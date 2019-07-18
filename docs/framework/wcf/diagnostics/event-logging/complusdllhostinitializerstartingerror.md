@@ -3,11 +3,11 @@ title: ComPlusDllHostInitializerStartingError
 ms.date: 03/30/2017
 ms.assetid: ad7d176a-cf40-412a-9335-eef64a25454a
 ms.openlocfilehash: 1e541525d66504b37bf97cce115414e71c31305e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999413"
 ---
 # <a name="complusdllhostinitializerstartingerror"></a>ComPlusDllHostInitializerStartingError
 ID: 131  

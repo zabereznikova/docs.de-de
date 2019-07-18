@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
-ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b1e9033d7aba8b4f423f29cd4fb4f7efbbe17a29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834893"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624366"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)
 In diesem Beispiel werden Objektdaten gelesen, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.  
@@ -39,11 +39,11 @@ End Sub
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
+- Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
   
--   Die Daten in der Datei stellen keine Daten aus der zu deserialisierenden Klasse dar.  
+- Die Daten in der Datei stellen keine Daten aus der zu deserialisierenden Klasse dar.  
   
--   Die Datei ist nicht vorhanden (<xref:System.IO.IOException>).  
+- Die Datei ist nicht vorhanden (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Überprüfen Sie immer die Eingaben, und deserialisieren Sie keine Daten aus einer nicht vertrauenswürdigen Quelle. Das neu erstellte Objekt wird auf einem lokalen Computer mit den Berechtigungen des Codes ausgeführt, der es deserialisiert hat. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  

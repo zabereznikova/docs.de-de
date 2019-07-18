@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f686c20a9afd981405e32854fcc594abac78c85c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153620"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882027"
 ---
 # <a name="local-transactions"></a>Lokale Transaktionen
-Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzelne Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&amp;#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn der Task entweder ein Fehler auftritt, werden beide Aktualisierungen ein Rollback ausgeführt.  
+Transaktionen werden in ADO.NET verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzige Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&amp;#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn der Task entweder ein Fehler auftritt, werden beide Aktualisierungen ein Rollback ausgeführt.  
   
 ## <a name="determining-the-transaction-type"></a>Bestimmen des Transaktionstyps  
  Um eine lokale Transaktion zu sein, wenn es eine Phase hat nur und direkt von der Datenbank behandelt wird, wird als Transaktion betrachtet. In einer verteilten Transaktion zu sein, wenn er von einem Transaktionsmonitor koordiniert ist und verwendet für die transaktionsauflösung ausfallsichere Mechanismen verwenden (z. B. Zweiphasen-Commit), wird als Transaktion betrachtet.  
   
- Alle [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter verfügen jeweils über ein eigenes `Transaction`-Objekt für das Ausführen lokaler Transaktionen. Wählen Sie eine <xref:System.Data.SqlClient>-Transaktion, wenn eine Transaktion in einer SQL Server-Datenbank ausgeführt werden muss. Verwenden Sie für eine Oracle-Transaktion den <xref:System.Data.OracleClient>-Anbieter. Darüber hinaus steht eine <xref:System.Data.Common.DbTransaction> -Klasse, die zum Schreiben anbieterunabhängiger Code, die Transaktionen erfordert.  
+ Die einzelnen .NET Framework-Datenanbieter verfügen jeweils über ein eigenes `Transaction`-Objekt für das Ausführen lokaler Transaktionen. Wählen Sie eine <xref:System.Data.SqlClient>-Transaktion, wenn eine Transaktion in einer SQL Server-Datenbank ausgeführt werden muss. Verwenden Sie für eine Oracle-Transaktion den <xref:System.Data.OracleClient>-Anbieter. Darüber hinaus steht eine <xref:System.Data.Common.DbTransaction> -Klasse, die zum Schreiben anbieterunabhängiger Code, die Transaktionen erfordert.  
   
 > [!NOTE]
 > Transaktionen sind am effizientesten, wenn sie auf dem Server ausgeführt werden. Wenn Sie mit einer SQL Server-Datenbank arbeiten, die häufig explizite Transaktionen verwendet, empfiehlt es sich, die Transaktionen unter Verwendung der BEGIN TRANSACTION-Anweisung von Transact-SQL als gespeicherte Prozeduren zu schreiben.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>Ausführen einer Transaktion unter Verwendung einer einzelnen Verbindung  
- In [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] können Sie Transaktionen mit dem `Connection`-Objekt steuern. Zum Initiieren einer lokalen Transaktion steht Ihnen die `BeginTransaction`-Methode zur Verfügung. Nachdem Sie eine Transaktion gestartet haben, können Sie mit der `Transaction`-Eigenschaft eines `Command`-Objekts einen Befehl in dieser Transaktion eintragen. Dann können Sie für Änderungen an der Datenquelle auf Grundlage des Erfolgs oder Fehlschlags der Komponenten der Transaktion einen Commit oder Rollback ausführen.  
+ In ADO.NET können Sie Transaktionen mit dem `Connection`-Objekt steuern. Zum Initiieren einer lokalen Transaktion steht Ihnen die `BeginTransaction`-Methode zur Verfügung. Nachdem Sie eine Transaktion gestartet haben, können Sie mit der `Transaction`-Eigenschaft eines `Command`-Objekts einen Befehl in dieser Transaktion eintragen. Dann können Sie für Änderungen an der Datenquelle auf Grundlage des Erfolgs oder Fehlschlags der Komponenten der Transaktion einen Commit oder Rollback ausführen.  
   
 > [!NOTE]
 >  Die `EnlistDistributedTransaction`-Methode darf nicht für eine lokale Transaktion verwendet werden.  
@@ -34,15 +34,15 @@ Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)
 ## <a name="example"></a>Beispiel  
  Führen Sie diese Schritte aus, um eine Transaktion auszuführen:  
   
-1.  Rufen Sie die <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts auf, um den Start der Transaktion festzulegen. Die <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>-Methode gibt einen Verweis auf die Transaktion zurück. Dieser Verweis wird den <xref:System.Data.SqlClient.SqlCommand>-Objekten zugeordnet, die in der Transaktion eingetragen sind.  
+1. Rufen Sie die <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts auf, um den Start der Transaktion festzulegen. Die <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A>-Methode gibt einen Verweis auf die Transaktion zurück. Dieser Verweis wird den <xref:System.Data.SqlClient.SqlCommand>-Objekten zugeordnet, die in der Transaktion eingetragen sind.  
   
-2.  Weisen Sie das `Transaction`-Objekt der <xref:System.Data.SqlClient.SqlCommand.Transaction%2A>-Eigenschaft des auszuführenden <xref:System.Data.SqlClient.SqlCommand> zu. Wenn ein Befehl für eine Verbindung mit einer aktiven Transaktion ausgeführt wird und das `Transaction`-Objekt nicht der `Transaction`-Eigenschaft des `Command`-Objekts zugewiesen wurde, wird eine Ausnahme ausgelöst.  
+2. Weisen Sie das `Transaction`-Objekt der <xref:System.Data.SqlClient.SqlCommand.Transaction%2A>-Eigenschaft des auszuführenden <xref:System.Data.SqlClient.SqlCommand> zu. Wenn ein Befehl für eine Verbindung mit einer aktiven Transaktion ausgeführt wird und das `Transaction`-Objekt nicht der `Transaction`-Eigenschaft des `Command`-Objekts zugewiesen wurde, wird eine Ausnahme ausgelöst.  
   
-3.  Führen Sie die erforderlichen Befehle aus.  
+3. Führen Sie die erforderlichen Befehle aus.  
   
-4.  Rufen Sie die <xref:System.Data.SqlClient.SqlTransaction.Commit%2A>-Methode des <xref:System.Data.SqlClient.SqlTransaction>-Objekts auf, um die Transaktion abzuschließen, oder rufen Sie die <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A>-Methode auf, um die Transaktion zu beenden. Wenn die Verbindung vor dem Ausführen der <xref:System.Data.SqlClient.SqlTransaction.Commit%2A>-Methode oder der <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A>-Methode geschlossen oder verworfen wurde, wird für die Transaktion ein Rollback ausgeführt.  
+4. Rufen Sie die <xref:System.Data.SqlClient.SqlTransaction.Commit%2A>-Methode des <xref:System.Data.SqlClient.SqlTransaction>-Objekts auf, um die Transaktion abzuschließen, oder rufen Sie die <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A>-Methode auf, um die Transaktion zu beenden. Wenn die Verbindung vor dem Ausführen der <xref:System.Data.SqlClient.SqlTransaction.Commit%2A>-Methode oder der <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A>-Methode geschlossen oder verworfen wurde, wird für die Transaktion ein Rollback ausgeführt.  
   
- Im folgenden Codebeispiel wird die Transaktionslogik unter Verwendung von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] mit Microsoft SQL Server veranschaulicht.  
+ Im folgenden Codebeispiel wird die Transaktionslogik unter Verwendung von ADO.NET mit Microsoft SQL Server veranschaulicht.  
   
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b94987631f7dbbe39e585a8ea2c2252b9427613
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6e157c758b472ea89e21c1ed1ba8c17693c20a3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079603"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777794"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope-Methode
 Öffnet eine vorhandene, auf dem Datenträger-Datei, und seine Metadaten in den Arbeitsspeicher zugeordnet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT OpenScope (  
     [in]  LPCWSTR     szScope,   
     [in]  DWORD       dwOpenFlags,   

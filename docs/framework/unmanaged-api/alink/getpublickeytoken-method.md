@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d1b28eadc9f09abff799f99d1d6012c98b1d3dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215767"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741882"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken-Methode
 Ruft das Token des öffentlichen Schlüssels für eine angegebene Schlüsseldatei oder Schlüsselcontainer ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetPublicKeyToken(  
     LPCWSTR pszKeyFile,  
     LPCWSTR pszKeyContainer,  
@@ -60,4 +60,4 @@ HRESULT GetPublicKeyToken(
 
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

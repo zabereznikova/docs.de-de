@@ -2,12 +2,12 @@
 title: 'Ausnahmen: Die failwith-Funktion'
 description: Erfahren Sie, wie die Funktion "Failwith" F#-Ausnahme generiert.
 ms.date: 05/16/2016
-ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 08107966ddc2f55625347deb92d224b286df7761
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610111"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641947"
 ---
 # <a name="exceptions-the-failwith-function"></a>Ausnahmen: Die failwith-Funktion
 

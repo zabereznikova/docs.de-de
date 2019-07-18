@@ -2,25 +2,25 @@
 title: Erneutes Hosten von Designern
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 360bf66b235d2cb4297f9bd69a3d7328706fb365
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837353"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635582"
 ---
-# <a name="designer-rehosting"></a>Hosten von Designern
+# <a name="designer-rehosting"></a>Erneutes Hosten von Designern
 Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das Hosting des Entwurfszeichnungsbereichs des Workflows in einer benutzerdefinierten Anwendung bezieht. Die Hostinganwendung, mit der die meisten Personen vertraut sind, ist Visual Studio, es gibt jedoch eine Reihe von Szenarien, in denen das Anzeigen des Workflow-Designers in einer Anwendung hilfreich sein kann:  
   
--   Das Überwachen von Anwendungen (die Schaffung von Möglichkeiten für einen Endbenutzer, den Prozess sowie Laufzeitdaten zum Prozess, z. B. die gerade aktiven Zustände, die kombinierten Ausführungszeitdaten oder andere Informationen zu einer Instanz des Workflows, visuell darzustellen).  
+- Das Überwachen von Anwendungen (die Schaffung von Möglichkeiten für einen Endbenutzer, den Prozess sowie Laufzeitdaten zum Prozess, z. B. die gerade aktiven Zustände, die kombinierten Ausführungszeitdaten oder andere Informationen zu einer Instanz des Workflows, visuell darzustellen).  
   
--   Anwendungen, die es einem Benutzer ermöglichen, den Prozess mit einem beschränkten Satz von Aktivitäten anzupassen.  
+- Anwendungen, die es einem Benutzer ermöglichen, den Prozess mit einem beschränkten Satz von Aktivitäten anzupassen.  
   
  Zur Unterstützung dieser Anwendungstypen wird der Workflow-Designer als Bestandteil von .NET Framework ausgeliefert und kann in einer WPF-Anwendung oder in einer WinForms-Anwendung mit dem entsprechenden WPF-Hostingcode gehostet werden. Dieses Beispiel veranschaulicht Folgendes:  
   
--   Erneutes Hosten des Workflow-Designers  
+- Erneutes Hosten des Workflow-Designers  
   
--   Verwenden der neu gehosteten Toolbox und auch des Eigenschaftenrasters.  
+- Verwenden der neu gehosteten Toolbox und auch des Eigenschaftenrasters.  
   
 ## <a name="rehosting-the-designer"></a>Erneutes Hosten des Workflow-Designers  
  In diesem Beispiel wird veranschaulicht, wie das WPF-Layout so erstellt wird, dass es den Designer enthält, wie im folgenden Rasterlayout dargestellt (der Toolboxcode wurde aus Platzgründen weggelassen). Beachten Sie die Benennung der Rahmen, die den Designer und das Eigenschaftenraster enthalten.  
@@ -40,7 +40,7 @@ Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das 
 </Grid>  
 ```  
   
- Im Beispiel wird dann der Designer erstellt und seine primäre <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> und <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> dem entsprechenden Container in der Benutzeroberfläche zugeordnet. Im folgenden Beispiel gibt es einige zusätzliche Codezeilen, die einer Erläuterung bedürfen. Der <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A>-Aufruf ist erforderlich, um die Standardaktivitätsdesigner für die Aktivitäten zuzuordnen, die im Lieferumfang von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] enthalten sind. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> wird aufgerufen, um das zu bearbeitende WF-Element zu übergeben. Schließlich werden die <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (primärer Zeichnungsbereich) und die <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (Eigenschaftenraster) auf der Benutzeroberfläche platziert.  
+ Im Beispiel wird dann der Designer erstellt und seine primäre <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> und <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> dem entsprechenden Container in der Benutzeroberfläche zugeordnet. Im folgenden Beispiel gibt es einige zusätzliche Codezeilen, die einer Erläuterung bedürfen. Die <xref:System.Activities.Core.Presentation.DesignerMetadata.Register%2A> Aufruf ist erforderlich, um die standardaktivitätsdesigner für die Aktivitäten, die im Lieferumfang von .NET Framework zuzuordnen. <xref:System.Activities.Presentation.WorkflowDesigner.Load%2A> wird aufgerufen, um das zu bearbeitende WF-Element zu übergeben. Schließlich werden die <xref:System.Activities.Presentation.WorkflowDesigner.View%2A> (primärer Zeichnungsbereich) und die <xref:System.Activities.Presentation.WorkflowDesigner.PropertyInspectorView%2A> (Eigenschaftenraster) auf der Benutzeroberfläche platziert.  
   
 ```csharp  
 protected override void OnInitialized(EventArgs e)  
@@ -114,11 +114,11 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Verwenden des Beispiels  
   
-1.  Öffnen Sie die Projektmappe designerrehosting.sln in Visual Studio 2010.  
+1. Öffnen Sie die Projektmappe designerrehosting.sln in Visual Studio 2010.  
   
-2.  Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.  
+2. Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.  
   
-3.  Eine WPF-Anwendung beginnt mit einem neu gehosteten Designer.  
+3. Eine WPF-Anwendung beginnt mit einem neu gehosteten Designer.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

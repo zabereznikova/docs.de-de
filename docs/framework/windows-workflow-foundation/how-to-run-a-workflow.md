@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: a5866bae5217b8c8ea22ba66a344b464694583ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7784f37c9e8009adc3735974a6fb0423f24ea37
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720974"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238511"
 ---
 # <a name="how-to-run-a-workflow"></a>Vorgehensweise: Ausführen eines Workflows
 In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schritte-Tutorial, und beschreibt, wie Sie einen Workflowhost erstellen und Ausführen des Workflows, die definiert, in der vorherigen [Vorgehensweise: Erstellen eines Workflows](how-to-create-a-workflow.md) Thema.
@@ -23,27 +23,27 @@ In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schr
   
 ### <a name="to-create-the-workflow-host-project"></a>So erstellen Sie das Workflowhostprojekt  
   
-1.  Öffnen Sie die Projektmappe aus dem vorherigen [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md) Thema mithilfe von Visual Studio 2012.  
+1. Öffnen Sie die Projektmappe aus dem vorherigen [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md) Thema mithilfe von Visual Studio 2012.  
   
-2.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **WF45GettingStartedTutorial** , zeigen Sie auf **Hinzufügen**, und wählen Sie **Neues Projekt**aus.  
+2. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **WF45GettingStartedTutorial** , zeigen Sie auf **Hinzufügen**, und wählen Sie **Neues Projekt**aus.  
   
     > [!TIP]
     >  Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer** aus.
 
-3.  Wählen Sie im Knoten **Installiert** die Option **Visual C#** und anschließend **Workflow** (oder **Visual Basic**, **Workflow**) aus.
+3. Wählen Sie im Knoten **Installiert** die Option **Visual C#** und anschließend **Workflow** (oder **Visual Basic**, **Workflow**) aus.
 
     > [!NOTE]
     >  Je nachdem, welche Programmiersprache als die primäre Sprache in Visual Studio konfiguriert ist, befindet sich der Knoten **Visual C#** oder **Visual Basic** möglicherweise nicht unter dem Knoten **Andere Sprachen** im Knoten **Installiert** .
 
      Stellen Sie sicher, dass in der Dropdownliste mit der .NET Framework-Version **.NET Framework 4.5** ausgewählt ist. Wählen Sie in der Liste **Workflow** die Option **Konsolenanwendung für Workflows** aus. Geben Sie im Feld `NumberGuessWorkflowHost` Name **die Bezeichnung** ein, und klicken Sie auf **OK**. Auf diese Weise wird eine Start-Workflowanwendung mit grundlegender Unterstützung von Workflowhosting erstellt. Dieser grundlegende Hostingcode wird geändert und zum Ausführen der Workflowanwendung verwendet.
 
-4.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das neu hinzugefügte Projekt **NumberGuessWorkflowHost** , und wählen Sie **Verweis hinzufügen**aus. Wählen Sie in der Liste **Verweis hinzufügen** den Eintrag **Projektmappe** aus, aktivieren Sie das Kontrollkästchen neben **NumberGuessWorkflowActivities**, und klicken Sie auf **OK**.
+4. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das neu hinzugefügte Projekt **NumberGuessWorkflowHost** , und wählen Sie **Verweis hinzufügen**aus. Wählen Sie in der Liste **Verweis hinzufügen** den Eintrag **Projektmappe** aus, aktivieren Sie das Kontrollkästchen neben **NumberGuessWorkflowActivities**, und klicken Sie auf **OK**.
 
-5.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Workflow1.xaml** , und wählen Sie **Löschen**aus. Klicken Sie zur Bestätigung auf **OK** .
+5. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **Workflow1.xaml** , und wählen Sie **Löschen**aus. Klicken Sie zur Bestätigung auf **OK** .
 
 ### <a name="to-modify-the-workflow-hosting-code"></a>So ändern Sie den Code zum Hosten von Workflows
 
-1.  Doppelklicken Sie im **Projektmappen-Explorer** auf **Program.cs** oder **Module1.vb** , um den Code anzuzeigen.
+1. Doppelklicken Sie im **Projektmappen-Explorer** auf **Program.cs** oder **Module1.vb** , um den Code anzuzeigen.
 
     > [!TIP]
     >  Wenn das Fenster **Projektmappen-Explorer** nicht angezeigt wird, wählen Sie im Menü **Ansicht** die Option **Projektmappen-Explorer** aus.
@@ -51,13 +51,13 @@ In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schr
      Da dieses Projekt mit der Vorlage **Konsolenanwendung für Workflows** erstellt wurde, enthält **Program.cs** oder **Module1.vb** den folgenden grundlegenden Code zum Hosten von Workflows.
 
     ```vb
-    ' Create and cache the workflow definition
-    Activity workflow1 = new Workflow1()
+    ' Create and cache the workflow definition.
+    Dim workflow1 As Activity = New Workflow1()
     WorkflowInvoker.Invoke(workflow1)
     ```
 
     ```csharp
-    // Create and cache the workflow definition
+    // Create and cache the workflow definition.
     Activity workflow1 = new Workflow1();
     WorkflowInvoker.Invoke(workflow1);
     ```
@@ -86,12 +86,12 @@ In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schr
 
 ### <a name="to-set-input-arguments-of-a-workflow"></a>So legen Sie die Eingabeargumente eines Workflows fest
 
-1.  Fügen Sie oben in der Datei **Program.cs** oder **Module1.vb** unter den vorhandenen `using` - oder `Imports` -Anweisung die folgende Anweisung hinzu.
+1. Fügen Sie oben in der Datei **Program.cs** oder **Module1.vb** unter den vorhandenen `using` - oder `Imports` -Anweisung die folgende Anweisung hinzu.
 
      [!code-csharp[CFX_WF_GettingStarted#5](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#5)]
      [!code-vb[CFX_WF_GettingStarted#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#5)]
 
-2.  Ersetzen Sie die Codezeile, die das neue <xref:System.Activities.WorkflowApplication> -Element erstellt, durch den folgenden Code, der ein Wörterbuch mit Parametern erstellt und dieses nach seiner Erstellung an den Workflow übergibt.
+2. Ersetzen Sie die Codezeile, die das neue <xref:System.Activities.WorkflowApplication> -Element erstellt, durch den folgenden Code, der ein Wörterbuch mit Parametern erstellt und dieses nach seiner Erstellung an den Workflow übergibt.
 
     > [!NOTE]
     >  Ersetzen Sie `Workflow1` in diesen Beispielen durch `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`, oder `StateMachineNumberGuessWorkflow`, je nachdem, auf welchen Workflow Sie im vorherigen abgeschlossen [Vorgehensweise: Erstellen eines Workflows](how-to-create-a-workflow.md) Schritt. Wenn Sie `Workflow1` nicht ersetzen, erhalten Sie Buildfehler, wenn Sie versuchen, den Workflow zu erstellen oder auszuführen.
@@ -103,19 +103,19 @@ In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schr
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>So rufen Sie die Ausgabeargumente eines Workflows ab
 
-1.  Ändern Sie den <xref:System.Activities.WorkflowApplication.Completed%2A> -Handler, um die Anzahl der vom Workflow verwendeten Durchgänge (turns) abzurufen und anzuzeigen.
+1. Ändern Sie den <xref:System.Activities.WorkflowApplication.Completed%2A> -Handler, um die Anzahl der vom Workflow verwendeten Durchgänge (turns) abzurufen und anzuzeigen.
 
      [!code-csharp[CFX_WF_GettingStarted#7](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#7)]
      [!code-vb[CFX_WF_GettingStarted#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#7)]
 
 ### <a name="to-resume-a-bookmark"></a>So nehmen Sie ein Lesezeichen wieder auf
 
-1.  Fügen Sie oben in der `Main` -Methode direkt nach der bestehenden <xref:System.Threading.AutoResetEvent> -Deklaration den folgenden Code hinzu.
+1. Fügen Sie oben in der `Main` -Methode direkt nach der bestehenden <xref:System.Threading.AutoResetEvent> -Deklaration den folgenden Code hinzu.
 
      [!code-csharp[CFX_WF_GettingStarted#8](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#8)]
      [!code-vb[CFX_WF_GettingStarted#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#8)]
 
-2.  Fügen Sie direkt unterhalb der drei bestehenden Lebenszyklushandler des Workflows im Abschnitt <xref:System.Activities.WorkflowApplication.Idle%2A> den folgenden `Main`-Handler hinzu.
+2. Fügen Sie direkt unterhalb der drei bestehenden Lebenszyklushandler des Workflows im Abschnitt <xref:System.Activities.WorkflowApplication.Idle%2A> den folgenden `Main`-Handler hinzu.
 
      [!code-csharp[CFX_WF_GettingStarted#9](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#9)]
      [!code-vb[CFX_WF_GettingStarted#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#9)]
@@ -125,7 +125,7 @@ In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schr
     > [!NOTE]
     >  In diesem Beispiel verwendet die Hostanwendung AutoReset-Ereignisse in den Handlern <xref:System.Activities.WorkflowApplication.Completed%2A> und <xref:System.Activities.WorkflowApplication.Idle%2A> , um die Hostanwendung mit dem Status des Workflows zu synchronisieren. Das Blockieren und das Warten auf den Eintritt des Workflows in den Leerlaufzustand ist nicht erforderlich, bevor ein Lesezeichen wiederaufgenommen wird. In diesem Beispiel sind die Synchronisierungsereignisse jedoch erforderlich, damit der Host weiß, ob der Workflow abgeschlossen ist oder ob dieser mithilfe von <xref:System.Activities.Bookmark>auf weitere Benutzereingaben wartet. Weitere Informationen finden Sie unter [Lesezeichen](bookmarks.md).
 
-3.  Entfernen Sie den Aufruf von `WaitOne`, und ersetzen Sie diesen durch Code zum Erfassen der Eingabe des Benutzers und zum Wiederaufnehmen von <xref:System.Activities.Bookmark>.
+3. Entfernen Sie den Aufruf von `WaitOne`, und ersetzen Sie diesen durch Code zum Erfassen der Eingabe des Benutzers und zum Wiederaufnehmen von <xref:System.Activities.Bookmark>.
 
      Entfernen Sie die folgende Codezeile.
 
@@ -139,9 +139,9 @@ In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schr
 
 ## <a name="BKMK_ToRunTheApplication"></a> So erstellen und führen Sie die Anwendung aus
 
-1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **NumberGuessWorkflowHost** , und wählen Sie **Als Startprojekt festlegen**aus.
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf **NumberGuessWorkflowHost** , und wählen Sie **Als Startprojekt festlegen**aus.
 
-2.  Drücken Sie STRG+F5, um die Anwendung zu erstellen und auszuführen. Versuchen Sie, die Zahl in möglichst wenigen Durchgängen zu erraten.
+2. Drücken Sie STRG+F5, um die Anwendung zu erstellen und auszuführen. Versuchen Sie, die Zahl in möglichst wenigen Durchgängen zu erraten.
 
      Um die Anwendung mit einem der anderen Workflowtypen auszuprobieren, ersetzen Sie `Workflow1` im Code, durch den <xref:System.Activities.WorkflowApplication> erstellt wird, durch `FlowchartNumberGuessWorkflow`, `SequentialNumberGuessWorkflow`oder `StateMachineNumberGuessWorkflow`, je nachdem, welcher Workflowtyp gewünscht ist.
 

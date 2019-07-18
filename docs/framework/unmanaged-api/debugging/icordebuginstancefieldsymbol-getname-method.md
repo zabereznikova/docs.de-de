@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d23bf14fbb3d75534ac2d4a43eca0fbf3e994ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 338f68a6ffc1c23508f12b344008fecce01bbf7d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161394"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760258"
 ---
 # <a name="icordebuginstancefieldsymbolgetname-method"></a>ICorDebugInstanceFieldSymbol::GetName-Methode
 Ruft den Namen des Instanzfelds ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetName(  
    [in] ULONG32 cchName,   
    [out] ULONG32 *pcchName,   
@@ -51,4 +51,4 @@ HRESULT GetName(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugInstanceFieldSymbol-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

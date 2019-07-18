@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a40fa9beec1eabeb02c6ccc4e2ab8179aa49288c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174628"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585769"
 ---
 # <a name="transport-quotas"></a>Transportkontingente
 Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann eine Verbindung übermäßige Ressourcen belegt. Ein Kontingent ist eine harte Grenze, die eine Nutzung zusätzlicher Ressourcen nach Überschreiten des Kontingentwerts verhindert. Transportkontingente verhindern entweder böswillige oder unbeabsichtigte Denial-of-Service-Angriffe.  
@@ -19,11 +19,11 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 ## <a name="types-of-transport-quotas"></a>Typen von Transportkontingenten  
  WCF-Transporte haben drei Typen von Kontingenten:  
   
--   *Timeouts* mindern Denial of Service-Angriffe, die abhängig sind, auf die Ressourcen für längere Zeit binden.  
+- *Timeouts* mindern Denial of Service-Angriffe, die abhängig sind, auf die Ressourcen für längere Zeit binden.  
   
--   *Zuordnung des Arbeitsspeicherlimits* zu verhindern, dass eine einzelne Verbindung Systemspeicher für schwellenwertbenachrichtigungen und Dienst zu anderen Verbindungen verweigert.  
+- *Zuordnung des Arbeitsspeicherlimits* zu verhindern, dass eine einzelne Verbindung Systemspeicher für schwellenwertbenachrichtigungen und Dienst zu anderen Verbindungen verweigert.  
   
--   *Grenzwerte für sammlungsgröße* begrenzen den Verbrauch von Ressourcen, die Speicher indirekt Belegen oder beschränkt zur Verfügung sind.  
+- *Grenzwerte für sammlungsgröße* begrenzen den Verbrauch von Ressourcen, die Speicher indirekt Belegen oder beschränkt zur Verfügung sind.  
   
 ## <a name="transport-quota-descriptions"></a>Transportkontingentbeschreibungen  
  In diesem Abschnitt werden die transportkontingente beschrieben für die standard-WCF-Transporte zur Verfügung: HTTP (S), TCP/IP und named Pipes. Benutzerdefinierte Transporte können eigene konfigurierbare Kontingente aufweisen, die nicht in dieser Liste enthalten sind. Weitere Informationen über diese Kontingente finden Sie in der Dokumentation zum benutzerdefinierten Transport.  
@@ -100,9 +100,9 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  Das `MaxBufferSize`-Transportkontingent steht nur auf der `BasicHttp`-Bindung zur Verfügung. Die `WSHttp`-Bindungen gelten für Szenarien, die keine Streamingtransportmodi unterstützen.  
+1. Das `MaxBufferSize`-Transportkontingent steht nur auf der `BasicHttp`-Bindung zur Verfügung. Die `WSHttp`-Bindungen gelten für Szenarien, die keine Streamingtransportmodi unterstützen.  
   
-2.  Die Transportkontingente, `MaxPendingConnections` und `MaxOutboundConnectionsPerEndpoint` werden zu einem einzelnen Transportkontingent namens `MaxConnections` kombiniert.  
+2. Die Transportkontingente, `MaxPendingConnections` und `MaxOutboundConnectionsPerEndpoint` werden zu einem einzelnen Transportkontingent namens `MaxConnections` kombiniert.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Kontrolle von Transportkontingenten von der Konfiguration  
  Die Anwendungskonfiguration kann die gleichen Transportkontingente festlegen, wie der direkte Zugriff auf Eigenschaften auf der Bindung . In Konfigurationsdateien beginnt der Name eines Transportkontingents immer mit einem Kleinbuchstaben. Beispielsweise entspricht die `CloseTimeout`-Eigenschaft auf einer Bindung der `closeTimeout`-Einstellung in der Konfiguration, und die `MaxConnections`-Eigenschaft auf einer Bindung entspricht der `maxConnections`-Einstellung in der Konfiguration.  

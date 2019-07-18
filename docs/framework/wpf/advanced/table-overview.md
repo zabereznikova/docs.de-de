@@ -9,35 +9,35 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: eb16f633f78e9d345d20c93847e2c22173267960
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 01ab11d8e3c1d2c84514770816ca9c9eab0835b6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161433"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649187"
 ---
 # <a name="table-overview"></a>Übersicht über Tabellen
 <xref:System.Windows.Documents.Table> ist ein Element auf Blockebene, die rasterbasierte Darstellung von Flussdokumentinhalten unterstützt. Die Flexibilität dieses Elements macht es nicht nur sehr hilfreich, sondern auch schwieriger zu verstehen und richtig zu verwenden.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Grundlagen zu Tabellen](#table_basics)  
+- [Grundlagen zu Tabellen](#table_basics)  
   
--   [Worin unterscheidet sich eine Tabelle von einem Raster?](#table_vs_Grid)  
+- [Worin unterscheidet sich eine Tabelle von einem Raster?](#table_vs_Grid)  
   
--   [Grundlegende Tabellenstruktur](#basic_table_structure)  
+- [Grundlegende Tabellenstruktur](#basic_table_structure)  
   
--   [Tabellenkapselung](#table_containment)  
+- [Tabellenkapselung](#table_containment)  
   
--   [Zeilengruppen](#row_groupings)  
+- [Zeilengruppen](#row_groupings)  
   
--   [Hintergrundrendering-Rangfolge](#rendering_precedence)  
+- [Hintergrundrendering-Rangfolge](#rendering_precedence)  
   
--   [Überspannen von Zeilen oder Spalten](#spanning_rows_or_columns)  
+- [Überspannen von Zeilen oder Spalten](#spanning_rows_or_columns)  
   
--   [Erstellen einer Tabelle mit Code](#building_a_table_with_code)  
+- [Erstellen einer Tabelle mit Code](#building_a_table_with_code)  
   
--   [Verwandte Themen] 
+- [Verwandte Themen] 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>Grundlagen zu Tabellen  
@@ -50,15 +50,15 @@ ms.locfileid: "59161433"
 ### <a name="basic-table-structure"></a>Grundlegende Tabellenstruktur  
  <xref:System.Windows.Documents.Table> ermöglicht die rasterbasierte Darstellung von Spalten (dargestellt durch <xref:System.Windows.Documents.TableColumn> Elemente) und Zeilen (dargestellt durch <xref:System.Windows.Documents.TableRow> Elemente). <xref:System.Windows.Documents.TableColumn> -Elemente hosten keinen Inhalt. Sie definieren lediglich Spalten und deren Eigenschaften. <xref:System.Windows.Documents.TableRow> Elemente müssen gehostet werden, einem <xref:System.Windows.Documents.TableRowGroup> -Element, das eine Gruppierung von Zeilen für die Tabelle definiert. <xref:System.Windows.Documents.TableCell> Elemente, die enthalten den eigentlichen Inhalt der Tabelle angezeigt werden, müssen gehostet werden, einem <xref:System.Windows.Documents.TableRow> Element. <xref:System.Windows.Documents.TableCell> kann nur Elemente enthalten, die abgeleitet <xref:System.Windows.Documents.Block>.  Gültige untergeordnete Elemente für eine <xref:System.Windows.Documents.TableCell> enthalten.  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> -Elemente hosten Textinhalt möglicherweise nicht direkt. Weitere Informationen über die Kapselungsregeln für fortlaufenden Inhaltselemente wie <xref:System.Windows.Documents.TableCell>, finden Sie unter [Übersicht über Flussdokumente](flow-document-overview.md).  
@@ -78,19 +78,19 @@ ms.locfileid: "59161433"
 ### <a name="table-containment"></a>Tabellenkapselung  
  <xref:System.Windows.Documents.Table> leitet sich von der <xref:System.Windows.Documents.Block> -Element, und die allgemeinen Regeln für <xref:System.Windows.Documents.Block> Ebene von Elementen.  Ein <xref:System.Windows.Documents.Table> Element kann eines der folgenden Elemente enthalten sein:  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>Zeilengruppen  
@@ -108,15 +108,15 @@ ms.locfileid: "59161433"
 ### <a name="background-rendering-precedence"></a>Hintergrundrendering-Rangfolge  
  Tabellenelemente rendern in der folgenden Reihenfolge (Z-Reihenfolge, vom niedrigsten zum höchsten). Diese Reihenfolge kann nicht geändert werden. Beispielsweise gibt es keine „Z-Reihenfolge“-Eigenschaft für diese Elemente, die Sie zum Überschreiben dieser festgelegten Reihenfolge verwenden können.  
   
-1.  <xref:System.Windows.Documents.Table>  
+1. <xref:System.Windows.Documents.Table>  
   
-2.  <xref:System.Windows.Documents.TableColumn>  
+2. <xref:System.Windows.Documents.TableColumn>  
   
-3.  <xref:System.Windows.Documents.TableRowGroup>  
+3. <xref:System.Windows.Documents.TableRowGroup>  
   
-4.  <xref:System.Windows.Documents.TableRow>  
+4. <xref:System.Windows.Documents.TableRow>  
   
-5.  <xref:System.Windows.Documents.TableCell>  
+5. <xref:System.Windows.Documents.TableCell>  
   
  Betrachten Sie das folgende Beispiel, das Hintergrundfarben für jedes dieser Elemente in einer Tabelle definiert.  
   

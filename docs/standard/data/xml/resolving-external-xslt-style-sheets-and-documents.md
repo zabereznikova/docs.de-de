@@ -5,31 +5,31 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e956b96b27898e2cad4bed30996622ab0b86656
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609459"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170308"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Auflösen von externen XSLT-Stylesheets und Dokumenten
 Während einer Transformation müssen Sie u. U. mehrmals externe Ressourcen auflösen.  
   
 > [!NOTE]
->  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen.  
+>  Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen.  
   
  Während einer Transformation müssen Sie u. U. mehrmals externe Ressourcen auflösen:  
   
--   Während <xref:System.Xml.Xsl.XslTransform.Load%2A> ausgeführt wird, um ein externes Stylesheet zu suchen.  
+- Während <xref:System.Xml.Xsl.XslTransform.Load%2A> ausgeführt wird, um ein externes Stylesheet zu suchen.  
   
--   Während <xref:System.Xml.Xsl.XslTransform.Load%2A> ausgeführt wird, um ein beliebiges `<xsl:include>`-Element oder ein beliebiges `<xsl:import>`-Element im Stylesheet aufzulösen.  
+- Während <xref:System.Xml.Xsl.XslTransform.Load%2A> ausgeführt wird, um ein beliebiges `<xsl:include>`-Element oder ein beliebiges `<xsl:import>`-Element im Stylesheet aufzulösen.  
   
--   Während <xref:System.Xml.Xsl.XslTransform.Transform%2A> ausgeführt wird, um eine beliebige `document()`-Funktion aufzulösen.  
+- Während <xref:System.Xml.Xsl.XslTransform.Transform%2A> ausgeführt wird, um eine beliebige `document()`-Funktion aufzulösen.  
   
 ## <a name="using-the-xmlresolver-class"></a>Verwenden der XmlResolver-Klasse  
  Wenn für den Zugriff auf eine Netzwerkressource eine Authentifizierung erforderlich ist, verwenden Sie die <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden, die über einen <xref:System.Xml.XmlResolver>-Parameter verfügen, um das <xref:System.Xml.XmlResolver>-Objekt zu übergeben, bei dem die notwendigen Anmeldeeigenschaften festgelegt sind.  
   
- Wenn Sie einen benutzerdefinierten <xref:System.Xml.XmlResolver> verwenden möchten, oder wenn Sie abweichende Anmeldeinformationen angeben müssen, finden Sie in der nachfolgenden Tabelle die erforderliche Vorgehensweise, je nach dem, für das Auflösen der externen Ressource erforderlichen Zeitpunkt.  
+ Wenn Sie einen benutzerdefinierten <xref:System.Xml.XmlResolver> verwenden möchten, oder wenn Sie abweichende Anmeldeinformationen angeben müssen, finden Sie in der nachfolgenden Tabelle die erforderliche Vorgehensweise, je nach dem für das Auflösen der externen Ressource erforderlichen Zeitpunkt.  
   
 |Aufzulösender Prozess|Erforderliche Vorgehensweise|  
 |--------------------------------------|-------------------|  

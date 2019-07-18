@@ -5,11 +5,11 @@ helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
 ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747705"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel-Transaktionskonfiguration
 Windows Communication Foundation (WCF) bietet drei Attribute zum Konfigurieren von Transaktionen für einen Dienst: `transactionFlow`, `transactionProtocol`, und `transactionTimeout`.  
@@ -65,4 +65,4 @@ Windows Communication Foundation (WCF) bietet drei Attribute zum Konfigurieren v
 ## <a name="see-also"></a>Siehe auch
 
 - [\<binding>](../../../../docs/framework/misc/binding.md)
-- [WCF-Konfigurationsschema](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+- [WCF Configuration Schema (Schema zur WCF-Konfiguration)](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

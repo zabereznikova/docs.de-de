@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 8bc366e6c88c8ea378504535bb259e81dad83306
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b58219a8a4d45ce01f80fd367ed56b13a773e4bc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674309"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483396"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Typbeziehungen in LINQ-Abfragevorgängen (C#)
 Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, wie die Variablentypen in einer vollständigen Abfrageoperation miteinander zusammenhängen. Wenn Sie diese Beziehungen verstehen, können Sie die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Beispiele und die Codebeispiele in der Dokumentation besser nachvollziehen. Weiterhin können Sie dann besser verstehen, was im Hintergrund abläuft, wenn Variablen implizit mithilfe von `var` typisiert werden.  
@@ -29,42 +29,38 @@ Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, w
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Abfragen, bei denen die Quelldaten nicht transformiert werden  
  Die folgende Abbildung zeigt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageoperation für Objekte, die keine Transformationen der Daten ausführt. Die Quelle enthält eine Sequenz von Zeichenfolgen, und die Abfrageausgabe ist ebenfalls eine Sequenz von Zeichenfolgen.  
   
- ![Beziehung von Datentypen in einer LINQ-Abfrage](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![Diagramm, dass die Beziehung von Datentypen in einer LINQ-Abfrage zeigt.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
-1.  Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.  
+1. Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.  
   
-2.  Der Typ des Objekts, das ausgewählt ist, bestimmt den Typ der Abfragevariablen. In diesem Beispiel ist `name` eine Zeichenfolge. Daher ist die Abfragevariable ein `IEnumerable<string>`.  
+2. Der Typ des Objekts, das ausgewählt ist, bestimmt den Typ der Abfragevariablen. In diesem Beispiel ist `name` eine Zeichenfolge. Daher ist die Abfragevariable ein `IEnumerable<string>`.  
   
-3.  Die Abfragevariable durchläuft in der `foreach`-Anweisung verschiedene Iterationen. Da die Abfragevariable eine Sequenz von Zeichenfolgen ist, ist die Iterationsvariable ebenfalls eine Zeichenfolge.  
+3. Die Abfragevariable durchläuft in der `foreach`-Anweisung verschiedene Iterationen. Da die Abfragevariable eine Sequenz von Zeichenfolgen ist, ist die Iterationsvariable ebenfalls eine Zeichenfolge.  
   
 ## <a name="queries-that-transform-the-source-data"></a>Abfragen, bei denen die Quelldaten transformiert werden  
  Die folgende Abbildung zeigt eine [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]-Abfrageoperation, die eine einfache Datentransformation ausführt. Die Abfrage verwendet eine Sequenz von `Customer`-Objekten als Eingabe und wählt nur die `Name`-Eigenschaft im Ergebnis aus. Da `Name` eine Zeichenfolge ist, erzeugt die Abfrage eine Sequenz von Zeichenfolgen als Ausgabe.  
   
- ![Eine Abfrage, die den Datentyp transformiert](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![Diagramm, das eine Abfrage zeigt, die den Datentyp transformiert.](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
-1.  Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.  
+1. Das Typargument der Datenquelle bestimmt den Typ der Bereichsvariablen.  
   
-2.  Die `select`-Anweisung gibt die `Name`-Eigenschaft statt des vollständigen `Customer`-Objekts zurück. Da `Name` eine Zeichenfolge ist, lautet das Typargument von `custNameQuery` nicht `Customer`, sondern `string`.  
+2. Die `select`-Anweisung gibt die `Name`-Eigenschaft statt des vollständigen `Customer`-Objekts zurück. Da `Name` eine Zeichenfolge ist, lautet das Typargument von `custNameQuery` nicht `Customer`, sondern `string`.  
   
-3.  Da `custNameQuery` eine Sequenz von Zeichenfolgen ist, muss die Iterationsvariable der `foreach`-Schleife auch ein `string` sein.  
+3. Da `custNameQuery` eine Sequenz von Zeichenfolgen ist, muss die Iterationsvariable der `foreach`-Schleife auch ein `string` sein.  
   
  Die folgende Abbildung zeigt eine etwas komplexere Transformation. Die `select`-Anweisung gibt einen anonymen Typ zurück, der nur zwei Member des ursprünglichen `Customer`-Objekts erfasst.  
   
- ![Eine Abfrage, die den Datentyp transformiert](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![Diagramm, das eine komplexere Abfrage zeigt, die den Datentyp transformiert.](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
-1.  Das Typargument der Datenquelle ist immer der Typ der Bereichsvariablen in der Abfrage.  
+1. Das Typargument der Datenquelle ist immer der Typ der Bereichsvariablen in der Abfrage.  
   
-2.  Da die `select`-Anweisung einen anonymen Typ erzeugt, muss die Abfragevariable mithilfe von `var` implizit typisiert werden.  
+2. Da die `select`-Anweisung einen anonymen Typ erzeugt, muss die Abfragevariable mithilfe von `var` implizit typisiert werden.  
   
-3.  Da der Typ der Abfragevariablen implizit ist, muss die Iterationsvariable in der `foreach`-Schleife auch implizit sein.  
+3. Da der Typ der Abfragevariablen implizit ist, muss die Iterationsvariable in der `foreach`-Schleife auch implizit sein.  
   
 ## <a name="letting-the-compiler-infer-type-information"></a>Ableiten von Typinformationen durch den Compiler  
  Auch wenn Sie die Typbeziehungen einer Abfrageoperation grundsätzlich verstehen sollten, haben Sie die Option, den Compiler alle Arbeitsschritte ausführen zu lassen. Das [var](../../../../csharp/language-reference/keywords/var.md)-Schlüsselwort kann in einer Abfrageoperation für jede lokale Variable verwendet werden. Die folgende Abbildung ähnelt Beispiel Nummer 2, das zuvor erläutert wurde. Allerdings stellt der Compiler den starken Typ für jede Variable in der Abfrageoperation bereit.  
   
- ![Typfluss mit implizierter Typisierung](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![Diagramm, das den Typenfluss mit implizierter Typisierung zeigt.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  Weitere Informationen zu `var` finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
-  
-## <a name="see-also"></a>Siehe auch
-
-- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

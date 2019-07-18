@@ -13,21 +13,21 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a61fa5a3f87c534574d7265dfdc16365c0afbbe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584687"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644857"
 ---
 # <a name="version-tolerant-serialization"></a>Versionstolerante Serialisierung
-In Version&#160;1.0 und Version 1.1 von .NET&#160;Framework war das Erstellen serialisierbarer Typen problematisch, die für mehrere Anwendungsversionen verwendbar waren. Wenn ein Typ durch Hinzufügen eines zusätzlicher Felder geändert wurde, traten die folgenden Probleme auf:  
+In Version&amp;#160;1.0 und Version 1.1 von .NET&amp;#160;Framework war das Erstellen serialisierbarer Typen problematisch, die für mehrere Anwendungsversionen verwendbar waren. Wenn ein Typ durch Hinzufügen eines zusätzlicher Felder geändert wurde, traten die folgenden Probleme auf:  
   
--   Ältere Versionen einer Anwendung lösten bei dem Versuch, neue Versionen des alten Typs zu deserialisieren, Ausnahmen aus.  
+- Ältere Versionen einer Anwendung lösten bei dem Versuch, neue Versionen des alten Typs zu deserialisieren, Ausnahmen aus.  
   
--   Neuere Versionen einer Anwendung lösten bei dem Versuch, ältere Versionen eines Typs mit fehlenden Daten zu deserialisieren, Ausnahmen aus.  
+- Neuere Versionen einer Anwendung lösten bei dem Versuch, ältere Versionen eines Typs mit fehlenden Daten zu deserialisieren, Ausnahmen aus.  
   
- Bei VTS (Version Tolerant Serialization) handelt es sich um eine Gruppe von Funktionen, die in .NET&#160;Framework&#160;2.0 eingeführt wurde, um das möglicherweise im Laufe der Zeit erforderliche Ändern serialisierbarer Typen zu vereinfachen. Die VTS-Funktionen sind insbesondere für Klassen aktiviert, auf die das <xref:System.SerializableAttribute>-Attribut angewendet wurde, einschließlich generischer Typen. VTS ermöglicht das Hinzufügen neuer Felder zu diesen Klassen, ohne die Kompatibilität mit anderen Versionen des Typs zu beeinträchtigen. Informationen zu einer funktionierenden Beispielanwendung finden Sie unter [Technologiebeispiel für versionstolerante Serialisierung](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md).  
+ Bei VTS (Version Tolerant Serialization) handelt es sich um eine Gruppe von Funktionen, die in .NET&amp;#160;Framework&amp;#160;2.0 eingeführt wurde, um das möglicherweise im Laufe der Zeit erforderliche Ändern serialisierbarer Typen zu vereinfachen. Die VTS-Funktionen sind insbesondere für Klassen aktiviert, auf die das <xref:System.SerializableAttribute>-Attribut angewendet wurde, einschließlich generischer Typen. VTS ermöglicht das Hinzufügen neuer Felder zu diesen Klassen, ohne die Kompatibilität mit anderen Versionen des Typs zu beeinträchtigen. Informationen zu einer funktionierenden Beispielanwendung finden Sie unter [Technologiebeispiel für versionstolerante Serialisierung](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md).  
   
  Die VTS-Funktionen werden bei der Verwendung von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> aktiviert. Zudem sind alle Funktionen mit Ausnahme der Toleranz für externe Daten auch bei der Verwendung von <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> aktiviert. Weitere Informationen zur Verwendung dieser Klassen für die Serialisierung finden Sie unter [Binäre Serialisierung](binary-serialization.md).  
   
@@ -36,20 +36,20 @@ In Version&#160;1.0 und Version 1.1 von .NET&#160;Framework war das Erstellen se
 ## <a name="feature-list"></a>Funktionsliste  
  VTS umfasst die folgenden Funktionen:  
   
--   Toleranz für externe oder unerwartete Daten. Dies ermöglicht es neueren Versionen des Typs, Daten an frühere Versionen zu senden.  
+- Toleranz für externe oder unerwartete Daten. Dies ermöglicht es neueren Versionen des Typs, Daten an frühere Versionen zu senden.  
   
--   Toleranz für fehlende optionale Daten. Dies ermöglicht es älteren Versionen, Daten an neuere Versionen zu senden.  
+- Toleranz für fehlende optionale Daten. Dies ermöglicht es älteren Versionen, Daten an neuere Versionen zu senden.  
   
--   Serialisierungsrückrufe. Dies ermöglicht ein intelligentes Festlegen von Standardwerten im Fall fehlender Daten.  
+- Serialisierungsrückrufe. Dies ermöglicht ein intelligentes Festlegen von Standardwerten im Fall fehlender Daten.  
   
  Zudem ist eine Funktion zum Deklarieren verfügbar, wenn ein neues optionales Feld hinzugefügt wurde. Es handelt sich hierbei um die <xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A>-Eigenschaft des <xref:System.Runtime.Serialization.OptionalFieldAttribute>-Attributs.  
   
  Diese Funktionen werden nachfolgend näher erläutert.  
   
 ## <a name="tolerance-of-extraneous-or-unexpected-data"></a>Toleranz für externe oder unerwartete Daten  
- In früheren Versionen wurden während der Deserialisierung bei auftretenden externen oder unerwarteten Daten Ausnahmen. Mit VTS werden in derselben Situation keine Ausnahmen mehr ausgelöst, sondern alle externen oder unerwarteten Daten werden ignoriert. Dies ermöglicht es, Anwendungen mit neueren Versionen eines Typs (d.&#160;h. eine Version mit mehr Feldern), Informationen an Anwendungen zu senden, die ältere Versionen desselben Typs erwarten.  
+ In früheren Versionen wurden während der Deserialisierung bei auftretenden externen oder unerwarteten Daten Ausnahmen. Mit VTS werden in derselben Situation keine Ausnahmen mehr ausgelöst, sondern alle externen oder unerwarteten Daten werden ignoriert. Dies ermöglicht es, Anwendungen mit neueren Versionen eines Typs (d.&amp;#160;h. eine Version mit mehr Feldern), Informationen an Anwendungen zu senden, die ältere Versionen desselben Typs erwarten.  
   
- Im folgenden Beispiel werden die zusätzlichen Daten im `CountryField`-Feld von Version&#160;2.0 der `Address`-Klasse ignoriert, wenn eine ältere Anwendung die neuere Version deserialisiert.  
+ Im folgenden Beispiel werden die zusätzlichen Daten im `CountryField`-Feld von Version&amp;#160;2.0 der `Address`-Klasse ignoriert, wenn eine ältere Anwendung die neuere Version deserialisiert.  
   
 ```csharp  
 // Version 1 of the Address class.  
@@ -89,9 +89,9 @@ End Class
 ```  
   
 ## <a name="tolerance-of-missing-data"></a>Toleranz für fehlende Daten  
- Felder können mithilfe des <xref:System.Runtime.Serialization.OptionalFieldAttribute>-Attributs als optional markiert werden. Wenn während der Deserialisierung optionale Daten fehlen, ignoriert das Serialisierungsmodul das Fehlen dieser Daten und löst keine Ausnahme aus. Anwendungen, die ältere Versionen eines Typs erwarten, können daher Daten an Anwendungen senden, die neuere Versionen desselben Typs erwarten.  
+ Felder können mithilfe des <xref:System.Runtime.Serialization.OptionalFieldAttribute>-Attributs als optional markiert werden. Wenn während der Deserialisierung optionale Daten fehlen, ignoriert die Serialisierungs-Engine das Fehlen dieser Daten und löst keine Ausnahme aus. Anwendungen, die ältere Versionen eines Typs erwarten, können daher Daten an Anwendungen senden, die neuere Versionen desselben Typs erwarten.  
   
- Im folgenden Beispiel wird Version&#160;2.0 der `Address`-Klasse mit dem als optional markierten `CountryField`-Feld veranschaulicht. Wenn eine ältere Anwendung Version&#160;1 an eine neuere Anwendung sendet, die Version&#160;2.0 erwartet, wird das Fehlen der Daten ignoriert.  
+ Im folgenden Beispiel wird Version&amp;#160;2.0 der `Address`-Klasse mit dem als optional markierten `CountryField`-Feld veranschaulicht. Wenn eine ältere Anwendung Version&amp;#160;1 an eine neuere Anwendung sendet, die Version&amp;#160;2.0 erwartet, wird das Fehlen der Daten ignoriert.  
   
 ```csharp  
 [Serializable]  
@@ -123,13 +123,13 @@ End Class
 |---------------|------------------------------------------|-----------------|  
 |<xref:System.Runtime.Serialization.OnDeserializingAttribute>|Vor der Deserialisierung. *|Initialisieren von Standardwerten für optionale Felder.|  
 |<xref:System.Runtime.Serialization.OnDeserializedAttribute>|Nach der Deserialisierung.|Korrigieren Sie optionale Feldwerte auf der Grundlage des Inhalts anderer Felder.|  
-|<xref:System.Runtime.Serialization.OnSerializingAttribute>|Vor der Deserialisierung.|Vorbereiten der Serialisierung. Erstellen Sie z.&#160;B. optionale Datenstrukturen.|  
+|<xref:System.Runtime.Serialization.OnSerializingAttribute>|Vor der Deserialisierung.|Vorbereiten der Serialisierung. Erstellen Sie z.&amp;#160;B. optionale Datenstrukturen.|  
 |<xref:System.Runtime.Serialization.OnSerializedAttribute>|Nach der Serialisierung.|Protokollieren der Serialisierungsereignisse.|  
   
  \* Dieser Rückruf wird vor dem Deserialisierungskonstruktor aufgerufen, sofern ein solcher vorhanden ist.  
   
 ### <a name="using-callbacks"></a>Verwenden von Rückrufen  
- Zur Verwendung von Rückrufen wenden Sie die entsprechenden Attribute auf eine Methode an, die einen <xref:System.Runtime.Serialization.StreamingContext>-Parameter akzeptiert. Mit jedem dieser Attribute kann nur eine Methode pro Klasse markiert werden. Beispiel:  
+ Zur Verwendung von Rückrufen wenden Sie die entsprechenden Attribute auf eine Methode an, die einen <xref:System.Runtime.Serialization.StreamingContext>-Parameter akzeptiert. Mit jedem dieser Attribute kann nur eine Methode pro Klasse markiert werden. Zum Beispiel:  
   
 ```csharp  
 [OnDeserializing]  
@@ -262,23 +262,23 @@ End Class
 ## <a name="best-practices"></a>Bewährte Methoden  
  Um das richtige Versionsverhalten sicherzustellen, beachten Sie beim Ändern eines Typs von Version zu Version die folgenden Regeln:  
   
--   Entfernen Sie nie ein serialisiertes Feld.  
+- Entfernen Sie nie ein serialisiertes Feld.  
   
--   Wenden Sie das <xref:System.NonSerializedAttribute>-Attribut nie auf ein Feld an, wenn das Attribut in der vorherigen Version nicht auf das Feld angewendet wurde.  
+- Wenden Sie das <xref:System.NonSerializedAttribute>-Attribut nie auf ein Feld an, wenn das Attribut in der vorherigen Version nicht auf das Feld angewendet wurde.  
   
--   Ändern Sie nie den Namen oder den Typ eines serialisierten Felds.  
+- Ändern Sie nie den Namen oder den Typ eines serialisierten Felds.  
   
--   Wenden Sie beim Hinzufügen eines neuen serialisierten Felds das **OptionalFieldAttribute**-Attribut an.  
+- Wenden Sie beim Hinzufügen eines neuen serialisierten Felds das **OptionalFieldAttribute**-Attribut an.  
   
--   Wenden Sie beim Entfernen eines **NonSerializedAttribute**-Attributs von einem Feld, das in einer vorherigen Version nicht serialisierbar war, das **OptionalFieldAttribute**-Attribut an.  
+- Wenden Sie beim Entfernen eines **NonSerializedAttribute**-Attributs von einem Feld, das in einer vorherigen Version nicht serialisierbar war, das **OptionalFieldAttribute**-Attribut an.  
   
--   Legen Sie für alle optionalen Felder sinnvolle Standardwerte fest, indem Sie die Serialisierungsrückrufe verwenden, sofern 0 oder **NULL** nicht als Standardwerte zulässig sind.  
+- Legen Sie für alle optionalen Felder sinnvolle Standardwerte fest, indem Sie die Serialisierungsrückrufe verwenden, sofern 0 oder **NULL** nicht als Standardwerte zulässig sind.  
   
  Um sicherzustellen, dass ein Typ mit zukünftigen Serialisierungs-Engines kompatibel ist, beachten Sie die folgenden Richtlinien:  
   
--   Legen Sie die **VersionAdded**-Eigenschaft im **OptionalFieldAttribute**-Attribut ordnungsgemäß fest.  
+- Legen Sie die **VersionAdded**-Eigenschaft im **OptionalFieldAttribute**-Attribut ordnungsgemäß fest.  
   
--   Vermeiden Sie verzweigte Versionen.  
+- Vermeiden Sie verzweigte Versionen.  
   
 ## <a name="see-also"></a>Siehe auch
 

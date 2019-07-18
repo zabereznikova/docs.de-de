@@ -3,11 +3,11 @@ title: <windows> der <clientCredentials> Element
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
 ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769719"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<Windows > des \<ClientCredentials >-Element
 Gibt die Einstellungen für Windows-Anmeldeinformationen an, die zum Darstellen des Clients verwendet werden.  
@@ -55,5 +55,5 @@ Gibt die Einstellungen für Windows-Anmeldeinformationen an, die zum Darstellen 
 - <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)
-- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

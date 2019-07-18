@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfd466f48a55f8b8905f6c76cf876fb8a32d4a8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 676c968bb48e493f9a4514235fbc3246cf395228
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151397"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774647"
 ---
 # <a name="isymunmanagedmethodgetnamespace-method"></a>ISymUnmanagedMethod::GetNamespace-Methode
 Ruft den Namespace, in dem diese Methode definiert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetNamespace(  
    [out] ISymUnmanagedNamespace  **pRetVal);  
 ```  

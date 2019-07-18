@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2ce6dd1210eef94e77b5d6a2d58a35cf971e6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dcf63000de549b42d92ba157a7e550ac605bbfcd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138774"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768378"
 ---
 # <a name="lpoverlappedcompletionroutine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE-Funktionszeiger
 Zeigt auf eine Funktion, die den Host benachrichtigt, wenn eine überlappende (d. h. asynchrone) E/A auf einem Gerät abgeschlossen ist.  
   
- Dieser Funktionszeiger ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Dieser Funktionszeiger wurde in .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (  
     [in] DWORD  dwErrorCode,  
     [in] DWORD  dwNumberOfBytesTransfered,  

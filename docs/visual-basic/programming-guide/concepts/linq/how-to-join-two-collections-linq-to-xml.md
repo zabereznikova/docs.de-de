@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Verbinden von zwei Auflistungen (LINQ to XML) (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 85689fa756ab20a4dcd054b70eb3003c767936ea
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778052"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Vorgehensweise: Verbinden von zwei Auflistungen (LINQ to XML) (Visual Basic)
 Ein Element oder Attribut in einem XML-Dokument kann mitunter auf ein anderes Element oder Attribut verweisen. So enthält beispielsweise die [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) eine Liste von Kunden und eine Liste von Bestellungen. Jedes `Customer`-Element enthält ein `CustomerID`-Attribut. Jedes `Order`-Element enthält ein `CustomerID`-Element. Das `CustomerID`-Element eines Auftrags verweist auf das `CustomerID`-Attribut eines Kunden.  

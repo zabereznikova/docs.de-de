@@ -9,23 +9,23 @@ helpviewer_keywords:
 - type constructors
 - virtual members
 - constructors, types
-- default constructors
+- parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
-ms.openlocfilehash: 68192e3b75a120c73b82c34005d4dee650540bf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 074aa391b71257584a01171e95da7472354cdc2c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722166"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746776"
 ---
 # <a name="constructor-design"></a>Konstruktorentwurf
 Es gibt zwei Arten von Konstruktoren: Geben Sie die Konstruktoren und Instanz.  
   
  Typkonstruktoren sind statisch und von der CLR ausgeführt werden, bevor der Typ verwendet wird. Instanzkonstruktoren wird ausgeführt, wenn eine Instanz eines Typs erstellt wird.  
   
- Typen können keine Parameter annimmt. Instanzkonstruktoren können. Instanzkonstruktoren, die Parameter annehmen, nicht werden standardmäßige Konstruktoren häufig bezeichnet werden.  
+ Typen können keine Parameter annimmt. Instanzkonstruktoren können. Instanzkonstruktoren, die Parameter annehmen, nicht werden häufig parameterlose Konstruktoren aufgerufen.  
   
  Konstruktoren sind die beste Möglichkeit zum Erstellen von Instanzen eines Typs. Die meisten Entwickler durchsucht und versuchen, einen Konstruktor zu verwenden, bevor sie alternative Methoden zum Erstellen von Instanzen (z. B. Factorymethoden) in Betracht ziehen.  
   
@@ -49,15 +49,15 @@ Es gibt zwei Arten von Konstruktoren: Geben Sie die Konstruktoren und Instanz.
   
  **✓ DO** Ausnahmen von Instanzkonstruktoren, falls zutreffend.  
   
- **✓ DO** in Klassen, die öffentlichen Standardkonstruktor explizit deklariert werden, wenn ein solcher Konstruktor erforderlich ist.  
+ **Führen Sie ✓** in Klassen, die öffentlichen parameterlosen Konstruktor explizit deklarieren, wenn ein solcher Konstruktor erforderlich ist.  
   
- Wenn Sie für einen Typ explizit keine Konstruktoren deklarieren nicht, werden viele Sprachen (z. B. C# -Referenz) automatisch einen öffentlichen Standardkonstruktor hinzugefügt. (Abstrakte Klassen erhalten einen geschützten Konstruktor.)  
+ Wenn für einen Typ, viele Sprachen nicht explizit keine Konstruktoren deklariert werden (z. B. C#) einen öffentlichen parameterlosen Konstruktor wird automatisch hinzugefügt. (Abstrakte Klassen erhalten einen geschützten Konstruktor.)  
   
- Eine Klasse einen parametrisierten Konstruktor hinzugefügt wird verhindert, dass den Compiler die standardmäßigen Konstruktor hinzufügt. Dies führt häufig zu versehentlichen Änderungen.  
+ Eine Klasse einen parametrisierten Konstruktor hinzugefügt wird verhindert, dass der Compiler den parameterlosen Konstruktor hinzufügen. Dies führt häufig zu versehentlichen Änderungen.  
   
- **X AVOID** explizit standardmäßige Konstruktoren für Strukturen definiert.  
+ **X vermeiden** explizit parameterlose Konstruktoren für Strukturen definiert.  
   
- Dadurch Arrayerstellung schneller, da der Standardkonstruktor nicht definiert ist, es nicht unbedingt auf alle Slot im Array ausgeführt werden. Beachten Sie, dass viele Compiler, u. a. c#, Strukturen, die aus diesem Grund parameterlose Konstruktoren besitzen nicht zulassen.  
+ Dadurch Arrayerstellung schneller, da der parameterlose Konstruktor nicht definiert ist, es nicht unbedingt auf alle Slot im Array ausgeführt werden. Beachten Sie, dass viele Compiler, u. a. c#, Strukturen, die aus diesem Grund parameterlose Konstruktoren besitzen nicht zulassen.  
   
  **X AVOID** virtuelle Member für ein Objekt in seinem Konstruktor aufrufen.  
   

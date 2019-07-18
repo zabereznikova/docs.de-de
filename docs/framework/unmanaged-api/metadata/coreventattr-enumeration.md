@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1a50c15071ea1e696e508c779309225c7e7bfa2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7562ec10b6822ae0ec1478cdb077578493ea0b7a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097820"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781877"
 ---
 # <a name="coreventattr-enumeration"></a>CorEventAttr-Enumeration
 Enthält Werte, die die Metadaten eines Ereignisses beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorEventAttr {  
   
     evSpecialName           =   0x0200,  

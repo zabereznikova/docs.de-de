@@ -10,12 +10,12 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb51dfbae4d9c4ef205e67ac15c5027e62a9a938
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839079"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663200"
 ---
 # <a name="set-statement-visual-basic"></a>Set-Anweisung (Visual Basic)
 Deklariert eine `Set` Eigenschaftenprozedur, mit einer Eigenschaft einen Wert zuweisen.  
@@ -35,13 +35,13 @@ End Set
  `accessmodifier`  
  Optional Klicken Sie auf höchstens die `Get` und `Set` Anweisungen in dieser Eigenschaft. Einer der folgenden Werte ist möglich:  
   
--   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
--   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
--   `Protected Friend`  
+- `Protected Friend`  
   
  Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -70,13 +70,13 @@ End Set
   
 ## <a name="rules"></a>Regeln  
   
--   **Gemischte Zugriffsebenen.** Wenn Sie eine Eigenschaft mit Lese-/ Schreibzugriff definieren, können Sie optional eine andere Zugriffsebene angeben, entweder die `Get` oder `Set` Prozedur, aber nicht beides. Wenn Sie dies tun, muss die Zugriffsebene der Prozedur restriktiver ist als die Zugriffsebene der Eigenschaft. Z. B., wenn die Eigenschaft deklariert ist `Friend`, Sie können deklarieren, die `Set` Prozedur `Private`, aber nicht `Public`.  
+- **Gemischte Zugriffsebenen.** Wenn Sie eine Eigenschaft mit Lese-/ Schreibzugriff definieren, können Sie optional eine andere Zugriffsebene angeben, entweder die `Get` oder `Set` Prozedur, aber nicht beides. Wenn Sie dies tun, muss die Zugriffsebene der Prozedur restriktiver ist als die Zugriffsebene der Eigenschaft. Z. B., wenn die Eigenschaft deklariert ist `Friend`, Sie können deklarieren, die `Set` Prozedur `Private`, aber nicht `Public`.  
   
      Wenn Sie definieren eine `WriteOnly` -Eigenschaft, die `Set` Prozedur darstellt, die gesamte Eigenschaft. Sie können nicht deklarieren eine andere Zugriffsebene für `Set`, da hierdurch zwei Zugriffsebenen für die Eigenschaft festgelegt werden.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Zurückgeben einer Eigenschaftenprozedur.** Wenn die `Set` Prozedur werden an den aufrufenden Code zurückgibt, die Ausführung wird fortgeführt, nach der Anweisung, die den zu speichernde Wert bereitgestellt.  
+- **Zurückgeben einer Eigenschaftenprozedur.** Wenn die `Set` Prozedur werden an den aufrufenden Code zurückgibt, die Ausführung wird fortgeführt, nach der Anweisung, die den zu speichernde Wert bereitgestellt.  
   
      `Set` Property-Prozeduren können entweder Zurückgeben der [Return-Anweisung](../../../visual-basic/language-reference/statements/return-statement.md) oder [Exit-Anweisung](../../../visual-basic/language-reference/statements/exit-statement.md).  
   

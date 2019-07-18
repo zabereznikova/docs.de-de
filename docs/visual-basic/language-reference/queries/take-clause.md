@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
 ms.openlocfilehash: cb109eaf43fee19b77ac690492b85919c9d78301
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054392"
 ---
 # <a name="take-clause-visual-basic"></a>Take-Klausel (Visual Basic)
 Gibt eine angegebene Anzahl von zusammenhängenden Elementen vom Anfang einer Auflistung zurück.  

@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 88e30caed97938501302c05830df6546a6822a48
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863726"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Vorgehensweise: Erstellen Sie eine Prozedur, die einen Wert zurückgibt (Visual Basic)
 Sie verwenden eine `Function` -Prozedur, einen Wert an den aufrufenden Code zurückgibt.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>Zum Erstellen einer Prozedur, die einen Wert zurückgibt.  
   
-1.  Verwendung außerhalb anderer Prozeduren ein `Function` -Anweisung, gefolgt von einer `End Function` Anweisung.  
+1. Verwendung außerhalb anderer Prozeduren ein `Function` -Anweisung, gefolgt von einer `End Function` Anweisung.  
   
-2.  In der `Function` -Anweisung, befolgen Sie die `Function` Schlüsselwort mit dem Namen der Prozedur, und klicken Sie dann die Liste der Parameter in Klammern.  
+2. In der `Function` -Anweisung, befolgen Sie die `Function` Schlüsselwort mit dem Namen der Prozedur, und klicken Sie dann die Liste der Parameter in Klammern.  
   
-3.  Führen Sie die Klammern mit einer `As` -Klausel, um den Datentyp des zurückgegebenen Werts angeben.  
+3. Führen Sie die Klammern mit einer `As` -Klausel, um den Datentyp des zurückgegebenen Werts angeben.  
   
-4.  Platzieren Sie Anweisungen von der Prozedur bei der Code zwischen den `Function` und `End Function` Anweisungen.  
+4. Platzieren Sie Anweisungen von der Prozedur bei der Code zwischen den `Function` und `End Function` Anweisungen.  
   
-5.  Verwenden einer `Return` -Anweisung den Wert an den aufrufenden Code zurückgegeben.  
+5. Verwenden einer `Return` -Anweisung den Wert an den aufrufenden Code zurückgegeben.  
   
      Die folgenden `Function` Prozedur berechnet werden, die längste Seite, die Hypotenuse eines rechtwinkligen Dreiecks, anhand der Werte der beiden anderen Seiten.  
   

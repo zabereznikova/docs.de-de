@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 29afeb84498f2b1d000940ddc28545602a44d408
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077760"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626153"
 ---
 # <a name="copying-dataset-contents"></a>Kopieren von DataSet-Inhalten
 Sie können eine Kopie erstellen eine <xref:System.Data.DataSet> , damit Sie ohne Auswirkungen auf die ursprünglichen Daten mit Daten arbeiten können, oder Arbeiten mit einer Teilmenge der Daten aus einer **DataSet**. Beim Kopieren einer **DataSet**, können Sie:  
   
--   Erstellen Sie eine genaue Kopie der **DataSet**, einschließlich Schema, Daten, Informationen zum Zeilenstatus und Zeilenversionen.  
+- Erstellen Sie eine genaue Kopie der **DataSet**, einschließlich Schema, Daten, Informationen zum Zeilenstatus und Zeilenversionen.  
   
--   Erstellen Sie eine **DataSet** , enthält das Schema einer vorhandenen **DataSet**, aber nur die Zeilen, die geändert wurden. Sie können alle Zeilen zurückgeben, die geändert wurden, oder geben Sie einen bestimmten **DataRowState**. Weitere Informationen zum Zeilenstatus finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+- Erstellen Sie eine **DataSet** , enthält das Schema einer vorhandenen **DataSet**, aber nur die Zeilen, die geändert wurden. Sie können alle Zeilen zurückgeben, die geändert wurden, oder geben Sie einen bestimmten **DataRowState**. Weitere Informationen zum Zeilenstatus finden Sie unter [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
--   Kopieren Sie das Schema oder die relationale Struktur von den **DataSet** , ohne dass alle Zeilen kopiert. Zeilen können mit <xref:System.Data.DataTable> in eine vorhandene <xref:System.Data.DataTable.ImportRow%2A> importiert werden.  
+- Kopieren Sie das Schema oder die relationale Struktur von den **DataSet** , ohne dass alle Zeilen kopiert. Zeilen können mit <xref:System.Data.DataTable> in eine vorhandene <xref:System.Data.DataTable.ImportRow%2A> importiert werden.  
   
  Erstellen Sie eine genaue Kopie der **DataSet** , die sowohl Schema-als auch Daten enthält, verwenden Sie die <xref:System.Data.DataSet.Copy%2A> -Methode der der **DataSet**. Im folgenden Codebeispiel wird veranschaulicht, wie erstellen Sie eine genaue Kopie der **DataSet**.  
   
@@ -98,5 +98,5 @@ foreach (DataRow copyRow in copyRows)
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

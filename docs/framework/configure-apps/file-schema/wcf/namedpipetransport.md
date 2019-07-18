@@ -2,12 +2,12 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: fd7dc38e229b6135f91fc159596ed1669d43701a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 819639eabf0332a34d6a7250159d24e42552f874
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228236"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423094"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
 Definiert einen Transport, durch den ein Kanal Nachrichten mit benannten Pipes 체bertr채gt, wenn er in einer benutzerdefinierten Bindung enthalten ist.  
@@ -34,7 +34,7 @@ Definiert einen Transport, durch den ein Kanal Nachrichten mit benannten Pipes �
                     transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
   <connectionPoolSettings groupName="String"
                           idleTimeout="TimeSpan"
-                          maxOutboundConnectionsPerEndpopint="Integer" />
+                          maxOutboundConnectionsPerEndpoint="Integer" />
 </namedPipeTransport>
 ```  
   
@@ -79,7 +79,7 @@ Das `namedPipeTransport`-Element stellt den Startpunkt f체r das Erstellen einer 
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [W채hlen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Ausw채hlen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)

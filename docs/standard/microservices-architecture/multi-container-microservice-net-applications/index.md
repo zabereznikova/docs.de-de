@@ -1,15 +1,13 @@
 ---
 title: Entwerfen und Entwickeln von .NET-Anwendungen, die auf mehreren Containern und Microservice basieren
 description: .NET-Microservices-Architektur für .NET-Containeranwendungen | Grundlegendes zur externen Architektur für das Entwerfen und Entwickeln von .NET-Anwendungen, die auf mehreren Containern und Microservice basieren
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 3bbf746aa9c0b66a097b8c4df2964b5679342fd0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8c2f828e9913a0efcdf580371124b0f624daeffe
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144142"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639461"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Entwerfen und Entwickeln von .NET-Anwendungen, die auf mehreren Containern und Microservice basieren
 

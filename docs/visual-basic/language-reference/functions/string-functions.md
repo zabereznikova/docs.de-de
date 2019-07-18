@@ -5,11 +5,11 @@ helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
 ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801991"
 ---
 # <a name="string-functions-visual-basic"></a>String-Funktionen (Visual Basic)
 In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum Suchen und Bearbeiten von Zeichenfolgen bereitstellt.  

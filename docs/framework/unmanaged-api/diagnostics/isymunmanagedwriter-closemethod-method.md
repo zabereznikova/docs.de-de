@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 591279a80b7d6a770127fb98eb71c056c48bdffd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 23f77f30b84622dffd8c76bb9302ad564f40ed41
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231213"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778186"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>ISymUnmanagedWriter::CloseMethod-Methode
 Schließt die aktuelle Methode. Sobald eine Methode geschlossen wurde, können keine Symbole mehr darin definiert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CloseMethod();  
 ```  
   

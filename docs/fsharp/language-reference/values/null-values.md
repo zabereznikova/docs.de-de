@@ -3,11 +3,11 @@ title: NULL-Werte
 description: Erfahren Sie, wie der null-Wert in der Programmiersprache F# verwendet wird.
 ms.date: 03/22/2019
 ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902277"
 ---
 # <a name="null-values"></a>NULL-Werte
 
@@ -31,7 +31,7 @@ Um einen null-Wert zu interpretieren, der von einer .NET-Methode abgerufen werde
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-NULL-Werte für F#-Typen können auch auf andere Weise, wie z. B. bei Verwendung von generiert `Array.zeroCreate`, welche Aufrufe `Unchecked.defaultof`. Sie müssen Code zum Beibehalten der null-Werten gekapselt vorsichtig sein. In einer Bibliothek nur für F# vorgesehen sind müssen Sie keinen null-Werte in jeder Funktion überprüfen. Wenn Sie eine Bibliothek für die Interoperation mit anderen .NET-Sprachen schreiben, müssen Sie möglicherweise Hinzufügen von Überprüfungen auf Null Eingabeparametern, und lösen eine `ArgumentNullException`genau wie in C# oder Visual Basic-Code.
+NULL-Werte für F#-Typen können auch auf andere Weise, wie z. B. bei Verwendung von generiert `Array.zeroCreate`, welche Aufrufe `Unchecked.defaultof`. Sie müssen Code zum Beibehalten der null-Werten gekapselt vorsichtig sein. In einer Bibliothek nur für F# vorgesehen sind müssen Sie keinen null-Werte in jeder Funktion überprüfen. Wenn Sie eine Bibliothek für die Interoperation mit anderen .NET-Sprachen schreiben, müssen Sie möglicherweise Hinzufügen von Überprüfungen auf Null Eingabeparametern, und lösen eine `ArgumentNullException`genau wie in c# oder Visual Basic-Code.
 
 Sie können den folgenden Code verwenden, um zu überprüfen, ob ein beliebiger Wert gleich null ist.
 

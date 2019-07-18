@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: 1b76d21cb4f416aae76e7597ad16cfd45e5b7cad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210265"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636513"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts
 

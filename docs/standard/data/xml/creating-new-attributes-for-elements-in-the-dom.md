@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9cbef07e3db294dd4c0ffca1f25c15ec39e6ecf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024570"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647935"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Erstellen von neuen Attributen für Elemente im Dokumentobjektmodell
 Das Erstellen von neuen Attributen unterscheidet sich vom Erstellen anderer Knotentypen, da Attribute keine Knoten sind, sondern Eigenschaften eines Elementknotens, und in einer mit dem Element verknüpften **XmlAttributeCollection** enthalten sind. Es gibt verschiedene Möglichkeiten, ein Attribut zu erstellen und an ein Element anzuhängen:  
   
--   Den Elementknoten abrufen und dann mit **SetAttribute** der Attributauflistung dieses Elements ein Attribut hinzufügen  
+- Den Elementknoten abrufen und dann mit **SetAttribute** der Attributauflistung dieses Elements ein Attribut hinzufügen  
   
--   Mit der **CreateAttribute**-Methode einen **XmlAttribute**-Knoten erstellen, den Elementknoten abrufen und dann mit **SetAttributeNode** den Knoten der Attributauflistung dieses Elements hinzufügen  
+- Mit der **CreateAttribute**-Methode einen **XmlAttribute**-Knoten erstellen, den Elementknoten abrufen und dann mit **SetAttributeNode** den Knoten der Attributauflistung dieses Elements hinzufügen  
   
  Im folgenden Beispiel wird veranschaulicht, wie Sie einem Element mit der **SetAttribute**-Methode ein Attribut hinzufügen.  
   
@@ -74,7 +74,7 @@ public class Sample
   
  Im folgenden Beispiel wird dargestellt, wie mit der **CreateAttribute**-Methode ein neues Attribut erstellt wird. Anschließend wird das Attribut mithilfe der **SetAttributeNode**-Methode der Attributauflistung des **book**-Elements hinzugefügt.  
   
- Mit dem folgenden XML-Code   
+ Mit dem folgenden XML-Code  
   
 ```xml  
 <book genre='novel' ISBN='1-861001-57-5'>  
@@ -82,7 +82,7 @@ public class Sample
 </book>  
 ```  
   
- erstellen Sie ein neues Attribut. Geben Sie ihm einen Wert   
+ erstellen Sie ein neues Attribut. Geben Sie ihm einen Wert  
   
 ```vb  
 Dim attr As XmlAttribute = doc.CreateAttribute("publisher")  
@@ -122,7 +122,7 @@ doc.DocumentElement.SetAttributeNode(attr);
  Wenn Sie ein Element erstellen, das gemäß Deklaration ein Standardattribut aufweist, wird durch das Dokumentobjektmodell (DOM) ein neues Standardattribut mit seinem Standardwert erstellt und an das Element angehängt. Gleichzeitig werden die untergeordneten Knoten des Standardattributs erstellt.  
   
 ## <a name="attribute-child-nodes"></a>Untergeordnete Knoten von Attributen  
- Die Werte eines Attributknotens werden zu dessen untergeordneten Knoten. Es gibt nur zwei Typen von gültigen untergeordneten Knoten: **XmlText**-Knoten und **XmlEntityReference**-Knoten. Diese sind dahingehend als untergeordnete Knoten zu betrachten, dass sie von Methoden wie **FirstChild** und **LastChild** als untergeordnete Knoten verarbeitet werden. Dieses Merkmal eines Attributs mit untergeordneten Knoten ist von Bedeutung, wenn Sie versuchen, Attribute oder untergeordnete Knoten von Attributen zu entfernen. Weitere Informationen hierzu finden Sie unter [Entfernen von Attributen aus einem Elementknoten im DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
+ Die Werte eines Attributknotens werden zu dessen untergeordneten Knoten. Es gibt nur zwei Typen von zulässigen untergeordneten Knoten: **XmlText**-Knoten und **XmlEntityReference**-Knoten. Diese sind dahingehend als untergeordnete Knoten zu betrachten, dass sie von Methoden wie **FirstChild** und **LastChild** als untergeordnete Knoten verarbeitet werden. Dieses Merkmal eines Attributs mit untergeordneten Knoten ist von Bedeutung, wenn Sie versuchen, Attribute oder untergeordnete Knoten von Attributen zu entfernen. Weitere Informationen hierzu finden Sie unter [Entfernen von Attributen aus einem Elementknoten im DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

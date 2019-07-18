@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab7df9b77b1820f291c1b1873b4dfb39e326bc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8d6be64137b59c84dfadbd7f0e4895eac2fb27e4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193160"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776799"
 ---
 # <a name="isymunmanageddocumentfindclosestline-method"></a>ISymUnmanagedDocument::FindClosestLine-Methode
 Gibt die nächste Zeile, die ein Sequenzpunkt ist, ausgehend von einer Zeile in diesem Dokument, das nicht unbedingt ein Sequenzpunkt zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT FindClosestLine(  
     [in]  ULONG32  line,  
     [out, retval] ULONG32*  pRetVal);  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db609bdee7975b6c067271f99529e2cf2240f720
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480181"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753340"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString-Methode
 Weist eine neue Zeichenfolgeninstanz mit dem angegebenen Inhalt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT NewString (  
     [in] LPCWSTR   string  
 );  

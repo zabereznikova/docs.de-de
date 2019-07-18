@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c54b2af6e7a200db89bfd7335868a629d7a886fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141309"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739466"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState-Enumeration
 Gibt den Benutzerzustand eines Threads an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugUserState {  
     USER_STOP_REQUESTED     =  0x01,  
     USER_SUSPEND_REQUESTED  =  0x02,  
@@ -72,4 +72,4 @@ typedef enum CorDebugUserState {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

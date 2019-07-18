@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abe9a7b617e5fec0f25765dc5eb94d57ead1ffcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b8c5d35af072b773786a8be5ad7d1e71a21c38b2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221045"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773080"
 ---
 # <a name="iclrdebugmanagersetdacl-method"></a>ICLRDebugManager::SetDacl-Methode
 Diese Methode ist nicht implementiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetDacl (  
     [in] PACL pacl  
 );  

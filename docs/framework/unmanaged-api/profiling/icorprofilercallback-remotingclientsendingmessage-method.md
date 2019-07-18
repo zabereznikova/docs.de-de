@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61a36ff23bf9deac25983f06387b2bbbfd49546b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4729a8d3ac2c6f7ec51a032a07ebfd1c2838cb9a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133184"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782907"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage-Methode
 Benachrichtigt den Profiler, dass der Client eine Anforderung an den Server sendet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT RemotingClientSendingMessage(  
     [in] GUID *pCookie,  
     [in] BOOL fIsAsync);  
@@ -39,11 +39,11 @@ HRESULT RemotingClientSendingMessage(
  `pCookie`  
  [in] Ein Wert, mit dem Wert im bereitgestellten [ICorProfilerCallback:: RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) unter diesen Bedingungen:  
   
--   Remoting-GUID-Cookies sind aktiv.  
+- Remoting-GUID-Cookies sind aktiv.  
   
--   Der Kanal ist erfolgreich, bei der Übermittlung der Nachricht.  
+- Der Kanal ist erfolgreich, bei der Übermittlung der Nachricht.  
   
--   GUID-Cookies werden auf den serverseitigen Prozess aktiv.  
+- GUID-Cookies werden auf den serverseitigen Prozess aktiv.  
   
  Dies ermöglicht die einfache Kopplung der Remotingaufrufe und die Erstellung einer logischen Aufrufliste.  
   

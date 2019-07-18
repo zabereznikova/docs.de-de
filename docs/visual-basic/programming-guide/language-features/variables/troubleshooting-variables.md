@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 31aca95bb292ecd0bb04fda6ded83d4af8be0e2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831123"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598617"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Problembehandlung bei Variablen in Visual Basic
 Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei der Arbeit mit Variablen in Visual Basic.  
@@ -18,9 +18,9 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
 ## <a name="unable-to-access-members-of-an-object"></a>Zugriff auf Member eines Objekts ist nicht möglich  
  Wenn Ihr Code versucht, auf eine Eigenschaft oder Methode eines Objekts zuzugreifen, können zwei Arten von Fehlern auftreten:  
   
--   Der Compiler kann eine Fehlermeldung generieren, wenn Sie die Objektvariable als bestimmten Typ deklarieren und dann auf einen Member verweisen, der nicht durch diesen Typ definiert ist.  
+- Der Compiler kann eine Fehlermeldung generieren, wenn Sie die Objektvariable als bestimmten Typ deklarieren und dann auf einen Member verweisen, der nicht durch diesen Typ definiert ist.  
   
--   Eine Laufzeit- <xref:System.MemberAccessException> tritt auf, wenn das einer Objektvariablen zugewiesene Objekt nicht den Member verfügbar macht, auf den Ihr Code zugreifen möchten. Bei einer Variablen von [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)können Sie diese Ausnahmemeldung auch erhalten, wenn der Member nicht `Public`auftreten können. Der Grund ist, dass die späte Bindung nur den Zugriff auf `Public` -Member erlaubt.  
+- Eine Laufzeit- <xref:System.MemberAccessException> tritt auf, wenn das einer Objektvariablen zugewiesene Objekt nicht den Member verfügbar macht, auf den Ihr Code zugreifen möchten. Bei einer Variablen von [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)können Sie diese Ausnahmemeldung auch erhalten, wenn der Member nicht `Public`auftreten können. Der Grund ist, dass die späte Bindung nur den Zugriff auf `Public` -Member erlaubt.  
   
  Wenn [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) für die Typüberprüfung `On`festlegt, kann eine Objektvariable nur auf die Methoden und Eigenschaften der Klasse zugreifen, mit der Sie sie deklarieren. Dies wird anhand des folgenden Beispiels veranschaulicht.  
 

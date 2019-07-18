@@ -5,27 +5,27 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 4a77060661cb0d71b0209cbcdeba23ffc2c6e5c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088571"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610530"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Code-Behind und XAML in WPF
 <a name="introduction"></a> CodeBehind ist ein Begriff zum Beschreiben des Codes, der mit Markup-definierten Objekten verknüpft ist, verwendet bei einem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite ist Markupkompilierte. Dieses Thema beschreibt die Anforderungen für die Code-Behind sowie eine alternative Inline-Code-Mechanismus für den Code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Vorraussetzungen](#Prerequisites)  
+- [Erforderliche Komponenten](#Prerequisites)  
   
--   [Code-Behind und XAML-Sprache](#codebehind_and_the_xaml_language)  
+- [Code-Behind und XAML-Sprache](#codebehind_and_the_xaml_language)  
   
--   [Code-Behind-Ereignishandler und Anforderungen der partiellen Klasse in WPF](#Code_behind__Event_Handler__and_Partial_Class)  
+- [Code-Behind-Ereignishandler und Anforderungen der partiellen Klasse in WPF](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+- [x:Code](#x_Code)  
   
--   [Einschränkungen von Inlinecode](#Inline_Code_Limitations)  
+- [Einschränkungen von Inlinecode](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
@@ -38,15 +38,15 @@ ms.locfileid: "59088571"
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
 ## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a>Code-Behind-Ereignishandler und Anforderungen der partiellen Klasse in WPF  
   
--   Die partielle Klasse muss vom Typ abgeleitet werden, die das Stammelement sichert.  
+- Die partielle Klasse muss vom Typ abgeleitet werden, die das Stammelement sichert.  
   
--   Beachten Sie, dass es sich bei den Markup kompilieren Buildvorgängen Standardverhalten, Sie die Ableitung in der Definition der partiellen Klasse leer auf der Code-Behind-Seite lassen können. Das kompilierte Ergebnis wird die Seitenstamm Unterstützungstyp um als Grundlage für die partielle Klasse ist, werden wird davon ausgegangen, selbst wenn er nicht angegeben. Auf dieses Verhalten ist jedoch nicht empfohlen.  
+- Beachten Sie, dass es sich bei den Markup kompilieren Buildvorgängen Standardverhalten, Sie die Ableitung in der Definition der partiellen Klasse leer auf der Code-Behind-Seite lassen können. Das kompilierte Ergebnis wird die Seitenstamm Unterstützungstyp um als Grundlage für die partielle Klasse ist, werden wird davon ausgegangen, selbst wenn er nicht angegeben. Auf dieses Verhalten ist jedoch nicht empfohlen.  
   
--   Die Ereignishandler, die Sie im Code-Behind schreiben müssen Instanzmethoden sein und darf nicht statische Methoden sein. Diese Methoden müssen definiert werden, von der partiellen Klasse innerhalb der CLR-Namespace identifizierte `x:Class`. Sie können nicht qualifizieren Sie den Namen eines ereignishandlers um anzuweisen, ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor einen Ereignishandler für die ereignisverknüpfung in einer anderen Klassenbereich gesucht.  
+- Die Ereignishandler, die Sie im Code-Behind schreiben müssen Instanzmethoden sein und darf nicht statische Methoden sein. Diese Methoden müssen definiert werden, von der partiellen Klasse innerhalb der CLR-Namespace identifizierte `x:Class`. Sie können nicht qualifizieren Sie den Namen eines ereignishandlers um anzuweisen, ein [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Prozessor einen Ereignishandler für die ereignisverknüpfung in einer anderen Klassenbereich gesucht.  
   
--   Der Handler muss den Delegaten für das entsprechende Ereignis in das System von Unterstützungstypen übereinstimmen.  
+- Der Handler muss den Delegaten für das entsprechende Ereignis in das System von Unterstützungstypen übereinstimmen.  
   
--   Für die Microsoft Visual Basic-Sprache gesagt können Sie die sprachspezifischen `Handles` zuzuordnende Schlüsselwort Handler Instanzen und Ereignissen in der Handlerdeklaration anstatt durch Anfügen von Handlern, die mit Attributen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Diese Technik verfügt jedoch über einige Einschränkungen. da die `Handles` Schlüsselwort kann nicht unterstützt, die bestimmte Features von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ereignissystem, z. B. bestimmte Ereignisszenarien weitergeleitet oder angefügten Ereignisse. Weitere Informationen finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](visual-basic-and-wpf-event-handling.md).  
+- Für die Microsoft Visual Basic-Sprache gesagt können Sie die sprachspezifischen `Handles` zuzuordnende Schlüsselwort Handler Instanzen und Ereignissen in der Handlerdeklaration anstatt durch Anfügen von Handlern, die mit Attributen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Diese Technik verfügt jedoch über einige Einschränkungen. da die `Handles` Schlüsselwort kann nicht unterstützt, die bestimmte Features von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ereignissystem, z. B. bestimmte Ereignisszenarien weitergeleitet oder angefügten Ereignisse. Weitere Informationen finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](visual-basic-and-wpf-event-handling.md).  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
@@ -56,7 +56,7 @@ ms.locfileid: "59088571"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>Einschränkungen von Inlinecode  
- Sie sollten erwägen, zu vermeiden oder die Verwendung von Inline-Code einzuschränken. Im Hinblick auf die Architektur und die Codierung der Philosophie behält eine Trennung zwischen Markup und Code-Behind die Rollen-Designer und Entwickler viel klarer. Auf Weitere technische Ebene, der Code, den Sie für Inline-Code schreiben kann sein, schwierig zu erstellen, da Sie immer in schreiben die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] partielle Klasse generiert und können nur die standardzuordnungen von XML-Namespace verwenden. Da Sie keine hinzufügen können `using` -Anweisungen, müssen Sie vollständig qualifizieren vieler der [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] Aufrufe, die Sie vornehmen. Der Standardwert [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zuordnungen enthalten, die jedoch nicht alle [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Namespaces, die in vorhanden sind die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Assemblys müssen vollqualifiziert Aufrufe von Typen und Member in anderen CLR-Namespaces enthalten sind. Außerdem kann nicht definieren nichts über die partielle Klasse in den Inlinecode, und alle Benutzercodeentitäten, die Sie verweisen, als ein Element oder eine Variable in der generierten partiellen Klasse vorhanden sein. Andere Sprache Programmierfunktionen, z. B. Makros oder `#ifdef` für globale Variablen oder Buildvariablen, sind ebenfalls nicht verfügbar. Weitere Informationen finden Sie unter [X: Code-XAML-Grundtyp](../../xaml-services/x-code-intrinsic-xaml-type.md).  
+ Sie sollten erwägen, zu vermeiden oder die Verwendung von Inline-Code einzuschränken. Im Hinblick auf die Architektur und die Codierung der Philosophie behält eine Trennung zwischen Markup und Code-Behind die Rollen-Designer und Entwickler viel klarer. Auf Weitere technische Ebene, der Code, den Sie für Inline-Code schreiben kann sein, schwierig zu erstellen, da Sie immer in schreiben die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] partielle Klasse generiert und können nur die standardzuordnungen von XML-Namespace verwenden. Da Sie keine hinzufügen können `using` -Anweisungen, müssen Sie vollständig qualifizieren viele API-Aufrufe, die Sie vornehmen. Der Standardwert [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Zuordnungen enthalten, die jedoch nicht alle [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Namespaces, die in vorhanden sind die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Assemblys müssen vollqualifiziert Aufrufe von Typen und Member in anderen CLR-Namespaces enthalten sind. Außerdem kann nicht definieren nichts über die partielle Klasse in den Inlinecode, und alle Benutzercodeentitäten, die Sie verweisen, als ein Element oder eine Variable in der generierten partiellen Klasse vorhanden sein. Andere Sprache Programmierfunktionen, z. B. Makros oder `#ifdef` für globale Variablen oder Buildvariablen, sind ebenfalls nicht verfügbar. Weitere Informationen finden Sie unter [X: Code-XAML-Grundtyp](../../xaml-services/x-code-intrinsic-xaml-type.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

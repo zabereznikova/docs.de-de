@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
 ms.openlocfilehash: 6b3da322493d17e4f8e36a35b9a0e40fdc9dc685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767052"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Vorgehensweise: Horizontales oder vertikales Kippen eines UIElement
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.ScaleTransform> So kippen Sie ein <xref:System.Windows.UIElement> horizontal oder vertikal. In diesem Beispiel eine <xref:System.Windows.Controls.Button> Steuerelement (eine Art von <xref:System.Windows.UIElement>) gekippt wird, durch Anwenden einer <xref:System.Windows.Media.ScaleTransform> zu seine <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft.  

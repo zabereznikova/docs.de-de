@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 374ace4ec5e25731e4a7e958be145a660ff2ef7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094488"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614869"
 ---
 # <a name="property-element-net-native"></a>\<Eigenschaft > (Element (.NET Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.  
@@ -81,9 +81,9 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
  Das Kompilieren und Ausführen dieses Beispiels löst jedoch eine [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)-Ausnahme aus. Obwohl wir Metadaten für den `Book`-Typ verfügbar gemacht haben, haben wir keine Implementierungen der Eigenschaftengetter dynamisch zur Verfügung gestellt. Wir können diesen Fehler auf eine von zwei Arten beheben:  
   
--   Durch Definieren der `Dynamic`-Richtlinie für den `Book`-Typ in dessen [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)-Element.  
+- Durch Definieren der `Dynamic`-Richtlinie für den `Book`-Typ in dessen [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)-Element.  
   
--   Durch Hinzufügen eines verschachtelten [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)-Elements für jede Eigenschaft, deren Getter wir wie in der folgenden Datei „default.rd.xml“ aufrufen möchten.  
+- Durch Hinzufügen eines verschachtelten [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)-Elements für jede Eigenschaft, deren Getter wir wie in der folgenden Datei „default.rd.xml“ aufrufen möchten.  
   
     ```xml  
     <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -101,6 +101,6 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine Eigenschaft an.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

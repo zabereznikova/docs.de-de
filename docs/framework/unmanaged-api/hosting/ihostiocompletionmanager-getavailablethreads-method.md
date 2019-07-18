@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e96a12bbf9c4fdc8a0bc79661070eb7fec1a593
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4316412cec26ae5698918ff65b2da65de9f36ff2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123969"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779619"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>IHostIoCompletionManager::GetAvailableThreads-Methode
 Ruft die Anzahl der e/a-Abschlussthreads, der die Gesamtzahl der Threads, die vom Host verwaltet, die derzeit keine Anforderungen bedient werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetAvailableThreads (  
     [out] DWORD *pdwAvailableIoCompletionThreads  
 );  

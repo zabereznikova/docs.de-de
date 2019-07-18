@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5e59b0284ad1c05c16c33d520bc4c223e6ddace1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623248"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambdaausdrücke (Visual Basic)
 Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die verwendet werden kann, wo Delegaten gültig ist. Lambda-Ausdrücke können Funktionen oder Unterroutinen und können ein- oder mehrzeiligen. Sie können Werte aus dem aktuellen Bereich an einen Lambda-Ausdruck übergeben.  
@@ -43,27 +43,27 @@ Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die verwen
 ## <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax  
  Die Syntax eines Lambda-Ausdrucks ähnelt einer standard-Funktion oder Unterroutine. Die Unterschiede sind wie folgt aus:  
   
--   Ein Lambda-Ausdruck ist nicht auf einen Namen haben.  
+- Ein Lambda-Ausdruck ist nicht auf einen Namen haben.  
   
--   Lambda-Ausdrücke sind keine Modifizierer, z. B. `Overloads` oder `Overrides`.  
+- Lambda-Ausdrücke sind keine Modifizierer, z. B. `Overloads` oder `Overrides`.  
   
--   Einzeilige Lambda-Funktionen verwenden Sie keine `As` -Klausel, um den Rückgabetyp zu bestimmen. Stattdessen wird der Typ des Werts abgeleitet, der der Text des Lambda-Ausdrucks ergibt. Wenn der Text des Lambda-Ausdrucks ist z. B. `cust.City = "London"`, dessen Rückgabetyp `Boolean`.  
+- Einzeilige Lambda-Funktionen verwenden Sie keine `As` -Klausel, um den Rückgabetyp zu bestimmen. Stattdessen wird der Typ des Werts abgeleitet, der der Text des Lambda-Ausdrucks ergibt. Wenn der Text des Lambda-Ausdrucks ist z. B. `cust.City = "London"`, dessen Rückgabetyp `Boolean`.  
   
--   In mehrzeiligen Lambdafunktionen können Sie entweder einen Rückgabetyp angeben, mit einem `As` -Klausel, oder lassen Sie die `As` Klausel so, dass der Rückgabetyp abgeleitet wird. Wenn die `As` -Klausel weggelassen, bei einer mehrzeiligen Lambda-Funktion, die der Rückgabetyp abgeleitet wird, werden von der bestimmende Typ von allen die `Return` Anweisungen in der mehrzeiligen Lambda-Funktion. Die *bestimmende Typ* ist ein eindeutiger Typ, der alle anderen Typen erweitert werden können. Wenn dieser eindeutige Typ nicht bestimmt werden kann, ist der bestimmende Typ der eindeutige Typ, dem alle anderen Typen im Array eingegrenzt werden können. Wenn keiner dieser eindeutigen Typen bestimmt werden kann, ist der bestimmende Typ `Object`. In diesem Fall wenn `Option Strict` nastaven NA hodnotu `On`, tritt ein Compilerfehler auf.  
+- In mehrzeiligen Lambdafunktionen können Sie entweder einen Rückgabetyp angeben, mit einem `As` -Klausel, oder lassen Sie die `As` Klausel so, dass der Rückgabetyp abgeleitet wird. Wenn die `As` -Klausel weggelassen, bei einer mehrzeiligen Lambda-Funktion, die der Rückgabetyp abgeleitet wird, werden von der bestimmende Typ von allen die `Return` Anweisungen in der mehrzeiligen Lambda-Funktion. Die *bestimmende Typ* ist ein eindeutiger Typ, der alle anderen Typen erweitert werden können. Wenn dieser eindeutige Typ nicht bestimmt werden kann, ist der bestimmende Typ der eindeutige Typ, dem alle anderen Typen im Array eingegrenzt werden können. Wenn keiner dieser eindeutigen Typen bestimmt werden kann, ist der bestimmende Typ `Object`. In diesem Fall wenn `Option Strict` nastaven NA hodnotu `On`, tritt ein Compilerfehler auf.  
   
      Wenn die Ausdrücke für bereitgestellt, z. B. die `Return` -Anweisung enthalten die Werte des Typs `Integer`, `Long`, und `Double`, das resultierende Array ist vom Typ `Double`. Beide `Integer` und `Long` zu erweitert `Double` und nur `Double`. Daher ist `Double` der bestimmende Typ. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
--   Der Text einer einzeiligen-Funktion muss ein Ausdruck sein, der keine Anweisung einen Wert zurückgibt. Es gibt keine `Return` -Anweisung für einzeilige Funktionen. Der von der einzeilige-Funktion zurückgegebene Wert ist der Wert des Ausdrucks im Textkörper der Funktion.  
+- Der Text einer einzeiligen-Funktion muss ein Ausdruck sein, der keine Anweisung einen Wert zurückgibt. Es gibt keine `Return` -Anweisung für einzeilige Funktionen. Der von der einzeilige-Funktion zurückgegebene Wert ist der Wert des Ausdrucks im Textkörper der Funktion.  
   
--   Der Text der Unterroutine einzeilige muss es sich um einzeilige-Anweisung sein.  
+- Der Text der Unterroutine einzeilige muss es sich um einzeilige-Anweisung sein.  
   
--   Einzeilige Funktionen und Unterroutinen enthalten kein `End Function` oder `End Sub` Anweisung.  
+- Einzeilige Funktionen und Unterroutinen enthalten kein `End Function` oder `End Sub` Anweisung.  
   
--   Sie können den Datentyp eines Parameters des Lambda-Ausdruck angeben, mit der `As` Schlüsselwort oder den Datentyp des Parameters abgeleitet werden kann. Entweder für alle Parameter müssen angegeben haben, oder alle Datentypen per Rückschluss abgeleitet werden müssen.  
+- Sie können den Datentyp eines Parameters des Lambda-Ausdruck angeben, mit der `As` Schlüsselwort oder den Datentyp des Parameters abgeleitet werden kann. Entweder für alle Parameter müssen angegeben haben, oder alle Datentypen per Rückschluss abgeleitet werden müssen.  
   
--   `Optional` und `Paramarray` Parameter sind nicht zulässig.  
+- `Optional` und `Paramarray` Parameter sind nicht zulässig.  
   
--   Generische Parameter sind nicht zulässig.  
+- Generische Parameter sind nicht zulässig.  
   
 ## <a name="async-lambdas"></a>Asynchrone Lambdas  
  Sie können ganz einfach erstellen, Lambda-Ausdrücke und Anweisungen, die asynchrone Verarbeitung enthalten, mit der [Async](../../../../visual-basic/language-reference/modifiers/async.md) und [Await-Operator](../../../../visual-basic/language-reference/operators/await-operator.md) Schlüsselwörter. Das folgende Windows Forms enthält z. B. einen Ereignishandler, der eine Async-Methode, `ExampleMethodAsync`, aufruft und erwartet.  
@@ -118,15 +118,15 @@ End Class
   
  Das folgende Beispiel zeigt die Bandbreite der Zugriffsrechte des geschachtelten Lambda-Ausdrucks. Wenn der zurückgegebenen Lambda-Ausdruck ausgeführt wird `Main` als `aDel`, greift er auf diese Elemente:  
   
--   Ein Feld der Klasse, die in der sie definiert ist: `aField`  
+- Ein Feld der Klasse, die in der sie definiert ist: `aField`  
   
--   Eine Eigenschaft der Klasse, die in der sie definiert ist: `aProp`  
+- Eine Eigenschaft der Klasse, die in der sie definiert ist: `aProp`  
   
--   Ein Parameter der Methode `functionWithNestedLambda`, in dem sie definiert ist: `level1`  
+- Ein Parameter der Methode `functionWithNestedLambda`, in dem sie definiert ist: `level1`  
   
--   Eine lokale Variable vom `functionWithNestedLambda`: `localVar`  
+- Eine lokale Variable vom `functionWithNestedLambda`: `localVar`  
   
--   Ein Parameter des Lambdaausdrucks darstellen, in dem sie geschachtelt ist: `level2`  
+- Ein Parameter des Lambdaausdrucks darstellen, in dem sie geschachtelt ist: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>Beispiele  
   
--   Das folgende Beispiel definiert einen Lambda-Ausdruck, der zurückgibt `True` , wenn das Argument NULL-Werte zulässt, einen Wert zugewiesen wurde und `False` Wenn der Wert `Nothing`.  
+- Das folgende Beispiel definiert einen Lambda-Ausdruck, der zurückgibt `True` , wenn das Argument NULL-Werte zulässt, einen Wert zugewiesen wurde und `False` Wenn der Wert `Nothing`.  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   Das folgende Beispiel definiert einen Lambda-Ausdruck, der den Index des letzten Elements in einem Array zurückgibt.  
+- Das folgende Beispiel definiert einen Lambda-Ausdruck, der den Index des letzten Elements in einem Array zurückgibt.  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

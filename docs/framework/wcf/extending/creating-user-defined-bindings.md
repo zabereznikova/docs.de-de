@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e1e776a42ca63e4b862e307cbcae1bab2847d0ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188720"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587299"
 ---
 # <a name="creating-user-defined-bindings"></a>Erstellen benutzerdefinierter Bindungen
 Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System bereitgestellt werden:  
   
--   Erstellen Sie eine benutzerdefinierte Bindung auf Grundlage der <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, die einen Container darstellt, den Sie mit Bindungselementen füllen. Die benutzerdefinierte Bindung wird dann einem Dienstendpunkt hinzugefügt. Sie können die benutzerdefinierte Bindung entweder programmgesteuert oder in der Konfigurationsdatei einer Anwendung erstellen. Um das Bindungselement aus einer Anwendungskonfigurationsdatei verwenden zu können, muss es <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> erweitern. Weitere Informationen zu benutzerdefinierten Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md) und <xref:System.ServiceModel.Channels.CustomBinding>.  
+- Erstellen Sie eine benutzerdefinierte Bindung auf Grundlage der <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, die einen Container darstellt, den Sie mit Bindungselementen füllen. Die benutzerdefinierte Bindung wird dann einem Dienstendpunkt hinzugefügt. Sie können die benutzerdefinierte Bindung entweder programmgesteuert oder in der Konfigurationsdatei einer Anwendung erstellen. Um das Bindungselement aus einer Anwendungskonfigurationsdatei verwenden zu können, muss es <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> erweitern. Weitere Informationen zu benutzerdefinierten Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md) und <xref:System.ServiceModel.Channels.CustomBinding>.  
   
--   Sie können eine Klasse erstellen, die von einer Standardbindung abgeleitet ist. Sie können beispielsweise eine Klasse von <xref:System.ServiceModel.WSHttpBinding> ableiten und die <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A>-Methode überschreiben, um Bindungselemente abzurufen und ein benutzerdefiniertes Bindungselement einzufügen oder einen bestimmten Wert für die Sicherheit festzulegen.  
+- Sie können eine Klasse erstellen, die von einer Standardbindung abgeleitet ist. Sie können beispielsweise eine Klasse von <xref:System.ServiceModel.WSHttpBinding> ableiten und die <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A>-Methode überschreiben, um Bindungselemente abzurufen und ein benutzerdefiniertes Bindungselement einzufügen oder einen bestimmten Wert für die Sicherheit festzulegen.  
   
--   Sie können einen neuen <xref:System.ServiceModel.Channels.Binding>-Typ erstellen, um die Bindungsimplementierung vollständig zu steuern.  
+- Sie können einen neuen <xref:System.ServiceModel.Channels.Binding>-Typ erstellen, um die Bindungsimplementierung vollständig zu steuern.  
   
 ## <a name="the-order-of-binding-elements"></a>Die Reihenfolge der Bindungselemente  
  Jedes Bindungselement stellt einen Verarbeitungsschritt beim Senden und Empfangen von Nachrichten dar. Zur Laufzeit erstellen Bindungselemente die Kanäle und die Listener, die notwendig sind, um ausgehende und eingehende Kanalstapel zu erstellen.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
 ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001367"
 ---
 # <a name="how-to-create-a-grid-element"></a>Vorgehensweise: Erstellen eines Rasterelements
 ## <a name="example"></a>Beispiel  

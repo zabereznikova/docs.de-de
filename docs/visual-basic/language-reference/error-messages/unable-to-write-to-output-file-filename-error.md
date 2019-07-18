@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 61ba4dbc668f7b236b0631f797feb4e81068e517
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e0a00c4f57e45d65ff46fb9487a603a67d5a9e5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827197"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620600"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Beim Schreiben in die Ausgabedatei kann nicht '\<Dateiname >': \<Fehler >
 Beim Erstellen der Datei ist ein Fehler aufgetreten.  
@@ -21,9 +21,9 @@ Beim Erstellen der Datei ist ein Fehler aufgetreten.
   
  Häufige Situationen, in denen eine Datei exklusiv genutzt wird, sind:  
   
--   Die Anwendung wird bereits ausgeführt und nutzt die Dateien. Stellen Sie zum Lösen dieses Problems sicher, dass die Anwendung nicht ausgeführt wird.  
+- Die Anwendung wird bereits ausgeführt und nutzt die Dateien. Stellen Sie zum Lösen dieses Problems sicher, dass die Anwendung nicht ausgeführt wird.  
   
--   Die Datei wurde in einer anderen Anwendung geöffnet. Stellen Sie zum Lösen dieses Problems sicher, dass keine andere Anwendung auf die Dateien zugreift. Es ist nicht immer ersichtlich, welche Anwendung auf Ihre Dateien zugreift; ein Neustart Ihres Computer kann in diesem Fall der einfachste Weg sein, um die Anwendung zu beenden.  
+- Die Datei wurde in einer anderen Anwendung geöffnet. Stellen Sie zum Lösen dieses Problems sicher, dass keine andere Anwendung auf die Dateien zugreift. Es ist nicht immer ersichtlich, welche Anwendung auf Ihre Dateien zugreift; ein Neustart Ihres Computer kann in diesem Fall der einfachste Weg sein, um die Anwendung zu beenden.  
   
  Es reicht aus, dass eine Projektausgabedatei schreibgeschützt ist, um diese Ausnahme auszulösen.  
   
@@ -31,31 +31,31 @@ Beim Erstellen der Datei ist ein Fehler aufgetreten.
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Kompilieren Sie das Programm erneut, um festzustellen, ob der Fehler erneut auftritt.  
+1. Kompilieren Sie das Programm erneut, um festzustellen, ob der Fehler erneut auftritt.  
   
-2.  Wenn der Fehler weiterhin auftritt, speichern Sie Ihre Arbeit, und starten Sie Visual Studio.  
+2. Wenn der Fehler weiterhin auftritt, speichern Sie Ihre Arbeit, und starten Sie Visual Studio.  
   
-3.  Wenn der Fehler weiterhin besteht, starten Sie den Computer neu.  
+3. Wenn der Fehler weiterhin besteht, starten Sie den Computer neu.  
   
-4.  Wenn der Fehler erneut auftritt, installieren Sie Visual Basic.  
+4. Wenn der Fehler erneut auftritt, installieren Sie Visual Basic.  
   
-5.  Wenn der Fehler auch nach der erneuten Installation auftritt, informieren Sie den Produktsupport von Microsoft.  
+5. Wenn der Fehler auch nach der erneuten Installation auftritt, informieren Sie den Produktsupport von Microsoft.  
   
 ### <a name="to-check-file-attributes-in-file-explorer"></a>So prüfen Sie Dateiattribute im Datei-Explorer  
   
-1.  Öffnen Sie den gewünschten Ordner.  
+1. Öffnen Sie den gewünschten Ordner.  
   
-2.  Klicken Sie auf die **Ansichten** Symbol, und wählen Sie **Details**.  
+2. Klicken Sie auf die **Ansichten** Symbol, und wählen Sie **Details**.  
   
-3.  Mit der rechten Maustaste in der Kopfzeile der Spalte, und wählen **Attribute** aus der Dropdown-Liste.  
+3. Mit der rechten Maustaste in der Kopfzeile der Spalte, und wählen **Attribute** aus der Dropdown-Liste.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>So ändern Sie die Attribute einer Datei oder eines Ordners  
   
-1.  In **Datei-Explorer**mit der rechten Maustaste auf die Datei oder den Ordner, und wählen Sie **Eigenschaften**.  
+1. In **Datei-Explorer**mit der rechten Maustaste auf die Datei oder den Ordner, und wählen Sie **Eigenschaften**.  
   
-2.  In der **Attribute** Teil der **allgemeine** Registerkarte die **schreibgeschützte** Feld.  
+2. In der **Attribute** Teil der **allgemeine** Registerkarte die **schreibgeschützte** Feld.  
   
-3.  Klicken Sie auf **OK**.  
+3. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Siehe auch
 

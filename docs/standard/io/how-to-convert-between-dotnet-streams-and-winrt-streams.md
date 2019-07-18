@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835134"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877938"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Vorgehensweise: Konvertieren von .NET Framework- und Windows-Runtime-Streams (nur unter Windows)
 
@@ -51,7 +51,7 @@ Konvertieren Sie einen .NET Framework-Stream mit einer der folgenden <xref:Syste
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType> konvertiert einen verwalteten Stream in .NET für UWP-Apps in einen Ausgabestream in der Windows-Runtime.
   
-- Bei der [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md)-Methode wird ein in .NET für UWP-Apps verwalteter Stream in einen Stream mit wahlfreiem Zugriff konvertiert, den die Windows-Runtime für Lese- und Schreibvorgänge verwenden kann.
+- Mit <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A?displayProperty=nameWithType> wird ein in .NET für UWP-Apps verwalteter Stream in einen Stream mit wahlfreiem Zugriff konvertiert, den die Windows-Runtime für Lese- und Schreibvorgänge verwenden kann.
 
 Wenn Sie einen .NET Framework-Stream in einen Windows-Runtime-Stream konvertieren, hängen die Funktionen des konvertierten Streams vom ursprünglichen Stream ab. Wenn z. B. der ursprüngliche Stream sowohl Lese- als auch Schreibvorgänge unterstützt und Sie <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> zum Konvertieren des Streams aufrufen, ist der zurückgegebene Typ ein `IRandomAccessStream`. Der `IRandomAccessStream` implementiert `IInputStream` und `IOutputStream` und unterstützt Lese- und Schreibvorgänge.
 
@@ -59,7 +59,7 @@ Wenn Sie einen .NET Framework-Stream in einen Windows-Runtime-Stream konvertiere
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>Beispiel: Konvertieren eines .NET Framework-Streams in einen Windows-Runtime-Stream mit wahlfreiem Zugriff
 
-Sie können wie im folgenden Beispiel gezeigt einen .NET Framework-Stream mithilfe der Methode [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) in einen Windows-Runtime-Stream mit wahlfreiem Zugriff konvertieren:
+Sie können wie im folgenden Beispiel gezeigt einen .NET Framework-Stream mithilfe der Methode <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A> in einen Windows-Runtime-Stream mit wahlfreiem Zugriff konvertieren:
 
 > [!IMPORTANT]
 > Stellen Sie sicher, dass der von Ihnen verwendete .NET Framework-Stream Suchvorgänge unterstützt, oder kopieren Sie ihn in einen Stream, der dies unterstützt. Um dies zu ermitteln, können Sie die <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> -Eigenschaft verwenden.

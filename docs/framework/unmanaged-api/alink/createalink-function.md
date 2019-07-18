@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b494b8b776f4cb0eb534233c5a03ab2d34a698ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 993848711f41c9e03b969a3c611982a5c8bc860d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115621"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742215"
 ---
 # <a name="createalink-function"></a>CreateALink-Funktion
 Erstellt eine Instanz der Assembly Linker und setzt einen Zeiger auf die angegebene Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateALink (  
    REFIID riid,  
    IUnknown **ppInterface  

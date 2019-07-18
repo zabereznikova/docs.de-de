@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da6321e50082c3f73477b8187cc5bf671655df21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 402d56b44c2b6f53f901e35c6d7b965811a40344
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365944"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636589"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames-Funktion
 

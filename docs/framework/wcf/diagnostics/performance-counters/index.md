@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2f4c62ff551ac66c4b7192a4e978db0a9f443f3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087858"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613699"
 ---
 # <a name="wcf-performance-counters"></a>WCF-Leistungsindikatoren
 Windows Communication Foundation (WCF) umfasst eine große Anzahl von Leistungsindikatoren können Sie die Leistung Ihrer Anwendung zu messen.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) umfasst eine große Anzahl von Leistungsi
   
  Das `performanceCounters`-Attribut kann dafür festgelegt werden, dass ein bestimmter Typ von Leistungsindikatoren aktiviert wird. Folgende Werte sind gültig:  
   
--   Alle: Alle kategorieindikatoren (ServiceModelService, ServiceModelEndpoint und ServiceModelOperation) werden aktiviert.  
+- Alle: Alle kategorieindikatoren (ServiceModelService, ServiceModelEndpoint und ServiceModelOperation) werden aktiviert.  
   
--   ServiceOnly: Nur ServiceModelService-kategorieindikatoren werden aktiviert. Dies ist der Standardwert.  
+- ServiceOnly: Nur ServiceModelService-kategorieindikatoren werden aktiviert. Dies ist der Standardwert.  
   
--   Aus: ServiceModel *-Leistungsindikatoren sind deaktiviert.  
+- Aus: ServiceModel *-Leistungsindikatoren sind deaktiviert.  
   
  Wenn Sie die Leistungsindikatoren für alle WCF-Anwendungen aktivieren möchten, können Sie die Konfigurationseinstellungen in der Datei "Machine.config" platzieren.  Informieren Sie sich die **Erhöhen der Arbeitsspeichergröße für Leistungsindikatoren** Abschnitt unten für Weitere Informationen zum Konfigurieren ausreichenden Arbeitsspeichers für Leistungsindikatoren auf Ihrem Computer.  
   
@@ -63,11 +63,11 @@ config.Save();
   
  Sie können die Menge des Leistungsindikator-Arbeitsspeichers für WCF-Kategorien in der Registrierung ändern. Dazu muss den drei folgenden Speicherorten ein neuer DWORD-Wert mit der Bezeichnung `FileMappingSize` hinzugefügt und auf den gewünschten Wert in Byte festgelegt werden. Starten Sie den Computer neu, damit diese Änderungen wirksam werden.  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
--   HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
+- HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0\Performance  
   
  Wenn eine große Anzahl von Objekten (z. B. ServiceHost) verworfen wird, die automatische Speicherbereinigung jedoch noch aussteht, registriert der `PrivateBytes`-Leistungsindikator eine ungewöhnlich hohe Anzahl. Zum Beheben dieses Problems können Sie entweder eigene anwendungsspezifische Indikatoren hinzufügen oder mithilfe des `performanceCounters`-Attributs nur Indikatoren auf Dienstebene aktivieren.  
   
@@ -76,11 +76,11 @@ config.Save();
   
  Sie können WMI verwenden, um den Namen einer Leistungsindikatorinstanz abzurufen. Ein auf ein Objekt angewendeter  
   
--   -Instanzname des Indikators Service erhalten Sie über WMI [Service](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) die "CounterInstanceName"-Eigenschaft der Instanz.  
+- -Instanzname des Indikators Service erhalten Sie über WMI [Service](../../../../../docs/framework/wcf/diagnostics/wmi/service.md) die "CounterInstanceName"-Eigenschaft der Instanz.  
   
--   Namen der Leistungsindikatorinstanz Endpunkt erhalten Sie über WMI [Endpunkt](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) die "CounterInstanceName"-Eigenschaft der Instanz.  
+- Namen der Leistungsindikatorinstanz Endpunkt erhalten Sie über WMI [Endpunkt](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) die "CounterInstanceName"-Eigenschaft der Instanz.  
   
--   Namen der Leistungsindikatorinstanz Vorgang erhalten Sie über WMI [Endpunkt](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) die "GetOperationCounterInstanceName"-Methode Instanz.  
+- Namen der Leistungsindikatorinstanz Vorgang erhalten Sie über WMI [Endpunkt](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md) die "GetOperationCounterInstanceName"-Methode Instanz.  
   
  Weitere Informationen zu WMI finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
@@ -126,15 +126,15 @@ ServiceName@ServiceBaseAddress
 ## <a name="programming-the-wcf-performance-counters"></a>Programmieren der WCF-Leistungsindikatoren  
  Mehrere Dateien werden in SDK-Installationsordner installiert, sodass Sie die WCF-Leistungsindikatoren programmgesteuert zugreifen können. Diese Dateien werden wie folgt aufgelistet.  
   
--   _ServiceModelEndpointPerfCounters.vrg  
+- _ServiceModelEndpointPerfCounters.vrg  
   
--   _ServiceModelOperationPerfCounters.vrg  
+- _ServiceModelOperationPerfCounters.vrg  
   
--   _ServiceModelServicePerfCounters.vrg  
+- _ServiceModelServicePerfCounters.vrg  
   
--   _SMSvcHostPerfCounters.vrg  
+- _SMSvcHostPerfCounters.vrg  
   
--   _TransactionBridgePerfCounters.vrg  
+- _TransactionBridgePerfCounters.vrg  
   
  Weitere Informationen zum programmgesteuerten Zugriff auf die Indikatoren finden Sie unter [Architektur der Leistungsindikatorprogrammierung](https://go.microsoft.com/fwlink/?LinkId=95179).  
   

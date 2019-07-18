@@ -1,13 +1,13 @@
 ---
 redirect_url: /dotnet/fsharp/tutorials/asynchronous-and-concurrent-programming/async
-ms.openlocfilehash: 4dfa5d6a814e94f33623ba33cbf83cd46f4e161b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ba9dbdd74cafbb8df42cec8af9dde472a6a33d7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "25726587"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645296"
 ---
 # <a name="asynchronous-and-concurrent-programming-in-f"></a>Asynchrone und parallele Programmierung inF# #
 
 > [!NOTE]
-Dies wird immer noch bearbeitet.
+> Dies wird immer noch bearbeitet.

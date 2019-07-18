@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
 ms.openlocfilehash: 8520504757e9e9ec9557b84ca2608b4cb99daf62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931391"
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>Vorgehensweise: Implementieren von Validierungslogik für benutzerdefinierte Objekte
 Dieses Beispiel veranschaulicht das Implementieren von Validierungslogik für ein benutzerdefiniertes Objekt, und klicken Sie dann an sie binden.  
@@ -36,4 +36,4 @@ Dieses Beispiel veranschaulicht das Implementieren von Validierungslogik für ei
 
 - <xref:System.Windows.Controls.ExceptionValidationRule>
 - [Implementieren der Bindungsvalidierung](how-to-implement-binding-validation.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

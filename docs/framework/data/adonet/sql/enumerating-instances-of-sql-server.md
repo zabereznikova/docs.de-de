@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: a723679fe18352e115df78af72975097dc28b617
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d6d76d677bcf7dfa7df632bde8de76401a46db05
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162854"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661887"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Aufzählen von SQL Server-Instanzen (ADO.NET)
 SQL Server lässt es sich um Anwendungen zu SQL Server-Instanzen im aktuellen Netzwerk zu suchen. Die hierzu erforderlichen Informationen werden den Entwicklern von Anwendungen durch die <xref:System.Data.Sql.SqlDataSourceEnumerator>-Klasse als <xref:System.Data.DataTable> verfügbar gemacht, die Informationen zu allen sichtbaren Servern enthält. Zurückgegebene Tabelle enthält eine Liste von Serverinstanzen, die auf das Netzwerk, entspricht die Liste bereitgestellt, wenn ein Benutzer versucht, eine neue Verbindung erstellen, und erweitert die Dropdown-Liste mit allen verfügbaren Servern auf, die **Verbindung Eigenschaften** Dialogfeld. Die Liste der angezeigten Ergebnisse ist nicht immer vollständig.  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|Name des Servers.|  
 |**InstanceName**|Name der Serverinstanz. Die Spalte bleibt leer, wenn der Server als Standardinstanz ausgeführt wird.|  
 |**IsClustered**|Gibt an, ob der Server Teil eines Clusters ist.|  
-|**Version**|Serverversion. Zum Beispiel:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-   10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-   11.0.xx (SQL Server 2012)|  
+|**Version**|Serverversion. Zum Beispiel:<br /><br /> -9.00.x (SQLServer 2005)<br />-   10.0.xx (SQL Server 2008)<br />-10.50.x (SQL Server 2008 R2)<br />-   11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Einschränkungen bei der Enumeration  
  Möglicherweise werden nicht immer alle verfügbaren Server aufgelistet. Der Umfang der Liste kann je nach Faktoren wie Timeouts und Datenverkehr im Netzwerk variieren. Daher kann die Liste bei zwei aufeinander folgenden Aufrufen unterschiedlich ausfallen. Es werden nur Server aufgelistet, die sich im gleichen Netzwerk befinden. Da Broadcastpakete i. d. R. von Routern nicht weitergeleitet werden, wird möglicherweise ein verfügbarer Server nicht aufgelistet. Dieses Verhalten ist bei jedem Aufruf gleich.  

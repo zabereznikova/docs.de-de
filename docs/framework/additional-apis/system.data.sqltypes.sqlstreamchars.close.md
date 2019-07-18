@@ -12,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: d0c29bbc5c6bea98cf36e3c2b6bf7825d6843ccc
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 942ee987f1c56abe2cb1718347886dd397e7217e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634023"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634340"
 ---
 # <a name="sqlstreamcharsclose-method"></a>SqlStreamChars.Close-Methode
 

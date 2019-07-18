@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 820c99de1bdb108a24203a3438b1709ca54490b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fdfbb22d231d16be7757ff5df26a5a010928af54
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078121"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767063"
 ---
 # <a name="corfieldoffset-structure"></a>COR_FIELD_OFFSET-Struktur
 Speichert den Offset des angegebenen Felds innerhalb einer Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct COR_FIELD_OFFSET {  
     mdFieldDef  ridOfField;  
     ULONG       ulOffset;  

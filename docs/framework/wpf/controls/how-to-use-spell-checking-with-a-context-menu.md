@@ -10,11 +10,11 @@ helpviewer_keywords:
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
 ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699148"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Vorgehensweise: Verwenden der Rechtschreibprüfung mit einem Kontextmenü
 Standardmäßig werden beim Aktivieren der Rechtschreibprüfung in einem Bearbeitungssteuerelement wie <xref:System.Windows.Controls.TextBox> oder <xref:System.Windows.Controls.RichTextBox>, erhalten Sie die Optionen im Kontextmenü. Beispielsweise Benutzern ein falsch geschriebenes Wort mit der rechten Maustaste, erhalten sie einen Satz von Rechtschreibvorschläge oder die Option zum **alle ignorieren**. Wenn Sie das Standard-Kontextmenü mit Ihr eigenes benutzerdefiniertes Kontextmenü überschreiben, jedoch dieser Funktionalität verloren gegangen ist, und Sie Code schreiben, um die Rechtschreibprüfung-Funktion im Kontextmenü erneut aktivieren möchten. Das folgende Beispiel zeigt, wie Sie dies aktivieren, auf eine <xref:System.Windows.Controls.TextBox>.  
@@ -43,4 +43,4 @@ Standardmäßig werden beim Aktivieren der Rechtschreibprüfung in einem Bearbei
 - [Übersicht über TextBox](textbox-overview.md)
 - [Übersicht über RichTextBox](richtextbox-overview.md)
 - [Aktivieren der Rechtschreibprüfung in einem Textbearbeitungssteuerelement](how-to-enable-spell-checking-in-a-text-editing-control.md)
-- [Verwenden eines benutzerdefinierten Kontextmenüs mit einem TextBox-Objekt](how-to-use-a-custom-context-menu-with-a-textbox.md)
+- [Verwenden eines benutzerdefinierten Kontextmenüs mit "TextBox"](how-to-use-a-custom-context-menu-with-a-textbox.md)

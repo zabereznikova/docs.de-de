@@ -3,11 +3,11 @@ title: ServiceToEndpointAssociation
 ms.date: 03/30/2017
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
 ms.openlocfilehash: 3d23a3ee10c47e04ea7bdba202ea5063c0d84fac
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048230"
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
 Ordnet einem Endpunkt einen Dienst zu.  
@@ -32,7 +32,7 @@ class ServiceToEndpointAssociation
  Datentyp: Dienst  
   
  Zugriffstyp: Schreibgeschützt  
-Qualifizierer: Schlüssel  
+Qualifizierer: Key  
   
  Der dem Endpunkt zugeordnete Dienst.  
   
@@ -40,7 +40,7 @@ Qualifizierer: Schlüssel
  Datentyp: Endpunkt  
   
  Zugriffstyp: Schreibgeschützt  
-Qualifizierer: Schlüssel  
+Qualifizierer: Key  
   
  Der dem Dienst zugeordnete Endpunkt.  
   

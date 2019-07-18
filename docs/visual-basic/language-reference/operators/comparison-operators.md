@@ -31,11 +31,11 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
 ms.openlocfilehash: 9014cac5e2f3933b27411dfe5681fc16f4cdde30
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013581"
 ---
 # <a name="comparison-operators-visual-basic"></a>Vergleichsoperatoren (Visual Basic)
 Es folgen die Vergleichsoperatoren in Visual Basic definiert.  

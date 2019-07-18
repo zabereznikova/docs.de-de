@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b75eebd8d9bf439a0317521a61c06ece3745be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a5ba90ce4523fcc55fca3f84a78fa4cfeb6a93f0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075320"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782827"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted-Methode
 Benachrichtigt den Profiler, dass der just-in-Time-Compiler (JIT) gestartet wurde, mit der Kompilierung einer Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT JITCompilationStarted(  
     [in] FunctionID functionId,  
     [in] BOOL       fIsSafeToBlock);  

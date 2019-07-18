@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95ff27143453e7772b4a463fa66ca039bbb715fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dd1ec9caa70dd7016253ae4385b16dbfb982f956
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226916"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742020"
 ---
 # <a name="exporttype-method"></a>ExportType-Methode
 Gibt an, dass ein Typ exportiert werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ExportType(  
     mdAssembly      AssemblyID,  
     mdToken         FileToken,  
@@ -68,4 +68,4 @@ HRESULT ExportType(
 
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

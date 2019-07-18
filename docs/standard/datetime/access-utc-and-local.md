@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c10c07c08a4e676cf3c84a5722814eaed85f74a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d36b5ff4912b09101694dd0e83291053260f0bf9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658025"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586427"
 ---
 # <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Vorgehensweise: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte
 
@@ -50,8 +50,6 @@ Sie sollten immer die lokale Zeitzone zugreifen der <xref:System.TimeZoneInfo.Lo
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
 Für dieses Beispiel benötigen Sie Folgendes:
-
-* Dass das Projekt ein Verweis auf "System.Core.dll" hinzugefügt werden.
 
 * Dass die <xref:System> Namespace importiert werden, mit der `using` -Anweisung (in C#-Code erforderlich).
 

@@ -1,5 +1,5 @@
 ---
-title: =>-Operator - C#-Referenz
+title: 'Operator „=>“: C#-Referenz'
 ms.custom: seodec18
 ms.date: 01/22/2019
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 0cded9d23d67e6afc8b01d6711e42759b4b51fab
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a7fea9810cb02269278638ec71cd106463b029e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275859"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025017"
 ---
-# <a name="-operator-c-reference"></a>=>-Operator (C#-Referenz)
+# <a name="-operator-c-reference"></a>Operator „=>-“ (C#-Referenz)
 
 Das Token `=>` wird auf zwei Weisen unterstützt: als Lambdaoperator und als Trennzeichen eines Membernamens und der Memberimplementierung in der Definition eines Ausdruckskörpers.
 
@@ -25,15 +25,15 @@ In [Lambdaausdrücken](../../programming-guide/statements-expressions-operators/
 
 Im folgenden Beispiel wird das [LINQ](../../programming-guide/concepts/linq/index.md)-Feature mit der Methodensyntax verwendet, um die Verwendung von Lambdaausdrücken zu veranschaulichen:
 
-[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
 Eingabevariablen von Lambdaausdrücken sind zur Kompilierzeit stark typisiert. Wenn der Compiler die Typen von Eingabevariablen wie im obigen Beispiel ableiten kann, können Sie die Typdeklarationen weglassen. Wenn Sie den Typ von Eingabevariablen festlegen müssen, müssen Sie ihn wie im folgenden Beispiel gezeigt für jede Variable festlegen:
 
-[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
 Im folgenden Beispiel wird gezeigt, wie ein Lambdaausdruck ohne Eingabevariablen definiert wird:
 
-[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
 Weitere Informationen finden Sie unter [Lambdaausdrücke](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
 
@@ -77,7 +77,6 @@ Weitere Informationen finden Sie im Abschnitt [Anonyme Funktionsausdrücke](~/_c
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [Lambda-Ausdrücke](../../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Ausdruckskörpermember](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)

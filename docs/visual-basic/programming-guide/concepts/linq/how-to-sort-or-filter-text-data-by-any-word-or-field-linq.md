@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 6a5277e26b74ccf54af0cdc5f671516fcc7badb8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5d6a8d26f28feafecfbddfb8d2b538adc22f1b90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832202"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592462"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Vorgehensweise: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (Visual Basic)
 Das folgende Beispiel zeigt, wie Sie Zeilen aus strukturiertem Text nach jedem Feld in der Zeile sortieren können, wie z.B. durch Trennzeichen getrennte Werte. Das Feld kann dynamisch zur Laufzeit festgelegt werden. Gehen Sie davon aus, dass die Felder in scores.csv die Matrikelnummer eines Studenten repräsentieren, gefolgt von einer Reihe aus vier Testergebnissen.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>So erstellen Sie eine Datei, die Daten enthält  
   
-1.  Kopieren Sie die Daten aus „scores.csv“ auf dem Artikel [Vorgehensweise: Verknüpfen des Inhalts von Unterschiedlicher Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) und speichern Sie sie in den Projektmappenordner.  
+1. Kopieren Sie die Daten aus „scores.csv“ auf dem Artikel [Vorgehensweise: Verknüpfen des Inhalts von Unterschiedlicher Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) und speichern Sie sie in den Projektmappenordner.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -72,7 +72,7 @@ End Class
  Darüber hinaus wird veranschaulicht, wie eine Abfragevariable aus einer Funktion zurückgegeben wird.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.  
+Erstellen Sie ein Konsolenanwendungsprojekt für VB.NET, mit einem `Imports` -Anweisung für den Namespace "System.Linq".
   
 ## <a name="see-also"></a>Siehe auch
 

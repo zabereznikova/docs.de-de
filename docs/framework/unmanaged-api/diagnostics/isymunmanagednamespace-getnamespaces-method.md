@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d7ac84971f7d0e97f7ccd26710151d1aeefe729
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2e11886917964134a2530ae8484dba3cde5e7b61
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207213"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759373"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces-Methode
 Ruft die untergeordneten Elemente dieses Namespaces ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetNamespaces(  
     [in]  ULONG32  cNameSpaces,  
     [out] ULONG32  *pcNameSpaces,  

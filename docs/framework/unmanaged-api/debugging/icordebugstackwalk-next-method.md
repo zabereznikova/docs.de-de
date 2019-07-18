@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 724db50285532c20132fbfd5262df26227db6742
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 82f6c96e64b1197b5762c0ad7dbed5458b5d71a3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130025"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760890"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next-Methode
 Verschiebt die [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) Objekt zum nächsten Frame.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next();  
 ```  
   
@@ -60,5 +60,5 @@ HRESULT Next();
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugStackWalk-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

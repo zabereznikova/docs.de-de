@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 89fcd981dbb5442f6150f539db4c7d404fe8d691
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788920"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.  
@@ -38,9 +38,9 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>-Optioninfer in Visual Studio-IDE festlegen  
   
-1.  Wählen Sie ein Projekt in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
+1. Wählen Sie ein Projekt in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
-2.  Auf der **Kompilieren** Registerkarte, ändern Sie den Wert in der **Option infer-** Feld.  
+2. Auf der **Kompilieren** Registerkarte, ändern Sie den Wert in der **Option infer-** Feld.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code kompiliert `test.vb` mit aktiviertem lokalen Typrückschluss.  

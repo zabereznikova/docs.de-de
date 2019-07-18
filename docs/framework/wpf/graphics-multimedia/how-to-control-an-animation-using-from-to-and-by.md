@@ -8,11 +8,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008784"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Vorgehensweise: Steuern von Animationen mit „From“, „To“ und „By“
 "From/To/By" oder "grundlegende Animation" erstellt einen Übergang zwischen zwei Zielwerten (finden Sie unter [Übersicht über Animationen](animation-overview.md) eine Einführung in die verschiedenen Arten von Animationen). Verwenden Sie zum Festlegen der Zielwerte einer grundlegenden Animation die <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, und <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Eigenschaften.  Die folgende Tabelle enthält die <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>, <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>, und <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Eigenschaften können zusammen verwendet werden oder separat um die Zielwerte einer Animation zu bestimmen.  
@@ -41,4 +41,4 @@ ms.locfileid: "59073271"
 
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
-- [Aus, To und By Animation Target Values Sample](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From, To, and By Animation Target Values Sample (Beispiel für From-, To- und By-Animationszielwerte)](https://go.microsoft.com/fwlink/?LinkID=159988)

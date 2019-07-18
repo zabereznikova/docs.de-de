@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 28cd15a793d303e1d6e64c52c1d0095e8d619c7b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3d9e3ca31eddff9d08607c4d6d37ca76139bf5d2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378932"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756304"
 ---
 # <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition::EndEnumInstances-Methode
 
@@ -30,7 +30,7 @@ Gibt die vom internen Iteratoren, die verwendet werden, während der Instanzenum
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT EndEnumInstances(
     [in] CLRDATA_ENUM handle
 );
@@ -48,8 +48,8 @@ Die angegebene Methode ist Teil der `IXCLRDataMethodDefinition` Schnittstelle, u
 ## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keine  
-**Bibliothek:** Keine  
+**Header:** Keiner  
+**Bibliothek:** Keiner  
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch

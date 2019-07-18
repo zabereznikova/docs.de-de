@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 313d3d74356a378351270916e1043a1cc4d799ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28d96177e839613d40e8c500e334c92b05c6e96a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414241"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762197"
 ---
 # <a name="icordebugmodulecreatebreakpoint-method"></a>ICorDebugModule::CreateBreakpoint-Methode
-Diese Methode wurde nicht in der aktuellen Version von .NET Framework implementiert wurde.  
+Diese Methode wurde nicht in der aktuellen Version von .NET Framework implementiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateBreakpoint(  
     [out] ICorDebugModuleBreakpoint **ppBreakpoint  
 );  

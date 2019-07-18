@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f1b2756dd180cb0a701429978a34ea80447a86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d0fef75a1d47ba0c16569d3955ee447c2e7332d4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107639"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776133"
 ---
 # <a name="icorprofilercallbackexceptioncatcherleave-method"></a>ICorProfilerCallback::ExceptionCatcherLeave-Methode
 Benachrichtigt den Profiler, das Steuerelement aus der entsprechenden übergebenen `catch` Block.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ExceptionCatcherLeave();  
 ```  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd3b977a894f8cb1fc9a866f5a43265d917db513
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d231595ab2c7b41d1a24f654e9785b90b34ac780
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494440"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744503"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>ICorDebugAssembly2::IsFullyTrusted-Methode
 Ruft einen Wert, der angibt, ob die Assembly volle Vertrauenswürdigkeit von der Laufzeit-Sicherheitssystem erteilt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsFullyTrusted(  
     [out] BOOL *pbFullyTrusted  
 );  

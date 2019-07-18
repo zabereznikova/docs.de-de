@@ -6,11 +6,11 @@ helpviewer_keywords:
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
 ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940737"
 ---
 # <a name="value-visual-basic"></a>\<Wert > (Visual Basic)
 Gibt die Beschreibung einer Eigenschaft.  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b9e3444070a394a91cbb5aae8fe9f578c6e0374
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3d080145ac63882e04412b44c34d040a75746243
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493556"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767527"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap-Methode
 Ruft einen Enumerator für die Objekte ab, auf dem verwalteten Heap.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateHeap(  
     [out] ICorDebugHeapEnum **ppObjects  
 );  
@@ -54,5 +54,6 @@ HRESULT EnumerateHeap(
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugProcess5-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
 - [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae64fcccb49123f34cca2622a972a89bf700904f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0b6907cdf78fc70c75ddd711cd8593427857b172
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476684"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756893"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>ICorDebugGenericValue::SetValue-Methode
 Kopiert einen neuen Wert aus dem angegebenen Puffer.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetValue (  
     [in] void      *pFrom  
 );  

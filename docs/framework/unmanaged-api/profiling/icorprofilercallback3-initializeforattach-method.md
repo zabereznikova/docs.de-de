@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84d07fe975bab1b0af81299893b52142630b5bb9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e1a95b3078f4a592e28e0deb9869fc520cde811d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079746"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779276"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>ICorProfilerCallback3::InitializeForAttach-Methode
 Wird von der CLS (Common Language Runtime) aufgerufen, um dem Profiler das Initialisieren seines Zustands nach einem Anfügevorgang zu ermöglichen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT InitializeForAttach(  
             [in] IUnknown * pCorProfilerInfoUnk,  
             [in] void * pvClientData,  

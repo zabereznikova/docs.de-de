@@ -5,11 +5,11 @@ helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
 ms.openlocfilehash: 7e65e8e015c88c95c527e148aca6ecb2641afa61
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028651"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>Operatoren sortiert nach Funktionalität (Visual Basic)
 Finden Sie in der unten aufgeführten Kategorien, oder öffnen Sie diesen Teil der Hilfeinhalt Inhalt in eine alphabetische Liste der Visual Basic-Operatoren finden Sie unter.  

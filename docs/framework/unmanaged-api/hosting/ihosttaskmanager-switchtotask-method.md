@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a50c9f7fc5921d3e5c21dd3566de81ac2249f3dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9074201cb56ad9e6c4ddadc8468d2ceadbafcb75
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110559"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749313"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask-Methode
 Benachrichtigt den Host, dass sie die aktuelle Aufgabe wechseln soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SwitchToTask (  
     [in] DWORD option  
 );  

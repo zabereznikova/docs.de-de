@@ -5,11 +5,11 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: b89a82be-b03d-481e-a8d3-cc513d09ca00
 ms.openlocfilehash: 945675d03a280e2394fdb0eab27c0978dc7cc320
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010240"
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>Vorgehensweise: Hinzufügen eines Animationsausgabewerts zu einem Animationsstartwert
 Dieses Beispiel zeigt das Hinzufügen ein Animationsausgabewerts zu einem Animationsstartwert.  
@@ -26,4 +26,4 @@ Dieses Beispiel zeigt das Hinzufügen ein Animationsausgabewerts zu einem Animat
 - [Sammeln von Animationen während Wiederholungszyklen](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
-- [Gewusst-wie-Themen zu Animation und Zeitsteuerung](animation-and-timing-how-to-topics.md)
+- [Das Animations- und Zeitsteuerungssystem Gewusst-wie-Themen](animation-and-timing-how-to-topics.md)

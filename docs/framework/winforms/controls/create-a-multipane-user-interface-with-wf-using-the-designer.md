@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011512"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers
 Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der ähnelt der Verwendung in Microsoft Outlook ist eine **Ordner** Liste eine **Nachrichten** Bereich und eine **Vorschau** Bereich. In dieser Anordnung erfolgt hauptsächlich durch Andocken von Steuerelementen mit dem Formular.  
@@ -27,17 +27,17 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>Erstellen Sie eine Outlook-Stil-Benutzeroberfläche zur Entwurfszeit  
   
-1.  Erstellen Sie ein neues Windows-Anwendungsprojekt (**Datei** > **neu** > **Projekt** > **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).  
+1. Erstellen Sie ein neues Windows-Anwendungsprojekt (**Datei** > **neu** > **Projekt** > **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).  
   
-2.  Ziehen Sie eine <xref:System.Windows.Forms.SplitContainer> -Steuerelement aus der **Toolbox** auf das Formular. Legen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.SplitContainer.Dock%2A> auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
+2. Ziehen Sie eine <xref:System.Windows.Forms.SplitContainer> -Steuerelement aus der **Toolbox** auf das Formular. Legen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.SplitContainer.Dock%2A> auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
-3.  Ziehen Sie eine <xref:System.Windows.Forms.TreeView> -Steuerelement aus der **Toolbox** um im linken Bereich von der <xref:System.Windows.Forms.SplitContainer> Steuerelement. In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Left> durch Klicken auf den linken Bereich im Wert-Editor angezeigt, wenn auf der Dropdownpfeil geklickt wird.  
+3. Ziehen Sie eine <xref:System.Windows.Forms.TreeView> -Steuerelement aus der **Toolbox** um im linken Bereich von der <xref:System.Windows.Forms.SplitContainer> Steuerelement. In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Left> durch Klicken auf den linken Bereich im Wert-Editor angezeigt, wenn auf der Dropdownpfeil geklickt wird.  
   
-4.  Ziehen Sie ein weiteres <xref:System.Windows.Forms.SplitContainer> -Steuerelement aus der **Toolbox**; platzieren Sie es im rechten Bereich mit der <xref:System.Windows.Forms.SplitContainer> Kontrolle, die Sie dem Formular hinzugefügt. In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill> und <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft <xref:System.Windows.Forms.Orientation.Horizontal>.  
+4. Ziehen Sie ein weiteres <xref:System.Windows.Forms.SplitContainer> -Steuerelement aus der **Toolbox**; platzieren Sie es im rechten Bereich mit der <xref:System.Windows.Forms.SplitContainer> Kontrolle, die Sie dem Formular hinzugefügt. In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill> und <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
-5.  Ziehen Sie eine <xref:System.Windows.Forms.ListView> -Steuerelement aus der **Toolbox** in den oberen Bereich des zweiten <xref:System.Windows.Forms.SplitContainer> Kontrolle, die Sie dem Formular hinzugefügt. Legen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft des <xref:System.Windows.Forms.ListView> -Steuerelements auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
+5. Ziehen Sie eine <xref:System.Windows.Forms.ListView> -Steuerelement aus der **Toolbox** in den oberen Bereich des zweiten <xref:System.Windows.Forms.SplitContainer> Kontrolle, die Sie dem Formular hinzugefügt. Legen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft des <xref:System.Windows.Forms.ListView> -Steuerelements auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
-6.  Ziehen Sie eine <xref:System.Windows.Forms.RichTextBox> -Steuerelement aus der **Toolbox** in den unteren Bereich des zweiten <xref:System.Windows.Forms.SplitContainer> Steuerelement. Legen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft des <xref:System.Windows.Forms.RichTextBox> -Steuerelements auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
+6. Ziehen Sie eine <xref:System.Windows.Forms.RichTextBox> -Steuerelement aus der **Toolbox** in den unteren Bereich des zweiten <xref:System.Windows.Forms.SplitContainer> Steuerelement. Legen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft des <xref:System.Windows.Forms.RichTextBox> -Steuerelements auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
      Wenn Sie zum Ausführen der Anwendung F5 drücken, zeigt das Formular an diesem Punkt dreiteiligen Benutzeroberfläche, die von Microsoft Outlook ähnelt.  
   

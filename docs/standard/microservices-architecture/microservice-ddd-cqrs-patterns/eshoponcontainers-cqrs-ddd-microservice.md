@@ -1,15 +1,13 @@
 ---
 title: Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Implementierung von CQRS im Microservice für Bestellungen in eShopOnContainers
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 198e7df6e3bdc88d699c396ce8ac97f8a74066d6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462707"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875912"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
@@ -44,25 +42,13 @@ Es gibt nur eine Anwendungsarchitektur: die Architektur der System- oder der End
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Martin Fowler. CQRS** \
-  [https://martinfowler.com/bliki/CQRS.html](https://martinfowler.com/bliki/CQRS.html)
-
-- **Greg Young. CQS vs. CQRS** \
-  [http://codebetter.com/gregyoung/2009/08/13/command-query-separation/](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
+  <https://martinfowler.com/bliki/CQRS.html>
 
 - **Greg Young. CQRS Documents (CQRS-Dokumente)** \
-  [https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
-
-- **Greg Young. CQRS, Task Based UIs and Event Sourcing (CQRS: aufgabenbasierte Benutzeroberflächen und Ereignissourcing)** \
-  [http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
+  <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
 - **Udi Dahan. Clarified CQRS (Erläuterung zu CQRS)** \
-  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
-
-- **CQRS** \
-  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
-
-- **Event-Sourcing (ES) (Ereignissourcing)** \
-  [http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
+  <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
 >[Zurück](apply-simplified-microservice-cqrs-ddd-patterns.md)

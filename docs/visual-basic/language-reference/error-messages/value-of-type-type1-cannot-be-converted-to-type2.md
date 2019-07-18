@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31194
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
-ms.openlocfilehash: c8480c6fab2bff931950ebc21d0a8affe3c41c66
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a0f3eb2b1603899e9acc1273c023ec5d0ed3132
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827145"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913346"
 ---
 # <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>Der Wert vom Typ "Typ1" kann nicht zu "Typ2" konvertiert werden
 Wert vom Typ "Typ1" kann nicht in 'Typ2' konvertiert werden. Sie können die Value-Eigenschaft den Zeichenfolgenwert des ersten Elements der abzurufenden "\<ParentElement >'.  
@@ -23,7 +23,7 @@ Wert vom Typ "Typ1" kann nicht in 'Typ2' konvertiert werden. Sie können die Val
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Verwenden Sie die `Value` -Eigenschaft des XML-Literals, um auf dessen Wert als `String`zu verweisen. Verwenden Sie die `CType` -Funktion, eine weitere Typkonvertierungsfunktion, oder die <xref:System.Convert> -Klasse, um den Wert in den angegebenen Typ umzuwandeln.  
+- Verwenden Sie die `Value` -Eigenschaft des XML-Literals, um auf dessen Wert als `String`zu verweisen. Verwenden Sie die `CType` -Funktion, eine weitere Typkonvertierungsfunktion, oder die <xref:System.Convert> -Klasse, um den Wert in den angegebenen Typ umzuwandeln.  
   
 ## <a name="see-also"></a>Siehe auch
 

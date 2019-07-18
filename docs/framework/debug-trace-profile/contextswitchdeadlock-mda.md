@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a0e2a6c7851b261baa3e02f6431e7a4ff697e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643142"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660325"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock-MDA
 
@@ -39,11 +39,11 @@ Standardmäßig wird STA als Threadingmodell für den Hauptthread von Visual Bas
 
 Unter Umständen wird dieser MDA fälschlicherweise aktiviert, wenn alle folgenden Bedingungen erfüllt sind:
 
--   Eine Anwendung erstellt entweder direkt oder indirekt über Bibliotheken COM-Komponenten von STA-Threads.
+- Eine Anwendung erstellt entweder direkt oder indirekt über Bibliotheken COM-Komponenten von STA-Threads.
 
--   Die Anwendung wurde im Debugger angehalten, und der Benutzer hat entweder die Ausführung der Anwendung fortgesetzt oder einen Ausführungsschritt durchgeführt.
+- Die Anwendung wurde im Debugger angehalten, und der Benutzer hat entweder die Ausführung der Anwendung fortgesetzt oder einen Ausführungsschritt durchgeführt.
 
--   Nicht verwaltetes Debuggen ist nicht aktiviert.
+- Nicht verwaltetes Debuggen ist nicht aktiviert.
 
 Um festzustellen, ob der MDA fälschlicherweise aktiviert wurde, deaktivieren Sie alle Haltepunkte, starten Sie die Anwendung neu, und führen Sie sie ohne Unterbrechung aus. Wenn der MDA nicht aktiviert wird, war die erste Aktivierung wahrscheinlich falsch. Deaktivieren Sie in diesem Fall den MDA, um eine Störung der Debugsitzung zu vermeiden.
 
@@ -58,7 +58,7 @@ Befolgen Sie die COM-Regeln hinsichtlich der STA-Meldungsweiterleitung.
 
 Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Angaben über COM-Kontexte gemeldet.
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 Eine Meldung, die den aktuellen Kontext und den Zielkontext beschreibt.
 

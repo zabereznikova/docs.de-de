@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9afaeebfdb98a404ea53b0b5ec147f8c8104e14d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eb3aca0713b8b11bdfaa23bf33c8e1a0b302e272
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148810"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606535"
 ---
 # <a name="icordebugenum-interface"></a>ICorDebugEnum-Schnittstelle
 
@@ -39,47 +39,47 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Anwe
 ## <a name="remarks"></a>Hinweise  
  Leiten Sie die folgenden Enumeratoren von `ICorDebugEnum`:  
   
--   "ICorDebugAppDomainEnum"  
+- "ICorDebugAppDomainEnum"  
   
--   "ICorDebugAssemblyEnum"  
+- "ICorDebugAssemblyEnum"  
   
--   [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
+- [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
   
--   "ICorDebugBreakpointEnum"  
+- "ICorDebugBreakpointEnum"  
   
--   "ICorDebugChainEnum"  
+- "ICorDebugChainEnum"  
   
--   "ICorDebugCodeEnum"  
+- "ICorDebugCodeEnum"  
   
--   "ICorDebugErrorInfoEnum"  
+- "ICorDebugErrorInfoEnum"  
   
--   [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
+- [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
--   "ICorDebugFrameEnum"  
+- "ICorDebugFrameEnum"  
   
--   [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
+- [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
   
--   [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
+- [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
   
--   [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
+- [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
   
--   [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
+- [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
   
--   "ICorDebugModuleEnum"  
+- "ICorDebugModuleEnum"  
   
--   "ICorDebugObjectEnum"  
+- "ICorDebugObjectEnum"  
   
--   "ICorDebugProcessEnum"  
+- "ICorDebugProcessEnum"  
   
--   "ICorDebugStepperEnum"  
+- "ICorDebugStepperEnum"  
   
--   "ICorDebugThreadEnum"  
+- "ICorDebugThreadEnum"  
   
--   "ICorDebugTypeEnum"  
+- "ICorDebugTypeEnum"  
   
--   "ICorDebugValueEnum"  
+- "ICorDebugValueEnum"  
   
--   [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
+- [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
@@ -95,4 +95,4 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Anwe
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2016795e7b2c0588e2bd69e764fb96f7f90b24d0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 41bd4c0bb4e84b6d6f267e24808baafa57f71882
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480662"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771116"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval-Methode
 Erstellt ein ICorDebugEval-Objekt, das erfasst und macht die Funktionalität dieses ICorDebugThread.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateEval (  
     [out] ICorDebugEval   **ppEval  
 );  

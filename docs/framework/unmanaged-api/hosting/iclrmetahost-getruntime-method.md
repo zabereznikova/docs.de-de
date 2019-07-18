@@ -17,22 +17,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b71d0f29d770b2722b0dfaabc8b9667e524c99e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 99b87ca1af6c8e88173624f544117eee700fba17
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207603"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779771"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime-Methode
 Ruft die [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) Schnittstelle, die eine bestimmte Version der common Language Runtime (CLR) entspricht. Diese Methode ersetzt die [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) , die mit verwendet die [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) Flag.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRuntime (  
     [in] LPCWSTR pwzVersion,  
-    [in, REFIID riid,  
+    [in] REFIID riid,  
     [out,iid_is(riid), retval] LPVOID *ppRuntime  
 );  
 ```  
@@ -58,7 +58,7 @@ HRESULT GetRuntime (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_POINTER|`pwzVersion` oder `ppRuntime` ist null.|  
+|E_POINTER|`pwzVersion` oder `ppRuntime` ist NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode interagiert konsistent mit legacy-Schnittstellen wie z. B. die [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) -Schnittstelle und Legacy-Funktionen wie z. B. die veraltete `CorBindTo*` Funktionen (finden Sie unter [veraltet CLR Hosting-Funktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) in .NET Framework 2.0 hosting-API). Also mit der legacy-API geladenen Laufzeiten für die neue API sichtbar sind, und mit der neuen API geladenen Laufzeiten für die legacy-API sichtbar sind.  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfca06c656f3274f4c5ddb06373a0296dc5e6905
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dde8971f9f08cc9e0930f6ea133d9a06b22e4c96
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164540"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761418"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule-Methode
 Benachrichtigt den Debugger, dass ein common Language Runtime (CLR)-Modul wurde erfolgreich geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT LoadModule (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugModule    *pModule  

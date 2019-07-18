@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e502b9917e6a99a8526a2314136841140309083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115920"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582818"
 ---
 # <a name="wcf-client-overview"></a>Übersicht über den WCF-Client
 Dieser Abschnitt beschreibt das vorgehen, Client-Anwendungen, wie Sie konfigurieren, erstellen und verwenden Sie einen Windows Communication Foundation (WCF)-Client und Client-Anwendungen zu sichern.  
@@ -20,25 +20,25 @@ Dieser Abschnitt beschreibt das vorgehen, Client-Anwendungen, wie Sie konfigurie
 ## <a name="using-wcf-client-objects"></a>Verwenden von WCF-Clientobjekten  
  Eine Clientanwendung ist eine verwaltete Anwendung, die einen WCF-Client, die für die Kommunikation mit einer anderen Anwendung verwendet. Erstellen einer Clientanwendung erfordert die Anwendung für einen WCF-Dienst die folgenden Schritte aus:  
   
-1.  Abrufen des Dienstvertrags, der Bindungen und der Adressinformationen für einen Dienstendpunkt.  
+1. Abrufen des Dienstvertrags, der Bindungen und der Adressinformationen für einen Dienstendpunkt.  
   
-2.  Erstellen Sie einen WCF-Clients, die mithilfe dieser Informationen.  
+2. Erstellen Sie einen WCF-Clients, die mithilfe dieser Informationen.  
   
-3.  Aufrufen von Vorgängen.  
+3. Aufrufen von Vorgängen.  
   
-4.  Schließen Sie das WCF-Client-Objekt.  
+4. Schließen Sie das WCF-Client-Objekt.  
   
  In den folgenden Abschnitten finden Sie eine Erläuterung dieser Schritte und kurze Einführungen in die folgenden Probleme:  
   
--   Behandeln von Fehlern.  
+- Behandeln von Fehlern.  
   
--   Konfigurieren und Sichern von Clients.  
+- Konfigurieren und Sichern von Clients.  
   
--   Erstellen von Rückrufobjekten für Duplexdienste  
+- Erstellen von Rückrufobjekten für Duplexdienste  
   
--   Asynchrones Aufrufen von Diensten.  
+- Asynchrones Aufrufen von Diensten.  
   
--   Aufrufen von Diensten mithilfe von Clientkanälen.  
+- Aufrufen von Diensten mithilfe von Clientkanälen.  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Abrufen von Dienstvertrag, Bindungen und Adressen  
  In WCF Modellieren Sie Dienste und Clients Verträge, die über verwaltete Attribute, Schnittstellen und Methoden. Soll eine Verbindung zu einem Dienst in einer Clientanwendung hergestellt werden, muss der Informationstyp für den Dienstvertrag abgerufen werden. In der Regel Sie dazu die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), konvertiert es in eine verwaltete Quellcodedatei in der Sprache Ihrer Wahl der Metadaten vom Dienst heruntergeladen, und erstellt einen Client Konfigurationsdatei der Anwendung, die Sie zum Konfigurieren des WCF-Clientobjekts verwenden können. Z. B., wenn Sie beabsichtigen, zum Erstellen eines WCF-Clientobjekts zum Aufrufen einer `MyCalculatorService`, und Sie wissen, dass die Metadaten für diesen Dienst an veröffentlicht werden `http://computerName/MyCalculatorService/Service.svc?wsdl`, wird im folgenden Codebeispiel wird veranschaulicht, wie von Svcutil.exe zum Abrufen einer `ClientCode.vb` Datei, enthält den Dienstvertrag in verwaltetem Code.  
@@ -146,11 +146,11 @@ End Interface
   
  Clients von Duplexdiensten müssen folgende Vorgänge ausführen:  
   
--   Eine Rückrufvertragsklasse implementieren.  
+- Eine Rückrufvertragsklasse implementieren.  
   
--   Erstellen Sie eine Instanz der Implementierung der rückrufvertragsklasse und erstellen die <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> -Objekt, das Sie für den WCF-Client-Konstruktor übergeben.  
+- Erstellen Sie eine Instanz der Implementierung der rückrufvertragsklasse und erstellen die <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> -Objekt, das Sie für den WCF-Client-Konstruktor übergeben.  
   
--   Vorgänge aufrufen und Vorgangsrückrufe behandeln.  
+- Vorgänge aufrufen und Vorgangsrückrufe behandeln.  
   
  Duplex WCF Objekte Clientfunktion wie ihre Gegenstücke, mit der Ausnahme, dass sie die erforderlichen Funktionen zur Unterstützung von Rückrufen, einschließlich der Konfiguration des rückrufdiensts verfügbar machen.  
   

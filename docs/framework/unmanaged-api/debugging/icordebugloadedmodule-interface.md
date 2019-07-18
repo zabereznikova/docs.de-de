@@ -5,11 +5,11 @@ ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6e91dda9cbc5957768e98db2b2a9e1026d94c03e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946286"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule-Schnittstelle
 Stellt Informationen zu einem geladenen Modul bereit.  
@@ -39,5 +39,5 @@ Stellt Informationen zu einem geladenen Modul bereit.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

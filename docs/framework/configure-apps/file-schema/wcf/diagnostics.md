@@ -3,11 +3,11 @@ title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
 ms.openlocfilehash: 3fc7828d399555f7c459f6dd067ce9a24b8998b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704055"
 ---
 # <a name="diagnostics"></a>\<diagnostics>
 Das `diagnostics`-Element definiert Einstellungen, die von einem Administrator zur Laufzeitüberprüfung und -steuerung verwendet werden können.  

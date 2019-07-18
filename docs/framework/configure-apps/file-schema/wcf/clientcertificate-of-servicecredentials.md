@@ -3,11 +3,11 @@ title: <clientCertificate> von <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
 ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673302"
 ---
 # <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate> of \<serviceCredentials>
 Definiert ein X.509-Zertifikat, das zum Signieren und Verschlüsseln von Nachrichten an einen Client von einem Dienst in einem Duplexkommunikationsmuster verwendet wird.  
@@ -62,4 +62,4 @@ Definiert ein X.509-Zertifikat, das zum Signieren und Verschlüsseln von Nachric
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
 - [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

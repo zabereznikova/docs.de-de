@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 409cea924b8a775621c3073e27009d1f556e4f42
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838572"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268230"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Custom date and time format strings (Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit)
 
@@ -41,12 +41,12 @@ Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit können mit dem <x
 
 In Analysevorgängen können benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit mit den Methoden <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> und <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> verwendet werden. Bei diesen Methoden muss die Eingabezeichenfolge genau einem bestimmten Muster entsprechen, damit der Analysevorgang erfolgreich ausgeführt werden kann. Im folgenden Beispiel wird ein Aufruf der <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>-Methode veranschaulicht, um ein Datum zu analysieren, das einen Tag, einen Monat und eine zweistellige Jahresangabe enthalten muss.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
+[!code-csharp[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
 [!code-vb[Formatting.DateAndTime.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
 
 Die folgende Tabelle beschreibt die benutzerdefinierten Formatbezeichner für Datum und Uhrzeit und zeigt eine Ergebniszeichenfolge an, die von den einzelnen Formatbezeichnern erstellt wird. Standardmäßig entsprechen Ergebniszeichenfolgen den Formatierungskonventionen der Kultur "en-US". Wenn ein bestimmter Formatbezeichner eine lokalisierte Ergebniszeichenfolge erzeugt, wird im Beispiel auch die Kultur angegeben, für die die Ergebniszeichenfolge gilt. Weitere Informationen zum Verwenden von benutzerdefinierten Formatzeichenfolgen für Datum und Uhrzeit finden Sie im Abschnitt [Hinweise](#notes).
 
-| Formatbezeichner | Beschreibung | Beispiele |
+| Formatbezeichner | BESCHREIBUNG | Beispiele |
 | ---------------------- | ----------------- | -------------- |
 |"d"|Der Tag des Monats, von 1 bis 31.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatspezifizierer „d“](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 15|
 |"dd"|Der Tag des Monats, von 01 bis 31.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „dd“](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 15|
@@ -67,7 +67,7 @@ Die folgende Tabelle beschreibt die benutzerdefinierten Formatbezeichner für Da
 |"FFFFFF"|Wenn ungleich 0 (null), die Millionstelsekunde in einem Datums- und Uhrzeitwert.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatspezifizierer „FFFFFF“](#FFFFFF_Specifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> (keine Ausgabe)|
 |"FFFFFFF"|Wenn ungleich 0 (null), die Zehnmillionstelsekunde in einem Datums- und Uhrzeitwert.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatspezifizierer „FFFFFFF“](#FFFFFFF_Specifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 000115|
 |"g", "gg"|Der Zeitraum.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „g“ oder „gg“](#gSpecifier).|2009-06-15T13:45:30.6170000 -> A.D.|
-|"h" |Die Stunde, von 1 bis 12 (12-Stunden-Format).<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatspezifizierer „h“](#hSpecifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 1|
+|"h"|Die Stunde, von 1 bis 12 (12-Stunden-Format).<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatspezifizierer „h“](#hSpecifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 1|
 |"hh"|Die Stunde, von 01 bis 12 (12-Stunden-Format).<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatspezifizierer „hh“](#hhSpecifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 01|
 |"H"|Die Stunde, von 0 bis 24 (23-Stunden-Format).<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „H“](#H_Specifier).|2009-06-15T01:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -> 13|
 |"HH"|Die Stunde, von 00 bis 23 (24-Stunden-Format).<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „HH“](#HH_Specifier).|2009-06-15T01:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -> 13|
@@ -82,10 +82,10 @@ Die folgende Tabelle beschreibt die benutzerdefinierten Formatbezeichner für Da
 |"ss"|Die Sekunde, von 00 bis 59.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatspezifizierer „ss“](#ssSpecifier).|2009-06-15T13:45:09 -> 09|
 |"t"|Das erste Zeichen des AM/PM-Kennzeichners.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „t“](#tSpecifier).|2009-06-15T13:45:30 -> P (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午 (ja-JP)<br /><br /> 2009-06-15T13:45:30 -> (fr-FR)|
 |"tt"|Der AM/PM-Kennzeichner.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „tt“](#ttSpecifier).|2009-06-15T13:45:30 -> PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 午後 (ja-JP)<br /><br /> 2009-06-15T13:45:30 -> (fr-FR)|
-|"y" |Das Jahr, von 0 bis 99.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „y“](#ySpecifier).|0001-01-01T00:00:00 -> 1<br /><br /> 0900-01-01T00:00:00 -> 0<br /><br /> 1900-01-01T00:00:00 -> 0<br /><br /> 2009-06-15T13:45:30 -> 9<br /><br /> 2019-06-15T13:45:30 -> 19|
+|"y"|Das Jahr, von 0 bis 99.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „y“](#ySpecifier).|0001-01-01T00:00:00 -> 1<br /><br /> 0900-01-01T00:00:00 -> 0<br /><br /> 1900-01-01T00:00:00 -> 0<br /><br /> 2009-06-15T13:45:30 -> 9<br /><br /> 2019-06-15T13:45:30 -> 19|
 |"yy"|Das Jahr, von 00 bis 99.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „yy“](#yySpecifier).|0001-01-01T00:00:00 -> 01<br /><br /> 0900-01-01T00:00:00 -> 00<br /><br /> 1900-01-01T00:00:00 -> 00<br /><br /> 2019-06-15T13:45:30 -> 19|
 |"yyy"|Das Jahr, mit einem Minimum von drei Ziffern.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „yyy“](#yyySpecifier).|0001-01-01T00:00:00 -> 001<br /><br /> 0900-01-01T00:00:00 -> 900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|
-|"yyyy" |Das Jahr als vierstellige Zahl.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „yyyy“](#yyyySpecifier).|0001-01-01T00:00:00 -> 0001<br /><br /> 0900-01-01T00:00:00 -> 0900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|
+|"yyyy"|Das Jahr als vierstellige Zahl.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „yyyy“](#yyyySpecifier).|0001-01-01T00:00:00 -> 0001<br /><br /> 0900-01-01T00:00:00 -> 0900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|
 |"yyyyy"|Das Jahr als fünfstellige Zahl.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „yyyyy“](#yyyyySpecifier).|0001-01-01T00:00:00 -> 00001<br /><br /> 2009-06-15T13:45:30 -> 02009|
 |"z"|Offset von UTC in Stunden, ohne führende Nullen.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „z“](#zSpecifier).|2009-06-15T13:45:30-07:00 -> -7|
 |"zz"|Offset von UTC in Stunden, mit einer führenden Null für einen einstelligen Wert.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Formatbezeichner „zz“](#zzSpecifier).|2009-06-15T13:45:30-07:00 -> -07|
@@ -348,11 +348,11 @@ Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "HH" in
 
 Der benutzerdefinierte Formatbezeichner "K" stellt die Zeitzoneninformationen eines Datums- und Uhrzeitwerts dar. Bei Verendung dieses Formatbezeichners mit <xref:System.DateTime>-Werten wird die Ergebniszeichenfolge durch den Wert der <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft definiert:
 
--   Für die lokale Zeitzone (ein <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaftswert von <xref:System.DateTimeKind.Local?displayProperty=nameWithType>) ist dieser Bezeichner gleich dem Bezeichner "zzz" und erzeugt eine Ergebniszeichenfolge, die den lokalen Offset der koordinierten Weltzeit (Coordinated Universal Time, UTC) enthält, z. B. "-07:00".
+- Für die lokale Zeitzone (ein <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaftswert von <xref:System.DateTimeKind.Local?displayProperty=nameWithType>) ist dieser Bezeichner gleich dem Bezeichner "zzz" und erzeugt eine Ergebniszeichenfolge, die den lokalen Offset der koordinierten Weltzeit (Coordinated Universal Time, UTC) enthält, z. B. "-07:00".
 
--   Für eine UTC-Zeit (ein <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaftswert von <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) umfasst die Ergebniszeichenfolge ein Zeichen "Z", das ein UTC-Datum darstellt.
+- Für eine UTC-Zeit (ein <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaftswert von <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) umfasst die Ergebniszeichenfolge ein Zeichen "Z", das ein UTC-Datum darstellt.
 
--   Für eine Zeit in einer nicht spezifizierten Zeitzone (eine Zeit, deren <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft gleich <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ist), entspricht das Ergebnis <xref:System.String.Empty?displayProperty=nameWithType>.
+- Für eine Zeit in einer nicht spezifizierten Zeitzone (eine Zeit, deren <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>-Eigenschaft gleich <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ist), entspricht das Ergebnis <xref:System.String.Empty?displayProperty=nameWithType>.
 
 Für <xref:System.DateTimeOffset>-Werte ist der Formatbezeichner „K“ gleich dem Formatbezeichner „zzz“ und erzeugt eine Ergebniszeichenfolge, die den Offset des <xref:System.DateTimeOffset>-Werts von der koordinierten Weltzeit (Coordinated Universal Time, UTC) enthält.
 
@@ -509,7 +509,7 @@ Bei einem Analysevorgang wird eine mit dem benutzerdefinierten Formatbezeichner 
 
 Das folgende Beispiel schließt den benutzerdefinierten Formatbezeichner "yy" in eine benutzerdefinierte Formatzeichenfolge ein.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-csharp[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
 [Zurück zur Tabelle](#table)
@@ -632,13 +632,13 @@ Die folgenden Zeichen in einer benutzerdefinierten Formatzeichenfolge für Datum
 |F|H|K|M|d|
 |f|g|h|m|s|
 |t|y|z|%|:|
-|/|"|'|\||
+|/|"|'|&#92;||
 
 Alle anderen Zeichen werden immer als Zeichenliterale interpretiert und bei einem Formatierungsvorgang unverändert in die Ergebniszeichenfolge übernommen.  In einem Analysevorgang müssen die Zeichen exakt den Zeichen in der Eingabezeichenfolge entsprechen, beim Vergleich wird die Groß- und Kleinschreibung beachtet.
 
 Das folgende Beispiel enthält die Literalzeichen „PST“ (für Pacific Standard Time) und „PDT“ (für Pacific Daylight Time), um die lokale Zeitzone in einer Formatzeichenfolge darzustellen. Beachten Sie, dass die Zeichenfolge in der Ergebniszeichenfolge enthalten ist und dass eine Zeichenfolge, die die Zeichenfolge der lokalen Zeitzone enthält, ebenfalls erfolgreich analysiert wird.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+[!code-csharp[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
 [!code-vb[Formatting.DateAndTime.Custom#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
 
 Es gibt zwei Möglichkeiten, um anzugeben, dass Zeichen nicht als reservierte Zeichen, sondern als Literalzeichen interpretiert werden sollen, damit sie in eine Ergebniszeichenfolge eingeschlossen oder in einer Eingabezeichenfolge erfolgreich analysiert werden können:
@@ -647,12 +647,12 @@ Es gibt zwei Möglichkeiten, um anzugeben, dass Zeichen nicht als reservierte Ze
 
 Das folgende Beispiel enthält die Literalzeichen „pst“ (für Pacific Standard Time), um die lokale Zeitzone in einer Formatzeichenfolge darzustellen. Da „s“ und „t“ benutzerdefinierte Formatzeichenfolgen sind, müssen beide Zeichen mit Escapezeichen versehen werden, damit sie als Zeichenliterale interpretiert werden können.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+[!code-csharp[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
 [!code-vb[Formatting.DateAndTime.Custom#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
 - Schließen Sie die gesamte Literalzeichenfolge in Anführungszeichen oder Apostrophe ein. Das folgende Beispiel ist das gleiche wie das vorherige, außer dass „pst“ in Anführungszeichen eingeschlossen ist, um anzugeben, dass die gesamte Zeichenfolge als Zeichenliterale interpretiert werden soll.
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+[!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 ## <a name="notes"></a>Hinweise

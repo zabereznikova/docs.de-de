@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e3ce0b9a40d5375f563662d73964d28724209dcd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202715"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758295"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor-Funktion
 `CoUninitializeCor` ist veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDAPI_(void) CoUninitializeCor(void);  
 ```  
   

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8216e144dfcaeaf9b480d681ae91ce59832ae9e3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980718"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877537"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Befehlszeilenargumente (C#-Programmierhandbuch)
 Sie können Argumente an die `Main`- Methode senden, indem Sie die Methode auf eine der folgenden Arten definieren:  
@@ -51,23 +51,23 @@ long num = Convert.ToInt64(s);
   
  Führen Sie die folgenden Schritte aus, um die Anwendung von einer Eingabeaufforderung aus zu kompilieren und auszuführen:  
   
-1.  Fügen Sie den folgenden Code in einem beliebigen Text-Editor ein, und speichern Sie die Datei als Textdatei mit dem Namen `Factorial.cs`.  
+1. Fügen Sie den folgenden Code in einem beliebigen Text-Editor ein, und speichern Sie die Datei als Textdatei mit dem Namen `Factorial.cs`.  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2.  Öffnen Sie über den Bildschirm **Starten** oder das Menü **Starten** eine Visual Studio **Developer-Eingabeaufforderung**, und navigieren Sie dann zu dem Ordner, der die Datei enthält, die Sie gerade erstellt haben.  
+2. Öffnen Sie über den Bildschirm **Starten** oder das Menü **Starten** eine Visual Studio **Developer-Eingabeaufforderung**, und navigieren Sie dann zu dem Ordner, der die Datei enthält, die Sie gerade erstellt haben.  
   
-3.  Geben Sie den folgenden Befehl ein, um die Anwendung zu kompilieren.  
+3. Geben Sie den folgenden Befehl ein, um die Anwendung zu kompilieren.  
   
      `csc Factorial.cs`  
   
      Wenn die Anwendung keine Kompilierungsfehler aufweist, wird eine ausführbare Datei mit dem Namen `Factorial.exe` erstellt.  
   
-4.  Geben Sie den folgenden Befehl ein, um die Fakultät von 3 zu berechnen:  
+4. Geben Sie den folgenden Befehl ein, um die Fakultät von 3 zu berechnen:  
   
      `Factorial 3`  
   
-5.  Durch den Befehl wird die folgende Ausgabe generiert: `The factorial of 3 is 6.`  
+5. Durch den Befehl wird die folgende Ausgabe generiert: `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Wenn Sie eine Anwendung in Visual Studio ausführen, können Sie Befehlszeilenargumente auf der [Seite „Debuggen“, Projekt-Designer](/visualstudio/ide/reference/debug-page-project-designer) angeben.  
@@ -80,6 +80,5 @@ long num = Convert.ToInt64(s);
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)
 - [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von „foreach“](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)

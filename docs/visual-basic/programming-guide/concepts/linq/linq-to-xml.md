@@ -3,11 +3,11 @@ title: LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f7386556-a6b9-40d5-92b6-e8701dc2c63e
 ms.openlocfilehash: 1ed438b87d2b53e7e811c22e614c60c759fa07f2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650920"
 ---
 # <a name="linq-to-xml-visual-basic"></a>LINQ to XML (Visual Basic)
 LINQ to XML stellt eine XML-Programmierschnittstelle im Arbeitsspeicher bereit, die das .NET Language-Integrated Query-Framework (LINQ) nutzt. LINQ to XML verwendet die neuesten .NET Framework-Sprachfunktionen und kann mit einer aktualisierten und neu gestalteten DOM-XML-Programmierschnittstelle verglichen werden.  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b616017745d7cc33d57b1626b6c27c59a0a60a32
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a68ea07c40c966422be6ebb663e62508032c2610
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091173"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750451"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences-Methode
 Benachrichtigt den Profiler mit Informationen über Stammverweise nach der Garbagecollection.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT RootReferences(  
     [in] ULONG    cRootRefs,  
     [in, size_is(cRootRefs)] ObjectID rootRefIds[] );  

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103768918f67ca695a47c52b9cd97f24fb8d46ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bde1083fe232563aa6129cec79fdfc6c16c77d03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081573"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750016"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a>ICorDebugDebugEvent::GetThread-Methode
 Ruft den Thread auf, auf dem das Ereignis aufgetreten ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetThread(  
         [out]ICorDebugThread **ppThread  
 );  
@@ -43,4 +43,4 @@ HRESULT GetThread(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugDebugEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

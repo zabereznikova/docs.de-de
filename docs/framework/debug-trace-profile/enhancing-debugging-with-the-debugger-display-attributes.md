@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6663b4875fc2c3698b612a4958140ba199ea2669
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684592"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631923"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Verbessern des Debuggens mit den Debuggeranzeigeattributen
 
@@ -45,11 +45,11 @@ Wenn bei einem C#-Objekt beispielsweise `ToString()` überschrieben wurde, ruft 
 ## <a name="using-the-debuggerbrowsableattribute"></a>Verwenden von DebuggerBrowsableAttribute
  Wenden Sie <xref:System.Diagnostics.DebuggerBrowsableAttribute> auf ein Feld oder eine Eigenschaft an, um anzugeben, wie das Feld oder die Eigenschaft im Debuggerfenster angezeigt werden soll. Der Konstruktor für dieses Attribut nimmt einen der <xref:System.Diagnostics.DebuggerBrowsableState>-Enumerationswerte an, die einen der folgenden Zustände angeben:
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> gibt an, dass das Element nicht im Datenfenster angezeigt wird.  Verwenden Sie diesen Wert beispielsweise für den <xref:System.Diagnostics.DebuggerBrowsableAttribute> eines Felds, um das Feld aus der Hierarchie zu entfernen. Das Feld wird nicht angezeigt, wenn Sie den einschließenden Typ erweitern, indem Sie auf das Pluszeichen (+) für die Typinstanz klicken.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> gibt an, dass das Element nicht im Datenfenster angezeigt wird.  Verwenden Sie diesen Wert beispielsweise für den <xref:System.Diagnostics.DebuggerBrowsableAttribute> eines Felds, um das Feld aus der Hierarchie zu entfernen. Das Feld wird nicht angezeigt, wenn Sie den einschließenden Typ erweitern, indem Sie auf das Pluszeichen (+) für die Typinstanz klicken.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> gibt an, dass das Element angezeigt, aber nicht standardmäßig erweitert wird.  Dies ist das Standardverhalten.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> gibt an, dass das Element angezeigt, aber nicht standardmäßig erweitert wird.  Dies ist das Standardverhalten.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> gibt an, dass das Element selbst nicht angezeigt wird. Seine enthaltenen Objekte werden jedoch angezeigt, wenn es sich bei diesen um Arrays oder Sammlungen handelt.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> gibt an, dass das Element selbst nicht angezeigt wird. Seine enthaltenen Objekte werden jedoch angezeigt, wenn es sich bei diesen um Arrays oder Sammlungen handelt.
 
 > [!NOTE]
 >  <xref:System.Diagnostics.DebuggerBrowsableAttribute> wird von Visual Basic in .NET Framework-Version 2.0 nicht unterstützt.

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01151dc2fe6aa995285a34076527609816b2f3e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 81592b6da7fa7cdf275e9fa5b4b82ef0a15061c0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205159"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782569"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs-Methode
 Zählt TypeSpec-Token auf, die im aktuellen Metadatenbereich definiert sind.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumTypeSpecs (  
    [in, out] HCORENUM    *phEnum,  
    [out] mdTypeSpec      rTypeSpecs[],  

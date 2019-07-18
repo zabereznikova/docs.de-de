@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a0beb9a0b1ef2db6ff32fee1b55b3478794509a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a0ad4b7e907412aced911d7869ffce81eb867448
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219732"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738506"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual-Methode
 Schreibt Daten aus dem angegebenen Puffer an die Adresse des angegebenen virtuellen Speicher an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT WriteVirtual (  
     [in] CLRDATA_ADDRESS    address,  
     [in, size_is(bytesRequested)]   

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 43e9c1c2f03daedf4d56152da5672b89399a3c69
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804677"
+---
 ### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a>VB.NET unterstützt die Angabe partieller Namespaces für System.Windows-APIs nicht mehr
 
 |   |   |

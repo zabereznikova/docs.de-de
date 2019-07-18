@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
 ms.openlocfilehash: d847f589bc47f8ab3d6691666bbd879e795db0c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756519"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Erstellen von XML in Visual Basic
 Visual Basic können Sie mit *XML-Literale* direkt in Ihrem Code. Stellt die XML-Literalsyntax [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekte und der XML 1.0-Syntax ähnlich ist. Dies erleichtert die XML-Elemente, Dokumente und Fragmente programmgesteuert erstellt werden, da der Code die gleiche Struktur wie der endgültige XML-Code aufweist.  

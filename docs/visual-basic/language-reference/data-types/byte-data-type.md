@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 217778a21fb9f231f448436ca5a68c42e5837566
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e1725b709c03b0d77cf7e28761396236b5ef1a00
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977525"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622430"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte-Datentyp (Visual Basic)
 Enthält die 8-Bit (1-Byte)-Ganzzahlen ohne Vorzeichen, die im Wert von 0 bis 255 liegen.
@@ -48,15 +48,15 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>Tipps für die Programmierung
 
--   **Negative Zahlen.** Da `Byte` ein Typ ohne Vorzeichen, kann er eine negative Zahl ist keine darstellen. Bei Verwendung der unäres minus (`-`) Operator auf ein Ausdruck, der ausgewertet wird, um geben `Byte`, konvertiert den Ausdruck, der Visual Basic `Short` erste.
+- **Negative Zahlen.** Da `Byte` ein Typ ohne Vorzeichen, kann er eine negative Zahl ist keine darstellen. Bei Verwendung der unäres minus (`-`) Operator auf ein Ausdruck, der ausgewertet wird, um geben `Byte`, konvertiert den Ausdruck, der Visual Basic `Short` erste.
   
--   **Format-Konvertierungen.** Wenn Visual Basic liest oder schreibt Dateien oder beim Aufrufen von DLLs, Methoden und Eigenschaften, können sie automatisch zwischen den Datenformaten konvertieren. Binäre Daten, die in `Byte` Variablen und Arrays während solche Konvertierungen Format beibehalten wird. Verwenden Sie keine `String` Variablen, um binäre Daten verwenden, da der Inhalt während der Konvertierung zwischen ANSI- und Unicode-Formaten beschädigt werden können.
+- **Format-Konvertierungen.** Wenn Visual Basic liest oder schreibt Dateien oder beim Aufrufen von DLLs, Methoden und Eigenschaften, können sie automatisch zwischen den Datenformaten konvertieren. Binäre Daten, die in `Byte` Variablen und Arrays während solche Konvertierungen Format beibehalten wird. Verwenden Sie keine `String` Variablen, um binäre Daten verwenden, da der Inhalt während der Konvertierung zwischen ANSI- und Unicode-Formaten beschädigt werden können.
 
--   **Erweiternde.** Die `Byte` -Datentyp wird zu `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, oder `Double`. Dies bedeutet, Sie können konvertieren `Byte` in alle diese Typen unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.
+- **Erweiternde.** Die `Byte` -Datentyp wird zu `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, oder `Double`. Dies bedeutet, Sie können konvertieren `Byte` in alle diese Typen unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.
   
--   **Typzeichen.** `Byte` hat kein literal-Typzeichen oder Bezeichner-Typzeichen.
+- **Typzeichen.** `Byte` hat kein literal-Typzeichen oder Bezeichner-Typzeichen.
 
--   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Byte?displayProperty=nameWithType>-Struktur.
+- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Byte?displayProperty=nameWithType>-Struktur.
 
 ## <a name="example"></a>Beispiel
 

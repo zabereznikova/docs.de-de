@@ -9,18 +9,18 @@ helpviewer_keywords:
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
 ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762227"
 ---
 # <a name="graphics-how-to-topics"></a>Gewusst-wie-Themen zu Grafiken
 In den folgenden Themen veranschaulichen, wie die Grafiken Funktionen des die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Animieren eines Rechtecks](how-to-animate-a-rectangle.md)  
- [Animieren der Position eines Objekts mithilfe von PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Animieren der Position eines Objekts mit Punktanimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Transformieren von Punkten und Vektoren](how-to-transform-points-and-vectors.md)  
  [Erweitern von Glasframe in eine WPF-Anwendung](extend-glass-frame-into-a-wpf-application.md)  
  [Vorgehensweise: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements](how-to-improve-rendering-performance-by-caching-an-element.md)  

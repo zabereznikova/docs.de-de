@@ -2,20 +2,20 @@
 title: Asynchrone Programmierung
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: e516e356c9549921e1f3233c2ad0144fb7d517b1
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846128"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422799"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
-In diesem Thema erläutert die Unterstützung für asynchrone Programmierung in der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server (SqlClient) einschließlich der Erweiterungen zur Unterstützung von Funktionen, die in eingeführt wurde [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Dieses Thema beschreibt die Unterstützung für asynchrone Programmierung in .NET Framework-Datenanbieter für SQL Server (SqlClient) einschließlich der Erweiterungen zur Unterstützung der asynchronen Programmierung Funktionen, eingeführt wurden, in .NET Framework 4.5.
 
 ## <a name="legacy-asynchronous-programming"></a>Asynchrone Programmierung (Legacy)
 
-Vor [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] wurde die asynchrone Programmierung mit SqlClient mit den folgenden Methoden und der `Asynchronous Processing=true`-Verbindungseigenschaft ausgeführt:
+Vor .NET Framework 4.5, erfolgte die asynchrone Programmierung mit SqlClient mit den folgenden Methoden und die `Asynchronous Processing=true` Connection-Eigenschaft:
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -23,16 +23,16 @@ Vor [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] wurde die asynchrone
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-Diese Funktion ist weiterhin in SqlClient in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] enthalten.
+Diese Funktionalität ist weiterhin in SqlClient in .NET Framework 4.5.
 
 > [!TIP]
-> Ab der [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], diese älteren Methoden nicht mehr benötigen `Asynchronous Processing=true` in der Verbindungszeichenfolge.
+> Ab .NET Framework 4.5 können diese älteren Methoden nicht mehr benötigen `Asynchronous Processing=true` in der Verbindungszeichenfolge.
 
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Funktionen für asynchrone Programmierung, die in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] hinzugefügt wurden
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>Funktionen für die asynchrone Programmierung in .NET Framework 4.5 hinzugefügt
 
 Die neue Funktion für asynchrone Programmierung bietet eine einfache Möglichkeit, Code asynchron ausführen.
 
-Weitere Informationen zu der in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] eingeführten Funktion für asynchrone Programmierung finden Sie unter:
+Weitere Informationen zu der Funktion für asynchrone Programmierung, die in .NET Framework 4.5 eingeführt wurde, finden Sie unter:
 
 - [Asynchrone Programmierung in C#](../../../csharp/async.md)
 
@@ -44,7 +44,7 @@ Weitere Informationen zu der in [!INCLUDE[net_v45](../../../../includes/net-v45-
 
 Wenn die Benutzeroberfläche nicht mehr reagiert oder der Server nicht skaliert, ist es wahrscheinlich, dass Sie den Code asynchroner programmieren müssen. Das Schreiben von asynchronem Code umfasste üblicherweise die Installation eines Rückrufs (auch als Fortsetzung bekannt), um die Logik auszudrücken, die nach Ende des asynchronen Vorgangs ausgeführt wird. Dadurch wird die Struktur des asynchronen Codes im Vergleich zu synchronem Code komplizierter.
 
-Sie können nun Aufrufe in asynchrone Methoden ohne Rückrufe ausführen, und ohne Code auf mehrere Methoden oder Lambda-Ausdrücke zu verteilen.
+Sie können nun Aufrufe in asynchrone Methoden ohne Rückrufe ausführen, und ohne Code auf mehrere Methoden oder Lambdaausdrücke zu verteilen.
 
 Der `async`-Modifizierer gibt an, dass eine Methode asynchron ist. Wenn eine `async`-Methode aufgerufen wird, wird eine Aufgabe zurückgegeben. Wenn die `await` -Operator auf eine Aufgabe angewendet wird, die aktuelle Methode sofort beendet. Nach Beendigung der Aufgabe wird die Ausführung in derselben Methode fortgesetzt.
 
@@ -53,7 +53,7 @@ Der `async`-Modifizierer gibt an, dass eine Methode asynchron ist. Wenn eine `as
 
 Durch den Aufruf einer `async`-Methode werden keine weiteren Threads zugeordnet. Der vorhandene E/A-Abschlussthread wird möglicherweise kurz am Ende verwendet.
 
-Die folgenden Methoden wurden in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] hinzugefügt, um asynchrone Programmierung zu unterstützen:
+In .NET Framework 4.5 zur Unterstützung asynchronen Programmierens wurden die folgenden Methoden hinzugefügt:
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 
@@ -493,7 +493,7 @@ namespace SqlBulkCopyAsyncCodeSample {
          }
       }
 
-      // 3.2 Add new Async.NET capabilities in an existing application (Mixing synchronous and asynchornous calls)
+      // 3.2 Add new Async.NET capabilities in an existing application (Mixing synchronous and asynchronous calls)
       private static async Task MixSyncAsyncSqlBulkCopy() {
          using (OdbcConnection odbcconn = new OdbcConnection(odbcConnectionString)) {
             odbcconn.Open();
@@ -703,7 +703,7 @@ class Class1 {
    }
 
    private static string GetConnectionString() {
-      // To avoid storing the connection string in your code, you can retrive it from a configuration file.
+      // To avoid storing the connection string in your code, you can retrieve it from a configuration file.
       return "Data Source=(local);Integrated Security=SSPI;Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";
    }
 }
@@ -820,7 +820,7 @@ class Program {
    }
 
    private static string GetConnectionString() {
-      // To avoid storing the connection string in your code, you can retrive it from a configuration file.
+      // To avoid storing the connection string in your code, you can retrieve it from a configuration file.
       return "Data Source=(local);Integrated Security=SSPI;Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";
    }
 }

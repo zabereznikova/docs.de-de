@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e5479fad3f19c219a0ca1d5d01934ce92a7162e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: be8d860f508644e68bf69892a63e145e7ffd5b90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127164"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740243"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>CorDebugDebugEventKind-Aufzählung
 Gibt den Typ des Ereignisses, dessen Informationen decodiert wird, die [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugDebugEventKind {  
     DEBUG_EVENT_KIND_MODULE_LOADED                          = 1,  
     DEBUG_EVENT_KIND_MODULE_UNLOADED                        = 2,  
@@ -63,4 +63,4 @@ typedef enum CorDebugDebugEventKind {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

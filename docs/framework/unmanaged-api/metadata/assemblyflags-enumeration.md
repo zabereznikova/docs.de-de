@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c86a4fd2788c8ea2df5d9e54c5c221afd179704
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 502e7841f8c413aa48732bcea0b6c2178d70c061
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091420"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776447"
 ---
 # <a name="assemblyflags-enumeration"></a>AssemblyFlags-Enumeration
 Enthält Werte, die Laufzeitfunktionen einer Assembly zu beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     afImplicitExportedTypes = 0x0001,  
     afImplicitResources = 0x0002,  

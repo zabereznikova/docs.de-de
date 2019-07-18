@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4af328c537fbc3b64eb1a2ac3df3a4e4224789e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f823f660efee2d53bc1f6fa50d8878f496417379
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466621"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752274"
 ---
 # <a name="icordebugenumgetcount-method"></a>ICorDebugEnum::GetCount-Methode
 Ruft die Anzahl der Elemente in der Enumeration.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCount (  
     [out] ULONG *pcelt  
 );  

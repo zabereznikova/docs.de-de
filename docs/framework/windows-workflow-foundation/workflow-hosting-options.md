@@ -2,24 +2,24 @@
 title: Optionen zum Hosten von Workflows
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 2a03c7b5e15b76eabc714f44624f04d3385720d4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0cd9748c28cd6206e1fedffc5772b2849462dba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713318"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487363"
 ---
 # <a name="workflow-hosting-options"></a>Optionen zum Hosten von Workflows
-Die meisten Windows Workflow Foundation (WF)-Beispiele verwenden die Workflows, die in einer Konsolenanwendung gehostet werden, aber dies ist ein realistisches Szenario für realer Workflows nicht. Workflows in realen Geschäftsanwendungen werden in persistenten Prozessen gehostet – entweder in einem vom Entwickler erstellten Webdienst oder in einer Serveranwendung wie [!INCLUDE[iisver](../../../includes/iisver-md.md)] oder AppFabric. Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.  
+Die meisten Windows Workflow Foundation (WF)-Beispiele verwenden die Workflows, die in einer Konsolenanwendung gehostet werden, aber dies ist ein realistisches Szenario für realer Workflows nicht. Workflows in realen Geschäftsanwendungen werden in persistenten Prozessen – entweder ein Windows-Dienst erstellt vom Entwickler oder in einer Serveranwendung, z. B. IIS 7.0 oder AppFabric gehostet werden. Zwischen diesen Vorgehensweisen bestehen die folgenden Unterschiede.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Hosten von Workflows in IIS mit Windows AppFabric  
  Das Verwenden von IIS mit AppFabric ist die bevorzugte Hostmethode für Workflows. Die Hostanwendung für Workflows mit AppFabric ist Windows Activation Service (WAS). Durch diesen Dienst wird nur die Abhängigkeit von "HTTP over IIS" entfernt.  
   
 ## <a name="hosting-workflows-in-iis-alone"></a>Hosten von Workflows nur in IIS  
- Die alleinige Verwendung von [!INCLUDE[iisver](../../../includes/iisver-md.md)] wird nicht empfohlen, da Verwaltungs- und Überwachungstools mit AppFabric verfügbar sind, die die Wartung ausgeführter Anwendungen erleichtern. Workflows sollten nur alleine in [!INCLUDE[iisver](../../../includes/iisver-md.md)] gehostet werden, wenn der Wechsel zu AppFabric Infrastrukturprobleme mit sich bringen würde.  
+ Mit IIS 7.0 allein sollte nicht vorliegen, Verwaltungs- und Überwachungstools mit AppFabric verfügbar sind, die die Wartung ausgeführter Anwendungen zu erleichtern. Workflows sollten nur in IIS 7.0 nur, wenn Infrastrukturprobleme dem Wechsel zu AppFabric gehostet werden.  
   
 > [!WARNING]
->  Von [!INCLUDE[iisver](../../../includes/iisver-md.md)] werden Anwendungspools regelmäßig aus verschiedenen Gründen wiederverwendet. Wenn ein Anwendungspool wiederverwendet wird, akzeptiert IIS keine an den alten Pool gerichteten Nachrichten und instanziiert einen neuen Anwendungspool, um neue Anforderungen zu akzeptieren. Wenn ein Workflow nach dem Senden einer Antwort weiter ausgeführt wird, hat [!INCLUDE[iisver](../../../includes/iisver-md.md)] davon keine Kenntnis, und der Hostanwendungspool wird möglicherweise wiederverwendet. Wenn dies geschieht, wird der Workflow abgebrochen und Überwachungsdienste zeichnen eine [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) Nachricht mit einem leeren Feld "Grund".  
+>  IIS 7.0 wird Anwendungspools in regelmäßigen Abständen aus verschiedenen Gründen wiederverwendet. Wenn ein Anwendungspool wiederverwendet wird, akzeptiert IIS keine an den alten Pool gerichteten Nachrichten und instanziiert einen neuen Anwendungspool, um neue Anforderungen zu akzeptieren. Wenn ein Workflow weiter nach dem Senden einer Antwort, IIS 7.0 werden nicht über die Arbeit und möglicherweise der hostanwendungspool wiederverwendet. Wenn dies geschieht, wird der Workflow abgebrochen und Überwachungsdienste zeichnen eine [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) Nachricht mit einem leeren Feld "Grund".  
 >   
 >  Wenn Persistenz verwendet wird, müssen die seit dem letzten Persistenzpunkt abgebrochenen Instanzen explizit neu gestartet werden.  
 >   

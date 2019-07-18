@@ -3,19 +3,19 @@ title: 224 - MessageThrottleAtSeventyPercent
 ms.date: 03/30/2017
 ms.assetid: 82bbbfd7-10d2-41fd-805d-2443b0c1b96b
 ms.openlocfilehash: f70dc235e037b4f490a25866940fe2bccceae2a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916304"
 ---
 # <a name="224---messagethrottleatseventypercent"></a>224 - MessageThrottleAtSeventyPercent
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|Id|224|  
-|Stichwörter|EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel|  
+|ID|224|  
+|Schlüsselwörter|EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel|  
 |Ebene|Warnung|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   

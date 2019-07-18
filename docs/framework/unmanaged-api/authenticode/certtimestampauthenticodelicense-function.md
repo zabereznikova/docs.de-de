@@ -10,19 +10,19 @@ api_type:
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: beb9a848a55c71259e4f7421658d56ae95a2f3e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111721"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741212"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense-Funktion
 Fügt einer Authenticode-XrML-Lizenz einen Zeitstempel hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CertTimestampAuthenticodeLicense (  
     [in]  PCRYPT_DATA_BLOB   pSignedLicenseBlob,  
     [in]  LPCWSTR            pwszTimestampURI,  
@@ -44,7 +44,7 @@ HRESULT CertTimestampAuthenticodeLicense (
  Die Zeitstempelsignatur ist eigentlich eine PKCS #7-SignedData-Nachricht, deren Inhalt die Binärform des SignatureValue aus der Signatur der Lizenz ist. Im Prinzip agiert sie als Gegensignatur für die Lizenz.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` wenn die Funktion erfolgreich ausgeführt wird. Andernfalls wird ein Fehlercode zurückgegeben.  
+ `S_OK`, wenn die Funktion erfolgreich ausgeführt wurde. Andernfalls wird ein Fehlercode zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch
 

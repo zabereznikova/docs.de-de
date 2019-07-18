@@ -6,11 +6,11 @@ helpviewer_keywords:
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
 ms.openlocfilehash: 607b3a11085f746503c1b82552f1740b49d9ef5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942069"
 ---
 # <a name="how-to-scale-an-element"></a>Vorgehensweise: Skalieren eines Elements
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.ScaleTransform> ein Element skalieren.  
@@ -42,4 +42,4 @@ Zwei ScaleTransform-Vorgänge mit identischen ScaleX- und ScaleY-Werten aber unt
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [Übersicht über Transformationen](transforms-overview.md)
-- [Gewusst wie-Themen](transformations-how-to-topics.md)
+- [Themen zu Vorgehensweisen](transformations-how-to-topics.md)

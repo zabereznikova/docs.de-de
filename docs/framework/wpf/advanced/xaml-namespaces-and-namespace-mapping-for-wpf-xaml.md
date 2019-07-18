@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031872"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML-Namespaces und Namespacezuordnung für WPF-XAML
 Diesem Thema bietet weitere Erläuterungen zu Vorhandensein und Zweck der beiden XAML-Namespacezuordnungen, die häufig im Stammelement einer WPF XAML-Datei zu finden sind. Es wird ebenfalls beschrieben, wie Sie ähnliche Zuordnungen für Elemente in Ihrem eigenen Code und/oder separaten Assemblys erstellen können.  
@@ -47,9 +47,9 @@ Diesem Thema bietet weitere Erläuterungen zu Vorhandensein und Zweck der beiden
   
  Die Syntax akzeptiert die folgenden möglichen benannten Token und die folgenden Werte:  
   
- `clr-namespace:` Der CLR-Namespace deklariert innerhalb der Assembly, die als Elemente verfügbar gemachten öffentlichen Typen enthält.  
+ `clr-namespace:` Der CLR-Namespace, der innerhalb der Assembly deklariert ist, die die öffentlichen Typen enthält, welche als Elemente verfügbar gemacht werden sollen.  
   
- `assembly=` Die Assembly, die einige oder alle der auf das verwiesen wird, enthält [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Namespace. Dieser Wert ist in der Regel nur der Name der Assembly, nicht der Pfad zu ihr, und er schließt nicht die Erweiterung (z.B. .dll oder .exe) ein. Der Pfad zu dieser Assembly muss als Projektreferenz in der Projektdatei hergestellt werden, die das zuzuordnende XAML enthält. Um Versionierung und Signierung mit starkem Namen, integrieren den `assembly` Wert kann eine Zeichenfolge gemäß <xref:System.Reflection.AssemblyName>, anstatt den einfachen Namen.  
+ `assembly=` Die Assembly, die einige oder alle der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Namespaces enthält, auf die verwiesen wird. Dieser Wert ist in der Regel nur der Name der Assembly, nicht der Pfad zu ihr, und er schließt nicht die Erweiterung (z.B. .dll oder .exe) ein. Der Pfad zu dieser Assembly muss als Projektreferenz in der Projektdatei hergestellt werden, die das zuzuordnende XAML enthält. Um Versionierung und Signierung mit starkem Namen, integrieren den `assembly` Wert kann eine Zeichenfolge gemäß <xref:System.Reflection.AssemblyName>, anstatt den einfachen Namen.  
   
  Beachten Sie, dass als Trennzeichen zwischen `clr-namespace`-Token und dessen Wert ein Doppelpunkt (:) verwendet wird, während der `assembly`-Token von seinem Wert mit einem Gleichheitszeichen (=) getrennt ist. Das zwischen diesen beiden Token zu verwendende Zeichen ist ein Semikolon. Darüber hinaus enthalten Sie keine Leerstellen an einer beliebigen Stelle in der Deklaration.  
   
@@ -99,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>Zuordnen von aktuellen Assemblys  
- `assembly` kann ausgelassen werden, wenn die `clr-namespace` auf die verwiesen wird in der gleichen Assembly wie der Anwendungscode, die die benutzerdefinierten Klassen verweist definiert wird. Eine alternative Syntax für diesen Fall ist die Angabe `assembly=`, ohne Zeichenfolgetoken nach dem Gleichheitszeichen.  
+ `assembly` kann ausgelassen werden, wenn die referenzierte `clr-namespace` innerhalb der gleichen Assembly wie der Anwendungscode definiert ist, der auf die benutzerdefinierten Klassen verweist. Eine alternative Syntax für diesen Fall ist die Angabe `assembly=`, ohne Zeichenfolgetoken nach dem Gleichheitszeichen.  
   
  Benutzerdefinierte Klassen können nicht als Stammelement einer Seite verwendet werden, wenn sie in der gleichen Assembly definiert sind. Partielle Klassen müssen nicht zugeordnet werden. Es müssen nur Klassen zugeordnet werden, die keine partielle Klasse einer Seite in Ihrer Anwendung sind, wenn Sie auf diese als Elemente in XAML verweisen möchten.  
   
@@ -112,22 +112,22 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Designer-Namespaces und andere Präfixe aus XAML-Vorlagen  
  Wenn Sie mit Entwicklungsumgebungen und/oder Entwurfstools für WPF-XAML arbeiten, werden Sie bemerken, dass es im XAML-Markup weitere definierte XAML-Namespaces/Präfixe gibt.  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] verwendet einen Designer-Namespace, der in der Regel das Präfix zugeordnet ist `d:`. Neuere Projektvorlagen für WPF ordnen dieses Präfix möglicherweise bereits im Vorfeld zu, um den Austausch von XAML zwischen [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] und andere Entwurfsumgebungen zu unterstützen. Dieser XAML-Designer-Namespace wird verwendet, um bei Roundtrips von XAML-basierten Benutzeroberflächen den jeweiligen Stand des Designs festzuhalten. Er wird ebenfalls für Funktionen wie z.B. `d:IsDataSource` verwendet, die die Laufzeit-Datenquellen in einem Designer aktivieren.  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] verwendet einen Designer-Namespace, der üblicherweise dem Präfix `d:` zugeordnet ist. Neuere Projektvorlagen für WPF ordnen dieses Präfix möglicherweise bereits im Vorfeld zu, um den Austausch von XAML zwischen [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] und andere Entwurfsumgebungen zu unterstützen. Dieser XAML-Designer-Namespace wird verwendet, um bei Roundtrips von XAML-basierten Benutzeroberflächen den jeweiligen Stand des Designs festzuhalten. Er wird ebenfalls für Funktionen wie z.B. `d:IsDataSource` verwendet, die die Laufzeit-Datenquellen in einem Designer aktivieren.  
   
- Ein anderes Präfix, dessen Zuordnung Sie möglicherweise sehen können, ist `mc:`. `mc:` ist für die Markupkompatibilität und nutzt ein Markup-Compatibility-Muster, das nicht unbedingt XAML-spezifischen ist. In gewissem Umfang können die Markupkompatibilitäts-Funktionen verwendet werden, um XAML zwischen Frameworks oder grenzübergreifend mit unterstützenden Implementierungen auszutauschen, zwischen verschiedenen XAML-Schema-Kontexten zu arbeiten, Kompatibilität für eingeschränkte Modi in Designern bereitzustellen, und so weiter. Weitere Informationen zu Markupkompatibilitätskonzepten und deren Beziehung zu WPF, finden Sie unter [Markupkompatibilität (Mc:) Sprachfunktionen](markup-compatibility-mc-language-features.md).  
+ Ein anderes Präfix, dessen Zuordnung Sie möglicherweise sehen können, ist `mc:`. `mc:` dient der Markupkompatibilität. Dabei wird ein Markup-Kompatibilitätsmuster wiederverwendet, das nicht unbedingt XAML-spezifisch ist. In gewissem Umfang können die Markupkompatibilitäts-Funktionen verwendet werden, um XAML zwischen Frameworks oder grenzübergreifend mit unterstützenden Implementierungen auszutauschen, zwischen verschiedenen XAML-Schema-Kontexten zu arbeiten, Kompatibilität für eingeschränkte Modi in Designern bereitzustellen, und so weiter. Weitere Informationen zu Markupkompatibilitätskonzepten und deren Beziehung zu WPF, finden Sie unter [Markupkompatibilität (Mc:) Sprachfunktionen](markup-compatibility-mc-language-features.md).  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF und Laden von Assemblys  
  Der XAML-Schemakontext für WPF-Integration mit dem WPF-Anwendungsmodell, die wiederum die CLR definierte Konzept von <xref:System.AppDomain>. Die folgende Sequenz beschreibt, wie XAML-Schemakontext interpretiert, wie Assemblys geladen werden oder finden von Typen zur Laufzeit oder Entwurfszeit basierend auf der WPF-Verwendung von <xref:System.AppDomain> und anderen Faktoren.  
   
-1.  Durchlaufen der <xref:System.AppDomain>, Suchen nach einer bereits geladenen Assembly mit allen Aspekten des Namens, des zuletzt geladenen Assembly wird gestartet.  
+1. Durchlaufen der <xref:System.AppDomain>, Suchen nach einer bereits geladenen Assembly mit allen Aspekten des Namens, des zuletzt geladenen Assembly wird gestartet.  
   
-2.  Wenn der Name qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
+2. Wenn der Name qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
   
-3.  Wenn der Kurzname und das öffentliche Schlüsseltoken eines qualifizierten Namens mit der Assembly übereinstimmen, aus der das Markup geladen wurde, gib diese Assembly zurück.  
+3. Wenn der Kurzname und das öffentliche Schlüsseltoken eines qualifizierten Namens mit der Assembly übereinstimmen, aus der das Markup geladen wurde, gib diese Assembly zurück.  
   
-4.  Verwenden Sie zum Aufrufen der Kurzname und das Token des öffentlichen Schlüssels <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4. Verwenden Sie zum Aufrufen der Kurzname und das Token des öffentlichen Schlüssels <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-5.  Wenn der Name nicht qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+5. Wenn der Name nicht qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  Loose XAML verwendet Schritt 3 nicht, da es nicht aus Assemblys geladen wird.  
   

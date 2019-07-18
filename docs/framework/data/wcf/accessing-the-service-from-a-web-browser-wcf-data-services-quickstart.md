@@ -2,12 +2,12 @@
 title: Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793470"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Zugreifen auf den Dienst mit einem Webbrowser (WCF Data Services-Schnellstart)
 
@@ -18,16 +18,16 @@ Dies ist die zweite Aufgabe des Schnellstarts WCF Data Services. In dieser Aufga
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>So fordern Sie das Standarddienstdokument mithilfe von Internet Explorer an
 
-1.  In Internet Explorer aus der **Tools** , wählen Sie im Menü **Internetoptionen**, klicken Sie auf die **Content** auf **Einstellungen**, und Deaktivieren von  **Die Feedleseanzeige einschalten**.
+1. In Internet Explorer aus der **Tools** , wählen Sie im Menü **Internetoptionen**, klicken Sie auf die **Content** auf **Einstellungen**, und Deaktivieren von  **Die Feedleseanzeige einschalten**.
 
      Dadurch wird sichergestellt, dass das Lesen von Feeds deaktiviert ist. Wenn Sie diese Funktionalität nicht deaktivieren, behandelt der Webbrowser das zurückgegebene AtomPub-codierte Dokument als XML-Feed, statt die unformatierten XML-Daten anzuzeigen.
 
     > [!NOTE]
     > Wenn der Browser den Feed nicht als unformatierte XML-Daten anzeigen kann, sollten es dennoch möglich sein, den Feed als Quellcode der Seite anzuzeigen.
 
-2.  Drücken Sie in Visual Studio die **F5** Schlüssel zum Starten des Debuggings der Anwendungs.
+2. Drücken Sie in Visual Studio die **F5** Schlüssel zum Starten des Debuggings der Anwendungs.
 
-3.  Öffnen Sie auf dem lokalen Computer einen Webbrowser. Geben Sie in der Adressleiste den folgenden URI ein:
+3. Öffnen Sie auf dem lokalen Computer einen Webbrowser. Geben Sie in der Adressleiste den folgenden URI ein:
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ Dies ist die zweite Aufgabe des Schnellstarts WCF Data Services. In dieser Aufga
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>So greifen Sie auf Entitätenmengenressourcen in einem Webbrowser zu
 
-1.  Geben Sie in der Adressleiste des Webbrowsers den folgenden URI ein:
+1. Geben Sie in der Adressleiste des Webbrowsers den folgenden URI ein:
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ Dies ist die zweite Aufgabe des Schnellstarts WCF Data Services. In dieser Aufga
 
      Dadurch wird ein Satz aller Kunden in der Northwind-Beispieldatenbank zurückgegeben.
 
-2.  Geben Sie in der Adressleiste des Webbrowsers den folgenden URI ein:
+2. Geben Sie in der Adressleiste des Webbrowsers den folgenden URI ein:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ Dies ist die zweite Aufgabe des Schnellstarts WCF Data Services. In dieser Aufga
 
      Dadurch wird eine Entitätsinstanz für einen bestimmten Kunden, `ALFKI`, zurückgegeben.
 
-3.  Geben Sie in der Adressleiste des Webbrowsers den folgenden URI ein:
+3. Geben Sie in der Adressleiste des Webbrowsers den folgenden URI ein:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ Dies ist die zweite Aufgabe des Schnellstarts WCF Data Services. In dieser Aufga
 
      Dadurch wird die Beziehung zwischen Kunden und Bestellungen durchlaufen, um einen Satz aller Bestellungen für den Kunden `ALFKI` zurückzugeben.
 
-4.  Geben Sie in der Adressleiste des Webbrowsers den folgenden URI ein:
+4. Geben Sie in der Adressleiste des Webbrowsers den folgenden URI ein:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643

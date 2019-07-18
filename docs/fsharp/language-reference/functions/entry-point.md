@@ -2,12 +2,12 @@
 title: Einstiegspunkt
 description: Erfahren Sie, wie eine F#-Programm Einstiegspunkt fest, die als ausführbare Datei kompiliert wird, in dem Ausführung formal beginnt.
 ms.date: 05/16/2016
-ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c7aedda5834fb224507bfcecd4688978efa26547
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614347"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645451"
 ---
 # <a name="entry-point"></a>Einstiegspunkt
 

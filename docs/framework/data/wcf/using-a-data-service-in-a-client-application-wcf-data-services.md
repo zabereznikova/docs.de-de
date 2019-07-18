@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc14b6a2b3782ae7ed3d26f9878646f004504d1c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155934"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660558"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Verwenden eines Datendiensts in einer Clientanwendung (WCF Data Services)
 Sie können auf zugreifen, einen Dienst, der verfügbar macht eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed zu, indem Sie einen URI auf einen Webbrowser angeben. Der URI stellt die Adresse einer Ressource bereit, und Anforderungsnachrichten werden an diese Adressen gesendet, um auf die zugrunde liegenden Daten, die die Ressource darstellt, zuzugreifen oder um diese zu ändern. Der Browser gibt einen HTTP GET-Befehl aus und gibt die angeforderte Ressource als [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed zurück. Weitere Informationen finden Sie unter [Zugriff auf den Dienst über einen Webbrowser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -21,26 +21,26 @@ Sie können auf zugreifen, einen Dienst, der verfügbar macht eine [!INCLUDE[ssO
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die Gewährleistung der Interoperabilität zwischen Diensten, die verfügbar machen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feeds bzw. Anwendungen, die nutzen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -feeds. Anwendungen Zugriff auf und Ändern von Daten in eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Diensts durch Senden von Anforderungsnachrichten einer bestimmten HTTP-Aktion und mit einem URI, der eine Entitätsressource adressiert, für die die Aktion ausgeführt werden soll. Erforderliche Entitätsdaten werden als speziell codierte Nutzlast im Nachrichtentext angegeben.  
   
 ### <a name="http-actions"></a>HTTP-Aktionen  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die folgenden HTTP-Aktionen zum Erstellen, lesen, aktualisieren und Löschen von Entitätsdaten, die die adressierte Ressource darstellt:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die folgenden HTTP-Aktionen zum Erstellen, Lesen, Aktualisieren und Löschen von Entitätsdaten, die die adressierte Ressource darstellt:  
   
--   **HTTP GET** – Dies ist die Standardaktion, wenn eine Ressource über einen Browser zugegriffen wird. In der Anforderungsnachricht wird keine Nutzlast angegeben, und es wird eine Antwortmethode mit einer Nutzlast zurückgegeben, die die angeforderten Daten enthält.  
+- **HTTP GET** – Dies ist die Standardaktion, wenn eine Ressource über einen Browser zugegriffen wird. In der Anforderungsnachricht wird keine Nutzlast angegeben, und es wird eine Antwortmethode mit einer Nutzlast zurückgegeben, die die angeforderten Daten enthält.  
   
--   **HTTP-POST** -fügt neue Entitätsdaten in die angegebene Ressource. Einzufügende Daten werden in der Nutzlast der Anforderungsnachricht angegeben. Die Nutzlast der Antwortnachricht enthält die Daten für die neu erstellte Entität. Dazu gehören auch alle automatisch generierten Schlüsselwerte. Der Header enthält auch den URI, der die neue Entitätsressource adressiert.  
+- **HTTP-POST** -fügt neue Entitätsdaten in die angegebene Ressource. Einzufügende Daten werden in der Nutzlast der Anforderungsnachricht angegeben. Die Nutzlast der Antwortnachricht enthält die Daten für die neu erstellte Entität. Dazu gehören auch alle automatisch generierten Schlüsselwerte. Der Header enthält auch den URI, der die neue Entitätsressource adressiert.  
   
--   **HTTP DELETE** -löscht die Entitätsdaten, die die angegebene Ressource darstellt. Eine Nutzlast ist in der Anforderungs- oder Antwortnachricht nicht vorhanden.  
+- **HTTP DELETE** -löscht die Entitätsdaten, die die angegebene Ressource darstellt. Eine Nutzlast ist in der Anforderungs- oder Antwortnachricht nicht vorhanden.  
   
--   **HTTP PUT** - ersetzt vorhandene Entitätsdaten in der angeforderten Ressource mit neuen Daten, die in der Nutzlast der Anforderungsnachricht angegeben ist.  
+- **HTTP PUT** - ersetzt vorhandene Entitätsdaten in der angeforderten Ressource mit neuen Daten, die in der Nutzlast der Anforderungsnachricht angegeben ist.  
   
--   **HTTP MERGE** - wegen Ineffizienzen beim Ausführen eines Löschvorgangs, gefolgt von einer Insert-Anweisung in der Datenquelle nur zum Ändern von Entitätsdaten, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] führt eine neue HTTP MERGE-Aktion. Die Nutzlast der Anforderungsnachricht enthält die Eigenschaften, die für die adressierte Entitätsressource geändert werden müssen. Da HTTP MERGE nicht in der HTTP-Spezifikation definiert ist, ist möglicherweise eine zusätzliche Verarbeitung zum Weiterleiten einer HTTP MERGE-Anforderung durch Server erforderlich, die [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] nicht unterstützen.  
+- **HTTP MERGE** - wegen Ineffizienzen beim Ausführen eines Löschvorgangs, gefolgt von einer Insert-Anweisung in der Datenquelle nur zum Ändern von Entitätsdaten, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] führt eine neue HTTP MERGE-Aktion. Die Nutzlast der Anforderungsnachricht enthält die Eigenschaften, die für die adressierte Entitätsressource geändert werden müssen. Da HTTP MERGE nicht in der HTTP-Spezifikation definiert ist, ist möglicherweise eine zusätzliche Verarbeitung zum Weiterleiten einer HTTP MERGE-Anforderung durch Server erforderlich, die [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] nicht unterstützen.  
   
  Weitere Informationen finden Sie unter [OData: Vorgänge](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Nutzlastformate  
  Für eine HTTP PUT-, HTTP POST- oder HTTP MERGE-Anforderung enthält die Nutzlast einer Anforderungsnachricht die Entitätsdaten, die Sie an den Datendienst senden. Der Inhalt der Nutzlast hängt vom Datenformat der Nachricht ab. Die HTTP-Antworten auf alle Aktionen außer DELETE enthalten auch eine entsprechende Nutzlast. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die folgenden Nutzlastformate zum Zugreifen auf und Ändern von Daten mit dem Dienst:  
   
--   **Atom** -eine XML-basierte nachrichtencodierung, definiert durch [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] als Erweiterung für das Atom Publishing Protocol (AtomPub) zum Aktivieren von den Datenaustausch über HTTP für Webfeeds, Podcasts, Wikis und XML-basierte Internetfunktionalität. Weitere Informationen finden Sie unter [OData: Atom-Format](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** -eine XML-basierte nachrichtencodierung, definiert durch [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] als Erweiterung für das Atom Publishing Protocol (AtomPub) zum Aktivieren von den Datenaustausch über HTTP für Webfeeds, Podcasts, Wikis und XML-basierte Internetfunktionalität. Weitere Informationen finden Sie unter [OData: Atom-Format](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
--   **JSON** -JavaScript Object Notation (JSON) ist ein einfaches Datenaustauschformat, das für eine Teilmenge der Programmiersprache JavaScript basiert. Weitere Informationen finden Sie unter [OData: JSON-Format](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JavaScript Object Notation (JSON) ist ein einfaches Datenaustauschformat, das für eine Teilmenge der Programmiersprache JavaScript basiert. Weitere Informationen finden Sie unter [OData: JSON-Format](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
  Das Nachrichtenformat der Nutzlast wird im Header der HTTP-Anforderungsnachricht angefordert. Weitere Informationen finden Sie unter [OData: Vorgänge](https://go.microsoft.com/fwlink/?LinkID=185792).  
   

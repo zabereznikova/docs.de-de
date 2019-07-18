@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 046bb61b50540b2c58bd8ed9971620662f308823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37ffbe36b231737ca10b2dc864ad6e5b304b94bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133587"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648314"
 ---
 # <a name="instancing"></a>Instanziierung
 Im Beispiel zur Instanziierung wird die Einstellung zum Instanziierungsverhalten veranschaulicht, die steuert, wie Instanzen einer Dienstklasse als Reaktion auf Clientanforderungen erstellt werden. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), implementiert die `ICalculator` Dienstvertrag. In diesem Beispiel wird ein neuer Vertrag (`ICalculatorInstance`) definiert, der von `ICalculator` erbt. Der von `ICalculatorInstance` angegebene Vertrag stellt drei zusätzliche Vorgänge zum Überprüfen des Zustands der Dienstinstanz bereit. Indem Sie die Einstellung für die Instanziierung ändern, können Sie Änderungen im Verhalten beobachten, wenn Sie den Client ausführen.  
@@ -22,11 +22,11 @@ Im Beispiel zur Instanziierung wird die Einstellung zum Instanziierungsverhalten
   
  Es stehen die folgenden Instanziierungsmodi zur Verfügung:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Eine neue Dienstinstanz wird für jede Clientanforderung erstellt.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Eine neue Dienstinstanz wird für jede Clientanforderung erstellt.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Eine neue Instanz wird für jede neue Clientsitzung erstellt und verwaltet werden, für die Lebensdauer der Sitzung (erfordert eine Bindung, die Sitzung unterstützt).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Eine neue Instanz wird für jede neue Clientsitzung erstellt und verwaltet werden, für die Lebensdauer der Sitzung (erfordert eine Bindung, die Sitzung unterstützt).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Eine einzelne Instanz der Dienstklasse verarbeitet alle Clientanforderungen für die Lebensdauer der Anwendung.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Eine einzelne Instanz der Dienstklasse verarbeitet alle Clientanforderungen für die Lebensdauer der Anwendung.  
   
  Die Dienstklasse gibt das Instanziierungsverhalten mit dem `[ServiceBehavior(InstanceContextMode=<setting>)]`-Attribut an, wie im folgenden Beispielcode dargestellt. Indem Sie unterschiedliche Zeilen auskommentieren, können Sie das Verhalten der einzelnen Instanzmodi beobachten. Denken Sie daran, den Dienst nach dem Ändern des Instanziierungsmodus neu zu erstellen. Es gibt keine Einstellungen in Bezug auf die Instanziierung, die auf dem Client angegeben werden.  
   
@@ -124,11 +124,11 @@ static void Main()
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

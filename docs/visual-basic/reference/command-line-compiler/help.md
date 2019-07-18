@@ -10,11 +10,11 @@ helpviewer_keywords:
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
 ms.openlocfilehash: adfde0bd420ccb7af4c4872affe09e5f6cf47e71
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051688"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 Zeigt die Compileroptionen an.  

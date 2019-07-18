@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 820d4cb9d17bf467d257bfbba5f43f07228c0b4f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818688"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663563"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Vorgehensweise: Einer Objektvariablen verweist nicht auf eine beliebige Instanz (Visual Basic)
 Sie können die Zuordnung einer Objektvariablen von jeder Objektinstanz aufheben, durch Festlegung auf [nichts](../../../../visual-basic/language-reference/nothing.md).  
   
 ### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>Aufheben der Zuordnung eine Objektvariablen von jeder Objektinstanz  
   
--   Legen Sie die Variable auf `Nothing` in einer zuweisungsanweisung.  
+- Legen Sie die Variable auf `Nothing` in einer zuweisungsanweisung.  
   
     ```  
     ' Assume account is a defined class  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d9e7b52c9061a1a7b470f9d4abf735e605087dc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352073"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636853"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob-Funktion
 

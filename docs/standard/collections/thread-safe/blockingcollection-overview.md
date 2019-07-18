@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673997"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664553"
 ---
 # <a name="blockingcollection-overview"></a>Übersicht über BlockingCollections
 <xref:System.Collections.Concurrent.BlockingCollection%601> ist eine threadsichere Sammlungsklasse, die die folgenden Features bietet:  
   
--   Implementierung des Producer-Consumer-Musters.  
+- Implementierung des Producer-Consumer-Musters.  
   
--   Gleichzeitiges Hinzufügen und Entfernen von Elementen aus mehreren Threads.  
+- Gleichzeitiges Hinzufügen und Entfernen von Elementen aus mehreren Threads.  
   
--   Optionale maximale Kapazität.  
+- Optionale maximale Kapazität.  
   
--   Einfüge- und Löschvorgänge, die blockiert werden, wenn die Sammlung leer oder voll ist.  
+- Einfüge- und Löschvorgänge, die blockiert werden, wenn die Sammlung leer oder voll ist.  
   
--   Einfüge- und Löschvorgänge zum „Ausprobieren“, die Abläufe nicht oder nur für eine festgelegte Zeitspanne blockieren.  
+- Einfüge- und Löschvorgänge zum „Ausprobieren“, die Abläufe nicht oder nur für eine festgelegte Zeitspanne blockieren.  
   
--   Kapselung aller Sammlungstypen, die <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> implementieren  
+- Kapselung aller Sammlungstypen, die <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> implementieren  
   
--   Abbruch mit Abbruchtoken.  
+- Abbruch mit Abbruchtoken.  
   
--   Zwei Arten von Enumeration mit `foreach` (`For Each` in Visual Basic):  
+- Zwei Arten von Enumeration mit `foreach` (`For Each` in Visual Basic):  
   
-    1.  Schreibgeschützte Enumeration.  
+    1. Schreibgeschützte Enumeration.  
   
-    2.  Enumeration, in deren Verlauf Elemente entfernt werden.  
+    2. Enumeration, in deren Verlauf Elemente entfernt werden.  
   
 ## <a name="bounding-and-blocking-support"></a>Unterstützung von Begrenzen und Blockieren  
  <xref:System.Collections.Concurrent.BlockingCollection%601> unterstützt das Begrenzen und Blockieren. Begrenzen bedeutet, dass Sie die maximale Kapazität der Sammlung festlegen können. Das Begrenzen ist in bestimmten Szenarien wichtig, da es Ihnen ermöglicht, die maximale Größe der Sammlung im Arbeitsspeicher zu steuern, und es verhindert, dass die erzeugenden Threads den verbrauchenden Threads zu weit vorauseilen.  

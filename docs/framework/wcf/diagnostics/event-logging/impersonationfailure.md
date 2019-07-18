@@ -3,11 +3,11 @@ title: ImpersonationFailure
 ms.date: 03/30/2017
 ms.assetid: 3005d73d-2164-4ed0-9da1-9f83bd5b9d06
 ms.openlocfilehash: 9d4f554234b77b737e2bae962612f2a1f8c9fa5f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969574"
 ---
 # <a name="impersonationfailure"></a>ImpersonationFailure
 ID: 176  

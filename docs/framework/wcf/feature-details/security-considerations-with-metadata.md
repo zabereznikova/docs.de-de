@@ -3,11 +3,11 @@ title: Sicherheitsüberlegungen für Metadaten
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
 ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748368"
 ---
 # <a name="security-considerations-with-metadata"></a>Sicherheitsüberlegungen für Metadaten
 Wenn Sie die Metadaten-Features in Windows Communication Foundation (WCF) verwenden, sollten Sie die Sicherheitsaspekte bei der Veröffentlichung, abrufen und verwenden die Metadaten des Diensts.  
@@ -40,5 +40,5 @@ Wenn Sie die Metadaten-Features in Windows Communication Foundation (WCF) verwen
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Sichern von Metadatenendpunkten](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Vorgehensweise: Sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)

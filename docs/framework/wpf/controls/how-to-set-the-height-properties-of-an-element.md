@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
 ms.openlocfilehash: fb655630336c3b69afdc726a2e3c5a2cb8838667
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024416"
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>Vorgehensweise: Festlegen der Höheneigenschaften eines Elements
 ## <a name="example"></a>Beispiel  

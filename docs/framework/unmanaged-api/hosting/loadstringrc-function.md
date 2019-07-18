@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f17ecfe683de0739e4e1e063d38836eecf949336
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9047bf973224cdbc1f67463ef70f15f81089f827
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146996"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768467"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC-Funktion
 Übersetzt einen HRESULT-Wert in eine Fehlermeldung, wobei die Standardkultur des aktuellen Threads verwendet wird.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT LoadStringRC (  
     [in]  UINT    iResourceID,   
     [out] LPWSTR  szBuffer,   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 2475f63099e47beedc610b8815a8e39e1f7be77e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611216"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859559"
 ---
 # <a name="value-types-table-c-reference"></a>Tabelle der Werttypen (C#-Referenz)
 
@@ -21,22 +21,22 @@ In der folgenden Tabelle sind die Werttypen in C# angegeben:
 |Werttyp|Kategorie|Typsuffix|
 |----------------|--------------|-----------------|
 |[bool](bool.md)|Boolesch||
-|[byte](byte.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||
-|[char](char.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||
-|[decimal](decimal.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|M oder m|
-|[double](double.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|D oder d|
+|`byte`|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
+|[char](char.md)|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)
+|`decimal`|Numerisch, [Gleitkomma](../builtin-types/floating-point-numeric-types.md)|M oder m|
+|`double`|Numerisch, [Gleitkomma](../builtin-types/floating-point-numeric-types.md)|D oder d|
 |[enum](enum.md)|Enumeration||
-|[float](float.md)|Numerisch, [Gleitkomma](floating-point-types-table.md)|F oder f|
-|[int](int.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)||
-|[long](long.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)|L oder l|
-|[sbyte](sbyte.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)||
-|[short](short.md)|Mit Vorzeichen, numerisch, [integral](integral-types-table.md)||
+|`float`|Numerisch, [Gleitkomma](../builtin-types/floating-point-numeric-types.md)|F oder f|
+|`int`|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
+|`long`|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)|L oder l|
+|`sbyte`|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
+|`short`|Mit Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
 |[struct](struct.md)|Eine benutzerdefinierte Struktur||
-|[uint](uint.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)|U oder u|
-|[ulong](ulong.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU oder lu|
-|[ushort](ushort.md)|Ohne Vorzeichen, numerisch, [integral](integral-types-table.md)||
+|`uint`|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)|U oder u|
+|`ulong`|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU oder lu|
+|`ushort`|Ohne Vorzeichen, numerisch, [integral](../builtin-types/integral-numeric-types.md)||
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Sie verwenden ein Typsuffix zum Angeben eines numerischen Literaltyps. Beispiel:
 
@@ -52,7 +52,6 @@ Wenn ein [reales Ganzzahlliteral](~/_csharplang/spec/lexical-structure.md#real-l
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
-- [Referenztabellen für Typen](reference-tables-for-types.md)
 - [Tabelle für Standardwerte](default-values-table.md)
 - [Werttypen](value-types.md)
 - [Tabelle zur Formatierung numerischer Ergebnisse](formatting-numeric-results-table.md)

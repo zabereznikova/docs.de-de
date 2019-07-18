@@ -3,11 +3,11 @@ title: SQL Server-Datenvorgänge in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
 ms.openlocfilehash: 2dd4430e5b7f86253966f2778abe7d9ba58661a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876316"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>SQL Server-Datenvorgänge in ADO.NET
 In diesem Abschnitt werden SQL Server-Funktionen und -verhaltensweisen beschrieben, die für den .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) spezifisch sind.  

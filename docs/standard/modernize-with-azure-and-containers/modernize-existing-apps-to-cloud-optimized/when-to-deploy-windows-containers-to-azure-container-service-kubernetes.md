@@ -1,15 +1,13 @@
 ---
 title: Beim Bereitstellen von Windows-Containern in Azure Container Service (d.h. Kubernetes)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Beim Bereitstellen von Windows-Containern in Azure Container Service (d.h. Kubernetes)
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 0b803b104f905fddac7939d7b070c206aabffeda
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144792"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758562"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Beim Bereitstellen von Windows-Containern in Azure Container Service (d.h. Kubernetes)
 
@@ -24,5 +22,5 @@ Z. B. in Kubernetes Unterstützung für Container systemeigen (Bewohner erster K
 Wichtiger Hinweis: Die hoch entwickelten und "Weitere PaaS" ACS (Azure Container Service) für Kubernetes-Version befindet sich AKS (Azure Kubernetes Service), Windows-Container werden Q2 2018 weiterhin nicht unterstützt, jedoch in Kürze unterstützt.
 
 >[!div class="step-by-step"]
->[Zurück](when-to-deploy-windows-containers-to-service-fabric.md)
+>[Zurück](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
 >[Weiter](choosing-azure-compute-options-for-container-based-applications.md)

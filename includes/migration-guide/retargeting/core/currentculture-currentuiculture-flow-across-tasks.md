@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: de40d16dbb5e7a7a49ae0988342b3eb75bc078c5
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761090"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804415"
 ---
 ### <a name="currentculture-and-currentuiculture-flow-across-tasks"></a>CurrentCulture und CurrentUICulture werden über mehrere Aufgaben übertragen
 

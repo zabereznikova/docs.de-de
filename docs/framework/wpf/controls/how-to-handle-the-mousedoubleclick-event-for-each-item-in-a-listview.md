@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
 ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770993"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Vorgehensweise: Behandeln des MouseDoubleClick-Ereignisses für die einzelnen ListView-Elemente
 Behandeln eines Ereignisses für ein Element in einem <xref:System.Windows.Controls.ListView>, müssen Sie zum Hinzufügen eines ereignishandlers zu jeder <xref:System.Windows.Controls.ListViewItem>. Wenn eine <xref:System.Windows.Controls.ListView> gebunden ist Sie nicht explizit erstellen, mit einer Datenquelle eine <xref:System.Windows.Controls.ListViewItem>, aber Sie können das Ereignis für jedes Element behandeln, durch das Hinzufügen eine <xref:System.Windows.EventSetter> , einem Stil ein <xref:System.Windows.Controls.ListViewItem>.  
@@ -35,7 +35,7 @@ Behandeln eines Ereignisses für ein Element in einem <xref:System.Windows.Contr
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.XmlElement>
-- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
+- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
 - [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
-- [Binden an XML-Daten mithilfe der XMLDataProvider-Klasse und mithilfe von XPath-Abfragen](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
 - [Übersicht über ListView](listview-overview.md)

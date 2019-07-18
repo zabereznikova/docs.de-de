@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f093229af96cba679959fa052bd6b5809d347f4b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195058"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606026"
 ---
 # <a name="sending-and-receiving-faults"></a>Senden und Empfangen von Fehlern
 SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an einen Client und bei Duplexkommunikation von einem Client an einen Dienst in einem interoperablen Verfahren. In der Regel definiert ein Dienst benutzerdefinierten Fehlerinhalt und legt fest, welche Vorgänge ihn zurückgeben können. (Weitere Informationen finden Sie unter [definieren und Angeben von Fehlern](../../../docs/framework/wcf/defining-and-specifying-faults.md).) In diesem Thema wird erläutert, wie ein Dienst oder ein Duplexclient diese Fehler senden kann, wenn der entsprechende Fehlerzustand aufgetreten ist, und wie eine Client- oder Dienstanwendung diese Fehler verarbeitet. Einen Überblick über die Fehlerbehandlung in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -47,19 +47,19 @@ SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an
 ## <a name="handling-faults"></a>Behandeln von Fehlern  
  SOAP-Fehler, die auftreten, während der Kommunikation, die für Clientanwendungen relevant sind, werden in WCF-Clients als verwaltete Ausnahmen ausgelöst. Es gibt zahlreiche Ausnahmen, die während der Ausführung eines Programms auftreten können, können Anwendungen, die über das Programmiermodell für die WCF-Client davon ausgehen, Ausnahmen von den folgenden beiden Typen als kommunikationsergebnis behandeln.  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> -Objekte werden ausgelöst, wenn ein Vorgang das angegebene Zeitlimit überschreitet.  
+ <xref:System.TimeoutException>-Objekte werden ausgelöst, wenn ein Vorgang das angegebene Zeitlimit überschreitet.  
   
- <xref:System.ServiceModel.CommunicationException> -Objekte werden ausgelöst, wenn einige wiederherstellbaren kommunikationsfehlerbedingung entweder auf den Dienst oder auf dem Client vorhanden ist.  
+ <xref:System.ServiceModel.CommunicationException>-Objekte werden ausgelöst, wenn entweder beim Dienst oder beim Client eine behebbare Kommunikationsfehlerbedingung besteht.  
   
  Die <xref:System.ServiceModel.CommunicationException>-Klasse verfügt über zwei wichtige abgeleitete Typen: <xref:System.ServiceModel.FaultException> und den generischen <xref:System.ServiceModel.FaultException%601>-Typ.  
   
- <xref:System.ServiceModel.FaultException> Ausnahmen werden ausgelöst, wenn ein Listener einen Fehler empfängt, der nicht erwartet oder im Vorgangsvertrag angegeben wird; Dies geschieht normalerweise, wenn die Anwendung ein Debugvorgang durchgeführt wird und der Dienst hat die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`.  
+ <xref:System.ServiceModel.FaultException>-Ausnahmen werden ausgelöst, wenn ein Listener einen Fehler empfängt, der in dem Vorgangsvertrag nicht erwartet oder festgelegt ist; dies geschieht normalerweise, wenn die Anwendung gedebuggt wird und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-Eigenschaft des Diensts auf `true` festgelegt ist.  
   
- <xref:System.ServiceModel.FaultException%601> Ausnahmen werden auf dem Client ausgelöst, wenn ein Fehler, die im Vorgangsvertrag angegeben wird als Reaktion auf einen bidirektionalen Vorgang empfangen wird (d. h. eine Methode mit einem <xref:System.ServiceModel.OperationContractAttribute> -Attribut mit <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> festgelegt `false`).  
+ Am Client werden <xref:System.ServiceModel.FaultException%601>-Ausnahmen ausgelöst, wenn ein im Vorgangsvertrag angegebener Fehler als Antwort auf einen bidirektionalen Vorgang empfangen wird (d. h. eine Methode mit einem <xref:System.ServiceModel.OperationContractAttribute>-Attribut, bei dem <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> auf `false` festgelegt ist).  
   
 > [!NOTE]
 >  Wenn ein WCF-Dienst hat die <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true` der Client erfährt dieses als eine undeklarierte <xref:System.ServiceModel.FaultException%601> des Typs <xref:System.ServiceModel.ExceptionDetail>. Clients können diesen bestimmten Fehler entweder abfangen oder den Fehler in einem Catch-Block für <xref:System.ServiceModel.FaultException> behandeln.  
@@ -81,13 +81,13 @@ SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an
   
  In der Regel werden Clientobjektkanäle auf eine der folgenden Möglichkeiten geschlossen:  
   
--   Wenn der WCF-Clientobjekt wiederverwendet wird.  
+- Wenn der WCF-Clientobjekt wiederverwendet wird.  
   
--   Wenn die Clientanwendung <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> aufruft.  
+- Wenn die Clientanwendung <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> aufruft.  
   
--   Wenn die Clientanwendung <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> aufruft.  
+- Wenn die Clientanwendung <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> aufruft.  
   
--   Wenn die Clientanwendung einen Vorgang aufruft, bei dem es sich um einen Vorgang handelt, der eine Sitzung beendet.  
+- Wenn die Clientanwendung einen Vorgang aufruft, bei dem es sich um einen Vorgang handelt, der eine Sitzung beendet.  
   
  In jedem Fall weist das Schließen des Kanals den Kanal an zu beginnen, alle zugrunde liegenden Kanäle zu schließen, die möglicherweise Nachrichten senden, um eine komplexe Funktionalität auf Anwendungsebene zu unterstützen. Wenn z. B. ein Vertrag Sitzungen erfordert, versucht eine Bindung eine Sitzung einzurichten, indem Nachrichten mit dem Dienstkanal ausgetauscht werden, bis eine Sitzung eingerichtet ist. Wenn der Kanal geschlossen wird, benachrichtigt der zugrunde liegende Sitzungskanal den Dienst, dass die Sitzung beendet wird. Wenn der Kanal bereits abgebrochen oder geschlossen ist oder aus anderen Gründen nicht verwendet werden kann (z. B. wenn ein Netzwerkkabel abgezogen wird), kann der Clientkanal dem Dienstkanal in diesem Fall nicht mitteilen, dass die Sitzung beendet wird, und dies kann zu einer Ausnahme führen.  
   
@@ -110,4 +110,4 @@ SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Erwartete Ausnahmen](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Freigeben von WCF-Clientressourcen mit „Close“ und „Abort“](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Verwenden Sie schließen "und" Abort um WCF-Client-Ressourcen freizugeben.](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

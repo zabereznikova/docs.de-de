@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren und Verwenden von benutzerdefinierten numerischen Formatanbietern'
+title: 'Vorgehensweise: Definieren und Verwenden von benutzerdefinierten numerischen Formatanbietern'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,51 +17,51 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879035"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590469"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Gewusst wie: Definieren und Verwenden von benutzerdefinierten numerischen Formatanbietern
-Das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ermöglicht eine umfangreiche Steuerung der Zeichenfolgendarstellung numerischer Werte. Die folgenden Funktionen für die Anpassung des Formats numerischer Werte werden unterstützt:  
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Vorgehensweise: Definieren und Verwenden von benutzerdefinierten numerischen Formatanbietern
+.NET Framework ermöglicht eine umfangreiche Steuerung der Zeichenfolgendarstellung numerischer Werte. Die folgenden Funktionen für die Anpassung des Formats numerischer Werte werden unterstützt:  
   
--   Standardmäßige Zahlenformatzeichenfolgen, die einen vordefinierten Satz an Formaten für die Konvertierung von Zahlen in ihre Zeichenfolgendarstellung bereitstellen. Sie können diese mit jeder Zahlenformatierungsmethode verwenden, die über einen `format`-Parameter verfügt, z.B. <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. Weitere Informationen finden Sie unter [Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+- Standardmäßige Zahlenformatzeichenfolgen, die einen vordefinierten Satz an Formaten für die Konvertierung von Zahlen in ihre Zeichenfolgendarstellung bereitstellen. Sie können diese mit jeder Zahlenformatierungsmethode verwenden, die über einen `format`-Parameter verfügt, z.B. <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. Weitere Informationen finden Sie unter [Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
--   Benutzerdefinierte Zahlenformatzeichenfolgen, die einen Satz von Symbolen bereitstellen, die kombiniert werden können, um benutzerdefinierte Zahlenformatbezeichner zu definieren. Sie können auch mit jeder Zahlenformatierungsmethode verwendet werden, die über einen `format`-Parameter verfügt, z.B. <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. Weitere Informationen finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- Benutzerdefinierte Zahlenformatzeichenfolgen, die einen Satz von Symbolen bereitstellen, die kombiniert werden können, um benutzerdefinierte Zahlenformatbezeichner zu definieren. Sie können auch mit jeder Zahlenformatierungsmethode verwendet werden, die über einen `format`-Parameter verfügt, z.B. <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. Weitere Informationen finden Sie unter [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   Benutzerdefinierte <xref:System.Globalization.CultureInfo>- oder <xref:System.Globalization.NumberFormatInfo>-Objekte, die die beim Anzeigen der Zeichenfolgendarstellungen numerischer Werte verwendeten Symbole und Formatmuster definieren. Sie können diese mit jeder Zahlenformatierungsmethode verwenden, die über einen `provider`-Parameter verfügt, z.B. <xref:System.Int32.ToString%2A>. Üblicherweise wird der `provider`-Parameter verwendet, um eine kulturspezifische Formatierung anzugeben.  
+- Benutzerdefinierte <xref:System.Globalization.CultureInfo>- oder <xref:System.Globalization.NumberFormatInfo>-Objekte, die die beim Anzeigen der Zeichenfolgendarstellungen numerischer Werte verwendeten Symbole und Formatmuster definieren. Sie können diese mit jeder Zahlenformatierungsmethode verwenden, die über einen `provider`-Parameter verfügt, z.B. <xref:System.Int32.ToString%2A>. Üblicherweise wird der `provider`-Parameter verwendet, um eine kulturspezifische Formatierung anzugeben.  
   
- In einigen Fällen (z.B. wenn eine Anwendung eine formatierte Kontonummer, eine ID oder eine Postleitzahl anzeigen muss) sind diese drei Techniken nicht geeignet. Das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ermöglicht Ihnen auch die Definition eines Formatierungsobjekts, bei dem es sich weder um ein <xref:System.Globalization.CultureInfo>-Objekt noch um ein <xref:System.Globalization.NumberFormatInfo>-Objekt handelt, um zu bestimmen, wie ein numerischer Wert formatiert wird. Dieses Thema stellt eine Schrittanleitung für die Implementierung eines solchen Objekts bereit und bietet ein Beispiel, das Telefonnummern formatiert.  
+ In einigen Fällen (z.B. wenn eine Anwendung eine formatierte Kontonummer, eine ID oder eine Postleitzahl anzeigen muss) sind diese drei Techniken nicht geeignet. .NET Framework ermöglicht Ihnen auch die Definition eines Formatierungsobjekts, bei dem es sich weder um ein <xref:System.Globalization.CultureInfo>-Objekt noch um ein <xref:System.Globalization.NumberFormatInfo>-Objekt handelt, um zu bestimmen, wie ein numerischer Wert formatiert wird. Dieses Thema stellt eine Schrittanleitung für die Implementierung eines solchen Objekts bereit und bietet ein Beispiel, das Telefonnummern formatiert.  
   
 ### <a name="to-define-a-custom-format-provider"></a>Definieren eines benutzerdefinierten Formatanbieters  
   
-1.  Definieren Sie eine Klasse, die die <xref:System.IFormatProvider>- und <xref:System.ICustomFormatter>-Schnittstelle implementiert.  
+1. Definieren Sie eine Klasse, die die <xref:System.IFormatProvider>- und <xref:System.ICustomFormatter>-Schnittstelle implementiert.  
   
-2.  Implementieren Sie die <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode. <xref:System.IFormatProvider.GetFormat%2A> ist eine Rückrufmethode, die von der Formatierungsmethode (z.B. der <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode) aufgerufen wird, um das Objekt abzurufen, das tatsächlich für die benutzerdefinierte Formatierung zuständig ist. Eine typische Implementierung von <xref:System.IFormatProvider.GetFormat%2A> führt Folgendes aus:  
+2. Implementieren Sie die <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode. <xref:System.IFormatProvider.GetFormat%2A> ist eine Rückrufmethode, die von der Formatierungsmethode (z.B. der <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode) aufgerufen wird, um das Objekt abzurufen, das tatsächlich für die benutzerdefinierte Formatierung zuständig ist. Eine typische Implementierung von <xref:System.IFormatProvider.GetFormat%2A> führt Folgendes aus:  
   
-    1.  Bestimmt, ob das als Methodenparameter übergebene <xref:System.Type>-Objekt eine <xref:System.ICustomFormatter>-Schnittstelle darstellt.  
+    1. Bestimmt, ob das als Methodenparameter übergebene <xref:System.Type>-Objekt eine <xref:System.ICustomFormatter>-Schnittstelle darstellt.  
   
-    2.  Wenn der Parameter die <xref:System.ICustomFormatter>-Schnittstelle tatsächlich darstellt, gibt <xref:System.IFormatProvider.GetFormat%2A> ein Objekt zurück, das die für die benutzerdefinierte Formatierung zuständige <xref:System.ICustomFormatter>-Schnittstelle implementiert. Üblicherweise gibt das benutzerdefinierte Formatierungsobjekt sich selbst zurück.  
+    2. Wenn der Parameter die <xref:System.ICustomFormatter>-Schnittstelle tatsächlich darstellt, gibt <xref:System.IFormatProvider.GetFormat%2A> ein Objekt zurück, das die für die benutzerdefinierte Formatierung zuständige <xref:System.ICustomFormatter>-Schnittstelle implementiert. Üblicherweise gibt das benutzerdefinierte Formatierungsobjekt sich selbst zurück.  
   
-    3.  Wenn der Parameter die <xref:System.ICustomFormatter>-Schnittstelle nicht darstellt, gibt <xref:System.IFormatProvider.GetFormat%2A> `null` zurück.  
+    3. Wenn der Parameter die <xref:System.ICustomFormatter>-Schnittstelle nicht darstellt, gibt <xref:System.IFormatProvider.GetFormat%2A> `null` zurück.  
   
-3.  Implementieren Sie die <xref:System.ICustomFormatter.Format%2A>-Methode. Diese Methode wird von der <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode aufgerufen und ist für die Rückgabe der Zeichenfolgendarstellung einer Zahl zuständig. Die Implementierung der Methode umfasst üblicherweise Folgendes:  
+3. Implementieren Sie die <xref:System.ICustomFormatter.Format%2A>-Methode. Diese Methode wird von der <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode aufgerufen und ist für die Rückgabe der Zeichenfolgendarstellung einer Zahl zuständig. Die Implementierung der Methode umfasst üblicherweise Folgendes:  
   
-    1.  Stellen Sie optional sicher, dass die Methode dazu in der Lage sein soll, Formatierungsdienste bereitzustellen, indem Sie den `provider`-Parameter untersuchen. Bei Formatierungsobjekten, die sowohl <xref:System.IFormatProvider> als auch <xref:System.ICustomFormatter> implementieren, umfasst dies das Testen des `provider`-Parameters auf Gleichheit mit dem aktuellen Formatierungsobjekt.  
+    1. Stellen Sie optional sicher, dass die Methode dazu in der Lage sein soll, Formatierungsdienste bereitzustellen, indem Sie den `provider`-Parameter untersuchen. Bei Formatierungsobjekten, die sowohl <xref:System.IFormatProvider> als auch <xref:System.ICustomFormatter> implementieren, umfasst dies das Testen des `provider`-Parameters auf Gleichheit mit dem aktuellen Formatierungsobjekt.  
   
-    2.  Bestimmen Sie, ob das Formatierungsobjekt benutzerdefinierte Formatbezeichner unterstützen soll. (Beispielsweise könnte ein Formatbezeichner „N“ angeben, dass eine US-amerikanische Telefonnummer im NANP-Format (Nordamerikanischer Nummerierungsplan) ausgegeben werden soll, und ein Bezeichner „I“ könnte eine Ausgabe im Format der ITU-T-Empfehlung E.123 angeben.) Wenn Formatbezeichner verwendet werden, muss die Methode den angegebenen Formatbezeichner verarbeiten. Der Bezeichner wird im `format`-Parameter der Methode übergeben. Wenn kein Bezeichner vorhanden ist, lautet der Wert des `format`-Parameters <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Bestimmen Sie, ob das Formatierungsobjekt benutzerdefinierte Formatbezeichner unterstützen soll. (Beispielsweise könnte ein Formatbezeichner „N“ angeben, dass eine US-amerikanische Telefonnummer im NANP-Format (Nordamerikanischer Nummerierungsplan) ausgegeben werden soll, und ein Bezeichner „I“ könnte eine Ausgabe im Format der ITU-T-Empfehlung E.123 angeben.) Wenn Formatbezeichner verwendet werden, muss die Methode den angegebenen Formatbezeichner verarbeiten. Der Bezeichner wird im `format`-Parameter der Methode übergeben. Wenn kein Bezeichner vorhanden ist, lautet der Wert des `format`-Parameters <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-    3.  Rufen Sie den numerischen Wert ab, der als `arg`-Parameter der Methode übergeben wurde. Führen Sie alle Änderungen durch, die notwendig sind, um den Wert in seine Zeichenfolgendarstellung zu konvertieren.  
+    3. Rufen Sie den numerischen Wert ab, der als `arg`-Parameter der Methode übergeben wurde. Führen Sie alle Änderungen durch, die notwendig sind, um den Wert in seine Zeichenfolgendarstellung zu konvertieren.  
   
-    4.  Geben Sie die Zeichenfolgendarstellung des `arg`-Parameters zurück.  
+    4. Geben Sie die Zeichenfolgendarstellung des `arg`-Parameters zurück.  
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Verwenden eines benutzerdefinierten Zahlenformatierungsobjekts  
   
-1.  Erstellen Sie eine neue Instanz der benutzerdefinierten Formatierungsklasse.  
+1. Erstellen Sie eine neue Instanz der benutzerdefinierten Formatierungsklasse.  
   
-2.  Rufen Sie die <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Formatierungsmethode auf, und übergeben Sie das benutzerdefinierte Formatierungsobjekt, den Formatierungsbezeichner (oder <xref:System.String.Empty?displayProperty=nameWithType>, falls kein Bezeichner verwendet wird) und den numerischen Wert, der formatiert werden soll.  
+2. Rufen Sie die <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Formatierungsmethode auf, und übergeben Sie das benutzerdefinierte Formatierungsobjekt, den Formatierungsbezeichner (oder <xref:System.String.Empty?displayProperty=nameWithType>, falls kein Bezeichner verwendet wird) und den numerischen Wert, der formatiert werden soll.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel definiert einen benutzerdefinierten Zahlenformatanbieter namens `TelephoneFormatter`, der eine Zahl, die eine US-amerikanische Telefonnummer darstellt, in das entsprechende NANP- oder E.123-Format konvertiert. Die Methode verarbeitet zwei Formatbezeichner: „N“ (zur Ausgabe des NANP-Formats) und „I“ (zur Ausgabe des internationalen E.123-Formats).  
@@ -87,9 +87,6 @@ Das [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ermöglicht ein
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
  In diesem Beispiel dient die Methode, die <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> implementiert, als eine Rückrufmethode der <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>-Methode. Daher untersucht diese Methode den `formatProvider`-Parameter, um zu ermitteln, ob dieser einen Verweis auf das aktuelle `TelephoneFormatter`-Objekt enthält. Die Methode kann jedoch auch direkt aus dem Code aufgerufen werden. In diesem Fall können Sie den `formatProvider`-Parameter verwenden, um ein <xref:System.Globalization.CultureInfo>- oder <xref:System.Globalization.NumberFormatInfo>-Objekt bereitzustellen, das kulturspezifische Formatierungsinformationen bereitstellt.  
-  
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kompilieren Sie den Code über csc.exe oder vb.exe in der Befehlszeile. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
 ## <a name="see-also"></a>Siehe auch
 

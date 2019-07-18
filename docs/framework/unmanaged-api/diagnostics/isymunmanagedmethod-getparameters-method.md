@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a757e3b28a94c96e28a5bab736a6820a83617a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 39ad47ae7659734191d380d8b3c29fb1a6de6afc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101210"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769425"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>ISymUnmanagedMethod::GetParameters-Methode
 Ruft die Parameter für diese Methode ab. Die Parameter werden in der Reihenfolge zurückgegeben, in denen sie in der Signatur der Methode definiert sind.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetParameters(  
     [in]  ULONG32  cParams,  
     [out] ULONG32  *pcParams,  

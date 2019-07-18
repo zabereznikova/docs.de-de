@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
 ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956246"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Spaltentypen im DataGridView-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spaltentypen, die Informationen anzeigen und Benutzern ermöglichen, ändern oder Hinzufügen von Informationen.  
@@ -91,6 +91,6 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spa
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
-- [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelements in Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Arbeiten mit Bildspalten im DataGridView-Steuerelement in Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelement von Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Arbeiten Sie mit Bildspalten im DataGridView-Steuerelement in Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
 - [Anpassen des DataGridView-Steuerelements von Windows Forms](customizing-the-windows-forms-datagridview-control.md)

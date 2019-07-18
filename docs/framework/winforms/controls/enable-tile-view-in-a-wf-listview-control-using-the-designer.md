@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 7f7e3f0fadeccafc867c49d76f6f6cf11300fddc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f8c8a1b2e3d2adfa7daadd609051ffc304150efe
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972123"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Vorgehensweise: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement in Windows Forms mithilfe des Designers
 Die Funktion der Tile-Ansicht der <xref:System.Windows.Forms.ListView> -Steuerelement können Sie eine visuelle Balance zwischen grafischen und textbasierten Daten bereitstellen. Die textbasierten Daten, die für ein Element in der Ansicht "Nebeneinander" angezeigt werden, sind die gleichen wie die Spalteninformationen, die für die Detailansicht definiert wurden. Markieren Sie Funktionen in Funktionen der Tile-Ansicht in Kombination mit der Gruppierung oder Einfügen der <xref:System.Windows.Forms.ListView> Steuerelement.  
@@ -31,9 +31,9 @@ Die Funktion der Tile-Ansicht der <xref:System.Windows.Forms.ListView> -Steuerel
   
 ### <a name="to-set-tile-view-in-the-designer"></a>Ansicht "Nebeneinander" im Designer festgelegt.  
   
-1.  Wählen Sie die <xref:System.Windows.Forms.ListView> Steuerelement auf Ihrem Formular.  
+1. Wählen Sie die <xref:System.Windows.Forms.ListView> Steuerelement auf Ihrem Formular.  
   
-2.  In der **Eigenschaften** wählen Sie im Fenster der <xref:System.Windows.Forms.ListView.View%2A> Eigenschaft, und wählen Sie **Kachel**.  
+2. In der **Eigenschaften** wählen Sie im Fenster der <xref:System.Windows.Forms.ListView.View%2A> Eigenschaft, und wählen Sie **Kachel**.  
   
 ## <a name="see-also"></a>Siehe auch
 

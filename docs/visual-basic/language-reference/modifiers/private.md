@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: d6e28e5e87c3a88e4db3fc81177894683dbb0908
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ddb2d165de330758f58fbbcb5872e820e639808f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819475"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642785"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
 Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur aus ihrem Deklarationskontext einschließlich aus in alle enthaltenen Typen zugegriffen werden kann.  
@@ -25,13 +25,13 @@ Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur aus ihrem De
 
 ## <a name="rules"></a>Regeln  
 
--   **Deklarationskontext.** Sie können `Private` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `Private` Element muss ein Modul, Klasse oder Struktur sein, und eine Quelldatei, Namespace, Schnittstelle oder Prozedur nicht möglich.  
+- **Deklarationskontext.** Sie können `Private` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `Private` Element muss ein Modul, Klasse oder Struktur sein, und eine Quelldatei, Namespace, Schnittstelle oder Prozedur nicht möglich.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Zugriffsebene.** Sämtlichen Code innerhalb einer Deklarationskontext kann Zugriff auf seine `Private` Elemente. Dies schließt Code innerhalb eines enthaltenen Typs, z. B. eine geschachtelte Klasse oder eines Zuweisungsausdrucks in einer Enumeration. Kein Code außerhalb der Deklarationskontext kann Zugriff auf seine `Private` Elemente.  
+- **Zugriffsebene.** Sämtlichen Code innerhalb einer Deklarationskontext kann Zugriff auf seine `Private` Elemente. Dies schließt Code innerhalb eines enthaltenen Typs, z. B. eine geschachtelte Klasse oder eines Zuweisungsausdrucks in einer Enumeration. Kein Code außerhalb der Deklarationskontext kann Zugriff auf seine `Private` Elemente.  
   
--   **Zugriffsmodifizierer.** Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*. Einen Vergleich der Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Zugriffsmodifizierer.** Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*. Einen Vergleich der Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Der `Private`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   

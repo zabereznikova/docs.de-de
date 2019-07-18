@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fe6559eca2fef1c9481c8996b19ffb8a08c6019
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b842fb4d0853f473ae8e237a42e800cf0af8dc11
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080032"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781390"
 ---
 # <a name="imetadatatablesgetstringheapsize-method"></a>IMetaDataTables::GetStringHeapSize-Methode
 Ruft die Größe in Bytes, der dem String-Heap an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStringHeapSize (  
     [out] ULONG   *pcbStrings  
 );  

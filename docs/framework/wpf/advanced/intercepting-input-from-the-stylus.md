@@ -10,25 +10,25 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 76976f1599ecbbaf7405d7941f66aa2c5f955565
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218770"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598956"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Abfangen von Tablettstifteingaben
 Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanismus zum Implementieren der Steuerung auf niedriger Ebene über <xref:System.Windows.Input.Stylus> sowie die Erstellung von digitaler Tinte <xref:System.Windows.Ink.Stroke> Objekte. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> -Klasse bietet einen Mechanismus für die Sie benutzerdefiniertes Verhalten implementieren, und klicken Sie auf die vom Tablettstift für eine optimale Leistung eingehenden Datenstrom anzuwenden.  
   
  Dieses Thema enthält folgende Unterabschnitte:  
   
--   [Architektur](#Architecture)  
+- [Architektur](#Architecture)  
   
--   [Implementieren der Tablettstift-Plug-ins](#ImplementingStylusPlugins)  
+- [Implementieren der Tablettstift-Plug-ins](#ImplementingStylusPlugins)  
   
--   [Hinzufügen eines Plug-Ins an ein InkCanvas-Steuerelement](#AddingYourPluginToAnInkCanvas)  
+- [Hinzufügen eines Plug-Ins an ein InkCanvas-Steuerelement](#AddingYourPluginToAnInkCanvas)  
   
--   [Schlussbemerkung](#Conclusion)  
+- [Schlussfolgerung](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architektur  

@@ -2,12 +2,12 @@
 title: Vergleichssemantik (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
-ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2ca91861d4830321168e96fb200c4889dc33b04b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083334"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631715"
 ---
 # <a name="comparison-semantics-entity-sql"></a>Vergleichssemantik (Entity SQL)
 Beim Ausführen aller folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Operationen werden Typinstanzen verglichen:  
@@ -15,58 +15,58 @@ Beim Ausführen aller folgenden [!INCLUDE[esql](../../../../../../includes/esql-
 ## <a name="explicit-comparison"></a>Expliziter Vergleich  
  Gleichheitsoperationen:  
   
--   =  
+- =  
   
--   !=  
+- !=  
   
  Sortieroperationen:  
   
--   <  
+- <  
   
--   \<=  
+- \<=  
   
--   \>  
+- \>  
   
--   \>=  
+- \>=  
   
  NULL-Zulässigkeitsoperationen:  
   
--   IS NULL  
+- IS NULL  
   
--   IS NOT NULL  
+- IS NOT NULL  
   
 ## <a name="explicit-distinction"></a>Explizite Unterscheidung  
  Gleichheitsunterscheidung:  
   
--   DISTINCT  
+- DISTINCT  
   
--   GROUP BY  
+- GROUP BY  
   
  Sortierunterscheidung:  
   
--   ORDER BY  
+- ORDER BY  
   
 ## <a name="implicit-distinction"></a>Implizite Unterscheidung  
  Mengenoperationen und Prädikate (Gleichheit):  
   
--   UNION  
+- UNION  
   
--   INTERSECT  
+- INTERSECT  
   
--   EXCEPT  
+- EXCEPT  
   
--   SET  
+- SET  
   
--   OVERLAPS  
+- OVERLAPS  
   
  Elementprädikate (Gleichheit):  
   
--   IN  
+- IN  
   
 ## <a name="supported-combinations"></a>Unterstützte Kombinationen  
  In der folgenden Tabelle werden alle unterstützten Kombinationen von Vergleichsoperatoren für jede Art von Typ angezeigt:  
   
-|**Typ**|**=**<br /><br /> **!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **IS NOT NULL**|  
+|**Type**|**=**<br /><br /> **\!=**|**GROUP BY**<br /><br /> **DISTINCT**|**UNION**<br /><br /> **INTERSECT**<br /><br /> **EXCEPT**<br /><br /> **SET**<br /><br /> **OVERLAPS**|**IN**|**<   <=**<br /><br /> **>   >=**|**ORDER BY**|**IS NULL**<br /><br /> **IST NICHT NULL**|  
 |-|-|-|-|-|-|-|-|  
 |Entitätstyp|Ref<sup>1</sup>|Alle Eigenschaften<sup>2</sup>|Alle Eigenschaften<sup>2</sup>|Alle Eigenschaften<sup>2</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Ref<sup>1</sup>|  
 |Komplexer Typ|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|Löst<sup>3</sup>|  

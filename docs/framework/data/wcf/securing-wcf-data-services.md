@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119118"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877350"
 ---
 # <a name="securing-wcf-data-services"></a>Sichern von WCF Data Services
 Dieses Thema beschreibt sicherheitsüberlegungen speziell für das Entwickeln, bereitstellen und Ausführen von WCF Data Services und Anwendungen, von Access Services, die das Open Data Protocol (OData) zu unterstützen. Sie sollten auch Empfehlungen für das Erstellen sicherer Anwendungen für .NET Framework ausführen.  
@@ -55,7 +55,7 @@ context.Credentials = _
  Wenn der Datendienst Anmeldeinformationen erfordert, die nicht mithilfe eines <xref:System.Net.NetworkCredential>-Objekts angegeben werden können (z. B. ein anspruchbasiertes Token oder Cookie), müssen Sie manuell Header in der HTTP-Anforderung festlegen (normalerweise die Header `Authorization` und `Cookie`). Weitere Informationen zu diesem authentifizierungsszenario finden Sie im Blogbeitrag [ OData und Authentifizierung – Teil 3 – ClientSide Hooks](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/). Ein Beispiel zum Festlegen von HTTP-Header in einer Anforderungsnachricht finden Sie unter [Vorgehensweise: Festlegen von Headern in der Clientanforderung](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md).  
   
 ## <a name="impersonation"></a>Identitätswechsel  
- Im Allgemeinen greift der Datendienst anhand der Anmeldeinformationen des Arbeitsprozesses, der den Datendienst hostet, auf erforderliche Ressourcen zu (z. B. Dateien auf dem Server oder eine Datenbank). Mithilfe eines Identitätswechsels können [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendungen unter der Windows-Identität (Benutzerkonto) des Benutzers ausgeführt werden, der die Anforderung sendet. Ein Identitätswechsel wird für gewöhnlich in Anwendungen verwendet, bei denen die Benutzerauthentifizierung über IIS erfolgt und die Anmeldeinformationen dieses Prinzipals für den Zugriff auf die benötigten Ressourcen verwendet werden. Weitere Informationen finden Sie unter [ASP.NET-Identitätswechsel](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
+ Im Allgemeinen greift der Datendienst anhand der Anmeldeinformationen des Arbeitsprozesses, der den Datendienst hostet, auf erforderliche Ressourcen zu (z. B. Dateien auf dem Server oder eine Datenbank). Beim Verwenden des Identitätswechsels können ASP.NET-Anwendungen mit der Windows-Identität (Benutzerkonto) des Benutzers an, der die Anforderung ausführen. Ein Identitätswechsel wird für gewöhnlich in Anwendungen verwendet, bei denen die Benutzerauthentifizierung über IIS erfolgt und die Anmeldeinformationen dieses Prinzipals für den Zugriff auf die benötigten Ressourcen verwendet werden. Weitere Informationen finden Sie unter [ASP.NET-Identitätswechsel](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
   
 ## <a name="configuring-data-service-authorization"></a>Konfigurieren der Datendienstautorisierung  
  Durch die Autorisierung wird einem Prinzipal oder Prozess, der mittels einer vorherigen erfolgreichen Authentifizierung identifiziert wurde, Zugriff auf Anwendungsressourcen gewährt. Im Allgemeinen sollten Benutzern des Datendiensts nur die Rechte gewährt werden, die zur Ausführung der von Clientanwendungen benötigten Vorgänge erforderlich sind.  
@@ -82,15 +82,15 @@ OData basiert auf dem HTTP-Protokoll. Abhängig von der vom Datendienst implemen
 ### <a name="custom-hosting-requirements"></a>Benutzerdefinierte Hostanforderungen  
  Standardmäßig wird die WCF Data Services als eine in IIS gehostete ASP.NET-Anwendung erstellt. Dies ermöglicht es dem Datendienst, die sicheren Verhalten dieser Plattform zu nutzen. Sie können WCF Data Services definieren, die von einem benutzerdefinierten Host gehostet werden. Weitere Informationen finden Sie unter [Hosting des Datendiensts](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md). Die Komponenten und die Plattform, von denen ein Datendienst gehostet wird, müssen Angriffe auf den Datendienst durch die folgenden Sicherheitsverhalten verhindern:  
   
--   Begrenzen Sie die Länge des in einer Datendienstanforderung akzeptierten URI für alle möglichen Vorgänge.  
+- Begrenzen Sie die Länge des in einer Datendienstanforderung akzeptierten URI für alle möglichen Vorgänge.  
   
--   Begrenzen Sie die Größe ein- und ausgehender HTTP-Nachrichten.  
+- Begrenzen Sie die Größe ein- und ausgehender HTTP-Nachrichten.  
   
--   Begrenzen Sie die Gesamtanzahl von Anforderungen, die gleichzeitig ausstehen können.  
+- Begrenzen Sie die Gesamtanzahl von Anforderungen, die gleichzeitig ausstehen können.  
   
--   Begrenzen Sie die Größe der HTTP-Headern und deren Werte aus, und geben Sie die WCF Data Services-Zugriff auf Headerdaten.  
+- Begrenzen Sie die Größe der HTTP-Headern und deren Werte aus, und geben Sie die WCF Data Services-Zugriff auf Headerdaten.  
   
--   Richten Sie eine Erkennung und Verteidigungsmaßnahmen für bekannte Angriffe wie TCP-SYN und Nachrichtenreplay ein.  
+- Richten Sie eine Erkennung und Verteidigungsmaßnahmen für bekannte Angriffe wie TCP-SYN und Nachrichtenreplay ein.  
   
 ### <a name="values-are-not-further-encoded"></a>Keine weitere Codierung von Werten  
  An den Datendienst gesendete Eigenschaftenwerte werden von der WCF Data Services-Runtime nicht weiter codiert. Wenn z. B. eine string-Eigenschaft einer Entität formatierten HTML-Inhalt enthält, werden die Tags vom Datendienst nicht HTML-codiert. Eigenschaftenwerte in der Antwort werden vom Datendienst ebenfalls nicht weiter codiert. Von der Clientbibliothek wird auch keine zusätzliche Codierung ausgeführt.  
@@ -98,19 +98,19 @@ OData basiert auf dem HTTP-Protokoll. Abhängig von der vom Datendienst implemen
 ### <a name="considerations-for-client-applications"></a>Überlegungen für Clientanwendungen  
  Die folgenden Sicherheitsaspekte gelten für Anwendungen, die die WCF Data Services-Client verwenden, um den Zugriff auf OData-Dienste:  
   
--   Die Clientbibliothek geht davon aus, dass die für den Zugriff auf den Datendienst verwendeten Protokolle eine geeignete Sicherheitsebene bereitstellen.  
+- Die Clientbibliothek geht davon aus, dass die für den Zugriff auf den Datendienst verwendeten Protokolle eine geeignete Sicherheitsebene bereitstellen.  
   
--   Die Clientbibliothek verwendet alle Standardwerte für Timeouts und Analyseoptionen der Transportstapel der zugrunde liegenden Plattform.  
+- Die Clientbibliothek verwendet alle Standardwerte für Timeouts und Analyseoptionen der Transportstapel der zugrunde liegenden Plattform.  
   
--   Die Clientbibliothek liest keine Einstellungen aus Anwendungskonfigurationsdateien.  
+- Die Clientbibliothek liest keine Einstellungen aus Anwendungskonfigurationsdateien.  
   
--   Die Clientbibliothek implementiert keine domänenübergreifenden Zugriffsmechanismen. Sie verwendet stattdessen die vom zugrunde liegenden HTTP-Stapel bereitgestellten Mechanismen.  
+- Die Clientbibliothek implementiert keine domänenübergreifenden Zugriffsmechanismen. Sie verwendet stattdessen die vom zugrunde liegenden HTTP-Stapel bereitgestellten Mechanismen.  
   
--   Die Clientbibliothek verfügt nicht über Benutzeroberflächenelemente und versucht nie, die empfangenen oder gesendeten Daten anzuzeigen oder zu rendern.  
+- Die Clientbibliothek verfügt nicht über Benutzeroberflächenelemente und versucht nie, die empfangenen oder gesendeten Daten anzuzeigen oder zu rendern.  
   
--   Benutzereingaben und akzeptierte Daten von nicht vertrauenswürdigen Diensten sollten immer von Clientanwendungen überprüft werden.  
+- Benutzereingaben und akzeptierte Daten von nicht vertrauenswürdigen Diensten sollten immer von Clientanwendungen überprüft werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

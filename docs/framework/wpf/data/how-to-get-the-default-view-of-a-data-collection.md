@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
 ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931511"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>Vorgehensweise: Abrufen der Standardansicht einer Datensammlung
 Sichten können die Datenerfassung auf unterschiedliche Weise je nach sortieren, filtern oder gruppieren die Kriterien angezeigt werden. Jede Sammlung verfügt über eine gemeinsame Standardansicht, die als die tatsächliche Bindung-Quelle verwendet wird, wenn eine Bindung eine Sammlung als Quelle angegeben. In diesem Beispiel veranschaulicht das Abrufen der Standardansicht einer Auflistung.  
@@ -35,4 +35,4 @@ Sichten können die Datenerfassung auf unterschiedliche Weise je nach sortieren,
 ## <a name="see-also"></a>Siehe auch
 
 - [Sortieren und Gruppieren von Daten mit einer Ansicht in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

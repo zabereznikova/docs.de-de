@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20913d1cfa258036e8c20e826415f96a8984fdb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 621582536c07b269dd723c9014e23c50e561957a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103362"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774614"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs-Methode
 Zählt TypeDef-Token auf, die alle Typen innerhalb des aktuellen Bereichs darstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumTypeDefs (  
    [out] HCORENUM   *phEnum,   
    [in]  mdTypeDef  rTypeDefs[],  

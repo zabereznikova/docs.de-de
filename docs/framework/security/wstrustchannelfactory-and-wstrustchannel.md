@@ -3,12 +3,12 @@ title: „WSTrustChannelFactory“ und „WSTrustChannel“
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d129775137759cf7f006ce6501279978f4ab2595
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839418"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633173"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>„WSTrustChannelFactory“ und „WSTrustChannel“
 Wenn Sie mit Windows Communication Foundation (WCF) bereits vertraut sind, wissen Sie, dass ein WCF-Client bereits verbundfähig ist. Wird ein WCF-Client mit <xref:System.ServiceModel.WSFederationHttpBinding> oder einer ähnlichen benutzerdefinierten Bindung konfiguriert, können Sie die Verbundauthentifizierung für einen Dienst aktivieren.
@@ -25,7 +25,7 @@ Wenn Sie mit Windows Communication Foundation (WCF) bereits vertraut sind, wisse
 
 - Verwenden nur von WIF, um ein Token vom Sicherheitstokendienst abzurufen und es dann einem WCF-Client zu ermöglichen, sich mit diesem Token zu authentifizieren. Weitere Informationen finden Sie unter dem Beispiel [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).
 
- Das erste Szenario ist selbsterklärend: Vorhandene WCF-Clients funktionieren weiterhin mit WIF-Seiten und Sicherheitstokendiensten. In diesem Thema werden die verbleibenden beiden Szenarien besprochen.
+ Das erste Szenario ist selbsterklärend: Vorhandene WCF-Clients werden weiterhin mit WIF-Seiten und Sicherheitstokendiensten arbeiten. In diesem Thema werden die verbleibenden beiden Szenarien besprochen.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>Optimieren eines vorhandenen WCF-Clients mit ActAs/OnBehalfOf
 In einem typischen Identitätsdelegierungsszenario ruft ein Client einen Dienst der mittleren Ebene auf, der dann einen Back-End-Dienst aufruft. Der Dienst der mittleren Ebene dient als oder im Namen vom Client.

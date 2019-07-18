@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c09f57ad805b4ba17b4bdafd3ced533199277a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2455c896ebdc12f2bb92a30d55745f7bd5bc308a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196683"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765523"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory-Methode
 Ruft das Installationsverzeichnis von dieser Schnittstelle zugeordnet die common Language Runtime (CLR) ab.  
@@ -31,7 +31,7 @@ Ruft das Installationsverzeichnis von dieser Schnittstelle zugeordnet die common
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRuntimeDirectory(  
 [out, size_is(*pcchBuffer)] LPWSTR pwzBuffer,  
 [in, out]  DWORD *pcchBuffer);  
@@ -50,7 +50,7 @@ HRESULT GetRuntimeDirectory(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_POINTER|`pwzBuffer` oder `pchBuffer` ist null.|  
+|E_POINTER|`pwzBuffer` oder `pchBuffer` ist NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
   

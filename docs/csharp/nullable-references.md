@@ -2,12 +2,12 @@
 title: Nullwerte zulassende Verweistypen
 description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
 ms.date: 02/19/2019
-ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725024"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195921"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -58,7 +58,7 @@ Die NULL-Zulässigkeit eines Typs in einer Variablendeklaration wird durch den *
 
 Nullable-Kontexte ermöglichen eine differenzierte Steuerung der Interpretation von Verweistypvariablen durch den Compiler. Der **Nullable-Anmerkungskontext** jeder beliebigen Quellzeile ist `enabled` oder `disabled`. Der Compiler vor C# 8 hat all Ihren Code in einem `disabled`-Nullable-Kontext kompiliert: Alle Verweistypen sind möglicherweise NULL. Der **Nullable-Warnungskontext** wird möglicherweise auf `enabled`, `disabled` oder `safeonly` festgelegt. Der Nullable-Warnungskontext gibt die vom Compiler generierten Warnungen mithilfe der Flussanalyse an.
 
-Der Nullable-Anmerkungskontext und der Nullable-Warnungskontext können für ein Projekt festgelegt werden, indem Sie das `NullableContextOptions`-Element in Ihrer `csproj`-Datei verwenden. Dieses Element konfiguriert, wie der Compiler die NULL-Zulässigkeit von Typen interpretiert und welche Warnungen generiert werden. Gültige Einstellungen sind folgende:
+Der Nullable-Anmerkungskontext und der Nullable-Warnungskontext können für ein Projekt festgelegt werden, indem Sie das `Nullable`-Element in Ihrer `csproj`-Datei verwenden. Dieses Element konfiguriert, wie der Compiler die NULL-Zulässigkeit von Typen interpretiert und welche Warnungen generiert werden. Gültige Einstellungen sind folgende:
 
 - `enable`: Der Nullable-Anmerkungskontext ist **enabled** (aktiviert). Der Nullable-Warnungskontext ist **enabled** (aktiviert).
   - Variablen eines Verweistyps wie `string` sind „non-nullable“ (nicht-nullable).  Alle NULL-Zulässigkeitswarnungen sind „enabled“ (aktiviert).
@@ -70,6 +70,9 @@ Der Nullable-Anmerkungskontext und der Nullable-Warnungskontext können für ein
   - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend). Alle NULL-Zulässigkeitswarnungen sind „enabled“ (aktiviert).
 - `safeonlywarnings`: Der Nullable-Anmerkungskontext ist **disabled** (deaktiviert). Der Nullable-Warnungskontext ist **safeonly** (nur sicher).
   - Variablen eines Verweistyps sind „oblivious“ (nichtbeachtend). Alle NULL-Zulässigkeitswarnungen zur Sicherheit sind „enabled“ (aktiviert).
+
+> [!IMPORTANT]
+> Das `Nullable`-Element hieß früher `NullableContextOptions`. Die Umbenennung erfolgt in Visual Studio 2019, 16.2-p1. Das .NET Core SDK 3.0.100-preview5-011568 umfasst diese Änderung nicht. Wenn Sie die .NET Core-CLI verwenden, müssen Sie `NullableContextOptions`weiter verwenden, bis die nächste Vorschauversion verfügbar ist.
 
 Sie können auch Anweisungen verwenden, um diese Kontexte überall in Ihrem Projekt festzulegen:
 

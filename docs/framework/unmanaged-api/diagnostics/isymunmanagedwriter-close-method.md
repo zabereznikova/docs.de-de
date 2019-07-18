@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d3497d3167715d3e8a04f10a6687260949e4a36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fd7131c55f9c06a8fcfc0cad859c18e410169c78
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104701"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778193"
 ---
 # <a name="isymunmanagedwriterclose-method"></a>ISymUnmanagedWriter::Close-Methode
 Schließt den Symbolwriter nach dem Ausführen eines Commits für die Symbole an den Symbolspeicher.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Close();  
 ```  
   

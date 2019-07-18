@@ -9,11 +9,11 @@ helpviewer_keywords:
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
 ms.openlocfilehash: 76449c88f9a720741c8ed61255e04a40e6a8613f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776207"
 ---
 # <a name="how-to-draw-text-to-a-controls-background"></a>Vorgehensweise: Zeichnen von Text im Hintergrund eines Steuerelements
 Sie können Text direkt in den Hintergrund eines Steuerelements zeichnen, indem konvertiert eine Textzeichenfolge mit einer <xref:System.Windows.Media.FormattedText> Objekt aus, und klicken Sie dann das Objekt des Steuerelements gezeichnet <xref:System.Windows.Media.DrawingContext>. Sie können dieses Verfahren auch verwenden, für das Zeichnen in den Hintergrund von Objekten abgeleitet <xref:System.Windows.Controls.Panel>, z. B. <xref:System.Windows.Controls.Canvas> und <xref:System.Windows.Controls.StackPanel>.  

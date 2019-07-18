@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 072e775d11d44dfbca27f1616889e388ae61d467
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 378095aa2b363f4003a5372b4158df27412655e1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365996"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757856"
 ---
 # <a name="ixclrdataprocessendenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::EndEnumMethodInstancesByAddress Method
 
@@ -30,7 +30,7 @@ Gibt die vom internen Iteratoren, die verwendet werden, während der Instanzenum
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT EndEnumMethodInstancesByAddress(
     [in] CLRDATA_ENUM handle
 );
@@ -48,8 +48,8 @@ Die angegebene Methode ist Teil der `IXCLRDataProcess` Schnittstelle, und mit de
 ## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keine  
-**Bibliothek:** Keine  
+**Header:** Keiner  
+**Bibliothek:** Keiner  
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch

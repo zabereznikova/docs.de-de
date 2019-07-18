@@ -2,12 +2,12 @@
 title: Arrays
 description: Informationen Sie zum Erstellen und Verwenden von Arrays in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9670f2a61ed5c254493806501120552be9caecdf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4a81a0994479ecd92b8556c4901fea23c3c0507b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772709"
 ---
 # <a name="arrays"></a>Arrays
 
@@ -109,6 +109,7 @@ Die Ausgabe zeigt an, dass das Unterfeld bei Element "5" beginnt und 10 Elemente
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
+
 [`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) ein neues Array erstellt, indem zwei vorhandene Arrays kombiniert.
 
 Der folgende Code veranschaulicht **Array.append**.
@@ -164,7 +165,7 @@ Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
 [`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) generiert ein neues Array durch Umkehren der Reihenfolge eines vorhandenen Arrays an. Der folgende Code stellt `Array.rev` dar.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
+[!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]
 
 Die Ausgabe des vorhergehenden Codes entspricht dem Folgenden.
 
@@ -205,7 +206,7 @@ Nur eine Teilmenge der Funktionen für eindimensionale Arrays ist auch für mehr
 In einem zweidimensionalen Array (eine Matrix), können Sie eine Sub-Matrix extrahieren, indem Sie Bereiche angeben und Verwenden eines Platzhalters (`*`) Zeichen, ganze Zeilen oder Spalten anzugeben.
 
 ```fsharp
-/ Get rows 1 to N from an NxM matrix (returns a matrix):
+// Get rows 1 to N from an NxM matrix (returns a matrix):
 matrix.[1.., *]
 
 // Get rows 1 to 3 from a matrix (returns a matrix):
@@ -239,7 +240,7 @@ type Matrix<'T>(N: int, M: int) =
         and set(a: int, b: int) (value:'T) = internalArray.[a, b] <- value
 
     member this.GetSlice(rowStart: int option, rowFinish : int option, colStart: int option, colFinish : int option) =
-        let rowStart = 
+        let rowStart =
             match rowStart with
             | Some(v) -> v
             | None -> 0
@@ -247,33 +248,33 @@ type Matrix<'T>(N: int, M: int) =
             match rowFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(0) - 1
-        let colStart = 
+        let colStart =
             match colStart with
             | Some(v) -> v
             | None -> 0
-        let colFinish = 
+        let colFinish =
             match colFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(1) - 1
         internalArray.[rowStart..rowFinish, colStart..colFinish]
 
     member this.GetSlice(row: int, colStart: int option, colFinish: int option) =
-        let colStart = 
+        let colStart =
             match colStart with
             | Some(v) -> v
             | None -> 0
-        let colFinish = 
+        let colFinish =
             match colFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(1) - 1
         internalArray.[row, colStart..colFinish]
 
     member this.GetSlice(rowStart: int option, rowFinish: int option, col: int) =
-        let rowStart = 
+        let rowStart =
             match rowStart with
             | Some(v) -> v
             | None -> 0
-        let rowFinish = 
+        let rowFinish =
             match rowFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(0) - 1

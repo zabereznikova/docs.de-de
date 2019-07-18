@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 776b2ca050a1f46a493bb1953a7cee16258c7954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f8d3ec0201a54a841470a4850e2e53d0e4bfb29e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199153"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781031"
 ---
 # <a name="itypenamebuilderaddszarray-method"></a>ITypeNameBuilder::AddSzArray-Methode
 Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT AddSzArray ( );  
 ```  
   
@@ -44,4 +44,4 @@ HRESULT AddSzArray ( );
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

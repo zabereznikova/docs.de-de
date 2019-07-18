@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8b3fd9940bd11c3d026b46247e0657c82b18099
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6629af393eeadb68292f8f2360ecb60c09a0cd03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120002"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764617"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget::SetThreadContext Method
 Legt den Kontext (Registerwerte) für einen Thread fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetThreadContext(  
    [in] DWORD dwThreadID,  
    [in] ULONG32 contextSize,   [in, size_is(contextSize)] const BYTE * pContext);  
@@ -47,4 +47,4 @@ HRESULT SetThreadContext(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugMutableDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

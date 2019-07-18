@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5d2f5ad2afb2e73acead82369782f142aa10aac3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155655"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782708"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver-Funktion
 Lädt eine Typbibliothek und verwendet die angegebene [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) intern referenzierte Typbibliotheken aufgelöst.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT LoadTypeLibWithResolver(  
     [in]  LPCOLESTR           szFile,  
     [in]  REGKIND             regkind,  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in] Ein [REGKIND Enumeration](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) Flag, das steuert, wie die Typbibliothek registriert wird. Die Werte sind möglich:  
   
--   `REGKIND_DEFAULT`: Verwenden Sie Standardverhalten für die Registrierung.  
+- `REGKIND_DEFAULT`: Verwenden Sie Standardverhalten für die Registrierung.  
   
--   `REGKIND_REGISTER`: Diese Typbibliothek zu registrieren.  
+- `REGKIND_REGISTER`: Diese Typbibliothek zu registrieren.  
   
--   `REGKIND_NONE`: Führen Sie diese Typbibliothek nicht registriert werden.  
+- `REGKIND_NONE`: Führen Sie diese Typbibliothek nicht registriert werden.  
   
  `pTlbResolver`  
  [in] Ein Zeiger auf die Implementierung der [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  

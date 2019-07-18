@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cf7978af4081b84a361e0a96a6c9da7180cb217
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d50ea76c4d6448173002f720e1779233522ef499
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736526"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort-Methode
 Fordert an, dass der Host eine neue e/a-Abschlussport zu erstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateIoCompletionPort (  
     [out] HANDLE *phPort  
 );  

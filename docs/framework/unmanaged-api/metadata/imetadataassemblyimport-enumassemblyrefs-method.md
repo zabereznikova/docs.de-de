@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91e253669b9f51e7c1d600ba11f13a9ce67fb58a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5c7b512de76b5ada882b1d81c2968b4ead5c8c20
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072479"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775932"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs-Methode
 Listet die `mdAssemblyRef` Instanzen, die im Assemblymanifest definiert sind.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumAssemblyRefs (  
     [in, out] HCORENUM        *phEnum,   
     [out]     mdAssemblyRef   rAssemblyRefs[],   

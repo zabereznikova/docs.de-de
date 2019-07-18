@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0acbf4163e98b1171510260c4fac72c3d6f6fb1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5096eb1064485c02b599659cc9ae889e7151581c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189286"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767698"
 ---
 # <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a>IHostMemoryManager::ReleasedVirtualAddressSpace-Methode
 Benachrichtigt den Host, dass die common Language Runtime (CLR) über den angegebenen Speicher abgeschlossen ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ReleasedVirtualAddressSpace(  
     [in] LPVOID startAddress  
 );  

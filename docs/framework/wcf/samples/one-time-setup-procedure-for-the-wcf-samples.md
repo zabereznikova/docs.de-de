@@ -2,12 +2,12 @@
 title: Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825169"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876718"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Internet Information Services (IIS) gehostet und von einem gemeinsamen virtuellen Verzeichnis ausführen. Diesem einmaligen Setupverfahren erstellt einen Ordner auf dem Datenträger; Es fügt auch ein virtuelles Verzeichnis in IIS **ServiceModelSamples**.
@@ -19,13 +19,13 @@ Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Interne
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Einmaliges Setupverfahren für WCF-Beispiele  
   
-1.  Stellen Sie sicher, dass [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] eingerichtet ist. Weitere Informationen zum Einrichten [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], finden Sie unter [Internet-Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
+1. Stellen Sie sicher, dass ASP.NET eingerichtet ist. Weitere Informationen zum Einrichten von ASP.NET finden Sie unter [Internet-Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).  
   
-2.  Stellen Sie sicher, dass [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] installiert ist. Durchsuchen Sie das folgende Verzeichnis für v4. 0 (oder höher): **\Windows\Microsoft.NET\Framework**  
+2. Stellen Sie sicher, dass [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] installiert ist. Durchsuchen Sie das folgende Verzeichnis für v4. 0 (oder höher): **\Windows\Microsoft.NET\Framework**  
   
-3.  Wenn Visual Studio 2012 nicht installiert ist, und das Betriebssystem ist nicht Windows Server 2008 SP2 oder höher installieren [Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
+3. Wenn Visual Studio 2012 nicht installiert ist, und das Betriebssystem ist nicht Windows Server 2008 SP2 oder höher installieren [Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Führen Sie die folgenden Befehle durch. Weitere Informationen dazu, warum diese Befehle ausgeführt werden müssen, finden Sie unter [IIS gehosteten Dienst nicht](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
+4. Führen Sie die folgenden Befehle durch. Weitere Informationen dazu, warum diese Befehle ausgeführt werden müssen, finden Sie unter [IIS gehosteten Dienst nicht](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).  
   
     > [!WARNING]
     >  Wenn IIS neu installiert wird, müssen die folgenden Befehle noch einmal ausgeführt werden.
@@ -38,19 +38,19 @@ Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Interne
     > [!WARNING]
     >  Ausführen des Befehls `aspnet_regiis –i –enable` wird der Standardanwendungspool mit ausführen, [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], dadurch kann es zu Inkompatibilitätsproblemen bei anderen Anwendungen auf demselben Computer.  
   
-5.  Führen Sie die [Firewall-Anweisungen](../../../../docs/framework/wcf/samples/firewall-instructions.md) zum Aktivieren der von den Beispielen verwendeten Anschlüsse.  
+5. Führen Sie die [Firewall-Anweisungen](../../../../docs/framework/wcf/samples/firewall-instructions.md) zum Aktivieren der von den Beispielen verwendeten Anschlüsse.  
   
-6.  Suchen Sie nach dem folgenden Standardverzeichnis: \<InstallDrive>:**\WF_WCF_Samples**. Wenn die Beispiele bereits installiert wurden, ist dies das Standardverzeichnis.  
+6. Suchen Sie nach dem folgenden Standardverzeichnis: \<InstallDrive>:**\WF_WCF_Samples**. Wenn die Beispiele bereits installiert wurden, ist dies das Standardverzeichnis.  
   
-7.  Wenn die Beispiele nicht installiert sind, installieren Sie sie aus der Beispiel-Downloadseite für [Visual C#-](https://go.microsoft.com/fwlink/?LinkId=190939) oder [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
+7. Wenn die Beispiele nicht installiert sind, installieren Sie sie aus der Beispiel-Downloadseite für [Visual C#-](https://go.microsoft.com/fwlink/?LinkId=190939) oder [Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373).  
   
-8.  Nach dem Installieren der Beispiele finden Sie hier: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
+8. Nach dem Installieren der Beispiele finden Sie hier: \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. Führen Sie die **Setupvroot.bat** Batchdatei. Die folgenden Schritte werden ausgeführt:  
   
-    -   In IIS wird ein virtuelles Verzeichnis mit dem Namen ServiceModelSamples erstellt.  
+    - In IIS wird ein virtuelles Verzeichnis mit dem Namen ServiceModelSamples erstellt.  
   
-    -   Es werden die neuen Datenträgerverzeichnisse %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples und %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin erstellt.  
+    - Es werden die neuen Datenträgerverzeichnisse %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples und %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin erstellt.  
   
      Wenn Sie diese Verzeichnisse manuell einrichten möchten, finden Sie unter den [Anleitung zum Einrichten von virtuellen Verzeichnisses](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md). Um alle in diesem Schritt vorgenommenen Änderungen rückgängig zu machen, führen Sie cleanupvroot.bat aus, sobald die Beispiele nicht mehr benötigt werden.  
   
@@ -66,11 +66,11 @@ Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Interne
 
 12. Führen Sie die Datei "Setupcerttool.bat" aus. Diese Datei befindet sich der \<"InstallPath" > \WF_WCF_Samples\WCF\Setup\-Ordner.  Mit diesem Skript werden folgende Aufgaben ausgeführt:
 
-    -   Erstellen des Tools FindPrivateKey
+    - Erstellen des Tools FindPrivateKey
 
-    -   Erstellen eines Verzeichnisses mit dem Namen %ProgramFiles%\ServiceModelSampleTools
+    - Erstellen eines Verzeichnisses mit dem Namen %ProgramFiles%\ServiceModelSampleTools
 
-    -   Kopieren Sie das neue Tool FindPrivateKey in dieses Verzeichnis.
+    - Kopieren Sie das neue Tool FindPrivateKey in dieses Verzeichnis.
 
      Dieses Tool ist für Beispiele erforderlich, die Zertifikate verwenden und in IIS gehostet werden.
 

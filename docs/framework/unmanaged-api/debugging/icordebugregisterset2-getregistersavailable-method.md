@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5d4ab49aaccd77fac497bd86413915e82c99ed3e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099871"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744905"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable-Methode
 Ruft ein Array von Bytes, die eine Bitmap der die verfügbaren Register bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRegistersAvailable (  
     [in] ULONG32 numChunks,  
     [out, size_is(numChunks)] BYTE availableRegChunks[]  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>Hinweise  
  Die Werte der CorDebugRegister-Enumeration angeben, die Register anderer Mikroprozessoren wird. Die oberen fünf Bits der einzelnen Werte werden der Index der `availableRegChunks` Bytearray. Die unteren drei Bits der einzelnen Werte identifizieren die Bitposition innerhalb des indizierten Byte. Erhält eine `CorDebugRegister` Wert, der angibt, ein bestimmtes Register, die Position des Registers in der Maske wird wie folgt bestimmt:  
   
-1.  Extrahieren Sie Index benötigt Zugriff auf die richtige Byte in den `availableRegChunks` Array:  
+1. Extrahieren Sie Index benötigt Zugriff auf die richtige Byte in den `availableRegChunks` Array:  
   
-     `CorDebugRegister` value >> 3  
+     `CorDebugRegister` Wert >> 3  
   
-2.  Extrahieren Sie die Bitposition innerhalb des indizierten Byte, wobei das niederwertigste Bit von Bit 0 (null) ist:  
+2. Extrahieren Sie die Bitposition innerhalb des indizierten Byte, wobei das niederwertigste Bit von Bit 0 (null) ist:  
   
      `CorDebugRegister` Wert & 7  
   

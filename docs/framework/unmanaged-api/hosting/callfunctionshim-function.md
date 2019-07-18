@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aeb813cafbf5b18739c4574c386398ac3c7a77b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 31d93ac427ec67726c9456d623aeb683c9029ccd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180478"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773762"
 ---
 # <a name="callfunctionshim-function"></a>CallFunctionShim-Funktion
 Ruft eine Funktion mit dem angegebenen Namen und den angegebenen Parametern in der angegebenen Bibliothek auf.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CallFunctionShim (  
     [in] LPCWSTR     szDllName,  
     [in] LPCSTR      szFunctionName,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad7856a9376880f867e35f1e63bc2cac1ca216fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7d23b2371e7cc3c9d1e91af061c19b4fb0dbc69e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130138"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779697"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy-Methode
 Wertet Richtlinien für die Bindung für den Host.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EvaluatePolicy (  
     [in] LPCWSTR     pwzReferenceIdentity,  
     [in] BYTE       *pbApplicationPolicy,  

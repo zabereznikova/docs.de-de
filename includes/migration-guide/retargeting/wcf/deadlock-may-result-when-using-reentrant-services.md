@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 0aaa0ad0e0e3cbd23de287b3b79a8c209143544e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859332"
+---
 ### <a name="deadlock-may-result-when-using-reentrant-services"></a>Bei der Verwendung von Eintrittsinvarianzdiensten können Deadlocks auftreten
 
 |   |   |

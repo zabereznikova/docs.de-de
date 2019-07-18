@@ -2,12 +2,12 @@
 title: Neuerungen in C# 7.3
 description: Eine Übersicht der neuen Features in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58028677"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397780"
 ---
 # <a name="whats-new-in-c-73"></a>Neuerungen in C# 7.3
 
@@ -34,7 +34,12 @@ Die neuen Compileroptionen lauten:
 - `-publicsign`, um das Signieren von Assemblys durch Open Source Software (OSS) zu ermöglichen.
 - `-pathmap`, um eine Zuordnung für Quellverzeichnisse bereitzustellen.
 
-Der übrige Teil dieses Artikels enthält Informationen und Links, über die Sie mehr zu den einzelnen Verbesserungen erfahren.
+Der übrige Teil dieses Artikels enthält Informationen und Links, über die Sie mehr zu den einzelnen Verbesserungen erfahren. Sie können sich diese Funktionen in unserer Umgebung mit dem globalen `dotnet try`-Tool näher ansehen:
+
+1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
+1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
+1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp7* für das *try-samples*-Repository fest.
+1. Führen Sie aus `dotnet try`.
 
 ## <a name="enabling-more-efficient-safe-code"></a>Ermöglichen von effizienterem sicherem Code
 
@@ -112,7 +117,7 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-Weitere Informationen finden Sie im Artikel zur [`stackalloc`-Anweisung](../language-reference/keywords/stackalloc.md) in der Sprachreferenz.
+Weitere Informationen finden Sie im Artikel zum [`stackalloc`-Operator](../language-reference/operators/stackalloc.md).
 
 ### <a name="more-types-support-the-fixed-statement"></a>Weitere Typen unterstützen die `fixed`-Anweisung
 

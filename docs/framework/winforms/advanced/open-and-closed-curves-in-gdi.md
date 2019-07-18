@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 06afdc4549f7c3c9b0636e5c7052dcca87a153f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165112"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505452"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>Offene und geschlossene Kurven in GDI+
 Die folgende Abbildung zeigt zwei Kurven geteilt: eine offene und eine geschlossen.  
@@ -23,7 +23,7 @@ Die folgende Abbildung zeigt zwei Kurven geteilt: eine offene und eine geschloss
  ![Offene und geschlossene Kurven](./media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>Verwaltete Schnittstelle für die Kurven  
- Geschlossene Kurven ein inneres haben und können daher mit einem Pinsel gefüllt werden. Die <xref:System.Drawing.Graphics> -Klasse im [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet die folgenden Methoden zum Füllen geschlossene Formen und Kurven: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, und <xref:System.Drawing.Graphics.FillRegion%2A>. Wenn Sie eine der folgenden Methoden aufrufen, müssen Sie eine der bestimmten Pinseltyp übergeben (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, oder <xref:System.Drawing.Drawing2D.PathGradientBrush>) als Argument.  
+ Geschlossene Kurven ein inneres haben und können daher mit einem Pinsel gefüllt werden. Die <xref:System.Drawing.Graphics> -Klasse in GDI + bietet die folgenden Methoden zum Füllen der geschlossene Formen und Kurven: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, und <xref:System.Drawing.Graphics.FillRegion%2A>. Wenn Sie eine der folgenden Methoden aufrufen, müssen Sie eine der bestimmten Pinseltyp übergeben (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, oder <xref:System.Drawing.Drawing2D.PathGradientBrush>) als Argument.  
   
  Die <xref:System.Drawing.Graphics.FillPie%2A> Methode ist eine Ergänzung für die <xref:System.Drawing.Graphics.DrawArc%2A> Methode. Ebenso wie die <xref:System.Drawing.Graphics.DrawArc%2A> Methode zeichnet einen Teil der Kontur einer Ellipse, die <xref:System.Drawing.Graphics.FillPie%2A> Methode füllt einen Teil der das Innere einer Ellipse. Im folgenden Beispiel zeichnet einen Bogen und den entsprechenden Teil das Innere der Ellipse füllt:  
   

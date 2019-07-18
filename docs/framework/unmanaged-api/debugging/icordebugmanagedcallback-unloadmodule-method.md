@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12e42da015864e83663d2f4d74bab2a34052d760
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8826644ae3bdfbef76e9143de5f8f449c1555095
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083543"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761205"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule-Methode
 Benachrichtigt den Debugger, dass ein common Language Runtime-Modul (DLL) entladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT UnloadModule (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugModule     *pModule  

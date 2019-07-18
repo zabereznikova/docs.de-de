@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cf109aec8b55650f43f07f5b303c6373df4efc7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004457"
 ---
 # <a name="how-to-create-application-settings"></a>Vorgehensweise: Erstellen von Anwendungseinstellungen
 Mithilfe von verwaltetem Code können Sie neue Anwendungseinstellungen erstellen und diese an Eigenschaften für Ihr Formular oder die Steuerelemente Ihres Formulars binden, damit diese Einstellungen zur Laufzeit automatisch geladen und gespeichert werden.  
@@ -24,19 +24,19 @@ Mithilfe von verwaltetem Code können Sie neue Anwendungseinstellungen erstellen
   
 ### <a name="to-create-new-application-settings-programmatically"></a>So erstellen Sie programmgesteuert neue Anwendungseinstellungen  
   
-1.  Fügen Sie dem Projekt eine neue Klasse hinzu, und benennen Sie diese um. Für dieses Verfahren müssen wir diese Klasse aufrufen `MyUserSettings`. Ändern Sie die Klassendefinition so, dass die Klasse von <xref:System.Configuration.ApplicationSettingsBase> abgeleitet wird.  
+1. Fügen Sie dem Projekt eine neue Klasse hinzu, und benennen Sie diese um. Für dieses Verfahren müssen wir diese Klasse aufrufen `MyUserSettings`. Ändern Sie die Klassendefinition so, dass die Klasse von <xref:System.Configuration.ApplicationSettingsBase> abgeleitet wird.  
   
-2.  Definieren Sie eine Eigenschaft für diese Wrapperklasse für jede benötigte Anwendungseinstellung, und wenden Sie diese Eigenschaft mit <xref:System.Configuration.ApplicationScopedSettingAttribute> oder mit <xref:System.Configuration.UserScopedSettingAttribute>, abhängig vom Bereich der Einstellung an. Weitere Informationen zum Einstellungsbereich finden Sie unter [Übersicht über Anwendungseinstellungen](application-settings-overview.md). Ihr Code sollte jetzt wie folgt aussehen.  
+2. Definieren Sie eine Eigenschaft für diese Wrapperklasse für jede benötigte Anwendungseinstellung, und wenden Sie diese Eigenschaft mit <xref:System.Configuration.ApplicationScopedSettingAttribute> oder mit <xref:System.Configuration.UserScopedSettingAttribute>, abhängig vom Bereich der Einstellung an. Weitere Informationen zum Einstellungsbereich finden Sie unter [Übersicht über Anwendungseinstellungen](application-settings-overview.md). Ihr Code sollte jetzt wie folgt aussehen.  
   
      [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-3.  Erstellen Sie eine Instanz dieser Wrapperklasse in Ihrer Anwendung. Sie wird in der Regel ein privates Element des Hauptformulars sein. Nachdem Sie nun Ihre Klasse definiert haben, müssen Sie sie an eine Eigenschaft binden. In diesem Fall ist dies die Eigenschaft <xref:System.Windows.Forms.Form.BackColor%2A> des Formulars. Sie können dies bewerkstelligen, Ihres Formulars `Load` -Ereignishandler.  
+3. Erstellen Sie eine Instanz dieser Wrapperklasse in Ihrer Anwendung. Sie wird in der Regel ein privates Element des Hauptformulars sein. Nachdem Sie nun Ihre Klasse definiert haben, müssen Sie sie an eine Eigenschaft binden. In diesem Fall ist dies die Eigenschaft <xref:System.Windows.Forms.Form.BackColor%2A> des Formulars. Sie können dies bewerkstelligen, Ihres Formulars `Load` -Ereignishandler.  
   
      [!code-csharp[ApplicationSettings.Create#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
      [!code-vb[ApplicationSettings.Create#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
   
-4.  Wenn Sie eine Möglichkeit zum Ändern von Einstellungen zur Laufzeit bereitstellen, müssen Sie die aktuellen Einstellungen des Benutzers auf dem Datenträger speichern, wenn das Formular geschlossen wird. Andernfalls gehen diese Änderungen verloren.  
+4. Wenn Sie eine Möglichkeit zum Ändern von Einstellungen zur Laufzeit bereitstellen, müssen Sie die aktuellen Einstellungen des Benutzers auf dem Datenträger speichern, wenn das Formular geschlossen wird. Andernfalls gehen diese Änderungen verloren.  
   
      [!code-csharp[ApplicationSettings.Create#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
      [!code-vb[ApplicationSettings.Create#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  

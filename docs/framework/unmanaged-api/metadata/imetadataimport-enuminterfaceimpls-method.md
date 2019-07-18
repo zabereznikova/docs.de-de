@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21d70b2702a754b554f06de5dad776ae98ae918d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 0d0f94949cdc82cdecd52f003f3400c43014fabf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836265"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780460"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls-Methode
 Listet alle Schnittstellen implementiert, mit dem angegebenen `TypeDef`. 
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumInterfaceImpls (  
    [in, out]  HCORENUM       *phEnum,   
    [in]   mdTypeDef          td,  
@@ -76,5 +76,6 @@ Die Enumeration gibt eine Auflistung von `mdInterfaceImpl` -Token für jede Schn
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

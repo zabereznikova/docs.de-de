@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: d35e5b5127f335eac04caa8ee95749f45cb870bf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c7b30a854667a122ff30ec4a8e4855902489087f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674002"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660780"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Übersicht über TextPattern für die Benutzeroberflächenautomatisierung
 
@@ -41,7 +41,7 @@ Kurz formuliert können barrierefreie Technologien, die schreibgeschützten Zugr
 
 ## <a name="control-types"></a>Steuerelementtypen
 
-#### <a name="text"></a>Text
+### <a name="text"></a>Text
 
 Das Textsteuerelement ist das Grundelement, das einen Text auf dem Bildschirm darstellt.
 
@@ -50,14 +50,14 @@ Ein eigenständiges Textsteuerelement kann als Bezeichnung oder statischer Text 
 > [!NOTE]
 > Textsteuerelemente werden möglicherweise nicht in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur angezeigt (weitere Informationen finden Sie unter [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)). Dies liegt daran, dass Textsteuerelemente häufig durch die Name-Eigenschaft eines anderen Steuerelements angezeigt werden. Beispielsweise wird der Text für die Bezeichnung eines Bearbeitungssteuerelements über die Name-Eigenschaft des Bearbeitungssteuerelements verfügbar gemacht. Da sich das Bearbeitungssteuerelement in der Inhaltsansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur befindet, muss das Textelement selbst nicht in dieser Ansicht der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur vorhanden sein. In der Inhaltsansicht wird nur Text angezeigt, der kein Text mit redundanten Informationen ist. Dadurch kann jede Hilfstechnologie schnell genau die Informationen herausfiltern, die die Benutzer benötigen.
 
-#### <a name="edit"></a>Bearbeiten
+### <a name="edit"></a>Bearbeiten
 
 Mit einem Bearbeitungssteuerelement kann ein Benutzer eine einzelne Textzeile anzeigen und bearbeiten
 
 > [!NOTE]
 > Die einzelne Textzeile wird in bestimmten Layoutszenarien möglicherweise umbrochen.
 
-#### <a name="document"></a>Dokument
+### <a name="document"></a>Dokument
 
 Mit einem Dokumentsteuerelement kann ein Benutzer in mehreren Textseiten navigieren und Informationen aus diesen Textseiten abrufen.
 
@@ -93,8 +93,10 @@ Ein <xref:System.Windows.Automation.TextPattern> -Anbieter muss immer die <xref:
 |`System.Windows.Automation.TextPatternIdentifiers Class`|Enthält Werte, die als Bezeichner für Textanbieter verwendet werden (weitere Informationen finden Sie unter <xref:System.Windows.Automation.TextPatternIdentifiers>).|
 
 <a name="Security"></a>
+
 ## <a name="security"></a>Sicherheit
- Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Architektur wurde unter Berücksichtigung von Sicherheitsaspekten entwickelt (weitere Informationen finden Sie unter [UI Automation Security Overview](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Die in dieser Übersicht beschriebenen TextPattern-Klassen erfordern jedoch einige besondere Sicherheitsüberlegungen.
+
+Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Architektur wurde unter Berücksichtigung von Sicherheitsaspekten entwickelt (weitere Informationen finden Sie unter [UI Automation Security Overview](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Die in dieser Übersicht beschriebenen TextPattern-Klassen erfordern jedoch einige besondere Sicherheitsüberlegungen.
 
 - [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] - Textanbieter stellen schreibgeschützte Schnittstellen und bieten keine Möglichkeit, den vorhandenen Text in einem Steuerelement zu ändern.
 
@@ -104,9 +106,9 @@ Ein <xref:System.Windows.Automation.TextPattern> -Anbieter muss immer die <xref:
 
 - Eine der wichtigsten Änderungen hinsichtlich der Sicherheit für [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] wird allgemein als "Secure Input" bezeichnet und umfasst Technologien wie LUA (Least-privileged oder Limited User Accounts) und UIPI (UI Privilege Level Isolation).
 
-    - UIPI hindert ein Programm daran, ein anderes Programm, das mehr Berechtigungen hat, zu steuern und/oder zu überwachen. Dadurch verhindert UIPI Angriffe durch prozessübergreifende Fenstermeldungen, die Benutzereingaben vortäuschen.
+  - UIPI hindert ein Programm daran, ein anderes Programm, das mehr Berechtigungen hat, zu steuern und/oder zu überwachen. Dadurch verhindert UIPI Angriffe durch prozessübergreifende Fenstermeldungen, die Benutzereingaben vortäuschen.
 
-    - LUA begrenzt die Berechtigungen von Anwendungen, die von Benutzern der Gruppe "Administratoren" ausgeführt werden. Anwendungen haben nicht notwendigerweise Administratorberechtigungen, sondern werden stattdessen mit den niedrigsten erforderlichen Berechtigungen ausgeführt. Hierdurch werden in LUA-Szenarien möglicherweise einige Beschränkungen erzwungen. Dies ist insbesondere die Kürzung von Zeichenfolgen (einschließlich TextPattern-Zeichenfolgen), wobei es erforderlich sein kann, die Länge der Zeichenfolgen zu beschränken, die von einer Anwendung auf Administratorebene abgerufen werden, sodass die Anwendung nicht gezwungen ist, bis zu ihrer Deaktivierung Arbeitsspeicher zuzuordnen.
+  - LUA begrenzt die Berechtigungen von Anwendungen, die von Benutzern der Gruppe "Administratoren" ausgeführt werden. Anwendungen haben nicht notwendigerweise Administratorberechtigungen, sondern werden stattdessen mit den niedrigsten erforderlichen Berechtigungen ausgeführt. Hierdurch werden in LUA-Szenarien möglicherweise einige Beschränkungen erzwungen. Dies ist insbesondere die Kürzung von Zeichenfolgen (einschließlich TextPattern-Zeichenfolgen), wobei es erforderlich sein kann, die Länge der Zeichenfolgen zu beschränken, die von einer Anwendung auf Administratorebene abgerufen werden, sodass die Anwendung nicht gezwungen ist, bis zu ihrer Deaktivierung Arbeitsspeicher zuzuordnen.
 
 <a name="Performance"></a>
 
@@ -120,19 +122,25 @@ Zum Verbessern der Leistung ist eine Möglichkeit, durch Verwenden von <xref:Sys
 
 ## <a name="textpattern-terminology"></a>TextPattern-Terminologie
 
-**Attribut** eine Formatierungseigenschaft eines Textbereichs (z. B. <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> oder <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).
+**Attribut**\
+Eine Formatierungseigenschaft eines Textbereichs (z. B. <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> oder <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).
 
-**Degenerierter Bereich** ein degenerierter Bereich ist eine leere oder NULL-Zeichen-Textbereich. Im Zusammenhang mit TextPattern-Steuerelementmustern wird die Einfügemarke (bzw. das Systemeinfügezeichen) als degenerierter Bereich angesehen. Wenn kein Text ausgewählt ist, gibt <xref:System.Windows.Automation.TextPattern.GetSelection%2A> einen degenerierten Bereich an der Texteinfügemarke und <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> einen degenerierten Bereich als seinen Startpunkt zurück. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> und <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> können degenerierte Bereiche zurückgeben, wenn der Anbieter keine Textbereiche findet, die der angegebenen Bedingung entsprechen. Dieser degenerierte Bereich kann als Startpunkt im Textanbieter verwendet werden. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> und <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null-Verweis zurückgeben (`Nothing` in Microsoft Visual Basic .NET) um Verwechslungen mit erkannten Bereichen und degenerierten Bereichen zu vermeiden.
+**Degenerierter Bereich**\
+Ein degenerierter Bereich ist ein leerer Bereich bzw. ein Textbereich mit 0 (null) Zeichen. Im Zusammenhang mit TextPattern-Steuerelementmustern wird die Einfügemarke (bzw. das Systemeinfügezeichen) als degenerierter Bereich angesehen. Wenn kein Text ausgewählt ist, gibt <xref:System.Windows.Automation.TextPattern.GetSelection%2A> einen degenerierten Bereich an der Texteinfügemarke und <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> einen degenerierten Bereich als seinen Startpunkt zurück. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> und <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> können degenerierte Bereiche zurückgeben, wenn der Anbieter keine Textbereiche findet, die der angegebenen Bedingung entsprechen. Dieser degenerierte Bereich kann als Startpunkt im Textanbieter verwendet werden. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> und <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> null-Verweis zurückgeben (`Nothing` in Microsoft Visual Basic .NET) um Verwechslungen mit erkannten Bereichen und degenerierten Bereichen zu vermeiden.
 
-**Eingebettetes Objekt** es gibt zwei Arten von eingebetteten Objekten in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Textmodell. Diese umfassen textbasierte Inhaltselemente, z. B. Links oder Tabellen, und Steuerelemente, z. B. Bilder und Schaltflächen. Ausführlichere Informationen finden Sie unter [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).
+**Eingebettetes Objekt**\
+Es gibt zwei Typen von eingebetteten Objekten im [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Textmodell. Diese umfassen textbasierte Inhaltselemente, z. B. Links oder Tabellen, und Steuerelemente, z. B. Bilder und Schaltflächen. Ausführlichere Informationen finden Sie unter [Access Embedded Objects Using UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).
 
-**Endpunkt** den absoluten <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> oder <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> Punkt eines Textbereichs in einem Textcontainer.
+**Endpunkt**\
+Der absolute <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> - oder <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> -Punkt eines Textbereichs in einem Textcontainer.
 
 ![TextPatternRangeEndpoints &#40;beginnen und enden&#41;. ](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints") die folgende Abbildung veranschaulicht einen Start- und Endpunkt.
 
-**TextRange** eine Darstellung eines Textabschnitts samt Start- und Endpunkt, in einem Textcontainer einschließlich aller zugeordneten Attribute und Funktionen.
+**TextRange**\
+Eine Darstellung eines Textabschnitts samt Start- und Endpunkt in einem Textcontainer einschließlich aller zugeordneten Attribute und Funktionen.
 
-<xref:System.Windows.Automation.Text.TextUnit> Eine vordefinierte Texteinheit (Zeichen, Wort, Zeile oder Absatz) zum Navigieren durch logische Segmente eines Textbereichs.
+<xref:System.Windows.Automation.Text.TextUnit>\
+Eine vordefinierte Texteinheit (Zeichen, Wort, Zeile oder Absatz), die zum Navigieren durch logische Segmente eines Textbereichs verwendet.
 
 ## <a name="see-also"></a>Siehe auch
 

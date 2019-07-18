@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2fecc7160cb41e31bf88f1a461265ad8fdce166
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170390"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739760"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult-Enumeration
 Stellt Details darüber bereit, wie der Wert des Anweisungszeigers (IP) abgerufen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugMappingResult {  
     MAPPING_PROLOG              = 0x1,  
     MAPPING_EPILOG              = 0x2,  
@@ -64,4 +64,4 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

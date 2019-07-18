@@ -2,12 +2,12 @@
 title: Ausführliche Syntax
 description: Erfahren Sie, den Unterschied zwischen ausführliche und einfache Syntax in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 05b909d438e9844ad5adcb2a4087ce04f8999751
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c95965d7d9d18a0fca11663a474dbbc9375a9494
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610891"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641661"
 ---
 # <a name="verbose-syntax"></a>Ausführliche Syntax
 
@@ -33,6 +33,7 @@ zusammengesetzte Ausdrücke
 <expression1>
 <expression2>
 ```
+
 </td><td>
 
 ```fsharp
@@ -84,6 +85,7 @@ begin
     <expression2>;
 end
 ```
+
 </td>
 </tr>
 <tr><td>
@@ -244,7 +246,7 @@ type <union-name> =
     ...
     with
         <value-or-member-definitions>
-    end    
+    end
 ```
 
 </td>
@@ -255,6 +257,7 @@ type <union-name> =
 type <interface-name> =
     ...
 ```
+
 </td><td>
 
 ```fsharp

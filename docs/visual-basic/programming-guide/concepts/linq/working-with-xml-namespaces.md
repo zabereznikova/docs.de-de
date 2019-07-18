@@ -3,11 +3,11 @@ title: Arbeiten mit XML-Namespaces (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
 ms.openlocfilehash: b2b9db9ed547858eb5358d5e3c871c6a84d22ae6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907789"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>Arbeiten mit XML-Namespaces (Visual Basic)
 In den Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Namespaces unterstützt.  

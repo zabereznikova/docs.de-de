@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23bda470b8b5812b567081ba268ad503ac39ecaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3dd233643bd18b60b7d6176c34ee57e4061daf7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090354"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740658"
 ---
 # <a name="corheapinfo-structure"></a>COR_HEAPINFO-Struktur
 Liefert allgemeine Informationen zum Garbage Collection-Heap, auch zu dessen Aufzählbarkeit.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _COR_HEAPINFO {  
     BOOL areGCStructuresValid;   
     DWORD pointerSize;   

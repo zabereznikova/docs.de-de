@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b996cf848de968d71cc1d325d3bbda7bd5386f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f05f349699b28262c1628cadc6e9a0fb0a3459c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715552"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783104"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass-Funktion
 Erstellt ein neu abgeleitetes Klassenobjekt aus einem angegebenen Objekt.    
@@ -30,7 +30,7 @@ Erstellt ein neu abgeleitetes Klassenobjekt aus einem angegebenen Objekt.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SpawnDerivedClass (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -47,7 +47,7 @@ HRESULT SpawnDerivedClass (
 [in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `lFlags`  
-[in]: Reserviert Dieser Parameter muss 0 sein.
+[in] Reserviert. Dieser Parameter muss 0 sein.
 
 `ppNewClass`  
 [out] Erhält der Zeiger auf das neue Objekt der Klasse-Definition. Wenn ein Fehler auftritt, ist ein neues Objekt nicht zurückgegeben, und `ppNewClass` wird links unverändert. Der Wert darf nicht sein `null`.
@@ -81,4 +81,5 @@ Das neue Objekt im zurückgegebenen `ppNewClass` wird automatisch eine Unterklas
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

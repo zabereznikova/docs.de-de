@@ -2,12 +2,12 @@
 title: Übersicht über den erweiterten Schutz für die Authentifizierung
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c166ae4795a64983c0df81629669c9cbf5b0d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183676"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665952"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Übersicht über den erweiterten Schutz für die Authentifizierung
 Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-Middle (MITM)-Angriffe, bei denen die Anmeldeinformationen eines Clients von einem Angreifer abgefangen und an einen Server weitergeleitet werden.  
@@ -24,11 +24,11 @@ Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-
   
  Der Server kann folgende Sicherheitsstufen aufweisen:  
   
--   Keine Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
+- Keine Keine Kanalbindungsvalidierung wird durchgeführt. Dies ist das Standardverhalten aller nicht aktualisierten Server.  
   
--   Partiell Alle aktualisierten Clients müssen Kanalbindungsinformationen für den Server bereitstellen. Dies gilt nicht für nicht aktualisierte Clients. Dies ist eine Zwischenoption, durch die Anwendungskompatibilität gewahrt wird.  
+- Partiell Alle aktualisierten Clients müssen Kanalbindungsinformationen für den Server bereitstellen. Dies gilt nicht für nicht aktualisierte Clients. Dies ist eine Zwischenoption, durch die Anwendungskompatibilität gewahrt wird.  
   
--   Vollständig Alle Clients müssen Kanalbindungsinformationen bereitstellen. Authentifizierungsanfragen von Clients, bei denen dies nicht der Fall ist, werden abgewiesen.  
+- Vollständig Alle Clients müssen Kanalbindungsinformationen bereitstellen. Authentifizierungsanfragen von Clients, bei denen dies nicht der Fall ist, werden abgewiesen.  
   
  Weitere Informationen finden Sie im Beispiel zu Win7 CBT/Erweiterter Schutz.  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 312f133c263becfd815f1b4ad48dff4892963aaf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7fa7dfe101b07ae6eb8d58daad85954f0ce29b02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227847"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747055"
 ---
 # <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a>ICorProfilerCallback::UnmanagedToManagedTransition-Methode
 Benachrichtigt den Profiler, dass ein Übergang von nicht verwaltetem Code an verwalteten Code aufgetreten ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT UnmanagedToManagedTransition(  
     [in] FunctionID functionId,  
     [in] COR_PRF_TRANSITION_REASON reason);  

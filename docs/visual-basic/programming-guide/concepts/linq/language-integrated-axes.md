@@ -3,11 +3,11 @@ title: Sprachintegrierte Achsen in Visual Basic (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d450a556-a134-4261-b011-44e399660894
 ms.openlocfilehash: 0de88ad55724f71f5671a044dbadcb2f6c59e829
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663465"
 ---
 # <a name="language-integrated-axes-in-visual-basic-linq-to-xml"></a>Sprachintegrierte Achsen in Visual Basic (LINQ to XML)
 Dieser Abschnitt beschreibt die Funktionen, die erstellt wird, direkt in Visual Basic-Sprache, damit sie problemlos XML-Daten zugreifen können. Viele der Beispiele in der LINQ to XML-Dokumentation verwenden Sie diese integrierten Visual Basic-Achsen.  

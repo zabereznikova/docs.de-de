@@ -4,12 +4,12 @@ description: Hier finden Sie Empfehlungen zu Best Practices für die Verwaltung 
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 0cd00ff36ad52bc46769ca1793b9efd02db14da1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "49400527"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644277"
 ---
 # <a name="dependencies"></a>Abhängigkeiten
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35dac5fd000f5ae30af917e3813239b2e365e64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 910f8b7f78b6348ace9036d35c0844f2a64cf433
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153984"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763140"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished-Methode
 Benachrichtigt den Profiler an, dass eine Anwendungsdomäne erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT AppDomainCreationFinished(  
     [in] AppDomainID appDomainId,  
     [in] HRESULT     hrStatus);   

@@ -5,27 +5,27 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 8754049e493ab23b1e7b01d0f315b00bdebf0378
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665935"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Vorgehensweise: Erstellen eines Lambdaausdrucks (Visual Basic)
 Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine, die nicht über einen Namen verfügt. Ein Lambda-Ausdruck kann verwendet werden, wo ein Delegattyp gültig ist.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Zum Erstellen einer einzeiligen Lambda-Ausdruck-Funktion  
   
-1.  In einer Situation, in ein Delegattyp verwendet werden kann, geben Sie das Schlüsselwort `Function`, wie im folgenden Beispiel:  
+1. In einer Situation, in ein Delegattyp verwendet werden kann, geben Sie das Schlüsselwort `Function`, wie im folgenden Beispiel:  
   
      `Dim add1 =`   `Function`  
   
-2.  In Klammern direkt nach `Function`, geben Sie die Parameter der Funktion. Beachten Sie, dass Sie nicht nach Namen angeben `Function`.  
+2. In Klammern direkt nach `Function`, geben Sie die Parameter der Funktion. Beachten Sie, dass Sie nicht nach Namen angeben `Function`.  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3.  Geben Sie nach der Parameterliste einen einzelnen Ausdruck als Hauptteil der Funktion. Der Wert, dem der Ausdruck ergibt, ist der von der Funktion zurückgegebene Wert. Verwenden Sie keine `As` -Klausel, um den Rückgabetyp anzugeben.  
+3. Geben Sie nach der Parameterliste einen einzelnen Ausdruck als Hauptteil der Funktion. Der Wert, dem der Ausdruck ergibt, ist der von der Funktion zurückgegebene Wert. Verwenden Sie keine `As` -Klausel, um den Rückgabetyp anzugeben.  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
@@ -33,21 +33,21 @@ Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine, die nicht über einen
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4.  Alternativ wird das gleiche Ergebnis im folgenden Beispiel erreicht:  
+4. Alternativ wird das gleiche Ergebnis im folgenden Beispiel erreicht:  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Um eine Unterroutine der einzeiligen Lambda-Ausdruck zu erstellen.  
   
-1.  In einer Situation, in ein Delegattyp verwendet werden kann, geben Sie das Schlüsselwort `Sub`, wie im folgenden Beispiel gezeigt.  
+1. In einer Situation, in ein Delegattyp verwendet werden kann, geben Sie das Schlüsselwort `Sub`, wie im folgenden Beispiel gezeigt.  
   
      `Dim add1 =`   `Sub`  
   
-2.  In Klammern direkt nach `Sub`, geben Sie die Parameter der Unterroutine. Beachten Sie, dass Sie nicht nach Namen angeben `Sub`.  
+2. In Klammern direkt nach `Sub`, geben Sie die Parameter der Unterroutine. Beachten Sie, dass Sie nicht nach Namen angeben `Sub`.  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3.  Geben Sie nach der Parameterliste einer einzelnen Anweisung als Text der Unterroutine.  
+3. Geben Sie nach der Parameterliste einer einzelnen Anweisung als Text der Unterroutine.  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
@@ -57,17 +57,17 @@ Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine, die nicht über einen
   
 ### <a name="to-create-a-multiline-lambda-expression-function"></a>Zum Erstellen einer mehrzeiligen Lambda-Ausdruck-Funktion  
   
-1.  In einer Situation, in ein Delegattyp verwendet werden kann, geben Sie das Schlüsselwort `Function`, wie im folgenden Beispiel gezeigt.  
+1. In einer Situation, in ein Delegattyp verwendet werden kann, geben Sie das Schlüsselwort `Function`, wie im folgenden Beispiel gezeigt.  
   
      `Dim add1 =`   `Function`  
   
-2.  In Klammern direkt nach `Function`, geben Sie die Parameter der Funktion. Beachten Sie, dass Sie nicht nach Namen angeben `Function`.  
+2. In Klammern direkt nach `Function`, geben Sie die Parameter der Funktion. Beachten Sie, dass Sie nicht nach Namen angeben `Function`.  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3.  Drücken Sie die EINGABETASTE. Die `End Function` -Anweisung wird automatisch hinzugefügt.  
+3. Drücken Sie die EINGABETASTE. Die `End Function` -Anweisung wird automatisch hinzugefügt.  
   
-4.  Fügen Sie im Text der Funktion den folgenden Code zum Erstellen eines Ausdrucks und der Wert zurückgegeben. Verwenden Sie keine `As` -Klausel, um den Rückgabetyp anzugeben.  
+4. Fügen Sie im Text der Funktion den folgenden Code zum Erstellen eines Ausdrucks und der Wert zurückgegeben. Verwenden Sie keine `As` -Klausel, um den Rückgabetyp anzugeben.  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
@@ -77,17 +77,17 @@ Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine, die nicht über einen
   
 ### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Um eine Unterroutine der mehrzeiligen Lambda-Ausdruck zu erstellen.  
   
-1.  In einer Situation, in ein Delegattyp verwendet werden kann, geben Sie das Schlüsselwort `Sub`, wie im folgenden Beispiel gezeigt:  
+1. In einer Situation, in ein Delegattyp verwendet werden kann, geben Sie das Schlüsselwort `Sub`, wie im folgenden Beispiel gezeigt:  
   
      `Dim add1 =`   `Sub`  
   
-2.  In Klammern direkt nach `Sub`, geben Sie die Parameter der Unterroutine. Beachten Sie, dass Sie nicht nach Namen angeben `Sub`.  
+2. In Klammern direkt nach `Sub`, geben Sie die Parameter der Unterroutine. Beachten Sie, dass Sie nicht nach Namen angeben `Sub`.  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3.  Drücken Sie die EINGABETASTE. Die `End Sub` -Anweisung wird automatisch hinzugefügt.  
+3. Drücken Sie die EINGABETASTE. Die `End Sub` -Anweisung wird automatisch hinzugefügt.  
   
-4.  Fügen Sie den folgenden Code ausgeführt wird, wenn die Unterroutine aufgerufen wird, innerhalb des Texts der Funktion.  
+4. Fügen Sie den folgenden Code ausgeführt wird, wenn die Unterroutine aufgerufen wird, innerhalb des Texts der Funktion.  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   

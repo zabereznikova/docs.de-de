@@ -2,14 +2,14 @@
 title: Veröffentlichen von Metadaten
 ms.date: 03/30/2017
 helpviewer_keywords:
-- meatadata [WCF], publishing
+- metadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-ms.openlocfilehash: 97836cef12cd1f220e97d2c38d2dca1b878d7484
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 54ab05f32320f3084fc609d8107f2892ffe6efbd
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183071"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424575"
 ---
 # <a name="publishing-metadata"></a>Veröffentlichen von Metadaten
 Windows Communication Foundation (WCF)-Dienste veröffentlichen Metadaten, indem Sie eine oder mehrere Metadatenendpunkte veröffentlichen. Die Veröffentlichung von Dienstmetadaten macht die Metadaten über die Nutzung standardisierter Protokolle verfügbar, z. B. WS-MetadataExchange (MEX) und HTTP/GET-Anforderungen. Metadatenendpunkte sind anderen Dienstendpunkten dahingehend ähnlich, dass sie über eine Adresse, eine Bindung und einen Vertrag verfügen und sie per Konfiguration oder in einem imperativen Code zu einem Diensthost hinzugefügt werden können.  
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF)-Dienste veröffentlichen Metadaten, indem
  [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  Veranschaulicht das Konfigurieren eines WCF-Diensts zum Veröffentlichen von Metadaten, sodass die Metadaten mit WS-MetadataExchange oder eine HTTP/GET-Anforderung mithilfe von Clients abgerufen werden kann die `?wsdl` Abfragezeichenfolge.  
   
- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst über den Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
  Veranschaulicht, wie die Veröffentlichung von Metadaten für einen WCF-Dienst im Code zu aktivieren, sodass die Metadaten mit WS-MetadataExchange oder eine HTTP/GET-Anforderung mithilfe von Clients abgerufen werden kann die `?wsdl` Abfragezeichenfolge.  
   
 ## <a name="reference"></a>Referenz  

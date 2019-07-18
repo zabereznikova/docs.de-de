@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c566c54343f1dd7c3da2701c2b7ea9f815e22e7b
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 52ec268df38a12dfe7dac469eed9901d7c0646a1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583666"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769601"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Erzeugen von Schlüsseln für die Ver- und Entschlüsselung
 Das Erstellen und Verwalten von Schlüsseln ist ein wichtiger Bestandteil des kryptografischen Prozesses. Bei symmetrischen Algorithmen müssen ein Schlüssel und ein Initialisierungsvektor (IV) erstellt werden. Der Schlüssel muss vor Unbefugten, die Ihre Daten nicht entschlüsseln können sollen, geheim gehalten werden. Der IV muss nicht geheim sein, sollte aber für jede Sitzung geändert werden. Bei asymmetrischen Algorithmen müssen ein öffentlicher und ein privater Schlüssel erstellt werden. Der öffentliche Schlüssel kann allgemein zugänglich sein, während der private Schlüssel nur dem Teilnehmer bekannt sein darf, der die mit dem öffentlichen Schlüssel verschlüsselten Daten entschlüsselt. In diesem Abschnitt wird beschrieben, wie Schlüssel für symmetrische und asymmetrische Algorithmen erzeugt und verwaltet werden.  
   
 ## <a name="symmetric-keys"></a>Symmetrische Schlüssel  
- Für die von .NET Framework bereitgestellten symmetrischen Verschlüsselungsklassen sind ein Schlüssel und ein neuer Initialisierungsvektor (IV) erforderlich, damit Daten verschlüsselt und entschlüsselt werden können. Wenn Sie mit dem Standardkonstruktor eine neue Instanz einer verwalteten symmetrischen Kryptografieklasse erstellen, werden automatisch ein neuer Schlüssel und ein neuer IV erzeugt. Alle Benutzer, die zum Entschlüsseln der Daten berechtigt sind, müssen über den gleichen Schlüssel und IV verfügen und den gleichen Algorithmus verwenden. Generell sollten für jede Sitzung ein neuer Schlüssel und IV erstellt und weder Schlüssel noch IV für eine spätere Sitzung gespeichert werden.  
+ Für die von .NET Framework bereitgestellten symmetrischen Verschlüsselungsklassen sind ein Schlüssel und ein neuer Initialisierungsvektor (IV) erforderlich, damit Daten verschlüsselt und entschlüsselt werden können. Wenn Sie eine neue Instanz der eines der mit dem parameterlosen Konstruktor verwalteten symmetrischen Kryptografieklasse erstellen, werden automatisch ein neuer Schlüssel und IV erstellt. Alle Benutzer, die zum Entschlüsseln der Daten berechtigt sind, müssen über den gleichen Schlüssel und IV verfügen und den gleichen Algorithmus verwenden. Generell sollten für jede Sitzung ein neuer Schlüssel und IV erstellt und weder Schlüssel noch IV für eine spätere Sitzung gespeichert werden.  
   
  Um den symmetrischen Schlüssel und IV der Gegenseite mitzuteilen, wird der symmetrische Schlüssel in der Regel asymmetrisch verschlüsselt. Das Senden des unverschlüsselten Schlüssels über ein nicht sicheres Netzwerk birgt ein großes Sicherheitsrisiko, da jeder, der den Schlüssel und den IV abfängt, die Daten entschlüsseln kann. Weitere Informationen zum verschlüsselten Datenaustausch finden Sie unter [Erstellen eines kryptografischen Schemas](../../../docs/standard/security/creating-a-cryptographic-scheme.md).  
   
@@ -60,13 +60,13 @@ tdes.GenerateKey();
  Beim Ausführen des obigen Codes werden beim Erstellen der neuen **TripleDESCryptoServiceProvider** -Instanz ein Schlüssel und IV erzeugt. Ein weiterer Schlüssel und ein weiterer IV werden beim Aufruf der **GenerateKey** -Methode und der **GenerateIV** -Methode erstellt.  
   
 ## <a name="asymmetric-keys"></a>Asymmetrische Schlüssel  
- .NET Framework stellt die Klassen <xref:System.Security.Cryptography.RSACryptoServiceProvider> und <xref:System.Security.Cryptography.DSACryptoServiceProvider> für asymmetrische Verschlüsselung bereit. Durch diese Klassen wird beim Erstellen einer neuen Instanz mit dem Standardkonstruktor ein öffentliches/privates Schlüsselpaar erzeugt. Asymmetrische Schlüssel können entweder nur für eine Sitzung erzeugt oder gespeichert und für mehrere Sitzungen verwendet werden. Während der öffentliche Schlüssel öffentlich verfügbar sein kann, sollte der private Schlüssel streng geheim gehalten werden.  
+ .NET Framework stellt die Klassen <xref:System.Security.Cryptography.RSACryptoServiceProvider> und <xref:System.Security.Cryptography.DSACryptoServiceProvider> für asymmetrische Verschlüsselung bereit. Diese Klassen erstellen ein öffentliches/privates Schlüsselpaar, bei der Verwendung des parameterlosen Konstruktors zum Erstellen einer neuen Instanz. Asymmetrische Schlüssel können entweder nur für eine Sitzung erzeugt oder gespeichert und für mehrere Sitzungen verwendet werden. Während der öffentliche Schlüssel öffentlich verfügbar sein kann, sollte der private Schlüssel streng geheim gehalten werden.  
   
  Bei jedem Erstellen einer neuen Instanz einer asymmetrischen Algorithmusklasse wird ein öffentliches/privates Schlüsselpaar erzeugt. Nachdem eine neue Instanz der Klasse erstellt worden ist, können die Schlüsselinformationen mit einer der folgenden beiden Methoden extrahiert werden:  
   
--   mit der <xref:System.Security.Cryptography.RSA.ToXmlString%2A> -Methode, die eine XML-Darstellung der Schlüsselinformationen zurückgibt;  
+- mit der <xref:System.Security.Cryptography.RSA.ToXmlString%2A> -Methode, die eine XML-Darstellung der Schlüsselinformationen zurückgibt;  
   
--   mit der <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> -Methode, die eine <xref:System.Security.Cryptography.RSAParameters> -Struktur mit den Schlüsselinformationen zurückgibt.  
+- mit der <xref:System.Security.Cryptography.RSACryptoServiceProvider.ExportParameters%2A> -Methode, die eine <xref:System.Security.Cryptography.RSAParameters> -Struktur mit den Schlüsselinformationen zurückgibt.  
   
  Bei beiden Methoden wird ein boolescher Wert akzeptiert, der angibt, ob nur die Informationen des öffentlichen Schlüssels oder die Informationen beider Schlüssel (öffentlich und privat) zurückgegeben werden sollen. Eine **RSACryptoServiceProvider** -Klasse kann mit dem Wert einer **RSAParameters** -Struktur initialisiert werden, indem die <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A> -Methode verwendet wird.  
   

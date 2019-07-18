@@ -3,11 +3,11 @@ title: Peerkanalszenarien
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
 ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046383"
 ---
 # <a name="peer-channel-scenarios"></a>Peerkanalszenarien
 Die Peerkanal-APIs unterstützen die folgenden Entwicklungsszenarien:  

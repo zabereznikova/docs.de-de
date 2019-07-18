@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15b1f6be2dac6bc7566852791ac22e495949521c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b9b7138d403bc84ab377301b82d697fd137416c6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179625"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781592"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType-Enumeration
 Gibt an, wie ein Objekt von der common Language Runtime serialisiert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorSerializationType {  
   
     SERIALIZATION_TYPE_UNDEFINED     = 0,  

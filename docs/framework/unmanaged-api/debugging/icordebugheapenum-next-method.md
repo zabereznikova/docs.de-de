@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd993eb26f26818117a20d376c3331f88c46b26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: aef821c10b8b44e54967245aaab3956c16ea15b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214350"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757384"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next-Methode
 Ruft die angegebene Anzahl von [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Instanzen, die Informationen zu Objekten im verwalteten Heap enthalten.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next(  
     [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_HEAPOBJECT  objects[],   
     [out] ULONG *pceltFetched  
@@ -61,4 +61,4 @@ HRESULT Next(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugHeapEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

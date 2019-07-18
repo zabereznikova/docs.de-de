@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172782"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505636"
 ---
 # <a name="matrix-representation-of-transformations"></a>Matrixdarstellung von Transformationen
 Eine m-x-n-Matrix ist eine Menge von Zahlen, die in m Zeilen und n Spalten angeordnet sind. Die folgende Abbildung zeigt mehrere Matrizen.  
@@ -66,7 +66,7 @@ Eine m-x-n-Matrix ist eine Menge von Zahlen, die in m Zeilen und n Spalten angeo
   
  ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können Sie eine affine Transformation in speichern eine <xref:System.Drawing.Drawing2D.Matrix> Objekt. Da immer ist der dritte Spalte der eine Matrix, die eine affine Transformation darstellt (0, 0, 1), Sie nur die sechs Zahlen in den ersten beiden Spalten angeben, wenn Sie erstellen eine <xref:System.Drawing.Drawing2D.Matrix> Objekt. Die Anweisung `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` erstellt die Matrix, die in der obigen Abbildung dargestellt.  
+ GDI + können Sie speichern eine affine Transformation in einem <xref:System.Drawing.Drawing2D.Matrix> Objekt. Da immer ist der dritte Spalte der eine Matrix, die eine affine Transformation darstellt (0, 0, 1), Sie nur die sechs Zahlen in den ersten beiden Spalten angeben, wenn Sie erstellen eine <xref:System.Drawing.Drawing2D.Matrix> Objekt. Die Anweisung `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` erstellt die Matrix, die in der obigen Abbildung dargestellt.  
   
 ## <a name="composite-transformations"></a>Zusammengesetzte Transformationen  
  Eine zusammengesetzte Transformation ist eine Sequenz von Transformationen gefolgt von den anderen. Beachten Sie die Matrizen und Transformationen in der folgenden Liste:  

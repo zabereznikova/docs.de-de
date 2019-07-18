@@ -3,11 +3,11 @@ title: 5002 - DCSerializeWithSurrogateStop
 ms.date: 03/30/2017
 ms.assetid: 66fd4496-8b94-46d4-b987-19040b4ea4bc
 ms.openlocfilehash: fee805f57d37893db3e32d031749ccc018fae2df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33468760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967973"
 ---
 # <a name="5002---dcserializewithsurrogatestop"></a>5002 - DCSerializeWithSurrogateStop
 ## <a name="properties"></a>Eigenschaften  
@@ -15,7 +15,7 @@ ms.locfileid: "33468760"
 |||  
 |-|-|  
 |ID|5002|  
-|Stichwörter|Serialisierung|  
+|Schlüsselwörter|Serialisierung|  
 |Ebene|Ausführlich|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Debug|  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 699c65aae205efd5b08f1d163b4ff9a223bbc217
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: abf24b81bae4d16c3a03aa668d4e1f5e8117cc93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468831"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737464"
 ---
 # <a name="icordebugarrayvaluegetrank-method"></a>ICorDebugArrayValue::GetRank-Methode
 Ruft die Anzahl der Dimensionen im Array ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRank (  
     [out] ULONG32   *pnRank  
 );  

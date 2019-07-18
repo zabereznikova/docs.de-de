@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93c55cec3d35fd4208a4a8a7c9b235dd10fb9ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f005ee9d3d9d4b8977cd6a1838fe46015e604df5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156168"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777466"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName-Methode
 Ruft Metadaten für einen Typ, der im angegebenen Gültigkeitsbereich definiert ist, handelt es sich außerhalb des aktuellen Bereichs ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineTypeRefByName (   
     [in]  mdToken     tkResolutionScope,   
     [in]  LPCWSTR     szName,   
@@ -41,15 +41,15 @@ HRESULT DefineTypeRefByName (
  `tkResolutionScope`  
  [in] Das Token, die Angabe des Bereichs der Lösung. Die folgenden Tokentypen sind gültig:  
   
--   `mdModuleRef`, wenn der Typ in der gleichen Assembly definiert ist, in dem der Aufrufer definiert wird.  
+- `mdModuleRef`, wenn der Typ in der gleichen Assembly definiert ist, in dem der Aufrufer definiert wird.  
   
--   `mdAssemblyRef`, wenn der Typ in einer anderen als der Assembly definiert ist, in dem der Aufrufer definiert wird.  
+- `mdAssemblyRef`, wenn der Typ in einer anderen als der Assembly definiert ist, in dem der Aufrufer definiert wird.  
   
--   `mdTypeRef`, wenn der Typ ein geschachtelter Typ ist.  
+- `mdTypeRef`, wenn der Typ ein geschachtelter Typ ist.  
   
--   `mdModule`, wenn der Typ im selben Modul definiert ist, in dem der Aufrufer definiert wird.  
+- `mdModule`, wenn der Typ im selben Modul definiert ist, in dem der Aufrufer definiert wird.  
   
--   NULL, wenn der Typ global definiert ist.  
+- NULL, wenn der Typ global definiert ist.  
   
  `szName`  
  [in] Der Name des Zieltyps im Unicode-Format.  

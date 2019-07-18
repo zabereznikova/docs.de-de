@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 630c365c8710388ae3e913bedece0fb710da7cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208474"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768134"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS-Struktur
 Stellt Statistiken über Garbage Collection-Mechanismus der common Language Runtime (CLR) bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _COR_GC_STATS {  
     ULONG   Flags;   
     SIZE_T  ExplicitGCCount;  
@@ -71,7 +71,7 @@ typedef struct _COR_GC_STATS {
   
  Ein Beispiel für die Nutzung lautet wie folgt aus:  
   
-```  
+```cpp  
 COR_GC_STATS GCStats;  
 GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;  
 pCLRGCManager->GetStats(&GCStats);  
@@ -88,6 +88,6 @@ pCLRGCManager->GetStats(&GCStats);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingstrukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Automatische Speicherverwaltung](../../../../docs/standard/automatic-memory-management.md)
 - [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)

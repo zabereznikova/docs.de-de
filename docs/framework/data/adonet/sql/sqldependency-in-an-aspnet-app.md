@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: c49d28f42dec311d4a0c35a7115b00d989411358
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780288"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>"SqlDependency" in einer ASP.NET-Anwendung
 Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System.Data.SqlClient.SqlDependency> durch Verwendung des ASP.NET-<xref:System.Web.Caching.SqlCacheDependency>-Objekts. Das <xref:System.Web.Caching.SqlCacheDependency>-Objekt verwendet eine <xref:System.Data.SqlClient.SqlDependency>, um Benachrichtigungen zu empfangen und den Cache ordnungsgemäß zu aktualisieren.  
@@ -24,11 +24,11 @@ Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System
 ## <a name="creating-the-sample-application"></a>Erstellen der Beispielanwendung  
  Gehen Sie zum Erstellen und Ausführen der Beispielanwendung wie folgt vor:  
   
-1.  Erstellen Sie eine neue ASP.NET-Website.  
+1. Erstellen Sie eine neue ASP.NET-Website.  
   
-2.  Fügen Sie der Seite Default.aspx<xref:System.Web.UI.WebControls.Label> ein <xref:System.Web.UI.WebControls.GridView>-Steuerelement und ein -Steuerelement hinzu.  
+2. Fügen Sie der Seite Default.aspx<xref:System.Web.UI.WebControls.Label> ein <xref:System.Web.UI.WebControls.GridView>-Steuerelement und ein -Steuerelement hinzu.  
   
-3.  Öffnen Sie das Klassenmodul der Seite, und fügen Sie die folgenden Anweisungen hinzu:  
+3. Öffnen Sie das Klassenmodul der Seite, und fügen Sie die folgenden Anweisungen hinzu:  
   
     ```vb  
     Option Strict On  
@@ -42,12 +42,12 @@ Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System
     using System.Web.Caching;  
     ```  
   
-4.  Fügen Sie dem `Page_Load`-Ereignis der Seite folgenden Code hinzu:  
+4. Fügen Sie dem `Page_Load`-Ereignis der Seite folgenden Code hinzu:  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  Fügen Sie zwei Hilfsmethoden hinzu, `GetConnectionString` und `GetSQL`. Die definierte Verbindungszeichenfolge verwendet integrierte Sicherheit. Sie müssen Sie sicherstellen, dass die von Ihnen verwendete Konto, die erforderlichen Datenbankberechtigungen und dass verfügt der-Beispieldatenbank **AdventureWorks**, Benachrichtigungen aktiviert.
+5. Fügen Sie zwei Hilfsmethoden hinzu, `GetConnectionString` und `GetSQL`. Die definierte Verbindungszeichenfolge verwendet integrierte Sicherheit. Sie müssen Sie sicherstellen, dass die von Ihnen verwendete Konto, die erforderlichen Datenbankberechtigungen und dass verfügt der-Beispieldatenbank **AdventureWorks**, Benachrichtigungen aktiviert.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

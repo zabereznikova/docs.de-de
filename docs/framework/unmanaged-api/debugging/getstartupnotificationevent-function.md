@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ed1db49be78d7d16648a9ef9735e79ef1b3ab98
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f67f3ef57b4996eb4a956c596b76fb94b1bdfd7a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487329"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738887"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent-Funktion
 Erstellt oder öffnet ein Ereignishandle, das über jede CLR-Runtime (Common Language Runtime) benachrichtigt wird, die im angegebenen Zielprozess geladen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStartupNotificationEvent  
     (  
     [in]  DWORD     debuggeePID,  

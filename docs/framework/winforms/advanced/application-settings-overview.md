@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e70b9c16c3af46b72ea8f8745806c7ebf849e2f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203625"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169984"
 ---
 # <a name="application-settings-overview"></a>Übersicht über Anwendungseinstellungen
 In diesem Thema wird erläutert, wie Einstellungsdaten für Ihre Anwendung und deren Benutzer erstellt und gespeichert werden.  
   
  Die Funktion „Anwendungseinstellungen“ von Windows Forms erleichtert das Erstellen, Speichern und Verwalten von benutzerdefinierten Einstellungen für Anwendungen und Benutzer auf dem Clientcomputer. Mit Windows Forms-Anwendungseinstellungen können Sie nicht nur Anwendungsdaten wie Datenbankverbindungszeichenfolgen, sondern auch benutzerspezifische Daten, etwa Anwendungseinstellungen, speichern. Mithilfe von Visual Studio oder benutzerdefiniertem verwaltetem Code können Sie neue Einstellungen erstellen, diese vom Datenträger lesen bzw. sie darauf schreiben, sie an Eigenschaften in Ihren Formularen binden und Einstellungsdaten vor dem Laden und Speichern überprüfen.  
   
- Anwendungseinstellungen ermöglichen Entwicklern das Speichern des Zustands ihrer jeweiligen Anwendung mit sehr wenig benutzerdefiniertem Code und stellen einen Ersatz für die dynamischen Eigenschaften in früheren Versionen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]dar. Anwendungseinstellungen enthalten zahlreiche Verbesserungen gegenüber dynamischen Eigenschaften, die schreibgeschützt und spät gebunden sind sowie mehr benutzerdefinierte Programmierung erfordern. Die dynamischen Eigenschaftenklassen wurden in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]beibehalten, sind aber nur noch Shell-Klassen, die nur einen schwachen Wrapper für die Anwendungseinstellungen-Klassen darstellen.  
+ Anwendungseinstellungen ermöglicht Entwicklern das Speichern des Zustands Ihrer jeweiligen Anwendung mit sehr wenig benutzerdefiniertem Code und ist ein Ersatz für dynamische Eigenschaften in früheren Versionen von .NET Framework. Anwendungseinstellungen enthalten zahlreiche Verbesserungen gegenüber dynamischen Eigenschaften, die schreibgeschützt und spät gebunden sind sowie mehr benutzerdefinierte Programmierung erfordern. Die dynamischen Eigenschaftenklassen wurden in .NET Framework 2.0 beibehalten, aber sie sind nur noch Shell-Klassen, die die Anwendungseinstellungen-Klassen mit schlanker speicherzuweisung zu umschließen.  
   
 ## <a name="what-are-application-settings"></a>Was sind Anwendungseinstellungen?  
  Ihr Windows Forms-Anwendungen benötigen häufig Daten, die für die Ausführung der Anwendung von entscheidender Bedeutung sind, die Sie aber nicht direkt in den Anwendungscode einschließen möchten. Wenn Ihre Anwendung einen Webdienst oder einen Datenbankserver verwendet, sollten Sie diese Informationen in einer separaten Datei speichern, damit Sie sie später ändern können, ohne sie neu kompilieren zu müssen. Auf ähnliche Weise können Ihre Anwendungen die Speicherung von Daten erfordern, die für den aktuellen Benutzer spezifisch sind. Die meisten Anwendungen verfügen beispielsweise über Benutzereinstellungen, die das Aussehen und Verhalten der Anwendung anpassen.  
@@ -34,7 +34,7 @@ In diesem Thema wird erläutert, wie Einstellungsdaten für Ihre Anwendung und d
  Benutzerdefinierte Steuerelemente können ihre eigenen Einstellungen auch speichern, indem die <xref:System.Configuration.IPersistComponentSettings> -Schnittstelle implementiert wird, die die <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> -Methode verfügbar macht. Das Windows Forms-Steuerelement <xref:System.Windows.Forms.ToolStrip> implementiert diese Schnittstelle, um die Position von Symbolleisten und Symbolleistenelementen zwischen Anwendungssitzungen zu speichern. Weitere Informationen zu benutzerdefinierten Steuerelementen und Anwendungseinstellungen finden Sie unter [Application Settings for Custom Controls](application-settings-for-custom-controls.md).  
   
 ## <a name="limitations-of-application-settings"></a>Einschränkungen von Anwendungseinstellungen  
- Sie können keine Anwendungseinstellungen in einer nicht verwalteten Anwendung verwenden, die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]hostet. Einstellungen funktionieren nicht in Umgebungen wie Visual Studio-Add-Ins, C++ für Microsoft Office, Steuerelementhosting in Internet Explorer oder Microsoft Outlook-Add-Ins und Projekte.  
+ Sie können keine Anwendungseinstellungen in einer nicht verwalteten Anwendung, die von .NET Framework gehostet verwenden. Einstellungen funktionieren nicht in Umgebungen wie Visual Studio-Add-Ins, C++ für Microsoft Office, Steuerelementhosting in Internet Explorer oder Microsoft Outlook-Add-Ins und Projekte.  
   
  Sie können derzeit keine Bindung an einige Eigenschaften in Windows Forms durchführen. Das bemerkenswerteste Beispiel ist die <xref:System.Windows.Forms.Form.ClientSize%2A> -Eigenschaft, weil das Binden an diese Eigenschaft zu unvorhersehbarem Verhalten zur Laufzeit führen würde. Sie können diese Probleme in der Regel umgehen, indem Sie diese Einstellungen programmgesteuert speichern und laden.  
   
@@ -55,7 +55,7 @@ In diesem Thema wird erläutert, wie Einstellungsdaten für Ihre Anwendung und d
 - <xref:System.Configuration.IPersistComponentSettings>
 - [Vorgehensweise: Überprüfen von Anwendungseinstellungen](how-to-validate-application-settings.md)
 - [Verwalten von Anwendungseinstellungen (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Vorgehensweise: Lesen von Einstellungen zur Laufzeit mit C#](how-to-read-settings-at-run-time-with-csharp.md)
+- [How To: Lesen von Einstellungen zur Laufzeit mitC#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](using-application-settings-and-user-settings.md)
 - [Architektur der Anwendungseinstellungen](application-settings-architecture.md)
-- [Anwendungseinstellungen für benutzerdefinierte Steuerelemente](application-settings-for-custom-controls.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)

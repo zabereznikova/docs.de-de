@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 293787d7798768ff2b4e2fb8fec9ed201fdb85ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085414"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742266"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions-Enumeration
 Listet die Assemblyoptionen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum _AssemblyOptions {  
     optAssemTitle = 0,  
     optAssemDescription,  

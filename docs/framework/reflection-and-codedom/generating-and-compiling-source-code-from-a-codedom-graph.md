@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0218f74f5aa66921104fd36c085aaed04c9b435
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7bfc915287e579374c69636135c4b049184ef6ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164787"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm
 Der <xref:System.CodeDom.Compiler>-Namespace stellt Schnittstellen zum Generieren von Sourcecode aus CodeDOM-Objektdiagrammen und zum Verwalten der Kompilierung mit unterstützten Compilern bereit. Ein Codeanbieter kann Quellcode in einer bestimmten Programmiersprache anhand eines CodeDOM-Diagramms erstellen. Eine Klasse, die von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet wurde, kann in der Regel Methoden zum Generieren und Kompilieren von Code für die Sprache bereitstellen, die der Anbieter unterstützt.  
@@ -94,6 +94,7 @@ Der <xref:System.CodeDom.Compiler>-Namespace stellt Schnittstellen zum Generiere
  Das .NET Framework bietet Codecompiler für Codegeneratoren für die folgenden Sprachen: C#, Visual Basic, C++ und JScript. Die CodeDOM-Unterstützung kann auf andere Sprachen durch Implementierung sprachspezifischer Codegeneratoren und Codecompiler erweitert werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [Generieren und Kompilieren von dynamischem Quellcode](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

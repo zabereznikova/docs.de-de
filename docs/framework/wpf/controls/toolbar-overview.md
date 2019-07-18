@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
 ms.openlocfilehash: 711d55e46fb548787976a1f966c9fbf6dc7f12d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790858"
 ---
 # <a name="toolbar-overview"></a>Übersicht überToolBar
 <xref:System.Windows.Controls.ToolBar> -Steuerelemente sind Container für eine Gruppe von Befehlen oder Steuerelementen, die in der Regel in ihren Funktionen miteinander verbunden sind. Ein <xref:System.Windows.Controls.ToolBar> enthält in der Regel Schaltflächen, die Befehle aufrufen.  

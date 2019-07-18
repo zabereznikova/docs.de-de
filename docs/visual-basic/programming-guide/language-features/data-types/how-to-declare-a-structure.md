@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906710"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Vorgehensweise: Deklarieren einer Struktur (Visual Basic)
 Sie beginnen mit eine Structure-Deklaration die [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md), und beenden sie mit der `End Structure` Anweisung. Zwischen zwei Anweisungen müssen Sie mindestens eine deklarieren *Element*. Die Elemente können einen beliebigen Datentyp aufweisen, jedoch muss mindestens eine entweder eine nicht freigegebene Variable oder eine nicht freigegebene nicht benutzerdefinierte Event.  
@@ -25,7 +25,7 @@ Sie beginnen mit eine Structure-Deklaration die [Structure-Anweisung](../../../.
   
 ### <a name="to-declare-a-structure"></a>Um eine Struktur zu deklarieren.  
   
-1.  Erstellen Sie die Anfangs- und Endposition Anweisungen für die Struktur.  
+1. Erstellen Sie die Anfangs- und Endposition Anweisungen für die Struktur.  
   
      Können Sie angeben, die Zugriffsebene einer Struktur mit der [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md), [geschützte](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), oder [Private](../../../../visual-basic/language-reference/modifiers/private.md) -Schlüsselwort, oder Sie können es Standardmäßig `Public`.  
   
@@ -34,7 +34,7 @@ Sie beginnen mit eine Structure-Deklaration die [Structure-Anweisung](../../../.
     End Structure  
     ```  
   
-2.  Der Text der Struktur Elemente hinzufügen.  
+2. Der Text der Struktur Elemente hinzufügen.  
   
      Eine Struktur muss mindestens ein Element verfügen. Sie müssen jedes Element zu deklarieren, und geben eine Zugriffsebene für sie. Bei Verwendung der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) ohne Schlüsselwörter verwenden, der Zugriff standardmäßig `Public`.  
   

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 14ab9b5b36eee607679ee95423c2af912ed02310
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197684"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860002"
 ---
 # <a name="trees-in-wpf"></a>Strukturen in WPF
-In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur organisiert, in denen Entwickler die Objektknoten direkt in der Struktur bearbeiten, um das Rendering oder das Verhalten einer Anwendung zu beeinflussen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verwendet auch mehrere baumstrukturmetaphern, um Beziehungen zwischen Programmelementen zu definieren. Da die WPF-Entwickler meist eine Anwendung im Code erstellen können oder Teile der Anwendung in XAML festlegen, obwohl sie konzeptionell über die Baumstrukturobjektmetapher denken, rufen sie trotzdem eine bestimmte API auf oder verwenden bestimmte Markups, um dies zu tun, anstatt einige allgemeine API-Strukturobjektmanipulationen vorzunehmen, wie Sie sie möglicherweise im XML-DOM verwenden. WPF zeigt zwei hilfsprogrammklassen, die eine strukturmetapheransicht bereitstellen <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>. Die Begriffe „visuelle Struktur“ und „logische Struktur“ werden auch in der WPF-Dokumentation verwendet, da diese Strukturen für das Verstehen des Verhaltens bestimmter WPF-Schlüsselfunktionen hilfreich sind. In diesem Thema definiert, was die visuelle Struktur und die logische Struktur darstellen, wird erläutert, wie sich diese Strukturen auf ein allgemeines Objektstrukturkonzept beziehen und führt <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>s.  
+In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur organisiert, in denen Entwickler die Objektknoten direkt in der Struktur bearbeiten, um das Rendering oder das Verhalten einer Anwendung zu beeinflussen. Außerdem verwendet [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mehrere Baumstrukturmetaphern, um Beziehungen zwischen Programmelementen festzulegen. Da die WPF-Entwickler meist eine Anwendung im Code erstellen können oder Teile der Anwendung in XAML festlegen, obwohl sie konzeptionell über die Baumstrukturobjektmetapher denken, rufen sie trotzdem eine bestimmte API auf oder verwenden bestimmte Markups, um dies zu tun, anstatt einige allgemeine API-Strukturobjektmanipulationen vorzunehmen, wie Sie sie möglicherweise im XML-DOM verwenden. WPF zeigt zwei hilfsprogrammklassen, die eine strukturmetapheransicht bereitstellen <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>. Die Begriffe „visuelle Struktur“ und „logische Struktur“ werden auch in der WPF-Dokumentation verwendet, da diese Strukturen für das Verstehen des Verhaltens bestimmter WPF-Schlüsselfunktionen hilfreich sind. In diesem Thema definiert, was die visuelle Struktur und die logische Struktur darstellen, wird erläutert, wie sich diese Strukturen auf ein allgemeines Objektstrukturkonzept beziehen und führt <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>s.  
 
 <a name="element_tree"></a>   
 ## <a name="trees-in-wpf"></a>Strukturen in WPF  
@@ -51,7 +51,7 @@ In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur org
   
 <a name="override_logical_tree"></a>   
 ### <a name="overriding-the-logical-tree"></a>Überschreiben der logischen Struktur  
- Erfahrene Steuerelementautoren können die logische Struktur überschreiben, indem Sie mehrere [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] überschreiben, die festlegen, wie ein allgemeines Objekt- oder Inhaltsmodell Objekte innerhalb der logischen Struktur hinzufügt oder entfernt. Ein Beispiel zum Überschreiben der logischen Struktur finden Sie unter [Überschreiben der logischen Struktur](how-to-override-the-logical-tree.md).  
+ Erfahrene Autoren von Steuerelementen können die logische Struktur überschreiben, indem Sie mehrere APIs, die definieren, wie ein allgemeines Objekt- oder Inhaltsmodell Objekte hinzufügt oder entfernt innerhalb der logischen Struktur überschreiben. Ein Beispiel zum Überschreiben der logischen Struktur finden Sie unter [Überschreiben der logischen Struktur](how-to-override-the-logical-tree.md).  
   
 <a name="pvi"></a>   
 ### <a name="property-value-inheritance"></a>Vererbung von Eigenschaftswerten  

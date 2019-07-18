@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607877"
 ---
 # <a name="row-states-and-row-versions"></a>Zeilenstatus und Zeilenversionen
 ADO.NET verwaltet Zeilen in Tabellen mithilfe des Zeilenstatus und der Zeilenversion. Ein Zeilenstatus gibt den Status einer Zeile an. In Zeilenversionen werden die Werte, die in einer Zeile gespeichert werden, während der Bearbeitung verwaltet. Zu diesen Werten zählen z. B. die Werte current, original und default. Wenn Sie beispielsweise eine Spalte in einer Zeile geändert haben, weist die Zeile den Zeilenstatus `Modified` und die folgenden beiden Zeilenversionen auf: `Current` mit den aktuellen Zeilenwerten und `Original` mit den Zeilenwerten vor den Änderungen der Spalte.  
@@ -23,7 +23,7 @@ ADO.NET verwaltet Zeilen in Tabellen mithilfe des Zeilenstatus und der Zeilenver
 |<xref:System.Data.DataRowState.Added>|Die Zeile wurde der Tabelle hinzugefügt, `AcceptChanges` wurde aber nicht aufgerufen.|  
 |<xref:System.Data.DataRowState.Modified>|Ein Element der Zeile wurde geändert.|  
 |<xref:System.Data.DataRowState.Deleted>|Die Zeile wurde aus einer Tabelle gelöscht, und `AcceptChanges` wurde nicht aufgerufen.|  
-|<xref:System.Data.DataRowState.Detached>|Die Zeile ist nicht Teil einer `DataRowCollection`. Der `RowState` einer neu erstellten Zeile wird auf `Detached` festgelegt. Nach dem Hinzufügen der neuen `DataRow` zur `DataRowCollection` durch Aufrufen der `Add`-Methode wird der Wert der `RowState`-Eigenschaft auf `Added` festgelegt.<br /><br /> `Detached` für eine Zeile, die von entfernt wurde ebenfalls festgelegt wird eine `DataRowCollection` mithilfe der `Remove` -Methode, oder durch die `Delete` Methode, gefolgt von der `AcceptChanges` Methode.|  
+|<xref:System.Data.DataRowState.Detached>|Die Zeile ist nicht Teil einer `DataRowCollection`. Der `RowState` einer neu erstellten Zeile wird auf `Detached` festgelegt. Nach dem Hinzufügen der neuen `DataRow` zur `DataRowCollection` durch Aufrufen der `Add`-Methode wird der Wert der `RowState`-Eigenschaft auf `Added` festgelegt.<br /><br /> `Detached` wird auch für eine Zeile festgelegt, die mit der `DataRowCollection`-Methode bzw. mit der `Remove`-Methode, gefolgt von der `Delete`-Methode, aus einer `AcceptChanges` entfernt wurde.|  
   
  Wenn `AcceptChanges` für einen <xref:System.Data.DataSet>, eine <xref:System.Data.DataTable> oder eine <xref:System.Data.DataRow> aufgerufen wird, werden alle Zeilen mit dem Zeilenstatus `Deleted` entfernt. Die verbleibenden Zeilen erhalten den Zeilenstatus `Unchanged`, und die Werte in der Zeilenversion `Original` werden mit den Werten der Zeilenversion `Current` überschrieben. Wenn `RejectChanges` aufgerufen wird, werden alle Zeilen mit dem Zeilenstatus `Added` entfernt. Die verbleibenden Zeilen erhalten den Zeilenstatus `Unchanged`, und die Werte in der Zeilenversion `Current` werden mit den Werten der Zeilenversion `Original` überschrieben.  
   
@@ -50,7 +50,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
   
  Sie können überprüfen, ob eine `DataRow` eine bestimmte Zeilenversion aufweist, indem Sie die <xref:System.Data.DataRow.HasVersion%2A>-Methode aufrufen und eine `DataRowVersion` als Argument übergeben. So gibt z. B. `DataRow.HasVersion(DataRowVersion.Original)` für neu hinzugefügte Zeilen vor dem Aufrufen von `false` den Wert `AcceptChanges` zurück.  
   
- Im folgenden Codebeispiel werden die Werte in allen gelöschten Zeilen einer Tabelle angezeigt. `Deleted` -Zeilen haben keine `Current` Zeilenversion, daher müssen Sie übergeben `DataRowVersion.Original` beim Zugriff auf die Spaltenwerte.  
+ Im folgenden Codebeispiel werden die Werte in allen gelöschten Zeilen einer Tabelle angezeigt. `Deleted`-Zeilen haben keine `Current`-Zeilenversion. Deshalb müssen Sie beim Zugriff auf die Spaltenwerte `DataRowVersion.Original` übergeben.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -96,7 +96,7 @@ foreach (DataRow delRow in delRows)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Bearbeiten von Daten in einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- ["DataAdapters" und "DataReaders"](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataAdapters und DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

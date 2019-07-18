@@ -1,5 +1,5 @@
 ---
-title: <appDomainManagerAssembly> Element
+title: <appDomainManagerAssembly>-Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <appDomainManagerAssembly> element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fe1dfbd62a6967ae51031fa12f80e9c5563dc44
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff8c91680a0c3049fa9bc2f7e9c1bf3f654a19b9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182350"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487775"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly> Element
 Gibt die Assembly an, die den Anwendungsdomänen-Manager für die Standardanwendungsdomäne im Prozess bereitstellt.  
@@ -58,7 +58,7 @@ Gibt die Assembly an, die den Anwendungsdomänen-Manager für die Standardanwend
   
  Das Format des Anzeigenamens der Assembly finden Sie unter den <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> Eigenschaft.  
   
- Dieses Konfigurationselement steht nur in der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher.  
+ Dieses Element ist nur in .NET Framework 4 und höher verfügbar.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie angeben, dass die Anwendungsdomänen-Manager für die Standardanwendungsdomäne eines Prozesses ist die `MyMgr` Geben Sie in der `AdMgrExample` Assembly.  

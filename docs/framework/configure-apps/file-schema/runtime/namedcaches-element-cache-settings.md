@@ -1,5 +1,5 @@
 ---
-title: <namedCaches> -Element (Cacheeinstellungen)
+title: <namedCaches>-Element (Cacheeinstellungen)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704868"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<NamedCaches >-Element (Cacheeinstellungen)
 Gibt eine Auflistung von Konfigurationseinstellungen für den benannten <xref:System.Runtime.Caching.MemoryCache> Instanzen. Die <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> -Eigenschaft verweist auf die Auflistung der Konfigurationseinstellungen von einer oder mehreren `namedCaches` Elemente der Konfigurationsdatei.  

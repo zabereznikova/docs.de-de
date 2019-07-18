@@ -20,11 +20,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
 ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004145"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>Vorgehensweise: Zeichnen der Kontur einer Form
 In diesem Beispiel zeichnet konturierte Ellipsen und Rechtecke in einem Formular.  
@@ -45,6 +45,6 @@ In diesem Beispiel zeichnet konturierte Ellipsen und Rechtecke in einem Formular
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
-- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
-- [Verwenden eines Stiftes zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)

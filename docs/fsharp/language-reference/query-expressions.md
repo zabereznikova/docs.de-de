@@ -2,12 +2,12 @@
 title: Abfrageausdrücke
 description: Informationen Sie zu Abfrage-Ausdruck-Unterstützung für LINQ, in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc077bfbe25f88104e89508ef6283a5bc42eddbd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191561"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645345"
 ---
 # <a name="query-expressions"></a>Abfrageausdrücke
 
@@ -819,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> durch <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> mit <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection

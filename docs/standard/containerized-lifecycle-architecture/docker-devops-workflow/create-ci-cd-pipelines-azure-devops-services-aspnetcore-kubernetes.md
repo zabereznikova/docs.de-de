@@ -1,41 +1,39 @@
 ---
-title: Schritte in der äußeren Schleife DevOps-Workflow für eine Docker-Anwendung
+title: Schritte im Outer-Loop-DevOps-Workflow für eine Docker-Anwendung
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 2cd769ce9013a8521c53f36b44ea260ceccd48b7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834965"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65644984"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Erstellen von CI/CD-Pipelines in Azure DevOps-Dienste für eine .NET Core 2.0-Anwendung für Container und die Bereitstellung in einem Kubernetes-cluster
+# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Erstellen von CI/CD-Pipelines in Azure DevOps Services für eine .NET Core 2.0-Anwendung auf Containern und anschließendes Bereitstellen für ein Kubernetes-Cluster
 
-In Abbildung 5-12 sehen Sie die End-to-End-DevOps-Szenario für die Verwaltung von Code, Code-Kompilierung, Docker-Images erstellen, Docker-Images per Push übertragen, um eine Docker-Registrierung und schließlich auf die Bereitstellung in einem Kubernetes-Cluster in Azure.
+In Abbildung 5–12 können Sie das DevOps-Szenario End-to-End betrachten, das Codeverwaltung, Codekompilierung, das Erstellen von Docker-Images, das Hochladen von Docker-Images in eine Docker-Registrierung und schließlich die Bereitstellung auf einem Kubernetes-Cluster in Azure umfasst.
 
-![Workflow: Startet in den Entwicklungscomputer. Mithilfe von Push übertragen, in einem Repository beginnt die Build/CI-Aufgabe, die mithilfe eines benutzerdefinierten Images, das gesendet, um eine Docker-Registrierung, und klicken Sie dann von der CD/deploy-Task, schließlich pushen in AKS.](media/docker-workflow-ci-cd-aks.png)
+![Workflow: Beginnt auf dem Entwicklungscomputer. Mit dem Hochladen in ein Repository beginnt die Build/CI-Aufgabe, die ein benutzerdefiniertes Image verwendet, das in eine Docker-Registrierung hochgeladen und schließlich von der CD/Bereitstellungsaufgabe für das Hochladen auf AKS verwendet wird.](media/docker-workflow-ci-cd-aks.png)
 
-**Abbildung 5-12**. CI/CD-Szenario erstellen Docker-Images und Bereitstellen eines Kubernetes-Clusters in Azure
+**Abbildung 5-12**. CI/CD-Szenario, in dem Docker-Images erstellt und auf einem Kubernetes-Cluster in Azure bereitgestellt werden
 
-Es ist wichtig, hervorzuheben, dass die zwei Pipelines, Build/CI und Release/CD, über die Docker-Registrierung (z. B. Docker Hub oder Azure Container Registry-Instanz) verbunden sind. Die Docker-Registrierung ist eine der wichtigsten Unterschiede im Vergleich zu einem traditionellen CI-/CD-Prozess ohne Docker.
+Es ist wichtig, hervorzuheben, dass die zwei Pipelines Build/CI und Release/CD durch die Docker-Registrierung (z.B. Docker Hub oder Azure Container Registry) verbunden sind. Die Docker-Registrierung stellt einen der wichtigsten Unterschiede im Vergleich mit einem herkömmlichen CI/CD-Prozess ohne Docker dar.
 
-Wie in Abbildung 5-13 dargestellt, ist die erste Phase der Build/CI-Pipeline. In Azure DevOps-Dienste können Sie Build/CD-Pipelines erstellen, die Kompilieren des Codes, die Docker-Images erstellen und per push an eine Docker-Registrierung, wie Docker Hub oder Azure Container Registry-Instanz wird.
+Wie in Abbildung 5–13 dargestellt, ist die erste Phase die Build/CI-Pipeline. In Azure DevOps Services können Sie Build/CI-Pipelines erstellen, die das Kompilieren des Codes, das Erstellen der Docker-Images und das Hochladen in eine Docker-Registrierung wie Docker Hub oder Azure Container Registry übernehmen.
 
-![Browseransicht des Azure DevOps, Builddefinition, Prozess-Aufgabe.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
+![Browseransicht von Azure DevOps, Aufgabendefinition des Buildprozesses.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 
-**Abbildung 5-13**. Build/CI-Pipeline in Azure DevOps-Docker-Images erstellen, und Images per Push übertragen, in einem Docker-Registrierung
+**Abbildung 5-13**. Build/CI-Pipeline in Azure DevOps beim Erstellen von Docker-Images und Pushen von Images in eine Docker-Registrierung
 
-In der zweite Phase wird zum Erstellen einer Bereitstellung/Release-Pipeline. In Azure DevOps-Dienste können Sie einfach eine Bereitstellungspipeline, die für einen Kubernetes-Cluster mit den Kubernetes-Aufgaben für Azure DevOps-Dienste, wie in Abbildung 5-14 dargestellt erstellen.
+In der zweiten Phase wird eine Bereitstellungs-/Releasepipeline erstellt. In Azure DevOps Services können Sie auf einfache Weise eine Bereitstellungspipeline mit einem Kubernetes-Cluster als Ziel erstellen, indem Sie die Kubernetes-Aufgaben für Azure DevOps Services verwenden, wie in Abbildung 5–14 dargestellt.
 
-![Browseransicht der Azure DevOps, stellen Sie in Kubernetes-Aufgabendefinition.](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
+![Browseransicht von Azure DevOps, Aufgabendefinition von „Für Kubernetes bereitstellen“](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
 
-**Abbildung 5-14**. Release/CD-Pipeline in Azure DevOps-Dienste in einem Kubernetes-Cluster bereitstellen
+**Abbildung 5-14**. Release/CD-Pipeline in Azure DevOps Services bei der Bereitstellung auf einem Kubernetes-Cluster
 
-> [! Exemplarische Vorgehensweise] eShopModernized für Kubernetes bereitstellen:
+> [!Exemplarische Vorgehensweise] Bereitstellung von eShopModernized für Kubernetes:
 >
-> Eine ausführliche exemplarische Vorgehensweise zur Azure DevOps-CI/CD-Pipelines Bereitstellen in Kubernetes, siehe diesen Beitrag: \
+> Eine ausführliche exemplarische Vorgehensweise zur Bereitstellung in Kubernetes mithilfe von Azure DevOps-CI/CD-Pipelines finden Sie in diesem Beitrag: \
 ><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]

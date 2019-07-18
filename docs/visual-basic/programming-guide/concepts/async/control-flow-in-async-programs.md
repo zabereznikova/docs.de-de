@@ -2,12 +2,12 @@
 title: Ablaufsteuerung in asynchronen Programmen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 57c83021551ab386f62c8d22b90db8da8054df7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c6afd7e166e08ea30637bd3f05026ef71d781ab6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837428"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624761"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Ablaufsteuerung in asynchronen Programmen (Visual Basic)
 Sie können asynchrone Programme mithilfe der Schlüsselwörter `Async` und `Await` einfacher schreiben und verwalten. Möglicherweise könnten Sie jedoch die Ergebnisse überraschen, wenn Sie die Funktionsweise Ihres Programms nicht verstehen. In diesem Thema wird die Ablaufsteuerung durch ein einfaches asynchrones Programm nachvollzogen, um darzustellen, wann die Steuerung von einer Methode zu einer anderen springt und welche Informationen jedes Mal übertragen werden.  
@@ -19,9 +19,9 @@ Sie können asynchrone Programme mithilfe der Schlüsselwörter `Async` und `Awa
   
  Im folgenden Beispiel werden asynchrone Methoden verwendet, um den Inhalt einer angegebenen Website als Zeichenfolge herunterzuladen und um die Länge der Zeichenfolge anzuzeigen. Das Beispiel enthält die folgenden beiden Methoden.  
   
--   `startButton_Click`, die `AccessTheWebAsync` aufruft und das Ergebnis angezeigt.  
+- `startButton_Click`, die `AccessTheWebAsync` aufruft und das Ergebnis angezeigt.  
   
--   `AccessTheWebAsync`, die den Inhalt einer Website als Zeichenfolge herunterlädt und die Länge der Zeichenfolge zurückgibt. `AccessTheWebAsync` verwendet eine asynchrone <xref:System.Net.Http.HttpClient>-Methode, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, um den Inhalt herunterzuladen.  
+- `AccessTheWebAsync`, die den Inhalt einer Website als Zeichenfolge herunterlädt und die Länge der Zeichenfolge zurückgibt. `AccessTheWebAsync` verwendet eine asynchrone <xref:System.Net.Http.HttpClient>-Methode, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, um den Inhalt herunterzuladen.  
   
  Nummerierte Ausgabezeilen werden über das Programm verteilt an strategischen Stellen angezeigt, die dabei helfen sollen, die Ausführung des Programms nachzuvollziehen und zu verdeutlichen, was an den markierten Punkten geschieht. Die Ausgabezeilen werden durchgehend von "ONE" (Eins) bis "SIX" (Sechs) bezeichnet. Die Bezeichnungen entsprechen der Reihenfolge, in der das Programm diese Codezeilen erreicht.  
   
@@ -98,36 +98,36 @@ Length of the downloaded string: 33946.
 >  Um das Beispiel auszuführen, benötigen Sie Visual Studio 2012 oder höher und .NET Framework 4.5 oder höher auf Ihrem Computer installiert.  
   
 ### <a name="download-the-program"></a>Das Programm herunterladen  
- Sie können die Anwendung für dieses Thema von [Async Sample: Ablaufsteuerung in asynchronen Programmen](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Mithilfe der folgenden Schritte wird das Programm geöffnet und ausgeführt.  
+ Sie können die Anwendung für dieses Thema von [Asynchrones Beispiel: Ablaufsteuerung in asynchronen Programmen](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) herunterladen. Mithilfe der folgenden Schritte wird das Programm geöffnet und ausgeführt.  
   
-1.  Entzippen Sie die heruntergeladene Datei und starten Sie anschließend Visual Studio.  
+1. Entzippen Sie die heruntergeladene Datei und starten Sie anschließend Visual Studio.  
   
-2.  Klicken Sie in der Menüleiste auf **Datei**, dann auf **Öffnen**und **Projekt/Projektmappe**.  
+2. Klicken Sie in der Menüleiste auf **Datei**, dann auf **Öffnen**und **Projekt/Projektmappe**.  
   
-3.  Navigieren Sie zu dem Ordner, der den entzippten Beispielcode enthält, öffnen Sie die Projektmappendatei (SLN) und drücken Sie dann die F5-TASTE, um das Projekt zu erstellen und auszuführen.  
+3. Navigieren Sie zu dem Ordner, der den entzippten Beispielcode enthält, öffnen Sie die Projektmappendatei (SLN) und drücken Sie dann die F5-TASTE, um das Projekt zu erstellen und auszuführen.  
   
 ### <a name="build-the-program-yourself"></a>Das Programm selbst erstellen  
  Das folgende Windows Presentation Foundation (WPF)-Projekt enthält das Codebeispiel für dieses Thema.  
   
  Um das Projekt auszuführen, führen Sie die folgenden Schritte aus:  
   
-1.  Starten Sie Visual Studio.  
+1. Starten Sie Visual Studio.  
   
-2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
+2. Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  In der **installierte Vorlagen** Bereich wählen **Visual Basic**, und wählen Sie dann **WPF-Anwendung** aus der Liste der Projekttypen zur Verfügung.  
+3. In der **installierte Vorlagen** Bereich wählen **Visual Basic**, und wählen Sie dann **WPF-Anwendung** aus der Liste der Projekttypen zur Verfügung.  
   
-4.  Geben Sie `AsyncTracer` als Name für das Projekt ein, und wählen Sie dann die Schaltfläche **OK** aus.  
+4. Geben Sie `AsyncTracer` als Name für das Projekt ein, und wählen Sie dann die Schaltfläche **OK** aus.  
   
      Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.  
   
-5.  Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
+5. Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
   
      Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für „MainWindow.xaml“ im **Projektmappen-Explorer**, und wählen Sie dann **Code anzeigen**aus.  
   
-6.  Ersetzen Sie den automatisch generierten Code in der **XAML**-Ansicht der Datei „MainWindow.xaml“ durch den folgenden Code.  
+6. Ersetzen Sie den automatisch generierten Code in der **XAML**-Ansicht der Datei „MainWindow.xaml“ durch den folgenden Code.  
   
     ```vb  
     <Window  
@@ -145,9 +145,9 @@ Length of the downloaded string: 33946.
   
      Ein einfaches Fenster, das ein Textfeld und eine Schaltfläche enthält, wird in der **Entwurfsansicht** der Datei „MainWindow.xaml“ angezeigt.  
   
-7.  Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.  
+7. Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.  
   
-8.  In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Ansichtscode**.  
+8. In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Ansichtscode**.  
   
 9. Ersetzen Sie den Code in "MainWindow.Xaml.vb" mit dem folgenden Code.  
   

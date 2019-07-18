@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94dfeaaa4ae917540c8030034959ad2f693bb025
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699590"
 ---
 # <a name="idebuggerinfo-interface"></a>IDebuggerInfo-Schnittstelle
 Stellt Methoden zum Abrufen von Informationen über den Status der Debugdienste bereit.  
@@ -43,5 +43,5 @@ Stellt Methoden zum Abrufen von Informationen über den Status der Debugdienste 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [CorRuntimeHost-Co-Klasse](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

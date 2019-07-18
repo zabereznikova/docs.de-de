@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50750b23af9e9cfca79b0f7db9d272e8e24971ab
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659490"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591411"
 ---
 # <a name="creating-new-strings-in-net"></a>Erstellen neuer Zeichenfolgen in .NET
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ermöglicht das Erstellen von Zeichenfolgen mithilfe einer einfachen Zuweisung und überlädt auch einen Klassenkonstruktor, um die Zeichenfolgenerstellung mithilfe einer Reihe verschiedener Parameter zu unterstützen. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt auch verschiedene Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse bereit, die durch Kombinieren verschiedener Zeichenfolgen, Zeichenfolgenarrays oder Objekte neue Zeichenfolgenobjekte erstellen.  
+.NET Framework ermöglicht das Erstellen von Zeichenfolgen mithilfe einer einfachen Zuweisung und überlädt auch einen Klassenkonstruktor, um die Zeichenfolgenerstellung mithilfe einer Reihe verschiedener Parameter zu unterstützen. .NET Framework stellt auch verschiedene Methoden in der <xref:System.String?displayProperty=nameWithType>-Klasse bereit, die durch das Kombinieren verschiedener Zeichenfolgen, Zeichenfolgenarrays oder Objekte neue Zeichenfolgenobjekte erstellen.  
   
 ## <a name="creating-strings-using-assignment"></a>Erstellen von Zeichenfolgen mithilfe von Zuweisung  
  Die einfachste Möglichkeit, ein neues <xref:System.String>-Objekt zu erstellen, ist die Zuweisung eines Zeichenfolgenliterals zu einem <xref:System.String>-Objekt.  
@@ -34,7 +34,7 @@ ms.locfileid: "54659490"
 ## <a name="methods-that-return-strings"></a>Methoden, die Zeichenfolgen zurückgeben  
  Die folgende Tabelle führt verschiedene nützliche Methoden auf, die neue Zeichenfolgenobjekte zurückgeben.  
   
-|Methodenname|Mit|  
+|Methodenname|Verwendung|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|Erstellt eine formatierte Zeichenfolge aus einem Satz von Eingabeobjekten.|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|Erstellt Zeichenfolgen aus mindestens zwei Zeichenfolgen.|  

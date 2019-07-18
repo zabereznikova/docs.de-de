@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf36b9e09f5e9eeb28930a6adc48426927a60e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f4cea67587e4a33b4b9f8cbaa23cb7d299004a46
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145690"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736158"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut-Methode
 Wird aufgerufen, wenn ein Aufruf ausgegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT OnSyncCallOut  
 (  
     [in]  CALL_ID  in_CallID,  

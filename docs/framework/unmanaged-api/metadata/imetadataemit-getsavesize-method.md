@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7337222f7f419c68ae21d604d1673158acca85ba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169051"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777391"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize-Methode
 Ruft die binäre geschätzte Größe der Assembly und die Metadaten im aktuellen Bereich ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSaveSize (  
     [in]  CorSaveSize fSave,  
     [out] DWORD       *pdwSaveSize  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in] Der Wert der [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) -Enumeration, der angibt, ob eine genaue oder ungefähre Größe erhalten soll. Nur drei Werte sind gültig: CssAccurate, CssQuick und CssDiscardTransientCAs:  
   
--   CssAccurate gibt die genaue Größe dauert jedoch länger zu berechnen.  
+- CssAccurate gibt die genaue Größe dauert jedoch länger zu berechnen.  
   
--   CssQuick gibt eine Größe aus, aus Sicherheitsgründen aufgefüllt, jedoch weniger Zeit zum Berechnen.  
+- CssQuick gibt eine Größe aus, aus Sicherheitsgründen aufgefüllt, jedoch weniger Zeit zum Berechnen.  
   
--   CssDiscardTransientCAs teilt `GetSaveSize` , entfernbare benutzerdefinierte Attribute ausgelöst werden können.  
+- CssDiscardTransientCAs teilt `GetSaveSize` , entfernbare benutzerdefinierte Attribute ausgelöst werden können.  
   
  `pdwSaveSize`  
  [out] Ein Zeiger auf die Größe, die zum Speichern der Datei erforderlich ist.  

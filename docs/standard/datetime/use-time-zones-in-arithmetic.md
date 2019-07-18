@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d504aa9ad7d6e4084192a2434ac408e8fa7a041
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682692"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588543"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Vorgehensweise: Verwenden von Zeitzonen in arithmetischen Datums- und Uhrzeitoperationen
 
@@ -59,8 +59,6 @@ Beachten Sie, dass diese Ergänzung einfach durchgeführt wird, auf die <xref:Sy
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
 Für dieses Beispiel benötigen Sie Folgendes:
-
-* Dass das Projekt ein Verweis auf "System.Core.dll" hinzugefügt werden.
 
 * Dass die <xref:System> Namespace importiert werden, mit der `using` -Anweisung (in C#-Code erforderlich).
 

@@ -1,21 +1,13 @@
-items:
 - name: Attribute
   href: index.md
   items:
-  - name: Erstellen benutzerdefinierter Attribute
-    href: creating-custom-attributes.md
-    items:
+    - name: Erstellen benutzerdefinierter Attribute
+      href: creating-custom-attributes.md
     - name: AttributeUsage
       href: attributeusage.md
-  - name: Zugriff auf Attribute mit Reflektion
-    href: accessing-attributes-by-using-reflection.md
-  - name: 'Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen'
-    href: how-to-create-a-c-cpp-union-by-using-attributes.md
-  - name: Allgemeine Attribute
-    href: common-attributes.md
-ms.openlocfilehash: a0d3d1f59209cdbba6ccda6ddb8a3173ddab74d0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468997"
+    - name: Zugriff auf Attribute mit Reflektion
+      href: accessing-attributes-by-using-reflection.md
+    - name: 'Vorgehensweise: Erstellen einer Union in C/C++ mit Attributen'
+      href: how-to-create-a-c-cpp-union-by-using-attributes.md
+    - name: Allgemeine Attribute
+      href: common-attributes.md

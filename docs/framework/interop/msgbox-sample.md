@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3393adf5beed02a5a4bda2e07bd26e29e47fae2f
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0c4100bb3bafdfe141dc746a64ebd8172ebe3bce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219307"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648590"
 ---
 # <a name="msgbox-sample"></a>MsgBox-Beispiel
 Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Parameter übergeben werden und wann das <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>-Feld, das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld und das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>-Feld zu verwenden sind.  
   
  Das MsgBox-Beispiel verwendet die folgende nicht verwaltete Funktion, die zusammen mit ihrer ursprünglichen Funktionsdeklaration aufgeführt wird:  
   
--   **MessageBox** aus „User32.dll“ exportiert.  
+- **MessageBox** aus „User32.dll“ exportiert.  
   
     ```  
     int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   
@@ -45,6 +45,7 @@ Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Par
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Marshallen von Zeichenfolgen](marshaling-strings.md)
 - [Standardmäßiges Marshalling für Zeichenfolgen](default-marshaling-for-strings.md)
 - [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 768d16a05bbe139c3fe02677526bc28809a93be0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59187332"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779715"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats-Methode
 Ruft einen Satz von aktuellen Statistiken über die common Language Runtime die Garbage Collection-System ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStats (  
     [in, out] COR_GC_STATS *pStats  
 );  
@@ -57,7 +57,7 @@ HRESULT GetStats (
   
  Ein Beispiel für die Nutzung lautet wie folgt aus:  
   
-```  
+```cpp  
 COR_GC_STATS GCStats;  
 GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;  
 pCLRGCManager->GetStats(&GCStats);  
@@ -74,12 +74,12 @@ pCLRGCManager->GetStats(&GCStats);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [Automatische Speicherverwaltung](../../../../docs/standard/automatic-memory-management.md)
 - [COR_GC_STATS-Struktur](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [COR_GC_STAT_TYPES-Enumeration](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
 - [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)
 - [ICLRControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [CLR-Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

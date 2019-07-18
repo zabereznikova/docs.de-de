@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 829bdda3f3302d8d3c41e704dc8caf88720d1ebc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637595"
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
 In der Regel beim Erstellen von Windows Communication Foundation (WCF)-Anwendungen, Entwickler Achten Sie besonders auf die Datenstrukturen und serialisierungsprobleme und müssen nicht auf die Struktur der Nachrichten achten, in denen die Daten transportiert werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -105,7 +105,7 @@ public class BankingTransaction
  Das <xref:System.ServiceModel.MessageContractAttribute> ermöglicht Ihnen das Angeben des WrapperName-Attributs und des WrapperNamespace-Attributs, die den Namen des Wrapperelements im Textkörper der SOAP-Nachricht steuern. Standardmäßig wird der Name des Typs des Nachrichtenvertrags für den Wrapper verwendet, und der Namespace, in dem der Nachrichtenvertrag `http://tempuri.org/` definiert ist, fungiert als Standardnamespace.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> Attribute werden in Nachrichtenverträgen ignoriert. Ist ein <xref:System.Runtime.Serialization.KnownTypeAttribute> erforderlich, platzieren Sie es auf dem Vorgang, der den in Frage kommenden Nachrichtenvertrag nutzt.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribute werden in Nachrichtenverträgen ignoriert. Ist ein <xref:System.Runtime.Serialization.KnownTypeAttribute> erforderlich, platzieren Sie es auf dem Vorgang, der den in Frage kommenden Nachrichtenvertrag nutzt.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Kontrollieren von Header- und Textteilnamen und Namespaces  
  In der SOAP-Darstellung eines Nachrichtenvertrags wird jeder Header und jeder Textteil einem XML-Element zugeordnet, das über einen Namen und einen Namespace verfügt.  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP-Header-Attribute  
  Der SOAP-Standard definiert die folgenden Attribute, die in einem Header verwendet werden können:  
   
--   `Actor/Role` (`Actor` in SOAP 1.1, `Role` in SOAP 1.2)  
+- `Actor/Role` (`Actor` in SOAP 1.1, `Role` in SOAP 1.2)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  Das `Actor`-Attribut oder das `Role`-Attribut legt den URI (Uniform Resource Identifier) des Knotens fest, für den ein bestimmter Header angegeben wurde. Das `MustUnderstand`-Attribut gibt an, ob der Header die Knotenverarbeitung versteht. Das `Relay`-Attribut gibt an, ob der Header an Downstreamknoten weitergeleitet werden soll. WCF führt keine verarbeitet diese Attribute bei eingehenden Nachrichten, mit Ausnahme der `MustUnderstand` -Attribut, wie im Abschnitt "Versionsvergabe" weiter unten in diesem Thema angegeben. Allerdings wird es Ihnen ermöglicht, diese Attribute wie erforderlich zu lesen und zu schreiben (wie in der folgenden Beschreibung).  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  Für Versionsheader gelten die folgenden Regeln:  
   
--   WCF nicht dem fehlenden Header Objekt – die entsprechenden Member behalten die Standardwerte bei.  
+- WCF nicht dem fehlenden Header Objekt – die entsprechenden Member behalten die Standardwerte bei.  
   
--   WCF ignoriert auch unerwartete zusätzliche Header. Die Ausnahme zu dieser Regel besteht darin, dass der zusätzliche Header über ein `MustUnderstand`-Attribut verfügt, das in der eingehenden SOAP-Nachricht auf `true` festgelegt ist – in diesem Fall wird eine Ausnahme ausgelöst, da ein Header, der verstanden werden muss, nicht verarbeitet werden kann.  
+- WCF ignoriert auch unerwartete zusätzliche Header. Die Ausnahme zu dieser Regel besteht darin, dass der zusätzliche Header über ein `MustUnderstand`-Attribut verfügt, das in der eingehenden SOAP-Nachricht auf `true` festgelegt ist – in diesem Fall wird eine Ausnahme ausgelöst, da ein Header, der verstanden werden muss, nicht verarbeitet werden kann.  
   
  Nachrichtentexte haben ähnliche Versionsregeln – sowohl fehlende als auch zusätzliche Nachrichtentextteile werden ignoriert.  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  Bei der Erstellung einer Nachricht oder beim Zugriff darauf mithilfe eines Nachrichtenvertragstyps, der von anderen Nachrichtenvertragstypen erbt, gelten die folgenden Regeln.  
   
--   Alle Nachrichtenheader in der Vererbungshierarchie werden gesammelt, um den vollständigen Satz an Headern für die Nachricht zu bilden.  
+- Alle Nachrichtenheader in der Vererbungshierarchie werden gesammelt, um den vollständigen Satz an Headern für die Nachricht zu bilden.  
   
--   Alle Nachrichtentextteile in der Vererbungshierarchie werden gesammelt, um den vollständigen Nachrichtentext zu bilden. Die Textteile werden basierend auf den üblichen Sortierungsregeln sortiert (nach der <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>-Eigenschaft und danach alphabetisch), wobei die Position in der Vererbungshierarchie unbeachtet bleibt. Wenn Nachrichtentextteile in mehreren Ebenen der Vererbungsstruktur auftauchen, wird von der Verwendung der Nachrichtenvertragsvererbung strengstens abgeraten. Wenn eine Basisklasse und eine abgeleitete Klasse einen Header oder einen Textteil mit demselben Namen definieren, wird der Member der Basisklasse verwendet, um den Wert des Headers oder des Textteils zu speichern.  
+- Alle Nachrichtentextteile in der Vererbungshierarchie werden gesammelt, um den vollständigen Nachrichtentext zu bilden. Die Textteile werden basierend auf den üblichen Sortierungsregeln sortiert (nach der <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>-Eigenschaft und danach alphabetisch), wobei die Position in der Vererbungshierarchie unbeachtet bleibt. Wenn Nachrichtentextteile in mehreren Ebenen der Vererbungsstruktur auftauchen, wird von der Verwendung der Nachrichtenvertragsvererbung strengstens abgeraten. Wenn eine Basisklasse und eine abgeleitete Klasse einen Header oder einen Textteil mit demselben Namen definieren, wird der Member der Basisklasse verwendet, um den Wert des Headers oder des Textteils zu speichern.  
   
  Betrachten Sie die Klassen im folgenden Codebeispiel.  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>Überlegungen zu WSDL  
  Bei der Erstellung eines WSDL (Web Services Description Language)-Vertrags aus einem Dienst, der Nachrichtenverträge nutzt, ist es wichtig, daran zu denken, dass nicht alle Nachrichtenvertragsfunktionen in der resultierenden WSDL widergespiegelt werden. Berücksichtigen Sie die folgenden Punkte:  
   
--   WSDL kann den Begriff eines Arrays aus Headern nicht ausdrücken. Bei der Erstellung von Nachrichten mit einem Array aus Headern mithilfe des <xref:System.ServiceModel.MessageHeaderArrayAttribute> spiegelt die resultierende WSDL nur einen Header wider anstelle eines Array.  
+- WSDL kann den Begriff eines Arrays aus Headern nicht ausdrücken. Bei der Erstellung von Nachrichten mit einem Array aus Headern mithilfe des <xref:System.ServiceModel.MessageHeaderArrayAttribute> spiegelt die resultierende WSDL nur einen Header wider anstelle eines Array.  
   
--   Das resultierende WSDL-Dokument spiegelt möglicherweise einige der Informationen auf Schutzebene nicht wider.  
+- Das resultierende WSDL-Dokument spiegelt möglicherweise einige der Informationen auf Schutzebene nicht wider.  
   
--   Der in der WSDL generierte Nachrichtentyp verfügt über denselben Namen wie die Klasse des Nachrichtenvertragstyps.  
+- Der in der WSDL generierte Nachrichtentyp verfügt über denselben Namen wie die Klasse des Nachrichtenvertragstyps.  
   
--   Bei Verwendung desselben Nachrichtenvertrags in mehreren Vorgängen werden mehrere Nachrichtentypen im WSDL-Dokument generiert. Die Namen werden durch Hinzufügen der Zahlen "2", "3" usw. für eine aufeinanderfolgende Verwendung eindeutig gekennzeichnet. Beim Rückimport der WSDL werden mehrere Nachrichtenvertragstypen erstellt, die abgesehen von ihren Namen identisch sind.  
+- Bei Verwendung desselben Nachrichtenvertrags in mehreren Vorgängen werden mehrere Nachrichtentypen im WSDL-Dokument generiert. Die Namen werden durch Hinzufügen der Zahlen "2", "3" usw. für eine aufeinanderfolgende Verwendung eindeutig gekennzeichnet. Beim Rückimport der WSDL werden mehrere Nachrichtenvertragstypen erstellt, die abgesehen von ihren Namen identisch sind.  
   
 ## <a name="soap-encoding-considerations"></a>Überlegungen zur SOAP-Codierung  
  WCF ermöglicht es, Sie verwenden das ältere SOAP-Codierungsformat für XML, wird dessen Verwendung jedoch nicht empfohlen. Bei der Verwendung dieses Formats (durch Festlegen der `Use`-Eigenschaft auf `Encoded` auf dem <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>, das auf den Dienstvertrag angewandt wird), gelten die folgenden zusätzlichen Überlegungen:  
   
--   Die Nachrichtenheader werden nicht unterstützt. Dies bedeutet, dass das Attribut <xref:System.ServiceModel.MessageHeaderAttribute> und das Arrayattribut <xref:System.ServiceModel.MessageHeaderArrayAttribute> nicht mit der SOAP-Codierung kompatibel sind.  
+- Die Nachrichtenheader werden nicht unterstützt. Dies bedeutet, dass das Attribut <xref:System.ServiceModel.MessageHeaderAttribute> und das Arrayattribut <xref:System.ServiceModel.MessageHeaderArrayAttribute> nicht mit der SOAP-Codierung kompatibel sind.  
   
--   Wird der Nachrichtenvertrag nicht umbrochen, d. h., ist die Eigenschaft <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> auf `false` festgelegt, kann der Nachrichtenvertrag nur über einen Textteil verfügen.  
+- Wird der Nachrichtenvertrag nicht umbrochen, d. h., ist die Eigenschaft <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> auf `false` festgelegt, kann der Nachrichtenvertrag nur über einen Textteil verfügen.  
   
--   Der Name des Wrapperelements für den Anforderungsnachrichtenvertrag muss zum Vorgangsnamen passen. Verwenden Sie hierfür die `WrapperName`-Eigenschaft des Nachrichtenvertrags.  
+- Der Name des Wrapperelements für den Anforderungsnachrichtenvertrag muss zum Vorgangsnamen passen. Verwenden Sie hierfür die `WrapperName`-Eigenschaft des Nachrichtenvertrags.  
   
--   Der Name des Wrapperelements für den Antwortnachrichtenvertrag muss dem Namen des Vorgangs entsprechen, der über das Suffix "Response" verfügt. Verwenden Sie hierfür die <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A>-Eigenschaft des Nachrichtenvertrags.  
+- Der Name des Wrapperelements für den Antwortnachrichtenvertrag muss dem Namen des Vorgangs entsprechen, der über das Suffix "Response" verfügt. Verwenden Sie hierfür die <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A>-Eigenschaft des Nachrichtenvertrags.  
   
--   SOAP-Codierung behält Objektverweise bei. Betrachten Sie hierzu den folgenden Beispielcode:  
+- SOAP-Codierung behält Objektverweise bei. Betrachten Sie hierzu den folgenden Beispielcode:  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 973442a969746671e4d85c5d7881f51c5dfba535
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7ab4905c55a1395e9ae5cba8343e6b832622005d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222262"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737642"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW-Methode
 Ruft ein verwaltetes Objekt über einen Zeiger des COM Callable Wrapper (CCW) ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetObjectForCCW(  
    [in]CORDB_ADDRESS ccwPointer,   
    [out]ICorDebugValue **ppManagedObject  
@@ -44,4 +44,4 @@ HRESULT GetObjectForCCW(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugAppDomain4-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

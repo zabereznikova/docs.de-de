@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cefe84c482df3b20b5939e031ad76647f295d3e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d6bfde8a934da857e580c603bd1c0115a04a4070
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484620"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754633"
 ---
 # <a name="icordebugfunctiongetmodule-method"></a>ICorDebugFunction::GetModule-Methode
 Ruft das Modul, in dem diese Funktion definiert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetModule (  
     [out] ICorDebugModule **ppModule  
 );  

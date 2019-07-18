@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 045061f403b301d460bc85d161c1d6dee9c7d9f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602403"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Eine Konvertierung des anonymen Typs in eine Ausdrucksbaumstruktur ist nicht möglich, da sie ein Feld enthält, das in der Initialisierung eines anderen Feldes verwendet wird
 Der Compiler nimmt keine Konvertierung eines anonymen in eine Ausdrucksbaumstruktur, wenn eine Eigenschaft des anonymen Typs verwendet wird, um eine andere Eigenschaft des anonymen Typs initialisieren. In den folgenden Code, z. B. `Prop1` in der Initialisierungsliste deklariert wird, und klicken Sie dann als der Anfangswert für verwendet `Prop2`.  
@@ -35,7 +35,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Weisen Sie den Anfangswert für `Prop1` an eine lokale Variable. Weisen Sie diese Variable sowohl `Prop1` und `Prop2`, wie im folgenden Code gezeigt.  
+- Weisen Sie den Anfangswert für `Prop1` an eine lokale Variable. Weisen Sie diese Variable sowohl `Prop1` und `Prop2`, wie im folgenden Code gezeigt.  
   
     ```  
     Sub Main()  

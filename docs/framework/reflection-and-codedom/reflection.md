@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221237"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591488"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflektion in .NET Framework
 Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mit <xref:System.Type?displayProperty=nameWithType>, Informationen zu geladenen [Assemblys](../app-domains/assemblies-in-the-common-language-runtime.md) und den hierin definierten Typen wie [Klassen](../../standard/base-types/common-type-system.md#classes), [Schnittstellen](../../standard/base-types/common-type-system.md#interfaces) und [Werttypen](../../csharp/language-reference/keywords/value-types.md) abzurufen. Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.
@@ -37,23 +37,23 @@ Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mi
   
  [Assemblys](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) enthalten Module, Module enthalten Typen, und Typen enthalten Member. Mit der Reflektion werden Objekte bereitgestellt, die Assemblys, Module und Typen kapseln. Sie können mithilfe von Reflektion dynamisch eine Instanz eines Typen erzeugen, Typen an ein vorhandenes Objekt binden und Typinformationen eines vorhandenen Objekts abfragen. Sie können anschließend die Methoden des Typs aufrufen oder auf dessen Felder oder Eigenschaften zugreifen. Typische Verwendungen von Reflektionen umfassen die folgenden:  
   
--   Verwenden Sie <xref:System.Reflection.Assembly>, um Assemblys zu definieren und zu laden, um Module zu laden, die im Assemblymanifest aufgeführt sind, und um einen Typ in seiner Assembly zu suchen und eine Instanz hiervon zu erstellen.  
+- Verwenden Sie <xref:System.Reflection.Assembly>, um Assemblys zu definieren und zu laden, um Module zu laden, die im Assemblymanifest aufgeführt sind, und um einen Typ in seiner Assembly zu suchen und eine Instanz hiervon zu erstellen.  
   
--   Verwenden Sie <xref:System.Reflection.Module>, um Informationen zu ermitteln, wie die Assembly, die das Modul enthält, und die Klassen im Modul. Sie können auch alle globalen Methoden oder andere spezifische, nicht globale Methoden abrufen, die im Modul definiert sind.  
+- Verwenden Sie <xref:System.Reflection.Module>, um Informationen zu ermitteln, wie die Assembly, die das Modul enthält, und die Klassen im Modul. Sie können auch alle globalen Methoden oder andere spezifische, nicht globale Methoden abrufen, die im Modul definiert sind.  
   
--   Verwenden Sie <xref:System.Reflection.ConstructorInfo>, um Informationen wie den Namen, die Parameter, die Zugriffsmodifizierer (wie `public` oder `private`) und Details zur Implementierung (wie `abstract` oder `virtual`) für einen Konstruktor abzurufen. Verwenden Sie die <xref:System.Type.GetConstructors%2A>- oder die <xref:System.Type.GetConstructor%2A>-Methode eines <xref:System.Type>, um einen bestimmten Konstruktor aufzurufen.  
+- Verwenden Sie <xref:System.Reflection.ConstructorInfo>, um Informationen wie den Namen, die Parameter, die Zugriffsmodifizierer (wie `public` oder `private`) und Details zur Implementierung (wie `abstract` oder `virtual`) für einen Konstruktor abzurufen. Verwenden Sie die <xref:System.Type.GetConstructors%2A>- oder die <xref:System.Type.GetConstructor%2A>-Methode eines <xref:System.Type>, um einen bestimmten Konstruktor aufzurufen.  
   
--   Verwenden Sie <xref:System.Reflection.MethodInfo>, um Informationen wie den Namen, den Rückgabetyp, die Parameter, die Zugriffsmodifizierer (wie `public` oder `private`) und Details zur Implementierung (wie `abstract` oder `virtual`) für eine Methode abzurufen. Verwenden Sie die <xref:System.Type.GetMethods%2A>- oder die <xref:System.Type.GetMethod%2A>-Methode eines <xref:System.Type>, um eine bestimmte Methode aufzurufen.  
+- Verwenden Sie <xref:System.Reflection.MethodInfo>, um Informationen wie den Namen, den Rückgabetyp, die Parameter, die Zugriffsmodifizierer (wie `public` oder `private`) und Details zur Implementierung (wie `abstract` oder `virtual`) für eine Methode abzurufen. Verwenden Sie die <xref:System.Type.GetMethods%2A>- oder die <xref:System.Type.GetMethod%2A>-Methode eines <xref:System.Type>, um eine bestimmte Methode aufzurufen.  
   
--   Verwenden Sie <xref:System.Reflection.FieldInfo>, um Informationen wie den Namen, die Zugriffsmodifizierer (wie `public` oder `private`) und Details zur Implementierung (wie `static`) für ein Feld abzurufen oder die Feldwerte abzurufen oder festzulegen.  
+- Verwenden Sie <xref:System.Reflection.FieldInfo>, um Informationen wie den Namen, die Zugriffsmodifizierer (wie `public` oder `private`) und Details zur Implementierung (wie `static`) für ein Feld abzurufen oder die Feldwerte abzurufen oder festzulegen.  
   
--   Verwenden Sie <xref:System.Reflection.EventInfo>, um Informationen wie den Namen, den Datentyp das Ereignishandlers, benutzerdefinierte Attribute, den Deklarationstyp und den reflektierten Typ eines Ereignisses abzurufen und um Ereignishandler hinzuzufügen oder zu entfernen.  
+- Verwenden Sie <xref:System.Reflection.EventInfo>, um Informationen wie den Namen, den Datentyp das Ereignishandlers, benutzerdefinierte Attribute, den Deklarationstyp und den reflektierten Typ eines Ereignisses abzurufen und um Ereignishandler hinzuzufügen oder zu entfernen.  
   
--   Verwenden Sie <xref:System.Reflection.PropertyInfo>, um Informationen wie den Namen, den Datentyp, den Deklarationstyp, den reflektierten Typ und die Status "Schreibgeschützt" oder "Beschreibbar" einer Eigenschaft abzurufen und um die Eigenschaftswert abzurufen oder festzulegen.  
+- Verwenden Sie <xref:System.Reflection.PropertyInfo>, um Informationen wie den Namen, den Datentyp, den Deklarationstyp, den reflektierten Typ und die Status "Schreibgeschützt" oder "Beschreibbar" einer Eigenschaft abzurufen und um die Eigenschaftswert abzurufen oder festzulegen.  
   
--   Verwenden Sie <xref:System.Reflection.ParameterInfo>, um Informationen wie den Namen eines Parameters, den Datentyp, ob es sich um einen Eingabe- oder Ausgabeparameter handelt und die Position des Parameters in der Methodensignatur abzurufen.  
+- Verwenden Sie <xref:System.Reflection.ParameterInfo>, um Informationen wie den Namen eines Parameters, den Datentyp, ob es sich um einen Eingabe- oder Ausgabeparameter handelt und die Position des Parameters in der Methodensignatur abzurufen.  
   
--   Verwenden Sie <xref:System.Reflection.CustomAttributeData>, um Informationen zu benutzerdefinierten Attributen abzurufen, wenn Sie im ausschließlich reflektionsbezogenen Kontext einer Anwendungsdomäne arbeiten. <xref:System.Reflection.CustomAttributeData> ermöglicht Ihnen, Attribute zu überprüfen, ohne Instanzen hiervon erstellen zu müssen.  
+- Verwenden Sie <xref:System.Reflection.CustomAttributeData>, um Informationen zu benutzerdefinierten Attributen abzurufen, wenn Sie im ausschließlich reflektionsbezogenen Kontext einer Anwendungsdomäne arbeiten. <xref:System.Reflection.CustomAttributeData> ermöglicht Ihnen, Attribute zu überprüfen, ohne Instanzen hiervon erstellen zu müssen.  
   
  Die Klassen des <xref:System.Reflection.Emit>-Namespace stellen eine spezielle Form der Reflektion bereit, die es Ihnen ermöglicht, Typen zur Laufzeit zu erstellen.  
   
@@ -89,4 +89,3 @@ Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mi
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
-  

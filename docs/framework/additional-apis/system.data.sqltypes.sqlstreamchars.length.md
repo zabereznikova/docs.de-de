@@ -13,12 +13,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c2ef66fa493512e1fa062e22858ea251ced39453
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 8f318f593237dc555d546858152bb03546c8306b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634140"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634453"
 ---
 # <a name="sqlstreamcharslength-property"></a>SqlStreamChars.Length-Eigenschaft
 

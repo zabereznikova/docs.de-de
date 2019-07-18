@@ -2,12 +2,12 @@
 title: Konfigurationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6ceea71e4adc4e8c25ca624ca8adb6e08713a93b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8c96b41877fa56f486bec03a10dcbf47bac9e37a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651052"
 ---
 # <a name="configuration-sample"></a>Konfigurationsbeispiel
 In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigurationsdatei erkennbar gemacht wird.  
@@ -27,15 +27,15 @@ In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigura
 ## <a name="service-configuration"></a>Dienstkonfiguration  
  Die Konfigurationsdatei in diesem Beispiel veranschaulicht zwei Funktionen:  
   
--   Erkennbar machen des Diensts über einen standardmäßigen <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+- Erkennbar machen des Diensts über einen standardmäßigen <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
   
--   Anpassen von die Suche betreffenden Informationen für den Anwendungsendpunkt des Diensts und Anpassen von die Suche betreffenden Einstellungen am Standardendpunkt.  
+- Anpassen von die Suche betreffenden Informationen für den Anwendungsendpunkt des Diensts und Anpassen von die Suche betreffenden Einstellungen am Standardendpunkt.  
   
  Um die Suche zu aktivieren, müssen einige Änderungen in der Anwendungskonfigurationsdatei für den Dienst vorgenommen werden:  
   
--   Ein Suchendpunkt muss zum `<service>`-Element hinzugefügt werden. Dabei handelt es sich um einen standardmäßigen <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Endpunkt. Diesen Systemendpunkt ordnet die Laufzeit dem Suchdienst zu. Der Suchdienst lauscht an diesem Endpunkt nach Nachrichten.  
+- Ein Suchendpunkt muss zum `<service>`-Element hinzugefügt werden. Dabei handelt es sich um einen standardmäßigen <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Endpunkt. Diesen Systemendpunkt ordnet die Laufzeit dem Suchdienst zu. Der Suchdienst lauscht an diesem Endpunkt nach Nachrichten.  
   
--   Das `<serviceDiscovery>`-Verhalten wird zum `<serviceBehaviors>`-Abschnitt hinzugefügt. Auf diese Weise kann der Dienst zur Laufzeit erkannt werden. Der zuvor erwähnte Suchendpunkt wird zum Lauschen nach Such-`Probe`-Nachrichten und Such-`Resolve`-Nachrichten verwendet. Mit diesen beiden Ergänzungen ist der Dienst am angegebenen Suchendpunkt erkennbar.  
+- Das `<serviceDiscovery>`-Verhalten wird zum `<serviceBehaviors>`-Abschnitt hinzugefügt. Auf diese Weise kann der Dienst zur Laufzeit erkannt werden. Der zuvor erwähnte Suchendpunkt wird zum Lauschen nach Such-`Probe`-Nachrichten und Such-`Resolve`-Nachrichten verwendet. Mit diesen beiden Ergänzungen ist der Dienst am angegebenen Suchendpunkt erkennbar.  
   
  Der folgende Konfigurationsausschnitt zeigt einen Dienst mit einem definierten Anwendungsendpunkt und einem definierten Suchendpunkt:  
   
@@ -261,10 +261,10 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  Dieses Beispiel verwendet die HTTP-Endpunkte und Ausführung dieser Beispiel, die richtige URL-ACLs hinzugefügt werden finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Details. Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Dieses Beispiel verwendet die HTTP-Endpunkte und Ausführung dieser Beispiel, die richtige URL-ACLs hinzugefügt werden finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Details. Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Erstellen Sie die Projektmappe.  
+2. Erstellen Sie die Projektmappe.  
   
-3.  Führen Sie die ausführbare Dienstdatei aus dem Buildverzeichnis aus.  
+3. Führen Sie die ausführbare Dienstdatei aus dem Buildverzeichnis aus.  
   
-4.  Führen Sie die ausführbare Clientanwendung aus. Beachten Sie, dass der Client in der Lage ist, den Dienst zu finden.  
+4. Führen Sie die ausführbare Clientanwendung aus. Beachten Sie, dass der Client in der Lage ist, den Dienst zu finden.  

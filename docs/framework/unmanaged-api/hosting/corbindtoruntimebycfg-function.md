@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbba208296dd2099c9da58c81ff66fddc78fdc86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a8f5e9a909a752dd8dc70bfc1c683b4611715f31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093815"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767965"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg-Funktion
 Lädt die common Language Runtime (CLR) in einen Prozess mit Versionsinformationen, die aus einer XML-Datei gelesen wird.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CorBindToRuntimeByCfg (  
     [in]  IStream     *pCfgStream,  
     [in]  DWORD        reserved,  

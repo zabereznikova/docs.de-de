@@ -9,11 +9,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
 ms.openlocfilehash: fbca9fa8aa227d8d5b6488bef179f4bda08bb38c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945352"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct-Klausel (Visual Basic)
 Schränkt die Werte des die aktuelle Bereichsvariable, doppelte Werte in nachfolgenden Abfrageklauseln zu beseitigen.  

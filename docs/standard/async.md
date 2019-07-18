@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: b9084da80ff400bf99fc8641c69bc38c805d039a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: aa08389d896fa81dbed8a63bb22a97e151016392
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071427"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628807"
 ---
 # <a name="async-overview"></a>Async (Übersicht)
 
@@ -39,10 +39,10 @@ Weitere Informationen finden Sie im Artikel zu [Async](async-in-depth.md).
 
 Das Thema [Muster für die asynchrone Programmierung](asynchronous-programming-patterns/index.md) bietet eine Übersicht über diese drei in .NET unterstützten asynchronen Programmierungsmuster:  
   
--   [Asynchronous Programming Model (APM) (Asynchrones Programmiermodell (APM))](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (Legacy)  
+- [Asynchronous Programming Model (APM) (Asynchrones Programmiermodell (APM))](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (Legacy)  
   
--   [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Legacy)  
+- [Event-based Asynchronous Pattern (EAP) (Ereignisbasiertes asynchrones Muster (EAP))](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (Legacy)  
   
--   [Task-based Asynchronous Pattern (TAP) (Taskbasierte asynchrone Muster (TAP))](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (für neue Entwicklung empfohlen)  
+- [Task-based Asynchronous Pattern (TAP) (Taskbasierte asynchrone Muster (TAP))](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (für neue Entwicklung empfohlen)  
 
 Weitere Informationen zum empfohlenen aufgabenbasierten Programmierungsmodell finden Sie im Artikel [Aufgabenbasierte asynchrone Programmierung](parallel-programming/task-based-asynchronous-programming.md).

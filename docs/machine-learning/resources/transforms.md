@@ -1,175 +1,107 @@
 ---
-title: Datentransformationen für maschinelles Lernen – ML.NET
+title: Datentransformationen
 description: Untersuchen Sie die in ML.NET unterstützten herausragenden technischen Komponenten.
-author: JRAlexander
-ms.custom: seodec18
-ms.date: 01/14/2019
-ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+author: natke
+ms.author: nakersha
+ms.date: 04/02/2019
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355407"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558014"
 ---
-# <a name="machine-learning-data-transforms---mlnet"></a>Datentransformationen für maschinelles Lernen – ML.NET
+# <a name="data-transformations"></a>Datentransformationen
 
-Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützten Datentransformationen.
+Datentransformationen dienen zur Vorbereitung von Daten für das Trainieren des Modells. Die Transformationen in diesem Handbuch geben Klassen zurück, die die [IEstimator](xref:Microsoft.ML.IEstimator%601)-Schnittstelle implementieren. Datentransformationen können miteinander verkettet werden. Jede Transformation erwartet und erzeugt Daten bestimmter Typen und Formate, die in der verknüpften Referenzdokumentation angegeben werden.
 
-> [!NOTE]
-> ML.NET ist derzeit als Vorschauversion verfügbar. Nicht alle Datentransformationen werden derzeit unterstützt. Wenn Sie eine Anforderung für eine bestimmte Transformation einreichen möchten, können Sie ein Issue im GitHub-Repository [dotnet/machinelearning](https://github.com/dotnet/machinelearning/issues) erstellen.
+Einige Datentransformationen erfordern Trainingsdaten, um ihre Parameter zu berechnen. Beispiel: Der <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A>-Transformator berechnet den Mittelwert und die Varianz der Trainingsdaten während des `Fit()`-Vorgangs und verwendet diese Parameter im `Transform()`-Vorgang. 
 
-## <a name="combiners-and-segregators"></a>Kombinierer und Trenner
+Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*>-Transformation kann die `Transform()`-Operation durchführen, ohne während der `Fit()`-Operation Trainingsdaten gesehen zu haben.
 
-| Transformation | Definition |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.GroupTransform> | Gruppiert Werte einer Skalarspalte auf Grundlage einer ID einer zusammenhängenden Gruppe und überführt diese in einen Vektor. |
-| <xref:Microsoft.ML.Transforms.UngroupTransform> | Hebt die Gruppierung für Vektorspalten auf und überführt diese in Zeilensequenzen; Umkehrvorgang zur Gruppentransformation. |
-
-## <a name="conversions"></a>Konvertierungen
+## <a name="column-mapping-and-grouping"></a>Zuordnung und Gruppierung von Spalten
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | Bildet Hashwerte entweder aus Spalten mit Einzelwerten oder aus Vektorspalten. Bei Vektorspalten wird für jeden Slot ein separater Hashwert gebildet. Hashwerte können wahlweise aus Textwerten oder aus Schlüsselwerten gebildet werden. |
-| <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | Konvertiert mehrere Spaltenwerte in Hashwerte. Für diese Transformation werden sowohl Texteingaben als auch numerische Eingaben akzeptiert. Es kann sich sowohl um Spalten mit Einzel- als auch mit Vektorwerten handeln. |
-| <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | Konvertiert einen Schlüssel in eine binäre Vektorspalte. |
-| <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | Nutzt KeyValues-Metadaten, um die Schlüsselindizes den entsprechenden Werten in den KeyValues-Metadaten zuzuordnen. |
-| <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Konvertiert einen Schlüssel in eine Vektorspalte. |
-| <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Ändert den zugrundeliegenden Spaltentyp, vorausgesetzt, der Typ kann konvertiert werden. |
-| <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Konvertiert Eingabewerte (Wörter, Zahlen usw.) für eine Wörterbuchindizierung. |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A> | Verketten einer oder mehrerer Eingabespalten in einer neuen Ausgabespalte |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.CopyColumns%2A> | Kopieren und Umbenennen einer oder mehrerer Eingabespalten |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.DropColumns%2A> | Löschen einer oder mehrerer Eingabespalten |
+| <xref:Microsoft.ML.TransformExtensionsCatalog.SelectColumns%2A> | Auswählen einer oder mehrerer beizubehaltender Spalten aus den Eingabedaten |
 
-## <a name="deep-learning"></a>Deep Learning
+## <a name="normalization-and-scaling"></a>Normalisierung und Skalierung
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.OnnxTransform> | Stellt Daten für ein vorhandenes ONNX-Modell zur Verfügung und gibt die Bewertung zurück (Vorhersage). |
-| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | Kann entweder eine Bewertung eines vortrainierten TensorFlow-Modells oder das erneute Trainieren eines TensorFlow-Modells durchführen. |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> | Subtrahieren des Mittelwerts (der Trainingsdaten) und Dividieren durch die Varianz (der Trainingsdaten) |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeLogMeanVariance%2A> | Normalisieren auf Basis des Logarithmus der Trainingsdaten |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeLpNorm%2A> | Skalieren von Eingabevektoren durch ihre [LP-Norm](https://en.wikipedia.org/wiki/Lp_space#The_p-norm_in_finite_dimensions), wobei P gleich 1, 2 oder unendlich ist. Der Standardwert ist die L2-Norm (Euklidischer Abstand) |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeGlobalContrast%2A> | Skalieren jedes Werts in einer Zeile durch Subtrahieren des Mittelwerts der Zeilendaten und Division entweder durch die Standardabweichung oder die L2-Norm (der Daten aus der Zeile) und Multiplizieren mit einem konfigurierbaren Skalierungsfaktor (Standard: 2) |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeBinning%2A> | Zuweisen des Eingabewerts zu einem Binindex und Division durch die Anzahl der Bins, um einen Gleitkommawert zwischen 0 und 1 zu erzeugen. Die Bingrenzen werden berechnet, um die Trainingsdaten gleichmäßig auf Bins zu verteilen |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeSupervisedBinning%2A> | Zuweisen des Eingabewerts zu einem Bin basierend auf seiner Korrelation mit der Bezeichnungsspalte |
+| <xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax%2A> | Skalieren der Eingabe um den Unterschied zwischen den minimalen und maximalen Werten in den Trainingsdaten |
 
-## <a name="feature-extraction"></a>Featureextraktion
-
-| Transformation | Definition |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Entfernt eine angegebene Liste von Stoppwörtern durch Vergleich einzelner Token (ohne Berücksichtigung der Groß-/Kleinschreibung) mit den Stoppwörtern.|
-| <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Nimmt eine oder mehrere ImageType-Spalten an und konvertiert sie in eine Graustufendarstellung des gleichen Bilds.|
-| <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Nimmt eine oder mehrere ReadOnlyMemory-Spalten an und lädt sie als einen ImageType. |
-| <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Nimmt eine oder mehrere ImageType-Spalten an und konvertiert sie in eine Vektordarstellung.|
-| <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Nimmt eine oder mehrere ImageType-Spalten an und ändert ihre Größe auf die angegebene Höhe und Breite.|
-| <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Implementiert LightLDA, eine Implementierung der Latent Dirichlet Allocation auf dem neuesten Stand.|
-| <xref:Microsoft.ML.Transforms.LoadTransform> | Lädt bestimmte Transformationen aus der angegebenen Modelldatei. Ermöglicht die gezielte Auswahl von Transformationen aus einer serialisierten Kette oder die Anwendung einer vortrainierten Transformation auf eine andere (aber trotzdem kompatible) Datenansicht. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Erstellt eine Sammlung mit der Anzahl der N-Gramme (Sequenzen aufeinander folgender Werte der Länge 1–n) in einem angegebenen Schlüsselvektor. Dabei wird ein Wörterbuch mit N-Grammen erstellt, und die ID im Wörterbuch wird als Index in der Sammlung verwendet. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Wandelt eine Sammlung von Tokentext (Vektor von ReadOnlyMemory) oder Vektoren von Schlüsseln in numerische Featurevektoren um. Die Featurevektoren sind die Anzahlen von N-Grammen (Abfolgen aufeinander folgender Token – Wörter oder Schlüssel – mit der Länge 1-n). |
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Wandelt eine Sammlung von Tokentext (Vektor von ReadOnlyMemory) mittels Hashing in numerische Featurevektoren um. |
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Erzeugt eine Sammlung mit der Anzahl der N-Gramme (Abfolgen aufeinander folgender Wörter der Länge 1–n) in einem bestimmten Text. |
-| <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Konvertiert den Kategoriewert in ein Indikatorarray. Dazu wird auf der Grundlage der Daten ein Wörterbuch der Kategorien erstellt und die ID im Wörterbuch als Index im Array verwendet. |
-| <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Berechnet die Projektion des Featurevektors auf einen niederrangigen Teilraum. |
-| <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Verwendet ein vortrainiertes Stimmungsmodell, um Eingabezeichenfolgen zu bewerten. |
-| <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | Entfernt eine sprachspezifische Liste von Stoppwörtern (häufigsten Wörtern) durch Vergleich einzelner Token (ohne Berücksichtigung der Groß-/Kleinschreibung) mit den Stoppwörtern. |
-| <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Erzeugt eine Sammlung mit der Anzahl der N-Gramme (Abfolgen aufeinander folgender Wörter) in einem bestimmten Text. Dabei wird ein Wörterbuch mit N-Grammen erstellt, und die ID im Wörterbuch wird als Index in der Sammlung verwendet. |
-| <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Erzeugt eine Sammlung mit der Anzahl der N-Gramme (Abfolgen aufeinander folgender Wörter der Länge 1–n) in einem bestimmten Text. Dazu wird ein Hashwert jedes N-Gramms erstellt, der dann als Index in der Sammlung verwendet wird. |
-| <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Teilt den Text mithilfe der Trennzeichen in Wörter auf. |
-
-
-## <a name="image-model-featurizers"></a>Featurebereitsteller von Bildmodellen
+## <a name="conversions-between-data-types"></a>Konvertierungen zwischen Datentypen
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Dies ist eine Erweiterungsmethode für die Verwendung mit dem <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>, um ein vortrainiertes [AlexNet](https://en.wikipedia.org/wiki/AlexNet)-Modell zu verwenden. Das NuGet-Paket, das diese Erweiterung enthält, beinhaltet außerdem garantiert die binäre Modelldatei. |
-| <xref:Microsoft.ML.Transforms.ResNet18Extension> | Diese ist eine Erweiterungsmethode für die Verwendung mit dem <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>, um ein vortrainiertes ResNet18-Modell zu verwenden. Das NuGet-Paket, das diese Erweiterung enthält, beinhaltet außerdem garantiert die binäre Modelldatei. |
-| <xref:Microsoft.ML.Transforms.ResNet50Extension> | Diese ist eine Erweiterungsmethode für die Verwendung mit dem <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>, um ein vortrainiertes ResNet50-Modell zu verwenden. Das NuGet-Paket, das diese Erweiterung enthält, beinhaltet außerdem garantiert die binäre Modelldatei. |
-| <xref:Microsoft.ML.Transforms.ResNet101Extension> | Diese ist eine Erweiterungsmethode für die Verwendung mit dem <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>, um ein vortrainiertes ResNet101-Modell zu verwenden. Das NuGet-Paket, das diese Erweiterung enthält, beinhaltet außerdem garantiert die binäre Modelldatei. |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.ConvertType%2A> | Konvertieren des Typs einer Eingabespalte in einen neuen Typ |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue*> | Zuordnen von Werten zu Schlüsseln (Kategorien) auf Grundlage des angegebenen Zuordnungenwörterbuchs |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*> | Zuordnen von Werten zu Schlüsseln (Kategorien) durch Erstellen der Zuordnung aus den Eingabedaten |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToValue*> | Konvertieren von Schlüsseln zurück in ihre ursprünglichen Werte |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapKeyToVector*> | Konvertieren von Schlüsseln zurück in Vektoren ursprünglicher Werte |
+| <xref:Microsoft.ML.ConversionsCatalog.MapKeyToBinaryVector*> | Konvertieren von Schlüsseln zurück in einen binären Vektor ursprünglicher Werte |
+| <xref:Microsoft.ML.ConversionsExtensionsCatalog.Hash*> | Anwenden des Hashalgorithmus auf den Wert in der Eingabespalte |
 
-## <a name="label-parsing"></a>Bezeichnungsanalyse
+## <a name="text-transformations"></a>Texttransformationen
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  Konvertiert Bezeichnungen. |
-| <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | Ordnet mehrklassige Bezeichnungen binären WAHR-, FALSCH-Bezeichnungen neu zu, hauptsächlich für die Verwendung mit OVA.|
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Umwandeln einer Textspalte in ein Gleitkommaarray der normalisierten Anzahl von N-Grammen und Char-Grammen | 
+| <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Aufteilen einer oder mehrerer Textspalten in einzelne Wörter |
+| <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Aufteilen einer oder mehrerer Textspalten in einzelne Zeichengleitkommazahlen über eine Reihe von Themen |
+| <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Ändern von Groß-/Kleinschreibung, Entfernen von diakritischen Zeichen, Satzzeichen und Zahlen |
+| <xref:Microsoft.ML.TextCatalog.ProduceNgrams*> | Umwandeln einer Textspalte in eine Sammlung mit der Anzahl der N-Gramme (Abfolgen aufeinander folgender Wörter)|
+| <xref:Microsoft.ML.TextCatalog.ProduceWordBags*> | Umwandeln einer Textspalte in einen Vektor der Sammlung mit der Anzahl der N-Gramme |
+| <xref:Microsoft.ML.TextCatalog.ProduceHashedNgrams*> | Umwandeln einer Textspalte in einen Vektor der Anzahl von N-Grammen, für die der Hashwert berechnet wurde |
+| <xref:Microsoft.ML.TextCatalog.ProduceHashedWordBags*> | Umwandeln einer Textspalte in eine Sammlung der Anzahl von N-Grammen, für die der Hashwert berechnet wurde |
+| <xref:Microsoft.ML.TextCatalog.RemoveDefaultStopWords*>  | Entfernen der Standardstoppwörter für die angegebene Sprache aus Eingabespalten |
+| <xref:Microsoft.ML.TextCatalog.RemoveStopWords*> | Entfernt die angegebenen Stoppwörter aus Eingabespalten |
+| <xref:Microsoft.ML.TextCatalog.LatentDirichletAllocation*> | Umwandeln eines Dokuments (dargestellt als Vektor von Gleitkommazahlen) in einen Vektor von Gleitkommazahlen über eine Reihe von Themen |
+| <xref:Microsoft.ML.TextCatalog.ApplyWordEmbedding*> | Konvertieren von Vektoren von Texttoken in Satzvektoren mithilfe eines vortrainierten Modells |
+
+## <a name="image-transformations"></a>Bildtransformationen
+
+| Transformation | Definition |
+| --- | --- |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> | Konvertieren eines Bilds in Graustufen |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage*> | Konvertieren eines Vektors von Pixeln in <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | Konvertieren von Pixeln eines Eingabebilds in einen Vektor aus Zahlen |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | Laden von Bildern aus einem Ordner in den Arbeitsspeicher |
+| <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | Ändern der Größe von Bildern |
+
+## <a name="categorical-data-transformations"></a>Kategorische Datentransformationen
+
+| Transformation | Definition |
+| --- | --- |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | Konvertieren einer oder mehrerer Textspalten in mit [1-aus-n-Code](https://en.wikipedia.org/wiki/One-hot) codierte Vektoren |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | Konvertieren einer oder mehrerer Textspalten in hashbasierte mit 1-aus-n-Code codierte Vektoren |
 
 ## <a name="missing-values"></a>Fehlende Werte
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Entfernt fehlende Werte aus Spalten. |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Erstellt eine boolesche Ausgabespalte, in der sich genauso viele Slots wie in der Eingabespalte befinden. Der Ausgabewert ist TRUE, falls der Wert in der Eingabespalte fehlt. |
-| <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Ersetzt fehlende Werte durch den Standardwert oder durch den Mittel-, Mindest- oder Höchstwert (nur im Fall von Nicht-Text-Spalten). |
+| <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues*> | Erstellen einer neuen booleschen Ausgabespalte, deren Wert „true“ ist, wenn der Wert in der Eingabespalte fehlt |
+| <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*> | Erstellen einer neuen Ausgabespalte, deren Wert auf einen Standardwert festgelegt ist, wenn der Wert aus der Eingabespalte nicht vorhanden ist, und andernfalls auf den Eingabewert |
 
-## <a name="normalization"></a>Normalisierung
-
-| Transformation | Definition |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.Projections.LpNormalizingTransformer> | Lp-Norm-Normalisierungstransformation (vektor-/zeilenweise). |
-| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | Berechnet Mittelwert und Abweichung für eine Spalte mit Vektorwerten. Verfolgt den aktuellen Mittelwert und den M2 (Summe der zum Quadrat erhobenen Differenzen der Werte des Mittelwerts), die Anzahl der NaNs und die Anzahl der Elemente ungleich Null nach. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | Berechnet Mittelwert und Abweichung für eine Spalte mit Vektorwerten. Verfolgt den aktuellen Mittelwert und den M2 (Summe der zum Quadrat erhobenen Differenzen der Werte des Mittelwerts), die Anzahl der NaNs und die Anzahl der Elemente ungleich Null nach. |
-| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | Verfolgt die Minimal- und Maximalanzahl der Werte nicht geringer Dichte (vCount) und die Anzahl der ProcessValue()-Aufrufe (trainCount) für eine Spalte mit Vektorwerten. |
-| <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | Standardisiert Featurebereiche. |
-| <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |Standardisiert Featurebereiche. |
-
-## <a name="onnx"></a>Onnx
+## <a name="feature-selection"></a>Featureauswahl
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.OnnxTransform> | Bewertet vortrainierte ONNX-Modelle, die den ONNX v1.2-Standard verwenden. |
+| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | Auswählen von Features, deren nicht standardmäßige Werte größer als der Schwellenwert sind |
+| <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | Wählen Sie die Features aus, von denen die Daten in der Bezeichnungsspalte am meisten abhängen |
 
-## <a name="preprocessing"></a>Vorverarbeitung
-| Transformation | Definition |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | Erzeugt eine Annäherung an Bootstrap-Zufallsstichproben mithilfe von Poisson-Zufallsstichproben. |
-| <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | Generiert eine zufällige Fourierfunktion. |
-| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Zeichenorientierter Tokenizer, der Text als Zeichensequenz verarbeitet. |
-| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Vereinfacht die Optimierung, unterstützend bei der Erkennung von Gewichtungen verwendet. |
-
-## <a name="row-filters"></a>Zeilenfilter
+## <a name="custom-transformations"></a>Benutzerdefinierte Transformationen
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.RowShufflingTransformer> | Mischt einen randomisierten Cursor bei einem Ausführungsversuch und verwendet dazu einen Pool aus einer bestimmten Anzahl Zeilen.  |
-| <xref:Microsoft.ML.Transforms.SkipFilter> | Ermöglicht das Einschränken der Eingabe auf eine Teilmenge von Zeilen, indem eine bestimmte Anzahl von Zeilen übersprungen wird. |
-| <xref:Microsoft.ML.Transforms.SkipTakeFilter> | Ermöglicht das Einschränken der Eingabe auf eine Teilmenge von Zeilen unter Berücksichtigung eines optionalen Offsets. Kann zur Implementierung eines Seitensteuerungsverfahrens für Daten verwendet werden. Verhält sich bei Erstellung mit SkipTakeFilter.SkipArguments wie `SkipFilter`.
-| <xref:Microsoft.ML.Transforms.TakeFilter> | Ermöglicht das Einschränken der Eingabe auf eine Teilmenge von Zeilen, indem die ersten N Zeilen berücksichtigt werden. |
-
-
-## <a name="schema"></a>Schema
-
-| Transformation | Definition |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | Dupliziert die Spalten aus dem Dataset.|
-| <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | Wählt einen Satz von Spalten aus, die in einer bestimmten Eingabe gelöscht oder beibehalten werden sollen. |
-| <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | Löscht Slots aus Spalten.|
-| <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | Erstellt eine neue Spalte vom angegebenen Typ mit Standardwerten. |
-| <xref:Microsoft.ML.Transforms.RangeFilter> | Filtert eine Datensicht nach einer Spalte des Typs „Single“, „Double“ oder nach ihrem Schlüssel (zusammenhängende Gruppe). Behält die Werte bei, die im Bereich zwischen angegebenem Minimum und Maximum liegen. Fehlende Werte werden stets herausgefiltert. Wenn die Eingabe ein Schlüssel ist, werden die minimalen/maximalen Werte als Prozentsätze der Anzahl der Werte betrachtet. |
-
-## <a name="tensorflow"></a>TensorFlow
-
-| Transformation | Definition |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | Führt entweder eine Bewertung eines vortrainierten TensorFlow-Modells oder das erneute Trainieren eines TensorFlow-Modells durch. |
-
-## <a name="text-processing-and-featurization"></a>Textverarbeitung und Featurebereitstellung
-
-| Transformation | Definition |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.TextNormalizingTransformer> | Eine Normalisierungstransformation von Text, die Normalisierung der Groß-/Kleinschreibung, das Entfernen von diakritischen Zeichen und/oder Ziffern ermöglicht. Die Transformation wird auf Texteingabe sowie als Vektor von Token/Text ausgeführt (Vektor von ReadOnlyMemory). |
-| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Zeichenorientierter Tokenizer, der Text als Zeichensequenz verarbeitet. |
-
-## <a name="time-series"></a>Zeitreihe
-
-| Transformation | Definition |
-| --- | --- |
-| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | Akzeptiert einen gewichteten Mittelwert der Werte: ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)). |
-| <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | Implementiert die Transformation der Änderungspunkterkennung für eine u.i.v. Sequenz (Zufallsstichprobe) basierend auf der Schätzung der adaptiven Kerneldichte und Martingalen. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | Implementiert die Transformation der Spitzenerkennung für eine u.i.v. Sequenz (Zufallsstichprobe) basierend auf der Schätzung der adaptiven Kerneldichte. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | Stellt einen gewichteten Durchschnitt der Werte des gleitenden Fensters bereit. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.PercentileThresholdTransform> | Entscheidet, ob der aktuelle Wert der Zeitreihe zum Perzentil der höchsten Werte des gleitenden Fensters gehört. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.PValueTransform> | Berechnet den empirischen p-Wert des aktuellen Werts der Reihe auf der Grundlage der anderen Werte im gleitenden Fenster. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.SlidingWindowTransform> | Gibt ein gleitendes Fenster über eine Zeitreihe vom Typ Single aus. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.SsaChangePointDetector> | Implementiert die Transformation der Änderungspunkterkennung auf der Grundlage der Einzelspektrum-Modellierung der Zeitreihe. |
-| <xref:Microsoft.ML.TimeSeriesProcessing.SsaSpikeDetector> | Implementiert die Transformation der Spitzenerkennung auf der Grundlage der Einzelspektrum-Modellierung der Zeitreihe. |
-
-## <a name="miscellaneous"></a>Verschiedenes
-
-| Transformation | Definition |
-| --- | --- |
-| <xref:Microsoft.ML.Transforms.CompositeTransformer> | Erstellt eine zusammengesetzte DataTransform. |
-| <xref:Microsoft.ML.Transforms.CustomMappingTransformer%602> | Generiert zusätzliche Spalten für die bereitgestellte `IDataView`. Die Anzahl der Zeilen wird nicht geändert, und der Vorgang kann als Ergebnis der Anwendung der Funktion des Benutzers auf jede Zeile der Eingabedaten angesehen werden.|
-| <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | Fügt eine Spalte mit einer generierten Zahlensequenz hinzu. |
-| <xref:Microsoft.ML.Transforms.ProduceIdTransform> | Erzeugt eine Spalte mit der ID des Cursors als Spalte. |
-| <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | Generiert eine zufällige Zahl. |
+| <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping*> | Transformieren vorhandener Spalten in neue mit einer benutzerdefinierten Zuordnung |

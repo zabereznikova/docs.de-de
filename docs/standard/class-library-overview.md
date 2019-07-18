@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970570"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593507"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
@@ -52,17 +52,17 @@ ms.locfileid: "56970570"
   
  Die .NET-Typen bilden die Grundlage für den Entwurf von Anwendungen, Komponenten und Steuerelementen in .NET. .NET-Implementierungen umfassen Typen zur Ausführung folgender Funktionen:  
   
--   Darstellung von Basisdatentypen und -ausnahmen  
+- Darstellung von Basisdatentypen und -ausnahmen  
   
--   Kapseln von Datenstrukturen  
+- Kapseln von Datenstrukturen  
   
--   E/A-Operationen  
+- E/A-Operationen  
   
--   Zugriff auf Informationen über geladene Typen  
+- Zugriff auf Informationen über geladene Typen  
   
--   Aufrufen von .NET Framework-Sicherheitsüberprüfungen  
+- Aufrufen von .NET Framework-Sicherheitsüberprüfungen  
   
--   Datenzugriff und Bereitstellen einer eigenständigen Client-GUI sowie einer servergesteuerten Client-GUI  
+- Datenzugriff und Bereitstellen einer eigenständigen Client-GUI sowie einer servergesteuerten Client-GUI  
   
  In .NET stehen neben zahlreichen Schnittstellen abstrakte und konkrete (nicht abstrakte) Klassen zur Verfügung. Sie können die konkreten Klassen unverändert verwenden oder eigene Klassen von ihnen ableiten. Sie können entweder eine Klasse erstellen, die die Schnittstelle implementiert, oder eine Klasse von einer der .NET-Klassen ableiten, die die Schnittstelle implementiert, um die Funktionen einer Schnittstelle zu verwenden.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "56970570"
 
  Für .NET-Typen wird ein Benennungsschema mit Punktsyntax verwendet, das der hierarchischen Struktur entspricht. Bei diesem Verfahren werden verwandte Typen in Namespaces zusammengefasst, wodurch Suchvorgänge und Verweise vereinfacht werden. Der erste Teil des vollständigen Namens, bis zum letzten Punkt, gibt den Namen des Namespaces wieder. Der letzte Teil ist der Name des Typs. `System.Collections.Generic.List<T>` stellt beispielsweise den Typ `List<T>` dar, der zum Namespace `System.Collections.Generic` gehört. Die Typen in <xref:System.Collections.Generic> können mit generischen Sammlungen verwendet werden.  
   
- Dieses Benennungsschema erleichtert es Entwicklern von Bibliotheken, die Erweiterungen für [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] entwerfen, hierarchische Typengruppen zu erstellen und diese konsistent und aussagekräftig zu benennen. Außerdem können Typen nach ihrem vollständigen Namen (d. h. ihrem Namespace und Typnamen) eindeutig identifiziert werden, wodurch Konflikte bei Typnamen vermieden werden. Von Entwicklern von Bibliotheken wird erwartet, dass sie sich beim Erstellen der Namen für eigene Namespaces an die nachstehende Konvention halten:  
+ Dieses Benennungsschema erleichtert es Entwicklern von Bibliotheken, die Erweiterungen für .NET Framework entwerfen, hierarchische Typengruppen zu erstellen und diese einheitlich und aussagekräftig zu benennen. Außerdem können Typen nach ihrem vollständigen Namen (d. h. ihrem Namespace und Typnamen) eindeutig identifiziert werden, wodurch Konflikte bei Typnamen vermieden werden. Von Entwicklern von Bibliotheken wird erwartet, dass sie sich beim Erstellen der Namen für eigene Namespaces an die nachstehende Konvention halten:  
   
  *CompanyName*.*TechnologyName*  
   

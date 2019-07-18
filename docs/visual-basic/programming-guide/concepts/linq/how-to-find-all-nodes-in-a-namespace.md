@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Suchen Sie aller Knoten in einem Namespace (Visual Basic
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
 ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855672"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Vorgehensweise: Suchen Sie aller Knoten in einem Namespace (Visual Basic)
 Sie können nach den Namespaces der einzelnen Elemente oder Attribute filtern und so alle Knoten im jeweiligen Namespace ermitteln.  

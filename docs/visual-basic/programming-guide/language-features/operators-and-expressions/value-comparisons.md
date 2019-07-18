@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
 ms.openlocfilehash: 270b226d0a1aa7d08721e6f9ed36d68492685af3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864390"
 ---
 # <a name="value-comparisons-visual-basic"></a>Wertevergleich (Visual Basic)
 Vergleichsoperatoren können verwendet werden, um Ausdrücke zu erstellen, die die Werte von numerischen Variablen vergleichen. Diese Ausdrücke geben eine `Boolean` Wert basiert, ob der Vergleich "true" oder "false". Beispiele für ein solcher Ausdruck sind wie folgt aus.  

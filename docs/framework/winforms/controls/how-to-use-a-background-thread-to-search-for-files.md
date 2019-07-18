@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4a247bdb90780a22d90bf338eef52830c82907fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157751"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630678"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Vorgehensweise: Verwenden eines Hintergrundthreads zur Dateisuche
 Die <xref:System.ComponentModel.BackgroundWorker> Komponente ersetzt und funktionell erweitert die <xref:System.Threading> Namespace, aber die <xref:System.Threading> Namespace wird für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, falls gewünscht. Weitere Informationen finden Sie unter [Übersicht über die BackgroundWorker-Komponente](backgroundworker-component-overview.md).  
@@ -28,13 +28,13 @@ Die <xref:System.ComponentModel.BackgroundWorker> Komponente ersetzt und funktio
   
  Im folgenden Beispiel (`DirectorySearcher`) zeigt ein Multithread Windows Forms-Steuerelement, werden mit einem Hintergrundthread rekursiv suchen ein Verzeichnis für Dateien, die Übereinstimmung mit einer angegebenen Zeichenfolge und füllt dann ein Listenfeld mit den Suchergebnissen. Die wichtigsten Konzepte, die im Beispiel dargestellt lauten wie folgt aus:  
   
--   `DirectorySearcher` Startet einen neuen Thread, um die Suche auszuführen. Der Thread führt die `ThreadProcedure` -Methode, die wiederum die Hilfsmethode aufruft, `RecurseDirectory` Methode, um die Suche auszuführen und das Listenfeld aufgefüllt. Auffüllen des Listenfelds erfordert jedoch einen threadübergreifenden-Aufruf, wie in den nächsten zwei Listen mit Aufzählungszeichen erläutert.  
+- `DirectorySearcher` Startet einen neuen Thread, um die Suche auszuführen. Der Thread führt die `ThreadProcedure` -Methode, die wiederum die Hilfsmethode aufruft, `RecurseDirectory` Methode, um die Suche auszuführen und das Listenfeld aufgefüllt. Auffüllen des Listenfelds erfordert jedoch einen threadübergreifenden-Aufruf, wie in den nächsten zwei Listen mit Aufzählungszeichen erläutert.  
   
--   `DirectorySearcher` definiert die `AddFiles` Methode zum Hinzufügen von Dateien in einem ListBox; allerdings `RecurseDirectory` nicht direkt aufrufen, `AddFiles` da `AddFiles` können nur in der STA-Thread, der erstellt ausführen `DirectorySearcher`.  
+- `DirectorySearcher` definiert die `AddFiles` Methode zum Hinzufügen von Dateien in einem ListBox; allerdings `RecurseDirectory` nicht direkt aufrufen, `AddFiles` da `AddFiles` können nur in der STA-Thread, der erstellt ausführen `DirectorySearcher`.  
   
--   Die einzige Möglichkeit `RecurseDirectory` Aufrufen `AddFiles` wird durch einen Aufruf der threadübergreifende –, also durch den Aufruf <xref:System.Windows.Forms.Control.Invoke%2A> oder <xref:System.Windows.Forms.Control.BeginInvoke%2A> Marshallen `AddFiles` an den Erstellungsthread, der `DirectorySearcher`. `RecurseDirectory` verwendet <xref:System.Windows.Forms.Control.BeginInvoke%2A> , damit der Aufruf asynchron erfolgen kann.  
+- Die einzige Möglichkeit `RecurseDirectory` Aufrufen `AddFiles` wird durch einen Aufruf der threadübergreifende –, also durch den Aufruf <xref:System.Windows.Forms.Control.Invoke%2A> oder <xref:System.Windows.Forms.Control.BeginInvoke%2A> Marshallen `AddFiles` an den Erstellungsthread, der `DirectorySearcher`. `RecurseDirectory` verwendet <xref:System.Windows.Forms.Control.BeginInvoke%2A> , damit der Aufruf asynchron erfolgen kann.  
   
--   Marshalling einer Methode ist das Äquivalent eines Funktionszeiger oder ein Rückruf erforderlich. Dies erfolgt mithilfe von Delegaten in .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> verwendet einen Delegaten als Argument an. `DirectorySearcher` aus diesem Grund definiert einen Delegaten (`FileListDelegate`), bindet `AddFiles` mit einer Instanz von `FileListDelegate` in seinem Konstruktor, und übergibt, die dieser Delegat-Instanz <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` Außerdem definiert einen Ereignisdelegaten, der gemarshallt wird, wenn die Suche abgeschlossen ist.  
+- Marshalling einer Methode ist das Äquivalent eines Funktionszeiger oder ein Rückruf erforderlich. Dies erfolgt mithilfe von Delegaten in .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> verwendet einen Delegaten als Argument an. `DirectorySearcher` aus diesem Grund definiert einen Delegaten (`FileListDelegate`), bindet `AddFiles` mit einer Instanz von `FileListDelegate` in seinem Konstruktor, und übergibt, die dieser Delegat-Instanz <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` Außerdem definiert einen Ereignisdelegaten, der gemarshallt wird, wenn die Suche abgeschlossen ist.  
   
 ```vb  
 Option Strict  
@@ -766,4 +766,4 @@ namespace SampleUsage
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)
-- [Übersicht über ereignisbasierte asynchrone Muster](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

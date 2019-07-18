@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Serialisieren Sie mit DataContractSerializer (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
 ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054431"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>Vorgehensweise: Serialisieren Sie mit DataContractSerializer (Visual Basic)
 Dieses Thema enthält ein Beispiel, das zum Serialisieren und Deserialisieren <xref:System.Runtime.Serialization.DataContractSerializer> verwendet.  

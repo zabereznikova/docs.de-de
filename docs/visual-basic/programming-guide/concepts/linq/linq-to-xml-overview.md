@@ -2,12 +2,12 @@
 title: LINQ to XML-Übersicht (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-ms.openlocfilehash: 987409aab9d3d12cc3cbbebaa64da0bffcee1c8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4b40acaaf3787e67e4d6efb1efb1ecd4f117427
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504040"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586324"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML-Übersicht (Visual Basic)
 XML hat sich mittlerweile als hervorragende Möglichkeit durchgesetzt, Daten in einer Vielzahl von Kontexten zu formatieren. Sie finden XML beispielsweise im Internet, in Konfigurationsdateien, in Microsoft Office Word-Dateien und in Datenbanken.  
@@ -20,15 +20,15 @@ XML hat sich mittlerweile als hervorragende Möglichkeit durchgesetzt, Daten in 
  Professionelle Entwickler können mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ihre Produktivität deutlich steigern. Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] muss weniger Code geschrieben werden, und dieser Code ist ausdrucksvoller, kompakter und leistungsstärker. Sie können Abfrageausdrücke aus mehreren Datendomänen gleichzeitig verwenden.  
   
 ## <a name="what-is-linq-to-xml"></a>Was ist LINQ to XML?  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist eine LINQ-fähige XML-Programmierschnittstelle im Arbeitsspeicher, mit der Sie aus [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Programmiersprachen heraus mit XML arbeiten können.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist eine LINQ-fähige, speicherinterne XML-Programmierschnittstelle, die es ermöglicht Ihnen die Arbeit mit XML in .NET Framework mit Sprachen programmieren.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ähnelt dem Dokumentobjektmodell (DOM) darin, dass das XML-Dokument im Arbeitsspeicher bereitgestellt wird. Sie können das Dokument abfragen und ändern, und nach dem Ändern können Sie es in einer Datei speichern oder es serialisieren und über das Internet versenden. Allerdings [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] unterscheidet sich vom DOM: Es bietet ein neues Objektmodell, das leichter und einfacher zu handhaben und, die nutzt Sprachfeatures in Visual Basic.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ähnelt dem Dokumentobjektmodell (DOM) darin, dass das XML-Dokument im Arbeitsspeicher bereitgestellt wird. Sie können das Dokument abfragen und ändern, und nach dem Ändern können Sie es in einer Datei speichern oder es serialisieren und über das Internet versenden. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] unterscheidet sich aber auch vom DOM: Es bietet ein neues Objektmodell, das leichter und einfacher zu handhaben und, die nutzt Sprachfeatures in Visual Basic.  
   
  Der wichtigste Vorteil von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] besteht in dessen Integration in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Diese Integration ermöglicht es Ihnen, Abfragen für das XML-Dokument im Arbeitsspeicher zu schreiben, um Auflistungen von Elementen und Attributen abzurufen. Die Abfragefunktion von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist von ihrer Funktionalität her mit der von XPath und XQuery vergleichbar, die Syntax ist allerdings eine andere. Die Integration von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] in Visual Basic bietet eine stärkere Typisierung, syntaxüberprüfung und verbesserte Debuggerunterstützung.  
   
  Ein weiterer Vorteil von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist die Fähigkeit, Abfrageergebnisse als Parameter für <xref:System.Xml.Linq.XElement>-Objektkonstruktoren und <xref:System.Xml.Linq.XAttribute>-Objektkonstruktoren zu verwenden. Dies ist ein sehr effizienter Ansatz zum Erstellen von XML-Strukturen. Diese Herangehensweise, die als *funktionale Konstruktion* bezeichnet wird, versetzt Entwickler in die Lage, XML-Strukturen problemlos von einer Form in eine andere zu transformieren.  
   
- Angenommen, Sie müssen möglicherweise eine typische XML-Bestellung, wie in beschrieben [XML-Beispieldatei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md). Durch die Verwendung von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können Sie zum Abrufen des Attributwerts der Teilenummer für jedes Artikelelement im Auftrag die folgende Abfrage ausführen:  
+ Nehmen Sie das Beispiel einer typischen XML-Bestellung, wie sie in [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) beschrieben wird. Durch die Verwendung von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können Sie zum Abrufen des Attributwerts der Teilenummer für jedes Artikelelement im Auftrag die folgende Abfrage ausführen:  
   
 ```vb  
 Dim partNos = _  
@@ -49,19 +49,19 @@ Select item
   
  Zusätzlich zu diesen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Funktionen stellt [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eine verbesserte XML-Programmierschnittstelle bereit. Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] können Sie Folgendes durchführen:  
   
--   XML aus Dateien oder Streams laden  
+- XML aus Dateien oder Streams laden  
   
--   XML in Dateien oder Streams serialisieren  
+- XML in Dateien oder Streams serialisieren  
   
--   XML mittels funktionaler Konstruktion von Grund auf neu erstellen  
+- XML mittels funktionaler Konstruktion von Grund auf neu erstellen  
   
--   XML mit XPath-ähnlichen Achsen abfragen  
+- XML mit XPath-ähnlichen Achsen abfragen  
   
--   XML-Strukturen im Arbeitsspeicher mit Methoden wie <xref:System.Xml.Linq.XContainer.Add%2A>, <xref:System.Xml.Linq.XNode.Remove%2A>, <xref:System.Xml.Linq.XNode.ReplaceWith%2A> und <xref:System.Xml.Linq.XElement.SetValue%2A> bearbeiten  
+- XML-Strukturen im Arbeitsspeicher mit Methoden wie <xref:System.Xml.Linq.XContainer.Add%2A>, <xref:System.Xml.Linq.XNode.Remove%2A>, <xref:System.Xml.Linq.XNode.ReplaceWith%2A> und <xref:System.Xml.Linq.XElement.SetValue%2A> bearbeiten  
   
--   XML-Strukturen mit XSD validieren  
+- XML-Strukturen mit XSD validieren  
   
--   XML-Strukturen mit einer Kombination aus diesen Funktionen von einer Form in eine andere transformieren  
+- XML-Strukturen mit einer Kombination aus diesen Funktionen von einer Form in eine andere transformieren  
   
 ## <a name="creating-xml-trees"></a>Erstellen von XML-Strukturen  
  Einer der bedeutendsten Vorteile beim Programmieren mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist die einfache Erstellung von XML-Strukturen. Beispielsweise können um eine kleine XML-Struktur zu erstellen, Sie Code wie folgt schreiben:  

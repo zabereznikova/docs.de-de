@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84f71266d84cc98c2a5deb4aa8639e36808315a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8ea4947582e4e8bfdb6873a90c5284e9ae9d8a62
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130181"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736250"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager-Funktion
 Ruft einen Zeiger auf eine Schnittstelle, die die common Language Runtime (CLR) zum Verwalten von Identitäten ermöglicht.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDAPI GetCLRIdentityManager(  
     [in]  REFIID      riid,  
     [out] IUnknown  **ppManager  

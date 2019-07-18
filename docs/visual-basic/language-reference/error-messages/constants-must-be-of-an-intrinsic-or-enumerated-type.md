@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: f82a548c820aec7d2ae13c30a67d778fc167a8b6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649841"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>Konstanten müssen einen systeminternen oder enumerierten Typ aufweisen, keinen Klassen-, Struktur-, Typparameter- oder Arraytyp.
 Sie haben versucht, eine Konstante als eine Klasse, Struktur oder Arraytyp oder als eine von einem enthaltenden generischen Typ definierten Typparameter deklarieren.  
@@ -23,9 +23,9 @@ Sie haben versucht, eine Konstante als eine Klasse, Struktur oder Arraytyp oder 
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Deklarieren Sie die Konstante als systeminterne Funktion oder `Enum` Typ.  
+1. Deklarieren Sie die Konstante als systeminterne Funktion oder `Enum` Typ.  
   
-2.  Eine Konstante kann auch sein ein spezieller Wert wie z. B. `True`, `False`, oder `Nothing`. Der Compiler betrachtet diese vordefinierten Werte von den entsprechenden systeminternen Typ sein.  
+2. Eine Konstante kann auch sein ein spezieller Wert wie z. B. `True`, `False`, oder `Nothing`. Der Compiler betrachtet diese vordefinierten Werte von den entsprechenden systeminternen Typ sein.  
   
 ## <a name="see-also"></a>Siehe auch
 

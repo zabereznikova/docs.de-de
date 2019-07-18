@@ -3,11 +3,11 @@ title: <issuerMetadata> von <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
 ms.openlocfilehash: e46e56c6285af24941a550b2c4f7dec3b441db69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764100"
 ---
 # <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata> of \<issuedTokenParameters>
 \<system.serviceModel>  

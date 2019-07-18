@@ -2,12 +2,12 @@
 title: ASP.NET-Kompatibilität
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 521ab07d2a747927a7b26c38221f59de736990b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 01329769b74c8a5841b5a2024d3ed674c108be1c
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112527"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487668"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET-Kompatibilität
 Dieses Beispiel veranschaulicht, wie ASP.NET Kompatibilitätsmodus in Windows Communication Foundation (WCF) zu aktivieren. Dienste, die unter ASP.NET-Kompatibilität Modus nehmen uneingeschränkt an der ASP.NET-Pipeline für die Anwendung und können ASP.NET-Funktionen wie z. B. Datei-/URL-Autorisierung, Sitzungsstatus, verwenden und die <xref:System.Web.HttpContext> Klasse. Die <xref:System.Web.HttpContext> Klasse ermöglicht den Zugriff auf Cookies, Sitzungen und andere ASP.NET-Funktionen. Dieser Modus erfordert, dass die Bindungen den HTTP-Transport verwenden und der Dienst selbst in IIS gehostet ist.  
@@ -19,13 +19,13 @@ Dieses Beispiel veranschaulicht, wie ASP.NET Kompatibilitätsmodus in Windows Co
   
 Damit das Beispiel ausgeführt werden kann, muss ein [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]-Anwendungspool verfügbar sein. Führen Sie die folgenden Schritte aus, um einen neuen Anwendungspool zu erstellen oder den Standardanwendungspool zu ändern.  
 
-1.  Open **Systemsteuerung**.  Öffnen der **Verwaltung** Applet unter der **System und Sicherheit** Überschrift. Öffnen der **(Internet Information Services, IIS) Manager** Applet.  
+1. Open **Systemsteuerung**.  Öffnen der **Verwaltung** Applet unter der **System und Sicherheit** Überschrift. Öffnen der **(Internet Information Services, IIS) Manager** Applet.  
 
-2.  Erweitern Sie die Strukturansicht, in der **Verbindungen** Bereich. Wählen Sie die **Anwendungspools** Knoten.  
+2. Erweitern Sie die Strukturansicht, in der **Verbindungen** Bereich. Wählen Sie die **Anwendungspools** Knoten.  
 
-3.  Festlegen der Standardanwendungspool mit [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (Dies verursacht möglicherweise Inkompatibilitätsprobleme mit vorhandenen Websites), mit der rechten Maustaste die **DefaultAppPool** Listenelement aus, und wählen Sie **Grundeinstellungen...** . Legen Sie die **.Net Framework-Version** Pulldownliste **.Net Framework v4.0.30128** (oder höher).  
+3. Festlegen der Standardanwendungspool mit [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (Dies verursacht möglicherweise Inkompatibilitätsprobleme mit vorhandenen Websites), mit der rechten Maustaste die **DefaultAppPool** Listenelement aus, und wählen Sie **Grundeinstellungen...** . Legen Sie die **.Net Framework-Version** Pulldownliste **.Net Framework v4.0.30128** (oder höher).  
 
-4.  Um einen neuen Anwendungspool zu erstellen, die verwendet [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (um die Kompatibilität mit anderen Anwendungen beizubehalten), mit der rechten Maustaste die **Anwendungspools** Knoten, und wählen **Anwendungspool hinzufügen...** . Benennen Sie den neuen Anwendungspool, und legen Sie die **.Net Framework-Version** Pulldownliste **.Net Framework-v4.0.30128** (oder höher). Nach dem Ausführen des Setups unten aufgeführten Schritte, mit der rechten Maustaste die **ServiceModelSamples** Anwendung, und wählen **-Anwendung verwalten**, **Erweiterte Einstellungen...** . Legen Sie die **Anwendungspool** an den neuen Anwendungspool.  
+4. Um einen neuen Anwendungspool zu erstellen, die verwendet [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (um die Kompatibilität mit anderen Anwendungen beizubehalten), mit der rechten Maustaste die **Anwendungspools** Knoten, und wählen **Anwendungspool hinzufügen...** . Benennen Sie den neuen Anwendungspool, und legen Sie die **.Net Framework-Version** Pulldownliste **.Net Framework-v4.0.30128** (oder höher). Nach dem Ausführen des Setups unten aufgeführten Schritte, mit der rechten Maustaste die **ServiceModelSamples** Anwendung, und wählen **-Anwendung verwalten**, **Erweiterte Einstellungen...** . Legen Sie die **Anwendungspool** an den neuen Anwendungspool.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
@@ -119,14 +119,14 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Achten Sie darauf durchgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Achten Sie darauf durchgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Nachdem die Projektmappe erstellt wurde, führen Sie Setup.bat aus, um die ServiceModelSamples-Anwendung in [!INCLUDE[iisver](../../../../includes/iisver-md.md)] einzurichten. Das Verzeichnis ServiceModelSamples sollte jetzt als [!INCLUDE[iisver](../../../../includes/iisver-md.md)]-Anwendung angezeigt werden.  
+3. Nachdem die Lösung erstellt wurde, führen Sie Setup.bat aus, um die ServiceModelSamples-Anwendung in IIS 7.0 einzurichten. Das Verzeichnis ServiceModelSamples sollte jetzt als IIS 7.0-Anwendung angezeigt werden.  
   
-4.  Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Hosting- und -Persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

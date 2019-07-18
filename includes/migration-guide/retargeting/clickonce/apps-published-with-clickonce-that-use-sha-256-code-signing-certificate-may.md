@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: dd4e387f798b3f93f3eabccb5357399fbe5a4fc1
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804501"
+---
 ### <a name="apps-published-with-clickonce-that-use-a-sha-256-code-signing-certificate-may-fail-on-windows-2003"></a>Mit ClickOnce veröffentlichte Apps, die ein SHA-256-Codesignaturzertifikat verwenden, verursachen unter Windows 2003 möglicherweise einen Fehler
 
 |   |   |

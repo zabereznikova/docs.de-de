@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946457"
 ---
 # <a name="statements-in-visual-basic"></a>Anweisungen in Visual Basic
 
@@ -156,7 +156,7 @@ In vielen Fällen können Sie eine Anweisung auf der nächsten Zeile fortfahren,
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    Weitere Informationen finden Sie unter [Objektinitialisierer: benannte und anonyme Typen](./objects-and-classes/object-initializers-named-and-anonymous-types.md) oder [Auflistungsinitialisierer](./collection-initializers/index.md).
+    Weitere Informationen finden Sie unter [Objektinitialisierer: Benannte und anonyme Typen](./objects-and-classes/object-initializers-named-and-anonymous-types.md) oder [Auflistungsinitialisierer](./collection-initializers/index.md).
 
 - Nach dem ein Öffnen eines eingebetteten Ausdrucks (`<%=`) oder vor dem Ende eines eingebetteten Ausdrucks (`%>`) in ein XML-Literal. Zum Beispiel:
 
@@ -196,7 +196,7 @@ In vielen Fällen können Sie eine Anweisung auf der nächsten Zeile fortfahren,
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   Weitere Informationen finden Sie unter [mit... With-Anweisung](../../../visual-basic/language-reference/statements/with-end-with-statement.md) oder [Objektinitialisierer: benannte und anonyme Typen](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
+   Weitere Informationen finden Sie unter [mit... With-Anweisung](../../../visual-basic/language-reference/statements/with-end-with-statement.md) oder [Objektinitialisierer: Benannte und anonyme Typen](./objects-and-classes/object-initializers-named-and-anonymous-types.md).
 
 - Nach dem ein XML-Achseneigenschaften-Qualifizierer (`.` oder `.@` oder `...`). Sie müssen jedoch ein Zeilenfortsetzungszeichen einschließen (`_`) Wenn Sie einen Memberqualifizierer angeben, bei der Verwendung der `With` Schlüsselwort. Zum Beispiel:
 
@@ -246,5 +246,5 @@ Wenn Sie nach dem Sie eine einzige Zeile Code eingeben, wird eine blaue Wellenli
 |---|---|
 |[Zuweisungsoperatoren](../../../visual-basic/language-reference/operators/assignment-operators.md)|Enthält Links zu Sprachreferenzseiten Zuweisungsoperatoren wie z. B. `=`, `*=`, und `&=`.|
 |[Operatoren und Ausdrücke](./operators-and-expressions/index.md)|Zeigt, wie Elemente mit Operatoren zum erzielen neuer Werte kombinieren.|
-|[Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Erfahren, wie eine einzelne Anweisung in mehrere Zeilen aufteilen und wie Sie mehrere Anweisungen in der gleichen Zeile platzieren.|
-|[Gewusst wie: Bezeichnen von Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Veranschaulicht, wie eine einzige Zeile Code zu bezeichnen.|
+|[Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Erfahren, wie eine einzelne Anweisung in mehrere Zeilen aufteilen und wie Sie mehrere Anweisungen in der gleichen Zeile platzieren.|
+|[Vorgehensweise: Label-Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Veranschaulicht, wie eine einzige Zeile Code zu bezeichnen.|

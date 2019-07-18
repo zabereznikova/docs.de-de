@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607929"
 ---
 # <a name="merging-dataset-contents"></a>Zusammenführen von DataSet-Inhalten
 
@@ -18,7 +18,7 @@ Sie können die <xref:System.Data.DataSet.Merge%2A>-Methode verwenden, um den In
 
 ## <a name="primary-keys"></a>Primärschlüssel
 
-Wenn die Tabelle, die neue Daten und Schemas aus einer Zusammenführung empfängt, einen Primärschlüssel besitzt, werden die neuen Zeilen aus den empfangenen Daten mit vorhandenen Zeilen verglichen, die dieselben <xref:System.Data.DataRowVersion.Original>-Primärschlüsselwerte besitzen wie die empfangenen Daten. Wenn die Spalten aus dem empfangenen Schema mit denen des vorhandenen Schemas übereinstimmen, werden die Daten in den vorhandenen Zeilen geändert. Spalten, die nicht mit dem vorhandenen Schema übereinstimmen, werden, abhängig vom Wert des <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>-Parameters, entweder ignoriert oder hinzugefügt. Neue Zeilen mit Primärschlüsselwerten, die nicht mit vorhandenen Zeilen übereinstimmen, werden an die vorhandene Tabelle angehängt.
+Wenn die Tabelle, die neue Daten und Schemas aus einem Merge empfängt, einen Primärschlüssel besitzt, werden die neuen Zeilen aus den empfangenen Daten mit vorhandenen Zeilen verglichen, die dieselben <xref:System.Data.DataRowVersion.Original>-Primärschlüsselwerte besitzen wie die empfangenen Daten. Wenn die Spalten aus dem empfangenen Schema mit denen des vorhandenen Schemas übereinstimmen, werden die Daten in den vorhandenen Zeilen geändert. Spalten, die nicht mit dem vorhandenen Schema übereinstimmen, werden, abhängig vom Wert des <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A>-Parameters, entweder ignoriert oder hinzugefügt. Neue Zeilen mit Primärschlüsselwerten, die nicht mit vorhandenen Zeilen übereinstimmen, werden an die vorhandene Tabelle angehängt.
 
 Wenn empfangene oder vorhandene Zeilen den Zeilenstatus <xref:System.Data.DataRowState.Added> aufweisen, werden ihre Primärschlüsselwerte mit dem <xref:System.Data.DataRowVersion.Current>-Primärschlüsselwert der `Added`-Zeile verglichen, weil es keine `Original`-Zeilenversion gibt.
 
@@ -28,10 +28,10 @@ Wenn die Tabelle, die neue Daten aus einer Zusammenführung empfängt, keinen Pr
 
 ## <a name="table-names-and-namespaces"></a>Tabellennamen und Namespaces
 
-<xref:System.Data.DataTable>-Objekten kann optional ein <xref:System.Data.DataTable.Namespace%2A>-Eigenschaftswert zugewiesen werden. Wenn <xref:System.Data.DataTable.Namespace%2A>-Werte zugewiesen werden, kann ein <xref:System.Data.DataSet> mehrere <xref:System.Data.DataTable>-Objekte mit demselben <xref:System.Data.DataTable.TableName%2A>-Wert enthalten. Bei Zusammenführungen werden sowohl der <xref:System.Data.DataTable.TableName%2A> als auch der <xref:System.Data.DataTable.Namespace%2A> verwendet, um das Ziel der Zusammenführung anzugeben. Wenn kein <xref:System.Data.DataTable.Namespace%2A> zugewiesen wurde, wird zur Angabe des Ziels nur der <xref:System.Data.DataTable.TableName%2A> verwendet.
+<xref:System.Data.DataTable>-Objekten kann optional ein <xref:System.Data.DataTable.Namespace%2A>-Eigenschaftswert zugewiesen werden. Wenn <xref:System.Data.DataTable.Namespace%2A>-Werte zugewiesen werden, kann ein <xref:System.Data.DataSet> mehrere <xref:System.Data.DataTable>-Objekte mit demselben <xref:System.Data.DataTable.TableName%2A>-Wert enthalten. Bei Merges werden sowohl der <xref:System.Data.DataTable.TableName%2A> als auch der <xref:System.Data.DataTable.Namespace%2A> verwendet, um das Ziel des Merge anzugeben. Wenn kein <xref:System.Data.DataTable.Namespace%2A> zugewiesen wurde, wird zur Angabe des Ziels nur der <xref:System.Data.DataTable.TableName%2A> verwendet.
 
 > [!NOTE]
-> Dieses Verhalten ist in .NET Framework 2.0 neu. In Version 1.1 wurden Namespaces zwar unterstützt, bei Zusammenführungen wurden sie aber ignoriert. Aus diesem Grund hängt das Verhalten eines <xref:System.Data.DataSet>, das <xref:System.Data.DataTable.Namespace%2A>-Eigenschaftswerte verwendet, von der jeweils verwendeten .NET Framework-Version ab. Nehmen wir z. B. an, es gibt zwei `DataSets`, die `DataTables` mit identischen <xref:System.Data.DataTable.TableName%2A>-Eigenschaftswerten, aber verschiedenen <xref:System.Data.DataTable.Namespace%2A>-Eigenschaftswerten enthalten. In .NET Framework 1.1 werden die verschiedenen <xref:System.Data.DataTable.Namespace%2A>-Namen beim Zusammenführen der beiden <xref:System.Data.DataSet>-Objekte ignoriert. Ab Version 2.0 hingegen werden beim Zusammenführen zwei neue `DataTables` im Ziel-<xref:System.Data.DataSet> erstellt. Auf die ursprünglichen `DataTables` hat die Zusammenführung keine Auswirkung.
+> Dieses Verhalten ist in .NET Framework 2.0 neu. In Version 1.1 wurden Namespaces zwar unterstützt, bei Merges wurden sie aber ignoriert. Aus diesem Grund hängt das Verhalten eines <xref:System.Data.DataSet>, das <xref:System.Data.DataTable.Namespace%2A>-Eigenschaftswerte verwendet, von der jeweils verwendeten .NET Framework-Version ab. Nehmen wir z. B. an, es gibt zwei `DataSets`, die `DataTables` mit identischen <xref:System.Data.DataTable.TableName%2A>-Eigenschaftswerten, aber verschiedenen <xref:System.Data.DataTable.Namespace%2A>-Eigenschaftswerten enthalten. In .NET Framework 1.1 werden die verschiedenen <xref:System.Data.DataTable.Namespace%2A>-Namen beim Zusammenführen der beiden <xref:System.Data.DataSet>-Objekte ignoriert. Ab Version 2.0 hingegen werden beim Zusammenführen zwei neue `DataTables` im Ziel-<xref:System.Data.DataSet> erstellt. Auf die ursprünglichen `DataTables` hat die Zusammenführung keine Auswirkung.
 
 ## <a name="preservechanges"></a>PreserveChanges
 
@@ -45,9 +45,9 @@ Wenn das `PreserveChanges`-Flag auf `true` festgelegt ist, werden die Daten der 
 
 Wenn das `PreserveChanges`-Flag auf `false` festgelegt ist, werden sowohl die `Current`-Zeilenversion als auch die `Original`-Zeilenversion in der vorhandenen Zeile durch die Daten der empfangenen Zeile überschrieben, und der `RowState` der vorhandenen Zeile wird auf den `RowState` der empfangenen Zeile festgelegt. Beachten Sie folgende Ausnahmen:
 
-- Wenn die empfangene Zeile den `RowState` `Unchanged` und die vorhandene Zeile den `RowState` `Modified`, `Deleted` oder `Added` besitzt, wird der `RowState` der vorhandenen Zeile auf `Modified` festgelegt.
+- Wenn die empfangene Zeile den `RowState``Unchanged` und die vorhandene Zeile den `RowState``Modified`, `Deleted` oder `Added` besitzt, wird der `RowState` der vorhandenen Zeile auf `Modified` festgelegt.
 
-- Wenn die empfangene Zeile den `RowState` `Added` und die vorhandene Zeile den `RowState` `Unchanged`, `Modified` oder `Deleted` besitzt, wird der `RowState` der vorhandenen Zeile auf `Modified` festgelegt. Außerdem werden die Daten der `Original`-Zeilenversion der vorhandenen Zeile nicht durch die Daten der empfangenen Zeile überschrieben, weil die empfangene Zeile keine `Original`-Zeilenversion besitzt.
+- Wenn die empfangene Zeile den `RowState``Added` und die vorhandene Zeile den `RowState``Unchanged`, `Modified` oder `Deleted` besitzt, wird der `RowState` der vorhandenen Zeile auf `Modified` festgelegt. Außerdem werden die Daten der `Original`-Zeilenversion der vorhandenen Zeile nicht durch die Daten der empfangenen Zeile überschrieben, weil die empfangene Zeile keine `Original`-Zeilenversion besitzt.
 
 ## <a name="missingschemaaction"></a>MissingSchemaAction
 
@@ -66,7 +66,7 @@ Eine Beschreibung der Optionen für `MissingSchemaAction` finden Sie in der folg
 
 Bei der `Merge`-Methode werden Einschränkungen erst überprüft, wenn dem vorhandenen `DataSet` alle neuen Daten hinzugefügt wurden. Sobald die Daten hinzugefügt wurden, werden die Einschränkungen für die aktuellen Werte im `DataSet` erzwungen. Sie müssen sicherstellen, dass Ihr Code die Behandlung von Ausnahmen ermöglicht, die aufgrund von Einschränkungsverletzungen ausgelöst werden.
 
-Nehmen wir einmal an, eine vorhandene Zeile in einem `DataSet` ist eine Zeile mit dem `Unchanged`-Zeilenstatus und dem Primärschlüsselwert 1. Beim Zusammenführen mit einer empfangenen Zeile mit dem `Modified`-Zeilenstatus und dem `Original`-Primärschlüsselwert 2 sowie dem `Current`-Primärschlüsselwert 1 werden die vorhandene Zeile und die empfangene Zeile als nicht übereinstimmend betrachtet, weil die `Original`-Primärschlüsselwerte unterschiedlich sind. Wenn die Zusammenführung abgeschlossen ist und die Einschränkungen überprüft werden, wird allerdings eine Ausnahme ausgelöst, weil die `Current`-Primärschlüsselwerte die <legacyBold>Unique</legacyBold>-Einschränkung für die Primärschlüsselspalte verletzen.
+Nehmen wir einmal an, eine vorhandene Zeile in einem `DataSet` ist eine Zeile mit dem `Unchanged`-Zeilenstatus und dem Primärschlüsselwert 1. Beim Zusammenführen mit einer empfangenen Zeile mit dem `Modified`-Zeilenstatus und dem `Original`-Primärschlüsselwert 2 sowie dem `Current`-Primärschlüsselwert 1 werden die vorhandene Zeile und die empfangene Zeile als nicht übereinstimmend betrachtet, weil die `Original`-Primärschlüsselwerte unterschiedlich sind. Wenn die Zusammenführung abgeschlossen ist und die Einschränkungen überprüft werden, wird allerdings eine Ausnahme ausgelöst, weil die `Current`-Primärschlüsselwerte die &lt;legacyBold&gt;Unique&lt;/legacyBold&gt;-Einschränkung für die Primärschlüsselspalte verletzen.
 
 > [!NOTE]
 > Beim Einfügen von Zeilen in Datenbanktabellen mit automatisch inkrementierenden Spalten, z. B. Identitätsspalten, ist es möglich, dass der von der Einfügung zurückgegebene Wert für die Identitätsspalte nicht mit dem Wert im `DataSet` übereinstimmt, sodass die zurückgegebenen Zeilen nicht zusammengeführt, sondern angefügt werden. Weitere Informationen finden Sie unter [Abrufen von Identity- oder Autonumber-Werten](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4618f7ea08aa304ff5e77800cf3c0a90dd88fdbd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0e25f2e49ab25d2df827fdd59526b13976d21219
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110916"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756566"
 ---
 # <a name="ihosttaskmanagersleep-method"></a>IHostTaskManager::Sleep-Methode
 Benachrichtigt den Host, dass die aktuelle Aufgabe in den Ruhezustand versetzt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Sleep (  
     [in] DWORD dwMilliseconds,  
     [in] DWORD option  

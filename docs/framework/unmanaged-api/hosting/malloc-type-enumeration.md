@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 695f69c8d9c3a295a705971743733339cf8aab13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f1c3fd9155761528b9203a5c69dee0bde16327f7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211945"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779337"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE-Enumeration
 Enthält Werte, die die Merkmale des Arbeitsspeichers angeben, die zugeordnet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     MALLOC_THREADSAFE = 0x1,  
     MALLOC_EXECUTABLE = 0x2,  

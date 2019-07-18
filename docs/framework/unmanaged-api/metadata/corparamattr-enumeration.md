@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97f62b082db11a5f0bb930e33cb47acef76e7a04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bfa8f1b5df76c7fdfe2f25b637b157bfa4424f7a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092057"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781656"
 ---
 # <a name="corparamattr-enumeration"></a>CorParamAttr-Enumeration
 Enthält Werte, die die Metadaten eines Methodenparameters beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorParamAttr {  
   
     pdIn                        =   0x0001,  

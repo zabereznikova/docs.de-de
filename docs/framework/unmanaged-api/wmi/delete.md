@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1a26db7785a8a378fa541308ecc6aee30fa87ec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 965143eadd6e2dde498d5ee73e4f9e8bfded8a6e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367120"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636722"
 ---
 # <a name="delete-function"></a>Delete-Funktion
 

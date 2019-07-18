@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: cdfbab381360bfcbae6cf3849d0bf0e18fda24bc
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185739"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377855"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -64,7 +64,6 @@ private DamageResult CalculateDamageDone()
     // Does an expensive calculation and returns
     // the result of that calculation.
 }
-
 
 calculateButton.Clicked += async (o, e) =>
 {
@@ -156,7 +155,7 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
     NetworkProgressBar.Visibility = Visibility.Visible;
 
     // The await operator suspends SeeTheDotNets_Click, returning control to its caller.
-    // This is what allows the app to be responsive and not hang on the UI thread.
+    // This is what allows the app to be responsive and not block the UI thread.
     var html = await getDotNetFoundationHtmlTask;
     int count = Regex.Matches(html, @"\.NET").Count;
 

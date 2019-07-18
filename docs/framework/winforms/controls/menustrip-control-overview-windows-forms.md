@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], about MenuStrip control
 - menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
-ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b72fcf75aeebc297d09cbaa9dbf00bb2370b1222
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625763"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Übersicht über das MenuStrip-Steuerelement (Windows Forms)
 Menüs stellen die Funktionalität für Ihre Benutzer von Befehlen, die von einem gemeinsamen Thema zusammengefasst sind.  
@@ -26,11 +26,11 @@ Menüs stellen die Funktionalität für Ihre Benutzer von Befehlen, die von eine
 ## <a name="ways-to-use-the-menustrip-control"></a>Möglichkeiten, das MenuStrip-Steuerelement zu verwenden.  
  Verwenden der <xref:System.Windows.Forms.MenuStrip> zu steuern:  
   
--   Erstellen Sie ganz einfach benutzerdefinierte, häufig verwendete Menüs, die unterstützen erweiterte Benutzer Schnittstelle und das Layout-Funktionen, z. B. Text und Bild Sortierung und Ausrichtung, Drag & Drop-Vorgänge, MDI, Überlauf und alternative Modi für den Zugriff auf Befehle im Menü.  
+- Erstellen Sie ganz einfach benutzerdefinierte, häufig verwendete Menüs, die unterstützen erweiterte Benutzer Schnittstelle und das Layout-Funktionen, z. B. Text und Bild Sortierung und Ausrichtung, Drag & Drop-Vorgänge, MDI, Überlauf und alternative Modi für den Zugriff auf Befehle im Menü.  
   
--   Unterstützt das typische Aussehen und Verhalten des Betriebssystems.  
+- Unterstützt das typische Aussehen und Verhalten des Betriebssystems.  
   
--   Behandeln von Ereignissen konsistent für alle Container und enthaltene Elemente, auf die gleiche Weise, die Sie behandeln Ereignisse für andere Steuerelemente.  
+- Behandeln von Ereignissen konsistent für alle Container und enthaltene Elemente, auf die gleiche Weise, die Sie behandeln Ereignisse für andere Steuerelemente.  
   
  Die folgende Tabelle zeigt einige besonders wichtigen Eigenschaften der <xref:System.Windows.Forms.MenuStrip> und die zugehörigen Klassen.  
   

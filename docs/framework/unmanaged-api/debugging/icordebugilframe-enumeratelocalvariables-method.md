@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc9601105d05740e6db0a41bae521bd9a276d74
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c18f2fce23e979f27d9116e74b6c6b007cd33bf0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471315"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752887"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables-Methode
 Ruft einen Enumerator für die lokalen Variablen in diesem Frame ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateLocalVariables(   
     [out] ICorDebugValueEnum    **ppValueEnum  
 );  

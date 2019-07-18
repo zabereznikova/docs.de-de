@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 71d5bbf7eb2df4065362031f30840635062a9298
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147549"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583504"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Aktivieren von Multiple Active Result Sets
 MARS (Multiple Active Result Sets) ist eine Funktion, die mit SQL Server verwendet wird und das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. Wenn MARS für die Verwendung mit SQL Server aktiviert wird, fügen die einzelnen verwendeten Befehlsobjekte der Verbindung eine Sitzung hinzu.  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Die Batchausführungsumgebung enthält die folgenden Komponenten:  
   
--   Gruppenoptionen (z. B. ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
+- Gruppenoptionen (z. B. ANSI_NULLS, DATE_FORMAT, LANGUAGE, TEXTSIZE)  
   
--   Sicherheitskontext (Benutzerrolle/Anwendungsrolle)  
+- Sicherheitskontext (Benutzerrolle/Anwendungsrolle)  
   
--   Datenbankkontext (aktuelle Datenbank)  
+- Datenbankkontext (aktuelle Datenbank)  
   
--   Ausführungszustandsvariablen (z. B. @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
+- Ausführungszustandsvariablen (z. B. @@ERROR, @@ROWCOUNT, @@FETCH_STATUS @@IDENTITY)  
   
--   Temporäre Tabellen auf oberster Ebene  
+- Temporäre Tabellen auf oberster Ebene  
   
  Mit MARS wird einer Verbindung eine Standardausführungsumgebung zugeordnet. Jeder neue Batch, der mit einer angegebenen Verbindung ausgeführt wird, erhält eine Kopie der Standardumgebung. Bei jeder Ausführung von Code unter einem angegebenen Batch beschränken sich alle an der Umgebung vorgenommenen Änderungen auf den bestimmten Batch. Nachdem die Ausführung beendet ist, werden die Ausführungseinstellungen in die Standardumgebung kopiert. Bei einem einzelnen Batch, der verschiedene nacheinander mit derselben Transaktion auszuführende Befehle ausgibt, entspricht die Semantik genau derjenigen, die von Verbindungen unter Einbeziehung früherer Clients oder Server verfügbar gemacht wird.  
   
@@ -102,11 +102,11 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Zum Behandeln dieses Szenarien bestehen drei Möglichkeiten:  
   
-1.  Starten Sie die Transaktion, nachdem der Reader erstellt wurde, damit dieser keinen Bestandteil der Transaktion darstellt. Jedes Update wird zu einer eigenen Transaktion.  
+1. Starten Sie die Transaktion, nachdem der Reader erstellt wurde, damit dieser keinen Bestandteil der Transaktion darstellt. Jedes Update wird zu einer eigenen Transaktion.  
   
-2.  Führen Sie alle Aufgaben aus, nachdem der Reader geschlossen wurde. Dadurch kann eine Vielzahl von Updates entstehen.  
+2. Führen Sie alle Aufgaben aus, nachdem der Reader geschlossen wurde. Dadurch kann eine Vielzahl von Updates entstehen.  
   
-3.  Verwenden Sie nicht MARS, sondern für jedes Befehlsobjekt eine separate Verbindung (wie vor der Verwendung von MARS).  
+3. Verwenden Sie nicht MARS, sondern für jedes Befehlsobjekt eine separate Verbindung (wie vor der Verwendung von MARS).  
   
 ### <a name="detecting-mars-support"></a>Ermitteln der MARS-Unterstützung  
  Durch Lesen des `SqlConnection.ServerVersion`-Werts kann eine Anwendung überprüfen, ob MARS unterstützt wird. Der Hauptwert sollte 9 für SQL Server 2005 und 10 für SQL Server 2008 lauten.  

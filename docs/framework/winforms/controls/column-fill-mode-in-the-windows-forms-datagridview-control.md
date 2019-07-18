@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214727"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590369"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms
 Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerelement seine Spalten automatisch so an, dass sie die Breite des verfügbaren Anzeigebereichs ausfüllen. Das Steuerelement zeigt die horizontale Bildlaufleiste nur an, wenn es erforderlich ist, dass die Breite jeder Spalte gleich oder größer als sein <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Eigenschaftenwert ist.  
@@ -45,22 +45,20 @@ Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerel
 ### <a name="comments"></a>Kommentare  
  So verwenden Sie diese Beispielanwendung:  
   
--   Ändern Sie die Größe des Formulars. Beachten Sie, wie sich die Breite der Spalten ändert, während die Proportionen, die durch die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Eigenschaftenwerte angegeben werden, beibehalten werden.  
+- Ändern Sie die Größe des Formulars. Beachten Sie, wie sich die Breite der Spalten ändert, während die Proportionen, die durch die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Eigenschaftenwerte angegeben werden, beibehalten werden.  
   
--   Ändern Sie die Spaltengrößen, indem Sie die Spaltenunterteiler mit der Maus ziehen. Beobachten Sie, wie sich die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Werte ändern.  
+- Ändern Sie die Spaltengrößen, indem Sie die Spaltenunterteiler mit der Maus ziehen. Beobachten Sie, wie sich die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Werte ändern.  
   
--   Ändern Sie den <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Wert für eine Spalte, und ändern Sie dann die Größe des Formulars durch Ziehen. Wenn die Größe des Formulars klein genug ist, beobachten Sie, dass die <xref:System.Windows.Forms.DataGridViewColumn.Width%2A>-Werte die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Werte nicht unterschreiten.  
+- Ändern Sie den <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Wert für eine Spalte, und ändern Sie dann die Größe des Formulars durch Ziehen. Wenn die Größe des Formulars klein genug ist, beobachten Sie, dass die <xref:System.Windows.Forms.DataGridViewColumn.Width%2A>-Werte die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Werte nicht unterschreiten.  
   
--   Ändern Sie die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Werte für alle Spalten in hohe Werte, damit die kombinierten Werte die Breite des Steuerelements überschreiten. Beachten Sie, wie die horizontale Bildlaufleiste angezeigt wird.  
+- Ändern Sie die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Werte für alle Spalten in hohe Werte, damit die kombinierten Werte die Breite des Steuerelements überschreiten. Beachten Sie, wie die horizontale Bildlaufleiste angezeigt wird.  
   
--   Ändern Sie die <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> Werte für einige Spalten. Beobachten Sie die Auswirkungen, wenn Sie die Größe von Spalten oder des Formulars ändern.  
+- Ändern Sie die <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> Werte für einige Spalten. Beobachten Sie die Auswirkungen, wenn Sie die Größe von Spalten oder des Formulars ändern.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
-  
--   Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
+- Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
 ## <a name="see-also"></a>Siehe auch
 

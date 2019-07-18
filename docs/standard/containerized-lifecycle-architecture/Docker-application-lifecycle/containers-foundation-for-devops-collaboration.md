@@ -1,97 +1,95 @@
 ---
-title: Container als Grundlage für die DevOps-Zusammenarbeit
-description: Erfahren Sie, die wichtige Rolle der Container, DevOps zu optimieren.
-author: CESARDELATORRE
-ms.author: wiwagn
+title: Container als Grundlage für die Zusammenarbeit mit DevOps
+description: Verstehen der Schlüsselrolle von Containern bei der Optimierung von DevOps.
 ms.date: 02/15/2019
-ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 37faf00f270414df363f36894317f31f81a2937e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679098"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65641316"
 ---
-# <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die DevOps-Zusammenarbeit
+# <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die Zusammenarbeit mit DevOps
 
-Aufgrund der Natur von Containern und Docker-Technologie können Entwickler ihrer Software und Abhängigkeiten ganz einfach mit IT-Betrieb und produktionsumgebungen freigeben beim Entfernen der typischen "es funktioniert auf meinem Computer" Entschuldigung. Container lösen Konflikte zwischen Anwendungen zwischen unterschiedlichen Umgebungen. Indirekt zusammenbringen Container und Docker-Entwickler und IT-Betrieb näher, dafür eine effektive Zusammenarbeit zu vereinfachen. Übernehmen den Container-Workflow bietet viele Kunden die DevOps-Kontinuität, die Sie gesucht haben, aber bisher über eine komplexere Konfiguration für die Version zu implementieren und Pipelines zu erstellen. Container vereinfachen die Erstellung/Testdurchführung/Bereitstellung-Pipelines in DevOps.
+Aufgrund der Natur von Containern und der Docker-Technologie können Entwickler ihre Software und Abhängigkeiten komfortabel mit dem IT-Betrieb und Produktionsumgebungen teilen und zugleich die typische Entschuldigung „auf meinem Computer funktioniert es“ hinter sich lassen. Containers lösen Anwendungskonflikte zwischen verschiedenen Umgebungen. Indirekt bringen Container und Docker Entwickler und IT-Ops näher zusammen, was ihnen die effektive Zusammenarbeit erleichtert. Die Einführung der Containerworkflow bietet vielen Kunden die DevOps-Kontinuität, die sie angestrebt haben, aber bisher mit weit komplexeren Konfigurationen für Release- und Buildpipelines implementieren mussten. Container vereinfachen die Build-/Test-/Bereitstellungspipelines in DevOps.
 
-![Docker unterstützt das Erstellen von Brücken zwischen Entwickler und Architekten von der Vorgehensweise zum Entwickeln/Design-arbeitsauslastung und die IT-Vorgänge in der Workload ausführen, überwachen, verwalten](./media/image1.png)
+![Docker unterstützt das Bauen von Brücken zwischen Entwicklern und Architekten in der Entwicklungs-/Entwurfsworkload und dem IT-Betrieb in der Ausführen-/Überwachen-/Verwaltenworkload](./media/image1.png)
 
-**Abbildung 2-1.** Main Workloads pro "Personen" im Lebenszyklus containerisierten Docker-Anwendungen
+**Abbildung 2-1.** Hauptworkloads nach „Personas“ im Lebenszyklus von in Containern verpackten Docker-Anwendungen
 
-Mit Docker-Containern, Entwickler eigene Was ist in den Container (Anwendungs- und Dienst- und Abhängigkeiten für Frameworks und Komponenten) und den Container und Dienste zusammen, wie eine Anwendung, die durch eine Sammlung von Diensten zusammengesetzt Verhalten. In die gegenseitigen Abhängigkeiten von mehreren Containern definiert sind eine `docker-compose.yml` Datei oder was aufgerufen werden, kann ein *Bereitstellungsmanifest*. In der Zwischenzeit können IT-Betriebsteams ("IT-Experten" und "Verwaltung") auf die Verwaltung von produktionsumgebungen konzentrieren; Infrastruktur Skalierbarkeit Überwachen der; und letztlich, sicherzustellen, dass die Anwendungen ordnungsgemäß für die Endbenutzer bereitstellen werden, ohne den Inhalt von den verschiedenen Containern kennen zu müssen. Daher der Name "Container" die Analogie zu echten Frachtcontainer abrufen. Daher müssen die Besitzer des Inhalts von eines Containers nicht betreffen sich wie der Container versendet werden soll, und der Protokollversand Unternehmen Transporte einen Container aus am ursprünglichen Speicherort, an das Ziel ohne wissen oder eine Rolle spielt, über den Inhalt. Auf ähnliche Weise können Entwickler erstellen und besitzen den Inhalt in einem Docker-Container, ohne die Notwendigkeit, sich mit den Transportmechanismen "" betreffen.
+Mit Docker-Containern sind Entwickler im Besitz des gesamten Containerinhalts (Anwendung und Dienst sowie Abhängigkeiten von Frameworks und Komponenten) und der Weise, wie Container und Dienste sich gemeinsam als aus einer Sammlung von Diensten zusammengesetzte Anwendung verhalten. Die gegenseitigen Abhängigkeiten der mehreren Container sind in einer `docker-compose.yml`-Datei definiert, die man in diesem Sinne als *Bereitstellungsmanifest* bezeichnen könnte. Inzwischen können sich IT-Betriebsteams (IT-Experten und Management) um die Verwaltung von Produktionsumgebungen, Infrastruktur, Skalierbarkeit, Überwachung und schließlich darum kümmern, dass die Leistung der Anwendungen für die Endbenutzer problemlos verfügbar ist, ohne die Inhalte der verschiedenen Container kennen zu müssen. Daher der Name „Container“, die Analogie zu Frachtcontainern aus der realen Welt ist allzu deutlich. Daher brauchen sich die Besitzer der Inhalte eines Containers nicht mit der Frage des Containerversands zu befassen, und das Speditionsunternehmen transportiert einen Container von seinem Ursprungsort an seinen Zielort, ohne die Inhalte des Containers zu kennen oder sich dafür zu interessieren. In ähnlicher Weise können Entwickler die Inhalte in einem Docker-Container erstellen und besitzen, ohne sich ihrerseits mit den Transportmechanismen zu befassen.
 
-In der Säule auf der linken Seite der Abbildung 2-1 Entwickler schreiben und Ausführen von Code lokal in Docker-Containern mit Docker für Windows oder Mac. Sie definieren die betriebsumgebung für den Code mit einer dockerfile-Datei, der angibt, das Basisbetriebssystem sowie die Schritte zum Erstellen von Code in einem Docker-Image ausgeführt. Der Entwickler definieren, wie ein oder mehrere Abbilder wird Interoperabilität mit dem zuvor erwähnten `docker-compose.yml` Bereitstellungsmanifest für die Datei. Nach Abschluss die lokale Entwicklung, übertragen sie ihren Anwendungscode und die Docker-Konfigurationsdateien im Code-Repository ihrer Wahl (d. h. Git-Repository).
+In der linken Säule von Abbildung 2–1 erstellen Entwickler Code lokal in Docker-Containern mithilfe von Docker für Windows oder Mac und führen ihn aus. Sie definieren die Betriebssystemumgebung für den Code mithilfe eines Dockerfiles, das das auszuführende Basisbetriebssystem sowie die Buildschritte zum Erstellen des Codes in einem Docker-Image angibt. Die Entwickler definieren, wie die Zusammenarbeit eines oder mehrerer Images erfolgt, und verwenden dazu das bereits erwähnte `docker-compose.yml`-Bereitstellungsmanifest. Mit dem Abschluss der lokalen Entwicklung laden sie den Anwendungscode und die Docker-Konfigurationsdateien in das Coderepository ihrer Wahl (d.h. das Git-Repository) hoch.
 
-Die DevOps-Säule definiert die Build – Continuous Integration (CI)-Pipelines mit der dockerfile-Datei im coderepository bereitgestellt. Das CI-System die Basis-containerimages aus der ausgewählten Docker-Registrierung abruft und der benutzerdefinierten Docker-Images für die Anwendung erstellt. Die Bilder werden anschließend überprüft und per Push an die Docker-Registrierung für die Bereitstellung in mehreren Umgebungen verwendet.
+Die DevOps-Säule definiert die Continuous Integration-Erstellungspipelines (CI) unter Verwendung des im Coderepository bereitgestellten Dockerfiles. Das CI-System ruft die Container-Basisimages aus der gewählten Docker-Registrierung ab und erstellt die benutzerdefinierten Docker-Images für die Anwendung. Die Images werden anschließend überprüft und in die Docker-Registrierung übertragen, die für die Bereitstellung in mehreren Umgebungen verwendet wird.
 
-In der Säule auf der rechten Seite bereitgestellt Vorgänge, die Teams verwalten, Anwendungen und Infrastruktur in der produktionsumgebung während der Überwachung von der Umgebung und die Anwendungen, damit sie Feedback und Einblicke für die das Entwicklungsteam dazu, wie die Anwendung möglicherweise bereitstellen können verbessert. Container-apps werden in der Regel in der Produktion mithilfe von containerorchestratoren ausgeführt.
+In der rechten Säule verwalten Betriebsteams Anwendungen und Infrastruktur in der Produktion, während sie Umgebung und Anwendungen überwachen, sodass sie dem Entwicklungsteam Feedback und Erkenntnisse über mögliche Verbesserungen der Anwendung geben können. Container-Apps werden normalerweise in der Produktion mithilfe von Containerorchestratoren ausgeführt.
 
-Die beiden Teams sind über eine grundlegende Plattform (Docker-Containern) zusammenarbeiten, die eine Trennung der Belange als Vertrag, und somit eine erhebliche Steigerung der beiden Teams Zusammenarbeit im Lebenszyklus Anwendung bereitstellt. Die Entwickler besitzen Inhalte des Containers und seiner betriebsumgebung, die Container-Abhängigkeiten, während die Operations-Teams nutzen den erstellten Images zusammen mit dem Manifest und führt diese in ihren System für die Orchestrierung.
+Die beiden Teams arbeiten mithilfe einer Grundplattform (Docker-Container) zusammen, die eine Separation of Concerns als Vertrag zur Verfügung stellt, während sie die Zusammenarbeit der beiden Teams im Anwendungslebenszyklus erheblich verbessert. Die Entwickler besitzen die Inhalte der Container, ihre Betriebsumgebung und die Abhängigkeiten zwischen Containern, während die Betriebsteams die erstellten Inhalte zusammen mit dem Manifest an sich nehmen und sie in ihrem Orchestrierungssystem ausführen.
 
-## <a name="challenges-in-application-life-cycle-when-using-docker"></a>Herausforderungen bei der Lebensdauer der Anwendung mithilfe von Docker-Zyklus.
+## <a name="challenges-in-application-life-cycle-when-using-docker"></a>Herausforderungen im Lebenszyklus von Anwendungen beim Einsatz von Docker.
 
-Es gibt viele Gründe, die die Anzahl von Anwendungen in Containern in den kommenden Jahren steigern, und eine der aus diesen Gründen ist das Erstellen von Anwendungen, die auf Microservices basierenden.
+Es gibt viele Gründe, warum die Anzahl der containerisierten Anwendungen in den kommenden Jahren steigen wird, und einer dieser Gründe ist die Erstellung von Anwendungen, die auf Microservices basieren.
 
-In den letzten 15 Jahren die Verwendung von Webdiensten wurde die Basis des Tausende von Anwendungen, und wahrscheinlich schon, nach ein paar Jahren wir finden die gleiche Situation mit Microservice basierende Anwendungen, die auf Docker-Container ausgeführt wird.
+Während der letzten 15 Jahre war die Nutzung von Webdiensten die Grundlage von Tausenden von Anwendungen, und wahrscheinlich werden wir in einigen Jahren die gleiche Situation im Hinblick auf Microservice-basierten Anwendungen vorfinden, die in Docker-Containern ausgeführt werden.
 
-Es lohnt sich außerdem zu erwähnen, dass Sie auch Docker-Container für monolithische Anwendungen verwenden können und Sie weiterhin die meisten Vorteile von Docker erhalten. Container werden nicht nur Microservices erstellen.
+Es ist darüber hinaus erwähnenswert, dass Sie Docker-Container auch für monolithische Anwendungen verwenden und trotzdem den größten Teil der Vorteile von Docker nutzen können. Container richten sich nicht nur auf Microservices.
 
-Die Verwendung von Docker zur containerisierung und Microservices bewirkt, dass neue Herausforderungen des Entwicklungsprozesses Ihrer Organisation und aus diesem Grund benötigen eine solide Strategie zu viele Container und Microservices, die auf Produktionssystemen zu verwalten. Schließlich müssen unternehmensanwendungen Hunderte oder Tausende von Containern und Instanzen in der Produktion ausgeführt wird.
+Die Verwendung von Containerisierung mit Docker und Microservices hat zu neuen Herausforderungen im Entwicklungsprozess Ihrer Organisationen geführt und daher benötigen Sie eine solide Strategie zum Verwalten vieler Container und Microservices, die auf Produktionssystemen ausgeführt werden. Schließlich können beim Unternehmenseinsatz Hunderte oder Tausende von Containern/Instanzen in der Produktion ausgeführt werden.
 
-Diese Herausforderungen erstellen neue Anforderungen auf, wenn DevOps-Tools zu verwenden, damit Sie zum Definieren neuer Prozesse in Ihren DevOps-Aktivitäten und finden Sie Antworten auf diese Art von Fragen können:
+Durch diese Herausforderungen entstehen neue Anforderungen für den Einsatz von DevOps-Tools, sodass Sie in Ihren DevOps-Aktivitäten neue Prozesse definieren und Antworten auf diese Art von Fragen finden müssen:
 
-- Welche Tools kann ich für die Entwicklung für CI/CD, Verwaltung und Betrieb verwenden?
+- Welche Tools kann ich für die Entwicklung, für CI/CD, Management und Betrieb verwenden?
 
-- Wie kann mein Unternehmen Fehler in Containern verwalten, wenn in der produktionsumgebung ausgeführt?
+- Wie kann mein Unternehmen mit Fehlern in Containern umgehen, die in der Produktion eingesetzt werden?
 
-- Wie können wir unsere Softwarekomponenten in der produktionsumgebung mit minimalen Ausfallzeiten ändern?
+- Wie können wir Teile unserer Software in der Produktion mit minimalen Ausfallzeiten ändern?
 
-- Wie können wir skalieren, und wie können wir unserem Produktionssystem überwachen?
+- Wie können wir skalieren, und wie können wir unser Produktionssystem überwachen?
 
-- Wie können wir testen und Bereitstellen von Containern in unserer releasepipeline einschließen?
+- Wie können wir Test und Bereitstellung von Containern in unsere Releasepipeline einbeziehen?
 
-- Wie können wir die Open-Source-Tools/Plattformen für Container in Microsoft Azure verwenden?
+- Wie können wir Open Source-Tools/-Plattformen für Container in Microsoft Azure verwenden?
 
-Wenn Sie all diese Fragen beantworten können, werden Sie besser vorbereitet, Ihre Anwendungen (apps vorhandenen oder neuen) Docker-Container verschieben können. 
+Wenn Sie alle diese Fragen beantworten, sind Sie besser darauf vorbereitet, Ihre Anwendungen (vorhandene oder neue) in Docker-Container zu verschieben. 
 
-## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Einführung in eine generische End-to-End-Docker-anwendungsworkflows des Lebenszyklus
+## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Einführung in eine allgemeine Anwendungslebenszyklus-Workflow mit Docker
 
-Abbildung 2-2: Stellt einen ausführlicheren Workflow für einen Docker-Anwendungslebenszyklus mit dem Schwerpunkt auf bestimmte DevOps-Aktivitäten und Ressourcen auf dieser Instanz verwendet wird.
+Abbildung 2–2 stellt einen detaillierteren Workflow für einen Docker-Anwendungslebenszyklus dar, in dieser Instanz mit dem Schwerpunkt auf bestimmten DevOps-Aktivitäten und -Ressourcen.
 
-![Dieses Diagramm zeigt die "äußere Schleife" von DevOps. Wenn Code per Push an das Repository übertragen wird, eine CI-Pipeline wird gestartet und beginnt dann die CD-Pipeline, in dem die Anwendung bereitgestellt wird. Von bereitgestellten Anwendungen gesammelten Metriken werden eingelesen, wieder in der arbeitsauslastung "Entwicklung", die "innere Schleife", wo auftritt, müssen Entwicklungsteams tatsächliche Daten, die auf Benutzer und die geschäftlichen Anforderungen zu reagieren.](./media/image2.png)
+![Dieses Diagramm zeigt die „äußere Schleife“ von DevOps. Wenn Code per Push an das Repository übertragen wird, beginnt die CD-Pipeline, in der die Anwendung bereitgestellt wird. Aus bereitgestellten Anwendungen gesammelte Metriken werden in die Entwicklungsworkload rückgekoppelt, in der die „innere Schleife“ stattfindet, sodass die Entwicklungsteams über reale Daten verfügen, mit denen sie auf Benutzer- und Geschäftsanforderungen reagieren können.](./media/image2.png)
 
-**Abbildung 2-2.** Allgemeiner Workflow für den Lebenszyklus des Docker-containeranwendungen
+**Abbildung 2–2.** Allgemeiner Workflow für den Lebenszyklus von in Containern verpackten Docker-Anwendungen
 
-Alles beginnt mit dem Entwickler, mit dem Schreiben von Code in den Workflow für die innere Schleife beginnt. Die innere Schleife-Phase ist, in dem Entwickler alles definieren, die vor dem Pushvorgang von Code im Code-Repository (z. B. ein Quellcodeverwaltungssystem wie z. B. Git) erfolgt. Nachdem sie hat sich verpflichtet, die Repository-Trigger Continuous Integration (CI) und den Rest des Workflows.
+Alles beginnt mit dem Entwickler, der in der Workflow der inneren Schleife mit dem Schreiben von Code beginnt. In der Phase der inneren Schleife definieren Entwickler alles, was geschieht, bevor sie den Code in das Coderepository übertragen (beispielsweise ein Quellcodeverwaltungssystem wie Git). Nach dem Commit löst das Repository Continuous Integration (CI) und den Rest der Workflow aus.
 
-Die innere Schleife besteht im Grunde typische Schritte wie "Code", "ausführen", "test" und "Debug" sowie die zusätzlichen Schritte erforderlich, direkt vor dem Ausführen der app lokal aus. Dies ist der Entwickler-Prozess zum Ausführen und Testen Sie die app als Docker-Container. Der Workflow für die innere Schleife wird in den Abschnitten erläutert werden.
+Die innere Schleife besteht im Grunde genommen aus typischen Schritten wie „Codeerstellung“, „Ausführen“, „Testen“ und Debuggen, zuzüglich der zusätzlichen Schritte, die vor der lokalen Ausführung der App erforderlich sind. Dies ist der Prozess des Entwicklers zum Ausführen und Testen der App als Docker-Container. Die Workflow der inneren Schleife wird in den folgenden Abschnitten erläutert.
 
-Einen Schritt zum zurückgeleitet Betrachten der End-to-End-Workflow, der DevOps-Workflow ist mehr als eine Technologie oder einen Satz von Tools: Es ist eine Haltung, die kulturelle Weiterentwicklung ist erforderlich. Es handelt sich um Personen, Prozesse und den entsprechenden Tools der Anwendungslebensdauer, schnellere und besser vorhersagbare vornehmen. Unternehmen, die einen Workflow in Containern in der Regel übernehmen umstrukturieren ihrer Organisationen zur Darstellung von Menschen und Prozesse, die den Containern Workflow entsprechen.
+Wenn wir einen Schritt zurücktreten, um die Workflow im Ganzen zu betrachten, erweist sich die DevOps-Workflow als mehr als eine Technologie oder ein Toolset: Es ist eine Geisteshaltung, für die eine kulturelle Weiterentwicklung erforderlich ist. Es geht um Personen, Prozesse und die geeigneten Tools, um Ihren Anwendungslebenszyklus schneller und besser vorhersagbar zu gestalten. Unternehmen, die einen Workflow mit Containern einführen, führen normalerweise eine Umstrukturierung ihrer Organisationen durch, um Personen und Prozesse an die Workflow mit Containern anzupassen.
 
-Eignen, DevOps, können Teams schneller zusammen reagieren auf Wettbewerbsdruck durch Ersetzen von fehleranfällige manuelle Prozesse durch Automatisierung, die verbesserte rückverfolgbarkeit und wiederholbare Workflows ausgeführt werden. Organisationen können auch eine effizientere Verwaltung von Umgebungen und Erkennen von kosteneinsparungen mit einer Kombination aus lokalen und Cloudressourcen sowie eng integrierte Tools.
+Das Praktizieren von DevOps kann Teams helfen, gemeinsam schneller auf Wettbewerbsdruck zu reagieren, indem sie fehleranfällige manuelle Prozesse durch Automatisierung ersetzen, wodurch sich verbesserte Nachverfolgbarkeit und wiederholbare Workflows ergeben. Organisationen können darüber hinaus mit einer Kombination aus lokalen und Cloudressourcen sowie eng integrierten Tools Umgebungen effizienter verwalten und Kosteneinsparungen realisieren.
 
-Wenn Sie Ihre DevOps-Workflow für Docker-Anwendungen zu implementieren, werden Sie sehen, dass Docker-Technologien in fast jeder Phase des Workflows, die von Ihrem Entwicklungscomputer bei der Arbeit von der Build-Test-CI-Phase, in der inneren Schleife (Code ausführen, Debuggen) vorhanden sind und, zum Schluss die Bereitstellung dieser Container in der Staging und produktionsumgebungen.
+Beim Implementieren Ihrer DevOps-Workflow für Docker-Anwendungen werden Sie feststellen, dass Docker-Technologien in nahezu jeder Phase der Workflow präsent sind, beginnend mit Ihrer Entwicklungsbox bei der Arbeit in der inneren Schleife (Codeerstellung, Ausführen, Debuggen), der Build-Test-CI-Phase und schließlich der Bereitstellung der Container in den Staging- und Produktionsumgebungen.
 
-Zur Verbesserung der Qualität Methoden kann Fehler frühzeitig im Entwicklungszyklus, identifiziert die reduziert die Kosten für die Behebung Eingriffe. Einschließlich der Umgebung und Ihre Abhängigkeiten in der Abbildung und die Einführung einer Philosophie der Bereitstellung des gleichen Images über mehrere Umgebungen hinweg, Stufen Sie eine Disziplin, extrahieren Sie die umgebungsspezifische Konfiguration, sodass Bereitstellungen zuverlässiger.
+Die Verbesserung der Qualitätspraktiken hilft, Fehler frühzeitig im Entwicklungszyklus zu erkennen, wodurch sich die Kosten zu ihrer Behebung verringern. Durch Einschließen von Umgebung und Abhängigkeiten in das Image und die Einführung einer Philosophie, das gleiche Image übergreifend in mehreren Umgebungen einzusetzen, fördern Sie einen Habitus, die umgebungsspezifischen Konfigurationen zu extrahieren, wodurch Bereitstellungen an Zuverlässigkeit gewinnen.
 
-Umfangreiche Daten abgerufen werden, durch die effektive Instrumentierung (Überwachung und Diagnose) bietet Einblicke in Leistungsprobleme und Benutzerverhalten, um künftige Prioritäten und Investitionen orientieren.
+Aussagekräftige Daten, die durch effektive Instrumentierung (Überwachung und Diagnose) erhalten werden, bieten Einsicht in Leistungsprobleme und Benutzerverhalten, um die Richtung zukünftiger Prioritäten und Investitionen zu bestimmen.
 
-DevOps sollten eine Reise, die nicht in ein Ziel berücksichtigt werden. Sie sollten über entsprechend Bereichsbezogene Projekte inkrementell implementiert werden, aus dem Erfolg zu veranschaulichen, erfahren Sie, und entwickeln.
+DevOps sollte als ein Weg angesehen werden, nicht als ein Zielort. Es sollte inkrementell durch Projekte mit passendem Umfang implementiert werden, die Ihnen Erfolge, Erkenntnisse und Weiterentwicklung erbringen.
 
 ## <a name="benefits-of-devops-for-containerized-applications"></a>Vorteile von DevOps für Anwendungen in Containern
 
-Hier sind einige der wichtigsten Vorteile, die eine solide DevOps-Workflow:
+Dies sind einige der wichtigsten Vorteile, die sich durch eine solide DevOps-Workflow ergeben:
 
-- Übermitteln Sie Software mit höherer Qualität schneller und mit bessere Einhaltung gesetzlicher Bestimmungen.
+- Schnelleres Ausliefern besserer Software mit besserer Compliance
 
-- Fördern Sie fortlaufende Verbesserungen und Korrekturen, früher und kostengünstiger.
+- Frühzeitige und ökonomisch sinnvollere Förderung von fortlaufenden Verbesserungen und Anpassungen
 
-- Erhöhen Sie die Transparenz und die Zusammenarbeit zwischen Beteiligte zum Bereitstellen und betreiben von Software.
+- Bessere Transparenz und Zusammenarbeit von Projektbeteiligten, die an Herstellung und Betrieb von Software beteiligt sind
 
-- Die kontrollieren Sie Kosten, und die nutzen Sie bereitgestellte Ressourcen effektiver, bei gleichzeitiger Minimierung von Sicherheitsrisiken.
+- Kostenkontrolle und effektiverer Einsatz der bereitgestellten Ressourcen bei gleichzeitiger Minimierung von Sicherheitsrisiken.
 
-- Plug & play auch mit vielen Ihrer vorhandenen DevOps-Investitionen, einschließlich der Investitionen in Open-Source.
+- Plug-and-Play-Bereitschaft mit vielen Ihrer bereits getätigten DevOps-Investitionen, einschließlich Investitionen in Open-Source.
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)

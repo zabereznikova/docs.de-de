@@ -10,11 +10,11 @@ ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd987cea78d082eee26032d5f98a54dc0cd3e1d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754686"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse-MDA
 Der Assistent für verwaltetes Debuggen `dllMainReturnsFalse` (Managed Debugging Assistant, MDA) wird aktiviert, wenn die verwaltete Funktion `DllMain` einer Benutzerassembly, die mit der Ursache DLL_PROCESS_ATTACH aufgerufen wurde, FALSE zurückgibt.  
@@ -46,4 +46,4 @@ Der Assistent für verwaltetes Debuggen `dllMainReturnsFalse` (Managed Debugging
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

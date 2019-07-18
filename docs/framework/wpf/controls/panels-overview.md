@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9bd2af8cd74c32bcda3a6105f39af470f961289d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157871"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625719"
 ---
 # <a name="panels-overview"></a>Übersicht über Panel-Elemente
 <xref:System.Windows.Controls.Panel> -Elemente sind Komponenten, die das Rendern von Elementen steuern – ihre Größe und Dimensionen, deren Position und die Anordnung des untergeordneten Inhalts. Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine Reihe von vordefinierten <xref:System.Windows.Controls.Panel> Elementen sowie die Möglichkeit zum Erstellen von benutzerdefinierten <xref:System.Windows.Controls.Panel> Elemente.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Die Panel-Klasse](#Panels_view_from_10000_feet)  
+- [Die Panel-Klasse](#Panels_view_from_10000_feet)  
   
--   [Allgemeine Member von Panel-Element](#Panels_declared_members)  
+- [Allgemeine Member von Panel-Elementen](#Panels_declared_members)  
   
--   [Abgeleitete Panel-Elemente](#Panels_derived_elements)  
+- [Abgeleitete Panel-Elemente](#Panels_derived_elements)  
   
--   [Panels der Benutzeroberfläche](#Panels_main_UI_elements)  
+- [Panels der Benutzeroberfläche](#Panels_main_UI_elements)  
   
--   [Geschachtelte Panel-Elemente](#Panels_nested_panel_elements)  
+- [Geschachtelte Panel-Elemente](#Panels_nested_panel_elements)  
   
--   [Benutzerdefinierte Panel-Elemente](#Panels_custom_panel_elements)  
+- [Benutzerdefinierte Panel-Elemente](#Panels_custom_panel_elements)  
   
--   [Unterstützung der Lokalisierung/Globalisierung](#Panels_global_localization)  
+- [Unterstützung für Lokalisierung/Globalisierung](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>Die Panel-Klasse  
@@ -81,7 +81,7 @@ ms.locfileid: "59157871"
   
  Jeder abgeleitete <xref:System.Windows.Controls.Panel> -Element behandelt größeneinschränkungen anders. Grundlegendes zu wie eine <xref:System.Windows.Controls.Panel> Handles-Einschränkungen in horizontaler bzw. vertikaler Richtung möglich Layout besser vorhersagbar.  
   
-|**Panelname**|**X-Dimension**|**y-Dimension**|  
+|**Panelname**|**X-Dimension**|**Y-Dimension**|  
 |--------------------|----------------------|----------------------|  
 |<xref:System.Windows.Controls.Canvas>|Eingeschränkt auf Inhalt|Eingeschränkt auf Inhalt|  
 |<xref:System.Windows.Controls.DockPanel>|Beschränkt|Beschränkt|  
@@ -242,7 +242,7 @@ ms.locfileid: "59157871"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>Unterstützung der Lokalisierung/Globalisierung  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt eine Reihe von Funktionen, die Sie unterstützen das Erstellen einer lokalisierbaren [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt eine Reihe von Funktionen, die Ihnen beim Erstellen einer lokalisierbaren [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] helfen.  
   
  Alle Panel-Elemente nativ unterstützen die <xref:System.Windows.FrameworkElement.FlowDirection%2A> -Eigenschaft, die verwendet werden kann, um die Inhalte basierend auf Gebietsschema oder der Sprache des Benutzers dynamisch umzubrechen. Weitere Informationen finden Sie unter <xref:System.Windows.FrameworkElement.FlowDirection%2A>.  
   
@@ -254,8 +254,8 @@ ms.locfileid: "59157871"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Beispiel für WPF-Layoutkatalog](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Beispiel für einen WPF-Layoutkatalog](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Layout](../advanced/layout.md)
 - [Beispiel für WPF-Steuerelementsammlungen](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [Übersicht über Alignment, Margin und Padding](../advanced/alignment-margins-and-padding-overview.md)

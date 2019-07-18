@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 6eefe7dd69d02712b650d95ddf14394c10792807
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 306e0dbf7fb819d1214d7d5d93d335b5d2db75e6
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213702"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053619"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Vorgehensweise: Bestimmen von Seiteneigenschaften mit der PageSetupDialog-Komponente
 Mithilfe der [PageSetupDialog](pagesetupdialog-component-windows-forms.md) -Komponente können Benutzer das Layout, die Papiergröße und weitere Optionen für das Seitenlayout festlegen.  
@@ -26,7 +26,7 @@ Mithilfe der [PageSetupDialog](pagesetupdialog-component-windows-forms.md) -Komp
   
 ### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>So bestimmen Sie die Seiteneigenschaften mit der PageSetupDialog-Komponente  
   
-1.  Verwenden Sie die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> -Methode, um das Dialogfeld anzuzeigen, und geben Sie das zu verwendende <xref:System.Drawing.Printing.PrintDocument> an.  
+1. Verwenden Sie die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> -Methode, um das Dialogfeld anzuzeigen, und geben Sie das zu verwendende <xref:System.Drawing.Printing.PrintDocument> an.  
   
      Im folgenden Beispiel öffnet der <xref:System.Windows.Forms.Button> -Ereignishandler des <xref:System.Windows.Forms.Control.Click> -Steuerelements eine Instanz der <xref:System.Windows.Forms.PageSetupDialog> -Komponente. Ein vorhandenes Dokument wird in der <xref:System.Windows.Forms.PageSetupDialog.Document%2A> -Eigenschaft angegeben, und seine <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> -Eigenschaft wird auf `false`festgelegt.  
   
@@ -76,7 +76,7 @@ Mithilfe der [PageSetupDialog](pagesetupdialog-component-windows-forms.md) -Komp
        }  
     ```  
   
-     (Visual C#- und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C# und visuelle C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -90,5 +90,5 @@ Mithilfe der [PageSetupDialog](pagesetupdialog-component-windows-forms.md) -Komp
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Vorgehensweise: Erstellen von standardmäßigen Druckaufträgen in Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [Vorgehensweise: Erstellen von Druckaufträgen in Standard-Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
 - [PageSetupDialog-Komponente](pagesetupdialog-component-windows-forms.md)

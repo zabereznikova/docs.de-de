@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d10bb7033688efce9488078d2ef605e2a29382f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: abe0a0fc177c9ec89f4621e7defb5330c911034b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221413"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778618"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody-Methode
 Ersetzt den Text der angegebenen Funktion im angegebenen Modul an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetILFunctionBody(  
     [in] ModuleID    moduleId,  
     [in] mdMethodDef methodid,  

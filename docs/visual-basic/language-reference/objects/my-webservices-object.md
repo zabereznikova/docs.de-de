@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
 ms.openlocfilehash: a60f32c4f581e42f240fca55ce496776c5511ba3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050284"
 ---
 # <a name="mywebservices-object"></a>My.WebServices-Objekt
 Stellt Eigenschaften bereit, für das Erstellen und den Zugriff auf eine einzelne Instanz jeder XML-Webdienst, der vom aktuellen Projekt verwiesen wird.  

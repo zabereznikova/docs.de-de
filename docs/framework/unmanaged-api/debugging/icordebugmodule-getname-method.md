@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b39467c067e50f2d553b35a41b0f783e0fc82156
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988020"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName-Methode
 Ruft den Dateinamen des Moduls ab.  

@@ -17,27 +17,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 682d6684b6c86485530b9e5283d843f3b2eb7e46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413802"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752208"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort-Methode
-Bricht die Berechnung, die derzeit diese ICorDebugEval-Objekt ausgeführt werden.  
+Bricht ab, der Berechnung, die dieses ICorDebugEval Objekt derzeit ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Abort ();  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Auswertung geschachtelt ist und es nicht der aktuellste Auftrag ist die `Abort` -Methode schlägt möglicherweise fehl.  
+ Wenn die Auswertung geschachtelt ist, und es nicht der aktuellste Auftrag ist, der `Abort` -Methode schlägt möglicherweise fehl.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

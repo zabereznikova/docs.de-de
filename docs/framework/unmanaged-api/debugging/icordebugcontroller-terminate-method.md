@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c8dd8795fc3699176490ea0bb9b2e999038afb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 06c91a813a80af5cf09914ca134ac9935ed787c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124877"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750072"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate-Methode
 Beendet den Prozess mit den angegebenen Exitcode.  
@@ -32,7 +32,7 @@ Beendet den Prozess mit den angegebenen Exitcode.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Terminate (  
     [in] UINT exitCode  
 );  

@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f88c22f88aa9e1aaa777f12d8b230e7ba92dffeb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 630e0c20309b6e791991b64ef8d423ff927b70fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124591"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767902"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost-Funktion
 Ermöglicht es Hosts, eine angegebene Version der Common Language Runtime (CLR) in einen Prozess zu laden.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CorBindToRuntimeHost (  
     [in] LPCWSTR       pwszVersion,   
     [in] LPCWSTR       pwszBuildFlavor,   
@@ -47,7 +47,7 @@ HRESULT CorBindToRuntimeHost (
  `pwszVersion`  
  [in] Eine Zeichenfolge, welche die Version der zu ladenden CLR beschreibt.  
   
- Eine Versionsnummer in .NET Framework besteht aus vier Teilen, die durch Punkte getrennt sind: *"Hauptversion.Nebenversion.Build.Revision"*. Die als `pwszVersion` übergebene Zeichenfolge muss mit dem Buchstaben "v" beginnen, auf den die ersten drei Teile der Versionsnummer folgen (z. B. "v1.0.1529").  
+ Eine Versionsnummer in .NET Framework besteht aus vier Teilen, die durch Punkte getrennt sind: *"Hauptversion.Nebenversion.Build.Revision"* . Die als `pwszVersion` übergebene Zeichenfolge muss mit dem Buchstaben "v" beginnen, auf den die ersten drei Teile der Versionsnummer folgen (z. B. "v1.0.1529").  
   
  Einige Versionen der CLR werden mit einer Richtlinienanweisung installiert, welche die Kompatibilität mit früheren Versionen der CLR angibt. In der Standardeinstellung wertet das Startmodul `pwszVersion` anhand von Richtlinienanweisungen aus und lädt die neueste Version der Common Language Runtime, die mit der angeforderten Version kompatibel ist. Ein Host kann erzwingen, dass das Startmodul die Richtlinienauswertung überspringt und genau die in `pwszVersion` angegebene Version lädt, indem für `startupFlags` der Wert STARTUP_LOADER_SAFEMODE übergeben wird.  
   

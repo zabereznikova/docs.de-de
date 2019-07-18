@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d204ec29304fe0c4596950cd17c48d0c1d2ac616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 85ebddf4ef96be2a583e54082e4d4405b30adf46
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152619"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777766"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly-Methode
 Diese Methode ist nicht implementiert. Wird aufgerufen, gibt E_NOTIMPL zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT FindAssembly(  
     [in]  LPCWSTR  szAppBase,  
     [in]  LPCWSTR  szPrivateBin,  

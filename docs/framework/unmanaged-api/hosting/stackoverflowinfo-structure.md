@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0f5d522a24394369583692f8c564254529bf13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7de5a6d38d43c20ce52f609ef6514a1f28022416
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137345"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781139"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo-Struktur
 Speichert den Typ der Überlauf, die aufgetreten sind und Informationen für die Ausnahme, die aufgrund der Überlauf ausgelöst wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _StackOverflowInfo {  
     StackOverflowType   soType;  
     EXCEPTION_POINTERS  *pExceptionInfo;  
@@ -56,4 +56,4 @@ typedef struct _StackOverflowInfo {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingstrukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

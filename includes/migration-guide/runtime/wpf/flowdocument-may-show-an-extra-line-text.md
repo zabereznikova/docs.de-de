@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6c1740df66ead271afa5f97dc125587810946bc6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379699"
+---
 ### <a name="flowdocument-may-show-an-extra-line-of-text"></a>„FlowDocument“ zeigt möglicherweise eine zusätzliche Textzeile an
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Windows.Documents.FlowDocument.%23ctor?displayProperty=nameWithType></li><li><xref:System.Windows.Documents.FlowDocument.%23ctor(System.Windows.Documents.Block)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.FlowDocumentReader.%23ctor?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.FlowDocumentPageViewer.%23ctor?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.DocumentPageView.%23ctor?displayProperty=nameWithType></li></ul>|
-

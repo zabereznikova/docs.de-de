@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 951941092f67f66c5b17c8ae592569c2a8e6a675
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a876ff1ba0d2342f7975bf5adfc8ec03d21578f5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079629"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781642"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap-Enumeration
 Gibt Optionen für PInvoke-Aufrufs.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum  CorPinvokeMap {  
   
     pmNoMangle          = 0x0001,  

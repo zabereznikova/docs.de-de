@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 293ad30ebf47ca8684d158b1ae1772ab245d7981
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 658b88349bedcbcefd0b97226c7bd1fa34f656c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163110"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781913"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO-Struktur
 Stellt die Argumente einer Funktion dar, in Reihenfolge von links nach rechts.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {  
     ULONG numRanges;  
     ULONG totalArgumentSize;  

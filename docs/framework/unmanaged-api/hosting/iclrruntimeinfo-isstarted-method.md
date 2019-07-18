@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5b064f0b1cec07f29058300041711285bde66697
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073896"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748400"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted-Methode
 Gibt an, ob die Laufzeit gestartet wurde (d. h., ob die [ICLRRuntimeHost:: Start-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) aufgerufen wurde und erfolgreich war).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsStarted(  
         [out] BOOL     *pbStarted,  
         [out] DWORD    *pdwStartupFlags);  
@@ -46,10 +46,10 @@ HRESULT IsStarted(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_NOTIMPL|Die Version der common Language Runtime (CLR) ist älter als die CLR-Version in der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
+|E_NOTIMPL|Die Version der common Language Runtime (CLR) ist älter als die CLR-Version in .NET Framework 4.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode funktioniert nicht mit CLR-Versionen älter als die CLR-Version in der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
+ Diese Methode funktioniert älter als die CLR-Version in .NET Framework 4 nicht mit CLR-Versionen.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -63,5 +63,5 @@ HRESULT IsStarted(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

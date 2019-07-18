@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890500"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "65589523"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen
 Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeichenfolge ein gültiges E-Mail-Format aufweist.  
@@ -35,7 +35,7 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
   
  Um die Gültigkeit der E-Mail-Adresse zu überprüfen ruft die `IsValidEmail` -Methode die <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> -Methode mit dem regulären Ausdruck `(@)(.+)$` auf, um den Domänennamen von der E-Mail-Adresse zu trennen. Der dritte Parameter ist ein <xref:System.Text.RegularExpressions.MatchEvaluator> -Delegat, der die Methode darstellt, die den gefundenen Text verarbeitet und ersetzt. Das Muster des regulären Ausdrucks wird wie folgt interpretiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`(@)`|Das @ Zeichen wird als Übereinstimmung verwendet. Dies ist die erste Erfassungsgruppe.|  
 |`(.+)`|Ein- oder mehrmalige Übereinstimmung mit beliebigem Zeichen. Dies ist die zweite Erfassungsgruppe.|  
@@ -52,7 +52,7 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
   
  In diesem Beispiel kann das Muster des regulären Ausdrucks ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` wie in der folgenden Tabelle dargestellt interpretiert werden. Beachten Sie, dass der reguläre Ausdruck mit dem Flag <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> kompiliert wurde.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Starten Sie den Vergleich am Beginn der Zeichenfolge.|  
 |`(?(")`|Ermittelt, ob es sich beim ersten Zeichen um ein Anführungszeichen handelt. `(?(")` ist der Anfang eines Alternierungskonstrukts.|  
@@ -72,16 +72,6 @@ Im folgenden Beispiel wird mit einem regulären Ausdruck geprüft, ob eine Zeich
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Die `IsValidEmail` -Methode und die `DomainMapper` -Methode können in einer Bibliothek von Hilfsprogrammmethoden für reguläre Ausdrücke oder als private statische oder Instanzmethoden in der Anwendungsklasse enthalten sein.  
   
- Um sie in einer Bibliothek für reguläre Ausdrücke einzubeziehen, kopieren und fügen Sie den Code in ein Visual Studio-Klassenbibliotheksprojekt ein, oder kopieren und fügen Sie den Code in eine Textdatei ein, und kompilieren Sie ihn über die Befehlszeile mit einem Befehl wie dem folgenden (vorausgesetzt der Name der Quellcodedatei ist "RegexUtilities.cs" oder "RegexUtilities.vb"):  
-  
-```csharp  
-csc /t:library RegexUtilities.cs  
-```  
-  
-```vb  
-vbc /t:library RegexUtilities.vb  
-```  
-  
  Sie können auch die <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> -Methode verwenden, um diesen regulären Ausdruck in eine Bibliothek für reguläre Ausdrücke einzuschließen.  
   
  Wenn sie in einer Bibliothek für reguläre Ausdrücke verwendet werden, können Sie die Methoden mit dem folgenden Code aufrufen:  
@@ -89,20 +79,6 @@ vbc /t:library RegexUtilities.vb
  [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
  [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]  
   
- Wenn Sie eine Klassenbibliothek mit dem Namen "RegexUtilities.dll" erstellt haben, die den regulären Ausdruck zur E-Mail-Gültigkeitsprüfung enthält, können Sie dieses Beispiel mit einer der folgenden Methoden kompilieren:  
-  
--   In Visual Studio durch Erstellen eine Konsolenanwendung und Hinzufügen eines Verweises auf RegexUtilities.dll zum Projekt.  
-  
--   Über die Befehlszeile durch Kopieren und Einfügen des Quellcodes in eine Textdatei und durch Kompilieren mit einem Befehl wie dem folgenden (vorausgesetzt der Name der Quellcodedatei ist "Example.cs" oder "Example.vb"):  
-  
-    ```csharp  
-    csc Example.cs /r:RegexUtilities.dll  
-    ```  
-  
-    ```vb  
-    vbc Example.vb /r:RegexUtilities.dll  
-    ```  
-  
 ## <a name="see-also"></a>Siehe auch
 
-- [Reguläre Ausdrücke von .NET Framework](../../../docs/standard/base-types/regular-expressions.md)
+- [Reguläre Ausdrücke von .NET Framework](../../../docs/standard/base-types/regular-expressions.md)

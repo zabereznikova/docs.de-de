@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6817a2154e876dfa83540e3496f42acdcdb25a83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1cf6255bfd23b38be63cd609798643f9fa1e1f93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198764"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765769"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>ICLRRuntimeHost::SetHostControl-Methode
 Legt den Schnittstellenzeiger auf, die die common Language Runtime (CLR) verwenden können, um die die Implementierung der Hosts erhalten [IHostControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetHostControl(  
     [in] IHostControl* pHostControl  
 );  

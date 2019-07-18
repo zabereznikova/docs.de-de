@@ -17,27 +17,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcd7bfb52cadf740d8fe3cb92a09b071f530b7ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b577e915422814fbd0060fdda53b9e2bf7cd091a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417400"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760723"
 ---
 # <a name="icordebugstepperdeactivate-method"></a>ICorDebugStepper::Deactivate-Methode
-Bewirkt, dass dieser ICorDebugStepper, mit dem letzten Schrittbefehl "Abbrechen", den empfangen wurde.  
+Bewirkt, dass ICorDebugStepper in den letzten Schrittbefehl abzubrechen, den er empfangen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Deactivate ();  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ein neuer Schrittbefehl kann ausgegeben werden, nachdem der zuletzt empfangenen Schrittbefehl abgebrochen wurde.  
+ Nachdem die zuletzt empfangene Befehl abgebrochen wurde, kann ein neuer Schrittbefehl ausgestellt werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

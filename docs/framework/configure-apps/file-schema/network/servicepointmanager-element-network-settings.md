@@ -1,5 +1,5 @@
 ---
-title: <servicePointManager> -Element (Netzwerkeinstellungen)
+title: <servicePointManager>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704985"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<ServicePointManager >-Element (Netzwerkeinstellungen)
 Konfiguriert die Verbindungen mit Netzwerkressourcen.  
@@ -70,4 +70,4 @@ Konfiguriert die Verbindungen mit Netzwerkressourcen.
 
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

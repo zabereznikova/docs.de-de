@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: 3e3f1168a983b2fa608cbadffba0531afef7c92b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665779"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Vorgehensweise: Erstellen Sie eine Eigenschaft (Visual Basic)
 Sie setzen eine Eigenschaftsdefinition zwischen einem `Property` Anweisung und eine `End Property` Anweisung. Innerhalb dieser Definition, die Sie definieren eine `Get` Verfahren einen `Set` -Prozedur oder beides. Der Eigenschaftenwert Code ist in diesen Prozeduren.  
@@ -21,33 +21,33 @@ Sie setzen eine Eigenschaftsdefinition zwischen einem `Property` Anweisung und e
   
 ### <a name="to-create-a-property"></a>So erstellen Sie eine Eigenschaft  
   
-1.  Außerhalb einer Eigenschaft oder Prozedur verwendet eine [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), gefolgt von einer `End Property` Anweisung.  
+1. Außerhalb einer Eigenschaft oder Prozedur verwendet eine [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md), gefolgt von einer `End Property` Anweisung.  
   
-2.  Wenn die Eigenschaft Parameter akzeptiert, führen Sie die `Property` Schlüsselwort durch den Namen der Prozedur, und klicken Sie dann auf die Parameterliste in Klammern angegeben.  
+2. Wenn die Eigenschaft Parameter akzeptiert, führen Sie die `Property` Schlüsselwort durch den Namen der Prozedur, und klicken Sie dann auf die Parameterliste in Klammern angegeben.  
   
-3.  Führen Sie die Klammern mit einer `As` -Klausel, um den Datentyp des Werts der Eigenschaft angeben. Sie müssen den Datentyp für eine WriteOnly-Eigenschaft selbst angeben.  
+3. Führen Sie die Klammern mit einer `As` -Klausel, um den Datentyp des Werts der Eigenschaft angeben. Sie müssen den Datentyp für eine WriteOnly-Eigenschaft selbst angeben.  
   
-4.  Hinzufügen `Get` und `Set` Verfahren nach Bedarf. Sehen Sie die folgenden Anweisungen ein.  
+4. Hinzufügen `Get` und `Set` Verfahren nach Bedarf. Sehen Sie die folgenden Anweisungen ein.  
   
 ### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>Zum Erstellen einer Get-Prozedur, die einen Eigenschaftswert abruft.  
   
-1.  Zwischen der `Property` und `End Property` Schreiben von Anweisungen, eine [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), gefolgt von einem `End Get` Anweisung. Sie müssen keine Parameter für definieren die `Get` Verfahren.  
+1. Zwischen der `Property` und `End Property` Schreiben von Anweisungen, eine [Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md), gefolgt von einem `End Get` Anweisung. Sie müssen keine Parameter für definieren die `Get` Verfahren.  
   
-2.  Platzieren Sie den Code-Anweisungen zum Abrufen des Eigenschaftswerts zwischen der `Get` und `End Get` Anweisungen. Dieser Code kann es sich um andere Berechnungen und Datenverarbeitungsaufgaben zusätzlich zum Erstellen und Zurückgeben der Wert der Eigenschaft enthalten.  
+2. Platzieren Sie den Code-Anweisungen zum Abrufen des Eigenschaftswerts zwischen der `Get` und `End Get` Anweisungen. Dieser Code kann es sich um andere Berechnungen und Datenverarbeitungsaufgaben zusätzlich zum Erstellen und Zurückgeben der Wert der Eigenschaft enthalten.  
   
-3.  Verwenden einer `Return` -Anweisung den Wert der Eigenschaft an den aufrufenden Code zurückgegeben.  
+3. Verwenden einer `Return` -Anweisung den Wert der Eigenschaft an den aufrufenden Code zurückgegeben.  
   
  Müssen Sie schreiben eine `Get` Verfahren für die Schreib-Lese-Eigenschaft und für eine schreibgeschützte Eigenschaft. Sie müssen keine definieren eine `Get` Prozedur für eine WriteOnly-Eigenschaft.  
   
 ### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>So erstellen Sie eine Set-Prozedur schreibt, die den Wert einer Eigenschaft  
   
-1.  Zwischen der `Property` und `End Property` Schreiben von Anweisungen, eine [Set-Anweisung](../../../../visual-basic/language-reference/statements/set-statement.md), gefolgt von einem `End Set` Anweisung.  
+1. Zwischen der `Property` und `End Property` Schreiben von Anweisungen, eine [Set-Anweisung](../../../../visual-basic/language-reference/statements/set-statement.md), gefolgt von einem `End Set` Anweisung.  
   
-2.  In der `Set` -Anweisung, befolgen Sie die `Set` Schlüsselwort mit einer Liste von Parametern in Klammern. Dieser Parameter muss mindestens ein Value-Parameter für den Wert, der vom aufrufenden Code übergeben enthalten. Der Standardname für diesen Wertparameter lautet `Value`, aber Sie können einen anderen Namen verwenden, falls zutreffend. Der Value-Parameter müssen den gleichen Datentyp wie die Eigenschaft selbst.  
+2. In der `Set` -Anweisung, befolgen Sie die `Set` Schlüsselwort mit einer Liste von Parametern in Klammern. Dieser Parameter muss mindestens ein Value-Parameter für den Wert, der vom aufrufenden Code übergeben enthalten. Der Standardname für diesen Wertparameter lautet `Value`, aber Sie können einen anderen Namen verwenden, falls zutreffend. Der Value-Parameter müssen den gleichen Datentyp wie die Eigenschaft selbst.  
   
-3.  Platzieren Sie die codeanweisungen zum Speichern eines Werts in der Eigenschaft zwischen den `Set` und `End Set` Anweisungen. Dieser Code kann es sich um andere Berechnungen und Datenverarbeitungsaufgaben zusätzlich zu überprüfen, und speichern den Wert der Eigenschaft enthalten.  
+3. Platzieren Sie die codeanweisungen zum Speichern eines Werts in der Eigenschaft zwischen den `Set` und `End Set` Anweisungen. Dieser Code kann es sich um andere Berechnungen und Datenverarbeitungsaufgaben zusätzlich zu überprüfen, und speichern den Wert der Eigenschaft enthalten.  
   
-4.  Verwenden Sie den Value-Parameter, um den Wert des aufrufenden Codes zu akzeptieren. Sie können diesen Wert direkt in einer zuweisungsanweisung speichern oder verwenden es in einem Ausdruck zum Berechnen des internen Wert gespeichert werden.  
+4. Verwenden Sie den Value-Parameter, um den Wert des aufrufenden Codes zu akzeptieren. Sie können diesen Wert direkt in einer zuweisungsanweisung speichern oder verwenden es in einem Ausdruck zum Berechnen des internen Wert gespeichert werden.  
   
  Müssen Sie schreiben eine `Set` Verfahren für die Schreib-Lese-Eigenschaft und für eine WriteOnly-Eigenschaft. Sie müssen keine definieren eine `Set` Prozedur für eine schreibgeschützte Eigenschaft.  
   

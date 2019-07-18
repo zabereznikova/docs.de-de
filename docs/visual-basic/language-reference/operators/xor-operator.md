@@ -15,11 +15,11 @@ helpviewer_keywords:
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
 ms.openlocfilehash: 0cba3a995fb1ab774c8a5308e58f0b6905fc23f3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781172"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor-Operator (Visual Basic)
 Führt einen logischen Ausschluss für zwei `Boolean` Ausdrücke oder eine bitweise Exklusion zweier numerischer Ausdrücke.  

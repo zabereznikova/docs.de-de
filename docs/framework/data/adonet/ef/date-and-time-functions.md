@@ -3,11 +3,11 @@ title: Funktionen für Datum und Zeit
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
 ms.openlocfilehash: 8d5bbb9577e8016d6d5f2d0bef1932f6321a1e02
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606653"
 ---
 # <a name="date-and-time-functions"></a>Funktionen für Datum und Zeit
 Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Funktionen für Datum und Uhrzeit bereit, die einen `System.DateTime`-Eingabewert verarbeiten und ein Ergebnis vom Typ `string` oder `System.DateTime` bzw. einen numerischen Wert zurückgeben. Diese Funktionen befinden sich im SQLServer-Namespace, der bei der Verwendung von SqlClient verfügbar ist. Anhand der Namespaceigenschaft des Anbieters kann Entity Framework ermitteln, welches Präfix von diesem Anbieter für spezifische Konstrukte, wie Typen und Funktionen, verwendet wird. Die folgende Tabelle zeigt die Datums- und Uhrzeitfunktionen von SqlClient.  

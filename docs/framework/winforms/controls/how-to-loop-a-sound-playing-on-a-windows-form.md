@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e14d9de2326234b86c1f24b227e86f822fbfdb71
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188512"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592362"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Vorgehensweise: Starten einer Schleife eines wiedergegebenen Sounds in Windows Forms
 Im folgenden Codebeispiel wird ein Sound mehrfach wiedergegeben. Wenn der Code im `stopPlayingButton_Click`-Ereignishandler ausgeführt wird, werden alle aktuell wiedergegebenen Sounds beendet. Wenn kein Sound wiedergegeben wird, passiert nichts.  
@@ -27,28 +27,26 @@ Im folgenden Codebeispiel wird ein Sound mehrfach wiedergegeben. Wenn der Code i
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System" und "System.Windows.Forms".  
+- Verweise auf die Assemblys "System" und "System.Windows.Forms".  
   
--   Ersetzen Sie den Dateinamen `"c:\Windows\Media\chimes.wav"` durch einen gültigen Dateinamen.  
-  
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
+- Ersetzen Sie den Dateinamen `"c:\Windows\Media\chimes.wav"` durch einen gültigen Dateinamen.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Dateioperationen sollten in entsprechende Ausnahmebehandlungsblöcke eingeschlossen sein.  
   
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Pfadname ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>-Klasse).  
+- Der Pfadname ist falsch formatiert. Er enthält beispielsweise unzulässige Zeichen oder besteht nur aus Leerzeichen (<xref:System.ArgumentException>-Klasse).  
   
--   Der Pfad ist schreibgeschützt (<xref:System.IO.IOException>-Klasse).  
+- Der Pfad ist schreibgeschützt (<xref:System.IO.IOException>-Klasse).  
   
--   Der Pfadname ist `Nothing` (<xref:System.ArgumentNullException>-Klasse).  
+- Der Pfadname ist `Nothing` (<xref:System.ArgumentNullException>-Klasse).  
   
--   Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>-Klasse).  
+- Der Pfadname ist zu lang (<xref:System.IO.PathTooLongException>-Klasse).  
   
--   Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>-Klasse).  
+- Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>-Klasse).  
   
--   Der Pfad besteht nur aus einem Doppelpunkt ":" (<xref:System.NotSupportedException>-Klasse).  
+- Der Pfad besteht nur aus einem Doppelpunkt ":" (<xref:System.NotSupportedException>-Klasse).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens. Bei der Datei "Form1.vb" handelt es sich zum Beispiel nicht unbedingt um eine Visual Basic-Quelldatei. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  
@@ -56,5 +54,5 @@ Im folgenden Codebeispiel wird ein Sound mehrfach wiedergegeben. Wenn der Code i
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
 - [Übersicht über die SoundPlayer-Klasse](soundplayer-class-overview.md)

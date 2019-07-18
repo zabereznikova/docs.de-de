@@ -9,21 +9,21 @@ ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697666"
 ---
 # <a name="fusion-interfaces"></a>Fusion-Schnittstellen
-In diesem Abschnitt wird beschrieben, die nicht verwalteten Schnittstellen, die die Fusion-API verwendet, um die Eigenschaften der Ressourcen einer Anwendung zugreifen und die richtigen Versionen dieser Ressourcen für die Anwendung zu suchen.  
+In diesem Abschnitt wird beschrieben, die nicht verwalteten Schnittstellen, die die Fusion-API verwendet, um die Eigenschaften der Ressourcen einer Anwendung zugreifen und die richtigen Versionen dieser Ressourcen für die Anwendung zu ermitteln.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [IAppIdAuthority-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
- Stellt Methoden, die zum Generieren und Vergleichen von Schlüsseln für Anwendungsidentitäten und Verweise.  
+ Stellt Methoden, die zum Generieren und Vergleichen von Schlüsseln für Anwendungsidentitäten und Verweise bereit.  
   
  [IAssemblyCache-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
- Bietet eine Darstellung des globalen Assemblycaches.  
+ Bietet eine Darstellung der im globalen Assemblycache.  
   
  [IAssemblyCacheItem-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
  Stellt eine einzelne Assembly im globalen Assemblycache.  
@@ -32,7 +32,7 @@ In diesem Abschnitt wird beschrieben, die nicht verwalteten Schnittstellen, die 
  Stellt einen Enumerator für ein Array von `IAssemblyName` Objekte.  
   
  [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- Stellt Methoden zum Beschreiben und Arbeiten mit eindeutige Identität einer Assembly bereit.  
+ Stellt Methoden zum Beschreiben von und Arbeiten mit der Identität einer Assembly eindeutig.  
   
  [IDefinitionAppId-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md)  
  Stellt einen eindeutigen Bezeichner für den Code, der die Anwendung im aktuellen Bereich definiert.  
@@ -44,7 +44,7 @@ In diesem Abschnitt wird beschrieben, die nicht verwalteten Schnittstellen, die 
  Dient als Enumerator für eine Auflistung von `IDefinitionIdentity` Objekte.  
   
  [IEnumIDENTITY_ATTRIBUTE-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- Dient als Enumerator für die Attribute des Codeobjekts im aktuellen Bereich.  
+ Dient als ein Enumerator für die Attribute des Codeobjekts im aktuellen Bereich.  
   
  [IEnumReferenceIdentity-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)  
  Dient als Enumerator für eine Auflistung von `IReferenceIdentity` Objekte.  
@@ -62,7 +62,7 @@ In diesem Abschnitt wird beschrieben, die nicht verwalteten Schnittstellen, die 
  Stellt einen Verweis auf den eindeutigen Bezeichner für die Anwendung im aktuellen Bereich.  
   
  [IReferenceIdentity-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- Stellt einen Verweis auf die eindeutige Signatur des ein Codeobjekt dar.  
+ Stellt einen Verweis auf die eindeutige Signatur ein Codeobjekt dar.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Reflection>  

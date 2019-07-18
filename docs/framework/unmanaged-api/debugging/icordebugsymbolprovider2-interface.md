@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c9c3d92-f0de-4d4d-87f1-0c702a4808af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea60ecd542300bf3833c4977b7f0910399a2e409
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b787302902779695c48df6e02e2ee00b28f44cb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994109"
 ---
 # <a name="icordebugsymbolprovider2-interface"></a>ICorDebugSymbolProvider2-Schnittstelle
 Erweitert logisch die [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) Schnittstelle, um zusätzliche Debugsymbolinformationen abzurufen.  
@@ -36,6 +36,7 @@ Erweitert logisch die [ICorDebugSymbolProvider](../../../../docs/framework/unman
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugSymbolProvider-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
 - [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

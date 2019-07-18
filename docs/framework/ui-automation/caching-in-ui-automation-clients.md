@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 405199ff0652303fa5ccae18770307ea10e38b52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175824"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647219"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
@@ -64,21 +64,21 @@ ms.locfileid: "59175824"
 ## <a name="retrieving-cached-properties"></a>Abrufen von zwischengespeicherten Eigenschaften  
  Sie können die zwischengespeicherten Eigenschaften eines Elements über die folgenden Methoden und Eigenschaften abrufen.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  Wenn sich die angeforderte Eigenschaft nicht im Cache befindet, wird eine Ausnahme ausgelöst.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>, z. B. <xref:System.Windows.Automation.AutomationElement.Current%2A>, macht Sie einzelne Eigenschaften als Member einer Struktur verfügbar. Sie müssen diese Struktur jedoch nicht abrufen, denn Sie können direkt auf die einzelnen Eigenschaften zugreifen. Beispielsweise kann die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> -Eigenschaft aus `element.Cached.Name`abgerufen werden, wobei `element` ein <xref:System.Windows.Automation.AutomationElement>ist.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>macht, ähnlich wie <xref:System.Windows.Automation.AutomationElement.Current%2A>, einzelne Eigenschaften als Member einer Struktur verfügbar. Sie müssen diese Struktur jedoch nicht abrufen, denn Sie können direkt auf die einzelnen Eigenschaften zugreifen. Beispielsweise kann die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> -Eigenschaft aus `element.Cached.Name`abgerufen werden, wobei `element` ein <xref:System.Windows.Automation.AutomationElement>ist.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>Abrufen von zwischengespeicherten Steuerelementmustern  
  Sie können die zwischengespeicherten Steuerelementmuster eines Elements über die folgenden Methoden abrufen.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  Wenn sich das Muster nicht im Cache befindet, löst <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> eine Ausnahme aus, und <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> gibt `false`zurück.  
   

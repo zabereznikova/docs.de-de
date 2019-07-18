@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 29d0f33960534e8a5521b36eb6cc11655ab89c6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540253"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624640"
 ---
 # <a name="enabling-network-tracing"></a>Aktivieren der Netzwerkablaufverfolgung
 Die Netzwerkablaufverfolgung bietet Zugriff auf Informationen über den Aufruf von Methoden sowie Informationen zu dem von einer Anwendung generierten Netzwerkdatenverkehr. Sie müssen folgende Aufgaben abschließen, um die Netzwerkablaufverfolgung in Ihrer Anwendung zu aktivieren:  
   
--   Kompilieren Sie Ihren Code, während die Ablaufverfolgung aktiviert ist. Weitere Informationen finden Sie unter [How to: Compile Conditionally with Trace and Debug (Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen)](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
+- Kompilieren Sie Ihren Code, während die Ablaufverfolgung aktiviert ist. Weitere Informationen finden Sie unter [How to: Compile Conditionally with Trace and Debug (Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen)](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
   
--   Geben Sie ein Ziel für die Ablaufsverfolgungsausgabe an.  
+- Geben Sie ein Ziel für die Ablaufsverfolgungsausgabe an.  
   
--   Konfigurieren Sie das Verhalten der Netzwerkablaufverfolgung. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).  
+- Konfigurieren Sie das Verhalten der Netzwerkablaufverfolgung. Weitere Informationen finden Sie unter [How to: Konfigurieren der Netzwerkablaufverfolgung](../../../docs/framework/network-programming/how-to-configure-network-tracing.md).  
   
  Die am häufigsten verwendeten Ziele für die Ablaufverfolgung, die auch als Ablaufverfolgungslistener bezeichnet werden, sind der Standardlistener und die Protokolldatei.  
   
@@ -46,6 +46,7 @@ Die Netzwerkablaufverfolgung bietet Zugriff auf Informationen über den Aufruf v
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Interpretieren von Netzwerkablaufverfolgung](../../../docs/framework/network-programming/interpreting-network-tracing.md)
 - [Netzwerkablaufverfolgung in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6969f2c1df9b5b04122ed6aef550697171123cf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e15f4e8691db13b9a646a1e1d783075acfcdd896
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229016"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777078"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked-Methode
 Ruft einen Wert, der angibt, ob das angegebene Metadatentoken als verarbeitet gekennzeichnet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsTokenMarked (  
     [in]  mdToken  tk,   
     [out] BOOL     *pIsMarked  

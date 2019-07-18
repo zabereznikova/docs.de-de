@@ -2,12 +2,12 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 3762fdaee1312a7cb008386bb1f6b7bf7cb4316e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eb45bc5b7bc317d04f5275afadbb1879117e3af0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212309"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586942"
 ---
 # <a name="oracletypes"></a>OracleTypes
 Der .NET Framework-Datenanbieter für Oracle enthält mehrere Strukturen, die für das Arbeiten mit Oracle-Datentypen verwendet werden können. Dazu gehören <xref:System.Data.OracleClient.OracleNumber> und <xref:System.Data.OracleClient.OracleString>.  
@@ -17,9 +17,9 @@ Der .NET Framework-Datenanbieter für Oracle enthält mehrere Strukturen, die f
   
  In den unten stehenden C#-Beispielen werden folgende Aktionen ausgeführt:  
   
--   Erstellen einer Oracle-Tabelle, die anschließend mit Daten gefüllt wird.  
+- Erstellen einer Oracle-Tabelle, die anschließend mit Daten gefüllt wird.  
   
--   Zugriff auf die Daten mithilfe eines <xref:System.Data.OracleClient.OracleDataReader>. Das Darstellen der Daten erfolgt mithilfe mehrerer <xref:System.Data.OracleClient.OracleType>-Strukturen.  
+- Zugriff auf die Daten mithilfe eines <xref:System.Data.OracleClient.OracleDataReader>. Das Darstellen der Daten erfolgt mithilfe mehrerer <xref:System.Data.OracleClient.OracleType>-Strukturen.  
   
 ## <a name="creating-an-oracle-table"></a>Erstellen einer Oracle-Tabelle  
  In diesem Beispiel wird eine Oracle-Tabelle erstellt, die anschließend mit Daten gefüllt wird. Sie müssen dieses Beispiel ausführen, bevor das nächste Beispiel ausgeführt wird.  

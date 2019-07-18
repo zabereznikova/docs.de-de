@@ -2,21 +2,21 @@
 title: 'Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 668f72e2a891a9332093b97ebc927c156ad2087c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820294"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593010"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)
 Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:  
   
--   Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.  
+- Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.  
   
--   Durch Abfragen der Schnittmenge, um die Dateien abzurufen, die sich in beiden Ordnern befinden.  
+- Durch Abfragen der Schnittmenge, um die Dateien abzurufen, die sich in beiden Ordnern befinden.  
   
--   Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.  
+- Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.  
   
     > [!NOTE]
     >  Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.  
@@ -114,8 +114,8 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.  
-  
+ Erstellen Sie ein Konsolenanwendungsprojekt für VB.NET, mit einem `Imports` -Anweisung für den Namespace "System.Linq".
+ 
 ## <a name="see-also"></a>Siehe auch
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

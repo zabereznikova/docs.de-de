@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe237ca01d409636f184930d26ca970d58e90437
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b199d3226ec391fadc356b5efacdbf10a3e25adf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472951"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766157"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>ICorDebugProcess::EnableLogMessages-Methode
 Aktiviert und deaktiviert die Übertragung von Meldungen an den Debugger.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnableLogMessages([in]BOOL fOnOff);  
 ```  
   

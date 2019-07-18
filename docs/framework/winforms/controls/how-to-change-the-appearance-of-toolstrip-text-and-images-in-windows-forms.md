@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cf2f332b17bf6ff5b6ffb7cbc2d5777649728ec6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088472"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650844"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>Vorgehensweise: Ändern der Darstellung von ToolStrip-Text und -Bildern in Windows Forms
 Sie können steuern, ob Text und Bilder angezeigt werden, auf eine <xref:System.Windows.Forms.ToolStripItem> und wie diese im Verhältnis zueinander ausgerichtet sind und die <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>Definieren Sie die Anzeige auf einem ToolStripItem  
   
--   Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> Eigenschaft auf den gewünschten Wert. Mögliche Werte sind `Image`, `ImageAndText`, `None`, und `Text`. Die Standardeinstellung ist `ImageAndText`.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> Eigenschaft auf den gewünschten Wert. Mögliche Werte sind `Image`, `ImageAndText`, `None`, und `Text`. Die Standardeinstellung ist `ImageAndText`.  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -38,7 +38,7 @@ Sie können steuern, ob Text und Bilder angezeigt werden, auf eine <xref:System.
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>Ausrichten von Text auf einem ToolStripItem  
   
--   Legen Sie die <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> Eigenschaft auf den gewünschten Wert. Mögliche Werte sind eine beliebige Kombination von Top, Middle und unten mit Links, zentriert und rechts. Die Standardeinstellung ist `MiddleCenter`.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> Eigenschaft auf den gewünschten Wert. Mögliche Werte sind eine beliebige Kombination von Top, Middle und unten mit Links, zentriert und rechts. Die Standardeinstellung ist `MiddleCenter`.  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -51,7 +51,7 @@ Sie können steuern, ob Text und Bilder angezeigt werden, auf eine <xref:System.
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>Anpassung an das ein Bild auf einem ToolStripItem  
   
--   Legen Sie die <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> Eigenschaft auf den gewünschten Wert. Mögliche Werte sind eine beliebige Kombination von Top, Middle und unten mit Links, zentriert und rechts. Die Standardeinstellung ist `MiddleLeft`.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> Eigenschaft auf den gewünschten Wert. Mögliche Werte sind eine beliebige Kombination von Top, Middle und unten mit Links, zentriert und rechts. Die Standardeinstellung ist `MiddleLeft`.  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -64,7 +64,7 @@ Sie können steuern, ob Text und Bilder angezeigt werden, auf eine <xref:System.
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>Definieren Sie, wie im Verhältnis zueinander ToolStripItem-Text und Bilder angezeigt werden  
   
--   Legen Sie die <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> Eigenschaft auf den gewünschten Wert. Mögliche Werte sind `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, und `TextBeforeImage`. Die Standardeinstellung ist `ImageBeforeText`.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> Eigenschaft auf den gewünschten Wert. Mögliche Werte sind `ImageAboveText`, `ImageBeforeText`, `Overlay`, `TextAboveImage`, und `TextBeforeImage`. Die Standardeinstellung ist `ImageBeforeText`.  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  

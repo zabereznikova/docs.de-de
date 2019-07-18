@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: ee2449ff905bfdacaeeee4cc244db1ce50e00104
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e6aee5ea36c0315d5b01ae2734d17c9e7dab8e93
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863895"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Vorgehensweise: Das Ablegen eines Werts in einer Eigenschaft (Visual Basic)
 Sie können einen Wert in einer Eigenschaft speichern, indem Sie die Namen der Eigenschaft auf der linken Seite einer zuweisungsanweisung einfügen.  
@@ -22,17 +22,17 @@ Sie können einen Wert in einer Eigenschaft speichern, indem Sie die Namen der E
   
 ### <a name="to-store-a-value-in-a-property"></a>Zum Speichern eines Werts in einer Eigenschaft  
   
-1.  Verwenden Sie den Eigenschaftennamen, auf der linken Seite einer zuweisungsanweisung.  
+1. Verwenden Sie den Eigenschaftennamen, auf der linken Seite einer zuweisungsanweisung.  
   
      Im folgenden Beispiel wird den Wert des Visual Basic `TimeOfDay` Eigenschaft am Mittag implizit Aufrufen seiner `Set` Verfahren.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2.  Wenn die Eigenschaft Argumente akzeptiert, führen Sie die Namen der Eigenschaft in Klammern einschließen, um die Argumentliste einschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern optional weglassen.  
+2. Wenn die Eigenschaft Argumente akzeptiert, führen Sie die Namen der Eigenschaft in Klammern einschließen, um die Argumentliste einschließen. Wenn keine Argumente vorhanden sind, können Sie die Klammern optional weglassen.  
   
-3.  Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern durch Kommas getrennt ein. Achten Sie darauf, dass Sie die Argumente in der gleichen Reihenfolge angeben, dass die Eigenschaft über die entsprechenden Parameter definiert.  
+3. Platzieren Sie die Argumente in der Argumentliste innerhalb der Klammern durch Kommas getrennt ein. Achten Sie darauf, dass Sie die Argumente in der gleichen Reihenfolge angeben, dass die Eigenschaft über die entsprechenden Parameter definiert.  
   
-4.  Der Wert, der auf der rechten Seite der Zuweisung generiert wird in der Eigenschaft gespeichert.  
+4. Der Wert, der auf der rechten Seite der Zuweisung generiert wird in der Eigenschaft gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch
 

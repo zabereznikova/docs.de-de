@@ -5,11 +5,11 @@ ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868535"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > (Element (.NET Native)
 Definiert die Richtlinie für Codeelemente, auf die das enthaltende Attribut angewendet wird.  
@@ -70,6 +70,6 @@ Definiert die Richtlinie für Codeelemente, auf die das enthaltende Attribut ang
 ## <a name="see-also"></a>Siehe auch
 
 - [\<Type >-Element](../../../docs/framework/net-native/type-element-net-native.md)
-- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

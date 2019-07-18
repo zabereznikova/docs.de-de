@@ -2,12 +2,12 @@
 title: Module
 description: Erfahren Sie, wie eine F#-Modul eine Gruppierung von F#-Code, z. B. Werte, Typen und Funktionswerte in einem F#-Programm.
 ms.date: 04/24/2017
-ms.openlocfilehash: 9e5bef4ffe3301a69bbe32483625652d988f8a35
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 07ea1eb9ed06988a780fd3c5acccbc8383a4dc55
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611112"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641777"
 ---
 # <a name="modules"></a>Module
 

@@ -10,36 +10,36 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223627"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505504"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen
-Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und Bearbeiten von Bildern mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], müssen Sie erstellen eine <xref:System.Drawing.Graphics> Objekt. Die <xref:System.Drawing.Graphics> -Objekt stellt eine [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zeichenoberfläche und ist das Objekt, das zum Erstellen von Grafiken verwendet wird.  
+Bevor Sie Linien und Formen zeichnen, Rendern von Text oder anzeigen und Bearbeiten von Bildern mit GDI +, müssen Sie zum Erstellen einer <xref:System.Drawing.Graphics> Objekt. Die <xref:System.Drawing.Graphics> -Objekt stellt eine GDI + Zeichenoberfläche und ist das Objekt, das zum Erstellen von Grafiken verwendet wird.  
   
  Es gibt zwei Schritte bei der Arbeit mit Grafiken:  
   
-1.  Erstellen einer <xref:System.Drawing.Graphics> Objekt.  
+1. Erstellen einer <xref:System.Drawing.Graphics> Objekt.  
   
-2.  Mithilfe der <xref:System.Drawing.Graphics> Objekt, das Zeichnen von Linien und Formen, Rendern von Text oder anzeigen und Bearbeiten von Bildern.  
+2. Mithilfe der <xref:System.Drawing.Graphics> Objekt, das Zeichnen von Linien und Formen, Rendern von Text oder anzeigen und Bearbeiten von Bildern.  
   
 ## <a name="creating-a-graphics-object"></a>Erstellen ein Grafikobjekt  
  Ein Grafikobjekt kann auf verschiedene Arten erstellt werden.  
   
 #### <a name="to-create-a-graphics-object"></a>Um ein Graphics-Objekt zu erstellen.  
   
--   Erhalten Sie einen Verweis auf ein Graphics-Objekt als Teil der <xref:System.Windows.Forms.PaintEventArgs> in die <xref:System.Windows.Forms.Control.Paint> Ereignis eines Formulars oder Steuerelements. Dies ist in der Regel an, wie Sie einen Verweis auf ein Graphics-Objekt abrufen, beim von Zeichnungscode für ein Steuerelement zu erstellen. Auf ähnliche Weise können Sie ein Grafikobjekt auch abrufen, als Eigenschaft der <xref:System.Drawing.Printing.PrintPageEventArgs> bei der Verarbeitung der <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignis für eine <xref:System.Drawing.Printing.PrintDocument>.  
+- Erhalten Sie einen Verweis auf ein Graphics-Objekt als Teil der <xref:System.Windows.Forms.PaintEventArgs> in die <xref:System.Windows.Forms.Control.Paint> Ereignis eines Formulars oder Steuerelements. Dies ist in der Regel an, wie Sie einen Verweis auf ein Graphics-Objekt abrufen, beim von Zeichnungscode für ein Steuerelement zu erstellen. Auf ähnliche Weise können Sie ein Grafikobjekt auch abrufen, als Eigenschaft der <xref:System.Drawing.Printing.PrintPageEventArgs> bei der Verarbeitung der <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignis für eine <xref:System.Drawing.Printing.PrintDocument>.  
   
-     - oder -   
+     - oder -  
   
--   Rufen Sie die <xref:System.Windows.Forms.Control.CreateGraphics%2A> Methode des Steuerelements oder Formulars zum Abrufen eines Verweises auf eine <xref:System.Drawing.Graphics> Objekt, das die Zeichenoberfläche des betreffenden Steuerelements oder Formulars darstellt. Verwenden Sie diese Methode, wenn Sie auf einem Formular oder Steuerelement, das bereits zeichnen möchten.  
+- Rufen Sie die <xref:System.Windows.Forms.Control.CreateGraphics%2A> Methode des Steuerelements oder Formulars zum Abrufen eines Verweises auf eine <xref:System.Drawing.Graphics> Objekt, das die Zeichenoberfläche des betreffenden Steuerelements oder Formulars darstellt. Verwenden Sie diese Methode, wenn Sie auf einem Formular oder Steuerelement, das bereits zeichnen möchten.  
   
-     - oder -   
+     - oder -  
   
--   Erstellen Sie eine <xref:System.Drawing.Graphics> Objekt aus einem beliebigen Objekt, das von erbt <xref:System.Drawing.Image>. Dieser Ansatz ist hilfreich, wenn Sie ein bereits vorhandenes Bild ändern möchten.  
+- Erstellen Sie eine <xref:System.Drawing.Graphics> Objekt aus einem beliebigen Objekt, das von erbt <xref:System.Drawing.Image>. Dieser Ansatz ist hilfreich, wenn Sie ein bereits vorhandenes Bild ändern möchten.  
   
      Die folgenden Abschnitte enthalten Details zu jeder dieser Prozesse.  
   
@@ -48,11 +48,11 @@ Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Um einen Verweis auf ein Grafikobjekt aus den PaintEventArgs im Paint-Ereignis zu erhalten.  
   
-1.  Deklarieren Sie die <xref:System.Drawing.Graphics> Objekt.  
+1. Deklarieren Sie die <xref:System.Drawing.Graphics> Objekt.  
   
-2.  Weisen Sie die Variable zum Verweisen auf die <xref:System.Drawing.Graphics> -Objekt übergeben, als Teil der <xref:System.Windows.Forms.PaintEventArgs>.  
+2. Weisen Sie die Variable zum Verweisen auf die <xref:System.Drawing.Graphics> -Objekt übergeben, als Teil der <xref:System.Windows.Forms.PaintEventArgs>.  
   
-3.  Fügen Sie Code, um das Formular oder Steuerelement zu zeichnen.  
+3. Fügen Sie Code, um das Formular oder Steuerelement zu zeichnen.  
   
      Das folgende Beispiel zeigt, wie Sie verweisen auf eine <xref:System.Drawing.Graphics> -Objekt aus der <xref:System.Windows.Forms.PaintEventArgs> in die <xref:System.Windows.Forms.Control.Paint> Ereignis:  
   
@@ -94,7 +94,7 @@ Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und
   
 #### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>Erstellen Sie ein Graphics-Objekt mit der CreateGraphics-Methode  
   
--   Rufen Sie die <xref:System.Windows.Forms.Control.CreateGraphics%2A> -Methode der das Formular oder Steuerelement, von denen Sie Grafiken zu rendern möchten.  
+- Rufen Sie die <xref:System.Windows.Forms.Control.CreateGraphics%2A> -Methode der das Formular oder Steuerelement, von denen Sie Grafiken zu rendern möchten.  
   
     ```vb  
     Dim g as Graphics  
@@ -122,7 +122,7 @@ Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und
   
 #### <a name="to-create-a-graphics-object-from-an-image"></a>Um ein Grafikobjekt aus einem Image erstellen  
   
--   Rufen Sie die <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> Methode, und geben den Namen des Image-Variablen aus der Sie erstellen möchten eine <xref:System.Drawing.Graphics> Objekt.  
+- Rufen Sie die <xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType> Methode, und geben den Namen des Image-Variablen aus der Sie erstellen möchten eine <xref:System.Drawing.Graphics> Objekt.  
   
      Das folgende Beispiel zeigt, wie Sie mit einem <xref:System.Drawing.Bitmap> Objekt:  
   
@@ -149,30 +149,30 @@ Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und
 ## <a name="drawing-and-manipulating-shapes-and-images"></a>Zeichnen und Bearbeiten von Formen und Bilder  
  Nachdem dieser erstellt wurde, eine <xref:System.Drawing.Graphics> -Objekt zum Zeichnen von Linien und Formen, Rendern von Text oder anzeigen und Bearbeiten von Bildern verwendet werden kann. Die principal-Objekten, mit denen, die <xref:System.Drawing.Graphics> Objekt sind:  
   
--   Die <xref:System.Drawing.Pen> Klasse – zum Zeichnen von Linien, Formen oder Rendern geometrische anderen Darstellungen bereit.  
+- Die <xref:System.Drawing.Pen> Klasse – zum Zeichnen von Linien, Formen oder Rendern geometrische anderen Darstellungen bereit.  
   
--   Die <xref:System.Drawing.Brush> Klasse, für das Ausfüllen von Grafiken, z. B. gefüllte Formen, Bildern oder Text verwendet.  
+- Die <xref:System.Drawing.Brush> Klasse, für das Ausfüllen von Grafiken, z. B. gefüllte Formen, Bildern oder Text verwendet.  
   
--   Die <xref:System.Drawing.Font> Klasse – enthält eine Beschreibung der Formen, die zur Verwendung beim Rendern von Text.  
+- Die <xref:System.Drawing.Font> Klasse – enthält eine Beschreibung der Formen, die zur Verwendung beim Rendern von Text.  
   
--   Die <xref:System.Drawing.Color> Struktur – stellt die verschiedenen Farben angezeigt.  
+- Die <xref:System.Drawing.Color> Struktur – stellt die verschiedenen Farben angezeigt.  
   
 #### <a name="to-use-the-graphics-object-you-have-created"></a>Das Graphics-Objekt verwenden, die, das Sie erstellt haben  
   
--   Arbeiten Sie mit dem entsprechenden Objekt zeichnen, müssen Sie der oben aufgelisteten.  
+- Arbeiten Sie mit dem entsprechenden Objekt zeichnen, müssen Sie der oben aufgelisteten.  
   
      Weitere Informationen finden Sie unter den folgenden Themen:  
   
     |Zum Rendern|Siehe|  
     |---------------|---------|  
-    |Linien|[Vorgehensweise: Zeichnen einer Linie in Windows Forms](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formen|[Vorgehensweise: Zeichnen der Kontur einer Form](how-to-draw-an-outlined-shape.md)|  
-    |Text|[Vorgehensweise: Zeichnen von Text in einem Windows Form](how-to-draw-text-on-a-windows-form.md)|  
-    |Bilder|[Vorgehensweise: Darstellen von Bildern mit GDI+](how-to-render-images-with-gdi.md)|  
+    |Linien|[Vorgehensweise: Zeichnen einer Linie in einem Windows Form](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formen|[Vorgehensweise: Zeichnen der Kontur eine Form](how-to-draw-an-outlined-shape.md)|  
+    |Text|[Vorgehensweise: Zeichnen von Text in einem Windows Form](how-to-draw-text-on-a-windows-form.md)|  
+    |Bilder|[Vorgehensweise: Darstellen von Bildern mit GDI +](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Linien, Kurven und Formen](lines-curves-and-shapes.md)
-- [Vorgehensweise: Darstellen von Bildern mit GDI+](how-to-render-images-with-gdi.md)
+- [Vorgehensweise: Darstellen von Bildern mit GDI +](how-to-render-images-with-gdi.md)

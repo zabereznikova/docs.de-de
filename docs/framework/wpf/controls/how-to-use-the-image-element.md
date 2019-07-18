@@ -10,11 +10,11 @@ helpviewer_keywords:
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
 ms.openlocfilehash: 967159894e25721bdf380f851712e91d76088f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696271"
 ---
 # <a name="how-to-use-the-image-element"></a>Vorgehensweise: Verwenden des Bildelements
 Dieses Beispiel zeigt, wie Sie Bilder in einer Anwendung einfügen, mit der <xref:System.Windows.Controls.Image> Element.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
 ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972210"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement ist ein neues Steuerelement, das ersetzt die <xref:System.Windows.Forms.DataGrid> Steuerelement. Die <xref:System.Windows.Forms.DataGridView> -Steuerelement stellt zahlreiche grundlegenden und erweiterten Features, die fehlen in der <xref:System.Windows.Forms.DataGrid> Steuerelement. Darüber hinaus die Architektur der <xref:System.Windows.Forms.DataGridView> Steuerelement erleichtert das Erweitern und anpassen, die als die <xref:System.Windows.Forms.DataGrid> Steuerelement.  
@@ -45,6 +45,6 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement ist ein neues Steuere
 - [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
 - [Datenformatierung im DataGridView-Steuerelement in Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [Spaltensortiermodi im DataGridView-Steuerelement von Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
 - [Auswahlmodi im DataGridView-Steuerelement von Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)
 - [Anpassen des DataGridView-Steuerelements von Windows Forms](customizing-the-windows-forms-datagridview-control.md)

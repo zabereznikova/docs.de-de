@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 064d7ed61921f3f700311a1b09ee77e0c9818d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77d3a45f6213bc390e0b3da0d30cfbc55235b1d1
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554282"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170235"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)
 Dieses Beispiel verwendet die <xref:System.Xml.Serialization.XmlSerializer>-Klasse, um das Objekt aus einer Klasse in eine XML-Datei zu schreiben.  
@@ -45,18 +45,18 @@ public class XMLWrite
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.  
+ Die zu serialisierende Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
+- Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
   
--   Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
+- Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
   
--   Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).  
+- Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).  
   
--   Der Datenträger ist voll (<xref:System.IO.IOException>).  
+- Der Datenträger ist voll (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist. Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine `Create`-Berechtigung für den Ordner. Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung für den `Write`-Zugriff, also eine geringere Berechtigung. Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die `Read`-Berechtigung für eine einzelne Datei erteilt werden (anstatt `Create`-Berechtigungen für den gesamten Ordner zu gewähren).  

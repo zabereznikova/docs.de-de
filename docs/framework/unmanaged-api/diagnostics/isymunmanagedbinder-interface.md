@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b6d91f68ac737ce28cdbef926119bb3711bc1096
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940061"
 ---
 # <a name="isymunmanagedbinder-interface"></a>ISymUnmanagedBinder-Schnittstelle
 Stellt einen Symbolbinder für nicht verwalteten Code dar.  

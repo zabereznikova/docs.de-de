@@ -11,12 +11,12 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: 60b775408f5c43ff08fc5c7de72a8302b20b2264
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f3dff351052eaaf70737c6410c1367ab568f6fd0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145612"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586518"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Vorgehensweise: Anzeigen einer Einfügemarke in einem ListView-Steuerelement in Windows Forms
 Die Einfügemarke im <xref:System.Windows.Forms.ListView>-Steuerelement zeigt Benutzern die Stelle an, an der mit der Maus gezogene Elemente eingefügt werden. Wenn ein Benutzer ein Element an eine Stelle zwischen zwei anderen Elementen zieht, gibt die Einfügemarke die erwartete neue Position des Elements an.  
@@ -38,9 +38,7 @@ Die Einfügemarke im <xref:System.Windows.Forms.ListView>-Steuerelement zeigt Be
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System" und "System.Windows.Forms".  
-  
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
+- Verweise auf die Assemblys "System" und "System.Windows.Forms".  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -49,4 +47,4 @@ Die Einfügemarke im <xref:System.Windows.Forms.ListView>-Steuerelement zeigt Be
 - <xref:System.Windows.Forms.ListViewInsertionMark>
 - [ListView-Steuerelement](listview-control-windows-forms.md)
 - [Übersicht über das ListView-Steuerelement](listview-control-overview-windows-forms.md)
-- [Exemplarische Vorgehensweise: Ausführen von Drag & Drop-Operationen in Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [Exemplarische Vorgehensweise: Eine Drag & Drop-Vorgang in Windows Forms](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

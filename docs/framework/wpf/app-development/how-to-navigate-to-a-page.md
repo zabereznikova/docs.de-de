@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: c8e808180682bfd97f397d8cadd1e4deafd7eb06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 458769355521c8a3653e3bc80a6ab8a0d0f7c6dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141049"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622819"
 ---
 # <a name="how-to-navigate-to-a-page"></a>Vorgehensweise: Navigieren zu einer Seite
 Dieses Beispiel veranschaulicht mehrere Möglichkeiten, die in der eine Seite werden, von navigiert kann einem <xref:System.Windows.Navigation.NavigationWindow>.  
@@ -21,9 +21,9 @@ Dieses Beispiel veranschaulicht mehrere Möglichkeiten, die in der eine Seite we
 ## <a name="example"></a>Beispiel  
  Es ist möglich, dass eine <xref:System.Windows.Navigation.NavigationWindow> Navigieren zu einer Seite mit einer der folgenden:  
   
--   Die <xref:System.Windows.Navigation.NavigationWindow.Source%2A>-Eigenschaft  
+- Die <xref:System.Windows.Navigation.NavigationWindow.Source%2A>-Eigenschaft  
   
--   Die <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> -Methode.  
+- Die <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> -Methode.  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatetopagecode)]
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  

@@ -2,12 +2,12 @@
 title: 'Ressourcenverwaltung: Das Use-Schlüsselwort'
 description: Erfahren Sie mehr über die F# 'verwendet'-Schlüsselwort und die "using"-Funktion, die die Initialisierung und Freigabe von Ressourcen steuern kann.
 ms.date: 05/16/2016
-ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 3389f84713ec7cf5459dd0132249970f0e2ef3e0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613088"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641708"
 ---
 # <a name="resource-management-the-use-keyword"></a>Ressourcenverwaltung: Das Use-Schlüsselwort
 

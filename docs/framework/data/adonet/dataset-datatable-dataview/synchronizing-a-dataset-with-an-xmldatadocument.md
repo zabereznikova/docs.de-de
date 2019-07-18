@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607493"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Synchronisieren eines "DataSet "mit einem "XmlDataDocument"
 In diesem Abschnitt wird ein Schritt bei der Verarbeitung einer Bestellung mit einem <xref:System.Data.DataSet> mit strikter Typbindung beschrieben, das mit einem <xref:System.Xml.XmlDataDocument> synchronisiert wird. Erstellen Sie die folgenden Beispielen ein **DataSet** mit einem minimalistischen Schema, der nur einen Teil des XML-Quelldokuments übereinstimmt. Die Beispiele verwenden eine **XmlDataDocument** um die Genauigkeit der XML-Quelldokument beizubehalten aktivieren die **DataSet** verwendet werden, um eine Teilmenge der XML-Dokument verfügbar zu machen.  

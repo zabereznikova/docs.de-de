@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 8527f5f4a52c02744b02fea7ffaf833c223fa3f1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221146"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586220"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe
 In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.  
@@ -27,25 +27,25 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
   
 ### <a name="to-define-a-generic-type"></a>So definieren Sie einen generischen Typ  
   
-1.  Definieren Sie eine dynamische Assembly mit der Bezeichnung `GenericEmitExample1`. In diesem Beispiel wird die Assembly ausgeführt und auf einem Datenträger gespeichert, daher wird <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> angegeben.  
+1. Definieren Sie eine dynamische Assembly mit der Bezeichnung `GenericEmitExample1`. In diesem Beispiel wird die Assembly ausgeführt und auf einem Datenträger gespeichert, daher wird <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> angegeben.  
   
      [!code-cpp[EmitGenericType#2](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#2)]
      [!code-csharp[EmitGenericType#2](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#2)]
      [!code-vb[EmitGenericType#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#2)]  
   
-2.  Definieren Sie ein dynamisches Modul. Eine Assembly besteht aus ausführbaren Modulen. Der Modulname für eine Assembly mit nur einem Modul ist der gleiche wie der Assemblyname, und der Dateiname ist der Modulname plus eine Erweiterung.  
+2. Definieren Sie ein dynamisches Modul. Eine Assembly besteht aus ausführbaren Modulen. Der Modulname für eine Assembly mit nur einem Modul ist der gleiche wie der Assemblyname, und der Dateiname ist der Modulname plus eine Erweiterung.  
   
      [!code-cpp[EmitGenericType#3](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#3)]
      [!code-csharp[EmitGenericType#3](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#3)]
      [!code-vb[EmitGenericType#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#3)]  
   
-3.  Definieren Sie eine Klasse. In diesem Beispiel heißt die Klasse `Sample`.  
+3. Definieren Sie eine Klasse. In diesem Beispiel heißt die Klasse `Sample`.  
   
      [!code-cpp[EmitGenericType#4](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#4)]
      [!code-csharp[EmitGenericType#4](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#4)]
      [!code-vb[EmitGenericType#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#4)]  
   
-4.  Definieren Sie die generischen Typparameter von `Sample`, indem Sie ein Array von Zeichenfolgen, das die Namen der Parameter enthält, an die <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType>-Methode übergeben. Dadurch wird die Klasse zu einem generischen Typ. Der Rückgabewert ist ein Array von <xref:System.Reflection.Emit.GenericTypeParameterBuilder>-Objekten, die Typparameter darstellen, die Sie in Ihrem ausgegebenen Code verwenden können.  
+4. Definieren Sie die generischen Typparameter von `Sample`, indem Sie ein Array von Zeichenfolgen, das die Namen der Parameter enthält, an die <xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType>-Methode übergeben. Dadurch wird die Klasse zu einem generischen Typ. Der Rückgabewert ist ein Array von <xref:System.Reflection.Emit.GenericTypeParameterBuilder>-Objekten, die Typparameter darstellen, die Sie in Ihrem ausgegebenen Code verwenden können.  
   
      Im folgenden Code wird `Sample` zu einem generischen Typ mit den beiden Typparametern `TFirst` und `TSecond` gemacht. Damit der Code einfacher zu lesen ist, wird jede <xref:System.Reflection.Emit.GenericTypeParameterBuilder> in einer Variable mit dem gleichen Namen wie dem des Typparameters platziert.  
   
@@ -53,25 +53,25 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
      [!code-csharp[EmitGenericType#5](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#5)]
      [!code-vb[EmitGenericType#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#5)]  
   
-5.  Fügen Sie den Typparametern besondere Einschränkungen hinzu. In diesem Beispiel wird der Typparameter `TFirst` auf Verweistypen sowie auf Typen beschränkt, die parameterlose Konstruktoren besitzen.  
+5. Fügen Sie den Typparametern besondere Einschränkungen hinzu. In diesem Beispiel wird der Typparameter `TFirst` auf Verweistypen sowie auf Typen beschränkt, die parameterlose Konstruktoren besitzen.  
   
      [!code-cpp[EmitGenericType#6](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#6)]
      [!code-csharp[EmitGenericType#6](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#6)]
      [!code-vb[EmitGenericType#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#6)]  
   
-6.  Fügen Sie den Typparametern bei Bedarf Klassen- und Schnittstelleneinschränkungen hinzu. In diesem Beispiel wird der Typparameter `TFirst` auf Typen beschränkt, die von der Basisklasse abgeleitet wurden, die vom in der Variable `baseType` enthaltenen <xref:System.Type>-Objekt dargestellt wird. Diese implementiert die Schnittstellen, dessen Typen in den Variablen `interfaceA` und `interfaceB` enthalten sind. Das Codebeispiel enthält die Deklaration und die Zuweisung dieser Variablen.  
+6. Fügen Sie den Typparametern bei Bedarf Klassen- und Schnittstelleneinschränkungen hinzu. In diesem Beispiel wird der Typparameter `TFirst` auf Typen beschränkt, die von der Basisklasse abgeleitet wurden, die vom in der Variable `baseType` enthaltenen <xref:System.Type>-Objekt dargestellt wird. Diese implementiert die Schnittstellen, dessen Typen in den Variablen `interfaceA` und `interfaceB` enthalten sind. Das Codebeispiel enthält die Deklaration und die Zuweisung dieser Variablen.  
   
      [!code-cpp[EmitGenericType#7](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#7)]
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  Definieren Sie ein Feld. In diesem Beispiel wird der Typ des Felds durch den Typparameter `TFirst` angegeben. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> wird von <xref:System.Type> abgeleitet; Sie können also generische Typparameter immer dort benutzen, wo ein Typ verwendet werden kann.  
+7. Definieren Sie ein Feld. In diesem Beispiel wird der Typ des Felds durch den Typparameter `TFirst` angegeben. <xref:System.Reflection.Emit.GenericTypeParameterBuilder> wird von <xref:System.Type> abgeleitet; Sie können also generische Typparameter immer dort benutzen, wo ein Typ verwendet werden kann.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8.  Definieren Sie eine Methode, die die Typparameter des generischen Typs verwendet. Beachten Sie, dass solche Methoden nicht generisch sind, es sei denn, sie weisen ihre eigenen Typparameterlisten auf. Der folgende Code definiert eine `static`-Methode (`Shared` in Visual Basic), die ein Array von `TFirst` akzeptiert und eine `List<TFirst>` (`List(Of TFirst)` in Visual Basic) zurückgibt, die alle Elemente des Arrays enthält. Um diese Methode zu definieren ist es erforderlich, den Typ `List<TFirst>` zu definieren, indem Sie <xref:System.Type.MakeGenericType%2A> auf der generischen Typdefinition `List<T>` aufrufen. (Die `T` wird ausgelassen, wenn Sie den `typeof`-Operator (`GetType` in Visual Basic) verwenden, um die generische Typdefinition zu erhalten.) Der Parametertyp wird mithilfe der <xref:System.Type.MakeArrayType%2A>-Methode erstellt.  
+8. Definieren Sie eine Methode, die die Typparameter des generischen Typs verwendet. Beachten Sie, dass solche Methoden nicht generisch sind, es sei denn, sie weisen ihre eigenen Typparameterlisten auf. Der folgende Code definiert eine `static`-Methode (`Shared` in Visual Basic), die ein Array von `TFirst` akzeptiert und eine `List<TFirst>` (`List(Of TFirst)` in Visual Basic) zurückgibt, die alle Elemente des Arrays enthält. Um diese Methode zu definieren ist es erforderlich, den Typ `List<TFirst>` zu definieren, indem Sie <xref:System.Type.MakeGenericType%2A> auf der generischen Typdefinition `List<T>` aufrufen. (Die `T` wird ausgelassen, wenn Sie den `typeof`-Operator (`GetType` in Visual Basic) verwenden, um die generische Typdefinition zu erhalten.) Der Parametertyp wird mithilfe der <xref:System.Type.MakeArrayType%2A>-Methode erstellt.  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -127,15 +127,8 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]
  [!code-vb[EmitGenericType#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#1)]  
   
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
-  
--   Der Code enthält die für die Kompilierung erforderlichen `using`-Anweisungen für C# (`Imports` in Visual Basic).  
-  
--   Er werden keine weiteren Assemblyverweise benötigt.  
-  
--   Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
-  
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
 - [Verwenden der Reflektionsausgabe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [Szenarios für die Reflektionsausgabe mit dynamischen Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

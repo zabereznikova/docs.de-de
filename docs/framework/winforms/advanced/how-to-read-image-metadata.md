@@ -8,17 +8,17 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6c02f7e5744828fd8eddc88be8d7da28f3bc2a2a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173614"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505777"
 ---
 # <a name="how-to-read-image-metadata"></a>Vorgehensweise: Lesen von Bildmetadaten
-Einige Bilddateien enthalten Metadaten, die Sie lesen können, um zu bestimmen, Features des Abbilds an. Beispielsweise kann eine digitale Fotografie Metadaten enthalten, die Sie lesen können, um zu bestimmen, die Marke und Modell der Kamera verwendet, um das Image zu erfassen. Mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], Sie können die vorhandenen Metadaten lesen und Sie können auch neue Metadaten in Bilddateien schreiben.  
+Einige Bilddateien enthalten Metadaten, die Sie lesen können, um zu bestimmen, Features des Abbilds an. Beispielsweise kann eine digitale Fotografie Metadaten enthalten, die Sie lesen können, um zu bestimmen, die Marke und Modell der Kamera verwendet, um das Image zu erfassen. Mit GDI + können Sie vorhandene Metadaten gelesen, und Sie können auch neue Metadaten in Bilddateien schreiben.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Speichert ein einzelnes Stück von Metadaten in einem <xref:System.Drawing.Imaging.PropertyItem> Objekt. Erhalten Sie die <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaft eine <xref:System.Drawing.Image> Objekt, das alle Metadaten aus einer Datei abzurufen. Die <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaft gibt ein Array von <xref:System.Drawing.Imaging.PropertyItem> Objekte.  
+ GDI + speichert individuelle von Metadaten in einem <xref:System.Drawing.Imaging.PropertyItem> Objekt. Erhalten Sie die <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaft eine <xref:System.Drawing.Image> Objekt, das alle Metadaten aus einer Datei abzurufen. Die <xref:System.Drawing.Image.PropertyItems%2A> Eigenschaft gibt ein Array von <xref:System.Drawing.Imaging.PropertyItem> Objekte.  
   
  Ein <xref:System.Drawing.Imaging.PropertyItem> Objekt hat die folgenden vier Eigenschaften: `Id`, `Value`, `Len`, und `Type`.  
   
@@ -40,7 +40,7 @@ Einige Bilddateien enthalten Metadaten, die Sie lesen können, um zu bestimmen, 
   
 |Numerischer Wert|Beschreibung|  
 |-------------------|-----------------|  
-|1|A `Byte`|  
+|1|Eine `Byte`|  
 |2|Ein Array von `Byte` als ASCII-codierte Objekte|  
 |3|Eine 16-Bit-Ganzzahl|  
 |4|Eine 32-Bit-Ganzzahl|  
@@ -57,64 +57,66 @@ Einige Bilddateien enthalten Metadaten, die Sie lesen können, um zu bestimmen, 
  Das folgende Codebeispiel liest und zeigt die sieben Teile der Metadaten in der Datei `FakePhoto.jpg`. Das zweite Element der (Index 1)-Eigenschaft in der Liste hat <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (Equipment Manufacturers, OEMs) und <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (ASCII-codiertes Bytearray). Das Codebeispiel zeigt den Wert des Eigenschaftenelements.  
   
  Der Code erzeugt eine Ausgabe ähnlich der folgenden:  
+ 
+```
+ Property Item 0
   
- `Property Item 0`  
+ id: 0x320
   
- `id: 0x320`  
+ type: 2
+ 
+ length: 16 bytes 
   
- `type: 2`  
+ Property Item 1
   
- `length: 16 bytes`  
+ id: 0x10f
   
- `Property Item 1`  
+ type: 2 
   
- `id: 0x10f`  
+ length: 17 bytes
   
- `type: 2`  
+ Property Item 2
   
- `length: 17 bytes`  
+ id: 0x110
   
- `Property Item 2`  
+ type: 2
   
- `id: 0x110`  
+ length: 7 bytes
   
- `type: 2`  
+ Property Item 3
   
- `length: 7 bytes`  
+ id: 0x9003
   
- `Property Item 3`  
+ type: 2
   
- `id: 0x9003`  
+ length: 20 bytes
   
- `type: 2`  
+ Property Item 4
   
- `length: 20 bytes`  
+ id: 0x829a
   
- `Property Item 4`  
+ type: 5
   
- `id: 0x829a`  
+ length: 8 bytes
   
- `type: 5`  
+ Property Item 5
   
- `length: 8 bytes`  
+ id: 0x5090
   
- `Property Item 5`  
+ type: 3
   
- `id: 0x5090`  
+ length: 128 bytes
   
- `type: 3`  
+ Property Item 6
   
- `length: 128 bytes`  
+ id: 0x5091
   
- `Property Item 6`  
+ type: 3
   
- `id: 0x5091`  
+ length: 128 bytes
   
- `type: 3`  
-  
- `length: 128 bytes`  
-  
- `The equipment make is Northwind Camera.`  
+ The equipment make is Northwind Camera.
+ ```
   
 ### <a name="code"></a>Code  
  [!code-csharp[System.Drawing.WorkingWithImages#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]

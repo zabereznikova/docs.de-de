@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f01d9af8a78f6fd8855e81dadbc596f768ca601d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 30be03b6d57a7cfeff56234f02af586b704bb063
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110148"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772082"
 ---
 # <a name="icorprofilerinfosetfunctionrejit-method"></a>ICorProfilerInfo::SetFunctionReJIT-Methode
 Nicht implementiert. Nicht verwenden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetFunctionReJIT(  
     [in] FunctionID functionId);  
 ```  

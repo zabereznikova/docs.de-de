@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc785a48d0cdf1cf2fdc0245a27b8ef35fd2d81
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 717d2104db8addf40e5187cee4cc8c46e5dc355e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364514"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636743"
 ---
 # <a name="strongnamekeydelete-function"></a>StrongNameKeyDelete-Funktion
 

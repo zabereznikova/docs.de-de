@@ -1,5 +1,5 @@
 ---
-title: Einfügen von XML-Daten mit XPathNavigator
+title: Einfügen von XML-Daten mit "XPathNavigator"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,14 +9,14 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 224e4f3db31e4818833eb8411f44f547538534fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517252"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647915"
 ---
-# <a name="insert-xml-data-using-xpathnavigator"></a>Einfügen von XML-Daten mit XPathNavigator
+# <a name="insert-xml-data-using-xpathnavigator"></a>Einfügen von XML-Daten mit "XPathNavigator"
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, die zum Einfügen von nebengeordneten und untergeordneten Knoten sowie von Attributknoten in ein XML-Dokument verwendet werden. Diese Methoden können nur dann verwendet werden, wenn das <xref:System.Xml.XPath.XPathNavigator>-Objekt bearbeitet werden kann, d. h. seine <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A>-Eigenschaft muss `true` sein.  
   
  <xref:System.Xml.XPath.XPathNavigator>-Objekte, die ein XML-Dokument bearbeiten können, werden von der <xref:System.Xml.XmlDocument.CreateNavigator%2A>-Methode der <xref:System.Xml.XmlDocument>-Klasse erstellt. <xref:System.Xml.XPath.XPathNavigator>-Objekte, die von der <xref:System.Xml.XPath.XPathDocument>-Klasse erstellt werden, sind schreibgeschützt. Der Versuch, die Bearbeitungsmethoden eines <xref:System.Xml.XPath.XPathNavigator>-Objekts anzuwenden, das von einem <xref:System.Xml.XPath.XPathDocument>-Objekt erstellt wurde, führt zu einer <xref:System.NotSupportedException>.  
@@ -29,13 +29,13 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methode
 ### <a name="inserting-sibling-nodes"></a>Einfügen von nebengeordneten Knoten  
  Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt die folgenden Methoden zum Einfügen von nebengeordneten Knoten bereit.  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  Diese Methoden fügen vor und nach dem Knoten, auf dem gerade ein <xref:System.Xml.XPath.XPathNavigator>-Objekt positioniert ist, nebengeordnete Knoten ein.  
   
@@ -58,13 +58,13 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methode
 ### <a name="inserting-child-nodes"></a>Einfügen von untergeordneten Knoten  
  Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt die folgenden Methoden zum Einfügen von untergeordneten Knoten bereit.  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  Diese Methoden fügen untergeordnete Knoten an das Ende und an den Anfang der Liste untergeordneter Knoten des Knotens an, auf dem gegenwärtig ein <xref:System.Xml.XPath.XPathNavigator>-Objekt positioniert ist.  
   
@@ -87,9 +87,9 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methode
 ### <a name="inserting-attribute-nodes"></a>Einfügen von Attributknoten  
  Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt die folgenden Methoden zum Einfügen von Attributknoten bereit.  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  Diese Methoden fügen in dem Elementknoten, auf dem gerade ein <xref:System.Xml.XPath.XPathNavigator>-Objekt positioniert ist, Attributknoten ein. Die <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>-Methode erstellt in dem Elementknoten, auf dem gerade ein <xref:System.Xml.XPath.XPathNavigator>-Objekt positioniert ist, einen Attributknoten. Dabei werden das angegebene Namespacepräfix und der angegebene lokale Name, der Namespace-URI und der Wert als Parameter verwendet. Die <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>-Methode gibt ein <xref:System.Xml.XmlWriter>-Objekt zurück, das zum Einfügen von Attributknoten verwendet wird.  
   
@@ -227,26 +227,26 @@ navigator.SetTypedValue(DateTime.Now);
   
  Nachfolgend werden alle möglicherweise auftretenden Konflikte bei Namespaces dargestellt.  
   
--   Wenn sich ein Namespace innerhalb des Kontextbereichs des <xref:System.Xml.XmlReader>-Objekts befindet, bei dem sich das Präfix zur Zuordnung des Namespace-URI nicht im Kontext des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, wird dem neu eingefügten Knoten eine neue Namespacedeklaration hinzugefügt.  
+- Wenn sich ein Namespace innerhalb des Kontextbereichs des <xref:System.Xml.XmlReader>-Objekts befindet, bei dem sich das Präfix zur Zuordnung des Namespace-URI nicht im Kontext des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, wird dem neu eingefügten Knoten eine neue Namespacedeklaration hinzugefügt.  
   
--   Wenn sich der gleiche Namespace-URI innerhalb des Kontextbereichs des <xref:System.Xml.XmlReader>-Objekts und des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, aber wenn ihm in beiden Kontexten ein anderes Präfix zugeordnet wurde, wird dem neu eingefügten Knoten eine neue Namespacedeklaration hinzugefügt, wobei das Präfix und der Namespace-URI des <xref:System.Xml.XmlReader>-Objekts verwendet werden.  
+- Wenn sich der gleiche Namespace-URI innerhalb des Kontextbereichs des <xref:System.Xml.XmlReader>-Objekts und des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, aber wenn ihm in beiden Kontexten ein anderes Präfix zugeordnet wurde, wird dem neu eingefügten Knoten eine neue Namespacedeklaration hinzugefügt, wobei das Präfix und der Namespace-URI des <xref:System.Xml.XmlReader>-Objekts verwendet werden.  
   
--   Wenn sich das gleiche Namespacepräfix innerhalb des Kontextbereichs des <xref:System.Xml.XmlReader>-Objekts und des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, aber wenn ihm in beiden Kontexten ein anderer Namespace-URI zugeordnet wurde, wird dem neu eingefügten Knoten eine neue Namespacedeklaration hinzugefügt,. Dabei wird das Präfix mit dem Namespace-URI des <xref:System.Xml.XmlReader>-Objekts erneut deklariert.  
+- Wenn sich das gleiche Namespacepräfix innerhalb des Kontextbereichs des <xref:System.Xml.XmlReader>-Objekts und des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, aber wenn ihm in beiden Kontexten ein anderer Namespace-URI zugeordnet wurde, wird dem neu eingefügten Knoten eine neue Namespacedeklaration hinzugefügt,. Dabei wird das Präfix mit dem Namespace-URI des <xref:System.Xml.XmlReader>-Objekts erneut deklariert.  
   
--   Wenn das Präfix sowie der Namespace-URI im Kontext des <xref:System.Xml.XmlReader>-Objekts und im Kontext des <xref:System.Xml.XPath.XPathNavigator>-Objekts gleich sind, wird dem neu eingefügten Knoten keine neue Namespacedeklaration hinzugefügt.  
+- Wenn das Präfix sowie der Namespace-URI im Kontext des <xref:System.Xml.XmlReader>-Objekts und im Kontext des <xref:System.Xml.XPath.XPathNavigator>-Objekts gleich sind, wird dem neu eingefügten Knoten keine neue Namespacedeklaration hinzugefügt.  
   
 > [!NOTE]
 >  Die oben genannte Beschreibung gilt auch für Namespacedeklarationen mit einem leeren `string` als Präfix (z. B. die Standardnamespacedeklaration).  
   
  Nachfolgend werden alle möglicherweise auftretenden Konflikte bei `xml:lang` dargestellt.  
   
--   Wenn sich ein `xml:lang`-Attribut im Kontextbereich des <xref:System.Xml.XmlReader>-Objekts, aber nicht im Kontext des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, wird dem neu eingefügten Knoten ein `xml:lang`-Attribut hinzugefügt, dessen Wert aus dem <xref:System.Xml.XmlReader>-Objekt entnommen wird.  
+- Wenn sich ein `xml:lang`-Attribut im Kontextbereich des <xref:System.Xml.XmlReader>-Objekts, aber nicht im Kontext des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, wird dem neu eingefügten Knoten ein `xml:lang`-Attribut hinzugefügt, dessen Wert aus dem <xref:System.Xml.XmlReader>-Objekt entnommen wird.  
   
--   Wenn sich ein `xml:lang`-Attribut im Kontextbereich des <xref:System.Xml.XmlReader>-Objekts und des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, aber jedes Attribut einen anderen Wert besitzt, wird dem neu eingefügten Knoten ein `xml:lang`-Attribut hinzugefügt, dessen Wert aus dem <xref:System.Xml.XmlReader>-Objekt entnommen wird.  
+- Wenn sich ein `xml:lang`-Attribut im Kontextbereich des <xref:System.Xml.XmlReader>-Objekts und des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, aber jedes Attribut einen anderen Wert besitzt, wird dem neu eingefügten Knoten ein `xml:lang`-Attribut hinzugefügt, dessen Wert aus dem <xref:System.Xml.XmlReader>-Objekt entnommen wird.  
   
--   Wenn sich ein `xml:lang`-Attribut im Kontextbereich des <xref:System.Xml.XmlReader>-Objekts und des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, aber beide Attribute den gleichen Wert besitzen, wird dem neu eingefügten Knoten kein neues `xml:lang`-Attribut hinzugefügt.  
+- Wenn sich ein `xml:lang`-Attribut im Kontextbereich des <xref:System.Xml.XmlReader>-Objekts und des <xref:System.Xml.XPath.XPathNavigator>-Objekts befindet, aber beide Attribute den gleichen Wert besitzen, wird dem neu eingefügten Knoten kein neues `xml:lang`-Attribut hinzugefügt.  
   
--   Wenn sich ein `xml:lang`-Attribut im Kontextbereich des <xref:System.Xml.XPath.XPathNavigator>-Objekts, aber nicht im Kontextbereich des <xref:System.Xml.XmlReader>-Objekts befindet, wird dem neu eingefügten Knoten kein `xml:lang`-Attribut hinzugefügt.  
+- Wenn sich ein `xml:lang`-Attribut im Kontextbereich des <xref:System.Xml.XPath.XPathNavigator>-Objekts, aber nicht im Kontextbereich des <xref:System.Xml.XmlReader>-Objekts befindet, wird dem neu eingefügten Knoten kein `xml:lang`-Attribut hinzugefügt.  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>Einfügen von Knoten mit "XmlWriter"  
  Die im Abschnitt zum Einfügen von Knoten und Werten beschriebenen Methoden zum Einfügen von nebengeordneten und untergeordneten Knoten sowie von Attributknoten sind überladen. Die Methoden <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> und <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> der <xref:System.Xml.XPath.XPathNavigator>-Klasse geben ein <xref:System.Xml.XmlWriter>-Objekt zurück, das zum Einfügen von Knoten verwendet wird.  
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  Die folgenden beiden Anmerkungen sollten bei der Verwendung mehrerer <xref:System.Xml.XmlWriter>-Objekte unbedingt beachtet werden.  
   
--   Dem XML-Dokument werden von <xref:System.Xml.XmlWriter>-Objekten geschriebene XML-Fragmente hinzugefügt, wenn die <xref:System.Xml.XmlWriter.Close%2A>-Methode eines jeden <xref:System.Xml.XmlWriter>-Objekts aufgerufen wird. Bis zu diesem Zeitpunkt schreibt das <xref:System.Xml.XmlWriter>-Objekt ein nicht verbundenes Fragment. Das Ausführen eines Vorgangs für das XML-Dokument wirkt sich nicht auf Fragmente aus, die vor dem Aufrufen von <xref:System.Xml.XmlWriter> von einem <xref:System.Xml.XmlWriter.Close%2A>-Objekt geschrieben wurden.  
+- Dem XML-Dokument werden von <xref:System.Xml.XmlWriter>-Objekten geschriebene XML-Fragmente hinzugefügt, wenn die <xref:System.Xml.XmlWriter.Close%2A>-Methode eines jeden <xref:System.Xml.XmlWriter>-Objekts aufgerufen wird. Bis zu diesem Zeitpunkt schreibt das <xref:System.Xml.XmlWriter>-Objekt ein nicht verbundenes Fragment. Das Ausführen eines Vorgangs für das XML-Dokument wirkt sich nicht auf Fragmente aus, die vor dem Aufrufen von <xref:System.Xml.XmlWriter> von einem <xref:System.Xml.XmlWriter.Close%2A>-Objekt geschrieben wurden.  
   
--   Wenn sich auf einer bestimmten XML-Unterstruktur ein offenes <xref:System.Xml.XmlWriter>-Objekt befindet und diese Unterstruktur gelöscht wird, könnte das <xref:System.Xml.XmlWriter>-Objekt der Unterstruktur noch hinzugefügt werden. Aus der Teilstruktur wird einfach ein gelöschtes Fragment.  
+- Wenn sich auf einer bestimmten XML-Unterstruktur ein offenes <xref:System.Xml.XmlWriter>-Objekt befindet und diese Unterstruktur gelöscht wird, könnte das <xref:System.Xml.XmlWriter>-Objekt der Unterstruktur noch hinzugefügt werden. Aus der Teilstruktur wird einfach ein gelöschtes Fragment.  
   
--   Wenn an der gleichen Stelle im XML-Dokument mehrere <xref:System.Xml.XmlWriter>-Objekte geöffnet sind, werden sie dem XML-Dokument in der Reihenfolge hinzugefügt, in der die <xref:System.Xml.XmlWriter>-Objekte geschlossen werden, und nicht in der Reihenfolge, in der sie geöffnet wurden.  
+- Wenn an der gleichen Stelle im XML-Dokument mehrere <xref:System.Xml.XmlWriter>-Objekte geöffnet sind, werden sie dem XML-Dokument in der Reihenfolge hinzugefügt, in der die <xref:System.Xml.XmlWriter>-Objekte geschlossen werden, und nicht in der Reihenfolge, in der sie geöffnet wurden.  
   
  Im folgenden Beispiel werden ein <xref:System.Xml.XmlDocument>-Objekt sowie ein <xref:System.Xml.XPath.XPathNavigator>-Objekt erstellt und anschließend ein von der <xref:System.Xml.XmlWriter>-Methode zurückgegebenes <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>-Objekt verwendet, um die Struktur des ersten Buchs in der Datei `books.xml` zu erstellen. Anschließend wird sie im Beispiel als die Datei `book.xml` gespeichert.  
   

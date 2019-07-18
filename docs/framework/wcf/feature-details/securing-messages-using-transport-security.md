@@ -2,12 +2,12 @@
 title: Sichern von Nachrichten mit Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6f93fa37c6f1d6a0d7396c7f9ea5e97b44d1dc92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160887"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603518"
 ---
 # <a name="securing-messages-using-transport-security"></a>Sichern von Nachrichten mit Transportsicherheit
 In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher erläutert, mit der Sie an eine Warteschlange gesendete Nachrichten sichern können.  
@@ -25,11 +25,11 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
   
  Durch den Einsatz der Transportsicherheit mit <xref:System.ServiceModel.NetMsmqBinding> und <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> wird bestimmt, wie MSMQ-Nachrichten bei der Übertragung von der Übertragungswarteschlange zur Zielwarteschlange gesichert werden. Sicherheit bedeutet hier:  
   
--   Signieren der Nachricht, um sicherzustellen, dass sie nicht verfälscht wurde.  
+- Signieren der Nachricht, um sicherzustellen, dass sie nicht verfälscht wurde.  
   
--   Verschlüsseln der Nachricht, um sicherzustellen, dass sie nicht angezeigt oder verfälscht werden kann. Dies wird empfohlen, ist jedoch optional.  
+- Verschlüsseln der Nachricht, um sicherzustellen, dass sie nicht angezeigt oder verfälscht werden kann. Dies wird empfohlen, ist jedoch optional.  
   
--   Der Zielwarteschlangenmanager, der überprüft, dass der Sender der Nachricht wirklich der Absender ist.  
+- Der Zielwarteschlangenmanager, der überprüft, dass der Sender der Nachricht wirklich der Absender ist.  
   
  In MSMQ hat die Zielwarteschlange, unabhängig von der Authentifizierung, eine Access Control List (ACL), anhand der überprüft wird, ob der Client die Berechtigung hat, die Nachricht an die Zielwarteschlange zu senden. Die Empfängeranwendung wird ebenfalls daraufhin überprüft, ob sie die Berechtigung hat, die Nachricht aus der Zielwarteschlange zu empfangen.  
   
@@ -50,7 +50,7 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
  Wenn die Transportsicherheit aktiviert ist, ist die Standardeinstellung <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
 #### <a name="windows-domain-authentication-mode"></a>Windows-Domänenauthentifizierungsmodus  
- Um die Windows-Sicherheit verwenden zu können, ist die Active Directory-Integration erforderlich. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> ist der standardmäßige transportsicherheitsmodus. Wenn dies festgelegt ist, wird der WCF-Kanal fügt die Windows-SID an die MSMQ-Nachricht und verwendet das interne Zertifikat, das von Active Directory abgerufen. MSMQ verwendet dieses interne Zertifikat, um die Nachricht zu sichern. Der Warteschlangenmanager, der die Nachricht empfängt, verwendet Active Directory, um ein entsprechendes Zertifikat zu suchen, mit dem der Client authentifiziert werden kann. Zugleich wird dadurch überprüft, dass die SID auch der des Clients entspricht. Dieser Authentifizierungsschritt wird ausgeführt, wenn ein Zertifikat, sei es intern erstellt worden wie im Fall des `WindowsDomain`-Authentifizierungsmodus, oder extern wie im Fall des `Certificate`-Authentifizierungsmodus, an die Nachricht angehängt wird, selbst wenn für die Zielwarteschlange nicht festgelegt wurde, dass eine Authentifizierung notwendig ist.  
+ Um die Windows-Sicherheit verwenden zu können, ist die Active Directory-Integration erforderlich. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> ist der standardmäßige Transportsicherheitsmodus. Wenn dies festgelegt ist, wird der WCF-Kanal fügt die Windows-SID an die MSMQ-Nachricht und verwendet das interne Zertifikat, das von Active Directory abgerufen. MSMQ verwendet dieses interne Zertifikat, um die Nachricht zu sichern. Der Warteschlangenmanager, der die Nachricht empfängt, verwendet Active Directory, um ein entsprechendes Zertifikat zu suchen, mit dem der Client authentifiziert werden kann. Zugleich wird dadurch überprüft, dass die SID auch der des Clients entspricht. Dieser Authentifizierungsschritt wird ausgeführt, wenn ein Zertifikat, sei es intern erstellt worden wie im Fall des `WindowsDomain`-Authentifizierungsmodus, oder extern wie im Fall des `Certificate`-Authentifizierungsmodus, an die Nachricht angehängt wird, selbst wenn für die Zielwarteschlange nicht festgelegt wurde, dass eine Authentifizierung notwendig ist.  
   
 > [!NOTE]
 >  Beim Erstellen einer Warteschlange können Sie die Warteschlange als authentifizierte Warteschlange kennzeichnen, um anzugeben, dass für die Warteschlange eine Authentifizierung des Clients, der die Nachricht an die Warteschlange sendet, erforderlich ist. Dadurch wird sichergestellt, dass keine nicht authentifizierten Nachrichten in die Warteschlange aufgenommen werden.  

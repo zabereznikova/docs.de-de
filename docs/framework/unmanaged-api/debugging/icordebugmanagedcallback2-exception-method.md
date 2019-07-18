@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8952b34781045089945e7e72e179e88300b5fdd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103349"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761077"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception-Methode
 Benachrichtigt den Debugger, dass eine Suche nach einem Ausnahmehandler gestartet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Exception (  
     [in] ICorDebugAppDomain   *pAppDomain,  
     [in] ICorDebugThread      *pThread,  
@@ -66,7 +66,7 @@ HRESULT Exception (
   
  Der bestimmten Frame und Offset hängen von der `dwEventType` Parameter wie folgt:  
   
-|Wert des `dwEventType`|Wert des `pFrame`|Wert des `nOffset`|  
+|Wert von `dwEventType`|Wert von `pFrame`|Wert von `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|Der Frame, der die Ausnahme ausgelöst hat.|Der Anweisungszeiger im Frame.|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|Der Rahmen Benutzercode dem Punkt der ausgelösten Ausnahme am nächsten ist.|Der Anweisungszeiger im Frame.|  

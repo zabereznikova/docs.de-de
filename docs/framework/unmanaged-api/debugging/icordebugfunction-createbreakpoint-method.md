@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 695ce7f25813a191c74bec6563fc7f8ae8d1143d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6eb93b84baf9dcd82d89bb1a4711a91d97c52779
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496117"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754787"
 ---
 # <a name="icordebugfunctioncreatebreakpoint-method"></a>ICorDebugFunction::CreateBreakpoint-Methode
 Erstellt einen Haltepunkt am Anfang dieser Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateBreakpoint (  
     [out] ICorDebugFunctionBreakpoint **ppBreakpoint  
 );  

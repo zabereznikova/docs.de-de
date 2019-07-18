@@ -1,17 +1,15 @@
 ---
-title: Modernisieren Sie Ihre apps mit Überwachung und Telemetrie
+title: Modernisieren Ihrer Apps mit Überwachung und Telemetrie
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Modernisieren Sie Ihre apps mit Überwachung und Telemetrie
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147475"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758620"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernisieren Sie Ihre apps mit Überwachung und Telemetrie
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernisieren Ihrer Apps mit Überwachung und Telemetrie
 
 Wenn Sie eine Anwendung in der Produktion ausführen, ist es wichtig, dass Sie Erkenntnisse zur Leistung Ihrer Anwendung haben. Wird auf einer hohen Ebene ausgeführt? Erhalten Benutzer Fehler, oder ist die Anwendung, stabil und zuverlässig? Sie benötigen die umfassenden Leistungsüberwachungsfunktionen, leistungsstarke Warnungen und Dashboards, um sicherzustellen, dass Ihre Anwendung verfügbar sind und wie erwartet ist. Sie müssen auch in der Lage, schnell angezeigt werden, wenn ein Problem vorliegt, stellen Sie fest, wie viele Kunden betroffen sind, und führen eine Analyse der Grundursache und beheben Sie das Problem.
 
@@ -35,15 +33,13 @@ Sie können Zugriff auf Log Analytics über das OMS-Portal oder Azure-Portal, de
 
 Die [containerüberwachungslösung](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) im Log Analytics können Sie anzeigen und Verwalten Ihrer Docker- und Windows-Container-Hosts an einem zentralen Ort. Die Lösung zeigt, welche Container ausgeführt wird, welches containerimage sie ausgeführt, und wo Container ausgeführt werden. Sie können ausführliche Überwachungsinformationen, einschließlich der Befehle, die mit Containern verwendet werden, anzeigen. Sie können Container auch beheben, indem anzeigen und Durchsuchen zentralisierte Protokolle, ohne eine Remoteanzeige der Docker- oder Windows-Hosts. Sie können Container suchen, die Störungen verursachen und übermäßig viele Ressourcen, die auf einem Host sein können. Darüber hinaus können Sie die zentrale CPU, Arbeitsspeicher, Speicher und Netzwerkauslastung und Leistungsinformationen, für Container anzeigen. Auf Computern unter Windows können Sie zu zentralisieren und vergleichen Sie Protokolle von Windows Server-, Hyper-V und Docker-Containern. Die Lösung unterstützt die folgenden containerorchestratoren:
 
--   Docker Swarm
+- Docker Swarm
 
--   DC/OS
+- DC/OS
 
--   Kubernetes
+- Kubernetes
 
--   Service Fabric
-
--   Red Hat OpenShift
+- Red Hat OpenShift
 
 Abbildung 4-11 zeigt die Beziehungen zwischen verschiedenen containerhosts und Agents und OMS.
 
@@ -53,47 +49,43 @@ Abbildung 4-11 zeigt die Beziehungen zwischen verschiedenen containerhosts und A
 
 Sie können die Log Analytics containerüberwachungslösung zu verwenden:
 
--   Informationen über alle containerhosts an einem zentralen Ort anzeigen.
+- Informationen über alle containerhosts an einem zentralen Ort anzeigen.
 
--   Wissen, welche Container ausgeführt wird, welches Bild sie ausgeführt, und, in dem sie ausgeführt.
+- Wissen, welche Container ausgeführt wird, welches Bild sie ausgeführt, und, in dem sie ausgeführt.
 
--   Finden Sie in einen Audit-Trail für Aktionen in Containern.
+- Finden Sie in einen Audit-Trail für Aktionen in Containern.
 
--   Problembehandlung bei anzeigen und Durchsuchen zentralisierter Protokolle ohne Remoteanmeldung auf den Docker-Hosts.
+- Problembehandlung bei anzeigen und Durchsuchen zentralisierter Protokolle ohne Remoteanmeldung auf den Docker-Hosts.
 
--   Container, die möglicherweise "noisy Neighbors", und nutzen übermäßig viele Ressourcen auf einem Host zu finden.
+- Container, die möglicherweise "noisy Neighbors", und nutzen übermäßig viele Ressourcen auf einem Host zu finden.
 
--   Zeigen Sie die zentrale CPU, Arbeitsspeicher, Speicher und Netzwerkauslastung und Leistungsinformationen, für Container.
+- Zeigen Sie die zentrale CPU, Arbeitsspeicher, Speicher und Netzwerkauslastung und Leistungsinformationen, für Container.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Übersicht über die Überwachung in Microsoft Azure**
+- **Übersicht über die Überwachung in Microsoft Azure**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Was ist Application Insights?**
+- **Was ist Application Insights?**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
--   **Was ist Log Analytics?**
+- **Was ist Log Analytics?**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Containerüberwachungslösung in Log Analytics**
+- **Containerüberwachungslösung in Azure Monitor**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
--   **Übersicht über Azure Monitor**
+- **Übersicht über Azure Monitor**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Was ist die Operations Management Suite (OMS)?**
+- **Was ist die Operations Management Suite (OMS)?**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
-
--   **Überwachung von Windows Server-Containern in Service Fabric mit OMS**
-
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 >[!div class="step-by-step"]
 >[Zurück](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

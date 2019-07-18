@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
 ms.openlocfilehash: 3b32bbedb5f654ce75e90a827eb0c4dba1d4d345
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910688"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>Vorgehensweise: Anpassen der Teilstriche auf einem Schieberegler
 Dieses Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Controls.Slider> -Steuerelement mit Teilstrichen.  

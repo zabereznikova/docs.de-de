@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: de79182e326082786c1e0691f8888e30cd410f5d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59235222"
+---
 ### <a name="wpf-textbox-defaults-to-undo-limit-of-100"></a>WPF TextBox verwendet standardmäßig 100 als Grenzwert für die Aktion „Rückgängig machen“
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
-

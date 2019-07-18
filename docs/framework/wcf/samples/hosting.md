@@ -2,12 +2,12 @@
 title: Hosting WCF-Beispiele
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
-ms.openlocfilehash: a2b6767ac85a45587f68e0175cb80487baa640c3
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8ea382af4ed7b5d36c199a0a916756cbb935e753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332467"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876968"
 ---
 # <a name="hosting"></a>Hosting
 Dieser Abschnitt enthält Beispiele, die Hostingdienste von Windows Communication Foundation (WCF) zu veranschaulichen.  
@@ -20,7 +20,7 @@ Dieser Abschnitt enthält Beispiele, die Hostingdienste von Windows Communicatio
  Veranschaulicht die Integration der Hostebene in die Klassen im <xref:System.Web.Routing>-Namespace.  
   
  [ASP.NET-Kompatibilität](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)  
- Veranschaulicht das Aktivieren von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Kompatibilitätsmodus in WCF.  
+ Veranschaulicht, wie ASP.NET Kompatibilitätsmodus in WCF zu aktivieren.  
   
  [IIS-Hosting mithilfe von Inlinecode](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
  Zeigt, wie ein von IIS (Internet Information Services, Internetinformationsdienste) gehosteter Dienst implementiert wird, bei dem der Code sich inline in einer SVC-Datei befindet und bei Bedarf kompiliert wird.  

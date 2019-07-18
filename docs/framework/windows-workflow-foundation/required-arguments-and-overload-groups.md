@@ -2,12 +2,12 @@
 title: Erforderliche Argumente und Überladungsgruppen
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a2a5182adf34c6910f75e85505098075ffe7d3c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707871"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649335"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Erforderliche Argumente und Überladungsgruppen
 Aktivitäten können so konfiguriert werden, dass bestimmte Argumente gebunden werden müssen, wenn die Ausführung der Aktivität gültig sein soll. Das `RequiredArgument`-Attribut wird verwendet, um anzugeben, dass bestimmte Argumente für eine Aktivität erforderlich sind. Mit dem `OverloadGroup`-Attribut werden die Kategorien erforderlicher Argumente zusammen anzuordnen. Mit diesen Attributen können Aktivitätsautoren einfache oder komplexe Konfigurationen für die Aktivitätsvalidierung bereitstellen.  
@@ -144,19 +144,19 @@ Public class DbUpdate: AsyncCodeActivity
   
  Beim Definieren einer Überladungsgruppe gilt:  
   
--   Eine Überladungsgruppe darf keine Teilmenge bzw. kein äquivalenter Satz einer anderen Überladungsgruppe sein.  
+- Eine Überladungsgruppe darf keine Teilmenge bzw. kein äquivalenter Satz einer anderen Überladungsgruppe sein.  
   
     > [!NOTE]
     >  Es gibt allerdings eine Ausnahme zu dieser Regel. Wenn eine Überladungsgruppe eine Teilmenge einer anderen Überladungsgruppe ist und die Teilmenge nur Argumente enthält, bei denen `RequiredArgument` gleich `false` ist, ist die Überladungsgruppe gültig.  
   
--   Überladungsgruppen können sich überschneiden. Dabei tritt jedoch ein Fehler auf, wenn die Schnittmenge der Gruppen alle erforderlichen Argumente einer oder beider Überladungsgruppen enthält. Im vorherigen Beispiel trat eine Überschneidung zwischen der Überladungsgruppe `G2` und der Überladungsgruppe `G3` auf, aber da die Schnittmenge nicht alle Argumente einer oder beider Gruppen enthielt, war dies gültig.  
+- Überladungsgruppen können sich überschneiden. Dabei tritt jedoch ein Fehler auf, wenn die Schnittmenge der Gruppen alle erforderlichen Argumente einer oder beider Überladungsgruppen enthält. Im vorherigen Beispiel trat eine Überschneidung zwischen der Überladungsgruppe `G2` und der Überladungsgruppe `G3` auf, aber da die Schnittmenge nicht alle Argumente einer oder beider Gruppen enthielt, war dies gültig.  
   
  Beim Binden von Argumenten in einer Überladungsgruppe gilt:  
   
--   Eine Überladungsgruppe wird als gebunden angesehen, wenn alle `RequiredArgument`-Argumente in der Gruppe gebunden sind.  
+- Eine Überladungsgruppe wird als gebunden angesehen, wenn alle `RequiredArgument`-Argumente in der Gruppe gebunden sind.  
   
--   Wenn eine Gruppe über 0 `RequiredArgument`-Argumente verfügt und mindestens ein Argument gebunden ist, wird die Gruppe als gebunden betrachtet.  
+- Wenn eine Gruppe über 0 `RequiredArgument`-Argumente verfügt und mindestens ein Argument gebunden ist, wird die Gruppe als gebunden betrachtet.  
   
--   Es tritt ein Validierungsfehler auf, wenn keine der Überladungsgruppen gebunden ist, es sei denn, eine Überladungsgruppe enthält keine `RequiredArgument`-Argumente.  
+- Es tritt ein Validierungsfehler auf, wenn keine der Überladungsgruppen gebunden ist, es sei denn, eine Überladungsgruppe enthält keine `RequiredArgument`-Argumente.  
   
--   Es tritt ein Fehler auf, wenn mehr als eine Überladungsgruppe gebunden ist, d. h., wenn alle erforderlichen Argumente in einer Überladungsgruppe gebunden sind und zusätzlich ein weiteres Argument in einer anderen Überladungsgruppe gebunden ist.
+- Es tritt ein Fehler auf, wenn mehr als eine Überladungsgruppe gebunden ist, d. h., wenn alle erforderlichen Argumente in einer Überladungsgruppe gebunden sind und zusätzlich ein weiteres Argument in einer anderen Überladungsgruppe gebunden ist.

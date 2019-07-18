@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ff60852a85d003deb68cae96a184ac8d61c65f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 412e2bb7da7b5b3396342df169d56d2724ddb466
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089406"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740548"
 ---
 # <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS-Enumeration
 Identifiziert den aufzulistenden Prozesstyp.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     COR_PUB_MANAGEDONLY    = 0x00000001  
 } COR_PUB_ENUMPROCESS;  
@@ -54,4 +54,4 @@ typedef enum {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

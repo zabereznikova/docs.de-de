@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88cd08b4290739808079bc8ecb713a5c5ea96584
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1baee71b5b8575f51eb54fbc8a037a5dddd24500
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172561"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782522"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField-Methode
 Ruft einen Zeiger auf das FieldDef token für das Feld, das eingeschlossen wird durch das angegebene <xref:System.Type> und dem angegebenen Namen und Metadaten aufweist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT FindField (  
    [in]  mdTypeDef         td,  
    [in]  LPCWSTR           szName,  

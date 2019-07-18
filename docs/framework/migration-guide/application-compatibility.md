@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1939666b3dd271959c418e3d714b177e170fcd04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623789"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität im .NET Framework
 
@@ -42,11 +42,11 @@ Die Diagnose der .NET Kompatibilität umfasst von Roslyn unterstützte Analyzer,
 
 Jedes Problem umfasst die folgenden Informationen:
 
--   Die Beschreibung der Änderungen von einer früheren Version.
+- Die Beschreibung der Änderungen von einer früheren Version.
 
--   Wie sich die Änderung auf Kunden auswirkt und ob Problemumgehungen verfügbar sind, um die Kompatibilität zwischen Versionen beizubehalten.
+- Wie sich die Änderung auf Kunden auswirkt und ob Problemumgehungen verfügbar sind, um die Kompatibilität zwischen Versionen beizubehalten.
 
--   Eine Bewertung der Bedeutung der Änderung. Anwendungskompatibilitätsprobleme werden wie folgt kategorisiert:
+- Eine Bewertung der Bedeutung der Änderung. Anwendungskompatibilitätsprobleme werden wie folgt kategorisiert:
 
     |   |   |
     |---|---|
@@ -55,25 +55,24 @@ Jedes Problem umfasst die folgenden Informationen:
     |Grenzfall|Eine Änderung, die nur Apps in sehr spezifischen, nicht üblichen Szenarien beeinflusst.|
     |Transparent|Eine Änderung ohne nennenswerte Auswirkungen auf die Entwickler oder Benutzer der Anwendung.|
 
--   Die Version gibt an, wann die Änderung zum ersten Mal im Framework auftritt. Einige der Änderungen werden in einer bestimmten Version eingeführt und in einer späteren Version zurückgesetzt; dies wird ebenso beschrieben.
+- Die Version gibt an, wann die Änderung zum ersten Mal im Framework auftritt. Einige der Änderungen werden in einer bestimmten Version eingeführt und in einer späteren Version zurückgesetzt; dies wird ebenso beschrieben.
 
--   Art der Änderung:
+- Art der Änderung:
 
     |   |   |
     |---|---|
     |Neuzuweisung|Die Änderung wirkt sich auf Apps aus, die neu kompiliert werden, um auf eine neue Version von .NET Framework ausgerichtet zu werden.|
     |Laufzeit|Die Änderung wirkt sich auf eine vorhandene Anwendung aus, die auf eine frühere Version von .NET Framework ausgerichtet ist, aber unter einer höheren Version ausgeführt wird.|
 
--   Die betroffenen APIs, falls vorhanden.
+- Die betroffenen APIs, falls vorhanden.
 
--   Die IDs der verfügbaren Diagnosen.
+- Die IDs der verfügbaren Diagnosen.
 
 ## <a name="usage"></a>Verwendung
 Um zu starten, wählen Sie unten den Typ der Kompatibilitätsänderung aus:
 
 * [Neuausrichtungsänderungen](./retargeting/index.md)
 * [Änderungen zur Laufzeit](./runtime/index.md)
-
 
 ## <a name="see-also"></a>Siehe auch
 

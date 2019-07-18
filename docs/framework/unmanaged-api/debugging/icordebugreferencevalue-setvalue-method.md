@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59ef7bf8f17e79c9ae7b80dd314a5afce7fa9584
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 804aa4a6508713b2d6f2d154fc47e09638994468
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474175"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747367"
 ---
 # <a name="icordebugreferencevaluesetvalue-method"></a>ICorDebugReferenceValue::SetValue-Methode
 Legt fest, die angegebenen Speicheradresse. D.h., legt diese Methode ICorDebugReferenceValue, um auf ein Objekt zu verweisen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetValue (  
     [in] CORDB_ADDRESS    value  
 );  

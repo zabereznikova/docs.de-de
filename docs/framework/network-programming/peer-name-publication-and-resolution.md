@@ -2,12 +2,12 @@
 title: Peernamenveröffentlichung und -auflösung
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a0787972a61f5700d1e8728be96db8ef9ee749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682981"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623199"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Peernamenveröffentlichung und -auflösung
 
@@ -15,9 +15,9 @@ ms.locfileid: "54682981"
 
  Ein Peer geht folgendermaßen vor, um eine neue PNRP-ID (Peer Name Resolution Protocol) zu veröffentlichen:  
   
--   Er sendet PNRP-Veröffentlichungsnachrichten an seine Cachenachbarn (die Peers, die PNRP-IDs in der untersten Ebene des Caches registriert haben), um deren Caches zu starten.  
+- Er sendet PNRP-Veröffentlichungsnachrichten an seine Cachenachbarn (die Peers, die PNRP-IDs in der untersten Ebene des Caches registriert haben), um deren Caches zu starten.  
   
--   Er wählt zufällige Knoten in der Cloud aus, die nicht seine Nachbarn sind, und sendet ihnen PNRP-Namensauflösungsanforderungen für seine eigene P2P-ID. Der damit gestartete Endpunktbestimmungsprozess startet die Caches von zufälligen Knoten in der Cloud mit der PNRP-ID des Veröffentlichungspeers.  
+- Er wählt zufällige Knoten in der Cloud aus, die nicht seine Nachbarn sind, und sendet ihnen PNRP-Namensauflösungsanforderungen für seine eigene P2P-ID. Der damit gestartete Endpunktbestimmungsprozess startet die Caches von zufälligen Knoten in der Cloud mit der PNRP-ID des Veröffentlichungspeers.  
   
 Knoten der Version 2 von PNRP veröffentlichen keine PNRP-IDs, wenn diese nur andere P2P-IDs auflösen. Der Registrierungswert „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1“ (Typ „REG_DWORD“) gibt an, dass Peers PNRP nur für die Namensauflösung und niemals für die Namensveröffentlichung verwenden. Dieser Registrierungswert kann auch über die Gruppenrichtlinien konfiguriert werden.  
   
@@ -25,9 +25,9 @@ Knoten der Version 2 von PNRP veröffentlichen keine PNRP-IDs, wenn diese nur an
 
  Der Suchvorgang nach anderen Peers in einem PNRP-Netzwerk oder einer PNRP-Cloud besteht aus zwei Phasen:  
   
-1.  Endpunktbestimmung  
+1. Endpunktbestimmung  
   
-2.  und PNRP-ID-Auflösung  
+2. und PNRP-ID-Auflösung  
   
  In der Phase der Endpunktbestimmung bestimmt ein Peer, der die PNRP-ID eines Diensts auf einem anderen Computer versucht aufzulösen, die IPv6-Adresse dieses Remotepeers.  Der Remotepeer ist derjenige, der die PNRP-ID des Computers oder des Diensts veröffentlicht hat oder damit verknüpft ist.  
   
@@ -37,15 +37,16 @@ Knoten der Version 2 von PNRP veröffentlichen keine PNRP-IDs, wenn diese nur an
   
  Zur Durchführung der Namensauflösung in PNRP überprüft der Peer die Einträge in seinem eigenen Cache nach einem Eintrag, der mit der Ziel-PNRP-ID übereinstimmt. Hat er den Eintrag gefunden, sendet der Peer eine PNRP-Anforderungsnachricht an den Peer und wartet auf eine Antwort. Hat er keinen Eintrag für die PNRP-ID gefunden, sendet der Peer eine PNRP-Anforderungsnachricht an den Peer, dessen Eintrag der Ziel-PNRP-ID am ehesten entspricht. Der Knoten, der die PNRP-Anforderungsnachricht erhält, überprüft wiederum seinen eigenen Cache und führt die folgenden Schritte aus:  
   
--   Wird die PNRP-ID gefunden, antwortet der angeforderte Endpunktpeer dem anfordernden Peer direkt.  
+- Wird die PNRP-ID gefunden, antwortet der angeforderte Endpunktpeer dem anfordernden Peer direkt.  
   
--   Wird die PNRP-ID nicht gefunden und ist eine PNRP-ID im Cache der Ziel-PNRP-ID ähnlicher, sendet der angeforderte Peer eine Antwort an den anfordernden Peer. Diese Antwort enthält die IPv6-Adresse des Peers, dessen Eintrag stärker mit der Ziel-PNRP-ID übereinstimmt. Mithilfe der IP-Adresse aus der Antwort sendet der anfordernde Knoten eine weitere PNRP-Anforderungsnachricht an die IPv6-Adresse, die antworten und ihren Cache überprüfen soll.  
+- Wird die PNRP-ID nicht gefunden und ist eine PNRP-ID im Cache der Ziel-PNRP-ID ähnlicher, sendet der angeforderte Peer eine Antwort an den anfordernden Peer. Diese Antwort enthält die IPv6-Adresse des Peers, dessen Eintrag stärker mit der Ziel-PNRP-ID übereinstimmt. Mithilfe der IP-Adresse aus der Antwort sendet der anfordernde Knoten eine weitere PNRP-Anforderungsnachricht an die IPv6-Adresse, die antworten und ihren Cache überprüfen soll.  
   
--   Wird die PNRP-ID nicht gefunden und befindet sich im Cache keine PNRP-ID, die stärker mit der Ziel-PNRP-ID übereinstimmt, sendet der angeforderte Peer dem anfordernden Peer eine Antwort, in der diese Bedingung angegeben wird. Der anfordernde Peer wählt anschließend die nächstgelegene PNRP-ID aus.  
+- Wird die PNRP-ID nicht gefunden und befindet sich im Cache keine PNRP-ID, die stärker mit der Ziel-PNRP-ID übereinstimmt, sendet der angeforderte Peer dem anfordernden Peer eine Antwort, in der diese Bedingung angegeben wird. Der anfordernde Peer wählt anschließend die nächstgelegene PNRP-ID aus.  
   
 Der anfordernde Peer wiederholt diesen Vorgang mit aufeinanderfolgenden Iterationen, bis er den Knoten, der die PNRP-ID registriert hat, gefunden hat.  
   
  Innerhalb des <xref:System.Net.PeerToPeer>-Namespaces besteht eine m:n-Beziehung zwischen den <xref:System.Net.PeerToPeer.PeerName>- Datensätzen, die Endpunkte enthalten, und den PNRP-Clouds oder -Meshs, in denen sie kommunizieren. Bei doppelten oder veralteten Einträgen sowie bei mehreren Knoten mit demselben Peernamen können PNRP-Knoten aktuelle Informationen mithilfe der <xref:System.Net.PeerToPeer.PeerNameResolver>-Klasse abrufen. Die <xref:System.Net.PeerToPeer.PeerNameResolver>-Methoden verwenden einen einzelnen Peernamen, um die Perspektive für die Peernamendatensätze und Clouds auf eine 1:n-Beziehung zu vereinfachen. Diese Methode ähnelt einer Abfrage, die mit einer relationalen Tabellenverknüpfung ausgeführt wird. Nach erfolgreichem Abschluss gibt das Resolverobjekt eine <xref:System.Net.PeerToPeer.PeerNameRecordCollection> für den angegebenen Peernamen zurück.  Ein Peername kommt z.B. in allen Peernamendatensätzen der Sammlung nach Cloud geordnet vor. Dies sind die Instanzen des Peernamens, dessen Daten von einer PNRP-basierten Anwendung angefordert werden können.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.PeerToPeer>

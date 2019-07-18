@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
 ms.openlocfilehash: 6b44f63d20e0e2ed0d2486003b15a932ba939f55
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670234"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding>
 Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge oder für die Kommunikation über SOAP-Vermittler geeignet ist.  
@@ -91,7 +91,7 @@ Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `WSDualHttpBinding` bietet die gleiche Unterstützung für Webdienstprotokolle wie die `WSHttpBinding`, jedoch für die Verwendung mit Duplexverträgen. `WSDualHttpBinding` unterstützt ausschließlich SOAP-Sicherheit und erfordert zuverlässiges messaging. Diese Bindung macht es erforderlich, dass der Client einen öffentlichen URI aufweist, der einen Rückrufendpunkt für den Dienst bereitstellt. Dies wird vom `clientBaseAddress`-Attribut zur Verfügung gestellt. Eine Dualbindung macht die IP-Adresse des Clients für den Dienst verfügbar. Der Client sollte Sicherheitseinstellungen verwenden, um sicherzustellen, dass nur Verbindungen zu vertrauenswürdigen Diensten hergestellt werden.  
+ Die `WSDualHttpBinding` bietet die gleiche Unterstützung für Webdienstprotokolle wie die `WSHttpBinding`, jedoch für die Verwendung mit Duplexverträgen. `WSDualHttpBinding` unterstützt ausschließlich SOAP-Sicherheit und erfordert zuverlässiges Messaging. Diese Bindung macht es erforderlich, dass der Client einen öffentlichen URI aufweist, der einen Rückrufendpunkt für den Dienst bereitstellt. Dies wird vom `clientBaseAddress`-Attribut zur Verfügung gestellt. Eine Dualbindung macht die IP-Adresse des Clients für den Dienst verfügbar. Der Client sollte Sicherheitseinstellungen verwenden, um sicherzustellen, dass nur Verbindungen zu vertrauenswürdigen Diensten hergestellt werden.  
   
  Diese Bindung kann zur zuverlässigen Kommunikation über einen oder mehrere SOAP-Vermittler verwendet werden.  
   

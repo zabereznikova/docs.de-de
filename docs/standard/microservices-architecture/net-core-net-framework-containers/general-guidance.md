@@ -1,15 +1,13 @@
 ---
 title: Allgemeine Anleitung
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Allgemeine Anleitung
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 6ff6170fd1cdd0c69ecc8729cc8199cceea43ffa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0981cb16d5aa2036391caba0cf6ad3ac5c44ed6f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128478"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644133"
 ---
 # <a name="general-guidance"></a>Allgemeine Anleitung
 
@@ -17,11 +15,11 @@ Dieser Abschnitt enthält eine Zusammenfassung darüber, wann .NET Core bzw. .NE
 
 Sie sollten .NET Core mit Linux- oder Windows-Containern für Ihre containerisierte Docker-Serveranwendung verwenden, wenn:
 
--   Es bestehen plattformübergreifende Anforderungen. Sie beispielsweise Linux- und Windows-Container verwenden möchten
+- Es bestehen plattformübergreifende Anforderungen. Sie beispielsweise Linux- und Windows-Container verwenden möchten
 
--   Die Architektur Ihrer Anwendung auf Microservices basiert
+- Die Architektur Ihrer Anwendung auf Microservices basiert
 
--   Sie Container schnell starten müssen und den Ressourcenbedarf pro Container gering halten möchten, um eine höhere Dichte oder mehr Container pro Hardwareeinheit zu erreichen und Ihre Kosten zu senken
+- Sie Container schnell starten müssen und den Ressourcenbedarf pro Container gering halten möchten, um eine höhere Dichte oder mehr Container pro Hardwareeinheit zu erreichen und Ihre Kosten zu senken
 
 Kurz gesagt sollte Ihre Wahl standardmäßig auf .NET Core fallen, wenn Sie neue .NET-Containeranwendungen erstellen. .NET Core weist viele Vorteile auf und entspricht dem Konzept und der Arbeitsweise von Containern am besten.
 
@@ -29,20 +27,20 @@ Ein zusätzlicher Vorteil bei der Verwendung von .NET Core besteht darin, dass S
 
 Sie sollten .NET Framework für Ihre containerisierte Docker-Serveranwendung verwenden, wenn:
 
--   Ihre Anwendung derzeit .NET Framework verwendet und starke Abhängigkeiten von Windows aufweist
+- Ihre Anwendung derzeit .NET Framework verwendet und starke Abhängigkeiten von Windows aufweist
 
--   Sie Windows-APIs verwenden müssen, die von .NET Core nicht unterstützt werden
+- Sie Windows-APIs verwenden müssen, die von .NET Core nicht unterstützt werden
 
--   Sie .NET-Bibliotheken von Drittanbietern oder NuGet-Pakete verwenden müssen, die für .NET Core nicht verfügbar sind
+- Sie .NET-Bibliotheken von Drittanbietern oder NuGet-Pakete verwenden müssen, die für .NET Core nicht verfügbar sind
 
 Das Verwenden von .NET Framework auf Docker kann Ihre Bereitstellungen verbessern, indem Bereitstellungsprobleme reduziert werden. Dieses [Lift & Shift-Szenario](https://aka.ms/liftandshiftwithcontainersebook) ist wichtig für das Containerisieren von veralteten Anwendungen, die ursprünglich mit dem herkömmlichen .NET Framework entwickelt wurden, z.B. mit ASP.NET WebForms, MVC-Web-Apps oder WCF-Diensten (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **eBook: Modernize existing .NET Framework applications with Azure and Windows Containers** (E-Book: Modernisieren vorhandener .NET Framework-Anwendungen mit Azure und Windows-Containern)  
+- **eBook: Modernize existing .NET Framework applications with Azure and Windows Containers** (E-Book: Modernisieren vorhandener .NET Framework-Anwendungen mit Azure und Windows-Containern)  
     https://aka.ms/liftandshiftwithcontainersebook
 
--   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (Beispiel-Apps: Modernisieren von veralteten ASP.NET-Web-Apps mithilfe von Windows-Containern)  
+- **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (Beispiel-Apps: Modernisieren von veralteten ASP.NET-Web-Apps mithilfe von Windows-Containern)  
     https://aka.ms/eshopmodernizing
 
 >[!div class="step-by-step"]

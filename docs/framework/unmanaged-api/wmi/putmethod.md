@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74654cf18d87fed8ad5ce9a4cd4249d56fdb4343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ca510f30f0f38ae54eb83046b0e9d5541db882d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693450"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758692"
 ---
 # <a name="putmethod-function"></a>PutMethod-Funktion
 Erstellt eine Methode.
@@ -30,7 +30,7 @@ Erstellt eine Methode.
     
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT PutMethod (
    [in] int                vFunc, 
    [in] IWbemClassObject*  ptr, 
@@ -53,14 +53,13 @@ HRESULT PutMethod (
 [in] Der Name der Methode zu erstellen. 
 
 `lFlags`  
-[in]: Reserviert Dieser Parameter muss 0 sein.
+[in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pSignatureIn`  
 [in] Ein Zeiger auf eine Kopie der [__Parameters Systemklasse](/windows/desktop/WmiSdk/--parameters) , enthält die `in` Parameter für die Methode. Dieser Parameter wird ignoriert, wenn auf festgelegt `null`.  
 
 `pSignatureOut`  
 [in]  Ein Zeiger auf eine Kopie der [__Parameters Systemklasse](/windows/desktop/WmiSdk/--parameters) , enthält die `out` Parameter für die Methode. Dieser Parameter wird ignoriert, wenn auf festgelegt `null`.
- 
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -102,4 +101,5 @@ Ein Beispiel finden Sie unter den [IWbemClassObject::PutMethod](/windows/desktop
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

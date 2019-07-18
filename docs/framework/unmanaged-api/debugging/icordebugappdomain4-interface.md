@@ -5,11 +5,11 @@ ms.assetid: c536b9dc-148e-4924-bde1-1daa98d49d90
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c6077f16f07c5f1fc76b6525ccb036aa1e4fa06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922166"
 ---
 # <a name="icordebugappdomain4-interface"></a>ICorDebugAppDomain4-Schnittstelle
 Erweitert logisch die ICorDebugAppDomain-Schnittstelle, um ein verwaltetes Objekt über einen COM callable Wrapper zu erhalten.  
@@ -33,5 +33,5 @@ Erweitert logisch die ICorDebugAppDomain-Schnittstelle, um ein verwaltetes Objek
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

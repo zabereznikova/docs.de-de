@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b84a2fad53feda2996515781035c0eaad5828d54
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a90f0a0319d88654d0310530749ef35b7095e0fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473434"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754430"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength-Methode
 Erstellt eine Zeichenfolge der angegebenen Länge und mit dem angegebenen Inhalt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT NewStringWithLength (  
     [in] LPCWSTR               string,  
     [in] UINT                  uiLength  

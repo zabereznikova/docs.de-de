@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eb5c7ec85c0adb301fb722155caaed3c14e0e19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 59af484710dc0848d7712017021adc5f3dcb7bce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137721"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749771"
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>IHostTaskManager::BeginThreadAffinity-Methode
 Benachrichtigt, dass der Host, der von Code verwaltetem eine Phase eintritt, in dem die aktuelle Aufgabe nicht auf einen anderen Betriebssystemthread verschoben werden muss.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT BeginThreadAffinity ();  
 ```  
   

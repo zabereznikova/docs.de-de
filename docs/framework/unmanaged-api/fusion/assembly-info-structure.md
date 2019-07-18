@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bae19ec18c54eccc7aa54d2d3a006f36ba8ab762
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 219a92c0a105cc43e0c2af7d93868cac12f2e4e4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110876"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778522"
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO-Struktur
 Enthält Informationen zu einer Assembly, die im globalen Assemblycache registriert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _ASSEMBLY_INFO {  
     ULONG           cbAssemblyInfo;  
     DWORD           dwAssemblyFlags;  
@@ -57,5 +57,5 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusionsstrukturen](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [Fusion-Strukturen](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
 - [Globaler Assemblycache](../../../../docs/framework/app-domains/gac.md)

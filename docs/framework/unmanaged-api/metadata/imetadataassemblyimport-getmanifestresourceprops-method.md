@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ba99d84686974b425bcdee0bbf4770e4843e1351
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e47b1807e51427487d6af2f96ff5af437c4653eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081657"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760943"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps-Methode
 Ruft den Satz von Eigenschaften der Manifestressource mit der angegebenen Metadaten-Signatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetManifestResourceProps (  
     [in]  mdManifestResource   mdmr,   
     [out] LPWSTR               szName,   

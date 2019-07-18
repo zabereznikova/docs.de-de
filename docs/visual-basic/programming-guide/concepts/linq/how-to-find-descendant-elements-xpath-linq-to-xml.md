@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Suchen von Descendant-Elementen (XPath-LINQ to XML) (Vis
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
 ms.openlocfilehash: 09f12dca7b6278327394126ffb0950682d285f88
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780561"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen von Descendant-Elementen (XPath-LINQ to XML) (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie die Nachfolgerelemente mit einem bestimmten Namen ermitteln können.  

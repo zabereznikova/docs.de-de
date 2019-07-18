@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7acf08262c73df00a96cfb5c244cdfc352e51ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 348c51507006fecfe756cb17fd0d6242617577d7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080475"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750223"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>ICorDebugDataTarget2::GetImageLocation-Methode
 Gibt den Pfad eines Moduls aus der Basisadresse des Moduls zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,  
     [in] ULONG32 cchName,  
     [out] ULONG32 *pcchName,  
@@ -54,4 +54,4 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugDataTarget2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

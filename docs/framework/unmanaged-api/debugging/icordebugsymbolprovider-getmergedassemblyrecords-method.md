@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9003482860e554049c39ea9ffed4c52345bfeff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b436bd844f917aab3c653428c7cd38809be870b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183208"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771381"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords-Methode
 Ruft die Symboldatensätze für alle zusammengeführten Assemblys ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetMergedAssemblyRecords(  
    [in] ULONG32 cRequestedRecords,  
    [out] ULONG32 *pcFetchedRecords,  
@@ -51,4 +51,4 @@ HRESULT GetMergedAssemblyRecords(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugSymbolProvider-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

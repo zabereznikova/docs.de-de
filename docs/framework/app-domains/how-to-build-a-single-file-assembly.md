@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a409a93e5d84e96bbab13f2f6268d7f7ce6464ed
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597839"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634247"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>Vorgehensweise: Erstellen einer Einzeldateiassembly
 
@@ -33,7 +33,7 @@ Das folgende Verfahren zeigt Ihnen, wie Sie Einzeldateiassemblys mithilfe von Be
 
 ## <a name="to-create-an-assembly-with-an-exe-extension"></a>So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung
 
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
+1. Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
      \<*compilerbefehl*> \<*modulname*>
 
@@ -51,7 +51,7 @@ vbc myCode.vb
 
 ### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>So erstellen Sie eine Assembly mit einer „.exe“-Erweiterung und geben den Namen der Ausgabedatei an
 
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
+1. Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
      \<*compilerbefehl*> **/out:**\<*dateiname*> \<*modulname*>
 
@@ -72,7 +72,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 ### <a name="to-create-a-library-assembly"></a>So erstellen Sie eine Bibliotheksassembly
 
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
+1. Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
      \<*Compilerbefehl*> **/t:library** \<*Modulname*>
 

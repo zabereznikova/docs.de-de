@@ -2,12 +2,12 @@
 title: Verwendung von Standardendpunkten
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a2af1ae793166d1ed3742782b911ded30d0b9d35
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584285"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662399"
 ---
 # <a name="usage-of-standard-endpoints"></a>Verwendung von Standardendpunkten
 
@@ -139,21 +139,21 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1.  Öffnen Sie die Datei StandardEndpoints.sln mit Visual Studio 2012.
+1. Öffnen Sie die Datei StandardEndpoints.sln mit Visual Studio 2012.
 
-2.  Aktivieren Sie mehrere Projekte, um zu starten.
+2. Aktivieren Sie mehrere Projekte, um zu starten.
 
-    1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Projektmappe Standardendpunkte, und wählen Sie dann **Eigenschaften**.
+    1. In **Projektmappen-Explorer**mit der rechten Maustaste auf die Projektmappe Standardendpunkte, und wählen Sie dann **Eigenschaften**.
 
-    2.  In **allgemeine Eigenschaften**Option **Startprojekt**, und klicken Sie dann auf **mehrere Startprojekte**.
+    2. In **allgemeine Eigenschaften**Option **Startprojekt**, und klicken Sie dann auf **mehrere Startprojekte**.
 
-    3.  Verschieben Sie das Dienstprojekt an den Anfang der Liste mit den **Aktion** festgelegt **starten**.
+    3. Verschieben Sie das Dienstprojekt an den Anfang der Liste mit den **Aktion** festgelegt **starten**.
 
-    4.  Verschieben Sie die Client-Projekt nach dem Dienstprojekt, auch mit der **Aktion** festgelegt **starten**.
+    4. Verschieben Sie die Client-Projekt nach dem Dienstprojekt, auch mit der **Aktion** festgelegt **starten**.
 
          Dadurch wird angegeben, dass das Clientprojekt nach dem Dienstprojekt ausgeführt werden soll.
 
-3.  Drücken Sie F5, um die Projektmappe auszuführen.
+3. Drücken Sie F5, um die Projektmappe auszuführen.
 
 > [!NOTE]
 > Wenn diese Schritte nicht funktionieren, stellen Sie sicher, dass Ihre Umgebung ordnungsgemäß eingerichtet wurde wurde mit den folgenden Schritten:

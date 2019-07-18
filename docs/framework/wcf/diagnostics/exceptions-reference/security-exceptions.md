@@ -3,11 +3,11 @@ title: Sicherheitsausnahmen
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780860"
 ---
 # <a name="security-exceptions"></a>Sicherheitsausnahmen
 Dieses Thema enthält alle Sicherheitsausnahmen.  
@@ -22,15 +22,15 @@ Dieses Thema enthält alle Sicherheitsausnahmen.
 |AtMostOnePrimarySignatureInReceiveSecurityHeader|In einem Sicherheitsheader ist nur eine primäre Signatur zulässig.|  
 |BadContextTokenFaultReason|Der Sicherheitskontext ist abgelaufen oder ungültig. Die Nachricht wurde nicht verarbeitet.|  
 |BadEncryptionState|EncryptedData oder EncryptedKey befinden sich in einem für diesen Vorgang ungültigen Status.|  
-|BasicHttpMessageSecurityRequiresCertificate|Die Bindung „BasicHttp“ erfordert, dass „BasicHttpBinding.Security.Message.ClientCredentialType“ dem Anmeldeinformationstyp „BasicHttpMessageCredentialType.Certificate“ für sichere Nachrichten entspricht. Wählen Sie die Transport- oder TransportWithMessageCredential-Sicherheit für UserName-Anmeldeinformationen.|  
+|BasicHttpMessageSecurityRequiresCertificate|Die BasicHttp-Bindung erfordert, dass BasicHttpBinding.Security.Message.ClientCredentialType dem Anmeldeinformationstyp BasicHttpMessageCredentialType.Certificate für sichere Nachrichten entspricht. Wählen Sie die Transport- oder TransportWithMessageCredential-Sicherheit für UserName-Anmeldeinformationen.|  
 |BasicTokenCannotBeWrittenWithoutEncryption|Das Basistoken kann nicht ohne Verschlüsselung geschrieben werden.|  
 |BindingDoesNotSupportProtectionForRst|Die angegebene Bindung für den angegebenen Vertrag ist mit SecureConversation konfiguriert, der Authentifizierungsmodus kann jedoch keine für die Aushandlung erforderliche und auf Anforderung/Antwort basierende Integrität und Vertraulichkeit bereitstellen.|  
 |BindingDoesNotSupportWindowsIdenityForImpersonation|Der angegebene Vertragsvorgang erfordert Windows-Identität für den automatischen Identitätswechsel. Die angegebene Bindung für den angegebenen Vertrag stellt jedoch keine Windows-Identität bereit, die den Aufrufer darstellt.|  
 |CachedNegotiationStateQuotaReached|Der Dienst kann den Aushandlungsstatus nicht zwischenspeichern, weil die angegebene Kapazität ausgeschöpft wurde. Wiederholen Sie die Anforderung.|  
 |CacheQuotaReached|Das Element kann nicht hinzugefügt werden. Die maximale Cachegröße wurde erreicht.|  
 |CannotDetermineSPNBasedOnAddress|Der Client kann den Dienstprinzipalnamen auf der Basis der Identität in der angegebenen Zieladresse für die Verwendung durch SspiNegotiation/Kerberos nicht bestimmen. Der zieladressenidentität muss eine UPN-Identität (wie gipfeldomäne\\\alice) oder SPN-Identität (wie Host/Bobs-Computer).|  
-|CannotFindCert|Das X.509-Zertifikat kann mit den angegebenen Suchkriterien nicht gefunden werden: StoreName, StoreLocation, FindType, FindValue.|  
-|CannotFindCertForTarget|Das X.509-Zertifikat kann mit den angegebenen Suchkriterien nicht gefunden werden: StoreName, StoreLocation, FindType, FindValue für das angegebene Ziel.|  
+|CannotFindCert|Das x. 509-Zertifikat mit den angegebenen Suchkriterien nicht gefunden werden: StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCertForTarget|Die x. 509-Zertifikat mit den angegebenen Suchkriterien nicht gefunden werden: StoreName, StoreLocation, FindType, FindValue für das angegebene Ziel.|  
 |CannotFindCorrelationStateForApplyingSecurity|Es kann kein Korrelierungsstatus für das Anwenden von Sicherheit zum Antworten gefunden werden.|  
 |CannotFindNegotiationState|Der Aushandlungsstatus für den angegebenen Kontext kann nicht gefunden werden.|  
 |CannotFindSecuritySession|Die Sicherheitssitzung mit der angegebenen ID kann nicht gefunden werden.|  
@@ -55,8 +55,8 @@ Dieses Thema enthält alle Sicherheitsausnahmen.
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|Fehler beim Sicherheitsrichtlinienexport. Die Bindung enthält sowohl ein AsymmetricSecurityBindingElement als auch ein sicheres Transportbindungselement. Der Richtlinienexport für diese Bindung wird nicht unterstützt.|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|Fehler beim Sicherheitsrichtlinienexport. Die Bindung enthält sowohl ein SymmetricSecurityBindingElement als auch ein sicheres Transportbindungselement. Der Richtlinienexport für diese Bindung wird nicht unterstützt.|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|Fehler beim Sicherheitsrichtlinienexport. Die Bindung enthält ein TransportSecurityBindingElement, jedoch kein Transportbindungselement, das ITransportTokenAssertionProvider implementiert. Der Richtlinienexport für diese Bindung wird nicht unterstützt. Das Transportbindungselement in der Bindung muss die ITransportTokenAssertionProvider-Schnittstelle implementieren.|  
-|FoundMultipleCerts|Mehrere X.509-Zertifikate gefunden, die das angegebene Suchkriterium verwenden: StoreName, StoreLocation, FindType, FindValue. Stellen Sie einen spezifischeren Fundwert bereit.|  
-|FoundMultipleCertsForTarget|Es wurden mehrere X.509-Zertifikate mit den folgenden Suchkriterien gefunden: StoreName, StoreLocation, FindType, FindValue für das angegebene Ziel. Stellen Sie einen spezifischeren Fundwert bereit.|  
+|FoundMultipleCerts|Finden Sie mehrere x. 509-Zertifikate, die mit den angegebenen Suchkriterien: StoreName, StoreLocation, FindType, FindValue. Stellen Sie einen spezifischeren Fundwert bereit.|  
+|FoundMultipleCertsForTarget|Finden Sie mehrere x. 509-Zertifikate, die mit den angegebenen Suchkriterien: StoreName, StoreLocation, FindType, FindValue für das angegebene Ziel. Stellen Sie einen spezifischeren Fundwert bereit.|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 unterstützt keine Entschlüsselung von Headern. Verwenden Sie SecurityVersion.WsSecurityXXX2005 oder höher, oder verwenden Sie die Transportsicherheit, um die vollständige Nachricht zu verschlüsseln.|  
 |IdentityCheckFailedForIncomingMessage|Fehler bei der Identitätsprüfung für die eingehende Nachricht. Die erwartete Identität wird für den Zielendpunkt angegeben.|  
 |IdentityCheckFailedForOutgoingMessage|Fehler bei der Identitätsprüfung für die ausgehende Nachricht. Die erwartete Identität wird für den Zielendpunkt angegeben.|  

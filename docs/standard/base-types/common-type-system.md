@@ -19,33 +19,33 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722665"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634645"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime deklariert, verwendet und verwaltet werden. Außerdem ist das System ein wichtiger Bestandteil der Laufzeitunterstützung für die sprachübergreifende Integration. Das allgemeine Typsystem hat die folgenden Funktionen:  
   
--   Aufbau eines Frameworks, das die sprachübergreifende Integration, Typsicherheit sowie eine äußerst leistungsfähige Codeausführung ermöglicht.  
+- Aufbau eines Frameworks, das die sprachübergreifende Integration, Typsicherheit sowie eine äußerst leistungsfähige Codeausführung ermöglicht.  
   
--   Bereitstellung eines objektorientierten Modells, das die vollständige Implementierung zahlreicher Programmiersprachen unterstützt.  
+- Bereitstellung eines objektorientierten Modells, das die vollständige Implementierung zahlreicher Programmiersprachen unterstützt.  
   
--   Definition von Regeln, die von Programmiersprachen eingehalten werden müssen und sicherstellen, dass in verschiedenen Sprachen programmierte Objekte miteinander interagieren können.  
+- Definition von Regeln, die von Programmiersprachen eingehalten werden müssen und sicherstellen, dass in verschiedenen Sprachen programmierte Objekte miteinander interagieren können.  
   
--   Bereitstellung einer Bibliothek, die die bei der Anwendungsentwicklung verwendeten primitiven Datentypen enthält (z. B. <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> und <xref:System.UInt64>).  
+- Bereitstellung einer Bibliothek, die die bei der Anwendungsentwicklung verwendeten primitiven Datentypen enthält (z. B. <xref:System.Boolean>, <xref:System.Byte>, <xref:System.Char>, <xref:System.Int32> und <xref:System.UInt64>).  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Typen in .NET](#types_in_the_net_framework)  
+- [Typen in .NET](#types_in_the_net_framework)  
   
--   [Typdefinitionen](#type_definitions)  
+- [Typdefinitionen](#type_definitions)  
   
--   [Typmember](#type_members)  
+- [Typmember](#type_members)  
   
--   [Eigenschaften von Typmembern](#characteristics_of_type_members)  
+- [Eigenschaften von Typmembern](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
 ## <a name="types-in-net"></a>Typen in .NET  
@@ -57,15 +57,15 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  Das allgemeine Typsystem in .NET unterstützt die folgenden fünf Typkategorien:  
   
--   [Klassen](#Classes)  
+- [Klassen](#Classes)  
   
--   [Strukturen](#Structures)  
+- [Strukturen](#Structures)  
   
--   [Enumerationen](#Enumerations)  
+- [Enumerationen](#Enumerations)  
   
--   [Schnittstellen](#Interfaces)  
+- [Schnittstellen](#Interfaces)  
   
--   [Delegaten](#Delegates)  
+- [Delegaten](#Delegates)  
   
 <a name="Classes"></a>   
 ### <a name="classes"></a>Klassen  
@@ -106,13 +106,13 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  Für Enumerationen gelten die folgenden zusätzlichen Beschränkungen:  
   
--   Sie können keine eigenen Methoden definieren.  
+- Sie können keine eigenen Methoden definieren.  
   
--   Sie können keine Schnittstellen implementieren.  
+- Sie können keine Schnittstellen implementieren.  
   
--   Sie können keine Eigenschaften oder Ereignisse definieren.  
+- Sie können keine Eigenschaften oder Ereignisse definieren.  
   
--   Sie können nicht generisch sein, es sei denn, sie sind nur deshalb generisch, weil sie in einem generischen Typ geschachtelt sind. Das bedeutet, dass eine Enumeration nicht über eigene Typparameter verfügen kann.  
+- Sie können nicht generisch sein, es sei denn, sie sind nur deshalb generisch, weil sie in einem generischen Typ geschachtelt sind. Das bedeutet, dass eine Enumeration nicht über eigene Typparameter verfügen kann.  
   
     > [!NOTE]
     >  Geschachtelte Typen (z. B. Enumerationen), die mit Visual Basic, C# oder C++ erstellt wurden, enthalten die Typparameter aller einschließenden generischen Typen und sind daher generisch, auch wenn sie über keine eigenen Typparameter verfügen. Weitere Informationen finden Sie im Referenzthema <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> unter "Geschachtelte Typen".  
@@ -130,13 +130,13 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  Für Schnittstellen gelten die folgenden Beschränkungen:  
   
--   Eine Schnittstelle kann mit beliebigem Zugriff deklariert werden, die Schnittstellenmember müssen jedoch alle über die Zugriffsart public verfügen.  
+- Eine Schnittstelle kann mit beliebigem Zugriff deklariert werden, die Schnittstellenmember müssen jedoch alle über die Zugriffsart public verfügen.  
   
--   Schnittstellen können keine Konstruktoren definieren.  
+- Schnittstellen können keine Konstruktoren definieren.  
   
--   Schnittstellen können keine Felder definieren.  
+- Schnittstellen können keine Felder definieren.  
   
--   Schnittstellen können nur Instanzmember definieren. Sie können keine statischen Member definieren.  
+- Schnittstellen können nur Instanzmember definieren. Sie können keine statischen Member definieren.  
   
  Jede Sprache muss Regeln zur Verfügung stellen, mit deren Hilfe eine Implementierung der Schnittstelle zugeordnet werden kann, die den Member benötigt. Der Grund ist, dass in mehreren Schnittstellen Member mit identischen Signaturen deklariert werden können, die jedoch möglicherweise über separate Implementierungen verfügen.  
   
@@ -165,24 +165,22 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
 > [!NOTE]
 >  Es ist in C#, C++ und Visual Basic nicht erforderlich, diese Methoden für Ereignishandlerdelegaten einzusetzen, da in diesen Programmiersprachen Syntax zum Hinzufügen und Entfernen von Ereignishandlern bereitsteht.  
-  
- 
-  
+
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Typdefinitionen  
  Eine Typdefinition enthält Folgendes:  
   
--   Alle für den Typ definierten Attribute.  
+- Alle für den Typ definierten Attribute.  
   
--   Den Zugriff des Typs (Sichtbarkeit).  
+- Den Zugriff des Typs (Sichtbarkeit).  
   
--   Den Typnamen.  
+- Den Typnamen.  
   
--   Den Basistyp des Typs.  
+- Den Basistyp des Typs.  
   
--   Alle durch den Typ implementierten Schnittstellen.  
+- Alle durch den Typ implementierten Schnittstellen.  
   
--   Definitionen für jeden Member des Typs.  
+- Definitionen für jeden Member des Typs.  
   
 ### <a name="attributes"></a>Attribute  
  Durch Attribute werden zusätzliche benutzerdefinierte Metadaten bereitgestellt. Sie werden in dem meisten Fällen verwendet, um zusätzliche Informationen zu einem Typ in seiner Assembly zu speichern oder um das Verhalten eines Typmembers zur Entwurfszeit oder in der Laufzeitumgebung zu ändern.  
@@ -201,22 +199,22 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  Die Zugriffsdomäne eines geschachtelten Members `M`, der in einem Typ `T` innerhalb eines Programms `P` deklariert ist, wird wie folgt definiert (wobei `M` selbst ein Typ sein kann):  
   
--   Wenn die deklarierte Zugriffsart von `M` den Wert `public` hat, entspricht die Zugriffsdomäne von `M` der von `T`.  
+- Wenn die deklarierte Zugriffsart von `M` den Wert `public` hat, entspricht die Zugriffsdomäne von `M` der von `T`.  
   
--   Wenn die deklarierte Zugriffsart von `M` den Wert `protected internal` hat, entspricht die Zugriffsdomäne von `M` der Schnittmenge zwischen der Zugriffsdomäne von `T`, dem Programmtext von `P` und dem Programmtext jedes Typs, der von `T` abgeleitet und außerhalb von `P` deklariert wurde.  
+- Wenn die deklarierte Zugriffsart von `M` den Wert `protected internal` hat, entspricht die Zugriffsdomäne von `M` der Schnittmenge zwischen der Zugriffsdomäne von `T`, dem Programmtext von `P` und dem Programmtext jedes Typs, der von `T` abgeleitet und außerhalb von `P` deklariert wurde.  
   
--   Wenn die deklarierte Zugriffsart von `M` den Wert `protected` hat, entspricht die Zugriffsdomäne von `M` der Schnittmenge zwischen der Zugriffsdomäne von `T`, dem Programmtext von `T` und jedem von `T` abgeleiteten Typ.  
+- Wenn die deklarierte Zugriffsart von `M` den Wert `protected` hat, entspricht die Zugriffsdomäne von `M` der Schnittmenge zwischen der Zugriffsdomäne von `T`, dem Programmtext von `T` und jedem von `T` abgeleiteten Typ.  
   
--   Wenn die deklarierte Zugriffsart von `M` den Wert `internal` hat, entspricht die Zugriffsdomäne von `M` der Schnittmenge zwischen der Zugriffsdomäne von `T` und dem Programmtext von `P`.  
+- Wenn die deklarierte Zugriffsart von `M` den Wert `internal` hat, entspricht die Zugriffsdomäne von `M` der Schnittmenge zwischen der Zugriffsdomäne von `T` und dem Programmtext von `P`.  
   
--   Wenn die deklarierte Zugriffsart von `M` den Wert `private` hat, entspricht die Zugriffsdomäne von `M` dem Programmtext von `T`.  
+- Wenn die deklarierte Zugriffsart von `M` den Wert `private` hat, entspricht die Zugriffsdomäne von `M` dem Programmtext von `T`.  
   
 ### <a name="type-names"></a>Typnamen  
  Das allgemeine Typsystem sieht lediglich zwei Namenseinschränkungen vor:  
   
--   Alle Namen werden als Unicode-Zeichenfolgen (16-Bit-Zeichen) codiert.  
+- Alle Namen werden als Unicode-Zeichenfolgen (16-Bit-Zeichen) codiert.  
   
--   Ein eingebetteter Wert von 0x0000 (16 Bits) ist für Namen nicht zulässig.  
+- Ein eingebetteter Wert von 0x0000 (16 Bits) ist für Namen nicht zulässig.  
   
  In den meisten Sprachen gelten jedoch möglicherweise zusätzliche Beschränkungen für Typnamen. Alle Vergleiche erfolgen byteweise, sie berücksichtigen daher die Groß-/Kleinschreibung und sind unabhängig vom Gebietsschema.  
   
@@ -226,32 +224,30 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
  Ein Typ kann Werte und Verhaltensdefinitionen von anderen Typen erben. Gemäß dem allgemeinen Typsystem können Typen nicht von mehr als einem Basistyp erben.  
   
  Ein Typ kann eine beliebige Anzahl von Schnittstellen implementieren. Zur Implementierung einer Schnittstelle muss ein Typ alle virtuellen Member der betreffenden Schnittstelle implementieren. Eine virtuelle Methode kann durch einen abgeleiteten Typ implementiert und entweder statisch oder dynamisch aufgerufen werden.  
-  
-  
-  
+
 <a name="type_members"></a>   
 ## <a name="type-members"></a>Typmember  
  Die Laufzeit ermöglicht es Ihnen, Member des Typs zu definieren. Hierbei werden das Verhalten und der Zustand eines Typs angegeben. Typmember umfassen Folgendes:  
   
--   [Felder](#Fields)  
+- [Felder](#Fields)  
   
--   [Eigenschaften](#Properties)  
+- [Eigenschaften](#Properties)  
   
--   [Methoden](#Methods)  
+- [Methoden](#Methods)  
   
--   [Konstruktoren](#Constructors)  
+- [Konstruktoren](#Constructors)  
   
--   [Ereignisse](#Events)  
+- [Ereignisse](#Events)  
   
--   [Geschachtelte Typen](#NestedTypes)  
+- [Geschachtelte Typen](#NestedTypes)  
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>Felder  
  Ein Feld beschreibt und enthält Teile des Typzustands. Felder können jedem von der Laufzeit unterstützten Typ entsprechen. In den meisten Fällen sind Felder `private` oder `protected`, damit auf sie nur innerhalb der Klasse oder aus einer abgeleiteten Klasse zugegriffen werden kann. Wenn der Wert eines Felds außerhalb seines Typs geändert werden kann, wird normalerweise ein Eigenschaftensatzaccessor verwendet. Öffentlich verfügbar gemachte Felder sind normalerweise schreibgeschützt und können zwei Typen aufweisen:  
   
--   Konstanten, deren Wert zur Entwurfszeit zugewiesen wird. Diese sind statische Member einer Klasse, obwohl sie nicht mit dem `static`-Schlüsselwort (`Shared` in Visual Basic) definiert werden.  
+- Konstanten, deren Wert zur Entwurfszeit zugewiesen wird. Diese sind statische Member einer Klasse, obwohl sie nicht mit dem `static`-Schlüsselwort (`Shared` in Visual Basic) definiert werden.  
   
--   Schreibgeschützte Variablen, deren Werte im Klassenkonstruktor zugewiesen werden können.  
+- Schreibgeschützte Variablen, deren Werte im Klassenkonstruktor zugewiesen werden können.  
   
  Im folgenden Beispiel werden diese zwei Verwendungen für schreibgeschützte Felder veranschaulicht.  
   
@@ -290,9 +286,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
  Ein geschachtelter Typ ist ein Typ, der ein Member eines anderen Typs ist. Geschachtelte Typen müssen eng mit dem zugehörigen enthaltenden Typ verknüpft sein und dürfen nicht für allgemeine Zwecke verwendbar sein. Geschachtelte Typen sind sinnvoll, wenn der deklarierende Typ Instanzen des geschachtelten Typs verwendet und erstellt und die Verwendung des geschachtelten Typs nicht in öffentlichen Membern verfügbar gemacht wird.  
   
  Für einige Entwickler sind geschachtelte Typen verwirrend, und sie sollten nur öffentlich sichtbar sein, wenn ein zwingender Grund dafür vorliegt. In einer gut entworfenen Bibliothek sollten Entwickler nur selten geschachtelte Typen zum Instanziieren von Objekten oder Deklarieren von Variablen verwenden müssen.  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>Eigenschaften von Typmembern  
  Das allgemeine Typsystem unterstützt Typmember, die eine Vielzahl unterschiedlicher Merkmale haben können. Zur Unterstützung all dieser Merkmale sind jedoch keine speziellen Sprachen erforderlich. In der folgenden Tabelle sind diese Membermerkmale beschrieben.  
@@ -318,9 +312,9 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ### <a name="inheriting-overriding-and-hiding-members"></a>Vererben, Überschreiben und Verdecken von Membern  
  Ein abgeleiteter Typ erbt alle Member seines Basistyps. Dies bedeutet, dass diese Member für den abgeleiteten Typ definiert und verfügbar sind. Das Verhalten oder die Merkmale geerbter Member können auf zwei Weisen geändert werden:  
   
--   Ein abgeleiteter Typ kann einen geerbten Member verdecken, indem er einen neuen Member mit derselben Signatur definiert. Dies kann z. B. geschehen, um einen Member, der zuvor als public deklariert war, als private zu definieren, oder um ein neues Verhalten für eine geerbte Methode zu definieren, die mit `final` gekennzeichnet ist.  
+- Ein abgeleiteter Typ kann einen geerbten Member verdecken, indem er einen neuen Member mit derselben Signatur definiert. Dies kann z. B. geschehen, um einen Member, der zuvor als public deklariert war, als private zu definieren, oder um ein neues Verhalten für eine geerbte Methode zu definieren, die mit `final` gekennzeichnet ist.  
   
--   Ein abgeleiteter Typ kann eine geerbte virtuelle Methode überschreiben. Die überschreibende Methode stellt eine neue Definition für die Methode bereit, die basierend auf dem Werttyp zur Laufzeit aufgerufen wird und nicht basierend auf dem zur Kompilierungszeit bekannten Variablentyp. Eine virtuelle Methode kann nur von einer Methode überschrieben werden, wenn die virtuelle Methode nicht als `final` gekennzeichnet ist und die neue Methode mindestens dieselben Zugriffstypen unterstützt wie die virtuelle Methode.  
+- Ein abgeleiteter Typ kann eine geerbte virtuelle Methode überschreiben. Die überschreibende Methode stellt eine neue Definition für die Methode bereit, die basierend auf dem Werttyp zur Laufzeit aufgerufen wird und nicht basierend auf dem zur Kompilierungszeit bekannten Variablentyp. Eine virtuelle Methode kann nur von einer Methode überschrieben werden, wenn die virtuelle Methode nicht als `final` gekennzeichnet ist und die neue Methode mindestens dieselben Zugriffstypen unterstützt wie die virtuelle Methode.  
   
 ## <a name="see-also"></a>Siehe auch
 

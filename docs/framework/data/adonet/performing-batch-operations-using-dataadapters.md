@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878290"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Ausführen von Batchvorgängen mit "DataAdapters"
 Durch Batch-Unterstützung in ADO.NET kann ein <xref:System.Data.Common.DataAdapter> die Operationen INSERT, UPDATE und DELETE aus einem <xref:System.Data.DataSet> oder einer <xref:System.Data.DataTable> an einen Server zusammenfassen, anstatt nur jeweils eine Operation senden zu können. Durch das Reduzieren der Anzahl von Roundtrips zum Server kann im Allgemeinen die Leistung beträchtlich gesteigert werden. Batchupdates werden für die .NET-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) und Oracle (<xref:System.Data.OracleClient>) unterstützt.  
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>Zugreifen auf aktualisierte Zeilen  
  Bei deaktivierter Batchverarbeitung kann auf die zu aktualisierende Zeile mit der <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A>-Eigenschaft der <xref:System.Data.Common.RowUpdatedEventArgs>-Klasse zugegriffen werden.  
   
- Bei aktivierter Batchverarbeitung wird für mehrere Zeilen ein einziges `RowUpdated`-Ereignis generiert. Daher ist der Wert der `Row`-Eigenschaft  in jeder Zeile NULL. `RowUpdating` Ereignisse werden weiterhin für jede Zeile generiert. Mit der <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>-Methode der <xref:System.Data.Common.RowUpdatedEventArgs>-Klasse können Sie auf die verarbeiteten Zeilen zugreifen, indem Sie Verweise auf die Zeilen in ein Array kopieren. Wenn keine Zeilen verarbeitet werden, löst `CopyToRows` eine <xref:System.ArgumentNullException> aus. Verwenden Sie die <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A>-Eigenschaft, um vor dem Aufruf der <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>-Methode die Anzahl der verarbeiteten Zeilen zurückzugeben.  
+ Bei aktivierter Batchverarbeitung wird für mehrere Zeilen ein einziges `RowUpdated`-Ereignis generiert. Daher ist der Wert der `Row`-Eigenschaft  in jeder Zeile NULL. Es werden weiterhin `RowUpdating`-Ereignisse für jede Zeile generiert. Mit der <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>-Methode der <xref:System.Data.Common.RowUpdatedEventArgs>-Klasse können Sie auf die verarbeiteten Zeilen zugreifen, indem Sie Verweise auf die Zeilen in ein Array kopieren. Wenn keine Zeilen verarbeitet werden, löst `CopyToRows` eine <xref:System.ArgumentNullException> aus. Verwenden Sie die <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A>-Eigenschaft, um vor dem Aufruf der <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A>-Methode die Anzahl der verarbeiteten Zeilen zurückzugeben.  
   
 ### <a name="handling-data-errors"></a>Behandeln von Datenfehlern  
  Eine Batchausführung hat dieselben Auswirkungen wie die Ausführung einzelner Anweisungen. Anweisungen werden in der Reihenfolge ausgeführt, in der sie dem Batch hinzugefügt wurden. Fehler werden im Batchmodus in derselben Weise behandelt wie bei deaktiviertem Batchmodus. Jede Zeile wird einzeln verarbeitet. Nur Zeilen, die erfolgreich in der Datenbank verarbeitet wurden, werden in der entsprechenden <xref:System.Data.DataRow> innerhalb der <xref:System.Data.DataTable> aktualisiert.  
@@ -143,7 +143,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
 ## <a name="see-also"></a>Siehe auch
 
-- ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

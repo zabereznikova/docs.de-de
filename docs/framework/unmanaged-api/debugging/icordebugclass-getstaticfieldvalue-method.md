@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b67f5ec233679461f61715d7562b47c2a195fb8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7649d91ca2b654952d1d5ab0d45f7903d3c46a32
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471627"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745543"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue-Methode
 Ruft den Wert des angegebenen statischen Felds ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStaticFieldValue (  
     [in]  mdFieldDef         fieldDef,  
     [in]  ICorDebugFrame     *pFrame,  

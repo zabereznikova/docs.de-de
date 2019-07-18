@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 90768a0c816e790138ba60bd24afee242e41e652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091407"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860289"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource-Markuperweiterung
 Gibt einen Wert für alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Eigenschaftsattribut, das von bereit, um einen Verweis auf eine Ressource definiert werden. Das Suchverhalten für diese Ressource ist analog zur Laufzeit-Suche.  
@@ -52,7 +52,7 @@ Gibt einen Wert für alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2shar
   
  Ein Ressourcenschlüssel möglicherweise eine beliebige Zeichenfolge, die definiert, der [XamlName-Grammatik](../../xaml-services/xamlname-grammar.md). Ein Ressourcenschlüssel möglicherweise auch andere Objekttypen, z. B. eine <xref:System.Type>. Ein <xref:System.Type> Schlüssel ist wesentlich, wie Steuerelemente mithilfe von Designs formatiert werden können. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] für die Suche von Ressourcenwerte wie z. B. <xref:System.Windows.FrameworkElement.FindResource%2A>, befolgen Sie die Suchlogik der gleichen Ressource vom verwendete `DynamicResource`.  
+ APIs für die Suche nach Ressourcen-Werte, z. B. <xref:System.Windows.FrameworkElement.FindResource%2A>, befolgen Sie die Suchlogik der gleichen Ressource vom verwendete `DynamicResource`.  
   
  Die alternative deklaratives Mittel für die verweisen auf eine Ressource ist als eine [StaticResource-Markuperweiterung](staticresource-markup-extension.md).  
   
@@ -60,7 +60,7 @@ Gibt einen Wert für alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2shar
   
  `DynamicResource` kann in Objektelementsyntax verwendet werden. In diesem Fall geben Sie den Wert der <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> Eigenschaft ist erforderlich.  
   
- `DynamicResource` kann auch verwendet werden, in einer ausführlichen Attributverwendung, der angibt, die <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> Eigenschaft als Eigenschaft = Wert-Paar:  
+ `DynamicResource` kann zudem in einer ausführlichen Attributverwendung verwendet werden, die die <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>-Eigenschaft als Eigenschaft=Wert-Paar angibt:  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  

@@ -17,27 +17,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a290ca162e5ab71b4184d166bcd00f1d0217cb94
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9d30b6cb083cc2f92bcbe089bf8e990fedd8e8f7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402495"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738094"
 ---
 # <a name="icordebugappdomainattach-method"></a>ICorDebugAppDomain::Attach-Methode
-Fügt der Debugger an die Anwendungsdomäne.  
+Fügt den Debugger an die Anwendungsdomäne an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Attach ();  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Debugger muss an die Anwendungsdomäne Ereignisse empfangen und zum Aktivieren des Debuggens der Anwendungsdomäne angefügt werden.  
+ Der Debugger muss an die Anwendungsdomäne zum Empfangen von Ereignissen und zum Aktivieren des Debuggens der Anwendungsdomäne angefügt werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

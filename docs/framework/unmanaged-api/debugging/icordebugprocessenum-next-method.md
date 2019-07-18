@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 59efdb76c000a78007ec0321202793ed0dd50cfb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493582"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768276"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next-Methode
 Ruft die angegebene Anzahl von ICorDebugProcess-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next (  
     [in]  ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
@@ -42,7 +42,7 @@ HRESULT Next (
  `celt`  
  [in] Die Anzahl der `ICorDebugProcess` Instanzen abgerufen werden sollen.  
   
- `processess`  
+ `processes`  
  [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugProcess` -Objekt, das einen Prozess darstellt.  
   
  `pceltFetched`  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd01dcbd45ecae84ccccffb510c20f580ae8c598
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f5140462ae3c869d58187351d2e0ff11f7b6e179
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080808"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776694"
 ---
 # <a name="isymunmanageddocumentgetlanguagevendor-method"></a>ISymUnmanagedDocument::GetLanguageVendor-Methode
 Ruft den Compilerhersteller des in diesem Dokument ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetLanguageVendor(  
     [out, retval]  GUID*  pRetVal);  
 ```  

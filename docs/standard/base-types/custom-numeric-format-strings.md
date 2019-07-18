@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133336"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268211"
 ---
 # <a name="custom-numeric-format-strings"></a>Benutzerdefinierte Zahlenformatzeichenfolgen
 
 Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern bestehende benutzerdefinierte numerische Formatzeichenfolge erstellen, um anzugeben, wie numerische Daten formatiert werden sollen. Eine benutzerdefinierte numerische Formatzeichenfolge wird wie jede Formatzeichenfolge definiert, bei der es sich nicht um eine [standardmäßige numerische Formatzeichenfolge](../../../docs/standard/base-types/standard-numeric-format-strings.md)handelt.  
-  
 
  Benutzerdefinierte numerische Formatzeichenfolgen werden von einigen Überladungen der `ToString` -Methode aller numerischen Typen unterstützt. Sie können z. B. eine numerische Formatzeichenfolge an die <xref:System.Int32.ToString%28System.String%29> -Methode und <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> -Methode des <xref:System.Int32> -Typs übergeben. Benutzerdefinierte numerische Formatzeichenfolgen werden auch vom .NET-Feature für die [kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md) unterstützt, die von einigen `Write`-Methoden und `WriteLine`-Methoden der <xref:System.Console>-Klasse und der <xref:System.IO.StreamWriter>-Klasse, der <xref:System.String.Format%2A?displayProperty=nameWithType>-Methode und der <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>-Methode verwendet wird. Das Feature [Zeichenfolgeninterpolation](../../csharp/language-reference/tokens/interpolated.md) unterstützt auch benutzerdefinierte numerische Formatzeichenfolgen.  
   
@@ -37,7 +36,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
   
 <a name="table"></a> Die folgenden Tabelle beschreibt die benutzerdefinierten Zahlenformatbezeichner und zeigt eine Beispielausgabe an, die von den einzelnen Formatbezeichnern erstellt wird. Weitere Informationen über das Verwenden von benutzerdefinierten numerischen Formatzeichenfolgen finden Sie im Abschnitt [Hinweise](#NotesCustomFormatting) . Der Abschnitt [Beispiel](#example) enthält eine umfassende Abbildung ihrer Verwendung.  
   
-|Formatbezeichner|name|Beschreibung|Beispiele|  
+|Formatbezeichner|name|BESCHREIBUNG|Beispiele|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|0-Platzhalter|Ersetzt die Ziffer 0 ggf. durch eine entsprechende vorhandene Ziffer; andernfalls wird die Ziffer 0 in der Ergebniszeichenfolge angezeigt.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Spezifizierer „0“](#Specifier0)|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Ziffernplatzhalter|Ersetzt das "#"-Symbol ggf. durch eine entsprechende vorhandene Ziffer; andernfalls wird keine Ziffer in der Ergebniszeichenfolge angezeigt.<br /><br /> Beachten Sie, dass keine Ziffer in der Ergebniszeichenfolge angezeigt wird, wenn die entsprechende Ziffer in der Eingabezeichenfolge eine nicht signifikante 0 ist. Zum Beispiel: 0003 ("####") -> 3.<br /><br /> Weitere Informationen: [Der benutzerdefinierte Spezifizierer „#“](#SpecifierD)|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -86,7 +85,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
  Verwenden Sie das Feature für die [zusammengesetzte Formatierung](../../../docs/standard/base-types/composite-formatting.md) , und geben Sie eine Feldbreite an, wie im folgenden Beispiel veranschaulicht, um eine Ergebniszeichenfolge zurückzugeben, in der fehlende Ziffern oder führende Nullen durch Leerzeichen ersetzt werden.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Zurück zur Tabelle](#table)  
@@ -109,11 +108,11 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 ## <a name="the--custom-specifier"></a>Der benutzerdefinierte Bezeichner „,“  
  Das Zeichen "," dient sowohl als Bezeichner für Gruppentrennzeichen als auch als Bezeichner für Zahlenskalierung.  
   
--   Gruppentrennzeichen: Wenn mindestens ein Komma zwischen zwei Ziffernplatzhaltern (0 oder #) angegeben ist, das die ganzzahligen Ziffern einer Zahl formatiert, wird zwischen jeder Zahlengruppe im ganzzahligen Teil der Ausgabe ein Gruppentrennzeichen eingefügt.  
+- Gruppentrennzeichen: Wenn mindestens ein Komma zwischen zwei Ziffernplatzhaltern (0 oder #) angegeben ist, das die ganzzahligen Ziffern einer Zahl formatiert, wird zwischen jeder Zahlengruppe im ganzzahligen Teil der Ausgabe ein Gruppentrennzeichen eingefügt.  
   
      Die <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> -Eigenschaft und die <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> -Eigenschaft des aktuellen <xref:System.Globalization.NumberFormatInfo> -Objekts bestimmen das als Zahlengruppentrennzeichen verwendete Zeichen und die Größe der einzelnen Zahlengruppen. Wenn z. B. zum Formatieren der Zahl 1000 die Zeichenfolge "#,#" und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000".  
   
--   Zahlenskalierungsspezifizierer: Wenn direkt links neben dem expliziten oder impliziten Dezimaltrennzeichen mindestens ein Komma angegeben wird, wird die zu formatierende Zahl bei jedem Vorkommen eines Kommas durch 1000 dividiert. Wenn z. B. zum Formatieren der Zahl 100 Millionen die Zeichenfolge "0,," verwendet wird, lautet die Ausgabe "100".  
+- Zahlenskalierungsspezifizierer: Wenn direkt links neben dem expliziten oder impliziten Dezimaltrennzeichen mindestens ein Komma angegeben wird, wird die zu formatierende Zahl bei jedem Vorkommen eines Kommas durch 1000 dividiert. Wenn z. B. zum Formatieren der Zahl 100 Millionen die Zeichenfolge "0,," verwendet wird, lautet die Ausgabe "100".  
   
  Sie können in der gleichen Formatzeichenfolge sowohl Bezeichner für Gruppentrennzeichen als auch für Zahlenskalierung verwenden. Wenn z. B. zum Formatieren der Zahl 1 Milliarde die Zeichenfolge "#,0,," und die invariante Kultur verwendet werden, lautet die Ausgabe "1,000".  
   
@@ -190,7 +189,7 @@ Sie können eine aus einem oder mehreren benutzerdefinierten Zahlenbezeichnern b
 ## <a name="the--section-separator"></a>Das Abschnittstrennzeichen „;“  
  Das Semikolon (;) ist ein bedingter Formatbezeichner, der Zahlen unterschiedlich formatiert, je nachdem, ob sein Wert positiv, negativ oder 0 (null) ist. Dafür kann eine benutzerdefinierte Formatzeichenfolge bis zu drei durch Semikolons getrennte Abschnitte enthalten. Diese Abschnitte werden in der folgenden Tabelle beschrieben.  
   
-|Anzahl der Abschnitte|Beschreibung|  
+|Anzahl der Abschnitte|BESCHREIBUNG|  
 |------------------------|-----------------|  
 |Ein Abschnitt|Die Formatzeichenfolge gilt für alle Werte.|  
 |Zwei Abschnitte|Der erste Abschnitt gilt für positive Werte und Nullen, der zweite Abschnitt für negative Werte.<br /><br /> Wenn die zu formatierende Zahl negativ ist, aber nach dem Runden entsprechend dem Format im zweiten Abschnitt 0 ist, wird die resultierende 0 entsprechend dem ersten Abschnitt formatiert.|  

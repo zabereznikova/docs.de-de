@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bd3326aa5807bd7f2dd882991d211cbbf873067
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 26c9c85f22f9d8201214dc56f32718e055a97801
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150409"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779263"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete-Methode
 Wird aufgerufen, von der common Language Runtime (CLR), um anzugeben, dass der Profiler jetzt aufrufen kann die [ICorProfilerInfo3:: EnumJITedFunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md) und [ICorProfilerInfo3:: EnumModules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md) -Ausgleichsmethode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ProfilerAttachComplete ();  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
  Die `ProfilerAttachComplete` -Rückruf wird ausgegeben, nachdem die [ICorProfilerCallback3:: InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) Methode wird aufgerufen. Dies bedeutet Folgendes:  
   
--   Die vom Profiler in `InitializeForAttach` angeforderten Rückrufe wurden aktiviert.  
+- Die vom Profiler in `InitializeForAttach` angeforderten Rückrufe wurden aktiviert.  
   
--   Der Profiler kann jetzt einen Ausgleich für die zugeordneten IDs auch ohne Benachrichtigungen ausführen.  
+- Der Profiler kann jetzt einen Ausgleich für die zugeordneten IDs auch ohne Benachrichtigungen ausführen.  
   
- Die CLR ignoriert den Rückgabewert von diesem Rückruf.   
+ Die CLR ignoriert den Rückgabewert von diesem Rückruf.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

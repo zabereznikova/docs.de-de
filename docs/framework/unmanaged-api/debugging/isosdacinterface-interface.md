@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: ccaf479fc4fb90007b4999e95ee03bdd0529321e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922147"
 ---
 # <a name="isosdacinterface-interface"></a>ISOSDacInterface-Schnittstelle
 
@@ -43,8 +43,8 @@ Diese Schnittstelle befindet sich in der Common Language Runtime und nicht über
 ## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keine  
-**Bibliothek:** Keine  
+**Header:** Keiner  
+**Bibliothek:** Keiner  
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Siehe auch

@@ -2,12 +2,12 @@
 title: Messagingprotokolle
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: a5292914cfebc79bf8a9af1c852dd8feec99eba4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 70972f6a211d60d9fd330277040428ef783e9668
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129752"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631522"
 ---
 # <a name="messaging-protocols"></a>Messagingprotokolle
 
@@ -28,7 +28,7 @@ Dieses Thema enthält Details zur WCF-Implementierung für die folgenden Protoko
 - [XML](https://www.w3.org/TR/REC-xml)
 - [SOAP 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)
 - [SOAP 1.2 Core](https://www.w3.org/TR/soap12-part1/)
-- [WS-Adressierung 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
+- [WS-Addressing 2004/08](https://www.w3.org/Submission/2004/SUBM-ws-addressing-20040810/)
 - [W3C Web Services Addressing 1.0 – Core](https://www.w3.org/TR/2006/REC-ws-addr-core-20060509)
 - [W3C Web Services Addressing 1.0 – SOAP-Bindung](https://www.w3.org/TR/2006/REC-ws-addr-soap-20060509)
 - [W3C Web Services Addressing 1.0 – WSDL-Bindung](https://www.w3.org/TR/2006/CR-ws-addr-wsdl-20060529/)
@@ -405,7 +405,7 @@ Die folgende Sequenz von Schritten beschreibt den MTOM-spezifischen Codierungspr
 
 4. Erstellen Sie einen XOP SOAP-Umschlag, der eine Kopie des Original-SOAP-Umschlags ist, aber bei dem das untergeordnete Element jedes Elementinformationselements, das im vorherigen Schritt identifiziert wurde, durch ein `xop:Include`-Elementinformationselement ersetzt wurde, das wie folgt erstellt wird:
 
-    1. Wandeln Sie die ersetzten Zeichen in Binärdaten um, indem Sie sie als base64-codierte Daten verarbeiten.
+    1. Transformieren Sie die ersetzten Zeichen in Binärdaten, indem Sie sie als base64-codierte Daten verarbeiten.
 
     2. Generieren Sie einen eindeutigen Content-ID-Headerwert, der die Anforderungen R3133 und R3134 zufriedenstellt.
 
@@ -456,9 +456,9 @@ Während die Anforderung, die doppelte Anführungszeichen verwenden, nicht in RF
 
 - R4133: Ein HTTP Content-Type-Header sollte einen Startparameter mit dem Wert des Content-ID-Headers des MIME-Teils, der das SOAP enthält haben 1.x Envelope, in doppelte Anführungszeichen eingeschlossen. Wenn der Startparameter weggelassen wird, muss der erste MIME-Teil den SOAP 1.x Envelope enthalten.
 
-- R4134: ZUM Ein HTTP Content-Type-Header für eine SOAP 1.1 MTOM-codierte Nachricht muss der StartInfo-Parameter mit dem Wert von Text/Xml, eingeschlossen in doppelte Anführungszeichen enthalten.
+- R4134: Ein HTTP Content-Type-Header für eine SOAP 1.1 MTOM-codierte Nachricht muss der StartInfo-Parameter mit dem Wert von Text/Xml, eingeschlossen in doppelte Anführungszeichen enthalten.
 
-- R4135: ZUM Ein HTTP Content-Type-Header für eine SOAP 1.2 MTOM-codierte Nachricht muss der StartInfo-Parameter mit dem Wert des enthalten `application/soap+xml`, eingeschlossen in doppelte Anführungszeichen ein.
+- R4135: Ein HTTP Content-Type-Header für eine SOAP 1.2 MTOM-codierte Nachricht muss der StartInfo-Parameter mit dem Wert des enthalten `application/soap+xml`, eingeschlossen in doppelte Anführungszeichen ein.
 
 - R4136: HTTP Content-Type-Header für eine SOAP 1.x MTOM-codierte Nachricht muss den grenzparameter mit dem Wert (in doppelten Anführungszeichen eingeschlossen) aufweisen, der MIME-grenz entspricht, die BNF in RFC 2046, Abschnitt 5.1.1 definiert
 

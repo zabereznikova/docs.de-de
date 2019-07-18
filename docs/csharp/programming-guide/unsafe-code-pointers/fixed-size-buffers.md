@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700610"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833502"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Puffer fester Größe (C#-Programmierhandbuch)
 
@@ -40,7 +40,7 @@ Im obigen Beispiel wird der Zugriff auf `fixed`-Felder ohne Anheften dargestellt
 Ein anderes häufiges Array mit fester Größe ist das [bool](../../language-reference/keywords/bool.md)-Array. Die Elemente in einem `bool`-Array sind immer ein Byte groß. `bool`-Arrays eignen sich nicht zum Erstellen von Bitarrays oder Puffern.
 
 > [!NOTE]
-> Mit Ausnahme von Arbeitsspeicher, der mithilfe von [stackalloc](../../language-reference/keywords/stackalloc.md) erstellt wurde, führen der C#-Compiler und die Common Language Runtime (CLR) keine Sicherheitsüberprüfungen für Pufferüberlauf aus. Lassen Sie, wie bei jedem unsicheren Code, Vorsicht walten.
+> Mit Ausnahme von Arbeitsspeicher, der mithilfe von [stackalloc](../../language-reference/operators/stackalloc.md) erstellt wurde, führen der C#-Compiler und die Common Language Runtime (CLR) keine Sicherheitsüberprüfungen für Pufferüberlauf aus. Lassen Sie, wie bei jedem unsicheren Code, Vorsicht walten.
 
 Unsichere Puffer unterscheiden sich folgendermaßen von normalen Arrays:
 

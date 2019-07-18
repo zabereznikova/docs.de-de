@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aeb4ad1dffe4553b243b5168037aea8b68f8244b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f37fab4d877ae804996f46290e3576cecc5a25ca
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222057"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767615"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID-Methode
 Konvertiert einen Typ-ID zu einem ICorDebugType-Wert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetTypeForTypeID(  
     [in] COR_TYPEID id, [  
     out] ICorDebugType **ppType  
@@ -58,4 +58,4 @@ HRESULT GetTypeForTypeID(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugProcess5-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

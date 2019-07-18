@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 198141545119976cb9107bc9c09b913572e266ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104610"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781122"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo-Struktur
 Enthält Informationen über die `Event_MDAFired` -Ereignis, das die Erstellung einer-Assistent für verwaltetes Debuggen (MDA) ausgelöst.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _MDAInfo {  
     LPCWSTR  lpMDACaption;  
     LPCWSTR  lpMDAMessage  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  Die Common Language Runtime verwendet die folgenden Schritte aus, wenn ein Ereignis, das die Erstellung eines MDA wird ausgelöst, die ausgelöst wird:  
   
--   Wenn der Host nicht registriert wurde ein [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) Instanz durch den Aufruf [ICLROnEventManager:: RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) benachrichtigt werden sollen ein `Event_MDAFired` Ereignis die Laufzeit fortgesetzt wird, mit der standardmäßig nicht gehosteten Verhalten.  
+- Wenn der Host nicht registriert wurde ein [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) Instanz durch den Aufruf [ICLROnEventManager:: RegisterActionOnEvent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) benachrichtigt werden sollen ein `Event_MDAFired` Ereignis die Laufzeit fortgesetzt wird, mit der standardmäßig nicht gehosteten Verhalten.  
   
--   Wenn der Host einen Handler für dieses Ereignis registriert hat, überprüft die Laufzeit, um festzustellen, ob ein Debugger an den Prozess angefügt ist. Wenn es sich handelt, unterbricht die Runtime den Debugger. Wenn der Debugger weiterhin auftritt, wird mit dem Host. Wenn kein Debugger angefügt ist, ruft die Runtime `IActionOnCLREvent::OnEvent` und übergibt einen Zeiger auf ein `MDAInfo` -Instanz als die `data` Parameter.  
+- Wenn der Host einen Handler für dieses Ereignis registriert hat, überprüft die Laufzeit, um festzustellen, ob ein Debugger an den Prozess angefügt ist. Wenn es sich handelt, unterbricht die Runtime den Debugger. Wenn der Debugger weiterhin auftritt, wird mit dem Host. Wenn kein Debugger angefügt ist, ruft die Runtime `IActionOnCLREvent::OnEvent` und übergibt einen Zeiger auf ein `MDAInfo` -Instanz als die `data` Parameter.  
   
  Der Host kann auswählen, um MDAs zu aktivieren und benachrichtigt werden, wenn ein MDA aktiviert wird. Dies ermöglicht dem Host ein Standardverhalten außer Kraft setzen und den verwalteten Thread abzubrechen, der das Ereignis, um zu verhindern, dass sie den Verarbeitungsstatus beschädigen ausgelöst hat. Weitere Informationen zum Verwenden von MDAs finden Sie unter [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
@@ -64,5 +64,5 @@ typedef struct _MDAInfo {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingstrukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

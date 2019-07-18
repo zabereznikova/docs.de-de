@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a19762cbec91871d7af617957896e4ee34944fba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b7be346f1c92c877932957787b0747515c144752
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132709"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741538"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile-Methode
 Weist den Namen der Assembly, die erstellt werden. Nicht für die Verwendung bei der Produktion ungebundener Modules.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetAssemblyFile(  
     LPCWSTR pszFilename,  
     IMetaDataEmit* pEmitter,  
@@ -60,4 +60,4 @@ HRESULT SetAssemblyFile(
 
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

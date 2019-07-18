@@ -2,12 +2,12 @@
 title: Von System.Transactions bereitgestellte Funktionen
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-ms.openlocfilehash: 6fc20f8249f37f69689fb3fc6b3144792badad3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75277090652cd439d3466a307790f4b918ddb090
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365929"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645718"
 ---
 # <a name="features-provided-by-systemtransactions"></a>Von System.Transactions bereitgestellte Funktionen
 In diesem Abschnitt wird beschrieben, wie Sie anhand der Funktionen, die der <xref:System.Transactions>-Namespace bereitstellt, Ihre eigene Transaktionsanwendung und Ihren eigenen Ressourcen-Manager schreiben können. In diesem Abschnitt wird insbesondere darauf eingegangen, wie eine (lokale oder verteilte) Transaktion erstellt wird und ein oder mehrere Teilnehmer daran teilnehmen können.  
@@ -19,20 +19,20 @@ In diesem Abschnitt wird beschrieben, wie Sie anhand der Funktionen, die der <xr
   
  Der Transaktions-Manager eskaliert zudem lokale Transaktionen durch Koordination mit einem datenträgerbasierten Transaktions-Manager wie DTC transparent zu verteilten Transaktionen, wenn sich ein zusätzlicher dauerhafter Ressourcen-Manager bei der Transaktion einträgt. Es gibt zwei grundlegende Methoden, mit der <xref:System.Transactions>-Infrastruktur eine verbesserte Leistung zu erreichen.  
   
--   Dynamische Eskalation: Sie stellt sicher, dass die <xref:System.Transactions>-Infrastruktur nur MSDTC verwendet, wenn die Transaktion mehrere verteilte Ressourcen betrifft. Weitere Informationen zur dynamischen Eskalation finden Sie unter [Management Transaktionseskalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md) Thema.  
+- Dynamische Eskalation: Sie stellt sicher, dass die <xref:System.Transactions>-Infrastruktur nur MSDTC verwendet, wenn die Transaktion mehrere verteilte Ressourcen betrifft. Weitere Informationen zur dynamischen Eskalation finden Sie unter [Eskalation der Transaktionsverwaltung](../../../../docs/framework/data/transactions/transaction-management-escalation.md) Thema.  
   
--   Erweiterbare Eintragungen: Ermöglichen es einer Ressource (z.B. einer Datenbank), Eigentümer der Transaktion zu werden, wenn sie die einzige Entität ist, die an der Transaktion teilnimmt. Gegebenenfalls kann die <xref:System.Transactions>-Infrastruktur die Verwaltung der Transaktion zu einem späteren Zeitpunkt an MSDTC eskalieren. Auch dies reduziert die Zahl der Fälle, in denen MSDTC verwendet wird. Heraufstufbare Eintragungen werden ausführlich im Thema[Optimierung mit einzelnen Phase Commit und heraufstufbare Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+- Erweiterbare Eintragungen: Ermöglichen es einer Ressource (z.B. einer Datenbank), Eigentümer der Transaktion zu werden, wenn sie die einzige Entität ist, die an der Transaktion teilnimmt. Gegebenenfalls kann die <xref:System.Transactions>-Infrastruktur die Verwaltung der Transaktion zu einem späteren Zeitpunkt an MSDTC eskalieren. Auch dies reduziert die Zahl der Fälle, in denen MSDTC verwendet wird. Erweiterbare Eintragungen werden ausführlich im Thema[Optimization using Single Phase Commit and Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
- Der <xref:System.Transactions>-Namespace definiert drei Vertrauensebenen – AllowPartiallyTrustedCallers (APTCA), DistributedTransactionPermission (DTP) und volle Vertrauenswürdigkeit –, die den Zugriff auf die verfügbar gemachten Ressourcentypen einschränken. Weitere Informationen zu den verschiedenen Vertrauensebenen finden Sie [Sicherheit Vertrauensebenen in den Zugriff auf Ressourcen](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md).  
+ Der <xref:System.Transactions>-Namespace definiert drei Vertrauensebenen – AllowPartiallyTrustedCallers (APTCA), DistributedTransactionPermission (DTP) und volle Vertrauenswürdigkeit –, die den Zugriff auf die verfügbar gemachten Ressourcentypen einschränken. Weitere Informationen zu den verschiedenen Vertrauensebenen, finden Sie unter [Security Trust Levels in Accessing Resources](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 ### <a name="writing-a-transactional-application"></a>Erstellen einer Transaktionsanwendung  
- Der <xref:System.Transactions>-Namespace stellt zwei Modelle zum Erstellen von Transaktionsanwendungen bereit. [Implementieren eine implizite Transaktion mithilfe der Transaktionsbereich](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) wird beschrieben, wie die <xref:System.Transactions> Namespace unterstützt die Erstellung impliziter Transaktionen, die mithilfe der <xref:System.Transactions.TransactionScope> Klasse.  
+ Der <xref:System.Transactions>-Namespace stellt zwei Modelle zum Erstellen von Transaktionsanwendungen bereit. [Implementieren einer impliziten Transaktion mit Transaktionsbereich](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) wird beschrieben, wie die <xref:System.Transactions> Namespace unterstützt die Erstellung impliziter Transaktionen mithilfe der <xref:System.Transactions.TransactionScope> Klasse.  
   
- [Implementieren eine explizite Transaktion mit CommittableTransaction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md) wird beschrieben, wie die <xref:System.Transactions> Namespace unterstützt die Erstellung von expliziter Transaktionen, die mithilfe der <xref:System.Transactions.CommittableTransaction> Klasse.  
+ [Implementieren einer expliziten Transaktion mit CommittableTransaction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md) wird beschrieben, wie die <xref:System.Transactions> Namespace unterstützt die Erstellung expliziter Transaktionen mithilfe der <xref:System.Transactions.CommittableTransaction> Klasse.  
   
- Zusätzliche Themen Erstellen einer transaktionsanwendung, finden Sie unter [Erstellen einer Transaktionsanwendung](../../../../docs/framework/data/transactions/writing-a-transactional-application.md).  
+ Weitere Themen zum Schreiben einer transaktionsanwendung, finden Sie unter [Erstellen einer Transaktionsanwendung](../../../../docs/framework/data/transactions/writing-a-transactional-application.md).  
   
 ### <a name="implementing-a-resource-manager"></a>Implementieren eines Ressourcen-Managers  
- Um ein Ressourcen-Manager, die einbezogen werden kann in einer Transaktion zu implementieren, finden Sie unter [Implementieren eines Ressourcen-Managers](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md). In diesem Abschnitt werden das Eintragen einer Ressource, das Durchführen eines Transaktionscommit, die Wiederherstellung nach einem Fehler und Best Practices für die Optimierung behandelt.
+ Um einen Ressourcen-Manager, die beteiligt sind, kann in einer Transaktion zu implementieren, finden Sie unter [Implementieren eines Ressourcen-Managers](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md). In diesem Abschnitt werden das Eintragen einer Ressource, das Durchführen eines Transaktionscommit, die Wiederherstellung nach einem Fehler und Best Practices für die Optimierung behandelt.

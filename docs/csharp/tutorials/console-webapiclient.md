@@ -3,12 +3,12 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412304"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063880"
 ---
 # <a name="rest-client"></a>REST-Client
 
@@ -36,11 +36,10 @@ Sie müssen Ihren bevorzugten Code-Editor installieren. In den folgenden Beschre
 
 ## <a name="create-the-application"></a>Erstellen der Anwendung
 
-Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie an der Eingabeaufforderung den Befehl `dotnet new console` ein. Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt.
+Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie an der Eingabeaufforderung den Befehl `dotnet new console` ein. Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt. Da es sich um ein neues Projekt handelt, ist keine der Abhängigkeiten vorhanden, sodass die erste Ausführung das .NET Core-Framework herunterlädt, ein Entwicklungszertifikat installiert und den NuGet-Paket-Manager ausführt, um die fehlenden Abhängigkeiten wiederherzustellen.
 
-Bevor Sie damit beginnen, Änderungen durchzuführen, gehen wir die Schritte zur Ausführung der einfachen Hello World-Anwendung durch. Geben Sie nach dem Erstellen der Anwendung den Befehl `dotnet restore` ([siehe Hinweis](#dotnet-restore-note)) bei Eingabeaufforderung ein. Mit diesem Befehl wird der Prozess zur NuGet-Paketwiederherstellung ausgeführt. NuGet ist ein .NET-Paket-Manager. Mit diesem Befehl werden alle fehlenden abhängigen Komponenten für Ihr Projekt heruntergeladen. Da es sich um ein neues Projekt handelt, ist keine der abhängigen Komponenten vorhanden, deshalb wird zunächst das .NET Core-Framework heruntergeladen. Nach diesem ersten Schritt müssen Sie `dotnet restore` ([siehe Hinweis](#dotnet-restore-note)) nur ausführen, wenn Sie neue abhängige Pakete hinzufügen oder die Versionen abhängiger Komponenten aktualisieren.
-
-Nach dem Wiederherstellen der Pakete führen Sie `dotnet build` aus. Hiermit wird die Build-Engine ausgeführt und Ihre Anwendung erstellt. Abschließend führen Sie `dotnet run` aus, um Ihre Anwendung zu starten.
+Bevor Sie beginnen, Änderungen vornehmen, geben Sie `dotnet run` ([siehe Hinweis](#dotnet-restore-note)) zum Ausführen der Anwendung an der Eingabeaufforderung ein. `dotnet run` führt automatisch `dotnet restore` aus, wenn Ihrer Umgebung Abhängigkeiten fehlen. Wenn Ihre Anwendung neu erstellt werden muss, wird auch `dotnet build` ausgeführt.
+Nach dem ersten Setup müssen Sie nur dann `dotnet restore` oder `dotnet build` ausführen, wenn es für Ihr Projekt sinnvoll ist.
 
 ## <a name="adding-new-dependencies"></a>Hinzufügen von neuen Abhängigkeiten
 
@@ -62,11 +61,11 @@ Fügen Sie direkt nach dieser Zeile Folgendes ein:
 
 Die meisten Code-Editoren bieten Codevervollständigung für verschiedene Versionen dieser Bibliotheken. Sie werden in der Regel die neueste Version der hinzugefügten Pakete verwenden. Es ist jedoch wichtig, sicherzustellen, dass die Versionen aller Pakete übereinstimmen und auch der Version des .NET Core-Anwendungsframeworks entsprechen.
 
-Nachdem Sie diese Änderungen durchgeführt haben, sollten Sie erneut `dotnet restore` ([siehe Hinweis](#dotnet-restore-note)) ausführen, damit das Paket auf Ihrem System installiert wird.
+Nachdem Sie diese Änderungen durchgeführt haben, führen Sie `dotnet restore` ([siehe Hinweis](#dotnet-restore-note)) aus, damit das Paket auf Ihrem System installiert wird.
 
 ## <a name="making-web-requests"></a>Ausführen von Webanforderungen
 
-Jetzt können Sie damit beginnen, Daten aus dem Web abzurufen. In dieser Anwendung lesen Sie Informationen aus der [GitHub-API](https://developer.github.com/v3/) ein. Beginnen wir damit, Informationen zu den Projekten unterhalb der Kategorie [.NET Foundation](https://www.dotnetfoundation.org/) einzulesen. Hierzu senden Sie zunächst eine Anforderung an die GitHub-API, um Informationen zu den Projekten abzurufen. Der verwendete Endpunkt ist [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Sie möchten alle Informationen zu diesen Projekten abrufen, deshalb verwenden Sie eine HTTP GET-Anforderung.
+Jetzt können Sie damit beginnen, Daten aus dem Web abzurufen. In dieser Anwendung lesen Sie Informationen aus der [GitHub-API](https://developer.github.com/v3/) ein. Beginnen wir damit, Informationen zu den Projekten unterhalb der Kategorie [.NET Foundation](https://www.dotnetfoundation.org/) einzulesen. Hierzu senden Sie zunächst eine Anforderung an die GitHub-API, um Informationen zu den Projekten abzurufen. Der verwendete Endpunkt ist <https://api.github.com/orgs/dotnet/repos>. Sie möchten alle Informationen zu diesen Projekten abrufen, deshalb verwenden Sie eine HTTP GET-Anforderung.
 Ihr Browser verwendet ebenfalls HTTP GET-Anforderungen, deshalb können Sie diese URL in Ihren Browser einfügen, um zu sehen, welche Informationen abgerufen und verarbeitet werden.
 
 Sie verwenden die <xref:System.Net.Http.HttpClient> -Klasse zum Ausführen der Webanforderungen. Wie alle modernen .NET-APIs unterstützt <xref:System.Net.Http.HttpClient> nur asynchrone Methoden für APIs mit langer Ausführungszeit.

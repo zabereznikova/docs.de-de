@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6d74af6af6cea0d65c33db67ecbfd71ac1d5c346
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709015"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636945"
 ---
 # <a name="how-to-create-an-activity"></a>Vorgehensweise: Erstellen einer Aktivität
 
@@ -21,26 +21,26 @@ Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1]
 
 ## <a name="create-the-activity-library-project"></a>Erstellen Sie die Workflow-aktivitätsbibliothekprojekt
 
-1.  Öffnen Sie Visual Studio, und wählen Sie **neu** > **Projekt** aus der **Datei** Menü.
+1. Öffnen Sie Visual Studio, und wählen Sie **neu** > **Projekt** aus der **Datei** Menü.
 
-2.  In der **neues Projekt** Dialogfeld unter die **installiert** Kategorie **Visual C#-** > **Workflow** (oder **Visual Basic** > **Workflow**).
+2. In der **neues Projekt** Dialogfeld unter die **installiert** Kategorie **Visual C#-** > **Workflow** (oder **Visual Basic** > **Workflow**).
 
     > [!NOTE]
     > Wenn Sie nicht sehen die **Workflow** Vorlagenkategorie, müssen Sie möglicherweise installieren die **Windows Workflow Foundation** Komponente von Visual Studio. Wählen Sie die **Visual Studio-Installer öffnen** Link auf der linken Seite die **neues Projekt** Dialogfeld. Wählen Sie in Visual Studio-Installer die **Einzelkomponenten** Registerkarte. Klicken Sie unter den **Entwicklungsaktivitäten** Kategorie der **Windows Workflow Foundation** Komponente. Wählen Sie **ändern** die Komponente installieren.
 
 3. Wählen Sie die **Aktivitätsbibliothek** Projektvorlage. Typ `NumberGuessWorkflowActivities` in die **Namen** ein, und klicken Sie dann auf **OK**.
 
-4.  Mit der rechten Maustaste **Activity1.xaml** in **Projektmappen-Explorer** , und wählen Sie **löschen**. Klicken Sie zur Bestätigung auf **OK** .
+4. Mit der rechten Maustaste **Activity1.xaml** in **Projektmappen-Explorer** , und wählen Sie **löschen**. Klicken Sie zur Bestätigung auf **OK** .
 
 ## <a name="create-the-readint-activity"></a>Erstellen Sie die ReadInt-Aktivität
 
-1.  Wählen Sie **neues Element hinzufügen** aus der **Projekt** Menü.
+1. Wählen Sie **neues Element hinzufügen** aus der **Projekt** Menü.
 
-2.  In der **installiert** > **gemeinsame Elemente** Knoten **Workflow**. Wählen Sie **Codeaktivität** aus der **Workflow** Liste.
+2. In der **installiert** > **gemeinsame Elemente** Knoten **Workflow**. Wählen Sie **Codeaktivität** aus der **Workflow** Liste.
 
-3.  Typ `ReadInt` in die **Namen** ein, und klicken Sie dann auf **hinzufügen**.
+3. Typ `ReadInt` in die **Namen** ein, und klicken Sie dann auf **hinzufügen**.
 
-4.  Ersetzen Sie die vorhandene `ReadInt`-Definition durch die folgende Definition.
+4. Ersetzen Sie die vorhandene `ReadInt`-Definition durch die folgende Definition.
 
      [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
@@ -50,21 +50,21 @@ Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1]
 
 ## <a name="create-the-prompt-activity"></a>Erstellen Sie die Prompt-Aktivität
 
-1.  Drücken Sie **STRG**+**UMSCHALT**+**B** zum Erstellen des Projekts. Durch das Erstellen des Projekts wird die `ReadInt`-Aktivität in diesem Projekt erstellt, mit der die benutzerdefinierte Aktivität aus diesem Schritt erstellt werden soll.
+1. Drücken Sie **STRG**+**UMSCHALT**+**B** zum Erstellen des Projekts. Durch das Erstellen des Projekts wird die `ReadInt`-Aktivität in diesem Projekt erstellt, mit der die benutzerdefinierte Aktivität aus diesem Schritt erstellt werden soll.
 
-2.  Wählen Sie **neues Element hinzufügen** aus der **Projekt** Menü.
+2. Wählen Sie **neues Element hinzufügen** aus der **Projekt** Menü.
 
-3.  In der **installiert** > **gemeinsame Elemente** Knoten **Workflow**. Wählen Sie **Aktivität** aus der **Workflow** Liste.
+3. In der **installiert** > **gemeinsame Elemente** Knoten **Workflow**. Wählen Sie **Aktivität** aus der **Workflow** Liste.
 
-4.  Typ `Prompt` in die **Namen** ein, und klicken Sie dann auf **hinzufügen**.
+4. Typ `Prompt` in die **Namen** ein, und klicken Sie dann auf **hinzufügen**.
 
-5.  Doppelklicken Sie auf **Prompt.xaml** in **Projektmappen-Explorer** um es im Designer anzuzeigen, wenn er nicht bereits angezeigt wird.
+5. Doppelklicken Sie auf **Prompt.xaml** in **Projektmappen-Explorer** um es im Designer anzuzeigen, wenn er nicht bereits angezeigt wird.
 
-6.  Klicken Sie auf **Argumente** in den links unten auf der der Aktivitäts-Designer zum Anzeigen der **Argumente** Bereich.
+6. Klicken Sie auf **Argumente** in den links unten auf der der Aktivitäts-Designer zum Anzeigen der **Argumente** Bereich.
 
-7.  Klicken Sie auf **Argument erstellen**.
+7. Klicken Sie auf **Argument erstellen**.
 
-8.  Typ `BookmarkName` in die **Namen** wählen Sie im **In** aus der **Richtung** Dropdown-Liste **Zeichenfolge** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die **EINGABETASTE** auf das Argument zu speichern.
+8. Typ `BookmarkName` in die **Namen** wählen Sie im **In** aus der **Richtung** Dropdown-Liste **Zeichenfolge** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die **EINGABETASTE** auf das Argument zu speichern.
 
 9. Klicken Sie auf **Argument erstellen**.
 

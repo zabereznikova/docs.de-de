@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa85fb2cebb47ecbd7b0f091cb79f6ea0936b1cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c9a7d55b5a4867dcdc4e816bd3eac2cf29c68564
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177839"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751977"
 ---
 # <a name="corprfsnapshotinfo-enumeration"></a>COR_PRF_SNAPSHOT_INFO-Enumeration
 Gibt an, wie viel zu übergebende Daten mit einer Stapelmomentaufnahme in jedem Aufruf des Profilers Sichern [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum _COR_PRF_SNAPSHOT_INFO {  
     COR_PRF_SNAPSHOT_DEFAULT = 0x0,  
     COR_PRF_SNAPSHOT_REGISTER_CONTEXT = 0x1,  

@@ -2,22 +2,22 @@
 title: Serialisierungskonzepte
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 649c4475aa8dcfc657b7591a0068dbfa4af918ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 99716a6346689ac4d3201f83b0b8204cad462e8e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976537"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593330"
 ---
 # <a name="serialization-concepts"></a>Serialisierungskonzepte
-Warum ist es sinnvoll, die Serialisierung zu verwenden? Die beiden wichtigsten Gründe bestehen darin, dass der Objektstatus auf einem Speichermedium dauerhaft gespeichert werden soll, damit zu einem späteren Zeitpunkt eine genaue Kopie angefertigt werden kann, und dass das Objekt als Wert von einer Anwendungsdomäne zu einer anderen Anwendungsdomäne übertragen werden soll. Die Serialisierung wird beispielsweise eingesetzt, um den Sitzungsstatus in ASP.NET zu speichern und Objekte in die Zwischenablage von Windows&#160;Forms zu kopieren. Sie wird auch vom Remotingsystem verwendet, um Objekte als Wert von einer Anwendungsdomäne an eine andere zu übergeben.
+Warum ist es sinnvoll, die Serialisierung zu verwenden? Die beiden wichtigsten Gründe bestehen darin, dass der Objektstatus auf einem Speichermedium dauerhaft gespeichert werden soll, damit zu einem späteren Zeitpunkt eine genaue Kopie angefertigt werden kann, und dass das Objekt als Wert von einer Anwendungsdomäne zu einer anderen Anwendungsdomäne übertragen werden soll. Die Serialisierung wird beispielsweise eingesetzt, um den Sitzungsstatus in ASP.NET zu speichern und Objekte in die Zwischenablage von Windows&amp;#160;Forms zu kopieren. Sie wird auch vom Remotingsystem verwendet, um Objekte als Wert von einer Anwendungsdomäne an eine andere zu übergeben.
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
 ## <a name="persistent-storage"></a>Dauerhafte Speicherung
 Es ist häufig notwendig, die Werte der Felder eines Objekts auf einem Datenträger zu speichern und diese Daten später abzurufen. Dies lässt sich zwar auch ohne die Serialisierung erreichen, aber dieser Ansatz ist häufig mühsam und fehleranfällig und wird zunehmend komplex, wenn eine Hierarchie von Objekten verfolgt werden muss. Stellen Sie sich vor, Sie programmieren eine große Geschäftsanwendung mit Tausenden von Objekten und müssen Code schreiben, mit dem die Felder und Eigenschaften der einzelnen Objekte auf dem Datenträger gespeichert und von diesem wieder abgerufen und in den jeweiligen Objekten wiederhergestellt werden. Die Serialisierung stellt einen zweckmäßigen Mechanismus zur Erreichung dieses Ziels bereit.
 
-Die Common Language Runtime verwaltet, wie Objekte im Speicher gespeichert werden und stellt einen automatischen Serialisierungsmechanismus bereit, der sich auf die [Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md) stützt. Wenn ein Objekt serialisiert wird, werden der Name der Klasse, die Assembly und alle Datenmember der Klasseninstanz auf das Speichermedium geschrieben. Objekte speichern oft in Membervariablen Verweise auf andere Instanzen. Beim Serialisieren der Klasse verfolgt das Serialisierungsmodul Objekte, auf die verwiesen wird und die bereits serialsiert sind, um sicherzustellen, dass ein Objekt nicht zweimal serialisiert wird. Die mit dem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bereitgestellte Serialisierungsarchitektur behandelt Objektdiagramme und Zirkelverweise automatisch richtig. Objektdiagramme müssen nur die Anforderung erfüllen, dass alle Objekte, auf die das serialisierte Objekt verweist, auch als `Serializable` markiert sein müssen (weitere Informationen finden Sie unter [Einfache Serialisierung](basic-serialization.md)). Ist dies nicht der Fall, wird eine Ausnahme ausgelöst, wenn versucht wird, das nicht markierte Objekt zu serialisieren.
+Die Common Language Runtime verwaltet, wie Objekte im Speicher gespeichert werden und stellt einen automatischen Serialisierungsmechanismus bereit, der sich auf die [Reflektion](../../../docs/framework/reflection-and-codedom/reflection.md) stützt. Wenn ein Objekt serialisiert wird, werden der Name der Klasse, die Assembly und alle Datenmember der Klasseninstanz auf das Speichermedium geschrieben. Objekte speichern oft in Membervariablen Verweise auf andere Instanzen. Beim Serialisieren der Klasse verfolgt die Serialisierungs-Engine Objekte, auf die verwiesen wird und die bereits serialsiert sind, um sicherzustellen, dass ein Objekt nicht zweimal serialisiert wird. Die Serialisierungsarchitektur sofern .NET Framework ordnungsgemäß behandelt Objektdiagramme und Zirkelverweise automatisch Objekt. Objektdiagramme müssen nur die Anforderung erfüllen, dass alle Objekte, auf die das serialisierte Objekt verweist, auch als `Serializable` markiert sein müssen (weitere Informationen finden Sie unter [Einfache Serialisierung](basic-serialization.md)). Ist dies nicht der Fall, wird eine Ausnahme ausgelöst, wenn versucht wird, das nicht markierte Objekt zu serialisieren.
 
 Wenn die serialisierte Klasse deserialisiert wird, wird sie neu erstellt, und die Werte aller Datenmember werden automatisch wiederhergestellt.
 

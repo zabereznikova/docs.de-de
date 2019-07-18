@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed13f78d5a1f6d54b12c86613715f4878a521bfa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fdf3998d7430348cb71af8e7dd75cf2203d380ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489929"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769032"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions-Methode
 Ruft Informationen über die aktiven Funktion in dieses Threads Frames ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetActiveFunctions (  
     [in]   ULONG32             cFunctions,  
     [out]  ULONG32             *pcFunctions,  

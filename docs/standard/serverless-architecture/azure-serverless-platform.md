@@ -4,12 +4,12 @@ description: Die serverlose Azure-Plattform bietet Funktionen, die einschließli
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 6149e79f45422be0b4f1ebc719543efd1b0b750c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 43646db564ae31d26fe59e1ad7392e51d2d4e953
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126421"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638867"
 ---
 # <a name="azure-serverless-platform"></a>Serverlose Azure-Plattform
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cac790ebbf25ee3095db293ba90612be37fff9b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e46118e97a4b888a16f12cf6705d2b7e67bbf7ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190443"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740363"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason-Enumeration
 Gibt den Grund oder die Gründe für die Initiierung einer Aufrufkette an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugChainReason {  
     CHAIN_NONE              = 0x000,  
     CHAIN_CLASS_INIT        = 0x001,  
@@ -78,4 +78,4 @@ typedef enum CorDebugChainReason {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

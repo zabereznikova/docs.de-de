@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f4136a2c8fb7ca98ff22aa6a5fc676f30cd1c5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828120"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624303"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struktur von Visual Basic-Programmen
 Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung* besteht aus einem oder mehreren Projekten. Ein *Projekt* wiederum können eine oder mehrere Assemblys enthalten. Jede *Assembly* aus ein oder mehrere Quelldateien kompiliert wird. Ein *Quelldatei* enthält die Definition und Implementierung von Klassen, Strukturen, Module und Schnittstellen, die letzten Endes den gesamten Code enthalten.  
@@ -22,11 +22,11 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
 ## <a name="file-level-programming-elements"></a>Laufwerkssicherungen auf Dateiebene Programmierelemente  
  Wenn Sie, ein Projekt oder eine Datei beginnen und den Code-Editor zu öffnen, sehen Sie etwas Code bereits an Ort und in der richtigen Reihenfolge. Code, den Sie schreiben, sollten die folgende Sequenz beachten:  
   
-1.  `Option` Anweisungen  
+1. `Option` Anweisungen  
   
-2.  `Imports` Anweisungen  
+2. `Imports` Anweisungen  
   
-3.  `Namespace` Anweisungen und Namespace-Level-Elementen  
+3. `Namespace` Anweisungen und Namespace-Level-Elementen  
   
  Wenn Sie die Anweisungen in einer anderen Reihenfolge eingeben, können Kompilierungsfehler führen.  
   
@@ -47,30 +47,30 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
 ## <a name="namespace-level-programming-elements"></a>Namespace-Ebene Programmierelemente  
  Klassen, Strukturen und -Module enthalten alle den Code in der Quelldatei. Sie sind *auf Namespace-Ebene* -Elemente, die in einem Namespace oder auf der Ebene der Quelldatei angezeigt werden können. Sie enthalten die Deklarationen der anderen Programmierungselementen. Schnittstellen, die Elementsignaturen zu definieren, aber keine Implementierung bereitstellen, werden auch auf Modulebene angezeigt. Weitere Informationen zu den Elementen auf Modulebene finden Sie in der folgenden:  
   
--   [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module-Anweisung](../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module-Anweisung](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  Datenelemente auf Namespaceebene sind Enumerationen und Delegaten.  
   
 ## <a name="module-level-programming-elements"></a>Auf Modulebene Programmierelemente  
  Prozeduren, Operatoren, Eigenschaften und Ereignisse sind die einzige Programmierelemente, die ausführbaren Code (Anweisungen, die Aktionen zur Laufzeit ausführen) enthalten können. Sie sind der *auf Modulebene* Elemente Ihres Programms. Weitere Informationen zu den Elementen auf Prozedurebene finden Sie hier:  
   
--   [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)  
   
  Datenelemente auf Modulebene sind Variablen, Konstanten, Enumerationen und Delegaten.  
   
@@ -82,13 +82,13 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
 ## <a name="the-main-procedure"></a>Die Main-Prozedur  
  Die `Main` Verfahren ist der erste Code, der ausgeführt werden, wenn die Anwendung geladen wurde. `Main` Dient als Ausgangspunkt und gesamtsteuerung für Ihre Anwendung. Es gibt vier Arten von `Main`:  
   
--   `Sub Main()`  
+- `Sub Main()`  
   
--   `Sub Main(ByVal cmdArgs() As String)`  
+- `Sub Main(ByVal cmdArgs() As String)`  
   
--   `Function Main() As Integer`  
+- `Function Main() As Integer`  
   
--   `Function Main(ByVal cmdArgs() As String) As Integer`  
+- `Function Main(ByVal cmdArgs() As String) As Integer`  
   
  Die am häufigsten verwendete Variante dieses Verfahrens ist `Sub Main()`. Weitere Informationen finden Sie unter [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
   

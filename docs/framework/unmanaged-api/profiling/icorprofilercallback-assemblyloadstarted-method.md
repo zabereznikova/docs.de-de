@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a96a2a0d6e4bc48a46850aeaadd17c2669419cef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4ace66630176149a18a174fad24f782a289b0e9d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219355"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763000"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted-Methode
 Benachrichtigt den Profiler an, dass eine Assembly geladen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT AssemblyLoadStarted(  
     [in] AssemblyID assemblyId);  
 ```  

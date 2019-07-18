@@ -2,12 +2,12 @@
 title: Grundlegende Konzepte für Windows-Workflows
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 730679c892d96ff6de2d02ee1e1afdd52e452439
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703412"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650935"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Grundlegende Konzepte für Windows-Workflows
 Bei der Workflowentwicklung in [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] werden Konzepte verwendet, die für einige Entwickler möglicherweise neu sind. In diesem Thema werden einige dieser Konzepte und ihre Implementierung beschrieben.  
@@ -27,27 +27,27 @@ Bei der Workflowentwicklung in [!INCLUDE[netfx_current_long](../../../includes/n
 ## <a name="workflow-runtime"></a>Workflow-Laufzeit  
  Die Workflowlaufzeit ist die Umgebung, in der Workflows ausgeführt werden. <xref:System.Activities.WorkflowInvoker> ist die einfachste Möglichkeit, einen Workflow auszuführen. Der Host verwendet <xref:System.Activities.WorkflowInvoker> für folgende Aktionen:  
   
--   Synchrones Aufrufen eines Workflows  
+- Synchrones Aufrufen eines Workflows  
   
--   Bereitstellen von Eingabedaten bzw. Abrufen von Ausgabedaten eines Workflows  
+- Bereitstellen von Eingabedaten bzw. Abrufen von Ausgabedaten eines Workflows  
   
--   Hinzufügen von Erweiterungen für Aktivitäten  
+- Hinzufügen von Erweiterungen für Aktivitäten  
   
  <xref:System.Activities.ActivityInstance> ist der threadsichere Proxy, über den Hosts mit der Laufzeit interagieren können. Der Host verwendet <xref:System.Activities.ActivityInstance> für folgende Aktionen:  
   
--   Abrufen einer Instanz durch Erstellen oder Laden aus einem Instanzspeicher  
+- Abrufen einer Instanz durch Erstellen oder Laden aus einem Instanzspeicher  
   
--   Aktivieren von Benachrichtigungen bei Instanzlebenszyklusereignissen  
+- Aktivieren von Benachrichtigungen bei Instanzlebenszyklusereignissen  
   
--   Steuern der Workflowausführung  
+- Steuern der Workflowausführung  
   
--   Bereitstellen von Eingabedaten bzw. Abrufen von Ausgabedaten eines Workflows  
+- Bereitstellen von Eingabedaten bzw. Abrufen von Ausgabedaten eines Workflows  
   
--   Signalisieren einer Workflowfortsetzung und Übergeben von Werten in den Workflow  
+- Signalisieren einer Workflowfortsetzung und Übergeben von Werten in den Workflow  
   
--   Aufbewahren von Workflowdaten  
+- Aufbewahren von Workflowdaten  
   
--   Hinzufügen von Erweiterungen für Aktivitäten  
+- Hinzufügen von Erweiterungen für Aktivitäten  
   
  Aktivitäten erhalten Zugriff auf die Workflowlaufzeitumgebung, indem sie die entsprechende abgeleitete <xref:System.Activities.ActivityContext>-Klasse wie <xref:System.Activities.NativeActivityContext> oder <xref:System.Activities.CodeActivityContext> verwenden. Sie verwenden diese zum Auflösen von Argumenten und Variablen, zum Planen von untergeordneten Aktivitäten und zu vielen anderen Zwecken.  
   
@@ -57,10 +57,10 @@ Bei der Workflowentwicklung in [!INCLUDE[netfx_current_long](../../../includes/n
 ## <a name="persistence-unloading-and-long-running-workflows"></a>Persistenz, Entladen und langfristige Workflows  
  Windows Workflow vereinfacht die Erstellung von langfristigen reaktiven Programmen durch die folgenden Punkte:  
   
--   Aktivitäten, die auf externe Eingabedaten zugreifen.  
+- Aktivitäten, die auf externe Eingabedaten zugreifen.  
   
--   Die Möglichkeit zur Erstellung von <xref:System.Activities.Bookmark>-Objekten, die von einer Host-Listeneranwendung übernommen werden können.  
+- Die Möglichkeit zur Erstellung von <xref:System.Activities.Bookmark>-Objekten, die von einer Host-Listeneranwendung übernommen werden können.  
   
--   Die Möglichkeit zum Aufbewahren der Daten eines Workflows und zum Entladen des Workflows und zum anschließenden erneuten Laden und Aktivieren des Workflows basierend auf der Wiederaufnahme von <xref:System.Activities.Bookmark>-Objekten in einem bestimmten Workflow.  
+- Die Möglichkeit zum Aufbewahren der Daten eines Workflows und zum Entladen des Workflows und zum anschließenden erneuten Laden und Aktivieren des Workflows basierend auf der Wiederaufnahme von <xref:System.Activities.Bookmark>-Objekten in einem bestimmten Workflow.  
   
  Ein Workflow führt kontinuierlich Aktivitäten aus, bis keine Aktivitäten mehr auszuführen sind bzw. bis für alle ausgeführten Aktivitäten eine Eingabe aussteht. Im letzteren Fall befindet sich der Workflow im Leerlauf. Workflows im Leerlauf werden von einem Host häufig entladen und dann neu geladen, um die Ausführung fortzusetzen, wenn eine Nachricht eingeht. <xref:System.ServiceModel.Activities.WorkflowServiceHost> stellt Funktionen für dieses Feature sowie eine erweiterbare Entladerichtlinie bereit. Für Ausführungsblöcke mit Daten im flüchtigen Zustand bzw. anderen Daten, die nicht dauerhaft gespeichert werden können, kann in einer Aktivität mit <xref:System.Activities.NoPersistHandle> angegeben werden, dass die Daten nicht dauerhaft gespeichert werden sollen. Die Daten eines Workflows können auch mit der <xref:System.Activities.Statements.Persist>-Aktivität explizit auf einem dafür vorgesehenen Speichermedium dauerhaft gespeichert werden.

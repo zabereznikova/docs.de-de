@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
 ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762084"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Gewusst-wie-Themen zu visueller Ebenenprogrammierung
 Die Themen in diesem Abschnitt veranschaulichen, wie die visuelle Ebene für Treffertests und Low-Level-Komposition verwendet wird.  
@@ -21,7 +21,7 @@ Die Themen in diesem Abschnitt veranschaulichen, wie die visuelle Ebene für Tre
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Abrufen des Offsets eines visuellen Objekts](how-to-get-the-offset-of-a-visual.md)  
  [Auflisten des Zeichnungsinhalts eines visuellen Objekts](how-to-enumerate-drawing-content-of-a-visual.md)  
- [Treffertest für eine Geometrie in einem visuellen Objekt](how-to-hit-test-geometry-in-a-visual.md)  
+ [Vorgehensweise: Treffertest für eine Geometrie in einem visuellen Objekt](how-to-hit-test-geometry-in-a-visual.md)  
  [Treffertest mit Geometrie als Parameter](how-to-hit-test-using-geometry-as-a-parameter.md)  
  [Treffertest mithilfe eines Win32-Hostcontainers](how-to-hit-test-using-a-win32-host-container.md)  
  [Rendern in Pro-Frame-Intervallen mit CompositionTarget](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  

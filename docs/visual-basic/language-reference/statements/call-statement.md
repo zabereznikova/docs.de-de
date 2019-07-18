@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
 ms.openlocfilehash: 755443a99a1ad8b0430a76d2dba1ff27472d4c9d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945066"
 ---
 # <a name="call-statement-visual-basic"></a>Call-Anweisung (Visual Basic)
 Überträgt die Steuerung an eine `Function`, `Sub`, oder eine Dynamic Link Library (DLL)-Prozedur.  

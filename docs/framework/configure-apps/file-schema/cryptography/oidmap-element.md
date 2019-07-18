@@ -1,5 +1,5 @@
 ---
-title: <oidMap> Element
+title: <oidMap>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705167"
 ---
 # <a name="oidmap-element"></a>\<OidMap >-Element
 Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.  
@@ -76,7 +76,7 @@ Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.
 ## <a name="see-also"></a>Siehe auch
 
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schema für Kryptografieeinstellungen](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Kryptografische Dienste](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

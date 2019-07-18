@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6998be3daf0ab6a6290a3400b96c32227df3e022
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9a1c0f7deb2ef24893530797b4507e2dcc540ad2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175088"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757050"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next-Methode
 Ruft den relativen virtuellen Adresse (RVA) der angegebenen Anzahl von Objekten aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]    

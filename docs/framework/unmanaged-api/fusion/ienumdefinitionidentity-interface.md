@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d19ca92db6f57a004dca54f6e22db10603c9498a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4bbd8476b7778de6d0023f3a8522a44be6626884
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214844"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751528"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity-Schnittstelle
 Dient als Enumerator für eine Auflistung von `IDefinitionIdentity` Objekte.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 IEnumDefinitionIdentity : IUnknown {  
   
     HRESULT Clone (  

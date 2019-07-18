@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
 ms.openlocfilehash: b3c9452f8d144fb18ea3efcb35b85caed80e8692
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778676"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
 Gibt an, dass es sich bei Visual Basic alle Zeichenfolgen in Unicode-Werten, unabhängig vom Namen des deklarierten der externen Prozedur marshallen soll.  

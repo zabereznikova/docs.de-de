@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b37e9c2874448b5fff82f6a37f6ca850875f2b04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 06d734bfd79e7752db427821a6ddc663b6e22b7d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112514"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778534"
 ---
 # <a name="asmname-enumeration"></a>ASM_NAME-Enumeration
 Gibt an, die Version, Build, Kultur, Signatur und So weiter, der die Assembly, deren Eigenschaften abgerufen oder festgelegt werden [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) Methoden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
   
     ASM_NAME_PUBLIC_KEY = 0,  
@@ -76,4 +76,4 @@ typedef enum {
 ## <a name="see-also"></a>Siehe auch
 
 - [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusionsenumerationen](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Fusion-Enumerationen](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

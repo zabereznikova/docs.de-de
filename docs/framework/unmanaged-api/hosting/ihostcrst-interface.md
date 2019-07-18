@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 939f100e8ee386642a29c33827a8339caf0467b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967829"
 ---
 # <a name="ihostcrst-interface"></a>IHostCrst-Schnittstelle
 Dient als Darstellung des Hosts in einem kritischen Abschnitt für das Threading teilweise.  
@@ -51,4 +51,4 @@ Dient als Darstellung des Hosts in einem kritischen Abschnitt für das Threading
 
 - [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
 - [IHostSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

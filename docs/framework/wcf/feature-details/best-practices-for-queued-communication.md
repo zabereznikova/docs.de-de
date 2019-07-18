@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b2f64faab6df678182fb39174c8a558b298a8748
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584966"
 ---
 # <a name="best-practices-for-queued-communication"></a>Bewährte Methoden für die Kommunikation unter Verwendung von Warteschlangen
 Dieses Thema enthält bewährte Methoden für die Kommunikation in Windows Communication Foundation (WCF), in der Warteschlange. In den folgenden Abschnitten werden bewährte Methoden aus der Perspektive eines Szenarios vorgestellt.  
@@ -29,7 +29,7 @@ Dieses Thema enthält bewährte Methoden für die Kommunikation in Windows Commu
  Um eine zuverlässige End-to-End-Übertragung zu gewährleisten, legen Sie die <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>-Eigenschaft auf den Wert `true` fest Die <xref:System.ServiceModel.MsmqBindingBase.Durable%2A>-Eigenschaft kann je nach Anforderungen auf `true` oder `false` festgelegt werden. (Die Standardeinstellung ist `true`.) Im Allgemeinen wird für die <xref:System.ServiceModel.MsmqBindingBase.Durable%2A>-Eigenschaft der Wert `true` gewählt, wenn eine zuverlässige End-to-End-Übertragung gewünscht wird. Dies geht zwar auf Kosten der Leistung, Meldungen gehen bei dieser Einstellung jedoch nicht verloren, falls ein Warteschlangen-Manager einmal abstürzen sollte.  
   
 ### <a name="use-of-transactions"></a>Verwendung von Transaktionen  
- Sie müssen Transaktionen verwenden, um eine zuverlässige End-to-End-Übertragung zu gewährleisten. `ExactlyOnce` -zusicherungen gewährleisten nur, dass Nachrichten an die Zielwarteschlange übermittelt werden. Um sicherzustellen, dass die Nachricht auch empfangen wird, verwenden Sie Transaktionen. Ohne Transaktionen geht bei einem Absturz des Diensts die gerade zugestellte Nachricht verloren, wobei sie jedoch an die Anwendung gesendet wird.  
+ Sie müssen Transaktionen verwenden, um eine zuverlässige End-to-End-Übertragung zu gewährleisten. `ExactlyOnce`-Zusicherungen gewährleisten nur, dass Nachrichten an die Zielwarteschlange gesendet werden. Um sicherzustellen, dass die Nachricht auch empfangen wird, verwenden Sie Transaktionen. Ohne Transaktionen geht bei einem Absturz des Diensts die gerade zugestellte Nachricht verloren, wobei sie jedoch an die Anwendung gesendet wird.  
   
 ### <a name="use-of-dead-letter-queues"></a>Verwendung von Warteschlangen für unzustellbare Nachrichten  
  Bei Verwendung von Warteschlangen für unzustellbare Nachrichten werden Sie benachrichtigt, falls eine Nachricht nicht in die Zielwarteschlange gestellt werden kann. Sie können die vom System bereitgestellte oder Ihre eigene Warteschlange für unzustellbare Nachrichten verwenden. Im Allgemeinen empfiehlt sich die Verwendung Ihrer eigenen Warteschlange für unzustellbare Nachrichten, da Sie die nicht zustellbaren Nachrichten einer Anwendung dann an eine bestimmte Warteschlange für unzustellbare Nachrichten senden können. Andernfalls werden alle nicht zustellbaren Nachrichten aller Anwendungen auf dem System in eine einzige Warteschlange gestellt. In diesem Fall muss dann jede Anwendung in der Warteschlange für unzustellbare Nachrichten nach den für sie relevanten unzustellbaren Nachrichten suchen. Gelegentlich können keine benutzerdefinierten Warteschlangen für unzustellbare Nachrichten verwendet werden, zum Beispiel bei MSMQ&amp;#160;3.0.  
@@ -41,18 +41,18 @@ Dieses Thema enthält bewährte Methoden für die Kommunikation in Windows Commu
 ### <a name="use-of-poison-message-handling"></a>Handhabung beschädigter (nicht verarbeitbarer) Nachrichten  
  Die Handhabung beschädigter Nachrichten gibt Ihnen die Möglichkeit zur Wiederherstellung nach Fehlern bei der Nachrichtenverarbeitung.  
   
- Wenn Sie die Funktion für die Handhabung beschädigter Nachrichten verwenden, muss die <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>-Eigenschaft auf den richtigen Wert festgelegt werden. Bei <xref:System.ServiceModel.ReceiveErrorHandling.Drop> gehen die Daten verloren. Andererseits wird bei der Einstellung <xref:System.ServiceModel.ReceiveErrorHandling.Fault> auf dem Diensthost ein Fehler ausgegeben, wenn dieser auf eine beschädigte (nicht verarbeitbare) Nachricht stößt. Bei MSMQ&amp;#160;3.0 ist die Einstellung <xref:System.ServiceModel.ReceiveErrorHandling.Fault> die beste Option, um Datenverluste zu vermeiden und die beschädigte Nachricht zu eliminieren. Bei Verwendung von MSMQ 4.0 ist <xref:System.ServiceModel.ReceiveErrorHandling.Move> die empfohlene Vorgehensweise. <xref:System.ServiceModel.ReceiveErrorHandling.Move> Verschiebt eine beschädigte Nachricht aus der Warteschlange, damit der Dienst fortgesetzt werden kann, um neue Nachrichten zu verarbeiten. Die beschädigte Nachricht kann dann separat vom Dienst für beschädigte Nachrichten verarbeitet werden.  
+ Wenn Sie die Funktion für die Handhabung beschädigter Nachrichten verwenden, muss die <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>-Eigenschaft auf den richtigen Wert festgelegt werden. Bei <xref:System.ServiceModel.ReceiveErrorHandling.Drop> gehen die Daten verloren. Andererseits wird bei der Einstellung <xref:System.ServiceModel.ReceiveErrorHandling.Fault> auf dem Diensthost ein Fehler ausgegeben, wenn dieser auf eine beschädigte (nicht verarbeitbare) Nachricht stößt. Bei MSMQ&amp;#160;3.0 ist die Einstellung <xref:System.ServiceModel.ReceiveErrorHandling.Fault> die beste Option, um Datenverluste zu vermeiden und die beschädigte Nachricht zu eliminieren. Bei Verwendung von MSMQ 4.0 ist <xref:System.ServiceModel.ReceiveErrorHandling.Move> die empfohlene Vorgehensweise. Durch <xref:System.ServiceModel.ReceiveErrorHandling.Move> wird die kritische Nachricht aus der Warteschlange verschoben, sodass neue Nachrichten verarbeitet werden können. Die beschädigte Nachricht kann dann separat vom Dienst für beschädigte Nachrichten verarbeitet werden.  
   
  Weitere Informationen finden Sie unter [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md).  
   
 ## <a name="achieving-high-throughput"></a>Hoher Durchsatz  
  Verwenden Sie Folgendes, um bei einem einzelnen Endpunkt einen hohen Durchsatz zu erreichen:  
   
--   Transaktive Batchverarbeitung: Bei der transaktiven Batchverarbeitung ist sichergestellt, dass viele Nachrichten in einer einzelnen Transaktion gelesen werden können. Hierdurch werden die Commits für Transaktionen optimiert und die Gesamtleistung verbessert. Nachteil der Batchverarbeitung: Tritt bei einer Nachricht im Batch ein Fehler auf, wird der gesamte Batch zurückgesetzt, und die Nachrichten müssen so lange einzeln verarbeitet werden, bis die Batchverarbeitung wieder sicher aufgenommen werden kann. Da beschädigte Nachrichten in der Regel nur selten auftreten, ist die Batchverarbeitung die bevorzugte Methode, die Systemleistung zu verbessern, insbesondere dann, wenn noch andere Ressourcen-Manager an der Transaktion beteiligt sind. Weitere Informationen finden Sie unter [Batchverarbeitung von Nachrichten in einer Transaktion](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
+- Transaktive Batchverarbeitung: Bei der transaktiven Batchverarbeitung ist sichergestellt, dass viele Nachrichten in einer einzelnen Transaktion gelesen werden können. Hierdurch werden die Commits für Transaktionen optimiert und die Gesamtleistung verbessert. Nachteil der Batchverarbeitung: Tritt bei einer Nachricht im Batch ein Fehler auf, wird der gesamte Batch zurückgesetzt, und die Nachrichten müssen so lange einzeln verarbeitet werden, bis die Batchverarbeitung wieder sicher aufgenommen werden kann. Da beschädigte Nachrichten in der Regel nur selten auftreten, ist die Batchverarbeitung die bevorzugte Methode, die Systemleistung zu verbessern, insbesondere dann, wenn noch andere Ressourcen-Manager an der Transaktion beteiligt sind. Weitere Informationen finden Sie unter [Batchverarbeitung von Nachrichten in einer Transaktion](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md).  
   
--   Parallelität: Parallelität erhöht den Durchsatz, verschärft jedoch auch den Wettstreit um freigegebene Ressourcen. Weitere Informationen finden Sie unter [Parallelität](../../../../docs/framework/wcf/samples/concurrency.md).  
+- Parallelität: Parallelität erhöht den Durchsatz, verschärft jedoch auch den Wettstreit um freigegebene Ressourcen. Weitere Informationen finden Sie unter [Parallelität](../../../../docs/framework/wcf/samples/concurrency.md).  
   
--   Einschränkung: Schränken Sie die Anzahl der Nachrichten in der Verteilerpipeline ein, um eine optimale Leistung zu erzielen. Ein Beispiel dazu, finden Sie unter [Drosselung](../../../../docs/framework/wcf/samples/throttling.md).  
+- Einschränkung: Schränken Sie die Anzahl der Nachrichten in der Verteilerpipeline ein, um eine optimale Leistung zu erzielen. Ein Beispiel dazu, finden Sie unter [Drosselung](../../../../docs/framework/wcf/samples/throttling.md).  
   
  Beachten Sie bei der Batchverarbeitung, dass Parallelität und Einschränkung zu simultanen Batches führen.  
   
@@ -75,17 +75,17 @@ Dieses Thema enthält bewährte Methoden für die Kommunikation in Windows Commu
   
  Beachten Sie bei der Verwendung von `MsmqIntegrationBinding` folgende Punkte:  
   
--   Ein WCF-Nachrichtentext ist nicht identisch mit einem MSMQ-Nachrichtentext. Wenn Sie eine WCF-Nachricht mit einer Bindung in der Warteschlange zu senden, wird der WCF-Nachrichtentext in eine MSMQ-Nachricht platziert. In der MSMQ-Infrastruktur wird diese Zusatzinformation jedoch nicht wahrgenommen, MSMQ sieht lediglich die MSMQ-Nachricht.  
+- Ein WCF-Nachrichtentext ist nicht identisch mit einem MSMQ-Nachrichtentext. Wenn Sie eine WCF-Nachricht mit einer Bindung in der Warteschlange zu senden, wird der WCF-Nachrichtentext in eine MSMQ-Nachricht platziert. In der MSMQ-Infrastruktur wird diese Zusatzinformation jedoch nicht wahrgenommen, MSMQ sieht lediglich die MSMQ-Nachricht.  
   
--   `MsmqIntegrationBinding` unterstützt die gängigen Serialisierungstypen. Je nach Serialisierungstyp nimmt der Texttyp der generischen Nachricht - <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> - unterschiedliche Typparameter an. So ist bei <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> zum Beispiel `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> und bei `MsmqMessage<Stream>` der Parameter erforderlich.  
+- `MsmqIntegrationBinding` unterstützt die gängigen Serialisierungstypen. Je nach Serialisierungstyp nimmt der Texttyp der generischen Nachricht - <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> - unterschiedliche Typparameter an. So ist bei <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> zum Beispiel `MsmqMessage\<byte[]>`<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> und bei `MsmqMessage<Stream>` der Parameter erforderlich.  
   
--   Mit XML-Serialisierung, können Sie angeben, den bekannten Typ mithilfe der `KnownTypes` -Attribut für die [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element, klicken Sie dann zu bestimmen, wie Deserialisieren die XML-Nachricht verwendet wird.  
+- Mit XML-Serialisierung, können Sie angeben, den bekannten Typ mithilfe der `KnownTypes` -Attribut für die [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element, klicken Sie dann zu bestimmen, wie Deserialisieren die XML-Nachricht verwendet wird.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Vorgehensweise: Austauschen von Nachrichten in der Warteschlange mit wcd-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Vorgehensweise: Austauschen von Nachrichten mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Gruppieren von Nachrichten in der Warteschlange einer Sitzung](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
 - [Batchverarbeitung von Nachrichten in einer Transaktion](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
 - [Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)

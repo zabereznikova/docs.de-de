@@ -2,12 +2,12 @@
 title: Datenablaufverfolgung in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 8f9388d084e9e598e43c0f871b21d05c053e77ce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367166"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489523"
 ---
 # <a name="data-tracing-in-adonet"></a>Datenablaufverfolgung in ADO.NET
 
@@ -31,7 +31,7 @@ Weitere Informationen zum Festlegen und Konfigurieren der verwalteten Ablaufverf
 
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse
 
-In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server, Datenzugriff tracing ([Datenzugriffs-Ablaufverfolgung](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) wurde aktualisiert, um einfacher Clientereignissen zu Diagnoseinformationen, z. B. Verbindungsfehlern, aus zu erleichtern die die Serververbindung Klingeln und Informationen zur Anwendungsleistung im Protokoll für erweiterte Ereignisse. Informationen zum Lesen des Protokolls für erweiterte Ereignisse finden Sie unter [View Event Session Data](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
+In der .NET Framework-Datenanbieter für SQL Server, Daten, die Ablaufverfolgung zugreifen ([Datenzugriffs-Ablaufverfolgung](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) wurde aktualisiert, um einfacher Clientereignissen zu Diagnoseinformationen, z. B. Verbindungsfehlern, aus zu erleichtern die die Serververbindung Klingeln und Informationen zur Anwendungsleistung im Protokoll für erweiterte Ereignisse. Informationen zum Lesen des Protokolls für erweiterte Ereignisse finden Sie unter [View Event Session Data](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
 Für Verbindungsvorgänge sendet ADO.NET eine Clientverbindungs-ID. Wenn die Verbindung fehlschlägt, können Sie auf den verbindungsringpuffer zugreifen ([Behandlung von Konnektivitätsproblemen in SQL Server 2008 mit dem Konnektivitätsringpuffer](https://go.microsoft.com/fwlink/?LinkId=207752)) und suchen Sie die `ClientConnectionID` Feld und Diagnoseinformationen zum Abrufen der Verbindungsfehler. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn eine Verbindung fehlschlägt, bevor das Voranmeldungspaket gesendet wird, wird keine Clientverbindungs-ID generiert). Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie finden die Clientverbindungs-ID auch in der Zielausgabe für erweiterte Ereignisse, wenn die `client_connection_id`-Aktion den Ereignissen in einer Sitzung für erweiterte Ereignisse hinzugefügt wurde. Sie können die Ablaufverfolgung für den Datenzugriff aktivieren, den Verbindungsbefehl erneut ausführen und das `ClientConnectionID`-Feld in der Datenzugriffs-Ablaufverfolgung beobachten, wenn Sie weitere Diagnoseinformationen zum Clienttreiber benötigen.
 
@@ -41,7 +41,7 @@ Sie können die Clientverbindungs-ID programmgesteuert abrufen, indem Sie die `S
 
 ADO.NET sendet zudem eine threadspezifische Aktivitäts-ID. Die Aktivitäts-ID wird in den Sitzungen für erweiterte Ereignisse erfasst, wenn die Sitzungen mit aktivierter TRACK_CAUSALITY-Option gestartet werden. Bei Leistungsproblemen mit einer aktiven Verbindung können Sie die Aktivitäts-ID aus der Datenzugriffs-Ablaufverfolgung des Clients (`ActivityID`-Feld) abrufen und die Aktivitäts-ID in der Ausgabe der erweiterten Ereignisse suchen. Die Aktivitäts-ID in den erweiterten Ereignissen ist eine 16-Byte-GUID (nicht identisch mit der GUID für die Clientverbindungs-ID), an die eine 4-Byte-Sequenznummer angefügt wurde. Die Sequenznummer stellt die Reihenfolge einer Anforderung innerhalb eines Threads dar und gibt die relative Reihenfolge der Batch- und RPC-Anweisungen für den Thread an. `ActivityID` wird derzeit optional für SQL-Batchanweisungen und RPC-Anforderungen gesendet, wenn die Ablaufverfolgung für den Datenzugriff aktiviert ist und das 18. Bit im Konfigurationswort der Datenzugriffs-Ablaufverfolgung ON lautet.
 
-Im folgenden Beispiel wird [!INCLUDE[tsql](../../../../includes/tsql-md.md)] verwendet, um eine Sitzung für erweiterte Ereignisse zu starten, die in einem Ringpuffer gespeichert wird und die von einem Client für RPC- und Batchvorgänge gesendete Aktivitäts-ID aufzeichnet.
+Im folgenden finden ein Beispiel, Transact-SQL verwendet, um eine Sitzung für erweiterte Ereignisse, die in einem Ringpuffer gespeichert wird und von einem Client bei RPC- und Stapelvorgängen gesendete Aktivitäts-ID zu starten.
 
 ```sql
 create event session MySession on server

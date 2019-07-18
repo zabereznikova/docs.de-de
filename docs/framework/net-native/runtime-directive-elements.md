@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf692ff93a575858d1d1a89346611cb9c5957b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137812"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052409"
 ---
 # <a name="runtime-directive-elements"></a>Elemente der Laufzeitanweisung
 Das Dateiformat der Laufzeitanweisungen (rd.xml) unterstützt die folgenden Laufzeitanweisungselemente. Eine hierarchische Darstellung finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
@@ -23,13 +23,13 @@ Das Dateiformat der Laufzeitanweisungen (rd.xml) unterstützt die folgenden Lauf
  [\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)  
  Wenn die enthaltende [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)-Anweisung ein Attribut ist, wird eine Laufzeitrichtlinie auf Codeelemente angewendet, auf die dieses Attribut angewendet wird.  
   
- [\<Directives >](../../../docs/framework/net-native/directives-element-net-native.md)  
- Das Stammelement in jeder Laufzeitanweisungsdatei für [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Die untergeordneten Elemente sind [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) und [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+ [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
+ Das Stammelement in jeder laufzeitanweisungsdatei für .NET Native. Die untergeordneten Elemente sind [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) und [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
- [\<Ereignis >](../../../docs/framework/net-native/event-element-net-native.md)  
+ [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf ein Ereignis an. Dies ist ein untergeordnetes Element der [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- und [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Elemente.  
   
- [\<Feld >](../../../docs/framework/net-native/field-element-net-native.md)  
+ [\<Field>](../../../docs/framework/net-native/field-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf ein Feld an. Dies ist ein untergeordnetes Element der [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- und [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Elemente.  
   
  [\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)  
@@ -41,7 +41,7 @@ Das Dateiformat der Laufzeitanweisungen (rd.xml) unterstützt die folgenden Lauf
  [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf alle Typen in einer Assembly an. Dies ist ein untergeordnetes Element der [\<Application>](../../../docs/framework/net-native/application-element-net-native.md)- und [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Elemente.  
   
- [\<Methode >](../../../docs/framework/net-native/method-element-net-native.md)  
+ [\<Method>](../../../docs/framework/net-native/method-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf eine Methode an. Dies ist ein untergeordnetes Element der [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- und [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Elemente.  
   
  [\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)  
@@ -53,7 +53,7 @@ Das Dateiformat der Laufzeitanweisungen (rd.xml) unterstützt die folgenden Lauf
  [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf den Typ des Arguments an, das an eine Methode übergeben wird.  
   
- [\<Eigenschaft >](../../../docs/framework/net-native/property-element-net-native.md)  
+ [\<Property>](../../../docs/framework/net-native/property-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf eine Eigenschaft an. Dies ist ein untergeordnetes Element der [\<Type>](../../../docs/framework/net-native/type-element-net-native.md)- und [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)-Elemente.  
   
  [\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)  
@@ -70,4 +70,4 @@ Das Dateiformat der Laufzeitanweisungen (rd.xml) unterstützt die folgenden Lauf
   
 ## <a name="see-also"></a>Siehe auch
 
-- ["rd.xml"-Konfigurationsdateireferenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [„rd.xml“-Konfigurationsdateireferenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

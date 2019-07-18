@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 5a66d3f4-dd16-4d62-9dcc-0eab7041d894
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52b5c63f35732655834768eb5b914406203d423c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f43e98530fcd6d11b7c76295a92d42baceddcd6e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135615"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764621"
 ---
 # <a name="icordebugmutabledatatargetcontinuestatuschanged-method"></a>ICorDebugMutableDataTarget::ContinueStatusChanged-Methode
 Ändert den Fortsetzungsstatus für das ausstehende Debugereignis für den angegebenen Thread.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ContinueStatusChanged(  
    [in] DWORD dwThreadId,  
    [in] CORDB_CONTINUE_STATUS continueStatus);  
@@ -44,4 +44,4 @@ HRESULT ContinueStatusChanged(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugMutableDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

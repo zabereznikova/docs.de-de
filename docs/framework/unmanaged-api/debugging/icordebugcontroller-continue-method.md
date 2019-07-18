@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eacffe5769bc77ab626f6adbc99db1137da565f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3a4e98a7265bda288b20b1cee1a10ab11990e8e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146808"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748888"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue-Methode
 Setzt die Ausführung von verwalteten Threads nach einem Aufruf von [Methode beenden](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Continue (  
     [in] BOOL fIsOutOfBand  
 );  

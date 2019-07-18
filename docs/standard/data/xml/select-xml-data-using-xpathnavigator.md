@@ -1,5 +1,5 @@
 ---
-title: Auswählen von XML-Daten mit XPathNavigator
+title: Auswählen von XML-Daten mit 'XPathNavigator'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,25 +8,25 @@ dev_langs:
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a7aebc98627a079d08870b59e4a848a51dbfaaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ab2dbe79e1b4b89070d07e0f2c966cb54f6e500
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520112"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589994"
 ---
-# <a name="select-xml-data-using-xpathnavigator"></a>Auswählen von XML-Daten mit XPathNavigator
+# <a name="select-xml-data-using-xpathnavigator"></a>Auswählen von XML-Daten mit 'XPathNavigator'
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, mit denen eine Gruppe von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe eines XPath-Ausdrucks ausgewählt werden können. Sobald die Knoten ausgewählt sind, können die ausgewählten Knoten durchlaufen werden.  
   
-## <a name="xpathnavigator-selection-methods"></a>Auswahlmethoden von "XPathNavigator"  
+## <a name="xpathnavigator-selection-methods"></a>Auswahlmethoden von XPathNavigator  
  Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt eine Gruppe von Methoden bereit, mit denen eine Gruppe von Knoten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt mithilfe eines XPath-Ausdrucks ausgewählt werden können. Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt außerdem eine Gruppe optimierter Methoden bereit, mit denen übergeordnete, direkt untergeordnete und indirekt untergeordnete Knoten schneller als bei Verwendung eines XPath-Ausdrucks ausgewählt werden können. Die ausgewählte Knotengruppe wird in einem <xref:System.Xml.XPath.XPathNodeIterator>-Objekt oder (falls es sich um nur einen ausgewählten Knoten handelt) in einem <xref:System.Xml.XPath.XPathNavigator>-Objekt zurückgegeben.  
   
 ### <a name="selecting-nodes-using-xpath-expressions"></a>Auswählen von Knoten mithilfe von XPath-Ausdrücken  
  Verwenden Sie eine der folgenden Auswahlmethoden, um eine Gruppe von Knoten mithilfe eines XPath-Ausdrucks auszuwählen.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  Bei einem Aufruf geben diese Methoden eine Knotengruppe zurück, die Sie mithilfe eines <xref:System.Xml.XPath.XPathNodeIterator>-Objekts oder (falls es sich um nur einen ausgewählten Knoten handelt) eines <xref:System.Xml.XPath.XPathNavigator>-Objekts frei durchsuchen können.  
   

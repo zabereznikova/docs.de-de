@@ -8,11 +8,11 @@ helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
 ms.openlocfilehash: d8d503f0814a89c977cdc208eced026b2d8cb1fd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802462"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (generischer Modifizierer) (Visual Basic)
 Das Schlüsselwort `In` gibt für generische Typparameter an, dass der Typparameter kontravariant ist.  

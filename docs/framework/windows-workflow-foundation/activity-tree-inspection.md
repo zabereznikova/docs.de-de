@@ -3,11 +3,11 @@ title: Aktivitätsstrukturüberprüfung
 ms.date: 03/30/2017
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
 ms.openlocfilehash: 014795b79b3536b387096e4de64266e26649da21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774120"
 ---
 # <a name="activity-tree-inspection"></a>Aktivitätsstrukturüberprüfung
 Die Aktivitätsstrukturüberprüfung wird von Workflowanwendungsautoren verwendet, um die von der Anwendung gehosteten Workflows zu überprüfen. <xref:System.Activities.WorkflowInspectionServices> ermöglicht die Suche nach bestimmten untergeordneten Aktivitäten in Workflows, die Auflistung einzelner Aktivitäten und ihrer Eigenschaften sowie die Zwischenspeicherung von Laufzeitmetadaten der Aktivitäten zu einem bestimmten Zeitpunkt. Dieses Thema bietet eine Übersicht über <xref:System.Activities.WorkflowInspectionServices> und die Verwendung zur Überprüfung einer Aktivitätsstruktur.  

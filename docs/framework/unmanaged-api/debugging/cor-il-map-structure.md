@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6d8023c7ac6d917c9df40fb18316ddc12df5ec1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 74f515626f5001cbea1a25e8268338c588524bde
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190423"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740534"
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP-Struktur
 Gibt Änderungen im relativen Offset einer Funktion an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _COR_IL_MAP {  
     ULONG32 oldOffset;   
     ULONG32 newOffset;   
@@ -49,37 +49,37 @@ typedef struct _COR_IL_MAP {
   
  Für die schrittweise Ausführung, um ordnungsgemäß zu arbeiten, sollten die folgenden Anforderungen erfüllt sein:  
   
--   Die Karte sollten in aufsteigender Reihenfolge sortiert werden.  
+- Die Karte sollten in aufsteigender Reihenfolge sortiert werden.  
   
--   Instrumentierter MSIL-Code muss nicht neu angeordnet werden.  
+- Instrumentierter MSIL-Code muss nicht neu angeordnet werden.  
   
--   Ursprüngliche MSIL-Code sollte nicht entfernt werden.  
+- Ursprüngliche MSIL-Code sollte nicht entfernt werden.  
   
--   Die Zuordnung sollte Einträge zum Zuordnen der Sequenzpunkte über die Programmdatenbankdatei (PDB) enthalten.  
+- Die Zuordnung sollte Einträge zum Zuordnen der Sequenzpunkte über die Programmdatenbankdatei (PDB) enthalten.  
   
  Die Zuordnung wird nicht fehlenden Einträge interpoliert. Das folgende Beispiel zeigt eine Zuordnung und ihre Ergebnisse.  
   
  Ordnen Sie:  
   
--   0 alte Offset, 0 neue offset  
+- 0 alte Offset, 0 neue offset  
   
--   5 alte Offset, 10 neuen offset  
+- 5 alte Offset, 10 neuen offset  
   
--   9 alte Offset, 20 neue offset  
+- 9 alte Offset, 20 neue offset  
   
  Ergebnisse:  
   
--   Ein Alter Offset von 0, 1, 2, 3 oder 4 wird ein neuer Offset 0 zugeordnet werden.  
+- Ein Alter Offset von 0, 1, 2, 3 oder 4 wird ein neuer Offset 0 zugeordnet werden.  
   
--   Ein Alter Offset von 5, 6, 7 oder 8 wird zum neuen Offset 10 zugeordnet werden.  
+- Ein Alter Offset von 5, 6, 7 oder 8 wird zum neuen Offset 10 zugeordnet werden.  
   
--   Ein Alter Offset des 9 oder höher wird zum neuen Offset 20 zugeordnet werden.  
+- Ein Alter Offset des 9 oder höher wird zum neuen Offset 20 zugeordnet werden.  
   
--   Ein neuer Offset von 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 werden alte Offset 0 zugeordnet werden.  
+- Ein neuer Offset von 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 werden alte Offset 0 zugeordnet werden.  
   
--   Alte Offset 5 wird ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 zugeordnet werden.  
+- Alte Offset 5 wird ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 zugeordnet werden.  
   
--   Ein neuer Offset von 20 oder höher werden alte Offset 9 zugeordnet werden.  
+- Ein neuer Offset von 20 oder höher werden alte Offset 9 zugeordnet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

@@ -2,12 +2,12 @@
 title: Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d44e410727924260640f0f50aea5ea41f264f3af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202793"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650340"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 Viele Anwendungen verwenden für den Zugriff auf Daten gespeicherte Prozeduren, wobei der Zugriff auf die Basistabellen per Besitzverkettung gesteuert wird. Sie können EXECUTE-Berechtigungen für gespeicherte Prozeduren gewähren und so Berechtigungen für die Basistabellen widerrufen oder verweigern. Wenn der Besitzer der gespeicherten Prozedur identisch mit dem Besitzer der Tabellen ist, nimmt SQL Server keine Prüfung der Berechtigungen des Aufrufers vor. Bei Objekten, die verschiedenen Besitzern gehören, und bei dynamischem SQL funktioniert die Besitzverkettung jedoch nicht.  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  Für die Aufnahme der EXECUTE AS-Klausel in eine Prozedur sind die folgenden drei Schritte auszuführen.  
   
-1.  Erstellen Sie einen Proxybenutzer in der Datenbank, der keiner Anmeldung zugeordnet wird. Dieser Schritt ist nicht zwingend erforderlich, erleichtert aber das Verwalten der Berechtigungen.  
+1. Erstellen Sie einen Proxybenutzer in der Datenbank, der keiner Anmeldung zugeordnet wird. Dieser Schritt ist nicht zwingend erforderlich, erleichtert aber das Verwalten der Berechtigungen.  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  Gewähren Sie dem Proxybenutzer die notwendigen Berechtigungen.  
+1. Gewähren Sie dem Proxybenutzer die notwendigen Berechtigungen.  
   
-2.  Fügen Sie der gespeicherten Prozedur oder der benutzerdefinierten Funktion die EXECUTE AS-Klausel hinzu.  
+2. Fügen Sie der gespeicherten Prozedur oder der benutzerdefinierten Funktion die EXECUTE AS-Klausel hinzu.  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  
@@ -59,11 +59,11 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="specifying-the-execution-context"></a>Angeben des Ausführungskontexts  
  Neben dem Angeben eines Benutzers können Sie EXECUTE AS auch zusammen mit den folgenden Schlüsselwörtern verwenden.  
   
--   CALLER: Das Ausführen als CALLER ist die Standardeinstellung. Wenn nichts anderes angegeben ist, wird die Prozedur im Sicherheitskontext des Aufrufers ausgeführt.  
+- CALLER: Das Ausführen als CALLER ist die Standardeinstellung. Wenn nichts anderes angegeben ist, wird die Prozedur im Sicherheitskontext des Aufrufers ausgeführt.  
   
--   OWNER: Mit OWNER wird die Prozedur im Kontext des Prozedurbesitzers ausgeführt. Wenn die Prozedur in einem Schema erstellt wird, dessen Besitzer der Datenbankbesitzer (`dbo`) ist, wird die Prozedur mit uneingeschränkten Berechtigungen ausgeführt.  
+- OWNER: Mit OWNER wird die Prozedur im Kontext des Prozedurbesitzers ausgeführt. Wenn die Prozedur in einem Schema erstellt wird, dessen Besitzer der Datenbankbesitzer (`dbo`) ist, wird die Prozedur mit uneingeschränkten Berechtigungen ausgeführt.  
   
--   SELF: Mit SELF wird die Prozedur im Sicherheitskontext des Erstellers der gespeicherten Prozedur ausgeführt. Dies entspricht der Ausführung der Prozedur als ein spezifischer Benutzer, wobei der spezifische Benutzer die Person ist, die die Prozedur erstellt oder geändert hat.  
+- SELF: Mit SELF wird die Prozedur im Sicherheitskontext des Erstellers der gespeicherten Prozedur ausgeführt. Dies entspricht der Ausführung der Prozedur als ein spezifischer Benutzer, wobei der spezifische Benutzer die Person ist, die die Prozedur erstellt oder geändert hat.  
   
 ## <a name="see-also"></a>Siehe auch
 

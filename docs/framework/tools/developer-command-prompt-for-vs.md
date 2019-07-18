@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221231"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877044"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Developer-Eingabeaufforderung für Visual Studio.
 
 Mithilfe der Developer-Eingabeaufforderung für Visual Studio können Sie .NET Framework-Tools komfortabler verwenden. Es handelt sich um eine Eingabeaufforderung, die automatisch bestimmte Umgebungsvariablen festlegt.
 
 > [!div class="button"]
-> [Herunterladen von Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+> [Herunterladen von Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>Suchen nach der Eingabeaufforderung auf Ihrem Computer
 
@@ -38,7 +38,7 @@ Abhängig von der Version von Visual Studio und jeglichen zusätzlichen installi
 
 ### <a name="in-windows-81"></a>Unter Windows 8.1
 
-1. Wechseln Sie zum Bildschirm **Start**, indem Sie beispielsweise die Windows-Logo-Taste ![Windows-Logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") auf der Tastatur drücken.
+1. Wechseln Sie zum Bildschirm **Start**, indem Sie beispielsweise die Windows-Logo-Taste ![Windows-Logo-Taste auf der Tastatur](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) auf der Tastatur drücken.
 
 2. Drücken Sie auf dem Bildschirm **Start** die Tastenkombination **STRG**+**TAB**, um die Liste **Apps** zu öffnen, und geben Sie dann `V` ein. Dadurch wird eine Liste angezeigt, die alle installierten Visual Studio-Eingabeaufforderungen enthält.
 
@@ -46,9 +46,9 @@ Abhängig von der Version von Visual Studio und jeglichen zusätzlichen installi
 
 ### <a name="in-windows-8"></a>Unter Windows 8
 
-1. Wechseln Sie zum Bildschirm **Start**, indem Sie beispielsweise die Windows-Logo-Taste ![Windows-Logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") auf der Tastatur drücken.
+1. Wechseln Sie zum Bildschirm **Start**, indem Sie beispielsweise die Windows-Logo-Taste ![Windows-Logo-Taste auf der Tastatur](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) auf der Tastatur drücken.
 
-2. Drücken Sie auf dem Bildschirm **Start** die Windows-Logo-Taste ![Windows-Logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z`.
+2. Drücken Sie auf dem Bildschirm **Start** die Windows-Logo-Taste ![Windows-Logo-Taste auf der Tastatur](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
 
 3. Wählen Sie im unteren Bereich des Bildschirms das Symbol **Apps-Ansicht** aus, und geben Sie anschließend `V` ein. Dadurch wird eine Liste angezeigt, die alle installierten Visual Studio-Eingabeaufforderungen enthält.
 

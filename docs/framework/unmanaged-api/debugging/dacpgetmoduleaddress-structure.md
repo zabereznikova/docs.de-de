@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: cbea6c0562c68ae5d18247dc97bc53eb9dfbfd7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 145b06f89b45b165b9d6329a4c16ac5739406113
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104104"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739181"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress-Struktur
 
@@ -30,7 +30,7 @@ Definiert den Container für eine Anforderung zum modulimport Adresse an.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 struct DacpGetModuleAddress
 {
     CLRDATA_ADDRESS ModulePtr;

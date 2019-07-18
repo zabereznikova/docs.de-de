@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1baeac5db41aa64380d694ebab5419229d8adb4c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763541"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask-Schnittstelle
 Bietet Methoden, mit denen den Host aus, um die Anforderungen der common Language Runtime (CLR) zu erstellen oder eine Benachrichtigung an die CLR über die zugewiesene Aufgabe bereitzustellen.  
@@ -61,5 +61,5 @@ Bietet Methoden, mit denen den Host aus, um die Anforderungen der common Languag
 - [ICLRTaskManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
 - [IHostTaskManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [ICLRTask2-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)

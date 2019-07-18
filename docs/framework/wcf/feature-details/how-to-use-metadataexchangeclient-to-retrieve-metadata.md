@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Die Verwendung von MetadataExchangeClient zum Abrufen von Metadaten'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038765"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Vorgehensweise: Die Verwendung von MetadataExchangeClient zum Abrufen von Metadaten
 Verwenden Sie die <xref:System.ServiceModel.Description.MetadataExchangeClient>-Klasse, um Metadaten mit dem WS-MetadataExchange (MEX)-Protokoll herunterzuladen. Die abgerufenen Metadatendateien werden als <xref:System.ServiceModel.Description.MetadataSet>-Objekt zurückgegeben. Das zurückgegebene <xref:System.ServiceModel.Description.MetadataSet>-Objekt enthält eine Auflistung der <xref:System.ServiceModel.Description.MetadataSection>-Objekte, von denen jedes einen bestimmten Metadatendialekt sowie eine ID enthält. Sie können die zurückgegebenen Metadaten in Dateien schreiben. Wenn die zurückgegebenen Metadaten WSDL (Web Services Description Language)-Dokumente enthalten, können Sie die Metadaten mit <xref:System.ServiceModel.Description.WsdlImporter> importieren.  
@@ -21,11 +21,11 @@ Verwenden Sie die <xref:System.ServiceModel.Description.MetadataExchangeClient>-
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>So verwenden Sie MetadataExchangeClient zum Abrufen von Metadaten  
   
-1.  Erstellen Sie ein neues <xref:System.ServiceModel.Description.MetadataExchangeClient>-Objekt, indem Sie ausdrücklich eine Bindung, einen Endpunktkonfigurationsnamen oder die Adresse der Metadaten angeben.  
+1. Erstellen Sie ein neues <xref:System.ServiceModel.Description.MetadataExchangeClient>-Objekt, indem Sie ausdrücklich eine Bindung, einen Endpunktkonfigurationsnamen oder die Adresse der Metadaten angeben.  
   
-2.  Konfigurieren Sie <xref:System.ServiceModel.Description.MetadataExchangeClient>, um ihn an Ihre Anforderungen anzupassen. So können Sie z.&amp;#160;B. Anmeldeinformationen angeben, die verwendet werden, wenn Metadaten angefordert werden. Und Sie können die <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A>-Eigenschaft festlegen, um zu steuern, wie lange die Metadatenanforderung zurückgegeben werden muss, bevor das Zeitlimit überschritten wird.  
+2. Konfigurieren Sie <xref:System.ServiceModel.Description.MetadataExchangeClient>, um ihn an Ihre Anforderungen anzupassen. So können Sie z.&amp;#160;B. Anmeldeinformationen angeben, die verwendet werden, wenn Metadaten angefordert werden. Und Sie können die <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A>-Eigenschaft festlegen, um zu steuern, wie lange die Metadatenanforderung zurückgegeben werden muss, bevor das Zeitlimit überschritten wird.  
   
-3.  Rufen Sie das <xref:System.ServiceModel.Description.MetadataSet>-Objekt ab, das die abgerufenen Metadaten enthält, indem Sie eine der <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>-Methoden aufrufen. Beachten Sie, dass Sie lediglich die <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>-Überladung verwenden können, die keine Argumente aufnimmt, wenn Sie beim Erstellen von <xref:System.ServiceModel.Description.MetadataExchangeClient> ausdrücklich eine Adresse angegeben haben.  
+3. Rufen Sie das <xref:System.ServiceModel.Description.MetadataSet>-Objekt ab, das die abgerufenen Metadaten enthält, indem Sie eine der <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>-Methoden aufrufen. Beachten Sie, dass Sie lediglich die <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A>-Überladung verwenden können, die keine Argumente aufnimmt, wenn Sie beim Erstellen von <xref:System.ServiceModel.Description.MetadataExchangeClient> ausdrücklich eine Adresse angegeben haben.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird die Verwendung von <xref:System.ServiceModel.Description.MetadataExchangeClient> dargestellt, mit dem Metadatendateien heruntergeladen und aufgelistet werden.  

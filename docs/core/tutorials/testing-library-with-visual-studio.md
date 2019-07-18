@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201325"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402207"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio 2017
 
@@ -26,7 +26,7 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü des Projektmappenknotens **ClassLibraryProject**, und wählen Sie **Hinzufügen** > **Neues Projekt** aus.
 
-1. Klicken Sie auf den Knoten **Visual C#** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **MSTest-Testprojekt (.NET Core)**. Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
+1. Klicken Sie auf den Knoten **Visual C#** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **MSTest-Testprojekt (.NET Core)** . Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
 
    ![Dialogfeld „Neues Projekt hinzufügen“ mit angezeigtem Komponententestprojekt – C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
@@ -55,7 +55,7 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü des Projektmappenknotens **ClassLibraryProject**, und wählen Sie **Hinzufügen** > **Neues Projekt** aus.
 
-1. Klicken Sie auf den Knoten **Visual Basic** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **MSTest-Testprojekt (.NET Core)**. Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
+1. Klicken Sie auf den Knoten **Visual Basic** im Dialogfeld **Neues Projekt hinzufügen**. Klicken Sie dann auf den Knoten **.NET Core**, gefolgt von der Projektvorlage **MSTest-Testprojekt (.NET Core)** . Geben Sie im Textfeld **Name** „StringLibraryTest“ als Namen des Projekts ein. Klicken Sie auf **OK**, um das Komponententestprojekt zu erstellen
 
    ![Dialogfeld „Neues Projekt hinzufügen“ mit angezeigtem Komponententestprojekt – Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
@@ -68,7 +68,7 @@ Um das Komponententestprojekt zu erstellen, führen Sie folgende Schritte aus:
 
    Der von der Vorlage für Komponententests erstellte Quellcode führt Folgendes aus:
 
-   * Er importiert den Namespace [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType>, der die für Komponententests verwendeten Typen enthält.
+   * Er importiert den Namespace <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, der für Komponententests verwendeten Typen enthält.
 
    * Er wendet das Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> auf die Klasse `UnitTest1` an. Jede mit dem Attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> markierte Testmethode in einer Testklasse wird bei Ausführung des Komponententests automatisch ausgeführt.
 
@@ -150,11 +150,13 @@ In Ihrem Testlauf sind keine Fehler aufgetreten, darum verändern Sie ihn leicht
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " };
    ```
+
    ```vb
    Dim words() As String = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " }
 
    ```
+
 1. Führen Sie den Test aus, indem Sie **Test** > **Ausführen** > **Alle Tests** aus der Menüleiste auswählen. Das Fenster **Test-Explorer** zeigt, dass zwei Tests erfolgreich ausgeführt wurden und einer nicht erfolgreich war.
 
    ![Test Explorer-Fenster mit fehlschlagenden Tests](./media/testing-library-with-visual-studio/failed-test-window.png)

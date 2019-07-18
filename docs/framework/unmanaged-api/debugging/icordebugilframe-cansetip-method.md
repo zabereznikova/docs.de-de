@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49cef22e88613fe4c4dfb3fb35a92977977b1827
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 75b28dafae2861a2d33363f95a46bf1abf4cda35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473564"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756575"
 ---
 # <a name="icordebugilframecansetip-method"></a>ICorDebugILFrame::CanSetIP-Methode
 Ruft ein HRESULT, der angibt, ob den Anweisungszeiger auf der angegebenen Offsetposition im Microsoft Intermediate Language (MSIL)-Code festgelegt werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CanSetIP (  
     [in] ULONG32   nOffset  
 );  

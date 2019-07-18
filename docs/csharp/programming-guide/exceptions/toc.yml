@@ -1,24 +1,17 @@
-items:
 - name: Ausnahmen und Ausnahmebehandlung
   href: index.md
   items:
-  - name: Verwenden von Ausnahmen
-    href: using-exceptions.md
-  - name: Ausnahmebehandlung
-    href: exception-handling.md
-  - name: Erstellen und Auslösen von Ausnahmen
-    href: creating-and-throwing-exceptions.md
-  - name: Vom Compiler generierte Ausnahmen
-    href: compiler-generated-exceptions.md
-  - name: 'Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“'
-    href: how-to-handle-an-exception-using-try-catch.md
-  - name: 'Vorgehensweise: Ausführen von Bereinigungscode mit „finally“'
-    href: how-to-execute-cleanup-code-using-finally.md
-  - name: 'Vorgehensweise: Abfangen einer Nicht-CLS-Ausnahme'
-    href: how-to-catch-a-non-cls-exception.md
-ms.openlocfilehash: 391605df4d623451a4a1c830a48322c7a14eef7c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468727"
+    - name: Verwenden von Ausnahmen
+      href: using-exceptions.md
+    - name: Ausnahmebehandlung
+      href: exception-handling.md
+    - name: Erstellen und Auslösen von Ausnahmen
+      href: creating-and-throwing-exceptions.md
+    - name: Vom Compiler generierte Ausnahmen
+      href: compiler-generated-exceptions.md
+    - name: 'Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“'
+      href: how-to-handle-an-exception-using-try-catch.md
+    - name: 'Vorgehensweise: Ausführen von Bereinigungscode mit „finally“'
+      href: how-to-execute-cleanup-code-using-finally.md
+    - name: 'Vorgehensweise: Abfangen einer Nicht-CLS-Ausnahme'
+      href: how-to-catch-a-non-cls-exception.md

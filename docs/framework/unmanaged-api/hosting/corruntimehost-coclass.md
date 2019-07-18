@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2143fc13db1757ac2fa8a9c5a43f104a0c519ca0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 942c9544a6ce868c3b6296569d4a16a44281cdba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218562"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758323"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost-Co-Klasse
 Stellt Schnittstellen zum Verwalten von Anwendungen, die von der common Language Runtime ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 coclass CorRuntimeHost {  
     [default] interface ICorRuntimeHost;  
     interface IGCHost;  
@@ -59,4 +59,4 @@ coclass CorRuntimeHost {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosting-Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

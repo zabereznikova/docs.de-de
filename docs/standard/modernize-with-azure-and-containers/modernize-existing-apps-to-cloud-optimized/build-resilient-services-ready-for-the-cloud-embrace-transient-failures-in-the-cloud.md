@@ -1,17 +1,15 @@
 ---
-title: Erstellen Sie belastbarer Dienste, die für die Cloud bereit. Verstehen Sie vorübergehender Fehler in der cloud
-description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Erstellen Sie belastbarer Dienste, die für die Cloud bereit. Verstehen Sie vorübergehender Fehler in der cloud
-author: CESARDELATORRE
-ms.author: wiwagn
+title: Erstellen Sie belastbarer Dienste, die für die Cloud bereit. Beheben vorübergehender Fehler in der Cloud
+description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Erstellen Sie belastbarer Dienste, die für die Cloud bereit. Beheben vorübergehender Fehler in der Cloud
 ms.date: 04/30/2018
-ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca5d5e0c3af772ac52a02894c96889c776cf7d48
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971831"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643738"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen Sie belastbarer Dienste, die für die Cloud bereit: Verstehen Sie vorübergehender Fehler in der cloud
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Erstellen robuster Clouddienste: Beheben vorübergehender Fehler in der Cloud
 
 Als Stabilität wird die Fähigkeit zum Wiederherstellen nach Fehlern und zum Fortsetzen der Funktionsweise bezeichnet. Resilienz ist nicht zum Vermeiden von Fehlern, aber akzeptieren der Tatsache, dass Fehler auftreten, und klicken Sie dann die Antwort auf diese in einer Weise, die Ausfallzeiten oder Datenverluste zu vermeiden. Das Ziel der Stabilität ist, die Anwendung nach einem Fehler wieder in einen voll funktionsfähigen Zustand zu versetzen.
 
@@ -43,19 +41,19 @@ Gewusst wie: Implementieren Sie Strategien zum Beheben von teilfehlern in der Cl
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Implementieren robuste Kommunikation zum Behandeln von teilfehlern**
+- **Implementieren robuste Kommunikation zum Behandeln von teilfehlern**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework datenbankverbindungsresilienz und Wiederholungslogik Verbindungslogik (Version 6 und höher)**
+- **Entity Framework datenbankverbindungsresilienz und Wiederholungslogik Verbindungslogik (Version 6 und höher)**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **Der Anwendungsblock für die Behandlung vorübergehender Fehler**
+- **Der Anwendungsblock für die Behandlung vorübergehender Fehler**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **Polly-Bibliothek für robuste HTTP-Kommunikation**
+- **Polly-Bibliothek für robuste HTTP-Kommunikation**
 
     https://github.com/App-vNext/Polly
 

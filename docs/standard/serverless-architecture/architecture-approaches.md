@@ -4,12 +4,12 @@ description: Eine Einführung in die Architektur Ansätzen für das Erstellen vo
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ee529abd1f6955d4f542464dd9a2380dd663571f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126744"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638841"
 ---
 # <a name="architecture-approaches"></a>Architekturansätze
 

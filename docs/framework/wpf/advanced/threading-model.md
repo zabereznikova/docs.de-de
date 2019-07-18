@@ -18,20 +18,18 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c74d76cf7c216ed1d4d5c0741ed0ca4f651543e0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125680"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598626"
 ---
 # <a name="threading-model"></a>Threading-Modell
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] soll Entwicklern bei Problemen mit Threading helfen. Als Ergebnis der meisten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Entwickler keine Schnittstelle schreiben, die mehr als einem Thread verwendet. Da Multithreadprogramme komplex und schwierig zu debuggen sind, sollten sie vermieden werden, wenn Singlethread-Lösungen vorhanden sind.  
   
  Ganz gleich, wie gut entworfen wurde, wird keine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Framework wird immer in der Lage, eine Singlethread-Lösung für jede Art von Problem bereitzustellen. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kommt dem nahe, aber es Situationen gibt, in denen mehrere Threads verbessern, weiterhin [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] -Reaktionsfähigkeit oder die Anwendungsleistung. In diesem Artikel werden zunächst einige Hintergrundinformationen angegeben, dann einige dieser Situationen beschrieben und am Ende einige Details auf niedriger Ebene besprochen.  
-  
 
-  
 > [!NOTE]
 >  In diesem Thema wird erläutert, threading mithilfe der <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> Methode zum asynchronen Aufrufen. Sie können auch asynchrone Aufrufe vornehmen, durch den Aufruf der <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> -Methode, die nehmen ein <xref:System.Action> oder <xref:System.Func%601> als Parameter.  Die <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> Methode gibt eine <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601>, die eine <xref:System.Windows.Threading.DispatcherOperation.Task%2A> Eigenschaft. Können Sie die `await` -Schlüsselwort entweder mit der <xref:System.Windows.Threading.DispatcherOperation> oder mit dem zugehörigen <xref:System.Threading.Tasks.Task>. Wenn Sie synchron auf das <xref:System.Threading.Tasks.Task> warten müssen, das von <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601> zurückgegeben wird, rufen Sie die <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>-Erweiterungsmethode auf.  Aufrufen von <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> führt zu einem Deadlock. Weitere Informationen zur Verwendung einer <xref:System.Threading.Tasks.Task> zum Ausführen von asynchroner Vorgängen finden Sie unter Aufgabenparallelität.  Die <xref:System.Windows.Threading.Dispatcher.Invoke%2A> Methode verfügt auch über Überladungen, die eine <xref:System.Action> oder <xref:System.Func%601> als Parameter.  Sie können die <xref:System.Windows.Threading.Dispatcher.Invoke%2A> Methode zum Erstellen von synchronen Aufrufe durch Übergabe eines Delegaten <xref:System.Action> oder <xref:System.Func%601>.  
   
@@ -116,14 +114,14 @@ ms.locfileid: "58125680"
   
  Im Folgenden sind einige der Details aufgeführt, die beachtet werden sollten.  
   
--   Erstellen des Schaltflächenhandlers  
+- Erstellen des Schaltflächenhandlers  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherbuttonhandler)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherbuttonhandler)]  
   
  Wenn auf die Schaltfläche geklickt wird, wird die Uhr-Zeichnung angezeigt, und wir beginnen mit der Animation. Die Schaltfläche wird deaktiviert. Rufen wir die `FetchWeatherFromServer` -Methode in einen neuen Thread und anschließend zurück, sodass die <xref:System.Windows.Threading.Dispatcher> zum Verarbeiten von Ereignissen während wir auf die Wettervorhersage warten.  
   
--   Abrufen der Wettervorhersage  
+- Abrufen der Wettervorhersage  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherfetchweather)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherfetchweather)]  
@@ -132,7 +130,7 @@ ms.locfileid: "58125680"
   
  Wenn die Verzögerung beendet, und wir die Wettervorhersage zufällig ausgewählt haben, ist es Zeit, zurückzumelden der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread. Wir erreichen dies durch Planen eines Aufrufs von `UpdateUserInterface` in die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] thread mithilfe des betreffenden Threads <xref:System.Windows.Threading.Dispatcher>. Wir übergeben eine Zeichenfolge, die das Wetter beschreibt, an diesen eingeplanten Methodenaufruf.  
   
--   Aktualisieren der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
+- Aktualisieren der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
@@ -218,4 +216,5 @@ ms.locfileid: "58125680"
  Die Aufgabe für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] besteht darin, unerwarteten Wiedereintritt zu verhindern, ohne Speicherverlust zu, weshalb wir Wiedereintritt nicht überall blockieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Single-Threaded Application with Long-Running Calculation Sample (Singlethread-Anwendung mit Beispiel für Berechnung mit langer Laufzeit)](https://go.microsoft.com/fwlink/?LinkID=160038)

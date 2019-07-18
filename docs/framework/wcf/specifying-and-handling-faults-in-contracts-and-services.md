@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b9d6a4e2bb6b7e5c750ff7dad92934c4337c0083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210671"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605950"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Angeben und Behandeln von Fehlern in Verträgen und Diensten
 Windows Communication Foundation (WCF)-Anwendungen behandeln Fehler durch verwaltete Ausnahmeobjekte SOAP-Fehlerobjekten und SOAP-Fehlerobjekte verwalteten Ausnahmeobjekten zuordnen. Die Themen in diesem Abschnitt erläutern, wie Verträge erstellt werden, die Fehlerbedingungen als benutzerdefinierte SOAP-Fehler verfügbar machen, wie solche Fehler als Teil einer Dienstimplementierung zurückgegeben werden, und wie Clients diese Fehler abfangen.  
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF)-Anwendungen behandeln Fehler durch verwal
   
  In der Regel führen Dienste (und Duplexclients) die folgenden Schritte aus, um die Fehlerbehandlung erfolgreich in ihre Anwendungen zu integrieren:  
   
--   Sie ordnen Ausnahmebedingungen benutzerdefinierten SOAP-Fehlern zu.  
+- Sie ordnen Ausnahmebedingungen benutzerdefinierten SOAP-Fehlern zu.  
   
--   Clients und Dienste senden und empfangen SOAP-Fehler als Ausnahmen.  
+- Clients und Dienste senden und empfangen SOAP-Fehler als Ausnahmen.  
   
  Darüber hinaus können WCF-Clients und Dienste undeklarierte Soap-Fehler für Debugzwecke und können standardmäßiges Fehlerverhalten erweitern. Diese Aufgaben und Begriffe werden in den folgenden Abschnitten erläutert.  
   

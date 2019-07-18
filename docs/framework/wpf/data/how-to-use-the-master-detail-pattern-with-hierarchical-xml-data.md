@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
 ms.openlocfilehash: ba6c932f519ffa5c3c70ecb21eb9b5d08c40fb28
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931754"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>Vorgehensweise: Verwenden des Master-/Detailmusters mit hierarchischen XML-Daten
 Dieses Beispiel zeigt, wie Sie das Master / Detail-Szenario mit implementieren [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten.  
@@ -24,4 +24,4 @@ Dieses Beispiel zeigt, wie Sie das Master / Detail-Szenario mit implementieren [
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

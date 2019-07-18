@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6a95a636623f0b4ea75706039194572ecf1bbe0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6aeda4901551b7e79becff132e44382ed11b0d31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136200"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773354"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsAssemblyReferenceInList-Methode
 Ruft einen Wert, der angibt, ob der angegebene Zeiger auf eine Assembly in der Liste verweist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsAssemblyReferenceInList (  
     [in] IUnknown *pName  
 );  

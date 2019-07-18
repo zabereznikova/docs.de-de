@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: afe47975a393db3074222ebf0461f5b73fb6442d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715541"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655792"
 ---
 # <a name="workflow-persistence"></a>Workflowpersistenz
 Workflowpersistenz bezeichnet die dauerhafte Erfassung des Zustands einer Workflowinstanz unabhängig von Prozess- oder Computerinformationen. Sie wird durchgeführt, um einen bekannten Wiederherstellungspunkt für die Workflowinstanz im Fall eines Systemfehlers bereitzustellen oder um Arbeitsspeicher beizubehalten, indem Workflowinstanzen entladen werden, die gerade nicht aktiv sind, bzw. um den Zustand der Workflowinstanz von einem Knoten zu einem anderen Knoten in einer Serverfarm zu verschieben.  
@@ -27,30 +27,30 @@ Workflowpersistenz bezeichnet die dauerhafte Erfassung des Zustands einer Workfl
 ## <a name="implicit-persistence-points"></a>Implizite Persistenzpunkte  
  Die folgende Liste enthält Beispiele der Bedingungen, zu denen ein Workflow beibehalten wird, wenn ein Instanzspeicher einem Workflow zugeordnet ist.  
   
--   Wenn eine **TransactionScope** Aktivität abgeschlossen wird oder ein **TransactedReceiveScope** Aktivität abgeschlossen wird.  
+- Wenn eine **TransactionScope** Aktivität abgeschlossen wird oder ein **TransactedReceiveScope** Aktivität abgeschlossen wird.  
   
--   Wenn eine Workflowinstanz im Leerlauf wird und die **WorkflowIdleBehavior** auf den Workflowhost festgelegt ist. In diesem Fall z. B. Wenn Sie messagingaktivitäten verwenden oder eine **Verzögerung** Aktivität.  
+- Wenn eine Workflowinstanz im Leerlauf wird und die **WorkflowIdleBehavior** auf den Workflowhost festgelegt ist. In diesem Fall z. B. Wenn Sie messagingaktivitäten verwenden oder eine **Verzögerung** Aktivität.  
   
--   Wenn eine Workflowanwendung im Leerlauf wird und die **PersistableIdle** der Anwendung-Eigenschaftensatz auf **PersistableIdleAction.Persist**.  
+- Wenn eine Workflowanwendung im Leerlauf wird und die **PersistableIdle** der Anwendung-Eigenschaftensatz auf **PersistableIdleAction.Persist**.  
   
--   Wenn eine Hostanwendung angewiesen ist, eine Workflowinstanz beizubehalten oder zu entladen.  
+- Wenn eine Hostanwendung angewiesen ist, eine Workflowinstanz beizubehalten oder zu entladen.  
   
--   Wenn eine Workflowinstanz beendet oder fertig gestellt wird.  
+- Wenn eine Workflowinstanz beendet oder fertig gestellt wird.  
   
--   Wenn eine **Persist** Aktivität ausgeführt wird.  
+- Wenn eine **Persist** Aktivität ausgeführt wird.  
   
--   Wenn eine Instanz eines Workflows, die mit einer früheren Version von Windows Workflow Foundation entwickelt wurde, während einer interoperablen Ausführung auf einen Persistenzpunkt trifft.  
+- Wenn eine Instanz eines Workflows, die mit einer früheren Version von Windows Workflow Foundation entwickelt wurde, während einer interoperablen Ausführung auf einen Persistenzpunkt trifft.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [SQL-Workflowinstanzspeicher](sql-workflow-instance-store.md)  
+- [SQL-Workflowinstanzspeicher](sql-workflow-instance-store.md)  
   
--   [Instanzspeicher](instance-stores.md)  
+- [Instanzspeicher](instance-stores.md)  
   
--   [Persistenzteilnehmer](persistence-participants.md)  
+- [Persistenzteilnehmer](persistence-participants.md)  
   
--   [Empfohlene Vorgehensweisen für die Persistenz](persistence-best-practices.md)  
+- [Empfohlene Vorgehensweisen für die Persistenz](persistence-best-practices.md)  
   
--   [Nicht beibehaltene Workflowinstanzen](non-persisted-workflow-instances.md)  
+- [Nicht beibehaltene Workflowinstanzen](non-persisted-workflow-instances.md)  
   
--   [Anhalten und Fortsetzen eines Workflows](pausing-and-resuming-a-workflow.md)
+- [Anhalten und Fortsetzen eines Workflows](pausing-and-resuming-a-workflow.md)

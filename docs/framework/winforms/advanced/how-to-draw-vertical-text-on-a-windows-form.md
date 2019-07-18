@@ -14,12 +14,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 - text [Windows Forms], vertical text
 ms.assetid: 717a6131-00f6-4373-b574-9894e8317799
-ms.openlocfilehash: eb00928205a318b068d49ea3f6f71c398f77bbcd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 660d7abae5463c976e60b7d9caeae8a798d122ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072492"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626174"
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>Vorgehensweise: Zeichnen von vertikalem Text in einem Windows Form
 Im folgenden Codebeispiel wird veranschaulicht, wie Zeichnen von vertikalem Text in einem Formular mithilfe der <xref:System.Drawing.Graphics.DrawString%2A> -Methode der <xref:System.Drawing.Graphics>.  
@@ -35,7 +35,7 @@ Im folgenden Codebeispiel wird veranschaulicht, wie Zeichnen von vertikalem Text
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Die Schriftart Arial ist nicht installiert.  
+- Die Schriftart Arial ist nicht installiert.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -43,5 +43,5 @@ Im folgenden Codebeispiel wird veranschaulicht, wie Zeichnen von vertikalem Text
 - <xref:System.Drawing.StringFormat.FormatFlags%2A>
 - <xref:System.Drawing.StringFormatFlags>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Verwenden von Schriftarten und Text](using-fonts-and-text.md)

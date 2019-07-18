@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d45c5b09358430535438734b38e5dce5d1bcdd3e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2bc996973a98f3b8596b449e1524d5c93b4456e3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101626"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749808"
 ---
 # <a name="ihosttaskstart-method"></a>IHostTask::Start-Methode
 Fordert an, dass der Host verschieben Sie die Aufgabe, die vom aktuellen [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) Instanz aus einem Ruhezustand in einen aktiven Zustand, in dem Code ausgeführt werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Start ();  
 ```  
   

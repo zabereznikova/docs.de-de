@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 415df9928572e095c529119bf2e726fa383577b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3a2badf8f164abd1bbb8892ec5db28f7cf39f5c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224948"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775663"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall-Methode
 Importiert ein öffentliches/privates Schlüsselpaar in einen Container.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT StrongNameKeyInstall (  
     [in]  LPCWSTR   wszKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  

@@ -2,12 +2,12 @@
 title: Zertifikatauswahl und -überprüfung
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 6d2c5470856f09d3da3bcae890717757c598a4c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318350"
 ---
 # <a name="certificate-selection-and-validation"></a>Zertifikatauswahl und -überprüfung
 Die <xref:System.Net>-Klassen unterstützen mehrere Möglichkeiten zur Auswahl und Überprüfung von <xref:System.Security.Cryptography.X509Certificates> für SSL-Verbindungen (Secure Socket Layer). Ein Client kann ein oder mehrere Zertifikate zur Authentifizierung gegenüber eines Servers wählen. Ein Server kann fordern, dass ein Clientzertifikat ein oder mehrere bestimmte Attribute für die Authentifizierung aufweist.  
@@ -29,11 +29,11 @@ Die <xref:System.Net>-Klassen unterstützen mehrere Möglichkeiten zur Auswahl u
 ## <a name="client-certificate-selection"></a>Clientzertifikatauswahl  
  .NET Framework wählt das Clientzertifikat aus, das dem Server auf folgende Weise präsentiert wird:  
   
-1.  Wenn ein Clientzertifikat dem Server bereits gezeigt wurde, wird das Zertifikat beim ersten Mal zwischengespeichert und für nachfolgende Clientzertifikatanforderungen wiederverwendet.  
+1. Wenn ein Clientzertifikat dem Server bereits gezeigt wurde, wird das Zertifikat beim ersten Mal zwischengespeichert und für nachfolgende Clientzertifikatanforderungen wiederverwendet.  
   
-2.  Wenn ein Delegat vorhanden ist, verwenden Sie immer das Ergebnis aus dem Delegaten als auszuwählendes Clientzertifikat. Versuchen Sie nach Möglichkeit ein zwischengespeichertes Zertifikat zu verwenden, aber verwenden Sie keine zwischengespeicherten anonymen Anmeldeinformationen, wenn der Delegat NULL zurückgegeben hat und die Zertifikatauflistung nicht leer ist.  
+2. Wenn ein Delegat vorhanden ist, verwenden Sie immer das Ergebnis aus dem Delegaten als auszuwählendes Clientzertifikat. Versuchen Sie nach Möglichkeit ein zwischengespeichertes Zertifikat zu verwenden, aber verwenden Sie keine zwischengespeicherten anonymen Anmeldeinformationen, wenn der Delegat NULL zurückgegeben hat und die Zertifikatauflistung nicht leer ist.  
   
-3.  Ist dies die erste Abfrage für ein Clientzertifikat, listet das Framework die Zertifikate in <xref:System.Security.Cryptography.X509Certificates.X509Certificate>- oder <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Klassenobjekten auf, die der Verbindung zugeordnet sind. Sie suchen nach einer Übereinstimmung zwischen der vom Server bereitgestellten Liste der Zertifikataussteller und dem Ausstellernamen für Clientzertifikate. Das erste übereinstimmende Zertifikat wird an den Server gesendet. Wenn kein Zertifikat übereinstimmt oder die Zertifikatauflistung leer ist, wird eine anonyme Anmeldeinformation an den Server gesendet.  
+3. Ist dies die erste Abfrage für ein Clientzertifikat, listet das Framework die Zertifikate in <xref:System.Security.Cryptography.X509Certificates.X509Certificate>- oder <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Klassenobjekten auf, die der Verbindung zugeordnet sind. Sie suchen nach einer Übereinstimmung zwischen der vom Server bereitgestellten Liste der Zertifikataussteller und dem Ausstellernamen für Clientzertifikate. Das erste übereinstimmende Zertifikat wird an den Server gesendet. Wenn kein Zertifikat übereinstimmt oder die Zertifikatauflistung leer ist, wird eine anonyme Anmeldeinformation an den Server gesendet.  
   
 ## <a name="tools-for-certificate-configuration"></a>Tools für die Zertifikatkonfiguration  
  Eine Reihe von Tools stehen für die Zertifikatkonfiguration für Client und Server zur Verfügung.  
@@ -53,5 +53,6 @@ Das *HttpCfg.exe*-Tool kann verwendet werden, um Serverzertifikate für die <xre
  Zusätzlich zu diesen Tools stellen die <xref:System.Security.Cryptography.X509Certificates.X509Certificate>- und <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Klassen Methoden zum Laden eines Zertifikats aus dem Dateisystem bereit.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](../../../docs/framework/network-programming/security-in-network-programming.md)
+
+- [Sicherheit in der Netzwerkprogrammierung](../../../docs/framework/network-programming/security-in-network-programming.md)
 - [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876935"
+---
 # <a name="contributing"></a>Beitragen
 
 Vielen Dank für Ihr Interesse und Ihre Bereitschaft, an der .NET-Dokumentation mitzuwirken!
@@ -24,7 +32,7 @@ Tickets und Aufgaben für all diese Repositorys werden hier verfolgt.
 
 Sie benötigen Grundkenntnisse von [Git und GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Schritt 1:** Überspringen Sie diesen Schritt, wenn Sie nur kleine Änderungen vornehmen möchten. Wenn Sie daran interessiert sind, neue Inhalte zu schreiben oder vorhandene Inhalte sorgfältig zu überarbeiten, eröffnen Sie ein [Ticket](https://github.com/dotnet/docs/issues) (Issue), in dem Sie beschreiben, was Sie tun möchten.
+**Schritt 1:** Überspringen Sie diesen Schritt, wenn Sie nur kleine Änderungen vornehmen möchten (wenn Sie beispielsweise einen Tippfehler korrigieren oder sofort einen Pull Request öffnen, um ein Problem zu beheben, das Sie in der Dokumentation finden). Wenn Sie daran interessiert sind, neue Inhalte zu schreiben oder vorhandene Inhalte sorgfältig zu überarbeiten, eröffnen Sie ein [Ticket](https://github.com/dotnet/docs/issues) (Issue), in dem Sie beschreiben, was Sie tun möchten.
 Der Inhalt im Ordner **docs** ist in Abschnitte unterteilt, die sich im Inhaltsverzeichnis (Table of Contents, TOC) wiederfinden. Definieren Sie, an welcher Stelle sich das Thema im Inhaltsverzeichnis befinden wird. Warten Sie auf Feedback zu Ihrem Vorschlag.
 
 - oder - 
@@ -57,14 +65,16 @@ Achten Sie darauf, die richtige Markdownsyntax einzuhalten. Weitere Informatione
 
 ### <a name="example-structure"></a>Beispielstruktur
 
-    docs
-      /about
-      /core
-        /porting
-          porting-overview.md
-          /media
-            /porting-overview
-                portability_report.png
+```
+docs
+  /about
+  /core
+    /porting
+      porting-overview.md
+      /media
+        /porting-overview
+            portability_report.png
+```
 
 **Schritt 4:** Übermitteln Sie einen Pull Request (PR) von Ihrem Branch an `dotnet/docs/master`.
 

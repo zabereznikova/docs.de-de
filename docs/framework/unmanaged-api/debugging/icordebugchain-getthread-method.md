@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ab2b584b4a3e9bef17110f3084dc93efb2e5167
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d05002ecdb903a1adfeea88930083ba472164324
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481650"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745638"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread-Methode
 Ruft den physischen Thread, die, den diese Kette von Aufrufen ist, Teil ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetThread (  
     [out] ICorDebugThread    **ppThread  
 );  

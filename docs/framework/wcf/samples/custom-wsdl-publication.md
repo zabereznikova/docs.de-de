@@ -2,23 +2,23 @@
 title: Benutzerdefinierte WSDL-Veröffentlichung
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: beae9dfcbedabeff09f733113edbe5635d27b075
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b83f225c7c410c3f7dc86f39978b5fef32ae3f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197255"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650162"
 ---
 # <a name="custom-wsdl-publication"></a>Benutzerdefinierte WSDL-Veröffentlichung
 Dieses Beispiel demonstriert, wie Sie  
   
--   Eine <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> in einem benutzerdefinierten <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Attribut zum Exportieren von Attributeigenschaften als WSDL-Anmerkungen implementieren.  
+- Eine <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> in einem benutzerdefinierten <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>-Attribut zum Exportieren von Attributeigenschaften als WSDL-Anmerkungen implementieren.  
   
--   <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> zum Importieren der benutzerdefinierten WSDL-Anmerkungen implementieren.  
+- <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> zum Importieren der benutzerdefinierten WSDL-Anmerkungen implementieren.  
   
--   <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> in einem benutzerdefinierten Vertragsverhalten bzw. Vorgangsverhalten definieren, um importierte Anmerkungen als Anmerkungen in die CodeDom für den importieren Vertrag bzw. Vorgang zu schreiben.  
+- <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> in einem benutzerdefinierten Vertragsverhalten bzw. Vorgangsverhalten definieren, um importierte Anmerkungen als Anmerkungen in die CodeDom für den importieren Vertrag bzw. Vorgang zu schreiben.  
   
--   Verwenden der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zum Herunterladen des WSDL, eine <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> WSDL mit dem benutzerdefinierten WSDL-Importer importieren und die <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> zum Generieren von Windows Communication Foundation (WCF)-Clientcode mit den WSDL-Anmerkungen als / / / und ''' Kommentare in c# und Visual Basic.  
+- Verwenden der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zum Herunterladen des WSDL, eine <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> WSDL mit dem benutzerdefinierten WSDL-Importer importieren und die <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> zum Generieren von Windows Communication Foundation (WCF)-Clientcode mit den WSDL-Anmerkungen als / / / und ''' Kommentare in c# und Visual Basic.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -289,11 +289,11 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

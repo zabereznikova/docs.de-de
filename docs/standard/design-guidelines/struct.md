@@ -12,19 +12,19 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e787c5b34848a561b43c3457341673f11cc2bd00
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646606"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775544"
 ---
 # <a name="struct-design"></a>Strukturentwurf
 Der allgemeine Typ wird meist als eine Struktur, die c#-Schlüsselwort bezeichnet. Dieser Abschnitt enthält Richtlinien für den Strukturentwurf von allgemeinen.  
   
- **X DO NOT** einen Standardkonstruktor für eine Struktur bereitstellen.  
+ **X nicht** einen parameterlosen Konstruktor für eine Struktur bereitstellen.  
   
- Diese Richtlinien kann Arrays von Strukturen erstellt werden, ohne dass den Konstruktor für jedes Element des Arrays ausgeführt. Beachten Sie, dass C#-Strukturen, die über Standardkonstruktoren verfügen nicht zulässt.  
+ Diese Richtlinien kann Arrays von Strukturen erstellt werden, ohne dass den Konstruktor für jedes Element des Arrays ausgeführt. Beachten Sie, dass C# lässt sich nicht auf Strukturen, parameterlose Konstruktoren besitzen.  
   
  **X DO NOT** änderbaren Werts Typen definieren.  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
 ms.openlocfilehash: 8f1b0ac42ea7509f8bc22b0bd2f50e2f96b5bee5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923395"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Vorgehensweise: Drehen eines Objekts mithilfe eines geometrischen Pfads (Matrixanimation)
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> und ein <xref:System.Windows.Media.MatrixTransform> gedreht (PowerPivot) eines Objekts entlang eines geometrischen Pfads durch definiert eine <xref:System.Windows.Media.PathGeometry> Objekt.  
@@ -34,5 +34,5 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.Ma
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Animationen](animation-overview.md)
-- [Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)
+- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)
 - [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bands [Windows Forms], manipulating in Windows Forms
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
-ms.openlocfilehash: 848ae7c88e2531806bf97b05cc0fe6d2388977fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e62f5d31b9d24469455ab31f9771ebc81f74967
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162370"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592341"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Bearbeiten von Bändern im DataGridView-Steuerelement in Windows Forms
 Das folgende Codebeispiel zeigt verschiedene Möglichkeiten zum Bearbeiten von <xref:System.Windows.Forms.DataGridView>-Zeilen und -Spalten mithilfe von Eigenschaften der Klasse <xref:System.Windows.Forms.DataGridViewBand>, von der die Klassen <xref:System.Windows.Forms.DataGridViewRow> und <xref:System.Windows.Forms.DataGridViewColumn> abgeleitet werden.  
@@ -28,9 +28,7 @@ Das folgende Codebeispiel zeigt verschiedene Möglichkeiten zum Bearbeiten von <
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
-  
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
+- Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
 ## <a name="see-also"></a>Siehe auch
 

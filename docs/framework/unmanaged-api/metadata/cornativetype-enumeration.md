@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf62000fd4ec5c8f3dea3fa7d560b3f9ead33fa7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 846c754aeb0a710fa70e906e666f694eaa77c576
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113918"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781708"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType-Enumeration
 Enthält Werte, die systemeigene, nicht verwaltete Typen beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorNativeType {  
   
     NATIVE_TYPE_END                  = 0x0,  

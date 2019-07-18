@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Suchen nach einem Element mit bestimmten Attributen (Vis
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
 ms.openlocfilehash: d4af129cdb7e9049be747b9eb29aaa26ef5d8188
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855620"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Vorgehensweise: Suchen nach einem Element mit bestimmten Attributen (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie nach einem Element mit einem bestimmten Wert suchen können.  

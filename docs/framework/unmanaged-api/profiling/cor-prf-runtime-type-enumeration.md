@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e57c622780f0bc92061fd2928ea861f904d9eb37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6c52f96ad9458dfd5cdedc5cc73154aa570c6759
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122108"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751962"
 ---
 # <a name="corprfruntimetype-enumeration"></a>COR_PRF_RUNTIME_TYPE-Enumeration
 Enthält Werte, die die Version der common Language Runtime (CLR) angeben: Desktop oder CoreCLR, das in Silverlight verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum  
 {  
     COR_PRF_DESKTOP_CLR = 0x1,  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7f982c97bd76288ecd1a8d1f53fc2b25b0bb829e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826326"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623886"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next-Anweisung (Visual Basic)
 Einer Gruppe von Anweisungen für eine angegebene Anzahl von Malen wiederholt wird.  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` wird häufig verwendet werden, nachdem Sie eine Bedingung ausgewertet (z. B. in einer `If`... `Then`... `Else` Struktur). Möglicherweise möchten Sie verwenden `Exit For` für die folgenden Bedingungen:  
   
--   So durchlaufen Sie den Vorgang fortsetzen, ist nicht erforderlich oder unmöglich ist. Diese Bedingung möglicherweise erstellen Sie einen fehlerhaften Wert oder eine Anforderung zum Beenden.  
+- So durchlaufen Sie den Vorgang fortsetzen, ist nicht erforderlich oder unmöglich ist. Diese Bedingung möglicherweise erstellen Sie einen fehlerhaften Wert oder eine Anforderung zum Beenden.  
   
--   Ein `Try`... `Catch`... `Finally` Anweisung wird eine Ausnahme abgefangen. Sie können `Exit For` am Ende der `Finally` Block.  
+- Ein `Try`... `Catch`... `Finally` Anweisung wird eine Ausnahme abgefangen. Sie können `Exit For` am Ende der `Finally` Block.  
   
--   Sie haben eine Endlosschleife, wird eine Schleife, die eine lange oder sogar unendliche Anzahl von Malen ausgeführt werden konnte. Wenn Sie eine solche Bedingung erkennen, können Sie `Exit For` die Schleife mit Escapezeichen versehen. Weitere Informationen finden Sie unter [tun... Until...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Sie haben eine Endlosschleife, wird eine Schleife, die eine lange oder sogar unendliche Anzahl von Malen ausgeführt werden konnte. Wenn Sie eine solche Bedingung erkennen, können Sie `Exit For` die Schleife mit Escapezeichen versehen. Weitere Informationen finden Sie unter [tun... Until...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="technical-implementation"></a>Technische Implementierung  
  Wenn eine `For`... `Next` Schleife beginnt, Visual Basic wertet `start`, `end`, und `step`. Visual Basic wertet diese Werte nur an diese Zeit und weist dann `start` zu `counter`. Vor der Anweisung Block ausgeführt wird, vergleicht der Visual Basic `counter` zu `end`. Wenn `counter` bereits ist größer als die `end` Wert (oder kleiner, wenn `step` ist ein negativer Wert), wird die `For` Schleife und die Steuerung an die Anweisung die folgende übergeben die `Next` Anweisung. Andernfalls wird der Anweisungsblock ausgeführt.  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  Der Datentyp des `counter` bestimmt den Typ der Iteration, der einen der folgenden Typen sein muss:  
   
--   Ein `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, oder `Double`.  
+- Ein `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, oder `Double`.  
   
--   Eine Enumeration, die Sie, mithilfe Deklarieren einer [Enum-Anweisung](../../../visual-basic/language-reference/statements/enum-statement.md).  
+- Eine Enumeration, die Sie, mithilfe Deklarieren einer [Enum-Anweisung](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
--   Eine `Object`.  
+- Eine `Object`.  
   
--   Ein Typ `T` , besitzt die folgenden Operatoren, in denen `B` ist ein Typ, der verwendet werden kann eine `Boolean` Ausdruck.  
+- Ein Typ `T` , besitzt die folgenden Operatoren, in denen `B` ist ein Typ, der verwendet werden kann eine `Boolean` Ausdruck.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

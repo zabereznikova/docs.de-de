@@ -6,15 +6,15 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f743f3de505904854be8aab59e9d3ad14ee64581
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113281"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238621"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Serialisierungseinschränkungen für XamlWriter.Save
-Die [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A> können verwendet werden, um den Inhalt der serialisieren eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Anwendung als eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Datei. Es gibt jedoch einige wichtige Einschränkungen darin, was genau serialisiert wird. Diese Einschränkungen und einige allgemeine Aspekte werden in diesem Thema dokumentiert.  
+Die API <xref:System.Windows.Markup.XamlWriter.Save%2A> können verwendet werden, um den Inhalt der serialisieren eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Anwendung als eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Datei. Es gibt jedoch einige wichtige Einschränkungen darin, was genau serialisiert wird. Diese Einschränkungen und einige allgemeine Aspekte werden in diesem Thema dokumentiert.  
 
 <a name="Run_Time__Not_Design_Time_Representation"></a>   
 ## <a name="run-time-not-design-time-representation"></a>Laufzeit-, statt Entwurfszeitdarstellung  
@@ -30,14 +30,14 @@ Die [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:Sy
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>Ereignisbehandlung wird nicht beibehalten  
- Wenn Ereignishandler, die durch [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hinzugefügt wurden, serialisiert werden, werden diese nicht beibehalten. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ohne CodeBehind (und auch ohne den zugehörigen X: Code-Mechanismus) kann keine prozedurale Logik zur Laufzeit serialisieren. Da die Serialisierung in sich geschlossen und auf die logische Struktur beschränkt ist, besteht keine Möglichkeit zur Speicherung der Ereignishandler. Folglich werden bei Ereignishandlerattributen sowohl das Attribut selbst als auch der Zeichenfolgenwert, der den Handler benennt, aus der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Ausgabe entfernt.  
+ Wenn Ereignishandler, die durch [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hinzugefügt wurden, serialisiert werden, werden diese nicht beibehalten. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ohne CodeBehind (und auch ohne den zugehörigen x:Code-Mechanismus) kann keine prozedurale Logik zur Laufzeit serialisieren. Da die Serialisierung in sich geschlossen und auf die logische Struktur beschränkt ist, besteht keine Möglichkeit zur Speicherung der Ereignishandler. Folglich werden bei Ereignishandlerattributen sowohl das Attribut selbst als auch der Zeichenfolgenwert, der den Handler benennt, aus der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Ausgabe entfernt.  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Realistische Szenarios für die Verwendung von XAMLWriter.Save  
  Während die Einschränkungen aufgeführt. hier sind ziemlich umfangreich, es gibt noch mehrere geeignete Szenarien für die Verwendung <xref:System.Windows.Markup.XamlWriter.Save%2A> für die Serialisierung.  
   
--   Vektorausgabe oder grafische Ausgabe: Die Ausgabe des gerenderten Bereichs kann dazu verwendet werden, den gleichen Vektor oder Grafiken beim erneuten Laden zu reproduzieren.  
+- Vektorausgabe oder grafische Ausgabe: Die Ausgabe des gerenderten Bereichs kann dazu verwendet werden, den gleichen Vektor oder Grafiken beim erneuten Laden zu reproduzieren.  
   
--   Rich Text und Flussdokumente Dokumente: Text und alle Element elementformatierungen und elementeinschlüsse darin wird in der Ausgabe beibehalten. Dies kann für Mechanismen nützlich sein, die einer Zwischenablagefunktionalität ähneln.  
+- Rich Text und Flussdokumente Dokumente: Text und alle Element elementformatierungen und elementeinschlüsse darin wird in der Ausgabe beibehalten. Dies kann für Mechanismen nützlich sein, die einer Zwischenablagefunktionalität ähneln.  
   
--   Beibehalten von Daten für Geschäftsobjekte: Wenn Sie Daten in benutzerdefinierten Elementen wie z. B. gespeichert haben [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten, solange Ihre Geschäftsobjekte grundlegende folgen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Regeln wie das Bereitstellen von benutzerdefinierten Konstruktoren und das Konvertieren für durch Verweis Eigenschaftswerte, die diese Geschäftsobjekte werden können über die Serialisierung aufrechterhalten.
+- Beibehalten von Daten für Geschäftsobjekte: Wenn Sie Daten in benutzerdefinierten Elementen wie z. B. gespeichert haben [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten, solange Ihre Geschäftsobjekte grundlegende folgen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Regeln wie das Bereitstellen von benutzerdefinierten Konstruktoren und das Konvertieren für durch Verweis Eigenschaftswerte, die diese Geschäftsobjekte werden können über die Serialisierung aufrechterhalten.

@@ -3,11 +3,11 @@ title: System.ServiceModel.TxCompletionStatusCompletedForError
 ms.date: 03/30/2017
 ms.assetid: 8ade4722-a6d5-471c-b960-1cfea4ea2aa9
 ms.openlocfilehash: 591e1a1dcb6746d79ff5eceba7e74e890f327354
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779495"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforerror"></a>System.ServiceModel.TxCompletionStatusCompletedForError
 Die angegebene Transaktion für den angegebenen Vorgang wurde aufgrund einer unbehandelten Ausführungsausnahme abgeschlossen.  

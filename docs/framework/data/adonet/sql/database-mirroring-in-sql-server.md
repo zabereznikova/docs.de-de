@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877811"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Datenbankspiegelungen in SQL Server
 Mithilfe der Datenbankspiegelung in SQL Server können Sie eine Kopie, oder auch ein Spiegelbild, einer SQL Server-Datenbank auf einem Standbyserver speichern. Durch das Spiegeln wird sichergestellt, dass jederzeit zwei separate Kopien der Daten vorhanden sind. Dies gewährleistet Hochverfügbarkeit und vollständige Datenredundanz. Der .NET-Datenanbieter für SQL Server stellt implizite Unterstützung für die Datenbankspiegelung bereit. Daher muss der Entwickler keine weiteren Schritte ausführen oder Code programmieren, nachdem die Spiegelung für eine SQL Server-Datenbank konfiguriert wurde. Außerdem unterstützt das <xref:System.Data.SqlClient.SqlConnection>-Objekt einen expliziten Verbindungsmodus, über den der Name eines Failover-Partnerservers im <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> angegeben werden kann.  
   
  Die folgende vereinfachte Ereignissequenz tritt bei einem <xref:System.Data.SqlClient.SqlConnection>-Objekt ein, das eine Datenbank zum Ziel hat, welche für die Spiegelung konfiguriert wurde:  
   
-1.  Die Clientanwendung stellt mit Erfolg eine Verbindung mit der Prinzipaldatenbank her, und der Server sendet den Namen des Partnerservers zurück, der dann auf dem Client zwischengespeichert wird.  
+1. Die Clientanwendung stellt mit Erfolg eine Verbindung mit der Prinzipaldatenbank her, und der Server sendet den Namen des Partnerservers zurück, der dann auf dem Client zwischengespeichert wird.  
   
-2.  Wenn der Server mit der Prinzipaldatenbank ausfällt oder die Konnektivität unterbrochen wird, gehen die Verbindung und der Transaktionsstatus verloren. Die Clientanwendung versucht, erneut eine Verbindung mit der Prinzipaldatenbank herzustellen, und hat damit keinen Erfolg.  
+2. Wenn der Server mit der Prinzipaldatenbank ausfällt oder die Konnektivität unterbrochen wird, gehen die Verbindung und der Transaktionsstatus verloren. Die Clientanwendung versucht, erneut eine Verbindung mit der Prinzipaldatenbank herzustellen, und hat damit keinen Erfolg.  
   
-3.  Die Clientanwendung versucht daraufhin transparent, eine Verbindung mit der Spiegeldatenbank auf dem Partnerserver herzustellen. Wenn dieser Vorgang erfolgreich ausgeführt werden kann, wird die Verbindung zur Spiegeldatenbank umgeleitet, die daraufhin zur neuen Prinzipaldatenbank wird.  
+3. Die Clientanwendung versucht daraufhin transparent, eine Verbindung mit der Spiegeldatenbank auf dem Partnerserver herzustellen. Wenn dieser Vorgang erfolgreich ausgeführt werden kann, wird die Verbindung zur Spiegeldatenbank umgeleitet, die daraufhin zur neuen Prinzipaldatenbank wird.  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Angeben des Failoverpartners in der Verbindungszeichenfolge  
  Wenn Sie den Namen eines Failover-Partnerservers in der Verbindungszeichenfolge angeben, versucht der Client transparent, eine Verbindung mit dem Failover-Partnerserver herzustellen, wenn die Prinzipaldatenbank beim ersten Verbindungsversuch der Clientanwendung nicht verfügbar ist.  
@@ -61,7 +61,7 @@ string activeServer = connection.DataSource;
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Datenbankspiegelung](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Beschreibt, wie die Spiegelung in SQL Server eingerichtet und konfiguriert wird.|  
+|[Die Datenbankspiegelung](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Beschreibt, wie die Spiegelung in SQL Server eingerichtet und konfiguriert wird.|  
   
 ## <a name="see-also"></a>Siehe auch
 

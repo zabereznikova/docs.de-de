@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: e5579dd05e11de9dd54023604f7515fb52fb29a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650725"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59152905"
 ---
 # <a name="managing-connections"></a>Verwalten von Verbindungen
 Anwendungen, die HTTP zum Herstellen einer Verbindung mit Datenressourcen verwenden, können die <xref:System.Net.ServicePoint>- und <xref:System.Net.ServicePointManager>-Klassen von .NET Framework verwenden, um Verbindungen mit dem Internet zu verwalten und dabei zu helfen, dass diese eine optimale Skalierung und Leistung erreichen.  
@@ -65,5 +65,6 @@ sp.ConnectionLimit = newLimit
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Connection Grouping (Verbindungsgruppierung)](../../../docs/framework/network-programming/connection-grouping.md)
 - [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)

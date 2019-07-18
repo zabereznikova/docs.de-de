@@ -1,15 +1,13 @@
 ---
 title: Verwenden eines Datenbankservers, der als Container ausgeführt wird
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Verwenden eines als Container ausgeführten Datenbankservers nur für die Entwickelung Erfahren Sie den Grund.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463344"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639732"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Verwenden eines Datenbankservers, der als Container ausgeführt wird
 
@@ -48,10 +46,10 @@ Die Ausführung von SQL Server als Container ist nicht nur für eine Demo nützl
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Ausführen des Docker-Images von SQL Server unter Linux, Mac oder Windows** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
 - **Verbinden und Abfragen von SQL Server unter Linux mit sqlcmd** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Seeding mit Testdaten beim Starten von Webanwendungen
 
@@ -165,7 +163,7 @@ Wenn Sie Redis jedoch in der Produktion ausführen, sollten Sie besser eine Lös
 
 Redis stellt ein Docker-Image mit Redis bereit. Dieses Image ist im Docker-Hub unter der folgenden URL verfügbar:
 
-[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
+<https://hub.docker.com/\_/redis/>
 
 Ein Docker Redis-Container kann durch Ausführen des folgenden Befehls der Docker-Befehlszeilenschnittstelle in der Eingabeaufforderung direkt ausgeführt werden:
 

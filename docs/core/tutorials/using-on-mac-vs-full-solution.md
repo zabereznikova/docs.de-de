@@ -1,15 +1,15 @@
 ---
 title: Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac
 description: Dieses Thema führt Sie durch die Erstellung einer .NET Core-Lösung, die eine wiederverwendbare Bibliothek und Komponententests enthält.
-author: guardrex
+author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3c515c3771f8204bbc7b6944f81fed463c309bc3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 44ade71a257f5c4fdcb8da9b572adf7133448fb8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203401"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300155"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac
 
@@ -26,7 +26,7 @@ Dieses Tutorial zeigt Ihnen, wie Sie eine Anwendung erstellen, die einen Suchbeg
 
 - OpenSSL (wenn .NET Core 1.1 ausgeführt wird): Weitere Informationen finden Sie unter dem Thema [Voraussetzungen für .NET Core unter Mac](../macos-prerequisites.md).
 - [.NET Core SDK 1.1 oder höher](https://www.microsoft.com/net/core#macos)
-- [Visual Studio 2017 für Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
+- [Visual Studio 2017 für Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 Weitere Informationen über erforderliche Komponenten finden Sie unter [Prerequisites for .NET Core on Mac (Erforderliche Komponenten für .NET Core unter Mac)](../../core/macos-prerequisites.md). Die vollständigen Systemanforderungen von Visual Studio 2017 für Mac finden Sie unter [Visual Studio 2017 für Mac – Systemanforderungen der Produktfamilie](/visualstudio/productinfo/vs2017-system-requirements-mac).
 

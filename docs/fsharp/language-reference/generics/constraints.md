@@ -2,12 +2,12 @@
 title: Einschränkungen
 description: Erfahren Sie mehr über F# Einschränkungen, die für generische Typparameter an die Anforderungen für die ein Typargument in einer generischen Typ oder eine Funktion gelten.
 ms.date: 05/16/2016
-ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: bb6625636f0465dd608ae2e8a8986d043b62b6e4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612230"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378187"
 ---
 # <a name="constraints"></a>Einschränkungen
 
@@ -25,15 +25,15 @@ Es gibt mehrere andere Einschränkungen, die Sie anwenden können, um die Typen 
 
 |Constraint|Syntax|Beschreibung|
 |----------|------|-----------|
-|Typeinschränkung|*Typparameter* :&gt; *Typ*|Der bereitgestellte Typ muss gleich oder abgeleitet aus dem angegebenen Typ oder, wenn der Typ eine Schnittstelle ist, muss der angegebene Typ die Schnittstelle implementieren.|
-|NULL-Einschränkung|*Typparameter* : null|Der angegebene Typ muss es sich um das null-Literal unterstützen. Dies schließt alle Objekttypen in .NET, nicht jedoch F# Liste, Tupel, Funktion, Klasse, Datensatzes oder union-Typen.|
+|Typeinschränkung|*type-parameter* :&gt; *type*|Der bereitgestellte Typ muss gleich oder abgeleitet aus dem angegebenen Typ oder, wenn der Typ eine Schnittstelle ist, muss der angegebene Typ die Schnittstelle implementieren.|
+|NULL-Einschränkung|*type-parameter* : null|Der angegebene Typ muss es sich um das null-Literal unterstützen. Dies schließt alle Objekttypen in .NET, nicht jedoch F# Liste, Tupel, Funktion, Klasse, Datensatzes oder union-Typen.|
 |Explizites Mitglied-Einschränkung|[(]*Typparameter* [oder... oder *Typparameter*)]: (*Membersignatur*)|Mindestens eines der bereitgestellten Typargumente müssen ein Mitglied, das die angegebene Signatur verfügt; nicht für die allgemeine Verwendung vorgesehen. Mitglieder müssen entweder explizit auf den Typ oder einem Teil einer Erweiterung impliziter Typ werden gültige Ziele für eine explizite Einschränkung für Member definiert werden.|
 |Konstruktoreinschränkung|*Typparameter* : (neu: Unit -&gt; "ein)|Der angegebene Typ muss einen Standardkonstruktor verfügen.|
 |Werttypeinschränkung|: Struktur|Der angegebene Typ muss ein.|
 |Verweistypeinschränkung|: nicht-Struktur|Der angegebene Typ muss ein Verweistyp für .NET.|
-|Eine Einschränkung für Enumeration|: Enumeration&lt;*vom zugrunde liegenden Typ*&gt;|Der bereitgestellte Typ muss es sich um ein enumerierter Typ sein, der den angegebenen zugrunde liegenden Typ aufweist; nicht für die allgemeine Verwendung vorgesehen.|
-|Delegieren der Einschränkung|: Delegieren&lt;*Tupel-Parameter-Type*, *Rückgabetyp*&gt;|Der angegebene Typ muss ein Delegattyp, die die angegebenen Argumenten sein und Rückgabewert; nicht für die allgemeine Verwendung vorgesehen.|
-|Comparison-Einschränkung|: Vergleich|Der angegebene Typ muss es sich um Vergleich unterstützen.|
+|Eine Einschränkung für Enumeration|: enum&lt;*underlying-type*&gt;|Der bereitgestellte Typ muss es sich um ein enumerierter Typ sein, der den angegebenen zugrunde liegenden Typ aufweist; nicht für die allgemeine Verwendung vorgesehen.|
+|Delegieren der Einschränkung|: delegate&lt;*tuple-parameter-type*, *return-type*&gt;|Der angegebene Typ muss ein Delegattyp, die die angegebenen Argumenten sein und Rückgabewert; nicht für die allgemeine Verwendung vorgesehen.|
+|Comparison-Einschränkung|: comparison|Der angegebene Typ muss es sich um Vergleich unterstützen.|
 |Equality-Einschränkung|: auf Gleichheit|Der angegebene Typ muss die Gleichheit unterstützen.|
 |Nicht verwaltete Einschränkungen|: nicht verwaltete|Der angegebene Typ muss es sich um einen nicht verwalteten Typ sein. Nicht verwaltete Typen sind entweder bestimmten primitiven Typen (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, oder `decimal`), Enumerationstypen, `nativeptr<_>`, oder eine nicht generische Struktur, deren Felder alle nicht verwalteten Typen werden.|
 
@@ -58,10 +58,6 @@ class end
 
 // Null constraint
 type Class3<'T when 'T : null> =
-class end
-
-// Member constraint with static member
-type Class4<'T when 'T : (static member staticMethod1 : unit -> 'T) > =
 class end
 
 // Member constraint with instance member

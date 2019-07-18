@@ -2,12 +2,12 @@
 title: Auswählen eines Nachrichtenaustauschmusters
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2d39164944207d73fdfe418a30326fb40462db72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157749"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664911"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Auswählen eines Nachrichtenaustauschmusters
 Der erste Schritt beim Schreiben eines benutzerdefinierten Transports ist, zu entscheiden, welche *Nachrichtenaustauschmuster* (oder Nachrichtenaustauschmuster) für den Kanal, die Sie entwickeln erforderlich sind. In diesem Thema werden die verfügbaren Optionen beschrieben und die verschiedenen Anforderungen erläutert. Dies ist die erste Aufgabe in der beschriebenen kanalentwicklungsaufgabenliste [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -15,15 +15,15 @@ Der erste Schritt beim Schreiben eines benutzerdefinierten Transports ist, zu en
 ## <a name="six-message-exchange-patterns"></a>Sechs Nachrichtenaustauschmuster  
  Es stehen drei Nachrichtenaustauschmuster zur Auswahl:  
   
--   Datagramm (<xref:System.ServiceModel.Channels.IInputChannel> und <xref:System.ServiceModel.Channels.IOutputChannel>)  
+- Datagramm (<xref:System.ServiceModel.Channels.IInputChannel> und <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
      Bei Verwendung ein Datagramm-Nachrichtenaustauschmusters sendet ein Client eine Nachricht mit einem *auslösen und vergessen* Exchange. Ein "fire and forget"-Austausch erfordert eine Out-of-Band-Bestätigung für die erfolgreiche Zustellung. Die Nachricht könnte unterwegs verloren gehen und den Dienst nicht erreichen. Wenn der Sendevorgang auf der Clientseite erfolgreich abgeschlossen wird, stellt dies keine Garantie dar, dass der Remoteendpunkt die Nachricht erhalten hat. Das Datagramm ist ein wesentlicher Baustein für den Nachrichtenaustausch, da Sie eigene Protokolle damit erstellen können, einschließlich zuverlässiger Protokolle und sicherer Protokolle. Clientdatagrammkanäle implementieren die <xref:System.ServiceModel.Channels.IOutputChannel>-Schnittstelle, und Dienstdatagrammkanäle implementieren die <xref:System.ServiceModel.Channels.IInputChannel>-Schnittstelle.  
   
--   Anforderung-Antwort (<xref:System.ServiceModel.Channels.IRequestChannel> und <xref:System.ServiceModel.Channels.IReplyChannel>)  
+- Anforderung-Antwort (<xref:System.ServiceModel.Channels.IRequestChannel> und <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
      In diesem Nachrichtenaustauschmuster wird eine Nachricht gesendet, und eine Antwort wird empfangen. Das Muster besteht aus Anforderungs-Antwort-Paaren. Beispiele für Anforderung-Antwort-Aufrufe sind Remoteprozeduraufrufe (RPC) und Browser-GET-Anforderungen. Dieses Muster wird auch als Halbduplex bezeichnet. In diesem Nachrichtenaustauschmuster implementieren Clientkanäle <xref:System.ServiceModel.Channels.IRequestChannel>, und Dienstkanäle implementieren <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Duplex (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
+- Duplex (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
   
      Das Duplex-Nachrichtenaustauschmuster ermöglicht, dass eine willkürliche Anzahl von Nachrichten von einem Client gesendet und in beliebiger Reihenfolge empfangen wird. Das Duplex-Nachrichtenaustauschmuster ist mit einem Telefongespräch vergleichbar, bei dem jedes gesprochene Wort einer Nachricht entspricht. Da beide Teilnehmer in diesem Nachrichtenaustauschmuster senden und empfangen können, ist die vom Client und von den Dienstkanälen implementierte Schnittstelle <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -32,17 +32,17 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
   
  Jedes dieser Nachrichtenaustauschmuster kann außerdem unterstützen *Sitzungen*. Eine Sitzung (und Implementierung von <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> des Typs <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) korreliert alle in einem Kanal gesendeten und empfangenen Nachrichten. Das Anforderung-Antwort-Muster ist eine eigenständige, aus zwei Nachrichten bestehende Sitzung, da die Anforderung und die Antwort korreliert werden. Demgegenüber impliziert das Anforderung-Antwort-Muster, das Sitzungen unterstützt, dass alle Anforderung/Antwort-Paare in diesem Kanal miteinander korreliert werden. Daher stehen insgesamt sechs Nachrichtenaustauschmuster zur Auswahl:  
   
--   Datagramm  
+- Datagramm  
   
--   Anforderung-Antwort  
+- Anforderung-Antwort  
   
--   Duplex  
+- Duplex  
   
--   Datagramm mit Sitzungen  
+- Datagramm mit Sitzungen  
   
--   Anforderung-Antwort mit Sitzungen  
+- Anforderung-Antwort mit Sitzungen  
   
--   Duplex mit Sitzungen  
+- Duplex mit Sitzungen  
   
 > [!NOTE]
 >  Für den UDP-Transport wird nur das Nachrichtenaustauschmuster Datagramm unterstützt, da UDP grundsätzlich ein "fire and forget"-Protokoll ist.  
@@ -72,25 +72,25 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
 ## <a name="writing-sessionful-channels"></a>Schreiben von sitzungsbasierten Kanälen  
  Als sitzungsbasierter Kanalautor muss Ihr Kanal einige Voraussetzungen erfüllen, um Sitzungen bereitzustellen. Auf der Senderseite muss Ihr Kanal Folgendes erfüllen:  
   
--   Erstellen Sie für jeden neuen Kanal eine neue Sitzung, und verknüpfen Sie sie mit einer neuen Sitzungs-ID, die einer eindeutigen Zeichenfolge entspricht. Oder rufen Sie unterhalb im Stapel eine neue Sitzung aus dem sitzungsbasierten Kanal ab.  
+- Erstellen Sie für jeden neuen Kanal eine neue Sitzung, und verknüpfen Sie sie mit einer neuen Sitzungs-ID, die einer eindeutigen Zeichenfolge entspricht. Oder rufen Sie unterhalb im Stapel eine neue Sitzung aus dem sitzungsbasierten Kanal ab.  
   
--   Für jede mit diesem Kanal gesendete Nachricht müssen Sie die Nachricht mit der Sitzung verknüpfen, wenn Ihr Kanal die Sitzung erstellt hat (statt sie von der Ebene unterhalb zu erhalten). Für Protokollkanäle wird dies i. d. R. durch Hinzufügen eines SOAP-Headers ausgeführt. Für Transportkanäle wird dies durch Erstellen einer neuen Transportverbindung oder durch Hinzufügen von Sitzungsinformationen zum Framing-Protokoll ausgeführt.  
+- Für jede mit diesem Kanal gesendete Nachricht müssen Sie die Nachricht mit der Sitzung verknüpfen, wenn Ihr Kanal die Sitzung erstellt hat (statt sie von der Ebene unterhalb zu erhalten). Für Protokollkanäle wird dies i. d. R. durch Hinzufügen eines SOAP-Headers ausgeführt. Für Transportkanäle wird dies durch Erstellen einer neuen Transportverbindung oder durch Hinzufügen von Sitzungsinformationen zum Framing-Protokoll ausgeführt.  
   
--   Für jede über diesen Kanal gesendete Nachricht müssen Sie die oben erwähnten Zustellungsgarantien zur Verfügung stellen. Wenn Sie den Kanal unterhalb zur Bereitstellung der Sitzung verwenden, stellt dieser Kanal auch die Zustellungsgarantien zur Verfügung. Wenn Sie die Sitzung selbst zur Verfügung stellen, müssen Sie diese Garantien als Teil des Protokolls implementieren. Wenn Sie einen Protokollkanal schreiben, der WCF auf beiden Seiten voraussetzt, benötigen Sie im Allgemeinen den TCP-Transportkanal oder den Kanal für zuverlässiges Messaging und sind auf einen der beiden Kanäle zur Bereitstellung einer Sitzung angewiesen.  
+- Für jede über diesen Kanal gesendete Nachricht müssen Sie die oben erwähnten Zustellungsgarantien zur Verfügung stellen. Wenn Sie den Kanal unterhalb zur Bereitstellung der Sitzung verwenden, stellt dieser Kanal auch die Zustellungsgarantien zur Verfügung. Wenn Sie die Sitzung selbst zur Verfügung stellen, müssen Sie diese Garantien als Teil des Protokolls implementieren. Wenn Sie einen Protokollkanal schreiben, der WCF auf beiden Seiten voraussetzt, benötigen Sie im Allgemeinen den TCP-Transportkanal oder den Kanal für zuverlässiges Messaging und sind auf einen der beiden Kanäle zur Bereitstellung einer Sitzung angewiesen.  
   
--   Wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> auf Ihrem Kanal aufgerufen wird, führen Sie die notwendigen Schritte zum Schließen der Sitzung aus, indem Sie entweder den angegebenen Timeout oder den Standardwert verwenden. Dazu brauchen Sie möglicherweise nur <xref:System.ServiceModel.ICommunicationObject.Close%2A> auf dem Kanal unterhalb aufzurufen (wenn Sie die Sitzung soeben von diesem erhalten haben), eine spezielle SOAP-Nachricht zu senden oder eine Transportverbindung zu schließen.  
+- Wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> auf Ihrem Kanal aufgerufen wird, führen Sie die notwendigen Schritte zum Schließen der Sitzung aus, indem Sie entweder den angegebenen Timeout oder den Standardwert verwenden. Dazu brauchen Sie möglicherweise nur <xref:System.ServiceModel.ICommunicationObject.Close%2A> auf dem Kanal unterhalb aufzurufen (wenn Sie die Sitzung soeben von diesem erhalten haben), eine spezielle SOAP-Nachricht zu senden oder eine Transportverbindung zu schließen.  
   
--   Wenn <xref:System.ServiceModel.ICommunicationObject.Abort%2A> auf dem Kanal aufgerufen wird, beenden Sie die Sitzung unvermittelt, ohne E/A auszuführen. Dies bedeutet möglicherweise, nichts zu machen oder eine Netzwerkverbindung oder eine andere Ressource abzubrechen.  
+- Wenn <xref:System.ServiceModel.ICommunicationObject.Abort%2A> auf dem Kanal aufgerufen wird, beenden Sie die Sitzung unvermittelt, ohne E/A auszuführen. Dies bedeutet möglicherweise, nichts zu machen oder eine Netzwerkverbindung oder eine andere Ressource abzubrechen.  
   
  Auf der Empfängerseite muss Ihr Kanal Folgendes erfüllen:  
   
--   Für jede eingehende Nachricht muss der Kanallistener die Sitzung erkennen, zu der sie gehört. Wenn es sich dabei um die erste Nachricht in der Sitzung handelt, muss der Kanallistener einen neuen Kanal erstellen und ihn vom Aufruf an <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> zurückgeben. Andernfalls muss der Kanallistener den vorhandenen Kanal, der der Sitzung entspricht, suchen und die Nachricht über den Kanal zustellen.  
+- Für jede eingehende Nachricht muss der Kanallistener die Sitzung erkennen, zu der sie gehört. Wenn es sich dabei um die erste Nachricht in der Sitzung handelt, muss der Kanallistener einen neuen Kanal erstellen und ihn vom Aufruf an <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> zurückgeben. Andernfalls muss der Kanallistener den vorhandenen Kanal, der der Sitzung entspricht, suchen und die Nachricht über den Kanal zustellen.  
   
--   Wenn Ihr Kanal die Sitzung (sowie die erforderlichen Zustellungsgarantien) bereitstellt, muss die Empfängerseite möglicherweise einige Aktionen ausführen, wie die Nachrichtenreihenfolge ändern oder Bestätigungen senden.  
+- Wenn Ihr Kanal die Sitzung (sowie die erforderlichen Zustellungsgarantien) bereitstellt, muss die Empfängerseite möglicherweise einige Aktionen ausführen, wie die Nachrichtenreihenfolge ändern oder Bestätigungen senden.  
   
--   Wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> auf Ihrem Kanal aufgerufen wird, führen Sie die notwendigen Schritte zum Schließen der Sitzung aus, indem Sie entweder den angegebenen Timeout oder den Standardwert verwenden. Es könnten Ausnahmen ausgelöst werden, wenn der Kanal eine Nachricht empfängt, während er darauf wartet, dass der Schließen-Timeout abläuft. Der Grund dafür ist, dass sich der Kanal im Schließen-Zustand befindet, wenn er eine Nachricht empfängt. Daher wird eine Ausnahme ausgelöst.  
+- Wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> auf Ihrem Kanal aufgerufen wird, führen Sie die notwendigen Schritte zum Schließen der Sitzung aus, indem Sie entweder den angegebenen Timeout oder den Standardwert verwenden. Es könnten Ausnahmen ausgelöst werden, wenn der Kanal eine Nachricht empfängt, während er darauf wartet, dass der Schließen-Timeout abläuft. Der Grund dafür ist, dass sich der Kanal im Schließen-Zustand befindet, wenn er eine Nachricht empfängt. Daher wird eine Ausnahme ausgelöst.  
   
--   Wenn <xref:System.ServiceModel.ICommunicationObject.Abort%2A> auf dem Kanal aufgerufen wird, beenden Sie die Sitzung unvermittelt, ohne E/A auszuführen. Dies bedeutet möglicherweise, nichts zu machen oder eine Netzwerkverbindung oder eine andere Ressource abzubrechen.  
+- Wenn <xref:System.ServiceModel.ICommunicationObject.Abort%2A> auf dem Kanal aufgerufen wird, beenden Sie die Sitzung unvermittelt, ohne E/A auszuführen. Dies bedeutet möglicherweise, nichts zu machen oder eine Netzwerkverbindung oder eine andere Ressource abzubrechen.  
   
 ## <a name="see-also"></a>Siehe auch
 

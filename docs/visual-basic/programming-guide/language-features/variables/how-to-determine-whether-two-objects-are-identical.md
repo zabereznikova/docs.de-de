@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769082"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Vorgehensweise: Zu bestimmen, ob zwei Objekte identisch (Visual Basic)
 In Visual Basic sind Verweise auf zwei Variablen als identisch, wenn deren Zeiger identisch, d. h. sind Wenn beide Variablen auf die gleiche Klasseninstanz im Arbeitsspeicher verweisen. Z. B. in einer Windows Forms-Anwendung, Sie möchten stellen einen Vergleich aus, um zu bestimmen, ob die aktuelle Instanz (`Me`) ist identisch mit einer bestimmten Instanz, wie z. B. `Form2`.  
@@ -22,9 +22,9 @@ In Visual Basic sind Verweise auf zwei Variablen als identisch, wenn deren Zeige
   
 #### <a name="to-determine-if-two-objects-are-identical"></a>Um festzustellen, ob zwei Objekte identisch sind.  
   
-1.  Richten Sie eine `Boolean` Ausdruck, der die beiden Objekte zu testen.  
+1. Richten Sie eine `Boolean` Ausdruck, der die beiden Objekte zu testen.  
   
-2.  Testausdruck, verwenden Sie die `Is` Operator mit den beiden Objekten als Operanden.  
+2. Testausdruck, verwenden Sie die `Is` Operator mit den beiden Objekten als Operanden.  
   
      `Is` Gibt `True` Wenn die Objekte auf die gleiche Instanz der Klasse zeigen.  
   
@@ -33,9 +33,9 @@ In Visual Basic sind Verweise auf zwei Variablen als identisch, wenn deren Zeige
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>Um festzustellen, ob zwei Objekte nicht identisch sind.  
   
-1.  Richten Sie eine `Boolean` Ausdruck, der die beiden Objekte zu testen.  
+1. Richten Sie eine `Boolean` Ausdruck, der die beiden Objekte zu testen.  
   
-2.  Testausdruck, verwenden Sie die `IsNot` Operator mit den beiden Objekten als Operanden.  
+2. Testausdruck, verwenden Sie die `IsNot` Operator mit den beiden Objekten als Operanden.  
   
      `IsNot` Gibt `True` Wenn die Objekte nicht auf die gleiche Instanz der Klasse zeigen.  
   

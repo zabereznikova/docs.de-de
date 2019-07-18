@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a15d7f16676b8b9d66f8d1ba7484f3fec5735a44
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988753"
 ---
 # <a name="icordebugframe-interface"></a>ICorDebugFrame-Schnittstelle
 
@@ -56,4 +56,4 @@ Stellt einen Rahmen auf dem aktuellen Stapel dar.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

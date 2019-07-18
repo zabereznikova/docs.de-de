@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3090887d3c670b2784b7b40c7d63832715596c3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c5e8dd4a9dbf301b0910eda220513e9a3ffdc1cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141517"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778642"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority-Funktion
 Ruft einen Zeiger auf ein [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) -Instanz, die Schlüssel für die Codeobjekte verwaltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetIdentityAuthority (  
     [out] IIdentityAuthority   **ppIIdentityAuthority  
  );  
@@ -49,4 +49,4 @@ HRESULT GetIdentityAuthority (
 ## <a name="see-also"></a>Siehe auch
 
 - [IIdentityAuthority-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)
-- [Fusion – Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

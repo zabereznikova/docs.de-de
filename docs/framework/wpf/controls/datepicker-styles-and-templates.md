@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 5c8e199dd7123e1490c8a836a62ffea158797eb8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 013076fdac8666b974fdf0ce9b09740197031c15
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206134"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170539"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker-Stile und -Vorlagen
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.DatePicker> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -62,8 +62,8 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 |Mit einem Wasserzeichen versehen|WatermarkStates|Das Steuerelement zeigt den ersten Text.  Die <xref:System.Windows.Controls.Primitives.DatePickerTextBox> befindet sich im Zustand, wenn der Benutzer nicht eingegebene Text oder ein Datum ausgewählt hat.|  
 |Unwatermarked|WatermarkStates|Text in eingegeben wurden die <xref:System.Windows.Controls.Primitives.DatePickerTextBox> oder ein Datum in der <xref:System.Windows.Controls.DatePicker>.|  
 |Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
-|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
-|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
+|InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` und das Steuerelement den Fokus besitzt.|  
+|InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` und das Steuerelement keinen Fokus besitzt.|  
   
 ## <a name="datepicker-controltemplate-example"></a>DatePicker-ControlTemplate-Beispiel  
  Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.DatePicker> Steuerelement.  

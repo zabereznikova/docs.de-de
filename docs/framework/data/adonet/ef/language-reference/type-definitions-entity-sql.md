@@ -2,12 +2,12 @@
 title: Typdefinitionen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096022"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641397"
 ---
 # <a name="type-definitions-entity-sql"></a>Typdefinitionen (Entity SQL)
 Eine Typdefinition wird in der Deklarationsanweisung einer [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Inlinefunktion verwendet.  
@@ -19,25 +19,25 @@ Eine Typdefinition wird in der Deklarationsanweisung einer [!INCLUDE[esql](../..
   
  Dies sind die zulässigen Typdefinitionen:  
   
--   Der Typ des Bezeichners (z. B. "Int32" oder "AdventureWorks.Order").  
+- Der Typ des Bezeichners (z. B. "Int32" oder "AdventureWorks.Order").  
   
--   Das `COLLECTION`-Schlüsselwort, das von einer anderen Typdefinition in Klammern gefolgt wird (z. B. "Collection(AdventureWorks.Order)").  
+- Das `COLLECTION`-Schlüsselwort, das von einer anderen Typdefinition in Klammern gefolgt wird (z. B. "Collection(AdventureWorks.Order)").  
   
--   Das von einer Liste von Eigenschaftendefinitionen in Klammern (z. B. "Row(x AdventureWorks.Order))" gefolgte ROW-Schlüsselwort. Eigenschaftendefinitionen besitzen Formate wie z. B. "`identifier type_definition`, `identifier type_definition`,...".  
+- Das von einer Liste von Eigenschaftendefinitionen in Klammern (z. B. "Row(x AdventureWorks.Order))" gefolgte ROW-Schlüsselwort. Eigenschaftendefinitionen besitzen Formate wie z. B. "`identifier type_definition`, `identifier type_definition`,...".  
   
--   Das vom Typ des Bezeichners in Klammern (z. B. "Ref(AdventureWorks.Order)") gefolgte REF-Schlüsselwort. Der REF-Typdefinitionsoperator erfordert einen Entitätstyp als Argument. Sie können keinen primitiven Typ als Argument angeben.  
+- Das vom Typ des Bezeichners in Klammern (z. B. "Ref(AdventureWorks.Order)") gefolgte REF-Schlüsselwort. Der REF-Typdefinitionsoperator erfordert einen Entitätstyp als Argument. Sie können keinen primitiven Typ als Argument angeben.  
   
  Sie können Typdefinitionen auch schachteln (z. B., "Collection(Row(x Ref(AdventureWorks.Order)))").  
   
  Die Typdefinitionsoptionen lauten folgendermaßen:  
   
--   `IdentifierName supported_type`, oder  
+- `IdentifierName supported_type`, oder  
   
--   `IdentifierName` Sammlung (`type_definition`), oder  
+- `IdentifierName` COLLECTION(`type_definition`) oder  
   
--   `IdentifierName` Zeile (`property_definition`), oder  
+- `IdentifierName` ROW(`property_definition`) oder  
   
--   `IdentifierName` REF (`supported_entity_type`)  
+- `IdentifierName` REF(`supported_entity_type`)  
   
  Die Eigenschaftendefinitionsoption ist `IdentifierName type_definition`.  
   

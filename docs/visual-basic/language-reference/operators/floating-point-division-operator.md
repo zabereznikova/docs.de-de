@@ -17,11 +17,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
 ms.openlocfilehash: af2316f92e2904eee1e8c046b34b8147e40cb513
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778481"
 ---
 # <a name="-operator-visual-basic"></a>/-Operator (Visual Basic)
 Dividiert zwei Zahlen und gibt ein Gleitkommaergebnis zurück.  

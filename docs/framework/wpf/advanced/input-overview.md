@@ -24,31 +24,31 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: defce7949bff47ef109e81d03894b13d95ba4c3d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090024"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238495"
 ---
 # <a name="input-overview"></a>Übersicht über die Eingabe
-<a name="introduction"></a> Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Subsystem bietet eine leistungsstarke [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] zum Abrufen von Eingabe aus einer Vielzahl von Geräten, einschließlich der Maus, Tastatur, Touch- und Stift. In diesem Thema werden die Dienste beschrieben, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bereitgestellt werden sowie die Architektur des Eingabesystems.
+<a name="introduction"></a> Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Subsystem bietet eine leistungsstarke API zum Abrufen von Eingabe aus einer Vielzahl von Geräten, einschließlich der Maus, Tastatur, Touch- und Stift. In diesem Thema werden die Dienste beschrieben, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bereitgestellt werden sowie die Architektur des Eingabesystems.
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>Eingabe-API
- Die primäre Eingabe [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] -Darlegung finden Sie unter den Basiselementklassen: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.FrameworkContentElement>.  Weitere Informationen zu den Basiselementen finden Sie unter [Übersicht über Basiselemente](base-elements-overview.md).  Diese Klassen bieten Funktionen für Eingabeereignisse, die im Zusammenhang mit Tastatureingaben, Maustasten, dem Mausrad, der Bewegung der Maus, der Fokusverwaltung und Mauseingabe stehen, um nur einige zu nennen. Anstatt alle Eingabeereignisse als einen Dienst zu behandeln, ermöglicht die Eingabearchitektur durch die Platzierung der Eingabe-[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] auf Basiselementen, dass die Eingabeereignisse von einem bestimmten Objekt auf der Benutzeroberfläche stammen und ein Ereignisroutingschema unterstützen, wobei mehr als ein Element die Möglichkeit hat, ein Eingabeereignis zu behandeln. Vielen Eingabeereignissen ist ein Paar von Ereignissen zugeordnet.  Z. B. das KeyDown-Ereignis zugeordnet ist die <xref:System.Windows.Input.Keyboard.KeyDown> und <xref:System.Windows.Input.Keyboard.PreviewKeyDown> Ereignisse.  Der Unterschied zwischen diesen Ereignissen ist, wie an das Zielelement weitergeleitet werden.  Vorschauereignisse tunneln die Elementstruktur vom Stammelement hinunter zum Zielelement.  Bubbling-Ereignisse übergeben vom Zielelement an das Stammelement.  Das Ereignisrouting in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird ausführlicher unten in dieser Übersicht und unter der [Übersicht über Routingereignisse](routed-events-overview.md) behandelt.
+ Die primäre Eingabe-API--Darlegung finden Sie in den Basiselementklassen: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.FrameworkContentElement>.  Weitere Informationen zu den Basiselementen finden Sie unter [Übersicht über Basiselemente](base-elements-overview.md).  Diese Klassen bieten Funktionen für Eingabeereignisse, die im Zusammenhang mit Tastatureingaben, Maustasten, dem Mausrad, der Bewegung der Maus, der Fokusverwaltung und Mauseingabe stehen, um nur einige zu nennen. Platzieren die Eingabe-API in den Basiselementen, anstatt alle Eingabeereignisse als einen Dienst zu behandeln, ermöglicht die Eingabearchitektur für die die Eingabeereignisse von einem bestimmten Objekt in der Benutzeroberfläche stammen und ein ereignisroutingschema unterstützen, bei dem mehr als ein Element ein Opp hat Ortunity, ein Eingabeereignis zu behandeln. Vielen Eingabeereignissen ist ein Paar von Ereignissen zugeordnet.  Z. B. das KeyDown-Ereignis zugeordnet ist die <xref:System.Windows.Input.Keyboard.KeyDown> und <xref:System.Windows.Input.Keyboard.PreviewKeyDown> Ereignisse.  Der Unterschied zwischen diesen Ereignissen ist, wie an das Zielelement weitergeleitet werden.  Vorschauereignisse tunneln die Elementstruktur vom Stammelement hinunter zum Zielelement.  Bubbling-Ereignisse übergeben vom Zielelement an das Stammelement.  Das Ereignisrouting in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird ausführlicher unten in dieser Übersicht und unter der [Übersicht über Routingereignisse](routed-events-overview.md) behandelt.
 
 ### <a name="keyboard-and-mouse-classes"></a>Tastatur- und Mausklassen
- Zusätzlich zur Eingabe- [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] in den Basiselementklassen, die <xref:System.Windows.Input.Keyboard> Klasse und <xref:System.Windows.Input.Mouse> Klassen bieten zusätzliche [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] für das Arbeiten mit Tastatur- und Mauseingaben.
+ Zusätzlich zu den Eingabe-API in den Basiselementklassen die <xref:System.Windows.Input.Keyboard> Klasse und <xref:System.Windows.Input.Mouse> Klassen bieten zusätzliche API zum Arbeiten mit Tastatur- und Mauseingaben.
 
- Beispiele für die Eingabe [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] auf die <xref:System.Windows.Input.Keyboard> -Klasse sind der <xref:System.Windows.Input.Keyboard.Modifiers%2A> -Eigenschaft, die zurückgibt der <xref:System.Windows.Input.ModifierKeys> gerade gedrückt wird, und die <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> -Methode, die bestimmt, ob eine bestimmte Taste gedrückt wird.
+ Beispiele für die Eingabe-API auf der <xref:System.Windows.Input.Keyboard> -Klasse sind der <xref:System.Windows.Input.Keyboard.Modifiers%2A> -Eigenschaft, die gibt die <xref:System.Windows.Input.ModifierKeys> gerade gedrückt wird, und die <xref:System.Windows.Input.Keyboard.IsKeyDown%2A> -Methode, die bestimmt, ob eine bestimmte Taste gedrückt wird.
 
  Im folgenden Beispiel wird die <xref:System.Windows.Input.Keyboard.GetKeyStates%2A> Methode, um zu bestimmen, ob eine <xref:System.Windows.Input.Key> befindet sich im Zustand "ausgefallen".
 
  [!code-csharp[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/csharp/VS_Snippets_Wpf/KeyArgsSnippetSample/CSharp/Window1.xaml.cs#keyeventargskeyboardgetkeystates)]
  [!code-vb[keyargssnippetsample#KeyEventArgsKeyBoardGetKeyStates](~/samples/snippets/visualbasic/VS_Snippets_Wpf/KeyArgsSnippetSample/visualbasic/window1.xaml.vb#keyeventargskeyboardgetkeystates)]
 
- Beispiele für die Eingabe [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] auf die <xref:System.Windows.Input.Mouse> -Klasse sind <xref:System.Windows.Input.Mouse.MiddleButton%2A>, die den Zustand der mittleren Maustaste abruft und <xref:System.Windows.Input.Mouse.DirectlyOver%2A>, derzeit ist die den Mauszeiger auf dem Element abruft, über.
+ Beispiele für die Eingabe-API auf die <xref:System.Windows.Input.Mouse> -Klasse sind <xref:System.Windows.Input.Mouse.MiddleButton%2A>, die den Zustand der mittleren Maustaste abruft und <xref:System.Windows.Input.Mouse.DirectlyOver%2A>, derzeit ist die den Mauszeiger auf dem Element abruft, über.
 
  Im folgende Beispiel wird bestimmt, ob die <xref:System.Windows.Input.Mouse.LeftButton%2A> auf die Maus befindet sich in der <xref:System.Windows.Input.MouseButtonState.Pressed> Zustand.
 
@@ -58,7 +58,7 @@ ms.locfileid: "59090024"
  Die <xref:System.Windows.Input.Mouse> und <xref:System.Windows.Input.Keyboard> Klassen werden im weiteren Verlauf dieser Übersicht behandelt.
 
 ### <a name="stylus-input"></a>Stifteingabe
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über integrierte Unterstützung für die <xref:System.Windows.Input.Stylus>.  Die <xref:System.Windows.Input.Stylus> ist eine Stifteingabe, durch die [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen können der Stift als Maus behandeln, mit der Maus [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], aber [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] macht auch eine Stift-Geräteabstraktion, die einem Modell ähnlich der Tastatur und Maus zu verwenden.  Alle dem Stift zugehörigen [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] enthalten den Begriff „Stylus“ (Stift oder Tablettstift).
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über integrierte Unterstützung für die <xref:System.Windows.Input.Stylus>.  Die <xref:System.Windows.Input.Stylus> ist eine Stifteingabe, durch die [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen können der Stift als Maus behandeln, mit der Maus-API, aber [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] macht auch eine Stift-Geräteabstraktion, die einem Modell ähnlich der Tastatur und Maus zu verwenden.  Alle dem Stift zugehörigen APIs das Wort "Stift" enthalten ist.
 
  Da der Stift als Maus fungieren kann, können Anwendungen, die nur die Mauseingabe unterstützen, noch immer ein gewisses Maß an automatischer Unterstützung für den Stift erhalten. Wenn der Stift auf diese Weise verwendet wird, bekommt die Anwendung die Gelegenheit, das entsprechende Stiftereignis zu behandeln und behandelt dann das entsprechende Mausereignis. Darüber hinaus sind Dienste auf höherer Ebene (z.B. Freihandeingabe) noch immer über die Stift-Geräteabstraktion verfügbar.  Weitere Informationen zur Freihandeingabe finden Sie unter [Erste Schritte mit Freihandeingaben](getting-started-with-ink.md).
 
@@ -68,7 +68,7 @@ ms.locfileid: "59090024"
 
  Das Ereignisrouting ist der Prozess, in dem Ereignisse an mehrere Elemente weitergeleitet werden, sodass ein bestimmtes Objekt oder Element entlang der Route einem Ereignis eine signifikante Antwort (durch Behandlung) anbieten kann, die sonst von einem anderen Element hätte stammen können.  Routingereignisse verwenden einen von drei Routingmechanismen: direkt, Bubbling und Tunneln.  Beim direkten Routing ist das Quellelement das einzige benachrichtigte Element, und das Ereignis wird nicht an andere Elemente weitergeleitet. Das direkte Routingereignis bietet jedoch noch einige zusätzliche Funktionen, die im Gegensatz zu [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Standardereignissen nur für Routingereignisse vorhanden sind. Bubbling arbeitet sich in der Elementstruktur nach oben, indem zuerst das Element benachrichtigt wird, von dem das Ereignis stammt, und anschließend das übergeordnete Element usw.  Tunneling beginnt am Stamm der Elementstruktur, arbeitet sich nach unten und endet mit dem ursprünglichen Quellelement.  Weitere Informationen zu Routingereignissen finden Sie unter [Übersicht über Routingereignisse](routed-events-overview.md).
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Eingabeereignisse treten generell in Paaren, die aus einem Tunneling- und einem bubbling-Ereignis besteht.  Tunneling-Ereignisse unterscheiden sich von Bubbling-Ereignissen im Präfix „Preview“.  Z. B. <xref:System.Windows.Input.Mouse.PreviewMouseMove> ist die Tunneling-Version ein MouseMove-Ereignis und <xref:System.Windows.Input.Mouse.MouseMove> ist die bubbling-Version dieses Ereignisses. Diese Ereignispaarung ist eine Konvention, die auf der Elementebene implementiert ist, und keine inhärente Funktion des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignissystems, Weitere Informationen finden Sie im Abschnitt „Eingabeereignisse in WPF“ in [Übersicht über Routingereignisse](routed-events-overview.md).
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eingabeereignisse treten generell in Paaren auf, die aus einem Tunneling-Ereignis und einem Bubbling-Ereignis bestehen.  Tunneling-Ereignisse unterscheiden sich von Bubbling-Ereignissen im Präfix „Preview“.  Z. B. <xref:System.Windows.Input.Mouse.PreviewMouseMove> ist die Tunneling-Version ein MouseMove-Ereignis und <xref:System.Windows.Input.Mouse.MouseMove> ist die bubbling-Version dieses Ereignisses. Diese Ereignispaarung ist eine Konvention, die auf der Elementebene implementiert ist, und keine inhärente Funktion des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignissystems, Weitere Informationen finden Sie im Abschnitt „Eingabeereignisse in WPF“ in [Übersicht über Routingereignisse](routed-events-overview.md).
 
 <a name="handling_input_events"></a>
 ## <a name="handling-input-events"></a>Behandeln von Eingabeereignissen
@@ -137,50 +137,50 @@ ms.locfileid: "59090024"
 
 <a name="touch_and_manipulation"></a>
 ## <a name="touch-and-manipulation"></a>Fingereingabe (Touch) und-Bearbeitung
- Neue Hardware und API im Windows 7-Betriebssystem bieten Anwendungen die Möglichkeit, Eingabe von mehreren Berührungen gleichzeitig zu erhalten. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Anwendungen erkennen und reagieren auf andere Eingabe, z. B. Maus oder Tastatur, durch Auslösen von Ereignissen, wenn eine Fingereingabe erfolgt ähnlich wie Fingereingabe reagieren.
+ Neue Hardware und API im Windows 7-Betriebssystem bieten Anwendungen die Möglichkeit, Eingabe von mehreren Berührungen gleichzeitig zu erhalten. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ermöglicht Anwendungen, Fingereingabe zu erkennen und ähnlich wie auf andere Eingabe zu reagieren, z.B. von einer Maus oder einer Tastatur, durch Auslösen von Ereignissen, wenn eine Fingereingabe erfolgt.
 
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet zwei Typen von Ereignissen, wenn eine Fingereingabe erfolgt: Berührungsereignisse und Bearbeitungsereignisse. Berührungsereignisse stellen Rohdaten zu jedem Finger auf einem Touchscreen und seiner Bewegung bereit. Bearbeitungsereignisse interpretieren die Eingabe als bestimmte Aktionen. Beide Typen von Ereignissen werden in diesem Abschnitt erläutert.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] macht zwei Typen von Ereignissen verfügbar, wenn eine Fingereingabe erfolgt: Berührungsereignisse und Bearbeitungsereignisse. Berührungsereignisse stellen Rohdaten zu jedem Finger auf einem Touchscreen und seiner Bewegung bereit. Bearbeitungsereignisse interpretieren die Eingabe als bestimmte Aktionen. Beide Typen von Ereignissen werden in diesem Abschnitt erläutert.
 
 ### <a name="prerequisites"></a>Vorraussetzungen
  Sie benötigen die folgenden Komponenten zur Entwicklung einer Anwendung, die auf Fingereingabe reagiert.
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
--   Windows 7
+- Windows 7
 
--   Ein Gerät, z.B. ein Touchscreen, das Windows Touch unterstützt
+- Ein Gerät, z.B. ein Touchscreen, das Windows Touch unterstützt
 
 ### <a name="terminology"></a>Terminologie
  Die folgenden Begriffe werden verwendet, wenn die Fingereingabe behandelt wird.
 
--   **Touch (Fingereingabe)** ist ein Typ von Benutzereingabe, der von Windows 7 erkannt wird. In der Regel wird die Fingereingabe initiiert, indem ein berührungsempfindlicher Bildschirm mit Fingern berührt wird. Beachten Sie, dass Geräte wie Touchpads, die auf Laptops gang und gäbe sind, keine Fingereingabe unterstützen, wenn das Gerät lediglich die Position und die Bewegung des Fingers als Mauseingabe konvertiert.
+- **Touch (Fingereingabe)** ist ein Typ von Benutzereingabe, der von Windows 7 erkannt wird. In der Regel wird die Fingereingabe initiiert, indem ein berührungsempfindlicher Bildschirm mit Fingern berührt wird. Beachten Sie, dass Geräte wie Touchpads, die auf Laptops gang und gäbe sind, keine Fingereingabe unterstützen, wenn das Gerät lediglich die Position und die Bewegung des Fingers als Mauseingabe konvertiert.
 
--   **Multitouch (Mehrfingereingabe)** ist Berührung, die gleichzeitig von mehreren Punkten erfolgt. Windows 7 und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützen die Mehrfingereingabe. Wann immer die Fingereingabe in der Dokumentation für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erläutert wird, gelten die Konzepte auch für die Mehrfingereingabe.
+- **Multitouch (Mehrfingereingabe)** ist Berührung, die gleichzeitig von mehreren Punkten erfolgt. Windows 7 und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützen die Mehrfingereingabe. Wann immer die Fingereingabe in der Dokumentation für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erläutert wird, gelten die Konzepte auch für die Mehrfingereingabe.
 
--   Ein **Manipulation** tritt auf, wenn die Berührung als physische Aktion interpretiert wird, die auf ein Objekt angewendet wird. In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interpretieren Bearbeitungsereignisse die Eingabe als Übersetzungs-, Erweiterungs- und Drehungsmanipualtion.
+- Ein **Manipulation** tritt auf, wenn die Berührung als physische Aktion interpretiert wird, die auf ein Objekt angewendet wird. In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interpretieren Bearbeitungsereignisse die Eingabe als Übersetzungs-, Erweiterungs- und Drehungsmanipualtion.
 
--   Ein `touch device` stellt ein Gerät dar, das Fingereingabe erzeugt, z.B. ein einzelner Finger auf einem Touchscreen.
+- Ein `touch device` stellt ein Gerät dar, das Fingereingabe erzeugt, z.B. ein einzelner Finger auf einem Touchscreen.
 
 ### <a name="controls-that-respond-to-touch"></a>Steuerelemente, die auf Fingereingabe reagieren
  Die folgenden Steuerelemente können gescrollt werden, wenn Sie über Inhalt verfügen, der sich außerhalb der Ansicht befindet, indem Sie mit einem Finger über die Steuerelemente wischen.
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  Die <xref:System.Windows.Controls.ScrollViewer> definiert die <xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType> angefügten Eigenschaft, die es Ihnen die ermöglicht Angabe, ob Touch Schwenken aktiviert ist horizontal, vertikal, beides oder keines von beiden. Die <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType> Eigenschaft gibt an, wie schnell der Bildlauf langsamer wird, wenn der Benutzer den Finger von Touchscreen abhebt. Die <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType> angefügte Eigenschaft gibt das Verhältnis des Bildlauf-Offsets zum Übersetzen des Manipulations-Offset.
 
@@ -189,25 +189,25 @@ ms.locfileid: "59090024"
 
  Alle drei Klassen definieren die folgenden Ereignisse, die sich ähnlich verhalten, unabhängig von der definierenden Klasse.
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  Wie die Tastatur- und Maus-Ereignisse sind die Berührungsereignisse Routingereignisse. Die Ereignisse, die mit `Preview` beginnen, sind Tunneling-Ereignisse, und die Ereignisse, die mit `Touch` beginnen, sind Bubbling-Ereignisse. Weitere Informationen zu Routingereignissen finden Sie unter [Übersicht über Routingereignisse](routed-events-overview.md). Wenn Sie diese Ereignisse behandeln, können Sie die Position der Eingabe relativ zu der jedes Element erhalten, durch den Aufruf der <xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A> oder <xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A> Methode.
 
@@ -217,46 +217,46 @@ ms.locfileid: "59090024"
 
  Die folgende Liste beschreibt die Abfolge der Ereignisse in der vorherigen Abbildung.
 
-1.  Die <xref:System.Windows.UIElement.TouchEnter> -Ereignis tritt einmal, wenn der Benutzer einen Finger auf das Element legt.
+1. Die <xref:System.Windows.UIElement.TouchEnter> -Ereignis tritt einmal, wenn der Benutzer einen Finger auf das Element legt.
 
-2.  Die <xref:System.Windows.UIElement.TouchDown> -Ereignis tritt einmal.
+2. Die <xref:System.Windows.UIElement.TouchDown> -Ereignis tritt einmal.
 
-3.  Die <xref:System.Windows.UIElement.TouchMove> -Ereignis tritt mehrmals auf, wenn der Benutzer den Finger im Element bewegt.
+3. Die <xref:System.Windows.UIElement.TouchMove> -Ereignis tritt mehrmals auf, wenn der Benutzer den Finger im Element bewegt.
 
-4.  Die <xref:System.Windows.UIElement.TouchUp> -Ereignis tritt einmal, wenn der Benutzer den Finger vom Element hebt.
+4. Die <xref:System.Windows.UIElement.TouchUp> -Ereignis tritt einmal, wenn der Benutzer den Finger vom Element hebt.
 
-5.  Die <xref:System.Windows.UIElement.TouchLeave> -Ereignis tritt einmal.
+5. Die <xref:System.Windows.UIElement.TouchLeave> -Ereignis tritt einmal.
 
  Wenn mehr als zwei Finger verwendet werden, treten die Ereignisse für jeden Finger auf.
 
 ### <a name="manipulation-events"></a>Bearbeitungsereignisse
  Für Fälle, die einer Anwendung, in denen einen Benutzer zum Bearbeiten eines Objekts ermöglicht, das <xref:System.Windows.UIElement> Klasse definiert die Bearbeitungsereignisse. Im Gegensatz zu den Berührungsereignissen, die einfach die Position der Berührung melden, melden die Bearbeitungsereignisse, wie die Eingabe interpretiert werden kann. Es gibt drei Arten von Manipulationen, Übersetzung, Erweiterung und Drehung. Die folgende Liste beschreibt, wie die drei Typen von Manipulationen aufgerufen werden.
 
--   Legen Sie einen Finger auf ein Objekt, und verschieben Sie den Finger über den Touchscreen, um eine Übersetzungsmanipulation aufzurufen. Dadurch wird in der Regel das Objekt verschoben.
+- Legen Sie einen Finger auf ein Objekt, und verschieben Sie den Finger über den Touchscreen, um eine Übersetzungsmanipulation aufzurufen. Dadurch wird in der Regel das Objekt verschoben.
 
--   Legen Sie zwei Finger auf ein Objekt, und bewegen Sie die Finger näher zusammen oder weiter auseinander, um eine Erweiterungsmanipulation aufzurufen. Dadurch wird in der Regel die Größe des Objekts geändert.
+- Legen Sie zwei Finger auf ein Objekt, und bewegen Sie die Finger näher zusammen oder weiter auseinander, um eine Erweiterungsmanipulation aufzurufen. Dadurch wird in der Regel die Größe des Objekts geändert.
 
--   Legen Sie zwei Finger auf ein Objekt, und drehen Sie einen Finger um den jeweils anderen um eine Drehungsmanipulation aufzurufen. Dadurch wird in der Regel das Objekt gedreht.
+- Legen Sie zwei Finger auf ein Objekt, und drehen Sie einen Finger um den jeweils anderen um eine Drehungsmanipulation aufzurufen. Dadurch wird in der Regel das Objekt gedreht.
 
  Es kann mehr als eine Manipulation gleichzeitig geschehen.
 
- Wenn Sie Objekte dazu bringen, auf Manipulationen anzusprechen, können Sie erreichen, dass das Objekt verzögert wird. Dadurch kann Ihr Objekt die physische Welt simulieren. Wenn Sie z.B. ein Buch über einen Tisch schieben, dann bewegt sich das Buch nach dem Loslassen weiter voran, wenn Sie nur kräftig genug anschieben. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie dieses Verhalten zu simulieren, indem Sie das Auslösen von Bearbeitungsereignissen, nachdem die Finger des Benutzers gibt das Objekt frei.
+ Wenn Sie Objekte dazu bringen, auf Manipulationen anzusprechen, können Sie erreichen, dass das Objekt verzögert wird. Dadurch kann Ihr Objekt die physische Welt simulieren. Wenn Sie z.B. ein Buch über einen Tisch schieben, dann bewegt sich das Buch nach dem Loslassen weiter voran, wenn Sie nur kräftig genug anschieben. Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie dieses Verhalten übernehmen, indem Sie Bearbeitungsereignisse auslösen,nachdem der Benutzer das Objekt losgelassen hat.
 
  Weitere Informationen zum Erstellen einer Anwendung, die den Benutzer verschieben, skalieren und Drehen eines Objekts ermöglicht, finden Sie unter [Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung](walkthrough-creating-your-first-touch-application.md).
 
  Die <xref:System.Windows.UIElement> definiert folgende Bearbeitungsereignisse.
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  Standardmäßig eine <xref:System.Windows.UIElement> erhält keine diese Bearbeitungsereignisse. Um Bearbeitungsereignisse auf eine <xref:System.Windows.UIElement>legen <xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType> zu `true`.
 
@@ -269,17 +269,17 @@ ms.locfileid: "59090024"
 
  Die folgende Liste beschreibt die Abfolge der Ereignisse in der vorherigen Abbildung.
 
-1.  Die <xref:System.Windows.UIElement.ManipulationStarting> Ereignis tritt auf, wenn der Benutzer einen Finger auf das Objekt platziert. Unter anderem mit diesem Ereignis können Sie festlegen, die <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> Eigenschaft. In den nachfolgenden Ereignissen wird die Position der Manipulation relativ zu den <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. In anderen Ereignissen als <xref:System.Windows.UIElement.ManipulationStarting>, diese Eigenschaft ist schreibgeschützt, sodass die <xref:System.Windows.UIElement.ManipulationStarting> Ereignis ist das einzige Mal, die Sie diese Eigenschaft festlegen können.
+1. Die <xref:System.Windows.UIElement.ManipulationStarting> Ereignis tritt auf, wenn der Benutzer einen Finger auf das Objekt platziert. Unter anderem mit diesem Ereignis können Sie festlegen, die <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> Eigenschaft. In den nachfolgenden Ereignissen wird die Position der Manipulation relativ zu den <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. In anderen Ereignissen als <xref:System.Windows.UIElement.ManipulationStarting>, diese Eigenschaft ist schreibgeschützt, sodass die <xref:System.Windows.UIElement.ManipulationStarting> Ereignis ist das einzige Mal, die Sie diese Eigenschaft festlegen können.
 
-2.  Die <xref:System.Windows.UIElement.ManipulationStarted> -Ereignis geschieht als Nächstes. Dieses Ereignis meldet den Ursprung der Manipulation.
+2. Die <xref:System.Windows.UIElement.ManipulationStarted> -Ereignis geschieht als Nächstes. Dieses Ereignis meldet den Ursprung der Manipulation.
 
-3.  Die <xref:System.Windows.UIElement.ManipulationDelta> -Ereignis tritt mehrmals als über den Touchscreen des Benutzers Finger bewegt. Die <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> Eigenschaft der <xref:System.Windows.Input.ManipulationDeltaEventArgs> -Klasse meldet, ob die Manipulation als Bewegung, Erweiterung oder Verschiebung interpretiert wird. Hier können Sie die meisten Bearbeitungen an einem Objekt durchführen.
+3. Die <xref:System.Windows.UIElement.ManipulationDelta> -Ereignis tritt mehrmals als über den Touchscreen des Benutzers Finger bewegt. Die <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> Eigenschaft der <xref:System.Windows.Input.ManipulationDeltaEventArgs> -Klasse meldet, ob die Manipulation als Bewegung, Erweiterung oder Verschiebung interpretiert wird. Hier können Sie die meisten Bearbeitungen an einem Objekt durchführen.
 
-4.  Die <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis tritt auf, wenn die Finger des Benutzers Kontakt mit dem Objekt verlieren. Mit diesem Ereignis können Sie die Verlangsamung der Bearbeitungen während der Verzögerung angeben. So kann Ihr Objekt unterschiedliche physikalische Bereiche oder Attribute Ihrer Wahl emulieren. Nehmen wir beispielsweise an, Ihre Anwendung enthält zwei Objekte, die Elemente in der realen Welt darstellen, und eines massiger als das andere ist. Sie können veranlassen, dass das massige Objekt schneller verlangsamt wird als das leichtere Objekt
+4. Die <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis tritt auf, wenn die Finger des Benutzers Kontakt mit dem Objekt verlieren. Mit diesem Ereignis können Sie die Verlangsamung der Bearbeitungen während der Verzögerung angeben. So kann Ihr Objekt unterschiedliche physikalische Bereiche oder Attribute Ihrer Wahl emulieren. Nehmen wir beispielsweise an, Ihre Anwendung enthält zwei Objekte, die Elemente in der realen Welt darstellen, und eines massiger als das andere ist. Sie können veranlassen, dass das massige Objekt schneller verlangsamt wird als das leichtere Objekt
 
-5.  Die <xref:System.Windows.UIElement.ManipulationDelta> -Ereignis tritt mehrmals auf, wenn die Verzögerung auftritt. Beachten Sie, dass dieses Ereignis auftritt, wenn der Benutzer seine Finger über den Touchscreen bewegt, und wenn [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Verzögerung simuliert. Das heißt, <xref:System.Windows.UIElement.ManipulationDelta> tritt vor und nach der <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis. Die <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> Eigenschaftsberichten, ob die <xref:System.Windows.UIElement.ManipulationDelta> Ereignis tritt auf, während der Trägheit, damit Sie diese Eigenschaft überprüfen und unterschiedliche Aktionen je nach Wert durchführen können.
+5. Die <xref:System.Windows.UIElement.ManipulationDelta> -Ereignis tritt mehrmals auf, wenn die Verzögerung auftritt. Beachten Sie, dass dieses Ereignis auftritt, wenn der Benutzer seine Finger über den Touchscreen bewegt, und wenn [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Verzögerung simuliert. Das heißt, <xref:System.Windows.UIElement.ManipulationDelta> tritt vor und nach der <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis. Die <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> Eigenschaftsberichten, ob die <xref:System.Windows.UIElement.ManipulationDelta> Ereignis tritt auf, während der Trägheit, damit Sie diese Eigenschaft überprüfen und unterschiedliche Aktionen je nach Wert durchführen können.
 
-6.  Die <xref:System.Windows.UIElement.ManipulationCompleted> Ereignis tritt auf, wenn die Bearbeitung und die Verzögerung beendet. Das heißt, nachdem alle die <xref:System.Windows.UIElement.ManipulationDelta> Ereignisse auftreten, die <xref:System.Windows.UIElement.ManipulationCompleted> Ereignis tritt auf, um zu signalisieren, dass die Bearbeitung abgeschlossen ist.
+6. Die <xref:System.Windows.UIElement.ManipulationCompleted> Ereignis tritt auf, wenn die Bearbeitung und die Verzögerung beendet. Das heißt, nachdem alle die <xref:System.Windows.UIElement.ManipulationDelta> Ereignisse auftreten, die <xref:System.Windows.UIElement.ManipulationCompleted> Ereignis tritt auf, um zu signalisieren, dass die Bearbeitung abgeschlossen ist.
 
  Die <xref:System.Windows.UIElement> definiert auch die <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> Ereignis. Dieses Ereignis tritt auf, wenn die <xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A> Methode wird aufgerufen, der <xref:System.Windows.UIElement.ManipulationDelta> Ereignis. Die <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> -Ereignis ermöglicht Anwendungen oder Komponenten von visuellem Feedback, wenn ein Objekt auf eine Begrenzung trifft. Z. B. die <xref:System.Windows.Window> -Klasse behandelt die <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> Ereignis, um das Fenster leicht verschoben wird, wenn dessen Rand erkannt wird.
 
@@ -300,13 +300,13 @@ ms.locfileid: "59090024"
 
  Die folgende Liste beschreibt die Beziehung zwischen Berührungs- und Bearbeitungsereignissen, die in der folgenden Abbildung dargestellt ist.
 
--   Wenn das erste touchgerät generiert eine <xref:System.Windows.UIElement.TouchDown> Ereignis auf einer <xref:System.Windows.UIElement>, ruft die Bearbeitungslogik die <xref:System.Windows.UIElement.CaptureTouch%2A> -Methode, die generiert die <xref:System.Windows.UIElement.GotTouchCapture> Ereignis.
+- Wenn das erste touchgerät generiert eine <xref:System.Windows.UIElement.TouchDown> Ereignis auf einer <xref:System.Windows.UIElement>, ruft die Bearbeitungslogik die <xref:System.Windows.UIElement.CaptureTouch%2A> -Methode, die generiert die <xref:System.Windows.UIElement.GotTouchCapture> Ereignis.
 
--   Wenn die <xref:System.Windows.UIElement.GotTouchCapture> auftritt, ruft die Bearbeitungslogik die <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> -Methode, die generiert die <xref:System.Windows.UIElement.ManipulationStarting> Ereignis.
+- Wenn die <xref:System.Windows.UIElement.GotTouchCapture> auftritt, ruft die Bearbeitungslogik die <xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType> -Methode, die generiert die <xref:System.Windows.UIElement.ManipulationStarting> Ereignis.
 
--   Wenn die <xref:System.Windows.UIElement.TouchMove> Ereignisse auftreten, generiert die Bearbeitungslogik die <xref:System.Windows.UIElement.ManipulationDelta> Ereignisse, die vor dem Auftreten der <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis.
+- Wenn die <xref:System.Windows.UIElement.TouchMove> Ereignisse auftreten, generiert die Bearbeitungslogik die <xref:System.Windows.UIElement.ManipulationDelta> Ereignisse, die vor dem Auftreten der <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis.
 
--   Bei der letzten Fingereingabegerät löst das Element aus der <xref:System.Windows.UIElement.TouchUp> Ereignis generiert die Bearbeitungslogik die <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis.
+- Bei der letzten Fingereingabegerät löst das Element aus der <xref:System.Windows.UIElement.TouchUp> Ereignis generiert die Bearbeitungslogik die <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis.
 
 <a name="focus"></a>
 ## <a name="focus"></a>Fokus
@@ -317,7 +317,7 @@ ms.locfileid: "59090024"
 
  Über den Tastaturfokus abgerufen werden kann, indem Sie die TAB-Taste auf ein Element oder durch Klicken mit der Maus auf bestimmte Elemente, wie z. B. eine <xref:System.Windows.Controls.TextBox>.  Tastaturfokus kann auch programmgesteuert mithilfe von abgerufen werden die <xref:System.Windows.Input.Keyboard.Focus%2A> Methode für die <xref:System.Windows.Input.Keyboard> Klasse.  <xref:System.Windows.Input.Keyboard.Focus%2A> versucht, die den angegebene Element den Tastaturfokus erhalten.  Das von zurückgegebene Element <xref:System.Windows.Input.Keyboard.Focus%2A> ist das Element, das derzeit Tastaturfokus besitzt.
 
- In der Reihenfolge nach einem Element den Tastaturfokus erhalten die <xref:System.Windows.UIElement.Focusable%2A> Eigenschaft und die <xref:System.Windows.UIElement.IsVisible%2A> Eigenschaften müssen festgelegt werden, um **"true"**.  Einige Klassen, z. B. <xref:System.Windows.Controls.Panel>, haben <xref:System.Windows.UIElement.Focusable%2A> festgelegt `false` standardmäßig, möglicherweise müssen Sie diese Eigenschaft auf festgelegt `true` sollten Sie dieses Element Fokus abrufen können.
+ In der Reihenfolge nach einem Element den Tastaturfokus erhalten die <xref:System.Windows.UIElement.Focusable%2A> Eigenschaft und die <xref:System.Windows.UIElement.IsVisible%2A> Eigenschaften müssen festgelegt werden, um **"true"** .  Einige Klassen, z. B. <xref:System.Windows.Controls.Panel>, haben <xref:System.Windows.UIElement.Focusable%2A> festgelegt `false` standardmäßig, möglicherweise müssen Sie diese Eigenschaft auf festgelegt `true` sollten Sie dieses Element Fokus abrufen können.
 
  Im folgenden Beispiel wird <xref:System.Windows.Input.Keyboard.Focus%2A> festzulegende über den Tastaturfokus auf einen <xref:System.Windows.Controls.Button>.  Der empfohlene Ort Anfangsfokus in einer Anwendung ist in der <xref:System.Windows.FrameworkElement.Loaded> -Ereignishandler.
 
@@ -350,11 +350,11 @@ ms.locfileid: "59090024"
 
 <a name="mouse_position"></a>
 ## <a name="mouse-position"></a>Mausposition
- Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eingabe-[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] stellt hilfreiche Informationen bezüglich Koordinatenbereichen bereit.  Zum Beispiel ist die Koordinate `(0,0)` die Koordinate oben links, aber von welchem Element in der Struktur? Das Element, das das Eingabeziel ist? Das Element, an das Sie Ihren Ereignishandler angefügt haben? Oder doch etwas anderes? Um Verwechslungen zu vermeiden erfordert die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eingabe-[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], dass Sie Ihren Verweisrahmen angeben, wenn Sie mit Koordinaten arbeiten, die über die Maus aufgerufen werden. Die <xref:System.Windows.Input.Mouse.GetPosition%2A> Methode gibt die Koordinate des Mauszeigers relativ zum angegebenen Element zurück.
+ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eingabe-API stellt hilfreiche Informationen koordinatenbereichen bereit.  Zum Beispiel ist die Koordinate `(0,0)` die Koordinate oben links, aber von welchem Element in der Struktur? Das Element, das das Eingabeziel ist? Das Element, an das Sie Ihren Ereignishandler angefügt haben? Oder doch etwas anderes? Zur Vermeidung von Verwirrung bezüglich der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eingabe-API erfordert, dass Sie Ihren Verweisrahmen angeben, wenn Sie mit der Koordinaten der Maus arbeiten. Die <xref:System.Windows.Input.Mouse.GetPosition%2A> Methode gibt die Koordinate des Mauszeigers relativ zum angegebenen Element zurück.
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Mausaufzeichnung
- Insbesondere Mausgeräte verfügen über modale Eigenschaften, die als Mausaufzeichnung bekannt sind. Die Mausaufzeichnung wird verwendet, um einen vorübergehenden Eingabestatus beizubehalten, wenn ein Drag & Drop-Vorgang gestartet wird, damit andere Vorgänge, einschließlich die nominale Position auf dem Bildschirm, nicht unbedingt auftreten. Während des Ziehens kann der Benutzer nicht klicken, ohne dass der Drag & Drop-Vorgang abgebrochen wird. Darum sind die meisten Mouseover-Cues nicht geeignet, während die Mausaufzeichnung durch die Drag-Quelle gehalten wird. Das Eingabesystem macht [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] verfügbar, was den Status der Mausaufzeichnung bestimmen kann, sowie [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], was die Mausaufzeichnung auf ein bestimmtes Element erzwingen oder den Status der Mausaufzeichnung löschen kann. Weitere Informationen zu Drag & Drop-Vorgängen finden Sie unter [Übersicht über Drag & Drop](drag-and-drop-overview.md).
+ Insbesondere Mausgeräte verfügen über modale Eigenschaften, die als Mausaufzeichnung bekannt sind. Die Mausaufzeichnung wird verwendet, um einen vorübergehenden Eingabestatus beizubehalten, wenn ein Drag & Drop-Vorgang gestartet wird, damit andere Vorgänge, einschließlich die nominale Position auf dem Bildschirm, nicht unbedingt auftreten. Während des Ziehens kann der Benutzer nicht klicken, ohne dass der Drag & Drop-Vorgang abgebrochen wird. Darum sind die meisten Mouseover-Cues nicht geeignet, während die Mausaufzeichnung durch die Drag-Quelle gehalten wird. Das Eingabesystem macht APIs, die den Status der mausaufzeichnung bestimmen kann, sowie APIs, die mausaufzeichnung auf ein bestimmtes Element erzwingen oder den Status der mausaufzeichnung löschen können. Weitere Informationen zu Drag & Drop-Vorgängen finden Sie unter [Übersicht über Drag & Drop](drag-and-drop-overview.md).
 
 <a name="commands"></a>
 ## <a name="commands"></a>Befehle

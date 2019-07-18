@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ce1bb864c4cb0b1c330de7d96649f9870231e8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660176"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59328698"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C#-Compileroptionen)
 Mit der Option **-filealign** können Sie die Größe der Abschnitte in Ihrer Ausgabedatei angeben.  
@@ -36,7 +36,7 @@ Mit der Option **-filealign** können Sie die Größe der Abschnitte in Ihrer Au
  `number`  
  Ein Wert, der die Größe der Abschnitte in der Ausgabedatei angibt. Gültige Werte sind 512, 1024, 2048, 4096 und 8192. Diese Werte sind in Bytes angegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Jeder Abschnitt wird auf einer Grenze angeordnet, die ein Vielfaches des Werts **-filealign** darstellt. Es gibt keinen festen Standardwert. Wenn **-filealign** nicht angegeben ist, wählt die Common Language Runtime zur Kompilierzeit einen Standardwert.  
   
  Das Angeben der Abschnittsgröße wirkt sich auf die Größe der Ausgabedatei aus. Das Ändern der Größe kann möglicherweise für Programme hilfreich sein, die auf kleineren Geräten ausgeführt werden.  
@@ -45,13 +45,13 @@ Mit der Option **-filealign** können Sie die Größe der Abschnitte in Ihrer Au
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
+2. Klicken Sie auf die Eigenschaftenseite **Build** .  
   
-3.  Klicken Sie auf die Schaltfläche **Erweitert** .  
+3. Klicken Sie auf die Schaltfläche **Erweitert** .  
   
-4.  Ändern der Eigenschaft **Dateianordnung**.  
+4. Ändern der Eigenschaft **Dateianordnung**.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.  
   

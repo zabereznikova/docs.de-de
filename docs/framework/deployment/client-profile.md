@@ -11,23 +11,24 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 06db09ac66164886b1dc99a37129201543c5ce4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514321"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457286"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
-Das .NET Client Profile stellt eine Teilmenge des .NET Framework dar, die mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und früheren Versionen bereitgestellt wurde und für Anwendungen auf dem Client optimiert war. Das .NET Framework ist eine Entwicklungsplattform für Windows, Windows Phone und Microsoft Azure und stellt eine verwaltete App-Ausführungsumgebung und die .NET Framework-Klassenbibliothek bereit. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und frühere Versionen verfügten über zwei Bereitstellungsoptionen: vollständiges .NET Framework oder .NET Client Profile. Das Client Profile ermöglichte eine schnellere Bereitstellung und kleinere App-Installationspakete als das vollständige .NET Framework.  
+Das .NET Client Profile stellt eine Teilmenge von .NET Framework dar, die mit .NET Framework 4 und früheren Versionen bereitgestellt wurde und für Anwendungen auf dem Client optimiert war. Das .NET Framework ist eine Entwicklungsplattform für Windows, Windows Phone und Microsoft Azure und stellt eine verwaltete App-Ausführungsumgebung und die .NET Framework-Klassenbibliothek bereit. In .NET Framework 4 und früheren Versionen standen zwei Bereitstellungsoptionen zur Verfügung: vollständiges .NET Framework und .NET Client Profile. Das Client Profile ermöglichte eine schnellere Bereitstellung und kleinere App-Installationspakete als das vollständige .NET Framework.  
   
- Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird Client Profile nicht mehr angeboten, und nur das vollständige verteilbare Paket ist verfügbar. Aufgrund der Optimierungen in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], z. B. geringere Downloadgröße und schnellere Bereitstellung, ist kein separates Bereitstellungspaket mehr erforderlich. Durch das einzelne verteilbare Paket wird der Installationsvorgang optimiert, und die App verfügt über einfachere Bereitstellungsoptionen.  
+ Ab .NET Framework 4.5 wird Client Profile nicht mehr angeboten, und es ist nur noch das vollständige weitervertreibbare Paket verfügbar. Aufgrund der Optimierungen in .NET Framework 4.5 (wie etwa eine geringere Downloadgröße und eine schnellere Bereitstellung) ist kein separates Bereitstellungspaket mehr erforderlich. Durch das einzelne verteilbare Paket wird der Installationsvorgang optimiert, und die App verfügt über einfachere Bereitstellungsoptionen.  
   
  Wenn Sie jedoch .NET Framework 4 oder 3.5 als Zielversion verwenden und mehr über das Clientprofil und dessen Verwendung erfahren möchten, finden Sie Informationen hierzu unter [.NET Framework Client Profile (.NET Framework-Clientprofil)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29) in der Dokumentation zu .NET Framework 4.  
   
- Wenn Sie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] installieren, wird .NET Framework 4 Client Profile auf die Vollversion von .NET Framework aktualisiert. Informationen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Install the .NET Framework for developers (Installieren von .NET Framework für Entwickler)](../../../docs/framework/install/guide-for-developers.md).  
+ Wenn Sie .NET Framework 4.5 installieren, wird .NET Framework 4.5 Client Profile auf die Vollversion von .NET Framework aktualisiert. Informationen zum Installieren von .NET Framework 4.5 finden Sie unter [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Installieren von .NET Framework für Entwickler).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Clientprofil für .NET Framework (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Übersicht über die Ausrichtung auf mehrere Zielversionen in Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Problembehandlung bei .NET Framework-Zielversionsfehlern](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)

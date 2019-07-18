@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: 4fe79c74b6ff634223a4f10d8c5dc54bb77571cc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6b78dfed1d615ba865f136365eac1c9c131ed5a5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822283"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661949"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Spät gebundene Auflösung. Laufzeitfehler sind möglich.
 Ein Objekt erhält, eine Variable deklariert die [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md).  
@@ -27,7 +27,7 @@ Ein Objekt erhält, eine Variable deklariert die [Object Data Type](../../../vis
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn möglich, deklarieren Sie die Variable eines bestimmten Typs sein.  
+- Wenn möglich, deklarieren Sie die Variable eines bestimmten Typs sein.  
   
 ## <a name="see-also"></a>Siehe auch
 

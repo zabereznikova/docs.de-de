@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adef1010d08561c0a0fe38480fe0d2f519a80b49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ba24f5394ef8fb31d8bfa4e74ac59e7bd4af86d8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133522"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769866"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind-Enumeration
 Gibt den Typ der Speicheradresse.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorSymAddrKind  
 {  
     ADDR_IL_OFFSET          = 1,  

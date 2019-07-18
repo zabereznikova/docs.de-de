@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75ef24162adbb653671ed070587e7155fae6b949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 531f9167a931d6b972e47e120950197bed11c07e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079109"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778702"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly-Methode
 Deinstalliert die angegebene Assembly aus dem globalen Assemblycache.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT UninstallAssembly (  
     [in] DWORD dwFlags,  
     [in] LPCWSTR pszAssemblyName,  
@@ -51,17 +51,17 @@ HRESULT UninstallAssembly (
  `pulDisposition`  
  [Out, optional] Einer der Dispositionswerte in Fusion.idl definiert sind. Die folgenden: mögliche Werten  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

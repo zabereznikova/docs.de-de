@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 948c83f49b703194ccfe932e53751e0bb2dde37c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f1a1eab471d46f018a8e0d0cf787d487cf67c11e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760806"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774089"
 ---
 ### <a name="contextmenustripsourcecontrol-property-contains-a-valid-control-in-the-case-of-nested-toolstripmenuitems"></a>„ContextMenuStrip.SourceControl“-Eigenschaft enthält im Fall geschachtelter „ToolStripMenuItems“ ein gültiges Steuerelement
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760806"
 |Version|4.7.2|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType></li></ul>|
-

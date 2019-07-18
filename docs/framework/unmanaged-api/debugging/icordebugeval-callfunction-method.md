@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66e51dc15f7d44ede26634571fa04c58e9735694
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 65225281fe3abaa20e69e96f4cd4d2a4b03a87ce
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364150"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65629939"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction-Methode
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataObject class [WPF], retrieving data
 ms.assetid: a625acf3-1144-44cd-add7-456aefc3859f
 ms.openlocfilehash: b3ec1b8fa873fd449956912e9e77e98b0362cb0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768407"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>Vorgehensweise: Abrufen von Daten in einem bestimmten Datenformat
 Die folgenden Beispiele zeigen, wie Sie Daten von einem Datenobjekt in einem angegebenen Format abzurufen.  

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e98575b2569ebc20a5421de54bc13fb14cb3cdac
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140217"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663147"
 ---
 # <a name="geometries"></a>Geometrien
-<xref:System.Windows.Media.Geometry> ist eine vielseitige Klasse, die zum Rendern verwendet [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] Grafiken, Treffertests für Objekte, und definieren Ausschneidebereiche  
+<xref:System.Windows.Media.Geometry> ist eine vielseitige Klasse, die zum Rendern von 2D-Grafiken, Treffertests für Objekte und Ausschneidebereiche definieren  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Pfadmarkupsyntax](path-markup-syntax.md)  
- [Übersicht über die Geometrie](geometry-overview.md)  
- [Gewusst wie-Themen](geometries-how-to-topics.md)  
+ [Übersicht über Geometrien](geometry-overview.md)  
+ [Themen zu Vorgehensweisen](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

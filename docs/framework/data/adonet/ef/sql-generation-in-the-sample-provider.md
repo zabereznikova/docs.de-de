@@ -3,11 +3,11 @@ title: SQL-Generierung im Beispielanbieter
 ms.date: 03/30/2017
 ms.assetid: e70f553d-4622-4627-928e-1aa2ee605d8e
 ms.openlocfilehash: 88223930b65ccec9d030104c62d8b4b2e77ddbe2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879293"
 ---
 # <a name="sql-generation-in-the-sample-provider"></a>SQL-Generierung im Beispielanbieter
 Die [Entity Framework Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) veranschaulicht die neuen Komponenten von ADO.NET-Datenanbietern,, die Unterstützung der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  Es funktioniert mit einer SQL Server 2005-Datenbank und wird als Wrapper für den System.Data.SqlClient ADO.NET 2.0-Datenanbieter implementiert.  

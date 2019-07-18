@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aeadcbd8f2d09320645c36fdc771cfb2cb976036
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d0d5b6648fe6ce8a42f343d3cbdd77eb026b8f13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471250"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744479"
 ---
 # <a name="icordebugassemblygetprocess-method"></a>ICorDebugAssembly::GetProcess-Methode
 Ruft einen Schnittstellenzeiger an den Prozess, in dem diese ICorDebugAssembly-Instanz ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [out] ICorDebugProcess **ppProcess  
 );  

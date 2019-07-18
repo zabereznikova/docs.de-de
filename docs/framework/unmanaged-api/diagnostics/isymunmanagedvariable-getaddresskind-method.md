@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eae5b21af3bcdca911ec13067a61bb957d4ae6ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6b5fd3c5e5a7a706929af849ec3a66dd6c41b3bd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092941"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778286"
 ---
 # <a name="isymunmanagedvariablegetaddresskind-method"></a>ISymUnmanagedVariable::GetAddressKind-Methode
 Ruft die Art der Adresse dieser Variablen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetAddressKind(  
     [out, retval] ULONG32* pRetVal);  
 ```  

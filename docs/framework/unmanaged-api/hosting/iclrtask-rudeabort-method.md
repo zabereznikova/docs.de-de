@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2db47f90e73922858013885e99e953ddcacbd450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e7750d50b772ff17cf9dcd05de2e2f34556714e4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147614"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770479"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort-Methode
 Weist die common Language Runtime (CLR) zum Abbrechen der Aufgabe, die vom aktuellen [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz sofort und ohne Bedingung.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT RudeAbort ();   
 ```  
   

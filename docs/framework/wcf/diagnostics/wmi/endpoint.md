@@ -3,11 +3,11 @@ title: Endpunkt
 ms.date: 03/30/2017
 ms.assetid: fe63370d-81a1-40f3-97c2-59cb357c78d2
 ms.openlocfilehash: 4562481e8b0b18c0ea0d9df0af3427ffe6419821
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963604"
 ---
 # <a name="endpoint"></a>Endpunkt
 Endpunkt  
@@ -71,7 +71,7 @@ class Endpoint
  Die Anwendungsdomänen-ID der Anwendungsdomäne, von der der Endpunkt gehostet wird.  
   
 ### <a name="behaviors"></a>Verhalten  
- Datentyp: Behavior-Array  
+ Datentyp: Behavior-array  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -120,7 +120,7 @@ class Endpoint
  Die Prozess-ID des Prozesses, von dem der Endpunkt gehostet wird.  
   
 ### <a name="ref"></a>ref  
- Datentyp: Contract  
+ Datentyp: Vertrag  
   
  Zugriffstyp: Schreibgeschützt  
   

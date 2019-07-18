@@ -2,12 +2,12 @@
 title: Funktionale Programmierung und Imperative Programmierung (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 42c80146a091bfdcff2bbf3ebe1f4ed9a9510e29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518955"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596700"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Funktionale Programmierung und Imperative Programmierung (C#)
 In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen Programmierung und der herkömmlichen imperativen (prozeduralen) Programmierung erläutert.  
@@ -35,11 +35,11 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
 ## <a name="advantages-of-pure-functions"></a>Vorteile von reinen Funktionen  
  Der Hauptgrund für die Implementierung von funktionalen Transformationen als reinen Funktionen (Pure-Funktionen) besteht darin, dass reine Funktionen zusammenstellbar sind, d. h., sie sind in sich abgeschlossen und zustandslos. Diese Eigenschaften bieten u. a. die folgenden Vorteile:  
   
--   Bessere Lesbarkeit und Verwaltbarkeit: Jede Funktion ist für die Erledigung einer bestimmten Aufgabe anhand ihrer Argumente vorgesehen, ohne sich dabei auf einen externen Zustand zu verlassen.  
+- Bessere Lesbarkeit und Verwaltbarkeit: Jede Funktion ist für die Erledigung einer bestimmten Aufgabe anhand ihrer Argumente vorgesehen, ohne sich dabei auf einen externen Zustand zu verlassen.  
   
--   Einfachere reiterative Entwicklung: Da der Code einfacher umgestaltet werden kann, können Änderungen am Entwurf oft leichter implementiert werden. Nehmen wir z. B. an, Sie schreiben eine komplizierte Transformation und stellen dann fest, dass sich ein Teil des Codes in der Transformation mehrmals wiederholt. Bei der Umgestaltung mit einer reinen Methode können Sie Ihre reine Methode ganz nach Belieben aufrufen, ohne auf irgendwelche Nebenwirkungen Rücksicht nehmen zu müssen.  
+- Einfachere reiterative Entwicklung: Da der Code einfacher umgestaltet werden kann, können Änderungen am Entwurf oft leichter implementiert werden. Nehmen wir z. B. an, Sie schreiben eine komplizierte Transformation und stellen dann fest, dass sich ein Teil des Codes in der Transformation mehrmals wiederholt. Bei der Umgestaltung mit einer reinen Methode können Sie Ihre reine Methode ganz nach Belieben aufrufen, ohne auf irgendwelche Nebenwirkungen Rücksicht nehmen zu müssen.  
   
--   Einfacheres Testen und Debuggen: Da reine Funktionen einfacher in Isolation getestet werden können, können Sie Testcode schreiben, der die reine Funktion mit typischen Werten, gültigen Randfällen und ungültigen Randfällen aufruft.  
+- Einfacheres Testen und Debuggen: Da reine Funktionen einfacher in Isolation getestet werden können, können Sie Testcode schreiben, der die reine Funktion mit typischen Werten, gültigen Randfällen und ungültigen Randfällen aufruft.  
   
 ## <a name="transitioning-for-oop-developers"></a>Was müssen OOP-Entwickler beachten?  
  Bei der traditionellen objektorientierten Programmierung (OOP) verwenden die meisten Entwickler beim Programmieren den imperativen/prozeduralen Stil. Für den Umstieg auf die Entwicklung in einem reinen funktionalen Stil müssen die Entwickler umdenken und ihre Herangehensweise an die Entwicklung ändern.  
@@ -52,6 +52,6 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (C#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [XSLT Transformations (XSLT-Transformationen)](../../../../standard/data/xml/xslt-transformations.md)
 - [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -3,11 +3,11 @@ title: <add> von <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
 ms.openlocfilehash: 1c6764b37b2aa5349b8ccf63e6b7c2bc580b69b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701137"
 ---
 # <a name="add-of-allowaccounts"></a>\<Hinzufügen > der \<AllowAccounts >
 Gibt ein Benutzerkonto für Prozesse, die WCF-Dienste hosten, und denen Verbindungszugriff auf den Freigabedienst gewährt wurde.  

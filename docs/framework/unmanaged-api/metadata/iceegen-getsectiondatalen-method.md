@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca01f78cf46d4f7543b949c820eb6b1971687e23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: febf952dbfd80a37017cb165aec4a6b207052d1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198711"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745943"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen-Methode
 Ruft die Länge des angegebenen Abschnitts.  
@@ -31,7 +31,7 @@ Ruft die Länge des angegebenen Abschnitts.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSectionDataLen (  
     [in]  HCEESECTION  section,  
     [out] ULONG        *dataLen  

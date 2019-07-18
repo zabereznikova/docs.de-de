@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f6f6744451bf3436e58a3ff9efcdb16ceee08c9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091329"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489741"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
 Sie können mithilfe der Ereignisablaufverfolgung für Windows (ETW) Common Language Runtime (CLR)-Ereignisse aufzeichnen. Sie können Ablaufverfolgungen mit den folgenden Tools erstellen und anzeigen:  
   
--   Die Befehlszeilentools [Logman](/windows-server/administration/windows-commands/logman) und [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) sind im Windows-Betriebssystem enthalten.  
+- Die Befehlszeilentools [Logman](/windows-server/administration/windows-commands/logman) und [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) sind im Windows-Betriebssystem enthalten.  
   
--   Die [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference)-Tools im [Windows Performance Toolkit](/windows-hardware/test/wpt/). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](https://go.microsoft.com/fwlink/?LinkId=179509).  
+- Die [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference)-Tools im [Windows Performance Toolkit](/windows-hardware/test/wpt/). Weitere Informationen zu Xperf finden Sie im [Windows Performance-Blog](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Wenn Sie CLR-Ereignisinformationen erfassen möchten, muss der CLR-Anbieter auf dem Computer installiert werden. Geben Sie an der Eingabeaufforderung `logman query providers` ein, um festzustellen, ob der Anbieter installiert ist. Eine Anbieterliste wird angezeigt. Diese Liste sollte wie folgt einen Eintrag für den CLR-Anbieter enthalten.  
   
@@ -28,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](/windows-server/administration/windows-commands/wevtutil) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Ändern Sie das Eingabeaufforderungsverzeichnis in den Ordner [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET-Version>\ ). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:  
+ Wenn der CLR-Anbieter nicht aufgeführt ist, können Sie ihn unter Windows Vista und späteren Betriebssystemen mithilfe des Windows-Befehlszeilentools [Wevtutil](/windows-server/administration/windows-commands/wevtutil) installieren. Öffnen Sie das Eingabeaufforderungsfenster als Administrator. Ändern Sie das Eingabeaufforderungsverzeichnis in den .NET Framework 4-Ordner (% WINDIR%\Microsoft.NET\Framework[64]\v4.\<. NET-Version > \). Dieser Ordner enthält die Datei "CLR-ETW.man". Geben Sie an der Eingabeaufforderung den folgenden Befehl ein, um den CLR-Anbieter zu installieren:  
   
  `wevtutil im CLR-ETW.man`  
   
@@ -37,31 +37,31 @@ Provider                                 GUID
   
  Zum Aktivieren der Protokollierung müssen Benutzer drei Informationen angeben:  
   
--   Anbieter, mit dem kommuniziert werden soll.  
+- Anbieter, mit dem kommuniziert werden soll.  
   
--   Eine 64-Bit-Zahl, die einen Satz von Schlüsselwörtern darstellt. Jedes Schlüsselwort stellt einen Satz von Ereignissen dar, den der Anbieter aktivieren kann. Die Zahl stellt einen kombinierten Satz von Schlüsselwörtern dar, die aktiviert werden sollen.  
+- Eine 64-Bit-Zahl, die einen Satz von Schlüsselwörtern darstellt. Jedes Schlüsselwort stellt einen Satz von Ereignissen dar, den der Anbieter aktivieren kann. Die Zahl stellt einen kombinierten Satz von Schlüsselwörtern dar, die aktiviert werden sollen.  
   
--   Eine kleine Zahl, die die Ebene (den Ausführlichkeitsgrad) der Protokollierung darstellt. Ebene 1 ist die am wenigsten ausführliche, Ebene 5 die ausführlichste. Ebene 0 ist ein Standard mit anbieterspezifischer Bedeutung.  
+- Eine kleine Zahl, die die Ebene (den Ausführlichkeitsgrad) der Protokollierung darstellt. Ebene 1 ist die am wenigsten ausführliche, Ebene 5 die ausführlichste. Ebene 0 ist ein Standard mit anbieterspezifischer Bedeutung.  
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>So erfassen Sie CLR-ETW-Ereignisse mit Logman  
   
-1.  Geben Sie an der Eingabeaufforderung Folgendes ein:  
+1. Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
   
      Dabei gilt:  
   
-    -   Durch den `-p`-Parameter wird die Anbieter-GUID identifiziert.  
+    - Durch den `-p`-Parameter wird die Anbieter-GUID identifiziert.  
   
-    -   `0x1CCBD` Gibt die Kategorien von Ereignissen, die ausgelöst wird.  
+    - `0x1CCBD` gibt die Kategorien der Ereignisse an, die ausgelöst werden.  
   
-    -   `0x5` Legt fest, den Umfang der Protokollierung (in diesem Fall "ausführlich" (5)).  
+    - `0x5` legt die Ebene der Protokollierung fest (in diesem Fall "Ausführlich" (5)).  
   
-    -   Mit dem `-ets`-Parameter wird Logman angewiesen, Befehle an Ereignisablaufverfolgungs-Sitzungen zu senden.  
+    - Mit dem `-ets`-Parameter wird Logman angewiesen, Befehle an Ereignisablaufverfolgungs-Sitzungen zu senden.  
   
-    -   Der `-ct perf`-Parameter gibt an, dass mit der `QueryPerformanceCounter`-Funktion der Zeitstempel für jedes Ereignis protokolliert wird.  
+    - Der `-ct perf`-Parameter gibt an, dass mit der `QueryPerformanceCounter`-Funktion der Zeitstempel für jedes Ereignis protokolliert wird.  
   
-2.  Geben Sie Folgendes ein, um die Protokollierung der Ereignisse zu beenden:  
+2. Geben Sie Folgendes ein, um die Protokollierung der Ereignisse zu beenden:  
   
      `logman stop clrevents -ets`  
   
@@ -69,13 +69,13 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-xperf"></a>So erfassen Sie CLR-ETW-Ereignisse mit XPerf  
   
-1.  Geben Sie an der Eingabeaufforderung Folgendes ein:  
+1. Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
      Dabei ist die GUID die GUID des CLR-ETW-Anbieters, und `0x1CCBD:5` verfolgt sämtliche Vorgänge auf und unterhalb von Ebene 5 (Ausführlich).  
   
-2.  Geben Sie Folgendes ein, um die Ablaufverfolgung zu beenden:  
+2. Geben Sie Folgendes ein, um die Ablaufverfolgung zu beenden:  
   
      `Xperf -stop clr`  
   
@@ -86,7 +86,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>So zeigen Sie CLR-ETW-Ereignisse mit Tracerpt an  
   
--   Geben Sie an der Eingabeaufforderung Folgendes ein:  
+- Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `tracerpt clrevents.etl`  
   
@@ -94,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>So zeigen Sie CLR-ETW-Ereignisse mit Xperf an  
   
--   Geben Sie an der Eingabeaufforderung Folgendes ein:  
+- Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `xperf clrevents.etl`  
   
@@ -102,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>So konvertieren Sie die ETL-Datei in eine CSV-Datei  
   
--   Geben Sie an der Eingabeaufforderung Folgendes ein:  
+- Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   
@@ -111,4 +111,4 @@ Provider                                 GUID
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
-- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

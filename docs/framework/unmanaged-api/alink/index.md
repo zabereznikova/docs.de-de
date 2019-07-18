@@ -9,11 +9,11 @@ ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d5c80a72eef31abaacedc52c9e63d561c30cc25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753425"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink-API (Verweis zur nicht verwalteten API)
 Unterstützt das Erstellen von .NET Framework-Assemblys und ungebundenen Modulen.  

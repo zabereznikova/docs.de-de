@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ce95daaee3c74ac57b107ab8bcb23d41e42cabb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6bacd93baae3f0c0b70c4b910e8130551b4f3e48
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466647"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738053"
 ---
 # <a name="icordebugappdomainenumerateassemblies-method"></a>ICorDebugAppDomain::EnumerateAssemblies-Methode
 Ruft einen Enumerator für die Assemblys in der Anwendungsdomäne ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateAssemblies (  
     [out] ICorDebugAssemblyEnum  **ppAssemblies  
 );  

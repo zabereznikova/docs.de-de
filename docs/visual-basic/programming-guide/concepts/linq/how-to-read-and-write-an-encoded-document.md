@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Lesen und Schreiben eines codierten Dokuments (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
 ms.openlocfilehash: 7d558b8dea5f376b6ad77e2f4ac93a3f4663cbff
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008875"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Vorgehensweise: Lesen und Schreiben eines codierten Dokuments (Visual Basic)
 Fügen Sie zum Erstellen eines codierten XML-Dokuments der XML-Struktur eine <xref:System.Xml.Linq.XDeclaration> hinzu, die die Codierung auf den gewünschten Codeseitennamen festlegt.  

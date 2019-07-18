@@ -1,30 +1,23 @@
-items:
 - name: Objekte und Klassen
   href: index.md
   items:
-  - name: 'Exemplarische Vorgehensweise: Definieren von Klassen'
-    href: walkthrough-defining-classes.md
-  - name: Überladene Eigenschaften und Methoden
-    href: overloaded-properties-and-methods.md
-  - name: Grundlagen der Vererbung
-    href: inheritance-basics.md
-  - name: 'Objektlebensdauer: Erstellen und Zerstören von Objekten'
-    href: object-lifetime-how-objects-are-created-and-destroyed.md
-  - name: 'Objektinitialisierer: benannte und anonyme Typen'
-    href: object-initializers-named-and-anonymous-types.md
-    items:
-    - name: 'Vorgehensweise: Deklarieren eines Objekts mithilfe eines Objektinitialisierers'
-      href: how-to-declare-an-object-by-using-an-object-initializer.md
-  - name: Anonyme Typen
-    href: anonymous-types.md
-    items:
-    - name: 'Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen'
-      href: how-to-infer-property-names-and-types-in-anonymous-type-declarations.md
-    - name: Definition von anonymen Typen
-      href: anonymous-type-definition.md
-ms.openlocfilehash: e048ae6781560ee70ff6121814f5ad93b6ea30f4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468820"
+    - name: 'Exemplarische Vorgehensweise: Definieren von Klassen'
+      href: walkthrough-defining-classes.md
+    - name: Überladene Eigenschaften und Methoden
+      href: overloaded-properties-and-methods.md
+    - name: Grundlagen der Vererbung
+      href: inheritance-basics.md
+    - name: 'Objektlebensdauer: Erstellen und Zerstören von Objekten'
+      href: object-lifetime-how-objects-are-created-and-destroyed.md
+    - name: 'Objektinitialisierer: benannte und anonyme Typen'
+      href: object-initializers-named-and-anonymous-types.md
+      items:
+        - name: 'Vorgehensweise: Deklarieren eines Objekts mithilfe eines Objektinitialisierers'
+          href: how-to-declare-an-object-by-using-an-object-initializer.md
+    - name: Anonyme Typen
+      href: anonymous-types.md
+      items:
+        - name: 'Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen'
+          href: how-to-infer-property-names-and-types-in-anonymous-type-declarations.md
+        - name: Definition von anonymen Typen
+          href: anonymous-type-definition.md

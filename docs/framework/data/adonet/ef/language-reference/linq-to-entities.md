@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129687"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539771"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es Entwicklern ermöglicht, in Visual Basic oder Visual C# Abfragen für das konzeptionelle Modell im Entity Framework zu schreiben. Abfragen für das Entity Framework werden als Befehlsstrukturabfragen dargestellt, die für den Objektkontext ausgeführt werden. LINQ to Entities wandelt LINQ (Language-Integrated Queries)-Abfragen in Befehlsstrukturabfragen um, führt die Abfragen für das Entity Framework aus und gibt Objekte zurück, die sowohl vom Entity Framework als auch von LINQ verwendet werden können. Mit folgendem Vorgang können Sie eine LINQ to Entities-Abfrage erstellen und ausführen:  
   
-1.  Erstellen Sie eine <xref:System.Data.Objects.ObjectQuery%601>-Instanz aus dem <xref:System.Data.Objects.ObjectContext>.  
+1. Erstellen Sie eine <xref:System.Data.Objects.ObjectQuery%601>-Instanz aus dem <xref:System.Data.Objects.ObjectContext>.  
   
-2.  Verfassen Sie mithilfe der <xref:System.Data.Objects.ObjectQuery%601>-Instanz eine LINQ to Entities-Abfrage in C# oder Visual Basic.  
+2. Verfassen Sie mithilfe der <xref:System.Data.Objects.ObjectQuery%601>-Instanz eine LINQ to Entities-Abfrage in C# oder Visual Basic.  
   
-3.  Wandeln Sie LINQ-Standardabfrageoperatoren und -ausdrücke in Befehlsstrukturen um.  
+3. Wandeln Sie LINQ-Standardabfrageoperatoren und -ausdrücke in Befehlsstrukturen um.  
   
-4.  Führen Sie die als Befehlsstruktur dargestellte Abfrage für die Datenquelle aus. Alle Ausnahmen, die bei der Ausführung für die Datenquelle ausgelöst wurden, werden direkt an den Client weitergegeben.  
+4. Führen Sie die als Befehlsstruktur dargestellte Abfrage für die Datenquelle aus. Alle Ausnahmen, die bei der Ausführung für die Datenquelle ausgelöst wurden, werden direkt an den Client weitergegeben.  
   
-5.  Geben Sie die Abfrageergebnisse an den Client zurück.  
+5. Geben Sie die Abfrageergebnisse an den Client zurück.  
   
 ## <a name="constructing-an-objectquery-instance"></a>Erstellen einer 'ObjectQuery'-Instanz  
  Die generische <xref:System.Data.Objects.ObjectQuery%601>-Klasse stellt eine Abfrage dar, die eine Auflistung von 0 (null) oder mehr typisierten Entitäten zurückgibt. Eine Objektabfrage wird normalerweise aus einem bestehenden Objektkontext und nicht manuell erstellt. Sie gehört immer zu diesem Objektkontext. Dieser Kontext stellt die Verbindungs- und Metadateninformationen bereit, die zum Verfassen und Ausführen der Abfrage erforderlich sind. Die generische <xref:System.Data.Objects.ObjectQuery%601>-Klasse implementiert die generische <xref:System.Linq.IQueryable%601>-Schnittstelle, durch deren Generatormethoden die inkrementelle Erstellung von LINQ-Abfragen aktiviert wird. Sie können auch den Typ von Entitäten mit dem `var`-Schlüsselwort in C# (`Dim` in Visual Basic, wobei der lokale Typrückschluss aktiviert sein muss) per Rückschluss vom Compiler ableiten lassen.  
@@ -47,7 +47,7 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
   
  Informationen, wie CLR-Methodenaufrufe kanonischen Funktionen in der Datenquelle zugeordnet werden, finden Sie unter [CLR-Methoden zu kanonischen Funktionszuordnung](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
- Informationen zu Datenbank zum Aufrufen von kanonischen und benutzerdefinierten Funktionen aus [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfragen finden Sie [aufrufende Funktionen in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
+ Weitere Informationen über das Aufrufen von kanonischen, Datenbank und benutzerdefinierte Funktionen aus in LINQ to Entities-Abfragen finden Sie unter [aufrufende Funktionen in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## <a name="query-execution"></a>Abfrageausführung  
  Nachdem der Benutzer die LINQ-Abfrage erstellt hat, wird sie in eine Darstellung konvertiert, die mit dem Entity Framework kompatibel ist (in Form von Befehlsstrukturen). Diese wird anschließend für die Datenquelle ausgeführt. Bei der Abfrageausführung werden alle Abfrageausdrücke (oder Abfragekomponenten) auf dem Client oder dem Server ausgewertet. Dazu gehören Ausdrücke, die zur Materialisierung der Ergebnisse oder zur Entitätsprojektion verwendet werden. Weitere Informationen finden Sie unter [Abfrageausführung](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Weitere Informationen zur Verbesserung der Leistung durch eine Abfrage einmal kompiliert, und klicken Sie dann mehrfach mit verschiedenen Parametern ausgeführt wird, finden Sie unter [kompilierte Abfragen (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
@@ -57,13 +57,13 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
   
  Abfrageergebnisse werden üblicherweise auf eine der folgenden Arten zurückgegeben:  
   
--   Eine Auflistung von 0 (null) oder mehr typisierten Entitätsobjekten oder eine Projektion komplexer Typen, die im konzeptionellen Modell definiert werden.  
+- Eine Auflistung von 0 (null) oder mehr typisierten Entitätsobjekten oder eine Projektion komplexer Typen, die im konzeptionellen Modell definiert werden.  
   
--   CLR-Typen, die vom [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] unterstützt werden.  
+- CLR-Typen, die vom [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] unterstützt werden.  
   
--   Inlineauflistungen  
+- Inlineauflistungen  
   
--   Anonyme Typen  
+- Anonyme Typen  
   
  Weitere Informationen finden Sie unter [Abfrageergebnisse](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   
@@ -91,7 +91,7 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
 ## <a name="see-also"></a>Siehe auch
 
 - [Bekannte Probleme von und Überlegungen zu LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [Language-Integrated Query (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ) – C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ) – Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ und ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

@@ -3,11 +3,11 @@ title: Erweiterte LINQ to XML-Programmierung (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
 ms.openlocfilehash: f30f8f1c6dcdbabc1f32f4f7e216ce65a50396c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787204"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>Erweiterte LINQ to XML-Programmierung (Visual Basic)
 Dieser Abschnitt enthält Informationen, die nur für erfahrene Entwickler und in bestimmten [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Szenarios relevant sind.  

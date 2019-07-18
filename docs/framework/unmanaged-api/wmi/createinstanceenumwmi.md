@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a1d082cae19bd83c90e063d841a0c9e4602bc40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: db325296d85dc6d4780583731a6cab10fb884fd1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373048"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636477"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi-Funktion
 
-Gibt einen Enumerator, der die Instanzen einer bestimmten Klasse zurückgibt, die angegebenen Kriterien erfüllen.
+Gibt einen Enumerator zurück, der die Instanzen einer bestimmten Klasse zurückgibt, die angegebene Auswahlkriterien erfüllen.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
 ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938865"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass-Anweisung
 Ändert die XAML-Markup kompilieren Verhalten beim `x:Class` wird ebenfalls bereitgestellt. Statt eine partielle Klasse, die basierend auf `x:Class`, bereitgestellten `x:Class` wird erstellt, wie ein intermediate-Klasse, und klicken Sie dann Ihre bereitgestellte abgeleitete Klasse wird erwartet, dass auf basiert `x:Class`.  
@@ -58,5 +58,5 @@ ms.locfileid: "59140789"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [x:Class-Direktive](x-class-directive.md)
+- [x:Class-Anweisung](x-class-directive.md)
 - [XAML- und benutzerdefinierte Klassen für WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)

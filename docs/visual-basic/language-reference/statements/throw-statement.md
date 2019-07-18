@@ -15,11 +15,11 @@ helpviewer_keywords:
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
 ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766635"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw-Anweisung (Visual Basic)
 Löst eine Ausnahme in einer Prozedur.  

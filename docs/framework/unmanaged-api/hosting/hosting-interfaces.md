@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e330e0d06077d1eef63cf44f31bbcbf7c3431b59
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 46ff6032f2cdbd4a5f294198fe3bf71862c67528
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303308"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490248"
 ---
 # <a name="hosting-interfaces"></a>Hostingschnittstellen
 In diesem Abschnitt wird beschrieben, die Schnittstellen, die nicht verwaltete Hosts können die common Language Runtime (CLR) in ihre Anwendungen integrieren.  
@@ -22,7 +22,7 @@ In diesem Abschnitt wird beschrieben, die Schnittstellen, die nicht verwaltete H
   
  Die .NET Framework-Versionen 3.0 und 3.5 verwenden die .NET Framework Version 2.0-Hostingschnittstellen und Hostingfunktionen führen.  
   
- Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Hostschnittstellen in die .NET Framework 2.0-Schnittstellen.
+ Die .NET Framework 4-Hostingschnittstellen Vorrang vor den .NET Framework 2.0-Schnittstellen.
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Veraltete CLR-Hostingschnittstellen und Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
@@ -32,7 +32,7 @@ In diesem Abschnitt wird beschrieben, die Schnittstellen, die nicht verwaltete H
  Beschreibt die hosting-Schnittstellen in .NET Framework, Version 2.0 eingeführt wurde.  
   
  [In .NET Framework 4 und 4.5 hinzugefügte CLR-Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- Beschreibt die in eingeführt Hostingschnittstellen der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Beschreibt die hosting-Schnittstellen in .NET Framework 4 eingeführt wurde.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
 ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017656"
 ---
 # <a name="control-styles-and-templates"></a>Steuerelementformate und -vorlagen
 Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xref:System.Windows.Controls.ControlTemplate> , die die visuelle Struktur des Steuerelements enthält. Sie können die Struktur und Darstellung eines Steuerelements ändern, durch Ändern der <xref:System.Windows.Controls.ControlTemplate> des Steuerelements. Es gibt keine Möglichkeit, nur einen Teil der visuellen Struktur eines Steuerelements zu ersetzen; um die visuelle Struktur eines Steuerelements zu ändern, Sie festlegen müssen, die <xref:System.Windows.Controls.Control.Template%2A> Eigenschaft des Steuerelements auf dessen neues und vollständiges <xref:System.Windows.Controls.ControlTemplate>.  

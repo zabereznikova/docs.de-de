@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ead1c1a91b910e7cfbb09f17ba823fc7a77ce0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181440"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746555"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType-Funktion
 Ruft den Typ des Apartments ab, in dem die aufrufende Funktion ausgeführt wird.   
@@ -30,7 +30,7 @@ Ruft den Typ des Apartments ab, in dem die aufrufende Funktion ausgeführt wird.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCurrentApartmentType (
    [in] int                   vFunc, 
    [in] IComThreadingInfo*    ptr, 
@@ -51,7 +51,7 @@ HRESULT GetCurrentApartmentType (
 
 ## <a name="return-value"></a>Rückgabewert
 
-|Konstante  |Wert  |Beschreibung  |
+|Konstante  |Wert  |Description  |
 |---------|---------|---------|
 | `S_OK` | 0 | Die Funktion wurde erfolgreich abgeschlossen. |
 | `E_FAIL` | 0x80000008 | Der Aufrufer eine Wohnung nicht ausgeführt. |

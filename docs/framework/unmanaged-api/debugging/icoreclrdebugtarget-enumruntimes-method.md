@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 08f34822099468b8c52f1d7ea2c665205f1b6c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134677"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774429"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes-Methode
 Listet die CLR-Laufzeiten (Common Language Runtime) im angegebenen Prozess auf, der auf einem Remotecomputer ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumRuntimes (  
       [in] DWORD       dwInternalProcessID,  
       [out] DWORD*     pcRuntimes,  
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  Erfolgreich.  
   
  S_FALSE  
- `dwInternalProcessID` entspricht keiner Prozess, der auf dem Computer ausgeführt wird wahrscheinlich weil der Prozess beendet wurde. `pcRuntimes` und `ppRuntimes` NULL.  
+ `dwInternalProcessID` entspricht keinem auf dem Computer ausgeführten Prozess; wahrscheinlich wurde der Prozess beendet. `pcRuntimes` und `ppRuntimes` sind null.  
   
  E_OUTOFMEMORY  
  Für `ppRuntimes` kann nicht genug Arbeitsspeicher zugewiesen werden.  

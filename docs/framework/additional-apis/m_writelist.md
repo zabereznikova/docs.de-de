@@ -1,5 +1,5 @@
 ---
-title: Connection.m_WriteList-Feld
+title: Connection.m_WriteList Field
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,14 +10,14 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: a7446b9cbbfd4d3a4d38368a8e24c99527cf9108
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d138e0490e849ff26f540077ec7d23ae42737606
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146705"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300907"
 ---
 # <a name="connectionmwritelist-field"></a>Connection.m\_WriteList-Feld
 

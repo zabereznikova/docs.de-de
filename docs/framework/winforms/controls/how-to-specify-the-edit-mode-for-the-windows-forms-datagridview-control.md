@@ -8,23 +8,23 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a999582aeb629646fa1843f973b10a039c29e1a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080396"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630528"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms
 Standardmäßig können Benutzer bearbeiten Sie den Inhalt des aktuellen <xref:System.Windows.Forms.DataGridView> Textfeldzelle, indem Sie darin eingeben oder F2 drücken. Dadurch wird die Zelle im Bearbeitungsmodus befindet, wenn alle der folgenden Bedingungen erfüllt sind:  
   
--   Die zugrunde liegenden Datenquelle unterstützt die Bearbeitung.  
+- Die zugrunde liegenden Datenquelle unterstützt die Bearbeitung.  
   
--   Die <xref:System.Windows.Forms.DataGridView> -Steuerelements aktiviert ist.  
+- Die <xref:System.Windows.Forms.DataGridView> -Steuerelements aktiviert ist.  
   
--   Die <xref:System.Windows.Forms.DataGridView.EditMode%2A> Eigenschaftswert ist keine <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
+- Die <xref:System.Windows.Forms.DataGridView.EditMode%2A> Eigenschaftswert ist keine <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.  
   
--   Die `ReadOnly` Eigenschaften der Zelle, Zeile, Spalte und Steuerelement sind mit `false`.  
+- Die `ReadOnly` Eigenschaften der Zelle, Zeile, Spalte und Steuerelement sind mit `false`.  
   
  Im Bearbeitungsmodus befindet kann der Benutzer ändern Sie den Zellenwert, und drücken Sie EINGABETASTE zum committen der Änderung oder die ESC-Taste, um die Zelle auf den ursprünglichen Wert zurückgesetzt.  
   
@@ -32,7 +32,7 @@ Standardmäßig können Benutzer bearbeiten Sie den Inhalt des aktuellen <xref:S
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>So ändern Sie den Bearbeitungsmodus des DataGridView-Steuerelements  
   
--   Legen Sie die <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> -Eigenschaft auf die entsprechende <xref:System.Windows.Forms.DataGridViewEditMode> Enumeration.  
+- Legen Sie die <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> -Eigenschaft auf die entsprechende <xref:System.Windows.Forms.DataGridViewEditMode> Enumeration.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
@@ -40,9 +40,9 @@ Standardmäßig können Benutzer bearbeiten Sie den Inhalt des aktuellen <xref:S
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
+- Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.  
   
--   Verweise auf die Assemblys <xref:System> und <xref:System.Windows.Forms>.  
+- Verweise auf die Assemblys <xref:System> und <xref:System.Windows.Forms>.  
   
 ## <a name="see-also"></a>Siehe auch
 

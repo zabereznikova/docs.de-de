@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
 ms.openlocfilehash: 4093e98738cf6e41cd450229d82e3672fe9687ec
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788868"
 ---
 # <a name="-refonly-visual-basic"></a>-Refonly (Visual Basic)
 

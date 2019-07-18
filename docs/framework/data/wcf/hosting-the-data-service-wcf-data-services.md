@@ -8,33 +8,33 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 1464880e92753d2774b1ca60d55c71a88d8e9b15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c240a76ea54d57456ff13fee7a48981354f669de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519383"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881278"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting des Datendiensts (WCF Data Services)
 Sie können mithilfe von WCF Data Services, einen Dienst, der macht Daten als Erstellen einer [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Dieser Datendienst wird als Klasse definiert, die von <xref:System.Data.Services.DataService%601> erbt. Diese Klasse stellt die Funktionalität erforderlich, um Anforderungsnachrichten zu verarbeiten, Updates für die Datenquelle auszuführen und Antwortnachrichten zu generieren, als OData erforderlich. Allerdings kann kein Datendienst zu binden und netzwerksockets für eingehende HTTP-Anforderungen lauschen. Für diese erforderliche Funktion benötigt der Datendienst eine Hostingkomponente.
 
  Der Datendiensthost führt die folgenden Aufgaben im Namen des Datendiensts aus:
 
--   Lauscht auf Anforderungen und leitet diese an den Datendienst weiter.
+- Lauscht auf Anforderungen und leitet diese an den Datendienst weiter.
 
--   Erstellt für jede Anforderung eine Instanz des Datendiensts.
+- Erstellt für jede Anforderung eine Instanz des Datendiensts.
 
--   Fordert an, dass der Datendienst die eingehende Anforderung verarbeitet.
+- Fordert an, dass der Datendienst die eingehende Anforderung verarbeitet.
 
--   Sendet die Antwort im Namen des Datendiensts.
+- Sendet die Antwort im Namen des Datendiensts.
 
- WCF Data Services dient zum Hosten eines Datendiensts zu vereinfachen, mit der Windows Communication Foundation (WCF) integriert. Der Datendienst stellt eine WCF-Standardimplementierung, die als Datendiensthost in dient eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anwendung. Daher können Sie einen Datendienst in einer der folgenden Methoden hosten:
+ WCF Data Services dient zum Hosten eines Datendiensts zu vereinfachen, mit der Windows Communication Foundation (WCF) integriert. Der Datendienst stellt eine WCF-Standardimplementierung, die als in einer ASP.NET-Anwendung Datendiensthost fungiert. Daher können Sie einen Datendienst in einer der folgenden Methoden hosten:
 
--   In einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendung.
+- In einer ASP.NET-Anwendung.
 
--   In einer verwalteten Anwendung, die selbst gehostete WCF-Dienste unterstützt.
+- In einer verwalteten Anwendung, die selbst gehostete WCF-Dienste unterstützt.
 
--   In einem anderen benutzerdefinierten Datendiensthost.
+- In einem anderen benutzerdefinierten Datendiensthost.
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hosten eines Datendiensts in einer ASP.NET-Anwendung
 
@@ -48,30 +48,30 @@ Bei Verwendung der **neues Element hinzufügen** Dialogfeld in Visual Studio 201
     Service="NorthwindService.Northwind" %>
 ```
 
- Diese Anweisung weist die Anwendung an, den Diensthost für die benannte Datendienstklasse mithilfe der <xref:System.Data.Services.DataServiceHostFactory>-Klasse zu erstellen.
+ Diese Direktive weist die Anwendung an, den Diensthost für die benannte Datendienstklasse mithilfe der <xref:System.Data.Services.DataServiceHostFactory>-Klasse zu erstellen.
 
  Die CodeBehind-Seite für die `.svc`-Datei enthält die Klasse, bei der es sich um die Implementierung des Datendiensts selbst handelt und die für den Northwind-Beispieldatendienst folgendermaßen definiert wird:
 
- [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
- [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+ [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+ [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
- Da sich ein Datendienst wie ein WCF-Dienst verhält, wird der Datendienst in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] integriert und folgt dem WCF-Webprogrammiermodell. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) und [WCF-HTTP-Webprogrammierungsmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
+ Da ein Datendienst wie ein WCF-Dienst verhält, wird der Datendienst integriert und folgt das WCF-Webprogrammiermodell. Weitere Informationen finden Sie unter [WCF-Dienste und ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) und [WCF-HTTP-Webprogrammierungsmodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
 
 ## <a name="self-hosted-wcf-services"></a>Selbst gehostete WCF-Dienste
- Da es eine WCF-Implementierung enthält, unterstützt WCF Data Services selbst Hosten eines Datendiensts als WCF-Dienst. Ein Dienst kann in allen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Anwendungen selbst gehostet werden, z. B. in einer Konsolenanwendung. Die <xref:System.Data.Services.DataServiceHost>-Klasse, die von <xref:System.ServiceModel.Web.WebServiceHost> erbt, wird verwendet, um den Datendienst bei einer bestimmten Adresse zu instanziieren.
+ Da es eine WCF-Implementierung enthält, unterstützt WCF Data Services selbst Hosten eines Datendiensts als WCF-Dienst. Ein Dienst kann in jeder .NET Framework-Anwendung, z. B. einer Konsolenanwendung selbst gehostet werden. Die <xref:System.Data.Services.DataServiceHost>-Klasse, die von <xref:System.ServiceModel.Web.WebServiceHost> erbt, wird verwendet, um den Datendienst bei einer bestimmten Adresse zu instanziieren.
 
- Selbsthosting kann für die Entwicklung und für Tests verwendet werden, da die Bereitstellung und Problembehandlung vereinfacht wird. Diese Art von Hosting stellt jedoch nicht die erweiterten Hosting- und Verwaltungsfunktionen von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] oder der Internetinformationsdienste (IIS) bereit. Weitere Informationen finden Sie unter [Hosten in einer verwalteten Anwendung](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
+ Selbsthosting kann für die Entwicklung und für Tests verwendet werden, da die Bereitstellung und Problembehandlung vereinfacht wird. Diese Art von hosting bietet jedoch keine erweiterten hosten und Verwaltungsfunktionen, die von ASP.NET oder von Internet Information Services (IIS) bereitgestellt werden. Weitere Informationen finden Sie unter [Hosten in einer verwalteten Anwendung](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
 
 ## <a name="defining-a-custom-data-service-host"></a>Definieren eines benutzerdefinierten Datendiensthosts
  Wenn die WCF-Hostimplementierung zu restriktiv ist, können Sie für einen Datendienst auch einen benutzerdefinierten Host definieren. Alle Klassen, die eine <xref:System.Data.Services.IDataServiceHost>-Schnittstelle implementieren, können für einen Datendienst als Netzwerkhost verwendet werden. Ein benutzerdefinierter Host muss die <xref:System.Data.Services.IDataServiceHost>-Schnittstelle implementieren und in der Lage sein, die folgenden grundlegenden Aufgaben des Datendiensthosts zu übernehmen:
 
--   Bereitstellen des Dienststammpfads für den Datendienst
+- Bereitstellen des Dienststammpfads für den Datendienst
 
--   Verarbeiten der Anforderungs- und Antwortheaderinformationen für die entsprechende <xref:System.Data.Services.IDataServiceHost>-Memberimplementierung
+- Verarbeiten der Anforderungs- und Antwortheaderinformationen für die entsprechende <xref:System.Data.Services.IDataServiceHost>-Memberimplementierung
 
--   Behandeln der vom Datendienst ausgelösten Ausnahmen
+- Behandeln der vom Datendienst ausgelösten Ausnahmen
 
--   Überprüfen der Parameter in der Abfragezeichenfolge
+- Überprüfen der Parameter in der Abfragezeichenfolge
 
 ## <a name="see-also"></a>Siehe auch
 

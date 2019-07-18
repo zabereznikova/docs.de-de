@@ -3,18 +3,18 @@ title: Filtern von Daten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
 ms.openlocfilehash: a673126d928a97bf522783e73fc254debe2a9de8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051454"
 ---
 # <a name="filtering-data-visual-basic"></a>Filtern von Daten (Visual Basic)
 Mit Filtern wird die Einschränkung des Resultsets auf Elemente bezeichnet, die eine bestimmte Bedingung erfüllen. Es ist auch bekannt als Auswahl.  
   
  Die folgende Abbildung zeigt die Ergebnisse des Filterns einer Zeichenfolge. Das Prädikat für den Filtervorgang gibt an, dass das Zeichen A sein muss.  
   
- ![Diagramm zeigt eine LINQ Filtervorgang](./media/filtering-data/linq-filter-operation.png)  
+ ![Abbildung zu einem LINQ-Filtervorgang](./media/filtering-data/linq-filter-operation.png)  
   
  Die Methoden des Standardabfrageoperators, die Auswahl ausführen, sind im folgenden Abschnitt aufgeführt.  
   

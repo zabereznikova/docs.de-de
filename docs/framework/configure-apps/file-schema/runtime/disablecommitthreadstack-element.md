@@ -1,5 +1,5 @@
 ---
-title: <disableCommitThreadStack> Element
+title: <disableCommitThreadStack>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08ffd6ffcb9a8fa356d486f6d2ae1113de0fa682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a5852579758e85bb033af9b6d036fe76444bb8e4
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106509"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583855"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<DisableCommitThreadStack >-Element
 Gibt an, ob beim Starten eines Threads für den vollständigen Threadstapel ein Commit ausgeführt wird  
@@ -53,7 +53,7 @@ Gibt an, ob beim Starten eines Threads für den vollständigen Threadstapel ein 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|`configuration`|Das Stammelement in jeder von der Common Language Runtime- und den [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] -Anwendungen verwendeten Konfigurationsdatei.|  
+|`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  

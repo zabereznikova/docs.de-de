@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5eae9e14bcd0ca430f03a873818246896438463
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 99dbe5c5da5b8c169e34aa29afca507cc6624f0f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227092"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748793"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning-Methode
 Ruft einen Wert, der angibt, ob die Threads im Prozess frei derzeit ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsRunning (  
     [out] BOOL *pbRunning  
 );  

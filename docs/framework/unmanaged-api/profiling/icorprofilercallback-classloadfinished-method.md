@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cab4b039d225f4ee1b00add6ffec63fd35be8857
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6508c989b143780090d582fd4175fe20bedeb770
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202806"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745435"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished-Methode
 Benachrichtigt den Profiler, dass eine Klasse vollständig geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ClassLoadFinished(  
     [in] ClassID classId,  
     [in] HRESULT hrStatus);  

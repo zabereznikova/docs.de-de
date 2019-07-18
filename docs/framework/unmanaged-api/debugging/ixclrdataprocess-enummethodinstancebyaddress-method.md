@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a51c709b0b331127b74d98c4dc42e2772fd7f2db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 89b89a0cb056a0515bf0859069455a73f62aae4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166438"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769615"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress Method
 
@@ -30,7 +30,7 @@ Listet die Methodeninstanzen dieses Prozesses, der einen Adressoffset ab.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT EnumMethodInstanceByAddress(
     [in] CLRDATA_ENUM              *handle,
     [out] IXCLRDataMethodInstance **method

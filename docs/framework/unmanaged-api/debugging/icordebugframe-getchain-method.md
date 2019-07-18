@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 032c1e3dcfe50cd30953ca581ff9f0d83b78518d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 64de770676cdd02375e854acb8af7feecb28dfeb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488470"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754110"
 ---
 # <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain-Methode
 Ruft einen Zeiger auf die Kette, die, der diesem Frame angehört.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetChain (  
     [out] ICorDebugChain     **ppChain  
 );  

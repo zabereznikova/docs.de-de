@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Pen object
 ms.assetid: 7fbea8b7-7ac1-4413-9c17-733a850381e3
 ms.openlocfilehash: 69fe6157c710ae63df9dbf391a5d355d1c3f9765
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004405"
 ---
 # <a name="how-to-create-a-pen"></a>Vorgehensweise: Erstellen eines Stifts
 In diesem Beispiel wird eine <xref:System.Drawing.Pen> Objekt.  
@@ -31,5 +31,5 @@ In diesem Beispiel wird eine <xref:System.Drawing.Pen> Objekt.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Drawing.Pen>
-- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Stifte, Linien und Rechtecke in GDI+](pens-lines-and-rectangles-in-gdi.md)

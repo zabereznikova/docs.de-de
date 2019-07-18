@@ -5,71 +5,71 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c59a205df5358daec101339cc6a308c8e38a9d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361667"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640869"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu Freihanddaten
 Sie können Freihand benutzerdefinierte Daten hinzufügen, die beim Speichern der Freihandeingabe als serialisierte Freihandeingabe-Format (ISF) gespeichert werden.  Sie können die benutzerdefinierten Daten zu speichern die <xref:System.Windows.Ink.DrawingAttributes>, <xref:System.Windows.Ink.StrokeCollection>, oder die <xref:System.Windows.Ink.Stroke>.  Wird zum Speichern von benutzerdefinierter Daten für drei Objekte können Ihnen die Möglichkeit der beste Ort zum Speichern der Daten zu entscheiden.  Alle drei Klassen verwenden ähnliche Methoden zum Speichern und auf benutzerdefinierte Daten zugreifen.  
   
  Nur die folgenden Typen können als benutzerdefinierte Daten gespeichert werden:  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.Boolean>[]  
+- <xref:System.Boolean>[]  
   
--   <xref:System.Byte>  
+- <xref:System.Byte>  
   
--   <xref:System.Byte>[]  
+- <xref:System.Byte>[]  
   
--   <xref:System.Char>  
+- <xref:System.Char>  
   
--   <xref:System.Char>[]  
+- <xref:System.Char>[]  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.DateTime>[]  
+- <xref:System.DateTime>[]  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Decimal>[]  
+- <xref:System.Decimal>[]  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Double>[]  
+- <xref:System.Double>[]  
   
--   <xref:System.Int16>  
+- <xref:System.Int16>  
   
--   <xref:System.Int16>[]  
+- <xref:System.Int16>[]  
   
--   <xref:System.Int32>  
+- <xref:System.Int32>  
   
--   <xref:System.Int32>[]  
+- <xref:System.Int32>[]  
   
--   <xref:System.Int64>  
+- <xref:System.Int64>  
   
--   <xref:System.Int64>[]  
+- <xref:System.Int64>[]  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Single>[]  
+- <xref:System.Single>[]  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.UInt16>  
+- <xref:System.UInt16>  
   
--   <xref:System.UInt16>[]  
+- <xref:System.UInt16>[]  
   
--   <xref:System.UInt32>  
+- <xref:System.UInt32>  
   
--   <xref:System.UInt32>[]  
+- <xref:System.UInt32>[]  
   
--   <xref:System.UInt64>  
+- <xref:System.UInt64>  
   
--   <xref:System.UInt64>[]  
+- <xref:System.UInt64>[]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt das Hinzufügen und Abrufen von benutzerdefinierten Daten aus einer <xref:System.Windows.Ink.StrokeCollection>.  

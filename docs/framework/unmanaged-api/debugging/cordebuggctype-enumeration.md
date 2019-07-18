@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 315d6dd522f3c6be2d36b1eb411d9f471350df60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f101fe2a84a26efb23f57bac3aaf4f0e64a4d36c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182922"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740030"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType-Enumeration
 Gibt an, ob die Garbage Collection auf einer Arbeitsstation oder einen Server ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugGCType {  
     CorDebugWorkstationGC  = 0,  
     CorDebugServerGC       = ( CorDebugWorkstationGC + 1 )  
@@ -57,4 +57,4 @@ typedef enum CorDebugGCType {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

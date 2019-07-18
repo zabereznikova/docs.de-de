@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
 ms.openlocfilehash: ad8ff2b6daaaf48975b86c637435b31fa1869e1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940568"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Richtlinien für die Migration einer mit WIF 3.5 bis WIF 4.5 erstellten Anwendung
 
@@ -120,8 +120,7 @@ Weitere Informationen zum Identitäts- und Zugriffs-Tool finden Sie unter [Ident
 
 - Die Klassen im `Microsoft.IdentityModel.Web.Configuration`-Namespace wurden nach <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType> verschoben. Diese Klassen stellen die Objekte dar, die für die Konfiguration in passiven Szenarien spezifisch sind.
 
-- 
-  `FederatedPassiveSignInControl` wird nicht mehr unterstützt. Alle Klassen im `Microsoft.IdentityModel.Web.Controls`-Namespace wurden aus WIF 4.5 entfernt.
+- `FederatedPassiveSignInControl` wird nicht mehr unterstützt. Alle Klassen im `Microsoft.IdentityModel.Web.Controls`-Namespace wurden aus WIF 4.5 entfernt.
 
 - Die Abmeldefunktionalität des Authentifizierungsmoduls des WS-Verbunds (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>) unterscheidet sich von der in WIF 3.5. Weitere Informationen zur Funktionsweise der Abmeldung in WIF 4.5 finden Sie unter dem <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>-Klassenthema.
 

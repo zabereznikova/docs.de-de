@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 81c0ddf5b937d604559a9eb1a8b598885546c97f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107981"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504964"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Skalieren von Farben mithilfe von Transformationen
 Die Skalierungstransformation multipliziert mindestens eine der vier Farbkomponenten durch eine Zahl. Die Farbe Matrix Einträge, die Skalierung darstellen, werden in der folgenden Tabelle angegeben.  
@@ -35,7 +35,7 @@ Die Skalierungstransformation multipliziert mindestens eine der vier Farbkompone
   
  ![Screenshot, in dem die ursprünglichen und skalierten Farben verglichen.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
- Die folgende Tabelle enthält die Farbe Vektoren für die vier Balken, vor und nach der blauen Skalierung. Beachten Sie, dass die blaue Komponente in der vierten Farbleiste aus 0.8 auf 0.6 ist ein Fehler aufgetreten. Der Grund dafür ist [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] behält nur der Bruchteil des Ergebnisses. Beispielsweise (: (2)(0.8) = 1.6, und der Bruchteil von 1.6 ist 0.6. Nur die Nachkommastellen beibehalten wird sichergestellt, dass das Ergebnis immer im Intervall [0, 1].  
+ Die folgende Tabelle enthält die Farbe Vektoren für die vier Balken, vor und nach der blauen Skalierung. Beachten Sie, dass die blaue Komponente in der vierten Farbleiste aus 0.8 auf 0.6 ist ein Fehler aufgetreten. Der Grund GDI + behält nur den Bruchteil das Ergebnis ist. Beispielsweise (: (2)(0.8) = 1.6, und der Bruchteil von 1.6 ist 0.6. Nur die Nachkommastellen beibehalten wird sichergestellt, dass das Ergebnis immer im Intervall [0, 1].  
   
 |Ursprünglich|Skaliert|  
 |--------------|------------|  
@@ -68,4 +68,4 @@ Die Skalierungstransformation multipliziert mindestens eine der vier Farbkompone
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Neueinfärben von Bildern](recoloring-images.md)
+- [Neufärben von Bildern](recoloring-images.md)

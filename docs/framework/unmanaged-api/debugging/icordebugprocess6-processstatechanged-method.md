@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fb6d30d9-54f3-462b-8ebf-ce0440791ad5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4dcee3b396d9533f3169db1ea54a6cdc6086c8c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 68dae3839cfb4d04797d81bca41ee212a64cca51
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166140"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751565"
 ---
 # <a name="icordebugprocess6processstatechanged-method"></a>ICorDebugProcess6::ProcessStateChanged-Methode
 Benachrichtigt [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) , die der Prozess ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);  
 ```  
   
@@ -42,4 +42,4 @@ HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugProcess6-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

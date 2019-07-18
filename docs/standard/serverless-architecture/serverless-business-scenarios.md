@@ -4,14 +4,14 @@ description: Erfahren Sie durch den Zugriff auf Beispiele, in denen reichen von 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: adc4e1f3249cd72c423430ad4cb5dbb8eea8baf9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653898"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638825"
 ---
-# <a name="serverless-business-scenarios-and-use-cases"></a>Serverlose Business-Szenarien und Anwendungsfälle
+# <a name="serverless-business-scenarios-and-use-cases"></a>Geschäftsszenarios für serverlose Architekuren und Anwendungsfälle
 
 Es gibt viele Anwendungsfälle und Szenarien für die serverlose Anwendungen. Dieses Kapitel enthält Beispiele, in denen die verschiedenen Szenarien zu veranschaulichen. Die Szenarien umfassen die Links zu verwandten Dokumentation und in öffentlichen Quellcode-Repositorys. In die Beispielen in diesem Kapitel können Sie mit Ihren eigenen erstellen und Implementieren von serverlosen Lösungen beginnen zu können.
 

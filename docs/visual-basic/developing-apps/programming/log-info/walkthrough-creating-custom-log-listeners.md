@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: c38b6d227859a962c320a0fb2f059294ccacfcfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831921"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593332"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern (Visual Basic)
 Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefinierten Protokolllistener erstellen und ihn so konfigurieren, dass er der Ausgabe des `My.Application.Log`-Objekts lauscht.  
@@ -20,7 +20,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefini
   
 #### <a name="to-create-the-listener"></a>So erstellen Sie den Listener  
   
--   Erstellen Sie in Ihrer Anwendung eine Klasse mit dem Namen `SimpleListener`, die von <xref:System.Diagnostics.TraceListener> erbt.  
+- Erstellen Sie in Ihrer Anwendung eine Klasse mit dem Namen `SimpleListener`, die von <xref:System.Diagnostics.TraceListener> erbt.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -37,23 +37,23 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefini
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>So geben Sie der Assembly mit Protokolllistener einen starken Namen  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
+1. Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
   
-2.  Klicken Sie auf die Registerkarte **Signierung**.  
+2. Klicken Sie auf die Registerkarte **Signierung**.  
   
-3.  Wählen Sie das Feld **Sign the assembly** (Assembly signieren) aus.  
+3. Wählen Sie das Feld **Sign the assembly** (Assembly signieren) aus.  
   
-4.  Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen** **\<Neu>** aus.  
+4. Wählen Sie in der Dropdownliste **Schlüsseldatei mit starkem Namen auswählen** **\<Neu>** aus.  
   
      Das Dialogfeld **Schlüssel für einen starken Namen erstellen** wird geöffnet.  
   
-5.  Geben Sie einen Namen für die Schlüsseldatei im Feld **Schlüsseldateiname** ein.  
+5. Geben Sie einen Namen für die Schlüsseldatei im Feld **Schlüsseldateiname** ein.  
   
-6.  Geben Sie in die Felder **Kennwort eingeben** und **Kennwort bestätigen** ein Kennwort ein.  
+6. Geben Sie in die Felder **Kennwort eingeben** und **Kennwort bestätigen** ein Kennwort ein.  
   
-7.  Klicken Sie auf **OK**.  
+7. Klicken Sie auf **OK**.  
   
-8.  Erstellen Sie die Anwendung neu.  
+8. Erstellen Sie die Anwendung neu.  
   
 ## <a name="adding-the-listener"></a>Hinzufügen des Listeners  
  Da die Assembly jetzt über einen starken Namen verfügt, müssen Sie den starken Namen des Listeners bestimmen, damit `My.Application.Log` Ihren Protokolllistener verwendet.  
@@ -64,7 +64,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefini
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>So bestimmen Sie den starken Namen des Listeners  
   
--   Im folgenden Code wird gezeigt, wie Sie den Namen für den Typ mit starkem Namen für `SimpleListener` bestimmen.  
+- Im folgenden Code wird gezeigt, wie Sie den Namen für den Typ mit starkem Namen für `SimpleListener` bestimmen.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -74,29 +74,29 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefini
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>So fügen Sie den Listener zu „My.Application.Log“ hinzu  
   
-1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.  
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.  
   
      - oder -   
   
      Wenn eine app.config-Datei vorhanden ist:  
   
-    1.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
+    1. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
-    2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
+    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
   
-    3.  Klicken Sie auf **Hinzufügen**.  
+    3. Klicken Sie auf **Hinzufügen**.  
   
-2.  Suchen Sie den `<listeners>` -Abschnitt, der sich im `<source>` -Abschnitt mit dem `name` -Attribut "DefaultSource" im Abschnitt `<sources>` befindet. Der Abschnitt `<sources>` befindet sich im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
+2. Suchen Sie den `<listeners>` -Abschnitt, der sich im `<source>` -Abschnitt mit dem `name` -Attribut "DefaultSource" im Abschnitt `<sources>` befindet. Der Abschnitt `<sources>` befindet sich im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
   
-3.  Fügen Sie dem Abschnitt `<listeners>` dieses Element hinzu:  
+3. Fügen Sie dem Abschnitt `<listeners>` dieses Element hinzu:  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  Suchen Sie den Abschnitt `<sharedListeners>` im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
+4. Suchen Sie den Abschnitt `<sharedListeners>` im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
   
-5.  Fügen Sie dem `<sharedListeners>` -Abschnitt dieses Element hinzu:  
+5. Fügen Sie dem `<sharedListeners>` -Abschnitt dieses Element hinzu:  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  

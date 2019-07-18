@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7af01bda05b113be02261051421a91bdea776851
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827275"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644570"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML-Kommentarliteral (Visual Basic)
 Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XComment> Objekt.  
@@ -39,9 +39,9 @@ Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XComment> Objekt.
 ## <a name="remarks"></a>Hinweise  
  XML-Kommentarliterale enthalten nicht den Inhalt des Dokuments; Sie enthalten Informationen über das Dokument. Der Abschnitt der XML-Kommentar endet mit der Sequenz "-->". Dies bedeutet Folgendes:  
   
--   Sie können keinen eingebetteten Ausdruck in einem XML-Kommentarliteral verwenden, da die Trennzeichen für eingebettete Ausdrücke gültigen XML-Kommentar Inhalt sind.  
+- Sie können keinen eingebetteten Ausdruck in einem XML-Kommentarliteral verwenden, da die Trennzeichen für eingebettete Ausdrücke gültigen XML-Kommentar Inhalt sind.  
   
--   Abschnitte der XML-Kommentar können nicht geschachtelt werden, da `content` "kann nicht den Wert-->" enthalten.  
+- Abschnitte der XML-Kommentar können nicht geschachtelt werden, da `content` "kann nicht den Wert-->" enthalten.  
   
  Sie können eine Variable einem XML-Kommentarliteral zuweisen, oder Sie können es in ein XML-Elementliteral einschließen.  
   

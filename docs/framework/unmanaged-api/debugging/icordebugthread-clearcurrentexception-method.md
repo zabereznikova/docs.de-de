@@ -17,24 +17,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1875badfb27b005d63c5b5104c17b87ec7fd51d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45c3bc7612d79dcf819f04994bc1121796d36a64
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423454"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771185"
 ---
 # <a name="icordebugthreadclearcurrentexception-method"></a>ICorDebugThread::ClearCurrentException-Methode
 Diese Methode ist nicht implementiert. Verwenden Sie sie nicht.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ClearCurrentException();  
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

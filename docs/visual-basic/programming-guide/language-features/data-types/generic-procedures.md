@@ -13,11 +13,11 @@ helpviewer_keywords:
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
 ms.openlocfilehash: 4aed16ce9eb59da54156a0cd5f1594819788521b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906593"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generische Prozeduren in Visual Basic
 Ein *generische Prozedur*auch Namens eine *generische Methode*, wird eine Prozedur mit mindestens einem Typparameter definiert. Dadurch wird den aufrufenden Code auf die Datentypen, die Anforderungen jedes Mal passen sie die Prozedur aufruft.  

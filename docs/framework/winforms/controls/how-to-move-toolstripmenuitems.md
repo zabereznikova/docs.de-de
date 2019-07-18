@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 70387a4c43b78f93a46f601eb35b7dca2083b01f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913626"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Vorgehensweise: Verschieben von ToolStripMenuItems
 Zur Entwurfszeit Sie ganze Menüs der obersten Ebene und ihre Menüelemente an eine andere Stelle auf Verschieben der <xref:System.Windows.Forms.MenuStrip>. Sie können auch einzelne Menüelemente zwischen Menüs der obersten Ebene verschieben oder Ändern der Position der Menüelemente in einem Menü.  
@@ -26,47 +26,47 @@ Zur Entwurfszeit Sie ganze Menüs der obersten Ebene und ihre Menüelemente an e
   
 ### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a>Um ein Menü der obersten Ebene und den Menüelementen auf oberster Ebene verschieben  
   
-1.  Klicken Sie auf, und halten Sie die linke Maustaste auf das Menü, das Sie verschieben möchten.  
+1. Klicken Sie auf, und halten Sie die linke Maustaste auf das Menü, das Sie verschieben möchten.  
   
-2.  Ziehen Sie die Einfügemarke auf das Menü der obersten Ebene, die vor der beabsichtigten neuen Position befindet, und lassen Sie die linke Maustaste los.  
+2. Ziehen Sie die Einfügemarke auf das Menü der obersten Ebene, die vor der beabsichtigten neuen Position befindet, und lassen Sie die linke Maustaste los.  
   
      Das ausgewählte Menü wird rechts neben der Einfügemarke verschoben werden.  
   
 ### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a>Ein Menü der obersten Ebene und seine Menüelemente an eine Dropdown-Speicherort zu verschieben  
   
-1.  Klicken Sie auf das Menü, das Sie verwenden möchten, verschieben, und drücken STRG + X, und mit der rechten Maustaste im Menüs, und wählen Sie **Ausschneiden** aus dem Kontextmenü.  
+1. Klicken Sie auf das Menü, das Sie verwenden möchten, verschieben, und drücken STRG + X, und mit der rechten Maustaste im Menüs, und wählen Sie **Ausschneiden** aus dem Kontextmenü.  
   
-2.  Klicken Sie im Menü der obersten Ebene Ziel einen Menüpunkt oberhalb der beabsichtigten neuen Position und drücken Sie STRG + V, oder mit der rechten Maustaste in des Menüelements oberhalb der beabsichtigten neuen Position und wählen Sie **einfügen** aus dem Kontextmenü.  
+2. Klicken Sie im Menü der obersten Ebene Ziel einen Menüpunkt oberhalb der beabsichtigten neuen Position und drücken Sie STRG + V, oder mit der rechten Maustaste in des Menüelements oberhalb der beabsichtigten neuen Position und wählen Sie **einfügen** aus dem Kontextmenü.  
   
      Das Menü, das Sie Ausschneiden wird nach dem das ausgewählte Menüelement eingefügt.  
   
 ### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a>Verschieben Sie ein Menüelement innerhalb eines Menüs mit dem Elementauflistungs-Editor  
   
-1.  Mit der rechten Maustaste in des Menüs, das das Menüelement enthält, die, das Sie verschieben möchten.  
+1. Mit der rechten Maustaste in des Menüs, das das Menüelement enthält, die, das Sie verschieben möchten.  
   
-2.  Wählen Sie im Kontextmenü den Befehl **DropDownItems bearbeiten**.  
+2. Wählen Sie im Kontextmenü den Befehl **DropDownItems bearbeiten**.  
   
-3.  In der **-Elementauflistungs-Editor**, klicken Sie auf das Menüelement, das Sie verschieben möchten.  
+3. In der **-Elementauflistungs-Editor**, klicken Sie auf das Menüelement, das Sie verschieben möchten.  
   
-4.  Klicken Sie auf die Pfeiltasten oben und nach unten, um das Menüelement im Menü zu verschieben.  
+4. Klicken Sie auf die Pfeiltasten oben und nach unten, um das Menüelement im Menü zu verschieben.  
   
-5.  Klicken Sie auf **OK**.  
+5. Klicken Sie auf **OK**.  
   
 ### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a>Um ein Menüelement in einem Menü mit der Tastatur zu verschieben.  
   
-1.  Drücken Sie die EINGABETASTE, und halten Sie die ALT-Taste.  
+1. Drücken Sie die EINGABETASTE, und halten Sie die ALT-Taste.  
   
-2.  Klicken Sie auf, und halten der linken Maustaste auf das Menüelement, das Sie verschieben möchten.  
+2. Klicken Sie auf, und halten der linken Maustaste auf das Menüelement, das Sie verschieben möchten.  
   
-3.  Ziehen Sie das Menüelement an den neuen Speicherort aus, und lassen Sie die linke Maustaste gedrückt.  
+3. Ziehen Sie das Menüelement an den neuen Speicherort aus, und lassen Sie die linke Maustaste gedrückt.  
   
 ### <a name="to-move-a-menu-item-to-another-menu"></a>So verschieben ein Menüelement zu einer anderen Menüressource  
   
-1.  Klicken Sie auf das Menüelement, das Sie verwenden möchten, verschieben, und drücken STRG + X, oder mit der rechten Maustaste in des Menüelements, und wählen **Ausschneiden** aus dem Kontextmenü.  
+1. Klicken Sie auf das Menüelement, das Sie verwenden möchten, verschieben, und drücken STRG + X, oder mit der rechten Maustaste in des Menüelements, und wählen **Ausschneiden** aus dem Kontextmenü.  
   
-2.  Klicken Sie auf das Menü, das das Menüelement enthält, das für Sie gelten.  
+2. Klicken Sie auf das Menü, das das Menüelement enthält, das für Sie gelten.  
   
-3.  Klicken Sie auf das Menüelement, das vor der beabsichtigten neuen Position befindet, und drücken Sie STRG + V, oder mit der rechten Maustaste in des Menüelements, das vor der beabsichtigten neuen Position, und wählen **einfügen** aus dem Kontextmenü.  
+3. Klicken Sie auf das Menüelement, das vor der beabsichtigten neuen Position befindet, und drücken Sie STRG + V, oder mit der rechten Maustaste in des Menüelements, das vor der beabsichtigten neuen Position, und wählen **einfügen** aus dem Kontextmenü.  
   
      Dem Menüelement, das das ausgeschnittene wird nach dem das ausgewählte Menüelement eingefügt.  
   

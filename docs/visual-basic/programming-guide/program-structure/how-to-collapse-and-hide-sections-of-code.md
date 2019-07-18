@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 367527fd638f6855077caf8ff5911edb333dfcbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822286"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648767"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Vorgehensweise: Reduzieren und Ausblenden von Codeabschnitten (Visual Basic)
 Die `#Region` Richtlinie ermöglicht es Ihnen, reduzieren und Ausblenden von Codeabschnitten in Visual Basic-Dateien. Die `#Region` -Direktive können Sie einen Block mit Code, den Sie erweitern können, oder reduzieren angeben, wenn Sie Visual Studio Code-Editor verwenden. Die Möglichkeit, um ausgewählten Code auszublenden, kann Ihre Dateien leichter lesbar und besser verwaltbar. Weitere Informationen finden Sie unter [Gliedern](/visualstudio/ide/outlining).  
@@ -20,7 +20,7 @@ Die `#Region` Richtlinie ermöglicht es Ihnen, reduzieren und Ausblenden von Cod
   
 ### <a name="to-collapse-and-hide-a-section-of-code"></a>Reduzieren und Ausblenden eines Abschnitts des Codes  
   
--   Platzieren Sie den Abschnitt des Codes zwischen der `#Region` und `#End Region` -Anweisungen, wie im folgenden Beispiel gezeigt:  
+- Platzieren Sie den Abschnitt des Codes zwischen der `#Region` und `#End Region` -Anweisungen, wie im folgenden Beispiel gezeigt:  
   
      [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   

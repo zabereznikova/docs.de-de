@@ -1,5 +1,5 @@
 ---
-title: <switches> Element
+title: <switches>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - trace switches, <switches> element
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 ms.openlocfilehash: 44f5c918f19f84daf827ad4e8f3b6bfbc3e9f439
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704504"
 ---
 # <a name="switches-element"></a>\<Switches >-Element
 Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind.  
@@ -71,4 +71,4 @@ Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

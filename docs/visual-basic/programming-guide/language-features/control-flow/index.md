@@ -9,16 +9,16 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
 ms.openlocfilehash: 14133dc764d6708d8b7a3366038bc3240e5cbc76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906658"
 ---
 # <a name="control-flow-in-visual-basic"></a>Ablaufsteuerung in Visual Basic
 Verbleibt unkontrolliert; ein Programm durchläuft seine Anweisungen von Anfang bis Ende. Einige sehr einfache Programme können nur mit diesem unidirektionalen Ablauf geschrieben werden. Ein Großteil der Leistung und der Hilfsprogramme einer Programmiersprache stammt jedoch von der Fähigkeit, die Ausführungsreihenfolge mit Steuerungsanweisungen und Schleifen zu ändern.  
   
- Steuerungsstrukturen erlauben Ihnen, den Ablauf der Ausführung Ihres Programms zu steuern. Mit Steuerungsstrukturen, können Sie Visual Basic-Code, der entscheidet oder, schreiben, die Aktionen wiederholt. Mit anderen Steuerungsstrukturen können Sie die Freigabe einer Ressource garantieren oder eine Reihe von Anweisungen auf dem gleichen Objektverweis ausführen.  
+ Steuerungsstrukturen erlauben Ihnen, den Ablauf der Ausführung Ihres Programms zu steuern. Verwenden Steuerungsstrukturen, können Sie Visual Basic Code schreiben, der Entscheidungen trifft oder Aktionen wiederholt. Mit anderen Steuerungsstrukturen können Sie die Freigabe einer Ressource garantieren oder eine Reihe von Anweisungen auf dem gleichen Objektverweis ausführen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)  

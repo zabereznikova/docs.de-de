@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cff5b7fadf4345b7a1d09911dc7061adc925e7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8bddb782e13b4e7400c7e4a8128dc333efc8141d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139151"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746180"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection-Methode
 Ruft ab, der Teil der Zwischensprache Codebasis auf das angegebene Handle verweist.  
@@ -31,7 +31,7 @@ Ruft ab, der Teil der Zwischensprache Codebasis auf das angegebene Handle verwei
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetIlSection (  
     [in] HCEESECTION  *section  
 );  

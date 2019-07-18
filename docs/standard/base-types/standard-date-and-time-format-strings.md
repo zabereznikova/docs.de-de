@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532190"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267919"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standard-Formatzeichenfolgen für Datum und Uhrzeit
 Eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines Datums- und Uhrzeitwerts zu definieren. Jede Formatzeichenfolge für Datum und Uhrzeit, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Eine standardmäßige oder benutzerdefinierte Formatzeichenfolge kann auf zwei Arten verwendet werden:  
   
--   Zum Definieren der Zeichenfolge, die das Ergebnis eines Formatierungsvorgangs ist.  
+- Zum Definieren der Zeichenfolge, die das Ergebnis eines Formatierungsvorgangs ist.  
   
--   Zum Definieren der Textdarstellung eines Datums- und Uhrzeitwerts, der bei einem Analysevorgang in einen <xref:System.DateTime>-Wert oder in einen <xref:System.DateTimeOffset>-Wert konvertiert werden kann.  
+- Zum Definieren der Textdarstellung eines Datums- und Uhrzeitwerts, der bei einem Analysevorgang in einen <xref:System.DateTime>-Wert oder in einen <xref:System.DateTimeOffset>-Wert konvertiert werden kann.  
 
 > [!TIP]
 >  Sie können das [Formatting Utility](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)herunterladen, eine Anwendung, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können.  
@@ -39,7 +39,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
 
 <a name="table"></a> In der folgenden Tabelle werden die Standardformatbezeichner für Datum und Uhrzeit beschrieben. Sofern nicht anders angegeben, erzeugt ein bestimmter Standardformatbezeichner für Datum und Uhrzeit eine identische Zeichenfolgendarstellung, unabhängig davon, ob sie mit einem <xref:System.DateTime>-Wert oder einem <xref:System.DateTimeOffset>-Wert verwendet wird. Weitere Informationen zum Verwenden von standardmäßigen Formatzeichenfolgen für Datum und Uhrzeit finden Sie im Abschnitt [Hinweise](#Notes).  
   
-|Formatbezeichner|Beschreibung|Beispiele|  
+|Formatbezeichner|BESCHREIBUNG|Beispiele|  
 |----------------------|-----------------|--------------|  
 |"d"|Kurzes Datumsmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "d" für das kurze Datum](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
 |"D"|Langes Datumsmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "D" für das lange Datum](#LongDate).|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|  
@@ -48,7 +48,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
 |"g"|Allgemeines Datums-/Zeitmuster (kurze Zeit).<br /><br /> Weitere Informationen: [Der allgemeine Formatspezifizierer „g“ für Datum und kurze Zeit](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|  
 |"G"|Allgemeines Datums-/Zeitmuster (lange Zeit).<br /><br /> Weitere Informationen: [Der allgemeine Formatspezifizierer „G“ für Datum und lange Zeit](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
 |"M", "m"|Monatstagmuster.<br /><br /> Weitere Informationen: [Der Formatspezifizierer „M“, „m“ für den Monat](#MonthDay).|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|  
-|"O", "o"|Zurückkonvertieren von Datums-/Zeitmuster.<br /><br /> Weitere Informationen: [Der Formatspezifizierer „O“, „o“ für Roundtrips](#Roundtrip).|<xref:System.DateTime>-Werte sind:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset>-Werte sind:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
+|"O", "o"|Zurückkonvertieren von Datums-/Zeitmuster.<br /><br /> Weitere Informationen: [Der Formatspezifizierer „O“, „o“ für Roundtrips](#Roundtrip).|<xref:System.DateTime>-Werte sind:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset>:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
 |"R", "r"|RFC1123-Muster.<br /><br /> Weitere Informationen: [Der RFC1123-Formatspezifizierer „R“, „r“](#RFC1123).|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|  
 |"s"|Sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen: [Der sortierbare Formatspezifizierer „s“](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
 |"t"|Kurzes Zeitmuster.<br /><br /> Weitere Informationen: [Der Formatspezifizierer „t“ für kurze Zeit](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
@@ -63,17 +63,17 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Wenn eine Standardformatzeichenfolge in einem Formatierungsvorgang der benutzerdefinierte Formatzeichenfolge einer bestimmten Kultur zugeordnet wird, kann die Anwendung eine bestimmte Kultur definieren, deren benutzerdefinierte Formatzeichenfolgen auf eine der folgenden Weisen verwendet werden:  
   
--   Sie können die Standardkultur (die aktuelle Kultur) verwenden. Das folgende Beispiel zeigt ein Datum unter Verwendung des kurzen Datumsformat der aktuellen Kultur an. In diesem Fall ist die aktuelle Kultur en-US.  
+- Sie können die Standardkultur (die aktuelle Kultur) verwenden. Das folgende Beispiel zeigt ein Datum unter Verwendung des kurzen Datumsformat der aktuellen Kultur an. In diesem Fall ist die aktuelle Kultur en-US.  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   Sie können ein <xref:System.Globalization.CultureInfo>-Objekt, das die Kultur darstellt, deren Formatierung verwendet werden soll, an eine Methode mit einem <xref:System.IFormatProvider>-Parameter übergeben. Das folgenden Beispiel zeigt ein Datum unter Verwendung des kurzen Datumsformat der Kultur pt-BR an.  
+- Sie können ein <xref:System.Globalization.CultureInfo>-Objekt, das die Kultur darstellt, deren Formatierung verwendet werden soll, an eine Methode mit einem <xref:System.IFormatProvider>-Parameter übergeben. Das folgenden Beispiel zeigt ein Datum unter Verwendung des kurzen Datumsformat der Kultur pt-BR an.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   Sie können ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt, das Formatierungsinformationen liefert, an eine Methode mit einem <xref:System.IFormatProvider>-Parameter übergeben. Das folgenden Beispiel zeigt ein Datum unter Verwendung des kurzen Datumsformat aus einem <xref:System.Globalization.DateTimeFormatInfo>-Objekt für die Kultur hr-HR an.  
+- Sie können ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt, das Formatierungsinformationen liefert, an eine Methode mit einem <xref:System.IFormatProvider>-Parameter übergeben. Das folgenden Beispiel zeigt ein Datum unter Verwendung des kurzen Datumsformat aus einem <xref:System.Globalization.DateTimeFormatInfo>-Objekt für die Kultur hr-HR an.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -85,14 +85,14 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
 |Standardformatzeichenfolge|Definiert durch die DateTimeFormatInfo.InvariantInfo-Eigenschaft|Benutzerdefinierte Formatzeichenfolge|  
 |----------------------------|----------------------------------------------------------|--------------------------|  
-|"O" oder "o"|Keiner|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
+|"O" oder "o"|Keine|yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffzz|  
 |"R" oder "r"|<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|ddd, dd MMM yyyy HH':'mm':'ss 'GMT'|  
 |"s"|<xref:System.Globalization.DateTimeFormatInfo.SortableDateTimePattern%2A>|yyyy'-'MM'-'dd'T'HH':'mm':'ss|  
 |"u"|<xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>|yyyy'-'MM'-'dd HH':'mm':'ss'Z'|  
   
  Standardformatzeichenfolgen können in Analysevorgängen auch mit der <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>-Methode oder mit der <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>-Methode verwendet werden. Dabei muss eine Eingabezeichenfolge genau einem bestimmten Muster entsprechen, damit der Analysevorgang erfolgreich durchgeführt wird. Viele Standardformatzeichenfolgen entsprechen mehreren benutzerdefinierten Formatzeichenfolgen. Ein Datums- und Uhrzeitwert kann also in einer Vielzahl von Formaten dargestellt werden, und dennoch wird der Analysevorgang erfolgreich durchgeführt. Sie können die benutzerdefinierten Formatzeichenfolgen festlegen, die einer Standardformatzeichenfolge entsprechen, indem Sie die <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType>-Methode aufrufen. Im folgenden Beispiel werden die benutzerdefinierten Formatzeichenfolgen angezeigt, die der Standardformatzeichenfolge "d" (kurzes Datumsmuster) zugeordnet sind.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  In den folgenden Abschnitten werden die Standardformatbezeichner für den <xref:System.DateTime>-Wert und den <xref:System.DateTimeOffset>-Wert beschrieben.  
@@ -103,7 +103,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  In der folgenden Tabellen sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Definiert das Gesamtformat der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|Definiert die Zeichenfolge, die die Komponenten Jahr, Monat und Tag eines Datums trennt.|  
@@ -121,7 +121,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  In der folgenden Tabelle sind die Eigenschaften des <xref:System.Globalization.DateTimeFormatInfo>-Objekts aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Definiert das Gesamtformat der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Definiert die lokalisierten Tagesnamen, die in der Ergebniszeichenfolge vorkommen können.|  
@@ -140,7 +140,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen eines bestimmten <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType>-Eigenschaft und <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Definiert das Format der Datumskomponente der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Definiert das Format der Zeitkomponente der Ergebniszeichenfolge.|  
@@ -163,7 +163,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Definiert das Gesamtformat der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Definiert die lokalisierten Tagesnamen, die in der Ergebniszeichenfolge vorkommen können.|  
@@ -185,7 +185,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen eines bestimmten <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>-Eigenschaft und der <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Definiert das Format der Datumskomponente der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Definiert das Format der Zeitkomponente der Ergebniszeichenfolge.|  
@@ -207,7 +207,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen eines bestimmten <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>-Eigenschaft und der <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Definiert das Format der Datumskomponente der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Definiert das Format der Zeitkomponente der Ergebniszeichenfolge.|  
@@ -229,7 +229,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  In der folgenden Tabellen sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Definiert das Gesamtformat der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Definiert die lokalisierten Monatsnamen, die in der Ergebniszeichenfolge vorkommen können.|  
@@ -249,19 +249,19 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Der Standardformatbezeichner „O“ oder „o“ (und die benutzerdefinierte Formatzeichenfolge „yyyy'-'MM'-'dd'T'HH':'mm':'ss'.fffffffK“) nutzt die drei Methoden, mit denen ISO 8601 Zeitzoneninformationen darstellt, um die <xref:System.DateTime.Kind%2A>-Eigenschaft der <xref:System.DateTime>-Werte beizubehalten:  
   
--   Die Zeitzonenkomponente der <xref:System.DateTimeKind.Local?displayProperty=nameWithType>-Datums- und Uhrzeitwerte ist ein Offset von UTC (z. B. +01:00, -07:00). Alle <xref:System.DateTimeOffset>-Werte sind auch in diesem Format dargestellt.  
+- Die Zeitzonenkomponente der <xref:System.DateTimeKind.Local?displayProperty=nameWithType>-Datums- und Uhrzeitwerte ist ein Offset von UTC (z. B. +01:00, -07:00). Alle <xref:System.DateTimeOffset>-Werte sind auch in diesem Format dargestellt.  
   
--   Die Zeitzonenkomponente der <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>-Datums- und Uhrzeitwerte verwendet "Z" (null Offset), um UTC darzustellen.  
+- Die Zeitzonenkomponente der <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>-Datums- und Uhrzeitwerte verwendet "Z" (null Offset), um UTC darzustellen.  
   
--   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>-Datums- und Uhrzeitwerte enthalten keine Zeitzoneninformationen.  
+- <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>-Datums- und Uhrzeitwerte enthalten keine Zeitzoneninformationen.  
   
  Da der Standardformatbezeichner „O“ oder „o“ einem internationalen Standard entspricht, nutzt der Formatierungs- oder Analysevorgang, der den Bezeichner verwendet, stets die invariante Kultur und den gregorianischen Kalender.  
   
  Zeichenfolgen, die an die `Parse`-, `TryParse`-, `ParseExact` und `TryParseExact`-Methoden von <xref:System.DateTime> und <xref:System.DateTimeOffset> weitergegeben werden, können mit dem Formatbezeichner "O" oder "o" analysiert werden, wenn sie in einem dieser Formate vorliegen. Bei <xref:System.DateTime>-Objekten sollte die Überladung, die Sie aufrufen, auch einen `styles`-Parameter mit einem Wert von <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> enthalten. Beachten Sie, dass Sie durch Aufrufen einer Analysemethode mit der benutzerdefinierten Formatzeichenfolge, die dem Formatbezeichner "O" oder "o" entspricht, nicht die gleichen Ergebnisse wie "O" oder "o" erhalten. Der Grund dafür ist, dass Analysemethoden, die benutzerdefinierte Formatzeichenfolgen verwenden, die Zeichenfolgendarstellung von Datums- und Zeitwerten nicht analysieren können, wenn diese keine Zeitzonenkomponente enthalten oder "Z" zur Angabe von UTC verwenden.  
   
- Im folgenden Beispiel wird der "o"-Formatbezeichner verwendet, um eine Reihe von <xref:System.DateTime>-Werten und einen <xref:System.DateTimeOffset>-Wert in einem System in der Zeitzone Pacific verwendet wird.  
+ Sie sehen im folgenden Beispiel, dass der „o“-Formatbezeichner zum Anzeigen einer Reihe von <xref:System.DateTime>-Werten und eines <xref:System.DateTimeOffset>-Werts in einem System in der Zeitzone Pacific verwendet wird.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  Im folgenden Beispiel wird der o-Formatbezeichner verwendet, um eine formatierte Zeichenfolge zu erstellen, und anschließend wird der ursprüngliche Datums- und Uhrzeitwert wiederhergestellt, indem eine `Parse`-Methode für Datum und Uhrzeit aufgerufen wird.  
@@ -277,7 +277,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Die Ergebniszeichenfolge wird von den folgenden Eigenschaften des <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst, die von der <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wurden, die die invariante Kultur darstellt.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|Definiert das Format der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|Definiert die abgekürzten Tagesnamen, die in der Ergebniszeichenfolge vorkommen können.|  
@@ -285,7 +285,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Auch wenn eine Zeitangabe gemäß der RFC-Spezifikation 1123 als koordinierte Weltzeit (UTC) ausgedrückt wird, wird der Wert des <xref:System.DateTime>-Objekts, das formatiert wird, durch den Formatierungsvorgang nicht geändert. Daher müssen Sie den <xref:System.DateTime>-Wert in UTC konvertieren. Rufen Sie hierfür die <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType>-Methode auf, bevor Sie den Formatierungsvorgang ausführen. Im Gegensatz dazu wird diese Konvertierung durch <xref:System.DateTimeOffset>-Werte automatisch ausgeführt, und es besteht keine Notwendigkeit, die <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType>-Methode vor Ausführung des Formatierungsvorgangs aufzurufen.  
   
- Im folgenden Beispiel wird der "r"-Formatbezeichner verwendet, um einen <xref:System.DateTime>- und einen <xref:System.DateTimeOffset>-Wert in einem System in der Zeitzone Pacific verwendet wird.  
+ Sie sehen im folgenden Beispiel, dass der „r“-Formatbezeichner zum Anzeigen eines <xref:System.DateTime>-Werts und eines <xref:System.DateTimeOffset>-Werts in einem System in der Zeitzone Pacific verwendet wird.  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
@@ -300,7 +300,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Wenn dieser Standardformatbezeichner verwendet wird, wird bei der Formatierungs- oder Analysemethode immer die invariante Kultur verwendet.  
   
- Im folgenden Beispiel wird der "s"-Formatbezeichner verwendet, um einen <xref:System.DateTime>- und einen <xref:System.DateTimeOffset>-Wert in einem System in der Zeitzone Pacific verwendet wird.  
+ Sie sehen im folgenden Beispiel, dass der „s“-Formatbezeichner zum Anzeigen eines <xref:System.DateTime>-Werts und eines <xref:System.DateTimeOffset>-Werts in einem System in der Zeitzone Pacific verwendet wird.  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  
@@ -313,7 +313,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen eines bestimmten <xref:System.Globalization.DateTimeFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Definiert das Format der Zeitkomponente der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Definiert die Zeichenfolge, die die Komponenten Stunde, Minute und Sekunde einer Uhrzeit trennt.|  
@@ -333,7 +333,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Definiert das Format der Zeitkomponente der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Definiert die Zeichenfolge, die die Komponenten Stunde, Minute und Sekunde einer Uhrzeit trennt.|  
@@ -366,7 +366,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  In der folgenden Tabelle sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern können. Der von der <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>-Eigenschaft einiger Kulturen zurückgegebene benutzerdefinierte Formatbezeichner nutzt möglicherweise nicht alle Eigenschaften.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Definiert das Gesamtformat der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Definiert die lokalisierten Tagesnamen, die in der Ergebniszeichenfolge vorkommen können.|  
@@ -390,7 +390,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  In der folgenden Tabellen sind die <xref:System.Globalization.DateTimeFormatInfo>-Objekteigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|Definiert das Gesamtformat der Ergebniszeichenfolge.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Definiert die lokalisierten Monatsnamen, die in der Ergebniszeichenfolge vorkommen können.|  

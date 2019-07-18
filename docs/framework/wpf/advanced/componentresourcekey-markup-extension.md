@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a593839447742ed91d22a397d29b2455ce7a3b2d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169753"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627406"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey-Markuperweiterung
 Definiert und verweist auf die Schlüssel für Ressourcen, die aus externen Assemblys geladen werden. Dies ermöglicht eine Ressourcensuche einen Zieltyp in einer Assembly, anstatt explizit ein Ressourcenwörterbuch in eine Assembly oder auf eine Klasse angeben.  
@@ -52,9 +52,9 @@ Definiert und verweist auf die Schlüssel für Ressourcen, die aus externen Asse
 ## <a name="remarks"></a>Hinweise  
  Wie in den oben genannten Verwendungen ein {`ComponentResourceKey`} Markuperweiterungsverwendung befindet sich an zwei Stellen:  
   
--   Die Definition eines Schlüssels in einem Ressourcenverzeichnis des Designs, wie vom Autor eines Steuerelements bereitgestellt.  
+- Die Definition eines Schlüssels in einem Ressourcenverzeichnis des Designs, wie vom Autor eines Steuerelements bereitgestellt.  
   
--   Zugriff auf eine Design-Ressource aus der Assembly, wenn Sie anpassungszenarios das Steuerelement aber Eigenschaftswerte verwenden, die von Ressourcen, die von den Designs des Steuerelements bereitgestellt werden soll.  
+- Zugriff auf eine Design-Ressource aus der Assembly, wenn Sie anpassungszenarios das Steuerelement aber Eigenschaftswerte verwenden, die von Ressourcen, die von den Designs des Steuerelements bereitgestellt werden soll.  
   
  Zum Verweisen auf Komponentenressourcen, die von Designs stammen, wird allgemein empfohlen, dass Sie verwenden `{DynamicResource}` statt `{StaticResource}`. Dies wird in den Verwendungen gezeigt. `{DynamicResource}` wird empfohlen, da des Designs, die vom Benutzer geändert werden kann. Wenn die Komponentenressource werden, die am ehesten der Autor des Steuerelements die Absicht sollen für die Unterstützung von Design entspricht, sollten Sie Ihre Komponentenressourcenverweis auch dynamisch sein aktivieren.  
   

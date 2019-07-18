@@ -1,13 +1,13 @@
 ---
-title: <issuerChannelBehaviors> Element
+title: <issuerChannelBehaviors>-Element
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
 ms.openlocfilehash: 7cbd50daa82b0ca937a1bba93786545898b03c8b
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760726"
 ---
 # <a name="issuerchannelbehaviors-element"></a>\<IssuerChannelBehaviors >-Element
 

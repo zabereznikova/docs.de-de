@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6a929957a0bb512ae4af503ad4b80c9d081764dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200389"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582965"
 ---
 # <a name="using-properties-c-programming-guide"></a>Verwenden von Eigenschaften (C#-Programmierhandbuch)
 Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer eines Objekts erscheint eine Eigenschaft wie ein Feld; der Zugriff auf die Eigenschaft erfordert dieselbe Syntax. Für den Implementierer einer Klasse, besteht eine Eigenschaft aus einem oder zwei Codeblöcken, die einen [get](../../../csharp/language-reference/keywords/get.md)-Accessor und/oder einen [set](../../../csharp/language-reference/keywords/set.md)-Accessor darstellen. Der Codeblock für den `get`-Accessor wird ausgeführt, wenn die Eigenschaft gelesen wird; der Codeblock für den `set`-Accessor wird ausgeführt, wenn der Eigenschaft ein neuer Wert zugewiesen wird. Eine Eigenschaft ohne einen `set`-Accessor ist schreibgeschützt. Eine Eigenschaft ohne einen `get`-Accessor ist lesegeschützt. Eine Eigenschaft, die beide Accessoren umfasst, ermöglicht Lese-/ Schreibzugriff.  
@@ -85,11 +85,11 @@ Eigenschaften kombinieren Aspekte der Felder und der Methoden. Für den Benutzer
   
  Die folgenden Punkte im vorherigen Beispiel sind wichtig:  
   
--   Die Eigenschaft `Name` in der abgeleiteten Klasse blendet die Eigenschaft `Name` in der Basisklasse aus. In solch einem Fall wird der `new`-Modifizierer in der Deklaration der Eigenschaft in der abgeleiteten Klasse verwendet:  
+- Die Eigenschaft `Name` in der abgeleiteten Klasse blendet die Eigenschaft `Name` in der Basisklasse aus. In solch einem Fall wird der `new`-Modifizierer in der Deklaration der Eigenschaft in der abgeleiteten Klasse verwendet:  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
--   Die Umwandlung `(Employee)` wird für den Zugriff auf die ausgeblendete Eigenschaft in der Basisklasse verwendet:  
+- Die Umwandlung `(Employee)` wird für den Zugriff auf die ausgeblendete Eigenschaft in der Basisklasse verwendet:  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   

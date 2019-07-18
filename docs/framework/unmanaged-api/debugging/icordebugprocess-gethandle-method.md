@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 56f1dd892429724866182248b0c0413a7d2437cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498085"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766074"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle-Methode
 Ruft ein Handle für den Prozess ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
 ```  
   

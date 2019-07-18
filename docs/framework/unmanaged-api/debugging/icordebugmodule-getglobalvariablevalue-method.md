@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00e747e43f67533771665313f4d420e4725945cd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bd79299dcfdb03b703c2cab214ba448631daa6f2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485351"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763479"
 ---
 # <a name="icordebugmodulegetglobalvariablevalue-method"></a>ICorDebugModule::GetGlobalVariableValu-Methode
 Ruft den Wert der angegebenen globalen Variablen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetGlobalVariableValue(  
     [in]  mdFieldDef      fieldDef,  
     [out] ICorDebugValue  **ppValue  

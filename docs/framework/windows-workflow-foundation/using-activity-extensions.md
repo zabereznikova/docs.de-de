@@ -2,27 +2,27 @@
 title: Verwenden von Aktivitätserweiterungen
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 420bd25a94f67169d299bbac64dae06e15c5b0b2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669510"
 ---
 # <a name="using-activity-extensions"></a>Verwenden von Aktivitätserweiterungen
 Aktivitäten können mit Erweiterungen von Workflowanwendungen interagieren, die es dem Host ermöglichen, weitere Funktionen bereitzustellen, die nicht explizit im Workflow modelliert wurden.  In diesem Thema wird beschrieben, wie eine Erweiterung erstellt und verwendet wird, mit der die Häufigkeit der Ausführung einer Aktivität erfasst werden kann.
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>So verwenden Sie die Aktivitätserweiterung zum Erfassen der Häufigkeit der Ausführung
 
-1.  Öffnen Sie Visual Studio 2010. Wählen Sie **neue**, **Projekt**. Unter den **Visual C#-** Knoten **Workflow**.  Wählen Sie **Konsolenanwendung für Workflows** aus der Liste der Vorlagen. Benennen Sie das Projekt mit `Extensions`. Klicken Sie auf **OK**, um das Projekt zu erstellen.
+1. Öffnen Sie Visual Studio 2010. Wählen Sie **neue**, **Projekt**. Unter den **Visual C#-** Knoten **Workflow**.  Wählen Sie **Konsolenanwendung für Workflows** aus der Liste der Vorlagen. Benennen Sie das Projekt mit `Extensions`. Klicken Sie auf **OK**, um das Projekt zu erstellen.
 
-2.  Hinzufügen einer `using` -Anweisung in der Datei "Program.cs" für die **System.Collections.Generic** Namespace.
+2. Hinzufügen einer `using` -Anweisung in der Datei "Program.cs" für die **System.Collections.Generic** Namespace.
 
     ```
     using System.Collections.Generic;
     ```
 
-3.  Erstellen Sie in der Datei "Program.cs" eine neue Klasse namens **ExecutionCountExtension**. Der folgende Code erstellt eine workflowerweiterung, die Instanz-IDs nachverfolgt. bei der **registrieren** Methode wird aufgerufen.
+3. Erstellen Sie in der Datei "Program.cs" eine neue Klasse namens **ExecutionCountExtension**. Der folgende Code erstellt eine workflowerweiterung, die Instanz-IDs nachverfolgt. bei der **registrieren** Methode wird aufgerufen.
 
     ```
     // This extension collects a list of workflow Ids
@@ -56,7 +56,7 @@ Aktivitäten können mit Erweiterungen von Workflowanwendungen interagieren, die
     }
     ```
 
-4.  Erstellen Sie eine Aktivität, die **ExecutionCountExtension**. Der folgende Code definiert eine Aktivität, die abruft der **ExecutionCountExtension** Objekt aus der Common Language Runtime und ruft seine **registrieren** Methode, wenn die Aktivität ausgeführt wird.
+4. Erstellen Sie eine Aktivität, die **ExecutionCountExtension**. Der folgende Code definiert eine Aktivität, die abruft der **ExecutionCountExtension** Objekt aus der Common Language Runtime und ruft seine **registrieren** Methode, wenn die Aktivität ausgeführt wird.
 
     ```
     // Activity that consumes an extension provided by the host. If the extension is available
@@ -75,7 +75,7 @@ Aktivitäten können mit Erweiterungen von Workflowanwendungen interagieren, die
     }
     ```
 
-5.  Implementieren Sie die Aktivität in der **Main** -Methode der Datei "Program.cs". Der folgende Code enthält Methoden, mit denen zwei unterschiedliche Workflows generiert, die Workflows mehrfach ausgeführt und die resultierenden Daten in der Erweiterung angezeigt werden.
+5. Implementieren Sie die Aktivität in der **Main** -Methode der Datei "Program.cs". Der folgende Code enthält Methoden, mit denen zwei unterschiedliche Workflows generiert, die Workflows mehrfach ausgeführt und die resultierenden Daten in der Erweiterung angezeigt werden.
 
     ```
     class Program

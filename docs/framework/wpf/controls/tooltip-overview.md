@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 097eb8c50a6a21f9d356aba562c95fd2d9d09022
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170104"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630770"
 ---
 # <a name="tooltip-overview"></a>Übersicht über die QuickInfo
 Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutzer den Mauszeiger auf ein Element, beispielsweise über hält eine <xref:System.Windows.Controls.Button>. In diesem Thema wird die QuickInfo vorgestellt und das Erstellen und Anpassen von QuickInfo-Inhalten erläutert.  
@@ -24,9 +24,9 @@ Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutz
   
  Der Inhalt einer QuickInfo kann eine oder mehrere Zeilen Text, Bilder, Formen oder andere visuelle Inhalte enthalten. Um eine QuickInfo für ein Steuerelement zu definieren, legen Sie für deren Inhalt eine der folgenden Eigenschaften fest.  
   
--   <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkContentElement.ToolTip%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
  Die Eigenschaft, die Sie verwenden, hängt davon ab, ob das Steuerelement, das die QuickInfo definiert, erbt die <xref:System.Windows.FrameworkContentElement> oder <xref:System.Windows.FrameworkElement> Klasse.  
   
@@ -79,4 +79,4 @@ Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutz
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipEventArgs>
 - <xref:System.Windows.Controls.ToolTipEventHandler>
-- [Gewusst wie-Themen](tooltip-how-to-topics.md)
+- [Themen zu Vorgehensweisen](tooltip-how-to-topics.md)

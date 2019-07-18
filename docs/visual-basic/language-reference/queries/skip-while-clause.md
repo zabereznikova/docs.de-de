@@ -9,11 +9,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
 ms.openlocfilehash: 3d6caeb1938e8e53e8ec2575f740cd5e49496f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054418"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While-Klausel (Visual Basic)
 Überspringt Elemente in einer Auflistung, solange eine angegebene Bedingung `true` ist, und gibt anschließend die übrigen Elemente zurück.  

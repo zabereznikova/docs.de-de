@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355635"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379934"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
 
-Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine verteilbare Laufzeit. Wenn Sie Apps für diese Version von .NET Framework entwickeln, können Sie das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup als Teil einer erforderlichen Komponente in das Setup Ihrer App einschließen (mit dem Setup verketten). Für ein angepasstes oder einheitliches Setup können Sie festlegen, dass das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup automatisch gestartet und sein Status nachverfolgt wird, während der Setupstatus Ihrer App angezeigt wird. Das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup (das beobachtet werden kann) definiert mithilfe eines MMIO (Memory-Mapped IO)-Segments ein Protokoll für die Kommunikation mit Ihrem Setup (dem Monitor oder Chainer), um die automatische Nachverfolgung zu aktivieren. Dieses Protokoll definiert ein Verfahren für einen Chainer zum Abrufen von Statusinformationen und ausführlichen Ergebnissen, zum Antworten auf Meldungen sowie zum Abrechen des [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setups.
+Bei .NET Framework 4.5 handelt es sich um eine weitervertreibbare Laufzeit. Wenn Sie Apps für diese Version von .NET Framework entwickeln, können Sie das .NET Framework 4.5-Setup als Teil einer erforderlichen Komponente in das Setup Ihrer App einschließen (mit dem Setup verketten). Für ein angepasstes oder einheitliches Setup können Sie festlegen, dass das .NET Framework 4.5-Setup automatisch gestartet und sein Status nachverfolgt werden soll, während der Setupstatus Ihrer App angezeigt wird. Das .NET Framework 4.5-Setup (das beobachtet werden kann) definiert mithilfe eines MMIO-Segments (Memory-Mapped IO) ein Protokoll für die Kommunikation mit Ihrem Setup (dem Monitor oder Chainer), um die automatische Nachverfolgung zu ermöglichen. Dieses Protokoll definiert ein Verfahren für einen Chainer zum Abrufen von Statusinformationen und ausführlichen Ergebnissen, zum Antworten auf Meldungen sowie zum Abrechen des .NET Framework 4.5-Setups.
 
-- **Aufruf**. Um das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup aufzurufen und Statusinformationen aus dem MMIO-Abschnitt zu empfangen, muss das Setupprogramm folgende Aktionen ausführen:
+- **Aufruf**. Um das .NET Framework 4.5-Setup aufzurufen und Statusinformationen aus dem MMIO-Abschnitt zu empfangen, muss das Setupprogramm folgende Aktionen ausführen:
 
-    1. Aufruf des verteilbaren Programms für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]:
+    1. Aufrufen des weitervertreibbaren .NET Framework 4.5-Programms:
 
         ```
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
@@ -36,23 +36,23 @@ Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine
 
         Ersetzen Sie diese Namen durch Namen, die für das Setupprogramm eindeutig sind.
 
-    2. Lesen aus dem MMIO-Abschnitt. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] werden die Download- und Installationsvorgänge gleichzeitig ausgeführt: Während ein Teil von .NET Framework installiert wird, wird vielleicht ein weiterer Teil heruntergeladen. Als Ergebnis wird der Status als zwei Zahlen (`m_downloadSoFar` und `m_installSoFar`), die von 0 bis 255 zunehmen, an den MMIO-Abschnitt zurückgesendet (das heißt, in den Abschnitt geschrieben). Wenn 255 geschrieben wurde und .NET Framework beendet wird, ist die Installation abgeschlossen.
+    2. Lesen aus dem MMIO-Abschnitt. In .NET Framework 4.5 werden die Download- und Installationsvorgänge gleichzeitig ausgeführt: Während ein Teil von .NET Framework installiert wird, wird vielleicht ein weiterer Teil heruntergeladen. Als Ergebnis wird der Status als zwei Zahlen (`m_downloadSoFar` und `m_installSoFar`), die von 0 bis 255 zunehmen, an den MMIO-Abschnitt zurückgesendet (das heißt, in den Abschnitt geschrieben). Wenn 255 geschrieben wurde und .NET Framework beendet wird, ist die Installation abgeschlossen.
 
-- **Exitcodes** Mit den folgenden Exitcodes im Befehl zum Aufrufen des verteilbaren Programms für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird angegeben, ob das Setup erfolgreich war oder mit einem Fehler beendet wurde:
+- **Exitcodes** Die folgenden Exitcodes des Befehls zum Aufrufen des weitervertreibbaren .NET Framework 4.5-Programms geben Aufschluss darüber, ob das Setup erfolgreich abgeschlossen wurde:
 
-    - 0 - erfolgreich abgeschlossenes Setup.
+  - 0 - erfolgreich abgeschlossenes Setup.
 
-    - 3010 – Setup wurde erfolgreich abgeschlossen. Das System muss neu gestartet werden.
+  - 3010 – Setup wurde erfolgreich abgeschlossen. Das System muss neu gestartet werden.
 
-    - 1602 – Setup wurde abgebrochen.
+  - 1602 – Setup wurde abgebrochen.
 
-    - Alle anderen Codes - in Setup sind Fehler aufgetreten; Details dazu finden Sie in den unter "%temp%" erstellten Protokolldateien.
+  - Alle anderen Codes - in Setup sind Fehler aufgetreten; Details dazu finden Sie in den unter "%temp%" erstellten Protokolldateien.
 
 - **Abbrechen des Setups** Sie können Setup jederzeit abbrechen, indem Sie mit der `Abort`-Methode das `m_downloadAbort`-Flag und das `m_ installAbort`-Flag im MMIO-Abschnitt festlegen.
 
 ## <a name="chainer-sample"></a>Chainer-Beispiel
 
-Im Chainer-Beispiel wird das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup automatisch gestartet und nachverfolgt, während der Status angezeigt wird. Dieses Beispiel ähnelt dem Chainer-Beispiel für .NET Framework 4. Jedoch werden außerdem Systemneustarts vermieden, indem das Meldungsfeld zum Schließen von .NET Framework 4-Apps verarbeitet wird. Weitere Informationen zu diesem Meldungsfeld finden Sie unter [Reducing System Restarts During .NET Framework 4.5 Installations (Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen)](../../../docs/framework/deployment/reducing-system-restarts.md). Sie können dieses Beispiel mit dem .NET Framework 4-Installationsprogramm verwenden. In diesem Szenario wird die Meldung einfach nicht gesendet.
+Im Chainer-Beispiel wird das .NET Framework 4.5-Setup automatisch gestartet und nachverfolgt, während der Status angezeigt wird. Dieses Beispiel ähnelt dem Chainer-Beispiel für .NET Framework 4. Jedoch werden außerdem Systemneustarts vermieden, indem das Meldungsfeld zum Schließen von .NET Framework 4-Apps verarbeitet wird. Weitere Informationen zu diesem Meldungsfeld finden Sie unter [Reducing System Restarts During .NET Framework 4.5 Installations (Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen)](../../../docs/framework/deployment/reducing-system-restarts.md). Sie können dieses Beispiel mit dem .NET Framework 4-Installationsprogramm verwenden. In diesem Szenario wird die Meldung einfach nicht gesendet.
 
 > [!WARNING]
 > Sie müssen das Beispiel als Administrator ausführen.
@@ -63,7 +63,7 @@ In den folgenden Abschnitten werden die bedeutendsten Dateien in diesem Beispiel
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- Die Datei „MMIOChainer.h“ (siehe den [vollständigen Code](https://go.microsoft.com/fwlink/?LinkId=231369)) enthält die Datenstrukturdefinition und die Basisklasse, von der die chainer-Klasse abgeleitet werden sollte. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] erweitert die MMIO-Datenstruktur, um Daten zu behandeln, die das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Installationsprogramm benötigt. Die Änderungen an der MMIO-Struktur sind abwärtskompatibel. Deshalb kann ein .NET Framework 4-Chainer mit dem .NET Framework 4.5-Setup verwendet werden, ohne dass eine Neukompilierung erforderlich ist. In diesem Szenario wird jedoch nicht die Funktion zur Reduzierung von Systemneustarts unterstützt.
+- Die Datei „MMIOChainer.h“ (siehe den [vollständigen Code](https://go.microsoft.com/fwlink/?LinkId=231369)) enthält die Datenstrukturdefinition und die Basisklasse, von der die chainer-Klasse abgeleitet werden sollte. .NET Framework 4.5 erweitert die MMIO-Datenstruktur, um Daten zu behandeln, die das .NET Framework 4.5-Installationsprogramm benötigt. Die Änderungen an der MMIO-Struktur sind abwärtskompatibel. Deshalb kann ein .NET Framework 4-Chainer mit dem .NET Framework 4.5-Setup verwendet werden, ohne dass eine Neukompilierung erforderlich ist. In diesem Szenario wird jedoch nicht die Funktion zur Reduzierung von Systemneustarts unterstützt.
 
     Ein Versionsfeld ermöglicht das Erkennen von Änderungen an der Struktur und dem Meldungsformat. Das .NET Framework-Setup bestimmt die Version der Chainer-Schnittstelle, indem die `VirtualQuery`-Funktion aufgerufen wird, um die Größe der Dateizuordnung zu ermitteln. Wenn die Größe für das Versionsfeld ausreicht, verwendet das .NET Framework-Setup den angegebenen Wert. Wenn die Dateizuordnung zu klein ist, um ein Versionsfeld aufzunehmen, wie dies bei .NET Framework 4 der Fall ist, wird beim Setupvorgang Version 0 (4) angenommen. Wenn der Chainer die Version der Meldung, die vom .NET Framework-Setup gesendet werden soll, nicht unterstützt, geht das .NET Framework-Setup von der Antwort "Ignorieren" aus.
 
@@ -96,7 +96,7 @@ In den folgenden Abschnitten werden die bedeutendsten Dateien in diesem Beispiel
         };
     ```
 
-- Die `MmioDataStructure`-Datenstruktur sollte nicht direkt verwendet werden. Verwenden Sie stattdessen die `MmioChainer`-Klasse zum Implementieren des Chainers. Leiten Sie die `MmioChainer`-Klasse ab, um das verteilbare [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Paket zu verketten.
+- Die `MmioDataStructure`-Datenstruktur sollte nicht direkt verwendet werden. Verwenden Sie stattdessen die `MmioChainer`-Klasse zum Implementieren des Chainers. Verwenden Sie eine Ableitung von der Klasse `MmioChainer`, um die weitervertreibbare .NET Framework 4.5-Komponente zu verketten.
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
@@ -151,7 +151,7 @@ In den folgenden Abschnitten werden die bedeutendsten Dateien in diesem Beispiel
     }
     ```
 
-- Vor dem Starten der Installation überprüft der Chainer durch Aufruf von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ob `IsNetFx4Present` bereits installiert ist.
+- Vor dem Start der Installation überprüft der Chainer durch Aufrufen von `IsNetFx4Present`, ob .NET Framework 4.5 bereits installiert ist:
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -307,7 +307,7 @@ In den folgenden Abschnitten werden die bedeutendsten Dateien in diesem Beispiel
     ```
 
     > [!IMPORTANT]
-    > Das verteilbare Programm von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] schreibt in der Regel viele Statusmeldungen und eine einzelne Meldung, die den Abschluss angibt (auf Chainer-Seite). Es liest außerdem asynchron und sucht nach `Abort`-Datensätzen. Wenn es einen `Abort`-Datensatz empfängt, wird die Installation abgebrochen, und nach dem Abbruch der Installation und dem Rollback der Setupvorgänge wird ein abgeschlossener Datensatz geschrieben, der E_ABORT lautet.
+    > Die weitervertreibbare .NET Framework 4.5-Komponente schreibt in der Regel zahlreiche Statusmeldungen sowie eine einzelne Meldung, die den Abschluss angibt (auf der Chainer-Seite). Es liest außerdem asynchron und sucht nach `Abort`-Datensätzen. Wenn es einen `Abort`-Datensatz empfängt, wird die Installation abgebrochen, und nach dem Abbruch der Installation und dem Rollback der Setupvorgänge wird ein abgeschlossener Datensatz geschrieben, der E_ABORT lautet.
 
 Ein typischer Server erstellt einen zufälligen MMIO-Dateinamen, erstellt die Datei (wie im vorherigen Codebeispiel in `Server::CreateSection` gezeigt) und startet das verteilbare Programm mit der `CreateProcess`-Methode. Dabei wird der Pipename mit der Option `-pipe someFileSectionName` übergeben. Der Server sollte Methoden für `OnProgress`, `Send` und `Finished` mit spezifischem Code für die Benutzeroberfläche der Anwendung implementieren.
 

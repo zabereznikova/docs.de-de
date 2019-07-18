@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: af02460f-2a45-496e-bc4e-a1ac4f80fe11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70b3b57b51faed51aa7d5a70a3b785e0f719321b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 848929901e91164bdccda5c1e77069364452a782
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215841"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750248"
 ---
 # <a name="icordebugdatatarget2enumeratethreadids-method"></a>ICorDebugDataTarget2::EnumerateThreadIDs-Methode
 Gibt eine Liste der aktiven Thread-IDs aus.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateThreadIDs(  
     [in] ULONG32 cThreadIds,   
     [out] ULONG32 *pcThreadIds,   
@@ -49,4 +49,4 @@ HRESULT EnumerateThreadIDs(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugDataTarget2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

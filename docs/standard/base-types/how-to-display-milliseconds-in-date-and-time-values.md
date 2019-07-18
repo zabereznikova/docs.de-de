@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97ea5c7389cf30f7f58c944c95e095ebe4146192
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643766"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590596"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Vorgehensweise: Anzeigen der Millisekunden in Datums- und Uhrzeitwerten
 Bei den Standardformatierungsmethoden für Datum und Uhrzeit, wie <xref:System.DateTime.ToString?displayProperty=nameWithType>, werden die Stunden, Minuten und Sekunden eines Uhrzeitwerts berücksichtigt, deren Millisekundenkomponente jedoch nicht. In diesem Thema wird erläutert, wie die Millisekundenkomponente für Datum und Uhrzeit in eine formatierte Datums- und Uhrzeitzeichenfolge eingefügt wird.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>So zeigen Sie die Millisekundenkomponente eines DateTime-Werts an  
   
-1.  Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime>-Methode oder <xref:System.DateTimeOffset>-Methode in einen <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>-Wert oder einen <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>-Wert.  
+1. Wenn Sie mit der Zeichenfolgendarstellung eines Datums arbeiten, konvertieren Sie sie mithilfe der statischen <xref:System.DateTime>-Methode oder <xref:System.DateTimeOffset>-Methode in einen <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType>-Wert oder einen <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>-Wert.  
   
-2.  Um die Zeichenfolgendarstellung einer Millisekundenkomponente für die Uhrzeit zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>-Methode oder <xref:System.DateTimeOffset.ToString%2A>-Methode des Datums- oder Uhrzeitwerts auf und übergeben das benutzerdefinierte Formatmuster `fff` oder `FFF` alleine oder zusammen mit anderen benutzerdefinierten Formatbezeichnern als `format`-Parameter.  
+2. Um die Zeichenfolgendarstellung einer Millisekundenkomponente für die Uhrzeit zu extrahieren, rufen Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>-Methode oder <xref:System.DateTimeOffset.ToString%2A>-Methode des Datums- oder Uhrzeitwerts auf und übergeben das benutzerdefinierte Formatmuster `fff` oder `FFF` alleine oder zusammen mit anderen benutzerdefinierten Formatbezeichnern als `format`-Parameter.  
   
 ## <a name="example"></a>Beispiel  
  Im Beispiel wird die Millisekundenkomponente von <xref:System.DateTime> und ein <xref:System.DateTimeOffset>-Wert für die Konsole angezeigt, und zwar sowohl alleine als auch als Bestandteil einer längeren Datums- und Uhrzeitzeichenfolge.  
@@ -50,9 +50,6 @@ Bei den Standardformatierungsmethoden für Datum und Uhrzeit, wie <xref:System.D
   
 > [!NOTE]
 >  Es besteht die Möglichkeit, sehr kleine Sekundenbruchteile wie Zehntausendstelsekunden oder Hunderttausendstelsekunden anzuzeigen. Diese Werte sind jedoch möglicherweise nicht sinnvoll. Die Genauigkeit der Datums- und Uhrzeitwerte hängt von der Auflösung der Systemuhr ab. Unter Windows NT 3.5 und höher und in [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]-Betriebssystemen beträgt die Auflösung der Uhr etwa 10-15 Millisekunden.  
-  
-## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Kompilieren Sie den Code über csc.exe oder vb.exe in der Befehlszeile. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
 ## <a name="see-also"></a>Siehe auch
 

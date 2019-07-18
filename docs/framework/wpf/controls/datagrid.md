@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
 ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912235"
 ---
 # <a name="datagrid"></a>DataGrid
 Die <xref:System.Windows.Controls.DataGrid> -Steuerelement können Sie zum Anzeigen und Bearbeiten von Daten aus vielen verschiedenen Quellen, z. B. aus einer SQL-Datenbank, LINQ-Abfrage oder eine beliebige andere bindbare Datenquelle. Weitere Informationen finden Sie unter [Übersicht über Bindungsquellen](../data/binding-sources-overview.md).  
@@ -53,14 +53,14 @@ Die <xref:System.Windows.Controls.DataGrid> -Steuerelement können Sie zum Anzei
 |[Vorgehensweise: Hinzufügen von Zeilendetails zu einem DataGrid-Steuerelement](how-to-add-row-details-to-a-datagrid-control.md)|Beschreibt das Erstellen von Details für die Zeile für eine <xref:System.Windows.Controls.DataGrid>.|  
 |[Vorgehensweise: Implementieren von Validierung mit dem DataGrid-Steuerelement](how-to-implement-validation-with-the-datagrid-control.md)|Beschreibt das Validieren von Werten in <xref:System.Windows.Controls.DataGrid> Zellen und Zeilen und die Validierungsfeedback anzeigen.|  
 |[Standardverhalten von Tastatur und Maus im DataGrid-Steuerelement](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|Beschreibt, wie für die Interaktion mit der <xref:System.Windows.Controls.DataGrid> -Steuerelement unter Verwendung der Tastatur und Maus.|  
-|[Vorgehensweise: Gruppieren, Sortieren und Filtern von Daten in einem DataGrid-Steuerelement](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Beschreibt, wie Daten in einem <xref:System.Windows.Controls.DataGrid> auf verschiedene Arten von gruppieren, Sortieren und Filtern der Daten.|  
+|[Vorgehensweise: Gruppieren, Sortieren und Filtern von Daten im DataGrid-Steuerelement](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Beschreibt, wie Daten in einem <xref:System.Windows.Controls.DataGrid> auf verschiedene Arten von gruppieren, Sortieren und Filtern der Daten.|  
 |[Größenänderungsoptionen im DataGrid-Steuerelement](sizing-options-in-the-datagrid-control.md)|Beschreibt, wie Sie die absolute und automatische größenanpassung in steuern die <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Controls.DataGrid>
 - [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
-- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
+- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)
 - [Steuerelemente](index.md)
 - [WPF-Inhaltsmodell](wpf-content-model.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 05f5d3fbe05ad1e97a1ae61ed0496f314c4ec5cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185925"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765965"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem-Struktur
 Beschreibt ein Element ein benutzerdefiniertes Speicherabbild in der Fehlerberichterstattung hinzugefügt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 struct {  
     ECustomDumpItemKind itemKind;   
     union {  
@@ -58,4 +58,4 @@ struct {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingstrukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

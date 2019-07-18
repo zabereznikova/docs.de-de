@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 143b11f0a99081b7d49bfbb68b635d92cf1e9ba3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fa5a446ba7bfd70330601c7cbc129800761cdb7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163877"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782619"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum-Methode
 Setzt den angegebenen Enumerator auf die der angegebene Position zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ResetEnum (  
    [in] HCORENUM    hEnum,   
    [in] ULONG       ulPos  

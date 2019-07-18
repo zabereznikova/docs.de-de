@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81d8cdb8d2dfc593d37322b70c070bc0b9f10b25
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102231"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659684"
 ---
 # <a name="white-space-processing-in-xaml"></a>Leerstellenverarbeitung in XAML
 Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet werden müssen, indem eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung. In diesem Thema werden diese XAML-Sprachregeln erläutert. Er dokumentiert auch zusätzliche Leerzeichen behandeln, die von definiert ist die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Implementierung der XAML-Prozessor und der XAML-Writer für die Serialisierung.  
@@ -25,15 +25,15 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
 ## <a name="white-space-normalization"></a>Normalisierung von Leerzeichen  
  Wird standardmäßig die folgenden leerstellennormalisierung tritt auf, wenn eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Prozessor Prozesse eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Datei:  
   
-1.  Zeilenvorschubzeichen zwischen ostasiatischen Zeichen werden entfernt. Eine Definition dieses Begriffs finden Sie im Abschnitt „Ostasiatische Zeichen“ weiter hinten in diesem Thema.  
+1. Zeilenvorschubzeichen zwischen ostasiatischen Zeichen werden entfernt. Eine Definition dieses Begriffs finden Sie im Abschnitt „Ostasiatische Zeichen“ weiter hinten in diesem Thema.  
   
-2.  Alle Leerraumzeichen (Leerzeichen, Zeilenvorschub, Registerkarte ") werden in Leerzeichen konvertiert.  
+2. Alle Leerraumzeichen (Leerzeichen, Zeilenvorschub, Registerkarte ") werden in Leerzeichen konvertiert.  
   
-3.  Alle aufeinander folgenden Leerzeichen werden gelöscht und durch ein Leerzeichen ersetzt.  
+3. Alle aufeinander folgenden Leerzeichen werden gelöscht und durch ein Leerzeichen ersetzt.  
   
-4.  Ein Leerzeichen unmittelbar nach dem Starttag wird gelöscht.  
+4. Ein Leerzeichen unmittelbar nach dem Starttag wird gelöscht.  
   
-5.  Ein Leerzeichen unmittelbar vor dem Endtag wird gelöscht.  
+5. Ein Leerzeichen unmittelbar vor dem Endtag wird gelöscht.  
   
  „Standard“ entspricht dem Zustand, der durch den Standardwert des [xml:space](xml-space-handling-in-xaml.md) -Attribut bezeichnet wird.  
   
@@ -41,13 +41,13 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>Leerraum in innerem Text und zeichenfolgenprimitive  
  Die oben genannten Normalisierungsregeln gelten für inneren Text innerhalb von XAML-Elementen. Nach der Normalisierung konvertiert ein XAML-Prozessor inneren Text wie folgt in einen entsprechenden Typ:  
   
--   Wenn der Typ der Eigenschaft keine Auflistung, aber nicht direkt ein <xref:System.Object> -Typ ist, versucht der XAML-Prozessor, unter Verwendung seines Typkonverters eine Konvertierung in diesen Typ durchzuführen. Ein Konvertierungsfehler verursacht einen Fehler zu Kompilierzeit.  
+- Wenn der Typ der Eigenschaft keine Auflistung, aber nicht direkt ein <xref:System.Object> -Typ ist, versucht der XAML-Prozessor, unter Verwendung seines Typkonverters eine Konvertierung in diesen Typ durchzuführen. Ein Konvertierungsfehler verursacht einen Fehler zu Kompilierzeit.  
   
--   Wenn der Typ der Eigenschaft eine Auflistung und der innere Text zusammenhängend ist (keine dazwischen liegenden Elementtags), wird der innere Text als einzelner <xref:System.String>analysiert. Wenn der Auflistungstyp <xref:System.String>nicht akzeptieren kann, führt dies ebenfalls zu einem Kompilierzeitfehler.  
+- Wenn der Typ der Eigenschaft eine Auflistung und der innere Text zusammenhängend ist (keine dazwischen liegenden Elementtags), wird der innere Text als einzelner <xref:System.String>analysiert. Wenn der Auflistungstyp <xref:System.String>nicht akzeptieren kann, führt dies ebenfalls zu einem Kompilierzeitfehler.  
   
--   Wenn der Typ der Eigenschaft <xref:System.Object>ist, wird der innere Text als einzelner <xref:System.String>analysiert. Wenn dazwischen liegende Elementtags vorhanden sind, führt dies zu einem Kompilierzeitfehler, da der <xref:System.Object> -Typ ein einzelnes Objekt impliziert (<xref:System.String> oder anderes).  
+- Wenn der Typ der Eigenschaft <xref:System.Object>ist, wird der innere Text als einzelner <xref:System.String>analysiert. Wenn dazwischen liegende Elementtags vorhanden sind, führt dies zu einem Kompilierzeitfehler, da der <xref:System.Object> -Typ ein einzelnes Objekt impliziert (<xref:System.String> oder anderes).  
   
--   Wenn der Typ der Eigenschaft eine Auflistung und der innere Text nicht zusammenhängend ist, wird die erste Teilzeichenfolge in einen <xref:System.String> konvertiert und als Auflistungselement hinzugefügt, das dazwischen liegende Element wird als Auflistungselement hinzugefügt, und schließlich wird die nachgestellte Teilzeichenfolge (sofern vorhanden) der Auflistung als drittes <xref:System.String> -Element hinzugefügt.  
+- Wenn der Typ der Eigenschaft eine Auflistung und der innere Text nicht zusammenhängend ist, wird die erste Teilzeichenfolge in einen <xref:System.String> konvertiert und als Auflistungselement hinzugefügt, das dazwischen liegende Element wird als Auflistungselement hinzugefügt, und schließlich wird die nachgestellte Teilzeichenfolge (sofern vorhanden) der Auflistung als drittes <xref:System.String> -Element hinzugefügt.  
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>Beibehalten von Leerraum  
@@ -76,6 +76,6 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [XML-Zeichenentitäten und XAML](xml-character-entities-and-xaml.md)
 - [XML: space-Behandlung in XAML](xml-space-handling-in-xaml.md)

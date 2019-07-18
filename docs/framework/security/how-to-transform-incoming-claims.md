@@ -1,76 +1,76 @@
 ---
-title: 'Gewusst wie: Transformieren eingehender Ansprüche'
+title: 'Vorgehensweise: Transformieren eingehender Ansprüche'
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e667b90a51e3a5591596e46878973f925f788a5b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181630"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626078"
 ---
-# <a name="how-to-transform-incoming-claims"></a>Gewusst wie: Transformieren eingehender Ansprüche
+# <a name="how-to-transform-incoming-claims"></a>Vorgehensweise: Transformieren eingehender Ansprüche
 ## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Zusammenfassung  
  In dieser Vorgehensweise werden ausführliche Prozeduren zum Erstellen einer einfachen Ansprüche unterstützenden ASP.NET Web Forms-Anwendung und zum Transformieren eingehender Ansprüche vorgestellt. Sie enthält auch Anweisungen zum Testen der Anwendung, mit denen überprüft werden kann, ob transformierte Ansprüche dargestellt werden, wenn die Anwendung ausgeführt wird.  
   
 ## <a name="contents"></a>Inhalt  
   
--   Ziele  
+- Ziele  
   
--   Übersicht  
+- Übersicht  
   
--   Zusammenfassung von Schritten  
+- Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
+- Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="objectives"></a>Ziele  
   
--   Konfigurieren Sie eine ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung.  
+- Konfigurieren Sie eine ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung.  
   
--   Transformieren Sie eingehende Ansprüche durch Hinzufügen eines Administratorrollenanspruchs.  
+- Transformieren Sie eingehende Ansprüche durch Hinzufügen eines Administratorrollenanspruchs.  
   
--   Testen Sie die ASP.NET Web Forms-Anwendung, um festzustellen, ob sie ordnungsgemäß funktioniert.  
+- Testen Sie die ASP.NET Web Forms-Anwendung, um festzustellen, ob sie ordnungsgemäß funktioniert.  
   
 ## <a name="overview"></a>Übersicht  
  WIF macht eine Klasse mit dem Namen <xref:System.Security.Claims.ClaimsAuthenticationManager> verfügbar, mit der Benutzer Ansprüche ändern können, bevor sie in einer Anwendung der vertrauenden Seite (Relying Party, RP) dargestellt werden. <xref:System.Security.Claims.ClaimsAuthenticationManager> eignet sich für die Trennung von Bereichen zwischen Authentifizierung und zugrunde liegendem Anwendungscode. Das unten aufgeführte Beispiel zeigt, wie eine Rolle den Ansprüchen im eingehenden <xref:System.Security.Claims.ClaimsPrincipal> hinzugefügt wird, die möglicherweise für die vertrauende Seite erforderlich ist.  
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
+- Schritt 2: Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
  In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung.  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
   
-1.  Starten Sie Visual Studio im erweiterten Modus als Administrator.  
+1. Starten Sie Visual Studio im erweiterten Modus als Administrator.  
   
-2.  Klicken Sie in Visual Studio auf **Datei**, **Neu** und anschließend auf **Projekt**.  
+2. Klicken Sie in Visual Studio auf **Datei**, **Neu** und anschließend auf **Projekt**.  
   
-3.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
+3. Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
   
-4.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
+4. Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
   
-5.  Klicken Sie mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestApp**, und wählen Sie anschließend **Identität und Zugriff** aus.  
+5. Klicken Sie mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestApp**, und wählen Sie anschließend **Identität und Zugriff** aus.  
   
-6.  Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Test your application with the Local Development STS** (Anwendung mit dem lokalen Entwicklungs-STS testen), und klicken Sie anschließend auf **Übernehmen**.  
+6. Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Test your application with the Local Development STS** (Anwendung mit dem lokalen Entwicklungs-STS testen), und klicken Sie anschließend auf **Übernehmen**.  
   
-7.  Ersetzen Sie in der Datei *Default.aspx* das vorhandene Markup durch das folgende Markup, und speichern Sie die Datei anschließend:  
+7. Ersetzen Sie in der Datei *Default.aspx* das vorhandene Markup durch das folgende Markup, und speichern Sie die Datei anschließend:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "50181630"
     </asp:Content>  
     ```  
   
-8.  Öffnen Sie die CodeBehind-Datei mit dem Namen *Default.aspx.cs*. Ersetzen Sie den vorhandenen Code durch folgenden Code, und speichern Sie die Datei anschließend:  
+8. Öffnen Sie die CodeBehind-Datei mit dem Namen *Default.aspx.cs*. Ersetzen Sie den vorhandenen Code durch folgenden Code, und speichern Sie die Datei anschließend:  
   
     ```csharp  
     using System;  
@@ -113,24 +113,24 @@ ms.locfileid: "50181630"
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Implementieren der Anspruchstransformation mithilfe eines benutzerdefinierten „ClaimsAuthenticationManager“  
   
-1.  Klicken Sie mit der rechten Maustaste in Visual Studio auf die Projektmappe, und klicken Sie dann auf **Hinzufügen** und **Neues Projekt**.  
+1. Klicken Sie mit der rechten Maustaste in Visual Studio auf die Projektmappe, und klicken Sie dann auf **Hinzufügen** und **Neues Projekt**.  
   
-2.  Wählen Sie im Fenster **Neues Projekt hinzufügen** aus der Vorlagenliste **Visual C#** die Option **Klassenbibliothek** aus. Geben Sie `ClaimsTransformation` ein, und klicken Sie anschließend auf **OK**. Das neue Projekt wird im Projektmappenordner erstellt.  
+2. Wählen Sie im Fenster **Neues Projekt hinzufügen** aus der Vorlagenliste **Visual C#** die Option **Klassenbibliothek** aus. Geben Sie `ClaimsTransformation` ein, und klicken Sie anschließend auf **OK**. Das neue Projekt wird im Projektmappenordner erstellt.  
   
-3.  Klicken Sie mit der rechten Maustaste unter dem Projekt **ClaimsTransformation** auf **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
+3. Klicken Sie mit der rechten Maustaste unter dem Projekt **ClaimsTransformation** auf **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
   
-4.  Wählen Sie im Fenster **Verweis-Manager** die Option **System.IdentityModel** aus, und klicken Sie anschließend auf **OK**.  
+4. Wählen Sie im Fenster **Verweis-Manager** die Option **System.IdentityModel** aus, und klicken Sie anschließend auf **OK**.  
   
-5.  Öffnen Sie, sofern vorhanden, **Class1.cs**. Andernfalls klicken Sie mit der rechten Maustaste auf **ClaimsTransformation**, und klicken Sie anschließend auf **Hinzufügen** und **Class...** (Klasse...).  
+5. Öffnen Sie, sofern vorhanden, **Class1.cs**. Andernfalls klicken Sie mit der rechten Maustaste auf **ClaimsTransformation**, und klicken Sie anschließend auf **Hinzufügen** und **Class...** (Klasse...).  
   
-6.  Fügen Sie der Codedatei die folgenden using-Anweisungen hinzu:  
+6. Fügen Sie der Codedatei die folgenden using-Anweisungen hinzu:  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  Fügen Sie in der Codedatei die folgende Klasse und Methode hinzu.  
+7. Fügen Sie in der Codedatei die folgende Klasse und Methode hinzu.  
   
     > [!WARNING]
     >  Der folgende Code dient nur der Veranschaulichung. Überprüfen Sie Ihre beabsichtigten Berechtigungen im Produktionscode.  
@@ -150,7 +150,7 @@ ms.locfileid: "50181630"
     }  
     ```  
   
-8.  Speichern Sie die Datei, und erstellen Sie das Projekt **ClaimsTransformation**.  
+8. Speichern Sie die Datei, und erstellen Sie das Projekt **ClaimsTransformation**.  
   
 9. Klicken Sie mit der rechten Maustaste in Ihrem ASP.NET-Projekt **TestApp** auf „Verweise“, und klicken Sie anschließend auf **Verweis hinzufügen**.  
   
@@ -167,9 +167,9 @@ ms.locfileid: "50181630"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Testen der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Formularauthentifizierung  
   
-1.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Es sollte *Default.aspx* dargestellt werden.  
+1. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Es sollte *Default.aspx* dargestellt werden.  
   
-2.  Auf der Seite *Default.aspx* sollte unter der Überschrift **Your Claims** (Ihre Ansprüche) eine Tabelle angezeigt werden, die die Anspruchsinformationen **Issuer** (Aussteller), **OriginalIssuer** (Originalaussteller), **Type** (Typ), **Value** (Wert) und **ValueType** (Werttyp) Ihres Kontos enthält. Die letzte Zeile sollte folgendermaßen dargestellt werden:  
+2. Auf der Seite *Default.aspx* sollte unter der Überschrift **Your Claims** (Ihre Ansprüche) eine Tabelle angezeigt werden, die die Anspruchsinformationen **Issuer** (Aussteller), **OriginalIssuer** (Originalaussteller), **Type** (Typ), **Value** (Wert) und **ValueType** (Werttyp) Ihres Kontos enthält. Die letzte Zeile sollte folgendermaßen dargestellt werden:  
   
     ||||||  
     |-|-|-|-|-|  

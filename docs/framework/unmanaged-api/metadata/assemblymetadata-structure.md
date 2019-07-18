@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f0a9b9c149c86b4d9121275aa858dfdc0cdbac7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a5039117c649943a1f05a91ecccf22eb4230e5e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195162"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776377"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA-Struktur
 Enthält Informationen über die referenzierte Assembly, einschließlich Version und der Grad der Unterstützung für Gebietsschemas, Prozessoren und Betriebssysteme.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct {  
     USHORT  usMajorVersion;  
     USHORT  usMinorVersion;  

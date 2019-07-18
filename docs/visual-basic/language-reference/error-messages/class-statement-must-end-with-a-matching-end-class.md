@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
-ms.openlocfilehash: 0619db618abd562bda86836bdd41bbcd6caee0f9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 559595e9902ec2f0a19fd6b13e2c89fa1c2b52d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836505"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602418"
 ---
 # <a name="class-statement-must-end-with-a-matching-end-class"></a>"Class" muss mit einem entsprechenden "End Class" abgeschlossen werden.
 `Class` Dient zum Initiieren einer `Class` blockieren; kann daher nur am Anfang des Blocks mit einer passenden auftreten `End Class` -Anweisung beendet. Entweder ist eine redundante `Class` -Anweisung, oder Sie wurde nicht beendet. Ihre `Class` -block mit `End Class`.  
@@ -21,9 +21,9 @@ ms.locfileid: "58836505"
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Suchen und entfernen Sie die unnötige `Class` -Anweisung.  
+- Suchen und entfernen Sie die unnötige `Class` -Anweisung.  
   
--   Beenden der `Class` Block mit einer passenden `End Class`.  
+- Beenden der `Class` Block mit einer passenden `End Class`.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 888628a90f615943d155c6c28762a645e36699f0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3e9a1009167d8a765bc401d64a574bd123736ccd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760822"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774057"
 ---
 ### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a>Zulassen bidirektionaler Unicode-Steuerzeichen in URIs
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760822"
 |Version|4.7.2|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
-

@@ -13,23 +13,23 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f0ec2c56403e43f2ce04b394a1a4a59eafaa7311
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821295"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912988"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Merkmale deklarierter Elemente (Visual Basic)
 Ein *Merkmal* eines deklarierten Elements ist ein Aspekt dieses Elements, die betroffen sind, wie Code mit ihm interagieren kann. Jedem deklariertes Element verfügt über eine oder mehrere der folgenden Eigenschaften zugeordnet:  
   
--   *Datentyp* – die Werte, die das Element enthalten kann und wie diese Werte gespeichert. Weitere Informationen finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Datentyp* – die Werte, die das Element enthalten kann und wie diese Werte gespeichert. Weitere Informationen finden Sie unter [Datentypen](../../../../visual-basic/language-reference/data-types/index.md).  
   
--   *Lebensdauer* – den Zeitraum der Ausführungszeit, die in dem das Element für die Verwendung verfügbar ist. Weitere Informationen finden Sie unter [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Lebensdauer* – den Zeitraum der Ausführungszeit, die in dem das Element für die Verwendung verfügbar ist. Weitere Informationen finden Sie unter [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Bereich* – die Anzahl sämtlicher Code, der auf das Element ohne Angabe ihres Namens verweisen kann. Weitere Informationen finden Sie unter [Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Bereich* – die Anzahl sämtlicher Code, der auf das Element ohne Angabe ihres Namens verweisen kann. Weitere Informationen finden Sie unter [Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Zugriffsebene* – die Berechtigung für Code, um, des Elements verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Steuern der Verfügbarkeit einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Zugriffsebene* – die Berechtigung für Code, um, des Elements verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Steuern der Verfügbarkeit einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Eigenschaften der Elemente  
  Die folgende Tabelle zeigt die deklarierte Elemente und die Eigenschaften, die für jede gelten.  

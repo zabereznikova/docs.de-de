@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: b6036b10e87560a45880f41f30fabc7a348241d0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 035daf2ec7fa487c171317fd67e7c39fea7fc951
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747478"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397616"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und MSTest
 
@@ -44,7 +44,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-vb-using-stest*. Führen Sie [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) aus, um das Klassenbibliotheksprojekt zur Projektmappe hinzuzufügen.
+Ändern Sie das Verzeichnis wieder in das Verzeichnis *unit-testing-vb-using-mstest*. Führen Sie [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) aus, um das Klassenbibliotheksprojekt zur Projektmappe hinzuzufügen.
 
 ## <a name="creating-the-test-project"></a>Erstellen des Testprojekts
 
@@ -108,7 +108,7 @@ Namespace PrimeService.Tests
         Sub ReturnFalseGivenValueOf1()
             Dim result As Boolean = _primeService.IsPrime(1)
 
-            Assert.False(result, "1 should not be prime")
+            Assert.IsFalse(result, "1 should not be prime")
         End Sub
 
     End Class

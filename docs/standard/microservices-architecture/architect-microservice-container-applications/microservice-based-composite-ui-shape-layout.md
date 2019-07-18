@@ -1,15 +1,13 @@
 ---
 title: Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 description: Die Microservicesarchitektur eignet sich nicht nur für das Back-End. Verschaffen Sie sich einen Einblick in der Verwendung für das Front-End.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b481a76052efdd1ce0da406732230d41701ac354
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 55cb2a8096cc8122c94cae50af4384e9392868cf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464839"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644589"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 
@@ -42,19 +40,19 @@ Wir empfehlen Ihnen, sich in den folgenden Ressourcen weiter über die mithilfe 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Composite UI using ASP.NET (Particular’s Workshop) (Zusammengesetzte Benutzeroberfläche mit ASP.NET (Particular-Workshop))** \
-  [https://github.com/Particular/Workshop/tree/master/demos/asp-net-core](https://github.com/Particular/Workshop/tree/master/demos/asp-net-core)
+  <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
 - **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture (Das monolithische Front-End in der Microservicesarchitektur)** \
-  [https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/](https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
+  <https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/>
 
 - **Mauro Servienti. The secret of better UI composition (Das Geheimnis besserer Benutzeroberflächenzusammenstellung)** \
-  [https://particular.net/blog/secret-of-better-ui-composition](https://particular.net/blog/secret-of-better-ui-composition)
+  <https://particular.net/blog/secret-of-better-ui-composition>
 
 - **Viktor Farcic. Including Front-End Web Components Into Microservices (Einschließen von Front-End-Webkomponenten in Microservices)** \
-  [https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
+  <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
 - **Managing Frontend in the Microservices Architecture (Verwalten des Front-Ends in der Microservicesarchitektur)** \
-  [https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+  <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]
 >[Zurück](microservices-addressability-service-registry.md)

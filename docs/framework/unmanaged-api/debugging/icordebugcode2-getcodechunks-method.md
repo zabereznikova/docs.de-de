@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1428fc245d4f6993050c2753321684afee488c0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4bbc7ac7d87c6a5d36dc3432c603bb7d16d62c00
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116780"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747428"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks-Methode
 Ruft die Codeabschnitte ab, aus denen dieses Codeobjekt besteht.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCodeChunks (  
     [in]  ULONG32     cbufSize,  
     [out] ULONG32     *pcnumChunks,  

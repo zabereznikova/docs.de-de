@@ -3,11 +3,11 @@ title: <clientCertificate> der <clientCredentials> Element
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
 ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673315"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<ClientCertificate > von \<ClientCredentials >-Element
 Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.  
@@ -63,5 +63,5 @@ Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem
 - [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)
-- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

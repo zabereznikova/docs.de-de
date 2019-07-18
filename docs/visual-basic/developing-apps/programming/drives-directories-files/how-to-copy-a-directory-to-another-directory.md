@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: e45de705eb25d58857239cc549125c524765aaa5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9a02407ea805db4ae23f001de49ed6610f807b8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628890"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Vorgehensweise: Kopieren eines Verzeichnisses in ein anderes Verzeichnis in Visual Basic
 Verwenden Sie die <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>-Methode zum Kopieren eines Verzeichnisses in ein anderes Verzeichnis. Diese Methode kopiert den Inhalt des Verzeichnisses sowie das Verzeichnis selbst. Wenn das Zielverzeichnis nicht vorhanden ist, wird es erstellt. Wenn ein Verzeichnis mit dem gleichen Namen am Zielspeicherort vorhanden ist und `overwrite` auf `False` festgelegt ist, werden die Inhalte der beiden Verzeichnisse zusammengeführt. Sie können während des Vorgangs einen neuen Namen für das Verzeichnis angeben.  
@@ -21,7 +21,7 @@ Verwenden Sie die <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A
   
 ### <a name="to-copy-a-directory-to-another-directory"></a>Kopieren eines Verzeichnisses in ein anderes Verzeichnis  
   
--   Verwenden Sie die `CopyDirectory`-Methode, um Verzeichnisnamen von Quelle und Ziel anzugeben. Im folgenden Beispiel wird das Verzeichnis mit dem Namen `TestDirectory1` in `TestDirectory2` kopiert, wobei vorhandene Dateien überschrieben werden.  
+- Verwenden Sie die `CopyDirectory`-Methode, um Verzeichnisnamen von Quelle und Ziel anzugeben. Im folgenden Beispiel wird das Verzeichnis mit dem Namen `TestDirectory1` in `TestDirectory2` kopiert, wobei vorhandene Dateien überschrieben werden.  
   
      [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]  
   
@@ -30,35 +30,35 @@ Verwenden Sie die <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der neue Name, der für das Verzeichnis angegeben wird, enthält einen Doppelpunkt (:) oder einen Schrägstrich (\ oder /) (<xref:System.ArgumentException>).  
+- Der neue Name, der für das Verzeichnis angegeben wird, enthält einen Doppelpunkt (:) oder einen Schrägstrich (\ oder /) (<xref:System.ArgumentException>).  
   
--   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
+- Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).  
+- Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).  
   
--   `destinationDirectoryName` ist `Nothing` oder eine leere Zeichenfolge (<xref:System.ArgumentNullException>).  
+- `destinationDirectoryName` ist `Nothing` oder eine leere Zeichenfolge (<xref:System.ArgumentNullException>).  
   
--   Das Quellverzeichnis ist nicht vorhanden (<xref:System.IO.DirectoryNotFoundException>).  
+- Das Quellverzeichnis ist nicht vorhanden (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Das Quellverzeichnis ist ein Stammverzeichnis (<xref:System.IO.IOException>).  
+- Das Quellverzeichnis ist ein Stammverzeichnis (<xref:System.IO.IOException>).  
   
--   Der kombinierte Pfad verweist auf eine vorhandene Datei (<xref:System.IO.IOException>).  
+- Der kombinierte Pfad verweist auf eine vorhandene Datei (<xref:System.IO.IOException>).  
   
--   Der Quellpfad und der Zielpfad sind identisch (<xref:System.IO.IOException>).  
+- Der Quellpfad und der Zielpfad sind identisch (<xref:System.IO.IOException>).  
   
--   `ShowUI` ist auf `UIOption.AllDialogs` festgelegt, und der Benutzer bricht den Vorgang ab, oder eine oder mehrere Dateien im Verzeichnis können nicht kopiert werden (<xref:System.OperationCanceledException>).  
+- `ShowUI` ist auf `UIOption.AllDialogs` festgelegt, und der Benutzer bricht den Vorgang ab, oder eine oder mehrere Dateien im Verzeichnis können nicht kopiert werden (<xref:System.OperationCanceledException>).  
   
--   Der Vorgang ist zyklisch (<xref:System.InvalidOperationException>).  
+- Der Vorgang ist zyklisch (<xref:System.InvalidOperationException>).  
   
--   Der Pfad enthält einen Doppelpunkt (:) (<xref:System.NotSupportedException>).  
+- Der Pfad enthält einen Doppelpunkt (:) (<xref:System.NotSupportedException>).  
   
--   Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
+- Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
   
--   Der Pfad eines Datei- oder Ordnernamens enthält einen Doppelpunkt (:) oder weist ein ungültiges Format auf (<xref:System.NotSupportedException>).  
+- Der Pfad eines Datei- oder Ordnernamens enthält einen Doppelpunkt (:) oder weist ein ungültiges Format auf (<xref:System.NotSupportedException>).  
   
--   Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>).  
+- Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>).  
   
--   Eine Zieldatei ist vorhanden, aber nicht zugänglich (<xref:System.UnauthorizedAccessException>).  
+- Eine Zieldatei ist vorhanden, aber nicht zugänglich (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Siehe auch
 

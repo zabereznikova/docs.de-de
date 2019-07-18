@@ -2,12 +2,12 @@
 title: Benutzernamen- und Kennwort-Validierungssteuerelement
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16e5f854dbe76150945145c0ce81d0d5fa4ac0d0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162749"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421827"
 ---
 # <a name="user-name-password-validator"></a>Benutzernamen- und Kennwort-Validierungssteuerelement
 Dieses Beispiel veranschaulicht, wie ein benutzerdefiniertes UserNamePassword-Validierungssteuerelement implementiert wird. Dies ist nützlich, wenn keines der integrierten UserNamePassword-Validierungsmodi den Anforderungen der Anwendung entspricht (z. B. wenn Benutzername/Kennwort-Paare in externen Speichern wie einer Datenbank gespeichert werden). In diesem Beispiel wird ein Dienst gezeigt, der ein benutzerdefiniertes Validierungssteuerelement enthält, das auf zwei bestimmte Benutzername/Kennwort-Paare überprüft. Der Client verwendet solch ein Benutzername/Kennwort-Paar, um sich beim Dienst zu authentifizieren.
@@ -26,13 +26,13 @@ Dieses Beispiel veranschaulicht, wie ein benutzerdefiniertes UserNamePassword-Va
 
  Insgesamt zeigt dieses Beispiel Folgendes:
 
--   Der Client kann mit einem Benutzernamentoken authentifiziert werden.
+- Der Client kann mit einem Benutzernamentoken authentifiziert werden.
 
--   Der Server überprüft die Clientanmeldeinformationen anhand eines benutzerdefinierten UserNamePasswordValidator und wie benutzerdefinierte Fehler aus der Logik zur Validierung von Benutzername und Kennwort an den Client weitergegeben werden.
+- Der Server überprüft die Clientanmeldeinformationen anhand eines benutzerdefinierten UserNamePasswordValidator und wie benutzerdefinierte Fehler aus der Logik zur Validierung von Benutzername und Kennwort an den Client weitergegeben werden.
 
--   Der Server wird mit dem X.509-Zertifikat des Servers authentifiziert.
+- Der Server wird mit dem X.509-Zertifikat des Servers authentifiziert.
 
- Der Dienst macht einen einzelnen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit der Konfigurationsdatei "App.conf" definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung konfiguriert ist, mit einer normalen `wsHttpBinding` , die standardmäßig WS-Securityand Benutzernamenauthentifizierung verwendet. Das Dienstverhalten gibt den `Custom`-Modus zum Überprüfen von Benutzername/Kennwort-Paaren zusammen mit dem Typ der Validierungssteuerelementklasse an. Das Verhalten gibt auch das Serverzertifikat mit dem `serviceCertificate`-Element an. Das Serverzertifikat muss für den gleichen Wert enthalten die `SubjectName` als die `findValue` in die [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ Der Dienst macht einen einzelnen Endpunkt zur Kommunikation mit dem Dienst verfügbar, der mit der Konfigurationsdatei "App.conf" definiert wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung konfiguriert ist, mit einer normalen `wsHttpBinding` , die standardmäßig WS-Security und Benutzernamen-Authentifizierung. Das Dienstverhalten gibt den `Custom`-Modus zum Überprüfen von Benutzername/Kennwort-Paaren zusammen mit dem Typ der Validierungssteuerelementklasse an. Das Verhalten gibt auch das Serverzertifikat mit dem `serviceCertificate`-Element an. Das Serverzertifikat muss für den gleichen Wert enthalten die `SubjectName` als die `findValue` in die [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
 <system.serviceModel>
@@ -254,7 +254,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.
 
--   Erstellen des Serverzertifikats
+- Erstellen des Serverzertifikats
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable %SERVER_NAME% gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Der Standardwert ist localhost.
 
@@ -268,7 +268,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installieren des Serverzertifikats in den Clientspeicher für vertrauenswürdige Zertifikate:
+- Installieren des Serverzertifikats in den Clientspeicher für vertrauenswürdige Zertifikate:
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
@@ -278,40 +278,40 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es
 
-1.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-2.  Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, folgen Sie den folgenden Anweisungen.
+2. Um das Beispiel in einer Konfiguration mit einem Computer oder computerübergreifend auszuführen, folgen Sie den folgenden Anweisungen.
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>So führen Sie das Beispiel auf demselben Computer aus
 
-1.  Führen Sie Setup.bat aus dem beispielinstallationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung ein. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
+1. Führen Sie Setup.bat aus dem beispielinstallationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung ein. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
 
     > [!NOTE]
     >  Die Batchdatei "Setup.bat" wird aus einer Visual Studio 2012-Eingabeaufforderung ausgeführt werden soll. Die PATH-Umgebungsvariable festgelegt in der Visual Studio 2012-Eingabeaufforderung verweist auf das Verzeichnis mit ausführbaren Dateien, die durch das Skript Setup.bat erforderlich sind.  
   
-2.  Starten Sie Service.exe aus dem Ordner \service\bin.  
+2. Starten Sie Service.exe aus dem Ordner \service\bin.  
   
-3.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
+3. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-4.  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-machines"></a>So führen Sie das Beispiel computerübergreifend aus  
   
-1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.  
+1. Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.  
   
-2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
+2. Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
   
-3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Die Konfigurationsdatei für den Server muss entsprechend aktualisiert werden, dass sie diesen neuen Zertifikatsnamen wiedergibt.  
+3. Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Die Konfigurationsdatei für den Server muss entsprechend aktualisiert werden, dass sie diesen neuen Zertifikatsnamen wiedergibt.  
   
-4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser – TrustedPeople des Clients. Dies ist nur dann erforderlich, wenn das Serverzertifikat nicht von einem vertrauenswürdigen Aussteller ausgegeben wurde.  
+4. Kopieren Sie das Serverzertifikat in den Speicher CurrentUser – TrustedPeople des Clients. Dies ist nur dann erforderlich, wenn das Serverzertifikat nicht von einem vertrauenswürdigen Aussteller ausgegeben wurde.  
   
-5.  Ändern Sie in der Datei "App.config" auf dem Dienstcomputer den Wert der Basisadresse, um anstelle von "localhost" einen vollqualifizierten Computernamen anzugeben.  
+5. Ändern Sie in der Datei "App.config" auf dem Dienstcomputer den Wert der Basisadresse, um anstelle von "localhost" einen vollqualifizierten Computernamen anzugeben.  
   
-6.  Starten Sie auf dem Dienstcomputer Service.exe in einem Eingabeaufforderungsfenster.  
+6. Starten Sie auf dem Dienstcomputer Service.exe in einem Eingabeaufforderungsfenster.  
   
-7.  Kopieren Sie die Clientprogrammdateien aus dem Ordner "\client\bin\" (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.  
+7. Kopieren Sie die Clientprogrammdateien aus dem Ordner "\client\bin\" (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.  
   
-8.  Ändern Sie in der Datei "Client.exe.config" auf dem Clientcomputer den Wert für die Adresse des Endpunkts so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt.  
+8. Ändern Sie in der Datei "Client.exe.config" auf dem Clientcomputer den Wert für die Adresse des Endpunkts so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt.  
   
 9. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster.  
   
@@ -319,4 +319,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
-1.  Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben. Dadurch wird das Serverzertifikat aus dem Zertifikatspeicher entfernt.  
+1. Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben. Dadurch wird das Serverzertifikat aus dem Zertifikatspeicher entfernt.  

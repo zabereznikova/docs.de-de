@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934276"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Der Name einer Bereichsvariablen kann nur von einem einfachen oder qualifizierten Namen ohne Argumente abgeleitet werden
 Ein Programmierelement, das eine oder mehrere Argumente akzeptiert, ist in einer LINQ-Abfrage enthalten. Der Compiler ist nicht möglich, eine Bereichsvariable, die von diesem Programmierelement abzuleiten.  
@@ -21,7 +21,7 @@ Ein Programmierelement, das eine oder mehrere Argumente akzeptiert, ist in einer
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Geben Sie einen expliziten Variablennamen für das Programmierelement, wie im folgenden Code gezeigt:  
+1. Geben Sie einen expliziten Variablennamen für das Programmierelement, wie im folgenden Code gezeigt:  
   
 ```  
 Dim query = From var1 In collection1   

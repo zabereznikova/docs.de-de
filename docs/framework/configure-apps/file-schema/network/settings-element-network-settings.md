@@ -1,5 +1,5 @@
 ---
-title: <settings> -Element (Netzwerkeinstellungen)
+title: <settings>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674414"
 ---
 # <a name="settings-element-network-settings"></a>\<Einstellungen >-Element (Netzwerkeinstellungen)
 Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProperty=nameWithType>-Namespace.  
@@ -51,7 +51,7 @@ Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProp
 |[ipv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Ermöglicht es Internet Protocol, Version 6 (IPv6) unterstützen.|  
 |[\<PerformanceCounter >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Ermöglicht das Netzwerk-Leistungsindikatoren.|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Konfiguriert die Verbindungen mit Netzwerkressourcen.|  
-|[Socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.|  
+|[socket](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.|  
 |[\<WebProxyScript >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Konfiguriert die Eigenschaften des Skripts zur Ermittlung von Webproxys, verwendet.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -68,4 +68,4 @@ Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net?displayProp
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

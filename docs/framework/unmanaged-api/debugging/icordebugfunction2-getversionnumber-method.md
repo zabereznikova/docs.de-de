@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cc9c2af62184c83857b82445941f6087a05c2c3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 89cf2a12b0a693bbed3e8a3c1134d0f2b2a72a30
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497170"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754448"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber-Methode
 Ruft die bearbeiten und Fortfahren-Version dieser Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetVersionNumber (  
     [out] ULONG32   *pnVersion  
 );  

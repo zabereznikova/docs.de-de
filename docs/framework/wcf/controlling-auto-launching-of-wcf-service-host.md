@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
-ms.openlocfilehash: 2fa060e567fba9bb5e6344b2c8fc67fb639ad0f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 806d85df2a7fff63704db755400b81cc2dc5c37b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228496"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652087"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>Steuern des automatischen Starts des WCF-Diensthosts
 Sie können den automatischen Start-Funktion von Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) für einen WCF-Dienstbibliotheksprojekt, steuern, beim Debuggen eines anderen Projekts in der gleichen Visual Studio-Projektmappe mit mehreren Projekten.  
@@ -20,13 +20,13 @@ Sie können den automatischen Start-Funktion von Windows Communication Foundatio
   
  Diese Option steht für die folgenden Projekte zur Verfügung:  
   
--   WCF-Dienstbibliotheksprojekt.  
+- WCF-Dienstbibliotheksprojekt.  
   
--   Bibliotheksprojekt für sequenziellen Workflowdienst  
+- Bibliotheksprojekt für sequenziellen Workflowdienst  
   
--   Bibliotheksprojekt für Statuscomputerworkflowdienst  
+- Bibliotheksprojekt für Statuscomputerworkflowdienst  
   
--   Bibliotheksprojekt für Syndication-Dienst  
+- Bibliotheksprojekt für Syndication-Dienst  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73a4a8a2fc737bbf4b49ca859f0549ca7efd54a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5a839eb2edd36dc726c819a819fd4d427fbaea40
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089769"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740993"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance-Funktion
 Erstellt ein Schnittstellenobjekt für das angegebene Ziel-Element.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CLRDataCreateInstance (  
     [in]  REFIID           iid,   
     [in]  ICLRDataTarget  *target,   

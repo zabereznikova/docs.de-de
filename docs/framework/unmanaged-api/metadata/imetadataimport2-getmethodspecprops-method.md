@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35212e7d261a5b385823fdaa345f6fbd638571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f7700236efe7b031866867f5ed859ba71683a8a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079343"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782300"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps-Methode
 Ruft die Metadatensignatur der Methode verwiesen wird, vom angegebenen MethodSpec token ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetMethodSpecProps (  
    [in]  mdMethodSpec     mi,  
    [out] mdToken          *tkParent,  

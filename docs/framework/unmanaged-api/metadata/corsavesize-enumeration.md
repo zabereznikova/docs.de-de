@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc36468a2016822e884ec3a36a23c75477a00a2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c1e7bbac17d9a9ae191a5ad6d69b52a806383562
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217197"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781600"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize-Enumeration
 Enthält Werte, die den Genauigkeitsgrad angeben, der beim Abfragen der Größe eines Speichervorgangs erforderlich ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorSaveSize {  
     cssAccurate                = 0x0000,   
     cssQuick                   = 0x0001,   

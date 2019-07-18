@@ -3,11 +3,11 @@ title: Verfügbarmachen von Daten mit CacheMetadata
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
 ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945703"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>Verfügbarmachen von Daten mit CacheMetadata
 
@@ -31,8 +31,7 @@ Die Standardimplementierung von <xref:System.Activities.NativeActivity.CacheMeta
 
 - <xref:System.Collections.ICollection> Der Typ <xref:System.Activities.ActivityDelegate>: Alle Elemente in der Auflistung werden zur Laufzeit als öffentliche Delegaten verfügbar gemacht.
 
-
-  <xref:System.Activities.Activity.CacheMetadata%2A> für Aktivitäten, die aus <xref:System.Activities.Activity>, <xref:System.Workflow.Activities.CodeActivity> abgeleitet werden, und <xref:System.Activities.AsyncCodeActivity> funktionieren auch wie oben beschrieben, mit Ausnahme der folgenden Unterschiede:
+<xref:System.Activities.Activity.CacheMetadata%2A> für Aktivitäten, die aus <xref:System.Activities.Activity>, <xref:System.Workflow.Activities.CodeActivity> abgeleitet werden, und <xref:System.Activities.AsyncCodeActivity> funktionieren auch wie oben beschrieben, mit Ausnahme der folgenden Unterschiede:
 
 - Klassen, die aus <xref:System.Activities.Activity> abgeleitet werden, können keine untergeordneten Aktivitäten oder Delegaten planen. Daher werden solche Member als importierte untergeordnete Elemente und Delegaten verfügbar gemacht.
 
@@ -60,7 +59,7 @@ protected override void CacheMetadata(NativeActivityMetadata metadata)
 
 Zur Übergabe von Daten an untergeordnete Aktivitäten, die mithilfe von Variablen von einer Aktivität geplant werden sollen, müssen die Variablen als Implementierungsvariablen hinzugefügt werden. Die Werte von öffentlichen Variablen können nicht auf diese Weise festgelegt werden. Der Grund ist, dass Aktivitäten nach Möglichkeit eher als Implementierungen von Funktionen (die über Parameter verfügen) ausgeführt werden sollen und nicht als gekapselte Klassen (die über Eigenschaften verfügen). Es gibt jedoch Situationen, in denen die Argumente explizit festgelegt werden müssen, beispielsweise beim Verwenden von <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, da die geplante Aktivität nicht so auf die Argumente der übergeordneten Aktivität zugreifen kann wie eine untergeordnete Aktivität.
 
-Der folgende Codeausschnitt veranschaulicht, wie ein Argument aus einer systemeigene Aktivität mit <xref:System.Activities.Activity.CacheMetadata%2A> an eine geplante Aktivität übergeben wird.
+Der folgende Codeausschnitt veranschaulicht, wie ein Argument aus einer nativen Aktivität mit <xref:System.Activities.Activity.CacheMetadata%2A> an eine geplante Aktivität übergeben wird.
 
 ```csharp
 public sealed class ChildActivity : NativeActivity

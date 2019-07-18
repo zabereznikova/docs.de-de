@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4b74ab89837592de2de6cfa43d9efb1ed0f63d69
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139606"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457446"
 ---
 # <a name="flow-document-overview"></a>Übersicht über Flussdokumente
 Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein vordefiniertes Layout festgelegt zu werden, passen Flussdokumente ihren Inhalt basierend auf Laufzeitvariablen dynamisch an Variablen wie Fenstergröße, Geräteauflösung und optionale Benutzereinstellungen an und brechen den Inhalt dynamisch um. Zudem bieten Flussdokumente erweiterte Dokumentfunktionen, z.B. Paginierung und Spalten. Dieses Thema enthält eine Übersicht über Flussdokumente und deren Erstellung.  
@@ -42,13 +42,13 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Wie in der obigen Abbildung verdeutlicht es gibt mehrere Funktionen in Flussdokumenten integriert:
   
--   Suchen: Ermöglicht dem Benutzer um eine Volltextsuche ein ganzes Dokument auszuführen.  
+- Suchen: Ermöglicht dem Benutzer um eine Volltextsuche ein ganzes Dokument auszuführen.  
   
--   Anzeigemodus: Der Benutzer kann seinen bevorzugten Anzeigemodus, einschließlich einen Single-Page (Seite-an-a-Time)-Anzeigemodus, eine zwei-Seite-an-a-Time (Buch lesen Format) anzeigen, Modus und einen fortlaufenden Bildlaufmodus anzeigen (buchleseformat) von auswählen.  Weitere Informationen zu diesen Anzeigemodi finden Sie unter <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
+- Anzeigemodus: Der Benutzer kann seinen bevorzugten Anzeigemodus, einschließlich einen Single-Page (Seite-an-a-Time)-Anzeigemodus, eine zwei-Seite-an-a-Time (Buch lesen Format) anzeigen, Modus und einen fortlaufenden Bildlaufmodus anzeigen (buchleseformat) von auswählen.  Weitere Informationen zu diesen Anzeigemodi finden Sie unter <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
   
--   Steuerelemente für die Seitennavigation: Wenn der Anzeigemodus des Dokuments Seiten verwendet werden, enthalten die Steuerelemente für die Seitennavigation eine Schaltfläche zum Wechseln der nächsten Seite (Pfeil nach unten) oder vorherige Seite (Pfeil), als auch Indikatoren für die aktuelle Seitenzahl und die Gesamtzahl der Seiten. Das Blättern durch Seiten funktioniert auch mithilfe der Pfeiltasten auf der Tastatur.  
+- Steuerelemente für die Seitennavigation: Wenn der Anzeigemodus des Dokuments Seiten verwendet werden, enthalten die Steuerelemente für die Seitennavigation eine Schaltfläche zum Wechseln der nächsten Seite (Pfeil nach unten) oder vorherige Seite (Pfeil), als auch Indikatoren für die aktuelle Seitenzahl und die Gesamtzahl der Seiten. Das Blättern durch Seiten funktioniert auch mithilfe der Pfeiltasten auf der Tastatur.  
   
--   Zoom: Die Zoomsteuerelemente ermöglichen erhöhen oder verringern die Zoomstufe, indem Sie auf das Pluszeichen oder minusschaltfächen klickt den Benutzer bzw. aus. Die Zoomsteuerelemente umfassen zudem einen Schieberegler zum Anpassen der Zoomstufe. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
+- Zoom: Die Zoomsteuerelemente ermöglichen erhöhen oder verringern die Zoomstufe, indem Sie auf das Pluszeichen oder minusschaltfächen klickt den Benutzer bzw. aus. Die Zoomsteuerelemente umfassen zudem einen Schieberegler zum Anpassen der Zoomstufe. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
   
  Diese Funktionen können basierend auf dem zum Hosten des fortlaufenden Inhalts verwendeten Steuerelement bearbeitet werden. Im nächsten Abschnitt werden die verschiedenen Steuerelemente beschrieben.  
   
@@ -75,9 +75,9 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
 ## <a name="creating-flow-content"></a>Erstellen von fortlaufendem Inhalt  
  Fortlaufendem Inhalt kann komplex sein, bestehend aus verschiedenen Elementen einschließlich Text, Bilder, Tabellen, und sogar <xref:System.Windows.UIElement> abgeleiteten Klassen wie Steuerelemente. Um zu verstehen, wie komplexer fortlaufender Inhalt erstellt wird, sind die folgenden Punkte wichtig:  
   
--   **Flussbezogene Klassen**: Jede in fortlaufendem Inhalt verwendete Klasse verfügt über einen bestimmten Zweck. Darüber hinaus hilft Ihnen die hierarchische Beziehung zwischen Flussklassen dabei, zu verstehen, wie sie verwendet werden. Z. B. von abgeleiteten Klassen der <xref:System.Windows.Documents.Block> -Klasse verwendet, um andere Objekte enthalten, während die abgeleitete Klassen <xref:System.Windows.Documents.Inline> enthält Objekte, die angezeigt werden.  
+- **Flussbezogene Klassen**: Jede in fortlaufendem Inhalt verwendete Klasse verfügt über einen bestimmten Zweck. Darüber hinaus hilft Ihnen die hierarchische Beziehung zwischen Flussklassen dabei, zu verstehen, wie sie verwendet werden. Z. B. von abgeleiteten Klassen der <xref:System.Windows.Documents.Block> -Klasse verwendet, um andere Objekte enthalten, während die abgeleitete Klassen <xref:System.Windows.Documents.Inline> enthält Objekte, die angezeigt werden.  
   
--   **Inhaltsschema**: Ein Flussdokument kann eine große Anzahl von geschachtelten Elementen erfordern. Das Inhaltsschema gibt mögliche Übergeordnet/Untergeordnet-Beziehungen zwischen Elementen an.  
+- **Inhaltsschema**: Ein Flussdokument kann eine große Anzahl von geschachtelten Elementen erfordern. Das Inhaltsschema gibt mögliche Übergeordnet/Untergeordnet-Beziehungen zwischen Elementen an.  
   
  In den folgenden Abschnitten wird jeder dieser Bereiche ausführlicher erklärt.  
   
@@ -89,14 +89,14 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Für die Zwecke des fortlaufenden Inhalts gibt es zwei wichtige Kategorien:  
   
-1.  **Blockabgeleitete Klassen**: Auch "Blockinhaltselemente" oder einfach "Blockelemente" genannt. Elemente, die von erben <xref:System.Windows.Documents.Block> kann verwendet werden, um Elemente unter einem gemeinsamen übergeordneten Element gruppiert oder gemeinsame Attribute auf eine Gruppe angewendet.  
+1. **Blockabgeleitete Klassen**: Auch "Blockinhaltselemente" oder einfach "Blockelemente" genannt. Elemente, die von erben <xref:System.Windows.Documents.Block> kann verwendet werden, um Elemente unter einem gemeinsamen übergeordneten Element gruppiert oder gemeinsame Attribute auf eine Gruppe angewendet.  
   
-2.  **Inlineabgeleitete Klassen**: Auch "Inlineinhaltselemente" oder einfach "Inlineelemente" genannt. Elemente, die von erben <xref:System.Windows.Documents.Inline> entweder in einem Blockelement oder einem anderen Inlineelement enthalten sind. Inlineelemente werden oft als direkter Container für Inhalt verwendet, der auf dem Bildschirm gerendert wird. Z. B. eine <xref:System.Windows.Documents.Paragraph> (Block-Element) darf eine <xref:System.Windows.Documents.Run> (Inline-Element), aber die <xref:System.Windows.Documents.Run> enthält den Text, der auf dem Bildschirm gerendert wird.  
+2. **Inlineabgeleitete Klassen**: Auch "Inlineinhaltselemente" oder einfach "Inlineelemente" genannt. Elemente, die von erben <xref:System.Windows.Documents.Inline> entweder in einem Blockelement oder einem anderen Inlineelement enthalten sind. Inlineelemente werden oft als direkter Container für Inhalt verwendet, der auf dem Bildschirm gerendert wird. Z. B. eine <xref:System.Windows.Documents.Paragraph> (Block-Element) darf eine <xref:System.Windows.Documents.Run> (Inline-Element), aber die <xref:System.Windows.Documents.Run> enthält den Text, der auf dem Bildschirm gerendert wird.  
   
  Jede Klasse in diesen zwei Kategorien wird nachstehend kurz beschrieben.  
   
 ### <a name="block-derived-classes"></a>Blockabgeleitete Klassen  
- **Absatz**  
+ **Paragraph**  
   
  <xref:System.Windows.Documents.Paragraph> wird normalerweise zum Gruppieren von Inhalten in einem Absatz verwendet. Die einfachste und häufigste Verwendung von Paragraph ist, einen Textabsatz zu erstellen.  
   
@@ -107,7 +107,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Sie können jedoch auch andere inlineabgeleitete Elemente enthalten, wie unten dargestellt wird. 
   
- **Abschnitt**  
+ **Bereich**  
   
  <xref:System.Windows.Documents.Section> wird nur verwendet, um andere enthält <xref:System.Windows.Documents.Block>-abgeleitete Elemente. Sie wendet keine Standardformatierungen auf die Elemente an, die sie einschließt. Allerdings alle Standardwerte für die Eigenschaft Gruppe auf einen <xref:System.Windows.Documents.Section> gilt für die untergeordneten Elemente. Eine Section-Klasse ermöglicht es Ihnen auch, ihre untergeordnete Auflistung programmgesteuert zu durchlaufen. <xref:System.Windows.Documents.Section> werden in ähnlicher Weise wie für die \<DIV >-Tag in HTML.  
   
@@ -130,7 +130,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  ![Screenshot mit einem UIElement eingebettet in fortlaufenden Inhalt.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **Liste**  
+ **List**  
   
  <xref:System.Windows.Documents.List> wird verwendet, um eine Liste mit Aufzählungszeichen oder Zahlen erstellen. Legen Sie die <xref:System.Windows.Documents.List.MarkerStyle%2A> Eigenschaft, um eine <xref:System.Windows.TextMarkerStyle> Enumerationswert, der den Stil der Liste zu bestimmen. Das folgende Beispiel zeigt, wie Sie eine einfache Liste erstellen.  
   
@@ -141,7 +141,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  **Hinweis:** <xref:System.Windows.Documents.List> ist das einzige Flusselement, das verwendet die <xref:System.Windows.Documents.ListItemCollection> zum Verwalten von untergeordneten Elementen.  
   
- **Tabelle**  
+ **Table**  
   
  <xref:System.Windows.Documents.Table> Dient zum Erstellen einer Tabelle. <xref:System.Windows.Documents.Table> ähnelt der <xref:System.Windows.Controls.Grid> -Element, aber es weist mehr Funktionen und erfordert daher höheren Ressourcenaufwand. Da <xref:System.Windows.Controls.Grid> ist eine <xref:System.Windows.UIElement>, es kann nicht in fortlaufendem Inhalt verwendet werden, es sei denn, sie in enthalten ist ein <xref:System.Windows.Documents.BlockUIContainer> oder <xref:System.Windows.Documents.InlineUIContainer>. Weitere Informationen zu <xref:System.Windows.Documents.Table>, finden Sie unter [Tabellenübersicht](table-overview.md).  
   
@@ -152,7 +152,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
- **Hinweis**:  Ab der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft der <xref:System.Windows.Documents.Run> Objekt ist eine Abhängigkeitseigenschaft. Sie binden die <xref:System.Windows.Documents.Run.Text%2A> -Eigenschaft an eine Datenquelle, beispielsweise eine <xref:System.Windows.Controls.TextBlock>. Die <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft unterstützt die unidirektionale Bindung. Die <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft unterstützt auch die bidirektionale Bindung, mit Ausnahme von <xref:System.Windows.Controls.RichTextBox>. Ein Beispiel finden Sie unter <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
+ **Hinweis**:  Ab .NET Framework 4, die <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft der <xref:System.Windows.Documents.Run> Objekt ist eine Abhängigkeitseigenschaft. Sie binden die <xref:System.Windows.Documents.Run.Text%2A> -Eigenschaft an eine Datenquelle, beispielsweise eine <xref:System.Windows.Controls.TextBlock>. Die <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft unterstützt die unidirektionale Bindung. Die <xref:System.Windows.Documents.Run.Text%2A> Eigenschaft unterstützt auch die bidirektionale Bindung, mit Ausnahme von <xref:System.Windows.Controls.RichTextBox>. Ein Beispiel finden Sie unter <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
  **Span**  
   
@@ -194,21 +194,21 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  <xref:System.Windows.Documents.Figure> und <xref:System.Windows.Documents.Floater> unterscheiden sich auf verschiedene Weise und für verschiedene Szenarios verwendet werden.  
   
- **Abbildung:**  
+ **Figure:**  
   
--   Kann positioniert werden: Sie können die horizontalen und vertikalen Textmarken auf es Bezug auf die Seite, die Inhalte, die Spalte oder die Absatz andocken festlegen. Sie können auch die <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> und <xref:System.Windows.Documents.Figure.VerticalOffset%2A> Eigenschaft, um beliebige Offsets anzugeben.  
+- Kann positioniert werden: Sie können die horizontalen und vertikalen Textmarken auf es Bezug auf die Seite, die Inhalte, die Spalte oder die Absatz andocken festlegen. Sie können auch die <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> und <xref:System.Windows.Documents.Figure.VerticalOffset%2A> Eigenschaft, um beliebige Offsets anzugeben.  
   
--   Ist mehr als einer Spalte beträchtliche: Sie können festlegen, <xref:System.Windows.Documents.Figure> Höhe und Breite auf ein Vielfaches von Seite, Inhalt oder Spalte Höhe oder Breite. Beachten Sie, dass im Fall von Seiten und Inhalt keine Vielfachen über 1 zulässig sind. Sie können z. B. die Breite des Festlegen einer <xref:System.Windows.Documents.Figure> "0.5 Page" oder "0.25 Content" oder "2 Column" sein. Sie können die Höhe und Breite auch auf absolute Pixelwerte festlegen.  
+- Ist mehr als einer Spalte beträchtliche: Sie können festlegen, <xref:System.Windows.Documents.Figure> Höhe und Breite auf ein Vielfaches von Seite, Inhalt oder Spalte Höhe oder Breite. Beachten Sie, dass im Fall von Seiten und Inhalt keine Vielfachen über 1 zulässig sind. Sie können z. B. die Breite des Festlegen einer <xref:System.Windows.Documents.Figure> "0.5 Page" oder "0.25 Content" oder "2 Column" sein. Sie können die Höhe und Breite auch auf absolute Pixelwerte festlegen.  
   
--   Paginiert nicht: Wenn der Inhalt in einem <xref:System.Windows.Documents.Figure> passt nicht in der <xref:System.Windows.Documents.Figure>, passt der Inhalt wird ausgegeben, und der restliche Inhalt geht verloren  
+- Paginiert nicht: Wenn der Inhalt in einem <xref:System.Windows.Documents.Figure> passt nicht in der <xref:System.Windows.Documents.Figure>, passt der Inhalt wird ausgegeben, und der restliche Inhalt geht verloren  
   
  **Floater:**  
   
--   Kann nicht positioniert werden und wird gerendert, wo Speicherplatz dafür verfügbar gemacht werden kann. Sie können nicht festgelegt, den Offset oder die Verankerung einer <xref:System.Windows.Documents.Floater>.  
+- Kann nicht positioniert werden und wird gerendert, wo Speicherplatz dafür verfügbar gemacht werden kann. Sie können nicht festgelegt, den Offset oder die Verankerung einer <xref:System.Windows.Documents.Floater>.  
   
--   Mehr als eine Spalte kann nicht festgelegt werden: In der Standardeinstellung <xref:System.Windows.Documents.Floater> Größe an eine Spalte. Es wurde eine <xref:System.Windows.Documents.Floater.Width%2A> -Eigenschaft, die festgelegt werden kann, um einen absoluten Pixelwert, aber wenn ist dieser Wert größer als eine Spaltenbreite wird ignoriert und die Floater-Klasse ist Größe einer Spalte. Sie können die Größe auf weniger als einer Spalte durch die richtige Pixelbreite festlegen, größenanpassung ist jedoch nicht spaltenabhängig, sodass "0.5Column" kein gültiger Ausdruck für ist <xref:System.Windows.Documents.Floater> Breite. <xref:System.Windows.Documents.Floater> hat keine Höheneigenschaft, und es ist Höhe kann nicht festgelegt werden, die die Höhe hängt vom Inhalt  
+- Mehr als eine Spalte kann nicht festgelegt werden: In der Standardeinstellung <xref:System.Windows.Documents.Floater> Größe an eine Spalte. Es wurde eine <xref:System.Windows.Documents.Floater.Width%2A> -Eigenschaft, die festgelegt werden kann, um einen absoluten Pixelwert, aber wenn ist dieser Wert größer als eine Spaltenbreite wird ignoriert und die Floater-Klasse ist Größe einer Spalte. Sie können die Größe auf weniger als einer Spalte durch die richtige Pixelbreite festlegen, größenanpassung ist jedoch nicht spaltenabhängig, sodass "0.5Column" kein gültiger Ausdruck für ist <xref:System.Windows.Documents.Floater> Breite. <xref:System.Windows.Documents.Floater> hat keine Höheneigenschaft, und es ist Höhe kann nicht festgelegt werden, die die Höhe hängt vom Inhalt  
   
--   <xref:System.Windows.Documents.Floater> paginiert: Wenn der Inhalt bei angegebener Breite auf mehr als 1 Spaltenhöhe erweitert wird, bricht Floater um und paginiert zur nächsten Spalte, nächsten Seite usw.  
+- <xref:System.Windows.Documents.Floater> paginiert: Wenn der Inhalt bei angegebener Breite auf mehr als 1 Spaltenhöhe erweitert wird, bricht Floater um und paginiert zur nächsten Spalte, nächsten Seite usw.  
   
  <xref:System.Windows.Documents.Figure> ist ein guter Ausgangspunkt zum eigenständigen Inhalt zu platzieren, in denen Sie zum Steuern der Größe möchten, und Positionierung und sind davon überzeugt, dass der Inhalt in die angegebene Größe passt. <xref:System.Windows.Documents.Floater> ist ein guter Ausgangspunkt, um weitere kostenlose Inhalt zu platzieren, die ähnlich wie der Inhalt der Hauptseite fließen, aber von diesem getrennt ist.  
   
@@ -350,7 +350,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
 
 - [Text](optimizing-performance-text.md)
 - [Typografie in WPF](typography-in-wpf.md)
-- [Gewusst wie-Themen](flow-content-elements-how-to-topics.md)
+- [Themen zu Vorgehensweisen](flow-content-elements-how-to-topics.md)
 - [Übersicht über das TextElement-Inhaltsmodell](textelement-content-model-overview.md)
 - [Übersicht über RichTextBox](../controls/richtextbox-overview.md)
 - [Dokumente in WPF](documents-in-wpf.md)

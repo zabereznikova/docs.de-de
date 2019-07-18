@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12a37ee8367006975b0f8ee4fa638ae3d72f9486
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: da473ed176ab6c69ed974d5f28b22fc8eb30c6af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487746"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762518"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a>ICorDebugThread::GetAppDomain-Methode
 Ruft einen Schnittstellenzeiger an die Anwendungsdomäne, in der dieser ICorDebugThread derzeit ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetAppDomain (  
     [out] ICorDebugAppDomain  **ppAppDomain  
 );  

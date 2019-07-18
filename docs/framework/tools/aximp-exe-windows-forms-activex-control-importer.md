@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b7a2725b340c4ecb43861e1b8855fcae425a4b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119196"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Control Importer-Tool)
 Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliothek für ein ActiveX-Steuerelement in ein Windows Forms-Steuerelement.  
@@ -34,22 +34,22 @@ Der ActiveX Control Importer konvertiert Typdefinitionen in einer COM-Typbibliot
 aximp [options]{file.dll | file.ocx}  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
   
 |Argument|Beschreibung|  
 |--------------|-----------------|  
-|*datei*|Der Name der Quelldatei mit dem zu konvertierenden ActiveX-Steuerelement. Das Dateiargument muss die Erweiterung ".dll" oder ".ocx" aufweisen.|  
+|*Datei*|Der Name der Quelldatei mit dem zu konvertierenden ActiveX-Steuerelement. Das Dateiargument muss die Erweiterung ".dll" oder ".ocx" aufweisen.|  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
 |`/delaysign`|Legt fest, dass "Aximp.exe" das resultierende Steuerelement verzögert signiert. Diese Option müssen Sie entweder mit der Option `/keycontainer:`, `/keyfile:` oder `/publickey:` angeben. Weitere Informationen zum verzögerten Signieren finden Sie unter [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|`/keycontainer:` *containername*|Signiert die resultierende Steuerelement mit einem starken Namen, wobei das Paar aus privatem und öffentlichem Schlüssel aus dem Schlüsselcontainer verwendet wird, der mit *containername* angegeben wurde|  
-|`/keyfile:` *dateiname*|Signiert das resultierende Steuerelement unter Verwendung des unter *dateiname* angegebenen Paar aus privatem und öffentlichem Schlüssel des Herausgebers mit einem starken Namen.|  
+|`/keycontainer:` *containerName*|Signiert die resultierende Steuerelement mit einem starken Namen, wobei das Paar aus privatem und öffentlichem Schlüssel aus dem Schlüsselcontainer verwendet wird, der mit *containername* angegeben wurde|  
+|`/keyfile:` *filename*|Signiert das resultierende Steuerelement unter Verwendung des unter *dateiname* angegebenen Paar aus privatem und öffentlichem Schlüssel des Herausgebers mit einem starken Namen.|  
 |`/nologo`|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
-|`/out:` *dateiname*|Legt den Namen der zu erstellenden Assembly fest.|  
-|`/publickey:` *dateiname*|Signiert das resultierende Steuerelement unter Verwendung des öffentlichen Schlüssels, der in der durch *dateiname* angegebenen Datei enthalten ist, mit einem starken Namen.|  
-|`/rcw:` *dateiname*|Verwendet den angegebenen Runtime Callable Wrapper, anstatt einen neuen zu generieren. Sie können mehrere Instanzen angeben. Das aktuelle Verzeichnis wird für relative Pfade verwendet. Weitere Informationen finden Sie im Abschnitt [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
+|`/out:` *filename*|Legt den Namen der zu erstellenden Assembly fest.|  
+|`/publickey:` *filename*|Signiert das resultierende Steuerelement unter Verwendung des öffentlichen Schlüssels, der in der durch *dateiname* angegebenen Datei enthalten ist, mit einem starken Namen.|  
+|`/rcw:` *filename*|Verwendet den angegebenen Runtime Callable Wrapper, anstatt einen neuen zu generieren. Sie können mehrere Instanzen angeben. Das aktuelle Verzeichnis wird für relative Pfade verwendet. Weitere Informationen finden Sie im Abschnitt [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
 |`/silent`|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
 |`/source`|Erstellt C#-Quellcode für den Windows Forms-Wrapper.|  
 |`/verbose`|Gibt den ausführlichen Modus an und zeigt zusätzliche Verlaufsinformationen an.|  
@@ -80,5 +80,6 @@ aximp c:\systemroot\system32\msdxm.ocx
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Extras](../../../docs/framework/tools/index.md)
-- [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+
+- [Tools](../../../docs/framework/tools/index.md)
+- [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

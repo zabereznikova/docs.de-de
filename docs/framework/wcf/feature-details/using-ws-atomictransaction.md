@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
-ms.openlocfilehash: 8a8265873e4287e1455659aa4d9fae7e1d570a00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e01f5b683bebe1f4cdf282c56aa3049b6da794ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165473"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637479"
 ---
 # <a name="using-ws-atomictransaction"></a>Verwenden von WS-AtomicTransaction
 WS-Atomic-Transaktion (WS-AT) ist ein interoperables Transaktionsprotokoll. Mit diesem Protokoll können Sie verteilte Transaktionen unter Verwendung von Webdienstnachrichten übergeben und interoperativ zwischen heterogenen Transaktionsinfrastrukturen koordinieren. WS-AT verwendet das Zwei-Phasen-Commitprotokoll, um eine unteilbare Ausgabe zwischen verteilten Anwendungen, Transaktions-Managern und Ressourcen-Managern zu erzielen.  
@@ -20,12 +20,12 @@ WS-Atomic-Transaktion (WS-AT) ist ein interoperables Transaktionsprotokoll. Mit 
   
  Die Protokollauswahl beeinflusst Folgendes:  
   
--   Das Format der Nachrichtenheader, das zur Weitergabe der Transaktion vom Client an den Server verwendet wird.  
+- Das Format der Nachrichtenheader, das zur Weitergabe der Transaktion vom Client an den Server verwendet wird.  
   
--   Das Netzwerkprotokoll, mit dem das Zwei-Phasen-Commitprotokoll zwischen dem Transaktions-Manager des Clients und der Transaktion des Servers ausgeführt wird, um das Ergebnis der Transaktion aufzulösen.  
+- Das Netzwerkprotokoll, mit dem das Zwei-Phasen-Commitprotokoll zwischen dem Transaktions-Manager des Clients und der Transaktion des Servers ausgeführt wird, um das Ergebnis der Transaktion aufzulösen.  
   
  Wenn der Server und der Client mithilfe von WCF geschrieben werden, müssen Sie keine WS-AT verwenden. Sie können stattdessen die Standardeinstellungen von `NetTcpBinding` mit aktiviertem `TransactionFlow`-Attribut verwenden. Dieses nutzt dann stattdessen das `OleTransactions`-Protokoll. Weitere Informationen finden Sie unter [ \<NetTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md). Andernfalls müssen Sie bei der Weitergabe von Transaktionen an Webdienste, die mit der Technologie von Fremdanbietern erstellt wurden, WS-AT verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurieren der WS-AtomicTransaction-Unterstützung](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+- [Konfigurieren der Unterstützung von WS-Atomic-Transaction](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

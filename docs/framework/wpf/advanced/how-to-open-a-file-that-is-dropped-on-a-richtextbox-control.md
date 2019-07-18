@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
 ms.openlocfilehash: 8ffa4c9919788060dc4524e127c181ee8282e6f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768601"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Vorgehensweise: Öffnen einer Datei, die auf einem RichTextBox-Steuerelement abgelegt ist
 In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, und <xref:System.Windows.Documents.FlowDocument> steuert den gesamten haben integrierte Drag & Drop-Funktionalität. Die integrierte Funktionen kann Drag & Drop von Text innerhalb und zwischen den Steuerelementen. Es wird jedoch nicht aktiviert das Öffnen einer Datei durch die Datei auf das Steuerelement ablegen. Diese Steuerelemente werden auch die Drag & Drop-Ereignisse als behandelt markieren. Standardmäßig können nicht Sie daher Ihre eigenen Ereignishandler, um Funktionen zum Öffnen von gelöschter Dateien bereitzustellen hinzufügen.  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a288edc89029804de277484741c1895af7859b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 16fcc631e7e734e1bce4566f31d209a8433fbfdf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081527"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753452"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount-Methode
 Erstellt ein kritisches Abschnittsobjekt mit Spin-Anzahl für die Synchronisierung.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateCrstWithSpinCount (  
     [in]  DWORD dwSpinCount,  
     [out] IHostCrst** ppCrst  

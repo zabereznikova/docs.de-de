@@ -2,12 +2,12 @@
 title: Typabkürzungen
 description: Informationen Sie zu F# typabkürzungen auf einem Typ einen aussagekräftigeren Namen geben, damit der um Code leichter lesbar zu machen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0deaef789367aad413e5a537bf7164034e1275c0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2930db1dcaa66741900bc91937aa1fd2f006c5f8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613348"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641685"
 ---
 # <a name="type-abbreviations"></a>Typabkürzungen
 

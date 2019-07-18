@@ -16,21 +16,21 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fee3ee901f3f882091464d7c450f4f144d69a6e7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172185"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666405"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements
 Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die folgenden zugeordneten Renderingklassen (Zeichnungsklassen):  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> Stellt das Aussehen und den Stil des Betriebssystems.  
+- <xref:System.Windows.Forms.ToolStripSystemRenderer> stellt das Aussehen und den Stil des Betriebssystems bereit.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Stellt das Aussehen und den Stil von Microsoft Office.  
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> stellt das Aussehen und den Stil von Microsoft Office bereit.  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> ist die abstrakte Basisklasse für die beiden anderen Renderingklassen.  
+- <xref:System.Windows.Forms.ToolStripRenderer> ist die abstrakte Basisklasse für die beiden anderen Renderingklassen.  
   
  Zum benutzerdefinierten Zeichnen (auch als Ownerdrawn bekannt) eines <xref:System.Windows.Forms.ToolStrip> können Sie eine der Renderingklassen überschreiben und einen Aspekt der Renderinglogik ändern.  
   
@@ -38,20 +38,20 @@ Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die fol
   
 ### <a name="to-switch-between-the-provided-renderers"></a>So wechseln Sie zwischen den bereitgestellten Renderern  
   
--   Legen Sie die <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>-Eigenschaft auf den gewünschten <xref:System.Windows.Forms.ToolStripRenderMode>-Wert fest.  
+- Legen Sie die <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>-Eigenschaft auf den gewünschten <xref:System.Windows.Forms.ToolStripRenderMode>-Wert fest.  
   
      Mit <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> bestimmt der statische <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> den Renderer für die Anwendung. Die anderen Werte von <xref:System.Windows.Forms.ToolStripRenderMode> lauten <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional> und <xref:System.Windows.Forms.ToolStripRenderMode.System>.  
   
 ### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a>So ändern Sie die Rahmen im Stil von Microsoft Office in "gerade"  
   
--   Überschreiben Sie <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, rufen Sie jedoch nicht die Basisklasse auf.  
+- Überschreiben Sie <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, rufen Sie jedoch nicht die Basisklasse auf.  
   
 > [!NOTE]
 >  Für <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer> und <xref:System.Windows.Forms.ToolStripProfessionalRenderer> gibt es eine Version dieser Methode.  
   
 ### <a name="to-change-the-professionalcolortable"></a>So ändern Sie die ProfessionalColorTable  
   
--   Überschreiben Sie <xref:System.Windows.Forms.ProfessionalColorTable>, und ändern Sie die gewünschten Farben.  
+- Überschreiben Sie <xref:System.Windows.Forms.ProfessionalColorTable>, und ändern Sie die gewünschten Farben.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -107,19 +107,19 @@ Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die fol
   
 ### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>So ändern Sie das Rendering für alle ToolStrip-Steuerelemente in Ihrer Anwendung  
   
-1.  Verwenden Sie die <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType>-Eigenschaft, um einen der bereitgestellten Renderer auszuwählen.  
+1. Verwenden Sie die <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType>-Eigenschaft, um einen der bereitgestellten Renderer auszuwählen.  
   
-2.  Verwenden Sie <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>, um einen benutzerdefinierten Renderer zuzuweisen.  
+2. Verwenden Sie <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>, um einen benutzerdefinierten Renderer zuzuweisen.  
   
-3.  Stellen Sie sicher, dass <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> auf den Standardwert von <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> festgelegt ist.  
+3. Stellen Sie sicher, dass <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> auf den Standardwert von <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> festgelegt ist.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>So deaktivieren Sie die Microsoft Office-Farben für die gesamte Anwendung  
   
--   Legen Sie <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> auf `false` fest.  
+- Legen Sie <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> auf `false` fest.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a>So deaktivieren Sie die Microsoft Office-Farben für ein ToolStrip-Steuerelement  
   
--   Verwenden Sie ähnlichen Code wie im folgenden Codebeispiel.  
+- Verwenden Sie ähnlichen Code wie im folgenden Codebeispiel.  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  
@@ -139,5 +139,5 @@ Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die fol
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Steuerelemente mit integrierter Ownerdrawing-Unterstützung](controls-with-built-in-owner-drawing-support.md)
-- [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Übersicht über das ToolStrip-Steuerelement](toolstrip-control-overview-windows-forms.md)

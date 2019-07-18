@@ -3,11 +3,11 @@ title: <dataContractSerializer> der < system.runtime.serialization >
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
 ms.openlocfilehash: c81fdb040f2e0d6c9a3728d8ed3b917443ecb42e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700981"
 ---
 # <a name="datacontractserializer-of-systemruntimeserialization"></a>\<DataContractSerializer > von \<system.runtime.serialization >
 Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataContractSerializer>.  

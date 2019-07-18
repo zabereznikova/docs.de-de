@@ -3,11 +3,11 @@ title: <wsHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
 ms.openlocfilehash: 20d931dfd1805dd4b56aabbab778e6587caa003a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670169"
 ---
 # <a name="wshttpcontextbinding"></a>\<wsHttpContextBinding>
 Gibt einen Kontext für <xref:System.ServiceModel.WSHttpBinding> an, der voraussetzt, dass die Sicherheitsebene signiert wird.  

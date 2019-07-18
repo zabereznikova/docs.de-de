@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 570b3d382157d4be832f57265ad3a064fcd3df9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209813"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743467"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Datenabruf und CUD-Operationen in n-schichtigen Anwendungen (LINQ to SQL)
 Wenn Sie Entitätsobjekte wie Customers oder Orders über ein Netzwerk an einen Client serialisieren, werden diese Entitäten von ihrem Datenkontext getrennt. Änderungen oder Verknüpfungen mit anderen Objekten werden vom Datenkontext nicht mehr verfolgt. Dies stellt kein Problem dar, solange die Clients die Daten nur lesen. Es ist außerdem relativ einfach, Clients zu ermöglichen, einer Datenbank neue Zeilen hinzuzufügen. Wenn Ihre Anwendung jedoch voraussetzt, dass Clients Daten aktualisieren oder löschen sollen, müssen Sie die Entitäten an einen neuen Datenkontext anfügen, bevor Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> aufrufen. Wenn Sie eine Überprüfung auf vollständige Parallelität mit ursprünglichen Werten verwenden, müssen Sie außerdem eine Möglichkeit schaffen, der Datenbank sowohl die ursprüngliche als auch die geänderte Entität bereitzustellen. Die `Attach`-Methoden werden bereitgestellt, um es Ihnen zu ermöglichen, Entitäten in einen neuen Datenkontext einzufügen, nachdem sie getrennt wurden.  
   
  Auch wenn Sie anstelle von Proxy-Objekte Serialisieren der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Entitäten, Sie müssen trotzdem erstellen Sie eine Entität auf der Datenzugriffsebene (DAL), und fügen Sie ihn an einen neuen <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, um die Daten in der Datenbank zu übermitteln.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist spielt wie Entitäten serialisiert werden. Weitere Informationen zur Verwendung der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] und SQLMetal-Tools zum Generieren von Klassen, die serialisierbar sind, mithilfe von Windows Communication Foundation (WCF), finden Sie unter [Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist spielt wie Entitäten serialisiert werden. Weitere Informationen zur Verwendung der Object Relational Designer und SQLMetal-Tools zum Generieren von Klassen, die serialisierbar sind, mithilfe von Windows Communication Foundation (WCF) finden Sie unter [Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
   
 > [!NOTE]
 >  Rufen Sie die `Attach`-Methoden nur für neue oder deserialisierte Entitäten auf. Die einzige Möglichkeit, eine Entität von ihrem ursprünglichen Datenkontext zu trennen, besteht darin, sie zu serialisieren. Wenn Sie versuchen, eine nicht getrennte Entität an einen neuen Datenkontext anzufügen, und diese Entität noch über verzögerte Ladeprogramme aus dem vorherigen Datenkontext verfügt, löst [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Ausnahme aus. Eine Entität mit verzögerten Ladenprogrammen aus zwei unterschiedlichen Datenkontexten könnte unerwünschte Ergebnisse hervorbringen, wenn Sie Einfüge-, Aktualisierungs- und Löschvorgänge für diese Entität ausführen. Weitere Informationen zu verzögerten Ladeprogrammen finden Sie unter [verzögertes im Vergleich zu den sofortigen Laden](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>Implementierung auf der mittleren Ebene  
  Im folgenden Beispiel wird eine Implementierung der Schnittstellenmethode auf der mittleren Ebene veranschaulicht. Die folgenden beiden Hauptpunkte sind zu beachten:  
   
--   <xref:System.Data.Linq.DataContext> wird im Methodenbereich deklariert.  
+- <xref:System.Data.Linq.DataContext> wird im Methodenbereich deklariert.  
   
--   Die Methode gibt eine <xref:System.Collections.IEnumerable>-Auflistung der tatsächlichen Ergebnisse zurück. Das Serialisierungsprogramm führt die Abfrage aus, um die Ergebnisse an die Client- oder Präsentationsebene zurückzusenden. Um lokal auf der mittleren Ebene auf die Abfrageergebnisse zuzugreifen, können Sie die Ausführung erzwingen, indem Sie `ToList` oder `ToArray` für die Abfragevariable aufrufen. Anschließend können Sie diese Liste oder dieses Array als `IEnumerable` zurückgeben.  
+- Die Methode gibt eine <xref:System.Collections.IEnumerable>-Auflistung der tatsächlichen Ergebnisse zurück. Das Serialisierungsprogramm führt die Abfrage aus, um die Ergebnisse an die Client- oder Präsentationsebene zurückzusenden. Um lokal auf der mittleren Ebene auf die Abfrageergebnisse zuzugreifen, können Sie die Ausführung erzwingen, indem Sie `ToList` oder `ToArray` für die Abfragevariable aufrufen. Anschließend können Sie diese Liste oder dieses Array als `IEnumerable` zurückgeben.  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -208,13 +208,13 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>Aktualisieren von Daten  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt Updates in diesen Szenarien mit vollständiger Parallelität:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt Updates in folgenden Szenarien mit vollständiger Parallelität:  
   
--   Vollständige Parallelität auf der Grundlage von Timestamps oder RowVersion-Nummern  
+- Vollständige Parallelität auf der Grundlage von Timestamps oder RowVersion-Nummern  
   
--   Vollständige Parallelität auf der Grundlage ursprünglicher Werte einer Teilmenge von Entitätseigenschaften  
+- Vollständige Parallelität auf der Grundlage ursprünglicher Werte einer Teilmenge von Entitätseigenschaften  
   
--   Vollständige Parallelität auf der Grundlage der vollständigen ursprünglichen und geänderten Entitäten  
+- Vollständige Parallelität auf der Grundlage der vollständigen ursprünglichen und geänderten Entitäten  
   
  Sie können auch Update- oder Löschvorgänge für eine Entität und ihre Beziehungen ausführen, beispielsweise für einen Kunden und eine Auflistung der zugehörigen Bestellobjekte. Wenn Sie auf dem Client Änderungen an einem Diagramm von Entitätsobjekten und deren untergeordneten (`EntitySet`) Auflistungen vornehmen und für Überprüfungen auf vollständige Parallelität ursprüngliche Werte erforderlich sind, muss der Client diese ursprünglichen Werte für jede Entität und jedes <xref:System.Data.Linq.EntitySet%601>-Objekt bereitstellen. Wenn Clients in der Lage sein sollen, eine Reihe verknüpfter Updates, Löschungen und Einfügungen in einem einzelnen Methodenaufruf auszuführen, müssen Sie auf dem Client eine Möglichkeit vorsehen, um anzuzeigen, welcher Operationstyp für welche Entität ausgeführt werden soll. Auf der mittleren Ebene müssen Sie anschließend die geeignete <xref:System.Data.Linq.ITable.Attach%2A>-Methode und dann <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>, <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A> oder <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (ohne `Attach`, für Einfügungen) für jede Entität aufrufen, bevor Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufrufen. Das Abrufen von Daten aus der Datenbank ist keine zulässige Methode, um ursprüngliche Werte zu erhalten, bevor Sie ein Update versuchen.  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>Erwartete Entitätsmember  
  Wie bereits erwähnt, müssen nur bestimmte Member des Entitätsobjekts festgelegt werden, bevor Sie die `Attach`-Methoden aufrufen. Entitätsmember, die festgelegt werden müssen, sollten folgenden Kriterien erfüllen:  
   
--   Sie müssen Teil der Identität der Entität sein.  
+- Sie müssen Teil der Identität der Entität sein.  
   
--   Von ihnen wird erwartet, dass sie sich ändern.  
+- Von ihnen wird erwartet, dass sie sich ändern.  
   
--   Es muss sich um einen Timestamp handeln oder ihr <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>-Attribut muss auf einen anderen Wert als `Never` festgelegt sein.  
+- Es muss sich um einen Timestamp handeln oder ihr <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>-Attribut muss auf einen anderen Wert als `Never` festgelegt sein.  
   
  Wenn eine Tabelle einen Timestamp oder eine Versionsnummer für die Prüfung auf vollständige Parallelität verwendet, müssen diese Member daher festgelegt sein, bevor Sie <xref:System.Data.Linq.ITable.Attach%2A> aufrufen. Ein Member gilt als für die Überprüfung auf vollständige Parallelität festgelegt, wenn die <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>-Eigenschaft für dieses Spaltenattribut auf true festgelegt ist. Alle angeforderten Updates werden nur gesendet, wenn der Wert für die Versionsnummer oder den Timestamp in Datenbank identisch ist.  
   
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>Zustand  
  Nachdem ein Entitätsobjekt an die <xref:System.Data.Linq.DataContext>-Instanz angefügt wurde, wird davon ausgegangen, dass sich das Objekt im `PossiblyModified`-Zustand befindet. Sie können auf drei Weisen erzwingen, dass ein angefügtes Objekt als Objekt im `Modified`-Zustand betrachtet wird.  
   
-1.  Fügen Sie es als unverändert an, und ändern Sie die Felder dann direkt.  
+1. Fügen Sie es als unverändert an, und ändern Sie die Felder dann direkt.  
   
-2.  Fügen Sie es mit der <xref:System.Data.Linq.Table%601.Attach%2A>-Überladung an, die aktuelle und ursprüngliche Objektinstanzen akzeptiert. Dadurch werden dem Änderungsprotokollierer alte und neue Werte zur Verfügung gestellt, sodass er automatisch weiß, welche Felder geändert wurden.  
+2. Fügen Sie es mit der <xref:System.Data.Linq.Table%601.Attach%2A>-Überladung an, die aktuelle und ursprüngliche Objektinstanzen akzeptiert. Dadurch werden dem Änderungsprotokollierer alte und neue Werte zur Verfügung gestellt, sodass er automatisch weiß, welche Felder geändert wurden.  
   
-3.  Fügen Sie es mit der <xref:System.Data.Linq.Table%601.Attach%2A>-Überladung an, die einen zweiten booleschen Parameter (auf true festgelegt) akzeptiert. Dadurch wird das Objekt vom Änderungsprotokollierer als geändert betrachtet, ohne dass einer der ursprünglichen Werte bereitgestellt werden muss. Bei dieser Vorgehensweise muss dass Objekt über ein Versions-/Timestampfeld verfügen.  
+3. Fügen Sie es mit der <xref:System.Data.Linq.Table%601.Attach%2A>-Überladung an, die einen zweiten booleschen Parameter (auf true festgelegt) akzeptiert. Dadurch wird das Objekt vom Änderungsprotokollierer als geändert betrachtet, ohne dass einer der ursprünglichen Werte bereitgestellt werden muss. Bei dieser Vorgehensweise muss dass Objekt über ein Versions-/Timestampfeld verfügen.  
   
  Weitere Informationen finden Sie unter [Objektzustände und Änderungsverfolgung](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
   

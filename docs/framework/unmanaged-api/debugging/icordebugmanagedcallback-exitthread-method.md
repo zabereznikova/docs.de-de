@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37815d8aead1ec89826c13db6f012f2cd17bc792
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 85247f2f3672e7827f4dd0c93e50cd5da914ee8f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132443"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755780"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>ICorDebugManagedCallback::ExitThread-Methode
 Benachrichtigt den Debugger, dass ein Thread, der Ausführung von verwaltetem Code beendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ExitThread (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread    *thread  

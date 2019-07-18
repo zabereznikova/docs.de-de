@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8c8d4e45035a49a35c32f334895eeae27a1f02a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162880"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656213"
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -22,9 +22,9 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
 ## <a name="enabling-tracing"></a>Aktivieren der Ablaufverfolgung  
  Windows Communication Foundation (WCF) gibt die folgenden Daten für die diagnoseablaufverfolgung aus:  
   
--   Ablaufverfolgungen für Verarbeitungsmeilensteine in allen Komponenten der Anwendungen, beispielsweise Operationsaufrufe, Codeausnahmen, Warnungen und andere wichtige Verarbeitungsereignisse.  
+- Ablaufverfolgungen für Verarbeitungsmeilensteine in allen Komponenten der Anwendungen, beispielsweise Operationsaufrufe, Codeausnahmen, Warnungen und andere wichtige Verarbeitungsereignisse.  
   
--   Windows-Fehlerereignisse bei Fehlern der Ablaufverfolgungsfunktion. Finden Sie unter [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+- Windows-Fehlerereignisse bei Fehlern der Ablaufverfolgungsfunktion. Finden Sie unter [Ereignisprotokollierung](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
  Ablaufverfolgung von WCF basiert auf der Basis von <xref:System.Diagnostics>. Definieren Sie in der Konfigurationsdatei oder im Code Ablaufverfolgungsquellen, wenn Sie die Ablaufverfolgung verwenden möchten. WCF definiert eine Ablaufverfolgungsquelle für jede WCF-Assembly. Die `System.ServiceModel` Ablaufverfolgungsquelle ist die allgemeinste WCF-Ablaufverfolgungsquelle und zeichnet Verarbeitung Meilensteine für die WCF-Kommunikationsstapel vom eintreten/Verlassen des Transports zum Eintreten/verlassen von Benutzercode. Die `System.ServiceModel.MessageLogging`-Ablaufverfolgungsquelle zeichnet alle Nachrichten auf, die das System durchlaufen.  
   
@@ -58,19 +58,19 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen  
  WCF definiert eine Ablaufverfolgungsquelle für jede Assembly. Innerhalb einer Assembly generierte Ablaufverfolgungen werden von den Listenern verwendet, die für diese Quelle definiert sind. Folgende Ablaufverfolgungsquellen sind definiert:  
   
--   System.ServiceModel: Protokolliert alle Stufen der WCF-Verarbeitung, jedes Mal, wenn Konfiguration wird gelesen, eine Nachricht im Transport verarbeitet wird, wird zur Verarbeitung, der eine Nachricht im Benutzercode usw. verteilt.  
+- System.ServiceModel: Protokolliert alle Stufen der WCF-Verarbeitung, jedes Mal, wenn Konfiguration wird gelesen, eine Nachricht im Transport verarbeitet wird, wird zur Verarbeitung, der eine Nachricht im Benutzercode usw. verteilt.  
   
--   System.ServiceModel.MessageLogging: Protokolliert alle Nachrichten, die das System durchlaufen.  
+- System.ServiceModel.MessageLogging: Protokolliert alle Nachrichten, die das System durchlaufen.  
   
--   System.IdentityModel.  
+- System.IdentityModel.  
   
--   System.ServiceModel.Activation.  
+- System.ServiceModel.Activation.  
   
--   System.IO.Log: Die Protokollierung für die .NET Framework-Schnittstelle, die Common Log File System (CLFS).  
+- System.IO.Log: Die Protokollierung für die .NET Framework-Schnittstelle, die Common Log File System (CLFS).  
   
--   System.Runtime.Serialization: Protokolliert, wenn Objekte gelesen oder geschrieben werden.  
+- System.Runtime.Serialization: Protokolliert, wenn Objekte gelesen oder geschrieben werden.  
   
--   CardSpace.  
+- CardSpace.  
   
  Das folgenden Konfigurationsbeispiel veranschaulicht, wie Sie jede Ablaufverfolgungsquelle so konfigurieren können, dass sie den gleichen (freigegebenen) Listener verwendet:  
   

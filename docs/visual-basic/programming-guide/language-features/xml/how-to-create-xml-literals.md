@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 991f10b00082bb4eb2b54f10c1b85cdc2c9009d2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836862"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598543"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Vorgehensweise: Erstellen von XML-Literalen (Visual Basic)
 Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, mit einem XML-literal. In die Beispielen in diesem Thema wird veranschaulicht, wie ein XML-Element zu erstellen, die über drei untergeordnete Elemente verfügt wie ein XML-Dokument erstellt.  
@@ -18,11 +18,11 @@ Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, m
   
 ### <a name="to-create-an-xml-element"></a>Erstellen Sie ein XML-element  
   
--   Erstellen Sie die XML-Inline, indem Sie mit der XML-Literalen Syntax, die die tatsächlichen XML-Syntax identisch ist.  
+- Erstellen Sie die XML-Inline, indem Sie mit der XML-Literalen Syntax, die die tatsächlichen XML-Syntax identisch ist.  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     Führen Sie den Code ein. Die Ausgabe dieses Codes lautet:  
+     Führen Sie den Code aus. Die Ausgabe dieses Codes lautet:  
   
      `<contact>`  
   
@@ -36,11 +36,11 @@ Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, m
   
 ### <a name="to-create-an-xml-document"></a>Zum Erstellen eines XML-Dokuments  
   
--   Die XML-Dokument Inline zu erstellen. Der folgende Code erstellt eine XML-Dokument mit Literalen Syntax, eine XML-Deklaration, eine verarbeitungsanweisung, einen Kommentar und ein Element, ein anderes Element enthält.  
+- Die XML-Dokument Inline zu erstellen. Der folgende Code erstellt eine XML-Dokument mit Literalen Syntax, eine XML-Deklaration, eine verarbeitungsanweisung, einen Kommentar und ein Element, ein anderes Element enthält.  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     Führen Sie den Code ein. Die Ausgabe dieses Codes lautet:  
+     Führen Sie den Code aus. Die Ausgabe dieses Codes lautet:  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   

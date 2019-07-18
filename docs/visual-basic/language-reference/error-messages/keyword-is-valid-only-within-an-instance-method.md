@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: 5ff82b932f9bea4c7fd087651e34277ef94bc27c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8ec1e704815ee10cb98d8cc20fb5982ee4b92832
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820716"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662010"
 ---
 # <a name="keyword-is-valid-only-within-an-instance-method"></a>"\<Schlüsselwort >' ist nur innerhalb einer Instanzenmethode gültig
 Die `Me`, `MyClass`, und `MyBase` Schlüsselwörter beziehen sich auf bestimmte Klasseninstanzen. Können Sie nicht in einem gemeinsam verwendeten `Function` oder `Sub` Verfahren.  
@@ -21,7 +21,7 @@ Die `Me`, `MyClass`, und `MyBase` Schlüsselwörter beziehen sich auf bestimmte 
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Entfernen Sie das Schlüsselwort aus der Prozedur, oder Entfernen der `Shared` -Schlüsselwort aus der Deklaration der Prozedur.  
+- Entfernen Sie das Schlüsselwort aus der Prozedur, oder Entfernen der `Shared` -Schlüsselwort aus der Deklaration der Prozedur.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -5,11 +5,11 @@ ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eecb135e034c3565e805ea776115579488b2a4d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645460"
 ---
 # <a name="icordebugassembly3-interface"></a>ICorDebugAssembly3-Schnittstelle
 Erweitert logisch die ICorDebugAssembly-Schnittstelle, um die Container-Assemblys und der darin enthaltenen Assemblys unterstützen.  
@@ -37,5 +37,5 @@ Erweitert logisch die ICorDebugAssembly-Schnittstelle, um die Container-Assembly
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

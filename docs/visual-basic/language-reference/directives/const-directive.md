@@ -16,11 +16,11 @@ helpviewer_keywords:
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
 ms.openlocfilehash: 5458bbebc6064eb6273b8deb5447b8941e1d233f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746681"
 ---
 # <a name="const-directive"></a>#Const-Anweisung
 Definiert Konstanten für bedingte Kompilierung für Visual Basic.  

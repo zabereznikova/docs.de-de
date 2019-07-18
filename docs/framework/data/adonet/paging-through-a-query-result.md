@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
 ms.openlocfilehash: 023efcc15d7080afc1583f4ad8984e152b86cf23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878383"
 ---
 # <a name="paging-through-a-query-result"></a>Paging durch ein Abfrageergebnis
 Beim Paging durch ein Abfrageergebnis werden die Ergebnisse einer Abfrage in kleineren Untergruppen von Daten oder Seiten zurückgegeben. Dies ist eine allgemein übliche Vorgehensweise, um einem Benutzer Ergebnisse in kleinen Blöcken anzuzeigen, die sich leicht verwalten lassen.  
@@ -125,5 +125,5 @@ adapter.Fill(dataSet, "Orders");
   
 ## <a name="see-also"></a>Siehe auch
 
-- ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

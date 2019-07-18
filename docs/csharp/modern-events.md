@@ -3,12 +3,12 @@ title: Das aktualisierte .NET Core-Ereignismuster
 description: Erfahren Sie, wie das .NET Core-Ereignismuster die Flexibilität mit Abwärtskompabilität erhöht und wie Sie sichere Ereignisverarbeitung mit asynchronen Abonnenten implementieren können.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188481"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751789"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Das aktualisierte .NET Core-Ereignismuster
 
@@ -23,9 +23,23 @@ Das Programm funktioniert genauso.
 
 Sie könnten auch `SearchDirectoryArgs` in eine Struktur ändern, wenn Sie eine weitere Änderung vornehmen:
 
-[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
+```csharp
+internal struct SearchDirectoryArgs
+{
+    internal string CurrentSearchDirectory { get; }
+    internal int TotalDirs { get; }
+    internal int CompletedDirs { get; }
 
-Die zusätzliche Änderung besteht darin, den Standardkonstruktor aufzurufen, bevor der Konstruktor eingegeben wird, der alle Felder initialisiert. Ohne diesen Zusatz würden die Regeln von C# berichten, dass auf die Eigenschaften zugegriffen wird, bevor sie zugewiesen wurden.
+    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs) : this()
+    {
+        CurrentSearchDirectory = dir;
+        TotalDirs = totalDirs;
+        CompletedDirs = completedDirs;
+    }
+}
+```
+
+Die zusätzliche Änderung besteht darin, den parameterlosen Konstruktor aufzurufen, bevor der Konstruktor eingegeben wird, der alle Felder initialisiert. Ohne diesen Zusatz würden die Regeln von C# berichten, dass auf die Eigenschaften zugegriffen wird, bevor sie zugewiesen wurden.
 
 Ändern Sie `FileFoundArgs` nicht von einer Klasse (Verweistyp) in eine Struktur (Werttyp). Das Protokoll zur Behandlung von Abbrüchen erfordert, dass die Ereignisargumente als Verweis übergeben werden. Wenn Sie diese Änderung vorgenommen hätten, könnte die Dateisuche-Klasse niemals Änderungen beobachten, die von einem der Ereignisabonnenten vorgenommen wurden. Für jeden Abonnenten würde eine neue Kopie der Struktur verwendet werden, und diese Kopie würde sich von derjenigen unterscheiden, die vom Dateisuche-Objekt gesehen wird.
 
@@ -37,7 +51,7 @@ Nach derselben Logik würden alle erstellten Ereignisargumenttypen keine Abonnen
 
 ## <a name="events-with-async-subscribers"></a>Ereignisse mit asynchronen Abonnenten
 
-Das letzte, in diesem Artikel behandelte Muster ist die richtige Schreibweise von Ereignisabonnenten, die asynchronen Code aufrufen. Informationen hierzu finden Sie im Artikel zu [Async und Await](async.md). Asynchrone Methoden können einen Rückgabetyp „Void“ haben, aber davon ist dringend abzuraten. Wenn Ihr Ereignisabonnent eine asynchrone Methode aufruft, haben Sie keine Wahl, außer eine `async void`-Methode zu erstellen. Sie wird von der Signatur des Ereignishandlers benötigt.
+Sie haben ein letztes Muster, um Folgendes kennenzulernen: die richtige Schreibweise von Ereignisabonnenten, die asynchronen Code aufrufen. Informationen hierzu finden Sie im Artikel zu [Async und Await](async.md). Asynchrone Methoden können einen Rückgabetyp „Void“ haben, aber davon ist dringend abzuraten. Wenn Ihr Ereignisabonnent eine asynchrone Methode aufruft, haben Sie keine Wahl, außer eine `async void`-Methode zu erstellen. Sie wird von der Signatur des Ereignishandlers benötigt.
 
 Sie müssen diesen entgegengesetzten Leitfaden abstimmen. Sie müssen irgendwie eine sichere `async void`-Methode erstellen. Die Grundlagen des Musters, das Sie implementieren müssen, finden Sie untenan:
 

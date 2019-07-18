@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7f29c365e9f6ba85f85ceb232f7af89446af2a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f62ea692c055b0537394ad5e16501d4162faef12
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213050"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746834"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration-Funktion
 Beendet eine Enumerationsfolge gestartet, die durch einen Aufruf der [BeginMethodEnumeration-Funktion](beginmethodenumeration.md).  
@@ -30,7 +30,7 @@ Beendet eine Enumerationsfolge gestartet, die durch einen Aufruf der [BeginMetho
     
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EndMethodEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr 

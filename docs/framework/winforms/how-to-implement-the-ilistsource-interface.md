@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
-ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 718514c843bbfc0fcc56e89ca0b60bd3ec65b3cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159782"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630643"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Vorgehensweise: Implementieren der IListSource-Schnittstelle
 Implementieren der <xref:System.ComponentModel.IListSource> Schnittstelle, um eine bindbare Klasse zu erstellen, die nicht implementiert <xref:System.Collections.IList> stattdessen bieten Sie eine Liste von einem anderen Speicherort.  
@@ -36,7 +36,7 @@ Implementieren der <xref:System.ComponentModel.IListSource> Schnittstelle, um ei
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys ""System.Drawing" und "System.Windows.Forms".  
+- Verweise auf die Assemblys ""System.Drawing" und "System.Windows.Forms".  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -44,4 +44,4 @@ Implementieren der <xref:System.ComponentModel.IListSource> Schnittstelle, um ei
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)
+- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)

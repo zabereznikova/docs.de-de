@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7093edaf12e801a1e1adc52b0be823ff92b91
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079915"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026000"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping-Struktur
-Maps eine [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID, die das zugehörige ICorDebugType-Objekt.  
+Ordnet eine Windows-Runtime-GUID mit der entsprechenden ICorDebugType-Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,11 +41,11 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`iid`|Die GUID der der zwischengespeicherte [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typ.|  
+|`iid`|Die GUID der der zwischengespeicherte Windows-Runtime-Typ.|  
 |`pType`|Ein Zeiger auf ein ICorDebugType-Objekt, das Informationen zu der zwischengespeicherte Typ bereitstellt.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].  
+ **Plattformen:** Windows-Runtime.  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -1,36 +1,29 @@
-items:
 - name: Konstanten und Enumerationen
   href: index.md
   items:
-  - name: Übersicht über Konstanten
-    href: constants-overview.md
-    items:
-    - name: 'Vorgehensweise: Deklarieren einer Konstante'
-      href: how-to-declare-a-constant.md
-    - name: Benutzerdefinierte Konstanten
-      href: user-defined-constants.md
-    - name: Konstanten und literale Datentypen
-      href: constant-and-literal-data-types.md
-    - name: 'Vorgehensweise: Gruppieren verwandter konstanter Werte'
-      href: how-to-group-related-constant-values-together.md
-  - name: Übersicht über Enumerationen
-    href: enumerations-overview.md
-    items:
-    - name: 'Vorgehensweise: Deklarieren einer Enumeration'
-      href: how-to-declare-enumerations.md
-    - name: 'Vorgehensweise: Verweisen auf einen Enumerationsmember'
-      href: how-to-refer-to-an-enumeration-member.md
-    - name: Enumerationen und Namensqualifikation
-      href: enumerations-and-name-qualification.md
-    - name: 'Vorgehensweise: Durchlaufen einer Enumeration'
-      href: how-to-iterate-through-an-enumeration.md
-    - name: 'Vorgehensweise: Bestimmen der einem Enumerationswert zugeordnete Zeichenfolge'
-      href: how-to-determine-the-string-associated-with-an-enumeration-value.md
-    - name: Situationen für die Verwendung von Enumerationen
-      href: when-to-use-an-enumeration.md
-ms.openlocfilehash: d04784aa644ef5d37a7b3d416f8a15f2e5113f98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469486"
+    - name: Übersicht über Konstanten
+      href: constants-overview.md
+      items:
+        - name: 'Vorgehensweise: Deklarieren einer Konstante'
+          href: how-to-declare-a-constant.md
+        - name: Benutzerdefinierte Konstanten
+          href: user-defined-constants.md
+        - name: Konstanten und literale Datentypen
+          href: constant-and-literal-data-types.md
+        - name: 'Vorgehensweise: Gruppieren verwandter konstanter Werte'
+          href: how-to-group-related-constant-values-together.md
+    - name: Übersicht über Enumerationen
+      href: enumerations-overview.md
+      items:
+        - name: 'Vorgehensweise: Deklarieren einer Enumeration'
+          href: how-to-declare-enumerations.md
+        - name: 'Vorgehensweise: Verweisen auf einen Enumerationsmember'
+          href: how-to-refer-to-an-enumeration-member.md
+        - name: Enumerationen und Namensqualifikation
+          href: enumerations-and-name-qualification.md
+        - name: 'Vorgehensweise: Durchlaufen einer Enumeration'
+          href: how-to-iterate-through-an-enumeration.md
+        - name: 'Vorgehensweise: Bestimmen der einem Enumerationswert zugeordnete Zeichenfolge'
+          href: how-to-determine-the-string-associated-with-an-enumeration-value.md
+        - name: Situationen für die Verwendung von Enumerationen
+          href: when-to-use-an-enumeration.md

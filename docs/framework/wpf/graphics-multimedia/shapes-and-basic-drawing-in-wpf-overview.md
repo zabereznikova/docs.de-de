@@ -12,29 +12,29 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9278af55cebaedcb349487609aa658a5c4a038c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189131"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663261"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF
 Dieses Thema bietet eine Übersicht über das Zeichnen mit <xref:System.Windows.Shapes.Shape> Objekte. Ein <xref:System.Windows.Shapes.Shape> ist eine Art von <xref:System.Windows.UIElement> , mit der Sie eine Form auf dem Bildschirm zu zeichnen. Da sie UI-Elemente sind <xref:System.Windows.Shapes.Shape> Objekte können verwendet werden, in <xref:System.Windows.Controls.Panel> Elemente und die meisten Steuerelemente.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet mehrere Ebenen des Zugriffs auf Grafiken und Renderingdienste. Auf der obersten Ebene <xref:System.Windows.Shapes.Shape> Objekte sind einfach zu verwenden und bieten viele nützliche Features, z.B. Layout und Teilnahme an der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ereignissystem.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet mehrere Ebenen für den Zugriff auf Grafiken und Renderingdienste. Auf der obersten Ebene <xref:System.Windows.Shapes.Shape> Objekte sind einfach zu verwenden und bieten viele nützliche Features, z.B. Layout und Teilnahme an der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ereignissystem.  
 
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>Shape-Objekte  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine Reihe von sofort zu verwendende <xref:System.Windows.Shapes.Shape> Objekte.  Alle Shape-Objekte erben von der <xref:System.Windows.Shapes.Shape> Klasse. Verfügbare Shape-Objekte sind <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, und <xref:System.Windows.Shapes.Rectangle>. <xref:System.Windows.Shapes.Shape> Objekte nutzen die folgenden allgemeinen Eigenschaften.  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>: Beschreibt, wie der Form gezeichnet wird.  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>: Beschreibt, wie der Form gezeichnet wird.  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Beschreibt die Stärke der Form an.  
+- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Beschreibt die Stärke der Form an.  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>: Beschreibt, wie das Innere der Form gezeichnet wird.  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>: Beschreibt, wie das Innere der Form gezeichnet wird.  
   
--   Dateneigenschaften zum Angeben von Koordinaten und Eckpunkten, gemessen in geräteunabhängigen Pixeln.  
+- Dateneigenschaften zum Angeben von Koordinaten und Eckpunkten, gemessen in geräteunabhängigen Pixeln.  
   
  Da sie von abgeleitet <xref:System.Windows.UIElement>, Shape-Objekte in Bereichen und den meisten Steuerelementen verwendet werden können. Die <xref:System.Windows.Controls.Canvas> Bereich ist eine besonders gute Wahl für das Erstellen von komplexen Zeichnungen, da es die absolute Positionierung der untergeordneten Objekte unterstützt.  
   
@@ -154,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Die Stretch-Eigenschaft nimmt einen der folgenden Werte an:  
   
--   <xref:System.Windows.Media.Stretch.None>: Die <xref:System.Windows.Shapes.Shape> Inhalt des Objekts werden nicht gestreckt.  
+- <xref:System.Windows.Media.Stretch.None>: Die <xref:System.Windows.Shapes.Shape> Inhalt des Objekts werden nicht gestreckt.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Die <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, um den Layoutbereich auszufüllen.  Das Seitenverhältnis wird nicht beibehalten.  
+- <xref:System.Windows.Media.Stretch.Fill>: Die <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, um den Layoutbereich auszufüllen.  Das Seitenverhältnis wird nicht beibehalten.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Die <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, so weit wie möglich ist, um den Layoutbereich auszufüllen und gleichzeitig die ursprünglichen Seitenverhältnisse beizubehalten.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Die <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, so weit wie möglich ist, um den Layoutbereich auszufüllen und gleichzeitig die ursprünglichen Seitenverhältnisse beizubehalten.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Die <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, um den Layoutbereich vollständig auszufüllen, während gleichzeitig die ursprünglichen Seitenverhältnisse beizubehalten.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Die <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, um den Layoutbereich vollständig auszufüllen, während gleichzeitig die ursprünglichen Seitenverhältnisse beizubehalten.  
   
  Beachten Sie, dass bei einem <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, die <xref:System.Windows.Shapes.Shape> -Objekts nach dem Strecken gezeichnet wird.  
   
@@ -217,6 +217,6 @@ myPolygon.StrokeThickness = 2;
 
 - [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md)
-- [Übersicht über die Geometrie](geometry-overview.md)
-- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Übersicht über Geometrien](geometry-overview.md)
+- [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Übersicht über Animationen](animation-overview.md)

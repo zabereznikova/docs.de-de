@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fba06360a0c31e0a7fa3e61de9793bad14650fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 840a3779ca5692787c2c352db60a29d6a4d4ba4f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127503"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768590"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate-Methode
 Überprüft die angegebene Datei (portable Executable) oder Microsoft intermediate Language (MSIL)-Datei.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Validate (  
     [in] IVEHandler            *veh,  
     [in] IUnknown              *pAppDomain,  

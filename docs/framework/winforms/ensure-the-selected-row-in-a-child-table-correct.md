@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1047958a5600d8e6ee0ba461305e09395151ab14
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149109"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592285"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Vorgehensweise: Sicherstellen, dass die ausgewählte Zeile in einer untergeordneten Tabelle an der richtigen Position verbleibt
 Wenn Sie mit Datenbindungen in Windows Forms arbeiten, zeigen Sie diese Daten häufig in einer so genannten hierarchischen oder Master-/Detail-Ansicht an. Diese Bezeichnung bezieht sich auf ein Datenbindungsszenario, bei dem Daten aus der gleichen Quelle in zwei Steuerelementen angezeigt werden. Wird die Auswahl in einem Steuerelement geändert, ändern sich die Daten, die im zweiten Steuerelement angezeigt werden. So enthält das erste Steuerelement möglicherweise eine Kundenliste, und im zweiten Steuerelement wird eine Liste der Bestellungen angezeigt, die der im ersten Steuerelement ausgewählte Kunde getätigt hat.  
@@ -30,28 +30,28 @@ Wenn Sie mit Datenbindungen in Windows Forms arbeiten, zeigen Sie diese Daten h�
   
 ### <a name="to-cache-the-current-child-position"></a>So speichern Sie die aktuelle untergeordnete Position zwischen  
   
-1.  Deklarieren Sie eine ganzzahlige Variable zum Speichern der Position in der untergeordneten Liste und eine boolesche Variable, um zu speichern, ob die untergeordnete Position zwischengespeichert werden soll.  
+1. Deklarieren Sie eine ganzzahlige Variable zum Speichern der Position in der untergeordneten Liste und eine boolesche Variable, um zu speichern, ob die untergeordnete Position zwischengespeichert werden soll.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  Behandeln Sie das <xref:System.Windows.Forms.CurrencyManager.ListChanged>-Ereignis für den <xref:System.Windows.Forms.CurrencyManager> der Bindung, und prüfen Sie auf einen <xref:System.ComponentModel.ListChangedType> von <xref:System.ComponentModel.ListChangedType.Reset>.  
+2. Behandeln Sie das <xref:System.Windows.Forms.CurrencyManager.ListChanged>-Ereignis für den <xref:System.Windows.Forms.CurrencyManager> der Bindung, und prüfen Sie auf einen <xref:System.ComponentModel.ListChangedType> von <xref:System.ComponentModel.ListChangedType.Reset>.  
   
-3.  Überprüfen Sie die aktuelle Position von <xref:System.Windows.Forms.CurrencyManager>. Ist diese größer als der erste Eintrag in der Liste (normalerweise 0), speichern Sie sie in einer Variablen.  
+3. Überprüfen Sie die aktuelle Position von <xref:System.Windows.Forms.CurrencyManager>. Ist diese größer als der erste Eintrag in der Liste (normalerweise 0), speichern Sie sie in einer Variablen.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  Behandeln Sie das <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>-Ereignis für den übergeordneten Währungs-Manager der übergeordneten Liste. Legen Sie im Handler den booleschen Wert fest, um anzugeben, dass es sich nicht um ein Zwischenspeicherungsszenario handelt. Wenn <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> auftritt, handelt es sich bei der Änderung an der übergeordneten Liste um eine Positionsänderung und nicht um eine Änderung des Elementwerts.  
+4. Behandeln Sie das <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>-Ereignis für den übergeordneten Währungs-Manager der übergeordneten Liste. Legen Sie im Handler den booleschen Wert fest, um anzugeben, dass es sich nicht um ein Zwischenspeicherungsszenario handelt. Wenn <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> auftritt, handelt es sich bei der Änderung an der übergeordneten Liste um eine Positionsänderung und nicht um eine Änderung des Elementwerts.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>So setzen Sie die untergeordnete Position zurück  
   
-1.  Behandeln Sie das <xref:System.Windows.Forms.BindingManagerBase.PositionChanged>-Ereignis für den <xref:System.Windows.Forms.CurrencyManager> der Bindung der untergeordneten Liste.  
+1. Behandeln Sie das <xref:System.Windows.Forms.BindingManagerBase.PositionChanged>-Ereignis für den <xref:System.Windows.Forms.CurrencyManager> der Bindung der untergeordneten Liste.  
   
-2.  Setzen Sie die Position in der untergeordneten Tabelle auf die zwischengespeicherte Position zurück, die mit der vorherigen Prozedur gespeichert wurde.  
+2. Setzen Sie die Position in der untergeordneten Tabelle auf die zwischengespeicherte Position zurück, die mit der vorherigen Prozedur gespeichert wurde.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
@@ -64,27 +64,25 @@ Wenn Sie mit Datenbindungen in Windows Forms arbeiten, zeigen Sie diese Daten h�
   
  Führen Sie die folgenden Schritte aus, um das Codebeispiel zu testen:  
   
-1.  Führen Sie das Beispiel aus.  
+1. Führen Sie das Beispiel aus.  
   
-2.  Vergewissern Sie sich, dass das Kontrollkästchen **Position zwischenspeichern und zurücksetzen** aktiviert ist.  
+2. Vergewissern Sie sich, dass das Kontrollkästchen **Position zwischenspeichern und zurücksetzen** aktiviert ist.  
   
-3.  Klicken Sie auf die Schaltfläche **Übergeordnetes Feld löschen**, um eine Änderung an einem Feld der übergeordneten Tabelle zu veranlassen. Beachten Sie, dass sich die ausgewählte Zeile in der untergeordneten Tabelle nicht ändert.  
+3. Klicken Sie auf die Schaltfläche **Übergeordnetes Feld löschen**, um eine Änderung an einem Feld der übergeordneten Tabelle zu veranlassen. Beachten Sie, dass sich die ausgewählte Zeile in der untergeordneten Tabelle nicht ändert.  
   
-4.  Schließen Sie das Beispiel, und führen Sie es erneut aus. Dies ist erforderlich, da die Rücksetzung erst nach der ersten Änderung in der übergeordneten Zeile stattfindet.  
+4. Schließen Sie das Beispiel, und führen Sie es erneut aus. Dies ist erforderlich, da die Rücksetzung erst nach der ersten Änderung in der übergeordneten Zeile stattfindet.  
   
-5.  Deaktivieren Sie das Kontrollkästchen **Position zwischenspeichern und zurücksetzen**.  
+5. Deaktivieren Sie das Kontrollkästchen **Position zwischenspeichern und zurücksetzen**.  
   
-6.  Klicken Sie auf die Schaltfläche **Übergeordnetes Feld löschen**. Beachten Sie, dass sich die ausgewählte Zeile in der untergeordneten Tabelle nun auf die erste Zeile ändert.  
+6. Klicken Sie auf die Schaltfläche **Übergeordnetes Feld löschen**. Beachten Sie, dass sich die ausgewählte Zeile in der untergeordneten Tabelle nun auf die erste Zeile ändert.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System", "System.Data", "System.Drawing", "System.Windows.Forms" und "System.XML".  
-  
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual C#-, finden Sie unter [erstellen über die Befehlszeile](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [mit csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
+- Verweise auf die Assemblys "System", "System.Data", "System.Drawing", "System.Windows.Forms" und "System.XML".  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben](multiple-controls-bound-to-data-source-synchronized.md)
 - [BindingSource-Komponente](./controls/bindingsource-component.md)
-- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)
+- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)

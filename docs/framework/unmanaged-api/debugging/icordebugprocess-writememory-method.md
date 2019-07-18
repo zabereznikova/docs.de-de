@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e9d640fb1c9dae5bb195baa504e560ba8e45821
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4599bf310a0b819bc662b90a5a86e87ac27c37b1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497092"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737022"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory-Methode
 Schreibt Daten in einem Bereich des Arbeitsspeichers in diesem Prozess.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT WriteMemory(  
     [in]  CORDB_ADDRESS address,  
     [in]  DWORD size,  

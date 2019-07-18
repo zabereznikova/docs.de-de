@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747393"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Exemplarische Vorgehensweise: Ausführen von Drag & Drop-Operationen in Windows Forms
 Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müssen Sie insbesondere eine Reihe von Ereignissen, behandeln die <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, und <xref:System.Windows.Forms.Control.DragDrop> Ereignisse. Wenn Sie die Daten aus den Ereignisargumenten dieser Ereignisse verwenden, können Sie Drag & Drop-Vorgänge problemlos vereinfachen.  
@@ -28,7 +28,7 @@ Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müss
   
 #### <a name="to-start-a-drag-operation"></a>So starten Sie einen Zielvorgang  
   
-1.  In der <xref:System.Windows.Forms.Control.MouseDown> Ereignis für das Steuerelement, in dem der Ziehvorgang beginnen, verwenden die `DoDragDrop` Methode, um die zu ziehenden Daten festzulegen und die zulässige Wirkung haben. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DragEventArgs.Data%2A> und <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
+1. In der <xref:System.Windows.Forms.Control.MouseDown> Ereignis für das Steuerelement, in dem der Ziehvorgang beginnen, verwenden die `DoDragDrop` Methode, um die zu ziehenden Daten festzulegen und die zulässige Wirkung haben. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DragEventArgs.Data%2A> und <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
   
      Im folgenden Beispiel wird gezeigt, wie ein Ziehvorgang gestartet wird. Das Steuerelement, an dem der Ziehvorgang beginnt, eine <xref:System.Windows.Forms.Button> -Steuerelement die gezogenen Daten ist die Zeichenfolgendarstellung der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der <xref:System.Windows.Forms.Button> -Steuerelement und die zulässigen Auswirkungen sind entweder kopieren oder verschieben.  
   
@@ -57,9 +57,9 @@ Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müss
   
 #### <a name="to-perform-a-drop"></a>So führen Sie einen Ablegevorgang aus  
   
-1.  Legen Sie die <xref:System.Windows.Forms.Control.AllowDrop%2A> Eigenschaft auf "true".  
+1. Legen Sie die <xref:System.Windows.Forms.Control.AllowDrop%2A> Eigenschaft auf "true".  
   
-2.  In der `DragEnter` Ereignis für das Steuerelement, in dem der Ablegevorgang erfolgt, stellen Sie sicher, dass die gezogenen Daten einem zulässigen Typ ist (in diesem Fall <xref:System.Windows.Forms.Control.Text%2A>). Der Code legt dann die Auswirkungen, die durchgeführt werden, wenn das ablegen, auf einen Wert in geschieht der <xref:System.Windows.Forms.DragDropEffects> Enumeration. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. In der `DragEnter` Ereignis für das Steuerelement, in dem der Ablegevorgang erfolgt, stellen Sie sicher, dass die gezogenen Daten einem zulässigen Typ ist (in diesem Fall <xref:System.Windows.Forms.Control.Text%2A>). Der Code legt dann die Auswirkungen, die durchgeführt werden, wenn das ablegen, auf einen Wert in geschieht der <xref:System.Windows.Forms.DragDropEffects> Enumeration. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -85,7 +85,7 @@ Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müss
     > [!NOTE]
     >  Können Ihren eigenen definieren <xref:System.Windows.Forms.DataFormats> durch Angabe Ihrer eigenen Objekt als die <xref:System.Object> Parameter, der die <xref:System.Windows.Forms.DataObject.SetData%2A> Methode. Stellen Sie dabei sicher, dass das angegebene Objekt serialisierbar ist. Weitere Informationen finden Sie unter <xref:System.Runtime.Serialization.ISerializable>.  
   
-3.  In der <xref:System.Windows.Forms.Control.DragDrop> Ereignis für das Steuerelement, in dem der Ablegevorgang erfolgt, verwenden die <xref:System.Windows.Forms.DataObject.GetData%2A> Methode, um die gezogenen Daten abzurufen. Weitere Informationen finden Sie unter <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. In der <xref:System.Windows.Forms.Control.DragDrop> Ereignis für das Steuerelement, in dem der Ablegevorgang erfolgt, verwenden die <xref:System.Windows.Forms.DataObject.GetData%2A> Methode, um die gezogenen Daten abzurufen. Weitere Informationen finden Sie unter <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
      Im folgenden Beispiel wird eine <xref:System.Windows.Forms.TextBox> ist das Steuerelement gezogene (und auf dem der Ablegevorgang erfolgt). Der Code legt die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der <xref:System.Windows.Forms.TextBox> steuern die gezogenen Daten gleich.  
   
@@ -108,6 +108,6 @@ Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müss
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Hinzufügen von Daten zur Zwischenablage](how-to-add-data-to-the-clipboard.md)
+- [Vorgehensweise: Hinzufügen von Daten in die Zwischenablage](how-to-add-data-to-the-clipboard.md)
 - [Vorgehensweise: Abrufen von Daten aus der Zwischenablage](how-to-retrieve-data-from-the-clipboard.md)
-- [Drag &amp; Drop-Operationen und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)
+- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)

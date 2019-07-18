@@ -1,19 +1,23 @@
 ---
 title: Befehl „dotnet add package“
-description: Der Befehl „dotnet add package“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt.
-ms.date: 12/04/2018
-ms.openlocfilehash: 159b208feafb82e267629ea47dcef02d6b575055
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+description: Der Paketbefehl „dotnet add“ bietet eine praktische Option zum Hinzufügen von NuGet-Paketverweisen zu einem Projekt.
+ms.date: 06/26/2019
+ms.openlocfilehash: 50a352be66f2b4bd4498d79f61dc01f56d4b00c5
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170001"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569504"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Dieser Artikel gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
 
-## <a name="name"></a>Name
+<!-- todo: uncomment when all CLI commands are reviewed
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
+
+## <a name="name"></a>name
 
 `dotnet add package`: Fügt einen Paketverweis zu einer Projektdatei hinzu.
 
@@ -21,7 +25,7 @@ ms.locfileid: "53170001"
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
 Der `dotnet add package`-Befehl bietet eine praktische Option zum Hinzufügen von Paketverweisen zu einer Projektdatei. Nach dem Ausführen des Befehls wird die Kompatibilität überprüft, um sicherzustellen, dass das Paket mit den Frameworks im Projekt kompatibel ist. Wenn die Überprüfung erfolgreich ist, wird ein `<PackageReference>`-Element zur Projektdatei hinzugefügt, und [dotnet restore](dotnet-restore.md) wird ausgeführt.
 
@@ -70,7 +74,7 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
 
 * **`--interactive`**
 
-  Ermöglicht es dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten (z.B. um die Authentifizierung abzuschließen). Verfügbar ab .NET Core 2.1 SDK, Version 2.1.400 oder höher.
+  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten (z.B. um die Authentifizierung abzuschließen). Verfügbar ab .NET Core 2.1 SDK, Version 2.1.400 oder höher.
 
 * **`-n|--no-restore`**
 
@@ -78,15 +82,15 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Stellt das Paket im angegebenen Verzeichnis wieder her.
+  Das Verzeichnis, in dem die Pakete wiederhergestellt werden sollen. Der standardmäßige Wiederherstellungsort für Pakete ist `%userprofile%\.nuget\packages` unter Windows und `~/.nuget/packages` unter MacOS und Linux. Weitere Informationen finden Sie unter [Verwalten von globalen Pakete-, Cache- und temporären Ordnern in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
 * **`-s|--source <SOURCE>`**
 
-  Verwendet während des Wiederherstellungsvorgangs eine bestimmte NuGet-Paketquelle.
+  Die NuGet-Paketquelle, die während des Wiederherstellungsvorgangs zu verwenden ist.
 
 * **`-v|--version <VERSION>`**
 
-  Die Version des Pakets.
+  Die Version des Pakets. Weitere Informationen hierzu finden Sie unter [NuGet-Paketversionsverwaltung](https://docs.microsoft.com/nuget/reference/package-versioning).
 
 ## <a name="examples"></a>Beispiele
 
@@ -107,3 +111,8 @@ Die *ToDo.csproj*-Datei enthält nun ein [`<PackageReference>`](/nuget/consume-p
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
+
+## <a name="see-also"></a>Siehe auch
+
+- [Verwalten von globalen Pakete-, Cache- und temporären Ordnern in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [NuGet-Paketversionsverwaltung](https://docs.microsoft.com/nuget/reference/package-versioning)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ef48ff1bbf79be981b8b8d4148f818fe40b72353
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829134"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64632188"
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonyme Typen (Visual Basic)
 Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erstellen, ohne eine Klassendefinition für den Datentyp zu schreiben. Stattdessen erzeugt der Compiler eine Klasse. Die Klasse hat keinen verwendbaren Namen, erbt direkt von <xref:System.Object>, und enthält die Eigenschaften, die Sie in der Deklaration des Objekts angeben. Da der Name des Datentyps nicht angegeben ist, wird bezeichnet als ein *anonymen Typs*.  
@@ -53,22 +53,22 @@ Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erst
 ## <a name="key-properties"></a>Schlüsseleigenschaften  
  Wichtige Eigenschaften unterscheiden sich einige grundlegende Arten von nicht schlüsselbezogene Eigenschaften:  
   
--   Nur die Werte der Haupteigenschaften werden verglichen, um festzustellen, ob die beiden Instanzen gleich sind.  
+- Nur die Werte der Haupteigenschaften werden verglichen, um festzustellen, ob die beiden Instanzen gleich sind.  
   
--   Die Werte der Eigenschaften sind schreibgeschützt und können nicht geändert werden.  
+- Die Werte der Eigenschaften sind schreibgeschützt und können nicht geändert werden.  
   
--   Eigenschaftenwerte sind nur im vom Compiler generierter Code Hashalgorithmus für einen anonymen Typ enthalten.  
+- Eigenschaftenwerte sind nur im vom Compiler generierter Code Hashalgorithmus für einen anonymen Typ enthalten.  
   
 ### <a name="equality"></a>Gleichheit  
  Instanzen von anonymen Typen können nur dann, wenn sie Instanzen desselben anonymen Typs sind gleich sein. Der Compiler behandelt zwei Instanzen als Instanzen des gleichen Typs, wenn sie die folgenden Bedingungen erfüllen:  
   
--   Sie werden in der gleichen Assembly deklariert.  
+- Sie werden in der gleichen Assembly deklariert.  
   
--   Ihre Eigenschaften haben die gleichen Namen, denselben abgeleiteten Typ verwenden, und in der gleichen Reihenfolge deklariert werden. Beim Vergleichen wird nicht beachtet werden.  
+- Ihre Eigenschaften haben die gleichen Namen, denselben abgeleiteten Typ verwenden, und in der gleichen Reihenfolge deklariert werden. Beim Vergleichen wird nicht beachtet werden.  
   
--   Die gleichen Eigenschaften in den einzelnen werden als Schlüsseleigenschaften gekennzeichnet.  
+- Die gleichen Eigenschaften in den einzelnen werden als Schlüsseleigenschaften gekennzeichnet.  
   
--   Mindestens eine Eigenschaft in jeder Deklaration ist eine Schlüsseleigenschaft.  
+- Mindestens eine Eigenschaft in jeder Deklaration ist eine Schlüsseleigenschaft.  
   
  Eine Instanz eines anonymen Typs, die keine Schlüsseleigenschaften entspricht nur sich selbst zur Verfügung.  
   
@@ -86,11 +86,11 @@ Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erst
 ## <a name="anonymous-types-from-query-expressions"></a>Anonyme Typen in Abfrageausdrücken  
  Abfrageausdrücke muss nicht immer die Erstellung von anonymen Typen. Wenn möglich, verwenden sie einen vorhandenen Typ zum Speichern der Spaltendaten an. Dies tritt auf, wenn die Abfrage entweder ganze Datensätze aus der Datenquelle oder nur ein Feld aus jedem Datensatz zurückgibt. In den folgenden Codebeispielen `customers` ist eine Auflistung von Objekten von einem `Customer` Klasse. Die Klasse verfügt über zahlreiche Eigenschaften, und Sie können eine oder mehrere von ihnen in das Abfrageergebnis in einer beliebigen Reihenfolge einschließen. In den ersten beiden Beispielen sind keine anonymen Typen erforderlich, da die Abfragen Elemente der benannten Typen auswählen:  
   
--   `custs1` enthält eine Auflistung von Zeichenfolgen, da `cust.Name` ist eine Zeichenfolge.  
+- `custs1` enthält eine Auflistung von Zeichenfolgen, da `cust.Name` ist eine Zeichenfolge.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` enthält eine Auflistung von `Customer` Objekte um, da jedes Element der `customers` ist eine `Customer` Objekt und das ganze Element von der Abfrage ausgewählt ist.  
+- `custs2` enthält eine Auflistung von `Customer` Objekte um, da jedes Element der `customers` ist eine `Customer` Objekt und das ganze Element von der Abfrage ausgewählt ist.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

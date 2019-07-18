@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079135"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596746"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern
 Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivieren, deaktivieren und filtern.  
@@ -31,9 +31,9 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>So erstellen und initialisieren Sie einen Ablaufverfolgungsschalter  
   
-1.  Definieren Sie einen Schalter entweder mit dem Typ <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> oder mit dem Typ <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, und legen Sie den Namen und die Beschreibung des Schalters fest.  
+1. Definieren Sie einen Schalter entweder mit dem Typ <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> oder mit dem Typ <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>, und legen Sie den Namen und die Beschreibung des Schalters fest.  
   
-2.  Konfigurieren Sie Ihren Ablaufverfolgungsschalter. Weitere Informationen finden Sie unter [Konfigurieren von Ablaufverfolgungsschaltern](#configure).  
+2. Konfigurieren Sie Ihren Ablaufverfolgungsschalter. Weitere Informationen finden Sie unter [Konfigurieren von Ablaufverfolgungsschaltern](#configure).  
   
      Im folgenden Code werden zwei Schalter erstellt, jeweils ein Schalter jedes Typs:  
   
@@ -71,15 +71,15 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
 #### <a name="to-configure-trace-switches"></a>So konfigurieren Sie Ablaufverfolgungsschalter  
   
-1.  Um Ablaufverfolgungsschalter zu verwenden, müssen Sie diese zuerst erstellen und sie, wie im Abschnitt [Erstellen und Initialisieren eines Ablaufverfolgungsschalters](#create) beschrieben, in Ihrem Code platzieren.  
+1. Um Ablaufverfolgungsschalter zu verwenden, müssen Sie diese zuerst erstellen und sie, wie im Abschnitt [Erstellen und Initialisieren eines Ablaufverfolgungsschalters](#create) beschrieben, in Ihrem Code platzieren.  
   
-2.  Enthält Ihr Projekt keine Konfigurationsdatei („app.config“ oder „Web.config“), dann wählen Sie im Menü **Projekt** den Befehl **Neues Element hinzufügen** aus.  
+2. Enthält Ihr Projekt keine Konfigurationsdatei („app.config“ oder „Web.config“), dann wählen Sie im Menü **Projekt** den Befehl **Neues Element hinzufügen** aus.  
   
-    -   **Visual Basic:** In der **neues Element hinzufügen** Dialogfeld wählen **Anwendungskonfigurationsdatei**.  
+    - **Visual Basic:** In der **neues Element hinzufügen** Dialogfeld wählen **Anwendungskonfigurationsdatei**.  
   
-         Die Anwendungskonfigurationsdatei wird erstellt und geöffnet. Dies ist ein XML-Dokument dem Stammelement `<configuration>.`  
+         Die Anwendungskonfigurationsdatei wird erstellt und geöffnet. Diese Datei ist ein XML-Dokument mit dem Stammelement `<configuration>.`  
   
-    -   **Visual C#:** In der **neues Element hinzufügen** Dialogfeld wählen **XML-Datei**. Geben Sie dieser Datei den Namen **app.config**. Fügen Sie im XML-Editor nach der XML-Deklaration die folgende XML hinzu:  
+    - **Visual C#:** In der **neues Element hinzufügen** Dialogfeld wählen **XML-Datei**. Geben Sie dieser Datei den Namen **app.config**. Fügen Sie im XML-Editor nach der XML-Deklaration die folgende XML hinzu:  
   
         ```xml  
         <configuration>  
@@ -88,7 +88,7 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
          Nachdem das Projekt kompiliert ist, wird die Datei „app.config“ in den Projektausgabeordner kopiert und in „*Anwendungsname*.exe.config“ umbenannt.  
   
-3.  Fügen Sie nach dem `<configuration>`-Tag, aber vor dem `</configuration>`-Tag, die entsprechende XML ein, um die Schalter zu konfigurieren. In den folgenden Beispielen werden ein **BooleanSwitch** mit einer **DisplayName**-Eigenschaft von `DataMessageSwitch` und ein **TraceSwitch** mit einer **DisplayName**-Eigenschaft von `TraceLevelSwitch` veranschaulicht.  
+3. Fügen Sie nach dem `<configuration>`-Tag, aber vor dem `</configuration>`-Tag, die entsprechende XML ein, um die Schalter zu konfigurieren. In den folgenden Beispielen werden ein **BooleanSwitch** mit einer **DisplayName**-Eigenschaft von `DataMessageSwitch` und ein **TraceSwitch** mit einer **DisplayName**-Eigenschaft von `TraceLevelSwitch` veranschaulicht.  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
      In dieser Konfiguration sind beide Schalter deaktiviert.  
   
-4.  Wenn Sie einen **BooleanSwitch**, wie `DataMessagesSwitch` im vorhergehenden Beispiel, aktivieren möchten, ändern Sie den **Wert** in eine beliebige ganze Zahl ungleich 0.  
+4. Wenn Sie einen **BooleanSwitch**, wie `DataMessagesSwitch` im vorhergehenden Beispiel, aktivieren möchten, ändern Sie den **Wert** in eine beliebige ganze Zahl ungleich 0.  
   
-5.  Wenn Sie einen **TraceSwitch**, wie `TraceLevelSwitch` im vorhergehenden Beispiel, aktivieren möchten, ändern Sie den **Wert** in die entsprechende Ebeneneinstellung (1 bis 4).  
+5. Wenn Sie einen **TraceSwitch**, wie `TraceLevelSwitch` im vorhergehenden Beispiel, aktivieren möchten, ändern Sie den **Wert** in die entsprechende Ebeneneinstellung (1 bis 4).  
   
-6.  Fügen Sie der .config-Datei Kommentare hinzu , damit der Benutzer genau weiß, welche Werte geändert werden müssen, damit die Schalter geeignet konfiguriert sind.  
+6. Fügen Sie der .config-Datei Kommentare hinzu , damit der Benutzer genau weiß, welche Werte geändert werden müssen, damit die Schalter geeignet konfiguriert sind.  
   
      Im folgenden Beispiel wird gezeigt, wie der endgültige Code einschließlich der Kommentare aussehen könnte:  
   
@@ -130,4 +130,4 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

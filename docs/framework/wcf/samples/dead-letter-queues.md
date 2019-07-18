@@ -2,12 +2,12 @@
 title: Warteschlangen für unzustellbare Meldungen
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 2a6ed86b04cd110dcf71efb1a6b0560fc5d45467
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 59e2344d2bd6a9de3396f7d6d878182333138ff3
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177930"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425481"
 ---
 # <a name="dead-letter-queues"></a>Warteschlangen für unzustellbare Meldungen
 Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Es basiert auf der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
@@ -24,15 +24,15 @@ Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mi
 
  Die Warteschlange für unzustellbare Nachrichten in der `NetMsmqBinding`-Bindung wird in den folgenden Eigenschaften ausgedrückt:
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> die Eigenschaft, die Art der Dead Letter-Warteschlange, die vom Client benötigten auszudrücken. Diese Enumeration verfügt über folgende Werte:
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>-Eigenschaft, um die vom Client benötigte Art der Warteschlange für unzustellbare Nachrichten auszudrücken. Diese Enumeration verfügt über folgende Werte:
 
--   `None`: Der Client ist keine Warteschlange für unzustellbare Nachrichten erforderlich.
+- `None`: Der Client ist keine Warteschlange für unzustellbare Nachrichten erforderlich.
 
--   `System`: Die Systemwarteschlange für unzustellbare Nachrichten wird verwendet, um unzustellbare Nachrichten zu speichern. Die Systemwarteschlange für unzustellbare Nachrichten wird von allen Anwendungen verwendet, die auf dem Computer ausgeführt werden.
+- `System`: Die Systemwarteschlange für unzustellbare Nachrichten wird verwendet, um unzustellbare Nachrichten zu speichern. Die Systemwarteschlange für unzustellbare Nachrichten wird von allen Anwendungen verwendet, die auf dem Computer ausgeführt werden.
 
--   `Custom`: Eine benutzerdefinierte Dead Letter-Warteschlange angegeben, mit der <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Eigenschaft wird verwendet, um unzustellbare Nachrichten zu speichern. Diese Funktion ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar. Dieser Wert wird verwendet, wenn die Anwendung ihre eigene Warteschlange für unzustellbare Nachrichten verwenden muss und diese nicht mit anderen Anwendungen auf dem gleichen Computer gemeinsam verwenden kann.
+- `Custom`: Eine benutzerdefinierte Dead Letter-Warteschlange angegeben, mit der <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Eigenschaft wird verwendet, um unzustellbare Nachrichten zu speichern. Diese Funktion ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar. Dieser Wert wird verwendet, wenn die Anwendung ihre eigene Warteschlange für unzustellbare Nachrichten verwenden muss und diese nicht mit anderen Anwendungen auf dem gleichen Computer gemeinsam verwenden kann.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> die Eigenschaft, die betreffende Warteschlange für die Verwendung als Warteschlange für unzustellbare Nachrichten auszudrücken. Diese ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft, um die spezifische Warteschlange für unzustellbare Nachrichten anzugeben. Diese ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.
 
  In diesem Beispiel sendet der Client einen Stapel von Nachrichten aus dem Bereich der Transaktion an den Dienst und legt einen willkürlichen niedrigen Wert für die Gültigkeitsdauer für diese Nachrichten fest (ca. 2 Sekunden). Der Client gibt auch eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten an, in der abgelaufene Nachrichten abgelegt werden.
 
@@ -156,7 +156,7 @@ class Client
 ```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)
 {
-    Console.WriteLine("Submitting purchase order did not succed ", po);
+    Console.WriteLine("Submitting purchase order did not succeed ", po);
     MsmqMessageProperty mqProp =
                   OperationContext.Current.IncomingMessageProperties[
                   MsmqMessageProperty.Name] as MsmqMessageProperty;
@@ -310,27 +310,27 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:
+2. Wenn der Dienst zuerst ausgeführt wird, wird überprüft, ob die Warteschlange vorhanden ist. Ist die Warteschlange nicht vorhanden, wird sie vom Dienst erstellt. Sie können zuerst den Dienst ausführen, um die Warteschlange zu erstellen, oder Sie können sie über den MSMQ-Warteschlangen-Manager erstellen. Führen Sie zum Erstellen einer Warteschlange in Windows 2008 die folgenden Schritte aus:
 
-    1.  Öffnen Sie Server-Manager in Visual Studio 2012.
+    1. Öffnen Sie Server-Manager in Visual Studio 2012.
 
-    2.  Erweitern Sie die **Features** Registerkarte.
+    2. Erweitern Sie die **Features** Registerkarte.
 
-    3.  Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.
+    3. Mit der rechten Maustaste **Private Meldungswarteschlangen**, und wählen Sie **neu**, **Private Warteschlange**.
 
-    4.  Überprüfen Sie die **transaktional** Feld.
+    4. Überprüfen Sie die **transaktional** Feld.
 
-    5.  Geben Sie `ServiceModelSamplesTransacted` als Name der neuen Warteschlange.
+    5. Geben Sie `ServiceModelSamplesTransacted` als Name der neuen Warteschlange.
 
-3.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
+3. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
 
-4.  Zum Ausführen des Beispiels in einem einzelnen Computer oder computerübergreifend Konfiguration ändern Sie die Warteschlangennamen Namen entsprechend, und Ersetzen Sie "localhost" durch den vollständigen Namen des Computers, und befolgen die Anweisungen in [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Zum Ausführen des Beispiels in einem einzelnen Computer oder computerübergreifend Konfiguration ändern Sie die Warteschlangennamen Namen entsprechend, und Ersetzen Sie "localhost" durch den vollständigen Namen des Computers, und befolgen die Anweisungen in [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>So führen Sie das Beispiel auf einem Computer aus, der zu einer Arbeitsgruppe gehört
 
-1.  Wenn Ihr Computer nicht zu einer Domäne gehört, deaktivieren Sie die Transportsicherheit, indem Sie den Authentifizierungsmodus und die Schutzebene auf `None` festlegen, wie in der folgenden Beispielkonfiguration gezeigt.
+1. Wenn Ihr Computer nicht zu einer Domäne gehört, deaktivieren Sie die Transportsicherheit, indem Sie den Authentifizierungsmodus und die Schutzebene auf `None` festlegen, wie in der folgenden Beispielkonfiguration gezeigt.
 
     ```xml
     <bindings>
@@ -344,7 +344,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
      Stellen Sie sicher, dass der Endpunkt der Bindung zugeordnet ist, indem Sie das `bindingConfiguration`-Attribut des Endpunkts festlegen.
 
-2.  Ändern Sie die Konfiguration auf dem DeadLetterService, dem Server und dem Client, bevor Sie das Beispiel ausführen.
+2. Ändern Sie die Konfiguration auf dem DeadLetterService, dem Server und dem Client, bevor Sie das Beispiel ausführen.
 
     > [!NOTE]
     >  Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von `MsmqAuthenticationMode`, `MsmqProtectionLevel` und der `Message`-Sicherheit auf `None`.

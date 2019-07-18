@@ -2,21 +2,21 @@
 title: Sie müssen einen Dateinamen angeben.
 ms.date: 07/20/2015
 ms.assetid: e011825a-019f-4c01-8d5b-3194f172e495
-ms.openlocfilehash: 201c92879a42b323e93fba2267c5c9c7d3a29e4e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: ba8ab6ebbd2d6ae7094ccae927ef317c1571c178
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58046981"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913261"
 ---
 # <a name="you-must-specify-a-file-name"></a>Sie müssen einen Dateinamen angeben.
 Sie haben versucht, einen Vorgang auszuführen, z. B. das Verschieben oder Kopieren einer Datei, für die ein Dateiname angegeben werden muss.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Geben Sie den erforderlichen Dateinamen an.  
+- Geben Sie den erforderlichen Dateinamen an.  
   
--   Stellen Sie sicher, dass der Pfad endet nicht mit einem Verzeichnistrennzeichen (\\).  
+- Stellen Sie sicher, dass der Pfad endet nicht mit einem Verzeichnistrennzeichen (\\).  
   
 ## <a name="see-also"></a>Siehe auch
 

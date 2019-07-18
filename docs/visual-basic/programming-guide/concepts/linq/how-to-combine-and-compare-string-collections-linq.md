@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: efd8ebdcc12c2941753b6811028d73655167c2f9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4515fd3f96bfe94e46c2a090d75468a7e5b18939
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828965"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593033"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (Visual Basic)
 In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammenführen und die Ergebnisse anschließend sortieren. Insbesondere wird gezeigt, wie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge von zwei Gruppen von Textzeilen ausgeführt wird.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>So richten Sie das Projekt und die Textdateien ein  
   
-1.  Kopieren Sie diese Namen in eine Textdatei namens „names1.txt“, und speichern Sie sie in Ihrem Projektordner:  
+1. Kopieren Sie diese Namen in eine Textdatei namens „names1.txt“, und speichern Sie sie in Ihrem Projektordner:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammen
     Garcia, Debra  
     ```  
   
-2.  Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner. Beachten Sie, dass die zwei Dateien einige Namen gemeinsam haben.  
+2. Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner. Beachten Sie, dass die zwei Dateien einige Namen gemeinsam haben.  
   
     ```  
     Liu, Jinghao  
@@ -163,7 +163,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.  
+Erstellen Sie ein Konsolenanwendungsprojekt für VB.NET, mit einem `Imports` -Anweisung für den Namespace "System.Linq".
   
 ## <a name="see-also"></a>Siehe auch
 

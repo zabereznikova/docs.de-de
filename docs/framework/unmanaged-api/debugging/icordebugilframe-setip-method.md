@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a25e52c6b858aaa602ffade0e407b1aaf6e5c67e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2af3f58fa7714b3c2b0ba387b1da650f0638dd6c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471390"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758778"
 ---
 # <a name="icordebugilframesetip-method"></a>ICorDebugILFrame::SetIP-Methode
 Legt den Anweisungszeiger am angegebenen Offset Speicherort im Microsoft intermediate Language (MSIL)-Code fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetIP (  
     [in] ULONG32 nOffset  
 );  

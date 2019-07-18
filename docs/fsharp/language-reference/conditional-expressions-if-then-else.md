@@ -2,12 +2,12 @@
 title: 'Bedingte Ausdrücke: if... then... else'
 description: Erfahren Sie, wie Sie bedingte Ausdrücke in F# zum Ausführen der unterschiedliche Codezweige geschrieben.
 ms.date: 05/16/2016
-ms.openlocfilehash: eade8c20c1b62a2e9a54700550d832798308f368
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: db2d5ce5b75ecda171f2623c986878dcee1cf4d9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614047"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641990"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>Bedingte Ausdrücke: `if...then...else`
 

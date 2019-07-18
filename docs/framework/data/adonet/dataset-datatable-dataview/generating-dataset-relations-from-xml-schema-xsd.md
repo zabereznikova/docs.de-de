@@ -2,21 +2,21 @@
 title: Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2cf6d2ed949a3efa39c0f1c049bc03e7a5b0eb0b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170221"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621083"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)
 In einem <xref:System.Data.DataSet> können Sie eine Verknüpfung zwischen zwei oder mehreren Spalten erstellen, indem Sie eine Beziehung zwischen übergeordneten und untergeordneten Elementen erstellen. Es gibt drei Möglichkeiten zur Darstellung einer **DataSet** Beziehung in ein Schema für XML Schema Definition Language (XSD):  
   
--   Geben Sie geschachtelte komplexe Typen an.  
+- Geben Sie geschachtelte komplexe Typen an.  
   
--   Verwenden der **msdata: Relationship** Anmerkung.  
+- Verwenden der **msdata: Relationship** Anmerkung.  
   
--   Geben Sie eine **xs: keyref** ohne die **msdata: ConstraintOnly** Anmerkung.  
+- Geben Sie eine **xs: keyref** ohne die **msdata: ConstraintOnly** Anmerkung.  
   
 ## <a name="nested-complex-types"></a>Geschachtelte komplexe Typen  
  Geschachtelte komplexe Typdefinitionen in einem Schema geben die Beziehungen zwischen übergeordneten und untergeordneten Elementen an. Das folgende XML-Schema-Fragment zeigt, dass **OrderDetail** ist ein untergeordnetes Element von der **Reihenfolge** Element.  
@@ -87,14 +87,14 @@ msdata:childkey="" />
  [Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
  Beschreibt, wie Sie das explizite Festlegen von Beziehungen einem **DataSet** für geschachtelte Elemente im XML-Schema.  
   
- [Angeben von Beziehungen zwischen Elementen ohne Verschachtelung](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ [Angeben von Beziehungen zwischen Elementen ohne Schachtelung](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
  Beschreibt das Erstellen von Beziehungen in einem **DataSet** zwischen XML-Schema-Elemente, die nicht geschachtelt sind.  
   
 ### <a name="related-sections"></a>Verwandte Abschnitte  
  [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Beschreibt die relationale Struktur bzw. das Schema, der eine **DataSet** , die vom Schema der XML Schema Definition Language (XSD) erstellt wird.  
   
- [Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Beschreibt die XML-Schema-Elemente, die zum Erstellen von Unique- und foreign Key-Einschränkungen in einer **DataSet**.  
   
 ## <a name="see-also"></a>Siehe auch

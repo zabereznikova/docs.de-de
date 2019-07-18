@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Branches und Schleifen in C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1475941e0b0169566307f016d68ef3c3cb0b907c
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 7122bda62465482340ebdd2b1dc37577de9a0e69
+  ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029735"
+  ms.lasthandoff: 07/09/2019
+  ms.locfileid: "67661015"
 items:
 - durationInMinutes: 1
   content: >
@@ -418,9 +418,9 @@ items:
     Weitere Informationen zu Zahlen in C# finden Sie auch unter folgenden Themen:
 
 
-    - [Tabelle ganzzahliger Typen](../../language-reference/keywords/integral-types-table.md)
+    - [Integrale Typen](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [Tabelle für Gleitkommatypen](../../language-reference/keywords/floating-point-types-table.md)
+    - [Tabelle für Gleitkommatypen](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
     - [Tabelle integrierter Typen](../../language-reference/keywords/built-in-types-table.md)
 

@@ -2,18 +2,18 @@
 title: Lernen durch exemplarische Vorgehensweisen
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189000"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743035"
 ---
 # <a name="learning-by-walkthroughs"></a>Lernen durch exemplarische Vorgehensweisen
 Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumentation stellt mehrere exemplarische Vorgehensweisen bereit. Dieser Abschnitt behandelt allgemeine Aspekte der exemplarischen Vorgehensweisen (einschließlich Fehlerbehebung) und bietet Links zu Vorgehensweisen für Einsteiger, die mehr über [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfahren möchten.  
   
 > [!NOTE]
->  Die exemplarischen Vorgehensweisen in diesem Abschnitt zu den ersten Schritten machen Sie mit dem grundlegenden Code vertraut, der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Technologie unterstützt. In der Praxis verwenden Sie in der Regel [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] und Windows Forms-Projekte, um Ihre [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen zu implementieren. Die [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]-Dokumentation stellt Beispiele und exemplarische Vorgehensweisen für diesen Zweck bereit.  
+>  Die exemplarischen Vorgehensweisen in diesem Abschnitt zu den ersten Schritten machen Sie mit dem grundlegenden Code vertraut, der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Technologie unterstützt. In der Praxis werden Sie in der Regel die Object Relational Designer und Windows Forms-Projekten verwenden, um Implementieren Ihrer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Anwendungen. Die O/R-Designer-Dokumentation enthält Beispiele und exemplarische Vorgehensweisen zu diesem Zweck an.  
   
 ## <a name="getting-started-walkthroughs"></a>Exemplarische Vorgehensweisen zu den ersten Schritten  
  In diesem Abschnitt sind mehrere exemplarische Vorgehensweisen verfügbar. Diese exemplarischen Vorgehensweisen basieren auf der Beispieldatenbank Northwind und präsentieren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Funktionen umfassend und mit minimaler Komplexität.  
@@ -25,25 +25,25 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
 |Erstellen einer Entitätsklasse und Ausführen einer einfachen Abfrage|[Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
 |Hinzufügen einer zweiten Klasse und Ausführen einer komplexeren Abfrage<br /><br /> (Erfordert den Abschluss der vorherigen exemplarischen Vorgehensweise.)|[Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
 |Hinzufügen, Ändern und Löschen von Elementen in der Datenbank|[Exemplarische Vorgehensweise: Bearbeiten von Daten (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Exemplarische Vorgehensweise: Bearbeiten von Daten (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Verwenden von gespeicherten Prozeduren|[Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Verwenden von gespeicherten Prozeduren|[Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Exemplarische Vorgehensweise: Verwenden von gespeicherten Prozeduren nur (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Allgemein  
  Die folgenden Informationen betreffen diese exemplarischen Vorgehensweisen im Allgemeinen:  
   
--   Umgebung: Jede [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exemplarischen Vorgehensweise wird Visual Studio verwendet, als die integrierte Entwicklungsumgebung (IDE).  
+- Umgebung: Jede [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] exemplarischen Vorgehensweise wird Visual Studio verwendet, als die integrierte Entwicklungsumgebung (IDE).  
   
--   SQL-Module: In diesen exemplarischen Vorgehensweisen werden für die Implementierung mit SQL Server Express geschrieben. Wenn Sie nicht über SQL Server Express verfügen, können Sie diese Lösung kostenlos herunterladen. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- SQL-Module: In diesen exemplarischen Vorgehensweisen werden für die Implementierung mit SQL Server Express geschrieben. Wenn Sie nicht über SQL Server Express verfügen, können Sie diese Lösung kostenlos herunterladen. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Exemplarische Vorgehensweisen verwenden einen Dateinamen als Verbindungszeichenfolge. Einfach einen Dateinamen anzugeben ist eine Annehmlichkeit, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für SQL Server Express-Benutzer bereitstellt. Achten Sie stets auf Sicherheitsprobleme. Weitere Informationen finden Sie unter [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    >  Exemplarische Vorgehensweisen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwenden einen Dateinamen als Verbindungszeichenfolge. Einfach einen Dateinamen anzugeben ist eine Annehmlichkeit, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für SQL Server Express-Benutzer bereitstellt. Achten Sie stets auf Sicherheitsprobleme. Weitere Informationen finden Sie unter [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Exemplarische Vorgehensweisen erfordern in der Regel die Beispieldatenbank Northwind. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Exemplarische Vorgehensweisen erfordern in der Regel die Beispieldatenbank Northwind. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Die angezeigten Dialogfelder und Menübefehle, die Sie in den exemplarischen Vorgehensweisen finden Sie möglicherweise je nach den aktiven Einstellungen oder Visual Studio-Edition in der Hilfe beschriebenen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+- Die angezeigten Dialogfelder und Menübefehle, die Sie in den exemplarischen Vorgehensweisen finden Sie möglicherweise je nach den aktiven Einstellungen oder Visual Studio-Edition in der Hilfe beschriebenen unterscheiden. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
--   Für exemplarische Vorgehensweisen, die sich auf Szenarien mit mehreren Ebenen beziehen, muss sich ein Server auf einem Computer befinden, der sich vom Entwicklungscomputer unterscheidet. Außerdem müssen Sie über die entsprechenden Zugriffsrechte für den Server verfügen.  
+- Für exemplarische Vorgehensweisen, die sich auf Szenarien mit mehreren Ebenen beziehen, muss sich ein Server auf einem Computer befinden, der sich vom Entwicklungscomputer unterscheidet. Außerdem müssen Sie über die entsprechenden Zugriffsrechte für den Server verfügen.  
   
--   Der Name der Klasse, die in der Regel für die Orders-Tabelle in der Beispieldatenbank Northwind steht, lautet `[Order]`. Das escaping ist erforderlich, da `Order` ist ein Schlüsselwort in Visual Basic.  
+- Der Name der Klasse, die in der Regel für die Orders-Tabelle in der Beispieldatenbank Northwind steht, lautet `[Order]`. Das escaping ist erforderlich, da `Order` ist ein Schlüsselwort in Visual Basic.  
   
 ## <a name="troubleshooting"></a>Problembehandlung  
  Laufzeitfehler können auftreten, da Sie nicht über ausreichende Berechtigungen für den Zugriff auf die Datenbanken verfügen, die in diesen exemplarischen Vorgehensweisen verwendet werden. Die folgenden Schritte unterstützen Sie bei der Behebung der gängigsten Probleme.  
@@ -53,13 +53,13 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>So prüfen oder ändern Sie die Datenbankanmeldung  
   
-1.  Klicken Sie auf der Windows **starten** , zeigen Sie auf **Programme**, **Microsoft SQL Server 2005**, zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
+1. Klicken Sie auf der Windows **starten** , zeigen Sie auf **Programme**, **Microsoft SQL Server 2005**, zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
+2. Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
   
-3.  Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Eigenschaften**.  
+3. Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)** , und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie auf die **anmelden** Registerkarte, und überprüfen Sie, wie Sie möchten melden Sie sich an den Server.  
+4. Klicken Sie auf die **anmelden** Registerkarte, und überprüfen Sie, wie Sie möchten melden Sie sich an den Server.  
   
      In den meisten Fällen **Lokales System** funktioniert.  
   
@@ -70,9 +70,9 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>So aktivieren Sie das Named Pipes-Protokoll  
   
-1.  Im linken Bereich die **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server 2005-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für SQLEXPRESS**.  
+1. Im linken Bereich die **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server 2005-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für SQLEXPRESS**.  
   
-2.  Stellen Sie im rechten Bereich sicher, dass die **Named Pipes** -Protokoll aktiviert ist. Wenn sie nicht der Fall ist, mit der rechten Maustaste **Namenspipes** , und klicken Sie dann auf **aktivieren**.  
+2. Stellen Sie im rechten Bereich sicher, dass die **Named Pipes** -Protokoll aktiviert ist. Wenn sie nicht der Fall ist, mit der rechten Maustaste **Namenspipes** , und klicken Sie dann auf **aktivieren**.  
   
      Sie müssen den Dienst beenden und neu starten. Führen Sie die Schritte im nächsten Block aus.  
   
@@ -81,11 +81,11 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 ##### <a name="to-stop-and-restart-the-service"></a>So beenden Sie den Dienst und starten ihn neu  
   
-1.  Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
+1. Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
   
-2.  Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **beenden**.  
+2. Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)** , und klicken Sie dann auf **beenden**.  
   
-3.  Mit der rechten Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Neustart**.  
+3. Mit der rechten Maustaste **SQL Server (SQLEXPRESS)** , und klicken Sie dann auf **Neustart**.  
   
 ## <a name="see-also"></a>Siehe auch
 

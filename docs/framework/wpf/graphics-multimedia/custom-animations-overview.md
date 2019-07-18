@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b97c926da28eeb5385de71362a6cbc064ccc20cd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190729"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615440"
 ---
 # <a name="custom-animations-overview"></a>Übersicht über benutzerdefinierte Animationen
 In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animationssystem durch Erstellen benutzerdefinierter Keyframes oder Animationsklassen erweitert oder durch Pro-Frame-Rückrufe umgangen wird.  
@@ -28,11 +28,11 @@ In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient]
 ## <a name="extending-the-animation-system"></a>Erweitern des Animationssystems  
  Es gibt zahlreiche Methoden zum Erweitern des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animationssystems, abhängig von der Ebene der integrierten Funktionen, die Sie verwenden möchten.  Es gibt drei primäre Erweiterungspunkte in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animations-Engine:  
   
--   Erstellen Sie ein benutzerdefiniertes Keyframe-Objekt durch Erben von einer von der  *\<Typ >* KeyFrame-Klassen, z. B. <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Dieser Ansatz verwendet die meisten der integrierten Funktionen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animations-Engine.  
+- Erstellen Sie ein benutzerdefiniertes Keyframe-Objekt durch Erben von einer von der  *\<Typ >* KeyFrame-Klassen, z. B. <xref:System.Windows.Media.Animation.DoubleKeyFrame>. Dieser Ansatz verwendet die meisten der integrierten Funktionen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animations-Engine.  
   
--   Erstellen Sie eine eigene Animationsklasse durch Vererbung von <xref:System.Windows.Media.Animation.AnimationTimeline> mindestens eine der  *\<Typ >* AnimationBase-Klassen.  
+- Erstellen Sie eine eigene Animationsklasse durch Vererbung von <xref:System.Windows.Media.Animation.AnimationTimeline> mindestens eine der  *\<Typ >* AnimationBase-Klassen.  
   
--   Verwenden Sie Pro-Frame-Rückruf, um Animationen auf einer Pro-Frame-Basis zu generieren. Bei diesem Ansatz werden die Animations- und Zeitsteuerungssysteme vollständig umgangen.  
+- Verwenden Sie Pro-Frame-Rückruf, um Animationen auf einer Pro-Frame-Basis zu generieren. Bei diesem Ansatz werden die Animations- und Zeitsteuerungssysteme vollständig umgangen.  
   
  In der folgenden Tabelle werden einige die Szenarios zur Erweiterung des Animationssystems beschrieben.  
   
@@ -47,11 +47,11 @@ In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient]
 ## <a name="create-a-custom-key-frame"></a>Erstellen eines benutzerdefinierten Keyframes  
  Die einfachste Möglichkeit zum Erweitern des Animationssystems ist das Erstellen einer benutzerdefinierten Keyframe-Klasse. Verwenden Sie diesen Ansatz, wenn Sie eine andere Interpolationsmethode für eine Keyframe-Animation möchten.  Wie in [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md) beschrieben ist, verwendet eine Keyframe-Animation Keyframe-Objekte, um die Ausgabewerte zu generieren. Jedes Keyframe-Objekt hat drei Funktionen:  
   
--   Gibt an, ein Ziel mithilfe der <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> Eigenschaft.  
+- Gibt an, ein Ziel mithilfe der <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> Eigenschaft.  
   
--   Gibt die Uhrzeit, an dem dieser Wert erreicht sein soll mithilfe, der <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Eigenschaft.  
+- Gibt die Uhrzeit, an dem dieser Wert erreicht sein soll mithilfe, der <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> Eigenschaft.  
   
--   Interpoliert zwischen dem Wert des vorherigen Keyframes und dem eigenen Wert durch Implementieren der InterpolateValueCore-Methode.  
+- Interpoliert zwischen dem Wert des vorherigen Keyframes und dem eigenen Wert durch Implementieren der InterpolateValueCore-Methode.  
   
  **Implementierungsanweisungen**  
   
@@ -87,21 +87,21 @@ In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient]
   
  Leiten Sie von der <xref:System.Windows.Media.Animation.AnimationTimeline> Klasse, und überschreiben Sie die folgenden Elemente:  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – Wenn die neue Klasse konkret ist, müssen Sie Sie überschreiben <xref:System.Windows.Freezable.CreateInstanceCore%2A> um eine neue Instanz der Klasse zurückzugeben.  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> – Wenn die neue Klasse konkret ist, müssen Sie Sie überschreiben <xref:System.Windows.Freezable.CreateInstanceCore%2A> um eine neue Instanz der Klasse zurückzugeben.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – Überschreiben Sie diese Methode, um den aktuellen Wert Ihrer Animation zurückzugeben. Es werden drei Parameter übernommen: ein Standardursprungswert, ein Standardzielwert und eine <xref:System.Windows.Media.Animation.AnimationClock>. Verwenden der <xref:System.Windows.Media.Animation.AnimationClock> um die aktuelle Uhrzeit oder den Fortschritt der Animation zu erhalten. Sie können auswählen, ob die Standardursprungs- oder zielwerte verwendet werden.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – Überschreiben Sie diese Methode, um den aktuellen Wert Ihrer Animation zurückzugeben. Es werden drei Parameter übernommen: ein Standardursprungswert, ein Standardzielwert und eine <xref:System.Windows.Media.Animation.AnimationClock>. Verwenden der <xref:System.Windows.Media.Animation.AnimationClock> um die aktuelle Uhrzeit oder den Fortschritt der Animation zu erhalten. Sie können auswählen, ob die Standardursprungs- oder zielwerte verwendet werden.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – Überschreiben Sie diese Eigenschaft, um anzugeben, ob die Animation den Standardzielwert gemäß verwendet die <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> Methode.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – Überschreiben Sie diese Eigenschaft, um anzugeben, ob die Animation den Standardzielwert gemäß verwendet die <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> Methode.  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Überschreiben Sie diese Eigenschaft an, dass die <xref:System.Type> der Ausgabe der Animation erzeugten.  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Überschreiben Sie diese Eigenschaft an, dass die <xref:System.Type> der Ausgabe der Animation erzeugten.  
   
  Wenn die Klasse keine Abhängigkeitseigenschaften zum Speichern von Daten nutzt oder nach der Erstellung eine zusätzliche Initialisierung erfordert, müssen Sie möglicherweise zusätzliche Methoden überschreiben. Weitere Informationen finden Sie unter [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
   
  Das empfohlene Paradigma (verwendet von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animationen) besteht in der Verwendung von zwei Vererbungsebenen:  
   
-1.  Erstellen Sie eine abstrakte  *\<Typ >* AnimationBase-Klasse, die von abgeleitet <xref:System.Windows.Media.Animation.AnimationTimeline>. Diese Klasse sollte überschreiben die <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> Methode. Sollte auch eine neue abstrakte Methode GetCurrentValueCore, einführen und außer Kraft setzen <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> , damit sie die Typen des Standardursprungswerts und Parameter überprüft hat, ruft Sie GetCurrentValueCore.  
+1. Erstellen Sie eine abstrakte  *\<Typ >* AnimationBase-Klasse, die von abgeleitet <xref:System.Windows.Media.Animation.AnimationTimeline>. Diese Klasse sollte überschreiben die <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> Methode. Sollte auch eine neue abstrakte Methode GetCurrentValueCore, einführen und außer Kraft setzen <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> , damit sie die Typen des Standardursprungswerts und Parameter überprüft hat, ruft Sie GetCurrentValueCore.  
   
-2.  Erstellen Sie eine andere Klasse, die erbt von der neuen  *\<Typ >* AnimationBase-Klasse und überschreibt die <xref:System.Windows.Freezable.CreateInstanceCore%2A> -Methode, die GetCurrentValueCore-Methode, die Sie eingeführt, und die <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> Eigenschaft.  
+2. Erstellen Sie eine andere Klasse, die erbt von der neuen  *\<Typ >* AnimationBase-Klasse und überschreibt die <xref:System.Windows.Freezable.CreateInstanceCore%2A> -Methode, die GetCurrentValueCore-Methode, die Sie eingeführt, und die <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> Eigenschaft.  
   
  **Alternative Ansätze**  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 701086c76d4e7b811ca67a9dd2112e69a45ba254
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a31b1dc01fe1f9d9dd97775ae3c65f762b167079
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745874"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635262"
 ---
 # <a name="c-programming-guide"></a>C#-Programmierhandbuch
 Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von C# sowie zu Funktionen, die über .NET Framework für C# verfügbar sind.  
@@ -52,7 +52,7 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
   
  [Ereignisse](../../csharp/programming-guide/events/index.md)  
   
- [Generika](../../csharp/programming-guide/generics/index.md)  
+ [Generics](../../csharp/programming-guide/generics/index.md)  
   
  [Iteratoren](../../csharp/programming-guide/concepts/iterators.md)
   
@@ -66,7 +66,7 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
   
  [Unsicherer Code und Zeiger](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
   
- [XML-Dokumentationskommentare](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [XML-Dokumentationskommentare](../../csharp/programming-guide/xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>Abschnitte zur Plattform  
  [Anwendungsdomänen](../../framework/app-domains/application-domains.md)  

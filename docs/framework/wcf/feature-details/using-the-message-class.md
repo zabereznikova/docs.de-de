@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: d9b1c1242fe2686a66e41b777f904a71898159ea
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1db509d8f1c672bf51cac7f1ca6b1af91b34fa4d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409600"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591267"
 ---
 # <a name="using-the-message-class"></a>Verwenden der Message-Klasse
 Die <xref:System.ServiceModel.Channels.Message> Klasse ist von grundlegender Wichtigkeit, Windows Communication Foundation (WCF). Die gesamte Kommunikation zwischen Clients und Diensten führt letztlich zu gesendeten und empfangenen <xref:System.ServiceModel.Channels.Message>-Instanzen.  
   
  Sie würden normalerweise nicht direkt mit der <xref:System.ServiceModel.Channels.Message>-Klasse interagieren. Stattdessen werden WCF Service Model-Konstrukten wie Datenverträge, Nachrichtenverträge und Vorgangsverträge zum Beschreiben von ein- und ausgehender Nachrichten verwendet. In einigen komplexen Szenarien können Sie jedoch direkt mit der <xref:System.ServiceModel.Channels.Message>-Klasse programmieren. Die Verwendung der <xref:System.ServiceModel.Channels.Message>-Klasse kann beispielsweise in den folgenden Fällen erforderlich sein:  
   
--   Wenn Sie eine alternative Methode zum Erstellen des Inhalts ausgehender Nachrichten (z. B. Erstellen einer Nachricht direkt aus einer Datei auf der Festplatte) statt des Serialisierens von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten benötigen.  
+- Wenn Sie eine alternative Methode des Inhalts der ausgehender Nachrichten (z. B. zum Erstellen einer Nachricht direkt aus einer Datei auf dem Datenträger) erstellen, statt des Serialisierens von .NET Framework-Objekten benötigen.  
   
--   Wenn Sie eine alternative Methode zum Verwenden des Inhalts eingehender Nachrichten (z. B. zum Anwenden einer XSLT-Transformation auf den unformatierten XML-Inhalt) statt des Deserialisierens in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekte benötigen.  
+- Wenn Sie eine alternative Möglichkeit der Verwendung des Inhalts eingehender Nachrichten (z. B., wenn Sie eine XSLT-Transformation auf den unformatierten XML-Inhalt anwenden möchten) statt des Deserialisierens in .NET Framework-Objekte benötigen.  
   
--   Wenn Sie Nachrichten allgemein und unabhängig vom Nachrichteninhalt bearbeiten müssen (z. B. zum Routen oder Weiterleiten von Nachrichten beim Erstellen eines Routers, Lastenausgleichsmoduls oder Veröffentlichen-Abonnieren-Systems).  
+- Wenn Sie Nachrichten allgemein und unabhängig vom Nachrichteninhalt bearbeiten müssen (z. B. zum Routen oder Weiterleiten von Nachrichten beim Erstellen eines Routers, Lastenausgleichsmoduls oder Veröffentlichen-Abonnieren-Systems).  
   
  Vor der Verwendung der <xref:System.ServiceModel.Channels.Message> Klasse, machen Sie sich mit WCF Data Transfer-Architektur in [Übersicht über die Architektur von Data Transfer](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md).  
   
@@ -30,11 +30,11 @@ Die <xref:System.ServiceModel.Channels.Message> Klasse ist von grundlegender Wic
 ## <a name="using-the-message-class-in-operations"></a>Verwenden der Meldungsklasse in Vorgängen  
  Sie können die <xref:System.ServiceModel.Channels.Message>-Klasse als Eingabeparameter eines Vorgangs, als den Rückgabewert eines Vorgangs oder beides verwenden. Wenn <xref:System.ServiceModel.Channels.Message> an einer Stelle in einem Vorgang verwendet wird, gelten die folgenden Einschränkungen:  
   
--   Der Vorgang kann über keinen `out`-Parameter oder `ref`-Parameter verfügen.  
+- Der Vorgang kann über keinen `out`-Parameter oder `ref`-Parameter verfügen.  
   
--   Es kann nicht mehr als einen `input`-Parameter geben. Wenn der Parameter vorhanden ist, muss er entweder eine Nachricht oder ein Nachrichtenvertragstyp sein.  
+- Es kann nicht mehr als einen `input`-Parameter geben. Wenn der Parameter vorhanden ist, muss er entweder eine Nachricht oder ein Nachrichtenvertragstyp sein.  
   
--   Der Rückgabetyp muss entweder `void`, `Message` oder ein Nachrichtenvertragstyp sein.  
+- Der Rückgabetyp muss entweder `void`, `Message` oder ein Nachrichtenvertragstyp sein.  
   
  Das folgende Codebeispiel enthält einen gültigen Vorgangsvertrag.  
   
@@ -78,11 +78,11 @@ Die <xref:System.ServiceModel.Channels.Message> Klasse ist von grundlegender Wic
 ## <a name="extracting-message-body-data"></a>Extrahieren von Nachrichtentextdaten  
  Die `Message`-Klasse unterstützt mehrere Methoden zum Extrahieren von Informationen aus dem Text. Diese können in die folgenden Kategorien klassifiziert werden:  
   
--   Einmaliges Abrufen des gesamten Nachrichtentexts in einen XML-Writer. Dies wird als bezeichnet *beim Schreiben einer Nachricht*.  
+- Einmaliges Abrufen des gesamten Nachrichtentexts in einen XML-Writer. Dies wird als bezeichnet *beim Schreiben einer Nachricht*.  
   
--   Laufenlassen eines XML-Readers über den Nachrichtentext. Dies ermöglicht es Ihnen, später nach Bedarf Stück für Stück auf den Nachrichtentext zuzugreifen. Dies wird als bezeichnet *Lesen einer Nachricht*.  
+- Laufenlassen eines XML-Readers über den Nachrichtentext. Dies ermöglicht es Ihnen, später nach Bedarf Stück für Stück auf den Nachrichtentext zuzugreifen. Dies wird als bezeichnet *Lesen einer Nachricht*.  
   
--   Die gesamte Nachricht, einschließlich des Texts, kann in einen Puffer im Arbeitsspeicher vom <xref:System.ServiceModel.Channels.MessageBuffer>-Typ kopiert werden. Dies wird als bezeichnet *Kopieren einer Nachricht*.  
+- Die gesamte Nachricht, einschließlich des Texts, kann in einen Puffer im Arbeitsspeicher vom <xref:System.ServiceModel.Channels.MessageBuffer>-Typ kopiert werden. Dies wird als bezeichnet *Kopieren einer Nachricht*.  
   
  Sie können unabhängig von der Zugriffsmethode nur einmal auf den Text einer `Message` zugreifen. Ein Nachrichtenobjekt verfügt über eine `State`-Eigenschaft, die anfänglich auf "Erstellt" festgelegt ist. Mit den drei zuvor beschriebenen Zugriffsmethoden wird der Zustand auf "Geschrieben", "Gelesen" bzw. "Kopiert" festgelegt. Darüber hinaus kann eine `Close`-Methode den Zustand auf "Geschlossen" festlegen, wenn der Inhalt des Nachrichtentexts nicht mehr benötigt wird. Auf den Nachrichtentext kann nur im Zustand "Erstellt" zugegriffen werden, und eine Rückkehr zu diesem Zustand ist nach einer Zustandsänderung nicht mehr möglich.  
   
@@ -96,9 +96,9 @@ Die <xref:System.ServiceModel.Channels.Message> Klasse ist von grundlegender Wic
   
  Zwei zusätzliche Hilfsmethoden schreiben bestimmte SOAP-Startelement-Tags. Diese Methoden haben keinen Zugriff auf den Nachrichtentext, der Nachrichtenzustand wird also nicht geändert. Dazu gehören:  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> schreibt das Start-Textelement, z. B. `<soap:Body>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A> schreibt das Start-Textelement, z. B. `<soap:Body>`.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> schreibt das Start-Umschlagelement, z. B. `<soap:Envelope>`.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A> schreibt das Start-Umschlagelement, z. B. `<soap:Envelope>`.  
   
  Rufen Sie zum Schreiben der jeweiligen Endelement-Tags `WriteEndElement` auf dem entsprechenden XML-Writer auf. Diese Methoden werden selten direkt aufgerufen.  
   
@@ -138,15 +138,15 @@ Die <xref:System.ServiceModel.Channels.Message> Klasse ist von grundlegender Wic
 ## <a name="accessing-other-message-parts"></a>Zugreifen auf andere Nachrichtenteile  
  Für den Zugriff auf andere Informationen zur Nachricht als den Textinhalt werden verschiedene Eigenschaften bereitgestellt. Diese können jedoch nicht aufgerufen werden, wenn die Nachricht geschlossen wurde:  
   
--   Die <xref:System.ServiceModel.Channels.Message.Headers%2A>-Eigenschaft stellt die Nachrichtenheader dar. Finden Sie im Abschnitt unter "Arbeiten mit Headern" weiter unten in diesem Thema.  
+- Die <xref:System.ServiceModel.Channels.Message.Headers%2A>-Eigenschaft stellt die Nachrichtenheader dar. Finden Sie im Abschnitt unter "Arbeiten mit Headern" weiter unten in diesem Thema.  
   
--   Die <xref:System.ServiceModel.Channels.Message.Properties%2A>-Eigenschaft stellt die Eigenschaften der Nachricht dar, die Teile an die Nachricht angehängter benannter Daten sind, die beim Senden der Nachricht im Allgemeinen nicht ausgegeben werden. Weitere Informationen finden Sie im Abschnitt "Arbeiten mit Eigenschaften" weiter unten in diesem Thema.  
+- Die <xref:System.ServiceModel.Channels.Message.Properties%2A>-Eigenschaft stellt die Eigenschaften der Nachricht dar, die Teile an die Nachricht angehängter benannter Daten sind, die beim Senden der Nachricht im Allgemeinen nicht ausgegeben werden. Weitere Informationen finden Sie im Abschnitt "Arbeiten mit Eigenschaften" weiter unten in diesem Thema.  
   
--   Die <xref:System.ServiceModel.Channels.Message.Version%2A>-Eigenschaft gibt die der Nachricht zugeordnete SOAP-Version und Version der WS-Adressierung an, oder `None`, wenn SOAP deaktiviert ist.  
+- Die <xref:System.ServiceModel.Channels.Message.Version%2A>-Eigenschaft gibt die der Nachricht zugeordnete SOAP-Version und Version der WS-Adressierung an, oder `None`, wenn SOAP deaktiviert ist.  
   
--   Die <xref:System.ServiceModel.Channels.Message.IsFault%2A>-Eigenschaft gibt `true` zurück, wenn die Nachricht eine SOAP-Fehlermeldung ist.  
+- Die <xref:System.ServiceModel.Channels.Message.IsFault%2A>-Eigenschaft gibt `true` zurück, wenn die Nachricht eine SOAP-Fehlermeldung ist.  
   
--   Die <xref:System.ServiceModel.Channels.Message.IsEmpty%2A>-Eigenschaft gibt `true` zurück, wenn die Nachricht keinen Text enthält.  
+- Die <xref:System.ServiceModel.Channels.Message.IsEmpty%2A>-Eigenschaft gibt `true` zurück, wenn die Nachricht keinen Text enthält.  
   
  Sie können mithilfe der <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29>-Methode auf ein bestimmtes, mit einem bestimmten Namen und Namespace bezeichnetes Attribut im Textwrapperelement (z. B. `<soap:Body>`) zugreifen. Wenn ein solches Attribut nicht gefunden wurde, wird `null` zurückgegeben. Diese Methode kann nur dann aufgerufen werden, wenn sich die `Message` im Zustand "Erstellt" befindet (wenn noch nicht auf den Nachrichtentext zugegriffen wurde).  
   

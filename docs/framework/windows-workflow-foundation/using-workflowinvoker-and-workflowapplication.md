@@ -3,11 +3,11 @@ title: Verwenden von WorkflowInvoker und WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
 ms.openlocfilehash: 29d152cd6011fb3b55aae60726d095dc44dd23a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669562"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>Verwenden von WorkflowInvoker und WorkflowApplication
 Windows Workflow Foundation (WF) bietet mehrere Methoden zum Hosten von Workflows. <xref:System.Activities.WorkflowInvoker> stellt eine einfache Möglichkeit zum Aufrufen eines Workflows bereit, so als handelte es sich um einen Methodenaufruf, und kann nur für Workflows verwendet werden, die keine Persistenz verwenden. <xref:System.Activities.WorkflowApplication> bietet ein umfangreicheres Modell zum Ausführen von Workflows, die Benachrichtigungen über Lebenszyklusereignisse, Ausführungssteuerung, Wiederaufnahme von Lesezeichen und Persistenz enthalten. <xref:System.ServiceModel.Activities.WorkflowServiceHost> umfasst die Unterstützung von Messagingaktivitäten und wird hauptsächlich in Verbindung mit Workflowdiensten verwendet. In diesem Thema wird das Workflowhosting mit <xref:System.Activities.WorkflowInvoker> und <xref:System.Activities.WorkflowApplication> erläutert. Weitere Informationen zum Hosten von Workflows mit <xref:System.ServiceModel.Activities.WorkflowServiceHost>, finden Sie unter [Workflowdienste](../wcf/feature-details/workflow-services.md) und [Übersicht über Hosting von Workflowdiensten](../wcf/feature-details/hosting-workflow-services-overview.md).  

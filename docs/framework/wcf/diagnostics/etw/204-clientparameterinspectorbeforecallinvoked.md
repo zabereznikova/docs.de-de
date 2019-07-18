@@ -3,19 +3,19 @@ title: 204 - ClientParameterInspectorBeforeCallInvoked
 ms.date: 03/30/2017
 ms.assetid: 8253555a-9002-4565-8ede-33d7a33a895f
 ms.openlocfilehash: eb060cfa79b75452deae67705126a24b7ca9ffef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782037"
 ---
 # <a name="204---clientparameterinspectorbeforecallinvoked"></a>204 - ClientParameterInspectorBeforeCallInvoked
 ## <a name="properties"></a>Eigenschaften  
   
 |||  
 |-|-|  
-|Id|204|  
-|Stichwörter|Troubleshooting, ServiceModel|  
+|ID|204|  
+|Schlüsselwörter|Troubleshooting, ServiceModel|  
 |Ebene|Information|  
 |Kanal|Microsoft-Windows-Application Server-Applications/Analytic|  
   

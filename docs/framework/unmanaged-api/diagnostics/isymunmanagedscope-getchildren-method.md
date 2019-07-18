@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3cad217ddf2d5354ad019f26fd10fb9ccd004d61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ffc4d5a1e6b8f1acc7603e9c2e01216e3188989e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133899"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751307"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren-Methode
 Ruft die untergeordneten Elemente dieses Bereichs ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetChildren(  
     [in]  ULONG32  cChildren,  
     [out] ULONG32  *pcChildren,  

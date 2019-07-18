@@ -4,13 +4,13 @@ ms.custom: updateeachrelease
 description: Informationen zum Installieren von .NET Framework unter Windows 8.1
 author: rlander
 ms.author: mairaw
-ms.date: 10/22/2017
-ms.openlocfilehash: 114ff758be59afd08b0c4727378df3a95ebc8220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 04/18/2019
+ms.openlocfilehash: 752f18eb3cbb87e5b6703fd7e0e81762ba3f0f10
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737805"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052071"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Installieren von .NET Framework unter Windows 8.1 und Windows Server 2012 R2
 
@@ -18,14 +18,14 @@ ms.locfileid: "54737805"
 
 ![Diese Anwendung konnte nicht gestartet werden](./media/this-application-could-not-be-started.png)
 
-Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) ist die aktuelle Version. Es wird unter Windows 8.1 und Windows Server 2012 R2 unterstützt und ist im Lieferumfang vom [Windows 10-Update von Oktober 2018](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) und dem [Windows 10-Update von April 2018](https://www.microsoft.com/software-download/windows10) enthalten.
+Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) ist die aktuelle Version. Es wird unter Windows 8.1 und Windows Server 2012 R2 unterstützt und ist im [Windows 10-Update von Mai 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update) enthalten.
 
-## <a name="net-framework-472"></a>.NET Framework 4.7.2
+## <a name="net-framework-8"></a>.NET Framework 8
 
 > [!div class="button"]
-> [.NET Framework 4.7.2 herunterladen](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [.NET Framework 4.8 herunterladen](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) kann verwendet werden, um Anwendungen auszuführen, die für .NET Framework 4.0 oder höher entwickelt wurden.
+[.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) kann zum Ausführen von Anwendungen verwendet werden, die für .NET Framework 4.0 oder höher entwickelt wurden.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

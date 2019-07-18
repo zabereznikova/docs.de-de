@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Serialisieren mit der DataContractSerializer-Klasse (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
-ms.openlocfilehash: 75f805c2a954957519f2ebb9425ae7e2e2a967b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7175b5051d318e7f214b4c2f7d96d44acf7a0a48
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721840"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484917"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a>Vorgehensweise: Serialisieren mit der DataContractSerializer-Klasse (C#)
 Dieses Thema enthält ein Beispiel, das zum Serialisieren und Deserialisieren <xref:System.Runtime.Serialization.DataContractSerializer> verwendet.  
@@ -91,6 +91,3 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>Siehe auch
-
-- [Serialisieren von Objektdiagrammen, die XElement-Objekte enthalten (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

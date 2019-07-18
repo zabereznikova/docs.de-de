@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb537950ce240d77282551f847b637a77792a264
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645235"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59321730"
 ---
 # <a name="accessing-custom-attributes"></a>Zugreifen auf benutzerdefinierte Attribute
 Nachdem Attribute Programmierelementen zugeordnet worden sind, kann Reflektion benutzt werden, um deren Existenz und Werte abzufragen. In der .NET Framework Version 1.0 und 1.1 werden benutzerdefinierte Attribute im Ausführungskontext untersucht. Die .NET Framework Version 2.0 stellt einen neuen Ladekontext bereit, den reflektionsbezogener Ladekontext, der zum Untersuchen von Code benutzt werden kann, der nicht für die Ausführung geladen werden kann.  
@@ -56,13 +56,13 @@ public class LocalizationExtenderProvider
   
  Wenn die Runtime versucht, die benutzerdefinierten Attribute für den öffentlichen benutzerdefinierten Attributtyp <xref:System.ComponentModel.DescriptionAttribute> abzurufen, der an die **GetLanguage**-Methode angefügt ist, werden folgende Aktionen ausgeführt:  
   
-1.  Die Runtime überprüft, dass das Typargument **DescriptionAttribute** für **Type.GetCustomAttributes** (Typ *type*) öffentlich und somit sichtbar und erreichbar ist.  
+1. Die Runtime überprüft, dass das Typargument **DescriptionAttribute** für **Type.GetCustomAttributes** (Typ *type*) öffentlich und somit sichtbar und erreichbar ist.  
   
-2.  Die Runtime überprüft, dass der benutzerdefinierte Typ **MyDescriptionAttribute**, der von **DescriptionAttribute** abgeleitet wurde, in der Assembly **System.Web.DLL** sichtbar und erreichbar ist, wo er an die Methode **GetLanguage**() angefügt ist.  
+2. Die Runtime überprüft, dass der benutzerdefinierte Typ **MyDescriptionAttribute**, der von **DescriptionAttribute** abgeleitet wurde, in der Assembly **System.Web.DLL** sichtbar und erreichbar ist, wo er an die Methode **GetLanguage**() angefügt ist.  
   
-3.  Die Runtime überprüft, dass der Konstruktor von **MyDescriptionAttribute** innerhalb der **System.Web.DLL**-Assembly sichtbar und erreichbar ist.  
+3. Die Runtime überprüft, dass der Konstruktor von **MyDescriptionAttribute** innerhalb der **System.Web.DLL**-Assembly sichtbar und erreichbar ist.  
   
-4.  Die Runtime ruft den Konstruktor von **MyDescriptionAttribute** mit den benutzerdefinierten Attributparametern auf und gibt dem Aufrufer das neue Objekt zurück.  
+4. Die Runtime ruft den Konstruktor von **MyDescriptionAttribute** mit den benutzerdefinierten Attributparametern auf und gibt dem Aufrufer das neue Objekt zurück.  
   
  Dem Reflektionsmodell des benutzerdefinierten Attributs könnten Instanzen von benutzerdefinierten Typen außerhalb der Assembly fehlen, in der der Typ definiert ist. Hier besteht kein Unterschied zu den Membern in der Runtimesystembibliothek, die Instanzen benutzerdefinierter Typen zurückgeben, z.B. <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>, die ein Array von **RuntimeMethodInfo**-Objekten zurückgibt. Um zu verhindern, dass ein Client Informationen über einen benutzerdefinierten Typ eines benutzerdefinierten Attributs ermittelt, definieren Sie, dass die Member des Typen nicht öffentlich sein sollen.  
   
@@ -73,6 +73,7 @@ public class LocalizationExtenderProvider
  [!code-vb[CustomAttributeData#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A?displayProperty=nameWithType>
 - <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

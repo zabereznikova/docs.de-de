@@ -2,23 +2,23 @@
 title: 'Vorgehensweise: Generieren von angepasstem Code durch Verändern einer DBML-Datei'
 ms.date: 03/30/2017
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-ms.openlocfilehash: f64d323abf124f3bd8aeb684563a08289fa47f7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3fa4d9db4076309ab7d6066cc7072797eaead54
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877343"
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>Vorgehensweise: Generieren von angepasstem Code durch Verändern einer DBML-Datei
 Sie können Visual Basic generieren oder C# Quellcode aus einer Database Markup Language (.dbml)-Metadatendatei. Dieser Ansatz bietet die Möglichkeit zur Anpassung der standardmäßigen .dbml-Datei vor dem Erzeugen des Codes für die Anwendungszuweisung. Dies ist eine erweiterte Funktion.  
   
  Dieses Verfahren umfasst die folgenden Schritte:  
   
-1.  Erzeugen einer .dbml-Datei.  
+1. Erzeugen einer .dbml-Datei.  
   
-2.  Verwenden eines Editors, um die .dbml-Datei zu ändern. Beachten Sie, die anhand der Schemadefinitionsdatei (.xsd) für die DBML-Datei validieren muss [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML-Dateien. Weitere Informationen finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+2. Verwenden eines Editors, um die .dbml-Datei zu ändern. Beachten Sie, die anhand der Schemadefinitionsdatei (.xsd) für die DBML-Datei validieren muss [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] DBML-Dateien. Weitere Informationen finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
-3.  Generieren Sie die Visual Basic oder C# Quellcode.  
+3. Generieren Sie die Visual Basic oder C# Quellcode.  
   
  In den folgenden Beispielen wird das SQLMetal-Befehlszeilentool verwendet. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   

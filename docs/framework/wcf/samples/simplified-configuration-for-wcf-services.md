@@ -2,12 +2,12 @@
 title: Vereinfachte Konfiguration für WCF-Dienste
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 50693062b201c9cf2e0d87f796f3e935e1fd8e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 791d2dcf2578ed0b816450f558654dae259653bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220720"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650984"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Vereinfachte Konfiguration für WCF-Dienste
 Dieses Beispiel veranschaulicht das Implementieren und konfigurieren ein typischer Dienst und Client mit Windows Communication Foundation (WCF). Es dient als Grundlage für alle anderen grundlegenden Technologiebeispiele.  
@@ -57,17 +57,17 @@ Dieses Beispiel veranschaulicht das Implementieren und konfigurieren ein typisch
   
 ### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Führen Sie das Beispiel aus, indem Sie folgende Schritte ausführen:  
+3. Führen Sie das Beispiel aus, indem Sie folgende Schritte ausführen:  
   
-    1.  Klicken Sie mit der rechten Maustaste auf die **Service** Projekt, und wählen **als Startprojekt festlegen**, drücken Sie dann die **STRG + F5**.  
+    1. Klicken Sie mit der rechten Maustaste auf die **Service** Projekt, und wählen **als Startprojekt festlegen**, drücken Sie dann die **STRG + F5**.  
   
-    2.  Warten Sie auf die Ausgabe der Konsole, die bestätigt, dass der Dienst gestartet ist und ausgeführt wird.  
+    2. Warten Sie auf die Ausgabe der Konsole, die bestätigt, dass der Dienst gestartet ist und ausgeführt wird.  
   
-    3.  Klicken Sie mit der rechten Maustaste auf die **Client** Projekt, und wählen **als Startprojekt festlegen**, drücken Sie dann die **STRG + F5**.  
+    3. Klicken Sie mit der rechten Maustaste auf die **Client** Projekt, und wählen **als Startprojekt festlegen**, drücken Sie dann die **STRG + F5**.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

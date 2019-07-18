@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: 0550e4ad700494c8773a5d9b5b282dfa116adfed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e8dfe95ef3385635f5839ecc96047911544a256e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813365"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591451"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 Gibt einen Standard-Basisadresse an, beim Erstellen einer DLL.  
@@ -32,7 +32,7 @@ Gibt einen Standard-Basisadresse an, beim Erstellen einer DLL.
 |`address`|Erforderlich. Die Basisadresse für die DLL. Diese Adresse muss als hexadezimale Zahl angegeben werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Standard-Basisadresse für eine DLL-Datei wird festgelegt, durch die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ Die Standard-Basisadresse für eine DLL-Datei wird vom .NET Framework festgelegt.  
   
  Denken Sie daran, dass das niederwertige Wort in dieser Adresse gerundet wird. Wenn Sie 0 x 11110001 angeben, wird es beispielsweise auf 0 x 11110000 gerundet.  
   

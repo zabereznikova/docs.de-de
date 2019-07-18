@@ -17,27 +17,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0aabff090634f1ecdeec5636336ad1fb77b8b81c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4a1adb79e5081fc909d0cd180d8161eccea7e58e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412577"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754349"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort-Methode
-Bricht die Berechnung ab, die von diesem `ICorDebugEval2` wird derzeit ausgeführt.  
+Bricht ab, der Berechnung, die dieses `ICorDebugEval2` wird derzeit ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT RudeAbort ();  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- `RudeAbort` Alle sperren, die die Auswertung enthält, wird nicht freigegeben werden, damit sie die Debugsitzung in einem unsicheren Zustand verlässt. Rufen Sie diese Methode mit äußerster Sorgfalt erfolgen.  
+ `RudeAbort` Alle sperren, die die Auswertung enthält, wird nicht freigegeben werden, damit sie die Debugsitzung in einem unsicheren Zustand verlässt. Rufen Sie diese Methode mit äußerster Vorsicht.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

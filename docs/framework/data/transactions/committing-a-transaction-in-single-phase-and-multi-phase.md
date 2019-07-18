@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
 ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875965"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion
 Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. Die [eintragen von Ressourcen als Teilnehmer an einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) Thema wird erläutert, wie eine Ressource (oder mehrere Ressourcen) in einer Transaktion eingetragen werden können. In diesem Thema wird erläutert, wie das Ausführen von Commits für Transaktionen unter eingetragenen Ressourcen koordiniert werden kann.  
@@ -111,5 +111,5 @@ public void InDoubt (Enlistment enlistment)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
+- [Optimierung mit Einphasencommit und heraufstufbarer Einphasenbenachrichtigung](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
 - [Eintragen von Ressourcen als Teilnehmer an einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

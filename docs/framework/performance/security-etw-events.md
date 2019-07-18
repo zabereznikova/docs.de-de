@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11a19dce496423883e5fed62375c6db8ed5efdb1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f2ea19c88ff8b854b09ed372b35bf8c45d994585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134029"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583651"
 ---
 # <a name="security-etw-events"></a>ETW-Sicherheitsereignisse
 <a name="top"></a> Sicherheitsereignisse werden während der Überprüfung mit starkem Namen und bei der Authenticodeüberprüfung ausgelöst.  
   
  Diese Kategorie umfasst die folgenden Ereignisse:  
   
--   [StrongNameVerificationStart_V1-Ereignis und StrongNameVerificationStop_V1-Ereignis](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
+- [StrongNameVerificationStart_V1-Ereignis und StrongNameVerificationStop_V1-Ereignis](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
   
--   [AuthenticodeVerificationStart_V1-Ereignis und AuthenticodeVerificationStop_V1-Ereignis](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
+- [AuthenticodeVerificationStart_V1-Ereignis und AuthenticodeVerificationStop_V1-Ereignis](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
   
 <a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
 ## <a name="strongnameverificationstartv1-and-strongnameverificationstopv1-events"></a>StrongNameVerificationStart_V1-Ereignis und StrongNameVerificationStop_V1-Ereignis  
@@ -29,7 +29,7 @@ ms.locfileid: "59134029"
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0x400)|Information (4)|  
+|`SecurityKeyword` (0 x 400)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59134029"
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0x400)|Information (4)|  
+|`SecurityKeyword` (0 x 400)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   

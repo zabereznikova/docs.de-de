@@ -3,11 +3,11 @@ title: Entity SQL-Kurzreferenz
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
 ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785254"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL-Kurzreferenz
 Dieses Thema enthält eine Kurzreferenz zu [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfragen. Die Abfragen in diesem Thema basieren auf dem AdventureWorks Sales-Modell.  
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE UND SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Stellt den SELECT VALUE-Klausel, um die implizite Zeilenkonstruktion zu überspringen. In einer SELECT VALUE-Klausel kann nur ein Element angegeben werden. Wenn diese Klausel verwendet wird, kein Zeilen-Wrapper für die Elemente in der SELECT-Klausel erstellt wird und eine Auflistung der gewünschten Form werden, z. B. erstellt kann: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt die SELECT VALUE-Klausel bereit, um die implizite Zeilenkonstruktion zu überspringen. In einer SELECT VALUE-Klausel kann nur ein Element angegeben werden. Wenn diese Klausel verwendet wird, kein Zeilen-Wrapper für die Elemente in der SELECT-Klausel erstellt wird und eine Auflistung der gewünschten Form werden, z. B. erstellt kann: `SELECT VALUE a`.  
   
  Beispiel:  
   

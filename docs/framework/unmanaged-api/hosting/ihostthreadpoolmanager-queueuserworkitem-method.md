@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c548ae7f8d605ff84da2046d057e436c8e95721
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 12c571f478f15a0b72168977f12623be1c4a08a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082112"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749164"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem-Methode
 Fügt eine Funktion für die Ausführung und gibt ein Objekt mit Daten, die von dieser Funktion verwendet werden. Die Funktion ausgeführt wird, wenn ein Thread verfügbar wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT QueueUserWorkItem (  
     [in] LPTHREAD_START_ROUTINE Function,  
     [in] PVOID Context,  

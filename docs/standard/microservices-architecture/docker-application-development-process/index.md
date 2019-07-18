@@ -1,15 +1,13 @@
 ---
 title: Entwicklungsprozess für auf Docker-basierende Anwendungen
 description: Verschaffen Sie sich einen Überblick über die Möglichkeiten bei der Entwicklung von Docker-basierten Anwendungen. Sie haben die Wahl zwischen Visual Studio für Windows, Visual Studio für Mac oder Visual Studio Code für die Unterstützung mehrerer Plattformen (Windows, Mac und Linux).
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/27/2018
-ms.openlocfilehash: 219a562459be7fb1114dfdd9f139c938d1282c5c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: a32b27f3d98ed7ebf63b637ec0c979c22ee8e1e8
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465034"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690615"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Entwicklungsprozess für auf Docker-basierende Anwendungen
 
@@ -27,23 +25,26 @@ Egal, ob Sie eine vollständige und leistungsstarke integrierte Entwicklungsumge
 
 **Visual Studio Code und Docker-CLI** Wenn Sie einen einfachen und plattformübergreifenden Editor bevorzugen, der jede beliebige Entwicklungssprache unterstützt, können Sie Microsoft Visual Studio Code (VS Code) sowie die Docker-CLI verwenden. Dies ist ein plattformübergreifender Entwicklungsansatz für Mac, Linux und Windows. Zusätzlich unterstützt Visual Studio Code Erweiterungen für Docker, z.B. IntelliSense für Docker-Dateien und Verknüpfungsaufgaben, um Docker-Befehle aus dem Editor auszuführen.
 
-Durch Installation der Tools der [Docker Community Edition (CE)](https://www.docker.com/community-edition) können Sie eine einzelne Docker-CLI zum Erstellen von Apps für Windows und Linux verwenden.
+Durch Installation von [Docker Desktop Community Edition (CE)](https://hub.docker.com/search/?type=edition&offering=community) können Sie eine einzelne Docker-CLI zum Erstellen von Apps für Windows und Linux verwenden.
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Visual Studio**. Offizielle Website. \
-  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/)
+  [https://visualstudio.microsoft.com/vs/](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 - **Visual Studio Code**. Offizielle Website. \
-  [https://code.visualstudio.com/download](https://code.visualstudio.com/download)
+  <https://code.visualstudio.com/download>
 
-- **Docker Community Edition (CE) für Mac und Windows** \
-  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
+- **Docker Desktop für Windows Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+  
+- **Docker Desktop für Mac Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET-Sprachen und -Frameworks für Docker-Container
 
 Wie in vorherigen Abschnitten diese Handbuchs erwähnt, können Sie .NET Framework, .NET Core oder das Open-Source-Mono-Projekt verwenden, wenn Sie .NET-Containeranwendungen für Docker entwickeln. Sie können C\#, F\# oder Visual Studio entwickeln, wenn Sie Linux- oder Windows-Container als Ziel haben, je nachdem, welches .NET-Framework verwendet wird. Weitere Details zu .NET-Sprachen finden Sie im Blogbeitrag [The .NET Language Strategy (Strategie für die .NET-Sprache)](https://devblogs.microsoft.com/dotnet/the-net-language-strategy/).
 
 >[!div class="step-by-step"]
->[Zurück](../architect-microservice-container-applications/using-azure-service-fabric.md)
+>[Zurück](../architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md)
 >[Weiter](docker-app-development-workflow.md)

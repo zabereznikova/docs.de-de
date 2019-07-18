@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 50ecb2aad84bd5b6c32f655b1dbbd34cf03a5b29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119131"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624296"
 ---
 # <a name="thread-pool-etw-events"></a>ETW-Threadpoolereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen zu Arbeits- und E/A-Threads.  
   
  Es gibt zwei Gruppen von Threadpoolereignissen:  
   
--   [Arbeitsthreadpoolereignisse](#worker), die Aufschluss darüber geben, wie eine Anwendung den Threadpool verwendet und welchen Effekt Arbeitsauslastungen auf die Parallelitätssteuerung haben.  
+- [Arbeitsthreadpoolereignisse](#worker), die Aufschluss darüber geben, wie eine Anwendung den Threadpool verwendet und welchen Effekt Arbeitsauslastungen auf die Parallelitätssteuerung haben.  
   
--   [E/A-Threadpoolereignisse](#io), die Aufschluss über E/A-Threads geben, die im Threadpool erstellt, deaktiviert, erneut aktiviert oder beendet werden.  
+- [E/A-Threadpoolereignisse](#io), die Aufschluss über E/A-Threads geben, die im Threadpool erstellt, deaktiviert, erneut aktiviert oder beendet werden.  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>Arbeitsthreadpoolereignisse  

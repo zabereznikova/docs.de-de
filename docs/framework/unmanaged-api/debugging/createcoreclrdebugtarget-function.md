@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48ce5381c745669b813f5b28d801add7daba7825
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dbcf6c842e7eee55609a9ea2a25cda4360f8dc95
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470064"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739290"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget-Funktion
 Erstellt eine Verbindung mit einem Debuggerproxy, die auf einem Remotecomputer ausgeführt wird, und gibt eine [ICoreClrDebugTarget](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md) -Objekt, das zum Abfragen der ausgeführten Prozesse und geladene Laufzeitmodule auf dem Remotecomputer verwendet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateCoreClrDebugTarget (  
        [in]  DWORD    dwAddress,   
        [out] ICoreClrDebugTarget**     ppTarget  

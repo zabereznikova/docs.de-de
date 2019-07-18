@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 417cf623948d16147f9a1242d714f4df1311a314
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c1ea9424c000ad3ae4918181084c89038c2ec8d1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212049"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777289"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>ISymUnmanagedWriter::Initialize-Methode
 Legt die Metadatenemitter-Schnittstelle mit der dieser Writer zugewiesen werden soll, und den Namen der Ausgabedatei, die Debugsymbole geschrieben werden.  
@@ -31,7 +31,7 @@ Legt die Metadatenemitter-Schnittstelle mit der dieser Writer zugewiesen werden 
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Initialize(  
     [in] IUnknown     *emitter,  
     [in] const WCHAR  *filename,  

@@ -12,19 +12,19 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: be2f6e8e10d9f9b23b4f57fa696f1fb88c4726c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.openlocfilehash: f0a5805561509501ca38a7fec6b4731af190e3c3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105026"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59322016"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelements in Windows Forms
 Sie können den Text durch Ändern der <xref:System.Windows.Forms.LinkLabel> Steuerelement an eine Vielzahl von Zwecken anpassen. Beispielsweise ist es üblich, zu verdeutlichen, dass Text geklickt werden kann, durch Festlegen des Texts in einer bestimmten Farbe mit einer Unterstreichung angezeigt. Nachdem der Benutzer den Text klickt, ändert sich die Farbe in eine andere Farbe. Um dieses Verhalten zu steuern, können Sie fünf verschiedene Eigenschaften festlegen: die <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaften.  
   
 ### <a name="to-change-the-appearance-of-a-linklabel-control"></a>So ändern Sie die Darstellung des LinkLabel-Steuerelement  
   
-1.  Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften, die Sie die gewünschten Farben.  
+1. Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> und <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaften, die Sie die gewünschten Farben.  
   
      Hierzu können entweder programmgesteuert oder zur Entwurfszeit in den **Eigenschaften** Fenster.  
   
@@ -49,7 +49,7 @@ Sie können den Text durch Ändern der <xref:System.Windows.Forms.LinkLabel> Ste
     linkLabel1->VisitedLinkColor = Color::Purple;  
     ```  
   
-2.  Legen Sie die <xref:System.Windows.Forms.LinkLabel.Text%2A> Eigenschaft eine geeignete Beschriftung.  
+2. Legen Sie die <xref:System.Windows.Forms.LinkLabel.Text%2A> Eigenschaft eine geeignete Beschriftung.  
   
      Hierzu können entweder programmgesteuert oder zur Entwurfszeit in den **Eigenschaften** Fenster.  
   
@@ -65,7 +65,7 @@ Sie können den Text durch Ändern der <xref:System.Windows.Forms.LinkLabel> Ste
     linkLabel1->Text = "Click here to see more.";  
     ```  
   
-3.  Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft, um zu bestimmen, welcher Teil der Beschriftung als Link gekennzeichnet wird.  
+3. Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Eigenschaft, um zu bestimmen, welcher Teil der Beschriftung als Link gekennzeichnet wird.  
   
      Die <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Wert wird dargestellt, mit einem <xref:System.Windows.Forms.LinkArea> mit zwei Zahlen, die Position des ersten Zeichens und die Anzahl der Zeichen. Hierzu können entweder programmgesteuert oder zur Entwurfszeit in den **Eigenschaften** Fenster.  
   
@@ -81,11 +81,11 @@ Sie können den Text durch Ändern der <xref:System.Windows.Forms.LinkLabel> Ste
     linkLabel1->LinkArea = LinkArea(6,4);  
     ```  
   
-4.  Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> Eigenschaft <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, oder <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.  
+4. Legen Sie die <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> Eigenschaft <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, oder <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.  
   
      Wenn sie, um festgelegt ist <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, die Teil der Beschriftung, die bestimmt, indem <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> ist nur unterstrichen werden, wenn der Mauszeiger darauf positioniert.  
   
-5.  In der <xref:System.Windows.Forms.LinkLabel.LinkClicked> ereignishandlers, der <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaft `true`.  
+5. In der <xref:System.Windows.Forms.LinkLabel.LinkClicked> ereignishandlers, der <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaft `true`.  
   
      Wenn Sie ein Link bereits besucht wurde, ist es üblich, dessen Darstellung auf irgendeine Weise, in der Regel nach ihrer Farbe zu ändern. Der Text ändert sich in die Farbe, die gemäß der <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> Eigenschaft.  
   
@@ -128,5 +128,5 @@ Sie können den Text durch Ändern der <xref:System.Windows.Forms.LinkLabel> Ste
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
 - [Übersicht über das LinkLabel-Steuerelement](linklabel-control-overview-windows-forms.md)
-- [Vorgehensweise: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Vorgehensweise: Link zu einem Objekt oder Webseite mit dem LinkLabel-Steuerelement in Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [LinkLabel-Steuerelement](linklabel-control-windows-forms.md)

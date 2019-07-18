@@ -3,14 +3,14 @@ title: Abfragebeispiele
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
 ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783109"
 ---
 # <a name="query-examples"></a>Abfragebeispiele
-Dieser Abschnitt enthält die Visual Basic- und C#-Beispiele für typische [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen. Entwickler, die mit Visual Studio finden viele weitere Beispiele in einer beispiellösung im Abschnitt Beispiele. Weitere Informationen finden Sie unter [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Dieser Abschnitt enthält die Visual Basic- und c#-Beispiele für typische [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen. Entwickler, die mit Visual Studio finden viele weitere Beispiele in einer beispiellösung im Abschnitt Beispiele. Weitere Informationen finden Sie unter [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
 >  *DB* wird häufig in Codebeispielen verwendet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation. *DB* wird davon ausgegangen, dass eine Instanz einer *Northwind* -Klasse, die erbt <xref:System.Data.Linq.DataContext>.  

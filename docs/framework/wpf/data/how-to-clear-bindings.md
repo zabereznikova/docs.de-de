@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
 ms.openlocfilehash: 8140928d44555e399ddf4ebd73407a251ad3cffe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931468"
 ---
 # <a name="how-to-clear-bindings"></a>Vorgehensweise: Löschen von Bindungen
 Dieses Beispiel zeigt, wie Bindungen aus einem Objekt gelöscht werden.  
@@ -32,5 +32,5 @@ Dieses Beispiel zeigt, wie Bindungen aus einem Objekt gelöscht werden.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Data.BindingOperations>
-- [Übersicht über die Datenbindung](data-binding-overview.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

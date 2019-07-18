@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d31aa0dfad70bed31bd72be5029c7bdff0925ba2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 01aefbc764e2620319da04356a25af63c8edc839
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088551"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769354"
 ---
 # <a name="ihostsecuritymanagersetsecuritycontext-method"></a>IHostSecurityManager::SetSecurityContext-Methode
 Legt den Sicherheitskontext des gerade ausgeführten Threads fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetSecurityContext (  
     [in]  EContextType eContextType,  
     [out] IHostSecurityContext** ppSecurityContext  

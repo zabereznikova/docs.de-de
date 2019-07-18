@@ -2,12 +2,12 @@
 title: Zitieren von Code
 description: Erfahren Sie mehr über F# Codezitate, eine Sprachfunktion, die Ihnen zum Generieren von und arbeiten programmgesteuert mit F#-Codeausdrücken ermöglicht.
 ms.date: 05/16/2016
-ms.openlocfilehash: aa8a17eb8f9837ca4023abc552a6aac063117e96
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 30fd5b575fa59d78c3e70c1a94cd921a6a655ace
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614297"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402130"
 ---
 # <a name="code-quotations"></a>Zitieren von Code
 
@@ -39,9 +39,7 @@ Die folgenden Ausdrücke sind jedoch gültig.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-Zum Zitieren von Code verwenden zu können, müssen Sie eine Importdeklaration hinzufügen (mithilfe der `open` Schlüsselwort), öffnet der [Microsoft.FSharp.Quotations](https://msdn.microsoft.com/library/e9ce8a3a-e00c-4190-bad5-cce52ee089b2) Namespace.
-
-Die F# PowerPack bietet Unterstützung für die Auswertung und Ausführung F# Ausdrucksobjekte.
+Auszuwertende F# Zitaten, verwenden Sie die [ F# Anführungszeichen Ausdrucksauswertungsfehler](https://github.com/fsprojects/FSharp.Quotations.Evaluator). Es bietet Unterstützung für die Auswertung und Ausführung F# Ausdrucksobjekte.
 
 ## <a name="expr-type"></a>Expr-Typ
 

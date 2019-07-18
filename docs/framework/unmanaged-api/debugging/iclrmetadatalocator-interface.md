@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697848"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator-Schnittstelle
 Wird von der Datenzugriffsdienstebene zum Suchen von Metadaten von Assemblys in einem Zielprozess.  
@@ -46,4 +46,4 @@ Wird von der Datenzugriffsdienstebene zum Suchen von Metadaten von Assemblys in 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d00c04f3719d6fb340541d3301d4dc4a3f95ca40
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e45f49d17a5b71abfb58ff8c0126abad49322c5b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495623"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737585"
 ---
 # <a name="icordebugarrayvaluegetcount-method"></a>ICorDebugArrayValue::GetCount-Methode
 Ruft die Gesamtzahl der Elemente im Array ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCount (  
     [out] ULONG32 *pnCount  
 );  

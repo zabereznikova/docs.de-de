@@ -14,38 +14,39 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a3b516e43c07666f4b52e67f85cb567ab310f020
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832919"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Assemblys in der Common Language Runtime (CLR)
 Assemblys sind die Bausteine von .NET Framework-Anwendungen; sie bilden das Fundament für Bereitstellung, Versionskontrolle, Wiederverwendung, Gültigkeitsbereiche für die Aktivierung und Sicherheitsberechtigungen. Eine Assembly ist eine Auflistung von Typen und Ressourcen, die so erstellt wurden, dass sie zusammenarbeiten und eine logische funktionelle Einheit bilden. Eine Assembly stellt der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Für die Common Language Runtime sind Typen nur im Kontext einer Assembly vorhanden.  
   
  Eine Assembly führt die folgenden Funktionen aus:  
   
--   Sie enthält Code, der von der Common Language Runtime ausgeführt wird. MSIL-Code (Microsoft Intermediate Language) in einer übertragbaren ausführbaren Datei (Portable Executable, PE) wird nicht ausgeführt, wenn diesem kein Assemblymanifest zugeordnet wurde. Beachten Sie, dass jede Assembly nur über einen Einstiegspunkt (`DllMain`, `WinMain` oder `Main`) verfügen kann.  
+- Sie enthält Code, der von der Common Language Runtime ausgeführt wird. MSIL-Code (Microsoft Intermediate Language) in einer übertragbaren ausführbaren Datei (Portable Executable, PE) wird nicht ausgeführt, wenn diesem kein Assemblymanifest zugeordnet wurde. Beachten Sie, dass jede Assembly nur über einen Einstiegspunkt (`DllMain`, `WinMain` oder `Main`) verfügen kann.  
   
--   Sie bildet eine Sicherheitsgrenze. Eine Assembly ist die Einheit, bei der Berechtigungen angefordert und erteilt werden. Weitere Informationen über Sicherheitsgrenzen bei Assemblys finden Sie unter [Überlegungen zur Assemblysicherheit](../../../docs/framework/app-domains/assembly-security-considerations.md).  
+- Sie bildet eine Sicherheitsgrenze. Eine Assembly ist die Einheit, bei der Berechtigungen angefordert und erteilt werden. Weitere Informationen über Sicherheitsgrenzen bei Assemblys finden Sie unter [Überlegungen zur Assemblysicherheit](../../../docs/framework/app-domains/assembly-security-considerations.md).  
   
--   Sie bildet eine Typgrenze. Die Identität jedes Typs enthält den Namen der Assembly, in der dieser sich befindet. Wenn der Typ `MyType` in den Gültigkeitsbereich einer Assembly geladen wird, ist dieser nicht derselbe wie der Typ `MyType`, der in den Gültigkeitsbereich einer anderen Assembly geladen wurde.  
+- Sie bildet eine Typgrenze. Die Identität jedes Typs enthält den Namen der Assembly, in der dieser sich befindet. Wenn der Typ `MyType` in den Gültigkeitsbereich einer Assembly geladen wird, ist dieser nicht derselbe wie der Typ `MyType`, der in den Gültigkeitsbereich einer anderen Assembly geladen wurde.  
   
--   Sie bildet eine Grenze für den Gültigkeitsbereich von Verweisen. Das Assemblymanifest enthält Assemblymetadaten, die für das Auflösen von Typen und die Bereitstellung angeforderter Ressourcen verwendet werden. Sie gibt die Typen und Ressourcen an, die außerhalb der Assembly verfügbar gemacht werden. Das Manifest listet außerdem andere Assemblys auf, von denen sie abhängig ist.  
+- Sie bildet eine Grenze für den Gültigkeitsbereich von Verweisen. Das Assemblymanifest enthält Assemblymetadaten, die für das Auflösen von Typen und die Bereitstellung angeforderter Ressourcen verwendet werden. Sie gibt die Typen und Ressourcen an, die außerhalb der Assembly verfügbar gemacht werden. Das Manifest listet außerdem andere Assemblys auf, von denen sie abhängig ist.  
   
--   Sie bildet eine Versionsgrenze. Die Assembly ist die kleinste, in verschiedenen Versionen verwendbare Einheit in der Common Language Runtime. Alle Typen und Ressourcen in derselben Assembly bilden eine Einheit mit derselben Version. Das Assemblymanifest beschreibt die von Ihnen für abhängige Assemblys angegebenen Versionsabhängigkeiten. Weitere Informationen über die Versionen finden Sie unter [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md).  
+- Sie bildet eine Versionsgrenze. Die Assembly ist die kleinste, in verschiedenen Versionen verwendbare Einheit in der Common Language Runtime. Alle Typen und Ressourcen in derselben Assembly bilden eine Einheit mit derselben Version. Das Assemblymanifest beschreibt die von Ihnen für abhängige Assemblys angegebenen Versionsabhängigkeiten. Weitere Informationen über die Versionen finden Sie unter [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md).  
   
--   Sie bildet eine Bereitstellungseinheit. Beim Starten einer Anwendung müssen nur die von der Anwendung zu Beginn aufgerufenen Assemblys vorhanden sein. Andere Assemblys, z. B. Lokalisierungsressourcen oder Assemblys mit Hilfsklassen, können bei Bedarf abgerufen werden. Dadurch ist die Anwendung beim ersten Herunterladen einfach und schlank. Weitere Informationen über die Bereitstellung von Assemblys finden Sie unter [Bereitstellung von Anwendungen](../../../docs/framework/deployment/index.md).  
+- Sie bildet eine Bereitstellungseinheit. Beim Starten einer Anwendung müssen nur die von der Anwendung zu Beginn aufgerufenen Assemblys vorhanden sein. Andere Assemblys, z. B. Lokalisierungsressourcen oder Assemblys mit Hilfsklassen, können bei Bedarf abgerufen werden. Dadurch ist die Anwendung beim ersten Herunterladen einfach und schlank. Weitere Informationen über die Bereitstellung von Assemblys finden Sie unter [Bereitstellung von Anwendungen](../../../docs/framework/deployment/index.md).  
   
--   Sie stellt die Einheit dar, in der die parallele Ausführung unterstützt wird. Weitere Informationen über das Ausführen mehrerer Versionen einer Assembly finden Sie unter [Assemblys und parallele Ausführung](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
+- Sie stellt die Einheit dar, in der die parallele Ausführung unterstützt wird. Weitere Informationen über das Ausführen mehrerer Versionen einer Assembly finden Sie unter [Assemblys und parallele Ausführung](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
   
  Assemblys können statisch oder dynamisch sein. Statische Assemblys können .NET Framework-Typen (Schnittstellen und Klassen) sowie Ressourcen für die Assembly (Bitmaps, JPEG-Dateien, Ressourcendateien usw.) enthalten. Statische Assemblys werden auf dem Datenträger in PE-Dateien (Portable Executable, übertragbare ausführbare Datei) gespeichert. Mit .NET Framework können Sie außerdem dynamische Assemblys erstellen, die direkt vom Arbeitsspeicher aus ausgeführt und vor der Ausführung nicht auf dem Datenträger gespeichert werden. Dynamische Assemblys können nach ihrer Ausführung auf dem Datenträger gespeichert werden.  
   
- Beim Erstellen von Assemblys stehen Ihnen verschiedene Möglichkeiten zur Verfügung: Um DLL-Dateien oder EXE-Dateien zu erstellen, verwenden Sie wie gewohnt Entwicklungstools wie z. B. Visual Studio. Mit den Tools von [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] können Sie Assemblys mit Modulen erstellen, die in anderen Entwicklungsumgebungen erzeugt wurden. Außerdem können Sie dynamische Assemblys auch mit Common Language Runtime-APIs wie <xref:System.Reflection.Emit?displayProperty=nameWithType> erstellen.  
+ Beim Erstellen von Assemblys stehen Ihnen verschiedene Möglichkeiten zur Verfügung: Um DLL-Dateien oder EXE-Dateien zu erstellen, verwenden Sie wie gewohnt Entwicklungstools wie z. B. Visual Studio. Mit den Tools im Windows Software Development Kit (SDK) können Sie Assemblys mit Modulen erstellen, die in anderen Entwicklungsumgebungen erzeugt wurden. Außerdem können Sie dynamische Assemblys auch mit Common Language Runtime-APIs wie <xref:System.Reflection.Emit?displayProperty=nameWithType> erstellen.  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Assemblyinhalte](../../../docs/framework/app-domains/assembly-contents.md)|Beschreibt die Elemente, aus denen die Assembly besteht.|  
 |[Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md)|Beschreibt die Daten im Assemblymanifest und wie diese in Assemblys gespeichert werden.|  

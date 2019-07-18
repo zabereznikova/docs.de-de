@@ -8,18 +8,18 @@ helpviewer_keywords:
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
 ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790831"
 ---
 # <a name="textbox"></a>TextBox
 Die <xref:System.Windows.Controls.TextBox> Steuerelement bietet Unterstützung für grundlegende Texteingabe in WPF-Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über TextBox](textbox-overview.md)  
- [Gewusst wie-Themen](textbox-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.TextBox>  

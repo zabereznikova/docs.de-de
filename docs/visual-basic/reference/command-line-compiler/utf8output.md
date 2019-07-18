@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /utf8output compiler option [Visual Basic]
 ms.assetid: 8ab36b1e-027a-49ac-85b4-f48997d9e4d6
 ms.openlocfilehash: 75369c3bcb19afbf98bfb80bc3e439f996d2a9d0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796077"
 ---
 # <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
 Zeigt die Compilerausgabe mit UTF-8-Codierung an.  

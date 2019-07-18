@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906736"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Vorgehensweise: Freigeben einer Systemressource (Visual Basic)
 Sie können eine `Using` Block, um sicherzustellen, dass das System eine Ressource freigibt, wenn der Code den Block beendet. Dies ist hilfreich, wenn Sie eine Systemressource, die eine große Menge an Arbeitsspeicher beansprucht oder andere Komponenten auch verwenden möchten.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Um eine Verbindung mit Datenbank freigeben, wenn Ihr Code beendet wurde  
   
-1.  Stellen Sie sicher, Sie fügen Sie die entsprechenden [Imports-Anweisung (.NET-Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) für eine Verbindung mit der Datenbank am Anfang der Quelldatei (in diesem Fall <xref:System.Data.SqlClient>).  
+1. Stellen Sie sicher, Sie fügen Sie die entsprechenden [Imports-Anweisung (.NET-Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) für eine Verbindung mit der Datenbank am Anfang der Quelldatei (in diesem Fall <xref:System.Data.SqlClient>).  
   
-2.  Erstellen Sie eine `Using` -block mit der `Using` und `End Using` Anweisungen. Platzieren Sie den Code, der mit der datenbankverbindung behandelt, innerhalb des Blocks.  
+2. Erstellen Sie eine `Using` -block mit der `Using` und `End Using` Anweisungen. Platzieren Sie den Code, der mit der datenbankverbindung behandelt, innerhalb des Blocks.  
   
-3.  Deklarieren Sie die Verbindung, und erstellen Sie eine Instanz davon als Teil der `Using` Anweisung.  
+3. Deklarieren Sie die Verbindung, und erstellen Sie eine Instanz davon als Teil der `Using` Anweisung.  
   
     ```  
     ' Insert the following line at the beginning of your source file.  

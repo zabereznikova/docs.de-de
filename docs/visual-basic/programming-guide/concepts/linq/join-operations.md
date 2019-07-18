@@ -3,11 +3,11 @@ title: Verknüpfungsvorgänge (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834379"
 ---
 # <a name="join-operations-visual-basic"></a>Verknüpfungsvorgänge (Visual Basic)
 Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten einer Datenquelle zu den Objekten einer anderen Datenquelle, die ein Attribut gemeinsam haben.  
@@ -18,7 +18,7 @@ Eine *Verknüpfung* zweier Datenquellen entspricht der Zuordnung von Objekten ei
   
  Die folgende Abbildung zeigt eine Konzeptansicht zweier Sätze sowie der Elemente innerhalb dieser Sätze, die entweder in eine innere oder linke äußere Verknüpfung einbezogen sind.  
   
- ![Zwei überlappende Kreise innere&#47;äußere.](./media/join-operations/join-method-overlapping-circles.png)  
+ ![Zwei überlappende Kreise innen&#47;außen.](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>Methoden  
   

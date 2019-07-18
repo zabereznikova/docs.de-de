@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
 ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788972"
 ---
 # <a name="-optimize"></a>-optimize
 Aktiviert oder deaktiviert compileroptimierungen.  

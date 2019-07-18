@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5786444c36fcfc9547be1db0006757b0a9376c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8597b68b75d2b5f77f68fc13c3fb78bfdae46178
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175187"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736294"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion-Funktion
 Ruft ab, die erforderlich common Language Runtime (CLR)-Versionsnummer.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCORRequiredVersion (  
     [out] LPWSTR   pbuffer,  
     [in]  DWORD    cchBuffer,  

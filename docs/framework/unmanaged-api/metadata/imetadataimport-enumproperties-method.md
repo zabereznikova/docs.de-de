@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 410fd7a702d3aa3812b4ea053c43fdaa507a474a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3c63797b60354b461891f44d32cf1840f7fdcf3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176032"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756494"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties-Methode
 Zählt PropertyDef-Token auf, die die Eigenschaften des Typs darstellen, auf den vom angegebenen TypeDef-Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumProperties (  
    [in, out] HCORENUM    *phEnum,  
    [in]      mdTypeDef   td,  

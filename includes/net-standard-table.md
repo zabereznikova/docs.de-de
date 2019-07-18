@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3f3f60f9752b9bd36d76387102c202d88b39c3ca
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672424"
+---
 | .NET-Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
 | .NET Core                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 |
@@ -16,7 +24,7 @@
 - Die Spalten stellen die .NET Standard-Versionen dar. Jede Zelle enthält einen Link zu einem Dokument, im dem die APIs angegeben sind, die in dieser Version von .NET Standard hinzugefügt wurden.
 - Die Zeilen stellen die verschiedenen .NET-Implementierungen dar.
 - Die Versionsnummer in jeder Zelle gibt an, welche Version der Implementierung Sie *mindestens* benötigen, um diese Version von .NET Standard als Ziel zu setzen.
-- Eine interaktive Tabelle finden Sie unter [.NET Standard-Versionen](https://immo.landwerth.net/netstandard-versions/#).
+- Eine interaktive Tabelle finden Sie unter [.NET Standard-Versionen](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

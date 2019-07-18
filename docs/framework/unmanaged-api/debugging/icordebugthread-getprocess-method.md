@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46aa2ec5a282ef56f28d5fa0499571028e6602e6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ad87b6552df25926b5b4184b7884c1d444c4f1be
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57483627"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769071"
 ---
 # <a name="icordebugthreadgetprocess-method"></a>ICorDebugThread::GetProcess-Methode
 Ruft einen Schnittstellenzeiger an den Prozess, von dem diese ICorDebugThread Bestandteil, ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [out] ICorDebugProcess   **ppProcess  
 );  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
 ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962436"
 ---
 # <a name="element-tree-and-serialization"></a>Elementstruktur und Serialisierung
 WPF-Programmierelemente stehen häufig in einer hierarchischen Form der Beziehung zueinander. Eine in XAML erstellte Anwendungsbenutzeroberfläche kann beispielsweise als Objektstruktur entworfen werden. Die Elementstruktur kann noch weiter in zwei getrennte Strukturen unterteilt werden, die trotzdem manchmal parallel angeordnet sein können: die logische Struktur und die visuelle Struktur. Serialisierung in WPF beinhaltet das Speichern des Zustands dieser beiden Strukturen sowie des Zustands der Anwendung, die in eine Datei, potenziell als XAML, geschrieben werden.  

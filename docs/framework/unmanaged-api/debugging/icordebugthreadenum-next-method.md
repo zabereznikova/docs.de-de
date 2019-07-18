@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b80e0cc026ce80950c14436abb2e84548f9adb64
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5e9e33e65b1cdeabe203c67ee4d4f259e2f7ac99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499575"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770072"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next-Methode
 Ruft die Anzahl der angegebenen ICorDebugThread-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  

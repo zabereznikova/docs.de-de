@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 432e202eb8db105e8d56d3d36cdc8001bac5320c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e909680428c7957da2283d13f5676329d953bf22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182376"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781894"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr-Enumeration
 Enthält Werte, die die Metadaten über ein Feld beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorFieldAttr {  
   
     fdFieldAccessMask           =   0x0007,  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d0fb35f5d7fec0c79a31cd8d7b77cf2b1c043f60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d5b82415635980f5bd4e13e87a0a03ec5b7032bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148017"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777326"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter-Methode
 Definiert einen einzelnen Parameter in der aktuellen Methode. Der Parametertyp stammt aus der die Position des Parameters (Sequenz) in der Signatur der Methode.  
@@ -31,7 +31,7 @@ Definiert einen einzelnen Parameter in der aktuellen Methode. Der Parametertyp s
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineParameter(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  

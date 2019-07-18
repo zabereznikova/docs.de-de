@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093540"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625451"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung
 Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur geringfügig schwieriger als bei COM-Komponenten. Für das Setup sind zwei Manifeste erforderlich:  
   
--   COM-Anwendungen müssen über ein Win32-Anwendungsmanifest verfügen, um die verwaltete Komponente zu bestimmen.  
+- COM-Anwendungen müssen über ein Win32-Anwendungsmanifest verfügen, um die verwaltete Komponente zu bestimmen.  
   
--   .NET Framework-Komponenten müssen über ein Komponentenmanifest mit den zur Laufzeit erforderlichen Aktivierungsinformationen verfügen.  
+- .NET Framework-Komponenten müssen über ein Komponentenmanifest mit den zur Laufzeit erforderlichen Aktivierungsinformationen verfügen.  
   
  In diesem Thema werden das Zuordnen eines Anwendungsmanifests zu einer Anwendung, das Zuordnen eines Komponentenmanifests zu einer Komponente und das Einbetten eines Komponentenmanifests in eine Assembly beschrieben.  
   
 ### <a name="to-create-an-application-manifest"></a>So erstellen Sie ein Anwendungsmanifest  
   
-1.  Erstellen oder bearbeiten Sie mit einem XML-Editor das Anwendungsmanifest der COM-Anwendung, die mit einer oder mehreren verwalteten Komponenten interoperiert.  
+1. Erstellen oder bearbeiten Sie mit einem XML-Editor das Anwendungsmanifest der COM-Anwendung, die mit einer oder mehreren verwalteten Komponenten interoperiert.  
   
-2.  Fügen Sie am Anfang der Datei den folgenden Standardheader ein:  
+2. Fügen Sie am Anfang der Datei den folgenden Standardheader ein:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -39,7 +39,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
   
      Weitere Informationen über Elemente von Manifesten und deren Attribute finden Sie unter [Anwendungsmanifeste](/windows/desktop/SbsCs/application-manifests).  
   
-3.  Bestimmen Sie den Besitzer des Manifests. Im folgenden Beispiel ist `myComApp`, Version 1, Besitzer der Manifestdatei.  
+3. Bestimmen Sie den Besitzer des Manifests. Im folgenden Beispiel ist `myComApp`, Version 1, Besitzer der Manifestdatei.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +51,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
       />  
     ```  
   
-4.  Bestimmen Sie die abhängigen Assemblys. Im folgenden Beispiel ist `myComApp` von `myManagedComp` abhängig.  
+4. Bestimmen Sie die abhängigen Assemblys. Im folgenden Beispiel ist `myComApp` von `myManagedComp` abhängig.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -75,22 +75,22 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
     </assembly>  
     ```  
   
-5.  Speichern und benennen Sie die Manifestdatei. Der Name eines Anwendungsmanifests besteht aus dem Namen der ausführbaren Assembly gefolgt von der Erweiterung MANIFEST. Der Dateiname des Anwendungsmanifests für myComApp.exe lautet z. B. myComApp.exe.manifest.  
+5. Speichern und benennen Sie die Manifestdatei. Der Name eines Anwendungsmanifests besteht aus dem Namen der ausführbaren Assembly gefolgt von der Erweiterung MANIFEST. Der Dateiname des Anwendungsmanifests für myComApp.exe lautet z. B. myComApp.exe.manifest.  
   
  Sie können ein Anwendungsmanifest im gleichen Verzeichnis wie die COM-Anwendung installieren. Sie können es aber auch der EXE-Datei der Anwendung als eine Ressource hinzufügen. Weitere Informationen finden Sie unter [About Side-by-Side Assemblies (Parallele Assemblys)](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>So erstellen Sie ein Komponentenmanifest  
   
-1.  Erstellen Sie mit einem XML-Editor ein Komponentenmanifest, um die verwaltete Assembly zu beschreiben.  
+1. Erstellen Sie mit einem XML-Editor ein Komponentenmanifest, um die verwaltete Assembly zu beschreiben.  
   
-2.  Fügen Sie am Anfang der Datei den folgenden Standardheader ein:  
+2. Fügen Sie am Anfang der Datei den folgenden Standardheader ein:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  Bestimmen Sie den Besitzer der Datei. Das `<assemblyIdentity>`-Element des `<dependentAssembly>`-Elements in der Anwendungsmanifestdatei muss mit dem entsprechenden Element im Komponentenmanifest übereinstimmen. Im folgenden Beispiel ist `myManagedComp`, Version 1.2.3.4, Besitzer der Manifestdatei.  
+3. Bestimmen Sie den Besitzer der Datei. Das `<assemblyIdentity>`-Element des `<dependentAssembly>`-Elements in der Anwendungsmanifestdatei muss mit dem entsprechenden Element im Komponentenmanifest übereinstimmen. Im folgenden Beispiel ist `myManagedComp`, Version 1.2.3.4, Besitzer der Manifestdatei.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,7 +103,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
            />  
     ```  
   
-4.  Bestimmen Sie alle Klassen in der Assembly. Verwenden Sie das `<clrClass>`-Element, um die einzelnen Klassen in der verwalteten Assembly eindeutig zu kennzeichnen. Das Element, das ein Unterelement des `<assembly>`-Elements ist, verfügt über die in der folgenden Tabelle beschriebenen Attribute.  
+4. Bestimmen Sie alle Klassen in der Assembly. Verwenden Sie das `<clrClass>`-Element, um die einzelnen Klassen in der verwalteten Assembly eindeutig zu kennzeichnen. Das Element, das ein Unterelement des `<assembly>`-Elements ist, verfügt über die in der folgenden Tabelle beschriebenen Attribute.  
   
     |Attribut|Beschreibung|Erforderlich|  
     |---------------|-----------------|--------------|  
@@ -146,25 +146,25 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
     </assembly>  
     ```  
   
-5.  Speichern und benennen Sie die Manifestdatei. Der Name eines Komponentenmanifests besteht aus dem Namen der Assemblybibliothek gefolgt von der Erweiterung MANIFEST. Das Manifest zu myManagedComp.dll lautet z. B. myManagedComp.manifest.  
+5. Speichern und benennen Sie die Manifestdatei. Der Name eines Komponentenmanifests besteht aus dem Namen der Assemblybibliothek gefolgt von der Erweiterung MANIFEST. Das Manifest zu myManagedComp.dll lautet z. B. myManagedComp.manifest.  
   
  Sie müssen das Komponentenmanifest als eine Ressource in die Assembly einbetten.  
   
 #### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>So betten Sie ein Komponentenmanifest in eine verwaltete Assembly ein  
   
-1.  Erstellen Sie ein Ressourcenskript, das die folgende Anweisung enthält:  
+1. Erstellen Sie ein Ressourcenskript, das die folgende Anweisung enthält:  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
      In dieser Anweisung ist `myManagedComp.manifest` der Name des einzubettenden Komponentenmanifests. Der Name der Skriptdatei für dieses Beispiel lautet `myresource.rc`.  
   
-2.  Kompilieren Sie das Skript mit dem Ressourcencompiler von Microsoft Windows (Rc.exe). Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
+2. Kompilieren Sie das Skript mit dem Ressourcencompiler von Microsoft Windows (Rc.exe). Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
   
      `rc myresource.rc`  
   
      Rc.exe erstellt die Ressourcendatei `myresource.res`.  
   
-3.  Kompilieren Sie die Quelldatei der Assembly erneut, und geben Sie die Ressourcendatei mit der Option **/win32res** an:  
+3. Kompilieren Sie die Quelldatei der Assembly erneut, und geben Sie die Ressourcendatei mit der Option **/win32res** an:  
   
     ```  
     /win32res:myresource.res  
@@ -173,6 +173,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
      Auch hier ist `myresource.res` der Name der Ressourcendatei mit der eingebetteten Ressource.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [COM-Interop ohne Registrierung](registration-free-com-interop.md)
 - [Anforderungen an COM-Interop ohne Registrierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))

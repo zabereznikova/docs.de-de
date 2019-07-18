@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bad63bbc8e221f306e5807f51fbbb8eb4761d0fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 862fc7012c2c5c84a163d6716dfeb4b97f00cbcd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599178"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634179"
 ---
 # <a name="multifile-assemblies"></a>Mehrfachdateiassemblys
 
@@ -30,14 +30,14 @@ Nehmen Sie z.B. an, dass Sie eine Anwendung haben, die zwei Codemodule enthält,
 
 Es gibt mehrere Gründe, sich für eine Mehrfachdateiassembly zu entscheiden:
 
--   Das Kombinieren von Modulen, die in unterschiedlichen Sprachen geschrieben wurden. Dies ist der häufigste Grund für das Erstellen einer Mehrfachdateiassembly.
+- Das Kombinieren von Modulen, die in unterschiedlichen Sprachen geschrieben wurden. Dies ist der häufigste Grund für das Erstellen einer Mehrfachdateiassembly.
 
--   Die Optimierung des Herunterladens einer Anwendung durch das Einfügen selten verwendeter Typen in ein Modul, das nur wenn nötig heruntergeladen wird.
+- Die Optimierung des Herunterladens einer Anwendung durch das Einfügen selten verwendeter Typen in ein Modul, das nur wenn nötig heruntergeladen wird.
 
     > [!NOTE]
     > Wenn Sie eine Anwendung erstellen, die mit dem `<object>`-Tag mit Microsoft Internet Explorer heruntergeladen wird, ist es wichtig, dass Sie Mehrfachdateiassemblys erstellen. In diesem Szenario erstellen Sie eine von Ihren Codemodulen getrennte Datei, die nur das Assemblymanifest enthält. Internet Explorer lädt zunächst das Assemblymanifest herunter und erstellt anschließend Arbeitsthreads, um alle weiteren erforderlichen Module bzw. Assemblys herunterzuladen. Während des Downloads der Datei, die das Assemblymanifest enthält, reagiert Internet Explorer nicht auf Eingaben des Benutzers. Je kleiner die Datei ist, die das Assemblymanifest enthält, desto kürzer ist die Zeitspanne, in der Internet Explorer nicht reagiert.
 
--   Das Kombinieren von Codemodulen, die von mehreren Entwicklern geschrieben wurden. Obwohl jeder Entwickler jedes Codemodul in eine Assembly kompilieren kann, kann dies dazu führen, dass einige Teile öffentlich gemacht werden, die aber nicht verfügbar gemacht werden, wenn alle Module in eine Mehrfachdateiassembly integriert werden.
+- Das Kombinieren von Codemodulen, die von mehreren Entwicklern geschrieben wurden. Obwohl jeder Entwickler jedes Codemodul in eine Assembly kompilieren kann, kann dies dazu führen, dass einige Teile öffentlich gemacht werden, die aber nicht verfügbar gemacht werden, wenn alle Module in eine Mehrfachdateiassembly integriert werden.
 
 Sobald Sie die Assembly erstellt haben, können Sie die Datei signieren, die das Assemblymanifest enthält (und somit auch die Assembly). Alternativ können Sie der Datei auch einen starken Namen geben und sie in den globalen Assemblycache einfügen.
 

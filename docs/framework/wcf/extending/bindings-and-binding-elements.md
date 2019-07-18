@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eae78220196395ba3002141f01d554f2335a1f28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073844"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613362"
 ---
 # <a name="bindings-and-binding-elements"></a>Bindungen und Bindungselemente
 Bindungen sind Sammlungen spezieller Konfigurationselemente, die Namen *Bindungselemente*, die von der Service-Laufzeit, wenn ein Client ausgewertet werden oder Dienstendpunkt erstellt wird. Der Typ und die Reihenfolge der Bindungselemente in einer Bindung bestimmen die Auswahl und Stapelreihenfolge des Protokolls und der Transportkanäle in einem Endpunkt-Kanalstapel.  
@@ -21,13 +21,13 @@ Bindungen sind Sammlungen spezieller Konfigurationselemente, die Namen *Bindungs
 ## <a name="extending-bindings-and-binding-elements"></a>Erweitern von Bindungen und Bindungselementen  
  Windows Communication Foundation (WCF) umfasst vom System bereitgestellten Bindungen, die eine Vielzahl von Szenarien abdecken. (Weitere Informationen finden Sie unter [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).) Gibt es möglicherweise Zeiten, allerdings beim müssen Sie zum Erstellen und verwenden eine Bindung, die nicht in WCF enthalten ist. Bei den folgenden Szenarien muss eine neue Bindung erstellt werden:  
   
--   Um ein neues Bindungselement zu verwenden (z. B. ein neues Transport-, Codierungs- oder Protokollbindungselement), müssen Sie eine neue Bindung erstellen, die dieses Bindungselemente enthält. Wenn Sie beispielsweise ein benutzerdefiniertes `UdpTransportBindingElement` für den UDP-Transport hinzufügen, müssen Sie eine neue Bindung erstellen, damit Sie das Element verwenden können. Weitere Informationen zum Ausführen dieses Verhalten mithilfe der <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+- Um ein neues Bindungselement zu verwenden (z. B. ein neues Transport-, Codierungs- oder Protokollbindungselement), müssen Sie eine neue Bindung erstellen, die dieses Bindungselemente enthält. Wenn Sie beispielsweise ein benutzerdefiniertes `UdpTransportBindingElement` für den UDP-Transport hinzufügen, müssen Sie eine neue Bindung erstellen, damit Sie das Element verwenden können. Weitere Informationen zum Ausführen dieses Verhalten mithilfe der <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> finden Sie unter [benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
--   Zum Konfigurieren vorhandener Bindungselemente, sodass die vom System bereitgestellten Bindungen nicht auf öffentlichen Eigenschaften verfügbar gemacht werden. Sie müssen beispielsweise eine neue Bindung erstellen, um die Reihenfolge zu ändern, in der Signatur- und Verschlüsselungsvorgänge durchgeführt werden. Informationen zum Durchführen dieses Verhaltens finden Sie unter [Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+- Zum Konfigurieren vorhandener Bindungselemente, sodass die vom System bereitgestellten Bindungen nicht auf öffentlichen Eigenschaften verfügbar gemacht werden. Sie müssen beispielsweise eine neue Bindung erstellen, um die Reihenfolge zu ändern, in der Signatur- und Verschlüsselungsvorgänge durchgeführt werden. Informationen zum Durchführen dieses Verhaltens finden Sie unter [Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
   
--   Zum Einrichten von unternehmensweiten Standardbindungen, die nur bestimmte Konfigurationsoptionen verfügbar machen. Wenn Sie beispielsweise für Ihr Unternehmen eine Variante der <xref:System.ServiceModel.WSHttpBinding> erstellen, in der Sicherheit nicht deaktiviert werden kann, erstellen Sie eine neue Bindung, die das gleiche Verhalten hat wie die <xref:System.ServiceModel.WSHttpBinding>, allerdings ist die Sicherheit immer aktiviert. Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+- Zum Einrichten von unternehmensweiten Standardbindungen, die nur bestimmte Konfigurationsoptionen verfügbar machen. Wenn Sie beispielsweise für Ihr Unternehmen eine Variante der <xref:System.ServiceModel.WSHttpBinding> erstellen, in der Sicherheit nicht deaktiviert werden kann, erstellen Sie eine neue Bindung, die das gleiche Verhalten hat wie die <xref:System.ServiceModel.WSHttpBinding>, allerdings ist die Sicherheit immer aktiviert. Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
   
--   Zum Durchführen von Metadatenanpassungen, normalerweise zum Konfigurieren oder Verwenden von benutzerdefinierten Bindungselementen. Weitere Informationen zum Bereitstellen von metadatenunterstützung für Bindungen und Bindungselementen finden Sie unter [Konfiguration und Metadatenunterstützung](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
+- Zum Durchführen von Metadatenanpassungen, normalerweise zum Konfigurieren oder Verwenden von benutzerdefinierten Bindungselementen. Weitere Informationen zum Bereitstellen von metadatenunterstützung für Bindungen und Bindungselementen finden Sie unter [Konfiguration und Metadatenunterstützung](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
 
 ## <a name="channels-bindings-and-binding-elements"></a>Kanäle, Bindungen und Bindungselemente  
  Bindungen und Bindungselemente sind das Bindeglied zwischen dem Anwendungsprogrammiermodell, das die Attribute und Verhalten enthält, und dem Kanalmodell, das Factorys und Listeners, Nachrichtenencoder sowie Transport- und Protokollimplementierungen enthält. Normalerweise werden Bindungselemente und Bindungen implementiert, um Kanäle zu aktivieren, damit sie von der Anwendungsschicht verwendet werden.  

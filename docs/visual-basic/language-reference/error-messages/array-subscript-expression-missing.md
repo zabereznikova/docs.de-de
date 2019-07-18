@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30306
 ms.assetid: 3c0d9732-ee37-436f-a1df-29d65712f48a
-ms.openlocfilehash: 4dadad63f4321e88b79f2006a9e6b7befa27909a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 831cab0871405f342f389ed21d77ec15639803a5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619579"
 ---
 # <a name="array-subscript-expression-missing"></a>Fehlender Arraysubscriptausdruck
 Eine Arrayinitialisierung bewirkt, dass Sie eine oder mehrere die tiefgestellten Zeichen, die die Arraygrenzen definieren. Die Anweisung kann beispielsweise den Ausdruck enthalten `myArray (5,5,,10)`, d. h., das dritte Subscript.  
@@ -21,7 +21,7 @@ Eine Arrayinitialisierung bewirkt, dass Sie eine oder mehrere die tiefgestellten
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Geben Sie den fehlenden Index.  
+- Geben Sie den fehlenden Index.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Suchen des Stammelements (XPath-LINQ to XML) (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
 ms.openlocfilehash: 0936300a51c697eaff5a1aeafff70e37b04a2a96
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780457"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen des Stammelements (XPath-LINQ to XML) (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] das Stammelement ermitteln können.  

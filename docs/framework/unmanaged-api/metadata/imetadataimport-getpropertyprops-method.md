@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a08bd5beeb9fab1cd5b703c3afc4e82aaf71dbbc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e83afcf6c872927e614fce33ca96e93f0da4f497
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122602"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778873"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps-Methode
 Ruft die Metadaten für die Eigenschaft, die durch das angegebene Token dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetPropertyProps (  
    [in]  mdProperty        prop,  
    [out] mdTypeDef         *pClass,   

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 784e58e0c5c2329705671580d53763f2ac30f0b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e6584d31674670bcd005161a846b74df71a27a5f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201350"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741648"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2-Methode
 Assemblys und ungebundenen Modulen importiert. Diese Methode entspricht [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), aber Sie funktioniert auch, wenn die zu importierende Datei auf dem Datenträger nicht vorhanden ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ImportFileEx2(  
     LPCWSTR pszFilename,  
     LPCWSTR pszTargetName,  
@@ -76,4 +76,4 @@ HRESULT ImportFileEx2(
 
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

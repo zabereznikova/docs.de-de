@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: d8451a028def44ec7d5b629a1c0749321684e4d2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202196"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586528"
 ---
 # <a name="-link-visual-basic"></a>-link (Visual Basic)
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinformationen in den angegebenen Assemblys bereitstellt.  
@@ -49,13 +49,13 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
   
  Wenn Sie eine Verknüpfung mit einer COM-Assembly (Assembly A) erstellen, die selbst auf eine andere COM-Assembly (Assembly B) verweist, müssen Sie auch eine Verknüpfung mit Assembly B erstellen, wenn eine der folgenden Aussagen zutrifft:  
   
--   Ein Typ von Assembly A erbt von einem Typ oder implementiert eine Schnittstelle aus Assembly B.  
+- Ein Typ von Assembly A erbt von einem Typ oder implementiert eine Schnittstelle aus Assembly B.  
   
--   Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
+- Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
  Verwendung [- Libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) auf das Verzeichnis anzugeben, in denen eine oder mehrere der Assemblyverweise befinden.  
   
- Wie die [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) -Compileroption verwenden, die `-link` Compileroption verwendet der Vbc.rsp-Antwortdatei, die Verweise häufig verwendete [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys. Verwenden Sie die [- Noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) Compileroption, wenn Sie nicht, dass den Compiler die Datei "vbc.rsp" zu verwenden möchten.  
+ Wie die [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) -Compileroption verwenden, die `-link` Compileroption verwendet die Vbc.rsp-Antwortdatei, der Verweise, häufig .NET Framework-Assemblys verwendete. Verwenden Sie die [- Noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) Compileroption, wenn Sie nicht, dass den Compiler die Datei "vbc.rsp" zu verwenden möchten.  
   
  Die Kurzform von `-link` ist `-l`.  
   

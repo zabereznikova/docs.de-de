@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b436fa14322d444a6c8b515ba8e50698eecb95ba
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f2ea7ebff122622a0db46160d23574619664f8ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487017"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745021"
 ---
 # <a name="icordebugreferencevaluedereference-method"></a>ICorDebugReferenceValue::Dereference-Methode
 Ruft das Objekt ab, auf die verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Dereference (  
     [out] ICorDebugValue  **ppValue  
 );  

@@ -4,18 +4,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-ms.openlocfilehash: 1c36382db2918952a9c84c25fb4319f7006d73d2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6f0f7d51c31c674d70d40b7cd9a717aa5a1b0f4c
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863159"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041692"
 ---
 # <a name="mylog-object"></a>My.Log-Objekt
 Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis-und Ausnahmeinformationen in die protokollüberwachung der Anwendung.  
   
 ## <a name="remarks"></a>Hinweise  
- Informationen zu den Methoden und Eigenschaften der `My.Log` Objekt, finden Sie unter <xref:Microsoft.VisualBasic.Logging.AspLog>.  
+ Informationen zu den Methoden und Eigenschaften des `My.Log` -Objekts finden Sie unter <xref:Microsoft.VisualBasic.Logging.AspLog>.  
   
  Die `My.Log` Objekt für nur für ASP.NET-Anwendungen verfügbar ist. Verwenden Sie für Clientanwendungen [My.Application.Log-Objekt](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
   
@@ -24,4 +24,4 @@ Stellt eine Eigenschaft und Methoden zum Schreiben von Ereignis-und Ausnahmeinfo
   
  **Klasse:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a9d8c02a05723814d074ff91c847471287588618
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110715"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642977"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms
 Wenn ein Windows Forms <xref:System.Windows.Forms.TextBox> Steuerelement zunächst den Fokus erhält, wird das standardmäßige einfügen in das Textfeld auf der linken Seite des vorhandenen Text. Der Benutzer kann die Einfügemarke die Tastatur oder Maus verschieben. Wenn das Textfeld eingeschränkt, und klicken Sie dann wieder den Fokus erhält, wird die Einfügemarke ablegen, wo der Benutzer zuletzt es platziert werden.  
@@ -24,9 +24,9 @@ Wenn ein Windows Forms <xref:System.Windows.Forms.TextBox> Steuerelement zunäch
   
 ### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>Zum Steuern der Einfügemarke in einem TextBox-Steuerelement  
   
-1.  Legen Sie für die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>-Eigenschaft einen geeigneten Wert fest. 0 (null) platziert die Einfügemarke direkt auf der linken Seite des ersten Zeichens.  
+1. Legen Sie für die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>-Eigenschaft einen geeigneten Wert fest. 0 (null) platziert die Einfügemarke direkt auf der linken Seite des ersten Zeichens.  
   
-2.  (Optional) Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft, um die Länge des Texts, die Sie auswählen möchten.  
+2. (Optional) Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft, um die Länge des Texts, die Sie auswählen möchten.  
   
      Der folgende Code gibt die Einfügemarke immer 0 zurück. Die `TextBox1_Enter` Ereignishandler muss gebunden sein, auf das Steuerelement; Weitere Informationen, wie unter [Erstellen von Ereignishandlern in Windows Forms](../creating-event-handlers-in-windows-forms.md).  
   
@@ -59,15 +59,15 @@ Wenn ein Windows Forms <xref:System.Windows.Forms.TextBox> Steuerelement zunäch
   
 #### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>Um den Text die Einfügemarke auf eine neue Form standardmäßig sichtbar zu machen  
   
--   Legen Sie die <xref:System.Windows.Forms.TextBox> des Steuerelements <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft `0`.  
+- Legen Sie die <xref:System.Windows.Forms.TextBox> des Steuerelements <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft `0`.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox-Steuerelement](textbox-control-windows-forms.md)

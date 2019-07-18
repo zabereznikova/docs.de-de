@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e201b9a350c030da59e2b6ed27f84f570c8e621
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126658"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739090"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>_EFN_GetManagedExcepStack-Funktion
+# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack-Funktion
 Gibt bei Angabe der Adresse eines verwalteten Ausnahmeobjekts eine Zeichenfolgenversion der enthaltenen Stapelüberwachung zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT _EFN_GetManagedExcepStack(  
     [in]  PDEBUG_CLIENT Client,  
     [in]  ULONG64       StackObjAddr,  
@@ -58,7 +58,7 @@ HRESULT _EFN_GetManagedExcepStack(
   
  **Header:** SOS_Stacktrace.h  
   
- **.NET Framework-Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
 

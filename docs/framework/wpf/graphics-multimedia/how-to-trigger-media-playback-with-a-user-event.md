@@ -8,11 +8,11 @@ helpviewer_keywords:
 - multimedia [WPF], synchronizing media playback with events
 ms.assetid: c4dbe632-6e7f-4d7f-9df5-98737a758bc3
 ms.openlocfilehash: ae8ba54cc852bb85350492c95e3e890aebf6534f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769277"
 ---
 # <a name="how-to-trigger-media-playback-with-a-user-event"></a>Vorgehensweise: Auslösen der Medienwiedergabe durch ein Benutzerereignis
 In diesem Beispiel wird die Synchronisierung der Medienwiedergabe mit einem Ereignis dargestellt.  
@@ -28,5 +28,5 @@ In diesem Beispiel wird die Synchronisierung der Medienwiedergabe mit einem Erei
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.EventTrigger.RoutedEvent%2A>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Gewusst wie-Themen](audio-and-video-how-to-topics.md)
+- [Themen zu Vorgehensweisen](audio-and-video-how-to-topics.md)
 - [Grafiken und Multimedia](index.md)

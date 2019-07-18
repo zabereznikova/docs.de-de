@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82988d25926a4e61d91a98e7cd5995dacde4e5b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a30ac0ab8c985af04709ddd8e8e5dd9bca776dcb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127061"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759095"
 ---
 # <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a>ICLRSyncManager::DeleteRWLockOwnerIterator-Methode
 Fordert an, dass die common Language Runtime (CLR) den Iterator, der durch einen Aufruf erstellt wurde zerstört [ICLRSyncManager:: CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DeleteRWLockOwnerIterator (  
     [in] SIZE_T  Iterator  
 );  

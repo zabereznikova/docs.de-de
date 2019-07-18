@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960900"
 ---
 # <a name="application-settings-for-custom-controls"></a>Anwendungseinstellungen für benutzerdefinierte Steuerelemente
 Sie müssen bestimmte Aufgaben aus, um Ihre benutzerdefinierten Steuerelemente bieten die Möglichkeit, Anwendungseinstellungen beizubehalten, wenn die Steuerelemente in Anwendungen von Drittanbietern gehostet werden, ausführen.  
@@ -22,9 +22,9 @@ Sie müssen bestimmte Aufgaben aus, um Ihre benutzerdefinierten Steuerelemente b
   
  Darüber hinaus müssen Sie Folgendes in der Reihenfolge für Anwendungseinstellungen für benutzerdefinierte Steuerelemente zum ordnungsgemäßen in zur Entwurfszeit-Umgebungen wie Visual Studio implementieren:  
   
-1.  Eine benutzerdefinierte Anwendung Settings-Klasse mit einem Konstruktor, akzeptiert eine <xref:System.ComponentModel.IComponent> als einzelner Parameter. Verwenden Sie diese Klasse zum Speichern und laden alle Einstellungen Ihrer Anwendung. Wenn Sie eine neue Instanz dieser Klasse erstellen, übergeben Sie das benutzerdefinierte Steuerelement mit dem Konstruktor.  
+1. Eine benutzerdefinierte Anwendung Settings-Klasse mit einem Konstruktor, akzeptiert eine <xref:System.ComponentModel.IComponent> als einzelner Parameter. Verwenden Sie diese Klasse zum Speichern und laden alle Einstellungen Ihrer Anwendung. Wenn Sie eine neue Instanz dieser Klasse erstellen, übergeben Sie das benutzerdefinierte Steuerelement mit dem Konstruktor.  
   
-2.  Diese benutzerdefinierten Einstellungen-Klasse erstellen, nachdem das Steuerelement erstellt und in der Form eines Formulars, wie z. B. platziert wurde <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
+2. Diese benutzerdefinierten Einstellungen-Klasse erstellen, nachdem das Steuerelement erstellt und in der Form eines Formulars, wie z. B. platziert wurde <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
   
  Anweisungen zum Erstellen einer CustomSettings-Klasse, finden Sie unter [Vorgehensweise: Erstellen von Anwendungseinstellungen](how-to-create-application-settings.md).  
   

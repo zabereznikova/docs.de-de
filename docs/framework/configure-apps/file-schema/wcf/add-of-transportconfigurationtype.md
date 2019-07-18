@@ -3,11 +3,11 @@ title: <add> von <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
 ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701436"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<add> of \<transportConfigurationType>
 Dieses Element ist ein Schlüssel-Wert-Paar, das den Typ eines bestimmten Transports identifiziert.  

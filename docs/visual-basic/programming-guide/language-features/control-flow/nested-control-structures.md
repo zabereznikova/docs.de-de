@@ -11,11 +11,11 @@ helpviewer_keywords:
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
 ms.openlocfilehash: c016722332dafa3d3be91a1e9e98cc0ce9a49717
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907990"
 ---
 # <a name="nested-control-structures-visual-basic"></a>Geschachtelte Steuerungsstrukturen (Visual Basic)
 Können Sie die Anweisungen in anderen Anweisungen, z. B. Platzieren einer `If...Then...Else` -Block in einem `For...Next` Schleife. Eine steuerungsanweisung, die in einer anderen Kontrollmaßnahme platziert gilt als *geschachtelte*.  

@@ -18,19 +18,19 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634667"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapezeichen in regulären Ausdrücken
 Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine der folgenden Optionen stehen:  
   
--   Das darauf folgende Zeichen ist ein Sonderzeichen, wie in der Tabelle im folgenden Abschnitt gezeigt. `\b` ist z. B. ein Anker, der angibt, dass die Übereinstimmung eines regulären Ausdrucks mit einer Wortgrenze beginnen sollte, `\t` stellt einen Tabulator dar und `\x020` stellt ein Leerzeichen dar.  
+- Das darauf folgende Zeichen ist ein Sonderzeichen, wie in der Tabelle im folgenden Abschnitt gezeigt. `\b` ist z. B. ein Anker, der angibt, dass die Übereinstimmung eines regulären Ausdrucks mit einer Wortgrenze beginnen sollte, `\t` stellt einen Tabulator dar und `\x020` stellt ein Leerzeichen dar.  
   
--   Ein Zeichen, das andernfalls als Sprachkonstrukt ohne Escapezeichen interpretiert werden würde, sollte als Zeichenliteral interpretiert werden. Durch eine geschweifte Klammer (`{`) wird z. B. der Beginn der Definition eines Quantifizierers angezeigt, aber ein von einer geschweiften Klammer (`\{`) gefolgter umgekehrter Schrägstrich gibt an, dass die Engine für reguläre Ausdrücke eine Entsprechung für die geschweifte Klammer finden sollte. Auf ähnliche Weise markiert ein einzelner umgekehrter Schrägstrich den Anfang eines Sprachkonstrukts mit Escapezeichen, aber zwei umgekehrte Schrägstriche (`\\`) geben an, dass die Engine für reguläre Ausdrücke eine Entsprechung für den umgekehrten Schrägstrich finden soll.  
+- Ein Zeichen, das andernfalls als Sprachkonstrukt ohne Escapezeichen interpretiert werden würde, sollte als Zeichenliteral interpretiert werden. Durch eine geschweifte Klammer (`{`) wird z. B. der Beginn der Definition eines Quantifizierers angezeigt, aber ein von einer geschweiften Klammer (`\{`) gefolgter umgekehrter Schrägstrich gibt an, dass die Engine für reguläre Ausdrücke eine Entsprechung für die geschweifte Klammer finden sollte. Auf ähnliche Weise markiert ein einzelner umgekehrter Schrägstrich den Anfang eines Sprachkonstrukts mit Escapezeichen, aber zwei umgekehrte Schrägstriche (`\\`) geben an, dass die Engine für reguläre Ausdrücke eine Entsprechung für den umgekehrten Schrägstrich finden soll.  
   
 > [!NOTE]
 >  Escapezeichen werden in Mustern von regulären Ausdrücken, jedoch nicht in Ersetzungsmustern erkannt.  
@@ -52,7 +52,7 @@ Der umgekehrte Schrägstrich (\\) in einem regulären Ausdruck kann für eine de
 |`\` *nnn*|Entspricht einem ASCII-Zeichen, wobei *nnn* aus zwei oder drei Ziffern besteht, die den oktalen Zeichencode darstellen. Beispielsweise stellt `\040` ein Leerzeichen dar. Dieses Konstrukt wird als Rückverweis interpretiert, wenn es nur eine Ziffer (z. B. `\2`) hat oder wenn es der Nummer einer Erfassungsgruppe entspricht. (Siehe [Rückverweiskonstrukte](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
 |`\x` *nn*|Entspricht einem ASCII-Zeichen, wobei *nn* ein zweistelliger Hexadezimalzeichencode ist.|  
 |`\c` *X*|Entspricht einem ASCII-Steuerzeichen, wobei X der Buchstabe des Steuerzeichens ist. Beispielsweise ist `\cC` STRG+C.|  
-|`\u` *nnnn*|Entspricht einer UTF-16-Codeeinheit, deren Wert *nnnn* hexadezimal ist. **Hinweis:** Das Perl 5-Escapezeichen, das zum Festlegen von Unicode verwendet wird, wird nicht von .NET unterstützt. Das Perl 5-Escape-Zeichen hat das Format `\x{`*####*`…}`, wobei *####*`…` einer Reihe von Hexadezimalziffern entspricht. Verwenden Sie stattdessen `\u`*nnnn*.|  
+|`\u` *nnnn*|Entspricht einer UTF-16-Codeeinheit, deren Wert *nnnn* hexadezimal ist. **Hinweis**:  Das Perl 5-Escapezeichen, das zum Festlegen von Unicode verwendet wird, wird nicht von .NET unterstützt. Das Perl 5-Escape-Zeichen hat das Format `\x{` *####* `…}`, wobei *####* `…` einer Reihe von Hexadezimalziffern entspricht. Verwenden Sie stattdessen `\u`*nnnn*.|  
 |`\`|Folgt diesem Zeichen ein Zeichen, das nicht als Escapezeichen erkannt wird, entspricht es diesem Zeichen. `\*` entspricht beispielsweise einem Sternchen (*) und ist gleich `\x2A`.|  
   
 ## <a name="an-example"></a>Beispiel  

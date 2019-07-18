@@ -2,12 +2,12 @@
 title: Überwachungsprofile
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a643cf37bbb3e72baefb434249aa54b386060627
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721371"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660931"
 ---
 # <a name="tracking-profiles"></a>Überwachungsprofile
 
@@ -17,7 +17,7 @@ ms.locfileid: "57721371"
 
 Mithilfe von Nachverfolgungsprofilen wird angegeben, welche Nachverfolgungsinformationen für eine Workflowinstanz ausgegeben werden. Wenn kein Profil angegeben wird, dann werden alle Nachverfolgungsereignisse ausgegeben. Wenn ein Profil angegeben ist, werden die Nachverfolgungsereignisse, die im Profil angegeben sind, ausgegeben. Je nach Überwachungsanforderungen können Sie ein Profil schreiben, das sehr allgemein gehalten ist und einen kleinen Satz von unspezifischen Zustandsänderungen eines Workflows abonniert. Umgekehrt ist es möglich, ein sehr ausführliches Profil zu erstellen, dessen resultierende Ereignisse umfangreich genug sind, um später einen detaillierten Ausführungsfluss zu rekonstruieren.
 
-Überwachungsprofile sind XML-Elemente, die innerhalb einer standardmäßigen [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Konfigurationsdatei oder in Code angegeben werden. Das folgende Beispiel ist einem [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]-Überwachungsprofil in einer Konfigurationsdatei entnommen, die es einem Überwachungsteilnehmer ermöglicht, `Started`-Workflowereignisse und `Completed`-Workflowereignisse zu abonnieren.
+Überwachungsprofile manifestieren sich als XML-Elemente innerhalb einer standardmäßigen .NET Framework-Konfigurationsdatei oder in Code angegeben. Das folgende Beispiel ist einem [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]-Überwachungsprofil in einer Konfigurationsdatei entnommen, die es einem Überwachungsteilnehmer ermöglicht, `Started`-Workflowereignisse und `Completed`-Workflowereignisse zu abonnieren.
 
 ```xml
 <system.serviceModel>
@@ -63,9 +63,9 @@ TrackingProfile profile = new TrackingProfile()
 
 Die zwei Sichtbarkeitsmodi, die vom `implementationVisibility`-Attribut im Überwachungsprofil angegeben werden, sind `RootScope` und `All`. Durch Verwendung des `RootScope`-Modus werden Überwachungsdatensätze für Aktivitäten, die die Implementierung einer Aktivität bilden, unterdrückt, wenn der Stamm eines Workflows keine zusammengesetzte Aktivität ist. Dies bedeutet, dass nur die allgemeine Aktivität innerhalb der zusammengesetzten Aktivität nachverfolgt wird, wenn einem Workflow eine Aktivität hinzugefügt wird, die mit anderen Aktivitäten implementiert wird, und `implementationVisibility` auf RootScope festgelegt ist. Wenn eine Aktivität der Stamm des Workflows ist, stellt die Implementierung der Aktivität den Workflow selbst dar, und Überwachungsdatensätze werden für Aktivitäten ausgegeben, die die Implementierung bilden. Bei Verwendung des All-Modus werden die Überwachungsdatensätze für die Stammaktivität und alle zugehörigen zusammengesetzten Aktivitäten ausgegeben.
 
-Nehmen wir beispielsweise an *MyActivity* ist eine zusammengesetzte Aktivität, deren Implementierung zwei Aktivitäten enthält *"Activity1"* und *"activity2"*. Wenn diese Aktivität einem Workflow hinzugefügt wird und die nachverfolgung aktiviert ist, mit einem Überwachungsprofil mit `implementationVisibility` festgelegt `RootScope`, werden Überwachungsdatensätze nur für *MyActivity*. Allerdings werden keine Datensätze für Aktivitäten ausgegeben *"Activity1"* und *"activity2"*.
+Nehmen wir beispielsweise an *MyActivity* ist eine zusammengesetzte Aktivität, deren Implementierung zwei Aktivitäten enthält *"Activity1"* und *"activity2"* . Wenn diese Aktivität einem Workflow hinzugefügt wird und die nachverfolgung aktiviert ist, mit einem Überwachungsprofil mit `implementationVisibility` festgelegt `RootScope`, werden Überwachungsdatensätze nur für *MyActivity*. Allerdings werden keine Datensätze für Aktivitäten ausgegeben *"Activity1"* und *"activity2"* .
 
-Jedoch wenn die `implementationVisibility` Attribut für das Überwachungsprofil ist auf `All`, und klicken Sie dann die Überwachungsdatensätze ausgegeben werden, nicht nur für *MyActivity*, aber auch für die Aktivitäten *"Activity1"* und  *"Activity2"*.
+Jedoch wenn die `implementationVisibility` Attribut für das Überwachungsprofil ist auf `All`, und klicken Sie dann die Überwachungsdatensätze ausgegeben werden, nicht nur für *MyActivity*, aber auch für die Aktivitäten *"Activity1"* und  *"Activity2"* .
 
 Das `implementationVisibility`-Flag gilt für folgende Datensatztypen für die Nachverfolgung:
 
@@ -112,199 +112,199 @@ Die `ImplementationVisibility`-Einstellung ist für das Überwachungsprofil opti
 
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery> – Hiermit können Sie Änderungen am Workflowinstanz-Lebenszyklus nachverfolgen, z. B. die bereits erwähnten Optionen `Started` und `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> – Wird für das Abonnieren der folgenden <xref:System.Activities.Tracking.TrackingRecord>-Objekte verwendet:
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>
 
-    - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
+  - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
 
-    Jeder Zustand, der abonniert werden kann, ist in der <xref:System.Activities.Tracking.WorkflowInstanceStates>-Klasse angegeben.
+  Jeder Zustand, der abonniert werden kann, ist in der <xref:System.Activities.Tracking.WorkflowInstanceStates>-Klasse angegeben.
 
-    Die Konfiguration bzw. der Code zum Abonnieren von Überwachungsdatensätzen auf Workflowinstanzebene für den `Started`-Instanzzustand mit dem <xref:System.Activities.Tracking.WorkflowInstanceQuery>-Objekt wird im folgenden Beispiel gezeigt.
+  Die Konfiguration bzw. der Code zum Abonnieren von Überwachungsdatensätzen auf Workflowinstanzebene für den `Started`-Instanzzustand mit dem <xref:System.Activities.Tracking.WorkflowInstanceQuery>-Objekt wird im folgenden Beispiel gezeigt.
 
-    ```xml
-    <workflowInstanceQueries>
-        <workflowInstanceQuery>
-          <states>
-            <state name="Started"/>
-          </states>
-        </workflowInstanceQuery>
-    </workflowInstanceQueries>
-    ```
+  ```xml
+  <workflowInstanceQueries>
+      <workflowInstanceQuery>
+        <states>
+          <state name="Started"/>
+        </states>
+      </workflowInstanceQuery>
+  </workflowInstanceQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new WorkflowInstanceQuery()
-            {
-                States = { WorkflowInstanceStates.Started}
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new WorkflowInstanceQuery()
+          {
+              States = { WorkflowInstanceStates.Started}
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.ActivityStateQuery> – Hiermit können Sie die Lebenszyklusänderungen der Aktivitäten nachverfolgen, aus denen eine Workflowinstanz besteht. Beispielsweise empfiehlt es sich zum Nachverfolgen jedes Mal, wenn die Aktivität "E-Mail senden" innerhalb einer Workflowinstanz abgeschlossen wird. Diese Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.ActivityStateRecord>-Objekte abonnieren kann. Die verfügbaren Zustände, die abonniert werden können, werden im <xref:System.Activities.Tracking.ActivityStates>-Objekt angegeben.
 
-    Die Konfiguration und der Code zum Abonnieren von Überwachungsdatensätzen für den Aktivitätszustand, die das  <xref:System.Activities.Tracking.ActivityStateQuery>-Objekt für die `SendEmailActivity`-Aktivität verwenden, werden im folgenden Beispiel gezeigt.
+  Die Konfiguration und der Code zum Abonnieren von Überwachungsdatensätzen für den Aktivitätszustand, die das  <xref:System.Activities.Tracking.ActivityStateQuery>-Objekt für die `SendEmailActivity`-Aktivität verwenden, werden im folgenden Beispiel gezeigt.
 
-    ```xml
-    <activityStateQueries>
-      <activityStateQuery activityName="SendEmailActivity">
-        <states>
-          <state name="Closed"/>
-        </states>
-      </activityStateQuery>
-    </activityStateQueries>
-    ```
+  ```xml
+  <activityStateQueries>
+    <activityStateQuery activityName="SendEmailActivity">
+      <states>
+        <state name="Closed"/>
+      </states>
+    </activityStateQuery>
+  </activityStateQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new ActivityStateQuery()
-            {
-                ActivityName = "SendEmailActivity",
-                States = { ActivityStates.Closed }
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new ActivityStateQuery()
+          {
+              ActivityName = "SendEmailActivity",
+              States = { ActivityStates.Closed }
+          }
+      }
+  };
+  ```
 
-    > [!NOTE]
-    > Wenn mehrere activityStateQuery-Elemente denselben Namen haben, werden nur die Zustände im letzten Element im Nachverfolgungsprofil verwendet.
+  > [!NOTE]
+  > Wenn mehrere activityStateQuery-Elemente denselben Namen haben, werden nur die Zustände im letzten Element im Nachverfolgungsprofil verwendet.
 
 - <xref:System.Activities.Tracking.ActivityScheduledQuery> – Mit dieser Abfrage können Sie eine Aktivität nachverfolgen, die von einer übergeordneten Aktivität ausgeführt werden soll. Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.ActivityScheduledRecord>-Objekte abonnieren kann.
 
-    Die Konfiguration und der Code zum Abonnieren von Datensätzen, die mit der untergeordneten `SendEmailActivity`-Aktivität verknüpft sind, deren Planung mit dem <xref:System.Activities.Tracking.ActivityScheduledQuery>-Objekt erfolgt, wird im folgenden Beispiel gezeigt.
+  Die Konfiguration und der Code zum Abonnieren von Datensätzen, die mit der untergeordneten `SendEmailActivity`-Aktivität verknüpft sind, deren Planung mit dem <xref:System.Activities.Tracking.ActivityScheduledQuery>-Objekt erfolgt, wird im folgenden Beispiel gezeigt.
 
-    ```xml
-    <activityScheduledQueries>
-      <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
-     </activityScheduledQueries>
-    ```
+  ```xml
+  <activityScheduledQueries>
+    <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+  </activityScheduledQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new ActivityScheduledQuery()
-            {
-                ActivityName = "ProcessNotificationsActivity",
-                ChildActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new ActivityScheduledQuery()
+          {
+              ActivityName = "ProcessNotificationsActivity",
+              ChildActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.FaultPropagationQuery> – Hiermit können Sie die Behandlung von Fehlern nachverfolgen, die in einer Aktivität auftreten. Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.FaultPropagationRecord>-Objekte abonnieren kann.
 
-    Die Konfiguration und der Code zum Abonnieren von mit der Fehlerweitergabe verknüpften Datensätzen mithilfe von <xref:System.Activities.Tracking.FaultPropagationQuery> werden im folgenden Beispiel gezeigt.
+  Die Konfiguration und der Code zum Abonnieren von mit der Fehlerweitergabe verknüpften Datensätzen mithilfe von <xref:System.Activities.Tracking.FaultPropagationQuery> werden im folgenden Beispiel gezeigt.
 
-    ```xml
-    <faultPropagationQueries>
-      <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />
-    </faultPropagationQueries>
-    ```
+  ```xml
+  <faultPropagationQueries>
+    <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />
+  </faultPropagationQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new FaultPropagationQuery()
-            {
-                FaultSourceActivityName = "SendEmailActivity",
-                FaultHandlerActivityName = "NotificationsFaultHandler"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new FaultPropagationQuery()
+          {
+              FaultSourceActivityName = "SendEmailActivity",
+              FaultHandlerActivityName = "NotificationsFaultHandler"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery> – Hiermit können Sie Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachverfolgen. Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.CancelRequestedRecord>-Objekte abonnieren kann.
 
-    Die Konfiguration und der Code zum Abonnieren von Datensätzen im Zusammenhang mit der Aktivität den Abbruch mit <xref:System.Activities.Tracking.CancelRequestedQuery> wird im folgenden Beispiel dargestellt.
+  Die Konfiguration und der Code zum Abonnieren von Datensätzen im Zusammenhang mit der Aktivität den Abbruch mit <xref:System.Activities.Tracking.CancelRequestedQuery> wird im folgenden Beispiel dargestellt.
 
-    ```xml
-    <cancelRequestedQueries>
-      <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
-    </cancelRequestedQueries>
-    ```
+  ```xml
+  <cancelRequestedQueries>
+    <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+  </cancelRequestedQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new CancelRequestedQuery()
-            {
-                ActivityName = "ProcessNotificationsActivity",
-                ChildActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new CancelRequestedQuery()
+          {
+              ActivityName = "ProcessNotificationsActivity",
+              ChildActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.CustomTrackingQuery> – Hiermit können Sie Ereignisse nachverfolgen, die Sie in den Codeaktivitäten definieren. Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte abonnieren kann.
 
-    Die Konfiguration und der Code zum Abonnieren von mit der benutzerdefinierten Nachverfolgung verknüpften Datensätzen mit <xref:System.Activities.Tracking.CustomTrackingQuery> werden im folgenden Beispiel gezeigt.
+  Die Konfiguration und der Code zum Abonnieren von mit der benutzerdefinierten Nachverfolgung verknüpften Datensätzen mit <xref:System.Activities.Tracking.CustomTrackingQuery> werden im folgenden Beispiel gezeigt.
 
-    ```xml
-    <customTrackingQueries>
-      <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />
-    </customTrackingQueries>
-    ```
+  ```xml
+  <customTrackingQueries>
+    <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />
+  </customTrackingQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new CustomTrackingQuery()
-            {
-                Name = "EmailAddress",
-                ActivityName = "SendEmailActivity"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new CustomTrackingQuery()
+          {
+              Name = "EmailAddress",
+              ActivityName = "SendEmailActivity"
+          }
+      }
+  };
+  ```
 
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery> – Hiermit können Sie die Wiederaufnahme eines Lesezeichens in einer Workflowinstanz nachverfolgen. Diese Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.BookmarkResumptionRecord>-Objekte abonnieren kann.
 
-    Die Konfiguration und der Code zum Abonnieren von mit der Wiederaufnahme von Lesezeichen verknüpften Datensätzen mithilfe von <xref:System.Activities.Tracking.BookmarkResumptionQuery> werden im folgenden Beispiel gezeigt.
+  Die Konfiguration und der Code zum Abonnieren von mit der Wiederaufnahme von Lesezeichen verknüpften Datensätzen mithilfe von <xref:System.Activities.Tracking.BookmarkResumptionQuery> werden im folgenden Beispiel gezeigt.
 
-    ```xml
-    <bookmarkResumptionQueries>
-      <bookmarkResumptionQuery name="SentEmailBookmark" />
-    </bookmarkResumptionQueries>
-    ```
+  ```xml
+  <bookmarkResumptionQueries>
+    <bookmarkResumptionQuery name="SentEmailBookmark" />
+  </bookmarkResumptionQueries>
+  ```
 
-    ```csharp
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()
-    {
-        Name = "Sample Tracking Profile",
-        Queries =
-        {
-            new BookmarkResumptionQuery()
-            {
-                Name = "sentEmailBookmark"
-            }
-        }
-    };
-    ```
+  ```csharp
+  TrackingProfile sampleTrackingProfile = new TrackingProfile()
+  {
+      Name = "Sample Tracking Profile",
+      Queries =
+      {
+          new BookmarkResumptionQuery()
+          {
+              Name = "sentEmailBookmark"
+          }
+      }
+  };
+  ```
 
 ### <a name="annotations"></a>Anmerkungen
 
@@ -352,38 +352,38 @@ Es folgen einige häufige Beispiele für Überwachungsprofile.
 
 - Ein Überwachungsprofil zum Abfragen von Workflowinstanz-Datensätzen und -fehlern
 
-```xml
-<trackingProfile name="Instance and Fault Records">
-  <workflow activityDefinitionId="*">
-    <workflowInstanceQueries>
-      <workflowInstanceQuery>
-        <states>
-          <state name="*" />
-        </states>
-      </workflowInstanceQuery>
-    </workflowInstanceQueries>
-    <activityStateQueries>
-      <activityStateQuery activityName="*">
-        <states>
-          <state name="Faulted"/>
-        </states>
-      </activityStateQuery>
-    </activityStateQueries>
-  </workflow>
-</trackingProfile>
-```
+  ```xml
+  <trackingProfile name="Instance and Fault Records">
+    <workflow activityDefinitionId="*">
+      <workflowInstanceQueries>
+        <workflowInstanceQuery>
+          <states>
+            <state name="*" />
+          </states>
+        </workflowInstanceQuery>
+      </workflowInstanceQueries>
+      <activityStateQueries>
+        <activityStateQuery activityName="*">
+          <states>
+            <state name="Faulted"/>
+          </states>
+        </activityStateQuery>
+      </activityStateQueries>
+    </workflow>
+  </trackingProfile>
+  ```
 
-1. Ein Überwachungsprofil zum Abfragen aller benutzerdefinierten Überwachungsdatensätze
+- Ein Überwachungsprofil zum Abfragen aller benutzerdefinierten Überwachungsdatensätze
 
-```xml
-<trackingProfile name="Instance_And_Custom_Records">
-  <workflow activityDefinitionId="*">
-    <customTrackingQueries>
-      <customTrackingQuery name="*" activityName="*" />
-    </customTrackingQueries>
-  </workflow>
-</trackingProfile>
-```
+  ```xml
+  <trackingProfile name="Instance_And_Custom_Records">
+    <workflow activityDefinitionId="*">
+      <customTrackingQueries>
+        <customTrackingQuery name="*" activityName="*" />
+      </customTrackingQueries>
+    </workflow>
+  </trackingProfile>
+  ```
 
 ## <a name="see-also"></a>Siehe auch
 

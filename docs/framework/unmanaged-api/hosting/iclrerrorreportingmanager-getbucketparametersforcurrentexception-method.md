@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cb2a8d2a4e089d16b6c2129c165a9d8b6828f3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 276a69deecccc91b3c511403c2bd0d5c0baabd9d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141730"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772800"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>ICLRErrorReportingManager::GetBucketParametersForCurrentException-Methode
 Ruft die Dr. Watson-Bucket für die aktuelle Ausnahme im aufrufenden Thread ab.  
@@ -31,7 +31,7 @@ Ruft die Dr. Watson-Bucket für die aktuelle Ausnahme im aufrufenden Thread ab.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetBucketParametersForCurrentException(  
     [out] BucketParameters *pParams  
 );  

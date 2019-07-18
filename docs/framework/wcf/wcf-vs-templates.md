@@ -2,12 +2,12 @@
 title: WCF Visual Studio-Vorlagen
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2e192e671d37e096e4199b295d4f533194ab89b6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130896"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613234"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio-Vorlagen
 Windows Communication Foundation (WCF) von Visual Studio-Vorlagen sind vordefinierte Projekt- und Elementvorlagen, die Sie in Visual Studio verwenden können, um WCF-Dienste und entsprechende Anwendungen schnell zu erstellen.  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) von Visual Studio-Vorlagen sind vordefini
   
  Bei der Erstellung ein neues Projekt mit der **WCF-Dienst** Vorlage für das neue Projekt schließt automatisch die folgenden drei Dateien:  
   
--   Dienstvertragsdatei ("IService1.cs" oder "IService1.vb"). Die dienstvertragsdatei ist eine Schnittstelle, die WCF-Dienst-Attribute, die angewendet wurde. Diese Datei enthält eine Definition eines einfachen Diensts, anhand derer Sie sehen können, wie Sie Ihre Dienste definieren können, sowie Parameter-basierte Vorgänge und ein Beispiel für einen einfachen Datenvertrag. Dies ist die Standarddatei, die nach dem Erstellen eines WCF-Dienst-Projekts im Code-Editor angezeigt.  
+- Dienstvertragsdatei ("IService1.cs" oder "IService1.vb"). Die dienstvertragsdatei ist eine Schnittstelle, die WCF-Dienst-Attribute, die angewendet wurde. Diese Datei enthält eine Definition eines einfachen Diensts, anhand derer Sie sehen können, wie Sie Ihre Dienste definieren können, sowie Parameter-basierte Vorgänge und ein Beispiel für einen einfachen Datenvertrag. Dies ist die Standarddatei, die nach dem Erstellen eines WCF-Dienst-Projekts im Code-Editor angezeigt.  
   
--   Dienstimplementierungsdatei (Service1.cs oder Service1.vb). Die Dienstimplementierungsdatei implementiert den in der Dienstvertragsdatei definierten Vertrag.  
+- Dienstimplementierungsdatei (Service1.cs oder Service1.vb). Die Dienstimplementierungsdatei implementiert den in der Dienstvertragsdatei definierten Vertrag.  
   
--   Anwendungskonfigurationsdatei (App.config). Die Konfigurationsdatei enthält die grundlegenden Elemente eines WCF-Dienstmodells mit einer sicheren HTTP-Bindung. Sie enthält auch einen Endpunkt für den Dienst und aktiviert den Metadatenaustausch.  
+- Anwendungskonfigurationsdatei (App.config). Die Konfigurationsdatei enthält die grundlegenden Elemente eines WCF-Dienstmodells mit einer sicheren HTTP-Bindung. Sie enthält auch einen Endpunkt für den Dienst und aktiviert den Metadatenaustausch.  
   
 > [!NOTE]
 >  Visual Studio ist so konfiguriert, dass die Datei "App.config" als der Konfigurationsdatei für das Projekt erkannt wird, wenn er ausgeführt wird, mit der [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), dies ist die Standardkonfiguration. Wenn als Host für die Dienstbibliothek eine EXE-Datei verwendet wird, müssen Sie den Konfigurationscode in die Konfigurationsdatei der EXE-Datei verschieben, da Konfigurationsdateien für DLL-Dateien ungültig sind.  
@@ -34,13 +34,13 @@ Windows Communication Foundation (WCF) von Visual Studio-Vorlagen sind vordefini
   
  Bei der Erstellung ein neues Projekt mit der **WCF-Webanwendungsdienst** Vorlage für das Projekt enthält die folgenden vier Dateien:  
   
--   Diensthostdatei ("service1.svc").  
+- Diensthostdatei ("service1.svc").  
   
--   Dienstvertragsdatei ("IService1.cs" oder "IService1.vb").  
+- Dienstvertragsdatei ("IService1.cs" oder "IService1.vb").  
   
--   Dienstimplementierungsdatei ("Service1.svc.cs" oder "Service1.svc.vb").  
+- Dienstimplementierungsdatei ("Service1.svc.cs" oder "Service1.svc.vb").  
   
--   Webkonfigurationsdatei ("Web.config").  
+- Webkonfigurationsdatei ("Web.config").  
   
  Die Vorlage erstellt automatisch eine Website, die in einem virtuellen Verzeichnis eingerichtet wird, und dient zugleich als Host für einen Dienst.  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 593d3fcefe3bb81518d0886afde82f9a172874ba
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188310"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912388"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Vorgehensweise: Festlegen einer Eigenschaft nach einer Storyboard-Animation
 In einigen Fällen kann es so aussehen, dass Sie den Wert einer Eigenschaft ändern können, nachdem sie animiert wurde.  
@@ -30,11 +30,11 @@ In einigen Fällen kann es so aussehen, dass Sie den Wert einer Eigenschaft änd
   
  Der vorherige Code nicht angezeigt werden, nichts weiter tun: Pinsel bleibt die Gelb, das den Wert angegeben wird, indem die <xref:System.Windows.Media.Animation.ColorAnimation> , die den Pinsel animiert. Der zugrunde liegende Eigenschaftswert (der Basiswert) ist tatsächlich Blau geändert. Der effektive bzw. der aktuelle Wert bleibt jedoch gelben da die <xref:System.Windows.Media.Animation.ColorAnimation> noch den Basiswert überschreibt. Wenn Sie den Basiswert der effektive Wert erneut werden möchten, müssen Sie die Animation einen Einfluss auf die Eigenschaft beenden. Es gibt drei Möglichkeiten, dies mit der Storyboard-Animationen umzusetzen:  
   
--   Festlegen der Animation <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- Festlegen der Animation <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   Entfernen Sie das gesamte Storyboard an.  
+- Entfernen Sie das gesamte Storyboard an.  
   
--   Entfernen Sie die Animation, aus der jeweiligen Eigenschaft.  
+- Entfernen Sie die Animation, aus der jeweiligen Eigenschaft.  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>Festlegen von FillBehavior-Eigenschaft der Animation beendet  
  Durch Festlegen von <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> zu <xref:System.Windows.Media.Animation.FillBehavior.Stop>, Sie erkennen, dass die Animation beendet wird, auf die Zieleigenschaft, nachdem das Ende des aktiven Zeitraums erreicht.  

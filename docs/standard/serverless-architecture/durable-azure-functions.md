@@ -4,14 +4,14 @@ description: Permanente Azure-Funktionen erweitern die Azure Functions-Laufzeit,
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f7ee74926d6658042120113b49dc763383881423
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147306"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643404"
 ---
-# <a name="durable-azure-functions"></a>Permanenten Azure-Funktionen
+# <a name="durable-azure-functions"></a>Durable Functions (Azure)
 
 Wenn Sie mit Azure Functions serverlose Anwendungen zu erstellen, werden Ihre Vorgänge in der Regel entworfen werden, in eine statusfreie Weise ausgeführt. Der Grund für diese entwurfsentscheidung liegt als die Skalierung der Plattform, wird es schwierig, Sie wissen, welche Server der Code ausgeführt wird. Es wird auch nur schwer erkennbar, wie viele Instanzen zu einem bestimmten Zeitpunkt aktiv sind. Es gibt jedoch Klassen von Anwendungen, die den aktuellen Status eines Prozesses nicht bekannt sein müssen. Betrachten Sie den Prozess zur Übermittlung einer Bestellung zu einem Onlineshop. Der Auscheckvorgang möglicherweise einen Workflow, der mehrere Vorgänge besteht, die den Zustand des Prozesses kennen müssen. Solche Informationen gehören möglicherweise die Produktbestands, wenn der Kunde Form von Credits auf ihr Konto und die Ergebnisse der Verarbeitung der Kreditkarte verfügt. Diese Vorgänge ist möglicherweise einfach eigene interne Workflows oder sogar Dienste von Drittanbietern.
 

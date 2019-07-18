@@ -3,20 +3,20 @@ title: Empfehlungen für das Hosting mit Azure für ASP.NET Core-Web-Apps
 description: Entwerfen moderner Web-Apps mit ASP.NET Core und Azure | Empfehlungen für das Hosting mit Azure für ASP.NET-Web-Apps
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: cda4c002c73e2dd0db1b2d5d1fa8bc76903c5c62
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 06/06/2019
+ms.openlocfilehash: 7cfb9ada4f963aa392a41cfb9f1b2df22f542d41
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828383"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758656"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Empfehlungen für das Hosting mit Azure für ASP.NET Core-Web-Apps
 
-> „Branchenspezifische Führungskräfte beziehen Anwendungen zunehmend über die Cloud (SaaS) und nicht mehr über ihre IT-Abteilungen. Dabei wird ein Zahlungsmodell genutzt, das an Zeitschriftenabonnements erinnert. Wenn ein Dienst nicht mehr benötigt wird, kann das Abonnement einfach gekündigt werden, ohne dass hierbei Ressourcen verschwendet werden.“  
+> „Geschäftsbereichsleiter lassen IT-Abteilungen zunehmend außen vor und beziehen Anwendungen über die Cloud (SaaS). Dabei wird ein Zahlungsmodell genutzt, das an Zeitschriftenabonnements erinnert. Wenn ein Dienst nicht mehr benötigt wird, kann das Abonnement einfach gekündigt werden, ohne dass hierbei Ressourcen verschwendet werden.“  
 > _\- Daryl Plummer, Gartner-Analyst_
 
-Windows Azure stellt Unterstützung für sämtliche Anforderungen und die gesamte Architektur Ihrer Anwendung bereit. Ihre Hostinganforderungen können dabei von einfachen statischen Websites bis zu komplexen Anwendungen reichen, die aus zahlreichen Diensten bestehen. Für monolithische Web-Apps und unterstützende Dienste in ASP.NET Core gibt es mehrere bekannte Konfigurationen, die empfohlen werden. Die Empfehlungen in diesem Artikel sind nach der Art der Ressource gruppiert, die gehostet werden soll, z.B. vollständige Anwendungen, individuelle Prozesse oder Daten.
+Microsoft Azure stellt Unterstützung für sämtliche Anforderungen und die gesamte Architektur Ihrer Anwendung bereit. Ihre Hostinganforderungen können dabei von einfachen statischen Websites bis zu hochkomplexen Anwendungen reichen, die aus zahlreichen Diensten bestehen. Für monolithische Web-Apps und unterstützende Dienste in ASP.NET Core gibt es mehrere bekannte Konfigurationen, die empfohlen werden. Die Empfehlungen in diesem Artikel sind nach der Art der Ressource gruppiert, die gehostet werden soll, z.B. vollständige Anwendungen, individuelle Prozesse oder Daten.
 
 ## <a name="web-applications"></a>Webanwendungen
 
@@ -24,13 +24,11 @@ Web-Apps können mit Folgendem gehostet werden:
 
 - App Service-Web-Apps
 
-- Container
-
-- Azure Service Fabric
+- Container (verschiedene Optionen)
 
 - Microsoft Azure Virtual Machines
 
-Für die meisten Szenarios werden App Service-Web-Apps empfohlen. Im Fall von Microservicearchitekturen können Sie einen containerbasierten Ansatz oder Service Fabric verwenden. Wenn Sie mehr Kontrolle über die Computer benötigen, auf denen Ihre Anwendung ausgeführt wird, sollten Sie Azure Virtual Machines in Betracht ziehen.
+Für die meisten Szenarien – einschließlich einfacher containerbasierter Apps – bieten sich App Service-Web-Apps an. Im Fall von Microservicearchitekturen können Sie einen containerbasierten Ansatz verwenden. Wenn Sie mehr Kontrolle über die Computer benötigen, auf denen Ihre Anwendung ausgeführt wird, sollten Sie Azure Virtual Machines in Betracht ziehen.
 
 ### <a name="app-service-web-apps"></a>App Service-Web-Apps
 
@@ -46,7 +44,37 @@ App Service-Web-Apps ist eine vollständig verwaltete Plattform, die für das Ho
 
 - Visual Studio-Integration
 
-Für die meisten Web-Apps ist Azure App Service die beste Wahl. Die Bereitstellung und die Verwaltung sind in die Plattform integriert, Websites können zur Bewältigung hoher Datenverkehrsauslastungen schnell skaliert werden, und der integrierte Lastenausgleich sowie der Traffic Manager sorgen für Hochverfügbarkeit. Sie können vorhandene Websites einfach zu Azure App Service mithilfe eines Onlinemigrationstools migrieren, eine Open Source-App aus Web App Gallery verwenden oder eine neue Seite mit einem Framework und mit Tools Ihrer Wahl erstellen. Das WebJobs-Feature vereinfacht die Verarbeitung von Hintergrundaufträgen in Ihrer App Service-Web-App.
+Für die meisten Web-Apps ist Azure App Service die beste Wahl. Die Bereitstellung und die Verwaltung sind in die Plattform integriert, Websites können zur Bewältigung hoher Datenverkehrsauslastungen schnell skaliert werden, und der integrierte Lastenausgleich sowie der Traffic Manager sorgen für Hochverfügbarkeit. Sie können vorhandene Websites einfach zu Azure App Service mithilfe eines Onlinemigrationstools migrieren, eine Open Source-App aus Web App Gallery verwenden oder eine neue Seite mit einem Framework und mit Tools Ihrer Wahl erstellen. Das WebJobs-Feature vereinfacht die Verarbeitung von Hintergrundaufträgen in Ihrer App Service-Web-App. Wenn Sie über eine vorhandene ASP.NET-Anwendung verfügen, die mit einer lokalen Datenbank lokal gehostet wird, existiert ein klar definierter Migrationspfad zu einer App Service-Web-App mit einer Azure SQL-Datenbank (oder sicherem Zugriff auf Ihren lokalen Datenbankserver, wenn Sie dies bevorzugen).
+
+![Empfohlene Strategie für die Migration lokaler .NET-Apps zu Azure App Service](./media/image1-6.png)
+
+In den meisten Fällen ist der Umstieg von einer lokal gehosteten ASP.NET-App auf eine App Service-Web-App unkompliziert. Für die App selbst sind in der Regel keine oder nur geringfügige Änderungen notwendig, und sie profitiert schnell von den vielen Features, die Azure App Service-Web-Apps bieten.
+
+Azure App Service-Web-Apps sind eine hervorragende Lösung nicht nur für Apps, die nicht für die Cloud optimiert sind, sondern auch für viele einfache monolithische (nicht verteilte) Anwendungen, wie z.B. viele ASP.NET Core-Apps. Bei diesem Ansatz ist die Architektur unkompliziert und einfach zu verstehen und zu verwalten:
+
+![Grundlegende Azure-Architektur](./media/image1-5.png)
+
+Zur Verwaltung einer solchen App ist in der Regel eine geringe Anzahl von Ressourcen in einer einzigen Ressourcengruppe ausreichend. Apps, die nicht aus vielen separaten Prozessen bestehen, sondern als eine einzige Einheit bereitgestellt werden, sind üblicherweise gute Kandidaten für diesen [grundlegenden Architekturansatz](https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app). Obwohl die Architektur recht einfach ist, ermöglicht es dieser Ansatz dennoch, die gehostete App sowohl zentral (mehr Ressourcen pro Knoten) als auch horizontal (mehr gehostete Knoten) hochzuskalieren, um einen höheren Bedarf zu erfüllen. Mit der Autoskalierung kann die App so konfiguriert werden, dass die Anzahl der Knoten, auf denen die Apps gehostet wird, automatisch basierend auf dem Bedarf und der durchschnittlichen Last auf den Knoten angepasst wird.
+
+### <a name="app-service-web-apps-for-containers"></a>App Service-Web-Apps für Container
+
+Zusätzlich zur direkten Unterstützung für das Hosten von Web-Apps können [App Service-Web-Apps für Container](https://azure.microsoft.com/services/app-service/containers/) zum Ausführen von containerbasierten Anwendungen unter Windows und Linux verwendet werden. Mit diesem Dienst können Sie ganz einfach containerbasierte Anwendungen bereitstellen und ausführen, die sich mit Ihrem Business skalieren lassen. Die Apps weisen alle oben aufgeführten Features von App Service-Web-Apps auf. Darüber hinaus unterstützen Web-App für Container optimierte CI/CD-Funktionen mit Docker Hub, Azure Container Registry und GitHub. Sie können Azure DevOps verwenden, um Build- und Bereitstellungspipelines zu definieren, die Änderungen in einer Registrierung veröffentlichen. Diese Änderungen können dann in einer Stagingumgebung getestet und über Bereitstellungsslots automatisch in der Produktion bereitgestellt werden – so sind Upgrades ohne jede Ausfallzeit möglich. Ein Rollback zu früheren Versionen lässt sich ebenso einfach ausführen.
+
+Es gibt einige Szenarien, in denen Web-Apps für Container die sinnvollste Lösung sind. Wenn Sie über Apps verfügen, die Sie in Container packen können – Windows- oder Linux-Container –, können Sie diese ganz einfach mithilfe dieses Toolsets hosten. Veröffentlichen Sie einfach Ihren Container, und konfigurieren Sie dann Web-Apps für Container so, dass die neueste Version des Images per Pull aus der Registrierung Ihrer Wahl abgerufen wird. Es handelt sich hier um ein „Lift and Shift“-Verfahren zur Migration von klassischen App-Hostingmodellen zu einem cloudoptimierten Modell.
+
+![Migrieren von lokalen .NET-Anwendungen in Containern zu Azure Web-Apps für Container](./media/image1-8.png)
+
+Dieser Ansatz funktioniert gut, wenn Ihr Entwicklungsteam zu einem containerbasierten Entwicklungsprozess wechseln kann. Die „innere Schleife“ bei der Entwicklung von Apps mit Containern umfasst auch die Erstellung der App mit Containern. Änderungen, die am Code sowie an der Containerkonfiguration vorgenommen werden, werden in die Quellcodeverwaltung gepusht, und ein automatisierter Buildprozess ist dafür zuständig, neue Containerimages in einer Registrierung wie Docker Hub oder Azure Container Registry zu veröffentlichen. Diese Images werden dann als Basis für die weitere Entwicklung sowie zum Verlagern von Bereitstellungen in die Produktion verwendet, wie im folgenden Diagramm gezeigt:
+
+![Vollständiger Docker-DevOps-Lebenszyklusworkflow](./media/image1-7.png)
+
+Die Entwicklung mit Containern bietet viele Vorteile, insbesondere dann, wenn in der Produktion Container verwendet werden. Zum Hosten der App in jeder Umgebung, in der sie ausgeführt wird – vom lokalen Entwicklungscomputer über Build- und Testsysteme bis hin zur Produktion –, wird ein und dieselbe Containerkonfiguration verwendet. Damit sinkt das Risiko von Fehlern, die aus Unterschieden in Computerkonfigurationen oder Softwareversionen resultieren. Entwickler können die Tools verwenden, mit denen sie am produktivsten arbeiten – dies umfasst auch das Betriebssystem –, da Container unter jedem Betriebssystem ausgeführt werden können. In einigen Fällen ist die Ausführung von verteilten Anwendungen mit vielen Containern auf einem einzigen Entwicklungscomputer sehr ressourcenintensiv. In diesem Szenario kann es sinnvoll sein, ein Upgrade durchzuführen und Kubernetes und Azure Dev Spaces einzusetzen. Dies wird im nächsten Abschnitt erläutert.
+
+Da Teile größerer Anwendungen in kleinere, unabhängige *Microservices* aufgeteilt werden, können zusätzliche Entwurfsmuster verwendet werden, um das App-Verhalten zu verbessern. Anstatt direkt mit einzelnen Diensten zu arbeiten, kann ein *API-Gateway* den Zugriff vereinfachen und den Client vom zugehörigen Back-End entkoppeln. Separate Dienst-Back-Ends für verschiedene Front-Ends ermöglichen es Diensten auch, sich in Übereinstimmung mit den jeweiligen Consumern zu entwickeln. Auf gemeinsame Dienste kann über einen separaten *Sidecarcontainer* zugegriffen werden, der über das *Botschafter*-Muster gemeinsame Bibliotheken für die Clientkonnektivität enthalten kann.
+
+![Beispielarchitektur für Microservices mit verschiedenen allgemeinen Entwurfsmustern.](./media/image1-10.png)
+
+[Erfahren Sie mehr über Entwurfsmuster für den Aufbau microservicebasierter Systeme](https://docs.microsoft.com/azure/architecture/microservices/design/patterns).
 
 ### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
@@ -61,30 +89,22 @@ AKS verringert die Komplexität und den operativen Mehraufwand der Verwaltung ei
 
 Da Azure die Knoten im AKS-Cluster verwaltet, müssen Sie keine Aufgaben wie Clusterupgrades mehr manuell ausführen. Da Azure diese wichtigen Wartungsaufgaben übernimmt, stellt AKS keinen direkten Zugriff (z.B. mit SSH) auf den Cluster bereit.
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
+Teams, die AKS nutzen, können auch von Azure Dev Spaces profitieren. Azure Dev Spaces ermöglicht es Teams, direkt mit der gesamten in AKS ausgeführten Microservicearchitektur oder Anwendung zu arbeiten – so können sich die Teams ganz auf die Entwicklung und schnelle Iteration ihrer Microserviceanwendung konzentrieren. Azure Dev Spaces bietet auch die Möglichkeit, Teile einer Microservicearchitektur unabhängig und isoliert zu aktualisieren, ohne dass dies sich auf den Rest des AKS-Clusters oder andere Entwickler auswirkt.
 
-Service Fabric ist eine gute Wahl, wenn Sie eine neue App erstellen oder eine vorhandene App mit dem Ziel neu schreiben, eine Microservicearchitektur zu verwenden. Apps, die in einem freigegebenen Pool von Computern ausgeführt werden, können zu Beginn klein sein, nach einiger Zeit aber eine beachtliche Größe erreichen, wodurch Hunderte oder Tausende Computer benötigt werden. Zustandsbehaftete Dienste erleichtern das konsistente und zuverlässige Speichern des App-Zustands, und Service Fabric verwaltet die Dienstpartitionierung, Skalierung und Verfügbarkeit automatisch für Sie. Service Fabric unterstützt auch die WebAPI mit Open Web Interface for .NET (OWIN) und ASP.NET Core. Im Vergleich zu App Service bietet Service Fabric mehr Kontrolle über bzw. direkten Zugriff auf die zugrunde liegende Infrastruktur. Sie können per Remotezugriff auf Ihre Server zugreifen oder die Startaufgaben des Servers konfigurieren.
+![Beispiel für Azure Dev Spaces-Workflow](./media/image1-9.gif)
+
+Azure Dev Spaces bietet folgende Vorteile:
+
+- Einrichtungszeit und Ressourcenanforderungen für lokale Computer werden minimiert.
+- Teams können Iterationen schneller durchführen.
+- Teams benötigen eine geringere Anzahl von Integrationsumgebungen.
+- Die Notwendigkeit, bestimmte Dienste in verteilten Systemen zu simulieren, entfällt.
+
+[Weitere Informationen zu Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
 
 ### <a name="azure-virtual-machines"></a>Azure Virtual Machines
 
-Wenn Sie über eine Anwendung verfügen, deren Ausführung in App Service oder Service Fabric umfassende Änderungen notwendig machen würde, können Sie sich für Virtual Machines entscheiden, um die Migration zur Cloud zu vereinfachen. Das ordnungsgemäße Konfigurieren, Sichern und Verwalten von Virtual Machines erfordert allerdings deutlich mehr Zeit und IT-Kenntnisse im Vergleich zu Azure App Service und Service Fabric. Wenn Sie Azure Virtual Machines in Betracht ziehen, sollten Sie den ständigen Wartungsaufwand für das Patchen, Aktualisieren und Verwalten der VM-Umgebung beachten. Azure Virtual Machines ist ein IaaS-Angebot (Infrastructure-as-a-Service), während App Service und Service Fabric PaaS-Angebote (Platform-as-a-Service) sind.
-
-#### <a name="feature-comparison"></a>Featurevergleich
-
-| Feature                                                                                    | App Service | Container (AKS) | Service Fabric | Virtueller Computer |
-| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
-| Nahezu sofortige Bereitstellung                                                                    | X           | X                | X              |                 |
-| Zentrales Hochskalieren auf größere Computer ohne erneute Bereitstellung                                               | X           | X                | X              |                 |
-| Instanzen teilen Inhalte und Konfigurationen – eine erneute Bereitstellung oder Konfiguration wird für die Skalierung nicht benötigt | X           | X                | X              |                 |
-| Mehrere Bereitstellungsumgebungen (Produktion, Staging)                                     | X           | X                | X              |                 |
-| Automatische Updateverwaltung für Betriebssysteme                                                             | X           | X                |                |                 |
-| Nahtloser Wechsel zwischen 32- und 64-Bit-Plattformen                                             | X           | X                |                |                 |
-| Bereitstellen von Code mit Git und FTP                                                                  | X           | X                |                | X               |
-| Bereitstellen von Code mit WebDeploy                                                                 | X           | X                |                | X               |
-| Bereitstellen von Code mit TFS                                                                       | X           | X                | X              | X               |
-| Hosten einer Web-/Webdienstebene einer Architektur mit mehreren Ebenen                                    | X           | X                | X              | X               |
-| Zugreifen auf Azure-Dienste wie Service Bus, Azure Storage und SQL-Datenbank                              | X           | X                | X              | X               |
-| Installieren von benutzerdefinierten MSI                                                                     |             | X                | X              | X               |
+Wenn Sie über eine Anwendung verfügen, deren Ausführung in App Service umfassende Änderungen notwendig machen würde, können Sie sich für Virtual Machines entscheiden, um die Migration zur Cloud zu vereinfachen. Das ordnungsgemäße Konfigurieren, Sichern und Verwalten von Virtual Machines erfordert allerdings deutlich mehr Zeit und IT-Kenntnisse im Vergleich zu Azure App Service. Wenn Sie Azure Virtual Machines in Betracht ziehen, sollten Sie den ständigen Wartungsaufwand für das Patchen, Aktualisieren und Verwalten der VM-Umgebung beachten. Azure Virtual Machines ist ein IaaS-Angebot (Infrastructure-as-a-Service), während App Service ein PaaS-Angebot (Platform-as-a-Service) ist. Sie sollten auch überlegen, ob die Bereitstellung Ihrer App als Windows-Container in „Web-App für Container“ eine geeignete Option für Ihr Szenario wäre.
 
 ## <a name="logical-processes"></a>Logische Prozesse
 
@@ -115,14 +135,20 @@ Abbildung 11-2 zeigt ein Beispiel einer Referenzarchitektur. Dieses Diagramm bes
 - Azure-Lösungsarchitekturen
   <https://azure.microsoft.com/solutions/architecture/>
 
+- Azure-Architektur für einfache Webanwendungen
+  <https://docs.microsoft.com/azure/architecture/reference-architectures/app-service-web-app/basic-web-app>
+
+- Entwurfsmuster für Microservices
+  <https://docs.microsoft.com/azure/architecture/microservices/design/patterns>
+
 - Entwicklerleitfaden für Microsoft Azure
   <https://azure.microsoft.com/campaigns/developer-guide/>
 
 - Web-Apps-Übersicht
   <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
-- Azure App Service, Azure Virtual Machines, Service Fabric und Azure Cloud Services im Vergleich
-  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- Web-App für Container
+  <https://azure.microsoft.com/services/app-service/containers/>
 
 - Einführung in Azure Kubernetes Service (AKS)
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>

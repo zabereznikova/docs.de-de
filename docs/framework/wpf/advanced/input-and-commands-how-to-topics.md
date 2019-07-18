@@ -8,11 +8,11 @@ helpviewer_keywords:
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
 ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942778"
 ---
 # <a name="input-and-commands-how-to-topics"></a>Gewusst-wie-Themen zur Eingabe und zu Befehlen
 Die Themen in diesem Abschnitt wird beschrieben, wie die Eingabe- und Befehlsinfrastruktur-Infrastruktur in Windows Presentation Foundation (WPF) verwenden.  

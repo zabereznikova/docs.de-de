@@ -5,11 +5,11 @@ ms.assetid: f2de5224-fd91-45de-9e58-bc600c6d22f1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd524446cd9fd5cf9c067ab5778a654ed000ffb3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940178"
 ---
 # <a name="isymunmanagedasyncmethod-interface"></a>ISymUnmanagedAsyncMethod-Schnittstelle
 Diese Schnittstelle ist die Ergänzung lesen [ISymUnmanagedAsyncMethodPropertiesWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md).  

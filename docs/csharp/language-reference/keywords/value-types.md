@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612724"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661593"
 ---
 # <a name="value-types-c-reference"></a>Werttypen (C#-Referenz)
 
@@ -34,17 +34,17 @@ Im Gegensatz zu Verweistypen können Sie von Werttypen keinen neuen ableiten. St
 
 Werttypvariablen können nicht standardmäßig `null` sein. Variablen der entsprechenden [Nullable-Typen](../../../csharp/programming-guide/nullable-types/index.md) können jedoch `null` sein.
 
-Jeder Werttyp hat einen impliziten Standardkonstruktor, der den Standardwert dieses Typs initialisiert. Informationen zu den Standardwerten von Werttypen finden Sie unter [Tabelle für Standardwerte](default-values-table.md).
+Jeder Werttyp hat einen impliziten parameterlosen Konstruktor, der den Standardwert dieses Typs initialisiert. Informationen zu den Standardwerten von Werttypen finden Sie unter [Tabelle für Standardwerte](default-values-table.md).
 
 ## <a name="simple-types"></a>Einfache Typen
 
 Die *einfachen Typen* sind eine Reihe von vordefinierten Strukturtypen, die von C# bereitgestellt werden, und umfassen die folgenden Typen:
 
-- [Ganzzahltypen](integral-types-table.md): ganzzahlige numerische Typen und der [char](char.md)-Typ
-- [Gleitkommatypen](floating-point-types-table.md)
+- [Ganzzahltypen](../builtin-types/integral-numeric-types.md): ganzzahlige numerische Typen und der [char](char.md)-Typ
+- [Gleitkommatypen](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
-Die einfachen Typen werden durch Schlüsselwörter identifiziert, aber diese Schlüsselwörter sind einfach Aliase für vordefinierte Strukturtypen im Namespace <xref:System>. [int](int.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=nameWithType>. Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](built-in-types-table.md).
+Die einfachen Typen werden durch Schlüsselwörter identifiziert, aber diese Schlüsselwörter sind einfach Aliase für vordefinierte Strukturtypen im Namespace <xref:System>. [int](../builtin-types/integral-numeric-types.md) ist z.B. ein Alias von <xref:System.Int32?displayProperty=nameWithType>. Eine vollständige Liste der Aliase finden Sie unter [Tabelle integrierter Typen](built-in-types-table.md).
 
 Die einfachen Typen unterscheiden sich von anderen Strukturtypen dadurch, dass sie bestimmte zusätzliche Vorgänge ermöglichen:
 
@@ -67,7 +67,7 @@ int myInt;
 Sie können sie nicht verwenden, bis Sie sie initialisiert haben. Sie können sie mit der folgenden Anweisung initialisieren:
 
 ```csharp
-myInt = new int();  // Invoke default constructor for int type.
+myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
 Diese Anweisung entspricht der folgenden Anweisung:
@@ -88,17 +88,17 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Durch die Verwendung des Operators [new](new.md) wird der Standardkonstruktor des angegebenen Typs aufgerufen und der Variablen der Standardwert zugewiesen. Im vorherigen Beispiel hat der Standardkonstruktor `myInt` den Wert `0` zugewiesen. Weitere Informationen zu Werten, die durch Aufrufen von Standardkonstruktoren zugewiesen werden, finden Sie unter [Tabelle für Standardwerte](default-values-table.md).
+Durch die Verwendung des Operators [new](../operators/new-operator.md) wird der parameterlose Konstruktor des angegebenen Typs aufgerufen und der Variablen der Standardwert zugewiesen. Im vorherigen Beispiel hat der parameterlose Konstruktor `myInt` den Wert `0` zugewiesen. Weitere Informationen zu Werten, die durch Aufrufen von Standardkonstruktoren zugewiesen werden, finden Sie unter [Tabelle für Standardwerte](default-values-table.md).
 
-Verwenden Sie bei benutzerdefinierten Typen [new](new.md) zum Aufrufen des Standardkonstruktors. Die folgende Anweisung ruft z.B. den Standardkonstruktor der `Point`-Struktur auf:
+Verwenden Sie bei benutzerdefinierten Typen [new](../operators/new-operator.md) zum Aufrufen des parameterlosen Konstruktors. Die folgende Anweisung ruft beispielsweise den parameterlosen Konstruktor der `Point`-Struktur auf:
 
 ```csharp
-Point p = new Point(); // Invoke default constructor for the struct.
+var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 Nach diesem Aufruf gilt die Struktur als definitiv zugewiesen. Das bedeutet, dass alle ihre Member mit ihren Standardwerten initialisiert werden.
 
-Weitere Informationen zum `new`-Operator finden Sie unter [neu](new.md).
+Weitere Informationen zum `new`-Operator finden Sie unter [neu](../operators/new-operator.md).
 
 Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter [Tabelle zur Formatierung numerischer Ergebnisse](formatting-numeric-results-table.md).
 
@@ -108,6 +108,5 @@ Informationen zum Formatieren der Ausgabe von numerischen Typen finden Sie unter
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
 - [Typen](types.md)
-- [Referenztabellen für Typen](reference-tables-for-types.md)
 - [Verweistypen](reference-types.md)
 - [Nullable-Typen](../../programming-guide/nullable-types/index.md)

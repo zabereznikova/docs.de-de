@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05184ceb3b32eb003951fff5cfdfbfb813992552
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216053"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739861"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType-Enumeration
 Identifiziert den Stapelrahmentyp. Diese Enumeration wird verwendet, durch die [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugInternalFrameType {  
   
     STUBFRAME_NONE                 = 0x00000000,  
@@ -72,4 +72,4 @@ typedef enum CorDebugInternalFrameType {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

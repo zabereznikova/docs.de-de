@@ -2,12 +2,12 @@
 title: Asynchrone Kommunikation
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005588"
 ---
 # <a name="asynchronous-communication"></a>Asynchrone Kommunikation
 In diesem Beispiel wird veranschaulicht, wie die Kommunikation zwischen zwei verschiedene Windows Workflow Foundation (WF)-Dienste standardmäßig asynchron ausgeführt wird.  
@@ -31,13 +31,13 @@ In diesem Beispiel wird veranschaulicht, wie die Kommunikation zwischen zwei ver
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Mit der rechten Maustaste die **AsynchronousCommunication** Projektmappe, und wählen **Eigenschaften**.  
+1. Mit der rechten Maustaste die **AsynchronousCommunication** Projektmappe, und wählen **Eigenschaften**.  
   
-2.  In **allgemeine Eigenschaften**Option **Startprojekt**, und wählen Sie **mehrere Startprojekte**.  
+2. In **allgemeine Eigenschaften**Option **Startprojekt**, und wählen Sie **mehrere Startprojekte**.  
   
-3.  Verschieben Sie **RentalApprovalService** an die erste Position in der Liste, gefolgt von **CreditCheckService**, gefolgt von **Client**. Legen Sie die **starten** Aktion für alle drei Projekte.  
+3. Verschieben Sie **RentalApprovalService** an die erste Position in der Liste, gefolgt von **CreditCheckService**, gefolgt von **Client**. Legen Sie die **starten** Aktion für alle drei Projekte.  
   
-4.  Klicken Sie auf **OK**, und drücken Sie F5, um das Beispiel auszuführen.  
+4. Klicken Sie auf **OK**, und drücken Sie F5, um das Beispiel auszuführen.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

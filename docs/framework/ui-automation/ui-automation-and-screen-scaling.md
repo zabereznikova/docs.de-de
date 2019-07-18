@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e101fffbd7e53cadce0b621d73ade2d1459ba00
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194062"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237445"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
 > [!NOTE]
 >  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] ermöglicht Benutzern das Ändern der [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] Einstellung so, dass die meisten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] Elemente auf dem Bildschirm größer erscheinen. Obwohl dieses Feature in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]bereits seit längerem verfügbar ist, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]führt der Desktopfenster-Manager standardmäßig die Skalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht übernehmen. Benutzeroberflächenautomatisierungs-Clientanwendungen müssen dieses Feature berücksichtigen.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] ermöglicht es Benutzern, die [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] -Einstellung so zu ändern, dass die meisten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Elemente auf dem Bildschirm größer erscheinen. Obwohl dieses Feature in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]bereits seit längerem verfügbar ist, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]führt der Desktopfenster-Manager standardmäßig die Skalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht übernehmen. Benutzeroberflächenautomatisierungs-Clientanwendungen müssen dieses Feature berücksichtigen.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Skalierung in Windows Vista  
@@ -42,30 +42,30 @@ ms.locfileid: "59194062"
   
 <a name="Scaling_in_UI_Automation_Clients"></a>   
 ## <a name="scaling-in-ui-automation-clients"></a>Skalierung in Benutzeroberflächenautomatisierungs-Clients  
- Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] does not use logical coordinates. Die folgenden Methoden und Eigenschaften geben entweder physische Koordinaten zurück oder verwenden sie als Parameter.  
+ Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API verwendet keine logische Koordinaten. Die folgenden Methoden und Eigenschaften geben entweder physische Koordinaten zurück oder verwenden sie als Parameter.  
   
--   <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetClickablePoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
+- <xref:System.Windows.Automation.AutomationElement.ClickablePointProperty>  
   
--   <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FromPoint%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
+- <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>  
   
  Standardmäßig ist eine Benutzeroberflächenautomatisierungs-Clientanwendung, die in einer Nicht-96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] -Umgebung ausgeführt wird, nicht in der Lage, von diesen Methoden und Eigenschaften die richtigen Ergebnisse zu erhalten. Da die Cursorposition z. B. in logischen Koordinaten angegeben wird, kann der Client diese Koordinaten nicht einfach an <xref:System.Windows.Automation.AutomationElement.FromPoint%2A> übergeben, um das Element abzurufen, das sich unter dem Cursor befindet. Darüber hinaus ist die Anwendung nicht in der Lage, Fenster außerhalb seines Clientbereichs ordnungsgemäß zu platzieren.  
   
  Die Lösung besteht aus zwei Teilen.  
   
-1.  Zunächst sorgen Sie dafür, dass die Clientanwendung mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel ist. Rufen Sie dazu die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `SetProcessDPIAware` beim Start auf. Die folgende Deklaration stellt diese Funktion in verwaltetem Code zur Verfügung.  
+1. Zunächst sorgen Sie dafür, dass die Clientanwendung mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel ist. Rufen Sie dazu die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `SetProcessDPIAware` beim Start auf. Die folgende Deklaration stellt diese Funktion in verwaltetem Code zur Verfügung.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Diese Funktion wird der gesamte Prozess dpi-fähig ist, was bedeutet, dass alle an den Prozess gehörenden Fenster nicht skaliert werden werden. In der [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), z. B. die vier Fenster, die das hervorgehobene Rechteck bilden sich an den physischen Koordinaten, die aus der UI-Automatisierung, nicht an den logischen Koordinaten abgerufen werden. Wenn das Beispiel nicht dpi-bewusst wäre, würde die Hervorhebung an den logischen Koordinaten auf dem Desktop gezeichnet werden was zu falschen Platzierung in einer nicht-96-dpi-Umgebung führen würde.  
   
-2.  Rufen Sie die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `GetPhysicalCursorPos`auf, um Cursorkoordinaten abzurufen. Im folgenden Beispiel wird das Deklarieren und Verwenden dieser Funktion veranschaulicht.  
+2. Rufen Sie die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `GetPhysicalCursorPos`auf, um Cursorkoordinaten abzurufen. Im folgenden Beispiel wird das Deklarieren und Verwenden dieser Funktion veranschaulicht.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  

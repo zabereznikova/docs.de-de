@@ -1,5 +1,5 @@
 ---
-title: <membername> ist nicht eindeutig. Er wird sowohl in der geerbten Schnittstelle "<interfacename1>" als auch in "<interfacename2>" verwendet.
+title: <membername> ist nicht eindeutig. Er wird sowohl in der geerbten Schnittstelle '<interfacename1>' als auch in '<interfacename2>' verwendet.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30685
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 71f8cb96c9981bbfc55236ea815fa5f5cb0e8aaf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820856"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622655"
 ---
 # <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<Membername >' ist mehrdeutig, in der geerbten Schnittstelle\<schnittstellenname1 >' und '\<schnittstellenname2 >'
 Die Schnittstelle erbt mindestens zwei Elemente mit dem gleichen Namen von mehreren Schnittstellen.  
@@ -21,7 +21,7 @@ Die Schnittstelle erbt mindestens zwei Elemente mit dem gleichen Namen von mehre
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wandeln Sie den Wert für die Basisschnittstelle, die Sie verwenden möchten; Zum Beispiel:  
+- Wandeln Sie den Wert für die Basisschnittstelle, die Sie verwenden möchten; Zum Beispiel:  
   
     ```  
     Interface Left  

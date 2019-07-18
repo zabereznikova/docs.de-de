@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7407db297a827004c851b904b2da8652778cb08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f97e90e3953a01f07d77e604628fbdb79eb9efa0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177488"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779178"
 ---
 # <a name="corexemain-function"></a>_CorExeMain-Funktion
 Initialisiert die common Language Runtime (CLR), sucht den verwalteten Einstiegspunkt im CLR-Header der ausführbaren Assembly und startet die Ausführung.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain ();  
 ```  
   

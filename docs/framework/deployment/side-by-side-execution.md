@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654600"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641037"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
 Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer Anwendung oder einer Komponente auf demselben Computer auszuführen. Das bedeutet, dass Sie gleichzeitig mehrere Versionen der Common Language Runtime sowie mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausführen können.  
@@ -33,15 +33,15 @@ Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer A
   
  Die parallele Ausführung und .NET Framework bieten die folgenden Features zur Vermeidung von DLL-Konflikten:  
   
--   Assemblys mit starkem Namen  
+- Assemblys mit starkem Namen  
   
      Die parallele Ausführung verwendet Assemblys mit starken Namen, um Typinformationen an eine bestimmte Version einer Assembly zu binden. Dadurch wird verhindert, dass eine Anwendung oder Komponente an eine ungültige Version einer Assembly gebunden wird. Assemblys mit starken Namen ermöglichen außerdem das Vorhandensein mehrerer Versionen einer Datei auf demselben Computer und deren Verwendung durch Anwendungen. Weitere Informationen finden Sie unter [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Versionsabhängige Codespeicherung  
+- Versionsabhängige Codespeicherung  
   
      .NET Framework bietet versionsabhängige Codespeicherung im globalen Assemblycache. Der globale Asssemblycache ist ein Codecache für den gesamten Computer, der auf allen Computern vorhanden ist, auf denen .NET Framework installiert ist. Im Cache werden Assemblys anhand der Version, Kultur und Herstellerinformationen gespeichert, und es werden mehrere Versionen von Komponenten und Anwendungen unterstützt. Weitere Informationen finden Sie unter [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md).  
   
--   Isolation.  
+- Isolation.  
   
      Mit .NET Framework können Sie Anwendungen und Komponenten erstellen, die isoliert ausgeführt werden. Isolation ist eine wesentliche Komponente der parallelen Ausführung. Sie umfasst sowohl die Erkennung der verwendeten Ressourcen als auch die zuverlässige gemeinsame Verwendung von Ressourcen durch mehrere Versionen einer Anwendung oder Komponente. Die Isolation umfasst außerdem das versionsspezifische Speichern von Dateien. Weitere Informationen zur Isolation finden Sie unter [Richtlinien für die Erstellung von Anwendungen und Komponenten für die parallele Ausführung](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
   
@@ -66,20 +66,20 @@ Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer A
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Bestimmen der zu ladenden Laufzeitversion  
  Die Common Language Runtime verwendet die folgenden Informationen, um zu bestimmen, welche Version der Runtime für eine Anwendung geladen werden soll:  
   
--   Die verfügbaren Runtime-Versionen  
+- Die verfügbaren Runtime-Versionen  
   
--   Die Runtime-Versionen, die von einer Anwendung unterstützt werden  
+- Die Runtime-Versionen, die von einer Anwendung unterstützt werden  
   
 ### <a name="supported-runtime-versions"></a>Unterstützte Runtime-Versionen  
  Die Common Language Runtime verwendet die Anwendungskonfigurationsdatei und den PE-Dateiheader (Portable Executable, übertragbare ausführbare Datei), um zu bestimmen, welche Version der Runtime von einer Anwendung unterstützt wird. Wenn keine Anwendungskonfigurationsdatei vorhanden ist, lädt die Runtime die im PE-Dateiheader der Anwendung angegebene Runtime-Version, sofern diese verfügbar ist.  
   
  Wenn eine Anwendungskonfigurationsdatei vorhanden ist, bestimmt die Runtime die entsprechende zu ladende Runtime-Version anhand der Ergebnisse der folgenden Vorgehensweise:  
   
-1.  Die Runtime überprüft das [\<<supportedRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in der Konfigurationsdatei der Anwendung. Sind eine oder mehrere der unterstützten Runtime-Versionen vorhanden, die im **\<<supportedRuntime>**-Element angegeben sind, lädt die Common Language Runtime die Runtime-Version, die im ersten **\<<supportedRuntime>**-Element angegeben ist. Wenn diese Version nicht verfügbar ist, überprüft die Common Language Runtime das nächste **\<<supportedRuntime>**-Element und versucht, die angegebene Runtime-Version zu laden. Wenn auch diese Runtime-Version nicht verfügbar ist, werden die weiteren **\<<supportedRuntime>**-Elemente überprüft. Wenn keine der unterstützten Runtime-Versionen verfügbar ist, kann die Common Language Runtime keine Runtime-Version laden, und sie zeigt eine Meldung an (siehe Schritt 3).  
+1. Die Runtime überprüft das [\<<supportedRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in der Konfigurationsdatei der Anwendung. Sind eine oder mehrere der unterstützten Runtime-Versionen vorhanden, die im **\<<supportedRuntime>**-Element angegeben sind, lädt die Common Language Runtime die Runtime-Version, die im ersten **\<<supportedRuntime>**-Element angegeben ist. Wenn diese Version nicht verfügbar ist, überprüft die Common Language Runtime das nächste **\<<supportedRuntime>**-Element und versucht, die angegebene Runtime-Version zu laden. Wenn auch diese Runtime-Version nicht verfügbar ist, werden die weiteren **\<<supportedRuntime>**-Elemente überprüft. Wenn keine der unterstützten Runtime-Versionen verfügbar ist, kann die Common Language Runtime keine Runtime-Version laden, und sie zeigt eine Meldung an (siehe Schritt 3).  
   
-2.  Die Common Language Runtime liest den PE-Dateiheader der ausführbaren Datei der Anwendung. Ist die im PE-Dateiheader angegebene Runtime-Version verfügbar, lädt die Common Language Runtime diese Version. Ist die angegebene Runtime-Version nicht verfügbar, sucht die Runtime nach einer Runtime-Version, für die Microsoft festgestellt hat, dass sie mit der Common Language Runtime-Version im PE-Dateiheader kompatibel ist. Wird diese Version nicht gefunden, wird die Vorgehensweise mit Schritt 3 fortgesetzt.  
+2. Die Common Language Runtime liest den PE-Dateiheader der ausführbaren Datei der Anwendung. Ist die im PE-Dateiheader angegebene Runtime-Version verfügbar, lädt die Common Language Runtime diese Version. Ist die angegebene Runtime-Version nicht verfügbar, sucht die Runtime nach einer Runtime-Version, für die Microsoft festgestellt hat, dass sie mit der Common Language Runtime-Version im PE-Dateiheader kompatibel ist. Wird diese Version nicht gefunden, wird die Vorgehensweise mit Schritt 3 fortgesetzt.  
   
-3.  Die Runtime zeigt eine Meldung an, in der mitgeteilt wird, dass die von der Anwendung unterstützte Runtime-Version nicht verfügbar ist. Die Common Language Runtime wird nicht geladen.  
+3. Die Runtime zeigt eine Meldung an, in der mitgeteilt wird, dass die von der Anwendung unterstützte Runtime-Version nicht verfügbar ist. Die Common Language Runtime wird nicht geladen.  
   
     > [!NOTE]
     >  Sie können die Anzeige dieser Meldung unterdrücken, indem Sie unter dem Registrierungsschlüssel „HKLM\Software\Microsoft\\.NETFramework“ den Wert „NoGuiFromShim“ oder indem Sie die Umgebungsvariable „COMPLUS_NoGuiFromShim“ verwenden. Beispielsweise können Sie die Meldung für Anwendungen unterdrücken, bei denen typischerweise keine Interaktion mit dem Benutzer vorgesehen ist (z. B. bei unbeaufsichtigten Installationen oder Windows-Diensten). Wenn die Anzeige dieser Meldung unterdrückt wird, schreibt die Common Language Runtime eine Meldung in das Ereignisprotokoll.  Legen Sie den Registrierungswert "NoGuiFromShim" auf 1 fest, um diese Meldung für alle Anwendungen auf einem Computer zu unterdrücken. Sie können aber auch die Umgebungsvariable "COMPLUS_NoGuiFromShim" auf 1 festlegen, um die Meldung für Anwendungen zu unterdrücken, die in einem bestimmten Benutzerkontext ausgeführt werden.  

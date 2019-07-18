@@ -11,58 +11,58 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9f284904fe9fec9ba423a8b9cd1e87457d768a2b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168063"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651605"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Problembehandlung beim Erstellen von Komponenten und Steuerelementen
 Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln von Komponenten und Steuerelementen auftreten. Weitere Informationen finden Sie unter [Programmieren mit Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
--   Steuerelement kann nicht zur Toolbox hinzugefügt werden  
+- Steuerelement kann nicht zur Toolbox hinzugefügt werden  
   
--   Windows Forms-Benutzersteuerelement oder Komponente kann nicht debuggt werden  
+- Windows Forms-Benutzersteuerelement oder Komponente kann nicht debuggt werden  
   
--   Ereignis wird im geerbten Steuerelement oder der Komponente zweimal ausgelöst  
+- Ereignis wird im geerbten Steuerelement oder der Komponente zweimal ausgelöst  
   
--   Während der Entwurfszeit-Fehler: "Fehler beim Erstellen der Komponente"*Komponentenname*""  
+- Während der Entwurfszeit-Fehler: "Fehler beim Erstellen der Komponente"*Komponentenname*""  
   
--   STAThreadAttribute  
+- STAThreadAttribute  
   
--   Symbol „Komponente“ wird nicht in der Toolbox angezeigt  
+- Symbol „Komponente“ wird nicht in der Toolbox angezeigt  
   
 ## <a name="cannot-add-control-to-toolbox"></a>Steuerelement kann nicht zur Toolbox hinzugefügt werden  
  Wenn Sie ein benutzerdefiniertes Steuerelement, das Sie in einem anderen Projekt erstellt haben, oder ein Drittanbieter-Steuerelement zur **Toolbox** hinzufügen möchten, müssen Sie dies manuell vornehmen. Wenn das aktuelle Projekt ein Steuerelement oder eine Komponente enthält, sollte es automatisch in der **Toolbox** angezeigt werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>So fügen Sie der Toolbox ein Steuerelement hinzu  
   
-1.  Klicken Sie mit der rechten Maustaste auf **Toolbox**, und wählen Sie im Kontextmenü **Elemente auswählen** aus.  
+1. Klicken Sie mit der rechten Maustaste auf **Toolbox**, und wählen Sie im Kontextmenü **Elemente auswählen** aus.  
   
-2.  Fügen Sie im Dialogfeld **Toolboxelemente auswählen** die Komponente hinzu:  
+2. Fügen Sie im Dialogfeld **Toolboxelemente auswählen** die Komponente hinzu:  
   
-    -   Wenn Sie eine .NET Framework-Komponente oder ein -Steuerelement hinzufügen möchten, klicken Sie auf die Registerkarte **.NET Framework-Komponenten**.  
+    - Wenn Sie eine .NET Framework-Komponente oder ein -Steuerelement hinzufügen möchten, klicken Sie auf die Registerkarte **.NET Framework-Komponenten**.  
   
          – oder –  
   
-    -   Wenn Sie eine COM-Komponente oder ein ActiveX-Steuerelement hinzufügen möchten, klicken Sie auf die Registerkarte **COM-Steuerelemente**.  
+    - Wenn Sie eine COM-Komponente oder ein ActiveX-Steuerelement hinzufügen möchten, klicken Sie auf die Registerkarte **COM-Steuerelemente**.  
   
-3.  Wenn das Steuerelement im Dialogfeld aufgelistet ist, bestätigen Sie die Auswahl, und klicken Sie auf **OK**.  
+3. Wenn das Steuerelement im Dialogfeld aufgelistet ist, bestätigen Sie die Auswahl, und klicken Sie auf **OK**.  
   
      Das Steuerelement wird zur **Toolbox** hinzugefügt.  
   
-4.  Wenn Ihr Steuerelement nicht im Dialogfeld aufgelistet ist, führen Sie folgende Schritte aus:  
+4. Wenn Ihr Steuerelement nicht im Dialogfeld aufgelistet ist, führen Sie folgende Schritte aus:  
   
-    1.  Klicken Sie auf die Schaltfläche **Durchsuchen**.  
+    1. Klicken Sie auf die Schaltfläche **Durchsuchen**.  
   
-    2.  Navigieren Sie zum Ordner mit der DLL-Datei, die Ihr Steuerelement enthält.  
+    2. Navigieren Sie zum Ordner mit der DLL-Datei, die Ihr Steuerelement enthält.  
   
-    3.  Wählen Sie die DLL-Datei aus, und klicken Sie auf **Öffnen**.  
+    3. Wählen Sie die DLL-Datei aus, und klicken Sie auf **Öffnen**.  
   
          Das Steuerelement wird im Dialogfeld angezeigt.  
   
-    4.  Bestätigen Sie die Auswahl des Steuerelements, und klicken Sie dann auf **OK**.  
+    4. Bestätigen Sie die Auswahl des Steuerelements, und klicken Sie dann auf **OK**.  
   
          Ihr Steuerelement wird zur **Toolbox** hinzugefügt.  
   
@@ -73,15 +73,15 @@ Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln 
   
 #### <a name="to-debug-a-control-or-component"></a>So debuggen Sie ein Steuerelement oder eine Komponente  
   
-1.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**, um eine Projektmappe zu erstellen.  
+1. Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**, um eine Projektmappe zu erstellen.  
   
-2.  Wählen Sie im Menü **Datei** **Hinzufügen** und dann **Neues Projekt** aus, um ein Testprojekt zu Ihrer Anwendung hinzuzufügen.  
+2. Wählen Sie im Menü **Datei** **Hinzufügen** und dann **Neues Projekt** aus, um ein Testprojekt zu Ihrer Anwendung hinzuzufügen.  
   
-3.  Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** für den Projekttyp **Windows-Anwendung** aus.  
+3. Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** für den Projekttyp **Windows-Anwendung** aus.  
   
-4.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten **Verweise** für das neue Projekt. Klicken Sie im Kontextmenü auf **Verweis hinzufügen**, um einen Verweis auf das Projekt mit dem Steuerelement oder der Komponente hinzuzufügen.  
+4. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Knoten **Verweise** für das neue Projekt. Klicken Sie im Kontextmenü auf **Verweis hinzufügen**, um einen Verweis auf das Projekt mit dem Steuerelement oder der Komponente hinzuzufügen.  
   
-5.  Erstellen Sie eine Instanz des Steuerelements oder der Komponente im Testprojekt. Wenn sich Ihre Komponente in der **Toolbox** befindet, können Sie sie auf die Oberfläche des Designers ziehen, oder die Instanz programmgesteuert erstellen, wie im folgenden Codebeispiel gezeigt wird.  
+5. Erstellen Sie eine Instanz des Steuerelements oder der Komponente im Testprojekt. Wenn sich Ihre Komponente in der **Toolbox** befindet, können Sie sie auf die Oberfläche des Designers ziehen, oder die Instanz programmgesteuert erstellen, wie im folgenden Codebeispiel gezeigt wird.  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  
@@ -111,7 +111,7 @@ Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln 
 
 - [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](developing-windows-forms-controls-at-design-time.md)
 - [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
-- [Erstellen von Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
+- [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [Komponentenerstellung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
 - [Problembehandlung bei der Entwurfszeitentwicklung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a6e4f6e7e3107516476b179b0ed718ca44bb114
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0e6acdf6996f437c85b629b0af886287b1aef03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103393"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748561"
 ---
 # <a name="icordebugcode4enumeratevariablehomes-method"></a>ICorDebugCode4::EnumerateVariableHomes-Methode
 Ruft einen Enumerator auf das lokale Variablen und Argumente in einer Funktion ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateVariableHomes(  
     [out] ICorDebugVariableHomeEnum **ppEnum  
 );  
@@ -54,4 +54,4 @@ HRESULT EnumerateVariableHomes(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugCode4-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

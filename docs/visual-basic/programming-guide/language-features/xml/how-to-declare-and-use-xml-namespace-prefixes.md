@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML namespace prefixes
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
-ms.openlocfilehash: 244329058624bebb03440961c1dda4a50b4efb8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b461ae96beffa91d00d25fa061aff96efe3d5d78
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818662"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598293"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Vorgehensweise: Deklarieren und Verwenden von XML-Namespace-Präfixe (Visual Basic)
 Dieses Beispiel zeigt, wie Sie das XML-Namespacepräfix importieren `ns` und in ein XML-Literal und XML-Achseneigenschaften verwenden.  
@@ -21,7 +21,7 @@ Dieses Beispiel zeigt, wie Sie das XML-Namespacepräfix importieren `ns` und in 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Einen Verweis auf den <xref:System.Xml.Linq>-Namespace  
+- Einen Verweis auf den <xref:System.Xml.Linq>-Namespace  
   
 ## <a name="see-also"></a>Siehe auch
 

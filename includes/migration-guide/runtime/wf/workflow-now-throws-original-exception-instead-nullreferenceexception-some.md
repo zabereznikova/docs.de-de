@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 6e5e90a4cfb862b3bfd74ac5a3715e97a736f598
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760437"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802509"
 ---
 ### <a name="workflow-now-throws-original-exception-instead-of-nullreferenceexception-in-some-cases"></a>Der Workflow löst jetzt anstelle einer NullReferenceException teilweise eine ursprüngliche Ausnahme aus
 

@@ -3,11 +3,11 @@ title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
 ms.openlocfilehash: ebe976df9af0c316e95a1e089412e57a575a6df1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673374"
 ---
 # <a name="clientcredentials"></a>\<clientCredentials>
 Gibt die zum Authentifizieren des Clients an einem Dienst verwendeten Anmeldeinformationen an.  

@@ -1,7 +1,7 @@
 ---
 title: Neuerungen der Barrierefreiheit in .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bdb1bf5d7e32c2e05eb779eed16c311cbd3eae7
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: da73df97524b9e394fac795daf14a3f0fb1f4e3d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212507"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661374"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Neuerungen der Barrierefreiheit in .NET Framework
 
@@ -28,10 +28,11 @@ Wenn Ihre App auf .NET Framework 4.7 oder niedriger ausgerichtet ist, aber auf .
 |---|---|
 |.NET Framework 4.7.1|„Switch.UseLegacyAccessibilityFeatures“|
 |.NET Framework 4.7.2|„Switch.UseLegacyAccessibilityFeatures.2“|
+|.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>Profitieren von Barrierefreiheitserweiterungen
 
-Die neuen Barrierefreiheitsfunktionen werden standardmäßig für Anwendungen aktiviert, die .NET Framework 4.7.1 oder höher anzielen. Zusätzlich können Anwendungen, die eine frühere Version von .NET Framework anzielen, aber unter .NET Framework 4.7.1 oder höher ausgeführt werden, veraltete Verhaltensweisen für die Barrierefreiheit deaktivieren (und dadurch die Verbesserungen der Barrierefreiheit nutzen), indem Sie dem [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element im [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md)-Abschnitt der Konfigurationsdatei der Anwendung einen Parameter hinzufügen und deren Wert auf `false` festlegen. Das folgende Beispiel zeigt, wie Sie die in .NET Framework 4.7.1 eingeführten Barrierefreiheitserweiterungen aktivieren:
+Die neuen Barrierefreiheitsfunktionen werden standardmäßig für Anwendungen aktiviert, die .NET Framework 4.7.1 oder höher anzielen. Zusätzlich können Anwendungen, die eine frühere Version von .NET Framework anzielen, aber unter .NET Framework 4.7.1 oder höher ausgeführt werden, veraltete Verhaltensweisen für die Barrierefreiheit deaktivieren (und dadurch die Verbesserungen der Barrierefreiheit nutzen), indem Sie dem [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element im [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md)-Abschnitt der Konfigurationsdatei der Anwendung einen Parameter hinzufügen und deren Wert auf `false` festlegen. Das folgende Beispiel zeigt, wie Sie die in .NET Framework 4.7.1 eingeführten Barrierefreiheitsverbesserungen aktivieren:
 
 ```xml
 <runtime>
@@ -49,6 +50,15 @@ Wenn Sie die Barrierefreiheitsoptionen in einer höheren Version von .NET Framew
 </runtime>
 ```
 
+Sie benötigen das folgende [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element, um Ihre App so zu konfigurieren, dass Sie die Verbesserungen der Barrierefreiheit in NET Framework 4.7.1, 4.7.2 und 4.8 nutzen können:
+
+```xml
+<runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+</runtime>
+```
+
 ### <a name="restoring-legacy-behavior"></a>Wiederherstellen von Legacyverhalten
 
 Anwendungen, die Versionen von .NET Framework ab 4.7.1 anzielen, können die Barrierefreiheitsfeatures deaktivieren, indem folgendes Element zum [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Element im [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md)-Abschnitt der Konfigurationsdatei der Anwendung hinzugefügt und deren Wert auf `true` festgelegt wird. Beispielsweise deaktiviert die folgende Konfiguration die Barrierefreiheitsfeatures, die in .NET Framework 4.7.2 eingeführt wurden:
@@ -60,9 +70,260 @@ Anwendungen, die Versionen von .NET Framework ab 4.7.1 anzielen, können die Bar
 </runtime>
 ```
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-472"></a>Neuerungen der Barrierefreiheit in .NET Framework 4.7.2
+## <a name="whats-new-in-accessibility-in-net-framework-48"></a>Neuerungen der Barrierefreiheit in .NET Framework 4.8
 
-.NET Framework 4.7.2 enthält neue Barrierefreiheitsfeatures für die folgenden Bereiche:
+.NET Framework 4.8 enthält neue Barrierefreiheitsfunktionen für die folgenden Bereiche:
+
+- [Windows Forms](#winforms48)
+
+- [Windows Presentation Foundation (WPF)](#wpf48)
+
+- [Workflow-Designer von Windows Workflow Foundation (WF)](#wf48)
+
+<a name="winforms48" />
+
+### <a name="windows-forms"></a>Windows Forms
+
+In .NET Framework 4.8 bieten Windows Forms jetzt Unterstützung für LiveRegions und Benachrichtigungsereignisse für viele häufig verwendete Steuerelemente. Es bietet auch Unterstützung für QuickInfos, wenn ein Benutzer mit der Tastatur zu einem Steuerelement navigiert.
+
+**Unterstützung für UIA-LiveRegions in den Bezeichnungen und StatusStrips**
+
+UIA LiveRegions ermöglichen es Anwendungsentwicklern, Sprachausgaben über eine Textänderung in einem Steuerelement zu informieren, das sich außerhalb des Bereichs befindet, in dem der Benutzer arbeitet. Dies ist z.B. für ein <xref:System.Windows.Forms.StatusStrip>-Steuerelement nützlich, das einen Verbindungsstatus anzeigt. Wenn die Verbindung unterbrochen wird und sich der Status ändert, kann der Entwickler die Sprachausgabe benachrichtigen.
+
+Ab .NET Framework 4.8 implementiert Windows Forms UIA-LiveRegions für sowohl <xref:System.Windows.Forms.Label>- als auch <xref:System.Windows.Forms.StatusStrip>-Steuerelemente. Der folgende Code verwendet die LiveRegion beispielsweise in einem <xref:System.Windows.Forms.Label>-Steuerelement mit dem Namen `label1`:
+
+```csharp
+public Form1()
+{
+   InitializeComponent();
+   label1.AutomationLiveSetting = AutomationLiveSetting.Polite;
+}
+
+…
+Label1.Text = “Ready!”;
+```
+
+Die Sprachausgabe kündigt „Bereit“ an, unabhängig davon, wo der Benutzer mit der Anwendung gerade interagiert.
+
+Sie können Ihr <xref:System.Windows.Forms.UserControl> ebenfalls als LiveRegion implementieren:
+
+```csharp
+using System;
+using System.Windows.Forms;
+using System.Windows.Forms.Automation;
+
+namespace WindowsFormsApplication
+{
+   public partial class UserControl1 : UserControl, IAutomationLiveRegion
+   {
+      public UserControl1()
+      {
+         InitializeComponent();
+      }
+
+      public AutomationLiveSetting AutomationLiveSetting { get; set; }
+      private AutomationLiveSetting IAutomationLiveRegion.GetLiveSetting()
+      {
+         return this.AutomationLiveSetting;
+      }
+
+      protected override void OnTextChanged(EventArgs e)
+      {
+         base.OnTextChanged(e);
+         AutomationNotifications.UiaRaiseLiveRegionChangedEvent(this.AccessibilityObject);
+      }
+   }
+}
+```
+
+**UIA-Benachrichtigungsereignisse**
+
+Das UIA-Benachrichtigungsereignis, das mit dem Windows 10 Fall Creators Update eingeführt wurde, ermöglicht es Ihrer App, ein UIA-Ereignis auszulösen, was dazu führt, dass die Sprachausgabe einfach eine Ankündigung basierend auf dem Text macht, den Sie mit dem Ereignis bereitstellen. Dafür muss in der Benutzeroberfläche kein entsprechendes Steuerelement vorhanden sein. In einigen Szenarien ist dies eine einfache Möglichkeit, um die Barrierefreiheit Ihrer App erheblich zu verbessern. Auch kann damit über den Fortschritt eines Prozesses zu informiert werden, der viel Zeit in Anspruch nehmen kann. Weitere Informationen über UIA-Benachrichtigungsereignisse finden Sie in [Can your desktop app leverage the new UI Notification event?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/) (Kann Ihre Desktop-App das neue UI-Benachrichtigungsereignis nutzen?).
+
+Im folgenden Beispiel wird ein [Benachrichtigungsereignis](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A) ausgelöst:
+
+```csharp
+MethodInfo raiseMethod = typeof(AccessibleObject).GetMethod("RaiseAutomationNotification");
+if (raiseMethod != null) {
+   raiseMethod.Invoke(progressBar1.AccessibilityObject, new object[3] {/*Other*/ 4, /*All*/ 2, "The progress is 50%." });
+}
+```
+
+**QuickInfos für den Tastaturzugriff**
+
+In Anwendungen, die auf .NET Framework 4.7.2 und frühere Versionen abzielen, kann ein Steuerelement [tooltip](xref:System.Windows.Forms.ToolTip) nur durch Bewegen eines Mauszeigers in das Steuerelement angezeigt werden. Ab .NET Framework 4.8 kann ein Tastaturbenutzer die QuickInfo eines Steuerelements aufrufen, indem er das Steuerelement mit einer Tabulatortaste oder Pfeiltasten mit oder ohne Zusatztasten fokussiert. Für diese Verbesserungen der Barrierefreiheit ist ein zusätzlicher [AppContext-Schalter](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) erforderlich:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1"/>
+   </startup>
+   <runtime>
+      <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false  -->
+      <!-- Please note that disabling Switch.UseLegacyAccessibilityFeatures, Switch.UseLegacyAccessibilityFeatures.2 and Switch.UseLegacyAccessibilityFeatures.3 is required to disable Switch.System.Windows.Forms.UseLegacyToolTipDisplay -->
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.System.Windows.Forms.UseLegacyToolTipDisplay=false"/>
+   </runtime>
+</configuration>
+```
+
+Die folgende Abbildung zeigt die QuickInfo, wenn der Benutzer eine Schaltfläche mit der Tastatur ausgewählt hat.
+
+![QuickInfo, wenn Benutzer mit der Tastatur zur Schaltfläche navigiert](media/tooltip.png)
+
+<a name="wpf48" />
+
+### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+Ab .NET Framework 4.8 enthält WPF eine Reihe von Verbesserungen der Barrierefreiheit.
+
+**Die Sprachausgabe kündigt keine Elemente mit der Sichtbarkeit „Collapsed“ oder „Hidden“ mehr an**
+
+Elemente mit der Sichtbarkeit „Collapsed“ oder „Hidden“ werden von der Sprachausgabe nicht mehr angekündigt. Benutzeroberflächen, die Elemente mit einer Sichtbarkeit <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> oder <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> enthalten, können durch die Sprachausgabe falsch interpretiert werden, wenn sie dem Benutzer angekündigt werden. Ab .NET Framework 4.8 enthält WPF keine komprimierten oder ausgeblendeten Elemente mehr in der Steuerelementansicht der UIAutomation-Struktur, sodass die Sprachausgabe diese Elemente nicht mehr ankündigen kann.
+
+**SelectionTextBrush-Eigenschaft für die Verwendung mit einer nicht Adorner-basierten Textauswahl**
+
+In .NET Framework 4.7.2.2 hat WPF die Möglichkeit hinzugefügt, eine <xref:System.Windows.Controls.TextBox>- und <xref:System.Windows.Controls.PasswordBox>-Textauswahl zu zeichnen, ohne die Adornerebene zu verwenden. Die Vordergrundfarbe des markierten Texts in diesem Szenario wurde von <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType> vorgegeben.
+
+.NET Framework 4.8 fügt eine neue Eigenschaft, `SelectionTextBrush`, hinzu, die es Entwicklern ermöglicht, den spezifischen Pinsel für den ausgewählten Text auszuwählen, wenn sie eine nicht Adorner-basierte Textauswahl verwenden. Diese Eigenschaft funktioniert nur bei <xref:System.Windows.Controls.Primitives.TextBoxBase>-basierten Steuerelementen und dem <xref:System.Windows.Controls.PasswordBox>-Steuerelement in WPF-Anwendungen, bei denen die nicht auf Adorner basierende Textauswahl aktiviert ist. Sie funktioniert nicht für das <xref:System.Windows.Controls.RichTextBox>-Steuerelement. Wenn die nicht auf Adorner basierende Textauswahl nicht aktiviert ist, wird diese Eigenschaft ignoriert.
+
+Um diese Eigenschaft zu verwenden, fügen Sie sie einfach zu Ihrem XAML-Code hinzu, und verwenden Sie den entsprechenden Pinsel oder die passende Bindung. Die sich daraus ergebende Textauswahl sieht folgendermaßen aus:
+
+![QuickInfo, wenn Benutzer mit der Tastatur zur Schaltfläche navigiert](media/selectiontextbrush-property.png)
+
+Sie können die Verwendung der Eigenschaften `SelectionBrush` und `SelectionTextBrush` kombinieren, um jede beliebige Hintergrund- und Vordergrundfarbkombination zu generieren, die Sie für zweckmäßig halten.
+
+**Unterstützung für die UIAutomation ControllerFor-Eigenschaft**
+
+Die `ControllerFor`-Eigenschaft von UIAutomation gibt ein Array von Automatisierungselementen zurück, die von dem Automatisierungselement geändert werden, das diese Eigenschaft unterstützt. Diese Eigenschaft wird häufig bei der Vorschlagsuche verwendet. `ControllerFor` wird verwendet, wenn ein Automatisierungselement ein oder mehrere Segmente der Benutzeroberfläche der Anwendung oder des Desktops beeinflusst. Andernfalls ist es schwierig, die Auswirkungen des Steuerelementvorgangs den Elementen der Benutzeroberfläche zuzuordnen. Dieses Feature fügt die Möglichkeit hinzu, dass Steuerelemente einen Wert für die `ControllerFor`-Eigenschaft bereitstellen.
+
+.NET Framework 4.8 fügt eine neue virtuelle Methode hinzu: <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>. Auf einen Wert für die `ControllerFor` Eigenschaft einfach diese Methode überschreiben und Zurückgeben einer `List<AutomationPeer>` für die Steuerelemente, die von diesem bearbeiteten <xref:System.Windows.Automation.Peers.AutomationPeer>:
+
+```csharp
+public class AutoSuggestTextBox: TextBox
+{
+   protected override AutomationPeer OnCreateAutomationPeer()
+   {
+      return new AutoSuggestTextBoxAutomationPeer(this);
+   }
+
+   public ListBox SuggestionListBox;
+}
+
+internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
+{
+   public AutoSuggestTextBoxAutomationPeer(AutoSuggestTextBox owner) : base(owner)
+   {
+   }
+
+   protected override List<AutomationPeer> GetControlledPeersCore()
+   {
+      List<AutomationPeer> controlledPeers = new List<AutomationPeer>();
+      AutoSuggestTextBox owner = Owner as AutoSuggestTextBox;
+      controlledPeers.Add(UIElementAutomationPeer.CreatePeerForElement(owner.SuggestionListBox));
+      return controlledPeers;
+   }
+}
+```
+
+**QuickInfos für den Tastaturzugriff**
+
+In .NET Framework 4.7.2 und früheren Versionen werden QuickInfos nur angezeigt, wenn der Benutzer den Mauszeiger über ein Steuerelement bewegt. In .NET Framework 4.8 werden QuickInfos auch beim Fokussieren mit der Tastatur sowie über eine Tastenkombination angezeigt.
+
+Um dieses Feature zu aktivieren, muss eine Anwendung .NET Framework 4.8 als Ziel verwenden oder sich mit den `Switch.UseLegacyAccessibilityFeatures.3`- und `Switch.UseLegacyToolTipDisplay`-[AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)-Schaltern anmelden. Nachfolgend finden Sie die Konfigurationsdatei für eine Beispielanwendung:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.UseLegacyToolTipDisplay=false" />
+   </runtime>
+</configuration>
+```
+
+Nach der Aktivierung zeigen alle Steuerelemente, die eine QuickInfo enthalten, diese an, sobald die Tastatur auf das Steuerelement fokussiert. Die QuickInfo kann im Laufe der Zeit oder bei einer Änderung des Tastaturfokus deaktiviert werden. Benutzer können die QuickInfo auch manuell verwerfen, indem sie eine neue Tastenkombination verwenden, STRG + UMSCHALT + F10. Wenn die QuickInfo verworfen wurde, kann sie mithilfe der gleichen Tastenkombination wieder angezeigt werden.
+
+> [!NOTE]
+> [Menüband-QuickInfos](xref:System.Windows.Controls.Ribbon.RibbonToolTip) auf <xref:System.Windows.Controls.Ribbon.Ribbon>-Steuerelementen werden nicht beim Tastaturfokus angezeigt, sondern nur über die Tastenkombination.
+
+**Unterstützung für SizeOfSet- und PositionInSet-UIAutomation-Eigenschaften hinzugefügt**
+
+Windows 10 hat zwei neue UIAutomation-Eigenschaften eingeführt, `SizeOfSet` und `PositionInSet`, die von Anwendungen verwendet werden, um die Anzahl der Elemente in einem Satz zu beschreiben. UIAutomation-Clientanwendungen wie die Sprachausgabe können dann eine Anwendung hinsichtlich dieser Eigenschaften abfragen und eine genaue Darstellung der Benutzeroberfläche der Anwendung ankündigen.
+
+Ab .NET Framework 4.8 stellt WPF diese beiden Eigenschaften für UIAutomation in WPF-Anwendungen bereit. Dafür stehen zwei Methoden zur Verfügung:
+
+- Verwenden von Abhängigkeitseigenschaften
+
+  WPF fügt zwei neue Abhängigkeitseigenschaften, <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> und <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>, hinzu. Ein Entwickler kann diese Werte mit XAML festlegen:
+
+  ```xaml
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="1">Button 1</Button>
+
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="2">Button 2</Button>
+
+  <Button AutomationProperties.SizeOfSet="3"
+    AutomationProperties.PositionInSet="3">Button 3</Button>
+  ```
+
+- Überschreiben von virtuellen AutomationPeer-Methoden
+
+  Die AutomationPeer-Klasse wurde mit den virtuellen Methoden <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> und <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> erweitert. Ein Entwickler kann diese Werte für `SizeOfSet` und `PositionInSet` durch Überschreiben dieser Methode bereitstellen, wie im folgenden Beispiel gezeigt:
+
+  ```csharp
+  public class MyButtonAutomationPeer : ButtonAutomationPeer
+  {
+    protected override int GetSizeOfSetCore()
+    {
+        // Call into your own logic to provide a value for SizeOfSet
+        return CalculateSizeOfSet();
+    }
+
+    protected override int GetPositionInSetCore()
+    {
+        // Call into your own logic to provide a value for PositionInSet
+        return CalculatePositionInSet();
+    }
+  }
+  ```
+
+Darüber hinaus stellen Elemente in <xref:System.Windows.Controls.ItemsControl>-Instanzen automatisch einen Wert für diese Eigenschaften ohne zusätzliche Maßnahmen des Entwicklers bereit. Wenn ein <xref:System.Windows.Controls.ItemsControl> gruppiert ist, wird die Sammlung von Gruppen als Satz dargestellt, und jede Gruppe wird als separater Satz gezählt. Dabei gibt jedes Element innerhalb dieser Gruppe seine Position innerhalb dieser Gruppe sowie die Größe der Gruppe an. Automatische Werte werden durch Virtualisierung nicht beeinflusst. Selbst wenn ein Element nicht realisiert wird, wird es dennoch auf die Gesamtgröße des Satzes angerechnet und beeinflusst die Position im Satz seiner gleichgeordneten Elemente.
+
+Automatische Werte werden nur bereitgestellt, wenn die Anwendung auf .NET Framework 4.8 abzielt. Für Anwendungen, die auf eine frühere Version von .NET-Frameworks abzielen, können Sie den `Switch.UseLegacyAccessibilityFeatures.3`-[AppContext-Schalter](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) einrichten, wie in der folgenden App.config-Datei gezeigt:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+   </runtime>
+</configuration>
+```
+
+<a name="wf48" />
+
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Workflow-Designer von Windows Workflow Foundation (WF)
+
+Der Workflow-Designer umfasst in .NET Framework 4.8 folgende Änderungen:
+
+- Benutzer, die die Sprachausgabe verwenden, werden Verbesserungen bei FlowSwitch-case-Bezeichnungen feststellen.
+
+- Benutzer, die die Sprachausgabe verwenden, werden Verbesserungen bei Schaltflächenbeschreibungen feststellen.
+
+- Benutzer, die Designs mit hohem Kontrast verwenden, werden Verbesserungen in der Sichtbarkeit des Workflow-Designers und dessen Steuerelementen feststellen. Dazu zählen verbesserte Kontrastverhältnisse zwischen Elementen und leichter erkennbare Auswahlfelder für Fokuselemente.
+
+Wenn Ihre Anwendung auf .NET Framework 4.7.2 oder eine frühere Version abzielt, können Sie diese Änderungen übernehmen, indem Sie den `Switch.UseLegacyAccessibilityFeatures.3`-[AppContext-Schalter](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) in Ihrer Anwendungskonfigurationsdatei auf `false` festlegen. Weitere Informationen finden Sie im Abschnitt [Profitieren von Barrierefreiheitsverbesserungen](#taking-advantage-of-accessibility-enhancements) in diesem Artikel.
+
+## <a name="whats-new-in-accessibility-in-net-framework-472"></a>Neuerungen der Barrierefreiheit in .NET Framework 4.7.2
+
+.NET Framework 4.7.2 enthält neue Barrierefreiheitsfunktionen für die folgenden Bereiche:
 
 - [Windows Forms](#winforms472)
 
@@ -138,9 +399,9 @@ In .NET Framework 4.7.1 und früheren Versionen konnten Benutzer für das in ein
 
 Es kann jedoch sein, dass automatisierte Anwendungen, für die der Fokus dauerhaft auf der WinForms-Ebene liegen muss, nicht mehr einwandfrei funktionieren.
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-471"></a>Neuerungen der Barrierefreiheit in .NET Framework 4.7.1
+## <a name="whats-new-in-accessibility-in-net-framework-471"></a>Neuerungen der Barrierefreiheit in .NET Framework 4.7.1
 
-.NET Framework 4.7.1 enthält neue Barrierefreiheitsfunktionen für folgende Bereiche:
+.NET Framework 4.7.1 enthält neue Barrierefreiheitsfunktionen für die folgenden Bereiche:
 
 - [Windows Presentation Foundation (WPF)](#wpf471)
 
@@ -186,10 +447,10 @@ Folgende APIs wurden zu WPF hinzugefügt, um dynamische Bereiche zu unterstütze
 
 - Die <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>-Enumeration, die die folgenden möglichen **LiveSetting**-Werte definiert:
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Das Element sendet keine Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Das Element sendet nicht unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Das Element sendet keine Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Das Element sendet nicht unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Das Element sendet unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Das Element sendet unterbrechende Benachrichtigungen, wenn der Inhalt des dynamischen Bereichs geändert wurde.
 
 Sie können einen dynamischen Bereich erstellen, indem Sie die Eigenschaft **AutomationProperties.LiveSetting** wie im folgenden Beispiel dargestellt auf das relevante Element festlegen:
 
@@ -204,6 +465,7 @@ var peer = FrameworkElementAutomationPeer.FromElement(myTextBlock);
 
 peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged);
 ```
+
 ```vb
 Dim peer = FrameworkElementAutomationPeer.FromElement(myTextBlock)
 peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
@@ -216,81 +478,81 @@ Ab .NET Framework 4.7.1 wurden Verbesserungen am Design „Hoher Kontrast“ fü
 
 - <xref:System.Windows.Controls.Expander>-Steuerelement
 
-    Das visuelle Fokuselement für das <xref:System.Windows.Controls.Expander>-Steuerelement wird nun angezeigt. Das visuelle Tastaturelement für die <xref:System.Windows.Controls.ComboBox>-, <xref:System.Windows.Controls.ListBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelemente wird ebenfalls angezeigt. Beispiel:
+  Das visuelle Fokuselement für das <xref:System.Windows.Controls.Expander>-Steuerelement wird nun angezeigt. Das visuelle Tastaturelement für die <xref:System.Windows.Controls.ComboBox>-, <xref:System.Windows.Controls.ListBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelemente wird ebenfalls angezeigt. Beispiel:
 
-    Vorher: 
+  Vorher: 
 
-    ![Das Expander-Steuerelement mit Fokus vor der Verbesserung der Barrierefreiheit](media/expander-before.png)
+  ![Das Expander-Steuerelement mit Fokus vor der Verbesserung der Barrierefreiheit](media/expander-before.png)
 
-    Nachher: 
+  Nachher: 
 
-    ![Das Expander-Steuerelement mit Fokus nach der Verbesserung der Barrierefreiheit](media/expander-after.png)
+  ![Das Expander-Steuerelement mit Fokus nach der Verbesserung der Barrierefreiheit](media/expander-after.png)
 
 - <xref:System.Windows.Controls.CheckBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelemente
 
-    Der Text in den <xref:System.Windows.Controls.CheckBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelementen ist nun leichter zu erkennen, wenn das Design mit hohem Kontrast ausgewählt ist. Beispiel:
+  Der Text in den <xref:System.Windows.Controls.CheckBox>- und <xref:System.Windows.Controls.RadioButton>-Steuerelementen ist nun leichter zu erkennen, wenn das Design mit hohem Kontrast ausgewählt ist. Beispiel:
 
-    Vorher: 
+  Vorher: 
 
-    ![Das Optionsfeld im Design mit hohem Kontrast mit Fokus vor der Verbesserung der Barrierefreiheit](media/radio-button-before.png)
+  ![Das Optionsfeld im Design mit hohem Kontrast mit Fokus vor der Verbesserung der Barrierefreiheit](media/radio-button-before.png)
 
-    Nachher: 
+  Nachher: 
 
-    ![Das Optionsfeld im Design mit hohem Kontrast mit Fokus nach der Verbesserung der Barrierefreiheit](media/radio-button-after.png)
+  ![Das Optionsfeld im Design mit hohem Kontrast mit Fokus nach der Verbesserung der Barrierefreiheit](media/radio-button-after.png)
 
 - <xref:System.Windows.Controls.ComboBox>-Steuerelement
 
-    Ab .NET Framework 4.7.1 hat der Rahmen eines deaktivierten <xref:System.Windows.Controls.ComboBox>-Steuerelements die gleiche Farbe wie der deaktivierte Text. Beispiel:
+  Ab .NET Framework 4.7.1 hat der Rahmen eines deaktivierten <xref:System.Windows.Controls.ComboBox>-Steuerelements die gleiche Farbe wie der deaktivierte Text. Beispiel:
 
-    Vorher: 
+  Vorher: 
 
-     ![Rahmen und Text eines deaktivierten ComboBox-Steuerelements vor der Verbesserung der Barrierefreiheit](media/combo-disabled-before.png)
+  ![Rahmen und Text eines deaktivierten ComboBox-Steuerelements vor der Verbesserung der Barrierefreiheit](media/combo-disabled-before.png)
 
-    Nachher:   
+  Nachher:   
 
-     ![Rahmen und Text eines deaktivierten ComboBox-Steuerelements nach der Verbesserung der Barrierefreiheit](media/combo-disabled-after.png)
+  ![Rahmen und Text eines deaktivierten ComboBox-Steuerelements nach der Verbesserung der Barrierefreiheit](media/combo-disabled-after.png)
 
-    Darüber hinaus verwenden deaktivierte Schaltflächen und Schaltflächen mit Fokus das richtige Farbdesign.
+  Darüber hinaus verwenden deaktivierte Schaltflächen und Schaltflächen mit Fokus das richtige Farbdesign.
 
-    Vorher:
+  Vorher:
 
-    ![Farbdesign der Schaltflächen vor der Verbesserung der Barrierefreiheit](media/button-themes-before.png) 
+  ![Farbdesign der Schaltflächen vor der Verbesserung der Barrierefreiheit](media/button-themes-before.png) 
 
-    Nachher: 
+  Nachher: 
 
-    ![Farbdesign der Schaltflächen nach der Verbesserung der Barrierefreiheit](media/button-themes-after.png) 
+  ![Farbdesign der Schaltflächen nach der Verbesserung der Barrierefreiheit](media/button-themes-after.png) 
 
-    In .NET Framework 4.7 und früher führte das Festlegen des Formats eines <xref:System.Windows.Controls.ComboBox>-Steuerelements auf `Toolbar.ComboBoxStyleKey` dazu, dass der Dropdownpfeil nicht angezeigt wurde. Dieses Problem wurde in .NET Framework 4.7.1 behoben. Beispiel:
+  In .NET Framework 4.7 und früher führte das Festlegen des Formats eines <xref:System.Windows.Controls.ComboBox>-Steuerelements auf `Toolbar.ComboBoxStyleKey` dazu, dass der Dropdownpfeil nicht angezeigt wurde. Dieses Problem wurde in .NET Framework 4.7.1 behoben. Beispiel:
 
-    Vorher: 
+  Vorher: 
 
-    ![„Toolbar.ComboBoxStyleKey“ vor der Verbesserung der Barrierefreiheit](media/comboboxstylekey-before.png) 
+  ![„Toolbar.ComboBoxStyleKey“ vor der Verbesserung der Barrierefreiheit](media/comboboxstylekey-before.png) 
 
-    Nachher: 
+  Nachher: 
 
-    ![„Toolbar.ComboBoxStyleKey“ nach der Verbesserung der Barrierefreiheit](media/comboboxstylekey-after.png) 
+  ![„Toolbar.ComboBoxStyleKey“ nach der Verbesserung der Barrierefreiheit](media/comboboxstylekey-after.png) 
 
 - <xref:System.Windows.Controls.DataGrid>-Steuerelement
 
-    Ab .NET Framework 4.7.1 verwendet der Pfeil für die Sortieranzeige in den <xref:System.Windows.Controls.DataGrid>-Steuerelementen das richtige Farbdesign. Beispiel:
+  Ab .NET Framework 4.7.1 verwendet der Pfeil für die Sortieranzeige in den <xref:System.Windows.Controls.DataGrid>-Steuerelementen das richtige Farbdesign. Beispiel:
 
-    Vorher: 
+  Vorher: 
 
-    ![Pfeil für die Sortieranzeige vor der Verbesserung der Barrierefreiheit](media/sort-indicator-before.png) 
+  ![Pfeil für die Sortieranzeige vor der Verbesserung der Barrierefreiheit](media/sort-indicator-before.png) 
 
-    Nachher:   
+  Nachher:   
 
-    ![Pfeil für die Sortieranzeige nach der Verbesserung der Barrierefreiheit](media/sort-indicator-after.png) 
+  ![Pfeil für die Sortieranzeige nach der Verbesserung der Barrierefreiheit](media/sort-indicator-after.png) 
 
-    Darüber hinaus wurde in .NET Framework 4.7 und früher das Standarddesign für Links geändert, wodurch Links beim Bewegen der Maus über diese im Modus mit hohem Kontrast in der falschen Farbe angezeigt wurden. Dieses Problem wurde in .NET Framework 4.7.1 behoben. Auf ähnliche Weise verwenden die Spalten des Kontrollkästchens <xref:System.Windows.Controls.DataGrid> ab .NET Framework 4.7.1 die erwarteten Farben für das Feedback des Tastaturfokus.
+  Darüber hinaus wurde in .NET Framework 4.7 und früher das Standarddesign für Links geändert, wodurch Links beim Bewegen der Maus über diese im Modus mit hohem Kontrast in der falschen Farbe angezeigt wurden. Dieses Problem wurde in .NET Framework 4.7.1 behoben. Auf ähnliche Weise verwenden die Spalten des Kontrollkästchens <xref:System.Windows.Controls.DataGrid> ab .NET Framework 4.7.1 die erwarteten Farben für das Feedback des Tastaturfokus.
 
-    Vorher: 
+  Vorher: 
 
-    ![DataGrid-Standarddesign für Links vor der Verbesserung der Barrierefreiheit](media/default-link-style-before.png) 
+  ![DataGrid-Standarddesign für Links vor der Verbesserung der Barrierefreiheit](media/default-link-style-before.png) 
 
-    Nachher:    
+  Nachher:    
 
-    ![DataGrid-Standarddesign für Links nach der Verbesserung der Barrierefreiheit](media/default-link-style-after.png) 
+  ![DataGrid-Standarddesign für Links nach der Verbesserung der Barrierefreiheit](media/default-link-style-after.png) 
 
 Weitere Informationen zu Verbesserungen der WPF-Barrierefreiheit in .NET Framework 4.7.1 finden Sie unter [Verbesserung der Barrierefreiheit in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -319,13 +581,13 @@ Folgende Änderungen wurden am Design mit hohem Kontrast vorgenommen:
 
 - Deaktivierter Text ist einfacher zu lesen. Beispiel:
 
-    Vorher:
+  Vorher:
 
-    ![Deaktivierter Text vor der Verbesserung der Barrierefreiheit](media/wf-disabled-before.png) 
+  ![Deaktivierter Text vor der Verbesserung der Barrierefreiheit](media/wf-disabled-before.png) 
 
-    Nachher:
+  Nachher:
 
-    ![Deaktivierter Text nach der Verbesserung der Barrierefreiheit](media/wf-disabled-after.png) 
+  ![Deaktivierter Text nach der Verbesserung der Barrierefreiheit](media/wf-disabled-after.png) 
 
 - Verbesserungen am Design mit hohem Kontrast im Dialogfeld der Threadausnahme.
 

@@ -3,12 +3,12 @@ title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443249"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195846"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen
 
@@ -24,7 +24,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0 Beta-Compilers. Der C# 8 Beta-Compiler ist mit [Visual Studio 2019 Vorschauversion 2 und höher](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) oder [.NET Core 3.0 Vorschauversion 2](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0 Beta-Compilers. Der C# 8 Beta-Compiler ist mit [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder der neueste[ Vorschauversion von .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
 
 In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Visual Studio oder die .NET Core-CLI kennen.
 
@@ -49,8 +49,11 @@ Beim Aktualisieren der Sprachversion wird C# 8.0 ausgewählt, aber dies aktivier
 Ein guter nächster Schritt ist, den NULL-Werte zulassenden Anmerkungskontext zu aktivieren und zu sehen, wie viele Warnungen generiert werden. Fügen Sie das folgende Element beiden CSPROJ-Dateien in der Projektmappe hinzu, direkt unterhalb des `LangVersion`-Elements:
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> Das `Nullable`-Element hieß früher `NullableContextOptions`. Die Umbenennung erfolgt in Visual Studio 2019, 16.2-p1. Das .NET Core SDK 3.0.100-preview5-011568 umfasst diese Änderung nicht. Wenn Sie die .NET Core-CLI verwenden, müssen Sie `NullableContextOptions`weiter verwenden, bis die nächste Vorschauversion verfügbar ist.
 
 Führen Sie einen Testbuild durch, und beachten Sie die Liste der Warnungen. In dieser kleinen Anwendung generiert der Compiler fünf Warnungen, daher sollten Sie den NULL-Werte zulassenden Anmerkungskontext aktiviert lassen und beginnen, Warnungen für das gesamte Projekt zu beheben.
 
@@ -58,7 +61,7 @@ Diese Strategie funktioniert nur bei kleineren Projekten. Bei größeren Projekt
 
 ## <a name="warnings-help-discover-original-design-intent"></a>Warnungen tragen dazu bei, die ursprüngliche Entwurfsabsicht zu ermitteln
 
-Es gibt zwei Klassen, die mehrere Warnungen generieren. Beginnen Sie mit der `NewsStoryViewModel`-Klasse. Entfernen Sie das `NullableContextOptions`-Element aus beiden CSPROJ-Dateien, damit Sie den Bereich der Warnungen auf die Abschnitte des Codes beschränken können, mit denen Sie arbeiten. Öffnen Sie die *NewsStoryViewModel.cs*-Datei, und fügen Sie die folgenden Anweisungen zum Aktivieren des NULL-Werte zulassenden Anmerkungskontexts für das `NewsStoryViewModel` hinzu, und stellen Sie es nach dieser Klassendefinition wieder her:
+Es gibt zwei Klassen, die mehrere Warnungen generieren. Beginnen Sie mit der `NewsStoryViewModel`-Klasse. Entfernen Sie das `Nullable`-Element aus beiden CSPROJ-Dateien, damit Sie den Bereich der Warnungen auf die Abschnitte des Codes beschränken können, mit denen Sie arbeiten. Öffnen Sie die *NewsStoryViewModel.cs*-Datei, und fügen Sie die folgenden Anweisungen zum Aktivieren des NULL-Werte zulassenden Anmerkungskontexts für das `NewsStoryViewModel` hinzu, und stellen Sie es nach dieser Klassendefinition wieder her:
 
 ```csharp
 #nullable enable
@@ -81,7 +84,7 @@ Diese beiden Eigenschaften lösen `CS8618` aus: „Initialisierung der NULL-Wert
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Im vorherigen Codeblock ist einiges los. Diese Anwendung verwendet das [AutoMapper](http://automapper.org/)-NuGet-Paket zum Erstellen eines Nachrichtenelements aus einem `ISyndicationItem`. Sie haben festgestellt, dass in dieser einen Anweisung die Nachrichtenelemente erstellt und die Eigenschaften festgelegt werden. Das bedeutet, dass der Entwurf für das `NewsStoryViewModel` angibt, dass diese Eigenschaften nie den Wert `null` haben sollten. Diese Eigenschaften sollten **Nullwerte nicht zulassende Verweistypen** sein. Das drückt am besten die ursprüngliche Entwurfsabsicht aus. Jedes `NewsStoryViewModel` *ist* in der Tat mit NULL nicht zulassenden Werten ordnungsgemäß instanziiert. Das macht den folgenden Initialisierungscode zu einer gültigen Fehlerbehebung:
+Im vorherigen Codeblock ist einiges los. Diese Anwendung verwendet das [AutoMapper](https://automapper.org/)-NuGet-Paket zum Erstellen eines Nachrichtenelements aus einem `ISyndicationItem`. Sie haben festgestellt, dass in dieser einen Anweisung die Nachrichtenelemente erstellt und die Eigenschaften festgelegt werden. Das bedeutet, dass der Entwurf für das `NewsStoryViewModel` angibt, dass diese Eigenschaften nie den Wert `null` haben sollten. Diese Eigenschaften sollten **Nullwerte nicht zulassende Verweistypen** sein. Das drückt am besten die ursprüngliche Entwurfsabsicht aus. Jedes `NewsStoryViewModel` *ist* in der Tat mit NULL nicht zulassenden Werten ordnungsgemäß instanziiert. Das macht den folgenden Initialisierungscode zu einer gültigen Fehlerbehebung:
 
 ```csharp
 public class NewsStoryViewModel

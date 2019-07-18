@@ -3,11 +3,11 @@ title: Verweis (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0f4cc4b9-361d-4de2-b4c3-be7cbd5dd47b
 ms.openlocfilehash: 4b56942d50f2eae6be4c3814b6f12aa4bb34b5c3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787100"
 ---
 # <a name="reference-linq-to-xml"></a>Verweis (LINQ to XML)
 Dieses Thema enthält Links zu den Referenzthemen für LINQ to XML.  

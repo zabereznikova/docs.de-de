@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._HttpResponse-Feld
+title: HttpWebRequest._HttpResponse Field
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ef746d4a2e6782fa295b7c27f32ce5dc117350a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: db56bce0832d3439309d58f85e455f63f339816e
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745915"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301026"
 ---
-# <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest-Anforderung. \_HttpResponse-Feld
+# <a name="httpwebrequesthttpresponse-field"></a>"HttpWebRequest". \_HttpResponse-Feld
 
-`HttpWebRequest._HttpResponse` ist eine <xref:System.Net.HttpWebResponse> , die Details der HTTP-Antwort von einer HTTP-Anforderung enthält. Es kann sein `null` bis eine HTTP-Antwort empfangen wird.
+`HttpWebRequest._HttpResponse` ist ein <xref:System.Net.HttpWebResponse> , die Details der HTTP-Antwort aus einer HTTP-Anforderung enthält. Es kann sein `null` erst eine HTTP-Antwort empfangen wird.
 
 ## <a name="syntax"></a>Syntax
   
@@ -30,7 +30,7 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> Die `HttpWebRequest._HttpResponse` Feld ist intern und nicht direkt im Code verwendet werden sollen.
+> Die `HttpWebRequest._HttpResponse` Feld ist intern und nicht direkt in Ihrem Code verwendet werden sollen.
 > 
 > Microsoft unterstützt nicht die Verwendung dieses Felds in einer produktionsanwendung unter keinen Umständen.
 
@@ -40,4 +40,4 @@ internal HttpWebResponse _HttpResponse
 
 **Assembly:** System (in "System.dll")
 
-**.NET Framework-Versionen:** verfügbar seit 2.0.
+**.NET Framework-Versionen:** Verfügbar seit 2.0.

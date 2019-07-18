@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 11cf4f8d9457ebff385a601786dc97334f274324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813898"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662063"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>Generische Parameter, die als optionale Parametertypen verwendet werden, müssen eine Klassenbeschränkung aufweisen.
 Eine Prozedur ist mit einem optionalen Parameter deklariert, die einen Typparameter verwendet, der nicht zu einem Referenztyp eingeschränkt wird.  
@@ -25,7 +25,7 @@ Eine Prozedur ist mit einem optionalen Parameter deklariert, die einen Typparame
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Einschränken Sie den Typparameter nur den Verweistyp akzeptiert, oder verwenden Sie es nicht für den optionalen Parameter.  
+- Einschränken Sie den Typparameter nur den Verweistyp akzeptiert, oder verwenden Sie es nicht für den optionalen Parameter.  
   
 ## <a name="see-also"></a>Siehe auch
 

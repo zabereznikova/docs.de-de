@@ -6,19 +6,19 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: fe29bb14b85b74c249a5d9b7f8c2802ef991b13d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 891acd56939a2cff8eb377512a8a516f8a189034
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977811"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487428"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ und generische Typen (C#)
-[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen basieren auf generischen Typen, die mit Version 2.0 von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] eingeführt wurden. Sie benötigen kein ausführliches Wissen über Generics, um Abfragen schreiben zu können. Dennoch sollten Sie zwei grundlegende Konzepte verstehen:  
+[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen basieren auf generischen Typen, die mit Version 2.0 von .NET Framework eingeführt wurden. Sie benötigen kein ausführliches Wissen über Generics, um Abfragen schreiben zu können. Dennoch sollten Sie zwei grundlegende Konzepte verstehen:  
   
-1.  Wenn Sie eine Instanz einer generischen Auflistungsklasse wie etwa <xref:System.Collections.Generic.List%601> erstellen, ersetzen Sie das „T“ durch den Objekttyp, den die Liste enthalten wird. Eine Liste von Zeichenfolgen wird z.B. als `List<string>` und eine Liste von `Customer`-Objekten als `List<Customer>` ausgedrückt. Eine generische Liste ist stark typisiert und hat gegenüber Auflistungen, die ihre Elemente als <xref:System.Object> speichern, viele Vorzüge. Wenn Sie versuchen einen `Customer` in eine `List<string>` einzufügen, erhalten Sie zur Laufzeit eine Fehlermeldung. Es ist sehr leicht, generische Auflistungen zu verwenden, da Sie keine Laufzeitumwandlung von Typen durchführen müssen.  
+1. Wenn Sie eine Instanz einer generischen Auflistungsklasse wie etwa <xref:System.Collections.Generic.List%601> erstellen, ersetzen Sie das „T“ durch den Objekttyp, den die Liste enthalten wird. Eine Liste von Zeichenfolgen wird z.B. als `List<string>` und eine Liste von `Customer`-Objekten als `List<Customer>` ausgedrückt. Eine generische Liste ist stark typisiert und hat gegenüber Auflistungen, die ihre Elemente als <xref:System.Object> speichern, viele Vorzüge. Wenn Sie versuchen einen `Customer` in eine `List<string>` einzufügen, erhalten Sie zur Laufzeit eine Fehlermeldung. Es ist sehr leicht, generische Auflistungen zu verwenden, da Sie keine Laufzeitumwandlung von Typen durchführen müssen.  
   
-2.  <xref:System.Collections.Generic.IEnumerable%601> ist die Schnittstelle, die es ermöglicht, dass generische Auflistungsklassen mithilfe der Anweisung `foreach` aufgelistet werden. Generische Auflistungsklassen unterstützen <xref:System.Collections.Generic.IEnumerable%601>, während nicht generische Auflistungsklassen, wie etwa <xref:System.Collections.ArrayList>, <xref:System.Collections.IEnumerable> unterstützen.  
+2. <xref:System.Collections.Generic.IEnumerable%601> ist die Schnittstelle, die es ermöglicht, dass generische Auflistungsklassen mithilfe der Anweisung `foreach` aufgelistet werden. Generische Auflistungsklassen unterstützen <xref:System.Collections.Generic.IEnumerable%601>, während nicht generische Auflistungsklassen, wie etwa <xref:System.Collections.ArrayList>, <xref:System.Collections.IEnumerable> unterstützen.  
   
  Weitere Informationen zu Generics finden Sie unter [Generics](../../../../csharp/programming-guide/generics/index.md).  
   
@@ -38,5 +38,4 @@ ms.locfileid: "56977811"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Generics](../../../../csharp/programming-guide/generics/index.md)

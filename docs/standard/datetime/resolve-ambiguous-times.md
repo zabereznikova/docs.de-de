@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Auflösen von mehrdeutigen Zeiten'
+title: 'Vorgehensweise: Auflösen mehrdeutiger Zeiten'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 2cf5fb25-492c-4875-9245-98cac8348e97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aae3e5145d2fa85cd55fc5b1288ef4aaa0fef48f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c98f47613479c40804dce254261c560d829d91c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569292"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586368"
 ---
-# <a name="how-to-resolve-ambiguous-times"></a>Vorgehensweise: Auflösen von mehrdeutigen Zeiten
+# <a name="how-to-resolve-ambiguous-times"></a>Vorgehensweise: Auflösen mehrdeutiger Zeiten
 
 Eine mehrdeutige Zeit ist eine Zeit, die mehreren koordinierten Weltzeiten (UTC) zugeordnet werden kann. Dies ist der Fall, wenn die Uhrzeit umgestellt wird, beispielsweise während des Übergangs von der Sommerzeit einer Zeitzone auf die Standardzeit. Bei der Verarbeitung einer mehrdeutigen Zeit haben Sie eine der folgenden Möglichkeiten:
 
@@ -52,8 +52,6 @@ In diesem Beispiel erfolgen alle Verweise auf die lokale Zeitzone über die <xre
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
 Für dieses Beispiel benötigen Sie Folgendes:
-
-* Dass das Projekt ein Verweis auf "System.Core.dll" hinzugefügt werden.
 
 * Dass die <xref:System> Namespace importiert werden, mit der `using` -Anweisung (in C#-Code erforderlich).
 

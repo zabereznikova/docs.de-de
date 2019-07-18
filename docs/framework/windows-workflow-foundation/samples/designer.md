@@ -3,11 +3,11 @@ title: Designer
 ms.date: 03/30/2017
 ms.assetid: bf28aae3-ddfb-4a86-b55d-1957f08c4e10
 ms.openlocfilehash: de4ead51c7ccad864695f2ef6c46ac60dda42715
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913821"
 ---
 # <a name="designer"></a>Designer
 Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] verwendet wird.

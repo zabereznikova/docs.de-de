@@ -7,11 +7,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 330178e0-a375-4742-b662-b3080c89fa54
 ms.openlocfilehash: da76f528ea6087fd973bd267c67952ce8687dc86
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608410"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>Arithmetische Operatoren (Visual Basic)
 Im folgenden sind die arithmetischen Operatoren in Visual Basic.  

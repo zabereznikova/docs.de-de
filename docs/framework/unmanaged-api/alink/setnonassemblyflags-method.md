@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7716db814e86258c4cb81047b39142f33798782
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 27ad89f1910bc7bb08a23c9fdb0d50828fb8b5e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143194"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741437"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags-Methode
 Flags, die keine Assembly-spezifische sind festgelegt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetNonAssemblyFlags(  
     AssemblyFlags afFlags  
 ) PURE;  
@@ -48,4 +48,4 @@ HRESULT SetNonAssemblyFlags(
 
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

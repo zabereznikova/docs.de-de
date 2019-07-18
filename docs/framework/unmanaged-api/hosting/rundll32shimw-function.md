@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccfdf9ffab35f076b85c067c2b412020a5f541b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 569efa9d14ef10d8c5cf735091778a6c78882815
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231083"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781162"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW-Funktion
 Führt den angegebenen Befehl aus.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT RunDll32ShimW (  
     [in] HWND        hwnd,  
     [in] HINSTANCE   hinst,  

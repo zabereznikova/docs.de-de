@@ -9,12 +9,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 15111a185f73f60e77139d3a7faef7f32f4bf613
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8442438d06e8853e159b717b1f86fdce5c4b8f7
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677666"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422147"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C#-Referenz)
 
@@ -48,7 +48,6 @@ C# enthält auch die [Using-Anweisung](using-statement.md), die eine ähnliche F
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
 - [try-, throw- und catch-Anweisungen (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [Ausnahmebehandlungsanweisungen](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-catch](try-catch.md)
 - [Vorgehensweise: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

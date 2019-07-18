@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 18aff4d8-bde8-461b-9960-ccabb24e9d22
 ms.openlocfilehash: dd53c2fd16a82ce0f69a33e0b7d7ffef7815b91b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877148"
 ---
 # <a name="how-to-retrieve-many-objects-at-once"></a>Vorgehensweise: Gleichzeitiges Abrufen von zahlreichen Objekten
 Sie können in einer Abfrage viele Objekte abrufen, indem Sie <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> verwenden.  

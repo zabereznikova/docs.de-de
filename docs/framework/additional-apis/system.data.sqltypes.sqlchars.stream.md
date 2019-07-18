@@ -14,12 +14,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 4858d9f8878e5b56a0811edf92a2faa729775156
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 7485f462ec19a20a4bc6989c2f1b576b0f991009
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633997"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634394"
 ---
 # <a name="sqlcharsstream-property"></a>SqlChars.Stream-Eigenschaft
 

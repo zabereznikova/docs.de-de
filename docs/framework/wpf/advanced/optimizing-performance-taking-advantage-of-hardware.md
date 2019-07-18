@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163175"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238452"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimieren der Leistung: Nutzen der Vorteile der Hardware
 Die interne Architektur des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über zwei Renderingpipelines, Hardware und Software. Dieses Thema enthält Informationen über diese Renderingpipelines, die Ihnen bei Ihren Entscheidungen zur leistungsoptimierung von Anwendungen helfen.  
@@ -30,27 +30,27 @@ Die interne Architektur des [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 ### <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken  
  Es kann sehr schwierig sein, die Hardwarekonfiguration vorherzusagen, die Ihre Anwendung ausgeführt wird. Möglicherweise möchten jedoch einen Entwurf zu berücksichtigen, der können Ihre Anwendung nahtlos Features wechseln, wenn Sie auf andere Hardware ausgeführt, sodass sie alle Vorteile der einzelnen Konfigurationen anderer Hardware nutzen kann.  
   
- Um dies zu erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Funktionen, um die Grafik-Funktion von einem System zur Laufzeit zu bestimmen. Grafikfunktionen wird durch die Kategorisierung der Videokarte als eine der drei Ebenen der Funktion bestimmt. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt eine [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , mit der eine Anwendung die Renderingebene für die Funktion Abfragen können. Ihre Anwendung kann dann unterschiedliche Codepfade zur Laufzeit abhängig von der von der Hardware unterstützten Renderingebene ausführen.  
+ Um dies zu erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Funktionen, um die Grafik-Funktion von einem System zur Laufzeit zu bestimmen. Grafikfunktionen wird durch die Kategorisierung der Videokarte als eine der drei Ebenen der Funktion bestimmt. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt eine API, die einer Anwendung auf die Ebene der Funktion Abfragen ermöglicht. Ihre Anwendung kann dann unterschiedliche Codepfade zur Laufzeit abhängig von der von der Hardware unterstützten Renderingebene ausführen.  
   
  Die Funktionen der Grafikhardware, die sich am stärksten auf die Renderingebenen auswirken, sind:  
   
--   **Video-RAM**: Die Videospeichermenge der Grafikhardware bestimmt die Größe und Anzahl der Puffer, die für die Zusammensetzung von Grafiken verwendet werden kann.  
+- **Video-RAM**: Die Videospeichermenge der Grafikhardware bestimmt die Größe und Anzahl der Puffer, die für die Zusammensetzung von Grafiken verwendet werden kann.  
   
--   **Pixel-Shader**: Ein Pixel-Shader ist eine Grafikprozessorfunktion, die Auswirkungen auf eine Pro-Pixel-Basis berechnet. Abhängig von der Auflösung der angezeigten Grafiken kann es mehrere Millionen Pixel geben, die für jeden Frame des Displays verarbeitet werden müssen.  
+- **Pixel-Shader**: Ein Pixel-Shader ist eine Grafikprozessorfunktion, die Auswirkungen auf eine Pro-Pixel-Basis berechnet. Abhängig von der Auflösung der angezeigten Grafiken kann es mehrere Millionen Pixel geben, die für jeden Frame des Displays verarbeitet werden müssen.  
   
--   **Vertex-Shader**: Ein Vertex-Shader ist eine Grafikprozessorfunktion, die mathematische Operationen für die Vertexdaten des Objekts ausführt.  
+- **Vertex-Shader**: Ein Vertex-Shader ist eine Grafikprozessorfunktion, die mathematische Operationen für die Vertexdaten des Objekts ausführt.  
   
--   **Multitexturunterstützung**: Bei Multitexturunterstützung handelt es sich um die Möglichkeit, zwei oder mehr unterschiedliche Texturen während eines Mischvorgangs für ein 3D-Grafikobjekt anzuwenden. Der Grad der Multitexturunterstützung wird durch die Anzahl der Multitextureinheiten in der Grafikhardware bestimmt.  
+- **Multitexturunterstützung**: Bei Multitexturunterstützung handelt es sich um die Möglichkeit, zwei oder mehr unterschiedliche Texturen während eines Mischvorgangs für ein 3D-Grafikobjekt anzuwenden. Der Grad der Multitexturunterstützung wird durch die Anzahl der Multitextureinheiten in der Grafikhardware bestimmt.  
   
  Die Pixel-Shader, Vertex-Shader und multitextur-Features werden verwendet, um bestimmte definieren [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Versionsebenen, die wiederum verwendet werden, definieren Sie die unterschiedlichen Ebenen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Die Funktionen der Grafikhardware bestimmen die Renderingfunktion einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung. Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-System definiert drei Renderingebenen:  
   
--   **Renderingebene 0**: Keine Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] -Versionsebene ist kleiner als die Version 7.0.  
+- **Renderingebene 0**: Keine Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] -Versionsebene ist kleiner als die Version 7.0.  
   
--   **Renderingebene 1** Beschleunigung der partiellen Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] -Versionsebene ist größer als oder gleich 7.0 verwenden, und **weniger** als die Version 9.0.  
+- **Renderingebene 1** Beschleunigung der partiellen Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] -Versionsebene ist größer als oder gleich 7.0 verwenden, und **weniger** als die Version 9.0.  
   
--   **Renderingebene 2**: Die meisten Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Versionsebene ist größer als oder gleich der Version 9.0.  
+- **Renderingebene 2**: Die meisten Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Versionsebene ist größer als oder gleich der Version 9.0.  
   
  Weitere Informationen zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Renderingebenen finden Sie [Renderingebenen für Grafiken](graphics-rendering-tiers.md).  
   

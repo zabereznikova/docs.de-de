@@ -1,138 +1,627 @@
-items:
 - name: Sprachreferenz
-  href: index.md
   items:
-  - name: Angeben der Sprachversion
-    href: configure-language-version.md
-  - name: C#-Schlüsselwörter
-    href: keywords/index.md
-  - name: C#-Operatoren
-    href: operators/index.md
-  - name: C#-Sonderzeichen
-    href: tokens/index.md
-  - name: C#-Präprozessoranweisungen
-    href: preprocessor-directives/index.md
-  - name: C#-Compileroptionen
-    href: compiler-options/index.md
-  - name: C#-Compilerfehler
-    href: compiler-messages/index.md
-  - name: C# 6.0 draft specification (C# 6.0 - Entwurfsspezifikationen)
-    items:
-    - name: Einführung
-      href: ../../../_csharplang/spec/introduction.md
-    - name: Lexikalische Struktur
-      href: ../../../_csharplang/spec/lexical-structure.md
-    - name: Grundlegende Konzepte
-      href: ../../../_csharplang/spec/basic-concepts.md
-    - name: Typen
-      href: ../../../_csharplang/spec/types.md
-    - name: Variablen
-      href: ../../../_csharplang/spec/variables.md
-    - name: Konvertierungen
-      href: ../../../_csharplang/spec/conversions.md
-    - name: Ausdrücke
-      href: ../../../_csharplang/spec/expressions.md
-    - name: Anweisungen
-      href: ../../../_csharplang/spec/statements.md
-    - name: Namespaces
-      href: ../../../_csharplang/spec/namespaces.md
-    - name: Klassen
-      href: ../../../_csharplang/spec/classes.md
-    - name: Strukturen
-      href: ../../../_csharplang/spec/structs.md
-    - name: Arrays
-      href: ../../../_csharplang/spec/arrays.md
-    - name: Schnittstellen
-      href: ../../../_csharplang/spec/interfaces.md
-    - name: Enumerationen
-      href: ../../../_csharplang/spec/enums.md
-    - name: Delegaten
-      href: ../../../_csharplang/spec/delegates.md
-    - name: Ausnahmen
-      href: ../../../_csharplang/spec/exceptions.md
-    - name: Attribute
-      href: ../../../_csharplang/spec/attributes.md
-    - name: Unsicherer Code
-      href: ../../../_csharplang/spec/unsafe-code.md
-    - name: Dokumentationskommentare
-      href: ../../../_csharplang/spec/documentation-comments.md
-  - name: C# 7.0-Sprachvorschläge
-    items:
-    - name: Musterabgleich
-      href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
-    - name: Lokale Funktionen
-      href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
-    - name: out-Variablendeklaration
-      href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
-    - name: Throw-Ausdrücke
-      href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
-    - name: Binäre Literale
-      href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
-    - name: Zahlentrennzeichen
-      href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-  - name: C# 7.1-Sprachvorschläge
-    items:
-    - name: Async Main-Methode
-      href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
-    - name: Standardausdrücke
-      href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
-    - name: Ableiten von Tupelnamen
-      href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
-    - name: Musterabgleich mit Generics
-      href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-  - name: C# 7.2-Sprachvorschläge
-    items:
-    - name: Schreibgeschützte Verweise
-      href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
-    - name: Sicherheit zur Kompilierzeit für ref-ähnliche Typen
-      href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
-    - name: Nicht schließende benannte Argumente
-      href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
-    - name: Privat geschützt
-      href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
-    - name: Bedingter ref-Ausdruck
-      href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
-    - name: Trennzeichen für vorangestellte Ziffern
-      href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-  - name: C# 7.3-Sprachvorschläge
-    items:
-    - name: Nicht verwaltete generische Typeneinschränkungen
-      href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
-    - name: Für `fixed`-Felder zur Indizierung ist kein Anheften erforderlich unabhängig vom Kontext „verschiebbar/nicht verschiebbar“
-      href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
-    - name: Musterbasierte `fixed`-Anweisung
-      href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
-    - name: Lokale ref-Neuzuweisung
-      href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
-    - name: Stackalloc-Arrayinitialisierer
-      href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
-    - name: Auf Felder ausgerichtete Attribute für automatisch implementierte Eigenschaft
-      href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
-    - name: Ausdrucksvariablen in Initialisierern
-      href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
-    - name: Tupelgleichheit (==) und -ungleichheit (! =)
-      href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
-    - name: Verbesserte Überladungskandidaten
-      href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-  - name: C# 8.0-Sprachvorschläge
-    items:
-    - name: Nullverweistypen – Vorschlag
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
-    - name: Nullverweistypen – Spezifikation
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
-    - name: Rekursiver Musterabgleich
-      href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: Asynchrone Datenströme
-      href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
-    - name: Bereiche
-      href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
-    - name: Musterbasierte Verwendung und using-Deklarationen
-      href: ../../../_csharplang/proposals/csharp-8.0/using.md
-    - name: Koaleszierende NULL-Zuweisung
-      href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
-ms.openlocfilehash: a2c2b2377b093b542f9d45ae688de121db1c1959
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469303"
+    - name: 'C#-Programmiersprachenreferenz'
+      href: index.md
+    - name: Angeben der Sprachversion
+      href: configure-language-version.md
+    - name: 'C#-Schlüsselwörter'
+      items:
+        - name: Übersicht
+          href: keywords/index.md
+        - name: Integrierte Typen
+          items:
+            - name: Werttypen
+              items:
+                - name: Funktionen von Werttypen
+                  href: keywords/value-types.md
+                - name: bool
+                  href: keywords/bool.md
+                - name: Integrale numerische Typen
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  href: builtin-types/integral-numeric-types.md
+                - name: Numerische Gleitkommatypen
+                  displayName: 'float, decimal, double, rational, real'
+                  href: builtin-types/floating-point-numeric-types.md
+                - name: char
+                  href: keywords/char.md
+                - name: enum
+                  href: keywords/enum.md
+                - name: struct
+                  href: keywords/struct.md
+            - name: Verweistypen
+              items:
+                - name: Funktionen von Verweistypen
+                  href: keywords/reference-types.md
+                - name: class
+                  href: keywords/class.md
+                - name: Integrierte Referenztypen
+                  displayName: 'object, delegate, dynamic, string'
+                  href: builtin-types/reference-types.md
+                - name: interface
+                  href: keywords/interface.md
+            - name: void
+              href: keywords/void.md
+            - name: var
+              href: keywords/var.md
+            - name: Verweistabellen für Typen
+              items:
+                - name: Tabelle integrierter Typen
+                  href: keywords/built-in-types-table.md
+                - name: Tabelle der Werttypen
+                  href: keywords/value-types-table.md
+                - name: Tabelle für Standardwerte
+                  href: keywords/default-values-table.md
+                - name: Tabelle für implizite numerische Konvertierungen
+                  href: keywords/implicit-numeric-conversions-table.md
+                - name: Tabelle für explizite numerische Konvertierungen
+                  href: keywords/explicit-numeric-conversions-table.md
+                - name: Tabelle zur Formatierung numerischer Ergebnisse
+                  href: keywords/formatting-numeric-results-table.md
+        - name: Modifizierer
+          items:
+            - name: Zugriffsmodifizierer
+              items:
+                - name: Kurzreferenz
+                  href: keywords/access-modifiers.md
+                - name: Zugriffsebenen
+                  href: keywords/accessibility-levels.md
+                - name: Zugriffsdomäne
+                  href: keywords/accessibility-domain.md
+                - name: Einschränkungen bei der Verwendung von Zugriffsebenen
+                  href: keywords/restrictions-on-using-accessibility-levels.md
+                - name: internal
+                  href: keywords/internal.md
+                - name: private
+                  href: keywords/private.md
+                - name: protected
+                  href: keywords/protected.md
+                - name: public
+                  href: keywords/public.md
+                - name: protected internal
+                  href: keywords/protected-internal.md
+                - name: private protected
+                  href: keywords/private-protected.md
+            - name: abstract
+              href: keywords/abstract.md
+            - name: async
+              href: keywords/async.md
+            - name: const
+              href: keywords/const.md
+            - name: event
+              href: keywords/event.md
+            - name: extern
+              href: keywords/extern.md
+            - name: In (generischer Modifizierer)
+              href: keywords/in-generic-modifier.md
+            - name: new (Membermodifizierer)
+              href: keywords/new-modifier.md
+            - name: out (generischer Modifizierer)
+              href: keywords/out-generic-modifier.md
+            - name: override
+              href: keywords/override.md
+            - name: readonly
+              href: keywords/readonly.md
+            - name: sealed
+              href: keywords/sealed.md
+            - name: static
+              href: keywords/static.md
+            - name: unsafe
+              href: keywords/unsafe.md
+            - name: virtual
+              href: keywords/virtual.md
+            - name: volatile
+              href: keywords/volatile.md
+        - name: Anweisungsschlüsselwörter
+          items:
+            - name: Anweisungskategorien
+              href: keywords/statement-keywords.md
+            - name: Auswahlanweisungen
+              items:
+                - name: if-else
+                  href: keywords/if-else.md
+                - name: switch
+                  href: keywords/switch.md
+            - name: Iterationsanweisungen
+              items:
+                - name: do
+                  href: keywords/do.md
+                - name: for
+                  href: keywords/for.md
+                - name: 'foreach, in'
+                  href: keywords/foreach-in.md
+                - name: while
+                  href: keywords/while.md
+            - name: Sprunganweisungen
+              items:
+                - name: break
+                  href: keywords/break.md
+                - name: continue
+                  href: keywords/continue.md
+                - name: goto
+                  href: keywords/goto.md
+                - name: return
+                  href: keywords/return.md
+            - name: Ausnahmebehandlungsanweisungen
+              items:
+                - name: throw
+                  href: keywords/throw.md
+                - name: try-catch
+                  href: keywords/try-catch.md
+                - name: try-finally
+                  href: keywords/try-finally.md
+                - name: try-catch-finally
+                  href: keywords/try-catch-finally.md
+            - name: Checked und Unchecked
+              items:
+                - name: Übersicht
+                  href: keywords/checked-and-unchecked.md
+                - name: checked
+                  href: keywords/checked.md
+                - name: unchecked
+                  href: keywords/unchecked.md
+            - name: fixed-Anweisung
+              href: keywords/fixed-statement.md
+            - name: lock-Anweisung
+              href: keywords/lock-statement.md
+        - name: Methodenparameter
+          items:
+            - name: Übergeben von Parametern
+              href: keywords/method-parameters.md
+            - name: params
+              href: keywords/params.md
+            - name: Modifizierer für in-Parameter
+              href: keywords/in-parameter-modifier.md
+            - name: ref
+              href: keywords/ref.md
+            - name: Modifizierer für out-Parameter
+              href: keywords/out-parameter-modifier.md
+        - name: Namespaceschlüsselwörter
+          items:
+            - name: namespace
+              href: keywords/namespace.md
+            - name: using
+              items:
+                - name: Kontexte für using
+                  href: keywords/using.md
+                - name: using-Direktive
+                  href: keywords/using-directive.md
+                - name: using static-Direktive
+                  href: keywords/using-static.md
+                - name: using-Anweisung
+                  href: keywords/using-statement.md
+            - name: extern-Alias
+              href: keywords/extern-alias.md
+        - name: Typtest-Schlüsselwörter
+          items:
+            - name: echt
+              href: keywords/is.md
+        - name: Generische Schlüsselwörter für die Typeinschränkung
+          items:
+            - name: new-Einschränkung
+              href: keywords/new-constraint.md
+            - name: wo
+              href: keywords/where-generic-type-constraint.md
+        - name: Operatorschlüsselwörter
+          items:
+            - name: await
+              href: keywords/await.md
+            - name: sizeof
+              href: keywords/sizeof.md
+        - name: Zugriffsschlüsselwörter
+          items:
+            - name: Basis
+              href: keywords/base.md
+            - name: this
+              href: keywords/this.md
+        - name: Literalschlüsselwörter
+          items:
+            - name: 'NULL'
+              href: keywords/null.md
+            - name: 'true'
+              href: keywords/true-literal.md
+            - name: 'False'
+              href: keywords/false-literal.md
+            - name: default
+              href: keywords/default.md
+        - name: Kontextabhängige Schlüsselwörter
+          items:
+            - name: Kurzreferenz
+              href: keywords/contextual-keywords.md
+            - name: Hinzufügen
+              href: keywords/add.md
+            - name: get
+              href: keywords/get.md
+            - name: Global
+              href: keywords/global.md
+            - name: partial (Typ)
+              href: keywords/partial-type.md
+            - name: partial (Methode)
+              href: keywords/partial-method.md
+            - name: remove
+              href: keywords/remove.md
+            - name: Festlegen
+              href: keywords/set.md
+            - name: when (Filterbedingung)
+              href: keywords/when.md
+            - name: Wert
+              href: keywords/value.md
+            - name: yield
+              href: keywords/yield.md
+        - name: Abfrageschlüsselwörter
+          items:
+            - name: Kurzreferenz
+              href: keywords/query-keywords.md
+            - name: from-Klausel
+              href: keywords/from-clause.md
+            - name: where-Klausel
+              href: keywords/where-clause.md
+            - name: select-Klausel
+              href: keywords/select-clause.md
+            - name: group-Klausel
+              href: keywords/group-clause.md
+            - name: into
+              href: keywords/into.md
+            - name: orderby-Klausel
+              href: keywords/orderby-clause.md
+            - name: join-Klausel
+              href: keywords/join-clause.md
+            - name: let-Klausel
+              href: keywords/let-clause.md
+            - name: ascending
+              href: keywords/ascending.md
+            - name: descending
+              href: keywords/descending.md
+            - name: an
+              href: keywords/on.md
+            - name: equals
+              href: keywords/equals.md
+            - name: by
+              href: keywords/by.md
+            - name: in
+              href: keywords/in.md
+    - name: 'C#-Operatoren'
+      items:
+        - name: Übersicht
+          href: operators/index.md
+        - name: Arithmetische operatoren
+          href: operators/arithmetic-operators.md
+          displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+        - name: Logische boolesche Operatoren
+          href: operators/boolean-logical-operators.md
+          displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+        - name: Bitweise und Schiebeoperatoren
+          href: operators/bitwise-and-shift-operators.md
+          displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+        - name: Gleichheitsoperatoren
+          href: operators/equality-operators.md
+          displayName: '==, !='
+        - name: Vergleichsoperatoren
+          href: operators/comparison-operators.md
+          displayName: '>, <, >=, <=, greater, less'
+        - name: Operatoren für den Memberzugriff
+          href: operators/member-access-operators.md
+          displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
+        - name: Typtest- und Konvertierungsoperatoren
+          href: operators/type-testing-and-conversion-operators.md
+          displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), cast'
+        - name: Benutzerdefinierte Konvertierungsoperatoren
+          href: operators/user-defined-conversion-operators.md
+          displayName: 'implicit, explicit'
+        - name: Operatoren im Zusammenhang mit Zeigern
+          href: operators/pointer-related-operators.md
+          displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
+        - name: =-Operator
+          href: operators/assignment-operator.md
+          displayName: 'assignment, ref'
+        - name: + +=-Operatoren
+          href: operators/addition-operator.md
+          displayName: 'string concatenation, delegate combination, event subscription'
+        - name: '- -=-Operatoren'
+          href: operators/subtraction-operator.md
+          displayName: 'delegate removal, event unsubscription'
+        - name: '?:-Operator'
+          href: operators/conditional-operator.md
+          displayName: 'conditional, ternary, ref'
+        - name: '?? operator'
+          href: operators/null-coalescing-operator.md
+          displayName: null-coalescing
+        - name: =>-Operator
+          href: operators/lambda-operator.md
+          displayName: lambda
+        - name: '::-Operator'
+          href: operators/namespace-alias-qualifer.md
+          displayName: namespace alias qualifier
+        - name: nameof-Operator
+          href: operators/nameof.md
+        - name: new-Operator
+          href: operators/new-operator.md
+        - name: stackalloc-Operator
+          href: operators/stackalloc.md
+        - name: true- und false-Operatoren
+          href: operators/true-false-operators.md
+        - name: Überladen von Operatoren
+          href: operators/operator-overloading.md
+    - name: 'C#-Sonderzeichen'
+      items:
+        - name: Übersicht
+          href: tokens/index.md
+        - name: $ -- Zeichenfolgeninterpolation
+          href: tokens/interpolated.md
+        - name: '@ -- ausführlicher Bezeichner'
+          href: tokens/verbatim.md
+    - name: 'C#-Präprozessoranweisungen'
+      items:
+        - name: Übersicht
+          href: preprocessor-directives/index.md
+        - name: '#if'
+          href: preprocessor-directives/preprocessor-if.md
+        - name: '#else'
+          href: preprocessor-directives/preprocessor-else.md
+        - name: '#elif'
+          href: preprocessor-directives/preprocessor-elif.md
+        - name: '#endif'
+          href: preprocessor-directives/preprocessor-endif.md
+        - name: '#define'
+          href: preprocessor-directives/preprocessor-define.md
+        - name: '#undef'
+          href: preprocessor-directives/preprocessor-undef.md
+        - name: '#warning'
+          href: preprocessor-directives/preprocessor-warning.md
+        - name: '#error'
+          href: preprocessor-directives/preprocessor-error.md
+        - name: '#line'
+          href: preprocessor-directives/preprocessor-line.md
+        - name: '#region'
+          href: preprocessor-directives/preprocessor-region.md
+        - name: '#endregion'
+          href: preprocessor-directives/preprocessor-endregion.md
+        - name: '#pragma'
+          href: preprocessor-directives/preprocessor-pragma.md
+        - name: '#pragma warning'
+          href: preprocessor-directives/preprocessor-pragma-warning.md
+        - name: '#pragma checksum'
+          href: preprocessor-directives/preprocessor-pragma-checksum.md
+    - name: 'C#-Compileroptionen'
+      items:
+        - name: Übersicht
+          href: compiler-options/index.md
+        - name: Erstellen über die Befehlszeile mit csc.exe
+          href: compiler-options/command-line-building-with-csc-exe.md
+        - name: 'Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile'
+          href: compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
+        - name: 'C#-Compileroptionen nach Kategorien sortiert'
+          href: compiler-options/listed-by-category.md
+        - name: 'C#-Compileroptionen alphabetisch sortiert'
+          href: compiler-options/listed-alphabetically.md
+          items:
+            - name: '@'
+              href: compiler-options/response-file-compiler-option.md
+            - name: '-addmodule'
+              href: compiler-options/addmodule-compiler-option.md
+            - name: '-appconfig'
+              href: compiler-options/appconfig-compiler-option.md
+            - name: '-baseaddress'
+              href: compiler-options/baseaddress-compiler-option.md
+            - name: '-bugreport'
+              href: compiler-options/bugreport-compiler-option.md
+            - name: '-checked'
+              href: compiler-options/checked-compiler-option.md
+            - name: '-codepage'
+              href: compiler-options/codepage-compiler-option.md
+            - name: '-Debug'
+              href: compiler-options/debug-compiler-option.md
+            - name: '-define'
+              href: compiler-options/define-compiler-option.md
+            - name: '-delaysign'
+              href: compiler-options/delaysign-compiler-option.md
+            - name: '-deterministic'
+              href: compiler-options/deterministic-compiler-option.md
+            - name: '-doc'
+              href: compiler-options/doc-compiler-option.md
+            - name: '-errorreport'
+              href: compiler-options/errorreport-compiler-option.md
+            - name: '-filealign'
+              href: compiler-options/filealign-compiler-option.md
+            - name: '-fullpaths'
+              href: compiler-options/fullpaths-compiler-option.md
+            - name: '-help, -?'
+              href: compiler-options/help-compiler-option.md
+            - name: '-highentropyva'
+              href: compiler-options/highentropyva-compiler-option.md
+            - name: '-keycontainer'
+              href: compiler-options/keycontainer-compiler-option.md
+            - name: '-keyfile'
+              href: compiler-options/keyfile-compiler-option.md
+            - name: '-langversion'
+              href: compiler-options/langversion-compiler-option.md
+            - name: '-lib'
+              href: compiler-options/lib-compiler-option.md
+            - name: '-link'
+              href: compiler-options/link-compiler-option.md
+            - name: '-linkresource'
+              href: compiler-options/linkresource-compiler-option.md
+            - name: '-main'
+              href: compiler-options/main-compiler-option.md
+            - name: '-moduleassemblyname'
+              href: compiler-options/moduleassemblyname-compiler-option.md
+            - name: '-noconfig'
+              href: compiler-options/noconfig-compiler-option.md
+            - name: '-nologo'
+              href: compiler-options/nologo-compiler-option.md
+            - name: '-nostdlib'
+              href: compiler-options/nostdlib-compiler-option.md
+            - name: '-nowarn'
+              href: compiler-options/nowarn-compiler-option.md
+            - name: '-nowin32manifest'
+              href: compiler-options/nowin32manifest-compiler-option.md
+            - name: '-optimize'
+              href: compiler-options/optimize-compiler-option.md
+            - name: '-out'
+              href: compiler-options/out-compiler-option.md
+            - name: '-pathmap'
+              href: compiler-options/pathmap-compiler-option.md
+            - name: '-pdb'
+              href: compiler-options/pdb-compiler-option.md
+            - name: '-platform'
+              href: compiler-options/platform-compiler-option.md
+            - name: '-preferreduilang'
+              href: compiler-options/preferreduilang-compiler-option.md
+            - name: '-publicsign'
+              href: compiler-options/publicsign-compiler-option.md
+            - name: '-recurse'
+              href: compiler-options/recurse-compiler-option.md
+            - name: '-reference'
+              href: compiler-options/reference-compiler-option.md
+            - name: '-refout'
+              href: compiler-options/refout-compiler-option.md
+            - name: '-refonly'
+              href: compiler-options/refonly-compiler-option.md
+            - name: '-resource'
+              href: compiler-options/resource-compiler-option.md
+            - name: '-subsystemversion'
+              href: compiler-options/subsystemversion-compiler-option.md
+            - name: '-target'
+              href: compiler-options/target-compiler-option.md
+              items:
+                - name: '-target:appcontainerexe'
+                  href: compiler-options/target-appcontainerexe-compiler-option.md
+                - name: '-target:exe'
+                  href: compiler-options/target-exe-compiler-option.md
+                - name: '-target:library'
+                  href: compiler-options/target-library-compiler-option.md
+                - name: '-target:module'
+                  href: compiler-options/target-module-compiler-option.md
+                - name: '-target:winexe'
+                  href: compiler-options/target-winexe-compiler-option.md
+                - name: '-target:winmdobj'
+                  href: compiler-options/target-winmdobj-compiler-option.md
+            - name: '-unsafe'
+              href: compiler-options/unsafe-compiler-option.md
+            - name: '-utf8output'
+              href: compiler-options/utf8output-compiler-option.md
+            - name: '-warn'
+              href: compiler-options/warn-compiler-option.md
+            - name: '-warnaserror'
+              href: compiler-options/warnaserror-compiler-option.md
+            - name: '-win32icon'
+              href: compiler-options/win32icon-compiler-option.md
+            - name: '-win32manifest'
+              href: compiler-options/win32manifest-compiler-option.md
+            - name: '-win32res'
+              href: compiler-options/win32res-compiler-option.md
+    - name: 'C#-Compilerfehler'
+      href: compiler-messages/index.md
+    - name: 'C# 6.0 draft specification (C# 6.0 - Entwurfsspezifikationen)'
+      items:
+        - name: Einführung
+          href: ../../../_csharplang/spec/introduction.md
+        - name: Lexikalische Struktur
+          href: ../../../_csharplang/spec/lexical-structure.md
+        - name: Grundlegende Konzepte
+          href: ../../../_csharplang/spec/basic-concepts.md
+        - name: Typen
+          href: ../../../_csharplang/spec/types.md
+        - name: Variablen
+          href: ../../../_csharplang/spec/variables.md
+        - name: Konvertierungen
+          href: ../../../_csharplang/spec/conversions.md
+        - name: Ausdrücke
+          href: ../../../_csharplang/spec/expressions.md
+        - name: Anweisungen
+          href: ../../../_csharplang/spec/statements.md
+        - name: Namespaces
+          href: ../../../_csharplang/spec/namespaces.md
+        - name: Klassen
+          href: ../../../_csharplang/spec/classes.md
+        - name: Strukturen
+          href: ../../../_csharplang/spec/structs.md
+        - name: Arrays
+          href: ../../../_csharplang/spec/arrays.md
+        - name: Schnittstellen
+          href: ../../../_csharplang/spec/interfaces.md
+        - name: Enumerationen
+          href: ../../../_csharplang/spec/enums.md
+        - name: Delegaten
+          href: ../../../_csharplang/spec/delegates.md
+        - name: Ausnahmen
+          href: ../../../_csharplang/spec/exceptions.md
+        - name: Attribute
+          href: ../../../_csharplang/spec/attributes.md
+        - name: Unsicherer Code
+          href: ../../../_csharplang/spec/unsafe-code.md
+        - name: Dokumentationskommentare
+          href: ../../../_csharplang/spec/documentation-comments.md
+    - name: 'C# 7.0-Sprachvorschläge'
+      items:
+        - name: Musterabgleich
+          href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+        - name: Lokale Funktionen
+          href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
+        - name: out-Variablendeklaration
+          href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
+        - name: Throw-Ausdrücke
+          href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+        - name: Binäre Literale
+          href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+        - name: Zahlentrennzeichen
+          href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+    - name: 'C# 7.1-Sprachvorschläge'
+      items:
+        - name: Async Main-Methode
+          href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
+        - name: Standardausdrücke
+          href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+        - name: Ableiten von Tupelnamen
+          href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+        - name: Musterabgleich mit Generics
+          href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+    - name: 'C# 7.2-Sprachvorschläge'
+      items:
+        - name: Schreibgeschützte Verweise
+          href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+        - name: Sicherheit zur Kompilierzeit für ref-ähnliche Typen
+          href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
+        - name: Nicht schließende benannte Argumente
+          href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+        - name: Privat geschützt
+          href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
+        - name: Bedingter ref-Ausdruck
+          href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+        - name: Trennzeichen für vorangestellte Ziffern
+          href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+    - name: 'C# 7.3-Sprachvorschläge'
+      items:
+        - name: Nicht verwaltete generische Typeneinschränkungen
+          href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
+        - name: Für `fixed`-Felder zur Indizierung ist kein Anheften erforderlich unabhängig vom Kontext „verschiebbar/nicht verschiebbar“
+          href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+        - name: Musterbasierte `fixed`-Anweisung
+          href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+        - name: Lokale ref-Neuzuweisung
+          href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+        - name: Stackalloc-Arrayinitialisierer
+          href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+        - name: Auf Felder ausgerichtete Attribute für automatisch implementierte Eigenschaft
+          href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+        - name: Ausdrucksvariablen in Initialisierern
+          href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+        - name: Tupelgleichheit (==) und -ungleichheit (! =)
+          href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+        - name: Verbesserte Überladungskandidaten
+          href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+    - name: 'C# 8.0-Sprachvorschläge'
+      items:
+        - name: Nullverweistypen – Vorschlag
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+        - name: Nullverweistypen – Spezifikation
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+        - name: Rekursiver Musterabgleich
+          href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+        - name: Asynchrone Datenströme
+          href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
+        - name: Bereiche
+          href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
+        - name: Musterbasierte Verwendung und using-Deklarationen
+          href: ../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: Koaleszierende NULL-Zuweisung
+          href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md

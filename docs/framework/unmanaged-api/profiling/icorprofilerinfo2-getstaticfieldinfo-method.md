@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0106b2dd1151e302c0082b306d999ab5a1c4322
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 36cb8d5865cdc4c1c8e34671010ede25d531bacf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177748"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782258"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>ICorProfilerInfo2::GetStaticFieldInfo-Methode
 Ruft einen Wert, der die Art der statischen angibt, die für das angegebene Feld gilt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStaticFieldInfo (  
     [in] ClassID               classId,  
     [in] mdFieldDef            fieldToken,  

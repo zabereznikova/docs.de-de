@@ -3,26 +3,26 @@ title: Beispiele für die methodenbasierte Abfrage (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
 ms.openlocfilehash: 9419bd664a0e918b1ed40e5d468d01cf724f054d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772296"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Beispiele für die methodenbasierte Abfrage (LINQ to DataSet)
 Dieser Abschnitt enthält LINQ to DataSet--Programmierbeispiele in methodenbasierter Abfragesyntax, bei denen die Standardabfrageoperatoren zu verwenden. Die <xref:System.Data.DataSet> in diesen Beispielen verwendete werden ausgefüllt, indem Sie mit der `FillDataSet` -Methode, die im angegebenen [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Weitere Informationen finden Sie unter [Standard Query Operators Overview (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oder [Standard Query Operators Overview (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Projection](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+ [Projektion](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
  In den Beispielen in diesem Thema wird gezeigt, wie Sie mithilfe der Methoden <xref:System.Linq.Enumerable.Select%2A> und <xref:System.Linq.Enumerable.SelectMany%2A> ein <xref:System.Data.DataSet> abfragen können.  
   
  [Partitionierung](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
  In den Beispielen in diesem Thema wird gezeigt, wie Sie mit der <xref:System.Linq.Enumerable.Skip%2A>-Methode und der <xref:System.Linq.Enumerable.Take%2A>-Methode ein <xref:System.Data.DataSet> abfragen und die Ergebnisse partitionieren können.  
   
- [Sortieren](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+ [Sortierung](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
  In den Beispielen in diesem Thema wird gezeigt, wie Sie mithilfe der <xref:System.Linq.Enumerable.OrderBy%2A>-Methode, der <xref:System.Linq.Enumerable.OrderByDescending%2A>-Methode, der <xref:System.Linq.Enumerable.Reverse%2A>-Methode und der <xref:System.Linq.Enumerable.ThenByDescending%2A>-Methode ein <xref:System.Data.DataSet> abfragen und die Ergebnisse sortieren können.  
   
- [Mengenoperatoren](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+ [Set-Operatoren](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
  In den Beispielen in diesem Thema wird gezeigt, wie Sie mithilfe der Operatoren <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A> und <xref:System.Linq.Enumerable.Union%2A> wertbasierte Vergleichsoperationen für einen Satz von Datenzeilen ausführen können.  
   
  [Konvertierungsoperatoren](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
@@ -31,7 +31,7 @@ Dieser Abschnitt enthält LINQ to DataSet--Programmierbeispiele in methodenbasie
  [Elementoperatoren](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
  In den Beispielen in diesem Thema wird gezeigt, wie Sie mit der <xref:System.Linq.Enumerable.First%2A>-Methode und der <xref:System.Linq.Enumerable.ElementAt%2A>-Methode aus einem <xref:System.Data.DataRow><xref:System.Data.DataSet>-Elemente abrufen können.  
   
- [Aggregatoperatoren](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+ [Aggregierungsoperatoren](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
  In den Beispielen in diesem Thema wird gezeigt, wie Sie mit der <xref:System.Linq.Enumerable.Average%2A>-Methode, der <xref:System.Linq.Enumerable.Count%2A>-Methode, der <xref:System.Linq.Enumerable.Max%2A>-Methode, der <xref:System.Linq.Enumerable.Min%2A>-Methode und der <xref:System.Linq.Enumerable.Sum%2A>-Methode ein <xref:System.Data.DataSet> abfragen und die Ergebnisse aggregieren können.  
   
  [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  

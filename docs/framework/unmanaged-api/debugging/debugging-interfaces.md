@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ff589285d81a3febf887bba976b62a9ae4a573c8
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981607"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025946"
 ---
 # <a name="debugging-interfaces"></a>Debugschnittstellen
 In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das Debuggen eines Programms behandeln, das in der Common Language Runtime (CLR) ausgeführt wird.  
@@ -53,7 +53,7 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  Stellt Methoden bereit, um mit Arrays, Zeigern, Funktionszeigern und ByRef-Typen zu arbeiten. Diese Schnittstelle ist eine Erweiterung der `ICorDebugAppDomain`-Schnittstelle.  
   
  [ICorDebugAppDomain3-Schnittstelle](icordebugappdomain3-interface.md)\
- Stellt Methoden für die Arbeit mit [!INCLUDE[wrt](../../../../includes/wrt-md.md)]-Typen in einer Anwendungsdomäne bereit. Diese Schnittstelle ist eine Erweiterung der `ICorDebugAppDomain`- und `ICorDebugAppDomain2`-Schnittstellen.  
+ Stellt Methoden zum Arbeiten mit der Windows-Runtime-Typen in einer Anwendungsdomäne bereit. Diese Schnittstelle ist eine Erweiterung der `ICorDebugAppDomain`- und `ICorDebugAppDomain2`-Schnittstellen.  
   
  [ICorDebugAppDomain4-Schnittstelle](icordebugappdomain4-interface.md)\
  Erweitert logisch die [ICorDebugAppDomain](icordebugappdomain-interface.md) Schnittstelle, um ein verwaltetes Objekt über einen COM callable Wrapper abzurufen.  

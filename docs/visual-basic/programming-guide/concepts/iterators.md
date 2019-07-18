@@ -2,12 +2,12 @@
 title: Iteratoren (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 73561cf5bed583e2dbf853b7771b9e949a5c0267
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820848"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642285"
 ---
 # <a name="iterators-visual-basic"></a>Iteratoren (Visual Basic)
 Ein *Iterator* kann verwendet werden, um Auflistungen wie Listen und Arrays schrittweise durchzugehen.  
@@ -44,21 +44,21 @@ End Function
   
  **Inhalt**  
   
--   [Einfacher Iterator](#BKMK_SimpleIterator)  
+- [Einfacher Iterator](#BKMK_SimpleIterator)  
   
--   [Erstellen einer Auflistungsklasse](#BKMK_CollectionClass)  
+- [Erstellen einer Auflistungsklasse](#BKMK_CollectionClass)  
   
--   [Try-Blöcke](#BKMK_TryBlocks)  
+- [Try-Blöcke](#BKMK_TryBlocks)  
   
--   [Anonyme Methoden](#BKMK_AnonymousMethods)  
+- [Anonyme Methoden](#BKMK_AnonymousMethods)  
   
--   [Verwenden von Iteratoren mit einer generischen Liste](#BKMK_GenericList)  
+- [Verwenden von Iteratoren mit einer generischen Liste](#BKMK_GenericList)  
   
--   [Syntaxinformationen](#BKMK_SyntaxInformation)  
+- [Syntaxinformationen](#BKMK_SyntaxInformation)  
   
--   [Technische Implementierung](#BKMK_Technical)  
+- [Technische Implementierung](#BKMK_Technical)  
   
--   [Verwendung von Iteratoren](#BKMK_UseOfIterators)  
+- [Verwendung von Iteratoren](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  Alle Beispiele im Thema außer einfacher Iterator enthalten [Importe](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) -Anweisungen für die `System.Collections` und `System.Collections.Generic` Namespaces.  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> Verwendung von Iteratoren  
  Mit Iteratoren können Sie die Einfachheit einer `For Each`-Schleife beibehalten, wenn Sie komplexen Code verwenden müssen, um eine Listensequenz aufzufüllen. Das kann für Folgende Aktionen nützlich sein:  
   
--   Das Modifizieren der Listensequenz nach der ersten Iteration einer `For Each`-Schleife.  
+- Das Modifizieren der Listensequenz nach der ersten Iteration einer `For Each`-Schleife.  
   
--   Das Vermeiden des kompletten Ladens einer großen Liste vor der ersten Iteration einer `For Each`-Schleife. Ein Beispiel dafür ist das ausgelagerte Abrufen, um einen Batch von Tabellenzeilen zu laden. Ein anderes Beispiel ist die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>-Methode, die Iteratoren im .NET Framework implementiert.  
+- Das Vermeiden des kompletten Ladens einer großen Liste vor der ersten Iteration einer `For Each`-Schleife. Ein Beispiel dafür ist das ausgelagerte Abrufen, um einen Batch von Tabellenzeilen zu laden. Ein anderes Beispiel ist die <xref:System.IO.DirectoryInfo.EnumerateFiles%2A>-Methode, die Iteratoren im .NET Framework implementiert.  
   
--   Das Einschließen des Erstellens der Liste im Iterator. In der Iteratormethode können Sie die Liste erstellen und anschließend jedes Ergebnis in eine Schleife liefern.  
+- Das Einschließen des Erstellens der Liste im Iterator. In der Iteratormethode können Sie die Liste erstellen und anschließend jedes Ergebnis in eine Schleife liefern.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 805e1cc7d1def74a2a3e7b28afd052be1c4836c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194889"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596840"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungsquellen
-Die <xref:System.Diagnostics.TraceSource>-Klasse wird von Anwendungen verwendet, um Ablaufverfolgungen zu erzeugen, die der Anwendung zugeordnet werden können. <xref:System.Diagnostics.TraceSource> Stellt Methoden für die Ablaufverfolgung, mit die Sie problemlos Ablaufverfolgungsereignisse, Ablaufverfolgungsdaten und ablaufverfolgungen zu Informationszwecken ausgeben können. Die Ablaufverfolgungsausgabe von <xref:System.Diagnostics.TraceSource> kann mit oder ohne Konfigurationsdateien erstellt und initialisiert werden. Dieses Thema enthält Anweisungen für beide Varianten. Es wird jedoch empfohlen, Konfigurationsdateien zu verwenden, um die Neukonfiguration der durch die Ablaufverfolgungsquellen erzeugten Ablaufverfolgungen zur Laufzeit zu vereinfachen.  
+Die <xref:System.Diagnostics.TraceSource>-Klasse wird von Anwendungen verwendet, um Ablaufverfolgungen zu erzeugen, die der Anwendung zugeordnet werden können. <xref:System.Diagnostics.TraceSource> stellt Ablaufverfolgungsmethoden bereit, mit denen Sie Ereignisse und Daten einfach verfolgen und Ablaufverfolgungen zu Informationszwecken ausgeben können. Die Ablaufverfolgungsausgabe von <xref:System.Diagnostics.TraceSource> kann mit oder ohne Konfigurationsdateien erstellt und initialisiert werden. Dieses Thema enthält Anweisungen für beide Varianten. Es wird jedoch empfohlen, Konfigurationsdateien zu verwenden, um die Neukonfiguration der durch die Ablaufverfolgungsquellen erzeugten Ablaufverfolgungen zur Laufzeit zu vereinfachen.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>So erstellen und initialisieren Sie eine Ablaufverfolgungsquelle mit einer Konfigurationsdatei  
   
-1.  Erstellen Sie ein Visual Studio-Konsolenanwendungsprojekt, und ersetzen Sie den angegebenen Code durch den folgenden Code. Dieser Code protokolliert Fehler und Warnungen und gibt einige davon in der Konsole aus und einige davon in der myListener-Datei, die von den Einträgen in der Konfigurationsdatei erstellt wird.  
+1. Erstellen Sie ein Visual Studio-Konsolenanwendungsprojekt, und ersetzen Sie den angegebenen Code durch den folgenden Code. Dieser Code protokolliert Fehler und Warnungen und gibt einige davon in der Konsole aus und einige davon in der myListener-Datei, die von den Einträgen in der Konfigurationsdatei erstellt wird.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2.  Fügen Sie dem Projekt eine Anwendungskonfigurationsdatei hinzu, falls keine vorhanden ist, um die Ablaufverfolgungsquelle mit dem Namen `TraceSourceApp` aus Schritt 1 des Codebeispiels zu initialisieren.  
+2. Fügen Sie dem Projekt eine Anwendungskonfigurationsdatei hinzu, falls keine vorhanden ist, um die Ablaufverfolgungsquelle mit dem Namen `TraceSourceApp` aus Schritt 1 des Codebeispiels zu initialisieren.  
   
-3.  Ersetzen Sie den Standardinhalt der Konfigurationsdatei durch die folgenden Einstellungen, um einen Konsolen-Ablaufverfolgungslistener und einen Textwriter-Ablaufverfolgungslistener für die Ablaufverfolgungsquelle zu initialisieren, die in Schritt 1 erstellt wurde.  
+3. Ersetzen Sie den Standardinhalt der Konfigurationsdatei durch die folgenden Einstellungen, um einen Konsolen-Ablaufverfolgungslistener und einen Textwriter-Ablaufverfolgungslistener für die Ablaufverfolgungsquelle zu initialisieren, die in Schritt 1 erstellt wurde.  
   
     ```xml  
     <configuration>  
@@ -73,7 +73,7 @@ Die <xref:System.Diagnostics.TraceSource>-Klasse wird von Anwendungen verwendet,
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>So initialisieren Sie Ablaufverfolgungsquellen, Listener und Filter ohne eine Konfigurationsdatei  
   
--   Verwenden Sie den folgenden Beispielcode, um die Ablaufverfolgung mit einer Ablaufverfolgungsquelle zu aktivieren, ohne eine Konfigurationsdatei zu verwenden. Dieses Verfahren wird nicht empfohlen. Möglicherweise gibt es jedoch Situationen, in denen Sie sich nicht auf Konfigurationsdateien verlassen möchten, um die Ablaufverfolgung sicherzustellen.  
+- Verwenden Sie den folgenden Beispielcode, um die Ablaufverfolgung mit einer Ablaufverfolgungsquelle zu aktivieren, ohne eine Konfigurationsdatei zu verwenden. Dieses Verfahren wird nicht empfohlen. Möglicherweise gibt es jedoch Situationen, in denen Sie sich nicht auf Konfigurationsdateien verlassen möchten, um die Ablaufverfolgung sicherzustellen.  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

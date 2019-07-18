@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36cf8647b3caafeaae2db3c2fd53471496e922fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bb7861e33a02b994c4c29569a811f4e2f3c44cec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109538"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762312"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion-Methode
 Ruft Versionsinformationen zur Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetVersion(  
    [out] USHORT *pMajor,   
    [out] USHORT *pMinor,   
@@ -56,4 +56,4 @@ HRESULT GetVersion(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugMergedAssemblyRecord-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

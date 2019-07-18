@@ -9,11 +9,11 @@ ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789765"
 ---
 # <a name="ialink2-interface"></a>IALink2-Schnittstelle
 Ergänzt die [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) durch das Deklarieren von Methoden, die in neueren Metadatenschnittstellen, wie z. B. arbeiten [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). IALink2 deklariert darüber hinaus Methoden, die zusätzliche Nutzung über die ursprüngliche IALink Schnittstellen flexibler zu sein.  
@@ -43,6 +43,6 @@ Ergänzt die [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/ali
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
 ms.openlocfilehash: 6a63862d35f2c40289ea6445eb3dab8a2abe4a61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776232"
 ---
 # <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Vorgehensweise: Bestimmen, ob ein Freezable-Objekt fixiert ist
 Dieses Beispiel zeigt, wie Sie ermitteln, ob eine <xref:System.Windows.Freezable> Objekt eingefroren ist. Wenn Sie versuchen, ein fixiertes ändern <xref:System.Windows.Freezable> -Objekt löst eine <xref:System.InvalidOperationException>. Verwenden, um zu vermeiden, diese Ausnahme auslöst, die <xref:System.Windows.Freezable.IsFrozen%2A> Eigenschaft der <xref:System.Windows.Freezable> bestimmt, ob er fixiert ist.  
@@ -30,4 +30,4 @@ Dieses Beispiel zeigt, wie Sie ermitteln, ob eine <xref:System.Windows.Freezable
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.IsFrozen%2A>
 - [Übersicht über Freezable-Objekte](freezable-objects-overview.md)
-- [Gewusst wie-Themen](base-elements-how-to-topics.md)
+- [Themen zu Vorgehensweisen](base-elements-how-to-topics.md)

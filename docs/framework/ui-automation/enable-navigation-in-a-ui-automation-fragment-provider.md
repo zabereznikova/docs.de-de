@@ -9,11 +9,11 @@ helpviewer_keywords:
 - navigation, enabling in UI Automation provider
 ms.assetid: 3cb6092a-58c9-4ca0-84a5-0e54d5d00a0d
 ms.openlocfilehash: e97494e01a81ad75820cd3cffa51b5a508152355
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645915"
 ---
 # <a name="enable-navigation-in-a-ui-automation-fragment-provider"></a>Aktivieren der Navigation in einem Benutzeroberflächenautomatisierungs-Fragmentanbieter
 > [!NOTE]
@@ -30,4 +30,4 @@ ms.locfileid: "59175993"
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)

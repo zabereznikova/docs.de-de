@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9be512bab30e08ddeb7deadf8a29263e928549a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 77b164cdec0dd224042e4de3265d14a4991d60ba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134608"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771889"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW-Funktion
 Generiert einen Hashwert für den Inhalt der durch eine Unicode-Zeichenfolge angegebenen Datei.  
@@ -30,7 +30,7 @@ Generiert einen Hashwert für den Inhalt der durch eine Unicode-Zeichenfolge ang
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetHashFromFileW (   
     [in]  LPCWSTR   wszFilePath,  
     [in, out] unsigned int   *piHashAlg,  

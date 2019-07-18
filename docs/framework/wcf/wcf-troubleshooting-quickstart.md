@@ -5,33 +5,33 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 53e164bfdc27d99073cc893f98f332366091a753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168129"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881292"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Schnelleinstieg zur Problembehandlung in WCF
 In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden beim Entwickeln von WCF-Clients und -Diensten begegnet sind. Wenn Ihr spezifisches Problem nicht in dieser Liste enthalten ist, sollten Sie die Ablaufverfolgung für den Dienst konfigurieren. Dadurch wird eine Ablaufverfolgungsdatei generiert, die Sie im Ablaufverfolgungsdatei-Viewer anzeigen können, um detaillierte Informationen zu Ausnahmen im Dienst zu erhalten. Weitere Informationen zum Konfigurieren der Ablaufverfolgung finden Sie unter: [Konfigurieren der Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Weitere Informationen zum Ablaufverfolgungsdatei-Viewer finden Sie unter: [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
-1.  [Wenn ich versuche, auf einen WCF-Dienst zuzugreifen, erhalte ich nach der Installation von Windows 7 und IIS, die folgende Fehlermeldung angezeigt: HTTP-Fehler 404.3 – nicht gefunden.](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1. [Wenn ich versuche, auf einen WCF-Dienst zuzugreifen, erhalte ich nach der Installation von Windows 7 und IIS, die folgende Fehlermeldung angezeigt: HTTP-Fehler 404.3 – nicht gefunden.](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      HTTP Fehler 404.3 – Nicht gefunden. Die angeforderte Seite kann aufgrund einer Konfigurationserweiterung nicht angezeigt werden. Wenn es sich bei der Seite um ein Skript handelt, müssen Sie einen Handler hinzufügen. Wenn die Datei heruntergeladen werden soll, müssen Sie eine MIME-Zuordnung hinzufügen. Detaillierte Fehlerinformationen finden Sie unter dem Modul StaticFileModule.  
   
-2.  [Manchmal wird eine MessageSecurityException bei der zweiten Anforderung ausgelöst, wenn sich der Client nach der ersten Anforderung eine Weile im Leerlauf befunden hat. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [Manchmal wird eine MessageSecurityException bei der zweiten Anforderung ausgelöst, wenn sich der Client nach der ersten Anforderung eine Weile im Leerlauf befunden hat. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [Der Dienst lehnt nach einer Interaktion mit ungefähr 10 Clients weitere Clients ab. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [Der Dienst lehnt nach einer Interaktion mit ungefähr 10 Clients weitere Clients ab. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
-4.  [Kann ich die Dienstkonfiguration aus einer anderen Quelle laden als der Konfigurationsdatei der WCF-Anwendung?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4. [Kann ich die Dienstkonfiguration aus einer anderen Quelle laden als der Konfigurationsdatei der WCF-Anwendung?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [Dienst und Client funktionieren hervorragend, nicht jedoch, wenn sich der Client auf einem anderen Computer befindet. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [Dienst und Client funktionieren hervorragend, nicht jedoch, wenn sich der Client auf einem anderen Computer befindet. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [Wenn ich auslösen eine FaultException\<Ausnahme >, wenn der Typ eine Ausnahme ist, erhalten ich immer einen allgemeinen FaultException-Typ, auf dem Client und nicht den generischen Typ. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [Wenn ich auslösen eine FaultException\<Ausnahme >, wenn der Typ eine Ausnahme ist, erhalten ich immer einen allgemeinen FaultException-Typ, auf dem Client und nicht den generischen Typ. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [Unidirektionale und Anforderung-Antwort-Vorgänge scheinen nahezu mit der gleichen Geschwindigkeit zurückgegeben zu werden, wenn die Antwort keine Daten enthält. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [Unidirektionale und Anforderung-Antwort-Vorgänge scheinen nahezu mit der gleichen Geschwindigkeit zurückgegeben zu werden, wenn die Antwort keine Daten enthält. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [Ich verwende ein X.509-Zertifikat mit dem Dienst und erhalte eine System.Security.Cryptography.CryptographicException. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [Ich verwende ein X.509-Zertifikat mit dem Dienst und erhalte eine System.Security.Cryptography.CryptographicException. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
 9. [Ich habe den ersten Parameter eines Vorgangs von Groß- in Kleinbuchstaben geändert, und der Client löst nun eine Ausnahme aus. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>Dienst und Client funktionieren hervorragend, nicht jedoch, wenn sich der Client auf einem anderen Computer befindet. Woran liegt das?  
  Je nach Ausnahme können verschiedene Probleme vorliegen:  
   
--   Möglicherweise müssen Sie die Clientendpunktadressen von localhost auf den Hostnamen ändern.  
+- Möglicherweise müssen Sie die Clientendpunktadressen von localhost auf den Hostnamen ändern.  
   
--   Sie müssen gegebenenfalls den Anschluss zur Anwendung öffnen. Weitere Informationen finden Sie unter [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) in den SDK-Beispielen.  
+- Sie müssen gegebenenfalls den Anschluss zur Anwendung öffnen. Weitere Informationen finden Sie unter [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) in den SDK-Beispielen.  
   
--   Weiteren möglichen Problemen finden Sie im Thema Beispiele [Ausführen der Windows Communication Foundation-Beispiele](./samples/running-the-samples.md).  
+- Weiteren möglichen Problemen finden Sie im Thema Beispiele [Ausführen der Windows Communication Foundation-Beispiele](./samples/running-the-samples.md).  
   
--   Wenn der Client Windows-Anmeldeinformationen verwendet und es sich bei der Ausnahme um <xref:System.ServiceModel.Security.SecurityNegotiationException>handelt, konfigurieren Sie Kerberos wie folgt.  
+- Wenn der Client Windows-Anmeldeinformationen verwendet und es sich bei der Ausnahme um <xref:System.ServiceModel.Security.SecurityNegotiationException>handelt, konfigurieren Sie Kerberos wie folgt.  
   
-    1.  Fügen Sie die Anmeldeinformationen für die Identität dem Endpunktelement in der Datei App.config des Clients hinzu:  
+    1. Fügen Sie die Anmeldeinformationen für die Identität dem Endpunktelement in der Datei App.config des Clients hinzu:  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  Führen Sie den selbst gehosteten Dienst unter dem System- oder dem Netzwerkdienstkonto aus. Sie können diesen Befehl ausführen, um unter dem Systemkonto ein Befehlsfenster zu erstellen:  
+    2. Führen Sie den selbst gehosteten Dienst unter dem System- oder dem Netzwerkdienstkonto aus. Sie können diesen Befehl ausführen, um unter dem Systemkonto ein Befehlsfenster zu erstellen:  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  Hosten Sie den Dienst unter Internetinformationsdienste (IIS). Standardmäßig wird hier das Dienstprinzipalnamenkonto verwendet.  
+    3. Hosten Sie den Dienst unter Internetinformationsdienste (IIS). Standardmäßig wird hier das Dienstprinzipalnamenkonto verwendet.  
   
-    4.  Registrieren Sie mit SetSPN einen neuen Dienstprinzipalnamen bei der Domäne. Sie müssen dazu ein Domänenadministrator sein.  
+    4. Registrieren Sie mit SetSPN einen neuen Dienstprinzipalnamen bei der Domäne. Sie müssen dazu ein Domänenadministrator sein.  
   
  Weitere Informationen zum Kerberos-Protokoll finden Sie unter [in WCF verwendete Sicherheitsbegriffe](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md) und:  
   
--   [Debuggen von Windows-Authentifizierungsfehlern](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Debuggen von Windows-Authentifizierungsfehlern](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Registrieren von Kerberos-Dienstprinzipalnamen mithilfe von HTTP.SYS.](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Registrieren von Kerberos-Dienstprinzipalnamen mithilfe von HTTP.SYS.](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Informationen zu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Informationen zu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Wenn ich auslösen eine FaultException\<Ausnahme >, wenn der Typ eine Ausnahme ist, erhalten ich immer einen allgemeinen FaultException-Typ, auf dem Client und nicht den generischen Typ. Woran liegt das?  
  Erstellen Sie unbedingt einen eigenen benutzerdefinierten Fehlerdatentyp und deklarieren Sie ihn als Detailtyp in ihrem Fehlervertrag. Das Problem entsteht, weil Folgendes geschieht, wenn vom System bereitgestellter Ausnahmetypen verwendet werden:  
   
--   Eine Typabhängigkeit wird erstellt, die eine der größten Stärken dienstorientierter Anwendungen entfernt.  
+- Eine Typabhängigkeit wird erstellt, die eine der größten Stärken dienstorientierter Anwendungen entfernt.  
   
--   Ausnahmen werden nicht notwendigerweise standardmäßig serialisiert. Einige – wie <xref:System.Security.SecurityException>– sind vielleicht überhaupt nicht serialisierbar.  
+- Ausnahmen werden nicht notwendigerweise standardmäßig serialisiert. Einige – wie <xref:System.Security.SecurityException>– sind vielleicht überhaupt nicht serialisierbar.  
   
--   Interne Implementierungsdetails werden für Clients verfügbar gemacht. Weitere Informationen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+- Interne Implementierungsdetails werden für Clients verfügbar gemacht. Weitere Informationen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
  Wenn Sie eine Anwendung debuggen, können Sie jedoch mit der <xref:System.ServiceModel.Description.ServiceDebugBehavior> -Klasse Ausnahmeinformationen serialisieren und an den Client zurückgeben.  
   
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Was ist die Basisadresse? Worin besteht die Beziehung zu einer Endpunktadresse?  
- Eine Basisadresse ist die Stammadresse für eine <xref:System.ServiceModel.ServiceHost> -Klasse. Wenn Sie der Dienstkonfiguration eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior> -Klasse hinzufügen, werden standardmäßig die WSDL (Web Services Description Language) für alle vom Host veröffentlichten Endpunkte aus der HTTP-Basisadresse und alle relativen Adressen, die für das Metadatenverhalten bereitgestellt werden, sowie "?wsdl" abgerufen. Wenn Sie mit [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] und IIS vertraut sind, ist die Basisadresse mit dem virtuellen Verzeichnis vergleichbar.  
+ Eine Basisadresse ist die Stammadresse für eine <xref:System.ServiceModel.ServiceHost> -Klasse. Wenn Sie der Dienstkonfiguration eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior> -Klasse hinzufügen, werden standardmäßig die WSDL (Web Services Description Language) für alle vom Host veröffentlichten Endpunkte aus der HTTP-Basisadresse und alle relativen Adressen, die für das Metadatenverhalten bereitgestellt werden, sowie "?wsdl" abgerufen. Wenn Sie mit ASP.NET und IIS vertraut sind, ist die Basisadresse mit dem virtuellen Verzeichnis entspricht.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Gemeinsames Verwenden eines Ports durch einen Dienstendpunkt und einen mex-Endpunkt mithilfe der NetTcpBinding  
  Wenn Sie die Basisadresse für einen Dienst als net.tcp://MyServer:8080/MyService angeben und die folgenden Endpunkte hinzufügen:  

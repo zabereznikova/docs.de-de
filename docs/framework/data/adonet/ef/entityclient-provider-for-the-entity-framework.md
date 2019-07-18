@@ -2,18 +2,18 @@
 title: EntityClient-Anbieter für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 17f18753cc64bce5901c9f57181a8c08733f0cfc
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169675"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878806"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>EntityClient-Anbieter für Entity Framework
 Der EntityClient-Anbieter ist ein von Entity Framework-Anwendungen verwendeter Datenanbieter für den Zugriff auf Daten, die in einem konzeptionellen Modell beschrieben sind. Weitere Informationen zu konzeptionellen Modellen finden Sie unter [modellieren und zuordnen](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient greift mithilfe von anderen .NET Framework-Datenanbietern auf die Datenquelle zu. Beim Zugreifen (SqlClient) auf eine SQL Server-Datenbank verwendet EntityClient z. B. den .NET Framework-Datenanbieter für SQL Server. Weitere Informationen zu den SqlClient-Anbieter, finden Sie unter [SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Der EntityClient-Anbieter ist im <xref:System.Data.EntityClient>-Namespace implementiert.  
   
 ## <a name="managing-connections"></a>Verwalten von Verbindungen  
- Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] baut auf speicherspezifischen [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Datenanbieter durch die Bereitstellung einer <xref:System.Data.EntityClient.EntityConnection> zu einem zugrunde liegenden Datenanbieter und der relationalen Datenbank. Zum Erstellen einer <xref:System.Data.EntityClient.EntityConnection> -Objekts muss auf einen Satz von Metadaten zu verweisen, die notwendigen Modelle und Zuordnung sowie einen speicherspezifischen-Anbieterzeichenfolge an Namen und eine Verbindung enthält. Nach der <xref:System.Data.EntityClient.EntityConnection> ist vorhanden, können Entitäten über die aus dem konzeptionellen Modell generierten Klassen zugegriffen werden.  
+ Die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] baut auf speicherspezifischen ADO.NET-DATENANBIETERN entwickelt, durch die Bereitstellung einer <xref:System.Data.EntityClient.EntityConnection> zu einem zugrunde liegenden Datenanbieter und der relationalen Datenbank. Zum Erstellen einer <xref:System.Data.EntityClient.EntityConnection> -Objekts muss auf einen Satz von Metadaten zu verweisen, die notwendigen Modelle und Zuordnung sowie einen speicherspezifischen-Anbieterzeichenfolge an Namen und eine Verbindung enthält. Nach der <xref:System.Data.EntityClient.EntityConnection> ist vorhanden, können Entitäten über die aus dem konzeptionellen Modell generierten Klassen zugegriffen werden.  
   
  In der Datei app.config kann eine Verbindungszeichenfolge angegeben werden.  
   
@@ -32,7 +32,7 @@ cmd.CommandText = @"SELECT VALUE p
 ```
   
 ## <a name="executing-queries"></a>Ausführen von Abfragen  
- Wenn eine Abfrage ausgeführt wird, wird sie analysiert und in eine kanonische Befehlsstruktur konvertiert. Die darauf folgende Verarbeitung wird mit der Befehlsstruktur ausgeführt. Die Befehlsstruktur ermöglicht die Kommunikation zwischen dem <xref:System.Data.EntityClient> und dem zugrunde liegenden [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]-Datenanbieter wie <xref:System.Data.SqlClient>.  
+ Wenn eine Abfrage ausgeführt wird, wird sie analysiert und in eine kanonische Befehlsstruktur konvertiert. Die darauf folgende Verarbeitung wird mit der Befehlsstruktur ausgeführt. Die Befehlsstruktur ist das Mittel der Kommunikation zwischen den <xref:System.Data.EntityClient> und der zugrunde liegenden .NET Framework-Datenanbieter, wie z. B. <xref:System.Data.SqlClient>.  
   
  Der <xref:System.Data.EntityClient.EntityDataReader> stellt die Ergebnisse eines für ein konzeptionelles Modell ausgeführten <xref:System.Data.EntityClient.EntityCommand> zur Verfügung. Zum Ausführen des Befehls, das den <xref:System.Data.EntityClient.EntityDataReader> zurückgibt, rufen Sie <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A> auf. Der <xref:System.Data.EntityClient.EntityDataReader> implementiert <xref:System.Data.IExtendedDataRecord>, um umfangreiche strukturierte Ergebnisse zu beschreiben.  
   
@@ -54,9 +54,9 @@ cmd.CommandText = @"SELECT VALUE p
   
  [Vorgehensweise: Ausführen einer Abfrage, die geschachtelte Auflistungen zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [Vorgehensweise: Ausführen einer parametrisierten Entity SQL-Abfrage mithilfe von „EntityCommand“](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [Vorgehensweise: Ausführen einer parametrisierten Entity SQL-Abfrage mithilfe von EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [Vorgehensweise: Ausführen einer parametrisierten gespeicherten Prozedur mithilfe von „EntityCommand“](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [Vorgehensweise: Ausführen einer parametrisierten gespeicherten Prozedur mithilfe von EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
  [Vorgehensweise: Ausführen einer polymorphen Abfrage](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   

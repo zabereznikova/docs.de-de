@@ -10,11 +10,11 @@ helpviewer_keywords:
 - UI Automation, adding content to text boxes
 ms.assetid: 8bdd1a73-1ecb-4a05-a891-a7827ebb767f
 ms.openlocfilehash: 9183aecdc47d54aef26d5cdca8ea11d8398be732
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61610074"
 ---
 # <a name="add-content-to-a-text-box-using-ui-automation"></a>Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung
 > [!NOTE]

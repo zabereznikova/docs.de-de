@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc265e4a7ceec291d645346bb012e2ed4600d22
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 145e6b8891735c904aa98a36ccfd27958bdf788d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890383"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648617"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshalling von Delegaten als Rückrufmethode
 In diesem Beispiel wird veranschaulicht, wie Delegaten an eine nicht verwaltete Funktion übergeben werden, die Funktionszeiger erwartet. Ein Delegat ist eine Klasse, die einen Verweis auf eine Methode enthalten kann, und gleichbedeutend mit einem typsicheren Funktionszeiger oder einer Rückruffunktion ist.
@@ -26,13 +26,13 @@ In diesem Beispiel wird veranschaulicht, wie Delegaten an eine nicht verwaltete 
 
 Das Rückrufbeispiel verwendet die folgenden nicht verwalteten Funktionen, die jeweils zusammen mit ihrer ursprünglichen Funktionsdeklaration aufgeführt werden:
 
--   `TestCallBack` exportiert aus „PinvokeLib.dll“.
+- `TestCallBack` aus „PinvokeLib.dll“ exportiert.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   `TestCallBack2` exportiert aus „PinvokeLib.dll“.
+- `TestCallBack2` aus „PinvokeLib.dll“ exportiert.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);
@@ -53,6 +53,7 @@ Die `LibWrap`-Klasse in diesem Beispiel enthält verwaltete Prototypen für die 
 [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Verschiedene Marshallingbeispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [Datentypen für den Plattformaufruf](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
-- [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)
+- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)

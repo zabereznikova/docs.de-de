@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 724db8c5c8dbb5bf3ff8bc7202a60397180b7b38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 83bb52f7f2035605914e2fe72ce2daf78de5bc1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183390"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749904"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop-Methode
 Beendet alle Threads, die verwalteten Code im Prozess ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Stop (  
     [in] DWORD dwTimeoutIgnored  
 );  

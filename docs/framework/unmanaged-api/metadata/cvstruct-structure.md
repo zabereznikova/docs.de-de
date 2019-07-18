@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a5f06b3f79fed5dac5a6f07650e4fabd0aa5867
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b3e35cea4601c8e51eb3021dc9f598ddb881afe0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142167"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750720"
 ---
 # <a name="cvstruct-structure"></a>CVStruct-Struktur
 Enthält Informationen, die bei der Installation eines Moduls oder eines zusammengesetzten Abbilds verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct {  
     short Major;  
     short Minor;  

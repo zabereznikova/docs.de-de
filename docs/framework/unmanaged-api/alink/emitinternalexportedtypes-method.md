@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c196bcc159b18b9dc04329d817ebe16e07bb8bb7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 15174480c4345f2514572701a5525f0f192ad120
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218250"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742101"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes-Methode
 Gibt die Typen, die hinzugefügt werden, auf die Assembly aus. Rufen Sie diese Methode aus, nachdem bekannt, dass die interne Typen hinzugefügt wurden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EmitInternalExportedTypes(  
     mdAssembly AssemblyID  
 ) PURE;  
@@ -49,4 +49,4 @@ HRESULT EmitInternalExportedTypes(
 
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

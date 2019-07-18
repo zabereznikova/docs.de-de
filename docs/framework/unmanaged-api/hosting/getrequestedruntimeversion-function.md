@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ee737f4c6d34e77996f5ba08ce4d84132a99238
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4083440903e6147ae645f2d6420f19160471841c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207330"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779571"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion-Funktion
 Ruft die Versionsnummer der von der angegebenen Anwendung angeforderten die common Language Runtime (CLR) ab. Wenn diese Version nicht installiert ist, wird die letzte installierte Version vor der angeforderten Version abgerufen.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeVersion (  
     [in]  LPWSTR  pExe,   
     [out] LPWSTR  pVersion,   
@@ -60,7 +60,7 @@ HRESULT GetRequestedRuntimeVersion (
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
 |ERROR_INSUFFICIENT_BUFFER|Die Version-Puffer ist nicht groß genug zum Speichern der Versionszeichenfolge.|  
-|E_POINTER|`pdwLength` ist null.|  
+|E_POINTER|`pdwLength` ist NULL.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

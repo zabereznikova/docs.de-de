@@ -2,19 +2,19 @@
 title: Der Quellordner ist nicht vorhanden
 ms.date: 07/20/2015
 ms.assetid: c891d006-b721-4d93-b57d-ce51d91fca00
-ms.openlocfilehash: 6194e6e92a69ce3b81fe554ae49934dde075fb99
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 17d4575a59e795a901732efb8970ac8b2e902f2a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047396"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620337"
 ---
 # <a name="the-source-folder-does-not-exist"></a>Der Quellordner ist nicht vorhanden
 Sie haben versucht, einen Vorgang auszuführen, der auf einen nicht vorhandenen Quellordner verweist. Dies kann das Ergebnis eines falsch angegebenen Dateipfads sein.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Vergewissern Sie sich, dass Sie den richtigen Pfad verwenden, insbesondere, wenn Sie relative Pfade verwenden.  
+- Vergewissern Sie sich, dass Sie den richtigen Pfad verwenden, insbesondere, wenn Sie relative Pfade verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
 

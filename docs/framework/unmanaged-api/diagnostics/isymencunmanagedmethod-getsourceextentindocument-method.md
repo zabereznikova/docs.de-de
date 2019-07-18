@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 442584cffe4b4ae44702892587e261d41abf4e8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e4948a853434b14845983addb0e6fa4012279084
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150422"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776870"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument-Methode
 Ruft Starten des kleinsten und größten End Zeile für die Methode in einem bestimmten Dokument.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSourceExtentInDocument(  
     [in]  ISymUnmanagedDocument *document,  
     [out] ULONG32* pstartLine,  

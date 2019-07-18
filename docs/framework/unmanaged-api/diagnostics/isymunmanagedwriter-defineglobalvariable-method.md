@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66efe5ae1fe2154684d2ac6791895b7fcbe4f7b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5bc14c36563badb73ac9f9d955ea0c00f5330b4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225916"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777358"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable-Methode
 Definiert eine einzelne globale Variable.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineGlobalVariable(  
     [in] const WCHAR  *name,  
     [in] ULONG32      attributes,  

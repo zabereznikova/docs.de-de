@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 60c4dac76b4a7868da9143cab1433ee93f97c7d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191899"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636812"
 ---
 # <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Vorgehensweise: Reagieren auf das Klicken in das DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "59191899"
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Erkennen, wann der Benutzer wählt aus der das DataGrid-Steuerelement eine andere Zelle  
   
--   In der <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> -Ereignishandler, Schreiben Sie Code angemessen reagieren.  
+- In der <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> -Ereignishandler, Schreiben Sie Code angemessen reagieren.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -56,7 +56,7 @@ ms.locfileid: "59191899"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Um zu bestimmen, welcher Teil das DataGrid-Steuerelement der Benutzer geklickt hat.  
   
--   Rufen Sie die <xref:System.Windows.Forms.DataGrid.HitTest%2A> -Methode in einem geeigneten Ereignishandler, z.B. für die <xref:System.Windows.Forms.Control.MouseDown> oder <xref:System.Windows.Forms.Control.Click> Ereignis.  
+- Rufen Sie die <xref:System.Windows.Forms.DataGrid.HitTest%2A> -Methode in einem geeigneten Ereignishandler, z.B. für die <xref:System.Windows.Forms.Control.MouseDown> oder <xref:System.Windows.Forms.Control.Click> Ereignis.  
   
      Die <xref:System.Windows.Forms.DataGrid.HitTest%2A> Methode gibt eine <xref:System.Windows.Forms.DataGrid.HitTestInfo> -Objekt, das die Zeile und Spalte des Bereichs geklickt enthält.  
   
@@ -143,4 +143,4 @@ ms.locfileid: "59191899"
 ## <a name="see-also"></a>Siehe auch
 
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
-- [Vorgehensweise: Ändern der angezeigten Daten im DataGrid-Steuerelement in Windows Forms zur Laufzeit](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Vorgehensweise: Ändern der angezeigten Daten zur Laufzeit in das DataGrid-Steuerelement in Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)

@@ -6,12 +6,12 @@ title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464514"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589991"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -54,7 +54,7 @@ ms.locfileid: "58464514"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.7.2">
+                <a href="/dotnet/api/?view=netframework-4.8">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -88,7 +88,7 @@ ms.locfileid: "58464514"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/net.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/dotnet.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -107,7 +107,7 @@ ms.locfileid: "58464514"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/netcore.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/dotnet-core.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -128,7 +128,7 @@ ms.locfileid: "58464514"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/netframework.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/dotnet-framework.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -148,7 +148,7 @@ ms.locfileid: "58464514"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/xamarin.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/xamarin-icon.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -168,7 +168,7 @@ ms.locfileid: "58464514"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/csharp.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/csharp-icon.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -188,7 +188,7 @@ ms.locfileid: "58464514"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/fsharp.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/fsharp-icon.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -207,7 +207,7 @@ ms.locfileid: "58464514"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/vb.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/visual-basic.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -226,7 +226,7 @@ ms.locfileid: "58464514"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/images/hub/mldotnet.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/machine-learning-dotnet.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -235,6 +235,25 @@ ms.locfileid: "58464514"
                                                 <p><a href="/dotnet/machine-learning/resources">Ressourcen</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Glossar</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET-API-Referenz</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                            <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="/dotnet/images/hub/netspark.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3><a href="/dotnet/spark">Leitfaden für .NET für Apache Spark</a></h3>
+                                                <p><a href="/dotnet/spark/tutorials">Tutorials</a></p>
+                                                <p><a href="/dotnet/spark/resources">Ressourcen</a></p>
+                                                <p><a href="/dotnet/api/?view=spark-dotnet">API-Referenz zu .NET für Apache Spark</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -582,7 +601,7 @@ ms.locfileid: "58464514"
                         <a href="#gaming">Gaming</a>
                         <ul id="gaming" class="cardsC">
                             <li>
-                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/">
+                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -716,6 +735,25 @@ ms.locfileid: "58464514"
                                                 <div class="cardText">
                                                     <h3>Azure Machine Learning</h3>
                                                     <p>Machen Sie KI mit dieser skalierbaren und zuverlässigen End-to-End-Plattform mit Experimentieren und Modellverwaltung für alle verfügbar.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dotnet/spark/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img src="/dotnet/images/hub/swimlane-net-spark.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>.NET für Apache Spark</h3>
+                                                    <p>Verarbeitet Datenbatches, Echtzeitdatenströme, Machine Learning-Daten und Ad-hoc-Abfragen überall dort, wo Sie .NET-Code schreiben.</p>
                                                 </div>
                                             </div>
                                         </div>

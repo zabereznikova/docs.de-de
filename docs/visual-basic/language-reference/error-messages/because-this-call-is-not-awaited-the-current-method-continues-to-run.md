@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 5c8767db154c79d9e3b37a22410ac1e4705b7a44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4704fb09e9519c14f29365b2cf7f536bbbc5dca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609797"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619558"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Da auf diesen Aufruf nicht gewartet wird, wird die aktuelle Methode vor Abschluss des Aufrufs fortgesetzt
 Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Methode vor Abschluss des Aufrufs fortgesetzt. Ziehen Sie ein Anwenden des „Await“-Operators auf das Ergebnis des Aufrufs in Betracht.  
@@ -29,7 +29,7 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
   
 ### <a name="to-address-this-warning"></a>So reagieren Sie auf diese Warnung  
   
--   Ziehen Sie eine Unterdrückung der Warnung nur dann in Betracht, wenn Sie sicher sind, dass Sie nicht auf den Abschluss des asynchronen Aufrufs warten möchten und dass die aufgerufene Methode keine Ausnahmen auslösen wird. In diesem Fall können Sie die Warnung unterdrücken, indem Sie das Aufgabenergebnis des Aufrufs einer Variablen zuweisen.  
+- Ziehen Sie eine Unterdrückung der Warnung nur dann in Betracht, wenn Sie sicher sind, dass Sie nicht auf den Abschluss des asynchronen Aufrufs warten möchten und dass die aufgerufene Methode keine Ausnahmen auslösen wird. In diesem Fall können Sie die Warnung unterdrücken, indem Sie das Aufgabenergebnis des Aufrufs einer Variablen zuweisen.  
   
      Das folgende Beispiel zeigt, wie Sie die Warnung auslösen und unterdrücken können und wie Sie auf den Aufruf warten können.  
   
@@ -95,13 +95,13 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
 ## <a name="example"></a>Beispiel  
  Die folgende Windows Presentation Foundation (WPF)-Anwendung enthält die Methoden aus dem vorherigen Beispiel. Die folgenden Schritte richten die Anwendung ein.  
   
-1.  Erstellen Sie eine WPF-Anwendung, und geben Sie Ihr den Namen `AsyncWarning`.  
+1. Erstellen Sie eine WPF-Anwendung, und geben Sie Ihr den Namen `AsyncWarning`.  
   
-2.  Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
+2. Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
   
      Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für „MainWindow.xaml“ im **Projektmappen-Explorer**, und wählen Sie dann **Code anzeigen**aus.  
   
-3.  Ersetzen Sie den Code in der **XAML** -Ansicht der MainWindow.xaml-Datei durch den folgenden Code.  
+3. Ersetzen Sie den Code in der **XAML** -Ansicht der MainWindow.xaml-Datei durch den folgenden Code.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -117,9 +117,9 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
   
      Ein einfaches Fenster, das eine Schaltfläche und ein Textfeld enthält, wird in der **Entwurf** -Ansicht der MainWindow.xaml-Datei angezeigt.  
   
-     Weitere Informationen zum XAML-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit dem XAML-Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Weitere Informationen zur Verwendung die eigenen einfache Benutzeroberfläche zu erstellen, finden Sie unter der "So erstellen eine WPF-Anwendung" und "So entwerfen ein einfache WPF-MainWindow" Teile [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+     Weitere Informationen zum XAML-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit dem XAML-Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Informationen zum Erstellen einer eigenen einfachen Benutzeroberfläche finden Sie in den Abschnitten „Erstellen einer WPF-Anwendung“ und „Entwerfen eines einfachen WPF-MainWindows“ von [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
-4.  Ersetzen Sie den Code in „MainWindow.xaml.vb“ durch den folgenden Code.  
+4. Ersetzen Sie den Code in „MainWindow.xaml.vb“ durch den folgenden Code.  
   
     ```vb  
     Class MainWindow   
@@ -199,7 +199,7 @@ Da auf diesen Aufruf nicht gewartet wird, wird die Ausführung der aktuellen Met
     ' Exiting the Click event handler.  
     ```  
   
-5.  Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .  
+5. Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .  
   
      Am Ende des Codes wird die erwartete Ausgabe angezeigt.  
   

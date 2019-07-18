@@ -21,12 +21,12 @@ helpviewer_keywords:
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 ms.custom: seodec18
-ms.openlocfilehash: 2e4fef836b08f536565105dbab76292b2fc4388e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 126f20c86bb47e8002382e069ce6236600394aba
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221712"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638769"
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally-Anweisung (Visual Basic)
 

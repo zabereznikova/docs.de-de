@@ -11,11 +11,11 @@ helpviewer_keywords:
 - getting [WPF], return values of page functions
 ms.assetid: 75470af6-256c-4c46-87e7-705080723a1c
 ms.openlocfilehash: 054ffe16690425e118fcac481b2a5ff63f9450f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947718"
 ---
 # <a name="how-to-get-the-return-value-of-a-page-function"></a>Vorgehensweise: Abrufen des Rückgabewerts einer Seitenfunktion
 In diesem Beispiel wird gezeigt, wie das Ergebnis, das von einer Seitenfunktion zurückgegeben wird, abgerufen wird.  

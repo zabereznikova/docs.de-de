@@ -2,12 +2,12 @@
 title: Kontextaustauschprotokoll
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217002"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651104"
 ---
 # <a name="context-exchange-protocol"></a>Kontextaustauschprotokoll
 In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Version .NET Framework, Version 3.5 eingeführte kontextaustauschprotokoll beschrieben. Mithilfe dieses Protokolls kann vom Clientkanal ein vom Dienst bereitgestellter Kontext akzeptiert und für alle nachfolgenden Anforderungen übernommen werden, die über dieselbe Clientkanalinstanz an den Dienst gesendet werden. Die Implementierung des kontextaustauschprotokolls kann eine der beiden folgenden Verfahren verwenden, den Kontext zwischen dem Server und den Client weitergegeben werden: HTTP-Cookies oder ein SOAP-Header.  
@@ -21,16 +21,16 @@ In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Version .
   
  Im Folgenden finden Sie eine Liste der Dinge, die in diesem Modus nicht verändert werden können:  
   
--   Jeder Versuch, den Kontext mit `SetContext` zurückzusetzen, nachdem der Kanal geöffnet wurde, löst eine <xref:System.InvalidOperationException> aus.  
+- Jeder Versuch, den Kontext mit `SetContext` zurückzusetzen, nachdem der Kanal geöffnet wurde, löst eine <xref:System.InvalidOperationException> aus.  
   
--   Jeder Versuch, Kontext mithilfe der <xref:System.ServiceModel.Channels.ContextMessageProperty> in einer ausgehenden Nachricht zu senden, löst eine <xref:System.InvalidOperationException> aus.  
+- Jeder Versuch, Kontext mithilfe der <xref:System.ServiceModel.Channels.ContextMessageProperty> in einer ausgehenden Nachricht zu senden, löst eine <xref:System.InvalidOperationException> aus.  
   
--   Wenn eine Nachricht mit einem bestimmten Kontext vom Server empfangen wird, dann wird eine <xref:System.ServiceModel.ProtocolException> ausgelöst, wenn der Kanal bereits mit einem bestimmten Kontext initialisiert wurde.  
+- Wenn eine Nachricht mit einem bestimmten Kontext vom Server empfangen wird, dann wird eine <xref:System.ServiceModel.ProtocolException> ausgelöst, wenn der Kanal bereits mit einem bestimmten Kontext initialisiert wurde.  
   
     > [!NOTE]
     >  Der Empfang eines Anfangskontexts vom Server ist nur dann angemessen, wenn der Kanal geöffnet wird, ohne dass explizit ein Kontext festgelegt wird.  
   
--   Bei eingehenden Nachrichten hat <xref:System.ServiceModel.Channels.ContextMessageProperty> stets den Wert NULL.  
+- Bei eingehenden Nachrichten hat <xref:System.ServiceModel.Channels.ContextMessageProperty> stets den Wert NULL.  
   
 ## <a name="mode-2-application-context-management"></a>Modus 2: Anwendungskontextverwaltung  
  Dieser Modus wird verwendet, wenn <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> auf `false` festgelegt wurde. In diesem Modus verwaltet der Kontextkanal keinen Kontext. Es liegt in der Verantwortung der Anwendung, den Kontext mithilfe von <xref:System.ServiceModel.Channels.ContextMessageProperty> abzurufen, zu verwalten und zu übernehmen. Jeder Versuch, `GetContext` oder `SetContext` aufzurufen, führt zu einer <xref:System.InvalidOperationException>.  
@@ -53,7 +53,7 @@ In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Version .
   
  Für Dienstendpunkte, bei denen die Unterstützung des Kontextaustauschprotokolls erforderlich ist, kann diese Anforderung in der veröffentlichten Richtlinie als explizite Anforderung festgelegt werden. Es wurden zwei neue Richtlinienassertionen eingeführt, die die Anforderung des Clients zur Unterstützung des Kontextaustauschprotokolls auf SOAP-Ebene oder das Aktivieren der Unterstützung von HTTP-Cookies darstellen. Die Generierung dieser Assertionen in der Richtlinie auf Dienstseite wird vom Wert der <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A>-Eigenschaft folgendermaßen gesteuert:  
   
--   Für <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> wird die folgende Assertion generiert:  
+- Für <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> wird die folgende Assertion generiert:  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Version .
     protectionLevel="Sign" />  
     ```  
   
--   Für <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie> wird die folgende Assertion generiert:  
+- Für <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie> wird die folgende Assertion generiert:  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
@@ -69,4 +69,4 @@ In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Version .
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Handbuch für die Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+- [Leitfaden für die Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

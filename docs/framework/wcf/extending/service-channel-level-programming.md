@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857755"
 ---
 # <a name="service-channel-level-programming"></a>Dienst-Kanalebenenprogrammierung
 In diesem Thema wird beschrieben, wie Sie eine Windows Communication Foundation (WCF)-Dienst-Anwendung ohne schreiben die <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> und der zugehörigen Objektmodelle.  
@@ -18,15 +18,15 @@ In diesem Thema wird beschrieben, wie Sie eine Windows Communication Foundation 
 ## <a name="receiving-messages"></a>Empfangen von Meldungen  
  Um bereit zu sein, Meldungen zu empfangen und zu verarbeiten, sind die folgenden Schritte erforderlich:  
   
-1.  Erstellen Sie eine Bindung.  
+1. Erstellen Sie eine Bindung.  
   
-2.  Erstellen Sie einen Kanallistener.  
+2. Erstellen Sie einen Kanallistener.  
   
-3.  Öffnen Sie den Kanallistener.  
+3. Öffnen Sie den Kanallistener.  
   
-4.  Lesen Sie die Anforderung, und senden Sie eine Antwort.  
+4. Lesen Sie die Anforderung, und senden Sie eine Antwort.  
   
-5.  Schließen Sie alle Kanalobjekte.  
+5. Schließen Sie alle Kanalobjekte.  
   
 #### <a name="creating-a-binding"></a>Erstellen einer Bindung  
  Der erste Schritt beim Lauschen und Empfangen von Meldungen ist das Erstellen einer Bindung. Im Lieferumfang von WCF sind mehrere integrierte und vom System bereitgestellten Bindungen, die direkt durch Instanziierung verwendet werden können. Außerdem können Sie eigene benutzderdefinierte Bindungen durch Instanziieren einer CustomBinding-Klasse erstellen. Diese Aufgabe übernimmt beispielsweise der Code im Programmbeispiel 1.  

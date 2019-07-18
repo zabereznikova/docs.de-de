@@ -5,11 +5,11 @@ ms.assetid: 4af5e8c0-987d-405e-b934-8b9e70fcae6e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5732cc08512df25a14cc8ea9dcaa03c56207dde
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962331"
 ---
 # <a name="isymunmanagedwriter4-interface"></a>ISymUnmanagedWriter4-Schnittstelle
 ISymUnmanagedWriter4-Schnittstelle.  

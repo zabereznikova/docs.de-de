@@ -2,12 +2,12 @@
 title: Erweiterungen der Socketleistung in Version 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 590caba9080119386454671e2cab597a22e4d49b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587764"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59333287"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Erweiterungen der Socketleistung in Version 3.5
 Die <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse wurde in Version 3.5 für die Verwendung von Anwendungen verbessert, die asynchrone Netzwerk-E/A verwenden, um die höchste Leistung zu erreichen. Es wurde eine Serie neuer Klassen als Teil eines Satzes von Ergänzungen für die <xref:System.Net.Sockets.Socket>-Klasse hinzugefügt, durch die ein alternatives asynchrones Muster bereitgestellt wird, das von spezialisierten Socketanwendungen mit hoher Leistung verwendet werden kann. Diese Verbesserungen wurden speziell für Netzwerkserveranwendungen entwickelt, die hohe Leistung erfordern. Eine Anwendung kann die erweiterten asynchronen Muster ausschließlich oder nur in bestimmten Bereichen ihrer Anwendung nutzen (wenn z.B. große Datenmengen empfangen werden).  
@@ -19,21 +19,22 @@ Die <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse wurde i
   
  Das Muster zum Ausführen eines asynchronen Socketvorgangs mit dieser Klasse besteht aus den folgenden Schritten:  
   
-1.  Zuweisen eines neuen <xref:System.Net.Sockets.SocketAsyncEventArgs>-Kontextobjekt oder Abrufen eines kostenlosen aus einem Anwendungspool.  
+1. Zuweisen eines neuen <xref:System.Net.Sockets.SocketAsyncEventArgs>-Kontextobjekt oder Abrufen eines kostenlosen aus einem Anwendungspool.  
   
-2.  Festlegen von Eigenschaften für das Kontextobjekt für den durchzuführenden Vorgang (z.B. die Methode des Rückrufdelegaten und Datenpuffers).  
+2. Festlegen von Eigenschaften für das Kontextobjekt für den durchzuführenden Vorgang (z.B. die Methode des Rückrufdelegaten und Datenpuffers).  
   
-3.  Aufrufen der entsprechenden Socketmethode (XxxAsync) zum Initiieren des asynchronen Vorgangs.  
+3. Aufrufen der entsprechenden Socketmethode (XxxAsync) zum Initiieren des asynchronen Vorgangs.  
   
-4.  Wenn die asynchrone Socketmethode (XxxAsync) im Rückruf TRUE zurückgibt, dann fragen Sie die Kontexteigenschaften für den Abschlussstatus ab.  
+4. Wenn die asynchrone Socketmethode (XxxAsync) im Rückruf TRUE zurückgibt, dann fragen Sie die Kontexteigenschaften für den Abschlussstatus ab.  
   
-5.  Wenn die asynchrone Socketmethode (XxxAsync) im Rückruf FALSE zurückgibt, wurde der Vorgang synchron abgeschlossen. Die Kontexteigenschaften könnten möglicherweise für das Betriebsergebnis abgefragt werden.  
+5. Wenn die asynchrone Socketmethode (XxxAsync) im Rückruf FALSE zurückgibt, wurde der Vorgang synchron abgeschlossen. Die Kontexteigenschaften könnten möglicherweise für das Betriebsergebnis abgefragt werden.  
   
-6.  Verwenden Sie den Kontext für einen anderen Vorgang erneut, fügen Sie ihn wieder in den Pool ein, oder verwerfen Sie ihn.  
+6. Verwenden Sie den Kontext für einen anderen Vorgang erneut, fügen Sie ihn wieder in den Pool ein, oder verwerfen Sie ihn.  
   
  Die Lebensdauer des neuen Kontextobjekts des asynchronen Socketvorgangs wird durch Verweise im Anwendungscode und asynchrone E/A-Verweise bestimmt. Es ist nicht erforderlich, dass die Anwendung einen Verweis auf das Kontextobjekt des asynchronen Socketvorgangs beibehält, nachdem er als Parameter an eine der Methoden des asynchronen Socketvorgangs gesendet wurde. Der Verweis bleibt bestehen, bis der Abschlussrückruf zurückgegeben wird. Es ist jedoch von Vorteil für die Anwendung, den Verweis auf das Kontextobjekt beizubehalten, damit er für einen weiteren asynchronen Socketvorgang wiederverwendet werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>

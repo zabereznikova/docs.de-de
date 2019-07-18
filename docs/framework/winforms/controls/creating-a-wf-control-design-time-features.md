@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das von Visual Studio-Entwurfszeitfunktionen nutzt'
+title: 'Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724622"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882316"
 ---
-# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das von Visual Studio-Entwurfszeitfunktionen nutzt
+# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt
 
 Die zur Entwurfszeit für ein benutzerdefiniertes Steuerelement kann verbessert werden, indem Sie einen zugeordneten benutzerdefinierten Designer erstellen.
 
@@ -59,7 +59,7 @@ In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranscha
 
 Wenn Sie fertig sind, wird das benutzerdefinierte Steuerelement etwa wie folgt aussehen:
 
-![Mögliche Anordnung eines MarqueeControl](./media/demomarqueecontrol.gif "DemoMarqueeControl")
+![Die app einen Auswahlbereich sagen, Text und ein Start- und Stop-Schaltflächen angezeigt.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 Die vollständige codeauflistung finden Sie unter [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
 
@@ -68,17 +68,13 @@ Die vollständige codeauflistung finden Sie unter [Vorgehensweise: Erstellen Sie
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:
-
-- Berechtigt sind, können zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.
+Um diese exemplarische Vorgehensweise abzuschließen, benötigen Sie Visual Studio.
 
 ## <a name="creating-the-project"></a>Erstellen des Projekts
 
 Der erste Schritt ist das Anwendungsprojekt zu erstellen. Sie können dieses Projekt zum Erstellen der Anwendung, die das benutzerdefinierte Steuerelement hostet.
 
-### <a name="to-create-the-project"></a>So erstellen Sie das Projekt
-
-- Erstellen Sie eine Windows Forms-Anwendung mit dem Namen "MarqueeControlTest" (**Datei** > **neu** > **Projekt**  >   **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).
+Öffnen Sie Visual Studio, und erstellen Sie eine Windows Forms-Anwendung mit dem Namen "MarqueeControlTest" (**Datei** > **neu** > **Projekt**  >  **Visual C#**  oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).
 
 ## <a name="creating-a-control-library-project"></a>Erstellen ein Steuerelementbibliothek-Projekt
 
@@ -182,7 +178,7 @@ Wenn Sie eine benutzerdefinierte während der Entwurfszeit-Benutzeroberfläche e
 
 2. Wählen Sie in das Dialogfeld "MarqueeControlLibrary-Eigenschaftenseiten" die **Debuggen** Seite.
 
-3. In der **Startaktion** wählen Sie im Abschnitt **externes Startprogramm**. Sie Debuggen eine separate Instanz von Visual Studio, klicken Sie auf die Auslassungspunkte (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) Schaltfläche, um für die Visual Studio-IDE navigieren. Der Name der ausführbaren Datei lautet devenv.exe aus, und wenn Sie am Standardspeicherort installiert haben, wird der Pfad ist %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+3. In der **Startaktion** wählen Sie im Abschnitt **externes Startprogramm**. Sie Debuggen eine separate Instanz von Visual Studio, klicken Sie auf die Auslassungspunkte (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) Schaltfläche, um für die Visual Studio-IDE navigieren. Der Name der ausführbaren Datei lautet devenv.exe aus, und wenn Sie am Standardspeicherort installiert haben, wird der Pfad ist %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
 
 4. Klicken Sie auf OK, um das Dialogfeld zu schließen.
 
@@ -219,7 +215,7 @@ Dies ist das Ausmaß der der `MarqueeControl` Anpassungen. Die Run-Time-Features
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#260)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#260)]
 
-2. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnLayout%2A> -Methode.
+2. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnLayout%2A>-Methode.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#270)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#270)]
@@ -507,12 +503,12 @@ Die `MarqueeBorder` Steuerelement macht mehrere Eigenschaften im Eigenschaftenfe
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#92)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#92)]
 
-4. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A> -Methode. Diese Implementierung gibt <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>, wodurch angewiesen wird, der entwurfsumgebung Vorgehensweise beim Anzeigen der `LightShapeEditor`.
+4. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>-Methode. Diese Implementierung gibt <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>, wodurch angewiesen wird, der entwurfsumgebung Vorgehensweise beim Anzeigen der `LightShapeEditor`.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#93)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#93)]
 
-5. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> -Methode. Diese Implementierung fragt die entwurfsumgebung für eine <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> Objekt. Wenn erfolgreich, er erstellt eine `LightShapeSelectionControl`. Die <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> Methode wird aufgerufen, um das Starten der `LightShapeEditor`. Der Rückgabewert von diesem Aufruf wird die entwurfsumgebung zurückgegeben.
+5. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>-Methode. Diese Implementierung fragt die entwurfsumgebung für eine <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> Objekt. Wenn erfolgreich, er erstellt eine `LightShapeSelectionControl`. Die <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> Methode wird aufgerufen, um das Starten der `LightShapeEditor`. Der Rückgabewert von diesem Aufruf wird die entwurfsumgebung zurückgegeben.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#94)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#94)]
@@ -574,7 +570,7 @@ private IWindowsFormsEditorService editorService;
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]
 
-6. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode. Diese Implementierung wird ein ausgefülltes Quadrat und der Kreis gezeichnet. Es wird auch den ausgewählten Wert hervorheben, durch Zeichnen eines Rahmens um eine Form vom Typ oder die andere.
+6. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnPaint%2A>-Methode. Diese Implementierung wird ein ausgefülltes Quadrat und der Kreis gezeichnet. Es wird auch den ausgewählten Wert hervorheben, durch Zeichnen eines Rahmens um eine Form vom Typ oder die andere.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#380)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#380)]

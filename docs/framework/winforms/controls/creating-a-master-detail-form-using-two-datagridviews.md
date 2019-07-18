@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 774151efb136207a1c4f7a2f8f812bbbaefbf9e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078875"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648212"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Exemplarische Vorgehensweise: Erstellen eines Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms
 Einer der häufigsten Szenarios für die Verwendung der <xref:System.Windows.Forms.DataGridView> Steuerelement ist die *Master/Detail-* Form, in dem eine über-/unterordnungsbeziehung zwischen zwei Datenbanktabellen angezeigt wird. Auswählen von Zeilen in der master-Tabelle bewirkt, dass die Detailtabelle um mit den entsprechenden untergeordneten Daten zu aktualisieren.  
@@ -27,20 +27,20 @@ Einer der häufigsten Szenarios für die Verwendung der <xref:System.Windows.For
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
--   Zugriff auf einen Server, der die Beispieldatenbank Northwind-SQL-Server verfügt.  
+- Zugriff auf einen Server, der die Beispieldatenbank Northwind-SQL-Server verfügt.  
   
 ## <a name="creating-the-form"></a>Erstellen des Formulars  
   
 #### <a name="to-create-a-masterdetail-form"></a>Erstellen eines Master/Detail-Formulars  
   
-1.  Erstellen Sie eine abgeleitete Klasse <xref:System.Windows.Forms.Form> und enthält zwei <xref:System.Windows.Forms.DataGridView> -Steuerelemente und zwei <xref:System.Windows.Forms.BindingSource> Komponenten. Der folgende Code stellt die grundlegende Form Initialisierung bereit und enthält eine `Main` Methode. Wenn Sie Visual Studio-Designer verwenden, um das Formular zu erstellen, können Sie verwenden Sie den vom Designer generierten Code anstelle dieser Code, aber Achten Sie darauf, dass Sie die in den Variablen Deklarationen in den hier angezeigten Namen zu verwenden.  
+1. Erstellen Sie eine abgeleitete Klasse <xref:System.Windows.Forms.Form> und enthält zwei <xref:System.Windows.Forms.DataGridView> -Steuerelemente und zwei <xref:System.Windows.Forms.BindingSource> Komponenten. Der folgende Code stellt die grundlegende Form Initialisierung bereit und enthält eine `Main` Methode. Wenn Sie Visual Studio-Designer verwenden, um das Formular zu erstellen, können Sie verwenden Sie den vom Designer generierten Code anstelle dieser Code, aber Achten Sie darauf, dass Sie die in den Variablen Deklarationen in den hier angezeigten Namen zu verwenden.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  Implementieren Sie eine Methode in Ihres Formulars Klassendefinition für die Verarbeitung von Details der Verbindung zur Datenbank. Dieses Beispiel verwendet eine `GetData` -Methode, die füllt eine <xref:System.Data.DataSet> Objekt, fügt ein <xref:System.Data.DataRelation> Objekt, das Dataset, und bindet die <xref:System.Windows.Forms.BindingSource> Komponenten. Sorgen Sie dafür, dass die `connectionString`-Variable auf einen Wert gesetzt wird, der für Ihre Datenbank geeignet ist.  
+2. Implementieren Sie eine Methode in Ihres Formulars Klassendefinition für die Verarbeitung von Details der Verbindung zur Datenbank. Dieses Beispiel verwendet eine `GetData` -Methode, die füllt eine <xref:System.Data.DataSet> Objekt, fügt ein <xref:System.Data.DataRelation> Objekt, das Dataset, und bindet die <xref:System.Windows.Forms.BindingSource> Komponenten. Sorgen Sie dafür, dass die `connectionString`-Variable auf einen Wert gesetzt wird, der für Ihre Datenbank geeignet ist.  
   
     > [!IMPORTANT]
     >  Das Speichern vertraulicher Informationen (z. B. eines Kennworts) innerhalb der Verbindungszeichenfolge kann die Sicherheit einer Anwendung beeinträchtigen. Der Zugriff auf eine Datenbank lässt sich mithilfe der Windows-Authentifizierung (wird auch als integrierte Sicherheit bezeichnet) sicherer steuern. Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md).  
@@ -48,7 +48,7 @@ Einer der häufigsten Szenarios für die Verwendung der <xref:System.Windows.For
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  Implementieren einen Handler für Ihres Formulars <xref:System.Windows.Forms.Form.Load> -Ereignis, das gebunden wird die <xref:System.Windows.Forms.DataGridView> -Steuerelementen an die <xref:System.Windows.Forms.BindingSource> Komponenten und ruft die `GetData` Methode. Das folgende Beispiel enthält Code, der Größe der <xref:System.Windows.Forms.DataGridView> Spalten sind die angezeigten Daten anpassen.  
+3. Implementieren einen Handler für Ihres Formulars <xref:System.Windows.Forms.Form.Load> -Ereignis, das gebunden wird die <xref:System.Windows.Forms.DataGridView> -Steuerelementen an die <xref:System.Windows.Forms.BindingSource> Komponenten und ruft die `GetData` Methode. Das folgende Beispiel enthält Code, der Größe der <xref:System.Windows.Forms.DataGridView> Spalten sind die angezeigten Daten anpassen.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  
@@ -58,27 +58,27 @@ Einer der häufigsten Szenarios für die Verwendung der <xref:System.Windows.For
   
 #### <a name="to-test-the-form"></a>So testen Sie das Formular  
   
--   Kompilieren Sie die Anwendung, und führen Sie sie aus.  
+- Kompilieren Sie die Anwendung, und führen Sie sie aus.  
   
      Sie sehen zwei <xref:System.Windows.Forms.DataGridView> übereinander steuert. Sind Sie oben auf die Kunden aus dem Northwind `Customers` Tabelle, und werden am unteren Rand der `Orders` für den ausgewählten Kunden. Bei Auswahl von unterschiedlichen Zeilen in der oberen <xref:System.Windows.Forms.DataGridView>, den Inhalt der unteren <xref:System.Windows.Forms.DataGridView> entsprechend ändern.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Diese Anwendung verfügt über einen grundlegenden Überblick der <xref:System.Windows.Forms.DataGridView> Funktionen des Steuerelements. Sie können das Aussehen und Verhalten der Anpassen der <xref:System.Windows.Forms.DataGridView> Steuerelement auf verschiedene Weise:  
   
--   Ändern von Rahmen und Header-Formaten. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern des Rahmen- und Rasterlinienstils in der Windows Forms DataGridView-Steuerelement](change-the-border-and-gridline-styles-in-the-datagrid.md).  
+- Ändern von Rahmen und Header-Formaten. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern des Rahmen- und Rasterlinienstils in der Windows Forms DataGridView-Steuerelement](change-the-border-and-gridline-styles-in-the-datagrid.md).  
   
--   Aktivieren oder Einschränken von Benutzereingaben in die <xref:System.Windows.Forms.DataGridView> Steuerelement. Weitere Informationen finden Sie unter [Vorgehensweise: Verhindern des Hinzufügens der Zeile, und Löschen in der Windows Forms-DataGridView-Steuerelement](prevent-row-addition-and-deletion-datagridview.md), und [Vorgehensweise: Festlegen von Spalten schreibgeschützt in der Windows Forms-DataGridView-Steuerelement](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
+- Aktivieren oder Einschränken von Benutzereingaben in die <xref:System.Windows.Forms.DataGridView> Steuerelement. Weitere Informationen finden Sie unter [Vorgehensweise: Verhindern des Hinzufügens der Zeile, und Löschen in der Windows Forms-DataGridView-Steuerelement](prevent-row-addition-and-deletion-datagridview.md), und [Vorgehensweise: Festlegen von Spalten schreibgeschützt in der Windows Forms-DataGridView-Steuerelement](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).  
   
--   Überprüfen Sie Benutzereingaben an das <xref:System.Windows.Forms.DataGridView> Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Überprüfen von Daten in der Windows Forms-DataGridView-Steuerelement](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
+- Überprüfen Sie Benutzereingaben an das <xref:System.Windows.Forms.DataGridView> Steuerelement. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Überprüfen von Daten in der Windows Forms-DataGridView-Steuerelement](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md).  
   
--   Behandeln Sie sehr großen Datasets, die Verwendung des virtuellen Modus. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus in der Windows Forms-DataGridView-Steuerelement](implementing-virtual-mode-wf-datagridview-control.md).  
+- Behandeln Sie sehr großen Datasets, die Verwendung des virtuellen Modus. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus in der Windows Forms-DataGridView-Steuerelement](implementing-virtual-mode-wf-datagridview-control.md).  
   
--   Anpassen der Darstellung von Zellen an. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) und [Vorgehensweise: Festlegen von Standardzellenformaten für das Windows-DataGridView-Steuerelement Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
+- Anpassen der Darstellung von Zellen an. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) und [Vorgehensweise: Festlegen von Standardzellenformaten für das Windows-DataGridView-Steuerelement Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Erstellen eines Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
-- [Schützen von Verbindungsinformationen](../../data/adonet/protecting-connection-information.md)
+- [Vorgehensweise: Erstellen Sie eine Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
+- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md)

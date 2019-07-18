@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 0dd8687bac8aa8ce046fb89c109debd91409aca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61230ffc5cd055ee64de9d519cdfb4d76c856ca3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038050"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>Anpassen von Operationen durch ausschließliche Verwendung von gespeicherten Prozeduren
 Der Zugriff auf Daten nur mit gespeicherten Prozeduren ist ein gängiges Szenario.  
@@ -32,4 +32,5 @@ Der Zugriff auf Daten nur mit gespeicherten Prozeduren ist ein gängiges Szenari
  [!code-vb[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Aufgaben der Entwickler beim Überschreiben von Standardverhalten](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)

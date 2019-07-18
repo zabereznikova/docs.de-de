@@ -3,11 +3,11 @@ title: Beispiel für die Ausgaben von Office Open XML-Dokumentbausteinen (Visual
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
 ms.openlocfilehash: 98ef8390c75b7efbf57040e9723c117a6ae18a66
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931565"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Beispiel für die Ausgaben von Office Open XML-Dokumentbausteinen (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie ein Office Open XML-Dokument öffnen und auf Teile davon zugreifen können.  

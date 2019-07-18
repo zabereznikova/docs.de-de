@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
 ms.openlocfilehash: d9d50433e3bc24df7cda137a145ab3f0f0302a1f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608663"
 ---
 # <a name="await-operator-visual-basic"></a>Await-Operator (Visual Basic)
 Sie wenden den Operator `Await` auf einen Operanden in einer asynchronen Methode oder einem Lambda-Ausdruck an, um die Ausführung der Methode anzuhalten, bis die erwartete Aufgabe ausgeführt wurde. Die Aufgabe stellt derzeit ausgeführte Arbeit dar.  

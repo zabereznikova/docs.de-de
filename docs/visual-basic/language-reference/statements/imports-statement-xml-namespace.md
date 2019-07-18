@@ -10,11 +10,11 @@ helpviewer_keywords:
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
 ms.openlocfilehash: 97d08113a37477add9d770b0a680c303fe7e3040
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638956"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports-Anweisung (XML-Namespace)
 Importiert die XML-Namespacepräfixe für XML-Literale und XML-Achseneigenschaften.  

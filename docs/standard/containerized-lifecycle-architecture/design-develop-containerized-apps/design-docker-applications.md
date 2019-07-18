@@ -1,23 +1,21 @@
 ---
 title: Entwerfen von Docker-Anwendungen
-description: Hier der einen Verweis auf eine ausführliche Anleitung zur Microservices-Architektur, da dies ein Thema ist, die sie nicht in diesem Handbuch beschrieben wird.
-author: CESARDELATORRE
-ms.author: wiwagn
+description: Referenz zu einem tiefgreifenden Leitfaden zur Architektur von Microservices, da dieses Thema in diesem Leitfaden nicht ausführlich behandelt wird.
 ms.date: 02/15/2019
-ms.openlocfilehash: 1d49f7509c0a12edfe375486429147e8fd240b2d
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 535b6cefb7371014527032972ec27ebfe4b67ebc
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846328"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65644689"
 ---
 # <a name="design-docker-applications"></a>Entwerfen von Docker-Anwendungen
 
-Die grundlegenden Konzepte in Bezug auf Container und Docker, Kapitel 1 eingeführt. Diese Informationen ist die grundlegende Informationen, die Sie benötigen, um zu beginnen. Allerdings unternehmensanwendungen können komplex sein und besteht aus mehreren Diensten statt aus einem einzelnen Dienst oder Container. Für diese Fälle optionale Verwendung müssen Sie zusätzliche Ansätze zum Entwerfen, wie z. B. serviceorientierter Architektur (SOA) und erweiterte Konzepte von Microservices und Container orchestrierungskonzepte kennen. Der Umfang dieses Dokuments ist nicht beschränkt auf Microservices, aber auf alle Docker-Anwendungslebenszyklus aus diesem Grund wird nicht untersuchen Microservices-Architektur im Detail, da Sie auch können Container und Docker mit regulären SOA, Hintergrundaufgaben oder Aufträge, oder sogar mit monolithischen Anwendung Bereitstellungskonzept vorgehen.
+In Kapitel 1 wurden die grundlegenden Konzepte zu Containern und Docker vorgestellt. Diese Informationen bilden die erforderliche Basis für Ihren Einstieg. Unternehmensanwendungen können allerdings komplex sein und bestehen oftmals aus mehreren Diensten statt aus einem einzelnen Dienst oder Container. Für diese optionalen Anwendungsfälle müssen Sie weitere Entwurfsansätze, wie etwa die dienstorientierte Architektur (Service-Oriented Architecture, SOA) und die höher entwickelten Konzepte für Microservices und Containerorchestrierung kennen. Der Umfang dieses Dokuments ist nicht auf Microservices beschränkt, sondern befasst sich mit dem Lebenszyklus beliebiger Docker-Anwendungen, daher wird die Microservicearchitektur nicht tiefgreifend behandelt, da Sie Container und Cocker auch in Kombination mit gewöhnlicher SOA, mit Hintergrundaufgaben oder Aufträgen oder sogar mit monolithischen Ansätzen zur Anwendungsbereitstellung verwenden können.
 
-**Weitere Informationen** lesen Sie den Leitfaden, um weitere Informationen zum Enterprise-Anwendungen und Microservices-Architektur im Detail [NET-Microservices: Architektur für .NET-containeranwendungen](../../microservices-architecture/index.md) , die Sie können auch von <https://aka.ms/MicroservicesEbook>.
+**Weitere Informationen** Weitere, ausführliche Informationen zu Unternehmensanwendungen und Microservicearchitektur finden Sie in dem Leitfaden [NET Microservices: Architecture for Containerized .NET Applications](../../microservices-architecture/index.md) (NET-Microservices: Architektur für containerbasierte .NET-Anwendungen), den Sie auch von <https://aka.ms/MicroservicesEbook> herunterladen können.
 
-Bevor wir auf die Anwendung während des Lebenszyklus und DevOps eingehen, ist es jedoch wichtig zu wissen, wie Sie auf das Erstellen Ihrer Anwendung und welche Auswahl für den Entwurf.
+Bevor wir uns allerdings mit dem Anwendungslebenszyklus und DevOps befassen, müssen wir wissen, wie Sie Ihre Anwendung entwerfen und konstruieren möchten und welche Entwurfsoptionen sich Ihnen bieten.
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)

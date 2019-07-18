@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: affe67006c9e37d55b0f9d107c92441da44c9ab8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 84d9e30a2baf08f6b7ff530f2fce049d49386a60
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138788"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774848"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSize-Methode
 Ruft den verwalteten Slotindex einer lokalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSlotIndex(  
    [out] ULONG32 *pSlotIndex  
 );  
@@ -27,7 +27,7 @@ HRESULT GetSlotIndex(
  [out] Ein Zeiger auf den Slotindex der lokalen Variablen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` Bei erfolgreicher Ausführung. `E_FAIL` Wenn die Variable ein Funktionsargument ist.  
+ Bei Erfolg `S_OK`. `E_FAIL`, wenn die Variable ein Funktionsargument ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Der verwaltete Slotindex einer lokalen Variablen kann zum Abrufen der Metadateninformationen der Variablen verwendet werden.  
@@ -47,4 +47,4 @@ HRESULT GetSlotIndex(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugVariableSymbol-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

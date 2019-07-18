@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867932"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59298908"
 ---
 # <a name="plinq-data-sample"></a>PLINQ-Datenbeispiel
 Dieses Beispiel enthält Beispieldaten im CSV-Format zusammen mit Methoden, die sie in Sammlungen von „Customers“, „Products“, „Orders“ und „Order Details“ im Arbeitsspeicher umwandeln. Zum weiteren Experimentieren mit PLINQ können Sie Codebeispiele aus bestimmten anderen Themen in den Code dieses Themas einfügen und ihn von der `Main`-Methode aus aufrufen. Sie können diese Daten auch mit Ihren eigenen PLINQ-Abfragen verwenden.  
@@ -27,13 +27,13 @@ Dieses Beispiel enthält Beispieldaten im CSV-Format zusammen mit Methoden, die 
   
 ### <a name="to-set-up-this-sample"></a>So richten Sie dieses Beispiel ein  
   
-1.  Erstellen Sie ein Konsolenanwendungsprojekt für Visual C# oder Visual Basic.  
+1. Erstellen Sie ein Konsolenanwendungsprojekt für Visual C# oder Visual Basic.  
   
-2.  Ersetzen Sie den Inhalt von „Module1.vb“ bzw. „Program.cs“ mit dem Code, der diese Schritte befolgt.  
+2. Ersetzen Sie den Inhalt von „Module1.vb“ bzw. „Program.cs“ mit dem Code, der diese Schritte befolgt.  
   
-3.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie **Textdatei** aus, und klicken Sie auf **OK**. Kopieren Sie die Daten in dieses Thema, und fügen Sie sie in die neue Textdatei ein. Klicken Sie im Menü **Datei** auf **Speichern**, nennen Sie die Datei „Plinqdata.csv“, und speichern Sie sie in dem Ordner, der Ihre Quellcodedateien enthält.  
+3. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie **Textdatei** aus, und klicken Sie auf **OK**. Kopieren Sie die Daten in dieses Thema, und fügen Sie sie in die neue Textdatei ein. Klicken Sie im Menü **Datei** auf **Speichern**, nennen Sie die Datei „Plinqdata.csv“, und speichern Sie sie in dem Ordner, der Ihre Quellcodedateien enthält.  
   
-4.  Drücken Sie F5, um sicherzustellen, dass das Projekt erstellt und ordnungsgemäß ausgeführt wird. Die folgende Ausgabe sollte im Konsolenfenster angezeigt werden.  
+4. Drücken Sie F5, um sicherzustellen, dass das Projekt erstellt und ordnungsgemäß ausgeführt wird. Die folgende Ausgabe sollte im Konsolenfenster angezeigt werden.  
   
     ```  
     Customer count: 50  

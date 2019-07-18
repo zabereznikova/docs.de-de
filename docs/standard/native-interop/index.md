@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine Verknüpfung mit nativen Komponenten in 
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 29aacc9210b4103f379b7776c36fc3c29b9e6dec
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857618"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062711"
 ---
 # <a name="native-interoperability"></a>Native Interoperabilität
 
@@ -29,5 +29,5 @@ Die obige Liste deckt nicht alle möglichen Situationen und Szenarios ab, in den
 ## <a name="see-also"></a>Siehe auch
 
 - [Plattformaufruf (P/Invoke)](pinvoke.md)
-- [Marshallen von Typen](type-marshalling.md)
+- [Marshalling von Typen](type-marshaling.md)
 - [Bewährte Methoden für native Interoperabilität](best-practices.md)

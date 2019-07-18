@@ -1,17 +1,17 @@
 ---
 title: Zeichenfolgen – C#-Programmierhandbuch
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920687"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802317"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -24,7 +24,7 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Beachten Sie, dass Sie nicht den [neuen](../../../csharp/language-reference/keywords/new-operator.md) Operator zum Erstellen eines Zeichenfolgenobjekts verwenden, außer wenn Sie die Zeichenfolge mit einem Array von Chars initialisieren.  
+ Beachten Sie, dass Sie nicht den [neuen](../../../csharp/language-reference/operators/new-operator.md) Operator zum Erstellen eines Zeichenfolgenobjekts verwenden, außer wenn Sie die Zeichenfolge mit einem Array von Chars initialisieren.  
   
  Initialisieren Sie eine Zeichenfolge mit dem konstanten Wert <xref:System.String.Empty>, um ein neues <xref:System.String>-Objekt zu erstellen, dessen Zeichenfolge eine Länge von 0 hat. Die Darstellung des Zeichenfolgenliterals einer Zeichenfolge mit einer Länge von 0 ist "". Indem Zeichenfolgen mit dem Wert <xref:System.String.Empty> anstatt [NULL](../../../csharp/language-reference/keywords/null.md) initialisiert werden, können Sie die Chancen einer auftretenden <xref:System.NullReferenceException> reduzieren. Verwenden Sie die statische Methode <xref:System.String.IsNullOrEmpty%28System.String%29>, um den Wert einer Zeichenfolge zu überprüfen, bevor Sie versuchen, auf sie zuzugreifen.  
   
@@ -62,13 +62,16 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 |\n|Zeilenwechsel|0x000A|  
 |\r|Wagenrücklauf|0x000D|  
 |\t|Horizontaler Tabulator|0x0009|  
-|\U|Unicode-Escapesequenz für Ersatzzeichenpaare|\Unnnnnnnn|  
-|\u|Unicode-Escapesequenz|\u0041 = "A"|  
 |\v|Vertikaler Tabulator|0x000B|  
-|\x|Unicode-Escapesequenz, die ähnlich wie "\u" ist, außer mit variabler Länge|\x0041 oder \x41 = "A"|  
+|\u|Unicode-Escapesequenz (UTF-16)|`\uHHHH` (Bereich: 0000 - FFFF; Beispiel: `\u00E7` = "ç")|  
+|\U|Unicode-Escapesequenz (UTF-32)|`\U00HHHHHH` (Bereich: 000000 - 10FFFF; Beispiel: `\U0001F47D` = "&#x1F47D;")|  
+|\x|Unicode-Escapesequenz, die ähnlich wie "\u" ist, außer mit variabler Länge|`\xH[H][H][H]` (Bereich: 0 - FFFF; Beispiel: `\x00E7` or `\x0E7` oder `\xE7` = "ç")|  
+  
+> [!WARNING]
+>  Wenn Sie die Escapesequenz `\x` verwenden, weniger als vier Hexadezimalziffern angeben und es sich bei den Zeichen, die der Escapesequenz unmittelbar folgen, um gültige Hexadezimalziffern handelt (z. B. 0–9, A–F und a–f), werden diese als Teil der Escapesequenz interpretiert. Die Angabe `\xA1` erzeugt beispielsweise den Wert "&#161;", der dem Codepunkt U+00A1 entspricht. Wenn das nächste Zeichen jedoch „A“ oder „a“ ist, wird die Escapesequenz stattdessen als `\xA1A` interpretiert und erzeugt den Wert "&#x0A1A;", der dem Codepunkt U+0A1A entspricht. In solchen Fällen können Fehlinterpretationen vermieden werden, indem Sie alle vier Hexadezimalziffern (z. B. `\x00A1`) angeben.  
   
 > [!NOTE]
->  Zum Zeitpunkt der Kompilierung werden ausführliche Zeichenfolgen in normale Zeichenfolgen mit gleichen Escapesequenzen konvertiert. Aus diesem Grund sehen Sie die Escapezeichen, die vom Compiler hinzugefügt werden, und nicht die ausführliche Version aus Ihrem Sourcecode, wenn Sie eine ausführliche Zeichenfolge in Debugger-Überwachungsfenster anzeigen. Die ausführliche Zeichenfolge @"C:\files.txt" wird im Überwachungsfenster z.B. als „C:\\\files.txt“ angezeigt.  
+>  Zum Zeitpunkt der Kompilierung werden ausführliche Zeichenfolgen in normale Zeichenfolgen mit gleichen Escapesequenzen konvertiert. Aus diesem Grund sehen Sie die Escapezeichen, die vom Compiler hinzugefügt werden, und nicht die ausführliche Version aus Ihrem Sourcecode, wenn Sie eine ausführliche Zeichenfolge in Debugger-Überwachungsfenster anzeigen. Die ausführliche Zeichenfolge `@"C:\files.txt"` wird im Überwachungsfenster z.B. als „C:\\\files.txt“ angezeigt.  
   
 ## <a name="format-strings"></a>Formatzeichenfolgen  
  Eine Formatzeichenfolge ist eine Zeichenfolge, deren Inhalt zur Laufzeit dynamisch bestimmt wird. Formatzeichenfolgen werden erstellt, indem *interpolierte Ausdrücke* oder Platzhalter in geschweifte Klammern innerhalb einer Zeichenfolge eingebettet werden. Der in den Klammern (`{...}`) eingeschlossene Inhalt wird in einen Wert aufgelöst und zur Laufzeit als formatierte Zeichenfolge ausgegeben. Es gibt zwei Methoden zum Erstellen von Formatzeichenfolgen: Zeichenfolgeninterpolation und kombinierte Formatierung.
@@ -126,7 +129,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md)|Veranschaulicht Methoden zum Transformieren von Zeichenfolgen und Modifizieren von Zeichenfolgeninhalten.|  
 |[Vorgehensweise: Vergleichen von Zeichenfolgen](../../how-to/compare-strings.md)|So führen Sie ordinale und kulturspezifische Zeichenfolgenvergleiche durch.|  
@@ -136,7 +139,7 @@ string s = String.Empty;
 |[Vorgehensweise: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Zeigt, wie Sie sicher eine Zeichenfolge analysieren, um zu sehen, ob diese über einen gültigen numerischen Wert verfügt|  
 |[Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md)|Beschreibt die Funktion zur Zeichenfolgeninterpolation, die eine zweckmäßige Syntax zum Formatieren von Zeichenfolgen bietet.|
 |[Grundlegende Zeichenfolgenoperationen](../../../../docs/standard/base-types/basic-string-operations.md)|Stellt Links zu Themen bereit, die <xref:System.String?displayProperty=nameWithType>- und <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Methoden verwenden, um grundlegende Zeichenfolgenoperationen durchzuführen|  
-|[Analysieren von Zeichenfolgen](../../../standard/base-types/parsing-strings.md)|Beschreibt das Konvertieren von Zeichenfolgendarstellungen der .NET-Basistypen in Instanzen der entsprechenden Typen.|  
+|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Beschreibt das Konvertieren von Zeichenfolgendarstellungen der .NET-Basistypen in Instanzen der entsprechenden Typen.|  
 |[Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET](../../../standard/base-types/parsing-datetime.md)|Zeigt, wie eine Zeichenfolge wie "01/24/2008" in ein <xref:System.DateTime?displayProperty=nameWithType>-Objekt konvertiert wird|  
 |[Vergleichen von Zeichenfolgen](../../../../docs/standard/base-types/comparing.md)|Enthält Informationen, wie Zeichenfolgen verglichen werden, und gibt Beispiele in C# und Visual Basic|  
 |[Verwenden der StringBuilder-Klasse](../../../standard/base-types/stringbuilder.md)|Beschreibt das Erstellen und Ändern dynamischer Zeichenfolgenobjekte mithilfe der <xref:System.Text.StringBuilder>-Klasse|  

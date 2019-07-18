@@ -1,45 +1,65 @@
 ---
-title: ?? -Operator – C#-Referenz
+title: '?? Operator „-“: C#-Referenz'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/07/2019
 f1_keywords:
 - ??_CSharpKeyword
 helpviewer_keywords:
-- coalesce operator [C#]
+- null-coalescing operator [C#]
 - ?? operator [C#]
-- conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: b96fe4790aac7ff5ff5394cbaaeaddc1e334e96c
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333212"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024987"
 ---
-# <a name="-operator-c-reference"></a>?? operator (C#-Referenz)
+# <a name="-operator-c-reference"></a>?? Operator (C#-Referenz)
 
-Der Operator `??` wird NULL-Sammeloperator genannt.  Der linke Operand wird zurückgegeben, falls dieser nicht NULL ist. Andernfalls wird der rechte Operand zurückgegeben.
+Der NULL-Zusammenfügungsoperator `??` gibt den Wert des linken Operanden zurück, wenn dieser nicht `null` ist. Andernfalls wertet der Operator den rechten Operanden aus und gibt dessen Ergebnis zurück. Der `??`-Operator wertet seinen rechten Operanden nicht aus, wenn der linke Operand auf einen Wert ungleich NULL ausgewertet wird.
 
-## <a name="remarks"></a>Hinweise
+Der NULL-Zusammenfügungsoperator ist rechtsassoziativ, d.h. ein Ausdruck der Form
 
-Ein Typ, der NULL-Werte zulässt, kann einen Wert aus der Domäne des Typs repräsentieren, oder der Wert kann nicht definiert sein (in diesem Fall ist der Wert NULL). Sie können mit der syntaktischen Ausdruckskraft des `??`-Operators einen entsprechenden Wert (den rechten Operand) zurückgeben, wenn der linke Operand einen Typ aufweist, der NULL-Werte zulässt und dessen Wert NULL ist. Der Versuch, einen Werttyp, der auf NULL festgelegt werden kann, einem Werttyp, der nicht auf NULL festgelegt werden kann, ohne Verwendung des Operators `??` zuzuweisen, verursacht einen Kompilierungsfehler. Wenn bei einer Typumwandlung der Werttyp, der auf NULL festgelegt werden kann, aktuell nicht definiert ist, wird eine `InvalidOperationException`-Ausnahme ausgelöst.
+```csharp
+a ?? b ?? c
+```
 
-Weitere Informationen finden Sie unter [Nullable-Typen](../../programming-guide/nullable-types/index.md).
+wird als ausgewertet,
 
-Das Ergebnis eines ??- Operators wird nicht als Konstante angesehen, auch wenn beide Argumente Konstanten sind.
+```csharp
+a ?? (b ?? c)
+```
 
-## <a name="example"></a>Beispiel
+Der `??`-Operator kann in den folgenden Szenarien nützlich sein:
 
-[!code-csharp[csRefOperators#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#53)]
+- In Ausdrücken mit den [NULL-bedingten Operatoren „?.“ und „?[]“](member-access-operators.md#null-conditional-operators--and-) können Sie den NULL-Zusammenfügungsoperator verwenden, um einen alternativen Ausdruck zum Auswerten für den Fall bereitzustellen, dass das Ergebnis des NULL-bedingten Vorgangs `null` ist:
+
+  [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
+
+- Wenn Sie mit [Nullable-Werttypen](../../programming-guide/nullable-types/index.md) arbeiten und den Wert eines zugrunde liegenden Werttyps bereitstellen müssen, verwenden Sie den NULL-Zusammenfügungsoperator, um den Wert für den Fall anzugeben, dass der Wert eines Nullable-Typs `null` ist:
+
+  [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
+
+  Verwenden Sie die <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>-Methode, wenn der Wert, der verwenden werden soll, falls der Wert des Nullable-Typs `null` lautet, der Standardwert des zugrunde liegenden Werttyps sein soll.
+
+- Ab C# 7.0 können Sie einen [`throw`Ausdruck](../keywords/throw.md#the-throw-expression) als rechten Operanden des NULL-Zusammenfügungsoperators verwenden, um den Code für die Überprüfung der Argumente präziser zu fassen:
+
+  [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
+
+  Das oben stehende Beispiel veranschaulicht auch, wie Sie [Ausdruckskörpermember](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) verwenden, um eine Eigenschaft zu definieren.
+
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
+
+Der NULL-Zusammenfügungsoperator kann nicht überladen werden.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-Weitere Informationen finden Sie unter [Der NULL-Sammeloperator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) in der [C#-Sprachspezifikation](../language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
+Weitere Informationen finden Sie unter [NULL-Zusammenfügungsoperator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) in der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
-- [Typen mit Nullwert](../../programming-guide/nullable-types/index.md)
-- [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Was genau bedeutet „Lifted“?)
+- [?.- und ?[]-Operatoren](member-access-operators.md#null-conditional-operators--and-)
+- [?:-Operator](conditional-operator.md)

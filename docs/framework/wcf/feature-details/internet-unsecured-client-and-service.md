@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: ca6b028ef20095d6faeb125151772eedf1500fa0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5ceda5b9c89fdd1770c6573b132c449997fb62b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133756"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638634"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Internet: Ungesicherter Client und Dienst
 Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherten Windows Communication Foundation (WCF)-Client und Dienst:  
@@ -30,9 +30,9 @@ Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherte
 ## <a name="service"></a>Dienst  
  Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
--   Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
+- Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
--   Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.  
+- Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.  
   
 ### <a name="code"></a>Code  
  Im folgenden Code wird gezeigt, wie ein Endpunkt ohne Sicherheit erstellt wird: Standardmäßig verfügt die <xref:System.ServiceModel.BasicHttpBinding> über den Sicherheitsmodus <xref:System.ServiceModel.BasicHttpSecurityMode.None>.  
@@ -70,9 +70,9 @@ Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherte
 ## <a name="client"></a>Client  
  Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
--   Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
+- Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
--   Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
+- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

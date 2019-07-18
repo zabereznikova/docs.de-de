@@ -5,21 +5,21 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b4a70f96ad256b22ce0d933a633475161160e5a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665864"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Änderungsbenachrichtigung in der Windows Forms-Datenbindung
 Einer der wichtigsten Konzepte von Windows Forms-Datenbindung ist *änderungsbenachrichtigung*. Um sicherzustellen, dass die Datenquelle und gebundenen Steuerelementen stets die neuesten Daten verfügen, müssen Sie die änderungsbenachrichtigung für die Datenbindung hinzufügen. Insbesondere möchten Sie sicherstellen, dass die gebundene Steuerelemente über Änderungen benachrichtigt werden, die mit ihrer Datenquelle vorgenommen wurden, und die Datenquelle auf die gebundenen Eigenschaften eines Steuerelements vorgenommenen Änderungen benachrichtigt.  
   
  Es gibt verschiedene Arten von änderungsbenachrichtigungen, abhängig von der Art der Datenbindung:  
   
--   Einfache Bindung, in dem eine einzelnes Steuerelement-Eigenschaft auf eine einzelne Instanz eines Objekts gebunden ist.  
+- Einfache Bindung, in dem eine einzelnes Steuerelement-Eigenschaft auf eine einzelne Instanz eines Objekts gebunden ist.  
   
--   Listenbasierte Bindung, z. eine einzelnes Steuerelement-Eigenschaft, die an die Eigenschaft eines Elements in einer Liste oder eine Eigenschaft des Steuerelements gebunden b., die an eine Liste der Objekte gebunden werden.  
+- Listenbasierte Bindung, z. eine einzelnes Steuerelement-Eigenschaft, die an die Eigenschaft eines Elements in einer Liste oder eine Eigenschaft des Steuerelements gebunden b., die an eine Liste der Objekte gebunden werden.  
   
  Darüber hinaus, wenn Sie Windows Forms-Steuerelemente, die Sie für die Datenbindung verwenden möchten erstellen, Sie müssen Anwenden der *PropertyName*Muster für die Steuerelemente so geändert, dass Änderungen an die gebundene Eigenschaft eines Steuerelements an weitergegeben werden die die Datenquelle.  
   
@@ -37,6 +37,6 @@ Einer der wichtigsten Konzepte von Windows Forms-Datenbindung ist *änderungsben
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
-- [Datenbindung in Web Forms](windows-forms-data-binding.md)
+- [Windows Forms-Datenbindung](windows-forms-data-binding.md)
 - [Von Windows Forms unterstützte Datenquellen](data-sources-supported-by-windows-forms.md)
-- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)
+- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)

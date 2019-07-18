@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5d2539bc732cdc41c7514fd5d81c449ed8f17a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 73a1fd2a8ad0ad4dc638270c77921438f973de15
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193043"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630691"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx-Methode
 Generiert eine Signatur mit starkem Namen für die angegebene Assembly gemäß den angegebenen Flags.  
@@ -69,9 +69,9 @@ HRESULT StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Eine oder mehrere der folgenden Werte:  
   
--   `SN_SIGN_ALL_FILES` (0 x 00000001) – alle Hashes für verknüpfte Module neu.  
+- `SN_SIGN_ALL_FILES` (0 x 00000001) – alle Hashes für verknüpfte Module neu.  
   
--   `SN_TEST_SIGN` (0 x 00000002) - Test Signierung der Assembly.  
+- `SN_TEST_SIGN` (0 x 00000002) - Test Signierung der Assembly.  
   
 ## <a name="return-value"></a>Rückgabewert  
  `S_OK` Wenn die Methode erfolgreich abgeschlossen. andernfalls ein HRESULT-Wert, der Fehler weist darauf hin (finden Sie unter [Allgemeine HRESULT-Werte](https://go.microsoft.com/fwlink/?LinkId=213878) eine Liste).  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1c5547955a1d5d20938e3896406631da0fae0c5d
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186824"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860045"
 ---
 # <a name="property-value-inheritance"></a>Vererbung von Eigenschaftswerten
 Die Vererbung von Eigenschaftswerten ist eine Funktion des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftssystems. Die Vererbung von Eigenschaftswerten ermöglicht untergeordneten Elementen in einer Elementstruktur, den Wert einer bestimmten Eigenschaft von übergeordneten Elementen zu übernehmen. Dabei erben sie den Wert, der im nächsten übergeordneten Element festgelegt wurde. Das übergeordnete Element hat seinen Wert möglicherweise ebenfalls durch die Vererbung von Eigenschaftswerten erhalten, damit das System auf den Seitenstamm zurückgeführt werden kann. Die Vererbung von Eigenschaftswerten ist nicht das Standardverhalten eines Eigenschaftssystems. Eine Eigenschaft muss mit einer bestimmten Metadateneinstellung eingerichtet werden, damit diese die Vererbung von Eigenschaftswerten für untergeordnete Elemente veranlassen kann.  
@@ -22,7 +22,7 @@ Die Vererbung von Eigenschaftswerten ist eine Funktion des [!INCLUDE[TLA#tla_win
   
 <a name="Practical_Applications_of_Property_Value_Inheritance"></a>   
 ## <a name="practical-applications-of-property-value-inheritance"></a>Vererbung von Eigenschaftswerten in der praktischen Anwendung  
- Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] umfassen mehrere Eigenschaften, die die Vererbung von Eigenschaftswerten aktiviert haben. In der Regel ist das Szenario dafür, dass sie Eigenschaft einbeziehen, wenn dies angebracht ist, damit die Eigenschaft nur einmal pro Seite festgelegt wird, aber nur wenn diese Eigenschaft auch ein Member einer der Klassenbasiselement und daher auch für die meisten der untergeordneten Elemente vorhanden ist. Z. B. die <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft steuert, welche Richtung Inhalt fließender, auf der Seite angeordnet und angezeigt werden soll. In der Regel möchten Sie, dass das Textflusskonzept bei allen untergeordneten Elemente einheitlich behandelt werden soll. Wenn die Flussrichtung aus irgendeinem Grund in einer Ebene der Elementstruktur durch Benutzer oder Umgebungsaktionen zurückgesetzt wurde, sollten sie in der Regel in der gesamten Elementstruktur zurückgesetzt werden. Wenn die <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft erfolgt, um zu erben, der Wert muss nur festgelegt oder einmal zurückgesetzt werden, auf der Ebene in der Elementstruktur, die den darstellungsanforderungen Rand jeder Seite in der Anwendung umfasst. Auf diese Weise wird auch der anfängliche Standardwert erben. Das Eigenschaftswert-Vererbungsmodell kann weiterhin einzelne Elemente aktivieren, um den Wert in den seltenen Fällen zurückzusetzen, in denen eine Mischung aus Flussrichtungen beabsichtigt ist.  
+ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] APIs umfassen mehrere Eigenschaften, die Vererbung von Eigenschaftswerten aktiviert haben. In der Regel ist das Szenario dafür, dass sie Eigenschaft einbeziehen, wenn dies angebracht ist, damit die Eigenschaft nur einmal pro Seite festgelegt wird, aber nur wenn diese Eigenschaft auch ein Member einer der Klassenbasiselement und daher auch für die meisten der untergeordneten Elemente vorhanden ist. Z. B. die <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft steuert, welche Richtung Inhalt fließender, auf der Seite angeordnet und angezeigt werden soll. In der Regel möchten Sie, dass das Textflusskonzept bei allen untergeordneten Elemente einheitlich behandelt werden soll. Wenn die Flussrichtung aus irgendeinem Grund in einer Ebene der Elementstruktur durch Benutzer oder Umgebungsaktionen zurückgesetzt wurde, sollten sie in der Regel in der gesamten Elementstruktur zurückgesetzt werden. Wenn die <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft erfolgt, um zu erben, der Wert muss nur festgelegt oder einmal zurückgesetzt werden, auf der Ebene in der Elementstruktur, die den darstellungsanforderungen Rand jeder Seite in der Anwendung umfasst. Auf diese Weise wird auch der anfängliche Standardwert erben. Das Eigenschaftswert-Vererbungsmodell kann weiterhin einzelne Elemente aktivieren, um den Wert in den seltenen Fällen zurückzusetzen, in denen eine Mischung aus Flussrichtungen beabsichtigt ist.  
   
 <a name="Making_a_Custom_Property_Inheritable"></a>   
 ## <a name="making-a-custom-property-inheritable"></a>Erstellen einer benutzerdefinierten, vererbbaren Eigenschaft  

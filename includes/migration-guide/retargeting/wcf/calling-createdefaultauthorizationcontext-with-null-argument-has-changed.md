@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: a29f0ca6d235250ac1f41e686178b2d6affcd8a0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761129"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804560"
 ---
 ### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>Das Aufrufen von CreateDefaultAuthorizationContext mit einem NULL-Argument wurde geändert
 

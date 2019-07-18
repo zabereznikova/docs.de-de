@@ -2,24 +2,24 @@
 title: Aktivitätsablaufverfolgung in der Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-ms.openlocfilehash: c3bd36598fd903dc016959149e563174624d084b
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 65b2842c57da8e17c7280a2becd755ba2aae8364
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982840"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656450"
 ---
 # <a name="activity-tracing-in-message-security"></a>Aktivitätsablaufverfolgung in der Nachrichtensicherheit
 In diesem Thema wird die Aktivitätsablaufverfolgung für die Sicherheitsverarbeitung beschrieben, die in den folgenden drei Phasen erfolgt.  
   
--   Aushandlung/SCT-Austausch. Das kann später auf der Transportebene stattfinden (über binären Datenaustausch) oder auf der Nachrichtenebene (über SOAP-Nachrichtenaustausch).  
+- Aushandlung/SCT-Austausch. Das kann später auf der Transportebene stattfinden (über binären Datenaustausch) oder auf der Nachrichtenebene (über SOAP-Nachrichtenaustausch).  
   
--   Nachrichtenverschlüsselung/-entschlüsselung mit Signaturüberprüfung und Authentifizierung. Ablaufverfolgungen werden in der Umgebungsaktivität, in der Regel "Aktion verarbeiten", angezeigt.  
+- Nachrichtenverschlüsselung/-entschlüsselung mit Signaturüberprüfung und Authentifizierung. Ablaufverfolgungen werden in der Umgebungsaktivität, in der Regel "Aktion verarbeiten", angezeigt.  
   
--   Autorisierung und Überprüfung. Dies kann lokal geschehen oder bei der Kommunikation zwischen Endpunkten.  
+- Autorisierung und Überprüfung. Dies kann lokal geschehen oder bei der Kommunikation zwischen Endpunkten.  
   
 ## <a name="negotiationsct-exchange"></a>Aushandlung/SCT-Austausch  
- In der Phase Aushandlung/SCT-Austausch werden zwei Aktivitätstypen auf dem Client erstellt: "Sicherheitssitzung einrichten" und "Sicherheitssitzung schließen". "Sicherheitssitzung einrichten" umfasst die Ablaufverfolgung für den RST/RSTR/SCT-Nachrichtenaustausch, während "Sicherheitssitzung schließen" die Ablaufverfolgung der Cancel-Nachricht einschließt.  
+ In der Phase Aushandlung/SCT Exchange werden zwei Aktivitätstypen auf dem Client erstellt: "Sicherheitssitzung einrichten" und "Sicherheitssitzung schließen." "Sicherheitssitzung einrichten" umfasst die Ablaufverfolgung für den RST/RSTR/SCT-Nachrichtenaustausch, während "Sicherheitssitzung schließen" die Ablaufverfolgung der Cancel-Nachricht einschließt.  
   
  Auf dem Server wird jede Anforderung/Antwort zu RST/RSTR/SCT in einer eigenen Aktivität angezeigt. Wenn `propagateActivity` = `true` auf dem Server und Client Aktivitäten auf dem Server dieselbe ID haben, und in der "Sicherheitssitzung einrichten" bei der Anzeige über Service Trace Viewer zusammen angezeigt werden.  
   

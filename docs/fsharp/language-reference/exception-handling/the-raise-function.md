@@ -2,12 +2,12 @@
 title: 'Ausnahmen: Die raise-Funktion'
 description: Erfahren Sie, wie die F# "raise"-Funktion wird verwendet, um anzugeben, dass ein Fehler oder Ausnahmebedingung aufgetreten ist.
 ms.date: 05/16/2016
-ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9e2515ad7b85c1025bc3aa0aa2a6929a8d35436d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610150"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641966"
 ---
 # <a name="exceptions-the-raise-function"></a>Ausnahmen: Die raise-Funktion
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e52ef20f2b8e3937911dc37e68f8a338ab0d85d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5542cf5895bc60c5880f2f082a9c14d722e02478
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468870"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744922"
 ---
 # <a name="icordebugreferencevaluegetvalue-method"></a>ICorDebugReferenceValue::GetValue-Methode
 Ruft die aktuelle Speicheradresse des referenzierten Objekts ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetValue (  
     [out] CORDB_ADDRESS   *pValue  
 );  

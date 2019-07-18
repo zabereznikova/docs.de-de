@@ -3,12 +3,12 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126148"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423238"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
 
@@ -20,11 +20,11 @@ Dieser Artikel erläutert den Verlauf jeder Hauptversion der Sprache C#. Das C#-
 Die C#-Buildtools berücksichtigen die neueste Hauptversion der Standardsprachversion. Zwischen den Hauptversionen kann es Nebenversionen geben, die in anderen Artikeln in diesem Abschnitt erläutert werden. Sie müssen [die Sprachversion des Compilers konfigurieren](../language-reference/configure-language-version.md) und die Version auswählen, um die neuesten Features in einer Punktversion zu verwenden. Seit C# 7.0 gab es drei Nebenversionen:
 
 * [C# 7.3](csharp-7-3.md):
-  - C# 7.3 steht aktuell in [Visual Studio 2017 Version 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) und im [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) zur Verfügung.
+  - C# 7.3 steht ab [Visual Studio 2017 Version 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) und [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) zur Verfügung.
 * [C# 7.2](csharp-7-2.md):
-  - C# 7.2 steht aktuell in [Visual Studio 2017 Version 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) und im [.NET Core 2.0 SDK](../../core/whats-new/index.md) zur Verfügung.
+  - C# 7.2 steht ab [Visual Studio 2017 Version 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) und [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) zur Verfügung.
 * [C# 7.1](csharp-7-1.md):
-  - Diese Features wurden in [Visual Studio 2017 version 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) und im [.NET Core 2.0 SDK](../../core/whats-new/index.md) hinzugefügt.
+  - C# 7.1 steht ab [Visual Studio 2017 Version 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) und [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) zur Verfügung.
 
 ## <a name="c-version-10"></a>C# Version 1.0
 
@@ -45,7 +45,6 @@ Die wichtigsten Features von C# 1.0 umfassten:
 - [Ausdrücke](../programming-guide/statements-expressions-operators/expressions.md)
 - [Anweisungen](../programming-guide/statements-expressions-operators/statements.md)
 - [Attribute](../programming-guide/concepts/attributes/index.md)
-- [Literale](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# Version 1.2
 

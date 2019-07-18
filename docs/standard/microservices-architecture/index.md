@@ -1,21 +1,19 @@
 ---
 title: .NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranwendungen
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Microservices sind modulare und unabhängig bereitstellbare Dienste. Docker-Container (für Linux und Windows) vereinfachen die Bereitstellung und das Testen, indem ein Dienst und seine Abhängigkeiten zu einer einzigen Einheit gebündelt werden, die dann in einer isolierten Umgebung ausgeführt wird.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9a544172e180bbd3ae5eb2281e73e36407ffc003
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fe69dcec58ae1d1eed23a49fadbee378ec129990
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463643"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152019"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen
 
 ![Bucheinband](./media/cover-small.png)
 
-**EDITION v2.2.00:** auf ASP.NET Core 2.2 aktualisiert
+**EDITION v2.2**: auf ASP.NET Core 2.2 aktualisiert
 
 Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern. 
 
@@ -33,7 +31,7 @@ Um den Einstieg einfacher zu gestalten, konzentriert sich der Leitfaden auf eine
 
 ## <a name="introduction"></a>Einführung
 
-Unternehmen sparen zunehmend Kosten, lösen Entwicklungsprobleme und verbessern DevOps und Produktvorgänge durch das Verwenden von Containern. Microsoft hat durch das Erstellen von Produkten wie Azure Container Service und Azure Service Fabric sowie durch die Partnerschaft mit Marktführern wie Docker, Mesosphere und Kubernetes Containerinnovationen für Linux und Windows veröffentlicht. Diese Produkte stellen Containerlösungen bereit, die Unternehmen beim Erstellen und Bereitstellen von Anwendungen mit Cloudgeschwindigkeit und im Cloudmaßstab unterstützen, unabhängig von der Wahl ihrer Plattformen oder Tools.
+Unternehmen sparen zunehmend Kosten, lösen Entwicklungsprobleme und verbessern DevOps und Produktvorgänge durch das Verwenden von Containern. Microsoft hat mit Produkten wie Azure Kubernetes Service und Azure Service Fabric sowie durch die Partnerschaft mit Marktführern wie Docker, Mesosphere und Kubernetes Containerinnovationen für Linux und Windows veröffentlicht. Diese Produkte stellen Containerlösungen bereit, die Unternehmen beim Erstellen und Bereitstellen von Anwendungen mit Cloudgeschwindigkeit und im Cloudmaßstab unterstützen, unabhängig von der Wahl ihrer Plattformen oder Tools.
 
 Docker entwickelt sich praktisch zum Standard in der Containerindustrie und wird von den meisten wichtigen Anbietern der Windows- und Linux-Ökosysteme unterstützt. (Microsoft ist einer der wichtigsten Cloudanbieter, die Docker unterstützen.) In Zukunft wird Docker wahrscheinlich in jedem lokalen oder Cloud-Datencenter allgegenwärtig sein.
 
@@ -57,8 +55,8 @@ Dieser Leitfaden konzentriert sich nicht auf den Lebenszyklus der Anwendung, Dev
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Microsoft-Tools) (E-Book zum Download)  
-    [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+- **Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Microsoft-Tools) (E-Book zum Download)  
+    <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>Zielgruppe dieses Leitfadens
 
@@ -128,7 +126,7 @@ Teilnehmer und Prüfer:
 >
 > **Dylan Reisenberger**, Architekt und Entwicklungsleiter bei Polly
 >
-> **Steve Smith**, Softwarespezialist & Trainer bei ASPSmith Ltd.
+> **Steve „ardalis“ Smith** – Softwarearchitekt und Trainer – [Ardalis.com](https://ardalis.com)
 >
 > **Ian Cooper**, Codearchitekt bei Brighter
 >
@@ -164,7 +162,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 by Microsoft Corporation
+Copyright © 2019 Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
 

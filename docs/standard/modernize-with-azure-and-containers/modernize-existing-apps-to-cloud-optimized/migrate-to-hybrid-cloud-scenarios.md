@@ -1,17 +1,15 @@
 ---
-title: Migrieren Sie zu hybridcloudszenarien
+title: Migrieren zu Hybridcloudszenarios
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Migrieren Sie zu hybridcloudszenarien
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d6fc272854654d890559d5db032b05667627d94
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147345"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643721"
 ---
-# <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren Sie zu hybridcloudszenarien
+# <a name="migrate-to-hybrid-cloud-scenarios"></a>Migrieren zu Hybridcloudszenarios
 
 Einige Organisationen und Unternehmen können nicht einige seiner Anwendungen in öffentlichen Clouds wie Microsoft Azure oder jede andere öffentliche Cloud, die aufgrund von Bestimmungen oder ihre eigenen Richtlinien migriert. Allerdings ist es wahrscheinlich, dass jedes Unternehmen davon profitieren kann, dass einige seiner Anwendungen in der öffentlichen Cloud und andere Anwendungen vor Ort. Eine gemischte Umgebung kann jedoch zu führen Übermäßige Komplexität in Umgebungen, die aufgrund von verschiedenen Plattformen und Technologien, die in öffentlichen Clouds und lokale Umgebungen.
 
@@ -33,9 +31,9 @@ Abbildung 4-13 zeigt eine Übersicht über die hybride Cloud-Plattform, die Micr
 
 Azure Stack wird in zwei Bereitstellungsoptionen zur Erfüllung Ihrer Anforderungen angeboten:
 
--   Azure Stack integrierte Systeme
+- Azure Stack integrierte Systeme
 
--   Azure Stack Development Kits
+- Azure Stack Development Kits
 
 ### <a name="azure-stack-integrated-systems"></a>Azure Stack integrierte Systeme
 
@@ -47,25 +45,25 @@ Microsoft Azure Stack Development Kit ist eine einzelknotenbereitstellung von Az
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Azure hybridcloud**
+- **Azure hybridcloud**
 
-    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
-    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
+    <https://azure.microsoft.com/overview/azure-stack/>
 
--   **Active Directory-Dienstkonten für Windows-Container**
+- **Active Directory-Dienstkonten für Windows-Container**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **Erstellen Sie einen Container mit Active Directory-Unterstützung**
+- **Erstellen Sie einen Container mit Active Directory-Unterstützung**
 
-    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Lizenzieren von Azure-Hybridvorteil**
+- **Lizenzieren von Azure-Hybridvorteil**
 
-    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    <https://azure.microsoft.com/pricing/hybrid-benefit/>
 
 >[!div class="step-by-step"]
 >[Zurück](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
 ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052403"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>Vorgehensweise: Verwenden eines Rasters für automatisches Layout
 Dieses Beispiel beschreibt, wie ein Raster im automatischen Layoutansatz zum Erstellen einer lokalisierbaren Anwendung verwendet wird.  

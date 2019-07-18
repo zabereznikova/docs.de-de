@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5658ac87c7a938381639442216df03853f02998
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 120c31b61734cfb4cb0048489632bc0848a9430b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195786"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782180"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule-Methode
 Ruft die Bezeichner der Anwendungsdomänen ab, in denen das angegebene Modul geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetAppDomainsContainingModule(  
             [in] ModuleID moduleId,  
             [in] ULONG32 cAppDomainIds,  

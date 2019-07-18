@@ -5,11 +5,11 @@ ms.assetid: 15b8526e-4f5d-475c-a1e3-d8b2d145c879
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a6ed8c6e61c558a4bc9e3f92d559615ac93ecff8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962338"
 ---
 # <a name="isymunmanagedwriter5-interface"></a>ISymUnmanagedWriter5-Schnittstelle
 ISymUnmanagedWriter5-Schnittstelle.  

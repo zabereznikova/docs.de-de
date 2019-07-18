@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5b4da744151d8b667c0f944b1a0d51d1251bfae5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112085"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652003"
 ---
 # <a name="configuring-message-logging"></a>Konfigurieren der Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für verschiedene Szenarien konfigurieren können.  
@@ -78,16 +78,16 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
  Auf dieser Ebene protokollierte Nachrichten können vor oder nach dem Transport codiert oder decodiert werden. Wenn Filter definiert wurden, werden nur Nachrichten, die zu den Filtern passen, protokolliert. Andernfalls werden alle Nachrichten auf der Transportschicht protokolliert. Auf dieser Ebene werden alle Infrastrukturnachrichten protokolliert, einschließlich zuverlässiger Messagingnachrichten. Bei per Streaming übertragenen Nachrichten werden nur die Header protokolliert. Außerdem werden sichere Nachrichten auf dieser Ebene verschlüsselt protokolliert, außer bei Verwendung eines sicheren Transports wie HTTPS.  
   
 ### <a name="malformed-level"></a>Falsch formatierte Ebene  
- Falsch formatierte Nachrichten sind Nachrichten, die vom WCF-Stapel in jeder Phase der Verarbeitung abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definiert die Größe der Nachricht als CDATA protokolliert werden. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. Weitere Informationen zu diesem Attribut finden Sie im Abschnitt Weitere Optionen.  
+ Falsch formatierte Nachrichten sind Nachrichten, die vom WCF-Stapel in jeder Phase der Verarbeitung abgelehnt werden. Falsch formatierte Nachrichten werden unverändert protokolliert: verschlüsselt, wenn sie bereits verschlüsselt sind, mit nicht ordnungsgemäßem XML usw. `maxSizeOfMessageToLog` definierte die zu protokollierende Nachrichtengröße als CDATA. Standardmäßig beträgt `maxSizeOfMessageToLog` 256K. Weitere Informationen zu diesem Attribut finden Sie im Abschnitt Weitere Optionen.  
   
 ### <a name="other-options"></a>Weitere Optionen  
  Zusätzlich zu den Protokollierungsebenen kann der Benutzer die folgenden Optionen angeben:  
   
--   Gesamte Nachricht protokollieren (`logEntireMessage` Attribut): Dieser Wert gibt an, ob die ganze Meldung (Nachrichtenkopf und Text) protokolliert wird. Der Standardwert lautet `false`, das bedeutet, dass nur der Nachrichtenheader protokolliert wird. Diese Einstellung beeinflusst die Nachrichtenprotokollierung auf Dienst- und Transportebene.  
+- Gesamte Nachricht protokollieren (`logEntireMessage` Attribut): Dieser Wert gibt an, ob die ganze Meldung (Nachrichtenkopf und Text) protokolliert wird. Der Standardwert lautet `false`, das bedeutet, dass nur der Nachrichtenheader protokolliert wird. Diese Einstellung beeinflusst die Nachrichtenprotokollierung auf Dienst- und Transportebene.  
   
--   Max. zu protokollierende Nachrichten (`maxMessagesToLog` Attribut): Dieser Wert gibt die maximale Anzahl von zu protokollierenden Meldungen. Alle Nachrichten (Dienst, Transport und falsch formatierte Nachrichten) werden zu diesem Kontingent gezählt. Wenn das Kontingent erreicht wird, wird eine Ablaufverfolgung ausgegeben und keine weitere Nachricht protokolliert. Der Standardwert ist 10.000.  
+- Max. zu protokollierende Nachrichten (`maxMessagesToLog` Attribut): Dieser Wert gibt die maximale Anzahl von zu protokollierenden Meldungen. Alle Nachrichten (Dienst, Transport und falsch formatierte Nachrichten) werden zu diesem Kontingent gezählt. Wenn das Kontingent erreicht wird, wird eine Ablaufverfolgung ausgegeben und keine weitere Nachricht protokolliert. Der Standardwert ist 10.000.  
   
--   Maximale Größe einer zu protokollierenden Meldung (`maxSizeOfMessageToLog` Attribut): Dieser Wert gibt die maximale Größe von Nachrichten, melden Sie sich in Bytes. Nachrichten, die das Größenlimit überschreiten, werden nicht protokolliert, und für diese Nachricht werden keine weiteren Aktivitäten durchgeführt. Diese Einstellung wirkt sich auf alle Nachverfolgungsebenen aus. Wenn die ServiceModel-Ablaufverfolgung aktiviert ist, wird am ersten Protokollierungspunkt (ServiceModelSend* oder TransportReceive) zur Benachrichtigung des Benutzers eine Ablaufverfolgung auf Warnungsebene ausgegeben. Der Standardwert für Nachrichten auf Dienst- und auf Transportebene ist 256K, während der Standardwert für falsch formatierte Nachrichten 4K beträgt.  
+- Maximale Größe einer zu protokollierenden Meldung (`maxSizeOfMessageToLog` Attribut): Dieser Wert gibt die maximale Größe von Nachrichten, melden Sie sich in Bytes. Nachrichten, die das Größenlimit überschreiten, werden nicht protokolliert, und für diese Nachricht werden keine weiteren Aktivitäten durchgeführt. Diese Einstellung wirkt sich auf alle Nachverfolgungsebenen aus. Wenn die ServiceModel-Ablaufverfolgung aktiviert ist, wird am ersten Protokollierungspunkt (ServiceModelSend* oder TransportReceive) zur Benachrichtigung des Benutzers eine Ablaufverfolgung auf Warnungsebene ausgegeben. Der Standardwert für Nachrichten auf Dienst- und auf Transportebene ist 256K, während der Standardwert für falsch formatierte Nachrichten 4K beträgt.  
   
     > [!CAUTION]
     >  Bei der Nachrichtengröße, die für den Vergleich mit `maxSizeOfMessageToLog` berechnet wird, handelt es sich um die Nachrichtengröße im Arbeitsspeicher vor der Serialisierung. Diese Größe kann von der tatsächlichen Länge der Nachrichtenzeichenfolge, die protokolliert wird, abweichen. In vielen Fällen überschreitet sie die tatsächliche Größe. Demzufolge werden Nachrichten möglicherweise nicht protokolliert. Um dieser Tatsache Rechnung zu tragen, können Sie das `maxSizeOfMessageToLog`-Attribut um 10 % größer angeben als die erwartete Nachrichtengröße. Wenn falsch formatierte Nachrichten protokolliert werden, kann die tatsächliche Festplattenspeichergröße, die von Nachrichtenprotokollen genutzt wird, die Größe des durch `maxSizeOfMessageToLog` angegebenen Werts um das Fünffache übersteigen.  

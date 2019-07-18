@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d921c13765f5d61ce9822df0b4059b2cf93a6f6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744084"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623669"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Abrufen von Informationen aus Attributen
 Das Abrufen eines benutzerdefinierten Attributs ist ein einfacher Prozess. Zuerst deklarieren Sie eine Instanz des Attributs, das Sie abrufen möchten. Dann verwenden Sie die <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>-Methode, um das neue Attribut auf den Wert des abzurufenden Attributs zu initialisieren. Sobald das neue Attribut initialisiert wurde, verwenden Sie einfach dessen Eigenschaften, um die Werte abzurufen.  
   
 > [!IMPORTANT]
->  In diesem Thema wird beschrieben, wie Attribute für Code abgerufen werden, der in den Ausführungskontext geladen wird. Zum Abrufen von Attributen für Code, der in den reflexionsbezogenen Kontext geladen wurde, müssen Sie die <xref:System.Reflection.CustomAttributeData>-Klasse verwenden, wie in [Vorgehensweise: Laden von Assemblys in den reflexionsbezogenen Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) beschrieben.  
+>  In diesem Thema wird beschrieben, wie Attribute für Code abgerufen werden, der in den Ausführungskontext geladen wird. Zum Abrufen von Attributen für Code, der in den reflexionsbezogenen Kontext geladen wurde, müssen Sie die <xref:System.Reflection.CustomAttributeData>-Klasse verwenden, wie in [Vorgehensweise: Laden von Assemblys in den reflexionsbezogenen Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
  Dieser Abschnitt erläutert die folgenden Möglichkeiten zum Abrufen von Attributen:  
   
--   [Eine einzelne Instanz eines Attributs abrufen](#cpconretrievingsingleinstanceofattribute)  
+- [Eine einzelne Instanz eines Attributs abrufen](#cpconretrievingsingleinstanceofattribute)  
   
--   [Abrufen mehrerer Instanzen eines Attributs in demselben Gültigkeitsbereich angewendet](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [Abrufen mehrerer Instanzen eines Attributs in demselben Gültigkeitsbereich angewendet](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [Abrufen mehrerer Instanzen eines Attributs auf unterschiedliche Bereiche angewendet](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [Abrufen mehrerer Instanzen eines Attributs auf unterschiedliche Bereiche angewendet](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>Abrufen einer einzelnen Instanz eines Attributs  

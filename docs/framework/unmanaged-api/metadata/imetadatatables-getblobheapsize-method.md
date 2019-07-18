@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d22e61d28e0fbf06fa1cfe9e9ac18a534726f01d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b9a73df0b73eb5043103479b7452fedc84b02819
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076454"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781559"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize-Methode
 Ruft die Größe der binary large Object (BLOB) Heap in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetBlobHeapSize (  
     [out] ULONG     *pcbBlobs  
 );   

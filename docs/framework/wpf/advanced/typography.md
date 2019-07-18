@@ -9,11 +9,11 @@ helpviewer_keywords:
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
 ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981928"
 ---
 # <a name="typography"></a>Typografie
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet Unterstützung für umfangreiche Präsentation von Textinhalt. Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird mit [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] gerendert , was die Übersichtlichkeit und Lesbarkeit von Text verbessert. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt auch [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten, die den Funktionsumfang hinausgehende bieten die [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Format.  
@@ -21,12 +21,12 @@ ms.locfileid: "59195513"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Typografie in WPF](typography-in-wpf.md)  
  [Übersicht über ClearType](cleartype-overview.md)  
- [ClearType-Registrierungseinstellungen](cleartype-registry-settings.md)  
+ [ClearType Registry Settings (ClearType-Registrierungseinstellungen)](cleartype-registry-settings.md)  
  [Zeichnen von formatiertem Text](drawing-formatted-text.md)  
  [Erweiterte Textformatierung](advanced-text-formatting.md)  
  [Schriftarten](fonts-wpf.md)  
  [Symbole](glyphs.md)  
- [Gewusst wie-Themen](typography-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

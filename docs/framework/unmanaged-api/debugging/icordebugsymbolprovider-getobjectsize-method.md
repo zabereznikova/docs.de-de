@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbcdb5541fdd49944f462321dc24131a32a42391
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b90e2a097e6dfd35b6237808a7b8b47937774b0d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107288"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771321"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize-Methode
 Gibt die Objektgröße eines Objekts basierend auf seiner TypeSpec-Signatur zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetObjectSize(  
    [in] ULONG32 cbSignature,  
    [in, size_is(cbSignature)]  BYTE typeSig[],  
@@ -51,4 +51,4 @@ HRESULT GetObjectSize(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugSymbolProvider-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

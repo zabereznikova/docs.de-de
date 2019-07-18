@@ -3,11 +3,11 @@ title: Listen
 description: Erfahren Sie mehr über F# aufgeführt sind, handelt es sich bei eine geordnete, unveränderliche Reihe von Elementen des gleichen Typs.
 ms.date: 05/16/2016
 ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904123"
 ---
 # <a name="lists"></a>Listen
 
@@ -65,11 +65,11 @@ Der Listentyp unterstützt die folgenden Eigenschaften:
 |Eigenschaft|Typ|Beschreibung|
 |--------|----|-----------|
 |[Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Das erste Element.|
-|[leere](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Eine statische Eigenschaft, die eine leere Liste des entsprechenden Typs zurückgibt.|
-|["IsEmpty"](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|Ergibt `true`, wenn die Liste keine Elemente enthält.|
+|[Empty](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Eine statische Eigenschaft, die eine leere Liste des entsprechenden Typs zurückgibt.|
+|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|Ergibt `true`, wenn die Liste keine Elemente enthält.|
 |[Item](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|Das Element am angegebenen (nullbasierten) Index.|
 |[Länge](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Die Anzahl der Elemente.|
-|[Ende](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|Die Liste ohne das erste Element.|
+|[Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|Die Liste ohne das erste Element.|
 
 Nachfolgend sind einige Beispiele zur Verwendung dieser Eigenschaften aufgeführt.
 

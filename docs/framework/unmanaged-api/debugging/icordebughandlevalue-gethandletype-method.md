@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecc0b46618cd00ba4442e30c23a7b7e950382fee
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0bc65cdeada059f6e9b41dc8eb4d7589a232143d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475592"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756828"
 ---
 # <a name="icordebughandlevaluegethandletype-method"></a>ICorDebugHandleValue::GetHandleType-Methode
 Ruft einen Wert, der den Typ des Handles, die von diesem ICorDebugHandleValue-Objekt verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetHandleType (  
     [out] CorDebugHandleType  *pType  
 );  

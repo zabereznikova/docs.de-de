@@ -1,16 +1,16 @@
 ---
-title: <clear> Element für <namedCaches>
+title: <clear>-Element für <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: eb0a50919e163a795abc70d132bd45f1d05192ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e563f8f27538e70ba90465fc28d300754509f7a4
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146860"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423322"
 ---
 # <a name="clear-element-for-namedcaches"></a>\<clear >-Element für \<NamedCaches >
 Löscht alle `namedCache` Einträge in der `namedCaches` Auflistung für einen Speichercache.  
@@ -24,7 +24,7 @@ Löscht alle `namedCache` Einträge in der `namedCaches` Auflistung für einen S
   
 ```xml  
 <namedCaches>  
-    <clear name="default" />  
+    <clear name="Default" />  
     <!-- child elements -->  
  </namedCaches>  
 ```  

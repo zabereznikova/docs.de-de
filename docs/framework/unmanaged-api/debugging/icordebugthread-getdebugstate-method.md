@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0baabbb736365b138d1754e68070207b4310bf57
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489890"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762462"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState-Methode
 Ruft den aktuellen Debugzustand dieses ICorDebugThread-Objekts ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetDebugState (  
     [out] CorDebugThreadState   *pState  
 );  

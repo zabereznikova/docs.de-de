@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71e32211e6ab16fb5e4e2c624dbad3af5fd6b09f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b08937182797c8e94048d734d65473fad21b85cc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132014"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766309"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>ICorDebugObjectValue::IsValueClass-Methode
 Ruft einen Wert, der angibt, ob der Wert dieses Objekts ein Werttyp ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsValueClass (  
     [out] BOOL               *pbIsValueClass  
 );  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, UI Automation clients
 - UI Automation, client properties
 ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
-ms.openlocfilehash: a75b502dc02f0541b9debb6cd1ae23ba10eed8b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5fe988ab94584f79bf3a27257e521ee3a11babc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624260"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Benutzeroberflächenautomatisierungs-Eigenschaften für Clients
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59116362"
   
  Steuerelementmuster verfügen auch über Eigenschaften. Die Eigenschaften von Steuerelementmustern sind für das Muster spezifisch. <xref:System.Windows.Automation.ScrollPattern> enthält z. B. Eigenschaften, mit deren Hilfe eine Clientanwendung ermitteln kann, ob ein Fenster über vertikale oder horizontale Bildlaufleisten verfügt, und welche Ansichtsgrößen und Bildlaufpositionen aktuell verwendet werden. Steuerelementmuster machen alle Eigenschaften durch eine Struktur verfügbar, z. B. durch <xref:System.Windows.Automation.ScrollPattern.ScrollPatternInformation>.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften sind schreibgeschützt. Um Eigenschaften eines Steuerelements festzulegen, müssen Sie die Methoden des entsprechenden Steuerelementmusters verwenden. Verwenden Sie z. B. <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> , um die Positionswerte eines Bildlauffensters zu ändern.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften sind schreibgeschützt. Um Eigenschaften eines Steuerelements festzulegen, müssen Sie die Methoden des entsprechenden Steuerelementmusters verwenden. Verwenden Sie z. B. <xref:System.Windows.Automation.ScrollPattern.Scroll%2A> , um die Positionswerte eines Bildlauffensters zu ändern.  
   
  Um die Leistung zu verbessern, können Eigenschaftswerte von Steuerelementen und Steuerelementmustern zwischengespeichert werden, wenn <xref:System.Windows.Automation.AutomationElement> -Objekte abgerufen werden. Weitere Informationen finden Sie unter [Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md).  
   
@@ -41,11 +41,11 @@ ms.locfileid: "59116362"
   
  Weitere Informationen finden Sie unter den folgenden Referenzthemen:  
   
--   <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.FindAll%2A>  
+- <xref:System.Windows.Automation.AutomationElement.FindAll%2A>  
   
--   <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
+- <xref:System.Windows.Automation.TreeWalker.Condition%2A>  
   
 <a name="Retrieving_Properties"></a>   
 ## <a name="retrieving-properties"></a>Abrufen von Eigenschaften  
@@ -53,9 +53,9 @@ ms.locfileid: "59116362"
   
  Darüber hinaus kann jedes <xref:System.Windows.Automation.AutomationElement> oder jede Steuerelementmustereigenschaft, einschließlich von Eigenschaften, die in der <xref:System.Windows.Automation.AutomationElement.Cached%2A> -Struktur oder in der <xref:System.Windows.Automation.AutomationElement.Current%2A> -Struktur nicht verfügbar sind, mit einer der folgenden Methoden abgerufen werden:  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>  
   
  Diese Methoden bieten eine etwas bessere Leistung sowie Zugriff auf sämtliche Eigenschaften.  
   
@@ -106,5 +106,5 @@ ms.locfileid: "59116362"
 ## <a name="see-also"></a>Siehe auch
 
 - [Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
-- [Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)
 - [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

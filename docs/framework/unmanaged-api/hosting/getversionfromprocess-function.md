@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4015ecec38466650488a653641f5af93c4680f22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124084"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779592"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess-Funktion
 Ruft die Versionsnummer der die common Language Runtime (CLR), die dem angegebenen Prozesshandle zugeordnet ist.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetVersionFromProcess (  
     [in]  HANDLE  hProcess,   
     [out] LPWSTR  pVersion,   
@@ -59,7 +59,7 @@ HRESULT GetVersionFromProcess (
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`pVersion` ist null und `cchBuffer` ist nicht null ist, oder umgekehrt.<br /><br /> - oder - <br /><br /> `hProcess` ist kein gültiges Handle an einen Prozess.<br /><br /> - oder - <br /><br /> Die CLR wird nicht geladen werden.|  
+|E_INVALIDARG|`pVersion` ist null und `cchBuffer` ist nicht null ist, oder umgekehrt.<br /><br /> - oder -<br /><br /> `hProcess` ist kein gültiges Handle an einen Prozess.<br /><br /> - oder -<br /><br /> Die CLR wird nicht geladen werden.|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer` ist null oder kleiner als die Länge der Versionszeichenfolge.|  
 |E_NOTIMPL|Diese Methode ist nicht auf das Betriebssystem Microsoft Windows 95, Microsoft Windows 98 oder Microsoft Windows Millennium Edition verfügbar.|  
   

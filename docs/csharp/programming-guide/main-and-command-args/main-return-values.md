@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: e41b92239f0ba1a94190262c337f09eedaddab31
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965721"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878928"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main()-Rückgabewerte (C#-Programmierhandbuch)
 
@@ -22,7 +22,7 @@ Zudem kann `int` zurückgegeben werden:
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-Wenn der Rückgabewert von `Main` nicht verwendet wird, ermöglicht die Rückgabe von `void` einen etwas einfacheren Code. Die Rückgabe einer Ganzzahl ermöglicht es dem Programm jedoch, Statusinformationen an andere Programme oder Skripts zu übermitteln, die die ausführbare Datei aufrufen. Der Rückgabewert von `Main` wird als Exitcode für den Prozess behandelt. Im folgenden Beispiel wird gezeigt, wie auf den Rückgabewert von `Main` zugegriffen werden kann.
+Wenn der Rückgabewert von `Main` nicht verwendet wird, ermöglicht die Rückgabe von `void` einen etwas einfacheren Code. Die Rückgabe einer Ganzzahl ermöglicht es dem Programm jedoch, Statusinformationen an andere Programme oder Skripts zu übermitteln, die die ausführbare Datei aufrufen. Der Rückgabewert von `Main` wird als Exitcode für den Prozess behandelt. Wenn `void` aus `Main` zurückgegeben wird, ist der Exitcode implizit `0`. Im folgenden Beispiel wird gezeigt, wie auf den Rückgabewert von `Main` zugegriffen werden kann.
 
 ## <a name="example"></a>Beispiel
 
@@ -94,8 +94,8 @@ Wenn der Einstiegspunkt der Anwendung `Task` oder `Task<int>` zurückgibt, gener
 >Wäre im Beispiel der Modifizierer `async` auf die Methode `Main` angewendet worden, hätte der Compiler denselben Code generiert.
 
 ## <a name="see-also"></a>Siehe auch
+
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Referenz](../index.md)
 - [Main() und Befehlszeilenargumente](index.md)
 - [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von „foreach“](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

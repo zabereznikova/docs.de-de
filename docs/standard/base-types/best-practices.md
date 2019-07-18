@@ -13,29 +13,29 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152811"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634722"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Empfohlene Vorgehensweisen für die Verwendung von regulären Ausdrücken in .NET
 <a name="top"></a> Das Modul für reguläre Ausdrücke in .NET ist ein leistungsstarkes Tool mit vollem Funktionsumfang, das Texte auf Grundlage von Musterübereinstimmungen verarbeitet, anstatt Literaltext zu vergleichen und nach Übereinstimmungen mit diesem zu suchen. In den meisten Fällen wird die Suche nach Musterabgleichen schnell und effizient ausgeführt. Gelegentlich kann die Engine für reguläre Ausdrücke jedoch sehr langsam wirken. In Extremfällen kann auch der Eindruck entstehen, dass das Modul nicht mehr reagiert, wenn für die Verarbeitung relativ kleiner Eingaben mehrere Stunden oder sogar Tage benötigt werden.  
   
  In diesem Thema werden einige Best Practices erläutert, mit denen Entwickler sicherstellen können, dass ihre regulären Ausdrücke optimale Leistung erzielen. Es enthält die folgenden Abschnitte:  
   
--   [Bedenken der Eingabequelle](#InputSource)  
+- [Bedenken der Eingabequelle](#InputSource)  
   
--   [Angemessene Behandlung der Objektinstanziierung](#ObjectInstantiation)  
+- [Angemessene Behandlung der Objektinstanziierung](#ObjectInstantiation)  
   
--   [Steuern der Rückverfolgung](#Backtracking)  
+- [Steuern der Rückverfolgung](#Backtracking)  
   
--   [Verwenden von Timeoutwerten](#Timeouts)  
+- [Verwenden von Timeoutwerten](#Timeouts)  
   
--   [Erfassungen nur bei Bedarf](#Capture)  
+- [Erfassungen nur bei Bedarf](#Capture)  
   
--   [Verwandte Themen](#RelatedTopics)  
+- [Verwandte Themen](#RelatedTopics)  
   
 <a name="InputSource"></a>   
 ## <a name="consider-the-input-source"></a>Bedenken der Eingabequelle  
@@ -45,16 +45,16 @@ ms.locfileid: "53152811"
   
  Für Übereinstimmungen mit nicht eingeschränkten Eingaben muss ein regulärer Ausdruck drei Arten von Text effizient verarbeiten können:  
   
--   Text, der mit dem Muster eines regulären Ausdrucks übereinstimmt.  
+- Text, der mit dem Muster eines regulären Ausdrucks übereinstimmt.  
   
--   Text, der nicht mit dem Muster eines regulären Ausdrucks übereinstimmt.  
+- Text, der nicht mit dem Muster eines regulären Ausdrucks übereinstimmt.  
   
--   Text, der fast mit dem Muster eines regulären Ausdrucks übereinstimmt.  
+- Text, der fast mit dem Muster eines regulären Ausdrucks übereinstimmt.  
   
  Der letzte Texttyp ist besonders problematisch für reguläre Ausdrücke, die für die Behandlung eingeschränkter Eingaben vorgesehen sind. Wenn ein solcher regulärer Ausdruck zudem auf umfangreicher [Rückverfolgung](../../../docs/standard/base-types/backtracking-in-regular-expressions.md) beruht, kann die Engine für reguläre Ausdrücke für die Verarbeitung von scheinbar harmlosem Text übermäßig lange Zeit brauchen (in manchen Fällen mehrere Stunden oder Tage).  
   
 > [!WARNING]
->  Im folgenden Beispiel wird ein regulärer Ausdruck verwendet, der für übermäßige Rückverfolgung anfällig ist und wahrscheinlich gültige E-Mail-Adressen zurückweisen wird. Er sollte nicht in einer E-Mail-Validierungsroutine nicht verwendet werden. Wenn Sie einen regulären Ausdruck zur Überprüfung von E-Mail-Adressen verwenden möchten, finden Sie entsprechende Informationen unter [Gewusst wie: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+>  Im folgenden Beispiel wird ein regulärer Ausdruck verwendet, der für übermäßige Rückverfolgung anfällig ist und wahrscheinlich gültige E-Mail-Adressen zurückweisen wird. Er sollte nicht in einer E-Mail-Validierungsroutine nicht verwendet werden. Einen regulären Ausdruck, der E-Mail-Adressen überprüft, finden Sie unter [Vorgehensweise: Überprüfen, ob Zeichenfolgen ein gültiges E-Mail-Format aufweisen](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
  Als Beispiel dient hier ein sehr häufig verwendeter, jedoch äußerst problematischer regulärer Ausdruck zum Überprüfen des Alias einer E-Mail-Adresse. Der reguläre Ausdruck `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` wird konzipiert, um eine als gültig angenommene E-Mail-Adresse zu verarbeiten, die aus einem alphanumerischen Zeichen gefolgt von keinem oder weiteren Zeichen besteht, bei denen es sich um alphanumerische Zeichen, Punkte oder Bindestriche handeln kann. Der reguläre Ausdruck muss mit einem alphanumerischen Zeichen enden. Die Verarbeitung von gültigen Eingaben durch diesen regulären Ausdruck erfolgt zwar reibungslos, aber das folgende Beispiel zeigt, dass die Leistung bei der Verarbeitung von fast gültigen Eingaben sehr schlecht ist.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "53152811"
   
  Um dieses Problem zu beheben, können Sie wie folgt vorgehen:  
   
--   Beim Erstellen eines Musters sollten Sie berücksichtigen, wie sich das Zurückverfolgen auf die Leistung der Engine für reguläre Ausdrücke auswirken könnte. Dies gilt insbesondere, wenn ein regulärer Ausdruck für die Verarbeitung nicht eingeschränkter Eingaben vorgesehen ist. Weitere Informationen finden Sie im Abschnitt [Steuern der Rückverfolgung](#Backtracking).  
+- Beim Erstellen eines Musters sollten Sie berücksichtigen, wie sich das Zurückverfolgen auf die Leistung der Engine für reguläre Ausdrücke auswirken könnte. Dies gilt insbesondere, wenn ein regulärer Ausdruck für die Verarbeitung nicht eingeschränkter Eingaben vorgesehen ist. Weitere Informationen finden Sie im Abschnitt [Steuern der Rückverfolgung](#Backtracking).  
   
--   Testen Sie den regulären Ausdruck sowohl mit ungültigen und fast gültigen Eingaben als auch mit gültigen Eingaben gründlich. Um Eingaben für einen bestimmten regulären Ausdruck zufällig zu generieren, können Sie [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/) verwenden, ein Tool für das Untersuchen von regulären Ausdrücken von Microsoft Research.  
+- Testen Sie den regulären Ausdruck sowohl mit ungültigen und fast gültigen Eingaben als auch mit gültigen Eingaben gründlich. Um Eingaben für einen bestimmten regulären Ausdruck zufällig zu generieren, können Sie [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/) verwenden, ein Tool für das Untersuchen von regulären Ausdrücken von Microsoft Research.  
   
  [Zurück nach oben](#top)  
   
@@ -82,13 +82,13 @@ ms.locfileid: "53152811"
   
  Sie können die Engine für reguläre Ausdrücke mit einem bestimmten Muster für reguläre Ausdrücke verknüpfen und die Engine dann verwenden, um Textübereinstimmungen auf verschiedene Weise zu suchen:  
   
--   Sie können eine statische Methode für Musterübereinstimmungen aufrufen, z. B. <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>. Hierfür ist keine Instanziierung des Objekts eines regulären Ausdrucks erforderlich.  
+- Sie können eine statische Methode für Musterübereinstimmungen aufrufen, z. B. <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>. Hierfür ist keine Instanziierung des Objekts eines regulären Ausdrucks erforderlich.  
   
--   Sie können ein <xref:System.Text.RegularExpressions.Regex>-Objekt instanziieren und eine Instanzmethode für Musterübereinstimmungen eines interpretierten regulären Ausdrucks aufrufen. Dies ist die Standardmethode zum Binden der Engine für reguläre Ausdrücke an ein Muster für reguläre Ausdrücke. Das Ergebnis tritt ein, wenn ein <xref:System.Text.RegularExpressions.Regex>-Objekt ohne ein `options`-Argument instanziiert wird, das das <xref:System.Text.RegularExpressions.RegexOptions.Compiled>-Flag beinhaltet.  
+- Sie können ein <xref:System.Text.RegularExpressions.Regex>-Objekt instanziieren und eine Instanzmethode für Musterübereinstimmungen eines interpretierten regulären Ausdrucks aufrufen. Dies ist die Standardmethode zum Binden der Engine für reguläre Ausdrücke an ein Muster für reguläre Ausdrücke. Das Ergebnis tritt ein, wenn ein <xref:System.Text.RegularExpressions.Regex>-Objekt ohne ein `options`-Argument instanziiert wird, das das <xref:System.Text.RegularExpressions.RegexOptions.Compiled>-Flag beinhaltet.  
   
--   Sie können ein <xref:System.Text.RegularExpressions.Regex>-Objekt instanziieren und eine Instanzmethode für Musterübereinstimmungen eines kompilierten regulären Ausdrucks aufrufen. Objekte regulärer Ausdrücke stellen kompilierte Muster dar, wenn ein <xref:System.Text.RegularExpressions.Regex>-Objekt mit einem `options`-Argument instanziiert wird, das das <xref:System.Text.RegularExpressions.RegexOptions.Compiled>-Flag beinhaltet.  
+- Sie können ein <xref:System.Text.RegularExpressions.Regex>-Objekt instanziieren und eine Instanzmethode für Musterübereinstimmungen eines kompilierten regulären Ausdrucks aufrufen. Objekte regulärer Ausdrücke stellen kompilierte Muster dar, wenn ein <xref:System.Text.RegularExpressions.Regex>-Objekt mit einem `options`-Argument instanziiert wird, das das <xref:System.Text.RegularExpressions.RegexOptions.Compiled>-Flag beinhaltet.  
   
--   Sie können ein <xref:System.Text.RegularExpressions.Regex>-Objekt für besondere Zwecke erstellen, das eng mit einem bestimmten Muster für reguläre Ausdrücke verknüpft ist, dieses Objekt kompilieren und in einer eigenständigen Assembly speichern. Hierfür rufen Sie die <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>-Methode auf.  
+- Sie können ein <xref:System.Text.RegularExpressions.Regex>-Objekt für besondere Zwecke erstellen, das eng mit einem bestimmten Muster für reguläre Ausdrücke verknüpft ist, dieses Objekt kompilieren und in einer eigenständigen Assembly speichern. Hierfür rufen Sie die <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>-Methode auf.  
   
  Die Art und Weise, wie Sie Methoden für Übereinstimmungen mit regulären Ausdrucken aufrufen, kann erhebliche Auswirkungen auf die Anwendung haben. In den folgenden Abschnitten wird erläutert, wann statische Methodenaufrufe, interpretierte reguläre Ausdrücke und kompilierte reguläre Ausdrücke verwendet werden, um die Leistung Ihrer Anwendung zu verbessern.  
   
@@ -147,20 +147,20 @@ ms.locfileid: "53152811"
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
 |`[.?:;!]`|Übereinstimmung mit einem Punkt, Fragezeichen, Doppelpunkt, Semikolon oder Ausrufezeichen.|  
   
-### <a name="regular-expressions-compiled-to-an-assembly"></a>Reguläre Ausdrücke: Kompilierung in eine Assembly  
- Mit .NET können Sie auch eine Assembly erstellen, die kompilierte reguläre Ausdrücke enthält. Hierdurch werden die Leistungseinbußen bei der Kompilierung regulärer Ausdrücke von der Laufzeit zur Entwurfszeit verschoben. Allerdings sind auch einige zusätzliche Aufgaben damit verbunden: Sie müssen die regulären Ausdrücke im Voraus definieren und in eine Assembly kompilieren. Der Compiler kann dann beim Kompilieren von Quellcode, in dem die regulären Ausdrücke der Assembly verwendet werden, auf diese Assembly verweisen. Jeder kompilierte reguläre Ausdruck in der Assembly wird durch eine Klasse dargestellt, die von <xref:System.Text.RegularExpressions.Regex> abgeleitet wird.  
+### <a name="regular-expressions-compiled-to-an-assembly"></a>Reguläre Ausdrücke von .NET In einer Assembly kompiliert  
+ Mit .NET können Sie auch eine Assembly erstellen, die kompilierte reguläre Ausdrücke enthält. Hierdurch werden die Leistungseinbußen bei der Kompilierung regulärer Ausdrücke von der Laufzeit zur Entwurfszeit verschoben. Es sind jedoch einige zusätzliche Schritte erforderlich: Sie müssen die regulären Ausdrücke im Voraus definieren und in eine Assembly kompilieren. Der Compiler kann dann beim Kompilieren von Quellcode, in dem die regulären Ausdrücke der Assembly verwendet werden, auf diese Assembly verweisen. Jeder kompilierte reguläre Ausdruck in der Assembly wird durch eine Klasse dargestellt, die von <xref:System.Text.RegularExpressions.Regex> abgeleitet wird.  
   
  Um reguläre Ausdrücke in einer Assembly zu kompilieren, rufen Sie die <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%28System.Text.RegularExpressions.RegexCompilationInfo%5B%5D%2CSystem.Reflection.AssemblyName%29?displayProperty=nameWithType>-Methode auf und übergeben an diese Methode ein Array von <xref:System.Text.RegularExpressions.RegexCompilationInfo>-Objekten, die die zu kompilierenden regulären Ausdrücke darstellen, und ein <xref:System.Reflection.AssemblyName>-Objekt, das Informationen über die zu erstellende Assembly enthält.  
   
  Das Kompilieren regulärer Ausdrücke in einer Assembly wird in den folgenden Situationen empfohlen:  
   
--   Wenn Sie als Komponentenentwickler eine Bibliothek mit wiederverwendbaren regulären Ausdrücken erstellen möchten.  
+- Wenn Sie als Komponentenentwickler eine Bibliothek mit wiederverwendbaren regulären Ausdrücken erstellen möchten.  
   
--   Wenn die Anzahl der Aufrufe der Methoden für Musterübereinstimmungen mit regulären Ausdrücken erwartungsgemäß unbestimmt ist (von ein bis zwei bis zu mehreren Tausend oder zehntausend Aufrufen). Im Gegensatz zu kompilierten oder interpretierten regulären Ausdrücken bieten reguläre Ausdrücke, die in separaten Assemblys kompiliert werden, eine konsistente Leistung, die nicht von der Anzahl der Methodenaufrufe abhängt.  
+- Wenn die Anzahl der Aufrufe der Methoden für Musterübereinstimmungen mit regulären Ausdrücken erwartungsgemäß unbestimmt ist (von ein bis zwei bis zu mehreren Tausend oder zehntausend Aufrufen). Im Gegensatz zu kompilierten oder interpretierten regulären Ausdrücken bieten reguläre Ausdrücke, die in separaten Assemblys kompiliert werden, eine konsistente Leistung, die nicht von der Anzahl der Methodenaufrufe abhängt.  
   
- Wenn Sie kompilierte reguläre Ausdrücke verwenden, um die Leistung zu optimieren, sollten Sie nicht mithilfe der Reflektion die Assembly erstellen, die Engine für reguläre Ausdrücke laden und die Methoden für Musterübereinstimmungen ausführen. Hierbei sollten Sie es vermeiden, Muster für reguläre Ausdrücke dynamisch zu erstellen und zum Zeitpunkt der Assemblyerstellung Optionen für Musterübereinstimmungen anzugeben (z. B. Mustervergleiche ohne Berücksichtigung der Groß-/Kleinschreibung). Außerdem müssen Sie den Code, mit dem die Assembly erstellt wird, von dem Code trennen, der den regulären Ausdruck verwendet.  
+ Wenn Sie kompilierte reguläre Ausdrücke verwenden, um die Leistung zu optimieren, sollten Sie nicht mithilfe der Reflektion die Assembly erstellen, die Engine für reguläre Ausdrücke laden und die Methoden für Musterübereinstimmungen ausführen. Hierbei sollten Sie es vermeiden, Muster für reguläre Ausdrücke dynamisch zu erstellen und zum Zeitpunkt der Assemblyerstellung Optionen für Musterabgleiche anzugeben (z. B. Musterabgleiche ohne Berücksichtigung der Groß-/Kleinschreibung). Außerdem müssen Sie den Code, mit dem die Assembly erstellt wird, von dem Code trennen, der den regulären Ausdruck verwendet.  
   
- Im folgenden Beispiel wird gezeigt, wie eine Assembly erstellt wird, die einen kompilierten regulären Ausdruck enthält. Die Assembly `RegexLib.dll` wird mit einer einzelnen Klasse regulärer Ausdrücke erstellt, `SentencePattern`, die das reguläre Ausdrucksmuster für Satzübereinstimmungen enthält, das im Abschnitt [Interpretierte oder kompilierte reguläre Ausdrücke](#Interpreted) verwendet wird.  
+ Im folgenden Beispiel wird gezeigt, wie eine Assembly erstellt wird, die einen kompilierten regulären Ausdruck enthält. Die Assembly `RegexLib.dll` wird mit einer einzelnen Klasse regulärer Ausdrücke erstellt, `SentencePattern`, die das reguläre Ausdrucksmuster für Satzübereinstimmungen enthält, das im Abschnitt [Interpretierte und kompilierte reguläre Ausdrücke](#Interpreted) verwendet wird.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]  
@@ -220,7 +220,7 @@ ms.locfileid: "53152811"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- Die Sprache für reguläre Ausdrücke in .NET beinhaltet die folgenden Sprachelemente, die Sie verwenden können, um geschachtelte Quantifizierer zu vermeiden. Weitere Informationen finden Sie unter [Gruppierungskonstrukte in regulären Ausdrücken](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ Die Sprache für reguläre Ausdrücke in .NET beinhaltet die folgenden Sprachelemente, die Sie verwenden können, um geschachtelte Quantifizierer zu vermeiden. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 |Sprachelement|Beschreibung|  
 |----------------------|-----------------|  
@@ -235,13 +235,13 @@ ms.locfileid: "53152811"
 ## <a name="use-time-out-values"></a>Verwenden von Timeoutwerten  
  Wenn Ihre regulären Ausdrücke Eingaben verarbeiten, die annähernd mit dem Muster des regulären Ausdrucks übereinstimmen, wird häufig übermäßige Rückverfolgung verwendet. Dies beeinträchtigt die Leistung signifikant. Sie sollten die Verwendung der Rückverfolgung sorgfältig abwägen und den regulären Ausdruck mit annähernd übereinstimmenden Eingaben testen. Legen Sie darüber hinaus einen Timeoutwert fest, um ggf. die Beeinträchtigung durch übermäßige Rückverfolgung zu minimieren.  
   
- Das Timeoutintervall des regulären Ausdrucks definiert den Zeitraum bis zum Timeout, für den die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht. Das Standardtimeoutintervall ist <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>. Dies bedeutet, dass für den reguläre Ausdruck kein Timeout erfolgt. Sie können diesen Wert folgendermaßen überschreiben und ein Timeoutintervall definieren:  
+ Das Timeoutintervall des regulären Ausdrucks definiert den Zeitraum bis zum Timeout, für den die Engine für reguläre Ausdrücke nach einer einzelnen Übereinstimmung sucht. Das standardmäßige Timeoutintervall ist <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>. Dies bedeutet, dass für den reguläre Ausdruck kein Timeout erfolgt. Sie können diesen Wert folgendermaßen überschreiben und ein Timeoutintervall definieren:  
   
--   Stellen Sie beim Instanziieren eines <xref:System.Text.RegularExpressions.Regex>-Objekts einen Timeoutwert bereit, indem Sie den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>-Konstruktor aufrufen.  
+- Stellen Sie beim Instanziieren eines <xref:System.Text.RegularExpressions.Regex>-Objekts einen Timeoutwert bereit, indem Sie den <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>-Konstruktor aufrufen.  
   
--   Rufen Sie eine statische Methode für Musterübereinstimmungen auf, wie z. B. <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> oder <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, die einen `matchTimeout`-Parameter einschließt.  
+- Rufen Sie eine statische Methode für einen Musterabgleich auf, wie z. B. <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> oder <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, die einen `matchTimeout`-Parameter einschließt.  
   
--   Für kompilierte reguläre Ausdrücke, die durch Aufrufen der <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>-Methode erstellt werden, indem der Konstruktor mit dem Parametertyp <xref:System.TimeSpan> aufgerufen wird.  
+- Für kompilierte reguläre Ausdrücke, die durch Aufrufen der <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>-Methode erstellt werden, indem der Konstruktor mit dem Parametertyp <xref:System.TimeSpan> aufgerufen wird.  
   
  Wenn Sie ein Timeoutintervall definiert haben und am Ende dieses Intervalls keine Übereinstimmung gefunden wird, löst die Methode des regulären Ausdrucks eine <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>-Ausnahme aus. In Ihrem Ausnahmehandler können Sie auswählen, dass erneut ein Abgleich mit einem längeren Timeoutintervall versucht wird, dass der Versuch abgebrochen und davon ausgegangen wird, dass keine Übereinstimmung vorhanden ist, oder dass der Versuch abgebrochen und die Ausnahmeinformationen für eine zukünftige Analyse protokolliert werden.  
   
@@ -281,13 +281,13 @@ ms.locfileid: "53152811"
   
  Erfassungen können Sie auf eine der folgenden Arten deaktivieren:  
   
--   Verwenden Sie das Sprachelement `(?:subexpression)`. Dieses Element verhindert die Erfassung übereinstimmender Teilzeichenfolge in der Gruppe, auf die es angewendet wird. Die Erfassung von Teilzeichenfolgen in geschachtelten Gruppen wird nicht deaktiviert.  
+- Verwenden Sie das Sprachelement `(?:subexpression)`. Dieses Element verhindert die Erfassung übereinstimmender Teilzeichenfolge in der Gruppe, auf die es angewendet wird. Die Erfassung von Teilzeichenfolgen in geschachtelten Gruppen wird nicht deaktiviert.  
   
--   Verwenden Sie die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>-Option. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen im Muster für reguläre Ausdrücke. Wenn Sie diese Option verwenden, können nur Teilzeichenfolgen erfasst werden, die mit benannten Gruppen übereinstimmen, die mit dem Sprachelement `(?<name>subexpression)` definiert wurden. Das <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>-Flag kann an den `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktors oder an den `options`-Parameter einer statischen <xref:System.Text.RegularExpressions.Regex> Übereinstimmungsmethode übergeben werden.  
+- Verwenden Sie die <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>-Option. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen im Muster für reguläre Ausdrücke. Wenn Sie diese Option verwenden, können nur Teilzeichenfolgen erfasst werden, die mit benannten Gruppen übereinstimmen, die mit dem Sprachelement `(?<name>subexpression)` definiert wurden. Das <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>-Flag kann an den `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex>-Klassenkonstruktors oder an den `options`-Parameter einer statischen <xref:System.Text.RegularExpressions.Regex> Übereinstimmungsmethode übergeben werden.  
   
--   Verwenden Sie die `n`-Option im Sprachelement `(?imnsx)`. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen ab dem Punkt im Muster für reguläre Ausdrücke, an dem das Element erscheint. Erfassungen werden entweder bis zum Ende des Musters oder so lange deaktiviert, bis die `(-n)`-Option unbenannte oder implizite Erfassungen aktiviert. Weitere Informationen finden Sie unter [Miscellaneous Constructs](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
+- Verwenden Sie die `n`-Option im Sprachelement `(?imnsx)`. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen ab dem Punkt im Muster für reguläre Ausdrücke, an dem das Element erscheint. Erfassungen werden entweder bis zum Ende des Musters oder so lange deaktiviert, bis die `(-n)`-Option unbenannte oder implizite Erfassungen aktiviert. Weitere Informationen finden Sie unter [Verschiedene Konstrukte](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
--   Verwenden Sie die `n`-Option im Sprachelement `(?imnsx:subexpression)`. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen in `subexpression`. Erfassungen von allen unbenannten oder impliziten geschachtelten Erfassungsgruppen werden ebenfalls deaktiviert.  
+- Verwenden Sie die `n`-Option im Sprachelement `(?imnsx:subexpression)`. Diese Option deaktiviert alle unbenannten oder impliziten Erfassungen in `subexpression`. Erfassungen von allen unbenannten oder impliziten geschachtelten Erfassungsgruppen werden ebenfalls deaktiviert.  
   
  [Zurück nach oben](#top)  
   

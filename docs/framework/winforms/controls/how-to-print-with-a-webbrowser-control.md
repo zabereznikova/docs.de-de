@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fcc0e83b833181b731d33f3869e1229b6444f4ff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094943"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662369"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>Vorgehensweise: Drucken mit einem WebBrowser-Steuerelement
 Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.WebBrowser> Steuerelement auf eine Webseite zu drucken, ohne es anzuzeigen.  
@@ -30,15 +30,15 @@ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.Windows.For
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys `System` und `System.Windows.Forms`.  
+- Verweise auf die Assemblys `System` und `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Print%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [Vorgehensweise: Navigieren zu einem URL mit dem WebBrowser-Steuerelement](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Vorgehensweise: Hinzufügen von Webbrowserfunktionen zu einer Windows Forms-Anwendung](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Vorgehensweise: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Vorgehensweise: Navigieren Sie zu einer URL mit dem WebBrowser-Steuerelement](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Vorgehensweise: Hinzufügen von Webbrowserfunktionen zu einer Windows Forms-Anwendung](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Vorgehensweise: Erstellen Sie eine HTML-Dokumentviewers in einer Windows Forms-Anwendung](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
 - [Übersicht über das WebBrowser-Steuerelement](webbrowser-control-overview.md)
 - [WebBrowser-Sicherheit](webbrowser-security.md)

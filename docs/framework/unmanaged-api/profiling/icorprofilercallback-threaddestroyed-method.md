@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4c45290b1ef4360e51b5ed8e1b0fac3dcdde727
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f114d32432cccd88e36ff76ed49c610bd03f873e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217340"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747012"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed-Methode
 Benachrichtigt den Profiler, dass ein Thread zerstört wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ThreadDestroyed(  
     [in] ThreadID threadId);  
 ```  

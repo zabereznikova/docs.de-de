@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b33b50e53c454f2b62253d12943ea044240d8cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b4f34340c18fddc46695fe64946c3afd90ed7454
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230511"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772291"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType-Enumeration
 Gibt den Typ von einem Metadatentoken.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorTokenType {  
   
     mdtModule                       = 0x00000000,  

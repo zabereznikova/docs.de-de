@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966966"
 ---
 # <a name="how-keyboard-input-works"></a>Funktionsweise von Tastatureingaben
 Windows Forms verarbeitet Tastatureingaben, indem als Reaktion auf Windows-Meldungen Tastaturereignisse ausgelöst werden. Die meisten Windows Forms-Anwendungen verarbeiten Tastatureingaben ausschließlich durch Bearbeiten der Tastaturereignisse. Sie müssen jedoch die Funktionsweise von Tastaturnachrichten verstehen, damit Sie erweiterte Tastatureingabeszenarios implementieren können, wie z.B. das Abfangen von Schlüssel, bevor diese ein Steuerelement erreichen. Dieses Thema beschreibt die Typen von Schlüsseldaten, die Windows Forms erkennt, und bietet eine Übersicht darüber, wie Tastaturnachrichten weitergeleitet werden. Informationen zu Tastaturereignissen finden Sie unter [Verwenden von Tastaturereignissen](using-keyboard-events.md).  
@@ -22,13 +22,13 @@ Windows Forms verarbeitet Tastatureingaben, indem als Reaktion auf Windows-Meldu
 ## <a name="order-of-keyboard-events"></a>Reihenfolge von Tastaturereignissen  
  Wie oben aufgeführt gibt es drei mit der Tastatur verknüpfte Ereignisse, die in einem Steuerelement auftreten können. Die folgende Sequenz zeigt die allgemeine Reihenfolge der Ereignisse:  
   
-1.  Der Benutzer drückt die Taste "a", die Taste wird vorverarbeitet und gesendet, und ein <xref:System.Windows.Forms.Control.KeyDown> Ereignis auftritt.  
+1. Der Benutzer drückt die Taste "a", die Taste wird vorverarbeitet und gesendet, und ein <xref:System.Windows.Forms.Control.KeyDown> Ereignis auftritt.  
   
-2.  Der Benutzer hält die Taste "a", die Taste wird vorverarbeitet und gesendet, und ein <xref:System.Windows.Forms.Control.KeyPress> Ereignis auftritt.  
+2. Der Benutzer hält die Taste "a", die Taste wird vorverarbeitet und gesendet, und ein <xref:System.Windows.Forms.Control.KeyPress> Ereignis auftritt.  
   
      Dieses Ereignis tritt mehrmals auf, wenn der Benutzer eine Taste gedrückt hält.  
   
-3.  Der Benutzer lässt die Taste "a, die Taste" wird vorverarbeitet und gesendet und eine <xref:System.Windows.Forms.Control.KeyUp> Ereignis auftritt.  
+3. Der Benutzer lässt die Taste "a, die Taste" wird vorverarbeitet und gesendet und eine <xref:System.Windows.Forms.Control.KeyUp> Ereignis auftritt.  
   
 ## <a name="preprocessing-keys"></a>Vorverarbeiten von Tasten  
  Tastaturnachrichten werden wie andere Nachrichten in verarbeitet die <xref:System.Windows.Forms.Control.WndProc%2A> Methode von einem Formular oder Steuerelement. Allerdings vor dem Tastatur Nachrichten verarbeitet werden, die <xref:System.Windows.Forms.Control.PreProcessMessage%2A> Methode ruft eine oder mehrere Methoden, die überschrieben werden können, um sonderzeichentasten und physische Tasten zu behandeln. Sie können diese Methoden zum Erkennen und Filtern bestimmter Tasten überschreiben, bevor die Nachrichten vom Steuerelement verarbeitet werden. Die folgende Tabelle zeigt die Aktion an, die ausgeführt wird und die zugehörige Methode die auftritt, in der Reihenfolge, in der die Methode auftritt.  
@@ -63,9 +63,9 @@ Windows Forms verarbeitet Tastatureingaben, indem als Reaktion auf Windows-Meldu
 |Aufgabe|Methode|  
 |----------|------------|  
 |Fangen Sie eine Navigationstaste ab und lösen eine <xref:System.Windows.Forms.Control.KeyDown> Ereignis. Beispiel: Sie möchten, dass die TAB- und die Return-Taste in einem Textfeld bearbeitet werden.|Überschreiben Sie <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Hinweis**:  Alternativ können Sie behandeln die <xref:System.Windows.Forms.Control.PreviewKeyDown> -Ereignis und legen <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> von der <xref:System.Windows.Forms.PreviewKeyDownEventArgs> zu `true` für den bzw. die gewünschten Schlüssel.|  
-|Nehmen Sie bei einem Steuerelement eine besondere Eingabe oder Navigationsbehandlung vor. Beispiel: Sie möchten bei dem ausgewählten Element die Verwendung der Pfeiltasten in Ihrem Listensteuerelement ändern.|außer Kraft setzen <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Nehmen Sie bei einem Steuerelement eine besondere Eingabe oder Navigationsbehandlung vor. Beispiel: Sie möchten bei dem ausgewählten Element die Verwendung der Pfeiltasten in Ihrem Listensteuerelement ändern.|Überschreiben Sie <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>.|  
 |Fangen Sie eine Navigationstaste ab und lösen eine <xref:System.Windows.Forms.Control.KeyPress> Ereignis. Beispiel: Sie möchten, dass durch mehrfaches Drücken der Pfeiltaste in einem Drehfeld-Steuerelement der Fortschritt durch die Elemente beschleunigt wird.|Überschreiben Sie <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Besondere Eingabe oder navigationsbehandlung Behandlung beim Ausführen einer <xref:System.Windows.Forms.Control.KeyPress> Ereignis. Beispiel: Wenn in einem Listensteuerelement die Taste „r“ gedrückt gehalten wird, werden Elemente übersprungen, die mit diesem Buchstaben beginnen.|außer Kraft setzen <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Besondere Eingabe oder navigationsbehandlung Behandlung beim Ausführen einer <xref:System.Windows.Forms.Control.KeyPress> Ereignis. Beispiel: Wenn in einem Listensteuerelement die Taste „r“ gedrückt gehalten wird, werden Elemente übersprungen, die mit diesem Buchstaben beginnen.|Überschreiben Sie <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>.|  
 |Führen Sie eine benutzerdefinierte Bearbeitung mnemonischer Zeichen durch. Beispiel: Sie möchten mnemonische Zeichen in von Benutzern gezeichneten Schaltflächen bearbeiten, die in einer Symbolleiste enthalten sind.|Überschreiben Sie <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Siehe auch

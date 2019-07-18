@@ -9,12 +9,12 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 698fb7e0e0549b23647c364c467f3077c57fae52
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 0d02fb683335cf0db7d73d9d3ea545e65ca384a9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58635581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675467"
 ---
 # <a name="eventreason-enumeration"></a>EventReason-Enumeration
 
@@ -22,6 +22,7 @@ ms.locfileid: "58635581"
 [GuidAttribute("00000531-0000-0010-8000-00AA006D2EA4")]
 public enum EventReasonEnum
 ```
+
 ## <a name="members"></a>Member
 
 | Membername  | Beschreibung  |

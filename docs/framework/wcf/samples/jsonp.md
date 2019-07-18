@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 0e284ee6cce4ab513c03e7be402cc9c0f0c4ee1a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989884"
 ---
 # <a name="jsonp"></a>JSONP
 In diesem Beispiel wird erläutert, wie JSON mit Padding (JSONP) in WCF REST-Diensten unterstützt wird. JSONP ist eine Konvention, die zum Aufrufen domänenübergreifender Skripts durch das Generieren von Skripttags im aktuellen Dokument verwendet wird. Das Ergebnis wird in einer festgelegten Rückruffunktion zurückgegeben. JSONP basiert auf der Idee, die tags wie `<script src="http://..." >` Skripts aus einer beliebigen Domäne auswerten können und das durch diese Tags abgerufene Skript innerhalb eines Bereichs, in dem andere Funktionen möglicherweise bereits definiert, ausgewertet wird.
@@ -64,8 +64,8 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 #### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   
-1.  Öffnen Sie die Projektmappe für das JSONP-Beispiel.  
+1. Öffnen Sie die Projektmappe für das JSONP-Beispiel.  
   
-2.  Drücken Sie F5 zum Starten `http://localhost:26648/JSONPClientPage.aspx` im Browser.  
+2. Drücken Sie F5 zum Starten `http://localhost:26648/JSONPClientPage.aspx` im Browser.  
   
-3.  Beachten Sie, dass nach dem Laden der Seite die Texteingaben für "Name" und "Address" mit Werten aufgefüllt werden.  Diese Werte wurden von einem Aufruf an den WCF-Dienst bereitgestellt, nach dem der Browser Rendern der Seite.
+3. Beachten Sie, dass nach dem Laden der Seite die Texteingaben für "Name" und "Address" mit Werten aufgefüllt werden.  Diese Werte wurden von einem Aufruf an den WCF-Dienst bereitgestellt, nach dem der Browser Rendern der Seite.

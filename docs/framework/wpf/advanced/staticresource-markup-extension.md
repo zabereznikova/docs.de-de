@@ -9,11 +9,11 @@ helpviewer_keywords:
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
 ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981902"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource-Markuperweiterung
 Gibt einen Wert für alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Eigenschaftsattribut, das durch einen Verweis auf einen bereits definierten Ressource überprüfen. Das Suchverhalten für diese Ressource ist analog zur Ladezeit-Suche, der nach Ressourcen gesucht werden, die zuvor aus dem Markup des aktuellen geladen wurden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sowie andere Anwendungsquellen, und diesen Ressourcenwert generiert die der Eigenschaftswert in den Laufzeit-Objekten.  
@@ -55,7 +55,7 @@ Gibt einen Wert für alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2shar
   
  `StaticResource` kann in Objektelementsyntax verwendet werden. In diesem Fall geben Sie den Wert der <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> Eigenschaft ist erforderlich.  
   
- `StaticResource` kann auch verwendet werden, in einer ausführlichen Attributverwendung, der angibt, die <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> Eigenschaft als Eigenschaft = Wert-Paar:  
+ `StaticResource` kann zudem in einer ausführlichen Attributverwendung verwendet werden, die die <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>-Eigenschaft als Eigenschaft=Wert-Paar angibt:  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  

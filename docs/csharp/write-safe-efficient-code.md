@@ -3,12 +3,12 @@ title: Schreiben von sicherem und effizientem C#-Code
 description: Durch Verbesserungen, die kürzlich an C# vorgenommen wurden, können Sie nun überprüfbaren sicheren Code schreiben, dessen Leistung vorher nur mit unsicherem Code zu erzielen war.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411565"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832942"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Schreiben von sicherem und effizientem C#-Code
 
@@ -181,13 +181,15 @@ Wenn stattdessen zur Abstandsberechnung die unveränderliche Struktur `ReadonlyP
 
 Der Compiler generiert effizienteren Code, wenn Member vom Typ `readonly struct` aufgerufen werden: Im Gegensatz zur Kopie des Empfängers ist der `this`-Verweis immer ein `in`-Parameter, der als Verweis der Membermethode übergeben wird. Durch diese Optimierung werden Kopien vermieden, wenn Sie `readonly struct` als `in`-Argument verwenden.
 
+Übergeben Sie keinen Nullwerte zulassenden Typ als `in`-Argument. Der <xref:System.Nullable%601>-Typ wird nicht als schreibgeschützte Struktur deklariert. Dies bedeutet, dass der Compiler defensive Kopien für jedes Nullwerte zulassende Typargument generieren muss, das einer Methode mit dem `in`-Modifizierer in der Parameterdeklaration übergeben wird.
+
 In einem Beispielprogramm, das sich im entsprechenden [GitHub-Repository](https://www.nuget.org/packages/BenchmarkDotNet/) befindet, können Sie sich die Leistungsunterschiede ansehen, die mit [BenchmarkDotNet](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) erfasst werden. Dabei wird die Übergabe einer veränderlichen Struktur als Wert und Verweis mit der Übergabe einer unveränderlichen Struktur als Wert und Verweis verglichen. Am schnellsten ist die Übergabe einer unveränderlichen Struktur als Verweis.
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>Verwenden von `ref struct`-Typen als Speicherblöcke für einzelne Stapelrahmen
 
 Ein zugehöriges Sprachfeature ist die Möglichkeit, einen Werttyp zu deklarieren, der auf einen einzelnen Stapelrahmen beschränkt ist. Durch die Einschränkung kann der Compiler mehrere Optimierungen vornehmen. Der primäre Beweggrund für dieses Feature waren <xref:System.Span%601> und zugehörige Strukturen. Wenn Sie die neuen und aktualisierten .NET-APIs verwenden, in denen der <xref:System.Span%601>-Typ verwendet wird, werden Sie Leistungsverbesserungen erzielen, die diese Optimierungen mit sich bringen.
 
-Möglicherweise haben Sie ähnliche Anforderungen, wenn Sie mit Speicher arbeiten, der mit [`stackalloc`](language-reference/keywords/stackalloc.md) erstellt wurde, oder wenn Sie Speicher aus Interop-APIs verwenden. Sie können für diese Anforderungen eigene `ref struct`-Typen definieren.
+Möglicherweise haben Sie ähnliche Anforderungen, wenn Sie mit Speicher arbeiten, der mit [`stackalloc`](language-reference/operators/stackalloc.md) erstellt wurde, oder wenn Sie Speicher aus Interop-APIs verwenden. Sie können für diese Anforderungen eigene `ref struct`-Typen definieren.
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct`-Typ
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: df3cc6d054f431a9e187b21c20b7c5774d569a8e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104480"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611904"
 ---
 # <a name="opentype-font-features"></a>Features für OpenType-Schriftarten
 
@@ -22,19 +22,19 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType-Schriftartformat  
- Das [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftartformat ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]-Schriftartformat zur zusätzlichen Unterstützung von PostScript-Schriftartdaten. Das [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftartformat wurde gemeinsam von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe Corporation entwickelt. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] die Unterstützung für Schriftarten und das Betriebssystem services [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten bieten Benutzern eine einfache Möglichkeit zum Installieren und Verwenden von Schriftarten, ob die Schriftarten enthalten [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] Outlines oder CFF (PostScript) beschreibt.  
+ Das [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftartformat ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]-Schriftartformat zur zusätzlichen Unterstützung von PostScript-Schriftartdaten. Das [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftartformat wurde gemeinsam von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe Corporation entwickelt. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten und die Betriebssystemdienste, die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten unterstützen, liefern dem Benutzer eine einfache Möglichkeit zur Installation und Verwendung von Schriftarten, unabhängig davon, ob die Schriftarten [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]-Outlines oder CFF-Outlines (PostScript) enthalten.  
   
  Das [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftartformat behebt die folgenden Probleme für Entwickler:  
   
--   Breitere Multiplattform-Unterstützung.  
+- Breitere Multiplattform-Unterstützung.  
   
--   Bessere Unterstützung für internationale Zeichensätze.  
+- Bessere Unterstützung für internationale Zeichensätze.  
   
--   Besserer Schutz der Schriftartdaten.  
+- Besserer Schutz der Schriftartdaten.  
   
--   Kleinere Dateigrößen die eine effizientere Schriftartenverteilung ermöglichen.  
+- Kleinere Dateigrößen die eine effizientere Schriftartenverteilung ermöglichen.  
   
--   Breitere Unterstützung für erweiterte typografische Steuerelement.  
+- Breitere Unterstützung für erweiterte typografische Steuerelement.  
   
 > [!NOTE]
 >  Das Windows SDK enthält eine Reihe von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten, die mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwendet werden können. Diese Schriftarten bieten die meisten der Funktionen, wie im folgenden Thema dargestellt. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
@@ -42,13 +42,13 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
  Detaillierte Informationen zu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftartformat finden Sie unter [OpenType-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=96731).  
   
 ### <a name="advanced-typographic-extensions"></a>Erweiterte typografische Funktionen  
- Bei den erweiterten typografischen Tabellen ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Layouttabellen) werden die Funktionen der Schriftarten mit [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]- oder CFF-Outlines ergänzt. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] -Layoutschriftarten enthalten zusätzlichen Informationen, der die Leistungsfähigkeit der Schriftarten, qualitativ hochwertige internationale Typografie unterstützt erweitert. Die meisten [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten machen nur eine Teilmenge aller [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Funktionen verfügbar. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten bieten die folgenden Features.  
+ Bei den erweiterten typografischen Tabellen ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Layouttabellen) werden die Funktionen der Schriftarten mit [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]- oder CFF-Outlines ergänzt. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Layoutschriftarten enthalten zusätzliche Informationen, die die Leistungsfähigkeit der Schriftarten so erweitern, dass hochwertige internationale Typografie unterstützt wird. Die meisten [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten machen nur eine Teilmenge aller [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Funktionen verfügbar. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten stellen die folgenden Features bereit.  
   
--   Umfangreiche Zuordnung zwischen Zeichen und Symbolen, die Ligaturen, positionelle Formen, alternative Stile und andere Schriftartersetzungen unterstützen.  
+- Umfangreiche Zuordnung zwischen Zeichen und Symbolen, die Ligaturen, positionelle Formen, alternative Stile und andere Schriftartersetzungen unterstützen.  
   
--   Unterstützung von zweidimensionaler Positionierung und Symbolanfügung.  
+- Unterstützung von zweidimensionaler Positionierung und Symbolanfügung.  
   
--   Explizite Skript- und Sprachinformationen, die in der Schriftart enthalten sind, damit Textverarbeitungsanwendungen ihr Verhalten entsprechend anpassen können.  
+- Explizite Skript- und Sprachinformationen, die in der Schriftart enthalten sind, damit Textverarbeitungsanwendungen ihr Verhalten entsprechend anpassen können.  
   
  Die [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Layouttabellen werden ausführlich im Abschnitt [„Font File Tables“](https://www.microsoft.com/typography/otspec/otff.htm) der [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Spezifikation beschrieben.  
   
@@ -118,15 +118,15 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>Ligaturen  
- Ligaturen sind zwei oder mehr Symbole, die zu einem einzigen Symbol zusammengefügt werden, um einen besser lesbaren oder attraktiveren Text zu erstellen. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] -Schriftarten unterstützen vier Typen von Ligaturen:  
+ Ligaturen sind zwei oder mehr Symbole, die zu einem einzigen Symbol zusammengefügt werden, um einen besser lesbaren oder attraktiveren Text zu erstellen. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten unterstützen vier Typen von Ligaturen:  
   
--   **Standardligaturen**. Zur Verbesserung der Lesbarkeit. Zu den Standardligaturen gehören „fi“, „fl“ und „ff“.  
+- **Standardligaturen**. Zur Verbesserung der Lesbarkeit. Zu den Standardligaturen gehören „fi“, „fl“ und „ff“.  
   
--   **Kontextbedingte Ligaturen**. Mit Kontextligaturen soll die Lesbarkeit verbessert werden, indem die Buchstaben einer Ligatur optimal verbunden werden.  
+- **Kontextbedingte Ligaturen**. Mit Kontextligaturen soll die Lesbarkeit verbessert werden, indem die Buchstaben einer Ligatur optimal verbunden werden.  
   
--   **Bedingte Ligaturen**. Bedingte Ligaturen sollen verzierend wirken, wobei die Lesbarkeit eine untergeordnete Rolle spielt.  
+- **Bedingte Ligaturen**. Bedingte Ligaturen sollen verzierend wirken, wobei die Lesbarkeit eine untergeordnete Rolle spielt.  
   
--   **Historische Ligaturen**. Historische Ligaturen sollen eine historische Wirkung erzielen, wobei die Lesbarkeit eine untergeordnete Rolle spielt.  
+- **Historische Ligaturen**. Historische Ligaturen sollen eine historische Wirkung erzielen, wobei die Lesbarkeit eine untergeordnete Rolle spielt.  
   
  Im folgenden Text werden Symbole für Standardligaturen in der Schriftart Pericles gezeigt.  
   
@@ -181,7 +181,7 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>Alternative Stile  
- Alternative Stilvarianten sind Symbole, die ein Standardsymbol ersetzen können. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten, z. B. die Schriftart Pericles in den folgenden Beispielen können von Symbolen enthalten, die Sie verwenden können, um unterschiedliche Darstellungen für Text zu erstellen. Im folgenden Text werden die Standardsymbole der Schriftart Pericles dargestellt.  
+ Alternative Stilvarianten sind Symbole, die ein Standardsymbol ersetzen können. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten (wie im folgenden Beispiel die Schriftart Pericles) enthalten Varianten von Symbolen, mit denen Text auf verschiedene Weise dargestellt werden kann. Im folgenden Text werden die Standardsymbole der Schriftart Pericles dargestellt.  
   
  ![Text mit OpenType-Standardsymbolen](./media/opentype-font-features/opentype-standard-glyphs.gif "Text mit OpenType-Standardsymbolen")  
 
@@ -224,7 +224,7 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
  OpenType-Schriftarten unterstützen eine große Anzahl von Features, die mit numerischen Werten im Text verwendet werden können.  
   
 ### <a name="fractions"></a>Brüche  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] -Schriftarten unterstützen u. a. auch diagonalem und horizontalem Bruchstrich Stile.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten unterstützen u. a. auch Bruchformate mit diagonalem und horizontalem Bruchstrich.  
   
  Im folgenden Text werden Bruchformate für die Schriftart Palatino Linotype gezeigt.  
   
@@ -235,7 +235,7 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
  [!code-xaml[OpenTypeFontSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#10)]  
   
 ### <a name="old-style-numerals"></a>Mediävalziffern  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] -Schriftarten unterstützen ein altes Format-Ziffern-Format. Dieses Format dient der Anzeige von Ziffern in nicht mehr üblichen Stilen. Im folgenden Text wird ein Datum aus dem 18. Jahrhundert im Standardformat und mit Mediävalziffern in der Schriftart Palatino Linotype gezeigt.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten unterstützen Mediävalziffern. Dieses Format dient der Anzeige von Ziffern in nicht mehr üblichen Stilen. Im folgenden Text wird ein Datum aus dem 18. Jahrhundert im Standardformat und mit Mediävalziffern in der Schriftart Palatino Linotype gezeigt.  
   
  ![Text mit OpenType-Mediävalziffern](./media/opentype-font-features/opentype-old-style-numerals.gif "Text mit OpenType-Mediävalziffern")  
     
@@ -248,7 +248,7 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>Proportionale Darstellung und Tabellendarstellung  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] -Schriftarten unterstützen eine proportionaler und in tabellendarstellung-Funktion, um die Ausrichtung der breiten zu steuern, wenn Zahlen verwenden. In der proportionalen Darstellung verfügt jede Ziffer über eine eigene Breite: die „1“ ist schmaler als die „5“. In der Tabellendarstellung werden alle Ziffern mit der gleichen Breite dargestellt und vertikal ausgerichtet. Dies verbessert die Lesbarkeit z.B. bei Finanzinformationen.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten unterstützen bei der Verwendung von Ziffern in proportionaler und in Tabellendarstellung ein Feature zum Anpassen von Ziffern in der Breite. In der proportionalen Darstellung verfügt jede Ziffer über eine eigene Breite: die „1“ ist schmaler als die „5“. In der Tabellendarstellung werden alle Ziffern mit der gleichen Breite dargestellt und vertikal ausgerichtet. Dies verbessert die Lesbarkeit z.B. bei Finanzinformationen.  
   
  Im folgenden Text werden in der ersten Spalte zwei proportionale Zahlen in der Schriftart Miramonte proportional dargestellt. Die Ziffern „5“ und „1“ unterscheiden sich in der Breite. In der zweiten Spalte wurde die Breite der gleichen Zahlen mit dem Feature für die Tabellendarstellung angepasst.  
   
@@ -259,7 +259,7 @@ Dieses Thema enthält eine Übersicht über einige der Hauptfeatures der [!INCLU
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>Null mit Schrägstrich  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] -Schriftarten unterstützen Ziffernformat NULL Ziffern Format, um den Unterschied zwischen den Buchstaben "O" und die Ziffer "0" zu bezeichnen. Die Ziffer 0 (null) mit Schrägstrich wird häufig für Kennungen in Finanz- und Geschäftsinformationen verwendet.  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Schriftarten unterstützen das Ziffernformat einer 0 (null) mit Schrägstrich, um den Buchstaben „O“ und die Ziffer „0“ optisch besser voneinander zu unterscheiden. Die Ziffer 0 (null) mit Schrägstrich wird häufig für Kennungen in Finanz- und Geschäftsinformationen verwendet.  
   
  Im folgenden Text wird ein Beispiel mit einer Bestellnummer in der Schriftart Miramonte gezeigt. In der ersten Zeile werden Standardziffern verwendet. In der zweiten wird die Ziffer 0 (null) mit Schrägstrich verwendet, um die Ziffer 0 (null) optisch besser vom Großbuchstaben „O“ zu unterscheiden.  
   

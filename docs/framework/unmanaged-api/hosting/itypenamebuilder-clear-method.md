@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a4379a5f3c820889928f9008186b2f95b74b6da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 80f130b392cbedb4d8f61c7428d48feb0d6ceece
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173523"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778357"
 ---
 # <a name="itypenamebuilderclear-method"></a>ITypeNameBuilder::Clear-Methode
 Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Clear ( );  
 ```  
   
@@ -44,4 +44,4 @@ HRESULT Clear ( );
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

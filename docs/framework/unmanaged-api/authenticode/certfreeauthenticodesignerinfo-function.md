@@ -10,19 +10,19 @@ api_type:
 ms.assetid: 8029633c-b6e4-4665-a7c2-89607c3247ef
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdb764417b757cd7388c49d7e5cac9a960074820
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 42f5685a9a976be7a3a73badf286f77216e43106
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142401"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741243"
 ---
 # <a name="certfreeauthenticodesignerinfo-function"></a>CertFreeAuthenticodeSignerInfo-Funktion
 Gibt zugeordnete Ressourcen frei, die [AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) Struktur.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CertFreeAuthenticodeSignerInfo (  
     [in, out]  PAXL_AUTHENTICODE_SIGNER_INFO   pSignerInfo);  
 ```  
@@ -32,7 +32,7 @@ HRESULT CertFreeAuthenticodeSignerInfo (
  [in, out] Informationen über den Signaturgeber die veröffentlicht werden sollen. Finden Sie unter den [AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) Struktur.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` wenn die Funktion erfolgreich ausgeführt wird. Andernfalls wird ein Fehlercode zurückgegeben.  
+ `S_OK`, wenn die Funktion erfolgreich ausgeführt wurde. Andernfalls wird ein Fehlercode zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch
 

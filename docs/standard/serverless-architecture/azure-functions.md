@@ -4,12 +4,12 @@ description: Azure Functions bietet serverlose Funktionen in mehreren Sprachen (
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 2d8729276a5797bd8b89c39d8fb03c6f20646ea0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754236"
 ---
 # <a name="azure-functions"></a>Überprüfung auf
 
@@ -25,7 +25,7 @@ Weitere Informationen finden Sie unter [Dokumentation zu Azure Functions](https:
 
 Es gibt zwei Versionen von Azure Functions-Laufzeit: 1.x und 2.x. Version 1.x ist allgemein verfügbar (GA). Es unterstützt die Entwicklung von .NET über das Portal oder die Windows-Computer und verwendet die .NET Framework. 1.x unterstützt C#, JavaScript und F#, experimentelle Unterstützung für Python, PHP, TypeScript, Batch, Bash und PowerShell.
 
-Version 2.x ist in der Vorschau. Es nutzt die .NET Core und unterstützt die plattformübergreifende Entwicklung unter Windows, MacOS und Linux-Computer. 2.x bietet erstklassige Unterstützung für Java, aber noch direkt unterstützt keine experimentellen Sprachen. Version 2.x verwendet ein neues Erweiterbarkeitsmodell von Bindung, die Erweiterungen von Drittanbietern für die Plattform, Bindungen, voneinander unabhängige Versionen ermöglicht und eine optimierte ausführungsumgebung.
+[Version 2.x ist nun ebenfalls allgemein verfügbar](https://azure.microsoft.com/blog/introducing-azure-functions-2-0/). Es nutzt die .NET Core und unterstützt die plattformübergreifende Entwicklung unter Windows, MacOS und Linux-Computer. 2.x bietet erstklassige Unterstützung für Java, aber noch direkt unterstützt keine experimentellen Sprachen. Version 2.x verwendet ein neues Erweiterbarkeitsmodell von Bindung, die Erweiterungen von Drittanbietern für die Plattform, Bindungen, voneinander unabhängige Versionen ermöglicht und eine optimierte ausführungsumgebung.
 
 > **Es gibt ein bekanntes Problem in 1.x mit [Umleitung bindungsunterstützung](https://github.com/Azure/azure-functions-host/issues/992).** Das Problem ist spezifisch für die Entwicklung von .NET. Projekte mit Abhängigkeiten von Bibliotheken, die eine andere Version der Bibliotheken, die in der Laufzeit enthalten sind, sind betroffen. Die Functions-Team für die konkrete Fortschritte auf dem Problem zugesichert wurde. Das Team werden bindungsumleitungen in 2.x behandelt, bevor er in der allgemeinen Verfügbarkeit geht. Die offizielle Team-Anweisung mit empfohlenen Problembehebungen und problemumgehungen ist hier verfügbar: [Assembly-Auflösung in Azure Functions](https://github.com/Azure/azure-functions-host/wiki/Assembly-Resolution-in-Azure-Functions).
 
@@ -37,9 +37,9 @@ Die folgenden Sprachen unterstützt werden entweder im allgemeinen Verfügbarkei
 
 |Sprache      |1.x         |2.x      |
 |--------------|------------|---------|
-|**C#**        |ALLGEMEIN VERFÜGBAR          |Vorschau  |
-|**JavaScript**|ALLGEMEIN VERFÜGBAR          |Vorschau  |
-|**F#**        |ALLGEMEIN VERFÜGBAR          |         |
+|**C#**        |GA          |Vorschau  |
+|**JavaScript**|GA          |Vorschau  |
+|**F#**        |GA          |         |
 |**Java**      |            |Vorschau  |
 |**Python**    |Experimentell|         |
 |**PHP**       |Experimentell|         |

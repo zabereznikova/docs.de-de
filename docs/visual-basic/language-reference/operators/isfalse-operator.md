@@ -8,11 +8,11 @@ helpviewer_keywords:
 - IsFalse operator [Visual Basic]
 ms.assetid: 37fc9dbf-e5cc-4570-b93f-7213447974df
 ms.openlocfilehash: 9f25c406038486224c2c4708c86ef86889c44c15
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013542"
 ---
 # <a name="isfalse-operator-visual-basic"></a>IsFalse-Operator (Visual Basic)
 Bestimmt, ob ein Ausdruck ist `False`.  

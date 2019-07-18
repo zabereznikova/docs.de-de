@@ -11,11 +11,11 @@ helpviewer_keywords:
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
 ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973172"
 ---
 # <a name="error-types-visual-basic"></a>Fehlertypen (Visual Basic)
 In Visual Basic Fehler (so genannte *Ausnahmen*) fallen in drei Kategorien unterteilt: Syntaxfehler, Laufzeitfehler und Logikfehler.  

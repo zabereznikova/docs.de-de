@@ -2,15 +2,15 @@
 title: Vertrag zuerst-Tool
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819618"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380372"
 ---
 # <a name="contract-first-tool"></a>Vertrag zuerst-Tool
-Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] können Datenvertragsklassen mithilfe des Vertrag zuerst-Tools automatisch aus vorhandenen Diensten erstellt werden. Zum Verwenden des Vertrag zuerst-Tools muss die XSD (XML Schema Definition)-Datei lokal heruntergeladen werden. Das Tool kann keine Remotedatenverträge per HTTP importieren.
+Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In .NET Framework 4.5 können datenvertragsklassen automatisch aus vorhandenen Diensten, die mit dem Vertrag zuerst-Tool erstellt werden. Zum Verwenden des Vertrag zuerst-Tools muss die XSD (XML Schema Definition)-Datei lokal heruntergeladen werden. Das Tool kann keine Remotedatenverträge per HTTP importieren.
 
  Der Vertrag zuerst-Tool ist als Buildaufgabe in Visual Studio 2012 integriert. Die von der Buildaufgabe generierten Codedateien werden bei jeder Projekterstellung erzeugt, sodass das Projekt einfach Änderungen im zugrunde liegenden Dienstvertrag übernehmen kann.
 
@@ -69,31 +69,31 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!I
 
  Die folgenden erweiterten Einstellungen können für die Codegenerierung aus Verträgen konfiguriert werden. Die Einstellungen können nur für alle Dateien im Projekt konfiguriert werden. Das Konfigurieren der Einstellungen für einzelne Dateien ist derzeit nicht möglich.
 
--   **Serialisierungsmodus**: Diese Einstellung bestimmt, welcher Serialisierer für das Lesen von Vertragsdateien verwendet wird. Wenn **XML-Serialisierungsprogramm** ausgewählt ist, die **Auflistungstypen** und **Typen wiederverwenden** Optionen sind deaktiviert. Diese Optionen gelten nur für die **Data Contract Serializer**.
+- **Serialisierungsmodus**: Diese Einstellung bestimmt, welcher Serialisierer für das Lesen von Vertragsdateien verwendet wird. Wenn **XML-Serialisierungsprogramm** ausgewählt ist, die **Auflistungstypen** und **Typen wiederverwenden** Optionen sind deaktiviert. Diese Optionen gelten nur für die **Data Contract Serializer**.
 
--   **Typen wiederverwenden**: Diese Einstellung gibt an, welche Bibliotheken für die Wiederverwendung von Typen verwendet werden. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **Typen wiederverwenden**: Diese Einstellung gibt an, welche Bibliotheken für die Wiederverwendung von Typen verwendet werden. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
 
--   **Auflistungstyp**: Diese Einstellung gibt an, der den vollqualifizierten oder assemblyqualifizierten Typ für den Auflistungsdatentyp verwendet werden soll. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **Auflistungstyp**: Diese Einstellung gibt an, der den vollqualifizierten oder assemblyqualifizierten Typ für den Auflistungsdatentyp verwendet werden soll. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
 
--   **Wörterbuchtyp**: Diese Einstellung gibt an, der den vollqualifizierten oder assemblyqualifizierten Typ für den wörterbuchdatentyp verwendet werden soll.
+- **Wörterbuchtyp**: Diese Einstellung gibt an, der den vollqualifizierten oder assemblyqualifizierten Typ für den wörterbuchdatentyp verwendet werden soll.
 
--   **EnableDataBinding**: Diese Einstellung gibt an, ob implementiert die <xref:System.ComponentModel.INotifyPropertyChanged> Schnittstelle für alle Datentypen, um die Datenbindung zu implementieren.
+- **EnableDataBinding**: Diese Einstellung gibt an, ob implementiert die <xref:System.ComponentModel.INotifyPropertyChanged> Schnittstelle für alle Datentypen, um die Datenbindung zu implementieren.
 
--   **ExcludedTypes**: Diese Einstellung gibt an, die Liste der vollqualifizierten oder assemblyqualifizierten Typen aus den Assemblys ausgeschlossen werden sollen. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **ExcludedTypes**: Diese Einstellung gibt an, die Liste der vollqualifizierten oder assemblyqualifizierten Typen aus den Assemblys ausgeschlossen werden sollen. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
 
--   **GenerateInternalTypes**: Diese Einstellung gibt an, ob Klassen generiert, die als intern gekennzeichnet sind. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **GenerateInternalTypes**: Diese Einstellung gibt an, ob Klassen generiert, die als intern gekennzeichnet sind. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
 
--   **GenerateSerializableTypes**: Diese Einstellung gibt an, ob Klassen generiert die <xref:System.SerializableAttribute> Attribut. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **GenerateSerializableTypes**: Diese Einstellung gibt an, ob Klassen generiert die <xref:System.SerializableAttribute> Attribut. Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
 
--   **ImportXMLTypes**: Diese Einstellung gibt an, ob die Datenvertrags-Serialisierer anzuwendende konfiguriert die <xref:System.SerializableAttribute> -Attribut auf Klassen ohne den <xref:System.Runtime.Serialization.DataContractAttribute> Attribut.  Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
+- **ImportXMLTypes**: Diese Einstellung gibt an, ob die Datenvertrags-Serialisierer anzuwendende konfiguriert die <xref:System.SerializableAttribute> -Attribut auf Klassen ohne den <xref:System.Runtime.Serialization.DataContractAttribute> Attribut.  Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
 
--   **SupportFx35TypedDataSets**: Diese Einstellung gibt an, ob zusätzliche Funktionen für typisierte Datasets, die für .NET Framework 3.5 erstellten bereitzustellen. Wenn **Serialisierungsmodus** nastaven NA hodnotu **XML-Serialisierungsprogramm**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> Erweiterung wird an den XML-Schema-Importer hinzugefügt werden, wenn dieser Wert auf "true" festgelegt ist. Wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**, den Typ <xref:System.DateTimeOffset> aus verweisen ausgeschlossen wird, wenn dieser Wert auf "False" festgelegt ist, damit eine <xref:System.DateTimeOffset> wird immer generiert für ältere Frameworkversionen.
+- **SupportFx35TypedDataSets**: Diese Einstellung gibt an, ob zusätzliche Funktionen für typisierte Datasets, die für .NET Framework 3.5 erstellten bereitzustellen. Wenn **Serialisierungsmodus** nastaven NA hodnotu **XML-Serialisierungsprogramm**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> Erweiterung wird an den XML-Schema-Importer hinzugefügt werden, wenn dieser Wert auf "true" festgelegt ist. Wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**, den Typ <xref:System.DateTimeOffset> aus verweisen ausgeschlossen wird, wenn dieser Wert auf "False" festgelegt ist, damit eine <xref:System.DateTimeOffset> wird immer generiert für ältere Frameworkversionen.
 
--   **InputXsdFiles**: Diese Einstellung gibt die Liste der Eingabedateien an. Jede Datei muss ein gültiges XML-Schema enthalten.
+- **InputXsdFiles**: Diese Einstellung gibt die Liste der Eingabedateien an. Jede Datei muss ein gültiges XML-Schema enthalten.
 
--   **Sprache**: Diese Einstellung gibt die Sprache des generierten Vertragscodes an. Die Einstellung muss vom <xref:System.CodeDom.Compiler.CodeDomProvider> erkannt werden können.
+- **Sprache**: Diese Einstellung gibt die Sprache des generierten Vertragscodes an. Die Einstellung muss vom <xref:System.CodeDom.Compiler.CodeDomProvider> erkannt werden können.
 
--   **NamespaceMappings**: Diese Einstellung gibt an, die Zuordnungen zwischen den XSD-Zielnamespaces und CLR-Namespaces. Jede Zuordnung sollte folgendes Format aufweisen:
+- **NamespaceMappings**: Diese Einstellung gibt an, die Zuordnungen zwischen den XSD-Zielnamespaces und CLR-Namespaces. Jede Zuordnung sollte folgendes Format aufweisen:
 
     ```xml
     "<Schema Namespace>, <CLR Namespace>"
@@ -105,7 +105,7 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!I
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**: Diese Einstellung gibt das Verzeichnis, in dem die Codedateien generiert wird.
+- **OutputDirectory**: Diese Einstellung gibt das Verzeichnis, in dem die Codedateien generiert wird.
 
  Die Einstellungen werden verwendet, um Dienstvertragstypen aus Vertragsdateien zu generieren, wenn das Projekt erstellt wird.
 

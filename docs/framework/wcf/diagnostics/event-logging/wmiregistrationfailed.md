@@ -3,11 +3,11 @@ title: WmiRegistrationFailed
 ms.date: 03/30/2017
 ms.assetid: 69ac6b2b-770c-49e1-9865-34773767971c
 ms.openlocfilehash: 8d4a7b1af5e500d6e3b75616ed92f0c3618594ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998828"
 ---
 # <a name="wmiregistrationfailed"></a>WmiRegistrationFailed
 ID: 126  

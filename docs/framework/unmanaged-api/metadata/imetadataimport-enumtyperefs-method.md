@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de0fe4a51fbb49e80377b6b434bf3b72ddb90f02
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f6af4c1d6eb9c305358573b06da164e2344ff46e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081619"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774618"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs-Methode
 Zählt TypeRef-Token auf, die im aktuellen Metadatenbereich definiert sind.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumTypeRefs (  
    [in, out] HCORENUM    *phEnum,   
    [out] mdTypeRef       rTypeRefs[],  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 34d93c6956ff391e4d8726d8e45265c96947ad4c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 525ec4828fb942aeb447940ea68a523cd7c69140
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154764"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736729"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore-Methode
 Ersetzt den vorhandenen Symbolspeicher durch einen Deltasymbolspeicher. Diese Methode ähnelt der [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) -Methode, mit der Ausnahme an, dass das angegebene Delta vollständig ersetzt, sondern als ein Update fungiert.  
@@ -32,7 +32,7 @@ Ersetzt den vorhandenen Symbolspeicher durch einen Deltasymbolspeicher. Diese Me
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ReplaceSymbolStore (  
     [in] const WCHAR *filename,  
     [in] IStream *pIStream);  

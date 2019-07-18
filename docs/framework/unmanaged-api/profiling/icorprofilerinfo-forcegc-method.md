@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5672d1b89b4260d1ebfbf444deb2702f215a0e95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 208552dd94f587b9326280ad455ca2478ae4ac4d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078082"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780252"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC-Methode
 Erzwingt eine Garbagecollection in der common Language Runtime (CLR) ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ForceGC();  
 ```  
   

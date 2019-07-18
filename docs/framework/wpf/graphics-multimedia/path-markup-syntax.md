@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a26999b25cf2d060c1c29f378518c3fac255cad4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082489"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636708"
 ---
 # <a name="path-markup-syntax"></a>Pfadmarkupsyntax
 Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](shapes-and-basic-drawing-in-wpf-overview.md) und [Übersicht über die Geometrie](geometry-overview.md), jedoch in diesem Thema wird ausführlich die leistungsstarke und komplexe Minisprache Sie den Pfad angeben können Pfadgeometrien kompakter unter Verwendung [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -25,11 +25,11 @@ Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](shap
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry- und PathFigureCollection-Minisprachen  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt zwei Klassen, die Minisprachen für die Beschreibung von geometrischen Pfaden bereitstellen: <xref:System.Windows.Media.StreamGeometry> und <xref:System.Windows.Media.PathFigureCollection>.  
   
--   Sie verwenden die <xref:System.Windows.Media.StreamGeometry> Minisprache beim Festlegen einer Eigenschaft vom Typ <xref:System.Windows.Media.Geometry>, wie z. B. die <xref:System.Windows.UIElement.Clip%2A> Eigenschaft eine <xref:System.Windows.UIElement> oder <xref:System.Windows.Shapes.Path.Data%2A> Eigenschaft eine <xref:System.Windows.Shapes.Path> Element. Im folgenden Beispiel wird eine Attributsyntax zum Erstellen einer <xref:System.Windows.Media.StreamGeometry>.  
+- Sie verwenden die <xref:System.Windows.Media.StreamGeometry> Minisprache beim Festlegen einer Eigenschaft vom Typ <xref:System.Windows.Media.Geometry>, wie z. B. die <xref:System.Windows.UIElement.Clip%2A> Eigenschaft eine <xref:System.Windows.UIElement> oder <xref:System.Windows.Shapes.Path.Data%2A> Eigenschaft eine <xref:System.Windows.Shapes.Path> Element. Im folgenden Beispiel wird eine Attributsyntax zum Erstellen einer <xref:System.Windows.Media.StreamGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   Sie verwenden die <xref:System.Windows.Media.PathFigureCollection> Minisprache beim Festlegen der <xref:System.Windows.Media.PathGeometry.Figures%2A> Eigenschaft eine <xref:System.Windows.Media.PathGeometry>. Im folgende Beispiel wird eine Attributsyntax verwendet, zum Erstellen einer <xref:System.Windows.Media.PathFigureCollection> für eine <xref:System.Windows.Media.PathGeometry>.  
+- Sie verwenden die <xref:System.Windows.Media.PathFigureCollection> Minisprache beim Festlegen der <xref:System.Windows.Media.PathGeometry.Figures%2A> Eigenschaft eine <xref:System.Windows.Media.PathGeometry>. Im folgende Beispiel wird eine Attributsyntax verwendet, zum Erstellen einer <xref:System.Windows.Media.PathFigureCollection> für eine <xref:System.Windows.Media.PathGeometry>.  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   
@@ -57,7 +57,7 @@ Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](shap
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Gibt an, ob die <xref:System.Windows.Media.StreamGeometry> verwendet die <xref:System.Windows.Media.FillRule.EvenOdd> oder <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Gibt an, die <xref:System.Windows.Media.FillRule.EvenOdd> -Füllregel fest.<br />-   `F1` Gibt an, die <xref:System.Windows.Media.FillRule.Nonzero> -Füllregel fest.<br /><br /> Wenn Sie diesen Befehl weglassen, verwendet der untergeordnete Pfad das Standardverhalten, handelt es sich <xref:System.Windows.Media.FillRule.EvenOdd>. Wenn Sie diesen Befehl angeben, müssen Sie ihn zunächst platzieren.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Gibt an, ob die <xref:System.Windows.Media.StreamGeometry> verwendet die <xref:System.Windows.Media.FillRule.EvenOdd> oder <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Gibt an, die <xref:System.Windows.Media.FillRule.EvenOdd> -Füllregel fest.<br />-   `F1` Gibt an, die <xref:System.Windows.Media.FillRule.Nonzero> -Füllregel fest.<br /><br /> Wenn Sie diesen Befehl weglassen, verwendet der untergeordnete Pfad das Standardverhalten, handelt es sich <xref:System.Windows.Media.FillRule.EvenOdd>. Wenn Sie diesen Befehl angeben, müssen Sie ihn zunächst platzieren.|  
 |*figureDescription*|Eine aus einem Move-Befehl, Draw-Befehl und einem optionalen Close-Befehl bestehende Figur.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Ein Move-Befehl, der den Startpunkt der Figur angibt. Finden Sie unter den [Move-Befehl](#themovecommand) Abschnitt.|  
 |*drawCommands*|Mindestens ein Draw-Befehl, der den Inhalt der Figur beschreibt. Finden Sie unter den [Draw-Befehle](#drawcommands) Abschnitt.|  
@@ -97,11 +97,11 @@ Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](shap
 Ein großgeschriebenes `L` gibt an, dass `endPoint` ist ein absoluter Wert ist ein klein geschriebenes `l` gibt an, dass `endPoint` um einen Offset zum vorherigen Punkt handelt oder um (0,0), falls keiner vorhanden ist.
 
 ### <a name="horizontal-line-command"></a>Befehl für eine horizontale Linie  
- Erstellt eine horizontale Linie zwischen dem aktuellen Punkt und der angegebenen x-Koordinate. `H 90` ist ein Beispiel für einen Befehl gültig horizontale Linie.
+ Erstellt eine horizontale Linie zwischen dem aktuellen Punkt und der angegebenen x-Koordinate. `H 90` ist ein Beispiel für einen gültigen Befehl für eine horizontale Linie.
 
 |Syntax|  
 |------------|  
-|`H`  *w*<br /><br /> - oder -<br /><br /> `h`  *w*|  
+|`H`  *x*<br /><br /> - oder -<br /><br /> `h`  *x*|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -110,7 +110,7 @@ Ein großgeschriebenes `L` gibt an, dass `endPoint` ist ein absoluter Wert ist e
 Ein großgeschriebenes `H` gibt an, dass `x` ist ein absoluter Wert ist ein klein geschriebenes `h` gibt an, dass `x` um einen Offset zum vorherigen Punkt handelt oder um (0,0), falls keiner vorhanden ist.
   
 ### <a name="vertical-line-command"></a>Befehl für vertikale Linie  
- Erstellt eine vertikale Linie zwischen dem aktuellen Punkt und der angegebenen y-Koordinate. `v 90` ist ein Beispiel für einen Befehl gültig vertikale Linie.
+ Erstellt eine vertikale Linie zwischen dem aktuellen Punkt und der angegebenen y-Koordinate. `v 90` ist ein Beispiel für einen gültigen Befehl für eine vertikale Linie.
 
 |Syntax|  
 |------------|  
@@ -123,7 +123,7 @@ Ein großgeschriebenes `H` gibt an, dass `x` ist ein absoluter Wert ist ein klei
 Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klein geschriebenes `v` gibt an, dass `y` um einen Offset zum vorherigen Punkt handelt oder um (0,0), falls keiner vorhanden ist.  
     
 ### <a name="cubic-bezier-curve-command"></a>Kubische Bezier-Kurve-Befehl  
- Erstellt eine kubische Bezier-Kurve zwischen dem aktuellen Punkt und dem angegebenen Endpunkt mit den zwei angegebenen Kontrollpunkten (`controlPoint`1 und `controlPoint`2). `C 100,200 200,400 300,200` ist ein Beispiel für einen gültigen kurvenbefehl.  
+ Erstellt eine kubische Bezier-Kurve zwischen dem aktuellen Punkt und dem angegebenen Endpunkt mit den zwei angegebenen Kontrollpunkten (`controlPoint`1 und `controlPoint`2). `C 100,200 200,400 300,200` ist ein Beispiel für einen gültigen Kurvenbefehl.  
   
 |Syntax|  
 |------------|  
@@ -229,5 +229,5 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Übersicht über die Geometrie](geometry-overview.md)
-- [Gewusst wie-Themen](geometries-how-to-topics.md)
+- [Übersicht über Geometrien](geometry-overview.md)
+- [Themen zu Vorgehensweisen](geometries-how-to-topics.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492582"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833886"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
@@ -36,11 +36,11 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parameter
 
-| Argument | Beschreibung |
+| Argument | BESCHREIBUNG |
 | -------- | ----------- |
 |`filename`|Der Name der IL-Quelldatei. Diese Datei besteht aus Direktiven für die Deklaration von Metadaten und symbolischen IL-Anweisungen. Zum Erstellen einer einzelnen PE-Datei mithilfe von *Ilasm.exe* können mehrere Quelldateiargumente angegeben werden. **Hinweis**: Vergewissern Sie sich, dass die letzte Codezeile in der IL-Quelldatei entweder ein nachgestelltes Leerzeichen oder ein Zeilenendezeichen besitzt.|
 
-| Option | Beschreibung |
+| Option | BESCHREIBUNG |
 | ------ | ----------- |
 |**/32bitpreferred**|Erstellt ein Abbild im PE32-Format (vorzugweise 32 Bit).|
 |**/alignment:** `integer`|Legt FileAlignment auf den Wert fest, der im NT Optional-Header per `integer` angegeben ist. Wenn die .alignment-IL-Direktive in der Datei angegeben ist, wird sie durch diese Option überschrieben.|
@@ -58,14 +58,14 @@ ilasm [options] filename [[options]filename...]
 |**/include:** `includePath`|Legt einen Suchpfad für in `#include`aufgeführte Dateien fest.|
 |**/itanium**|Gibt Intel Itanium als Zielprozessor an.<br /><br /> Wenn keine Bitanzahl für das Abbild angegeben wird, lautet der Standardwert **/pe64**.|
 |**/key:** `keyFile`|Kompiliert `filename` mit einer starken Signatur unter Verwendung des privaten Schlüssels in `keyFile`.|
-|**/key:** @`keySource`|Kompiliert `filename` mit einer starken Signatur unter Verwendung des bei `keySource` erstellten privaten Schlüssels.|
+|**/key:**  @`keySource`|Kompiliert `filename` mit einer starken Signatur unter Verwendung des bei `keySource` erstellten privaten Schlüssels.|
 |**/listing**|Erstellt eine Listingdatei in der Standardausgabe. Wenn Sie diese Option weglassen, wird keine Listingdatei erstellt.<br /><br /> In .NET Framework 2.0 (oder höher) wird dieser Parameter nicht unterstützt.|
 |**/mdv:** `versionString`|Legt die Zeichenfolge der Metadatenversion fest.|
 |**/msv:** `major`.`minor`|Legt die Version des Metadatenstreams fest, wobei `major` und `minor` ganze Zahlen sind.|
 |**/noautoinherit**|Deaktiviert die Standardvererbung von <xref:System.Object> , wenn keine Basisklasse angegeben ist.|
 |**/nocorstub**|Unterdrückt die Generierung des CORExeMain-Stubs.|
 |**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|
-|**/output:** `file.ext`|Gibt den Namen und die Erweiterung der Ausgabedatei an. In der Standardeinstellung ist der Name der Ausgabedatei mit dem der ersten Quelldatei identisch. Die Standarderweiterung ist *.exe*. Wenn Sie die Option **/dll** angeben, lautet die Standarderweiterung *.dll*. **Hinweis**: Durch Angabe von „**/output**:myfile.dll“ wird die Option **/dll** nicht festgelegt. Wenn Sie **/dll** nicht angeben, wird eine ausführbare Datei mit dem Namen *myfile.dll* erstellt.|
+|**/output:** `file.ext`|Gibt den Namen und die Erweiterung der Ausgabedatei an. In der Standardeinstellung ist der Name der Ausgabedatei mit dem der ersten Quelldatei identisch. Die Standarderweiterung ist *.exe*. Wenn Sie die Option **/dll** angeben, lautet die Standarderweiterung *.dll*. **Hinweis**: Durch Angabe von „ **/output**:myfile.dll“ wird die Option **/dll** nicht festgelegt. Wenn Sie **/dll** nicht angeben, wird eine ausführbare Datei mit dem Namen *myfile.dll* erstellt.|
 |**/optimize**|Optimiert lange Anweisungen in kurze Anweisungen. Beispiel: `br` wird zu `br.s`.|
 |**/pe64**|Erstellt ein 64-Bit-Abbild (PE32+).<br /><br /> Wenn kein Zielprozessor angegeben wird, lautet der Standardwert `/itanium`.|
 |**/pdb**|Erstellt eine PDB-Datei, ohne das Nachverfolgen von Debuginformationen zu aktivieren.|
@@ -79,7 +79,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|
 
 > [!NOTE]
-> Bei allen Optionen für *Ilasm.exe* wird nicht zwischen Groß- und Kleinschreibung unterschieden, und sie werden anhand der ersten drei Buchstaben erkannt. So ist zum Beispiel **/lis** das Gleiche wie **/listing**, und **/res**:myresfile.res entspricht **/resource:** myresfile.res. Optionen, die Argumente angeben, können entweder einen Doppelpunkt (:) oder ein Gleichheitszeichen (=) als Trennzeichen zwischen der Option und dem Argument enthalten. So wären zum Beispiel **/output:** *file.ext* und **/output=**=*file.ext* identisch.
+> Bei allen Optionen für *Ilasm.exe* wird nicht zwischen Groß- und Kleinschreibung unterschieden, und sie werden anhand der ersten drei Buchstaben erkannt. So ist zum Beispiel **/lis** das Gleiche wie **/listing**, und **/res**:myresfile.res entspricht **/resource:** myresfile.res. Optionen, die Argumente angeben, können entweder einen Doppelpunkt (:) oder ein Gleichheitszeichen (=) als Trennzeichen zwischen der Option und dem Argument enthalten. So wären zum Beispiel **/output:** *file.ext* und **/output=** =*file.ext* identisch.
 
 ## <a name="remarks"></a>Anmerkungen
 
@@ -104,11 +104,11 @@ Damit dieses Zusammenspiel von *Ildasm.exe* und *Ilasm.exe* so exakt wie möglic
 > [!NOTE]
 > *Ildasm.exe* kann nur für Dateien auf der Festplatte verwendet werden. Bei Dateien, die im globalen Assemblycache installiert sind, funktioniert dieses Tool nicht.
 
-Weitere Informationen zur Grammatik von IL finden Sie in der Datei "asmparse.grammar" im [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Weitere Informationen zur Grammatik von IL finden Sie in der Datei „asmparse.grammar“ im Windows Software Development Kit (SDK).
 
 ## <a name="version-information"></a>Versionsinformationen
 
-Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können Sie ein benutzerdefiniertes Attribut an eine Schnittstellenimplementierung anfügen, indem Sie Code verwenden, der dem folgenden ähnelt:
+Ab .NET Framework 4.5 können Sie ein benutzerdefiniertes Attribut an eine Schnittstellenimplementierung anfügen, indem Sie Code verwenden, der in etwa wie folgt aussieht:
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können Sie ein benutzerd
       …
 ```
 
-Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können Sie ein beliebiges Marshall-BLOB (Binary Large Object) angeben, indem Sie die entsprechenden unformatierten Binärdaten wie im folgenden Code gezeigt angeben:
+Ab .NET Framework 4.5 können Sie ein beliebiges Marshall-BLOB (Binary Large Object) angeben, indem Sie die entsprechenden unformatierten Binärdaten wie im folgenden Code gezeigt angeben:
 
 ```
 .method public hidebysig abstract virtual
@@ -137,7 +137,7 @@ Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können Sie ein beliebige
         Test(object A_1) cil managed
 ```
 
-Weitere Informationen zur Grammatik von IL finden Sie in der Datei "asmparse.grammar" im [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Weitere Informationen zur Grammatik von IL finden Sie in der Datei „asmparse.grammar“ im Windows Software Development Kit (SDK).
 
 ## <a name="examples"></a>Beispiele
 

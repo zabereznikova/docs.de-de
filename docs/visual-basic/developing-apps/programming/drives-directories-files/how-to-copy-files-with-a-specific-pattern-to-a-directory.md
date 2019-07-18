@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 184742ef03343eaff644c0f3f803e2acec8854eb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15bec7c9604b243c586b393d71007b02917d3a6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837103"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628942"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Vorgehensweise: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis in Visual Basic
 Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode gibt eine schreibgeschützte Auflistung von Zeichenfolgen zurück, die die Pfadnamen für die Dateien darstellen. Sie können den `wildCards` -Parameter verwenden, um ein bestimmtes Muster anzugeben.  
@@ -23,15 +23,15 @@ Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode 
   
 ### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>So kopieren Sie Dateien mit einem bestimmten Muster in ein Verzeichnis  
   
-1.  Verwenden Sie die `GetFiles` -Methode, um die Liste der Dateien zurückzugeben. In diesem Beispiel werden alle RTF-Dateien im angegebenen Verzeichnis zurückgegeben.  
+1. Verwenden Sie die `GetFiles` -Methode, um die Liste der Dateien zurückzugeben. In diesem Beispiel werden alle RTF-Dateien im angegebenen Verzeichnis zurückgegeben.  
   
      [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
-2.  Verwenden Sie die `CopyFile` -Methode, um die Dateien zu kopieren. In diesem Beispiel werden die Dateien in das Verzeichnis `testdirectory`kopiert.  
+2. Verwenden Sie die `CopyFile` -Methode, um die Dateien zu kopieren. In diesem Beispiel werden die Dateien in das Verzeichnis `testdirectory`kopiert.  
   
      [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
-3.  Schließen Sie die `For` -Anweisung mit einer `Next` -Anweisung.  
+3. Schließen Sie die `For` -Anweisung mit einer `Next` -Anweisung.  
   
      [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
@@ -43,19 +43,19 @@ Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode 
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
+- Der Pfad ist aus einem der folgenden Gründe ungültig: Er ist eine Zeichenfolge der Länge 0, er enthält nur Leerzeichen, er enthält ungültige Zeichen, oder er ist ein Gerätepfad (beginnt mit \\\\.\\) (<xref:System.ArgumentException>).  
   
--   Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).  
+- Der Pfad ist ungültig, da er `Nothing` ist (<xref:System.ArgumentNullException>).  
   
--   Das Verzeichnis ist nicht vorhanden (<xref:System.IO.DirectoryNotFoundException>).  
+- Das Verzeichnis ist nicht vorhanden (<xref:System.IO.DirectoryNotFoundException>).  
   
--   Das Verzeichnis verweist auf eine vorhandene Datei (<xref:System.IO.IOException>).  
+- Das Verzeichnis verweist auf eine vorhandene Datei (<xref:System.IO.IOException>).  
   
--   Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
+- Der Pfad überschreitet die im System definierte maximale Länge (<xref:System.IO.PathTooLongException>).  
   
--   Der Pfad eines Datei- oder Verzeichnisnamens enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).  
+- Der Pfad eines Datei- oder Verzeichnisnamens enthält einen Doppelpunkt (:) oder hat ein ungültiges Format (<xref:System.NotSupportedException>).  
   
--   Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>). Der Benutzer verfügt nicht über die erforderlichen Berechtigungen (<xref:System.UnauthorizedAccessException>).  
+- Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>). Der Benutzer verfügt nicht über die erforderlichen Berechtigungen (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Siehe auch
 

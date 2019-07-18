@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
 ms.openlocfilehash: f198de20a3fa788fb8d5f2dc4ebf799989814756
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765712"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Benutzerdefinierte Datendienstanbieter (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enthält eine Reihe von Anbietern, die Ihnen ermöglicht, ein Datenmodell auf Grundlage spät gebundener Datentypen zu definieren.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umfasst eine Reihe von Anbietern, die es Ihnen ermöglicht, ein Datenmodell auf der Grundlage spät gebundener Datentypen zu definieren.  
   
 |Anbieter|Beschreibung|  
 |--------------|-----------------|  

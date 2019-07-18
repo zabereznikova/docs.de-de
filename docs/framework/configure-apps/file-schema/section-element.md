@@ -8,27 +8,27 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 58f823ce0c128f30e361b4a631d41286533b5f0f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 64556054df2689ff758f52c7e98556997a3e9d3d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259214"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301177"
 ---
 # <a name="section-element"></a>\<Abschnitt >-Element
 
 Enthält die Deklaration einer Konfigurations-Abschnitt.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Abschnitt >**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Abschnitt >**
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<sectionGroup>**](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<section>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sectionGroup>** ](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<section>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,22 +52,22 @@ Die folgenden Attribute gelten nur für ASP.NET-Anwendungen zur Verfügung. Das 
 
 |                     | Beschreibung |
 | ------------------- | ----------- |
-| **allowDefinition** | Gibt die Konfigurationsdatei an, die in Abschnitt verwendet werden kann. Verwenden Sie einen der folgenden Werte:<br><br>**Überall**<br>Können den Abschnitt in den Konfigurationsdateien verwendet werden. Dies ist die Standardeinstellung.<br>**MachineOnly**<br>Der Abschnitt kann nur in der Computerkonfigurationsdatei verwendet werden (*"Machine.config"*).<br>**MachineToApplication**<br>Können den Abschnitt in der Konfigurationsdatei des Computers oder der Konfigurationsdatei der Anwendung verwendet werden. |
+| **allowDefinition** | Gibt die Konfigurationsdatei an, die in Abschnitt verwendet werden kann. Verwenden Sie einen der folgenden Werte:<br><br>**Überall**<br>Können den Abschnitt in den Konfigurationsdateien verwendet werden. Dies ist die Standardeinstellung.<br>**MachineOnly**<br>Der Abschnitt kann nur in der Computerkonfigurationsdatei verwendet werden ( *"Machine.config"* ).<br>**MachineToApplication**<br>Können den Abschnitt in der Konfigurationsdatei des Computers oder der Konfigurationsdatei der Anwendung verwendet werden. |
 | **allowLocation**   | Bestimmt, ob im Abschnitt kann, in verwendet werden der  **\<Speicherort >** Element. Verwenden Sie einen der folgenden Werte:<br><br>**true**<br>Der Abschnitt kann verwendet werden die  **\<Speicherort >** Element. Dies ist die Standardeinstellung.<br>**false**<br>Im Abschnitt zu verwendenden lässt nicht zu den  **\<Speicherort >** Element. |
 
 ## <a name="parent-elements"></a>Übergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Enthält die Konfiguration im Abschnitt und Namespacedeklarationen. |
-| [**\<sectionGroup>** Element](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurationsabschnitte. |
+| [ **\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Enthält die Konfiguration im Abschnitt und Namespacedeklarationen. |
+| [ **\<sectionGroup>** Element](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | Definiert einen Namespace für Konfigurationsabschnitte. |
 
 > [!NOTE]
 > Ein  **\<Abschnitt >** Element ist ein untergeordnetes Element des entweder  **\<ConfigSections >** oder  **\<SectionGroup >** aber nicht beide.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine
+None
 
 ## <a name="remarks"></a>Hinweise
 
@@ -94,7 +94,7 @@ Das folgende Beispiel zeigt, wie Sie definieren einen Konfigurationsabschnitt au
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden (*"Machine.config"*), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden ( *"Machine.config"* ), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
 
 ## <a name="see-also"></a>Siehe auch
 

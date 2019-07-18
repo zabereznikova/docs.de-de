@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7199fbc0c8760354269a50b647952729860c805b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cd420f0f166b0b17e5fbaf08d6bedd6651188b1c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155362"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778740"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly-Methode
 Wird die angegebene Assembly im globalen Assemblycache installiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT InstallAssembly (  
     [in] DWORD dwFlags,  
     [in] LPCWSTR pszManifestFilePath,  
@@ -41,9 +41,9 @@ HRESULT InstallAssembly (
  `dwFlags`  
  [in] Flags, die in Fusion.idl definiert sind. Die folgenden Werte werden unterstützt:  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0 X 00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0 X 00000001)  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
+- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pszManifestFilePath`  
  [in] Der Pfad des Manifests für zu installierenden Assembly.  

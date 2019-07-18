@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
 ms.openlocfilehash: 796342d17b0d0f1a642aff381274746d1fda3559
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783915"
 ---
 # <a name="resume-statement"></a>Resume-Anweisung
 Setzt die Ausführung fort, nachdem eine Fehlerbehandlungsroutine abgeschlossen ist.  

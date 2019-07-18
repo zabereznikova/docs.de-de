@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a35f5ff62ca37337b7becb023f2328cbe05aea6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 301e6cc153f905bc5c15e1b526e6fb1a492a76d6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216040"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774441"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses-Methode
 Listet die Prozesse auf, die auf einem Remotecomputer ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumProcesses (  
        [out]  DWORD*                  pcProcs,   
        [out]  CoreClrDebugProcInfo**  ppProcs  

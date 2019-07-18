@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615371"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>"XmlSchemaSet" zur Kompilierung von Schemata
 Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
@@ -37,9 +37,9 @@ Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen C
 ## <a name="migrating-to-the-xmlschemaset"></a>Migrieren zum "XmlSchemaSet"  
  Im folgenden Codebeispiel ist eine Anleitung zum Migrieren von der veralteten <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse zur neuen <xref:System.Xml.Schema.XmlSchemaSet>-Klasse enthalten. Im Codebeispiel werden die folgenden Hauptunterschiede zwischen den beiden Klassen veranschaulicht.  
   
--   Im Gegensatz zur <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A>-Methode der <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse werden die Schemata beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode von <xref:System.Xml.Schema.XmlSchemaSet> nicht kompiliert. Die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode von <xref:System.Xml.Schema.XmlSchemaSet> wird im Beispielcode explizit aufgerufen.  
+- Im Gegensatz zur <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A>-Methode der <xref:System.Xml.Schema.XmlSchemaCollection>-Klasse werden die Schemata beim Aufrufen der <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>-Methode von <xref:System.Xml.Schema.XmlSchemaSet> nicht kompiliert. Die <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode von <xref:System.Xml.Schema.XmlSchemaSet> wird im Beispielcode explizit aufgerufen.  
   
--   Wenn Sie ein <xref:System.Xml.Schema.XmlSchemaSet> durchlaufen möchten, verwenden Sie die <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft des <xref:System.Xml.Schema.XmlSchemaSet>.  
+- Wenn Sie ein <xref:System.Xml.Schema.XmlSchemaSet> durchlaufen möchten, verwenden Sie die <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft des <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Nachfolgend ist ein Beispiel des veralteten <xref:System.Xml.Schema.XmlSchemaCollection>-Codes angegeben.  
   
@@ -235,7 +235,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
  Weitere Informationen über das Entfernen von Schemata aus einem <xref:System.Xml.Schema.XmlSchemaSet> finden Sie in der Referenzdokumentation zur <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>-Methode und zur <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>-Methode.  
   
-## <a name="schema-resolution-and-xsimport"></a>Schemaauflösung und "xs:import"  
+## <a name="schema-resolution-and-xsimport"></a>Schemaauflösung und „xs:import“  
  In den folgenden Beispielen wird die Verhaltensweise des <xref:System.Xml.Schema.XmlSchemaSet> beim Importieren von Schemata beschrieben, wenn in einem <xref:System.Xml.Schema.XmlSchemaSet> mehrere Schemata für einen angegebenen Namespace vorhanden sind.  
   
  Betrachten Sie beispielsweise ein <xref:System.Xml.Schema.XmlSchemaSet>, das mehrere Schemata für den `http://www.contoso.com`-Namespace enthält. Ein Schema mit der folgenden `xs:import`-Anweisung wird dem <xref:System.Xml.Schema.XmlSchemaSet> hinzugefügt.  

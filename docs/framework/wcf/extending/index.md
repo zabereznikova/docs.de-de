@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
 ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768718"
 ---
 # <a name="extending-wcf"></a>Erweitern von WCF
-Windows Communication Foundation (WCF) können Sie ändern und erweitern die Laufzeitkomponenten präzise steuern, und Erweitern von dienstbasierten Anwendungen. Die Themen in diesem Abschnitt enthalten eingehende Informationen zur Erweiterbarkeitsarchitektur. Weitere Informationen zur grundlegenden-Programmierung finden Sie unter [grundlegende WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) können Sie ändern und erweitern die Laufzeitkomponenten präzise steuern, und erweitern, dienstbasierte Anwendungen. Die Themen in diesem Abschnitt enthalten eingehende Informationen zur Erweiterbarkeitsarchitektur. Weitere Informationen zur grundlegenden Programmierung finden Sie unter [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erweitern von ServiceHost und der Dienstmodellebene](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
@@ -27,10 +27,10 @@ Windows Communication Foundation (WCF) können Sie ändern und erweitern die Lau
  Die Kanalebene liegt unterhalb der Dienstmodellebene und ist für den Austausch von Nachrichten zwischen Clients und Diensten verantwortlich. Kanalerweiterungen können neue Protokollfunktionalität implementieren, zum Beispiel Sicherheit. Kanalerweiterungen transportieren außerdem Funktionalität, zum Beispiel das Implementieren eines neuen Netzwerktransports, um SOAP-Nachrichten zu übermitteln.  
   
  [Erweitern der Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md)  
- Sicherheit in WCF besteht aus der Übertragung Sicherheit (Integrität, Vertraulichkeit und Authentifizierung), Zugriff auf Steuerelement (Autorisierung) und Überwachung. Die Klassen gefunden wird, der `IdentityModel` Namespace von WCF für die Zugriffssteuerung verwendet werden. Wenn Sie die Sicherheitsarchitektur verinnerlichen, können Sie benutzerdefinierte Anspruchstypen für benutzerdefinierte Zugriffssteuerungssysteme erstellen.  
+ Sicherheit in WCF besteht aus der Übertragung Sicherheit (Integrität, Vertraulichkeit und Authentifizierung), Zugriff auf Steuerelement (Autorisierung) und Überwachung. Die Klassen finden Sie in der `IdentityModel` Namespace werden von WCF für die Zugriffssteuerung verwendet. Wenn Sie die Sicherheitsarchitektur verinnerlichen, können Sie benutzerdefinierte Anspruchstypen für benutzerdefinierte Zugriffssteuerungssysteme erstellen.  
   
  [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- Der WCF-Metadatensystem ist eine Gruppe von Klassen und Schnittstellen, die Metadaten darstellen zum Implementieren von dienstbasierten Anwendungen erforderlich sind. Ändern bzw. erweitern Sie die Klassen, oder implementieren und konfigurieren Sie die Schnittstellen, um benutzerdefinierte Metadaten wie WDSL-Erweiterungen (Web Services Description Language) oder benutzerdefinierte WS-PolicyAttachments-Assertionen zu exportieren oder zu importieren.  
+ Das WCF-Metadaten-System ist eine Gruppe von Klassen und Schnittstellen, die Metadaten, die zum Implementieren von dienstbasierten Anwendungen darstellen. Ändern bzw. erweitern Sie die Klassen, oder implementieren und konfigurieren Sie die Schnittstellen, um benutzerdefinierte Metadaten wie WDSL-Erweiterungen (Web Services Description Language) oder benutzerdefinierte WS-PolicyAttachments-Assertionen zu exportieren oder zu importieren.  
   
  [Erweitern von Encodern und Serialisierungsprogrammen](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  Encoder und Serialisierungsprogramme übersetzen Daten von einem Formular in ein anderes. In den Themen in diesem Abschnitt wird erläutert, wie Sie die angegebenen Klassen erweitern, um besondere Anforderungen zu erfüllen.  

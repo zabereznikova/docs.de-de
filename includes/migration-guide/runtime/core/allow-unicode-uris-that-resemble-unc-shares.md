@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: d3c6818861f8b0261a9a71a4654029143d928d08
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760728"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67856963"
 ---
 ### <a name="allow-unicode-in-uris-that-resemble-unc-shares"></a>Zulassen von Unicode in URIs, die UNC-Freigaben ähneln
 

@@ -5,11 +5,11 @@ ms.assetid: caa71820-8058-4b6a-93a2-25ee757d92d3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82fcddd7a3f89a92cc79285930b30342333fbec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940100"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriter-interface"></a>ISymUnmanagedAsyncMethodPropertiesWriter-Schnittstelle
 Können Sie Informationen zu optionalen Async-Methode für jedes methodensymbol definieren. Verwenden Sie immer mit einer geöffneten Methode; d. h. zwischen den Aufrufen der [OpenMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md) und [CloseMethod-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md).  

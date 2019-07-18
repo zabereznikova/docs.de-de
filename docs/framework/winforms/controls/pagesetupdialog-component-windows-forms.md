@@ -20,11 +20,11 @@ helpviewer_keywords:
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
 ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012697"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog-Komponente (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.PageSetupDialog> Komponente ist ein vorkonfiguriertes Dialogfeld zum Festlegen von Seitendetails für das Drucken in Windows-basierten Anwendungen verwendet. Verwenden Sie es in Ihrer Windows-basierten Anwendung als einfache Lösung, die für Benutzer zum Festlegen der Einstellungen anstatt ein eigenes Dialogfeld zu konfigurieren. Sie können die Benutzer zum Festlegen von Rahmen und Rand Anpassungen, Kopf- und Fußzeilen sowie Hochformat und Querformat aktivieren. Durch die Verwendung von Windows-Standarddialogfeldern erstellen Sie Anwendungen, deren Basisfunktionen Benutzern sofort vertraut sind.  

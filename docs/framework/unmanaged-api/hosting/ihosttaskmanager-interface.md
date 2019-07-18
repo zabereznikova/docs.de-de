@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da30e75bf4a58e66bb0dd8210368b162cf14c3f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936473"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager-Schnittstelle
 Enthält Methoden, die die common Language Runtime (CLR) arbeiten mit Aufgaben, die über den Host aus, anstatt die Standardbetriebssystem threading oder Fiber-Funktionen zu ermöglichen.  
@@ -66,4 +66,4 @@ Enthält Methoden, die die common Language Runtime (CLR) arbeiten mit Aufgaben, 
 - [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

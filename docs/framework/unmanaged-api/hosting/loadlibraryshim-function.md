@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084569"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768522"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim-Funktion
 Lädt die angegebene Version einer DLL, die in .NET Framework redistributable-Paket enthalten ist.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet. Verwenden der [ICLRRuntimeInfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) Methode stattdessen.  
+ Diese Funktion ist in .NET Framework 4 veraltet. Verwenden der [ICLRRuntimeInfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) Methode stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT LoadLibraryShim (  
     [in]  LPCWSTR  szDllName,  
     [in]  LPCWSTR  szVersion,  
@@ -45,7 +45,7 @@ HRESULT LoadLibraryShim (
  [in] Eine 0 (null) endende Zeichenfolge mit dem Namen der DLL aus dem .NET Framework-Klassenbibliothek geladen werden.  
   
  `szVersion`  
- [in] Eine 0 (null) endende Zeichenfolge, die die Version der DLL zu ladende darstellt. Wenn `szVersion` null ist, ist die Version, die für das Laden, die neueste Version der angegebenen DLL ist, die kleiner als die Version 4 ist ausgewählt. D. h. alle Versionen gleich oder größer als 4-Version werden ignoriert, wenn `szVersion` null ist, und wenn keine Version kleiner als 4-Version installiert ist, kann die DLL zu laden. Dies ist, um sicherzustellen, dass die Installation von der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] wirkt sich nicht bereits vorhandene Anwendungen oder Komponenten. Finden Sie im Eintrag [In-Proc SxS und Migration Schnellstart](https://go.microsoft.com/fwlink/?LinkId=200329) im CLR-Teamblog.  
+ [in] Eine 0 (null) endende Zeichenfolge, die die Version der DLL zu ladende darstellt. Wenn `szVersion` null ist, ist die Version, die für das Laden, die neueste Version der angegebenen DLL ist, die kleiner als die Version 4 ist ausgewählt. D. h. alle Versionen gleich oder größer als 4-Version werden ignoriert, wenn `szVersion` null ist, und wenn keine Version kleiner als 4-Version installiert ist, kann die DLL zu laden. Dadurch wird sichergestellt, dass die Installation von .NET Framework 4 nicht auf bereits vorhandene Anwendungen oder Komponenten auswirkt. Finden Sie im Eintrag [In-Proc SxS und Migration Schnellstart](https://go.microsoft.com/fwlink/?LinkId=200329) im CLR-Teamblog.  
   
  `pvReserved`  
  Für zukünftige Verwendung reserviert.  

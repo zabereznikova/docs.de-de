@@ -10,29 +10,29 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955739"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Vorgehensweise: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern (Visual Basic)
 Wenn eine Prozedur verfügt über eine [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) -Parameter darf keine überladene Version, die ein eindimensionales Array für das Parameterarray definieren. Weitere Informationen finden Sie unter "Implizite Überladungen für ein ParamArray-Parameter" in [Überlegungen zu überladen von Prozeduren](./considerations-in-overloading-procedures.md).  
   
 ### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Um eine Prozedur zu überladen, die eine Variable Anzahl von Parametern akzeptiert.  
   
-1.  Sicherstellen, dass die Prozedur und profitiert von Versionen mehr als überladenen eine `ParamArray` Parameter. Finden Sie unter "Überladungen und ParamArrays" in [Überlegungen zur prozedurüberladung](./considerations-in-overloading-procedures.md).  
+1. Sicherstellen, dass die Prozedur und profitiert von Versionen mehr als überladenen eine `ParamArray` Parameter. Finden Sie unter "Überladungen und ParamArrays" in [Überlegungen zur prozedurüberladung](./considerations-in-overloading-procedures.md).  
   
-2.  Bestimmen Sie die Anzahl der bereitgestellten Werte wie vor in der Variable Teil der Parameterliste akzeptieren soll. Dazu gehören beispielsweise die Groß-/Kleinschreibung kein Wert ggf., und diese die Groß-/Kleinschreibung ein eindimensionales Array.  
+2. Bestimmen Sie die Anzahl der bereitgestellten Werte wie vor in der Variable Teil der Parameterliste akzeptieren soll. Dazu gehören beispielsweise die Groß-/Kleinschreibung kein Wert ggf., und diese die Groß-/Kleinschreibung ein eindimensionales Array.  
   
-3.  Schreiben Sie für jede zulässige Anzahl der bereitgestellten Werte, eine `Sub` oder `Function` -deklarationsanweisung in Verbindung, die die entsprechenden Parameterliste definiert. Verwenden Sie entweder nicht die `Optional` oder `ParamArray` -Schlüsselwort in die überladene Version.  
+3. Schreiben Sie für jede zulässige Anzahl der bereitgestellten Werte, eine `Sub` oder `Function` -deklarationsanweisung in Verbindung, die die entsprechenden Parameterliste definiert. Verwenden Sie entweder nicht die `Optional` oder `ParamArray` -Schlüsselwort in die überladene Version.  
   
-4.  In jeder Deklaration vorausgehen der `Sub` oder `Function` Schlüsselwort mit dem [Überladungen](../../../../visual-basic/language-reference/modifiers/overloads.md) Schlüsselwort.  
+4. In jeder Deklaration vorausgehen der `Sub` oder `Function` Schlüsselwort mit dem [Überladungen](../../../../visual-basic/language-reference/modifiers/overloads.md) Schlüsselwort.  
   
-5.  Schreiben Sie nach jeder Deklaration den Code der Prozedur, der ausgeführt werden soll, wenn der aufrufende Code Werte, die dieser Deklaration in der Parameterliste bereitstellt.  
+5. Schreiben Sie nach jeder Deklaration den Code der Prozedur, der ausgeführt werden soll, wenn der aufrufende Code Werte, die dieser Deklaration in der Parameterliste bereitstellt.  
   
-6.  Beenden Sie jede Prozedur mit der `End Sub` oder `End Function` Anweisung entsprechend.  
+6. Beenden Sie jede Prozedur mit der `End Sub` oder `End Function` Anweisung entsprechend.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine Prozedur mit definiert eine [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) übergeben wird, und einen entsprechenden Satz von überladenen Prozeduren.  

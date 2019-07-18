@@ -1,5 +1,5 @@
 ---
-title: <developmentMode> Element
+title: <developmentMode>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode
@@ -12,11 +12,11 @@ ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704764"
 ---
 # <a name="developmentmode-element"></a>\<DevelopmentMode >-Element
 Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch die DEVPATH-Umgebungsvariable angegeben werden.  
@@ -45,7 +45,7 @@ Gibt an, ob die Runtime nach Assemblys in Verzeichnissen suchen soll, die durch 
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**true**|Sucht nach Assemblys in Verzeichnissen, die durch die DEVPATH-Umgebungsvariable angegeben.|  
-|**False**|Sucht nicht nach Assemblys in Verzeichnissen, die durch die DEVPATH-Umgebungsvariable angegeben. Dies ist der Standardwert|  
+|**false**|Sucht nicht nach Assemblys in Verzeichnissen, die durch die DEVPATH-Umgebungsvariable angegeben. Dies ist der Standardwert|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

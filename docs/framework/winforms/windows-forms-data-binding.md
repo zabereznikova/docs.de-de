@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
 ms.openlocfilehash: ed456807137e8cf7594bc50eb0eebb67b88e6b40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800112"
 ---
 # <a name="windows-forms-data-binding"></a>Datenbindung in Web Forms
 Mit der Datenbindung in Windows Forms erhalten Sie die Möglichkeit, Informationen aus einer Datenquelle in Steuerelementen im Formular anzuzeigen und zu ändern. Sie können sowohl herkömmliche Datenquellen als auch beinahe alle Strukturen binden, die Daten enthalten.  

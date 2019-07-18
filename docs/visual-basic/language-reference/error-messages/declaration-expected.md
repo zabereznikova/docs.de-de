@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834178"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619529"
 ---
 # <a name="declaration-expected"></a>Deklaration erwartet.
 Eine nicht deklarierte-Anweisung, wie z. B. eine Zuweisung oder Schleifenanweisung, findet jede Prozedur ab. Nur Deklarationen sind externe Prozeduren zulässig.  
@@ -23,11 +23,11 @@ Eine nicht deklarierte-Anweisung, wie z. B. eine Zuweisung oder Schleifenanweisu
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Verschieben Sie die nicht deklarierte Anweisung in den Text einer Prozedur an.  
+- Verschieben Sie die nicht deklarierte Anweisung in den Text einer Prozedur an.  
   
--   Beginnen Sie mit der Deklaration mit einer entsprechenden Deklarationsschlüsselwort.  
+- Beginnen Sie mit der Deklaration mit einer entsprechenden Deklarationsschlüsselwort.  
   
--   Stellen Sie sicher, dass ein Deklarationsschlüsselwort nicht falsch geschrieben ist.  
+- Stellen Sie sicher, dass ein Deklarationsschlüsselwort nicht falsch geschrieben ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

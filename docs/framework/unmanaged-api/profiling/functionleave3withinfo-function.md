@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4304c933b9802ef565b8d18f1e04591e7fa83cb8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 495ed887126f0b569acc1309609a0c132d0766eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189917"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763310"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo-Funktion
 Benachrichtigt den Profiler, dass Steuerelement aus einer Funktion zurückgegeben werden, und stellt ein Handle übergeben werden kann, die die [ICorProfilerInfo3:: Getfunctionleave3info-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) den Stapelrahmen und den Rückgabewert abrufen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void __stdcall FunctionLeave3WithInfo(  
                [in] FunctionIDOrClientID functionIDOrClientID,  
                [in] COR_PRF_ELT_INFO eltInfo);  
@@ -48,9 +48,9 @@ void __stdcall FunctionLeave3WithInfo(
   
  Die ausführungs-Engine werden keine Register gespeichert, vor dem Aufrufen dieser Funktion.  
   
--   Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
+- Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
   
--   Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
+- Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
   
  Die Implementierung der `FunctionLeave3WithInfo` sollten nicht blockiert werden, da die Garbagecollection verzögert wird. Die Implementierung sollten eine Garbagecollection nicht versuchen, da der Stapel möglicherweise nicht in eine Garbage Collection geeigneten Zustand. Wenn eine Garbagecollection versucht wird, wird die Laufzeit blockiert, bis `FunctionLeave3WithInfo` zurückgibt.  
   

@@ -2,12 +2,12 @@
 title: Symbol- und Operatorenreferenz
 description: Informationen Sie zu den Symbolen und Operatoren, die in der Programmiersprache F# verwendet werden.
 ms.date: 02/11/2019
-ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092942"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306187"
 ---
 # <a name="symbol-and-operator-reference"></a>Symbol- und Operatorenreferenz
 
@@ -47,7 +47,7 @@ In der folgenden Tabelle werden die in der Sprache F# verwendeten Symbole beschr
 |`+?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Addiert die linke und die rechte Seite, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
 |`,`|[Tupel](../tuples.md)|<ul><li>Trennt die Elemente eines Tupels oder Typparameters.<br /></li></ul>|
 |`-`|[Arithmetische Operatoren](arithmetic-operators.md)|<ul><li>Bei Verwendung als binärer Operator wird rechte Seite von der linken subtrahiert.<br /></li><li>Führt bei Verwendung als unärer Operator eine Negationsoperation aus.<br /></li></ul>|
-|`-`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Subtrahiert die rechte Seite von der linken, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
+|`-?`|[Operatoren, die NULL-Werte zulassen](nullable-operators.md)|<ul><li>Subtrahiert die rechte Seite von der linken, wenn die rechte Seite ein Typ ist, der Null-Werte zulässt.<br /></li></ul>|
 |`->`|[Funktionen](../functions/index.md)<br /><br />[Vergleichsausdrücke](../match-expressions.md)|<ul><li>Begrenzt bei Funktionstypen die Argumente und Rückgabewerte.<br /></li><li>Ergibt einen Ausdruck (in Sequenzausdrücken); entspricht dem `yield`-Schlüsselwort.<br /></li><li>Wird in Übereinstimmungsausdrücken verwendet.<br /></li></ul>|
 |`.`|[Mitglieder](../members/index.md)<br /><br />[Primitive Typen](../primitive-types.md)|<ul><li>Greift auf einen Member zu und trennt einzelne Namen in einem vollqualifizierten Namen.<br /></li><li>Gibt ein Dezimaltrennzeichen in Gleitkommazahlen an.<br /></li></ul>|
 |`..`|[Schleifen: `for...in` Ausdruck](../loops-for-in-expression.md)|<ul><li>Gibt einen Bereich an.<br /></li></ul>|
@@ -127,6 +127,7 @@ Die folgende Tabelle zeigt die Rangreihenfolge der Operatoren und anderer Ausdru
 |`let`|Nicht assoziativ|
 |`function`, `fun`, `match`, `try`|Nicht assoziativ|
 |`if`|Nicht assoziativ|
+|`not`|Rechts|
 |`->`|Rechts|
 |`:=`|Rechts|
 |`,`|Nicht assoziativ|

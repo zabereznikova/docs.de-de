@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793912"
 ---
 # <a name="-main"></a>-main
 Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.  
@@ -37,13 +37,13 @@ Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>-Main in der integrierten Entwicklungsumgebung von Visual Studio festlegen  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
+1. Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
-2.  Klicken Sie auf die Registerkarte **Anwendung** .  
+2. Klicken Sie auf die Registerkarte **Anwendung** .  
   
-3.  Stellen Sie sicher, dass die **Anwendungsframework aktivieren** das Kontrollkästchen nicht aktiviert ist.  
+3. Stellen Sie sicher, dass die **Anwendungsframework aktivieren** das Kontrollkästchen nicht aktiviert ist.  
   
-4.  Ändern Sie den Wert in der **Startobjekt** Feld.  
+4. Ändern Sie den Wert in der **Startobjekt** Feld.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende code kompiliert `T2.vb` und `T3.vb`, geben Sie dabei, die die `Sub Main` Prozedur befindet sich in der `Test2` Klasse.  

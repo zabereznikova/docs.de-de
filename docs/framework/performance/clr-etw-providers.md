@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188603"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003745"
 ---
 # <a name="clr-etw-providers"></a>CLR-ETW-Anbieter
 Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbieter und den Rundownanbieter.  
   
  Der Laufzeitanbieter löst Ereignisse in Abhängigkeit von den aktivierten Schlüsselwörtern (Ereigniskategorien) aus. Sie können z. B. Ladeprogrammereignisse sammeln, indem Sie das Schlüsselwort `LoaderKeyword` aktivieren.  
   
- Die ETW (Event tracking for Windows)-Ereignisse werden in einer Datei mit einer ETL-Erweiterung protokolliert, die bei Bedarf später in CSV (Comma-Separated Value)-Dateien nachbearbeitet werden kann. Informationen zum Konvertieren der ETL-Datei in eine CSV-Datei finden Sie unter [Steuern der Protokollierung in .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
+ Event Tracing for Windows (ETW)-Ereignisse werden in einer Datei protokolliert mit einer ETL-Erweiterung, die später in durch Trennzeichen getrennte (.csv)-Dateien nach Bedarf nachbearbeitet werden kann. Informationen zum Konvertieren der ETL-Datei in eine CSV-Datei finden Sie unter [Steuern der Protokollierung in .NET Framework](../../../docs/framework/performance/controlling-logging.md).  
   
 ## <a name="the-runtime-provider"></a>Der Laufzeitanbieter  
  Der Laufzeitanbieter ist der zentrale CLR-ETW-Anbieter.  
@@ -58,7 +58,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>ETW-Datensammlung mit Laufzeit- und Rundownanbietern  
  Im folgenden Beispiel wird veranschaulicht, wie der CLR-Rundownanbieter so verwendet wird, dass die Symbolauflösung verwalteter Prozesse mit minimalen Auswirkungen ermöglicht wird, unabhängig davon, ob die Prozesse innerhalb oder außerhalb des Fensters, für das ein Profil erstellt wurde, beginnen oder enden.  
   
-1.  Aktivieren Sie die ETW-Protokollierung mit dem CLR-Laufzeitanbieter:  
+1. Aktivieren Sie die ETW-Protokollierung mit dem CLR-Laufzeitanbieter:  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
      Das Protokoll wird in der Datei clr1.etl gespeichert.  
   
-2.  Um die Profilerstellung zu beenden, während der Prozess weiterhin ausgeführt wird, starten Sie den Rundownanbieter, um die `DCEnd`-Ereignisse zu erfassen:  
+2. Um die Profilerstellung zu beenden, während der Prozess weiterhin ausgeführt wird, starten Sie den Rundownanbieter, um die `DCEnd`-Ereignisse zu erfassen:  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
      Dadurch kann mit dem Sammeln von `DCEnd`-Ereignissen eine Rundownsitzung begonnen werden. Das Sammeln aller Ereignisse dauert möglicherweise 30 bis 60 Sekunden. Das Protokoll wird in der Datei clr1.et2 gespeichert.  
   
-3.  Deaktivieren Sie die gesamte ETW-Profilerstellung:  
+3. Deaktivieren Sie die gesamte ETW-Profilerstellung:  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  Führen Sie die Profile zusammen, um eine Protokolldatei zu erstellen:  
+4. Führen Sie die Profile zusammen, um eine Protokolldatei zu erstellen:  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  
@@ -93,4 +93,4 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

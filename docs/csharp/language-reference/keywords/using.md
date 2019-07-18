@@ -1,35 +1,32 @@
 ---
 title: using-Schlüsselwort – C#-Referenz
-ms.custom: seodec18
-ms.date: 07/20/2015
+ms.custom: seoapril2019
+ms.date: 04/05/2019
 f1_keywords:
 - using_CSharpKeyword
 - using
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 4fcd46b5f532a1b9cb1df910dd9c99b27ec9f29a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 02dac1bfe3420abd474867dcc18f70aadc7aeff4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611385"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422134"
 ---
 # <a name="using-c-reference"></a>using (C#-Referenz)
 
-Das Schlüsselwort `using` hat zwei Hauptverwendungen:
+Das Schlüsselwort `using` hat drei Hauptverwendungen:
 
-- Als Direktive, wenn es zum Erstellen eines Alias für einen Namespace oder zum Importieren von in anderen Namespaces definierten Typen verwendet wird. Siehe [using-Anweisung](using-directive.md).
-
-- Als Anweisung, wenn es einen Bereich definiert, an dessen Ende ein Objekt verworfen wird. Siehe [using-Anweisung](using-statement.md).
-
-Außerdem können Sie mit der [using static](using-static.md)-Direktive einen Typ definieren, auf dessen statische Member Sie ohne Angabe eines Typnamens zugreifen können.
+- Die [Using-Anweisung](using-statement.md) definiert einen Bereich, an dessen Ende ein Objekt verworfen wird.
+- Die [Using-Anweisung](using-directive.md) erstellt einen Alias für einen Namespace oder importiert Typen, die in anderen Namespaces definiert sind.
+- Die [statische Using-Anweisung](using-static.md) importiert die Elemente einer einzelnen Klasse.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Namespaceschlüsselwörter](namespace-keywords.md)
 - [Namespaces](../../programming-guide/namespaces/index.md)
 - [extern](extern.md)

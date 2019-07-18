@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185691"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881269"
 ---
 # <a name="data-member-default-values"></a>Standardwerte der Datenelemente
-In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], besitzen Typen ein Konzept von *Standardwerte*. Für jeden Referenztyp ist der Standardwert beispielsweise  `null`, und für einen Integertyp ist er 0 (null). Von Zeit zu Zeit ist es empfehlenswert, ein Datenelement aus serialisierten Daten zu entfernen, wenn es auf seinen Standardwert festgelegt ist. Da das Element seinen Standardwert besitzt, braucht kein tatsächlicher Wert serialisiert werden; dies führt zu einem Leistungsvorteil.  
+In .NET Framework, besitzen Typen ein Konzept von *Standardwerte*. Für jeden Referenztyp ist der Standardwert beispielsweise  `null`, und für einen Integertyp ist er 0 (null). Von Zeit zu Zeit ist es empfehlenswert, ein Datenelement aus serialisierten Daten zu entfernen, wenn es auf seinen Standardwert festgelegt ist. Da das Element seinen Standardwert besitzt, braucht kein tatsächlicher Wert serialisiert werden; dies führt zu einem Leistungsvorteil.  
   
  Um ein Element aus den serialisierten Daten zu löschen, legen Sie die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> des Attributs <xref:System.Runtime.Serialization.DataMemberAttribute> auf `false` fest (der Standardwert ist `true`).  
   
@@ -50,11 +50,11 @@ In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], besitzen
 ### <a name="schema-representation"></a>Schemendarstellung  
  Die Details der schemadarstellung von Datenelementen XML-Schema Definition Language (XSD) bei der `EmitDefaultValue` -Eigenschaftensatz auf `false` finden Sie im [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Im Folgenden wird jedoch nur eine kurze Übersicht gegeben:  
   
--   Wenn die <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> nastaven NA hodnotu `false`, es wird im Schema als eine Anmerkung, die spezifisch für Windows Communication Foundation (WCF) dargestellt. Es gibt keine interoperable Möglichkeit, diese Informationen darzustellen. Besonders das Attribut "default" wird in diesem Schema nicht für diesen Zweck verwendet; das Attribut `minOccurs` wird nur durch die Einstellung <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> beeinflusst und das Attribut `nillable` wird nur von dem Typ des Datenelements beeinflusst.  
+- Wenn die <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> nastaven NA hodnotu `false`, es wird im Schema als eine Anmerkung, die spezifisch für Windows Communication Foundation (WCF) dargestellt. Es gibt keine interoperable Möglichkeit, diese Informationen darzustellen. Besonders das Attribut "default" wird in diesem Schema nicht für diesen Zweck verwendet; das Attribut `minOccurs` wird nur durch die Einstellung <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> beeinflusst und das Attribut `nillable` wird nur von dem Typ des Datenelements beeinflusst.  
   
--   Den zu verwendenden tatsächlichen Standardwert gibt es in dem Schema nicht. Der empfangende Endpunkt ist dafür verantwortlich, ein fehlendes Element angemessen zu interpretieren.  
+- Den zu verwendenden tatsächlichen Standardwert gibt es in dem Schema nicht. Der empfangende Endpunkt ist dafür verantwortlich, ein fehlendes Element angemessen zu interpretieren.  
   
- Beim schemenimport der <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> Eigenschaft wird automatisch festgelegt, um `false` jedes Mal, wenn die WCF-spezifische Anmerkung erwähnt zuvor erkannt wird. Außerdem wird sie für Referenztypen auf `false` festgelegt, deren Eigenschaft `nillable` auf  `false` festgelegt ist, um spezielle Interoperabilitätsszenarien zu unterstützen, die häufig bei der Nutzung von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdiensten auftreten.  
+ Beim schemenimport der <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> Eigenschaft wird automatisch festgelegt, um `false` jedes Mal, wenn die WCF-spezifische Anmerkung erwähnt zuvor erkannt wird. Wird auch festgelegt `false` für Verweistypen, die die `nillable` -Eigenschaftensatz auf `false` um spezielle Interoperabilitätsszenarien zu unterstützen, die häufig auftreten, bei der Nutzung von ASP.NET-Webdiensten.  
   
 ## <a name="see-also"></a>Siehe auch
 

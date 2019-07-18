@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: cd86757d43d7d57dc7777422086a7b7a96b6611e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013126"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Vorgehensweise: Festlegen der Aktivierreihenfolge in Windows Forms
 Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von einem Steuerelement zu einem anderen wechselt durch Drücken der TAB-Taste. Jedes Formular verfügt über eine eigene Aktivierreihenfolge. Standardmäßig entspricht die Aktivierreihenfolge der Reihenfolge, in der Sie die Steuerelemente erstellt. Aktivierreihenfolge Nummerierung beginnt mit 0 (null).  
@@ -25,16 +25,16 @@ Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von e
   
 ### <a name="to-set-the-tab-order-of-a-control"></a>Festlegen die Aktivierreihenfolge eines Steuerelements  
   
-1.  Auf der **Ansicht** Menü klicken Sie auf **Aktivierreihenfolge**.  
+1. Auf der **Ansicht** Menü klicken Sie auf **Aktivierreihenfolge**.  
   
      Dadurch wird den Auswahlmodus der Aktivierreihenfolge auf dem Formular aktiviert. Eine Zahl (darstellt der <xref:System.Windows.Forms.Control.TabIndex%2A> Eigenschaft) in der oberen linken Ecke eines Steuerelements angezeigt wird.  
   
-2.  Klicken Sie auf die Steuerelemente, nacheinander, um die Aktivierreihenfolge herstellen sollen.  
+2. Klicken Sie auf die Steuerelemente, nacheinander, um die Aktivierreihenfolge herstellen sollen.  
   
     > [!NOTE]
     >  Die Position eines Steuerelements in der Aktivierreihenfolge kann auf einen beliebigen Wert größer als oder gleich 0 festgelegt werden. Beim Auftreten von Duplikaten die Z-Reihenfolge der beiden Steuerelemente ausgewertet, und das Steuerelement im Vordergrund ist zunächst im Registerkartenformat. (Die Z-Reihenfolge ist für die Schichtung der Steuerelemente in einem Formular entlang des Formulars z-Achse [Tiefe]. Die Z-Reihenfolge bestimmt, welche Steuerelemente vor den anderen Steuerelementen sind.) Weitere Informationen zur Z-Anordnung finden Sie unter [Überlagern von Objekten in Windows Forms](how-to-layer-objects-on-windows-forms.md).  
   
-3.  Wenn Sie fertig sind, klicken Sie auf **Aktivierreihenfolge** auf die **Ansicht** im Menü erneut aus, um die Reihenfolge registerkartenmodus lassen.  
+3. Wenn Sie fertig sind, klicken Sie auf **Aktivierreihenfolge** auf die **Ansicht** im Menü erneut aus, um die Reihenfolge registerkartenmodus lassen.  
   
     > [!NOTE]
     >  Steuerelemente, die den Fokus erhalten können nicht als auch deaktivierte und nicht sichtbare Steuerelemente müssen keine <xref:System.Windows.Forms.Control.TabIndex%2A> -Eigenschaft und sind nicht in der Aktivierreihenfolge enthalten. Wenn der Benutzer die TAB-Taste drückt, wird diese Steuerelemente werden übersprungen.  
@@ -47,7 +47,7 @@ Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von e
   
 #### <a name="to-remove-a-control-from-the-tab-order"></a>So entfernen Sie ein Steuerelement aus der Aktivierreihenfolge  
   
-1.  Legen Sie die <xref:System.Windows.Forms.Control.TabStop%2A> Eigenschaft `false` im Eigenschaftenfenster angezeigt.  
+1. Legen Sie die <xref:System.Windows.Forms.Control.TabStop%2A> Eigenschaft `false` im Eigenschaftenfenster angezeigt.  
   
      Ein Steuerelement, dessen <xref:System.Windows.Forms.Control.TabStop%2A> eingestellt wurde `false` verwaltet seine Position in der Aktivierreihenfolge nach wie vor, auch wenn das Steuerelement wird übersprungen, wenn Sie die Steuerelemente mit der TAB-Taste durchlaufen.  
   
@@ -57,6 +57,6 @@ Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von e
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)
-- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
-- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

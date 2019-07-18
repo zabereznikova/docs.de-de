@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e42cf3440bef030f5c7bec71ed1b4b875b79a61
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378826"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377869"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put-Funktion
 
@@ -58,7 +58,7 @@ HRESULT QualifierSet_Put (
 `lFlavor`\
 [in] Einer der folgenden Konstanten, die die gewünschten Qualifizierern für diesen Qualifizierer definiert. Der Standardwert ist `WBEM_FLAVOR_OVERRIDABLE` (0).
 
-|Konstante  |Wert  |Beschreibung  |
+|Konstante  |Wert  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz überschrieben werden. **Dies ist der Standardwert.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Der Qualifizierer wird an Instanzen weitergegeben. |
@@ -72,7 +72,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Es wurde ein unzulässiger Versuch unternommen, an die **Schlüssel** Qualifizierer für eine Eigenschaft, die kein Schlüssel sein kann. Die Schlüssel werden angegeben. der c-Om; Ass-Definition für ein Objekt und können nicht individuell pro Instanz geändert werden. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Es wurde ein unzulässiger Versuch unternommen, an die **Schlüssel** Qualifizierer für eine Eigenschaft, die kein Schlüssel sein kann. Die Schlüssel werden in der Klassendefinition für ein Objekt angegeben und können nicht individuell pro Instanz geändert werden. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Die `pVal` Parameter ist nicht vom zulässiger Qualifizierertyp. |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Es ist nicht möglich, zum Aufrufen der `QualifierSet_Put` Methode für den Qualifizierer überschreibt, da das besitzende Objekt nicht zulässig ist. |

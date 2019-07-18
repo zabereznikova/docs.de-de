@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741704"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347396"
 ---
 # <a name="shadow-copying-assemblies"></a>Erstellen von Schattenkopien von Assemblys
 Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne verwendet werden, aktualisiert werden können, ohne die Anwendungsdomäne zu entladen. Dies ist besonders hilfreich für Anwendungen, die permanent verfügbar sein müssen, wie ASP.NET-Websites.  
@@ -30,21 +30,21 @@ Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne ver
   
  Dieser Artikel enthält folgende Abschnitte:  
   
--   [Aktivieren und Verwenden der Schattenkopiefunktion](#EnablingAndUsing) beschreibt die grundlegende Verwendung sowie die Optionen in Verbindung mit Schattenkopien.  
+- [Aktivieren und Verwenden der Schattenkopiefunktion](#EnablingAndUsing) beschreibt die grundlegende Verwendung sowie die Optionen in Verbindung mit Schattenkopien.  
   
--   [Startleistung](#StartupPerformance) beschreibt die Änderungen, die an der Schattenkopiefunktion in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] vorgenommen werden, um die Startleistung zu verbessern. Außerdem wird erläutert, wie das Verhalten vorheriger Versionen wiederhergestellt werden kann.  
+- [Startleistung](#StartupPerformance) beschreibt die Änderungen, die an der Schattenkopiefunktion in .NET Framework 4 vorgenommen werden, um die Startleistung zu verbessern. Außerdem wird erläutert, wie das Verhalten vorheriger Versionen wiederhergestellt werden kann.  
   
--   [Veraltete Methoden](#ObsoleteMethods) beschreibt die Änderungen, die an den Eigenschaften und Methoden vorgenommen wurden, die die Schattenkopiefunktion in [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] steuern.  
+- [Veraltete Methoden](#ObsoleteMethods) beschreibt die Änderungen, die an den Eigenschaften und Methoden vorgenommen wurden, die die Schattenkopiefunktion in .NET Framework 2.0 steuern.  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>Aktivieren und Verwenden der Schattenkopiefunktion  
  Sie können die Eigenschaften der <xref:System.AppDomainSetup>-Klasse wie folgt verwenden, um eine Anwendungsdomäne für Schattenkopien zu konfigurieren:  
   
--   Aktivieren Sie die Schattenkopiefunktion, indem Sie die <xref:System.AppDomainSetup.ShadowCopyFiles%2A>-Eigenschaft auf den Zeichenfolgenwert `"true"` festlegen.  
+- Aktivieren Sie die Schattenkopiefunktion, indem Sie die <xref:System.AppDomainSetup.ShadowCopyFiles%2A>-Eigenschaft auf den Zeichenfolgenwert `"true"` festlegen.  
   
      Standardmäßig bewirkt diese Einstellung, dass alle Assemblys im Anwendungspfad in einen Downloadcache kopiert werden, bevor sie geladen werden. Dies ist der gleiche Cache, der von der Common Language Runtime zum Speichern von Dateien verwendet wird, die von anderen Computern heruntergeladen wurden, und die Common Language Runtime löscht diese Dateien automatisch, wenn sie nicht mehr benötigt werden.  
   
--   Legen Sie optional einen benutzerdefinierten Speicherort für die Schattenkopien von Dateien fest, indem Sie die Eigenschaften <xref:System.AppDomainSetup.CachePath%2A> und <xref:System.AppDomainSetup.ApplicationName%2A> verwenden.  
+- Legen Sie optional einen benutzerdefinierten Speicherort für die Schattenkopien von Dateien fest, indem Sie die Eigenschaften <xref:System.AppDomainSetup.CachePath%2A> und <xref:System.AppDomainSetup.ApplicationName%2A> verwenden.  
   
      Der Basispfad für den Speicherort wird gebildet, indem die Eigenschaft <xref:System.AppDomainSetup.ApplicationName%2A> mit der Eigenschaft <xref:System.AppDomainSetup.CachePath%2A> als Unterverzeichnis verkettet wird. Schattenkopien von Assemblys werden in die Unterverzeichnisse dieses Pfades gesetzt und nicht in den Basispfad selbst.  
   
@@ -55,7 +55,7 @@ Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne ver
   
      Es gibt einige Gründe, warum Sie ggf. einen benutzerdefinierten Speicherort für Schattenkopien von Dateien anlegen sollten. Möglicherweise möchten Sie einen benutzerdefinierten Speicherort für Schattenkopien von Dateien anlegen, wenn Ihre Anwendung eine große Anzahl Kopien erstellt. Der Downloadcache ist in der Größe und nicht in der Lebensdauer begrenzt, daher ist es möglich, dass die Common Language Runtime versucht, eine Datei zu löschen, die noch verwendet wird. Ein weiterer Grund für das Einrichten eines benutzerdefinierten Speicherorts ist folgender: Wenn Benutzer, die Ihre Anwendung ausführen, keinen Schreibzugriff auf den Verzeichnisspeicherort haben, den die Common Language Runtime als Downloadcache verwendet.  
   
--   Begrenzen Sie optional die Assemblys, von denen Schattenkopien erstellt werden, indem Sie die <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>-Eigenschaft verwenden.  
+- Begrenzen Sie optional die Assemblys, von denen Schattenkopien erstellt werden, indem Sie die <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>-Eigenschaft verwenden.  
   
      Wenn Sie die Schattenkopiefunktion für eine Anwendungsdomäne aktivieren, werden standardmäßig alle Assemblys im Anwendungspfad kopiert, d. h. in den Verzeichnissen, die von den Eigenschaften <xref:System.AppDomainSetup.ApplicationBase%2A> und <xref:System.AppDomainSetup.PrivateBinPath%2A> festgelegt wurden. Sie können den Kopiervorgang auf ausgewählte Verzeichnisse beschränken, indem Sie eine Zeichenfolge erstellen, der nur die Verzeichnisse enthält, in denen Schattenkopien erstellt werden sollen. Weisen Sie die Zeichenfolge dann der <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>-Eigenschaft zu. Trennen Sie die Verzeichnisse mit Semikolons. Die einzigen Assemblys, von denen Schattenkopien erstellt werden, sind nun die in den ausgewählten Verzeichnissen.  
   
@@ -67,9 +67,9 @@ Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne ver
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>Startleistung  
- Wenn eine Anwendungsdomäne, in der die Schattenkopiefunktion verwendet wird, gestartet wird, kommt es zu einer Verzögerung, während die Assemblys im Anwendungsverzeichnis in das Verzeichnis für Schattenkopien kopiert oder während überprüft wird, ob sie sich bereits an diesem Speicherort befinden. Vor [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] wurden alle Assemblys in ein temporäres Verzeichnis kopiert. Jede Assembly wurde geöffnet, um den Assemblynamen zu überprüfen, und der starke Name wurde validiert. Jede Assembly wurde überprüft, um zu sehen, ob sie aktueller als die Kopie im Schattenkopieverzeichnis ist. Falls ja, wurde sie in das Schattenkopieverzeichnis kopiert. Abschließend wurden die temporären Kopien verworfen.  
+ Wenn eine Anwendungsdomäne, in der die Schattenkopiefunktion verwendet wird, gestartet wird, kommt es zu einer Verzögerung, während die Assemblys im Anwendungsverzeichnis in das Verzeichnis für Schattenkopien kopiert oder während überprüft wird, ob sie sich bereits an diesem Speicherort befinden. Vor .NET Framework 4.0 wurden alle Assemblys in ein temporäres Verzeichnis kopiert. Jede Assembly wurde geöffnet, um den Assemblynamen zu überprüfen, und der starke Name wurde validiert. Jede Assembly wurde überprüft, um zu sehen, ob sie aktueller als die Kopie im Schattenkopieverzeichnis ist. Falls ja, wurde sie in das Schattenkopieverzeichnis kopiert. Abschließend wurden die temporären Kopien verworfen.  
   
- Beginnend mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] besteht das standardmäßige Startverhalten darin, Datum und Uhrzeit jeder Assembly im Anwendungsverzeichnis direkt mit dem Datum und der Uhrzeit der Kopie im Schattenkopieverzeichnis zu vergleichen. Wenn die Assembly aktualisiert wurde, wird sie mit der gleichen Prozedur wie in älteren Versionen von .NET Framework kopiert; andernfalls wird die Schattenkopie im Schattenkopieverzeichnis geladen.  
+ Ab .NET Framework 4 besteht das standardmäßige Startverhalten darin, Datum und Uhrzeit jeder Assembly im Anwendungsverzeichnis direkt mit dem Datum und der Uhrzeit der Kopie im Schattenkopieverzeichnis zu vergleichen. Wenn die Assembly aktualisiert wurde, wird sie mit der gleichen Prozedur wie in älteren Versionen von .NET Framework kopiert; andernfalls wird die Schattenkopie im Schattenkopieverzeichnis geladen.  
   
  Die sich hieraus ergebende Leistungsverbesserung ist enorm für Anwendungen, in denen Assemblys nicht häufig geändert werden und Änderungen in der Regel nur an einer kleinen Teilmenge von Assemblys vorgenommen werden. Wenn ein Großteil der Assemblys in einer Anwendung häufig geändert wird, kann das neue Standardverhalten zu einem Leistungsverlust führen. Sie können das Startverhalten vorheriger Versionen von .NET Framework wiederherstellen, indem Sie das [\<<shadowCopyVerifyByTimestamp>-Element](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) mit `enabled="false"` zur Konfigurationsdatei hinzufügen.  
   
@@ -78,6 +78,7 @@ Schattenkopien sorgen dafür, dass Assemblys, die in einer Anwendungsdomäne ver
  Die <xref:System.AppDomain>-Klasse verfügt über mehrere Methoden, wie <xref:System.AppDomain.SetShadowCopyFiles%2A> und <xref:System.AppDomain.ClearShadowCopyPath%2A>, die verwendet werden können, um die Erstellung von Schattenkopien in einer Anwendungsdomäne zu steuern, diese wurde in .NET Framework 2.0 jedoch als veraltet deklariert. Die empfohlenen Methode zum Konfigurieren einer Anwendungsdomäne für die Schattenkopiefunktion besteht drin, die Eigenschaften der <xref:System.AppDomainSetup>-Klasse zu verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>

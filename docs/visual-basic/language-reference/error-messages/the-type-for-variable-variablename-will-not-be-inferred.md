@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: bcd142785d8ee736c6a1b41950fae80e4d26fa18
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a595f38f6dd68b9c152bfa78ec0bebf36e173e17
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838813"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649967"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Der Typ für die Variable "\<Variablenname >' wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist
 Der Typ für die Variable "\<Variablenname >' wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist. Ändern Sie den Namen des "\<Variablenname >', oder verwenden Sie den vollqualifizierten Namen (z. B. 'Me.Variablenname' oder 'MyBase.Variablenname').  
@@ -44,19 +44,19 @@ End Class
   
 ### <a name="to-address-this-warning"></a>So reagieren Sie auf diese Warnung  
   
--   Machen Sie die Schleifensteuerungsvariable lokal verfügbar, indem Sie ihren Namen in einen Bezeichner ändern, der nicht mit dem Feldnamen der Klasse übereinstimmt.  
+- Machen Sie die Schleifensteuerungsvariable lokal verfügbar, indem Sie ihren Namen in einen Bezeichner ändern, der nicht mit dem Feldnamen der Klasse übereinstimmt.  
   
     ```  
     For I = 1 To 10  
     ```  
   
--   Stellen Sie sicher, dass die Schleifensteuerungsvariable an das Klassenfeld gebunden ist, indem Sie dem Variablennamen als Präfix `Me.` voranstellen.  
+- Stellen Sie sicher, dass die Schleifensteuerungsvariable an das Klassenfeld gebunden ist, indem Sie dem Variablennamen als Präfix `Me.` voranstellen.  
   
     ```  
     For Me.Index = 1 To 10  
     ```  
   
--   Verwenden Sie eine `As`-Klausel, um einen Typ für die Schleifensteuerungsvariable festzulegen, anstatt sich auf den lokalen Typrückschluss zu verlassen.  
+- Verwenden Sie eine `As`-Klausel, um einen Typ für die Schleifensteuerungsvariable festzulegen, anstatt sich auf den lokalen Typrückschluss zu verlassen.  
   
     ```  
     For Index As Integer = 1 To 10  

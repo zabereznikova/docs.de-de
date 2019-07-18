@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034306"
 ---
 # <a name="handling-datatable-events"></a>Behandeln von DataTable-Ereignissen
 Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit, die von einer Anwendung verarbeitet werden können. Eine Beschreibung dieser `DataTable`-Ereignisse finden Sie in der folgenden Tabelle:  
@@ -47,21 +47,21 @@ Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit
 ## <a name="sequence-of-operations"></a>Abfolge der Vorgänge  
  Beim Hinzufügen, Ändern oder Löschen einer `DataRow` laufen die Vorgänge in der folgenden Reihenfolge ab:  
   
-1.  Der vorgeschlagene Datensatz wird erstellt, und alle Änderungen werden übernommen.  
+1. Der vorgeschlagene Datensatz wird erstellt, und alle Änderungen werden übernommen.  
   
-2.  Die Einschränkungen für Nicht-Ausdruck-Spalten werden überprüft.  
+2. Die Einschränkungen für Nicht-Ausdruck-Spalten werden überprüft.  
   
-3.  Das `RowChanging`-Ereignis oder das `RowDeleting`-Ereignis wird ausgelöst.  
+3. Das `RowChanging`-Ereignis oder das `RowDeleting`-Ereignis wird ausgelöst.  
   
-4.  Der vorgeschlagene Datensatz wird als aktueller Datensatz festgelegt.  
+4. Der vorgeschlagene Datensatz wird als aktueller Datensatz festgelegt.  
   
-5.  Alle zugeordneten Indizes werden aktualisiert.  
+5. Alle zugeordneten Indizes werden aktualisiert.  
   
-6.  Die `ListChanged`-Ereignisse für zugeordnete `DataView`-Objekte und die `PropertyChanged`-Ereignisse für zugeordnete `DataRowView`-Objekte werden ausgelöst.  
+6. Die `ListChanged`-Ereignisse für zugeordnete `DataView`-Objekte und die `PropertyChanged`-Ereignisse für zugeordnete `DataRowView`-Objekte werden ausgelöst.  
   
-7.  Alle Ausdrucksspalten werden ausgewertet, wobei aber die Überprüfung der Einschränkungen für diese Spalten verzögert wird.  
+7. Alle Ausdrucksspalten werden ausgewertet, wobei aber die Überprüfung der Einschränkungen für diese Spalten verzögert wird.  
   
-8.  Die `ListChanged`-Ereignisse für die zugeordneten `DataView`-Objekte und die `PropertyChanged`-Ereignisse für die zugeordneten `DataRowView`-Objekte, auf die sich die Auswertung der Ausdrucksspalten auswirkt, werden ausgelöst.  
+8. Die `ListChanged`-Ereignisse für die zugeordneten `DataView`-Objekte und die `PropertyChanged`-Ereignisse für die zugeordneten `DataRowView`-Objekte, auf die sich die Auswertung der Ausdrucksspalten auswirkt, werden ausgelöst.  
   
 9. Das `RowChanged`-Ereignis oder das `RowDeleted`-Ereignis wird ausgelöst.  
   
@@ -81,7 +81,7 @@ Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Bearbeiten von Daten in einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [Behandeln von DataAdapter-Ereignissen](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [Behandeln von DataSet-Ereignissen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [Handling DataSet Events (Behandeln von DataSet-Ereignissen)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

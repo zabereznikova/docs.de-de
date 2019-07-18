@@ -13,27 +13,27 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: b79e339ebe81a7228a02837e5c0c23c80a8132e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9dbe8fe977b2aa11573ab7a1ac1d79be0b5204af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654941"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624332"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Programmstruktur und Codekonventionen (Visual Basic)
-In diesem Abschnitt führt die typische Visual Basic-Programmstruktur, bietet ein einfaches Visual Basic-Programm "Hello, World" und Visual Basic-Code-Konventionen erläutert. Codekonventionen sind Vorschläge, die sich nicht auf die Logik eines Programms, sondern auf seine physische Struktur und sein Erscheinungsbild konzentrieren. Wenn Sie diese Konventionen einhalten, ist Programmcode besser lesbar, leichter verständlich und einfacher zu verwalten. Codekonventionen umfassen u. a.:  
+In diesem Abschnitt führt die typischen Visual Basic-Programmstruktur, bietet eine einfache Visual Basic-Programms "Hello, World" und Visual Basic-Code-Konventionen erläutert. Codekonventionen sind Vorschläge, die sich nicht auf die Logik eines Programms, sondern auf seine physische Struktur und sein Erscheinungsbild konzentrieren. Wenn Sie diese Konventionen einhalten, ist Programmcode besser lesbar, leichter verständlich und einfacher zu verwalten. Codekonventionen umfassen u. a.:  
   
--   Standardisierte Formate für Bezeichnungen und Kommentare im Code.  
+- Standardisierte Formate für Bezeichnungen und Kommentare im Code.  
   
--   Richtlinien für die Verwendung von Leerzeichen, Formatierungen und Einzügen beim Code.  
+- Richtlinien für die Verwendung von Leerzeichen, Formatierungen und Einzügen beim Code.  
   
--   Benennungskonventionen für Objekte, Variablen und Prozeduren.  
+- Benennungskonventionen für Objekte, Variablen und Prozeduren.  
   
- Die folgenden Themen enthalten eine Reihe von Programmierungsrichtlinien für Visual Basic-Programme, zusammen mit Beispielen, die richtige Verwendung.  
+ In den folgenden Themen stellen eine Reihe von Programmierungsrichtlinien für Visual Basic-Programme und Beispiele für die richtige Verwendung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Struktur eines Visual Basic-Programms](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- Bietet eine Übersicht über die Elemente, aus denen ein Visual Basic-Programm besteht.  
+ [Struktur der Visual Basic-Programmen](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
+ Bietet eine Übersicht über die Elemente, aus denen eine Visual Basic-Programm besteht.  
   
  [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
  Erörtert die Prozedur, die als Ausgangspunkt und Gesamtsteuerung für die Anwendung fungiert.  
@@ -53,13 +53,13 @@ In diesem Abschnitt führt die typische Visual Basic-Programmstruktur, bietet ei
  [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
  Beschreibt die selektive Kompilierung bestimmter Codeblöcke, indem der Compiler angewiesen wird, andere Blöcke zu ignorieren.  
   
- [Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
+ [Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  
  Zeigt, wie lange Anweisungen in mehrere Zeilen aufgeteilt und kurze Anweisungen zu einer Zeile zusammengefasst werden können.  
   
- [Gewusst wie: Reduzieren und Ausblenden von Codeabschnitten](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)  
- Zeigt, wie reduzieren und blenden Sie Codeabschnitte im Visual Basic Codeeditor.  
+ [Vorgehensweise: Reduzieren und Ausblenden von Codeabschnitten](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)  
+ Zeigt, wie reduzieren und Ausblenden von Codeabschnitten, die in der Visual Basic Code-Editor.  
   
- [Gewusst wie: Bezeichnen von Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)  
+ [Vorgehensweise: Label-Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)  
  Veranschaulicht, wie Codezeilen für die Verwendung mit Anweisungen, z. B. `On Error Goto`, gekennzeichnet werden.  
   
  [Sonderzeichen in Code](../../../visual-basic/programming-guide/program-structure/special-characters-in-code.md)  
@@ -69,10 +69,10 @@ In diesem Abschnitt führt die typische Visual Basic-Programmstruktur, bietet ei
  Beschreibt, wie dem Code beschreibende Kommentare hinzugefügt werden können.  
   
  [Schlüsselwörter als Elementnamen in Code](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
- Beschreibt, wie mithilfe von eckigen Klammern (`[]`) zur Begrenzung von Variablennamen, die auch Visual Basic-Schlüsselwörter sind.  
+ Beschreibt, wie mithilfe von eckigen Klammern (`[]`) zum Begrenzen von Variablennamen, die auch Visual Basic-Schlüsselwörter sind.  
   
  [Me, My, MyBase und MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- Beschreibt verschiedene Verfahren zum Verweisen auf Elemente eines Visual Basic-Programms.  
+ Beschreibt verschiedene Möglichkeiten zum Verweisen auf Elemente des Visual Basic-Programms an.  
   
  [Beschränkungen in Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)  
  Erläutert die Entfernung bekannter codierungsbeschränkungen in Visual Basic.  

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098740"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832687"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Zuordnen von Algorithmennamen zu kryptografischen Klassen
-Es gibt vier Möglichkeiten, die ein Entwickler ein Kryptografie mithilfe erstellen kann der [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+Es gibt vier Möglichkeiten, die ein Entwickler ein Kryptografieobjekts, verwenden das Windows Software Development Kit (SDK) erstellen kann:  
   
--   Erstellen Sie ein Objekt mithilfe der **neue** Operator.  
+- Erstellen Sie ein Objekt mithilfe der **neue** Operator.  
   
--   Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der **erstellen** Methode für die abstrakte Klasse für diesen Algorithmus.  
+- Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der **erstellen** Methode für die abstrakte Klasse für diesen Algorithmus.  
   
--   Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> Methode.  
+- Erstellen Sie ein Objekt, das einen bestimmten kryptografischen Algorithmus, durch Aufrufen implementiert der <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> Methode.  
   
--   Erstellen Sie ein Objekt, das implementiert, eine Klasse von kryptografischen Algorithmen (z. B. eine Verschlüsselung symmetrischer Blöcke) durch Aufrufen der **erstellen** Methode für die abstrakte Klasse für diesen Typ des-Algorithmus (z. B. <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+- Erstellen Sie ein Objekt, das implementiert, eine Klasse von kryptografischen Algorithmen (z. B. eine Verschlüsselung symmetrischer Blöcke) durch Aufrufen der **erstellen** Methode für die abstrakte Klasse für diesen Typ des-Algorithmus (z. B. <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
  Nehmen wir beispielsweise an, dass ein Entwickler möchte, um den SHA1-Hash einer Reihe von Bytes zu berechnen. Die <xref:System.Security.Cryptography> -Namespace enthält zwei Implementierungen von SHA1-Algorithmus, eine rein verwaltete Implementierungen und diejenige, die CryptoAPI umschließt. Entwickler kann auch eine bestimmte Implementierung des SHA1 instanziieren (z. B. die <xref:System.Security.Cryptography.SHA1Managed>) durch Aufrufen der **neue** Operator. Jedoch wenn es keine, welche Klasse die common Language Runtime lädt Rolle, solange die Klasse des SHA1-Hash-Algorithmus implementiert, der Entwickler kann erstellen ein Objekt durch Aufrufen der <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> Methode. Diese Methode ruft **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1") auf**, womit muss eine Implementierung des SHA1-Hashalgorithmus zurückgegeben.  
   
@@ -34,7 +34,7 @@ Es gibt vier Möglichkeiten, die ein Entwickler ein Kryptografie mithilfe erstel
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>Zuordnen von Algorithmennamen in Konfigurationsdateien  
  Standardmäßig gibt die Runtime eine <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> -Objekt für alle vier Szenarien. Ein Computeradministrator kann jedoch den Typ des Objekts ändern, die die Methoden in den letzten beiden Szenarien zurückgeben. Zu diesem Zweck müssen Sie einen Namen für die Anzeigenamen von Algorithmen für die Klasse zuordnen, die Sie in der Computerkonfigurationsdatei (Machine.config) verwenden möchten.  
   
- Das folgende Beispiel zeigt, wie die Laufzeit so konfiguriert, damit **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, und  **System.Security.Cryptography.HashAlgorithm.Create** Zurückgeben einer `MySHA1HashClass` Objekt.  
+ Das folgende Beispiel zeigt, wie die Laufzeit so konfiguriert, damit **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")** , und  **System.Security.Cryptography.HashAlgorithm.Create** Zurückgeben einer `MySHA1HashClass` Objekt.  
   
 ```xml  
 <configuration>  
@@ -69,5 +69,5 @@ Es gibt vier Möglichkeiten, die ein Entwickler ein Kryptografie mithilfe erstel
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../../docs/framework/configure-apps/configure-cryptography-classes.md)

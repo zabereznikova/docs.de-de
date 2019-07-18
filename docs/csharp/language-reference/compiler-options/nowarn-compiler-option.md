@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 79d61e7e4096ab206e207a05553a68020bca6204
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b455a2f719e7350c51cf4a1f095d4669529d0e5e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664823"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592808"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C#-Compileroptionen)
 Mit der Option **-nowarn** können Sie unterdrücken, dass der Compiler eine oder mehrere Warnungen anzeigt. Trennen Sie mehrere Warnnummern durch ein Komma.  
@@ -28,26 +28,26 @@ Mit der Option **-nowarn** können Sie unterdrücken, dass der Compiler eine ode
  `number1`, `number2`  
  Warnnummer(n), die der Compiler unterdrücken soll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Sie sollten lediglich den numerischen Teil des Warnungsbezeichners angeben. Wenn Sie z.B. CS0028 unterdrücken wollen, könnten Sie `-nowarn:28` angeben.  
   
  Der Compiler wird automatisch die Warnnummern ignorieren, die an `-nowarn` übergeben wurden und in einer früheren Version gültig waren, jedoch aus dem Compiler entfernt worden sind. CS0679 war z.B. im Compiler in Visual Studio .NET 2002 gültig, wurde aber später entfernt.  
   
  Die folgenden Warnungen können nicht durch die Option `-nowarn` unterdrückt werden.  
   
--   Compilerwarnung (Stufe 1) CS2002  
+- Compilerwarnung (Stufe 1) CS2002  
   
--   Compilerwarnung (Stufe 1) CS2023  
+- Compilerwarnung (Stufe 1) CS2023  
   
--   Compilerwarnung (Stufe 1) CS2029  
+- Compilerwarnung (Stufe 1) CS2029  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** für das Projekt. Informationen finden Sie auf der [Seite „Erstellen“, Projekt-Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Öffnen Sie die Seite **Eigenschaften** für das Projekt. Informationen finden Sie auf der [Seite „Erstellen“, Projekt-Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
+2. Klicken Sie auf die Eigenschaftenseite **Build** .  
   
-3.  Ändern Sie die Eigenschaft **Warnungen unterdrücken**.  
+3. Ändern Sie die Eigenschaft **Warnungen unterdrücken**.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
   

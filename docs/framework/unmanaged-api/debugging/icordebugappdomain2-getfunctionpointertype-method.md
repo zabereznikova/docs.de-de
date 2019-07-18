@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec1a9968dbec10783c6f1383fb523e95ff79561e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8f0643ba9e750e7c64d2dae8eb5744df7bc26931
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489747"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737798"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType-Methode
 Ruft einen Zeiger auf eine Funktion, die einer bestimmten Signatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetFunctionPointerType (  
     [in] ULONG32                             nTypeArgs,  
     [in, size_is(nTypeArgs)] ICorDebugType   *ppTypeArgs[],  

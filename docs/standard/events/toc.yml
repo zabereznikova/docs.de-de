@@ -1,25 +1,18 @@
-items:
 - name: Ereignisse
   href: index.md
   items:
-  - name: 'Vorgehensweise: Auslösen und Verarbeiten von Ereignissen'
-    href: how-to-raise-and-consume-events.md
-  - name: 'Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften'
-    href: how-to-handle-multiple-events-using-event-properties.md
-  - name: 'Vorgehensweise: Verarbeiten von Ereignissen in einer Web Forms-Anwendung'
-    href: how-to-consume-events-in-a-web-forms-application.md
-  - name: Beobachterentwurfsmuster
-    href: observer-design-pattern.md
-    items:
-    - name: Empfohlene Vorgehensweisen für Beobachterentwurfsmuster
-      href: observer-design-pattern-best-practices.md
-    - name: 'Vorgehensweise: Implementieren eines Anbieters'
-      href: how-to-implement-a-provider.md
-    - name: 'Vorgehensweise: Implementieren eines Observers'
-      href: how-to-implement-an-observer.md
-ms.openlocfilehash: 683b3ce9ecf53166bed8101c2ebcd0d4a43024b9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468694"
+    - name: 'Vorgehensweise: Auslösen und Verarbeiten von Ereignissen'
+      href: how-to-raise-and-consume-events.md
+    - name: 'Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften'
+      href: how-to-handle-multiple-events-using-event-properties.md
+    - name: 'Vorgehensweise: Verarbeiten von Ereignissen in einer Web Forms-Anwendung'
+      href: how-to-consume-events-in-a-web-forms-application.md
+    - name: Beobachterentwurfsmuster
+      href: observer-design-pattern.md
+      items:
+        - name: Empfohlene Vorgehensweisen für Beobachterentwurfsmuster
+          href: observer-design-pattern-best-practices.md
+        - name: 'Vorgehensweise: Implementieren eines Anbieters'
+          href: how-to-implement-a-provider.md
+        - name: 'Vorgehensweise: Implementieren eines Observers'
+          href: how-to-implement-an-observer.md

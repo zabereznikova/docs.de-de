@@ -12,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: cc8df68a608000d89dd322b0d396504483bbf372
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 2cad6015c1c4d72300d8413b7accead12f79a0be
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633724"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634301"
 ---
 # <a name="sqlstreamcharsdisposeboolean-method"></a>SqlStreamChars.Dispose(Boolean)-Methode
 

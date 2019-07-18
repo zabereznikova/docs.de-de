@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 580c554c968819ba4ef2ba52edeb5e754d33ac1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 335c25316b34f79b8d02eea5a7dd4ed7994fc754
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185265"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780180"
 ---
 # <a name="icorprofilerinfogetclassfromtoken-method"></a>ICorProfilerInfo::GetClassFromToken-Methode
 Ruft die ID der Klasse, mit dem angegebenen Metadatentoken ab. Diese Methode ist in .NET Framework, Version 2.0, veraltet. Verwendung [ICorProfilerInfo2:: GetClassFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassfromtokenandtypeargs-method.md) stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetClassFromToken(  
     [in]  ModuleID  moduleId,  
     [in]  mdTypeDef typeDef,  

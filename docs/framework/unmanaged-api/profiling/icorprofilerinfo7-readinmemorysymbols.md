@@ -12,21 +12,21 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 662863ec69e464dafe893552f1d81755313acc75
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2a878ccf94fb4f6d67daa3a4dd42fcf98faf34a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153321"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748644"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
-[Unterstützt in [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] und höheren Versionen]  
+[Wird nur in .NET Framework 4.6.1 und höheren Versionen unterstützt]  
   
  Liest Bytes aus einem in-Memory symbolstream.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ReadInMemorySymbols(  
         [in] ModuleID moduleId,  
         [in] DWORD symbolsReadOffset,  

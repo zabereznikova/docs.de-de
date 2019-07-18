@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c09140488730179616d11932faa3542f704958a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e4be840760782789aa91e5519f60374aca2e3941
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123746"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775267"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps-Methode
 Ändert die angegebene `ExportedType`-Metadatenstruktur.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetExportedTypeProps (  
     [in] mdExportedType   ct,   
     [in] mdToken          tkImplementation,  

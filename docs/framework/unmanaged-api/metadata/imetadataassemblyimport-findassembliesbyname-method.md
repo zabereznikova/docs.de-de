@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b388dae0f109ff366f83c92de99b00b80bcc01a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 315d9aa6f7db51342e71ba3f8fcdc091f7707743
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108718"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777981"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName-Methode
 Ruft ein Array von Assemblys mit dem angegebenen `szAssemblyName` Parameters unter Verwendung von die Standardregeln, die von der common Language Runtime (CLR) zum Auflösen von verweisen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT FindAssembliesByName (  
     [in]  LPCWSTR     szAppBase,   
     [in]  LPCWSTR     szPrivateBin,   

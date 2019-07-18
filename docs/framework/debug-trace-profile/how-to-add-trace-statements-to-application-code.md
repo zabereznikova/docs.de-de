@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754535"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode
 Die für die Ablaufverfolgung am häufigsten verwendeten Methoden sind die Methoden zum Schreiben von Ausgaben in Listener: **Schreiben von**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, und **fehlschlagen**. Diese Methoden können in zwei Kategorien unterteilt werden: **Schreiben von**, **WriteLine**, und **fehlschlagen** alle ausgeben bedingungslos während **WriteIf**, **WriteLineIf**, und  **Assert-** eine boolesche Bedingung testen und zu schreiben bzw. Schreiben nicht basierend auf dem Wert der Bedingung. **WriteIf** und **WriteLineIf** führen zu einer Ausgabe, wenn die Bedingung `true` entspricht. **Assert** führt zu einer Ausgabe, wenn die Bedingung `false` entspricht.  
@@ -29,7 +29,7 @@ Die für die Ablaufverfolgung am häufigsten verwendeten Methoden sind die Metho
   
 ### <a name="to-write-a-complete-line"></a>So schreiben Sie eine vollständige Zeile  
   
-1.  Rufen Sie die <xref:System.Diagnostics.Trace.WriteLine%2A>-Methode oder <xref:System.Diagnostics.Trace.WriteLineIf%2A>-Methode auf.  
+1. Rufen Sie die <xref:System.Diagnostics.Trace.WriteLine%2A>-Methode oder <xref:System.Diagnostics.Trace.WriteLineIf%2A>-Methode auf.  
   
      Es wird ein Wagenrücklauf am Ende der von dieser Methode zurückgegebenen Nachricht angefügt, sodass die nächste von **Write**, **WriteIf**, **WriteLine** oder **WriteLineIf** zurückgegebene Nachricht in der darauffolgenden Zeile beginnt:  
   
@@ -48,7 +48,7 @@ Die für die Ablaufverfolgung am häufigsten verwendeten Methoden sind die Metho
   
 ### <a name="to-write-a-partial-line"></a>So schreiben Sie eine Teilzeile  
   
-1.  Rufen Sie die <xref:System.Diagnostics.Trace.Write%2A>-Methode oder <xref:System.Diagnostics.Trace.WriteIf%2A>-Methode auf.  
+1. Rufen Sie die <xref:System.Diagnostics.Trace.Write%2A>-Methode oder <xref:System.Diagnostics.Trace.WriteIf%2A>-Methode auf.  
   
      Die nächste von **Write**, **WriteIf**, **WriteLine** oder **WriteLineIf** ausgegebene Nachricht beginnt auf derselben Zeile wie die Nachricht, die von **Write**- oder **WriteIf**-Anweisungen ausgegeben wurde:  
   
@@ -69,7 +69,7 @@ Die für die Ablaufverfolgung am häufigsten verwendeten Methoden sind die Metho
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>So überprüfen Sie, ob bestimmte Bedingungen vor oder nach dem Ausführen einer Methode vorhanden sind  
   
-1.  Rufen Sie die <xref:System.Diagnostics.Trace.Assert%2A>-Methode auf.  
+1. Rufen Sie die <xref:System.Diagnostics.Trace.Assert%2A>-Methode auf.  
   
     ```vb  
     Dim i As Integer = 4  
@@ -91,6 +91,6 @@ Die für die Ablaufverfolgung am häufigsten verwendeten Methoden sind die Metho
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)

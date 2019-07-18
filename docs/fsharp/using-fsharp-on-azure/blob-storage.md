@@ -3,12 +3,12 @@ title: Erste Schritte mit Azure Blob Storage mit F#
 description: Store unstrukturierte Daten in der Cloud mit Azure Blob Storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846427"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880048"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Erste Schritte mit Azure Blob Storage mit F\#
 
@@ -196,8 +196,8 @@ Weitere Informationen finden Sie unter [Verwalten von Nebenläufigkeit in Micros
 
 Jeder Blob im Azure-Speicher muss in einem Container befinden. Der Container bildet einen Teil der Blob-Name. Z. B. `mydata` ist der Name des Containers in diesen Beispiel-Blob-URIs:
 
-    https://storagesample.blob.core.windows.net/mydata/blob1.txt
-    https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- https://storagesample.blob.core.windows.net/mydata/blob1.txt
+- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
 Ein Containername muss ein gültiger DNS-Name, den folgenden Benennungsregeln entsprechen:
 
@@ -242,7 +242,7 @@ Eine kostenlose eigenständige app von Microsoft, die Ihnen ermöglicht, die unt
 
 ### <a name="related-guides"></a>Verwandte Leitfäden
 
-- [Erste Schritte mit Azure Blob Storage in C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Erste Schritte mit Azure Blob Storage in c#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Übertragen von Daten mit dem Befehlszeilenprogramm AzCopy unter Windows](/azure/storage/common/storage-use-azcopy)
 - [Übertragen von Daten mit dem Befehlszeilenprogramm AzCopy unter Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Konfigurieren von Azure Storage-Verbindungszeichenfolgen](/azure/storage/common/storage-configure-connection-string)

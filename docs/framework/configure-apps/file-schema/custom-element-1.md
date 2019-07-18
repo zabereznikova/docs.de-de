@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: bfc2a916e37ac27d45746eb268912b3752f4d80f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464436"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301152"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Custom Element for SingleTagSectionHandler element
 
 Definiert die Einstellungen in einem benutzerdefinierten Konfigurationsabschnitt, der durch definiert ist eine \<Abschnitt >-Element und verwendet die <xref:System.Configuration.SingleTagSectionHandler> Klasse.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;*\<sectionName>*
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,11 +36,11 @@ Attribute und Attributwerte sind benutzerdefiniert.
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+None
 
 ## <a name="remarks"></a>Hinweise
 
@@ -64,7 +64,7 @@ Das folgende Beispiel deklariert ein benutzerdefiniertes Element namens  **\<Sam
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden (*"Machine.config"*), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden ( *"Machine.config"* ), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
 
 ## <a name="see-also"></a>Siehe auch
 

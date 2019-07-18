@@ -10,11 +10,11 @@ helpviewer_keywords:
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
 ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649724"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 Definiert Konstanten für die bedingte Kompilierung.  

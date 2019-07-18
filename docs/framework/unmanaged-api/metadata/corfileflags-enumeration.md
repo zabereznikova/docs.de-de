@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 076d5de3e9d1925e3a030fee4a06a89862105897
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5c6ac7dabd2dfcc7829fd42389c0a6c261fe456d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159613"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781867"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags-Enumeration
 Enthält Werte, die beschreiben, den Typ der Datei, die definiert, die in einem Aufruf von [IMetaDataAssemblyEmit:: DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorFileFlags {  
   
     ffContainsMetaData      =   0x0000,  

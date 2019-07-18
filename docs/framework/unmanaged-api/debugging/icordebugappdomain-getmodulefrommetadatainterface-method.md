@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eaa48dcc7dad2d66f1a60922c94193120b59b32
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 48249bb634c301b7fda2c360c3b793e9206a759a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481351"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737902"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>ICorDebugAppDomain::GetModuleFromMetaDataInterface-Methode
 Ruft das Modul, das die angegebenen Metadaten-Schnittstelle entspricht.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetModuleFromMetaDataInterface (  
     [in] IUnknown           *pIMetaData,  
     [out] ICorDebugModule  **ppModule  

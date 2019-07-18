@@ -2,16 +2,16 @@
 title: Dynamisches Update
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 2553e6a29f498a9b53752d6c191df21a391dee34
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653885"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378279"
 ---
 # <a name="dynamic-update"></a>Dynamisches Update
 
-Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen. Dieses Thema enthält eine Übersicht über die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] eingeführte dynamische Updatefunktionalität.
+Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren, beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen. Dieses Thema enthält eine Übersicht über die in .NET Framework 4.5 eingeführte dynamische Updatefunktionalität.
 
 ## <a name="dynamic-update"></a>Dynamisches Update
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91c7235fb8790783b05b217cad755d8eedc88971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9503e5aeeb1b59c8e62cab20736ea6ab7d5f629f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092687"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758918"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling-Methode
 Ruft einen Wert, der angibt, ob die aktuelle Aufgabe, die ausgelagert werden wird, muss eine hohe Priorität für die durch das erneute Planen markiert sein.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT NeedsPriorityScheduling (  
     [out] BOOL *pbNeedsPriorityScheduling  
 );  

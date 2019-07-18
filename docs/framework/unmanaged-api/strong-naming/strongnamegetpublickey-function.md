@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e38a85b688d66e9f44bd8026bb4c9e141a6eb7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f6e9e5c199ad437290d7bf19d65b5f29a0abed5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229289"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780115"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey-Funktion
 Ruft den öffentlichen Schlüssel aus einem privaten/öffentlichen Schlüsselpaar ab. Das Schlüsselpaar kann entweder als einen Schlüsselcontainernamen in einen Kryptografiedienstanbieter (CSP) oder als unformatierte Bytes Auflistung angegeben werden.  
@@ -31,7 +31,7 @@ Ruft den öffentlichen Schlüssel aus einem privaten/öffentlichen Schlüsselpaa
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 BOOLEAN StrongNameGetPublicKey (   
     [in]  LPCWSTR   szKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  

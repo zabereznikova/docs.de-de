@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43532888d181adcb7a7e3760f2a5e3d8f664a35c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c9f58e66286f5e3e169507efd2f87ce10e9d323b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492282"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754851"
 ---
 # <a name="icordebugframegetstackrange-method"></a>ICorDebugFrame::GetStackRange-Methode
 Ruft den Bereich der absoluten Adresse dieses Stapelrahmens ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStackRange (  
     [out] CORDB_ADDRESS      *pStart,   
     [out] CORDB_ADDRESS      *pEnd  

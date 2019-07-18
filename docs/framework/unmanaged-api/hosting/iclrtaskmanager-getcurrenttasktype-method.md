@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2963e2a31fd62470e3ed6933edb38119d286071b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 595c39b56587150d0d8f9c3f8bdfcae4c075e4d8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59071973"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770161"
 ---
 # <a name="iclrtaskmanagergetcurrenttasktype-method"></a>ICLRTaskManager::GetCurrentTaskType-Methode
 Ruft den Typ der Aufgabe, die gerade ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCurrentTaskType(  
     [out] ETaskType *pTaskType  
 );  

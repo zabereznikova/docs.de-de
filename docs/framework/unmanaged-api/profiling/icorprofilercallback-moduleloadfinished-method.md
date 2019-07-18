@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 354d2f278bcb0618b823b7300079278fc4c3315c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c04b7862363b441ab35d6dd364c4dffaf7464153
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157344"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769231"
 ---
 # <a name="icorprofilercallbackmoduleloadfinished-method"></a>ICorProfilerCallback::ModuleLoadFinished-Methode
 Benachrichtigt den Profiler, dass ein Modul geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ModuleLoadFinished(  
     [in] ModuleID moduleId,  
     [in] HRESULT  hrStatus);  

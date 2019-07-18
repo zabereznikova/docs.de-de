@@ -7,14 +7,14 @@ helpviewer_keywords:
 - directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
 ms.openlocfilehash: 38d54feae5cf7bf41a825d1f6000811e2b56f319
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187275"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268208"
 ---
 # <a name="directives-visual-basic"></a>Anweisungen (Visual Basic)
-In den Themen in diesem Abschnitt werden die Visual Basic-Quellcode-Compileranweisungen dokumentiert.  
+In den Themen in diesem Abschnitt werden die Visual Basic-Quellcode-Compilerdirektiven dokumentiert.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [#Const-Anweisung](../../../visual-basic/language-reference/directives/const-directive.md) – Definieren einer Compilerkonstanten  

@@ -5,11 +5,11 @@ ms.assetid: 73225303-8852-487e-9a0e-9f0cb95e99d9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af4c7feb7076eeac6089a3255c7832c17a43469b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666962"
 ---
 # <a name="icordebugexceptiondebugeventgetflags-method"></a>ICorDebugExceptionDebugEvent::GetFlags-Methode
 Ruft ein Flag ab, das angibt, ob die Ausnahme abgefangen werden kann.  
@@ -43,4 +43,4 @@ HRESULT GetFlags(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugExceptionDebugEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

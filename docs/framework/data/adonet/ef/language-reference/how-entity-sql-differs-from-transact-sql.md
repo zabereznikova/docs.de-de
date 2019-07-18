@@ -2,15 +2,15 @@
 title: Unterschiede zwischen Entity SQL und Transact-SQL
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 54d7a3fa8ce6e8a0aba6194bfc034eb4d47dbf60
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162736"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489930"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Unterschiede zwischen Entity SQL und Transact-SQL
-Dieses Thema beschreibt die Unterschiede zwischen [!INCLUDE[esql](../../../../../../includes/esql-md.md)] und [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
+Dieses Thema beschreibt die Unterschiede zwischen [!INCLUDE[esql](../../../../../../includes/esql-md.md)] und Transact-SQL.  
   
 ## <a name="inheritance-and-relationships-support"></a>Unterstützung von Vererbung und Beziehungen  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet direkt konzeptionelle Entitätsschemas und unterstützt Features konzeptioneller Modelle, wie Vererbung und Beziehungen.  
@@ -20,20 +20,20 @@ Dieses Thema beschreibt die Unterschiede zwischen [!INCLUDE[esql](../../../../..
 ## <a name="support-for-collections"></a>Unterstützung von Auflistungen  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] behandelt Auflistungen als Entitäten erster Klasse. Zum Beispiel:  
   
--   In einer `from`-Klausel sind Auflistungsausdrücke gültig.  
+- In einer `from`-Klausel sind Auflistungsausdrücke gültig.  
   
--   `in` und `exists` Unterabfragen haben wurden so verallgemeinert, sämtliche Auflistungen zulässig.  
+- `in` und `exists`-Unterabfragen wurden so verallgemeinert, dass sämtliche Auflistungen zulässig sind.  
   
-     Eine Unterabfrage ist eine Art von Auflistung. `e1 in e2` und `exists(e)` sind die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Konstrukte zum Ausführen dieser Vorgänge.  
+     Eine Unterabfrage ist eine Art von Auflistung. `e1 in e2` und `exists(e)` sind die [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Konstrukte zum Ausführen dieser Operationen.  
   
--   Mengenoperationen, z. B. `union`, `intersect` und `except`, verarbeiten nun Auflistungen.  
+- Mengenoperationen, z. B. `union`, `intersect` und `except`, verarbeiten nun Auflistungen.  
   
--   Joins verarbeiten Auflistungen.  
+- Joins verarbeiten Auflistungen.  
   
 ## <a name="support-for-expressions"></a>Unterstützung von Ausdrücken  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] verfügt über Unterabfragen (Tabellen) und Ausdrücke (Zeilen und Spalten).  
+ Transact-SQL-verfügt über Unterabfragen (Tabellen) und Ausdrücke (Zeilen und Spalten).  
   
- Zur Unterstützung von Auflistungen und geschachtelten Auflistungen [!INCLUDE[esql](../../../../../../includes/esql-md.md)] alles als Ausdruck. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist zusammensetzbarer als [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], jeder Ausdruck kann überall verwendet werden. Abfrageausdrücke geben stets Auflistungen der projizierten Typen zurück und können immer verwendet werden, wenn ein Auflistungsausdruck zulässig ist. Informationen zu [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] Ausdrücke, die nicht unterstützt werden [!INCLUDE[esql](../../../../../../includes/esql-md.md)], finden Sie unter [nicht unterstützte Ausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).  
+ Zur Unterstützung von Auflistungen und geschachtelten Auflistungen [!INCLUDE[esql](../../../../../../includes/esql-md.md)] alles als Ausdruck. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist zusammensetzbarer als Transact-SQL – jeder Ausdruck kann überall verwendet werden. Abfrageausdrücke geben stets Auflistungen der projizierten Typen zurück und können immer verwendet werden, wenn ein Auflistungsausdruck zulässig ist. Weitere Informationen zu Transact-SQL-Ausdrücken, die nicht unterstützt werden [!INCLUDE[esql](../../../../../../includes/esql-md.md)], finden Sie unter [nicht unterstützte Ausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).  
   
  Bei den folgenden Abfragen handelt es sich um gültige [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfragen:  
   
@@ -47,30 +47,30 @@ set(e1)
 ```  
   
 ## <a name="uniform-treatment-of-subqueries"></a>Einheitliche Behandlung von Unterabfragen  
- Der Schwerpunkt auf Tabellen, erhält [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] führt Unterabfragen in Ihrem Kontext interpretiert. Beispielsweise eine Unterabfrage in der `from` Klausel gilt eine Multimenge (Tabelle). Dieselbe Unterabfrage in der `select`-Klausel wird hingegen als skalare Unterabfrage aufgefasst. Auf ähnliche Weise eine Unterabfrage, die auf der linken Seite des verwendet eine `in` Operator gilt als skalare Unterabfrage, während die rechte Seite erwartet wird ein multiset Unterabfrage sein.  
+ Wenn der Schwerpunkt auf Tabellen liegt, führt Transact-SQL Unterabfragen in Ihrem Kontext interpretiert. Beispielsweise eine Unterabfrage in der `from` Klausel gilt eine Multimenge (Tabelle). Dieselbe Unterabfrage in der `select`-Klausel wird hingegen als skalare Unterabfrage aufgefasst. Auf ähnliche Weise eine Unterabfrage, die auf der linken Seite des verwendet eine `in` Operator gilt als skalare Unterabfrage, während die rechte Seite erwartet wird ein multiset Unterabfrage sein.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] existieren diese Unterschiede nicht. Ein Ausdruck verfügt über eine einheitliche vom Kontext unabhängige Auslegung. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] betrachtet alle Unterabfragen multimengenabfragen. Ggf. ein skalarer Wert aus der Unterabfrage wird [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet die `anyelement` Operator, der eine Auflistung (in diesem Fall die Unterabfrage) ausgeführt wird, extrahiert einen Singleton-Wert aus der Auflistung.  
+ In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] existieren diese Unterschiede nicht. Ein Ausdruck verfügt über eine einheitliche vom Kontext unabhängige Auslegung. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] betrachtet alle Unterabfragen multimengenabfragen. Ggf. ein skalarer Wert aus der Unterabfrage wird [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet die `anyelement` Operator, der eine Auflistung (in diesem Fall die Unterabfrage) ausgeführt wird, extrahiert einen Singleton-Wert aus der Auflistung.  
   
 ### <a name="avoiding-implicit-coercions-for-subqueries"></a>Vermeiden impliziter Koersionen für Unterabfragen  
- Ein Nebeneffekt der einheitlichen Behandlung von Unterabfragen ist die implizite Konvertierung von Unterabfragen zu skalaren Werten. In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] wird eine Multimenge von Zeilen (mit einem einzelnen Feld) implizit in einen skalaren Wert konvertiert, dessen Datentyp mit dem des Felds übereinstimmt.  
+ Ein Nebeneffekt der einheitlichen Behandlung von Unterabfragen ist die implizite Konvertierung von Unterabfragen zu skalaren Werten. Insbesondere wird in Transact-SQL ein Multiset von Zeilen (mit einem einzelnen Feld) implizit in einen skalaren Wert konvertiert, dessen Datentyp mit dem des Felds ist.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt diese implizite Koersion nicht. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Stellt den ANYELEMENT-Operator zum Extrahieren eines Singleton-Werts aus einer Auflistung und ein `select value` -Klausel, um die Erstellung eines Zeilen-Wrappers in einem Abfrageausdruck zu vermeiden.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt diese implizite Umwandlung nicht. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt den ANYELEMENT-Operator zum Extrahieren eines Singleton-Werts aus einer Auflistung bereit sowie eine `select value`-Klausel zur Vermeidung der Erstellung eines Zeilen-Wrappers während eines Abfrageausdrucks.  
   
 ## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>Wert auswählen: Vermeiden die impliziten Zeilen-Wrappers  
- Die select-Klausel in einer [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] -Unterabfrage erstellt implizit einen Zeilen-Wrapper für die Elemente in der Klausel. Dies bedeutet, dass keine Auflistungen von Skalaren oder Objekten erstellt werden können. [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ermöglicht eine implizite Koersion zwischen einem Zeilentyp mit einem Feld und einem Singletonwert des gleichen Datentyps an.  
+ Die select-Klausel in einer Transact-SQL-Unterabfrage erstellt implizit einen Zeilen-Wrapper für die Elemente in der Klausel. Dies bedeutet, dass keine Auflistungen von Skalaren oder Objekten erstellt werden können. Transact-SQL ermöglicht eine implizite Koersion zwischen einem Zeilentyp mit einem Feld und einem Singletonwert des gleichen Datentyps.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Stellt die `select value` -Klausel, um die implizite Zeilenkonstruktion zu überspringen. In einer `select value`-Klausel kann nur ein Element angegeben werden. Wenn diese Klausel verwendet wird, wird kein Zeilen-Wrapper für die Elemente in der `select`-Klausel erstellt, und eine Auflistung der gewünschten Form kann erstellt werden. Beispiel: `select value a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt die `select value`-Klausel bereit, um die implizite Zeilenkonstruktion unnötig zu machen. In einer `select value`-Klausel kann nur ein Element angegeben werden. Wenn diese Klausel verwendet wird, wird kein Zeilen-Wrapper für die Elemente in der `select`-Klausel erstellt, und eine Auflistung der gewünschten Form kann erstellt werden. Beispiel: `select value a`.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt auch den Zeilenkonstruktor zum Erstellen beliebiger Zeilen bereit. `select` nimmt ein oder mehrere Elemente in der Projektion und die Ergebnisse in einen Datensatz mit Feldern, wie folgt:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt auch den Zeilenkonstruktor zum Erstellen beliebiger Zeilen bereit. Mit `select` werden ein oder mehrere Elemente in der Projektion übergeben, und das Ergebnis ist ein Datensatz mit folgenden Feldern:  
   
  `select a, b, c`  
   
 ## <a name="left-correlation-and-aliasing"></a>Linkskorrelation und Aliasing  
- In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] können Ausdrücke in einem bestimmten Bereich (eine einzelne Klausel wie `select` oder `from`) nicht auf Ausdrücke verweisen, die vorher im selben Bereich definiert wurden. Einige Dialekte von SQL (einschließlich [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]) unterstützen sie in der `from`-Klausel in beschränktem Umfang.  
+ In Transact-SQL-Ausdrücke in einem bestimmten Bereich (eine einzelne Klausel wie `select` oder `from`) nicht auf Ausdrücke, die zuvor im gleichen Gültigkeitsbereich definierte verweisen. Einige Dialekte der SQL (einschließlich Transact-SQL) bieten Unterstützung für eingeschränkte Arten von in die `from` Klausel.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verallgemeinert Linkskorrelationen in der `from` -Klausel, und behandelt sie einheitlich. Ausdrücke in der `from`-Klausel können ohne die Verwendung zusätzlicher Syntax auf vorherige Definitionen (Definitionen auf der linken Seite) in derselben Klausel verweisen.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] schränkt auch Abfragen, `group by` Klauseln. Ausdrücke in der `select` Klausel und `having` -Klausel solcher Abfragen nur bezieht sich möglicherweise auf die `group by` Schlüssel mithilfe ihrer Aliase. Das folgende Konstrukt ist in gültiger [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] jedoch nicht in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] schränkt auch Abfragen, die `group by`-Klauseln enthalten, weiter ein. Ausdrücke in der `select` Klausel und `having` -Klausel solcher Abfragen nur bezieht sich möglicherweise auf die `group by` Schlüssel mithilfe ihrer Aliase. Das folgende Konstrukt ist gültig, in Transact-SQL, jedoch werden nicht in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
 ```  
 select t.x + t.y from T as t group by t.x + t.y  
@@ -83,7 +83,7 @@ select k from T as t group by (t.x + t.y) as k
 ```  
   
 ## <a name="referencing-columns-properties-of-tables-collections"></a>Verweisen auf Spalten (Eigenschaften) von Tabellen (Auflistungen)  
- Alle Spaltenverweise in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] müssen mit dem Tabellenalias qualifiziert werden. Das folgende Konstrukt (vorausgesetzt, dass `a` ist eine gültige Spalte der Tabelle `T`) gilt in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] jedoch nicht in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+ Alle Spaltenverweise in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] müssen mit dem Tabellenalias qualifiziert werden. Das folgende Konstrukt (vorausgesetzt, dass `a` ist eine gültige Spalte der Tabelle `T`) ist gültig, in Transact-SQL, jedoch nicht im [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ```  
 select a from T  
@@ -95,14 +95,14 @@ select a from T
 select t.a as A from T as t  
 ```  
   
- Die Tabellenaliase sind in der `from`-Klausel optional. Der Name der Tabelle wird als implizites Alias verwendet. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] können auch das folgende Format:  
+ Die Tabellenaliase sind in der `from`-Klausel optional. Der Name der Tabelle wird als implizites Alias verwendet. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] lässt auch das folgende Formular zu:  
   
 ```  
 select Tab.a from Tab  
 ```  
   
 ## <a name="navigation-through-objects"></a>Navigieren durch Objekte  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] verwendet die "."-Schreibweise zum Verweisen auf Spalten (Zeilen) einer Tabelle. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] erweitert diese Schreibweise (wie Programmiersprachen) zur Unterstützung der Navigation durch die Eigenschaften eines Objekts an.  
+ Transact-SQL verwendet die "."-Schreibweise zum Verweisen auf Spalten (Zeilen) einer Tabelle. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] erweitert diese Schreibweise (wie Programmiersprachen), um die Navigation durch Eigenschaften eines Objekts zu unterstützen.  
   
  Wenn z. B. `p` ein Ausdruck vom Typ "Person" ist, lautet die [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Syntax zum Verweisen auf die Stadt und die Adresse dieser Person wie folgt.  
   
@@ -111,14 +111,14 @@ p.Address.City
 ```  
   
 ## <a name="no-support-for-"></a>Keine Unterstützung von *  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] unterstützt die unqualifizierte *-Syntax als Alias für die gesamte Zeile und die qualifizierte \* Syntax (t\*) als Abkürzung für die Felder dieser Tabelle. Darüber hinaus [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ermöglicht eine spezielle Anzahl (\*) Aggregat, das Nullen einschließt.  
+ Transact-SQL unterstützt die unqualifizierte *-Syntax als Alias für die gesamte Zeile und die qualifizierte \* Syntax (t\*) als Abkürzung für die Felder dieser Tabelle. Darüber hinaus können Sie Transact-SQL eine besondere Anzahl (\*) Aggregat, das Nullen einschließt.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt nicht das *-Konstrukt. [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] -Abfragen der Form `select * from T` und `select T1.* from T1, T2...` ausgedrückt werden können, im [!INCLUDE[esql](../../../../../../includes/esql-md.md)] als `select value t from T as t` und `select value t1 from T1 as t1, T2 as t2...`bzw. Außerdem behandeln diese Konstrukte Vererbung (Wertersetzbarkeit), während die `select *`-Varianten auf die Eigenschaften des deklarierten Typen auf oberster Ebene eingeschränkt sind.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt nicht das *-Konstrukt. Transact-SQL-Abfragen des Formulars `select * from T` und `select T1.* from T1, T2...` ausgedrückt werden können, im [!INCLUDE[esql](../../../../../../includes/esql-md.md)] als `select value t from T as t` und `select value t1 from T1 as t1, T2 as t2...`bzw. Außerdem behandeln diese Konstrukte Vererbung (Wertersetzbarkeit), während die `select *`-Varianten auf die Eigenschaften des deklarierten Typen auf oberster Ebene eingeschränkt sind.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt nicht die `count(*)` aggregieren. Verwenden Sie stattdessen `count(0)`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt nicht die `count(*)`-Aggregate. Verwenden Sie stattdessen `count(0)`.  
   
 ## <a name="changes-to-group-by"></a>Änderungen an "Group By"  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt Aliasing von `group by` Schlüssel. Ausdrücke in der `select`-Klausel und der `having`-Klausel müssen mithilfe dieser Aliase auf die `group by`-Schlüssel verweisen. Beispielsweise ist die [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Syntax  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt Aliasing von `group by`-Schlüsseln. Ausdrücke in der `select`-Klausel und der `having`-Klausel müssen mithilfe dieser Aliase auf die `group by`-Schlüssel verweisen. Beispielsweise ist die [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Syntax  
   
 ```  
 select k1, count(t.a), sum(t.a)  
@@ -126,7 +126,7 @@ from T as t
 group by t.b + t.c as k1  
 ```  
   
- ...entspricht folgender [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]:  
+ ... entspricht dem folgenden Transact-SQL:  
   
 ```  
 select b + c, count(*), sum(a)   
@@ -143,14 +143,14 @@ group by b + c
 select t.a as a, count({1,2,3}) as b from T as t     
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt auch Aggregate für SQL-Stil. Zum Beispiel:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt auch Aggregate im SQL-Format. Zum Beispiel:  
   
 ```  
 select a, sum(t.b) from T as t group by t.a as a  
 ```  
   
 ## <a name="order-by-clause-usage"></a>Verwendung der "ORDER BY"-Klausel  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ermöglicht die ORDER BY-Klauseln nur im obersten SELECT angegeben werden... FROM . WHERE-Block angegeben werden. In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] können ORDER BY-Ausdrücke geschachtelt und überall in der Abfrage platziert werden. Die Reihenfolge in einer geschachtelten Abfrage wird jedoch nicht erhalten.  
+ Transact-SQL kann ORDER BY-Klauseln nur im obersten SELECT angegeben werden... FROM . WHERE-Block angegeben werden. In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] können ORDER BY-Ausdrücke geschachtelt und überall in der Abfrage platziert werden. Die Reihenfolge in einer geschachtelten Abfrage wird jedoch nicht erhalten.  
   
 ```  
 -- The following query will order the results by the last name  
@@ -168,34 +168,34 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="identifiers"></a>Bezeichner  
- In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] basiert der Bezeichnervergleich auf der Sortierreihenfolge der aktuellen Datenbank. In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wird bei Bezeichnern nicht zwischen Groß-/Kleinschreibung unterschieden, Akzentzeichen werden dagegen von den keinen Akzent tragenden Zeichen unterschieden ([!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterscheidet also beispielsweise zwischen 'a' und 'ấ'). [!INCLUDE[esql](../../../../../../includes/esql-md.md)] behandelt Buchstaben, die die gleich erscheinen, aber aus verschiedenen Codepages als unterschiedliche Zeichen. Weitere Informationen finden Sie unter [Eingabe Zeichensatz](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
+ In Transact-SQL basiert die Bezeichnervergleich auf der Sortierung der aktuellen Datenbank. In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wird bei Bezeichnern nicht zwischen Groß-/Kleinschreibung unterschieden, Akzentzeichen werden dagegen von den keinen Akzent tragenden Zeichen unterschieden ([!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterscheidet also beispielsweise zwischen 'a' und 'ấ'). [!INCLUDE[esql](../../../../../../includes/esql-md.md)] behandelt Buchstaben, die gleich erscheinen, aber von anderen Codepages stammen. Weitere Informationen finden Sie unter [Eingabe Zeichensatz](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
   
 ## <a name="transact-sql-functionality-not-available-in-entity-sql"></a>Transact-SQL-Funktionalität ist in Entity SQL nicht verfügbar  
- Die folgende [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]-Funktionalität ist in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nicht verfügbar.  
+ Die folgende Transact-SQL-Funktionalität ist nicht verfügbar in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  DML  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet derzeit keine Unterstützung für DML-Anweisungen (einfügen, aktualisieren und löschen).  
   
  DDL  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet keine Unterstützung für DDL in der aktuellen Version.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt in der aktuellen Version keine Unterstützung für DDL bereit.  
   
  Imperative Programmierung  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet keine Unterstützung für die imperative Programmierung im Gegensatz zu [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Stattdessen sollte eine Programmiersprache verwendet werden.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bietet keine Unterstützung für die imperative Programmierung im Gegensatz zu Transact-SQL. Stattdessen sollte eine Programmiersprache verwendet werden.  
   
  Gruppierungsfunktionen  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] noch bietet keine Unterstützung für die Gruppierung von Funktionen (z. B. CUBE, ROLLUP und GROUPING_SET).  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt bisher keine Gruppierungsfunktionen wie CUBE, ROLLUP und GROUPING_SET.  
   
  Analytische Funktionen  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] keine (noch) unterstützen bei analytischen Funktionen.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt (bisher) keine analytischen Funktionen.  
   
  Integrierte Funktionen, Operatoren  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt eine Teilmenge der [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]der integrierten Funktionen und Operatoren. Diese Operatoren und Funktionen werden sehr wahrscheinlich von den großen Speicheranbietern unterstützt. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet die in einem Anbietermanifest deklarierten speicherspezifischen Funktionen an. Darüber hinaus die [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ermöglicht es Ihnen, deklarieren Sie integrierte und benutzerdefinierte Speicherfunktionen für [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwenden.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt die integrierte einer Teilmenge der Transact-SQL Funktionen und Operatoren. Diese Operatoren und Funktionen werden sehr wahrscheinlich von den großen Speicheranbietern unterstützt. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwendet die in einem Anbietermanifest deklarierten speicherspezifischen Funktionen an. Darüber hinaus die [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ermöglicht es Ihnen, deklarieren Sie integrierte und benutzerdefinierte Speicherfunktionen für [!INCLUDE[esql](../../../../../../includes/esql-md.md)] verwenden.  
   
  Hinweise  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt keine Mechanismen für Abfragehinweise bereit.  
   
  Batchabfrageergebnisse  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt keine Batchverarbeitung Abfrageergebnisse. Beispielsweise ist Folgendes gültig [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] (als Batch gesendet):  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt keine Batchabfrageergebnisse. Folgendes ist z. B. gültige Transact-SQL (als Batch gesendet):  
   
 ```  
 select * from products;  
@@ -209,7 +209,7 @@ Select value p from Products as p;
 Select value c from Categories as c;  
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt nur eine Ergebnisse liefernde abfrageanweisung pro Befehl.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt nur eine Ergebnisse liefernde Abfrageanweisung pro Befehl.  
   
 ## <a name="see-also"></a>Siehe auch
 

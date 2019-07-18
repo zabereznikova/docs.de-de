@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bfc6491a1d18c81a44a7d9c5084f744c9b76281
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0cdeb446b18adceb4a8ed306a7934d6c905a90f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072573"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778031"
 ---
 # <a name="strongnamefreebuffer-function"></a>StrongNameFreeBuffer-Funktion
 Gibt Speicher frei, der bei einem vorherigen Aufruf einer Funktion für starke Namen wie [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md) oder [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md) zugewiesen wurde.  
@@ -34,7 +34,7 @@ Gibt Speicher frei, der bei einem vorherigen Aufruf einer Funktion für starke N
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 VOID StrongNameFreeBuffer (   
    [in] BYTE   *pbMemory  
 );  

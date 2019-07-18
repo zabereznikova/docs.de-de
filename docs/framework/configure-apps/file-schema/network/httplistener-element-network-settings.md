@@ -1,13 +1,13 @@
 ---
-title: <httpListener> -Element (Netzwerkeinstellungen)
+title: <httpListener>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8257b0311e18a21fbc04185f8297ee8e5f38b86b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099741"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592749"
 ---
 # <a name="httplistener-element-network-settings"></a>\<HttpListener >-Element (Netzwerkeinstellungen)
 Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.  
@@ -43,7 +43,7 @@ Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Einstellungen](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die **UnescapeRequestUrl** Attribut gibt an, ob <xref:System.Net.HttpListener> verwendet den unformatierten URI ohne Escapezeichen anstelle des konvertierten URI, in dem alle Werte mit Prozentzeichen codiert konvertiert und andere Normalisierung Schritte sind.  
@@ -52,9 +52,9 @@ Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.
   
  Die `http.sys` Dienst verfügbar macht, zwei Anfrage-URI-Zeichenfolgen:  
   
--   RAW-URI  
+- RAW-URI  
   
--   Konvertierten URI  
+- Konvertierten URI  
   
  Der raw-URI ist die <xref:System.Uri?displayProperty=nameWithType> bereitgestellt, in der Anforderungszeile einer HTTP-Anforderung:  
   
@@ -72,11 +72,11 @@ Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.
   
  Die `http.sys` service kombiniert die <xref:System.Uri.Host%2A?displayProperty=nameWithType> Eigenschaftswert und die Zeichenfolge in der Anforderungszeile auf einen konvertierten URI zu erstellen. Darüber hinaus `http.sys` und <xref:System.Uri?displayProperty=nameWithType> Klasse wird außerdem Folgendes:  
   
--   Un-Escapezeichen alle als Prozentwert codierte Werte.  
+- Un-Escapezeichen alle als Prozentwert codierte Werte.  
   
--   Prozentwert codiert konvertiert nicht-ASCII-Zeichen in eine UTF-16-Zeichen-Darstellung. Beachten Sie, dass UTF-8 und ANSI/DBCS-Zeichen sowie Unicode-Zeichen (Unicode-Codierung mit dem % uXXXX-Format) unterstützt werden.  
+- Prozentwert codiert konvertiert nicht-ASCII-Zeichen in eine UTF-16-Zeichen-Darstellung. Beachten Sie, dass UTF-8 und ANSI/DBCS-Zeichen sowie Unicode-Zeichen (Unicode-Codierung mit dem % uXXXX-Format) unterstützt werden.  
   
--   Führt andere Normalisierungsschritte, ebenso wie die pfadkomprimierung an.  
+- Führt andere Normalisierungsschritte, ebenso wie die pfadkomprimierung an.  
   
  Da die Anforderung keine Informationen über die Codierung für prozentcodiert Werte verwendet wird, es möglich, zu bestimmen, die richtige Codierung nur durch Analysieren der prozentcodiert Werte möglicherweise nicht.  
   
@@ -142,4 +142,4 @@ Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpListenerRequest.Url%2A>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

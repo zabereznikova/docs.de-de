@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dialog boxes [WPF], opening
 ms.assetid: 6b1557d2-da98-4ef4-9f68-4089f04ab9ea
 ms.openlocfilehash: 70ac31285dd22244b4bd6ad0d188d182eb6e6264
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947705"
 ---
 # <a name="how-to-open-a-dialog-box"></a>Vorgehensweise: Öffnen eines Dialogfelds
 Dieses Beispiel zeigt, wie Sie ein Dialogfeld zu öffnen.  

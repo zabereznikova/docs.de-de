@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
 ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802387"
 ---
 # <a name="my-reference-visual-basic"></a>My-Referenz (Visual Basic)
 Die `My` Funktion Programmierung schneller und einfacher macht, intuitiven Zugriff auf häufig verwendete Methoden, Eigenschaften und Ereignisse ermöglicht. Diese Tabelle listet die Objekte, die in enthaltenen `My`, und die Aktionen, die mit jedem ausgeführt werden können.  

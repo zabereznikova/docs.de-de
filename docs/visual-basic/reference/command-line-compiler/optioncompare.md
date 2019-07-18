@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: 0c23a74f91cd6666a0c4bef5ea67c58430c511b8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd26643c2c289459b1e7b158952c402e42bae39b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819415"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639884"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 Gibt an, wie Zeichenfolgenvergleiche durchgeführt werden.  
@@ -38,15 +38,15 @@ Gibt an, wie Zeichenfolgenvergleiche durchgeführt werden.
   
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>-Optioncompare in Visual Studio-IDE festlegen  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
+1. Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
   
-2.  Klicken Sie auf die Registerkarte **Kompilieren**.  
+2. Klicken Sie auf die Registerkarte **Kompilieren**.  
   
-3.  Ändern Sie den Wert in der **Option Compare** Feld.  
+3. Ändern Sie den Wert in der **Option Compare** Feld.  
   
 ### <a name="to-set--optioncompare-programmatically"></a>-Optioncompare programmgesteuert festgelegt.  
   
--   Finden Sie unter [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+- Finden Sie unter [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="example"></a>Beispiel  
  Der folgende code kompiliert `ProjFile.vb` und binäre Zeichenfolgenvergleiche verwendet.  

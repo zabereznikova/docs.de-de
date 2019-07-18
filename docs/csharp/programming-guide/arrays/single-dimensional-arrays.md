@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 719e4463806c9c7e8b5407f2494c3b548ffa43e8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200779"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398560"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Eindimensionale Arrays (C#-Programmierhandbuch)
 
@@ -19,7 +19,7 @@ Sie können ein eindimensionales Array aus fünf ganzen Zahlen deklarieren, wie 
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- Dieses Array enthält die Elemente `array[0]` bis `array[4]`. Der [neue](../../../csharp/language-reference/keywords/new.md) Operator wird verwendet, um das Array zu erstellen und die Arrayelemente mit ihren Standardwerten zu initialisieren. In diesem Beispiel werden alle Arrayelemente mit null initialisiert.  
+ Dieses Array enthält die Elemente `array[0]` bis `array[4]`. Der [neue](../../../csharp/language-reference/operators/new-operator.md) Operator wird verwendet, um das Array zu erstellen und die Arrayelemente mit ihren Standardwerten zu initialisieren. In diesem Beispiel werden alle Arrayelemente mit null initialisiert.  
   
  Ein Array, das Zeichenfolgenelemente speichert, kann auf die gleiche Weise deklariert werden. Beispiel:  
   

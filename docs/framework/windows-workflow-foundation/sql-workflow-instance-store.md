@@ -2,12 +2,12 @@
 title: SQL-Workflowinstanzspeicher
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7cdd852795283660b8077e14686ad7ce4af76673
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086571"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626201"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL-Workflowinstanzspeicher
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] enthält den SQL-Workflowinstanzspeicher, mit dem Workflows die Zustandsinformationen zu Workflowinstanzen in einer Datenbank von SQL Server 2005 oder SQL Server 2008 speichern können. Diese Funktion wird hauptsächlich in Form der <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Klasse implementiert, die von der abstrakten <xref:System.Runtime.DurableInstancing.InstanceStore>-Klasse des Persistenzframeworks abgeleitet wird. Die Funktion SQL-Workflowinstanzspeicher besteht aus einem SQL-Persistenzanbieter, der eine konkrete Implementierung der Persistenz-API darstellt, mit der ein Host Persistenzbefehle an den Speicher sendet.  
@@ -22,19 +22,19 @@ ms.locfileid: "59086571"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Eigenschaften des SQL-Workflowinstanzspeichers](properties-of-sql-workflow-instance-store.md)  
+- [Eigenschaften des SQL-Workflowinstanzspeichers](properties-of-sql-workflow-instance-store.md)  
   
--   [Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Instanzaktivierung](instance-activation.md)  
+- [Instanzaktivierung](instance-activation.md)  
   
--   [Unterstützung für Abfragen](support-for-queries.md)  
+- [Unterstützung für Abfragen](support-for-queries.md)  
   
--   [Erweiterbarkeit des Speichers](store-extensibility.md)  
+- [Erweiterbarkeit des Speichers](store-extensibility.md)  
   
--   [Sicherheit](security.md)  
+- [Sicherheit](security.md)  
   
--   [SQL Server-Persistenzdatenbank](sql-server-persistence-database.md)  
+- [SQL Server-Persistenzdatenbank](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

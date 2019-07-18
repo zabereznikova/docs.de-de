@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7846eeceeb4d59c4e9aae73c79172c89184396e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7f27955467436d562c6a9acc9d7f666427e4c85b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123854"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770713"
 ---
 # <a name="imetadataimportcloseenum-method"></a>IMetaDataImport::CloseEnum-Methode
 Schließt den Enumerator, der durch das angegebene Handle identifiziert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void CloseEnum (  
    [in] HCORENUM hEnum  
 );  

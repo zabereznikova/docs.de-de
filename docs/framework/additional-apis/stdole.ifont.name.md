@@ -11,12 +11,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: f7bf63cbba4b637281314f6a545d78cf99b25c1a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b74992174d244845e1db2b283d962f2b87071c91
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748786"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634427"
 ---
 # <a name="ifontname-property"></a>IFont.Name-Eigenschaft
 

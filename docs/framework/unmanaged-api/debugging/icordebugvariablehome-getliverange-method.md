@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e2c9e981f431bb87df61a71389abf3d42a6a507
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b293a3e166bb2614b5d0b064485178f5a569db48
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123797"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774143"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange-Methode
 Ruft ab, der systemeigenen Bereich, in dem diese Variable ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetLiveRange(  
     [out] ULONG32* pStartOffset,  
     [out] ULONG32 *pEndOffset  

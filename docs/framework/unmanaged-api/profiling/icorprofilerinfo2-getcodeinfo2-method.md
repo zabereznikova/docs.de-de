@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1acf77c250b47bb32a83227a427dd3fe4f909a33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1acdc5d094fe93118e6cc62774f1cbf47a357dfc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122485"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751808"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2-Methode
 Ruft die Wertebereiche von nativem Code ab, der der angegebenen `FunctionID` zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCodeInfo2(  
     [in]  FunctionID functionID,  
     [in]  ULONG32 cCodeInfos,  

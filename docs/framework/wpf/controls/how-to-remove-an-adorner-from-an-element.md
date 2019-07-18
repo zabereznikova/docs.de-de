@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
 ms.openlocfilehash: 256dd6fa0117f88aec2ef6b60c6dcd4c33b57855
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770759"
 ---
 # <a name="how-to-remove-an-adorner-from-an-element"></a>Vorgehensweise: Entfernen eines Adorners aus einem Element
 In diesem Beispiel wird gezeigt, wie das programmgesteuerte Entfernen von einem bestimmten Adorner aus einem angegebenen <xref:System.Windows.UIElement>.  

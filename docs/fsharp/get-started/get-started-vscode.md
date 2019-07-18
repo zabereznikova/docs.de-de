@@ -2,12 +2,12 @@
 title: Erste Schritte mit F# in Visual Studio Code
 description: Erfahren Sie, wie Sie F# mit Visual Studio Code und Ionide-Plug-Ins Suite verwenden.
 ms.date: 12/23/2018
-ms.openlocfilehash: 3e526d33a8b52e3c1241ed861d5ceb37eac10451
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: d9d5ed4008f657f956ee7a5611a2f5fdd8e5b44a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846570"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051874"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Erste Schritte mit F# in Visual Studio Code
 
@@ -16,7 +16,7 @@ Können Sie F# in schreiben [Visual Studio Code](https://code.visualstudio.com) 
 Um zu beginnen, stellen Sie sicher, dass man [F# und Ionide-Plug-in ordnungsgemäß installiert](install-fsharp.md#install-f-with-visual-studio-code).
 
 > [!NOTE]
-> Ionide generiert .NET Framework F# Projekte, nicht .NET Core, die plattformübergreifende Kompatibilitätsprobleme verfügen können. Wenn Sie auf Ausführen **Linux** oder **OSX**, eine einfachere Möglichkeit für den Einstieg ist die Verwendung der [Befehlszeilentools](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line).
+> Ionide generiert .NET Framework F# Projekte, nicht .NET Core, die plattformübergreifende Kompatibilitätsprobleme verfügen können. Wenn Sie auf Ausführen **Linux** oder **OSX**, eine einfachere Möglichkeit für den Einstieg ist die Verwendung der [Befehlszeilentools](get-started-command-line.md).
 
 ## <a name="creating-your-first-project-with-ionide"></a>Erstellen Ihres ersten Projekts mit Ionide
 
@@ -153,6 +153,7 @@ Als Nächstes erstellen Sie ein neues [ `module` ](../language-reference/modules
 #load "ClassLibraryDemo.fs"
 open ClassLibraryDemo
 ```
+
 Wählen Sie die beiden Textzeilen aus, und drücken Sie Alt + Eingabetaste, um diese Zeilen in FSI auszuführen. Diese lädt den Inhalt der Pig Latin-Bibliothek in den FSI-Prozess und `open` der `ClassLibraryDemo` Namespace, damit Sie Zugriff auf die Funktionalität haben.
 
 Rufen Sie als Nächstes im Fenster FSI-Funktion mit dem `PigLatin` -Modul, das Sie zuvor definiert:

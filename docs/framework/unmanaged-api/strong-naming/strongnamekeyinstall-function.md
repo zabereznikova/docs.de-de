@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3fc69b2edf611383402b13555cf33be10dbad3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7121ace6777e7cf947fcc6ff30b1ea314851feff
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366581"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636714"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall-Funktion
 

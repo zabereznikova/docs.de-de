@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 88e13fcd03c6a10cf1450cec90f9ca60aedc3eb1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 86758c68f0f3bfe214a695f656d3924eadd27e31
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819163"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642684"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 Ein Zugriffsmodifizierer für Member, der angibt, dass eine oder mehrere Programmierelemente deklarierte sind nur von innerhalb ihrer eigenen Klasse oder von einer abgeleiteten Klasse zugegriffen werden.  
@@ -30,15 +30,15 @@ Ein Zugriffsmodifizierer für Member, der angibt, dass eine oder mehrere Program
   
 ## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** Sie können `Protected` nur auf Klassenebene. Dies bedeutet, dass der Deklarationskontext für eine `Protected` Element muss eine Klasse sein, und eine Quelldatei, Namespace, Schnittstelle, Modul, Struktur oder Prozedur nicht möglich.  
+- **Deklarationskontext.** Sie können `Protected` nur auf Klassenebene. Dies bedeutet, dass der Deklarationskontext für eine `Protected` Element muss eine Klasse sein, und eine Quelldatei, Namespace, Schnittstelle, Modul, Struktur oder Prozedur nicht möglich.  
 
 ## <a name="behavior"></a>Verhalten  
   
--   **Zugriffsebene.** Gesamten Code in einer Klasse kann Zugriff auf die Elemente auf. Code in einer Klasse, die von einer Basisklasse abgeleitet wird, kann auf alle zugreifen der `Protected` Elemente der Basisklasse. Dies gilt für alle Generationen der Ableitung. Dies bedeutet, dass der Zugriff auf eine Klasse kann `Protected` Elemente der Basisklasse der Basisklasse und So weiter.  
+- **Zugriffsebene.** Gesamten Code in einer Klasse kann Zugriff auf die Elemente auf. Code in einer Klasse, die von einer Basisklasse abgeleitet wird, kann auf alle zugreifen der `Protected` Elemente der Basisklasse. Dies gilt für alle Generationen der Ableitung. Dies bedeutet, dass der Zugriff auf eine Klasse kann `Protected` Elemente der Basisklasse der Basisklasse und So weiter.  
   
      Geschützter Zugriff ist nicht auf, eine Obermenge oder eine Teilmenge der Friend-Zugriff.  
   
--   **Zugriffsmodifizierer.** Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*. Einen Vergleich der Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Zugriffsmodifizierer.** Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*. Einen Vergleich der Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  Der `Protected`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   

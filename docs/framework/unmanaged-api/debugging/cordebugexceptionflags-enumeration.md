@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c7b9b25673685dde8b75702c80f525515917ae1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 352a45a33a109570f100e91a24cd44dc4f6780e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078706"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740149"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags-Enumeration
 Stellt zusätzliche Informationen über eine Ausnahme bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugExceptionFlags {  
     DEBUG_EXCEPTION_NONE = 0,  
     DEBUG_EXCEPTION_CAN_BE_INTERCEPTED = 0x0001  
@@ -56,4 +56,4 @@ typedef enum CorDebugExceptionFlags {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

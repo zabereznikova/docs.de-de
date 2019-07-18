@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
 ms.openlocfilehash: bd512adf2f06ed0fbd3d36ed3175a0928bf1c57c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863492"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Vorgehensweise: Verwenden Sie eine Klasse, die Operatoren (Visual Basic) definiert.
 Wenn Sie eine Klasse oder Struktur, die eine eigene Operatoren definiert verwenden, können Sie diese Operatoren in Visual Basic zugreifen.  

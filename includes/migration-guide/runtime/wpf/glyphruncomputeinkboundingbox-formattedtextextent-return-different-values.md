@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 059aa6f5885634b22b64d594563973f17fd2c4e7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804002"
+---
 ### <a name="glyphruncomputeinkboundingbox-and-formattedtextextent-return-different-values-beginning-in-net-framework-45"></a>„GlyphRun.ComputeInkBoundingBox()“ und „FormattedText.Extent“ geben ab .NET Framework 4.5 verschiedene Werte zurück
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox?displayProperty=nameWithType></li><li><xref:System.Windows.Media.FormattedText.Extent?displayProperty=nameWithType></li></ul>|
-

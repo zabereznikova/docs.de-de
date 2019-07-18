@@ -7,33 +7,33 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 005395beabd956767b59e0cebd563fe883f6fe53
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078783"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489801"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Aktivieren von JIT-attach Debugging
 Mit „JIT-attach Debugging“ wird das Anfügen eines Debuggers an einen Prozess beim Auftreten von Fehlern beschrieben. Es kann auch von bestimmten Methoden oder Funktionen ausgelöst werden.  
   
  JIT-attach Debugging wird bei den folgenden Fehlerzuständen verwendet:  
   
--   bei Ausnahmefehlern (im nativen und im verwalteten Code)  
+- bei Ausnahmefehlern (im nativen und im verwalteten Code)  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> Methode oder [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) Funktion (Windows 7-Produktfamilie).  
+- bei der <xref:System.Environment.FailFast%2A?displayProperty=nameWithType>-Methode oder [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107)-Funktion (Windows 7-Produktfamilie)  
   
--   bei schwerwiegenden Laufzeitfehlern  
+- bei schwerwiegenden Laufzeitfehlern  
   
  JIT-attach Debugging wird auch durch Aufrufen der folgenden Methoden und Funktionen ausgelöst:  
   
--   <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> -Methode.  
+- <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> -Methode.  
   
--   <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> -Methode.  
+- <xref:System.Diagnostics.Debugger.Break%2A?displayProperty=nameWithType> -Methode.  
   
--   [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106)-Funktion (Win32)  
+- [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106)-Funktion (Win32)  
   
- Vor [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] stellte .NET Framework separate Registrierungsschlüssel zur Verhaltenssteuerung von nativen und verwalteten Debuggern bereit. Beginnend mit der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], ist die Steuerung unter einem einzelnen Registrierungsschlüssel konsolidiert: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Mit den Werten, die Sie für diesen Schlüssel festlegen können, bestimmen Sie, ob ein Debugger aufgerufen wird. Außerdem können Sie festlegen, ob in diesem Fall ein Dialogfeld angezeigt werden soll, das eine Benutzereingabe erfordert. Informationen zum Festlegen dieses Registrierungsschlüssels finden Sie unter [Konfigurieren des automatischen Debuggens](https://go.microsoft.com/fwlink/?LinkId=181767).  
+ Vor .NET Framework 4 bereitgestellt, die .NET Framework separate Registrierungsschlüssel zur Steuerung des Verhaltens systemeigenen und verwalteten Debuggern bereit. Ab .NET Framework 4, wird die Steuerung unter einem einzelnen Registrierungsschlüssel konsolidiert: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug. Mit den Werten, die Sie für diesen Schlüssel festlegen können, bestimmen Sie, ob ein Debugger aufgerufen wird. Außerdem können Sie festlegen, ob in diesem Fall ein Dialogfeld angezeigt werden soll, das eine Benutzereingabe erfordert. Informationen zum Festlegen dieses Registrierungsschlüssels finden Sie unter [Konfigurieren des automatischen Debuggens](https://go.microsoft.com/fwlink/?LinkId=181767).  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05f5a3f29c7b72ed83c1456175f68ef9b986e3e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57483315"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762631"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain-Methode
 Ruft einen Schnittstellenzeiger auf das aktive Stapelkette (am jüngstes) für dieses ICorDebugThread-Objekt ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetActiveChain (  
     [out] ICorDebugChain **ppChain  
 );  

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 3b7b50700541649a785fa9bbe3ecc56c2697fbfc
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760268"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859085"
 ---
 ### <a name="wcf-message-security-now-is-able-to-use-tls11-and-tls12"></a>WCF-Nachrichtensicherheit kann jetzt TLS1.1 und TLS1.2 verwenden
 

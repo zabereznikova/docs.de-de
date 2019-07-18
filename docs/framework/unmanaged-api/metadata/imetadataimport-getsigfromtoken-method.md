@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 823a172c05d2ce76fef790966f54d7216f579fde
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2060a70e2a3ce355f43ade67e6d6843670e00ad3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152983"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778851"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken-Methode
 Ruft die binäre Metadatensignatur ab, die dem angegebenen Token zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSigFromToken (   
    [in]   mdSignature        mdSig,   
    [out]  PCCOR_SIGNATURE    *ppvSig,   

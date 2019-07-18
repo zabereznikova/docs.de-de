@@ -20,21 +20,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f82303a3d38e7a5baaf1c3edcc41518228360d34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e1ae530b8488dcd375e91058a227316dd38cf4ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088456"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779162"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance-Funktion
 Erstellt eine Instanz des angegebenen verwalteten Typs.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet. Verwenden Sie COM-Aktivierung zum Erstellen einer Instanz des verwalteten Typs oder -hosting (finden Sie unter [CLR Hosten von Schnittstellen hinzugefügt, in .NET Framework 4 und 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
+ Diese Funktion ist in .NET Framework 4 veraltet. Verwenden Sie COM-Aktivierung zum Erstellen einer Instanz des verwalteten Typs oder -hosting (finden Sie unter [CLR Hosten von Schnittstellen hinzugefügt, in .NET Framework 4 und 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDAPI ClrCreateManagedInstance (  
     [in]  LPCWSTR  pTypeName,   
     [in]  REFIID   riid,   

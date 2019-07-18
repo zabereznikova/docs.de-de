@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 9ad283af76085c228bedceb6db723a1d18b10210
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761119"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804434"
 ---
 ### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a>ETW-Ereignisnamen können sich nicht nur durch das Suffix „Start“ oder „Stop“ unterscheiden
 

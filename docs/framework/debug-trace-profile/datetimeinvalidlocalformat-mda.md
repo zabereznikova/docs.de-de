@@ -15,11 +15,11 @@ ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 380334dbe9b91ea369de6cbe58686a9a74254c2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874665"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>DateTimeInvalidLocalFormat-MDA
 Der `dateTimeInvalidLocalFormat`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine als UTC (Universal Coordinated Time, koordinierte Weltzeit) gespeicherte <xref:System.DateTime>-Instanz mit einem Format formatiert wird, das nur für lokale <xref:System.DateTime>-Instanzen verwendet werden soll. Dieser MDA wird nicht für nicht angegebene oder <xref:System.DateTime>-Standardinstanzen aktiviert.  
@@ -89,4 +89,4 @@ String serialized = XmlConvert.ToString(myDateTime,
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

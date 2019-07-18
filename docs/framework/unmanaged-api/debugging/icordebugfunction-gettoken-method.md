@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56c8eba49260eba9e3e0ca7e9ab4c7cfcd3261f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a4613e11896a34ed1a7fe91d4767fb38ac75aab8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471939"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754516"
 ---
 # <a name="icordebugfunctiongettoken-method"></a>ICorDebugFunction::GetToken-Methode
 Ruft den Metadatentoken für diese Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetToken (  
     [out] mdMethodDef *pMethodDef  
 );  

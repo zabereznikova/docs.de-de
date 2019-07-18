@@ -19,11 +19,11 @@ helpviewer_keywords:
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
 ms.openlocfilehash: 8c0aece749edf144fdd5c8ede9ec7e2e4c96ad54
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746720"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else-Anweisung
 Kompiliert bedingt ausgewählte Codeblöcke Visual Basic-Code ein.  

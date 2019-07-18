@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648218"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644920"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Anhalten und Unterbrechen von Threads
 
@@ -45,9 +45,9 @@ Die gängigsten Verfahren zum Synchronisieren der Aktivitäten von Threads beste
   
  Wenn sich ein Thread in einem verwalteten Wartezustand befindet, kann er durch <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> und <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>  sofort aktiviert werden. Bei einem nicht verwalteten Wartezustand (beispielsweise bei einem Plattformaufruf der Win32-[WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)-Funktion) können <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> und <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> die Steuerung des Threads erst übernehmen, wenn der Thread zu verwaltetem Code zurückkehrt oder einen Aufruf in verwaltetem Code ausführt. In verwaltetem Code sieht das Verhalten wie folgt aus:  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> aktiviert einen Thread aus jedem Wartezustand heraus und veranlasst, dass eine <xref:System.Threading.ThreadInterruptedException> im Zielthread ausgelöst wird.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> aktiviert einen Thread aus jedem Wartezustand heraus und veranlasst, dass eine <xref:System.Threading.ThreadInterruptedException> im Zielthread ausgelöst wird.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> aktiviert einen Thread aus jedem Wartezustand heraus und veranlasst, dass eine <xref:System.Threading.ThreadAbortException> im Thread ausgelöst wird. Ausführliche Informationen finden Sie unter [Zerstören von Threads](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> aktiviert einen Thread aus jedem Wartezustand heraus und veranlasst, dass eine <xref:System.Threading.ThreadAbortException> im Thread ausgelöst wird. Ausführliche Informationen finden Sie unter [Zerstören von Threads](../../../docs/standard/threading/destroying-threads.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

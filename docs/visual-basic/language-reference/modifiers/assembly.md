@@ -11,11 +11,11 @@ helpviewer_keywords:
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
 ms.openlocfilehash: 819fa9cf1bd25e9426fb1e75925a269fcf7a71cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801986"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 Gibt an, dass ein Attribut am Anfang einer Quelldatei für die gesamte Assembly gilt.  

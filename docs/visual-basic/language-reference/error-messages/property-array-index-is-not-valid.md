@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID381
 ms.assetid: 77c14680-bc61-4f46-9529-bb9fe366c18e
-ms.openlocfilehash: 13646cba1c61d79a4e1d394a2c5d0c2e62c645d9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c8e5495c082cfe93ccca9b52cc9efa959920549f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822127"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661825"
 ---
 # <a name="property-array-index-is-not-valid"></a>Ungültiger Eigenschaftenarrayindex.
 Der angegebene Wert ist ungültig für ein Eigenschaftenarrayindex.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Überprüfen Sie die Dokumentation der Komponente, um sicherzustellen, dass Ihr Index innerhalb des gültigen Bereichs für die angegebene Eigenschaft ist.  
+- Überprüfen Sie die Dokumentation der Komponente, um sicherzustellen, dass Ihr Index innerhalb des gültigen Bereichs für die angegebene Eigenschaft ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

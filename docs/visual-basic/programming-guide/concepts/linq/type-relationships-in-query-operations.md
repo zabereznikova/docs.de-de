@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053183"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Typbeziehungen in Abfrageoperationen (Visual Basic)
 Im verwendeten Variablen [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Abfrage Vorgänge sind stark typisiert und miteinander kompatibel sein müssen. Starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in die Ausführung der Abfrage verwendet werden. Die folgende Abbildung Begriffe, die zum Beschreiben einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage. Weitere Informationen zu den Teilen einer Abfrage finden Sie unter [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -49,11 +49,11 @@ Im verwendeten Variablen [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]
   
  Die folgenden Beziehungen vorhanden sowohl von den vorherigen Codebeispielen, ob die Typen implizit oder explizit bestimmt werden.  
   
-1.  Der Typ der Elemente in der Datenquelle `names`, ist der Typ der Bereichsvariablen, `name`, in der Abfrage.  
+1. Der Typ der Elemente in der Datenquelle `names`, ist der Typ der Bereichsvariablen, `name`, in der Abfrage.  
   
-2.  Der Typ des Objekts, das ausgewählt ist, `name`, bestimmt den Typ der Abfragevariablen, `mNames`. Hier `name` ist eine Zeichenfolge, daher ist die Abfragevariable IEnumerable (Of String) in Visual Basic.  
+2. Der Typ des Objekts, das ausgewählt ist, `name`, bestimmt den Typ der Abfragevariablen, `mNames`. Hier `name` ist eine Zeichenfolge, daher ist die Abfragevariable IEnumerable (Of String) in Visual Basic.  
   
-3.  Die Abfrage, die in definierten `mNames` ausgeführt wird, der `For Each` Schleife. Die Schleife ist das Ergebnis der Ausführung der Abfrage durchläuft. Da `mNames`, wenn er ausgeführt wird, gibt eine Sequenz von Zeichenfolgen, die Schleifenvariable Iteration `nm`, ist auch eine Zeichenfolge.  
+3. Die Abfrage, die in definierten `mNames` ausgeführt wird, der `For Each` Schleife. Die Schleife ist das Ergebnis der Ausführung der Abfrage durchläuft. Da `mNames`, wenn er ausgeführt wird, gibt eine Sequenz von Zeichenfolgen, die Schleifenvariable Iteration `nm`, ist auch eine Zeichenfolge.  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>Abfragen, die ein Feld aus der ausgewählten Elemente zurückgeben.  
  Das folgende Beispiel zeigt eine [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] Abfrageoperation, die eine Sequenz zurückgibt, enthält nur einen Teil der einzelnen Elemente aus der Datenquelle ausgewählt. Die Abfrage nimmt eine Auflistung von `Customer` Objekte, die als Datenquelle aus, und nur Projekte die `Name` im Ergebnis. Da es sich bei der Namen des Kunden auf eine Zeichenfolge ist, erzeugt die Abfrage eine Sequenz von Zeichenfolgen als Ausgabe.  
@@ -72,11 +72,11 @@ Next
   
  Die Beziehungen zwischen den Variablen werden wie in der einfacheres Beispiel.  
   
-1.  Der Typ der Elemente in der Datenquelle `customers`, ist der Typ der Bereichsvariablen, `cust`, in der Abfrage. In diesem Beispiel ist, der Typ ist `Customer`.  
+1. Der Typ der Elemente in der Datenquelle `customers`, ist der Typ der Bereichsvariablen, `cust`, in der Abfrage. In diesem Beispiel ist, der Typ ist `Customer`.  
   
-2.  Die `Select` Anweisung gibt die `Name` Eigenschaft der einzelnen `Customer` Objekt anstelle des gesamten Objekts. Da `Name` ist eine Zeichenfolge, die Abfragevariable `custNames`, werden nicht erneut IEnumerable (Of String), der `Customer`.  
+2. Die `Select` Anweisung gibt die `Name` Eigenschaft der einzelnen `Customer` Objekt anstelle des gesamten Objekts. Da `Name` ist eine Zeichenfolge, die Abfragevariable `custNames`, werden nicht erneut IEnumerable (Of String), der `Customer`.  
   
-3.  Da `custNames` stellt eine Sequenz von Zeichenfolgen, die `For Each` Iterationsvariable-Schleife, `custName`, muss eine Zeichenfolge sein.  
+3. Da `custNames` stellt eine Sequenz von Zeichenfolgen, die `For Each` Iterationsvariable-Schleife, `custName`, muss eine Zeichenfolge sein.  
   
  Ohne lokaler Typrückschluss wäre das vorherige Beispiel umständlicher zum Schreiben und zu verstehen, wie im folgenden Beispiel gezeigt.  
   
@@ -110,11 +110,11 @@ Next
   
  Obwohl es nicht möglich, geben Sie die Typen für alle Variablen im vorherigen Beispiel ist, bleibt die Beziehungen.  
   
-1.  Der Typ der Elemente in der Datenquelle ist es den Typ der Bereichsvariablen in der Abfrage. In diesem Beispiel `cust` ist eine Instanz der `Customer`.  
+1. Der Typ der Elemente in der Datenquelle ist es den Typ der Bereichsvariablen in der Abfrage. In diesem Beispiel `cust` ist eine Instanz der `Customer`.  
   
-2.  Da die `Select` Anweisung erstellt einen anonymen Typ der Abfragevariable `nameCityQuery`, als anonymer Typ implizit typisiert sein muss. Ein anonymer Typ hat keinen verwendbaren Namen, und kann daher nicht explizit angegeben werden.  
+2. Da die `Select` Anweisung erstellt einen anonymen Typ der Abfragevariable `nameCityQuery`, als anonymer Typ implizit typisiert sein muss. Ein anonymer Typ hat keinen verwendbaren Namen, und kann daher nicht explizit angegeben werden.  
   
-3.  Der Typ der Iterationsvariablen in der `For Each` Schleife ist der anonyme Typ, der in Schritt 2 erstellt haben. Da der Typ keinen verwendbaren Namen aufweist, muss implizit der Typ der Schleifenvariablen Iteration bestimmt werden.  
+3. Der Typ der Iterationsvariablen in der `For Each` Schleife ist der anonyme Typ, der in Schritt 2 erstellt haben. Da der Typ keinen verwendbaren Namen aufweist, muss implizit der Typ der Schleifenvariablen Iteration bestimmt werden.  
   
 ## <a name="see-also"></a>Siehe auch
 

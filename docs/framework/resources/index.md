@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: aabf2ad437ee8a50614ca27978aa0a031f5d7e55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592233"
 ---
 # <a name="resources-in-net-apps"></a>Ressourcen in .NET-Apps
 Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sich um nicht ausführbare Daten, die logisch mit einer App bereitgestellt werden. Eine Ressource kann in einer App als Fehlermeldung oder als Teil der Benutzeroberfläche angezeigt werden. Ressourcen können verschiedene Formen von Daten enthalten, z. B. Zeichenfolgen, Bilder und beibehaltene Objekte. (Objekte, die beibehalten werden, müssen serialisierbar sein, um in eine Ressourcendatei geschrieben werden zu können.) Durch Speichern von Daten in einer Ressourcendatei können Sie die Daten ändern, ohne die gesamte App neu kompilieren zu müssen. Außerdem können Sie dadurch die Daten an einem einzigen Ort speichern und müssen nicht auf hartcodierte Daten zurückgreifen, die an mehreren Orten gespeichert wird.  
@@ -43,25 +43,26 @@ Sie können die Ressourcen der App auch für bestimmte Kulturen lokalisieren. Da
 ## <a name="retrieving-resources"></a>Abrufen von Ressourcen  
  Zur Laufzeit werden von einer App die passenden lokalisierten Ressourcen auf Threadbasis entsprechend der Kultur geladen, die von der <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft angegeben wird. Dieser Eigenschaftswert wird wie folgt abgeleitet:  
   
--   Durch direktes Zuweisen eines <xref:System.Globalization.CultureInfo>-Objekts, das die lokalisierte Kultur darstellt, zur <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft.  
+- Durch direktes Zuweisen eines <xref:System.Globalization.CultureInfo>-Objekts, das die lokalisierte Kultur darstellt, zur <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft.  
   
--   Wenn keine Kultur explizit zugeordnet wurde, durch Abrufen der Benutzeroberflächenkultur des Standardthreads von der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft.  
+- Wenn keine Kultur explizit zugeordnet wurde, durch Abrufen der Benutzeroberflächenkultur des Standardthreads von der <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>-Eigenschaft.  
   
--   Wenn keine Benutzeroberflächenkultur des Standardthreads explizit zugeordnet wurde, durch Abrufen der Kultur für den aktuellen Benutzer auf dem lokalen Computer. Dazu rufen unter Windows ausgeführte .NET Implementierungen die Windows-Funktion [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) auf.  
+- Wenn keine Benutzeroberflächenkultur des Standardthreads explizit zugeordnet wurde, durch Abrufen der Kultur für den aktuellen Benutzer auf dem lokalen Computer. Dazu rufen unter Windows ausgeführte .NET Implementierungen die Windows-Funktion [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) auf.  
   
  Weitere Informationen darüber, wie die aktuelle Benutzeroberflächenkultur festgelegt wird, finden Sie auf den Referenzseiten <xref:System.Globalization.CultureInfo> und <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>.  
   
  Sie können Ressourcen dann für die aktuelle Benutzeroberflächenkultur oder für eine bestimmte Kultur abrufen, indem Sie die <xref:System.Resources.ResourceManager?displayProperty=nameWithType>-Klasse verwenden. Die <xref:System.Resources.ResourceManager>-Klasse wird zwar am häufigsten zum Abrufen von Ressourcen verwendet, der <xref:System.Resources?displayProperty=nameWithType>-Namespace enthält jedoch weitere Typen, die Sie zum Abrufen von Ressourcen verwenden können. Dazu gehören:  
   
--   Die <xref:System.Resources.ResourceReader>-Klasse, mit der Sie Ressourcen auflisten können, die in eine Assembly eingebettet oder in einer eigenständigen binären ".resources"-Datei gespeichert sind. Dies ist nützlich, wenn Sie die genauen Namen der Ressourcen nicht kennen, die zur Laufzeit verfügbar sind.  
+- Die <xref:System.Resources.ResourceReader>-Klasse, mit der Sie Ressourcen auflisten können, die in eine Assembly eingebettet oder in einer eigenständigen binären ".resources"-Datei gespeichert sind. Dies ist nützlich, wenn Sie die genauen Namen der Ressourcen nicht kennen, die zur Laufzeit verfügbar sind.  
   
--   Die <xref:System.Resources.ResXResourceReader>-Klasse, mit der Sie Ressourcen aus einer XML-Datei (.resx) abrufen können.  
+- Die <xref:System.Resources.ResXResourceReader>-Klasse, mit der Sie Ressourcen aus einer XML-Datei (.resx) abrufen können.  
   
--   Die <xref:System.Resources.ResourceSet>-Klasse, mit der Sie Ressourcen einer bestimmten Kultur abrufen können, ohne Fallbackregeln zu beachten. Die Ressourcen können in einer Assembly oder einer eigenständigen binären ".resources"-Datei gespeichert werden. Sie können auch eine <xref:System.Resources.IResourceReader>-Implementierung entwickeln, die Ihnen ermöglicht, mit der <xref:System.Resources.ResourceSet>-Klasse Ressourcen aus einer anderen Quelle abzurufen.  
+- Die <xref:System.Resources.ResourceSet>-Klasse, mit der Sie Ressourcen einer bestimmten Kultur abrufen können, ohne Fallbackregeln zu beachten. Die Ressourcen können in einer Assembly oder einer eigenständigen binären ".resources"-Datei gespeichert werden. Sie können auch eine <xref:System.Resources.IResourceReader>-Implementierung entwickeln, die Ihnen ermöglicht, mit der <xref:System.Resources.ResourceSet>-Klasse Ressourcen aus einer anderen Quelle abzurufen.  
   
--   Die <xref:System.Resources.ResXResourceSet>-Klasse, mit der Sie alle Elemente in einer XML-Ressourcendatei in den Speicher abrufen können.  
+- Die <xref:System.Resources.ResXResourceSet>-Klasse, mit der Sie alle Elemente in einer XML-Ressourcendatei in den Speicher abrufen können.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
 - [Grundlagen der Anwendung](../../../docs/standard/application-essentials.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099949"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752456"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType-Enumeration
 Gibt den nativen Speicherort-Typ einer Variablen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum VariableLocationType  
 {  
     VLT_REGISTER,               
@@ -59,4 +59,4 @@ typedef enum VariableLocationType
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

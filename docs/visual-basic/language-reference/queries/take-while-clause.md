@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
 ms.openlocfilehash: 080a106fc1deeb54165511ed03d7c7c5d2060f21
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945196"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While-Klausel (Visual Basic)
 Gibt Elemente in einer Auflistung zurück, solange eine angegebene Bedingung `true` ist, und überspringt dann die übrigen Elemente.  

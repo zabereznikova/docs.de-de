@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74447f52c75ae22e513c6f07950630d37bad191a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 135938c4ed91423145ca46b743620f4236f7f818
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969829"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742259"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
 
@@ -30,7 +30,7 @@ Wird von ALink als Platzhalter verwendet, um Informationen über benutzerdefinie
 
 ## <a name="syntax"></a>Syntax
 
-```
+```csharp
 internal sealed class AssemblyAttributesGoHereS
 ```
 

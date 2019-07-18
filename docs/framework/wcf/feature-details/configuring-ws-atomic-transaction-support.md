@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2ec4fd65b97808fbf1a8401f5c0913face5835f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203534"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651138"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Konfigurieren der WS-AtomicTransaction-Unterstützung
 In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unterstützung mit dem WS-AT-Konfigurationshilfsprogramm konfigurieren können.  
@@ -56,19 +56,19 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
   
  Sie müssen bereits die erforderlichen Zertifikate besitzen, um Vertrauensstellungen einzurichten. Weitere Informationen zum Erstellen und Installieren neuer Zertifikate, bevor die folgenden Schritte aus, finden Sie unter [Vorgehensweise: Erstellen und installieren temporärer Clientzertifikate in WCF während der Entwicklung](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
-1.  Importieren Sie auf Computer A mit dem MMC-Zertifikat-Snap-In das vorhandene Zertifikat (certA) in den Speicher LocalMachine\MY (Persönlicher Knoten) und LocalMachine\ROOT (Knoten der vertrauenswürdigen Stammzertifizierungsstelle). Klicken Sie zum Importieren eines Zertifikats zu einem bestimmten Knoten, mit der rechten Maustaste des Knotens, und wählen Sie **alle Aufgaben/importieren**.  
+1. Importieren Sie auf Computer A mit dem MMC-Zertifikat-Snap-In das vorhandene Zertifikat (certA) in den Speicher LocalMachine\MY (Persönlicher Knoten) und LocalMachine\ROOT (Knoten der vertrauenswürdigen Stammzertifizierungsstelle). Klicken Sie zum Importieren eines Zertifikats zu einem bestimmten Knoten, mit der rechten Maustaste des Knotens, und wählen Sie **alle Aufgaben/importieren**.  
   
-2.  Erstellen oder erhalten Sie auf Computer B mit dem MMC-Zertifikat-Snap-In ein Zertifikat (certB) mit einem privaten Schlüssel, und importieren Sie es in den Speicher LocalMachine\MY (Persönlicher Knoten) und LocalMachine\ROOT (Knoten der vertrauenswürdigen Stammzertifizierungsstelle).  
+2. Erstellen oder erhalten Sie auf Computer B mit dem MMC-Zertifikat-Snap-In ein Zertifikat (certB) mit einem privaten Schlüssel, und importieren Sie es in den Speicher LocalMachine\MY (Persönlicher Knoten) und LocalMachine\ROOT (Knoten der vertrauenswürdigen Stammzertifizierungsstelle).  
   
-3.  Exportieren Sie den öffentlichen Schlüssel von certA zu einer Datei, wenn noch nicht geschehen.  
+3. Exportieren Sie den öffentlichen Schlüssel von certA zu einer Datei, wenn noch nicht geschehen.  
   
-4.  Exportieren Sie den öffentlichen Schlüssel von certB zu einer Datei, wenn noch nicht geschehen.  
+4. Exportieren Sie den öffentlichen Schlüssel von certB zu einer Datei, wenn noch nicht geschehen.  
   
 ### <a name="establishing-mutual-trust-between-machines"></a>Einrichten einer gegenseitigen Vertrauensstellung zwischen Computern  
   
-1.  Importieren Sie auf Computer A die Dateidarstellung von certB in die Speicher LocalMachine\MY und LocalMachine\ROOT. Damit wird deklariert, dass Computer A certB für die Kommunikation vertraut.  
+1. Importieren Sie auf Computer A die Dateidarstellung von certB in die Speicher LocalMachine\MY und LocalMachine\ROOT. Damit wird deklariert, dass Computer A certB für die Kommunikation vertraut.  
   
-2.  Importieren Sie auf Computer B die Datei von certA in die Speicher LocalMachine\MY und LocalMachine\ROOT. Dies bedeutet, dass Computer B certA für die Kommunikation vertraut.  
+2. Importieren Sie auf Computer B die Datei von certA in die Speicher LocalMachine\MY und LocalMachine\ROOT. Dies bedeutet, dass Computer B certA für die Kommunikation vertraut.  
   
  Mit diesen Schritten wurde eine Vertrauensstellung zwischen den beiden Computern eingerichtet, und sie können für die Kommunikation mit WS-AT konfiguriert werden.  
   
@@ -77,9 +77,9 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
   
  Sie können dies mit dem MMC-WS-AT-Snap-In konfigurieren. Weitere Informationen zu diesem Tool finden Sie unter den [WS-AtomicTransaction Konfiguration-MMC-Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) Thema. In den folgenden Schritten wird beschrieben, wie Sie eine Vertrauensstellung zwischen zwei Computern einrichten, auf denen MSDTC ausgeführt wird.  
   
-1.  Konfigurieren Sie die Einstellungen von Computer A. Wählen Sie für "Endpunktzertifikat" CertA aus. Wählen Sie für "Autorisierte Zertifikate" certb aus.  
+1. Konfigurieren Sie die Einstellungen von Computer A. Wählen Sie für "Endpunktzertifikat" CertA aus. Wählen Sie für "Autorisierte Zertifikate" certb aus.  
   
-2.  Konfigurieren Sie die Einstellungen von Computer B. Wählen Sie für "Endpunktzertifikat" CertB aus. Wählen Sie für "Autorisierte Zertifikate" certa aus.  
+2. Konfigurieren Sie die Einstellungen von Computer B. Wählen Sie für "Endpunktzertifikat" CertB aus. Wählen Sie für "Autorisierte Zertifikate" certa aus.  
   
 > [!NOTE]
 >  Wenn ein Computer eine Nachricht an den anderen Computer sendet, versucht der Absender zu überprüfen, ob der Antragstellername des Zertifikats des Empfängers und der Name des Computers des Empfängers übereinstimmen. Wenn sie nicht übereinstimmen, schlägt die Zertifikatüberprüfung fehl, und die zwei Computer können nicht kommunizieren.  
@@ -98,27 +98,27 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
   
  Der WS-AT-Protokolldienst unterstützt auch integrierte ServiceModel-Ablaufverfolgung über die ETW-Ablaufverfolgungssitzung. Dies bietet ausführlichere, kommunikationsspezifische Ablaufverfolgungen zusätzlich zu den vorhandenen Transaktionsablaufverfolgungen.  Führen Sie die folgenden Schritte aus, um diese zusätzlichen Ablaufverfolgungen zu aktivieren:  
   
-1.  Öffnen der **starten/ausführen** Menü, geben Sie "Regedit" in das Eingabefeld, und wählen Sie **OK**.  
+1. Öffnen der **starten/ausführen** Menü, geben Sie "Regedit" in das Eingabefeld, und wählen Sie **OK**.  
   
-2.  In der **Registrierungs-Editor**, navigieren Sie zum folgenden Ordner im linken Bereich Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
+2. In der **Registrierungs-Editor**, navigieren Sie zum folgenden Ordner im linken Bereich Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
   
-3.  Klicken Sie mit der rechten Maustaste auf die `ServiceModelDiagnosticTracing` Wert im rechten Bereich, und wählen Sie **ändern**.  
+3. Klicken Sie mit der rechten Maustaste auf die `ServiceModelDiagnosticTracing` Wert im rechten Bereich, und wählen Sie **ändern**.  
   
-4.  In der **Wertdaten** Eingabefeld, geben Sie einen der folgenden gültigen Werte an das Level der Ablaufverfolgung, Sie aktivieren möchten.  
+4. In der **Wertdaten** Eingabefeld, geben Sie einen der folgenden gültigen Werte an das Level der Ablaufverfolgung, Sie aktivieren möchten.  
   
--   0: Aus  
+- 0: Aus  
   
--   1: Kritisch  
+- 1: Kritisch  
   
--   3: Fehler. Dies ist der Standardwert.  
+- 3: Fehler. Dies ist der Standardwert.  
   
--   7: Warnung  
+- 7: Warnung  
   
--   15: Informationen  
+- 15: Informationen  
   
--   31: Ausführlich  
+- 31: Ausführlich  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [WS-AtomicTransaction-Konfiguration-MMC-Snap-In](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

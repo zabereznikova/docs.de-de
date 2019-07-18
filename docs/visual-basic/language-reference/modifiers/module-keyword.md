@@ -9,11 +9,11 @@ helpviewer_keywords:
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
 ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920704"
 ---
 # <a name="module-keyword-visual-basic"></a>Modul \<Schlüsselwort > (Visual Basic)
 Gibt an, dass ein Attribut am Anfang einer Quelldatei für das aktuelle Assemblymodul gilt.  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c16f6d1334888fc389a7c39cf0a3865afca2085
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3ada3a06a2beb8f21c3e24665c0f1f8e7c48515f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471043"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752955"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue-Methode
 Erstellt einen Wert des angegebenen Typs mit einem Anfangswert von 0 (null) oder Null.  
@@ -31,7 +31,7 @@ Erstellt einen Wert des angegebenen Typs mit einem Anfangswert von 0 (null) oder
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateValue (  
     [in] CorElementType     elementType,  
     [in] ICorDebugClass     *pElementClass,  

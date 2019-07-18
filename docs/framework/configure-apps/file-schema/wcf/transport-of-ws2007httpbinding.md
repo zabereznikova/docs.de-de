@@ -3,11 +3,11 @@ title: <transport> von <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
 ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788296"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<Transport > von \<ws2007HttpBinding >
 Definiert die Authentifizierungseinstellungen für den HTTP-Transport.  

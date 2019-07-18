@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
 ms.openlocfilehash: 3255dff8268cd5500a1244716f37bf30f5b43cfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698602"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>Typografische und Codekonventionen (Visual Basic)
 Dokumentation zu Visual Basic verwendet die folgenden typografische und Codekonventionen.  

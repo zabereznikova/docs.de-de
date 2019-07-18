@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 44ab9766bead15c97a1397ef1f47de75f72643a3
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202599"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423538"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
@@ -114,6 +114,6 @@ Sie könnten dies wie im folgenden Beispiel gezeigt verwenden, um eine Enumerati
 
 - <xref:System.Collections.Generic>
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Einführung in Generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Einführung in Generics](../../../csharp/programming-guide/generics/index.md)
 - [Generische Klassen](../../../csharp/programming-guide/generics/generic-classes.md)
 - [new-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md)

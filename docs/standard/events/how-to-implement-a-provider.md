@@ -12,44 +12,44 @@ helpviewer_keywords:
 ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eecf16625c20ad5ff89791e221a4a40b2777956b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543788"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59324772"
 ---
 # <a name="how-to-implement-a-provider"></a>Vorgehensweise: Implementieren eines Anbieters
 Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Anbieter, der Daten überwacht und Benachrichtigungen sendet, und mindestens einem Beobachter, der Benachrichtigungen (Rückrufe) vom Anbieter empfängt. In diesem Thema wird das Erstellen eines Anbieters behandelt. Im verwandten Thema [Vorgehensweise: Implementieren eines Observers](../../../docs/standard/events/how-to-implement-an-observer.md) wird erläutert, wie ein Observer erstellt wird.  
   
 ### <a name="to-create-a-provider"></a>So erstellen Sie einen Anbieter  
   
-1.  Definieren Sie die Daten, die vom Anbieter an Observer gesendet werden. Obwohl nur der Anbieter und die an Observer gesendeten Daten einen einzelnen Typ aufweisen können, werden sie in der Regel von unterschiedlichen Typen dargestellt. Beispiel: In einer Anwendung zur Temperaturüberwachung definiert die `Temperature`-Struktur die Daten, die der Anbieter (dargestellt durch die im nächsten Schritt definierte `TemperatureMonitor`-Klasse) überwacht, und die abonnierten Observer.  
+1. Definieren Sie die Daten, die vom Anbieter an Observer gesendet werden. Obwohl nur der Anbieter und die an Observer gesendeten Daten einen einzelnen Typ aufweisen können, werden sie in der Regel von unterschiedlichen Typen dargestellt. Beispiel: In einer Anwendung zur Temperaturüberwachung definiert die `Temperature`-Struktur die Daten, die der Anbieter (dargestellt durch die im nächsten Schritt definierte `TemperatureMonitor`-Klasse) überwacht, und die abonnierten Observer.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/data.cs#1)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/data.vb#1)]  
   
-2.  Definieren Sie den Datenanbieter, der einen Typ zur Implementierung der <xref:System.IObservable%601?displayProperty=nameWithType>-Schnittstelle aufweist. Das generische Typargument des Anbieters ist der Typ, den der Anbieter an Observer sendet. Das folgende Beispiel definiert eine `TemperatureMonitor`-Klasse, die eine erstellte <xref:System.IObservable%601?displayProperty=nameWithType>-Implementierung mit einem generischen Typargument von `Temperature` darstellt.  
+2. Definieren Sie den Datenanbieter, der einen Typ zur Implementierung der <xref:System.IObservable%601?displayProperty=nameWithType>-Schnittstelle aufweist. Das generische Typargument des Anbieters ist der Typ, den der Anbieter an Observer sendet. Das folgende Beispiel definiert eine `TemperatureMonitor`-Klasse, die eine erstellte <xref:System.IObservable%601?displayProperty=nameWithType>-Implementierung mit einem generischen Typargument von `Temperature` darstellt.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#2)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#2)]  
   
-3.  Stellen Sie fest, wie der Anbieter Verweise auf Observer speichert, damit jeder Observer ggf. benachrichtigt werden kann. In den meisten Fällen wird hierfür ein Auflistungsobjekt wie etwa ein generisches <xref:System.Collections.Generic.List%601>-Objekt verwendet. Das folgende Beispiel definiert ein privates <xref:System.Collections.Generic.List%601>-Objekt, das im Klassenkonstruktor `TemperatureMonitor` instanziiert wird.  
+3. Stellen Sie fest, wie der Anbieter Verweise auf Observer speichert, damit jeder Observer ggf. benachrichtigt werden kann. In den meisten Fällen wird hierfür ein Auflistungsobjekt wie etwa ein generisches <xref:System.Collections.Generic.List%601>-Objekt verwendet. Das folgende Beispiel definiert ein privates <xref:System.Collections.Generic.List%601>-Objekt, das im Klassenkonstruktor `TemperatureMonitor` instanziiert wird.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#3)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#3)]  
   
-4.  Definieren Sie eine <xref:System.IDisposable>-Implementierung, die der Anbieter an Abonnenten zurückgeben kann, sodass diese jederzeit den Empfang von Benachrichtigungen beenden können. Im folgenden Beispiel wird eine geschachtelte `Unsubscriber`-Klasse definiert, der bei Instanziierung der Klasse ein Verweis auf die Auflistung der Abonnenten und auf den Abonnenten übergeben wird. Durch diesen Code kann der Abonnent die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung des Objekts aufrufen, damit es selbst aus der Abonnentenauflistung entfernt wird.  
+4. Definieren Sie eine <xref:System.IDisposable>-Implementierung, die der Anbieter an Abonnenten zurückgeben kann, sodass diese jederzeit den Empfang von Benachrichtigungen beenden können. Im folgenden Beispiel wird eine geschachtelte `Unsubscriber`-Klasse definiert, der bei Instanziierung der Klasse ein Verweis auf die Auflistung der Abonnenten und auf den Abonnenten übergeben wird. Durch diesen Code kann der Abonnent die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Implementierung des Objekts aufrufen, damit es selbst aus der Abonnentenauflistung entfernt wird.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#4)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#4)]  
   
-5.  Implementieren Sie die <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode. Der Methode wird ein Verweis auf die <xref:System.IObserver%601?displayProperty=nameWithType>-Schnittstelle übergeben, und sie sollte im Objekt gespeichert werden, das hierfür in Schritt 3 entworfen wurde. Die Methode sollte dann die in Schritt 4 entwickelte <xref:System.IDisposable>-Implementierung zurückgeben. Im folgenden Beispiel wird die Implementierung der <xref:System.IObservable%601.Subscribe%2A>-Methode in der Klasse `TemperatureMonitor` veranschaulicht.  
+5. Implementieren Sie die <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType>-Methode. Der Methode wird ein Verweis auf die <xref:System.IObserver%601?displayProperty=nameWithType>-Schnittstelle übergeben, und sie sollte im Objekt gespeichert werden, das hierfür in Schritt 3 entworfen wurde. Die Methode sollte dann die in Schritt 4 entwickelte <xref:System.IDisposable>-Implementierung zurückgeben. Im folgenden Beispiel wird die Implementierung der <xref:System.IObservable%601.Subscribe%2A>-Methode in der Klasse `TemperatureMonitor` veranschaulicht.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#5)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#5)]  
   
-6.  Benachrichtigen Sie ggf. Observer, indem Sie ihre <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>-, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>- und <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>-Implementierungen aufrufen. In einigen Fällen kann ein Anbieter beim Auftreten eines Fehlers nicht die <xref:System.IObserver%601.OnError%2A>-Methode aufrufen. Beispielsweise simuliert die folgende `GetTemperature`-Methode einen Monitor, der alle fünf Sekunden Temperaturdaten liest und Observer benachrichtigt, wenn sich die Temperatur seit dem letzten Lesevorgang um mindestens 0,1 Grad geändert hat. Wenn das Gerät keine Temperatur meldet (d.h., wenn der Wert null ist), werden Observer durch den Anbieter darüber benachrichtigt, dass die Übertragung abgeschlossen ist. Beachten Sie, dass bei der `GetTemperature`-Methode nicht nur die <xref:System.IObserver%601.OnCompleted%2A>-Methode der einzelnen Observer aufgerufen wird, sondern auch die <xref:System.Collections.Generic.List%601>-Auflistung gelöscht wird. Dabei ruft der Anbieter nicht die <xref:System.IObserver%601.OnError%2A>-Methode der jeweiligen Observer auf.  
+6. Benachrichtigen Sie ggf. Observer, indem Sie ihre <xref:System.IObserver%601.OnNext%2A?displayProperty=nameWithType>-, <xref:System.IObserver%601.OnError%2A?displayProperty=nameWithType>- und <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>-Implementierungen aufrufen. In einigen Fällen kann ein Anbieter beim Auftreten eines Fehlers nicht die <xref:System.IObserver%601.OnError%2A>-Methode aufrufen. Beispielsweise simuliert die folgende `GetTemperature`-Methode einen Monitor, der alle fünf Sekunden Temperaturdaten liest und Observer benachrichtigt, wenn sich die Temperatur seit dem letzten Lesevorgang um mindestens 0,1 Grad geändert hat. Wenn das Gerät keine Temperatur meldet (d.h., wenn der Wert null ist), werden Observer durch den Anbieter darüber benachrichtigt, dass die Übertragung abgeschlossen ist. Beachten Sie, dass bei der `GetTemperature`-Methode nicht nur die <xref:System.IObserver%601.OnCompleted%2A>-Methode der einzelnen Observer aufgerufen wird, sondern auch die <xref:System.Collections.Generic.List%601>-Auflistung gelöscht wird. Dabei ruft der Anbieter nicht die <xref:System.IObserver%601.OnError%2A>-Methode der jeweiligen Observer auf.  
   
      [!code-csharp[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/provider.cs#6)]
      [!code-vb[Conceptual.ObserverDesign.HowTo#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/provider.vb#6)]  

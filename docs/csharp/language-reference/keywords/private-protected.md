@@ -3,12 +3,12 @@ title: private protected – C#-Referenz
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: b0b89580b6ff88aafb56d206dd4ee0848507a40b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c739dd0b5a5457a66c11962ed86bcd2ffbf811ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240566"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661673"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C#-Referenz)
 
@@ -33,7 +33,7 @@ public class DerivedClass1 : BaseClass
 {
     void Access()
     {
-        BaseClass baseObject = new BaseClass();
+        var baseObject = new BaseClass();
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.

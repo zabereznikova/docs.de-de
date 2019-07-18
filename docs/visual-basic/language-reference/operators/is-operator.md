@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
 ms.openlocfilehash: a59ff4c956724c614342f0ee4c0622a67f1c25e7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054956"
 ---
 # <a name="is-operator-visual-basic"></a>Is-Operator (Visual Basic)
 Vergleicht zwei Objektverweisvariablen.  

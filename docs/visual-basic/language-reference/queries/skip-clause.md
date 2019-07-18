@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
 ms.openlocfilehash: db2d79596895505ddaa7778e831082a94c7ad44e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945248"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip-Klausel (Visual Basic)
 Überspringt eine festgelegte Anzahl von Elementen in einer Auflistung und gibt anschließend die übrigen Elemente zurück.  

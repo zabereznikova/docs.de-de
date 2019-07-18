@@ -3,15 +3,15 @@ title: Bindungserweiterbarkeit
 ms.date: 03/30/2017
 ms.assetid: cabdd583-ddf5-493e-9dba-c6c31cde8f65
 ms.openlocfilehash: af9736a1011c3de6e1add51e8a913745cfd6756d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944091"
 ---
 # <a name="binding-extensibility"></a>Bindungserweiterbarkeit
 
-Dieser Abschnitt enthält Beispiele für die benutzerdefinierten Bindung in der Windows Communication Foundation (WCF).  
+Dieser Abschnitt enthält Beispiele, die benutzerdefinierten Bindung in der Windows Communication Foundation (WCF) zu veranschaulichen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  <xref:System.ServiceModel.NetHttpBinding>  

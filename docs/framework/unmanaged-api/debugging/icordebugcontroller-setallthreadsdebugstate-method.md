@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 280dc3f0271d7326fe4c22b813abebfd4d45c89e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9348652129a3357784654006dc16d822298f28f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138475"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749965"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState-Methode
 Legt den Debugzustand des alle verwalteten Threads im Prozess fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetAllThreadsDebugState (  
     [in] CorDebugThreadState  state,  
     [in] ICorDebugThread      *pExceptThisThread  

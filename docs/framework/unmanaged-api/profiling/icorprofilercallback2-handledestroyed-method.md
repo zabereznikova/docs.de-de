@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc6b086b444a769afbf01369b50c69e242a21050
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3cb8783ba1427ecc2396abb32f350664ddf83d19
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090484"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779311"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>ICorProfilerCallback2::HandleDestroyed-Methode
 Benachrichtigt den Profiler, dass eine Garbage Collection-Handle zerstört wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT HandleDestroyed(  
     [in] GCHandleID handleId);  
 ```  

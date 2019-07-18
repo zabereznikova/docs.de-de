@@ -2,12 +2,12 @@
 title: Sicherheit von Typanbietern
 description: Erfahren Sie mehr über die Sicherheit von typanbietern in F#, wie Sie die Einstellungen für einen Typanbieter für die Vertrauensstellung zu ändern.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611190"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641849"
 ---
 # <a name="type-provider-security"></a>Sicherheit von Typanbietern
 

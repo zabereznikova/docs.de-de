@@ -1,13 +1,13 @@
 ---
 title: Literale
 description: Erfahren Sie, bis die Literaltypen in der Programmiersprache F#.
-ms.date: 02/08/2019
-ms.openlocfilehash: 28ce34dee3c3c3d4d0cfd4107e8cbc375a23032c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.date: 06/28/2019
+ms.openlocfilehash: 0c9ced0b505817a161ca39c6c9f853f94cedf410
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092162"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610154"
 ---
 # <a name="literals"></a>Literale
 
@@ -28,6 +28,7 @@ In der folgenden Tabelle werden die Literaltypen in F# angegeben. Bei Zeichen, d
 |uint16|16-Bit-natürliche-Zahl ohne Vorzeichen|mehreren|`86us`|
 |int<br /><br />int32|32-Bit-Ganzzahl mit Vorzeichen|l oder none|`86`<br /><br />`86l`|
 |uint<br /><br />uint32|32-Bit-natürliche-Zahl ohne Vorzeichen|u oder ul|`86u`<br /><br />`86ul`|
+|nativeint|systemeigene Zeiger auf eine natürliche Zahl mit Vorzeichen|n|`123n`|
 |unativeint|systemeigener Zeiger als natürliche Zahl ohne Vorzeichen|un|`0x00002D3Fun`|
 |int64|64-Bit-Ganzzahl mit Vorzeichen|L|`86L`|
 |uint64|64-Bit-natürliche-Zahl ohne Vorzeichen|UL|`86UL`|
@@ -43,13 +44,16 @@ In der folgenden Tabelle werden die Literaltypen in F# angegeben. Bei Zeichen, d
 |byte[]|ASCII-Zeichenfolge|B|`"text"B`|
 |String oder byte[]|wörtliche Zeichenfolge|@-Präfix|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>Hinweise
+## <a name="named-literals"></a>Benannte Literale
 
-Unicode-Zeichenfolgen können explizite Codierungen, die Sie angeben können, indem Sie mithilfe von enthalten `\u` gefolgt von einem hexadezimalen 16-Bit-Code oder UTF-32-Codierungen, die Sie angeben können, indem Sie mithilfe von `\U` gefolgt von eine hexadezimale 32-Bit-Code, der eine Unicode-darstellt das Ersatzzeichenpaar.
+Werte, die Konstanten sein sollen können gekennzeichnet werden, mit der [Literal](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) Attribut. Dieses Attribut bewirkt, dass ein Wert als Konstante kompiliert wird.
 
-Ab F# 3.1, können Sie die `+` melden Sie beim Kombinieren von Zeichenfolgenliteralen. Sie können auch das bitweise verwenden oder (`|||`) Operator, um Enumerationsflags zu kombinieren. In F# 3.1 ist beispielsweise der folgende Code zulässig:
+In Musterabgleichsausdrücken werden Bezeichner, die mit Kleinbuchstaben beginnen, immer als zu bindende Variablen statt als Literale behandelt. Verwenden Sie daher im Allgemeinen Großbuchstaben am Wortanfang, wenn Sie Literale definieren.
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -63,15 +67,13 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-Die Verwendung anderer bitweiser Operatoren ist nicht zulässig.
+## <a name="remarks"></a>Hinweise
 
-## <a name="named-literals"></a>Benannte Literale
+Unicode-Zeichenfolgen können explizite Codierungen, die Sie angeben können, indem Sie mithilfe von enthalten `\u` gefolgt von einem hexadezimalen 16-Bit-Code (0000 - FFFF) oder UTF-32-Codierungen, die Sie angeben können, indem Sie mithilfe von `\U` gefolgt von eine hexadezimale 32-Bit-Code, darstellt alle Unicode-Codepunkt (00000000 - 0010FFFF).
 
-Werte, die Konstanten sein sollen können gekennzeichnet werden, mit der [Literal](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) Attribut. Dieses Attribut bewirkt, dass ein Wert als Konstante kompiliert wird.
+Die Verwendung anderer bitweiser Operatoren außer `|||` ist nicht zulässig.
 
-In Musterabgleichsausdrücken werden Bezeichner, die mit Kleinbuchstaben beginnen, immer als zu bindende Variablen statt als Literale behandelt. Verwenden Sie daher im Allgemeinen Großbuchstaben am Wortanfang, wenn Sie Literale definieren.
-
-## <a name="integers-in-other-bases"></a>Ganze Zahlen In andere Basiszahlen
+## <a name="integers-in-other-bases"></a>Ganze Zahlen in andere Basiszahlen
 
 32-Bit-Ganzzahlen mit Vorzeichen können auch angegeben werden, mithilfe von hexadezimalen, Oktal- oder binäre eine `0x`, `0o` oder `0b` bzw. voranstellen.
 
@@ -82,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Unterstriche in numerischen Literalen
 
-Ab F# 4.1, können Sie Ziffern mit einem Unterstrich trennen (`_`).
+Sie können die Ziffern mit einem Unterstrich trennen (`_`).
 
 ```fsharp
 let value = 0xDEAD_BEEF

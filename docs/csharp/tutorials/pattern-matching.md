@@ -3,12 +3,12 @@ title: Verwenden von Features für den Musterabgleich, um Datentypen zu erweiter
 description: Dieses fortgeschrittene Tutorial veranschaulicht die Verwendung von Musterabgleichverfahren zum Erstellen von Funktionen mit Daten und Algorithmen, die separat erstellt werden.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262523"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397832"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Verwenden von Features für den Musterabgleich, um Datentypen zu erweitern
 
@@ -23,7 +23,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Vorschaucompilers. Der C# 8-Vorschaucompiler ist mit der neuesten [Visual Studio 2019 – Vorschauversion](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) oder der neuesten [.NET Core 3.0 – Vorschauversion](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0-Vorschaucompilers. Der C# 8-Vorschaucompiler ist mit dem neuesten [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder der neuesten [.NET Core 3.0 – Vorschauversion](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
 
 In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Visual Studio oder die .NET Core-CLI kennen.
 
@@ -199,7 +199,12 @@ vehicle switch
 };
 ```
 
-Die Mautbehörde interessiert sich nicht für die Anzahl der Fahrgäste in Lieferwagen. Stattdessen berücksichtigt sie beim Berechnen der Maut die Gewichtsklasse der Lieferwagen. Lieferwagen über 2,3 t wird ein Aufschlag von 5,00 US-Dollar berechnet. Leichte Lieferwagen unter 1,35 t (3.000 Pfund) erhalten einen Rabatt von 2,00 USD. Diese Regel wird mit folgendem Code implementiert:
+Die Mautbehörde interessiert sich nicht für die Anzahl der Fahrgäste in Lieferwagen. Stattdessen passt sie die Mauthöhe basierend auf der Gewichtsklasse der Lieferwagen wie folgt an:
+
+- Lieferwagen über 2,3 t wird ein Aufschlag von 5,00 US-Dollar berechnet.
+- Leichte Lieferwagen unter 1,35 t (3.000 Pfund) erhalten einen Rabatt von 2,00 USD.
+
+Diese Regel wird mit folgendem Code implementiert:
 
 ```csharp
 vehicle switch

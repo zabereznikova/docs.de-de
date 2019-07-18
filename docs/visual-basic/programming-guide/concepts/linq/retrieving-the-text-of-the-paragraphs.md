@@ -2,12 +2,12 @@
 title: Abrufen des Texts der Absätze (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
-ms.openlocfilehash: bc6035c7d894d30b1441dd35925c233e02d35163
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f508c95d5ea7889d3ea22a4852b4813ec54f97a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830005"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627165"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>Abrufen des Texts der Absätze (Visual Basic)
 Dieses Beispiel baut auf dem vorherigen Beispiel, [Abrufen der Absätze und deren Stile (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md). Dieses neue Beispiel ruft den Text jedes einzelnen Absatzes als Zeichenfolge ab  
@@ -139,7 +139,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel wird gezeigt, wie Sie zum Verketten mehrerer Zeichenfolgen zu einer einzelnen Zeichenfolge statt <xref:System.Linq.Enumerable.Aggregate%2A> eine Erweiterungsmethode verwenden können:  
   
--   [Refactoring mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Refactoring mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

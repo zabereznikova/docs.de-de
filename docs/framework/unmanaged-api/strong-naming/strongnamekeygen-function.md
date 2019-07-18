@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8ebecce4078ba6c2b59e6bfba2d54300ba0c4ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 74445b03e78ff68426f60c3e306d9151d0ba288a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107379"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780997"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen-Funktion
 Erstellt ein neues öffentliches/privates Schlüsselpaar für die Verwendung starker Namen.  
@@ -30,7 +30,7 @@ Erstellt ein neues öffentliches/privates Schlüsselpaar für die Verwendung sta
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 BOOLEAN StrongNameKeyGen (  
     [in]  LPCWSTR   wszKeyContainer,  
     [in]  DWORD     dwFlags,  
@@ -46,9 +46,9 @@ BOOLEAN StrongNameKeyGen (
  `dwFlags`  
  [in] Gibt an, ob den Schlüssel registriert bleiben soll. Die folgenden Werte werden unterstützt:  
   
--   0 x 00000000 - wird verwendet, wenn `wszKeyContainer` null ist, um einen temporären Schlüsselcontainernamen zu generieren.  
+- 0 x 00000000 - wird verwendet, wenn `wszKeyContainer` null ist, um einen temporären Schlüsselcontainernamen zu generieren.  
   
--   0 x 00000001 (`SN_LEAVE_KEY`) – gibt an, dass der Schlüssel registriert werden soll.  
+- 0 x 00000001 (`SN_LEAVE_KEY`) – gibt an, dass der Schlüssel registriert werden soll.  
   
  `ppbKeyBlob`  
  [out] Das zurückgegebene öffentliches/privates Schlüsselpaar.  

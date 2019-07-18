@@ -5,11 +5,11 @@ helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
 ms.openlocfilehash: 4960740af9637a1743dc86965d7831b76828e58a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772436"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 Definiert eine Bindung, die eine Warteschlangenunterstützung bereitstellt, indem Nachrichten über MSMQ weitergeleitet werden.  

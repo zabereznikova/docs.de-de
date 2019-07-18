@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f26fd93d42a709249936815d3c29ae572482f427
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1b8afe10563d61e3ddab93e8d1b57eee4b6765c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224623"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766835"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext-Methode
 Ruft die Kontextidentität, die derzeit mit dem angegebenen Thread zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetThreadContext(  
     [in]  ThreadID  threadId,  
     [out] ContextID *pContextId);  

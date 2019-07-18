@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504339"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834041"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Leitfaden zur Verwendung von Memory\<T> und Span\<T>
 
@@ -86,7 +86,7 @@ In diesem Code:
 
 - Die `Main`-Methode enthält den Verweis auf die <xref:System.Buffers.IMemoryOwner%601>-Instanz, sodass die `Main`-Methode der Besitzer des Puffers ist.
 
-- Die `WriteInt32ToBuffer`- und `DisplayBufferToConsole`-Methoden akzeptieren „xref:System.Memory%601>“ als eine öffentliche API. Daher sind sie der Consumer des Puffers. Und sie können ihn nur jeweils einzeln verbrauchen.
+- Die `WriteInt32ToBuffer`- und `DisplayBufferToConsole`-Methode akzeptieren <xref:System.Memory%601> als öffentliche API. Daher sind sie der Consumer des Puffers. Und sie können ihn nur jeweils einzeln verbrauchen.
 
 Obwohl die `WriteInt32ToBuffer`-Methode dazu bestimmt ist, einen Wert in den Puffer zu schreiben, ist die `DisplayBufferToConsole`-Methode dies nicht. Um dies anzugeben, hätte sie ein Argument vom Typ <xref:System.ReadOnlyMemory%601> akzeptieren können. Weitere Informationen zu <xref:System.ReadOnlyMemory%601> finden Sie unter [Regel 2: ReadOnlySpan\<T> oder ReadOnlyMemory\<T> verwenden, wenn der Puffer schreibgeschützt sein soll](#rule-2).
 
@@ -110,13 +110,13 @@ Da ein Speicherblock einen Besitzer hat, aber an mehrere Komponenten übergeben 
 
 - Es ist möglich, dass eine Komponente gleichzeitig mit einer anderen Komponente auf einem Puffer arbeitet, wodurch die Daten im Puffer beschädigt werden.
 
-- Durch die Stapelzuordnung von <xref:System.Span%601> wird zwar die Leistung optimiert und <xref:System.Span%601> zum bevorzugten Typ für den Betrieb auf einem Speicherblock, aber auch <xref:System.Span%601> unterliegt einigen wichtigen Einschränkungen. Es ist wichtig zu wissen, wann einen <xref:System.Span%601> und wann <xref:System.Memory%601> verwenden sollten.
+- Durch die Stapelzuordnung von <xref:System.Span%601> wird zwar die Leistung optimiert und <xref:System.Span%601> zum bevorzugten Typ für den Betrieb auf einem Speicherblock, aber auch <xref:System.Span%601> einigen bedeutenden Einschränkungen unterworfen. Es ist wichtig zu wissen, wann einen <xref:System.Span%601> und wann <xref:System.Memory%601> verwenden sollten.
 
 Nachfolgend finden Sie unsere Empfehlungen für den erfolgreichen Einsatz von <xref:System.Memory%601> und den verwandten Typen. Beachten Sie, dass die Richtlinien, die für <xref:System.Memory%601> und <xref:System.Span%601> gelten, auch für <xref:System.ReadOnlyMemory%601> und <xref:System.ReadOnlySpan%601> gelten, sofern nicht ausdrücklich anders angegeben.
 
 **Regel 1: Für eine synchrone API Span\<T> anstelle von Memory\<T> als Parameter verwenden, wenn möglich.**
 
-<xref:System.Span%601> ist vielseitiger als <xref:System.Memory%601> und kann eine größere Anzahl von zusammenhängenden Speicherpuffern darstellen. <xref:System.Span%601> bietet außerdem eine bessere Leistung als <xref:System.Memory%601>>. Schließlich können Sie die <xref:System.Memory%601.Span?displayProperty=nameWithType>-Eigenschaft verwenden, um eine <xref:System.Memory%601>-Instanz in eine <xref:System.Span%601>-Instanz zu konvertieren, obwohl eine Span\<T>-in-Memory\<T>-Konvertierung nicht möglich ist. Wenn Ihre Aufrufer also eine <xref:System.Memory%601>-Instanz haben, können sie Ihre Methoden trotzdem mit <xref:System.Span%601>-Parametern aufrufen.
+<xref:System.Span%601> ist vielseitiger als <xref:System.Memory%601> und kann eine größere Anzahl von zusammenhängenden Speicherpuffern darstellen. <xref:System.Span%601> bietet außerdem eine bessere Leistung als <xref:System.Memory%601>. Schließlich können Sie die <xref:System.Memory%601.Span?displayProperty=nameWithType>-Eigenschaft verwenden, um eine <xref:System.Memory%601>-Instanz in eine <xref:System.Span%601>-Instanz zu konvertieren, obwohl eine Span\<T>-in-Memory\<T>-Konvertierung nicht möglich ist. Wenn Ihre Aufrufer also eine <xref:System.Memory%601>-Instanz haben, können sie Ihre Methoden trotzdem mit <xref:System.Span%601>-Parametern aufrufen.
 
 Die Verwendung eines Parameters vom Typ <xref:System.Span%601> anstelle von Typ <xref:System.Memory%601> unterstützt Sie auch dabei, eine korrekte Implementierung einer konsumierenden Methode zu schreiben. Die Kompilierzeit wird automatisch überprüft, um sicherzustellen, dass Sie nicht versuche, nach Ablauf der Leasedauer auf den Puffer zuzugreifen (weitere Informationen dazu im weiteren Verlauf).
 
@@ -138,7 +138,7 @@ Wenn wir diese Regel und Regel 1 kombinieren, können wir die Methodensignatur w
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-Die `DisplayBufferToConsole`-Methode funktioniert nun mit praktisch jedem denkbaren Puffertyp: `T[]`, Speicher, der mit [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) zugewiesen wurde, und so weiter. Sie können einen <xref:System.String> sogar direkt übergeben!
+Die `DisplayBufferToConsole`-Methode funktioniert nun mit praktisch jedem denkbaren Puffertyp: `T[]`, Speicher, der mit [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) zugewiesen wurde, und so weiter. Sie können einen <xref:System.String> sogar direkt übergeben!
 
 **Regel 3: Wenn Ihre Methode Memory\<T> akzeptiert und `void` zurückgibt, dürfen Sie die Memory\<T>-Instanz nicht verwenden, nachdem Ihre Methode ein Ergebnis zurückgegeben hat.**
 
@@ -246,7 +246,7 @@ Jede Komponente, die den Besitz der <xref:System.Buffers.IMemoryOwner%601>-Insta
 
 **Regel 9: Wenn Sie eine synchrone P/Invoke-Methode umschließen, sollte Ihre API Span\<T> als Parameter akzeptieren.**
 
-Gemäß Regel 1 ist <xref:System.Span%601> im Allgemeinen der richtige Typ für synchrone APIs. Sie können wie im folgenden Beispiel gezeigt <xref:System.Span%601>\<T>-Instanzen über das Schlüsselwort [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) anheften.
+Gemäß Regel 1 ist <xref:System.Span%601> im Allgemeinen der richtige Typ für synchrone APIs. Sie können <xref:System.Span%601>-Instanzen über das Schlüsselwort [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) anheften, wie im folgenden Beispiel.
 
 ```csharp
 using System.Runtime.InteropServices;

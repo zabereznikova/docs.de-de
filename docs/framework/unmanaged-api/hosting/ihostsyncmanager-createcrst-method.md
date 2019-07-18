@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b63b283a28ed27a70698c45bdc87d63fef0daf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 88b7b2093ecb2c601e57eca32e25c21e91641281
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117941"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753474"
 ---
 # <a name="ihostsyncmanagercreatecrst-method"></a>IHostSyncManager::CreateCrst-Methode
 Erstellt ein Kritischer Abschnitt-Objekt, für die Synchronisierung.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateCrst (  
     [out] IHostCrst** ppCrst  
 );  
@@ -70,4 +70,4 @@ HRESULT CreateCrst (
 - [IHostSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
 - [IHostSemaphore-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
 - [Mutexe](../../../../docs/standard/threading/mutexes.md)
-- [Semaphore und SemaphoreSlim](../../../../docs/standard/threading/semaphore-and-semaphoreslim.md)
+- [Semaphore and SemaphoreSlim (Semaphore und SemaphoreSlim)](../../../../docs/standard/threading/semaphore-and-semaphoreslim.md)

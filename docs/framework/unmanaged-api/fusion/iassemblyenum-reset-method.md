@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0300165f33bfb3d5b4f05917f516feb26f0b5ec8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 075f952e6d5b3e863ca720bb206f33471809d09e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179854"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754085"
 ---
 # <a name="iassemblyenumreset-method"></a>IAssemblyEnum::Reset-Methode
 Dies setzt [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) Objekt, das die Position des ersten.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Reset (  
     void  
 );  

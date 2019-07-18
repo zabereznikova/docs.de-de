@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03c5c9d04567832951062fe1512a292f9b32a94b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 101bcac4ad25a0e1c0a5971aad639b0fb05378b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155674"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779967"
 ---
 # <a name="iclrtaskmanagersetuilocale-method"></a>ICLRTaskManager::SetUILocale-Methode
 Benachrichtigt die common Language Runtime (CLR), dass der Host, das Gebietsschema der Benutzeroberfläche (UI) oder die Kultur geändert hat, in der aktuell ausgeführten Aufgabe an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetUILocale (  
     [in] LCID lcid  
 );  

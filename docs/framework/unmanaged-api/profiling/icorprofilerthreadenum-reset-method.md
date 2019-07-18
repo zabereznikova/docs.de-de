@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6ced5572a482977316048b150ce377cb566ee15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 39446289f8197a14ab1d67ea2e80c16777e9bb56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222639"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781105"
 ---
 # <a name="icorprofilerthreadenumreset-method"></a>ICorProfilerThreadEnum::Reset-Methode
 Verschiebt den Cursor des Enumerators an die Anfangsposition der Sequenz.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Reset();  
 ```  
   

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a5a5bb26912c87cdf37ba0d8f0cee1cf1ffa97
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2cccb862a0dfd16eb0bbfe557e3c35373cd7e7b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142011"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740809"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT-Struktur
 Bietet Informationen zum Layout eines Arrayobjekts im Speicher.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct COR_ARRAY_LAYOUT {  
     COR_TYPEID componentID;  
     CorElementType componentType;  

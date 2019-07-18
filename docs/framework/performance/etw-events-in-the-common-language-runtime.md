@@ -8,28 +8,28 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d059a5d4df402b309f628bf3e9393114c4cdeec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 441cae712e7338b36e8983f41341b1721770a0bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191392"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489709"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>ETW-Ereignisse in der Common Language Runtime
 Die Common Language Runtime (CLR) stellt nützliche Diagnoseinformationen für die Ereignisablaufverfolgung für Windows (ETW) durch eine große Vielfalt von Ereignissen für das Debuggen und die Profilerstellung bereit. CLR-ETW-Ereignisse nutzen das Windows-ETW-Ablaufverfolgungssystem, um die bestehende Unterstützung für die Profilerstellung und das Debuggen zu erweitern, die von der Common Language Runtime bereitgestellt wird.  
   
  Weitere Informationen zu ETW finden Sie im Artikel [Improve Debugging and Performance Tuning with ETW (Verbessertes Debugging und Leistungsoptimierung mit ETW)](https://go.microsoft.com/fwlink/?LinkID=161142) auf MSDN. Weitere Informationen zu Xperf finden Sie im Eintrag [Windows Performance Toolkit – Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) im NTDebugging-Blog.  
   
- Für alle Ereignisse, die in den Themen zu Ereignissen beschrieben werden, ist [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oder höher erforderlich. Das Betriebssystem „Windows Vista“ ist die mindestens erforderliche Version für den Client, und Windows Server 2008 ist die mindestens erforderliche Version für den Server.  
+ .NET Framework 4 oder höher ist erforderlich, damit alle Ereignisse in den Ereignisthemen beschrieben. Das Betriebssystem „Windows Vista“ ist die mindestens erforderliche Version für den Client, und Windows Server 2008 ist die mindestens erforderliche Version für den Server.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Steuern der Protokollierung in .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
+ [Controlling .NET Framework Logging (Steuern der Protokollierung in .NET Framework)](../../../docs/framework/performance/controlling-logging.md)  
  Beschreibt die Tools und Befehle zum Erfassen und Anzeigen von ETW-Ereignissen.  
   
- [CLR-ETW-Anbieter](../../../docs/framework/performance/clr-etw-providers.md)  
+ [CLR ETW Providers (CLR-ETW-Anbieter)](../../../docs/framework/performance/clr-etw-providers.md)  
  Bietet Informationen zu den Runtime- und Rundownanbietern, und wie Sie diese für die ETW-Datensammlung nutzen können.  
   
- [CLR-ETW-Schlüsselwörter und -Ebenen](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
+ [CLR ETW Keywords and Levels (CLR-ETW-Schlüsselwörter und -Ebenen)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
  Beschreibt die Schlüsselwörter für die Runtime- und Rundownanbieter, die das Filtern der Ereignisse nach Kategorie ermöglichen.  
   
  [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)  
@@ -37,4 +37,4 @@ Die Common Language Runtime (CLR) stellt nützliche Diagnoseinformationen für d
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ETW-Ereignisse in .NET Framework](../../../docs/framework/performance/etw-events.md)
+- [ETW Events in the .NET Framework (ETW-Ereignisse in .NET Framework)](../../../docs/framework/performance/etw-events.md)

@@ -11,12 +11,12 @@ api_type:
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12414064bf0651eab443951bde2a50dcff7b2291
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0a6e00d55157046679ee1de0a7ff8e2764c1e357
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226961"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758055"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7::ModuleInMemorySymbolsUpdated Method
 [Wird nur in .NET Framework 4.6.1 und höheren Versionen unterstützt]  
@@ -25,7 +25,7 @@ ms.locfileid: "59226961"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ModuleInMemorySymbolsUpdated(  
      ModuleID moduleId  
 );  
@@ -56,4 +56,4 @@ HRESULT ModuleInMemorySymbolsUpdated(
 
 - [ModuleLoadFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)
 - [SetEventMask2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
-- [ICorProfilerCallback7-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)
+- [CorProfilerCallback7-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)

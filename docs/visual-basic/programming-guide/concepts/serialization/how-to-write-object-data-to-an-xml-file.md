@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 17f8463a4b905028d37a2e005562867f87f4bd2b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843733"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624381"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)
 Dieses Beispiel verwendet die <xref:System.Xml.Serialization.XmlSerializer>-Klasse, um das Objekt aus einer Klasse in eine XML-Datei zu schreiben.  
@@ -43,13 +43,13 @@ End Module
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
+- Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.  
   
--   Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
+- Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).  
   
--   Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).  
+- Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).  
   
--   Der Datenträger ist voll (<xref:System.IO.IOException>).  
+- Der Datenträger ist voll (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist. Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine `Create`-Berechtigung für den Ordner. Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung für den `Write`-Zugriff, also eine geringere Berechtigung. Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die `Read`-Berechtigung für eine einzelne Datei erteilt werden (anstatt `Create`-Berechtigungen für den gesamten Ordner zu gewähren).  

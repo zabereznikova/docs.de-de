@@ -10,11 +10,11 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 ms.openlocfilehash: 3abfd0bdd40f98a9e4774677fc2cd5068c14333f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673770"
 ---
 # <a name="filter-element-for-add-for-listeners-for-source"></a>\<Filter >-Element für \<hinzufügen > für \<Listener > für \<Quelle >
 Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle hinzu.  
@@ -96,4 +96,4 @@ Fügt einen Filter zu einem Listener in der `Listeners`-Sammlung für eine Ablau
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

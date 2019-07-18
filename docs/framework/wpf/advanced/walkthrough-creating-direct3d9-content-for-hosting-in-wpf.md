@@ -7,59 +7,59 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 8acef4a52c9317618485a7c46c1e22cc2524dd69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e1cb5832ec6e383d1ee183b6bc9a86745ecc207c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379600"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605842"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Exemplarische Vorgehensweise: Erstellen von Direct3D9-Inhalten zum Hosten in WPF
 Diese exemplarische Vorgehensweise veranschaulicht die Erstellung von Direct3D9-Inhalt, der für das Hosten in einer Windows Presentation Foundation (WPF)-Anwendung geeignet ist. Weitere Informationen zum Hosten von Direct3D9-Inhalt in WPF-Anwendungen, finden Sie unter [zwischen WPF und Direct3D9](wpf-and-direct3d9-interoperation.md).
 
- Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:
+ Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:
 
--   Erstellen Sie ein Direct3D9-Projekt.
+- Erstellen Sie ein Direct3D9-Projekt.
 
--   Konfigurieren des Direct3D9-Projekts für das Hosten in einer WPF-Anwendung.
+- Konfigurieren des Direct3D9-Projekts für das Hosten in einer WPF-Anwendung.
 
  Wenn Sie fertig sind, müssen Sie eine DLL, die Direct3D9-Inhalt für die Verwendung in einer WPF-Anwendung enthält.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
 
--   Visual Studio 2010.
+- Visual Studio 2010.
 
--   DirectX SDK 9 oder höher.
+- DirectX SDK 9 oder höher.
 
 ## <a name="creating-the-direct3d9-project"></a>Erstellen des Projekts Direct3D9
  Der erste Schritt ist zum Erstellen und konfigurieren Sie das Direct3D9-Projekt.
 
 #### <a name="to-create-the-direct3d9-project"></a>Zum Erstellen des Projekts Direct3D9
 
-1.  Erstellen Sie ein neues Win32-Projekt in C++, die mit dem Namen `D3DContent`.
+1. Erstellen Sie ein neues Win32-Projekt in C++, die mit dem Namen `D3DContent`.
 
      Die Win32-Anwendungsassistenten wird geöffnet und zeigt die Willkommensseite.
 
-2.  Klicken Sie auf **Weiter**.
+2. Klicken Sie auf **Weiter**.
 
      Der Application Settings-Bildschirm angezeigt wird.
 
-3.  In der **Anwendungstyp:** wählen Sie im Abschnitt der **DLL** Option.
+3. In der **Anwendungstyp:** wählen Sie im Abschnitt der **DLL** Option.
 
-4.  Klicken Sie auf **Fertig stellen**.
+4. Klicken Sie auf **Fertig stellen**.
 
      Das Projekt D3DContent wird generiert.
 
-5.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste in des D3DContent-Projekts, und wählen **Eigenschaften**.
+5. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste in des D3DContent-Projekts, und wählen **Eigenschaften**.
 
      Die **D3DContent Eigenschaftenseiten** Dialogfeld wird geöffnet.
 
-6.  Wählen Sie die **C/C++-** Knoten.
+6. Wählen Sie die **C/C++-** Knoten.
 
-7.  In der **Additional Include Directories** geben der Speicherort des DirectX Ordner einschließen. Der Standardspeicherort für diesen Ordner ist: %ProgramFiles%\Microsoft DirectX SDK (*Version*) \include"-Unterverzeichnis.
+7. In der **Additional Include Directories** geben der Speicherort des DirectX Ordner einschließen. Der Standardspeicherort für diesen Ordner ist: %ProgramFiles%\Microsoft DirectX SDK (*Version*) \include"-Unterverzeichnis.
 
-8.  Doppelklicken Sie auf die **Linker** Knoten aus, um ihn zu erweitern.
+8. Doppelklicken Sie auf die **Linker** Knoten aus, um ihn zu erweitern.
 
 9. In der **Zusätzliche Bibliotheksverzeichnisse** geben den Speicherort des Ordners der DirectX-Bibliotheken. Der Standardspeicherort für diesen Ordner ist: %ProgramFiles%\Microsoft DirectX SDK (*Version*) \Lib\x86.
 
@@ -74,7 +74,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Erstellung von Direct3D9-
 
 #### <a name="to-create-the-direct3d9-content"></a>Die Direct3D9 Inhalte erstellen
 
-1.  Projektmappen-Explorer das Projekt mit dem Namen im folgenden drei C++-Klassen hinzugefügt.
+1. Projektmappen-Explorer das Projekt mit dem Namen im folgenden drei C++-Klassen hinzugefügt.
 
      `CRenderer` (mit virtuellen Destruktor)
 
@@ -82,31 +82,31 @@ Diese exemplarische Vorgehensweise veranschaulicht die Erstellung von Direct3D9-
 
      `CTriangleRenderer`
 
-2.  Öffnen Sie Renderer.h im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
+2. Öffnen Sie Renderer.h im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
-3.  Öffnen Sie Renderer.cpp im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
+3. Öffnen Sie Renderer.cpp im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
-4.  Öffnen Sie RendererManager.h im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
+4. Öffnen Sie RendererManager.h im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
-5.  Öffnen Sie RendererManager.cpp im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
+5. Öffnen Sie RendererManager.cpp im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
-6.  Öffnen Sie TriangleRenderer.h im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
+6. Öffnen Sie TriangleRenderer.h im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
-7.  Öffnen Sie TriangleRenderer.cpp im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
+7. Öffnen Sie TriangleRenderer.cpp im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
-8.  Öffnen Sie "stdafx.h" im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
+8. Öffnen Sie "stdafx.h" im Code-Editor, und Ersetzen Sie den automatisch generierten Code durch den folgenden Code.
 
      [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 
@@ -137,7 +137,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Erstellung von Direct3D9-
 
 ## <a name="next-steps"></a>Nächste Schritte
 
--   Hosten Sie den Direct3D9-Inhalt in einer WPF-Anwendung. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
+- Hosten Sie den Direct3D9-Inhalt in einer WPF-Anwendung. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md).
 
 ## <a name="see-also"></a>Siehe auch
 

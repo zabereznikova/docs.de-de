@@ -1,48 +1,41 @@
-items:
-- name: Datumsangaben, Uhrzeiten und Zeitzonen
+- name: 'Datumsangaben, Uhrzeiten und Zeitzonen'
   href: index.md
   items:
-  - name: Übersicht über Zeitzonen
-    href: time-zone-overview.md
-  - name: Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"
-    href: choosing-between-datetime.md
-  - name: Suchen der in einem lokalen System definierten Zeitzonen
-    href: finding-the-time-zones-on-local-system.md
-  - name: 'Vorgehensweise: Aufzählen der auf einem Computer vorhandenen Zeitzonen'
-    href: enumerate-time-zones.md
-  - name: 'Vorgehensweise: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte'
-    href: access-utc-and-local.md
-  - name: 'Vorgehensweise: Instanziieren eines TimeZoneInfo-Objekts'
-    href: instantiate-time-zone-info.md
-  - name: Instanziieren eines "DateTimeOffset"-Objekts
-    href: instantiating-a-datetimeoffset-object.md
-  - name: 'Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln'
-    href: create-time-zones-without-adjustment-rules.md
-  - name: 'Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln'
-    href: create-time-zones-with-adjustment-rules.md
-  - name: Speichern und Wiederherstellen von Zeitzonen
-    href: saving-and-restoring-time-zones.md
-  - name: 'Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource'
-    href: save-time-zones-to-an-embedded-resource.md
-  - name: 'Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource'
-    href: restore-time-zones-from-an-embedded-resource.md
-  - name: Arbeiten mit Kalendern
-    href: working-with-calendars.md
-  - name: Durchführen arithmetischer Datums- und Uhrzeitoperationen
-    href: performing-arithmetic-operations.md
-  - name: 'Vorgehensweise: Verwenden von Zeitzonen in arithmetischen Datums- und Uhrzeitoperationen'
-    href: use-time-zones-in-arithmetic.md
-  - name: Konvertieren zwischen DateTime und DateTimeOffset
-    href: converting-between-datetime-and-offset.md
-  - name: Konvertieren von Uhrzeiten zwischen Zeitzonen
-    href: converting-between-time-zones.md
-  - name: 'Vorgehensweise: Auflösen mehrdeutiger Zeiten'
-    href: resolve-ambiguous-times.md
-  - name: 'Vorgehensweise: Auflösen mehrdeutiger Zeiten durch den Benutzer'
-    href: let-users-resolve-ambiguous-times.md
-ms.openlocfilehash: 302dc3e44cacb3148ae0e246220721ccfda44d98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469114"
+    - name: Übersicht über Zeitzonen
+      href: time-zone-overview.md
+    - name: 'Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"'
+      href: choosing-between-datetime.md
+    - name: Suchen der in einem lokalen System definierten Zeitzonen
+      href: finding-the-time-zones-on-local-system.md
+    - name: 'Vorgehensweise: Aufzählen der auf einem Computer vorhandenen Zeitzonen'
+      href: enumerate-time-zones.md
+    - name: 'Vorgehensweise: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte'
+      href: access-utc-and-local.md
+    - name: 'Vorgehensweise: Instanziieren eines TimeZoneInfo-Objekts'
+      href: instantiate-time-zone-info.md
+    - name: Instanziieren eines "DateTimeOffset"-Objekts
+      href: instantiating-a-datetimeoffset-object.md
+    - name: 'Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln'
+      href: create-time-zones-without-adjustment-rules.md
+    - name: 'Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln'
+      href: create-time-zones-with-adjustment-rules.md
+    - name: Speichern und Wiederherstellen von Zeitzonen
+      href: saving-and-restoring-time-zones.md
+    - name: 'Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource'
+      href: save-time-zones-to-an-embedded-resource.md
+    - name: 'Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource'
+      href: restore-time-zones-from-an-embedded-resource.md
+    - name: Arbeiten mit Kalendern
+      href: working-with-calendars.md
+    - name: Durchführen arithmetischer Datums- und Uhrzeitoperationen
+      href: performing-arithmetic-operations.md
+    - name: 'Vorgehensweise: Verwenden von Zeitzonen in arithmetischen Datums- und Uhrzeitoperationen'
+      href: use-time-zones-in-arithmetic.md
+    - name: Konvertieren zwischen DateTime und DateTimeOffset
+      href: converting-between-datetime-and-offset.md
+    - name: Konvertieren von Uhrzeiten zwischen Zeitzonen
+      href: converting-between-time-zones.md
+    - name: 'Vorgehensweise: Auflösen mehrdeutiger Zeiten'
+      href: resolve-ambiguous-times.md
+    - name: 'Vorgehensweise: Auflösen mehrdeutiger Zeiten durch den Benutzer'
+      href: let-users-resolve-ambiguous-times.md

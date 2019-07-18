@@ -3,11 +3,11 @@ title: Zuordnen von CLR-Methoden zu kanonischen Funktionen
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605716"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Zuordnen von CLR-Methoden zu kanonischen Funktionen
 
@@ -40,7 +40,7 @@ In LINQ-Szenarios müssen bei Abfragen für das Entity Framework bestimmte CLR-M
 
 |System.String-Methode (Instanz)|Kanonische Funktion|Hinweise|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Wenn `value` keine Konstante ist, dann wird dies zugeordnet zu: IndexOf(`this`, `value`) > 0.|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Wenn `value` nicht ist eine Konstante ist, wird dies zu: IndexOf zugeordnet (`this`, `value`) > 0|
 |Boolean EndsWith(String `value`)|`this` WIE `'` % `value`"|Wenn `value` keine Konstante ist, dann wird dies zugeordnet zu: Right(`this`, length(`value`)) = `value`.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Wenn `value` keine Konstante ist, dann wird dies zugeordnet zu: IndexOf(`this`, `value`) = 1.|
 |Länge|Length(`this`)||
@@ -67,10 +67,10 @@ In LINQ-Szenarios müssen bei Abfragen für das Entity Framework bestimmte CLR-M
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Boolean op_Equality(DateTime `d1`, DateTime `d2`)|=-Operator||
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|>-Operator||
-|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|>=-Operator||
+|Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> =-Operator||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!=-Operator||
 |Boolesche Op_LessThan ("DateTime" `t1`, "DateTime" `t2`)|<-Operator||
-|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<=-Operator||
+|Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< =-Operator||
 |Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` As DateInterval, \_<br /><br /> ByVal `DateValue` As DateTime, \_<br /><br /> Optional ByVal `FirstDayOfWeekValue` As FirstDayOfWeek = VbSunday, \_<br /><br /> Optionale ByVal `FirstWeekOfYearValue` als FirstWeekOfYear VbFirstJan1 = \_<br /><br /> ) As Integer||Weitere Informationen finden Sie im Abschnitt über die DatePart-Funktion.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
@@ -126,7 +126,7 @@ Die für die `get`-Methoden in den aufgeführten Eigenschaften gezeigte Zuordnun
 |-----------------------------------------|------------------------|-----------|
 |Stunden|Hour(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 |Milliseconds|Millisecond(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
-|Besprechungsprotokoll|Minute(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
+|Minuten|Minute(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 |Seconds|Second(`this`)|Wird für SQL Server 2005 nicht unterstützt.|
 
 > [!NOTE]

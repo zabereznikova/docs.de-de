@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b6916c223aee615fad0bb9e5a47691122db41c98
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102400"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752055"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR-Enumeration
 Enthält Werte, die zum Angeben von Verhalten, Funktionen oder Ereignissen verwendet werden, die der Profiler abonnieren muss.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_MONITOR_NONE                = 0x00000000,  
     COR_PRF_MONITOR_FUNCTION_UNLOADS    = 0x00000001,  
@@ -102,15 +102,15 @@ typedef enum {
 ## <a name="members"></a>Member  
  Den folgenden Abschnitten `COR_PRF_MONITOR` Enumerationsmember nach Kategorie. Die Kategorien sind:  
   
--   [Keine Flags festgelegt](#None)  
+- [Keine Flags festgelegt](#None)  
   
--   [Rückruf-Flags](#Callback)  
+- [Rückruf-flags](#Callback)  
   
--   [Flags zur Aktivierung von Funktionen](#Feature)  
+- [Flags zur Aktivierung von Feature](#Feature)  
   
--   [Konfigurationsflags](#Config)  
+- [Konfigurationsflags](#Config)  
   
--   [Kombinierte Flags](#Composite)  
+- [Kombinierte flags](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>Keine Flags festgelegt  
@@ -135,7 +135,7 @@ typedef enum {
 |`COR_PRF_MONITOR_ENTERLEAVE`|Steuerelemente der `FunctionEnter*`, `FunctionLeave*`, und `FunctionTailCall*` [profilerstellung für globale statische Funktionen](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md).|  
 |`COR_PRF_MONITOR_EXCEPTIONS`|Steuerelemente der [ExceptionThrown](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md) Rückruf und den `ExceptionSearch*`, `ExceptionOSHandler*`, `ExceptionUnwind*`, und `ExceptionCatcher*` Rückrufe in die [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) Schnittstelle.|  
 |`COR_PRF_MONITOR_FUNCTION_UNLOADS`|Steuerelemente der [FunctionUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md) Rückruf in die [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) Schnittstelle.|  
-|`COR_PRF_MONITOR_GC`|Steuerelemente der [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), [MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md), [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md), [ SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md), [SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), [ObjectsAllocatedByClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md), [ RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md), [RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md), [HandleCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md), [HandleDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md), und [FinalizeableObjectQueued ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) Rückrufe in die `ICorProfilerCallback*` Schnittstellen.|  
+|`COR_PRF_MONITOR_GC`|Steuerelemente der [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), [MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md), [MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md), [ SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md), [SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), [ObjectsAllocatedByClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md), [ RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md), [RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md), [HandleCreated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md), [HandleDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md), und [FinalizeableObjectQueued ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) Rückrufe in die `ICorProfilerCallback*` Schnittstellen. Beim `COR_PRF_MONITOR_GC` ist zugeordneten, gleichzeitige Garbage Collection ist deaktiviert.|  
 |`COR_PRF_MONITOR_JIT_COMPILATION`|Steuerelemente der `JITCompilation*`, [JITFunctionPitched](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md), und [JITInlining](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) Rückrufe in die [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) Schnittstelle.|  
 |`COR_PRF_MONITOR_MODULE_LOADS`|Steuerelemente der `ModuleLoad*`, `ModuleUnload*`, und [ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) Rückrufe in die [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) Schnittstelle.|  
 |`COR_PRF_MONITOR_OBJECT_ALLOCATED`|Steuerelemente der [ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) Rückruf in die [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) Schnittstelle.|  

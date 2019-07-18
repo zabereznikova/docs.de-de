@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eeff1c78b768e2c8f5a2583db86480ad96c5a9b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162723"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655447"
 ---
 # <a name="extending-dispatchers"></a>Erweitern von Verteilern
 Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde liegenden Kanälen abzufangen, sie in Methodenaufrufe im Anwendungscode zu übersetzen und die Ergebnisse zurück an den Aufrufer zu senden. Verteilererweiterungen versetzen Sie in die Lage, diese Verarbeitung zu ändern.  Sie können Nachrichten- oder Parameterinspektoren implementieren, die den Inhalt von Nachrichten oder Parametern überprüfen bzw. ändern.  Sie können die Weiterleitung von Nachrichten an Vorgänge ändern oder andere Funktionalität bereitstellen.  
@@ -40,61 +40,61 @@ Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde li
 ## <a name="scenarios"></a>Szenarien  
  Es gibt eine Reihe von Gründen, den Verteiler zu erweitern:  
   
--   Benutzerdefinierte Nachrichtenvalidierung. Benutzer können durchsetzen, dass eine Nachricht für ein bestimmtes Schema gültig ist. Dies kann über die Implementierung der Nachrichteninterceptorschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md).  
+- Benutzerdefinierte Nachrichtenvalidierung. Benutzer können durchsetzen, dass eine Nachricht für ein bestimmtes Schema gültig ist. Dies kann über die Implementierung der Nachrichteninterceptorschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Nachrichteninspektoren](../../../../docs/framework/wcf/samples/message-inspectors.md).  
   
--   Benutzerdefinierte Nachrichtenprotokollierung. Benutzer können einige Anwendungsnachrichten prüfen und protokollieren, die durch einen Endpunkt fließen. Dies kann ebenfalls mit den Nachrichteninterceptorschnittstellen erreicht werden.  
+- Benutzerdefinierte Nachrichtenprotokollierung. Benutzer können einige Anwendungsnachrichten prüfen und protokollieren, die durch einen Endpunkt fließen. Dies kann ebenfalls mit den Nachrichteninterceptorschnittstellen erreicht werden.  
   
--   Benutzerdefinierte Nachrichtentransformationen. Benutzer können bestimmte Transformationen (beispielsweise die Versionsverwaltung) auf die Nachricht in der Laufzeit anwenden. Auch dies kann mit den Nachrichteninterceptorschnittstellen erreicht werden.  
+- Benutzerdefinierte Nachrichtentransformationen. Benutzer können bestimmte Transformationen (beispielsweise die Versionsverwaltung) auf die Nachricht in der Laufzeit anwenden. Auch dies kann mit den Nachrichteninterceptorschnittstellen erreicht werden.  
   
--   Benutzerdefiniertes Datenmodell. Benutzer können über ein Datenmodell für die Serialisierung nicht unterstützt, die standardmäßig in WCF verfügen (d. h., <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, und unformatierte Nachrichten). Dies kann über die Implementierung der Nachrichtenformatierungsschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Vorgangsformatierer und Vorgangsauswahl](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+- Benutzerdefiniertes Datenmodell. Benutzer können über ein Datenmodell für die Serialisierung nicht unterstützt, die standardmäßig in WCF verfügen (d. h., <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, und unformatierte Nachrichten). Dies kann über die Implementierung der Nachrichtenformatierungsschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Vorgangsformatierer und Vorgangsauswahl](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
--   Benutzerdefinierte Parametervalidierung. Benutzer können durchsetzen, dass typisierte Parameter gültig sind (im Gegensatz zu XML). Dies kann mit den Parameterinspektorschnittstellen erreicht werden.  
+- Benutzerdefinierte Parametervalidierung. Benutzer können durchsetzen, dass typisierte Parameter gültig sind (im Gegensatz zu XML). Dies kann mit den Parameterinspektorschnittstellen erreicht werden.  
   
--   Benutzerdefinierte Vorgangsverteilung. Benutzer können die Verteilung an etwas anderes als an eine Aktion implementieren &amp;#8211; beispielsweise an das Textelement oder an eine benutzerdefinierte Nachrichteneigenschaft. Dies kann über die Verwendung der <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Schnittstelle erreicht werden. Ein Beispiel finden Sie unter [Vorgangsformatierer und Vorgangsauswahl](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
+- Benutzerdefinierte Vorgangsverteilung. Benutzer können die Verteilung an etwas anderes als an eine Aktion implementieren &amp;#8211; beispielsweise an das Textelement oder an eine benutzerdefinierte Nachrichteneigenschaft. Dies kann über die Verwendung der <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Schnittstelle erreicht werden. Ein Beispiel finden Sie unter [Vorgangsformatierer und Vorgangsauswahl](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
   
--   Objektpooling. Benutzer können Instanzen zusammenlegen, statt für jeden Aufruf eine neue Instanz zuzuordnen. Dies kann über die Implementierung der Instanzanbieterschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Pooling](../../../../docs/framework/wcf/samples/pooling.md).  
+- Objektpooling. Benutzer können Instanzen zusammenlegen, statt für jeden Aufruf eine neue Instanz zuzuordnen. Dies kann über die Implementierung der Instanzanbieterschnittstellen erreicht werden. Ein Beispiel finden Sie unter [Pooling](../../../../docs/framework/wcf/samples/pooling.md).  
   
--   Instanzleasing. Benutzer können ein Leasingmuster ähnlich dem von .NET&amp;#160;Framework Remoting für die Lebensdauer der Instanz implementieren. Dies kann mit den Instanzkontextlebensdauer-Schnittstellen erreicht werden.  
+- Instanzleasing. Benutzer können ein Leasingmuster ähnlich dem von .NET&amp;#160;Framework Remoting für die Lebensdauer der Instanz implementieren. Dies kann mit den Instanzkontextlebensdauer-Schnittstellen erreicht werden.  
   
--   Benutzerdefinierte Fehlerbehandlung. Benutzer können steuern, wie lokale Fehler verarbeitet werden und wie Clients über Fehler unterrichtet werden. Dies kann mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstellen implementiert werden.  
+- Benutzerdefinierte Fehlerbehandlung. Benutzer können steuern, wie lokale Fehler verarbeitet werden und wie Clients über Fehler unterrichtet werden. Dies kann mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstellen implementiert werden.  
   
--   Benutzerdefiniertes Autorisierungsverhalten Benutzer können eine benutzerdefinierte Zugriffssteuerung implementieren, indem sie die Vertrags- und Vorgangslaufzeitelemente erweitern und auf in der Nachricht enthaltenen Tokens basierende Sicherheitsüberprüfungen hinzufügen. Dies kann entweder mit den Nachrichteninterceptor- oder den Parameterinterceptorschnittstellen erreicht werden. Beispiele finden Sie in [Sicherheitserweiterbarkeit](../../../../docs/framework/wcf/samples/security-extensibility.md).  
+- Benutzerdefiniertes Autorisierungsverhalten Benutzer können eine benutzerdefinierte Zugriffssteuerung implementieren, indem sie die Vertrags- und Vorgangslaufzeitelemente erweitern und auf in der Nachricht enthaltenen Tokens basierende Sicherheitsüberprüfungen hinzufügen. Dies kann entweder mit den Nachrichteninterceptor- oder den Parameterinterceptorschnittstellen erreicht werden. Beispiele finden Sie in [Sicherheitserweiterbarkeit](../../../../docs/framework/wcf/samples/security-extensibility.md).  
   
     > [!CAUTION]
     >  Da Ändern der Sicherheitseigenschaften das Potenzial, Beeinträchtigung der Sicherheit des WCF-Anwendungen verfügt, wird empfohlen, dass Sie verpflichten sich, sicherheitsbezogene Änderungen mit Sorgfalt und vor der Bereitstellung gründlich zu testen.  
   
--   Benutzerdefinierte WCF-Laufzeitvalidierungs-Steuerelemente. Sie können benutzerdefinierte Validierungssteuerelemente installieren, die Dienste, Verträge und Bindungen, um auf Unternehmensebene Richtlinien in Bezug auf WCF-Anwendungen zu erzwingen zu untersuchen. (Z. B. finden Sie unter [Vorgehensweise: Sperren von Endpunkten im Unternehmen](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
+- Benutzerdefinierte WCF-Laufzeitvalidierungs-Steuerelemente. Sie können benutzerdefinierte Validierungssteuerelemente installieren, die Dienste, Verträge und Bindungen, um auf Unternehmensebene Richtlinien in Bezug auf WCF-Anwendungen zu erzwingen zu untersuchen. (Z. B. finden Sie unter [Vorgehensweise: Sperren von Endpunkten im Unternehmen](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
   
 ### <a name="using-the-dispatchruntime-class"></a>Verwenden der DispatchRuntime-Klasse  
  Verwenden Sie die <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse, um entweder das Standardverhalten eines Diensts oder eines einzelnen Endpunkts zu ändern, oder um Objekte einzufügen, die benutzerdefinierte Änderungen für einen oder für beide der folgenden Dienstprozesse implementieren (oder für Clientprozesse im Fall eines Duplexclients):  
   
--   Die Transformation eingehender Nachrichten in Objekte und die Freigabe dieser Objekte als Methodenaufrufe in einem Dienstobjekt.  
+- Die Transformation eingehender Nachrichten in Objekte und die Freigabe dieser Objekte als Methodenaufrufe in einem Dienstobjekt.  
   
--   Die Transformation von Objekten, die von der Antwort auf einen Dienstvorgangsaufruf empfangen wurden, in ausgehende Nachrichten.  
+- Die Transformation von Objekten, die von der Antwort auf einen Dienstvorgangsaufruf empfangen wurden, in ausgehende Nachrichten.  
   
  Die <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse ermöglicht Ihnen, den Kanal- oder Endpunktverteiler für alle Nachrichten in einem bestimmten Vertrag auch dann abzufangen und zu erweitern, wenn eine Nachricht nicht erkannt wurde. Wenn eine Nachricht eintrifft, die mit keinem im Vertrag deklarierten Vorgang übereinstimmt, wird sie an den Vorgang geleitet, der von der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.UnhandledDispatchOperation%2A>-Eigenschaft zurückgegeben wird. Informationen dazu, wie ein Verteiler erweitert wird, der alle Nachrichten für einen bestimmten Vorgang abfängt, finden Sie unter der <xref:System.ServiceModel.Dispatcher.DispatchOperation>-Klasse.  
   
  Es gibt vier Hauptbereiche der Verteilererweiterbarkeit, die von der <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse verfügbar gemacht werden:  
   
-1.  Kanalkomponenten verwenden Eigenschaften der <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse sowie jene des zugeordneten Kanalverteilers, der von der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A>-Eigenschaft zurückgegeben wird, um festzulegen, wie der Kanalverteiler Kanäle akzeptiert und schließt. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> und <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A>.  
+1. Kanalkomponenten verwenden Eigenschaften der <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse sowie jene des zugeordneten Kanalverteilers, der von der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A>-Eigenschaft zurückgegeben wird, um festzulegen, wie der Kanalverteiler Kanäle akzeptiert und schließt. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> und <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A>.  
   
-2.  Nachrichtenkomponenten werden für jede verarbeitete Nachricht angepasst. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> und <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>.  
+2. Nachrichtenkomponenten werden für jede verarbeitete Nachricht angepasst. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> und <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>.  
   
-3.  Instanzkomponenten passen die Erstellung, Lebensdauer und Freigabe von Instanzen des Diensttyps an. Weitere Informationen zur Lebensdauer von Dienstobjekten finden Sie in den Ausführungen zur <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> und <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>.  
+3. Instanzkomponenten passen die Erstellung, Lebensdauer und Freigabe von Instanzen des Diensttyps an. Weitere Informationen zur Lebensdauer von Dienstobjekten finden Sie in den Ausführungen zur <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> und <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>.  
   
-4.  Sicherheitsrelevante Komponenten können die folgenden Eigenschaften verwenden:  
+4. Sicherheitsrelevante Komponenten können die folgenden Eigenschaften verwenden:  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> Gibt an, wohin Überwachungsereignisse geschrieben werden.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> gibt an, wohin Überwachungsereignisse geschrieben werden.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Steuert, ob der Dienst versucht, mithilfe der Anmeldeinformationen der eingehenden Nachricht einen Identitätswechsel durchzuführen.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> steuert, ob der Dienst versucht, mithilfe der Anmeldeinformationen der eingehenden Nachricht einen Identitätswechsel durchzuführen.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Steuert, ob Ereignisse für erfolgreiche Nachrichtenauthentifizierung in das Ereignisprotokoll durch angegeben geschrieben werden <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> steuert, ob Ereignisse für erfolgreiche Nachrichtenauthentifizierung in das Ereignisprotokoll geschrieben werden, das von <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> angegeben wird.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> Steuerelemente wie die <xref:System.Threading.Thread.CurrentPrincipal%2A> festgelegt wird.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> steuert, wie die <xref:System.Threading.Thread.CurrentPrincipal%2A>-Eigenschaft festgelegt wird.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Gibt an, wie die Überwachung von Autorisierungsereignissen durchgeführt wird.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> gibt an, wie die Überwachung von Autorisierungsereignissen durchgeführt wird.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Gibt an, ob nicht schwerwiegende Ausnahmen unterdrückt werden sollen, die während des protokollierungsprozesses auftreten.  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> gibt an, ob während des Protokollierungsprozesses auftretende nicht schwerwiegende Ausnahmen unterdrückt werden sollen.  
   
  In der Regel werden benutzerdefinierte Erweiterungsobjekte einer <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Eigenschaft zugewiesen oder durch ein Dienstverhalten (ein Objekt, das <xref:System.ServiceModel.Description.IServiceBehavior> implementiert), durch ein Vertragsverhalten (ein Objekt, das <xref:System.ServiceModel.Description.IContractBehavior> implementiert) oder durch ein Endpunktverhalten (ein Objekt, das <xref:System.ServiceModel.Description.IEndpointBehavior> implementiert) in eine Auflistung eingefügt. Das installierende Verhaltensobjekt wird dann der entsprechenden Verhaltensauflistung entweder programmgesteuert oder durch Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>-Objekts hinzugefügt, um das Verhalten, das eingefügt werden soll, mithilfe einer Anwendungskonfigurationsdatei zu aktivieren.  
   
@@ -109,28 +109,28 @@ Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde li
   
  Die folgenden Eigenschaften kontrollieren die Laufzeitausführung auf Vorgangsebene:  
   
--   Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> erhalten die jeweiligen Werte für den Vorgang.  
+- Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> erhalten die jeweiligen Werte für den Vorgang.  
   
--   Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> geben das Transaktionsverhalten an.  
+- Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> geben das Transaktionsverhalten an.  
   
--   Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> steuern die Lebensdauer des benutzerdefinierten Dienstobjekts bezogen auf den <xref:System.ServiceModel.InstanceContext>.  
+- Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> steuern die Lebensdauer des benutzerdefinierten Dienstobjekts bezogen auf den <xref:System.ServiceModel.InstanceContext>.  
   
--   Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> ermöglichen die explizite Steuerung der Konvertierung von Nachrichten in Objekte und von Objekten in Nachrichten.  
+- Die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A> und <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> ermöglichen die explizite Steuerung der Konvertierung von Nachrichten in Objekte und von Objekten in Nachrichten.  
   
--   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A>-Eigenschaft gibt die Ebene des Identitätswechsels des Vorgangs an.  
+- Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A>-Eigenschaft gibt die Ebene des Identitätswechsels des Vorgangs an.  
   
--   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A>-Eigenschaft fügt benutzerdefinierte Erweiterungen des Aufrufkontexts für den Vorgang ein.  
+- Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A>-Eigenschaft fügt benutzerdefinierte Erweiterungen des Aufrufkontexts für den Vorgang ein.  
   
--   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A>-Eigenschaft steuert, wann Parameterobjekte gelöscht werden.  
+- Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A>-Eigenschaft steuert, wann Parameterobjekte gelöscht werden.  
   
--   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A>-Eigenschaft ist für das Einfügen eines benutzerdefinierten aufrufenden Objekts.  
+- Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A>-Eigenschaft ist für das Einfügen eines benutzerdefinierten aufrufenden Objekts.  
   
--   Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A>-Eigenschaft ermöglicht es Ihnen, einen benutzerdefinierten Parameterinspektor einzufügen, den Sie verwenden können, um Parameter und Rückgabewerte zu überprüfen oder zu ändern.  
+- Die <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A>-Eigenschaft ermöglicht es Ihnen, einen benutzerdefinierten Parameterinspektor einzufügen, den Sie verwenden können, um Parameter und Rückgabewerte zu überprüfen oder zu ändern.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Vorgehensweise: Überprüfen und Ändern von Nachrichten auf dem Dienst](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [Vorgehensweise: Überprüfen und Ändern von Nachrichten für den Dienst](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
 - [Vorgehensweise: Überprüfen oder Ändern von Parametern](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
 - [Vorgehensweise: Sperren von Endpunkten im Unternehmen](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 ms.openlocfilehash: 2f600f3ed37f38ddd7d86300231e0c447f458aa6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638102"
 ---
 # <a name="event-statement"></a>Event-Anweisung
 Deklariert ein benutzerdefiniertes Ereignis.  

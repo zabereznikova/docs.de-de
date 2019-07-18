@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487687"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753653"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray-Methode
 Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT NewParameterizedArray(  
     [in] ICorDebugType          *pElementType,  
     [in] ULONG32                rank,  

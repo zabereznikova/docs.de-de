@@ -2,12 +2,12 @@
 title: Operatoren, die NULL-Werte zulassen
 description: Informationen Sie zu den Nullwert-Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 05/16/2016
-ms.openlocfilehash: b17c0de2d81a1ef88b31d833a49ff9e3f9d34e8d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 79165f35258b414624174153d2cd729b301cf389
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610592"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642094"
 ---
 # <a name="nullable-operators"></a>Operatoren, die NULL-Werte zulassen
 

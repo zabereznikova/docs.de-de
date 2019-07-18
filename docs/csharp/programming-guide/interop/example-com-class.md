@@ -6,25 +6,25 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: e36dfe1117cc724f5388e3486a81310f2326ab7e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d4ea445339057bc65c3597d30a46f46d58b6e696
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595536"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM-Beispielklasse (C#-Programmierhandbuch)
 Das Folgende ist ein Beispiel für eine Klasse, die Sie als COM-Objekt offenlegen würden. Nachdem dieser Code in eine CS-Datei platziert und Ihrem Projekt hinzugefügt wurde, legen Sie die Eigenschaft **für COM-Interop registrieren** auf **TRUE** fest. Weitere Informationen finden Sie unter [Vorgehensweise: Registrieren einer Komponente für COM-Interop](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100)).
   
  Das Verfügbarmachen von Visual C#-Objekten für COM erfordert die Deklaration einer Klassenschnittstelle, einer Ereignisschnittstelle (wenn dies erforderlich ist) und die Klasse selbst. Klassenmember müssen diesen Regeln folgen, um für COM sichtbar zu sein:  
   
--   Die Klasse muss öffentlich sein.  
+- Die Klasse muss öffentlich sein.  
   
--   Eigenschaften, Methoden und Ereignisse müssen öffentlich sein.  
+- Eigenschaften, Methoden und Ereignisse müssen öffentlich sein.  
   
--   Eigenschaften und Methoden müssen auf der Klassenschnittstelle deklariert werden.  
+- Eigenschaften und Methoden müssen auf der Klassenschnittstelle deklariert werden.  
   
--   Ereignisse müssen in der Ereignisschnittstelle deklariert werden.  
+- Ereignisse müssen in der Ereignisschnittstelle deklariert werden.  
   
  Andere öffentliche Member in der Klasse, die nicht in diesen Schnittstellen deklariert sind, werden für COM nicht sichtbar sein, aber für andere .NET Framework-Objekte werden sie sichtbar sein.  
   

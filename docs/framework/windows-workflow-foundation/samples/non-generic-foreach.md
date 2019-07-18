@@ -2,12 +2,12 @@
 title: Nicht generisches ForEach-Element
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 46db1d455bcbdd28e02d3cddfe0c9248b4abd91c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620843"
 ---
 # <a name="non-generic-foreach"></a>Nicht generisches ForEach-Element
 Zur Toolbox von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] gehört ein Satz von Ablaufsteuerungsaktivitäten, einschließlich <xref:System.Activities.Statements.ForEach%601>, die das Durchlaufen von <xref:System.Collections.Generic.IEnumerable%601>-Auflistungen ermöglicht.  
@@ -95,13 +95,13 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 #### <a name="to-run-this-sample"></a>So führen Sie dieses Beispiel aus  
   
-1.  Legen Sie das Projekt Ihrer Wahl als Startprojekt der Projektmappe fest:  
+1. Legen Sie das Projekt Ihrer Wahl als Startprojekt der Projektmappe fest:  
   
-    1.  **CodeTestClient** zeigt, wie die Aktivität mit Code.  
+    1. **CodeTestClient** zeigt, wie die Aktivität mit Code.  
   
-    2.  **DesignerTestClient** wird gezeigt, wie die Aktivität im Designer verwendet.  
+    2. **DesignerTestClient** wird gezeigt, wie die Aktivität im Designer verwendet.  
   
-2.  Erstellen Sie das Projekt, und führen Sie es aus.  
+2. Erstellen Sie das Projekt, und führen Sie es aus.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

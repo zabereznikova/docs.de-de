@@ -13,11 +13,11 @@ helpviewer_keywords:
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
 ms.openlocfilehash: fafd3fc7345f94d3907163ff9dcf0ab293f85f3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609954"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>Suchen und Hervorheben von Text durch Benutzeroberflächenautomatisierung
 > [!NOTE]

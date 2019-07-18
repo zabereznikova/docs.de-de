@@ -2,15 +2,15 @@
 title: SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: aa4c716dc1b27d50620777613e698ca6dbab31d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213791"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487636"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
-In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] eingeführte) SqlClient-Unterstützung für hohe Verfügbarkeit und Notfallwiederherstellung erörtert, die in Form von AlwaysOn-Verfügbarkeitsgruppen bereitgestellt wird.  SQL Server 2012 wurde AlwaysOn-Verfügbarkeitsgruppen hinzugefügt. Weitere Informationen zu AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  
+Dieses Thema beschreibt die SqlClient-Unterstützung (in .NET Framework 4.5 hinzugefügt) für die hohe Verfügbarkeit und notfallwiederherstellung – Always On-Verfügbarkeitsgruppen.  SQL Server 2012 wurde AlwaysOn-Verfügbarkeitsgruppen hinzugefügt. Weitere Informationen zu AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  
   
  Sie können jetzt angeben, die Verfügbarkeitsgruppen-Listener eine (hohe Verfügbarkeit und notfallwiederherstellung) verfügbarkeitsgruppe (AG) oder SQL Server 2012-Failoverclusterinstanz in der Verbindungseigenschaft. Wenn eine SqlClient-Anwendung mit einer AlwaysOn-Datenbank verbunden ist, die einen Failover ausführt, ist die ursprüngliche Verbindung unterbrochen, und die Anwendung muss eine neue Verbindung öffnen, um die Arbeit nach dem Failover fortzusetzen.  
   
@@ -19,20 +19,20 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
 > [!NOTE]
 >  Ein höheres Verbindungstimeout und das Implementieren einer Logik für die Verbindungswiederholung erhöht die Wahrscheinlichkeit, dass eine Anwendung eine Verbindung mit einer Verfügbarkeitsgruppe herstellt. Da eine Verbindung aufgrund eines Failovers fehlschlagen kann, sollte auch eine Logik für Verbindungswiederholungen implementiert werden, die bis zur erfolgreichen Verbindung Verbindungswiederholungen durchführt.  
   
- Die folgenden Verbindungseigenschaften wurden SqlClient in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] hinzugefügt:  
+ Die folgenden Verbindungseigenschaften wurden SqlClient in .NET Framework 4.5 hinzugefügt:  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  Sie können diese Schlüsselwörter für Verbindungszeichenfolgen programmgesteuert ändern:  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  Festlegen von `MultiSubnetFailover` zu `true` ist nicht erforderlich, mit [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] oder höhere Versionen.
+>  Festlegen von `MultiSubnetFailover` zu `true` ist nicht mit .NET Framework 4.6.1 oder höher erforderlich.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Verbinden mit MultiSubnetFailover  
  Geben Sie immer `MultiSubnetFailover=True` beim Verbinden mit einer SQL Server 2012-verfügbarkeitsgruppenlistener oder einer SQL Server 2012-Failoverclusterinstanz. `MultiSubnetFailover` ermöglicht ein schnelleres Failover für alle Verfügbarkeitsgruppen und/oder Failoverclusterinstanzen in SQL Server 2012 und wird die Failoverzeit für einzelne und multisubnetz AlwaysOn-Topologien erheblich. Während eines Multisubnetzfailovers versucht der Client parallel, Verbindungen herzustellen. Während eines Subnetzfailovers wird die Herstellung der TCP-Verbindung aggressiv neu versucht.  
@@ -45,25 +45,25 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
  Verwenden Sie die folgenden Richtlinien für die Verbindung mit einem Server in einer verfügbarkeitsgruppe oder Failoverclusterinstanz von SQL Server 2012:  
   
--   Verwenden Sie die `MultiSubnetFailover`-Verbindungseigenschaft beim Herstellen der Verbindung mit einem einzelnen oder mehreren Subnetzen. Die Leistung wird in beiden Fällen gesteigert.  
+- Verwenden Sie die `MultiSubnetFailover`-Verbindungseigenschaft beim Herstellen der Verbindung mit einem einzelnen oder mehreren Subnetzen. Die Leistung wird in beiden Fällen gesteigert.  
   
--   Um eine Verbindung mit einer Verfügbarkeitsgruppe herzustellen, geben Sie den Verfügbarkeitsgruppenlistener der Verfügbarkeitsgruppe als Server in der Verbindungszeichenfolge an.  
+- Um eine Verbindung mit einer Verfügbarkeitsgruppe herzustellen, geben Sie den Verfügbarkeitsgruppenlistener der Verfügbarkeitsgruppe als Server in der Verbindungszeichenfolge an.  
   
--   Herstellen einer Verbindung mit einer SQL Server werden-Instanz, mit mehr als 64 IP-Adressen konfiguriert einen Verbindungsfehler verursachen.  
+- Herstellen einer Verbindung mit einer SQL Server werden-Instanz, mit mehr als 64 IP-Adressen konfiguriert einen Verbindungsfehler verursachen.  
   
--   Das Verhalten einer Anwendung, die verwendet die `MultiSubnetFailover` -Verbindungseigenschaft wird nicht beeinflusst basierend auf den Typ der Authentifizierung: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
+- Das Verhalten einer Anwendung, die verwendet die `MultiSubnetFailover` -Verbindungseigenschaft wird nicht beeinflusst basierend auf den Typ der Authentifizierung: SQL Server-Authentifizierung, Kerberos-Authentifizierung oder Windows-Authentifizierung.  
   
--   Erhöhen Sie den Wert von `Connect Timeout`, um die Failoverzeit anzupassen und die Wiederholungsversuche für die Verbindung mit der Anwendung zu verringern.  
+- Erhöhen Sie den Wert von `Connect Timeout`, um die Failoverzeit anzupassen und die Wiederholungsversuche für die Verbindung mit der Anwendung zu verringern.  
   
--   Verteilte Transaktionen werden nicht unterstützt.  
+- Verteilte Transaktionen werden nicht unterstützt.  
   
  Wenn das schreibgeschützte Routing nicht aktiviert ist, schlägt die Verbindung mit dem Speicherort eines sekundären Replikats in folgenden Situationen fehl:  
   
-1.  Wenn der Speicherort des sekundären Replikats keine Verbindungen akzeptiert.  
+1. Wenn der Speicherort des sekundären Replikats keine Verbindungen akzeptiert.  
   
-2.  Wenn eine Anwendung `ApplicationIntent=ReadWrite` (unten erläutert) verwendet und der Speicherort des sekundären Replikats für den schreibgeschützten Zugriff konfiguriert ist.  
+2. Wenn eine Anwendung `ApplicationIntent=ReadWrite` (unten erläutert) verwendet und der Speicherort des sekundären Replikats für den schreibgeschützten Zugriff konfiguriert ist.  
   
- <xref:System.Data.SqlClient.SqlDependency> wird auf schreibgeschützten sekundären Replikaten nicht unterstützt.  
+ <xref:System.Data.SqlClient.SqlDependency> wird für schreibgeschützte sekundäre Replikate nicht unterstützt.  
   
  Ein Verbindungsfehler tritt auf, wenn ein primäres Replikat so konfiguriert ist, dass schreibgeschützte Arbeitslasten abgelehnt werden und die Verbindungszeichenfolge `ApplicationIntent=ReadOnly` enthält.  
   
@@ -79,18 +79,18 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
  Das `ApplicationIntent`-Schlüsselwort funktioniert nicht mit schreibgeschützten Legacy-Datenbanken.  
   
- Eine Datenbank kann Lesearbeitslasten für die AlwaysOn-Zieldatenbank zulassen oder ablehnen. (Dies erfolgt mit der `ALLOW_CONNECTIONS` -Klausel der `PRIMARY_ROLE` und `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] Anweisungen.)  
+ Eine Datenbank kann Lesearbeitslasten für die AlwaysOn-Zieldatenbank zulassen oder ablehnen. (Dies erfolgt mit der `ALLOW_CONNECTIONS` -Klausel der `PRIMARY_ROLE` und `SECONDARY_ROLE`Transact-SQL-Anweisungen.)  
   
  Das `ApplicationIntent`-Schlüsselwort wird verwendet, um das schreibgeschützte Routing zu aktivieren.  
   
 ## <a name="read-only-routing"></a>Schreibgeschütztes Routing  
  Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit eines schreibgeschützten Replikats einer Datenbank sicherstellt. So aktivieren Sie das schreibgeschützte Routing  
   
-1.  Sie müssen eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.  
+1. Sie müssen eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.  
   
-2.  Das `ApplicationIntent`-Schlüsselwort der Verbindungszeichenfolge muss auf `ReadOnly` festgelegt werden.  
+2. Das `ApplicationIntent`-Schlüsselwort der Verbindungszeichenfolge muss auf `ReadOnly` festgelegt werden.  
   
-3.  Die Verfügbarkeitsgruppe muss vom Datenbankadministrator so konfiguriert werden, dass schreibgeschütztes Routing aktiviert ist.  
+3. Die Verfügbarkeitsgruppe muss vom Datenbankadministrator so konfiguriert werden, dass schreibgeschütztes Routing aktiviert ist.  
   
  Es ist möglich, dass mehrere Verbindungen, die das schreibgeschützte Routing verwenden, nicht alle eine Verbindung mit demselben schreibgeschützten Replikat herstellen. Änderungen in der Datenbanksynchronisierung oder Änderungen an der Routingkonfiguration des Servers können dazu führen, dass Clientverbindungen mit anderen schreibgeschützten Replikaten hergestellt werden. Um sicherzustellen, dass alle schreibgeschützten Anforderungen an dasselbe schreibgeschützte Replikat gerichtet werden, übergeben Sie keinen Verfügbarkeitsgruppenlistener an das `Data Source`-Schlüsselwort der Verbindungszeichenfolge. Stattdessen geben Sie den Namen der schreibgeschützten Instanz an.  
   
@@ -98,5 +98,5 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server-Funktionen und ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [SQL Server Features and ADO.NET (SQL Server-Features und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

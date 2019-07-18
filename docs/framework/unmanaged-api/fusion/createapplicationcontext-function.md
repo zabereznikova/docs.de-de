@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d98829b29100824e5d606e23aaf287c9f6e81d69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9853f974230ee755a33bc46ca6ba3e086051b236
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170962"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778475"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext-Funktion
 Diese Funktion unterstützt die .NET Framework-Infrastruktur und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateApplicationContext (  
     [in]  IAssemblyName  *pName,  
     [out] LPPAPPLICATIONCONTEXT  *ppCtx  
@@ -54,5 +54,5 @@ HRESULT CreateApplicationContext (
 ## <a name="see-also"></a>Siehe auch
 
 - [IAssemblyCache-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [Fusion – Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [Globaler Assemblycache](../../../../docs/framework/app-domains/gac.md)

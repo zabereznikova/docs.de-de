@@ -4,13 +4,13 @@ description: Informationen zum Installieren von .NET Framework unter Windows Vis
 ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-ms.date: 08/03/2017
-ms.openlocfilehash: 92745ed32ab671e7401d61c8edcbbe325fc1ddea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 04/18/2019
+ms.openlocfilehash: f1024e0bf245bbea23673cfb68de676383b672f2
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740699"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051901"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Installieren von .NET Framework unter Windows Vista und Windows Server 2008
 
@@ -18,13 +18,13 @@ ms.locfileid: "54740699"
 
 ![Diese Anwendung konnte nicht gestartet werden](./media/this-application-could-not-be-started.png)
 
-Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) ist die aktuelle Version. Sie wird unter Windows Vista und Windows Server 2008 nicht unterstützt. Sie ist im Lieferumfang des [Windows 10 Updates von Oktober 2018](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) und des [Windows 10 Updates von April 2018](https://www.microsoft.com/software-download/windows10) enthalten.
+Diese Anleitung soll Sie bei der Installation der benötigten .NET Framework-Versionen unterstützen. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) ist die aktuelle Version. Sie wird unter Windows Vista und Windows Server 2008 nicht unterstützt. Sie ist im Lieferumfang des [Windows 10-Updates vom Mai 2019](https://support.microsoft.com/help/4028685/windows-10-get-the-update) enthalten.
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) ist die neueste unterstütze .NET Framework-Version unter Windows Vista und Windows Server 2008.
+[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) ist die neueste unterstütze .NET Framework-Version unter Windows Vista und Windows Server 2008.
 
-[.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) unterstützt Anwendungen, die für .NET Framework 4.0 bis 4.6 entwickelt wurden.
+[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) unterstützt Anwendungen, die für .NET Framework 4.0 bis 4.6 entwickelt wurden.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

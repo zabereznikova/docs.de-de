@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e613f0c52c77efebf250f5935d5cbfc29bc09a6b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760421"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802537"
 ---
 ### <a name="wpf-printing-stack-update"></a>Update für WPF-Druckstapel
 

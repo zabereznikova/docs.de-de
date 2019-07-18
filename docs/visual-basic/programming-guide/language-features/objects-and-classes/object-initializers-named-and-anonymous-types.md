@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821364"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783239"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Objektinitialisierer: Benannte und anonyme Typen (Visual Basic)
 Objektinitialisierer können Sie Eigenschaften für ein komplexes Objekt mit einem einzelnen Ausdruck angeben. Sie können zum Erstellen von Instanzen benannter Typen und von anonymen Typen verwendet werden.  
@@ -32,7 +32,7 @@ Objektinitialisierer können Sie Eigenschaften für ein komplexes Objekt mit ein
  Die Anforderungen und die Ergebnisse der beiden Deklarationen sind nicht identisch. Für `namedCust`, `Customer` -Klasse, verfügt eine `Name` Eigenschaft muss bereits vorhanden sein, und die Deklaration erstellt eine Instanz dieser Klasse. Für `anonymousCust`, definiert der Compiler eine neue Klasse, die eine Eigenschaft, eine Zeichenfolge mit dem Namen `Name`, und erstellt eine neue Instanz dieser Klasse.  
   
 ## <a name="named-types"></a>Benannte Typen  
- Objektinitialisierer bieten eine einfache Möglichkeit, den Konstruktor eines Typs aufzurufen, und legen Sie dann die Werte der Eigenschaften, die einige oder alle in einer einzigen Anweisung. Der Compiler Ruft den entsprechenden Konstruktor für die Anweisung: der Standardkonstruktor, wenn keine Argumente angegeben werden, oder einen parametrisierten Konstruktor, wenn ein oder mehrere Argumente gesendet werden. Danach werden die angegebenen Eigenschaften in der Reihenfolge initialisiert, in denen sie in der Initialisiererliste dargestellt werden.  
+ Objektinitialisierer bieten eine einfache Möglichkeit, den Konstruktor eines Typs aufzurufen, und legen Sie dann die Werte der Eigenschaften, die einige oder alle in einer einzigen Anweisung. Der Compiler Ruft den entsprechenden Konstruktor für die Anweisung: der parameterlose Konstruktor, wenn keine Argumente angegeben werden, oder einen parametrisierten Konstruktor, wenn ein oder mehrere Argumente gesendet werden. Danach werden die angegebenen Eigenschaften in der Reihenfolge initialisiert, in denen sie in der Initialisiererliste dargestellt werden.  
   
  Jede Initialisierung in der Initialisiererliste besteht die Zuweisung von einem Anfangswert auf einen Member der Klasse ab. Wenn die Klasse definiert ist, werden die Namen und Datentypen der Elemente bestimmt. In den folgenden Beispielen wird die `Customer` Klasse muss vorhanden sein und müssen haben Mitglieder mit dem Namen `Name` und `City` , können Werte akzeptieren.  
   
@@ -42,7 +42,7 @@ Objektinitialisierer können Sie Eigenschaften für ein komplexes Objekt mit ein
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Jede dieser Deklarationen entspricht im folgenden Beispiel, das erstellt eine `Customer` -Objekt mit dem Standardkonstruktor, und gibt dann die Anfangswerte für die `Name` und `City` Eigenschaften mithilfe einer `With` -Anweisung.  
+ Jede dieser Deklarationen entspricht im folgenden Beispiel, das erstellt eine `Customer` -Objekt mit dem parameterlosen Konstruktor, und gibt dann die Anfangswerte für die `Name` und `City` Eigenschaften mithilfe einer `With` -Anweisung.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   
@@ -63,11 +63,11 @@ Objektinitialisierer können Sie Eigenschaften für ein komplexes Objekt mit ein
   
 ### <a name="remarks-about-named-types"></a>Hinweise zu benannten Typen  
   
--   Ein Klassenmember kann nicht mehr als einmal in der Objektinitialisiererliste initialisiert werden. Die Deklaration von `cust7` verursacht einen Fehler.  
+- Ein Klassenmember kann nicht mehr als einmal in der Objektinitialisiererliste initialisiert werden. Die Deklaration von `cust7` verursacht einen Fehler.  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
--   Ein Element kann verwendet werden, um sich selbst oder ein anderes Feld zu initialisieren. Wenn ein Element zugegriffen wird, bevor er, wie die folgende Deklaration für initialisiert wurde `cust8`, der Standardwert verwendet werden. Denken Sie daran, dass wenn eine Deklaration, die einen Objektinitialisierer wird verwendet, die verarbeitet wird, wird als erstes, das ausgeführt wird, dass der geeignete Konstruktor aufgerufen wird. Danach werden die einzelnen Felder in der Initialisierungsliste initialisiert. In den folgenden Beispielen wird der Standardwert für `Name` zugewiesen wird, für die `cust8`, und ein initialisierter Wert zugewiesen ist `cust9`.  
+- Ein Element kann verwendet werden, um sich selbst oder ein anderes Feld zu initialisieren. Wenn ein Element zugegriffen wird, bevor er, wie die folgende Deklaration für initialisiert wurde `cust8`, der Standardwert verwendet werden. Denken Sie daran, dass wenn eine Deklaration, die einen Objektinitialisierer wird verwendet, die verarbeitet wird, wird als erstes, das ausgeführt wird, dass der geeignete Konstruktor aufgerufen wird. Danach werden die einzelnen Felder in der Initialisierungsliste initialisiert. In den folgenden Beispielen wird der Standardwert für `Name` zugewiesen wird, für die `cust8`, und ein initialisierter Wert zugewiesen ist `cust9`.  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
@@ -75,17 +75,17 @@ Objektinitialisierer können Sie Eigenschaften für ein komplexes Objekt mit ein
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
--   Objektinitialisierer können geschachtelt werden. Im folgenden Beispiel `AddressClass` ist eine Klasse mit zwei Eigenschaften, `City` und `State`, und die `Customer` -Klasse verfügt über eine `Address` -Eigenschaft, die eine Instanz von `AddressClass`.  
+- Objektinitialisierer können geschachtelt werden. Im folgenden Beispiel `AddressClass` ist eine Klasse mit zwei Eigenschaften, `City` und `State`, und die `Customer` -Klasse verfügt über eine `Address` -Eigenschaft, die eine Instanz von `AddressClass`.  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
--   Die Initialisierungsliste darf nicht leer sein.  
+- Die Initialisierungsliste darf nicht leer sein.  
   
--   Die Instanz initialisiert wird, darf nicht vom Typ Object sein.  
+- Die Instanz initialisiert wird, darf nicht vom Typ Object sein.  
   
--   Klassenmember initialisiert wird, darf nicht freigegebenen Member, schreibgeschützten Member, Konstanten oder Methodenaufrufe sein.  
+- Klassenmember initialisiert wird, darf nicht freigegebenen Member, schreibgeschützten Member, Konstanten oder Methodenaufrufe sein.  
   
--   Klassenmember initialisiert wird, können nicht indiziert oder qualifiziert werden. In den folgenden Beispielen werden Compilerfehler ausgelöst:  
+- Klassenmember initialisiert wird, können nicht indiziert oder qualifiziert werden. In den folgenden Beispielen werden Compilerfehler ausgelöst:  
   
      `'' Not valid.`  
   
@@ -109,19 +109,19 @@ Objektinitialisierer können Sie Eigenschaften für ein komplexes Objekt mit ein
   
 ### <a name="remarks-about-anonymous-types"></a>Hinweise zu anonymen Typen  
   
--   In der Regel alle oder die meisten Eigenschaften in der Deklaration eines anonymen Typs werden Schlüsseleigenschaften, die angegeben werden, durch das Schlüsselwort `Key` vor den Namen der Eigenschaft.  
+- In der Regel alle oder die meisten Eigenschaften in der Deklaration eines anonymen Typs werden Schlüsseleigenschaften, die angegeben werden, durch das Schlüsselwort `Key` vor den Namen der Eigenschaft.  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
      Weitere Informationen zu den Schlüsseleigenschaften, finden Sie unter [Schlüssel](../../../../visual-basic/language-reference/modifiers/key.md).  
   
--   Wie bei benannten Typen, Initialisierungslisten für Definitionen von anonymen Typen müssen mindestens eine Eigenschaft deklarieren.  
+- Wie bei benannten Typen, Initialisierungslisten für Definitionen von anonymen Typen müssen mindestens eine Eigenschaft deklarieren.  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
--   Wenn eine Instanz eines anonymen Typs deklariert wird, generiert der Compiler eine entsprechende Definition von anonymen Typen. Die Namen und Datentypen der Eigenschaften der Deklaration der Instanz entnommen werden, und vom Compiler in der Definition enthalten sind. Die Eigenschaften sind nicht mit dem Namen und im Voraus definiert werden, wie sie für einen benannten Typ. Die Typen werden abgeleitet. Sie können nicht die Datentypen der Eigenschaften angeben, indem Sie mit einem `As` Klausel.  
+- Wenn eine Instanz eines anonymen Typs deklariert wird, generiert der Compiler eine entsprechende Definition von anonymen Typen. Die Namen und Datentypen der Eigenschaften der Deklaration der Instanz entnommen werden, und vom Compiler in der Definition enthalten sind. Die Eigenschaften sind nicht mit dem Namen und im Voraus definiert werden, wie sie für einen benannten Typ. Die Typen werden abgeleitet. Sie können nicht die Datentypen der Eigenschaften angeben, indem Sie mit einem `As` Klausel.  
   
--   Anonyme Typen können auch die Namen und Werte der Eigenschaften auf verschiedene Weise einrichten. Eine Eigenschaft eines anonymen Typs kann z. B. den Namen und den Wert einer Variablen oder der Name und Wert einer Eigenschaft eines anderen Objekts dauern.  
+- Anonyme Typen können auch die Namen und Werte der Eigenschaften auf verschiedene Weise einrichten. Eine Eigenschaft eines anonymen Typs kann z. B. den Namen und den Wert einer Variablen oder der Name und Wert einer Eigenschaft eines anderen Objekts dauern.  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   

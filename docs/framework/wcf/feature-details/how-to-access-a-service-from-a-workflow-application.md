@@ -2,35 +2,35 @@
 title: 'Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 790f8f24ed8a6c3b7592fb8e78befc8ee5e2214d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 178fb04244cb3e5075722877fdd3e2b5a92b8502
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779646"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung
 In diesem Thema wird beschrieben, wie Sie einen Workflowdienst in einer Workflowkonsolenanwendung aufrufen. Es setzt das Ende der [Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) Thema. Obwohl in diesem Thema wird beschrieben, wie Sie einen Workflowdienst aus einer workflowanwendung aufrufen, können die gleichen Methoden verwendet werden, um einen Windows Communication Foundation (WCF)-Dienst aus einer workflowanwendung aufrufen.
 
 ### <a name="create-a-workflow-console-application-project"></a>Erstellen eines Workflowkonsolen-Anwendungsprojekts
 
-1.  Starten Sie Visual Studio 2012.
+1. Starten Sie Visual Studio 2012.
 
-2.  Laden Sie das MyWFService-Projekt, das Sie erstellt, in haben der [Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) Thema.
+2. Laden Sie das MyWFService-Projekt, das Sie erstellt, in haben der [Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) Thema.
 
-3.  Klicken Sie mit der rechten Maustaste auf die **MyWFService** -Lösung in die **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Projekt**. Wählen Sie **Workflow** in die **installierte Vorlagen** und **Konsolenanwendung für Workflows** aus der Liste der Projekttypen zur Verfügung. Geben Sie dem Projekt den Namen "MyWFClient", und verwenden Sie wie in der folgenden Abbildung gezeigt den Standardspeicherort.
+3. Klicken Sie mit der rechten Maustaste auf die **MyWFService** -Lösung in die **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Projekt**. Wählen Sie **Workflow** in die **installierte Vorlagen** und **Konsolenanwendung für Workflows** aus der Liste der Projekttypen zur Verfügung. Geben Sie dem Projekt den Namen "MyWFClient", und verwenden Sie wie in der folgenden Abbildung gezeigt den Standardspeicherort.
 
      ![Dialogfeld "Neues Projekt hinzufügen"](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
      Klicken Sie auf die **OK** Schaltfläche zum Schließen der **neue Projektdialogfeld hinzufügen**.
 
-4.  Nachdem das Projekt erstellt wurde, wird die Datei "Workflow1.xaml" im Designer geöffnet. Klicken Sie auf die **Toolbox** Tab, um die Toolbox zu öffnen, ist dies nicht bereits geöffnet, und klicken Sie auf das Pinsymbol, damit das Toolboxfenster geöffnet bleibt.
+4. Nachdem das Projekt erstellt wurde, wird die Datei "Workflow1.xaml" im Designer geöffnet. Klicken Sie auf die **Toolbox** Tab, um die Toolbox zu öffnen, ist dies nicht bereits geöffnet, und klicken Sie auf das Pinsymbol, damit das Toolboxfenster geöffnet bleibt.
 
-5.  Drücken Sie **STRG**+**F5** zum Erstellen und starten Sie den Dienst. Wie zuvor auch, wird der ASP.NET Development Server gestartet, und Internet Explorer zeigt die WCF-Hilfeseite an. Merken Sie sich den URI für diese Seite, da Sie diesen im nächsten Schritt verwenden.
+5. Drücken Sie **STRG**+**F5** zum Erstellen und starten Sie den Dienst. Wie zuvor auch, wird der ASP.NET Development Server gestartet, und Internet Explorer zeigt die WCF-Hilfeseite an. Merken Sie sich den URI für diese Seite, da Sie diesen im nächsten Schritt verwenden.
 
      ![Internet Explorer zum Anzeigen von WCF-Hilfeseite und URI](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6.  Klicken Sie mit der rechten Maustaste auf die **"mywfclient"** -Projekt in der **Projektmappen-Explorer** , und wählen Sie **hinzufügen** > **Dienstverweis**. Klicken Sie auf die **Discover** Schaltfläche, um die aktuelle Projektmappe nach Diensten suchen. Klicken Sie in der Liste "Dienste" auf das Dreieck neben der Datei "Service1.xamlx". Klicken Sie auf das Dreieck neben "Service1", um die vom Dienst "Service1" implementierten Verträge aufzuführen. Erweitern Sie die **"Service1"** Knoten in der **Services** Liste. Die Echo-Vorgang wird angezeigt, der **Vorgänge** Liste wie in der folgenden Abbildung dargestellt.
+6. Klicken Sie mit der rechten Maustaste auf die **"mywfclient"** -Projekt in der **Projektmappen-Explorer** , und wählen Sie **hinzufügen** > **Dienstverweis**. Klicken Sie auf die **Discover** Schaltfläche, um die aktuelle Projektmappe nach Diensten suchen. Klicken Sie in der Liste "Dienste" auf das Dreieck neben der Datei "Service1.xamlx". Klicken Sie auf das Dreieck neben "Service1", um die vom Dienst "Service1" implementierten Verträge aufzuführen. Erweitern Sie die **"Service1"** Knoten in der **Services** Liste. Die Echo-Vorgang wird angezeigt, der **Vorgänge** Liste wie in der folgenden Abbildung dargestellt.
 
      ![Dialogfeld "Dienstverweis hinzufügen"](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -42,9 +42,9 @@ In diesem Thema wird beschrieben, wie Sie einen Workflowdienst in einer Workflow
 
      ![Echoaktivität in der toolbox](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 
-7.  Ziehen Sie eine <xref:System.Activities.Statements.Sequence>-Aktivität auf die Designeroberfläche. Es befindet sich unter dem **Ablaufsteuerung** Abschnitt der Toolbox.
+7. Ziehen Sie eine <xref:System.Activities.Statements.Sequence>-Aktivität auf die Designeroberfläche. Es befindet sich unter dem **Ablaufsteuerung** Abschnitt der Toolbox.
 
-8.  Mit der <xref:System.Activities.Statements.Sequence> -Aktivität in den Fokus besitzt, klicken Sie auf die **Variablen** verknüpfen, und fügen Sie eine Zeichenfolgenvariable mit dem Namen `inString`. Geben Sie der Variable den Standardwert `"Hello, world"` sowie eine String-Variable, die mit dem Namen `outString` wie im folgenden Diagramm dargestellt.
+8. Mit der <xref:System.Activities.Statements.Sequence> -Aktivität in den Fokus besitzt, klicken Sie auf die **Variablen** verknüpfen, und fügen Sie eine Zeichenfolgenvariable mit dem Namen `inString`. Geben Sie der Variable den Standardwert `"Hello, world"` sowie eine String-Variable, die mit dem Namen `outString` wie im folgenden Diagramm dargestellt.
 
      ![Hinzufügen einer InString-Variablen](./media/how-to-access-a-service-from-a-workflow-application/add-instring-variable.jpg)
 

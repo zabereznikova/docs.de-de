@@ -17,15 +17,15 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 06d2351ffa7d7f009d7b049f4689df7038b4d202
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078225"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505354"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Stifte, Linien und Rechtecke in GDI+
-Zum Zeichnen von Linien mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] müssen Sie erstellen eine <xref:System.Drawing.Graphics> Objekt und ein <xref:System.Drawing.Pen> Objekt. Die <xref:System.Drawing.Graphics> Objekt bietet Methoden, die den Zeichenvorgang, ausführen und die <xref:System.Drawing.Pen> Objekt speichert Attribute, z. B. Farbe, Breite und Stil.  
+Um Zeilen mit GDI + zu zeichnen, Sie erstellen müssen, eine <xref:System.Drawing.Graphics> Objekt und ein <xref:System.Drawing.Pen> Objekt. Die <xref:System.Drawing.Graphics> Objekt bietet Methoden, die den Zeichenvorgang, ausführen und die <xref:System.Drawing.Pen> Objekt speichert Attribute, z. B. Farbe, Breite und Stil.  
   
 ## <a name="drawing-a-line"></a>Zeichnen einer Linie  
  Um eine Linie zu zeichnen, rufen Sie die <xref:System.Drawing.Graphics.DrawLine%2A> -Methode der der <xref:System.Drawing.Graphics> Objekt. Die <xref:System.Drawing.Pen> Objekt als eines der Argumente zum Übergeben der <xref:System.Drawing.Graphics.DrawLine%2A> Methode. Im folgende Beispiel zeichnet eine Linie von der Punkt ("4", "2"), zu dem Punkt ("12", "6"):  
@@ -55,7 +55,7 @@ Zum Zeichnen von Linien mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptec
  ![Lines](./media/aboutgdip02-art04.gif "Aboutgdip02_art04")  
   
 ## <a name="drawing-a-rectangle"></a>Zeichnen eines Rechtecks  
- Zeichnen von Rechtecken in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ähnelt dem Zeichnen von Linien. Um ein Rechteck zu zeichnen, müssen Sie eine <xref:System.Drawing.Graphics> Objekt und ein <xref:System.Drawing.Pen> Objekt. Die <xref:System.Drawing.Graphics> -Objekt ermöglicht eine <xref:System.Drawing.Graphics.DrawRectangle%2A> -Methode, und die <xref:System.Drawing.Pen> Objekt speichert Attribute, z. B. Linienstärke und Farbe. Die <xref:System.Drawing.Pen> Objekt als eines der Argumente zum Übergeben der <xref:System.Drawing.Graphics.DrawRectangle%2A> Methode. Im folgende Beispiel zeichnet ein Rechteck mit der linken oberen Ecke an (100, 50), einer Breite von 80 und einer Höhe von 40:  
+ Zeichnen von Rechtecken in GDI + ist ähnlich wie Zeichnen von Linien. Um ein Rechteck zu zeichnen, müssen Sie eine <xref:System.Drawing.Graphics> Objekt und ein <xref:System.Drawing.Pen> Objekt. Die <xref:System.Drawing.Graphics> -Objekt ermöglicht eine <xref:System.Drawing.Graphics.DrawRectangle%2A> -Methode, und die <xref:System.Drawing.Pen> Objekt speichert Attribute, z. B. Linienstärke und Farbe. Die <xref:System.Drawing.Pen> Objekt als eines der Argumente zum Übergeben der <xref:System.Drawing.Graphics.DrawRectangle%2A> Methode. Im folgende Beispiel zeichnet ein Rechteck mit der linken oberen Ecke an (100, 50), einer Breite von 80 und einer Höhe von 40:  
   
  [!code-csharp[LinesCurvesAndShapes#45](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  
@@ -73,5 +73,5 @@ Zum Zeichnen von Linien mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptec
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
 - [Vorgehensweise: Erstellen eines Stifts](how-to-create-a-pen.md)
-- [Vorgehensweise: Zeichnen einer Linie in Windows Forms](how-to-draw-a-line-on-a-windows-form.md)
-- [Vorgehensweise: Zeichnen der Kontur einer Form](how-to-draw-an-outlined-shape.md)
+- [Vorgehensweise: Zeichnen einer Linie in einem Windows Form](how-to-draw-a-line-on-a-windows-form.md)
+- [Vorgehensweise: Zeichnen der Kontur eine Form](how-to-draw-an-outlined-shape.md)

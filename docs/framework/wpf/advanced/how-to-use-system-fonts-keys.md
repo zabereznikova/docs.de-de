@@ -5,11 +5,11 @@ helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
 ms.openlocfilehash: e924f4c14d98380d9f4c0defe27d9f98c3293114
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001610"
 ---
 # <a name="how-to-use-system-fonts-keys"></a>Vorgehensweise: Verwenden von Systemschriftartschlüsseln
 Systemressourcen machen eine Reihe von Systemmetriken als Ressourcen verfügbar, damit Entwickler visuelle Elemente erstellen können, die mit Systemeinstellungen konsistent sind. <xref:System.Windows.SystemFonts> eine Klasse, enthält sowohl Systemschriftartwerte und Systemschriftartressourcen, die an die Werte gebunden, ist – z. B. <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> und <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>.  

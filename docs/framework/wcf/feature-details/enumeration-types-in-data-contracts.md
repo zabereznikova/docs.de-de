@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195877"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586675"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Enumerationstypen in Datenverträgen
 Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Thema werden mehrere Beispiele behandelt, in denen das Programmiermodell erklärt wird.  
@@ -39,13 +39,13 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
   
  Sie können beispielsweise `CarConditionEnum` auf der Absenderseite und `CarConditionWithNumbers` auf der Empfängerseite verwenden. Obwohl die Absenderseite den Wert 1 und die Empfängerseite den Wert 20 für `Used` verwendet, lautet die XML-Darstellung für beide Seiten `<condition>Used</condition>`.  
   
- Um das Einbinden in den Datenvertrag zu erreichen, müssen Sie das <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut anwenden. Unter [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] können Sie immer den Sonderwert 0 (Null) auf eine Enumeration anwenden. Dabei handelt es sich auch um den Standardwert für Enumerationen. Auch dieser Sonderwert 0 kann jedoch nur serialisiert werden, wenn er mithilfe des <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attributs gekennzeichnet ist.  
+ Um das Einbinden in den Datenvertrag zu erreichen, müssen Sie das <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut anwenden. In .NET Framework können Sie immer den Sonderwert 0 (null) auf eine Enumeration anwenden handelt es sich auch der Standardwert für Enumerationen. Auch dieser Sonderwert 0 kann jedoch nur serialisiert werden, wenn er mithilfe des <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attributs gekennzeichnet ist.  
   
  Dabei gelten zwei Ausnahmen:  
   
--   Flagenumerationen (weiter unten in diesem Thema beschrieben).  
+- Flagenumerationen (weiter unten in diesem Thema beschrieben).  
   
--   Enumerationsdatenmember, für die die <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>-Eigenschaft auf `false` festgelegt ist. (In diesem Fall wird die Enumeration mit dem Wert "0" einfach aus den serialisierten Daten weggelassen.)  
+- Enumerationsdatenmember, für die die <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>-Eigenschaft auf `false` festgelegt ist. (In diesem Fall wird die Enumeration mit dem Wert "0" einfach aus den serialisierten Daten weggelassen.)  
   
 ### <a name="customizing-enumeration-member-values"></a>Anpassen von Enumerationsmemberwerten  
  Sie können den Enumerationsmemberwert anpassen, der Teil des Datenvertrags ist, indem Sie die <xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A>-Eigenschaft des <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attributs verwenden.  
@@ -79,11 +79,11 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
   
  Die folgenden Schritte gelten für das Senden des Enumerationswerts eines Flags:  
   
-1.  Versuchen Sie, einen Enumerationsmember zu finden (mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), der dem numerischen Wert zugeordnet ist. Wenn Sie einen Member finden, senden Sie eine Liste, die nur diesen Member enthält.  
+1. Versuchen Sie, einen Enumerationsmember zu finden (mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), der dem numerischen Wert zugeordnet ist. Wenn Sie einen Member finden, senden Sie eine Liste, die nur diesen Member enthält.  
   
-2.  Versuchen Sie, den numerischen Wert so zu einer Summe aufzulösen, dass Enumerationsmember vorhanden sind (jeweils mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), die den einzelnen Teilen der Summe zugeordnet sind. Senden Sie die Liste mit allen Membern dieser Art. Beachten Sie, dass die *greedy-Algorithmus* verwendet, um eine Summe, suchen und es gibt also keine Garantie dafür, die eine Summe gefunden wird, auch wenn es vorhanden ist. Um dieses Problem zu verhindern, sollten Sie sicherstellen, dass es sich bei den numerischen Werten der Enumerationsmember um Potenzen von 2 handelt.  
+2. Versuchen Sie, den numerischen Wert so zu einer Summe aufzulösen, dass Enumerationsmember vorhanden sind (jeweils mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), die den einzelnen Teilen der Summe zugeordnet sind. Senden Sie die Liste mit allen Membern dieser Art. Beachten Sie, dass die *greedy-Algorithmus* verwendet, um eine Summe, suchen und es gibt also keine Garantie dafür, die eine Summe gefunden wird, auch wenn es vorhanden ist. Um dieses Problem zu verhindern, sollten Sie sicherstellen, dass es sich bei den numerischen Werten der Enumerationsmember um Potenzen von 2 handelt.  
   
-3.  Lösen Sie eine <xref:System.Runtime.Serialization.SerializationException> aus, wenn die vorausgehenden zwei Schritte fehlschlagen und der numerische Wert ungleich 0 ist. Senden Sie die leere Liste, wenn der numerische Wert 0 ist.  
+3. Lösen Sie eine <xref:System.Runtime.Serialization.SerializationException> aus, wenn die vorausgehenden zwei Schritte fehlschlagen und der numerische Wert ungleich 0 ist. Senden Sie die leere Liste, wenn der numerische Wert 0 ist.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Enumerationsbeispiel kann für einen Flagvorgang verwendet werden.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d3f24fb335169c2b38ce945377bc4e64a47fe9d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193069"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539911"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Kompilierte Abfragen (LINQ to Entities)
 Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen ausführt, kann in vielen Fällen die Leistung gesteigert werden, indem die Abfrage einmal kompiliert und anschließend mehrmals mit verschiedenen Parametern ausgeführt wird. So können beispielsweise mithilfe einer Anwendung alle Kunden in einer bestimmten Stadt abgerufen werden, wobei die Stadt zur Laufzeit vom Benutzer in einem Formular festgelegt wird. Für derartige Aufgaben unterstützt LINQ to Entities die Verwendung kompilierter Abfragen.  
@@ -19,7 +19,7 @@ Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen a
   
  Die <xref:System.Data.Objects.CompiledQuery>-Klasse ermöglicht das Kompilieren und Zwischenspeichern von Abfragen zur Wiederverwendung. Diese Klasse enthält eine <xref:System.Data.Objects.CompiledQuery>-Methode einer `Compile` mit mehreren Überladungen. Rufen Sie die `Compile`-Methode auf, um einen neuen Delegaten für die Darstellung der kompilierten Abfrage zu erstellen. Die mit einem `Compile` und Parameterwerten ausgestatteten <xref:System.Data.Objects.ObjectContext>-Methoden geben einen Delegat zurück, der ein Ergebnis ausgibt (z. B. eine <xref:System.Linq.IQueryable%601>-Instanz). Die Abfrage wird nur einmal während der ersten Ausführung kompiliert. Die für die Abfrage zur Kompilierungszeit festgelegten Mergeoptionen können später nicht geändert werden. Nachdem die Abfrage kompiliert ist, können Sie nur Parameter mit einem primitiven Typ angeben. Sie können keine Teile der Abfrage ersetzen, die das generierte SQL ändern. Weitere Informationen finden Sie unter [Entity Framework-Zusammenführungsoptionen und kompilierte Abfragen](https://go.microsoft.com/fwlink/?LinkId=199591)  
   
- Die [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] Abfrageausdruck, der die <xref:System.Data.Objects.CompiledQuery>des `Compile` Methode kompiliert wird durch einen der generischen dargestellt `Func` Delegaten, z. B. <xref:System.Func%605>. Der Abfrageausdruck kann höchstens einen `ObjectContext`-Parameter, einen Rückgabeparameter und 16 Abfrageparameter kapseln. Sind mehr als 16 Abfrageparameter erforderlich, können Sie eine Struktur erstellen, deren Eigenschaften Abfrageparameter darstellen. Sie können anschließend die Eigenschaften für die Struktur im Abfrageausdruck verwenden, nachdem die Eigenschaften festgelegt wurden.  
+ Die LINQ to Entities-Abfrageausdruck, der die <xref:System.Data.Objects.CompiledQuery>des `Compile` Methode kompiliert wird durch einen der generischen dargestellt `Func` Delegaten, z. B. <xref:System.Func%605>. Der Abfrageausdruck kann höchstens einen `ObjectContext`-Parameter, einen Rückgabeparameter und 16 Abfrageparameter kapseln. Sind mehr als 16 Abfrageparameter erforderlich, können Sie eine Struktur erstellen, deren Eigenschaften Abfrageparameter darstellen. Sie können anschließend die Eigenschaften für die Struktur im Abfrageausdruck verwenden, nachdem die Eigenschaften festgelegt wurden.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine Abfrage kompiliert und anschließend aufgerufen, die einen <xref:System.Decimal>-Eingabeparameter akzeptiert und eine Auftragssequenz zurückgibt, in der der fällige Gesamtbetrag 200,00 US-Dollar oder mehr beträgt:  
@@ -72,4 +72,4 @@ Wenn eine Anwendung im Entity Framework häufig strukturell ähnliche Abfragen a
 
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
-- [Entity Framework-Zusammenführungsoptionen und kompilierte Abfragen.](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [Entity Framework-Zusammenführungsoptionen und kompilierte Abfragen](https://go.microsoft.com/fwlink/?LinkId=199591)

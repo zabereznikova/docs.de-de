@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8062ab151efc6175aa68cb0563cd2ad042ee9cd8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 46e3356df6578f2adf2ceee00b1363b65fd014ea
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189052"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760228"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>FLockClrVersionCallback-Funktionszeiger
 Verweist auf eine Funktion, die die common Language Runtime (CLR) Ruft auf, um anzugeben, dass die Initialisierung gestartet oder abgeschlossen wurde.  
   
- Dieser Funktionszeiger ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Dieser Funktionszeiger wurde in .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );  
 ```  
   

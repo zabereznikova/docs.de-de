@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c867945f8a75cade5c7405b2908e2819f5d261d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ea71439c9a6c494c218a7cfc18508f4f8173b03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706971"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740385"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason-Enumeration
 Gibt die möglichen Ursachen für das Blockieren eines Threads bei einem angegebenen Objekt an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 Typedef enum CorDebugBlockingReason  
 {  
    BLOCKING_NONE = 0  
@@ -58,5 +58,6 @@ Typedef enum CorDebugBlockingReason
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -3,11 +3,11 @@ title: <diagnostics> für die Aktivierung
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
 ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704257"
 ---
 # <a name="diagnostics-for-activation"></a>\<Diagnose > für die Aktivierung
 Konfiguriert die Diagnosefunktionen von Windows Communication Foundation (WCF)-Listener.  

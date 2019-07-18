@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32499e74e8af9a865347bd800d3db4c303a7344c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e38d1f3cfe78b7f47a37c12c84282196f4385fbb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59126385"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780750"
 ---
 # <a name="ihostmallocalloc-method"></a>IHostMAlloc::Alloc-Methode
 Fordert an, dass der Host die angegebene Arbeitsspeichermenge aus dem Heap zuordnen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Alloc (  
     [in] SIZE_T  cbSize,   
     [in] EMemoryCriticalLevel dwCriticalLevel,   

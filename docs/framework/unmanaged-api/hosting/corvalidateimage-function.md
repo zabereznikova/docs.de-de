@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a6f1d76ef5cf36bcbab29a33647520663f822798
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111175"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770036"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage-Funktion
 Überprüft Images des verwalteten Moduls, und benachrichtigt das Betriebssystemladeprogramm, nachdem sie geladen wurden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDAPI _CorValidateImage (   
    [in] PVOID* ImageBase,  
    [in] LPCWSTR FileName  
@@ -53,23 +53,23 @@ STDAPI _CorValidateImage (
 ## <a name="remarks"></a>Hinweise  
  In Windows XP und höheren Versionen überprüft vom Ladeprogramm des Betriebssystems nach verwalteten Modulen durch untersuchen das Verzeichnis der COM-Deskriptor-Bit in den Header zu common Object File-Format (COFF). Ein festgelegtes Bit gibt an, ein verwaltetes Modul. Wenn das Ladeprogramm ein verwaltetes Modul erkannt wird, lädt es "Mscoree.dll" und ruft `_CorValidateImage`, die die folgenden Aktionen ausführt:  
   
--   Bestätigt, dass das Bild, ein gültiges verwaltetes Modul ist.  
+- Bestätigt, dass das Bild, ein gültiges verwaltetes Modul ist.  
   
--   Ändert den Einstiegspunkt in das Abbild an einen Einstiegspunkt in die common Language Runtime (CLR).  
+- Ändert den Einstiegspunkt in das Abbild an einen Einstiegspunkt in die common Language Runtime (CLR).  
   
--   Für 64-Bit-Versionen von Windows ändert das Image im Arbeitsspeicher vom Format PE32 in das Format PE32 + transformieren.  
+- Für 64-Bit-Versionen von Windows ändert das Image im Arbeitsspeicher vom Format PE32 in das Format PE32 + transformieren.  
   
--   Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls geladen werden.  
+- Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls geladen werden.  
   
  Für ausführbare Images vom Ladeprogramm des Betriebssystems dann ruft der [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) -Funktion, unabhängig von der Einstiegspunkt in die ausführbare Datei angegeben. DLL-Assembly-Images, das Ladeprogramm ruft die [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) Funktion.  
   
  `_CorExeMain` oder `_CorDllMain` führt folgende Aktionen aus:  
   
--   Initialisiert die CLR.  
+- Initialisiert die CLR.  
   
--   Sucht den verwalteten Einstiegspunkt von CLR-Header der Assembly an.  
+- Sucht den verwalteten Einstiegspunkt von CLR-Header der Assembly an.  
   
--   Beginnt die Ausführung.  
+- Beginnt die Ausführung.  
   
  Die Aufrufe der Loader die [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funktionieren, wenn verwaltete Modulimages entladen. Diese Funktion führt jedoch keine Maßnahmen; Es gibt nur zurück.  
   

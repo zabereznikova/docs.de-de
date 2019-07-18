@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: de3fc8b23bd132179fc7fb67d29010552138e3ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110792"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742825"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Das LINQ to SQL-Objektmodell
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ein in der Programmiersprache des Entwicklers ausgedrücktes Objektmodell dem Datenmodell einer relationalen Datenbank zugeordnet ist. Operationen mit den Daten werden dann nach dem Objektmodell durchgeführt.  
   
  In diesem Szenario übergeben Sie keine Datenbankbefehle (z. B. `INSERT`) an die Datenbank. Stattdessen ändern Sie Werte und führen Methoden innerhalb des Objektmodells aus. Wenn Sie die Datenbank abfragen oder Änderungen übergeben möchten, übersetzt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ihre Anforderungen in die richtigen SQL-Befehle und sendet diese an die Datenbank.  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![Screenshot mit der Linq-Objektmodell.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  Die grundlegenden Elemente in der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell und deren Beziehungen zu Elementen im relationalen Datenmodell werden in der folgenden Tabelle zusammengefasst:  
   
@@ -69,10 +69,10 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ein in d
   
  Ein von einem Aufruf einer zugeordneten Prozedur zurückgegebener Ergebnissatz ist eine Auflistung mit strikter Typzuordnung.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ordnet gespeicherte Prozeduren und Funktionen auf Methoden mit dem <xref:System.Data.Linq.Mapping.FunctionAttribute> und <xref:System.Data.Linq.Mapping.ParameterAttribute> Attribute. Methoden, die gespeicherte Prozeduren darstellen, werden von jenen unterschieden, die benutzerdefinierte Funktionen durch die <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>-Eigenschaft darstellen. Wenn diese Eigenschaft auf `false` (Standard) festgelegt wird, stellt die Methode eine gespeicherte Prozedur dar. Wenn sie auf `true` festgelegt wird, stellt die Methode eine Datenbankfunktion dar.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ordnet gespeicherte Prozeduren und Funktionen den Methoden durch Verwendung des <xref:System.Data.Linq.Mapping.FunctionAttribute>-Attribut und des <xref:System.Data.Linq.Mapping.ParameterAttribute>-Attribut zu. Methoden, die gespeicherte Prozeduren darstellen, werden von jenen unterschieden, die benutzerdefinierte Funktionen durch die <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>-Eigenschaft darstellen. Wenn diese Eigenschaft auf `false` (Standard) festgelegt wird, stellt die Methode eine gespeicherte Prozedur dar. Wenn sie auf `true` festgelegt wird, stellt die Methode eine Datenbankfunktion dar.  
   
 > [!NOTE]
->  Wenn Sie Visual Studio verwenden, können Sie die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zum Erstellen von Methoden, die die gespeicherten Prozeduren und benutzerdefinierten Funktionen zugeordnet.  
+>  Wenn Sie Visual Studio verwenden, können Sie den Object Relational Designer verwenden, zum Erstellen von Methoden, die die gespeicherten Prozeduren und benutzerdefinierten Funktionen zugeordnet.  
   
 ### <a name="example"></a>Beispiel  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]
@@ -82,5 +82,5 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ein in d
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Attributbasiertes Zuordnen](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

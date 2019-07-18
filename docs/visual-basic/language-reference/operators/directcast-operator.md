@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
 ms.openlocfilehash: 628ce4f06b91d0f514f71dea3aad8ea0fee6dccf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778546"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast-Operator (Visual Basic)
 Führt einen Typkonvertierungsvorgang, basierend auf vererbungs- oder implementierungsbeziehung an.  

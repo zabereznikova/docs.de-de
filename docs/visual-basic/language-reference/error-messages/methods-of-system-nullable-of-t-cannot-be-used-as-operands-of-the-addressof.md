@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 54d66a60d20a6add4c2b4a160f87b58b5a1d00e9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e55e561fa20a3740d352537958681b0a66fc381e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817265"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592043"
 ---
 # <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>Methoden von „System.Nullable(Of T)“ können nicht als Operanden des Operators „AddressOf“ verwendet werden
 Eine Anweisung verwendet die `AddressOf` -Operator mit einem Operanden, eine Prozedur darstellt. die <xref:System.Nullable%601> Struktur.  
@@ -21,9 +21,9 @@ Eine Anweisung verwendet die `AddressOf` -Operator mit einem Operanden, eine Pro
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Ersetzen Sie den Namen der Prozedur in der `AddressOf` -Klausel mit einem Operanden, die nicht Mitglied ist <xref:System.Nullable%601>.  
+- Ersetzen Sie den Namen der Prozedur in der `AddressOf` -Klausel mit einem Operanden, die nicht Mitglied ist <xref:System.Nullable%601>.  
   
--   Schreiben Sie eine Klasse, die die Methode umschließt <xref:System.Nullable%601> , die Sie verwenden möchten. Im folgenden Beispiel die `NullableWrapper` -Klasse definiert eine neue Methode namens `GetValueOrDefault`. Da diese neue Methode kein Mitglied ist <xref:System.Nullable%601>, dieses angewendet werden kann, um `nullInstance`, eine Instanz der einen nullable-Typ, um ein Argument für bilden `AddressOf`.  
+- Schreiben Sie eine Klasse, die die Methode umschließt <xref:System.Nullable%601> , die Sie verwenden möchten. Im folgenden Beispiel die `NullableWrapper` -Klasse definiert eine neue Methode namens `GetValueOrDefault`. Da diese neue Methode kein Mitglied ist <xref:System.Nullable%601>, dieses angewendet werden kann, um `nullInstance`, eine Instanz der einen nullable-Typ, um ein Argument für bilden `AddressOf`.  
   
 ```vb  
 Module Module1  

@@ -2,12 +2,12 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 7cafd8c1ba96a4fa1014f3570413b4bb83f69766
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704439"
 ---
 # <a name="bindings"></a>\<bindings>
 
@@ -29,15 +29,15 @@ Sie können die `bindings` Element, um eine Auflistung von standardmäßigen und
   
  Die Reihenfolge der Elemente im Stapel ist von Belang, da sie der Reihenfolge entspricht, in der Vorgänge auf die Meldung angewendet werden. Die erforderliche Reihenfolge von Stapelelementen ist folgende:  
   
-1.  Transaktionen (optional)  
+1. Transaktionen (optional)  
   
-2.  Zuverlässiges messaging (optional)  
+2. Zuverlässiges messaging (optional)  
   
-3.  Sicherheit (Security, optional)  
+3. Sicherheit (Security, optional)  
   
-4.  Encoder  
+4. Encoder  
   
-5.  Transport  
+5. Transport  
   
  Benutzerdefinierte Bindungen werden durch ihr `name`-Attribut identifiziert. Weitere Informationen zu benutzerdefinierten Bindungen finden Sie unter [benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

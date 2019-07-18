@@ -1,13 +1,13 @@
 ---
-title: <localClientSettings> Element
+title: <localClientSettings>-Element
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
 ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765777"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings> element
 Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung fest.  

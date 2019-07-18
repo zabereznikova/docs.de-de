@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 0ab6be6f2c6d8ebbe67051e4e3f967a325e654c8
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761089"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804524"
 ---
 ### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter rendert das Element `<br/>` nicht ordnungsgemäß
 

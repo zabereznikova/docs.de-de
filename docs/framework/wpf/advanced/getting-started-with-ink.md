@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753004"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Erste Schritte mit Freihandeingaben in WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) ist ein Freihand-Feature, das es einfach m
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Verwenden Sie die folgenden Beispielen wird zuerst [installieren Sie Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Außerdem können wissen, wie Sie einfache WPF-apps zu schreiben. Erste Schritte mit WPF Hilfe finden Sie [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Um die folgenden Beispiele verwenden zu können, installieren Sie zunächst [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Außerdem können wissen, wie Sie einfache WPF-apps zu schreiben. Erste Schritte mit WPF Hilfe finden Sie [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Schnellstart
 
@@ -104,7 +104,7 @@ Sie können alle WPF-Funktionen aus prozeduralen Code zugreifen. Um eine "Hello 
 
 1. Fügen Sie Verweise auf die Assemblys PresentationCore, PresentationFramework und WindowsBase hinzu, indem Sie mit der rechten Maustaste auf **Verweise** in **Projektmappen-Explorer** und **VerweisHinzufügen**.
 
-   ![Verweis-Manager angezeigt wird, PresentationCore und PresentationFramework getrennt](./media/getting-started-with-ink/references.png)
+   ![Verweis-Manager angezeigt wird, PresentationCore und PresentationFramework getrennt](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
 1. Erstellen Sie die Anwendung durch Drücken von **F5**.
 

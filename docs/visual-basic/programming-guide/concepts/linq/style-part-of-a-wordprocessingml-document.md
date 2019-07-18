@@ -3,11 +3,11 @@ title: Absatzformatteil ein WordprocessingML-Document2
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
 ms.openlocfilehash: 2e5e0e570fa842fb8a4df59d4b1c02e1169c6878
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907854"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Absatzformatteil eines WordprocessingML-Dokuments
 In diesem Thema wird ein Beispiel für den Formatvorlagenteil des Office Open XML-WordprocessingML-Dokuments gezeigt.  

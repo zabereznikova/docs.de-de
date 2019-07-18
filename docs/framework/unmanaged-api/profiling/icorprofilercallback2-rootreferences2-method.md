@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09616243aef272be041573864effd25017cc65c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 563a2e19c9c254870b3e767253a276a201e631a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082151"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779304"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2-Methode
 Benachrichtigt den Profiler über Root-verweisen an, nach eine Garbagecollection aufgetreten ist. Diese Methode ist eine Erweiterung von der [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT RootReferences2(  
     [in] ULONG  cRootRefs,  
     [in, size_is(cRootRefs)] ObjectID rootRefIds[],  

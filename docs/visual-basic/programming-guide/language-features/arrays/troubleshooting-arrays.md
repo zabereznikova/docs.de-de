@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833372"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913467"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Problembehandlung bei Arrays (Visual Basic)
 Diese Seite listet einige der häufigsten Probleme, die bei der Arbeit mit Arrays auftreten können.  
@@ -22,7 +22,7 @@ Diese Seite listet einige der häufigsten Probleme, die bei der Arbeit mit Array
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Kompilierungsfehler deklarieren und Initialisieren eines Arrays  
  Kompilierungsfehler können von Missverständnissen Regeln zum Deklarieren, erstellen und Initialisieren von Arrays auftreten. Die häufigsten Ursachen von Fehlern sind die folgenden:  
   
--   Angeben einer [neuer Operator](../../../../visual-basic/language-reference/operators/new-operator.md) -Klausel nach der Angabe der Längen der Dimension in der Deklaration der Arrayvariablen. Die folgenden Codezeilen zeigen ungültige Deklarationen dieses Typs.  
+- Angeben einer [neuer Operator](../../../../visual-basic/language-reference/operators/new-operator.md) -Klausel nach der Angabe der Längen der Dimension in der Deklaration der Arrayvariablen. Die folgenden Codezeilen zeigen ungültige Deklarationen dieses Typs.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Diese Seite listet einige der häufigsten Probleme, die bei der Arbeit mit Array
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   Angeben von Längen der Dimension für mehr als Arrays der obersten Ebene eines verzweigten Arrays. Die folgende Codezeile zeigt eine ungültige Deklaration dieses Typs.  
+- Angeben von Längen der Dimension für mehr als Arrays der obersten Ebene eines verzweigten Arrays. Die folgende Codezeile zeigt eine ungültige Deklaration dieses Typs.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   Das Auslassen der `New` Schlüsselwort, wenn Sie die Elementwerte angeben. Die folgende Codezeile zeigt eine ungültige Deklaration dieses Typs.  
+- Das Auslassen der `New` Schlüsselwort, wenn Sie die Elementwerte angeben. Die folgende Codezeile zeigt eine ungültige Deklaration dieses Typs.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   Angeben einer `New` -Klausel ohne geschweifte Klammern (`{}`). Die folgenden Codezeilen zeigen ungültige Deklarationen dieses Typs.  
+- Angeben einer `New` -Klausel ohne geschweifte Klammern (`{}`). Die folgenden Codezeilen zeigen ungültige Deklarationen dieses Typs.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

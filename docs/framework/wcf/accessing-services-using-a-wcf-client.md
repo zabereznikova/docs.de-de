@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b391f7421e99c99c81710e73343a5aeb0894d47f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620192"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652141"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Zugreifen auf Dienste mithilfe eines WCF-Clients
 
@@ -20,11 +20,11 @@ Nachdem Sie einen Dienst erstellt haben, werden im nächste Schritt erstellen Si
 
  Die folgenden: die grundlegenden Schritte zum Erstellen eines WCF-Clients
 
-1.  Kompilieren Sie den Dienstcode.
+1. Kompilieren Sie den Dienstcode.
 
-2.  Generieren Sie den WCF-Clientproxy.
+2. Generieren Sie den WCF-Clientproxy.
 
-3.  Instanziieren Sie den WCF-Clientproxy.
+3. Instanziieren Sie den WCF-Clientproxy.
 
 Der WCF-Clientproxy kann manuell generiert werden, mithilfe der Service Model Metadata Utility Tool (SvcUtil.exe) Weitere Informationen finden Sie unter [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Der WCF-Clientproxy kann auch in Visual Studio generiert werden mithilfe der **Hinzufügen eines Dienstverweises** Feature. Um den WCF-Clientproxy mithilfe einer dieser Methoden zu generieren, muss der Dienst ausgeführt werden. Wenn es sich um einen selbst gehosteten Dienst handelt, müssen Sie den Host ausführen. Wenn der Dienst in IIS/WAS gehostet wird, ist kein weiterer Schritt erforderlich.
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Viele von einem WCF-Client ausgelöste Ausnahmen werden durch eine Ausnahme für den Dienst verursacht. Im Folgenden finden Sie einige Beispiele:
 
--   <xref:System.Net.Sockets.SocketException>: Eine vorhandene Verbindung wurde erzwungenermaßen vom Remotehost geschlossen.
+- <xref:System.Net.Sockets.SocketException>: Eine vorhandene Verbindung wurde erzwungenermaßen vom Remotehost geschlossen.
 
--   <xref:System.ServiceModel.CommunicationException>: Die zugrunde liegende Verbindung wurde unerwartet geschlossen.
+- <xref:System.ServiceModel.CommunicationException>: Die zugrunde liegende Verbindung wurde unerwartet geschlossen.
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>: Die Socketverbindung wurde abgebrochen. Mögliche Ursache: Ein Fehler beim Verarbeiten der Nachricht, eine Zeitüberschreitung durch den Remotehost beim Empfang oder ein Problem mit einer zugrunde liegenden Netzwerkressource.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: Die Socketverbindung wurde abgebrochen. Mögliche Ursache: Ein Fehler beim Verarbeiten der Nachricht, eine Zeitüberschreitung durch den Remotehost beim Empfang oder ein Problem mit einer zugrunde liegenden Netzwerkressource.
 
 Tritt eine Ausnahme dieses Typs auf, aktivieren Sie die Ablaufverfolgung auf der Dienstseite, und ermitteln Sie die dort aufgetretene Ausnahme. Weitere Informationen zur Ablaufverfolgung finden Sie unter [Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/index.md) und [mithilfe der Ablaufverfolgung Ihrer Anwendung beheben](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 

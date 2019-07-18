@@ -1,15 +1,13 @@
 ---
 title: Docker-Container, -Images und -Registrierungen
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Docker-Container, -Images und -Registrierungen
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 520f8d4d54f1fdd227ff9a1e88660b62e75f927f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130233"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639905"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker-Container, -Images und -Registrierungen
 
@@ -29,9 +27,9 @@ Durch das Einfügen von Images in eine Registrierung können Sie statische und u
 
 Private Imageregistrierungen, die lokal oder in der Cloud gehostet werden, werden empfohlen, wenn:
 
--   Ihre Images wegen Vertraulichkeit nicht öffentlich freigegeben werden dürfen
+- Ihre Images wegen Vertraulichkeit nicht öffentlich freigegeben werden dürfen
 
--   Sie eine minimale Netzwerklatenz zwischen Ihren Images und der ausgewählten Bereitstellungsumgebung erzielen möchten Wenn Ihre Produktionsumgebung beispielsweise die Azure-Cloud ist, möchten Sie Ihre Images wahrscheinlich in [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) speichern, um eine minimale Netzwerklatenz zu erzielen. Ähnliches gilt, wenn Ihre Produktionsumgebung lokal ist: Dann Sie möchten vermutlich sicherstellen, dass ein lokaler Docker Trusted Registry-Dienst innerhalb desselben lokalen Netzwerks verfügbar ist.
+- Sie eine minimale Netzwerklatenz zwischen Ihren Images und der ausgewählten Bereitstellungsumgebung erzielen möchten Wenn Ihre Produktionsumgebung beispielsweise die Azure-Cloud ist, möchten Sie Ihre Images wahrscheinlich in [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) speichern, um eine minimale Netzwerklatenz zu erzielen. Ähnliches gilt, wenn Ihre Produktionsumgebung lokal ist: Dann Sie möchten vermutlich sicherstellen, dass ein lokaler Docker Trusted Registry-Dienst innerhalb desselben lokalen Netzwerks verfügbar ist.
 
 >[!div class="step-by-step"]
 >[Zurück](docker-terminology.md)

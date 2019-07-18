@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f14d3dcaad1cc8cac11599b1647d61df3a793301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7e0e877402daf27c375aedddf8922e919a546ae5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124448"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781179"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo-Struktur
 Enthält ausführliche Informationen über das Modul verwiesen wird und die Assembly, die sie enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _ModuleBindInfo {  
     DWORD    dwAppDomainId;  
     LPCWSTR  lpAssemblyIdentity;  
@@ -58,7 +58,7 @@ typedef struct _ModuleBindInfo {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingstrukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [AssemblyBindInfo-Struktur](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
 - [ICLRAssemblyIdentityManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
 - [ICLRAssemblyReferenceList-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)

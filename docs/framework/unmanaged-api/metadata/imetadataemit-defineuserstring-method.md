@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f24dd3864be1bda454ac5e863f3fa2caf736bda9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 25e35fd9afd2ce4dc60e23ccd64e0630a008bf39
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215221"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777433"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString-Methode
 Ruft Metadaten für die angegebene Zeichenfolge ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineUserString (   
     [in]  LPCWSTR     szString,   
     [in]  ULONG       cchString,   

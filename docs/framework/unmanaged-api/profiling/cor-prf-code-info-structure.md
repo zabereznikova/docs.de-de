@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 56734a9971759b78a835917c4914cf55edaa47a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2f236a74da04dfddef852514eccb02215ad2d15a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103284"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752387"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO-Struktur
 Stellt einen zusammenhängenden Block von im Speicher befindlichem systemeigenem Code dar.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _COR_PRF_CODE_INFO {  
     UINT_PTR startAddress;  
     SIZE_T size;  

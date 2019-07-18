@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676821"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583067"
 ---
 # <a name="properties-c-programming-guide"></a>Eigenschaften (C#-Programmierhandbuch)
 
@@ -54,21 +54,21 @@ Dieses Muster wird anhand des folgenden Beispiels veranschaulicht. In diesem Bei
 
 In einigen Fällen weisen die Eigenschaft `get`- und `set`-Accessoren nur einen Wert zu oder rufen einen Wert aus einem Unterstützungsfeld ab, ohne zusätzliche Logik. Mithilfe von automatisch implementierten Eigenschaften können Sie Ihren Code vereinfachen, während der C#-Compiler das Unterstützungsfeld für Sie transparent bereitstellt. 
 
-Wenn eine Eigenschaft jeweils über einen `get`- und `set`-Accessor verfügt, müssen beide automatisch implementiert werden. Definieren Sie eine automatisch implementierte Eigenschaft mithilfe der `get`- und `set`-Schlüsselwörter ohne jede Implementierung. Im folgenden Beispiel wird das vorherige Beispiel wiederholt, außer das `Name` und `Price` automatisch implementierte Eigenschaften sind. Beachten Sie, dass das Beispiel auch den parametrisierten Konstruktor entfernt, damit `SaleItem`-Objekte jetzt mit einem Aufruf vom Standardkonstruktor und vom [Objektinitialisierer](object-and-collection-initializers.md) initialisiert werden.
+Wenn eine Eigenschaft jeweils über einen `get`- und `set`-Accessor verfügt, müssen beide automatisch implementiert werden. Definieren Sie eine automatisch implementierte Eigenschaft mithilfe der `get`- und `set`-Schlüsselwörter ohne jede Implementierung. Im folgenden Beispiel wird das vorherige Beispiel wiederholt, außer das `Name` und `Price` automatisch implementierte Eigenschaften sind. Beachten Sie, dass das Beispiel auch den parametrisierten Konstruktor entfernt, damit `SaleItem`-Objekte jetzt mit einem Aufruf des parameterlosen Konstruktors und eines [Objektinitialisierers](object-and-collection-initializers.md) initialisiert werden.
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
--   [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Schnittstelleneigenschaften](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Schnittstelleneigenschaften](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Vergleich zwischen Eigenschaften und Indexern](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Vergleich zwischen Eigenschaften und Indexern](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Einschränken des Zugriffsmethodenzugriffs](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Einschränken des Zugriffsmethodenzugriffs](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [Automatisch implementierte Eigenschaften](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Automatisch implementierte Eigenschaften](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 

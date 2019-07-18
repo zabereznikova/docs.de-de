@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: df55b4fa107f3630cd259b755e0aaacdee4904ef
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099988"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960090"
 ---
 # <a name="elevation-of-privilege"></a>Angriffe durch Rechteerweiterung
 *Rechteerweiterungen* aus und weisen Sie eine Autorisierung Angreifer Berechtigungen über die ursprünglich zugewiesenen ergibt. Dies ist zum Beispiel der Fall, wenn einem Angreifer mit einem Berechtigungssatz von "Nur-Lesen"-Berechtigungen es irgendwie gelingt, "Lesen-und-Schreiben"-Berechtigungen in seinen Berechtigungssatz aufzunehmen.  
@@ -18,20 +18,20 @@ ms.locfileid: "59099988"
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Vertrauenswürdige STS sollten SAML-Tokenansprüche signieren  
  Ein SAML (Security Assertions Markup Language)-Token ist ein generisches XML-Token, das den Standardtyp für ausgestellte Token darstellt. SAML-Token können von einem Sicherheitstokendienst (Security Token Service, STS) erstellt werden, der für den empfangenden Webdienst in einem typischen Datenaustausch als vertrauenswürdig gilt. SAML-Token enthalten Ansprüche in Form von Anweisungen. Ein Angreifer kann die Ansprüche aus einem gültigen Token kopieren, ein neues SAML-Token erstellen und mit einem anderen Aussteller signieren. Das Ziel ist hierbei, festzustellen, ob der Server Aussteller validiert, und wenn nicht, diese Schwäche zum Erstellen von SAML-Token auszunutzen, die Berechtigungen über die von einem vertrauenswürdigen STS beabsichtigten hinaus gewähren.  
   
- Die <xref:System.IdentityModel.Tokens.SamlAssertion>-Klasse überprüft die digitale Signatur, die in einem SAML-Token enthalten ist, und der Standard-<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> erfordert, dass SAML-Token mit einem X.509-Zertifikat signiert sind, das gültig ist, wenn <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> festgelegt ist. `ChainTrust` -Modus allein kann nicht bestimmen, ob der Aussteller des SAML-Tokens vertrauenswürdig ist. Dienste, die ein stärker granuliertes Vertrauenswürdigkeitsmodell erfordern, können entweder mithilfe von Autorisierungs- oder Durchsetzungsrichtlinien den Aussteller der erzeugten Anspruchssätze durch die Authentifizierung der Token überprüfen oder die X.509-Validierungseinstellungen für <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> verwenden, um den Satz zulässiger Signaturzertifikate einzuschränken. Weitere Informationen finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) und [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Die <xref:System.IdentityModel.Tokens.SamlAssertion>-Klasse überprüft die digitale Signatur, die in einem SAML-Token enthalten ist, und der Standard-<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> erfordert, dass SAML-Token mit einem X.509-Zertifikat signiert sind, das gültig ist, wenn <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> festgelegt ist. Mithilfe des `ChainTrust`-Modus allein kann nicht bestimmt werden, ob der Aussteller des SAML-Tokens vertrauenswürdig ist. Dienste, die ein stärker granuliertes Vertrauenswürdigkeitsmodell erfordern, können entweder mithilfe von Autorisierungs- oder Durchsetzungsrichtlinien den Aussteller der erzeugten Anspruchssätze durch die Authentifizierung der Token überprüfen oder die X.509-Validierungseinstellungen für <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> verwenden, um den Satz zulässiger Signaturzertifikate einzuschränken. Weitere Informationen finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) und [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Wechseln der Identität ohne Sicherheitskontext  
- Die nachfolgenden Ausführungen gelten nur für [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ Folgendes gilt nur für "WinFX".  
   
  Wenn zwischen einem Client und Server, die Identität des Clients eine Verbindung hergestellt ist, wird nicht geändert, nur in einem Fall: nach dem der WCF-Client geöffnet wird, wenn alle der folgenden Bedingungen erfüllt sind,:  
   
--   Die Verfahren für das ein Sicherheitskontext (mithilfe einer transportsicherheitssitzung oder einer nachrichtensicherheitssitzung) eingerichtet ist deaktiviert (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> -Eigenschaftensatz auf `false` bei nachrichtensicherheit oder transportsicherheit verfügt nicht über das Einrichten der Sicherheit Sitzungen wird verwendet, bei der Sicherheit von Transport. HTTPS ist ein Beispiel für ein solches Transportprotokoll).  
+- Die Verfahren für das ein Sicherheitskontext (mithilfe einer transportsicherheitssitzung oder einer nachrichtensicherheitssitzung) eingerichtet ist deaktiviert (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> -Eigenschaftensatz auf `false` bei nachrichtensicherheit oder transportsicherheit verfügt nicht über das Einrichten der Sicherheit Sitzungen wird verwendet, bei der Sicherheit von Transport. HTTPS ist ein Beispiel für ein solches Transportprotokoll).  
   
--   Sie verwenden die Windows-Authentifizierung.  
+- Sie verwenden die Windows-Authentifizierung.  
   
--   Sie legen die Anmeldeinformationen nicht explizit fest.  
+- Sie legen die Anmeldeinformationen nicht explizit fest.  
   
--   Sie rufen den Dienst unter dem Identitätswechsel-Sicherheitskontext auf.  
+- Sie rufen den Dienst unter dem Identitätswechsel-Sicherheitskontext auf.  
   
  Wenn diese Bedingungen erfüllt sind, kann die Identität verwendet zum Authentifizieren des Clients an den Dienst zu ändern (es ist möglicherweise nicht die imitierte Identität, sondern die Prozessidentität stattdessen) nach dem der WCF-Client geöffnet wird. Dies geschieht, weil die Windows-Anmeldeinformationen, mit denen der Client für den Dienst authentifiziert wird, mit jeder Nachricht übermittelt werden, und die zur Authentifizierung verwendeten Anmeldeinformationen von der Windows-Identität des aktuellen Threads bezogen werden. Wenn sich die Windows-Identität des aktuellen Threads ändert (beispielsweise durch einen Identitätswechsel, mit dem ein anderer Aufrufer imitiert wird), dann können sich auch die Anmeldeinformationen ändern, die an die Nachricht angefügt sind und die zur Authentifizierung des Clients gegenüber dem Dienst verwendet werden.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "59099988"
   
  Dieser Fall tritt auch ein, wenn Sie mit einer der folgenden Methoden benutzerdefinierte Bindungen erstellen:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
  Um dem entgegenzuwirken, muss die Autorisierungsrichtlinie die Aktion und Gültigkeitsdauer jeder Autorisierungsrichtlinie überprüfen.  
   
@@ -74,19 +74,19 @@ ms.locfileid: "59099988"
   
  Dieser Fall kann unter den folgenden Umständen eintreten:  
   
--   Der Client signiert eine Nachricht mit einem X.509-Zertifikat und fügt das X.509-Zertifikat nicht an die Nachricht an, sondern verweist über dessen Subjektschlüsselbezeichner darauf.  
+- Der Client signiert eine Nachricht mit einem X.509-Zertifikat und fügt das X.509-Zertifikat nicht an die Nachricht an, sondern verweist über dessen Subjektschlüsselbezeichner darauf.  
   
--   Auf dem Computer, auf dem der Dienst ausgeführt wird, sind zwei oder mehr Zertifikate mit dem gleichen öffentlichen Schlüssel vorhanden, die jedoch unterschiedliche Daten enthalten.  
+- Auf dem Computer, auf dem der Dienst ausgeführt wird, sind zwei oder mehr Zertifikate mit dem gleichen öffentlichen Schlüssel vorhanden, die jedoch unterschiedliche Daten enthalten.  
   
--   Der Dienst ruft ein Zertifikat ab, das zwar den gleichen Subjektschlüsselbezeichner aufweist, aber nicht das vom Client für die Verwendung vorgesehene Zertifikat ist. Wenn WCF die Nachricht empfängt und die Signatur überprüft, ordnet WCF die Informationen im unbeabsichtigten x. 509-Zertifikat einem Satz von Ansprüchen, die verschiedene und möglicherweise mit erhöhten Rechten aus, was vom Client erwartet.  
+- Der Dienst ruft ein Zertifikat ab, das zwar den gleichen Subjektschlüsselbezeichner aufweist, aber nicht das vom Client für die Verwendung vorgesehene Zertifikat ist. Wenn WCF die Nachricht empfängt und die Signatur überprüft, ordnet WCF die Informationen im unbeabsichtigten x. 509-Zertifikat einem Satz von Ansprüchen, die verschiedene und möglicherweise mit erhöhten Rechten aus, was vom Client erwartet.  
   
  Um dieses Problem zu entschärfen, verweisen Sie auf eine andere Art auf das X.509-Zertifikat, z.&amp;#160;B. mithilfe von <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Veröffentlichung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Dienstverweigerung (Denial of Service)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Wiederholungsangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [Verfälschungen](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

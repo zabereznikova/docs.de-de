@@ -3,11 +3,11 @@ title: Multiple Active Result Sets (MARS)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 ms.openlocfilehash: bb00fbfec32a9d64fd6661cd5cdfd06fe3aa7410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922355"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Multiple Active Result Sets (MARS)
 MARS ist eine Funktion, die das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. In früheren Versionen konnte jeweils nur ein Batch pro einzelne Verbindung ausgeführt werden. Das Ausführen mehrerer Batches mit MARS bedeutet nicht das gleichzeitige Ausführen von Vorgängen.  

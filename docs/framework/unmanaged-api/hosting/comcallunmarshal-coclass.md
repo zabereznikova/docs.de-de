@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f17a88a90905006432ae8c5dc040277124c947b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fde42e3ecfac81a168920bc152833be7ba72b995
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166880"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779082"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal-Co-Klasse
 Stellt Schnittstellen zum Verwalten von das Marshalling der Schnittstellenzeiger bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 coclass ComCallUnmarshal {  
     [default] interface IMarshal;  
 };  
@@ -51,4 +51,4 @@ coclass ComCallUnmarshal {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosting-Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

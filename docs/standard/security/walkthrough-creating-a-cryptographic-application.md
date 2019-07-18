@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 124641ed32dc2ea953202dbc6a73ee066a6c4a4e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964706"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602510"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung
 Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt und entschlüsselt wird. Die Codebeispiele sind für eine Windows Forms-Anwendung vorgesehen. Diese Anwendung zeigt keine realen Szenarien wie die Verwendung von Smartcards. Stattdessen veranschaulicht sie die Grundlagen der Ver- und Entschlüsselung.  
   
  In dieser exemplarische Vorgehensweise werden die folgenden Richtlinien für Verschlüsselung verwendet:  
   
--   Verwenden Sie die <xref:System.Security.Cryptography.RijndaelManaged>-Klasse (ein symmetrischer Algorithmus), um Daten zu ver- und entschlüsseln, indem Sie den automatisch generierten Schlüssel (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) und Initialisierungsvektor (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) verwenden.  
+- Verwenden Sie die <xref:System.Security.Cryptography.RijndaelManaged>-Klasse (ein symmetrischer Algorithmus), um Daten zu ver- und entschlüsseln, indem Sie den automatisch generierten Schlüssel (<xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A>) und Initialisierungsvektor (<xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A>) verwenden.  
   
--   Verwenden Sie den <xref:System.Security.Cryptography.RSACryptoServiceProvider> (ein asymmetrischer Algorithmus), um den Schlüssel für die Daten zu ver- und zu entschlüsseln, die mit <xref:System.Security.Cryptography.RijndaelManaged> verschlüsselt wurden. Asymmetrische Algorithmen sind am besten für kleinere Datenmengen geeignet, zum Beispiel für einen Schlüssel.  
+- Verwenden Sie den <xref:System.Security.Cryptography.RSACryptoServiceProvider> (ein asymmetrischer Algorithmus), um den Schlüssel für die Daten zu ver- und zu entschlüsseln, die mit <xref:System.Security.Cryptography.RijndaelManaged> verschlüsselt wurden. Asymmetrische Algorithmen sind am besten für kleinere Datenmengen geeignet, zum Beispiel für einen Schlüssel.  
   
     > [!NOTE]
     >  Wenn Sie Daten auf Ihrem Computer schützen möchten, anstatt verschlüsselte Inhalte mit anderen Personen auszutauschen, sollten Sie überlegen, die <xref:System.Security.Cryptography.ProtectedData>-Klasse oder die <xref:System.Security.Cryptography.ProtectedMemory>-Klasse zu verwenden.  
@@ -45,15 +45,15 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
 |Importieren eines öffentlichen Schlüssels|Lädt den Schlüssel aus einer XML-Datei in den Schlüsselcontainer.|  
 |Testen der Anwendung|Listet Verfahren zum Testen dieser Anwendung auf.|  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
--   Verweise auf die Namespaces <xref:System.IO> und <xref:System.Security.Cryptography>.  
+- Verweise auf die Namespaces <xref:System.IO> und <xref:System.Security.Cryptography>.  
   
 ## <a name="creating-a-windows-forms-application"></a>Erstellen einer Windows Forms-Anwendung  
  Die meisten Codebeispiele in dieser exemplarischen Vorgehensweise sind als Ereignishandler für Button-Steuerelemente konzipiert. In der folgenden Tabelle sind die Steuerelemente aufgelistet, die für die Beispielanwendung und die erforderlichen Namen benötigt werden, um mit den Codebeispielen übereinzustimmen.  
   
-|Steuerelement|name|Texteigenschaft (nach Bedarf)|  
+|Steuerelement|Name|Texteigenschaft (nach Bedarf)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Datei verschlüsseln|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Datei entschlüsseln|  
@@ -88,27 +88,27 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
  Die `EncryptFile`-Methode führt folgende Schritte aus:  
   
-1.  Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>-Algorithmus, um den Inhalt zu verschlüsseln.  
+1. Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>-Algorithmus, um den Inhalt zu verschlüsseln.  
   
-2.  Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu verschlüsseln.   
+2. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu verschlüsseln.   
   
-3.  Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den <xref:System.IO.FileStream> der Quelldatei in Byteblöcken in ein Ziel-<xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei zu lesen und zu verschlüsseln.  
+3. Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den <xref:System.IO.FileStream> der Quelldatei in Byteblöcken in ein Ziel-<xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei zu lesen und zu verschlüsseln.  
   
-4.  Sie ermittelt die Länge des verschlüsselten Schlüssels und IVs und erstellt Bytearrays mit deren Längenwerten.  
+4. Sie ermittelt die Länge des verschlüsselten Schlüssels und IVs und erstellt Bytearrays mit deren Längenwerten.  
   
-5.  Sie schreibt den Schlüssel, den IV und deren Längenwerte in das verschlüsselte Paket.  
+5. Sie schreibt den Schlüssel, den IV und deren Längenwerte in das verschlüsselte Paket.  
   
  Das Verschlüsselungspaket hat das folgende Format:  
   
--   Schlüssellänge, Bytes 0 - 3  
+- Schlüssellänge, Bytes 0 - 3  
   
--   IV-Länge, Bytes 4 - 7  
+- IV-Länge, Bytes 4 - 7  
   
--   Verschlüsselte Schlüssel  
+- Verschlüsselte Schlüssel  
   
--   IV  
+- IV  
   
--   Verschlüsselungsverfahrenstext  
+- Verschlüsselungsverfahrenstext  
   
  Durch die Längenangaben für den Schlüssel und den IV lassen sich Startpunkte und Längen aller Teile des Verschlüsselungspakets bestimmen. Diese können dann zum Entschlüsseln der Datei verwendet werden.  
   
@@ -127,15 +127,15 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
  Die `Decrypt`-Methode führt folgende Schritte aus:  
   
-1.  Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>-Algorithmus, um den Inhalt zu entschlüsseln.  
+1. Sie erstellt einen symmetrischen <xref:System.Security.Cryptography.RijndaelManaged>-Algorithmus, um den Inhalt zu entschlüsseln.  
   
-2.  Sie liest die ersten acht Bytes des <xref:System.IO.FileStream>-Objekts des verschlüsselten Pakets in Bytearrays ein, um die Länge des verschlüsselten Schlüssels und IVs zu erhalten.  
+2. Sie liest die ersten acht Bytes des <xref:System.IO.FileStream>-Objekts des verschlüsselten Pakets in Bytearrays ein, um die Länge des verschlüsselten Schlüssels und IVs zu erhalten.  
   
-3.  Sie extrahiert den Schlüssel und den IV aus dem Verschlüsselungspaket in Bytearrays hinein.  
+3. Sie extrahiert den Schlüssel und den IV aus dem Verschlüsselungspaket in Bytearrays hinein.  
   
-4.  Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu entschlüsseln.   
+4. Sie erstellt ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, um den <xref:System.Security.Cryptography.RijndaelManaged>-Schlüssel zu entschlüsseln.   
   
-5.  Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den Verschlüsselungsverfahrenstext-Abschnitt des <xref:System.IO.FileStream>-Verschlüsselungspakets als Byteblöcke in das <xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei einzulesen und zu entschlüsseln. Nach Beendigung dieses Vorgangs ist die Entschlüsselung abgeschlossen.  
+5. Sie verwendet ein <xref:System.Security.Cryptography.CryptoStream>-Objekt, um den Verschlüsselungsverfahrenstext-Abschnitt des <xref:System.IO.FileStream>-Verschlüsselungspakets als Byteblöcke in das <xref:System.IO.FileStream>-Objekt für die verschlüsselte Datei einzulesen und zu entschlüsseln. Nach Beendigung dieses Vorgangs ist die Entschlüsselung abgeschlossen.  
   
  Fügen Sie folgenden Code als `Click`-Ereignishandler für die Schaltfläche `Decrypt File` hinzu.  
   
@@ -158,7 +158,7 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
  [!code-vb[CryptoWalkThru#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#8)]  
   
 ## <a name="importing-a-public-key"></a>Importieren eines öffentlichen Schlüssels  
- In dieser Aufgabe wird der Schlüssel mit ausschließlich öffentlichen Parametern, wie er über die Schaltfläche `Export Public Key` erstellt wurde,geladen und als Schlüsselcontainername festgelegt.  
+ In dieser Aufgabe wird der Schlüssel mit ausschließlich öffentlichen Parametern, wie er über die Schaltfläche `Export Public Key` erstellt wurde, geladen und als Schlüsselcontainername festgelegt.  
   
  In dieser Aufgabe wird das Szenario simuliert, in dem Bob den Schlüssel von Alice mit ausschließlich öffentlichen Parametern lädt, sodass er Dateien an sie verschlüsseln kann.  
   
@@ -182,33 +182,33 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Inhalt verschlüsselt un
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>So erstellen Sie Schlüssel, so ver- und entschlüsseln Sie  
   
-1.  Klicken Sie auf die Schaltfläche `Create Keys`. Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, dass es sich um ein vollständiges Schlüsselpaar handelt.  
+1. Klicken Sie auf die Schaltfläche `Create Keys`. Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, dass es sich um ein vollständiges Schlüsselpaar handelt.  
   
-2.  Klicken Sie auf die Schaltfläche `Export Public Key`. Durch das Exportieren der öffentlichen Schlüsselparameter wird der aktuelle Schlüssel nicht ändert.  
+2. Klicken Sie auf die Schaltfläche `Export Public Key`. Durch das Exportieren der öffentlichen Schlüsselparameter wird der aktuelle Schlüssel nicht ändert.  
   
-3.  Klicken Sie auf die Schaltfläche `Encrypt File`, und wählen Sie eine Datei aus.  
+3. Klicken Sie auf die Schaltfläche `Encrypt File`, und wählen Sie eine Datei aus.  
   
-4.  Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus.  
+4. Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus.  
   
-5.  Sehen Sie sich die nun entschlüsselte Datei an.  
+5. Sehen Sie sich die nun entschlüsselte Datei an.  
   
-6.  Schließen Sie die Anwendung, und starten Sie sie neu, um das Abrufen von beibehaltenen Schlüsselcontainern im nächsten Szenario zu testen.  
+6. Schließen Sie die Anwendung, und starten Sie sie neu, um das Abrufen von beibehaltenen Schlüsselcontainern im nächsten Szenario zu testen.  
   
 #### <a name="to-encrypt-using-the-public-key"></a>So verschlüsseln Sie mit dem öffentlichen Schlüssel  
   
-1.  Klicken Sie auf die Schaltfläche `Import Public Key`. Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, dass dies nur der öffentliche Schlüssel ist.  
+1. Klicken Sie auf die Schaltfläche `Import Public Key`. Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, dass dies nur der öffentliche Schlüssel ist.  
   
-2.  Klicken Sie auf die Schaltfläche `Encrypt File`, und wählen Sie eine Datei aus.  
+2. Klicken Sie auf die Schaltfläche `Encrypt File`, und wählen Sie eine Datei aus.  
   
-3.  Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus. Dieser Schritt schlägt fehl, weil Sie für das Entschlüsseln den privaten Schlüssel haben müssen.  
+3. Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus. Dieser Schritt schlägt fehl, weil Sie für das Entschlüsseln den privaten Schlüssel haben müssen.  
   
  Dieses Szenario veranschaulicht, wie mit ausschließlich dem öffentlichen Schlüssel eine Datei für eine andere Person verschlüsselt wird. Normalerweise würde diese Person Ihnen nur den öffentlichen Schlüssel geben und den privaten Schlüssel für Entschlüsselung zurückbehalten.  
   
 #### <a name="to-decrypt-using-the-private-key"></a>So entschlüsseln Sie mit dem privaten Schlüssel  
   
-1.  Klicken Sie auf die Schaltfläche `Get Private Key`. Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, ob es sich um das vollständige Schlüsselpaar handelt.  
+1. Klicken Sie auf die Schaltfläche `Get Private Key`. Die Bezeichnung zeigt den Schlüsselnamen an und zeigt, ob es sich um das vollständige Schlüsselpaar handelt.  
   
-2.  Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus. Dies ist erfolgreich, weil Sie das vollständige Schlüsselpaar zum Entschlüsseln haben.  
+2. Klicken Sie auf die Schaltfläche `Decrypt File`, und wählen Sie die soeben verschlüsselte Datei aus. Dies ist erfolgreich, weil Sie das vollständige Schlüsselpaar zum Entschlüsseln haben.  
   
 ## <a name="see-also"></a>Siehe auch
 

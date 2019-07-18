@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Button controls [WPF], creating
 ms.assetid: 607a193c-4098-4dd8-8dc0-51256cec2020
 ms.openlocfilehash: 5be928ac75ad727feabcde07ac0c6dc76ed130e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910948"
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a>Vorgehensweise: Erstellen einer Schaltfläche mit einem Bild
 Dieses Beispiel zeigt, wie Sie ein Bild enthalten, auf eine <xref:System.Windows.Controls.Button>.  

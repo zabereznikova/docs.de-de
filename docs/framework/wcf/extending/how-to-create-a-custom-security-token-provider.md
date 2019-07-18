@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: dd9b53b50f76ec80232a5fb8624e2b1701f9760d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1677d44faf6901eb1eda93a9374636b7caa558a0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767194"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters
 In diesem Thema wird beschrieben, wie Sie neue Tokentypen mit einem benutzerdefinierten Sicherheitstokenanbieter erstellen und den Anbieter in einen benutzerdefinierten Sicherheitstoken-Manager integrieren.  
@@ -26,22 +26,22 @@ In diesem Thema wird beschrieben, wie Sie neue Tokentypen mit einem benutzerdefi
   
 ### <a name="to-create-a-custom-security-token-provider"></a>So erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter  
   
-1.  Definieren Sie eine neue von der <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Klasse abgeleitete Klasse.  
+1. Definieren Sie eine neue von der <xref:System.IdentityModel.Selectors.SecurityTokenProvider>-Klasse abgeleitete Klasse.  
   
-2.  Implementieren Sie die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29>-Methode. Die Methode ist für die Erstellung und die Rückgabe einer Instanz des Sicherheitstokens verantwortlich. Im folgenden Beispiel wird eine Klasse mit der Bezeichnung `MySecurityTokenProvider` erstellt und die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29>-Methode überschrieben, um eine Instanz der <xref:System.IdentityModel.Tokens.X509SecurityToken>-Klasse zurückzugeben. Der Klassenkonstruktor erfordert eine neue Instanz der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Klasse.  
+2. Implementieren Sie die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29>-Methode. Die Methode ist für die Erstellung und die Rückgabe einer Instanz des Sicherheitstokens verantwortlich. Im folgenden Beispiel wird eine Klasse mit der Bezeichnung `MySecurityTokenProvider` erstellt und die <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29>-Methode überschrieben, um eine Instanz der <xref:System.IdentityModel.Tokens.X509SecurityToken>-Klasse zurückzugeben. Der Klassenkonstruktor erfordert eine neue Instanz der <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>-Klasse.  
   
      [!code-csharp[c_CustomTokenProvider#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#1)]
      [!code-vb[c_CustomTokenProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#1)]  
   
 ### <a name="to-integrate-a-custom-security-token-provider-with-a-custom-security-token-manager"></a>So integrieren Sie einen benutzerdefinierten Sicherheitstokenanbieter in einen benutzerdefinierten Sicherheitstoken-Manager  
   
-1.  Definieren Sie eine neue von der <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse abgeleitete Klasse. (Das nachfolgende Beispiel ist von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>-Klasse abgeleitet, die von der <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse abgeleitet ist.)  
+1. Definieren Sie eine neue von der <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse abgeleitete Klasse. (Das nachfolgende Beispiel ist von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>-Klasse abgeleitet, die von der <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse abgeleitet ist.)  
   
-2.  Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>-Methode, wenn sie noch nicht überschrieben ist.  
+2. Überschreiben Sie die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>-Methode, wenn sie noch nicht überschrieben ist.  
   
      Die <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Methode ist verantwortlich für die Rückgabe einer Instanz von der <xref:System.IdentityModel.Selectors.SecurityTokenProvider> Klasse entsprechend den <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> Parameter an die Methode übergeben werden, durch das Framework der WCF-Sicherheit. Ändern Sie die Methode zur Rückgabe der Implementierung des benutzerdefinierten Sicherheitstokenanbieters (die mit dem vorherigen Verfahren erstellt wurde), wenn die Methode mit einem entsprechenden Sicherheitstokenparameter aufgerufen wird. Weitere Informationen zu der Sicherheitstoken-Manager, finden Sie unter den [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
-3.  Fügen Sie benutzerdefinierte Logik zur Methode hinzu, um diese zu befähigen, den benutzerdefinierten Sicherheitstokenanbieter basierend auf dem <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>-Parameter zurückzugeben. Im folgenden Beispiel wird der benutzerdefinierte Sicherheitstokenanbieter zurückgegeben, wenn die Tokenanforderungen erfüllt werden. Die Anforderungen umfassen ein  X.509-Sicherheitstoken und die Nachrichtenrichtung (die das Token für die Nachrichtenausgabe verwendet). In allen anderen Fällen ruft der Code die Basisklasse ab, um das vom System bereitgestellte Verhalten für andere Sicherheitstokenanforderungen zu verwalten.  
+3. Fügen Sie benutzerdefinierte Logik zur Methode hinzu, um diese zu befähigen, den benutzerdefinierten Sicherheitstokenanbieter basierend auf dem <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>-Parameter zurückzugeben. Im folgenden Beispiel wird der benutzerdefinierte Sicherheitstokenanbieter zurückgegeben, wenn die Tokenanforderungen erfüllt werden. Die Anforderungen umfassen ein  X.509-Sicherheitstoken und die Nachrichtenrichtung (die das Token für die Nachrichtenausgabe verwendet). In allen anderen Fällen ruft der Code die Basisklasse ab, um das vom System bereitgestellte Verhalten für andere Sicherheitstokenanforderungen zu verwalten.  
   
  [!code-csharp[c_CustomTokenProvider#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#2)]
  [!code-vb[c_CustomTokenProvider#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#2)]  
@@ -59,4 +59,4 @@ In diesem Thema wird beschrieben, wie Sie neue Tokentypen mit einem benutzerdefi
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
 - [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Authentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)

@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 0d253e917d6f805c471f244cddea44f339343868
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466152"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025526"
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
 Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, der ihn erstellt hat. Bei der Implementierung dieses Isolationstyps verwendet die Common Language Runtime den Begriff der Benutzeridentität, der auch vom Betriebssystem erkannt wird. Dabei handelt es sich um die Identität, die mit dem Prozess verknüpft ist, in dem der Code beim Öffnen des Speichers ausgeführt wird. Diese Identität ist eine authentifizierte Benutzeridentität, wobei ein Identitätswechsel dazu führen kann, dass sich die Identität des aktuellen Benutzers dynamisch ändert.  
   
  Zudem ist der Zugriff auf isolierte Speicherplätze durch die Identität eingeschränkt, die mit der Domäne und Assembly der Anwendung oder nur mit der Assembly verbunden ist. Die Runtime erhält diese Identitäten auf folgende Weise:  
   
--   Die Domänenidentität stellt den Beweis für die Anwendung dar, die im Falle einer Webanwendung die vollständige URL sein kann. Bei Shell-gehostetem Code kann die Domänenidentität auf dem Pfad des Anwendungsverzeichnisses basieren. Wenn die ausführbare Datei beispielsweise aus dem Pfad C:\Office\MyApp.exe ausgeführt wird, lautet die Domänenidentität C:\Office\MyApp.exe.  
+- Die Domänenidentität stellt den Beweis für die Anwendung dar, die im Falle einer Webanwendung die vollständige URL sein kann. Bei Shell-gehostetem Code kann die Domänenidentität auf dem Pfad des Anwendungsverzeichnisses basieren. Wenn die ausführbare Datei beispielsweise aus dem Pfad C:\Office\MyApp.exe ausgeführt wird, lautet die Domänenidentität C:\Office\MyApp.exe.  
   
--   Die Assemblyidentität ist der Beweis für die Assembly. Diese kann aus einer kryptographischen digitalen Signatur stammen, die der [starke Name](../../../docs/framework/app-domains/strong-named-assemblies.md) der Assembly, der Softwareherausgeber der Assembly oder ihre URL-Identität sein kann. Wenn eine Assembly sowohl einen starken Namen als auch eine Softwareherausgeberidentität hat, wird die Softwareherausgeberidentität verwendet. Wenn die Assembly aus dem Internet stammt und unsigniert ist, wird die URL-Identität verwendet. Weitere Informationen zu Assemblys und starken Namen finden Sie unter [Programming with Assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md) (Programmieren mit Assemblys).  
+- Die Assemblyidentität ist der Beweis für die Assembly. Diese kann aus einer kryptographischen digitalen Signatur stammen, die der [starke Name](../../../docs/framework/app-domains/strong-named-assemblies.md) der Assembly, der Softwareherausgeber der Assembly oder ihre URL-Identität sein kann. Wenn eine Assembly sowohl einen starken Namen als auch eine Softwareherausgeberidentität hat, wird die Softwareherausgeberidentität verwendet. Wenn die Assembly aus dem Internet stammt und unsigniert ist, wird die URL-Identität verwendet. Weitere Informationen zu Assemblys und starken Namen finden Sie unter [Programming with Assemblies](../../../docs/framework/app-domains/programming-with-assemblies.md) (Programmieren mit Assemblys).  
   
--   Roamingspeicher wandern mit einem Benutzer, der über ein Roamingbenutzerprofil verfügt. Die Dateien werden in ein Netzwerkverzeichnis geschrieben und auf jeden Computer heruntergeladen, bei dem sich der Benutzer anmeldet. Weitere Informationen zu Roamingbenutzerprofilen finden Sie unter <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Roamingspeicher wandern mit einem Benutzer, der über ein Roamingbenutzerprofil verfügt. Die Dateien werden in ein Netzwerkverzeichnis geschrieben und auf jeden Computer heruntergeladen, bei dem sich der Benutzer anmeldet. Weitere Informationen zu Roamingbenutzerprofilen finden Sie unter <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
  Durch die Kombination der Konzepte von Benutzer-, Domänen- und Assemblyidentität kann ein isolierter Speicher die Daten wie folgt isolieren, wobei es für jede dieser Methoden eigene Verwendungsszenarien gibt:  
   
--   [Isolation nach Benutzer und Assembly](#UserAssembly)  
+- [Isolation nach Benutzer und Assembly](#UserAssembly)  
   
--   [Isolation nach Benutzer, Domäne und Assembly](#UserDomainAssembly)  
+- [Isolation nach Benutzer, Domäne und Assembly](#UserDomainAssembly)  
   
  Jede dieser Isolationen kann mit einem Roamingbenutzerprofil kombiniert werden. Weitere Informationen finden Sie im Abschnitt [Isolierter Speicher und Roaming](#Roaming).  
   
@@ -53,7 +53,7 @@ Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, d
  Beachten Sie, dass isolierte Speicher (mit Ausnahme von Roamingspeichern) immer implizit nach Computer isoliert sind, da sie die Speicherfunktionen verwenden, die sich lokal auf einem bestimmten Computer befinden.  
   
 > [!IMPORTANT]
->  Isolierte Speicherung ist nicht für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps verfügbar. Verwenden Sie stattdessen die zum Speichern von lokalen Daten und Dateien in der `Windows.Storage` -API enthaltenen Anwendungsdatenklassen in den [!INCLUDE[wrt](../../../includes/wrt-md.md)] -Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .  
+>  Isolierte Speicherung ist nicht für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps verfügbar. Verwenden Sie stattdessen zum Speichern von lokalen Daten und Dateien die in der Windows-Runtime-API enthaltenen Anwendungsdatenklassen in den `Windows.Storage`-Namespaces. Weitere Informationen finden Sie im Windows Developer Center unter [Anwendungsdaten](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Isolation nach Benutzer und Assembly  

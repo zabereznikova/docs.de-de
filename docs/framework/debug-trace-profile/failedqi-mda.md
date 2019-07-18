@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7ca7d98dba7f66aee96d0f2059086c442df17f5b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217626"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660454"
 ---
 # <a name="failedqi-mda"></a>failedQI-MDA
 Der `failedQI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn die CLR stellvertretend für einen RCW (Runtime Callable Wrapper) `QueryInterface` für einen COM-Schnittstellenzeiger aufruft und der Aufruf von `QueryInterface` fehlschlägt.  
@@ -25,11 +25,11 @@ Der `failedQI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debu
   
 ## <a name="cause"></a>Ursache  
   
--   Der Aufruf erfolgt im falschen Kontext.  
+- Der Aufruf erfolgt im falschen Kontext.  
   
--   Der registrierte Proxy kann den Aufruf von `QueryInterface` nicht ausführen, weil der Aufruf im falschen Kontext erfolgte.  
+- Der registrierte Proxy kann den Aufruf von `QueryInterface` nicht ausführen, weil der Aufruf im falschen Kontext erfolgte.  
   
--   Ein OLE zugehöriger Proxy hat einen falschen Wert für HRESULT zurückgegeben.  
+- Ein OLE zugehöriger Proxy hat einen falschen Wert für HRESULT zurückgegeben.  
   
 ## <a name="resolution"></a>Auflösung  
  Informationen hierzu finden Sie in der MSDN-Dokumentation zu COM-Regeln.  
@@ -53,5 +53,5 @@ Der `failedQI`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debu
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop-Marshalling](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)

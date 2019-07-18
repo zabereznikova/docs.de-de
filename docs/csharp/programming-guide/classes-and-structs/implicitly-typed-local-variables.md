@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 9c6f7ae5d7a579abead2a62f8fdc7c63e5c53328
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222698"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635552"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Implizit typisierte lokale Variablen (C#-Programmierhandbuch)
 
@@ -55,7 +55,7 @@ Aus der Perspektive Ihres Quellcodes hat ein anonymer Typ keinen Namen. Wenn ein
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Die folgenden Einschränkungen gelten für implizit typisierte Variablendeklarationen:
 
@@ -68,6 +68,20 @@ Die folgenden Einschränkungen gelten für implizit typisierte Variablendeklarat
 - Es können nicht mehrere implizit typisierte Variablen in derselben Anweisung initialisiert werden.
 
 - Wenn sich ein Typ mit dem Namen `var` im Geltungsbereich befindet, löst sich das `var`-Schlüsselwort zu diesem Typnamen auf und wird nicht als Teil der Deklaration einer implizit typisierten lokalen Variablen behandelt.
+
+Implizite Typisierung mit dem `var` -Schlüsselwort kann nur auf Variablen im Gültigkeitsbereich der lokalen Methode angewendet werden. Implizite Typisierung ist für Klassenfelder nicht verfügbar, weil der C#-Compiler während der Verarbeitung des Codes auf ein logisches Paradox treffen würde: Der Compiler muss den Typ des Felds kennen, aber er kann den Typ erst bestimmen, wenn der Zuordnungsausdruck analysiert ist, und der Ausdruck kann nicht ohne Kenntnis des Typs ausgewertet werden. Betrachten Sie folgenden Code:
+
+```csharp
+private var bookTitles;
+```
+
+`bookTitles` ist ein Klassenfeld, das den Typ `var` erhält. Da das Feld keinen Ausdruck zur Auswertung enthält, kann der Compiler nicht ableiten, von welchem Typ `bookTitles` ist. Darüber hinaus ist es auch nicht ausreichend, dem Feld einen Ausdruck hinzuzufügen (wie für eine lokale Variable):
+
+```csharp
+private var bookTitles = new List<string>();
+```
+
+Wenn der Compiler während der Codekompilierung auf Felder trifft, zeichnet er den Typ jedes Felds auf, bevor er dem Feld zugeordnete Ausdrücke verarbeitet. Der Compiler erkennt das gleiche Paradox bei dem Versuch, `bookTitles` zu analysieren: Er muss den Typ des Felds kennen, aber der Compiler würde den Typ von `var` normalerweise durch Analysieren des Ausdrucks bestimmen, was nicht möglich ist, ohne vorher den Typ zu kennen.
 
 `var` erweist sich auch bei Abfrageausdrücken als nützlich, deren genauer konstruierter Typ der Abfragevariable schwer ermittelbar ist. Dies kann bei Gruppierungs- und Sortierungsvorgängen auftreten.
 

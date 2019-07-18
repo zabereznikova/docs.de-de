@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7200e3a19fcadabb5e149c38b620b3f60907c392
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377416"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783115"
 ---
 # <a name="setsecurity-function"></a>SetSecurity-Funktion
 
@@ -31,7 +31,7 @@ Ruft das Identitätswechseltoken ab, das dem aktuellen Thread zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT SetSecurity (
    [out] boolean* pNeedToReset, 
    [out] HANDLE* pCurrentThreadToken

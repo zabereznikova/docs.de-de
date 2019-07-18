@@ -3,11 +3,11 @@ title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
 ms.openlocfilehash: 18359e871feed17a11006d0b2998907faf25c158
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704192"
 ---
 # <a name="custom"></a>\<custom>
 Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.  
@@ -62,4 +62,4 @@ Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverd
 - <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
 - <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
 - [Peerresolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
-- [Hinzufügen einer benutzerdefinierten Auflösung zu einer PeerChannel-Anwendung](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))
+- [Hinzufügen eines benutzerdefinierten Konfliktlösers zu einer PeerChannel-Anwendung](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))

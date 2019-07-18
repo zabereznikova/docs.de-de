@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: 545f0f4a56e72e32d2225217225d441a10f0e52e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d7d3d86f89ef3b76e958707dd0be2dce8a3e9bf2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659821"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>"\<Elementname >' ist veraltet (Visual Basic-Warnung)
 Eine Anweisung versucht, auf ein Programmierelement zuzugreifen, das mit dem <xref:System.ObsoleteAttribute> -Attribut und der Direktive gekennzeichnet wurde, den Zugriffsversuch als Warnung zu behandeln.  
@@ -25,7 +25,7 @@ Eine Anweisung versucht, auf ein Programmierelement zuzugreifen, das mit dem <xr
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Stellen Sie sicher, dass der Elementname im Quellcodeverweis richtig geschrieben ist.  
+- Stellen Sie sicher, dass der Elementname im Quellcodeverweis richtig geschrieben ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

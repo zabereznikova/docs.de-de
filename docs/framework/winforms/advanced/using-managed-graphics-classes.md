@@ -6,19 +6,19 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1b6811e1412e1dc5b0731810f159bac633cd1eb2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720448"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505036"
 ---
 # <a name="using-managed-graphics-classes"></a>Verwenden von verwalteten Grafikklassen
-In den folgenden Themen wird beschrieben, wie die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] -API in das Framework für die verwaltete Klasse.  
+In den folgenden Themen wird beschrieben, wie die GDI +-API in der verwalteten Klasse-Framework verwendet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)  
- Beschreibt, wie Sie grundlegende Aufgaben mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Beschreibt die grundlegenden Aufgaben mit GDI +.  
   
  [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)  
  Veranschaulicht, wie einen Stift erstellen und verwenden, um eine Vielzahl von Linien und Formen zu zeichnen.  

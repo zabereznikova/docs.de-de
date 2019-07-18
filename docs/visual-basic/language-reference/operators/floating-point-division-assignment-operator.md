@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
 ms.openlocfilehash: d9d3fa021654d3be1b9d304beb83caa737660264
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778468"
 ---
 # <a name="-operator-visual-basic"></a>/=-Operator (Visual Basic)
 Dividiert den Wert einer Variablen oder Eigenschaft den Wert eines Ausdrucks und weist das Gleitkomma-Ergebnis der Variablen oder Eigenschaft.  

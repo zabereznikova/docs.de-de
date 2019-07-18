@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, network tracing output
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
-ms.openlocfilehash: 8813bf68ee2b354ed7fc5e981904b8e4b807c1be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576524"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59177566"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretieren von Netzwerkablaufverfolgung
 Wenn die Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgung zum Erfassen von Aufrufen durch Ihre Anwendung an verschiedene <xref:System.Net>-Klassenmember verwenden. Die Ausgabe dieser Aufrufe ähnelt möglicherweise den folgenden Beispielen.  
@@ -45,6 +45,7 @@ Wenn die Netzwerkablaufverfolgung aktiviert ist, können Sie die Ablaufverfolgun
  `Connection: Close`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Aktivieren der Netzwerkablaufverfolgung](../../../docs/framework/network-programming/enabling-network-tracing.md)
 - [Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
 - [Netzwerkablaufverfolgung in .NET Framework](../../../docs/framework/network-programming/network-tracing.md)

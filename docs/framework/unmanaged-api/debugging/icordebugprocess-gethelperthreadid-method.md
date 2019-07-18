@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd5e30d08e667dcd5a8be1f9502462f28290068e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ad62b267eb0c49ff8fbefeb45b523c21edc705fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494219"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766042"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID-Methode
 Ruft das Betriebssystem (OS)-Thread-ID des im Debugger das interne Hilfsmethode ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetHelperThreadID (  
     [out] DWORD *pThreadID  
 );  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e57d49965537a45bc62b9078079389efcfb2e2c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837650"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598748"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Deklaration von Objektvariablen (Visual Basic)
 Sie haben eine normale deklarationsanweisung zum Deklarieren einer Objektvariablen verwenden. Für den Datentyp, geben Sie entweder `Object` (d. h. die [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) oder eine spezifische Klasse, die von dem das Objekt ist, erstellt werden.  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>Vorteile der frühen Bindung  
  Deklarieren einer Objektvariablen als eine bestimmte Klasse bietet mehrere Vorteile:  
   
--   Automatische typüberprüfung  
+- Automatische typüberprüfung  
   
--   Zugriff auf alle Elemente der speziellen Klasse garantiert  
+- Zugriff auf alle Elemente der speziellen Klasse garantiert  
   
--   Microsoft IntelliSense-Unterstützung im Code-Editor  
+- Microsoft IntelliSense-Unterstützung im Code-Editor  
   
--   Verbesserte Lesbarkeit des Codes  
+- Verbesserte Lesbarkeit des Codes  
   
--   Weniger Fehler im code  
+- Weniger Fehler im code  
   
--   Fehler, die zur abgefangen Kompilierzeit statt zur Laufzeit  
+- Fehler, die zur abgefangen Kompilierzeit statt zur Laufzeit  
   
--   Schnellere Ausführung von code  
+- Schnellere Ausführung von code  
   
 ## <a name="access-to-object-variable-members"></a>Zugriff auf Member von Objektvariablen  
  Wenn `Option Strict` standardablaufverfolung `On`, nur die Methoden und Eigenschaften der Klasse mit dem Sie wurde deklariert, kann eine Objektvariable zugreifen. Dies wird anhand des folgenden Beispiels veranschaulicht.  

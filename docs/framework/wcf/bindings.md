@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608878"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation-Bindungen
 Bindungen geben an, wie ein Windows Communication Foundation (WCF)-Endpunkt mit anderen Endpunkten kommuniziert. Eine Bindung muss grundsätzlich erst einmal den zu verwendenden Transportweg festlegen (z. B. HTTP oder TCP). Sie können jedoch auch andere Merkmale wie Sicherheit und Transaktionssupport über Bindungen festlegen.  

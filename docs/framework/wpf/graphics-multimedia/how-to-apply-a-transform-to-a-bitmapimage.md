@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Transforms [WPF]
 ms.assetid: 5c042f8d-d569-45e4-ab32-868b89759bf2
 ms.openlocfilehash: f2a675cad6e98078c409fbdee036c5b5555e6b2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699018"
 ---
 # <a name="how-to-apply-a-transform-to-a-bitmapimage"></a>Vorgehensweise: Anwenden einer Transformation auf ein Bitmapbild
 In diesem Beispiel wird veranschaulicht, wie zum Anwenden einer <xref:System.Windows.Media.Transform> auf eine <xref:System.Windows.Media.Imaging.BitmapImage>.  

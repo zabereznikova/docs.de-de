@@ -9,11 +9,11 @@ helpviewer_keywords:
 - up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
 ms.openlocfilehash: 83d674e3fb7ff7e715b75c635b891cd4e9703a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972054"
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.DomainUpDown> Steuerelement sieht wie eine Kombination aus einem Textfeld und zwei Schaltflächen oben oder unten verschieben, Durchlaufen einer Liste. Das Steuerelement zeigt an, und legt eine Zeichenfolge aus einer Liste von Optionen. Der Benutzer kann die Zeichenfolge auswählen, indem Sie auf nach oben oder unten Schaltflächen zum Navigieren durch eine Liste, durch Drücken der nach-oben und nach-unten-Pfeiltasten oder durch Eingabe einer Zeichenfolge, die ein Element in der Liste entspricht. Eine Verwendungsmöglichkeit für dieses Steuerelement ist für das Auswählen von Elementen aus eine alphabetisch sortierte Liste von Namen. (Um die Liste zu sortieren, legen Sie die <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft `true`.) Die Funktion dieses Steuerelements ist das Listenfeld oder Kombinationsfeld sehr ähnlich, aber es dauert bis sehr wenig Speicherplatz.  

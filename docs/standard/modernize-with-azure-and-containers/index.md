@@ -1,15 +1,13 @@
 ---
 title: Modernisieren von vorhandenen .NET Anwendungen mit Azure Cloud und Windows-Container (2. Auflage)
 description: Informationen Sie zum übertragen und verschieben und modernisieren vorhandene Anwendungen zu Azure Cloud und Container mit diesem e-Book.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: ed291309d04e3e5bfed6c73cdf8a67b79431a363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870601"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern (2. Auflage)
 
@@ -74,7 +72,7 @@ Abbildung 1-1 zeigt die möglichen Pfade, die Sie einschlagen können, wenn Sie 
 
  ![Modernisierungspfade für vorhandene .NET-Anwendungen und -Dienste](./media/image1-1.png)
 
-> **(Abbildung 1-1)**. Modernisierungspfade für vorhandene .NET-Anwendungen und -Dienste
+> **(Abbildung 1-1)** . Modernisierungspfade für vorhandene .NET-Anwendungen und -Dienste
 
 Jeder Migrationsansatz weist unterschiedliche Vorteile und Gründe für seine Anwendung auf. Sie können einen einzelnen Ansatz wählen, wenn Sie Anwendungen in die Cloud migrieren, oder bestimmte Komponenten aus mehreren Ansätzen auswählen. Einzelne Anwendungen sind nicht auf einen Ansatz oder Reifezustand beschränkt. Ein allgemeiner Hybridansatz würde beispielsweise bestimmte lokale Komponenten und andere Komponenten in der Cloud aufweisen.
 
@@ -91,16 +89,16 @@ Die dritte Reifestufe ist das ultimative Ziel in der Cloud, aber sie ist für vi
 
 Tabelle 1-1 beschreibt die wichtigsten Vorteile und Gründe für die Wahl der einzelnen Migrations- oder Modernisierungsansätze.
 
-| **Bereit für Cloudinfrastruktur** <br /> *Lift & shift* | **Cloud-Optimized** <br /> *Modernisieren* | **Cloud-Native** <br /> *Modernisieren, überarbeiten und Schreiben* |
+| **Bereit für Cloudinfrastruktur** <br /> *Übertragen und verschieben* | **Cloud-Optimized** <br /> *Modernisieren* | **Cloud-Native** <br /> *Modernisieren, überarbeiten und Schreiben* |
 |---|---|---|
 | **Computeziel der Anwendung** |
-| Auf virtuellen Computern in Azure bereitgestellte Anwendungen | Monolithisch oder N-Tier-apps, die für Azure App Service, Azure Container-Instanz (ACI), virtuelle Computer bereitgestellt wird, mit dem Container, Azure Service Fabric oder AKS (Azure Kubernetes Service) | Microservices in Containern in Azure Kubernetes Service (AKS), Service Fabric und/oder serverlose Microservices, die basierend auf der Azure Functions. |
+| Auf virtuellen Computern in Azure bereitgestellte Anwendungen | Monolithisch oder N-Tier-apps, die in Azure App Service, Azure Container-Instanz (ACI), virtuelle Computer bereitgestellt wird, mit Containern oder AKS (Azure Kubernetes Service) | Microservices in Containern in Azure Kubernetes Service (AKS) und/oder serverlose Microservices, die basierend auf der Azure Functions. |
 | **Datenziel** |
 | SQL- oder eine beliebige relationale Datenbank auf einem virtuellen Computer | Verwaltete Azure SQL-Datenbankinstanz oder eine andere verwaltete Datenbank in der Cloud. | Strafzahlungen differenziertere Datenbanken pro Microservice, basierend auf Azure SQL-Datenbank, Azure Cosmos DB oder eine andere verwaltete Datenbank in der cloud |
 | **Vorteile**|
 | <li>Kein Code überarbeiten, werden keine neuen <li> Geringster Aufwand für eine schnelle Migration. <li> Kleinster gemeinsamen Nenner, der in Azure unterstützt wird. <li> Grundlegende Verfügbarkeitsgarantien. <li> Nach dem Wechsel in die Cloud ist es einfacher, noch mehr zu modernisieren. | <li> Keine Neuentwurf <li> Änderungen der minimalen Code-Konfiguration <li> Verbesserte Bereitstellung und DevOps-Agilität beim Release aufgrund von Containern. <li> Höhere Dichte und niedrigere Bereitstellungskosten. <li> Portabilität von Apps und Abhängigkeiten. <li> Die Flexibilität der hostziele: Methoden für PaaS oder IaaS | <li> Architekt für die Cloud, erhalten Sie die größten Vorteile aus der Cloud, aber neuer Code ist erforderlich. <li> Cloudnative Microservicesansätze. <li> Moderne unternehmenskritische Anwendungen, cloudrobust überaus skalierbarer <li> Vollständig verwaltete Dienste. <li> Optimiert für die Skalierung. <li> Optimiert für autonome Agilität durch Subsysteme. <li> Basiert auf Bereitstellung und DevOps. |
 | **Herausforderungen** |
-| <li> Geringerer Cloudwert, abgesehen von der Verschiebung der Betriebskosten oder der Schließung von Datencentern. <li> Wenig verwaltet wird: Ohne Betriebssystem oder Middleware Patchen; ggf. infrastrukturlösungen wie Terraform, Spinnaker oder Puppet verwenden werden. | <li> Das containerisieren ist ein zusätzlicher Schritt in der Lernkurve für Entwickler und IT-Betrieb <li> DevOps und CI/CD-Pipelines ist, in der Regel "muss" für diesen Ansatz. Wenn dies nicht der derzeit in der die Kultur der Organisation, möglicherweise eine zusätzliche Herausforderung| <li> Erfordert eine Neugestaltung für native Cloud-apps und Microservice-Architekturen und in der Regel erfordert erhebliche Code coderefactoring oder Neuerstellung beim modernisieren (erhöhter Zeit- und Kostenaufwand) <li> DevOps und CI/CD-Pipelines ist, in der Regel "muss" für diesen Ansatz. Wenn dies nicht der derzeit in der die Kultur der Organisation, möglicherweise eine zusätzliche Herausforderung|
+| <li> Geringerer Cloudwert, abgesehen von der Verschiebung der Betriebskosten oder der Schließung von Datencentern. <li> Wenig verwaltet wird: Ohne Betriebssystem oder Middleware Patchen; ggf. infrastrukturlösungen wie Terraform, Spinnaker oder Puppet verwenden werden. | <li> Das containerisieren ist ein zusätzlicher Schritt in der Lernkurve für Entwickler und IT-Betrieb <li> DevOps und CI/CD-Pipelines sind in der Regel "ein muss" für diesen Ansatz. Wenn dies nicht der derzeit in der die Kultur der Organisation, möglicherweise eine zusätzliche Herausforderung| <li> Erfordert eine Neugestaltung für native Cloud-apps und Microservice-Architekturen und in der Regel erfordert erhebliche Code coderefactoring oder Neuerstellung beim modernisieren (erhöhter Zeit- und Kostenaufwand)|
 > **Tabelle 1-1.** Vorteile und Herausforderungen von Modernisierungspfaden für vorhandene .NET-Anwendungen und -Dienste
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Schlüsseltechnologien und -architekturen nach Reifegrad
@@ -113,7 +111,7 @@ Abbildung 1-2 zeigt die primären Technologien und Architekturstile, die bei jed
 
 ![Primäre Technologien für jeden Reifegrad zur Modernisierung vorhandener .NET-Webanwendungen](./media/image1-2.png)
 
-> **Abbildung 1 – 2.** Primäre Technologien für jeden Reifegrad zur Modernisierung vorhandener .NET-Webanwendungen
+> **Abbildung 1-2.** Primäre Technologien für jeden Reifegrad zur Modernisierung vorhandener .NET-Webanwendungen
 
 Abbildung 1-2 zeigt die gängigsten Szenarien. Es sind aber viele hybride und gemischte Varianten bezüglich der Architektur denkbar. Die Reifegradmodelle gelten beispielsweise nicht nur für monolithische Architekturen in vorhandenen Web-Apps, sondern auch für Dienstorientierung, n-schichtige und andere Architekturstilvarianten. Die höhere Fokus oder Prozent in eine oder andere Architekturtyp und verwandten Technologien bestimmt die allgemeine Reife Ihrer Anwendungen.
 
@@ -121,15 +119,17 @@ Jeder Reifegrad im Modernisierungsprozess ist mit den folgenden Schlüsseltechno
 
 - **Bereit für Cloudinfrastruktur** ("zum erneuten Hosten" oder "Basic" lift & shift "): Als ersten Schritt möchten viele Organisationen nur schnell eine cloudmigrationsstrategie ausführen. In diesem Fall werden Anwendungen neu gehostet. Ein Großteil des erneuten Hostens kann automatisiert werden, indem [Azure Migrate](https://aka.ms/azuremigrate) verwendet wird, ein Dienst, der Anleitung, Einblicke und Mechanismen bietet, die benötigt werden, um Sie basierend auf Cloudtools wie [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/) und [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/) bei der Migration nach Azure zu unterstützen. Sie können erneutes Hosten auch manuell einrichten, sodass Sie beim Verschieben von Legacy-Apps in die Cloud Infrastrukturdetails über Ihre Ressourcen erfahren können. Sie können z. B. Ihre Anwendungen für virtuelle Computer in Azure verschieben, mit nur wenig Änderungen wahrscheinlich mit nur geringen konfigurationsänderungen. Die Netzwerkfunktionalität ähnelt in diesem Fall einer lokalen Umgebung, insbesondere wenn Sie virtuelle Netzwerke in Azure erstellen.
 
-- **Cloudoptimiert** (verwalteten Diensten und Windows-Containern): Dieses Modell geht es darum einige wichtige bereitstellungsoptimierungen um signifikante Vorteile aus der Cloud zu erhalten, ohne die Kernarchitektur der Anwendung ändern zu müssen. Der grundlegende Schritt hierbei besteht darin, Ihren vorhandenen .NET Framework-Anwendungen Unterstützung für [Windows-Container](https://docs.microsoft.com/virtualization/windowscontainers/about/) hinzuzufügen. Dieser wichtige Schritt (containerisierung) erfordert keine, berühren den Code, damit der gesamte übertragungs- und verschiebeaufwand gering ist. Sie können Tools wie [Image2Docker](https://github.com/docker/communitytools-image2docker-win) oder Visual Studio mit den Tools für [Docker](https://www.docker.com/) verwenden. Visual Studio wählt automatisch intelligente Standardeinstellungen für ASP.NET-Anwendungen und Windows Container-Images aus. Diese Tools bieten sowohl eine schnelle innere Schleife als auch einen schnellen Weg, um die Container in Azure zu übertragen. Ihre Agilität wird verbessert, wenn die Bereitstellung in mehreren Umgebungen erfolgt. Klicken Sie dann in die produktionsumgebung verschoben werden, Sie können Bereitstellen Ihrer Windows-Container [Azure-Web-App für Container](https://azure.microsoft.com/services/app-service/containers/), [Azure Container Instances (ACI) und Azure-VMs mit Windows Server 2016 und Container, wenn Sie einen IaaS-Ansatz bevorzugen. Für etwas komplexere Anwendungen mit mehreren Containern, in orchestratoren wie [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) oder [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/). Sie können während dieser ersten Modernisierung, auch Ressourcen hinzufügen, aus der Cloud, z.B. Überwachung mit Tools wie [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview); CI/CD-Pipelines für Ihre app-Lebenszyklen mit [Azure DevOps-Dienste](https://visualstudio.microsoft.com/team-services/); und viele weitere datenressourcendienste, die in Azure verfügbar sind. Beispielsweise können Sie eine monolithische Web-App., die ursprünglich unter Verwendung von traditionellem [ASP.NET Web Forms](https://www.asp.net/web-forms) oder [ASP.NET MVC](https://www.asp.net/mvc) entwickelt wurde, ändern, aber jetzt stellen Sie sie mit Hilfe von Windows-Containern bereit. Wenn Sie Windows-Container verwenden, sollten Sie Ihre Daten auch zu einer Datenbank in einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/) migrieren, ohne die Kernarchitektur Ihrer Anwendung zu verändern.
+- **Cloudoptimiert** (verwalteten Diensten und Windows-Containern): Dieses Modell geht es darum einige wichtige bereitstellungsoptimierungen um signifikante Vorteile aus der Cloud zu erhalten, ohne die Kernarchitektur der Anwendung ändern zu müssen. Der grundlegende Schritt hierbei besteht darin, Ihren vorhandenen .NET Framework-Anwendungen Unterstützung für [Windows-Container](https://docs.microsoft.com/virtualization/windowscontainers/about/) hinzuzufügen. Dieser wichtige Schritt (containerisierung) erfordert keine, berühren den Code, damit der gesamte übertragungs- und verschiebeaufwand gering ist. Sie können Tools wie [Image2Docker](https://github.com/docker/communitytools-image2docker-win) oder Visual Studio mit den Tools für [Docker](https://www.docker.com/) verwenden. Visual Studio wählt automatisch intelligente Standardeinstellungen für ASP.NET-Anwendungen und Windows Container-Images aus. Diese Tools bieten sowohl eine schnelle innere Schleife als auch einen schnellen Weg, um die Container in Azure zu übertragen. Ihre Agilität wird verbessert, wenn die Bereitstellung in mehreren Umgebungen erfolgt. Klicken Sie dann in die produktionsumgebung verschoben werden, Sie können Bereitstellen Ihrer Windows-Container [Azure-Web-App für Container](https://azure.microsoft.com/services/app-service/containers/), [Azure Container Instances (ACI)](https://azure.microsoft.com/services/container-instances/), und Azure-VMs mit Windows Server 2016 und Container, wenn Sie lieber ein IaaS-Ansatz. Für komplexere Anwendungen mit mehreren Containern, erwägen Sie die Verwendung von orchestratoren wie [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/). 
 
-- **Cloud-Native**: Wie eingeführt, sollten Sie sich vorstellen Informationen über die Architektur [cloudnative](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) -Anwendungen, wenn Sie große und komplexe Anwendungen mit mehreren unabhängige Entwicklungsteams arbeiten, die auf verschiedene Microservices, die sein können, verwenden möchten entwickelt und unabhängig bereitgestellt. Darüber hinaus aufgrund granularized und unabhängige Skalierbarkeit pro Microservice. Diese Architekturansätze stehen vor sehr wichtig, Herausforderungen und Komplexität aber Cloudplattform mit erheblich vereinfacht werden und orchestratoren wie [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (verwalteter kubernetes-Cluster), [Azure-Dienst Fabric und [Azure Functions](https://azure.microsoft.com/services/functions/) für eines serverlosen Ansatzes. Alle diese Ansätze (wie Microservices und serverlose) in der Regel müssen Sie sich für die Cloud entwerfen und Schreiben von neuem Code – Code, der an bestimmte PaaS-Plattformen angepasst ist, oder Code, der bestimmte Architekturen wie Microservices ausgerichtet ist.
+Sie können während dieser ersten Modernisierung, auch Ressourcen hinzufügen, aus der Cloud, z.B. Überwachung mit Tools wie [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview); CI/CD-Pipelines für Ihre app-Lebenszyklen mit [Azure DevOps-Dienste](https://azure.microsoft.com/services/devops/); und viele weitere datenressourcendienste, die in Azure verfügbar sind. Beispielsweise können Sie eine monolithische Web-App., die ursprünglich unter Verwendung von traditionellem [ASP.NET Web Forms](https://www.asp.net/web-forms) oder [ASP.NET MVC](https://www.asp.net/mvc) entwickelt wurde, ändern, aber jetzt stellen Sie sie mit Hilfe von Windows-Containern bereit. Wenn Sie Windows-Container verwenden, sollten Sie Ihre Daten auch zu einer Datenbank in einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/) migrieren, ohne die Kernarchitektur Ihrer Anwendung zu verändern.
+
+- **Cloud-Native**: Wie eingeführt, sollten Sie sich vorstellen Informationen über die Architektur [cloudnative](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) -Anwendungen, wenn Sie große und komplexe Anwendungen mit mehreren unabhängige Entwicklungsteams arbeiten, die auf verschiedene Microservices, die sein können, verwenden möchten entwickelt und unabhängig bereitgestellt. Darüber hinaus aufgrund granularized und unabhängige Skalierbarkeit pro Microservice. Diese Architekturansätze stehen vor sehr wichtig, Herausforderungen und Komplexität aber Cloudplattform mit erheblich vereinfacht werden und orchestratoren wie [Azure Kubernetes Service (AKS/ACS)](https://azure.microsoft.com/services/container-service/) (verwalteter kubernetes-Cluster), und [Azure Functions](https://azure.microsoft.com/services/functions/) für eines serverlosen Ansatzes. Alle diese Ansätze (wie Microservices und serverlose) in der Regel müssen Sie sich für die Cloud entwerfen und Schreiben von neuem Code – Code, der an bestimmte PaaS-Plattformen angepasst ist, oder Code, der bestimmte Architekturen wie Microservices ausgerichtet ist.
 
 Abbildung 1-3 zeigt die internen Technologien, die Sie für jeden Reifegrad verwenden können:
 
 ![Interne Technologien für jeden Modernisierungsreifegrad](./media/image1-3.png)
 
-> **Abbildung 1 – 3.** Interne Technologien für jeden Modernisierungsreifegrad
+> **Abbildung 1-3.** Interne Technologien für jeden Modernisierungsreifegrad
 
 ## <a name="lift-and-shift-scenario"></a>Lift & Shift-Szenario
 
@@ -145,13 +145,13 @@ Modernisierung Szenarien müssen Sie eine reine Cloud optimierte Anwendung mögl
 
 ![Beispielauswahlszenario mit Datenbank unter IaaS, DevOps und Containerisierung von Ressourcen](./media/image1-5.png)
 
-> **Abbildung 1 bis 5.** Beispielauswahlszenario mit Datenbank unter IaaS, DevOps und Containerisierung von Ressourcen
+> **Abbildung 1-5.** Beispielauswahlszenario mit Datenbank unter IaaS, DevOps und Containerisierung von Ressourcen
 
 Als Nächstes als ideales Szenario für viele vorhandene .NET Framework-Anwendungen zu migrieren, könnten Sie einer Anwendung Cloudoptimierte abzurufenden bedeutende Vorteile aus wenig Aufwand migrieren. Dieser Ansatz wird Sie als eine mögliche zukünftige Entwicklung auch für Native Cloud. Abbildung 1-6 zeigt ein Beispiel.
 
 ![Beispiel-apps Cloudoptimierte-Szenario mit Windows-Containern und verwalteten Diensten](./media/image1-6.png)
 
-> **Abbildung 1 bis 6.** Beispiel-apps Cloudoptimierte-Szenario mit Windows-Containern und verwalteten Diensten
+> **Abbildung 1-6.** Beispiel-apps Cloudoptimierte-Szenario mit Windows-Containern und verwalteten Diensten
 
 Darüber hinaus können Sie Ihre vorhandene Cloud optimierte Anwendung durch einige microservices für bestimmte Szenarien erweitern. Dies würden Sie teilweise auf der Ebene des Cloudnativen Modell verschieben handelt es sich nicht im Mittelpunkt der vorliegenden Anleitung steht.
 
@@ -161,7 +161,7 @@ Dieser Leitfaden behandelt eine bestimmte Teilmenge der in Abbildung 1-7 dargest
 
 ![Cloudnative wird in diesem Handbuch nicht behandelt.](./media/image1-7.png)
 
-> **Abbildung 1 bis 7.** Cloudnative wird in diesem Handbuch nicht behandelt.
+> **Abbildung 1-7.** Cloudnative wird in diesem Handbuch nicht behandelt.
 
 Der Schwerpunkt dieses Leitfadens ist spezifisch. Erfahren Sie, den Pfad an, die, den Sie ergreifen können, um eine Übertragung und Verschiebung Ihrer vorhandenen .NET-Anwendungen verwenden können, ohne Neuentwurf und ohne codeänderungen zu erzielen. Letzten Endes es erfahren Sie, wie Sie Ihre Anwendung Cloud optimiert.
 
@@ -170,13 +170,13 @@ Diesem Leitfaden können nicht Sie Gewusst wie: Erstellen Sie Native Cloudanwend
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Containerisierter Docker-Anwendungslebenszyklus mit Microsoft-Plattform und-Tools** (herunterladbares e-Book) \
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 - **.NET-Microservices: Architektur für containerisierte .NET-Anwendungen** (herunterladbares e-Book) \
-  [https://aka.ms/microservicesebook](https://aka.ms/microservicesebook)
+  <https://aka.ms/microservicesebook>
 
 - **Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure** (herunterladbares e-Book) \
-  [https://aka.ms/webappebook](https://aka.ms/webappebook)
+  <https://aka.ms/webappebook>
 
 ## <a name="who-should-use-this-guide"></a>Zielgruppe dieses Leitfadens
 
@@ -201,4 +201,4 @@ Diese Beispiel-apps ist eine zweite Version mit modernisiertem Code verfügbar, 
 Dieses Handbuch wurde geschrieben, können Sie Ihre Möglichkeiten zur Verbesserung und Modernisierung vorhandene Webanwendungen für .NET zu verstehen. Der Leitfaden und die zugehörigen Anwendungsbeispiele werden ständig weiterentwickelt. Ihr Feedback ist Willkommen! Wenn Sie Anmerkungen dazu haben, wie dieser Leitfaden hilfreicher gestaltet werden könnte, senden Sie diese bitte an [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
->[Weiter](lift-and-shift-existing-apps-azure-iaas.md)
+>[Nächste](lift-and-shift-existing-apps-azure-iaas.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673972"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<Hinzufügen >-Element für \<Listener > für \<Ablaufverfolgung >
 Fügt einen Listener, damit die **Listener** Auflistung.  
@@ -41,7 +41,7 @@ Fügt einen Listener, damit die **Listener** Auflistung.
 |---------------|-----------------|  
 |**Typ**|Erforderliches Attribut.<br /><br /> Gibt den Typ des Listeners. Sie müssen eine Zeichenfolge, die die in angegebenen Anforderungen erfüllt verwenden [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Optionales Attribut.<br /><br /> Die Zeichenfolge, die für die angegebene Klasse an den Konstruktor übergeben werden.|  
-|**Name**|Optionales Attribut.<br /><br /> Gibt den Namen des Listeners.|  
+|**name**|Optionales Attribut.<br /><br /> Gibt den Namen des Listeners.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -108,5 +108,5 @@ Fügt einen Listener, damit die **Listener** Auflistung.
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Ablaufverfolgungslistener](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -1,42 +1,35 @@
-items:
 - name: Deklarierte Elemente
   href: index.md
   items:
-  - name: Declared Element Names
-    href: declared-element-names.md
-  - name: Merkmale deklarierter Elemente
-    href: declared-element-characteristics.md
-    items:
-    - name: Lebensdauer
-      href: lifetime.md
-    - name: Bereich
-      href: scope.md
+    - name: Declared Element Names
+      href: declared-element-names.md
+    - name: Merkmale deklarierter Elemente
+      href: declared-element-characteristics.md
       items:
-      - name: 'Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen'
-        href: how-to-control-the-scope-of-a-variable.md
-      - name: Typerweiterung
-        href: type-promotion.md
-    - name: Zugriffsebenen
-      href: access-levels.md
-      items:
-      - name: 'Vorgehensweise: Steuern der Verfügbarkeit einer Variablen'
-        href: how-to-control-the-availability-of-a-variable.md
-    - name: References to Declared Elements
-      href: references-to-declared-elements.md
-    - name: Shadowing
-      href: shadowing.md
-      items:
-      - name: Unterschiede zwischen Shadowing und Überschreiben
-        href: differences-between-shadowing-and-overriding.md
-      - name: 'Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable'
-        href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
-      - name: 'Vorgehensweise: Ausblenden einer geerbten Variablen'
-        href: how-to-hide-an-inherited-variable.md
-      - name: 'Vorgehensweise: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet wird'
-        href: how-to-access-a-variable-hidden-by-a-derived-class.md
-ms.openlocfilehash: d747436df2e7ad7187e39808ea19d64ac1b082fc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468796"
+        - name: Lebensdauer
+          href: lifetime.md
+        - name: Bereich
+          href: scope.md
+          items:
+            - name: 'Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen'
+              href: how-to-control-the-scope-of-a-variable.md
+            - name: Typerweiterung
+              href: type-promotion.md
+        - name: Zugriffsebenen
+          href: access-levels.md
+          items:
+            - name: 'Vorgehensweise: Steuern der Verfügbarkeit einer Variablen'
+              href: how-to-control-the-availability-of-a-variable.md
+        - name: References to Declared Elements
+          href: references-to-declared-elements.md
+        - name: Shadowing
+          href: shadowing.md
+          items:
+            - name: Unterschiede zwischen Shadowing und Überschreiben
+              href: differences-between-shadowing-and-overriding.md
+            - name: 'Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable'
+              href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
+            - name: 'Vorgehensweise: Ausblenden einer geerbten Variablen'
+              href: how-to-hide-an-inherited-variable.md
+            - name: 'Vorgehensweise: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet wird'
+              href: how-to-access-a-variable-hidden-by-a-derived-class.md

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - grayscale [WPF], converting images to
 ms.assetid: 77935ff0-4500-4307-9710-96999dcf579f
 ms.openlocfilehash: f3b7837c6c25db1aa3bdd11786df90660a75da87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910935"
 ---
 # <a name="how-to-convert-an-image-to-greyscale"></a>Vorgehensweise: Konvertieren eines Bilds in Graustufen
 Dieses Beispiel zeigt, wie Sie ein Bild in Graustufen mit konvertieren <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.  
@@ -27,6 +27,6 @@ Dieses Beispiel zeigt, wie Sie ein Bild in Graustufen mit konvertieren <xref:Sys
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden des Bildelements](how-to-use-the-image-element.md)
+- [Verwenden des Image-Elements](how-to-use-the-image-element.md)
 - [Zuschneiden eines Bilds](how-to-crop-an-image.md)
 - [Drehen eines Bilds](how-to-rotate-an-image.md)

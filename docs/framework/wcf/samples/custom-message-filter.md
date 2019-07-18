@@ -2,12 +2,12 @@
 title: Benutzerdefinierter Nachrichtenfilter
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 31816ae67e3273e033b53951ff78d662ef8192c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34e6d851bd0aa3515c5c43521be6213451b7ed12
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003066"
 ---
 # <a name="custom-message-filter"></a>Benutzerdefinierter Nachrichtenfilter
 In diesem Beispiel wird veranschaulicht, wie die Nachrichtenfilter ersetzt werden, die Windows Communication Foundation (WCF) verwendet wird, um Nachrichten auf Endpunkte verteilt werden.  
@@ -119,11 +119,11 @@ Hello
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration mit einem einzelnen Computer ausführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration mit einem einzelnen Computer ausführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3.  Um das Beispiel in einer computerübergreifenden Konfiguration ausführen möchten, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) , und ändern Sie die folgende Zeile in "Client.cs".  
+3. Um das Beispiel in einer computerübergreifenden Konfiguration ausführen möchten, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md) , und ändern Sie die folgende Zeile in "Client.cs".  
   
     ```  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

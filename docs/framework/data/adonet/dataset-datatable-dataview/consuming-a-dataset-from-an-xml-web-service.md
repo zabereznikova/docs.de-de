@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034475"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Verwenden eines "DataSet" von einem XML-Webdienst aus
 Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstellt. Auf diese Art und Weise wird z. B. eine komfortable Übertragung von Daten über das Internet ermöglicht. Die **DataSet** ist "serializable" insofern, als Eingabe für angegeben werden oder Ausgabe aus XML-Webdiensten, ohne eine zusätzliche Codierung erforderlich, um den Inhalt der Streamen der **DataSet** aus einem XML-Webdienst zu einem Client und zurück. Die **DataSet** implizit in einen XML-Stream mit dem DiffGram-Format konvertiert, über das Netzwerk gesendet und dann aus der XML-Stream rekonstruiert eine **DataSet** auf der Empfangsseite. Dadurch steht Ihnen eine sehr einfache und flexible Methode zum Übertragen und Zurückübertragen von relationalen Daten mithilfe von XML-Webdiensten zur Verfügung. Weitere Informationen zum DiffGram-Format finden Sie unter [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -22,7 +22,7 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>So erstellen Sie einen XML-Webdienst, der ein "DataSet" zurückgibt und verarbeitet  
   
-1.  Erstellen Sie den XML-Webdienst.  
+1. Erstellen Sie den XML-Webdienst.  
   
      Im Beispiel wird ein XML-Webdienst erstellt, die Daten in diesem Fall eine Liste der Kunden zurückgibt der **Northwind** Datenbank, und empfängt eine **DataSet** mit Updates, die die Daten, die den XML-Webdienst Löst in der ursprünglichen Datenquelle zurück.  
   
@@ -159,7 +159,7 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
   
      In einem typischen Szenario stellt die **UpdateCustomers** Methode würde geschrieben werden, um Verletzung der vollständigen Parallelität abzufangen. Zur Vereinfachung wurde in diesem Beispiel darauf verzichtet. Weitere Informationen zur vollständigen Parallelität finden Sie unter [optimistische Parallelität](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).  
   
-2.  Erstellen Sie einen XML-Webdienstproxy.  
+2. Erstellen Sie einen XML-Webdienstproxy.  
   
      Clients des XML-Webdiensts benötigen einen SOAP-Proxy, um die verfügbar gemachten Methoden verarbeiten zu können. Sie können diesen Proxy von Visual Studio generieren lassen. Das in diesem Schritt beschriebene Verhalten wird transparent, wenn Sie einen Webverweis auf einen vorhandenen Webdienst von Visual Studio aus festlegen. Wenn Sie die Proxyklasse selbst erstellen möchten, finden Sie im Folgenden die notwendigen Informationen. In den meisten Fällen ist es jedoch ausreichend, wenn die Proxyklasse für die Clientanwendung mithilfe von Visual Studio erstellt wird.  
   
@@ -187,7 +187,7 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
     csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
-3.  Erstellen Sie einen XML-Webdienstclient.  
+3. Erstellen Sie einen XML-Webdienstclient.  
   
      Wenn Sie Visual Studio die Webdienst-Proxyklasse für Sie generiert haben möchten, einfach Client-Projekt erstellen und im Fenster Projektmappen-Explorer das Projekt der rechten Maustaste auf **Webverweis hinzufügen**, und wählen Sie den Webdienst die Liste der verfügbaren Webdienste (Dies erfordert möglicherweise die Adresse des Webdienst-Endpunkt, wenn der Webdienst nicht innerhalb der aktuellen Projektmappe oder auf dem aktuellen Computer verfügbar ist.) Wenn Sie den XML-Webdienstproxy (wie im vorigen Schritt beschrieben) selbst erstellen, können Sie ihn in den Clientcode importieren und die XML-Webdienstmethoden verwenden. Im folgenden Beispielcode wird die Proxybibliothek, Aufrufe importiert **GetCustomers** zum Abrufen einer Liste von Kunden, fügt einen neuen Kunden und gibt dann eine **DataSet** mit den Updates **UpdateCustomers** .  
   
@@ -262,10 +262,10 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
 ## <a name="see-also"></a>Siehe auch
 
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- ["DataTables"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [Auffüllen eines "DataSets" durch einen "DataAdapter"](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
+- [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [Web Services Description Language-Tool (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
+- [Web Services Description Language Tool (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

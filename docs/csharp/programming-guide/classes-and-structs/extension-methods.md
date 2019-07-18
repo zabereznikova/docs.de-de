@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a686716c4e8ed24c9b28426542cdf6bc6aa991b7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202222"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600228"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
@@ -73,9 +73,9 @@ using System.Linq;
   
  Wenn Sie Erweiterungsmethoden für einen gegebenen Typ implementieren, beachten Sie die folgenden Punkte:  
   
--   Eine Erweiterungsmethode wird nie aufgerufen, wenn sie die gleiche Signatur wie eine im Typ definierte Methode hat.  
+- Eine Erweiterungsmethode wird nie aufgerufen, wenn sie die gleiche Signatur wie eine im Typ definierte Methode hat.  
   
--   Erweiterungsmethoden werden auf Namespace-Ebene eingebunden. Wenn Sie z. B. mehrere statische Klassen haben, die Erweiterungsmethoden in einem einzelnen Namespace mit dem Namen `Extensions` enthalten, werden sie alle mit der `using Extensions;`-Direktive eingebunden.  
+- Erweiterungsmethoden werden auf Namespace-Ebene eingebunden. Wenn Sie z. B. mehrere statische Klassen haben, die Erweiterungsmethoden in einem einzelnen Namespace mit dem Namen `Extensions` enthalten, werden sie alle mit der `using Extensions;`-Direktive eingebunden.  
   
  Für eine Klassenbibliothek, die Sie implementiert haben, sollten Sie keine Erweiterungsmethoden verwenden, um zu vermeiden, dass die Versionsnummer einer Assembly erhöht wird. Wenn Sie einer Bibliothek, von deren Quellcode Sie der Besitzer oder die Besitzerin sind, wichtige Funktionen hinzufügen möchten, sollten Sie die standardmäßigen .NET Framework-Richtlinien für die Assemblyversionsverwaltung befolgen. Weitere Informationen dazu finden Sie unter [Assemblyversionen](../../../../docs/framework/app-domains/assembly-versioning.md).  
   

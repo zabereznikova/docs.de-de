@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8012d669cabc1bb589dcfe66bdf2e9b83dc5cb2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: db5d07d2b9a295a5cd21b4d4af954503b8bd7a8b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502448"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763668"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a>ICorDebugModule::IsDynamic-Methode
 Ruft einen Wert, der angibt, ob dieses Modul dynamisch ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsDynamic(  
     [out] BOOL *pDynamic  
 );  

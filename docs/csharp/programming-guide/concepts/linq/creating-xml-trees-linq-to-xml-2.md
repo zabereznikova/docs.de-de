@@ -2,12 +2,12 @@
 title: Erstellen von XML-Strukturen in C# (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37970b58519f5ff28165b45ebc729cc0a7f447d3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503167"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487507"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Erstellen von XML-Bäumen in C# (LINQ to XML)
 Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in C#.  
@@ -50,17 +50,17 @@ XElement contacts =
   
  Der `content`-Parameter ist äußerst flexibel. Er unterstützt jede Art von Objekt, das ein gültiges untergeordnetes Element eines <xref:System.Xml.Linq.XElement> ist. Die folgenden Regeln gelten für andere Arten von Objekten, die in diesem Parameter übergeben werden:  
   
--   Eine Zeichenfolge wird als Textinhalt hinzugefügt.  
+- Eine Zeichenfolge wird als Textinhalt hinzugefügt.  
   
--   Ein <xref:System.Xml.Linq.XElement> wird als untergeordnetes Element hinzugefügt.  
+- Ein <xref:System.Xml.Linq.XElement> wird als untergeordnetes Element hinzugefügt.  
   
--   Ein <xref:System.Xml.Linq.XAttribute> wird als Attribut hinzugefügt.  
+- Ein <xref:System.Xml.Linq.XAttribute> wird als Attribut hinzugefügt.  
   
--   Eine <xref:System.Xml.Linq.XProcessingInstruction>, ein <xref:System.Xml.Linq.XComment> oder ein <xref:System.Xml.Linq.XText> wird als untergeordneter Inhalt hinzugefügt.  
+- Eine <xref:System.Xml.Linq.XProcessingInstruction>, ein <xref:System.Xml.Linq.XComment> oder ein <xref:System.Xml.Linq.XText> wird als untergeordneter Inhalt hinzugefügt.  
   
--   Eine <xref:System.Collections.IEnumerable> wird aufgelistet, und diese Regeln werden rekursiv auf die Ergebnisse angewendet.  
+- Eine <xref:System.Collections.IEnumerable> wird aufgelistet, und diese Regeln werden rekursiv auf die Ergebnisse angewendet.  
   
--   Für alle anderen Arten wird deren `ToString`-Methode aufgerufen, und das Ergebnis wird als Textinhalt hinzugefügt.  
+- Für alle anderen Arten wird deren `ToString`-Methode aufgerufen, und das Ergebnis wird als Textinhalt hinzugefügt.  
   
 ### <a name="creating-an-xelement-with-content"></a>Erstellen eines „XElement“ mit Inhalt  
  Sie können mit einem einzigen Methodenaufruf ein <xref:System.Xml.Linq.XElement> erstellen, das einfachen Inhalt enthält. Geben Sie dazu den Inhalt wie folgt als zweiten Parameter an:  
@@ -236,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
 author: KrzysztofCwalina
 ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785540"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Basisklassen zum Implementieren von Abstraktionen
 Genau genommen wird eine Klasse eine Basisklasse, bei einer anderen Klasse abgeleitet wird. In diesem Abschnitt ist eine Basisklasse jedoch eine Klasse, die hauptsächlich um eine allgemeine Abstraktion oder für andere Klassen wiederverwenden einige Standardimplementierung über Vererbung entworfen. Base-Klassen befinden sich in der Regel in der Mitte Vererbungshierarchien, zwischen einer Abstraktion am Stamm einer Hierarchie und mehrere benutzerdefinierte Implementierungen am unteren Rand.  

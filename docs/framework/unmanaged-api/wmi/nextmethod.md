@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ebe6924dfe1a4aa640ef8ccd7b4047c1d137948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a730947b0c962d801975917cdf752136e7221c4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640042"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746480"
 ---
 # <a name="nextmethod-function"></a>NextMethod-Funktion
 Ruft die nächste Methode in einer Enumeration, die mit einem Aufruf von beginnt [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -30,7 +30,7 @@ Ruft die nächste Methode in einer Enumeration, die mit einem Aufruf von beginnt
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT NextMethod (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -50,7 +50,7 @@ HRESULT NextMethod (
 [in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `lFlags`  
-[in]: Reserviert Dieser Parameter muss 0 sein.
+[in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pName`  
 [out] Ein Zeiger, der auf zeigt `null` vor dem Aufruf. Wenn die Funktion zurückgibt, die Adresse eines neuen `BSTR` , enthält der Name der Methode. 
@@ -89,4 +89,5 @@ Eine C++-Beispiel finden Sie unter den [IWbemClassObject::NextMethod](/windows/d
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

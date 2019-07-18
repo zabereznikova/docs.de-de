@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f52f102102cb654035d49eea0f4b0a9061475a3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 19f1839aa2c4ca810e76c1745103a00c6f5ea5a3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128816"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777577"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef-Methode
 Erstellt die Signatur der Metadaten für ein Modul mit dem angegebenen Namen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineModuleRef (     
     [in]  LPCWSTR           szName,   
     [out] mdModuleRef       *pmur   

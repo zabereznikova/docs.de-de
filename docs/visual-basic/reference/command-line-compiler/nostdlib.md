@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 4f3dc61a6e78b0fb2135d4132c53e7efc22447a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1c3c70b24de5163ca004b41a21017205a19d9730
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814991"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583377"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 Bewirkt, dass den Compiler nicht automatisch auf die Standardbibliotheken verweisen.  
@@ -23,7 +23,7 @@ Bewirkt, dass den Compiler nicht automatisch auf die Standardbibliotheken verwei
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-nostdlib` Option wird der automatische Verweis auf die Assembly "System.dll" entfernt, und verhindert, dass den Compiler die Datei "vbc.rsp" zu lesen. Die Datei "vbc.rsp", die sich im gleichen Verzeichnis wie die Datei Vbc.exe befindet, verweist auf die häufig verwendeten [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys und importiert die `System` und `Microsoft.VisualBasic` Namespaces.  
+ Die `-nostdlib` Option wird der automatische Verweis auf die Assembly "System.dll" entfernt, und verhindert, dass den Compiler die Datei "vbc.rsp" zu lesen. Die Datei "vbc.rsp", die sich im gleichen Verzeichnis wie die Datei Vbc.exe befindet, verweist auf die häufig verwendete .NET Framework-Assemblys und importiert die `System` und `Microsoft.VisualBasic` Namespaces.  
   
 > [!NOTE]
 >  Die Datei "mscorlib.dll" und "Microsoft.VisualBasic.dll"-Assemblys werden immer auf die verwiesen wird.  

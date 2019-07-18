@@ -5,11 +5,11 @@ helpviewer_keywords:
 - graphics [WPF], custom Transforms
 ms.assetid: 919381ca-989f-47cf-86b4-1094060236e4
 ms.openlocfilehash: aeccb961db539d4cc6dea75fb487fba06e59d6de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769261"
 ---
 # <a name="how-to-use-a-matrixtransform-to-create-custom-transforms"></a>Vorgehensweise: Verwenden eines MatrixTransform-Objekts zum Erstellen benutzerdefinierter Transformationen
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.MatrixTransform> übersetzt (verschoben) die Position, Strecken und Zerren von einem <xref:System.Windows.Controls.Button>.  
@@ -25,5 +25,5 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.MatrixTransf
 - <xref:System.Windows.Media.MatrixTransform>
 - <xref:System.Windows.Media.Transform>
 - [Übersicht über Transformationen](transforms-overview.md)
-- [Gewusst wie-Themen](transformations-how-to-topics.md)
+- [Themen zu Vorgehensweisen](transformations-how-to-topics.md)
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)

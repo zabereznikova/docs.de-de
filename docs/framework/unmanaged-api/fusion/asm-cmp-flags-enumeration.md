@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a37355365f337527bbc9254cae6e6f3d3f2f604
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 28157d2ed223d89af4b4314035e7c03d572be7b8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216846"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778564"
 ---
 # <a name="asmcmpflags-enumeration"></a>ASM_CMP_FLAGS-Enumeration
 Gibt an, die Version, Build, Kultur, Signatur und So weiter, der zwei Assemblys, die durch verglichen werden die [IAssemblyName:: IsEqual](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
   
     ASM_CMPF_NAME                   = 0x1,  
@@ -79,4 +79,4 @@ typedef enum {
 ## <a name="see-also"></a>Siehe auch
 
 - [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusionsenumerationen](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [Fusion-Enumerationen](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

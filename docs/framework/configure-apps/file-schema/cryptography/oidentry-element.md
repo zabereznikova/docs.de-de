@@ -1,5 +1,5 @@
 ---
-title: <oidEntry> Element
+title: <oidEntry>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674745"
 ---
 # <a name="oidentry-element"></a>\<OidEntry >-Element
 Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.  
@@ -38,7 +38,7 @@ Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |**OID**|Erforderliches Attribut.<br /><br /> Gibt an, das ASN. 1-Objektbezeichner für den Algorithmus, der von Ihrer Klasse implementiert.|  
-|**Name**|Erforderliches Attribut.<br /><br /> Gibt den Wert für die **Namen** -Attribut in der [ \<NameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) Tag.|  
+|**name**|Erforderliches Attribut.<br /><br /> Gibt den Wert für die **Namen** -Attribut in der [ \<NameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) Tag.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -81,7 +81,7 @@ Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.
 ## <a name="see-also"></a>Siehe auch
 
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schema für Kryptografieeinstellungen](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Kryptografische Dienste](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

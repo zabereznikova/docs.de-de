@@ -1,18 +1,18 @@
 ---
-title: Das Navigieren durch Attribut- und Namespaceknoten mit XPathNavigator
+title: Das Navigieren durch Attribut- und Namespaceknoten mit "XPathNavigator"
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd3b1cacc73743622aaaad72bfd4edb26dc26390
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f2be5881a7f663b13dd13ffc0e0faf88afd7efc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740475"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647961"
 ---
-# <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Das Navigieren durch Attribut- und Namespaceknoten mit XPathNavigator
+# <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Das Navigieren durch Attribut- und Namespaceknoten mit "XPathNavigator"
 Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Navigationsmethoden bereit: Die erste Gruppe, die unter dem Thema [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) beschrieben wird, wird zum Navigieren durch *Knotengruppen* in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder <xref:System.Xml.XmlDocument>-Objekt verwendet. Die zweite Gruppe, die in diesem Thema beschrieben wird, wird zum Navigieren durch *Attribut- und Namespaceknoten* in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder <xref:System.Xml.XmlDocument>-Objekt verwendet.  
   
 ## <a name="attribute-node-navigation"></a>Navigieren durch Attributknoten  
@@ -22,11 +22,11 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Naviga
   
  Es folgen die die Navigationsmethoden für Attribute der <xref:System.Xml.XPath.XPathNavigator>-Klasse.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
   
  Wenn es sich bei dem aktuellen Knoten um ein Element handelt, können Sie mit der <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A>-Eigenschaft überprüfen, ob Attribute mit dem Element verbunden sind. Wenn bekannt ist, dass ein Element Attribute besitzt, bestehen mehrere Möglichkeiten, um auf die Attribute zuzugreifen. Verwenden Sie die <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A>-Methode zum Abrufen eines einzelnen Attributs aus dem Element. Verwenden Sie die <xref:System.Xml.XPath.XPathNavigator>-Methode, um den <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> auf ein bestimmtes Attribute zu positionieren. Sie können auch mit der <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>-Methode alle Attribute eines Elements durchlaufen und dann mehrmals die <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>-Methode aufrufen.  
   
@@ -40,18 +40,18 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Naviga
   
  Es folgen die Navigationsmethoden für Namspaces der <xref:System.Xml.XPath.XPathNavigator>-Klasse.  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
   
  Jedes Element eines XML-Dokuments befindet sich im Gültigkeitsbereich mindestens eines Namspaceknotens. Dies ist der Namespaceknoten mit dem Präfix `xml` und dem Namespace-URI `http://www.w3.org/XML/1998/namespace`. Verwenden Sie die <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A>-Methode zum Abrufen eines gültigen Namespace-URIs anhand eines bestimmten Präfixes. Verwenden Sie die <xref:System.Xml.XPath.XPathNavigator>-Methode, um das <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>-Objekt auf einen bestimmten Namespaceknoten zu verschieben. Sie können auch mit der <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>-Methode alle gültigen Namespaceknoten eines Elements durchlaufen und dann mehrmals die <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>-Methode aufrufen.  
   
 > [!NOTE]
 >  Wenn das <xref:System.Xml.XPath.XPathNavigator>-Objekt auf einem Attribut- oder Namespaceknoten positioniert ist, geben die Methoden  <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> und <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> immer `false` zurück und haben keine Auswirkungen auf die Position des <xref:System.Xml.XPath.XPathNavigator>. Die einzigen Ausnahmen sind die Methoden <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> und <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>.  
   
-### <a name="the-xpathnamespacescope-enumeration"></a>Die "XPathNamespaceScope"-Enumeration  
+### <a name="the-xpathnamespacescope-enumeration"></a>Die XPathNamespaceScope-Enumeration  
  Beim Navigieren durch Namespaceknoten können die <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>-Methode und die <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>-Methode mit dem <xref:System.Xml.XPath.XPathNamespaceScope>-Parameter aufgerufen werden. Das Verhalten dieser Methoden unterscheidet sich von dem ihrer Gegenstücke, die ohne Parameter aufgerufen werden. Die <xref:System.Xml.XPath.XPathNamespaceScope>-Enumeration enthält die Werte von <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> oder <xref:System.Xml.XPath.XPathNamespaceScope.Local>.  
   
  In den folgenden Beispielen wird veranschaulicht, welche Namespaces von der <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>-Methode und der <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>-Methode in den verschiedenen Gültigkeitsbereichen eines XML-Dokuments zurückgegeben werden.  
@@ -66,11 +66,11 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Naviga
   
  Die Reihenfolge der Namespaces (der Namespace, auf dem der <xref:System.Xml.XPath.XPathNavigator> nach dem Aufruf der <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>-Methode positioniert ist, gefolgt von Aufrufen der <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>-Methode) lautet wie folgt.  
   
--   Bei Positionierung auf `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` und `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- Bei Positionierung auf `element2`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` und `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   Bei Positionierung auf `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` und `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- Bei Positionierung auf `element1`: `xmlns:books="http://www.contoso.com/books"`, `xmlns="http://www.contoso.com"` und `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   Bei Positionierung auf `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+- Bei Positionierung auf `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
 >  Die <xref:System.Xml.XPath.XPathNavigator>-Klasse gibt Namespaceknoten in umgekehrter Dokumentreihenfolge zurück. Daher erfolgt mit <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> in Wirklichkeit ein Verschiebevorgang auf den letzten Namespaceknoten im aktuellen Gültigkeitsbereich.  
@@ -87,11 +87,11 @@ Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt zwei Gruppen von Naviga
   
  Bei Positionierung auf `child2` lautet die Reihenfolge der Namespaces (der Namespace, auf dem der <xref:System.Xml.XPath.XPathNavigator> nach dem Aufruf der <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>-Methode positioniert ist, gefolgt von Aufrufen der <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>-Methode) wie folgt.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"` und `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"`, `xmlns="http://www.contoso.com"` und `xmlns:xml="http://www.w3.org/XML/1998/namespace"`.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"` und `xmlns="http://www.contoso.com"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`, `xmlns:a="urn:a"`, `xmlns=""`, `xmlns:b="http://www.contoso.com/b"`, `xmlns:a="http://www.contoso.com/a"` und `xmlns="http://www.contoso.com"`.  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
+- <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
   
 > [!NOTE]
 >  Die <xref:System.Xml.XPath.XPathNavigator>-Klasse gibt Namespaceknoten in umgekehrter Dokumentreihenfolge zurück. Daher erfolgt mit <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> in Wirklichkeit ein Verschiebevorgang auf den letzten Namespaceknoten im aktuellen Gültigkeitsbereich.  

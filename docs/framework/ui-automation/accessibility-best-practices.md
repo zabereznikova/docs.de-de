@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 25fc2a54d958c221c866d657ccabc5a9aee64fe9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074234"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647234"
 ---
 # <a name="accessibility-best-practices"></a>Bewährte Methoden für Eingabehilfen
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "59074234"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Aktivieren des programmgesteuerten Zugriffs auf alle Elemente der Benutzeroberfläche und auf Text  
- [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] -Elemente sollten den programmgesteuerten Zugriff aktivieren. Wenn [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ein [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Standardsteuerelement ist, ist die Unterstützung für den programmgesteuerten Zugriff im Steuerelement enthalten. Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, d. h. ein Steuerelement, das als Unterklasse eines allgemeinen Steuerelements oder als Unterklasse von "Control" abgeleitet wurde, müssen Sie die <xref:System.Windows.Automation.Peers.AutomationPeer> -Implementierung auf Bereiche prüfen, für die möglicherweise eine Änderung erforderlich ist.  
+ [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] -Elemente sollten den programmgesteuerten Zugriff ermöglichen. Wenn [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ein [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Standardsteuerelement ist, ist die Unterstützung für den programmgesteuerten Zugriff im Steuerelement enthalten. Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, d. h. ein Steuerelement, das als Unterklasse eines allgemeinen Steuerelements oder als Unterklasse von "Control" abgeleitet wurde, müssen Sie die <xref:System.Windows.Automation.Peers.AutomationPeer> -Implementierung auf Bereiche prüfen, für die möglicherweise eine Änderung erforderlich ist.  
   
  Durch Befolgen dieser bewährten Methode können [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] -Anbieter die Elemente von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]Ihres Produkts identifizieren und ändern.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "59074234"
   
  Anwendungen sollten die folgenden Tastaturschnittstellen bereitstellen:  
   
--   Tabstopps für alle Steuerelemente, mit denen der Benutzer interagieren kann, z. B. Schaltflächen, Links oder Listenfelder  
+- Tabstopps für alle Steuerelemente, mit denen der Benutzer interagieren kann, z. B. Schaltflächen, Links oder Listenfelder  
   
--   Logische Aktivierreihenfolge  
+- Logische Aktivierreihenfolge  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>Anzeigen des Tastaturfokus  
@@ -90,11 +90,11 @@ ms.locfileid: "59074234"
   
  Anwendungen sollten beim Tastaturfokus wie folgt vorgehen:  
   
--   Der Tastaturfokus sollte immer bei einem Element liegen.  
+- Der Tastaturfokus sollte immer bei einem Element liegen.  
   
--   Der Tastaturfokus muss sichtbar und unverkennbar sein.  
+- Der Tastaturfokus muss sichtbar und unverkennbar sein.  
   
--   Die Auswahl und/oder Elemente mit Fokus müssen visuell hervorgehoben werden.  
+- Die Auswahl und/oder Elemente mit Fokus müssen visuell hervorgehoben werden.  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Unterstützen von Navigationsstandards und leistungsstarken Navigationsschemas  
@@ -102,11 +102,11 @@ ms.locfileid: "59074234"
   
  Anwendungen sollten die folgenden Tastaturschnittstellen bereitstellen:  
   
--   Tastenkombinationen und unterstrichene Zugriffstasten für alle Befehle, Menüs und Steuerelemente  
+- Tastenkombinationen und unterstrichene Zugriffstasten für alle Befehle, Menüs und Steuerelemente  
   
--   Tastenkombinationen für wichtige Links  
+- Tastenkombinationen für wichtige Links  
   
--   Alle Menüelemente verfügen über eine Tastenkombination, alle Schaltflächen verfügen über Tastenkombinationen, alle Befehle verfügen über eine Tastenkombination.  
+- Alle Menüelemente verfügen über eine Tastenkombination, alle Schaltflächen verfügen über Tastenkombinationen, alle Befehle verfügen über eine Tastenkombination.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Vermeiden störender Auswirkungen der Mausposition auf die Tastaturnavigation  

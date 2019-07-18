@@ -2,12 +2,12 @@
 title: Externalisierte Richtlinienaktivität in .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005029"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Externalisierte Richtlinienaktivität in .NET Framework 4.5
 
@@ -48,11 +48,11 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 |RuleSetName|Name des <xref:System.Workflow.Activities.Rules.RuleSet>, der in der RULES-Datei verwendet werden soll.|
 |TargetObject|Das Objekt, für das die <xref:System.Workflow.Activities.Rules.Rule>-Objekte im <xref:System.Workflow.Activities.Rules.RuleSet> ausgewertet werden.|
 |ResultObject|Das Objekt, das sich nach der Anwendung der Regeln ergibt. (Die Regeln werden zum Beispiel auf das Input-Argument angewendet, und das Ergebnis wird im Result-Argument gespeichert.)|
-|ValidationError|Die Liste der Validierungsfehler, die vom WF 3.5-Regelmodul beim Überprüfen des <xref:System.Workflow.Activities.Rules.RuleSet> für das Zielobjekt vor der Ausführung zurückgegeben wurde.|
+|ValidationError|Die Liste der Validierungsfehler, die von der WF 3.5-Regel-Engine beim Überprüfen des <xref:System.Workflow.Activities.Rules.RuleSet> für das Zielobjekt vor der Ausführung zurückgegeben wurde.|
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4-Aktivitätsdesigner
 
-Mit dem ExternalizedPolicy4-Designer können Sie eine Aktivität zur Verwendung eines vorhandenen RuleSet konfigurieren, ohne dass Sie Code schreiben müssen. Geben Sie den Pfad an, in dem sich die RULES-Datei befindet, und legen Sie den zu verwendenden  <xref:System.Workflow.Activities.Rules.RuleSet>-Namen fest. Sie können außerdem das <xref:System.Workflow.Activities.Rules.RuleSet> ändern. Nach dem Erstellen der Projektmappe befindet sich dies im Abschnitt Microsoft.Samples.Activities.Rules. Mit dem Designer können Sie eine RULES-Datei und ein <xref:System.Workflow.Activities.Rules.RuleSet> auswählen. Wenn die **Regelsatz bearbeiten** Schaltfläche geklickt wird, wird die WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> wird angezeigt. Dieses Dialogfeld ist der neu gehostete WF 3.5-Regeleditor. Es wird verwendet, um die von der ExternalizedPolicy4-Aktivität ausgeführten Regeln anzuzeigen und zu bearbeiten.
+Mit dem ExternalizedPolicy4-Designer können Sie eine Aktivität zur Verwendung eines vorhandenen RuleSet konfigurieren, ohne dass Sie Code schreiben müssen. Geben Sie den Pfad an, in dem sich die RULES-Datei befindet, und legen Sie den zu verwendenden <xref:System.Workflow.Activities.Rules.RuleSet>-Namen fest. Sie können außerdem das <xref:System.Workflow.Activities.Rules.RuleSet> ändern. Nach dem Erstellen der Projektmappe befindet sich dies im Abschnitt Microsoft.Samples.Activities.Rules. Mit dem Designer können Sie eine RULES-Datei und ein <xref:System.Workflow.Activities.Rules.RuleSet> auswählen. Wenn die **Regelsatz bearbeiten** Schaltfläche geklickt wird, wird die WF 3.5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> wird angezeigt. Dieses Dialogfeld ist der neu gehostete WF 3.5-Regeleditor. Es wird verwendet, um die von der ExternalizedPolicy4-Aktivität ausgeführten Regeln anzuzeigen und zu bearbeiten.
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 und ExternalPolicy4
 
@@ -66,21 +66,21 @@ Dieses Beispiel umfasst zwei Clientanwendungen: ImperativeCodeClientSample und D
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>Führen Sie die ImperativeCodeClientSample-Anwendung
 
-1.  Öffnen Sie Visual Studio mit der *Policy4sample.sln* Projektmappendatei.
+1. Öffnen Sie Visual Studio mit der *Policy4sample.sln* Projektmappendatei.
 
-2.  In **Projektmappen-Explorer**, mit der rechten Maustaste die **ImperativeCodeClientSample** und wählen Sie dann **als Startprojekt festlegen**.
+2. In **Projektmappen-Explorer**, mit der rechten Maustaste die **ImperativeCodeClientSample** und wählen Sie dann **als Startprojekt festlegen**.
 
-3.  Um das Projekt auszuführen, drücken Sie **STRG**+**F5**.
+3. Um das Projekt auszuführen, drücken Sie **STRG**+**F5**.
 
 ### <a name="run-the-designerclientsample-application"></a>Führen Sie die DesignerClientSample-Anwendung
 
-1.  Öffnen Sie Visual Studio mit der *Policy4sample.sln* Projektmappendatei.
+1. Öffnen Sie Visual Studio mit der *Policy4sample.sln* Projektmappendatei.
 
-2.  In **Projektmappen-Explorer**, mit der rechten Maustaste die **DesignerClientSample** und wählen Sie dann **als Startprojekt festlegen**.
+2. In **Projektmappen-Explorer**, mit der rechten Maustaste die **DesignerClientSample** und wählen Sie dann **als Startprojekt festlegen**.
 
-3.  Drücken Sie **STRG**+**UMSCHALT**+**B** zum Kompilieren des Projekts.
+3. Drücken Sie **STRG**+**UMSCHALT**+**B** zum Kompilieren des Projekts.
 
-4.  Drücken Sie **STRG**+**F5** um das Projekt auszuführen.
+4. Drücken Sie **STRG**+**F5** um das Projekt auszuführen.
 
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.

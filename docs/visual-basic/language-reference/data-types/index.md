@@ -37,12 +37,12 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 29e5cbe09026dd52811c6c5fb88e940b45b7c0bb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 46a65972a1ea96435002ff6956bc2837c07b0e57
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821971"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913111"
 ---
 # <a name="data-type-summary-visual-basic"></a>Datentyp: Zusammenfassung (Visual Basic)
 Die folgende Tabelle zeigt die Visual Basic-Datentypen, die unterstützenden Typen common Language Runtime, die nominale Speicherzuordnung und ihre Wertebereiche.  
@@ -77,16 +77,16 @@ Die folgende Tabelle zeigt die Visual Basic-Datentypen, die unterstützenden Typ
 ## <a name="memory-consumption"></a>Speicherverbrauch  
  Wenn Sie einen elementarer Datentyp deklarieren, ist es nicht davon ausgehen, dass der Speicherverbrauch die Zuordnung von nominalen identisch ist. Dies liegt an die folgenden Überlegungen:  
   
--   **Speicherzuweisung.** Die common Language Runtime kann Speicher, die basierend auf den aktuellen Merkmalen der Plattform, auf dem die Anwendung ausgeführt wird, zugewiesen. Wenn Arbeitsspeicher fast voll ist, können sie Ihre deklarierte Elemente so weit zusammen, wie möglich pack. In anderen Fällen kann es die Speicheradressen natürlichen hardwarebeschränkungen gelten zum Optimieren der Leistung auszurichten.  
+- **Speicherzuweisung.** Die common Language Runtime kann Speicher, die basierend auf den aktuellen Merkmalen der Plattform, auf dem die Anwendung ausgeführt wird, zugewiesen. Wenn Arbeitsspeicher fast voll ist, können sie Ihre deklarierte Elemente so weit zusammen, wie möglich pack. In anderen Fällen kann es die Speicheradressen natürlichen hardwarebeschränkungen gelten zum Optimieren der Leistung auszurichten.  
   
--   **Breite der Plattform.** Speicherzuweisung auf einer 64-Bit-Plattform unterscheidet sich von der Zuweisung auf einer 32-Bit-Plattform.  
+- **Breite der Plattform.** Speicherzuweisung auf einer 64-Bit-Plattform unterscheidet sich von der Zuweisung auf einer 32-Bit-Plattform.  
   
 ### <a name="composite-data-types"></a>Zusammengesetzte Datentypen  
  Die gleichen Überlegungen gelten für jedes Element einen zusammengesetzten Datentyp, z. B. eine Struktur oder ein Array. Sie können nicht auf die einfach Membern des Typs der nominalen speicherbelegungen addieren basieren. Darüber hinaus stehen auch andere Aspekte, z. B. Folgendes:  
   
--   **Aufwand.** Einige zusammengesetzten Typen haben Anforderungen an den zusätzlichen Arbeitsspeicher. Ein Array verwendet beispielsweise zusätzlichen Speicherplatz für das Array selbst sowie für jede Dimension. Auf einer 32-Bit-Plattform befindet sich dieser Aufwand derzeit 12 Byte plus 8 Bytes für jede Dimension. Auf einer 64-Bit-Plattform wird diese Anforderung verdoppelt.  
+- **Aufwand.** Einige zusammengesetzten Typen haben Anforderungen an den zusätzlichen Arbeitsspeicher. Ein Array verwendet beispielsweise zusätzlichen Speicherplatz für das Array selbst sowie für jede Dimension. Auf einer 32-Bit-Plattform befindet sich dieser Aufwand derzeit 12 Byte plus 8 Bytes für jede Dimension. Auf einer 64-Bit-Plattform wird diese Anforderung verdoppelt.  
   
--   **Speicherlayout.** Sie können nicht davon ausgehen, dass die Reihenfolge der im Speicher in der Reihenfolge der Deklaration identisch ist. Sie können nicht selbst Annahmen zu Byte-Ausrichtung, wie z. B. eine 2-Byte- oder 4-Byte-Grenze. Wenn Sie eine Klasse oder Struktur definieren, und Sie das Speicherlayout Membern steuern müssen, können Sie die <xref:System.Runtime.InteropServices.StructLayoutAttribute> -Attribut auf die Klasse oder Struktur.  
+- **Speicherlayout.** Sie können nicht davon ausgehen, dass die Reihenfolge der im Speicher in der Reihenfolge der Deklaration identisch ist. Sie können nicht selbst Annahmen zu Byte-Ausrichtung, wie z. B. eine 2-Byte- oder 4-Byte-Grenze. Wenn Sie eine Klasse oder Struktur definieren, und Sie das Speicherlayout Membern steuern müssen, können Sie die <xref:System.Runtime.InteropServices.StructLayoutAttribute> -Attribut auf die Klasse oder Struktur.  
   
 ### <a name="object-overhead"></a>Objekt-Mehraufwand  
  Ein `Object` verweisen auf alle elementaren oder zusammengesetzten Daten Typ verwendet 4 Bytes zusätzlich zu den Daten, die in den Datentyp enthalten.  

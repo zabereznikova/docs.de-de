@@ -14,11 +14,11 @@ helpviewer_keywords:
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
 ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937747"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Vorgehensweise: Kopieren von Pixeln zum Vermindern des Flackerns in Windows Forms
 Wenn Sie eine einfache Grafik animieren, können Benutzer manchmal Flimmern oder andere unerwünschte visuelle Effekte auftreten. Eine Möglichkeit zum Beschränken dieses Problems ist, einen "Bitblt" auf die Grafik verwenden. BitBlt ist die "Bitblocktransfer" der Farbdaten aus einem Ursprung Rechteck aus Pixeln einen Ziel-Rechteck aus Pixeln.  
@@ -68,4 +68,4 @@ private void Form1_Paint(System.Object sender,
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Verwenden eines Stiftes zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
+- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)

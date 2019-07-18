@@ -3,11 +3,11 @@ title: Visual Studio-IDE und Toolunterstützung für LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
 ms.openlocfilehash: 0ed0488f76e81d3097ec84ab914e060d4d1198a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907503"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio-IDE und Toolunterstützung für LINQ (Visual Basic)
 Die integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bietet die folgenden Features, die die LINQ-Anwendungsentwicklung unterstützen:  

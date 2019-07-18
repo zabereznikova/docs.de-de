@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60a4b56270318a05d0e5a480fdb56eb45593d5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3f56ceca5269ebffb29908c63e698ce794027d8a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177735"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768062"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS-Struktur
 Enthält pro-Thread-Statistiken, die Garbagecollection betreffen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _COR_GC_THREAD_STATS {  
     ULONGLONG  PerThreadAllocation;   
     ULONG      Flags;   
@@ -56,5 +56,5 @@ typedef struct _COR_GC_THREAD_STATS {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingstrukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [IHostTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

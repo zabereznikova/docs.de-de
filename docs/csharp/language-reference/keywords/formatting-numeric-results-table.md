@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 12fe89e3aa63e9d3d8c3f102fe5a01a5f2225375
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239968"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421971"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabelle zur Formatierung numerischer Ergebnisse (C#-Referenz)
 
@@ -31,7 +31,7 @@ Die folgende Tabelle weist die unterstützten Formatbezeichner zum Formatieren v
 |R oder r|Schleife|`string s = $"{2.5:R}";`|2.5|  
 |X oder x|Hexadezimal|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Ein Formatbezeichner wird zum Erstellen einer Formatzeichenfolge verwendet. Die Formatzeichenfolge weist die folgende Form auf: `Axx`, wobei
 
@@ -54,7 +54,6 @@ Weitere Informationen finden Sie unter [Numerische Standard-Formatzeichenfolgen]
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
-- [Referenztabellen für Typen](reference-tables-for-types.md)
 - [Formatierung von Typen](../../../standard/base-types/formatting-types.md)
 - [Kombinierte Formatierung](../../../standard/base-types/composite-formatting.md)
 - [Zeichenfolgeninterpolation](../tokens/interpolated.md)

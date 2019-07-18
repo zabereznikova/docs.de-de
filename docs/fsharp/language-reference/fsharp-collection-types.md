@@ -1,35 +1,35 @@
 ---
 title: F#-Auflistungstypen
-description: Informationen Sie zu F#-Auflistungstypen und deren Unterschiede zu Auflistungstypen in .NET Framework.
+description: Erfahren Sie mehr über F# Auflistungstypen und deren Unterschiede zu Auflistungstypen in .NET Framework.
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864760"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041728"
 ---
 # <a name="f-collection-types"></a>F#-Auflistungstypen
 
-Überprüfen Sie in diesem Thema, können Sie bestimmen, der F#-Auflistungstyp bewährte benötigen geeignet ist. Diese Auflistung unterscheiden sich von Auflistungstypen in .NET Framework, z. B. in der `System.Collections.Generic` -Namespace, die F#-Auflistungstypen aus funktionaler Programmierung anstatt einer objektorientierten Perspektive entwickelt wurden. Genauer gesagt, ist nur für die Sammlung der Array änderbare Elemente. Wenn Sie eine Auflistung ändern, erstellen Sie daher eine Instanz der geänderten Auflistung statt die ursprüngliche Auflistung ändern.
+Überprüfen Sie in diesem Thema, können Sie bestimmen, welche F# Auflistungstyp besten geeignet ist, benötigen. Diese Auflistung unterscheiden sich von Auflistungstypen in .NET Framework, z. B. in der `System.Collections.Generic` -Namespace, in, das die F# Auflistungstypen sind aus funktionaler Programmierung, anstatt eine objektorientierte konzipiert Perspektive. Genauer gesagt, ist nur für die Sammlung der Array änderbare Elemente. Wenn Sie eine Auflistung ändern, erstellen Sie daher eine Instanz der geänderten Auflistung statt die ursprüngliche Auflistung ändern.
 
 Auflistungstypen unterscheiden sich auch in der Art der Datenstruktur, in denen Objekte gespeichert werden. Datenstrukturen wie Hashtabellen, verknüpfte Listen und Arrays haben unterschiedliche Leistungsmerkmale und einen anderen Satz der verfügbaren Vorgänge aus.
 
 ## <a name="f-collection-types"></a>F#-Auflistungstypen
 
-Die folgende Tabelle zeigt die F#-Auflistungstypen.
+Die folgende Tabelle zeigt F# Auflistungstypen.
 
 |Typ|Beschreibung|Verwandte Links|
 |----|-----------|-------------|
 |[List](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Eine geordnete, unveränderliche Reihe von Elementen des gleichen Typs. Als eine verknüpfte Liste implementiert.|[Listen](lists.md)<br /><br />[List-Modul](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
 |[Array](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Eine feste Größe nullbasierte, änderbare Auflistung von aufeinander folgenden Datenelementen, die alle den gleichen Typ sind.|[Arrays](arrays.md)<br /><br />[Array-Modul](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D-Modul](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D-Modul](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Eine logische Reihe von Elementen, die alle vom selben Typ sind. Sequenzen sind besonders nützlich, wenn Sie eine große Sammlung von Daten sortiert haben, aber nicht unbedingt erwartet, dass alle Elemente zu verwenden. Einzelne Sequenzelemente werden nur als Elemente berechnet werden erforderlich, damit eine Sequenz kann eine bessere Leistung als eine Liste ausführen, wenn nicht alle Elemente werden verwendet. Sequenzen werden dargestellt, durch die `seq<'T>` Typ, der einen Alias für `IEnumerable<T>`. Aus diesem Grund alle .NET Framework-Typ, der implementiert `System.Collections.Generic.IEnumerable<'T>` kann als Sequenz verwendet werden.|[Sequenzen](sequences.md)<br /><br />[Seq-Modul](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
+|[seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Eine logische Reihe von Elementen, die alle vom selben Typ sind. Sequenzen sind besonders nützlich, wenn Sie eine große Sammlung von Daten sortiert haben, aber nicht unbedingt erwartet, dass alle Elemente zu verwenden. Einzelne Sequenzelemente werden nur als Elemente berechnet werden erforderlich, damit eine Sequenz kann eine bessere Leistung als eine Liste ausführen, wenn nicht alle Elemente werden verwendet. Sequenzen werden dargestellt, durch die `seq<'T>` Typ, der einen Alias für `IEnumerable<T>`. Aus diesem Grund alle .NET Framework-Typ, der implementiert `System.Collections.Generic.IEnumerable<'T>` kann als Sequenz verwendet werden.|[Sequenzen](sequences.md)<br /><br />[Seq-Modul](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[Zuordnung](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Ein unveränderliches Wörterbuch von Elementen. Elemente werden nach Schlüssel zugegriffen werden.|[Map-Modul](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Eine unveränderliche Gruppe, die auf binären Strukturen basieren, in dem Vergleich die F#-strukturvergleichsfunktion erfolgt-Funktion wird, verwendet möglicherweise Implementierungen der `System.IComparable` -Schnittstelle für Schlüsselwerte.|[Modul festlegen](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Eine unveränderliche Gruppe, die auf binären Strukturen basieren, in dem Vergleich wird die F# Strukturvergleich-Funktion, die Implementierungen von potenziell verwendet die `System.IComparable` -Schnittstelle für Schlüsselwerte.|[Modul festlegen](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Tabelle von Funktionen
 
-Dieser Abschnitt vergleicht die Funktionen, die für F#-Auflistungstypen zur Verfügung stehen. Die Komplexität der Berechnung der Funktion wird angegeben, wobei N die Größe der ersten Auflistung, und M ist die Größe der zweiten Auflistung, sofern vorhanden. Ein Bindestrich (-) gibt an, dass diese Funktion auf die Auflistung nicht vorhanden ist. Da Sequenzen verzögert ausgewertet werden, möglicherweise eine Funktion, wie z. B. Seq.distinct O(1), da wird sofort zurückgegeben, obwohl sie weiterhin die Leistung der Sequenz bei der Enumeration wirkt sich auf.
+In diesem Abschnitt vergleicht die Funktionen, die auf verfügbaren F# Auflistungstypen. Die Komplexität der Berechnung der Funktion wird angegeben, wobei N die Größe der ersten Auflistung, und M ist die Größe der zweiten Auflistung, sofern vorhanden. Ein Bindestrich (-) gibt an, dass diese Funktion auf die Auflistung nicht vorhanden ist. Da Sequenzen verzögert ausgewertet werden, möglicherweise eine Funktion, wie z. B. Seq.distinct O(1), da wird sofort zurückgegeben, obwohl sie weiterhin die Leistung der Sequenz bei der Enumeration wirkt sich auf.
 
 |Funktion|Array|Liste|Sequenz|Zuordnung|Set|Beschreibung|
 |--------|-----|----|--------|---|---|-----------|
@@ -52,8 +52,8 @@ Dieser Abschnitt vergleicht die Funktionen, die für F#-Auflistungstypen zur Ver
 |Erstellen|O(N)|-|-|-|-|Erstellt ein Array ganzer Elemente, die alle den angegebenen Wert haben.|
 |Verzögerung|-|-|O(1)|-|-|Gibt eine Sequenz, die erstellt wird aus der angegebenen verzögerten Spezifikation einer Sequenz zurück.|
 |Unterschied|-|-|-|-|O (M &#42; Log N)|Gibt eine neue Gruppe mit den Elementen des zweiten Satzes aus der ersten Gruppe entfernt.|
-|DISTINCT|||O(1)&AMP;#42;|||Gibt eine Sequenz, die nach generischen Hash- und Gleichheit auf die Einträge keine doppelten Einträge enthält. Wenn ein Element mehrere Male in der Sequenz auftritt, werden alle nachfolgenden Vorkommen verworfen.|
-|distinctBy|||O(1)&AMP;#42;|||Gibt eine Sequenz, die nach generischen Hash- und Gleichheitsvergleichen Vergleiche für den Schlüssel keine doppelten Einträge enthält, die die angegebene Funktion zurückgibt. Wenn ein Element mehrere Male in der Sequenz auftritt, werden alle nachfolgenden Vorkommen verworfen.|
+|DISTINCT|||O(1)&#42;|||Gibt eine Sequenz, die nach generischen Hash- und Gleichheit auf die Einträge keine doppelten Einträge enthält. Wenn ein Element mehrere Male in der Sequenz auftritt, werden alle nachfolgenden Vorkommen verworfen.|
+|distinctBy|||O(1)&#42;|||Gibt eine Sequenz, die nach generischen Hash- und Gleichheitsvergleichen Vergleiche für den Schlüssel keine doppelten Einträge enthält, die die angegebene Funktion zurückgibt. Wenn ein Element mehrere Male in der Sequenz auftritt, werden alle nachfolgenden Vorkommen verworfen.|
 |Leer|O(1)|O(1)|O(1)|O(1)|O(1)|Erstellt eine leere Auflistung an.|
 |exists|O(N)|O(N)|O(N)|O (Log N)|O (Log N)|Testet, ob ein Element der Sequenz das angegebene Prädikat erfüllt.|
 |exists2|O(min(N,M))|-|O(min(N,M))|||Testet, ob ein Paar passender Elemente der Eingabesequenzen das angegebene Prädikat erfüllt.|
@@ -73,8 +73,8 @@ Dieser Abschnitt vergleicht die Funktionen, die für F#-Auflistungstypen zur Ver
 |init|O(N)|O(N)|O(1)|-|-|Erstellt eine Auflistung, die anhand der Dimension und einer Generatorfunktion, mit die Elemente berechnet.|
 |initInfinite|-|-|O(1)|-|-|Generiert eine Sequenz, die beim Durchlaufen aufeinander folgende Elemente zurückgibt, durch die angegebene Funktion aufgerufen.|
 |Intersect|-|-|-|-|O (Log N &#42; Log M)|Berechnet die Schnittmenge zweier Mengen.|
-|intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Berechnet die Schnittmenge einer Sequenz von Sätzen. Die Sequenz darf nicht leer sein.|
-|"IsEmpty"|O(1)|O(1)|O(1)|O(1)|-|Gibt `true` , wenn die Auflistung leer ist.|
+|intersectMany|-|-|-|-|O(N1 &#42; N2 ...)|Berechnet die Schnittmenge einer Sequenz von Sätzen. Die Sequenz darf nicht leer sein.|
+|isEmpty|O(1)|O(1)|O(1)|O(1)|-|Gibt `true` , wenn die Auflistung leer ist.|
 |isProperSubset|-|-|-|-|O (M &#42; Log N)|Gibt `true` Wenn alle Elemente der ersten Menge in der zweiten Menge enthalten sind und mindestens ein Element der zweiten Menge nicht in der ersten Menge.|
 |isProperSuperset|-|-|-|-|O (M &#42; Log N)|Gibt `true` Wenn alle Elemente des zweiten Satzes im ersten Satz enthalten sind und mindestens ein Element der ersten Menge nicht in der zweiten Menge.|
 |isSubset|-|-|-|-|O (M &#42; Log N)|Gibt `true` Wenn alle Elemente der ersten Menge in der zweiten Menge sind.|
@@ -83,11 +83,12 @@ Dieser Abschnitt vergleicht die Funktionen, die für F#-Auflistungstypen zur Ver
 |iteri|O(N)|O(N)|O(N)|-|-|Wendet die angegebene Funktion auf jedes Element der Auflistung an. Die ganze Zahl, die an die Funktion übergeben wird, gibt den Index des Elements an.|
 |iteri2|O(N)|O(N)|-|-|-|Wendet die angegebene Funktion auf einem Paar von Elementen, die von übereinstimmenden Indizes in zwei Arrays gezeichnet werden. Die ganze Zahl, die an die Funktion übergeben wird, gibt den Index der Elemente an. Die beiden Arrays müssen dieselbe Länge haben.|
 |iter2|O(N)|O(N)|O(N)|-|-|Wendet die angegebene Funktion auf einem Paar von Elementen, die von übereinstimmenden Indizes in zwei Arrays gezeichnet werden. Die beiden Arrays müssen dieselbe Länge haben.|
+|last|O(1)|O(N)|O(N)|-|-|Gibt das letzte Element in der entsprechenden Auflistung zurück.|
 |Länge|O(1)|O(N)|O(N)|-|-|Gibt die Anzahl der Elemente in der Auflistung zurück.|
 |Zuordnung|O(N)|O(N)|O(1)|-|-|Erstellt eine Auflistung, deren Elemente das Ergebnis der wendet die angegebene Funktion auf jedes Element des Arrays sind.|
 |map2|O(N)|O(N)|O(1)|-|-|Erstellt eine Auflistung, dessen Elemente die Ergebnisse der die angegebene Funktion paarweise auf die entsprechenden Elemente der beiden Auflistungen angewendet werden. Beide Eingabearrays müssen dieselbe Länge haben.|
 |map3|-|O(N)|-|-|-|Erstellt eine Auflistung, dessen Elemente die Ergebnisse der die angegebene Funktion gleichzeitig auf die entsprechenden Elemente der drei Auflistungen angewendet werden.|
-|MAPI|O(N)|O(N)|O(N)|-|-|Erstellt ein Array, dessen Elemente das Ergebnis der wendet die angegebene Funktion auf jedes Element des Arrays sind. Der ganzzahlige Index, der an die Funktion übergeben wird, gibt den Index des Elements, das transformiert wird, an.|
+|mapi|O(N)|O(N)|O(N)|-|-|Erstellt ein Array, dessen Elemente das Ergebnis der wendet die angegebene Funktion auf jedes Element des Arrays sind. Der ganzzahlige Index, der an die Funktion übergeben wird, gibt den Index des Elements, das transformiert wird, an.|
 |mapi2|O(N)|O(N)|-|-|-|Erstellt eine Auflistung, deren Elemente das Ergebnis der wendet die angegebene Funktion auf die entsprechenden Elemente der beiden Auflistungen paarweisen, übergibt den Index der Elemente sind. Beide Eingabearrays müssen dieselbe Länge haben.|
 |max|O(N)|O(N)|O(N)|-|-|Gibt das größte Element in der Auflistung, die im Vergleich mit der [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) Operator.|
 |maxBy|O(N)|O(N)|O(N)|-|-|Gibt das größte Element in der Auflistung, die im Vergleich mit [max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) auf das Ergebnis der Funktion.|
@@ -110,10 +111,10 @@ Dieser Abschnitt vergleicht die Funktionen, die für F#-Auflistungstypen zur Ver
 |"Rev"|O(N)|O(N)|-|-|-|Gibt für eine neue Liste mit den Elementen in umgekehrter Reihenfolge zurück.|
 |Überprüfung|O(N)|O(N)|O(N)|-|-|Wendet eine Funktion auf jedes Element der Auflistung, die ein Akkumulatorargument in der Berechnung an. Dieser Vorgang wendet die Funktion das zweite Argument und das erste Element der Liste. Klicken Sie dann der Vorgang übergibt dieses Ergebnis an die Funktion zusammen mit dem zweiten Element und so weiter. Schließlich gibt der Vorgang die Liste mit Zwischenergebnissen und das endgültige Ergebnis zurück.|
 |scanBack|O(N)|O(N)|-|-|-|Ähnelt den FoldBack-Vorgang jedoch die zwischen- und Endergebnisse Ergebnisse zurückgegeben.|
-|Singleton|-|-|O(1)|-|O(1)|Gibt eine Sequenz, die nur ein Element ergibt.|
+|singleton|-|-|O(1)|-|O(1)|Gibt eine Sequenz, die nur ein Element ergibt.|
 |set|O(1)|-|-|-|-|Legt ein Element eines Arrays mit dem angegebenen Wert fest.|
 |überspringen|-|-|O(N)|-|-|Gibt eine Sequenz, die N Elemente der zugrunde liegenden Sequenz überspringt, und klicken Sie dann die verbleibenden Elemente der Sequenz ergibt.|
-|SkipWhile|-|-|O(N)|-|-|Gibt eine Sequenz zurück, die beim Durchlaufen der zugrunde liegenden Sequenz überspringt Elemente im angegebenen Prädikat zurückgegeben solange `true` , und klicken Sie dann die verbleibenden Elemente der Sequenz ergibt.|
+|skipWhile|-|-|O(N)|-|-|Gibt eine Sequenz zurück, die beim Durchlaufen der zugrunde liegenden Sequenz überspringt Elemente im angegebenen Prädikat zurückgegeben solange `true` , und klicken Sie dann die verbleibenden Elemente der Sequenz ergibt.|
 |sort|Durchschnitt von O (N Log N)<br /><br />O(N^2) schlimmsten Fall|O (N Log N)|O (N Log N)|-|-|Sortiert die Auflistung durch den Wert des Elements an. Elemente werden verglichen mit [vergleichen](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c).|
 |sortBy|Durchschnitt von O (N Log N)<br /><br />O(N^2) schlimmsten Fall|O (N Log N)|O (N Log N)|-|-|Sortiert die angegebene Liste mit Schlüsseln, die die angegebene Projektion bereitstellt. Schlüssel werden verglichen mit [vergleichen](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c).|
 |sortInPlace|Durchschnitt von O (N Log N)<br /><br />O(N^2) schlimmsten Fall|-|-|-|-|Sortiert die Elemente eines Arrays von mutierende sie an Ort und mithilfe der angegebenen Vergleichsfunktion. Elemente werden verglichen mit [vergleichen](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c).|
@@ -125,9 +126,9 @@ Dieser Abschnitt vergleicht die Funktionen, die für F#-Auflistungstypen zur Ver
 |sumBy|O(N)|O(N)|O(N)|-|-|Gibt die Summe der Ergebnisse, die generiert werden, durch Anwenden der Funktion auf jedes Element der Auflistung zurück.|
 |Ende|-|O(1)|-|-|-|Gibt die Liste ohne das erste Element zurück.|
 |Take|-|-|O(N)|-|-|Gibt die Elemente der Sequenz bis zu einer angegebenen Anzahl zurück.|
-|TakeWhile|-|-|O(1)|-|-|Gibt eine Sequenz zurück, die beim durchlaufen, Elemente der zugrunde liegenden Sequenz das angegebene Prädikat gibt solange `true` und gibt dann keine weiteren Elemente zurück.|
-|ToArray|-|O(N)|O(N)|O(N)|O(N)|Erstellt ein Array aus der angegebenen Auflistung.|
-|"ToList"|O(N)|-|O(N)|O(N)|O(N)|Erstellt eine Liste aus der angegebenen Auflistung.|
+|takeWhile|-|-|O(1)|-|-|Gibt eine Sequenz zurück, die beim durchlaufen, Elemente der zugrunde liegenden Sequenz das angegebene Prädikat gibt solange `true` und gibt dann keine weiteren Elemente zurück.|
+|toArray|-|O(N)|O(N)|O(N)|O(N)|Erstellt ein Array aus der angegebenen Auflistung.|
+|toList|O(N)|-|O(N)|O(N)|O(N)|Erstellt eine Liste aus der angegebenen Auflistung.|
 |toSeq|O(1)|O(1)|-|O(1)|O(1)|Erstellt eine Sequenz aus der angegebenen Auflistung.|
 |Abschneiden|-|-|O(1)|-|-|Gibt eine Sequenz zurück, die bei der Enumeration gibt nicht mehr als N Elemente.|
 |tryFind|O(N)|O(N)|O(N)|O (Log N)|-|Sucht ein Element, das ein angegebenes Prädikat erfüllt.|
@@ -136,11 +137,11 @@ Dieser Abschnitt vergleicht die Funktionen, die für F#-Auflistungstypen zur Ver
 |tryPick|O(N)|O(N)|O(N)|O (Log N)|-|Wendet die angegebene Funktion auf aufeinander folgende Elemente an und gibt das erste Ergebnis zurück, bei dem die Funktion `Some` beliebiger Wert. Wenn kein solches Element vorhanden ist, gibt der Vorgang `None`.|
 |Erweitern|-|-|O(N)|-|-|Gibt eine Sequenz, die das Elemente enthält, die die angegebene Berechnung generiert.|
 |union|-|-|-|-|O (M &#42; Log N)|Berechnet die Union der beiden Sätze.|
-|unionMany|-|-|-|-|O (N1 &AMP;#42; N2...)|Berechnet die Union einer Sequenz von Sätzen.|
+|unionMany|-|-|-|-|O(N1 &#42; N2 ...)|Berechnet die Union einer Sequenz von Sätzen.|
 |unzip|O(N)|O(N)|O(N)|-|-|Teilt eine Liste von Paaren in zwei Listen.|
 |unzip3|O(N)|O(N)|O(N)|-|-|Teilt eine Liste von Tripeln in drei Listen.|
 |im Fenstermodus|-|-|O(N)|-|-|Gibt eine Sequenz, die ergibt, gleitende Fenster enthaltender Elementen, die aus der Eingabesequenz gezeichnet werden. Jedes Fenster wird als neues Array zurückgegeben.|
-|ZIP|O(N)|O(N)|O(N)|-|-|Kombiniert die beiden Auflistungen in einer Liste von Paaren. Die beiden Listen müssen gleichlang sein.|
+|zip|O(N)|O(N)|O(N)|-|-|Kombiniert die beiden Auflistungen in einer Liste von Paaren. Die beiden Listen müssen gleichlang sein.|
 |zip3|O(N)|O(N)|O(N)|-|-|Kombiniert die drei Auflistungen in einer Liste von Tripeln. Die Listen müssen gleichlang sein.|
 
 ## <a name="see-also"></a>Siehe auch

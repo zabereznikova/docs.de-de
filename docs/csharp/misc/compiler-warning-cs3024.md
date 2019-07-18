@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-ms.openlocfilehash: e49c131328f132ae6372167818d084df51ef6c78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7515fdd7bc8f57890e3f1aac6303ed4607cc2249
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "56798333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688253"
 ---
 # <a name="compiler-warning-cs3024"></a>Compilerwarnung CS3024
 Einschränkungstyp 'Typ' ist nicht CLS-kompatibel.  
@@ -20,7 +20,7 @@ Einschränkungstyp 'Typ' ist nicht CLS-kompatibel.
   
 ### <a name="to-eliminate-this-warning"></a>So beseitigen Sie diese Warnung  
   
-1.  Verwenden Sie einen CLS-kompatiblen Typ für die Typeinschränkung.  
+1. Verwenden Sie einen CLS-kompatiblen Typ für die Typeinschränkung.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Fehler CS3024 an verschiedenen Stellen generiert:  

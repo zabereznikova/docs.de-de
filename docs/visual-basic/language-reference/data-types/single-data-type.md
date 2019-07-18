@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: b90fdb562f9d65858ac477321a18067cc6e621a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: af75f5eb5a4281f6efae8ec3c9442ce2b28f595e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833315"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646981"
 ---
 # <a name="single-data-type-visual-basic"></a>Single-Datentyp (Visual Basic)
 Speichert signierte IEEE-32-Bit (4-Byte) mit einfacher Genauigkeit Gleitkommazahlen im Bereich von - 3,4028235E + 38 bis - 1.401298E-45 für negative Werte und 1.401298E-45 bis 3,4028235E + 38 für positive Werte. Zahlen mit einfacher Genauigkeit speichern eine Approximation einer reellen Zahl.  
@@ -37,15 +37,15 @@ Speichert signierte IEEE-32-Bit (4-Byte) mit einfacher Genauigkeit Gleitkommazah
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Mit einfacher Genauigkeit.** Beim Arbeiten mit Gleitkommazahlen, Bedenken Sie, dass sie nicht immer eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen führen, von der bestimmte Vorgänge, z. B. den Wertvergleich und `Mod` Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Mit einfacher Genauigkeit.** Beim Arbeiten mit Gleitkommazahlen, Bedenken Sie, dass sie nicht immer eine genaue Darstellung im Arbeitsspeicher verfügen. Dies kann zu unerwarteten Ergebnissen führen, von der bestimmte Vorgänge, z. B. den Wertvergleich und `Mod` Operator. Weitere Informationen finden Sie unter [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
--   **Erweiternde.** Die `Single` -Datentyp wird zu `Double`. Dies bedeutet, Sie können konvertieren `Single` zu `Double` unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
+- **Erweiternde.** Die `Single` -Datentyp wird zu `Double`. Dies bedeutet, Sie können konvertieren `Single` zu `Double` unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Nachfolgende Nullen.** Der Gleitkomma-Datentypen keine interne Darstellung für nachfolgende 0 Zeichen. Angenommen, unterscheiden sie nicht zwischen 4,2000 und 4.2. Nachfolgende 0 Zeichen werden daher nicht angezeigt, wenn Sie anzeigen oder Drucken von Gleitkommazahlen-Punktwerte.  
+- **Nachfolgende Nullen.** Der Gleitkomma-Datentypen keine interne Darstellung für nachfolgende 0 Zeichen. Angenommen, unterscheiden sie nicht zwischen 4,2000 und 4.2. Nachfolgende 0 Zeichen werden daher nicht angezeigt, wenn Sie anzeigen oder Drucken von Gleitkommazahlen-Punktwerte.  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `F` an ein Literal wird der `Single`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `!` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Single`-Datentyp erzwungen.  
+- **Typzeichen.** Durch Anhängen des Literaltypzeichens `F` an ein Literal wird der `Single`-Datentyp erzwungen. Durch Anhängen des Typkennzeichens `!` an einen beliebigen Bezeichner wird für diesen ebenfalls der `Single`-Datentyp erzwungen.  
   
--   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Single?displayProperty=nameWithType>-Struktur.  
+- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Single?displayProperty=nameWithType>-Struktur.  
   
 ## <a name="see-also"></a>Siehe auch
 

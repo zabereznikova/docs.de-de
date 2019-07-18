@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38e2ec063d46ce9c890927391107888032e31378
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f7911d09c97c5401bff827ca5fb0a8766933778f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092594"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738666"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual-Methode
 Liest Daten aus der angegebenen virtuellen Speicheradresse in den angegebenen Puffer.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ReadVirtual (  
     [in] CLRDATA_ADDRESS    address,  
     [out, size_is(bytesRequested), length_is(*bytesRead)]   

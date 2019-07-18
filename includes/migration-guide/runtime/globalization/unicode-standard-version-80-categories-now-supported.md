@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 480cbdecd681408a7e1d6fa366e3f1a4b131ab42
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760676"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857540"
 ---
 ### <a name="unicode-standard-version-80-categories-now-supported"></a>Kategorien der Unicode-Standardversion 8.0 werden jetzt unterstützt
 

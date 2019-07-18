@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 12bfe994e02e1a330cc543ca1afd21ddf32dac66
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5be2ca8b4247fcd6bdc628ae0f4aefff30a11256
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673677"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652226"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -27,11 +27,11 @@ ms.locfileid: "57673677"
 ## <a name="ui-automation-control-pattern-components"></a>Komponenten der Steuerelementmuster für Benutzeroberflächenautomatisierung  
  Steuerelementmuster unterstützen die Methoden, Eigenschaften, Ereignisse und Beziehungen, die dazu erforderlich sind, eine bestimmte Funktionalität zu definieren, die in einem Steuerelement verfügbar ist.  
   
--   Die Beziehungen zwischen einem Benutzeroberflächenautomatisierungs-Element und dessen übergeordnetem Element sowie dessen unter- und gleichgeordneten Elementen beschreibt die Struktur des Elements innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur.  
+- Die Beziehungen zwischen einem Benutzeroberflächenautomatisierungs-Element und dessen übergeordnetem Element sowie dessen unter- und gleichgeordneten Elementen beschreibt die Struktur des Elements innerhalb der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur.  
   
--   Die Methoden ermöglichen es Benutzeroberflächenautomatisierungs-Clients, das Steuerelement zu bearbeiten.  
+- Die Methoden ermöglichen es Benutzeroberflächenautomatisierungs-Clients, das Steuerelement zu bearbeiten.  
   
--   Die Eigenschaften und Ereignisse stellen Informationen zur Funktionalität des Steuerelementmusters sowie zum Status des Steuerelements zur Verfügung.  
+- Die Eigenschaften und Ereignisse stellen Informationen zur Funktionalität des Steuerelementmusters sowie zum Status des Steuerelements zur Verfügung.  
   
  Steuerelementmuster beziehen sich so auf [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , wie sich Schnittstellen auf [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] -Objekte beziehen. In [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]können Sie ein Objekt daraufhin abfragen, welche Schnittstellen es unterstützt, und dann diese Schnittstellen verwenden, um auf die Funktionalität zuzugreifen. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]kann ein Benutzeroberflächenautomatisierungs-Client ein Steuerelement daraufhin abfragen, welche Steuerelementmuster es unterstützt, und anschließend über die Eigenschaften, Methoden, Ereignisse und Strukturen, die von den unterstützten Steuerelementmustern verfügbar gemacht werden, auf das Steuerelement zugreifen. Beispielsweise implementiert ein Benutzeroberflächenautomatisierungs-Anbieter für ein mehrzeiliges Bearbeitungsfeld eine <xref:System.Windows.Automation.Provider.IScrollProvider>-Schnittstelle. Wenn ein Client weiß, dass ein <xref:System.Windows.Automation.AutomationElement> das <xref:System.Windows.Automation.ScrollPattern> -Steuerelementmuster unterstützt, kann er die Eigenschaften, Methoden und Ereignisse, die von diesem Steuerelementmuster verfügbar gemacht werden, dazu verwenden, auf das Steuerelement oder auf Informationen über das Steuerelement zuzugreifen.  
   
@@ -73,6 +73,7 @@ ms.locfileid: "57673677"
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Macht fensterspezifische Informationen verfügbar. Dies ist ein grundlegendes Konzept für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Zu den Beispielen für Steuerelemente, die Fenster sind, gehören Anwendungsfenster der obersten Ebene ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]usw.), untergeordnete [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] -Fenster und Dialogfelder.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [Übersicht über die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-overview.md)

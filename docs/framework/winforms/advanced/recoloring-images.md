@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
 ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948069"
 ---
 # <a name="recoloring-images"></a>Neueinfärben von Bildern
 Neufärben von ist der Prozess Bildfarben angepasst. Einige Beispiele für über erneutes Einfärben sind eine Farbe in eine andere, Anpassen der Farbintensität relativ zu einer anderen Farbe, Anpassung der Helligkeit oder Kontrast aller Farben und Konvertieren von Farben in Graustufen ändern.  

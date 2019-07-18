@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
 ms.openlocfilehash: 91db42acb0e09b8fc99b0ee710a60800d40938ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607263"
 ---
 # <a name="navigating-datatables"></a>Navigieren in "DataTables"
 Der <xref:System.Data.DataTableReader> ruft den Inhalt eines oder mehrerer <xref:System.Data.DataTable>-Objekte in Form eines oder mehrerer schreibgeschützter vorwärts gerichteter Resultsets ab.  
@@ -25,5 +25,5 @@ Der <xref:System.Data.DataTableReader> ruft den Inhalt eines oder mehrerer <xref
   
 ## <a name="see-also"></a>Siehe auch
 
-- ["DataTableReaders"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
+- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

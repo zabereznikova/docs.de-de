@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf7b54ab7a2318e8194bf39dbe41b864633ddb43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b0e6250987997b8d1c833b7b33a985900510fb03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212908"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742140"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly-Methode
 Erstellt die Assembly an. Rufen Sie diese Methode auf, nachdem alle anderen Dateien mit Ausnahme der Assemblydatei geschlossen werden. Rufen Sie diese Methode nicht auf, wenn ungebundene Modulen erstellt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EmitAssembly(  
     mdAssembly AssemblyID  
 ) PURE;  
@@ -49,4 +49,4 @@ HRESULT EmitAssembly(
 
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

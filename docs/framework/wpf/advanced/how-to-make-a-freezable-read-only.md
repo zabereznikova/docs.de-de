@@ -7,23 +7,23 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5748b7929db18578bbe00e3217b1578ac5fbc0f4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191438"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614591"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Vorgehensweise: Erstellen eines schreibgeschützten Freezable-Objekts
 Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.Freezable> schreibgeschützte durch Aufrufen der <xref:System.Windows.Freezable.Freeze%2A> Methode.  
   
  Sie können nicht eingefroren werden eine <xref:System.Windows.Freezable> Objekt, wenn eine der folgenden Bedingungen ist `true` über das Objekt:  
   
--   Es verfügt über animierte oder datengebundene Eigenschaften.  
+- Es verfügt über animierte oder datengebundene Eigenschaften.  
   
--   Es verfügt über Eigenschaften, die von einer dynamischen Ressource festgelegt werden. Weitere Informationen zu dynamischen Ressourcen finden Sie unter den [XAML-Ressourcen](xaml-resources.md).  
+- Es verfügt über Eigenschaften, die von einer dynamischen Ressource festgelegt werden. Weitere Informationen zu dynamischen Ressourcen finden Sie unter den [XAML-Ressourcen](xaml-resources.md).  
   
--   Es enthält <xref:System.Windows.Freezable> untergeordnete Objekte, die nicht fixiert werden können.  
+- Es enthält <xref:System.Windows.Freezable> untergeordnete Objekte, die nicht fixiert werden können.  
   
  Wenn diese Bedingungen sind `false` für Ihre <xref:System.Windows.Freezable> -Objekt, und Sie beabsichtigen nicht, es ändern möchten, sollten das fixieren, um Leistungsvorteile zu erhalten.  
   
@@ -41,4 +41,4 @@ Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.Freezable> schreibgesch
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [Übersicht über Freezable-Objekte](freezable-objects-overview.md)
-- [Gewusst wie-Themen](base-elements-how-to-topics.md)
+- [Themen zu Vorgehensweisen](base-elements-how-to-topics.md)

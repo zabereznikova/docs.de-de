@@ -2,15 +2,15 @@
 title: <security> von <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: b6375a64ea157df01f903901e0414a2989287aee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 788d49239b8b9161a35705295705e6d42eff7837
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132292"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052167"
 ---
 # <a name="security-of-webhttpbinding"></a>\<security> of \<webHttpBinding>
-Gibt an, der die sicherheitsanforderungen für einen Endpunkt konfiguriert, die mit einem [ \<WsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+Gibt an, der die sicherheitsanforderungen für einen Endpunkt konfiguriert, die mit einem [ \<WebHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md).  
   
  \<system.ServiceModel>  
 \<bindings>  
@@ -47,7 +47,7 @@ Gibt an, der die sicherheitsanforderungen für einen Endpunkt konfiguriert, die 
   
 ## <a name="mode-attribute"></a>Mode-Attribut  
   
-|Wert|Beschreibung|  
+|Wert|Description|  
 |-----------|-----------------|  
 |Keiner|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Transport|Die Sicherheit wird über HTTPS bereitgestellt. Der Dienst muss mit SSL-Zertifikaten konfiguriert werden. Die Nachricht wird vollständig über HTTPS gesichert, und der Dienst wird vom Client über das SSL-Zertifikat des Diensts authentifiziert. Die Clientauthentifizierung wird durch die `ClientCredentialType` Attribut der [ \<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).|  
@@ -73,7 +73,7 @@ Gibt an, der die sicherheitsanforderungen für einen Endpunkt konfiguriert, die 
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.WebHttpSecurity>
 - [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Wählen eines Typs von Anmeldeinformationen](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Ausählen eines Anmeldeinformationentyps](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

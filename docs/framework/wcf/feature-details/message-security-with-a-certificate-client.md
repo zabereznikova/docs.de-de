@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 1393879c58609c501da5b2d413073328bee6d05d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fb68487746a7dc9cec1d1473b445bccc7b2b23c2
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227705"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424875"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Nachrichtensicherheit durch einem Zertifikatclient
 Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Dienst, die mit der nachrichtensicherheitsmodus gesichert werden. Sowohl der Client als auch der Dienst werden mit Zertifikaten authentifiziert. Weitere Informationen finden Sie unter [Distributed Application Security](../../../../docs/framework/wcf/feature-details/distributed-application-security.md).
@@ -33,9 +33,9 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 ## <a name="service"></a>Dienst  
  Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
--   Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
+- Erstellen Sie einen separaten Dienst, indem Sie den Code ohne Konfiguration verwenden.  
   
--   Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.  
+- Erstellen Sie mit der angegebenen Konfiguration einen Dienst, aber definieren Sie keine Endpunkte.  
   
 ### <a name="code"></a>Code  
  Der folgende Code zeigt, wie Sie einen Dienstendpunkt erstellen, der zum Herstellen eines sicheren Kontextes die Nachrichtensicherheit verwendet.  
@@ -65,7 +65,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
                name="ServiceModel.Calculator">  
         <endpoint address="http://localhost/Calculator"   
                   binding="wsHttpBinding"  
-                  bindingConfiguration="MessageAndCerficiateClient"   
+                  bindingConfiguration="MessageAndCertificateClient"   
                   name="SecuredByClientCertificate"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -87,9 +87,9 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 ## <a name="client"></a>Client  
  Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
   
--   Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
+- Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
--   Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
+- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -147,5 +147,5 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

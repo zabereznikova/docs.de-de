@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabc8f77b12865d0d971b5934d7de27b52f3e813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d98ebed2eb853d5dc8177b0b044bf654c3978494
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159483"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744351"
 ---
 # <a name="symlinedelta-structure"></a>SYMLINEDELTA-Struktur
 Enthält Informationen, die an den Symbol-Handler zu Methoden, die Bearbeitungsvorgängen verschoben wurden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _SYMLINEDELTA  
     {  
         mdMethodDef  mdMethod;  

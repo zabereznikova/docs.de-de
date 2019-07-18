@@ -2,12 +2,12 @@
 title: Beibehalten eines Objekts in Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3e1ae81b2871899e6efc4be4dfc7c62ed45a133a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841580"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624337"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (Visual Basic)
 Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standardwerte festlegen können, gehen während der Laufzeit eingegebene Werte verloren, wenn das Objekt zerstört wird. Sie können die Serialisierung verwenden, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.  
@@ -31,11 +31,11 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-create-the-loan-class"></a>So erstellen Sie eine Loan-Klasse  
   
-1.  Erstellen Sie ein neues Klassenbibliotheksprojekt mit dem Namen „LoanClass“. Weitere Informationen finden Sie unter [Erstellen von Projekten und Projektmappen](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1. Erstellen Sie ein neues Klassenbibliotheksprojekt mit dem Namen „LoanClass“. Weitere Informationen finden Sie unter [Erstellen von Projekten und Projektmappen](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
   
-2.  Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für die Datei „Class1“ und wählen Sie **Umbenennen** aus. Benennen Sie die Datei in `Loan` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `Loan` umbenannt.  
+2. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für die Datei „Class1“ und wählen Sie **Umbenennen** aus. Benennen Sie die Datei in `Loan` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `Loan` umbenannt.  
   
-3.  Fügen Sie der Klasse die folgenden öffentlichen Member hinzu:  
+3. Fügen Sie der Klasse die folgenden öffentlichen Member hinzu:  
   
     ```vb  
     Public Class Loan  
@@ -77,21 +77,21 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-create-a-test-application"></a>So erstellen Sie eine Testanwendung  
   
-1.  Wählen Sie im Menü **Datei** die Optionen **Hinzufügen** und **Neues Projekt** aus, um Ihrer Projektmappe ein Windows Forms-Anwendungsprojekt hinzuzufügen.  
+1. Wählen Sie im Menü **Datei** die Optionen **Hinzufügen** und **Neues Projekt** aus, um Ihrer Projektmappe ein Windows Forms-Anwendungsprojekt hinzuzufügen.  
   
-2.  Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** **Windows Forms-Anwendung** aus, und geben Sie als Namen für das Projekt `LoanApp` ein. Klicken Sie anschließend auf **OK**, um das Dialogfeld zu schließen.  
+2. Wählen Sie im Dialogfeld **Neues Projekt hinzufügen** **Windows Forms-Anwendung** aus, und geben Sie als Namen für das Projekt `LoanApp` ein. Klicken Sie anschließend auf **OK**, um das Dialogfeld zu schließen.  
   
-3.  Wählen Sie im **Projektmappen-Explorer** das LoanApp-Projekt aus.  
+3. Wählen Sie im **Projektmappen-Explorer** das LoanApp-Projekt aus.  
   
-4.  Klicken Sie im Menü **Projekt** auf **Als Startprojekt festlegen**.  
+4. Klicken Sie im Menü **Projekt** auf **Als Startprojekt festlegen**.  
   
-5.  Wählen Sie im Menü **Projekt** den Eintrag **Verweis hinzufügen**aus.  
+5. Wählen Sie im Menü **Projekt** den Eintrag **Verweis hinzufügen**aus.  
   
-6.  Wählen Sie im Dialogfeld **Verweis hinzufügen** die Registerkarte **Projekte** und anschließend das LoanClass-Projekt aus.  
+6. Wählen Sie im Dialogfeld **Verweis hinzufügen** die Registerkarte **Projekte** und anschließend das LoanClass-Projekt aus.  
   
-7.  Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
+7. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
-8.  Fügen Sie dem Formular im Designer vier <xref:System.Windows.Forms.TextBox>-Steuerelemente hinzu.  
+8. Fügen Sie dem Formular im Designer vier <xref:System.Windows.Forms.TextBox>-Steuerelemente hinzu.  
   
 9. Fügen Sie im Code-Editor folgenden Code hinzu:  
   
@@ -127,7 +127,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-mark-a-class-as-serializable"></a>So markieren Sie eine Klasse als serialisierbar  
   
--   Ändern Sie die Klassendeklaration für die Loan-Klasse wie folgt:  
+- Ändern Sie die Klassendeklaration für die Loan-Klasse wie folgt:  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>So verhindern Sie, dass ein Member serialisiert wird  
   
--   Ändern Sie die Deklaration für das Ereignis `PropertyChanged` wie folgt:  
+- Ändern Sie die Deklaration für das Ereignis `PropertyChanged` wie folgt:  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-add-references-to-namespaces"></a>So fügen Sie Verweise zu Namespaces hinzu  
   
--   Fügen Sie am Anfang der `Form1`-Klasse die folgenden Anweisungen ein:  
+- Fügen Sie am Anfang der `Form1`-Klasse die folgenden Anweisungen ein:  
   
     ```vb  
     Imports System.IO  
@@ -163,13 +163,13 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-deserialize-an-object"></a>So deserialisieren Sie ein Objekt  
   
-1.  Fügen Sie eine Konstante zur Klasse für den Dateinamen der serialisierten Daten hinzu.  
+1. Fügen Sie eine Konstante zur Klasse für den Dateinamen der serialisierten Daten hinzu.  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2.  Ändern Sie den Code der `Form1_Load`-Ereignisprozedur wie folgt:  
+2. Ändern Sie den Code der `Form1_Load`-Ereignisprozedur wie folgt:  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -197,7 +197,7 @@ Obwohl Sie die Eigenschaften eines Objekts während der Entwurfszeit auf Standar
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>So speichern Sie die Daten und serialisieren die Klasse  
   
--   Fügen Sie den folgenden Code zur `Form1_FormClosing`-Ereignisprozedur hinzu:  
+- Fügen Sie den folgenden Code zur `Form1_FormClosing`-Ereignisprozedur hinzu:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

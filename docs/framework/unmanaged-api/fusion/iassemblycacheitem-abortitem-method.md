@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59d785178f5c97dcd8e3911a2e51b4cc12f6a70f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cfb39183b7ed1db749ef8ae93475576c78f36fca
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120834"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778692"
 ---
 # <a name="iassemblycacheitemabortitem-method"></a>IAssemblyCacheItem::AbortItem-Methode
 Können Sie die Assembly im globalen Assemblycache Bereinigungsvorgänge ausgeführt werden, bevor er freigegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT AbortItem ();  
 ```  
   

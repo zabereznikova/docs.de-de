@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f946fa01f3d6334011098d12483445159ce54a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7e316f874a2b559cb3fe9d64a9ec7cf25addbe5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738117"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557784"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Entschärfung: Serialisierung von Steuerzeichen mit dem DataContractJsonSerializer
 
@@ -27,8 +27,6 @@ In .NET Framework 4.6.2 und früheren Versionen serialisierte der <xref:System.R
 Für Apps mit Zielversionen von .NET Framework ab .NET Framework 4.7 ist die Serialisierung dieser Steuerzeichen mit ECMAScript V6 und V8 kompatibel. Dies betrifft die folgenden APIs:
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 
-- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
-- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 
 ## <a name="mitigation"></a>Minderung
 
@@ -43,4 +41,5 @@ Wenn dieses Verhalten unerwünscht ist, können Sie sich gegen diese Funktion en
 ```
  
 ## <a name="see-also"></a>Siehe auch
+
 - [Änderungen der Neuzuweisungen in .NET Framework 4.7](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)

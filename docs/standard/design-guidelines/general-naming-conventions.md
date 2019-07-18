@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: KrzysztofCwalina
 ms.openlocfilehash: ae1b7ce83f6698cef470aabf07a12d89042ab8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026392"
 ---
 # <a name="general-naming-conventions"></a>Allgemeine Benennungskonventionen
 Dieser Abschnitt beschreibt allgemeine Benennungskonventionen, die im Zusammenhang mit der Auswahl der Wörter, die Richtlinien zum Verwenden von Abkürzungen und Akronyme und Empfehlungen zum Vermeiden Sie sprachspezifische Namen.  

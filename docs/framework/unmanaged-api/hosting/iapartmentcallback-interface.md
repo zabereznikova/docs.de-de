@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985508"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback-Schnittstelle
 Stellt Methoden für Rückrufe innerhalb einer Apartment. Ein *Apartment* ist ein logischer Container innerhalb eines Prozesses für Objekte, die die gleichen Thread zugriffsanforderungen gemeinsam nutzen.  
@@ -43,4 +43,4 @@ Stellt Methoden für Rückrufe innerhalb einer Apartment. Ein *Apartment* ist ei
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

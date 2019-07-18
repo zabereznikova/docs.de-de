@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 ms.openlocfilehash: d0600f7d9030324160343e800c37e0f5e68bff61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791806"
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>Unterstützung für verweisrückgabewerte (Visual Basic)
 

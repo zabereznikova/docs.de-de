@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc0554ed89d21607978d059b26c4ad69e59a2d4c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 906b5ef2795d8fad996185f66f145a8cd3618c41
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166633"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781809"
 ---
 # <a name="corlinkeroptions-enumeration"></a>CorLinkerOptions-Enumeration
 Gibt Flags für die Auswahl von Optionen für den Metadatenlinker an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorLinkerOptions {  
     MDAssembly          = 0x00000000,  
     MDNetModule         = 0x00000001,  

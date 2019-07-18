@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88f30089879f2d023c8fb04b52e75b2942da2a83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 90eb63b277f5c40053ecc3939890c87adc145251
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130155"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738119"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler-Methode
 Gibt das Ereignishandlerobjekt für verwaltete Ereignisse an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetManagedHandler (  
     [in] ICorDebugManagedCallback     *pCallback  
 );  

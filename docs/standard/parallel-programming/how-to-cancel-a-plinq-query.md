@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604300"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59305337"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Vorgehensweise: Abbrechen einer PLINQ-Abfrage
 In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-Abfrage veranschaulicht. Das erste Beispiel zeigt, wie eine Abfrage abgebrochen wird, die größtenteils aus Datendurchlauf besteht. Im zweiten Beispiel wird gezeigt, wie eine Abfrage abgebrochen wird, die eine rechenintensive Benutzerfunktion enthält.  
@@ -34,9 +34,9 @@ In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-A
   
  Der allgemeine Leitfaden zum Abbruch lautet wie folgt:  
   
-1.  Wenn Sie einen Benutzerdelegatenabbruch ausführen, sollten Sie PLINQ über die externe <xref:System.Threading.CancellationToken> informieren und eine <xref:System.OperationCanceledException>(ExternalCT) auslösen.  
+1. Wenn Sie einen Benutzerdelegatenabbruch ausführen, sollten Sie PLINQ über die externe <xref:System.Threading.CancellationToken> informieren und eine <xref:System.OperationCanceledException>(ExternalCT) auslösen.  
   
-2.  Wenn ein Abbruch auftritt und keine anderen Ausnahmen ausgelöst werden, dann sollten Sie eine <xref:System.OperationCanceledException> anstelle einer <xref:System.AggregateException> behandeln.  
+2. Wenn ein Abbruch auftritt und keine anderen Ausnahmen ausgelöst werden, dann sollten Sie eine <xref:System.OperationCanceledException> anstelle einer <xref:System.AggregateException> behandeln.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie einen Abbruch behandeln müssen, wenn der Benutzercode eine rechenintensive Funktion enthält.  

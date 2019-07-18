@@ -10,11 +10,11 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
 ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931429"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Vorgehensweise: Angeben der Bindungsquelle
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Ihre Daten abrufen. In diesem Thema werden die verschiedenen Methoden zur Angabe der Bindungsquelle beschrieben.  
@@ -48,6 +48,6 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
 - [Vererbung von Eigenschaftswerten](../advanced/property-value-inheritance.md)
-- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
 - [Übersicht über Bindungsdeklarationen](binding-declarations-overview.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

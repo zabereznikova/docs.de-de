@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856465"
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportieren und Importieren von Metadaten
 In Windows Communication Foundation (WCF) ist Exportieren von Metadaten der Prozess der Beschreibung von Dienstendpunkten und Ihrer Projektion in eine parallele, standardisierte Darstellung, die Clients verwenden können, um zu verstehen, wie Sie den Dienst verwenden. Beim Import von Dienstmetadaten werden <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanzen oder Teile davon aus Dienstmetadaten generiert.  
@@ -51,13 +51,13 @@ In Windows Communication Foundation (WCF) ist Exportieren von Metadaten der Proz
  [Vorgehensweise: Importieren von Metadaten in Dienstendpunkte](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Beschreibt, wie heruntergeladene Metadaten in Beschreibungsobjekte importiert werden.  
   
- [Vorgehensweise: Exportieren von Metadaten aus Dienstendpunkten](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Vorgehensweise: Exportieren Sie Metadaten aus Dienstendpunkten](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Beschreibt, wie Beschreibungsobjekte in Metadaten importiert werden.  
   
  [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Beschreibt die Zuordnung zwischen Beschreibungsobjekten und WSDL.  
   
- [Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Vorgehensweise: Verwenden von Svcutil.exe zum Exportieren von Metadaten aus kompiliertem Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Beschreibt die Verwendung von Svcutil.exe zum Export von Metadaten für Dienste, Verträge und Datentypen in kompilierten Assemblys.  
   
  [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

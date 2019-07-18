@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b819f1f02870a8a85a531d7d341cbaf488a1ccd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093748"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760345"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex-Methode
 Ruft den verwalteten slotindex einer lokalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSlotIndex(  
     [out] ULONG32 *pSlotIndex  
 );  

@@ -2,12 +2,12 @@
 title: WCF-Dienstpublishing
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 44dd7f58129ddc356f362f9ef9527d85644fe821
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441436"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635502"
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
 
@@ -17,31 +17,31 @@ Windows Communication Foundation (WCF)-Dienst veröffentlichen hilft Ihnen beim 
 
 Veröffentlichen von WCF-Dienst unterstützt die WCF-Dienste erstellt, aus dem Satz von WCF-Dienst-Bibliotheksvorlagen und der entsprechenden Elementvorlagen, die zählen unter anderem folgende:
 
--   WCF-dienstbibliotheksvorlage mit Elementvorlage.
+- WCF-dienstbibliotheksvorlage mit Elementvorlage.
 
--   Syndication-Dienstbibliothek
+- Syndication-Dienstbibliothek
 
 Sie können diese Dienstvorlagen auswählen **Datei** > **neues Projekt** > [**Visual Basic** oder **Visual C#** ] > **WCF**. Für die anderen WCF-Vorlagen an diesem Speicherort (einschließlich WCF Workflow Service Application "und" WCF-Dienstanwendung), können Sie veröffentlichen, mit [One-Click-Veröffentlichung für Webanwendungen](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110)).
 
 Der Dienst kann an den folgenden Zielorten veröffentlicht werden:
 
--   Lokale IIS
+- Lokale IIS
 
--   Dateisystem
+- Dateisystem
 
--   FTP-Site
+- FTP-Site
 
 ## <a name="using-wcf-service-publishing"></a>Verwenden des WCF-Dienstpublishings
 
 Führen Sie zum Bereitstellen einer Dienstimplementierung die folgenden Schritte aus:
 
-1.  Öffnen Sie Visual Studio mit erweiterten Berechtigungen (mit der rechten Maustaste in der ausführbare Datei, und wählen Sie **als Administrator ausführen** um ihn zu öffnen).  Wenn Sie mit IIS 7.0 oder höher,, dass sicher haben Sie die "IIS-Metabasis und IIS 6-Konfigurationskompatibilität"-Komponente, die mithilfe von "Turn Windows Features ein- oder ausschalten" in der Systemsteuerung installiert.
+1. Öffnen Sie Visual Studio mit erweiterten Berechtigungen (mit der rechten Maustaste in der ausführbare Datei, und wählen Sie **als Administrator ausführen** um ihn zu öffnen).  Wenn Sie mit IIS 7.0 oder höher,, dass sicher haben Sie die "IIS-Metabasis und IIS 6-Konfigurationskompatibilität"-Komponente, die mithilfe von "Turn Windows Features ein- oder ausschalten" in der Systemsteuerung installiert.
 
-2.  Öffnen Sie ein Dienstprojekt, wählen Sie **erstellen** > **veröffentlichen \<Projektname >** im Hauptmenü oder mit der rechten Maustaste in des Projekts im **Projektmappen-Explorer**, und klicken Sie auf **veröffentlichen**.
+2. Öffnen Sie ein Dienstprojekt, wählen Sie **erstellen** > **veröffentlichen \<Projektname >** im Hauptmenü oder mit der rechten Maustaste in des Projekts im **Projektmappen-Explorer**, und klicken Sie auf **veröffentlichen**.
 
-3.  Die **veröffentlichen** Fenster wird angezeigt. Klicken Sie auf die **...** . um den Zielort anzugeben, an dem der Dienst bereitgestellt werden soll. Sie können auswählen, um die Anwendung auf lokale IIS, Dateisystem oder FTP-Site bereitzustellen. Wenn die Anwendung für IIS lokal bereitstellen, können Sie wählen Sie Ihre Website und Ihre Webanwendung darunter erstellen, indem Sie auf die **neue Webanwendung erstellen** Symbol in der oberen rechten Ecke.
+3. Die **veröffentlichen** Fenster wird angezeigt. Klicken Sie auf die **...** . um den Zielort anzugeben, an dem der Dienst bereitgestellt werden soll. Sie können auswählen, um die Anwendung auf lokale IIS, Dateisystem oder FTP-Site bereitzustellen. Wenn die Anwendung für IIS lokal bereitstellen, können Sie wählen Sie Ihre Website und Ihre Webanwendung darunter erstellen, indem Sie auf die **neue Webanwendung erstellen** Symbol in der oberen rechten Ecke.
 
-4.  Nachdem Sie auf **veröffentlichen** in im Hauptfenster von Visual Studio die Anwendung an den angegebenen Zielort bereitgestellt und die Datei "Web.config", SVC-Datei und Assembly-Dateien in das Zielverzeichnis kopiert. sein. Der Name der SVC werden "ProjectName.ServiceName.svc". Nachdem der Dienst wurde erfolgreich veröffentlicht wurde, finden Sie einen Hotlink in das Ausgabefenster von Visual Studio-Fenster, die so aussieht wie "Herstellen einer Verbindung mit `http://localhost/WebApplicationFolderName...`". Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.
+4. Nachdem Sie auf **veröffentlichen** in im Hauptfenster von Visual Studio die Anwendung an den angegebenen Zielort bereitgestellt und die Datei "Web.config", SVC-Datei und Assembly-Dateien in das Zielverzeichnis kopiert. sein. Der Name der SVC werden "ProjectName.ServiceName.svc". Nachdem der Dienst wurde erfolgreich veröffentlicht wurde, finden Sie einen Hotlink in das Ausgabefenster von Visual Studio-Fenster, die so aussieht wie "Herstellen einer Verbindung mit `http://localhost/WebApplicationFolderName...`". Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.
 
      Wenn die Website nicht geöffnet werden kann, liegt dies möglicherweise daran, dass der Verzeichnisbrowser in IIS nicht aktiviert ist. Befolgen Sie die Tipps im Abschnitt "Mögliche Vorgehensweise", um ihn zu aktivieren. Sie können auch direkt eingeben `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` an die Dienstseite anzuzeigen.
 
@@ -63,9 +63,9 @@ Wenn Sie die Anwendung lokal für IIS bereitgestellt haben, treten möglicherwei
 
  Die generierte Datei "Web.config" enthält, die nützlich für das Webhosting sowie den Inhalt der Datei "App.config" für den WCF-Dienstbibliothek mit den folgenden Änderungen sind:
 
--   Die Basisadresse wird ausgeschlossen.
+- Die Basisadresse wird ausgeschlossen.
 
--   Einstellungen im `<diagnostics>`-Element werden übersprungen, um die Ablaufverfolgungseinstellungen der Zielplattform beizubehalten.
+- Einstellungen im `<diagnostics>`-Element werden übersprungen, um die Ablaufverfolgungseinstellungen der Zielplattform beizubehalten.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>Veröffentlichen von WCF-Diensten mit Nicht-HTTP-Bindungen in IIS
  Wenn Sie IIS 7.0 oder höher können Sie WCF-Dienste mit nicht-HTTP-Bindungen in IIS veröffentlichen. Hierfür müssen einige vorbereitende Konfigurationsschritte ausgeführt werden. Weitere Informationen finden Sie unter den Themen unter [Hosten in Windows Process Activation Service](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).

@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96cdfb79c1573648173305d6ee789aa8db030ff8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 680bd351a64632e67432ee03352ee7caa8f4b2d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211009"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780387"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::DynamicMethodUnloaded-Methode
 [Wird nur in .NET Framework 4.7.2 und höheren Versionen unterstützt]  
@@ -24,7 +24,7 @@ Benachrichtigt den Profiler an, wenn eine dynamische Methode Garbage Collector g
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DynamicMethodUnloaded(  
      [in]  FunctionID  functionId
 );  

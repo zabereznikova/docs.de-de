@@ -4,12 +4,12 @@ description: Azure Durable Functions pr
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 8be499a24e2c5a94132ce07241e17f675e8a1274
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 18e13c5355490ef4a019ceda459114bdb6bfd539
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843757"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638813"
 ---
 # <a name="orchestration-patterns"></a>Orchestrierung-Muster
 

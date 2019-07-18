@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
 ms.openlocfilehash: 39e6963c97340daab3f0ab7ad6860695f1f6c135
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747037"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource-Anweisung
 Gibt eine Zuordnung zwischen bestimmten Codezeilen an Quelle und dem Text für die Quelle extern an.  

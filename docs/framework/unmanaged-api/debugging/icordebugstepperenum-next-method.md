@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 58f148eb4c3206ba12eed41df670846d7beab77a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494596"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771640"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next-Methode
 Ruft die angegebene Anzahl von ICorDebugStepper-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next(  
     [in] ULONG  celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  

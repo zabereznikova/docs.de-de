@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 033d1cb0116b78ca9e3677c920ee5745117573d2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818534"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663520"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Vorgehensweise: Verschieben von Daten in und aus einer Variablen (Visual Basic)
 Sie können einen Wert in einer Variablen speichern, indem Sie den Namen den Variablen auf der linken Seite einer zuweisungsanweisung einfügen.  
@@ -19,7 +19,7 @@ Sie können einen Wert in einer Variablen speichern, indem Sie den Namen den Var
   
 #### <a name="to-store-a-value-in-a-variable"></a>Einen Wert in einer Variablen gespeichert.  
   
--   Verwenden Sie den Namen den Variablen auf der linken Seite einer zuweisungsanweisung.  
+- Verwenden Sie den Namen den Variablen auf der linken Seite einer zuweisungsanweisung.  
   
      Im folgenden Beispiel wird den Wert der Variablen `alpha`.  
   
@@ -34,11 +34,11 @@ Sie können einen Wert in einer Variablen speichern, indem Sie den Namen den Var
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>Zum Abrufen eines Werts aus einer Variablen  
   
--   Verwenden Sie den Namen den Variablen in einem Ausdruck. Sie können eine Variable an einer beliebigen Stelle können Sie eine Konstante oder ein Literal ist, außer in einem Ausdruck, der den Wert einer Konstante definiert.  
+- Verwenden Sie den Namen den Variablen in einem Ausdruck. Sie können eine Variable an einer beliebigen Stelle können Sie eine Konstante oder ein Literal ist, außer in einem Ausdruck, der den Wert einer Konstante definiert.  
   
      - oder -   
   
--   Verwenden Sie den Namen den Variablen nach dem Gleichheitszeichen (`=`) in einer zuweisungsanweisung anmelden.  
+- Verwenden Sie den Namen den Variablen nach dem Gleichheitszeichen (`=`) in einer zuweisungsanweisung anmelden.  
   
      Das folgende Beispiel liest den Wert der Variablen `startValue` und verwendet dann den Wert der Variablen `counter` in einem Ausdruck.  
   

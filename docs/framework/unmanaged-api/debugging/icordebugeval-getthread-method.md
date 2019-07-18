@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64cc5b6e7c6fe44080b35dc07f029ad311b88ca7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 24bc096a0ba01c58aa963d69fa46a1d1bbe8be75
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489383"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752903"
 ---
 # <a name="icordebugevalgetthread-method"></a>ICorDebugEval::GetThread-Methode
 Ruft den Thread, in dem diese Auswertung ausgeführt wird, oder ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetThread (  
     [out] ICorDebugThread   **ppThread  
 );  

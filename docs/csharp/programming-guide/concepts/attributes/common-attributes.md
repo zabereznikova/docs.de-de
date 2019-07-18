@@ -2,23 +2,23 @@
 title: Allgemeine Attribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: d5d56fff82fb552f42f72c18b8c3b907c5bc113c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374803"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603337"
 ---
 # <a name="common-attributes-c"></a>Allgemeine Attribute (C#)
 Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwendet werden.  
   
--   [Globale Attribute](#Global)  
+- [Globale Attribute](#Global)  
   
--   [Obsolete-Attribut](#Obsolete)  
+- [Obsolete-Attribut](#Obsolete)  
   
--   [Conditional-Attribut](#Conditional)  
+- [Conditional-Attribut](#Conditional)  
   
--   [Aufufrerinfoattribute](#CallerInfo)  
+- [Aufufrerinfoattribute](#CallerInfo)  
   
 ## <a name="Global"></a> Globale Attribute  
  Die meisten Attribute werden auf spezifische Sprachelemente wie Klassen oder Methoden angewendet. Einige Attribute sind jedoch global – sie gelten für eine gesamte Assembly oder ein Modul. Zum Beispiel kann das <xref:System.Reflection.AssemblyVersionAttribute>-Attribut zum Einbetten von Versionsinformationen in eine Assembly verwendet werden. Diese sieht wie folgt aus:  
@@ -31,11 +31,11 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwe
   
  Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen. Sie werden in die folgenden Kategorien eingeteilt:  
   
--   Attribute für Assemblyidentitäten  
+- Attribute für Assemblyidentitäten  
   
--   Informationsattribute  
+- Informationsattribute  
   
--   Attribute für Assemblymanifeste.  
+- Attribute für Assemblymanifeste.  
   
 ### <a name="assembly-identity-attributes"></a>Attribute für Assemblyidentitäten  
  Drei Attribute bestimmen mit einem starken Namen (falls zutreffend) die Identität einer Assembly: „name“, „version“ und „culture“. Diese Attribute bilden den vollständigen Namen der Assembly und sind erforderlich, wenn im Code auf sie verwiesen wird. Mit Attributen können die Version und Kultur einer Assembly festgelegt werden. Allerdings wird der name-Wert vom Compiler, der Visual Studio-IDE im [Dialogfeld „Assemblyinformationen“](/visualstudio/ide/reference/assembly-information-dialog-box) oder dem Assemblylinker (Al.exe) festgelegt, wenn die Assembly erstellt wird. Die geschieht auf Grundlage der Datei, die das Assemblymanifest enthält. Das Attribut <xref:System.Reflection.AssemblyFlagsAttribute> gibt an, ob mehrere Kopien der Assembly parallel bestehen können.  

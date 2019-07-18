@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038583"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Nachrichtensicherheit mit einem anonymen Client
 
@@ -25,7 +25,7 @@ Eine beispielanwendung finden Sie unter [Nachrichtensicherheit – anonym](../..
 |Sicherheitsmodus|Meldung|
 |Interoperabilität|Nur WCF|
 |Authentifizierung (Server)|Die erste Aushandlung erfordert die Serverauthentifizierung, jedoch keine Clientauthentifizierung|
-|Authentifizierung (Client)|Keine|
+|Authentifizierung (Client)|Keiner|
 |Integrität|Ja, mit freigegebenem Sicherheitskontext|
 |Vertraulichkeit|Ja, mit freigegebenem Sicherheitskontext|
 |Transport|HTTP|
@@ -94,14 +94,14 @@ Der folgende Code und die folgende Konfiguration werden unabhängig voneinander 
 
 - Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.
 
-- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Beispiel:
+- Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
 
 ### <a name="code"></a>Code
 
-Der folgende Code erstellt eine Instanz des Clients. Die Bindung verwendet den Nachrichtensicherheitsmodus, und der Clientanmeldeinformationstyp wird auf "none" festgelegt.
+Der folgende Code erstellt eine Instanz des Clients. Die Bindung verwendet den Nachrichtensicherheitsmodus, und der Clientanmeldeinformationstyp wird auf „none“ festgelegt.
 
 [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
 [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]

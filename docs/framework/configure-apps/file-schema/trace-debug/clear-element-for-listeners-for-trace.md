@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
 ms.openlocfilehash: 97b18f9d6baa618b0f535955b232e2119c758b11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701319"
 ---
 # <a name="clear-element-for-listeners-for-trace"></a>\<clear >-Element für \<Listener > für \<Ablaufverfolgung >
 Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.  
@@ -83,6 +83,6 @@ Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.TraceSource>
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)
-- [Ablaufverfolgungslistener](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

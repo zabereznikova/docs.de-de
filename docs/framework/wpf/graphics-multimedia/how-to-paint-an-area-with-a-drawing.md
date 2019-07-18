@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
 ms.openlocfilehash: 6b204ae631912181333e2559ebadcdc37e7693b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010073"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>Vorgehensweise: Zeichnen eines Bereichs mit einer Zeichnung
 Dieses Beispiel zeigt, wie Sie einen Bereich mit einer Zeichnung zeichnen. Um einen Bereich mit einer Zeichnung zu zeichnen, verwenden Sie eine <xref:System.Windows.Media.DrawingBrush> und einem oder mehreren <xref:System.Windows.Media.Drawing> Objekte.   Im folgenden Beispiel wird eine <xref:System.Windows.Media.DrawingBrush> um ein Objekt mit einer Zeichnung zweier Ellipsen zu zeichnen.  

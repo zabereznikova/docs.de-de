@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501005"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754918"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus-Methode
 Markiert die Funktion, die von dieser ICorDebugFunction2 dargestellt für nur mein Code schrittweise ausführen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetJMCStatus (  
     [in] BOOL   bIsJustMyCode  
 );  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35ff03eb830a02b05dd128da4c072a8c2c918921
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e657b8e2a0a9dbe8db703ce97d41a3767191a26f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501512"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833864"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify-Tool)
 Mit dem PEVerify-Tool können Entwickler, die MSIL (Microsoft Intermediate Language) generieren (Compilerentwickler, Skript-Engine-Entwickler usw.), herausfinden, ob ihr MSIL-Code und die zugeordneten Metadaten den Anforderungen an die Typsicherheit entsprechen. Einige Compiler generieren nur dann überprüfbar typsicheren Code, wenn bestimmte Sprachkonstrukte nicht verwendet werden. Wenn Sie als Entwickler einen solchen Compiler verwenden, sollten Sie unter Umständen prüfen, ob die Typsicherheit des Codes eingeschränkt wurde. Hierzu können Sie das PEVerify-Tool für die Dateien ausführen und damit die MSIL und Metadaten überprüfen.  
@@ -34,11 +34,11 @@ peverify filename [options]
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |*filename*|Die portierbare ausführbare Datei (Portable Executable, PE), deren MSIL und Metadaten überprüft werden sollen.|  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Bricht die Überprüfung nach *maxErrorCount*-Fehlern ab.<br /><br /> Dieser Parameter wird in .NET Framework, Version 2.0 oder höher, nicht unterstützt.|  
 |**/clock**|Erfasst und meldet die folgenden Überprüfungszeiten in Millisekunden:<br /><br /> **MD Val. cycle**<br /> Validierungszyklus der Metadaten<br /><br /> **MD Val. pure**<br /> Reine Metadatenvalidierung<br /><br /> **IL Ver. cycle**<br /> Überprüfungszyklus der Microsoft Intermediate Language (MSIL)<br /><br /> **IL Ver pure**<br /> Reine MSIL-Überprüfung<br /><br /> Die Zeiten **MD Val. cycle** und **IL Ver. cycle** umfassen die Zeit, die erforderlich ist, um die notwendigen Prozeduren zum Starten und Herunterfahren auszuführen. Die Zeiten **MD Val. pure** und **IL Ver pure** umfassen die Zeit, die erforderlich ist, um nur die Validierung oder Überprüfung auszuführen.|  
@@ -61,7 +61,7 @@ peverify filename [options]
   
  Wenn weder die **/md**-Option noch die **/il**-Option angegeben wurde, führt „peverify.exe“ beide Überprüfungen durch. „everify.exe“ führt zuerst **/md**-Überprüfungen aus. Wenn keine Fehler auftreten, werden **/il**-Überprüfungen durchgeführt. Wenn Sie **/md** und **/il** angeben, werden auch **/il**-Überprüfungen durchgeführt, wenn in den Metadaten Fehler vorhanden sind. Daher stimmt **peverify** *dateiname* mit **peverify** *dateiname* **/md** **/il** überein, wenn die Metadaten nicht fehlerhaft sind.  
   
- "Peverify.exe" führt umfangreiche MSIL-Überprüfungen anhand der Datenflussanalyse sowie einer Liste mit mehreren hundert Regeln für die Gültigkeit von Metadaten durch. Detaillierte Informationen zu den von "Peverify.exe" ausgeführten Überprüfungen finden Sie im [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] im Ordner "Tools Developers Guide" unter "Metadata Validation Specification" und "MSIL Instruction Set Specification".  
+ "Peverify.exe" führt umfangreiche MSIL-Überprüfungen anhand der Datenflussanalyse sowie einer Liste mit mehreren hundert Regeln für die Gültigkeit von Metadaten durch. Detaillierte Informationen zu den von „Peverify.exe“ ausgeführten Überprüfungen finden Sie im Windows Software Development Kit (SDK) im Ordner „Tools Developers Guide“ unter „Metadata Validation Specification“ und „MSIL Instruction Set Specification“.  
   
  Beachten Sie, dass .NET Framework, Version 2.0 oder höher, überprüfbare `byref`-Rückgaben unterstützt, die unter Verwendung der folgenden MSIL-Anweisungen angegeben werden: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` und `unbox`.  
   
@@ -121,6 +121,7 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Extras](../../../docs/framework/tools/index.md)
 - [Schreiben von überprüfbar typsicherem Code](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
 - [Typsicherheit und Sicherheit](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)

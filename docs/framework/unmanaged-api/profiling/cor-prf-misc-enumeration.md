@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b40ac5f49288f7b30018e0c8c727e3ce6b73ae8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1dd3cf7e4badf8caa711f2a1b972d9fa14215204
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199484"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752130"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC-Enumeration
 Enthält Konstantenwerte, die spezielle Bezeichner angeben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     PROFILER_PARENT_UNKNOWN = 0xFFFFFFFD,  
     PROFILER_GLOBAL_CLASS   = 0xFFFFFFFE,  

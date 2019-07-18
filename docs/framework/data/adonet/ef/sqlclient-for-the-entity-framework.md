@@ -2,25 +2,25 @@
 title: SqlClient für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: d81499961e7e47bba3b2594ddddd192c87a4a936
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e8933a975c075407066bff97672f1b82f125bb47
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195461"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662111"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient für Entity Framework
 Dieser Abschnitt beschreibt den .NET Framework-Datenanbieter für SQL Server (SqlClient), der dem Entity Framework die Arbeit mit Microsoft SQL Server ermöglicht.  
   
 ## <a name="provider-schema-attribute"></a>Anbieterschemaattribut  
- `Provider` ist ein Attribut des der `Schema` Element in der Datenspeicherschema-Definitionssprache (SSDL).  
+ `Provider` ist ein Attribut des `Schema`-Elements der Datenspeicherschema-Definitionssprache (Store Schema Definition Language, SSDL).  
   
  Um SqlClient zu verwenden, weisen Sie dem `Provider`-Attribut des `Schema`-Elements die Zeichenfolge "System.Data.SqlClient" zu.  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>'ProviderManifestToken'-Schemaattribut  
- `ProviderManifestToken` ist ein erforderliches Attribut des der `Schema` -Element in SSDL. Dieses Token wird verwendet, um das Anbietermanifest für Offlineszenarien zu laden. Weitere Informationen zu `ProviderManifestToken` Attribut, finden Sie unter [Schema-Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
+ Das `ProviderManifestToken`-Element ist ein erforderliches Attribut des `Schema`-Elements. Dieses Token wird verwendet, um das Anbietermanifest für Offlineszenarien zu laden. Weitere Informationen zu `ProviderManifestToken` Attribut, finden Sie unter [Schema-Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
   
- SqlClient kann als Datenanbieter für verschiedene Versionen von SQL Server verwendet werden. Diese Versionen haben verschiedene Funktionen. Beispielsweise unterstützt [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] die mit `varchar(max)` eingeführten Typen `nvarchar(max)` und [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] nicht.  
+ SqlClient kann als Datenanbieter für verschiedene Versionen von SQL Server verwendet werden. Diese Versionen haben verschiedene Funktionen. SQL Server 2000 unterstützt beispielsweise keine `varchar(max)` und `nvarchar(max)` Typen, die mit SQL Server 2005 eingeführt wurden.  
   
  SqlClient erzeugt und akzeptiert die folgenden Anbietermanifesttoken für die verschiedenen Versionen von SQL Server.  
   
@@ -49,6 +49,6 @@ Dieser Abschnitt beschreibt den .NET Framework-Datenanbieter für SQL Server (Sq
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Entity SQL-Sprache](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Entity SQL Language (Entity SQL-Sprache)](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
 - [Sprachreferenz](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
 - [Bekannte Probleme in SqlClient-Anbieter für Entitätsframework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)

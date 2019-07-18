@@ -1,5 +1,5 @@
 ---
-title: <trace> Element
+title: <trace>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673796"
 ---
 # <a name="trace-element"></a>\<Ablaufverfolgung >-Element
 Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.  
@@ -91,4 +91,4 @@ Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterl
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

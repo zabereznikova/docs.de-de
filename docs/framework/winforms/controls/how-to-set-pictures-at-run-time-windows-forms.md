@@ -13,19 +13,19 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8275961a8f11332a04f89561fac779f4cdf9f8d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073597"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609400"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Vorgehensweise: Festlegen von Bildern zur Laufzeit (Windows Forms)
 Sie können das Bild angezeigt, die von einer Windows Forms programmgesteuert festlegen <xref:System.Windows.Forms.PictureBox> Steuerelement.  
   
 ### <a name="to-set-a-picture-programmatically"></a>So legen Sie ein Bild programmgesteuert fest  
   
--   Legen Sie die <xref:System.Windows.Forms.PictureBox.Image%2A> Eigenschaft mithilfe der <xref:System.Drawing.Image.FromFile%2A> -Methode der der <xref:System.Drawing.Image> Klasse.  
+- Legen Sie die <xref:System.Windows.Forms.PictureBox.Image%2A> Eigenschaft mithilfe der <xref:System.Drawing.Image.FromFile%2A> -Methode der der <xref:System.Drawing.Image> Klasse.  
   
      Im folgenden Beispiel wird der Pfad für den Speicherort des Bilds Ordner "Eigene Dokumente". Dies geschieht, da Sie davon ausgehen können, dass die meisten Computer, die das Windows-Betriebssystem ausgeführt wird dieses Verzeichnis enthält. Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.PictureBox> Steuerelement bereits hinzugefügt.  
   
@@ -67,7 +67,7 @@ Sie können das Bild angezeigt, die von einer Windows Forms programmgesteuert fe
   
 ### <a name="to-clear-a-graphic"></a>Um eine Grafik zu löschen.  
   
--   Zunächst freigegeben Sie von der Abbildung verwendeten Arbeitsspeicher, und deaktivieren Sie dann auf die Grafik. Die automatische speicherbereinigung wird später um den Arbeitsspeicher freizugeben, wenn die Verwaltung des Arbeitsspeichers zu einem Problem wird.  
+- Zunächst freigegeben Sie von der Abbildung verwendeten Arbeitsspeicher, und deaktivieren Sie dann auf die Grafik. Die automatische speicherbereinigung wird später um den Arbeitsspeicher freizugeben, wenn die Verwaltung des Arbeitsspeichers zu einem Problem wird.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  

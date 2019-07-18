@@ -10,25 +10,25 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 05d9ad4766584b59cca7c31f49b737d4696a9921
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148238"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053541"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Anzeigen von Hyperlinks mit dem RichTextBox-Steuerelement von Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> -Steuerelement können Weblinks farbig und unterstrichen angezeigt. Sie können Code schreiben, die öffnet ein Browserfenster mit der Website, die in der Text des Links angegeben werden, wenn auf der Link geklickt wird.  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>So verknüpfen Sie mit der eine Webseite mit dem RichTextBox-Steuerelement  
   
-1.  Legen Sie die <xref:System.Windows.Forms.RichTextBox.Text%2A> Eigenschaft, um eine Zeichenfolge, enthält eine gültige URL ein (z. B. "http://www.microsoft.com/").  
+1. Legen Sie die <xref:System.Windows.Forms.RichTextBox.Text%2A> Eigenschaft, um eine Zeichenfolge, enthält eine gültige URL ein (z. B. "http://www.microsoft.com/").  
   
-2.  Stellen Sie sicher, dass die <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> -Eigenschaftensatz auf `true` (Standard).  
+2. Stellen Sie sicher, dass die <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> -Eigenschaftensatz auf `true` (Standard).  
   
-3.  Erstellen Sie eine neue globale Instanz des der <xref:System.Diagnostics.Process> Objekt.  
+3. Erstellen Sie eine neue globale Instanz des der <xref:System.Diagnostics.Process> Objekt.  
   
-4.  Schreiben Sie einen Ereignishandler für die <xref:System.Windows.Forms.RichTextBox.LinkClicked> -Ereignis, das an den gewünschten Text durch den Browser sendet.  
+4. Schreiben Sie einen Ereignishandler für die <xref:System.Windows.Forms.RichTextBox.LinkClicked> -Ereignis, das an den gewünschten Text durch den Browser sendet.  
   
      Im folgenden Beispiel wird die <xref:System.Windows.Forms.RichTextBox.LinkClicked> Ereignis öffnet eine Instanz von Internet Explorer, um die URL in die <xref:System.Windows.Forms.RichTextBox.Text%2A> Eigenschaft der <xref:System.Windows.Forms.RichTextBox> Steuerelement. In diesem Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.RichTextBox> Steuerelement.  
   
@@ -74,13 +74,13 @@ Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> -Steuerelement kö
        }  
     ```  
   
-     ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Sie müssen den Prozess initialisieren `p`, dies können Sie dazu die folgende Anweisung im Konstruktor des Formulars:  
+     (Visual C++) Sie müssen den Prozess initialisieren `p`, dies können Sie dazu die folgende Anweisung im Konstruktor des Formulars:  
   
     ```cpp  
     p = gcnew System::Diagnostics::Process();  
     ```  
   
-     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C#, Visual C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.richTextBox1.LinkClicked += new   
@@ -122,4 +122,4 @@ Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> -Steuerelement kö
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

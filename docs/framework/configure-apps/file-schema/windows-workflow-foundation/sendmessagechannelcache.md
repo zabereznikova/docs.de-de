@@ -3,12 +3,12 @@ title: <sendMessageChannelCache>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 241e428e-5030-4b13-8a0a-69f05288d3d9
-ms.openlocfilehash: 60847f423c61b9e7f49a4a7594c965fb75354714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e4f77e95cbacc2d025b57dceed5b1bd0d2851e81
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140178"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422903"
 ---
 # <a name="sendmessagechannelcache"></a>\<sendMessageChannelCache>
 Ein Dienstverhalten, das es, die cachefreigabeebenen Ebenen, die Einstellungen des channelfactorycaches und die Einstellungen des channelcaches für Workflows, die für das Senden von Nachrichten an Dienstendpunkte senden ermöglicht-messagingaktivitäten.  
@@ -45,7 +45,7 @@ Ein Dienstverhalten, das es, die cachefreigabeebenen Ebenen, die Einstellungen d
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|allowUnsafeCaching|Ein boolescher Wert, der angibt, ob das Zwischenspeichern aktiviert ist. Wenn der Workflowdienst benutzerdefinierte Bindungen oder benutzerdefiniertes Verhalten aufweist, könnte das Zwischenspeichern unsicher sein und ist daher standardmäßig deaktiviert. Aber wenn Sie aktivieren möchten Zwischenspeichern legen Sie diese Eigenschaft auf **"true"**.|  
+|allowUnsafeCaching|Ein boolescher Wert, der angibt, ob das Zwischenspeichern aktiviert ist. Wenn der Workflowdienst benutzerdefinierte Bindungen oder benutzerdefiniertes Verhalten aufweist, könnte das Zwischenspeichern unsicher sein und ist daher standardmäßig deaktiviert. Aber wenn Sie aktivieren möchten Zwischenspeichern legen Sie diese Eigenschaft auf **"true"** .|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -68,7 +68,7 @@ Ein Dienstverhalten, das es, die cachefreigabeebenen Ebenen, die Einstellungen d
  Weitere Informationen zur Vorgehensweise beim Ändern des Freigabe von Ebenen und die cacheeinstellungen für die ChannelFactory und den channelcache Standardcache finden Sie unter [Ändern der Cachefreigabeebenen für Send-Aktivitäten](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
   
 ## <a name="example"></a>Beispiel  
- In einem gehosteten Workflowdienst können Sie die Einstellungen für den Factorycache und den Channelcache in der Anwendungskonfigurationsdatei angeben. Fügen Sie dafür ein Dienstverhalten hinzu, das die Cacheeinstellungen für die Factory und den Channelcache enthält, und fügen Sie dieses Dienstverhalten dem Dienst hinzu. Das folgende Beispiel zeigt den Inhalt einer Konfigurationsdatei, die enthält die **MyChannelCacheBehavior** -Dienstverhalten mit dem benutzerdefinierten factorycache und den channelcache factorycacheeinstellungen. Dieses Dienstverhalten wird hinzugefügt, um den Dienst über die **BehaviorConfiguarion** Attribut.  
+ In einem gehosteten Workflowdienst können Sie die Einstellungen für den Factorycache und den Channelcache in der Anwendungskonfigurationsdatei angeben. Fügen Sie dafür ein Dienstverhalten hinzu, das die Cacheeinstellungen für die Factory und den Channelcache enthält, und fügen Sie dieses Dienstverhalten dem Dienst hinzu. Das folgende Beispiel zeigt den Inhalt einer Konfigurationsdatei, die enthält die `MyChannelCacheBehavior` -Dienstverhalten mit dem benutzerdefinierten factorycache und den channelcache factorycacheeinstellungen. Dieses Dienstverhalten wird hinzugefügt, um den Dienst über die `behaviorConfiguration` Attribut.  
   
 ```xml  
 <configuration>    
@@ -97,4 +97,4 @@ Ein Dienstverhalten, das es, die cachefreigabeebenen Ebenen, die Einstellungen d
 - <xref:System.ServiceModel.Activities.SendMessageChannelCache>
 - <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>
 - <xref:System.ServiceModel.Activities.Send>
-- [Ändern der Cachefreigabeebenen für Send-Aktivitäten](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+- [Ändern der Cachefreigabeebenen für Sendeaktivitäten](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

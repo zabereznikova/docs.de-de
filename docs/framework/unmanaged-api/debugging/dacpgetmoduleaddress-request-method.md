@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 298620092c37b2c02332e9135f73584272e326bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 07ad83da2bc608e3c5925664a68eec4a548860e1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111682"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739232"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request-Methode
 
@@ -30,7 +30,7 @@ Führt eine Anforderung zum Auffüllen der Struktur aus der angegebenen Runtime-
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT Request(
     [in] IXCLRDataModule* pDataModule
 );

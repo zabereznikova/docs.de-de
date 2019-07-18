@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8c778018a2d78fbec67a3bf41b5cbaa8e4bfb606
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710458"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504861"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] stellt die `Bitmap`-Klasse zum Arbeiten mit Rasterbilder und die `Metafile`-Klasse zum Arbeiten mit Vektorgrafiken bereit. Sowohl die `Bitmap`-Klasse als auch die `Metafile`-Klasse erben von der `Image`-Klasse.  
+GDI + bietet die `Bitmap` -Klasse beim Arbeiten mit Rasterbilder und die `Metafile` -Klasse für das Arbeiten mit Vektorgrafiken. Sowohl die `Bitmap`-Klasse als auch die `Metafile`-Klasse erben von der `Image`-Klasse.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Vorgehensweise: Zeichnen einer vorhandenen Bitmap auf dem Bildschirm](how-to-draw-an-existing-bitmap-to-the-screen.md)  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
-ms.openlocfilehash: f20ed883005641082eb89e2effa5221594910ffe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 50e1cd0e41da467a9e816c8e5d64d09a36923d65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838780"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665745"
 ---
 # <a name="array-bounds-cannot-appear-in-type-specifiers"></a>Arraygrenzen können nicht in Typbezeichnern stehen.
 Array-Größe können nicht als Teil eines Datenspezifizierers Typ deklariert werden.  
@@ -21,13 +21,13 @@ Array-Größe können nicht als Teil eines Datenspezifizierers Typ deklariert we
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Geben Sie die Größe des Arrays unmittelbar nach dem Variablennamen, anstatt die Größe des Arrays nach dem Typ, wie im folgenden Beispiel gezeigt.  
+- Geben Sie die Größe des Arrays unmittelbar nach dem Variablennamen, anstatt die Größe des Arrays nach dem Typ, wie im folgenden Beispiel gezeigt.  
   
     ```  
     Dim Array(8) As Integer   
     ```  
   
--   Definieren Sie ein Array, und initialisieren Sie es mit der gewünschten Anzahl von Elementen, wie im folgenden Beispiel gezeigt.  
+- Definieren Sie ein Array, und initialisieren Sie es mit der gewünschten Anzahl von Elementen, wie im folgenden Beispiel gezeigt.  
   
     ```  
     Dim Array2() As Integer = New Integer(8) {}  

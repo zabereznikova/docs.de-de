@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, requirements
 ms.assetid: c43918db-9a36-426c-9e8a-e1bd6688a5b7
 ms.openlocfilehash: 5bd681b5f0be45526a3448ecf4afcf6ccbd41c98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052598"
 ---
 # <a name="wcf-system-requirements"></a>WCF-Systemanforderungen
 Windows Communication Foundation (WCF) ist eine Kommunikationsinfrastruktur, die zum Erstellen verteilter Anwendungen verwendet wird. Die folgende Liste enthält die Anforderungen, mit die WCF ausführen zu können.  
@@ -24,6 +24,6 @@ Windows Communication Foundation (WCF) ist eine Kommunikationsinfrastruktur, die
 ## <a name="see-also"></a>Siehe auch
 
 - [Konzeptionelle Übersicht](../../../docs/framework/wcf/conceptual-overview.md)
-- [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Einfache WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Details zur WCF-Funktion](../../../docs/framework/wcf/feature-details/index.md)
 - [Richtlinien und empfohlene Vorgehensweisen](../../../docs/framework/wcf/guidelines-and-best-practices.md)

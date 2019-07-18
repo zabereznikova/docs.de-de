@@ -10,29 +10,29 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8e06032d145eb8c1aaf9bfcd1f205f8c6583634a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140503"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64581380"
 ---
 # <a name="graphics-paths-in-gdi"></a>Grafikpfade in GDI+
 Pfade werden durch die Kombination von Linien, Rechtecke und einfache Kurven gebildet. Erinnern Sie sich an den [Übersicht über Vektorgrafiken](vector-graphics-overview.md) , dass die folgenden grundlegenden Bausteine der am häufigsten für das Zeichnen von Bildern nützlich erwiesen haben:  
   
--   Linien  
+- Linien  
   
--   Rechtecke  
+- Rechtecke  
   
--   Ellipsen  
+- Ellipsen  
   
--   Bögen  
+- Bögen  
   
--   Polygone  
+- Polygone  
   
--   Kardinale splines  
+- Kardinale splines  
   
--   Béziersplinekurven  
+- Béziersplinekurven  
   
  In GDI + die <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt können Sie eine Sequenz von diese Bausteine in einer einzigen Einheit zu erfassen. Die gesamte Sequenz aus Linien, Rechtecke, Polygone und Kurven kann dann mit einem einzigen Aufruf gezeichnet werden die <xref:System.Drawing.Graphics.DrawPath%2A> Methode der <xref:System.Drawing.Graphics> Klasse. Die folgende Abbildung zeigt einen Pfad durch Kombination einer Zeile, einen Bogen, eine Béziersplinekurve und eine cardinal-Splinekurve erstellt.  
   

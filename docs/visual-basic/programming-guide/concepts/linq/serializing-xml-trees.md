@@ -3,11 +3,11 @@ title: Serialisieren von XML-Strukturen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
 ms.openlocfilehash: ddcd82a3fe8beea87913227ed0ff86fa3974bd11
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786450"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>Serialisieren von XML-Strukturen (Visual Basic)
 Beim Serialisieren einer XML-Struktur wird aus der XML-Struktur XML generiert. Eine Serialisierung kann in eine Datei, in eine konkrete Implementierung der <xref:System.IO.TextWriter>-Klasse oder in eine konkrete Implementierung eines <xref:System.Xml.XmlWriter> erfolgen.  

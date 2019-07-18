@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48650a370f7d15724e20850e9d3b47dc8215f960
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0e5120b5fddf621d6f4c684c4c432fda4f5c0117
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498353"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745257"
 ---
 # <a name="icordebugchaingetreason-method"></a>ICorDebugChain::GetReason-Methode
 Ruft den Grund für die Entstehung dieser Aufrufkette ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetReason (  
     [out] CorDebugChainReason *pReason  
 );  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: 81d79ec0add7f8b73cced5c64a470fa9d699063c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4a061b3128f8d0952f800be7173203b62f89c672
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972403"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639112"
 ---
 # <a name="binary-serialization"></a>Binäre Serialisierung
 

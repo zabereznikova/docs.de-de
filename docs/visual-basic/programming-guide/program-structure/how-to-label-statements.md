@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cbb80d94dc8280aa67859c89daad1520ce4e9669
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828640"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648745"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Vorgehensweise: Label-Anweisungen (Visual Basic)
 Anweisungsblöcke bestehen von Codezeilen, die durch Doppelpunkte getrennt sind. Codezeilen, die eine identifizierende Zeichenfolge oder ganzen Zahl vorangestellt werden als *mit der Bezeichnung*. Anweisungsbezeichnungen werden verwendet, um eine einzige Zeile Code für die Verwendung mit Anweisungen wie z. B. Identifikation markieren `On Error Goto`.  
@@ -28,7 +28,7 @@ Anweisungsblöcke bestehen von Codezeilen, die durch Doppelpunkte getrennt sind.
   
 ### <a name="to-label-a-line-of-code"></a>Um eine einzige Zeile Code zu beschriften.  
   
--   Fügen Sie einen Bezeichner, gefolgt von einem Doppelpunkt am Anfang der Zeile des Quellcodes.  
+- Fügen Sie einen Bezeichner, gefolgt von einem Doppelpunkt am Anfang der Zeile des Quellcodes.  
   
      Z. B. die folgenden Codezeilen sind mit der Bezeichnung `Jump` und `120`bzw.:  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
 ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856569"
 ---
 # <a name="federation-and-trust"></a>Verbund und Vertrauenswürdigkeit
 In diesem Thema werden verschiedene Aspekte im Zusammenhang mit verbundanwendungen, Vertrauensgrenzen und Konfiguration und Verwendung von ausgestellten Token in der Windows Communication Foundation (WCF) behandelt.  
@@ -41,5 +41,5 @@ In diesem Thema werden verschiedene Aspekte im Zusammenhang mit verbundanwendung
 
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
 - [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Vorgehensweise: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

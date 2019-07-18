@@ -1,13 +1,13 @@
 ---
-title: <message> von <wsFederationHttpBinding>
+title: <message> Element <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
 ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769875"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<Message >-Element der \<WsFederationHttpBinding >
 Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene für die [ \<WsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  

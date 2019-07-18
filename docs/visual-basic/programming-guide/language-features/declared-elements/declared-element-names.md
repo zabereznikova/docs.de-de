@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7642aea72ddaa3789dba3b2328f271afcb92a16a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814067"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610549"
 ---
 # <a name="declared-element-names-visual-basic"></a>Namen deklarierter Elemente (Visual Basic)
 Jedem deklariertes Element hat einen Namen, die so genannte ein *Bezeichner*, wird der Code verwendet wird, um darauf zu verweisen.  
@@ -36,13 +36,13 @@ Jedem deklariertes Element hat einen Namen, die so genannte ein *Bezeichner*, wi
 ## <a name="rules"></a>Regeln  
  Ein Elementname in Visual Basic muss die folgenden Regeln beachten:  
   
--   Es muss mit einem Buchstaben oder einem Unterstrich beginnen (`_`).  
+- Es muss mit einem Buchstaben oder einem Unterstrich beginnen (`_`).  
   
--   Sie müssen nur alphabetische Zeichen, Dezimalziffern und Unterstriche enthalten.  
+- Sie müssen nur alphabetische Zeichen, Dezimalziffern und Unterstriche enthalten.  
   
--   Es muss mindestens ein alphabetisches Zeichen oder eine Dezimalstelle enthalten, wenn er mit einem Unterstrich beginnt.  
+- Es muss mindestens ein alphabetisches Zeichen oder eine Dezimalstelle enthalten, wenn er mit einem Unterstrich beginnt.  
   
--   Es darf nicht mehr als 1023 Zeichen lang sein.  
+- Es darf nicht mehr als 1023 Zeichen lang sein.  
   
  Die maximale Länge des 1023 Zeichen gilt auch für die gesamte Zeichenfolge des vollqualifizierten Namens, z. B. `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.  
   
@@ -75,9 +75,9 @@ Jedem deklariertes Element hat einen Namen, die so genannte ein *Bezeichner*, wi
   
  Im Allgemeinen sollten Sie mit Escapezeichen versehene Namen verwenden nur dann, wenn:  
   
--   Ihr Code wurde von einer früheren Version von Visual Basic migriert, die nicht das Schlüsselwort verwendet wird, als Namen reserviert, oder oder  
+- Ihr Code wurde von einer früheren Version von Visual Basic migriert, die nicht das Schlüsselwort verwendet wird, als Namen reserviert, oder oder  
   
--   Sie arbeiten mit Code in einer anderen Sprache, in dem das angegebene Schlüsselwort nicht reserviert ist.  
+- Sie arbeiten mit Code in einer anderen Sprache, in dem das angegebene Schlüsselwort nicht reserviert ist.  
   
  Andernfalls sollten Sie das Element umbenennen, wenn der Name mit einem Schlüsselwort in Konflikt steht. Die integrierte Entwicklungsumgebung (IDE) bietet eine einfache Möglichkeit hierzu. Weitere Informationen finden Sie unter [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
   

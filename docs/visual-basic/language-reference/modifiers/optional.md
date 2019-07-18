@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 40605d4843bfccf9d2819b3ec6f2ef65f9e9cf9a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820788"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661324"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 Gibt an, dass ein Prozedurargument beim Aufrufen der Prozedur ausgelassen werden kann.  
@@ -25,13 +25,13 @@ Gibt an, dass ein Prozedurargument beim Aufrufen der Prozedur ausgelassen werden
   
  Der `Optional`-Modifizierer kann in folgenden Kontexten verwendet werden:  
   
--   [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  Beim Aufrufen einer Prozedur mit oder ohne optionale Parameter können Sie die Argumente nach Position oder anhand des Namens übergeben. Weitere Informationen finden Sie unter [übergeben von Argumenten nach Position und Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md).  

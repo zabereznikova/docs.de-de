@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df57cd5a2121c216fc23b9c608de091b002147e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad31df899fe98e66e39a1af785618b3679e644bd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101763"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739870"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion-Enumeration
 Legt eine Schnittstelle fest, eine Version des .NET Frameworks oder eine Version des .NET Frameworks, in dem eine Schnittstelle eingeführt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugInterfaceVersion {  
   
     CorDebugInvalidVersion            = 0,  
@@ -227,15 +227,15 @@ typedef enum CorDebugInterfaceVersion {
 ## <a name="interface-names"></a>Schnittstellennamen  
  Der Name, der am Ende der Schnittstellennamen in der Debugging-API enthalten ist (z. B. die "3" in `ICorDebugThread3`) legt die Version der Schnittstelle fest, nicht die des .NET Frameworks. Alle Schnittstellennamen in der Debugging-API enthalten Versionsnummern; ausgenommen sind Schnittstellen, die im .NET Framework Version 1 eingeführt wurden. Sämtliche Übereinstimmungen zwischen den Schnittstellenversionsnummern und .NET Framework-Versionsnummern sind zufällig.  
   
--   Schnittstellen, die mit der .NET Framework Version 1.0 eingeführt wurden, enthalten keine Zahlen, da es sich dabei implizit immer um die Version 1 handelt.  
+- Schnittstellen, die mit der .NET Framework Version 1.0 eingeführt wurden, enthalten keine Zahlen, da es sich dabei implizit immer um die Version 1 handelt.  
   
--   Die .NET Framework Version 1.1 verwendet Schnittstellen der Version 1.0 und führt keine neuen Debugging-Schnittstellen ein.  
+- Die .NET Framework Version 1.1 verwendet Schnittstellen der Version 1.0 und führt keine neuen Debugging-Schnittstellen ein.  
   
--   Die 14 mit der .NET-Framework Version 2.0 eingeführten Debugging-Schnittstellen sind eine logische Erweiterung ihrer Gegenstücke aus der Version 1 und enthalten die Versionsnummer "2" im Namen.  
+- Die 14 mit der .NET-Framework Version 2.0 eingeführten Debugging-Schnittstellen sind eine logische Erweiterung ihrer Gegenstücke aus der Version 1 und enthalten die Versionsnummer "2" im Namen.  
   
--   Die .NET Framework-Versionen 3.0 und 3.5 verwenden die vorhandenen Schnittstellen des .NET Framework 2.0 und führen keine neuen Schnittstellen ein.  
+- Die .NET Framework-Versionen 3.0 und 3.5 verwenden die vorhandenen Schnittstellen des .NET Framework 2.0 und führen keine neuen Schnittstellen ein.  
   
--   Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] führt eine Mischung von Schnittstellenversionen. Zum Beispiel erscheinen sowohl `ICorDebugThread3` als auch `ICorDebugThread4` als die dritte und vierte Version der `ICorDebugThread`-Schnittstelle. Die [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] führt außerdem die erste Version von der `ICorDebugStackWalk` Schnittstelle und die zweite Version der `ICorDebugNativeFrame` Schnittstelle (`ICorDebugNativeFrame2`).  
+- .NET Framework 4 führt eine Mischung von Schnittstellenversionen ein. Zum Beispiel erscheinen sowohl `ICorDebugThread3` als auch `ICorDebugThread4` als die dritte und vierte Version der `ICorDebugThread`-Schnittstelle. .NET Framework 4 führt außerdem die erste Version von der `ICorDebugStackWalk` Schnittstelle und die zweite Version der `ICorDebugNativeFrame` Schnittstelle (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -248,4 +248,4 @@ typedef enum CorDebugInterfaceVersion {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: a758d05cca5ca71943b0ef08184aef5b2c457739
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 93d02618ff19f431b3602e74478337f6918df289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836843"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665170"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Der Ausdruck ruft rekursiv die enthaltende Eigenschaft '\<Propertyname >'
 Eine Anweisung in der `Set` Definition einer Prozedur speichert einen Wert in den Namen der Eigenschaft.  
@@ -61,7 +61,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Schreiben Sie die Eigenschaftsdefinition, um die empfohlene Vorgehensweise verwenden, wie im vorherigen Beispiel gezeigt.  
+- Schreiben Sie die Eigenschaftsdefinition, um die empfohlene Vorgehensweise verwenden, wie im vorherigen Beispiel gezeigt.  
   
 ## <a name="see-also"></a>Siehe auch
 

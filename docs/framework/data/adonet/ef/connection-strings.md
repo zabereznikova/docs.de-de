@@ -3,11 +3,11 @@ title: Verbindungszeichenfolgen in ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 55097e4977111c56cb06c590e305e31ed681fd31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606774"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Verbindungszeichenfolgen in ADO.NET Entity Framework
 
@@ -25,7 +25,7 @@ Die [Entity Data Model-Tools](https://docs.microsoft.com/previous-versions/dotne
 
 Die folgende Tabelle enthält die gültigen Namen für Schlüsselwortwerte im <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.
 
-|Schlüsselwort|Beschreibung|
+|Stichwort|Beschreibung|
 |-------------|-----------------|
 |`Provider`|Erforderlich, wenn das Schlüsselwort `Name` nicht angegeben ist. Der Anbietername, mit dem das <xref:System.Data.Common.DbProviderFactory>-Objekt für den zugrunde liegenden Anbieter abgerufen wird. Dieser Wert ist konstant.<br /><br /> Wenn in einer Entitätsverbindungszeichenfolge nicht das Schlüsselwort `Name` eingefügt wurde, ist für das Schlüsselwort `Provider` ein nicht leerer Wert erforderlich. Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.|
 |`Provider Connection String`|Dies ist optional. Gibt die anbieterspezifische Verbindungszeichenfolge an, die an die zugrunde liegende Datenquelle übergeben wird. Diese Verbindungszeichenfolge enthält gültige Schlüsselwort-Wert-Paare für den Datenanbieter an. Eine ungültige `Provider Connection String` löst bei der Auswertung durch die Datenquelle einen Laufzeitfehler aus.<br /><br /> Dieses Schlüsselwort und das Schlüsselwort `Name` schließen sich gegenseitig aus.<br /><br /> Stellen Sie sicher, dass den Wert entsprechend die allgemeine Syntax von Escapezeichen [ADO.NET Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/connection-strings.md). Betrachten Sie beispielsweise die folgende Verbindungszeichenfolge: `Server=serverName; User ID = userID`. Sie müssen mit Escapezeichen versehen, da sie ein Semikolon enthält. Da es keine doppelten Anführungszeichen enthält, können sie für das Escapezeichen verwendet werden:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b258f0392275ffd18c52d11df3bc266a55ce3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 858d651523ac6196aa2dcad008ea53674eb01b04
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566293"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832840"
 ---
 # <a name="global-assembly-cache"></a>Globaler Assemblycache
 Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt einen computerweiten Codecache, den so genannten globalen Assemblycache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind.  
@@ -29,9 +29,9 @@ Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt ein
   
  Es gibt zwei Möglichkeiten für die Bereitstellung einer Assembly im globalen Assemblycache:  
   
--   Die Verwendung eines Installationsprogramms, das für die Zusammenarbeit mit dem globalen Assemblycache entworfen wurde. Das ist die bevorzugte Option für die Installation von Assemblys im globalen Assemblycache.  
+- Die Verwendung eines Installationsprogramms, das für die Zusammenarbeit mit dem globalen Assemblycache entworfen wurde. Das ist die bevorzugte Option für die Installation von Assemblys im globalen Assemblycache.  
   
--   Die Verwendung des Entwicklertools [Global Assembly Cache-Tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) aus [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Verwenden Sie ein Entwicklertool namens [Global Assembly Cache-Tool (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), das vom Windows Software Development Kit (SDK) bereitgestellt wird.  
   
     > [!NOTE]
     >  Bei Bereitstellungsszenarios sollten Sie Assemblys mit Windows Installer im globalen Assemblycache installieren. Verwenden Sie das Global Assembly Cache-Tool nur in Entwicklungsszenarios, da es weder die Assemblyverweiszählung noch weitere bei Verwendung des Windows Installer bereitgestellte Features unterstützt.  
@@ -43,6 +43,7 @@ Jeder Computer, auf dem die Common Language Runtime installiert ist, besitzt ein
  Alle Assemblys, die im globalen Assemblycache bereitgestellt werden, müssen starke Namen besitzen. Beim Hinzufügen einer Assembly zum globalen Assemblycache werden Integritätsprüfungen für alle Dateien vorgenommen, aus denen die Assembly besteht. Diese Integritätsprüfungen werden vom Cache durchgeführt, um sicherzustellen, dass eine Assembly nicht manipuliert wurde (z. B. wenn eine Datei geändert wurde, aber das Manifest diese Änderung nicht widerspiegelt).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)

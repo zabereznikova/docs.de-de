@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583999"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589870"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Abrufen von ungeordneten Knoten anhand des Namens oder Indexes
 **XmlNamedNodeMap** wird in der W3C-Spezifikation (World Wide Web Consortium) als „NamedNodeMap“ beschrieben und muss eine ungeordnete Gruppe von Knoten behandeln können und auf Knoten nach Name oder Index verweisen können. Zugriff auf eine **XmlNamedNodeMap** ist nur dann möglich, wenn eine **XmlNamedNodeMap** von einer Methode oder einer Eigenschaft zurückgegeben wurde. Es gibt drei Methoden bzw. Eigenschaften, die eine **XmlNamedNodeMap** zurückgeben:  
   
--   XmlElement.Attributes  
+- XmlElement.Attributes  
   
--   XmlDocumentType.Entities  
+- XmlDocumentType.Entities  
   
--   XmlDocumentType.Notations  
+- XmlDocumentType.Notations  
   
  Die **XmlDocumentType.Entities**-Eigenschaft ruft z.B. die in der Dokumenttypdeklaration deklarierte Auflistung von **XmlEntity**-Knoten ab. Diese Auflistung wird als **XmlNamedNodeMap** zurückgegeben, und Sie können sie mithilfe der **Count**-Eigenschaft durchlaufen und Informationen über die Entitäten anzeigen lassen. Ein Beispiel für das Durchlaufen einer **XmlNamedNodeMap** finden Sie unter <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   

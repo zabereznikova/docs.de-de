@@ -1,37 +1,35 @@
 ---
 title: Docker-Container, -Images und -Registrierungen
-description: Erfahren Sie, die wichtige Rolle, dass Registrierungen wie Docker Bereitstellung von Anwendungen allgemeine spielen.
-author: CESARDELATORRE
-ms.author: wiwagn
+description: Lernen Sie die Schlüsselrolle kennen, die Registrierungen überall in der Docker-Methode zum Bereitstellen von Anwendungen spielen.
 ms.date: 02/15/2019
-ms.openlocfilehash: e69490734a03cf58bf8534bc9e31110a11d44c58
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
+ms.openlocfilehash: 7becadc3de16d96f8d6f167cf49c6cdd3bcc0d32
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583315"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65641328"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker-Container, -Images und -Registrierungen
 
-Mithilfe von Docker erstellen Sie eine app oder -Dienst und -Paket, diese und ihre Abhängigkeiten in einem containerimage. Ein Image entspricht einer statischen Darstellung der Apps oder Dienste und von deren Konfigurationen und Abhängigkeiten.
+Bei der Verwendung von Docker erstellen Sie eine App oder einen Dienst und verpacken sie bzw. ihn zusammen mit den jeweiligen Abhängigkeiten in einem Containerimage. Ein Image entspricht einer statischen Darstellung der Apps oder Dienste und von deren Konfigurationen und Abhängigkeiten.
 
 Für die Ausführung einer App oder eines Diensts wird das Image der App oder des Diensts instanziiert, um einen Container zu erstellen, der auf dem Docker-Host ausgeführt wird. Container werden zunächst in einer Entwicklungsumgebung oder auf einem PC getestet.
 
-Speichern Sie Bilder in einer Registrierung, die als eine Bibliothek mit Images fungiert. Sie benötigen eine Registrierung bei der Bereitstellung für produktionsorchestratoren. Docker verwaltet eine öffentliche Registrierung über den [Docker-Hub](https://hub.docker.com/). Andere Anbieter stellen Registrierungen für verschiedene Imagesammlungen bereit, einschließlich der [Azure Container Registry](https://azure.microsoft.com/services/container-registry/). Alternativ können Unternehmen eine private lokale Registrierung für eigene Docker-Images einrichten.
+Sie speichern Images in einer Registrierung, die als Katalog für Images fungiert. Sie benötigen eine Registrierung für das Bereitstellen an Produktionsorchestratoren. Docker verwaltet eine öffentliche Registrierung über den [Docker-Hub](https://hub.docker.com/). Andere Anbieter stellen Registrierungen für verschiedene Imagesammlungen bereit, einschließlich der [Azure Container Registry](https://azure.microsoft.com/services/container-registry/). Alternativ können Unternehmen eine private lokale Registrierung für eigene Docker-Images einrichten.
 
-Abbildung 1 – 4 zeigt, wie Images und Registrierungen in Docker andere Komponenten in Beziehung stehen. Die Angebote verschiedener Anbieter für Registrierungen werden ebenfalls dargestellt.
+In Abbildung 1–4 wird dargestellt, wie Images und Registrierungen in Docker mit anderen Komponenten in Beziehung stehen. Die Angebote verschiedener Anbieter für Registrierungen werden ebenfalls dargestellt.
 
-![Grundlegende Taxonomie in Docker: Die Registrierung ist wie eine virtuelle Bibliothek, in denen Bilder sind, gespeichert und abgerufen werden, für das Erstellen von Containern, um Dienste oder Web-apps ausführen. Es sind private Docker-Registrierungen auf lokale und in der öffentlichen Cloud. Docker Hub ist eine öffentliche Registrierung, die von Docker betrieben wird, die Docker Trusted Registry ist eine für Unternehmen geeignete Lösung, und Azure bietet die Azure Container Registry an. AWS, Google und andere verfügen ebenfalls über Containerregistrierungen.](./media/image4.png)
+![Grundlegende Taxonomie in Docker: Die Registrierung funktioniert wie ein Bücherregal, in dem Images gespeichert und für den Abruf zum Erstellen von Containern verfügbar sind, in denen Dienste oder Web-Apps ausgeführt werden. Private Docker-Registrierungen gibt es lokal und in der öffentlichen Cloud. Docker Hub ist eine öffentliche Registrierung, die von Docker betrieben wird, die Docker Trusted Registry ist eine für Unternehmen geeignete Lösung, und Azure bietet die Azure Container Registry an. AWS, Google und andere verfügen ebenfalls über Containerregistrierungen.](./media/image4.png)
 
 **Abbildung 1-4.** Taxonomie der Docker-Begriffe und -Konzepte
 
-Durch das Einfügen von Images in einer Registrierung, können Sie statische und unveränderliche anwendungsbereitstellung, einschließlich aller ihrer Abhängigkeiten auf Frameworkebene speichern. Sie können verschiedene Versionen und Images in mehreren Umgebungen bereitstellen und dadurch eine konsistente Bereitstellungseinheit bereitstellen.
+Durch das Einfügen von Images in eine Registrierung können Sie statische und unveränderliche Komponenten der Anwendung speichern, einschließlich aller Abhängigkeiten auf Frameworkebene. Diese Images können dann mit einer Versionsangabe versehen und in mehreren Umgebungen bereitgestellt werden. Dadurch steht eine konsistente Bereitstellungseinheit zur Verfügung.
 
 Private Imageregistrierungen, die lokal oder in der Cloud gehostet werden, werden empfohlen, wenn:
 
 - Ihre Images wegen Vertraulichkeit nicht öffentlich freigegeben werden dürfen
 
-- Sie eine minimale Netzwerklatenz zwischen Ihren Images und der ausgewählten Bereitstellungsumgebung erzielen möchten Beispielsweise ist die produktionsumgebung auf Azure, wahrscheinlich Ihre Images speichern möchten [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) so, dass die Netzwerklatenz minimal ist. Ähnliches gilt, wenn Ihre Produktionsumgebung lokal ist: Dann Sie möchten vermutlich sicherstellen, dass ein lokaler Docker Trusted Registry-Dienst innerhalb desselben lokalen Netzwerks verfügbar ist.
+- Sie eine minimale Netzwerklatenz zwischen Ihren Images und der ausgewählten Bereitstellungsumgebung erzielen möchten Wenn Ihre Produktionsumgebung beispielsweise Azure ist, möchten Sie Ihre Images wahrscheinlich in [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) speichern, um eine minimale Netzwerklatenz zu erzielen. Ähnliches gilt, wenn Ihre Produktionsumgebung lokal ist: Dann Sie möchten vermutlich sicherstellen, dass ein lokaler Docker Trusted Registry-Dienst innerhalb desselben lokalen Netzwerks verfügbar ist.
 
 >[!div class="step-by-step"]
 >[Zurück](docker-terminology.md)

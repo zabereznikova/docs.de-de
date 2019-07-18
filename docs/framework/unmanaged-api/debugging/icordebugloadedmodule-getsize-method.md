@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4601261971cce32b6d6d9ee7377f725a85103a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 61bb5a019a8ba5450fa2859a851f4ac9425d45b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183468"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759904"
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize-Methode
 Ruft die Größe des geladenen Moduls in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSize(  
    [out] ULONG32 *pcBytes  
 );  
@@ -43,4 +43,4 @@ HRESULT GetSize(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugLoadedModule-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

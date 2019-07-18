@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e228cfbdade420c4d5248ffd417c6131083ee74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6fdfe33c5b488d8f464001a86233124d4e7df0ed
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110416"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779068"
 ---
 # <a name="corgcstattypes-enumeration"></a>COR_GC_STAT_TYPES-Enumeration
 Gibt an, die Statistiken für eine Garbagecollection aufgezeichnet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     COR_GC_COUNTS                 = 0x00000001  
     COR_GC_MEMORYUSAGE            = 0x00000002  

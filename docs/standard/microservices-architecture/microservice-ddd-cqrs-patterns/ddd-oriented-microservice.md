@@ -1,15 +1,13 @@
 ---
 title: Entwerfen eines DDD-orientierten Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über das Design DDD-orientierter Microservices für Bestellungen und die entsprechenden Anwendungsschichten
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464904"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639673"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Erstellen eines DDD-orientierten Microservices
 
@@ -96,13 +94,13 @@ Dieser Ebenenentwurf sollte bei jedem Microservice unabhängig erfolgen. Wie ber
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **DevIQ. Persistence Ignorance principle (Prinzip „Ignorieren der Persistenz“)** \
-  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
+  <https://deviq.com/persistence-ignorance/>
 
 - **Oren Eini. Infrastructure Ignorance (Ignorieren der Infrastruktur)** \
-  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
+  <https://ayende.com/blog/3137/infrastructure-ignorance>
 
 - **Angel Lopez. Layered Architecture In Domain-Driven Design (Architektur mit Ebenen im domänengesteuerten Design)** \
-  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
 >[Zurück](cqrs-microservice-reads.md)

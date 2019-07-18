@@ -2,12 +2,12 @@
 title: Entfernen der Designer ansichtzustands in einer XAML-Datei – WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: 71a2aadeefd53b391f4589ed9dc32d9cd6e3183a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: af57f838ea12d7199268988bf01baa0b61447650
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260566"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637863"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Entfernen des dem Designer hinzugefügt, dass ein XAML-Datei
 

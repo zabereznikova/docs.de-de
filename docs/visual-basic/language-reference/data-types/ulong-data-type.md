@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ULong data type
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
-ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f8a19e2e4395e43aa99b6ff63536fbbbc26cb2a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522959"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646964"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong-Datentyp (Visual Basic)
 
@@ -64,19 +64,19 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>Tipps für die Programmierung
   
--   **Negative Zahlen.** Da `ULong` ein Typ ohne Vorzeichen, kann er eine negative Zahl ist keine darstellen. Bei Verwendung der unäres minus (`-`) Operator auf ein Ausdruck, der ausgewertet wird, um geben `ULong`, konvertiert den Ausdruck, der Visual Basic `Decimal` erste.  
+- **Negative Zahlen.** Da `ULong` ein Typ ohne Vorzeichen, kann er eine negative Zahl ist keine darstellen. Bei Verwendung der unäres minus (`-`) Operator auf ein Ausdruck, der ausgewertet wird, um geben `ULong`, konvertiert den Ausdruck, der Visual Basic `Decimal` erste.  
   
--   **CLS-Kompatibilität.** Die `ULong` Datentyp ist nicht Teil der [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), damit die CLS-kompatiblem Code kann keine Komponente verwenden, der verwendet wird.  
+- **CLS-Kompatibilität.** Die `ULong` Datentyp ist nicht Teil der [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), damit die CLS-kompatiblem Code kann keine Komponente verwenden, der verwendet wird.  
   
--   **Interop-Überlegungen.** Wenn Sie anbinden, Komponenten, die nicht für .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschriebenen müssen bedenken, die Typen wie `ulong` kann in anderen Umgebungen über eine andere Datenbreite (32 Bit) verfügen. Wenn Sie ein 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `UInteger` anstelle von `ULong` in verwaltetem Visual Basic-Code.  
+- **Interop-Überlegungen.** Wenn Sie anbinden, Komponenten, die nicht für .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschriebenen müssen bedenken, die Typen wie `ulong` kann in anderen Umgebungen über eine andere Datenbreite (32 Bit) verfügen. Wenn Sie ein 32-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `UInteger` anstelle von `ULong` in verwaltetem Visual Basic-Code.  
   
      Automation unterstützt darüber hinaus keine 64-Bit-Ganzzahlen auf Windows 95, Windows 98, Windows ME oder Windows 2000. Sie können keine übergeben, eine Visual Basic `ULong` Argument an eine Automatisierungskomponente auf diesen Plattformen.  
   
--   **Erweiternde.** Die `ULong` -Datentyp wird zu `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `ULong` in alle diese Typen unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
+- **Erweiternde.** Die `ULong` -Datentyp wird zu `Decimal`, `Single`, und `Double`. Dies bedeutet, Sie können konvertieren `ULong` in alle diese Typen unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `UL` an ein Literal wird der `ULong` -Datentyp. `ULong` verfügt über keine Typkennzeichen aus.
+- **Typzeichen.** Durch Anhängen des Literaltypzeichens `UL` an ein Literal wird der `ULong` -Datentyp. `ULong` verfügt über keine Typkennzeichen aus.
   
--   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt64?displayProperty=nameWithType>-Struktur.  
+- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.UInt64?displayProperty=nameWithType>-Struktur.  
   
 ## <a name="see-also"></a>Siehe auch
 

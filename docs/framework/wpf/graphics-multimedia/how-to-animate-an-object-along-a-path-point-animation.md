@@ -9,11 +9,11 @@ helpviewer_keywords:
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
 ms.openlocfilehash: 4ef28118975d02500916676ca50e0f9622c7a3e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651453"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Vorgehensweise: Animieren eines Objekts entlang eines Pfads (Punktanimation)
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.PointAnimationUsingPath> zu animierende Objekt eine <xref:System.Windows.Point> entlang eines gekrümmten Pfads.  
@@ -34,4 +34,4 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.Po
 
 - [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Übersicht über Animationen](animation-overview.md)
-- [Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)
+- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)

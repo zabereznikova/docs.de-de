@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
 ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003209"
 ---
 # <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>Vorgehensweise: Zeichnen einer Polylinie mithilfe des Polylinien-Elements
 Dieses Beispiel zeigt, wie Sie das Zeichnen einer Polylinie, wird eine Reihe von miteinander verbundenen Linien mit dem <xref:System.Windows.Shapes.Polyline> Element.  

@@ -114,7 +114,9 @@
       "feedback_product_url": "https://developercommunity.visualstudio.com/spaces/61/index.html",
       "featureFlags": [
         "enable_uhf_ppe"
-      ]
+      ],
+      "show_latex": true,
+      "disable_contribution_on_translation_quality": ["MT"]
     },
     "fileMetadata": {
       "feedback_system": {
@@ -124,12 +126,6 @@
       "feedback_product_url": {
         "docs/fsharp/**/**.md": "https://github.com/Microsoft/visualfsharp"
       },
-     "feedback_github_repo": {
-	      "_csharplang/**/*.md": "dotnet/csharplang.de-de",
-		    "_csharplang/**/*.yml": "dotnet/csharplang.de-de",
-		    "_vblang/**/*.md": "dotnet/vblang.de-de",
-		    "_vblang/**/*.yml": "dotnet/vblang.de-de"
-	    },
       "ms.prod": {
         "_csharplang/**/*.md": "dotnet-csharp",
         "_vblang/spec/*.md": "dotnet-visualbasic",
@@ -139,8 +135,10 @@
         "docs/framework/**/**.md": "dotnet-framework",
         "docs/fsharp/**/**.md": "dotnet-fsharp",
         "docs/machine-learning/**/**.md": "dotnet-ml",
+        "docs/machine-learning/**/**.yml": "dotnet-ml",
         "docs/standard/**/**.md": "dotnet",
-        "docs/visual-basic/**/**.md": "dotnet-visualbasic"
+        "docs/visual-basic/**/**.md": "dotnet-visualbasic",
+        "docs/spark/**/**.md": "dotnet-spark"
       },
       "ms.topic": {
         "_csharplang/**/*.md": "language-reference",
@@ -165,14 +163,18 @@
         "docs/csharp/**/**.md": "billwagner",
         "docs/csharp/**/**.yml": "billwagner",
         "docs/framework/configure-apps/file-schema/network/**/**.md": "karelz",
-        "docs/framework/configure-apps/file-schema/wcf/**/**.md": "Lxiamail",
+        "docs/framework/configure-apps/file-schema/wcf/**/**.md": "HongGit",
         "docs/framework/data/adonet/**/**.md": "stevestein",
-        "docs/framework/data/wcf/**/**.md": "Lxiamail",
+        "docs/framework/data/wcf/**/**.md": "HongGit",
         "docs/framework/network-programming/**/**.md": "karelz",
-        "docs/framework/wcf/**/**.md": "Lxiamail",
+        "docs/framework/wcf/**/**.md": "HongGit",
         "docs/fsharp/**/**.md": "cartermp",
         "docs/machine-learning/**/**.md": "JRAlexander",
-        "docs/visual-basic/**/**.md": "KathleenDollard"
+        "docs/standard/containerized-lifecycle-architecture/**/**.md": "nishanil",
+        "docs/standard/microservices-architecture/**/**.md": "nishanil",
+        "docs/standard/modernize-with-azure-and-containers/**/**.md": "nishanil",
+        "docs/visual-basic/**/**.md": "KathleenDollard",
+        "docs/spark/**/**.md": "mamccrea"
       },
       "ms.author": {
         "_csharplang/**/*.md": "wiwagn",
@@ -189,7 +191,11 @@
         "docs/framework/wcf/**/**.md": "wcfsrvt",
         "docs/fsharp/**/**.md": "phcart",
         "docs/machine-learning/**/**.md": "johalex",
-        "docs/visual-basic/**/**.md": "kdollard"
+        "docs/standard/containerized-lifecycle-architecture/**/**.md": "nanil",
+        "docs/standard/microservices-architecture/**/**.md": "nanil",
+        "docs/standard/modernize-with-azure-and-containers/**/**.md": "nanil",
+        "docs/visual-basic/**/**.md": "kdollard",
+        "docs/spark/**/**.md": "mamccrea"
       },
       "ms.date": {
         "_csharplang/spec/*.md": "07/01/2017",
@@ -247,14 +253,15 @@
         "docs/core/testing/**.md": ".NET Core",
         "docs/core/tools/**.md": ".NET Core CLI",
         "docs/core/tutorials/**.md": ".NET Core",
-        "docs/core/versions/**.md": ".NET Core"
+        "docs/core/versions/**.md": ".NET Core",
+        "docs/machine-learning/**.md": "ML.NET",
+        "docs/machine-learning/how-to-guides/**.md": "ML.NET",
+        "docs/machine-learning/resources/**.md": "ML.NET",
+        "docs/machine-learning/tutorials/**.md": "ML.NET"
       },
       "ms.custom": {
         "docs/fsharp/tutorials/**/**.md": "seodec18",
         "docs/fsharp/language-reference/**/**.md": "seodec18"
-      },
-      "open_to_public_contributors": {
-	      "docs/standard/design-guidelines/**.md": false
       }
     },
     "dest": "_site",
@@ -262,7 +269,6 @@
       "docs.html"
     ],
     "xref": [
-      "_zip/office15.zip",
       "_zip/missingapi.yml"
     ],
     "lruSize": 0

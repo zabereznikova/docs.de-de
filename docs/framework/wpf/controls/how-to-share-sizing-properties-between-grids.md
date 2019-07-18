@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
 ms.openlocfilehash: d5ab2ac612d55c8cbc34ae6d7d9d63b9f8aa23e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910584"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>Vorgehensweise: Freigeben von Größeneigenschaften zwischen Rastern
 In diesem Beispiel wird gezeigt, wie zum Freigeben der Größenänderungsdaten von Spalten und Zeilen zwischen <xref:System.Windows.Controls.Grid> Elemente, um konsistente Größe beibehalten.  

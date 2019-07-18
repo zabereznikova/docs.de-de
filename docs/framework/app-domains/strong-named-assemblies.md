@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 681938b4893e9fe68caa142898db9b867b481bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592702"
 ---
 # <a name="strong-named-assemblies"></a>Assemblys mit starkem Namen
 Durch die Vergabe eines starken Namens erhalten Assemblys eine eindeutige Identität. Außerdem werden Assemblykonflikte verhindert.  
@@ -32,17 +32,18 @@ Durch die Vergabe eines starken Namens erhalten Assemblys eine eindeutige Identi
   
  Assemblys mit starkem Namen sind in den folgenden Szenarien nützlich:  
   
--   Auf Ihre Assemblys kann durch Assemblys mit starkem Namen verwiesen werden. Alternativ können Sie den `friend`-Zugriff auf Ihre Assemblys von anderen Assemblys mit starkem Namen ermöglichen.  
+- Auf Ihre Assemblys kann durch Assemblys mit starkem Namen verwiesen werden. Alternativ können Sie den `friend`-Zugriff auf Ihre Assemblys von anderen Assemblys mit starkem Namen ermöglichen.  
   
--   Für eine App ist der Zugriff auf verschiedene Versionen derselben Assembly erforderlich. Das bedeutet, dass Sie verschiedene Versionen einer Assembly in derselben App-Domäne nebeneinander ohne Konflikte laden müssen. Wenn z. B. verschiedene Erweiterungen einer API in Assemblys mit demselben einfachen Namen existieren, können Sie durch die Vergabe von starken Namen eine eindeutige Identität für die einzelnen Versionen der Assembly vergeben.  
+- Für eine App ist der Zugriff auf verschiedene Versionen derselben Assembly erforderlich. Das bedeutet, dass Sie verschiedene Versionen einer Assembly in derselben App-Domäne nebeneinander ohne Konflikte laden müssen. Wenn z. B. verschiedene Erweiterungen einer API in Assemblys mit demselben einfachen Namen existieren, können Sie durch die Vergabe von starken Namen eine eindeutige Identität für die einzelnen Versionen der Assembly vergeben.  
   
--   Die Assembly sollte domänenneutral sein, um eine Beeinträchtigung der Leistung der Apps zu vermeiden, die auf Ihre Assembly zugreifen. Dies erfordert starke Namen, da eine domänenneutrale Assembly im globalen Assemblycache installiert werden muss.  
+- Die Assembly sollte domänenneutral sein, um eine Beeinträchtigung der Leistung der Apps zu vermeiden, die auf Ihre Assembly zugreifen. Dies erfordert starke Namen, da eine domänenneutrale Assembly im globalen Assemblycache installiert werden muss.  
   
--   Wenn Sie den Service für Ihre App durch Anwendung einer Herausgeberrichtlinie zentralisieren möchten (d.h. wenn die Assembly im globalen Assemblycache installiert ist).  
+- Wenn Sie den Service für Ihre App durch Anwendung einer Herausgeberrichtlinie zentralisieren möchten (d.h. wenn die Assembly im globalen Assemblycache installiert ist).  
   
  Wenn Sie Open Source-Entwickler sind und die Vorzüge von Assemblys mit starkem Namen kennen lernen möchten, können Sie unter Umständen den privaten Schlüssel einer Assembly zusammen in Ihr Quellcodeverwaltungssystem einchecken.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)
 - [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)

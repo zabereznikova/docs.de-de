@@ -11,18 +11,18 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
 ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010253"
 ---
 # <a name="glyphs"></a>Symbole
 Symbole sind eine Low-Level-Darstellung eines Zeichens, auf dem Bildschirm gezeichnet werden soll. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet direkten Zugriff auf die Symbole für Kunden, die abfangen und Text nach der Formatierung beibehalten werden soll.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einführung in das "GlyphRun"-Objekt und das "Glyphs"-Element](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [Vorgehensweise: Zeichnen von Text mit Symbolen](draw-text-using-glyphs.md)  
+ [Einführung in das GlyphRun-Objekt und das Glyphs-Element](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [Vorgehensweise: Zeichnen von Text mit Glyphs](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

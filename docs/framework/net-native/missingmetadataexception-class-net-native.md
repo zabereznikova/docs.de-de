@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2961a4c02d8ffe17055307094f56a03680d1a59a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357130"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052507"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException-Klasse (.NET Native)
 
-**.NET für Windows-Apps für Windows 10, nur [!INCLUDE[net_native](../../../includes/net-native-md.md)]**
+**.NET für Windows-apps für Windows 10, nur .NET Native**
 
 Die Ausnahme, die ausgelöst wird, wenn Reflektion verwendet wird, um Metadaten abzurufen, die nicht vorhanden sind.
 
 **Namespace:** System.Reflection
 
 > [!IMPORTANT]
-> Die `MissingMetadataException`-Klasse ist nur zur internen Verwendung durch die [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bestimmt. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+> Die `MissingMetadataException` Klasse dient nur zur internen Verwendung durch die .NET Native-toolkette. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,15 +34,15 @@ Die `MissingMetadataException`-Klasse verfügt über die folgenden Member:
 
 |Konstruktor|Beschreibung|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|Initialisiert eine neue Instanz der `MissingMetadataException`-Klasse mit einer vom System generierten Meldung, die den Fehler beschreibt.<br /><br /> Dieser Konstruktor ist nur zur internen Verwendung durch die [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bestimmt.|
-|`public MissingMetadataException(String message)`|Initialisiert eine neue Instanz der `MissingMetadataException`-Klasse mit einer angegebenen Fehlermeldung.<br /><br /> Dieser Konstruktor ist nur zur internen Verwendung durch die [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bestimmt.|
+|`public MissingMetadataException()`|Initialisiert eine neue Instanz der `MissingMetadataException`-Klasse mit einer vom System generierten Meldung, die den Fehler beschreibt.<br /><br /> Dieser Konstruktor ist zur internen Verwendung durch die .NET Native-toolkette nur.|
+|`public MissingMetadataException(String message)`|Initialisiert eine neue Instanz der `MissingMetadataException`-Klasse mit einer angegebenen Fehlermeldung.<br /><br /> Dieser Konstruktor ist zur internen Verwendung durch die .NET Native-toolkette nur.|
 
 ## <a name="properties"></a>Eigenschaften
 
 |Eigenschaft|Beschreibung|
 |--------------|-----------------|
 |`public IDictionary Data { get; }`|Ruft eine Auflistung von Schlüssel-Wert-Paaren ab, die zusätzliche benutzerdefinierte Informationen über die Ausnahme bereitstellen. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
-|`public string HelpLink { get; set; }`|Ruft einen Link zu der mit dieser Ausnahme verbundenen Hilfedatei ab oder legt diesen fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
+|`public string HelpLink { get; set; }`|Ruft einen Link zur Hilfedatei ab, die dieser Ausnahme zugeordnet ist, oder legt einen Link fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
 |`public int HResult { get; protected set; }`|Ruft `HRESULT`, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist, ab oder legt ihn fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
 |`public Exception InnerException { get; }`|Ruft die Ausnahme ab, die die aktuelle Ausnahme verursacht hat. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
 |`public string Message { get; }`|Ruft eine Meldung ab, die die aktuelle Ausnahme beschreibt. (Geerbt von <xref:System.TypeLoadException>.)|
@@ -57,7 +57,7 @@ Die `MissingMetadataException`-Klasse verfügt über die folgenden Member:
 |------------|-----------------|
 |`public bool Equals(Object obj)`|Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.  (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
 |`protected void Finalize()`|Gibt einem Objekt Gelegenheit zu dem Versuch, Ressourcen freizugeben und andere Bereinigungen durchzuführen, bevor es von der Garbage Collection freigegeben wird. (Geerbt von <xref:System.Object>.)|
-|`public Exception GetBaseException()`|Gibt die Ausnahme zurück, die die Ursache für eine oder mehrere nachfolgende Ausnahmen ist. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
+|`public Exception GetBaseException()`|Gibt die Ausnahme zurück, die die Grundursache für eine oder mehrere nachfolgende Ausnahmen ist. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|
 |`public int GetHashCode()`|Gibt einen Hashcode für eine `MissingMetadataException`-Instanz zurück.   (Geerbt von <xref:System.Object>.)|
 |`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Legt ein <xref:System.Runtime.Serialization.SerializationInfo>-Objekt mit Informationen über die Ausnahme fest.  (Geerbt von <xref:System.TypeLoadException>.)|
 |`public Type GetType()`|Ruft den Laufzeittyp der aktuellen Instanz ab. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|

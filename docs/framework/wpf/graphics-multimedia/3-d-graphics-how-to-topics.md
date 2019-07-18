@@ -7,15 +7,15 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9689e3c42010b7de641bee47af34e6888c415ed9
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353555"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663956"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>Gewusst-wie-Themen zu 3D-Grafiken
-Die Themen in diesem Abschnitt veranschaulichen, wie [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] Grafiken in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen.  
+Die Themen in diesem Abschnitt veranschaulichen, wie 3D-Grafiken in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen einer 3D-Szene](how-to-create-a-3-d-scene.md)  

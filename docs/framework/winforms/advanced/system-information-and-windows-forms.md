@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2edc2e867259f8884467c3d5b0ae3d22ba391a77
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228899"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380115"
 ---
 # <a name="system-information-and-windows-forms"></a>Systeminformationen und Windows Forms
 Manchmal ist es erforderlich, um Informationen über den Computer zu erfassen, die Ihre Anwendung ausgeführt wird, um in Ihrem Code Entscheidungen zu treffen. Beispielsweise können Sie eine Funktion haben, die nur gültig, wenn es mit einer bestimmten Netzwerkdomäne verbunden sind; In diesem Fall müssten Sie eine Möglichkeit, bestimmen Sie die Domäne und die Funktion zu deaktivieren, wenn die Domäne nicht vorhanden ist.  
@@ -34,8 +34,8 @@ MessageBox.Show("Good morning " & User & ". You are connected to " _
 string User = SystemInformation.UserName;  
 string Domain = SystemInformation.UserDomainName;  
   
-MessageBox.Show("Good morning " + User + ". You are connected to " _  
-+ Domain)  
+MessageBox.Show("Good morning " + User + ". You are connected to "
++ Domain);
 ```  
   
  Alle Mitglieder der <xref:System.Windows.Forms.SystemInformation> Klasse sind schreibgeschützt; Sie können die Einstellungen eines Benutzers nicht ändern. Es gibt mehr als 100 Member der Klasse, die zum Zurückgeben von Informationen für alles, von der Anzahl der Monitore an den Computer angeschlossen (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) den Abstand der Symbole in Windows Explorer (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A> und <xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>).  

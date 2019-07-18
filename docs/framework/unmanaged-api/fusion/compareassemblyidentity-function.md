@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 55d4e936c8b732e4cc4a60df8c11b37c86c4a415
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231037"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778480"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity-Funktion
 Vergleicht zwei Assemblyidentitäten aus, um festzustellen, ob sie gleich sind.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDAPI CompareAssemblyIdentity (  
     [in]  LPCWSTR                  pwzAssemblyIdentity1,  
     [in]  BOOL                     fUnified1,  
@@ -65,11 +65,11 @@ STDAPI CompareAssemblyIdentity (
 ## <a name="remarks"></a>Hinweise  
  `CompareAssemblyIdentity` überprüft, ob `pwzAssemblyIdentity1` und `pwzAssemblyIdentity2` entsprechen. `pfEquivalent` nastaven NA hodnotu `true` unter eine oder mehrere der folgenden Bedingungen:  
   
--   Die zwei Assemblyidentitäten entsprechen. Für Assemblys mit starkem Namen erfordert die Äquivalenz der Assemblyname, Version, Token des öffentlichen Schlüssels und Kultur identisch sein. Für Assemblys mit einfachen Namen erfordert die Äquivalenz eine Übereinstimmung bei den Assemblynamen und Kultur.  
+- Die zwei Assemblyidentitäten entsprechen. Für Assemblys mit starkem Namen erfordert die Äquivalenz der Assemblyname, Version, Token des öffentlichen Schlüssels und Kultur identisch sein. Für Assemblys mit einfachen Namen erfordert die Äquivalenz eine Übereinstimmung bei den Assemblynamen und Kultur.  
   
--   Beide Assemblyidentitäten verweisen auf Assemblys, die auf .NET Framework ausgeführt. Diese Bedingung gibt `true` , auch wenn die Versionsnummern der Assembly nicht übereinstimmen.  
+- Beide Assemblyidentitäten verweisen auf Assemblys, die auf .NET Framework ausgeführt. Diese Bedingung gibt `true` , auch wenn die Versionsnummern der Assembly nicht übereinstimmen.  
   
--   Die beiden Assemblys sind nicht verwaltete Assemblys, aber `fUnified1` oder `fUnified2` wurde `true`.  
+- Die beiden Assemblys sind nicht verwaltete Assemblys, aber `fUnified1` oder `fUnified2` wurde `true`.  
   
  Die `fUnified` Flag gibt an, dass alle Versionsnummern bis zu die Versionsnummer der Assembly mit starkem Namen entspricht, auf die Assembly mit starkem Namen berücksichtigt werden. Z. B. wenn der Wert des `pwzAssemblyIndentity1` ist "MyAssembly, Version = 3.0.0.0, Culture = Neutral, PublicKeyToken =...", und der Wert der `fUnified1` ist `true`, dies weist darauf hin, dass alle Versionen von MyAssembly, Version "0.0.0.0" bis 3.0.0.0 sein soll als gleichwertig behandelt. In diesem Fall wenn `pwzAssemblyIndentity2` bezieht sich auf der gleichen Assembly wie `pwzAssemblyIndentity1`, außer dass es auf eine niedrigere Versionsnummer wurde `pfEquivalent` nastaven NA hodnotu `true`. Wenn `pwzAssemblyIdentity2` bezieht sich auf eine höhere Versionsnummer `pfEquivalent` nastaven NA hodnotu `true` nur, wenn der Wert des `fUnified2` ist `true`.  
   
@@ -86,5 +86,5 @@ STDAPI CompareAssemblyIdentity (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion – Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [AssemblyComparisonResult-Enumeration](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

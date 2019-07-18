@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 5471e6d5610fd74a71a53624392d757f85304236
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928580"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration
 In diesem Beispiel wird ein `ICalculator`-Vertrag für einen grundlegenden Rechnerdienst definiert. Der Dienst wird in die `CalculatorService`-Klasse implementiert. Anschließend wird der Endpunkt in der Datei "Web.config" konfiguriert, in der angegeben wird, dass der Dienst die <xref:System.ServiceModel.BasicHttpBinding> verwendet. Eine Beschreibung des Dienstes mithilfe von Code anstelle einer Konfigurations zu konfigurieren, finden Sie unter [Vorgehensweise: Angeben einer Dienstbindung im Code](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
@@ -23,12 +23,12 @@ In diesem Beispiel wird ein `ICalculator`-Vertrag für einen grundlegenden Rechn
   
 ### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>So geben Sie die BasicHttpBinding zur Konfiguration des Dienstes an  
   
-1.  Definieren Sie einen Dienstvertrag für den Diensttyp.  
+1. Definieren Sie einen Dienstvertrag für den Diensttyp.  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#1)]  
   
-2.  Implementieren Sie den Dienstvertrag in einer Dienstklasse.  
+2. Implementieren Sie den Dienstvertrag in einer Dienstklasse.  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
@@ -36,7 +36,7 @@ In diesem Beispiel wird ein `ICalculator`-Vertrag für einen grundlegenden Rechn
     > [!NOTE]
     >  Die Adresse oder die Bindungsinformationen werden nicht in der Implementierung des Dienstes angegeben. Ebenso wenig muss Code geschrieben werden, um diese Informationen aus der Konfigurationsdatei abzurufen.  
   
-3.  Erstellen Sie eine Web.config-Datei, um einen Endpunkt für den `CalculatorService` zu konfigurieren, der die <xref:System.ServiceModel.WSHttpBinding> verwendet.  
+3. Erstellen Sie eine Web.config-Datei, um einen Endpunkt für den `CalculatorService` zu konfigurieren, der die <xref:System.ServiceModel.WSHttpBinding> verwendet.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -73,7 +73,7 @@ In diesem Beispiel wird ein `ICalculator`-Vertrag für einen grundlegenden Rechn
     </configuration>  
     ```  
   
-4.  Erstellen Sie eine Service.svc-Datei, die die folgende Zeile enthält, und platzieren Sie sie im virtuellen IIS-Verzeichnis.  
+4. Erstellen Sie eine Service.svc-Datei, die die folgende Zeile enthält, und platzieren Sie sie im virtuellen IIS-Verzeichnis.  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
@@ -81,7 +81,7 @@ In diesem Beispiel wird ein `ICalculator`-Vertrag für einen grundlegenden Rechn
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>So ändern Sie die Standardwerte für die Bindungseigenschaften  
   
-1.  So ändern Sie eines der Standardeigenschaftswerte der <xref:System.ServiceModel.WSHttpBinding>, erstellen Sie einen neuen Namen der Bindung-Konfiguration – `<binding name="Binding1">` – in der [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element und legen Sie die neuen Werte für die Attribute des der die Bindung in dieses Bindungselement. Wenn Sie beispielsweise die standardmäßigen Timeoutwerte für das Öffnen und Schließen von 1 Minute in 2 Minuten ändern möchten, fügen Sie Folgendes der Konfigurationsdatei hinzu:  
+1. So ändern Sie eines der Standardeigenschaftswerte der <xref:System.ServiceModel.WSHttpBinding>, erstellen Sie einen neuen Namen der Bindung-Konfiguration – `<binding name="Binding1">` – in der [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element und legen Sie die neuen Werte für die Attribute des der die Bindung in dieses Bindungselement. Wenn Sie beispielsweise die standardmäßigen Timeoutwerte für das Öffnen und Schließen von 1 Minute in 2 Minuten ändern möchten, fügen Sie Folgendes der Konfigurationsdatei hinzu:  
   
     ```xml  
     <wsHttpBinding>  

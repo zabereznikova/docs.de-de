@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 57f09a8974dc1e8cb20185975c42c1cb3ad86a5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080826"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647155"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum-Schnittstelle
 Stellt einen Enumerator für Objekte bereit, die der Garbage Collection übergeben werden.  
@@ -39,11 +39,11 @@ Stellt einen Enumerator für Objekte bereit, die der Garbage Collection übergeb
   
  Die [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) -Objekte in der Auflistung, die von dieser Methode aufgefüllt stellen drei Arten von Objekten dar:  
   
--   Objekte aus allen verwalteten Stapel. Dies schließt die aktiven Verweise in verwaltetem Code als auch Objekte, die von der common Language Runtime erstellt.  
+- Objekte aus allen verwalteten Stapel. Dies schließt die aktiven Verweise in verwaltetem Code als auch Objekte, die von der common Language Runtime erstellt.  
   
--   Objekte aus der Handletabelle. Dies schließt starken Verweise (`HNDTYPE_STRONG` und `HNDTYPE_REFCOUNT`) und statische Variablen in einem Modul.  
+- Objekte aus der Handletabelle. Dies schließt starken Verweise (`HNDTYPE_STRONG` und `HNDTYPE_REFCOUNT`) und statische Variablen in einem Modul.  
   
--   Objekte aus der Finalizer-Warteschlange. Die Finalizer-Warteschlange Stämme Objekte an, bis der Finalizer ausgeführt wurde.  
+- Objekte aus der Finalizer-Warteschlange. Die Finalizer-Warteschlange Stämme Objekte an, bis der Finalizer ausgeführt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -56,4 +56,4 @@ Stellt einen Enumerator für Objekte bereit, die der Garbage Collection übergeb
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

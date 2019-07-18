@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
 ms.openlocfilehash: 8440ffe61e254403357970d771aea207a6eb6092
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037661"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Vorgehensweise: Auflösen von Parallelitätskonflikten durch Beibehalten von Datenbankwerten
 Wenn Sie Unterschiede zwischen den erwarteten und den tatsächlichen Datenbankwerten abstimmen möchten, bevor Sie versuchen, Ihre Änderungen erneut zu übergeben, können Sie die Datenbankwerte mithilfe von <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> erhalten. Die aktuellen Werte im Objektmodell werden dann überschrieben. Weitere Informationen finden Sie unter [optimistische Parallelität: Übersicht über die](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  

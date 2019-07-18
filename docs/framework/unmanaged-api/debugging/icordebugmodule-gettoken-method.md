@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c28182feff8e4b7d49b7d068da1496d44fa2f917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 30097ff0cd92253897a366a5a18f305eddb06b5b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150357"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763517"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken-Methode
 Ruft das Token für den Tabelleneintrag für dieses Modul ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetToken(  
     [out] mdModule *pToken  
 );  

@@ -1,5 +1,5 @@
 ---
-title: <mailSettings> -Element (Netzwerkeinstellungen)
+title: <mailSettings>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 ms.openlocfilehash: 54fb68ab0bf8aa2665d70391350c626131ccb4bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674497"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<MailSettings >-Element (Netzwerkeinstellungen)
 Konfiguriert E-Mail-Sendeoptionen.  
@@ -46,7 +46,7 @@ Konfiguriert E-Mail-Sendeoptionen.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[\<system.Net >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
+|[\<system.Net>-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel gibt die entsprechenden SMTP-Parameter zum Senden von e-Mails, die über die Standardanmeldeinformationen an.  
@@ -70,4 +70,4 @@ Konfiguriert E-Mail-Sendeoptionen.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.Mail.SmtpClient>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

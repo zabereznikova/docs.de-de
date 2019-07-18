@@ -2,12 +2,12 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 3f5d3c9a65bd9ac412a908a3e850a7e01d2ee6cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e691816ec3d0a66c9f43f9a13cffa26b755b3c39
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116661"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641776"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 Legt die Sortierreihenfolge für Objekte fest, die von einer SELECT-Anweisung zurückgegeben werden.  
@@ -79,23 +79,23 @@ ORDER BY ...
 ## <a name="restricted-keywords"></a>Eingeschränkte Schlüsselwörter  
  Die folgenden Schlüsselwörter müssen bei der Verwendung in einer `ORDER BY` -Klausel in Anführungszeichen gesetzt werden:  
   
--   CROSS  
+- CROSS  
   
--   FULL  
+- FULL  
   
--   KEY  
+- KEY  
   
--   NACH-LINKS  
+- NACH-LINKS  
   
--   ORDER  
+- ORDER  
   
--   OUTER  
+- OUTER  
   
--   NACH-RECHTS  
+- NACH-RECHTS  
   
--   ROW  
+- ROW  
   
--   VALUE  
+- VALUE  
   
 ## <a name="ordering-nested-queries"></a>Reihenfolge geschachtelter Abfragen  
  In Entity Framework kann ein geschachtelter Ausdruck an jeder Stelle in der Abfrage verwendet werden. Die Reihenfolge einer geschachtelten Abfrage wird nicht beibehalten.  
@@ -118,9 +118,9 @@ SELECT C2.FirstName, C2.LastName
 ## <a name="example"></a>Beispiel  
  In der folgenden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage wird der ORDER BY-Operator verwendet, um die für von der SELECT-Anweisung zurückgegebene Objekte zu verwendende Sortierreihenfolge anzugeben. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1.  Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
+2. Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
  [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
   

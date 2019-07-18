@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748462"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation-Sicherheit
 Die Themen in diesem Abschnitt wird beschrieben, Sicherheitsfunktionen von Windows Communication Foundation (WCF) und deren Verwendung zur Sicherung von Nachrichten.  
@@ -52,7 +52,7 @@ Die Themen in diesem Abschnitt wird beschrieben, Sicherheitsfunktionen von Windo
  [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Beschreibt, wie Sicherheitsereignisse überwacht werden.  
   
- [Sicherheitsleitfaden und empfohlene Vorgehensweisen](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Richtlinien zum Erstellen sicherer WCF-Anwendungen.  
   
 ## <a name="reference"></a>Referenz  
@@ -63,9 +63,9 @@ Die Themen in diesem Abschnitt wird beschrieben, Sicherheitsfunktionen von Windo
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Details zur WCF-Funktion](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [Lernprogramm 'Erste Schritte'](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Tutorial mit ersten Schritten](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
  [Konzeptionelle Übersicht](../../../../docs/framework/wcf/conceptual-overview.md)  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 6757d6375cbe1662b8bd7beb8a7562be166bc414
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69db887bf8e7b51c4450c04bd1a08d3d952e84f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181505"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643573"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat
 Absichern eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Technik, die meisten Bindungen in der Windows Communication Foundation (WCF) verwenden. Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509-Zertifikat.  
@@ -19,39 +19,39 @@ Absichern eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Techni
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>So konfigurieren Sie einen Dienst mit einem Zertifikat mithilfe von Code  
   
-1.  Erstellen Sie den Dienstvertrag und den implementierten Dienst. Weitere Informationen finden Sie unter [entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1. Erstellen Sie den Dienstvertrag und den implementierten Dienst. Weitere Informationen finden Sie unter [entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
   
-2.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse, und legen Sie deren Sicherheitsmodus auf <xref:System.ServiceModel.SecurityMode.Message> fest. Dies wird im folgenden Code veranschaulicht.  
+2. Erstellen Sie eine Instanz der <xref:System.ServiceModel.WSHttpBinding>-Klasse, und legen Sie deren Sicherheitsmodus auf <xref:System.ServiceModel.SecurityMode.Message> fest. Dies wird im folgenden Code veranschaulicht.  
   
      [!code-csharp[C_SecureWithCertificate#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#1)]
      [!code-vb[C_SecureWithCertificate#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#1)]  
   
-3.  Erstellen Sie zwei <xref:System.Type>-Variablen, je eine für den Vertragstyp und den implementierten Vertrag. Dies wird im folgenden Code veranschaulicht.  
+3. Erstellen Sie zwei <xref:System.Type>-Variablen, je eine für den Vertragstyp und den implementierten Vertrag. Dies wird im folgenden Code veranschaulicht.  
   
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse für die Basisadresse des Diensts. Da die `WSHttpBinding` verwendet der HTTP-Transport, der Uniform Resource Identifier (URI) muss mit einem Schema beginnen oder Windows Communication Foundation (WCF) wird eine Ausnahme ausgelöst, wenn der Dienst geöffnet wird.  
+4. Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse für die Basisadresse des Diensts. Da die `WSHttpBinding` verwendet der HTTP-Transport, der Uniform Resource Identifier (URI) muss mit einem Schema beginnen oder Windows Communication Foundation (WCF) wird eine Ausnahme ausgelöst, wenn der Dienst geöffnet wird.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
   
-5.  Erstellen Sie eine neue Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse mit der Variablen des implementierten Vertragstyps und dem URI.  
+5. Erstellen Sie eine neue Instanz der <xref:System.ServiceModel.ServiceHost>-Klasse mit der Variablen des implementierten Vertragstyps und dem URI.  
   
      [!code-csharp[C_SecureWithCertificate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#4)]
      [!code-vb[C_SecureWithCertificate#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#4)]  
   
-6.  Fügen Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> zum Dienst hinzu, indem Sie die <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>-Methode verwenden. Übergeben Sie den Vertrag, die Bindung und eine Endpunktadresse an den Konstruktor. Dies wird im folgenden Code veranschaulicht.  
+6. Fügen Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> zum Dienst hinzu, indem Sie die <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A>-Methode verwenden. Übergeben Sie den Vertrag, die Bindung und eine Endpunktadresse an den Konstruktor. Dies wird im folgenden Code veranschaulicht.  
   
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
   
-7.  Dies ist optional. Um Metadaten vom Dienst abzufragen, erstellen Sie ein neues <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Objekt und legen Sie die <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>-Eigenschaft auf `true` fest.  
+7. Dies ist optional. Um Metadaten vom Dienst abzufragen, erstellen Sie ein neues <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Objekt und legen Sie die <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>-Eigenschaft auf `true` fest.  
   
      [!code-csharp[C_SecureWithCertificate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#6)]
      [!code-vb[C_SecureWithCertificate#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#6)]  
   
-8.  Verwenden Sie die <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>-Methode der <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>-Klasse, um das gültige Zertifikat zum Dienst hinzuzufügen. Die Methode kann eine von diversen Methoden nutzen, um ein Zertifikat zu suchen. In diesem Beispiel wird die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName>-Enumeration verwendet. Die Enumeration gibt an, dass der gelieferte Wert der Name der Entität ist, an die das Zertifikat herausgegeben wurde.  
+8. Verwenden Sie die <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>-Methode der <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>-Klasse, um das gültige Zertifikat zum Dienst hinzuzufügen. Die Methode kann eine von diversen Methoden nutzen, um ein Zertifikat zu suchen. In diesem Beispiel wird die <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName>-Enumeration verwendet. Die Enumeration gibt an, dass der gelieferte Wert der Name der Entität ist, an die das Zertifikat herausgegeben wurde.  
   
      [!code-csharp[C_SecureWithCertificate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#7)]
      [!code-vb[C_SecureWithCertificate#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#7)]  
@@ -70,18 +70,18 @@ Absichern eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Techni
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Die folgenden Namespaces sind zum Kompilieren des Codes erforderlich:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.Web.Services.Description>  
+- <xref:System.Web.Services.Description>  
   
--   <xref:System.Security.Cryptography.X509Certificates>  
+- <xref:System.Security.Cryptography.X509Certificates>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

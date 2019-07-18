@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cdbe36403f830926d611ffdc655d82ea25ddeef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144793"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752145"
 ---
 # <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE-Enumeration
 Zeigt das Ergebnis einer zwischengespeicherten Funktionssuche.  
@@ -31,7 +31,7 @@ Zeigt das Ergebnis einer zwischengespeicherten Funktionssuche.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_CACHED_FUNCTION_FOUND,  
     COR_PRF_CACHED_FUNCTION_NOT_FOUND  

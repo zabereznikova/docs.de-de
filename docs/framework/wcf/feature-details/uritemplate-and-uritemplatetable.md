@@ -3,11 +3,11 @@ title: UriTemplate und UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918631"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
 Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. Windows Communication Foundation (WCF) hinzugefügt, zwei neue Klassen zum Steuern der URIs Entwicklern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage für die URI-basierten dispatchmoduls in WCF. Diese Klassen können auch auf ihre eigenen, ermöglicht Entwicklern das Nutzen von Vorlagen und der URI Mappingmechanismus verwendet werden, ohne die Implementierung eines WCF-Diensts.  
@@ -27,20 +27,20 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> ist eine Klasse, die eine URI-Vorlage kapselt. Der Konstruktor nimmt einen Zeichenfolgenparameter, der die Vorlage definiert. Diese Zeichenfolge enthält die Vorlage in dem im nächsten Abschnitt beschriebenen Format. Die <xref:System.UriTemplate>-Klasse bietet Methoden, die die Zuordnung eines eingehenden URI zu einer Vorlage, die Generierung eines URI aus einer Vorlage, das Abrufen einer Sammlung von Variablennamen, die in der Vorlage verwendet werden, die Bestimmung, ob zwei Vorlagen gleichwertig sind, und die Ausgabe der Zeichenfolge der Vorlage ermöglichen.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> akzeptiert eine Basisadresse und einen möglichen, URI und versucht, den URI der Vorlage übereinstimmen. Wenn die Zuordnung erfolgreich ist, wird eine <xref:System.UriTemplateMatch>-Instanz zurückgegeben. Das <xref:System.UriTemplateMatch>-Objekt enthält einen Basis-URI, den möglichen URI, eine Name-Wert-Sammlung der Abfrageparameter, eine Matrix der Segmente des relativen Pfads, eine Name-Wert-Sammlung der Variablen, die zugeordnet wurden, die <xref:System.UriTemplate>-Instanz, die zum Durchführen der Zuordnung verwendet wurde, eine Zeichenfolge, die jeden nicht zugeordneten Teil des Kandidaten-URI enthält (wird verwendet, wenn die Vorlage über einen Platzhalter verfügt), und ein Objekt, das der Vorlage zugewiesen ist.  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> nimmt eine Basisadresse und einen möglichen URI und versucht, den URI der Vorlage zuzuweisen. Wenn die Zuordnung erfolgreich ist, wird eine <xref:System.UriTemplateMatch>-Instanz zurückgegeben. Das <xref:System.UriTemplateMatch>-Objekt enthält einen Basis-URI, den möglichen URI, eine Name-Wert-Sammlung der Abfrageparameter, eine Matrix der Segmente des relativen Pfads, eine Name-Wert-Sammlung der Variablen, die zugeordnet wurden, die <xref:System.UriTemplate>-Instanz, die zum Durchführen der Zuordnung verwendet wurde, eine Zeichenfolge, die jeden nicht zugeordneten Teil des Kandidaten-URI enthält (wird verwendet, wenn die Vorlage über einen Platzhalter verfügt), und ein Objekt, das der Vorlage zugewiesen ist.  
   
 > [!NOTE]
 >  Beim Vergleichen eines möglichen URIs mit einer Vorlage ignoriert die <xref:System.UriTemplate>-Klasse das Schema und die Portnummer.  
   
- Zum Generieren eines URI aus einer Vorlage stehen zwei Methoden zur Verfügung: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> und <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> akzeptiert eine Basisadresse und eine Name/Wert-Auflistung von Parametern. Wenn die Vorlage gebunden ist, werden diese Parameter durch Variablen ersetzt. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> akzeptiert die Name/Wert-Paare und ersetzt sie von links nach rechts.  
+ Zum Generieren eines URI aus einer Vorlage stehen zwei Methoden zur Verfügung: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> und <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> akzeptiert eine Basisadresse und eine Name-Wert-Auflistung der Parameter. Wenn die Vorlage gebunden ist, werden diese Parameter durch Variablen ersetzt. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> akzeptiert die Name-Wert-Paare und ersetzt sie von links nach rechts.  
   
- <xref:System.UriTemplate.ToString> Gibt die Vorlagenzeichenfolge zurück.  
+ <xref:System.UriTemplate.ToString> gibt die Vorlagenzeichenfolge zurück,  
   
  Die <xref:System.UriTemplate.PathSegmentVariableNames%2A>-Eigenschaft enthält eine Sammlung der Namen der Variablen, die innerhalb der Pfadsegmente in der Vorlagenzeichenfolge verwendet werden.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> nimmt eine <xref:System.UriTemplate> als Parameter und gibt einen booleschen Wert, der angibt, ob die beiden Vorlagen gleichwertig sind. Weitere Informationen finden Sie im Abschnitt "Vorlagenäquivalenz" weiter unten in diesem Thema.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> akzeptiert <xref:System.UriTemplate> als Parameter und gibt einen booleschen Wert zurück, der angibt, ob die beiden Vorlagen gleichwertig sind. Weitere Informationen finden Sie im Abschnitt "Vorlagenäquivalenz" weiter unten in diesem Thema.  
   
- <xref:System.UriTemplate> Dient zum Arbeiten mit einem URI-Schema, die der HTTP-URI-Grammatik entspricht. Im Folgenden finden Sie Beispiele für unterstützte URI-Schemas:  
+ <xref:System.UriTemplate> wurde für die Zusammenarbeit mit einem URI-Schema entwickelt, das der HTTP URI-Grammatik entspricht. Im Folgenden finden Sie Beispiele für unterstützte URI-Schemas:  
   
 - http://  
   
@@ -330,7 +330,7 @@ Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einsch
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Überblick über WCF-Web-HTTP-Programmiermodelle](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
 - [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
 - [UriTemplate-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)

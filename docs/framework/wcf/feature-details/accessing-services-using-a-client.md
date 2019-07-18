@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9a38ec444c51560cab48db1b39ae331f728fba30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194525"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635665"
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
 Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client- oder kanalobjekt-Objekte mit Diensten kommunizieren. Die [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet eine Übersicht über die Objekte und Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  
@@ -20,13 +20,13 @@ Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client-
 ## <a name="overview"></a>Übersicht  
  In diesem Thema werden das Verhalten und die Probleme zu Folgendem beschrieben:  
   
--   Kanal- und Sitzungslebensdauer.  
+- Kanal- und Sitzungslebensdauer.  
   
--   Behandeln von Ausnahmen.  
+- Behandeln von Ausnahmen.  
   
--   Grundlagen von Blockierungsproblemen.  
+- Grundlagen von Blockierungsproblemen.  
   
--   Interaktives Initialisieren von Kanälen.  
+- Interaktives Initialisieren von Kanälen.  
   
 ### <a name="channel-and-session-lifetimes"></a>Kanal- und Sitzungslebensdauer  
  Windows Communication Foundation (WCF)-Anwendungen umfasst zwei Kategorien von Kanälen, Datagramm und sitzungsbasiert.  
@@ -83,11 +83,11 @@ Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client-
   
  Bei Verwendung des expliziten Ansatzes müssen durch die Anwendung die folgenden Schritte in dieser Reihenfolge ausgeführt werden:  
   
-1.  Rufen Sie <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (oder eine asynchrone Version) auf.  
+1. Rufen Sie <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (oder eine asynchrone Version) auf.  
   
-2.  Wenn die Initialisierer zurückgegeben wurden, rufen Sie entweder die <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode für das <xref:System.ServiceModel.IClientChannel>-Objekt oder für das <xref:System.ServiceModel.IClientChannel>-Objekt auf, das durch die <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
+2. Wenn die Initialisierer zurückgegeben wurden, rufen Sie entweder die <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode für das <xref:System.ServiceModel.IClientChannel>-Objekt oder für das <xref:System.ServiceModel.IClientChannel>-Objekt auf, das durch die <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
   
-3.  Aufrufen von Vorgängen.  
+3. Aufrufen von Vorgängen.  
   
  Es wird empfohlen, dass Anwendungen mit Produktionsqualität den Prozess der Benutzeroberfläche mithilfe des expliziten Ansatzes steuern.  
   
@@ -97,8 +97,8 @@ Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client-
 
 - [Duplexdienste](../../../../docs/framework/wcf/feature-details/duplex-services.md)
 - [Vorgehensweise: Zugreifen auf Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Vorgehensweise: Zugriff auf einen WSE3.0-Dienst](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Vorgehensweise: Verwenden der ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Vorgehensweise: Von Access Services mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Vorgehensweise: Zugriff auf einen WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Vorgehensweise: Verwenden von ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
 - [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Clientanwendungen mittlerer Ebene](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)
+- [Clientanwendungen der mittleren Schicht](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

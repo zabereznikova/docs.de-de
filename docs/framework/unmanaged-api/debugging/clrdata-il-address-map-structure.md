@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3aac7e24fa9cd03350aebf5f441063bcedfaed04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f34ae3e6687027aeb75e7ea169487fc8cbda466
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644767"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741031"
 ---
 # <a name="clrdatailaddressmap-structure"></a>CLRDATA_IL_ADDRESS_MAP-Struktur
 
@@ -30,7 +30,7 @@ Definiert eine IL-Adresszuordnung an.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 typedef struct
 {
     ULONG32 ilOffset;
@@ -56,8 +56,8 @@ Diese Struktur befindet sich in der Common Language Runtime und nicht über Head
 ## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keine  
-**Bibliothek:** Keine   
+**Header:** Keiner  
+**Bibliothek:** Keiner   
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch

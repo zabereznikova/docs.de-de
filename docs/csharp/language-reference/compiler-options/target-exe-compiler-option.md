@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: b9efa25870e11e0140cba2ad39c3bc4515056ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697880"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59331311"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C#-Compileroptionen)
 Die Option **-target:exe** bewirkt, dass der Compiler eine ausführbare Konsolenanwendung (EXE) erstellt.  
@@ -24,7 +24,7 @@ Die Option **-target:exe** bewirkt, dass der Compiler eine ausführbare Konsolen
 -target:exe  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Die Option **-target:exe** ist standardmäßig aktiviert. Die ausführbare Datei wird mit der Dateiendung „.exe“ erstellt.  
   
  Verwenden Sie [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), um ein ausführbares Windows-Programm zu erstellen.  
@@ -37,11 +37,11 @@ Die Option **-target:exe** bewirkt, dass der Compiler eine ausführbare Konsolen
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
+2. Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
   
-3.  Ändern Sie die Eigenschaft **Ausgabetyp**.  
+3. Ändern Sie die Eigenschaft **Ausgabetyp**.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   

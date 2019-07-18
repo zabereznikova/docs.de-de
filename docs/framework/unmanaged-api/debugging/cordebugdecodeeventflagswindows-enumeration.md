@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d4e006a03db5b16de93dfd07ec7b964db4bfc1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bab7da5855eaf562e55738b489ebf6f62dc45d04
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207733"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740226"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>CorDebugDecodeEventFlagsWindows-Aufzählung
 Weitere Informationen zu Debug-Ereignissen auf der Windows-Plattform.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugDecodeEventFlagsWindows {  
     IS_FIRST_CHANCE = 1,  
 } CorDebugDecodeEventFlagsWindows;  
@@ -53,4 +53,4 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

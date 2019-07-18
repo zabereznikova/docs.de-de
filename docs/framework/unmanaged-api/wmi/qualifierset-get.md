@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357182d6157b63f1bccf47cb43f0c78dec5875cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24ab27a8724107bac96c9fae695fb791b00bfa5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625938"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782574"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get-Funktion
 Ruft den angegebenen benannten Qualifizierer ab.  
@@ -30,7 +30,7 @@ Ruft den angegebenen benannten Qualifizierer ab.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT QualifierSet_Get (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 
@@ -53,7 +53,7 @@ HRESULT QualifierSet_Get (
 [in] Der Name des Qualifizierers, deren Wert angefordert wird.
 
 `lFlags`   
-[in]: Reserviert Dieser Parameter muss 0 sein.
+[in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pVal`   
 [out] Bei erfolgreicher Ausführung den richtigen Typ und Wert für den Qualifizierer. Wenn die Funktion fehlschlägt, die `VARIANT` verweist `pVal` wird nicht geändert. Wenn dieser Parameter ist `null`, der Parameter wird ignoriert.
@@ -83,4 +83,5 @@ Diese Funktion umschließt einen Aufruf der [IWbemQualifierSet::Get](/windows/de
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

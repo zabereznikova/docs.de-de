@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dec04fa267c61798a3340e9d1e18150b812e9eaf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8fc581904351443f4368a68a653fd39b3548999a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092655"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741427"
 ---
 # <a name="setpekind-method"></a>SetPEKind-Methode
 Bestimmt den portable ausführbare Typ, entweder computerspezifischen oder Computer agnostisch.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetPEKind(  
     mdAssembly AssemblyID,  
     mdToken FileToken,  
@@ -61,4 +61,4 @@ HRESULT SetPEKind(
 - [GetPEKind-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

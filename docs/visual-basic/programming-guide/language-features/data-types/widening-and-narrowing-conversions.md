@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842550"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586306"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Erweiternde und eingrenzende Konvertierungen (Visual Basic)
 Ein wichtiger Aspekt bei einer typkonvertierung ist, ob das Ergebnis der Konvertierung innerhalb des Bereichs des Ziel-Datentyps.  
@@ -68,15 +68,15 @@ Ein wichtiger Aspekt bei einer typkonvertierung ist, ob das Ergebnis der Konvert
 ## <a name="narrowing-conversions"></a>Eingrenzungskonvertierungen  
  Die standardmäßige einschränkenden Konvertierungen umfassen Folgendes:  
   
--   Die umgekehrte erfahren Sie, wie der erweiternden Konvertierungen in der vorherigen Tabelle (außer, dass jeder Typ an sich selbst erweitert wird)  
+- Die umgekehrte erfahren Sie, wie der erweiternden Konvertierungen in der vorherigen Tabelle (außer, dass jeder Typ an sich selbst erweitert wird)  
   
--   Konvertierungen in beide Richtungen zwischen [booleschen](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) und alle numerischen Typen  
+- Konvertierungen in beide Richtungen zwischen [booleschen](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) und alle numerischen Typen  
   
--   Konvertierungen von numerischen Typen in einen Enumerationstyp (`Enum`)  
+- Konvertierungen von numerischen Typen in einen Enumerationstyp (`Enum`)  
   
--   Konvertierungen in beide Richtungen zwischen [Zeichenfolge](../../../../visual-basic/language-reference/data-types/string-data-type.md) und alle numerischen Typen, `Boolean`, oder [Datum](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- Konvertierungen in beide Richtungen zwischen [Zeichenfolge](../../../../visual-basic/language-reference/data-types/string-data-type.md) und alle numerischen Typen, `Boolean`, oder [Datum](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   Geben Sie die Konvertierungen von einem Datentyp oder das Objekt zu einem Typ abgeleitet wird  
+- Geben Sie die Konvertierungen von einem Datentyp oder das Objekt zu einem Typ abgeleitet wird  
   
  Einschränkende Konvertierungen nicht immer erfolgreich zur Laufzeit und können fehlschlagen oder Datenverlust verursachen. Ein Fehler tritt auf, wenn den konvertierte Wert nicht der Zieldatentyp erhalten kann. Beispielsweise kann eine numerische Konvertierung zu einem Überlauf führen. Der Compiler lässt nicht zum Durchführen von einschränkende Konvertierungen implizit, wenn die [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) bestimmt den Typ an, wechseln Sie zur Überprüfung `Off`.  
   
@@ -89,11 +89,11 @@ Ein wichtiger Aspekt bei einer typkonvertierung ist, ob das Ergebnis der Konvert
 ## <a name="exceptions-during-conversion"></a>Ausnahmen während der Konvertierung  
  Da immer erweiternde Konvertierungen erfolgreich ausgeführt werden, werden sie keine Ausnahmen auslösen. Einschränkende Konvertierungen, wenn ein Fehler auftritt, löst am häufigsten gelten folgenden Ausnahmen:  
   
--   <xref:System.InvalidCastException> Wenn keine Konvertierung zwischen den beiden Typen definiert ist  
+- <xref:System.InvalidCastException> Wenn keine Konvertierung zwischen den beiden Typen definiert ist  
   
--   <xref:System.OverflowException> – (nur bei ganzzahligen Typen), wenn der konvertierte Wert für den Zieltyp zu groß ist.  
+- <xref:System.OverflowException> – (nur bei ganzzahligen Typen), wenn der konvertierte Wert für den Zieltyp zu groß ist.  
   
- Wenn eine Klasse oder Struktur definiert eine [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) als Operator für die Konvertierung in oder aus dieser Klasse oder Struktur, dienen, `CType` können geeignete Ausnahmen auslösen. Darüber hinaus, `CType` kann Visual Basic-Funktionen aufrufen oder [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] -Methoden, die wiederum eine Vielzahl von Ausnahmen auslösen können.  
+ Wenn eine Klasse oder Struktur definiert eine [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) als Operator für die Konvertierung in oder aus dieser Klasse oder Struktur, dienen, `CType` können geeignete Ausnahmen auslösen. Darüber hinaus, `CType` kann Visual Basic-Funktionen oder Methoden in .NET Framework, die wiederum eine Vielzahl von Ausnahmen auslösen könnten aufrufen.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Änderungen bei der Verweistypkonvertierungen  
  Eine Konvertierung von einem *Verweistyp* wird nur der Zeiger auf den Wert. Der Wert selbst werden nicht kopiert oder in einer Weise geändert. Das einzige, das geändert werden kann ist den Datentyp der Variablen den Zeiger enthält. Klicken Sie im folgenden Beispiel der Datentyp aus der abgeleiteten Klasse konvertiert wird, mit der Basisklasse, aber das Objekt, dem beide Variablen zeigen jetzt auf bleibt unverändert.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-ms.openlocfilehash: 20b2b20c2f7f37b4ae01159e70bc8c0945777152
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1e291e1638864176913342d02acad092f561789c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286428"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645681"
 ---
 # <a name="optimizing-performance-controls"></a>Optimieren der Leistung: Steuerelemente
 

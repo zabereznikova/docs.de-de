@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 889c3bb2d5e0cd1feb9e592e667d47dedd4ede36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8fd82418da26ab0cd32b007b4613d588dfa695eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745295"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next-Methode
 Ruft die angegebene Anzahl von [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) Objekte aus der Enumeration, die an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next([in] ULONG  celt,  
              [out, size_is(celt), length_is(*pceltFetched)]  
                            CorDebugBlockingObject values[],  
@@ -52,7 +52,7 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|S_FALSE|`pceltFetched` Ist nicht gleich `celt`.|  
+|S_FALSE|`pceltFetched` entspricht nicht `celt`.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode funktioniert wie einen typische com-Enumerator.  
@@ -74,5 +74,5 @@ HRESULT Next([in] ULONG  celt,
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

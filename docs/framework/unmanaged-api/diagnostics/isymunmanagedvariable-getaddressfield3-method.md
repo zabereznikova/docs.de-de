@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8b03b96c8cab43046d109d0dd11ae135cb70c9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 76199dd18799c9f51f37d5b92e589effd7f45a57
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163604"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778301"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3-Methode
 Ruft das dritte Adressfeld für diese Variable ab. Die Bedeutung, hängt von der Art der Adresse ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetAddressField3(  
     [out, retval] ULONG32* pRetVal);  
 ```  

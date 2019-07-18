@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077289"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651150"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "59077289"
   
  In diesem Abschnitt wird beschrieben, wie ein serverseitiger Benutzeroberflächenautomatisierungs-Anbieter für ein benutzerdefiniertes Steuerelement implementiert wird.  
   
- Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Elemente (z. B. solche, die für entwickelt wurden [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) unterscheidet sich grundlegend. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] durch eine Klasse, die von abgeleiteten <xref:System.Windows.Automation.Peers.AutomationPeer>. Nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente stellen die Unterstützung durch Implementierungen von Anbieterschnittstellen bereit.  
+ Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Elemente (z. B. solche, die für entwickelt wurden [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) unterscheidet sich grundlegend. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine von <xref:System.Windows.Automation.Peers.AutomationPeer>abgeleitete Klasse. Nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente stellen die Unterstützung durch Implementierungen von Anbieterschnittstellen bereit.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
@@ -37,11 +37,11 @@ ms.locfileid: "59077289"
   
  Das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] --Anbieterprojekt muss auf die folgenden Assemblys verweisen:  
   
--   UIAutomationProviders.dll  
+- UIAutomationProviders.dll  
   
--   UIAutomationTypes.dll  
+- UIAutomationTypes.dll  
   
--   WindowsBase.dll  
+- WindowsBase.dll  
 
 <a name="Provider_Interfaces"></a>   
 ### <a name="provider-interfaces"></a>Anbieterschnittstellen  
@@ -77,29 +77,29 @@ ms.locfileid: "59077289"
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
 ### <a name="property-values-in-non-wpf-providers"></a>Eigenschaftswerte in Nicht-WPF-Anbietern  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter für benutzerdefinierte Steuerelemente müssen bestimmte Eigenschaften unterstützen, die vom Automatisierungssystem sowie von Clientanwendungen verwendet werden können. Bei in Fenstern gehosteten Elementen (HWNDs) kann die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] einige Eigenschaften vom Standardfensteranbieter abrufen, andere müssen jedoch vom benutzerdefinierten Anbieter bezogen werden.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter für benutzerdefinierte Steuerelemente müssen bestimmte Eigenschaften unterstützen, die sowohl vom Automatisierungssystem als auch von Clientanwendungen verwendet werden können. Bei in Fenstern gehosteten Elementen (HWNDs) kann die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] einige Eigenschaften vom Standardfensteranbieter abrufen, andere müssen jedoch vom benutzerdefinierten Anbieter bezogen werden.  
   
  Anbieter für HWND-basierte Steuerelemente müssen die folgenden Eigenschaften (identifiziert nach Feldwerten) normalerweise nicht bereitstellen:  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.ProcessIdProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.ProcessIdProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.ClassNameProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.ClassNameProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.HasKeyboardFocusProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.HasKeyboardFocusProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.IsPasswordProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.IsPasswordProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
 >  Die <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> eines in einem Fenster gehosteten einfachen Elements oder Fragmentstamms wird vom Fenster bezogen. Fragmentelemente unterhalb des Stamms (wie Listeneinträge in einem Listenfeld) müssen jedoch eigene Bezeichner bereitstellen. Weitere Informationen finden Sie unter <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.  
@@ -112,7 +112,7 @@ ms.locfileid: "59077289"
   
 <a name="Events_in_Non_WPF_Providers"></a>   
 ### <a name="events-in-non-wpf-providers"></a>Ereignisse in Nicht-WPF-Anbietern  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter sollten Ereignisse, um Clientanwendungen über Zustandsänderungen der Benutzeroberfläche benachrichtigen auslösen. Ereignisse werden mit den folgenden Methoden ausgelöst.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter sollten Ereignisse auslösen, um Clientanwendungen über Zustandsänderungen der Benutzeroberfläche zu benachrichtigen. Ereignisse werden mit den folgenden Methoden ausgelöst.  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
@@ -144,17 +144,17 @@ ms.locfileid: "59077289"
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
 ### <a name="non-wpf-provider-reparenting"></a>Neuzuordnung des übergeordneten Elements für Nicht-WPF-Anbieter  
- Genau genommen sind Popupfenster Fenster oberster Ebene und werden in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur standardmäßig als untergeordnete Elemente des Desktops angezeigt. Eigentlich sind Popupfenster in vielen Fällen jedoch untergeordnete Elemente anderer Steuerelemente. Beispielsweise ist die Dropdownliste eines Kombinationsfelds logischerweise ein untergeordnetes Element des Kombinationsfelds. Dementsprechend ist ein Menüpopupfenster logischerweise ein untergeordnetes Element des Menüs. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] unterstützt das Popupfenster das Neuzuordnen des übergeordneten Elements, sodass diese als untergeordnete Elemente des zugehörigen Steuerelements angezeigt werden.  
+ Genau genommen sind Popupfenster Fenster oberster Ebene und werden in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur standardmäßig als untergeordnete Elemente des Desktops angezeigt. Eigentlich sind Popupfenster in vielen Fällen jedoch untergeordnete Elemente anderer Steuerelemente. Beispielsweise ist die Dropdownliste eines Kombinationsfelds logischerweise ein untergeordnetes Element des Kombinationsfelds. Dementsprechend ist ein Menüpopupfenster logischerweise ein untergeordnetes Element des Menüs. Die[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] unterstützt für Popupfenster das Neuzuordnen des übergeordneten Elements, sodass sie als untergeordnete Elemente des zugehörigen Steuerelements angezeigt werden.  
   
  So ordnen Sie ein Popupfenster einem neuen übergeordneten Element zu  
   
-1.  Erstellen Sie einen Anbieter für das Popupfenster. Hierfür muss die Klasse des Popupfensters im Voraus bekannt sein.  
+1. Erstellen Sie einen Anbieter für das Popupfenster. Hierfür muss die Klasse des Popupfensters im Voraus bekannt sein.  
   
-2.  Implementieren Sie für das Popupfenster alle Eigenschaften und Muster, als ob es ein vollkommen eigenständiges Steuerelement ist.  
+2. Implementieren Sie für das Popupfenster alle Eigenschaften und Muster, als ob es ein vollkommen eigenständiges Steuerelement ist.  
   
-3.  Implementieren Sie die <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> -Eigenschaft, sodass sie den mit <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>abgerufenen Wert zurückgibt. Der Parameter ist hierbei der Fensterhandle des Popupfensters.  
+3. Implementieren Sie die <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> -Eigenschaft, sodass sie den mit <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>abgerufenen Wert zurückgibt. Der Parameter ist hierbei der Fensterhandle des Popupfensters.  
   
-4.  Implementieren Sie für das Popupfenster und das übergeordnete Element <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> , sodass die Navigation vom logischen übergeordneten Element zum logischen untergeordneten Element sowie zwischen den nebengeordneten Elementen ordnungsgemäß verarbeitet wird.  
+4. Implementieren Sie für das Popupfenster und das übergeordnete Element <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> , sodass die Navigation vom logischen übergeordneten Element zum logischen untergeordneten Element sowie zwischen den nebengeordneten Elementen ordnungsgemäß verarbeitet wird.  
   
  Wenn die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] auf das Popupfenster als untergeordnetes Element des Desktops stößt, wird erkannt, dass die Standardnavigation überschrieben wurde, und das Popupfenster wird übersprungen. Stattdessen ist der Knoten nur über das Fragment erreichbar.  
   

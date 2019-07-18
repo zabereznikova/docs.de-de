@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f62c954bf9d73ab564eba388e742794a330362d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cfc4507557102e19d95f1b746b3a76a231882d7b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080500"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736741"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore-Methode
 Aktualisiert den vorhandenen Symbolspeicher mit einem Deltasymbolspeicher. Diese Methode wird in Szenarien mit bearbeiten und Fortfahren verwendet, um den Symbolspeicher Änderungen an der ursprünglichen übertragbaren ausführbaren Datei (PE) Datei entsprechend zu aktualisieren.  
@@ -32,7 +32,7 @@ Aktualisiert den vorhandenen Symbolspeicher mit einem Deltasymbolspeicher. Diese
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT UpdateSymbolStore (  
     [in] const WCHAR *filename,  
     [in] IStream *pIStream);  

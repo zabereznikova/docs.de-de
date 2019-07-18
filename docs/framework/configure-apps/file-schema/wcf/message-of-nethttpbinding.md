@@ -3,11 +3,11 @@ title: <message> von <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
 ms.openlocfilehash: 5bc953b4a1fad90aec5db507469368e7b21bb7e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768965"
 ---
 # <a name="message-of-nethttpbinding"></a>\<Message > von \<NetHttpBinding >
 Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  

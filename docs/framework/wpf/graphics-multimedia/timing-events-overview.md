@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1b0355758c7ba07d8cc1322dc165ac797e980498
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167166"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625663"
 ---
 # <a name="timing-events-overview"></a>Übersicht über Zeitsteuerungsereignisse
 In diesem Thema wird beschrieben, wie mit den fünf Zeitsteuerungsereignisse auf <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Objekte.  
@@ -23,11 +23,11 @@ In diesem Thema wird beschrieben, wie mit den fünf Zeitsteuerungsereignisse auf
   
  Es gibt mehrere Möglichkeiten zum Animieren von Eigenschaften in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Mit Storyboard-Objekten** (Markup und Code): Sie können <xref:System.Windows.Media.Animation.Storyboard> Objekte anzuordnen und Animationen auf eine oder mehrere Objekte zu verteilen. Ein Beispiel finden Sie unter [Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md).  
+- **Mit Storyboard-Objekten** (Markup und Code): Sie können <xref:System.Windows.Media.Animation.Storyboard> Objekte anzuordnen und Animationen auf eine oder mehrere Objekte zu verteilen. Ein Beispiel finden Sie unter [Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md).  
   
--   **Mit lokalen Animationen** (nur code): Sie können anwenden <xref:System.Windows.Media.Animation.AnimationTimeline> Objekte direkt auf die Eigenschaften, die sie animieren. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
+- **Mit lokalen Animationen** (nur code): Sie können anwenden <xref:System.Windows.Media.Animation.AnimationTimeline> Objekte direkt auf die Eigenschaften, die sie animieren. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
--   **Mit Uhren** (nur code): Sie können explizit verwalten und die Animationsuhren zu verteilen.  Ein Beispiel finden Sie unter [Animieren einer Eigenschaft mit AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
+- **Mit Uhren** (nur code): Sie können explizit verwalten und die Animationsuhren zu verteilen.  Ein Beispiel finden Sie unter [Animieren einer Eigenschaft mit AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md).  
   
  Da Sie diese im Markup und Code verwenden können, verwenden Sie in die Beispielen in dieser Übersicht <xref:System.Windows.Media.Animation.Storyboard> Objekte. Die beschriebenen Konzepte können jedoch auf die anderen Methoden der Animation von Eigenschaften angewendet werden.  
   

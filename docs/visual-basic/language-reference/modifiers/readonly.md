@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1a486d0fadce8135fe01d9eecd611081c986bfae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825390"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647689"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 Gibt an, dass eine Variable oder Eigenschaft lesen aber nicht geschrieben werden kann.  
@@ -24,11 +24,11 @@ Gibt an, dass eine Variable oder Eigenschaft lesen aber nicht geschrieben werden
   
 ## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** Sie können `ReadOnly` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `ReadOnly` Element muss eine Klasse, Struktur oder Modul, und eine Quelldatei, Namespace oder Prozedur nicht möglich.  
+- **Deklarationskontext.** Sie können `ReadOnly` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `ReadOnly` Element muss eine Klasse, Struktur oder Modul, und eine Quelldatei, Namespace oder Prozedur nicht möglich.  
   
--   **Kombinierte Modifizierer.** Sie können keine angeben `ReadOnly` zusammen mit `Static` in der gleichen Deklaration.  
+- **Kombinierte Modifizierer.** Sie können keine angeben `ReadOnly` zusammen mit `Static` in der gleichen Deklaration.  
   
--   **Zuweisen eines Werts an.** Code, in dem eine `ReadOnly` Eigenschaft kann nicht den Wert festgelegt. Code, der auf den zugrunde liegenden Speicher zugreifen kann jedoch zuweisen oder den Wert jederzeit ändern.  
+- **Zuweisen eines Werts an.** Code, in dem eine `ReadOnly` Eigenschaft kann nicht den Wert festgelegt. Code, der auf den zugrunde liegenden Speicher zugreifen kann jedoch zuweisen oder den Wert jederzeit ändern.  
   
      Sie können einen Wert zuweisen einer `ReadOnly` Variable nur in der Deklaration oder in den Konstruktor einer Klasse oder Struktur, in dem es definiert ist.  
   

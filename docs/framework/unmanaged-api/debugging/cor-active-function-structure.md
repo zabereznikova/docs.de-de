@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0400da0cd29d642a1be42be7e2b22213ae54b94
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121770"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740826"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION-Struktur
 Enthält Informationen zu den Funktionen, die aktuell in den Rahmen eines Threads aktiv sind. Diese Struktur wird verwendet, durch die [ICorDebugThread2:: GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct  _COR_ACTIVE_FUNCTION {  
     ICorDebugAppDomain   *pAppDomain;  
     ICorDebugModule      *pModule;  

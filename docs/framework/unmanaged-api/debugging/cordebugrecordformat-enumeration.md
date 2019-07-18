@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: add1458bb3a50a5e5433e8cc7baaf47d750c927d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: adb13688791cd7d8f467780da1895d4f9fe6e990
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083672"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739645"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat-Aufzählung
 Beschreibt das Format der Daten in einem Byte-Array, das Informationen über ein systemeigenes Ausnahme-Debug-Ereignis enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugRecordFormat {  
     FORMAT_WINDOWS_EXCEPTIONRECORD32 = 1,  
     FORMAT_WINDOWS_EXCEPTIONRECORD64 = 2,  
@@ -55,4 +55,4 @@ typedef enum CorDebugRecordFormat {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

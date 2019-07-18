@@ -3,17 +3,17 @@ title: Entity SQL-Referenz
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034267"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL-Referenz
 
 Dieser Abschnitt enthält die Entity SQL-Referenzartikel. In diesem Artikel werden zusammengefasst und die Entity SQL-Operatoren nach ihrer Kategorie gruppiert.
 
-## <a name="arithmetic-operators"></a>Arithmetische Operatoren
+## <a name="arithmetic-operators"></a>Arithmetische operatoren
 
 Arithmetische Operatoren führen mathematische Operationen an zwei Ausdrücken aus, die vom selben oder von unterschiedlichen numerischen Datentypen sind. Die folgende Tabelle enthält die Entity SQL arithmetischen Operatoren:
 

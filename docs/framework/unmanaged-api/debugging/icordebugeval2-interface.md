@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3767368c9da8c97cd081787c0945a15552a1da46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995968"
 ---
 # <a name="icordebugeval2-interface"></a>ICorDebugEval2-Schnittstelle
 
@@ -55,4 +55,4 @@ Erweitert "ICorDebugEval", um Unterstützung für generische Typen bereitzustell
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

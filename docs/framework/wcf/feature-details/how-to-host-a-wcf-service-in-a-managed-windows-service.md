@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b21033cff53f0cb59710b70923c14b8a539923a1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613823"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636494"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
 
@@ -22,13 +22,13 @@ Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Wind
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>Erstellen des Diensts und Bereitstellen des Hostcodes
 
-1.  Erstellen Sie eine neue Visual Studio **Konsolen-app** -Projekt namens **Service**.
+1. Erstellen Sie eine neue Visual Studio **Konsolen-app** -Projekt namens **Service**.
 
-2.  Benennen Sie "Program.cs" in "Service.cs" um.
+2. Benennen Sie "Program.cs" in "Service.cs" um.
 
-3.  Ändern Sie den Namespace zu `Microsoft.ServiceModel.Samples`.
+3. Ändern Sie den Namespace zu `Microsoft.ServiceModel.Samples`.
 
-4.  Fügen Sie Verweise auf die folgenden Assemblys hinzu:
+4. Fügen Sie Verweise auf die folgenden Assemblys hinzu:
 
     - System.ServiceModel.dll
 
@@ -36,22 +36,22 @@ Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Wind
 
     - System.Configuration.Install.dll
 
-5.  Fügen Sie der Datei "Service.cs" die folgenden using-Anweisungen hinzu.
+5. Fügen Sie der Datei "Service.cs" die folgenden using-Anweisungen hinzu.
 
      [!code-csharp[c_HowTo_HostInNTService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#0)]
      [!code-vb[c_HowTo_HostInNTService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#0)]
 
-6.  Definieren Sie den `ICalculator`-Dienstvertrag, wie im folgenden Code gezeigt.
+6. Definieren Sie den `ICalculator`-Dienstvertrag, wie im folgenden Code gezeigt.
 
      [!code-csharp[c_HowTo_HostInNTService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#1)]
      [!code-vb[c_HowTo_HostInNTService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#1)]
 
-7.  Implementieren Sie den Dienstvertrag in einer Klasse namens `CalculatorService`, wie im folgenden Code gezeigt.
+7. Implementieren Sie den Dienstvertrag in einer Klasse namens `CalculatorService`, wie im folgenden Code gezeigt.
 
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]
 
-8.  Erstellen Sie eine neue Klasse namens `CalculatorWindowsService`, die von der <xref:System.ServiceProcess.ServiceBase>-Klasse erbt. Fügen Sie eine lokale Variable namens `serviceHost` hinzu, die auf die <xref:System.ServiceModel.ServiceHost>-Instanz verweist. Definieren Sie die `Main`-Methode, die `ServiceBase.Run(new CalculatorWindowsService)` aufruft.
+8. Erstellen Sie eine neue Klasse namens `CalculatorWindowsService`, die von der <xref:System.ServiceProcess.ServiceBase>-Klasse erbt. Fügen Sie eine lokale Variable namens `serviceHost` hinzu, die auf die <xref:System.ServiceModel.ServiceHost>-Instanz verweist. Definieren Sie die `Main`-Methode, die `ServiceBase.Run(new CalculatorWindowsService)` aufruft.
 
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]
@@ -116,13 +116,13 @@ Der Dienstcode enthält eine Dienstimplementierung des Dienstvertrags, eine Wind
 
 ## <a name="install-and-run-the-service"></a>Installieren Sie den Dienst, und führen Sie ihn aus.
 
-1.  Erstellen Sie die Projektmappe, um `Service.exe` zu erstellen.
+1. Erstellen Sie die Projektmappe, um `Service.exe` zu erstellen.
 
-2.  Öffnen Sie die Developer-Eingabeaufforderung für Visual Studio, und navigieren Sie zum Verzeichnis Projekts. Geben Sie an der Eingabeaufforderung `installutil bin\service.exe` ein, um den Windows-Dienst zu installieren.
+2. Öffnen Sie die Developer-Eingabeaufforderung für Visual Studio, und navigieren Sie zum Verzeichnis Projekts. Geben Sie an der Eingabeaufforderung `installutil bin\service.exe` ein, um den Windows-Dienst zu installieren.
 
      Geben Sie an der Eingabeaufforderung `services.msc` ein, um auf den Dienststeuerungs-Manager (SCM) zuzugreifen. Der Windows-Dienst müsste unter "Dienste" als "WCFWindowsServiceSample" angezeigt werden. Der WCF-Dienst kann nur auf Clients reagieren, wenn der Windows-Dienst ausgeführt wird. Um den Dienst zu starten, klicken Sie darauf in der SCM und auf "Start", oder geben **Net start WCFWindowsServiceSample** an der Eingabeaufforderung.
 
-3.  Wenn Sie Änderungen am Dienst vornehmen, müssen Sie ihn zuerst stoppen und dann deinstallieren. Beenden Sie den Dienst, mit der rechten Maustaste in des Diensts im dienststeuerungs-Manager aus, und wählen Sie "Beenden" aus, oder **Geben Sie net Stop WCFWindowsServiceSample** an der Eingabeaufforderung. Wenn Sie den Windows-Dienst beenden und anschließend einen Client ausführen, tritt eine Ausnahme vom Typ <xref:System.ServiceModel.EndpointNotFoundException> auf, wenn ein Client versucht, auf den Dienst zuzugreifen. So deinstallieren Sie den Windows-Diensttyp **Installutil/u bin\service.exe** an der Eingabeaufforderung.
+3. Wenn Sie Änderungen am Dienst vornehmen, müssen Sie ihn zuerst stoppen und dann deinstallieren. Beenden Sie den Dienst, mit der rechten Maustaste in des Diensts im dienststeuerungs-Manager aus, und wählen Sie "Beenden" aus, oder **Geben Sie net Stop WCFWindowsServiceSample** an der Eingabeaufforderung. Wenn Sie den Windows-Dienst beenden und anschließend einen Client ausführen, tritt eine Ausnahme vom Typ <xref:System.ServiceModel.EndpointNotFoundException> auf, wenn ein Client versucht, auf den Dienst zuzugreifen. So deinstallieren Sie den Windows-Diensttyp **Installutil/u bin\service.exe** an der Eingabeaufforderung.
 
 ## <a name="example"></a>Beispiel
 

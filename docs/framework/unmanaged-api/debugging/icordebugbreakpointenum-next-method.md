@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18b65eb3e733fa7970e4c0e7de09755598eaf149
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 87249dae0eff4ea4899a63c0d13e79c266df453a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474981"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745007"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>ICorDebugBreakpointEnum::Next-Methode
 Ruft die angegebene Anzahl von ICorDebugBreakpoint-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  

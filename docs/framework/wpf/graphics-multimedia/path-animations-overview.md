@@ -9,11 +9,11 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008214"
 ---
 # <a name="path-animations-overview"></a>Übersicht über Pfadanimationen
 <a name="introduction"></a> In diesem Thema werden Pfadanimationen beschrieben, die Ihnen ermöglichen, mithilfe eines geometrischen Pfads Ausgabewerte zu generieren. Pfadanimationen eignen sich zum Verschieben und Drehen von Objekten auf komplexen Pfaden.  
@@ -45,16 +45,16 @@ ms.locfileid: "59182467"
   
  Pfadanimationsklassen gehören zu den <xref:System.Windows.Media.Animation> Namespace und verwenden Sie die folgende Benennungskonvention verwendet:  
   
- *\<Type>* `AnimationUsingPath`  
+ *\<Typ>* `AnimationUsingPath`  
   
  Wobei *\<Typ>* der Wertetyp ist, den die Klasse animiert.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt die folgenden Animation-Klassen bereit.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet folgende Pfadanimationsklassen.  
   
 |Eigenschaftentyp|Entsprechende Pfadanimationsklasse|Beispiel|  
 |-------------------|----------------------------------------|-------------|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Verschieben eines Objekts auf einem Pfad (Doppelanimation)](how-to-animate-an-object-along-a-path-double-animation.md)|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Animieren eines Objekts auf einem Pfad (Matrixanimation)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Verschieben eines Objekts auf einem Pfad (DoubleAnimation)](how-to-animate-an-object-along-a-path-double-animation.md)|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Animieren eines Objekts auf einem Pfad (MatrixAnimation)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Animieren eines Objekts entlang eines Pfads (Punktanimation)](how-to-animate-an-object-along-a-path-point-animation.md)|  
   
  Ein <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> generiert <xref:System.Windows.Media.Matrix> Werte aus der <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>. Bei Verwendung mit einem <xref:System.Windows.Media.MatrixTransform>, <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> können ein Objekt entlang eines Pfads verschieben. Setzen Sie die <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> Eigenschaft der <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> zu `true`, es wird auch das Objekt auf den Kurven des Pfads.  
@@ -93,6 +93,6 @@ ms.locfileid: "59182467"
 
 - [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Pfadmarkupsyntax](path-markup-syntax.md)
-- [Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)
+- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über die Verfahren zur Animation von Eigenschaften](property-animation-techniques-overview.md)

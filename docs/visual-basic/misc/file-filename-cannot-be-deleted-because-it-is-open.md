@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_FileAlreadyOpen1
 ms.assetid: e1cbc46a-1db0-412d-8109-31342ec9d327
-ms.openlocfilehash: c8c6cbf9682a1b46d44edb94dea8a092e74216e8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 941c8200207a13c88b8deaf828b353b7c17c4461
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254339"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610882"
 ---
 # <a name="file-filename-cannot-be-deleted-because-it-is-open"></a>Datei "\<Dateiname >' kann nicht gelöscht werden, da sie geöffnet ist
 Es wird versucht, eine geöffnete Datei zu löschen.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Schließen Sie die Datei, bevor Sie sie löschen.  
+- Schließen Sie die Datei, bevor Sie sie löschen.  
   
 ## <a name="see-also"></a>Siehe auch
 

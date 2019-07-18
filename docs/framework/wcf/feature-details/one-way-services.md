@@ -6,21 +6,21 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b29585eabcc2549876f4b50e6b6e55a7f8ef2eee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231278"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621340"
 ---
 # <a name="one-way-services"></a>Unidirektionale Dienste
 Das Standardverhalten eines Dienstvorgangs ist das Anforderung-Antwort-Muster. Bei einem Anforderung-Antwort-Muster wartet der Client auch dann auf die Antwortnachricht, wenn der Dienstvorgang im Code als `void`-Methode dargestellt wird. Mit einem unidirektionalen Vorgang wird nur eine Nachricht gesendet. Der Empfänger sendet keine Antwortnachricht, und vom Absender wird keine erwartet.  
   
  Verwenden Sie das unidirektionale Entwurfsmuster:  
   
--   Wenn der Client Vorgänge aufrufen muss und vom Ergebnis des Vorgangs auf Vorgangsebene nicht betroffen ist.  
+- Wenn der Client Vorgänge aufrufen muss und vom Ergebnis des Vorgangs auf Vorgangsebene nicht betroffen ist.  
   
--   Wenn die <xref:System.ServiceModel.NetMsmqBinding>-Klasse oder die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Klasse verwendet wird. (Weitere Informationen zu diesem Szenario finden Sie unter [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+- Wenn die <xref:System.ServiceModel.NetMsmqBinding>-Klasse oder die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>-Klasse verwendet wird. (Weitere Informationen zu diesem Szenario finden Sie unter [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Bei einem unidirektionalen Vorgang gibt es keine Antwortnachricht, über die Fehlerinformationen zurück an den Client übertragen werden. Sie können Fehlerbedingungen mit den Funktionen der zugrunde liegenden Bindung, z.&amp;#160;B. zuverlässige Sitzungen, ermitteln oder durch den Entwurf eines Duplexdienstvertrags, der zwei unidirektionale Vorgänge verwendet: einen unidirektionalen Vertrag vom Client zum Dienst zum Aufrufen von Dienstvorgängen sowie einen anderen unidirektionalen Vertrag zwischen dem Dienst und dem Client, damit der Dienst über einen vom Client implementierten Rückruf Fehler an den Client zurücksenden kann.  
   

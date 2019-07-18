@@ -3,11 +3,11 @@ title: Details der WCF Data Services-Protokollimplementierung
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
 ms.openlocfilehash: 3fcef8778707f2bac68755762143f4a7528f0bf1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875185"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Details der WCF Data Services-Protokollimplementierung
 ## <a name="odata-protocol-implementation-details"></a>Details der OData-Protokollimplementierung  
@@ -24,5 +24,5 @@ ms.locfileid: "59152853"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

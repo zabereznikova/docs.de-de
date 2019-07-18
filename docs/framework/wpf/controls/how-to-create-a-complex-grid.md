@@ -7,12 +7,12 @@ helpviewer_keywords:
 - monthly calendar [WPF], creating
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
-ms.openlocfilehash: dd17dfeea85e2b404f7a284f93faceec63145b1f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab5490d608b21fe8b29a078dc1f0147f038c27a3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355014"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645674"
 ---
 # <a name="how-to-create-a-complex-grid"></a>Vorgehensweise: erstellen ein komplexes Rasters
 

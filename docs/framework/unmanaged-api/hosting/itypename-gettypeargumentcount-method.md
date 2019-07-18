@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07deb2c1b7100362b7dbce41e25db53308de809c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 88c2818bd3ad86e7683ffbe6c5454fca560dacde
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159860"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757743"
 ---
 # <a name="itypenamegettypeargumentcount-method"></a>ITypeName::GetTypeArgumentCount-Methode
 Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetTypeArgumentCount (  
     [out, retval] DWORD* pCount  
 );  
@@ -46,4 +46,4 @@ HRESULT GetTypeArgumentCount (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
 ms.openlocfilehash: 2de5fe82f1969a2fdb305d45951d7d698252c0c8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839216"
 ---
 # <a name="-addmodule"></a>-addmodule
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, sämtliche Typinformationen aus den angegebenen Dateien bereitstellt.  

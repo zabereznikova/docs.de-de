@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control read-only
 ms.assetid: e707ec59-8b22-473e-b77c-3060a237517a
 ms.openlocfilehash: 7f24458eb98bd669d59f15c49d1d9e3beb6833b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770941"
 ---
 # <a name="how-to-make-a-textbox-control-read-only"></a>Vorgehensweise: Erstellen eines schreibgeschützten TextBox-Steuerelements
 Dieses Beispiel zeigt, wie Sie konfigurieren eine <xref:System.Windows.Controls.TextBox> Steuerelement, damit keine Benutzereingaben oder ändern können.  

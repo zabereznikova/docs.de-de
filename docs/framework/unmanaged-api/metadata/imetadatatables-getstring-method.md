@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fed98521c0609ebd8b5f65885d69c77814e9e85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3f817fa3f24bebf3303c656bd02c4d93d1d1431b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119339"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781395"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString-Methode
 Ruft die Zeichenfolge am angegebenen Index aus der Tabellenspalte in den Gültigkeitsbereich des aktuellen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetString (   
     [in]  ULONG       ixString,  
     [out] const char  **ppString  

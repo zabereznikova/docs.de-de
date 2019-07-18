@@ -1,15 +1,13 @@
 ---
 title: Implementieren des Trennschaltermusters
 description: Erfahren Sie, wie das Circuit-Breaker-Muster als ergänzendes System zu HTTP-Wiederholungsversuchen implementieren können.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 25a8b52749c3a8448a80155b233edb938e9bdd64
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464189"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639822"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementieren des Circuit Breaker-Musters
 

@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9ec21a21ce3c81c2d29d2edf353a098489c9026
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 137aeaab4e63adbb81c0f3d90718def10f906e6a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219749"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489235"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Typäquivalenz und eingebettete Interop-Typen
 
-Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], unterstützt die Common Language Runtime die Einbettung von Typinformationen für COM-Typen direkt in verwaltete Assemblys. Die verwalteten Assemblys müssen die Typinformationen für COM-Typen nicht aus Interop-Assemblys abrufen. Da die eingebettete Typinformation nur die Typen und Member enthält, die tatsächlich von einer verwalteten Assembly verwendet werden, können zwei verwaltete Assemblys möglicherweise sehr unterschiedliche Ansichten desselben COM-Typs haben. Jede verwaltete Assembly besitzt ein anderes <xref:System.Type>-Objekt, das eine Ansicht des COM-Typs darstellt. Die Common Language Runtime unterstützt Typäquivalenz zwischen diesen unterschiedlichen Ansichten für Schnittstellen, Strukturen, Enumerationen und Delegaten.
+Ab .NET Framework 4 unterstützt die Common Language Runtime die Einbettung von Typinformationen für COM-Typen direkt in verwaltete Assemblys. Die verwalteten Assemblys müssen die Typinformationen für COM-Typen nicht aus Interopassemblys abrufen. Da die eingebettete Typinformation nur die Typen und Member enthält, die tatsächlich von einer verwalteten Assembly verwendet werden, können zwei verwaltete Assemblys möglicherweise sehr unterschiedliche Ansichten desselben COM-Typs haben. Jede verwaltete Assembly besitzt ein anderes <xref:System.Type>-Objekt, das eine Ansicht des COM-Typs darstellt. Die Common Language Runtime unterstützt Typäquivalenz zwischen diesen unterschiedlichen Ansichten für Schnittstellen, Strukturen, Enumerationen und Delegaten.
 
 Typäquivalenz bedeutet, dass ein COM-Objekt, das von einer verwalteten Assembly an eine andere übergeben wird, für den entsprechenden verwalteten Typ in der empfangenden Assembly bereitgestellt werden kann.
 

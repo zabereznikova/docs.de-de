@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923265"
 ---
 # <a name="client-channel-level-programming"></a>Client-Kanalebenenprogrammierung
-In diesem Thema wird beschrieben, wie eine Windows Communication Foundation (WCF)-Client-Anwendung ohne Schreiben der <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> Klasse und der zugehörigen Objektmodelle.  
+In diesem Thema wird beschrieben, wie zum Schreiben einer Windows Communication Foundation (WCF)-Clientanwendung ohne Verwendung der <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> -Klasse und der zugehörigen Objektmodelle.  
   
 ## <a name="sending-messages"></a>Senden von Nachrichten  
  Um für das Senden von Nachrichten und das Empfangen und Verarbeiten von Antworten bereit zu sein, sind die folgenden Schritte erforderlich:  
   
-1.  Erstellen Sie eine Bindung.  
+1. Erstellen Sie eine Bindung.  
   
-2.  Erstellen einer Kanalfactory.  
+2. Erstellen einer Kanalfactory.  
   
-3.  Erstellen eines Kanals.  
+3. Erstellen eines Kanals.  
   
-4.  Senden einer Anforderung und Lesen der Antwort.  
+4. Senden einer Anforderung und Lesen der Antwort.  
   
-5.  Schließen Sie alle Kanalobjekte.  
+5. Schließen Sie alle Kanalobjekte.  
   
 #### <a name="creating-a-binding"></a>Erstellen einer Bindung  
- Ähnlich wie beim empfangenden Fall (finden Sie unter [Programmierung auf Kanalebene Service](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)), das Senden von Nachrichten beginnt durch Erstellen einer Bindung. In diesem Beispiel wird eine neue <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> erstellt und ein <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> seiner Elementauflistung hinzugefügt.  
+ Ähnlich wie beim Empfang (finden Sie unter [Programmieren auf Kanalebene von Dienst](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)), zum Erstellen einer Bindung Senden von Nachrichten beginnt. In diesem Beispiel wird eine neue <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> erstellt und ein <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> seiner Elementauflistung hinzugefügt.  
   
 #### <a name="building-a-channelfactory"></a>Erstellen einer ChannelFactory  
  Anstatt einen <xref:System.ServiceModel.Channels.IChannelListener?displayProperty=nameWithType> zu erstellen, wird hier eine <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> erstellt, indem <xref:System.ServiceModel.ChannelFactory.CreateFactory%2A?displayProperty=nameWithType> auf der Bindung aufgerufen wird, bei der der Typparameter <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> ist. Während die Kanallistener von der Seite verwendet werden, die auf eingehende Nachrichten wartet, werden Kanalfactorys von der Seite verwendet, die die Kommunikation für die Erstellung eines Kanals initiiert. Wie Kanallistener müssen auch Kanalfactorys zuerst geöffnet werden, bevor sie verwendet werden können.  

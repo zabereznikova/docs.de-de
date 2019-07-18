@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0791a59e0325668960dcfc98816920db55bcfb87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 148bc423a9497962ebfbc73faefcc799c6db6499
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199933"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739901"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept-Enumeration
 Gibt die Codetypen an, die schrittweise abgefangen werden können.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugIntercept {  
     INTERCEPT_NONE                = 0x0,  
     INTERCEPT_CLASS_INIT          = 0x01,  
@@ -66,4 +66,4 @@ typedef enum CorDebugIntercept {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762214"
 ---
 # <a name="graphics"></a>Grafik
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet integrierte Unterstützung für Multimedia, Vektorgrafiken, Animation und Inhaltskomposition, erleichtert Entwicklern das Erstellen interessanter Benutzeroberflächen und Inhalte.  
@@ -26,7 +26,7 @@ ms.locfileid: "59102348"
  [Formen](shapes.md)  
  [Transformationen](transformations.md)  
  [Registrierungseinstellungen für das Rendern von Grafiken](graphics-rendering-registry-settings.md)  
- [Gewusst wie-Themen](graphics-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

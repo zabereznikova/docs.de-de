@@ -5,11 +5,11 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cfc9dc5c8122f9b1b1696cedcd5d9a8ceead403
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868585"
 ---
 # <a name="directives-element-net-native"></a>\<Directives > (Element (.NET Native)
 Das Stammelement in jeder laufzeitanweisungsdatei für .NET Native.  
@@ -44,5 +44,5 @@ Das Stammelement in jeder laufzeitanweisungsdatei für .NET Native.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)

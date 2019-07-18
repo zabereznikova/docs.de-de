@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65904da9efea90d31960d71ae0da8c81dffeccf1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5c576cb808ee92452c193c3fbce4f1d2c2cad05
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351397"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636771"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration-Funktion
 

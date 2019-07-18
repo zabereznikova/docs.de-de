@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d6fb0b11c26ff65f74681d1e3bf7324bfb0e559d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083569"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766611"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen-Klasse
 Stellt Funktionen zum Erstellen einer native portable ausführbare Datei (PE) Datei bereit. Die Schnittstelle wird in der Regel vom Compiler verwendet werden, um die kompilierte ausführbare Ausgabe zu generieren.  
@@ -33,7 +33,7 @@ Stellt Funktionen zum Erstellen einer native portable ausführbare Datei (PE) Da
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 class ICeeFileGen {  
 public:  
     virtual HRESULT CreateCeeFile(HCEEFILE *ceeFile);  
@@ -245,4 +245,4 @@ public:
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

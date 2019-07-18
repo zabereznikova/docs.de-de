@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 48a2609a1931e55d24d98cd2b336fc16c520c948
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822075"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649636"
 ---
 # <a name="extension-methods-visual-basic"></a>Erweiterungsmethoden (Visual Basic)
 Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen, Datentypen, die bereits definiert sind, ohne einen neuen abgeleiteten Typ zu erstellen. Erweiterungsmethoden ermöglichen das Schreiben eine Methode, die aufgerufen werden können, als handele es sich um eine Instanzenmethode des vorhandenen Typs.  
@@ -93,19 +93,19 @@ End Module
 ## <a name="types-that-can-be-extended"></a>Erweiterungsfähige Typen  
  Erweiterungsmethoden können für die meisten Typen definiert werden, die in Visual Basic-Parameterlisten wie den folgenden dargestellt werden können:  
   
--   Klassen (Referenztypen)  
+- Klassen (Referenztypen)  
   
--   Strukturen (Werttypen)  
+- Strukturen (Werttypen)  
   
--   Schnittstellen  
+- Schnittstellen  
   
--   Delegaten  
+- Delegaten  
   
--   ByRef- und ByVal-Argumente  
+- ByRef- und ByVal-Argumente  
   
--   Parameter für generische Methoden  
+- Parameter für generische Methoden  
   
--   Arrays  
+- Arrays  
   
  Da der erste Parameter den Datentyp angibt, der durch die Erweiterungsmethode erweitert wird, ist er erforderlich und kann nicht ausgelassen werden. Aus diesem Grund kann ein `Optional`-Parameter oder ein `ParamArray`-Parameter nicht der erste Parameter in der Parameterliste sein.  
   
@@ -118,15 +118,15 @@ End Module
   
  Erweiterungsmethoden, die Sie Typen hinzufügen, die sich nicht in Ihrem Besitz befinden, sind im Allgemeinen angreifbarer als Erweiterungsmethoden, die Sie Typen hinzufügen, die von Ihnen gesteuert werden. In Klassen, die sich nicht in Ihrem Besitz befinden, können einige Ereignisse auftreten, die Ihre Erweiterungsmethoden negativ beeinflussen könnten.  
   
--   Falls ein Instanzenmember vorhanden ist, auf den zugegriffen werden kann und der über eine mit den Argumenten in der aufrufenden Anweisung kompatible Signatur verfügt, ohne dass einschränkende Konvertierungen vom Argument zum Parameter festgelegt sind, wird die Instanzenmethode vor allen Erweiterungsmethoden verwendet. Daher ist es möglich, dass auf einen vorhandenen Erweiterungsmember, den Sie verwenden möchten, nicht mehr zugegriffen werden kann, wenn einer Klasse zu einem bestimmten Zeitpunkt eine geeignete Instanzenmethode hinzugefügt wird.  
+- Falls ein Instanzenmember vorhanden ist, auf den zugegriffen werden kann und der über eine mit den Argumenten in der aufrufenden Anweisung kompatible Signatur verfügt, ohne dass einschränkende Konvertierungen vom Argument zum Parameter festgelegt sind, wird die Instanzenmethode vor allen Erweiterungsmethoden verwendet. Daher ist es möglich, dass auf einen vorhandenen Erweiterungsmember, den Sie verwenden möchten, nicht mehr zugegriffen werden kann, wenn einer Klasse zu einem bestimmten Zeitpunkt eine geeignete Instanzenmethode hinzugefügt wird.  
   
--   Der Autor einer Erweiterungsmethode kann nicht verhindern, dass andere Programmierer Erweiterungsmethoden schreiben, die Vorrang vor der ursprünglichen Erweiterung haben und damit Konflikte verursachen.  
+- Der Autor einer Erweiterungsmethode kann nicht verhindern, dass andere Programmierer Erweiterungsmethoden schreiben, die Vorrang vor der ursprünglichen Erweiterung haben und damit Konflikte verursachen.  
   
--   Sie können die Stabilität verbessern, indem Sie Erweiterungsmethoden in einen eigenen Namespace einfügen. Consumer Ihrer Bibliothek können einen Namespace dann ein- oder ausschließen bzw. vom Rest der Bibliothek getrennt unter den Namespaces auswählen.  
+- Sie können die Stabilität verbessern, indem Sie Erweiterungsmethoden in einen eigenen Namespace einfügen. Consumer Ihrer Bibliothek können einen Namespace dann ein- oder ausschließen bzw. vom Rest der Bibliothek getrennt unter den Namespaces auswählen.  
   
--   Das Erweitern von Schnittstellen bietet u. U. mehr Sicherheit als das Erweitern von Klassen, insbesondere, wenn Sie nicht der Besitzer der Schnittstelle oder Klasse sind. Eine Änderung einer Schnittstelle wirkt sich auf jede Klasse aus, die von ihr implementiert wird. Deshalb ist es eher unwahrscheinlich, dass der Autor Methoden in einer Schnittstelle hinzufügt oder ändert. Wenn eine Klasse jedoch zwei Schnittstellen implementiert, die über Erweiterungsmethoden mit gleicher Signatur verfügen, wird keine der Erweiterungsmethoden angezeigt.  
+- Das Erweitern von Schnittstellen bietet u. U. mehr Sicherheit als das Erweitern von Klassen, insbesondere, wenn Sie nicht der Besitzer der Schnittstelle oder Klasse sind. Eine Änderung einer Schnittstelle wirkt sich auf jede Klasse aus, die von ihr implementiert wird. Deshalb ist es eher unwahrscheinlich, dass der Autor Methoden in einer Schnittstelle hinzufügt oder ändert. Wenn eine Klasse jedoch zwei Schnittstellen implementiert, die über Erweiterungsmethoden mit gleicher Signatur verfügen, wird keine der Erweiterungsmethoden angezeigt.  
   
--   Erweitern Sie einen möglichst spezifischen Typ. Wenn Sie in einer Typhierarchie einen Typ auswählen, von dem viele andere Typen abgeleitet sind, können auf viele Weisen Instanzenmethoden oder andere Erweiterungsmethoden eingeführt werden, die Konflikte mit Ihren Instanzen- oder Erweiterungsmethoden verursachen könnten.  
+- Erweitern Sie einen möglichst spezifischen Typ. Wenn Sie in einer Typhierarchie einen Typ auswählen, von dem viele andere Typen abgeleitet sind, können auf viele Weisen Instanzenmethoden oder andere Erweiterungsmethoden eingeführt werden, die Konflikte mit Ihren Instanzen- oder Erweiterungsmethoden verursachen könnten.  
   
 ## <a name="extension-methods-instance-methods-and-properties"></a>Erweiterungsmethoden, Instanzmethoden und Eigenschaften  
  Wenn eine Instanzmethode im Gültigkeitsbereich über eine Signatur verfügt, die mit den Argumenten einer Aufrufanweisung kompatibel ist, wird die Instanzmethode vor den Erweiterungsmethoden bevorzugt ausgewählt. Die Instanzmethode hat auch dann Vorrang, wenn die Erweiterungsmethode eine bessere Übereinstimmung aufweist. Im folgenden Beispiel enthält die `ExampleClass` eine Instanzmethode mit der Bezeichnung `ExampleMethod`, die über einen Parameter des Typs `Integer` verfügt. Die Erweiterungsmethode `ExampleMethod` erweitert die `ExampleClass` und verfügt über einen Parameter des Typs `Long`.  
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>Rangfolge von Erweiterungsmethoden  
  Wenn sich zwei Erweiterungsmethoden mit identischen Signaturen im Gültigkeitsbereich befinden und zugreifbar sind, wird die Methode mit der höheren Rangfolge aufgerufen. Die Rangfolge einer Erweiterungsmethode basiert auf dem Mechanismus, der verwendet wird, um die Methode in den Gültigkeitsbereich einzubinden. Die folgende Liste gibt die hierarchische Rangfolge von oben nach unten an:  
   
-1.  Im aktuellen Modul definierte Erweiterungsmethoden.  
+1. Im aktuellen Modul definierte Erweiterungsmethoden.  
   
-2.  Erweiterungsmethoden, die innerhalb von Datentypen im aktuellen Namespace oder in übergeordneten Namespaces definiert sind, wobei untergeordnete Namespaces eine höhere Rangfolge als übergeordnete Namespaces haben.  
+2. Erweiterungsmethoden, die innerhalb von Datentypen im aktuellen Namespace oder in übergeordneten Namespaces definiert sind, wobei untergeordnete Namespaces eine höhere Rangfolge als übergeordnete Namespaces haben.  
   
-3.  In Typimporten in der aktuellen Datei definierte Erweiterungsmethoden.  
+3. In Typimporten in der aktuellen Datei definierte Erweiterungsmethoden.  
   
-4.  In Namespaceimporten in der aktuellen Datei definierte Erweiterungsmethoden.  
+4. In Namespaceimporten in der aktuellen Datei definierte Erweiterungsmethoden.  
   
-5.  In Typimporten auf Projektebene definierte Erweiterungsmethoden.  
+5. In Typimporten auf Projektebene definierte Erweiterungsmethoden.  
   
-6.  In Namespaceimporten auf Projektebene definierte Erweiterungsmethoden.  
+6. In Namespaceimporten auf Projektebene definierte Erweiterungsmethoden.  
   
  Wenn sich die Mehrdeutigkeit durch die Anwendung einer Rangfolge nicht auflösen lässt, können Sie den vollqualifizierten Namen zum Festlegen der aufgerufenen Methode verwenden. Wenn die `Print`-Methode aus dem vorherigen Beispiel in einem Modul mit dem Namen `StringExtensions` definiert wird, lautet der vollqualifizierte Name `StringExtensions.Print(example)` und nicht `example.Print()`.  
   

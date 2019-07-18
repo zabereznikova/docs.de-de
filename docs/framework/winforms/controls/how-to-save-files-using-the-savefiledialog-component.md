@@ -11,19 +11,19 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 18d9b93b78d3ed588eafa48831448983ccd61fe8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176799"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053511"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Vorgehensweise: Speichern von Dateien mit der SaveFileDialog-Komponente
 Die <xref:System.Windows.Forms.SaveFileDialog> -Komponente können Benutzer das Dateisystem durchsuchen, und wählen Sie die Dateien gespeichert werden soll. Das Dialogfeld gibt den Pfad und den Namen der ausgewählten Datei zurück. Sie müssen jedoch den Code schreiben, mit dem die Dateien letztendlich auf den Datenträger geschrieben werden.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>So speichern Sie eine Datei mit der SaveFileDialog-Komponente  
   
--   Zeigen Sie das Dialogfeld **Datei öffnen** an, und rufen Sie eine Methode zum Öffnen der vom Benutzer ausgewählten Datei auf.  
+- Zeigen Sie das Dialogfeld **Datei öffnen** an, und rufen Sie eine Methode zum Öffnen der vom Benutzer ausgewählten Datei auf.  
   
      Verwenden der <xref:System.Windows.Forms.SaveFileDialog> Komponente <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Methode, um die Datei zu speichern. Diese Methode gibt Ihnen eine <xref:System.IO.Stream> Objekt können Sie zu schreiben.  
   
@@ -161,7 +161,7 @@ Die <xref:System.Windows.Forms.SaveFileDialog> -Komponente können Benutzer das 
        }  
     ```  
   
-     (Visual C#- und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C# und visuelle C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  

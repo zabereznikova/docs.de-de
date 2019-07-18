@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 548594379f95952c79363759b8570cf5e2709cff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099767"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643558"
 ---
 # <a name="queues-overview"></a>Warteschlangenübersicht
 In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Warteschlangenkommunikation vorgestellt. Die folgenden Abschnitte werden in den Details wie den hier beschriebenen warteschlangenbegriffe in Windows Communication Foundation (WCF) festgelegt werden.  
@@ -36,9 +36,9 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
 ## <a name="queues-and-transactions"></a>Warteschlangen und Transaktionen  
  Transaktionen ermöglichen es Ihnen, mehrere Vorgänge zu gruppieren, so dass alle Vorgänge fehlschlagen, wenn ein Vorgang fehlschlägt. Ein Beispiel für die Verwendung von Transaktionen ist, wenn eine Person einen Betrag in Höhe von 1.000 € mithilfe eines entsprechenden Automaten von ihrem Sparkonto auf ihr Girokonto überweist. Dazu sind die folgenden Vorgänge erforderlich:  
   
--   Das Abbuchen von 1.000 € vom Sparkonto.  
+- Das Abbuchen von 1.000 € vom Sparkonto.  
   
--   Das Einzahlen von 1.000 € auf das Girokonto.  
+- Das Einzahlen von 1.000 € auf das Girokonto.  
   
  Wenn der erste Vorgang erfolgreich ist und 1.000 € vom Sparkonto abgebucht werden, der zweite Vorgang jedoch fehlschlägt, sind die 1.000 € verloren, weil sie bereits vom Sparkonto abgebucht wurden. Wenn ein Vorgang fehlschlägt, müssen also beide Vorgänge fehlschlagen, um für die Konten die richtigen Kontostände beizubehalten.  
   
@@ -59,9 +59,9 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
   
  Alle Fehler, beispielsweise eine Nachricht, die die Zielwarteschlange nicht erreicht oder deren Gültigkeitsdauer abgelaufen ist, müssen einzeln verarbeitet werden. Es ist deshalb nicht ungewöhnlich, dass Warteschlangenanwendungen zwei Arten von Logik schreiben:  
   
--   Die normale Client- und Dienstlogik zum Senden und Empfangen von Nachrichten.  
+- Die normale Client- und Dienstlogik zum Senden und Empfangen von Nachrichten.  
   
--   Die Kompensationslogik zum Verarbeiten von Nachrichten, deren Übertragung oder Zustellung fehlgeschlagen ist.  
+- Die Kompensationslogik zum Verarbeiten von Nachrichten, deren Übertragung oder Zustellung fehlgeschlagen ist.  
   
  Diese Begriffe werden in den folgenden Abschnitten erläutert.  
   
@@ -75,9 +75,9 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
-- [Warteschlangen für unzustellbare Meldungen](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [Warteschlangen für unzustellbare Nachrichten](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
 - [Flüchtige Kommunikation unter Verwendung von Warteschlangen](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
 - [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)

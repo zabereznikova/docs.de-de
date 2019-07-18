@@ -6,11 +6,11 @@ helpviewer_keywords:
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
 ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947471"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>Vorgehensweise: Auflisten des Zeichnungsinhalts eines visuellen Objekts
 Die <xref:System.Windows.Media.Drawing> Objekt stellt ein Objektmodell bereit, für das Auflisten des Inhalts einer <xref:System.Windows.Media.Visual>.  

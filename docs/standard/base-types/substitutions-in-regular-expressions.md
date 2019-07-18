@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030153"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301503"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Ersetzungen in regulären Ausdrücken
 <a name="Top"></a> Ersetzungen sind Sprachelemente, die nur in Ersetzungsmustern erkannt werden. Sie definieren den gesamten Text oder einen Teil des Texts, der den entsprechenden Text in der Eingabezeichenfolge ersetzen soll, mithilfe eines Musters eines regulären Ausdrucks. Das Ersetzungsmuster kann zusammen mit Literalzeichen aus einer oder mehreren Ersetzungen bestehen. Ersetzungsmuster werden für Überladungen der <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> -Methode bereitgestellt, die über einen `replacement` -Parameter verfügen, und für die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methode. Die Methoden ersetzen das übereinstimmende Muster durch das Muster, das durch den `replacement` -Parameter definiert wird.  
@@ -29,14 +29,14 @@ ms.locfileid: "54030153"
   
 |Substitution|Beschreibung|  
 |------------------|-----------------|  
-|`$` *number*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#Numbered).|  
-|`${` *Name* `}`|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#Named).|  
-|`$$`|Schließt ein einzelnes "$"-Literal in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen eines "$"-Symbols](#DollarSign).|  
-|`$&`|Schließt eine Kopie der gesamten Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der gesamten Übereinstimmung](#EntireMatch).|  
-|``$` ``|Schließt den gesamten Text der Eingabezeichenfolge vor der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts vor der Übereinstimmung](#BeforeMatch).|  
-|`$'`|Schließt den gesamten Text der Eingabezeichenfolge nach der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts nach der Übereinstimmung](#AfterMatch).|  
-|`$+`|Schließt die letzte erfasste Gruppe in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der zuletzt erfassten Gruppe](#LastGroup).|  
-|`$_`|Schließt die gesamte Eingabezeichenfolge in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der ganzen Eingabezeichenfolge](#EntireString).|  
+|$ *Zahl*|Schließt die letzte mit der Erfassungsgruppe, die durch *Zahl*identifiziert wird, übereinstimmende Teilzeichenfolge in der Ersetzungszeichenfolge ein. Hierbei ist *Zahl* ein Dezimalwert. Weitere Informationen finden Sie unter [Ersetzen einer nummerierten Gruppe](#Numbered).|  
+|${ *Name* }|Schließt die letzte Teilzeichenfolge in der Ersetzungszeichenfolge ein, die von der benannten Gruppe gefunden wird, die mit `(?<`*Name*`> )` angegeben wird. Weitere Informationen finden Sie unter [Ersetzen einer benannten Gruppe](#Named).|  
+|$$|Schließt ein einzelnes "$"-Literal in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen eines "$"-Symbols](#DollarSign).|  
+|$&|Schließt eine Kopie der gesamten Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der gesamten Übereinstimmung](#EntireMatch).|  
+|$\`|Schließt den gesamten Text der Eingabezeichenfolge vor der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts vor der Übereinstimmung](#BeforeMatch).|  
+|$'|Schließt den gesamten Text der Eingabezeichenfolge nach der Übereinstimmung in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen des Texts nach der Übereinstimmung](#AfterMatch).|  
+|$+|Schließt die letzte erfasste Gruppe in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der zuletzt erfassten Gruppe](#LastGroup).|  
+|$_|Schließt die gesamte Eingabezeichenfolge in der Ersetzungszeichenfolge ein. Weitere Informationen finden Sie unter [Ersetzen der ganzen Eingabezeichenfolge](#EntireString).|  
   
 ## <a name="substitution-elements-and-replacement-patterns"></a>Ersetzungselemente und Ersetzungsmuster  
  Ersetzungen sind die einzigen Sonderkonstrukte, die in einem Ersetzungsmuster erkannt werden. Keines der anderen Sprachelemente für reguläre Ausdrücke, einschließlich Escapezeichen und Punkt (`.`), der einem beliebigen Zeichen entspricht, wird unterstützt. Auf ähnliche Weise werden Ersetzungssprachelemente nur in Ersetzungsmustern erkannt und sind in Mustern für reguläre Ausdrücke nie gültig.  

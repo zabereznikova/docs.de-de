@@ -3,11 +3,11 @@ title: System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 ms.date: 03/30/2017
 ms.assetid: 155c3203-2e17-4709-b896-2254e22da45e
 ms.openlocfilehash: f84cc9336d6cce7d8c477a1feb6caf45b0662177
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996930"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforasyncabort"></a>System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 Die angegebene Transaktion für den angegebenen Vorgang wurde aufgrund eines asynchronen Abbruchs abgeschlossen.  

@@ -7,17 +7,15 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: dee1df1e122e47ea67618da5a1e4349e28d90447
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 46e7d9caf0bdf0be25a4ac76e96fe04d0e131ed1
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377364"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238577"
 ---
 # <a name="globalization-for-wpf"></a>Globalisierung für WPF
 In diesem Thema werden Probleme, die Sie beim Schreiben von bewusst sein sollten [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen für den globalen Markt. Programmierelemente der Globalisierung werden in definiert [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.
-
-
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML-Globalisierung
@@ -71,59 +69,59 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
 
  Die folgenden Skripts werden zurzeit unterstützt:
 
--   Arabisch
+- Arabisch
 
--   Bangla
+- Bangla
 
--   Devanagari
+- Devanagari
 
--   Kyrillisch
+- Kyrillisch
 
--   Griechisch
+- Griechisch
 
--   Gujarati
+- Gujarati
 
--   Gurmukhi
+- Gurmukhi
 
--   Hebräisch
+- Hebräisch
 
--   Ideografische Skripts
+- Ideografische Skripts
 
--   Kannada
+- Kannada
 
--   Laotisch
+- Laotisch
 
--   Latein
+- Latein
 
--   Malayalam
+- Malayalam
 
--   Mongolisch
+- Mongolisch
 
--   Odia
+- Odia
 
--   Syrisch
+- Syrisch
 
--   Tamil
+- Tamil
 
--   Telugu
+- Telugu
 
--   Thaana
+- Thaana
 
--   Thailändisch*
+- Thailändisch*
 
--   Tibetisch
+- Tibetisch
 
  *In dieser Version werden die Anzeige und Bearbeitung von thailändischem Text unterstützt. Die Wörtertrennung wird nicht unterstützt.
 
  Die folgenden Skripts werden zurzeit nicht unterstützt:
 
--   Khmer
+- Khmer
 
--   Koreanisch Old Hangul
+- Koreanisch Old Hangul
 
--   Myanmar
+- Myanmar
 
--   Singhalesisch
+- Singhalesisch
 
  Alle Schreibsystem-engines unterstützen [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] Schriftarten. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Schriftarten zählen die [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Layouttabellen, mit denen Ersteller von Schriftarten bessere internationale und Highend-typografische-Schriftarten entwerfen können. Die [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Layouttabellen der Schriftart enthalten Informationen über symbolersetzungen, symbolpositionierung, Ausrichtung und Positionierung Textverarbeitungstools Anwendungen Textlayout zu verbessern.
 
@@ -135,9 +133,9 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
 ### <a name="international-layout"></a>Internationales Layout
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine einfache Möglichkeit für die Unterstützung von horizontalen, bidirektionalen und vertikalen Layouts. In PresentationFramework der <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft kann verwendet werden, um das Layout zu definieren. Die Muster der Flussrichtung sind:
 
--   *LeftToRight*: Horizontales Layout für Latein, Ostasiatisch usw.
+- *LeftToRight*: Horizontales Layout für Latein, Ostasiatisch usw.
 
--   *RightToLeft*: Bidirektional für Arabisch, Hebräisch usw.
+- *RightToLeft*: Bidirektional für Arabisch, Hebräisch usw.
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>Entwickeln von lokalisierbaren Anwendungen
@@ -158,7 +156,7 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Erstellen von lokalisierbaren Anwendungen
- Lokalisierung bezeichnet die Anpassung einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] für andere Kulturen. Zu einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Anwendung lokalisierbar sein, müssen Entwickler alle lokalisierbaren Ressourcen in einer Ressourcenassembly erstellen. Die Ressourcenassembly wird in verschiedenen Sprachen lokalisiert, und das CodeBehind verwendet die ressourcenverwaltung [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] geladen. Einer der erforderlichen Dateien für eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung ist eine Projektdatei (.proj). Alle Ressourcen, die Sie in Ihrer Anwendung verwenden, sollten in der Projektdatei enthalten sein. Das folgende Beispiel einer CSPROJ-Datei zeigt die dazu erforderliche Vorgehensweise.
+ Lokalisierung bezeichnet die Anpassung einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] für andere Kulturen. Zu einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Anwendung lokalisierbar sein, müssen Entwickler alle lokalisierbaren Ressourcen in einer Ressourcenassembly erstellen. Die Ressourcenassembly wird in verschiedenen Sprachen lokalisiert, und das Code-Behind verwendet Ressourcenverwaltungs-API zum Laden. Einer der erforderlichen Dateien für eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung ist eine Projektdatei (.proj). Alle Ressourcen, die Sie in Ihrer Anwendung verwenden, sollten in der Projektdatei enthalten sein. Das folgende Beispiel einer CSPROJ-Datei zeigt die dazu erforderliche Vorgehensweise.
 
 ```xml
 <Resource Include="data\picture1.jpg"/>
@@ -181,4 +179,5 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
 ```
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über WPF-Globalisierung und -Lokalisierung](wpf-globalization-and-localization-overview.md)

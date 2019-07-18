@@ -2,12 +2,12 @@
 title: Gültiger Inhalt von XElement- und XDocument-Objekten
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: 064cd4a6a112a12e0af60732df376e72b294fabc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c179f2e57abf0e2028ec58428e75c8df786b4214
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524039"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483273"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Gültiger Inhalt von XElement- und XDocument-Objekten
 In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstruktoren und Methoden übergeben werden können, die Sie zum Hinzufügen von Inhalt zu Elementen und Dokumenten verwenden.  
@@ -17,35 +17,35 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
   
  Beim Hinzufügen einfachen Inhalts können dieser Methode verschiedene Typen übergeben werden. Gültige Typen sind:  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   Alle Typen, die `Object.ToString` implementieren.  
+- Alle Typen, die `Object.ToString` implementieren.  
   
--   Alle Typen, die <xref:System.Collections.Generic.IEnumerable%601> implementieren.  
+- Alle Typen, die <xref:System.Collections.Generic.IEnumerable%601> implementieren.  
   
  Beim Hinzufügen komplexen Inhalts können an diese Methode verschiedene Typen übergeben werden:  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   alle Typen, die eine <xref:System.Collections.Generic.IEnumerable%601> implementieren  
+- alle Typen, die eine <xref:System.Collections.Generic.IEnumerable%601> implementieren  
   
  Wenn ein Objekt eine <xref:System.Collections.Generic.IEnumerable%601> implementiert, wird die Auflistung im Objekt aufgezählt, und alle Elemente in der Auflistung werden hinzugefügt. Wenn die Auflistung <xref:System.Xml.Linq.XNode>-Objekte oder <xref:System.Xml.Linq.XAttribute>-Objekte enthält, wird jedes Element in der Auflistung getrennt hinzugefügt. Wenn die Auflistung Text (oder Objekte, die in Text umgewandelt wurden) enthält, wird der Text in der Auflistung verkettet und als einzelner Textknoten hinzugefügt.  
   
@@ -62,15 +62,15 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
   
  Als gültiger Inhalt für Dokumente gilt z. B.:  
   
--   kein oder ein <xref:System.Xml.Linq.XDocumentType>-Objekt: Die Dokumenttypen müssen vor dem Element kommen.  
+- kein oder ein <xref:System.Xml.Linq.XDocumentType>-Objekt: Die Dokumenttypen müssen vor dem Element kommen.  
   
--   kein oder ein Element  
+- kein oder ein Element  
   
--   keine oder mehrere Kommentare  
+- keine oder mehrere Kommentare  
   
--   keine oder mehrere Verarbeitungsanweisungen  
+- keine oder mehrere Verarbeitungsanweisungen  
   
--   keine oder mehrere Textknoten, die nur Leerraum enthalten  
+- keine oder mehrere Textknoten, die nur Leerraum enthalten  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Konstruktoren und Funktionen, die das Hinzufügen von Inhalt erlauben  
  Die folgenden Methoden ermöglichen es Ihnen, einem <xref:System.Xml.Linq.XElement>-Objekt oder <xref:System.Xml.Linq.XDocument>-Objekt untergeordneten Inhalt hinzuzufügen:  
@@ -90,4 +90,4 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

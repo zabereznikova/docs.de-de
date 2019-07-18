@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 1d9e01ab1fbabeb7b20fb5d2449ca7bba5f1853a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 46825eeb2befab7f11a87451da53a773a6ce2ad2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125964"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648227"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Vorgehensweise: Erstellen von Master-/Detaillisten mit dem DataGrid-Steuerelement in Windows Forms mithilfe des Designers
 
@@ -27,34 +27,34 @@ ms.locfileid: "59125964"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Zum Erstellen einer Master / Detail-Liste im designer  
   
-1.  Hinzufügen von zwei <xref:System.Windows.Forms.DataGrid> Steuerelemente im Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md). In Visual Studio 2005 die <xref:System.Windows.Forms.DataGrid> Steuerelement befindet sich nicht in der **Toolbox** standardmäßig. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Elementen zur Toolbox](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
+1. Hinzufügen von zwei <xref:System.Windows.Forms.DataGrid> Steuerelemente im Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md). In Visual Studio 2005 die <xref:System.Windows.Forms.DataGrid> Steuerelement befindet sich nicht in der **Toolbox** standardmäßig. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Elementen zur Toolbox](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
     > [!NOTE]
     >  Die folgenden Schritte gelten nicht für Visual Studio 2005 verwendet die **Datenquellen** Fenster für die Datenbindung zur Entwurfszeit. Weitere Informationen finden Sie unter [Binden von Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) und [Vorgehensweise: Anzeigen von verknüpften Daten in einer Windows Forms-Anwendung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
   
-2.  Ziehen Sie zwei oder mehr Tabellen aus **Server-Explorer** auf das Formular.  
+2. Ziehen Sie zwei oder mehr Tabellen aus **Server-Explorer** auf das Formular.  
   
-3.  Von der **Daten** , wählen Sie im Menü **DataSet generieren**.  
+3. Von der **Daten** , wählen Sie im Menü **DataSet generieren**.  
   
-4.  Legen Sie die Beziehungen zwischen den Tabellen, die mit dem XML-Designer. Weitere Informationen finden Sie unter "Vorgehensweise: Erstellen 1: N Beziehungen in XML-Schemas "und" Datasets"auf MSDN.  
+4. Legen Sie die Beziehungen zwischen den Tabellen, die mit dem XML-Designer. Weitere Informationen finden Sie unter "Vorgehensweise: Erstellen 1: N Beziehungen in XML-Schemas "und" Datasets"auf MSDN.  
   
-5.  Speichern Sie die Beziehungen durch Auswählen von **Alles speichern** aus der **Datei** Menü.  
+5. Speichern Sie die Beziehungen durch Auswählen von **Alles speichern** aus der **Datei** Menü.  
   
-6.  Konfigurieren der <xref:System.Windows.Forms.DataGrid> -Steuerelement, das Sie die master-Raster, wie folgt festlegen möchten:  
+6. Konfigurieren der <xref:System.Windows.Forms.DataGrid> -Steuerelement, das Sie die master-Raster, wie folgt festlegen möchten:  
   
-    1.  Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.  
+    1. Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.  
   
-    2.  Wählen Sie die master-Tabelle (z. B. "Customers") aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft.  
+    2. Wählen Sie die master-Tabelle (z. B. "Customers") aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft.  
   
-7.  Konfigurieren der <xref:System.Windows.Forms.DataGrid> -Steuerelement, das Sie im Detailraster wie folgt festlegen möchten:  
+7. Konfigurieren der <xref:System.Windows.Forms.DataGrid> -Steuerelement, das Sie im Detailraster wie folgt festlegen möchten:  
   
-    1.  Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.  
+    1. Wählen Sie die <xref:System.Data.DataSet> aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft.  
   
-    2.  Wählen Sie die Beziehung (z. B. "Customers.CustOrd") zwischen den Master- und Tabellen aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft. Um die Beziehung anzuzeigen, erweitern Sie den Knoten durch Klicken auf das Pluszeichen (**+**) neben der master-Tabelle in der Dropdown-Liste.  
+    2. Wählen Sie die Beziehung (z. B. "Customers.CustOrd") zwischen den Master- und Tabellen aus der Dropdown-Liste in der <xref:System.Windows.Forms.DataGrid.DataMember%2A> Eigenschaft. Um die Beziehung anzuzeigen, erweitern Sie den Knoten durch Klicken auf das Pluszeichen (**+**) neben der master-Tabelle in der Dropdown-Liste.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
 - [Übersicht über das DataGrid-Steuerelement](datagrid-control-overview-windows-forms.md)
-- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Binden von Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 6e485bc80a213be6a5d0da8a00c8ca718f867efb
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 486936ae29552891c6a58913b6d5cf9a0d725a69
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222935"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422482"
 ---
 # <a name="while-c-reference"></a>while (C#-Referenz)
 
@@ -40,5 +40,4 @@ Weitere Informationen finden Sie im Abschnitt [Die while-Anweisung](~/_csharplan
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Iterationsanweisungen](iteration-statements.md)
 - [do-Anweisung](do.md)

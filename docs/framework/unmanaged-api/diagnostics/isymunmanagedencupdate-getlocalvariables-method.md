@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16e91a0c748e5b148e79dc73cf213b03c68c5021
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 48e359f8ed4d52de1cff7ca46a523f4eb80ec4c6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776900"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables-Methode
 Ruft die lokalen Variablen ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetLocalVariables(  
     [in]  mdMethodDef  mdMethodToken,  
     [in]  ULONG        cLocals,  

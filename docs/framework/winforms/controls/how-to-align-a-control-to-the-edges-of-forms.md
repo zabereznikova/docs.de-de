@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185782"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59329972"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Vorgehensweise: Ausrichten eines Steuerelements an Formularrändern
 Sie können ein Steuerelement am Formularrand ausrichten, indem Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft festlegen. Diese Eigenschaft legt fest, wo auf dem Formular das Steuerelement sich befindet. Die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft kann auf einen der folgenden Werte festgelegt werden:  
@@ -33,7 +33,7 @@ Sie können ein Steuerelement am Formularrand ausrichten, indem Sie die <xref:Sy
   
 ### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a>So legen Sie die Dock-Eigenschaft für das Steuerelement zur Laufzeit fest  
   
-1.  Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft im Code auf den geeigneten Wert fest.  
+1. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft im Code auf den geeigneten Wert fest.  
   
     ```vb  
     ' To set the Dock property internally.  

@@ -4,11 +4,11 @@ description: Dieses Handbuch enthält einen Überblick über die verschiedenen L
 author: cartermp
 ms.date: 08/03/2018
 ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772800"
 ---
 # <a name="f-guide"></a>Leitfaden für F#
 

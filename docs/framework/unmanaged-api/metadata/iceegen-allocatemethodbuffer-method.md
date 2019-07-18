@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7be1bd2934fbb2e09a39c3042fa9ae314e89d629
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 080c16d3a7baceaa277b3418ac2e17391090f00c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083763"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750596"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer-Methode
 Erstellt einen Puffer mit der angegebenen Größe für eine Methode und ruft die relative virtuelle Adresse der Methode.  
@@ -31,7 +31,7 @@ Erstellt einen Puffer mit der angegebenen Größe für eine Methode und ruft die
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT AllocateMethodBuffer (   
     [in]  ULONG    cchBuffer,   
     [out] UCHAR    **lpBuffer,  

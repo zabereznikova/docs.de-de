@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
 ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607786"
 ---
 # <a name="adonet-code-examples"></a>Codebeispiele für ADO.NET
 In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe der folgenden ADO.NET-Technologien aus einer Datenbank abgerufen werden:
@@ -29,7 +29,7 @@ In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe
 
   - [LINQ to Entities](#linq-to-entities)
 
-  - [Typisierte ObjectQuery](#typed-objectquery)
+  - [Typed ObjectQuery](#typed-objectquery)
 
   - [EntityClient](#entityclient) (`System.Data.EntityClient`)
 

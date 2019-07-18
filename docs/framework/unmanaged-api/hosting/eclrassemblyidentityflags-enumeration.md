@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a0372afe6718e5b8cf4d5ed99b3198a8163ae7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 18b7310b2d04b81330c68de59adf5f18ba9c8675
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214767"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769749"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a>ECLRAssemblyIdentityFlags-Enumeration
 Gibt den Typ der Identität einer Assembly an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum _CLRAssemblyIdentityFlags {  
     CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT = 0  
 } ECLRAssemblyIdentityFlags;  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: adf854429f2b13fd2421252a6281ad96d9d88500
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655563"
 ---
 # <a name="formulate-projections"></a>Formulieren von Projektionen
 Die folgenden Beispiele zeigen die `select` -Anweisung in C# und `Select` -Anweisung in Visual Basic kann kombiniert werden, mit anderen Funktionen, um Abfrageprojektionen zu bilden.  
@@ -66,11 +66,11 @@ Die folgenden Beispiele zeigen die `select` -Anweisung in C# und `Select` -Anwei
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden geschachtelte Abfragen verwendet, um die folgenden Ergebnisse zurückzugeben:  
   
--   Eine Sequenz aller Bestellungen und der entsprechenden `OrderID`s.  
+- Eine Sequenz aller Bestellungen und der entsprechenden `OrderID`s.  
   
--   Eine Untersequenz der Elemente in der Bestellung, für die es einen Rabatt gibt.  
+- Eine Untersequenz der Elemente in der Bestellung, für die es einen Rabatt gibt.  
   
--   Der gesparte Betrag, wenn die Lieferkosten nicht eingeschlossen werden.  
+- Der gesparte Betrag, wenn die Lieferkosten nicht eingeschlossen werden.  
   
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  

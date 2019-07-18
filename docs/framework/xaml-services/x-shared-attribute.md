@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0e9003f22c488ec35f7cc9c7be7f72c7fb8241df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125736"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622782"
 ---
 # <a name="xshared-attribute"></a>x:Shared-Attribut
 Bei Festlegung auf `false`, verändert WPF Abrufen von Ressourcen, damit Anforderungen für die attributierte Ressource eine neue Instanz für jede Anforderung und nicht gemeinsam dieselbe Instanz für alle Anforderungen erstellen.  
@@ -45,9 +45,9 @@ Bei Festlegung auf `false`, verändert WPF Abrufen von Ressourcen, damit Anforde
   
  In WPF `x:Shared` gilt nur unter folgenden Bedingungen:  
   
--   Die <xref:System.Windows.ResourceDictionary> , enthält die Elemente mit `x:Shared` muss kompiliert werden. Die <xref:System.Windows.ResourceDictionary> in loose XAML nicht möglich, oder für Designs verwendet.  
+- Die <xref:System.Windows.ResourceDictionary> , enthält die Elemente mit `x:Shared` muss kompiliert werden. Die <xref:System.Windows.ResourceDictionary> in loose XAML nicht möglich, oder für Designs verwendet.  
   
--   Die <xref:System.Windows.ResourceDictionary> , enthält die Elemente müssen innerhalb einer anderen nicht geschachtelt werden <xref:System.Windows.ResourceDictionary>. Beispielsweise können keine `x:Shared` für Elemente in einer <xref:System.Windows.ResourceDictionary> , der sich im eine <xref:System.Windows.Style> , der sich bereits ein <xref:System.Windows.ResourceDictionary> Element.  
+- Die <xref:System.Windows.ResourceDictionary> , enthält die Elemente müssen innerhalb einer anderen nicht geschachtelt werden <xref:System.Windows.ResourceDictionary>. Beispielsweise können keine `x:Shared` für Elemente in einer <xref:System.Windows.ResourceDictionary> , der sich im eine <xref:System.Windows.Style> , der sich bereits ein <xref:System.Windows.ResourceDictionary> Element.  
   
 ## <a name="see-also"></a>Siehe auch
 

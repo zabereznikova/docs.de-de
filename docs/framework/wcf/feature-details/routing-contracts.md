@@ -3,11 +3,11 @@ title: Routingverträge
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
 ms.openlocfilehash: 660652caa804b8c19f6dd18bcba51bf4abc3ba12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991106"
 ---
 # <a name="routing-contracts"></a>Routingverträge
 Routingverträge definieren die Nachrichtenmuster, die der Routingdienst verarbeiten kann.  Jeder Vertrag ist typenlos und ermöglicht es dem Dienst, eine Nachricht ohne Kenntnis des Nachrichtenschemas oder der Nachrichtenaktion zu empfangen. Auf diese Weise kann der Routingdienst Nachrichten generisch weiterleiten, ohne dass eine zusätzliche Konfiguration für die Einzelheiten der zugrunde liegenden weitergeleiteten Nachrichten erforderlich ist.  
@@ -29,4 +29,4 @@ Routingverträge definieren die Nachrichtenmuster, die der Routingdienst verarbe
 ## <a name="see-also"></a>Siehe auch
 
 - [Routingdienst](../../../../docs/framework/wcf/feature-details/routing-service.md)
-- [Einführung in das Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Einführung in Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

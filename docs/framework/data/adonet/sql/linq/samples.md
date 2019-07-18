@@ -2,12 +2,12 @@
 title: Proben
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4f51c59791b0d65e99987e0e14a6fbedf1ee0a0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107171"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616211"
 ---
 # <a name="samples"></a>Proben
 Dieses Thema enthält Links zu den Visual Basic und C#-Lösungen, die enthalten [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Beispielcode.  
@@ -21,13 +21,13 @@ Dieses Thema enthält Links zu den Visual Basic und C#-Lösungen, die enthalten 
   
  Führen Sie diese Schritte aus, um weitere Beispiele für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Code und -Anwendungen zu erhalten:  
   
--   Suchen Sie nach bestimmten Problemen in Microsoft Docs.  
+- Suchen Sie nach bestimmten Problemen in Microsoft Docs.  
   
--   Teilnahme an der [LINQ-Forum](https://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren.  
+- Teilnahme an der [LINQ-Forum](https://go.microsoft.com/fwlink/?LinkId=76488), Hier können Sie komplexere Themen ausführlich mit Experten diskutieren.  
   
--   Untersuchen Sie das White Paper mit Details zur [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Technologie sowie Beispiele für Visual Basic und C#-Code. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Untersuchen Sie das White Paper mit Details zur [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Technologie sowie Beispiele für Visual Basic und C#-Code. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ to SQL Walkthroughs](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))
+- [LINQ to SQL Walkthroughs (Exemplarische Vorgehensweisen für LINQ to SQL)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))

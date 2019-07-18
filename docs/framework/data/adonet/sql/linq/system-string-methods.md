@@ -2,22 +2,22 @@
 title: System.String-Methoden
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c988bf7f04b284b0d352cd9e495931543980fdba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160497"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613761"
 ---
 # <a name="systemstring-methods"></a>System.String-Methoden
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt nicht die folgenden <xref:System.String> Methoden.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die folgenden <xref:System.String>-Methoden nicht.  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>Nicht unterstützte System.String-Methoden im Allgemeinen  
  Nicht unterstützte <xref:System.String>-Methoden im Allgemeinen:  
   
--   Kulturbewusste Überladungen (Methoden, die eine `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
+- Kulturbewusste Überladungen (Methoden, die eine `CultureInfo`  /  `StringComparison`  /  `IFormatProvider`).  
   
--   Methoden, die ein `char`-Array verwenden oder erzeugen.  
+- Methoden, die ein `char`-Array verwenden oder erzeugen.  
   
 ## <a name="unsupported-systemstring-static-methods"></a>Nicht unterstützte statische System.String-Methoden  
   
@@ -47,13 +47,13 @@ ms.locfileid: "59160497"
   
 ## <a name="differences-from-net"></a>Unterschiede zu .NET  
   
--   Abfragen berücksichtigen keine SQL Server-Zusammenstellungen, die möglicherweise auf dem Server aktiv sind. Aus diesem Grund werden standardmäßig kulturbewusste Vergleiche mit Berücksichtigung der Schreibweise erstellt. Dieses Verhalten unterscheidet sich von der standardmäßigen Semantik mit Groß-/Kleinschreibung von .NET Framework.  
+- Abfragen berücksichtigen keine SQL Server-Zusammenstellungen, die möglicherweise auf dem Server aktiv sind. Aus diesem Grund werden standardmäßig kulturbewusste Vergleiche mit Berücksichtigung der Schreibweise erstellt. Dieses Verhalten unterscheidet sich von der standardmäßigen Semantik mit Groß-/Kleinschreibung von .NET Framework.  
   
--   Wenn `LastIndexOf` 0 zurückgibt, entweder die Zeichenfolge `NULL` oder die gefundene Position ist 0.  
+- Wenn `LastIndexOf` 0 zurückgibt, entweder die Zeichenfolge `NULL` oder die gefundene Position ist 0.  
   
--   Die Verkettung oder andere Operationen mit Zeichenfolgen fester Länge (`CHAR`, `NCHAR`) kann zu unerwarteten Ergebnissen führen, da diese Typen in der Datenbank automatisches Padding verwenden.  
+- Die Verkettung oder andere Operationen mit Zeichenfolgen fester Länge (`CHAR`, `NCHAR`) kann zu unerwarteten Ergebnissen führen, da diese Typen in der Datenbank automatisches Padding verwenden.  
   
--   Da viele Methoden, wie `Replace`, `ToLower`, `ToUpper` und die Zeichenindizierung keine gültige Übersetzung für die `TEXT`-Spalte oder die `NTEXT`-Spalte und XML aufweisen, kommt es bei normaler Übersetzung zu `SqlExceptions`. Dieses Verhalten gilt für diese Typen als akzeptabel. Alle Zeichenfolgenoperationen müssen jedoch zur Common Language Runtime (CLR)-Semantik für `VARCHAR`, `NVARCHAR`, `VARCHAR(max)` und `NVARCHAR(max)` passen.  
+- Da viele Methoden, wie `Replace`, `ToLower`, `ToUpper` und die Zeichenindizierung keine gültige Übersetzung für die `TEXT`-Spalte oder die `NTEXT`-Spalte und XML aufweisen, kommt es bei normaler Übersetzung zu `SqlExceptions`. Dieses Verhalten gilt für diese Typen als akzeptabel. Alle Zeichenfolgenoperationen müssen jedoch zur Common Language Runtime (CLR)-Semantik für `VARCHAR`, `NVARCHAR`, `VARCHAR(max)` und `NVARCHAR(max)` passen.  
   
 ## <a name="see-also"></a>Siehe auch
 

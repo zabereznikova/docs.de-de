@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f12243571262ad7511795c48721617932fc6b30b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dd75fa12a95478a65d93eb07a32acf4cfd8b9632
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161407"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782083"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>IMetaDataTables2::GetMetaDataStorage-Methode
 Ruft ab, die Größe und den Inhalt der Metadaten im angegebenen Abschnitt gespeichert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetMetaDataStorage (  
    [in, out] const void   **ppvMd,  
    [out] ULONG   *pcbMd  

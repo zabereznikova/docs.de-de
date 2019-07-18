@@ -2,12 +2,12 @@
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3afc04fec996f4e24eb6e5ad771886480cd9cb9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166529"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491046"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) für einen Workflowdienst nachverfolgung aktivieren und die Überwachungsereignisse in Event Tracing for Windows (ETW) ausgegeben wird. In dem Beispiel wird der ETW-Überwachungsteilnehmer (<xref:System.Activities.Tracking.EtwTrackingParticipant>) zur Ausgabe von Workflowüberwachungsdatensätzen in ETW verwendet.
@@ -20,7 +20,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) f�
 |Komponente|Beschreibung|
 |---------------|-----------------|
 |Überwachungslaufzeit|Stellt die Infrastruktur bereit, um Überwachungsdatensätze auszugeben.|
-|Überwachungsteilnehmer|Greift auf die Nachverfolgungsdatensätze zu. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] umfasst einen Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
+|Überwachungsteilnehmer|Greift auf die Nachverfolgungsdatensätze zu. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] wird mit einem Nachverfolgungsteilnehmer geliefert, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
 |Überwachungsprofil|Ein Filtermechanismus, der einem Überwachungsteilnehmer das Abonnieren einer Teilmenge der Überwachungsdatensätze ermöglicht, die von einer Workflowinstanz ausgegeben werden.|
 
  In der folgenden Tabelle sind die Überwachungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.
@@ -39,33 +39,33 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) f�
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1.  Öffnen Sie die Projektmappendatei "etwtrackingparticipantsample.sln" in mit Visual Studio 2010.
+1. Öffnen Sie die Projektmappendatei "etwtrackingparticipantsample.sln" in mit Visual Studio 2010.
 
-2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
 
-3.  Drücken Sie F5, um die Projektmappe auszuführen.
+3. Drücken Sie F5, um die Projektmappe auszuführen.
 
      Der Dienst lauscht standardmäßig an Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4.  Öffnen Sie den WCF-Testclient mit [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)].
+4. Öffnen Sie die WCF-Testclient mit Datei-Explorer.
 
      WCF-Testclient (WcfTestClient.exe) befindet sich in der \<Visual Studio 2010-Installationsordner > \Common7\IDE\-Ordner.
 
      Der Standardinstallationsordner für die Visual Studio 2010 ist c:\Programme\Microsoft c:\Programme\Microsoft Visual Studio 10.0.
 
-5.  Wählen Sie im WCF-Testclient **Dienst hinzufügen** aus der **Datei** Menü.
+5. Wählen Sie im WCF-Testclient **Dienst hinzufügen** aus der **Datei** Menü.
 
      Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Die Standardeinstellung ist `http://localhost:53797/SampleWorkflowService.xamlx`.
 
-6.  Öffnen Sie die Ereignisanzeige.
+6. Öffnen Sie die Ereignisanzeige.
 
      Starten Sie vor dem Aufrufen des Diensts die Ereignisanzeige über den **starten** , wählen Sie im Menü **ausführen** und geben Sie im `eventvwr.exe`. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.
 
-7.  In der Strukturansicht der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, und **Microsoft**. Mit der rechten Maustaste **Microsoft** , und wählen Sie **Ansicht** und dann **analytische und Debugprotokolle** , aktivieren Sie die analytischen und Debugprotokolle
+7. In der Strukturansicht der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, und **Microsoft**. Mit der rechten Maustaste **Microsoft** , und wählen Sie **Ansicht** und dann **analytische und Debugprotokolle** , aktivieren Sie die analytischen und Debugprotokolle
 
      Sicherstellen, dass die **analytische und Debugprotokolle** Option aktiviert ist.
 
-8.  In der Strukturansicht in der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren** zum Aktivieren der **analytisch** Protokoll.
+8. In der Strukturansicht in der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren** zum Aktivieren der **analytisch** Protokoll.
 
 9. Testen Sie den Dienst mithilfe des WCF-Testclients, indem Sie auf `GetData` doppelklicken.
 
@@ -123,13 +123,13 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) f�
 
 #### <a name="to-clean-up-optional"></a>So führen Sie eine Bereinigung aus (optional)
 
-1.  Öffnen Sie die Ereignisanzeige.
+1. Öffnen Sie die Ereignisanzeige.
 
-2.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll deaktivieren**.
+2. Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll deaktivieren**.
 
-3.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll löschen**.
+3. Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll löschen**.
 
-4.  Wählen Sie die **löschen** Option aus, um die Ereignisse zu löschen.
+4. Wählen Sie die **löschen** Option aus, um die Ereignisse zu löschen.
 
 ## <a name="known-issue"></a>Bekanntes Problem
 

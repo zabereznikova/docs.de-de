@@ -1,17 +1,17 @@
 ---
-title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method
+title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod-Methode
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67ae413ae8944757fc90bcde752b9a5fe53cc68f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 870a71de2aee2e9b725749157791c49836c6ea00
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365320"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636885"
 ---
-# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method
+# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod-Methode
 
 Gibt einen Enumerator für alle Methoden, die in einem bestimmten NGen-Modul und Inline einer bestimmten Methode definiert sind.
 

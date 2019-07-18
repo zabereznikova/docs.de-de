@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f8c268c816975fa9b00725d317365c147312b950
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074650"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593460"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Vorgehensweise: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers
 Nachdem Sie dem Formular Steuerelemente hinzugefügt und die Benutzeroberfläche für Ihre Anwendung bestimmt, können Sie die Steuerelemente an eine Datenquelle binden, damit Benutzer können zur Laufzeit ändern und Speichern von Daten, die im Zusammenhang mit der Anwendung.  
@@ -27,29 +27,29 @@ Nachdem Sie dem Formular Steuerelemente hinzugefügt und die Benutzeroberfläche
   
 ### <a name="to-bind-a-control-at-design-time"></a>Zum Binden eines Steuerelements zur Entwurfszeit  
   
-1.  Ziehen Sie eine <xref:System.Windows.Forms.TextBox> -Steuerelement in das Formular.  
+1. Ziehen Sie eine <xref:System.Windows.Forms.TextBox> -Steuerelement in das Formular.  
   
-2.  In der **Eigenschaften** Fenster:  
+2. In der **Eigenschaften** Fenster:  
   
-    1.  Erweitern Sie die **(DataBindings)** Knoten.  
+    1. Erweitern Sie die **(DataBindings)** Knoten.  
   
-    2.  Klicken Sie auf den Pfeil neben der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft.  
+    2. Klicken Sie auf den Pfeil neben der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft.  
   
          Die **DataSource** UI-Typ-Editor wird geöffnet.  
   
          Wenn eine Datenquelle für das Projekt oder Formular zuvor konfiguriert wurde, wird es angezeigt.  
   
-3.  Klicken Sie auf **Projektdatenquelle hinzufügen**, um die Daten zu verbinden und die Datenquelle zu erzeugen.  
+3. Klicken Sie auf **Projektdatenquelle hinzufügen**, um die Daten zu verbinden und die Datenquelle zu erzeugen.  
   
-4.  Klicken Sie auf der Startseite des **Assistenten zum Konfigurieren von Datenquellen** auf **Weiter**.  
+4. Klicken Sie auf der Startseite des **Assistenten zum Konfigurieren von Datenquellen** auf **Weiter**.  
   
-5.  Auf der **wählen Sie einen Datenquellentyp** Seite **Datenbank**.  
+5. Auf der **wählen Sie einen Datenquellentyp** Seite **Datenbank**.  
   
-6.  Auf der **wählen Sie Ihre Datenverbindung** Seite, wählen Sie eine Datenverbindung aus der Liste der verfügbaren Verbindungen. Wenn die gewünschte Datenverbindung nicht verfügbar-Option ist **neue Verbindung** um eine neue Datenverbindung zu erstellen.  
+6. Auf der **wählen Sie Ihre Datenverbindung** Seite, wählen Sie eine Datenverbindung aus der Liste der verfügbaren Verbindungen. Wenn die gewünschte Datenverbindung nicht verfügbar-Option ist **neue Verbindung** um eine neue Datenverbindung zu erstellen.  
   
-7.  Wählen Sie **Ja, Verbindung speichern** so speichern die Verbindungszeichenfolge in der Konfigurationsdatei der Anwendung.  
+7. Wählen Sie **Ja, Verbindung speichern** so speichern die Verbindungszeichenfolge in der Konfigurationsdatei der Anwendung.  
   
-8.  Wählen Sie die Datenbankobjekte, die in die Anwendung gebracht werden sollen. In diesem Fall wählen Sie ein Feld in einer Tabelle, die Sie möchten die <xref:System.Windows.Forms.TextBox> angezeigt.  
+8. Wählen Sie die Datenbankobjekte, die in die Anwendung gebracht werden sollen. In diesem Fall wählen Sie ein Feld in einer Tabelle, die Sie möchten die <xref:System.Windows.Forms.TextBox> angezeigt.  
   
 9. Ersetzen Sie den Standardnamen des Datasets falls gewünscht.  
   
@@ -63,5 +63,5 @@ Nachdem Sie dem Formular Steuerelemente hinzugefügt und die Benutzeroberfläche
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [Hinzufügen neuer Datenquellen](/visualstudio/data-tools/add-new-data-sources)
+- [Neue Datenquelle hinzufügen](/visualstudio/data-tools/add-new-data-sources)
 - [Datenquellenfenster](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))

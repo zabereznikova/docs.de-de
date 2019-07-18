@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155089"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960112"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
 Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. Windows Communication Foundation (WCF) unterstützt zwei Mechanismen für den Autorisierungsprozess. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Die zweite ist ein anspruchsbasiertes Modell, bekannt als die *Identitätsmodell*. WCF verwendet das Identitätsmodell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Modellklassen für die Identität können zur Unterstützung neuer Anspruchstypen für benutzerdefinierte Autorisierungsschemas erweitert werden. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  
@@ -90,11 +90,11 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
   
  Die folgende Abbildung zeigt ein Beispiel mit drei Sätzen von Ansprüchen, wobei ein Satz von Ansprüchen als eigener Aussteller einen Satz von Ansprüchen besitzt, der wiederum den Anspruchssatz "System" als Aussteller aufweist. Daher bilden Sätze von Ansprüchen eine Hierarchie mit einer willkürlichen Tiefe.  
   
- ![Verwalten von Ansprüchen und Autorisierung](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "Claimshierarchy")  
+ ![Die Sätze von Ansprüchen, innerhalb der Hierarchie.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- Mehrere Sätze von Ansprüchen können über denselben ausstellenden Anspruchssatz verfügen, wie in der folgenden Abbildung dargestellt.  
+ Mehrere Sätze von Ansprüchen möglicherweise denselben ausstellenden eingabeanspruchssatz, wie in der folgenden Abbildung dargestellt:
   
- ![Verwalten von Ansprüchen und Autorisierung](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "Multiplesetsofclaims")  
+ ![Mehrere Sätze von Ansprüchen mit denselben ausstellenden Anspruchssatz.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  Mit Ausnahme eines Anspruchssatzes, der sein eigener Aussteller ist, bietet das Identitätsmodell keine Unterstützung für Anspruchssätze zur Bildung einer Schleife. Daher kann es nie zu einer Situation kommen, in der der Anspruchssatz A vom Anspruchssatz B ausgestellt wird, der wiederum selbst von Anspruchsatz A ausgestellt wurde. Außerdem bietet das Identitätsmodell keine Unterstützung für Anspruchssätze mit mehreren Ausstellern. Wenn zwei oder mehr Aussteller einen bestimmten Satz von Ansprüchen ausstellen müssen, müssen Sie mehrere Anspruchssätze verwenden. Jeder Satz enthält dabei dieselben Ansprüche, jedoch unterschiedliche Aussteller.  
   
@@ -175,8 +175,8 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
 - [Ansprüche und das Verweigern des Zugriffs auf Ressourcen](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [Erstellen von Ansprüchen und Ressourcenwerte](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
 - [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [Vorgehensweise: Vergleichen von Ansprüchen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Vorgehensweise: Erstellen einer benutzerdefinierten Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Vorgehensweise: Ansprüche vergleichen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Vorgehensweise: Erstellen Sie eine benutzerdefinierte Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
 - [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

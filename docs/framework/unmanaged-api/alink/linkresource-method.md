@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e851c1bd56c0e9ece02fb06c0dcd9975a5b02ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 335d80255f7a3f5a22e8a69aa91c9e5b0843ea1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079434"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741593"
 ---
 # <a name="linkresource-method"></a>LinkResource-Methode
 Links in einer Ressource.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT LinkResource(  
     mdAssembly  AssemblyID,  
     LPCWSTR     pszFileName,  
@@ -64,4 +64,4 @@ HRESULT LinkResource(
 
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

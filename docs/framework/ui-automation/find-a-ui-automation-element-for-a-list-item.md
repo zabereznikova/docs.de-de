@@ -10,11 +10,11 @@ helpviewer_keywords:
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
 ms.openlocfilehash: 7fe1f564e8c9fb967c0b7b4e8b12712962bdedc7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609876"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>Suchen eines Benutzeroberflächenautomatisierungs-Elements für ein Listenelement
 > [!NOTE]

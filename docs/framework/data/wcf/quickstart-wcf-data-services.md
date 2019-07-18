@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 49d11556d3703331b4cdf5bf83a69f6b15bca8ed
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504561"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881994"
 ---
 # <a name="quickstart-wcf-data-services"></a>Schnellstart (WCF Data Services)
 
@@ -20,7 +20,7 @@ Dieser Schnellstart hilft Ihnen mit WCF Data Services vertraut machen und die [!
 
 Die erste Aufgabe in diesem Schnellstart veranschaulicht das Erstellen eines Datendiensts, um einen OData-feed aus der Northwind-Beispieldatenbank verfügbar zu machen. In späteren Themen greifen auf den-OData-feed mit einem Webbrowser, und Sie erstellen eine Windows Presentation Foundation (WPF)-Clientanwendung, die die OData verwendet Feeds mit Clientbibliotheken.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Um diesen Schnellstart durchzuführen, müssen Sie die folgenden Komponenten installieren:
 
@@ -28,13 +28,13 @@ Um diesen Schnellstart durchzuführen, müssen Sie die folgenden Komponenten ins
 
 - Eine Instanz von SQL Server. Dies schließt SQL Server Express in einer Standardinstallation von Visual Studio 2015 oder als Teil von aufzunehmen ist die **datenspeicherung und-Verarbeitung** arbeitsauslastung in Visual Studio 2017.
 
-- Die Beispieldatenbank Northwind. Diese Beispieldatenbank, finden Sie unter auf der Downloadseite des [Beispieldatenbanken für SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+- Die Beispieldatenbank Northwind. Diese Beispieldatenbank kann von der Downloadseite [Beispieldatenbanken für SQL Server](https://go.microsoft.com/fwlink/?linkid=24758)heruntergeladen werden.
 
 ## <a name="wcf-data-services-quickstart-tasks"></a>WCF Data services-Schnellstart-Aufgaben
 
  [Erstellen des Datendiensts](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
- Definieren Sie die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung, definieren Sie das Datenmodell, erstellen Sie den Datendienst, und aktivieren Sie den Zugriff auf Ressourcen.
+ Definieren Sie die ASP.NET-Anwendung, definieren Sie das Datenmodell, erstellen Sie den Datendienst und aktivieren Sie den Zugriff auf Ressourcen.
 
  [Auf den Dienst über einen Webbrowser zugreifen.](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
@@ -45,7 +45,7 @@ Um diesen Schnellstart durchzuführen, müssen Sie die folgenden Komponenten ins
  Erstellen einer WPF-app für den OData-Feed zu nutzen, binden Daten an Windows-Steuerelemente, Ändern von Daten in den gebundenen Steuerelementen, und senden Sie, dass die Änderungen an den Datendienst zurück.
 
 > [!NOTE]
-> Projektdateien einer abgeschlossenen Version des Schnellstarts können von heruntergeladen werden die [WCF Data Services Documentation Samples](https://go.microsoft.com/fwlink/?LinkId=179994) Seite.
+> Projektdateien einer abgeschlossenen Version des Schnellstarts können von der Seite [WCF Data Services Quickstart (OData Service and WPF Client)](https://go.microsoft.com/fwlink/?LinkId=179994) (WCF Data Services-Schnellstart (OData-Dienst und WPF-Client)) heruntergeladen werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

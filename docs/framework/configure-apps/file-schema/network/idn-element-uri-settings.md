@@ -1,19 +1,19 @@
 ---
-title: <idn> -Element (Netzwerkeinstellungen)
+title: <idn>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 369decf8551c76293ca513b8a3e58b4142a74773
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129401"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592761"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN >-Element (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domänennamen angewendet wird.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  
- [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI >-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -50,25 +50,25 @@ Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domä
   
  Um die IRI-Unterstützung aktivieren, müssen die folgenden beiden Änderungen vornehmen:  
   
-1.  Fügen Sie die folgende Zeile in die Datei "Machine.config" im .NET Framework 2.0-Verzeichnis  
+1. Fügen Sie die folgende Zeile in die Datei "Machine.config" im .NET Framework 2.0-Verzeichnis  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Geben Sie, ob Sie möchten, dass Internationalized Domain Name (IDN) zu analysieren, die für den Domänennamen angewendet und gibt an, ob die IRI-Analyseregeln angewendet werden soll. Dies kann in der Datei „machine.config“ oder in der Datei „App.config“ durchgeführt werden.  
+2. Geben Sie, ob Sie möchten, dass Internationalized Domain Name (IDN) zu analysieren, die für den Domänennamen angewendet und gibt an, ob die IRI-Analyseregeln angewendet werden soll. Dies kann in der Datei „machine.config“ oder in der Datei „App.config“ durchgeführt werden.  
   
  Es gibt drei mögliche Werte für IDN, die abhängig von den DNS-Servern, die verwendet werden:  
   
--   IDN aktiviert = All  
+- IDN aktiviert = All  
   
      Dieser Wert werden alle Unicode-Domänennamen in ihre Punycode-Entsprechungen (IDN-Namen) konvertiert.  
   
--   IDN aktiviert = AllExceptIntranet  
+- IDN aktiviert = AllExceptIntranet  
   
      Diesen Wert werden alle Unicode-Domänennamen nicht auf dem lokalen Intranet verwenden Sie die Punycode-Entsprechungen (IDN-Namen) konvertiert. In diesem Fall sollte Wenn internationale Namen im lokalen Intranet verarbeitet, unterstützen die DNS-Server, die für das Intranet verwendet werden Unicode-namensauflösung.  
   
--   IDN aktiviert = keine  
+- IDN aktiviert = keine  
   
      Dieser Wert wird nicht auf Unicode-Domänennamen auf Ihre Punycode-Entsprechungen konvertiert. Dies ist der Standardwert, der das .NET Framework 2.0-Verhalten entspricht.  
   
@@ -97,4 +97,4 @@ Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domä
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

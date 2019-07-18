@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 68401571645d77a41b827c13b3cfc3674076e218
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7fbf2b15105a9fdcda5c7f6653753a4da54b394b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824571"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622344"
 ---
 # <a name="class-statement-visual-basic"></a>Class-Anweisung (Visual Basic)
 Deklariert den Namen einer Klasse, und führt die Definitionen der Variablen, Eigenschaften, Ereignisse und Prozeduren, die die Klasse umfasst.  
@@ -65,23 +65,23 @@ End Class
   
 ## <a name="rules"></a>Regeln  
   
--   **Schachteln.** Sie können eine Klasse in einer anderen definieren. Die äußere Klasse heißt die *, die Klasse enthält*, und die interne Klasse heißt eine *der geschachtelten Klasse*.  
+- **Schachteln.** Sie können eine Klasse in einer anderen definieren. Die äußere Klasse heißt die *, die Klasse enthält*, und die interne Klasse heißt eine *der geschachtelten Klasse*.  
   
--   **Vererbung.** Wenn die Klasse verwendet die [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), Sie können angeben, nur eine Basisklasse oder Schnittstelle. Eine Klasse kann nicht von mehr als ein Element erben.  
+- **Vererbung.** Wenn die Klasse verwendet die [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md), Sie können angeben, nur eine Basisklasse oder Schnittstelle. Eine Klasse kann nicht von mehr als ein Element erben.  
   
      Eine Klasse kann nicht von einer anderen Klasse mit einer stärker einschränkende Zugriffsebene erben. Z. B. eine `Public` Klasse erben kann keinem `Friend` Klasse.  
   
      Eine Klasse kann nicht von einer Klasse, die in ihr geschachtelt ist, erben.  
   
--   **-Implementierung.** Wenn die Klasse verwendet die [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md), Sie müssen alle Member, die durch jede Schnittstelle, die Sie, in angeben definierten implementieren `interfacenames`. Eine Ausnahme ist die erneute Implementierung eines Members der Basisklasse. Weitere Informationen finden Sie unter "Neuimplementierung" in [implementiert](../../../visual-basic/language-reference/statements/implements-clause.md).  
+- **-Implementierung.** Wenn die Klasse verwendet die [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md), Sie müssen alle Member, die durch jede Schnittstelle, die Sie, in angeben definierten implementieren `interfacenames`. Eine Ausnahme ist die erneute Implementierung eines Members der Basisklasse. Weitere Informationen finden Sie unter "Neuimplementierung" in [implementiert](../../../visual-basic/language-reference/statements/implements-clause.md).  
   
--   **Standardeigenschaft.** Eine Klasse kann höchstens eine Eigenschaft als Festlegen der *Standardeigenschaft*. Weitere Informationen finden Sie unter [Standard](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Standardeigenschaft.** Eine Klasse kann höchstens eine Eigenschaft als Festlegen der *Standardeigenschaft*. Weitere Informationen finden Sie unter [Standard](../../../visual-basic/language-reference/modifiers/default.md).  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Zugriffsebene.** Innerhalb einer Klasse können Sie jeden Member mit einer eigenen Zugriffsebene deklarieren. Standardzugriff für Klassen [öffentliche](../../../visual-basic/language-reference/modifiers/public.md) zuzugreifen, mit Ausnahme von Variablen und Konstanten, die standardmäßig [Private](../../../visual-basic/language-reference/modifiers/private.md) Zugriff. Wenn eine Klasse mehr als einen seiner Member Zugriff eingeschränktem, hat Zugriff auf Klassenebene Vorrang vor.  
+- **Zugriffsebene.** Innerhalb einer Klasse können Sie jeden Member mit einer eigenen Zugriffsebene deklarieren. Standardzugriff für Klassen [öffentliche](../../../visual-basic/language-reference/modifiers/public.md) zuzugreifen, mit Ausnahme von Variablen und Konstanten, die standardmäßig [Private](../../../visual-basic/language-reference/modifiers/private.md) Zugriff. Wenn eine Klasse mehr als einen seiner Member Zugriff eingeschränktem, hat Zugriff auf Klassenebene Vorrang vor.  
   
--   **Bereich.** Eine Klasse ist der Gültigkeitsbereich der enthaltenden Namespace, Klasse, Struktur oder Modul.  
+- **Bereich.** Eine Klasse ist der Gültigkeitsbereich der enthaltenden Namespace, Klasse, Struktur oder Modul.  
   
      Der Gültigkeitsbereich Jeder Klassenmember ist die gesamte Klasse.  
   
@@ -89,18 +89,18 @@ End Class
   
      Klassenmember verfügen über eine Lebensdauer, je nachdem, wie und wo sie deklariert werden. Weitere Informationen finden Sie unter [Lebensdauer in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   **Qualifizierung.** Code außerhalb einer Klasse muss den Namen eines Mitglieds mit dem Namen dieser Klasse qualifizieren.  
+- **Qualifizierung.** Code außerhalb einer Klasse muss den Namen eines Mitglieds mit dem Namen dieser Klasse qualifizieren.  
   
      Wenn Code in einer geschachtelten Klasse einen nicht qualifizierten Verweis auf ein Programmierelement enthält, sucht Visual Basic für das Element zuerst in der geschachtelten Klasse, klicken Sie dann in der enthaltenden Klasse, und so weiter bis zum äußersten enthaltenden Element.  
   
 ## <a name="classes-and-modules"></a>Klassen und Modulen  
  Diese Elemente verfügen über viele ähnlichkeiten, aber es gibt auch einige wichtige Unterschiede.  
   
--   **-Terminologie verwenden.** Zwei Arten von Modulen zur Erkennung von früheren Versionen von Visual Basic: *Klassenmodule* (CLS-Dateien) und *Standardmodulen* (BAS-Dateien). Der aktuellen Version werden diese *Klassen* und *Module*bzw.  
+- **-Terminologie verwenden.** Zwei Arten von Modulen zur Erkennung von früheren Versionen von Visual Basic: *Klassenmodule* (CLS-Dateien) und *Standardmodulen* (BAS-Dateien). Der aktuellen Version werden diese *Klassen* und *Module*bzw.  
   
--   **Freigegebene Member.** Sie können steuern, ob ein Member einer Klasse eines freigegebenen oder Instanzmember.  
+- **Freigegebene Member.** Sie können steuern, ob ein Member einer Klasse eines freigegebenen oder Instanzmember.  
   
--   **Objektorientierung.** Klassen sind objektorientiert, Module jedoch nicht. Sie können eine oder mehrere Instanzen einer Klasse erstellen. Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+- **Objektorientierung.** Klassen sind objektorientiert, Module jedoch nicht. Sie können eine oder mehrere Instanzen einer Klasse erstellen. Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine `Class` Anweisung, um eine Klasse und mehrere Member definieren.  

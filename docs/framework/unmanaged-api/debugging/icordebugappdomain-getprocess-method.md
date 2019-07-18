@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05c35c810630897e4a7bd28e1cbe8cedefefb1f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: eebb0c39cb8ae69dfce1e865f2784bbe9a408786
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489354"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737832"
 ---
 # <a name="icordebugappdomaingetprocess-method"></a>ICorDebugAppDomain::GetProcess-Methode
 Ruft den Prozess ab, die die Anwendungsdomäne enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [out] ICorDebugProcess   **ppProcess  
 );  

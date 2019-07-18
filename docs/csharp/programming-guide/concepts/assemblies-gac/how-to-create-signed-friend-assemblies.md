@@ -2,35 +2,35 @@
 title: 'Vorgehensweise: Erstellen von signierten Friend-Assemblys (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 13b99cd1118071e7c403828260003c80b9417792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354491"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582981"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Vorgehensweise: Erstellen von signierten Friend-Assemblys (C#)
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen verwenden. Beide Assemblys müssen starke Namen erhalten. Obwohl beide Assemblys in diesem Beispiel die gleichen Schlüssel verwenden, können Sie unterschiedliche Schlüssel für zwei Assemblys verwenden.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>So erstellen Sie eine signierte Assembly und eine Friend-Assembly  
   
-1.  Öffnen Sie eine Eingabeaufforderung.  
+1. Öffnen Sie eine Eingabeaufforderung.  
   
-2.  Verwenden Sie die folgende Sequenz von Befehlen mit dem Strong Name-Tool, um eine Schlüsseldatei zu generieren und den öffentlichen Schlüssel anzuzeigen. Weitere Informationen finden Sie unter [Sn.exe (Strong Name-Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
+2. Verwenden Sie die folgende Sequenz von Befehlen mit dem Strong Name-Tool, um eine Schlüsseldatei zu generieren und den öffentlichen Schlüssel anzuzeigen. Weitere Informationen finden Sie unter [Sn.exe (Strong Name-Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
-    1.  Generieren Sie einen Schlüssel mit starkem Namen für dieses Beispiel, und speichern Sie ihn in der Datei „FriendAssemblies.snk“:  
+    1. Generieren Sie einen Schlüssel mit starkem Namen für dieses Beispiel, und speichern Sie ihn in der Datei „FriendAssemblies.snk“:  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Extrahieren Sie den öffentlichen Schlüssel aus FriendAssemblies.snk, und fügen Sie es in FriendAssemblies.publickey ein:  
+    2. Extrahieren Sie den öffentlichen Schlüssel aus FriendAssemblies.snk, und fügen Sie es in FriendAssemblies.publickey ein:  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  Zeigen Sie den öffentlichen Schlüssel, der in der Datei „FriendAssemblies.publickey“ gespeichert ist:  
+    3. Zeigen Sie den öffentlichen Schlüssel, der in der Datei „FriendAssemblies.publickey“ gespeichert ist:  
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Erstellen Sie eine C#-Datei namens `friend_signed_A` mit dem folgenden Code. Der Code verwendet das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, um „friend_signed_B“ als Friend-Assembly zu deklarieren.  
+3. Erstellen Sie eine C#-Datei namens `friend_signed_A` mit dem folgenden Code. Der Code verwendet das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, um „friend_signed_B“ als Friend-Assembly zu deklarieren.  
   
      Das Strong Name-Tool generiert jedes Mal einen neuen öffentlichen Schlüssel, wenn es ausgeführt wird. Aus diesem Grund müssen Sie den öffentlichen Schlüssel im folgenden Code durch den öffentlichen Schlüssel ersetzen, den Sie gerade erstellt haben, so wie im folgenden Beispiel gezeigt.  
   
@@ -51,13 +51,13 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
     }  
     ```  
   
-4.  Kompilieren und signieren Sie friend_signed_A mithilfe des folgenden Befehls.  
+4. Kompilieren und signieren Sie friend_signed_A mithilfe des folgenden Befehls.  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  Erstellen Sie eine C#-Datei mit dem Namen `friend_signed_B`, die den folgenden Code enthält. Da friend_signed_A friend_signed_B als Friend-Assembly angibt, kann der Code in friend_signed_B auf `internal`-Typen und -Member aus friend_signed_A zugreifen. Im Folgenden wird der Code dieser Datei dargestellt:  
+5. Erstellen Sie eine C#-Datei mit dem Namen `friend_signed_B`, die den folgenden Code enthält. Da friend_signed_A friend_signed_B als Friend-Assembly angibt, kann der Code in friend_signed_B auf `internal`-Typen und -Member aus friend_signed_A zugreifen. Im Folgenden wird der Code dieser Datei dargestellt:  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -73,7 +73,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
     }  
     ```  
   
-6.  Kompilieren und signieren Sie friend_signed_B, indem Sie den folgenden Befehl verwenden.  
+6. Kompilieren und signieren Sie friend_signed_B, indem Sie den folgenden Befehl verwenden.  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -81,7 +81,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit Assemblys mit starken Namen 
   
      Der Name der vom Compiler generierten Assembly muss mit dem Namen der Friend-Assembly übereinstimmen, die an das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> übergeben wird. Sie müssen den Namen der Ausgabeassembly (EXE oder DLL) explizit mit der `/out`-Compileroption angeben.  Weitere Informationen finden Sie unter [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-7.  Führen Sie die Datei „friend_signed_B.exe“ aus.  
+7. Führen Sie die Datei „friend_signed_B.exe“ aus.  
   
      Das Programm gibt die Zeichenfolge „Class1.Test“ aus.  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c29e581a77ac90882d102cfee2c715e9c309e1a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116024"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762274"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData-Methode
 Fordert den Debugger auf, den vollständigen Pfad eines Moduls zurückzugeben, dessen Metadaten benötigt werden, um einen vom Debugger angeforderten Vorgang abzuschließen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetMetaData(  
       [in] LPCWSTR wszImagePath,  
       [in] DWORD   dwImageTimeStamp,  
@@ -69,7 +69,7 @@ HRESULT GetMetaData(
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|Die Methode wurde erfolgreich abgeschlossen. `wszPathBuffer` enthält den vollständigen Pfad zur Datei, und Null-terminiert ist.|  
+|S_OK|Die Methode wurde erfolgreich abgeschlossen. `wszPathBuffer` enthält den vollständigen Pfad zu der Datei und endet auf NULL.|  
 |E_NOT_SUFFICIENT_BUFFER|Die aktuelle Größe von `wszPathBuffer` reicht nicht aus, um den vollständigen Pfad aufzunehmen. In diesem Fall enthält `pcchPathBuffer` die benötigte Anzahl von `WCHAR`s, einschließlich des abschließenden NULL-Zeichens, und `GetMetaData` wird ein zweites Mal mit der angeforderten Puffergröße aufgerufen.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -87,5 +87,5 @@ HRESULT GetMetaData(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugThread4-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

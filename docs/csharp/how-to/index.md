@@ -2,12 +2,12 @@
 title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202339"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859534"
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
@@ -21,7 +21,7 @@ Es gibt einige Tipps und Tricks, die allgemeine C#-Entwicklungsmethoden sind.
 - [Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Verwenden von Lambdaausdrücken](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Lösen von Namenstypkonflikten durch das Verwenden des globalen Namespacealias](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Verwenden der Operatorüberladung](../language-reference/keywords/operator.md).
+- [Verwenden der Operatorüberladung](../language-reference/operators/operator-overloading.md).
 - [Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Auch C#-Programmierer sehen einen Nutzen im [Verwenden des `My`-Namespaces aus VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Erstellen einer neuen Methode für einen `enum`-Typ mithilfe von Erweiterungsmethoden](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
@@ -66,7 +66,7 @@ Möglicherweise müssen Sie ein Objekt in einen anderen Typ konvertieren.
 - [Konvertieren eines Bytearrays in einen ganzzahligen Typ](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Konvertieren einer Zeichenfolge in eine Zahl](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Verwenden des Musterabgleichs sowie der Operatoren `as` und `is` zur sicheren Umwandlung in einen anderen Typ](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
-- [Definieren von Konvertierungsoperatoren für `struct`-Typen](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
+- [Definieren benutzerdefinierter Typkonvertierungen](../language-reference/operators/user-defined-conversion-operators.md)
 - [Identifizieren, ob ein Typ ein Typ ist, der NULL-Werte zulässt](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Konvertieren zwischen Typen, die NULL zulassen, und Typen, die NULL nicht zulassen](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 
@@ -98,7 +98,6 @@ Ereignisse sind Funktionen zum Veröffentlichen oder Abonnieren von Benachrichti
 - [Implementieren von Schnittstellenereignissen](../programming-guide/events/how-to-implement-interface-events.md).
 - [Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 - [Auslösen von Basisklassenereignissen in abgeleiteten Klassen](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md).
-- [Speichern von Ereignisinstanzen in einem Wörterbuch](../programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md).
 - [Implementieren von benutzerdefinierten Ereigniszugriffsmethoden](../programming-guide/events/how-to-implement-custom-event-accessors.md).
 
 ## <a name="linq-practices"></a>LINQ-Methoden
@@ -133,4 +132,3 @@ Moderne Programme verwenden häufig asynchrone Vorgänge. In den folgenden Artik
 C#-Programme haben in der Regel Befehlszeilenargumente. In den folgenden Artikeln erfahren Sie, wie Sie auf Befehlszeilenargumente zugreifen und sie verarbeiten.
 
 - [Abrufen aller Befehlszeilenargumente mit `for`](../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md).
-- [Abrufen aller Befehlszeilenargumente mit `foreach`](../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md).

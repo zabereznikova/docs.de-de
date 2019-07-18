@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9af0773c2ef066c103f823e4d28c0fd6e9eadc24
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c5ddc2646b560814adef01f2508f3792abe13c1d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086558"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744528"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty-Methode
 Ruft einen Zeiger auf die Eigenschaft, die durch den Bezeichner für die angegebene Eigenschaft verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetProperty (  
     [in]      DWORD    PropertyId,  
     [out]     LPVOID   pvProperty,  

@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Sortieren von Elementen nach mehreren Schlüsseln (Visua
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
 ms.openlocfilehash: d423505a5b47189b9de556675d4b71f428a6bdc6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614209"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Vorgehensweise: Sortieren von Elementen nach mehreren Schlüsseln (Visual Basic)
 In diesem Thema wird das Sortieren nach mehreren Schlüsseln gezeigt.  

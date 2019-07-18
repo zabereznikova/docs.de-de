@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: fa99806510bac8102478cc21e0782067f7bdff86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497415"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613838"
 ---
 # <a name="time-based-cache-policies"></a>zeitbasierte Cacherichtlinien
 Eine zeitbasierten Cacherichtlinie definiert die Aktualität der zwischengespeicherten Einträge mithilfe der Uhrzeit, zu der die Ressource abgerufen wurde, der Header, die mit der Ressource zurückgegeben wurden und der aktuellen Uhrzeit. Wenn Sie eine zeitbasierte Cacherichtlinie festlegen, können Sie entweder die zeitbasierte Richtlinie <xref:System.Net.Cache.HttpRequestCacheLevel.Default> verwenden, oder eine benutzerdefinierte zeitbasierte Richtlinie erstellen. Bei Verwendung der zeitbasierten Standardrichtlinie für Ressourcen, die mithilfe des Hypertext Transfer Protocol (HTTP) abgerufen wurde, wird das exakte Cacheverhalten von den Headern bestimmt, die in der zwischengespeicherten Antwort enthalten sind, und von den Verhaltensweisen in den Abschnitten 13 und 14 des RFC 2616, verfügbar auf der Webseite der [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Ein Codebeispiel, das das Festlegen der zeitbasierten Standardrichtlinie für HTTP-Ressourcen veranschaulicht, finden Sie unter [Vorgehensweise: Festlegen der zeitbasierten Standardcacherichtlinie für eine Anwendung](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Codebeispiele, die das Erstellen und Verwenden von Cacherichtlinien veranschaulichen, finden Sie unter [Konfigurieren der Zwischenspeicherung in Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -30,13 +30,13 @@ Eine zeitbasierten Cacherichtlinie definiert die Aktualität der zwischengespeic
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Kriterien zum Bestimmen der Aktualität der zwischengespeicherten Einträge  
  Zum Anpassen einer zeitbasierten Cacherichtlinie können Sie angeben, dass eine oder mehrere der folgenden Kriterien verwendet werden, um die Aktualität der zwischengespeicherten Einträge zu bestimmen:  
   
--   Maximales Alter  
+- Maximales Alter  
   
--   Maximale Überalterung  
+- Maximale Überalterung  
   
--   Minimale Aktualität  
+- Minimale Aktualität  
   
--   Datum für die Cachesynchronisierung  
+- Datum für die Cachesynchronisierung  
   
 > [!NOTE]
 >  Die Verwendung der zeitbasierten Standardcacherichtlinie darf nicht mit dem Festlegen einer Standardcacherichtlinie für Ihre Anwendung verwechselt werden. Die zeitbasierte Standardrichtlinie ist eine bestimmte Richtlinie, die auf Ebene der Anforderung oder einer Anwendung verwendet werden kann. Die Standardcacherichtlinie für Ihre Anwendung ist eine Richtlinie (standortbasiert oder zeitbasiert), die wirksam wird, wenn keine Richtlinie für eine Anforderung festgelegt ist. Weitere Informationen zum Festlegen einer Standardcacherichtlinie für Ihre Anwendung finden Sie unter <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
@@ -57,11 +57,12 @@ Eine zeitbasierten Cacherichtlinie definiert die Aktualität der zwischengespeic
   
  Die folgenden Themen enthalten Informationen zu den Auswirkungen einer Kombination der Kriterien der zeitbasierten Cacherichtlinie:  
   
--   [Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+- [Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)
 - [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)

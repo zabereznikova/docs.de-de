@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959494"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593369"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Lesen aus Dateien in Visual Basic
 In diesem Abschnitt wird erläutert, wie man Aufgaben ausführt, die mit dem Lesen von Dateien zu tun haben.  
@@ -22,19 +22,19 @@ In diesem Abschnitt wird erläutert, wie man Aufgaben ausführt, die mit dem Les
  [Vorgehensweise: Lesen aus Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
  Veranschaulicht das Lesen aus einer Textdatei  
   
- [Gewusst wie: Lesen aus Textdateien mit Kommatrennung](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [Vorgehensweise: Lesen aus durch Trennzeichen getrennten Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
  Veranschaulicht das Lesen aus einer Textdatei mit Kommatrennung  
   
- [Gewusst wie: Lesen aus einer Textdatei mit fester Breite](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ [Vorgehensweise: Lesen aus einer Textdatei mit fester Breite](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
  Veranschaulicht das Lesen aus einer Textdatei mit fester Breite  
   
- [Gewusst wie: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ [Vorgehensweise: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
  Veranschaulicht das Lesen aus Textdateien mit mehreren Formaten  
   
- [Gewusst wie: Lesen aus Binärdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ [Vorgehensweise: Lesen aus Binärdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
  Veranschaulicht das Lesen aus einer Binärdatei  
   
- [Gewusst wie: Lesen von Text aus Dateien mit einem StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ [Vorgehensweise: Lesen von Text aus Dateien mit StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  Veranschaulicht die Verwendung von <xref:System.IO.StreamReader> zum Lesen aus einer Datei.  
   
 ## <a name="reference"></a>Referenz  
@@ -63,5 +63,5 @@ In diesem Abschnitt wird erläutert, wie man Aufgaben ausführt, die mit dem Les
  [Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Veranschaulicht die Verwendung des Features `My` mit Dateien und Verzeichnissen  
   
- [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Veranschaulicht die Verwendung der Methode [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] mit Dateien und Verzeichnissen
+ [Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ Veranschaulicht die Verwendung der .NET Framework-Methoden mit Dateien und Verzeichnissen

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ac28f28d4d284ba26fadd46e53ebeb8e5b5f3cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eda866c1a1f1f69f0d042ccfde3dfad293df9b37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139580"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776506"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION-Enumeration
 Enthält Werte, die angeben, dass die Aktion eines Hosts durchführen soll, wenn ein Vorgang angefordert wird, durch die common Language Runtime (CLR) ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     WAIT_MSGPUMP       = 0x1,  
     WAIT_ALERTABLE     = 0x2,  

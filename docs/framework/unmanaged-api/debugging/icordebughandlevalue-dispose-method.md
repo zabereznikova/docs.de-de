@@ -17,24 +17,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9114799b87d39333ff9da66429dc1ea99ec2131c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d21703aa911b5222fff71282e6da26aa5c0e2853
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413429"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756852"
 ---
 # <a name="icordebughandlevaluedispose-method"></a>ICorDebugHandleValue::Dispose-Methode
-Gibt das Handle, das auf die von diesem ICorDebugHandleValue-Objekt verwiesen wird, nicht explizit freigegeben den Schnittstellenzeiger frei.  
+Gibt das Handle, das auf die von diesem ICorDebugHandleValue-Objekt verwiesen wird, ohne explizit freizugeben den Schnittstellenzeiger frei.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Dispose ();  
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
 ms.openlocfilehash: 41c08a48fdb7501081e887fb5cf9f99c334c72ac
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920652"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
 Gibt an, dass eine Eigenschaft oder Prozedur kann nicht in einer abgeleiteten Klasse überschrieben werden.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
 ms.openlocfilehash: 38bf6e8f88b0325193d49148cd6c33031f7b0a6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931910"
 ---
 # <a name="how-to-use-xml-namespaces-in-data-binding"></a>Vorgehensweise: Verwenden von XML-Namespaces bei der Datenbindung
 ## <a name="example"></a>Beispiel  
@@ -31,6 +31,6 @@ ms.locfileid: "59149993"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Binden an XML-Daten mithilfe der XMLDataProvider-Klasse und mithilfe von XPath-Abfragen](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [Übersicht über die Datenbindung](data-binding-overview.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

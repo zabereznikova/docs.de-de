@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Analysiert eine Zeichenfolge (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
 ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942596"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Vorgehensweise: Analysiert eine Zeichenfolge (Visual Basic)
 In diesem Thema wird gezeigt, wie zum Erstellen einer XML-Struktur in C#.  

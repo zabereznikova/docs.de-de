@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 4223ee8c8790ad4d0ae2275b347c4f974eeb4158
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921324"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877963"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung
 
@@ -28,16 +28,16 @@ Wenn Sie einen sicheren Dienst oder Client mit Windows Communication Foundation 
 Der folgende Befehl erstellt ein selbstsigniertes Zertifikat mit dem Antragstellernamen "Stammzertifizierungsstelle" im Aktueller Benutzer persönlich Speicher.
 
 ```powershell
-PS $rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("1.3.6.1.4.1.311.21.10={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2")
+$rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -KeyUsage CertSign,DigitalSignature
 ```
 
 Wir müssen das Zertifikat in eine PFX-Datei exportieren, sodass es importiert werden kann, wo sie in einem späteren Schritt benötigt wird. Wenn Sie ein Zertifikat mit dem privaten Schlüssel exportieren, ist ein Kennwort erforderlich, für den Schutz aus. Wir speichern das Kennwort in einer `SecureString` und verwenden Sie die [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) Cmdlet, um das Zertifikat mit dem zugehörigen privaten Schlüssel in eine PFX-Datei zu exportieren. Wir speichern auch nur das öffentliche Zertifikat in einer CRT-Datei mithilfe der [Export-Certificate](/powershell/module/pkiclient/export-certificate) Cmdlet.
 
 ```powershell
-PS [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
-PS [String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
-PS Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
-PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
+[System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
+Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 ```
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>So erstellen Sie ein neues von einem Stammzertifizierungsstellen-Zertifikat signiertes Zertifikat
@@ -45,15 +45,15 @@ PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 Der folgende Befehl erstellt ein Testzertifikat signiertes Zertifikat der `RootCA` mit dem Antragstellernamen "SignedByRootCA" mit dem privaten Schlüssel des Ausstellers.
 
 ```powershell
-PS $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
+$testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
 ```
 
 Auf ähnliche Weise speichern wir das Zertifikat mit privatem Schlüssel in eine PFX-Datei und nur den öffentlichen Schlüssel in einer CRT-Datei ein.
 
 ```powershell
-PS [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
-PS Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
-PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
+[String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
+Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
+Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
 ## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>Installieren eines Zertifikats im Speicher mit den vertrauenswürdigen Stammzertifizierungsstellen
@@ -114,6 +114,6 @@ Achten Sie darauf, alle temporären Stammzertifizierungsstellen-Zertifikate aus 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Zertifikaten](working-with-certificates.md)
-- [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Arbeiten mit Zertifikaten](working-with-certificates.md)
+- [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Sichern von Diensten und Clients](securing-services-and-clients.md)

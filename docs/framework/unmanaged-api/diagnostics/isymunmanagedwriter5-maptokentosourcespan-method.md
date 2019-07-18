@@ -5,11 +5,11 @@ ms.assetid: d0fbbf61-71c6-4fb1-8c9f-d619ca5d7d68
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08c219dd033b39fc07159875b184cdf70e3aa3ed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937864"
 ---
 # <a name="isymunmanagedwriter5maptokentosourcespan-method"></a>ISymUnmanagedWriter5::MapTokenToSourceSpan-Methode
 Zuordnungen in die Zeile für die angegebene Quelle das angegebene Metadatentoken umfassen, in der angegebenen Quelldatei.  

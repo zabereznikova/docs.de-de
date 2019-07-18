@@ -3,11 +3,11 @@ title: Dienstframework
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
 ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780756"
 ---
 # <a name="service-framework"></a>Dienstframework
 In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgeführt.  
@@ -33,7 +33,7 @@ In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgefüh
 |BindingDoesnTSupportTwoWayButContractRequires1|Vertrag erfordert TwoWay (entweder Anforderung-Antwort oder Duplex). Die angegebene Bindung bietet hierfür keine Unterstützung oder wurde nicht ordnungsgemäß für eine Unterstützung konfiguriert.|  
 |BindingRequirementsAttributeDisallowsQueuedDelivery1|DeliveryRequirementsAttribute lässt QueuedDelivery nicht zu. Die Bindung für den Endpunkt mit dem angegebenen Vertrag bietet entsprechende Unterstützung.|  
 |BindingRequirementsAttributeRequiresQueuedDelivery1|DeliveryRequirementsAttribute erfordert QueuedDelivery. Die Bindung für den Endpunkt mit dem angegebenen Vertrag bietet hierfür keine Unterstützung oder wurde nicht ordnungsgemäß für die Unterstützung konfiguriert.|  
-|channelDoesNotHaveADuplexSession0|Der aktuelle Kanal unterstützt das Schließen der Ausgabesitzung nicht. Dieser Kanal implementiert keine ISessionChannel\<IDuplexSession >.|  
+|channelDoesNotHaveADuplexSession0|Der aktuelle Kanal unterstützt das Schließen der Ausgabesitzung nicht. Dieser Kanal ISessionChannel nicht implementiert\<IDuplexSession >.|  
 |ClientRuntimeRequiresFormatter0|Die angegebene ClientOperation erfordert ein Formatierungsprogramm, da SerializeRequest und DeserializeReply nicht beide False sind.|  
 |CommunicationObjectAborted1|Das angegebene Kommunikationsobjekt kann nicht für die Kommunikation verwendet werden, da es beendet wurde.|  
 |CommunicationObjectAbortedStack2|Das angegebene Kommunikationsobjekt kann nicht für die Kommunikation verwendet werden, da es beendet wurde: {1}|  
@@ -145,7 +145,7 @@ In diesem Thema sind alle von Dienstframeworkdaten erzeugten Ausnahmen aufgefüh
 |SFxSchemaDoesNotContainType|Das Schema mit dem angegebenen Zielnamespace enthält keinen Typ mit dem angegebenen Namen.|  
 |SfxServiceContractAttributeNotFound|Der angegebene Vertragstyp ist mit ServiceContractAttribute nicht attributiert. Um einen gültigen Vertrag zu definieren, muss der angegebene Typ mit ServiceContractAttribute attributiert sein. Der Typ kann entweder eine Vertragsschnittstelle oder eine Dienstklasse sein.|  
 |SFxServiceContractGeneratorConfigRequired|Zum Generieren von Konfigurationsinformationen mithilfe der GenerateServiceEndpoint-Methode muss die ServiceContractGenerator-Instanz mit einem gültigen Konfigurationsobjekt initialisiert worden sein.|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|Endpunkte können nicht hinzugefügt werden, wenn der ServiceHost einen der folgenden Status aufweist:<br /><br /> -Geöffnet<br />-Fehlerhaft<br />-Beendet<br />-Geschlossen|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|Endpunkte können nicht hinzugefügt werden, wenn der ServiceHost einen der folgenden Status aufweist:<br /><br /> -Geöffnet<br />-Fehler<br />-Beendet<br />: Geschlossen von|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|Endpunkte können erst hinzugefügt werden, wenn die Description-Eigenschaft initialisiert wurde.|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|Die HttpGetEnabled-Eigenschaft von ServiceMetadataBehavior ist auf True festgelegt, und die HttpGetUrl-Eigenschaft ist eine relative Adresse, aber es ist keine HTTP-Basisadresse verfügbar. Stellen Sie entweder eine HTTP-Basisadresse bereit, oder legen Sie die HttpGetUrl auf eine absolute Adresse fest.|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|Die HttpsGetEnabled-Eigenschaft von ServiceMetadataBehavior ist auf True festgelegt, und die HttpsGetUrl-Eigenschaft ist eine relative Adresse, aber es ist keine HTTPS-Basisadresse verfügbar. Stellen Sie entweder eine HTTPS-Basisadresse bereit, oder legen Sie die HttpsGetUrl auf eine absolute Adresse fest.|  

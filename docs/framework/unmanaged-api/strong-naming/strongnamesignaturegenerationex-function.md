@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e9d2d5786ee7db334b8b9b0817c2319a6257dc9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190014"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751746"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx-Funktion
 Generiert eine Signatur mit starkem Namen für die angegebene Assembly gemäß den angegebenen Flags.  
@@ -30,7 +30,7 @@ Generiert eine Signatur mit starkem Namen für die angegebene Assembly gemäß d
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureGenerationEx (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  LPCWSTR   wszKeyContainer,  
@@ -70,9 +70,9 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in] Eine oder mehrere der folgenden Werte:  
   
--   `SN_SIGN_ALL_FILES` (0 x 00000001) – alle Hashes für verknüpfte Module neu.  
+- `SN_SIGN_ALL_FILES` (0 x 00000001) – alle Hashes für verknüpfte Module neu.  
   
--   `SN_TEST_SIGN` (0 x 00000002) - Test Signierung der Assembly.  
+- `SN_TEST_SIGN` (0 x 00000002) - Test Signierung der Assembly.  
   
 ## <a name="return-value"></a>Rückgabewert  
  `true` Bei erfolgreichem Abschluss; andernfalls `false`.  

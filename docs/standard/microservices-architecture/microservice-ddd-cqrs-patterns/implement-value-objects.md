@@ -1,15 +1,13 @@
 ---
 title: Implementieren von Wertobjekten
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Einführung in die Details und Optionen zum Implementieren von Wertobjekten mithilfe neuer Features von Entity Framework
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: c17bc036517b5437c5ca20abf8a8e3a37ccb6d2c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463916"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423737"
 ---
 # <a name="implement-value-objects"></a>Implementieren von Wertobjekten
 
@@ -23,7 +21,7 @@ In Abbildung 7-13 wird das Wertobjekt „Address“ im Aggregat „Order“ ange
 
 **Abbildung 7-13**. Wertobjekt „Address“ im Aggregat „Order“
 
-Wie in Abbildung 7-13 dargestellt besteht eine Entität in der Regel aus mehreren Attributen. Beispielsweise kann die `Order`-Entität als Entität mit einer Identität modelliert sein und intern aus mehreren Attributen wie OrderId, OrderDate oder OrderItems bestehen. Der Wert „Address“, bei dem es sich nur um einen komplexen Wert handelt, der aus Attributen wie dem Land, der Straße oder der Stadt besteht und in dieser Domäne nicht über eine Identität verfügt, muss hingegen als Wertobjekt modelliert und behandelt werden.
+Wie in Abbildung 7-13 dargestellt besteht eine Entität in der Regel aus mehreren Attributen. Beispielsweise kann die `Order`-Entität als Entität mit einer Identität modelliert sein und intern aus mehreren Attributen wie OrderId, OrderDate oder OrderItems bestehen. Die Adresse, bei der es sich lediglich um einen komplexen Wert handelt, der aus Attributen wie Land/Region, Straße, Ort usw. besteht und in dieser Domäne nicht über eine Identität verfügt, muss hingegen als Wertobjekt modelliert und behandelt werden.
 
 ## <a name="important-characteristics-of-value-objects"></a>Wichtige Merkmale von Wertobjekten
 
@@ -309,26 +307,26 @@ public class Address
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Martin Fowler. ValueObject pattern (ValueObject-Muster)** \
-  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler. ValueObject pattern (ValueObject-Muster)**  \
+  <https://martinfowler.com/bliki/ValueObject.html>
 
 - **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software. (Domänengesteuertes Design (DDD): Umgang mit Komplexität im Kern einer Software.)** (Buch, das Erläuterungen zu Wertobjekten enthält) \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Vaughn Vernon. Implementing Domain-Driven Design (Implementieren des domänengesteuerten Designs.)** (Buch, das Erläuterungen zu Wertobjekten enthält) \
-  [https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+  <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- **Shadow Properties (Schatteneigenschaften)** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
+- **Shadow Properties (Schatteneigenschaften)**  \
+  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
-- **Complex types and/or value objects (komplexe Typen und/oder Wertobjekte)**. Diskussion im GitHub-Repository zu EF Core (Registerkarte „Issues“) \
-  [https://github.com/aspnet/EntityFramework/issues/246](https://github.com/aspnet/EntityFramework/issues/246)
+- **Complex types and/or value objects (komplexe Typen und/oder Wertobjekte)** . Diskussion im GitHub-Repository zu EF Core (Registerkarte „Issues“) \
+  <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** Basisklasse der Wertobjekte in eShopOnContainers.**  \
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs)
+- **ValueObject.cs.** Basisklasse der Wertobjekte in eShopOnContainers. \
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **Klasse „Address“** Beispielklasse der Wertobjekte in eShopOnContainers. \
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs>
 
 > [!div class="step-by-step"]
 > [Zurück](seedwork-domain-model-base-classes-interfaces.md)

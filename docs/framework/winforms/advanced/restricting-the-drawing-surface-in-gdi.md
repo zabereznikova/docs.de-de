@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
 ms.openlocfilehash: d0508166f905b45789ce638b03d0747dd6fa904e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672625"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>Einschränken der Zeichenfläche in GDI+
 Clipping wird Zeichnung auf ein bestimmtes Rechteck oder Region beschränkt. Die folgende Abbildung zeigt die Zeichenfolge "Hello" in einer Region Kern gestalteten abgeschnitten.  

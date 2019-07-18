@@ -9,18 +9,18 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ef0309ae0d03c8278134012e645960996c6f93c4
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209436"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610500"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Vorgehensweise: Überschreiben von Metadaten für eine Abhängigkeitseigenschaft
 Dieses Beispiel zeigt, wie Sie die standardmäßigen Metadaten von Abhängigkeitseigenschaften überschreiben, die durch den Aufruf einer geerbten Klasse stammen die <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> -Methode und typspezifische Metadaten bereitgestellt.  
   
 ## <a name="example"></a>Beispiel  
- Durch die Definition der <xref:System.Windows.PropertyMetadata>, eine Klasse kann der Abhängigkeitseigenschaft-Verhalten, wie die Standard-Wert und systemrückrufe definieren. Viele Abhängigkeitseigenschaftenklassen verfügen bereits über Standardmetadaten als Teil ihres Registrierungsprozesses. Hierzu gehören die Abhängigkeitseigenschaften der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]. Eine Klasse, die die Abhängigkeitseigenschaft über ihre Klassenvererbung erbt, kann die ursprünglichen Metadaten überschreiben, sodass die Merkmale der Eigenschaft, die über Metadaten geändert werden können, allen unterklassenspezifischen Anforderungen entsprechen.  
+ Durch die Definition der <xref:System.Windows.PropertyMetadata>, eine Klasse kann der Abhängigkeitseigenschaft-Verhalten, wie die Standard-Wert und systemrückrufe definieren. Viele Abhängigkeitseigenschaftenklassen verfügen bereits über Standardmetadaten als Teil ihres Registrierungsprozesses. Dazu gehören die Abhängigkeitseigenschaften, die Teil der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API. Eine Klasse, die die Abhängigkeitseigenschaft über ihre Klassenvererbung erbt, kann die ursprünglichen Metadaten überschreiben, sodass die Merkmale der Eigenschaft, die über Metadaten geändert werden können, allen unterklassenspezifischen Anforderungen entsprechen.  
   
  Das Überschreiben von Metadaten für eine Abhängigkeitseigenschaft muss vor der Verwendung dieser Eigenschaft durchgeführt werden (dies entspricht der Zeit, in der bestimmte Instanzen von Objekten, die die Eigenschaft registrieren, instanziiert werden). Aufrufe von <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> muss ausgeführt werden, in den statischen Konstruktoren des Typs, der sich selbst als die `forType` Parameter <xref:System.Windows.DependencyProperty.OverrideMetadata%2A>. Wenn Sie versuchen, die Metadaten zu ändern, nachdem Instanzen des Besitzertyps vorhanden sind, werden zwar keine Ausnahmen ausgelöst, jedoch inkonsistentes Verhalten im Eigenschaftensystem hervorgerufen. Außerdem können Metadaten nur einmal pro Typ überschrieben werden. Bei nachfolgenden Versuchen, Metadaten für den gleichen Typ zu überschreiben, wird eine Ausnahme ausgelöst.  
   
@@ -36,4 +36,4 @@ Dieses Beispiel zeigt, wie Sie die standardmäßigen Metadaten von Abhängigkeit
 - <xref:System.Windows.DependencyProperty>
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
-- [Gewusst wie-Themen](properties-how-to-topics.md)
+- [Themen zu Vorgehensweisen](properties-how-to-topics.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a372a9072d2ee18df1efd060d3fd024a92e0bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6cb46d3684e36ca203b3ea5b58491150af4ffd58
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178242"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490145"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>Hosten globaler statischer .NET Framework 4-Funktionen
-Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] wird eine neue exportierte Methode in "Mscoree.dll": [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
+.NET Framework 4 führt eine neue exportierte Methode in "Mscoree.dll": [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [CLRCreateInstance-Funktion](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
@@ -24,5 +24,5 @@ Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] wird eine 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosting – Globale statische Funktionen](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
+- [Hosten globaler statischer Funktionen](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

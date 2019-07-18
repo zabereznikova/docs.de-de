@@ -12,26 +12,27 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 0f58759b02fb650c090267e13ec5de65c2c63d19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9bd2ee7dab36172cba68532e50cfcd14fd884db
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704458"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649535"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Zugreifen auf das Internet über einen Proxy
 Wenn Ihre Website einen Proxy verwendet, um den Internetzugriff zu ermöglichen, müssen Sie eine Proxyinstanz zum Aktivieren der Anwendung für die Kommunikation mit dem Webproxy konfigurieren.  
   
  Dieser Abschnitt schließt folgende Themen ein:  
   
--   [Proxykonfiguration](../../../docs/framework/network-programming/proxy-configuration.md)  
+- [Proxykonfiguration](../../../docs/framework/network-programming/proxy-configuration.md)  
   
--   [Automatische Proxyerkennung](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
+- [Automatische Proxyerkennung](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
   
--   [Vorgehensweise: Aktivieren einer WebRequest-Klasse zur Verwendung eines Proxys für die Internetkommunikation](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [Vorgehensweise: Aktivieren einer WebRequest-Klasse zur Verwendung eines Proxys für die Internetkommunikation](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [Vorgehensweise: Überschreiben einer globalen Proxyauswahl](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+- [Vorgehensweise: Überschreiben einer globalen Proxyauswahl](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)
 - [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)

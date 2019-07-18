@@ -6,31 +6,31 @@ helpviewer_keywords:
 - painting [WPF], with system brushes
 - brushes [WPF], painting with system brushes [WPF]
 ms.assetid: 5141a763-9235-42cb-a6bb-afc75513eac7
-ms.openlocfilehash: e713903e2cfbb63cb64ceb94621317f9e76dea70
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 26511c577bf06b016dfc69cedc7fce2bafb35f32
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645383"
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Vorgehensweise: Zeichnen eines Bereichs mit einem Systempinsel
 Die <xref:System.Windows.SystemColors> Klasse bietet Zugriff auf Systempinsel und-Farben, z. B. <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, und <xref:System.Windows.SystemColors.DesktopBrush%2A>. Ein Systempinsel ist ein <xref:System.Windows.Media.SolidColorBrush> -Objekt, das einen Bereich mit der angegebenen Systemfarbe zeichnet. Ein Systempinsel erzeugt immer eine Volltonfüllung und kann nicht zur Erstellung eines Farbverlaufs verwendet werden.  
   
  Sie können Systempinsel als statische oder dynamische Ressource verwenden. Verwenden Sie eine dynamische Ressource, wenn der Pinsel automatisch aktualisiert werden soll, wenn der Benutzer den Systempinsel bei laufender Anwendung ändert. Verwenden Sie andernfalls eine statische Ressource. Die SystemColors-Klasse enthält eine Vielzahl von statischen Eigenschaften, die einer strengen Namenskonvention folgen:  
   
--   *\<SystemColor>* Brush  
+- *\<SystemColor>* Brush  
   
      Ruft einen statischen Verweis auf eine <xref:System.Windows.Media.SolidColorBrush> mit der angegebenen Systemfarbe.  
   
--   *\<SystemColor>* BrushKey  
+- *\<SystemColor>* BrushKey  
   
      Ruft einen dynamischen Verweis auf eine <xref:System.Windows.Media.SolidColorBrush> mit der angegebenen Systemfarbe.  
   
--   *\<SystemColor>* Color  
+- *\<SystemColor>* Color  
   
      Ruft einen statischen Verweis auf eine <xref:System.Windows.Media.Color> Struktur mit der angegebenen Systemfarbe.  
   
--   *\<SystemColor>* ColorKey  
+- *\<SystemColor>* ColorKey  
   
      Ruft einen dynamischen Verweis auf die <xref:System.Windows.Media.Color> Struktur mit der angegebenen Systemfarbe.  
   

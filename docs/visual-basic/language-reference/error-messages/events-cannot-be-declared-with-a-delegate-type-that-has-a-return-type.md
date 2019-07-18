@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-ms.openlocfilehash: fbdd85cfc1852afb2e174ac8b94fd63f9d07b796
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f9598a219c9ec0a5dac0b6e7df778bb9efd05f44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823208"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642918"
 ---
 # <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a>Ereignisse können nicht mit einem Delegattypen deklariert werden, der einen Rückgabetyp hat.
 Ein Delegat wurde für eine Funktionsprozedur angegeben.  
@@ -21,7 +21,7 @@ Ein Delegat wurde für eine Funktionsprozedur angegeben.
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Geben Sie einen Delegaten für eine `Sub` Verfahren.  
+- Geben Sie einen Delegaten für eine `Sub` Verfahren.  
   
 ## <a name="see-also"></a>Siehe auch
 

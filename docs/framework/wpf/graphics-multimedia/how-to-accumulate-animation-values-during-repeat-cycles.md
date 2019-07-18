@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bccdc9b7bf2d5a0ea476e39e8d54107854db7ae3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146015"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591472"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Vorgehensweise: Sammeln von Animationen während Wiederholungszyklen
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> Eigenschaft für "accumulate" Animationswerten während Wiederholungszyklen.  
@@ -22,13 +22,13 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Doub
   
  Das folgende Beispiel zeigt dieses Verhalten, indem Sie die Breite von vier Rechtecken animieren. Beispiel:  
   
--   Erstellt eine Animation die erste Rechteck mit <xref:System.Windows.Media.Animation.DoubleAnimation> und legt die <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> Eigenschaft `true`.  
+- Erstellt eine Animation die erste Rechteck mit <xref:System.Windows.Media.Animation.DoubleAnimation> und legt die <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> Eigenschaft `true`.  
   
--   Animiert das zweite Rechteck mit <xref:System.Windows.Media.Animation.DoubleAnimation> und legt die <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> Eigenschaft auf den Standardwert des `false`.  
+- Animiert das zweite Rechteck mit <xref:System.Windows.Media.Animation.DoubleAnimation> und legt die <xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A> Eigenschaft auf den Standardwert des `false`.  
   
--   Animiert die dritte Rechteck mit <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> und legt die <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> Eigenschaft `true`.  
+- Animiert die dritte Rechteck mit <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> und legt die <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> Eigenschaft `true`.  
   
--   Animiert die letzte Rechteck mit <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> und legt die <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> Eigenschaft `false`.  
+- Animiert die letzte Rechteck mit <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> und legt die <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.IsCumulative%2A> Eigenschaft `false`.  
   
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
@@ -38,4 +38,4 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Doub
 - [Wiederholen einer Animation](how-to-repeat-an-animation.md)
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
-- [Gewusst wie-Themen](animation-and-timing-how-to-topics.md)
+- [Themen zu Vorgehensweisen](animation-and-timing-how-to-topics.md)

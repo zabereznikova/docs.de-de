@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
 ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699122"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Vorgehensweise: Formatieren eines ListView-Objekts mit GridView mithilfe von Vorlagen
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.DataTemplate> und <xref:System.Windows.Style> Objekte an die Darstellung des eine <xref:System.Windows.Controls.ListView> -Steuerelement, das verwendet eine <xref:System.Windows.Controls.GridView> sichtmodus befinden.  
@@ -40,5 +40,5 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.DataTemplate> und <x
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [Übersicht über GridView](gridview-overview.md)
-- [Gewusst wie-Themen](listview-how-to-topics.md)
+- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
 - [Übersicht über ListView](listview-overview.md)

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b886bf16e5465d3faac5286457784712ac1b72e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645148"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2-Schnittstelle
 Erweitert [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) Methoden für die Arbeit mit Metadatenstreams eingeschlossen werden sollen.  

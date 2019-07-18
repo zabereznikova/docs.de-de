@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b086c27d73324b4d834c9afa9e7aea20bf6d9148
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1a2213c146374033c5a985a714352edad04f178a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762025"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>ICorDebugManagedCallback3::CustomNotification-Methode
 Gibt an, dass eine benutzerdefinierte Debuggerbenachrichtigung ausgelöst wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CustomNotification(ICorDebugThread *    pThread,  
                            ICorDebugAppDomain * pAppDomain);  
 ```  
@@ -67,5 +67,5 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugManagedCallback3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

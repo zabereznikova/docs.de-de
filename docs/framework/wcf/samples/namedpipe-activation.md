@@ -2,12 +2,12 @@
 title: NamedPipe-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 3e6084e8334eddc16b115cc1199819c6ab637666
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7d940d6be56160945ca0f8697361314af96bc0b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355427"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487550"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe-Aktivierung
 
@@ -73,7 +73,7 @@ public class CalculatorService : ICalculator
 
 Im Beispiel wird eine modifizierte `netNamedPipeBinding`-Bindung ohne Sicherheit verwendet. Die Bindung wird in den Konfigurationsdateien für den Client und Dienst angegeben. Der Bindungstyp für den Dienst wird im `binding`-Attribut des Endpunktelements angegeben (siehe folgende Beispielkonfiguration).
 
-Wenn Sie eine gesicherte benannte Pipe-Bindung verwenden möchten, ändern Sie den Sicherheitsmodus des Servers in die gewünschte Sicherheitseinstellung, und führen Sie auf dem Client "svcutil.exe" erneut aus, um eine aktualisierte Clientkonfigurationsdatei zu erhalten.
+Wenn Sie eine gesicherte benannte Pipe-Bindung verwenden möchten, ändern Sie den Sicherheitsmodus des Servers in die gewünschte Sicherheitseinstellung, und führen Sie auf dem Client „svcutil.exe“ erneut aus, um eine aktualisierte Clientkonfigurationsdatei zu erhalten.
 
 ```xml
 <system.serviceModel>
@@ -159,7 +159,7 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass [!INCLUDE[iisver](../../../../includes/iisver-md.md)] installiert ist. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] ist für die WAS-Aktivierung erforderlich.
+1. Stellen Sie sicher, dass IIS 7.0 installiert ist. IIS 7.0 ist zur WAS-Aktivierung erforderlich.
 
 2. Stellen Sie sicher, die von Ihnen ausgeführte der [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 

@@ -11,28 +11,28 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1fd594ef1fea4c8723965ad483a5a124892bcf00
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161069"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487875"
 ---
 # <a name="security-transparent-code-level-1"></a>Sicherheitstransparenter Code, Ebene 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Transparenz ermöglicht Entwicklern, sicherere .NET Framework-Bibliotheken zu schreiben, die Funktionalität für teilweise vertrauenswürdigen Code verfügbar machen. Transparenz der Ebene 1 wurde in .NET Framework, Version 2.0, eingeführt und wurde hauptsächlich bei Microsoft verwendet. Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], können Sie [Transparenz der Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md). Allerdings wurde Transparenz der Ebene 1 beibehalten wurde, damit Legacycode identifiziert werden können, die mit den früheren Sicherheitsregeln ausgeführt werden muss.  
+ Transparenz ermöglicht Entwicklern, sicherere .NET Framework-Bibliotheken zu schreiben, die Funktionalität für teilweise vertrauenswürdigen Code verfügbar machen. Transparenz der Ebene 1 wurde in .NET Framework, Version 2.0, eingeführt und wurde hauptsächlich bei Microsoft verwendet. Ab .NET Framework 4, können Sie [Transparenz der Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md). Allerdings wurde Transparenz der Ebene 1 beibehalten wurde, damit Legacycode identifiziert werden können, die mit den früheren Sicherheitsregeln ausgeführt werden muss.  
   
 > [!IMPORTANT]
->  Geben Sie Transparenz der Ebene 1 nur aus Kompatibilitätsgründen an, d. h., geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den <xref:System.Security.AllowPartiallyTrustedCallersAttribute> verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] entwickelt wurde, immer Transparenz der Ebene 2.  
+>  Geben Sie Transparenz der Ebene 1 nur aus Kompatibilitätsgründen an, d. h., geben Sie Ebene 1 nur für Code an, der mit .NET Framework 3.5 oder niedriger entwickelt wurde und für den <xref:System.Security.AllowPartiallyTrustedCallersAttribute> verwendet bzw. für den das Transparenzmodell nicht verwendet wird. Verwenden Sie Transparenz der Ebene 1 z. B. für .NET Framework 2.0-Assemblys, die Aufrufe von teilweise vertrauenswürdigen Aufrufern (APTCA) ermöglichen. Verwenden Sie für Code, der für die .NET Framework 4 entwickelt wird, immer Transparenz der Ebene 2 an.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Das Transparenzmodell der Ebene 1](#the_level_1_transparency_model)  
+- [Das Transparenzmodell der Ebene 1](#the_level_1_transparency_model)  
   
--   [Transparenzattribute](#transparency_attributes)  
+- [Transparenzattribute](#transparency_attributes)  
   
--   [Beispiele für Sicherheitstransparenz](#security_transparency_examples)  
+- [Beispiele für Sicherheitstransparenz](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>Das Transparenzmodell der Ebene 1  
@@ -40,11 +40,11 @@ ms.locfileid: "59161069"
   
  Sie können eine gesamte Assembly, einige Klassen in einer Assembly oder einige Methoden in einer Klasse als sicherheitstransparent kennzeichnen. Sicherheitstransparenter Code kann keine Berechtigungen heraufstufen. Diese Einschränkung hat drei Konsequenzen:  
   
--   Sicherheitstransparenter Code kann keine <xref:System.Security.Permissions.SecurityAction.Assert>-Aktionen durchführen.  
+- Sicherheitstransparenter Code kann keine <xref:System.Security.Permissions.SecurityAction.Assert>-Aktionen durchführen.  
   
--   Jeder Linkaufruf, der von sicherheitstransparentem Code umgesetzt wird, wird zu einem vollständigen Aufruf.  
+- Jeder Linkaufruf, der von sicherheitstransparentem Code umgesetzt wird, wird zu einem vollständigen Aufruf.  
   
--   Jeder unsichere (nicht überprüfbare) Code, der in sicherheitstransparentem Code ausgeführt werden muss, verursacht einen vollständigen Aufruf der Sicherheitsberechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
+- Jeder unsichere (nicht überprüfbare) Code, der in sicherheitstransparentem Code ausgeführt werden muss, verursacht einen vollständigen Aufruf der Sicherheitsberechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>.  
   
  Diese Regeln werden während der Ausführung durch die Common Language Runtime (CLR) erzwungen. Sicherheitstransparenter Code übergibt alle Sicherheitsanforderungen des Codes zurück an seine Aufrufer. Anforderungen, die durch sicherheitstransparenten Code fließen, können keine Berechtigungen heraufstufen. Wenn eine wenig vertrauenswürdige Anwendung sicherheitstransparenten Code aufruft und eine Anforderung für eine höhere Berechtigung verursacht, fließt die Anforderung zurück zum wenig vertrauenswürdigem Code und kann nicht ausgeführt werden. Der sicherheitstransparente Code kann die Anforderung nicht aufhalten, da er keine Assert-Aktionen ausführen kann. Wenn derselbe sicherheitstransparente Code von voll vertrauenswürdigem Code aufgerufen wird, kann die Anforderung erfolgreich ausgeführt werden.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "59161069"
 |Kein Attribut in einer teilweise vertrauenswürdigen Assembly|Alle Typen und Member sind transparent.|  
 |Kein Attribut in einer voll vertrauenswürdigen Assembly (im globalen Assemblycache oder als voll vertrauenswürdig in der `AppDomain` identifiziert)|Alle Typen sind transparent, und alle Member sind sicherheitskritisch und sicherheitsgeschützt.|  
 |`SecurityTransparent`|Alle Typen und Member sind transparent.|  
-|`SecurityCritical(SecurityCriticalScope.Everything)`| Alle Typen und Member sind sicherheitskritisch.|  
+|`SecurityCritical(SecurityCriticalScope.Everything)`|Alle Typen und Member sind sicherheitskritisch.|  
 |`SecurityCritical`|Der gesamte Code ist standardmäßig transparent. Einzelne Typen und Member können jedoch andere Attribute haben.|  
   
 <a name="security_transparency_examples"></a>   

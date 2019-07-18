@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77058ac0cb87d0316395bce1dfb11401a2ce806
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585340"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053153"
 ---
 # <a name="wpf-community-feedback"></a>WPF-Communityfeedback
 
@@ -24,7 +24,7 @@ Microsoft stellt eine Vielzahl von Communityressourcen für Sie erfahren, diskut
 
 ## <a name="forums"></a>Foren
 
-Die [WPF-Forum](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=wpf) ist die primäre Communityressource zur Diskussion und Behebung von Problemen. Foren vereinfachen die Diskussion und Problemlösung, indem sie ein umfassendes Angebot unterstützender Features bereitstellen, die Folgendes umfassen:
+Die [WPF-Forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) ist die primäre Communityressource zur Diskussion und Behebung von Problemen. Foren vereinfachen die Diskussion und Problemlösung, indem sie ein umfassendes Angebot unterstützender Features bereitstellen, die Folgendes umfassen:
 
 - Suchfunktionen
 - Verfolgung von Diskussionen
@@ -51,7 +51,7 @@ Präzise, aussagekräftige Titel verbessern die Auffindbarkeit der Beiträge. Si
 
 Beschreiben Sie das Problem und wie Sie versucht haben, um diesen durchgearbeitet haben. Falls möglich, sollten Sie unterstützende Codeausschnitte oder ein möglichst einfaches Beispiel hinzufügen, das Ihr Problem veranschaulicht. Diese Einzelheiten erhöhen die Chance, dass Ihre Frage rasch beantwortet wird.
 
-## <a name="visual-studio-developer-community"></a>Visual Studio-Entwicklercommunity
+## <a name="visual-studio-developer-community"></a>Visual Studio Developer Community
 
 Mitunter lassen sich Probleme nur schwierig oder gar nicht beheben. Ursache solcher Situationen können Probleme in der Technologie, Schwierigkeiten der Anwendung der Technologie auf bestimmte Szenarien oder eine mangelnde Unterstützung bestimmter Szenarien sein. Diese Informationen ist wichtig, Microsoft und kann bereitgestellt werden, über die [Visual Studio Developer Community](https://developercommunity.visualstudio.com/) Standort.
 

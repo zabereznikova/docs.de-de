@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517681"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634556"
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
 
@@ -100,15 +100,15 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
   
  Die Art und Weise, wie geschweifte Klammern mit Escapezeichen interpretiert werden, kann zu unerwarteten Ergebnissen führen. Betrachten Sie beispielsweise das Formatelement „{{{0:D}}}“, das eine öffnende geschweifte Klammer anzeigen soll, einen numerischen Wert, der als Dezimalzahl formatiert ist, und eine schließende geschweifte Klammer. Das Formatelement wird aber tatsächlich wie folgt interpretiert:  
   
-1.  Die ersten beiden öffnenden geschweiften Klammern ("{{") werden mit Escapezeichen versehen und ergeben eine öffnende geschweifte Klammer.  
+1. Die ersten beiden öffnenden geschweiften Klammern ("{{") werden mit Escapezeichen versehen und ergeben eine öffnende geschweifte Klammer.  
   
-2.  Die nächsten drei Zeichen ("{0":) werden als Anfang eines Formatelements interpretiert.  
+2. Die nächsten drei Zeichen ("{0":) werden als Anfang eines Formatelements interpretiert.  
   
-3.  Das nächste Zeichen ("D") wird als Formatbezeichner für das numerische Standarddezimalformat interpretiert, und die nächsten beiden geschweiften Klammern mit Escapezeichen ergeben eine einzelne geschweifte Klammer. Da die entstehende Zeichenfolge ("D}") kein numerischer Standardformatbezeichner ist, wird sie als benutzerdefinierte Formatzeichenfolge interpretiert, d. h., es wird die Literalzeichenfolge "D}" angezeigt.  
+3. Das nächste Zeichen ("D") wird als Formatbezeichner für das numerische Standarddezimalformat interpretiert, und die nächsten beiden geschweiften Klammern mit Escapezeichen ergeben eine einzelne geschweifte Klammer. Da die entstehende Zeichenfolge ("D}") kein numerischer Standardformatbezeichner ist, wird sie als benutzerdefinierte Formatzeichenfolge interpretiert, d. h., es wird die Literalzeichenfolge "D}" angezeigt.  
   
-4.  Die letzte geschweifte Klammer ("}") wird als Ende des Formatelements interpretiert.  
+4. Die letzte geschweifte Klammer ("}") wird als Ende des Formatelements interpretiert.  
   
-5.  Das Endergebnis, das angezeigt wird, ist die Literalzeichenfolge "{D}". Der numerische Wert, der formatiert werden sollte, wird nicht angezeigt.  
+5. Das Endergebnis, das angezeigt wird, ist die Literalzeichenfolge "{D}". Der numerische Wert, der formatiert werden sollte, wird nicht angezeigt.  
   
  Eine Möglichkeit, Code zu schreiben und dabei Probleme mit falsch interpretierten geschweiften Klammern und Formatelementen zu vermeiden, ist die separate Formatierung der geschweiften Klammern und Formatelemente. Zeigen Sie also beim ersten Formatierungsvorgang eine literale öffnende geschweifte Klammer, beim nächsten Formatierungsvorgang das Ergebnis des Formatelements und beim letzten Formatierungsvorgang eine literale schließende geschweifte Klammer an. Dieser Ansatz wird anhand des folgenden Beispiels veranschaulicht.  
   
@@ -120,19 +120,19 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
   
  Jeder Wert in der Parameterliste, der einem Formatelement entspricht, wird wie folgt in eine Zeichenfolge konvertiert:  
   
-1.  Wenn der zu formatierende Wert `null` ist, wird eine leere Zeichenfolge (<xref:System.String.Empty?displayProperty=nameWithType>) zurückgegeben.  
+1. Wenn der zu formatierende Wert `null` ist, wird eine leere Zeichenfolge (<xref:System.String.Empty?displayProperty=nameWithType>) zurückgegeben.  
   
-2.  Wenn eine <xref:System.ICustomFormatter>-Implementierung verfügbar ist, ruft die Laufzeit die <xref:System.ICustomFormatter.Format%2A>-Methode auf. Sie übergibt den *formatString*-Wert des Formatelements, sofern vorhanden, oder andernfalls `null` zusammen mit der <xref:System.IFormatProvider>-Implementierung an die Methode. Wenn durch den Aufruf der <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>-Methode `null` zurückgegeben wird, wird der nächste Schritt ausgeführt. Andernfalls wird das Ergebnis des <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>-Aufrufs zurückgegeben.
+2. Wenn eine <xref:System.ICustomFormatter>-Implementierung verfügbar ist, ruft die Laufzeit die <xref:System.ICustomFormatter.Format%2A>-Methode auf. Sie übergibt den *formatString*-Wert des Formatelements, sofern vorhanden, oder andernfalls `null` zusammen mit der <xref:System.IFormatProvider>-Implementierung an die Methode. Wenn durch den Aufruf der <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>-Methode `null` zurückgegeben wird, wird der nächste Schritt ausgeführt. Andernfalls wird das Ergebnis des <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>-Aufrufs zurückgegeben.
   
-3.  Wenn der Wert die <xref:System.IFormattable>-Schnittstelle implementiert, wird die <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>-Methode der Schnittstelle aufgerufen. Der *Formatzeichenfolge*-Wert wird, sofern im Formatelement vorhanden, an die Methode übergeben. Ist dies nicht der Fall, wird `null` übergeben. Das <xref:System.IFormatProvider>-Argument wird wie folgt bestimmt:  
+3. Wenn der Wert die <xref:System.IFormattable>-Schnittstelle implementiert, wird die <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29>-Methode der Schnittstelle aufgerufen. Der *Formatzeichenfolge*-Wert wird, sofern im Formatelement vorhanden, an die Methode übergeben. Ist dies nicht der Fall, wird `null` übergeben. Das <xref:System.IFormatProvider>-Argument wird wie folgt bestimmt:  
   
-    -   Bei einem numerischen Wert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.NumberFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.NumberFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
+    - Bei einem numerischen Wert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.NumberFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.NumberFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
   
-    -   Bei einem Datums- und Uhrzeitwert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
+    - Bei einem Datums- und Uhrzeitwert fordert die Laufzeit im Fall, dass eine Methode zur kombinierten Formatierung mit einem <xref:System.IFormatProvider>-Argument ungleich NULL aufgerufen wird, ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt von ihrer <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>-Methode an. Wenn sie keines bereitstellen kann, wenn der Wert des Arguments `null` ist, oder wenn die Methode zur kombinierten Formatierung keinen <xref:System.IFormatProvider>-Parameter hat, wird das <xref:System.Globalization.DateTimeFormatInfo>-Objekt für die aktuelle Threadkultur verwendet.  
   
-    -   Bei Objekten anderer Typen wird beim Aufruf einer kombinierten Formatierungsmethode mit einem <xref:System.IFormatProvider>-Argument der zugehörige Wert direkt an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben. Andernfalls wird `null` an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben.  
+    - Bei Objekten anderer Typen wird beim Aufruf einer kombinierten Formatierungsmethode mit einem <xref:System.IFormatProvider>-Argument der zugehörige Wert direkt an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben. Andernfalls wird `null` an die <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>-Implementierung übergeben.  
   
-4.  Die parameterlose `ToString`-Methode des Typs, die entweder <xref:System.Object.ToString?displayProperty=nameWithType> überschreibt oder das Verhalten ihrer Basisklasse erbt, wird aufgerufen. In diesem Fall wird die von der *formatString*-Komponente im Formatelement angegebene Formatzeichenfolge (sofern vorhanden) ignoriert.  
+4. Die parameterlose `ToString`-Methode des Typs, die entweder <xref:System.Object.ToString?displayProperty=nameWithType> überschreibt oder das Verhalten ihrer Basisklasse erbt, wird aufgerufen. In diesem Fall wird die von der *formatString*-Komponente im Formatelement angegebene Formatzeichenfolge (sofern vorhanden) ignoriert.  
   
  Die Ausrichtung wird angewendet, nachdem die vorhergehenden Schritte durchgeführt wurden.  
   

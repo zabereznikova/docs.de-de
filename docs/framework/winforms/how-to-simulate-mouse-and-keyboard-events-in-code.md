@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1d2e837ec13e6a0b507d004cd75c2f77ae0008dc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123447"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583406"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Vorgehensweise: Simulieren von Maus- und Tastaturereignissen in Code
 Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Maus- und Tastatureingaben bereit. Dieses Thema enthält eine Übersicht über diese Optionen.  
@@ -27,9 +27,9 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>So klicken Sie programmgesteuert mit der rechten Maustaste  
   
-1.  Erstellen Sie eine <xref:System.Windows.Forms.MouseEventArgs>-Instanz, deren <xref:System.Windows.Forms.MouseEventArgs.Button%2A>-Eigenschaft auf den Wert <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> festgelegt wird.  
+1. Erstellen Sie eine <xref:System.Windows.Forms.MouseEventArgs>-Instanz, deren <xref:System.Windows.Forms.MouseEventArgs.Button%2A>-Eigenschaft auf den Wert <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> festgelegt wird.  
   
-2.  Rufen Sie die <xref:System.Windows.Forms.Control.OnMouseClick%2A> -Methode mit dieser <xref:System.Windows.Forms.MouseEventArgs> -Instanz als Argument auf.  
+2. Rufen Sie die <xref:System.Windows.Forms.Control.OnMouseClick%2A> -Methode mit dieser <xref:System.Windows.Forms.MouseEventArgs> -Instanz als Argument auf.  
   
  Weitere Informationen zu benutzerdefinierten Steuerelementen finden Sie unter [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](./controls/developing-windows-forms-controls-at-design-time.md).  
   
@@ -58,7 +58,7 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
   
 #### <a name="to-send-a-keystroke-to-the-same-application"></a>So senden Sie eine Tastatureingabe an dieselbe Anwendung  
   
-1.  Rufen Sie die <xref:System.Windows.Forms.SendKeys.Send%2A> - oder die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode der <xref:System.Windows.Forms.SendKeys> -Klasse auf. Die angegebenen Tastatureingaben werden vom aktiven Steuerelement der Anwendung empfangen. Im folgenden Codebeispiel wird <xref:System.Windows.Forms.SendKeys.Send%2A> verwendet, um ein Drücken der EINGABETASTE zu simulieren, wenn der Benutzer auf die Oberfläche des Formulars doppelklickt. Für dieses Beispiel wird ein <xref:System.Windows.Forms.Form> -Objekt mit einem einzelnen <xref:System.Windows.Forms.Button> -Steuerelement angenommen, dessen Aktivierreihenfolge (TabIndex) gleich 0 ist.  
+1. Rufen Sie die <xref:System.Windows.Forms.SendKeys.Send%2A> - oder die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode der <xref:System.Windows.Forms.SendKeys> -Klasse auf. Die angegebenen Tastatureingaben werden vom aktiven Steuerelement der Anwendung empfangen. Im folgenden Codebeispiel wird <xref:System.Windows.Forms.SendKeys.Send%2A> verwendet, um ein Drücken der EINGABETASTE zu simulieren, wenn der Benutzer auf die Oberfläche des Formulars doppelklickt. Für dieses Beispiel wird ein <xref:System.Windows.Forms.Form> -Objekt mit einem einzelnen <xref:System.Windows.Forms.Button> -Steuerelement angenommen, dessen Aktivierreihenfolge (TabIndex) gleich 0 ist.  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
@@ -66,7 +66,7 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>So senden Sie eine Tastatureingabe an eine andere Anwendung  
   
-1.  Aktivieren Sie das Anwendungsfenster, das die Tastatureingaben empfängt, und rufen Sie dann die <xref:System.Windows.Forms.SendKeys.Send%2A> - oder die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode auf. Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, müssen Sie systemeigene Windows-Methoden verwenden, um den Fokus auf andere Anwendungen zu erzwingen. Im folgenden Codebeispiel wird ein Plattformaufruf dazu verwendet, die Methoden `FindWindow` und `SetForegroundWindow` aufzurufen, um das Anwendungsfenster Rechner zu aktivieren, und dann wird <xref:System.Windows.Forms.SendKeys.SendWait%2A> aufgerufen, um einige Berechnungselemente an Rechner zu senden.  
+1. Aktivieren Sie das Anwendungsfenster, das die Tastatureingaben empfängt, und rufen Sie dann die <xref:System.Windows.Forms.SendKeys.Send%2A> - oder die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode auf. Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, müssen Sie systemeigene Windows-Methoden verwenden, um den Fokus auf andere Anwendungen zu erzwingen. Im folgenden Codebeispiel wird ein Plattformaufruf dazu verwendet, die Methoden `FindWindow` und `SetForegroundWindow` aufzurufen, um das Anwendungsfenster Rechner zu aktivieren, und dann wird <xref:System.Windows.Forms.SendKeys.SendWait%2A> aufgerufen, um einige Berechnungselemente an Rechner zu senden.  
   
     > [!NOTE]
     >  Die richtigen Parameter des `FindWindow` -Aufrufs, der nach der Anwendung Rechner sucht, können je nach Windows-Version unterschiedlich sein.  Im folgenden Code wird die Anwendung Rechner unter [!INCLUDE[win7](../../../includes/win7-md.md)]gesucht. Ändern Sie unter [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]den ersten Parameter in "SciCalc". Sie können das zu Visual Studio gehörende Tool Spy++ verwenden, um die richtigen Parameter zu ermitteln.  
@@ -85,9 +85,7 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
-  
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
+- Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
 ## <a name="see-also"></a>Siehe auch
 

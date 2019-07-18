@@ -9,11 +9,11 @@ helpviewer_keywords:
 - finding ControlTemplate elements [WPF]
 ms.assetid: d7b25447-ceff-4bb4-9be5-fd7c40ef00af
 ms.openlocfilehash: 426f6c93433711ac72fe67eff2ee3006aa4d9166
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037140"
 ---
 # <a name="how-to-find-controltemplate-generated-elements"></a>Vorgehensweise: Suchen von Elementen, die mit einer ControlTemplate generiert wurden
 In diesem Beispiel zeigt, wie Sie Elemente, die vom generierten eine <xref:System.Windows.Controls.ControlTemplate>.  
@@ -30,7 +30,7 @@ In diesem Beispiel zeigt, wie Sie Elemente, die vom generierten eine <xref:Syste
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Suchen von Elementen, die mit einer DataTemplate-Klasse generiert wurden](../data/how-to-find-datatemplate-generated-elements.md)
+- [Suchen von Elementen, die mit einer DataTemplate generiert wurden](../data/how-to-find-datatemplate-generated-elements.md)
 - [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
 - [WPF-XAML-Namescopes](../advanced/wpf-xaml-namescopes.md)
 - [Strukturen in WPF](../advanced/trees-in-wpf.md)

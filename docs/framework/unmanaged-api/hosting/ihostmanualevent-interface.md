@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ad580f7cab81323e09a24dc12db39f223be3aeb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973063"
 ---
 # <a name="ihostmanualevent-interface"></a>IHostManualEvent-Schnittstelle
 Stellt eine Darstellung der ein Ereignis mit manueller Rücksetzung Implementierung des Hosts.  
@@ -49,4 +49,4 @@ Stellt eine Darstellung der ein Ereignis mit manueller Rücksetzung Implementier
 - [IHostAutoEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
 - [IHostSemaphore-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)
 - [IHostSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84ec75fb2a994543ba9ead84c41abc304c420053
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7424c80d05c3ff538cb530b24276868680af1c3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182974"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778498"
 ---
 # <a name="cleardownloadcache-function"></a>ClearDownloadCache-Funktion
 Löscht den globalen Assemblycache des heruntergeladenen Assemblys.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ClearDownloadCache ();  
 ```  
   
@@ -45,5 +45,5 @@ HRESULT ClearDownloadCache ();
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion – Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [Globaler Assemblycache](../../../../docs/framework/app-domains/gac.md)

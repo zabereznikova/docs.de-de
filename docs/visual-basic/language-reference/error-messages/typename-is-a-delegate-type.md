@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: c308805f5e73d740ff18a40d95b9cc2576ac95fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 45dc0403468fa40888a6c5e6bdfe6ca782e98325
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841255"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664189"
 ---
 # <a name="typename-is-a-delegate-type"></a>"\<Typname >' ist ein Delegattyp
 "\<Typname >' ist ein Delegattyp. Erstellen eines Delegaten kann nur einen einzelnen AddressOf-Ausdruck als Argument übergeben. Häufig kann ein AddressOf-Ausdruck anstelle einer Delegatkonstruktion verwendet werden.  
@@ -27,7 +27,7 @@ ms.locfileid: "58841255"
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Verwenden Sie einen einzelnen `AddressOf` Ausdruck in der Argumentliste für die Delegate-Klasse in der `New` Klausel.  
+- Verwenden Sie einen einzelnen `AddressOf` Ausdruck in der Argumentliste für die Delegate-Klasse in der `New` Klausel.  
   
 ## <a name="see-also"></a>Siehe auch
 

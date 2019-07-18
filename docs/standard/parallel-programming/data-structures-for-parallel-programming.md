@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625606"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Datenstrukturen für die parallele Programmierung
 .NET Framework Version 4 führt mehrere neue Typen ein, die für die parallele Programmierung nützlich sind. Darunter eine Reihe von parallelen Auflistungsklassen, einfache Synchronisierungsprimitiven und Typen für die verzögerte Initialisierung. Sie können diese Typen mit jedem Multithreadanwendungscode verwenden, einschließlich der Task Parallel Library und PLINQ.  
@@ -48,9 +48,9 @@ ms.locfileid: "55479697"
   
  Weitere Informationen finden Sie unter:  
   
--   [Vorgehensweise: Synchronisierung auf niedriger Ebene mit SpinLock](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Vorgehensweise: Synchronisierung auf niedriger Ebene mit SpinLock](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [Vorgehensweise: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Vorgehensweise: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Klassen mit verzögerter Initialisierung  
  Bei einer verzögerten Initialisierung wird der Speicher für ein Objekt nicht zugewiesen, bis dieser benötigt wird. Eine verzögerte Initialisierung kann zur Verbesserung der Leistung beitragen, indem Objektzuweisungen über die Lebensdauer eines Programms hinweg verteilt werden. Sie können die verzögerte Initialisierung für jeden benutzerdefinierten Typ verwenden, indem Sie damit den Typ <xref:System.Lazy%601> umschließen.  

@@ -3,11 +3,11 @@ title: 'Dienst: Fehlerhafte Aufrufe pro Sekunde'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
 ms.openlocfilehash: d87d5f06d0c9a3849ec80a3d1c7badefde7cf372
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915680"
 ---
 # <a name="service-calls-failed-per-second"></a>Dienst: Fehlerhafte Aufrufe pro Sekunde
 Indikatorname: Fehlerhafte Aufrufe pro Sekunde.  

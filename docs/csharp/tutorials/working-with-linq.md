@@ -3,12 +3,12 @@ title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815584"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609306"
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -268,6 +268,14 @@ Geben Sie die folgende Methode in Ihre `Extensions.cs`-Datei ein, bzw. kopieren 
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
+Dann werden unter `File` rote Wellenlinien angezeigt. Das bedeutet, dass dieses Element nicht vorhanden ist. Es erfolgt keine Kompilierung, da der Compiler nicht weiß, worum es sich bei `File` handelt. Sie können dieses Problem lösen, indem Sie die folgende Codezeile unter die erste Zeile der Datei `Extensions.cs` einfügen:
+
+```csharp
+using System.IO;
+```
+
+Dadurch sollten das Problem behoben und die roten Wellenlinien entfernt werden.
+
 Als Nächstes instrumentieren Sie die Definition jeder Abfrage mit einer Protokollmeldung:
 
 ```csharp
@@ -340,9 +348,8 @@ Abgesehen von LINQ haben Sie ein wenig über die Verfahren gelernt, die Zauberer
 
 Weitere Informationen zu LINQ finden Sie unter:
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-    - [Einführung in LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [Erste Schritte mit LINQ in C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [Grundlegende LINQ-Abfragevorgänge (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [Datentransformationen mit LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [Abfragesyntax und Methodensyntax in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [C#-Funktionen mit LINQ-Unterstützung](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [Einführung in LINQ](../programming-guide/concepts/linq/index.md)
+  - [Grundlegende LINQ-Abfragevorgänge (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+  - [Datentransformationen mit LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+  - [Abfragesyntax und Methodensyntax in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+  - [C#-Funktionen mit LINQ-Unterstützung](../programming-guide/concepts/linq/features-that-support-linq.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973679"
 ---
 # <a name="shapes-how-to-topics"></a>Gewusst-wie-Themen zu Formen
 Die Themen in diesem Abschnitt veranschaulichen, wie <xref:System.Windows.Shapes.Shape> Objekte, die grundlegende Formen auf dem Bildschirm gezeichnet.  

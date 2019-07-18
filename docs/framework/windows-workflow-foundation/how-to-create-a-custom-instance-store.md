@@ -1,21 +1,21 @@
 ---
-title: 'Vorgehensweise: Erstellen Sie eine benutzerdefinierte Instanz Store'
+title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Instanzspeichers'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
 ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945638"
 ---
-# <a name="how-to-create-a-custom-instance-store"></a>Vorgehensweise: Erstellen Sie eine benutzerdefinierte Instanz Store
+# <a name="how-to-create-a-custom-instance-store"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Instanzspeichers
 
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, einen Instanzspeicher, der SQL Server verwendet, um Workflowdaten beizubehalten. Wenn die Anwendung Workflowdaten auf einem anderen Medium, z. B. einer anderen Datenbank oder einem anderen Dateisystem dauerhaft speichern muss, können Sie einen benutzerdefinierten Instanzspeicher implementieren. Ein benutzerdefinierter Instanzspeicher wird erstellt, indem die abstrakte <xref:System.Runtime.DurableInstancing.InstanceStore>-Klasse erweitert wird und die Methoden implementiert werden, die für die Implementierung erforderlich sind. Eine vollständige Implementierung eines benutzerdefinierten instanzspeichers finden Sie unter den [Unternehmenseinkaufsprozess](./samples/corporate-purchase-process.md) Beispiel.
 
 ## <a name="implementing-the-begintrycommand-method"></a>Implementieren der BeginTryCommand-Methode
 
-<xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> wird vom Instanzspeicher an das Persistenzmodul gesendet. Der Typ des `command`-Parameters gibt an, welcher Befehl ausgeführt wird. Dieser Parameter kann folgende Typen aufweisen:
+<xref:System.Runtime.DurableInstancing.InstanceStore.BeginTryCommand%2A> wird vom Instanzspeicher an die Persistenz-Engine gesendet. Der Typ des `command`-Parameters gibt an, welcher Befehl ausgeführt wird. Dieser Parameter kann folgende Typen aufweisen:
 
 - <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>: Das persistenzmodul sendet diesen Befehl an den Instanzspeicher, wenn ein Workflow ist auf dem Speichermedium beibehalten werden. Die Persistenzdaten des Workflows werden im <xref:System.Activities.DurableInstancing.SaveWorkflowCommand.InstanceData%2A>-Member des `command`-Parameters für die Methode bereitgestellt.
 

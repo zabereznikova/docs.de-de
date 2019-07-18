@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
 ms.openlocfilehash: de11250a2e7529fba3b262e42b6714262738fa90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910909"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Ansichtsmodus für ein ListView-Objekt
 In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Windows.Controls.ListView.View%2A> Modus für eine <xref:System.Windows.Controls.ListView> Steuerelement.  
@@ -46,6 +46,6 @@ In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Window
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Gewusst wie-Themen](listview-how-to-topics.md)
+- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
 - [Übersicht über ListView](listview-overview.md)
 - [Übersicht über GridView](gridview-overview.md)

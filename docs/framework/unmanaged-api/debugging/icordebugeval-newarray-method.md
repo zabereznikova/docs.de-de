@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9597d05e46c2d41ab1f24a073c028561e944fb59
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471510"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753026"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray-Methode
 Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.  
@@ -31,7 +31,7 @@ Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT NewArray (  
     [in] CorElementType     elementType,  
     [in] ICorDebugClass     *pElementClass,  

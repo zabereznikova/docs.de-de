@@ -3,11 +3,11 @@ title: Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollie
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
 ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779729"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung
 In diesem Thema werden empfohlene Ablaufverfolgungs- und Nachrichtenprotokollierungseinstellungen für andere Arbeitsumfelder beschrieben.  
@@ -114,4 +114,4 @@ logman stop mytrace -ets
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Verwenden der Windows-Verwaltungsinstrumentation für die Diagnose](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679434"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593084"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C#-Compileroptionen)
 Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../../../csharp/language-reference/keywords/public.md) Typinformationen in der angegebenen Datei in das aktuelle Projekt zu importieren, sodass die Verweismetadaten aus den angegebenen Assemblydateien aktiviert werden.  
@@ -37,7 +37,7 @@ Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../../../
  `alias`  
  Ein gültiger C#-Bezeichner, der einen Stammnamespace darstellt, der alle Namespaces in der Assembly enthält.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Fügen Sie die Option **-reference** für jede Datei ein, um mehr als eine Datei zu importieren.  
   
  Die zu importierenden Dateien müssen ein Manifest enthalten. Die Ausgabedatei muss mit einer anderen [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)-Option als [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) kompiliert werden.  
@@ -48,9 +48,9 @@ Die Option **-reference** veranlasst den Compiler dazu, [öffentliche](../../../
   
  Wenn Sie auf eine Assembly (Assembly A) verweisen, die auf eine andere Assembly (Assembly B) verweist, müssen Sie auf Assembly B verweisen, wenn:  
   
--   Ein verwendeter Typ von Assembly A erbt von einem Typ oder implementiert eine Schnittstelle aus Assembly B.  
+- Ein verwendeter Typ von Assembly A erbt von einem Typ oder implementiert eine Schnittstelle aus Assembly B.  
   
--   Sie rufen ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode auf, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
+- Sie rufen ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode auf, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
  Verwenden Sie [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md), um das Verzeichnis anzugeben, in dem sich ein oder mehrere der Assemblyverweise befinden. Der Artikel **-lib** erläutert auch die Verzeichnisse, in denen der Compiler nach Assemblys sucht.  
   

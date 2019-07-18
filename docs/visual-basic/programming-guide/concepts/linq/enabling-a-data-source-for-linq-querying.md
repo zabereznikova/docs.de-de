@@ -2,24 +2,24 @@
 title: Aktivieren einer Datenquelle für LINQ-Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
-ms.openlocfilehash: f705db90f4838479621117bd9303f5a374d33d4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfb7aca68aefd7f4c41469e4c8efe3bce7c696ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676496"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626460"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Aktivieren einer Datenquelle für LINQ-Abfragen
 
 Es gibt verschiedene Möglichkeiten, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zu erweitern, um die Abfrage einer beliebigen Datenquelle im [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster zu ermöglichen. Bei der Datenquelle kann es sich u. a. um eine Datenstruktur, einen Webdienst, ein Dateisystem oder eine Datenbank handeln. Das [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster erleichtert Clients das Ausführen von Abfragen für eine Datenquelle mit aktivierter [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage, da die Syntax und das Muster der Abfrage unverändert bleiben. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kann u.a. auf folgende Weisen für die Verwendung dieser Datenquellen erweitert werden:
 
--   Implementieren der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle in einem Typ, um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects-Abfragen für diesen Typ zu aktivieren.
+- Implementieren der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle in einem Typ, um [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects-Abfragen für diesen Typ zu aktivieren.
 
--   Erstellen von Standardabfrageoperator-Methoden wie <xref:System.Linq.Enumerable.Where%2A> und <xref:System.Linq.Enumerable.Select%2A>, die einen Typ erweitern, um benutzerdefinierte [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen für diesen Typ zu aktivieren.
+- Erstellen von Standardabfrageoperator-Methoden wie <xref:System.Linq.Enumerable.Where%2A> und <xref:System.Linq.Enumerable.Select%2A>, die einen Typ erweitern, um benutzerdefinierte [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen für diesen Typ zu aktivieren.
 
--   Erstellen eines Anbieters für die Datenquelle, die die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert. Ein Anbieter, der diese Schnittstelle implementiert, empfängt [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen in Form von Ausdrucksbaumstrukturen, die er benutzerdefiniert ausführen kann, beispielsweise im Remotemodus.
+- Erstellen eines Anbieters für die Datenquelle, die die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert. Ein Anbieter, der diese Schnittstelle implementiert, empfängt [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen in Form von Ausdrucksbaumstrukturen, die er benutzerdefiniert ausführen kann, beispielsweise im Remotemodus.
 
--   Erstellen eines Anbieters für die Datenquelle, die eine vorhandene [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Technologie nutzt. Durch einen solchen Anbieter werden nicht nur Abfragen ermöglicht, sondern zusätzlich Einfüge-, Aktualisierungs- und Löschvorgänge sowie Zuordnungen für benutzerdefinierte Typen.
+- Erstellen eines Anbieters für die Datenquelle, die eine vorhandene [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Technologie nutzt. Durch einen solchen Anbieter werden nicht nur Abfragen ermöglicht, sondern zusätzlich Einfüge-, Aktualisierungs- und Löschvorgänge sowie Zuordnungen für benutzerdefinierte Typen.
 
 In diesem Thema werden diese Möglichkeiten erläutert.
 

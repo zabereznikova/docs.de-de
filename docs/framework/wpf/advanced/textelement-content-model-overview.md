@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1e1f67440377db95a5e0896b8fd31b1ab720b188
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125119"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630631"
 ---
 # <a name="textelement-content-model-overview"></a>Übersicht über das TextElement-Inhaltsmodell
 Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <xref:System.Windows.Documents.TextElement>. Die <xref:System.Windows.Documents.Paragraph> Klasse ist eine Art von <xref:System.Windows.Documents.TextElement>. Ein Inhaltsmodell beschreibt, welche Objekte/Elemente in anderen enthalten sein können. Diese Übersicht fasst das Inhaltsmodell für abgeleitete Objekte verwendet <xref:System.Windows.Documents.TextElement>. Weitere Informationen finden Sie unter [Übersicht über Flussdokumente](flow-document-overview.md).  
@@ -27,7 +27,7 @@ Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <x
   
  Wie aus dem vorherigen Diagramm ersichtlich ist, die für ein Element zulässigen untergeordneten Elemente werden nicht zwingend davon bestimmt, ob von eine Klasse abgeleitet ist die <xref:System.Windows.Documents.Block> Klasse oder ein <xref:System.Windows.Documents.Inline> Klasse. Z. B. eine <xref:System.Windows.Documents.Span> (ein <xref:System.Windows.Documents.Inline>-abgeleitete Klasse) nur möglich, <xref:System.Windows.Documents.Inline> untergeordnete Elemente, aber ein <xref:System.Windows.Documents.Figure> (auch ein <xref:System.Windows.Documents.Inline>-abgeleitete Klasse) nur möglich, <xref:System.Windows.Documents.Block> untergeordnete Elemente. Aus diesem Grund ist ein Diagramm nützlich, um schnell zu bestimmen, welches Element in einem anderen eingeschlossen sein kann. Als Beispiel verwenden Sie wir das Diagramm, um zu bestimmen, wie den fortlaufende Inhalt einer <xref:System.Windows.Controls.RichTextBox>.  
   
-1.  Ein <xref:System.Windows.Controls.RichTextBox> darf eine <xref:System.Windows.Documents.FlowDocument> muss wiederum eine <xref:System.Windows.Documents.Block>-abgeleitetes Objekt. Im Folgenden wird das entsprechende Segment aus dem vorherigen Diagramm dargestellt.  
+1. Ein <xref:System.Windows.Controls.RichTextBox> darf eine <xref:System.Windows.Documents.FlowDocument> muss wiederum eine <xref:System.Windows.Documents.Block>-abgeleitetes Objekt. Im Folgenden wird das entsprechende Segment aus dem vorherigen Diagramm dargestellt.  
   
      ![Diagramm: RichTextBox-Kapselungsregeln](./media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -35,7 +35,7 @@ Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <x
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  Gemäß dem Diagramm stehen verschiedene <xref:System.Windows.Documents.Block> zu wählen, darunter Elemente <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, und <xref:System.Windows.Documents.BlockUIContainer> (Siehe blockabgeleitete Klassen in der obigen Abbildung). Nehmen wir eine <xref:System.Windows.Documents.Table>. Gemäß dem vorherigen Diagramm eine <xref:System.Windows.Documents.Table> enthält eine <xref:System.Windows.Documents.TableRowGroup> mit <xref:System.Windows.Documents.TableRow> Elemente, die enthalten <xref:System.Windows.Documents.TableCell> Elemente beinhalten eine <xref:System.Windows.Documents.Block>-abgeleitetes Objekt. Im folgenden werden das entsprechende Segment für <xref:System.Windows.Documents.Table> aus dem vorherigen Diagramm erstellt.  
+2. Gemäß dem Diagramm stehen verschiedene <xref:System.Windows.Documents.Block> zu wählen, darunter Elemente <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, und <xref:System.Windows.Documents.BlockUIContainer> (Siehe blockabgeleitete Klassen in der obigen Abbildung). Nehmen wir eine <xref:System.Windows.Documents.Table>. Gemäß dem vorherigen Diagramm eine <xref:System.Windows.Documents.Table> enthält eine <xref:System.Windows.Documents.TableRowGroup> mit <xref:System.Windows.Documents.TableRow> Elemente, die enthalten <xref:System.Windows.Documents.TableCell> Elemente beinhalten eine <xref:System.Windows.Documents.Block>-abgeleitetes Objekt. Im folgenden werden das entsprechende Segment für <xref:System.Windows.Documents.Table> aus dem vorherigen Diagramm erstellt.  
   
      ![Diagramm: Übergeordnete&#47;untergeordnetes Schema für Tabelle](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -43,7 +43,7 @@ Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <x
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  In diesem Fall eine oder mehrere <xref:System.Windows.Documents.Block> Elemente sind erforderlich, darunter eine <xref:System.Windows.Documents.TableCell>. Um es einfach zu gestalten, fügen wir Text in die Zelle ein. Wir erreichen das mithilfe einer <xref:System.Windows.Documents.Paragraph> mit einem <xref:System.Windows.Documents.Run> Element. Im folgenden werden die entsprechenden Segmente aus dem Diagramm zeigt, dass eine <xref:System.Windows.Documents.Paragraph> dauert ein <xref:System.Windows.Documents.Inline> -Element sowie eine <xref:System.Windows.Documents.Run> (ein <xref:System.Windows.Documents.Inline> Element) kann nur nur-Text annehmen.  
+3. In diesem Fall eine oder mehrere <xref:System.Windows.Documents.Block> Elemente sind erforderlich, darunter eine <xref:System.Windows.Documents.TableCell>. Um es einfach zu gestalten, fügen wir Text in die Zelle ein. Wir erreichen das mithilfe einer <xref:System.Windows.Documents.Paragraph> mit einem <xref:System.Windows.Documents.Run> Element. Im folgenden werden die entsprechenden Segmente aus dem Diagramm zeigt, dass eine <xref:System.Windows.Documents.Paragraph> dauert ein <xref:System.Windows.Documents.Inline> -Element sowie eine <xref:System.Windows.Documents.Run> (ein <xref:System.Windows.Documents.Inline> Element) kann nur nur-Text annehmen.  
   
      ![Diagramm: Übergeordnete&#47;untergeordnetes Schema für Absatz](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
@@ -57,11 +57,11 @@ Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <x
 ## <a name="working-with-textelement-content-programmatically"></a>Programmgesteuertes Arbeiten mit TextElement-Inhalt  
  Den Inhalt einer <xref:System.Windows.Documents.TextElement> besteht aus Sammlungen und daher programmgesteuert bearbeiten des Inhalts der <xref:System.Windows.Documents.TextElement> Objekte erfolgt durch die Arbeit mit diesen Sammlungen. Es gibt drei verschiedene Auflistungen von verwendeten <xref:System.Windows.Documents.TextElement> -abgeleitete Klassen:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Inline>-Elementen dar. <xref:System.Windows.Documents.InlineCollection> definiert den zulässigen untergeordneten Inhalt, der die <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, und <xref:System.Windows.Controls.TextBlock> Elemente.  
+- <xref:System.Windows.Documents.InlineCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Inline>-Elementen dar. <xref:System.Windows.Documents.InlineCollection> definiert den zulässigen untergeordneten Inhalt der Elemente <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> und <xref:System.Windows.Controls.TextBlock>.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Block>-Elementen dar. <xref:System.Windows.Documents.BlockCollection> definiert den zulässigen untergeordneten Inhalt, der die <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, und <xref:System.Windows.Documents.Figure> Elemente.  
+- <xref:System.Windows.Documents.BlockCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Block>-Elementen dar. <xref:System.Windows.Documents.BlockCollection> definiert den zulässigen untergeordneten Inhalt der Elemente <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> und <xref:System.Windows.Documents.Figure>.  
   
--   <xref:System.Windows.Documents.ListItemCollection>: Ein fortlaufendes Inhaltselement, das ein bestimmtes Inhaltselement in einer geordneten darstellt oder die ungeordneten <xref:System.Windows.Documents.List>.  
+- <xref:System.Windows.Documents.ListItemCollection>: Ein fortlaufendes Inhaltselement, das ein bestimmtes Inhaltselement in einer geordneten darstellt oder die ungeordneten <xref:System.Windows.Documents.List>.  
   
  Sie können ändern (hinzufügen oder Entfernen von Elementen) diese Auflistungen mithilfe der entsprechenden Eigenschaften der **Inlines**, **Blöcke**, und **ListItems**. Die folgenden Beispiele zeigen, wie Sie den Inhalt eines Span-Element mit Bearbeiten der **Inlines** Eigenschaft.  
   

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2f94ec58e6fdb56cfc5147e74b6ffd6bb657228d
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857532"
+---
 ### <a name="itemsclear-does-not-remove-duplicates-from-selecteditems"></a>Items.Clear entfernt keine Duplikate aus SelectedItems
 
 |   |   |

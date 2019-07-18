@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222665"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539736"
 ---
 # <a name="null-comparisons"></a>NULL-Vergleiche
-Ein `null`-Wert in der Datenquelle gibt an, dass der Wert unbekannt ist. Sie können in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen auf NULL-Werte überprüfen, damit bestimmte Berechnungen oder Vergleiche nur für Zeilen mit gültigen Daten bzw. Daten, die nicht den Wert NULL haben, ausgeführt werden. Die NULL-Semantik der CLR unterscheidet sich jedoch möglicherweise von der NULL-Semantik der Datenquelle. Die meisten Datenbanken verwenden eine Logikversion mit einer dritten Möglichkeit der Auswertung, um NULL-Vergleiche zu behandeln. D. h. ein Vergleich mit einem null-Wert nicht als `true` oder `false`, ist er `unknown`. Oft ist dies eine Implementierung von ANSI-Nullen, das ist jedoch nicht immer der Fall.  
+Ein `null`-Wert in der Datenquelle gibt an, dass der Wert unbekannt ist. In LINQ to Entities-Abfragen können Sie null-Werte überprüfen, damit bestimmte Berechnungen oder Vergleiche nur für Zeilen ausgeführt werden, die ungültig oder nicht Null ist, Daten enthalten. Die NULL-Semantik der CLR unterscheidet sich jedoch möglicherweise von der NULL-Semantik der Datenquelle. Die meisten Datenbanken verwenden eine Logikversion mit einer dritten Möglichkeit der Auswertung, um NULL-Vergleiche zu behandeln. D. h. ein Vergleich mit einem null-Wert nicht als `true` oder `false`, ist er `unknown`. Oft ist dies eine Implementierung von ANSI-Nullen, das ist jedoch nicht immer der Fall.  
   
- Standardmäßig gibt der NULL-gleich-NULL-Vergleich in SQL Server einen NULL-Wert zurück. Im folgenden Beispiel werden die Zeilen, in denen `ShipDate` gleich NULL ist, vom Resultset ausgeschlossen, sodass die [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]-Anweisung keine Zeilen zurückgeben würde.  
+ Standardmäßig gibt der NULL-gleich-NULL-Vergleich in SQL Server einen NULL-Wert zurück. Im folgenden Beispiel, die Zeilen, in denen `ShipDate` ist Null, werden aus dem Resultset ausgeschlossen und die Transact-SQL-Anweisung 0 Zeilen zurückgegeben.  
   
 ```  
 -- Find order details and orders with no ship date.  
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>Übergeben von NULL-Auflistungen an Aggregatfunktionen  
- In [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], wenn Sie eine Sammlung übergeben, die unterstützt `IQueryable` für eine Aggregatfunktion, aggregierte Operationen in der Datenbank ausgeführt werden. Möglicherweise gibt es Unterschiede in den Ergebnissen einer Abfrage, die im Arbeitsspeicher ausgeführt wurde und eine Abfrage, die in der Datenbank ausgeführt wurde. Wenn keine Übereinstimmungen vorhanden sind, gibt die Abfrage mit einer in-Memory-Abfrage 0 (null) zurück. Bei der Datenbankabfrage gibt die gleiche Abfrage `null` zurück. Wenn eine `null` Wert an eine LINQ-Aggregatfunktion übergeben wird, wird eine Ausnahme ausgelöst. Mögliche akzeptieren `null` Werte umgewandelt, die Typen und die Eigenschaften der Typen, die Abfrageergebnisse in NULL-Werte zu erhalten.  
+ In LINQ to Entities, wenn Sie eine Sammlung übergeben, die unterstützt `IQueryable` für eine Aggregatfunktion, aggregierte Operationen in der Datenbank ausgeführt werden. Möglicherweise gibt es Unterschiede in den Ergebnissen einer Abfrage, die im Arbeitsspeicher ausgeführt wurde und eine Abfrage, die in der Datenbank ausgeführt wurde. Wenn keine Übereinstimmungen vorhanden sind, gibt die Abfrage mit einer in-Memory-Abfrage 0 (null) zurück. Bei der Datenbankabfrage gibt die gleiche Abfrage `null` zurück. Wenn eine `null` Wert an eine LINQ-Aggregatfunktion übergeben wird, wird eine Ausnahme ausgelöst. Mögliche akzeptieren `null` Werte umgewandelt, die Typen und die Eigenschaften der Typen, die Abfrageergebnisse in NULL-Werte zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch
 

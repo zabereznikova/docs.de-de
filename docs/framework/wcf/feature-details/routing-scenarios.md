@@ -2,14 +2,14 @@
 title: Routingszenarien
 ms.date: 03/30/2017
 helpviewer_keywords:
-- rounting [WCF], scenarios
+- routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0ab071bf7996a296563fbda68dfdc731e95ed897
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223826"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425363"
 ---
 # <a name="routing-scenarios"></a>Routingszenarien
 Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein, beim Erstellen einer völlig neuen Konfiguration eine effiziente Routinglogik zu entwerfen.  Es gibt jedoch einige allgemeine Szenarios, auf denen die meisten Routingdienstkonfigurationen basieren. Auch wenn diese Szenarios ggf. nicht genau mit Ihrer jeweiligen Konfiguration übereinstimmen, trägt es zum Verständnis des Routingdiensts bei, wenn Sie wissen, wie dieser in bestimmten Szenarios konfiguriert werden kann.  
@@ -49,9 +49,9 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
 ### <a name="multicast"></a>Multicast  
  Beim Weiterleiten von Nachrichten werden Nachrichten normalerweise an einen bestimmten Zielendpunkt weitergeleitet.  Es kann jedoch sein, dass Sie gelegentlich eine Kopie der Nachricht an mehrere Zielendpunkte weiterleiten müssen. Um das Routing per Multicast durchzuführen, müssen die folgenden Bedingungen erfüllt sein:  
   
--   Die Kanalform darf nicht vom Typ "Anforderung-Antwort" sein (unidirektional oder duplex ist jedoch möglich), weil dabei vorgegeben ist, dass die Clientanwendung als Antwort auf die Anforderung nur eine Antwort empfangen kann.  
+- Die Kanalform darf nicht vom Typ "Anforderung-Antwort" sein (unidirektional oder duplex ist jedoch möglich), weil dabei vorgegeben ist, dass die Clientanwendung als Antwort auf die Anforderung nur eine Antwort empfangen kann.  
   
--   Mehrere Filter müssen zurückgeben **"true"** beim Auswerten der Nachricht.  
+- Mehrere Filter müssen zurückgeben **"true"** beim Auswerten der Nachricht.  
   
  Wenn diese Bedingungen erfüllt sind, empfängt jeder Zielendpunkt, der einem Filter mit der Rückgabe "true" zugeordnet ist, eine Kopie der Nachricht.  
   
@@ -66,14 +66,14 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
  Die Schritte zum Konfigurieren der Fehlerbehandlung verwendet wird, finden Sie unter [so wird's gemacht: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [How To: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Vorgehensweise: Dienstdatenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [How To: Dienstdatenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Vorgehensweise: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [How To: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Vorgehensweise: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [How To: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Einführung in das Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Einführung in Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

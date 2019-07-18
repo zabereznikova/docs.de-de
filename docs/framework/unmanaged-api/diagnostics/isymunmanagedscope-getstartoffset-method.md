@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: faab55199a3b921ea8b995e2a0f9823fb4da9cc7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d34bcaf1ef00806e3883996804336bd22b9b634f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230589"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777847"
 ---
 # <a name="isymunmanagedscopegetstartoffset-method"></a>ISymUnmanagedScope::GetStartOffset-Methode
 Ruft den Anfangsoffset für diesen Bereich ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStartOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  

@@ -10,33 +10,33 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219905"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630114"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Verketten von Aufgaben mithilfe von Fortsetzungsaufgaben
 Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorgangs häufig ein zweiter Vorgang aufgerufen und Daten an diesen weitergegeben. In der Vergangenheit wurden für diese Fortsetzungen vor allem Rückrufmethoden genutzt. In der Task Parallel Library wird die gleiche Funktionalität durch *Fortsetzungsaufgaben*bereitgestellt. Eine Fortsetzungsaufgabe (auch kurz als Fortsetzung bezeichnet) ist eine asynchrone Aufgabe, die von einer anderen Aufgabe, die wiederum als *Vorgänger*bezeichnet wird, nach deren Beendigung aufgerufen wird.  
   
  Fortsetzungen können relativ einfach eingesetzt werden, sind dabei jedoch sehr leistungsstark und flexibel. Sie haben unter anderem folgende Möglichkeiten:  
   
--   Übergeben von Daten vom Vorgänger an die Fortsetzung  
+- Übergeben von Daten vom Vorgänger an die Fortsetzung  
   
--   Angeben der präzisen Bedingungen, unter denen die Fortsetzung aufgerufen bzw. nicht aufgerufen wird  
+- Angeben der präzisen Bedingungen, unter denen die Fortsetzung aufgerufen bzw. nicht aufgerufen wird  
   
--   Abbrechen einer Fortsetzung vor dem Starten oder kooperativ während ihrer Ausführung  
+- Abbrechen einer Fortsetzung vor dem Starten oder kooperativ während ihrer Ausführung  
   
--   Bereitstellen von Hinweisen zur Planung der Fortsetzung  
+- Bereitstellen von Hinweisen zur Planung der Fortsetzung  
   
--   Aufrufen mehrerer Fortsetzungen durch den gleichen Vorgänger  
+- Aufrufen mehrerer Fortsetzungen durch den gleichen Vorgänger  
   
--   Aufrufen einer Fortsetzung, wenn alle Vorgänger abgeschlossen werden oder einer von mehreren Vorgängern abgeschlossen wird  
+- Aufrufen einer Fortsetzung, wenn alle Vorgänger abgeschlossen werden oder einer von mehreren Vorgängern abgeschlossen wird  
   
--   Verketten von Fortsetzungen der Reihe nach auf eine beliebige Länge  
+- Verketten von Fortsetzungen der Reihe nach auf eine beliebige Länge  
   
--   Beheben von durch den Vorgänger ausgelösten Ausnahmen mithilfe einer Fortsetzung  
+- Beheben von durch den Vorgänger ausgelösten Ausnahmen mithilfe einer Fortsetzung  
   
 ## <a name="about-continuations"></a>Über Fortsetzungen  
  Eine Fortsetzung ist eine Aufgabe, die im <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> -Zustand erstellt wird. Sie wird automatisch aktiviert, wenn ihre Vorgängeraufgabe bzw. -aufgaben abgeschlossen wird bzw. werden. Das Aufrufen von <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> für eine Fortsetzung in Benutzercode löst eine <xref:System.InvalidOperationException?displayProperty=nameWithType> -Ausnahme aus.  
@@ -85,11 +85,11 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
 ## <a name="canceling-a-continuation"></a>Abbrechen einer Fortsetzung  
  Die <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> -Eigenschaft einer Fortsetzung wird in den folgenden Situationen auf <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> festgelegt:  
   
--   Sie löst als Antwort auf eine Abbruchanforderung eine <xref:System.OperationCanceledException> -Ausnahme aus. Wenn die Ausnahme das gleiche Token enthält, das an die Fortsetzung übergeben wurde, wird dies als Bestätigung des kooperativen Abbruchs interpretiert, wie dies bei allen Aufgaben der Fall ist.  
+- Sie löst als Antwort auf eine Abbruchanforderung eine <xref:System.OperationCanceledException> -Ausnahme aus. Wenn die Ausnahme das gleiche Token enthält, das an die Fortsetzung übergeben wurde, wird dies als Bestätigung des kooperativen Abbruchs interpretiert, wie dies bei allen Aufgaben der Fall ist.  
   
--   Der Fortsetzung wird ein <xref:System.Threading.CancellationToken?displayProperty=nameWithType> übergeben, dessen <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> -Eigenschaft auf `true`festgelegt ist. In diesem Fall wird die Fortsetzung nicht gestartet und geht in den Zustand <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> über.  
+- Der Fortsetzung wird ein <xref:System.Threading.CancellationToken?displayProperty=nameWithType> übergeben, dessen <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> -Eigenschaft auf `true`festgelegt ist. In diesem Fall wird die Fortsetzung nicht gestartet und geht in den Zustand <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> über.  
   
--   Die Fortsetzung wird nie ausgeführt, das die von ihrem <xref:System.Threading.Tasks.TaskContinuationOptions> -Argument festgelegte Bedingung nicht erfüllt wurde. Wenn beispielsweise ein Vorgänger in einen <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> -Zustand übergeht, wird seine Fortsetzung, der die Option <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> übergeben wurde, nicht ausgeführt, sondern geht stattdessen in den <xref:System.Threading.Tasks.TaskStatus.Canceled> -Zustand über.  
+- Die Fortsetzung wird nie ausgeführt, das die von ihrem <xref:System.Threading.Tasks.TaskContinuationOptions> -Argument festgelegte Bedingung nicht erfüllt wurde. Wenn beispielsweise ein Vorgänger in einen <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> -Zustand übergeht, wird seine Fortsetzung, der die Option <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> übergeben wurde, nicht ausgeführt, sondern geht stattdessen in den <xref:System.Threading.Tasks.TaskStatus.Canceled> -Zustand über.  
   
  Wenn eine Aufgabe und die zugehörige Fortsetzung zwei Teile des gleichen logischen Vorgangs sind, können Sie das gleiche Abbruchtoken an beide Aufgaben übergeben, wie im folgenden Beispiel gezeigt. Es besteht aus einem Vorgänger, der eine Liste mit ganzen Zahlen erstellt, die durch 33 teilbar sind und übergibt sie an die Fortsetzung. Die Fortsetzung zeigt ihrerseits die Liste an. Sowohl der Vorgänger als auch die Fortsetzung werden regelmäßig in zufälligen Intervallen angehalten. Darüber hinaus wird ein <xref:System.Threading.Timer?displayProperty=nameWithType> -Objekt verwendet, um die Methode `Elapsed` nach einem fünf Sekunden betragenden Timeoutintervall auszuführen. In diesem Beispiel wird die <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> -Methode aufgerufen, die bewirkt, dass die aktuell ausgeführte Aufgabe die <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> -Methode aufruft. Ob die Methode <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> während der Ausführung des Vorgängers oder seiner Fortsetzung aufgerufen wird, hängt von der Dauer der zufällig generierten Pausen ab. Wenn der Vorgänger abgebrochen wurde, wird die Fortsetzung nicht gestartet. Wenn der Vorgänger nicht abgebrochen wird, kann das Token trotzdem zum Abbrechen der Fortsetzung verwendet werden.  
   
@@ -133,12 +133,12 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
 ## <a name="handling-exceptions-thrown-from-continuations"></a>Behandeln von durch Fortsetzungen ausgelösten Ausnahmen  
  Eine Vorgänger-Fortsetzung-Beziehung ist keine Beziehung zwischen übergeordneten und untergeordneten Elementen. Durch Fortsetzungen ausgelöste Ausnahmen werden nicht an den Vorgänger weitergegeben. Behandeln Sie Ausnahmen, die von Fortsetzungen ausgelöst wurden, daher wie bei allen anderen Aufgaben (siehe unten):  
   
--   Verwenden Sie die Methode <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>oder <xref:System.Threading.Tasks.Task.WaitAny%2A> bzw. die generische Entsprechung, um auf die Fortsetzung zu warten. Sie können in der gleichen `try` -Anweisung auf einen Vorgänger und seine Fortsetzungen warten, wie im folgenden Beispiel gezeigt.  
+- Verwenden Sie die Methode <xref:System.Threading.Tasks.Task.Wait%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A>oder <xref:System.Threading.Tasks.Task.WaitAny%2A> bzw. die generische Entsprechung, um auf die Fortsetzung zu warten. Sie können in der gleichen `try` -Anweisung auf einen Vorgänger und seine Fortsetzungen warten, wie im folgenden Beispiel gezeigt.  
   
      [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
      [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
   
--   Sie können eine zweite Fortsetzung verwenden, um die <xref:System.Threading.Tasks.Task.Exception%2A> -Eigenschaft der ersten Fortsetzung zu beachten. In folgenden Beispiel versucht eine Aufgabe, aus einer nicht vorhandenen Datei zu lesen. In einem solchen Fall zeigt die Fortsetzung Informationen über die Ausnahme in der vorhergehenden Aufgabe an.  
+- Sie können eine zweite Fortsetzung verwenden, um die <xref:System.Threading.Tasks.Task.Exception%2A> -Eigenschaft der ersten Fortsetzung zu beachten. In folgenden Beispiel versucht eine Aufgabe, aus einer nicht vorhandenen Datei zu lesen. In einem solchen Fall zeigt die Fortsetzung Informationen über die Ausnahme in der vorhergehenden Aufgabe an.  
   
      [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
      [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
@@ -150,7 +150,7 @@ Bei der asynchronen Programmierung werden nach Abschluss eines asynchronen Vorga
   
      Weitere Informationen finden Sie unter [Ausnahmebehandlung (Task Parallel Library)](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md).  
   
--   Wenn die Fortsetzung eine angefügte untergeordnete Aufgabe ist, die mit der <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> -Option erstellt wurde, werden die zugehörigen Ausnahmen vom übergeordneten Element an den aufrufenden Thread zurückgegeben, wie dies auch bei allen anderen angefügten untergeordneten Elementen der Fall ist. Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
+- Wenn die Fortsetzung eine angefügte untergeordnete Aufgabe ist, die mit der <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> -Option erstellt wurde, werden die zugehörigen Ausnahmen vom übergeordneten Element an den aufrufenden Thread zurückgegeben, wie dies auch bei allen anderen angefügten untergeordneten Elementen der Fall ist. Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d5f24d7415ff7ecceba6b0a5fbd3098d70dcd0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190352"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767880"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation-Enumeration
 Beschreibt die Vorgänge, die für die ein Host Richtlinienaktionen anwenden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     OPR_ThreadAbort,  
     OPR_ThreadRudeAbortInNonCriticalRegion,  
@@ -55,7 +55,7 @@ typedef enum {
 ## <a name="remarks"></a>Hinweise  
  Die common Language Runtime (CLR) zuverlässigkeitsinfrastruktur unterscheidet zwischen Abbrüche und Ressource Fehler bei der Zuordnung, die auftreten, die im kritischen Bereich des Codes und diejenigen, die in nicht-kritische Bereiche des Codes auftreten. Diese Unterscheidung soll es ermöglicht Hosts, die verschiedene Richtlinien, je nachdem, in denen eines im Code Fehlers festzulegen.  
   
- Ein *des kritischen Codebereichs* ist eine beliebige Stelle, in denen die CLR kann nicht garantieren, diese eine Aufgabe oder Fehler beim Abschluss einer Anforderung für Ressourcen nur den aktuellen Task auswirkt. Z. B. wenn ein Task eine Sperre wird und empfängt ein HRESULT, das Fehler beim Erstellen einer speicherbelegungsanforderung weist darauf hin, es ist nicht ausreichend, einfach, um diese Aufgabe aus, um sicherzustellen, dass die Stabilität der Abbruch der <xref:System.AppDomain>, da die <xref:System.AppDomain> enthält möglicherweise andere Aufgaben, die die gleiche Sperre warten. Verwerfen der aktuellen Aufgabe kann dazu führen, dass die andere Aufgaben nicht mehr reagiert (oder hängen) auf unbestimmte Zeit. In diesem Fall benötigt der Host die Möglichkeit, den gesamten entladen <xref:System.AppDomain> statt Risiko potenzieller Systeminstabilität zur Folge.  
+ Ein *des kritischen Codebereichs* ist eine beliebige Stelle, in denen die CLR kann nicht garantieren, diese eine Aufgabe oder Fehler beim Abschluss einer Anforderung für Ressourcen nur den aktuellen Task auswirkt. Z. B. wenn ein Task eine Sperre wird und empfängt ein HRESULT, das Fehler beim Erstellen einer speicherbelegungsanforderung weist darauf hin, es ist nicht ausreichend, einfach, um diese Aufgabe aus, um sicherzustellen, dass die Stabilität der Abbruch der <xref:System.AppDomain>, da die <xref:System.AppDomain> enthält möglicherweise andere Aufgaben, die die gleiche Sperre warten. Zum Verwerfen der aktuellen dazu Aufgabe diese Aufgaben nicht mehr reagiert. In diesem Fall benötigt der Host die Möglichkeit, den gesamten entladen <xref:System.AppDomain> statt Risiko potenzieller Systeminstabilität zur Folge.  
   
  Ein *unkritische Codebereich*, auf der anderen Seite ist eine Region, in denen die CLR garantieren kann, dass ein Abbruch oder Fehler auf dem der Fehler tritt nur auf die Aufgabe beeinflussen.  
   

@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 146e9c2360cea153d2f487769d5b983516861e8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16934232e1e202f1b100680a5101332aa622f2cc
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694726"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348490"
 ---
 # <a name="tuples-visual-basic"></a>Tupel (Visual Basic)
 

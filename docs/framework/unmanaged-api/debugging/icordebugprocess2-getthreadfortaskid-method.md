@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa1f6852544dddcdf514b14710ade3949818c93e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c85040a31966a92ead6ca4786f62852f17923056
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487312"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736921"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID-Methode
 Ruft den Thread, der auf dem die Aufgabe mit der angegebenen ID ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetThreadForTaskID (  
     [in]  TASKID            taskid,  
     [out] ICorDebugThread2  **ppThread  

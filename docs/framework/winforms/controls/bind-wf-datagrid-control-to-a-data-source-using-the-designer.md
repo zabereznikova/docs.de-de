@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011752"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle mithilfe des Designers
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115725"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>An Daten des DataGrid-Steuerelements an eine einzelne Tabelle im Designer gebunden werden soll  
   
-1.  Legen Sie die <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft, um das Objekt, enthält die Datenelemente, die Sie binden möchten.  
+1. Legen Sie die <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft, um das Objekt, enthält die Datenelemente, die Sie binden möchten.  
   
-2.  Wenn die Datenquelle ein Dataset ist, legen Sie die <xref:System.Windows.Forms.DataGrid.DataMember%2A> -Eigenschaft auf den Namen der Tabelle zu binden.  
+2. Wenn die Datenquelle ein Dataset ist, legen Sie die <xref:System.Windows.Forms.DataGrid.DataMember%2A> -Eigenschaft auf den Namen der Tabelle zu binden.  
   
-3.  Ist die Datenquelle ein Dataset oder eine basierend auf einer Dataset-Tabelle an, fügen Sie Code zum Formular, um das Dataset zu füllen.  
+3. Ist die Datenquelle ein Dataset oder eine basierend auf einer Dataset-Tabelle an, fügen Sie Code zum Formular, um das Dataset zu füllen.  
   
      Die genaue Code, den Sie verwenden, hängt davon ab, in dem das Dataset Daten erhält. Wenn der Dataset direkt aus einer Datenbank gefüllt wird, rufen Sie in der Regel die `Fill` Methode eines Datenadapters, wie im folgenden Codebeispiel wird, die aufgefüllt, ein Dataset mit dem Namen wird `DsCategories1`:  
   
@@ -57,22 +57,22 @@ ms.locfileid: "59115725"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (Optional) Fügen Sie die geeigneten Tabellen- und Spaltenformate zum Raster an.  
+4. (Optional) Fügen Sie die geeigneten Tabellen- und Spaltenformate zum Raster an.  
   
      Wenn es keine Tabellenformate sind, sehen Sie in der Tabelle, jedoch mit minimaler Formatierung und alle Spalten angezeigt.  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Klicken Sie auf dem DataGrid-Steuerelement an mehrere Tabellen in einem Dataset in der Designer Datenbindung  
   
-1.  Legen Sie die <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft, um das Objekt, enthält die Datenelemente, die Sie binden möchten.  
+1. Legen Sie die <xref:System.Windows.Forms.DataGrid.DataSource%2A> Eigenschaft, um das Objekt, enthält die Datenelemente, die Sie binden möchten.  
   
-2.  Wenn das Dataset über verknüpfte Tabellen enthält (d. h. wenn er ein Relation-Objekt enthält), legen die <xref:System.Windows.Forms.DataGrid.DataMember%2A> -Eigenschaft auf den Namen der übergeordneten Tabelle.  
+2. Wenn das Dataset über verknüpfte Tabellen enthält (d. h. wenn er ein Relation-Objekt enthält), legen die <xref:System.Windows.Forms.DataGrid.DataMember%2A> -Eigenschaft auf den Namen der übergeordneten Tabelle.  
   
-3.  Schreiben Sie Code aus, um das Dataset zu füllen.  
+3. Schreiben Sie Code aus, um das Dataset zu füllen.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über das DataGrid-Steuerelement](datagrid-control-overview-windows-forms.md)
-- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement von Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
-- [Datenbindung in Web Forms](../windows-forms-data-binding.md)
+- [Windows Forms-Datenbindung](../windows-forms-data-binding.md)
 - [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

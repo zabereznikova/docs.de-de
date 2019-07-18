@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
 ms.openlocfilehash: 910c5dada6ca82f68992722e4df6b35f9f7497c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942791"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>Vorgehensweise: Erstellen einer überschreibbaren Kopie eines schreibgeschützten Freezable-Objekts
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Freezable.Clone%2A> Methode zum Erstellen einer überschreibbaren Kopie eine schreibgeschützte <xref:System.Windows.Freezable>.  
@@ -33,4 +33,4 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Freezable.Clone%2A> 
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CloneCurrentValue%2A>
 - [Übersicht über Freezable-Objekte](freezable-objects-overview.md)
-- [Gewusst wie-Themen](base-elements-how-to-topics.md)
+- [Themen zu Vorgehensweisen](base-elements-how-to-topics.md)

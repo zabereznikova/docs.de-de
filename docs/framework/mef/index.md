@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6fa91b6f2866ba2dee6963d7258fe193ce058f61
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454498"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457181"
 ---
 # <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -54,7 +54,7 @@ Das Managed Extensibility Framework oder MEF ist eine Bibliothek zum Erstellen v
 
 <a name="where_is_mef_available"></a>
 ## <a name="where-is-mef-available"></a>Wo ist MEF verfügbar?
- MEF ist ein wesentlicher Bestandteil des [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und ist überall dort verfügbar, wo .NET Framework verwendet wird. Sie können MEF in Clientanwendungen verwenden, egal ob bei diesen Windows Forms, WPF oder eine andere Technologie zum Einsatz kommt, oder in Serveranwendungen, die ASP.NET verwenden.
+ Das MEF ist ein wesentlicher Bestandteil vom .NET Framework 4 und ist überall dort verfügbar, wo das .NET Framework verwendet wird. Sie können MEF in Clientanwendungen verwenden, egal ob bei diesen Windows Forms, WPF oder eine andere Technologie zum Einsatz kommt, oder in Serveranwendungen, die ASP.NET verwenden.
 
 <a name="mef_and_maf"></a>
 ## <a name="mef-and-maf"></a>MEF und MAF
@@ -475,11 +475,11 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="conclusion"></a>Schlussbemerkung
  In diesem Thema wurden die grundlegenden Konzepte des MEF behandelt.
 
--   Teile, Kataloge und der Kompositionscontainer
+- Teile, Kataloge und der Kompositionscontainer
 
      Die Teile und der Kompositionscontainer sind die Grundbausteine einer MEF-Anwendung. Ein Teil ist jedes Objekt, durch das ein Wert importiert oder exportiert wird, einschließlich des Objekts selbst. Ein Katalog stellt eine Auflistung der Teile einer bestimmten Quelle bereit. Der Kompositionscontainer verwendet die von einem Katalog bereitgestellten Teile, um eine Komposition (die Bindung von Importen an Exporte) durchzuführen.
 
--   Importe und Exporte
+- Importe und Exporte
 
      Durch Importe und Exporte kommunizieren Komponenten miteinander. Durch einen Import fordert eine Komponente einen bestimmten Wert oder ein Objekt an. Mit einem Export wird die Verfügbarkeit eines Werts angezeigt. Jeder Import wird anhand seines Vertrags mit einer Reihe von Exporten verglichen.
 

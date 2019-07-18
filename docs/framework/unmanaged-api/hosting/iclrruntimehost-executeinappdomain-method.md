@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86348c35a023e22d10c4ad2e08f5cb1104b895a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 314ffb143e99f9490bcd4a6489f2afed314b7c2c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165474"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768764"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain-Methode
 Gibt an, die <xref:System.AppDomain> in dem den angegebenen verwalteten Code ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ExecuteInAppDomain(  
     [in] DWORD AppDomainId,   
     [in] FExecuteInDomainCallback pCallback,   

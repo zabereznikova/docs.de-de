@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182298"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616372"
 ---
 # <a name="lazy-initialization"></a>Verzögerte Initialisierung
 *Verzögerte Initialisierung* eines Objekts bedeutet, dass seine Erstellung bis zur ersten Verwendung verzögert wird. (In diesem Thema werden die Begriffe *verzögerte Initialisierung* und *verzögerte Instanziierung* synonym gebraucht.) Die verzögerte Initialisierung wird vorwiegend verwendet, um die Leistung zu verbessern, aufwendige Berechnungen zu vermeiden und die Speicheranforderungen des Programms zu reduzieren. Die folgenden Szenarios sind die häufigsten:  
   
--   Sie verfügen über ein Objekt, dessen Erstellung teuer ist und das möglicherweise nicht vom Programm verwendet wird. Angenommen, in Ihrem Speicher befindet sich ein `Customer`-Objekt mit einer `Orders`-Eigenschaft, die ein großes Array aus `Order`-Objekten enthält, das zur Initialisierung eine Datenbankverbindung benötigt. Fordert der Benutzer nie die Anzeige des Orders-Objekts oder die Verwendung der Daten in einer Berechnung an, ist es nicht notwendig, Systemspeicher oder Berechnungszyklen für seine Erstellung zu verwenden. Systemressourcen können geschont werden, wenn Sie die verzögerte Initialisierung für das `Orders`-Objekt mithilfe von `Lazy<Orders>` deklarieren, solange das Objekt nicht verwendet wird.  
+- Sie verfügen über ein Objekt, dessen Erstellung teuer ist und das möglicherweise nicht vom Programm verwendet wird. Angenommen, in Ihrem Speicher befindet sich ein `Customer`-Objekt mit einer `Orders`-Eigenschaft, die ein großes Array aus `Order`-Objekten enthält, das zur Initialisierung eine Datenbankverbindung benötigt. Fordert der Benutzer nie die Anzeige des Orders-Objekts oder die Verwendung der Daten in einer Berechnung an, ist es nicht notwendig, Systemspeicher oder Berechnungszyklen für seine Erstellung zu verwenden. Systemressourcen können geschont werden, wenn Sie die verzögerte Initialisierung für das `Orders`-Objekt mithilfe von `Lazy<Orders>` deklarieren, solange das Objekt nicht verwendet wird.  
   
--   Sie verfügen über ein Objekt, dessen Erstellung teuer ist und das daher erst erstellt werden soll, wenn andere teure Vorgänge abgeschlossen sind. Angenommen, das Programm lädt beim Start mehrere Objektinstanzen, von denen allerdings nur einige sofort benötigt werden. Hier kann die Startleistung des Programms verbessert werden, indem die Initialisierung der nicht benötigten Objekte verzögert wird, bis die benötigten Objekte erstellt wurden.  
+- Sie verfügen über ein Objekt, dessen Erstellung teuer ist und das daher erst erstellt werden soll, wenn andere teure Vorgänge abgeschlossen sind. Angenommen, das Programm lädt beim Start mehrere Objektinstanzen, von denen allerdings nur einige sofort benötigt werden. Hier kann die Startleistung des Programms verbessert werden, indem die Initialisierung der nicht benötigten Objekte verzögert wird, bis die benötigten Objekte erstellt wurden.  
   
- Sie können für die verzögerte Initialisierung Ihren eigenen Code schreiben. Es ist jedoch empfehlenswert, stattdessen <xref:System.Lazy%601> zu verwenden. <xref:System.Lazy%601> und die entsprechenden Typen auch Threadsicherheit zu unterstützen, und geben Sie eine konsistente Richtlinie zur ausnahmeweitergabe.  
+ Sie können für die verzögerte Initialisierung Ihren eigenen Code schreiben. Es ist jedoch empfehlenswert, stattdessen <xref:System.Lazy%601> zu verwenden. <xref:System.Lazy%601> und die zugehörigen verwandten Typen unterstützen auch die Threadsicherheit und stellen eine konsistente Richtlinie zur Ausnahmeweitergabe bereit.  
   
  In der folgenden Tabelle werden die Typen aufgelistet, die .NET Framework Version 4 bereitstellt, um die verzögerte Initialisierung in verschiedenen Szenarios zu aktivieren.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59182298"
   
  Einige <xref:System.Lazy%601>-Konstruktoren verfügen über einen <xref:System.Threading.LazyThreadSafetyMode>-Parameter mit dem Namen `mode`. Diese Konstruktoren stellen einen zusätzlichen Threadsicherheitsmodus bereit. Entnehmen Sie der folgenden Tabelle, wie die Threadsicherheit eines <xref:System.Lazy%601>-Objekts von den Konstruktorparametern beeinflusst wird, die die Threadsicherheit angeben. Jeder Konstruktor verfügt über höchstens einen solchen Parameter.  
   
-|Threadsicherheit des Objekts|`LazyThreadSafetyMode` `mode` -Parameter von|Boolescher Parameter `isThreadSafe`|Keine Threadsicherheitsparameter|  
+|Threadsicherheit des Objekts|`mode`-Parameter `LazyThreadSafetyMode`|Boolescher Parameter `isThreadSafe`|Keine Threadsicherheitsparameter|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Vollständig threadsicher; nur ein Thread versucht jeweils, den Wert zu initialisieren.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Ja.|  
 |Nicht threadsicher.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Nicht zutreffend.|  
@@ -126,13 +126,13 @@ ms.locfileid: "59182298"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> umschließt sein Objekt auf die gleiche Weise wie <xref:System.Lazy%601>, mit folgenden entscheidenden unterschieden:  
+ <xref:System.Threading.ThreadLocal%601> umschließt sein Objekt auf fast die gleiche Weise wie <xref:System.Lazy%601>, mit folgenden entscheidenden Unterschieden:  
   
--   Jeder Thread initialisiert die threadlokale Variable mit seinen eigenen privaten Daten, auf die von anderen Threads nicht zugegriffen werden kann.  
+- Jeder Thread initialisiert die threadlokale Variable mit seinen eigenen privaten Daten, auf die von anderen Threads nicht zugegriffen werden kann.  
   
--   Die <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType>-Eigenschaft verfügt über Lese-/Schreibzugriff und kann beliebig oft geändert werden. Dies kann sich auf die Ausnahmeweitergabe auswirken: So kann ein `get`-Vorgang z.B. eine Ausnahme auslösen, während der nächste den Wert erfolgreich initialisiert.  
+- Die <xref:System.Threading.ThreadLocal%601.Value%2A?displayProperty=nameWithType>-Eigenschaft verfügt über Lese-/Schreibzugriff und kann beliebig oft geändert werden. Dies kann sich auf die Ausnahmeweitergabe auswirken: So kann ein `get`-Vorgang z.B. eine Ausnahme auslösen, während der nächste den Wert erfolgreich initialisiert.  
   
--   <xref:System.Threading.ThreadLocal%601> initialisiert seinen umschlossenen Typ mit dem Standardwert des Typs, wenn kein Initialisierungsdelegat bereitgestellt wird. In dieser Hinsicht ist <xref:System.Threading.ThreadLocal%601> mit dem <xref:System.ThreadStaticAttribute>-Attribut konsistent.  
+- <xref:System.Threading.ThreadLocal%601> initialisiert seinen umschlossenen Typ mit dem Standardwert des Typs, wenn kein Initialisierungsdelegat bereitgestellt wird. In dieser Hinsicht ist <xref:System.Threading.ThreadLocal%601> mit dem <xref:System.ThreadStaticAttribute>-Attribut konsistent.  
   
  Das folgende Beispiel verdeutlicht, dass jeder auf die `ThreadLocal<int>`-Instanz zugreifende Thread eine eigene eindeutige Kopie der Daten erhält.  
   
@@ -155,6 +155,6 @@ ms.locfileid: "59182298"
 ## <a name="see-also"></a>Siehe auch
 
 - [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)
-- [Threads und Threading](../../../docs/standard/threading/threads-and-threading.md)
+- [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)
 - [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Vorgehensweise: Verzögerte Initialisierung von Objekten](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Vorgehensweise: Führen Sie die verzögerte Initialisierung von Objekten](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

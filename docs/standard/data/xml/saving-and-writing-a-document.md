@@ -8,29 +8,29 @@ dev_langs:
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83aad5d45dda1784069839662486f7dbcc307542
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a35e06837ac35a743a3f0424cb2a7ad5bbeb5400
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879515"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589964"
 ---
 # <a name="saving-and-writing-a-document"></a>Speichern und Ausgeben eines Dokuments
 Ein geladenes und dann gespeichertes <xref:System.Xml.XmlDocument> kann in den folgenden Punkten vom Original abweichen:  
   
--   Wenn die <xref:System.Xml.XmlDocument.PreserveWhitespace%2A>-Eigenschaft vor dem Aufruf der `true`-Methode auf <xref:System.Xml.XmlDocument.Save%2A> festgelegt wurde, bleibt im Dokument enthaltener Leerraum in der Ausgabe erhalten. Wenn diese Eigenschaft `false` ist, wird die Ausgabe automatisch von <xref:System.Xml.XmlDocument> eingerückt.  
+- Wenn die <xref:System.Xml.XmlDocument.PreserveWhitespace%2A>-Eigenschaft vor dem Aufruf der `true`-Methode auf <xref:System.Xml.XmlDocument.Save%2A> festgelegt wurde, bleibt im Dokument enthaltener Leerraum in der Ausgabe erhalten. Wenn diese Eigenschaft `false` ist, wird die Ausgabe automatisch von <xref:System.Xml.XmlDocument> eingerückt.  
   
--   Der gesamte Leerraum zwischen Attributen wird zu einem einzigen Leerzeichen zusammengefasst.  
+- Der gesamte Leerraum zwischen Attributen wird zu einem einzigen Leerzeichen zusammengefasst.  
   
--   Leerraum zwischen Elementen wird verändert. Signifikanter Leerraum bleibt im Gegensatz zu nicht signifikantem Leerraum erhalten. Beim Speichern des Dokuments wird allerdings standardmäßig der besseren Lesbarkeit wegen der **Indenting**-Modus von <xref:System.Xml.XmlTextWriter> verwendet.  
+- Leerraum zwischen Elementen wird verändert. Signifikanter Leerraum bleibt im Gegensatz zu nicht signifikantem Leerraum erhalten. Beim Speichern des Dokuments wird allerdings standardmäßig der besseren Lesbarkeit wegen der **Indenting**-Modus von <xref:System.Xml.XmlTextWriter> verwendet.  
   
--   Einfache Anführungszeichen für Attributwerte werden standardmäßig in doppelte Anführungszeichen umgewandelt. Das Anführungszeichen kann mit der <xref:System.Xml.XmlTextReader.QuoteChar%2A>-Eigenschaft des <xref:System.Xml.XmlTextWriter> als einfaches oder doppeltes Anführungszeichen festgelegt werden.  
+- Einfache Anführungszeichen für Attributwerte werden standardmäßig in doppelte Anführungszeichen umgewandelt. Das Anführungszeichen kann mit der <xref:System.Xml.XmlTextReader.QuoteChar%2A>-Eigenschaft des <xref:System.Xml.XmlTextWriter> als einfaches oder doppeltes Anführungszeichen festgelegt werden.  
   
--   Numerische Zeichenentitäten wie `{` werden standardmäßig erweitert.  
+- Numerische Zeichenentitäten wie `{` werden standardmäßig erweitert.  
   
--   Die Bytereihenfolgenmarkierung im Ausgangsdokument bleibt nicht erhalten. UCS-2 wird als UTF-8 gespeichert, wenn keine XML-Deklaration erstellt wird, die eine andere Codierung angibt.  
+- Die Bytereihenfolgenmarkierung im Ausgangsdokument bleibt nicht erhalten. UCS-2 wird als UTF-8 gespeichert, wenn keine XML-Deklaration erstellt wird, die eine andere Codierung angibt.  
   
--   Wenn das <xref:System.Xml.XmlDocument> als Datei oder als Stream ausgegeben wird, entspricht die Ausgabe dem Inhalt des Dokuments. Eine <xref:System.Xml.XmlDeclaration> wird also nur dann ausgegeben, wenn eine solche im Dokument vorhanden ist, und die für die Ausgabe verwendete Codierung entspricht der im Deklarationsknoten angegebenen Codierung.  
+- Wenn das <xref:System.Xml.XmlDocument> als Datei oder als Stream ausgegeben wird, entspricht die Ausgabe dem Inhalt des Dokuments. Eine <xref:System.Xml.XmlDeclaration> wird also nur dann ausgegeben, wenn eine solche im Dokument vorhanden ist, und die für die Ausgabe verwendete Codierung entspricht der im Deklarationsknoten angegebenen Codierung.  
   
 ## <a name="writing-an-xmldeclaration"></a>Schreiben einer "XmlDeclaration"  
  Außer der <xref:System.Xml.XmlDocument>-Methode und der <xref:System.Xml.XmlDeclaration>-Methode von <xref:System.Xml.XmlNode.OuterXml%2A> erstellen die Methoden <xref:System.Xml.XmlNode.InnerXml%2A>, <xref:System.Xml.XmlNode.WriteTo%2A> und <xref:System.Xml.XmlDocument> von <xref:System.Xml.XmlDocument.Save%2A> und <xref:System.Xml.XmlDocument.WriteContentTo%2A> eine XML-Deklaration.  

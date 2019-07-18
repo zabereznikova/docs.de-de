@@ -2,12 +2,12 @@
 title: Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 23a01b7221fcfcbfc3cceb82123c68879eba98a3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144117"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063159"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
 
@@ -17,7 +17,7 @@ OData-Aktionen bieten eine Möglichkeit, ein Verhalten für eine aus einem OData
  Zum Implementieren einer Dienstaktion müssen Sie implementieren die <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)), und [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) Schnittstellen. <xref:System.IServiceProvider> ermöglicht es WCF Data Services zum Abrufen der Implementierung von [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)). [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) sind WCF Data Services zu erstellen, suchen, zu beschreiben und Aufrufen von Dienstaktionen. [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) können Sie Sie rufen Sie den Code, der Dienstaktionen Verhalten implementiert, und rufen Sie die Ergebnisse, sofern vorhanden. Bedenken Sie, dass die WCF Data Services pro Aufruf berechnet werden. Bei jedem Aufruf des Dienstes wird eine neue Dienstinstanz erstellt.  Stellen Sie sicher, dass mit dem Dienst keine unnötigen Arbeiten ausgeführt werden.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- <xref:System.IServiceProvider> enthält eine Methode namens <xref:System.IServiceProvider.GetService%2A>. Diese Methode wird von den WCF Data Services aufgerufen, um eine Reihe von Dienstanbietern abzurufen, einschließlich Anbietern von Metadatendiensten und Anbietern von Datendienstaktionen. Wenn Sie aufgefordert, einen Datendienstanbieter für die Aktion, zurückgeben Ihre [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) Implementierung.  
+ <xref:System.IServiceProvider> enthält eine Methode mit dem Namen <xref:System.IServiceProvider.GetService%2A>. Diese Methode wird von den WCF Data Services aufgerufen, um eine Reihe von Dienstanbietern abzurufen, einschließlich Anbietern von Metadatendiensten und Anbietern von Datendienstaktionen. Wenn Sie aufgefordert, einen Datendienstanbieter für die Aktion, zurückgeben Ihre [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) Implementierung.  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
  [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) enthält Methoden, mit denen Sie Informationen zu den verfügbaren Aktionen abrufen können. Bei der Implementierung [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) erweitern Sie die Metadaten für den Dienst, der durch die Implementierung des Diensts definiert ist [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) mit Aktionen und behandeln die Verteilung an diese Aktionen nach Bedarf.  
@@ -40,13 +40,13 @@ OData-Aktionen bieten eine Möglichkeit, ein Verhalten für eine aus einem OData
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  Diese Schnittstelle bietet eine Möglichkeit zur Ausführung einer WCF Data Service-Aktion. Beim Implementieren von IDataServiceInvokable sind drei Dinge zu beachten:  
   
-1.  Erfassen und potenzielles Marshallen der Parameter  
+1. Erfassen und potenzielles Marshallen der Parameter  
   
-2.  Verteilen der Parameter an den Code, durch den die Aktion beim Aufruf von Invoke() tatsächlich implementiert wird  
+2. Verteilen der Parameter an den Code, durch den die Aktion beim Aufruf von Invoke() tatsächlich implementiert wird  
   
-3.  Speichern der Ergebnisse von Invoke(), sodass sie mit GetResult() abgerufen werden können  
+3. Speichern der Ergebnisse von Invoke(), sodass sie mit GetResult() abgerufen werden können  
   
- Die Parameter können als Token übergeben werden. Das liegt daran, dass ein Datendienstanbieter mit Unterstützung für Token geschrieben werden kann, die Ressourcen darstellen. In diesem Fall müssen die Token u. U. in tatsächliche Ressourcen konvertiert (gemarshallt) werden, bevor sie an die tatsächliche Aktion verteilt werden. Nachdem der Parameter gemarshallt wurde, muss er sich in einem bearbeitbaren Zustand befinden, damit alle Änderungen an der Ressource, die beim Aufrufen der Aktion auftreten, gespeichert und auf den Datenträger geschrieben werden.  
+ Die Parameter können als Token übergeben werden. Das liegt daran, dass ein Datendienstanbieter mit Unterstützung für Token geschrieben werden kann, die Ressourcen darstellen. In diesem Fall müssen die Token u. U. in tatsächliche Ressourcen konvertiert (gemarshallt) werden, bevor sie an die tatsächliche Aktion verteilt werden. Nachdem der Parameter gemarshallt wurde, muss in einem bearbeitbaren Zustand sein, damit alle Änderungen an der Ressource, die auftreten, wenn die Aktion aufgerufen wird, gespeichert und auf Festplatte geschrieben werden.  
   
  Diese Schnittstelle erfordert zwei Methoden: Invoke und GetResult. Mit Invoke wird der Delegat aufgerufen, der das Verhalten der Aktion implementiert, und GetResult gibt das Ergebnis der Aktion zurück.  
   
@@ -83,6 +83,6 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
 ## <a name="see-also"></a>Siehe auch
 
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
-- [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Entwickeln und Bereitstellen von WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
 - [Benutzerdefinierte Datendienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Aktivitätsdesigners'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716828"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170670"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Aktivitätsdesigners
 
@@ -17,7 +17,7 @@ Benutzerdefinierte Aktivitätsdesigner erben in der Regel von <xref:System.Activ
 
 <xref:System.Activities.Presentation.ActivityDesigner> verwendet zwei Hilfssteuerelemente (<xref:System.Activities.Presentation.WorkflowItemPresenter> und <xref:System.Activities.Presentation.WorkflowItemsPresenter>), die das Entwickeln benutzerdefinierter Aktivitätsdesigner vereinfachen. Sie behandeln die allgemeine Funktionalität wie Ziehen und Ablegen von untergeordneten Elementen sowie Löschen, Auswählen und Hinzufügen dieser untergeordneten Elemente. Die <xref:System.Activities.Presentation.WorkflowItemPresenter> unterstützt ein einzelnes untergeordnetes Benutzeroberflächenelement, die "Ablagezone" Bereitstellen während der <xref:System.Activities.Presentation.WorkflowItemsPresenter> unterstützt mehrere Benutzeroberflächenelemente, darunter zusätzliche Funktionalität z. B. zum Sortieren, verschieben, löschen und Hinzufügen von untergeordneten Elementen.
 
-Der zweite Hauptaspekt bei der Implementierung eines benutzerdefinierten Aktivitätsdesigners betrifft die Methode zur Bindung der grafischen Bearbeitungen an die Instanz der im Designer bearbeiteten Objekte im Arbeitsspeicher mit der [!INCLUDE[avalon2](../../../includes/avalon2-md.md)]-Datenbindung. Hierzu dient die Modellelementstruktur, die auch zur Aktivierung der Änderungsbenachrichtigung und der Nachverfolgung von Ereignissen wie Zustandsänderungen verwendet wird.
+Der andere wichtige Teil der Textabschnitt, der Hauptaspekt bei der Implementierung eines benutzerdefinierten Aktivitätsdesigners betrifft die Möglichkeit, in der Bearbeitung der visual gebunden sind, mithilfe von WPF-Datenbindung an die Instanz im Arbeitsspeicher, was wir im Designer zu bearbeiten sind. Hierzu dient die Modellelementstruktur, die auch zur Aktivierung der Änderungsbenachrichtigung und der Nachverfolgung von Ereignissen wie Zustandsänderungen verwendet wird.
 
 In diesem Thema werden zwei Prozeduren beschrieben.
 

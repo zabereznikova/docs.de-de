@@ -8,35 +8,35 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2c9a3b43f81f00a7b6a3a0b3a8e1c102aafe0c0e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988087"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170948"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>"XsltArgumentList" für Stylesheetparameter und Erweiterungsobjekte
 Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible Stylesheet Transformation) und XSLT-Erweiterungsobjekte. Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.  
   
 > [!NOTE]
->  Die <xref:System.Xml.Xsl.XslTransform>-Klasse und die <xref:System.Xml.Xsl.XsltArgumentList>-Klasse sind in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Sie können XSLT-Transformationen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse durchführen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
+>  Die Klassen <xref:System.Xml.Xsl.XslTransform> und <xref:System.Xml.Xsl.XsltArgumentList> sind in .NET Framework 2.0 veraltet. Sie können XSLT-Transformationen mit der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse durchführen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md).  
   
  Die <xref:System.Xml.Xsl.XsltArgumentList>-Klasse enthält XSLT-Parameter und XSLT-Erweiterungsobjekte. Bei der Übergabe an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode können diese Parameter und Erweiterungsobjekte von Stylesheets aus ausgerufen werden.  
   
  Die Übergabe eines Objekts bietet gegenüber der Verwendung eines eingebetteten Skripts folgende Vorteile:  
   
--   Sie ermöglicht eine bessere Kapselung und Wiederverwendung von Klassen.  
+- Sie ermöglicht eine bessere Kapselung und Wiederverwendung von Klassen.  
   
--   Stylesheets werden kleiner und sind besser verwaltbar.  
+- Stylesheets werden kleiner und sind besser verwaltbar.  
   
--   Das Aufrufen von Methoden für Klassen, die zu anderen Namespaces gehören als zu denen, die im Rahmen der unterstützten <xref:System>-Namespaces definiert sind, wird unterstützt.  
+- Das Aufrufen von Methoden für Klassen, die zu anderen Namespaces gehören als zu denen, die im Rahmen der unterstützten <xref:System>-Namespaces definiert sind, wird unterstützt.  
   
--   Bei Verwendung von <xref:System.Xml.XPath.XPathNodeIterator> wird die Übergabe von Ergebnisstrukturfragmenten an das Stylesheet unterstützt.  
+- Bei Verwendung von <xref:System.Xml.XPath.XPathNodeIterator> wird die Übergabe von Ergebnisstrukturfragmenten an das Stylesheet unterstützt.  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT-Stylesheetparameter  
  XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzugefügt. Dabei wird ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.  
   
- Das Parameterobjekt muss einem W3C-Typ entsprechen. In der folgenden Tabelle sind die jeweiligen W3C-Typen mit den entsprechenden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Klassen (Typ) aufgelistet und es ist angegeben, ob es sich bei dem W3C-Typ um einen XPath-Typ (XML Path Language) oder einen XSLT-Typ handelt.  
+ Das Parameterobjekt muss einem W3C-Typ entsprechen. In der folgenden Tabelle sind die jeweiligen W3C-Typen mit den entsprechenden .NET Framework-Klassen (Typ) aufgelistet, und es ist angegeben, ob es sich bei dem W3C-Typ um einen XPath-Typ (XML Path Language) oder einen XSLT-Typ handelt.  
   
 |W3C-Typ|Entsprechende .NET Framework-Klasse (Typ)|XPath-Typ oder XSLT-Typ|  
 |--------------|----------------------------------------------|-----------------------------|  
@@ -50,11 +50,11 @@ Die <xref:System.Xml.Xsl.XsltArgumentList> enthält XSLT-Parameter (Extensible S
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>So verwenden Sie den XSLT-Parameter:  
   
-1.  Erstellen Sie eine <xref:System.Xml.Xsl.XsltArgumentList> und fügen Sie die Objekte mit <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> hinzu.  
+1. Erstellen Sie eine <xref:System.Xml.Xsl.XsltArgumentList> und fügen Sie die Objekte mit <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> hinzu.  
   
-2.  Rufen Sie die Parameter aus dem Stylesheet auf.  
+2. Rufen Sie die Parameter aus dem Stylesheet auf.  
   
-3.  Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.  
+3. Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird mit der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode ein Parameter erstellt, der das berechnete Skontodatum enthält. Das Skontodatum ist 20 Tage nach dem Auftragsdatum.  
@@ -171,7 +171,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Ausgabe  
+### <a name="output"></a>Output  
   
 ```xml  
 <order>  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>So verwenden Sie das XSLT-Erweiterungsobjekt:  
   
-1.  Erstellen Sie eine <xref:System.Xml.Xsl.XsltArgumentList>, und fügen Sie das Erweiterungsobjekt mit <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> hinzu.  
+1. Erstellen Sie eine <xref:System.Xml.Xsl.XsltArgumentList>, und fügen Sie das Erweiterungsobjekt mit <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> hinzu.  
   
-2.  Rufen Sie das Erweiterungsobjekt aus dem Stylesheet auf.  
+2. Rufen Sie das Erweiterungsobjekt aus dem Stylesheet auf.  
   
-3.  Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.  
+3. Übergeben Sie die <xref:System.Xml.Xsl.XsltArgumentList> an die <xref:System.Xml.Xsl.XslTransform.Transform%2A>-Methode.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Umfang eines Kreises bei gegebenem Radius berechnet.  
@@ -343,7 +343,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>Ausgabe  
+### <a name="output"></a>Output  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

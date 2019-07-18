@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ae110d915241fe85453667e895ab54288302c20d
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3bde64b80e5dcfe98bbf598700b6d7004e3c3c9d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760831"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774040"
 ---
 ### <a name="keyboard-focus-now-moves-correctly-across-multiple-layers-of-winformswpf-hosting"></a>Der Tastaturfokus bewegt sich jetzt ordnungsgemäß über mehrere Ebenen von WinForms-/WPF-Hosting
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760831"
 |Bereich|Microsoft Edge|
 |Version|4.7.2|
 |Typ|Neuzuweisung|
-

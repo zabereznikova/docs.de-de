@@ -1,7 +1,6 @@
 ---
-title: Common Language Runtime (CLR)
-ms.custom: updateeachrelease
-ms.date: 04/16/2018
+title: 'Übersicht über Common Language Runtime (CLR): .NET Framework'
+ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 740c804dae32a79dd06f951751bd0980fb34ca07
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.custom: updateeachrelease
+ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904114"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645011"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Übersicht: Common Language Runtime (CLR)
 
@@ -64,7 +64,7 @@ Die Funktionen der Laufzeit werden durch Sprachcompiler und Tools auf eine Weise
 
 ## <a name="clr-versions"></a>CLR-Versionen
 
-Die Versionsnummer von .NET Framework entspricht nicht unbedingt der Versionsnummer der enthaltenen CLR. Die folgende Tabelle zeigt, wie die beiden Versionsnummern zusammenhängen.
+Die Versionsnummer von .NET Framework entspricht nicht unbedingt der Versionsnummer der enthaltenen CLR. Die folgende Tabelle zeigt, wie die beiden Versionsnummern zusammenhängen:
 
 |.NET Framework-Version|Enthält CLR-Version|
 |----------------------------|--------------------------|
@@ -77,6 +77,7 @@ Die Versionsnummer von .NET Framework entspricht nicht unbedingt der Versionsnum
 |4.5 (inklusive 4.5.1 und 4.5.2)|4|
 |4.6 (einschließlich 4.6.1 und 4.6.2)|4|
 |4.7 (einschließlich 4.7.1 und 4.7.2)|4|
+|4.8|4|
 
 ## <a name="related-topics"></a>Verwandte Themen
 

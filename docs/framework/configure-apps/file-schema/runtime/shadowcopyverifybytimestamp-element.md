@@ -1,5 +1,5 @@
 ---
-title: <shadowCopyVerifyByTimestamp> Element
+title: <shadowCopyVerifyByTimestamp>-Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4187d266d82783ebb72073c1da92faff95352884
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216415"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489377"
 ---
-# <a name="shadowcopyverifybytimestamp-element"></a>\<ShadowCopyVerifyByTimestamp >-Element
-Gibt an, ob die Schattenkopiefunktion das in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] eingeführte Standardstartverhalten verwendet oder auf das Startverhalten früherer Versionen von .NET Framework zurückgreift.  
+# <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp>-Element
+Gibt an, ob die Schattenkopiefunktion das standardmäßige Startverhalten, die in .NET Framework 4 eingeführt wurde verwendet, oder setzt auf das Startverhalten früherer Versionen von .NET Framework.  
   
  \<Configuration >-Element  
 \<Common Language Runtime >-Element  
-\<ShadowCopyVerifyByTimestamp >-Element  
+\<shadowCopyVerifyByTimestamp>-Element  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ Gibt an, ob die Schattenkopiefunktion das in [!INCLUDE[net_v40_long](../../../..
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|true|Beim Start kopiert wird nur Assemblys, die aktualisiert wurden, seit sie zuletzt in das Schattenkopieverzeichnis kopiert wurden. Dies ist die Standardeinstellung für die [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].|  
+|true|Beim Start kopiert wird nur Assemblys, die aktualisiert wurden, seit sie zuletzt in das Schattenkopieverzeichnis kopiert wurden. Dies ist die Standardeinstellung für .NET Framework 4.|  
 |False|Wird auf das Startverhalten früherer Versionen von .NET Framework, dem bestand darin, alle Dateien beim Start zu kopieren.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -54,10 +54,10 @@ Gibt an, ob die Schattenkopiefunktion das in [!INCLUDE[net_v40_long](../../../..
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beginnend mit der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], Assemblys werden Schattenkopien nur, wenn ihre Zeitstempel angeben, dass sie geändert wurden, seit sie zuletzt in das Schattenkopieverzeichnis kopiert wurden. Dies verbessert die Startzeiten für viele Anwendungen, die Schattenkopiefunktion, verwenden Sie, wie in beschrieben [Schattenkopien von Assemblys](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md). Anwendungen, die einen hohen Prozentsatz und Häufigkeit von Assembly-Updates verfügen möglicherweise nicht aufgrund der Änderung im Verhalten profitieren. In diesem Fall können Sie dieses Element, um das Verhalten früherer Versionen von .NET Framework wiederherzustellen.  
+ Ab .NET Framework 4 sind Assemblys Schattenkopien nur, wenn ihre Zeitstempel angeben, dass sie geändert wurden, seit sie zuletzt in das Schattenkopieverzeichnis kopiert wurden. Dies verbessert die Startzeiten für viele Anwendungen, die Schattenkopiefunktion, verwenden Sie, wie in beschrieben [Schattenkopien von Assemblys](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md). Anwendungen, die einen hohen Prozentsatz und Häufigkeit von Assembly-Updates verfügen möglicherweise nicht aufgrund der Änderung im Verhalten profitieren. In diesem Fall können Sie dieses Element, um das Verhalten früherer Versionen von .NET Framework wiederherzustellen.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie das standardmäßige Startverhalten der Schattenkopiefunktion in Deaktivieren der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], und klicken Sie auf das Startverhalten vorheriger Versionen von .NET Framework zurückgesetzt.  
+ Das folgende Beispiel zeigt, wie Sie das standardmäßige Startverhalten der Schattenkopiefunktion in .NET Framework 4 zu deaktivieren, und machen Sie auf das Startverhalten vorheriger Versionen von .NET Framework.  
   
 ```xml  
 <configuration>  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-ms.openlocfilehash: 806dcef7b7a29afa8804a581659023c817662434
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c1537133300ac4de33d0d7ebc3ea0ad6768e8ec9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58024539"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609148"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>Alle Feldbreiten (außer beim letzten Element) müssen größer als 0 (null) sein.
 Alle Feldbreiten (außer beim letzten Element) müssen größer als 0 (null) sein. Ein Feld mit einer Breite unter oder gleich 0 (null) im letzten Element bedeutet, dass die Länge des letzten Felds variabel ist.  
@@ -18,7 +18,7 @@ Alle Feldbreiten (außer beim letzten Element) müssen größer als 0 (null) sei
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Legen Sie die Feldbreite auf die richtige Länge fest.  
+- Legen Sie die Feldbreite auf die richtige Länge fest.  
   
 ## <a name="see-also"></a>Siehe auch
 

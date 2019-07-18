@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 494f39855132bc4a9551b78f746517862d285034
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 80bfdc9d58a86bb4cf945f0c8106bcfc00f3743e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074728"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760313"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a>ISymENCUnmanagedMethod::GetFileNameFromOffset-Methode
 Ruft den Dateinamen für die Zeile, die ein Offset zugeordnet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetFileNameFromOffset(  
     [in]  ULONG32  dwOffset,  
     [in]  ULONG32  cchName,  

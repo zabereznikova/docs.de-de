@@ -11,11 +11,11 @@ helpviewer_keywords:
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
 ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791845"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Rekursive Prozeduren (Visual Basic)
 Ein *rekursive* Verfahren ist ein, der sich selbst aufruft. Im Allgemeinen ist dies nicht die effektivste Möglichkeit, Visual Basic-Code zu schreiben.  

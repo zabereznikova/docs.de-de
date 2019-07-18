@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: ed7f88b20e4d519e67c8ef7b9f74909a38ea9c14
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829316"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593336"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt (Visual Basic)
 Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen über Ereignisse zu protokollieren, die in Ihrer Anwendung auftreten. In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie die Standardeinstellungen außer Kraft setzen und das `Log` -Objekt dazu bringen können, in andere Protokolllistener zu schreiben.  
@@ -22,21 +22,21 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 ### <a name="to-add-listeners"></a>Hinzufügen von Listenern  
   
-1.  Klicken Sie im **Projektmappen-Explorer** auf "app.config", und wählen Sie **Öffnen**aus.  
+1. Klicken Sie im **Projektmappen-Explorer** auf "app.config", und wählen Sie **Öffnen**aus.  
   
      \- oder –  
   
      Wenn keine app.config-Datei vorhanden ist:  
   
-    1.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
+    1. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
-    2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
+    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
   
-    3.  Klicken Sie auf **Hinzufügen**.  
+    3. Klicken Sie auf **Hinzufügen**.  
   
-2.  Suchen Sie den `<listeners>` -Abschnitt unter dem `<source>` -Abschnitt mit dem `name` -Attribut "DefaultSource" im Abschnitt `<sources>` . Der Abschnitt `<sources>` befindet sich im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
+2. Suchen Sie den `<listeners>` -Abschnitt unter dem `<source>` -Abschnitt mit dem `name` -Attribut "DefaultSource" im Abschnitt `<sources>` . Der Abschnitt `<sources>` befindet sich im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
   
-3.  Fügen Sie dem betreffenden `<listeners>` -Abschnitt diese Elemente hinzu.  
+3. Fügen Sie dem betreffenden `<listeners>` -Abschnitt diese Elemente hinzu.  
   
     ```xml  
     <!-- Uncomment to connect the application file log. -->  
@@ -51,11 +51,11 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
     <!-- <add name="Console" /> -->  
     ```  
   
-4.  Entfernen Sie die Auskommentierungen der Protokolllistener, die `Log` -Meldungen empfangen sollen.  
+4. Entfernen Sie die Auskommentierungen der Protokolllistener, die `Log` -Meldungen empfangen sollen.  
   
-5.  Suchen Sie den Abschnitt `<sharedListeners>` im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
+5. Suchen Sie den Abschnitt `<sharedListeners>` im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
   
-6.  Fügen Sie dem betreffenden `<sharedListeners>` -Abschnitt diese Elemente hinzu.  
+6. Fügen Sie dem betreffenden `<sharedListeners>` -Abschnitt diese Elemente hinzu.  
   
     ```xml  
     <add name="FileLog"  
@@ -86,7 +86,7 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
          initializeData="true" />  
     ```  
   
-7.  Der Inhalt der app.config-Datei sollte ähnlich dem folgenden XML-Code sein:  
+7. Der Inhalt der app.config-Datei sollte ähnlich dem folgenden XML-Code sein:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -147,33 +147,33 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 ### <a name="to-reconfigure-a-listener"></a>Umkonfigurieren eines Listeners  
   
-1.  Suchen Sie im Abschnitt `<add>` das `<sharedListeners>` -Element des Listeners.  
+1. Suchen Sie im Abschnitt `<add>` das `<sharedListeners>` -Element des Listeners.  
   
-2.  Das `type` -Attribut enthält den Namen des Listenertyps. Dieser Typ muss von der <xref:System.Diagnostics.TraceListener> -Klasse erben. Verwenden Sie den starken Typnamen, um sicherzustellen, dass der richtige Typ verwendet wird. Weitere Informationen finden Sie unten im Abschnitt "Verweise auf Typen mit starken Namen".  
+2. Das `type` -Attribut enthält den Namen des Listenertyps. Dieser Typ muss von der <xref:System.Diagnostics.TraceListener> -Klasse erben. Verwenden Sie den starken Typnamen, um sicherzustellen, dass der richtige Typ verwendet wird. Weitere Informationen finden Sie unten im Abschnitt "Verweise auf Typen mit starken Namen".  
   
      Dies sind einige der Typen, die Sie verwenden können:  
   
-    -   Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>-Listener, der in ein Dateiprotokoll schreibt.  
+    - Ein <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>-Listener, der in ein Dateiprotokoll schreibt.  
   
-    -   Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>-Listener, der Informationen in das Ereignisprotokoll des Computers schreibt, das im `initializeData`-Parameter angegeben ist.  
+    - Ein <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>-Listener, der Informationen in das Ereignisprotokoll des Computers schreibt, das im `initializeData`-Parameter angegeben ist.  
   
-    -   Die Listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, die in die Datei schreiben, die im `initializeData`-Parameter angegeben ist.  
+    - Die Listener <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> und <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, die in die Datei schreiben, die im `initializeData`-Parameter angegeben ist.  
   
-    -   Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>-Listener, der in die Befehlszeilenkonsole schreibt.  
+    - Ein <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>-Listener, der in die Befehlszeilenkonsole schreibt.  
   
      Informationen dazu, wohin andere Typen von Protokolllistenern Informationen schreiben, finden Sie in der Dokumentation zum entsprechenden Typ.  
   
-3.  Wenn die Anwendung das Protokolllistenerobjekt erstellt, übergibt sie das `initializeData` -Attribut als Konstruktorparameter. Die Bedeutung des `initializeData` -Attributs hängt vom Ablaufverfolgungslistener ab.  
+3. Wenn die Anwendung das Protokolllistenerobjekt erstellt, übergibt sie das `initializeData` -Attribut als Konstruktorparameter. Die Bedeutung des `initializeData` -Attributs hängt vom Ablaufverfolgungslistener ab.  
   
-4.  Nach dem Erstellen des Protokolllisteners legt die Anwendung die Eigenschaften des Listeners fest. Diese Eigenschaften werden durch die anderen Attribute im `<add>` -Element definiert. Weitere Informationen zu den Eigenschaften für einen bestimmten Listener finden Sie in der Dokumentation für den betreffenden Listenertyp.  
+4. Nach dem Erstellen des Protokolllisteners legt die Anwendung die Eigenschaften des Listeners fest. Diese Eigenschaften werden durch die anderen Attribute im `<add>` -Element definiert. Weitere Informationen zu den Eigenschaften für einen bestimmten Listener finden Sie in der Dokumentation für den betreffenden Listenertyp.  
   
 ### <a name="to-reference-a-strongly-named-type"></a>Verweise auf Typen mit starkem Namen  
   
-1.  Um sicherzustellen, dass der richtige Typ für Ihren Protokolllistener verwendet wird, achten Sie darauf, den vollqualifizierten Typnamen und den starken Assemblynamen zu verwenden. Die Syntax für einen Typ mit starkem Namen ist wie folgt:  
+1. Um sicherzustellen, dass der richtige Typ für Ihren Protokolllistener verwendet wird, achten Sie darauf, den vollqualifizierten Typnamen und den starken Assemblynamen zu verwenden. Die Syntax für einen Typ mit starkem Namen ist wie folgt:  
   
      \<*Typname*>, \<*Assemblyname*>, \<*Versionsnummer*>, \<*Kultur*>, \<*starker Name*>  
   
-2.  Dieses Codebeispiel zeigt, wie Sie den starken Typnamen für einen vollqualifizierten Typ bestimmen – in diesem Fall "System.Diagnostics.FileLogTraceListener".  
+2. Dieses Codebeispiel zeigt, wie Sie den starken Typnamen für einen vollqualifizierten Typ bestimmen – in diesem Fall "System.Diagnostics.FileLogTraceListener".  
   
      [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]  
   

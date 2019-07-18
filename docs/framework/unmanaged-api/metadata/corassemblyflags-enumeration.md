@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eca4b66a3f7c1a96bb06827dde477f34cb904ba3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3532ca0a30d83aa8f61bc4397090f3d589b73257
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072713"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780932"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags-Enumeration
 Enthält Werte, die die auf eine Assemblykompilierung angewendeten Metadaten beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorAssemblyFlags {  
   
     afPublicKey             =   0x0001,  
@@ -76,7 +76,7 @@ typedef enum CorAssemblyFlags {
 |`afRetargetable`|Gibt an, dass die Assembly zur Laufzeit auf eine Assembly von einem anderen Verleger umgeleitet werden kann.|  
 |`afContentType_Mask`|Eine Maske, die den Inhaltstyp beschreibt.|  
 |`afContentType_Default`|Gibt den Standardinhaltstyp an.|  
-|`afContentType_WindowsRuntime`|Gibt an, die [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Inhaltstyp.|  
+|`afContentType_WindowsRuntime`|Gibt den Inhaltstyp für die Windows-Runtime an.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

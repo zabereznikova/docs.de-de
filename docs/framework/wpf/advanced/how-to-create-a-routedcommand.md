@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
 ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776479"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Vorgehensweise: Erstellen eines RoutedCommand
 In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Windows.Input.RoutedCommand> und zum Implementieren von benutzerdefinierten Befehls durch das Erstellen einer <xref:System.Windows.Input.ExecutedRoutedEventHandler> und ein <xref:System.Windows.Input.CanExecuteRoutedEventHandler> und zum Anfügen von einer <xref:System.Windows.Input.CommandBinding>.  Weitere Informationen über Befehle finden Sie unter den [Befehlsübersicht](commanding-overview.md).  

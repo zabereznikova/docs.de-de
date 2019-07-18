@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5d4145e6c76cf95f2468a3f5ad59edcd310423e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3f45423bb0ff4c755e657729c5725c8d9a22bde3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160874"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746760"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion-Methode
 Ruft die Methodenversion ab. Die Methodenversion beginnt bei 1 und wird erhöht, jedes Mal, wenn die Methode erneut kompiliert wird. Neukompilierung möglich, ohne Änderungen an die Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetMethodVersion (  
     [in]  ISymUnmanagedMethod* pMethod,  
     [out] int* version);  

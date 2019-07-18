@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 732523935eec62bffbc15705bc93c97f14c90064
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bf9f7f3d3419efc9e1dc7d75fc7272432c0cf5d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148420"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739692"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags-Enumeration
 Gibt den Status des Threads an, auf dem der Assistent für verwaltetes Debuggen (MDA) ausgelöst wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugMDAFlags {  
     MDA_FLAG_SLIP = 0x2  
 } CorDebugMDAFlags;  
@@ -54,4 +54,4 @@ typedef enum CorDebugMDAFlags {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

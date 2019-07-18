@@ -14,11 +14,11 @@ helpviewer_keywords:
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
 ms.openlocfilehash: 7e25f25677fa684427bdaf00cea73916ffbad655
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608358"
 ---
 # <a name="and-operator-visual-basic"></a>And-Operator (Visual Basic)
 Führt eine logische Konjunktion für zwei `Boolean` Ausdrücke oder eine bitweise Konjunktion zweier numerischer Ausdrücke.  

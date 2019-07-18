@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5037f335e8d66c341d70d91d955a1ac7571b823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a66b2b94765c3d59327e500f1e208dc93cd8e231
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123759"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781932"
 ---
 # <a name="corprffinalizerflags-enumeration"></a>COR_PRF_FINALIZER_FLAGS-Enumeration
 Beschreibt den Finalizer für ein Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_FINALIZER_CRITICAL = 0x1  
 } COR_PRF_FINALIZER_FLAGS;  

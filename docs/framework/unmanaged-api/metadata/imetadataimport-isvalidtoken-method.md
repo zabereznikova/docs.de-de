@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3a99ed42f500b83b5109631b21a88029995b43d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 753449924f3415eb826b59d3a887eb69b9efba39
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123876"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778787"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken-Methode
 Ruft einen Wert ab, der angibt, ob das angegebene Token einen gültigen Verweis auf ein Codeobjekt enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 BOOL IsValidToken (  
    [in] mdToken     tk  
 );  

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bfbadc5553e86b2db10d66298c8d24d2a0f8bde
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c5c1c77b92d94062206cf9eb38981f38ff2a1cad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211574"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775456"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::GetSize-Methode
 Weist einer Variablen den Wert eines Bytearrays zu.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetValue(  
    [in] ULONG32 offset,  
    [in] DWORD threadID,  
@@ -63,4 +63,4 @@ HRESULT SetValue(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugVariableSymbol-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

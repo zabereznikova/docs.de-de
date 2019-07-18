@@ -1,5 +1,5 @@
 ---
-title: <sharedListeners> Element
+title: <sharedListeners>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
 ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701215"
 ---
 # <a name="sharedlisteners-element"></a>\<SharedListeners >-Element
 Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.  Diese Listener empfangen keine ablaufverfolgungen in der Standardeinstellung, und es ist nicht möglich, diese Listener zur Laufzeit abrufen. Listener, die als freigegebene Listener können anhand des Namens mit Quellen oder ablaufverfolgungen hinzugefügt werden.  
@@ -91,5 +91,5 @@ Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Diagnostics.TraceListener>
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Ablaufverfolgungslistener](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef22114b582ebfc9714dedc0cb6e66594d945ca1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 68dc80c657c3794a416f6e142f70cfb05bee2c77
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083789"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745896"
 ---
 # <a name="iceegengetstringsection-method"></a>ICeeGen::GetStringSection-Methode
 Ruft eine Zeichenfolgendarstellung der Codeabschnitt, der auf die verwiesen wird durch das angegebene Handle ab.  
@@ -31,7 +31,7 @@ Ruft eine Zeichenfolgendarstellung der Codeabschnitt, der auf die verwiesen wird
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStringSection (  
     [in, out] HCEESECTION     *section  
 );  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826131"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665143"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Der Ausdruck ist ein Wert und kann nicht als Ziel einer Zuweisung verwendet werden
 Eine Anweisung versucht, ein Ausdruck einen Wert zuweisen. Sie können einen Wert nur auf eine schreibbare Variable, eine Eigenschaft oder ein Arrayelement zur Laufzeit zuweisen. Im folgende Beispiel wird veranschaulicht, wie dieser Fehler kann auftreten.  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn die Anweisung ein Ausdruck einen Wert zuweist, ersetzen Sie den Ausdruck durch eine einzelne schreibbare Variable, eine Eigenschaft oder ein Arrayelement aus.  
+- Wenn die Anweisung ein Ausdruck einen Wert zuweist, ersetzen Sie den Ausdruck durch eine einzelne schreibbare Variable, eine Eigenschaft oder ein Arrayelement aus.  
   
--   Wenn die Anweisung indirekten Zugriff über einen Werttyp (in der Regel eine Struktur) ist, erstellen Sie eine Variable für den Werttyp.  
+- Wenn die Anweisung indirekten Zugriff über einen Werttyp (in der Regel eine Struktur) ist, erstellen Sie eine Variable für den Werttyp.  
   
--   Weisen Sie die entsprechende Struktur (oder anderen Werttyp) auf die Variable an.  
+- Weisen Sie die entsprechende Struktur (oder anderen Werttyp) auf die Variable an.  
   
--   Verwenden Sie die Variable, um Zugriff auf die Eigenschaft es sich um einen Wert zuzuweisen.  
+- Verwenden Sie die Variable, um Zugriff auf die Eigenschaft es sich um einen Wert zuzuweisen.  
   
 ## <a name="see-also"></a>Siehe auch
 

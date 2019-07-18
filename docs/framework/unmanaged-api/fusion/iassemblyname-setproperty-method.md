@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cc2a2c7991eb4d11873ebb6a2df92ccc45cde9b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113480"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761851"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty-Methode
 Legt den Wert der Eigenschaft durch den Bezeichner für die angegebene Eigenschaft verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetProperty (  
     [in] DWORD  PropertyId,  
     [in] LPVOID pvProperty,  

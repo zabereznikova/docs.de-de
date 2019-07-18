@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e281022cd7bc9b2095fdbd3964061b811ef60e0d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7b949961e854facf8414c81c47f995b2ac57af3f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496962"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755380"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext-Methode
 Legt den Kontext für den angegebenen Thread in diesem Prozess fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetThreadContext(  
     [in] DWORD threadID,  
     [in] ULONG32 contextSize,  

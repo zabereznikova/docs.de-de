@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 611b4a543a1de7c6163ec45ff7f17d07726569ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec18d5d5a6574cb0e08a6c4d6eaedcbcbf6886cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110364"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759359"
 ---
 # <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE-Struktur
 Stellt einen Verweis, den eine Anwendung in einer Assembly zu können, die die Anwendung im globalen Assemblycache installiert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _FUSION_INSTALL_REFERENCE_ {  
     DWORD    cbSize,  
     DWORD    dwFlags,  
@@ -57,5 +57,5 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusionsstrukturen](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [Fusion-Strukturen](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
 - [Globaler Assemblycache](../../../../docs/framework/app-domains/gac.md)

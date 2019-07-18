@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e089d133374f112dea13e91f9bd571bd2b5af07
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f87c9c04c4d5b1d65e8c844630a6034f3c72d484
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132924"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780970"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc-Methode
 Fordert an, dass der Host die angegebene Menge des Arbeitsspeichers aus dem Heap reserviert, und zudem nachverfolgen, in dem der Speicher belegt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DebugAlloc (  
     [in]  SIZE_T  cbSize,   
     [in]  EMemoryCriticalLevel dwCriticalLevel,   

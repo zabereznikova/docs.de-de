@@ -5,11 +5,11 @@ helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
 ms.openlocfilehash: 6b993a6399eec4e203821109db153aadf246cbac
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61639021"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (Antwortdatei festlegen) (Visual Basic)
 Gibt eine Datei mit Compileroptionen und Quellcodedateien zu kompilieren.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: 261350349497168e3f41b2f6887838d167c3e977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692544"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59172548"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Datagram Protocol (UDP) mit den <xref:System.Net.Sockets.TcpClient>-, <xref:System.Net.Sockets.TcpListener>- und <xref:System.Net.Sockets.UdpClient>-Klassen verwenden. Diese Protokollklassen bauen auf der <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>-Klasse auf und kümmern sich um die Details der Datenübertragung.  
@@ -33,6 +33,7 @@ Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Dat
  Die **UdpClient**-Klasse verwendet ein Array von Bytes zum Speichern des UDP-Datagramms. Verwenden Sie die <xref:System.Net.Sockets.UdpClient.Send%2A>-Methode, um die Daten an das Netzwerk zu senden, und die <xref:System.Net.Sockets.UdpClient.Receive%2A>-Methode, um ein eingehendes Datagramm zu empfangen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von TCP-Diensten](../../../docs/framework/network-programming/using-tcp-services.md)
 - [Verwenden von UDP-Diensten](../../../docs/framework/network-programming/using-udp-services.md)
 - [Verwenden von Datenströmen im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)

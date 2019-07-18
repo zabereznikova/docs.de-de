@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf78ded62f11b336d9f5fe0f3a205275ae37189b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ffeb04ddcec290f899556bf0d8078acfb06707ac
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157403"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778605"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache-Funktion
 Ruft einen Zeiger auf ein neues [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) Instanz, die im globalen Assemblycache darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateAssemblyCache (  
     [out] IAssemblyCache  **ppAsmCache,  
     [in]  DWORD           dwReserved  
@@ -56,5 +56,5 @@ HRESULT CreateAssemblyCache (
 ## <a name="see-also"></a>Siehe auch
 
 - [IAssemblyCache-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [Fusion – Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [Globaler Assemblycache](../../../../docs/framework/app-domains/gac.md)

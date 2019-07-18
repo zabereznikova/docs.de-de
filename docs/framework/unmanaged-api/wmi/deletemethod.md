@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb96a75686a14182b9526a0832223c2b9abfc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 291d5d0461da8d130d41f9a0eca67ea3be42b4bc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136915"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746820"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod-Funktion
 Löscht die angegebene Methode aus der Definition einer CIM-Klasse.
@@ -30,7 +30,7 @@ Löscht die angegebene Methode aus der Definition einer CIM-Klasse.
     
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Delete (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 

@@ -4,47 +4,48 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: addbeeab6f5b3544a7ed1b86b7da0f7d09be7ffb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b1c704113c8e05e493cdb3ef24f6376ab54b1cb
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701104"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251111"
 ---
 # <a name="mitigation-path-normalization"></a>Entschärfung: Pfadnormalisierung
-Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an hat sich die Pfadnormalisierung in .NET Framework geändert.  
+Ab Apps, die gezielt .NET Framework 4.6.2 verwenden, ändert sich die Pfadnormalisierung in .NET Framework.  
   
 ## <a name="what-is-path-normalization"></a>Was ist Pfadnormalisierung?  
  Das Normalisieren eines Pfads beinhaltet das Verändern der Zeichenfolge, die einen Pfad oder eine Datei kennzeichnet, in einer Weise, dass sie einem gültigen Pfad im Zielbetriebssystem entspricht. Normalisierung umfasst ist in der Regel:  
   
--   Die Kanonisierung von Komponenten- und Verzeichnistrennzeichen.  
+- Die Kanonisierung von Komponenten- und Verzeichnistrennzeichen.  
   
--   Die Anwendung des aktuellen Verzeichnisses auf einen relativen Pfad.  
+- Die Anwendung des aktuellen Verzeichnisses auf einen relativen Pfad.  
   
--   Die Auswertung des relativen Verzeichnisses (`.`) oder des übergeordneten Verzeichnisses (`..`) in einem Pfad.  
+- Die Auswertung des relativen Verzeichnisses (`.`) oder des übergeordneten Verzeichnisses (`..`) in einem Pfad.  
   
--   Das Verkürzen um angegebene Zeichen.  
+- Das Verkürzen um angegebene Zeichen.  
   
 ## <a name="the-changes"></a>Die Änderungen  
- Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an hat sich die Pfadnormalisierung in folgender Weise geändert:  
+ Ab Apps, die gezielt .NET Framework 4.6.2 verwenden, ändert sich die Pfadnormalisierung wie folgt:  
   
--   Die Runtime greift auf die Funktion [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) des Betriebssystems zurück, um Pfade zu normalisieren.  
+- Die Runtime greift auf die Funktion [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) des Betriebssystems zurück, um Pfade zu normalisieren.  
   
--   Die Normalisierung beinhaltet nicht mehr das Verkürzen des Endes von Verzeichnissegmenten (etwa im Fall eines Leerzeichens am Ende eines Verzeichnisnamens).  
+- Die Normalisierung beinhaltet nicht mehr das Verkürzen des Endes von Verzeichnissegmenten (etwa im Fall eines Leerzeichens am Ende eines Verzeichnisnamens).  
   
--   Unterstützung für Gerätepfadsyntax mit vollem Vertrauen, einschließlich `\\.\` und `\\?\` für Datei-E/A-APIs in mscorlib.dll.  
+- Unterstützung für Gerätepfadsyntax mit vollem Vertrauen, einschließlich `\\.\` und `\\?\` für Datei-E/A-APIs in mscorlib.dll.  
   
--   Die Runtime überprüft Gerätesyntaxpfade nicht.  
+- Die Runtime überprüft Gerätesyntaxpfade nicht.  
   
--   Die Verwendung von Gerätesyntax für den Zugriff auf alternative Datenströme wird unterstützt.  
+- Die Verwendung von Gerätesyntax für den Zugriff auf alternative Datenströme wird unterstützt.  
   
 ## <a name="impact"></a>Auswirkungen  
- Für Apps mit der Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] oder höher sind diese Änderungen standardmäßig aktiviert. Sie sollten die Leistung verbessern und Methoden zugleich den Zugriff auf zuvor nicht zugängliche Pfade ermöglichen.  
+
+Für Apps, die gezielt .NET Framework 4.6.2 oder eine höhere Version verwenden, sind diese Änderungen standardmäßig aktiviert. Sie sollten die Leistung verbessern und Methoden zugleich den Zugriff auf zuvor nicht zugängliche Pfade ermöglichen.  
   
- Apps mit der Zielplattform [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] und früheren Versionen, die unter [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] oder höher ausgeführt werden, sind von dieser Änderung nicht betroffen.  
+Apps mit der Zielplattform .NET Framework 4.6.1 und früheren Versionen, die unter .NET Framework 4.6.2 oder höher ausgeführt werden, sind von dieser Änderung nicht betroffen.  
   
 ## <a name="mitigation"></a>Minderung  
- Apps mit der Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] oder höher können sich gegen diese Änderung entscheiden und Legacynormalisierung verwenden, indem dem Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei Folgendes hinzugefügt wird:  
+ Apps, die gezielt .NET Framework 4.6.2 oder eine höhere Version verwenden, können diese Änderung deaktivieren und die Legacynormalisierung verwenden. Hierzu muss dem Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei Folgendes hinzugefügt werden:  
   
 ```xml  
 <runtime>  
@@ -52,7 +53,7 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
 </runtime>  
 ```  
   
- Apps mit der Zielplattform [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] oder früher, die unter [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] oder höher ausgeführt werden, können die Änderungen an der Pfadnormalisierung verwenden, indem dem Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei die folgende Zeile hinzugefügt wird:  
+Für Apps, die gezielt .NET Framework 4.6.1 oder eine niedrigere Version verwenden, aber unter .NET Framework 4.6.2 oder einer höheren Version ausgeführt werden, können die Änderungen an der Pfadnormalisierung aktiviert werden, indem dem Abschnitt [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) der Anwendungskonfigurationsdatei die folgende Zeile hinzugefügt wird:  
   
 ```xml  
 <runtime>  
@@ -61,4 +62,5 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

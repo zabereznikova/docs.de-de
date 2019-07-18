@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c317524cefd7ed654e76bdd7051cdcd7653062db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 61fc71c2ab0a9107f5e9fbb354fe0f8c2fb0dace
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101789"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776339"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr-Enumeration
 Enthält Werte, die Attribute eines Abschnitts für die Verwendung durch Angeben der [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum  {  
     sdNone      = 0,  
     sdReadOnly  = IMAGE_SCN_CNT_INITIALIZED_DATA |  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
 ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054028"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>Vorgehensweise: Zugreifen auf Zeichen in Zeichenfolgen in Visual Basic
 In diesem Beispiel wird veranschaulicht, wie die <xref:System.String.Chars%2A> Eigenschaft, um das Zeichen an der angegebenen Position in einer Zeichenfolge zuzugreifen.  

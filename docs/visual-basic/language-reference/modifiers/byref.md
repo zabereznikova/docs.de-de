@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], contexts
 ms.assetid: 4692e032-46f3-4e41-b0fa-3004364d9138
 ms.openlocfilehash: e553f350ea95f04996496b65f98f277795838e25
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800829"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
 Gibt an, dass ein Argument so übergeben wird, dass die aufgerufene Prozedur den Wert einer Variablen mit dem zugrunde liegenden Arguments im aufrufenden Code ändern kann.  

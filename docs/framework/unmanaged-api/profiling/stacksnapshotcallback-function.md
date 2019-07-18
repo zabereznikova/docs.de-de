@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 891423661f45a1167d53385e6e0306fb09487278
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6140ecda1d12c26e1936daee4eaad11cbd9b6ba4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198321"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781222"
 ---
 # <a name="stacksnapshotcallback-function"></a>StackSnapshotCallback-Funktion
 Stellt Informationen über jeden verwalteten Frame und die Ausführung von nicht verwalteten Frames im Stapel während eines Stackwalks, der von initiiert wird der Profiler die [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT __stdcall StackSnapshotCallback (  
     [in] FunctionID funcId,  
     [in] UINT_PTR ip,  

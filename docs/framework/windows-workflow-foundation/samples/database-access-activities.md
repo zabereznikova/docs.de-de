@@ -2,12 +2,12 @@
 title: Datenbankzugriffsaktivitäten
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 5a7c6fa6664acee8000c100513b2cc955ffa3392
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066089"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622452"
 ---
 # <a name="database-access-activities"></a>Datenbankzugriffsaktivitäten
 Mit Datenbankzugriffsaktivitäten können Sie auf eine Datenbank innerhalb eines Workflows zugreifen. Diese Aktivitäten können Datenbanken abrufen und ändern Sie Informationen sowie über [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) Zugriff auf die Datenbank.  
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>Konfigurieren von Verbindungsinformationen
  Für alle Datenbankaktivitäten gelten die gleichen Konfigurationsparameter. Für die Konfiguration gibt es zwei Möglichkeiten:
 
--   `ConnectionString + InvariantName`: Legen Sie den ADO.NET-Anbieter invarianten Namen und die Verbindungszeichenfolge-Zeichenfolge.
+- `ConnectionString + InvariantName`: Legen Sie den ADO.NET-Anbieter invarianten Namen und die Verbindungszeichenfolge-Zeichenfolge.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: Legen Sie den Namen des Konfigurationsabschnitts, der die Verbindungsinformationen enthält.
+- `ConfigName`: Legen Sie den Namen des Konfigurationsabschnitts, der die Verbindungsinformationen enthält.
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   In der Aktivität:
+- In der Aktivität:
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,38 +287,38 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  Das Skript "Setup.cmd" ruft die Skriptdatei "CreateDb.sql" auf, die SQL-Befehle zur Ausführung der folgenden Vorgänge enthält:
 
--   Erstellen einer Datenbank mit dem Namen DbActivitiesSample
+- Erstellen einer Datenbank mit dem Namen DbActivitiesSample
 
--   Erstellen der Tabelle "Roles"
+- Erstellen der Tabelle "Roles"
 
--   Erstellen der Tabelle "Employees"
+- Erstellen der Tabelle "Employees"
 
--   Einfügen von drei Datensätzen in die Tabelle "Roles"
+- Einfügen von drei Datensätzen in die Tabelle "Roles"
 
--   Einfügen von zwölf Datensätzen in die Tabelle "Employees"
+- Einfügen von zwölf Datensätzen in die Tabelle "Employees"
 
 ##### <a name="to-run-setupcmd"></a>So führen Sie "Setup.cmd" aus
 
-1.  Öffnen Sie eine Eingabeaufforderung.
+1. Öffnen Sie eine Eingabeaufforderung.
 
-2.  Navigieren Sie zum Beispielordner "DbActivities".
+2. Navigieren Sie zum Beispielordner "DbActivities".
 
-3.  Geben Sie "setup.cmd" aus, und drücken Sie die EINGABETASTE.
+3. Geben Sie "setup.cmd" aus, und drücken Sie die EINGABETASTE.
 
     > [!NOTE]
     >  Setup.cmd versucht, das Beispiel auf der SqlExpress-Instanz auf Ihrem lokalen Computer zu installieren. Wenn Sie es auf einer anderen SQL Server-Instanz installieren möchten, aktualisieren Sie "Setup.cmd" mit dem neuen Instanznamen.
 
 ##### <a name="to-uninstall-the-sample-database"></a>So deinstallieren Sie die Beispieldatenbank
 
-1.  Führen Sie "Cleanup.cmd" aus dem Beispielordner über eine Eingabeaufforderung aus.
+1. Führen Sie "Cleanup.cmd" aus dem Beispielordner über eine Eingabeaufforderung aus.
 
 ##### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus
 
-1.  Öffnen Sie die Projektmappe in Visual Studio 2010
+1. Öffnen Sie die Projektmappe in Visual Studio 2010
 
-2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu kompilieren.
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu kompilieren.
 
-3.  Um das Beispiel ohne Debugging auszuführen, drücken Sie STRG+F5.
+3. Um das Beispiel ohne Debugging auszuführen, drücken Sie STRG+F5.
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

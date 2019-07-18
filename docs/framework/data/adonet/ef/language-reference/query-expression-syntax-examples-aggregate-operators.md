@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
 ms.openlocfilehash: d9d53e91f5252a0ac44822ac6252ce02e9697d33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61615037"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>Beispiele für die Abfrageausdruckssyntax: Aggregatoperatoren
 In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, und <xref:System.Linq.Enumerable.Sum%2A> Methoden zum Abfragen der [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe der Abfrageausdruckssyntax Abfragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  

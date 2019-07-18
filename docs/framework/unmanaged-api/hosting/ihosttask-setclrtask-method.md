@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0220a0699e7325c6d81ba3ad4627176640937dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 884fedd6e8c2d79e895591e38b59cd3abb27275e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131962"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764391"
 ---
 # <a name="ihosttasksetclrtask-method"></a>IHostTask::SetCLRTask-Methode
 Ordnet eine `ICLRTask` Instanz mit dem aktuellen [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) Instanz.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetCLRTask (  
     [in] ICLRTask *pCLRTask  
 );  

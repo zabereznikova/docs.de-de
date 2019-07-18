@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Suchen nach verwandten Elementen (XPath-LINQ to XML) (Vi
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
 ms.openlocfilehash: 58137a1bca93c0281424ba457569631a4b513a55
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780431"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>Vorgehensweise: Suchen nach verwandten Elementen (XPath-LINQ to XML) (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie ein Element abrufen können, das auf der Basis eines Attributs ausgewählt wird, auf das vom Wert eines anderen Elements verwiesen wird.  

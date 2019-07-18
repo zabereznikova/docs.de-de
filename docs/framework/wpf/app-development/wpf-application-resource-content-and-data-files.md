@@ -17,40 +17,39 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2c48788507eed40e8240491dbd5064ad6c293c9f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379197"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651934"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] -Anwendungen hängen oftmals Dateien, die nicht ausführbare Daten, z. B. enthalten [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Bilder, Video und Audio. Windows Presentation Foundation (WPF) bietet spezielle Unterstützung für das Konfigurieren, identifizieren und die Verwendung dieser Typen von Datendateien, die als Anwendungsdatendateien bezeichnet werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  
   
--   **Ressourcendateien**: Datendateien, die in eine ausführbare Datei oder Bibliothek kompiliert werden [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assembly.  
+- **Ressourcendateien**: Datendateien, die in eine ausführbare Datei oder Bibliothek kompiliert werden [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assembly.  
   
--   **Inhaltsdateien**: Eigenständige Datendateien, die eine explizite Zuordnung mit einer ausführbaren Datei [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assembly.  
+- **Inhaltsdateien**: Eigenständige Datendateien, die eine explizite Zuordnung mit einer ausführbaren Datei [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assembly.  
   
--   **Dateien der Ursprungssite**: Eigenständige Datendateien, die keine Zuordnung zu einer ausführbaren Datei [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assembly.  
+- **Dateien der Ursprungssite**: Eigenständige Datendateien, die keine Zuordnung zu einer ausführbaren Datei [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assembly.  
   
  Ein wichtiger Unterschied zwischen diesen drei Dateitypen besteht darin, dass die Ressourcen- und Inhaltsdateien zur Buildzeit bekannt sind. Sie sind einer Assembly explizit bekannt. Für die Website der Dateien der Ursprungssite, jedoch einer Assembly u. u. keine Kenntnis davon, oder ein implizites Wissen über eine Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Verweis, der im letzteren Fall besteht keine Garantie, dass die Website auf die verwiesen wird, Datei der Ursprungssite tatsächlich vorhanden ist.  
   
  Anwendungsdatendateien verweisen möchten, verwendet Windows Presentation Foundation (WPF) das Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Schema, das ausführlich beschrieben wird [Paket-URIs in WPF](pack-uris-in-wpf.md)).  
   
  In diesem Thema wird beschrieben, wie Sie Anwendungsdatendateien konfigurieren und verwenden.  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>Ressourcendateien  
  Wenn eine Anwendungsdatendatei einer Anwendung stets zur Verfügung stehen muss, kann die Verfügbarkeit nur dadurch gewährleistet werden, dass die Datei in eine der ausführbaren Hauptassemblys einer Anwendung oder in eine der Assemblys kompiliert wird, auf die verwiesen wird. Dieser Typ von Anwendungsdatendatei wird als bezeichnet ein *Ressourcendatei*.  
   
  Verwenden Sie die Ressourcendateien in folgenden Fällen:  
   
--   Sie müssen den Inhalt der Ressourcendatei nicht aktualisieren, nachdem sie in eine Assembly kompiliert wurde.  
+- Sie müssen den Inhalt der Ressourcendatei nicht aktualisieren, nachdem sie in eine Assembly kompiliert wurde.  
   
--   Sie möchten die Komplexität der Anwendungsverteilung vereinfachen, indem Sie die Anzahl von Dateiabhängigkeiten verringern.  
+- Sie möchten die Komplexität der Anwendungsverteilung vereinfachen, indem Sie die Anzahl von Dateiabhängigkeiten verringern.  
   
--   Die Anwendungsdatendatei muss lokalisierbar sein (siehe [WPF-Globalisierung und Lokalisierung (Übersicht)](../advanced/wpf-globalization-and-localization-overview.md)).  
+- Die Anwendungsdatendatei muss lokalisierbar sein (siehe [WPF-Globalisierung und Lokalisierung (Übersicht)](../advanced/wpf-globalization-and-localization-overview.md)).  
   
 > [!NOTE]
 >  Die in diesem Abschnitt beschriebenen Ressourcendateien unterscheiden sich, als die Ressourcendateien im beschrieben [XAML-Ressourcen](../advanced/xaml-resources.md) und unterscheidet sich die eingebetteten oder verknüpften Ressourcen, die in beschriebenen [verwalten Ressourcen (.NET) ](/visualstudio/ide/managing-application-resources-dotnet).  
@@ -176,13 +175,13 @@ ms.locfileid: "57379197"
 ## <a name="site-of-origin-files"></a>Dateien der Ursprungssite  
  Ressourcendateien sind eine explizite Beziehung mit den Assemblys, die sie verteilt wurden, gemäß der <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>. Es kann jedoch vorkommen, dass Sie eine implizite oder nicht vorhandene Beziehung zwischen einer Assembly und einer Anwendungsdatendatei herstellen, u. a. in folgenden Fällen:  
   
--   Eine Datei existiert nicht zum Zeitpunkt der Kompilierung.  
+- Eine Datei existiert nicht zum Zeitpunkt der Kompilierung.  
   
--   Sie wissen bis zur Laufzeit nicht, welche Dateien von der Assembly benötigt werden.  
+- Sie wissen bis zur Laufzeit nicht, welche Dateien von der Assembly benötigt werden.  
   
--   Sie möchten in der Lage sein, Dateien ohne Neukompilierung der Assembly, der sie zugeordnet sind, zu aktualisieren.  
+- Sie möchten in der Lage sein, Dateien ohne Neukompilierung der Assembly, der sie zugeordnet sind, zu aktualisieren.  
   
--   Die Anwendung verwendet große Datendateien, z. B. Audio und Video. Diese sollen von Benutzern nur heruntergeladen werden, wenn sie dies wünschen.  
+- Die Anwendung verwendet große Datendateien, z. B. Audio und Video. Diese sollen von Benutzern nur heruntergeladen werden, wenn sie dies wünschen.  
   
  Es ist möglich, diese Arten von Dateien mit herkömmlichen laden [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Authentifizierungsschemas, z. B. die Schemas "file:///" und "http://.  
   
@@ -239,4 +238,5 @@ ms.locfileid: "57379197"
  Nachdem Sie den Buildtyp einer Anwendungsdatendatei geändert haben, müssen Sie die gesamte Anwendung neu erstellen, um zu gewährleisten, dass diese Änderungen übernommen werden. Wenn Sie nur die Anwendung erstellen, werden die Änderungen nicht übernommen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Paket-URI in WPF](pack-uris-in-wpf.md)

@@ -5,11 +5,11 @@ ms.assetid: a09e9ccc-0b37-43e3-95c1-bc5fa7ee5f42
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 639cfc514d2a206f0de72db4b0bac02b53305ae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946158"
 ---
 # <a name="icordebugvirtualunwinder-interface"></a>ICorDebugVirtualUnwinder-Schnittstelle
 Stellt Methoden bereit, um die Stapelentladung zu unterstützen.  
@@ -38,5 +38,5 @@ Stellt Methoden bereit, um die Stapelentladung zu unterstützen.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

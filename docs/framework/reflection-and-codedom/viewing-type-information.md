@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 267102198731054bd2ce050299627eecbd37a4a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2028bc8d9f160daef8afcdf881e1dfd514b4c94f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692209"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59190397"
 ---
 # <a name="viewing-type-information"></a>Anzeigen von Typinformationen
 Die Klasse <xref:System.Type?displayProperty=nameWithType> ist für die Reflektion wesentlich. Die Common Language Runtime (CLR) erstellt **Type** für einen geladenen Typ, wenn die Reflektion diesen anfordert. Sie können die Methoden, Felder, Eigenschaften und geschachtelten Klassen eines **Type**-Objekts dazu verwenden, alle Informationen zu diesem Typ zu erhalten.  
@@ -75,6 +75,7 @@ Die Klasse <xref:System.Type?displayProperty=nameWithType> ist für die Reflekti
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Reflection.BindingFlags>
 - <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>

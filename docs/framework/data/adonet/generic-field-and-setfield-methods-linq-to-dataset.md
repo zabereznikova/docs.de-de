@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 7c7f1fef5d1fa575cd6d3bfdb7e6cbbea79ade28
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1b2c7434543bb2574c59eaec126a621121dd7cef
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086012"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504787"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Generische Field- und SetField-Methoden (LINQ to DataSet)
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] stellt Erweiterungsmethoden bereit, um die <xref:System.Data.DataRow> -Klasse für den Zugriff auf Spaltenwerte: die <xref:System.Data.DataRowExtensions.Field%2A> Methode und die <xref:System.Data.DataRowExtensions.SetField%2A> Methode. Diese Methoden erleichtern Entwicklern den Zugriff auf Spaltenwerte, besonders hinsichtlich der NULL-Werte. Das <xref:System.Data.DataSet> verwendet <xref:System.DBNull.Value>, um NULL-Werte darzustellen, während [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] auf die Unterstützung für den in [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] eingeführten Typ zurückgreift, der NULL-Werte zulässt. Verwenden die schon zuvor vorhandenen spaltenzugriffsmethode in <xref:System.Data.DataRow> erfordert, dass Sie das Rückgabeobjekt in den entsprechenden Typ umwandeln. Wenn ein bestimmtes Feld in einem <xref:System.Data.DataRow> kann null sein. Sie müssen explizit für einen null-Wert überprüfen, da es sich <xref:System.DBNull.Value> und impliziten Umwandlung in einen anderen Typ löst eine <xref:System.InvalidCastException>. Im folgenden Beispiel wenn die <xref:System.Data.DataRow.IsNull%2A> Methode nicht verwendet, um zu prüfen, ob ein null-Wert, eine Ausnahme wird ausgelöst, wenn der Indexer zurückgegeben <xref:System.DBNull.Value> und versucht, ihn zum Umwandeln einer <xref:System.String>.  
+LINQ to DataSet bietet Erweiterungsmethoden für die <xref:System.Data.DataRow> -Klasse für den Zugriff auf Spaltenwerte: die <xref:System.Data.DataRowExtensions.Field%2A> Methode und die <xref:System.Data.DataRowExtensions.SetField%2A> Methode. Diese Methoden erleichtern Entwicklern den Zugriff auf Spaltenwerte, besonders hinsichtlich der NULL-Werte. Die <xref:System.Data.DataSet> verwendet <xref:System.DBNull.Value?displayProperty=nameWithType> zur Darstellung von null-Werte, wohingegen [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] verwendet die <xref:System.Nullable> und <xref:System.Nullable%601> Typen. Verwenden die schon zuvor vorhandenen spaltenzugriffsmethode in <xref:System.Data.DataRow> erfordert, dass Sie das Rückgabeobjekt in den entsprechenden Typ umwandeln. Wenn ein bestimmtes Feld in einem <xref:System.Data.DataRow> kann null sein. Sie müssen explizit für einen null-Wert überprüfen, da es sich <xref:System.DBNull.Value?displayProperty=nameWithType> und impliziten Umwandlung in einen anderen Typ löst eine <xref:System.InvalidCastException>. Im folgenden Beispiel wenn die <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> Methode nicht verwendet, um zu prüfen, ob ein null-Wert, eine Ausnahme wird ausgelöst, wenn der Indexer zurückgegeben <xref:System.DBNull.Value?displayProperty=nameWithType> und versucht, ihn zum Umwandeln einer <xref:System.String>.  
   
  [!code-csharp[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#whereisnull)]
  [!code-vb[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#whereisnull)]  
@@ -27,7 +27,7 @@ ms.locfileid: "59086012"
   
  Beachten Sie, dass der im generischen Parameter `T` der Methoden <xref:System.Data.DataRowExtensions.Field%2A> und <xref:System.Data.DataRowExtensions.SetField%2A> angegebene Datentyp mit dem Typ des zugrunde liegenden Werts übereinstimmen muss. Anderenfalls wird eine <xref:System.InvalidCastException> ausgelöst. Der angegebene Spaltenname muss außerdem mit dem Namen einer <xref:System.Data.DataSet>-Spalte übereinstimmen. Wenn dies nicht der Fall ist, wird eine <xref:System.ArgumentException> ausgelöst. In beiden Fällen wird die Ausnahme bei der Datenenumeration zur Laufzeit ausgelöst, wenn die Abfrage ausgeführt wird.  
   
- Die <xref:System.Data.DataRowExtensions.SetField%2A>-Methode selbst führt keine Typkonvertierungen aus. Dies bedeutet jedoch nicht, dass keinerlei Typkonvertierung auftritt. Die <xref:System.Data.DataRowExtensions.SetField%2A> Methode macht die [!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)] Verhalten der <xref:System.Data.DataRow> Klasse. Eine typkonvertierung konnte ausgeführt werden, indem die <xref:System.Data.DataRow> -Objekt und der konvertierte Wert würde dann gespeichert werden die <xref:System.Data.DataRow> Objekt.  
+ Die <xref:System.Data.DataRowExtensions.SetField%2A>-Methode selbst führt keine Typkonvertierungen aus. Dies bedeutet jedoch nicht, dass keinerlei Typkonvertierung auftritt. Die <xref:System.Data.DataRowExtensions.SetField%2A> Methode verfügbar macht, das ADO.NET Verhalten der <xref:System.Data.DataRow> Klasse. Eine typkonvertierung konnte ausgeführt werden, indem die <xref:System.Data.DataRow> -Objekt und der konvertierte Wert würde dann gespeichert werden die <xref:System.Data.DataRow> Objekt.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: <clear> -Element für WebRequestModules (Netzwerkeinstellungen)
+title: <clear>-Element für webRequestModules (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
 ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674596"
 ---
 # <a name="clear-element-for-webrequestmodules-network-settings"></a>\<clear >-Element für WebRequestModules (Netzwerkeinstellungen)
 Entfernt alle registrierte Webanforderungsmodulen aus der Anwendung an.  
@@ -72,4 +72,4 @@ Entfernt alle registrierte Webanforderungsmodulen aus der Anwendung an.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebRequest>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

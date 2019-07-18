@@ -4,12 +4,12 @@ description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellu
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678799"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641156"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -108,6 +108,6 @@ Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nic
 - [Zielframeworks](frameworks.md)
 - [Leitfaden für .NET Core](../core/index.md)
 - [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)
-- [Leitfaden zu .NET Framework in Docker](../framework/docker/index.md)
+- [Einführung in .NET and Docker](../core/docker/intro-net-docker.md)
 - [.NET-Komponenten – Übersicht](components.md)
 - [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md)

@@ -10,21 +10,21 @@ ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e7bd0fabcd4838990ae8704de4f83e9677dbc08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599285"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>Diagnosesymbolspeicher-Strukturen
-In diesem Thema wird beschrieben, die nicht verwalteten Strukturen, die Diagnosesymbolspeicher-API verwendet, wird.  
+In diesem Thema wird beschrieben, die nicht verwalteten Strukturen, die die Diagnosesymbolspeicher-API verwendet wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [CALL_ID-Struktur](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- Enthält Informationen für einen Debugger zu einer Funktion, die aufgerufen wird.  
+ Stellt Informationen bereit, an den Debugger zu einer Funktion, die aufgerufen wird.  
   
  [SYMLINEDELTA-Struktur](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- Enthält Informationen, die an den Handler Symbol zu Methoden, die als Ergebnis Bearbeitungen verschoben wurden.  
+ Enthält Informationen, die an den Symbol-Handler zu Methoden, die Bearbeitungsvorgängen verschoben wurden.  
   
  [USER_THREAD-Struktur](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
  Enthält Informationen für einen Debugger über einen Thread.  

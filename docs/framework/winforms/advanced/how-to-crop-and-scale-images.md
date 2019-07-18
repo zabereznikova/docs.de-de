@@ -9,11 +9,11 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
 ms.openlocfilehash: 4257431881565f9160f45795111d374cc680dedd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937571"
 ---
 # <a name="how-to-crop-and-scale-images"></a>Vorgehensweise: Zuschneiden und Skalieren von Bildern
 Die <xref:System.Drawing.Graphics> Klasse bietet mehrere <xref:System.Drawing.Graphics.DrawImage%2A> Methoden, von denen einige über die Parameter für Quell- und Ziel, die Sie zum Zuschneiden und Skalieren von Bildern verwenden können.  

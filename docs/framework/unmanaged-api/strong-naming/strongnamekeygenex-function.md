@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af75a645b11325b96740807f9a3df65f5a676026
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d2ed9ba4b580b8f64fc05dbb429742442a36acf5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120848"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757467"
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx-Funktion
 Generiert ein neues öffentliches/privates Schlüsselpaar mit der angegebenen Schlüsselgröße für die Verwendung der starken Namen an.  
@@ -30,7 +30,7 @@ Generiert ein neues öffentliches/privates Schlüsselpaar mit der angegebenen Sc
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 BOOLEAN StrongNameKeyGenEx (  
     [in]  LPCWSTR   wszKeyContainer,  
     [in]  DWORD     dwFlags,  
@@ -47,9 +47,9 @@ BOOLEAN StrongNameKeyGenEx (
  `dwFlags`  
  [in] Gibt an, ob den Schlüssel registriert bleiben soll. Die folgenden Werte werden unterstützt:  
   
--   0 x 00000000 - wird verwendet, wenn `wszKeyContainer` null ist, um einen temporären Schlüsselcontainernamen zu generieren.  
+- 0 x 00000000 - wird verwendet, wenn `wszKeyContainer` null ist, um einen temporären Schlüsselcontainernamen zu generieren.  
   
--   0 x 00000001 (`SN_LEAVE_KEY`) – gibt an, dass der Schlüssel registriert werden soll.  
+- 0 x 00000001 (`SN_LEAVE_KEY`) – gibt an, dass der Schlüssel registriert werden soll.  
   
  `dwKeySize`  
  [in] Die angeforderte Größe des Schlüssels in Bits.  

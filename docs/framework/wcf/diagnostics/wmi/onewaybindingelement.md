@@ -3,11 +3,11 @@ title: OneWayBindingElement
 ms.date: 03/30/2017
 ms.assetid: 5c7e17c3-39b9-4214-ae08-9e6141734305
 ms.openlocfilehash: 016ff823eb2c84a9f54c0763edadef1224e31517
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040047"
 ---
 # <a name="onewaybindingelement"></a>OneWayBindingElement
 OneWayBindingElement  

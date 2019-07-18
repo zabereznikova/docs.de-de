@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 7c036772-d58a-47f1-a5fa-31779898ef0d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e84d6deca0cd09cc547636007208c70ab91c1ab1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: adb01b8aa57bf3ed928578d15e0859b9ac73bc7d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223536"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759940"
 ---
 # <a name="icordebugloadedmodulegetbaseaddress-method"></a>ICorDebugLoadedModule::GetBaseAddress-Methode
 Ruft die Basisadresse für das geladene Modul ab oder legt diese fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetBaseAddress(  
    [out] CORDB_ADDRESS *pAddress  
 );  
@@ -43,4 +43,4 @@ HRESULT GetBaseAddress(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugLoadedModule-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

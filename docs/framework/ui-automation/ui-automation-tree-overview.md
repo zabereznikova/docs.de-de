@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: 19e416271e0c6e717a46821569983a250ef0ae0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033019"
 ---
 # <a name="ui-automation-tree-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
 > [!NOTE]
@@ -55,5 +55,6 @@ ms.locfileid: "57675575"
  Sie erhalten die Inhaltsansicht, indem Sie nach Elementen suchen, deren <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>-Eigenschaft auf `true` festgelegt ist, oder indem Sie über <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> in der Struktur navigieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Automation.AutomationElement>
 - [Übersicht über die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-overview.md)

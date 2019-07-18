@@ -1,5 +1,5 @@
 ---
-title: <clear> -Element für Bypasslist (Netzwerkeinstellungen)
+title: <clear>-Element für bypasslist (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674635"
 ---
 # <a name="clear-element-for-bypasslist-network-settings"></a>\<clear >-Element für Bypasslist (Netzwerkeinstellungen)
 Löscht der Proxyumgehungsliste enthalten.  
@@ -73,4 +73,4 @@ Löscht der Proxyumgehungsliste enthalten.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

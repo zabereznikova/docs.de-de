@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 345c7b88b6967773a185538943591383a686748c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ea09b9d66a288b0616870d971e5063bab83cda0a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224067"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780791"
 ---
 # <a name="ihostiocompletionmanagersetmaxthreads-method"></a>IHostIoCompletionManager::SetMaxThreads-Methode
 Legt die maximale Anzahl von Threads, die der Host-Bereitstellung e/a-Anforderungen fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetMaxThreads (  
     [in] DWORD dwMaxIoCompletionThreads  
 );  

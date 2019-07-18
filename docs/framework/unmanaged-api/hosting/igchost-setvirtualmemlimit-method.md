@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5b4210bda7d41b190f1025b62132c5df896a2a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c43c2259d5b899f05e42437aa121dde57ce4b0c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088391"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766487"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>IGCHost::SetVirtualMemLimit-Methode
 Legt die maximale Größe des virtuellen Arbeitsspeichers von der Laufzeit fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetVirtualMemLimit (  
     [in] SIZE_T sztMaxVirtualMemMB  
 );  

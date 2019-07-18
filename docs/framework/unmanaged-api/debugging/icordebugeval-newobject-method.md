@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c2d6a66eca080b480b508afea36c33b3e0aeec0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 362c01e0b08145919793cec011a856f0090e5c47
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178229"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752991"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject-Methode
 Reserviert eine neue Objektinstanz, und der angegebene Konstruktor-Methode aufgerufen.  
@@ -31,7 +31,7 @@ Reserviert eine neue Objektinstanz, und der angegebene Konstruktor-Methode aufge
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT NewObject (  
     [in] ICorDebugFunction  *pConstructor,  
     [in] ULONG32            nArgs,  

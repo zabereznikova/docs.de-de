@@ -2,12 +2,12 @@
 title: Übertragung
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c3f9420ac798bf2722f825d14ca64653127432b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145040"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662884"
 ---
 # <a name="transfer"></a>Übertragung
 Dieses Thema beschreibt die Übertragung in Windows Communication Foundation (WCF) aktivitätsablaufverfolgungs-Modell.  
@@ -35,28 +35,28 @@ Dieses Thema beschreibt die Übertragung in Windows Communication Foundation (WC
 ## <a name="example-of-transfers"></a>Beispiel für Übertragungen  
  Im Folgenden werden zwei Übertragungsbeispiele aufgelistet.  
   
--   Bei der Erstellung eines Diensthosts erhält der Konstruktor Steuerung über den Aufrufcode, oder der Aufrufcode überträgt zum Konstruktor. Wenn der Konstruktor die Ausführung beendet hat, gibt er die Steuerung zum aufrufenden Code zurück oder der Konstruktor überträgt zum aufrufenden Code zurück. Dies ist der Fall bei einer geschachtelten Beziehung.  
+- Bei der Erstellung eines Diensthosts erhält der Konstruktor Steuerung über den Aufrufcode, oder der Aufrufcode überträgt zum Konstruktor. Wenn der Konstruktor die Ausführung beendet hat, gibt er die Steuerung zum aufrufenden Code zurück oder der Konstruktor überträgt zum aufrufenden Code zurück. Dies ist der Fall bei einer geschachtelten Beziehung.  
   
--   Wenn ein Listener mit der Verarbeitung von Transportdaten beginnt, erstellt er einen neuen Thread und übergibt den geeigneten Kontext für die Verarbeitung, d. h. die Steuerung und die Daten, an die Bytes empfangen-Aktivität weiter. Hat dieser Thread die Verarbeitung der Anforderung beendet, gibt die Byteempfang-Aktivität keine Informationen zum Listener zurück. In diesem Fall haben wir eine Übertragung in die neue Threadaktivität, aber keine heraus. Die beiden Aktivitäten sind verknüpft, aber nicht geschachtelt.  
+- Wenn ein Listener mit der Verarbeitung von Transportdaten beginnt, erstellt er einen neuen Thread und übergibt den geeigneten Kontext für die Verarbeitung, d. h. die Steuerung und die Daten, an die Bytes empfangen-Aktivität weiter. Hat dieser Thread die Verarbeitung der Anforderung beendet, gibt die Byteempfang-Aktivität keine Informationen zum Listener zurück. In diesem Fall haben wir eine Übertragung in die neue Threadaktivität, aber keine heraus. Die beiden Aktivitäten sind verknüpft, aber nicht geschachtelt.  
   
 ## <a name="activity-transfer-sequence"></a>Aktivitätsübertragungssequenz  
  Eine gut strukturierte Aktivitätsübertragungssequenz schließt die folgenden Schritte ein.  
   
-1.  Starten Sie eine neue Aktivität, die aus der Auswahl einer neuen gAId besteht.  
+1. Starten Sie eine neue Aktivität, die aus der Auswahl einer neuen gAId besteht.  
   
-2.  Geben Sie eine Übertragungsablaufverfolgung zu dieser neuen gAId von der aktuellen Aktivitäts-ID aus.  
+2. Geben Sie eine Übertragungsablaufverfolgung zu dieser neuen gAId von der aktuellen Aktivitäts-ID aus.  
   
-3.  Festlegen der neuen ID in TLS  
+3. Festlegen der neuen ID in TLS  
   
-4.  Geben Sie eine Start-Ablaufverfolgung aus, um den Beginn der neuen Aktivität festzulegen.  
+4. Geben Sie eine Start-Ablaufverfolgung aus, um den Beginn der neuen Aktivität festzulegen.  
   
-5.  Die Rückgabe zur Originalaktivität besteht aus Folgendem:  
+5. Die Rückgabe zur Originalaktivität besteht aus Folgendem:  
   
-6.  Ausgabe einer Übertragungsablaufverfolgung zur Original-gAId  
+6. Ausgabe einer Übertragungsablaufverfolgung zur Original-gAId  
   
-7.  Ausgabe einer Stop-Ablaufverfolgung, um das Ende der neuen Aktivität festzulegen  
+7. Ausgabe einer Stop-Ablaufverfolgung, um das Ende der neuen Aktivität festzulegen  
   
-8.  Festlegen von TLS auf die alte gAId  
+8. Festlegen von TLS auf die alte gAId  
   
  Das folgende Codebeispiel veranschaulicht, wie Sie dabei vorgehen: Bei diesem Beispiel wird davon ausgegangen, dass ein Sperraufruf bei der Übertragung zur neuen Aktivität ausgelöst wurde, und es enthält Suspend-/Resume-Ablaufverfolungen.  
   
@@ -105,6 +105,6 @@ ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);
 ## <a name="see-also"></a>Siehe auch
 
 - [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

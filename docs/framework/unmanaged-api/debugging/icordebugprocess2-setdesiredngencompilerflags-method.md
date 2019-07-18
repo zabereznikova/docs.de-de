@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e061c3f3dc95e63339d6fd5f82b3cb4d38a4b6c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3582ebf2acee02d49aabafb03604c84249c4ce13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206706"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747374"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags-Methode
 Legt die Flags, die in einem vorkompilierten Abbild in der Reihenfolge für die Laufzeit beim Laden von Images in den aktuellen Prozess eingebettet werden müssen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetDesiredNGENCompilerFlags (  
     [in] DWORD    pdwFlags  
 );  

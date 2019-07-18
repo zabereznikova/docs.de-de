@@ -2,12 +2,12 @@
 title: 'Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2d8041bf3efefa085e94636624e92abb573c1820
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1b99908c1b83bb0d75e295b7a12e8c5933fe86a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196917"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650128"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren
 Dieses Beispiel veranschaulicht das listenbasierte Veröffentlichen-Abonnieren-Muster, die als ein Windows Communication Foundation (WCF)-Programm implementiert.  
@@ -112,45 +112,45 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>So führen Sie das Beispiel auf demselben Computer aus  
   
-1.  Prüfen Sie, ob Sie den Dienst, der über einen Browser unter Eingabe der folgenden Adresse zugreifen können: `http://localhost/servicemodelsamples/service.svc`. Als Antwort sollte eine Bestätigungsseite angezeigt werden.  
+1. Prüfen Sie, ob Sie den Dienst, der über einen Browser unter Eingabe der folgenden Adresse zugreifen können: `http://localhost/servicemodelsamples/service.svc`. Als Antwort sollte eine Bestätigungsseite angezeigt werden.  
   
-2.  Führen Sie Client.exe aus \client\bin\\, unter dem sprachspezifischen Ordner. Im Clientkonsolenfenster wird die Clientaktivität angezeigt. Starten Sie mehrere Clients.  
+2. Führen Sie Client.exe aus \client\bin\\, unter dem sprachspezifischen Ordner. Im Clientkonsolenfenster wird die Clientaktivität angezeigt. Starten Sie mehrere Clients.  
   
-3.  Führen Sie Datasource.exe aus \datasource\bin\\, unter dem sprachspezifischen Ordner. Die Datenquellenaktivität wird im Konsolenfenster angezeigt. Sobald die Datenquelle Informationen an den Dienst sendet, sollten diese an jeden Client übergeben werden.  
+3. Führen Sie Datasource.exe aus \datasource\bin\\, unter dem sprachspezifischen Ordner. Die Datenquellenaktivität wird im Konsolenfenster angezeigt. Sobald die Datenquelle Informationen an den Dienst sendet, sollten diese an jeden Client übergeben werden.  
   
-4.  Wenn der Client, Datenquelle und Dienstprogramme nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Wenn der Client, Datenquelle und Dienstprogramme nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>So führen Sie das Beispiel computerübergreifend aus  
   
-1.  Einrichten des Dienstrechners:  
+1. Einrichten des Dienstrechners:  
   
-    1.  Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis namens "ServiceModelSamples". Die Batchdatei "Setupvroot.bat" aus der [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) kann zum Erstellen des festplattenverzeichnisses und des virtuellen Verzeichnisses verwendet werden.  
+    1. Erstellen Sie auf dem Dienstcomputer ein virtuelles Verzeichnis namens "ServiceModelSamples". Die Batchdatei "Setupvroot.bat" aus der [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) kann zum Erstellen des festplattenverzeichnisses und des virtuellen Verzeichnisses verwendet werden.  
   
-    2.  Kopieren Sie die Dienstprogrammdateien aus %SystemDrive%\Inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis "ServiceModelSamples" auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Verzeichnis \bin einfügen.  
+    2. Kopieren Sie die Dienstprogrammdateien aus %SystemDrive%\Inetpub\wwwroot\servicemodelsamples in das virtuelle Verzeichnis "ServiceModelSamples" auf dem Dienstcomputer. Stellen Sie sicher, dass Sie die Dateien in das Verzeichnis \bin einfügen.  
   
-    3.  Testen Sie, ob Sie mit einem Browser vom Clientcomputer auf den Dienst zugreifen können.  
+    3. Testen Sie, ob Sie mit einem Browser vom Clientcomputer auf den Dienst zugreifen können.  
   
-2.  Einrichten der Clientcomputer:  
+2. Einrichten der Clientcomputer:  
   
-    1.  Kopieren Sie die Clientprogrammdateien aus dem Ordner "\client\bin\" (unterhalb des sprachspezifischen Ordners) auf die Clientcomputer.  
+    1. Kopieren Sie die Clientprogrammdateien aus dem Ordner "\client\bin\" (unterhalb des sprachspezifischen Ordners) auf die Clientcomputer.  
   
-    2.  Ändern Sie in jeder Clientkonfigurationsdatei den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
+    2. Ändern Sie in jeder Clientkonfigurationsdatei den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
   
-3.  Einrichten des Datenquellencomputers:  
+3. Einrichten des Datenquellencomputers:  
   
-    1.  Kopieren Sie die Datenquellen-Programmdateien aus dem Ordner "\datasource\bin\" (unterhalb des sprachspezifischen Ordners) auf den Datenquellencomputer.  
+    1. Kopieren Sie die Datenquellen-Programmdateien aus dem Ordner "\datasource\bin\" (unterhalb des sprachspezifischen Ordners) auf den Datenquellencomputer.  
   
-    2.  Ändern Sie in der Datenquellen-Konfigurationsdatei den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
+    2. Ändern Sie in der Datenquellen-Konfigurationsdatei den Wert für die Adresse der Endpunktdefinition so, dass er mit der neuen Adresse Ihres Diensts übereinstimmt. Ersetzen Sie alle Verweise auf localhost in der Adresse durch einen vollqualifizierten Domänennamen.  
   
-4.  Starten Sie auf den Clientcomputern in einer Eingabeaufforderung die Datei "Client.exe".  
+4. Starten Sie auf den Clientcomputern in einer Eingabeaufforderung die Datei "Client.exe".  
   
-5.  Starten Sie auf dem Datenquellencomputer in einer Eingabeaufforderung die Datei "Datasource.exe".  
+5. Starten Sie auf dem Datenquellencomputer in einer Eingabeaufforderung die Datei "Datasource.exe".  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

@@ -5,11 +5,11 @@ author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
 ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646864"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Übersicht über die .NET Core-Versionsverwaltung
 
@@ -92,7 +92,7 @@ Nach Erscheinen eines Release produzieren die Releaseabteilungen im Allgemeinen 
 
 .NET Standard besteht aus einer .NET-Referenzassembly. Es gibt mehrere plattformspezifische Implementierungen. Die Referenzassembly enthält die Definition von .NET-APIs, die Teil einer angegebenen .NET Standard-Version sind. Jede Implementierung erfüllt den .NET Standard-Vertrag für die jeweilige Plattform. Sie können mehr über .NET Standard im Artikel zu [.NET Standard](../../standard/net-standard.md) im .NET-Leitfaden erfahren.
 
-Die .NET Standard-Referenzassembly verwendet ein `MAJOR.MINOR`-Schema für die Versionsverwaltung. `PATCH` Ebene ist für .NET Standard nicht sinnvoll, da sie nur eine API-Spezifikation bereitstellt (keine Implementierung) und per Definition jede Änderung an der API eine Änderung im Funktionsumfang und damit eine neue `MINOR`-Version darstellen würde.
+Die .NET Standard-Referenzassembly verwendet ein `MAJOR.MINOR`-Schema für die Versionsverwaltung. Die `PATCH`-Ebene ist für .NET Standard nicht sinnvoll, da sie nur eine API-Spezifikation bereitstellt (keine Implementierung) und per Definition jede Änderung an der API eine Änderung im Funktionsumfang und damit eine neue `MINOR`-Version darstellen würde.
 
 Die Implementierungen auf jeder Plattform können aktualisiert werden (in der Regel als Teil des Plattformreleases) und sind daher für die Programmierer, die den .NET Standard auf dieser Plattform verwenden, nicht ersichtlich.
 
@@ -107,7 +107,7 @@ Jede Version von .NET Core implementiert eine Version von .NET Standard. Das Imp
 ## <a name="see-also"></a>Siehe auch
 
 - [Zielframeworks](../../standard/frameworks.md)
-- [Verpacken einer Verteilung von .NET Core](../build/distribution-packaging.md)
-- [Fakten zur Lebensdauer des .NET Core Supports](https://www.microsoft.com/net/core/support)
+- [.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](../build/distribution-packaging.md)
+- [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)
 - [.NET Core 2+ Versionsbindung](https://github.com/dotnet/designs/issues/3)
 - [Docker-Images für .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

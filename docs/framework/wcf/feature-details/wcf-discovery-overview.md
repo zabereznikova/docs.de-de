@@ -2,12 +2,12 @@
 title: Übersicht über die WCF-Suche
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 8f89a3b52728f10a0d0e0544f3663c9af13488c9
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 80cecec2143d78d9dee13e9071b6ebb5a4b1bdb0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084939"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662509"
 ---
 # <a name="wcf-discovery-overview"></a>Übersicht über die WCF-Suche
 Die Such-APIs stellen ein einheitliches Programmiermodell zur dynamischen Veröffentlichung von und zum Suchen nach Webdiensten bereit, wobei das WS-Suchprotokoll verwendet wird. Diese APIs ermöglichen es Diensten, sich selbst zu veröffentlichen, und Client das Suchen nach veröffentlichten Diensten. Nachdem ein Dienst erkennbar gemacht wurde, kann der Dienst Ankündigungsmeldungen senden sowie eine Überwachung auf Suchanforderungen durchführen und darauf antworten. Erkennbare Dienste können Hello-Nachrichten senden, um ihre Ankunft in einem Netzwerk anzukündigen, und Bye-Nachrichten, um das Verlassen eines Netzwerks anzukündigen. Um nach einem Dienst zu suchen, senden Clients eine `Probe`-Anforderung, die bestimmte Kriterien wie den Dienstvertragstyp, Schlüsselwörter und den Bereich des Netzwerks enthält. Dienste empfangen die `Probe`-Anforderung und bestimmen, ob diese den Kriterien entspricht. Wenn sich für einen Dienst eine Übereinstimmung ergibt, antwortet dieser mit dem Rücksenden einer `ProbeMatch`-Nachricht an den Client, in der die Informationen für die Kontaktaufnahme mit dem Dienst enthalten sind. Clients können auch `Resolve`-Anforderungen senden, mit deren Hilfe sie nach Diensten suchen können, die ggf. ihre Endpunktadresse geändert haben. Dienste, die Übereinstimmungen ergeben, antworten auf `Resolve`-Anforderungen, indem sie eine `ResolveMatch`-Nachricht zurück an den Client senden.  
@@ -15,11 +15,11 @@ Die Such-APIs stellen ein einheitliches Programmiermodell zur dynamischen Veröf
 ## <a name="ad-hoc-and-managed-modes"></a>Ad-hoc-Modus und verwalteter Modus  
  Die Such-API unterstützt zwei verschiedene Modi: Verwaltet und Ad-hoc. Im Modus "Verwaltet" wird ein zentralisierter Server verwendet, der als Suchproxy bezeichnet wird und Informationen zu verfügbaren Diensten verwaltet. Der Suchproxy auf verschiedene Arten mit Informationen zu Diensten aufgefüllt werden. Dienste können z. B. während des Starts Ankündigungsmeldungen an den Suchproxy senden, oder der Proxy kann Daten aus einer Datenbank oder einer Konfigurationsdatei lesen, um zu ermitteln, welche Dienste verfügbar sind. Die Art und Weise, wie der Suchproxy aufgefüllt wird, hängt vollständig vom Entwickler ab. Clients verwenden den Suchproxy zum Abrufen von Informationen zu verfügbaren Diensten. Wenn ein Client nach einem Dienst sucht, sendet er eine `Probe`-Nachricht an den Suchproxy, und der Proxy ermittelt dann, ob einer der bekannten Dienste mit dem Dienst übereinstimmt, nach dem der Client sucht. Wenn Übereinstimmungen vorhanden sind, sendet der Suchproxy eine `ProbeMatch`-Antwort zurück an den Client. Der Client kann sich dann direkt an den Dienst wenden, indem er die vom Proxy zurückgegebenen Dienstinformationen verwendet. Das Hauptprinzip hinter dem Modus "Verwaltet" beruht darauf, dass die Suchanforderungen im Unicast-Format an eine Autorität, den Suchproxy, gesendet werden. .NET Framework enthält Hauptkomponenten, mit denen Sie einen eigenen Proxy erstellen können. Es gibt für Clients und Dienste mehrere Methoden, nach dem Proxy zu suchen:  
   
--   Der Proxy kann auf Ad-hoc-Nachrichten reagieren.  
+- Der Proxy kann auf Ad-hoc-Nachrichten reagieren.  
   
--   Der Proxy kann während des Startvorgangs eine Ankündigungsnachricht senden.  
+- Der Proxy kann während des Startvorgangs eine Ankündigungsnachricht senden.  
   
--   Es können Clients und Dienste geschrieben werden, um nach einem bestimmten bekannten Endpunkt zu suchen.  
+- Es können Clients und Dienste geschrieben werden, um nach einem bestimmten bekannten Endpunkt zu suchen.  
   
  Im Ad-hoc-Modus gibt es keinen zentralisierten Server. Alle Suchnachrichten, z. B. Dienstankündigungen und Clientanforderungen, werden im Multicast-Format gesendet. Standardmäßig enthält .NET Framework Unterstützung für die Ad-hoc-Suche über das UDP-Protokoll. Wenn ein Dienst z. B. konfiguriert wird, um während des Startvorgangs eine Hello-Ankündigung zu senden, erfolgt das Senden über eine bekannte Multicastadresse und das UDP-Protokoll. Clients müssen über eine aktive Überwachung auf diese Ankündigungen verfügen und diese entsprechend verarbeiten. Wenn ein Client eine `Probe`-Nachricht für einen Dienst sendet, wird diese mit einem Multicastprotokoll über das Netzwerk übertragen. Jeder Dienst, der die Anforderung empfängt, ermittelt, ob diese mit den Kriterien der `Probe`-Nachricht übereinstimmt. Anschließend antwortet der jeweilige Dienst dem Client direkt mit einer `ProbeMatch`-Nachricht, falls sich für den Dienst eine Übereinstimmung mit den Kriterien ergibt, die in der `Probe`-Nachricht angegeben sind.  
   
@@ -151,9 +151,9 @@ class Client
 ## <a name="discovery-and-web-hosted-services"></a>Suche und im Internet gehostete Dienste  
  Damit WCF-Dienste erkennbar sind, müssen sie derzeit ausgeführt werden. Unter IIS oder WAS gehostete WCF-Dienste werden erst ausgeführt, wenn IIS/WAS eine Meldung für den Dienst empfängt. Daher sind sie nicht standardmäßig erkennbar.  Es gibt zwei Möglichkeiten, im Internet gehostete Dienste als erkennbar festzulegen:  
   
-1.  Verwenden der Autostart-Funktion von Windows Server AppFabric  
+1. Verwenden der Autostart-Funktion von Windows Server AppFabric  
   
-2.  Verwenden eines Suchproxys zur Kommunikation im Namen des Diensts  
+2. Verwenden eines Suchproxys zur Kommunikation im Namen des Diensts  
   
  Windows Server AppFabric verfügt über eine Autostart-Funktion, mit der ein Dienst gestartet werden kann, bevor Meldungen empfangen werden. Wenn die Autostart-Funktion festgelegt ist, kann ein von IIS/WAS gehosteter Dienst als erkennbar konfiguriert werden. Weitere Informationen zu der Autostart-Funktion finden Sie unter [Autostart-Feature von Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Wenn Sie die Autostart-Funktion aktivieren, müssen Sie den Dienst für die Suche konfigurieren. Weitere Informationen finden Sie unter [Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und Client](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Konfigurieren der Suche in einer Konfigurationsdatei](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   

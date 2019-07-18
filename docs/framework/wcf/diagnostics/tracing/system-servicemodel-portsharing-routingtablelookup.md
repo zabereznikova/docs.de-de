@@ -3,11 +3,11 @@ title: System.ServiceModel.PortSharing.RoutingTableLookup
 ms.date: 03/30/2017
 ms.assetid: 51788083-310c-4c36-a9a1-f1089a1e2687
 ms.openlocfilehash: 933eab76dcb785010ccca802b620fef5986fed99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934107"
 ---
 # <a name="systemservicemodelportsharingroutingtablelookup"></a>System.ServiceModel.PortSharing.RoutingTableLookup
 System.ServiceModel.PortSharing.RoutingTableLookup  

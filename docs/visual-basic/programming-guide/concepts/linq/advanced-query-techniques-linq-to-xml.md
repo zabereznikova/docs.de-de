@@ -3,11 +3,11 @@ title: Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
 ms.openlocfilehash: 609ac419eea5c320bb51bad2193d10ec63a2e651
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769927"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)
 Dieser Abschnitt enthält Beispiele für erweiterte [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragetechniken.  

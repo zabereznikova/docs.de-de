@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8136ccc2306894f2a2cfc0203460cb62c0bbec73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc973aadde30b5d5e9bfd55cb544ac3115656a3b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143090"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750546"
 ---
 # <a name="iceegengenerateceememoryimage-method"></a>ICeeGen::GenerateCeeMemoryImage-Methode
 Generiert ein Image im Arbeitsspeicher für die Codebasis.  
@@ -31,7 +31,7 @@ Generiert ein Image im Arbeitsspeicher für die Codebasis.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GenerateCeeMemoryImage (  
     [out] void    **ppImage  
 );  

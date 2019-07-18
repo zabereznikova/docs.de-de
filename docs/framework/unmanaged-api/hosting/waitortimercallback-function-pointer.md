@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8cf12fc6828c5e439a6a86532f22b8a598a9f03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120990"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776500"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK-Funktionszeiger
 Verweist auf eine Funktion, die benachrichtigt den Host, die ein Wait-handle (<xref:System.Threading.WaitHandle>) hat signalisiert wurde oder das Timeout.  
   
- Dieser Funktionszeiger ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Dieser Funktionszeiger wurde in .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  
     [in] PVOID lpParameter,  
     [in] BOOL  TimerOrWaitFired  

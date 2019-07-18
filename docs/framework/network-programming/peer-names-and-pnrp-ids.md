@@ -2,12 +2,12 @@
 title: Peernamen und PNRP-IDs
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cdd5151d029436d11c78806cf7673861cc0d8a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690787"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623122"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Peernamen und PNRP-IDs
 Ein Peername steht für einen Endpunkt für die Kommunikation, der ein Computer, ein Benutzer, eine Gruppe, ein Dienst oder alles sein kein, was einem Peer zugeordnet ist, das in eine IPv6-Adresse aufgelöst werden kann. Das Peer Name Resolution-Protokoll (PNRP) nimmt den statistisch eindeutigen Peernamen zur Erstellung einer PNRP-ID an, die zur Identifikation von Cloudelementen verwendet wird.  
@@ -24,12 +24,13 @@ Ein Peername steht für einen Endpunkt für die Kommunikation, der ein Computer,
   
  PNRP-IDs bestehen aus den folgenden Teilen:  
   
--   Die höherwertigen 128 Bits sind als Peer-to-Peer-ID (P2P) bekannt. Sie sind ein Hash des Peernamens, der dem Endpunkt zugewiesen ist. Der Peername hat das folgende Format: *Authority.Classifier*. Für sichere Namen ist *Autorität* der Secure-Hash-Algorithmus 1 (SHA1) des öffentlichen Schlüssels des Peernamens in hexadezimalen Zeichen. Für unsichere Namen ist *Autorität* als einzelnes Zeichen „0“ festgelegt. *Klassifizierung* ist eine Zeichenfolge, die die Anwendung identifiziert. Kein Klassifizierer für Peernamen kann länger als 149 Zeichen sein, einschließlich dem `null`-Abschlusszeichen.  
+- Die höherwertigen 128 Bits sind als Peer-to-Peer-ID (P2P) bekannt. Sie sind ein Hash des Peernamens, der dem Endpunkt zugewiesen ist. Der Peername hat das folgende Format: *Authority.Classifier*. Für sichere Namen ist *Autorität* der Secure-Hash-Algorithmus 1 (SHA1) des öffentlichen Schlüssels des Peernamens in hexadezimalen Zeichen. Für unsichere Namen ist *Autorität* als einzelnes Zeichen „0“ festgelegt. *Klassifizierung* ist eine Zeichenfolge, die die Anwendung identifiziert. Kein Klassifizierer für Peernamen kann länger als 149 Zeichen sein, einschließlich dem `null`-Abschlusszeichen.  
   
--   Die niederwertigen 128 Bits werden für die Dienstidentifizierung verwendet. Dies ist eine generierte Zahl, die verschiedene Instanzen der gleichen P2P-ID in der gleichen Cloud identifiziert.  
+- Die niederwertigen 128 Bits werden für die Dienstidentifizierung verwendet. Dies ist eine generierte Zahl, die verschiedene Instanzen der gleichen P2P-ID in der gleichen Cloud identifiziert.  
   
  Diese Kombination von P2P-ID und Dienstidentifizierung ermöglicht die Registrierung mehrerer PNRP-IDs von einem einzelnen Computer aus.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.PeerToPeer.PeerName>
 - <xref:System.Net.PeerToPeer>

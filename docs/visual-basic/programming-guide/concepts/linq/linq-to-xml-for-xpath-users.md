@@ -3,11 +3,11 @@ title: LINQ to XML für XPath-Benutzer (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
 ms.openlocfilehash: 13c23eec1261700b15bea7f92f6c50e9231e900a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769108"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML für XPath-Benutzer (Visual Basic)
 

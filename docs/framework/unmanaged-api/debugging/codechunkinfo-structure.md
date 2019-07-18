@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072661"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740884"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo-Struktur
 
@@ -29,7 +29,7 @@ Stellt einen einzelnen Codeabschnitt im Speicher dar.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _CodeChunkInfo {  
     CORDB_ADDRESS startAddr;  
     ULONG32       length;  

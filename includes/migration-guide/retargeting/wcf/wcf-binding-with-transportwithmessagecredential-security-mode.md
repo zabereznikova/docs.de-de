@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ce7e2db3f74ec24f47b1c224335451c997c4c349
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761058"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804342"
 ---
 ### <a name="wcf-binding-with-the-transportwithmessagecredential-security-mode"></a>WCF-Bindung mit dem TransportWithMessageCredential-Sicherheitsmodus
 

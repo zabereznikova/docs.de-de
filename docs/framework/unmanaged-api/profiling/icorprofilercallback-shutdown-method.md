@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1696cb49170ba245a657e5efb6c8ba4b694af32f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192640"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747172"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown-Methode
 Benachrichtigt den Profiler an, dass die Anwendung heruntergefahren wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Shutdown();  
 ```  
   

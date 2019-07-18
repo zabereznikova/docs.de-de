@@ -3,11 +3,11 @@ title: Standardabfragen (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
 ms.openlocfilehash: 9f4a0508fddd5140ff2cc8f82f9c613a66b2d7ca
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903525"
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>Standardabfragen (LINQ to XML) (Visual Basic)
 Dieser Abschnitt enthält Beispiele für einfache [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen.  

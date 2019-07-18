@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bae4dccacfa092243c7e0b1a2e6daad92b51d933
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 60007467112fb46d3e455902a6d3a561e0c17227
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090380"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777160"
 ---
 # <a name="imetadataemit2resetenclog-method"></a>IMetaDataEmit2::ResetENCLog-Methode
 Setzt das Bearbeiten und Fortfahren-Protokoll, und startet eine neue Sitzung.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ResetENCLog ();  
 ```  
   

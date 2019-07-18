@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 18d8a22e20626a30585f556f97b54c65f1ab46a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105416"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645777"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementieren einer expliziten Transaktion mit CommittableTransaction
 Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwendungen, Transaktionen explizit zu verwenden, anstatt die <xref:System.Transactions.TransactionScope>-Klasse implizit zu verwenden. Sie ist für Anwendungen nützlich, die dieselben Transaktionen über mehrere Funktionsaufrufe oder mehrere Threadaufrufe hinweg verwenden wollen. Im Unterschied zur <xref:System.Transactions.TransactionScope>-Klasse muss der Autor der Anwendung die <xref:System.Transactions.CommittableTransaction.Commit%2A>-Methode bzw. die <xref:System.Transactions.Transaction.Rollback%2A>-Methode aufrufen, um einen Commit der Transaktion auszuführen oder um sie abzubrechen.  
@@ -22,9 +22,9 @@ Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwe
   
  Berücksichtigen Sie die folgenden Aspekte, wenn Sie die <xref:System.Transactions.CommittableTransaction>-Klasse verwenden.  
   
--   Durch das Erstellen einer <xref:System.Transactions.CommittableTransaction>-Transaktion wird die Ambient-Transaktion nicht festgelegt. Sie müssen die Ambient-Transaktion explizit festlegen und zurücksetzen, um sicherzustellen, dass Ressourcen-Manager im richtigen Transaktionskontext arbeiten. Die aktuelle Ambient-Transaktion wird durch Einstellen der statischen <xref:System.Transactions.Transaction.Current%2A>-Eigenschaft für das globale <xref:System.Transactions.Transaction>-Objekt festgelegt.  
+- Durch das Erstellen einer <xref:System.Transactions.CommittableTransaction>-Transaktion wird die Ambient-Transaktion nicht festgelegt. Sie müssen die Ambient-Transaktion explizit festlegen und zurücksetzen, um sicherzustellen, dass Ressourcen-Manager im richtigen Transaktionskontext arbeiten. Die aktuelle Ambient-Transaktion wird durch Einstellen der statischen <xref:System.Transactions.Transaction.Current%2A>-Eigenschaft für das globale <xref:System.Transactions.Transaction>-Objekt festgelegt.  
   
--   Ein <xref:System.Transactions.CommittableTransaction>-Objekt kann nicht wiederverwendet werden. Nachdem ein Commit oder ein Rollback für ein <xref:System.Transactions.CommittableTransaction>-Objekt ausgeführt wurde, kann es nicht in einer Transaktion wiederverwendet werden. Das heißt, es kann nicht als aktueller Ambient-Transaktionskontext festgelegt werden.  
+- Ein <xref:System.Transactions.CommittableTransaction>-Objekt kann nicht wiederverwendet werden. Nachdem ein Commit oder ein Rollback für ein <xref:System.Transactions.CommittableTransaction>-Objekt ausgeführt wurde, kann es nicht in einer Transaktion wiederverwendet werden. Das heißt, es kann nicht als aktueller Ambient-Transaktionskontext festgelegt werden.  
   
 ## <a name="creating-a-committabletransaction"></a>Erstellen einer CommittableTransaction  
  Im folgenden Beispiel wird eine neue Instanz von <xref:System.Transactions.CommittableTransaction> erstellt und ein Commit dafür ausgeführt.  
@@ -87,5 +87,5 @@ void OnCommitted(IAsyncResult asyncResult)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Implementieren einer impliziten Transaktion mit Transaktionsbereich](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
-- [Verarbeiten von Transaktionen](../../../../docs/framework/data/transactions/index.md)
+- [Implementieren einer impliziten Transaktion mit einem Transaktionsbereich](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
+- [Transaction Processing (Verarbeiten von Transaktionen)](../../../../docs/framework/data/transactions/index.md)

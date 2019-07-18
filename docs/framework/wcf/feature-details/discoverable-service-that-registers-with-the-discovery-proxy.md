@@ -2,36 +2,36 @@
 title: 'Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 053ace300610cd4129c4541f4e2658ac8d09da85
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177826"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626985"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist
 Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Sie einen suchproxy implementiert. In diesem Thema erstellen Sie einen WCF-Dienst, der ankündigungsnachrichten sendet (`Hello` und `Bye`) an den suchproxy, aufgrund dessen an-und Abmelden selbst mit den suchproxy.
 
 ### <a name="to-define-the-service-contract"></a>So definieren Sie den Dienstvertrag
 
-1.  Fügen Sie der Projektmappe `DiscoveryProxyExample` ein neues Konsolenanwendungsprojekt mit dem Namen `Service` hinzu.
+1. Fügen Sie der Projektmappe `DiscoveryProxyExample` ein neues Konsolenanwendungsprojekt mit dem Namen `Service` hinzu.
 
-2.  Fügen Sie Verweise auf die folgenden Assemblys hinzu:
+2. Fügen Sie Verweise auf die folgenden Assemblys hinzu:
 
-    1.  System.ServiceModel
+    1. System.ServiceModel
 
-    2.  System.ServiceModel.Discovery
+    2. System.ServiceModel.Discovery
 
-3.  Fügen Sie dem `CalculatorService`-Projekt eine neue Klasse hinzu.
+3. Fügen Sie dem `CalculatorService`-Projekt eine neue Klasse hinzu.
 
-4.  Fügen Sie die folgenden using-Anweisungen hinzu.
+4. Fügen Sie die folgenden using-Anweisungen hinzu.
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  Definieren Sie den Dienstvertrag innerhalb der Datei CalculatorService.cs.
+5. Definieren Sie den Dienstvertrag innerhalb der Datei CalculatorService.cs.
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie e
     }
     ```
 
-6.  Implementieren Sie in der Datei CalculatorService.cs auch den Dienstvertrag.
+6. Implementieren Sie in der Datei CalculatorService.cs auch den Dienstvertrag.
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie e
 
 ### <a name="to-host-the-service"></a>So hosten Sie den Dienst
 
-1.  Öffnen Sie die Datei Program.cs, die generiert wurde, als Sie das Projekt erstellt haben.
+1. Öffnen Sie die Datei Program.cs, die generiert wurde, als Sie das Projekt erstellt haben.
 
-2.  Fügen Sie die folgenden using-Anweisungen hinzu.
+2. Fügen Sie die folgenden using-Anweisungen hinzu.
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie e
     using System.ServiceModel.Discovery;
     ```
 
-3.  Fügen Sie in der `Main()`-Methode den folgenden Code hinzu:
+3. Fügen Sie in der `Main()`-Methode den folgenden Code hinzu:
 
     ```csharp
     // Define the base address of the service

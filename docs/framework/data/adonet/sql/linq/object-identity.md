@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
 ms.openlocfilehash: 0f1b6cf27101c2a7f55757b72b56b2291198404d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767538"
 ---
 # <a name="object-identity"></a>Objektidentität
 Objekte verfügen zur Laufzeit über eindeutige Identitäten. Zwei Variablen, die sich auf das gleiche Objekt beziehen, verweisen tatsächlich auf die gleiche Objektinstanz. Aufgrund dieser Tatsache sind Änderungen, die Sie über einen Pfad durch eine Variable vornehmen, sofort über die andere Variable sichtbar.  

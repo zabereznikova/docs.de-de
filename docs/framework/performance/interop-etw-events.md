@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083607"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422422"
 ---
 # <a name="interop-etw-events"></a>Interop-ETW-Ereignisse
 <a name="top"></a> Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischenspeicherung (Microsoft Intermediate Language).  
   
  Diese Kategorie umfasst die folgenden Ereignisse:  
   
--   [ILStubGenerated-Ereignis](#ilstubgenerated_event)  
+- [ILStubGenerated-Ereignis](#ilstubgenerated_event)  
   
--   [ILStubCacheHit-Ereignis](#ilstubcachehit_event)  
+- [ILStubCacheHit-Ereignis](#ilstubcachehit_event)  
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>ILStubGenerated-Ereignis  
@@ -43,7 +43,7 @@ ms.locfileid: "59083607"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Der Modulbezeichner.|  
 |StubMethodID|win:UInt64|Der Bezeichner für die Stubmethode.|  
-|StubFlags|win:UInt64|Die Flags für den Stub:<br /><br /> 0x1 – Reverse-Interop.<br /><br /> 0x2 – COM-Interop.<br /><br /> 0x4 – Von „NGen.exe“ generierter Stub.<br /><br /> 0x8 – Delegat.<br /><br /> 0x10 – Variables Argument.<br /><br /> 0x20 – Nicht verwalteter Aufgerufener.|  
+|StubFlags|win:UInt64|Die Flags für den Stub:<br /><br /> 0x1 – Reverse-Interop.<br /><br /> 0x2 – COM-Interop.<br /><br /> 0x4 – Von „NGen.exe“ generierter Stub.<br /><br /> 0x8 – Delegat.<br /><br /> 0 x 10 – Variables Argument.<br /><br /> 0x20 – Nicht verwalteter Aufgerufener.|  
 |ManagedInteropMethodToken|win:UInt32|Das Token für die verwaltete Interop-Methode.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Der Namespace für die verwaltete Interop-Methode.|  
 |ManagedInteropMethodName|win:UnicodeString|Der Name der verwalteten Interop-Methode.|  

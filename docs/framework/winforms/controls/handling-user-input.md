@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
 ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971235"
 ---
 # <a name="handling-user-input"></a>Behandeln von Benutzereingaben
 In diesem Thema wird beschrieben, die wichtigsten Tastatur- und Mausereignisse Ereignisse gebotenen <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Beim Bearbeiten eines Ereignisses sollten Autoren von Steuerelementen die geschützte Methode `On`*EventName* überschreiben, statt einen Delegaten an das Ereignis anzuhängen. Zum Überprüfen der Ereignisse siehe [Auslösen von Ereignissen aus einer Komponente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
@@ -65,7 +65,7 @@ In diesem Thema wird beschrieben, die wichtigsten Tastatur- und Mausereignisse E
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ereignisse in Windows Forms-Steuerelementen](events-in-windows-forms-controls.md)
+- [Ereignisse in Windows Forms-Steuerelementen](events-in-windows-forms-controls.md)
 - [Definieren eines Ereignisses](defining-an-event-in-windows-forms-controls.md)
 - [Ereignisse](../../../standard/events/index.md)
 - [Benutzereingaben in Windows Forms](../user-input-in-windows-forms.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 218279684304b766a9bf009f5891ac4910254a3c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492165"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737070"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory-Methode
 Liest einen angegebenen Bereich des Arbeitsspeichers für diesen Prozess.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ReadMemory(  
     [in]  CORDB_ADDRESS address,   
     [in]  DWORD size,  

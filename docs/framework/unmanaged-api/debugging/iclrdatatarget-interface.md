@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6ed3cb62b56e80a7fe4ea54b43ac9f4a28b8d102
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698108"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget-Schnittstelle
 Stellt Methoden für die Interaktion mit der common Language Runtime (CLR) ein Target-Element.  
@@ -57,4 +57,4 @@ Stellt Methoden für die Interaktion mit der common Language Runtime (CLR) ein T
 ## <a name="see-also"></a>Siehe auch
 
 - [ICLRDataTarget2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

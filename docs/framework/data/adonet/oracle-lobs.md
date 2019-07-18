@@ -3,11 +3,11 @@ title: Oracle-LOBs
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771942"
 ---
 # <a name="oracle-lobs"></a>Oracle-LOBs
 Die .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleLob> -Klasse, die verwendet wird, um das Arbeiten mit Oracle- **LOB** -Datentypen.  
@@ -17,7 +17,7 @@ Die .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.Orac
 |Datentyp|Beschreibung|  
 |---------------|-----------------|  
 |**Blob**|Ein Oracle **BLOB** -Datentyp, der Binärdaten mit einer maximalen Größe von 4 Gigabyte enthält. Dies ordnet eine **Array** des Typs **Byte**.|  
-|**CLOB**|Ein Oracle **CLOB** -Datentyp, der Zeichendaten, basierend auf dem Standardzeichensatz festgelegt wird, auf dem Server mit einer maximalen Größe von 4 Gigabyte. Entspricht dem **Zeichenfolge**.|  
+|**Clob**|Ein Oracle **CLOB** -Datentyp, der Zeichendaten, basierend auf dem Standardzeichensatz festgelegt wird, auf dem Server mit einer maximalen Größe von 4 Gigabyte. Entspricht dem **Zeichenfolge**.|  
 |**NClob**|Ein Oracle **NCLOB** -Datentyp, der Zeichendaten enthält auf Grundlage des nationalen Zeichensatzes auf dem Server mit einer maximalen Größe von 4 Gigabyte. Entspricht dem **Zeichenfolge**.|  
   
  Ein **OracleLob** unterscheidet sich von einem <xref:System.Data.OracleClient.OracleBFile> , da die Daten auf dem Server statt in einer physischen Datei im Betriebssystem gespeichert ist. Es kann ein Objekt mit Lese-/ Schreibzugriff, auch sein, im Gegensatz zu einer **OracleBFile**, die immer schreibgeschützt ist.  

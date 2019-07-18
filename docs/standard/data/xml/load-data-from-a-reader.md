@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e4b789a23b790757ce2dfaa82b6eaec7fdaf3cb3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207225"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647867"
 ---
 # <a name="load-data-from-a-reader"></a>Laden von Daten aus einem Reader
 Wenn ein XML-Dokument mithilfe der <xref:System.Xml.XmlDocument.Load%2A>-Methode und einem Parameter eines <xref:System.Xml.XmlReader> geladen wird, weist das Verhalten Unterschiede zu dem Verhalten auf, das beim Laden von Daten aus anderen Formaten eintritt. Wenn sich der Reader in seinem Ausgangszustand befindet, verarbeitet <xref:System.Xml.XmlDocument.Load%2A> den gesamten Inhalt des Readers und erstellt das XML-DOM (Dokumentobjektmodell) aus allen Daten im Reader.  
   
  Wenn sich der Reader bereits auf einem Knoten im Dokument befindet und der Reader an die <xref:System.Xml.XmlDocument.Load%2A>-Methode übergeben wird, versucht <xref:System.Xml.XmlDocument.Load%2A>, den aktuellen Knoten und alle zugehörigen nebengeordneten Elemente zu lesen. Dies erfolgt bis zum Endtag, das die aktuelle Hierarchietiefe abschließt. Ob <xref:System.Xml.XmlDocument.Load%2A> erfolgreich ist, hängt vom Knoten ab, auf dem sich der Reader beim Ladeversuch befindet, da <xref:System.Xml.XmlDocument.Load%2A> überprüft, ob das XML aus dem Reader wohlgeformt ist. Wenn das XML nicht wohlgeformt ist, löst <xref:System.Xml.XmlDocument.Load%2A> eine Ausnahme aus. In der folgende Gruppe von Knoten sind beispielsweise zwei Elemente der Stammebene enthalten, das XML ist nicht wohlgeformt und <xref:System.Xml.XmlDocument.Load%2A> löst eine Ausnahme aus.  
   
--   Ein Kommentarknoten, auf den ein Elementknoten, ein weiterer Elementknoten und dann ein EndElement-Knoten folgt.  
+- Ein Kommentarknoten, auf den ein Elementknoten, ein weiterer Elementknoten und dann ein EndElement-Knoten folgt.  
   
  Die folgende Gruppe von Knoten erstellt ein unvollständiges DOM, da auf der Stammebene kein Element vorhanden ist.  
   
--   Ein Kommentarknoten, auf den ein ProcessingInstruction-Knoten, ein Kommentarknoten und dann ein EndElement-Knoten folgt.  
+- Ein Kommentarknoten, auf den ein ProcessingInstruction-Knoten, ein Kommentarknoten und dann ein EndElement-Knoten folgt.  
   
  Dies löst keine Ausnahme aus, und die Daten werden geladen. Sie können an der obersten Position dieser Knoten ein Stammelement hinzufügen und wohlgeformtes XML erstellen, das ohne Fehler gespeichert werden kann.  
   

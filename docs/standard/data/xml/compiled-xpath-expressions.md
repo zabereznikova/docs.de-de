@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1716488f6e072b09469dfbe5cc8fb4965e5db44c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75534bdfb1eef5902d3cd5071b4f5b4bfba8caa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605242"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647953"
 ---
 # <a name="compiled-xpath-expressions"></a>Kompilierte XPath-Ausdrücke
 Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath-Abfrage dar, die entweder von der statischen <xref:System.Xml.XPath.XPathExpression.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathExpression>-Klasse oder der <xref:System.Xml.XPath.XPathNavigator.Compile%2A>-Methode der <xref:System.Xml.XPath.XPathNavigator>-Klasse zurückgegeben wurde.  
@@ -25,15 +25,15 @@ Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath
   
  Nach der Kompilierung kann das <xref:System.Xml.XPath.XPathExpression>-Objekt je nach dem Typ, der von der XPath-Abfrage zurückgegeben wird, als Eingabe für die folgenden Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse verwendet werden:  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  In der folgenden Tabelle werden alle XPath-Rückgabetypen des W3C sowie ihre Entsprechungen in Microsoft .NET Framework beschrieben. Außerdem wird erläutert, welche Methoden das <xref:System.Xml.XPath.XPathExpression>-Objekt auf der Basis des Rückgabetyps verwenden.  
   
@@ -52,19 +52,19 @@ Ein <xref:System.Xml.XPath.XPathExpression>-Objekt stellt eine kompilierte XPath
   
  Die <xref:System.Xml.XPath.XPathExpression.ReturnType%2A>-Eigenschaft gibt einen der folgenden <xref:System.Xml.XPath.XPathResultType>-Enumerationswerte zurück, die die XPath-Rückgabetypen des W3C darstellen:  
   
--   <xref:System.Xml.XPath.XPathResultType.Any>  
+- <xref:System.Xml.XPath.XPathResultType.Any>  
   
--   <xref:System.Xml.XPath.XPathResultType.Boolean>  
+- <xref:System.Xml.XPath.XPathResultType.Boolean>  
   
--   <xref:System.Xml.XPath.XPathResultType.Error>  
+- <xref:System.Xml.XPath.XPathResultType.Error>  
   
--   <xref:System.Xml.XPath.XPathResultType.Navigator>  
+- <xref:System.Xml.XPath.XPathResultType.Navigator>  
   
--   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
+- <xref:System.Xml.XPath.XPathResultType.NodeSet>  
   
--   <xref:System.Xml.XPath.XPathResultType.Number>  
+- <xref:System.Xml.XPath.XPathResultType.Number>  
   
--   <xref:System.Xml.XPath.XPathResultType.String>  
+- <xref:System.Xml.XPath.XPathResultType.String>  
   
  Im folgenden Beispiel werden mithilfe des <xref:System.Xml.XPath.XPathExpression>-Objekts eine Zahl und eine Knotengruppe aus der Datei `books.xml` zurückgegeben. Die <xref:System.Xml.XPath.XPathExpression.ReturnType%2A>-Eigenschaft aller <xref:System.Xml.XPath.XPathExpression>-Objekte sowie die Ergebnisse der <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>-Methode und der <xref:System.Xml.XPath.XPathNavigator.Select%2A>-Methode werden in die Konsole geschrieben.  
   

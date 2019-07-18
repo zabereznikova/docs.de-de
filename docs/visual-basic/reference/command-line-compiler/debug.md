@@ -8,11 +8,11 @@ helpviewer_keywords:
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
 ms.openlocfilehash: 9bf7170cee31f92481b15fb1227f21895cd3734d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649737"
 ---
 # <a name="-debug-visual-basic"></a>-Debug (Visual Basic)
 Bewirkt, dass der Compiler Debuginformationen generiert, und fügen Sie ihn in den Ausgabedateien.  

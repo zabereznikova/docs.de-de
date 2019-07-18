@@ -4,12 +4,12 @@ description: Unterstützte Versionen von Linux-Versionen und .NET Core-Abhängig
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083885"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612224"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Voraussetzungen für .NET Core unter Linux
 
@@ -87,8 +87,6 @@ Unter [.NET Core 3.0 Supported OS Versions (Von .NET Core 3.0 unterstützte Betr
 
 Weitere Informationen zum Installieren von .NET Core 3.0 unter ARM64 finden Sie unter [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213) (Installieren von .NET Core 3.0 unter Linux ARM64).
 
-
-
 ---
 
 ## <a name="linux-distribution-dependencies"></a>Abhängigkeiten der Linux-Distributionen
@@ -146,7 +144,7 @@ Unter Linux gibt es zwei Auswahlmöglichkeiten für Installationspakete:
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>Das Skripten von Installationen mit dem Installationsskript von .NET Core
 
-Die [Dotnet-Installationsskripts](./tools/dotnet-install-script.md) werden verwendet, um ohne Administratorrechte eine Installation der CLI-Toolkette und der freigegebenen Laufzeit auszuführen. Sie können das Skript unter [https://dot.net/v1/dotnet-install.sh](https://dot.net/v1/dotnet-install.sh) herunterladen.
+Die [Dotnet-Installationsskripts](./tools/dotnet-install-script.md) werden verwendet, um ohne Administratorrechte eine Installation der CLI-Toolkette und der freigegebenen Laufzeit auszuführen. Sie können das Skript unter <https://dot.net/v1/dotnet-install.sh> herunterladen.
 
 Das Skript installiert standardmäßig die neueste Version von „LTS“, aktuell .NET Core 1.1. Zum Installieren von .NET Core 2.1 führen Sie das Skript mit dem folgenden Switch aus:
 

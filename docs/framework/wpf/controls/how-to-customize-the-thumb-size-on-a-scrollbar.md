@@ -7,11 +7,11 @@ helpviewer_keywords:
 - thumb size [WPF]
 ms.assetid: fa32b866-5ca1-4e73-85e7-2ac64b80d194
 ms.openlocfilehash: 60ae7c4e95801036c5deb0c485645297509b830c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911052"
 ---
 # <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>Vorgehensweise: Anpassen der Größe des Ziehpunkts auf einer Scrollleiste
 In diesem Thema erläutert das Einrichten der <xref:System.Windows.Controls.Primitives.Thumb> von eine <xref:System.Windows.Controls.Primitives.ScrollBar> eine feste Größe und eine Mindestgröße für angeben der <xref:System.Windows.Controls.Primitives.Thumb> von eine <xref:System.Windows.Controls.Primitives.ScrollBar>.  

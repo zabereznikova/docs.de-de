@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 313dbd11f1d033f0e15de651b9c130cc98c217e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 65f59d3df96f46ad65650183bdb6f631356a4d0b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192819"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775533"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields-Methode
 Zählt FieldDef-Token für den Typ auf, auf den durch das angegebene TypeDef-Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumFields (   
    [in, out] HCORENUM    *phEnum,   
    [in]      mdTypeDef   cl,   

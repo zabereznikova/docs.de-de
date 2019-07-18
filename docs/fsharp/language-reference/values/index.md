@@ -2,12 +2,12 @@
 title: Werte
 description: Erfahren Sie, wie Werte in F# Mengen sind, die einen bestimmten Typ aufweisen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5c1d4f1e59cbf092911d99a725654042bf3383b1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611879"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641619"
 ---
 # <a name="values"></a>Werte
 

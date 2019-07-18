@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146145"
 ---
 # <a name="introducing-pluggable-protocols"></a>Einführung in austauschbare Protokolle
 Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Ihre Anwendungen integriert werden. Die Internetzugriffsklassen in den Namespaces <xref:System.Net> und <xref:System.Net.Sockets> können zur Implementierung von sowohl webbasierten als auch internetbasierten Anwendungen verwendet werden.  
@@ -67,6 +67,7 @@ Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete
  Die **System.Net.Sockets**-Klassen erweisen sich besonders für Entwickler als nützlich, die mit der Windows Sockets-Schnittstelle vertraut sind oder die die Kontrolle durch das Programmieren auf Socketebene benötigen. Die **System.Net.Sockets**-Klassen stellen innerhalb der **System.Net**-Klassen einen Übergangspunkt von verwaltetem zu nativem Code dar. In den meisten Fällen marshallen **System.Net.Sockets**-Klassen Daten in ihre jeweilige Windows-32-Bit-Entsprechung und führen alle erforderlichen Sicherheitsüberprüfungen durch.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
 - [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)

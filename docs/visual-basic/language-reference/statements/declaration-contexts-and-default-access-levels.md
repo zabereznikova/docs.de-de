@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 05c2d6420526b660ead2f50eba7feb6b20524705
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623944"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Deklarationskontexte und Standardzugriffsebenen (Visual Basic)
 In diesem Thema wird beschrieben, welche Visual Basic-Typen in der anderen Typen deklariert werden können und was ihre Zugriffsebenen Standard Wenn kein Wert angegeben.  
@@ -24,11 +24,11 @@ In diesem Thema wird beschrieben, welche Visual Basic-Typen in der anderen Typen
   
  Der Schwellenwert für Deklarationskontexte lauten wie folgt:  
   
--   *Namespace-Ebene* – innerhalb einer Quelldatei oder der Namespace, jedoch nicht innerhalb einer Klasse, Struktur, Modul oder Schnittstelle  
+- *Namespace-Ebene* – innerhalb einer Quelldatei oder der Namespace, jedoch nicht innerhalb einer Klasse, Struktur, Modul oder Schnittstelle  
   
--   *Auf Modulebene* – innerhalb einer Klasse, Struktur, Modul oder Schnittstelle jedoch nicht innerhalb einer Prozedur oder einem Block  
+- *Auf Modulebene* – innerhalb einer Klasse, Struktur, Modul oder Schnittstelle jedoch nicht innerhalb einer Prozedur oder einem Block  
   
--   *Prozedurebene* – innerhalb einer Prozedur oder der Block (z. B. `If` oder `For`)  
+- *Prozedurebene* – innerhalb einer Prozedur oder der Block (z. B. `If` oder `For`)  
   
  Die folgende Tabelle zeigt die Zugriffsebenen "Standard" für verschiedene deklarierte Programmierelemente, je nach ihren Deklarationskontexte.  
   

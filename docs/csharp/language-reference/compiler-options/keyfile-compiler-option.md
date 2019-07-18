@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: bd89a5fa58507528b2a70efde04ecd2a6f601b39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e11cbca004aedd7d4f992abf2f766de4f4f5935
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605603"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59344649"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C#-Compileroptionen)
 Gibt den Dateinamen mit dem kryptografischen Schlüssel an.  
@@ -30,7 +30,7 @@ Gibt den Dateinamen mit dem kryptografischen Schlüssel an.
 |----------|----------------|  
 |`file`|Der Name der Datei mit dem Schlüssel mit starkem Namen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Wenn diese Option verwendet wird, fügt der Compiler den öffentlichen Schlüssel von der angegebenen Datei in das Assemblymanifest ein und signiert anschließend die endgültige Assembly mit dem privaten Schlüssel. Geben Sie sn -k `file` in die Befehlszeile ein, um eine Schlüsseldatei zu generieren.  
   
  Wenn Sie mit der Option **-target:module** kompilieren, wird der Name der Schlüsseldatei im Modul aufbewahrt und in die Assembly integriert, die erstellt wird, wenn Sie eine Assembly mit [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) kompilieren.  
@@ -45,11 +45,11 @@ Gibt den Dateinamen mit dem kryptografischen Schlüssel an.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** für das Projekt.  
+1. Öffnen Sie die Seite **Eigenschaften** für das Projekt.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Signieren**.  
+2. Klicken Sie auf die Eigenschaftenseite **Signieren**.  
   
-3.  Modifizieren Sie die Eigenschaft **Schlüsseldatei mit starkem Namen auswählen**.  
+3. Modifizieren Sie die Eigenschaft **Schlüsseldatei mit starkem Namen auswählen**.  
   
  Sie können mit <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A> programmgesteuert auf diese Compileroption zugreifen.  
   

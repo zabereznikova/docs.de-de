@@ -8,12 +8,12 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: 41c1aa0e2a5219cdb40ba6d79c2a55bbf8568322
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b63d94789d081ce7337b5f9c2abca3f7d9e99eeb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775726"
 ---
 # <a name="use-caching-in-ui-automation"></a>Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -23,33 +23,33 @@ ms.locfileid: "59211412"
   
 ### <a name="activate-a-cache-request"></a>Aktivieren einer Cacheanforderung  
   
-1.  Erstellen Sie eine <xref:System.Windows.Automation.CacheRequest>.  
+1. Erstellen Sie eine <xref:System.Windows.Automation.CacheRequest>.  
   
-2.  Geben Sie über <xref:System.Windows.Automation.CacheRequest.Add%2A>die Eigenschaften und Muster an, die zwischengespeichert werden sollen.  
+2. Geben Sie über <xref:System.Windows.Automation.CacheRequest.Add%2A>die Eigenschaften und Muster an, die zwischengespeichert werden sollen.  
   
-3.  Geben Sie den Umfang des Zwischenspeicherns an, indem Sie die <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> -Eigenschaft festlegen.  
+3. Geben Sie den Umfang des Zwischenspeicherns an, indem Sie die <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> -Eigenschaft festlegen.  
   
-4.  Geben Sie die Ansicht der Unterstruktur an, indem Sie die <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> -Eigenschaft festlegen.  
+4. Geben Sie die Ansicht der Unterstruktur an, indem Sie die <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> -Eigenschaft festlegen.  
   
-5.  Legen Sie die <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> -Eigenschaft auf <xref:System.Windows.Automation.AutomationElementMode.None> fest, wenn Sie die Effizienz dadurch steigern möchten, dass auf das Abrufen eines vollständigen Verweises auf Objekte verzichtet wird. (Dadurch wird es unmöglich, aktuelle Werte aus diesen Objekten abzurufen.)  
+5. Legen Sie die <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> -Eigenschaft auf <xref:System.Windows.Automation.AutomationElementMode.None> fest, wenn Sie die Effizienz dadurch steigern möchten, dass auf das Abrufen eines vollständigen Verweises auf Objekte verzichtet wird. (Dadurch wird es unmöglich, aktuelle Werte aus diesen Objekten abzurufen.)  
   
-6.  Aktivieren Sie die Anforderung mithilfe von <xref:System.Windows.Automation.CacheRequest.Activate%2A> innerhalb einer `using` Block (`Using` in Microsoft Visual Basic .NET).  
+6. Aktivieren Sie die Anforderung mithilfe von <xref:System.Windows.Automation.CacheRequest.Activate%2A> innerhalb einer `using` Block (`Using` in Microsoft Visual Basic .NET).  
   
  Deaktivieren Sie nach dem Abrufen von <xref:System.Windows.Automation.AutomationElement> -Objekten oder dem Abonnieren von Ereignissen die Anforderung, indem Sie <xref:System.Windows.Automation.CacheRequest.Pop%2A> verwenden (wenn <xref:System.Windows.Automation.CacheRequest.Push%2A> verwendet wurde) oder indem Sie das durch <xref:System.Windows.Automation.CacheRequest.Activate%2A>erstellte Objekt löschen. (Verwenden <xref:System.Windows.Automation.CacheRequest.Activate%2A> in einem `using` Block (`Using` in Microsoft Visual Basic .NET).  
   
 ### <a name="cache-automationelement-properties"></a>Zwischenspeichern von AutomationElement-Eigenschaften  
   
-1.  Während ein <xref:System.Windows.Automation.CacheRequest> aktiv ist, können Sie <xref:System.Windows.Automation.AutomationElement> -Objekte über <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> oder <xref:System.Windows.Automation.AutomationElement.FindAll%2A>abrufen. Sie können ein <xref:System.Windows.Automation.AutomationElement> -Objekt aber auch als Quelle eines Ereignisses abrufen, für das Sie eine Registrierung vorgenommen haben, als das <xref:System.Windows.Automation.CacheRequest> -Objekt aktiv war. (Sie können einen Cache auch erstellen, indem Sie ein <xref:System.Windows.Automation.CacheRequest> an GetUpdatedCache oder an eine der <xref:System.Windows.Automation.TreeWalker> -Methoden übergeben.)  
+1. Während ein <xref:System.Windows.Automation.CacheRequest> aktiv ist, können Sie <xref:System.Windows.Automation.AutomationElement> -Objekte über <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> oder <xref:System.Windows.Automation.AutomationElement.FindAll%2A>abrufen. Sie können ein <xref:System.Windows.Automation.AutomationElement> -Objekt aber auch als Quelle eines Ereignisses abrufen, für das Sie eine Registrierung vorgenommen haben, als das <xref:System.Windows.Automation.CacheRequest> -Objekt aktiv war. (Sie können einen Cache auch erstellen, indem Sie ein <xref:System.Windows.Automation.CacheRequest> an GetUpdatedCache oder an eine der <xref:System.Windows.Automation.TreeWalker> -Methoden übergeben.)  
   
-2.  Verwenden Sie <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> , oder rufen Sie eine Eigenschaft aus der <xref:System.Windows.Automation.AutomationElement.Cached%2A> -Eigenschaft des <xref:System.Windows.Automation.AutomationElement>-Objekts ab.  
+2. Verwenden Sie <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> , oder rufen Sie eine Eigenschaft aus der <xref:System.Windows.Automation.AutomationElement.Cached%2A> -Eigenschaft des <xref:System.Windows.Automation.AutomationElement>-Objekts ab.  
   
 ### <a name="obtain-cached-patterns-and-their-properties"></a>Abrufen von zwischengespeicherten Mustern und deren Eigenschaften  
   
-1.  Während ein <xref:System.Windows.Automation.CacheRequest> aktiv ist, können Sie <xref:System.Windows.Automation.AutomationElement> -Objekte über <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> oder <xref:System.Windows.Automation.AutomationElement.FindAll%2A>abrufen. Sie können ein <xref:System.Windows.Automation.AutomationElement> -Objekt aber auch als Quelle eines Ereignisses abrufen, für das Sie eine Registrierung vorgenommen haben, als das <xref:System.Windows.Automation.CacheRequest> -Objekt aktiv war. (Sie können einen Cache auch erstellen, indem Sie ein <xref:System.Windows.Automation.CacheRequest> an GetUpdatedCache oder an eine der <xref:System.Windows.Automation.TreeWalker> -Methoden übergeben.)  
+1. Während ein <xref:System.Windows.Automation.CacheRequest> aktiv ist, können Sie <xref:System.Windows.Automation.AutomationElement> -Objekte über <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> oder <xref:System.Windows.Automation.AutomationElement.FindAll%2A>abrufen. Sie können ein <xref:System.Windows.Automation.AutomationElement> -Objekt aber auch als Quelle eines Ereignisses abrufen, für das Sie eine Registrierung vorgenommen haben, als das <xref:System.Windows.Automation.CacheRequest> -Objekt aktiv war. (Sie können einen Cache auch erstellen, indem Sie ein <xref:System.Windows.Automation.CacheRequest> an GetUpdatedCache oder an eine der <xref:System.Windows.Automation.TreeWalker> -Methoden übergeben.)  
   
-2.  Verwenden Sie <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> oder <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> , um ein zwischengespeichertes Muster abzurufen.  
+2. Verwenden Sie <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> oder <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> , um ein zwischengespeichertes Muster abzurufen.  
   
-3.  Rufen Sie Eigenschaftswerte aus der `Cached` -Eigenschaft des Steuerelementmusters ab.  
+3. Rufen Sie Eigenschaftswerte aus der `Cached` -Eigenschaft des Steuerelementmusters ab.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel werden die verschiedenen Möglichkeiten des Zwischenspeicherns gezeigt. Dabei wird <xref:System.Windows.Automation.CacheRequest.Activate%2A> verwendet wird, um das <xref:System.Windows.Automation.CacheRequest>-Objekt zu aktivieren.  

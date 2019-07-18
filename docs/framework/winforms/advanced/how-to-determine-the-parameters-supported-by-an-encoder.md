@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3e5345180e0ff3321b9ef0b885b836d3e9456f28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204574"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643339"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>Vorgehensweise: Ermitteln der von einem Encoder unterstützten Parameter
 Sie können anpassen, Imageparameter, z. B. Qualität und der Komprimierung, jedoch müssen Sie wissen, welche Parameter von einem angegebenen Bildencoder unterstützt werden. Die <xref:System.Drawing.Image> -Klasse stellt die <xref:System.Drawing.Image.GetEncoderParameterList%2A> Methode, damit Sie bestimmen können, welche Parameter für einen bestimmten Encoder unterstützt werden. Sie geben den Encoder mit einer GUID. Die <xref:System.Drawing.Image.GetEncoderParameterList%2A> Methode gibt ein Array von <xref:System.Drawing.Imaging.EncoderParameter> Objekte.  
@@ -26,12 +26,12 @@ Sie können anpassen, Imageparameter, z. B. Qualität und der Komprimierung, jed
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Eine Windows Forms-Anwendung  
+- Eine Windows Forms-Anwendung  
   
--   Ein <xref:System.Windows.Forms.PaintEventArgs>, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
+- Ein <xref:System.Windows.Forms.PaintEventArgs>, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Auflisten installierter Encoder](how-to-list-installed-encoders.md)
-- [Bitmaptypen](types-of-bitmaps.md)
+- [Typen von Bitmaps](types-of-bitmaps.md)
 - [Verwenden von Bildencodern und -decodern in Managed GDI+](using-image-encoders-and-decoders-in-managed-gdi.md)

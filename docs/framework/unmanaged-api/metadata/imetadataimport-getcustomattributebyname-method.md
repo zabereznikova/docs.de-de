@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 61029074347d554faaefe790c1e408e860e34690
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7bebf254110d9970ff3a99f948ff2e831ffb6b35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183026"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782438"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName-Methode
 Ruft das benutzerdefinierte Attribut, mit dem angegebenen Namen und Besitzer ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCustomAttributeByName (  
    [in]  mdToken          tkObj,  
    [in]  LPCWSTR          szName,  

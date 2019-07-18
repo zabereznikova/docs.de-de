@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725700"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59302568"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C#-Compileroptionen)
 Bettet die angegebene Ressource in die Ausgabedatei ein.  
@@ -37,7 +37,7 @@ Bettet die angegebene Ressource in die Ausgabedatei ein.
  `accessibility-modifier` (optional)  
  Barrierefreiheit der Ressource: öffentlich oder privat. Der Standardwert ist „öffentlich“.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Verwenden Sie [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md), um eine Ressource mit einer Assembly zu verknüpfen, anstatt die Ressourcendatei zur Ausgabedatei hinzuzufügen.  
   
  Ressourcen sind standardmäßig in der Assembly öffentlich, wenn sie mithilfe des C#-Compilers erstellt werden. Geben Sie `private` als Modifizierer der Barrierefreiheit an. Außer `public` und `private` sind keine anderen Zugriffsmethoden zulässig.  
@@ -50,13 +50,13 @@ Bettet die angegebene Ressource in die Ausgabedatei ein.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Fügen Sie Ihrem Projekt eine Ressourcendatei hinzu.  
+1. Fügen Sie Ihrem Projekt eine Ressourcendatei hinzu.  
   
-2.  Wählen Sie im **Projektmappen-Explorer** die Datei aus, die Sie einbetten möchten.  
+2. Wählen Sie im **Projektmappen-Explorer** die Datei aus, die Sie einbetten möchten.  
   
-3.  Wählen Sie im Fenster **Eigenschaften** die Option **Buildvorgang** für die Datei aus.  
+3. Wählen Sie im Fenster **Eigenschaften** die Option **Buildvorgang** für die Datei aus.  
   
-4.  Legen Sie die Option **Buildvorgang** auf **Eingebettete Ressource** fest.  
+4. Legen Sie die Option **Buildvorgang** auf **Eingebettete Ressource** fest.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   

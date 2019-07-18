@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a22f65206a33ecece1ec8a117db4bc838e9a350
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 89d2f9c9cfa7d4c2498710b36796f3e2605bcbf0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136577"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763647"
 ---
 # <a name="coiniticor-enumeration"></a>COINITICOR-Enumeration
 Gibt Konstanten an, die von verwendet [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) bei der Initialisierung der common Language Runtime.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum tagCOINITCOR  
 {  
     COINITCOR = 0x0  

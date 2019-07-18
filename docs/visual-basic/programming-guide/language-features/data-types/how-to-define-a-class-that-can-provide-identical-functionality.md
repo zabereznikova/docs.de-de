@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 1bc82fe9ecee577125c4353677fb19cd3a57b0cf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837064"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757400"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Vorgehensweise: Definieren einer Klasse, die gleiche Funktionalität für unterschiedliche Datentypen bereitstellen kann (Visual Basic)
 Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen. Hierzu geben Sie in der Definition mindestens einen *Typparameter* an. Die Klasse kann dann als Vorlage für Objekte fungieren, für die verschiedene Datentypen verwendet werden. Eine in dieser Weise definierte Klasse wird als *generische Klasse* bezeichnet.  
@@ -42,27 +42,27 @@ Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die
   
 ### <a name="to-define-a-class-with-a-type-parameter"></a>So definieren Sie eine Klasse mit einem Typparameter  
   
-1.  Definieren Sie die Klasse auf die übliche Weise.  
+1. Definieren Sie die Klasse auf die übliche Weise.  
   
-2.  Fügen Sie `(Of` *Typparameter*`)` unmittelbar nach dem Klassennamen hinzu, um einen Typparameter anzugeben.  
+2. Fügen Sie `(Of` *Typparameter*`)` unmittelbar nach dem Klassennamen hinzu, um einen Typparameter anzugeben.  
   
-3.  Sind mehrere Typparameter vorhanden, erstellen Sie innerhalb der Klammern eine Liste mit Kommas als Trennzeichen. Geben Sie das `Of` -Schlüsselwort nur einmal an.  
+3. Sind mehrere Typparameter vorhanden, erstellen Sie innerhalb der Klammern eine Liste mit Kommas als Trennzeichen. Geben Sie das `Of` -Schlüsselwort nur einmal an.  
   
-4.  Werden im Code Operationen für einen Typparameter ausgeführt, die über eine einfache Zuweisung hinausgehen, geben Sie nach dem Typparameter eine `As` -Klausel an, um die entsprechende Anzahl von *Einschränkungen*hinzuzufügen. Eine Einschränkung gewährleistet, dass der für den Typparameter angegebene Typ eine Anforderung erfüllt, beispielsweise eine der folgenden:  
+4. Werden im Code Operationen für einen Typparameter ausgeführt, die über eine einfache Zuweisung hinausgehen, geben Sie nach dem Typparameter eine `As` -Klausel an, um die entsprechende Anzahl von *Einschränkungen*hinzuzufügen. Eine Einschränkung gewährleistet, dass der für den Typparameter angegebene Typ eine Anforderung erfüllt, beispielsweise eine der folgenden:  
   
-    -   Unterstützt eine Operation, etwa `>`, die der Code ausführt  
+    - Unterstützt eine Operation, etwa `>`, die der Code ausführt  
   
-    -   Unterstützt einen Member, etwa eine Methode, auf den der Code zugreift  
+    - Unterstützt einen Member, etwa eine Methode, auf den der Code zugreift  
   
-    -   Macht einen parameterlosen Konstruktor verfügbar  
+    - Macht einen parameterlosen Konstruktor verfügbar  
   
      Wenn Sie keine Einschränkungen angeben, können im Code nur Operationen und Member verwendet werden, die vom [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)unterstützt werden. Weitere Informationen finden Sie unter [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-5.  Ermitteln Sie jeden Klassenmember, der mit einem bereitgestellten Typ deklariert werden muss, und deklarieren Sie ihn mit `As` `typeparameter`. Dies gilt für die interne Speicherung, für Prozedurparameter und für Rückgabewerte.  
+5. Ermitteln Sie jeden Klassenmember, der mit einem bereitgestellten Typ deklariert werden muss, und deklarieren Sie ihn mit `As` `typeparameter`. Dies gilt für die interne Speicherung, für Prozedurparameter und für Rückgabewerte.  
   
-6.  Im Code dürfen nur Operationen und Methoden verwenden, die von jedem Datentyp unterstützt werden, der im Code für `itemType`angegeben werden kann.  
+6. Im Code dürfen nur Operationen und Methoden verwenden, die von jedem Datentyp unterstützt werden, der im Code für `itemType`angegeben werden kann.  
   
-     Im folgenden Beispiel wird eine Klasse definiert, in der eine sehr einfache Liste verwaltet wird. Die Klasse speichert die Liste im internen Array `items`, und der verwendende Code kann den Datentyp der Listenelemente deklarieren. Mit einem parametrisierten Konstruktor wird es dem verwendenden Code ermöglicht, die Obergrenze von `items`festzulegen, und der Standardkonstruktor legt diese auf 9 (für insgesamt 10 Elemente) fest.  
+     Im folgenden Beispiel wird eine Klasse definiert, in der eine sehr einfache Liste verwaltet wird. Die Klasse speichert die Liste im internen Array `items`, und der verwendende Code kann den Datentyp der Listenelemente deklarieren. Ein parametrisierter Konstruktor ermöglicht die Verwendung von dem Code aus, um die obere Grenze der `items`, und der parameterlose Konstruktor legt dies fest auf 9 (für insgesamt 10 Elemente).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   

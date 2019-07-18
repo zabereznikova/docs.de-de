@@ -1,15 +1,15 @@
 ---
-title: <EnableAmPmParseAdjustment> Element
+title: <EnableAmPmParseAdjustment>-Element
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57d1a14199debbb90827c1ea95347d485a636329
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4bcde1bbb5419de2c363b422c327d55c2ce9eea1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222509"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607312"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment >-Element
 Bestimmt, ob Datum und Uhrzeit-Analysemethoden verwenden einen angepassten Satz von Regeln zum Analysieren von Datumszeichenfolgen, die ein Tag, Monat, Stunde und AM/PM-Kennzeichner enthalten.  
@@ -53,15 +53,15 @@ Bestimmt, ob Datum und Uhrzeit-Analysemethoden verwenden einen angepassten Satz 
 ## <a name="remarks"></a>Hinweise  
  Die `<EnableAmPmParseAdjustment>` -Element steuert, wie die folgenden Methoden eine Datumszeichenfolge analysiert, die einen numerischen Tag und Monat, gefolgt von einer Stunde und einer AM/PM-Kennzeichner (z. B. "4/10 6 Uhr") enthält:  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
+- <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
  Es sind keine anderen Mustern betroffen.  
   
@@ -84,4 +84,4 @@ Bestimmt, ob Datum und Uhrzeit-Analysemethoden verwenden einen angepassten Satz 
 ## <a name="see-also"></a>Siehe auch
 
 - [\<Common Language Runtime >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 4a634f99542b2cf1a2cca9314c5eb648e841b158
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545454"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661196"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Übereinstimmungsvergleiche (C#-Programmierhandbuch)
 
@@ -28,7 +28,7 @@ Unter bestimmten Umständen ist es erforderlich, die Gleichheit zweier Werte zu 
 
 ## <a name="value-equality"></a>Wertgleichheit
 
- Eine Wertgleichheit liegt dann vor, wenn zwei Objekte den gleichen Wert bzw. die gleichen Werte enthalten. Die Prüfung auf Wertgleichheit für primitive Werttypen wie [int](../../../csharp/language-reference/keywords/int.md) oder [bool](../../../csharp/language-reference/keywords/bool.md) ist einfach. Sie können den [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-)-Operator verwenden, wie im folgenden Beispiel gezeigt.  
+ Eine Wertgleichheit liegt dann vor, wenn zwei Objekte den gleichen Wert bzw. die gleichen Werte enthalten. Die Prüfung auf Wertgleichheit für primitive Werttypen wie [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) oder [bool](../../../csharp/language-reference/keywords/bool.md) ist einfach. Sie können den [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-)-Operator verwenden, wie im folgenden Beispiel gezeigt.  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -47,11 +47,11 @@ if( b == a)
   
 ### <a name="value-equality-for-floating-point-values"></a>Wertgleichheit für Gleitkommawerte
 
- Übereinstimmungsvergleiche für Gleitkommawerte ([double](../../../csharp/language-reference/keywords/double.md) und [float](../../../csharp/language-reference/keywords/float.md)) sind aufgrund der Ungenauigkeit der Gleitkommaarithmetik auf Computern mit Binärlogik problematisch. Weitere Informationen finden Sie in den Hinweisen im Thema <xref:System.Double?displayProperty=nameWithType>.  
+ Übereinstimmungsvergleiche für Gleitkommawerte ([double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) und [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) sind aufgrund der Ungenauigkeit der Gleitkommaarithmetik auf Computern mit Binärlogik problematisch. Weitere Informationen finden Sie in den Hinweisen im Thema <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Beschreibt, wie zwei Variablen auf Verweisgleichheit geprüft werden.|  
 |[Vorgehensweise: Definieren von Wertgleichheit für einen Typ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Beschreibt, wie eine benutzerdefinierte Definition der Wertgleichheit für einen Typ erstellt wird.|  

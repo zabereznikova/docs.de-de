@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48dd987896536006fe81bc01528cadb507123e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: aa5d5ee469d41cca46ea05fa4111ce3abff808d4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203404"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771904"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle-Funktion
 Generiert einen Hashwert für den Inhalt der Datei mit dem angegebenen Dateihandle unter Verwendung des angegebenen Hashalgorithmus.  
@@ -30,7 +30,7 @@ Generiert einen Hashwert für den Inhalt der Datei mit dem angegebenen Dateihand
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetHashFromHandle (  
     [in]  HANDLE   hFile,  
     [in, out] unsigned int   *piHashAlg,  

@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 – Leistung
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: f7590591bfac374f6de637f57fad9853b82ca20c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845734"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348538"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 
@@ -18,7 +18,7 @@ ms.locfileid: "57845734"
 ## <a name="terminology"></a>Terminologie
  Die in [!INCLUDE[wf1](../../../includes/wf1-md.md)] eingeführte [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]-Version wird in den übrigen Abschnitten dieses Themas als WF4 bezeichnet.  [!INCLUDE[wf1](../../../includes/wf1-md.md)] wurde in .NET 3.0 eingeführt und hatte einige geringfügige Revisionen über [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1. Die [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]-Version von Workflow Foundation wird in den restlichen Abschnitten dieses Themas als WF3 bezeichnet. WF3 wird in [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] parallel mit WF4 ausgeliefert. Weitere Informationen zum Migrieren von WF3-Artefakten zu WF4 finden Sie unter: [Migrationsanleitung für Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313)
 
- Windows Communication Foundation (WCF) ist Microsofts einheitliches Programmiermodell zum Erstellen von dienstorientierten Anwendungen. Es wurde zuerst als Teil von .NET 3.0 zusammen mit WF3 eingeführt und ist jetzt eine der wichtigsten Komponenten von der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
+ Windows Communication Foundation (WCF) ist Microsofts einheitliches Programmiermodell zum Erstellen von dienstorientierten Anwendungen. Es wurde zuerst als Teil von .NET 3.0 zusammen mit WF3 eingeführt und ist jetzt eine der wichtigsten Komponenten von .NET Framework.
 
  Windows Server AppFabric ist eine Reihe integrierter Technologien, mit denen das Erstellen, Skalieren und Verwalten von Webanwendungen und zusammengesetzten Anwendungen, die unter IIS ausgeführt werden, vereinfacht wird. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
@@ -31,7 +31,7 @@ ms.locfileid: "57845734"
 ### <a name="wf-runtime"></a>WF-Laufzeit
  Die zentrale Komponente der [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Laufzeit ist ein asynchroner Planer, der die Ausführung der Aktivitäten in einem Workflow steuert. Er stellt eine leistungsstarke, vorhersagbare Ausführungsumgebung für Aktivitäten zur Verfügung. Die Umgebung weist einen gut definierten Vertrag für Ausführung, Fortsetzung, Abschluss, Abbruch, Ausnahmen und ein vorhersagbares Threadingmodell auf.
 
- Im Vergleich zu WF3 ist der Planer der WF4-Laufzeit effizienter. Es nutzt den gleichen e/a-Threadpool für die verwendeten WCF, dies ist sehr effizient auf die Ausführung im Batchmodus Arbeitsaufgaben. Die interne Warteschlange des Arbeitsaufgabenplaners ist für die gängigsten Verwendungsmuster optimiert. Die WF4-Laufzeit verwaltet auch die Ausführungszustände auf sehr ressourcenschonende Weise mit minimaler Synchronisierung und Ereignisbehandlungslogik. Für WF3 sind hingegen intelligente Ereignisregistrierungen und Aufrufe erforderlich, um die komplexe Synchronisierung für Zustandsübergänge auszuführen.
+ Im Vergleich zu WF3 ist der Planer der WF4-Laufzeit effizienter. Es nutzt den gleichen e/a-Threadpool für die verwendeten WCF, dies ist sehr effizient auf die Ausführung im Batchmodus Arbeitsaufgaben. Die interne Warteschlange des Arbeitsaufgabenplaners ist für die gängigsten Verwendungsmuster optimiert. Die WF4-Laufzeit verwaltet auch die Ausführungszustände auf sehr einfache Weise mit minimaler Synchronisierung und ereignisbehandlungslogik, hängt von WF3 unter Heavyweight--ereignisregistrierungen und Aufrufe, die komplexe Synchronisierung für Zustandsübergänge auszuführen.
 
 ### <a name="data-storage-and-flow"></a>Datenspeicherung und -fluss
  In WF3 werden einer Aktivität zugeordnete Daten durch Abhängigkeitseigenschaften modelliert, die vom Typ <xref:System.Windows.DependencyProperty> implementiert werden. Das abhängigkeitseigenschaftenmuster wurde in Windows Presentation Foundation (WPF) eingeführt. Im Allgemeinen ist dieses Muster sehr flexibel, sodass eine einfache Datenbindung und andere Benutzeroberflächenfunktionen unterstützt werden. Für das Muster müssen jedoch die Eigenschaften als statische Felder in der Workflowdefinition definiert sein. Jedes Mal, wenn die [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Laufzeit die Eigenschaftswerte festlegt oder abruft, wird eine komplexe Suchlogik angewendet.
@@ -43,7 +43,7 @@ ms.locfileid: "57845734"
 ### <a name="control-flow"></a>Ablaufsteuerung
  Wie andere Programmiersprachen auch unterstützt [!INCLUDE[wf1](../../../includes/wf1-md.md)] Ablaufsteuerungen für Workflowdefinitionen. Hierzu wurde ein Satz von Ablaufsteuerungsaktivitäten für die Sequenzierung, die Ausführung als Schleife, das Verzweigen und andere Muster eingeführt. Wenn in WF3 dieselbe Aktivität erneut ausgeführt werden muss, wird ein neuer <xref:System.Workflow.ComponentModel.ActivityExecutionContext> erstellt und die Aktivität durch eine komplexe Serialisierungs- und eine Deserialisierungslogik auf Grundlage von <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> geklont. Normalerweise ist die Leistung bei iterativen Ablaufsteuerungen viel geringer als beim Ausführen einer Sequenz von Aktivitäten.
 
- WF4 behandelt diesen Vorgang anders. Es nimmt die Aktivitätsvorlage, erstellt ein neues ActivityInstance-Objekt und fügt es der Planerwarteschlange hinzu. Dieser ganze Prozess umfasst nur die explizite Objekterstellung und ist sehr einfach.
+ WF4 behandelt diesen Vorgang anders. Es nimmt die Aktivitätsvorlage, erstellt ein neues ActivityInstance-Objekt und fügt es der Planerwarteschlange hinzu. Dieser gesamte Prozess nur umfasst die explizite objekterstellung und ist sehr einfach.
 
 ### <a name="asynchronous-programming"></a>Asynchrone Programmierung
  Anwendungen weisen in der Regel bessere Leistung und Skalierbarkeit mit asynchroner Programmierung für lang ausgeführte blockierende Vorgänge auf, wie z. B. E/A oder verteilte Computervorgänge. WF4 stellt asynchrone Unterstützung durch die Basisaktivitätstypen <xref:System.Activities.AsyncCodeActivity> und <xref:System.Activities.AsyncCodeActivity%601> bereit. Die Laufzeit versteht asynchrone Aktivitäten systemintern und kann daher die Instanz automatisch in eine Zone ohne Persistenz verschieben, während die asynchrone Arbeit aussteht. Benutzerdefinierte Aktivitäten können von diesen Typen abgeleitet werden, um asynchrone Aufgaben auszuführen, ohne dass der Workflowplanerthread angehalten und Aktivitäten, die möglicherweise parallel ausgeführt werden, blockiert werden.
@@ -376,44 +376,44 @@ public class Workflow1 : Activity
 
  Beachten Sie, dass der WF4-SQL-Persistenzanbieter weitere Aufgaben in der Datenbankebene ausführt.  Die SQL-Datenbank kann zu einem Engpass führen. Daher ist die Überwachung der CPU und Datenträgerverwendung in diesem Fall von Bedeutung.  Nehmen Sie die folgenden Leistungsindikatoren aus der SQL-Datenbank bei den Leistungstests von Workflowanwendungen auf:
 
--   Physikalischer Datenträger\\% Lesezeit
+- Physikalischer Datenträger\\% Lesezeit
 
--   Physikalischer Datenträger\\Zeit (%)
+- Physikalischer Datenträger\\Zeit (%)
 
--   Physikalischer Datenträger\\% Datenträger Schreibzeit
+- Physikalischer Datenträger\\% Datenträger Schreibzeit
 
--   Physikalischer Datenträger\\%-durchschnittliche Länge der Datenträgerwarteschlange
+- Physikalischer Datenträger\\%-durchschnittliche Länge der Datenträgerwarteschlange
 
--   Physischer Datenträger\Durchschnittl. Warteschlangenlänge der Datenträger-Lesevorgänge
+- Physischer Datenträger\Durchschnittl. Warteschlangenlänge der Datenträger-Lesevorgänge
 
--   Physischer Datenträger\Durchschnittl. Warteschlangenlänge der Datenträger-Schreibvorgänge
+- Physischer Datenträger\Durchschnittl. Warteschlangenlänge der Datenträger-Schreibvorgänge
 
--   Physischer Datenträger\Aktuelle Warteschlangenlänge
+- Physischer Datenträger\Aktuelle Warteschlangenlänge
 
--   Prozessorinformationen\\Prozessorzeit (%)
+- Prozessorinformationen\\Prozessorzeit (%)
 
--   SQLServer:Latches\Durchschnittliche Latchwartezeit (ms)
+- SQLServer:Latches\Durchschnittliche Latchwartezeit (ms)
 
--   SQLServer:Latches\Latchwartezeiten/s
+- SQLServer:Latches\Latchwartezeiten/s
 
 ### <a name="tracking"></a>Nachverfolgung
  Die Workflownachverfolgung kann verwendet werden, um den Status eines Workflows nachzuverfolgen.  Die Informationen, die in den Nachverfolgungsereignissen enthalten sind, werden von einem Nachverfolgungsprofil bestimmt.  Mit der Komplexität des Nachverfolgungsprofils steigt der Aufwand für die Nachverfolgung.
 
  WF3 wurde mit einem auf SQL-basierenden Nachverfolgungsdienst geliefert.  Dieser Dienst funktionierte im Batchmodus und in Nicht-Batch-Modi.  Im Nicht-Batch-Modus werden Nachverfolgungsereignisse direkt in die Datenbank geschrieben.  Im Batchmodus werden Nachverfolgungsereignisse im selben Batch wie der Workflowinstanzzustand gesammelt.  Der Batchmodus weist für den größten Bereich von Workflowentwürfen die beste Leistung auf.  Die Batchverarbeitung kann jedoch negative Auswirkungen auf die Leistung haben, wenn der Workflow viele Aktivitäten ohne Persistenz ausführt und diese Aktivitäten nachverfolgt werden.  Dies trat am häufigsten in Schleifen auf. Dieses Szenario wird am besten vermieden, indem große Schleifen entworfen werden, die einen Persistenzpunkt enthalten.  Das Einfügen eines Persistenzpunkts in eine Schleife kann negative Auswirkungen auf die Leistung haben. Daher müssen sich die jeweiligen Kosten gegeneinander aufwiegen.
 
- WF4 wird nicht mit einem SQL-Nachverfolgungsdienst bereitgestellt.  Das Aufzeichnen von Nachverfolgungsinformationen in einer SQL-Datenbank kann besser über einen Anwendungsserver als über eine Integration in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] abgewickelt werden. Daher wird die SQL-Nachverfolgung jetzt von AppFabric abgewickelt.  Der Standardnachverfolgungsanbieter in WF4 basiert auf der Ereignisablaufverfolgung für Windows (ETW).
+ WF4 wird nicht mit einem SQL-Nachverfolgungsdienst bereitgestellt.  Aufzeichnen von Nachverfolgungsinformationen in einer SQL­Datenbank kann besser von einem Anwendungsserver verarbeitet anstatt im .NET Framework integriert. Daher wird die SQL-Nachverfolgung jetzt von AppFabric abgewickelt.  Der Standardnachverfolgungsanbieter in WF4 basiert auf der Ereignisablaufverfolgung für Windows (ETW).
 
  ETW ist ein in Windows integriertes Ereignissystem mit niedriger Latenzzeit auf Kernelebene.  Es verwendet ein Anbieter-/Consumermodell, das ermöglicht, dass die Strafe für die Ereignisablaufverfolgung nur übernommen wird, wenn tatsächlich ein Consumer vorhanden ist.  Zusätzlich zu Kernel-Ereignissen, wie z. B. Prozessor, Datenträger, Arbeitsspeicher und Netzwerkverwendung, nutzen auch viele Anwendungen ETW.  ETW-Ereignisse sind insofern leistungsstärker als Leistungsindikatoren, da Ereignisse an die Anwendung angepasst werden können.  Ein Ereignis kann Text enthalten, wie z. B. eine Workflow-ID oder eine Informationsmeldung.  Zudem werden Ereignisse mit Bitmasken kategorisiert, da die Verarbeitung einer bestimmten Teilmenge von Ereignissen geringere Auswirkungen auf die Leistung als das Erfassen sämtlicher Ereignisse hat.
 
  Vorteile des Ansatzes der Verwendung von ETW zur Nachverfolgung anstelle von SQL:
 
--   Eine Auflistung von Nachverfolgungsereignissen kann in einem anderen Prozess abgetrennt werden.  Dies ermöglicht höhere Flexibilität beim Aufzeichnen der Ereignisse.
+- Eine Auflistung von Nachverfolgungsereignissen kann in einem anderen Prozess abgetrennt werden.  Dies ermöglicht höhere Flexibilität beim Aufzeichnen der Ereignisse.
 
--   ETW-Nachverfolgungsereignisse werden einfach mit den WCF-ETW-Ereignissen oder anderen ETW-Anbietern, z. B. eine SQL Server oder den Kernel-Anbieter kombiniert werden.
+- ETW-Nachverfolgungsereignisse werden einfach mit den WCF-ETW-Ereignissen oder anderen ETW-Anbietern, z. B. eine SQL Server oder den Kernel-Anbieter kombiniert werden.
 
--   Workflowautoren müssen keinen Workflow ändern, damit er besser mit einer bestimmten Nachverfolgungsimplementierung funktioniert, wie z. B. dem Batchmodus des WF3-SQL-Überwachungsdiensts.
+- Workflowautoren müssen keinen Workflow ändern, damit er besser mit einer bestimmten Nachverfolgungsimplementierung funktioniert, wie z. B. dem Batchmodus des WF3-SQL-Überwachungsdiensts.
 
--   Ein Administrator kann die Nachverfolgung aktivieren oder deaktivieren, ohne den Hostprozess wiederzuverwenden.
+- Ein Administrator kann die Nachverfolgung aktivieren oder deaktivieren, ohne den Hostprozess wiederzuverwenden.
 
  Die Leistungsvorteile der ETW-Nachverfolgung haben auch einen Nachteil.  ETW-Ereignisse können unter intensivem Ressourcendruck auf das System verloren gehen.  Die Verarbeitung von Ereignissen soll die normale Programmausführung nicht blockieren. Daher wird nicht garantiert, dass alle ETW-Ereignisse an ihre Abonnenten übertragen werden.  Daher eignet sich die ETW-Nachverfolgung hervorragend zum Systemmonitoring, ist aber nicht für das Auditing geeignet.
 

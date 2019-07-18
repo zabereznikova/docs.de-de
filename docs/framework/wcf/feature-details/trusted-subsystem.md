@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918702"
 ---
 # <a name="trusted-subsystem"></a>Vertrauenswürdiges Subsystem
 Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk verteilt werden. Die Webdienste sind so ausgelegt, dass der Zugriff auf zusätzliche Ressourcen (beispielsweise Datenbanken oder andere Webdienste) in der Geschäftslogik des Webdiensts gekapselt sind. Diese Ressourcen müssen vor nicht autorisiertem Zugriff geschützt werden. Die folgende Abbildung stellt einen vertrauenswürdigen Subsystemprozess dar.  
@@ -19,15 +19,15 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
   
  Die folgenden Schritte beschreiben den vertrauenswürdigen Subsystemprozess:  
   
-1.  Der Client reicht zusammen mit Anmeldeinformationen eine Anforderung beim vertrauenswürdigen Subsystem ein.  
+1. Der Client reicht zusammen mit Anmeldeinformationen eine Anforderung beim vertrauenswürdigen Subsystem ein.  
   
-2.  Das vertrauenswürdige Subsystem wird authentifiziert und autorisiert den Benutzer.  
+2. Das vertrauenswürdige Subsystem wird authentifiziert und autorisiert den Benutzer.  
   
-3.  Das vertrauenswürdige Subsystem sendet eine Anforderungsnachricht an die Remoteressource. Diese Anforderung wird von Anmeldeinformationen für das vertrauenswürdige Subsystem (oder das Dienstkonto, unter dem der vertrauenswürdige Subsystemprozess durchgeführt wird) begleitet.  
+3. Das vertrauenswürdige Subsystem sendet eine Anforderungsnachricht an die Remoteressource. Diese Anforderung wird von Anmeldeinformationen für das vertrauenswürdige Subsystem (oder das Dienstkonto, unter dem der vertrauenswürdige Subsystemprozess durchgeführt wird) begleitet.  
   
-4.  Die Back-End-Ressource authentifiziert und autorisiert das vertrauenswürdige Subsystem. Es verarbeitet dann die Anforderung und gibt eine Antwort zum vertrauenswürdigen Subsystem aus.  
+4. Die Back-End-Ressource authentifiziert und autorisiert das vertrauenswürdige Subsystem. Es verarbeitet dann die Anforderung und gibt eine Antwort zum vertrauenswürdigen Subsystem aus.  
   
-5.  Das vertrauenswürdige Subsystem verarbeitet die Antwort und gibt seine eigene Antwort an den Client heraus.  
+5. Das vertrauenswürdige Subsystem verarbeitet die Antwort und gibt seine eigene Antwort an den Client heraus.  
   
 |Merkmal|Beschreibung|  
 |--------------------|-----------------|  
@@ -38,7 +38,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 |Integrität|Ja|  
 |Vertraulichkeit|Ja|  
 |Transport|HTTP zwischen Client und dem vertrauenswürdigen Subsystemdienst.<br /><br /> NET.TCP zwischen dem vertrauenswürdigen Subsystemdienst und der Ressource (Back-End-Dienst).|  
-|Bindung|<xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Bindung|<xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.NetTcpBinding> [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Ressource (Back-End-Dienst)  
   

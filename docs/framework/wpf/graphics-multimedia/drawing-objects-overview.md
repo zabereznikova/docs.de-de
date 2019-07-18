@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b09fed48912a9175ff34d5be4f783bdb06abf936
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144026"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615420"
 ---
 # <a name="drawing-objects-overview"></a>Übersicht über Zeichnungsobjekte
 In diesem Thema werden <xref:System.Windows.Media.Drawing> Objekte und beschreibt, wie Sie diese verwenden, um effizient Zeichnen von Formen, Bitmaps, Text und Medien. Verwenden Sie <xref:System.Windows.Media.Drawing> Zeichnen von Objekten, die bei der Erstellung von ClipArt-Objekt, mit einem <xref:System.Windows.Media.DrawingBrush>, oder verwenden Sie <xref:System.Windows.Media.Visual> Objekte.  
@@ -23,25 +23,25 @@ In diesem Thema werden <xref:System.Windows.Media.Drawing> Objekte und beschreib
 ## <a name="what-is-a-drawing-object"></a>Was ist ein Zeichnungsobjekt?  
  Ein <xref:System.Windows.Media.Drawing> -Objekt beschreibt sichtbaren Inhalt, z. B. eine Form, Bitmap, Video oder eine Textzeile. Verschiedene Arten von Zeichnungen beschreiben verschiedene Arten von Inhalten. Im Folgenden finden Sie eine Liste der unterschiedlichen Typen von Zeichnungsobjekten.  
   
--   <xref:System.Windows.Media.GeometryDrawing> – Zeichnet eine Form.  
+- <xref:System.Windows.Media.GeometryDrawing> – Zeichnet eine Form.  
   
--   <xref:System.Windows.Media.ImageDrawing> – Zeichnet ein Bild.  
+- <xref:System.Windows.Media.ImageDrawing> – Zeichnet ein Bild.  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – Zeichnet Text.  
+- <xref:System.Windows.Media.GlyphRunDrawing> – Zeichnet Text.  
   
--   <xref:System.Windows.Media.VideoDrawing> – Gibt eine Audio- oder Videodatei.  
+- <xref:System.Windows.Media.VideoDrawing> – Gibt eine Audio- oder Videodatei.  
   
--   <xref:System.Windows.Media.DrawingGroup> – Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
+- <xref:System.Windows.Media.DrawingGroup> – Zeichnet andere Zeichnungen. Verwenden Sie eine Zeichnungsgruppe, um andere Zeichnungen in einer zusammengesetzten Zeichnung zu kombinieren.  
   
  <xref:System.Windows.Media.Drawing> -Objekte sind vielseitig. Es gibt viele Möglichkeiten, Sie können, eine <xref:System.Windows.Media.Drawing> Objekt.  
   
--   Sie können es als Bild anzeigen, indem Sie mit einem <xref:System.Windows.Media.DrawingImage> und <xref:System.Windows.Controls.Image> Steuerelement.  
+- Sie können es als Bild anzeigen, indem Sie mit einem <xref:System.Windows.Media.DrawingImage> und <xref:System.Windows.Controls.Image> Steuerelement.  
   
--   Können Sie sie mit einer <xref:System.Windows.Media.DrawingBrush> auf ein Objekt zu zeichnen, z. B. die <xref:System.Windows.Controls.Page.Background%2A> von einer <xref:System.Windows.Controls.Page>.  
+- Können Sie sie mit einer <xref:System.Windows.Media.DrawingBrush> auf ein Objekt zu zeichnen, z. B. die <xref:System.Windows.Controls.Page.Background%2A> von einer <xref:System.Windows.Controls.Page>.  
   
--   Sie können sie die Darstellung der beschreiben eine <xref:System.Windows.Media.DrawingVisual>.  
+- Sie können sie die Darstellung der beschreiben eine <xref:System.Windows.Media.DrawingVisual>.  
   
--   Sie können es verwenden, um den Inhalt der aufzulisten eine <xref:System.Windows.Media.Visual>.  
+- Sie können es verwenden, um den Inhalt der aufzulisten eine <xref:System.Windows.Media.Visual>.  
   
  WPF bietet andere Arten von Objekten, zeichnen Formen, Bitmaps, Text und Medien. Angenommen, Sie können auch <xref:System.Windows.Shapes.Shape> Objekte zum Zeichnen von Formen, und die <xref:System.Windows.Controls.MediaElement> Steuerelement bietet eine weitere Möglichkeit zum Hinzufügen von Videos für Ihre Anwendung. Wann also sollten Sie verwenden <xref:System.Windows.Media.Drawing> Objekte? Wenn Sie Frameworkfeatures auf Frameworkebene Leistungsvorteile Opfern können oder Sie müssen <xref:System.Windows.Freezable> Funktionen. Da <xref:System.Windows.Media.Drawing> Objekte unterstützen keine [Layout](../advanced/layout.md), Eingabe und Fokus, bieten sie Leistungsvorteile, die sie sich hervorragend zum Beschreiben von Hintergründen, ClipArt und zum Zeichnen auf niedriger Ebene mit machen <xref:System.Windows.Media.Visual> Objekte.  
   
@@ -94,27 +94,27 @@ Eine ImageDrawing mit den Maßen 100 x 100
   
  Zum Abspielen von Medien ohne das Erstellen einer eigenen <xref:System.Windows.Media.MediaTimeline>, Sie die folgenden Schritte ausführen.  
   
-1.  Erstellen eines <xref:System.Windows.Media.MediaPlayer>-Objekts  
+1. Erstellen eines <xref:System.Windows.Media.MediaPlayer>-Objekts  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
-2.  Verwenden der <xref:System.Windows.Media.MediaPlayer.Open%2A> Methode zum Laden der Mediendatei.  
+2. Verwenden der <xref:System.Windows.Media.MediaPlayer.Open%2A> Methode zum Laden der Mediendatei.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline2)]  
   
-3.  Erstellen Sie eine <xref:System.Windows.Media.VideoDrawing>.  
+3. Erstellen Sie eine <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4.  Geben Sie die Größe und Position zum Zeichnen der Medien durch Festlegen der <xref:System.Windows.Media.VideoDrawing.Rect%2A> Eigenschaft der <xref:System.Windows.Media.VideoDrawing>.  
+4. Geben Sie die Größe und Position zum Zeichnen der Medien durch Festlegen der <xref:System.Windows.Media.VideoDrawing.Rect%2A> Eigenschaft der <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5.  Legen Sie die <xref:System.Windows.Media.VideoDrawing.Player%2A> Eigenschaft der <xref:System.Windows.Media.VideoDrawing> mit der <xref:System.Windows.Media.MediaPlayer> Sie erstellt haben.  
+5. Legen Sie die <xref:System.Windows.Media.VideoDrawing.Player%2A> Eigenschaft der <xref:System.Windows.Media.VideoDrawing> mit der <xref:System.Windows.Media.MediaPlayer> Sie erstellt haben.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6.  Verwenden der <xref:System.Windows.Media.MediaPlayer.Play%2A> Methode der <xref:System.Windows.Media.MediaPlayer> zum Starten der Wiedergabe von Medien.  
+6. Verwenden der <xref:System.Windows.Media.MediaPlayer.Play%2A> Methode der <xref:System.Windows.Media.MediaPlayer> zum Starten der Wiedergabe von Medien.  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
@@ -124,19 +124,19 @@ Eine ImageDrawing mit den Maßen 100 x 100
   
  Um zeitlich steuern die Medien zu erhalten, verwenden Sie eine <xref:System.Windows.Media.MediaTimeline> mit der <xref:System.Windows.Media.MediaPlayer> und <xref:System.Windows.Media.VideoDrawing> Objekte. Die <xref:System.Windows.Media.MediaTimeline> können Sie angeben, ob das Video wiederholt werden soll. Verwenden einer <xref:System.Windows.Media.MediaTimeline> mit einem <xref:System.Windows.Media.VideoDrawing>, Sie die folgenden Schritte ausführen:  
   
-1.  Deklarieren Sie die <xref:System.Windows.Media.MediaTimeline> und legen Sie die Zeitsteuerungsverhalten.  
+1. Deklarieren Sie die <xref:System.Windows.Media.MediaTimeline> und legen Sie die Zeitsteuerungsverhalten.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2.  Erstellen Sie eine <xref:System.Windows.Media.MediaClock> aus der <xref:System.Windows.Media.MediaTimeline>.  
+2. Erstellen Sie eine <xref:System.Windows.Media.MediaClock> aus der <xref:System.Windows.Media.MediaTimeline>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3.  Erstellen einer <xref:System.Windows.Media.MediaPlayer> und verwenden Sie die <xref:System.Windows.Media.MediaClock> Festlegen seiner <xref:System.Windows.Media.MediaPlayer.Clock%2A> Eigenschaft.  
+3. Erstellen einer <xref:System.Windows.Media.MediaPlayer> und verwenden Sie die <xref:System.Windows.Media.MediaClock> Festlegen seiner <xref:System.Windows.Media.MediaPlayer.Clock%2A> Eigenschaft.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4.  Erstellen einer <xref:System.Windows.Media.VideoDrawing> und weisen Sie die <xref:System.Windows.Media.MediaPlayer> auf die <xref:System.Windows.Media.VideoDrawing.Player%2A> Eigenschaft der <xref:System.Windows.Media.VideoDrawing>.  
+4. Erstellen einer <xref:System.Windows.Media.VideoDrawing> und weisen Sie die <xref:System.Windows.Media.MediaPlayer> auf die <xref:System.Windows.Media.VideoDrawing.Player%2A> Eigenschaft der <xref:System.Windows.Media.VideoDrawing>.  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   
@@ -237,8 +237,8 @@ Eine mit einem DrawingBrush verwendete GeometryDrawing
 - <xref:System.Windows.Media.DrawingGroup>
 - [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)
-- [Übersicht über die Geometrie](geometry-overview.md)
+- [Übersicht über Geometrien](geometry-overview.md)
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)
 - [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md)
-- [Gewusst wie-Themen](drawings-how-to-topics.md)
+- [Themen zu Vorgehensweisen](drawings-how-to-topics.md)

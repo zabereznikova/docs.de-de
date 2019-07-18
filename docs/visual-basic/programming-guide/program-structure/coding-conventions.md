@@ -6,68 +6,68 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: f73648888b28c349104a70e78c29eb208d438b78
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fe07b01cfa62d8d1cbc2e4a61cac814425af7da0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639835"
 ---
 # <a name="visual-basic-coding-conventions"></a>Codierungskonventionen in Visual Basic
 Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem Thema folgen. Wenn Sie dieselben Codierungskonventionen beachten, erhalten Sie möglicherweise folgende Vorteile:  
   
--   Der Code erhält eine konsistente Gestaltung, damit sich die Leser mehr auf den Inhalt und nicht auf das Layout konzentrieren.  
+- Der Code erhält eine konsistente Gestaltung, damit sich die Leser mehr auf den Inhalt und nicht auf das Layout konzentrieren.  
   
--   Leser verstehen den Code schneller, da sie Rückschlüsse aus früheren Erfahrungen ziehen können.  
+- Leser verstehen den Code schneller, da sie Rückschlüsse aus früheren Erfahrungen ziehen können.  
   
--   Sie können den Code kopieren, ändern und leichter pflegen.  
+- Sie können den Code kopieren, ändern und leichter pflegen.  
   
--   Sie können sicherstellen, dass der Code die "empfohlenen Vorgehensweisen" für Visual Basic berücksichtigt.  
+- Sie können sicherstellen, dass der Code die "empfohlenen Vorgehensweisen" für Visual Basic berücksichtigt.  
   
 ## <a name="naming-conventions"></a>Namenskonventionen  
   
--   Informationen zu Benennungsrichtlinien finden Sie unter [Benennungsrichtlinien für die](../../../standard/design-guidelines/naming-guidelines.md) Thema.  
+- Informationen zu Benennungsrichtlinien finden Sie unter [Benennungsrichtlinien für die](../../../standard/design-guidelines/naming-guidelines.md) Thema.  
   
--   Verwenden Sie nicht "My" oder "my" als Teil eines Variablennamens. Diese Vorgehensweise führt zu Verwechslungen mit den `My`-Objekten.  
+- Verwenden Sie nicht "My" oder "my" als Teil eines Variablennamens. Diese Vorgehensweise führt zu Verwechslungen mit den `My`-Objekten.  
   
--   Sie müssen die Namen von Objekten in automatisch generiertem Code nicht ändern, um sie an die Richtlinien anzupassen.  
+- Sie müssen die Namen von Objekten in automatisch generiertem Code nicht ändern, um sie an die Richtlinien anzupassen.  
   
 ## <a name="layout-conventions"></a>Layoutkonventionen  
   
--   Fügen Sie Registerkarten als Leerzeichen ein, und verwenden Sie intelligenten Einzug mit vier Leerzeichen.  
+- Fügen Sie Registerkarten als Leerzeichen ein, und verwenden Sie intelligenten Einzug mit vier Leerzeichen.  
   
--   Verwendung **Einrückung Einrückung des Codes** Neuformatieren von Code im Code-Editor. Weitere Informationen finden Sie unter [Optionen, Text-Editor, Standard (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+- Verwendung **Einrückung Einrückung des Codes** Neuformatieren von Code im Code-Editor. Weitere Informationen finden Sie unter [Optionen, Text-Editor, Standard (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
--   Verwenden Sie pro Zeile nur eine Anweisung. Verwenden Sie nicht das Visual Basic-Zeilentrennzeichen (:).  
+- Verwenden Sie pro Zeile nur eine Anweisung. Verwenden Sie nicht das Visual Basic-Zeilentrennzeichen (:).  
   
--   Vermeiden Sie, das explizite Zeilenfortsetzungszeichen "_" zugunsten der impliziten Zeilenfortsetzung, wenn die Sprache dies ermöglicht.  
+- Vermeiden Sie, das explizite Zeilenfortsetzungszeichen "_" zugunsten der impliziten Zeilenfortsetzung, wenn die Sprache dies ermöglicht.  
   
--   Verwenden Sie pro Zeile nur eine Deklaration.  
+- Verwenden Sie pro Zeile nur eine Deklaration.  
   
--   Wenn **Einrückung Einrückung des Codes** nicht Fortsetzungszeilen automatisch zum einrücken manuell Fortsetzung einen Tabstopp. In einer Liste werden jedoch die Elemente immer links ausgerichtet.  
+- Wenn **Einrückung Einrückung des Codes** nicht Fortsetzungszeilen automatisch zum einrücken manuell Fortsetzung einen Tabstopp. In einer Liste werden jedoch die Elemente immer links ausgerichtet.  
   
     ```  
     a As Integer,  
     b As Integer  
     ```  
   
--   Fügen Sie zwischen Methoden- und Eigenschaftendefinitionen mindestens eine Leerzeile ein.  
+- Fügen Sie zwischen Methoden- und Eigenschaftendefinitionen mindestens eine Leerzeile ein.  
   
 ## <a name="commenting-conventions"></a>Konventionen für Kommentare  
   
--   Fügen Sie den Kommentar in einer eigenen Zeile und nicht am Ende einer Codezeile ein.  
+- Fügen Sie den Kommentar in einer eigenen Zeile und nicht am Ende einer Codezeile ein.  
   
--   Beginnen Sie den Kommentartext mit einem Großbuchstaben, und beenden Sie ihn mit einem Punkt.  
+- Beginnen Sie den Kommentartext mit einem Großbuchstaben, und beenden Sie ihn mit einem Punkt.  
   
--   Fügen Sie ein Leerzeichen zwischen dem Kommentartrennzeichen (') und dem Kommentartext ein.  
+- Fügen Sie ein Leerzeichen zwischen dem Kommentartrennzeichen (') und dem Kommentartext ein.  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
--   Erstellen Sie keine formatierten Blöcke von Sternchen, die die Kommentare umgeben.  
+- Erstellen Sie keine formatierten Blöcke von Sternchen, die die Kommentare umgeben.  
   
 ## <a name="program-structure"></a>Programmstruktur  
   
--   Wenn Sie die `Main`-Methode verwenden, verwenden Sie das Standardkonstrukt für neue Konsolenanwendungen, und verwenden Sie `My` für Befehlszeilenargumente.  
+- Wenn Sie die `Main`-Methode verwenden, verwenden Sie das Standardkonstrukt für neue Konsolenanwendungen, und verwenden Sie `My` für Befehlszeilenargumente.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -75,11 +75,11 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 ### <a name="string-data-type"></a>String-Datentyp  
   
--   Verwenden Sie zum Verketten von Zeichenfolgen, ein kaufmännisches und-Zeichen (&).  
+- Verwenden Sie zum Verketten von Zeichenfolgen, ein kaufmännisches und-Zeichen (&).  
   
      [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
   
--   Verwenden Sie das <xref:System.Text.StringBuilder>-Objekt, um Zeichenfolgen in Schleifen anzuhängen.  
+- Verwenden Sie das <xref:System.Text.StringBuilder>-Objekt, um Zeichenfolgen in Schleifen anzuhängen.  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
@@ -90,11 +90,11 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 ### <a name="unsigned-data-type"></a>Datentyp ohne Vorzeichen  
   
--   Verwenden Sie `Integer` anstelle von Typen ohne Vorzeichen, wenn sie nicht notwendig sind.  
+- Verwenden Sie `Integer` anstelle von Typen ohne Vorzeichen, wenn sie nicht notwendig sind.  
   
 ### <a name="arrays"></a>Arrays  
   
--   Verwenden Sie die kurze Syntax, wenn Sie Arrays in der Deklarationszeile initialisieren. Sie können z. B. folgende Syntax verwenden.  
+- Verwenden Sie die kurze Syntax, wenn Sie Arrays in der Deklarationszeile initialisieren. Sie können z. B. folgende Syntax verwenden.  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
@@ -102,7 +102,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
--   Legen Sie den Arraybezeichner im Typ und nicht in der Variablen ab. Sie können z. B. folgende Syntax verwenden:  
+- Legen Sie den Arraybezeichner im Typ und nicht in der Variablen ab. Sie können z. B. folgende Syntax verwenden:  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
@@ -110,7 +110,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
--   Verwenden Sie die { }-Syntax, wenn Sie Arrays aus grundlegenden Datentypen deklarieren und initialisieren. Sie können z. B. folgende Syntax verwenden:  
+- Verwenden Sie die { }-Syntax, wenn Sie Arrays aus grundlegenden Datentypen deklarieren und initialisieren. Sie können z. B. folgende Syntax verwenden:  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
@@ -131,7 +131,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 ### <a name="new-keyword"></a>New-Schlüsselwort  
   
--   Verwenden Sie die kurze Instanziierung. Sie können z. B. folgende Syntax verwenden:  
+- Verwenden Sie die kurze Instanziierung. Sie können z. B. folgende Syntax verwenden:  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
@@ -139,25 +139,25 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
--   Verwenden Sie für neue Objekte Objektinitialisierer anstelle des parameterlosen Konstruktors:  
+- Verwenden Sie für neue Objekte Objektinitialisierer anstelle des parameterlosen Konstruktors:  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
 ### <a name="event-handling"></a>Ereignisbehandlung  
   
--   Verwenden Sie eher `Handles` als `AddHandler`:  
+- Verwenden Sie eher `Handles` als `AddHandler`:  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
--   Verwenden Sie `AddressOf`, und instanziieren Sie den Delegaten nicht explizit:  
+- Verwenden Sie `AddressOf`, und instanziieren Sie den Delegaten nicht explizit:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
--   Wenn Sie ein Ereignis definieren, verwenden Sie die kurze Syntax, und lassen Sie den Delegaten vom Compiler definieren:  
+- Wenn Sie ein Ereignis definieren, verwenden Sie die kurze Syntax, und lassen Sie den Delegaten vom Compiler definieren:  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
--   Überprüfen Sie nicht, ob ein Ereignis `Nothing` (NULL) ist, bevor Sie die `RaiseEvent`-Methode aufrufen. Die `RaiseEvent`-Methode führt vor dem Auslösen des Ereignisses eine Überprüfung auf den Wert `Nothing` durch.  
+- Überprüfen Sie nicht, ob ein Ereignis `Nothing` (NULL) ist, bevor Sie die `RaiseEvent`-Methode aufrufen. Die `RaiseEvent`-Methode führt vor dem Auslösen des Ereignisses eine Überprüfung auf den Wert `Nothing` durch.  
   
 ### <a name="using-shared-members"></a>Verwenden von Shared-Membern  
  Rufen Sie `Shared`-Member über den Klassennamen auf, nicht von einer Instanzvariablen aus.  
@@ -165,43 +165,43 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
 ### <a name="use-xml-literals"></a>Verwenden von XML-Literalen  
  XML-Literale vereinfachen allgemeine Aufgaben bei der Arbeit mit XML (z. B. Laden, Abfragen und Transformieren). Beachten Sie bei der Entwicklung mit XML die folgenden Richtlinien:  
   
--   Verwenden Sie zum Erstellen von XML-Dokumenten und –Fragmenten XML-Literale, anstatt die XML-APIs direkt aufzurufen.  
+- Verwenden Sie zum Erstellen von XML-Dokumenten und –Fragmenten XML-Literale, anstatt die XML-APIs direkt aufzurufen.  
   
--   Importieren Sie XML-Namespaces auf Datei- oder Projektebene, um die Leistungsoptimierung für XML-Literale zu verwenden.  
+- Importieren Sie XML-Namespaces auf Datei- oder Projektebene, um die Leistungsoptimierung für XML-Literale zu verwenden.  
   
--   Verwenden Sie die XML-Achseneigenschaften, um auf Elemente und Attribute in einem XML-Dokument zuzugreifen.  
+- Verwenden Sie die XML-Achseneigenschaften, um auf Elemente und Attribute in einem XML-Dokument zuzugreifen.  
   
--   Verwenden Sie eingebettete Ausdrücke, um Werte einzuschließen und XML aus vorhandenen Werten zu erstellen, anstatt API-Aufrufe wie die `Add`-Methode zu nutzen:  
+- Verwenden Sie eingebettete Ausdrücke, um Werte einzuschließen und XML aus vorhandenen Werten zu erstellen, anstatt API-Aufrufe wie die `Add`-Methode zu nutzen:  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
 ### <a name="linq-queries"></a>LINQ-Abfragen  
   
--   Verwenden Sie aussagekräftige Namen für Abfragevariablen:  
+- Verwenden Sie aussagekräftige Namen für Abfragevariablen:  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
--   Geben Sie Aliasnamen für Elemente in einer Abfrage an, um eine korrekte Großschreibung von Eigenschaftennamen anonymer Typen in Pascal-Schreibweise sicherzustellen:  
+- Geben Sie Aliasnamen für Elemente in einer Abfrage an, um eine korrekte Großschreibung von Eigenschaftennamen anonymer Typen in Pascal-Schreibweise sicherzustellen:  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
--   Benennen Sie Eigenschaften um, wenn die Eigenschaftennamen im Ergebnis nicht eindeutig sind. Wenn die Abfrage beispielsweise einen Kundennamen und eine Auftrags-ID zurückgibt, sollten Sie diese im Ergebnis umbenennen, anstatt `Name` und `ID` zu übernehmen:  
+- Benennen Sie Eigenschaften um, wenn die Eigenschaftennamen im Ergebnis nicht eindeutig sind. Wenn die Abfrage beispielsweise einen Kundennamen und eine Auftrags-ID zurückgibt, sollten Sie diese im Ergebnis umbenennen, anstatt `Name` und `ID` zu übernehmen:  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
--   Verwenden Sie den Typrückschluss in der Deklaration von Abfragevariablen und Bereichsvariablen:  
+- Verwenden Sie den Typrückschluss in der Deklaration von Abfragevariablen und Bereichsvariablen:  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
--   Richten Sie Abfrageklauseln unter der `From`-Anweisung aus:  
+- Richten Sie Abfrageklauseln unter der `From`-Anweisung aus:  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
--   Verwenden Sie vor anderen Abfrageklauseln `Where`-Klauseln, sodass die nachfolgenden Abfrageklauseln für den reduzierten, gefilterten Datensatz ausgeführt werden:  
+- Verwenden Sie vor anderen Abfrageklauseln `Where`-Klauseln, sodass die nachfolgenden Abfrageklauseln für den reduzierten, gefilterten Datensatz ausgeführt werden:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
--   Verwenden Sie zum expliziten Definieren eines Verbindungsvorgangs die `Join`-Klausel anstelle der `Where`-Klausel, bei der ein Verbindungsvorgang implizit definiert wird:  
+- Verwenden Sie zum expliziten Definieren eines Verbindungsvorgangs die `Join`-Klausel anstelle der `Where`-Klausel, bei der ein Verbindungsvorgang implizit definiert wird:  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

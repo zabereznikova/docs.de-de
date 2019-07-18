@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Erstellen eines Dokuments mit Namespaces (LINQ to XML) (
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: b65d22451d900f7b20226f25b61bb235241dd84f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855516"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Vorgehensweise: Erstellen eines Dokuments mit Namespaces (LINQ to XML) (Visual Basic)
 In diesem Thema wird das Erstellen eines Dokuments mit Namespaces in Visual Basic beschrieben.  

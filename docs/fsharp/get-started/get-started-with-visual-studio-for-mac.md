@@ -2,12 +2,12 @@
 title: Erste Schritte mit F# in Visual Studio für Mac
 description: Erfahren Sie, wie F# in Visual Studio für Mac verwenden.
 ms.date: 07/03/2018
-ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949720"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Erste Schritte mit F# in Visual Studio für Mac
 
@@ -19,9 +19,9 @@ Eine der grundlegendsten Projekte in Visual Studio für Mac ist die Konsolenanwe
 
 1. Auf der **Datei** Startmenü **neue Projektmappe**.
 
-2.  Klicken Sie im Dialogfeld "Neues Projekt" gibt es unterschiedliche 2-Vorlagen für die Konsolenanwendung.  Es gibt einen anderen -> .NET und .NET Framework ausgerichtet ist.  Die andere Vorlage befindet sich unter .NET Core >, das auf .NET Core-App.  Entweder Vorlage sollte im Rahmen dieses Artikels funktionieren.
+2. Klicken Sie im Dialogfeld "Neues Projekt" gibt es unterschiedliche 2-Vorlagen für die Konsolenanwendung.  Es gibt einen anderen -> .NET und .NET Framework ausgerichtet ist.  Die andere Vorlage befindet sich unter .NET Core >, das auf .NET Core-App.  Entweder Vorlage sollte im Rahmen dieses Artikels funktionieren.
 
-3. Unter Konsolen-app c#, F# bei Bedarf ändern.  Wählen Sie die **Weiter** Schaltfläche, um den Vorgang fortzusetzen.  
+3. Unter Konsolen-app C#, F# bei Bedarf ändern.  Wählen Sie die **Weiter** Schaltfläche, um den Vorgang fortzusetzen.  
 
 4. Geben Sie Ihrem Projekt einen Namen ein, und wählen Sie die Optionen, die Sie für die app verwenden möchten.  Beachten Sie, dass im Vorschaufenster auf der Seite des Bildschirms, der die Verzeichnisstruktur angezeigt wird, die erstellt werden, basierend auf den ausgewählten Optionen.  
 

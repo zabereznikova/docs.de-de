@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 311f4c025072162e0cfb6b87587f8602d33fcd19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646869"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Zugriff des freigegebenen Members, konstanten Members, Enumerationsmembers oder geschachtelten Typs über eine Instanz; der qualifizierende Ausdruck wird nicht ausgewertet
 Eine Instanzvariable für eine Klasse oder Struktur wird verwendet, für den Zugriff auf eine `Shared` Variable, Eigenschaft, Prozedur oder das Ereignis in dieser Klasse oder Struktur definiert. Diese Warnung kann auch auftreten, wenn eine Instanzvariable Zugriff auf eine implizit freigegebenen Member einer Klasse oder Struktur, z. B. eine Konstante oder -Enumeration oder eine geschachtelte Klasse oder Struktur verwendet wird.  
@@ -29,7 +29,7 @@ Eine Instanzvariable für eine Klasse oder Struktur wird verwendet, für den Zug
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Verwenden Sie den Namen der Klasse oder Struktur, die definiert die `Shared` Member darauf zugreifen, wie im folgenden Beispiel gezeigt.  
+- Verwenden Sie den Namen der Klasse oder Struktur, die definiert die `Shared` Member darauf zugreifen, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 Public Class testClass  

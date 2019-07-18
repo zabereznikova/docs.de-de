@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7024140ed9b870b5db38dba7e9b13321dd37386a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ae518e5a736a78a261dc3821d53d93afee95a271
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157585"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779996"
 ---
 # <a name="cornativelink-structure"></a>COR_NATIVE_LINK-Struktur
 Enthält Informationen, die zum Verknüpfen von nativem Code verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct   
 {  
     BYTE        m_linkType;  

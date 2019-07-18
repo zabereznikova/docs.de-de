@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
 ms.openlocfilehash: b5376085dc36549cd2d3d72835ec291454124267
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921705"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>Vorgehensweise: Zeichnen eines Bereichs mit einem visuellen Element
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.VisualBrush> -Klasse zum Zeichnen eines Bereichs mit einem <xref:System.Windows.Media.Visual>.  

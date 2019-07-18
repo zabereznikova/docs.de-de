@@ -1,13 +1,13 @@
 ---
-title: <claimTypeRequirements> Element
+title: <claimTypeRequirements>-Element
 ms.date: 03/30/2017
 ms.assetid: a26efe73-4bad-4731-8cad-27f00d54354b
 ms.openlocfilehash: 236ae880fff24f7ccbf5d6c9c03c0208d446688f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704400"
 ---
 # <a name="claimtyperequirements-element"></a>\<ClaimTypeRequirements >-Element
 Gibt eine Auflistung von erforderlichen Anspruchstypen an.  

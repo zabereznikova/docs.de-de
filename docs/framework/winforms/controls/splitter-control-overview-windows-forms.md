@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
 ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009707"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Übersicht über das Splitter-Steuerelement (Windows Forms)
 > [!IMPORTANT]
@@ -25,5 +25,5 @@ ms.locfileid: "59176409"
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
+- [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

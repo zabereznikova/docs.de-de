@@ -1,28 +1,28 @@
 ---
 title: Musterabgleich – Leitfaden für C#
 description: Erfahren Sie mehr über Musterabgleichausdrücke in C#.
-ms.date: 01/24/2017
+ms.date: 04/10/2019
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5ace3c4552184b848b90dee3516d549ca8fd5806
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61652025"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
 Muster testen, ob ein Wert eine bestimmte *Form* hat, und können Informationen vom Wert *extrahieren*, wenn er die entsprechende Form hat. Der Musterabgleich stellt eine kürzere Syntax für Algorithmen bereit, die Sie bereits verwenden. Sie erstellen bereits mithilfe vorhandener Syntax Musterabgleichalgorithmen. Sie schreiben `if`- oder `switch`-Anweisungen, die Werte testen. Wenn diese Anweisungen anschließend übereinstimmen, extrahieren und verwenden Sie die Informationen von diesem Wert. Die neuen Syntaxelemente sind Erweiterungen für Anweisungen, mit denen Sie bereits vertraut sind: `is` und `switch`. Diese neuen Erweiterungen kombinieren das Testen von Werten mit dem Extrahieren dieser Information.
 
-In diesem Thema wird die neue Syntax betrachtet, um Ihnen zu zeigen, wie dadurch ein lesbarer, kurzer Code ermöglicht wird. Ein Musterabgleich ermöglicht Idiome, bei denen Daten und der Code getrennt sind, im Gegensatz zu objektorientierten Entwürfen, bei denen Daten und die Methoden, die sie bearbeiten, eng gekoppelt sind.
+In diesem Artikel wird die neue Syntax betrachtet, um Ihnen zu zeigen, wie dadurch ein lesbarer, kurzer Code ermöglicht wird. Ein Musterabgleich ermöglicht Idiome, bei denen Daten und der Code getrennt sind, im Gegensatz zu objektorientierten Entwürfen, bei denen Daten und die Methoden, die sie bearbeiten, eng gekoppelt sind.
 
 Wir arbeiten mit Strukturen, die geometrische Formen mithilfe Musterabgleichanweisungen darstellen, um diese neuen Idiome zu veranschaulichen. Sie sind wahrscheinlich mit dem Erstellen von Klassenhierarchien und dem Erstellen [virtueller und überschriebener Methoden](methods.md#inherited) vertraut, um Objektverhalten anhand des Laufzeittyps des Objekts anzupassen.
 
 Diese Techniken sind nicht für Daten geeignet, die nicht in einer Klassenhierarchie strukturiert sind. Wenn Daten und Methoden getrennt sind, benötigen Sie andere Tools. Die neuen *Musterabgleichkonstrukte* ermöglichen eine saubere Syntax, um Daten zu untersuchen und anhand jeder Bedingung dieser Daten Steuerungsflüsse zu bearbeiten. Sie schreiben bereits `if`-Anweisungen und `switch`, die den Wert einer Variable testen. Sie schreiben `is`-Anweisungen, die einen Typ einer Variable testen. *Musterabgleich* fügt neue Funktionen zu diesen Anweisungen hinzu.
 
-In diesem Thema erstellen Sie eine Methode, die den Bereich der verschiedenen geometrischen Formen berechnet. Aber Sie tun dies, ohne auf objektorientierte Techniken zurückzugreifen und eine Klassenhierarchie für die verschiedenen Formen zu erstellen.
+In diesem Artikel erstellen Sie eine Methode, die den Bereich der verschiedenen geometrischen Formen berechnet. Aber Sie tun dies, ohne auf objektorientierte Techniken zurückzugreifen und eine Klassenhierarchie für die verschiedenen Formen zu erstellen.
 Sie verwenden stattdessen *Musterabgleich*.
-Während Sie dieses Beispiel bearbeiten, vergleichen Sie diesen Code damit, wie er als Objekthierarchie strukturiert wäre. Wenn die Klasse, die Sie abfragen und bearbeiten müssen, keine Klassenhierarchie ist, ermöglicht Musterabgleich sehr elegante Entwürfe.
+Während Sie dieses Beispiel bearbeiten, vergleichen Sie diesen Code damit, wie er als Objekthierarchie strukturiert wäre. Wenn die Klasse, die Sie abfragen und bearbeiten müssen, keine Klassenhierarchie ist, ermöglicht Musterabgleich elegante Entwürfe.
 
 Anstatt mit einer Definition einer abstrakten Form zu starten und verschiedene bestimmte Formklassen hinzuzufügen, beginnen wir mit einfachen reinen Datendefinitionen für jede der geometrischen Formen:
 
@@ -80,7 +80,7 @@ Jeder Typ wie `object` in diesem Beispiel kann verwendet werden. Die case-Ausdr�
 
 Solange sie auf konstante Werte beschränkt waren, konnte nicht mehr als eine `case`-Bezeichnung mit dem Wert des `switch`-Ausdrucks übereinstimmen. Verbinden Sie das mit der Regel, das jeder `switch`-Abschnitt nicht im nächsten Abschnitt fortfahren darf, und daraus folgt, dass die `switch`-Abschnitte in jeder Reihenfolge neu angeordnet werden konnten, ohne das Verhalten zu beeinflussen.
 Nun spielt die Reihenfolge von jedem Abschnitt mit verallgemeinerten `switch`-Ausdrücken eine Rolle. Die `switch`-Ausdrücke werden in der Reihenfolge ausgewertet, in der sie im Text auftreten. Die Ausführung wechselt zur ersten `switch`-Bezeichnung, die mit dem `switch`-Ausdruck übereinstimmt.  
-Beachten Sie, dass der `default`-case nur ausgeführt wird, wenn keine andere case-Bezeichnung übereinstimmt. Der `default`-case wird zuletzt bewertet, unabhängig von der Reihenfolge im Text. Wenn kein `default`-case existiert und keine anderen `case`-Ausdrücke übereinstimmen, wird die Ausführung an der Anweisung nach der `switch`-Anweisung fortgesetzt. Kein Code der `case`-Bezeichnungen wird ausgeführt.
+Der `default`-case wird nur ausgeführt, wenn keine andere case-Bezeichnung übereinstimmt. Der `default`-case wird zuletzt bewertet, unabhängig von der Reihenfolge im Text. Wenn kein `default`-case existiert und keine anderen `case`-Ausdrücke übereinstimmen, wird die Ausführung an der Anweisung nach der `switch`-Anweisung fortgesetzt. Kein Code der `case`-Bezeichnungen wird ausgeführt.
 
 ## <a name="when-clauses-in-case-expressions"></a>`when`-Klauseln in `case`-Ausdrücken
 
@@ -111,7 +111,7 @@ Der besondere Verhalten für das `null`-Muster ist interessant, weil die Konstan
 
 Mit der Einführung von `var` als Übereinstimmungsausdruck werden neue Regeln für den Musterabgleich eingeführt.
 
-Die erste Regel lautet, dass die `var`-Deklaration den normalen Typrückschlussregeln entspricht:  Der Typ wird als statischer Typ des switch-Ausdrucks abgeleitet. Dieser Regel entsprechend stimmt der Typ immer überein.
+Die erste Regel ist, dass die `var`-Deklaration den normalen Typinferenzregeln folgt: Der Typ wird als statischer Typ des Switch-Ausdrucks abgeleitet. Dieser Regel entsprechend stimmt der Typ immer überein.
 
 Die zweite Regel lautet, dass eine `var`-Deklaration keine NULL-Überprüfung umfasst, die in anderen Typmusterausdrücken enthalten ist. Dies bedeutet, dass die Variable NULL sein kann, und eine NULL-Überprüfung ist in diesem Fall erforderlich.
 
@@ -135,4 +135,3 @@ Dies ist ein Beispiel, bei dem Sie einen `var`-case-Ausdruck erwägen können, d
 Musterabgleich funktioniert mit jedem Datentyp. Sie erstellen Ausdrücke, die das Objekt untersuchen und Steuerungsflussentscheidungen anhand dieser Bedingungen treffen.
 
 Vergleichen Sie den Code in diesem Beispiel mit dem Entwurf, der aus dem Erstellen einer Klassenhierarchie für eine abstrakte `Shape` und spezifisch abgeleitete Formen folgen würde, von denen jede ihre eigene Implementierung einer virtuellen Methode hat, um den Bereich zu berechnen. Sie werden häufig feststellen, dass Musterabgleichausdrücke sehr nützlich sein können, wenn Sie mit Daten arbeiten und die Datenspeicherprobleme von den Verhaltensproblemen trennen möchten.
-

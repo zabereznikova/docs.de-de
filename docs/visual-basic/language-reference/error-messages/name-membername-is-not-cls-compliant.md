@@ -1,5 +1,5 @@
 ---
-title: Name "<membername>" ist nicht CLS-kompatibel.
+title: Name '<membername>' ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - bc40031
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2d89d3588b854c9e77445a9980530d8dd53c33c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824623"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592017"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>Namen \<Membername > ist nicht CLS-kompatibel.
 Eine Assembly ist als markiert `<CLSCompliant(True)>` aber zur Verfügung stellt ein Element mit einem Namen, die mit einem Unterstrich beginnt (`_`).  
@@ -29,9 +29,9 @@ Eine Assembly ist als markiert `<CLSCompliant(True)>` aber zur Verfügung stellt
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn Sie die Kontrolle über den Quellcode haben, ändern Sie den Namen des Members, damit er nicht mit einem Unterstrich beginnt.  
+- Wenn Sie die Kontrolle über den Quellcode haben, ändern Sie den Namen des Members, damit er nicht mit einem Unterstrich beginnt.  
   
--   Wenn Sie der Namen des Members unveränderte verbleiben müssen, entfernen Sie die <xref:System.CLSCompliantAttribute> aus seiner Definition oder kennzeichnen Sie ihn als `<CLSCompliant(False)>`. Sie können weiterhin markieren Sie die Assembly als `<CLSCompliant(True)>`.  
+- Wenn Sie der Namen des Members unveränderte verbleiben müssen, entfernen Sie die <xref:System.CLSCompliantAttribute> aus seiner Definition oder kennzeichnen Sie ihn als `<CLSCompliant(False)>`. Sie können weiterhin markieren Sie die Assembly als `<CLSCompliant(True)>`.  
   
 ## <a name="see-also"></a>Siehe auch
 

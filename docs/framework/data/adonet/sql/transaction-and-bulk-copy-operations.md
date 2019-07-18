@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: b05ff42fc79a8fc39b7ebe4969875dbadf0dab7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf40d0963c29209d4e8f7e4850f0c99b6702a6bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527730"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487627"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transaktionen und Massenkopiervorgänge
 Massenkopiervorgänge können als isolierte Vorgänge oder als Teil einer mehrstufigen Transaktion ausgeführt werden. Die Ausführung als Teil einer mehrstufigen Transaktion ermöglicht es Ihnen, innerhalb ein und derselben Transaktion mehr als einen Massenkopiervorgang sowie andere Datenbankoperationen (z. B. Einfüge-, Update- und Löschvorgänge) auszuführen, ohne dabei auf die Möglichkeit verzichten zu müssen, einen Commit oder einen Rollback für die gesamte Transaktion durchführen zu können.  
@@ -20,12 +20,12 @@ Massenkopiervorgänge können als isolierte Vorgänge oder als Teil einer mehrst
 ## <a name="performing-a-non-transacted-bulk-copy-operation"></a>Ausführen eines nicht transaktiven Massenkopiervorgangs  
  Die folgende Konsolenanwendung zeigt, was passiert, wenn während eines nicht transaktiven Massenkopiervorgangs ein Fehler auftritt.  
   
- Im Beispiel enthalten, die Quell- und Zieltabelle jeweils eine `Identity` Spalte mit dem Namen **"ProductID"**. Der Code bereitet zunächst die Zieltabelle vor, indem Löschen aller Zeilen aus, und klicken Sie dann eine einzelne Zeile einfügt, deren **"ProductID"** ist bekannt, in der Quelltabelle vorhanden sein. In der Standardeinstellung wird für jede hinzugefügte Zeile ein neuer Wert für die `Identity`-Spalte in der Zieltabelle generiert. In diesem Beispiel wird beim Öffnen der Verbindung eine Option festgelegt, durch die beim Massenladevorgang stattdessen die `Identity`-Werte aus der Quelltabelle verwendet werden.  
+ Im Beispiel enthalten, die Quell- und Zieltabelle jeweils eine `Identity` Spalte mit dem Namen **"ProductID"** . Der Code bereitet zunächst die Zieltabelle vor, indem Löschen aller Zeilen aus, und klicken Sie dann eine einzelne Zeile einfügt, deren **"ProductID"** ist bekannt, in der Quelltabelle vorhanden sein. In der Standardeinstellung wird für jede hinzugefügte Zeile ein neuer Wert für die `Identity`-Spalte in der Zieltabelle generiert. In diesem Beispiel wird beim Öffnen der Verbindung eine Option festgelegt, durch die beim Massenladevorgang stattdessen die `Identity`-Werte aus der Quelltabelle verwendet werden.  
   
  Der Massenkopiervorgang wird mit der Einstellung "10" für die <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A>-Eigenschaft ausgeführt. Wenn der Vorgang auf die ungültige Zeile stößt, wird eine Ausnahme ausgelöst. In diesem ersten Beispiel ist der Massenkopiervorgang nicht Teil einer Transaktion. Für alle bis zum Zeitpunkt des Fehlers kopierten Batches wird ein Commit ausgeführt. Für den Batch mit dem doppelten Schlüssel wird ein Rollback ausgeführt, und der Massenkopiervorgang wird vor der Verarbeitung weiterer Batches angehalten.  
   
 > [!NOTE]
->  In diesem Beispiel wird nicht ausgeführt werden, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Dieser Code wird bereitgestellt, um zu veranschaulichen die Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in der gleichen SQL Server-Instanz befinden, es ist einfacher und schneller eine [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+>  In diesem Beispiel wird nicht ausgeführt werden, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Dieser Code wird bereitgestellt, um zu veranschaulichen die Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in der gleichen SQL Server-Instanz befinden, es ist einfacher und schneller mit einer Transact-SQL`INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -41,7 +41,7 @@ Massenkopiervorgänge können als isolierte Vorgänge oder als Teil einer mehrst
  Die folgende Konsolenanwendung ähnelt mit einer Ausnahme dem vorherigen Beispiel: In diesem Beispiel verwaltet der Massenkopiervorgang eine eigene Transaktion. Für alle bis zum Zeitpunkt des Fehlers kopierten Batches wird ein Commit ausgeführt. Für den Batch mit dem doppelten Schlüssel wird ein Rollback ausgeführt, und der Massenkopiervorgang wird vor der Verarbeitung weiterer Batches angehalten.  
   
 > [!IMPORTANT]
->  In diesem Beispiel wird nicht ausgeführt werden, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Dieser Code wird bereitgestellt, um zu veranschaulichen die Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in der gleichen SQL Server-Instanz befinden, es ist einfacher und schneller eine [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+>  In diesem Beispiel wird nicht ausgeführt werden, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Dieser Code wird bereitgestellt, um zu veranschaulichen die Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in der gleichen SQL Server-Instanz befinden, es ist einfacher und schneller mit einer Transact-SQL`INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,11 +54,12 @@ Massenkopiervorgänge können als isolierte Vorgänge oder als Teil einer mehrst
  Die folgende Konsolenanwendung ähnelt der im vorherigen Beispiel, jedoch mit einem Unterschied: In diesem Beispiel ist der Massenkopiervorgang Teil einer größeren, externen Transaktion. Wenn der Fehler für einen Primärschlüsselkonflikt auftritt, wird ein Rollback für die gesamte Transaktion ausgeführt. In diesem Fall werden der Zieltabelle keine Zeilen hinzugefügt.  
   
 > [!IMPORTANT]
->  In diesem Beispiel wird nicht ausgeführt werden, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Dieser Code wird bereitgestellt, um zu veranschaulichen die Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in der gleichen SQL Server-Instanz befinden, es ist einfacher und schneller eine [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
+>  In diesem Beispiel wird nicht ausgeführt werden, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Dieser Code wird bereitgestellt, um zu veranschaulichen die Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn Quell-und Ziel in der gleichen SQL Server-Instanz befinden, es ist einfacher und schneller mit einer Transact-SQL`INSERT … SELECT` Anweisung, um die Daten zu kopieren.  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Massenkopiervorgänge in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

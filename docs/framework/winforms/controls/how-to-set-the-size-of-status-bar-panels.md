@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: c6c9d6570e9b5c2f6d4eee0262c3d90e29e4b493
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: efd3074aaf018e7226c484061cbacb2eac0be820
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013243"
 ---
 # <a name="how-to-set-the-size-of-status-bar-panels"></a>Vorgehensweise: Festlegen der Größe eines Statusleistenbereichs
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59131053"
   
 ### <a name="to-set-the-size-of-a-panel"></a>Die Größe eines Bereichs festgelegt  
   
-1.  Legen Sie in einer Prozedur die <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, und <xref:System.Windows.Forms.StatusBarPanel.Width%2A> Eigenschaften (oder eine beliebige Teilmenge darin) für die Statusleiste Bereiche, deren Index verwendet wird, die über übergeben die <xref:System.Windows.Forms.StatusBar.Panels%2A> Eigenschaft der <xref:System.Windows.Forms.StatusBarPanel> Auflistung.  
+1. Legen Sie in einer Prozedur die <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>, <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>, und <xref:System.Windows.Forms.StatusBarPanel.Width%2A> Eigenschaften (oder eine beliebige Teilmenge darin) für die Statusleiste Bereiche, deren Index verwendet wird, die über übergeben die <xref:System.Windows.Forms.StatusBar.Panels%2A> Eigenschaft der <xref:System.Windows.Forms.StatusBarPanel> Auflistung.  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -70,5 +70,5 @@ ms.locfileid: "59131053"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [Exemplarische Vorgehensweise: Aktualisieren von Statusleisteninformationen zur Laufzeit](walkthrough-updating-status-bar-information-at-run-time.md)
-- [Vorgehensweise: Bestimmen, auf welchen Bereich im StatusBar-Steuerelement in Windows Forms geklickt wurde](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Vorgehensweise: Bestimmen Sie, welchen Bereich im StatusBar-Steuerelement von Windows Forms geklickt wurde](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [Übersicht über das StatusBar-Steuerelement](statusbar-control-overview-windows-forms.md)

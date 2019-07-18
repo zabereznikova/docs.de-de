@@ -2,12 +2,12 @@
 title: Tupel
 description: Erfahren Sie mehr über die F# Tupel eine Gruppierung von unbenannter aber sortierter Werte möglicherweise von anderen Typen.
 ms.date: 05/16/2016
-ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 950451ad1672e0c9fc609773f1bc32fc13636ddb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611047"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645112"
 ---
 # <a name="tuples"></a>Tupel
 
@@ -88,7 +88,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interoperation mit c#-Tupel
 
-C# 7.0 eingeführt Tupel für die Sprache an.  Tupel in c# sind Strukturen und Strukturieren von Tupeln in F# entsprechen.  Wenn Sie mit c# zusammenarbeiten müssen, müssen Sie Strukturieren von Tupeln verwenden.
+C# 7.0 eingeführt Tupel für die Sprache an.  Tupel in C# sind Strukturen und Strukturieren von Tupeln in F# entsprechen.  Wenn Sie mit c# zusammenarbeiten müssen, müssen Sie Strukturieren von Tupeln verwenden.
 
 Dies ist ganz einfach.  Beispiel: Angenommen Sie, Sie verfügen über ein Tupel an eine C#-Klasse übergeben, und klicken Sie dann nutzen das Ergebnis, das auch ein Tupel ist:
 
@@ -126,7 +126,7 @@ Sie müssen Muster für ein Tupel übereinstimmen, und erstellen Sie das andere 
 
 Dieser Abschnitt erläutert die Form von Tupeln an, wenn sie kompiliert werden.  Die folgenden Informationen ist es nicht notwendig, zu lesen, wenn Sie .NET Framework 3.5 verwenden oder niedriger.
 
-Tupel werden in Objekte eines von mehreren generischen Typen, die alle benannten kompiliert `System.Tuple`, für die Stelligkeit oder die Anzahl der Typparameter überladen sind. Tuple-Typen werden in diesem Formular angezeigt, bei der Anzeige in einer anderen Sprache, z. B. c# oder Visual Basic, oder wenn Sie ein Tool verwenden, die F#-Konstrukte unbekannt ist. Die `Tuple` Typen in .NET Framework 4 eingeführt wurden. Wenn Sie eine frühere Version von .NET Framework Anzielen, verwendet der Compiler Versionen der [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) aus der Version 2.0 der F#-Kernbibliothek. Nur für Anwendungen, die auf der 2.0, 3.0 und 3.5 von .NET Framework-Versionen abzielen, werden die Typen in dieser Bibliothek verwendet. Weiterleiten von Typen wird verwendet, um sicherzustellen, dass binäre Kompatibilität zwischen .NET Framework 2.0 und .NET Framework 4 F# Komponenten.
+Tupel werden in Objekte eines von mehreren generischen Typen, die alle benannten kompiliert `System.Tuple`, für die Stelligkeit oder die Anzahl der Typparameter überladen sind. Tuple-Typen werden in diesem Formular angezeigt, bei der Anzeige in einer anderen Sprache, z. B. C# oder Visual Basic, oder wenn Sie ein Tool verwenden, die F#-Konstrukte unbekannt ist. Die `Tuple` Typen in .NET Framework 4 eingeführt wurden. Wenn Sie eine frühere Version von .NET Framework Anzielen, verwendet der Compiler Versionen der [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) aus der Version 2.0 der F#-Kernbibliothek. Nur für Anwendungen, die auf der 2.0, 3.0 und 3.5 von .NET Framework-Versionen abzielen, werden die Typen in dieser Bibliothek verwendet. Weiterleiten von Typen wird verwendet, um sicherzustellen, dass binäre Kompatibilität zwischen .NET Framework 2.0 und .NET Framework 4 F# Komponenten.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Kompilierte Form von Strukturieren von Tupeln
 

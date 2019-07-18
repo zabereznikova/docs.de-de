@@ -1,4 +1,12 @@
-### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a>Enumerable.Empty&lt;TResult&gt; gibt immer die zwischengespeicherte Instanz zurück
+---
+ms.openlocfilehash: c9efbefc2bce9e21f328680795e72b62bfcd5cbd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379687"
+---
+### <a name="enumerableemptytresult-always-returns-cached-instance"></a>Enumerable.Empty\<TResult> gibt immer die zwischengespeicherte Instanz zurück
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
-

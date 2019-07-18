@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-ms.openlocfilehash: af1ce858108785fa4dac6352c9e80531e86fbb23
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b8c67c2390df91c6a4af66e020365544e6bf369b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751630"
 ---
 # <a name="addressof-operand-must-be-the-name-of-a-method-without-parentheses"></a>Der AddressOf-Operand muss dem Namen einer Methode entsprechen (ohne Klammern).
 Der `AddressOf` -Operator erstellt eine Delegatinstanz einer Prozedur, die auf eine bestimmte Prozedur verweist. Die Syntax lautet wie folgt aus.  
@@ -25,9 +25,9 @@ Der `AddressOf` -Operator erstellt eine Delegatinstanz einer Prozedur, die auf e
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Entfernen Sie die Klammern um die folgenden Argument `AddressOf`.  
+1. Entfernen Sie die Klammern um die folgenden Argument `AddressOf`.  
   
-2.  Stellen Sie sicher, dass das Argument den Namen einer Methode ist.  
+2. Stellen Sie sicher, dass das Argument den Namen einer Methode ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

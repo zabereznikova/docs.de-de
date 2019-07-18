@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fff88c50dd2004d4491e050258ef760c033f6de5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161844"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622564"
 ---
 # <a name="custom-tracking"></a>Benutzerdefinierte Nachverfolgung
 Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Nachverfolgungskomponente erstellt und der Inhalt der Nachverfolgungsdaten in die Konsole geschrieben wird. Außerdem wird veranschaulicht, wie mit benutzerdefinierten Daten aufgefüllte <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte ausgegeben werden. Die konsolenbasierte Nachverfolgungskomponente filtert die vom Workflow ausgegebenen <xref:System.Activities.Tracking.TrackingRecord>-Objekte mit einem im Code erstellten Nachverfolgungsprofilobjekt.
@@ -18,7 +18,7 @@ Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Nachve
 |Komponente|Beschreibung|
 |---------------|-----------------|
 |Überwachungslaufzeit|Stellt die Infrastruktur bereit, um Überwachungsdatensätze auszugeben.|
-|Überwachungsteilnehmer|Verarbeitet die Nachverfolgungsdatensätze. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] umfasst einen Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
+|Überwachungsteilnehmer|Verarbeitet die Nachverfolgungsdatensätze. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wird mit einem Nachverfolgungsteilnehmer geliefert, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
 |Überwachungsprofil|Ein Filtermechanismus, der einem Überwachungsteilnehmer das Abonnieren einer Teilmenge der Überwachungsdatensätze ermöglicht, die von einer Workflowinstanz ausgegeben werden.|
 
  In der folgenden Tabelle sind die Überwachungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.
@@ -110,9 +110,9 @@ invoker.Extensions.Add(customTrackingParticipant);
 ### <a name="emitting-custom-tracking-records"></a>Ausgeben von benutzerdefinierten Nachverfolgungsdatensätzen
  In diesem Beispiel wird auch die Fähigkeit zur Ausgabe von <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekten aus einer benutzerdefinierten Workflowaktivität veranschaulicht:
 
--   Die <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte werden erstellt und mit benutzerdefinierten Daten aufgefüllt, die mit dem Datensatz ausgegeben werden sollen.
+- Die <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte werden erstellt und mit benutzerdefinierten Daten aufgefüllt, die mit dem Datensatz ausgegeben werden sollen.
 
--   Die <xref:System.Activities.Tracking.CustomTrackingRecord> wird durch Aufrufen der Nachverfolgungsmethode des ausgegeben, die <xref:System.Activities.ActivityContext>.
+- Die <xref:System.Activities.Tracking.CustomTrackingRecord> wird durch Aufrufen der Nachverfolgungsmethode des ausgegeben, die <xref:System.Activities.ActivityContext>.
 
  Im folgenden Beispiel wird veranschaulicht, wie <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte innerhalb einer benutzerdefinierten Aktivität ausgegeben werden.
 
@@ -133,11 +133,11 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1.  Öffnen Sie die Projektmappendatei "CustomTrackingSample.sln" mit Visual Studio 2010.
+1. Öffnen Sie die Projektmappendatei "CustomTrackingSample.sln" mit Visual Studio 2010.
 
-2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
 
-3.  Drücken Sie STRG+F5, um die Projektmappe auszuführen.
+3. Drücken Sie STRG+F5, um die Projektmappe auszuführen.
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

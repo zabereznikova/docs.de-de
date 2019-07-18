@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e6805dc67f7ec5ceb8c67d77462a0200b6c0317
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5b7540f166311bbc9e5efa21d136132cc72b7c12
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205905"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768736"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain-Methode
 Ruft die angegebene Methode des angegebenen Typs in der angegebenen verwalteten Assembly.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ExecuteInDefaultAppDomain (  
     [in] LPCWSTR pwzAssemblyPath,  
     [in] LPCWSTR pwzTypeName,   
@@ -69,7 +69,7 @@ HRESULT ExecuteInDefaultAppDomain (
 ## <a name="remarks"></a>Hinweise  
  Die aufgerufene Methode muss es sich um die folgende Signatur aufweisen:  
   
-```  
+```cpp  
 static int pwzMethodName (String pwzArgument)  
 ```  
   

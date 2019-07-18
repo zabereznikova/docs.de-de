@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fd80cb16466d95f443b098fe20f2d407ba2aed8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4b4a59d7ecdb88b6ca052b7ffef896b7471e3f43
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401728"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745241"
 ---
 # <a name="icordebugchaingetcontext-method"></a>ICorDebugChain::GetContext-Methode
 Diese Methode ist nicht in der aktuellen Version von .NET Framework implementiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetContext (  
     [out] ICorDebugContext   **ppContext  
 );  

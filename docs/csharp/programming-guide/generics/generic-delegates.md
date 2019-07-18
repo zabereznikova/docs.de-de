@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 2806eadd2d3f8a4c3e8f001b02b28d35a60daaec
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ff19b3d71858552158a8ae5d0ab362a86dc98e65
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970149"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423497"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>Generische Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) kann seine eigenen Typparameter definieren. Wie im folgenden Beispiel gezeigt, kann Code, der auf den generischen Delegaten verweist, das Typargument zum Erstellen eines geschlossenen konstruierten Typs angeben, genau wie wenn eine generische Klasse instanziiert oder eine generische Methode aufgerufen wird:  
@@ -38,7 +38,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) kann sein
 
 - <xref:System.Collections.Generic>
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Einführung in Generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Einführung in Generics](../../../csharp/programming-guide/generics/index.md)
 - [Generische Methoden](../../../csharp/programming-guide/generics/generic-methods.md)
 - [Generische Klassen](../../../csharp/programming-guide/generics/generic-classes.md)
 - [Generische Schnittstellen](../../../csharp/programming-guide/generics/generic-interfaces.md)

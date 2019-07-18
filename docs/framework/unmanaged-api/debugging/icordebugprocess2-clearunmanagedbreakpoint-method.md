@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4dcfb977f5ca87f2219fd3ed8ef87d16c2defd2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9fb566ff2e5e2b0bcb096cead243ed65a904a914
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472642"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736979"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint-Methode
 Entfernt einen zuvor festgelegten Haltepunkt an der angegebenen Adresse.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ClearUnmanagedBreakpoint (  
     [in] CORDB_ADDRESS   address  
 );  

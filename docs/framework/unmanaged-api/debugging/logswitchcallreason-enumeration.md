@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eadb595eb62b4f1a9dcc888225cbb7454119c7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 894f74f12de7ed0754dcca34eacb815efc33c766
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198490"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752573"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason-Enumeration
 Gibt den Vorgang an, der für einen Debug-/Ablaufverfolgungsschalter ausgeführt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum LogSwitchCallReason {  
     SWITCH_CREATE,  
     SWITCH_MODIFY,  
@@ -55,4 +55,4 @@ typedef enum LogSwitchCallReason {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

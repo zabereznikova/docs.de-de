@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 8cc94117cc26f44288835fd85c6ded429124d3c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ff5320fa5b4441ae3e0f414b274ab9118b77ec50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020243"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Vorgehensweise: Animieren einer Matrix mithilfe von Keyframes
 Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.MatrixTransform.Matrix%2A> Eigenschaft eine <xref:System.Windows.Media.MatrixTransform> mithilfe von Keyframes.  
@@ -21,11 +21,11 @@ Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.MatrixTr
   
  Diese Animation verwendet die <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> Klasse, um zwei Keyframes und wird mit ihnen Folgendes:  
   
-1.  Erstellt eine Animation die erste <xref:System.Windows.Media.Matrix> während der ersten 0,2 Sekunden. Die Beispiel-Änderungen der <xref:System.Windows.Media.Matrix.M11%2A> und <xref:System.Windows.Media.Matrix.M12%2A> Eigenschaften der <xref:System.Windows.Media.Matrix>. Diese Änderung bewirkt, dass die Schaltfläche zum Strecken und verzerrt werden. Im Beispiel ändert sich auch die <xref:System.Windows.Media.Matrix.OffsetX%2A> und <xref:System.Windows.Media.Matrix.OffsetY%2A> Eigenschaften so, dass die Position der Schaltfläche zu ändern.  
+1. Erstellt eine Animation die erste <xref:System.Windows.Media.Matrix> während der ersten 0,2 Sekunden. Die Beispiel-Änderungen der <xref:System.Windows.Media.Matrix.M11%2A> und <xref:System.Windows.Media.Matrix.M12%2A> Eigenschaften der <xref:System.Windows.Media.Matrix>. Diese Änderung bewirkt, dass die Schaltfläche zum Strecken und verzerrt werden. Im Beispiel ändert sich auch die <xref:System.Windows.Media.Matrix.OffsetX%2A> und <xref:System.Windows.Media.Matrix.OffsetY%2A> Eigenschaften so, dass die Position der Schaltfläche zu ändern.  
   
-2.  Die zweite animiert <xref:System.Windows.Media.Matrix> bei 1,0 Sekunden. Die Schaltfläche wird in eine andere Position verschoben, während die Schaltfläche nicht mehr verzerrt oder gestreckt wird.  
+2. Die zweite animiert <xref:System.Windows.Media.Matrix> bei 1,0 Sekunden. Die Schaltfläche wird in eine andere Position verschoben, während die Schaltfläche nicht mehr verzerrt oder gestreckt wird.  
   
-3.  Wird für die Animation endlos wiederholt.  
+3. Wird für die Animation endlos wiederholt.  
   
 > [!NOTE]
 >  Keyframes, die Ableiten der <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> objekterstellung abrupte Sprünge zwischen Werten, d. h. die Verschiebung der Animation ist ruckartig.  
@@ -39,4 +39,4 @@ Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.MatrixTr
 - <xref:System.Windows.Media.MatrixTransform.Matrix%2A>
 - <xref:System.Windows.Media.MatrixTransform>
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
-- [Themen zur Vorgehensweise mit Keyframes](key-frame-animation-how-to-topics.md)
+- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)

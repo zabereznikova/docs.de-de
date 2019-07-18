@@ -2,12 +2,12 @@
 title: NAVIGATE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: 993c07b824d30c89773c5cfea90c7c194c6b3869
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6ce88cecf210d8b3cf541fe7e870e19a59e344ec
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356876"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307334"
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 
@@ -35,7 +35,7 @@ Wenn die Kardinalität des "to"-Endes "1" beträgt, ist der Rückgabewert `Ref<T
 
 ## <a name="remarks"></a>Hinweise
 
-Beziehungen sind im [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM) Konstrukte der ersten Klasse. Beziehungen können zwischen zwei oder mehr Entitätstypen festgelegt werden, und Benutzer können über die Beziehung von einem Ende (Entität) zu einem anderen navigieren. `from` und `to` sind bedingt optional, wenn es keine Mehrdeutigkeit in der Namensauflösung innerhalb der Beziehung gibt.
+Beziehungen sind Konstrukte der ersten Klasse in der Entity Data Model (EDM). Beziehungen können zwischen zwei oder mehr Entitätstypen festgelegt werden, und Benutzer können über die Beziehung von einem Ende (Entität) zu einem anderen navigieren. `from` und `to` sind bedingt optional, wenn es keine Mehrdeutigkeit in der Namensauflösung innerhalb der Beziehung gibt.
 
 NAVIGATE ist im O- und im C-Raum gültig.
 
@@ -43,7 +43,7 @@ Ein Navigationskonstrukt hat die folgende allgemeine Form:
 
 navigate(`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ] ] )
 
-Beispiel:
+Zum Beispiel:
 
 ```sql
 Select o.Id, navigate(o, OrderCustomer, Customer, Order)

@@ -1,5 +1,5 @@
 ---
-title: <clear> -Element für AuthenticationModules (Netzwerkeinstellungen)
+title: <clear>-Element für authenticationModules (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674609"
 ---
 # <a name="clear-element-for-authenticationmodules-network-settings"></a>\<clear >-Element für AuthenticationModules (Netzwerkeinstellungen)
 Löscht alle Authentifizierungsmodule aus der Anwendung an.  
@@ -69,4 +69,4 @@ Löscht alle Authentifizierungsmodule aus der Anwendung an.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

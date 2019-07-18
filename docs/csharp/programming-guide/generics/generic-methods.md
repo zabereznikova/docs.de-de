@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 8d64f14f635a50afd8356dedfe16f8897fc77f98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 443d4367cc64eb7f9054b2cd52bef59e589f55b3
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978058"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170259"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Generische Methoden (C#-Programmierhandbuch)
 Bei einer generischen Methode handelt es sich um eine mit Typparametern deklarierte Methode, wie folgt:  
@@ -31,7 +31,7 @@ Bei einer generischen Methode handelt es sich um eine mit Typparametern deklarie
   
  [!code-csharp[csProgGuideGenerics#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#25)]  
   
- Wenn eine generische Methode definiert wird, die die gleichen Typparameter wie die übergeordnete Klasse verwendet, gibt der Compiler die Warnung CS0693 aus, weil innerhalb des Gültigkeitsbereichs der Methode das Argument für das äußere `T` durch das Argument für das innere `T` ausgeblendet wird. Falls Sie die Flexibilität benötigen, eine generische Klassenmethode mit anderen als den bei der Instanziierung der Klasse bereitgestellten Typargumenten aufrufen zu können, sollten Sie einen anderen Bezeichner für den Typparameter der Methode erwägen, wie in `GenericList2<T>` im folgenden Beispiel dargestellt.  
+ Wenn eine generische Methode definiert wird, die die gleichen Typparameter wie die übergeordnete Klasse akzeptiert, gibt der Compiler die Warnung [CS0693](../../misc/cs0693.md) aus, weil innerhalb des Gültigkeitsbereichs der Methode das Argument für das innere `T` das Argument für das innere `T` verdeckt. Falls Sie die Flexibilität benötigen, eine generische Klassenmethode mit anderen als den bei der Instanziierung der Klasse bereitgestellten Typargumenten aufrufen zu können, sollten Sie einen anderen Bezeichner für den Typparameter der Methode erwägen, wie in `GenericList2<T>` im folgenden Beispiel dargestellt.  
   
  [!code-csharp[csProgGuideGenerics#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#26)]  
   
@@ -50,5 +50,5 @@ Bei einer generischen Methode handelt es sich um eine mit Typparametern deklarie
 
 - <xref:System.Collections.Generic>
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Einführung in Generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Einführung in Generics](../../../csharp/programming-guide/generics/index.md)
 - [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)

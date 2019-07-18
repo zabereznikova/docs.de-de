@@ -2,12 +2,12 @@
 title: Ereignisse
 description: Erfahren Sie, wie F# Ereignisse ermöglichen, die in der GUI-Programmierung wichtig sind Benutzeraktionen Funktionsaufrufe zugeordnet werden soll.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad2e8001b81f48fdeb783bee2423a3dc9e22ac79
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227001"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645223"
 ---
 # <a name="events"></a>Ereignisse
 
@@ -174,9 +174,9 @@ Application.Run(appForm)
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Member](index.md)
+- [Mitglieder](index.md)
 - [Behandeln und Auslösen von Ereignissen](../../../../docs/standard/events/index.md)
-- [Lambda-Ausdrücke: Die `fun` Schlüsselwort](../functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda-Ausdrücke: Das `fun`-Schlüsselwort](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event-Modul](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;t&#62; Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control.Event&#60;'Delegate,'Args&#62; Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

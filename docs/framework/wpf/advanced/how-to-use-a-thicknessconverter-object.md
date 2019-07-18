@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
 ms.openlocfilehash: ebfb8642a01f6d602f4e5ffa58fde6a8ee0b4e1f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001480"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>Vorgehensweise: Verwenden eines ThicknessConverter-Objekts
 ## <a name="example"></a>Beispiel  

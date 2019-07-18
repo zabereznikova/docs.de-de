@@ -2,12 +2,12 @@
 title: Dienstendpunkte und Adressieren von Warteschlangen
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b31c000fa15b2651a965deff0b4deecf681b992b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172522"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586176"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Dienstendpunkte und Adressieren von Warteschlangen
 In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus Warteschlangen auslesen, und wie Dienstendpunkte Warteschlangen zugeordnet werden. Die folgende Abbildung zeigt, dass Windows Communication Foundation (WCF) die Bereitstellung einer Anwendung in der Warteschlange zur Erinnerung: dem klassischen Bereitstellungsmodell.  
@@ -34,11 +34,11 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
   
  Dabei gilt:  
   
--   \<*Hostname*> ist der Name des Computers, der die Zielwarteschlange hostet.  
+- \<*Hostname*> ist der Name des Computers, der die Zielwarteschlange hostet.  
   
--   [privat] ist optional. Dies wird verwendet, wenn eine Zielwarteschlange adressiert wird, bei der es sich um eine private Warteschlange handelt. Um eine öffentliche Warteschlange zu adressieren, dürfen Sie nicht "privat" angeben. Beachten Sie, dass im Gegensatz zu MSMQ-Pfaden, gibt es kein "$" in der WCF-URI-Format.  
+- [privat] ist optional. Dies wird verwendet, wenn eine Zielwarteschlange adressiert wird, bei der es sich um eine private Warteschlange handelt. Um eine öffentliche Warteschlange zu adressieren, dürfen Sie nicht "privat" angeben. Beachten Sie, dass im Gegensatz zu MSMQ-Pfaden, gibt es kein "$" in der WCF-URI-Format.  
   
--   \<*Warteschlangenname*> ist der Name der Warteschlange. Der Warteschlangenname kann auch auf eine Unterwarteschlange verweisen. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
+- \<*Warteschlangenname*> ist der Name der Warteschlange. Der Warteschlangenname kann auch auf eine Unterwarteschlange verweisen. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
   
  Beispiel 1: Zum Beheben einer privaten Warteschlange PurchaseOrders, die auf dem Computer Abc atadatum.com gehostet wird, würde der URI Net. MSMQ://abc.adatum.com/private/purchaseorders.  
   
@@ -51,9 +51,9 @@ In diesem Thema wird erläutert, wie Clients Dienste adressieren, die Daten aus 
 ### <a name="multiple-contracts-in-a-queue"></a>Mehrere Verträge in einer Warteschlange  
  Nachrichten in einer Warteschlange können verschiedene Verträge implementieren. In diesem Fall muss eines der folgenden Szenarien zutreffen, um alle Nachrichten erfolgreich lesen und verarbeiten zu können:  
   
--   Geben Sie einen Endpunkt für einen Dienst an, der alle Verträge implementiert. Dies ist die empfohlene Vorgehensweise.  
+- Geben Sie einen Endpunkt für einen Dienst an, der alle Verträge implementiert. Dies ist die empfohlene Vorgehensweise.  
   
--   Geben Sie mehrere Endpunkte mit verschiedenen Verträgen an, stellen Sie jedoch sicher, dass alle Endpunkte das gleiche `NetMsmqBinding`-Objekt verwenden. Die Dispatchlogik in ServiceModel verwendet ein Nachrichtensystem, das Nachrichten aus dem Transportkanal für den Dispatch ausliest, der schließlich für die Nachrichten auf der Grundlage des Vertrags ein De-Multiplexing mit anderen Endpunkten ausführt. Es wird ein Nachrichtensystem für ein Abhör-URI-/Bindungspaar erstellt. Die Warteschlangenadresse wird von dem Warteschlangenlistener als Abhör-URI verwendet. Da alle Endpunkte dasselbe Bindungsobjekt verwenden, wird sichergestellt, dass ein einziges Nachrichtensystem zum Lesen der Nachricht und zum Ausführen von De-Multiplexing für relevante Endpunkte auf der Grundlage des Vertrags verwendet wird.  
+- Geben Sie mehrere Endpunkte mit verschiedenen Verträgen an, stellen Sie jedoch sicher, dass alle Endpunkte das gleiche `NetMsmqBinding`-Objekt verwenden. Die Dispatchlogik in ServiceModel verwendet ein Nachrichtensystem, das Nachrichten aus dem Transportkanal für den Dispatch ausliest, der schließlich für die Nachrichten auf der Grundlage des Vertrags ein De-Multiplexing mit anderen Endpunkten ausführt. Es wird ein Nachrichtensystem für ein Abhör-URI-/Bindungspaar erstellt. Die Warteschlangenadresse wird von dem Warteschlangenlistener als Abhör-URI verwendet. Da alle Endpunkte dasselbe Bindungsobjekt verwenden, wird sichergestellt, dass ein einziges Nachrichtensystem zum Lesen der Nachricht und zum Ausführen von De-Multiplexing für relevante Endpunkte auf der Grundlage des Vertrags verwendet wird.  
   
 ### <a name="srmp-messaging"></a>SRMP-Messaging  
  Wie zuvor erläutert, können Sie das SRMP-Protokoll für Übertragungen zwischen Warteschlangen einsetzen. Dies wird häufig angewendet, wenn ein HTTP-Transport Nachrichten zwischen der Übertragungswarteschlange und der Zielwarteschlange sendet.  

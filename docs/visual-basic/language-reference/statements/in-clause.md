@@ -7,11 +7,11 @@ helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
 ms.openlocfilehash: 6826489970137605bf2b07f88b5a64f2ec6bfc2e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638284"
 ---
 # <a name="in-clause-visual-basic"></a>In-Klausel (Visual Basic)
 Gibt die Gruppe, die die Schleifenvariable in Durchlaufen einer `For Each` Schleife aus, oder gibt die Auflistung in der Abfrage eine `From`, `Join`, oder `Group Join` Klausel.  

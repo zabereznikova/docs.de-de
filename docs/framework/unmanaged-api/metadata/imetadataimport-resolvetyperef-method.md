@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f929e6b338d4fd48b2a6ef9588523377e0dd8faa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096061"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755369"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef-Methode
 Löst eine <xref:System.Type> Verweis durch das angegebene TypeRef-Token dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ResolveTypeRef (  
    [in]  mdTypeRef       tr,  
    [in]  REFIID          riid,  

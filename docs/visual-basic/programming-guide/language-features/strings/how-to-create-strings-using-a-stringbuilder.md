@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], using StringBuilder
 ms.assetid: 9c042880-aa16-432e-9ccb-cd00abda9ae3
 ms.openlocfilehash: 00fefcc138164288d872cd339f165dc6ffc0131a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032123"
 ---
 # <a name="how-to-create-strings-using-a-stringbuilder-in-visual-basic"></a>Vorgehensweise: Erstellen von Zeichenfolgen mit StringBuilder in Visual Basic
 In diesem Beispiel erstellt eine lange Zeichenfolge aus vielen kleineren Zeichenfolgen, die mit der <xref:System.Text.StringBuilder> Klasse. Die <xref:System.Text.StringBuilder> Klasse ist effizienter als die `&=` Operators für viele Zeichenfolgen verketten.  

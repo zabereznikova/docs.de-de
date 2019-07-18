@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0bb7293a5423004a13cf98b79bba0a6c411a7c97
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210687"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505513"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Vorgehensweise: Erstellen einer privaten Schriftartenauflistung
 Die <xref:System.Drawing.Text.PrivateFontCollection> Klasse erbt von der <xref:System.Drawing.Text.FontCollection> abstrakte Basisklasse. Sie können eine <xref:System.Drawing.Text.PrivateFontCollection> Objekt, das einen Satz von Schriftarten, die speziell für Ihre Anwendung zu verwalten. Installierte Systemschriftarten sowie Schriftarten, die nicht auf dem Computer installiert wurden, kann eine privaten schriftartenauflistung enthalten. Rufen Sie zum Hinzufügen einer Schriftartdatei zu einer privaten schriftartenauflistung der <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> Methode eine <xref:System.Drawing.Text.PrivateFontCollection> Objekt.  
@@ -25,11 +25,11 @@ Die <xref:System.Drawing.Text.PrivateFontCollection> Klasse erbt von der <xref:S
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel fügt die folgenden drei Schriftartdateien in einem <xref:System.Drawing.Text.PrivateFontCollection> Objekt:  
   
--   "C:"\\*Systemroot*\Fonts\Arial.tff (Arial, reguläre)  
+- "C:"\\*Systemroot*\Fonts\Arial.tff (Arial, reguläre)  
   
--   "C:"\\*Systemroot*\Fonts\CourBI.tff (Courier New, fett, kursiv)  
+- "C:"\\*Systemroot*\Fonts\CourBI.tff (Courier New, fett, kursiv)  
   
--   "C:"\\*Systemroot*\Fonts\TimesBd.tff (Times New Roman fett formatiert)  
+- "C:"\\*Systemroot*\Fonts\TimesBd.tff (Times New Roman fett formatiert)  
   
  Der Code Ruft ein Array von <xref:System.Drawing.FontFamily> Objekte aus der <xref:System.Drawing.Text.FontCollection.Families%2A> Eigenschaft der <xref:System.Drawing.Text.PrivateFontCollection> Objekt.  
   
@@ -41,9 +41,9 @@ Die <xref:System.Drawing.Text.PrivateFontCollection> Klasse erbt von der <xref:S
   
  ![Screenshot mit Text in verschiedenen Schriftarten.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
- Arial.tff (die im folgenden Codebeispiel wird der private Schriftart-Auflistung hinzugefügt wurde) ist die Schriftart für Arial Schriftschnitt. Beachten Sie jedoch, dass das Programm mehrere verfügbaren Formate als reguläre für die Familie der Schriftart Arial verwendet wird. Der Grund dafür ist [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können die fett, kursiv und Fett Kursiv Stile vom Schriftschnitt simuliert werden. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kann außerdem unterstrichen und durchgestrichen normal vom Schriftschnitt erstellen.  
+ Arial.tff (die im folgenden Codebeispiel wird der private Schriftart-Auflistung hinzugefügt wurde) ist die Schriftart für Arial Schriftschnitt. Beachten Sie jedoch, dass das Programm mehrere verfügbaren Formate als reguläre für die Familie der Schriftart Arial verwendet wird. Dies liegt daran GDI + die fett, kursiv und Fett Kursiv Stile vom Schriftschnitt simulieren kann. GDI + kann außerdem unterstrichen und durchgestrichen normal vom Schriftschnitt erstellen.  
   
- Auf ähnliche Weise [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können fett kursive Formatierung aus der fettformatierung oder kursive simulieren. Die Programmausgabe zeigt, dass die fett formatierten kursive Formatierung für die Zeiten-Familie verfügbar ist, auch wenn TimesBd.tff (Times New Roman fett formatiert) die einzige ist Times-Datei in der Auflistung.  
+ Auf ähnliche Weise können GDI + fettformatierung kursive Formatierung aus der fettformatierung oder kursive simulieren. Die Programmausgabe zeigt, dass die fett formatierten kursive Formatierung für die Zeiten-Familie verfügbar ist, auch wenn TimesBd.tff (Times New Roman fett formatiert) die einzige ist Times-Datei in der Auflistung.  
   
  [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  

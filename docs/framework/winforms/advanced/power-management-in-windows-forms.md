@@ -8,17 +8,17 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 36c152a9e388fe61b1c82a8783bf74bbe6c8f123
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154673"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592518"
 ---
 # <a name="power-management-in-windows-forms"></a>Energieverwaltung in Windows Forms
 Ihrer Windows Forms-Anwendungen können die Energieverwaltungsfunktionen im Windows-Betriebssystem nutzen. Ihre Anwendungen können den Status eines Computers überwachen und Maßnahmen ergreifen, wenn eine Änderung des. Beispielsweise wenn Ihre Anwendung auf einem tragbaren Computer ausgeführt wird, empfiehlt, deaktivieren bestimmte Features in Ihrer Anwendung aus, wenn der Ladezustand des Akkus unter ein bestimmtes Niveau fällt.  
   
- Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bietet eine <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> Ereignis tritt auf, wenn eine im Energiestatus Änderung, z. B. wenn ein Benutzer angehalten oder fortgesetzt wird das Betriebssystem oder wenn der Status des AC oder Akkustatus ändert. Die <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> Eigenschaft der <xref:System.Windows.Forms.SystemInformation> Klasse kann Folgendes sein verwendet, um die Abfrage für den aktuellen Status, wie im folgenden Codebeispiel gezeigt.  
+ .NET Framework bietet eine <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> Ereignis tritt auf, wenn eine im Energiestatus Änderung, z. B. wenn ein Benutzer angehalten oder fortgesetzt wird das Betriebssystem oder wenn der Status des AC oder Akkustatus ändert. Die <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A> Eigenschaft der <xref:System.Windows.Forms.SystemInformation> Klasse kann Folgendes sein verwendet, um die Abfrage für den aktuellen Status, wie im folgenden Codebeispiel gezeigt.  
   
  [!code-csharp[PowerMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#1)]
  [!code-vb[PowerMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#1)]  

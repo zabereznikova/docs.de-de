@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191327"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662147"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Bekannte Probleme von und Überlegungen zu LINQ to Entities
-Dieser Abschnitt enthält Informationen zu bekannten Problemen bei [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen.  
+Dieser Abschnitt enthält Informationen zu bekannten Problemen mit LINQ to Entities-Abfragen.  
   
--   [LINQ-Abfragen, die nicht zwischengespeichert werden können](#LINQQueriesThatAreNotCached)  
+- [LINQ-Abfragen, können nicht zwischengespeichert werden](#LINQQueriesThatAreNotCached)  
   
--   [Fehlende Sortierung](#OrderingInfoLost)  
+- [Fehlende Sortierung](#OrderingInfoLost)  
   
--   [Keine Unterstützung von ganzen Zahlen ohne Vorzeichen](#UnsignedIntsUnsupported)  
+- [Ganzzahlen ohne Vorzeichen, die nicht unterstützt](#UnsignedIntsUnsupported)  
   
--   [Typkonvertierungsfehler](#TypeConversionErrors)  
+- [Fehler bei der Datentypkonvertierung](#TypeConversionErrors)  
   
--   [Keine Unterstützung von Verweisen auf nicht skalare Variablen](#RefNonScalarClosures)  
+- [Verweisen auf nicht skalare Variablen werden nicht unterstützt](#RefNonScalarClosures)  
   
--   [Geschachtelte Abfragen schlagen mit SQL Server 2000 möglicherweise fehl](#NestedQueriesSQL2000)  
+- [Geschachtelte Abfragen schlagen möglicherweise mit SQLServer 2000 fehl.](#NestedQueriesSQL2000)  
   
--   [Projizieren auf einen anonymen Typ](#ProjectToAnonymousType)  
+- [Projizieren auf einen anonymen Typ](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>LINQ-Abfragen, die nicht zwischengespeichert werden können  
@@ -35,14 +35,14 @@ Dieser Abschnitt enthält Informationen zu bekannten Problemen bei [!INCLUDE[lin
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>Fehlende Sortierung  
- Beim Projizieren von Spalten in einen anonymen Typ geht die Sortierung in einigen Abfragen verloren, die für eine [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]-Datenbank mit dem Kompatibilitätsgrad "80" ausgeführt werden.  Dies kann vorkommen, wenn ein Spaltenname in der Sortierliste einem Spaltennamen im Selektor entspricht, wie im folgenden Beispiel dargestellt:  
+ Beim Projizieren von Spalten in einen anonymen Typ führt dazu, dass Informationen zur Reihenfolge der bei einigen Abfragen verloren, die für eine SQL Server 2005-Datenbank, legen Sie auf dem Kompatibilitätsgrad "80" ausgeführt werden.  Dies kann vorkommen, wenn ein Spaltenname in der Sortierliste einem Spaltennamen im Selektor entspricht, wie im folgenden Beispiel dargestellt:  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Keine Unterstützung von ganzen Zahlen ohne Vorzeichen  
- Sie können in einer [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfrage keine ganze Zahl ohne Vorzeichen angeben, da das [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] keine ganzen Zahlen ohne Vorzeichen unterstützt. Wenn Sie eine Ganzzahl ohne Vorzeichen angeben einer <xref:System.ArgumentException> Ausnahme aus, während der Übersetzung des Abfrageausdrucks, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird die Bestellung mit der ID 48000 abgefragt.  
+ Einen Ganzzahltyp ohne Vorzeichen angeben, in einer LINQ to Entities-Abfrage wird nicht unterstützt werden, da die [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] Ganzzahlen ohne Vorzeichen wird nicht unterstützt. Wenn Sie eine Ganzzahl ohne Vorzeichen angeben einer <xref:System.ArgumentException> Ausnahme aus, während der Übersetzung des Abfrageausdrucks, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird die Bestellung mit der ID 48000 abgefragt.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

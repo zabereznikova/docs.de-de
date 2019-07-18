@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 145f92badf39b6456a82df8f7de23f1784d2ce50
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9b6c839cc664105149f26b0d21d7ba7fb91b3e29
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742199"
 ---
 # <a name="closeenum-method"></a>CloseEnum-Methode
 Schließt die angegebene Enumeration und die zugeordneten Ressourcen freigegeben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CloseEnum(  
     HALINKENUM hEnum  
 ) PURE;  
@@ -46,6 +46,7 @@ HRESULT CloseEnum(
  Erfordert alink.h  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

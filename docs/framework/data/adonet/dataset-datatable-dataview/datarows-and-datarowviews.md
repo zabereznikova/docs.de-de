@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
 ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879826"
 ---
 # <a name="datarows-and-datarowviews"></a>"DataRows" und "DataRowViews"
 Eine <xref:System.Data.DataView> macht eine aufzählbare Auflistung von <xref:System.Data.DataRowView>-Objekten verfügbar. Die **DataRowView** Objekte verfügbar zu machen Werte als Objektarrays, die durch den Namen oder den Ordnungszahlverweis der Spalte in der zugrunde liegenden Tabelle indiziert werden. Sie erreichen die <xref:System.Data.DataRow> , die von verfügbar gemacht wird der **DataRowView** mithilfe der <xref:System.Data.DataRowView.Row%2A> Eigenschaft der **DataRowView**.  
@@ -65,5 +65,5 @@ public static void WriteView(DataView thisDataView)
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- ["DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

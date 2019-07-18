@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1e69d9cbf39049e82803d2f7bc795cc9fd0b368
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a416a51f5121f29d373fcfdfa6b0597d9b10ded5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154439"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779377"
 ---
 # <a name="ecustomdumpflavor-enumeration"></a>ECustomDumpFlavor-Enumeration
 Enthält Werte, die angeben, die eine benutzerdefinierte Teilmenge eines Heaps einzuschließenden Elemente zu speichern, sollte ein Fehler auftreten.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     DUMP_FLAVOR_Mini            = 1,  
     DUMP_FLAVOR_NonHeapCLRState = 2  

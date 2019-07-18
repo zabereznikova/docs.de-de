@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be7eaeccb53e8b180aeb9492cd887f952bbaea5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 356f7ec9c50ce511883cbf0f5fbcb729493c92af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485303"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737571"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement-Methode
 Ruft den Wert des angegebenen Array-Elements.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetElement (  
     [in]  ULONG32          cdim,  
     [in, size_is(cdim), length_is(cdim)]   

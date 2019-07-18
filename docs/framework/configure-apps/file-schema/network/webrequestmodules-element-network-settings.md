@@ -1,5 +1,5 @@
 ---
-title: <webRequestModules> -Element (Netzwerkeinstellungen)
+title: <webRequestModules>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 ms.openlocfilehash: e5d1780a204b2e99593d51179a479845fd49e608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59187004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704946"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<WebRequestModules >-Element (Netzwerkeinstellungen)
 Gibt die Module zu verwenden, um Informationen aus der Hosts im Netzwerk anzufordern.  
@@ -39,8 +39,8 @@ Gibt die Module zu verwenden, um Informationen aus der Hosts im Netzwerk anzufor
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Hinzufügen](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Die Anwendung hinzugefügt ein benutzerdefinierte Webanforderungsmodul.|  
-|[nicht aktiviert](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Entfernt alle registrierte Webanforderungsmodulen aus der Anwendung an.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Die Anwendung hinzugefügt ein benutzerdefinierte Webanforderungsmodul.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Entfernt alle registrierte Webanforderungsmodulen aus der Anwendung an.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Entfernt ein benutzerdefinierte Webanforderungsmodul aus der Anwendung an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -77,4 +77,4 @@ Gibt die Module zu verwenden, um Informationen aus der Hosts im Netzwerk anzufor
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

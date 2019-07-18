@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3077e0494816a083d97839d66d06b18130e5dac8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 38542ec28cce9687dc3ed824f9d449f3070976da
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487797"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737300"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName-Methode
 Ruft den Namen der Assembly ab, die dies `ICorDebugAssembly` -Instanz darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetName (  
     [in] ULONG32  cchName,  
     [out] ULONG32 *pcchName,  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
 ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776961"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>Vorgehensweise: Anwenden von Transformationen auf Text
 Transformationen können die Anzeige von Text in Ihrer Anwendung ändern. Die folgenden Beispiele verwenden verschiedene Arten von Renderingtransformationen die Anzeige von Text in beeinflusst eine <xref:System.Windows.Controls.TextBlock> Steuerelement.  

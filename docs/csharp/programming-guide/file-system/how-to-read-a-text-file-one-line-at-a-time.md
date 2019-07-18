@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: 831f306a19d926b70170c1a6ebc4ab670f1b9851
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e6c4cfce1b5e97f70040b318eb68ee78ee4a953
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718649"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595390"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Vorgehensweise: Zeilenweises Lesen einer Textdatei (Visual C#)
 Dieses Beispiel liest den Inhalt einer Textdatei Zeile pro Zeile in eine Zeichenfolge mithilfe der `ReadLine`-Methode der `StreamReader`-Klasse. Jede Textzeile wird in der Zeichenfolge `line` gespeichert und auf dem Bildschirm angezeigt.  
@@ -45,7 +45,7 @@ System.Console.ReadLine();
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Die Datei ist möglicherweise nicht vorhanden.  
+- Die Datei ist möglicherweise nicht vorhanden.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens. Bei der Datei `myFile.cs` handelt es sich möglicherweise nicht um eine C#-Quelldatei.  

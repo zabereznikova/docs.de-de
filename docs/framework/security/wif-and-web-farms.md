@@ -3,12 +3,12 @@ title: WIF und Webfarmen
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 656e7b116b9da68dbb38a5a2fc3d1ed90fda576a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135355"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592276"
 ---
 # <a name="wif-and-web-farms"></a>WIF und Webfarmen
 Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von einer Anwendung der vertrauenden Seite zu sichern, die in einer Webfarm bereitgestellt wird, müssen Sie bestimmte Schritte durchführen, um sicherzustellen, dass WIF Token von Instanzen der Anwendung der vertrauenden Seite verarbeiten kann. Diese Anwendung wird auf verschiedenen Computern in der Farm ausgeführt. Diese Verarbeitung beinhaltet die Überprüfung von Signaturen der Sitzungstokens, die Verschlüsselung, Entschlüsselung und Zwischenspeicherung der Sitzungstoken, und die Erkennung von wiedergegebenen Sicherheitstoken.  
@@ -17,21 +17,21 @@ Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von eine
   
  Wenn die Standardeinstellungen verwendet werden, führt WIF Folgendes aus:  
   
--   Es wird eine Instanz der <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>-Klasse zum Lesen und Schreiben eines Sitzungstokens (eine Instanz der <xref:System.IdentityModel.Tokens.SessionSecurityToken>-Klasse) verwendet, die Ansprüche und andere Informationen über das Sicherheitstoken überträgt, die für die Authentifizierung verwendet wurden sowie Informationen über die Sitzung selbst. Das Sitzungstoken wird verpackt und in ein Sitzungscookie gespeichert. Standardmäßig verwendet <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> die <xref:System.IdentityModel.ProtectedDataCookieTransform>-Klasse, welche Sitzungstoken mit der Data Protection API (DPAPI) schützt. Die DPAPI bietet Schutz mithilfe der Anmeldeinformationen für Benutzer oder Computer und speichert die Schlüsseldaten im Benutzerprofil.  
+- Es wird eine Instanz der <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>-Klasse zum Lesen und Schreiben eines Sitzungstokens (eine Instanz der <xref:System.IdentityModel.Tokens.SessionSecurityToken>-Klasse) verwendet, die Ansprüche und andere Informationen über das Sicherheitstoken überträgt, die für die Authentifizierung verwendet wurden sowie Informationen über die Sitzung selbst. Das Sitzungstoken wird verpackt und in ein Sitzungscookie gespeichert. Standardmäßig verwendet <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> die <xref:System.IdentityModel.ProtectedDataCookieTransform>-Klasse, welche Sitzungstoken mit der Data Protection API (DPAPI) schützt. Die DPAPI bietet Schutz mithilfe der Anmeldeinformationen für Benutzer oder Computer und speichert die Schlüsseldaten im Benutzerprofil.  
   
--   Sie verwendet eine standardmäßige, speicherinterne Implementierung der <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>-Klasse zur Speicherung und Verarbeitung des Sitzungstokens.  
+- Sie verwendet eine standardmäßige, speicherinterne Implementierung der <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>-Klasse zur Speicherung und Verarbeitung des Sitzungstokens.  
   
  Diese Standardeinstellungen eignen sich für Szenarios, in denen die Anwendung der vertrauenden Seite auf einem Einzelcomputer bereitgestellt wird. Bei der Bereitstellung in einer Webfarm kann jede HTTP-Anforderung möglicherweise an eine andere Instanz dieser Anwendung, die auf einem anderen Computer ausgeführt wird, gesendet und von ihr verarbeitet werden. In diesem Szenario funktionieren die oben beschriebenen WIF-Standardeinstellungen nicht, da sowohl der Schutz und die Zwischenspeicherung des Tokens von einem bestimmten Computer abhängig sind.  
   
  Um eine Anwendung der vertrauenden Seite in einer Webfarm bereitstellen zu können, müssen Sie sicherstellen, dass die Verarbeitung der Sitzungstoken (sowie der wiedergegebenen Token) nicht davon abhängt, dass die Anwendung auf einem bestimmten Computer ausgeführt wird. Eine Möglichkeit hierfür ist die Implementierung Ihrer Anwendung der vertrauenden Seite, sodass sie die vom `<machineKey>`-Konfigurationselement von ASP.NET bereitgestellten Funktionen verwendet, und verteilte Zwischenspeicherung für die Verarbeitung von Sitzungstoken und wiedergegebenen Token bereitstellt. Das `<machineKey>`-Element ermöglicht Ihnen das Festlegen der Schlüssel, die zur Überprüfung, Ver- und Entschlüsselung von Token in einer Konfigurationsdatei nötig sind. Sie können somit die gleichen Schlüssel auf verschiedenen Computern in der Webfarm festlegen. WIF stellt einen speziellen Sitzungstokenhandler <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> zur Verfügung, der Token mit den im `<machineKey>`-Element angegebenen Schlüsseln schützt. Um diese Strategie zu implementieren, können Sie die folgenden Richtlinien beachten:  
   
--   Verwenden Sie das `<machineKey>`-Element von ASP.NET in der Konfiguration, um die Schlüssel zur Signierung und Verschlüsselung explizit anzugeben, die auf Computern in der Farm verwendet werden können. Das folgende XML zeigt die Spezifikation des `<machineKey>`-Elements unter dem `<system.web>`-Element in einer Konfigurationsdatei.  
+- Verwenden Sie das `<machineKey>`-Element von ASP.NET in der Konfiguration, um die Schlüssel zur Signierung und Verschlüsselung explizit anzugeben, die auf Computern in der Farm verwendet werden können. Das folgende XML zeigt die Spezifikation des `<machineKey>`-Elements unter dem `<system.web>`-Element in einer Konfigurationsdatei.  
   
     ```xml  
     <machineKey compatibilityMode="Framework45" decryptionKey="CC510D … 8925E6" validationKey="BEAC8 … 6A4B1DE" />  
     ```  
   
--   Konfigurieren Sie die Anwendung für die Verwendung der <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, indem Sie sie zur Auflistung der Tokenhandler hinzufügen. Entfernen Sie zuerst die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (oder alle aus der <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>-Klasse abgeleiteten Handler) aus der Auflistung der Tokenhandler, wenn ein solcher Handler vorhanden ist. Die <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> verwendet die <xref:System.IdentityModel.Services.MachineKeyTransform>-Klasse, die die Cookiedaten der Sitzung mit kryptografischem Material schützt, das im `<machineKey>`-Element angegeben ist. Das folgende XML zeigt das Hinzufügen der <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> zu einer Auflistung von Tokenhandler.  
+- Konfigurieren Sie die Anwendung für die Verwendung der <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>, indem Sie sie zur Auflistung der Tokenhandler hinzufügen. Entfernen Sie zuerst die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> (oder alle aus der <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>-Klasse abgeleiteten Handler) aus der Auflistung der Tokenhandler, wenn ein solcher Handler vorhanden ist. Die <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> verwendet die <xref:System.IdentityModel.Services.MachineKeyTransform>-Klasse, die die Cookiedaten der Sitzung mit kryptografischem Material schützt, das im `<machineKey>`-Element angegeben ist. Das folgende XML zeigt das Hinzufügen der <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler> zu einer Auflistung von Tokenhandler.  
   
     ```xml  
     <securityTokenHandlers>  
@@ -40,7 +40,7 @@ Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von eine
     </securityTokenHandlers>  
     ```  
   
--   Von <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> ableiten und verteilte Zwischenspeicherung implementieren, d.h., einen Zwischenspeicher, auf den von allen Computern in der Farm, auf denen die vertrauende Seite ausgeführt werden könnte, zugegriffen werden kann. Konfigurieren Sie die vertrauende Seite für die Verwendung Ihres verteilten Zwischenspeichers durch Angabe des [\<SessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)-Elements in der Konfigurationsdatei. Sie können die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType>-Methode in der abgeleiteten Klasse überschreiben, sodass sie untergeordnete Elemente des `<sessionSecurityTokenCache>`-Elements überschreibt, sofern diese erforderlich sind.  
+- Von <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache> ableiten und verteilte Zwischenspeicherung implementieren, d.h., einen Zwischenspeicher, auf den von allen Computern in der Farm, auf denen die vertrauende Seite ausgeführt werden könnte, zugegriffen werden kann. Konfigurieren Sie die vertrauende Seite für die Verwendung Ihres verteilten Zwischenspeichers durch Angabe des [\<SessionSecurityTokenCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)-Elements in der Konfigurationsdatei. Sie können die <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache.LoadCustomConfiguration%2A?displayProperty=nameWithType>-Methode in der abgeleiteten Klasse überschreiben, sodass sie untergeordnete Elemente des `<sessionSecurityTokenCache>`-Elements überschreibt, sofern diese erforderlich sind.  
   
     ```xml  
     <caches>  
@@ -52,7 +52,7 @@ Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von eine
   
      Eine Möglichkeit zur Implementierung des verteilten Zwischenspeichers ist die Bereitstellung des WCF-Front-Ends für Ihren benutzerdefinierten Zwischenspeicher. Weitere Informationen zum Implementieren eines WCFS-Caching-Diensts finden Sie unter [Der WCF-Cache-Dienst](#BKMK_TheWCFCachingService). Weitere Informationen zum Implementieren eines WCF-Clients, den die Anwendung der vertrauenden Seite zum Aufrufen des Cache-Diensts verwenden kann, finden Sie unter [Der WCF-Caching-Client](#BKMK_TheWCFClient).  
   
--   Wenn Ihre Anwendung wiedergegebene Token erkennt, müssen Sie einer ähnlichen Strategie für verteilte Zwischenspeicher für den Zwischenspeicher der wiedergegebene Token folgen. Leiten Sie von <xref:System.IdentityModel.Tokens.TokenReplayCache> ab, und verweisen Sie auf den Caching-Dienst für wiedergegebene Token im Konfigurationselement [\<TokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
+- Wenn Ihre Anwendung wiedergegebene Token erkennt, müssen Sie einer ähnlichen Strategie für verteilte Zwischenspeicher für den Zwischenspeicher der wiedergegebene Token folgen. Leiten Sie von <xref:System.IdentityModel.Tokens.TokenReplayCache> ab, und verweisen Sie auf den Caching-Dienst für wiedergegebene Token im Konfigurationselement [\<TokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
 >  Alle Beispiel-XML und Code in diesem Thema stammt aus dem [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) Beispiel.  

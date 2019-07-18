@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 21efca701eb16898dd291d73bf0431641ba75d12
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826118"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583357"
 ---
 # <a name="-reference-visual-basic"></a>-Referenz (Visual Basic)
 Veranlasst den Compiler Typinformationen in den angegebenen Assemblys für das Projekt verfügbar sein, auf denen Sie aktuell kompilieren.  
@@ -38,15 +38,15 @@ Veranlasst den Compiler Typinformationen in den angegebenen Assemblys für das P
   
  Wenn Sie eine Assembly (Assembly A) verweisen, die ihrerseits auf einer anderen Assembly (Assembly B) verweist, müssen Sie auf Assembly B verweisen wenn:  
   
--   Ein Typ von Assembly A erbt von einem Typ oder implementiert eine Schnittstelle aus Assembly B.  
+- Ein Typ von Assembly A erbt von einem Typ oder implementiert eine Schnittstelle aus Assembly B.  
   
--   Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
+- Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
  Verwendung [- Libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) auf das Verzeichnis anzugeben, in denen eine oder mehrere der Assemblyverweise befinden.  
   
  Für den Compiler an, das Erkennen eines Typs in einer Assembly (nicht in einem Modul) muss er gezwungen werden, den Typ aufzulösen. Ein Beispiel dafür, wie Sie dies tun können, ist eine Instanz des Typs definieren. Weitere Möglichkeiten sind verfügbar, Typnamen in einer Assembly für den Compiler aufzulösen. Wenn Sie von einem Typ in einer Assembly erben, wird z. B. der Typnamen klicken Sie dann an den Compiler bezeichnet.  
   
- Der Vbc.rsp-Antwortdatei, die Verweise häufig verwendet [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys wird standardmäßig verwendet. Verwenden Sie `-noconfig` Wenn Sie nicht, dass den Compiler "vbc.rsp" zu verwenden möchten.  
+ Die Vbc.rsp-Antwortdatei, das auf .NET Framework-Assemblys verwendet, wird standardmäßig verwendet. Verwenden Sie `-noconfig` Wenn Sie nicht, dass den Compiler "vbc.rsp" zu verwenden möchten.  
   
  Die Kurzform von `-reference` ist `/r`.  
   

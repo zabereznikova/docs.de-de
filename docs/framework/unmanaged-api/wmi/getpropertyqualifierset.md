@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdb9f748279e4e74c0dbd1ced1f48e3a24b9904d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 588c56c80cc55df3689178875a9a0500cd0ca7b8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358417"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636404"
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet-Funktion
 

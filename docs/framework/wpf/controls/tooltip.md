@@ -9,11 +9,11 @@ helpviewer_keywords:
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
 ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59054987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790715"
 ---
 # <a name="tooltip"></a>QuickInfo
 Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutzer den Mauszeiger auf ein Element, beispielsweise über hält eine <xref:System.Windows.Controls.Button>.  
@@ -25,8 +25,8 @@ Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutz
  ![Screenshot der QuickInfo](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über die QuickInfo](tooltip-overview.md)  
-  [Gewusst wie-Themen](tooltip-how-to-topics.md)  
+ [Übersicht über QuickInfo](tooltip-overview.md)  
+  [Themen zu Vorgehensweisen](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.ToolTip>  
@@ -35,4 +35,4 @@ Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutz
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Übersicht über Popups](popup-overview.md)  
-  [Gewusst wie-Themen](popup-how-to-topics.md)
+  [Themen zu Vorgehensweisen](popup-how-to-topics.md)

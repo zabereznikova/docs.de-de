@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d50f7488c2b231ea66c12cc4903469d9e2337fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: da3b83191ce1acdf40e27c5ee1d843a1fb4a54f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088378"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750677"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc-Methode
 Fügt eine .reloc-Anweisung in die Codebasis.  
@@ -31,7 +31,7 @@ Fügt eine .reloc-Anweisung in die Codebasis.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT AddSectionReloc (  
    [in] HCEESECTION            section,  
    [in] ULONG                  offset,  

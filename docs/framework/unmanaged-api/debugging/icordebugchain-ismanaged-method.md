@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a27ea95ca78f7db8f67ec2a13f02767e67619e97
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7e14ff1cd85810a0b2f9e14c3ab4c8d12d883d17
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488057"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745622"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged-Methode
 Ruft einen Wert, der angibt, ob dieser Kette auf verwalteten Code ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsManaged (  
     [out] BOOL               *pManaged  
 );  

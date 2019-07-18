@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe9bc9aea4ceb0f5b5c03416f43894b482c3294e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8717a1eafebf24366c35848dbe285943c107ed51
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136629"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777733"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption-Methode
 Ruft den Wert der angegebenen Option für den aktuellen Metadatenbereich. Die Option wird gesteuert, wie Aufrufe im aktuellen Metadatenbereich behandelt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetOption (  
     [in]  REFGUID         optionId,   
     [out] const VARIANT   *pValue  
@@ -46,19 +46,19 @@ HRESULT GetOption (
 ## <a name="remarks"></a>Hinweise  
  Die folgende Liste enthält die GUIDs, die für diese Methode unterstützt werden. Beschreibungen, finden Sie unter den [IMetaDataDispenserEx:: SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) Methode. Wenn `optionId` ist nicht in der Liste, gibt diese Methode HRESULT zurück, mit denen `E_INVALIDARG`, was einen falschen Parameter angibt.  
   
--   MetaDataCheckDuplicatesFor  
+- MetaDataCheckDuplicatesFor  
   
--   MetaDataRefToDefCheck  
+- MetaDataRefToDefCheck  
   
--   MetaDataNotificationForTokenMovement  
+- MetaDataNotificationForTokenMovement  
   
--   MetaDataSetENC  
+- MetaDataSetENC  
   
--   MetaDataErrorIfEmitOutOfOrder  
+- MetaDataErrorIfEmitOutOfOrder  
   
--   MetaDataGenerateTCEAdapters  
+- MetaDataGenerateTCEAdapters  
   
--   MetaDataLinkerOptions  
+- MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

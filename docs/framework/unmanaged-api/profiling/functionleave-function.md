@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b1fe219c4c852792390b48b0ea4d38adb702281
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 80d82e26fe54c5422d1140bba84830879f0b5c2d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218887"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781274"
 ---
 # <a name="functionleave-function"></a>FunctionLeave-Funktion
 Benachrichtigt den Profiler, dass eine Funktion zum an den Aufrufer zurückgeben.  
@@ -31,7 +31,7 @@ Benachrichtigt den Profiler, dass eine Funktion zum an den Aufrufer zurückgeben
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void __stdcall FunctionLeave (  
     [in] FunctionID funcID  
 );  
@@ -46,9 +46,9 @@ void __stdcall FunctionLeave (
   
  Die ausführungs-Engine werden keine Register gespeichert, vor dem Aufrufen dieser Funktion.  
   
--   Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
+- Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
   
--   Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
+- Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
   
  Die Implementierung der `FunctionLeave` sollten nicht blockiert werden, da die Garbagecollection verzögert wird. Die Implementierung sollten eine Garbagecollection nicht versuchen, da der Stapel möglicherweise nicht in eine Garbage Collection geeigneten Zustand. Wenn eine Garbagecollection versucht wird, wird die Laufzeit blockiert, bis `FunctionLeave` zurückgibt.  
   

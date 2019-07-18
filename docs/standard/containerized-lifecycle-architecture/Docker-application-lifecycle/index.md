@@ -1,19 +1,17 @@
 ---
 title: Einführung in den Docker-Anwendungslebenszyklus
-description: Beginnen Sie hier den Entwicklung containerbasierter Anwendungen Weg.
-author: CESARDELATORRE
-ms.author: wiwagn
+description: Beginnen Sie hier Ihre Reise durch die Entwicklung von Containeranwendungen.
 ms.date: 11/23/2018
-ms.openlocfilehash: 5d569cf5edc9f1e39b9c53908b7fbe075d3f2bf5
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
+ms.openlocfilehash: 825226e0004af16deccfe1418596d91d6438b076
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584355"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65644818"
 ---
-# <a name="introduction-tothe-docker-application-life-cycle"></a>Einführung in die Docker-Anwendungslebenszyklus
+# <a name="introduction-tothe-docker-application-life-cycle"></a>Einführung in den Docker-Anwendungslebenszyklus
 
-*Der Lebenszyklus von containerisierten Anwendungen ist eine Reise, die mit der Entwickler beginnt. Der Entwickler entscheidet sich für Container und Docker zu implementieren, da es Reibungsverluste bei der Bereitstellung und IT-Betriebs nicht erforderlich, wodurch schließlich alle Beteiligten agiler, produktiver End-to-End- und schneller zu werden.*
+*Der Lebenszyklus von containerisierten Anwendungen ist eine Reise, die beim Entwickler beginnt. Der Entwickler entscheidet sich für die Implementierung von Containern und Docker, weil dies Reibungsverluste bei der Bereitstellung und im IT-Betrieb eliminiert, was letztendlich dazu beiträgt, dass alle Beteiligten agiler, produktiver und schneller arbeiten können.*
 
 >[!div class="step-by-step"]
 >[Zurück](../docker-containers-images-and-registries.md)

@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Zusammensetzungen mit NativeActivity
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: 4d7cd64d5a7d581a81d10c39638b63f1f6787570
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c88a4a7794ef5f9e721669bc61402e97f6032da0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840455"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637605"
 ---
 # <a name="custom-composite-using-native-activity"></a>Benutzerdefinierte Zusammensetzungen mit NativeActivity
 In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.NativeActivity> geschrieben wird, die andere <xref:System.Activities.Activity>-Objekte plant, um den Fluss der Ausführung eines Workflows zu steuern. Zur Veranschaulichung dieses Vorgangs werden in diesem Beispiel zwei häufige Ablaufsteuerungen verwendet: Sequence und While.
@@ -25,13 +25,13 @@ In diesem Beispiel wird veranschaulicht, wie eine <xref:System.Activities.Native
 
  Wenn die untergeordnete Aktivität abgeschlossen wird, wird der <xref:System.Activities.CompletionCallback> ausgeführt. Die Schleife fängt wieder von vorne an. Wie auch `Execute`, verwendet ein <xref:System.Activities.CompletionCallback> einen <xref:System.Activities.NativeActivityContext>, sodass die Implementierung Zugriff auf die Laufzeit erhält.
 
- `MyWhile` unterscheidet sich von `MySequence` darin, dass es sich um ein einzelnes plant <xref:System.Activities.Activity> -Objekt wiederholt, und verwendet eine <xref:System.Activities.Activity%601>< Bool\> mit dem Namen `Condition` zu bestimmen, ob diese Planung stattfinden soll. Wie auch `MySequence`, verwendet `MyWhile` eine `InternalExecute`-Methode, um seine Planungslogik zu zentralisieren. Es plant den `Condition` <xref:System.Activities.Activity>< Bool\> mit einem <xref:System.Activities.CompletionCallback%601> \<"bool" > mit dem Namen `OnEvaluationCompleted`. Wenn die Ausführung von `Condition` abgeschlossen ist, wird das Ergebnis durch diesen <xref:System.Activities.CompletionCallback> in einem stark typisierten Parameter mit dem Namen `result` verfügbar. Wenn `true`, `MyWhile`<xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> aufruft, werden das `Body`<xref:System.Activities.Activity>-Objekt und `InternalExecute` als <xref:System.Activities.CompletionCallback> übergeben. Wenn die Ausführung von `Body` abgeschlossen ist, wird `Condition` erneut in `InternalExecute` geplant, und die Starte beginn erneut von vorne. Wenn der `Condition` `false` zurückgibt, gibt eine Instanz von `MyWhile` die Steuerung an die Laufzeit zurück, ohne den `Body` zu planen, und die Laufzeit verschiebt diesen in den Zustand <xref:System.Activities.ActivityInstanceState.Closed>.
+ `MyWhile` unterscheidet sich von `MySequence` darin, dass es sich um ein einzelnes plant <xref:System.Activities.Activity> -Objekt wiederholt, und verwendet eine <xref:System.Activities.Activity%601>< Bool\> mit dem Namen `Condition` zu bestimmen, ob diese Planung stattfinden soll. Wie auch `MySequence`, verwendet `MyWhile` eine `InternalExecute`-Methode, um seine Planungslogik zu zentralisieren. Es plant den `Condition` <xref:System.Activities.Activity>< Bool\> mit einem <xref:System.Activities.CompletionCallback%601> \<"bool" > mit dem Namen `OnEvaluationCompleted`. Wenn die Ausführung von `Condition` abgeschlossen ist, wird das Ergebnis durch diesen <xref:System.Activities.CompletionCallback> in einem stark typisierten Parameter mit dem Namen `result` verfügbar. Wenn `true`, `MyWhile`<xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> aufruft, werden das `Body`<xref:System.Activities.Activity>-Objekt und `InternalExecute` als <xref:System.Activities.CompletionCallback> übergeben. Wenn die Ausführung von `Body` abgeschlossen ist, wird `Condition` erneut in `InternalExecute` geplant, und die Starte beginn erneut von vorne. Wenn der `Condition``false` zurückgibt, gibt eine Instanz von `MyWhile` die Steuerung an die Laufzeit zurück, ohne den `Body` zu planen, und die Laufzeit verschiebt diesen in den Zustand <xref:System.Activities.ActivityInstanceState.Closed>.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1.  Öffnen Sie die beispiellösung Composite.sln in Visual Studio 2010.
+1. Öffnen Sie die beispiellösung Composite.sln in Visual Studio 2010.
 
-2.  Erstellen Sie die Projektmappe, und führen Sie sie aus.
+2. Erstellen Sie die Projektmappe, und führen Sie sie aus.
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

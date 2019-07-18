@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665766"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic
 Ein *Standardeigenschaft* ist eine Klasse oder Struktur-Eigenschaft, die Ihren Code zugreifen können, ohne ihn. Beim Aufrufen von Code Namen einer Klasse oder Struktur, aber keine Eigenschaft, und der Kontext ermöglicht den Zugriff auf eine Eigenschaft, Visual Basic löst den Zugriff auf diese Klasse oder Struktur Standardeigenschaft, falls vorhanden.  
@@ -26,37 +26,37 @@ Ein *Standardeigenschaft* ist eine Klasse oder Struktur-Eigenschaft, die Ihren C
   
 ### <a name="to-declare-a-default-property"></a>Um eine Standardeigenschaft zu deklarieren.  
   
-1.  Deklarieren Sie die Eigenschaft, auf die übliche Weise. Geben Sie nicht die `Shared` oder `Private` Schlüsselwort.  
+1. Deklarieren Sie die Eigenschaft, auf die übliche Weise. Geben Sie nicht die `Shared` oder `Private` Schlüsselwort.  
   
-2.  Enthalten die `Default` -Schlüsselwort in der Deklaration der Eigenschaft.  
+2. Enthalten die `Default` -Schlüsselwort in der Deklaration der Eigenschaft.  
   
-3.  Geben Sie mindestens einen Parameter für die Eigenschaft an. Sie können keine Standardeigenschaft definieren, die nicht mindestens ein Argument übernimmt.  
+3. Geben Sie mindestens einen Parameter für die Eigenschaft an. Sie können keine Standardeigenschaft definieren, die nicht mindestens ein Argument übernimmt.  
   
      [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
 ### <a name="to-call-a-default-property"></a>Zum Aufrufen einer Standardeigenschaft  
   
-1.  Deklarieren Sie eine Variable die enthaltende Klasse oder Struktur.  
+1. Deklarieren Sie eine Variable die enthaltende Klasse oder Struktur.  
   
      [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
-2.  Verwenden Sie den Variablennamen in einem Ausdruck allein, müssten Sie normalerweise den Eigenschaftennamen einfügen.  
+2. Verwenden Sie den Variablennamen in einem Ausdruck allein, müssten Sie normalerweise den Eigenschaftennamen einfügen.  
   
      [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
-3.  Führen Sie den Variablennamen mit einer Argumentliste in Klammern ein. Eine Standardeigenschaft muss mindestens ein Argument übernehmen.  
+3. Führen Sie den Variablennamen mit einer Argumentliste in Klammern ein. Eine Standardeigenschaft muss mindestens ein Argument übernehmen.  
   
      [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
-4.  Um den Standardwert der Eigenschaft abzurufen, verwenden Sie den Variablennamen ein, mit einer Argumentliste, die in einem Ausdruck oder nach den Gleichheitsoperator (`=`) in einer zuweisungsanweisung anmelden.  
+4. Um den Standardwert der Eigenschaft abzurufen, verwenden Sie den Variablennamen ein, mit einer Argumentliste, die in einem Ausdruck oder nach den Gleichheitsoperator (`=`) in einer zuweisungsanweisung anmelden.  
   
      [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
-5.  Um den Standardwert der Eigenschaft festzulegen, verwenden Sie den Variablennamen ein, mit einer Argumentliste, auf der linken Seite einer zuweisungsanweisung.  
+5. Um den Standardwert der Eigenschaft festzulegen, verwenden Sie den Variablennamen ein, mit einer Argumentliste, auf der linken Seite einer zuweisungsanweisung.  
   
      [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
-6.  Sie können den Standardnamen für die Eigenschaft zusammen mit dem Variablennamen immer angeben, wie Sie vornehmen möchten, für den Zugriff auf eine andere Eigenschaft.  
+6. Sie können den Standardnamen für die Eigenschaft zusammen mit dem Variablennamen immer angeben, wie Sie vornehmen möchten, für den Zugriff auf eine andere Eigenschaft.  
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   

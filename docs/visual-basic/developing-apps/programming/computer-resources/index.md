@@ -6,27 +6,27 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], tasks
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-ms.openlocfilehash: 7128a71f28d1755a14fcda5f09bee11202ab4154
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2c53358d483868317887258c92b1aad2d9dcba00
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524683"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662687"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>Zugreifen auf Computerressourcen (Visual Basic)
 
 Das `My.Computer`-Objekt ist eines der drei zentralen Objekte in `My` und bietet Zugriff auf Informationen und häufig verwendete Funktionen. `My.Computer` bietet Methoden, Eigenschaften und Ereignisse für den Zugriff auf den Computer, auf dem die Anwendung ausgeführt wird. Es enthält folgende Objekte:  
   
--   <xref:Microsoft.VisualBasic.Devices.Audio>
--   Zwischenablage (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
--   <xref:Microsoft.VisualBasic.Devices.Clock>
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem>
--   <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
--   <xref:Microsoft.VisualBasic.Devices.Keyboard>
--   <xref:Microsoft.VisualBasic.Devices.Mouse>
--   <xref:Microsoft.VisualBasic.Devices.Network>
--   <xref:Microsoft.VisualBasic.Devices.Ports>
--   Registrierung (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
+- <xref:Microsoft.VisualBasic.Devices.Audio>
+- Zwischenablage (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
+- <xref:Microsoft.VisualBasic.Devices.Clock>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
+- <xref:Microsoft.VisualBasic.Devices.Keyboard>
+- <xref:Microsoft.VisualBasic.Devices.Mouse>
+- <xref:Microsoft.VisualBasic.Devices.Network>
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- Registrierung (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

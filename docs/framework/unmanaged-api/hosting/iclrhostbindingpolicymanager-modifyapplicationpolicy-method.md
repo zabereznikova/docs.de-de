@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07a4998f86958e21fffc8ba8657ec9f2a170f43e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0a9e438e6dd436303cd6f7aa60c779179b5d3c04
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112436"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779668"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy-Methode
 Ändert die Richtlinie für die angegebene Assembly und erstellt eine neue Version der Richtlinie.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT  ModifyApplicationPolicy (  
     [in] LPCWSTR     pwzSourceAssemblyIdentity,   
     [in] LPCWSTR     pwzTargetAssemblyIdentity,  

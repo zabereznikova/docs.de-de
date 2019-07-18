@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ece12247e48a0a005fd542bf76a32a1c6eeaa7cb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8ac12d5b6bc2911e3bd879285a9a12f65c426f0d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478401"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745859"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map-Methode
 Ordnet eine Beziehung zwischen den Signaturen von Metadaten mit Assemblys.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Map (  
     [in]  mdToken tkImp,   
     [in]  mdToken tkEmit  
@@ -56,4 +56,5 @@ HRESULT Map (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMapToken-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

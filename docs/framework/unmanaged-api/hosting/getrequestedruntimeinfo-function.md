@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074884"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778140"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo-Funktion
 Ruft Version und Verzeichnisinformationen Informationen über die common Language Runtime (CLR), das von einer Anwendung angefordert.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeInfo (  
     [in]  LPCWSTR  pExe,   
     [in]  LPCWSTR  pwszVersion,   
@@ -94,25 +94,25 @@ HRESULT GetRequestedRuntimeInfo (
   
  In .NET Framework, Version 2.0, erhalten Sie Informationen über die neueste installierte Version mithilfe der `GetRequestedRuntimeInfo` -Methode wie folgt:  
   
--   Geben Sie die `pExe`, `pwszVersion`, und `pConfigurationFile` Parameter als Null.  
+- Geben Sie die `pExe`, `pwszVersion`, und `pConfigurationFile` Parameter als Null.  
   
--   Geben Sie das Flag RUNTIME_INFO_UPGRADE_VERSION in die `RUNTIME_INFO_FLAGS` Enumerationen für die `runtimeInfoFlags` Parameter.  
+- Geben Sie das Flag RUNTIME_INFO_UPGRADE_VERSION in die `RUNTIME_INFO_FLAGS` Enumerationen für die `runtimeInfoFlags` Parameter.  
   
  Die `GetRequestedRuntimeInfo` Methode nicht die neueste Version der CLR in den folgenden Situationen zurückgegeben:  
   
--   Die Konfigurationsdatei einer Anwendung, die angibt, laden eine bestimmte CLR-Version vorhanden ist. Beachten Sie, dass .NET Framework die Konfigurationsdatei verwendet wird, auch wenn Sie null für angeben der `pConfigurationFile` Parameter.  
+- Die Konfigurationsdatei einer Anwendung, die angibt, laden eine bestimmte CLR-Version vorhanden ist. Beachten Sie, dass .NET Framework die Konfigurationsdatei verwendet wird, auch wenn Sie null für angeben der `pConfigurationFile` Parameter.  
   
--   Die [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) Methode wurde aufgerufen, die eine frühere Version der CLR angibt.  
+- Die [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) Methode wurde aufgerufen, die eine frühere Version der CLR angibt.  
   
--   Eine Anwendung, die für eine frühere Version der CLR kompiliert wurde, wird derzeit ausgeführt.  
+- Eine Anwendung, die für eine frühere Version der CLR kompiliert wurde, wird derzeit ausgeführt.  
   
  Für die `runtimeInfoFlags` -Parameters, können Sie angeben nur eine der Architekturkonstanten der `RUNTIME_INFO_FLAGS` Enumeration zu einem Zeitpunkt:  
   
--   RUNTIME_INFO_REQUEST_IA64  
+- RUNTIME_INFO_REQUEST_IA64  
   
--   RUNTIME_INFO_REQUEST_AMD64  
+- RUNTIME_INFO_REQUEST_AMD64  
   
--   RUNTIME_INFO_REQUEST_X86  
+- RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

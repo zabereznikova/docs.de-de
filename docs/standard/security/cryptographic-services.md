@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677096"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663990"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 
@@ -39,7 +39,7 @@ ms.locfileid: "57677096"
 
 In .NET Framework werden viele Aspekte der Kryptografie von den Klassen im <xref:System.Security.Cryptography?displayProperty=nameWithType> -Namespace verwaltet. Einige davon sind Wrapper für die nicht verwaltete Microsoft Cryptography API (CryptoAPI), bei anderen handelt es sich um rein verwaltete Implementierungen. Sie müssen kein Experte in Sachen Kryptografie sein, um diese Klassen verwenden zu können. Wenn Sie eine neue Instanz einer Verschlüsselungsalgorithmusklasse erstellen, werden der Einfachheit halber automatisch Schlüssel erzeugt. Die Standardeigenschaften sind dabei auf möglichst hohe Sicherheit und hohen Schutz ausgelegt.
 
-Diese Übersicht enthält eine Zusammenfassung der von .NET Framework unterstützten Verschlüsselungsmethoden und -verfahren wie ClickOnce-Manifeste, Suite B und die Unterstützung von Cryptography Next Generation (CNG), die in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]eingeführt wurde.
+Diese Übersicht bietet eine Zusammenfassung der Verschlüsselungsmethoden und Methoden, die von .NET Framework, einschließlich der ClickOnce-Manifeste, Suite B und Cryptography Next Generation (CNG) unterstützt, die seit .NET Framework 3.5 unterstützt.
 
 Diese Übersicht enthält folgende Abschnitte:
 
@@ -112,9 +112,9 @@ Die Verschlüsselung mit geheimem Schlüssel hat den Nachteil, dass sich zwei Te
 
 Vorausgesetzt, dass Alice und Bob um zwei Teilnehmer, die über einen unsicheren Kanal miteinander kommunizieren möchten handelt, können sie die Verschlüsselung mit geheimem Schlüssel wie folgt verwenden: Alice und Bob stimmen auf einen bestimmten Algorithmus (z. B. AES) mit einem bestimmten Schlüssel und Initialisierungsvektor zu verwenden. Alice verfasst eine Nachricht und erstellt einen Netzwerkstream (eventuell eine benannte Pipe oder eine Netzwerk-e-Mail) auf dem die Nachricht zu senden. Danach verschlüsselt sie mithilfe des Schlüssels und des Initialisierungsvektors den Text und sendet die verschlüsselten Nachricht und den Initialisierungsvektor über das Intranet an Bob. Bob empfängt den verschlüsselten Text und entschlüsselt ihn mit dem Initialisierungsvektor und dem zuvor vereinbarten Schlüssel. Wenn die Übertragung abgefangen wird, kann der unbefugte Dritte die Originalnachricht nicht entschlüsseln, da er den Schlüssel nicht kennt. In diesem Szenario muss nur der Schlüssel geheim bleiben. In der Realität würde entweder Alice oder Bob einen geheimen (symmetrischen) Schlüssel erzeugen und ihn mithilfe der asymmetrischen Verschlüsselung (mit öffentlichem Schlüssel) an die Gegenseite übertragen. Weitere Informationen zur Verschlüsselung mit öffentlichem Schlüssel finden Sie im nachfolgenden Abschnitt.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementiert werden:
+.NET Framework bietet die folgenden Klassen, die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementieren:
 
-- <xref:System.Security.Cryptography.AesManaged> (eingeführt in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
+- <xref:System.Security.Cryptography.AesManaged> (eingeführt in .NET Framework 3.5).
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
@@ -154,7 +154,7 @@ In der folgenden Liste werden Kryptographiealgorithmen mit öffentlichem und geh
 
 - Algorithmen mit öffentlichem Schlüssel sind im Vergleich zu Algorithmen mit geheimem Schlüssel extrem langsam und für die Verschlüsselung großer Datenmengen nicht geeignet. Algorithmen mit öffentlichem Schlüssel sind nur für die Übertragung sehr kleiner Datenmengen sinnvoll. In der Regel werden bei der Verschlüsselung mit öffentlichem Schlüssel ein Schlüssel und ein Initialisierungsvektor verschlüsselt, die in einem Algorithmus mit geheimem Schlüssel verwendet werden sollen. Nach der Übertragung von Schlüssel und Initialisierungsvektor wird für die restliche Sitzung die Verschlüsselung mit geheimem Schlüssel verwendet.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die Verschlüsselungsalgorithmen mit öffentlichem Schlüssel implementiert werden:
+.NET Framework bietet die folgenden Klassen, die Algorithmen für Verschlüsselung mit öffentlichem Schlüssel implementieren:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ Um die Kryptografie mit öffentlichem Schlüssel zum digitalen Signieren einer N
 > [!NOTE]
 > Eine Signatur kann von jedem überprüft werden, da der öffentliche Schlüssel des Absenders allgemein bekannt und in der Regel im digitalen Signaturformat enthalten ist. Mit dieser Methode wird die Nachricht nicht geheim gehalten. Hierzu muss sie zusätzlich verschlüsselt werden.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die digitale Signaturalgorithmen implementiert werden:
+.NET Framework bietet die folgenden Klassen, die digitale Signaturalgorithmen implementiert:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -207,23 +207,23 @@ Zwei Teilnehmer (Alice und Bob) könnten eine Hashfunktion verwenden, um die Nac
 
 - Alice sendet die Klartext-Nachricht und die Hashnachricht (digitale Signatur) an Bob. Bob empfängt die Nachricht, wendet den Hashalgorithmus darauf an und vergleicht seinen Hashwert mit dem von Alice empfangenen Hashwert. Wenn die Hashwerte identisch sind, wurde die Nachricht nicht geändert. Wenn die Werte nicht identisch sind, wurde die Nachricht geändert, nachdem sie von Alice geschrieben wurde.
 
-    Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alice sendet die Klartext-Nachricht über einen unsicheren öffentlichen Kanal an Bob. Sie sendet die Hashnachricht über einen sicheren privaten Kanal an Bob. Bob empfängt die Klartext-Meldung, wendet den Hashalgorithmus darauf an, und vergleicht den Hash mit dem privat ausgetauschten Hash. Wenn die Hashs zusammenpassen, weiß Bob zwei Dinge:
 
-    - Die Nachricht wurde nicht geändert.
+  - Die Nachricht wurde nicht geändert.
 
-    - Der Absender der Nachricht (Alice) ist authentisch.
+  - Der Absender der Nachricht (Alice) ist authentisch.
 
-    Damit dieses System funktioniert, muss Alice den originalen Hashwert geheim halten. Nur Bob darf ihn kennen.
+  Damit dieses System funktioniert, muss Alice den originalen Hashwert geheim halten. Nur Bob darf ihn kennen.
 
 - Alice sendet die Klartext-Nachricht über einen unsicheren öffentlichen Kanal an Bob und platziert die Haschnachricht auf ihrer öffentlich zugänglichen Website.
 
-    Mit dieser Methode wird eine Manipulation der Nachricht verhindert, da jeder an einer Änderung des Hashwerts gehindert wird. Obwohl die Nachricht und deren Hash von jedem gelesen werden kann, kann der Hashwert nur von Alice geändert werden. Ein Angreifer, der die Identität von Alice annehmen will, müsste Zugriff auf die Website von Alice haben.
+  Mit dieser Methode wird eine Manipulation der Nachricht verhindert, da jeder an einer Änderung des Hashwerts gehindert wird. Obwohl die Nachricht und deren Hash von jedem gelesen werden kann, kann der Hashwert nur von Alice geändert werden. Ein Angreifer, der die Identität von Alice annehmen will, müsste Zugriff auf die Website von Alice haben.
 
 Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten von Alice lesen, da sie als Klartext übertragen werden. Vollständige Sicherheit ist in der Regel nur mit digitalen Signaturen (Signieren von Nachrichten) und Verschlüsselung möglich.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die Hashalgorithmen implementiert werden:
+.NET Framework bietet die folgenden Klassen, die Hashalgorithmen implementiert:
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -256,7 +256,7 @@ Mit keiner der vorherigen Methoden wird verhindert, dass Dritte die Nachrichten 
 
 ## <a name="random-number-generation"></a>Zufallszahlengenerierung
 
-Die Zufallszahlengenerierung ist wichtiger Bestandteil vieler kryptografischer Vorgänge. Kryptografische Schlüssel müssen z. B. möglichst zufällig erzeugt werden, sodass ein Replizieren unmöglich ist. Mit Generatoren für kryptografische Zufallszahlen müssen Ausgabewerte erzeugt werden, die rechnerisch mit einer Wahrscheinlichkeit von weniger als 0,5 vorhergesagt werden können. Deshalb darf jede Methode zur Vorhersage des nächsten Ausgabebits nicht besser sein als eine bloße Vermutung. Die Klassen in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] erzeugen mit Zufallszahlengeneratoren kryptografische Schlüssel.
+Die Zufallszahlengenerierung ist wichtiger Bestandteil vieler kryptografischer Vorgänge. Kryptografische Schlüssel müssen z. B. möglichst zufällig erzeugt werden, sodass ein Replizieren unmöglich ist. Mit Generatoren für kryptografische Zufallszahlen müssen Ausgabewerte erzeugt werden, die rechnerisch mit einer Wahrscheinlichkeit von weniger als 0,5 vorhergesagt werden können. Deshalb darf jede Methode zur Vorhersage des nächsten Ausgabebits nicht besser sein als eine bloße Vermutung. Die Klassen in .NET Framework verwenden Zufallszahlengeneratoren kryptografische Schlüssel zu generieren.
 
 Die <xref:System.Security.Cryptography.RNGCryptoServiceProvider> -Klasse ist die Implementierung eines Algorithmus mit Zufallszahlengenerator.
 
@@ -266,7 +266,7 @@ Die <xref:System.Security.Cryptography.RNGCryptoServiceProvider> -Klasse ist die
 
 ## <a name="clickonce-manifests"></a>ClickOnce-Manifeste
 
-In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]können Sie mithilfe der folgenden kryptografischen Klassen Informationen zu Manifestsignaturen für Anwendungen abrufen und überprüfen, die mithilfe der [ClickOnce-Technologie](/visualstudio/deployment/clickonce-security-and-deployment)bereitgestellt werden:
+Die folgenden kryptografischen Klassen in .NET Framework 3.5 können Sie abrufen und überprüfen die Informationen zu manifestsignaturen für Anwendungen, die mit bereitgestellt werden [ClickOnce-Technologie](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - Die <xref:System.Security.Cryptography.ManifestSignatureInformation> -Klasse ruft Informationen zu einer Manifestsignatur ab, wenn Sie deren <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> -Methodenüberladungen verwenden.
 
@@ -290,7 +290,7 @@ In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]können Sie m
 
 ## <a name="suite-b-support"></a>Suite B-Unterstützung
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] unterstützt den Suite B-Satz kryptografischer Algorithmen, die von der National Security Agency (NSA) veröffentlicht wurden. Weitere Informationen zur Suite B finden Sie im [NSA-Suite-B-Kryptographie-Merkblatt](https://www.nsa.gov/what-we-do/information-assurance/).
+.NET Framework 3.5 unterstützt die Suite B-Satz kryptografischer Algorithmen, die von der National Security Agency (NSA) veröffentlicht. Weitere Informationen zur Suite B finden Sie im [NSA-Suite-B-Kryptographie-Merkblatt](https://www.nsa.gov/what-we-do/information-assurance/).
 
 Dazu gehören die folgenden Algorithmen:
 
@@ -314,7 +314,7 @@ Die CNG-Klassen (Cryptography Next Generation) stellen einen verwalteten Wrapper
 
 Die <xref:System.Security.Cryptography.CngKey> -Klasse wird für eine Vielzahl zusätzlicher Operationen verwendet, einschließlich dem Öffnen, Erstellen, Löschen und Exportieren von Schlüsseln. Sie stellt auch den Zugriff auf das zugrunde liegende Schlüsselhandle bereit, das für den direkten Aufruf systemeigener Funktionen verwendet wird.
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] enthält darüber hinaus eine Reihe von CNG-Klassen, wie die folgenden, zur Unterstützung:
+.NET Framework 3.5 enthält auch eine Reihe von CNG-Klassen, wie die folgende Unterstützung:
 
 - <xref:System.Security.Cryptography.CngProvider> verwaltet einen Schlüsselspeicheranbieter.
 

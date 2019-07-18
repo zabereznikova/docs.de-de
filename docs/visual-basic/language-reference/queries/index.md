@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
 ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052143"
 ---
 # <a name="queries-visual-basic"></a>Abfragen (Visual Basic)
 Visual Basic ermöglicht Ihnen die Erstellung [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] -Ausdrücken in Ihrem Code.  

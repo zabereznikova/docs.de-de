@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
 ms.openlocfilehash: 4b8f36397d0f52866ebe9fa188d6b163364aeffc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608332"
 ---
 # <a name="-operator-visual-basic"></a>+=-Operator (Visual Basic)
 Der Wert einer numerischen Variablen oder Eigenschaft den Wert eines numerischen Ausdrucks hinzugefügt, und weist das Ergebnis der Variablen oder Eigenschaft. Kann auch verwendet werden, zum Verketten von einer `String` Ausdruck, der eine `String` Variablen oder einer Eigenschaft sowie das Ergebnis der Variablen oder Eigenschaft zuzuweisen.  

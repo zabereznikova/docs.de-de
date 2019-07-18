@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Sortieren von Elementen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
 ms.openlocfilehash: b6f2e0056582e60066b2c0715a663022b72a6c9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614383"
 ---
 # <a name="how-to-sort-elements-visual-basic"></a>Vorgehensweise: Sortieren von Elementen (Visual Basic)
 In diesem Beispiel wird gezeigt, wie Sie eine Abfrage schreiben können, die ihre Ergebnisse sortiert.  

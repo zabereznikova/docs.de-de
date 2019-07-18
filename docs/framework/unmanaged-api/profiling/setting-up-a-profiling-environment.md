@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098181"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775745"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Einrichten einer Profilerstellungsumgebung
 > [!NOTE]
->  Es gab beträchtliche Änderungen an der Profilerstellung in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+>  Es wurden wesentliche Änderungen an der profilerstellung in .NET Framework 4.  
   
  Wenn ein verwalteter Prozess (Anwendung oder Dienst) gestartet wird, wird die Common Language Runtime (CLR) geladen. Wenn die CLR initialisiert wird, werden die folgenden zwei Umgebungsvariablen ausgewertet, um zu entscheiden, ob der Prozess mit einem Profiler verbunden werden soll:  
   
--   COR_ENABLE_PROFILING: Die CLR stellt eine Verbindung mit einem Profiler her, nur, wenn diese Umgebungsvariable vorhanden ist und auf 1 festgelegt ist.  
+- COR_ENABLE_PROFILING: Die CLR stellt eine Verbindung mit einem Profiler her, nur, wenn diese Umgebungsvariable vorhanden ist und auf 1 festgelegt ist.  
   
--   COR_PROFILER: Wenn die COR_ENABLE_PROFILING übergibt überprüfen, verbindet sich die CLR an den Profiler, der dieser CLSID oder ProgID her, die zuvor in der Registrierung abgelegt worden sein muss. Die COR_PROFILER-Umgebungsvariable ist als Zeichenfolge definiert, wie in den beiden folgenden Beispielen gezeigt.  
+- COR_PROFILER: Wenn die COR_ENABLE_PROFILING übergibt überprüfen, verbindet sich die CLR an den Profiler, der dieser CLSID oder ProgID her, die zuvor in der Registrierung abgelegt worden sein muss. Die COR_PROFILER-Umgebungsvariable ist als Zeichenfolge definiert, wie in den beiden folgenden Beispielen gezeigt.  
   
-    ```  
+    ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
@@ -37,36 +37,36 @@ ms.locfileid: "59098181"
  Zur Profilerstellung für eine CLR-Anwendung müssen die Umgebungsvariablen COR_ENABLE_PROFILING und COR_PROFILER festgelegt werden, bevor Sie die Anwendung ausführen. Außerdem müssen Sie sicherstellen, dass die Profiler-DLL registriert ist.  
   
 > [!NOTE]
->  Ab [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] müssen Profiler nicht registriert werden.  
+>  Ab .NET Framework 4, müssen Profiler nicht registriert werden.  
   
 > [!NOTE]
->  Verwenden von .NET Framework-Versionen 2.0, 3.0 und 3.5 Profiler in den [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] und höheren Versionen müssen Sie die COMPLUS_ProfAPI_ProfilerCompatibilitySetting-Umgebungsvariable festlegen.  
+>  Um .NET Framework-Versionen 2.0, 3.0 und 3.5-Profiler im .NET Framework 4 und höhere Versionen verwenden zu können, müssen Sie die COMPLUS_ProfAPI_ProfilerCompatibilitySetting-Umgebungsvariable festlegen.  
   
 ## <a name="environment-variable-scope"></a>Umgebungsvariablenbereich  
  Die Werte, die Sie für die Umgebungsvariablen COR_ENABLE_PROFILING und COR_PROFILER festlegen, bestimmen den Einflussbereich dieser Variablen. Sie haben folgende Möglichkeiten, diese Variablen festzulegen:  
   
--   Wenn Sie die Variablen festgelegt haben, eine [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) aufrufen, sie gelten nur für die Anwendung, die Sie zu dem Zeitpunkt ausgeführt werden. (Sie gelten auch für andere Anwendungen, die von dieser Anwendung gestartet werden und die die Umgebung erben.)  
+- Wenn Sie die Variablen festgelegt haben, eine [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) aufrufen, sie gelten nur für die Anwendung, die Sie zu dem Zeitpunkt ausgeführt werden. (Sie gelten auch für andere Anwendungen, die von dieser Anwendung gestartet werden und die die Umgebung erben.)  
   
--   Wenn Sie die Variablen in einer Eingabeaufforderung festlegen, gelten sie für alle Anwendungen, die von diesem Fenster aus gestartet werden.  
+- Wenn Sie die Variablen in einer Eingabeaufforderung festlegen, gelten sie für alle Anwendungen, die von diesem Fenster aus gestartet werden.  
   
--   Wenn Sie die Variablen auf Benutzerebene festlegen, gelten sie für alle Anwendungen, die Sie mit Datei-Explorer starten. Eine Eingabeaufforderung, die Sie nach dem Festlegen dieser Variablen öffnen, hat diese Umgebungseinstellungen, ebenso wie jede Anwendung, die Sie aus diesem Fenster starten. Zum Festlegen von Umgebungsvariablen auf Benutzerebene Maustaste **Arbeitsplatz**, klicken Sie auf **Eigenschaften**, klicken Sie auf die **erweitert** auf **Umgebung Variablen**, und fügen Sie die Variablen, die **Benutzervariablen** Liste.  
+- Wenn Sie die Variablen auf Benutzerebene festlegen, gelten sie für alle Anwendungen, die Sie mit Datei-Explorer starten. Eine Eingabeaufforderung, die Sie nach dem Festlegen dieser Variablen öffnen, hat diese Umgebungseinstellungen, ebenso wie jede Anwendung, die Sie aus diesem Fenster starten. Zum Festlegen von Umgebungsvariablen auf Benutzerebene Maustaste **Arbeitsplatz**, klicken Sie auf **Eigenschaften**, klicken Sie auf die **erweitert** auf **Umgebung Variablen**, und fügen Sie die Variablen, die **Benutzervariablen** Liste.  
   
--   Wenn Sie die Variablen auf Computerebene festlegen, gelten sie für alle Anwendungen, die auf diesem Computer gestartet werden. Eine Eingabeaufforderung, die Sie auf diesem Computer öffnen, hat diese Umgebungseinstellungen, ebenso wie jede Anwendung, die Sie aus diesem Fenster starten. Dies bedeutet, dass jeder verwaltete Prozess auf diesem Computer mit Ihrem Profiler startet. Zum Festlegen von Umgebungsvariablen auf Computerebene Maustaste **Arbeitsplatz**, klicken Sie auf **Eigenschaften**, klicken Sie auf die **erweitert** auf **Umgebung Variablen**, fügen Sie die Variablen, die **Systemvariablen** aus, und klicken Sie dann den Computer neu starten. Nach dem Neustart sind die Variablen systemweit verfügbar.  
+- Wenn Sie die Variablen auf Computerebene festlegen, gelten sie für alle Anwendungen, die auf diesem Computer gestartet werden. Eine Eingabeaufforderung, die Sie auf diesem Computer öffnen, hat diese Umgebungseinstellungen, ebenso wie jede Anwendung, die Sie aus diesem Fenster starten. Dies bedeutet, dass jeder verwaltete Prozess auf diesem Computer mit Ihrem Profiler startet. Zum Festlegen von Umgebungsvariablen auf Computerebene Maustaste **Arbeitsplatz**, klicken Sie auf **Eigenschaften**, klicken Sie auf die **erweitert** auf **Umgebung Variablen**, fügen Sie die Variablen, die **Systemvariablen** aus, und klicken Sie dann den Computer neu starten. Nach dem Neustart sind die Variablen systemweit verfügbar.  
   
  Wenn Sie ein Profil für einen Windows-Dienst erstellen, müssen Sie nach dem Festlegen der Umgebungsvariablen und dem Registrieren der Profiler-DLL den Computer neu starten. Weitere Informationen zu diesen Überlegungen finden Sie im Abschnitt [Profilerstellung für einen Windows-Dienst](#windows_service).  
   
 ## <a name="additional-considerations"></a>Weitere Überlegungen  
   
--   Die Profilerklasse implementiert die [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) und [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) Schnittstellen. In .NET Framework, Version 2.0, muss ein Profiler `ICorProfilerCallback2` implementieren. Wenn dies nicht geschieht, wird `ICorProfilerCallback2` nicht geladen.  
+- Die Profilerklasse implementiert die [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) und [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) Schnittstellen. In .NET Framework, Version 2.0, muss ein Profiler `ICorProfilerCallback2` implementieren. Wenn dies nicht geschieht, wird `ICorProfilerCallback2` nicht geladen.  
   
--   Nur ein einzelner Profiler kann ein Profil für einen Prozess zu einem gegebenen Zeitpunkt in einer gegebenen Umgebung erstellen. Sie können zwei verschiedene Profiler in anderen Umgebungen registrieren, doch in jedem müssen Profile für gesonderte Prozesse erstellt werden. Der Profiler muss als prozessinterne COM-Server-DLL implementiert werden, die im gleichen Adressbereich wie der Prozess zugeordnet wird, für den ein Profil erstellt wird. Dies bedeutet, dass der Profiler prozessintern ausgeführt wird. .NET Framework unterstützt keinen anderen Typ von COM-Server. Wenn beispielsweise ein Profiler Anwendungen von einem Remotecomputer aus überwachen möchte, muss er Collector-Agents auf jedem Computer implementieren. Diese Agents fassen die Ergebnisse in Stapeln zusammen und melden diese dem zentralen Datenerfassungscomputer.  
+- Nur ein einzelner Profiler kann ein Profil für einen Prozess zu einem gegebenen Zeitpunkt in einer gegebenen Umgebung erstellen. Sie können zwei verschiedene Profiler in anderen Umgebungen registrieren, doch in jedem müssen Profile für gesonderte Prozesse erstellt werden. Der Profiler muss als prozessinterne COM-Server-DLL implementiert werden, die im gleichen Adressbereich wie der Prozess zugeordnet wird, für den ein Profil erstellt wird. Dies bedeutet, dass der Profiler prozessintern ausgeführt wird. .NET Framework unterstützt keinen anderen Typ von COM-Server. Wenn beispielsweise ein Profiler Anwendungen von einem Remotecomputer aus überwachen möchte, muss er Collector-Agents auf jedem Computer implementieren. Diese Agents fassen die Ergebnisse in Stapeln zusammen und melden diese dem zentralen Datenerfassungscomputer.  
   
--   Da der Profiler ein COM-Objekt ist, das prozessintern instanziiert wird, verfügt jede Anwendung mit Profil über eine eigene Kopie des Profilers. Daher muss eine einzelne Profilerinstanz nicht Daten von mehreren Anwendungen behandeln. Sie müssen jedoch eine Logik zum Protokollierungscode des Profilers hinzufügen, um zu verhindern, dass die Protokolldatei durch andere Anwendungen mit Profil überschrieben wird.  
+- Da der Profiler ein COM-Objekt ist, das prozessintern instanziiert wird, verfügt jede Anwendung mit Profil über eine eigene Kopie des Profilers. Daher muss eine einzelne Profilerinstanz nicht Daten von mehreren Anwendungen behandeln. Sie müssen jedoch eine Logik zum Protokollierungscode des Profilers hinzufügen, um zu verhindern, dass die Protokolldatei durch andere Anwendungen mit Profil überschrieben wird.  
   
 ## <a name="initializing-the-profiler"></a>Initialisieren des Profilers  
  Wenn die Prüfung auf beide Umgebungsvariablen erfolgreich ist, erstellt die CLR eine Instanz des Profilers in ähnlicher Weise wie für die COM-`CoCreateInstance`-Funktion. Der Profiler wird nicht durch einen direkten Aufruf von `CoCreateInstance` geladen. Deshalb wird ein Aufruf von `CoInitialize`, der das Festlegen des Threadingmodells erfordert, vermieden. Die CLR ruft dann die [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) -Methode in der Profiler. Die Signatur dieser Methode wird im Folgenden beschrieben.  
   
-```  
+```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
@@ -75,7 +75,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
 ## <a name="setting-event-notifications"></a>Festlegen von Ereignisbenachrichtigungen  
  Der Profiler ruft anschließend die [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) Methode, um anzugeben, welche Kategorien von Benachrichtigungen von Interesse sind. Wenn für den Profiler z. B. nur Benachrichtigungen zum Starten und Verlassen von Funktionen und an Garbage Collection-Benachrichtigungen von Belang sind, wird Folgendes angegeben.  
   
-```  
+```cpp  
 ICorProfilerInfo* pInfo;  
 pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  

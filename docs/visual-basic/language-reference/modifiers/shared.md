@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: 12c81a9a0651088a348afeaff3b71935d289da53
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd43ef7cb5c16995fff87a65fc0f0974d8f4a47d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816282"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647706"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 Gibt an, dass eine oder mehrere deklarierte Programmierelemente einer Klasse oder Struktur, die in großen, und nicht mit einer bestimmten Instanz der Klasse oder Struktur zugeordnet sind.  
@@ -30,25 +30,25 @@ Gibt an, dass eine oder mehrere deklarierte Programmierelemente einer Klasse ode
   
 ## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** Sie können `Shared` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `Shared` Element muss eine Klasse oder Struktur sein, und eine Quelldatei, Namespace oder Prozedur nicht möglich.  
+- **Deklarationskontext.** Sie können `Shared` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `Shared` Element muss eine Klasse oder Struktur sein, und eine Quelldatei, Namespace oder Prozedur nicht möglich.  
   
--   **Kombinierte Modifizierer.** Sie können keine angeben `Shared` zusammen mit [überschreibt](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), oder [ Statische](../../../visual-basic/language-reference/modifiers/static.md) in der gleichen Deklaration.  
+- **Kombinierte Modifizierer.** Sie können keine angeben `Shared` zusammen mit [überschreibt](../../../visual-basic/language-reference/modifiers/overrides.md), [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md), oder [ Statische](../../../visual-basic/language-reference/modifiers/static.md) in der gleichen Deklaration.  
   
--   **Zugriff auf.** Sie haben einen freigegebenen Elements durch die Qualifizierung mit dem Namen Klasse oder Struktur, die nicht mit dem Variablennamen, die einer bestimmten Instanz der Klasse oder Struktur zugreifen. Sie müssen auch keinen zum Erstellen einer Instanz einer Klasse oder Struktur auf freigegebenen Member zuzugreifen.  
+- **Zugriff auf.** Sie haben einen freigegebenen Elements durch die Qualifizierung mit dem Namen Klasse oder Struktur, die nicht mit dem Variablennamen, die einer bestimmten Instanz der Klasse oder Struktur zugreifen. Sie müssen auch keinen zum Erstellen einer Instanz einer Klasse oder Struktur auf freigegebenen Member zuzugreifen.  
   
      Im folgenden Beispiel wird die freigegebene Prozedur <xref:System.Double.IsNaN%2A> verfügbar gemacht werden, indem die <xref:System.Double> Struktur.  
   
      `If Double.IsNaN(result) Then MsgBox("Result is mathematically undefined.")`  
   
--   **Implizite freigeben.** Können keine der `Shared` -Modifizierer in einer [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md), aber Konstanten sind implizit freigegeben. Auf ähnliche Weise können Sie nicht Mitglied ein Modul oder eine Schnittstelle sein deklarieren `Shared`, aber sie werden implizit freigegeben.  
+- **Implizite freigeben.** Können keine der `Shared` -Modifizierer in einer [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md), aber Konstanten sind implizit freigegeben. Auf ähnliche Weise können Sie nicht Mitglied ein Modul oder eine Schnittstelle sein deklarieren `Shared`, aber sie werden implizit freigegeben.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Speicher.** Eine freigegebene Variable oder ein Ereignis wird im Arbeitsspeicher gespeichert, nur nach dem, unabhängig davon, wie viele oder wenige Instanzen der Klasse oder Struktur erstellen. Analog dazu enthält ein gemeinsames Verfahren oder eine Eigenschaft nur einen Satz von lokalen Variablen.  
+- **Speicher.** Eine freigegebene Variable oder ein Ereignis wird im Arbeitsspeicher gespeichert, nur nach dem, unabhängig davon, wie viele oder wenige Instanzen der Klasse oder Struktur erstellen. Analog dazu enthält ein gemeinsames Verfahren oder eine Eigenschaft nur einen Satz von lokalen Variablen.  
   
--   **Zugriff auf durch eine Instanzvariable.** Es ist möglich, die Zugriff auf einen freigegebenen Elements durch die Qualifizierung mit dem Namen einer Variablen, die eine bestimmte Instanz der Klasse oder Struktur enthält. Obwohl dies in der Regel funktioniert wie erwartet, kann der Compiler generiert eine Warnung angezeigt und führt den Zugriff über den Namen der Klasse oder Struktur anstelle der Variablen.  
+- **Zugriff auf durch eine Instanzvariable.** Es ist möglich, die Zugriff auf einen freigegebenen Elements durch die Qualifizierung mit dem Namen einer Variablen, die eine bestimmte Instanz der Klasse oder Struktur enthält. Obwohl dies in der Regel funktioniert wie erwartet, kann der Compiler generiert eine Warnung angezeigt und führt den Zugriff über den Namen der Klasse oder Struktur anstelle der Variablen.  
   
--   **Zugriff auf durch einen Instanzausdruck.** Wenn Sie einen freigegebenen Elements durch einen Ausdruck, die eine Instanz ihrer Klasse oder Struktur zurückgibt zugreifen, wird der Compiler den Zugriff durch den Namen der Klasse oder Struktur, anstelle die Auswertung des Ausdrucks. Dies erzeugt unerwartete Ergebnisse, wenn das beabsichtigt ist des Ausdrucks, der andere Aktionen sowie die Instanz zurückgeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+- **Zugriff auf durch einen Instanzausdruck.** Wenn Sie einen freigegebenen Elements durch einen Ausdruck, die eine Instanz ihrer Klasse oder Struktur zurückgibt zugreifen, wird der Compiler den Zugriff durch den Namen der Klasse oder Struktur, anstelle die Auswertung des Ausdrucks. Dies erzeugt unerwartete Ergebnisse, wenn das beabsichtigt ist des Ausdrucks, der andere Aktionen sowie die Instanz zurückgeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
     ```vb
     Sub main()  

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 023b7d8c5aa9d435d3493935b4439ae4262c85bb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670845"
+---
 > [!CAUTION]
 >  Codezugriffssicherheit und teilweise vertrauenswürdiger Code  
 >   

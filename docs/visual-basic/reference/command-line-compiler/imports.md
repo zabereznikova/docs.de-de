@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663244"
 ---
 # <a name="-imports-visual-basic"></a>-imports (Visual Basic)
 Importiert Namespaces aus einer angegebenen Assembly.  

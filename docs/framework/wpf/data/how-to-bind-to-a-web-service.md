@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954283"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Vorgehensweise: Binden an einen Webdienst
 Dieses Beispiel zeigt, wie zum Binden an Objekte, die durch Aufrufe des Webdiensts-Methode zurückgegeben wird.  
@@ -24,13 +24,13 @@ Dieses Beispiel zeigt, wie zum Binden an Objekte, die durch Aufrufe des Webdiens
   
  Bevor Sie einen Webdienst aufrufen, müssen Sie einen Verweis darauf erstellen. Erstellen Sie einen Webverweis auf den Dienst mit MTPS [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], befolgen Sie die folgenden Schritte aus:  
   
-1.  Öffnen Sie Ihr [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]-Projekt.  
+1. Öffnen Sie Ihr [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]-Projekt.  
   
-2.  Von der **Projekt** Menü klicken Sie auf **Webverweis hinzufügen**.  
+2. Von der **Projekt** Menü klicken Sie auf **Webverweis hinzufügen**.  
   
-3.  Legen Sie im Dialogfeld die **URL** zu [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
+3. Legen Sie im Dialogfeld die **URL** zu [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
   
-4.  Drücken Sie **wechseln** und dann **Verweis hinzufügen**.  
+4. Drücken Sie **wechseln** und dann **Verweis hinzufügen**.  
   
  Anschließend rufen Sie die Webdienstmethode und legen Sie die <xref:System.Windows.FrameworkElement.DataContext%2A> des entsprechenden Steuerelements oder des Fenster auf das zurückgegebene Objekt. Die **GetContent** -Methode des Diensts MTPS akzeptiert einen Verweis auf die **GetContentRequest** Objekt. Aus diesem Grund legt im folgenden Beispiel wird zuerst ein Anforderungsobjekt fest:  
   
@@ -47,6 +47,6 @@ Dieses Beispiel zeigt, wie zum Binden an Objekte, die durch Aufrufe des Webdiens
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
 - [Übersicht über Bindungsquellen](binding-sources-overview.md)
 - [Bereitstellen von Daten für die Bindung in XAML](how-to-make-data-available-for-binding-in-xaml.md)

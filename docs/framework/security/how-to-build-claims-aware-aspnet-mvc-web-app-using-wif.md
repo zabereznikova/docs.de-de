@@ -1,76 +1,76 @@
 ---
-title: 'Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET MVC-Webanwendung mithilfe von WIF'
+title: 'Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET MVC-Webanwendung mithilfe von WIF'
 ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
-ms.openlocfilehash: 4a003acbf4e182a0493368b586a3add229d8b526
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f2ac263d8869c770594283923a45c7c53c9df4cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035999"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626120"
 ---
-# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET MVC-Webanwendung mithilfe von WIF
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET MVC-Webanwendung mithilfe von WIF
 ## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>Zusammenfassung  
  In dieser Vorgehensweise werden ausführliche Prozeduren zum Erstellen einer einfachen Ansprüche unterstützenden ASP.NET MVC-Webanwendung vorgestellt. Sie enthält auch Anweisungen dazu, wie eine einfache Ansprüche unterstützende ASP.NET MVC-Webanwendung auf die erfolgreiche Implementierung der anspruchsbasierten Authentifizierung getestet werden kann. Diese Vorgehensweise enthält keine detaillierten Anweisungen zum Erstellen eines Sicherheitstokendiensts (Security Token Service, STS) und geht davon aus, dass Sie bereits einen STS konfiguriert haben.  
   
 ## <a name="contents"></a>Inhalt  
   
--   Ziele  
+- Ziele  
   
--   Zusammenfassung von Schritten  
+- Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET MVC-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET MVC-Anwendung  
   
--   Schritt 2: Konfigurieren einer ASP.NET MVC-Anwendung für die anspruchsbasierte Authentifizierung  
+- Schritt 2: Konfigurieren einer ASP.NET MVC-Anwendung für die anspruchsbasierte Authentifizierung  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
--   Verwandte Elemente  
+- Verwandte Elemente  
   
 ## <a name="objectives"></a>Ziele  
   
--   Konfigurieren einer ASP.NET MVC-Webanwendung für die anspruchsbasierte Authentifizierung  
+- Konfigurieren einer ASP.NET MVC-Webanwendung für die anspruchsbasierte Authentifizierung  
   
--   Testen einer erfolgreichen Ansprüche unterstützenden ASP.NET MVC-Webanwendung  
+- Testen einer erfolgreichen Ansprüche unterstützenden ASP.NET MVC-Webanwendung  
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET MVC-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET MVC-Anwendung  
   
--   Schritt 2: Konfigurieren einer ASP.NET MVC-Anwendung für die anspruchsbasierte Authentifizierung  
+- Schritt 2: Konfigurieren einer ASP.NET MVC-Anwendung für die anspruchsbasierte Authentifizierung  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>Schritt 1: Erstellen einer einfachen ASP.NET MVC-Anwendung  
  In diesem Schritt erstellen Sie eine neue ASP.NET MVC-Anwendung.  
   
 #### <a name="to-create-simple-aspnet-mvc-application"></a>Erstellen einer einfachen ASP.NET MVC-Anwendung  
   
-1.  Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu**, und klicken Sie dann auf **Projekt**.  
+1. Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu**, und klicken Sie dann auf **Projekt**.  
   
-2.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET MVC 3-Webanwendung**.  
+2. Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET MVC 3-Webanwendung**.  
   
-3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und klicken Sie auf **OK**.  
+3. Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und klicken Sie auf **OK**.  
   
-4.  Wählen Sie im Dialogfeld **Neues ASP.NET MVC 3-Projekt** aus den verfügbaren Vorlagen **Internetanwendung** aus, und versichern Sie sich, dass die **Ansichts-Engine** auf **Razor** festgelegt ist. Klicken Sie dann auf **OK**.  
+4. Wählen Sie im Dialogfeld **Neues ASP.NET MVC 3-Projekt** aus den verfügbaren Vorlagen **Internetanwendung** aus, und versichern Sie sich, dass die **Ansichts-Engine** auf **Razor** festgelegt ist. Klicken Sie dann auf **OK**.  
   
-5.  Wenn das neue Projekt sich öffnet, klicken Sie mit der rechten Maustaste auf das **TestApp**-Projekt im **Projektmappen-Explorer**, und klicken Sie dann auf die Option **Eigenschaften**.  
+5. Wenn das neue Projekt sich öffnet, klicken Sie mit der rechten Maustaste auf das **TestApp**-Projekt im **Projektmappen-Explorer**, und klicken Sie dann auf die Option **Eigenschaften**.  
   
-6.  Klicken Sie auf der Seite „Eigenschaften“ des Projekts links auf die Registerkarte **Web**, und versichern Sie sich, dass die Option **Lokalen IIS-Webserver verwenden** ausgewählt ist.  
+6. Klicken Sie auf der Seite „Eigenschaften“ des Projekts links auf die Registerkarte **Web**, und versichern Sie sich, dass die Option **Lokalen IIS-Webserver verwenden** ausgewählt ist.  
   
 ## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a>Schritt 2: Konfigurieren einer ASP.NET MVC-Anwendung für die anspruchsbasierte Authentifizierung  
  In diesem Schritt fügen Sie Konfigurationseinträge zur Konfigurationsdatei *Web.config* Ihrer ASP.NET MVC-Webanwendung hinzu, damit diese Ansprüche unterstützt.  
   
 #### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a>Konfigurieren einer ASP.NET MVC-Anwendung für die anspruchsbasierte Authentifizierung  
   
-1.  Fügen Sie der Konfigurationsdatei *Web.config* folgende Definitionen für den Konfigurationsabschnitt hinzu. Dadurch werden Konfigurationsabschnitte definiert, die für Windows Identity Foundation erforderlich sind. Fügen Sie die Definitionen direkt nach dem öffnenden Element **\<configuration>** hinzu:  
+1. Fügen Sie der Konfigurationsdatei *Web.config* folgende Definitionen für den Konfigurationsabschnitt hinzu. Dadurch werden Konfigurationsabschnitte definiert, die für Windows Identity Foundation erforderlich sind. Fügen Sie die Definitionen direkt nach dem öffnenden Element **\<configuration>** hinzu:  
   
     ```xml  
     <configSections>  
@@ -79,7 +79,7 @@ ms.locfileid: "48035999"
     </configSections>  
     ```  
   
-2.  Fügen Sie ein **\<location>**-Element hinzu, das den Zugriff auf die Verbundmetadaten der Anwendung ermöglicht:  
+2. Fügen Sie ein **\<location>**-Element hinzu, das den Zugriff auf die Verbundmetadaten der Anwendung ermöglicht:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -91,7 +91,7 @@ ms.locfileid: "48035999"
     </location>  
     ```  
   
-3.  Fügen Sie die folgenden Konfigurationseinträge innerhalb des Elements **\<system.web>** hinzu, um Benutzer zu verweigern, die native Authentifizierung zu deaktivieren und WIF zu ermöglichen, die Authentifizierung zu verwalten.  
+3. Fügen Sie die folgenden Konfigurationseinträge innerhalb des Elements **\<system.web>** hinzu, um Benutzer zu verweigern, die native Authentifizierung zu deaktivieren und WIF zu ermöglichen, die Authentifizierung zu verwalten.  
   
     ```xml  
     <authorization>  
@@ -100,7 +100,7 @@ ms.locfileid: "48035999"
     <authentication mode="None" />  
     ```  
   
-4.  Fügen Sie folgende auf Windows Identity Foundation bezogene Konfigurationseinträge hinzu, und versichern Sie sich, dass die URL und Portnummer Ihrer ASP.NET-Anwendungen mit den Werten des **\<audienceUris>**-Eintrags, des **realm**-Attributs des **\<wsFederation>**-Elements und des **reply**-Attributs des **\<wsFederation>**-Elements übereinstimmen. Vergewissern Sie sich zudem, dass der Wert des **Ausstellers** der URL Ihres Sicherheitstokendiensts entspricht.  
+4. Fügen Sie folgende auf Windows Identity Foundation bezogene Konfigurationseinträge hinzu, und versichern Sie sich, dass die URL und Portnummer Ihrer ASP.NET-Anwendungen mit den Werten des **\<audienceUris>**-Eintrags, des **realm**-Attributs des **\<wsFederation>**-Elements und des **reply**-Attributs des **\<wsFederation>**-Elements übereinstimmen. Vergewissern Sie sich zudem, dass der Wert des **Ausstellers** der URL Ihres Sicherheitstokendiensts entspricht.  
   
     ```xml  
     <system.identityModel>  
@@ -124,16 +124,16 @@ ms.locfileid: "48035999"
     </system.identityModel.services>  
     ```  
   
-5.  Fügen Sie der Assembly <xref:System.IdentityModel> einen Verweis hinzu.  
+5. Fügen Sie der Assembly <xref:System.IdentityModel> einen Verweis hinzu.  
   
-6.  Kompilieren Sie die Projektmappe, um sich zu vergewissern, ob Fehler vorliegen.  
+6. Kompilieren Sie die Projektmappe, um sich zu vergewissern, ob Fehler vorliegen.  
   
 ## <a name="step-3--test-your-solution"></a>Schritt 3: Testen Ihrer Projektmappe  
  In diesem Schritt testen Sie die ASP.NET MVC-Webanwendung, die für die anspruchsbasierte Authentifizierung konfiguriert wurde. Sie können einen grundlegenden Test ausführen, indem Sie einfachen Code hinzufügen, der die Ansprüche im Token anzeigt, die vom Sicherheitstokendienst (STS) ausgegeben werden.  
   
 #### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a>Testen Ihrer ASP.NET MVC-Anwendung für die anspruchsbasierte Authentifizierung  
   
-1.  Erweitern Sie im **Projektmappen-Explorer** den Ordner **Controller**, und öffnen Sie die Datei *HomeController.cs* im Editor. Fügen Sie der **Index**-Methode folgenden Code hinzu:  
+1. Erweitern Sie im **Projektmappen-Explorer** den Ordner **Controller**, und öffnen Sie die Datei *HomeController.cs* im Editor. Fügen Sie der **Index**-Methode folgenden Code hinzu:  
   
     ```csharp  
     public ActionResult Index()  
@@ -144,7 +144,7 @@ ms.locfileid: "48035999"
     }  
     ```  
   
-2.  Erweitern Sie im **Projektmappen-Explorer** zunächst **Ansichten** und dann die Ordner **Home**. Öffnen Sie dann die Datei *Index.cshtml* im Editor. Löschen Sie deren Inhalte, und fügen Sie das folgende Markup hinzu:  
+2. Erweitern Sie im **Projektmappen-Explorer** zunächst **Ansichten** und dann die Ordner **Home**. Öffnen Sie dann die Datei *Index.cshtml* im Editor. Löschen Sie deren Inhalte, und fügen Sie das folgende Markup hinzu:  
   
     ```html  
     @{  
@@ -212,10 +212,10 @@ ms.locfileid: "48035999"
     </table>  
     ```  
   
-3.  Starten Sie die Projektmappe durch Drücken der Taste **F5**.  
+3. Starten Sie die Projektmappe durch Drücken der Taste **F5**.  
   
-4.  Ihnen sollte die Seite angezeigt werden, die die Ansprüche im Token anzeigen, die Ihnen vom Sicherheitstokendienst ausgegeben wurden.  
+4. Ihnen sollte die Seite angezeigt werden, die die Ansprüche im Token anzeigen, die Ihnen vom Sicherheitstokendienst ausgegeben wurden.  
   
 ## <a name="related-items"></a>Verwandte Elemente  
   
--   [Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [How To: Erstellen von Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

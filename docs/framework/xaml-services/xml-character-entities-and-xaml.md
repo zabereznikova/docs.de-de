@@ -21,11 +21,11 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938709"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML-Zeichenentitäten und XAML
 XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem Thema werden einige bestimmte Zeichenentitäten und allgemeine Überlegungen für andere XML-Konzepte in XAML beschrieben.  
@@ -67,4 +67,4 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
 - [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Markuperweiterungen und WPF-XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName-Grammatik](xamlname-grammar.md)
-- [Leerstellenverarbeitung in XAML](whitespace-processing-in-xaml.md)
+- [Leerzeichen in XAML verarbeitet](whitespace-processing-in-xaml.md)

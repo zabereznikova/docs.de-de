@@ -1,15 +1,13 @@
 ---
 title: Entwerfen der Microserviceanwendungsschicht und Web-API
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Eine kurze Betrachtung der SOLID-Prinzipien zum Entwerfen der Anwendungsschicht.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 4a6a7faac6d0419d88e613ca23d9862475659918
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3c3b9f74e76e01deafa1f97de5d3250d57716014
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464202"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639508"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Entwerfen der Microserviceanwendungsschicht und Web-API
 
@@ -38,13 +36,13 @@ Ein weiteres Handbuch wäre erforderlich, um SOLID ausführlich zu behandeln. Di
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **SOLID: Fundamental OOP Principles (SOLID: grundlegende OOP-Prinzipien)** \
-  [https://deviq.com/solid/](https://deviq.com/solid/)
+  <https://deviq.com/solid/>
 
 - **Inversion of Control Containers and the Dependency Injection pattern** \ (Umkehrung von Steuerelementcontainern und das Abhängigkeitsinjektionsmuster)
-  [https://martinfowler.com/articles/injection.html](https://martinfowler.com/articles/injection.html)
+  <https://martinfowler.com/articles/injection.html>
 
 - **Steve Smith. New is glue („New“ hält besser)** \
-  [https://ardalis.com/new-is-glue](https://ardalis.com/new-is-glue)
+  <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
 > [Zurück](nosql-database-persistence-infrastructure.md)

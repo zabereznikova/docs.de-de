@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff2ddb1e98f3455c6915acf8149f528176228425
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 81fcc99a739d5e673d1d01d5efb801ba4930bdee
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177982"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752547"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance-Funktionszeiger
 Verweist auf eine Funktion, die einem Schnittstellenobjekt für das angegebene Ziel-Element erstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (  
     [in]  REFIID           iid,  
     [in]  ICLRDataTarget  *target,  

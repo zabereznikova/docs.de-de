@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b86775f78b02b09dd8fb7925a13625783520bce1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076860"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052666"
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs, die auf Refelktion beruhen
-In einigen Fällen ist die Verwendung von Reflektion im Code nicht offensichtlich, und daher behält die [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette zur Laufzeit benötigte Metadaten nicht bei. In diesem Thema werden einige gängige APIs oder Programmiermuster behandelt, die nicht als Teil der Reflektions-API betrachtet werden, aber Reflektion benötigen, um erfolgreich ausgeführt zu werden. Wenn Sie diese im Quellcode verwenden, können Sie Informationen darüber in die Laufzeitanweisungsdatei (.rd.xml) einfügen, sodass Aufrufe dieser APIs zur Laufzeit keine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme oder sonstige Ausnahmen auslösen.  
+In einigen Fällen ist die Verwendung von Reflektion im Code nicht offensichtlich, und daher nicht die .NET Native-toolkette Metadaten, die zur Laufzeit benötigt wird beibehalten. In diesem Thema werden einige gängige APIs oder Programmiermuster behandelt, die nicht als Teil der Reflektions-API betrachtet werden, aber Reflektion benötigen, um erfolgreich ausgeführt zu werden. Wenn Sie diese im Quellcode verwenden, können Sie Informationen darüber in die Laufzeitanweisungsdatei (.rd.xml) einfügen, sodass Aufrufe dieser APIs zur Laufzeit keine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme oder sonstige Ausnahmen auslösen.  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType-Methode  
  Sie können einen generischen Typ `AppClass<T>` dynamisch instanziieren, indem Sie die <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>-Methode aufrufen. Dazu verwenden Sie Code wie den folgenden:  
@@ -51,11 +51,11 @@ App1.AppClass`1<System.Int32>.
   
  Damit dieser Code erfolgreich ausgeführt wird, sind mehrere Elemente von Metadaten erforderlich:  
   
--   `Browse` die Metadaten für den Typ, dessen Methode Sie aufrufen möchten.  
+- `Browse`-Metadaten für den Typ, dessen Methode Sie aufrufen möchten.  
   
--   `Browse` Metadaten für die Methode, die Sie aufrufen möchten.  Ist es eine öffentliche Methode, umfasst das Hinzufügen von öffentlichen `Browse`-Metadaten für den enthaltenden Typ auch die Methode.  
+- `Browse`-Metadaten für die Methode, die Sie aufrufen möchten.  Ist es eine öffentliche Methode, umfasst das Hinzufügen von öffentlichen `Browse`-Metadaten für den enthaltenden Typ auch die Methode.  
   
--   Dynamische Metadaten für die Methode, die Sie aufrufen möchten, damit der Reflektionsaufrufdelegat nicht von der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette entfernt wird. Wenn dynamische Metadaten für die Methode fehlen, wird beim Aufruf der <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>-Methode die folgende Ausnahme ausgelöst:  
+- Dynamische Metadaten für die Methode, die Sie aufrufen möchten, damit der reflektionsaufrufdelegat nicht von der .NET Native-toolkette entfernt wird. Wenn dynamische Metadaten für die Methode fehlen, wird beim Aufruf der <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>-Methode die folgende Ausnahme ausgelöst:  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse` Metadaten für den Arraytyp ist erforderlich, um ihn dynamisch zu instanziieren.  Die folgende Laufzeitdirektive ermöglicht die dynamische Instanziierung von `Class1[]`.  
+ `Browse`-Metadaten für den Arraytyp sind erforderlich, um ihn dynamisch zu instanziieren.  Die folgende Laufzeitdirektive ermöglicht die dynamische Instanziierung von `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
@@ -95,4 +95,4 @@ Unfortunately, no further information is available.
 ## <a name="see-also"></a>Siehe auch
 
 - [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

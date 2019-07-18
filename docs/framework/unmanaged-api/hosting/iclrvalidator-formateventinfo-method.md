@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9117a82dff48dcda8d96f0feb7b8c4a001fa17f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7354536db483ad93d29fef29745af44a6f90884c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205874"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779929"
 ---
 # <a name="iclrvalidatorformateventinfo-method"></a>ICLRValidator::FormatEventInfo-Methode
 Ruft eine ausführliche Meldung über den angegebenen Validierungsfehler ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT FormatEventInfo (  
     [in] HRESULT            hVECode,  
     [in] VEContext          Context,  

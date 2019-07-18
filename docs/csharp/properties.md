@@ -2,12 +2,12 @@
 title: Eigenschaften
 description: Erfahren Sie mehr über C#-Eigenschaften, die Funktionen für die Validierung, berechnete Werte, die verzögerte Auswertung und Benachrichtigungen für Eigenschaftsänderungen umfassen.
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956237"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878282"
 ---
 # <a name="properties"></a>Eigenschaften
 
@@ -140,7 +140,7 @@ Ein abschließendes Szenario, in dem Sie Code in einem Eigenschaftenaccessor sch
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-Der Operator `?.` wird *bedingter NULL-Operator* genannt. Es sucht vor der Auswertung der rechten Seite des Operators nach einem NULL-Verweis. Das Endergebnis bedeutet, dass, wenn sich keine Abonnenten im `PropertyChanged`-Ereignis befinden, der Code zum Auslösen des Ereignisses nicht ausgeführt wird. Er würde eine `NullReferenceException` auslösen, ohne diese in diesem Fall zu überprüfen. Weitere Informationen finden Sie unter [`events`](delegates-events.md). In diesem Beispiel wird auch der neue `nameof`-Operator verwendet, um vom Symbol des Eigenschaftennamen in die Textdarstellung zu konvertieren.
+Der Operator `?.` wird *bedingter NULL-Operator* genannt. Es sucht vor der Auswertung der rechten Seite des Operators nach einem NULL-Verweis. Das Endergebnis bedeutet, dass, wenn sich keine Abonnenten im `PropertyChanged`-Ereignis befinden, der Code zum Auslösen des Ereignisses nicht ausgeführt wird. Er würde eine `NullReferenceException` auslösen, ohne diese in diesem Fall zu überprüfen. Weitere Informationen finden Sie unter [`events`](events-overview.md). In diesem Beispiel wird auch der neue `nameof`-Operator verwendet, um vom Symbol des Eigenschaftennamen in die Textdarstellung zu konvertieren.
 Mithilfe von `nameof` können Fehler reduziert werden, bei denen Sie den Namen der Eigenschaft falsch eingegeben haben.
 
 Erneut ist die Implementierung von <xref:System.ComponentModel.INotifyPropertyChanged> ein Beispiel für einen Fall, in dem Sie Code in Ihren Accessoren schreiben können, um die benötigten Szenarios zu unterstützen.

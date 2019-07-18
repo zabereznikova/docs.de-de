@@ -2,12 +2,12 @@
 title: Arithmetische Operatoren
 description: Erfahren Sie, bis die arithmetischen Operatoren, die in der Programmiersprache F# verfügbar sind.
 ms.date: 04/04/2018
-ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 74ab813a7ca5018b6bd084aea10627e4afd62015
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614583"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641645"
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
 

@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID55
 ms.assetid: d674a0fb-ef16-4cc2-9da7-709a8a07dbea
-ms.openlocfilehash: e565dbd6352a8f76290f3f58d62e2e14a18ef45f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8ec878e04b0128c997c5be51d2c714d55abcde8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823505"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665121"
 ---
 # <a name="file-already-open"></a>Die Datei ist bereits geöffnet.
 Manchmal muss eine Datei geschlossen werden, bevor Sie einen anderen `FileOpen` oder andere Vorgänge ausgeführt werden kann. Zu den möglichen Ursachen für diesen Fehler gehören:  
   
--   Eine sequenzielle Ausgabemodus `FileOpen` Vorgang wurde ausgeführt, für eine Datei, die bereits geöffnet ist.  
+- Eine sequenzielle Ausgabemodus `FileOpen` Vorgang wurde ausgeführt, für eine Datei, die bereits geöffnet ist.  
   
--   Eine Anweisung verweist auf eine geöffnete Datei.  
+- Eine Anweisung verweist auf eine geöffnete Datei.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Schließen Sie die Datei, bevor die Anweisung ausgeführt.  
+1. Schließen Sie die Datei, bevor die Anweisung ausgeführt.  
   
 ## <a name="see-also"></a>Siehe auch
 

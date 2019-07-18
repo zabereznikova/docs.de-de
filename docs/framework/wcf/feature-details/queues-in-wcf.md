@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: e28c91a8cc1798a4d0cd690f72e503b687af0108
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 6990d2b08f0ff729f0c0138c091c728a5ba59605
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643542"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Warteschlangen in Windows Communication Foundation
 Die Themen in diesem Abschnitt erläutert die Windows Communication Foundation (WCF)-Unterstützung für Warteschlangen. WCF bietet Unterstützung für Warteschlangenvorgänge durch die Nutzung von Microsoft Message Queuing (vormals bekannt als MSMQ) als Transport und ermöglicht die folgenden Szenarien:  
   
--   Lose verbundene Anwendungen: Die sendenden Anwendungen können Nachrichten an Warteschlangen senden, unabhängig davon, ob die empfangende Anwendung für die Verarbeitung der Nachricht zur Verfügung steht. Die Warteschlange macht die Verarbeitung unabhängig. So kann die sendende Anwendung Nachrichten mit einer Frequenz an die Warteschlange senden, die unabhängig davon ist, wie schnell die empfangenden Anwendungen die Nachrichten verarbeiten können. Die Gesamtverfügbarkeit des Systems verbessert sich, wenn das Senden von Nachrichten an eine Warteschlange und die Nachrichtenverarbeitung nur lose miteinander verbunden sind.  
+- Lose verbundene Anwendungen: Die sendenden Anwendungen können Nachrichten an Warteschlangen senden, unabhängig davon, ob die empfangende Anwendung für die Verarbeitung der Nachricht zur Verfügung steht. Die Warteschlange macht die Verarbeitung unabhängig. So kann die sendende Anwendung Nachrichten mit einer Frequenz an die Warteschlange senden, die unabhängig davon ist, wie schnell die empfangenden Anwendungen die Nachrichten verarbeiten können. Die Gesamtverfügbarkeit des Systems verbessert sich, wenn das Senden von Nachrichten an eine Warteschlange und die Nachrichtenverarbeitung nur lose miteinander verbunden sind.  
   
--   Fehlerisolierung: Anwendungen, die Nachrichten an eine Warteschlange senden oder Nachrichten empfangen, können fehlschlagen, ohne dass dies Auswirkungen auf die anderen Anwendungen hat. Wenn beispielsweise in der empfangenden Anwendung ein Fehler auftritt, kann die sendende Anwendung trotzdem weiterhin Nachrichten an die Warteschlange senden. Sobald der Empfänger wieder einsatzbereit ist, können die Nachrichten in der Warteschlange verarbeitet werden. Durch die Fehlerisolierung werden Zuverlässigkeit und Verfügbarkeit des Systems insgesamt verbessert.  
+- Fehlerisolierung: Anwendungen, die Nachrichten an eine Warteschlange senden oder Nachrichten empfangen, können fehlschlagen, ohne dass dies Auswirkungen auf die anderen Anwendungen hat. Wenn beispielsweise in der empfangenden Anwendung ein Fehler auftritt, kann die sendende Anwendung trotzdem weiterhin Nachrichten an die Warteschlange senden. Sobald der Empfänger wieder einsatzbereit ist, können die Nachrichten in der Warteschlange verarbeitet werden. Durch die Fehlerisolierung werden Zuverlässigkeit und Verfügbarkeit des Systems insgesamt verbessert.  
   
--   Lastenausgleich: Sendende Anwendungen können empfangende Anwendungen mit Nachrichten überlasten. Durch Warteschlangen kann ein Ungleichgewicht an gesendeten und verarbeiteten Nachrichten ausgeglichen werden, sodass der Empfänger nicht mit Nachrichten überschwemmt wird.  
+- Lastenausgleich: Sendende Anwendungen können empfangende Anwendungen mit Nachrichten überlasten. Durch Warteschlangen kann ein Ungleichgewicht an gesendeten und verarbeiteten Nachrichten ausgeglichen werden, sodass der Empfänger nicht mit Nachrichten überschwemmt wird.  
   
--   Getrennte Vorgänge: Die Vorgänge des Sendens, Empfangens und Verarbeitens können bei der Kommunikation über Netzwerke mit hoher Latenz oder eingeschränkter Verfügbarkeit, wie dies zum Beispiel bei mobilen Geräten der Fall ist, voneinander getrennt werden. Warteschlangen ermöglichen die Fortsetzung dieser Vorgänge, selbst wenn die Endpunkte nicht erreichbar sind. Sobald die Verbindung wiederhergestellt ist, leitet die Warteschlange die Nachrichten an die empfangende Anwendung weiter.  
+- Getrennte Vorgänge: Die Vorgänge des Sendens, Empfangens und Verarbeitens können bei der Kommunikation über Netzwerke mit hoher Latenz oder eingeschränkter Verfügbarkeit, wie dies zum Beispiel bei mobilen Geräten der Fall ist, voneinander getrennt werden. Warteschlangen ermöglichen die Fortsetzung dieser Vorgänge, selbst wenn die Endpunkte nicht erreichbar sind. Sobald die Verbindung wiederhergestellt ist, leitet die Warteschlange die Nachrichten an die empfangende Anwendung weiter.  
   
  Um die Warteschlangenfunktion in einer WCF-Anwendung verwenden möchten, können Sie eine der standardbindungen verwenden, oder Sie können eine benutzerdefinierte Bindung erstellen, wenn die standardbindungen Ihre Anforderungen nicht erfüllen. Weitere Informationen über relevante standardbindungen und wie Sie eine auswählen, finden Sie unter [Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   

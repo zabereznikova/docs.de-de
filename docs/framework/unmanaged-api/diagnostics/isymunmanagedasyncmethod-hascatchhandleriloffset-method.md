@@ -5,11 +5,11 @@ ms.assetid: a9ce105c-6495-49ab-b0e5-903a48ebadb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa9583442e9ed76d4064e4f10089b17db961ba9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940165"
 ---
 # <a name="isymunmanagedasyncmethodhascatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::HasCatchHandlerILOffset-Methode
 Finden Sie unter [DefineCatchHandlerILOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md).  

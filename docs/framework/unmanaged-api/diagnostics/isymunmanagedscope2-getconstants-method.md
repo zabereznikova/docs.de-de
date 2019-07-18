@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08bc85c7a5b53c145375ca34f11ec499e5e7528f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bb3f5926677577bbc0bb14413c5d70150ef25152
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096822"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778037"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants-Methode
 Ruft ab, die lokalen Konstanten, die innerhalb dieses Bereichs definiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetConstants(  
      [in]  ULONG32  cConstants,  
      [out] ULONG32  *pcConstants,  

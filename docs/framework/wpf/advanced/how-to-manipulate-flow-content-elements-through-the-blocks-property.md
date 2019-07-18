@@ -10,25 +10,25 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3ca05590bd1adf7f9c486382a08cb334b4731ac9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150136"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614600"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>Vorgehensweise: Bearbeiten von fortlaufenden Inhaltselementen mit der Blocks-Eigenschaft
 Diese Beispiele veranschaulichen einige der häufigsten Vorgänge, die für fortlaufenden Inhaltselementen mit ausgeführt werden können die **Blöcke** Eigenschaft. Diese Eigenschaft wird verwendet, um das Hinzufügen und Entfernen von Elementen <xref:System.Windows.Documents.BlockCollection>. Fortlaufende Inhaltselemente, eine **Blöcke** -Eigenschaft enthalten:  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.ListItem>  
+- <xref:System.Windows.Documents.ListItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
  In diesen Beispielen auftreten, verwenden Sie <xref:System.Windows.Documents.Section> wie der Flow Content-Element, aber diese Verfahren gelten für alle Elemente, die eine Auflistung der Flow-Element für Inhalt zu hosten.  
   

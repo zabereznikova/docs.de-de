@@ -9,11 +9,11 @@ ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789778"
 ---
 # <a name="ialink-interface"></a>IALink-Schnittstelle
 Unterstützt beim Erstellen von .NET Framework-Assemblys. Unter anderem enthält die Schnittstelle Methoden, die beim Schreiben von Manifesten für Assemblys mit mehreren Modulen, Signieren von Assemblys mit starken Namen und das Erstellen einer NETMODULE-Datei unterstützen.  
@@ -77,6 +77,6 @@ Unterstützt beim Erstellen von .NET Framework-Assemblys. Unter anderem enthält
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

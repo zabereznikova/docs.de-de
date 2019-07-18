@@ -9,12 +9,12 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a95e07596a10e67d32fdd0af036a14e8d66390c7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159821"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053036"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>Vorgehensweise: Fertigstellen von Druckaufträgen in Windows Forms
 In vielen Fällen bieten textverarbeitungs- und andere Anwendungen, bei denen Drucken die Möglichkeit, Benutzern eine Meldung angezeigt, dass ein Auftrag abgeschlossen ist. Sie können diese Funktionalität in Windows Forms bereitstellen, durch Behandeln der <xref:System.Drawing.Printing.PrintDocument.EndPrint> Ereignis die <xref:System.Drawing.Printing.PrintDocument> Komponente.  
@@ -23,7 +23,7 @@ In vielen Fällen bieten textverarbeitungs- und andere Anwendungen, bei denen Dr
   
 ### <a name="to-complete-a-print-job"></a>Einen Auftrag abgeschlossen  
   
-1.  Legen Sie die <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> Eigenschaft der <xref:System.Drawing.Printing.PrintDocument> Komponente.  
+1. Legen Sie die <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> Eigenschaft der <xref:System.Drawing.Printing.PrintDocument> Komponente.  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -37,7 +37,7 @@ In vielen Fällen bieten textverarbeitungs- und andere Anwendungen, bei denen Dr
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  Erstellen Sie Code zur Behandlung des <xref:System.Drawing.Printing.PrintDocument.EndPrint> -Ereignisses.  
+2. Erstellen Sie Code zur Behandlung des <xref:System.Drawing.Printing.PrintDocument.EndPrint> -Ereignisses.  
   
      Im folgenden Codebeispiel wird ein Meldungsfeld angezeigt, der angibt, dass das Dokument gedruckt wurde.  
   
@@ -66,7 +66,7 @@ In vielen Fällen bieten textverarbeitungs- und andere Anwendungen, bei denen Dr
        }  
     ```  
   
-     (Visual C#- und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C# und visuelle C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.printDocument1.EndPrint += new  
@@ -83,4 +83,4 @@ In vielen Fällen bieten textverarbeitungs- und andere Anwendungen, bei denen Dr
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
+- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

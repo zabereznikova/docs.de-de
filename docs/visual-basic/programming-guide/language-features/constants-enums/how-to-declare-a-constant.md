@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b84afe4e354d4029bc61ba67bc93bd36a3430de4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843408"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610596"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Vorgehensweise: Deklarieren einer Konstante (Visual Basic)
 Sie verwenden die `Const` Anweisung, um eine Konstante deklariert, und legen Sie dessen Wert. Durch Deklarieren einer Konstante, weisen Sie einen aussagekräftigen Namen auf einen Wert an. Nachdem eine Konstante deklariert wird, nicht geändert oder einen neuer Wert zugewiesen.  
@@ -41,7 +41,7 @@ Sie verwenden die `Const` Anweisung, um eine Konstante deklariert, und legen Sie
   
 ### <a name="to-declare-a-constant"></a>Um eine Konstante zu deklarieren.  
   
--   Schreiben Sie eine Deklaration, Zugriffsspezifizierer hat, enthält, die `Const` -Schlüsselwort und in einem Ausdruck, wie in den folgenden Beispielen:  
+- Schreiben Sie eine Deklaration, Zugriffsspezifizierer hat, enthält, die `Const` -Schlüsselwort und in einem Ausdruck, wie in den folgenden Beispielen:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
@@ -51,7 +51,7 @@ Sie verwenden die `Const` Anweisung, um eine Konstante deklariert, und legen Sie
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Um eine Konstante zu deklarieren, die einen explizit angegebenen Datentyp verfügt  
   
--   Schreiben Sie eine Deklaration, enthält die `As` -Schlüsselwort und einen expliziten Datentyp eingeben, wie in den folgenden Beispielen:  
+- Schreiben Sie eine Deklaration, enthält die `As` -Schlüsselwort und einen expliziten Datentyp eingeben, wie in den folgenden Beispielen:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
@@ -59,7 +59,7 @@ Sie verwenden die `Const` Anweisung, um eine Konstante deklariert, und legen Sie
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>Um mehrere Konstanten in einer einzelnen Zeile deklariert werden.  
   
--   Trennen Sie die Deklarationen, durch ein Komma und ein Leerzeichen, wie im folgenden Beispiel gezeigt:  
+- Trennen Sie die Deklarationen, durch ein Komma und ein Leerzeichen, wie im folgenden Beispiel gezeigt:  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  

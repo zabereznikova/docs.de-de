@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
 ms.openlocfilehash: 19e2780d526c0ae37d6577aef25a5a4940005cb1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751448"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard-Objekt
 Stellt Eigenschaften für den Zugriff auf den aktuellen Zustand der Tastatur bereit, z.B. welche Tasten werden gerade gedrückt? Außerdem bietet es eine Methode, mit der Sie Tastatureingaben an ein aktives Fenster schicken können.  

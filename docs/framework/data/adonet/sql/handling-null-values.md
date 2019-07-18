@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 45b123e7b0db4832a1629f8ec0224729ff20f689
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191470"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623461"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relationalen Datenbank ein NULL-Wert verwendet. NULL ist weder eine leere Zeichenfolge (für Zeichen- oder Datetime-Datentypen) noch ein Wert 0 (null) (für numerische Datentypen). Die ANSI SQL-92-Spezifikation legt fest, dass NULL für alle Datentypen gleich sein muss, sodass alle NULL-Werte einheitlich behandelt werden können. Der <xref:System.Data.SqlTypes>-Namespace stellt durch Implementieren der <xref:System.Data.SqlTypes.INullable>-Schnittstelle eine NULL-Semantik bereit. Jeder Datentyp in <xref:System.Data.SqlTypes> besitzt eine eigene `IsNull`-Eigenschaft und einen `Null`-Wert. Diese können einer Instanz dieses Datentyps zugewiesen werden.  
@@ -21,11 +21,11 @@ Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relational
 ## <a name="nulls-and-three-valued-logic"></a>NULL-Werte und dreiwertige Logik  
  Wenn in Spaltendefinitionen NULL-Werte zugelassen werden, wird dreiwertige Logik in die Anwendung eingeführt. Eine Vergleichsoperation wird mit einer der drei nachfolgenden Bedingungen ausgewertet:  
   
--   True  
+- True  
   
--   False  
+- False  
   
--   Unbekannt  
+- Unbekannt  
   
  Da NULL als unbekannt betrachtet wird, gelten zwei miteinander verglichene NULL-Werte nicht als gleich. In Ausdrücken, die arithmetische Operatoren verwenden, ist das Ergebnis NULL, wenn einer der Operanden NULL ist.  
   
@@ -35,7 +35,7 @@ Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relational
  ![Wahrheitstabelle](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Informationen zur ANSI_NULLS-Option  
- <xref:System.Data.SqlTypes> Stellt die gleiche Semantik wie bereit, wenn die ANSI_NULLS-Option in SQL Server auf festgelegt ist. Alle arithmetischen Operatoren (+, -, *, /, %), bitweise Operatoren (~, &, &#124;), und die meisten Funktionen null zurück, wenn einer der Operanden oder Argumente null ist, außer für die Eigenschaft `IsNull`.  
+ Mit <xref:System.Data.SqlTypes> wird dieselbe Semantik bereitgestellt wie bei aktivierter ANSI_NULLS-Option in SQL Server. Alle arithmetischen Operatoren (+, -, *, /, %), bitweise Operatoren (~, &, &#124;), und die meisten Funktionen null zurück, wenn einer der Operanden oder Argumente null ist, außer für die Eigenschaft `IsNull`.  
   
  Der ANSI SQL-92-Standard unterstützt keine *ColumnName* = NULL in einer WHERE-Klausel. In SQL Server steuert die ANSI_NULLS-Option die Fähigkeit, in der Standardeinstellung NULL-Werte in der Datenbank zuzulassen sowie die Auswertung von Vergleichen mit NULL-Werten. Wenn ANSI_NULLS aktiviert ist (Standardeinstellung), muss der IS NULL-Operator beim Testen auf NULL-Werte in Ausdrücken verwendet werden. Der folgende Vergleich ergibt z. B. immer "Unknown", wenn ANSI_NULLS aktiviert ist:  
   
@@ -83,19 +83,19 @@ WHERE TerritoryID IN (1, 2, 3)
 >  Die `Nullable<T>`-Struktur und die <xref:System.Nullable>-Struktur werden im `DataSet` derzeit nicht unterstützt.  
   
 ### <a name="multiple-column-row-assignment"></a>Zuweisung mehrerer Spalten (Zeilen)  
- `DataTable.Add`, `DataTable.LoadDataRow`, oder andere APIs, akzeptieren ein <xref:System.Data.DataRow.ItemArray%2A> an einer Zeile zugeordnet wird, ordnen Sie auf DataColumns-Standardwert ' null'. Wenn ein Objekt im Array `DbNull.Value` oder dessen stark typisierte Entsprechung enthält, gelten dieselben Regeln wie oben beschrieben.  
+ `DataTable.Add`, `DataTable.LoadDataRow` oder andere APIs, die ein <xref:System.Data.DataRow.ItemArray%2A> akzeptieren, das einer Reihe zugeordnet wird, ordnen dem Standardwert der <legacyBold>DataColumn</legacyBold> 'NULL' zu. Wenn ein Objekt im Array `DbNull.Value` oder dessen stark typisierte Entsprechung enthält, gelten dieselben Regeln wie oben beschrieben.  
   
  Darüber hinaus gelten für Instanzen von `DataRow.["columnName"]`-NULL-Zuweisungen die folgenden Regeln:  
   
-1.  Der Standardwert *Standard* Wert `DbNull.Value` für alle außer den stark typisierten null-Spalten das entsprechende stark also null-Wert typisierte.  
+1. Der Standardwert *Standard* Wert `DbNull.Value` für alle außer den stark typisierten null-Spalten das entsprechende stark also null-Wert typisierte.  
   
-2.  NULL-Werte werden bei der Serialisierung in XML-Dateien (wie in "xsi:nil") nie ausgegeben.  
+2. NULL-Werte werden bei der Serialisierung in XML-Dateien (wie in "xsi:nil") nie ausgegeben.  
   
-3.  Alle Nicht-NULL-Werte einschließlich der Standardwerte werden bei der Serialisierung nach XML immer ausgegeben. Dies entspricht nicht der XSD/XML-Semantik, bei der ein NULL-Wert (xsi:nil) explizit und der Standardwert implizit ist (wenn nicht in XML vorhanden, kann der Wert von einem validierenden Parser aus einem zugeordneten XSD-Schema abgerufen werden). Das Gegenteil gilt für eine `DataTable`: Ein NULL-Wert ist implizit, und der Standardwert ist explizit.  
+3. Alle Nicht-NULL-Werte einschließlich der Standardwerte werden bei der Serialisierung nach XML immer ausgegeben. Dies entspricht nicht der XSD/XML-Semantik, bei der ein NULL-Wert (xsi:nil) explizit und der Standardwert implizit ist (wenn nicht in XML vorhanden, kann der Wert von einem validierenden Parser aus einem zugeordneten XSD-Schema abgerufen werden). Das Gegenteil gilt für eine `DataTable`: Ein NULL-Wert ist implizit, und der Standardwert ist explizit.  
   
-4.  Allen fehlenden Spaltenwerten für Zeilen, die aus der XML-Eingabe gelesen werden, wird NULL zugewiesen. Zeilen, die mithilfe von <xref:System.Data.DataTable.NewRow%2A> oder ähnlichen Methoden erstellt wurden, wird der Standardwert von DataColumn zugewiesen.  
+4. Allen fehlenden Spaltenwerten für Zeilen, die aus der XML-Eingabe gelesen werden, wird NULL zugewiesen. Zeilen, die mithilfe von <xref:System.Data.DataTable.NewRow%2A> oder ähnlichen Methoden erstellt wurden, wird der Standardwert von DataColumn zugewiesen.  
   
-5.  Die <xref:System.Data.DataRow.IsNull%2A>-Methode gibt sowohl für `true` als auch für `DbNull.Value` `INullable.Null` zurück.  
+5. Die <xref:System.Data.DataRow.IsNull%2A>-Methode gibt sowohl für `true` als auch für `DbNull.Value` `INullable.Null` zurück.  
   
 ## <a name="assigning-null-values"></a>Zuweisen von NULL-Werten  
  Der Standardwert für alle <xref:System.Data.SqlTypes>-Instanzen ist NULL.  
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Vergleichen von NULL-Werten mit "SqlTypes" und CLR-Typen  
- Beim Vergleichen von NULL-Werten ist es wichtig zu verstehen, wie die `Equals`-Methode NULL-Werte in <xref:System.Data.SqlTypes> auswertet und wie sie im Unterschied dazu bei CLR-Typen vorgeht. Alle der <xref:System.Data.SqlTypes>`Equals` -Methoden für die Bewertung von null-Werte verwenden: Wenn eine oder beide Werte null ist, ergibt der Vergleich Null. Andererseits ergibt die Anwendung der CLR-`Equals`-Methode auf zwei <xref:System.Data.SqlTypes> <legacyBold>true</legacyBold>, wenn beide NULL sind. Dies spiegelt den Unterschied zwischen der Verwendung einer Instanzmethode wie der CLR-`String.Equals`-Methode und der Verwendung der <legacyBold>static</legacyBold>/<legacyBold>shared</legacyBold>-Methode `SqlString.Equals` wider.  
+ Beim Vergleichen von NULL-Werten ist es wichtig zu verstehen, wie die `Equals`-Methode NULL-Werte in <xref:System.Data.SqlTypes> auswertet und wie sie im Unterschied dazu bei CLR-Typen vorgeht. Alle <xref:System.Data.SqlTypes>`Equals`-Methoden verwenden für die Auswertung von NULL-Werten die Datenbanksemantik: Wenn mindestens einer der Werte NULL ist, ergibt der Vergleich NULL. Andererseits ergibt die Anwendung der CLR-`Equals`-Methode auf zwei <xref:System.Data.SqlTypes> <legacyBold>true</legacyBold>, wenn beide NULL sind. Dies spiegelt den Unterschied zwischen der Verwendung einer Instanzmethode wie der CLR-`String.Equals`-Methode und der Verwendung der <legacyBold>static</legacyBold>/<legacyBold>shared</legacyBold>-Methode `SqlString.Equals` wider.  
   
  Das folgende Beispiel zeigt den Unterschied in den Ergebnissen zwischen der `SqlString.Equals`-Methode und der `String.Equals`-Methode, wenn beiden Methoden ein Paar von NULL-Werten und dann ein Paar leerer Zeichenfolgen übergeben wird.  
   
@@ -143,5 +143,5 @@ String.Equals instance method:
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server-Datentypen und ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

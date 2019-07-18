@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 70a22e7e37a0fd88bcb8673846f5313d35971a15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1075643bbd17765bf33a26038fc6beaf32d0aebb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121523"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781503"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid-Methode
 Ruft eine GUID aus der Zeile am angegebenen Index ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetGuid (   
     [in]  ULONG       ixGuid,  
     [out] const GUID  **ppGUID  

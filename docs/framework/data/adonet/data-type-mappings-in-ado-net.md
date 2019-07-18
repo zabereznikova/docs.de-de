@@ -2,22 +2,22 @@
 title: Datentypzuordnungen in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d4afab94-ada6-4c77-a73c-41f17bae6b5a
-ms.openlocfilehash: 1db427424e48d5b94e6c158e1d9967626297f4aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4e85db4732da664848cee2ef48f9a880a86fef18
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178697"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583762"
 ---
 # <a name="data-type-mappings-in-adonet"></a>Datentypzuordnungen in ADO.NET
-.NET Framework basiert auf dem allgemeinen Typsystem, das definiert, wie Typen in der Laufzeit deklariert, verwendet und verwaltet werden. Es besteht aus Werttypen und Verweistypen, die alle vom <xref:System.Object>-Basistyp abgeleitet sind. Bei Datenquellen wird über den Datenanbieter auf den Datentyp geschlossen, wenn dieser nicht explizit angegeben ist. Ein <xref:System.Data.DataSet>-Objekt ist z. B. von keiner bestimmten Datenquelle abhängig. Daten in einem `DataSet` werden aus einer Datenquelle abgerufen, und Änderungen werden mithilfe eines `DataAdapter` in die Datenquelle übernommen. Wenn daher ein `DataAdapter`-Objekt eine <xref:System.Data.DataTable> in einem `DataSet` mit Werten aus einer Datenquelle füllt, entsprechen die Datentypen der Spalten in der `DataTable`[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datentypen und nicht speziellen Datentypen des[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieters, der zum Herstellen der Verbindung mit der Datenquelle verwendet wird.  
+.NET Framework basiert auf dem allgemeinen Typsystem, das definiert, wie Typen in der Laufzeit deklariert, verwendet und verwaltet werden. Es besteht aus Werttypen und Verweistypen, die alle vom <xref:System.Object>-Basistyp abgeleitet sind. Bei Datenquellen wird über den Datenanbieter auf den Datentyp geschlossen, wenn dieser nicht explizit angegeben ist. Ein <xref:System.Data.DataSet>-Objekt ist z. B. von keiner bestimmten Datenquelle abhängig. Daten in einem `DataSet` werden aus einer Datenquelle abgerufen, und Änderungen werden mithilfe eines `DataAdapter` in die Datenquelle übernommen. Das bedeutet, wenn eine `DataAdapter` füllt eine <xref:System.Data.DataTable> in einer `DataSet` mit Werten aus einer Datenquelle, die Datentypen der Spalten in der `DataTable` sind .NET Framework-Typen anstelle der .NET Framework-Datenanbieter für Typen, die wird bei der Herstellung einer Verbindung mit der Datenquelle verwendet werden.  
   
- Wenn ein `DataReader` einen Wert aus einer Datenquelle zurückgibt, wird dieser Wert entsprechend in einer lokalen Variable mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typ gespeichert. Sowohl bei den `Fill`-Vorgängen des `DataAdapter` als auch bei den `Get`-Methoden des `DataReader` wird der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typ von dem Wert hergeleitet, der vom [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter zurückgegeben wird.  
+ Ebenso, wenn eine `DataReader` gibt ein Wert aus einer Datenquelle, die sich ergebenden Wert befindet sich in einer lokalen Variablen, die .NET Framework-Typ aufweist. Für beide die `Fill` Vorgänge von der `DataAdapter` und `Get` Methoden der `DataReader`, der .NET Framework-Typ wird abgeleitet aus dem Wert, der von der .NET Framework-Datenanbieter zurückgegeben.  
   
- Sie können auch die typisierten Zugriffsmethoden des `DataReader` verwenden, wenn Sie den Typ des zurückgegebenen Werts kennen, anstatt den hergeleiteten Datentyp zu verwenden. Mit typisierten Accessormethoden erzielen Sie eine bessere Leistung, da ein Wert als bestimmter [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typ zurückgegeben wird und somit keine weitere Typkonvertierung erforderlich ist.  
+ Sie können auch die typisierten Zugriffsmethoden des `DataReader` verwenden, wenn Sie den Typ des zurückgegebenen Werts kennen, anstatt den hergeleiteten Datentyp zu verwenden. Typisierten Zugriffsmethoden erzielen Sie eine bessere Leistung durch Rückgabe eines Werts als einen bestimmten .NET Framework-Typ, der nicht mehr die weitere typkonvertierung erforderlich ist.  
   
 > [!NOTE]
->  NULL-Werte werden bei Datentypen des [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieters als `DBNull.Value` dargestellt.  
+>  Für .NET Framework-Datenanbieters NULL-Werte werden durch dargestellt `DBNull.Value`.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [SQL Server-Datentypzuordnungen](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "59178697"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server-Datentypen und ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [Konfigurieren von Parametern und Parameterdatentypen](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Allgemeines Typsystem](../../../../docs/standard/base-types/common-type-system.md)

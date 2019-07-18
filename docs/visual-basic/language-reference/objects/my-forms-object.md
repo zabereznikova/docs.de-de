@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949317"
 ---
 # <a name="myforms-object"></a>My.Forms-Objekt
 Stellt Eigenschaften bereit, für den Zugriff auf eine Instanz von jedem Windows-Formular, das im aktuellen Projekt deklariert.  

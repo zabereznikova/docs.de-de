@@ -10,30 +10,30 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d64e77b7fc6862eead3cb7e791b3a8f68ac52713
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211037"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859733"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Vorgehensweise: Diagnose von Problemen mit Druckaufträgen
-Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckaufträge, die gar nicht oder nur langsam gedruckt werden. Den umfassenden Satz an Eigenschaften eines Druckauftrags verfügbar gemacht werden, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von Microsoft .NET Framework ermöglichen eine schnelle remote-Diagnose von Druckaufträgen ausführen.  
+Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckaufträge, die gar nicht oder nur langsam gedruckt werden. Der umfassende Satz an Eigenschaften eines Druckauftrags verfügbar gemacht werden, in .NET Framework-APIs von Microsoft bieten eine Möglichkeit zum Ausführen von einer schnellen remote-Diagnose von Druckaufträgen an.  
   
 ## <a name="example"></a>Beispiel  
  Die wichtigsten Schritte beim Erstellen dieses Hilfsprogramms sind die folgenden.  
   
-1.  Identifizieren Sie den Druckauftrag, über den sich der Benutzer beschwert. Benutzern ist dies häufig nicht genau möglich. Sie wissen möglicherweise den Namen des Druckerserver oder Druckers nicht. Sie können den Speicherort des Druckers in anderer Terminologie verwendet als bei der Einstellung beschreiben die <xref:System.Printing.PrintQueue.Location%2A> Eigenschaft. Daher ist es eine gute Idee, eine Liste der zuletzt übermittelten Druckaufträge des Benutzers zu erstellen. Wenn es mehr als einen Druckauftrag gibt, kann die Kommunikation zwischen dem Benutzer und dem Administrator des Drucksystems verwendet werden, um den Auftrag zu ermitteln, bei dem Probleme vorliegen. Die Teilschritte werden im Folgenden beschrieben.  
+1. Identifizieren Sie den Druckauftrag, über den sich der Benutzer beschwert. Benutzern ist dies häufig nicht genau möglich. Sie wissen möglicherweise den Namen des Druckerserver oder Druckers nicht. Sie können den Speicherort des Druckers in anderer Terminologie verwendet als bei der Einstellung beschreiben die <xref:System.Printing.PrintQueue.Location%2A> Eigenschaft. Daher ist es eine gute Idee, eine Liste der zuletzt übermittelten Druckaufträge des Benutzers zu erstellen. Wenn es mehr als einen Druckauftrag gibt, kann die Kommunikation zwischen dem Benutzer und dem Administrator des Drucksystems verwendet werden, um den Auftrag zu ermitteln, bei dem Probleme vorliegen. Die Teilschritte werden im Folgenden beschrieben.  
   
-    1.  Rufen Sie eine Liste aller Druckerserver ab.  
+    1. Rufen Sie eine Liste aller Druckerserver ab.  
   
-    2.  Durchlaufen Sie die Server, um ihre Druckwarteschlangen abzufragen.  
+    2. Durchlaufen Sie die Server, um ihre Druckwarteschlangen abzufragen.  
   
-    3.  Durchlaufen Sie in jeder Phase der Serverschleife alle Serverwarteschlangen, um die Aufträge abzufragen.  
+    3. Durchlaufen Sie in jeder Phase der Serverschleife alle Serverwarteschlangen, um die Aufträge abzufragen.  
   
-    4.  Durchlaufen Sie in jeder Phase der Serverschleife alle Aufträge und sammeln Sie bezeichnende Informationen über die Aufträge, die vom Benutzer übermittelt wurden, der die Beschwerde gestellt hat.  
+    4. Durchlaufen Sie in jeder Phase der Serverschleife alle Aufträge und sammeln Sie bezeichnende Informationen über die Aufträge, die vom Benutzer übermittelt wurden, der die Beschwerde gestellt hat.  
   
-2.  Untersuchen Sie relevante Eigenschaften, wenn der Druckauftrag mit Problemen identifiziert wurde, um herauszufinden, wo das Problem liegen könnte. Befindet sich der Auftrag z.B. im Fehlerstatus oder ist der Drucker, der die Warteschleife wartet in den Offlinemodus gewechselt, bevor der Auftrag gedruckt werden konnte?  
+2. Untersuchen Sie relevante Eigenschaften, wenn der Druckauftrag mit Problemen identifiziert wurde, um herauszufinden, wo das Problem liegen könnte. Befindet sich der Auftrag z.B. im Fehlerstatus oder ist der Drucker, der die Warteschleife wartet in den Offlinemodus gewechselt, bevor der Auftrag gedruckt werden konnte?  
   
  Im unteren Code finden Sie eine Reihe von Codebeispielen. Das erste Codebeispiel enthält das Durchlaufen der Druckerwarteschlangen. (Schritt 1c oben.) Die Variable `myPrintQueues` ist die <xref:System.Printing.PrintQueueCollection> -Objekt für den aktuellen Druckerserver.  
   
@@ -49,9 +49,9 @@ Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckauftr�
   
  Zu diesem Zeitpunkt enthält die Anwendung eine Verzweigungsstruktur, die den beiden Möglichkeiten entspricht, den Status eines Druckauftrags zu überprüfen:  
   
--   Sie können die Flags der Lesen der <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> Eigenschaft, die vom Typ <xref:System.Printing.PrintJobStatus>.  
+- Sie können die Flags der Lesen der <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> Eigenschaft, die vom Typ <xref:System.Printing.PrintJobStatus>.  
   
--   Sie können jede relevante Eigenschaft wie z. B. Lesen <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> und <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
+- Sie können jede relevante Eigenschaft wie z. B. Lesen <xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A> und <xref:System.Printing.PrintSystemJobInfo.IsInError%2A>.  
   
  In diesem Beispiel werden beide Methoden veranschaulicht, damit der Benutzer zuvor hinsichtlich der zu verwendenden Methode aufgefordert und hat "Y", wenn er die Flags der verwenden die <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> Eigenschaft. Weitere Informationen zu den beiden Methoden finden Sie unten. Schließlich verwendet die Anwendung eine Methode namens **ReportQueueAndJobAvailability**, die meldet, ob der Auftrag zu dieser Tageszeit gedruckt werden kann. Diese Methode wird in [Ermitteln, ob ein Druckauftrag zu dieser Tageszeit gedruckt werden kann](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md) diskutiert.  
   
@@ -59,7 +59,7 @@ Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckauftr�
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- Überprüfen des Status des Druckauftrags mit den Flags der der <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> -Eigenschaft, zu überprüfen jedes relevante Flag überprüfen, ob es festgelegt ist. Standardmäßig wird durch Ausführen eines logischen AND-Vorgangs mit einem Satz von Flags als einem Operanden und dem Flag selbst als zweiten Operanden überprüft, ob ein Bit in einem Satz von Bitflags festgelegt ist. Da das Flag selbst nur über einen Bitsatz verfügt, ergibt der logische AND-Vorgang lediglich, dass dasselbe Bit festgelegt ist. Um herauszufinden, ob das Bit festgelegt ist, können Sie das Ergebnis des logischen AND-Vorgangs einfach mit dem Flag selbst vergleichen. Weitere Informationen finden Sie unter <xref:System.Printing.PrintJobStatus>, [&-Operator (C# Verweis)](~/docs/csharp/language-reference/operators/and-operator.md), und <xref:System.FlagsAttribute>.  
+ Überprüfen des Status des Druckauftrags mit den Flags der der <xref:System.Printing.PrintSystemJobInfo.JobStatus%2A> -Eigenschaft, zu überprüfen jedes relevante Flag überprüfen, ob es festgelegt ist. Standardmäßig wird durch Ausführen eines logischen AND-Vorgangs mit einem Satz von Flags als einem Operanden und dem Flag selbst als zweiten Operanden überprüft, ob ein Bit in einem Satz von Bitflags festgelegt ist. Da das Flag selbst nur über einen Bitsatz verfügt, ergibt der logische AND-Vorgang lediglich, dass dasselbe Bit festgelegt ist. Um herauszufinden, ob das Bit festgelegt ist, können Sie das Ergebnis des logischen AND-Vorgangs einfach mit dem Flag selbst vergleichen. Weitere Informationen finden Sie unter <xref:System.Printing.PrintJobStatus>, [&-Operator (C# Verweis)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), und <xref:System.FlagsAttribute>.  
   
  Für jedes Attribut, dessen Bit festgelegt ist, meldet der Code dies im Konsolenfenster, und schlägt manchmal eine mögliche Reaktion vor. (Die Methode **HandlePausedJob**, die aufgerufen wird, wenn der Auftrag oder die Warteschlange wie oben beschrieben angehalten wird.)  
   
@@ -87,6 +87,6 @@ Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckauftr�
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [Operator & (C#-Referenz)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [&-Operator (C# Verweis)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [Dokumente in WPF](documents-in-wpf.md)
 - [Übersicht über das Drucken](printing-overview.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
 ms.openlocfilehash: 555bf31b27ba233ffa54438077984b02b5e3084a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911981"
 ---
 # <a name="datepicker"></a>DatePicker
 Die <xref:System.Windows.Controls.DatePicker> Steuerelement ermöglicht dem Benutzer, wählen Sie ein Datum durch Eingabe in ein Textfeld oder ein Dropdownmenü mit <xref:System.Windows.Controls.Calendar> Steuerelement.  

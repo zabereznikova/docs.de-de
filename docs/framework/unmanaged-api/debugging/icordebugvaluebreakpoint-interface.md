@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 778359a7d26b6e2f19984a1f7ff06a527f2449f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993719"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint-Schnittstelle
 Erweitert die ICorDebugBreakpoint-Schnittstelle für den Zugriff auf bestimmte Werte.  
@@ -48,4 +48,4 @@ Erweitert die ICorDebugBreakpoint-Schnittstelle für den Zugriff auf bestimmte W
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

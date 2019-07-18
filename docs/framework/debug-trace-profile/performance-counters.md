@@ -8,31 +8,31 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: af558e6712d58e208bf05cdb7a0f847ec4517f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184807"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614310"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in .NET Framework
 Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
   
--   [Ausnahmeleistungsindikatoren](#exception)  
+- [Ausnahmeleistungsindikatoren](#exception)  
   
--   [Interop-Leistungsindikatoren](#interop)  
+- [Interop-Leistungsindikatoren](#interop)  
   
--   [JIT-Leistungsindikatoren](#jit)  
+- [JIT-Leistungsindikatoren](#jit)  
   
--   [Ladeleistungsindikatoren](#loading)  
+- [Ladeleistungsindikatoren](#loading)  
   
--   [Sperren- und Threadleistungsindikatoren](#lockthread)  
+- [Sperren- und Threadleistungsindikatoren](#lockthread)  
   
--   [Speicherleistungsindikatoren](#memory)  
+- [Speicherleistungsindikatoren](#memory)  
   
--   [Netzwerkleistungsindikatoren](#networking)  
+- [Netzwerkleistungsindikatoren](#networking)  
   
--   [Sicherheitsleistungsindikatoren](#security)  
+- [Sicherheitsleistungsindikatoren](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>Ausnahmeleistungsindikatoren  
@@ -64,7 +64,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
   
 |Leistungsindikator|Beschreibung|  
 |-------------------------|-----------------|  
-|**Anzahl JIT-kompilierte IL-Bytes**|Zeigt die Gesamtzahl der seit dem Anwendungsstart vom JIT-Compiler (Just in Time) kompilierten MSIL-Bytes (Microsoft Intermediate Language) an. Dieser Indikator entspricht dem Indikator **Gesamtzahl JIT-kompilierte IL-Bytes**.|  
+|**Anzahl der JIT-kompilierten IL-Bytes**|Zeigt die Gesamtzahl der seit dem Anwendungsstart vom JIT-Compiler (Just in Time) kompilierten MSIL-Bytes (Microsoft Intermediate Language) an. Dieser Indikator entspricht dem Indikator **Gesamtzahl JIT-kompilierte IL-Bytes**.|  
 |**Anzahl JIT-kompilierte Methoden**|Zeigt die Gesamtzahl der seit dem Anwendungsstart JIT-kompilierten Methoden an. Dieser Indikator berücksichtigt keine vor-JIT-kompilierten Methoden.|  
 |**JIT-Zeitdauer in Prozent**|Zeigt den Prozentsatz der verstrichenen Zeit an, der seit der letzten JIT-Kompilierungsphase in der JIT-Kompilierung verbracht wurde. Dieser Indikator wird am Ende jeder JIT-Kompilierungsphase aktualisiert. Eine JIT-Kompilierungsphase tritt auf, wenn eine Methode und ihre Abhängigkeiten kompiliert werden.|  
 |**JIT-kompilierte IL-Bytes/s**|Zeigt die Anzahl der pro Sekunde JIT-kompilierten MSIL-Bytes an. Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
@@ -120,7 +120,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
 |**Anzahl Bytes in allen Heaps**|Zeigt die Summe der Indikatoren **Gen 1-Heapgröße**, **Gen 2-Heapgröße** und **Größe des Heaps für große Objekte** an. Dieser Indikator gibt den aktuellen Speicher in Bytes an, der für Garbage Collection-Heaps reserviert ist.|  
 |**Anzahl GC-Handles**|Zeigt die aktuelle Anzahl der verwendeten Garbage Collection-Handles an. Garbage Collection-Handles sind Handles zu Ressourcen, die sich außerhalb der Common Language Runtime und der verwalteten Umgebung befinden.|  
 |**Anzahl Gen 0-Collections**|Zeigt an, wie oft für die Generation 0-Objekte (d. h. die jüngsten, zuletzt zugewiesenen Objekte) seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Garbage Collection für die Generation 0 tritt auf, wenn der verfügbare Speicher in der Generation 0 nicht ausreicht, um eine Speicherzuordnungsanforderung zu erfüllen. Dieser Indikator wird am Ende einer Garbage Collection für die Generation 0 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 1 oder 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
-|**Anzahl Gen 0-Collections**|Zeigt an, wie oft für die Generation 1-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Der Indikator wird am Ende einer Garbage Collection für die Generation 1 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
+|**Anzahl Gen 1-Collections**|Zeigt an, wie oft für die Generation 1-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Der Indikator wird am Ende einer Garbage Collection für die Generation 1 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
 |**Anzahl Gen 2-Collections**|Zeigt an, wie oft für die Generation 2-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde. Der Indikator wird am Ende einer Garbage Collection für die Generation 2 (auch als vollständige Garbage Collection bezeichnet) aktualisiert.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
 |**Anzahl induzierte GC**|Zeigt die Höchstzahl der aufgrund eines expliziten Aufrufs von <xref:System.GC.Collect%2A?displayProperty=nameWithType> durchgeführten Garbage Collections. Es wird empfohlen, die Häufigkeit der durchgeführten Garbage Collections dem Garbage Collector zu überlassen.|  
 |**Anzahl fixierte Objekte**|Zeigt die Anzahl der fixierten Objekte an, die in der letzten Garbage Collection vorhanden waren. Ein fixiertes Objekt ist ein Objekt, dass der Garbage Collector nicht im Arbeitsspeicher verschieben kann. Dieser Indikator erfasst fixierte Objekte nur in Heaps, die der Garbage Collection unterliegen. Eine Garbage Collection der Generation 0 verursacht beispielsweise nur eine Zählung der fixierten Objekte im Generation 0-Heap.|  
@@ -161,21 +161,21 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
   
  Es gibt mehrere Klassen von unterstützten Netzwerkleistungsindikatoren:  
   
--   Ereignisindikatoren, die die Anzahl messen, wie oft ein Ereignis aufgetreten ist.  
+- Ereignisindikatoren, die die Anzahl messen, wie oft ein Ereignis aufgetreten ist.  
   
--   Datenindikatoren, die die Menge gesendeter oder empfangener Daten messen.  
+- Datenindikatoren, die die Menge gesendeter oder empfangener Daten messen.  
   
--   Dauerindikatoren, die messen, wie lange verschiedene Prozesse dauern. Die Zeiten für die Objekte werden in jedem Intervall (normalerweise in Sekunden) gemessen, nachdem sie verschiedene Zustände verlassen haben.  
+- Dauerindikatoren, die messen, wie lange verschiedene Prozesse dauern. Die Zeiten für die Objekte werden in jedem Intervall (normalerweise in Sekunden) gemessen, nachdem sie verschiedene Zustände verlassen haben.  
   
--   Pro-Intervall-Indikatoren, die die Anzahl von Objekten messen, die einen bestimmten Übergang pro Intervall (normalerweise pro Sekunde) absolvieren.  
+- Pro-Intervall-Indikatoren, die die Anzahl von Objekten messen, die einen bestimmten Übergang pro Intervall (normalerweise pro Sekunde) absolvieren.  
   
  Die Netzwerkleistungsindikatoren für Ereignisse umfassen folgende:  
   
--   **Hergestellte Verbindungen**  
+- **Hergestellte Verbindungen**  
   
--   **Empfangene Datagramme**  
+- **Empfangene Datagramme**  
   
--   **Gesendete Datagramme**  
+- **Gesendete Datagramme**  
   
  Diese Leistungsindikatoren stellen Zählwerte seit Prozessstart bereit. Die Anzahl der hergestellten <xref:System.Net.Sockets.Socket>-Verbindungen umfasst ebenso explizite <xref:System.Net.Sockets.Socket>-Methodenaufrufe von einer Anwendung für eine Streamsocketverbindung, die hergestellt wurde, wie auch interne Aufrufe von anderen Klassen (z. B. <xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient> und <xref:System.Net.Sockets.TcpClient>), an die <xref:System.Net.Sockets.Socket>-Klasse.  
   
@@ -183,33 +183,33 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
   
  Die Netzwerkleistungsindikatoren für Daten umfassen folgende:  
   
--   **Empfangene Bytes**  
+- **Empfangene Bytes**  
   
--   **Gesendete Bytes**  
+- **Gesendete Bytes**  
   
  Die zuvor aufgeführten Leistungsindikatoren stellen Zählwerte für Bytes seit Prozessstart bereit.  
   
  Es gibt zwei Dauerindikatoren, die messen, wie lange <xref:System.Net.HttpWebRequest>-Objekte gebraucht haben, um entweder ihre gesamte Lebensdauer oder nur einen Teil davon zu durchlaufen:  
   
--   **Durchschnittliche HttpWebRequest-Lebensdauer**  
+- **Durchschnittliche HttpWebRequest-Lebensdauer**  
   
--   **Durchschnittliche HttpWebRequest-Warteschlangenzeit**  
+- **Durchschnittliche HttpWebRequest-Warteschlangenzeit**  
   
  Für den Indikator **Durchschnittliche HttpWebRequest-Lebensdauer** beginnt die Lebensdauer der meisten <xref:System.Net.HttpWebRequest>-Objekte immer mit der Erstellungszeit des Objekts und dauert bis zu dem Zeitpunkt, an dem der Antwortstream von der Anwendung geschlossen wird. Es gibt zwei ungewöhnliche Fälle:  
   
--   Wenn die Anwendung die <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>-Methode nie aufruft, wird die Lebensdauer des <xref:System.Net.HttpWebRequest>-Objekts ignoriert.  
+- Wenn die Anwendung die <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>-Methode nie aufruft, wird die Lebensdauer des <xref:System.Net.HttpWebRequest>-Objekts ignoriert.  
   
--   Wenn das <xref:System.Net.HttpWebRequest>-Objekt beim Aufrufen der <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.EndGetResponse%2A>-Methode eine <xref:System.Net.WebException> auslöst, endet die Lebensdauer mit dem Auslösen der Ausnahme. Aus technischer Sicht wird der zugrunde liegende Antwortstream auch an diesem Punkt geschlossen (der an den Benutzer zurückgegebene Antwortstream ist in Wirklichkeit ein Speicherstream, der eine Kopie des Antwortstreams enthält).  
+- Wenn das <xref:System.Net.HttpWebRequest>-Objekt beim Aufrufen der <xref:System.Net.HttpWebRequest.GetResponse%2A>- oder <xref:System.Net.HttpWebRequest.EndGetResponse%2A>-Methode eine <xref:System.Net.WebException> auslöst, endet die Lebensdauer mit dem Auslösen der Ausnahme. Aus technischer Sicht wird der zugrunde liegende Antwortstream auch an diesem Punkt geschlossen (der an den Benutzer zurückgegebene Antwortstream ist in Wirklichkeit ein Speicherstream, der eine Kopie des Antwortstreams enthält).  
   
  Es gibt vier Indikatoren, die bestimmte <xref:System.Net.HttpWebRequest> -Objektprobleme pro Intervall erfassen. Diese Leistungsindikatoren können Anwendungsentwicklern, Administratoren und Supportmitarbeiter dabei helfen, besser zu verstehen, was die <xref:System.Net.HttpWebRequest>-Objekte machen. Die Indikatoren sind unter anderem folgende:  
   
--   **Erstellte HttpWebRequests/sec**  
+- **Erstellte HttpWebRequests/sec**  
   
--   **In Warteschlange gestellte HttpWebRequests/s**  
+- **In Warteschlange gestellte HttpWebRequests/s**  
   
--   **Abgebrochene HttpWebRequests/s**  
+- **Abgebrochene HttpWebRequests/s**  
   
--   **Fehlgeschlagene HttpWebRequests/s**  
+- **Fehlgeschlagene HttpWebRequests/s**  
   
  Für den Indikator **Abgebrochene HttpWebRequests/s** werden auch interne Aufrufe von <xref:System.Net.HttpWebRequest.Abort%2A> gezählt. Diese internen Aufrufe werden normalerweise von Timeouts verursacht, die eine Anwendung eventuell messen möchte.  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  Die Netzwerkleistungsindikatoren werden in zwei Kategorien aufgeführt:  
   
--   ".NET CLR-Netzwerk" – Die ursprünglichen Leistungsindikatoren, die in .NET Framework Version 2 eingeführt wurden und von .NET Framework Version 2 und höher unterstützt werden.  
+- ".NET CLR-Netzwerk" – Die ursprünglichen Leistungsindikatoren, die in .NET Framework Version 2 eingeführt wurden und von .NET Framework Version 2 und höher unterstützt werden.  
   
--   ".NET CLR-Netzwerk 4.0.0.0" – Alle der oben aufgeführten Socketindikatoren, zuzüglich der neuen Leistungsindikatoren, die von .NET Framework Version 4 und höher unterstützt werden. Diese neuen Indikatoren liefern Leistungsinformationen zu <xref:System.Net.HttpWebRequest>-Objekten.  
+- ".NET CLR-Netzwerk 4.0.0.0" – Alle der oben aufgeführten Socketindikatoren, zuzüglich der neuen Leistungsindikatoren, die von .NET Framework Version 4 und höher unterstützt werden. Diese neuen Indikatoren liefern Leistungsinformationen zu <xref:System.Net.HttpWebRequest>-Objekten.  
   
  Weitere Informationen zum Zugriff auf und der Verwaltung von Leistungsindikatoren in einer Anwendung finden Sie unter [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   

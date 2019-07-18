@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_BadConnectionTimeout
 ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
-ms.openlocfilehash: 26510832d196aa6418112e3a00d73c7a1d3aef92
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: f9afa14ca7709f34c006c0c30a756b208d5a5d83
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58038772"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912516"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>Der Verbindungstimeout-Wert muss größer als 0 sein.
 Beim hoch- und Herunterladen von Dateien mit der [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network), geben Sie einen `connectionTimeout` größer als `0`.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Geben Sie einen `connectionTimeout` -Wert an, der größer ist als `0`.  
+- Geben Sie einen `connectionTimeout` -Wert an, der größer ist als `0`.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2372aac00473786df9b5deefb969fc02abd8daa
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4297b21970fbca4b5aa53c31680394cab358d255
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496104"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777597"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod-Methode
 Erstellt eine Definition für eine Methode oder globalen Funktion mit der angegebenen Signatur und ein Token an dieser Methodendefinition zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineMethod (      
     [in]  mdTypeDef         td,   
     [in]  LPCWSTR           szName,   
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>Definieren eine Methode für PInvoke  
  Für jede nicht verwaltete Funktion, die über PInvoke aufgerufen werden müssen Sie eine verwaltete Methode definieren, die die, die nicht verwaltete Zielfunktion darstellt. Verwenden Sie zum Definieren der verwalteten Methode `DefineMethod` mit den Parametern, die bestimmten Werten, je nachdem, wie in der PInvoke verwendet wird:  
   
--   "True" PInvoke - schließt den Aufruf einer externen nicht verwaltete Methode, die in einer nicht verwalteten DLL befinden.  
+- "True" PInvoke - schließt den Aufruf einer externen nicht verwaltete Methode, die in einer nicht verwalteten DLL befinden.  
   
--   Lokale PInvoke - schließt den Aufruf einer systemeigenen, nicht verwaltete Methode, die im aktuellen verwalteten Modul eingebettet ist.  
+- Lokale PInvoke - schließt den Aufruf einer systemeigenen, nicht verwaltete Methode, die im aktuellen verwalteten Modul eingebettet ist.  
   
  Die parametereinstellungen, werden in der folgenden Tabelle angegeben.  
   
@@ -113,5 +113,6 @@ HRESULT DefineMethod (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

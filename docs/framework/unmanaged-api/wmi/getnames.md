@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e75bf9aab820216373f2f33fe8aa567f10befcb1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202650"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746519"
 ---
 # <a name="getnames-function"></a>GetNames-Funktion
 Ruft eine Teilmenge oder alle Namen der Eigenschaften eines Objekts ab. 
@@ -30,7 +30,7 @@ Ruft eine Teilmenge oder alle Namen der Eigenschaften eines Objekts ab.
     
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetNames (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -82,7 +82,7 @@ Das Flag-Werte im `lFlags` Bitfelder werden
 
 Die Flags, die als übergeben werden können die `lEnumFlags` Argument sind Bitfeldern, die in definierten die *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code.  Sie können einen Flag aus jeder Gruppe mit einem Flag aus einer anderen Gruppe kombinieren. Allerdings sind Flags aus der gleichen Gruppe sich gegenseitig ausschließende. 
 
-| Gruppe 1-flags |Wert  |Beschreibung  |
+| Gruppe 1-flags |Wert  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_ALWAYS` | 0 | Geben Sie bei allen Eigenschaftsnamen zurück. `strQualifierName` und `pQualifierVal` werden nicht verwendet. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Nur Eigenschaften, die einen Qualifizierer, der den Namen trägt Zurückgeben der `strQualifierName` Parameter. Wenn dieses Flag verwendet wird, müssen Sie angeben `strQualifierName`. |

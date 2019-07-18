@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81da8052b79047933b4afc6d5686029465d83eba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 959cb541013ca0a26557e849874dbb329489d855
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191496"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749529"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime-Methode
 Benachrichtigt den Host aus, die aktuell ausgeführte Aufgabe ist, lassen die common Language Runtime (CLR) und geben nicht verwalteten Code zu.  
@@ -32,7 +32,7 @@ Benachrichtigt den Host aus, die aktuell ausgeführte Aufgabe ist, lassen die co
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT LeaveRuntime (  
     [in] SIZE_T target  
 );  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79ef272e0c8afa0cd1942416c3a5eb9b825c2e6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5741ba1b4564a703ff57b45c728bb9efac0bb35a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782006"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer-Methode
 Bestimmt den Puffer für den angegebenen Codeabschnitt.  
@@ -31,7 +31,7 @@ Bestimmt den Puffer für den angegebenen Codeabschnitt.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ComputePointer (  
     [in]  HCEESECTION  section,  
     [in]  ULONG        RVA,   

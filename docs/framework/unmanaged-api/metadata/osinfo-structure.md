@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0aba49fb4a60b2e471c541a8d8531a1cbc8627f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a36cd3c5fb638799a735e4b4a1a98959500300b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096198"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761601"
 ---
 # <a name="osinfo-structure"></a>OSINFO-Struktur
 Enthält Details über das Betriebssystem für eine Assembly oder ein Modul.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct {  
     DWORD   dwOSPlatformId;  
     DWORD   dwOSMajorVersion;   

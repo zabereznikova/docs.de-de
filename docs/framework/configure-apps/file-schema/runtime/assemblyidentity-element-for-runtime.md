@@ -1,5 +1,5 @@
 ---
-title: <assemblyIdentity> Element für <runtime>
+title: <assemblyIdentity>-Element für <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 ms.openlocfilehash: d5766b76f18dce441cb260887a753dcf64642a6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674232"
 ---
 # <a name="assemblyidentity-element-for-runtime"></a>\<AssemblyIdentity >-Element für \<Runtime >
 Enthält identifizierende Informationen für die Assembly an.  

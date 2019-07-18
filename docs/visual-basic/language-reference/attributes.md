@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
 ms.openlocfilehash: b3f93cfdde8e5063c5bf0503857dfc149ee90026
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797045"
 ---
 # <a name="attributes-visual-basic"></a>Attribute (Visual Basic)
 Visual Basic bietet mehrere Attribute, die es ermöglichen, dass die Objekte mit nicht verwaltetem Code zusammenarbeiten, und ein Attribut, mit dem Sie die Modulelemente, ohne den Namen des Moduls zugegriffen werden kann. Die folgende Tabelle enthält die Attribute, die von Visual Basic verwendet.  

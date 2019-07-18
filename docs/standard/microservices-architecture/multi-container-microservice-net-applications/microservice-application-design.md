@@ -1,15 +1,13 @@
 ---
 title: Entwerfen einer an Microservice orientierten Anwendung
 description: .NET-Microservicearchitekturfür .NET-Containeranwendungen | Übersicht über die Vor- und Nachteile von microserviceorientierten Anwendungen zum Treffen fundierter Entscheidungen
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: dfb1619bab68814bd14224e5b50a75d99525a802
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674392"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639516"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Entwerfen einer an Microservice orientierten Anwendung
 
@@ -92,7 +90,7 @@ Daher handelt es sich bei den Bereitstellungseinheiten für Microservices (und b
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **GitHub-Repository „eShopOnContainers“. Quellcode für die Referenzanwendung**\
-    [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
+    <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Vorteile eines auf Microservices basierenden Ansatzes
 

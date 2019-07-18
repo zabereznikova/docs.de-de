@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: f62cbdc4b3e73f0c27492f7ed20b35378654d399
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775497"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance-Schnittstelle
 
@@ -49,4 +49,4 @@ Diese Schnittstelle befindet sich in der Common Language Runtime und nicht über
 ## <a name="see-also"></a>Siehe auch
 
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

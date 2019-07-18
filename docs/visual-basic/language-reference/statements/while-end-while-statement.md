@@ -10,11 +10,11 @@ helpviewer_keywords:
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
 ms.openlocfilehash: 00ca0ad24231128b25a988921386d6bd3265e9a0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934224"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While-Anweisung (Visual Basic)
 Führt eine Reihe von Anweisungen aus, solange eine angegebene Bedingung ist `True`.  

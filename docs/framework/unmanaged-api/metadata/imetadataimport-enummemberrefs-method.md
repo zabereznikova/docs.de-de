@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a08577f15a6fab0e630d40032a23c273ee935faa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 444c892026f9b6de12255ebdcda829db82c9bfdb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072991"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780444"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs-Methode
 Zählt MemberRef-Token auf, die Elemente des angegebenen Typs darstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumMemberRefs (  
    [in, out] HCORENUM    *phEnum,   
    [in]   mdToken        tkParent,   

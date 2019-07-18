@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a553f2cbac6110e82803e6d0dd872cfaa15d773
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e215cf4f6d6c3cfde3fa723ecae67aa77e189917
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099923"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757057"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame-Methode
 Bestimmt, ob der angegebene Rahmen um das übergeordnete Element des aktuellen Frames ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2  
                                       *pPotentialParentFrame,  
                               [out] BOOL *pIsParent);  
@@ -49,7 +49,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |-------------|-----------------|  
 |S_OK|Der übergeordnete Status wurden erfolgreich zurückgegeben.|  
 |E_FAIL|Der übergeordnete Status konnte nicht zurückgegeben werden.|  
-|E_INVALIDARG|`pPotentialParentFrame` oder `pIsParent` ist null.|  
+|E_INVALIDARG|`pPotentialParentFrame` oder `pIsParent` ist NULL.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
@@ -68,5 +68,5 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugNativeFrame2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

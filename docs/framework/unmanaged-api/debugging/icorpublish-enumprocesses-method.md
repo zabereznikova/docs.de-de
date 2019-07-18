@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb4096b0ae083e0b6c0598ea18cc8b33c2fdfe3e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1804a14c1197148afbffb5ec2cb4f29cb9ff019e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116294"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774555"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses-Methode
 Ruft einen Enumerator für die verwaltete Prozesse auf diesem Computer ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumProcesses (  
     [in] COR_PUB_ENUMPROCESS       Type,  
     [out] ICorPublishProcessEnum   **ppIEnum  

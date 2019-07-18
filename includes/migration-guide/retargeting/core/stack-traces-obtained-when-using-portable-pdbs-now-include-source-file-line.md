@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c9fde24a4c3260cf5b9e265dfd03080c5cd1d04
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 384f8c7fa08b69c13d05edb3404787d428dad837
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760843"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774073"
 ---
 ### <a name="stack-traces-obtained-when-using-portable-pdbs-now-include-source-file-and-line-information-if-requested"></a>Stapelüberwachungen, die bei der Verwendung portabler PDBs abgerufen werden, enthalten nun Quelldatei- und Zeileninformationen, wenn diese angefordert werden
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760843"
 |Version|4.7.2|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Boolean)?displayProperty=nameWithType><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Int32,System.Boolean)?displayProperty=nameWithType></li></ul>|
-

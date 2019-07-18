@@ -2,12 +2,12 @@
 title: F# Interactive-Referenz (fsi.exe)
 description: Erfahren Sie, wie F# Interactive (fsi.exe) wird verwendet, um die Ausführung F# code interaktiv in der Konsole oder auszuführende F# Skripts.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 297532315269cf75bf1cbb52a4e01d58cb97c99f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172262"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641601"
 ---
 # <a name="interactive-programming-with-f"></a>Interaktive Programmierung mit F\#
 

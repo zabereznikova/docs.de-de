@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1a8cd568f1a9a05721f311cc72a22bfc2b6bcfc9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830135"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625458"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Problembehandlung bei Prozeduren (Visual Basic)
 Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei der Verwendung von Prozeduren an.  
@@ -46,9 +46,9 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Argument nicht geändert wird durch Prozeduraufruf  
  Wenn Sie beabsichtigen, eine Prozedur ein Programmierelement, das zugrunde liegende Argument im aufrufenden Code ändern zu können, müssen Sie es als Verweis übergeben. Aber eine Prozedur kann auf die Elemente eines Typarguments Verweis zugreifen, selbst wenn er als Wert übergeben.  
   
--   **Zugrunde liegende Variable**. Um das Verfahren zum Ersetzen des Werts, der das zugrunde liegende Variablenelement zu ermöglichen, muss die Prozedur deklarieren Sie den Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Darüber hinaus der aufrufende Code muss nicht setzen Sie das Argument in Klammern ein, da dies überschreiben würde die `ByRef` Übergabemechanismus.  
+- **Zugrunde liegende Variable**. Um das Verfahren zum Ersetzen des Werts, der das zugrunde liegende Variablenelement zu ermöglichen, muss die Prozedur deklarieren Sie den Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Darüber hinaus der aufrufende Code muss nicht setzen Sie das Argument in Klammern ein, da dies überschreiben würde die `ByRef` Übergabemechanismus.  
   
--   **Verweisen auf Elementen des Typs**. Wenn Sie einen Parameter deklarieren [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), die Prozedur nicht das zugrunde liegende Variablenelement ändern. Allerdings, wenn das Argument ein Verweistyp ist, kann die Prozedur ändern die Member des Objekts auf den er verweist, obwohl sie nicht den Wert der Variablen ersetzen kann. Wenn das Argument ein Array-Variable ist, z. B. die Prozedur kann nicht weisen Sie ein neues Array zu, aber kann sich eine oder mehrere der Elemente ändern. Die geänderten Elemente werden in der zugrunde liegende Array-Variable im aufrufenden Code übernommen.  
+- **Verweisen auf Elementen des Typs**. Wenn Sie einen Parameter deklarieren [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md), die Prozedur nicht das zugrunde liegende Variablenelement ändern. Allerdings, wenn das Argument ein Verweistyp ist, kann die Prozedur ändern die Member des Objekts auf den er verweist, obwohl sie nicht den Wert der Variablen ersetzen kann. Wenn das Argument ein Array-Variable ist, z. B. die Prozedur kann nicht weisen Sie ein neues Array zu, aber kann sich eine oder mehrere der Elemente ändern. Die geänderten Elemente werden in der zugrunde liegende Array-Variable im aufrufenden Code übernommen.  
   
  Das folgende Beispiel definiert zwei Prozeduren, die eine Array-Variable als Wert und ausgeführt werden, die Elemente. Prozedur `increase` einfach auf die einzelnen Elemente hinzugefügt. Prozedur `replace` weist ein neues Array, an den Parameter `a()` , und klicken Sie dann auf die einzelnen Elemente hinzugefügt. Die neuzuweisung ist jedoch nicht die zugrunde liegende Arrayvariable im aufrufenden Code beeinträchtigen, da `a()` deklariert `ByVal`.  
   
@@ -75,13 +75,13 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
   
  Die folgenden Elemente, sind auch wenn sie an die Parameterliste betreffen keine Komponenten dieser Signatur einer Prozedur:  
   
--   Schlüsselwörter für Prozedurmodifizierer, z. B. `Public`, `Shared`, und `Static`  
+- Schlüsselwörter für Prozedurmodifizierer, z. B. `Public`, `Shared`, und `Static`  
   
--   Parameternamen  
+- Parameternamen  
   
--   Parametermodifiziererschlüsselwörter, z. B. `ByRef` und `Optional`  
+- Parametermodifiziererschlüsselwörter, z. B. `ByRef` und `Optional`  
   
--   Der Datentyp des Rückgabewerts (mit Ausnahme eines Konvertierungsoperators)  
+- Der Datentyp des Rückgabewerts (mit Ausnahme eines Konvertierungsoperators)  
   
  Sie können nicht durch die Änderung nur eine oder mehrere der vorhergehenden Elemente eine Prozedur zu überladen.  
   
@@ -95,11 +95,11 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
   
  Wenn Sie die Überladung, die für Sie aufrufen möchten ermittelt haben, achten Sie darauf, dass Sie die folgenden Regeln beachten:  
   
--   Geben Sie die richtige Anzahl von Argumenten, und klicken Sie in der richtigen Reihenfolge.  
+- Geben Sie die richtige Anzahl von Argumenten, und klicken Sie in der richtigen Reihenfolge.  
   
--   Im Idealfall sollten Ihre Argumente, die genau dieselben Datentypen wie die entsprechenden Parameter aufweisen. In jedem Fall muss der Datentyp der einzelnen Argumente mit den entsprechenden Parameter erweitert werden. Dies gilt auch für die [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) festgelegt `Off`. Wenn Sie eine Überladung erfordert einschränkende Konvertierung aus Ihrer Typargumentliste, die überladen ist nicht berechtigt, die aufgerufen werden.  
+- Im Idealfall sollten Ihre Argumente, die genau dieselben Datentypen wie die entsprechenden Parameter aufweisen. In jedem Fall muss der Datentyp der einzelnen Argumente mit den entsprechenden Parameter erweitert werden. Dies gilt auch für die [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) festgelegt `Off`. Wenn Sie eine Überladung erfordert einschränkende Konvertierung aus Ihrer Typargumentliste, die überladen ist nicht berechtigt, die aufgerufen werden.  
   
--   Wenn Sie Argumente, die erfordern erweiternden angeben, stellen Sie ihre Datentypen, die so nah wie möglich an die entsprechenden Parameter-Datentypen. Wenn zwei oder mehr Überladungen Argumentdatentypen akzeptieren, löst der Compiler den Aufruf an die Überladung, die für die geringste Menge an erweiternde aufruft.  
+- Wenn Sie Argumente, die erfordern erweiternden angeben, stellen Sie ihre Datentypen, die so nah wie möglich an die entsprechenden Parameter-Datentypen. Wenn zwei oder mehr Überladungen Argumentdatentypen akzeptieren, löst der Compiler den Aufruf an die Überladung, die für die geringste Menge an erweiternde aufruft.  
   
  Sie können die Wahrscheinlichkeit, dass datentypenkonflikte reduzieren, indem Sie mit der [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) Konvertierungsschlüsselwort bei der Vorbereitung Ihrer Argumente.  
   

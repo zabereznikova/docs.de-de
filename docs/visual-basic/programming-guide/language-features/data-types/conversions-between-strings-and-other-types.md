@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
 ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907321"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Konvertierungen zwischen Zeichenfolgen und anderen Typen (Visual Basic)
 Sie können numerische, konvertieren `Boolean`, oder Datum/Uhrzeit-Wert, der eine `String`. Sie können auch in umgekehrter Richtung konvertieren, aus einem Zeichenfolgenwert in "Numerisch", `Boolean`, oder `Date` – sofern der Inhalt der Zeichenfolge als gültigen Wert des Zieltyps Daten interpretiert werden können. Ist dies nicht möglich, tritt ein Laufzeitfehler auf.  

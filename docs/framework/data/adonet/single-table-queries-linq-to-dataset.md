@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59187641"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504631"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Abfragen für einzelne Tabellen (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] -Abfragen arbeiten mit Datenquellen, implementieren die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle oder die <xref:System.Linq.IQueryable%601> Schnittstelle. Die <xref:System.Data.DataTable> Klasse implementiert die beiden Schnittstellen, nicht, sodass Sie aufrufen müssen die <xref:System.Data.DataTableExtensions.AsEnumerable%2A> Methode, wenn Sie verwenden möchten die <xref:System.Data.DataTable> als Quelle in die `From` -Klausel einer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Abfrage.  
@@ -20,7 +20,7 @@ ms.locfileid: "59187641"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- Abfrage die lokale Variable wird initialisiert, einem Abfrageausdruck operiert auf eine oder mehrere Informationsquellen durch Anwenden von ein oder mehrere Abfrageoperatoren entweder die Standardabfrageoperatoren oder, im Fall von [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], Operatoren, die spezifisch für die <xref:System.Data.DataSet>Klasse. Der Abfrageausdruck im vorherigen Beispiel verwendet zwei der Standardabfrageoperatoren: `Where` und `Select`.  
+ Abfrage die lokale Variable wird initialisiert, einem Abfrageausdruck operiert auf eine oder mehrere Informationsquellen durch Anwenden von ein oder mehrere Abfrageoperatoren entweder die Standardabfrageoperatoren oder, bei LINQ to DataSet, Operatoren, die spezifisch für die <xref:System.Data.DataSet>Klasse. Der Abfrageausdruck im vorherigen Beispiel verwendet zwei der Standardabfrageoperatoren: `Where` und `Select`.  
   
  Die `Where`-Klausel filtert die Reihenfolge auf der Basis einer Bedingung. In diesem Fall lautet die Bedingung, dass für `OnlineOrderFlag` der Wert `true` gilt. Der `Select`-Operator ordnet ein aufzählbares Objekt zu, das die an den Operator übergebenen Argumente erfasst, und gibt das Objekt zurück. Im Beispiel oben wird ein anonymer Typ mit drei Eigenschaften erstellt: `SalesOrderID`, `OrderDate` und `SalesOrderNumber`. Als Werte für diese drei Eigenschaften werden die Werte der Spalten `SalesOrderID`, `OrderDate` und `SalesOrderNumber` aus der `SalesOrderHeader`-Tabelle verwendet.  
   

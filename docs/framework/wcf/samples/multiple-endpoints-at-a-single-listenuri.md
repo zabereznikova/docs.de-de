@@ -2,12 +2,12 @@
 title: Mehrere Endpunkte unter einem ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: 80a5c18f1e19ef82f490aca705973e027ee0a634
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6249690b7fdc95affd21eee13e0c6e2af1c4f8a0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755973"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Mehrere Endpunkte unter einem ListenUri
 In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert.  
@@ -39,7 +39,7 @@ In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem ei
   
  Alle drei Endpunkte werden unter demselben `ListenUri` gehostet und verwenden dieselbe `binding`. Endpunkte unter demselben `ListenUri` müssen dieselbe Bindung besitzen, da sie gemeinsam einen einzigen Kanalstapel nutzen, der Nachrichten an dieser physischen Adresse des Computers überwacht. Die `address` jedes Endpunkts ist ein URN. Obwohl Adressen in der Regel physische Speicherplätze darstellen, kann die Adresse eigentlich ein beliebiger URI sein, da die Adresse für den Abgleich und die Filterung verwendet wird, wie in diesem Beispiel gezeigt.  
   
- Da alle drei Endpunkte denselben `ListenUri`, wenn eine Nachricht eintrifft, Windows Communication Foundation (WCF) müssen entscheiden, welcher Endpunkt die Nachricht bestimmt ist. Jeder Endpunkt besitzt einen Nachrichtenfilter, der aus zwei Teilen besteht: dem Adressfilter und dem Vertragsfilter. Der Adressfilter gleicht `To` der SOAP-Nachricht mit der Adresse des Dienstendpunkts ab. So sind beispielsweise nur an `To "Urn:OtherEcho"` adressierte Nachrichten für den dritten Endpunkt dieses Diensts vorgesehen. Der Vertragsfilter gleicht die den Vorgängen eines besonderen Vertrags zugeordneten Aktionen ab. Nachrichten mit der Aktion von `IEcho` `Echo` mit die vertragsfiltern des zweiten und dritten Endpunkts dieses Diensts, übereinstimmt, da beide Endpunkte hosten die `IEcho` Vertrag.  
+ Da alle drei Endpunkte denselben `ListenUri`, wenn eine Nachricht eintrifft, Windows Communication Foundation (WCF) müssen entscheiden, welcher Endpunkt die Nachricht bestimmt ist. Jeder Endpunkt besitzt einen Nachrichtenfilter, der aus zwei Teilen besteht: dem Adressfilter und dem Vertragsfilter. Der Adressfilter gleicht `To` der SOAP-Nachricht mit der Adresse des Dienstendpunkts ab. So sind beispielsweise nur an `To "Urn:OtherEcho"` adressierte Nachrichten für den dritten Endpunkt dieses Diensts vorgesehen. Der Vertragsfilter gleicht die den Vorgängen eines besonderen Vertrags zugeordneten Aktionen ab. Nachrichten mit der Aktion von `IEcho` `Echo` stimmen beispielsweise mit den Vertragsfiltern des zweiten und dritten Endpunkts dieses Diensts überein, da beide Endpunkte den `IEcho`-Vertrag hosten.  
   
  Deshalb ermöglicht es die Kombination aus Adressfilter und Vertragsfilter, jede am `ListenUri` dieses Diensts eingehende Nachricht zum richtigen Endpunkt weiterzuleiten. Der dritte Endpunkt wird von den anderen beiden unterschieden, da er Nachrichten akzeptiert, die von den anderen Endpunkten an eine andere Adresse gesendet wurden. Der erste und der zweite Endpunkt werden anhand ihrer Verträge (die Aktion der eingehenden Nachricht) voneinander unterschieden.  
   
@@ -61,11 +61,11 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Bei einer computerübergreifenden Konfiguration müssen Sie "localhost" in der Datei "Client.cs" durch den Namen des Dienstcomputers ersetzen.  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0aa9b84c9e16811f799a3cd2ad096508db3f7d34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 981829500e499be05a8de7c1ffb4683429a903e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220499"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781846"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr-Enumeration
 Enthält Werte, die beschreiben, die <xref:System.Type> Parameter bei generischen Typen als in Aufrufen verwendet [IMetaDataEmit2:: DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorGenericParamAttr {  
   
     gpVarianceMask                     =   0x0003,  

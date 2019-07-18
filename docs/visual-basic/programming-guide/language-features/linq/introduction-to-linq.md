@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8a5fbc28a470415312540fff0acc969f939410b5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973625"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875531"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Einführung in LINQ in Visual Basic
 Language Integrated Query (LINQ) bietet Abfragefunktionen in Visual Basic sowie einfache und leistungsstarke Funktionen bei der Arbeit mit allen Arten von Daten. Anstatt senden eine Abfrage an eine Datenbank verarbeitet werden, oder Arbeiten mit unterschiedlichen Abfragesyntaxarten für jeden Typ von Daten, die Sie suchen, werden von LINQ Abfragen als Teil der Visual Basic-Sprache eingeführt. LINQ verwendet eine einheitliche Syntax, die unabhängig von der Art der Daten ist.  
@@ -43,7 +43,7 @@ Language Integrated Query (LINQ) bietet Abfragefunktionen in Visual Basic sowie 
 |LINQ to Objects|Mit dem Anbieter LINQ to Objects können Sie speicherinterne Auflistungen und Arrays abfragen. Wenn ein Objekt die <xref:System.Collections.IEnumerable>-Schnittstelle oder die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle unterstützt, können Sie es mit dem Anbieter LINQ to Objects abfragen.<br /><br /> Sie können den Anbieter LINQ to Objects aktivieren, indem Sie importieren die <xref:System.Linq> -Namespace, der standardmäßig für alle Visual Basic-Projekte importiert wird.<br /><br /> Weitere Informationen zu den Anbieter LINQ to Objects, finden Sie unter [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ to SQL|Mit dem Anbieter LINQ to SQL können Sie Daten einer SQL Server-Datenbank abfragen und ändern. Dies erleichtert das Zuordnen des Objektmodells einer Anwendung zu den Tabellen und Objekten in einer Datenbank.<br /><br /> Visual Basic erleichtert es, mit LINQ to SQL Arbeit durch den Object Relational Designer (O/R Designer). Der Designer wird verwendet, um in einer Anwendung ein Objektmodell zu erstellen, das den Objekten in einer Datenbank entspricht. O/R-Designer auch bietet Funktionen zum Zuordnen gespeicherter Prozeduren und Funktionen der <xref:System.Data.Linq.DataContext> -Objekt, das Kommunikation mit der Datenbank verwaltet und speichert den Zustand für Überprüfungen auf vollständige Parallelität.<br /><br /> Weitere Informationen über den Anbieter LINQ to SQL finden Sie unter [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Weitere Informationen zu den Object Relational Designer, finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ to XML|Mit dem Anbieter LINQ to XML können Sie XML abfragen und ändern. Sie können speicherinternes XML ändern, oder Sie können XML aus einer Datei laden und in einer Datei speichern.<br /><br /> Darüber hinaus können den Anbieter LINQ to XML, XML-Literale und XML-Achseneigenschaften, mit die Sie XML direkt in Visual Basic-Code schreiben können. Weitere Informationen finden Sie unter [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
-|LINQ to DataSet|Der Anbieter LINQ to DataSet können Sie Abfragen und Aktualisieren von Daten in eine [!INCLUDE[vstecado](~/includes/vstecado-md.md)] Dataset. Sie können Anwendungen, die DataSets verwenden, die Leistungsfähigkeit von LINQ hinzufügen und so die Funktionen zum Abfragen, Aggregieren und Aktualisieren der Daten in Ihrem DataSet vereinfachen und erweitern.<br /><br /> Weitere Informationen finden Sie unter [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
+|LINQ to DataSet|Der Anbieter LINQ to DataSet können Sie Abfragen und Aktualisieren von Daten in ein ADO.NET-DataSet. Sie können Anwendungen, die DataSets verwenden, die Leistungsfähigkeit von LINQ hinzufügen und so die Funktionen zum Abfragen, Aggregieren und Aktualisieren der Daten in Ihrem DataSet vereinfachen und erweitern.<br /><br /> Weitere Informationen finden Sie unter [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
 ## <a name="structure-of-a-linq-query"></a>Struktur einer LINQ-Abfrage  
  Eine LINQ-Abfrage, bezeichnet als eine *Abfrageausdruck*, besteht aus einer Kombination von Abfrageklauseln, die die Datenquellen und Iterationsvariablen für die Abfrage zu identifizieren. Ein Abfrageausdruck kann auch Anweisungen zum Sortieren, Filtern, Gruppieren und Verknüpfen sowie auf die Quelldaten anzuwendende Berechnungen enthalten. Die Abfrageausdruckssyntax ähnelt der Syntax von SQL. Deshalb werden Ihnen möglicherweise große Teile der Syntax vertraut vorkommen.  
@@ -182,11 +182,11 @@ Sie können weitere LINQ-Abfragefeatures verwenden, indem Sie die von LINQ berei
 ## <a name="visual-basic-features-that-support-linq"></a>Visual Basic-Funktionen, die LINQ unterstützen  
  Visual Basic umfasst weitere wichtige Features, die die Verwendung von LINQ erleichtern und reduziert die Menge an Code, den Sie zum Ausführen von LINQ-Abfragen schreiben müssen. Hierzu gehört Folgendes:  
   
--   **Anonyme Typen**, die Ihnen das Erstellen eines neuen Typs basierend auf einem Abfrageergebnis ermöglichen.  
+- **Anonyme Typen**, die Ihnen das Erstellen eines neuen Typs basierend auf einem Abfrageergebnis ermöglichen.  
   
--   **Implizit typisierte Variablen**, die ermöglichen Ihnen das verzögerte angeben eines Typs und können den Compiler den Typ, die abhängig vom Abfrageergebnis ableiten.  
+- **Implizit typisierte Variablen**, die ermöglichen Ihnen das verzögerte angeben eines Typs und können den Compiler den Typ, die abhängig vom Abfrageergebnis ableiten.  
   
--   **Erweiterungsmethoden**, das können Sie einen vorhandenen Typ mit eigenen Methoden zu erweitern, ohne den Typ selbst zu ändern.  
+- **Erweiterungsmethoden**, das können Sie einen vorhandenen Typ mit eigenen Methoden zu erweitern, ohne den Typ selbst zu ändern.  
   
  Weitere Informationen finden Sie unter [Visual Basic Features, die Support LINQ](../../concepts/linq/features-that-support-linq.md).  
   

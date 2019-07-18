@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: cfeef1d84a443163f4bbeda863682335d9cd1fcd
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222623"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267794"
 ---
 # <a name="yield-c-reference"></a>yield (C#-Referenz)
 
@@ -26,11 +26,11 @@ yield return <expression>;
 yield break;
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Sie verwenden eine `yield return`-Anweisung, um jedes Element einzeln zurückzugeben.
 
-Sie erzeugen eine Iteratormethode, indem Sie eine [foreach](foreach-in.md)-Anweisung oder eine LINQ-Abfrage verwenden. Jede Iteration der `foreach`-Schleife ruft die Iteratormethode auf. Wenn eine `yield return`-Anweisung im Iterator erreicht wird, wird ein `expression`-Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
+Die von einer Iteratormethode zurückgegebene Sequenz kann durch eine [foreach](foreach-in.md)-Anweisung oder eine LINQ-Abfrage verwendet werden. Jede Iteration der `foreach`-Schleife ruft die Iteratormethode auf. Wenn eine `yield return`-Anweisung im Iterator erreicht wird, wird ein `expression`-Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn die Iteratorfunktion das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.
 
 Sie verwenden eine `yield break`-Anweisung, um die Iteration zu beenden.
 

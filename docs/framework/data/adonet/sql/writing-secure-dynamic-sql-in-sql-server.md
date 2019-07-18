@@ -2,12 +2,12 @@
 title: Schreiben von sicherem dynamischen SQL in SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9b0c903c04c82c9a0f61197642645c5ba93ba099
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107353"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645926"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Schreiben von sicherem dynamischen SQL in SQL Server
 Die Einschleusung von SQL-Befehlen (SQL Injection-Angriff) ist eine Möglichkeit, Anwendungen anzugreifen. Dabei werden anstelle einer gültigen Eingabe Transact-SQL-Anweisungen in den Code eingeschleust. Wenn die Eingabe direkt und ohne Validierung an den Server weitergeleitet wird und die Anwendung den eingeschleusten Code ausführt, können Daten beschädigt oder sogar zerstört werden.  
@@ -21,34 +21,34 @@ Die Einschleusung von SQL-Befehlen (SQL Injection-Angriff) ist eine Möglichkeit
   
  Beachten Sie Folgendes:  
   
--   Erstellen Sie keine Transact-SQL-Anweisungen direkt aus Benutzereingaben. Validieren Sie Benutzereingaben mit gespeicherten Prozeduren.  
+- Erstellen Sie keine Transact-SQL-Anweisungen direkt aus Benutzereingaben. Validieren Sie Benutzereingaben mit gespeicherten Prozeduren.  
   
--   Validieren Sie Benutzereingaben durch Prüfen des Typs, der Länge, des Formats und des Bereichs. Verwenden Sie die Transact-SQL-QUOTENAME()-Funktion, um Systemnamen zu maskieren, oder die REPLACE()-Funktion, um Zeichen in einer Zeichenfolge zu maskieren.  
+- Validieren Sie Benutzereingaben durch Prüfen des Typs, der Länge, des Formats und des Bereichs. Verwenden Sie die Transact-SQL-QUOTENAME()-Funktion, um Systemnamen zu maskieren, oder die REPLACE()-Funktion, um Zeichen in einer Zeichenfolge zu maskieren.  
   
--   Implementieren Sie für jede Anwendungsebene mehrere Validierungsschichten.  
+- Implementieren Sie für jede Anwendungsebene mehrere Validierungsschichten.  
   
--   Prüfen Sie die Größe und den Datentyp der Eingabe, und sorgen Sie für die Einhaltung der festgelegten Grenzwerte. Dies kann helfen, vorsätzliche Pufferüberläufe zu verhindern.  
+- Prüfen Sie die Größe und den Datentyp der Eingabe, und sorgen Sie für die Einhaltung der festgelegten Grenzwerte. Dies kann helfen, vorsätzliche Pufferüberläufe zu verhindern.  
   
--   Prüfen Sie den Inhalt von Zeichenfolgenvariablen, und akzeptieren Sie nur erwartete Werte. Lehnen Sie Einträge ab, die Binärdaten, Maskierungssequenzen und Kommentarzeichen enthalten.  
+- Prüfen Sie den Inhalt von Zeichenfolgenvariablen, und akzeptieren Sie nur erwartete Werte. Lehnen Sie Einträge ab, die Binärdaten, Maskierungssequenzen und Kommentarzeichen enthalten.  
   
--   Validieren Sie beim Arbeiten mit XML-Dokumenten alle eingegebenen Daten anhand ihres Schemas.  
+- Validieren Sie beim Arbeiten mit XML-Dokumenten alle eingegebenen Daten anhand ihres Schemas.  
   
--   Sorgen Sie dafür, dass in Umgebungen mit mehreren Ebenen alle Daten vor dem Eintritt in die vertrauenswürdige Zone validiert werden.  
+- Sorgen Sie dafür, dass in Umgebungen mit mehreren Ebenen alle Daten vor dem Eintritt in die vertrauenswürdige Zone validiert werden.  
   
--   Akzeptieren Sie keine der folgenden Zeichenfolgen in Feldern, die von denen Dateinamen erstellt werden können: AUX, CLOCK$, COM1 bis COM8, CON, CONFIG$, LPT1 bis LPT8, NUL und PRN.  
+- Akzeptieren Sie keine der folgenden Zeichenfolgen in Feldern, die von denen Dateinamen erstellt werden können: AUX, CLOCK$, COM1 bis COM8, CON, CONFIG$, LPT1 bis LPT8, NUL und PRN.  
   
--   Verwenden Sie für die Typprüfung und die Längenvalidierung <xref:System.Data.SqlClient.SqlParameter>-Objekte mit gespeicherten Prozeduren und Befehlen.  
+- Verwenden Sie für die Typprüfung und die Längenvalidierung <xref:System.Data.SqlClient.SqlParameter>-Objekte mit gespeicherten Prozeduren und Befehlen.  
   
--   Verwenden Sie im Clientcode <xref:System.Text.RegularExpressions.Regex>-Ausdrücke, um ungültige Zeichen herauszufiltern.  
+- Verwenden Sie im Clientcode <xref:System.Text.RegularExpressions.Regex>-Ausdrücke, um ungültige Zeichen herauszufiltern.  
   
 ## <a name="dynamic-sql-strategies"></a>Strategien bei der Verwendung von dynamischem SQL  
  Beim Ausführen dynamisch erstellter SQL-Anweisungen in Ihrem prozeduralen Code wird die Besitzkette unterbrochen, sodass SQL Server die Berechtigungen des Aufrufers anhand der Objekte prüfen muss, auf die die dynamischen SQL-Anweisungen zugreifen.  
   
  SQL Server verfügt über Methoden, um Benutzern mithilfe von gespeicherten Prozeduren und benutzerdefinierten Funktionen, die dynamischen SQL-Code ausführen, den Zugriff auf Daten zu gewähren.  
   
--   Die Verwendung vom Identitätswechsel mit der T-SQL-Klausel EXECUTE AS, wie im Artikel zum [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md) beschrieben wird.  
+- Die Verwendung vom Identitätswechsel mit der T-SQL-Klausel EXECUTE AS, wie im Artikel zum [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md) beschrieben wird.  
   
--   Das Signieren von gespeicherten Prozeduren mit Zertifikaten, wie im Artikel zum [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Das Signieren von gespeicherten Prozeduren mit Zertifikaten, wie im Artikel zum [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  Die EXECUTE AS-Klausel ersetzt die Berechtigungen des Aufrufers durch die Berechtigungen des in der EXECUTE AS-Klausel angegebenen Benutzers. Geschachtelte gespeicherte Prozeduren oder Trigger werden im Sicherheitskontext des Proxybenutzers ausgeführt. Bei Anwendungen, die sich auf zeilenbasierte Sicherheit stützen oder eine Überwachung verlangen, kann dies zum Abbruch führen. Einige Funktionen, die die Identität des Benutzers zurückgeben, geben den in der EXECUTE AS-Klausel angegebenen Benutzer und nicht den ursprünglichen Aufrufer zurück. Der Ausführungskontext geht erst dann wieder auf den ursprünglichen Aufrufer über, wenn die Ausführung der Prozedur abgeschlossen wurde oder wenn eine REVERT-Anweisung ausgegeben wird.  

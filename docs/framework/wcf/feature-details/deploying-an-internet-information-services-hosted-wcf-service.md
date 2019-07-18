@@ -2,12 +2,12 @@
 title: Bereitstellen eines IIS-gehosteten WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170177"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486926"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Bereitstellen eines IIS-gehosteten WCF-Diensts
 
@@ -23,7 +23,7 @@ Entwickeln und Bereitstellen eines Windows Communication Foundation (WCF)-Dienst
 
 - Konfigurieren Sie den WCF-Dienst.
 
-Eine ausführliche exemplarische Vorgehensweise zum Erstellen eines IIS-gehosteten WCF-Diensts finden Sie unter [Gewusst wie: Hosten eines WCF-Diensts in IIS](how-to-host-a-wcf-service-in-iis.md).
+Eine ausführliche exemplarische Vorgehensweise zum Erstellen eines IIS-gehosteten WCF-Diensts finden Sie unter [Vorgehensweise: Hosten ein WCF-Diensts in IIS](how-to-host-a-wcf-service-in-iis.md).
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Sicherstellen, dass IIS, ASP.NET und WCF ordnungsgemäß installiert und registriert sind
 
@@ -35,15 +35,15 @@ Anweisungen zum Installieren von IIS unter anderen Betriebssystemen finden Sie u
 
 Der Installationsvorgang für .NET Framework wird WCF automatisch mit IIS registriert, wenn IIS bereits auf dem Computer vorhanden ist. Wenn IIS nach .NET Framework installiert ist, ist ein zusätzlicher Schritt erforderlich, zum Registrieren von WCF mit IIS und ASP.NET. Gehen Sie hierzu je nach Betriebssystem wie folgt vor:
 
-- Windows 7 und Windows Server 2003: Verwenden der [ServiceModel Registration-Tool (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) Tool, um WCF bei IIS registrieren. Um dieses Tool zu verwenden, geben **ServiceModelReg.exe/i / x** in die [Developer-Eingabeaufforderung für Visual Studio](../../tools/developer-command-prompt-for-vs.md).
+- Windows 7 und WindowsServer 2003: Verwenden der [ServiceModel Registration-Tool (ServiceModelReg.exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) Tool, um WCF bei IIS registrieren. Um dieses Tool zu verwenden, geben **ServiceModelReg.exe/i / x** in die [Developer-Eingabeaufforderung für Visual Studio](../../tools/developer-command-prompt-for-vs.md).
 
-- Windows 7: Zuletzt müssen Sie sicherstellen, dass ASP.NET für die Verwendung von .NET Framework, Version 4 oder höher konfiguriert ist. Zu diesem Zweck das Tool ASPNET_Regiis mit der Ausführung der `–i` Option. Weitere Informationen finden Sie unter [ASP.NET IIS Registration Tool](https://go.microsoft.com/fwlink/?LinkId=201186).
+- Windows 7: Abschließend müssen Sie sicherstellen, dass ASP.NET für die Verwendung von .NET Framework, Version 4 oder höher konfiguriert ist. Zu diesem Zweck das Tool ASPNET_Regiis mit der Ausführung der `–i` Option. Weitere Informationen finden Sie unter [ASP.NET IIS Registration Tool](https://go.microsoft.com/fwlink/?LinkId=201186).
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Erstellen einer neuen IIS-Anwendung oder Wiederverwenden einer vorhandenen ASP.NET-Anwendung
 
-IIS-gehosteten WCF-Dienste müssen innerhalb einer IIS‑Anwendung befinden. Sie können eine neue IIS‑Anwendung zum Hosten von WCF-Diensten ausschließlich erstellen. Alternativ können Sie einen WCF-Dienst bereitstellen, in eine vorhandene Anwendung, die bereits hostet [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Inhalt (z. B. aspx-Seiten und ASP.NET-Webdienste [ASMX]). Weitere Informationen zu diesen Optionen finden Sie unter der "Hosting WCF Seite-an-Seite mit ASP.NET" und "Hosting WCF-Dienste im ASP.NET-Kompatibilitätsmodus" Abschnitten [WCF-Dienste und ASP.NET](wcf-services-and-aspnet.md).
+IIS-gehosteten WCF-Dienste müssen innerhalb einer IIS‑Anwendung befinden. Sie können eine neue IIS‑Anwendung zum Hosten von WCF-Diensten ausschließlich erstellen. Alternativ können Sie einen WCF-Dienst in eine vorhandene Anwendung bereitstellen, die bereits mit ASP.NET 2.0-Inhalt (z. B. aspx-Seiten und ASP.NET-Webdienste [ASMX]) dient. Weitere Informationen zu diesen Optionen finden Sie unter der "Hosting WCF Seite-an-Seite mit ASP.NET" und "Hosting WCF-Dienste im ASP.NET-Kompatibilitätsmodus" Abschnitten [WCF-Dienste und ASP.NET](wcf-services-and-aspnet.md).
 
-Beachten Sie, dass [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und höhere Versionen in regelmäßigen Abständen eine isolierte objektorientierte Programmierungsanwendung neu starten. Der Standardwert ist 1740 Minuten. Der höchstmögliche Wert sind 71.582 Minuten. Dieser Neustart kann deaktiviert werden. Weitere Informationen zu dieser Eigenschaft finden Sie unter den [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
+Beachten Sie, dass IIS 6.0 und spätere Versionen in regelmäßigen Abständen eine isolierte objektorientierte Programmierung-Anwendung neu gestartet. Der Standardwert ist 1740 Minuten. Der höchstmögliche Wert sind 71.582 Minuten. Dieser Neustart kann deaktiviert werden. Weitere Informationen zu dieser Eigenschaft finden Sie unter den [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Erstellen einer SVC-Datei für den WCF-Dienst
 
@@ -65,7 +65,7 @@ Weitere Informationen über die Syntax für SVC-Dateien finden Sie unter [ \@Ser
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Bereitstellen der Dienstimplementierung für die IIS-Anwendung
 
-In IIS gehosteten WCF-Dienste verwenden das gleiche dynamische Kompilierungsmodell wie [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]. Genau wie bei ASP.NET können Sie den Implementierungscode für IIS-gehosteten WCF-Dienste auf verschiedene Weise an verschiedenen Speicherorten folgendermaßen bereitstellen:
+In IIS gehosteten WCF-Dienste verwenden das gleiche dynamische Kompilierungsmodell wie ASP.NET 2.0. Genau wie bei ASP.NET können Sie den Implementierungscode für IIS-gehosteten WCF-Dienste auf verschiedene Weise an verschiedenen Speicherorten folgendermaßen bereitstellen:
 
 - Als vorkompilierte DLL im globalen Assemblycache (GAC) oder im \bin-Verzeichnis der Anwendung. Vorkompilierte Binärdateien werden erst aktualisiert, wenn eine neue Version der Klassenbibliothek bereitgestellt wird.
 
@@ -73,7 +73,7 @@ In IIS gehosteten WCF-Dienste verwenden das gleiche dynamische Kompilierungsmode
 
 - Wie nicht kompilierten Code direkt in der SVC-Datei eingefügt werden soll. Code zur Implementierung kann sich Inline in der SVC Datei, auch sein, nach der \@ServiceHost-Direktive. Änderungen an Inlinecode führen dazu, dass die Anwendung wiederverwendet und neu kompiliert wird, wenn die nächste Anforderung empfangen wird.
 
-Weitere Informationen zu den [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] -Kompilierungsmodell finden Sie unter [Übersicht über die ASP.NET-Kompilierung](https://go.microsoft.com/fwlink/?LinkId=94773).
+Weitere Informationen über das Kompilierungsmodell von ASP.NET 2.0 finden Sie unter [Übersicht über die ASP.NET-Kompilierung](https://go.microsoft.com/fwlink/?LinkId=94773).
 
 ## <a name="configure-the-wcf-service"></a>Konfigurieren des WCF-Diensts
 
@@ -103,7 +103,7 @@ Sie müssen immer relative Endpunktadressen für IIS-gehostete Dienstendpunkte v
 
 ### <a name="available-transports"></a>Verfügbare Transporte
 
-WCF-Diensten in IIS 5.1 und [!INCLUDE[iis601](../../../../includes/iis601-md.md)] auf die Verwendung von HTTP-basierten Kommunikation beschränkt sind. Auf diesen IIS-Plattformen führt das Konfigurieren eines gehosteten Diensts für die Verwendung einer Nicht-HTTP-Bindung zu einem Fehler während der Dienstaktivierung. Die von [!INCLUDE[iisver](../../../../includes/iisver-md.md)]unterstützten Transporte umfassen HTTP, Net.TCP, Net.Pipe, Net.MSMQ und msmq.formatname für die Abwärtskompatibilität mit bestehenden MSMQ-Anwendungen.
+WCF-Dienste in IIS gehostet 5.1 und IIS 6.0 auf die Verwendung von HTTP-basierten Kommunikation beschränkt sind. Auf diesen IIS-Plattformen führt das Konfigurieren eines gehosteten Diensts für die Verwendung einer Nicht-HTTP-Bindung zu einem Fehler während der Dienstaktivierung. Für IIS 7.0 enthalten die unterstützten Transporte HTTP, Net.TCP, Net.Pipe, Net.MSMQ und msmq.formatname für Abwärtskompatibilität Kompatibilität mit vorhandenen MSMQ-Anwendungen.
 
 ### <a name="http-transport-security"></a>HTTP-Transportsicherheit
 

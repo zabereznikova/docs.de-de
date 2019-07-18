@@ -10,25 +10,25 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991063"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML-Token und SAML-Ansprüche
 Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von Ansprüchen. Windows Communication Foundation (WCF) verwendet wird, in verbundsicherheitsszenarien SAML-Token sind standardmäßig *ausgestellte Token*.  
   
  SAML-Token enthalten Anweisungen, die Sets mit Ansprüchen sind, die von einer Entität über eine andere Entität gemacht wurden. In Verbundsicherheitsszenarien werden Anweisungen beispielsweise von einem Sicherheitstokendienst über einen Benutzer im System getroffen. Der Sicherheitstokendienst signiert das SAML-Token, um die Richtigkeit der Anweisungen im Token zu bestätigen. Darüber hinaus ist das SAML-Token kryptografischen Schlüsselmaterialien zugewiesen, wobei der Benutzer des SAML-Tokens beweisen muss, dass er um diese Materialien weiß. Dieser Beleg reicht aus, um die vertrauende Seite zu überzeugen, dass das SAML-Token tatsächlich für diesen Benutzer ausgestellt wurde. Ein typisches Szenario sieht folgendermaßen aus:  
   
-1.  Ein Client fordert einen SAML-Token von einem Sicherheitstokendienst an, wobei er sich bei diesem Dienst mit den Windows-Anmeldeinformationen authentifiziert.  
+1. Ein Client fordert einen SAML-Token von einem Sicherheitstokendienst an, wobei er sich bei diesem Dienst mit den Windows-Anmeldeinformationen authentifiziert.  
   
-2.  Der Sicherheitstokendienst stellt dem Client einen SAML-Token aus. Das SAML-Token wird mit einem dem Sicherheitstokendienst zugewiesenen Zertifikat signiert und enthält einen Prüfschlüssel, der für den Zieldienst verschlüsselt wurde.  
+2. Der Sicherheitstokendienst stellt dem Client einen SAML-Token aus. Das SAML-Token wird mit einem dem Sicherheitstokendienst zugewiesenen Zertifikat signiert und enthält einen Prüfschlüssel, der für den Zieldienst verschlüsselt wurde.  
   
-3.  Der Client empfängt auch eine Kopie der *Prüfschlüssel*. Der Client stellt dann das SAML-Token an den Anwendungsdienst (der *vertrauende*) und signiert die Nachricht mit diesem Prüfschlüssel.  
+3. Der Client empfängt auch eine Kopie der *Prüfschlüssel*. Der Client stellt dann das SAML-Token an den Anwendungsdienst (der *vertrauende*) und signiert die Nachricht mit diesem Prüfschlüssel.  
   
-4.  Die Signatur über dem SAML-Token zeigt der vertrauenden Seite, dass der Sicherheitstokendienst das Token ausgestellt hat. Die mit dem Prüfschlüssel erstellte Nachrichtensignatur zeigt der vertrauenden Seite, dass das Token für den Client ausgestellt wurde.  
+4. Die Signatur über dem SAML-Token zeigt der vertrauenden Seite, dass der Sicherheitstokendienst das Token ausgestellt hat. Die mit dem Prüfschlüssel erstellte Nachrichtensignatur zeigt der vertrauenden Seite, dass das Token für den Client ausgestellt wurde.  
   
 ## <a name="from-claims-to-samlattributes"></a>Von Ansprüchen zu SamlAttributes  
  In WCF-Anweisungen in SAML-Token werden als modelliert <xref:System.IdentityModel.Tokens.SamlAttribute> -Objekte, die direkt aus aufgefüllt werden können <xref:System.IdentityModel.Claims.Claim> bereitgestellten Objekte die <xref:System.IdentityModel.Claims.Claim> Objekt verfügt über eine <xref:System.IdentityModel.Claims.Claim.Right%2A> Eigenschaft <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> und <xref:System.IdentityModel.Claims.Claim.Resource%2A> Eigenschaft hat den Typ <xref:System.String>. Zum Beispiel:  
@@ -49,7 +49,7 @@ Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von An
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)
 - [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Ansprüche und Token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [Erstellen von Ansprüchen und Ressourcenwerte](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)

@@ -17,22 +17,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4d15d9ae63e63f98ab73e250df558dfa16002a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 61dcf014a65f524d2b2e7b92bcc7f007d1a47125
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411787"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754500"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>ICorDebugFunction2::EnumerateNativeCode-Methode
-Ruft einen Schnittstellenzeiger auf ein ICorDebugCodeEnum-Objekt mit den systemeigenen codeanweisungen in der Funktion, die von diesem ICorDebugFunction2-Objekt verwiesen wird.  
+Ruft einen Schnittstellenzeiger auf ein ICorDebugCodeEnum-Objekt, das den nativen Code-in der Funktion, die von diesem ICorDebugFunction2-Objekt verwiesen wird Anweisungen.  
   
 > [!NOTE]
 >  `EnumerateNativeCode` in der aktuellen Version von .NET Framework ist nicht implementiert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateNativeCode (  
     [out] ICorDebugCodeEnum   **ppCodeEnum  
 );  

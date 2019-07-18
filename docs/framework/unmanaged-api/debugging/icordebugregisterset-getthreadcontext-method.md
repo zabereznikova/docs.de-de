@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fecbcff0fd124b94aeeecf82e23d9875c34ebb9b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ef7619316cae46df350bd75a2c6838828f7e9c82
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091576"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747182"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext-Methode
 Ruft den Kontext des aktuellen Threads ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetThreadContext(  
     [in] ULONG32 contextSize,  
     [in, out, length_is(contextSize),  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494947"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755901"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Exemplarische Vorgehensweise: Hosten einer WPF-Uhr in Win32
 
@@ -29,11 +29,11 @@ Dieses Tutorial konzentriert sich auf die wichtigsten Schritte zum Erstellen ein
 
 Die folgende Grafik zeigt das angestrebte Endprodukt dieses Tutorials:
 
-![Dialogfeld Datums- und Uhrzeiteigenschaften](./media/interoparch06.PNG "InteropArch06")
+![Screenshot, das Dialogfeld Eigenschaften von Datum und Uhrzeit zeigt.](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-Sie können dieses Dialogfeld reproduzieren, durch das Erstellen von C++ [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Projekt [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], und Verwenden des Dialog-Editors Folgendes erstellen:
+Sie können dieses Dialogfeld reproduzieren, indem Sie erstellen eine C++ Win32-Projekt in Visual Studio und Verwenden des Dialog-Editors Folgendes erstellen:
 
-![Dialogfeld Datums- und Uhrzeiteigenschaften](./media/interoparch07.PNG "InteropArch07")
+![Neu erstellte Dialogfeld Datums- und Uhrzeiteigenschaften](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
 (Sie müssen nicht mit [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] verwenden <xref:System.Windows.Interop.HwndSource>, und Sie müssen nicht C++ verwenden, um das Schreiben von [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programme, aber dies ist eine durchaus übliche Vorgehensweise und eignet sich gut für eine schrittweise Erklärung des Tutorials).
 
@@ -229,7 +229,7 @@ Und hier das zugehörige CodeBehind:
 
 Das Endergebnis sieht folgendermaßen aus:
 
-![Dialogfeld Datums- und Uhrzeiteigenschaften](./media/interoparch08.PNG "InteropArch08")
+![Das Dialogfeld Datums- und Uhrzeiteigenschaften Endergebnis](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 Um Ihr Ergebnis mit den Code zu vergleichen, die diese Abbildung produzierte, finden Sie unter [Beispiel für die Interaktion von Win32-Uhr](https://go.microsoft.com/fwlink/?LinkID=160051).
 

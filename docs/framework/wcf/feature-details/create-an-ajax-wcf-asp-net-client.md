@@ -2,14 +2,14 @@
 title: Erstellen Sie in Visual Studio ein AJAX-aktivierten WCF-Dienst und einem ASP.NET-Client
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 06fa3a9d0151f3b4b865c421f9960854ef471377
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024609"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754607"
 ---
-# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Vorgehensweise: Erstellen eines AJAX-aktivierten WCF-Diensts und eines ASP.NET-Clients, der auf den Dienst zugreift
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Vorgehensweise: Erstellen Sie einen AJAX-aktivierten WCF-Dienst und einem ASP.NET-Client, die auf den Dienst zugreift
 
 In diesem Thema wird gezeigt, wie mit Visual Studio zum Erstellen einer AJAX-fähigen Windows Communication Foundation (WCF)-Dienst und einem ASP.NET-Client, die auf den Dienst zugreift.
 
@@ -77,15 +77,15 @@ In diesem Thema wird gezeigt, wie mit Visual Studio zum Erstellen einer AJAX-fä
 
 4. In der **Quelle** anzuzeigen, fügen Sie den folgenden Code zwischen den  **\<ScriptManager >** Tags aus, um den Pfad zum WCF-Dienst angeben:
 
-    ```html
+    ```xml
     <Services>
        <asp:ServiceReference Path="~/CostService.svc" />
     </Services>
     ```
 
-1. Fügen Sie den Code für die Javascript-Funktion `Calculate()`. Platzieren Sie den folgenden Code in die **Head** Abschnitt des Webformulars:
+5. Fügen Sie den Code für die Javascript-Funktion `Calculate()`. Platzieren Sie den folgenden Code in die **Head** Abschnitt des Webformulars:
 
-    ```javascript
+    ```html
     <script type="text/javascript">
 
         function Calculate() {

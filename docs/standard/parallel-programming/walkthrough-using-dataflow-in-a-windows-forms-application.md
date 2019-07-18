@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d27500332c59f24e121c9c15ac27a36ed93d07
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465801"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755050"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Exemplarische Vorgehensweise: Verwenden von Dataflow in einer Windows Forms-Anwendung
 Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstellt wird, die eine Bildverarbeitung in einer Windows Forms-Anwendung durchführen.  
@@ -29,55 +29,55 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
 ## <a name="sections"></a>Abschnitte  
  Diese exemplarische Vorgehensweise enthält folgende Abschnitte:  
   
--   [Erstellen der Windows Forms-Anwendung](#winforms)  
+- [Erstellen der Windows Forms-Anwendung](#winforms)  
   
--   [Erstellen des Datenflussnetzwerks](#network)  
+- [Erstellen des Datenflussnetzwerks](#network)  
   
--   [Verbinden des Datenflussnetzwerks mit der Benutzeroberfläche](#ui)  
+- [Verbinden des Datenflussnetzwerks mit der Benutzeroberfläche](#ui)  
   
--   [Vollständiges Beispiel](#complete)  
+- [Vollständiges Beispiel](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
  In diesem Abschnitt wird beschrieben, wie Sie die grundlegende Windows Forms-Anwendung erstellen und Steuerelemente zum Hauptformular hinzufügen.  
   
-#### <a name="to-create-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
+### <a name="to-create-the-windows-forms-application"></a>Erstellen der Windows Forms-Anwendung  
   
-1.  Erstellen Sie in Visual Studio ein Visual C#- oder Visual Basic-Projekt des Typs **Windows Forms-Anwendung**. In diesem Dokument hat das Projekt den Namen `CompositeImages`.  
+1. Erstellen Sie in Visual Studio ein Visual C#- oder Visual Basic-Projekt des Typs **Windows Forms-Anwendung**. In diesem Dokument hat das Projekt den Namen `CompositeImages`.  
   
-2.  Fügen Sie im Formulardesigner für das Hauptformular „Form1.cs“ („Form1.vb“ in Visual Basic) ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
+2. Fügen Sie im Formulardesigner für das Hauptformular „Form1.cs“ („Form1.vb“ in Visual Basic) ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement hinzu.  
   
-3.  Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> und die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Ordner auswählen** fest.  
+3. Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> und die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Ordner auswählen** fest.  
   
-4.  Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein zweites <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Abbrechen** und die <xref:System.Windows.Forms.ToolStripItem.Enabled%2A>-Eigenschaft auf `False` fest.  
+4. Fügen Sie dem <xref:System.Windows.Forms.ToolStrip>-Steuerelement ein zweites <xref:System.Windows.Forms.ToolStripButton>-Steuerelement hinzu. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>-Eigenschaft auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, die <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf **Abbrechen** und die <xref:System.Windows.Forms.ToolStripItem.Enabled%2A>-Eigenschaft auf `False` fest.  
   
-5.  Fügen Sie dem Hauptformular ein <xref:System.Windows.Forms.PictureBox>-Objekt hinzu. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
+5. Fügen Sie dem Hauptformular ein <xref:System.Windows.Forms.PictureBox>-Objekt hinzu. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
 <a name="network"></a>   
 ## <a name="creating-the-dataflow-network"></a>Erstellen des Datenflussnetzwerks  
  Dieser Abschnitt beschreibt das Erstellen eines Datenflussnetzwerks, das Bildverarbeitung durchführt.  
   
-#### <a name="to-create-the-dataflow-network"></a>Erstellen des Datenflussnetzwerks  
+### <a name="to-create-the-dataflow-network"></a>Erstellen des Datenflussnetzwerks  
   
-1.  Fügen Sie Ihrem Projekt einen Verweis auf „System.Threading.Tasks.Dataflow.dll“ hinzu.  
+1. Fügen Sie Ihrem Projekt einen Verweis auf „System.Threading.Tasks.Dataflow.dll“ hinzu.  
   
-2.  Stellen Sie sicher, dass „Form1.cs“ („Form1.vb“ für Visual Basic) die folgenden `using`-Anweisungen (`Using` in Visual Basic) enthält:  
+2. Stellen Sie sicher, dass „Form1.cs“ („Form1.vb“ für Visual Basic) die folgenden `using`-Anweisungen (`Using` in Visual Basic) enthält:  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
-3.  Fügen Sie der `Form1`-Klasse die folgenden Datenmember hinzu:  
+3. Fügen Sie der `Form1`-Klasse die folgenden Datenmember hinzu:  
   
      [!code-csharp[TPLDataflow_CompositeImages#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#2)]  
   
-4.  Fügen Sie der `Form1`-Klasse die folgende `CreateImageProcessingNetwork`-Methode hinzu: Diese Methode erstellt das Bildverarbeitungsnetzwerk.  
+4. Fügen Sie der `Form1`-Klasse die folgende `CreateImageProcessingNetwork`-Methode hinzu: Diese Methode erstellt das Bildverarbeitungsnetzwerk.  
   
      [!code-csharp[TPLDataflow_CompositeImages#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#3)]  
   
-5.  Implementieren Sie die `LoadBitmaps`-Methode.  
+5. Implementieren Sie die `LoadBitmaps`-Methode.  
   
      [!code-csharp[TPLDataflow_CompositeImages#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#4)]  
   
-6.  Implementieren Sie die `CreateCompositeBitmap`-Methode.  
+6. Implementieren Sie die `CreateCompositeBitmap`-Methode.  
   
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
@@ -86,7 +86,7 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
   
  In der folgenden Tabelle werden die Member des Netzwerks beschrieben.  
   
-|Member|Typ|Beschreibung|  
+|Member|Typ|BESCHREIBUNG|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Akzeptiert einen Ordnerpfad als Eingabe und erzeugt eine Auflistung von <xref:System.Drawing.Bitmap>-Objekten als Ausgabe.|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Akzeptiert eine Auflistung von <xref:System.Drawing.Bitmap>-Objekten als Eingabe und erzeugt eine zusammengesetzte Bitmap als Ausgabe.|  
@@ -107,17 +107,17 @@ Dieses Dokument veranschaulicht, wie ein Netzwerk von Datenflussblöcken erstell
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>Verbinden des Datenflussnetzwerks mit der Benutzeroberfläche  
  In diesem Abschnitt wird beschrieben, wie Sie das Datenflussnetzwerk mit der Benutzeroberfläche verbinden. Die Erstellung des zusammengesetzten Bildes und der Abbruch des Vorgangs werden über die Schaltflächen **Ordner auswählen** und **Abbrechen** initiiert. Wenn der Benutzer eine dieser Schaltflächen auswählt, wird die entsprechende Aktion auf asynchrone Weise initiiert.  
   
-#### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Verbinden des Datenflussnetzwerks mit der Benutzeroberfläche  
+### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>Verbinden des Datenflussnetzwerks mit der Benutzeroberfläche  
   
-1.  Erstellen Sie im Formulardesigner für das Hauptformular einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis der Schaltfläche **Ordner auswählen**.  
+1. Erstellen Sie im Formulardesigner für das Hauptformular einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis der Schaltfläche **Ordner auswählen**.  
   
-2.  Implementieren Sie das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis für die Schaltfläche **Ordner auswählen**.  
+2. Implementieren Sie das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis für die Schaltfläche **Ordner auswählen**.  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3.  Erstellen Sie im Formulardesigner für das Hauptformular einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis der Schaltfläche **Abbrechen**.  
+3. Erstellen Sie im Formulardesigner für das Hauptformular einen Ereignishandler für das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis der Schaltfläche **Abbrechen**.  
   
-4.  Implementieren Sie das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis für die Schaltfläche **Abbrechen**.  
+4. Implementieren Sie das <xref:System.Windows.Forms.ToolStripItem.Click>-Ereignis für die Schaltfläche **Abbrechen**.  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   

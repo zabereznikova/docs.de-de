@@ -5,11 +5,11 @@ helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
 ms.openlocfilehash: 88b9c530da3da39c0d70d9d8e90626bd5e133cf3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802416"
 ---
 # <a name="registry-summary-visual-basic"></a>Registrierung: Zusammenfassung (Visual Basic)
 Visual Studio-Programmiersprachen-Schlüsselwörter und Member der Laufzeitbibliothek nach ihrem Zweck organisiert sind, und verwenden.  

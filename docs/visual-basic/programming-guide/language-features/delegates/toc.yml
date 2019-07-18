@@ -1,16 +1,9 @@
-items:
 - name: Delegaten
   href: index.md
   items:
-  - name: 'Vorgehensweise: Aufrufen einer Delegatenmethode'
-    href: how-to-invoke-a-delegate-method.md
-  - name: 'Vorgehensweise: Übergeben von Prozeduren an eine andere Prozedur'
-    href: how-to-pass-procedures-to-another-procedure.md
-  - name: Gelockerte Delegatenkonvertierung
-    href: relaxed-delegate-conversion.md
-ms.openlocfilehash: 245db8051550fbdaa16338a8f184c0b900b20139
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468799"
+    - name: 'Vorgehensweise: Aufrufen einer Delegatenmethode'
+      href: how-to-invoke-a-delegate-method.md
+    - name: 'Vorgehensweise: Übergeben von Prozeduren an eine andere Prozedur'
+      href: how-to-pass-procedures-to-another-procedure.md
+    - name: Gelockerte Delegatenkonvertierung
+      href: relaxed-delegate-conversion.md

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc94c63edb602d87a7c08a9051eb2ef760834477
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4d4efa7cb3bc98c54be2889855c3b756fdbf2847
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200973"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782244"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout-Methode
-Ruft Informationen zum Layout eines Zeichenfolgenobjekts ab. Diese Methode ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], und wird durch die [ICorProfilerInfo3:: Getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) Methode.  
+Ruft Informationen zum Layout eines Zeichenfolgenobjekts ab. Diese Methode ist in .NET Framework 4 veraltet, und wird durch die [ICorProfilerInfo3:: Getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStringLayout(  
     [out] ULONG *pBufferLengthOffset,  
     [out] ULONG *pStringLengthOffset,  
@@ -52,11 +52,11 @@ HRESULT GetStringLayout(
 ## <a name="remarks"></a>Hinweise  
  Die `GetStringLayout` Methode ruft die Offsets, relativ zu den `ObjectID` -Zeiger ist, der Standorte in der folgenden gespeichert werden:  
   
--   Die Länge des Puffers der Zeichenfolge.  
+- Die Länge des Puffers der Zeichenfolge.  
   
--   Die Länge der Zeichenfolge selbst.  
+- Die Länge der Zeichenfolge selbst.  
   
--   Der Puffer, der die tatsächliche Zeichenfolge mit breiten Zeichen enthält.  
+- Der Puffer, der die tatsächliche Zeichenfolge mit breiten Zeichen enthält.  
   
  Zeichenfolgen können Null-terminiert sein.  
   

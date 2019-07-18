@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 17a4a7f4a514c07280dd5f58935fea3eed1ca4e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164986"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662210"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter und XAML
 In diesem Thema wird der Zweck der Typkonvertierung aus einer Zeichenfolge in eine allgemeinere Funktion der XAML-Sprache erläutert. In .NET Framework die <xref:System.ComponentModel.TypeConverter> Klasse einen bestimmten Zweck dient, als Teil der Implementierung für eine verwaltete benutzerdefinierte Klasse, die als Eigenschaftswert in der XAML-Attributverwendung verwendet werden kann. Wenn Sie eine benutzerdefinierte Klasse schreiben und Instanzen dieser Klasse als festlegbare XAML-Attributwerte verwendet werden sollen, müssen Sie möglicherweise Anwenden einer <xref:System.ComponentModel.TypeConverterAttribute> in Ihrer Klasse schreiben Sie eine benutzerdefinierte <xref:System.ComponentModel.TypeConverter> Klasse oder beides.  
@@ -59,19 +59,19 @@ In diesem Thema wird der Zweck der Typkonvertierung aus einer Zeichenfolge in ei
   
  <xref:System.ComponentModel.TypeConverter> definiert vier Member, die für die Konvertierung in und aus Zeichenfolgen für XAML-Verarbeitungszwecke relevant sind:  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  Die wichtigste Methode ist <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>. Diese Methode konvertiert die Eingabezeichenfolge in den erforderlichen Objekttyp. Streng genommen ist der <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> -Methode kann implementiert werden, um eine viel breitere Palette von Typen in den vom Konverter beabsichtigten Zieltyp zu konvertieren, und somit für Zwecke, die über XAML hinausgehen werden sollen, z.B. die Unterstützung von Konvertierungen zur Laufzeit, sondern für XAML-Zwecke Es ist nur der Codepfad, der verarbeiten kann eine <xref:System.String> Eingabe, die wichtig ist.  
   
  Die nächste wichtigste Methode ist <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Wenn eine Anwendung in eine Markupdarstellung umgewandelt wird (z. B. Wenn sie in XAML als Datei gespeichert ist), <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> ist verantwortlich für die Erstellung einer Markupdarstellung. In diesem Fall der Codepfad, der für XAML wichtig ist, wenn Sie übergeben eine `destinationType` von <xref:System.String> .  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> und <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sind Unterstützungsmethoden, die verwendet werden, wenn ein Dienst die Funktionen von Abfragen die <xref:System.ComponentModel.TypeConverter> Implementierung. Sie müssen diese Methoden implementieren, um `true` für typspezifische Klassen zurückzugeben, welche die entsprechenden Konvertierungsmethoden Ihres Konverters unterstützen. Für XAML-Zwecke bedeutet dies in der Regel den <xref:System.String> -Typ.  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> und <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sind Unterstützungsmethoden, die verwendet werden, wenn ein Dienst die Funktionen der <xref:System.ComponentModel.TypeConverter> -Implementierung abfragt. Sie müssen diese Methoden implementieren, um `true` für typspezifische Klassen zurückzugeben, welche die entsprechenden Konvertierungsmethoden Ihres Konverters unterstützen. Für XAML-Zwecke bedeutet dies in der Regel den <xref:System.String> -Typ.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Kulturinformations- und Typkonverter für XAML  
  Jede <xref:System.ComponentModel.TypeConverter> Implementierung kann über eine eigene Interpretation von was eine gültige Zeichenfolge für eine Konvertierung ausmacht und können auch verwenden oder die als Parameter übergebene typbeschreibung ignorieren. Im Hinblick auf die Kultur und das Konvertieren von XAML-Typen gibt es eine wichtige Überlegung. Die Verwendung von lokalisierbaren Zeichenfolgen als Attributwerte wird von XAML vollständig unterstützt. Die Verwendung lokalisierbarer Zeichenfolgen als Typkonvertereingabe mit bestimmten kulturellen Anforderungen wird nicht unterstützt, weil Typkonverter für XAML-Attributwerte ein zwangsläufig festes Sprachverarbeitungsverhalten umfassen, in dem die `en-US`-Kultur verwendet wird. Weitere Informationen zu den Gründe für diese Einschränkung finden Sie in der XAML-Sprachspezifikation ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)).  

@@ -1,5 +1,5 @@
 ---
-title: <authenticationModules> -Element (Netzwerkeinstellungen)
+title: <authenticationModules>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674713"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<AuthenticationModules >-Element (Netzwerkeinstellungen)
 Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.  
@@ -39,8 +39,8 @@ Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Hinzufügen](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Ein Modul für die Authentifizierung hinzugefügt der Anwendung.|  
-|[nicht aktiviert](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungsmodule aus der Anwendung an.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Ein Modul für die Authentifizierung hinzugefügt der Anwendung.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungsmodule aus der Anwendung an.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|Entfernt ein Authentifizierungsmodul aus der Anwendung an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -73,4 +73,4 @@ Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

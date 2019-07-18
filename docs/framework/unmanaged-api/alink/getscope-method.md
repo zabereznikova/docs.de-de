@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 571612796d4e66be9dd8469d748c2380c839ddfa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f3c3142ca12789b086bcd8b5a9c00c943264ae7b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165781"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741854"
 ---
 # <a name="getscope-method"></a>GetScope-Methode
 Ruft eine Importgültigkeitsbereich ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetScope(  
     mdAssembly AssemblyID,  
     mdToken FileToken,  
@@ -60,4 +60,4 @@ HRESULT GetScope(
 
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

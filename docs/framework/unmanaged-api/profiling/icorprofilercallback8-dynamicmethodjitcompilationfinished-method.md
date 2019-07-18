@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dbe8d4f7050b93ffb34280be6d63367ef294ae8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ba9f9d4ee5f95def3dcd2d757517e225c826cb9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206589"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758003"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationFinished-Methode
 [Wird nur in der .NET Framework 4.7 und höheren Versionen unterstützt]  
@@ -24,7 +24,7 @@ Benachrichtigt den Profiler an, wenn JIT-Kompilierung einer dynamischen Methode 
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DynamicMethodJITCompilationFinished(  
      [in]  FunctionID  functionId,   
      [in]  BOOL        hrStatus,   

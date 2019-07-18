@@ -2,45 +2,45 @@
 title: Deklarierte Elemente in Visual Basic
 ms.date: 07/20/2015
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-ms.openlocfilehash: cafc280bb4dbee388717ead4f748d66ea5d3ce72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3430517aea32eeb79aeb586d3a1eb0df1524998b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647695"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639170"
 ---
 # <a name="declared-elements-in-visual-basic"></a>Deklarierte Elemente in Visual Basic
 Ein *deklariertes Element* ist ein Programmierelement, das in einer Deklarationsanweisung definiert ist. Deklarierte Elemente enthalten Variablen, Konstanten, Enumerationen, Klassen, Strukturen, Module, Schnittstellen, Prozeduren, Prozedurparameter, Funktionsrückgaben, externe Prozedurverweise, Operatoren, Eigenschaften, Ereignisse und Delegaten.  
   
  Deklarationsanweisungen beinhalten Folgendes:  
   
--   [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+- [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)  
   
--   [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)  
+- [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)  
   
--   [Enum-Anweisung](../../../../visual-basic/language-reference/statements/enum-statement.md)  
+- [Enum-Anweisung](../../../../visual-basic/language-reference/statements/enum-statement.md)  
   
--   [Class-Anweisung](../../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class-Anweisung](../../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module-Anweisung](../../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module-Anweisung](../../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface-Anweisung](../../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface-Anweisung](../../../../visual-basic/language-reference/statements/interface-statement.md)  
   
--   [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare-Anweisung](../../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare-Anweisung](../../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event-Anweisung](../../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event-Anweisung](../../../../visual-basic/language-reference/statements/event-statement.md)  
   
--   [Delegate-Anweisung](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+- [Delegate-Anweisung](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

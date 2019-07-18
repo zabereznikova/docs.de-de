@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: a4f27c0b2bf95ed19e485881aba3c52073114117
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "52742476"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804553"
 ---
 ### <a name="wpf-layout-rounding-of-margins-has-changed"></a>Die WPF-Layoutglättung von Rändern wurde geändert
 

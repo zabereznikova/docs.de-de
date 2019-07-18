@@ -2,16 +2,16 @@
 title: SqlClient-Streamingunterstützung
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c5325e60e8303ab46f1c32340a20473b31bcf52e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844235"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489782"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient-Streamingunterstützung
 
-Die Streamingunterstützung zwischen SQL Server und einer Anwendung (neu in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) unterstützt unstrukturierte Daten auf dem Server (Dokumente, Bilder und Medien-Dateien). SQL Server-Datenbank kann binary large Object (BLOBs) speichern, aber beim Abrufen von BLOBS kann viel Arbeitsspeicher verwenden.
+Die Streamingunterstützung zwischen SQL Server und einer Anwendung (neu in .NET Framework 4.5) unterstützt unstrukturierte Daten, auf dem Server (Dokumente, Bilder und Medien-Dateien). SQL Server-Datenbank kann binary large Object (BLOBs) speichern, aber beim Abrufen von BLOBS kann viel Arbeitsspeicher verwenden.
 
 Streaming-Unterstützung in und aus SQL Server vereinfacht das Schreiben von Anwendungen, Übertragen von Daten, ohne die Daten vollständig in den Arbeitsspeicher, was zu weniger Ausnahmefehlern aufgrund arbeitsspeicherüberlaufs laden zu müssen.
 
@@ -78,7 +78,7 @@ Das <xref:System.Xml.XmlReader>-, <xref:System.IO.TextReader>- und <xref:System.
 
 ## <a name="sample----streaming-from-sql-server"></a>Beispiel: Streamen von SQLServer
 
-Verwenden Sie folgende [!INCLUDE[tsql](../../../../includes/tsql-md.md)], um die Beispieldatenbank zu erstellen:
+Verwenden Sie die folgende Transact-SQL, um die Beispieldatenbank zu erstellen:
 
 ```sql
 CREATE DATABASE [Demo]
@@ -101,9 +101,9 @@ Das Beispiel erläutert die folgenden Aufgaben:
 
 - Vermeiden, dass ein Benutzeroberflächenthread blockiert wird, indem eine asynchrone Methode zum Abrufen großer Dateien bereitgestellt wird.
 
-- Übertragen eine großen Textdatei von SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Übertragen einer großen Textdatei von SQL Server in .NET Framework 4.5.
 
-- Übertragen eine große XML-Datei von SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Übertragen einer großen XML-Datei von SQL Server in .NET Framework 4.5.
 
 - Abrufen von Daten aus SQL Server.
 
@@ -300,7 +300,7 @@ namespace StreamingFromServer {
 
 ## <a name="sample----streaming-to-sql-server"></a>Beispiel: Streamen an SQLServer
 
-Verwenden Sie folgende [!INCLUDE[tsql](../../../../includes/tsql-md.md)], um die Beispieldatenbank zu erstellen:
+Verwenden Sie die folgende Transact-SQL, um die Beispieldatenbank zu erstellen:
 
 ```sql
 CREATE DATABASE [Demo2]
@@ -323,9 +323,9 @@ GO
 
 Das Beispiel erläutert die folgenden Aufgaben:
 
-- Übertragen eines großen BLOBs und SQL Server in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Übertragen eines großen BLOBs und SQL Server in .NET Framework 4.5.
 
-- Übertragen einer großen Textdatei in SQL Server im [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Übertragen einer großen Textdatei in SQL Server im .NET Framework 4.5.
 
 - Verwenden der neuen asynchronen Funktion zur Übertragung eines großen BLOBs.
 

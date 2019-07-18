@@ -5,11 +5,11 @@ helpviewer_keywords:
 - StackPanel control [WPF], creating
 ms.assetid: e7ce65cb-720a-4bb6-95b6-286b74488a58
 ms.openlocfilehash: bcf6decff2fbc012b5f8b62794f0d7b2cd9f29fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59121809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051000"
 ---
 # <a name="how-to-create-a-stackpanel"></a>Vorgehensweise: Erstellen eines StackPanel-Objekts
 Dieses Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Controls.StackPanel>.  
@@ -47,4 +47,4 @@ Dieses Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Controls.Stac
 
 - <xref:System.Windows.Controls.StackPanel>
 - [Übersicht über Panel-Elemente](panels-overview.md)
-- [Gewusst wie-Themen](stackpanel-how-to-topics.md)
+- [Themen zu Vorgehensweisen](stackpanel-how-to-topics.md)

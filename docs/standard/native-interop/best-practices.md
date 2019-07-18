@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden für die Einrichtung von
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412057"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063066"
 ---
 # <a name="native-interoperability-best-practices"></a>Bewährte Methoden für native Interoperabilität
 
@@ -44,7 +44,7 @@ Denken Sie daran, `[DllImport]` als `Charset.Unicode` zu kennzeichnen, es sei de
 
 **❌ VERWENDEN SIE KEINE** `[Out] string`-Parameter. Zeichenfolgenparameter, die per Wert mit dem `[Out]`-Attribut übergeben werden, können die Runtime destabilisieren, wenn die Zeichenfolge internalisiert ist. Weitere Informationen zum Internalisieren von Zeichenfolgen finden Sie in der Dokumentation zu <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ VERMEIDEN** Sie `StringBuilder`-Parameter. `StringBuilder` -Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
+**❌ VERMEIDEN** Sie `StringBuilder`-Parameter. `StringBuilder`Marshalling erzeugt *immer* eine native Pufferkopie. Dies kann extrem ineffizient sein. Sehen Sie sich das folgende typische Szenario an, in dem eine Windows-API aufgerufen wird, die eine Zeichenfolge akzeptiert:
 
 1. Erstellen Sie einen StringBuilder mit der gewünschten Kapazität (ordnet die verwaltete Kapazität zu) **{1}**
 2. Aufrufen
@@ -57,11 +57,11 @@ Damit haben wir *{4}* Zuordnungen, um eine Zeichenfolge aus dem nativen Code abz
 
 Ein weiteres Problem bei `StringBuilder` ist, dass immer der Rückgabepuffer bis zum ersten NULL-Zeichen zurückkopiert wird. Wenn die zurückgegebene Zeichenfolge nicht beendet oder mit einem doppelten NULL-Zeichen beendet wird, ist „P/Invoke“ bestenfalls falsch.
 
-Wenn Sie `StringBuilder` *tatsächlich* verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshallen von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
+Wenn Sie `StringBuilder` *tatsächlich* verwenden, besteht eine weitere Besonderheit darin, dass die Kapazität **kein** verborgenes NULL-Zeichen umfasst, das bei der Interoperabilität immer berücksichtigt wird. Das wird häufig falsch gemacht, da die meisten APIs die Größe des Puffers *einschließlich* des NULL-Zeichens erwarten. Dies kann zu unnötigen bzw. verschwendeten Zuordnungen führen. Darüber hinaus verhindert diese Besonderheit, dass die Runtime das Marshalling von `StringBuilder` optimiert, um die Erstellung von Kopien zu minimieren.
 
 **✔️ ERWÄGEN** Sie die Verwendung von `char[]`s aus einem `ArrayPool`.
 
-Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standardmäßiges Marshalling für Zeichenfolgen](../../framework/interop/default-marshaling-for-strings.md) und [Anpassen des Zeichenfolgenmarshallings](customize-parameter-marshalling.md#customizing-string-parameters).
+Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standardmäßiges Marshalling für Zeichenfolgen](../../framework/interop/default-marshaling-for-strings.md) und [Anpassen des Zeichenfolgenmarshallings](customize-parameter-marshaling.md#customizing-string-parameters).
 
 > __Windows-spezifisch__  
 > Bei `[Out]`-Zeichenfolgen verwendet die CLR (Common Language Runtime) standardmäßig `CoTaskMemFree`, um Zeichenfolgen freizugeben, oder `SysStringFree` bei Zeichenfolgen, die als `UnmanagedType.BSTR` gekennzeichnet sind.  
@@ -73,7 +73,7 @@ Weitere Informationen zum Marshalling von Zeichenfolgen finden Sie unter [Standa
 
 ## <a name="boolean-parameters-and-fields"></a>Boolesche Parameter und Felder
 
-Bei booleschen Werten passieren leicht Fehler. Standardmäßig erfolgt für einen `bool`-Wert von .NET ein Marshalling in einen `BOOL`-Wert in Windows. Dort handelt es sich um einen 4 Byte langen Wert. Die Typen `_Bool` und `bool` in C und C++ sind jedoch *Einzelbytewerte*. Dies kann zu Bugs führen, die sich nur sehr schwer auffinden lassen, da der halbe Rückgabewert verworfen wird, sich das Ergebnis aber nur *möglicherweise* ändert. Weitere Informationen zum Marshallen von `bool`-Werten aus .NET in `bool`-Typen in C oder C++ finden Sie in der Dokumentation zum [Anpassen des Marshallings von booleschen Feldern](customize-struct-marshalling.md#customizing-boolean-field-marshalling).
+Bei booleschen Werten passieren leicht Fehler. Standardmäßig erfolgt für einen `bool`-Wert von .NET ein Marshalling in einen `BOOL`-Wert in Windows. Dort handelt es sich um einen 4 Byte langen Wert. Die Typen `_Bool` und `bool` in C und C++ sind jedoch *Einzelbytewerte*. Dies kann zu Bugs führen, die sich nur sehr schwer auffinden lassen, da der halbe Rückgabewert verworfen wird, sich das Ergebnis aber nur *möglicherweise* ändert. Weitere Informationen zum Marshalling von `bool`-Werten aus .NET in `bool`-Typen in C oder C++ finden Sie in der Dokumentation zum [Anpassen des Marshallings von booleschen Feldern](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
 ## <a name="guids"></a>GUIDs
 
@@ -126,7 +126,7 @@ Sie können feststellen, ob ein Typ für Blitting geeignet ist, indem Sie versuc
 Weitere Informationen finden Sie unter:
 
 - [Blitfähige und nicht blitfähige Typen](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Marshallen von Typen](type-marshalling.md)
+- [Marshalling von Typen](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Beibehalten von verwalteten Objekten
 
@@ -188,7 +188,6 @@ Die folgenden Typen weisen trotz ihrer Namen die gleiche Größe wie 32- und 64-
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
 
-
 Die folgenden Typen sind Zeiger und entsprechen der Breite der Plattform. Verwenden Sie `IntPtr`/`UIntPtr` für diese.
 
 | Signierte Zeigertypen (verwenden Sie `IntPtr`). | Nicht signierte Zeigertypen (verwenden Sie `UIntPtr`). |
@@ -246,4 +245,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-Es gibt jedoch einige Besonderheiten bei festen Puffern. Bei festen Puffer aus nicht für Blitting geeigneten Typen wird das Marshalling nicht ordnungsgemäß ausgeführt, daher muss das vorhandene Array auf mehrere einzelne Felder erweitert werden. Darüber hinaus gilt für .NET Framework und .NET Core vor Version 3.0: Wenn eine Struktur, die ein festes Pufferfeld enthält, in einer nicht für Blitting geeigneten Struktur geschachtelt wird, erfolgt kein ordnungsgemäßes Marshalling des festen Pufferfelds zum nativen Code.
+Es gibt jedoch einige Besonderheiten bei festen Puffern. Bei festen Puffern aus nicht für Blitting geeigneten Typen wird das Marshalling nicht ordnungsgemäß ausgeführt, daher muss das vorhandene Array auf mehrere einzelne Felder erweitert werden. Darüber hinaus gilt für .NET Framework und .NET Core vor Version 3.0: Wenn eine Struktur, die ein festes Pufferfeld enthält, in einer nicht für Blitting geeigneten Struktur geschachtelt wird, erfolgt kein ordnungsgemäßes Marshalling des festen Pufferfelds zum nativen Code.

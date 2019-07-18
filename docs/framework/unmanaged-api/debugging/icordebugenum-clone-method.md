@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d1226f64df379b5c40304221e9e66eebcdb17b4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 965ce04b02a0eb1ca30aba065b3e372332e08b55
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479232"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752292"
 ---
 # <a name="icordebugenumclone-method"></a>ICorDebugEnum::Clone-Methode
 Erstellt eine Kopie dieses ICorDebugEnum-Objekts.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Clone (  
     [out] ICorDebugEnum **ppEnum  
 );  

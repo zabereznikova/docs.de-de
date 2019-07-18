@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 41f29673622fa7918238dd014b97ee3cf0766257
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085804"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486204"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments-Anweisung
 Einschränken von übergibt Typargumente eines generischen an den Konstruktor des generischen Typs.  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>Generische XAML-Verwendungen von XAML 2006 und WPF  
  Für die Verwendung von XAML 2006 und XAML, das für WPF-Anwendungen verwendet wird, der die folgenden Einschränkungen gelten für `x:TypeArguments` und generische Typverwendungen aus XAML im Allgemeinen:  
   
--   Nur das Stammelement einer XAML-Datei kann es sich um einen generischen XAML-Verwendung unterstützen, die einen generischen Typ verweist.  
+- Nur das Stammelement einer XAML-Datei kann es sich um einen generischen XAML-Verwendung unterstützen, die einen generischen Typ verweist.  
   
--   Das Stammelement muss auf einen generischen Typ mit mindestens einem Typargument zugeordnet. Ein Beispiel hierfür ist <xref:System.Windows.Navigation.PageFunction%601>. Die Seitenfunktionen sind das primäre Szenario für die generischen Verwendung-Unterstützung in WPF-XAML.  
+- Das Stammelement muss auf einen generischen Typ mit mindestens einem Typargument zugeordnet. Ein Beispiel hierfür ist <xref:System.Windows.Navigation.PageFunction%601>. Die Seitenfunktionen sind das primäre Szenario für die generischen Verwendung-Unterstützung in WPF-XAML.  
   
--   Außerdem muss das Stammelement Element XAML-Objektelement für das generische deklariert eine partielle Klasse mit `x:Class`. Dies gilt auch, wenn Definieren eines WPF-Buildvorgang.  
+- Außerdem muss das Stammelement Element XAML-Objektelement für das generische deklariert eine partielle Klasse mit `x:Class`. Dies gilt auch, wenn Definieren eines WPF-Buildvorgang.  
   
--   `x:TypeArguments` Geschachtelte generische Einschränkungen kann nicht verwiesen werden.  
+- `x:TypeArguments` Geschachtelte generische Einschränkungen kann nicht verwiesen werden.  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 oder XAML 2006 ohne WPF 3.0 oder WPF 3.5 Abhängigkeit  
  In .NET Framework-XAML-Dienste für XAML 2006 oder XAML 2009 sind die WPF-bezogene Einschränkungen für generische XAML-Verwendung gelockert. Sie können ein generisches Objektelement an einer beliebigen Position im XAML-Markup instanziieren, die das dahinter liegende Typ und dem Objektmodell unterstützen kann.  
@@ -79,11 +79,11 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
- In WPF und Zielgruppenadressierung [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], können Sie XAML 2009-Funktionen zusammen mit `x:TypeArguments` jedoch nur für loose XAML (XAML, das nicht markupkompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht. Wenn Sie in Markup der XAML kompilieren müssen, müssen Sie unter den Einschränkungen, die im Abschnitt "XAML 2006 und WPF-generische XAML-Verwendungen" erwähnt ausgeführt werden.  
+ In WPF und .NET Framework 4 abzielen, können Sie XAML 2009-Funktionen zusammen mit `x:TypeArguments` jedoch nur für loose XAML (XAML, das nicht markupkompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht. Wenn Sie in Markup der XAML kompilieren müssen, müssen Sie unter den Einschränkungen, die im Abschnitt "XAML 2006 und WPF-generische XAML-Verwendungen" erwähnt ausgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [x:Class-Direktive](x-class-directive.md)
+- [x:Class-Anweisung](x-class-directive.md)
 - [x:Type-Markuperweiterung](x-type-markup-extension.md)
 - [Integrierte Typen für häufige XAML-Sprachprimitive](built-in-types-for-common-xaml-language-primitives.md)
 - [Generics in XAML](generics-in-xaml.md)

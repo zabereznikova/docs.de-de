@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a84fdfdba96c58671302c723b8a56848b70eb60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 23f5a2b6b0970f3cb64ee339e6a1a409354a60e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180016"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780951"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE-Enumeration
 Gibt Konstanten an, die von verwendet [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) beim Initialisieren der common Language Runtime.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum tagCOINITEE {  
    COINITEE_DEFAULT = 0x0,  
    COINITEE_DLL     = 0x1,  

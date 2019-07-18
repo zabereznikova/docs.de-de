@@ -5,30 +5,30 @@ helpviewer_keywords:
 - graphics [Windows Forms], using managed interface
 - graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
-ms.openlocfilehash: a95086645771de61cfc859e34b225992bc16eac9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f0e2fd9dcf31e5fdce16b5a3b6fd21eab6eab66a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103934"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505321"
 ---
 # <a name="overview-of-graphics"></a>Übersicht über Grafiken
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ist eine Anwendungsprogrammierschnittstelle (API), die das Subsystem des Betriebssystems Microsoft Windows bildet. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ist verantwortlich für die Anzeige von Informationen auf Bildschirmen und Druckern. Wie der Name andeutet, ist [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] der Nachfolger von [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], die Schnittstelle für Grafikgeräte (Graphics Device Interface), die in früheren Versionen von Windows enthalten ist.  
+GDI + ist eine Anwendungsprogrammierschnittstelle (API), die das Subsystem des Betriebssystems Microsoft Windows bildet. GDI + ist verantwortlich für die Anzeige von Informationen auf Bildschirmen und Druckern. Wie der Name schon sagt, wird der Nachfolger von GDI, die Graphics Device Interface enthalten, die mit früheren Versionen von Windows von GDI + ist.  
   
 ## <a name="managed-class-interface"></a>Schnittstelle für verwaltete Klassen  
- Die [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API wird über eine Reihe von Klassen, die als verwalteter Code verfügbar gemacht. Dieser Satz von Klassen heißt die *Schnittstelle für verwaltete Klassen* zu [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Die Schnittstelle für verwaltete Klassen besteht aus den folgenden Namespaces:  
+ Die GDI +-API wird über eine Reihe von Klassen, die als verwalteter Code verfügbar gemacht. Dieser Satz von Klassen heißt die *Schnittstelle für verwaltete Klassen* in GDI +. Die Schnittstelle für verwaltete Klassen besteht aus den folgenden Namespaces:  
   
--   <xref:System.Drawing>  
+- <xref:System.Drawing>  
   
--   <xref:System.Drawing.Drawing2D>  
+- <xref:System.Drawing.Drawing2D>  
   
--   <xref:System.Drawing.Imaging>  
+- <xref:System.Drawing.Imaging>  
   
--   <xref:System.Drawing.Text>  
+- <xref:System.Drawing.Text>  
   
--   <xref:System.Drawing.Printing>  
+- <xref:System.Drawing.Printing>  
   
- Mit einem Graphics Device Interface wie z. B. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], Sie können die Informationen auf einem Bildschirm oder Drucker anzeigen, ohne sich Gedanken über die Details des jeweiligen Ausgabegeräts machen. Der Programmierer ruft Methoden auf, die von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]-Klassen bereitgestellt werden. In diesen Methoden wiederum werden die speziellen Gerätetreiber aufgerufen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] isoliert die Anwendung von der Grafikhardware. Es ist diese Isolierung, die Programmierer geräteunabhängige Anwendungen erstellen kann.  
+ Mit einem Graphics Device Interface wie GDI + können Sie die Informationen auf einem Bildschirm oder Drucker anzeigen, ohne sich Gedanken über die Details des jeweiligen Ausgabegeräts machen. Der Programmierer ruft Methoden, die von GDI +-Klassen bereitgestellt werden. In diesen Methoden wiederum werden die speziellen Gerätetreiber aufgerufen. GDI + isoliert die Anwendung von der Grafikhardware. Es ist diese Isolierung, die Programmierer geräteunabhängige Anwendungen erstellen kann.  
   
 ## <a name="see-also"></a>Siehe auch
 

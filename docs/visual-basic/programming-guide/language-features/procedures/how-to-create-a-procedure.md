@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-ms.openlocfilehash: 0f3b0a793b2751b0ec9bb2b7cd6fedc12ae19e18
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665805"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Vorgehensweise: Erstellen Sie eine Prozedur (Visual Basic)
 Schließen Sie eine Prozedur zwischen einer deklarationsanweisung ab (`Sub` oder `Function`) und eine abschließende deklarationsanweisung (`End Sub` oder `End Function`). Alle der Prozedur bei der Code liegt zwischen Anweisungen.  
@@ -24,29 +24,29 @@ Schließen Sie eine Prozedur zwischen einer deklarationsanweisung ab (`Sub` oder
   
 ### <a name="to-create-a-procedure-that-does-not-return-a-value"></a>Zum Erstellen einer Prozedur, die keinen Wert zurückgibt  
   
-1.  Verwendung außerhalb anderer Prozeduren ein `Sub` -Anweisung, gefolgt von einer `End Sub` Anweisung.  
+1. Verwendung außerhalb anderer Prozeduren ein `Sub` -Anweisung, gefolgt von einer `End Sub` Anweisung.  
   
-2.  In der `Sub` -Anweisung, führen Sie die `Sub` Schlüsselwort durch den Namen der Prozedur, und klicken Sie dann auf die Parameterliste in Klammern angegeben.  
+2. In der `Sub` -Anweisung, führen Sie die `Sub` Schlüsselwort durch den Namen der Prozedur, und klicken Sie dann auf die Parameterliste in Klammern angegeben.  
   
-3.  Platzieren Sie Anweisungen von der Prozedur bei der Code zwischen den `Sub` und `End Sub` Anweisungen.  
+3. Platzieren Sie Anweisungen von der Prozedur bei der Code zwischen den `Sub` und `End Sub` Anweisungen.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>Zum Erstellen einer Prozedur, die einen Wert zurückgibt.  
   
-1.  Verwendung außerhalb anderer Prozeduren ein `Function` -Anweisung, gefolgt von einer `End Function` Anweisung.  
+1. Verwendung außerhalb anderer Prozeduren ein `Function` -Anweisung, gefolgt von einer `End Function` Anweisung.  
   
-2.  In der `Function` -Anweisung, führen Sie die `Function` Schlüsselwort durch den Namen der Prozedur, und klicken Sie dann auf die Parameterliste in Klammern ein, und klicken Sie dann eine `As` -Klausel, die den Datentyp des Rückgabewerts angibt.  
+2. In der `Function` -Anweisung, führen Sie die `Function` Schlüsselwort durch den Namen der Prozedur, und klicken Sie dann auf die Parameterliste in Klammern ein, und klicken Sie dann eine `As` -Klausel, die den Datentyp des Rückgabewerts angibt.  
   
-3.  Platzieren Sie Anweisungen von der Prozedur bei der Code zwischen den `Function` und `End Function` Anweisungen.  
+3. Platzieren Sie Anweisungen von der Prozedur bei der Code zwischen den `Function` und `End Function` Anweisungen.  
   
-4.  Verwenden einer `Return` -Anweisung den Wert an den aufrufenden Code zurückgegeben.  
+4. Verwenden einer `Return` -Anweisung den Wert an den aufrufenden Code zurückgegeben.  
   
 ### <a name="to-connect-your-new-procedure-with-the-old-repetitive-blocks-of-code"></a>Ihre neue Prozedur mit der alten, sich wiederholenden Codeblöcke verbinden  
   
-1.  Stellen Sie sicher, dass Sie die neue Prozedur an einer Stelle definieren, in denen der alte Code darauf zugreifen kann.  
+1. Stellen Sie sicher, dass Sie die neue Prozedur an einer Stelle definieren, in denen der alte Code darauf zugreifen kann.  
   
-2.  Ersetzen Sie in Ihrer alten, sich wiederholenden Codeblock, die Anweisungen, die die sich wiederholende Aufgabe mit einer einzigen Anweisung ausführen, die Aufrufe der `Sub` oder `Function` Verfahren.  
+2. Ersetzen Sie in Ihrer alten, sich wiederholenden Codeblock, die Anweisungen, die die sich wiederholende Aufgabe mit einer einzigen Anweisung ausführen, die Aufrufe der `Sub` oder `Function` Verfahren.  
   
-3.  Wenn die Prozedur ist eine `Function` , die einen Wert zurückgibt, stellen Sie sicher, dass die aufrufende Anweisung führt eine Aktion mit dem zurückgegebenen Wert, z. B. in einer Variablen speichern oder andernfalls der Wert verloren.  
+3. Wenn die Prozedur ist eine `Function` , die einen Wert zurückgibt, stellen Sie sicher, dass die aufrufende Anweisung führt eine Aktion mit dem zurückgegebenen Wert, z. B. in einer Variablen speichern oder andernfalls der Wert verloren.  
   
 ## <a name="example"></a>Beispiel  
  Die folgenden `Function` Prozedur berechnet werden, die längste Seite, die Hypotenuse eines rechtwinkligen Dreiecks, anhand der Werte der beiden anderen Seiten.  

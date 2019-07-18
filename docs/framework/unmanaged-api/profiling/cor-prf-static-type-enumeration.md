@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 310915ce84819a2a5a2d5e1f22356b61c16e7ec7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 753c3b38187dd69593dcb0520acef9ce4b137039
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190495"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751896"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE-Enumeration
 Zeigt an, ob ein Feld statisch ist und, falls dies der Fall ist, ob die statische Qualität für das Feld gilt. Diese Werte können kombiniert werden, die bitweise OR-Operation verwenden, um anzugeben, dass das Feld mehrere verschiedene statische Eigenschaften.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_FIELD_NOT_A_STATIC = 0x0,  
     COR_PRF_FIELD_APP_DOMAIN_STATIC = 0x1,  

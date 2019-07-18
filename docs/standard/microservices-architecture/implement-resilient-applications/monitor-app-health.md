@@ -1,15 +1,13 @@
 ---
 title: Systemüberwachung
 description: Entdecken Sie eine Möglichkeit zum Implementieren der Systemüberwachung.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 90beb8073cd169b0a68dc0025d8cd815ccb5a308
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b03506972166eec1864de840c1abda05bc3e5277
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464007"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639868"
 ---
 # <a name="health-monitoring"></a>Systemüberwachung
 
@@ -269,23 +267,20 @@ Beachten Sie, dass Azure Service Fabric ein eigenes [Modell zur Systemüberwachu
 
 Als letzter Schritt im Rahmen der Überwachung wird der Ereignisdatenstrom visualisiert, ein Bericht zur Leistung des Diensts wird erstellt, und es wird eine Warnung ausgegeben, wenn ein Problem erkannt wird. Sie können für diesen Bestandteil der Überwachung mehrere Lösungen verwenden.
 
-Einerseits können Sie einfache benutzerdefinierte Anwendungen verwenden, die den Status Ihrer Dienste anzeigen, z. B. die im Zusammenhang mit [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) erwähnten benutzerdefinierten Seiten. Andererseits können Sie auch Tools mit erweiterten Funktionen wie Azure Application Insights verwenden, um Warnungen anhand des Datenstroms der Ereignisse auszulösen.
+Einerseits können Sie einfache benutzerdefinierte Anwendungen verwenden, die den Status Ihrer Dienste anzeigen, z. B. die im Zusammenhang mit [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) erwähnten benutzerdefinierten Seiten. Andererseits können Sie auch Tools mit erweiterten Funktionen wie [Azure Monitor](https://azure.microsoft.com/services/monitor/) verwenden, um Warnungen anhand des Datenstroms der Ereignisse auszulösen.
 
 Außerdem können Sie Microsoft Power BI oder andere Lösungen (z.B. Kibana oder Splunk) verwenden, um Daten zu visualisieren, wenn Sie alle Ereignisdatenströme gespeichert haben.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **HealthChecks and HealthChecks UI for ASP.NET Core (HealthChecks und HealthChecks-UI für ASP.NET Core)**
-    [https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
+- **HealthChecks und HealthChecksUI für ASP.NET Core** \
+  <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>
 
--   **Einführung in die Service Fabric-Integritätsüberwachung**
-    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
+- **Einführung in die Systemüberwachung mit Service Fabric** \
+  [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
-    [https://azure.microsoft.com/services/application-insights/](https://azure.microsoft.com/services/application-insights/)
-
--   **Microsoft Operations Management Suite**
-    [https://www.microsoft.com/en-us/cloud-platform/operations-management-suite](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
+- **Azure Monitor**
+  <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
 >[Zurück](implement-circuit-breaker-pattern.md)

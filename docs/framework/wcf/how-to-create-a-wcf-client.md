@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 39f63b22257fb67d9caa5f84c886ead161508a33
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174368"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625823"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>Tutorial: Erstellen eines Windows Communication Foundation-Clients
 
@@ -47,7 +47,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 2. Fügen Sie einen Verweis in der **"gettingstartedclient"** Projekt die <xref:System.ServiceModel> Assembly: 
 
-    1.  In der **Projektmappen-Explorer** wählen Sie im Fenster der **Verweise** Ordner unter dem **"gettingstartedclient"** Projekt, und wählen Sie dann **"Verweis hinzufügen"** aus dem Kontextmenü. 
+    1. In der **Projektmappen-Explorer** wählen Sie im Fenster der **Verweise** Ordner unter dem **"gettingstartedclient"** Projekt, und wählen Sie dann **"Verweis hinzufügen"** aus dem Kontextmenü. 
 
     2. In der **Verweis hinzufügen** Fenster unter **Assemblys** wählen Sie auf der linken Seite des Fensters **Framework**.
     

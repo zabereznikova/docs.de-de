@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64e362be57a96bbe0f61b964ab413234f30d0ed1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3ab77b3e57213bd2c697dcb9222055b8d8f49210
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143779"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782283"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>ICorProfilerInfo2::GetObjectGeneration-Methode
 Ruft ab, das Segment des Heaps, die das angegebene Objekt enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetObjectGeneration(  
     [in] ObjectID objectId,  
     [out] COR_PRF_GC_GENERATION_RANGE *range);  

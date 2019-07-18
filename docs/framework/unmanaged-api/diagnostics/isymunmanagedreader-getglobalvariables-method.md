@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e778a5a7baed52941a7f4b990b34d31f8ca84c24
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3de246c8b9c4387ea782b77f16edfbe792bb4427
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092642"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777014"
 ---
 # <a name="isymunmanagedreadergetglobalvariables-method"></a>ISymUnmanagedReader::GetGlobalVariables-Methode
 Gibt alle globale Variablen zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetGlobalVariables(  
     [in]  ULONG32  cVars,  
     [out] ULONG32  *pcVars,  

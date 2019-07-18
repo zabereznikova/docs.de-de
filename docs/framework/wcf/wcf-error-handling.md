@@ -2,21 +2,21 @@
 title: WCF-Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: eba0894d6352bc1aea3596ee9d196b386e1eafef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235360"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645432"
 ---
 # <a name="wcf-error-handling"></a>WCF-Fehlerbehandlung
 Die bei einer WCF-Anwendung aufgetretenen Fehler gehören zu einer von drei Gruppen:  
   
-1.  Kommunikationsfehler  
+1. Kommunikationsfehler  
   
-2.  Proxy-/Channelfehler  
+2. Proxy-/Channelfehler  
   
-3.  Anwendungsfehler  
+3. Anwendungsfehler  
   
  Kommunikationsfehler treten auf, wenn ein Netzwerk nicht verfügbar ist, ein Client eine falsche Adresse verwendet oder der Diensthost keine eingehende Nachrichten überwacht. An den Client werden Fehler dieses Typs als <xref:System.ServiceModel.CommunicationException>-Klasse oder abgeleitete <xref:System.ServiceModel.CommunicationException>-Klasse zurückgegeben.  
   
@@ -26,13 +26,13 @@ Die bei einer WCF-Anwendung aufgetretenen Fehler gehören zu einer von drei Grup
   
  Die Fehlerbehandlung in WCF wird durch einen oder mehrere der folgenden Schritte ausgeführt:  
   
--   Direkte Behandlung der ausgelösten Ausnahme. Dies erfolgt nur für Kommunikations- und Proxy-/Channelfehler.  
+- Direkte Behandlung der ausgelösten Ausnahme. Dies erfolgt nur für Kommunikations- und Proxy-/Channelfehler.  
   
--   Verwenden von Fehlerverträgen  
+- Verwenden von Fehlerverträgen  
   
--   Implementieren der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle  
+- Implementieren der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle  
   
--   Behandlung von <xref:System.ServiceModel.ServiceHost>-Ereignissen  
+- Behandlung von <xref:System.ServiceModel.ServiceHost>-Ereignissen  
   
 ## <a name="fault-contracts"></a>Fehlerverträge  
  Mithilfe von Fehlerverträgen können Sie die Fehler, die während eines Dienstvorgangs auftreten können, auf plattformunabhängige Weise definieren. Standardmäßig werden alle innerhalb eines Dienstvorgangs ausgelösten Ausnahmen an den Client als <xref:System.ServiceModel.FaultException>-Objekt zurückgegeben. Das <xref:System.ServiceModel.FaultException>-Objekt enthält sehr wenig Informationen. Sie können die an den Client gesendeten Informationen durch Definieren eines Fehlervertrags und Zurückgeben des Fehlers als <xref:System.ServiceModel.FaultException%601> steuern. Weitere Informationen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 550cb6379ef0d5d17a3446b3f21120208b5a3dad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 013cdfbb6a2904e60d6f7b4df6d40e3d65606fcd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110187"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606814"
 ---
 # <a name="icordebugdebugevent-interface"></a>ICorDebugDebugEvent-Schnittstelle
 Definiert die Basisschnittstelle, von der alle `ICorDebug` Debug-Ereignisse abgeleitet werden.  
@@ -24,9 +24,9 @@ Definiert die Basisschnittstelle, von der alle `ICorDebug` Debug-Ereignisse abge
 ## <a name="remarks"></a>Hinweise  
  Die folgenden Schnittstellen sind aus der `ICorDebugDebugEvent`-Schnittstelle abgeleitet:  
   
--   [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
+- [ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
   
--   [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
+- [ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
   
 > [!NOTE]
 >  Diese Schnittstelle ist nur in Verbindung mit .NET Native verfügbar. Bei dem Versuch, `QueryInterface` aufzurufen, um einen Schnittstellenzeiger abzurufen, wird für ICorDebug-Szenarien außerhalb von .NET Native `E_NOINTERFACE` zurückgegeben.  
@@ -42,5 +42,5 @@ Definiert die Basisschnittstelle, von der alle `ICorDebug` Debug-Ereignisse abge
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

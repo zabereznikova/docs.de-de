@@ -4,12 +4,12 @@ description: Beschreibt das Erstellen eines globalen Tools. Das globale Tool ist
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d0a64d0473f51d73892cd40633e2982c1130469
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677863"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612666"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Erstellen eines globalen .NET Core-Tool mithilfe des .NET Core-CLIs
 
@@ -162,7 +162,7 @@ Erstellen Sie als Nächstes ein NuGet-Paket für Ihre Anwendung.
 dotnet pack
 ```
 
-Die `botsay.1.0.0.nupkg`-Datei wird in dem Ordner erstellt, der durch den `<PackageOutputPath>`-XML-Wert aus der `botsay.csproj`-Datei angegeben wird, in diesem Beispiel ist das der Ordner `./nupkg`. Dies vereinfacht Installation und Testen. Wenn Sie ein Tool öffentlich herausbringen möchten, laden Sie es nach [https://www.nuget.org](https://www.nuget.org) hoch. Sobald das Tool unter NuGet verfügbar ist, können Entwickler eine Installation des Tools für alle Benutzer mit der `--global`-Option des [dotnet tool install](dotnet-tool-install.md)-Befehls durchführen.
+Die `botsay.1.0.0.nupkg`-Datei wird in dem Ordner erstellt, der durch den `<PackageOutputPath>`-XML-Wert aus der `botsay.csproj`-Datei angegeben wird, in diesem Beispiel ist das der Ordner `./nupkg`. Dies vereinfacht Installation und Testen. Wenn Sie ein Tool öffentlich herausbringen möchten, laden Sie es nach <https://www.nuget.org> hoch. Sobald das Tool unter NuGet verfügbar ist, können Entwickler eine Installation des Tools für alle Benutzer mit der `--global`-Option des [dotnet tool install](dotnet-tool-install.md)-Befehls durchführen.
 
 Da Sie jetzt ein Paket besitzen, installieren Sie das Tool aus diesem Paket:
 

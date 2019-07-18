@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a518c6123b21ae62742071a0b26c6a09fa272b17
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083321"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591276"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Standardverhalten von Tastatur und Maus im DataGrid-Steuerelement
 In diesem Thema wird beschrieben, wie Benutzer interagieren können, mit der <xref:System.Windows.Controls.DataGrid> -Steuerelement unter Verwendung der Tastatur und Maus.  
@@ -55,21 +55,21 @@ In diesem Thema wird beschrieben, wie Benutzer interagieren können, mit der <xr
   
  Die folgenden Tastenkombinationen ändern Sie mehrzeilige Auswahl.  
   
--   UMSCHALT+NACH-UNTEN  
+- UMSCHALT+NACH-UNTEN  
   
--   UMSCHALT+NACH-OBEN  
+- UMSCHALT+NACH-OBEN  
   
--   UMSCHALT+BILD-AB  
+- UMSCHALT+BILD-AB  
   
--   UMSCHALT+BILD-AUF  
+- UMSCHALT+BILD-AUF  
   
--   STRG+UMSCHALT+NACH-UNTEN  
+- STRG+UMSCHALT+NACH-UNTEN  
   
--   STRG+UMSCHALT+NACH-OBEN  
+- STRG+UMSCHALT+NACH-OBEN  
   
--   STRG + UMSCHALT + POS1  
+- STRG + UMSCHALT + POS1  
   
--   STRG + UMSCHALT + ENDE  
+- STRG + UMSCHALT + ENDE  
   
 ## <a name="default-mouse-behavior"></a>Standardverhalten für Maus  
  Die folgende Tabelle enthält die Maus-Standardverhalten für die <xref:System.Windows.Controls.DataGrid>.  

@@ -1,19 +1,19 @@
 ---
 title: Befehl „dotnet remove package“
-description: Der Befehl „dotnet remove package“ bietet eine praktische Option zum Entfernen von NuGet-Paketverweisen auf ein Projekt.
+description: Der Paketbefehl „dotnet-remove“ bietet eine praktische Option zum Entfernen von NuGet-Paketverweisen auf ein Projekt.
 ms.date: 05/29/2018
-ms.openlocfilehash: 4cc8ac927b761547dc5e53be9abeba827bf1e1d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: cbdeacff78ef20c9a73010e10a771a724b23792e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168727"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632431"
 ---
 # <a name="dotnet-remove-package"></a>dotnet remove package
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet remove package`: Entfernt Paketverweis aus einer Projektdatei.
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 051b5f47db05301f3a3326a2cc4cc5cf5c8b1ec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 91dc4cb7d64d49d1e95c0c8eb79a29736559d842
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137825"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742082"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest-Methode
 Gibt das endgültige Manifest an. Rufen Sie diese Methode auf, nachdem alle anderen Dateien importiert, und alle Optionen festgelegt. Rufen Sie diese Methode nicht für die ungebundenen Modulen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EmitManifest(  
     mdAssembly   AssemblyID,  
     DWORD*       pdwReserveSize,  
@@ -57,4 +57,4 @@ HRESULT EmitManifest(
 
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

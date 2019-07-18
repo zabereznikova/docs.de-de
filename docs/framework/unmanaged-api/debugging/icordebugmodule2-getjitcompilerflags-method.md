@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77f4e745e4bd45be51b497fdd5bab95cd24c9685
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88277be93d3a0e445e97217655d3d524962dd01d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475371"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764221"
 ---
 # <a name="icordebugmodule2getjitcompilerflags-method"></a>ICorDebugModule2::GetJITCompilerFlags-Methode
 Ruft die Flags, die just-in-Time (JIT)-Kompilierung für dieses ICorDebugModule2 steuern.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetJITCompilerFlags (  
     [out] DWORD   *pdwFlags  
 );  

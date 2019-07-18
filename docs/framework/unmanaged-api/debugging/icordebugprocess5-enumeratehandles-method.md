@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b3cc158c48e8bb9f833429bbddaa74ed459f1b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 229717ba1d7f004dc1ed020eddb2929079aa9285
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108827"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767577"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles-Methode
 Ruft einen Enumerator für die Objekt-Handles in einem Prozess ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateHandles(     [in] CorGCReferenceType types,  
     [out] ICorDebugGCReferenceEnum **ppEnum);  
 ```  
@@ -46,11 +46,11 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
   
  Die `types` Parameter gibt die Typen von Handles in die Auflistung eingeschlossen werden sollen. `types` die folgenden drei Elemente von möglich die [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) Enumeration:  
   
--   `CorHandleStrongOnly` (Handles auf zuverlässige Verweise nur).  
+- `CorHandleStrongOnly` (Handles auf zuverlässige Verweise nur).  
   
--   `CorHandleWeakOnly` (um nur schwache Verweise Handles).  
+- `CorHandleWeakOnly` (um nur schwache Verweise Handles).  
   
--   `CorHandleAll` (alle Handles).  
+- `CorHandleAll` (alle Handles).  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

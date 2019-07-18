@@ -3,11 +3,11 @@ title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
 ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788413"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery>
 Gibt die Ermittelbarkeit von Dienstendpunkten an.  

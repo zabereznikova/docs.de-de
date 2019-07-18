@@ -2,12 +2,12 @@
 title: Variablen und Argumente
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669484"
 ---
 # <a name="variables-and-arguments"></a>Variablen und Argumente
 In Windows Workflow Foundation (WF), Variablen darstellen, die Speicherung von Daten und Argumente darstellen den Fluss der Daten in und aus einer Aktivität. Eine Aktivität verfügt über einen Satz von Argumenten, die die Signatur der Aktivität ausmachen. Darüber hinaus kann eine Aktivität eine Liste von Variablen verwalten. Ein Entwickler kann während des Entwurfs eines Workflows Variablen zu dieser Liste hinzufügen oder daraus löschen. Ein Argument wird mit einem Ausdruck gebunden, der einen Wert zurückgibt.  
@@ -63,11 +63,11 @@ Variable<string> var = new Variable<string>
   
  Die Workflowlaufzeit gewährleistet folgende Aktionen hinsichtlich der zeitlichen Steuerung der Datenverschiebung in und aus Aktivitäten:  
   
-1.  Wenn die Ausführung einer Aktivität beginnt, werden die Werte aller Eingabeargumente und Eingabe-/Ausgabeargumente berechnet. Beispielsweise entspricht unabhängig davon, wann <xref:System.Activities.Argument.Get%2A> aufgerufen wird, der zurückgegebene Wert dem Wert, der vor dem Aufruf von `Execute` von der Laufzeit berechnet wurde.  
+1. Wenn die Ausführung einer Aktivität beginnt, werden die Werte aller Eingabeargumente und Eingabe-/Ausgabeargumente berechnet. Beispielsweise entspricht unabhängig davon, wann <xref:System.Activities.Argument.Get%2A> aufgerufen wird, der zurückgegebene Wert dem Wert, der vor dem Aufruf von `Execute` von der Laufzeit berechnet wurde.  
   
-2.  Wenn <xref:System.Activities.InOutArgument%601.Set%2A> aufgerufen wird, legt die Laufzeit den Wert sofort fest.  
+2. Wenn <xref:System.Activities.InOutArgument%601.Set%2A> aufgerufen wird, legt die Laufzeit den Wert sofort fest.  
   
-3.  Für Argumente kann optional <xref:System.Activities.Argument.EvaluationOrder%2A> angegeben werden. <xref:System.Activities.Argument.EvaluationOrder%2A> ist ein nullbasierter Wert, der die Reihenfolge angibt, in der das Argument ausgewertet wird. Standardmäßig ist die Auswertungsreihenfolge des Arguments nicht angegeben und und entspricht dem <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>-Wert. Legen Sie <xref:System.Activities.Argument.EvaluationOrder%2A> auf einen Wert fest, der größer oder gleich null ist, um eine Auswertungsreihenfolge für dieses Argument anzugeben. Windows Workflow Foundation wertet Argumente mit einer angegebenen Auswertungsreihenfolge in aufsteigender Reihenfolge. Beachten Sie, dass Argumente mit einer nicht angegebenen Auswertungsreihenfolge vor Argumenten mit einer angegebenen Auswertungsreihenfolge ausgewertet werden.  
+3. Für Argumente kann optional <xref:System.Activities.Argument.EvaluationOrder%2A> angegeben werden. <xref:System.Activities.Argument.EvaluationOrder%2A> ist ein nullbasierter Wert, der die Reihenfolge angibt, in der das Argument ausgewertet wird. Standardmäßig ist die Auswertungsreihenfolge des Arguments nicht angegeben und entspricht dem <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>-Wert. Legen Sie <xref:System.Activities.Argument.EvaluationOrder%2A> auf einen Wert fest, der größer oder gleich null ist, um eine Auswertungsreihenfolge für dieses Argument anzugeben. Windows Workflow Foundation wertet Argumente mit einer angegebenen Auswertungsreihenfolge in aufsteigender Reihenfolge. Beachten Sie, dass Argumente mit einer nicht angegebenen Auswertungsreihenfolge vor Argumenten mit einer angegebenen Auswertungsreihenfolge ausgewertet werden.  
   
  Ein Aktivitätsautor kann einen stark typisierten Mechanismus zur Bereitstellung seiner Argumente verwenden. Dazu werden Eigenschaften von Typ <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> und <xref:System.Activities.InOutArgument%601> deklariert. Auf diese Weise kann ein Aktivitätsautor einen bestimmten Vertrag für die ein- und ausgehenden Daten einer Aktivität einrichten.  
   

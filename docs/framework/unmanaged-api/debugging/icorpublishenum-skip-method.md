@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98892964eb21746580e9115f86fd1be0832d9f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9be0c3b931130e0ea86766b5134ca514478f0201
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764941"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip-Methode
 Verschiebt den Cursor vorwärts in der Enumeration, um die angegebene Anzahl von Elementen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Skip (  
     [in] ULONG   celt  
 );  

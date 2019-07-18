@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e823911280f52e16c745c9c77fe17b49bd35dc0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9dbb655d6ed0b9bd88c5eedf61a191401a805fb3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129830"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738756"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase-Methode
 Ruft die Basis Speicheradresse des angegebenen Bilds ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetImageBase (  
     [in, string] LPCWSTR    imagePath,  
     [out] CLRDATA_ADDRESS   *baseAddress  

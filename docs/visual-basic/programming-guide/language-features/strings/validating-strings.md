@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
 ms.openlocfilehash: ab7b41e03e561a619349176c6bf7e021e1399730
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938280"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Überprüfen von Zeichenfolgen in Visual Basic
 In diesem Abschnitt wird erläutert, wie Zeichenfolgen in Visual Basic überprüft wird.  

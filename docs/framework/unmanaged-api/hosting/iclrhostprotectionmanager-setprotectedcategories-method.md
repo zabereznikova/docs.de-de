@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63b6e85b6abe20e9e1f0b00648a06a31735e63c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4f6dc1254261197583f2369587a61b5e179d760b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183624"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779644"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories-Methode
 Gibt an, welche Kategorien von verwalteten Typen und Membern ausführen in teilweise vertrauenswürdigen Code blockiert werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetProtectedCategories (  
     [in] EApiCategories  categories  
 );  

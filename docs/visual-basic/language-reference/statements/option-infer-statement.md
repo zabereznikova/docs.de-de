@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: a3846c952969a4814151757c5210d9df6f3c97b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a85d8012eea14abe4ddcdb35fa154245894a7f97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823492"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582943"
 ---
 # <a name="option-infer-statement"></a>Option Infer-Anweisung
 Ermöglicht die Verwendung des lokalen Typrückschlusses beim Deklarieren von Variablen.  
@@ -63,17 +63,17 @@ Option Infer { On | Off }
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Festlegen der Option Infer in der IDE  
   
-1.  Wählen Sie im **Projektmappen-Explorer** ein Projekt aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
+1. Wählen Sie im **Projektmappen-Explorer** ein Projekt aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
-2.  Klicken Sie auf die Registerkarte **Kompilieren**.  
+2. Klicken Sie auf die Registerkarte **Kompilieren**.  
   
-3.  Legen Sie den Wert der **Option infer-** Feld.  
+3. Legen Sie den Wert der **Option infer-** Feld.  
   
  Bei der Erstellung eines neuen Projekts die **Option Infer** festlegen auf die **Kompilieren** Registerkarte nastaven NA hodnotu der **Option Infer** festlegen in der **VB Defaults** Das Dialogfeld. Für den Zugriff auf die **VB Defaults** Dialogfeld auf die **Tools** Menü klicken Sie auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** **Projekte und Lösungen**, und klicken Sie dann auf **VB Defaults**. Die ursprüngliche Standardeinstellung in **VB Defaults** ist `On`.  
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>Festlegen der Option Infer in der Befehlszeile.  
   
--   Enthalten die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption in der **Vbc** Befehl.  
+- Enthalten die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption in der **Vbc** Befehl.  
   
 ## <a name="default-data-types-and-values"></a>Standarddatentypen und -werte  
  Die folgende Tabelle beschreibt die Ergebnisse der verschiedenen Kombinationen der Spezifizierung von Datentyp und Initialisierung in einer `Dim`-Anweisung.  

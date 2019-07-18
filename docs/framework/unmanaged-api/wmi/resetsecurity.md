@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e937690c184d810549e8ab11ef1fc2273a45c5f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d3d87fa10dafba326147bcaa39836b631291ef1c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115127"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783129"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity-Funktion
 Weist das angegebene Identitätswechseltoken dem aktuellen Thread zu.   
@@ -30,7 +30,7 @@ Weist das angegebene Identitätswechseltoken dem aktuellen Thread zu.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ResetSecurity (
    [in] HANDLE token
 ); 

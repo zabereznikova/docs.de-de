@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6718bbfdb1825b9f01698d76deec3fab16cb2ac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993680"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2-Schnittstelle
 Erweitert die Schnittstelle "ICorDebugValue", um Unterstützung für "ICorDebugType"-Objekte bereitzustellen.  
@@ -48,6 +48,6 @@ Erweitert die Schnittstelle "ICorDebugValue", um Unterstützung für "ICorDebugT
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 
 - [ICorDebugValue3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)

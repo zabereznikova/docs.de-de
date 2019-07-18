@@ -1,13 +1,13 @@
 ---
-title: <clear> -Element für SchemeSettings (Uri-Einstellungen)
+title: <clear>-Element für schemeSettings (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
 ms.openlocfilehash: 132506dc15335b738fcdb026f4d31429bc45a228
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674687"
 ---
 # <a name="clear-element-for-schemesettings-uri-settings"></a>\<clear >-Element für SchemeSettings (Uri-Einstellungen)
 Löscht alle vorhandenen Schema-Einstellungen.  
@@ -36,7 +36,7 @@ Löscht alle vorhandenen Schema-Einstellungen.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<SchemeSettings >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
+|[\<schemeSettings>-Element (URI-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  In der Standardeinstellung die <xref:System.Uri?displayProperty=nameWithType> Klasse un-Escapezeichen % codiert Pfadtrennzeichen vor dem Ausführen der Path-Komprimierung. Dies wurde als Sicherheitsmechanismus vor Angriffen wie folgt implementiert:  
@@ -78,4 +78,4 @@ Löscht alle vorhandenen Schema-Einstellungen.
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

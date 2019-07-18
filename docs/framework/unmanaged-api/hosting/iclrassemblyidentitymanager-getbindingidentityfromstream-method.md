@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6dc4e3adf5adec1aa4626a31b6a9391e2a04f1ed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 16cb3495bbc2fa9ead25afd5e7120774b021a37f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098577"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773558"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromStream-Methode
 Ruft die kanonische Assemblyidentitätsdaten für die Assembly im angegebenen Stream.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetBindingIdentityFromStream (  
     [in] IStream    *pStream,  
     [in] DWORD       dwFlags,  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
 ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877356"
 ---
 # <a name="group-elements-in-a-sequence"></a>Gruppieren von Elementen in einer Sequenz
 Der <xref:System.Linq.Enumerable.GroupBy%2A>-Operator gruppiert die Elemente einer Sequenz. In den folgenden Beispielen wird die Datenbank Northwind verwendet.  
@@ -75,4 +75,4 @@ Der <xref:System.Linq.Enumerable.GroupBy%2A>-Operator gruppiert die Elemente ein
 ## <a name="see-also"></a>Siehe auch
 
 - [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

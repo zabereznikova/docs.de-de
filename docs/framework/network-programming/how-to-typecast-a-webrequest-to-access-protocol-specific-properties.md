@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d9a8eae2-7454-46f9-b43b-c98477c5bcde
-ms.openlocfilehash: 6202b0b02d334c076dbe41a785195344dd2d7efe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9488e484aad7ba3df23c33b2cb5b79f234b758e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564512"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59088365"
 ---
 # <a name="how-to-typecast-a-webrequest-to-access-protocol-specific-properties"></a>Vorgehensweise: Typumwandlung einer WebRequest-Klasse in protokollspezifische Zugriffseigenschaften
 Dieses Beispiel zeigt, wie die Typumwandlung für ein WebRequest durchgeführt wird, sodass Sie auf protokollspezifische Eigenschaften zugreifen können.  
@@ -28,4 +28,5 @@ Dim httpreq As HttpWebRequest = _
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)

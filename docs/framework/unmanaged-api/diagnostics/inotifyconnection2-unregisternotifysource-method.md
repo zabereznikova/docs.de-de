@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742be1467d2f1e6eb7d8567ddf85f8e65ea4b8d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b8a8c3dbfb7b9949811025846484ab233ed3741
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229458"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776627"
 ---
 # <a name="inotifyconnection2unregisternotifysource-method"></a>INotifyConnection2::UnregisterNotifySource-Methode
 Entfernt eine angegebene Benachrichtigung-Quellobjekt aus der Verbindung an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT UnregisterNotifySource  
 (  
     [in]  INotifySource2*  in_pNotifySource  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 670ed89754aa9b4d2052bb1186e0139618190cd6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676888"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490969"
 ---
 # <a name="introduction-to-plinq"></a>Einführung in PLINQ
 
 ## <a name="what-is-a-parallel-query"></a>Was ist eine parallele-Abfrage?
 
-Sprachintegrierte Abfrage (Language-Integrated Query, LINQ) wurde in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] eingeführt. Sie kennzeichnet ein einheitliches Modell für die typsichere Abfrage beliebiger <xref:System.Collections.IEnumerable?displayProperty=nameWithType>- oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>- Datenquellen in einer typsicheren Weise. LINQ to Objects ist der Name für LINQ-Abfragen von Auflistungen im Arbeitsspeicher, z. B. <xref:System.Collections.Generic.List%601>, und Arrays. Dieser Artikel setzt Grundkenntnisse in LINQ voraus. Weitere Informationen finden Sie unter [Language Integrated Query (LINQ) – C#](../../csharp/programming-guide/concepts/linq/index.md) oder [Language Integrated Query (LINQ) – Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).
+Die sprachintegrierte Abfrage (Language-Integrated Query, LINQ) wurde in .NET Framework 3.5 eingeführt. Sie kennzeichnet ein einheitliches Modell für die typsichere Abfrage beliebiger <xref:System.Collections.IEnumerable?displayProperty=nameWithType>- oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>- Datenquellen in einer typsicheren Weise. LINQ to Objects ist der Name für LINQ-Abfragen von Auflistungen im Arbeitsspeicher, z. B. <xref:System.Collections.Generic.List%601>, und Arrays. Dieser Artikel setzt Grundkenntnisse in LINQ voraus. Weitere Informationen finden Sie unter [Language Integrated Query (LINQ) – C#](../../csharp/programming-guide/concepts/linq/index.md) oder [Language Integrated Query (LINQ) – Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md).
 
 Parallel LINQ (PLINQ) ist eine parallele Implementierung des LINQ-Musters. Eine PLINQ-Abfrage entspricht weitgehend einer nicht parallelen LINQ to Objects-Abfrage. PLINQ-Abfragen werden, ebenso wie sequenzielle [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)]-Abfragen, auf alle <xref:System.Collections.IEnumerable>- oder <xref:System.Collections.Generic.IEnumerable%601>-Datenquellen im Arbeitsspeicher angewendet und weisen eine verzögerte Ausführung auf, d. h. sie werden erst ausgeführt, wenn die Abfrage aufgelistet wird. Der Hauptunterschied besteht darin, dass PLINQ versucht, alle Prozessoren im System vollständig auszuschöpfen. PLINQ partitioniert hierzu die Datenquelle in Segmente und führt dann die Abfrage für jedes Segment parallel in separaten Arbeitsthreads und auf mehreren Prozessoren aus. In vielen Fällen bedeutet eine parallele Ausführung, dass die Abfrage deutlich schneller ausgeführt wird.
 
@@ -36,7 +36,7 @@ Der Rest dieses Artikels bietet eine Übersicht über die wichtigsten PLINQ-Klas
 
 Die <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>-Klasse stellt nahezu die gesamte Funktionalität von PLINQ zur Verfügung. Diese Klasse sowie die restlichen Typen des <xref:System.Linq?displayProperty=nameWithType>-Namespace werden in der Assembly "System.Core.dll" kompiliert. Die standardmäßigen C#- und Visual Basic-Projekte in Visual Studio verweisen auf die Assembly und importiert den Namespace.
 
-<xref:System.Linq.ParallelEnumerable> enthält Implementierungen aller Standardabfrageoperatoren, die von LINQ to Objects unterstützt werden, auch wenn nicht für jeden eine Parallelisierung angestrebt wird. Wenn Sie nicht mit [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] vertraut sind, lesen Sie [Einführung in LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md) und [Einführung in LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
+<xref:System.Linq.ParallelEnumerable> enthält Implementierungen aller Standardabfrageoperatoren, die von LINQ to Objects unterstützt werden, auch wenn nicht für jeden eine Parallelisierung angestrebt wird. Wenn Sie nicht mit [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] vertraut sind, lesen Sie [Einführung in LINQ (C#)](../../csharp/programming-guide/concepts/linq/index.md) und [Einführung in LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
 
 Zusätzlich zu den Standardabfrageoperatoren enthält die <xref:System.Linq.ParallelEnumerable>-Klasse einen Satz von Methoden, die spezielle Verhaltensweisen für die parallele Ausführung unterstützen. Diese PLINQ-spezifischen Methoden sind in der folgenden Tabelle aufgeführt.
 
@@ -107,7 +107,7 @@ Die folgende Abbildung zeigt den Unterschied zwischen `foreach` und <xref:System
 
 ## <a name="cancellation"></a>Abbruch
 
-PLINQ ist in die Abbruchtypen in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] integriert. (Weitere Informationen finden Sie unter [Cancellation in Managed Threads (Abbruch in verwalteten Threads)](../../../docs/standard/threading/cancellation-in-managed-threads.md).) Daher können PLINQ-Abfragen im Gegensatz zu sequenziellen LINQ to Objects-Abfragen abgebrochen werden. Um eine abbrechbare PLINQ-Abfrage zu erstellen, verwenden Sie den <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>-Operator in der Abfrage, und stellen Sie eine <xref:System.Threading.CancellationToken>-Instanz als Argument bereit. Wenn die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft im Token auf „true“ festgelegt ist, erkennt PLINQ dies. Die Verarbeitung wird in diesem Fall in allen Threads abgebrochen, und eine <xref:System.OperationCanceledException> wird ausgelöst.
+PLINQ ist in die Abbruchtypen in .NET Framework 4 integriert. (Weitere Informationen finden Sie unter [Cancellation in Managed Threads (Abbruch in verwalteten Threads)](../../../docs/standard/threading/cancellation-in-managed-threads.md).) Daher können PLINQ-Abfragen im Gegensatz zu sequenziellen LINQ to Objects-Abfragen abgebrochen werden. Um eine abbrechbare PLINQ-Abfrage zu erstellen, verwenden Sie den <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>-Operator in der Abfrage, und stellen Sie eine <xref:System.Threading.CancellationToken>-Instanz als Argument bereit. Wenn die <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>-Eigenschaft im Token auf „true“ festgelegt ist, erkennt PLINQ dies. Die Verarbeitung wird in diesem Fall in allen Threads abgebrochen, und eine <xref:System.OperationCanceledException> wird ausgelöst.
 
 Es ist möglich, dass eine PLINQ-Abfrage nach dem Festlegen des Abbruchtokens weiterhin einige Elemente verarbeitet.
 

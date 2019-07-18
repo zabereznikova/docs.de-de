@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a6b18f736743f1057641c20c7ef2bc544272f94f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135862"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616663"
 ---
 # <a name="clr-etw-events"></a>CLR-ETW-Ereignisse
 Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Windows-Ereignisse (ETW). Jedes Ereignis verfügt über ein zugeordnetes Schlüsselwort und die Ebene, die im Thema [CLR-ETW-Schlüsselwörter und-Ebenen](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) beschrieben werden. Die CLR verfügt über zwei Anbieter für die Ereignisse:  
   
--   Der Laufzeitanbieter löst Ereignisse in Abhängigkeit von den aktivierten Schlüsselwörtern (Ereigniskategorien) aus. Die GUID des CLR-Laufzeitanbieters ist e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
+- Der Laufzeitanbieter löst Ereignisse in Abhängigkeit von den aktivierten Schlüsselwörtern (Ereigniskategorien) aus. Die GUID des CLR-Laufzeitanbieters ist e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
--   Der Rundownanbieter, der für spezielle Zwecke genutzt werden kann. Die GUID des CLR-Rundownanbieters ist A669021C-C450-4609-A035-5AF59AF4DF18.  
+- Der Rundownanbieter, der für spezielle Zwecke genutzt werden kann. Die GUID des CLR-Rundownanbieters ist A669021C-C450-4609-A035-5AF59AF4DF18.  
   
  Weitere Informationen zu den Anbietern finden Sie unter [CLR-ETW-Anbieter](../../../docs/framework/performance/clr-etw-providers.md).  
   
@@ -65,7 +65,7 @@ Die Themen in diesem Abschnitt beschreiben die Ereignisablaufverfolgung für Win
 
 - [Verbessertes Debugging und Leistungsoptimierung mit ETW](https://go.microsoft.com/fwlink/?LinkId=179696)
 - [Windows Performance-Blog](https://go.microsoft.com/fwlink/?LinkId=179509)
-- [Steuern der Protokollierung in .NET Framework](../../../docs/framework/performance/controlling-logging.md)
-- [CLR-ETW-Anbieter](../../../docs/framework/performance/clr-etw-providers.md)
-- [CLR-ETW-Schlüsselwörter und -Ebenen](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
-- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [Controlling .NET Framework Logging (Steuern der Protokollierung in .NET Framework)](../../../docs/framework/performance/controlling-logging.md)
+- [CLR ETW Providers (CLR-ETW-Anbieter)](../../../docs/framework/performance/clr-etw-providers.md)
+- [CLR ETW Keywords and Levels (CLR-ETW-Schlüsselwörter und -Ebenen)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)
+- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

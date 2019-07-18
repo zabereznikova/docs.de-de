@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fd8f71ca75a795ab86c61140eacbbcfb0a18b590
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484237"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737807"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType-Methode
 Ruft ein Array von den angegebenen Typ oder ein Zeiger oder Verweis auf den angegebenen Typ ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetArrayOrPointerType (  
     [in]  CorElementType    elementType,  
     [in]  ULONG32           nRank,  
@@ -54,11 +54,11 @@ HRESULT GetArrayOrPointerType (
 ## <a name="remarks"></a>Hinweise  
  Der Wert des *ElementType* muss eine der folgenden sein:  
   
--   ELEMENT_TYPE_PTR  
+- ELEMENT_TYPE_PTR  
   
--   ELEMENT_TYPE_BYREF  
+- ELEMENT_TYPE_BYREF  
   
--   ELEMENT_TYPE_ARRAY oder ELEMENT_TYPE_SZARRAY  
+- ELEMENT_TYPE_ARRAY oder ELEMENT_TYPE_SZARRAY  
   
  Wenn der Wert des *ElementType* ELEMENT_TYPE_PTR oder ELEMENT_TYPE_BYREF, *nRank* muss NULL sein.  
   

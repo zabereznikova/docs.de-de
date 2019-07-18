@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 378a6b1543181052c000fd58f7deeed88cabf1ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818416"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622529"
 ---
 # <a name="attribute-list-visual-basic"></a>Attributliste (Visual Basic)
 Gibt die Attribute, die auf ein deklariertes Programmierelement ein Element angewendet werden. Mehrere Attribute werden durch Kommas getrennt. Es folgt die Syntax für ein Attribut.  
@@ -36,15 +36,15 @@ Gibt die Attribute, die auf ein deklariertes Programmierelement ein Element ange
   
 ## <a name="rules"></a>Regeln  
   
--   **Platzierung.** Sie können Attribute auf die meisten deklarierte Programmierelemente anwenden. Um ein oder mehrere Attribute zu übernehmen, Sie platzieren einen *Attributblock* am Anfang der Elementdeklaration. Jeder Eintrag in der Attributliste gibt ein Attribut, die Sie anwenden möchten, und die Modifizierer und Argumente, die Sie für diesen Aufruf des Attributs verwenden.  
+- **Platzierung.** Sie können Attribute auf die meisten deklarierte Programmierelemente anwenden. Um ein oder mehrere Attribute zu übernehmen, Sie platzieren einen *Attributblock* am Anfang der Elementdeklaration. Jeder Eintrag in der Attributliste gibt ein Attribut, die Sie anwenden möchten, und die Modifizierer und Argumente, die Sie für diesen Aufruf des Attributs verwenden.  
   
--   **Spitzen Klammern.** Wenn Sie eine Liste der Attribute angeben, müssen Sie es in spitzen Klammern einschließen ("`<`"und"`>`").  
+- **Spitzen Klammern.** Wenn Sie eine Liste der Attribute angeben, müssen Sie es in spitzen Klammern einschließen ("`<`"und"`>`").  
   
--   **Teil der Deklaration.** Das Attribut muss Teil der Elementdeklaration, nicht auf einer separaten Anweisung sein. Können Sie die Zeilenfortsetzungszeichenfolge (" `_`") zum Erweitern der deklarationsanweisung auf mehrere Quellcodezeilen.  
+- **Teil der Deklaration.** Das Attribut muss Teil der Elementdeklaration, nicht auf einer separaten Anweisung sein. Können Sie die Zeilenfortsetzungszeichenfolge (" `_`") zum Erweitern der deklarationsanweisung auf mehrere Quellcodezeilen.  
   
--   **Modifizierer.** Ein Attributmodifizierer (`Assembly` oder `Module`) muss für jedes Attribut angewendet wird, auf ein Programmierelement am Anfang einer Quelldatei. Attributmodifizierer dürfen keine für Attribute, die auf Elemente, die nicht am Anfang einer Quelldatei angewendet.  
+- **Modifizierer.** Ein Attributmodifizierer (`Assembly` oder `Module`) muss für jedes Attribut angewendet wird, auf ein Programmierelement am Anfang einer Quelldatei. Attributmodifizierer dürfen keine für Attribute, die auf Elemente, die nicht am Anfang einer Quelldatei angewendet.  
   
--   **Argumente.** Alle Positionsargumente für ein Attribut müssen jede Variable oder eine Eigenschaft-Initialisierer vorangestellt sein.  
+- **Argumente.** Alle Positionsargumente für ein Attribut müssen jede Variable oder eine Eigenschaft-Initialisierer vorangestellt sein.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die <xref:System.Runtime.InteropServices.DllImportAttribute> -Attribut auf eine rumpfdefinition einer `Function` Verfahren.  

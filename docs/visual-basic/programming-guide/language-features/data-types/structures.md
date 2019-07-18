@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
 ms.openlocfilehash: ebfc82665bb18d96c83db8f29a6c206a9a71fd7f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663361"
 ---
 # <a name="structures-visual-basic"></a>Strukturen (Visual Basic)
 Ein *Struktur* ist eine Generalisierung des benutzerdefinierten Typs (UDT) von älteren Versionen von Visual Basic unterstützt. Neben Feldern können Strukturen Eigenschaften, Methoden und Ereignisse verfügbar machen. Eine Struktur kann eine oder mehrere Schnittstellen implementieren, und Sie können einzelne Zugriffsebenen für die einzelnen Felder deklarieren.  
@@ -24,7 +24,7 @@ Ein *Struktur* ist eine Generalisierung des benutzerdefinierten Typs (UDT) von �
  Strukturen sind hilfreich, wenn Sie eine einzelne Variable zum Speichern von mehreren informationspaketen möchten. Beispielsweise empfiehlt es sich um Name, Durchwahl und Gehalt des Mitarbeiters zusammenzuhalten. Sie können mehrere Variablen für diese Informationen verwenden, oder Sie können eine Struktur definieren und verwenden sie für eine Variable für die einzelnen Mitarbeiter. Der Vorteil der Struktur wird deutlich, wenn Sie viele Mitarbeiter und aus diesem Grund viele Instanzen der Variablen haben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [Vorgehensweise: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
  Zeigt, wie eine Struktur und seine Elemente zu deklarieren.  
   
  [Strukturvariablen](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  

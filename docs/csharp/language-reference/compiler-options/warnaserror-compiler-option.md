@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: b208f6e4e768e400af203117d185944be285cb72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634609"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59329102"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C#-Compileroptionen)
 Die Option **-warnaserror+** behandelt alle Warnungen als Fehler.  
@@ -24,7 +24,7 @@ Die Option **-warnaserror+** behandelt alle Warnungen als Fehler.
 -warnaserror[+ | -][:warning-list]  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Alle Nachrichten, die in der Regel als Warnungen gemeldet worden wären, werden stattdessen als Fehler gemeldet, und der Buildprozesses wird angehalten (keine Ausgabedateien werden erstellt).  
   
  **-warnaserror-** ist standardmäßig gültig, wodurch Warnungen nicht die Generierung einer Ausgabedatei verhindern. **-warnaserror**, ist identisch mit **-warnaserror+** und bewirkt, dass Warnungen als Fehler behandelt werden.  
@@ -35,11 +35,11 @@ Die Option **-warnaserror+** behandelt alle Warnungen als Fehler.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
+2. Klicken Sie auf die Eigenschaftenseite **Build** .  
   
-3.  Ändern Sie die Eigenschaft **Warnungen als Fehler behandeln**.  
+3. Ändern Sie die Eigenschaft **Warnungen als Fehler behandeln**.  
   
  Wie Sie diese Compileroption programmgesteuert festlegen, erfahren Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>.  
   

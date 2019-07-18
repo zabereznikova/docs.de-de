@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: baf0084e6caa3fce8ca8c375bdcc2bcd135fa21e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c8fc11c8799912ea6340940ccd254ae82519591
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646801"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591689"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C#-Compileroptionen)
 Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei einfügen.  
@@ -32,12 +32,12 @@ Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei e
  `file`  
  Die Ausgabedatei für XML, die mit den Kommentaren in den Quellcodedateien der Kompilierung aufgefüllt wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  In Quellcodedateien können Dokumentationskommentare, die Folgendem vorausgehen, verarbeitet und der XML-Datei hinzugefügt werden:  
   
--   Benutzerdefinierte Typen wie eine [Klasse](../../../csharp/language-reference/keywords/class.md), ein [Delegat](../../../csharp/language-reference/keywords/delegate.md), oder eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md)  
+- Benutzerdefinierte Typen wie eine [Klasse](../../../csharp/language-reference/keywords/class.md), ein [Delegat](../../../csharp/language-reference/keywords/delegate.md), oder eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md)  
   
--   Member wie ein Feld, ein [Ereignis](../../../csharp/language-reference/keywords/event.md), eine [Eigenschaft](../../../csharp/programming-guide/classes-and-structs/using-properties.md), oder eine Methode  
+- Member wie ein Feld, ein [Ereignis](../../../csharp/language-reference/keywords/event.md), eine [Eigenschaft](../../../csharp/programming-guide/classes-and-structs/using-properties.md), oder eine Methode  
   
  Die Quellcodedatei, die Main enthält, wird zuerst in XML ausgegeben.  
   
@@ -52,11 +52,11 @@ Mit der Option **-doc** können Sie Dokumentationskommentare in eine XML-Datei e
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
+1. Öffnen Sie die **Eigenschaften**-Seite des Projekts.  
   
-2.  Klicken Sie auf die Registerkarte **Erstellen**.  
+2. Klicken Sie auf die Registerkarte **Erstellen**.  
   
-3.  Ändern Sie die Eigenschaft der **XML-Dokumentationsdatei**.  
+3. Ändern Sie die Eigenschaft der **XML-Dokumentationsdatei**.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   

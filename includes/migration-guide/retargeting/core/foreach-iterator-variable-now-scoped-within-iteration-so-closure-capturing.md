@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1805c26f1eff46719f30de8a14ca6d35f01948a6
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774333"
+---
 ### <a name="foreach-iterator-variable-is-now-scoped-within-the-iteration-so-closure-capturing-semantics-are-different-in-c5"></a>Der Gültigkeitsbereich der Foreach-Iteratorvariable ist jetzt auf die Iteration beschränkt, weswegen sich die Semantik für die Abschlusserfassung (in C# 5) unterscheidet
 
 |   |   |
@@ -7,4 +15,3 @@
 |Bereich|Hauptversion|
 |Version|4.5|
 |Typ|Neuzuweisung|
-

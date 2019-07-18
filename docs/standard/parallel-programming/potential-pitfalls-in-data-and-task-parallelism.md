@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971948"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620996"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potenzielle Fehler bei Daten- und Aufgabenparallelität
 In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> erhebliche Leistungssteigerungen gegenüber gewöhnlichen sequenziellen Schleifen bieten. Die Parallelisierung der Schleife erhöht jedoch die Komplexität des Vorgangs, was Probleme nach sich ziehen kann, die in sequenziellem Code weniger häufig oder gar nicht vorkommen. In diesem Thema sind bestimmte Fehlerquellen aufgeführt, die beim Schreiben von parallelen Schleifen vermieden werden sollten.  
@@ -31,11 +31,11 @@ In vielen Fällen können <xref:System.Threading.Tasks.Parallel.For%2A?displayPr
   
  Eine zu starke Parallelisierung tritt vor allem in geschachtelten Schleifen auf, wie im folgenden Ausschnitt gezeigt wird. In den meisten Fällen sollte idealerweise nur die äußere Schleife parallelisiert werden, sofern nicht eine oder mehrere der folgenden Bedingungen erfüllt sind:  
   
--   Die innere Schleife ist bekanntermaßen sehr lang.  
+- Die innere Schleife ist bekanntermaßen sehr lang.  
   
--   Sie führen für jede Bestellung eine umfangreiche Berechnung aus. (Der im Beispiel gezeigte Vorgang ist nicht sehr rechenintensiv.)  
+- Sie führen für jede Bestellung eine umfangreiche Berechnung aus. (Der im Beispiel gezeigte Vorgang ist nicht sehr rechenintensiv.)  
   
--   Das Zielsystem verfügt über genug Prozessoren für die Verarbeitung der Anzahl von Threads, die durch die Parallelisierung der Abfrage von `cust.Orders` erzeugt werden.  
+- Das Zielsystem verfügt über genug Prozessoren für die Verarbeitung der Anzahl von Threads, die durch die Parallelisierung der Abfrage von `cust.Orders` erzeugt werden.  
   
  In allen diesen Fällen empfiehlt es sich, die optimale Abfrageform mithilfe von Tests und Messungen zu ermitteln.  
   

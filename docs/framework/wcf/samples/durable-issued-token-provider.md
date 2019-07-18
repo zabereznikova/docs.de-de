@@ -2,34 +2,34 @@
 title: Dauerhaft ausgestellter Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bfe8f8bb8c3775760bc69031e338a156d690ab25
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103258"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487598"
 ---
 # <a name="durable-issued-token-provider"></a>Dauerhaft ausgestellter Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von einem benutzerdefinierten Client ausgestellt wird.  
   
 ## <a name="discussion"></a>Diskussion  
- Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um der Sicherheitsinfrastruktur Anmeldeinformationen angeben. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
+ Ein Tokenanbieter in Windows Communication Foundation (WCF) wird verwendet, um der Sicherheitsinfrastruktur Anmeldeinformationen angeben. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ist eines CardSpace-Sicherheitstoken-Anbieters. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:  
   
--   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem der integrierte Tokenanbieter nicht umgehen kann.  
+- Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem der integrierte Tokenanbieter nicht umgehen kann.  
   
--   Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Client die Anmeldeinformationen verwendet werden sollen.  
+- Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Client die Anmeldeinformationen verwendet werden sollen.  
   
--   Wenn Sie ein benutzerdefiniertes Token erstellen.  
+- Wenn Sie ein benutzerdefiniertes Token erstellen.  
   
  Dieses Beispiel veranschaulicht die Erstellung eines benutzerdefinierten Tokenanbieters, der von einem Sicherheitstokendienst (STS, Security Token Service) ausgestellte Token zwischenspeichert.  
   
  Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:  
   
--   Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.  
+- Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.  
   
--   Wie ausgestellte Token zwischengespeichert und an den WCF-Client bereitgestellt werden können.  
+- Wie ausgestellte Token zwischengespeichert und an den WCF-Client bereitgestellt werden können.  
   
--   Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.  
+- Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.  
   
  Das Beispiel besteht aus einem Clientkonsolenprogramm (Client.exe), einem Konsolenprogramm für den Sicherheitstokendienst (Securitytokenservice.exe) und einem Dienstkonsolenprogramm (Service.exe). Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert. Der Vertrag wird von der `ICalculator`-Schnittstelle definiert, die mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) verfügbar macht. Der Client empfängt ein Sicherheitstoken vom STS und fordert beim Dienst asynchron einen bestimmten mathematischen Vorgang an. Der Dienst antwortet mit dem Ergebnis. Die Clientaktivität ist im Konsolenfenster sichtbar.  
   
@@ -114,7 +114,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 #### <a name="to-develop-a-custom-token-provider"></a>So entwickeln Sie einen benutzerdefinierten Tokenanbieter  
   
-1.  Schreiben Sie einen benutzerdefinierten Tokenanbieter.  
+1. Schreiben Sie einen benutzerdefinierten Tokenanbieter.  
   
      Das Beispiel implementiert einen benutzerdefinierten Tokenanbieter, der ein Sicherheitstoken zurückgibt, das aus dem Cache abgerufen wird.  
   
@@ -133,7 +133,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
     }  
     ```  
   
-2.  Schreiben Sie den benutzerdefiniertem Sicherheitstoken-Manager.  
+2. Schreiben Sie den benutzerdefiniertem Sicherheitstoken-Manager.  
   
      Der <xref:System.IdentityModel.Selectors.SecurityTokenManager> wird zur Erstellung von einem <xref:System.IdentityModel.Selectors.SecurityTokenProvider> für eine bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> verwendet, die in der `CreateSecurityTokenProvider`-Methode übergeben wird. Der Sicherheitstoken-Manager dient außerdem zum Erstellen von Tokenauthentifizierern und Token-Serialisierungsprogrammen. Diese Vorgänge werden jedoch in diesem Beispiel nicht behandelt. In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken-Manager aus der Klasse <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> und setzt die Methode `CreateSecurityTokenProvider` außer Kraft, um den benutzerdefinierten Tokenanbieter zurückzugeben, wenn die übergebenen Tokenanforderungen angeben, dass ein ausgestelltes Token angefordert wird.  
   
@@ -162,7 +162,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
     }  
     ```  
   
-3.  Schreiben Sie benutzerdefinierte Clientanmeldeinformationen.  
+3. Schreiben Sie benutzerdefinierte Clientanmeldeinformationen.  
   
      Eine Klasse der Clientanmeldeinformationen stellt die Anmeldeinformationen dar, die für den Clientproxy konfiguriert werden, und erstellt einen Sicherheitstoken-Manager, mit dem Tokenauthentifizierer, Tokenanbieter und Token-Serialisierungsprogramme abgerufen werden können.  
   
@@ -204,7 +204,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
     }  
     ```  
   
-4.  Implementieren Sie den Tokencache. Die Beispielimplementierung verwendet eine abstrakte Basisklasse, über die Consumer eines bestimmten Tokencaches mit dem Cache interagieren.  
+4. Implementieren Sie den Tokencache. Die Beispielimplementierung verwendet eine abstrakte Basisklasse, über die Consumer eines bestimmten Tokencaches mit dem Cache interagieren.  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Führen Sie die Datei "Setup.cmd" aus, um die erforderlichen Zertifikate zu erstellen.  
+1. Führen Sie die Datei "Setup.cmd" aus, um die erforderlichen Zertifikate zu erstellen.  
   
-2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md). Stellen Sie sicher, dass alle Projekte in der Projektmappe erstellt werden (Shared, RSTRSTR, Service, SecurityTokenService und Client).  
+2. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md). Stellen Sie sicher, dass alle Projekte in der Projektmappe erstellt werden (Shared, RSTRSTR, Service, SecurityTokenService und Client).  
   
-3.  Stellen Sie sicher, dass Service.exe und SecurityTokenService.exe mit Administratorrechten ausgeführt werden.  
+3. Stellen Sie sicher, dass Service.exe und SecurityTokenService.exe mit Administratorrechten ausgeführt werden.  
   
-4.  Führen Sie Client.exe aus.  
+4. Führen Sie Client.exe aus.  
   
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
-1.  Führen Sie "Cleanup.cmd" im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
+1. Führen Sie "Cleanup.cmd" im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

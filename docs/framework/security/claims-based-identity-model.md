@@ -3,33 +3,33 @@ title: Anspruchsbasiertes Identitätsmodell
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411733"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422407"
 ---
 # <a name="claims-based-identity-model"></a>Anspruchsbasiertes Identitätsmodell
 Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeridentität in der Anwendung als Satz von Ansprüchen dargestellt. Ein Anspruch könnte der Name des Benutzers, eine andere e-Mail-Adresse sein. Das zugrunde liegende Konzept besteht darin, dass ein externes Identitätssystem konfiguriert wird, um der Anwendung mit jeder Anforderung alle erforderlichen Informationen über den Benutzer zu geben. Außerdem wird die kryptografische Zusicherung gegeben, dass die Identitätsdaten, die Sie erhalten, aus einer vertrauenswürdigen Quelle stammen.  
   
  Bei diesem Modell ist das einmalige Anmelden viel einfacher zu erreichen, und die Anwendung ist nicht mehr für Folgendes zuständig:  
   
--   Authentifizieren von Benutzern.  
+- Authentifizieren von Benutzern.  
   
--   Speichern von Benutzerkonten und Kennwörtern.  
+- Speichern von Benutzerkonten und Kennwörtern.  
   
--   Aufrufen der Unternehmensverzeichnisse, um Benutzeridentitätsdetails zu suchen.  
+- Aufrufen der Unternehmensverzeichnisse, um Benutzeridentitätsdetails zu suchen.  
   
--   Integration in Identitätssysteme anderer Plattformen oder Unternehmen.  
+- Integration in Identitätssysteme anderer Plattformen oder Unternehmen.  
   
  Bei diesem Modell trifft die Anwendung identitätsbezogene Entscheidungen auf der Grundlage von Ansprüchen, die von dem System bereitgestellt werden, das den Benutzer authentifizierte. Dabei kann es sich um die einfache Anwendungspersonalisierung mit dem Vornamen des Benutzers oder um das Autorisieren des Benutzers für den Zugriff auf höherwertige Funktionen und Ressourcen in der Anwendung handeln.  
   
  Dieses Thema enthält folgende Informationen:  
   
--   [Einführung in die anspruchsbasierte Identität](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [Einführung in die anspruchsbasierte Identität](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [Grundlegendes Szenario für ein anspruchsbasiertes Identitätsmodell](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [Grundlegendes Szenario für ein anspruchsbasiertes Identitätsmodell](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>Einführung in die anspruchsbasierte Identität  
@@ -58,7 +58,7 @@ Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeriden
  Wenn Sie eine Anwendung erstellen, die auf Ansprüche basiert ist, erstellen Sie eine Anwendung der vertrauenden Seite. Synonyme für eine Anwendung der vertrauenden Seite sind „Ansprüche unterstützende Anwendung“ und „anspruchsbasierte Anwendung“. Webanwendungen und Webdienste können Anwendungen der vertrauenden Seite sein. Eine Anwendung der vertrauenden Seite nutzt die Token, die von einem STS ausgegeben werden, und extrahiert die Ansprüche der Token, um sie für identitätsbezogene Aufgaben zu verwenden. WIF bietet Funktionen, die Sie beim Erstellen von Anwendungen der vertrauenden Seite unterstützen.  
   
 ### <a name="standards"></a>Standards  
- Aus Gründen der Interoperabilität werden im vorherigen Szenario einige WS-*Standards verwendet. Die Richtlinie wird mithilfe von WS-MetadataExchange abgerufen, und die Richtlinie selbst wird entsprechend der WS-Policy-Spezifikation strukturiert. Der STS macht Endpunkte verfügbar, mit denen die WS-Trust-Spezifikation implementiert wird. Diese beschreibt, wie Sicherheitstoken angefordert und abgerufen werden. Die meisten modernen STS-Dienste geben Token aus, die mit Security Assertion Markup Language (SAML) formatiert werden. SAML ist ein in der Branche anerkanntes XML-Vokabular, das verwendet werden kann, um Ansprüche interoperabel darzustellen. Wenn Sie über mehrere Plattformen verfügen, können Sie mithilfe von SAML mit einem STS auf einer anderen Plattform kommunizieren und einmaliges Anmelden für alle Anwendungen, unabhängig von der jeweiligen Plattform, implementieren.  
+ Aus Gründen der Interoperabilität werden im vorherigen Szenario einige WS-*Standards verwendet. Die Richtlinie wird mithilfe von WS-MetadataExchange abgerufen, und die Richtlinie selbst wird entsprechend der WS-Policy-Spezifikation strukturiert. Der STS macht Endpunkte verfügbar, mit denen die WS-Trust-Spezifikation implementiert wird. Diese beschreibt, wie Sicherheitstoken angefordert und abgerufen werden. Die meisten Sicherheitstokendienste (STS) geben Token, die mit Security Assertion Markup Language (SAML) formatiert. SAML ist ein in der Branche anerkanntes XML-Vokabular, das verwendet werden kann, um Ansprüche interoperabel darzustellen. Wenn Sie über mehrere Plattformen verfügen, können Sie mithilfe von SAML mit einem STS auf einer anderen Plattform kommunizieren und einmaliges Anmelden für alle Anwendungen, unabhängig von der jeweiligen Plattform, implementieren.  
   
 ### <a name="browser-based-applications"></a>Browserbasierte Anwendungen  
  Das anspruchsbasierte Identitätsmodell wird nicht nur von intelligenten Clients verwendet. Das Modell ist auch bei browserbasierten Anwendungen (auch als passive Clients bezeichnet) einsetzbar. Im folgenden Szenario wird beschrieben, wie dies funktioniert.  
@@ -73,10 +73,10 @@ Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeriden
   
  Dieses Diagramm zeigt eine Website (die Anwendung der vertrauenden Seite), die konfiguriert wurde, um WIF zur Authentifizierung zu verwenden, und einen Client, in diesem Fall einen Webbrowser, der diese Website verwenden möchte.  
   
-1.  Wenn ein nicht authentifizierter Benutzer eine Seite anfordert, wird der Browser zu den Seiten des Identity Provider (IdP) umgeleitet.  
+1. Wenn ein nicht authentifizierter Benutzer eine Seite anfordert, wird der Browser zu den Seiten des Identity Provider (IdP) umgeleitet.  
   
-2.  Der IdP muss der Benutzer seine Anmeldeinformationen ein, z. B. Benutzername/Kennwort oder Kerberos-Authentifizierung zu präsentieren.  
+2. Der IdP muss der Benutzer seine Anmeldeinformationen ein, z. B. Benutzername/Kennwort oder Kerberos-Authentifizierung zu präsentieren.  
   
-3.  Die IdP-Probleme, die ein die Token an, die an den Browser zurückgegeben wird.  
+3. Die IdP-Probleme, die ein die Token an, die an den Browser zurückgegeben wird.  
   
-4.  Der Browser wird jetzt wieder an die ursprünglich angeforderte Seite umgeleitet, wo WIF bestimmt, ob das Token die Anforderungen erfüllt und auf die Seite zugreifen darf. Falls ja, wird ein Cookie ausgegeben, um eine Sitzung zu starten. Die Authentifizierung muss daher nur einmal erfolgen und die Kontrolle wird an die Anwendung übergeben.
+4. Der Browser wird jetzt wieder an die ursprünglich angeforderte Seite umgeleitet, wo WIF bestimmt, ob das Token die Anforderungen erfüllt und auf die Seite zugreifen darf. Falls ja, wird ein Cookie ausgegeben, um eine Sitzung zu starten. Die Authentifizierung muss daher nur einmal erfolgen und die Kontrolle wird an die Anwendung übergeben.

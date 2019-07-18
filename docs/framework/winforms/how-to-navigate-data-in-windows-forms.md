@@ -11,29 +11,29 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 452aacab4580a3b07168daa6b7c03740dc98620b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154595"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583741"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Vorgehensweise: Navigieren durch Daten in Windows Forms
 In einer Windows-Anwendung ist die einfachste Möglichkeit zum Navigieren durch Datensätze in einer Datenquelle zum Binden einer <xref:System.Windows.Forms.BindingSource> -Komponente an die Datenquelle und dann Binden von Steuerelementen an die <xref:System.Windows.Forms.BindingSource>. Anschließend können Sie die integrierte Navigationsmethode auf die <xref:System.Windows.Forms.BindingSource> solche eine <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> und <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Mit diesen Methoden wird angepasst, die <xref:System.Windows.Forms.BindingSource.Position%2A> und <xref:System.Windows.Forms.BindingSource.Current%2A> Eigenschaften der <xref:System.Windows.Forms.BindingSource> entsprechend. Können Sie auch auf ein Element stoßen und es als aktuelles Element festlegen, durch Festlegen der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft.  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>Erhöht die Position in einer Datenquelle  
   
-1.  Legen Sie die <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft der <xref:System.Windows.Forms.BindingSource> für die gebundenen Daten auf die Position des Datensatzes zu wechseln. Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.BindingSource.MoveNext%2A> -Methode der der <xref:System.Windows.Forms.BindingSource> zur Erhöhung der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft bei der `nextButton` geklickt wird. Die <xref:System.Windows.Forms.BindingSource> zugeordnet ist die `Customers` Tabelle eines Datasets `Northwind`.  
+1. Legen Sie die <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft der <xref:System.Windows.Forms.BindingSource> für die gebundenen Daten auf die Position des Datensatzes zu wechseln. Das folgende Beispiel veranschaulicht die Verwendung der <xref:System.Windows.Forms.BindingSource.MoveNext%2A> -Methode der der <xref:System.Windows.Forms.BindingSource> zur Erhöhung der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft bei der `nextButton` geklickt wird. Die <xref:System.Windows.Forms.BindingSource> zugeordnet ist die `Customers` Tabelle eines Datasets `Northwind`.  
   
     > [!NOTE]
-    >  Festlegen der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft auf einen Wert nach der ersten oder letzten Datensatz führt nicht zu einem Fehler wie der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] lässt nicht die Position auf einen Wert außerhalb der Grenzen der Liste festlegen. Wenn es ist wichtig für Ihre Anwendung aus, um herauszufinden, ob Sie nach der ersten oder letzten Datensatz gelesen haben, enthalten Sie eine Logik zum Überprüfen, ob Sie die Anzahl der Elemente überschreitet.  
+    >  Festlegen der <xref:System.Windows.Forms.BindingSource.Position%2A> Eigenschaft auf einen Wert nach der ersten oder letzten Datensatz führt nicht zu einem Fehler, wie Sie festlegen, der die Position auf einen Wert außerhalb der Grenzen der Liste der .NET Framework nicht zugelassen wird. Wenn es ist wichtig für Ihre Anwendung aus, um herauszufinden, ob Sie nach der ersten oder letzten Datensatz gelesen haben, enthalten Sie eine Logik zum Überprüfen, ob Sie die Anzahl der Elemente überschreitet.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.NavigatingData#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#4)]  
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Überprüft, ob Sie am Ende oder Anfang bestanden haben  
   
-1.  Erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.BindingSource.PositionChanged>-Ereignis. In den Handler auf können Sie testen, ob der vorgeschlagenen Positionswert die Anzahl der tatsächlichen Daten überschritten hat.  
+1. Erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.BindingSource.PositionChanged>-Ereignis. In den Handler auf können Sie testen, ob der vorgeschlagenen Positionswert die Anzahl der tatsächlichen Daten überschritten hat.  
   
      Im folgende Beispiel wird veranschaulicht, wie Sie testen können, ob Sie das letzte Datenelement erreicht haben. Im Beispiel, wenn Sie das letzte Element sind die **Weiter** Formular auf die Schaltfläche ist deaktiviert.  
   
@@ -45,7 +45,7 @@ In einer Windows-Anwendung ist die einfachste Möglichkeit zum Navigieren durch 
   
 ### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Zum Auffinden eines Elements, und legen Sie es als aktuelles Element  
   
-1.  Suchen Sie den Datensatz, die, den Sie als das aktuelle Element festlegen möchten. Hierzu können Sie mithilfe der <xref:System.Windows.Forms.BindingSource.Find%2A> Methode der <xref:System.Windows.Forms.BindingSource>, wenn die Datenquelle implementiert <xref:System.ComponentModel.IBindingList>. Einige Beispiele für Daten, Datenquellen, die implementieren <xref:System.ComponentModel.IBindingList> sind <xref:System.ComponentModel.BindingList%601> und <xref:System.Data.DataView>.  
+1. Suchen Sie den Datensatz, die, den Sie als das aktuelle Element festlegen möchten. Hierzu können Sie mithilfe der <xref:System.Windows.Forms.BindingSource.Find%2A> Methode der <xref:System.Windows.Forms.BindingSource>, wenn die Datenquelle implementiert <xref:System.ComponentModel.IBindingList>. Einige Beispiele für Daten, Datenquellen, die implementieren <xref:System.ComponentModel.IBindingList> sind <xref:System.ComponentModel.BindingList%601> und <xref:System.Data.DataView>.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
@@ -54,5 +54,5 @@ In einer Windows-Anwendung ist die einfachste Möglichkeit zum Navigieren durch 
 
 - [Von Windows Forms unterstützte Datenquellen](data-sources-supported-by-windows-forms.md)
 - [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](change-notification-in-windows-forms-data-binding.md)
-- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)
-- [Datenbindung in Web Forms](windows-forms-data-binding.md)
+- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)
+- [Windows Forms-Datenbindung](windows-forms-data-binding.md)

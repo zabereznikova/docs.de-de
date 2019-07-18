@@ -1,68 +1,68 @@
 ---
-title: 'Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF'
+title: 'Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF'
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207153"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910586"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF
 ## <a name="applies-to"></a>Gilt für  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web Forms  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Zusammenfassung  
  In dieser Vorgehensweise werden ausführliche Prozeduren zum Erstellen einer einfachen Ansprüche unterstützenden ASP.NET Web Forms-Anwendung vorgestellt. Sie enthält auch Anweisungen dazu, wie eine einfache ASP.NET Web Forms-Anwendung auf die erfolgreiche Implementierung der Verbundauthentifizierung getestet werden kann. Diese Vorgehensweise enthält keine detaillierten Anweisungen zum Erstellen eines Sicherheitstokendiensts (Security Token Service, STS) und geht davon aus, dass Sie bereits einen STS konfiguriert haben.  
   
 ## <a name="contents"></a>Inhalt  
   
--   Ziele  
+- Ziele  
   
--   Zusammenfassung von Schritten  
+- Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2: Konfigurieren einer ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung  
+- Schritt 2: Konfigurieren einer ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="objectives"></a>Ziele  
   
--   Konfigurieren einer ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung  
+- Konfigurieren einer ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung  
   
--   Testen einer erfolgreichen Ansprüche unterstützenden ASP.NET Web Forms-Anwendung  
+- Testen einer erfolgreichen Ansprüche unterstützenden ASP.NET Web Forms-Anwendung  
   
 ## <a name="summary-of-steps"></a>Zusammenfassung von Schritten  
   
--   Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
+- Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
   
--   Schritt 2: Konfigurieren einer ASP.NET Web Forms-Anwendung für die Verbundauthentifizierung  
+- Schritt 2: Konfigurieren einer ASP.NET Web Forms-Anwendung für die Verbundauthentifizierung  
   
--   Schritt 3: Testen Ihrer Projektmappe  
+- Schritt 3: Testen Ihrer Projektmappe  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Schritt 1: Erstellen einer einfachen ASP.NET Web Forms-Anwendung  
  In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung.  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
   
-1.  Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.  
+1. Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.  
   
-2.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
+2. Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
   
-3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
+3. Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
   
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Schritt 2: Konfigurieren einer ASP.NET Web Forms-Anwendung für die anspruchsbasierte Authentifizierung  
  In diesem Schritt fügen Sie Konfigurationseinträge zur Konfigurationsdatei *Web.config* Ihrer ASP.NET Web Forms-Anwendung hinzu, damit diese Ansprüche unterstützt.  
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Konfigurieren einer ASP.NET-Anwendung für die anspruchsbasierte Authentifizierung  
   
-1.  Fügen Sie die folgenden Konfigurationseinträge unmittelbar nach dem öffnenden Element **\<configuration>** zur *Web.config*-Konfigurationsdatei hinzu:  
+1. Fügen Sie die folgenden Konfigurationseinträge unmittelbar nach dem öffnenden Element **\<configuration>** zur *Web.config*-Konfigurationsdatei hinzu:  
   
     ```xml  
     <configSections>  
@@ -71,7 +71,7 @@ ms.locfileid: "47207153"
     </configSections>  
     ```  
   
-2.  Fügen Sie ein **\<location>**-Element hinzu, das den Zugriff auf die Verbundmetadaten der Anwendung ermöglicht:  
+2. Fügen Sie ein **\<location>**-Element hinzu, das den Zugriff auf die Verbundmetadaten der Anwendung ermöglicht:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -83,7 +83,7 @@ ms.locfileid: "47207153"
     </location>  
     ```  
   
-3.  Fügen Sie die folgenden Konfigurationseinträge innerhalb des Elements **\<system.web>** hinzu, um Benutzer zu verweigern, die native Authentifizierung zu deaktivieren, und WIF zu ermöglichen, die Authentifizierung zu verwalten.  
+3. Fügen Sie die folgenden Konfigurationseinträge innerhalb des Elements **\<system.web>** hinzu, um Benutzer zu verweigern, die native Authentifizierung zu deaktivieren, und WIF zu ermöglichen, die Authentifizierung zu verwalten.  
   
     ```xml  
     <authorization>  
@@ -92,7 +92,7 @@ ms.locfileid: "47207153"
     <authentication mode="None" />  
     ```  
   
-4.  Fügen Sie das **\<system.webServer>**-Element hinzu, das die Module für Verbundauthentifizierung definiert. Beachten Sie, dass das *PublicKeyToken*-Attribut identisch mit dem *PublicKeyToken*-Attribut für die **\<configSections>**-Einträge sein muss, die zuvor hinzugefügt wurden:  
+4. Fügen Sie das **\<system.webServer>**-Element hinzu, das die Module für Verbundauthentifizierung definiert. Beachten Sie, dass das *PublicKeyToken*-Attribut identisch mit dem *PublicKeyToken*-Attribut für die **\<configSections>**-Einträge sein muss, die zuvor hinzugefügt wurden:  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "47207153"
     </system.webServer>  
     ```  
   
-5.  Fügen Sie folgende auf Windows Identity Foundation bezogene Konfigurationseinträge hinzu, und versichern Sie sich, dass die URL und Portnummer Ihrer ASP.NET-Anwendung mit den Werten des **\<audienceUris>**-Eintrags, des **realm**-Attributs des **\<wsFederation>**-Elements und des **reply**-Attributs des **\<wsFederation>**-Elements übereinstimmen. Vergewissern Sie sich zudem, dass der Wert des **Ausstellers** der URL Ihres Sicherheitstokendiensts entspricht.  
+5. Fügen Sie folgende auf Windows Identity Foundation bezogene Konfigurationseinträge hinzu, und versichern Sie sich, dass die URL und Portnummer Ihrer ASP.NET-Anwendung mit den Werten des **\<audienceUris>**-Eintrags, des **realm**-Attributs des **\<wsFederation>**-Elements und des **reply**-Attributs des **\<wsFederation>**-Elements übereinstimmen. Vergewissern Sie sich zudem, dass der Wert des **Ausstellers** der URL Ihres Sicherheitstokendiensts entspricht.  
   
     ```xml  
     <system.identityModel>  
@@ -127,16 +127,16 @@ ms.locfileid: "47207153"
     </system.identityModel.services>  
     ```  
   
-6.  Fügen Sie der Assembly <xref:System.IdentityModel> einen Verweis hinzu.  
+6. Fügen Sie der Assembly <xref:System.IdentityModel> einen Verweis hinzu.  
   
-7.  Kompilieren Sie die Projektmappe, um sich zu vergewissern, dass keine Fehler vorliegen.  
+7. Kompilieren Sie die Projektmappe, um sich zu vergewissern, dass keine Fehler vorliegen.  
   
 ## <a name="step-3--test-your-solution"></a>Schritt 3: Testen Ihrer Projektmappe  
  In diesem Schritt testen Sie die ASP.NET Web Forms-Anwendung, die für die anspruchsbasierte Authentifizierung konfiguriert wurde. Sie können einen grundlegenden Test ausführen, indem Sie einfachen Code hinzufügen, der die Ansprüche im Token anzeigt, die vom Sicherheitstokendienst (STS) ausgegeben werden.  
   
 #### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Testen Ihrer ASP.NET Web Form-Anwendung für die anspruchsbasierte Authentifizierung  
   
-1.  Öffnen Sie die Datei **Default.aspx** im Projekt **TestApp**, und ersetzen Sie das vorhandene Markup durch das folgende Markup:  
+1. Öffnen Sie die Datei **Default.aspx** im Projekt **TestApp**, und ersetzen Sie das vorhandene Markup durch das folgende Markup:  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -158,12 +158,12 @@ ms.locfileid: "47207153"
     </html>  
     ```  
   
-2.  Speichern Sie die Datei **Default.aspx**, und öffnen Sie dann die CodeBehind-Datei **Default.aspx.cs**.  
+2. Speichern Sie die Datei **Default.aspx**, und öffnen Sie dann die CodeBehind-Datei **Default.aspx.cs**.  
   
     > [!NOTE]
     >  **Default.aspx.cs** ist möglicherweise im Projektmappen-Explorer unter **Default.aspx** ausgeblendet. Wenn **Default.aspx.cs** nicht sichtbar ist, erweitern Sie **Default.aspx**, indem Sie auf das Dreieck daneben klicken.  
   
-3.  Ersetzen Sie den vorhandenen Code in der **Page_Load**-Methode von **Default.aspx.cs** durch den folgenden Code:  
+3. Ersetzen Sie den vorhandenen Code in der **Page_Load**-Methode von **Default.aspx.cs** durch den folgenden Code:  
   
     ```csharp  
     using System;  
@@ -202,8 +202,8 @@ ms.locfileid: "47207153"
     }  
     ```  
   
-4.  Speichern Sie **Default.aspx.cs**, und erstellen Sie die Anwendung.  
+4. Speichern Sie **Default.aspx.cs**, und erstellen Sie die Anwendung.  
   
-5.  Starten Sie die Projektmappe durch Drücken der Taste **F5**.  
+5. Starten Sie die Projektmappe durch Drücken der Taste **F5**.  
   
-6.  Ihnen sollte die Seite angezeigt werden, die die Ansprüche im Token anzeigt, die Ihnen vom Sicherheitstokendienst ausgegeben wurden.
+6. Ihnen sollte die Seite angezeigt werden, die die Ansprüche im Token anzeigt, die Ihnen vom Sicherheitstokendienst ausgegeben wurden.

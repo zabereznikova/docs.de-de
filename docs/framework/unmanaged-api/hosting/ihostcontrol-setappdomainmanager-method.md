@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 118e75cb28a4e474427f35f4516ec41850ebe99f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 94deb4eaeeec2400aebf397d391ce4b67c16989e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150864"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763883"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager-Methode
 Benachrichtigt den Host an, dass eine Anwendungsdomäne erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetAppDomainManager (  
     [in] DWORD     dwAppDomainID,  
     [in] IUnknown* pUnkAppDomainManager  

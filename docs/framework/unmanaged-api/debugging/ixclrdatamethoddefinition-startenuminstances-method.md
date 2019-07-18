@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e92eea9677731756bdbfcbdcfac1531861fb5dce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 89473f2a6a3da73ee5d172a3700bdb4d624278ff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361342"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756300"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>IXCLRDataMethodDefinition::StartEnumInstances-Methode
 
@@ -30,7 +30,7 @@ Stellt ein Handle für die Enumeration der Methodeninstanzen für einen bestimmt
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT StartEnumInstances(
     [in] IXCLRDataAppDomain* appDomain,
     [out] CLRDATA_ENUM *handle
@@ -52,8 +52,8 @@ Die angegebene Methode ist Teil der `IXCLRDataMethodDefinition` Schnittstelle, u
 ## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keine  
-**Bibliothek:** Keine  
+**Header:** Keiner  
+**Bibliothek:** Keiner  
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch

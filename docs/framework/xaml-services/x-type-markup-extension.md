@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bf62987c61c1d4f6aefce515f79e997b41272b56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211633"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622966"
 ---
 # <a name="xtype-markup-extension"></a>x:Type-Markuperweiterung
 Stellt die CLR <xref:System.Type> -Objekt, das die zugrunde liegende Typ für einen angegebenen XAML-Typ ist.  
@@ -71,11 +71,11 @@ Stellt die CLR <xref:System.Type> -Objekt, das die zugrunde liegende Typ für ei
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 bietet zusätzliche Unterstützung für generische Typen und das Funktionsverhalten der ändert `x:TypeArguments` und `x:Type` zur Bereitstellung dieser Unterstützung.  
   
--   `x:TypeArguments` und das zugeordnete Objekt-Element für eine generische Objektinstanziierung kann auf andere Elemente als Stamm. Weitere Informationen finden Sie im Abschnitt "XAML 2009" [X: TypeArguments Directive](x-typearguments-directive.md).  
+- `x:TypeArguments` und das zugeordnete Objekt-Element für eine generische Objektinstanziierung kann auf andere Elemente als Stamm. Weitere Informationen finden Sie im Abschnitt "XAML 2009" [X: TypeArguments Directive](x-typearguments-directive.md).  
   
--   XAML 2009 unterstützt eine Syntax zum Angeben eines generischen Typs Einschränkung im Markup. Dies kann verwendet werden, indem `x:TypeArguments`, `x:Type`, oder indem die beiden Funktionen sollten in Kombination.  
+- XAML 2009 unterstützt eine Syntax zum Angeben eines generischen Typs Einschränkung im Markup. Dies kann verwendet werden, indem `x:TypeArguments`, `x:Type`, oder indem die beiden Funktionen sollten in Kombination.  
   
--   WPF XAML-Implementierung, bei der Verarbeitung von XAML 2009 für Load auch diese Funktion die implizite Typkonvertierungsverhalten für bestimmte Frameworkeigenschaften hinzufügt, mit dem Typ <xref:System.Type>.  
+- WPF XAML-Implementierung, bei der Verarbeitung von XAML 2009 für Load auch diese Funktion die implizite Typkonvertierungsverhalten für bestimmte Frameworkeigenschaften hinzufügt, mit dem Typ <xref:System.Type>.  
   
  In WPF können Sie XAML 2009-Funktionen verwenden, jedoch nur für loose XAML (XAML, das nicht markupkompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht.  
   

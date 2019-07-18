@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcb869bed71be05e0450580b50dfa9f2a0fca525
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e77046745381d3ecc35c24d5af3f9181b9132e9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169792"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738163"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess-Methode
 Ruft einen Zeiger auf die "ICorDebugProcess"-Instanz für den angegebenen Prozess an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetProcess (  
     [in] DWORD               dwProcessId,  
     [out] ICorDebugProcess   **ppProcess  

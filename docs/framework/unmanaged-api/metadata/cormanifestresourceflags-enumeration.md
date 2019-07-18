@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3d3ef78da9dd639d0f9050a8b61d1e365cd8b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08f997e133fa6cc8769efe18e7ca06c0153f15a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650248"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781795"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags-Enumeration
 Gibt an, die Sichtbarkeit der Ressourcen, die in einem Assemblymanifest codiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorManifestResourceFlags {  
   
     mrVisibilityMask        =   0x0007,  
@@ -54,4 +54,5 @@ typedef enum CorManifestResourceFlags {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

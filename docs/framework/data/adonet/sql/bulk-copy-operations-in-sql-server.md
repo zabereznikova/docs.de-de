@@ -2,12 +2,12 @@
 title: Massenkopiervorgänge in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 086b3b997cf0915be7cfa603a651eb412d52e985
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e538e48400d955a0013a12dbf2d10f1f96c3ddfe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194798"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649549"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Massenkopiervorgänge in SQL Server
 Microsoft SQL Server enthält ein beliebtes Befehlszeilentools-Hilfsprogramm, die mit dem Namen **Bcp** für schnellen Massenkopieren großer Dateiumfänge in Tabellen oder Sichten in SQL Server-Datenbanken. Mit der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse können Sie verwaltete Codelösungen schreiben, durch die ähnliche Funktionen bereitgestellt werden. Es stehen auch andere Möglichkeiten zum Laden von Daten in eine SQL Server-Tabelle zur Verfügung (z. B. INSERT-Anweisungen), <xref:System.Data.SqlClient.SqlBulkCopy> weist diesen gegenüber jedoch einen deutlichen Leistungsvorteil auf.  
@@ -16,11 +16,11 @@ Microsoft SQL Server enthält ein beliebtes Befehlszeilentools-Hilfsprogramm, di
   
  Mit der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse können Sie folgende Vorgänge ausführen:  
   
--   Einzelne Massenkopiervorgänge  
+- Einzelne Massenkopiervorgänge  
   
--   Mehrere Massenkopiervorgänge  
+- Mehrere Massenkopiervorgänge  
   
--   Massenkopiervorgänge innerhalb von Transaktionen  
+- Massenkopiervorgänge innerhalb von Transaktionen  
   
 > [!NOTE]
 >  Bei Verwendung von .NET Framework, Version 1.1 oder früher (nicht unterstützt die <xref:System.Data.SqlClient.SqlBulkCopy> Klasse), können Sie die SQL Server Transact-SQL ausführen **BULK INSERT** Anweisung mit der <xref:System.Data.SqlClient.SqlCommand> Objekt.  

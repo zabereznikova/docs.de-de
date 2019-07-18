@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51162bfb6f9763d2ab4ac1f86e0ccdc15b601271
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 04b8ac6751024e64cc866fce1cfe72fb42e41200
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159873"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760436"
 ---
 # <a name="icordebugmanagedcallbackexitprocess-method"></a>ICorDebugManagedCallback::ExitProcess-Methode
 Benachrichtigt den Debugger an, dass ein Prozess beendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ExitProcess (  
     [in] ICorDebugProcess *pProcess  
 );  

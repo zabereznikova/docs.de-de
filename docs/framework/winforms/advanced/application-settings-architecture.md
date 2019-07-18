@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 717abc8f54669a5ca814a61827a0865215204e1b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099780"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487358"
 ---
 # <a name="application-settings-architecture"></a>Architektur der Anwendungseinstellungen
 In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellungen funktioniert. Außerdem werden erweiterte Funktionen der Architektur erläutert, z.B. gruppierte Einstellungen und Einstellungsschlüssel.  
@@ -22,17 +22,17 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
  Schnittstellen werden bereitgestellt, die benutzerdefinierten Komponenten ermöglichen, ihre eigenen Einstellungen beizubehalten, wenn sie in einer Anwendung gehostet werden können. Mithilfe von Einstellungsschlüsseln können Komponenten Einstellungen für mehrere Instanzen der Komponente getrennt halten.  
   
 ## <a name="defining-settings"></a>Definieren von Einstellungen  
- Die Architektur der Anwendungseinstellungen wird in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] und in Windows Forms verwendet und enthält eine Reihe von Basisklassen, die beide Umgebungen gemeinsam verwenden. Am wichtigsten ist <xref:System.Configuration.SettingsBase>, die ermöglicht den Zugriff auf Einstellungen über eine Auflistung, und stellt Low-Level-Methoden zum Laden und Speichern von Einstellungen. Jede Umgebung implementiert eine eigene Klasse abgeleitet <xref:System.Configuration.SettingsBase> um zusätzliche Einstellungsfunktionen für diese Umgebung bereitzustellen. In einer Windows Forms-basierten Anwendung, alle Anwendungseinstellungen definiert werden müssen, für eine Klasse, die von abgeleiteten der <xref:System.Configuration.ApplicationSettingsBase> -Klasse, die die Basisklasse der Klasse die folgende Funktionen hinzugefügt:  
+ Architektur der Anwendungseinstellungen wird in ASP.NET und Windows Forms verwendet, und es enthält eine Reihe von Basisklassen, die für beide Umgebungen gemeinsam genutzt werden. Am wichtigsten ist <xref:System.Configuration.SettingsBase>, die ermöglicht den Zugriff auf Einstellungen über eine Auflistung, und stellt Low-Level-Methoden zum Laden und Speichern von Einstellungen. Jede Umgebung implementiert eine eigene Klasse abgeleitet <xref:System.Configuration.SettingsBase> um zusätzliche Einstellungsfunktionen für diese Umgebung bereitzustellen. In einer Windows Forms-basierten Anwendung, alle Anwendungseinstellungen definiert werden müssen, für eine Klasse, die von abgeleiteten der <xref:System.Configuration.ApplicationSettingsBase> -Klasse, die die Basisklasse der Klasse die folgende Funktionen hinzugefügt:  
   
--   Lade- und Speichervorgänge auf höherer Ebene  
+- Lade- und Speichervorgänge auf höherer Ebene  
   
--   Unterstützung für benutzerspezifische Einstellungen  
+- Unterstützung für benutzerspezifische Einstellungen  
   
--   Wiederherstellen der vordefinierten Standardeinstellungen eines Benutzers  
+- Wiederherstellen der vordefinierten Standardeinstellungen eines Benutzers  
   
--   Aktualisieren von Einstellungen aus einer früheren Anwendungsversion  
+- Aktualisieren von Einstellungen aus einer früheren Anwendungsversion  
   
--   Überprüfen von Einstellungen, bevor sie geändert oder bevor sie gespeichert werden  
+- Überprüfen von Einstellungen, bevor sie geändert oder bevor sie gespeichert werden  
   
  Die Einstellungen können über eine Reihe von Attributen, die in definierten beschrieben werden die <xref:System.Configuration> Namespace; diese werden beschrieben [Attribute für Anwendungseinstellungen](application-settings-attributes.md). Wenn Sie eine Einstellung definieren, müssen Sie sie anwenden, entweder mit <xref:System.Configuration.ApplicationScopedSettingAttribute> oder <xref:System.Configuration.UserScopedSettingAttribute>, das beschreibt, ob die Einstellung für die gesamte Anwendung oder nur für den aktuellen Benutzer gilt.  
   
@@ -44,13 +44,13 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
 ## <a name="settings-persistence"></a>Beibehaltung von Einstellungen  
  Die <xref:System.Configuration.ApplicationSettingsBase> Klasse nicht selbst beibehalten oder Einstellungen geladen werden; diese Aufgabe übernimmt des Einstellungsanbieters, eine abgeleitete Klasse <xref:System.Configuration.SettingsProvider>. Wenn eine abgeleitete Klasse von <xref:System.Configuration.ApplicationSettingsBase> gibt keinen Einstellungsanbieter über die <xref:System.Configuration.SettingsProviderAttribute>, und klicken Sie dann den Standardanbieter <xref:System.Configuration.LocalFileSettingsProvider>, verwendet wird.  
   
- Das Konfigurationssystem, das ursprünglich mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] veröffentlicht wurde, unterstützt die Bereitstellung von statischen Anwendungskonfigurationsdaten über die Datei machine.config des lokalen Computers oder in einer Datei `app.`exe.config, die Sie mit Ihrer Anwendung bereitstellen. Die <xref:System.Configuration.LocalFileSettingsProvider> Klasse erweitert diese native Unterstützung auf folgende Weise:  
+ Das Konfigurationssystem, die ursprünglich mit .NET Framework veröffentlicht wurde unterstützt die Bereitstellung von statischen Anwendungskonfigurationsdaten über entweder auf dem lokalen Computer die machine.config-Datei oder in einem `app.`exe.config-Datei, die Sie mit bereitstellen. Ihre Anwendung. Die <xref:System.Configuration.LocalFileSettingsProvider> Klasse erweitert diese native Unterstützung auf folgende Weise:  
   
--   Anwendungsspezifische Einstellungen können in der Datei machine.config oder `app.`exe.config gespeichert werden. Die Datei machine.config ist immer schreibgeschützt, während `app`. exe.config aufgrund von Sicherheitsüberlegungen für die meisten Anwendungen schreibgeschützt ist.  
+- Anwendungsspezifische Einstellungen können in der Datei machine.config oder `app.`exe.config gespeichert werden. Die Datei machine.config ist immer schreibgeschützt, während `app`. exe.config aufgrund von Sicherheitsüberlegungen für die meisten Anwendungen schreibgeschützt ist.  
   
--   Benutzerspezifische Einstellungen können in `app`. exe.config-Dateien gespeichert werden und werden dann als statische Standardwerte behandelt.  
+- Benutzerspezifische Einstellungen können in `app`. exe.config-Dateien gespeichert werden und werden dann als statische Standardwerte behandelt.  
   
--   Nicht standardmäßige benutzerspezifische Einstellungen werden in einer neuen Datei, *benutzer*.config gespeichert, wobei *benutzer* der Benutzername der Person ist, die aktuell die Anwendung ausführt. Sie können angeben, den Standardwert für eine benutzerspezifische Einstellung mit <xref:System.Configuration.DefaultSettingValueAttribute>. Da sich benutzerspezifische Einstellungen häufig während der Ausführung der Anwendung ändern, hat `user`config Lese-/Schreibzugriff.  
+- Nicht standardmäßige benutzerspezifische Einstellungen werden in einer neuen Datei, *benutzer*.config gespeichert, wobei *benutzer* der Benutzername der Person ist, die aktuell die Anwendung ausführt. Sie können angeben, den Standardwert für eine benutzerspezifische Einstellung mit <xref:System.Configuration.DefaultSettingValueAttribute>. Da sich benutzerspezifische Einstellungen häufig während der Ausführung der Anwendung ändern, hat `user`config Lese-/Schreibzugriff.  
   
  Alle drei Konfigurationsdateien speichern Einstellungen im XML-Format. Das XML-Element der obersten Ebene für anwendungsspezifische Einstellungen ist `<appSettings>`, während `<userSettings>` für die benutzerspezifischen Einstellungen verwendet wird. Eine `app`. exe.config-Datei mit anwendungsspezifischen Einstellungen und Standardwerten für benutzerspezifische Einstellungen sieht wie folgt aus:  
   
@@ -100,25 +100,25 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
 ### <a name="settings-serialization"></a>Serialisierung von Einstellungen  
  Wenn <xref:System.Configuration.LocalFileSettingsProvider> Speichern von Einstellungen auf den Datenträger muss es führt folgende Aktionen aus:  
   
-1.  Verwendet Reflektion, um alle Eigenschaften für definierten untersuchen Ihrer <xref:System.Configuration.ApplicationSettingsBase> abgeleitete Klasse sein, suchen, die entweder mit gelten <xref:System.Configuration.ApplicationScopedSettingAttribute> oder <xref:System.Configuration.UserScopedSettingAttribute>.  
+1. Verwendet Reflektion, um alle Eigenschaften für definierten untersuchen Ihrer <xref:System.Configuration.ApplicationSettingsBase> abgeleitete Klasse sein, suchen, die entweder mit gelten <xref:System.Configuration.ApplicationScopedSettingAttribute> oder <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Serialisieren der Eigenschaft auf den Datenträger. Zuerst versucht wird, rufen Sie die <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> oder <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> auf der Typ zugeordneten <xref:System.ComponentModel.TypeConverter>. Schlägt der Versuch fehl, wird stattdessen die XML-Serialisierung angewendet.  
+2. Serialisieren der Eigenschaft auf den Datenträger. Zuerst versucht wird, rufen Sie die <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> oder <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> auf der Typ zugeordneten <xref:System.ComponentModel.TypeConverter>. Schlägt der Versuch fehl, wird stattdessen die XML-Serialisierung angewendet.  
   
-3.  Bestimmen, welche Einstellungen in welche Datei übergehen, basierend auf dem Attribut der Einstellung.  
+3. Bestimmen, welche Einstellungen in welche Datei übergehen, basierend auf dem Attribut der Einstellung.  
   
  Wenn Sie eine eigene Einstellungsklasse implementieren, können Sie die <xref:System.Configuration.SettingsSerializeAsAttribute> , markieren Sie eine Einstellung für die binäre oder benutzerdefinierte Serialisierung mit der <xref:System.Configuration.SettingsSerializeAs> Enumeration. Weitere Informationen zum Erstellen Ihrer eigenen Einstellungsklasse, im Code finden Sie unter [Vorgehensweise: Erstellen von Anwendungseinstellungen](how-to-create-application-settings.md).  
   
 ### <a name="settings-file-locations"></a>Einstellen von Dateispeicherorten  
- Der Speicherort der Dateien `app`. exe.config und *benutzer*.config hängt davon ab, wie die Anwendung installiert ist. Für eine Windows Forms-basierte Anwendung, die auf dem lokalen Computer kopiert `app`. exe.config befindet sich in demselben Verzeichnis wie das Basisverzeichnis der Hauptausführungsdatei der Anwendung und *Benutzer*config befindet sich in der vom angegebenen Speicherort der <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> Eigenschaft. Bei einer mit [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] installierten Anwendung befinden sich die beiden Dateien im [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]-Datenverzeichnis unter %InstallRoot%\Dokumente und Einstellungen\\*benutzername*\Lokale Einstellungen.  
+ Der Speicherort der Dateien `app`. exe.config und *benutzer*.config hängt davon ab, wie die Anwendung installiert ist. Für eine Windows Forms-basierte Anwendung, die auf dem lokalen Computer kopiert `app`. exe.config befindet sich in demselben Verzeichnis wie das Basisverzeichnis der Hauptausführungsdatei der Anwendung und *Benutzer*config befindet sich in der vom angegebenen Speicherort der <xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType> Eigenschaft. Für eine Anwendung mithilfe von ClickOnce, beide Dateien befindet sich in die ClickOnce-Datenverzeichnis unter %InstallRoot%\Documents und Einstellungen\\*Benutzername*\Local Einstellungen.  
   
- Der Speicherort dieser Dateien unterscheidet sich geringfügig, wenn ein Benutzer Roamingprofile aktiviert hat. Der Benutzer kann dann verschiedene Windows- oder Anwendungseinstellungen definieren, wenn er andere Computer in einer Domäne verwendet. In diesem Fall werden die Datei `app`.exe.config und *benutzer*.config von [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]-Anwendungen und Nicht-[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]-Anwendungen unter %InstallRoot%\Dokumente und Einstellungen \\*benutzername*\Application Data gespeichert.  
+ Der Speicherort dieser Dateien unterscheidet sich geringfügig, wenn ein Benutzer Roamingprofile aktiviert hat. Der Benutzer kann dann verschiedene Windows- oder Anwendungseinstellungen definieren, wenn er andere Computer in einer Domäne verwendet. In diesem Fall müssen sowohl für ClickOnce-Anwendungen als auch für nicht-ClickOnce-Anwendungen ihre `app`. exe.config und *Benutzer*.config-Dateien gespeichert, die unter %InstallRoot%\Documents und Einstellungen\\  *Benutzername*\Application Data.  
   
- Weitere Informationen zur Funktionsweise der Anwendungseinstellungen mit der neuen Bereitstellungstechnologie finden Sie unter [ClickOnce und Anwendungseinstellungen](/visualstudio/deployment/clickonce-and-application-settings). Weitere Informationen zum [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]-Datenverzeichnis finden Sie unter [Zugreifen auf lokale und Remotedaten in einer ClickOnce-Anwendung](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
+ Weitere Informationen zur Funktionsweise der Anwendungseinstellungen mit der neuen Bereitstellungstechnologie finden Sie unter [ClickOnce und Anwendungseinstellungen](/visualstudio/deployment/clickonce-and-application-settings). Weitere Informationen zu ClickOnce-Datenverzeichnis, finden Sie unter [zugreifen auf lokale und Remotedaten in ClickOnce-Anwendungen](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications).  
   
 ## <a name="application-settings-and-security"></a>Einstellungen und Sicherheit von Anwendungen  
  Anwendungseinstellungen sollen in teilweiser Vertrauenswürdigkeit, einer eingeschränkten Umgebung, funktionieren, die der Standard für über das Internet oder ein Intranet gehostete Windows Forms-Anwendungen ist. Außer teilweiser Vertrauenswürdigkeit sind keine besonderen Berechtigungen erforderlich, um Anwendungseinstellungen mit dem Standardeinstellungsanbieter zu verwenden.  
   
- Wenn Anwendungseinstellungen in einer [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]-Anwendung verwendet werden, wird die Datei `user`.config im [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]-Datenverzeichnis gespeichert. Die Größe der Datei `user`.config der Anwendung kann das Datenverzeichniskontingent nicht überschreiten, das von [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] festgelegt wurde. Weitere Informationen finden Sie unter [ClickOnce und Anwendungseinstellungen](/visualstudio/deployment/clickonce-and-application-settings).  
+ Wenn Anwendungseinstellungen in einer ClickOnce-Anwendung verwendet werden die `user`config-Datei befindet sich im ClickOnce-Datenverzeichnis. Die Größe der Anwendung `user`config-Datei darf nicht das Festlegen von ClickOnce Datenverzeichniskontingent überschreiten. Weitere Informationen finden Sie unter [ClickOnce und Anwendungseinstellungen](/visualstudio/deployment/clickonce-and-application-settings).  
   
 ## <a name="custom-settings-providers"></a>Benutzerdefinierte Einstellungsanbieter  
  In der Architektur der Anwendungseinstellungen besteht eine lose Kopplung zwischen den Anwendungseinstellungen Wrapperklasse, die von abgeleiteten <xref:System.Configuration.ApplicationSettingsBase>, und den zugeordneten Einstellungsanbietern, abgeleitete <xref:System.Configuration.SettingsProvider>. Diese Zuordnung wird nur von definiert die <xref:System.Configuration.SettingsProviderAttribute> auf die Wrapperklasse oder ihre individuellen Eigenschaften angewendet. Wenn ein Einstellungsanbieter nicht explizit den Standardanbieter angegeben, <xref:System.Configuration.LocalFileSettingsProvider>, verwendet wird. Daher unterstützt diese Architektur das Erstellen und Verwenden von benutzerdefinierten Einstellungsanbietern.  
@@ -152,6 +152,6 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Übersicht über Anwendungseinstellungen](application-settings-overview.md)
-- [Anwendungseinstellungen für benutzerdefinierte Steuerelemente](application-settings-for-custom-controls.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
 - [ClickOnce und Anwendungseinstellungen](/visualstudio/deployment/clickonce-and-application-settings)
 - [Schema für Anwendungseinstellungen](../../configure-apps/file-schema/application-settings-schema.md)

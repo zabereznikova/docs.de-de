@@ -11,25 +11,25 @@ f1_keywords:
 - IAssemblyCache::CreateAssemblyScavenger
 helpviewer_keywords:
 - CreateAssemblyScavenger method [.NET Framework fusion]
-- IAssemblyCache::CreateAssemblyScavanger method [.NET Framework fusion]
+- IAssemblyCache::CreateAssemblyScavenger method [.NET Framework fusion]
 ms.assetid: e8bb98f1-e477-45d2-8956-ba404137cd2d
 topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ec66a3e8ec09da31ef935d9f875e139fe3645bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 99b7142a60f979210c44497ce33af3ed1ca5c105
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097433"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770979"
 ---
 # <a name="iassemblycachecreateassemblyscavenger-method"></a>IAssemblyCache::CreateAssemblyScavenger-Methode
 Durch die Fusion-Technologie können Sie für die interne Verwendung reserviert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateAssemblyScavenger (  
     [out] IUnknown **ppUnkReserved  
 );  

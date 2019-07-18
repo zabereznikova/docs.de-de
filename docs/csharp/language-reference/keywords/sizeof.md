@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 1c5526366651d7e6623724c939b08ac46aa7db56
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a00c4f96e62f7fd7d7c352aece097acd5b600ae2
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242632"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422394"
 ---
 # <a name="sizeof-c-reference"></a>sizeof (C#-Referenz)
 
@@ -52,7 +52,7 @@ Im folgenden Beispiel wird gezeigt, wie Sie die Größe von `int` abrufen:
 int intSize = sizeof(int);
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Ab C# Version 2.0 ist für die Anwendung von `sizeof` auf einfache Typen oder Enumerationstypen nicht mehr erforderlich, dass Code in [unsicherem](unsafe.md) Kontext kompiliert wird.
 
@@ -73,7 +73,6 @@ Bei allen anderen Typen, darunter Strukturen, kann der Operator `sizeof` nur in 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Operatorschlüsselwörter](operator-keywords.md)
 - [enum](enum.md)
 - [Unsicherer Code und Zeiger](../../programming-guide/unsafe-code-pointers/index.md)
 - [Strukturen](../../programming-guide/classes-and-structs/structs.md)

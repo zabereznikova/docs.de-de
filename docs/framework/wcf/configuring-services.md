@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156506"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593324"
 ---
 # <a name="configuring-wcf-services"></a>Konfigurieren von WCF-Diensten
 
@@ -22,7 +22,7 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
  Beginnend mit [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF enthält ein neues Standard-Konfigurationsmodell, das WCF-konfigurationsanforderungen vereinfacht. Wenn Sie keine WCF-Konfiguration für einen bestimmten Dienst bereitstellen, konfiguriert die Runtime automatisch Ihren Dienst mit Standardendpunkten, Bindungen und Verhaltensweisen.  
   
  [Konfigurieren von Diensten mit Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Ein Windows Communication Foundation (WCF)-Dienst ist konfigurierbar mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Configuration-Technologie. In den meisten Fällen werden die XML-Elemente in die Datei "Web.config" für eine Website (Internet Information Services, IIS) hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen Adressen, die für die Kommunikation mit dem Dienst verwendet werden) für einzelne Computer.  
+ Ein Windows Communication Foundation (WCF)-Dienst kann mithilfe der .NET Framework Configuration-Technologie konfiguriert werden. In den meisten Fällen werden die XML-Elemente in die Datei "Web.config" für eine Website (Internet Information Services, IIS) hinzugefügt, die einen WCF-Dienst hostet. Mithilfe der Elemente können Sie Details ändern, zum Beispiel die Endpunktadressen (die eigentlichen Adressen, die für die Kommunikation mit dem Dienst verwendet werden) für einzelne Computer.  
   
  [Bindungen](../../../docs/framework/wcf/bindings.md)  
  Darüber hinaus werden WCF mehrere vom System bereitgestellte Allgemeine Konfigurationen in Form von Bindungen, mit denen Sie schnell auswählen, die die grundlegenden Features für die Kommunikation Client und Dienst zwischen, z. B. die Transporte, Sicherheit und Codierungen verwendet.  
@@ -58,6 +58,6 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Einfache WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Konzeptionelle Übersicht](../../../docs/framework/wcf/conceptual-overview.md)
 - [Details zur WCF-Funktion](../../../docs/framework/wcf/feature-details/index.md)

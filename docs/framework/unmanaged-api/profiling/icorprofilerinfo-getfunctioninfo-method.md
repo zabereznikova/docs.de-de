@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dd262c8206fdd45ca8a14f860a0894b999b0730
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b4b39e53af7abaf25cc4a563bfbec8450b1e57d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113606"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780652"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo-Methode
 Ruft die übergeordnete Klasse und die Metadaten token für die angegebene Funktion stellen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetFunctionInfo(  
     [in]  FunctionID functionId,  
     [out] ClassID    *pClassId,  

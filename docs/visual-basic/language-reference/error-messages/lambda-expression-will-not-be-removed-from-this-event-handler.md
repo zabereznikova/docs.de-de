@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a9e51ddfd9956ea3267a4323bc2d6e7fa865b207
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817614"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661966"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>Der Lambdaausdruck wird nicht aus diesem Ereignishandler entfernt
 Lambda-Ausdruck wird nicht aus diesem Ereignishandler entfernt werden. Weisen Sie den Lambda-Ausdruck einer Variablen zu und verwenden Sie die Variable hinzufügen und entfernen das Ereignis.  
@@ -60,7 +60,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Um die Warnung zu vermeiden, und entfernen Sie den Lambda-Ausdruck, den Lambda-Ausdruck einer Variablen zuweisen und verwenden Sie die Variable in beiden die `AddHandler` und `RemoveHandler` -Anweisungen, wie im folgenden Beispiel gezeigt.  
+- Um die Warnung zu vermeiden, und entfernen Sie den Lambda-Ausdruck, den Lambda-Ausdruck einer Variablen zuweisen und verwenden Sie die Variable in beiden die `AddHandler` und `RemoveHandler` -Anweisungen, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 Module Module1  

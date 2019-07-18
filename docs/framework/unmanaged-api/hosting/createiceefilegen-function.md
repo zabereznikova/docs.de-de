@@ -18,21 +18,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 566f73335861a8eb769b21a254e0e93b51a78d02
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 96968de84182b74f7baa89d5dfc12a4797ade595
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151813"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779230"
 ---
 # <a name="createiceefilegen-function"></a>CreateICeeFileGen-Funktion
 Erstellt eine [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) Objekt.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateICeeFileGen (  
     [out] ICeeFileGen  **ceeFileGen  
 );  

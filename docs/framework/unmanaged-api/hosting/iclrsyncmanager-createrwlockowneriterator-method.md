@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c742410da8e7dbce53b53978516ab94243455849
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1951efecca6c81322c3a0753eaaf06e9651e3d39
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217548"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759153"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator-Methode
 Fordert, dass die common Language Runtime (CLR) erstellt einen Iterator für den Host zu verwenden, um zu bestimmen, den Satz von Aufgaben, die auf eine Reader / Writer-Sperre warten.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateRWLockOwnerIterator (  
     [in]  SIZE_T    cookie,  
     [out] SIZE_T   *pIterator  
@@ -58,9 +58,9 @@ HRESULT CreateRWLockOwnerIterator (
 ## <a name="remarks"></a>Hinweise  
  Rufen Sie die Hosts in der Regel die `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, und `GetRWLockOwnerNext` Methoden während der Deadlockerkennung. Der Host ist dafür verantwortlich, sicherzustellen, dass die Reader / Writer-Sperre noch gültig ist, ist, da die CLR versucht nicht, die die Lese-/ Schreibsperre beibehalten wird. Es stehen verschiedene Strategien für den Host aus, um sicherzustellen, dass die Gültigkeit der Sperre zur Verfügung:  
   
--   Der Host kann Freigabeaufrufe für den Lese-/ Schreibsperre (z. B. [IHostSemaphore:: ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) und gleichzeitig sicherstellen, dass dieser Block keinen Deadlock verursacht.  
+- Der Host kann Freigabeaufrufe für den Lese-/ Schreibsperre (z. B. [IHostSemaphore:: ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) und gleichzeitig sicherstellen, dass dieser Block keinen Deadlock verursacht.  
   
--   Der Host kann das Warten auf das Ereignisobjekt, das der Reader / Writer-Sperre zugeordneten beenden blockieren und wieder sicherstellen, dass dieser Block keinen Deadlock verursacht.  
+- Der Host kann das Warten auf das Ereignisobjekt, das der Reader / Writer-Sperre zugeordneten beenden blockieren und wieder sicherstellen, dass dieser Block keinen Deadlock verursacht.  
   
 > [!NOTE]
 >  `CreateRWLockOwnerIterator` muss nur auf Threads aufgerufen werden, die derzeit nicht verwalteten Code ausgeführt werden.  

@@ -3,11 +3,11 @@ title: 'Explizite Felder: Das Val Schlüsselwort'
 description: Erfahren Sie mehr über die F# "Val"-Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs zu deklarieren.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904916"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das Val Schlüsselwort
 
@@ -40,7 +40,7 @@ Ein unveränderliches Feld mit der Bezeichnung `someField` verfügt zum Beispiel
 Bei einem veränderlichen Feld ist die kompilierte .NET-Darstellung ein .NET-Feld.
 
 >[!WARNING]
-> Der .NET Framework-Namespace `System.ComponentModel` enthält ein Attribut, das den gleichen Namen hat. Informationen zu diesem Attribut finden Sie unter `System.ComponentModel.DefaultValueAttribute`.
+>Der .NET Framework-Namespace `System.ComponentModel` enthält ein Attribut, das den gleichen Namen hat. Informationen zu diesem Attribut finden Sie unter `System.ComponentModel.DefaultValueAttribute`.
 
 Der folgende Code zeigt die Verwendung expliziter Felder und zum Vergleich eine `let`-Bindung in einer Klasse, die über einen primären Konstruktor verfügt. Beachten Sie, dass das `let`-gebundene Feld `myInt1` privat ist. Wenn das `let`-gebundene Feld `myInt1` von einer Membermethode referenziert wird, ist der Selbstbezeichner `this` nicht erforderlich. Wenn Sie jedoch die expliziten Felder `myInt2` und `myString` referenzieren, ist der Selbstbezeichner erforderlich.
 

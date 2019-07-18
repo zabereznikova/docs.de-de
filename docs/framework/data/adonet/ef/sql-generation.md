@@ -3,11 +3,11 @@ title: SQL-Generierung
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
 ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879150"
 ---
 # <a name="sql-generation"></a>SQL-Generierung
 Wenn Sie einen Anbieter für [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] schreiben, müssen Sie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Befehlsstrukturen in SQL übersetzen, das eine bestimmte Datenbank verstehen kann, z. B. Transact-SQL für SQL Server oder PL/SQL für Oracle. In diesem Abschnitt erfahren Sie, wie eine SQL-Generierungskomponente (für SELECT-Abfragen) für einen [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anbieter entwickelt wird. Informationen zu einfügen, aktualisieren und Löschen von Abfragen, finden Sie unter [Generierung von Änderungen in SQL](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  
@@ -22,7 +22,7 @@ Wenn Sie einen Anbieter für [!INCLUDE[adonet_ef](../../../../../includes/adonet
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Form der Befehlsstrukturen](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  
   
- [Generieren von SQL aus Befehlsstrukturen – Best Practices](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
+ [Generieren von SQL aus Befehlsstrukturen: Bewährte Methoden](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
   
  [SQL-Generierung im Beispielanbieter](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
   

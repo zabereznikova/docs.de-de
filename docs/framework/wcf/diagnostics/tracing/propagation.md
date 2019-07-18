@@ -2,12 +2,12 @@
 title: Weitergabe
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ab8b6c003f9e483dccd7b9c7b2687a409f27fdc3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154036"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600029"
 ---
 # <a name="propagation"></a>Weitergabe
 Dieses Thema beschreibt die Aktivitätsweitergabe im ablaufverfolgungsmodell Windows Communication Foundation (WCF).  
@@ -26,11 +26,11 @@ Dieses Thema beschreibt die Aktivitätsweitergabe im ablaufverfolgungsmodell Win
 ## <a name="propagation-definition"></a>Weitergabedefinition  
  Die gAId von Aktivität M wird an Aktivität N weitergegeben, wenn alle der folgenden Bedingungen erfüllt sind:  
   
--   N wird aufgrund von M erstellt.  
+- N wird aufgrund von M erstellt.  
   
--   Die gAId von M ist N bekannt.  
+- Die gAId von M ist N bekannt.  
   
--   Die gAId von N entspricht der gAId von M.  
+- Die gAId von N entspricht der gAId von M.  
   
  Die gAId wird über den ActivityId-Nachrichtenheader weitergegeben (wie im folgenden XML-Schema gezeigt):  
   
@@ -79,6 +79,6 @@ Dieses Thema beschreibt die Aktivitätsweitergabe im ablaufverfolgungsmodell Win
 ## <a name="see-also"></a>Siehe auch
 
 - [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

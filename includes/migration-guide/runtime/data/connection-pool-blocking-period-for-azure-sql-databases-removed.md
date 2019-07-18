@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 9605352c66f85b6942ba24942cb07c88bdd81f2a
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760644"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857579"
 ---
 ### <a name="connection-pool-blocking-period-for-azure-sql-databases-is-removed"></a>Die Sperrfrist des Verbindungspools für Azure SQL-Datenbanken wurde entfernt
 

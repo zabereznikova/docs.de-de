@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 480fc27bd41f7ca559ceee379b7f6f81c94da0ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f9a87ae4381ec5bc0d8c416ef4ee4c13b04a862f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188707"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606900"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget-Schnittstelle
 Stellt eine Rückrufschnittstelle bereit, die Zugriff auf einen bestimmten Zielprozess bietet.  
@@ -37,13 +37,13 @@ Stellt eine Rückrufschnittstelle bereit, die Zugriff auf einen bestimmten Zielp
 ## <a name="remarks"></a>Hinweise  
  `ICorDebugDataTarget` und seine Methoden weisen folgende Merkmale auf:  
   
--   Die Debuggen von Diensten rufen Methoden für diese Schnittstelle zum Zugriff auf Speicher und andere Daten in den Zielprozess.  
+- Die Debuggen von Diensten rufen Methoden für diese Schnittstelle zum Zugriff auf Speicher und andere Daten in den Zielprozess.  
   
--   Der Debuggerclient muss diese Schnittstelle nach Bedarf für die betreffende Zielframework (z. B. einen aktiven Prozess oder ein Speicherabbild) implementieren.  
+- Der Debuggerclient muss diese Schnittstelle nach Bedarf für die betreffende Zielframework (z. B. einen aktiven Prozess oder ein Speicherabbild) implementieren.  
   
--   Die `ICorDebugDataTarget` Methoden können nur aus aufgerufen werden, innerhalb von Methoden, die in anderen implementiert `ICorDebug*` Schnittstellen. Dadurch wird sichergestellt, dass der Debuggerclient steuern kann, über welchem Thread sie auf und wann aufgerufen wird.  
+- Die `ICorDebugDataTarget` Methoden können nur aus aufgerufen werden, innerhalb von Methoden, die in anderen implementiert `ICorDebug*` Schnittstellen. Dadurch wird sichergestellt, dass der Debuggerclient steuern kann, über welchem Thread sie auf und wann aufgerufen wird.  
   
--   Die `ICorDebugDataTarget` Implementierung muss immer auf dem neuesten Stand Informationen über das Ziel zurück.  
+- Die `ICorDebugDataTarget` Implementierung muss immer auf dem neuesten Stand Informationen über das Ziel zurück.  
   
  Der Zielprozess beendet und in keiner Weise bei der nicht geändert werden sollten `ICorDebug*` Schnittstellen (und somit auch `ICorDebugDataTarget` Methoden) aufgerufen werden. Wenn das Ziel ein, und dessen Zustand ändert, ist die [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) Methode muss erneut aufgerufen, um ein Ersatz-ICorDebugProcess-Instanz bereitstellen.  
   
@@ -61,5 +61,5 @@ Stellt eine Rückrufschnittstelle bereit, die Zugriff auf einen bestimmten Zielp
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

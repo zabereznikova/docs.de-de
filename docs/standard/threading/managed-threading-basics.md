@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: a47946ab8eb26045e641c44642bfe7a026269f3d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479567"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486340"
 ---
 # <a name="managed-threading-basics"></a>Grundlagen des verwalteten Threadings
 
@@ -24,7 +24,7 @@ Die ersten fünf Themen in diesem Abschnitt sollen Ihnen helfen, zu bestimmen, w
  Bei den übrigen Themen in diesem Abschnitt handelt es sich um erweiterte Themen einschließlich der Interaktion verwalteten Threadings mit dem Windows-Betriebssystem.  
   
 > [!NOTE]
->  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] stellen Task Parallel Library und PLINQ APIs für Aufgaben- und Datenparallelität in Multithreaded-Programmen bereit. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](../../../docs/standard/parallel-programming/index.md).  
+>  In .NET Framework 4 stellen die Task Parallel Library und PLINQ APIs für Aufgaben- und Datenparallelität in Multithreadprogrammen bereit. Weitere Informationen finden Sie unter [Parallel Programming in the .NET Framework (Parallele Programmierung in .NET Framework)](../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -43,14 +43,8 @@ Die ersten fünf Themen in diesem Abschnitt sollen Ihnen helfen, zu bestimmen, w
  [Verwaltetes und nicht verwaltetes Threading in Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  Beschreibt die Beziehung zwischen verwaltetem und nicht verwaltetem Threading, listet verwaltete Entsprechungen für Windows-Threading-APIs auf und erläutert die Interaktion von COM-Apartments und verwalteten Threads.  
   
- [Thread.Suspend, Garbage Collection und Sicherungspunkte](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- Beschreibt Anhalten von Threads und Garbage Collection.  
-  
  [Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Beschreibt threadbezogene Speichermechanismen.  
-  
- [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- Beschreibt, wie asynchrone oder lang andauernde synchrone Vorgänge mit einem Abbruchtoken abgebrochen werden können.  
   
 ## <a name="reference"></a>Referenz
 

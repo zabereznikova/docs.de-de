@@ -7,11 +7,11 @@ helpviewer_keywords:
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
 ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804012"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Vorgehensweise: Vereinfachen von Animationen durch untergeordnete Zeitachsen
 Dieses Beispiel zeigt, wie Sie Animationen durch untergeordnete vereinfachen <xref:System.Windows.Media.Animation.ParallelTimeline> Objekte. Ein <xref:System.Windows.Media.Animation.Storyboard> ist eine Art von <xref:System.Windows.Media.Animation.Timeline> , die Zielinformationen für die Zeitachsen, er enthält, bereitstellt. Verwenden einer <xref:System.Windows.Media.Animation.Storyboard> Zielinformationen, einschließlich Informationen zu Objekt und Eigenschaft bereitstellen.  
@@ -28,4 +28,4 @@ Dieses Beispiel zeigt, wie Sie Animationen durch untergeordnete vereinfachen <xr
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Animationen](animation-overview.md)
-- [Angeben der HandoffBehavior-Enumeration zwischen Storyboard-Animationen](how-to-specify-handoffbehavior-between-storyboard-animations.md)
+- [Angeben des Übergabeverhaltens zwischen Storyboard-Animationen](how-to-specify-handoffbehavior-between-storyboard-animations.md)

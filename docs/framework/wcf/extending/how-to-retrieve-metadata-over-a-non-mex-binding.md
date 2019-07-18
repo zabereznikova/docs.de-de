@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Aufrufen von Metadaten über eine Nicht-MEX-Bindung'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766778"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Vorgehensweise: Aufrufen von Metadaten über eine Nicht-MEX-Bindung
 In diesem Thema wird beschrieben, wie Metadaten über eine Nicht-MEX-Bindung von einem MEX-Endpunkt abgerufen werden. Der Code in diesem Beispiel basiert auf der [benutzerdefinierte sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) Beispiel.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>So rufen Sie Metadaten über eine Nicht-MEX-Bindung ab  
   
-1.  Bestimmen Sie die vom MEX-Endpunkt verwendete Bindung. Für Windows Communication Foundation (WCF)-Dienste können Sie die MEX-Bindung ermitteln, durch den Zugriff auf die Konfigurationsdatei des Diensts. In diesem Fall wird die MEX-Bindung in der folgenden Dienstkonfiguration definiert.  
+1. Bestimmen Sie die vom MEX-Endpunkt verwendete Bindung. Für Windows Communication Foundation (WCF)-Dienste können Sie die MEX-Bindung ermitteln, durch den Zugriff auf die Konfigurationsdatei des Diensts. In diesem Fall wird die MEX-Bindung in der folgenden Dienstkonfiguration definiert.  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ In diesem Thema wird beschrieben, wie Metadaten über eine Nicht-MEX-Bindung von
      </bindings>  
     ```  
   
-2.  Konfigurieren Sie in der Clientkonfigurationsdatei die gleiche benutzerdefinierte Bindung. Hier definiert der Client auch ein `clientCredentials`-Verhalten, um ein Zertifikat bereitzustellen, das beim Abrufen von Metadaten vom MEX-Endpunkt für die Authentifizierung am Dienst verwendet wird. Wenn Sie „Svcutil.exe“ zum Anfordern von Metadaten über eine benutzerdefinierte Bindung verwenden, sollten Sie die MEX-Endpunktkonfiguration der Konfigurationsdatei für „Svcutil.exe“ (Svcutil.exe.config) hinzufügen. Der Name der Endpunktkonfiguration sollte dann mit dem URI-Schema der MEX-Endpunktadresse übereinstimmen, wie im folgenden Code dargestellt:  
+2. Konfigurieren Sie in der Clientkonfigurationsdatei die gleiche benutzerdefinierte Bindung. Hier definiert der Client auch ein `clientCredentials`-Verhalten, um ein Zertifikat bereitzustellen, das beim Abrufen von Metadaten vom MEX-Endpunkt für die Authentifizierung am Dienst verwendet wird. Wenn Sie „Svcutil.exe“ zum Anfordern von Metadaten über eine benutzerdefinierte Bindung verwenden, sollten Sie die MEX-Endpunktkonfiguration der Konfigurationsdatei für „Svcutil.exe“ (Svcutil.exe.config) hinzufügen. Der Name der Endpunktkonfiguration sollte dann mit dem URI-Schema der MEX-Endpunktadresse übereinstimmen, wie im folgenden Code dargestellt:  
   
     ```xml  
     <system.serviceModel>  
@@ -83,7 +83,7 @@ In diesem Thema wird beschrieben, wie Metadaten über eine Nicht-MEX-Bindung von
     </system.serviceModel>  
     ```  
   
-3.  Erstellen Sie einen `MetadataExchangeClient`, und rufen Sie `GetMetadata` auf. Dazu stehen zwei Methoden zur Verfügung: Sie können die benutzerdefinierte Bindung in der Konfiguration angeben oder die benutzerdefinierte Bindung im Code, wie im folgenden Beispiel gezeigt:  
+3. Erstellen Sie einen `MetadataExchangeClient`, und rufen Sie `GetMetadata` auf. Dazu stehen zwei Methoden zur Verfügung: Sie können die benutzerdefinierte Bindung in der Konfiguration angeben oder die benutzerdefinierte Bindung im Code, wie im folgenden Beispiel gezeigt:  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -114,14 +114,14 @@ In diesem Thema wird beschrieben, wie Metadaten über eine Nicht-MEX-Bindung von
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  Erstellen Sie ein `WsdlImporter`-Element, und rufen Sie `ImportAllEndpoints` auf, wie im folgenden Code gezeigt.  
+4. Erstellen Sie ein `WsdlImporter`-Element, und rufen Sie `ImportAllEndpoints` auf, wie im folgenden Code gezeigt.  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  An diesem Punkt verfügen Sie über eine Auflistung von Dienstendpunkten. Weitere Informationen zum Importieren von Metadaten finden Sie unter [Vorgehensweise: Importieren von Metadaten in Dienstendpunkte](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5. An diesem Punkt verfügen Sie über eine Auflistung von Dienstendpunkten. Weitere Informationen zum Importieren von Metadaten finden Sie unter [Vorgehensweise: Importieren von Metadaten in Dienstendpunkte](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

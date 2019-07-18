@@ -3,11 +3,11 @@ title: Abfrageausdrücke (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
 ms.openlocfilehash: 5f89028b9c501dd840f1dc9445418e4757967db8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614621"
 ---
 # <a name="query-expressions-entity-sql"></a>Abfrageausdrücke (Entity SQL)
 Ein Abfrageausdruck fasst viele verschiedene Abfrageoperatoren in einer einzigen Syntax zusammen. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] stellt verschiedene Arten von Ausdrücken, einschließlich der folgenden: [Literale](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md), [Parameter](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md), [Variablen](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md), Operatoren, [Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md), set-Operatoren und so weiter. Weitere Informationen finden Sie unter [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md).  

@@ -1,5 +1,5 @@
 ---
-title: Connection-Klasse
+title: Verbindungsklasse
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ed1fce1d16f9ddbe3a3ede91fecb1a3ca6b3d407
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c50f673e77ef384ccf33803e14d60c322b6c0365
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146536"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300977"
 ---
-# <a name="connection-class"></a>Connection-Klasse
+# <a name="connection-class"></a>Verbindungsklasse
 
 Die `Connection` Klasse analysiert Serverantworten, warteschlangenanforderungen und Anforderungen der Pipeline.
 

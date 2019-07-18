@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755203"
 ---
 # <a name="net-standard"></a>.NET-Standard
 
@@ -27,9 +27,9 @@ Die verschiedenen .NET-Implementierungen verwenden spezifische Versionen von .NE
 
 ## <a name="net-implementation-support"></a>Unterstützung der .NET-Implementierung
 
-In der folgenden Tabelle sind die mindestens erforderlichen Versionen von Plattformen aufgeführt, die sämtliche .NET Standard-Versionen unterstützten.
+In der folgenden Tabelle sind die **mindestens** erforderlichen Versionen von Plattformen aufgeführt, die sämtliche .NET Standard-Versionen unterstützen. Dies bedeutet, dass höhere Versionen einer aufgelisteten Plattform auch die entsprechende Version von .NET Standard unterstützen. .NET Core 2.2 unterstützt z.B. .NET Standard 2.0 und frühere Versionen.
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 Führen Sie die folgenden Schritte aus, um die höchste Version von .NET Standard zu ermitteln, die Sie als Ziel verwenden können:
 
@@ -113,7 +113,7 @@ Weitere Informationen finden Sie unter [Der .NET Framework-Kompatibilitätsmodus
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard-Bibliotheken und Visual Studio
 
-Vergewissern Sie sich, dass unter Windows [Visual Studio 2017 Version 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) oder höher bzw. unter macOS [Visual Studio für Mac Version 7.1](https://visualstudio.microsoft.com/vs/visual-studio-mac/) oder höher installiert ist, damit Sie .NET Standard-Bibliotheken in Visual Studio erstellen können.
+Vergewissern Sie sich, dass unter Windows [Visual Studio 2017 Version 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) oder höher bzw. unter macOS [Visual Studio für Mac Version 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) oder höher installiert ist, damit Sie .NET Standard-Bibliotheken in Visual Studio erstellen können.
 
 Wenn Sie nur .NET Standard 2.0-Bibliotheken in Ihren Projekten verarbeiten müssen, können Sie auch Visual Studio 2015 verwenden. Allerdings muss dabei der NuGet-Client 3.6 oder höher installiert sein. Sie können den NuGet-Client für Visual Studio 2015 auf der Seite [NuGet-Downloads](https://www.nuget.org/downloads) herunterladen.
 

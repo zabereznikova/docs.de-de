@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3c16bf8aed0d281b2b5a3f9c6ae06f343b1eff7c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411962"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59307305"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C#-Compileroptionen)
 Die Option **-target:winexe** bewirkt, dass der Compiler ein ausführbares Windows-Programm (EXE) erstellt.  
@@ -37,11 +37,11 @@ Die Option **-target:winexe** bewirkt, dass der Compiler ein ausführbares Windo
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
+2. Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
   
-3.  Ändern Sie die Eigenschaft **Ausgabetyp**.  
+3. Ändern Sie die Eigenschaft **Ausgabetyp**.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   

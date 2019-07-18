@@ -1,15 +1,13 @@
 ---
 title: SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Verwenden des SeedWork-Konzepts als Ausgangspunkt zum Implementieren eines DDD-orientierten Domänenmodells
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 298f79383e477df0cfeeaada5c4657a9274b3df3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545727"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639491"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 
@@ -140,7 +138,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Martin Fowler. Separated Interface (Schnittstellenaufteilung)** \
-  [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+  <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
 >[Zurück](net-core-microservice-domain-model.md)

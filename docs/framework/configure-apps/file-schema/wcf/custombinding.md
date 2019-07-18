@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673185"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -232,13 +232,13 @@ Eine benutzerdefinierte Bindung wird durch Verwendung einer der <xref:System.Ser
 
 - Darauf folgt ein optionales Sicherheitsbindungselement, das Sicherheitsfunktionen wie Autorisierung, Authentifizierung, Schutz und Vertraulichkeit bereitstellt. Die folgenden Sicherheitsbindungselemente werden von Windows Communication Foundation (WCF) bereitgestellt werden:
 
-    - <xref:System.ServiceModel.Channels.SecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 
 - Darauf folgen die optionalen Nachrichtenmuster, die von den Bindungselementen spezifiziert werden:
 
@@ -246,35 +246,35 @@ Eine benutzerdefinierte Bindung wird durch Verwendung einer der <xref:System.Ser
 
 - Darauf folgen die optionalen Transport-Upgrades/unterstützenden Bindungselemente:
 
-    - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+  - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 
-    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
 - Darauf wiederum folgt ein erforderliches, Nachrichten codierendes Bindungselement. Sie können einen eigenen Transport verwenden oder die folgenden Nachrichten codierenden Bindungen:
 
-    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
-    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
 
-    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
 - Am Ende befindet sich ein erforderliches Transportelement. Sie können einen eigenen Transport oder eines der transportbindungselemente von Windows Communication Foundation (WCF):
 
-    - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
 
-    - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+  - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
 
-    - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 
 In der folgenden Tabelle werden die Optionen für jede Ebene zusammengefasst.
 

@@ -3,11 +3,11 @@ title: F#Richtlinien zum Entwerfen der Komponente
 description: Erfahren Sie, die Richtlinien für das Schreiben von F# Komponenten, die für die Nutzung durch andere Aufrufer vorgesehen.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55066024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902160"
 ---
 # <a name="f-component-design-guidelines"></a>F#Richtlinien zum Entwerfen der Komponente
 
@@ -748,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-Sehen wir uns an, wie dies F# Typ angezeigt wird, um ein Programmierer, die mithilfe einer anderen .NET-Sprache. Beispielsweise ist die ungefähre C# "Signatur" wie folgt:
+Sehen wir uns an, wie dies F# Typ angezeigt wird, um ein Programmierer, die mithilfe einer anderen .NET-Sprache. Beispielsweise ist die ungefähre c# "Signatur" wie folgt:
 
 ```csharp
 // C# signature for the unadjusted Point1 class

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18f1a4ede1a362860df1271835600e7b867eac00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 72b95b634ffc352b7fad006e0ccd68e6e159dee9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127763"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779105"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE-Funktion
-Stellt sicher, dass die common Language Runtime-Ausführungsmodul in einen Prozess geladen wird. Diese Funktion ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Verwenden der [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) Methode stattdessen.  
+Stellt sicher, dass die common Language Runtime-Ausführungsmodul in einen Prozess geladen wird. Diese Funktion ist in .NET Framework 4 veraltet. Verwenden der [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) Methode stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CoInitializeEE (  
    [in] DWORD fFlags  
 );  

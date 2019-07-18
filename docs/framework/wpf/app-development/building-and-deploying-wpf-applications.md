@@ -8,21 +8,21 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e47a140b1fed80618ba4279515cd45721a8e52f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368050"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662149"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Erstellen und Bereitstellen von WPF-Anwendungen
 Das Modell erstellen und bereitstellen, bietet die Möglichkeit zum Erstellen und Bereitstellen von Anwendungen, lokal und Remote, einschließlich der folgenden:  
   
--   MSBuild: .NET erstellen im Microsoft.Build.Tasks.Windows-Namespace befindet.  
+- MSBuild: .NET erstellen im Microsoft.Build.Tasks.Windows-Namespace befindet.  
   
--   Ressourcen: Arbeiten mit UI-Ressourcen.  
+- Ressourcen: Arbeiten mit UI-Ressourcen.  
   
--   ClickOnce-Bereitstellung: der .NET Veröffentlichungs- und Bereitstellungssystem.  
+- ClickOnce-Bereitstellung: der .NET Veröffentlichungs- und Bereitstellungssystem.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)  

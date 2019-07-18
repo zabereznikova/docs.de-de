@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-ms.openlocfilehash: d388d349755e0847b9b1374c043c3de45e0de800
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f214378d459ecafc5843a0cbe2cb8db945f3f68b
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840873"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041699"
 ---
 # <a name="mycomputerregistry-object"></a>My.Computer.Registry-Objekt
 Stellt Eigenschaften und Methoden zur Bearbeitung der Registrierung bereit.  
@@ -28,7 +28,7 @@ Stellt Eigenschaften und Methoden zur Bearbeitung der Registrierung bereit.
   
  **Klasse:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (ermöglicht den Zugriff auf <xref:Microsoft.Win32.Registry>)  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Siehe auch
 

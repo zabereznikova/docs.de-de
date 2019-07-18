@@ -14,11 +14,11 @@ helpviewer_keywords:
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
 ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783933"
 ---
 # <a name="rem-statement-visual-basic"></a>REM-Anweisung (Visual Basic)
 Für erläuternde Hinweise im Quellcode eines Programms verwendet.  

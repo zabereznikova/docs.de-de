@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd09ce27c0fea9dca8fd86afc563651d68542e13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 80465c8d1f1f9e09c0675de1667b999b332b9f6b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173146"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738147"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize-Methode
 Initialisiert das `ICorDebug`-Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Initialize ();  
 ```  
   

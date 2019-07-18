@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], constituent controls
 ms.assetid: 5565e720-198b-4bbd-a2bd-c447ba641798
 ms.openlocfilehash: 76a5a4f9b02a71616d247a1bb0f03cc0aec1d70d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956070"
 ---
 # <a name="constituent-controls"></a>Konstituierende Steuerelemente
 Die Steuerelemente, aus denen ein Benutzersteuerelement gebildet wird, werden als *konstituierende Steuerelemente* bezeichnet. Sie verhalten sich beim Rendering benutzerdefinierter Grafiken relativ unflexibel. Alle Windows Forms-Steuerelemente behandelt, eigene Rendering durch ihre eigenen <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Da diese Methode geschützt ist, kann der Entwickler nicht auf sie zugreifen. Daher kann nicht verhindert werden, dass die Methode ausgeführt wird, sobald ein Steuerelement gezeichnet wird. Das bedeutet jedoch nicht, dass kein Code hinzugefügt werden kann, um die Darstellung konstituierender Steuerelemente zu beeinflussen. Zusätzliches Rendering kann ermöglicht werden, indem ein Ereignishandler hinzugefügt wird. Nehmen wir beispielsweise an, die Sie erstellen eine <xref:System.Windows.Forms.UserControl> mit der Schaltfläche `MyButton`. Wenn Sie damit zusätzliches Rendering hinausgeht, was von bereitgestellt wurde die <xref:System.Web.UI.WebControls.Button>, fügen Sie Code in das Benutzersteuerelement dem folgenden ähnelt:  
@@ -49,4 +49,4 @@ System.Windows.Forms.PaintEventArgs e)
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [Benutzerdefinierte Steuerelemente](user-drawn-controls.md)
 - [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)
+- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)

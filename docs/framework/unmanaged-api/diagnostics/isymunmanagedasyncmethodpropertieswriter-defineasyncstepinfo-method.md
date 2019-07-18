@@ -5,11 +5,11 @@ ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8305d0a562fd90e3fae32e372b663ca3942d2a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940139"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo-Methode
 Definieren Sie eine Gruppe von Async "await" Vorgänge in der aktuellen Methode.  

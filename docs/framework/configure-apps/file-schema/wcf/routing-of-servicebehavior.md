@@ -3,11 +3,11 @@ title: <routing> von <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
 ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783057"
 ---
 # <a name="routing-of-servicebehavior"></a>\<Routing > von \<ServiceBehavior >
 Bietet Laufzeitzugriff auf den Routingdienst, um eine dynamische Änderung der Routingkonfiguration zu ermöglichen.  

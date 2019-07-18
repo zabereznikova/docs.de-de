@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826014"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649715"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>Vorgehensweise: Vergleichen einer Zeichenfolge mit einem Muster (Visual Basic)
 Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../visual-basic/language-reference/data-types/string-data-type.md) einem Muster entspricht, dann können Sie mithilfe der [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
@@ -29,7 +29,7 @@ Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>Um ein Zeichen in den Ausdruck für ein bestimmtes Zeichen  
   
--   Fügen Sie das Zeichen direkt in der Musterzeichenfolge. Bestimmte Sonderzeichen müssen in Klammern eingeschlossen werden (`[ ]`). Weitere Informationen finden Sie unter [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
+- Fügen Sie das Zeichen direkt in der Musterzeichenfolge. Bestimmte Sonderzeichen müssen in Klammern eingeschlossen werden (`[ ]`). Weitere Informationen finden Sie unter [Like-Operator](../../../../visual-basic/language-reference/operators/like-operator.md).  
   
      Im folgenden Beispiel wird getestet, ob `myString` besteht genau aus das einzelne Zeichen `H`.  
   
@@ -37,7 +37,7 @@ Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>Um ein Zeichen in den Ausdruck mit einem Platzhalterzeichen  
   
--   Fügen ein Fragezeichen (`?`) in der Musterzeichenfolge. Jedes gültige Zeichen an dieser Position ergibt eine Übereinstimmung.  
+- Fügen ein Fragezeichen (`?`) in der Musterzeichenfolge. Jedes gültige Zeichen an dieser Position ergibt eine Übereinstimmung.  
   
      Im folgenden Beispiel wird getestet, ob `myString` besteht aus den einzelnen Zeichens `W` gefolgt von genau zwei beliebigen Zeichen.  
   
@@ -45,7 +45,7 @@ Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>Um ein Zeichen in den Zeichenfolgenausdruck mit einer Liste von Zeichen  
   
--   Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge, und klicken Sie in den Klammern fügen Sie die Liste von Zeichen. Trennen Sie die Zeichen nicht mit Kommas oder aller anderen Trennzeichen. Beliebiges einzelnes Zeichen in der Liste wird eine Übereinstimmung.  
+- Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge, und klicken Sie in den Klammern fügen Sie die Liste von Zeichen. Trennen Sie die Zeichen nicht mit Kommas oder aller anderen Trennzeichen. Beliebiges einzelnes Zeichen in der Liste wird eine Übereinstimmung.  
   
      Im folgenden Beispiel wird getestet, ob `myString` irgendeinem gültigen Zeichen, gefolgt von genau einem Zeichen bestehen `A`, `C`, oder `E`.  
   
@@ -55,7 +55,7 @@ Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>Um ein Zeichen in den Ausdruck für einen Bereich von Zeichen  
   
--   Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge und innerhalb der Klammern, die die niedrigsten und höchsten Zeichen im Bereich einfügen, getrennt durch einen Bindestrich (`–`). Beliebiges einzelnes Zeichen innerhalb des Bereichs ergibt eine Übereinstimmung.  
+- Einfügen von Klammern (`[ ]`) in der Musterzeichenfolge und innerhalb der Klammern, die die niedrigsten und höchsten Zeichen im Bereich einfügen, getrennt durch einen Bindestrich (`–`). Beliebiges einzelnes Zeichen innerhalb des Bereichs ergibt eine Übereinstimmung.  
   
      Im folgenden Beispiel wird getestet, ob `myString` besteht aus den Zeichen `num` gefolgt von genau einem Zeichen `i`, `j`, `k`, `l`, `m`, oder `n`.  
   
@@ -68,11 +68,11 @@ Sollten Sie ermitteln, ob einen Ausdruck, der die [String-Datentyp](../../../../
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>Um ein Zeichen in den Ausdruck anhand einer Liste von Zeichen oder keine Zeichen  
   
-1.  Rufen Sie die `Like` Operator zwei Mal auf dem gleichen Ausdruck eine Zeichenfolge, und verbinden Sie die beiden Aufrufe entweder mit der [oder-Operator](../../../../visual-basic/language-reference/operators/or-operator.md) oder [OrElse-Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
+1. Rufen Sie die `Like` Operator zwei Mal auf dem gleichen Ausdruck eine Zeichenfolge, und verbinden Sie die beiden Aufrufe entweder mit der [oder-Operator](../../../../visual-basic/language-reference/operators/or-operator.md) oder [OrElse-Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
-2.  In der Musterzeichenfolge für die erste `Like` -Klausel, die in Klammern eingeschlossene Zeichenliste enthalten (`[ ]`).  
+2. In der Musterzeichenfolge für die erste `Like` -Klausel, die in Klammern eingeschlossene Zeichenliste enthalten (`[ ]`).  
   
-3.  In der Musterzeichenfolge für die zweite `Like` -Klausel, platzieren Sie keines Zeichen an der Position betreffende.  
+3. In der Musterzeichenfolge für die zweite `Like` -Klausel, platzieren Sie keines Zeichen an der Position betreffende.  
   
      Das folgende Beispiel testet die siebenstelligen Telefonnummer `phoneNum` für genau drei Ziffern, gefolgt von einem Leerzeichen, einen Bindestrich (`–`), einen Zeitraum (`.`), oder keine, gefolgt von genau vier Ziffern.  
   

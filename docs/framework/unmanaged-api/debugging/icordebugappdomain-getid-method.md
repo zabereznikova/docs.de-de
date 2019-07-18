@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fb8917fa401db9424cff168fe0b06ad84065827c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501444"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737940"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId-Methode
 Ruft den eindeutigen Bezeichner der Anwendungsdomäne ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetID (  
     [out] ULONG32   *pId  
 );  

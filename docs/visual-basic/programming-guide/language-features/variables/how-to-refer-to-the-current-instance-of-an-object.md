@@ -8,12 +8,12 @@ helpviewer_keywords:
 - current instance
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
-ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 70955cd55dfb91d4111e59ae58bfe409a4470433
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663532"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Vorgehensweise: Verweisen Sie auf die aktuelle Instanz eines Objekts (Visual Basic)
 Die *kurveninstanz* eines Objekts ist die Instanz, die in der der Code derzeit ausgeführt wird.  
@@ -22,7 +22,7 @@ Die *kurveninstanz* eines Objekts ist die Instanz, die in der der Code derzeit a
   
 ### <a name="to-refer-to-the-current-instance"></a>Zum Verweisen auf die aktuelle Instanz  
   
--   Verwenden Sie die `Me` Schlüsselwort, in denen Sie normalerweise den Namen einer Objektvariablen verwenden würden.  
+- Verwenden Sie die `Me` Schlüsselwort, in denen Sie normalerweise den Namen einer Objektvariablen verwenden würden.  
   
     ```  
     Me.ForeColor = System.Drawing.Color.Crimson  

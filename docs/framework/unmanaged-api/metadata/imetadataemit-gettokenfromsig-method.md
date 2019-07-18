@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 242618fb2a5ab748132baf68e24240d1ffaf2301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: afc2192fe46ed75ed6fb75e0d58268152856b746
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139840"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770782"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig-Methode
 Ruft ein Token für die angegebenen Metadaten-Signatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetTokenFromSig (   
     [in]  PCCOR_SIGNATURE pvSig,   
     [in]  ULONG       cbSig,   

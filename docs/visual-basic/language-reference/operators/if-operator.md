@@ -12,11 +12,11 @@ helpviewer_keywords:
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
 ms.openlocfilehash: 9ab01755d75c91ce87acf83e7f406b26c466aef6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663504"
 ---
 # <a name="if-operator-visual-basic"></a>If-Operator (Visual Basic)
 Verwendet kurzschlussauswertung bedingt eine von zwei Werten zurück. Die `If` Operator mit drei Argumenten oder mit zwei Argumenten aufgerufen werden kann.  

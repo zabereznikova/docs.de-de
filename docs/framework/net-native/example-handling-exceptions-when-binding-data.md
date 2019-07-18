@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199894"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052696"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Beispiel: Behandeln von Ausnahmen beim Binden von Daten
 > [!NOTE]
 >  Dieses Thema bezieht sich auf die .NET Native Developer Preview, ein Vorabrelease der Software. Sie können die Vorschau von der [Microsoft Connect-Website](https://go.microsoft.com/fwlink/?LinkId=394611) herunterladen (Registrierung erforderlich).  
   
- Im folgenden Beispiel wird veranschaulicht, wie eine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme behoben wird, die ausgelöst wird, wenn eine mit der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette kompilierte App versucht, Daten zu binden. Hier sind die Ausnahmeinformationen:  
+ Das folgende Beispiel zeigt, wie Sie lösen eine [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) Ausnahme wird ausgelöst, wenn eine app, die mit der .NET Native-toolkette kompiliert versucht wird, um Daten zu binden. Hier sind die Ausnahmeinformationen:  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   
@@ -62,4 +62,4 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="see-also"></a>Siehe auch
 
 - [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Beispiel: Problembehandlung bei dynamischer Programmierung](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [Anpassen von mit VSTU Problembehandlung bei dynamischer Programmierung](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

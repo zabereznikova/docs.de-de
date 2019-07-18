@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed1d7ad95b7c8474121994d0f54557c1c36cb531
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6ef8d1c47275d3cbd69c1516b788b950f8535513
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095125"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737714"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs-Methode
-Ruft einen Enumerator ab, für die Zwischenspeicherung [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen in einer Anwendungsdomäne auf der Grundlage von deren Schnittstellenbezeichner.  
+Ruft einen Enumerator für zwischengespeicherte Windows-Runtime-Typen in einer Anwendungsdomäne, basierend auf ihren Schnittstellenbezeichner ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCachedWinRTTypesForIIDs (   
     [in]  ULONG32            cReqTypes,  
     [in]  GUID                *iidsToResolve,  
@@ -42,16 +42,16 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in] Die Anzahl der erforderlichen Typen.  
   
  `iidsToResolve`  
- [in] Ein Zeiger auf ein Array, das die verwaltete Darstellung der entsprechenden Schnittstellenbezeichner enthält den [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen abgerufen werden sollen.  
+ [in] Ein Zeiger auf ein Array mit den Schnittstellenbezeichner, der für die verwaltete Darstellungen von der Windows-Runtime-Typen abgerufen werden sollen.  
   
  `ppTypesEnum`  
- [out] Ein Zeiger auf die Adresse einer "ICorDebugTypeEnum"-Schnittstellenobjekts, das ermöglicht die Enumeration, der die zwischengespeicherten verwaltete Darstellungen der [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen abgerufen, die basierend auf den Schnittstellenbezeichner in `iidsToResolve`.  
+ [out] Ein Zeiger auf die Adresse eines Objekts der "ICorDebugTypeEnum"-Schnittstelle, die Enumeration der zwischengespeicherten verwaltete Darstellungen von der Windows-Runtime-Typen ermöglicht abgerufen, die basierend auf den Schnittstellenbezeichner in `iidsToResolve`.  
   
 ## <a name="remarks"></a>Hinweise  
  Fällt die Methode zum Abrufen von Informationen für eine bestimmte Schnittstelle-ID, weist der entsprechende Eintrag in der Auflistung "ICorDebugTypeEnum" einen Typ von `ELEMENT_TYPE_END` nach Fehlern aufgrund von Datenproblemen abrufen, oder `ELEMENT_TYPE_VOID` für unbekannte-Schnittstelle Bezeichner.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **Plattformen:** Windows-Runtime  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

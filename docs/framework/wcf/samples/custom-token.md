@@ -2,12 +2,12 @@
 title: Benutzerdefiniertes Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 3632738ce7afaa5f458dfe26eb562cd70c2e2896
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11b89f6d4f2800f079ba6576801b39c85324f6e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201766"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425071"
 ---
 # <a name="custom-token"></a>Benutzerdefiniertes Token
 In diesem Beispiel wird veranschaulicht, wie Sie einer benutzerdefinierten tokenimplementierung in eine Windows Communication Foundation (WCF)-Anwendung. Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben. Das Token wird an den WS-Sicherheits-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt. Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen. In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.
@@ -17,13 +17,13 @@ In diesem Beispiel wird veranschaulicht, wie Sie einer benutzerdefinierten token
 
  Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:
 
--   Wie ein Client ein benutzerdefiniertes Sicherheitstoken an einen Dienst übergeben kann.
+- Wie ein Client ein benutzerdefiniertes Sicherheitstoken an einen Dienst übergeben kann.
 
--   Wie der Dienst ein benutzerdefiniertes Sicherheitstoken verwenden und überprüfen kann.
+- Wie der Dienst ein benutzerdefiniertes Sicherheitstoken verwenden und überprüfen kann.
 
--   Wie kann die WCF-Dienstcode, die Informationen zu empfangenen Sicherheitstoken, die das benutzerdefinierte Sicherheitstoken einschließlich abrufen.
+- Wie kann die WCF-Dienstcode, die Informationen zu empfangenen Sicherheitstoken, die das benutzerdefinierte Sicherheitstoken einschließlich abrufen.
 
--   Wie das X.509-Zertifikat des Servers dazu verwendet wird, den zur Nachrichtenverschlüsselung und für die Signatur verwendeten symmetrischen Schlüssel zu schützen.
+- Wie das X.509-Zertifikat des Servers dazu verwendet wird, den zur Nachrichtenverschlüsselung und für die Signatur verwendeten symmetrischen Schlüssel zu schützen.
 
 ## <a name="client-authentication-using-a-custom-security-token"></a>Sicherheitsauthentifizierung mithilfe eines benutzerdefinierten Sicherheitstokens
  Der Dienst macht einen einzelnen Endpunkt verfügbar, der programmgesteuert mithilfe der `BindingHelper`-Klasse und der `EchoServiceHost`-Klasse erstellt wird. Der Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer benutzerdefinierten Bindung unter Verwendung von `SymmetricSecurityBindingElement` und `HttpTransportBindingElement` konfiguriert. In diesem Beispiel wird `SymmetricSecurityBindingElement` so eingestellt, dass es ein X.509-Zertifikat für den Dienst verwendet, um den symmetrischen Schlüssel während der Übertragung zu schützen und um in einem WS-Sicherheits-Nachrichtenkopf ein benutzerdefiniertes `CreditCardToken` als signiertes und verschlüsseltes Sicherheitstoken zu übergeben. Das Verhalten legt die Dienstanmeldeinformationen fest, die zur Clientauthentifizierung verwendet werden sollen, sowie Informationen über das X.509-Zertifikat des Diensts.
@@ -251,7 +251,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  In diesem Beispiel wird ein Tokenanbieter nur für den Client und ein Tokenauthentifizierer nur für den Dienst verwendet, da ein Kreditkartentoken nur in der Richtung vom Client zum Dienst übertragen werden soll.
 
- Die Funktionalität auf dem Client befindet sich in den Klassen `CreditCardClientCrendentials`, `CreditCardClientCredentialsSecurityTokenManager` und `CreditCardTokenProvider`.
+ Die Funktionalität auf dem Client befindet sich in den Klassen `CreditCardClientCredentials`, `CreditCardClientCredentialsSecurityTokenManager` und `CreditCardTokenProvider`.
 
  Beim Dienst befindet sich die Funktionalität in den Klassen `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` und `CreditCardTokenAuthorizationPolicy`.
 
@@ -543,7 +543,7 @@ string GetCallerCreditCardNumber()
 
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.
 
--   Erstellen des Serverzertifikats
+- Erstellen des Serverzertifikats
 
      Mit den folgenden Zeilen aus der Batchdatei `Setup.bat` wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Standardmäßig lautet die Variable in dieser Batchdatei localhost. Wenn Sie die Variable `%SERVER_NAME%` ändern, müssen Sie die Dateien Client.cs und Service.cs durchgehen und alle Vorkommnisse von localhost durch den Servernamen ersetzen, den Sie im Setup.bat-Skript verwenden.
 
@@ -559,7 +559,7 @@ string GetCallerCreditCardNumber()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installieren des Serverzertifikats in den Clientspeicher für vertrauenswürdige Zertifikate:
+- Installieren des Serverzertifikats in den Clientspeicher für vertrauenswürdige Zertifikate:
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, dass von einem vertrauenswürdigen Clientstammzertifikat abstammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Auffüllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
@@ -570,7 +570,7 @@ string GetCallerCreditCardNumber()
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   Um den Zugriff vom IIS-gehosteten Dienst aus auf den privaten Schlüssel des Zertifikats zu aktivieren, müssen dem Benutzerkonto, unter dem der IIS-gehostete Prozess ausgeführt wird, entsprechende Berechtigungen für den privaten Schlüssel gewährt werden. Dies wird durch die letzten Schritte im Skript Setup.bat erreicht.
+- Um den Zugriff vom IIS-gehosteten Dienst aus auf den privaten Schlüssel des Zertifikats zu aktivieren, müssen dem Benutzerkonto, unter dem der IIS-gehostete Prozess ausgeführt wird, entsprechende Berechtigungen für den privaten Schlüssel gewährt werden. Dies wird durch die letzten Schritte im Skript Setup.bat erreicht.
 
     ```
     echo ************
@@ -588,38 +588,38 @@ string GetCallerCreditCardNumber()
 
 #### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es
 
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus
 
-1.  Öffnen Sie ein Visual Studio 2012-Eingabeaufforderung mit Administratorrechten, und führen Sie Setup.bat aus dem beispielinstallationsordner aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind. Stellen Sie sicher, dass der Pfad den Ordner enthält, in dem sich Makecert.exe befindet.
+1. Öffnen Sie ein Visual Studio 2012-Eingabeaufforderung mit Administratorrechten, und führen Sie Setup.bat aus dem beispielinstallationsordner aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind. Stellen Sie sicher, dass der Pfad den Ordner enthält, in dem sich Makecert.exe befindet.
 
 > [!NOTE]
 >  Entfernen Sie nach Abschluss des Beispiels unbedingt die Zertifikate, indem Sie Cleanup.bat ausführen. In anderen Sicherheitsbeispielen werden die gleichen Zertifikate verwendet.  
   
-1.  Starten Sie Client.exe im Verzeichnis \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
+1. Starten Sie Client.exe im Verzeichnis \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-2.  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+2. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computer"></a>So führen Sie das Beispiel computerübergreifend aus  
   
-1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.  
+1. Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.  
   
-2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Vergessen Sie nicht, die Datei CreditCardFile.txt zu kopieren. Andernfalls kann der Kreditkartenauthentifikator die vom Client gesendeten Kreditkartendaten nicht überprüfen. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
+2. Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Vergessen Sie nicht, die Datei CreditCardFile.txt zu kopieren. Andernfalls kann der Kreditkartenauthentifikator die vom Client gesendeten Kreditkartendaten nicht überprüfen. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
   
-3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Ein entsprechendes Zertifikat können Sie mithilfe von Setup.bat erstellen, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Namen des Computers festlegen, auf dem der Dienst gehostet wird. Beachten Sie, dass die Datei "Setup.bat" im Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet ausgeführt werden muss.  
+3. Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Ein entsprechendes Zertifikat können Sie mithilfe von Setup.bat erstellen, indem Sie die Variable `%SERVER_NAME%` auf den vollqualifizierten Namen des Computers festlegen, auf dem der Dienst gehostet wird. Beachten Sie, dass die Datei "Setup.bat" im Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet ausgeführt werden muss.  
   
-4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser-TrustedPeople auf dem Client. Sie müssen dies nur tun, wenn das Serverzertifikat nicht von einem vertrauenswürdigen Aussteller ausgegeben wurde.  
+4. Kopieren Sie das Serverzertifikat in den Speicher CurrentUser-TrustedPeople auf dem Client. Sie müssen dies nur tun, wenn das Serverzertifikat nicht von einem vertrauenswürdigen Aussteller ausgegeben wurde.  
   
-5.  Ändern Sie in der Datei EchoServiceHost.cs den Wert des Zertifikatsantragstellers, und geben Sie anstelle von localhost einen vollqualifizierten Computernamen an.  
+5. Ändern Sie in der Datei EchoServiceHost.cs den Wert des Zertifikatsantragstellers, und geben Sie anstelle von localhost einen vollqualifizierten Computernamen an.  
   
-6.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.  
+6. Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.  
   
-7.  Ändern Sie in der Datei Client.cs den Adresswert des Endpunkts, sodass dieser mit der neuen Adresse Ihres Diensts übereinstimmt.  
+7. Ändern Sie in der Datei Client.cs den Adresswert des Endpunkts, sodass dieser mit der neuen Adresse Ihres Diensts übereinstimmt.  
   
-8.  Ändern Sie in der Datei Client.cs den Antragstellernamen des X.509-Dienstzertifikats, und geben Sie anstelle von localhost den vollqualifizierten Computernamen des Remotehosts an.  
+8. Ändern Sie in der Datei Client.cs den Antragstellernamen des X.509-Dienstzertifikats, und geben Sie anstelle von localhost den vollqualifizierten Computernamen des Remotehosts an.  
   
 9. Starten Sie auf dem Clientcomputer Client.exe in einem Eingabeaufforderungsfenster.  
   
@@ -627,4 +627,4 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
-1.  Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
+1. Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  

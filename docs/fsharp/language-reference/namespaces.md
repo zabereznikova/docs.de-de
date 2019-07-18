@@ -2,12 +2,12 @@
 title: Namespaces
 description: Erfahren Sie, wie ein F# Namespace können Sie Code in Bereichen verwandter Funktionalität organisieren, indem Sie einen Namen für die Gruppierung von Programmelementen anfügen.
 ms.date: 12/08/2018
-ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b315d654dad0d36e3584564ad027c68fb3c94cce
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613439"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645275"
 ---
 # <a name="namespaces"></a>Namespaces
 

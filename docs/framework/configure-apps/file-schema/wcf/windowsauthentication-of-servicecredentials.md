@@ -3,11 +3,11 @@ title: <windowsAuthentication> von <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
 ms.openlocfilehash: ffddbae7effabcdafdc2638d588bbbf3e42d2c2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769693"
 ---
 # <a name="windowsauthentication-of-servicecredentials"></a>\<WindowsAuthentication > von \<ServiceCredentials >
 Gibt die Einstellungen der Windows-Dienstanmeldeinformationen an.  

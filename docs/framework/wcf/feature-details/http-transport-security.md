@@ -2,12 +2,12 @@
 title: HTTP-Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 456df42848c009dcf42022ac674a1d27e5b33972
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113801"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487021"
 ---
 # <a name="http-transport-security"></a>HTTP-Transportsicherheit
 Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure Sockets Layer (SSL)-Implementierung bereitgestellt. SSL wird im Internet häufig verwendet, um einen Dienst gegenüber einem Client zu authentifizieren und anschließend Vertraulichkeit (Verschlüsselung) für den Kanal bereitzustellen. In diesem Thema wird erläutert, wie SSL funktioniert und wie es in Windows Communication Foundation (WCF) implementiert wird.  
@@ -31,21 +31,21 @@ Bei der Verwendung von HTTP zum Transport wird die Sicherheit durch eine Secure 
 ## <a name="implementing-ssl-with-wcf"></a>Implementieren von SSL mit WCF  
  HTTP-transportsicherheit (oder SSL) wird für WCF extern bereitgestellt. Sie können SSL auf zwei Wegen implementieren; der entscheidende Faktor ist, wie die Anwendung gehostet wird:  
   
--   Bei Verwendung von Internetinformationsdienste (Internet Information Services, IIS) als Ihre WCF-Diensthost verwenden Sie die IIS-Infrastruktur, um ein SSL-Dienst einzurichten.  
+- Bei Verwendung von Internetinformationsdienste (Internet Information Services, IIS) als Ihre WCF-Diensthost verwenden Sie die IIS-Infrastruktur, um ein SSL-Dienst einzurichten.  
   
--   Wenn Sie eine selbst gehostete WCF-Anwendung erstellen, können Sie ein SSL-Zertifikat an die Adresse, die mit dem Tool HttpCfg.exe binden.  
+- Wenn Sie eine selbst gehostete WCF-Anwendung erstellen, können Sie ein SSL-Zertifikat an die Adresse, die mit dem Tool HttpCfg.exe binden.  
   
 ### <a name="using-iis-for-transport-security"></a>Verwenden von IIS für Transportsicherheit  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Einrichten [!INCLUDE[iisver](../../../../includes/iisver-md.md)] als sicheren Host (mit SSL), finden Sie unter [IIS 7.0 Beta: Konfigurieren von Secure Sockets Layer in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Zum Einrichten von IIS 7.0 als sicheren Host (mit SSL) finden Sie unter [Konfigurieren von Secure Sockets Layer in IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
   
- Konfigurieren von Zertifikaten für die Verwendung mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [IIS 7.0 Beta: Konfigurieren von Serverzertifikaten in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
+Zum Konfigurieren von Zertifikaten für die Verwendung mit IIS 7.0 finden Sie unter [Konfigurieren von Serverzertifikaten in IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="iis-60"></a>IIS 6.0  
- Einrichten [!INCLUDE[iis601](../../../../includes/iis601-md.md)] als sicheren Host (mit SSL), finden Sie unter [Konfigurieren von Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601).  
+ Zum Einrichten von IIS 6.0 als sicheren Host (mit SSL) finden Sie unter [Konfigurieren von Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601).  
   
- Konfigurieren von Zertifikaten für die Verwendung mit [!INCLUDE[iis601](../../../../includes/iis601-md.md)], finden Sie unter [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602).  
+ Um Zertifikate für die Verwendung mit IIS 6.0 konfigurieren zu können, finden Sie unter [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602).  
   
 ### <a name="using-httpcfg-for-ssl"></a>Verwenden von HttpCfg für SSL  
  Wenn Sie eine selbst gehostete WCF-Anwendung erstellen, laden Sie das HttpCfg.exe-Tool, das unter der [Windows XP Service Pack 2-Supporttools Site](https://go.microsoft.com/fwlink/?LinkId=29002).  

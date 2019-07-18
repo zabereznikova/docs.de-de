@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a915ed72350f278a5df01191e69c95a4917f1230
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 14266f02dd402e81928b72d155f224e10e910592
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094163"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781243"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory-Co-Klasse
 Stellt eine Schnittstelle für die Verwaltung der dekonstruieren eines Typnamens an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 coclass TypeNameFactory {  
     [default] interface ITypeNameFactory;  
 };  
@@ -51,4 +51,4 @@ coclass TypeNameFactory {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hosting-Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+- [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

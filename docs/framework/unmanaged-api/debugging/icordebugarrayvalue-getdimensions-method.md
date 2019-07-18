@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a52075f33d594787c516f84b65b3319991380907
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9c0f4836a3dc848b52ee7fe6947f350e6fab787f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500370"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737567"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions-Methode
 Ruft die Anzahl der Elemente in jeder Dimension dieses Array ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetDimensions (  
     [in] ULONG32         cdim,  
     [out, size_is(cdim), length_is(cdim)]   

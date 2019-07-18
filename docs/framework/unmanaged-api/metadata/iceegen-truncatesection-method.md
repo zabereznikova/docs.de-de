@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1036d6080bf17eea288724c7980ce53dfa2121f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116320"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745879"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection-Methode
 Schneidet den angegebenen Codeabschnitt durch die angegebene Länge ab.  
@@ -31,7 +31,7 @@ Schneidet den angegebenen Codeabschnitt durch die angegebene Länge ab.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT TruncateSection (  
     [in]  HCEESECTION     section,  
     [in]  ULONG           len  

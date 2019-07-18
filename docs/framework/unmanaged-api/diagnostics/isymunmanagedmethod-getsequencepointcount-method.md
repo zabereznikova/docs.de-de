@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9eac17ec9599caba88ddaa73d28abcae538a4d19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 22c45ff77c030dcbe87e5aa53284b2cace9849ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215065"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759479"
 ---
 # <a name="isymunmanagedmethodgetsequencepointcount-method"></a>ISymUnmanagedMethod::GetSequencePointCount-Methode
 Ruft die Anzahl der Sequenzpunkte innerhalb dieser Methode ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSequencePointCount(  
     [out, retval] ULONG32* pRetVal);  
 ```  

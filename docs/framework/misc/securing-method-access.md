@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8be971cee4aa2ae09745a090396269c80ca62198
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166178"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487943"
 ---
 # <a name="securing-method-access"></a>Sichern des Methodenzugriffs
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,17 +28,17 @@ ms.locfileid: "59166178"
   
  Verwalteter Code bietet mehrere Möglichkeiten zum Einschränken des Zugriffs auf Methoden:  
   
--   Einschränken des Zugriffsbereichs auf die Klasse, Assembly oder abgeleiteten Klassen, wenn diese vertrauenswürdig sind. Dies ist die einfachste Möglichkeit, um den Methodenzugriff einzuschränken. Beachten Sie, dass abgeleitete Klassen im Allgemeinen weniger vertrauenswürdig sind als die Klasse, von der sie abgeleitet wurden, obwohl sie in einigen Fällen die Identität der übergeordneten Klasse teilen. Leiten Sie insbesondere keine Vertrauenswürdigkeit vom Schlüsselwort **geschützt**, wird die nicht unbedingt im Sicherheitskontext verwendet.  
+- Einschränken des Zugriffsbereichs auf die Klasse, Assembly oder abgeleiteten Klassen, wenn diese vertrauenswürdig sind. Dies ist die einfachste Möglichkeit, um den Methodenzugriff einzuschränken. Beachten Sie, dass abgeleitete Klassen im Allgemeinen weniger vertrauenswürdig sind als die Klasse, von der sie abgeleitet wurden, obwohl sie in einigen Fällen die Identität der übergeordneten Klasse teilen. Leiten Sie insbesondere keine Vertrauenswürdigkeit vom Schlüsselwort **geschützt**, wird die nicht unbedingt im Sicherheitskontext verwendet.  
   
--   Beschränken Sie den Methodenzugriff auf Aufrufer mit einer angegebenen Identität – im Wesentlichen eine bestimmte [Beweise](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (starker Name, Herausgeber, Zone usw.), die Sie auswählen.  
+- Beschränken Sie den Methodenzugriff auf Aufrufer mit einer angegebenen Identität – im Wesentlichen eine bestimmte [Beweise](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (starker Name, Herausgeber, Zone usw.), die Sie auswählen.  
   
--   Schränken Sie den Methodenzugriff auf Aufrufer mit von Ihnen ausgewählten Berechtigungen ein.  
+- Schränken Sie den Methodenzugriff auf Aufrufer mit von Ihnen ausgewählten Berechtigungen ein.  
   
  Die deklarative Sicherheit ermöglicht es Ihnen gleichermaßen, die Vererbung von Klassen zu kontrollieren. Sie können **InheritanceDemand** die folgenden Schritte ausführen:  
   
--   Für abgeleitete Klassen eine bestimmte Identität oder Berechtigung anfordern.  
+- Für abgeleitete Klassen eine bestimmte Identität oder Berechtigung anfordern.  
   
--   Für abgeleitete Klassen, die bestimmte Methoden außer Kraft setzen, eine bestimmte Identität oder Berechtigung anfordern.  
+- Für abgeleitete Klassen, die bestimmte Methoden außer Kraft setzen, eine bestimmte Identität oder Berechtigung anfordern.  
   
  Das folgende Beispiel zeigt, wie eine öffentliche Klasse durch den eingeschränkten Zugriff geschützt wird, indem Sie festlegen, dass Aufrufer mit einem bestimmten starken Namen signiert werden müssen. Dieses Beispiel verwendet die <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> mit einem **Bedarf** für den starken Namen. Aufgabenbasierte Informationen zum Signieren einer Assembly mit einem starken Namen finden Sie [erstellen und Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
@@ -60,7 +60,7 @@ public class Class1
  Verwenden Sie die in diesem Abschnitt gezeigten Deklarationen, um bestimmte Klassen und Methoden sowie Eigenschaften und Ereignisse daran zu hindern, von teilweise vertrauenswürdigem Code verwendet zu werden. Durch die Anwendung dieser Deklarationen auf eine Klasse wenden Sie den Schutz auf ihre gesamten Methoden, Eigenschaften und Ereignisse an. Beachten Sie jedoch, dass sich die deklarative Sicherheit nicht auf den Feldzugriff auswirkt. Beachten Sie außerdem, dass Verknüpfungsaufrufe möglicherweise nur Schutz vor direkten Aufrufern bieten und möglicherweise immer noch anfällig sind für Lockangriffe.  
   
 > [!NOTE]
->  In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] wurde ein neues Transparenzmodell eingeführt. Die [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md) Modell identifiziert sicheren Code mit der <xref:System.Security.SecurityCriticalAttribute> Attribut. Sicherheitsrelevanter Code erfordert, dass sowohl Aufrufer als auch Erben voll vertrauenswürdig sind. Assemblys, die gemäß den Regeln für die Codezugriffssicherheit von früheren Versionen von .NET Framework ausgeführt werden, können Assemblys der Ebene 2 aufrufen. In diesem Fall werden die sicherheitsrelevanten Attribute für die volle Vertrauenswürdigkeit als Verknüpfungsaufrufe behandelt.  
+>  In .NET Framework 4 wurde ein neues Transparenzmodell eingeführt. Die [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md) Modell identifiziert sicheren Code mit der <xref:System.Security.SecurityCriticalAttribute> Attribut. Sicherheitsrelevanter Code erfordert, dass sowohl Aufrufer als auch Erben voll vertrauenswürdig sind. Assemblys, die gemäß den Regeln für die Codezugriffssicherheit von früheren Versionen von .NET Framework ausgeführt werden, können Assemblys der Ebene 2 aufrufen. In diesem Fall werden die sicherheitsrelevanten Attribute für die volle Vertrauenswürdigkeit als Verknüpfungsaufrufe behandelt.  
   
  In Assemblys mit starkem Namen eine [LinkDemand](../../../docs/framework/misc/link-demands.md) gilt für alle öffentlich zugänglichen Methoden, Eigenschaften und Ereignisse, um deren Verwendung auf voll vertrauenswürdige Aufrufer zu beschränken. Um diese Funktion zu deaktivieren, müssen Sie das <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut anwenden. Daher ist die explizite Markierung von Klassen zum Ausschließen von nicht vertrauenswürdiger Aufrufern nur für nicht signierte Assemblys oder Assemblys mit diesem Attribut erforderlich. Sie können diese Deklarationen verwenden, um eine Teilmenge der darin enthaltenen Typen zu markieren, die nicht für nicht vertrauenswürdige Aufrufer bestimmt sind.  
   

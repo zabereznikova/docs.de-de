@@ -2,12 +2,12 @@
 title: Typanbieter
 description: Erfahren Sie, wie ein F#-Typanbieter eine Komponente, die Typen, Eigenschaften und Methoden für die Verwendung in Ihren Programmen bereitstellt.
 ms.date: 04/02/2018
-ms.openlocfilehash: 39000fd1ca2af78afd1c333816fe9d5c0e2517cb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611632"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645164"
 ---
 # <a name="type-providers"></a>Typanbieter
 

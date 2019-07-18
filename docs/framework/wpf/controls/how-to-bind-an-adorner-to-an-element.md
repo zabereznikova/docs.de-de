@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-ms.openlocfilehash: 54c9e6dfff2bbf7bfabde523b5d6ae5a623fe733
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b6909fec466c2b31a7f4156c43b21a0c724f0217
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018969"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Vorgehensweise: Binden eines Adorners an ein Element
 Dieses Beispiel zeigt, wie Sie programmgesteuert einen Adorner an einem angegebenen binden <xref:System.Windows.UIElement>.  
@@ -21,9 +21,9 @@ Dieses Beispiel zeigt, wie Sie programmgesteuert einen Adorner an einem angegebe
 ## <a name="example"></a>Beispiel  
  Zum Binden eines Adorners an ein bestimmtes <xref:System.Windows.UIElement>, gehen Sie folgendermaßen vor:  
   
-1.  Aufrufen der `static` Methode <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> zum Abrufen einer <xref:System.Windows.Documents.AdornerLayer> -Objekt für die <xref:System.Windows.UIElement> verziert werden sollen. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> durchläuft die visuelle Struktur, beginnend am angegebenen **"UIElement"**, und gibt die erste Adornerebene gefundenen zurück. (Falls keine Adorner-Ebenen gefunden werden, gibt die Methode NULL zurück.)  
+1. Aufrufen der `static` Methode <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> zum Abrufen einer <xref:System.Windows.Documents.AdornerLayer> -Objekt für die <xref:System.Windows.UIElement> verziert werden sollen. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> durchläuft die visuelle Struktur, beginnend am angegebenen **"UIElement"**, und gibt die erste Adornerebene gefundenen zurück. (Falls keine Adorner-Ebenen gefunden werden, gibt die Methode NULL zurück.)  
   
-2.  Rufen Sie die <xref:System.Windows.Documents.AdornerLayer.Add%2A> Methode, um den Adorner an das Ziel binden **"UIElement"**.  
+2. Rufen Sie die <xref:System.Windows.Documents.AdornerLayer.Add%2A> Methode, um den Adorner an das Ziel binden **"UIElement"**.  
   
  Im folgende Beispiel wird ein SimpleCircleAdorner, die (siehe oben), um eine <xref:System.Windows.Controls.TextBox> mit dem Namen *MyTextBox*.  
   

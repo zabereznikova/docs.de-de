@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
 ms.openlocfilehash: 88c05b54402733fadb686e3c6f883b2d2d56990c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864857"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Allgemeine Aufgaben, die mit Visual Basic-Operatoren ausgeführt werden
 Operatoren führen viele gängige Aufgaben im Zusammenhang mit einem oder mehreren Ausdrücken aufgerufen *Operanden*.  

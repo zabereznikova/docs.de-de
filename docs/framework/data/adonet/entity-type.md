@@ -2,23 +2,23 @@
 title: Entitätstyp
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dd1e8a7605c29b3dacaa7ccf9156af2a9b65d5b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599622"
 ---
 # <a name="entity-type"></a>Entitätstyp
 Die *Entitätstyp* ist der wesentliche Baustein zum Beschreiben der Datenstruktur mit dem Entity Data Model (EDM). In einem konzeptionellen Modell stellt ein Entitätstyp die Struktur von Konzepten der obersten Ebene dar, z. B. Kunden oder Bestellungen. Ein Entitätstyp ist eine Vorlage für Entitätstypinstanzen. Jede Vorlage enthält die folgenden Informationen:  
   
--   Eine eindeutige Bezeichnung. (Erforderlich.)  
+- Eine eindeutige Bezeichnung. (Erforderlich.)  
   
--   Ein [Entitätsschlüssel](../../../../docs/framework/data/adonet/entity-key.md) durch eine oder mehrere Eigenschaften definiert. (Erforderlich.)  
+- Ein [Entitätsschlüssel](../../../../docs/framework/data/adonet/entity-key.md) durch eine oder mehrere Eigenschaften definiert. (Erforderlich.)  
   
--   Daten in Form von [Eigenschaften](../../../../docs/framework/data/adonet/property.md). (Optional)  
+- Daten in Form von [Eigenschaften](../../../../docs/framework/data/adonet/property.md). (Optional)  
   
--   [Navigationseigenschaften](../../../../docs/framework/data/adonet/navigation-property.md) , mit denen für die Navigation von einem [End](../../../../docs/framework/data/adonet/association-end.md) von einem [Zuordnung](../../../../docs/framework/data/adonet/association-type.md) zum anderen Ende. (Optional)  
+- [Navigationseigenschaften](../../../../docs/framework/data/adonet/navigation-property.md) , mit denen für die Navigation von einem [End](../../../../docs/framework/data/adonet/association-end.md) von einem [Zuordnung](../../../../docs/framework/data/adonet/association-type.md) zum anderen Ende. (Optional)  
   
  In einer Anwendung stellt eine Instanz eines Entitätstyps ein spezielles Objekt dar, wie etwa einen bestimmten Kunden oder eine Bestellung. Jede Instanz eines Entitätstyps muss eine eindeutige verfügen [Entitätsschlüssel](../../../../docs/framework/data/adonet/entity-key.md) innerhalb einer [Entitätenmenge](../../../../docs/framework/data/adonet/entity-set.md).  
   
@@ -39,4 +39,4 @@ Die *Entitätstyp* ist der wesentliche Baustein zum Beschreiben der Datenstruktu
 
 - [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [Facet](../../../../docs/framework/data/adonet/facet.md)
+- [facet](../../../../docs/framework/data/adonet/facet.md)

@@ -2,12 +2,12 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119833"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662165"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 Gibt die Auflistung, die in verwendete [wählen](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) Anweisungen.  
@@ -28,7 +28,7 @@ FROM expression [ ,...n ] as C
  `FROM C as c`  
   
 ## <a name="from-clause-items"></a>FROM-Klauselelemente  
- Jedes `FROM`-Klauselelement verweist auf eine Quellauflistung in der [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfrage. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt die folgenden Klassen von `FROM` Klauselelementen: einfache `FROM` -Klauselelemente `JOIN FROM` -Klauselelemente und `APPLY FROM` -Klauselelemente. Jedes dieser `FROM`-Klauselelemente wird in den folgenden Abschnitten ausführlicher beschrieben.  
+ Jedes `FROM`-Klauselelement verweist auf eine Quellauflistung in der [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfrage. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt die folgenden Klassen von `FROM`-Klauselelementen: einfache `FROM`-Klauselelemente, `JOIN FROM`-Klauselelemente und `APPLY FROM`-Klauselelemente. Jedes dieser `FROM`-Klauselelemente wird in den folgenden Abschnitten ausführlicher beschrieben.  
   
 ### <a name="simple-from-clause-item"></a>Einfaches FROM-Klauselelement  
  Das einfachste `FROM`-Klauselelement ist ein einzelner Ausdruck, der eine Auflistung und einen Alias identifiziert. Bei dem Ausdruck kann es sich einfach um eine Entitätenmenge, eine Unterabfrage oder um einen anderen Ausdruck vom Auflistungstyp handeln. Im Folgenden finden Sie ein Beispiel dazu:  
@@ -46,7 +46,7 @@ LOB.Customers
  Wenn kein Alias angegeben wird, erzeugt [!INCLUDE[esql](../../../../../../includes/esql-md.md)] auf der Grundlage des Auflistungsausdrucks einen Alias.  
   
 ### <a name="join-from-clause-item"></a>JOIN FROM-Klauselelement  
- Ein `JOIN FROM`-Klauselelement stellt einen Join zwischen zwei `FROM`-Klauselelementen dar. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt sowohl cross Joins, innere Joins, linke und Rechte äußere Verknüpfungen und vollständige äußere Joins. Diese Verknüpfungen werden alle auf ähnliche Weise unterstützt wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] müssen die beiden für `FROM` verwendeten `JOIN`-Klauselelemente unabhängig sein. Sie können demnach nicht korreliert werden. Für diese Fälle kann `CROSS APPLY` oder `OUTER APPLY` verwendet werden.  
+ Ein `JOIN FROM`-Klauselelement stellt einen Join zwischen zwei `FROM`-Klauselelementen dar. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt Kreuzjoins, innere Joins, linke und rechte äußere Verknüpfungen und vollständige äußere Joins. Alle diese Verknüpfungen werden ähnlich wie unterstützt, dass sie in Transact-SQL unterstützt werden. Wie in Transact-SQL, die beiden `FROM` -Klauselelemente beteiligt der `JOIN` unabhängig sein. Sie können demnach nicht korreliert werden. Für diese Fälle kann `CROSS APPLY` oder `OUTER APPLY` verwendet werden.  
   
 #### <a name="cross-joins"></a>Cross Joins  
  Ein `CROSS JOIN`-Abfrageausdruck erzeugt das kartesische Produkt der beiden Auflistungen, wie im folgenden Beispiel veranschaulicht:  
@@ -77,7 +77,7 @@ LOB.Customers
  Der vorige Abfrageausdruck verarbeitet eine Kombination aller Elemente der linken Auflistung gepaart mit jedem Element der rechten Auflistung, wenn die `ON`-Bedingung "true" ist. Wenn die `ON`-Bedingung "false" ist, verarbeitet der Ausdruck eine Instanz des linken Elements gepaart mit dem rechten Element mit dem Wert NULL. Außerdem wird eine Instanz des rechten Elements gepaart mit dem linken Element mit dem Wert NULL verarbeitet.  
   
 > [!NOTE]
->  In [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ist das OUTER-Schlüsselwort optional, um die Kompatibilität mit SQL-92 beizubehalten. `LEFT JOIN`, `RIGHT JOIN` und `FULL JOIN` sind daher Synonyme für `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` und `FULL OUTER JOIN`.  
+>  Zum Beibehalten der Kompatibilität mit SQL-92 in Transact-SQL ist das OUTER-Schlüsselwort optional. `LEFT JOIN`, `RIGHT JOIN` und `FULL JOIN` sind daher Synonyme für `LEFT OUTER JOIN`, `RIGHT OUTER JOIN` und `FULL OUTER JOIN`.  
   
 ### <a name="apply-clause-item"></a>APPLY-Klauselelement  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt zwei Arten von `APPLY`: `CROSS APPLY` und `OUTER APPLY`.  
@@ -93,10 +93,10 @@ LOB.Customers
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  Im Unterschied zu [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ist in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kein unnest-Schritt erforderlich.  
+>  Im Gegensatz zu in Transact-SQL, besteht keine Notwendigkeit für Unnest-Schritt im [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS` und `OUTER APPLY` Operatoren wurden in eingeführt [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen älter als [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], diese Operatoren nicht unterstützen, solche Abfragen können nicht auf diesen Back-End-Anbietern nicht ausgeführt werden.  
+>  `CROSS` und `OUTER APPLY` Operatoren wurden in SQL Server 2005 eingeführt. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen vor SQL Server 2005, die diese Operatoren nicht unterstützen, können keine solche Abfragen auf diesen Back-End-Anbietern ausgeführt werden.  
 >   
 >  Typische Szenarios, in denen `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren in der Ausgabeabfrage vorhanden sein können, sind beispielsweise korrelierte Unterabfragen mit Paging, AnyElement über einer korrelierten Unterabfrage oder über einer durch Navigation erzeugten Auflistung, LINQ-Abfragen, die Elementselektoren akzeptierende Gruppierungsmethoden verwenden, Abfragen, für die ein `CROSS APPLY` oder ein `OUTER APPLY` explizit angegeben wurden oder Abfragen, die ein `DEREF`-Konstrukt über einem `REF`-Konstrukt enthalten.  
   
@@ -131,13 +131,13 @@ from (C as c join D as d) cross apply c.Names as e
   
  Die `FROM`-Klausel erzeugt logisch eine Zeilenmultimenge vom Row(c, d, e)-Typ. Es wird angenommen, dass die Felder c, d und e den Elementtyp `C`, `D` und `c.Names` aufweisen.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Führt einen Alias für jedes einfache `FROM` -Klauselelement im Bereich. Im folgenden FROM-Klauselausschnitt sind die im Bereich eingeführten Namen beispielsweise c, d und e.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] führt einen Alias für jedes einfache `FROM`-Klauselelement im Bereich ein. Im folgenden FROM-Klauselausschnitt sind die im Bereich eingeführten Namen beispielsweise c, d und e.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (im Gegensatz zu [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]) führt die `FROM`-Klausel nur die Aliase im Bereich ein. Alle Verweise auf Spalten (Eigenschaften) dieser Auflistungen müssen mit dem Alias qualifiziert werden.  
+ In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (im Gegensatz zu Transact-SQL), die `FROM` Klausel führt nur die Aliase in den Bereich. Alle Verweise auf Spalten (Eigenschaften) dieser Auflistungen müssen mit dem Alias qualifiziert werden.  
   
 ## <a name="pulling-up-keys-from-nested-queries"></a>Ausführen von Pull-Vorgängen für Schlüssel aus geschachtelten Abfragen  
  Bestimmte Typen von Abfragen, die die Ausführung von Pull-Vorgängen für Schlüssel aus einer geschachtelten Abfrage erfordern, werden nicht unterstützt. Beispielsweise ist die folgende Abfrage gültig:  

@@ -2,12 +2,12 @@
 title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: bfda2b9d7b3aa5219a3e4c344347d3b10419a7bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2458cdd4d593637c2025047d5dd510f0f89b2a0f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102413"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423083"
 ---
 # <a name="oneway"></a>\<oneWay>
 Aktiviert Paketrouting und die Verwendung von unidirektionalen Methoden für eine benutzerdefinierte Bindung.  
@@ -24,7 +24,7 @@ Aktiviert Paketrouting und die Verwendung von unidirektionalen Methoden für ein
 <oneWay packetRoutable="Boolean">
   <channelPoolSettings idleTimeout="TimeSpan"
                        leaseTimeout="TimeSpan"
-                       maxOutboundConnectionsPerEndpopint="Integer" />
+                       maxOutboundConnectionsPerEndpoint="Integer" />
 </oneWay>
 ```  
   

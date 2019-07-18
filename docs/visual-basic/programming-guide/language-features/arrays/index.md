@@ -7,12 +7,12 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 12846b80f04e9fa6d1188485ad55b061cd2863fa
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675964"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758851"
 ---
 # <a name="arrays-in-visual-basic"></a>Arrays in Visual Basic
 
@@ -32,7 +32,7 @@ Hier einige Beispiele, bevor wir mit den Erklärungen starten:
 ' Declare a single-dimension array of 5 numbers.
 Dim numbers(4) As Integer
 
-'Declare a single-dimension array and set its 4 values.
+' Declare a single-dimension array and set its 4 values.
 Dim numbers = New Integer() {1, 2, 4, 8}
 
 ' Change the size of an existing array to 16 elements and retain the current values.

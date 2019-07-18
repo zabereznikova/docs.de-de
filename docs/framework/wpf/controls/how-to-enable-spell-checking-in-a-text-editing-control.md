@@ -12,11 +12,11 @@ helpviewer_keywords:
 - checking spelling [WPF]
 ms.assetid: 6f953d2b-67e8-4012-84ce-53c0e958da47
 ms.openlocfilehash: 7381bafc349506d89058581e9ed62a4348a72865
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031942"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>Vorgehensweise: Aktivieren der Rechtschreibprüfung in einem Textbearbeitungssteuerelement
 Das folgende Beispiel zeigt, wie Sie das Aktivieren der Rechtschreibprüfung in Echtzeit in ein <xref:System.Windows.Controls.TextBox> mithilfe der <xref:System.Windows.Controls.SpellCheck.IsEnabled%2A> Eigenschaft der <xref:System.Windows.Controls.SpellCheck> Klasse.  

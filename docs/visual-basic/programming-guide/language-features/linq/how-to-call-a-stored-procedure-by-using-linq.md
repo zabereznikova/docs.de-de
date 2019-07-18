@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 2d05d43ae8f9b93fd3e5e405bb7ff0d59832e830
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: af25ebe10681ebb1c346f90afc0291e53224833a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823349"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59319572"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Vorgehensweise: Aufrufen einer gespeicherten Prozedur mithilfe von LINQ (Visual Basic)
 Language Integrated Query (LINQ) erleichtert Ihnen den Zugriff auf Datenbankinformationen, einschließlich Datenbankobjekten, z. B. gespeicherte Prozeduren.  
@@ -25,39 +25,39 @@ Language Integrated Query (LINQ) erleichtert Ihnen den Zugriff auf Datenbankinfo
   
 ### <a name="to-create-a-connection-to-a-database"></a>Um eine Verbindung mit einer Datenbank zu erstellen.  
   
-1.  Öffnen Sie in Visual Studio **Server-Explorer**/**Datenbank-Explorer** durch Klicken auf **Server-Explorer**/**Datenbank Explorer** auf die **Ansicht** Menü.  
+1. Öffnen Sie in Visual Studio **Server-Explorer**/**Datenbank-Explorer** durch Klicken auf **Server-Explorer**/**Datenbank Explorer** auf die **Ansicht** Menü.  
   
-2.  Mit der rechten Maustaste **Datenverbindungen** in **Server-Explorer**/**Datenbank-Explorer** , und klicken Sie dann auf **Verbindung hinzufügen**.  
+2. Mit der rechten Maustaste **Datenverbindungen** in **Server-Explorer**/**Datenbank-Explorer** , und klicken Sie dann auf **Verbindung hinzufügen**.  
   
-3.  Geben Sie eine gültige Verbindung mit der Beispieldatenbank Northwind.  
+3. Geben Sie eine gültige Verbindung mit der Beispieldatenbank Northwind.  
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Zum Hinzufügen eines Projekts, das eine LINQ to SQL-Datei enthält.  
   
-1.  Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms-Anwendung** als Projekttyp.  
+1. Zeigen Sie in Visual Studio im Menü **Datei** auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie Visual Basic **Windows Forms-Anwendung** als Projekttyp.  
   
-2.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die **LINQ to SQL-Klassen** Elementvorlage.  
+2. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**. Wählen Sie die **LINQ to SQL-Klassen** Elementvorlage.  
   
-3.  Nennen Sie die Datei `northwind.dbml`. Klicken Sie auf **Hinzufügen**. Der Object Relational Designer (O/R Designer) wird für die Datei northwind.dbml geöffnet.  
+3. Nennen Sie die Datei `northwind.dbml`. Klicken Sie auf **Hinzufügen**. Der Object Relational Designer (O/R Designer) wird für die Datei northwind.dbml geöffnet.  
   
 ### <a name="to-add-stored-procedures-to-the-or-designer"></a>Hinzufügen von gespeicherten Prozeduren in den O/R-Designer  
   
-1.  In **Server-Explorer**/**Datenbank-Explorer**, erweitern Sie die Verbindung zur Northwind-Datenbank. Erweitern Sie die **gespeicherte Prozeduren** Ordner.  
+1. In **Server-Explorer**/**Datenbank-Explorer**, erweitern Sie die Verbindung zur Northwind-Datenbank. Erweitern Sie die **gespeicherte Prozeduren** Ordner.  
   
      Wenn Sie den O/R-Designer geschlossen haben, können Sie sie durch Doppelklicken auf die Datei northwind.dbml, die Sie zuvor hinzugefügt haben erneut öffnen.  
   
-2.  Klicken Sie auf die **Umsatz nach Jahr** gespeicherte Prozedur aus, und ziehen Sie es in den rechten Bereich des Designers. Klicken Sie auf die **Ten Most Expensive Products** gespeicherte Prozedur, ziehen Sie es in den rechten Bereich des Designers.  
+2. Klicken Sie auf die **Umsatz nach Jahr** gespeicherte Prozedur aus, und ziehen Sie es in den rechten Bereich des Designers. Klicken Sie auf die **Ten Most Expensive Products** gespeicherte Prozedur, ziehen Sie es in den rechten Bereich des Designers.  
   
-3.  Speichern Sie die Änderungen zu und schließen Sie den Designer.  
+3. Speichern Sie die Änderungen zu und schließen Sie den Designer.  
   
-4.  Speichern Sie das Projekt.  
+4. Speichern Sie das Projekt.  
   
 ### <a name="to-add-code-to-display-the-results-of-the-stored-procedures"></a>Hinzufügen von Code zum Anzeigen der Ergebnisse der gespeicherten Prozeduren  
   
-1.  Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.DataGridView> Steuerelement auf das Standard-Windows-Formular für das Projekt, Form1.  
+1. Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.DataGridView> Steuerelement auf das Standard-Windows-Formular für das Projekt, Form1.  
   
-2.  Doppelklicken Sie auf Form1, um zum Hinzufügen von Code die `Load` Ereignis.  
+2. Doppelklicken Sie auf Form1, um zum Hinzufügen von Code die `Load` Ereignis.  
   
-3.  Wenn Sie gespeicherte Prozeduren in den O/R-Designer hinzugefügt haben, wird der Designer hinzugefügt eine <xref:System.Data.Linq.DataContext> Objekt für das Projekt. Dieses Objekt enthält den Code, der für diese Prozeduren zugreifen. Die <xref:System.Data.Linq.DataContext> Objekt für das Projekt mit dem Namen wird anhand des Namens der DBML-Datei. Für dieses Projekt die <xref:System.Data.Linq.DataContext> Objekt mit dem Namen `northwindDataContext`.  
+3. Wenn Sie gespeicherte Prozeduren in den O/R-Designer hinzugefügt haben, wird der Designer hinzugefügt eine <xref:System.Data.Linq.DataContext> Objekt für das Projekt. Dieses Objekt enthält den Code, der für diese Prozeduren zugreifen. Die <xref:System.Data.Linq.DataContext> Objekt für das Projekt mit dem Namen wird anhand des Namens der DBML-Datei. Für dieses Projekt die <xref:System.Data.Linq.DataContext> Objekt mit dem Namen `northwindDataContext`.  
   
      Sie können eine Instanz von erstellen die <xref:System.Data.Linq.DataContext> in Ihrem Code und der Aufruf die gespeicherte Prozedur-Methoden, die vom O/R-Designer angegeben. Zum Binden an die <xref:System.Windows.Forms.DataGridView> Objekt ist, wird Sie möglicherweise erzwingen, dass die auszuführende Abfrage sofort durch Aufrufen der <xref:System.Linq.Enumerable.ToList%2A> -Methode für die Ergebnisse der gespeicherten Prozedur.  
   
@@ -66,7 +66,7 @@ Language Integrated Query (LINQ) erleichtert Ihnen den Zugriff auf Datenbankinfo
      [!code-vb[VbLINQtoSQLHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#1)]  
     [!code-vb[VbLINQtoSQLHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form3.vb#2)]  
   
-4.  Drücken Sie F5, um das Projekt ausführen und die Ergebnisse anzuzeigen.  
+4. Drücken Sie F5, um das Projekt ausführen und die Ergebnisse anzuzeigen.  
   
 ## <a name="see-also"></a>Siehe auch
 

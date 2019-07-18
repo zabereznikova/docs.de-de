@@ -6,11 +6,11 @@ helpviewer_keywords:
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
 ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907841"
 ---
 # <a name="other-control-structures-visual-basic"></a>Weitere Steuerungsstrukturen (Visual Basic)
 Visual Basic bietet Steuerungsstrukturen, die Ihnen helfen, einer Ressource zu verwerfen, oder verringern Sie die Anzahl wie oft Sie einen Objektverweis zu wiederholen müssen.  

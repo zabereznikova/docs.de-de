@@ -3,11 +3,11 @@ title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
 ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757910"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 Stellt das Stammelement für den <xref:System.Runtime.Serialization>-Namespaceabschnitt dar und enthält Elemente zum Festlegen von <xref:System.Runtime.Serialization.DataContractSerializer>-Optionen.  
@@ -49,7 +49,7 @@ Stellt das Stammelement für den <xref:System.Runtime.Serialization>-Namespaceab
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Das Element der obersten Ebene für die Konfiguration.|  
+|[\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Das Element der obersten Ebene für die Konfiguration.|  
   
 ## <a name="see-also"></a>Siehe auch
 

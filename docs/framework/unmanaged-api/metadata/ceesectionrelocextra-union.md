@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a78a4b82d0b2064c90c938a8614b0c7594f7856
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e73caa3c69090bca30c8d4a907ddb619bd0ed4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182272"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776322"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra-Union
 Stellt einen Adressoffset, mit dem die [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) Schnittstelle, um einen Abschnitt zu verschieben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef union  {  
     USHORT highAdj;  
 } CeeSectionRelocExtra;  

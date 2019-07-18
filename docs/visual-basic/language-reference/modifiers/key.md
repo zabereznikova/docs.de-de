@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
 ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053950"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 Die `Key` Schlüsselwort können Sie Verhalten für Eigenschaften anonymer Typen anzugeben. Nur Eigenschaften bestimmen Sie, wie Tests für Gleichheit zwischen Instanzen eines anonymen Typs oder eine Berechnung des Code-Hashwerte Schlüsseleigenschaften teilnehmen. Die Werte der Eigenschaften können nicht geändert werden.  

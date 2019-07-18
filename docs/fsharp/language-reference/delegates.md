@@ -2,12 +2,12 @@
 title: Delegaten
 description: Informationen zum Arbeiten mit Delegaten F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 772685488b7caef92123979d817929c631248afb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0596b67530b0399df41dffdf855a07bce2bf4761
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612893"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641971"
 ---
 # <a name="delegates"></a>Delegaten
 

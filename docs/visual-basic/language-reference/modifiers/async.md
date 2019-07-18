@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
 ms.openlocfilehash: ad6d671a45cee7d534347d23963bb5035ecc8dac
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802708"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 Die `Async` Modifizierer gibt an, dass die Methode oder [Lambda-Ausdruck](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) asynchron ist, dass er ändert. Solche Methoden werden als bezeichnet *Async-Methoden*.  

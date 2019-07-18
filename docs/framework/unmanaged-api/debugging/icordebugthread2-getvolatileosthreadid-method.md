@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9bf96371798b38bc392bc6bbd8f6fe8f97c7969
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d964a5a77569762ff4fd69e419324a377b820d97
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501967"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768946"
 ---
 # <a name="icordebugthread2getvolatileosthreadid-method"></a>ICorDebugThread2::GetVolatileOSThreadID-Methode
 Ruft den Bezeichner des Threads für ICorDebugThread2 ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetVolatileOSThreadID (  
     [out] DWORD    *pdwTid  
 );  

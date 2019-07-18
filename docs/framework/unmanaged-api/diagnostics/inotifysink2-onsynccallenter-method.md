@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78aaa5d8031e7b554eee2a147d9940ff8d7f7e02
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e5fc8b3e6432475468f1012313c95ddd2e22e026
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201896"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736262"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter-Methode
 Wird aufgerufen, wenn einen Aufruf eingeben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT OnSyncCallEnter  
 (  
     [in]  CALL_ID   in_CallID,  

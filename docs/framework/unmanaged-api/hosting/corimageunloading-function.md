@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cb5f9decbcdfb71f67a5132dc59773f1de8b0a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086428"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758394"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading-Funktion
 Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls entladen werden.  
@@ -30,7 +30,7 @@ Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls entladen
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 STDAPI (VOID) _CorImageUnloading(   
    [in] PVOID* ImageBase  
 );  

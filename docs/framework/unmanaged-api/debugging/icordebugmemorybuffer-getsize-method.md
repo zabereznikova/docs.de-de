@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 9ffd5482-268e-4680-9fd1-bfb0b7d66450
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d687f2bbd3c20564368d4246961b56382ea14cf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0db104dbfa61b836aa01b99be45725ed4c04c798
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099676"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752780"
 ---
 # <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer::GetSize-Methode
 Ruft die Größe des Speicherpuffers in Bytes ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSize(  
    [out] ULONG32 *pcbBufferLength  
 );  
@@ -43,4 +43,4 @@ HRESULT GetSize(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugMemoryBuffer-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

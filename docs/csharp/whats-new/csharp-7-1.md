@@ -1,13 +1,13 @@
 ---
 title: Neues in C# 7.1
 description: Eine Übersicht der neuen Features in C# 7.1
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 04/09/2019
+ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728653"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347616"
 ---
 # <a name="whats-new-in-c-71"></a>Neues in C# 7.1
 
@@ -23,10 +23,19 @@ Die neuen Sprachfeatures in diesem Release umfassen:
   - Sie können literale Standardausdrücke in Standardwertausdrücken verwenden, wenn der Zieltyp abgeleitet werden kann.
 * [Abgeleitete Tupelelementnamen](#inferred-tuple-element-names)
   - Die Namen von Tupelelementen können in den meisten Fällen von der Initialisierung eines Tupels abgeleitet werden.
+* [Musterabgleich für generische Typparameter](#pattern-matching-on-generic-type-parameters)
+  - Sie können Musterabgleichsausdrücke für Variablen verwenden, deren Typ ein generischer Typparameter ist.
 
-Außerdem verfügt der Compiler über die zwei Optionen `/refout` und `/refonly`, mit denen die [Generierung der Referenzassembly](#reference-assembly-generation) gesteuert wird.
+Außerdem verfügt der Compiler über die zwei Optionen `-refout` und `-refonly`, mit denen die [Generierung der Referenzassembly](#reference-assembly-generation) gesteuert wird.
 
 Sie müssen [die Sprachversion des Compilers konfigurieren](../language-reference/configure-language-version.md) und die Version auswählen, um die neuesten Features in einer Punktversion zu verwenden.
+
+Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktionen. Sie werden die Hintergründe jeder einzelnen Funktion erfahren. Sie werden die Syntax erlernen. Sie können sich diese Funktionen in unserer Umgebung mit dem globalen `dotnet try`-Tool näher ansehen:
+
+1. Installieren Sie das globale [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup)-Tool.
+1. Klonen Sie das [dotnet/try-samples](https://github.com/dotnet/try-samples)-Repository.
+1. Legen Sie das aktuelle Verzeichnis auf das Unterverzeichnis *csharp7* für das *try-samples*-Repository fest.
+1. Führen Sie aus `dotnet try`.
 
 ## <a name="async-main"></a>Async Main
 
@@ -77,7 +86,7 @@ Können Sie nun den Typ weglassen, der auf der rechten Seite der Initialisierung
 Func<string, bool> whereClause = default;
 ```
 
-Weitere Informationen zu dieser Erweiterung finden Sie unter [default value expressions (Standardwertausdrücke)](../programming-guide/statements-expressions-operators/default-value-expressions.md) im C#-Programmierhandbuch.
+Weitere Informationen zu dieser Erweiterung finden Sie unter [Standardwertausdrücke](../programming-guide/statements-expressions-operators/default-value-expressions.md) im C#-Programmierhandbuch.
 
 Diese Erweiterung ändert auch einige Regeln der Analyse für das [Schlüsselwort „default“](../language-reference/keywords/default.md).
 
@@ -101,7 +110,11 @@ var pair = (count, label); // element names are "count" and "label"
 
 Weitere Informationen über dieses Feature finden Sie im Artikel [Tupel](../tuples.md).
 
+## <a name="pattern-matching-on-generic-type-parameters"></a>Musterabgleich für generische Typparameter
+
+Ab C# 7.1 kann der Musterausdruck für `is` und das `switch`-Typmuster den Typ eines generischen Typparameters haben. Dies kann sehr nützlich sein, wenn Sie Typen überprüfen, die entweder `struct`- oder `class`-Typen sein können, und Sie Boxing vermeiden möchten.
+
 ## <a name="reference-assembly-generation"></a>Generierung der Referenzassembly
 
-Es gibt zwei neue Compileroptionen, die *Assemblys nur für Referenzen* generieren: [/refout](../language-reference/compiler-options/refout-compiler-option.md) und [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Es gibt zwei neue Compileroptionen, die *Assemblys nur für Referenzen* generieren: [-refout](../language-reference/compiler-options/refout-compiler-option.md) und [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
 In den verlinkten Artikeln werden diese Optionen und Referenzassemblys ausführlich beschrieben.

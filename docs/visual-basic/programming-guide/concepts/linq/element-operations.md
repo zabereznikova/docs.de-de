@@ -3,11 +3,11 @@ title: Elementvorgänge (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
 ms.openlocfilehash: d631c9d091d75c12366e17a862637bdc4f0633b9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977573"
 ---
 # <a name="element-operations-visual-basic"></a>Elementvorgänge (Visual Basic)
 Bei Elementvorgängen werden einzelne, spezifische Elemente aus einer Sequenz zurückgegeben.  

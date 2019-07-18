@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63dc9ee81c98a23f01948a142018369eca7210b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8043ae8a3d384ab0936ae96e39174a7afc80a636
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116754"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776210"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed-Methode
 Benachrichtigt den Profiler, dass eine COM-Interop-Vtable zerstört wird.  
@@ -32,7 +32,7 @@ Benachrichtigt den Profiler, dass eine COM-Interop-Vtable zerstört wird.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT COMClassicVTableDestroyed(  
     [in] ClassID wrappedClassId,  
     [in] REFGUID implementedIID,  
@@ -40,7 +40,7 @@ HRESULT COMClassicVTableDestroyed(
 ```  
   
 ## <a name="parameters"></a>Parameter  
- `wrappedClasId`  
+ `wrappedClassId`  
  [in] Die ID der Klasse für die diese Vtable erstellt wurde.  
   
  `implementedIID`  

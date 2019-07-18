@@ -3,11 +3,11 @@ title: Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
 ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766531"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)
 Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von Visual Basic, die ihnen ermöglicht, die als Teil des aufzurufenden eine *Abfrageausdruck*. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen *methodenbasierter* Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt.  

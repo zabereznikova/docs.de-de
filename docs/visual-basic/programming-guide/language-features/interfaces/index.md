@@ -7,25 +7,25 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee53e6e5fc360c5155e1682f829a45be922caf22
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972382"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665424"
 ---
 # <a name="interfaces-visual-basic"></a>Schnittstellen (Visual Basic)
 *Schnittstellen* definieren die Eigenschaften, Methoden und Ereignisse, die von Klassen implementiert werden können. Schnittstellen erlauben es Ihnen, Funktionen als kleine Gruppen mit verwandten Eigenschaften, Methoden und Ereignisse zu definieren. Dadurch werden Kompatibilitätsprobleme reduziert, da Sie für die Schnittstellen erweiterte Implementierungen entwickeln können, ohne vorhandenen Code zu gefährden. Sie können neue Funktionen zu einem beliebigen Zeitpunkt hinzufügen, indem Sie weitere Schnittstellen und Implementierungen entwickeln.  
   
  Es gibt viele weitere Gründe, warum Sie möglicherweise Schnittstellen anstelle der Klassenvererbung verwenden möchten:  
   
--   Schnittstellen sind besser für Situationen geeignet, in denen Anwendungen viele nicht verknüpfte Objekttypen erfordern, um bestimmte Funktionen bereitzustellen.  
+- Schnittstellen sind besser für Situationen geeignet, in denen Anwendungen viele nicht verknüpfte Objekttypen erfordern, um bestimmte Funktionen bereitzustellen.  
   
--   Schnittstellen sind flexibler als Basisklassen, da Sie eine einzelne Implementierung definieren können, die mehrere Schnittstellen implementieren kann.  
+- Schnittstellen sind flexibler als Basisklassen, da Sie eine einzelne Implementierung definieren können, die mehrere Schnittstellen implementieren kann.  
   
--   Schnittstellen sind in Situationen vorzuziehen, in denen Sie keine Implementierung von einer Basisklasse erben.  
+- Schnittstellen sind in Situationen vorzuziehen, in denen Sie keine Implementierung von einer Basisklasse erben.  
   
--   Schnittstellen sind nützlich, wenn Sie keine Klassenvererbung verwenden können. Z. B. Strukturen können nicht von Klassen erben, sie können jedoch Schnittstellen implementieren.  
+- Schnittstellen sind nützlich, wenn Sie keine Klassenvererbung verwenden können. Z. B. Strukturen können nicht von Klassen erben, sie können jedoch Schnittstellen implementieren.  
   
 ## <a name="declaring-interfaces"></a>Deklarieren von Schnittstellen  
  Schnittstellendefinitionen werden innerhalb der `Interface` und `End Interface` Anweisungen eingeschlossen. Nach der `Interface` Anweisung können Sie eine optionale `Inherits` Anweisung hinzufügen, die eine oder mehrere geerbte Schnittstellen auflistet. Die `Inherits` Anweisungen müssen in der Deklaration vor allen anderen Anweisungen, außer Kommentaren, stehen. Die übrigen Anweisungen der Schnittstellendefinition sollten `Event`, `Sub`, `Function`, `Property`, `Interface`, `Class`, `Structure`, und `Enum` Anweisungen sein. Schnittstellen können keinen Implementierungscode oder Anweisungen, die Implementierungscode zugeordnet sind, enthalten, wie z. B. `End Sub` oder `End Property`.  

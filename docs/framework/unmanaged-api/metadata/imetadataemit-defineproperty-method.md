@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b80833892fc1c0290e94f5de7d9b081529c6a37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 69b398fa003abc0dba00ee89a9bb911a8c2dd6df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085024"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777515"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty-Methode
 Erstellt eine Eigenschaftsdefinition für den angegebenen Typ, mit dem angegebenen `get` und `set` Methodenaccessoren, und ruft ein Token auf diese Eigenschaftsdefinition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineProperty (   
     [in]  mdTypeDef          td,   
     [in]  LPCWSTR            szProperty,   

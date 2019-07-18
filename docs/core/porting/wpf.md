@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 29ea308ee5147cfb18df312887e933615e349803
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677550"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342205"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Vorgehensweise: Portieren einer WPF-Desktop-App zu .NET Core
 
@@ -27,7 +27,7 @@ In diesem Artikel werden verschiedene Namen zum Identifizieren der für die Migr
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- [Visual Studio-2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=wpf+core) für alle Designerarbeiten, die Sie durchführen möchten.
+- [Visual Studio-2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) für alle Designerarbeiten, die Sie durchführen möchten.
 
   Installieren Sie die folgenden Visual Studio-Workloads:
   - .NET-Desktopentwicklung
@@ -37,9 +37,8 @@ In diesem Artikel werden verschiedene Namen zum Identifizieren der für die Migr
 - Ihr Projekt muss in C# codiert werden. 
 - Installieren Sie die neueste [.NET Core 3.0](https://aka.ms/netcore3download)-Vorschau.
 
-
 >[!NOTE]
->**Visual Studio 2017** unterstützt .NET Core 3.0-Projekte nicht. **Visual Studio 2019 Preview/RC** unterstützt .NET Core 3.0-Projekte, aber noch nicht den Visual Designer für .NET Core 3.0-WPF-Projekte. Ihre Projektmappe muss ein .NET-WPF-Projekt enthalten, das seine Dateien gemeinsam mit dem .NET Core-Projekt verwendet, um den Visual Designer verwenden zu können.
+>**Visual Studio 2017** unterstützt .NET Core 3.0-Projekte nicht. **Visual Studio 2019** unterstützt .NET Core 3.0-Projekte, aber noch nicht den Visual Designer für .NET Core 3.0-WPF-Projekte. Ihre Projektmappe muss ein .NET-WPF-Projekt enthalten, das seine Dateien gemeinsam mit dem .NET Core-Projekt verwendet, um den Visual Designer verwenden zu können.
 
 ### <a name="consider"></a>Consider
 
@@ -61,7 +60,7 @@ Wenn Sie eine .NET Framework WPF-Anwendung portieren, müssen Sie ein paar Dinge
 
     Es hat sich bewährt, vor jeder Migration die neuesten Versionen der NuGet-Pakete zu verwenden. Wenn Ihre Anwendung auf NuGet-Pakete verweist, aktualisieren Sie sie auf die neueste Version. Stellen Sie sicher, dass die Anwendung erfolgreich erstellt wird. Wenn nach dem Upgrade Paketfehler auftreten, stufen Sie das Paket auf die neueste Version herab, die Ihren Code nicht beschädigt.
 
-01. Visual Studio 2019 Preview/RC unterstützt noch nicht den WPF-Designer für .NET Core 3.0.
+01. Visual Studio 2019 unterstützt noch nicht den WPF-Designer für .NET Core 3.0.
 
     Derzeit müssen Sie Ihre vorhandene .NET Framework-WPF-Projektdatei beibehalten, wenn Sie den WPF-Designer in Visual Studio verwenden möchten.
 
@@ -216,7 +215,7 @@ Der vorherige Befehl fügt dem **MyWPFCore.csproj**-Projekt Folgendes hinzu:
 
 ## <a name="wpf-designer"></a>WPF-Designer
 
-Wie in diesem Artikel ausführlich beschrieben unterstützt Visual Studio 2019 Preview/RC in .NET Framework-Projekten nur den WPF-Designer. Durch Erstellen eines parallelen .NET Core-Projekts können Sie Ihr Projekt mit .NET Core testen, während Sie das .NET Framework-Projekt zum Entwerfen von Formularen verwenden. Die Projektmappendatei enthält sowohl die .NET Framework- als auch die .NET Core-Projekte. Führen Sie das Hinzufügen und Entwerfen Ihrer Formulare und Steuerelemente im .NET Framework-Projekt durch, und auf der Basis der Dateiglobmuster, die wir den .NET Core-Projekten hinzugefügt haben, wird jede neue oder geänderte Datei automatisch in die .NET Core-Projekte einbezogen.
+Wie in diesem Artikel ausführlich beschrieben unterstützt Visual Studio 2019 in .NET Framework-Projekten nur den WPF-Designer. Durch Erstellen eines parallelen .NET Core-Projekts können Sie Ihr Projekt mit .NET Core testen, während Sie das .NET Framework-Projekt zum Entwerfen von Formularen verwenden. Die Projektmappendatei enthält sowohl die .NET Framework- als auch die .NET Core-Projekte. Führen Sie das Hinzufügen und Entwerfen Ihrer Formulare und Steuerelemente im .NET Framework-Projekt durch, und auf der Basis der Dateiglobmuster, die wir den .NET Core-Projekten hinzugefügt haben, wird jede neue oder geänderte Datei automatisch in die .NET Core-Projekte einbezogen.
 
 Sobald Visual Studio 2019 den WPF-Designer unterstützt, können Sie den Inhalt Ihrer .NET Core-Projektdatei kopieren und in die .NET Framework-Projektdatei einfügen. Löschen Sie dann die Dateiglobmuster, die mit dem `<Source>`- und `<EmbeddedResource>`-Element hinzugefügt wurden. Stellen Sie die Pfade zu jedem von Ihrer App verwendeten Projektverweis wieder her. Damit wird effektiv das .NET Framework-Projekt zu einem .NET Core-Projekt heraufgestuft.
  

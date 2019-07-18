@@ -11,11 +11,11 @@ helpviewer_keywords:
 - drawing [WPF], text to visuals
 ms.assetid: fee4003c-e8a6-46ec-babd-2c7f4231a101
 ms.openlocfilehash: 1ea31540ad59ab419e209e4133bcb88640cc01fe
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776167"
 ---
 # <a name="how-to-draw-text-to-a-visual"></a>Vorgehensweise: Zeichnen von Text in grafischen Elementen
 Das folgende Beispiel zeigt das Zeichnen von Text auf einer <xref:System.Windows.Media.DrawingVisual> mithilfe einer <xref:System.Windows.Media.DrawingContext> Objekt. Ein Zeichnungskontext wird zurückgegeben, indem die <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> Methode eine <xref:System.Windows.Media.DrawingVisual> Objekt. Sie können Grafiken und Text in einen Zeichnungskontext zeichnen.  

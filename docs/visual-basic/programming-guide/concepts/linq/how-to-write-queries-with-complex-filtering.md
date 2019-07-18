@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Schreiben von Abfragen mit komplexer Filterung (Visual B
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
 ms.openlocfilehash: ac58394619b83e2b862e87926f0b6a722fdc3c7e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614843"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>Vorgehensweise: Schreiben von Abfragen mit komplexer Filterung (Visual Basic)
 Es kann vorkommen, dass Sie LINQ to XML-Abfragen mit komplexen Filtern schreiben möchten. Vielleicht möchten Sie z. B. auf diese Weise nach allen Elementen suchen, die ein untergeordnetes Element mit einem bestimmten Namen und einem bestimmten Wert besitzen. In diesem Thema finden Sie ein Beispiel für das Schreiben von Fragen mit komplexer Filterung.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c83d48994c6038dfde67867a1766777c479c2169
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174615"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637734"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
 Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen. Diese fehlgeschlagenen Nachrichten werden in einer Warteschlange für unzustellbare Nachrichten aufgezeichnet. Das Fehlschlagen der Zustellung kann beispielsweise durch Netzwerkfehler, eine gelöschte Warteschlange, eine volle Warteschlange, einen Authentifizierungsfehler oder eine zu späte Zustellung verursacht werden.  
@@ -30,18 +30,18 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
   
  Die Bindung weist die folgenden Eigenschaften für eine Warteschlange für unzustellbare Nachrichten auf:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
 ## <a name="reading-messages-from-the-dead-letter-queue"></a>Lesen von Nachrichten aus der Warteschlange für unzustellbare Nachrichten  
  Eine Anwendung, die Nachrichten aus einer Warteschlange für unzustellbare Nachrichten liest, ist ähnlich wie ein WCF-Dienst, der aus einer Anwendungswarteschlange, mit Ausnahme der folgenden geringfügige Unterschiede liest:  
   
--   Zum Lesen von Nachrichten aus einer transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI (Uniform Resource Identifier) folgendes Format aufweisen: net.msmq://localhost/system$;DeadXact.  
+- Zum Lesen von Nachrichten aus einer transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI (Uniform Resource Identifier) folgendes Format aufweisen: net.msmq://localhost/system$;DeadXact.  
   
--   Zum Lesen von Nachrichten aus einer nicht transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI folgendes Format aufweisen: net.msmq://localhost/system$;DeadLetter.  
+- Zum Lesen von Nachrichten aus einer nicht transaktionalen Systemwarteschlange für unzustellbare Nachrichten muss der URI folgendes Format aufweisen: net.msmq://localhost/system$;DeadLetter.  
   
--   Um eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten gelesen werden, der URI muss von der Form: Net.msmq://localhost/private/ sein\<*Custom-Dlq-Name*>, in denen *Custom-Dlq-Name* ist der Name des benutzerdefinierten Dead Letter-Warteschlange.  
+- Um eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten gelesen werden, der URI muss von der Form: Net.msmq://localhost/private/ sein\<*Custom-Dlq-Name*>, in denen *Custom-Dlq-Name* ist der Name des benutzerdefinierten Dead Letter-Warteschlange.  
   
  Weitere Informationen dazu, wie Sie die Adresse von Warteschlangen finden Sie unter [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
@@ -72,5 +72,5 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
 ## <a name="see-also"></a>Siehe auch
 
 - [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Vorgehensweise: Austauschen von Nachrichten in der Warteschlange mit wcd-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

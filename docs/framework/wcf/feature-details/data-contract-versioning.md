@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b2bfe253011e24e6792fc60221d05fd60555e87c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118026"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627050"
 ---
 # <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung
 Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine vollständige Übersicht und normative versionsverwaltungsanleitung finden Sie unter [Best Practices: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -34,13 +34,13 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
   
  Einige Änderungen ändern die gesendeten Daten, müssen aber nicht unbedingt "breaking" sein. Die folgenden Änderungen sind immer "breaking":  
   
--   Das Ändern der Werte <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>oder <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> eines Datenvertrags.  
+- Das Ändern der Werte <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>oder <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> eines Datenvertrags.  
   
--   Das Ändern der Reihenfolge der Datenelemente über die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> der Klasse <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+- Das Ändern der Reihenfolge der Datenelemente über die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> der Klasse <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
--   Das Umbenennen eines Datenelements.  
+- Das Umbenennen eines Datenelements.  
   
--   Das Ändern des Datenvertrags eines Datenelements. Beispielsweise die Änderung des Typs eines Datenelements von ganzer Zahl zu Zeichenfolge oder von einem Typ mit Datenvertrag namens "Kunde" in einen Typ mit einem Datenvertrag namens "Person".  
+- Das Ändern des Datenvertrags eines Datenelements. Beispielsweise die Änderung des Typs eines Datenelements von ganzer Zahl zu Zeichenfolge oder von einem Typ mit Datenvertrag namens "Kunde" in einen Typ mit einem Datenvertrag namens "Person".  
   
  Ebenfalls möglich sind die folgenden Änderungen.  
   
@@ -90,9 +90,9 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
 ## <a name="omitted-default-values"></a>Ausgelassene Standardwerte  
  Es ist möglich (wenn auch nicht empfohlen) Festlegen der `EmitDefaultValue` Eigenschaft für das Attribut DataMemberAttribute `false`, wie in beschrieben [Datenmemberwerte Standard](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Wenn diese Einstellung `false` ist, wird das Datenelement nicht ausgegeben, wenn es auf seinen Standardwert (normalerweise NULL oder 0 (null)) festgelegt ist. Dies ist in anderen Versionen auf zwei Arten nicht kompatibel mit erforderlichen Datenelementen:  
   
--   Ein Datenvertrag mit einem Datenelement, das in einer Version erforderlich ist, kann keine Standarddaten (NULL oder 0(null)) von einer anderen Version erhalten, in der das Datenelement `EmitDefaultValue` auf `false` festgelegt hat.  
+- Ein Datenvertrag mit einem Datenelement, das in einer Version erforderlich ist, kann keine Standarddaten (NULL oder 0(null)) von einer anderen Version erhalten, in der das Datenelement `EmitDefaultValue` auf `false` festgelegt hat.  
   
--   Ein erforderliches Datenelement, dessen `EmitDefaultValue` auf `false` festgelegt ist, kann nicht verwendet werden, um seinen Standardwert (NULL oder 0 (null)) zu deserialisieren, aber es kann bei der Deserialisierung einen derartigen Wert erhalten. Dies schafft ein Round-Tripping-Problem (Daten können eingelesen werden, aber die gleichen Daten können nicht ausgegeben werden). Wenn daher in einer Version `IsRequired``true` und `EmitDefaultValue``false` ist, sollte die gleiche Kombination für alle anderen Versionen gelten, damit keine Version des Datenvertrags einen Wert produzieren kann, der nicht zu einem Roundtrip führt.  
+- Ein erforderliches Datenelement, dessen `EmitDefaultValue` auf `false` festgelegt ist, kann nicht verwendet werden, um seinen Standardwert (NULL oder 0 (null)) zu deserialisieren, aber es kann bei der Deserialisierung einen derartigen Wert erhalten. Dies schafft ein Round-Tripping-Problem (Daten können eingelesen werden, aber die gleichen Daten können nicht ausgegeben werden). Wenn daher in einer Version `IsRequired``true` und `EmitDefaultValue``false` ist, sollte die gleiche Kombination für alle anderen Versionen gelten, damit keine Version des Datenvertrags einen Wert produzieren kann, der nicht zu einem Roundtrip führt.  
   
 ## <a name="schema-considerations"></a>Schemaüberlegungen  
  Eine Erklärung, welches Schema für Datenvertragstypen produziert wird, finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
@@ -126,7 +126,7 @@ Natürlich ist die Änderung des Datenvertrags der Inhalte einer Sammlung (z. B
 - <xref:System.Runtime.Serialization.SerializationException>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - [Versionstolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Bewährte Methoden: Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

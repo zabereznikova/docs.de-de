@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a676989bdc6866f85fabe3e15b1e6b7b8b5a9a9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 66bd56a332dc34fd35f3129256cc0e3d6c5d4508
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351254"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636703"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc-Methode
 

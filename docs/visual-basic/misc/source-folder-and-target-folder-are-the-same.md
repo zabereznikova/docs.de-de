@@ -2,19 +2,19 @@
 title: Quell- und Zielordner sind identisch.
 ms.date: 07/20/2015
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
-ms.openlocfilehash: a3739afd25971433d78d84bb183c51ab674ecd9a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: f631e3a349c049960963227fcd954b46ae4fbeaa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026369"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619087"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>Quell- und Zielordner sind identisch.
 Es wurde versucht, eine Datei zu kopieren oder zu verschieben, aber Quell- und Zielverzeichnis sind identisch. Dies kann das Ergebnis einer fehlerhaften Analyse eines Dateipfads sein.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Stellen Sie sicher, dass Sie das richtige Quell- und Zielverzeichnis angegeben haben.  
+- Stellen Sie sicher, dass Sie das richtige Quell- und Zielverzeichnis angegeben haben.  
   
 ## <a name="see-also"></a>Siehe auch
 

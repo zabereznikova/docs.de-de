@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 039dc0d9befb038e643abc4e2524c133234f460b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 275f62c8211f71f067d310dd4b3af2ddb11e93d7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492074"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755463"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended-Methode
 Ruft einen Wert, der angibt, ob der angegebene Thread durch den Debugger Beenden dieses Prozesses angehalten wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsOSSuspended(  
     [in]  DWORD threadID,  
     [out] BOOL  *pbSuspended);  

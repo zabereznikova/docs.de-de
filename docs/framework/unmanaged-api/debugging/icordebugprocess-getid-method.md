@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d9239ccfe8ce08e5b50b762a6fede11ab8a439b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9ebdf0dd2457cd10e31ff71c32b1c09d0e014431
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495714"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765995"
 ---
 # <a name="icordebugprocessgetid-method"></a>ICorDebugProcess::GetID-Methode
 Ruft das Betriebssystem (OS)-ID des Prozesses ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetID([out] DWORD *pdwProcessId);  
 ```  
   

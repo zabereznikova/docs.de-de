@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052442"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Vorgehensweise: Programmgesteuertes Drucken von XPS-Dateien
 Können Sie eine Überladung von der <xref:System.Printing.PrintQueue.AddJob%2A> Methode zum Drucken [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Dateien ohne Öffnen eine <xref:System.Windows.Controls.PrintDialog> oder, im Prinzip alle [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] überhaupt.  
@@ -25,13 +25,13 @@ Können Sie eine Überladung von der <xref:System.Printing.PrintQueue.AddJob%2A>
 ## <a name="example"></a>Beispiel  
  Die wichtigsten Schritte zur Verwendung der dreiparametrigen <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> Methode lauten wie folgt. Das folgende Beispiel enthält die Details.  
   
-1.  Stellen Sie fest, ob es sich bei dem Drucker um einen XPSDrv-Drucker handelt. (Weitere Informationen zu XPSDrv finden Sie unter [Übersicht über das Drucken](printing-overview.md).)  
+1. Stellen Sie fest, ob es sich bei dem Drucker um einen XPSDrv-Drucker handelt. (Weitere Informationen zu XPSDrv finden Sie unter [Übersicht über das Drucken](printing-overview.md).)  
   
-2.  Wenn es sich bei dem Drucker nicht um einen XPSDrv-Drucker handelt, legen Sie das Apartment des Threads auf Singlethread fest.  
+2. Wenn es sich bei dem Drucker nicht um einen XPSDrv-Drucker handelt, legen Sie das Apartment des Threads auf Singlethread fest.  
   
-3.  Instanziieren Sie einen Druckerserver und ein Druckwarteschlangenobjekt.  
+3. Instanziieren Sie einen Druckerserver und ein Druckwarteschlangenobjekt.  
   
-4.  Rufen Sie die Methode, und geben einen Auftragsnamen an, die Datei gedruckt werden, und ein <xref:System.Boolean> flag zum angeben, ob der Drucker einen XPSDrv-Drucker ist.  
+4. Rufen Sie die Methode, und geben einen Auftragsnamen an, die Datei gedruckt werden, und ein <xref:System.Boolean> flag zum angeben, ob der Drucker einen XPSDrv-Drucker ist.  
   
  Im folgenden Beispiel wird gezeigt, wie alle [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dateien in einem Verzeichnis als Batch gedruckt werden. Obwohl die Anwendung den Benutzer das Verzeichnis angeben, wird die dreiparametrige fordert <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> Methode ist nicht erforderlich, eine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Sie kann in jedem Codepfad verwendet werden, in dem ein [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dateiname und -Pfad vorhanden sind, die an sie übergeben werden können.  
   
@@ -66,7 +66,7 @@ Können Sie eine Überladung von der <xref:System.Printing.PrintQueue.AddJob%2A>
 - <xref:System.STAThreadAttribute>
 - [XPS-Dokumente](/windows/desktop/printdocs/documents)
 - [Drucken eines XPS-Dokuments](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
-- [Verwaltetes und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [Verwaltete und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
 - [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [Dokumente in WPF](documents-in-wpf.md)
 - [Übersicht über das Drucken](printing-overview.md)

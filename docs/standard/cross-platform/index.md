@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b153baaa-130c-4169-860b-e580591de91e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69c9cd480181d497eda7e67e57d53c32d4a8932f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c2167f74c5d1dd9f49995b6407e65feb474084dc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674067"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641437"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a>Entwickeln für mehrere Plattformen mit dem .NET Framework
 

@@ -2,19 +2,19 @@
 title: Aggregatfunktionen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b01c7dca675e79c61b87bcc1fb30455286db3118
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104922"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489961"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Aggregatfunktionen (Entity SQL)
-Ein Aggregat ist ein Sprachkonstrukt, das eine Auflistung als Teil einer Gruppenoperation zu einem Skalar zusammenfasst. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Aggregate sind in zwei Formen:  
+Ein Aggregat ist ein Sprachkonstrukt, das eine Auflistung als Teil einer Gruppenoperation zu einem Skalar zusammenfasst. Es gibt zwei Arten von [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Aggregaten:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Auflistungsfunktionen, die an einer beliebigen Stelle in einem Ausdruck verwendet werden können. Hierzu gehört auch die Verwendung von Aggregatfunktionen in Projektionen und Prädikate, die auf Auflistungen angewendet werden. Auflistungsfunktionen sind der bevorzugte Modus zum Angeben von Aggregaten in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Auflistungsfunktionen, die an einer beliebigen Stelle in einem Ausdruck verwendet werden können. Hierzu gehört auch die Verwendung von Aggregatfunktionen in Projektionen und Prädikate, die auf Auflistungen angewendet werden. Auflistungsfunktionen sind der bevorzugte Modus zum Angeben von Aggregaten in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
--   Gruppenaggregate in Abfrageausdrücken, die über eine GROUP BY-Klausel verfügen. Wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] akzeptieren Gruppenaggregate DISTINCT und ALL als Modifizierer für die Aggregateingabe.  
+- Gruppenaggregate in Abfrageausdrücken, die über eine GROUP BY-Klausel verfügen. Wie in Transact-SQL akzeptieren gruppenaggregate DISTINCT und ALL als Modifizierer für die Aggregateingabe.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zunächst versucht, einen Ausdruck als eine Funktion für die Sammlung zu interpretieren und wenn der Ausdruck im Rahmen einer SELECT-Ausdruck ist er als gruppenaggregat interpretiert.  
   

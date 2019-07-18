@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control patterns, supporting in UI Automation provider
 - UI Automation, supporting control patterns in provider
 ms.assetid: 0d635c35-ffa8-4dc8-bbc9-12fcd5445776
-ms.openlocfilehash: dd8bc880126cd6fa82f7f3a775edf47f0725b6d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 65ec0f85bf0a63d0051ff9491623a65abee7a05c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982955"
 ---
 # <a name="support-control-patterns-in-a-ui-automation-provider"></a>Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter
 > [!NOTE]
@@ -23,9 +23,9 @@ ms.locfileid: "59123928"
   
 ### <a name="support-control-patterns"></a>Unterstützung von Steuerelementmustern  
   
-1.  Implementieren Sie die entsprechenden Schnittstellen für die Steuerelementmuster, die vom Element unterstützt werden sollen, z. B. <xref:System.Windows.Automation.Provider.IInvokeProvider> für <xref:System.Windows.Automation.InvokePattern>.  
+1. Implementieren Sie die entsprechenden Schnittstellen für die Steuerelementmuster, die vom Element unterstützt werden sollen, z. B. <xref:System.Windows.Automation.Provider.IInvokeProvider> für <xref:System.Windows.Automation.InvokePattern>.  
   
-2.  Zurückgeben Sie das Objekt, das mit Ihrer Implementierung der einzelnen Steuerelementschnittstellen in der Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>  
+2. Geben Sie das Objekt, das die Implementierung der einzelnen Steuerelementschnittstellen enthält, in der Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPatternProvider%2A?displayProperty=nameWithType>zurück  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine Implementierung von <xref:System.Windows.Automation.Provider.ISelectionProvider> für ein benutzerdefiniertes Einzelauswahl-Listenfeld dargestellt. Die Implementierung gibt drei Eigenschaften zurück und ruft das aktuell ausgewählte Element ab.  
@@ -42,4 +42,4 @@ ms.locfileid: "59123928"
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
-- [Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)

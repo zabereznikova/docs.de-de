@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92353cfc2d9ce39074bf43937b5673ff51e34822
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: efe4d28d207625f00634087b862d76c001518c8d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080006"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777024"
 ---
 # <a name="isymunmanagedreadergetdocumentversion-method"></a>ISymUnmanagedReader::GetDocumentVersion-Methode
 Ruft die angegebene Version des angegebenen Dokuments ab. Die Version beginnt bei 1 und wird erhöht, jeder Aktualisierung des Dokuments wird mithilfe der [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) Methode. Wenn die `pbCurrent` Parameter `true`, dies ist die neueste Version des Dokuments.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetDocumentVersion (  
     [in]  ISymUnmanagedDocument *pDoc,  
     [out] int* version,  

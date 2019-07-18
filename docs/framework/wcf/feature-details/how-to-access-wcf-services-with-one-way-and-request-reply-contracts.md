@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Zugreifen auf WCF-Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 84b8f7c44c8124c1a150304dea0f08a0087752bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855113"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Vorgehensweise: Zugreifen auf WCF-Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen
 Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Foundation (WCF)-Dienst, der einen unidirektionalen Vertrag und einem Anforderung-Antwort-Vertrag definiert und verwendet, die nicht der Duplexkommunikation.  
   
 ### <a name="to-define-the-service"></a>So definieren Sie den Dienst  
   
-1.  Deklarieren Sie den Dienstvertrag. Für die unidirektionalen Vorgänge muss `IsOneWay` innerhalb von `true` auf <xref:System.ServiceModel.OperationContractAttribute> festgelegt werden. Im folgenden Code wird der `IOneWayCalculator`-Vertrag, der unidirektionale Vorgänge für `Add`, `Subtract`, `Multiply` und `Divide` besitzt, deklariert. Darüber hinaus wird der Anforderungsantwortvorgang `SayHello` definiert.  
+1. Deklarieren Sie den Dienstvertrag. Für die unidirektionalen Vorgänge muss `IsOneWay` innerhalb von `true` auf <xref:System.ServiceModel.OperationContractAttribute> festgelegt werden. Im folgenden Code wird der `IOneWayCalculator`-Vertrag, der unidirektionale Vorgänge für `Add`, `Subtract`, `Multiply` und `Divide` besitzt, deklariert. Darüber hinaus wird der Anforderungsantwortvorgang `SayHello` definiert.  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Found
     }  
     ```  
   
-2.  Implementieren Sie den Dienstvertrag. Im folgenden Code wird die `IOnewayCalculator`-Schnittstelle implementiert:  
+2. Implementieren Sie den Dienstvertrag. Im folgenden Code wird die `IOnewayCalculator`-Schnittstelle implementiert:  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -71,7 +71,7 @@ Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Found
     }  
     ```  
   
-3.  Hosten Sie den Dienst in einer Konsolenanwendung. Im folgenden Code wird gezeigt, wie der Dienst gehostet wird:  
+3. Hosten Sie den Dienst in einer Konsolenanwendung. Im folgenden Code wird gezeigt, wie der Dienst gehostet wird:  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -109,7 +109,7 @@ Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Found
   
 ### <a name="to-access-the-service"></a>So greifen Sie auf den Dienst zu  
   
-1.  Führen Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) mit der Metadatenaustausch-Endpunktadresse, die um die Clientklasse für den Dienst mithilfe der folgenden Befehlszeile zu erstellen: `Svcutil http://localhost:8000/Service` Die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generiert einen Satz von Schnittstellen und Klassen, wie im folgenden Beispielcode gezeigt.  
+1. Führen Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) mit der Metadatenaustausch-Endpunktadresse, die um die Clientklasse für den Dienst mithilfe der folgenden Befehlszeile zu erstellen: `Svcutil http://localhost:8000/Service` Die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generiert einen Satz von Schnittstellen und Klassen, wie im folgenden Beispielcode gezeigt.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -196,7 +196,7 @@ Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Found
   
      Beachten Sie bei der `IOneWayCalculator`-Schnittstelle, dass für die unidirektionalen Vorgänge das <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Attribut auf `true` und das Attribut des Vorgang des Anforderung-Antwort-Diensts auf den Standardwert (`false`) festgelegt ist. Beachten Sie auch die `OneWayCalculatorClient`-Klasse. Hierbei handelt es sich um die Klasse zum Aufrufen des Diensts.  
   
-2.  Erstellen Sie das Clientobjekt.  
+2. Erstellen Sie das Clientobjekt.  
   
     ```csharp  
     // Create a client  
@@ -205,7 +205,7 @@ Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Found
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3.  Rufen Sie Dienstvorgänge auf.  
+3. Rufen Sie Dienstvorgänge auf.  
   
     ```csharp  
     // Call the Add service operation.  
@@ -239,7 +239,7 @@ Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Found
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  Schließen Sie den Client, um Verbindungen zu schließen, und bereinigen Sie Ressourcen.  
+4. Schließen Sie den Client, um Verbindungen zu schließen, und bereinigen Sie Ressourcen.  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  

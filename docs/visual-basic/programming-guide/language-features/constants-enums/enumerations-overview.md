@@ -6,11 +6,11 @@ helpviewer_keywords:
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
 ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907399"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Übersicht über Enumerationen (Visual Basic)
 Enumerationen bieten eine bequeme Möglichkeit, um mit Sätzen verknüpfter Konstanten zu arbeiten und Konstante Werten Namen zuzuweisen. Sie können zum Beispiel eine Enumeration für einen Satz von Integerkonstanten deklarieren, denen die Tage der Woche zugewiesen sind, und dann in Ihrem Code die Namen der Wochentage statt deren Integerwerte verwenden.  

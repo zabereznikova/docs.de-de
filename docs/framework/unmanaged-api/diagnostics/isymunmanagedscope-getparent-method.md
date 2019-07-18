@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d90aeb22a945f4fa1576009c700c420704dd891b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 78a0f4b1c111e7978af0259f684402bb98566272
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144780"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777859"
 ---
 # <a name="isymunmanagedscopegetparent-method"></a>ISymUnmanagedScope::GetParent-Methode
 Ruft den übergeordneten Bereich dieses Bereichs ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetParent(  
     [out, retval] ISymUnmanagedScope** pRetVal);  
 ```  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
 ms.openlocfilehash: 9a64c6cd6fc1cc53383f2617f7a7a78959e87c4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053590"
 ---
 # <a name="calendar"></a>Kalender
 Ein Kalender kann einen Benutzer unter Verwendung einer visuellen Kalenderansicht ein Datum auswählen.  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
 ms.openlocfilehash: 08082d2e6647f07f33df72ab79dac00c15a1cd1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791611"
 ---
 # <a name="issuertokenresolver"></a>\<issuerTokenResolver>
 Registriert die Aussteller-tokenresolver, der von Handlern in die Auflistung der Tokenhandler verwendet wird. Die Aussteller-tokenresolver wird zum Auflösen des Signaturtokens auf eingehende Tokens und Nachrichten.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032863"
 ---
 # <a name="planning-for-application-performance"></a>Planen der Anwendungsleistung
 Der Erfolg Ihre Leistungsziele zu erreichen, hängt davon ab, wie gut Sie Ihre Leistungsstrategie für die entwickeln. Die Planung ist die erste Phase in ein Produkt entwickeln. Dieses Thema beschreibt einige sehr einfache Regeln für die Entwicklung einer Strategie für die gute Leistung.  
@@ -35,7 +35,7 @@ Der Erfolg Ihre Leistungsziele zu erreichen, hängt davon ab, wie gut Sie Ihre L
 ## <a name="see-also"></a>Siehe auch
 
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
-- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)
 - [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
 - [Objektverhalten](optimizing-performance-object-behavior.md)

@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.EnlistTransaction
 ms.date: 03/30/2017
 ms.assetid: ba793c1d-6b2f-43da-b14d-a825c6c31b01
 ms.openlocfilehash: b2dbf1399876da5785ac28b118956ab0bc5ee521
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997918"
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransaction"></a>Microsoft.Transactions.TransactionBridge.EnlistTransaction
 Der WS-Atomic Transaction-Protokolldienst hat sich erfolgreich in einer Transaktion eingetragen, die den bereitgestellten Koordinationskontext verwendet.  

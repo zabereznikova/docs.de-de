@@ -8,18 +8,18 @@ helpviewer_keywords:
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
 ms.openlocfilehash: f1e4257804b6ce77eeb1bed7b984e90e90cc2752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971066"
 ---
 # <a name="richtextbox"></a>RichTextBox
 Die <xref:System.Windows.Controls.RichTextBox> -Element definiert ein Bearbeitungssteuerelement mit integrierter Unterstützung für Features wie z. B. Ausschneiden und einfügen, Dokumentpräsentation und Inhaltsauswahl.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über RichTextBox](richtextbox-overview.md)  
- [Gewusst wie-Themen](richtextbox-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](richtextbox-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

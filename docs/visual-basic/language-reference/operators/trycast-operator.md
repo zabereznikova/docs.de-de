@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
 ms.openlocfilehash: c0eea4565d5040bb00743fc7864ac15b0fccdea9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013464"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast-Operator (Visual Basic)
 Führt einen Typkonvertierungsvorgang, der keine Ausnahme auslöst.  

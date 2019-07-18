@@ -10,58 +10,58 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146769"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348483"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Rendering von Steuerelementen mit visuellen Stilen
-Mithilfe visueller Stile in Betriebssystemen, die diese unterstützen, bietet das [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Unterstützung für das Rendern von Steuerelementen und anderen Elementen der Windows-Benutzeroberfläche (UI). In diesem Thema werden die verschiedenen Unterstützungsebenen im [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] für das Rendern von Steuerelementen und anderen UI-Elementen mit dem aktuellen visuellen Stil des Betriebssystems diskutiert.  
+.NET Framework bietet Unterstützung für das Rendern von Steuerelementen und anderen Windows-Benutzer Elemente der Benutzeroberfläche (UI), die mithilfe visueller Stile in Betriebssystemen, die sie unterstützen. In diesem Thema erläutert die verschiedenen Arten der Unterstützung in .NET Framework für das Rendern von Steuerelementen und anderen UI-Elementen mit dem aktuellen visuellen Stil des Betriebssystems.  
   
 ## <a name="rendering-classes-for-common-controls"></a>Rendern von Klassen für allgemeine Steuerelemente  
  Unter dem Rendern eine Steuerelements versteht man das Zeichnen der Benutzeroberfläche eines Steuerelements. Der <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace stellt die <xref:System.Windows.Forms.ControlPaint> -Klasse zum Rendern einiger allgemeiner Windows Forms-Steuerelemente bereit. Allerdings zeichnet diese Klasse die Steuerelemente im klassischen Windows-Stil. Dies kann eine einheitliche Gestaltung der Benutzeroberfläche erschweren, wenn das Zeichnen benutzerdefinierter Steuerelemente in Anwendungen mit visuellen Stilen aktiviert ist.  
   
- Das [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] beinhaltet Klassen im <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace, die Teile und Zustände von allgemeinen Steuerelementen mit visuellen Stilen rendern. Jede dieser Klassen enthält `static` -Methoden für das Zeichnen des Steuerelements oder Teile des Steuerelements in einem bestimmten Zustand mit dem aktuellen visuellen Stil des Betriebssystems.  
+ .NET Framework 2.0 enthält die Klassen in der <xref:System.Windows.Forms?displayProperty=nameWithType> Namespace, der die Teile und Zustände von allgemeinen Steuerelementen mit visuellen Stilen rendern. Jede dieser Klassen enthält `static` -Methoden für das Zeichnen des Steuerelements oder Teile des Steuerelements in einem bestimmten Zustand mit dem aktuellen visuellen Stil des Betriebssystems.  
   
  Einige dieser Klassen dienen dem Zeichnen des zugehörigen Steuerelements, unabhängig davon, ob visuelle Stile verfügbar sind. Wenn visuelle Stile aktiviert sind, werden die Klassenelemente das zugehörige Steuerelement mit visuellen Stilen gezeichnet. Wenn visuelle Stile deaktiviert sind, zeichnen die Klassenelemente das Steuerelement im klassischen Windows-Stil. Diese Klassen umfassen:  
   
--   <xref:System.Windows.Forms.ButtonRenderer>  
+- <xref:System.Windows.Forms.ButtonRenderer>  
   
--   <xref:System.Windows.Forms.CheckBoxRenderer>  
+- <xref:System.Windows.Forms.CheckBoxRenderer>  
   
--   <xref:System.Windows.Forms.GroupBoxRenderer>  
+- <xref:System.Windows.Forms.GroupBoxRenderer>  
   
--   <xref:System.Windows.Forms.RadioButtonRenderer>  
+- <xref:System.Windows.Forms.RadioButtonRenderer>  
   
  Andere Klassen können das zugehörige Steuerelement nur zeichnen, wenn visuelle Stile verfügbar sind, und ihre Member löst eine Ausnahme aus, wenn visuelle Stile deaktiviert sind. Diese Klassen umfassen:  
   
--   <xref:System.Windows.Forms.ComboBoxRenderer>  
+- <xref:System.Windows.Forms.ComboBoxRenderer>  
   
--   <xref:System.Windows.Forms.ProgressBarRenderer>  
+- <xref:System.Windows.Forms.ProgressBarRenderer>  
   
--   <xref:System.Windows.Forms.ScrollBarRenderer>  
+- <xref:System.Windows.Forms.ScrollBarRenderer>  
   
--   <xref:System.Windows.Forms.TabRenderer>  
+- <xref:System.Windows.Forms.TabRenderer>  
   
--   <xref:System.Windows.Forms.TextBoxRenderer>  
+- <xref:System.Windows.Forms.TextBoxRenderer>  
   
--   <xref:System.Windows.Forms.TrackBarRenderer>  
+- <xref:System.Windows.Forms.TrackBarRenderer>  
   
  Weitere Informationen zum Verwenden dieser Klassen zum Zeichnen eines Steuerelements finden Sie unter [Vorgehensweise: Verwenden eine Steuerelementwiedergabeklasse](how-to-use-a-control-rendering-class.md).  
   
 ## <a name="visual-style-element-and-rendering-classes"></a>Visuelles Stilelement und Renderingklassen  
  Der <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> -Namespace enthält Klassen, die zum Zeichnen und Abrufen von Informationen über jedes Steuerelement oder UI-Element verwendet werden können, das von visuellen Stilen unterstützt wird. Unterstützte Steuerelemente enthalten allgemeine Steuerelemente, die über eine Rendering-Klasse im <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace verfügen (s. Abschnitt oben), sowie andere Steuerelemente, z.B. Registersteuerelemente und Grundleistensteuerelemente. Weitere unterstützte UI-Elemente sind z.B. Teile des **Startmenüs** , der Taskleiste und des Nicht-Clientbereichs von Windows.  
   
- Die wichtigsten Klassen des <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> -Namespaces sind <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> und <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ist eine Foundation Class zur Identifizierung aller von visuellen Stilen unterstützten Steuerelemente oder Benutzeroberflächenelemente. Zusätzlich zu <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> selbst enthält der <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> -Namespace viele geschachtelte Klassen von <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> mit `static` -Eigenschaften, die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für jeden Zustand eines Steuerelements, Teil eines Steuerelements oder jedes UI-Element zurückgeben, der bzw. das von visuellen Stilen unterstützt wird.  
+ Die wichtigsten Klassen des <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> -Namespaces sind <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> und <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ist eine Foundation Class zur Ermittlung aller von visuellen Stilen unterstützten Steuerelemente oder Benutzeroberflächenelemente. Zusätzlich zu <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> selbst enthält der <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> -Namespace viele geschachtelte Klassen von <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> mit `static` -Eigenschaften, die <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> für jeden Zustand eines Steuerelements, Teil eines Steuerelements oder jedes UI-Element zurückgeben, der bzw. das von visuellen Stilen unterstützt wird.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Stellt die Methoden, die zeichnen und Abrufen von Informationen zu den einzelnen <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> vom aktuellen visuellen Stil des Betriebssystems definiert. Die Informationen, die über ein Element abgerufen werden können, beinhalten die Standardgröße, den Hintergrundtyp und die Farbdefinitionen. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> umschließt die Funktionalität der visuelle Stile (UxTheme) API aus dem Windows-Shell-Bereich der Windows-Plattform-SDK. Weitere Informationen finden Sie unter [Aktivieren von visuellen Stilen](/windows/desktop/controls/cookbook-overview).  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> stellt Methoden zum Zeichnen und Abrufen von Informationen zu jedem einzelnen <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> bereit, das durch den aktuellen visuellen Stil des Betriebssystems definiert wird. Die Informationen, die über ein Element abgerufen werden können, beinhalten die Standardgröße, den Hintergrundtyp und die Farbdefinitionen. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> umschließt die Funktionalität der API für visuelle Stile (UxTheme) aus dem Windows Shell-Bereich der Windows Platform SDK. Weitere Informationen finden Sie unter [Aktivieren von visuellen Stilen](/windows/desktop/controls/cookbook-overview).  
   
  Weitere Informationen zur Verwendung von <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> und <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, finden Sie unter [Vorgehensweise: Rendern eines visuellen Stilelements](how-to-render-a-visual-style-element.md).  
   
 ## <a name="enabling-visual-styles"></a>Aktivieren von visuellen Stilen  
- Programmierer müssen ein Anwendungsmanifest beifügen, das angibt, dass Version 6 von „ComCtl32.dll“ oder höher zum Zeichnen von Steuerelementen verwendet werden wird, damit visuelle Stile für Anwendungen aktiviert werden, die für [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 geschrieben wurden. Anwendungen, die mit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.1 oder höher erstellt wurden, können die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> -Methode der <xref:System.Windows.Forms.Application> -Klasse verwenden.  
+ Um visuelle Stile für eine Anwendung, die für .NET Framework, Version 1.0 geschrieben zu aktivieren, müssen Programmierer ein Anwendungsmanifest hinzufügen, der angibt, dass ComCtl32.dll Version 6 oder höher zum Zeichnen von Steuerelementen verwendet werden soll. Anwendungen, die mit .NET Framework, Version 1.1 oder höher können die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode der <xref:System.Windows.Forms.Application> Klasse.  
   
 ## <a name="checking-for-visual-styles-support"></a>Überprüfen der Unterstützung für visuelle Stile  
  Die <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> -Eigenschaft der <xref:System.Windows.Forms.Application> -Klasse gibt an, ob die aktuelle Anwendung Steuerelemente mit visuellen Stilen zeichnet. Wenn Sie ein benutzerdefiniertes Steuerelement zeichnen, können Sie den Wert von <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> anzeigen, um zu festzulegen, ob das Steuerelement mit oder ohne visuelle Stile gerendert werden soll. In der folgenden Tabelle werden die vier Faktoren aufgelistet, die gegeben sein müssen, damit <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> `true`zurückgibt.  
@@ -80,4 +80,4 @@ Mithilfe visueller Stile in Betriebssystemen, die diese unterstützen, bietet da
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen](custom-control-painting-and-rendering.md)
+- [Zeichnen und Rendern von benutzerdefinierten Steuerelementen](custom-control-painting-and-rendering.md)

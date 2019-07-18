@@ -6,11 +6,11 @@ helpviewer_keywords:
 - GridViewRowPresenter [WPF]
 ms.assetid: bdb785a5-a262-44d5-a517-ea14383e5f70
 ms.openlocfilehash: 0e471df3ab6fd10417fc58ece4cdb8ff1c457c95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910454"
 ---
 # <a name="how-to-display-data-by-using-gridviewrowpresenter"></a>Vorgehensweise: Anzeigen von Daten mithilfe von GridViewRowPresenter
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.GridViewRowPresenter> und <xref:System.Windows.Controls.GridViewHeaderRowPresenter> Objekte zum Anzeigen von Daten in Spalten.  

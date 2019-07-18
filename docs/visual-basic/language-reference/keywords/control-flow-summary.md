@@ -5,11 +5,11 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 ms.assetid: 6885d426-fa87-4e1c-881f-f0e9ec8d98af
 ms.openlocfilehash: d3884f99a79a66ed8f8b25975b25a110c7341849
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802985"
 ---
 # <a name="control-flow-summary-visual-basic"></a>Ablaufsteuerung: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  

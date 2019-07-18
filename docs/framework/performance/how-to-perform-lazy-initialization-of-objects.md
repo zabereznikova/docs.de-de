@@ -10,11 +10,11 @@ ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722990"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Vorgehensweise: Verzögerte Initialisierung von Objekten
 Die <xref:System.Lazy%601?displayProperty=nameWithType>-Klasse vereinfacht die verzögerte Initialisierung und Instanziierung von Objekten. Beim verzögerten Initialisieren von Objekten können Sie die Erstellung vermeiden, wenn diese nie gebraucht werden, oder Sie können die Initialisierung verschieben, bis ein erster Zugriff erfolgt. Weitere Informationen finden Sie unter [Verzögerte Initialisierung](../../../docs/framework/performance/lazy-initialization.md).  
@@ -79,4 +79,4 @@ End Sub
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [Verzögerte Initialisierung](../../../docs/framework/performance/lazy-initialization.md)
+- [Lazy Initialization (Verzögerte Initialisierung)](../../../docs/framework/performance/lazy-initialization.md)

@@ -1,15 +1,13 @@
 ---
 title: Modernisieren Sie vorhandene .NET apps für Cloudoptimierte Anwendungen
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: edbffe45a2a1652ff477f9785b3afb5b0e493bc3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 00385ac1e2f41d2005606fa7f943618ec253ffc2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151498"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65638945"
 ---
 # <a name="modernize-existing-net-apps-to-cloud-optimized-applications"></a>Modernisieren Sie vorhandene .NET apps für Cloudoptimierte Anwendungen
 

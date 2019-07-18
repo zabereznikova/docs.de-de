@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: dacf76582916ad50f51ae7c8818b496f31f9553e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7ad1a9957e9bffd7b28aa241723dedba1d11f4cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353113"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775872"
 ---
 # <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition::EnumInstance-Methode
 
@@ -30,7 +30,7 @@ Listet die Instanzen dieser Definition der Methode.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT EnumInstance(
     [in, out] CLRDATA_ENUM         *handle,
     [out] IXCLRDataMethodInstance **instance
@@ -52,8 +52,8 @@ Die angegebene Methode ist Teil der `IXCLRDataMethodDefinition` Schnittstelle, u
 ## <a name="requirements"></a>Anforderungen
 
 **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keine  
-**Bibliothek:** Keine  
+**Header:** Keiner  
+**Bibliothek:** Keiner  
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch

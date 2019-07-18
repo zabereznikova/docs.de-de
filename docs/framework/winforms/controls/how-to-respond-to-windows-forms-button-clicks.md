@@ -15,12 +15,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ebcde2b5e749c5a3621c623a864578b2a654ce63
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110070"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638355"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Vorgehensweise: Reagieren auf das Anklicken von Schaltflächen in Windows Forms
 Die grundlegende Verwendung von einer Windows Forms <xref:System.Windows.Forms.Button> Steuerelement ist, Code ausführen, wenn die Schaltfläche geklickt wird.  
@@ -31,7 +31,7 @@ Die grundlegende Verwendung von einer Windows Forms <xref:System.Windows.Forms.B
   
 ### <a name="to-respond-to-a-button-click"></a>Zum Antworten auf eine Schaltfläche klicken.  
   
--   In der Schaltfläche `Click` <xref:System.EventHandler> Ausführung des Codes zu schreiben. `Button1_Click` muss auf das Steuerelement gebunden werden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+- In der Schaltfläche `Click` <xref:System.EventHandler> Ausführung des Codes zu schreiben. `Button1_Click` muss auf das Steuerelement gebunden werden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -58,5 +58,5 @@ Die grundlegende Verwendung von einer Windows Forms <xref:System.Windows.Forms.B
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über das Button-Steuerelement](button-control-overview-windows-forms.md)
-- [Methoden zur Auswahl eines Button-Steuerelements in Windows Forms](ways-to-select-a-windows-forms-button-control.md)
+- [Methoden zur Auswahl eines Button-Steuerelements in Windows Forms](ways-to-select-a-windows-forms-button-control.md)
 - [Button-Steuerelement](button-control-windows-forms.md)

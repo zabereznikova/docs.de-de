@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1433583c4c8e20533e7e18f1722d5481ffed3bbc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129589"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625687"
 ---
 # <a name="timing-behaviors-overview"></a>Übersicht über Zeitsteuerungsverhalten
 Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <xref:System.Windows.Media.Animation.Timeline> Objekte.  
@@ -42,7 +42,7 @@ Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <
 |----------|-----------------|----------------|-|-|-|  
 |Einfache Dauer|Zeitspanne, die eine Zeitachse für eine Vorwärtsiteration benötigt.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |Eine Wiederholung|Die Zeitspanne für eine Zeitachse vorwärts nach und bei Spielen dauert die <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> -Eigenschaft "true" ist, einmal rückwärts abgespielt.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|Aktiver Zeitraum|Die Zeitdauer für ein Timeline alle angegebenen von Wiederholungen ausführen dauert seine <xref:System.Windows.Media.Animation.RepeatBehavior> Eigenschaft.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>ist <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>ist <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|Aktiver Zeitraum|Die Zeitdauer für ein Timeline alle angegebenen von Wiederholungen ausführen dauert seine <xref:System.Windows.Media.Animation.RepeatBehavior> Eigenschaft.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Die Duration-Eigenschaft  
@@ -106,9 +106,9 @@ Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <
   
  Das folgende Beispiel erstellt eine <xref:System.Windows.Media.Animation.Storyboard> Listenfeldsteuerelement mit zwei untergeordneten <xref:System.Windows.Media.Animation.DoubleAnimation> Objekte. Beide <xref:System.Windows.Media.Animation.DoubleAnimation> Objekte animieren das <xref:System.Windows.FrameworkElement.Width%2A> von einer <xref:System.Windows.Shapes.Rectangle> von 0 bis 100. Die <xref:System.Windows.Shapes.Rectangle> Elemente verfügen über nicht animiert <xref:System.Windows.FrameworkElement.Width%2A> -Werte von 500 [geräteunabhängigen Pixeln].  
   
--   Die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft des ersten <xref:System.Windows.Media.Animation.DoubleAnimation> nastaven NA hodnotu <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, der Standardwert. Daher bleibt die Breite des Rechtecks bei 100, sobald die <xref:System.Windows.Media.Animation.DoubleAnimation> endet.  
+- Die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft des ersten <xref:System.Windows.Media.Animation.DoubleAnimation> nastaven NA hodnotu <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, der Standardwert. Daher bleibt die Breite des Rechtecks bei 100, sobald die <xref:System.Windows.Media.Animation.DoubleAnimation> endet.  
   
--   Die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> -Eigenschaft der zweiten <xref:System.Windows.Media.Animation.DoubleAnimation> nastaven NA hodnotu <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Daher die <xref:System.Windows.FrameworkElement.Width%2A> des zweiten <xref:System.Windows.Shapes.Rectangle> wird auf 500 nach der <xref:System.Windows.Media.Animation.DoubleAnimation> endet.  
+- Die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> -Eigenschaft der zweiten <xref:System.Windows.Media.Animation.DoubleAnimation> nastaven NA hodnotu <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Daher die <xref:System.Windows.FrameworkElement.Width%2A> des zweiten <xref:System.Windows.Shapes.Rectangle> wird auf 500 nach der <xref:System.Windows.Media.Animation.DoubleAnimation> endet.  
   
  [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
@@ -116,16 +116,16 @@ Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>Eigenschaften, die die Geschwindigkeit einer Zeitachse steuern  
  Die <xref:System.Windows.Media.Animation.Timeline> -Klasse stellt drei Eigenschaften zum Festlegen ihrer Geschwindigkeit bereit:  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Gibt die Geschwindigkeit relativ zum übergeordneten Element, an dem die Zeit, für abläuft eine <xref:System.Windows.Media.Animation.Timeline>. Werte größer als 1 erhöhen die Geschwindigkeit der <xref:System.Windows.Media.Animation.Timeline> und ihre untergeordneten <xref:System.Windows.Media.Animation.Timeline> Objekte; die Werte zwischen 0 und 1 verlangsamen sie. Der Wert 1 gibt an, dass <xref:System.Windows.Media.Animation.Timeline> im Verlauf der gleiche Tarif wie das übergeordnete Element. Die <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Einstellung einer Containerzeitachse wirkt sich auf alle untergeordneten <xref:System.Windows.Media.Animation.Timeline> auch Objekte.  
+- <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – Gibt die Geschwindigkeit relativ zum übergeordneten Element, an dem die Zeit, für abläuft eine <xref:System.Windows.Media.Animation.Timeline>. Werte größer als 1 erhöhen die Geschwindigkeit der <xref:System.Windows.Media.Animation.Timeline> und ihre untergeordneten <xref:System.Windows.Media.Animation.Timeline> Objekte; die Werte zwischen 0 und 1 verlangsamen sie. Der Wert 1 gibt an, dass <xref:System.Windows.Media.Animation.Timeline> im Verlauf der gleiche Tarif wie das übergeordnete Element. Die <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> Einstellung einer Containerzeitachse wirkt sich auf alle untergeordneten <xref:System.Windows.Media.Animation.Timeline> auch Objekte.  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Legt den prozentualen Anteil der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für die Beschleunigung aufgewendet. Ein Beispiel finden Sie unter [Gewusst wie: Beschleunigen oder verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md). 
+- <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – Legt den prozentualen Anteil der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für die Beschleunigung aufgewendet. Ein Beispiel finden Sie unter [Gewusst wie: Beschleunigen oder verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md). 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Legt den prozentualen Anteil der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für die Verlangsamung aufgewendet. Ein Beispiel finden Sie unter [Gewusst wie: Beschleunigen oder verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md).  
+- <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Legt den prozentualen Anteil der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für die Verlangsamung aufgewendet. Ein Beispiel finden Sie unter [Gewusst wie: Beschleunigen oder verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md)
 - [Übersicht über Zeitsteuerungsereignisse](timing-events-overview.md)
-- [Gewusst wie-Themen](animation-and-timing-how-to-topics.md)
-- [Beispiel zu Textanimation Timing Verhalten](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Themen zu Vorgehensweisen](animation-and-timing-how-to-topics.md)
+- [Beispiel zum Verhalten der Animationszeitsteuerung](https://go.microsoft.com/fwlink/?LinkID=159970)

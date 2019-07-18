@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 07d84506a7c07bde09b3b46ea608b1874842c3ac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150760"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616387"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT-ETW-Ablaufverfolgungsereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just-In-Time (JIT)-Inlining und der JIT-Endaufrufe.  
   
  JIT-Ablaufverfolgungsereignisse bestehen aus den folgenden beiden Kategorien:  
   
--   [JIT-Inliningereignisse](#jit_inlining_events)  
+- [JIT-Inliningereignisse](#jit_inlining_events)  
   
--   [JIT-Endaufrufereignisse](#jit_tail_call_events)  
+- [JIT-Endaufrufereignisse](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
 ## <a name="jit-inlining-events"></a>JIT-Inliningereignisse  

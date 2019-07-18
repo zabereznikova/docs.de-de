@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 07801ee7bfbb32540880cdc8599e5b69797b09f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223980"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743540"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
 In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die bei der Implementierung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] auftreten können.  
@@ -34,32 +34,32 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
   
  Die genauen Details der Verbindungsnutzung hängen von folgenden Faktoren ab:  
   
--   Verbindungsstatus, wenn <xref:System.Data.Linq.DataContext> mit einem Verbindungsobjekt erstellt wird.  
+- Verbindungsstatus, wenn <xref:System.Data.Linq.DataContext> mit einem Verbindungsobjekt erstellt wird.  
   
--   Verbindungszeichenfolgen-Einstellungen (z. B. Aktivieren von MARS (Multiple Active Result Sets)). Weitere Informationen finden Sie unter [Multiple Active Result Sets (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
+- Verbindungszeichenfolgen-Einstellungen (z. B. Aktivieren von MARS (Multiple Active Result Sets)). Weitere Informationen finden Sie unter [Multiple Active Result Sets (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).  
   
 ## <a name="updating-without-querying"></a>Ausführen von Updates ohne Abfrage  
  F. Können Tabellendaten aktualisiert werden, ohne zuerst eine Datenbankabfrage auszuführen?  
   
  A. Obwohl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine mengenbasierten Updatebefehle bereitstellt, können Sie mithilfe einer der folgenden Techniken ohne vorherige Abfrage ein Update ausführen:  
   
--   Verwenden Sie <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>, um SQL-Code zu senden.  
+- Verwenden Sie <xref:System.Data.Linq.DataContext.ExecuteCommand%2A>, um SQL-Code zu senden.  
   
--   Erstellen Sie eine neue Instanz des Objekts, und initialisieren Sie alle aktuellen Werte (Felder), die sich auf das Update auswirken. Fügen Sie das Objekt anschließend mithilfe von <xref:System.Data.Linq.DataContext> an <xref:System.Data.Linq.Table%601.Attach%2A> an, und ändern Sie das gewünschte Feld.  
+- Erstellen Sie eine neue Instanz des Objekts, und initialisieren Sie alle aktuellen Werte (Felder), die sich auf das Update auswirken. Fügen Sie das Objekt anschließend mithilfe von <xref:System.Data.Linq.DataContext> an <xref:System.Data.Linq.Table%601.Attach%2A> an, und ändern Sie das gewünschte Feld.  
   
 ## <a name="unexpected-query-results"></a>Unerwartete Abfrageergebnisse  
  F. Meine Abfrage gibt unerwartete Ergebnisse zurück. Wie kann der Fehler festgestellt werden?  
   
- A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet verschiedene Tools zum Überprüfen des SQL-Codes, die sie generiert. Eines der wichtigsten Tools ist <xref:System.Data.Linq.DataContext.Log%2A>. Weitere Informationen finden Sie unter [Debugunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
+ A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] stellt mehrere Tools zum Überprüfen des generierten SQL-Codes bereit. Eines der wichtigsten Tools ist <xref:System.Data.Linq.DataContext.Log%2A>. Weitere Informationen finden Sie unter [Debugunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="unexpected-stored-procedure-results"></a>Gespeicherte Prozedur gibt unerwartete Ergebnisse zurück  
- F. Der Rückgabewert einer gespeicherten Prozedur wird durch `MAX()` berechnet. Wenn die gespeicherte Prozedur auf die [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]-Oberfläche gezogen wird, ist der Rückgabewert nicht richtig.  
+ F. Der Rückgabewert einer gespeicherten Prozedur wird durch `MAX()` berechnet. Wenn ich die gespeicherte Prozedur auf die Oberfläche des O/R-Designer ziehen, ist der Rückgabewert nicht richtig.  
   
- A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet zwei Möglichkeiten, um datenbankgenerierte Werte mithilfe gespeicherter Prozeduren zurückzugeben:  
+ A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet zwei Möglichkeiten, von der Datenbank generierte Werte mithilfe gespeicherter Prozeduren zurückzugeben:  
   
--   Durch Benennen des Ausgabeergebnisses.  
+- Durch Benennen des Ausgabeergebnisses.  
   
--   Durch explizites Festlegen eines Ausgabeparameters.  
+- Durch explizites Festlegen eines Ausgabeparameters.  
   
  Im Folgenden ein Beispiel für eine fehlerhafte Ausgabe. Da die Ergebnisse von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht zugeordnet werden können, wird immer 0 zurückgegeben:  
   
@@ -107,12 +107,12 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
 ## <a name="multiple-dbml-files"></a>Mehrere DBML-Dateien  
  F. Bei Verwendung mehrerer DBML-Dateien, die einige Tabellen gemeinsam nutzen, wird ein Compilerfehler ausgegeben.  
   
- A. Legen Sie die **Kontext Namespace** und **Entity Namespace** Eigenschaften aus der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] auf einen unterschiedlichen Wert für jede DBML-Datei. Durch diese Lösung werden Konflikte zwischen Namen und Namespace vermieden.  
+ A. Legen Sie die **Kontext Namespace** und **Entity Namespace** Eigenschaften aus den Object Relational Designer auf einen unterschiedlichen Wert für jede DBML-Datei. Durch diese Lösung werden Konflikte zwischen Namen und Namespace vermieden.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Vermeiden, dass von der Datenbank generierte Werte bei Einfüge- oder Updatevorgängen explizit festgelegt werden  
  F. Bei einer Datenbanktabelle mit einer `DateCreated`-Spalte wird die Spalte standardmäßig auf SQL `Getdate()` festgelegt. Beim Versuch, mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] einen neuen Datensatz einzufügen, wird der Wert auf `NULL` festgelegt. Erwartungsgemäß sollte der Wert auf den Datenbankstandard festgelegt werden.  
   
- A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt diese Situation automatisch (automatisch inkrementierten), ROWGUID-(datenbankgenerierte GUID) und Timestamp-Spalten. In anderen Fällen sollten Sie manuell festlegen <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` und <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> Eigenschaften.  
+ A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt diese Situation bei ID- (automatisch inkrementierten), ROWGUID- (von der Datenbank generierte GUID) und Timestamp-Spalten automatisch. In anderen Fällen sollten Sie manuell festlegen <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` und <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> Eigenschaften.  
   
 ## <a name="multiple-dataloadoptions"></a>Mehrere DataLoadOptions  
  F. Können zusätzliche Ladeoptionen angegeben werden, ohne die erste zu überschreiben?  
@@ -132,43 +132,43 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ```  
   
 ## <a name="errors-using-sql-compact-35"></a>Fehler bei der Verwendung von SQL Compact 3.5  
- F. Beim Ziehen von Tabellen aus einer [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]-Datenbank wird ein Fehler ausgegeben.  
+ F. Ziehen von Tabellen aus einer SQL Server Compact 3.5-Datenbank wird eine Fehlermeldung angezeigt.  
   
- A. Obwohl [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] von der [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]-Laufzeit unterstützt wird, bietet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine entsprechende Unterstützung. In dieser Situation müssen Sie eigene Entitätsklassen erstellen und die entsprechenden Attribute hinzufügen.  
+ A. Der Object Relational Designer werden die SQL Server Compact 3.5, nicht unterstützt, aber die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Runtime tut. In dieser Situation müssen Sie eigene Entitätsklassen erstellen und die entsprechenden Attribute hinzufügen.  
   
 ## <a name="errors-in-inheritance-relationships"></a>Fehler in Vererbungsbeziehungen  
- F. Wenn die Vererbungsform aus der Toolbox in [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zum Verbinden von zwei Entitäten verwendet wird, treten Fehler auf.  
+ F. Ich habe die vererbungsform aus der Toolbox in den Object Relational Designer Verbindung von zwei Entitäten verwendet, aber ich erhalte Fehler.  
   
  A. Es reicht nicht aus, die Beziehung zu erstellen. Sie müssen Informationen wie Unterscheidungsspalte, Basisklassen-Diskriminatorwert und Diskriminatorwert der abgeleiteten Klasse angeben.  
   
 ## <a name="provider-model"></a>Anbietermodell  
  F. Ist ein öffentliches Anbietermodell verfügbar?  
   
- A. Es ist kein öffentliches Anbietermodell verfügbar. Zu diesem Zeitpunkt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt SQL Server und [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] nur.  
+ A. Es ist kein öffentliches Anbietermodell verfügbar. Zu diesem Zeitpunkt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt nur SQL Server und SQL Server Compact 3.5.  
   
 ## <a name="sql-injection-attacks"></a>SQL-Injection-Angriffe  
  F. Wie wird [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vor SQL-Injection-Angriffen geschützt?  
   
- A. In herkömmlichen SQL-Abfragen, die durch die Verkettung der Benutzereingabe erzeugt wurden, stellte die SQL-Injection ein bedeutendes Risiko dar. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solche einfügungen vermeidet, mithilfe von <xref:System.Data.SqlClient.SqlParameter> in Abfragen. Die Benutzereingabe wird in Parameterwerte umgewandelt. Auf diese Weise wird verhindert, dass böswillige Befehle aus Kundeneingaben verwendet werden.  
+ A. In herkömmlichen SQL-Abfragen, die durch die Verkettung der Benutzereingabe erzeugt wurden, stellte die SQL-Injection ein bedeutendes Risiko dar. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] werden solche Einfügungen durch die Verwendung von <xref:System.Data.SqlClient.SqlParameter> in Abfragen vermieden. Die Benutzereingabe wird in Parameterwerte umgewandelt. Auf diese Weise wird verhindert, dass böswillige Befehle aus Kundeneingaben verwendet werden.  
   
 ## <a name="changing-read-only-flag-in-dbml-files"></a>Ändern des Schreibschutzflags in DBML-Dateien  
  F. Wie können Setter aus einigen Eigenschaften entfernt werden, wenn ein Objektmodell aus einer DBML-Datei erstellt wird?  
   
  A. Führen Sie für dieses erweiterte Szenario die folgenden Schritte aus:  
   
-1.  Ändern Sie in der DBML-Datei die Eigenschaft, indem Sie das <xref:System.Data.Linq.ITable.IsReadOnly%2A>-Flag in `True` ändern.  
+1. Ändern Sie in der DBML-Datei die Eigenschaft, indem Sie das <xref:System.Data.Linq.ITable.IsReadOnly%2A>-Flag in `True` ändern.  
   
-2.  Fügen Sie eine partielle Klasse hinzu. Erstellen Sie einen Konstruktor mit Parametern für die schreibgeschützten Member.  
+2. Fügen Sie eine partielle Klasse hinzu. Erstellen Sie einen Konstruktor mit Parametern für die schreibgeschützten Member.  
   
-3.  Überprüfen Sie den <xref:System.Data.Linq.Mapping.UpdateCheck>-Standardwert (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), um zu bestimmen, ob dieses der richtige Wert für die Anwendung ist.  
+3. Überprüfen Sie den <xref:System.Data.Linq.Mapping.UpdateCheck>-Standardwert (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>), um zu bestimmen, ob dieses der richtige Wert für die Anwendung ist.  
   
     > [!CAUTION]
-    >  Bei Verwendung der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] in Visual Studio Ihre Änderungen überschrieben werden.  
+    >  Wenn Sie den Object Relational Designer in Visual Studio verwenden, dass Ihre Änderungen überschrieben werden.  
   
 ## <a name="aptca"></a>APTCA  
  F. Ist System.Data.Linq für die Verwendung durch teilweise vertrauenswürdigen Code markiert?  
   
- A. Ja, die System.Data.Linq.dll-Assembly gehört zu den [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]-Assemblys, die mit dem <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut markiert sind. Assemblys in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)], die diese Markierung nicht aufweisen, sind nur für die Verwendung durch voll vertrauenswürdigen Code vorgesehen.  
+ A. Ja, die System.Data.Linq.dll-Assembly gehört zu .NET Framework-Assemblys mit markiert die <xref:System.Security.AllowPartiallyTrustedCallersAttribute> Attribut. Ohne diese Markierung ist, werden Assemblys in .NET Framework für die Verwendung nur durch voll vertrauenswürdigen Code vorgesehen.  
   
  Das Dienstprinzipal Szenario in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zum Zulassen teilweise vertrauenswürdiger Aufrufer ist die Aktivierung der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Assembly über Webanwendungen zugegriffen werden, in dem die *Vertrauensstellung* Konfiguration ist Mittel.  
   
@@ -185,12 +185,12 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A. Sie sollten nicht versuchen, Instanzen von <xref:System.Data.Linq.DataContext> wiederzuverwenden. Jeder <xref:System.Data.Linq.DataContext> behält den Zustand (einschließlich eines Identitätscaches) für eine bestimmte Bearbeitungs-/Abfragesitzung bei. Um neue Instanzen auf Grundlage des aktuellen Zustands der Datenbank zu erhalten, verwenden Sie einen neuen <xref:System.Data.Linq.DataContext>.  
   
- Sie können weiterhin das zugrunde liegende Verbindungspooling von [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] verwenden. Weitere Informationen finden Sie unter [SQL Server-Verbindungspooling (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Sie können weiterhin das zugrunde liegende Verbindungspooling ADO.NET verwenden. Weitere Informationen finden Sie unter [SQL Server-Verbindungspooling (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="second-datacontext-is-not-updated"></a>Zweiter DataContext wird nicht aktualisiert  
  F. Zum Speichern von Werten in der Datenbank wurde eine Instanz von <xref:System.Data.Linq.DataContext> verwendet. Die aktualisierten Werte werden aber von einem zweiten <xref:System.Data.Linq.DataContext> in derselben Datenbank nicht angezeigt. Die zweite <xref:System.Data.Linq.DataContext>-Instanz scheint zwischengespeicherte Werte zurückzugeben.  
   
- A. Dieses Verhalten ist vorgesehen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] weiterhin dieselben Instanzen/Werte, die Sie haben gesehen, in der ersten Instanz zurück. Wenn Sie Updates vornehmen, verwenden Sie vollständige Parallelität. Die ursprünglichen Daten werden verwendet, um den aktuellen Datenbankzustand zu überprüfen und zu bestätigen, dass der Zustand weiterhin unverändert ist. Wenn er sich geändert hat, tritt ein Konflikt auf, der von der Anwendung gelöst werden muss. Eine Möglichkeit für die Anwendung besteht darin, den ursprünglichen Zustand auf den aktuellen Datenbankzustand zurückzusetzen und den Updateversuch zu wiederholen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ A. Dieses Verhalten ist vorgesehen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gibt weiterhin dieselben Instanzen/Werte zurück, die in der ersten Instanz angezeigt wurden. Wenn Sie Updates vornehmen, verwenden Sie vollständige Parallelität. Die ursprünglichen Daten werden verwendet, um den aktuellen Datenbankzustand zu überprüfen und zu bestätigen, dass der Zustand weiterhin unverändert ist. Wenn er sich geändert hat, tritt ein Konflikt auf, der von der Anwendung gelöst werden muss. Eine Möglichkeit für die Anwendung besteht darin, den ursprünglichen Zustand auf den aktuellen Datenbankzustand zurückzusetzen und den Updateversuch zu wiederholen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
  Sie können auch <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> auf false festlegen, wodurch das Zwischenspeichern und Nachverfolgen von Änderungen deaktiviert wird. Anschließend können Sie bei jeder Abfrage die neuesten Werte abrufen.  
   
@@ -201,6 +201,6 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
 - [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

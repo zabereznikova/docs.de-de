@@ -5,11 +5,11 @@ ms.assetid: 41950c52-1ac8-4212-b814-c77e20879f91
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bf1fa21872c710ebc69c45e9980aeaa577a45fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942466"
 ---
 # <a name="icordebugmoduledebugevent-interface"></a>ICorDebugModuleDebugEvent-Schnittstelle
 Erweitert die [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) -Schnittstelle zur Unterstützung der Ereignisse auf Modulebene.  
@@ -37,5 +37,5 @@ Erweitert die [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/deb
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

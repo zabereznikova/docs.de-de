@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673679"
 ---
 # <a name="remove-element-for-listeners-for-trace"></a>\<Entfernen Sie >-Element für \<Listener > für \<Ablaufverfolgung >
 Entfernt einen Listener aus der **Listener** Auflistung.  
@@ -36,7 +36,7 @@ Entfernt einen Listener aus der **Listener** Auflistung.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**Name**|Erforderliches Attribut.<br /><br /> Der Name des Listeners, Aufheben der **Listener** Auflistung.|  
+|**name**|Erforderliches Attribut.<br /><br /> Der Name des Listeners, Aufheben der **Listener** Auflistung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -76,4 +76,4 @@ Entfernt einen Listener aus der **Listener** Auflistung.
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

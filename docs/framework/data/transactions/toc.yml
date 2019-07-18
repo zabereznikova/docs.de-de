@@ -1,45 +1,38 @@
-items:
 - name: Verarbeiten von Transaktionen
   href: index.md
   items:
-  - name: Transaktionsgrundlagen
-    href: transaction-fundamentals.md
-  - name: Von System.Transactions bereitgestellte Funktionen
-    href: features-provided-by-system-transactions.md
-    items:
-    - name: Erstellen einer Transaktionsanwendung
-      href: writing-a-transactional-application.md
+    - name: Transaktionsgrundlagen
+      href: transaction-fundamentals.md
+    - name: Von System.Transactions bereitgestellte Funktionen
+      href: features-provided-by-system-transactions.md
       items:
-      - name: Implementieren einer impliziten Transaktion mit Transaktionsbereich
-        href: implementing-an-implicit-transaction-using-transaction-scope.md
-      - name: Implementieren einer expliziten Transaktion mit CommittableTransaction
-        href: implementing-an-explicit-transaction-using-committabletransaction.md
-      - name: Verwalten von Parallelität mit DependentTransaction
-        href: managing-concurrency-with-dependenttransaction.md
-      - name: Interoperabilität mit Enterprise Services und COM+-Transaktionen
-        href: interoperability-with-enterprise-services-and-com-transactions.md
-      - name: Eskalation der Transaktionsverwaltung
-        href: transaction-management-escalation.md
-      - name: Ablaufverfolgungen zur Diagnose
-        href: diagnostic-traces.md
-      - name: Verwenden von System.Transactions in ASP.NET
-        href: using-system-transactions-in-aspnet.md
-    - name: Implementieren eines Ressourcen-Managers
-      href: implementing-a-resource-manager.md
-      items:
-      - name: Eintragen von Ressourcen als Teilnehmer an einer Transaktion
-        href: enlisting-resources-as-participants-in-a-transaction.md
-      - name: Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion
-        href: committing-a-transaction-in-single-phase-and-multi-phase.md
-      - name: Durchführen einer Wiederherstellung
-        href: performing-recovery.md
-      - name: Vertrauensebenen für Sicherheit beim Zugriff auf Ressourcen
-        href: security-trust-levels-in-accessing-resources.md
-      - name: Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung
-        href: optimization-spc-and-promotable-spn.md
-ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469075"
+        - name: Erstellen einer Transaktionsanwendung
+          href: writing-a-transactional-application.md
+          items:
+            - name: Implementieren einer impliziten Transaktion mit Transaktionsbereich
+              href: implementing-an-implicit-transaction-using-transaction-scope.md
+            - name: Implementieren einer expliziten Transaktion mit CommittableTransaction
+              href: implementing-an-explicit-transaction-using-committabletransaction.md
+            - name: Verwalten von Parallelität mit DependentTransaction
+              href: managing-concurrency-with-dependenttransaction.md
+            - name: Interoperabilität mit Enterprise Services und COM+-Transaktionen
+              href: interoperability-with-enterprise-services-and-com-transactions.md
+            - name: Eskalation der Transaktionsverwaltung
+              href: transaction-management-escalation.md
+            - name: Ablaufverfolgungen zur Diagnose
+              href: diagnostic-traces.md
+            - name: Verwenden von System.Transactions in ASP.NET
+              href: using-system-transactions-in-aspnet.md
+        - name: Implementieren eines Ressourcen-Managers
+          href: implementing-a-resource-manager.md
+          items:
+            - name: Eintragen von Ressourcen als Teilnehmer an einer Transaktion
+              href: enlisting-resources-as-participants-in-a-transaction.md
+            - name: Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion
+              href: committing-a-transaction-in-single-phase-and-multi-phase.md
+            - name: Durchführen einer Wiederherstellung
+              href: performing-recovery.md
+            - name: Vertrauensebenen für Sicherheit beim Zugriff auf Ressourcen
+              href: security-trust-levels-in-accessing-resources.md
+            - name: Optimierung mit Einphasencommit und Heraufstufbarer Einphasenbenachrichtigung
+              href: optimization-spc-and-promotable-spn.md

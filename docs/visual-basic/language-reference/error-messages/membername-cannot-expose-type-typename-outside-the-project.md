@@ -1,5 +1,5 @@
 ---
-title: <membername> kann den <typename>-Typ nicht außerhalb des Projekts über <containertype> "<containertypename>" verfügbar machen.
+title: <membername> kann den <typename>-Typ nicht außerhalb des Projekts über <containertype> '<containertypename>' verfügbar machen.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30909
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30909
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
-ms.openlocfilehash: 16f579a05236ba8977a071cb08068be8e98799f8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cb5191442ed8d3ee47c5116b10740e277ffa5bac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818339"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661918"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<Membername >' kann nicht verfügbar machen "\<Typname >' außerhalb des Projekts durch \<Hiermit > '\<Containertypename >'
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<Membername >' kann nicht verfügbar machen '\<Typname >' außerhalb des Projekts durch \<Hiermit > '\<Containertypename >'
 Eine Variable, Parameter der Prozedur oder Funktion zurückgegeben wird außerhalb des Containers verfügbar gemacht, aber sie wird deklariert, als Typ, der außerhalb des Containers nicht verfügbar gemacht werden muss.  
   
  Das folgende Codegerüst zeigt eine Situation, die diesen Fehler generiert.  
@@ -33,7 +33,7 @@ End Class
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Ändern Sie die Zugriffsebene der Variablen, Parameter der Prozedur oder Funktion zurückkehren, um die mindestens so restriktiv als die Zugriffsebene seines Datentyps sein.  
+- Ändern Sie die Zugriffsebene der Variablen, Parameter der Prozedur oder Funktion zurückkehren, um die mindestens so restriktiv als die Zugriffsebene seines Datentyps sein.  
   
 ## <a name="see-also"></a>Siehe auch
 

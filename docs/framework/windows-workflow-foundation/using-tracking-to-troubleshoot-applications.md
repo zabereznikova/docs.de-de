@@ -3,11 +3,11 @@ title: Verwenden der Nachverfolgung zum Beheben von Anwendungsfehlern
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 ms.openlocfilehash: 62c46ca36c89c023bfc775eb76ba454c9a4162c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004587"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Verwenden der Nachverfolgung zum Beheben von Anwendungsfehlern
 Windows Workflow Foundation (WF) ermöglicht Ihnen, workflowbezogene Informationen, um Details zur Ausführung eines Windows Workflow Foundation-Anwendung oder Dienst geben zu verfolgen. Windows Workflow Foundation-Hosts können Workflowereignisse während der Ausführung einer Workflowinstanz erfassen. Wenn der Workflow Fehler oder Ausnahmen generiert, können Sie die Windows Workflow Foundation, Nachverfolgen von Details für die Problembehandlung von der Verarbeitung.  

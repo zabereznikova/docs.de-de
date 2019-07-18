@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 540271c414ac295c419533a4622657d60d123796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842044"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665392"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Vorgehensweise: Erzwingen, dass ein Argument als Wert (Visual Basic) übergeben werden
 Den Übergabemechanismus der Prozedurdeklaration. Wenn ein Parameter deklariert wird [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic geht davon aus, das entsprechende Argument als Verweis übergeben. Dadurch wird das Verfahren zum Ändern des Werts des zugrunde liegenden Arguments im aufrufenden Code Programmierelements. Wenn Sie das zugrunde liegende Element für eine solche Änderung schützen möchten, können Sie überschreiben die `ByRef` Übergabemechanismus in der Prozedur aufrufen, indem der Name des Arguments in Klammern einschließen. Diese Klammern sind zusätzlich zu den Klammern einschließen der Liste der Argumente im Aufruf.  
@@ -28,9 +28,9 @@ Den Übergabemechanismus der Prozedurdeklaration. Wenn ein Parameter deklariert 
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>Erzwingen Sie ein Argument als Wert übergeben werden  
   
--   Wenn der entsprechende Parameter deklariert wird `ByVal` in der Prozedur, Sie müssen keine weiteren Schritte. Visual Basic erwartet, dass bereits das Argument als Wert übergeben.  
+- Wenn der entsprechende Parameter deklariert wird `ByVal` in der Prozedur, Sie müssen keine weiteren Schritte. Visual Basic erwartet, dass bereits das Argument als Wert übergeben.  
   
--   Wenn der entsprechende Parameter deklariert wird `ByRef` setzen Sie in der Prozedur das Argument im Aufruf Prozedur in Klammern.  
+- Wenn der entsprechende Parameter deklariert wird `ByRef` setzen Sie in der Prozedur das Argument im Aufruf Prozedur in Klammern.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine `ByRef` Parameterdeklaration. Im Aufruf, die erzwingt, dass `ByVal`, beachten Sie die zwei Ebenen von Klammern.  

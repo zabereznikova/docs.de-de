@@ -2,21 +2,21 @@
 title: Oracle-Sequenzen
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4ba7b750d48613b80eca0ef3c7c2da127977498d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192653"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64632344"
 ---
 # <a name="oracle-sequences"></a>Oracle-Sequenzen
 Der .NET Framework-Datenanbieter für Oracle bietet Unterstützung für das Abrufen der vom Server generierten Oracle-Sequenz-Schlüsselwerte, nachdem mit <xref:System.Data.OracleClient.OracleDataAdapter> Einfügevorgänge ausgeführt wurden.  
   
  SQL Server und Oracle unterstützen die Erstellung von Spalten, die automatisch inkrementiert und für Primärschlüssel verwendet werden. Diese Werte werden vom Server generiert, wenn einer Tabelle Zeilen hinzugefügt werden. In SQL Server legen Sie die Identität einer Spalte fest, in Oracle erstellen Sie eine Sequenz. Zwischen den AutoIncrement-Spalten in SQL Server und den Sequenzen in Oracle besteht der folgende Unterschied:  
   
--   In SQL Server markieren Sie eine Spalte als &lt;legacyBold&gt;AutoIncrement&lt;/legacyBold&gt;-Spalte, woraufhin SQL Server automatisch neue Werte für die Spalte generiert, sobald eine neue Zeile eingefügt wird.  
+- In SQL Server markieren Sie eine Spalte als &lt;legacyBold&gt;AutoIncrement&lt;/legacyBold&gt;-Spalte, woraufhin SQL Server automatisch neue Werte für die Spalte generiert, sobald eine neue Zeile eingefügt wird.  
   
--   In Oracle erstellen Sie eine Sequenz, um neue Werte für eine Spalte in Ihrer Tabelle zu generieren, wobei es aber keine direkte Verknüpfung zwischen der Sequenz und der Tabelle bzw. Spalte gibt. Eine Oracle-Sequenz ist ein Objekt wie eine Tabelle oder eine gespeicherte Prozedur.  
+- In Oracle erstellen Sie eine Sequenz, um neue Werte für eine Spalte in Ihrer Tabelle zu generieren, wobei es aber keine direkte Verknüpfung zwischen der Sequenz und der Tabelle bzw. Spalte gibt. Eine Oracle-Sequenz ist ein Objekt wie eine Tabelle oder eine gespeicherte Prozedur.  
   
  Wenn Sie in einer Oracle-Datenbank eine Sequenz erstellen, können Sie deren Erstwert und den Inkrementwert definieren. Sie können die Sequenz auch nach neuen Werten abfragen, bevor Sie neue Zeilen senden. Das bedeutet, Ihr Code kann die Schlüsselwerte für neue Zeilen erkennen, bevor Sie sie in die Datenbank einfügen.  
   

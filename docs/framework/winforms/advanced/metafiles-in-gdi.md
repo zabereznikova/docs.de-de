@@ -9,28 +9,28 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: df54289722cf12bad840722c6eafdaa43279a5dc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119859"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504588"
 ---
 # <a name="metafiles-in-gdi"></a>Metadateien in GDI+
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Imaging.Metafile> Klasse, sodass Sie aufzeichnen und Anzeigen von Metadateien. Eine Metadatei, auch einen Vektor Image bezeichnet, handelt es sich um ein Bild, das als eine Sequenz von Zeichnen-Befehle und Einstellungen gespeichert werden. Die Befehle und Einstellungen aufgezeichnet werden, einem <xref:System.Drawing.Imaging.Metafile> Objekt im Arbeitsspeicher gespeichert oder in einer Datei oder einem Stream gespeichert werden kann.  
+GDI + bietet die <xref:System.Drawing.Imaging.Metafile> Klasse, sodass Sie aufzeichnen und Anzeigen von Metadateien. Eine Metadatei, auch einen Vektor Image bezeichnet, handelt es sich um ein Bild, das als eine Sequenz von Zeichnen-Befehle und Einstellungen gespeichert werden. Die Befehle und Einstellungen aufgezeichnet werden, einem <xref:System.Drawing.Imaging.Metafile> Objekt im Arbeitsspeicher gespeichert oder in einer Datei oder einem Stream gespeichert werden kann.  
   
 ## <a name="metafile-formats"></a>Metadatei-Formaten  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Metadateien, die in den folgenden Formaten gespeichert wurden, können angezeigt werden:  
+ GDI + kann Metadateien anzeigen, die in den folgenden Formaten gespeichert wurden:  
   
--   Windows-Metadateien (WMF)  
+- Windows-Metadateien (WMF)  
   
--   Erweiterte Metadatei (Enhanced Metafile, EMF)  
+- Erweiterte Metadatei (Enhanced Metafile, EMF)  
   
--   EMF+  
+- EMF+  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kann die Metadateien im EMF und EMF +-Format, aber nicht in der WMF-Formats aufzeichnen.  
+ GDI + kann Metadateien im EMF und EMF +-Format, aber nicht in der WMF-Formats aufzeichnen.  
   
- EMF + ist eine Erweiterung EMF, die ermöglicht [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Datensätze gespeichert werden. Es gibt zwei Variationen auf dem EMF +-Format: EMF + nur und duale EMF +. EMF + nur Metadateien enthalten nur [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Datensätze. Solche Metadateien angezeigt werden können, indem [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] jedoch nicht von [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]. Duale EMF +-Metadateien enthalten [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] und [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Datensätze. Jede [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Datensatz in eine duale EMF + Metadatei wird zusammen mit einer alternativen [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Datensatz. Solche Metadateien angezeigt werden können, indem [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] oder [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
+ EMF + ist eine Erweiterung, EMF, die von GDI +-Datensätze gespeichert werden kann. Es gibt zwei Variationen auf dem EMF +-Format: EMF + nur und duale EMF +. EMF + nur Metadateien enthalten nur um GDI +-Datensätze. Solche Metadateien können von GDI +, aber nicht von GDI angezeigt werden. Duale EMF +-Metadateien enthalten GDI + und GDI-Datensätze. Eine alternative GDI-Datensatz ist jeder GDI +-Datensatz in eine duale EMF +-Metadatei zugeordnet. Solche Metadateien können von GDI oder GDI angezeigt werden.  
   
  Das folgende Beispiel zeigt eine Metadatei, die zuvor als Datei gespeichert wurde. Die Metadatei wird angezeigt, mit der linken oberen Ecke an (100, 100).  
   

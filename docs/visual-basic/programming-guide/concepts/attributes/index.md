@@ -2,25 +2,25 @@
 title: Übersicht über Attribute (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ecc3fb0a3bf7365b6eec39e1c5086d99f2c5a19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642452"
 ---
 # <a name="attributes-overview-visual-basic"></a>Übersicht über Attribute (Visual Basic)
 Attribute stellen eine effiziente Methode dar, Metadaten oder deklarative Informationen Code (Assemblys, Typen, Methoden, Eigenschaften usw.) zuzuordnen. Nach dem Zuordnen eines Attributs zu einer Programmentität kann das Attribut zur Laufzeit mit einer Technik namens *Reflektion* abgefragt werden. Weitere Informationen finden Sie unter [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
  Attribute verfügen über die folgenden Eigenschaften:  
   
--   Attribute fügen Metadaten zu Ihrem Programm hinzu. *Metadaten* sind Informationen zu den Typen, die in einem Programm definiert sind. Alle .NET-Assemblys enthalten einen festgelegten Satz von Metadaten, der die Typen und Typmember beschreibt, die in der Assembly definiert sind. Sie können benutzerdefinierte Attribute hinzufügen, um zusätzliche erforderliche Informationen anzugeben. Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Attribute (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
+- Attribute fügen Metadaten zu Ihrem Programm hinzu. *Metadaten* sind Informationen zu den Typen, die in einem Programm definiert sind. Alle .NET-Assemblys enthalten einen festgelegten Satz von Metadaten, der die Typen und Typmember beschreibt, die in der Assembly definiert sind. Sie können benutzerdefinierte Attribute hinzufügen, um zusätzliche erforderliche Informationen anzugeben. Weitere Informationen finden Sie unter [Erstellen benutzerdefinierter Attribute (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
   
--   Sie können eines oder mehrere Attribute auf ganze Assemblys, Module oder kleinere Programmelemente wie Klassen und Eigenschaften anwenden.  
+- Sie können eines oder mehrere Attribute auf ganze Assemblys, Module oder kleinere Programmelemente wie Klassen und Eigenschaften anwenden.  
   
--   Attribute können Argumente auf die gleiche Art wie Methoden und Eigenschaften akzeptieren.  
+- Attribute können Argumente auf die gleiche Art wie Methoden und Eigenschaften akzeptieren.  
   
--   Das Programm kann seine eigenen Metadaten oder die Metadaten in anderen Programmen mithilfe der Reflektion untersuchen. Weitere Informationen finden Sie unter [Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+- Das Programm kann seine eigenen Metadaten oder die Metadaten in anderen Programmen mithilfe der Reflektion untersuchen. Weitere Informationen finden Sie unter [Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   
 ## <a name="using-attributes"></a>Verwenden von Attributen  
  Attribute können in nahezu jeder Deklaration platziert werden, auch wenn ein bestimmtes Attribut die Typen der Deklarationen einschränkt, für die es gültig ist. In Visual Basic ist ein Attribut in spitzen Klammern eingeschlossen (\< >). Es muss in derselben Zeile direkt vor dem Element angezeigt werden, auf das es angewendet wird.  
@@ -107,40 +107,40 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>Häufige Verwendungsmöglichkeiten für Attribute  
  Die folgende Liste enthält einige häufige Verwendungsmöglichkeiten von Attributen im Code:  
   
--   Kennzeichnen von Methoden mit dem `WebMethod`-Attribut in Webdiensten, um anzugeben, dass die Methode über das SOAP-Protokoll aufrufbar sein sollte. Weitere Informationen finden Sie unter <xref:System.Web.Services.WebMethodAttribute>.  
+- Kennzeichnen von Methoden mit dem `WebMethod`-Attribut in Webdiensten, um anzugeben, dass die Methode über das SOAP-Protokoll aufrufbar sein sollte. Weitere Informationen finden Sie unter <xref:System.Web.Services.WebMethodAttribute>.  
   
--   Beschreiben, wie Methodenparameter bei der Interaktion mit systemeigenem Code gemarshallt werden sollen. Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+- Beschreiben, wie Methodenparameter bei der Interaktion mit systemeigenem Code gemarshallt werden sollen. Weitere Informationen finden Sie unter <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
--   Beschreiben der COM-Eigenschaften für Klassen, Methoden und Schnittstellen.  
+- Beschreiben der COM-Eigenschaften für Klassen, Methoden und Schnittstellen.  
   
--   Aufrufen von nicht verwaltetem Code mithilfe der Klasse <xref:System.Runtime.InteropServices.DllImportAttribute>.  
+- Aufrufen von nicht verwaltetem Code mithilfe der Klasse <xref:System.Runtime.InteropServices.DllImportAttribute>.  
   
--   Beschreiben der Assembly im Hinblick auf Titel, Version, Beschreibung oder Marke.  
+- Beschreiben der Assembly im Hinblick auf Titel, Version, Beschreibung oder Marke.  
   
--   Beschreiben, welche Member einer Klasse zur Verbesserung der Dauerhaftigkeit serialisiert werden müssen.  
+- Beschreiben, welche Member einer Klasse zur Verbesserung der Dauerhaftigkeit serialisiert werden müssen.  
   
--   Beschreiben der Zuordnung zwischen Klassenmembern und XML-Knoten für die XML-Serialisierung.  
+- Beschreiben der Zuordnung zwischen Klassenmembern und XML-Knoten für die XML-Serialisierung.  
   
--   Beschreiben der Sicherheitsanforderungen für Methoden.  
+- Beschreiben der Sicherheitsanforderungen für Methoden.  
   
--   Angeben von Eigenschaften zum Erzwingen der Sicherheit.  
+- Angeben von Eigenschaften zum Erzwingen der Sicherheit.  
   
--   Steuern der vom JIT-Compiler (Just-In-Time-Compiler) ausgeführten Optimierungen, damit der Code weiterhin problemlos debuggt werden kann.  
+- Steuern der vom JIT-Compiler (Just-In-Time-Compiler) ausgeführten Optimierungen, damit der Code weiterhin problemlos debuggt werden kann.  
   
--   Abrufen von Informationen zum Aufrufer einer Methode.  
+- Abrufen von Informationen zum Aufrufer einer Methode.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen finden Sie unter:  
   
--   [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Erstellen benutzerdefinierter Attribute (Visual Basic))  
+- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md) (Erstellen benutzerdefinierter Attribute (Visual Basic))  
   
--   [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))  
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))  
   
--   [Vorgehensweise: Erstellen einer C/C++-Union mit Attributen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Vorgehensweise: Erstellen einer C/C++-Union mit Attributen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
--   [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Gemeinsame Attribute (Visual Basic))  
+- [Common Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md) (Gemeinsame Attribute (Visual Basic))  
   
--   [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
+- [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

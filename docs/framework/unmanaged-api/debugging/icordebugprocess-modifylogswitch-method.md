@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1c85499e5269027da2c2a01ab67aab2c5da626
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 96db1ca115ffed47b5eb8eadd9c3d2f620060c4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488174"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755450"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch-Methode
 Legt den Schweregrad der angegebenen Log-Schalter fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ModifyLogSwitch(  
     [in] WCHAR *pLogSwitchName,  
     [in] LONG  lLevel);  

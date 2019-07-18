@@ -2,12 +2,12 @@
 title: Refactoring mit einer Erweiterungsmethode (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: 925ae6b1ae82576a830b06ef11232f7dad9875f2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 360b723fd8ef63338213dfcaa2c00f659ba3e74a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829992"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666082"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Refactoring mit einer Erweiterungsmethode (Visual Basic)
 Dieses Beispiel baut auf dem vorherigen Beispiel, [Abrufen des Texts der Absätze (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), gestaltet die Verkettung von Zeichenfolgen mit einer reinen Funktion, die implementiert wird, als eine Erweiterungsmethode.  
@@ -241,7 +241,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>Nächste Schritte  
  Im nächsten Beispiel wird gezeigt, wie dieser Code durch Verwendung von reinen Funktionen umgestaltet werden kann:  
   
--   [Refactoring mit reiner Funktion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Refactoring mit reiner Funktion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

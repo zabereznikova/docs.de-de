@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e392d3afcd81e6eace7a674788a2a957da28842c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193095"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746471"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet-Funktion
 Ruft den Qualifizierer ab, der für eine Klasseninstanz oder eine Klassendefinition festgelegt ist.
@@ -30,7 +30,7 @@ Ruft den Qualifizierer ab, der für eine Klasseninstanz oder eine Klassendefinit
     
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetQualifierSet (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `ppQualSet`  
-[out] Empfängt den Schnittstellenzeiger, der Zugriff auf die Qualifizierer des Klassenobjekts ermöglicht. `ppQualSet` Nicht möglich, `null`. Wenn ein Fehler auftritt, wird ein neues Objekt nicht zurückgegeben wird und der Zeiger bleibt unverändert. 
+[out] Empfängt den Schnittstellenzeiger, der Zugriff auf die Qualifizierer des Klassenobjekts ermöglicht. `ppQualSet` darf nicht `null` sein. Wenn ein Fehler auftritt, wird ein neues Objekt nicht zurückgegeben wird und der Zeiger bleibt unverändert. 
 
 ## <a name="return-value"></a>Rückgabewert
 

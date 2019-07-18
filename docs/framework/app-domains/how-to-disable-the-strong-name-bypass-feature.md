@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4e5ea1907ec3de4536d09b3d76ca4956c8756d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494301"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593615"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Vorgehensweise: Deaktivieren der Strong-Name-Bypass-Funktion
 Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem Namen nicht überprüft, wenn ein Assembly in ein vollständig vertrauenswürdiges <xref:System.AppDomain>-Objekt geladen wird, wie etwa die Standard-<xref:System.AppDomain> für die `MyComputer`-Zone. Dies wird Strong-Name-Bypass-Funktion genannt. In einer vollständig vertrauenswürdigen Umgebung sind Forderungen nach <xref:System.Security.Permissions.StrongNameIdentityPermission> für signierte, vollständig vertrauenswürdige Assemblys immer erfolgreich, unabhängig von deren Signatur. Einzige Einschränkung ist die Tatsache, dass die Assembly vollständig vertrauenswürdig sein muss, da deren Zone vollständig vertrauenswürdig ist. Da der starke Name unter diesen Bedingungen kein bestimmender Faktor ist, gibt es auch keinen Grund, ihn zu validieren. Das Umgehen der Validierung einer Signatur mit starkem Namen führt zu deutlichen Verbesserungen in der Leistung.  
@@ -28,17 +28,17 @@ Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>So können Sie die Strong-Name-Bypass-Funktion für alle Anwendungen deaktivieren  
   
--   Erstellen Sie auf 32-Bit-Computern einen DWORD-Eintrag mit einem Wert von 0 (null) mit dem Namen `AllowStrongNameBypass` unter dem Schlüssel „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ in der Registrierung des Systems.  
+- Erstellen Sie auf 32-Bit-Computern einen DWORD-Eintrag mit einem Wert von 0 (null) mit dem Namen `AllowStrongNameBypass` unter dem Schlüssel „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ in der Registrierung des Systems.  
   
--   Erstellen Sie auf 64-Bit-Computern einen DWORD-Eintrag mit einem Wert von 0 (null) mit dem Namen `AllowStrongNameBypass` unter den Schlüsseln „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ und „HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework“ in der Registrierung des Systems.  
+- Erstellen Sie auf 64-Bit-Computern einen DWORD-Eintrag mit einem Wert von 0 (null) mit dem Namen `AllowStrongNameBypass` unter den Schlüsseln „HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework“ und „HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework“ in der Registrierung des Systems.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>So können Sie die Strong-Name-Bypass-Funktion für eine Anwendung deaktivieren  
   
-1.  Öffnen oder erstellen Sie die Anwendungskonfigurationsdatei.  
+1. Öffnen oder erstellen Sie die Anwendungskonfigurationsdatei.  
   
      Weitere Informationen zu dieser Datei finden Sie im Abschnitt zu Anwendungskonfigurationsdateien unter [Configuring Apps (Konfigurationsdateien)](../../../docs/framework/configure-apps/index.md).  
   
-2.  Fügen Sie folgenden Eintrag hinzu:  
+2. Fügen Sie folgenden Eintrag hinzu:  
   
     ```xml  
     <configuration>  
@@ -54,6 +54,7 @@ Ab .NET Framework Version 3.5 Service Pack 1 (SP1) werden Signaturen mit starkem
 >  Sie können die Überprüfung von starken Namen für eine Anwendung nur dann aktivieren oder deaktivieren, wenn die Bypass-Funktion auf dem Computer aktiviert ist. Wenn die Bypass-Funktion auf dem Computer deaktiviert wurde, werden starke Namen für alle Anwendungen überprüft, und Sie können die Überprüfung nicht für eine einzelne Anwendung umgehen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [\<bypassTrustedAppStrongNames>-Element](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

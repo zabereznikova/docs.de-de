@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7534d760f902f80d42c6c20c57a34d52012997a7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369655"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746659"
 ---
 # <a name="get-function"></a>Get-Funktion
 
@@ -31,7 +31,7 @@ Ruft den angegebenen Eigenschaftswert ab, falls vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -55,7 +55,7 @@ HRESULT Get (
 [in] Der Name der Eigenschaft.
 
 `lFlags`\
-[in]: Reserviert Dieser Parameter muss 0 sein.
+[in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pVal`\
 [out] Wenn die Funktion erfolgreich zurückgegeben wird, enthält Sie den Wert des der `wszName` Eigenschaft. Die `pval` Argument erhält, den richtigen Typ und Wert für den Qualifizierer.

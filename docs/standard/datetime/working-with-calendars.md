@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 989c1dec8056502e94e4b9652af89d66a2795dd5
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055312"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661159"
 ---
 # <a name="working-with-calendars"></a>Arbeiten mit Kalendern
 
@@ -30,33 +30,33 @@ Obwohl ein Datums- und Uhrzeitwert eine universale zeitliche Angabe darstellt, i
 
 Alle Kalender in .NET leiten Sie von der <xref:System.Globalization.Calendar?displayProperty=nameWithType> -Klasse, die die basisimplementierung für Kalender-Implementierung bietet. Eine der Klassen, die von der <xref:System.Globalization.Calendar>-Klasse erbt, ist die <xref:System.Globalization.EastAsianLunisolarCalendar>-Klasse. Dies ist die Basisklasse für alle Mond-Sonne-Kalender. .NET umfasst folgende kalenderimplementierungen:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>, der den chinesischen Mond-Sonne-Kalender darstellt.
+* <xref:System.Globalization.ChineseLunisolarCalendar> stellt den chinesischen Mond-Sonne-Kalender dar.
 
-* <xref:System.Globalization.GregorianCalendar>, stellt den gregorianischen Kalender dar. Dieser Kalender ist in weitere Untertypen unterteilt (z. B. Französisch (Naher Osten) oder Arabisch), die durch die <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>-Enumeration definiert werden. Die <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType>-Eigenschaft gibt den Untertyp des gregorianischen Kalenders an.
+* <xref:System.Globalization.GregorianCalendar> stellt den gregorianischen Kalender dar. Dieser Kalender ist in weitere Untertypen unterteilt (z. B. Französisch (Naher Osten) oder Arabisch), die durch die <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>-Enumeration definiert werden. Die <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType>-Eigenschaft gibt den Untertyp des gregorianischen Kalenders an.
 
-* <xref:System.Globalization.HebrewCalendar>, stellt den hebräischen Kalender dar.
+* <xref:System.Globalization.HebrewCalendar> stellt den hebräischen Kalender dar.
 
-* <xref:System.Globalization.HijriCalendar>, stellt den Hijri-Kalender dar.
+* <xref:System.Globalization.HijriCalendar> stellt den Hijri-Kalender dar.
 
-* <xref:System.Globalization.JapaneseCalendar>, stellt den japanischen Kalender dar.
+* <xref:System.Globalization.JapaneseCalendar> stellt den japanischen Kalender dar.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>, das im japanischen Mond-Sonne-Kalender darstellt.
+* <xref:System.Globalization.JapaneseLunisolarCalendar> stellt den japanischen Mond-Sonne-Kalender dar.
 
-* <xref:System.Globalization.JulianCalendar>, stellt den julianischen Kalender dar.
+* <xref:System.Globalization.JulianCalendar> stellt den julianischen Kalender dar.
 
-* <xref:System.Globalization.KoreanCalendar>, stellt den koreanischen Kalender dar.
+* <xref:System.Globalization.KoreanCalendar> stellt den koreanischen Kalender dar.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>, der den koreanischen Mond-Sonne-Kalender darstellt.
+* <xref:System.Globalization.KoreanLunisolarCalendar> stellt den koreanischen Mond-Sonne-Kalender dar.
 
-* <xref:System.Globalization.PersianCalendar>, stellt den persischen Kalender dar.
+* <xref:System.Globalization.PersianCalendar> stellt den persischen Kalender dar.
 
-* <xref:System.Globalization.TaiwanCalendar>, stellt den taiwanesischen Kalender dar.
+* <xref:System.Globalization.TaiwanCalendar> stellt den taiwanesischen Kalender dar.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>, der den taiwanesischen Mond-Sonne-Kalender darstellt.
+* <xref:System.Globalization.TaiwanLunisolarCalendar> stellt den taiwanesischen Mond-Sonne-Kalender dar.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>, stellt den buddhistischen Kalender dar.
+* <xref:System.Globalization.ThaiBuddhistCalendar> stellt den buddhistischen Kalender Thailands dar.
 
-* <xref:System.Globalization.UmAlQuraCalendar>, der den Umm Al-Qura-Kalender darstellt.
+* <xref:System.Globalization.UmAlQuraCalendar>, der den Umm al-Qura-Kalender darstellt.
 
 Ein Kalender kann auf zwei Arten verwendet werden:
 
@@ -138,12 +138,12 @@ Es gibt jedoch eine wichtige Ausnahme. Der (nicht initialisierte) Standardwert e
 Kalender unterteilen Datumsangaben in der Regel in Zeiträume. Allerdings die <xref:System.Globalization.Calendar> Klassen in .NET unterstützen nicht alle Zeiträume, die durch einen Kalender, und die meisten definiert die <xref:System.Globalization.Calendar> Klassen unterstützen nur einen einzigen Zeitraum. Nur die Klassen <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar> unterstützen mehrere Zeiträume.
 
 > [!IMPORTANT]
->  Der Zeitraum Reiwa, eine neue Ära in der <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>, beginnt am 1. Mai 2019. Diese Änderung betrifft alle Anwendungen, die diese Kalender verwenden. Finden Sie unter den folgenden Artikeln Weitere Informationen:
+> Der Zeitraum Reiwa, eine neue Ära in der <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>, beginnt am 1. Mai 2019. Diese Änderung betrifft alle Anwendungen, die diese Kalender verwenden. Finden Sie unter den folgenden Artikeln Weitere Informationen:
 > - [Behandeln eine neue Ära im japanischen Kalender in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), Kalender mit mehreren Zeiträumen und erläutert bewährte Verfahren zu verwenden, bei der Verarbeitung mit mehreren Zeitraum Kalender in der dokumentiert sind Funktionen hinzugefügt, die zu .NET unterstützen.
 > - [Vorbereiten Ihrer Anwendung auf die japanischen Zeitraum Änderung](/windows/uwp/design/globalizing/japanese-era-change), die Informationen bereitstellt, auf das Testen von Anwendungen auf Windows, um sicherzustellen, dass deren Bereitschaft für den Zeitraum ändern.
-> - [Zusammenfassung der neuen japanischen Ära aktualisiert für .NET Framework](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework), dem .NET Framework-Updates für einzelne Windows-Versionen aufgeführt, die im Zusammenhang mit der neuen Ära der japanischen Kalender, Anmerkungen zu dieser neuen Features von .NET Framework für die Unterstützung von mehreren Zeiträumen und enthält die Dinge, die beim Testen Ihrer Anwendungen gesucht.
+> - [Zusammenfassung der neuen japanischen Ära aktualisiert für .NET Framework](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework), dem .NET Framework-Updates für einzelne Windows-Versionen aufgeführt, die im Zusammenhang mit der neuen Ära der japanischen Kalender, Anmerkungen zu dieser neuen Features von .NET Framework für die Unterstützung von mehreren Zeiträumen und enthält die Dinge, die beim Testen Ihrer Anwendungen gesucht.
 
-Ein Zeitraum, in den meisten Kalendern gibt einen extrem langen Zeitraum an. Im gregorianischen Kalender umfasst mehr als zwei Jahrtausenden z. B. der aktuelle Zeitraum. Für die <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>, die beiden Kalender, die mehrere Zeiträume unterstützen, ist dies nicht der Fall. Ein Zeitraum entspricht dem Zeitraum des ein Kaisers. Unterstützung für mehrere Zeiträume, insbesondere dann, wenn die Obergrenze des aktuellen Zeitraums unbekannt ist, beträgt besondere Herausforderungen verbunden ist. 
+Ein Zeitraum, in den meisten Kalendern gibt einen extrem langen Zeitraum an. Im gregorianischen Kalender umfasst mehr als zwei Jahrtausenden z. B. der aktuelle Zeitraum. Für die <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>, die beiden Kalender, die mehrere Zeiträume unterstützen, ist dies nicht der Fall. Ein Zeitraum entspricht dem Zeitraum des ein Kaisers. Unterstützung für mehrere Zeiträume, insbesondere dann, wenn die Obergrenze des aktuellen Zeitraums unbekannt ist, beträgt besondere Herausforderungen verbunden ist.
 
 ### <a name="eras-and-era-names"></a>Zeiträume und Namen
 
@@ -181,21 +181,21 @@ Wenn der Zeitraum geändert wird, wird die Absicht des Codes jedoch nicht eindeu
 
 - Instanziieren den Datum und Uhrzeit-Wert, die über das standardmäßige <xref:System.Globalization.GregorianCalendar> Klasse. Sie können dann den japanischen Kalender oder den japanischen Mond-Sonne-Kalender für die Zeichenfolgendarstellung von Datumsangaben, wie im folgenden Beispiel gezeigt verwenden.
 
-   [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
-   [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
+  [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
+  [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
 
 - Rufen Sie eine Datum und Uhrzeit-Methode, die explizit einen Zeitraum angibt. Dies umfasst die folgenden Methoden:
 
-   - Die <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> Methode der <xref:System.Globalization.JapaneseCalendar> oder <xref:System.Globalization.JapaneseLunisolarCalendar> Klasse.
+  - Die <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> Methode der <xref:System.Globalization.JapaneseCalendar> oder <xref:System.Globalization.JapaneseLunisolarCalendar> Klasse.
 
-   - Ein <xref:System.DateTime> oder <xref:System.DateTimeOffset> Analysemethode, z. B. <xref:System.DateTime.Parse%2A>, <xref:System.DateTime.TryParse%2A>, <xref:System.DateTime.ParseExact%2A>, oder <xref:System.DateTime.TryParseExact%2A>, die die zu analysierende Zeichenfolge enthält und optional eine <xref:System.Globalization.DateTimeStyles> Argument, wenn die aktuelle Kultur auf Japanisch-Japan ist (" ja-JP") und Kalenders der Kultur ist die <xref:System.Globalization.JapaneseCalendar>. Die zu analysierende Zeichenfolge muss es sich um den Zeitraum enthalten.
+  - Ein <xref:System.DateTime> oder <xref:System.DateTimeOffset> Analysemethode, z. B. <xref:System.DateTime.Parse%2A>, <xref:System.DateTime.TryParse%2A>, <xref:System.DateTime.ParseExact%2A>, oder <xref:System.DateTime.TryParseExact%2A>, die die zu analysierende Zeichenfolge enthält und optional eine <xref:System.Globalization.DateTimeStyles> Argument, wenn die aktuelle Kultur auf Japanisch-Japan ist (" ja-JP") und Kalenders der Kultur ist die <xref:System.Globalization.JapaneseCalendar>. Die zu analysierende Zeichenfolge muss es sich um den Zeitraum enthalten.
 
-   - Ein <xref:System.DateTime> oder <xref:System.DateTimeOffset> Analysemethode, die enthält eine `provider` Parameter vom Typ <xref:System.IFormatProvider>. `provider` muss eine <xref:System.Globalization.CultureInfo> -Objekt, das die Japanisch-Japan ("ja-JP") Kultur darstellt, dessen aktuellen Kalender <xref:System.Globalization.JapaneseCalendar> oder <xref:System.Globalization.DateTimeFormatInfo> Objekt, dessen <xref:System.Globalization.DateTimeFormatInfo.Calendar> Eigenschaft <xref:System.Globalization.JapaneseCalendar>. Die zu analysierende Zeichenfolge muss es sich um den Zeitraum enthalten.
+  - Ein <xref:System.DateTime> oder <xref:System.DateTimeOffset> Analysemethode, die enthält eine `provider` Parameter vom Typ <xref:System.IFormatProvider>. `provider` muss eine <xref:System.Globalization.CultureInfo> -Objekt, das die Japanisch-Japan ("ja-JP") Kultur darstellt, dessen aktuellen Kalender <xref:System.Globalization.JapaneseCalendar> oder <xref:System.Globalization.DateTimeFormatInfo> Objekt, dessen <xref:System.Globalization.DateTimeFormatInfo.Calendar> Eigenschaft <xref:System.Globalization.JapaneseCalendar>. Die zu analysierende Zeichenfolge muss es sich um den Zeitraum enthalten.
 
-   Im folgende Beispiel verwendet drei der folgenden Methoden zum Instanziieren einer Datums- und Uhrzeitangabe im Zeitraum Meiji zurück, die auf dem 8. September 1868 begann und endete am 29. Juli 1912. 
+  Im folgende Beispiel verwendet drei der folgenden Methoden zum Instanziieren einer Datums- und Uhrzeitangabe im Zeitraum Meiji zurück, die auf dem 8. September 1868 begann und endete am 29. Juli 1912.
 
-   [!code-csharp[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/cs/program.cs)]
-   [!code-vb[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/vb/program.vb)]
+  [!code-csharp[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/cs/program.cs)]
+  [!code-vb[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/vb/program.vb)]
 
 > [!TIP]
 > Bei der Verwendung von Kalendern, die mehrere Zeiträume unterstützen *immer* der gregorianische Kalender ein Datum zu instanziieren, oder geben Sie den Zeitraum, der beim Instanziieren einer Datums- und Uhrzeitangabe basierend auf diesen Kalender.
@@ -212,40 +212,40 @@ Sehr ähnlich wie einzelne Kalender Datumsbereiche, unterstützt haben Zeiträum
 
 Im folgenden Beispiel wird versucht, ein Datum im Jahr 65. des Zeitraums Showa, zu instanziieren, die auf 25 Dezember 1926 begann und endete am 7. Januar 1989. Dieses Datum entspricht dem 9. Januar 1990, d.h. außerhalb des Bereichs des Zeitraums Showa in die <xref:System.Globalization.JapaneseCalendar>. Wie die Ausgabe im Beispiel wird veranschaulicht, ist das Datum angezeigt, die im Beispiel am 9. Januar 1990 im zweiten Jahr im Heisei Zeitraum zurück.
 
-   [!code-csharp[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/cs/program.cs)]
-   [!code-vb[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/vb/program.vb)]
+  [!code-csharp[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/cs/program.cs)]
+  [!code-vb[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/vb/program.vb)]
 
 Wenn weniger strengen Prüfungen nicht erwünscht sind, können Sie strengen Prüfungen in eine Reihe von Möglichkeiten, je nach Version von .NET wiederherstellen, auf denen Ihre Anwendung ausgeführt wird:
 
 - **.NET Core:** Fügen Sie den folgenden können Sie die *. netcore.runtime.json* Config-Datei:
 
-   ```json
-   "runtimeOptions": {
-      "configProperties": {
-         "Switch.System.Globalization.EnforceJapaneseEraYearRanges": true
-      } 
-   }
-   ```
+  ```json
+  "runtimeOptions": {
+    "configProperties": {
+        "Switch.System.Globalization.EnforceJapaneseEraYearRanges": true
+    }
+  }
+  ```
 
 - **.NET Framework 4.6 oder höher:** Sie können die folgende AppContext-Option festlegen:
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <configuration>
-     <runtime>
-       <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceJapaneseEraYearRanges=true" />
-     </runtime>
-   </configuration>
-   ```
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <configuration>
+    <runtime>
+      <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceJapaneseEraYearRanges=true" />
+    </runtime>
+  </configuration>
+  ```
 
 - **.NET Framework 4.5.2 oder früher:** Sie können den folgenden Registrierungswert festlegen:
 
-   |  |  |
-   |--|--|
-   |Key | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |Name | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
-   |Typ | REG_SZ |
-   |Wert | 1 |
+  |  |  |
+  |--|--|
+  |Key | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
+  |Name | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
+  |Typ | REG_SZ |
+  |Wert | 1 |
 
 Mit strengen Prüfungen aktiviert, die im vorherige Beispiel löst eine <xref:System.ArgumentOutOfRangeException> und zeigt die folgende Ausgabe:
 
@@ -287,40 +287,40 @@ In der japanischen Kalender wird im erste Jahr eines Zeitabschnitts Gannen (元�
 
 Z. B. das folgende Beispiel zeigt ein Datum im ersten Jahr des Zeitraums Heisei in die <xref:System.Globalization.JapaneseCalendar> .
 
-   [!code-csharp[gannen](~/samples/snippets/standard/datetime/calendars/gannen/cs/program.cs)]
-   [!code-vb[gannen](~/samples/snippets/standard/datetime/calendars/gannen/vb/gannen-fmt.vb)]
+  [!code-csharp[gannen](~/samples/snippets/standard/datetime/calendars/gannen/cs/program.cs)]
+  [!code-vb[gannen](~/samples/snippets/standard/datetime/calendars/gannen/vb/gannen-fmt.vb)]
 
 Wenn dieses Verhalten bei Formatierungsvorgängen nicht erwünscht ist, können Sie das vorherige Verhalten wiederherstellen steht immer im erste Jahr eines Zeitabschnitts als "1" statt "Gannen", wie folgt, abhängig von der Version von .NET:
 
 - **.NET Core:** Fügen Sie den folgenden können Sie die *. netcore.runtime.json* Config-Datei:
 
-   ```json
-   "runtimeOptions": {
-      "configProperties": {
-         "Switch.System.Globalization.FormatJapaneseFirstYearAsANumber": true
-      } 
-   }
-   ```
+  ```json
+  "runtimeOptions": {
+    "configProperties": {
+        "Switch.System.Globalization.FormatJapaneseFirstYearAsANumber": true
+    }
+  }
+  ```
 
 - **.NET Framework 4.6 oder höher:** Sie können die folgende AppContext-Option festlegen:
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <configuration>
-     <runtime>
-       <AppContextSwitchOverrides value="Switch.System.Globalization.FormatJapaneseFirstYearAsANumber=true" />
-     </runtime>
-   </configuration>
-   ```
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <configuration>
+    <runtime>
+      <AppContextSwitchOverrides value="Switch.System.Globalization.FormatJapaneseFirstYearAsANumber=true" />
+    </runtime>
+  </configuration>
+  ```
 
 - **.NET Framework 4.5.2 oder früher:** Sie können den folgenden Registrierungswert festlegen:
 
-   |  |  |
-   |--|--|
-   |Key | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |Name | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
-   |Typ | REG_SZ |
-   |Wert | 1 |
+  |  |  |
+  |--|--|
+  |Key | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
+  |Name | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
+  |Typ | REG_SZ |
+  |Wert | 1 |
 
 Dank der Unterstützung bei Formatierungsvorgängen deaktiviert Gannen zeigt die im vorherige Beispiel die folgende Ausgabe:
 
@@ -332,36 +332,36 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 - **.NET Core:** Fügen Sie den folgenden können Sie die *. netcore.runtime.json* Config-Datei:
 
-   ```json
-   "runtimeOptions": {
-      "configProperties": {
-         "Switch.System.Globalization.EnforceLegacyJapaneseDateParsing": true
-      } 
-   }
-   ```
+  ```json
+  "runtimeOptions": {
+    "configProperties": {
+        "Switch.System.Globalization.EnforceLegacyJapaneseDateParsing": true
+    }
+  }
+  ```
 
 - **.NET Framework 4.6 oder höher:** Sie können die folgende AppContext-Option festlegen:
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <configuration>
-     <runtime>
-       <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceLegacyJapaneseDateParsing=true" />
-     </runtime>
-   </configuration>
-   ```
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <configuration>
+    <runtime>
+      <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceLegacyJapaneseDateParsing=true" />
+    </runtime>
+  </configuration>
+  ```
 
 - **.NET Framework 4.5.2 oder früher:** Sie können den folgenden Registrierungswert festlegen:
 
-   |  |  |
-   |--|--|  
-   |Key | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |Name | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
-   |Typ | REG_SZ |
-   |Wert | 1 | 
+  |  |  |
+  |--|--|
+  |Key | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
+  |Name | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
+  |Typ | REG_SZ |
+  |Wert | 1 |
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
 - [Beispiel: Kalender-Woche-Bereich-Hilfsprogramm](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
-- [Kalenderklasse](xref:System.Globalization.Calendar)
+- [Calendar-Klasse](xref:System.Globalization.Calendar)

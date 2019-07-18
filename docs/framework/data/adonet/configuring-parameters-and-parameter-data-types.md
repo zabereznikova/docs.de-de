@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242047"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879966"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurieren von Parametern und Parameterdatentypen
 
@@ -33,7 +33,7 @@ Beim Hinzufügen von Parametern müssen Sie für alle Parameter, die keine Einga
 
 ## <a name="working-with-parameter-placeholders"></a>Arbeiten mit Parameterplatzhaltern
 
-Die Syntax für Parameterplatzhalter ist abhängig von der jeweiligen Datenquelle. Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter handhaben die Benennung und das Angeben von Parametern und Parameterplatzhaltern unterschiedlich. Diese Syntax wird an eine bestimmte Datenquelle angepasst, wie in der folgenden Tabelle beschrieben.
+Die Syntax für Parameterplatzhalter ist abhängig von der jeweiligen Datenquelle. Die .NET Framework-Datenanbieter handhaben die Benennung und das Angeben von Parametern und Parameterplatzhaltern unterschiedlich. Diese Syntax wird an eine bestimmte Datenquelle angepasst, wie in der folgenden Tabelle beschrieben.
 
 |Datenanbieter|Syntax für Parameterbenennung|
 |-------------------|-----------------------------|
@@ -44,39 +44,39 @@ Die Syntax für Parameterplatzhalter ist abhängig von der jeweiligen Datenquell
 
 ## <a name="specifying-parameter-data-types"></a>Angeben von Parameterdatentypen
 
-Der Datentyp eines Parameters ist abhängig vom [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter. Durch Angabe des Typs wird der Wert von `Parameter` in den Typ des [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters konvertiert, bevor er an die Datenquelle übergeben wird. Der Typ eines `Parameter` kann auch in generischer Form angegeben werden, indem die `DbType` -Eigenschaft des `Parameter` -Objekts auf einen bestimmten <xref:System.Data.DbType>festgelegt wird.
+Der Datentyp eines Parameters ist jeweils datenanbieterspezifisch. Gibt den Typ konvertiert den Wert der `Parameter` in den .NET Framework-Anbieter-Datentyp vor dem Übergeben des Werts an die Datenquelle. Der Typ eines `Parameter` kann auch in generischer Form angegeben werden, indem die `DbType` -Eigenschaft des `Parameter` -Objekts auf einen bestimmten <xref:System.Data.DbType>festgelegt wird.
 
-Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbietertyp eines `Parameter` -Objekts wird vom [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typ des `Value` des `Parameter` -Objekts oder vom `DbType` des `Parameter` -Objekts hergeleitet. Die folgende Tabelle zeigt den abgeleiteten `Parameter` -Typ basierend auf dem als `Parameter` -Wert übergebenen Objekt oder dem angegebenen `DbType`.
+Der .NET Framework-Anbieter-Datentyp, der eine `Parameter` vom .NET Framework-Typ des Objekts abgeleitet wird die `Value` von der `Parameter` -Objekt, oder die `DbType` von der `Parameter` Objekt. Die folgende Tabelle zeigt den abgeleiteten `Parameter` -Typ basierend auf dem als `Parameter` -Wert übergebenen Objekt oder dem angegebenen `DbType`.
 
 |.NET Framework-Typ|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
-|<xref:System.Boolean>|Boolean|Bit|Boolesch|Bit|Byte|
+|<xref:System.Boolean>|Boolesch|Bit|Boolesch|Bit|Byte|
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|
 |byte[]|Binär|VarBinary. Diese implizite Konvertierung schlägt fehl, wenn das Bytearray größer als die maximale Größe eines varbinary ist, 8000 Byte. Legen Sie für Bytearrays mit mehr als 8000 Bytes explizit den <xref:System.Data.SqlDbType>.|VarBinary|Binär|Raw|
 |<xref:System.Char>| |Das Ableiten von <xref:System.Data.SqlDbType> aus char wird nicht unterstützt.|Char|Char|Byte|
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|
 |<xref:System.DateTimeOffset>|DateTimeOffset|"DateTimeOffset" in SQL Server 2008. Das Ableiten von <xref:System.Data.SqlDbType> aus DateTimeOffset wird erst ab SQL Server 2008 unterstützt.|||DateTime|
-|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numeric|Nummer|
+|<xref:System.Decimal>|Decimal|Decimal|Decimal|Numeric|Anzahl|
 |<xref:System.Double>|Double|Float|Double|Double|Double|
 |<xref:System.Single>|Single|Real|Single|Real|Float|
-|<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
+|<xref:System.Guid>|GUID|UniqueIdentifier|Guid|UniqueIdentifier|Raw|
 |<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Nummer|
-|<xref:System.Object>|Objekt|Variante|Variante|Das Ableiten von OdbcType aus Object wird nicht unterstützt.|Blob|
+|<xref:System.Object>|Object|Variante|Variante|Das Ableiten von OdbcType aus Object wird nicht unterstützt.|Blob|
 |<xref:System.String>|Zeichenfolge|NVarChar. Diese implizite Konvertierung kann nicht ausgeführt werden, wenn die Zeichenfolge die maximale NVarChar-Länge (4000 Zeichen) überschreitet. Legen Sie für Zeichenfolgen mit mehr als 4000 Zeichen explizit <xref:System.Data.SqlDbType>fest.|VarWChar|NVarChar|NVarChar|
 |<xref:System.TimeSpan>|zeit|"Time" in SQL Server 2008. Das Ableiten von <xref:System.Data.SqlDbType> aus TimeSpan wird erst ab SQL Server 2008 unterstützt.|DBTime|zeit|DateTime|
 |<xref:System.UInt16>|UInt16|Das Ableiten von <xref:System.Data.SqlDbType> aus UInt16 wird nicht unterstützt.|UnsignedSmallInt|Int|UInt16|
 |<xref:System.UInt32>|UInt32|Das Ableiten von <xref:System.Data.SqlDbType> aus UInt32 wird nicht unterstützt.|UnsignedInt|BigInt|UInt32|
-|<xref:System.UInt64>|UInt64|Das Ableiten von <xref:System.Data.SqlDbType> aus UInt64 wird nicht unterstützt.|UnsignedBigInt|Numeric|Nummer|
+|<xref:System.UInt64>|UInt64|Das Ableiten von <xref:System.Data.SqlDbType> aus UInt64 wird nicht unterstützt.|UnsignedBigInt|Numeric|Anzahl|
 ||AnsiString|VarChar|VarChar|VarChar|VarChar|
 ||AnsiStringFixedLength|Char|Char|Char|Char|
-||Währung|Money|Währung|Das Ableiten von `OdbcType` aus `Currency` wird nicht unterstützt.|Nummer|
+||Währung|Money|Währung|Das Ableiten von `OdbcType` aus `Currency` wird nicht unterstützt.|Anzahl|
 ||Datum|"Date" in SQL Server 2008. Das Ableiten von <xref:System.Data.SqlDbType> aus Date wird erst ab SQL Server 2008 unterstützt.|DBDate|Datum|DateTime|
 ||SByte|Das Ableiten von <xref:System.Data.SqlDbType> aus SByte wird nicht unterstützt.|TinyInt|Das Ableiten von `OdbcType` aus SByte wird nicht unterstützt.|SByte|
 ||StringFixedLength|NChar|WChar|NChar|NChar|
 ||zeit|"Time" in SQL Server 2008. Das Ableiten von <xref:System.Data.SqlDbType> aus Time wird erst ab SQL Server 2008 unterstützt.|DBTime|zeit|DateTime|
-||VarNumeric|Das Ableiten von <xref:System.Data.SqlDbType> aus VarNumeric wird nicht unterstützt.|VarNumeric|Das Ableiten von `OdbcType` aus VarNumeric wird nicht unterstützt.|Nummer|
+||VarNumeric|Das Ableiten von <xref:System.Data.SqlDbType> aus VarNumeric wird nicht unterstützt.|VarNumeric|Das Ableiten von `OdbcType` aus VarNumeric wird nicht unterstützt.|Anzahl|
 |Benutzerdefinierter Typ (ein Objekt mit <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>)|Object oder String, je nach Anbieter (SqlClient gibt immer ein Objekt zurück, ODBC immer eine Zeichenfolge, und der verwaltete OLE DB-Datenanbieter ist in der Lage, beide zu erkennen).|SqlDbType.Udt, wenn <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> vorhanden ist; andernfalls Variant|OleDbType.VarWChar (wenn der Wert NULL ist); andernfalls OleDbType.Variant.|OdbcType.NVarChar|wird nicht unterstützt|
 
 > [!NOTE]
@@ -96,12 +96,12 @@ Weitere Informationen finden Sie unter [Generieren von Befehlen mit CommandBuild
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Verwenden von Parametern mit SqlCommand und eine gespeicherte Prozedur
 
-Gespeicherte Prozeduren bieten zahlreiche Vorteile in datengesteuerten Anwendungen. Mit gespeicherten Prozeduren können Datenbankoperationen in einem einzelnen Befehl zusammengefasst, für die beste Leistung optimiert und mit zusätzlicher Sicherheit ausgestattet werden. Während eine gespeicherte Prozedur aufgerufen werden kann, übergeben Sie den Namen der gespeicherten Prozedur gefolgt von Parameterargumenten als SQL-Anweisung, mit der <xref:System.Data.Common.DbCommand.Parameters%2A> Auflistung von der [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> -Objekt ermöglicht es Ihnen genauere Definition der gespeicherten Parameter der Prozedur und zum Zugriff auf Ausgabeparameter und Rückgabewerte.
+Gespeicherte Prozeduren bieten zahlreiche Vorteile in datengesteuerten Anwendungen. Mit gespeicherten Prozeduren können Datenbankoperationen in einem einzelnen Befehl zusammengefasst, für die beste Leistung optimiert und mit zusätzlicher Sicherheit ausgestattet werden. Während eine gespeicherte Prozedur aufgerufen werden kann, übergeben Sie den Namen der gespeicherten Prozedur gefolgt von Parameterargumenten als SQL-Anweisung, mit der <xref:System.Data.Common.DbCommand.Parameters%2A> -Auflistung des ADO.NET- <xref:System.Data.Common.DbCommand> -Objekt ermöglicht es Ihnen genauere Definition der gespeicherten Prozedur Parameter, und um den Zugriff auf Ausgabeparameter und Rückgabewerte.
 
 > [!NOTE]
 > Parametrisierte Anweisungen werden auf dem Server mit `sp_executesql,` ausgeführt, sodass die Wiederverwendung von Abfrageplänen möglich ist. Lokale Cursor oder Variablen im `sp_executesql` -Batch sind für den Batch, der `sp_executesql`aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der `sp_executesql` -Anweisung gültig. Weitere Informationen finden Sie unter [Sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
 
-Wenn Sie Parameter mit einem <xref:System.Data.SqlClient.SqlCommand> verwenden, um eine gespeicherte SQL Server-Prozedur auszuführen, müssen die der <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> -Auflistung hinzugefügten Parameternamen mit den Namen der Parametermarkierungen in der gespeicherten Prozedur übereinstimmen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server unterstützt keine Fragezeichenplatzhalter (?) für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. Er behandelt die Parameter in der gespeicherten Prozedur als benannte Parameter und sucht nach den entsprechenden Parametermarkierungen. Nehmen wir z. B. an, die gespeicherte Prozedur `CustOrderHist` ist mit einem Parameter mit dem Namen `@CustomerID`definiert. Wenn Ihr Code die gespeicherte Prozedur ausführt, muss er ebenfalls einen Parameter mit dem Namen `@CustomerID`verwenden.
+Wenn Sie Parameter mit einem <xref:System.Data.SqlClient.SqlCommand> verwenden, um eine gespeicherte SQL Server-Prozedur auszuführen, müssen die der <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> -Auflistung hinzugefügten Parameternamen mit den Namen der Parametermarkierungen in der gespeicherten Prozedur übereinstimmen. Der .NET Framework-Datenanbieter für SQL Server unterstützt keine Fragezeichenplatzhalter (?) für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. Er behandelt die Parameter in der gespeicherten Prozedur als benannte Parameter und sucht nach den entsprechenden Parametermarkierungen. Nehmen wir z. B. an, die gespeicherte Prozedur `CustOrderHist` ist mit einem Parameter mit dem Namen `@CustomerID`definiert. Wenn Ihr Code die gespeicherte Prozedur ausführt, muss er ebenfalls einen Parameter mit dem Namen `@CustomerID`verwenden.
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ Dieses Beispiel zeigt, wie Sie eine gespeicherte SQL Server-Prozedur in der `Nor
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Verwenden von Parametern mit einem "OleDbCommand" oder OdbcCommand
 
-Wenn Sie Parameter mit einem <xref:System.Data.OleDb.OleDbCommand> oder einem <xref:System.Data.Odbc.OdbcCommand>verwenden, muss die Reihenfolge der der `Parameters` -Auflistung hinzugefügten Parameter mit der Reihenfolge der in der gespeicherten Prozedur definierten Parameter übereinstimmen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter für OLE DB und der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter für ODBC behandeln Parameter in einer gespeicherten Prozedur als Platzhalter und wenden Parameterwerte der Reihe nach an. Außerdem müssen der `Parameters` -Auflistung zuerst die Parameter für die Rückgabewerte hinzugefügt werden.
+Wenn Sie Parameter mit einem <xref:System.Data.OleDb.OleDbCommand> oder einem <xref:System.Data.Odbc.OdbcCommand>verwenden, muss die Reihenfolge der der `Parameters` -Auflistung hinzugefügten Parameter mit der Reihenfolge der in der gespeicherten Prozedur definierten Parameter übereinstimmen. Der .NET Framework-Datenanbieter für OLE DB und der .NET Framework-Datenanbieter für ODBC behandeln Parameter in einer gespeicherten Prozedur als Platzhalter und wenden Parameterwerte der Reihe nach an. Außerdem müssen der `Parameters` -Auflistung zuerst die Parameter für die Rückgabewerte hinzugefügt werden.
 
-Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB und der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für ODBC unterstützen keine benannten Parameter für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. In diesem Fall muss der Fragezeichenplatzhalter (?) verwenden. Dies wird im folgenden Beispiel dargestellt.
+Der .NET Framework-Datenanbieter für OLE DB und der .NET Framework-Datenanbieter für ODBC unterstützen keine benannten Parameter für die Übergabe von Parametern an eine SQL-Anweisung oder gespeicherte Prozedur. In diesem Fall muss der Fragezeichenplatzhalter (?) verwenden. Dies wird im folgenden Beispiel dargestellt.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

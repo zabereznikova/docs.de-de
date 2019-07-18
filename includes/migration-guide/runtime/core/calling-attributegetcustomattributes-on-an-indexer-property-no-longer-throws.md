@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: a3f54bec98f220af48e932e6485d06732a4c6ddd
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761286"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858503"
 ---
 ### <a name="calling-attributegetcustomattributes-on-an-indexer-property-no-longer-throws-ambiguousmatchexception-if-the-ambiguity-can-be-resolved-by-indexs-type"></a>Der Aufruf von Attribute.GetCustomAttributes für eine Indexereigenschaft löst keine AmbiguousMatchException-Ausnahme mehr aus, wenn die Mehrdeutigkeit durch den Typ des Indexes aufgelöst werden kann
 

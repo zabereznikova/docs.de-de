@@ -12,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6f802428a73f229e948099788ec21f07efbfab76
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 6b69f87da9fb3829d765dc135de1f6c10765b63a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634517"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634362"
 ---
 # <a name="sqlstreamcharsseekint64-seekorigin-method"></a>SqlStreamChars.Seek ("Int64", "SeekOrigin")-Methode
 

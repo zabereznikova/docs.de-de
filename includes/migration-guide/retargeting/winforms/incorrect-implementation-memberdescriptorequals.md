@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2413e1997b6e729b9d5889677e25254aaa24afea
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859362"
+---
 ### <a name="incorrect-implementation-of-memberdescriptorequals"></a>Falsche Implementierung von MemberDescriptor.Equals
 
 |   |   |

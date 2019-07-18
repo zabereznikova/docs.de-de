@@ -2,12 +2,12 @@
 title: Technologiebeispiel für versionstolerante Serialisierung
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: b874a347924f6d15e2e6164092b819321384ca3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c30c39848be02785b6b808ecf4af711c0c9e95d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681117"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66482994"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Technologiebeispiel für versionstolerante Serialisierung
 [Beispiel herunterladen](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -16,29 +16,29 @@ ms.locfileid: "54681117"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>So erstellen Sie das Beispiel mithilfe der Eingabeaufforderung  
   
-1.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse (unter V1 Application oder V2 Application) für das Beispiel.  
+1. Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse (unter V1 Application oder V2 Application) für das Beispiel.  
   
-2.  Geben Sie in die Befehlszeile **msbuild.exe \<ver> application.sln** ein (wobei „\<ver>“ entweder v1 oder v2 entspricht).  
+2. Geben Sie in die Befehlszeile **msbuild.exe \<ver> application.sln** ein (wobei „\<ver>“ entweder v1 oder v2 entspricht).  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio  
   
-1.  Öffnen Sie [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.  
+1. Öffnen Sie Datei-Explorer, und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.  
   
-2.  Navigieren Sie zum Unterverzeichnis V1 Application in dem Verzeichnis, das Sie im vorherigen Schritt ausgewählt haben.  
+2. Navigieren Sie zum Unterverzeichnis V1 Application in dem Verzeichnis, das Sie im vorherigen Schritt ausgewählt haben.  
   
-3.  Doppelklicken Sie auf das Symbol für V1 Application.sln, um die Datei in Visual Studio zu öffnen.  
+3. Doppelklicken Sie auf das Symbol für V1 Application.sln, um die Datei in Visual Studio zu öffnen.  
   
-4.  Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
+4. Klicken Sie im Menü **Erstellen** auf **Projektmappe erstellen**.  
   
-5.  Navigieren Sie zum Unterverzeichnis V2 Application, und wiederholen Sie die beiden vorherigen Schritte, um die V2-Anwendung zu erstellen.  
+5. Navigieren Sie zum Unterverzeichnis V2 Application, und wiederholen Sie die beiden vorherigen Schritte, um die V2-Anwendung zu erstellen.  
   
  Die Anwendungen werden im Standardunterverzeichnis \bin oder \bin\Debug des zugehörigen Projektverzeichnisses erstellt.  
   
 ### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   
-1.  Navigieren Sie im Eingabeaufforderungsfenster zu dem sprachspezifischen Unterverzeichnis, das Sie beim Erstellen der Beispielanwendungen ausgewählt haben.  
+1. Navigieren Sie im Eingabeaufforderungsfenster zu dem sprachspezifischen Unterverzeichnis, das Sie beim Erstellen der Beispielanwendungen ausgewählt haben.  
   
-2.  Geben Sie **runme.cmd** in der Befehlszeile ein, um sofort beide Anwendungen auszuführen.  
+2. Geben Sie **runme.cmd** in der Befehlszeile ein, um sofort beide Anwendungen auszuführen.  
   
  Alternativ können Sie zu den Verzeichnissen navigieren, die die neuen ausführbaren Dateien enthalten, und diese dann nacheinander ausführen.  
   

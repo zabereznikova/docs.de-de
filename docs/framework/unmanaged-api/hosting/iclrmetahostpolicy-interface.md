@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93507ac72b79210dc3a267fea39a6a7b2874916a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 56a34a8f185ce600f4792cf05c3e95623b70ad6c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188565"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776535"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy-Schnittstelle
 Stellt die [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) -Methode, die einen Zeiger auf eine common Language Runtime (CLR)-Schnittstelle basierend auf einer Richtlinienkriterien zurückgibt, verwalteten Assembly, Version und Konfiguration.  
@@ -35,7 +35,7 @@ Stellt die [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hostin
 ## <a name="remarks"></a>Hinweise  
  Sie erhalten einen Verweis auf diese Schnittstelle durch Aufrufen der [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) -Funktion wie im folgenden Code gezeigt:  
   
-```  
+```cpp  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,  
                    IID_ICLRMetaHostPolicy, (LPVOID*)&pMetaHostPolicy);  
@@ -44,7 +44,7 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 > [!NOTE]
 >  Diese Schnittstelle nicht lädt oder aktiviert die CLR, sondern einfach gibt die bevorzugte CLR-Version anhand der verfügbaren Versionen, die installiert oder geladen werden.  
   
- Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Richtlinien hosting-API konsolidiert werden, sodass Hosts mit bestimmten Anforderungen an die grundlegenden Funktionen verwenden können, ohne dass unbeabsichtigte Folge haben. Viele der Exporte "Mscoree.dll" werden z. B. auf eine bestimmte CLR binden, obwohl es sich bei eine Methode nicht logisch erforderlich ist. Die [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) Enumeration bietet Bindungsrichtlinien für die, die für die Mehrzahl der Hosts gelten.  
+ Die .NET Framework 4-hosting-API konsolidiert Richtlinien an, sodass Hosts mit bestimmten Anforderungen an die grundlegenden Funktionen verwenden können, ohne dass unbeabsichtigte Folge haben. Viele der Exporte "Mscoree.dll" werden z. B. auf eine bestimmte CLR binden, obwohl es sich bei eine Methode nicht logisch erforderlich ist. Die [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) Enumeration bietet Bindungsrichtlinien für die, die für die Mehrzahl der Hosts gelten.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -58,5 +58,5 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,
 ## <a name="see-also"></a>Siehe auch
 
 - [In .NET Framework 4 und 4.5 hinzugefügte CLR-Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

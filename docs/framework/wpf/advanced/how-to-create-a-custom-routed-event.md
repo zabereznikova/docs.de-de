@@ -9,11 +9,11 @@ helpviewer_keywords:
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
 ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776687"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Routingereignisses
 Für das benutzerdefinierte Ereignis zur Unterstützung von Ereignisrouting, müssen Sie registrieren einen <xref:System.Windows.RoutedEvent> mithilfe der <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> Methode. Dieses Beispiel zeigt die Grundlagen der Erstellung eines benutzerdefinierten Routingereignisses.  

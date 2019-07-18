@@ -6,15 +6,15 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb8112076bf0b835b558a9f88ae2ff59bdb8476d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708898"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505176"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Verwenden eines Pinsels zum Ausfüllen von Formen
-Ein [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> Objekt wird verwendet, um das Innere einer geschlossenen Form auszufüllen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] definiert mehrere Stilen: Volltonfarbe entspricht, Schraffur, Bildstruktur und Farbverlauf.  
+Eine GDI + <xref:System.Drawing.Brush> Objekt wird verwendet, um das Innere einer geschlossenen Form auszufüllen. GDI + definiert mehrere Stilen: Volltonfarbe entspricht, Schraffur, Bildstruktur und Farbverlauf.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Vorgehensweise: Ausfüllen einer Form mit einer Volltonfarbe](how-to-fill-a-shape-with-a-solid-color.md)  

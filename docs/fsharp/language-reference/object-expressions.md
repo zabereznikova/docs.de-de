@@ -3,11 +3,11 @@ title: Objektausdrücke
 description: Erfahren Sie, wie Sie mit F# Objektausdrücke, wenn Sie die zusätzlichen Code und den Aufwand vermeiden möchten, erforderlich zum Erstellen einer neuen benannten Typ.
 ms.date: 02/08/2019
 ms.openlocfilehash: 63f2c1d7128721b7b8c744e4cf02d73c2a8b4a07
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666287"
 ---
 # <a name="object-expressions"></a>Objektausdrücke
 

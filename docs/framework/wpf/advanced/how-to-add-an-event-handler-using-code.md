@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 32e3926bb4c519b7be14a26484603d6d4ea88b6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129355"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665795"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Vorgehensweise: Hinzufügen eines Ereignishandlers mithilfe von Code
 Dieses Beispiel zeigt, wie ein Element mithilfe von Code einen Ereignishandler hinzugefügt wird.  
@@ -25,9 +25,9 @@ Dieses Beispiel zeigt, wie ein Element mithilfe von Code einen Ereignishandler h
   
  Die C# Beispiel verwendet die `+=` Operator, um ein Ereignis einen Handler zuzuweisen. Dies ist der gleiche Operator, der verwendet wird, weisen Sie einen Handler im der [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Modell für die Ereignisbehandlung. Microsoft Visual Basic unterstützt diesen Operator nicht als Mittel zum Hinzufügen von Ereignishandlern. Es muss stattdessen eine der beiden Methoden:  
   
--   Verwenden der <xref:System.Windows.UIElement.AddHandler%2A> -Methode zusammen mit einer `AddressOf` -Operator, um auf die Implementierung des Handlers zu verweisen.  
+- Verwenden der <xref:System.Windows.UIElement.AddHandler%2A> -Methode zusammen mit einer `AddressOf` -Operator, um auf die Implementierung des Handlers zu verweisen.  
   
--   Verwenden der `Handles` -Schlüsselwort als Teil der Definition des Ereignis-Handler. Diese Technik ist hier nicht gezeigt; finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](visual-basic-and-wpf-event-handling.md).  
+- Verwenden der `Handles` -Schlüsselwort als Teil der Definition des Ereignis-Handler. Diese Technik ist hier nicht gezeigt; finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](visual-basic-and-wpf-event-handling.md).  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
@@ -40,4 +40,4 @@ Dieses Beispiel zeigt, wie ein Element mithilfe von Code einen Ereignishandler h
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Routingereignisse](routed-events-overview.md)
-- [Gewusst wie-Themen](events-how-to-topics.md)
+- [Themen zu Vorgehensweisen](events-how-to-topics.md)

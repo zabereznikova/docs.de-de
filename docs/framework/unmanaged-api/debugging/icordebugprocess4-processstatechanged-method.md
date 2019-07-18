@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b77dd1277e7d23729f30d9d495c5417055a22759
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378989"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767187"
 ---
 # <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::ProcessStateChanged-Methode
 
@@ -28,7 +28,7 @@ Benachrichtigt, dass die Out-of Prozess-Debugger, die zu debuggende Komponente A
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT ProcessStateChanged(
     [in] CorDebugStateChange change
 );
@@ -47,9 +47,9 @@ Die angegebene Methode ist Teil der `ICorDebugProcess4` Schnittstelle, und mit d
 
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
- **Header:** Keine
+ **Header:** None
 
- **Bibliothek:** Keine
+ **Bibliothek:** None
  
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 

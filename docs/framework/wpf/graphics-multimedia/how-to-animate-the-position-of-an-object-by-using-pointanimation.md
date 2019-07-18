@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animation [WPF], PointAnimation
 ms.assetid: 42310977-cc90-438a-8a47-0345898e01be
 ms.openlocfilehash: 1ef3f77e551affaa7e61d2aabf95f10c29275417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651349"
 ---
 # <a name="how-to-animate-the-position-of-an-object-by-using-pointanimation"></a>Vorgehensweise: Animieren der Position eines Objekts mithilfe von PointAnimation
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.PointAnimation> -Klasse zum Animieren eines Objekts entlang einer <xref:System.Windows.Shapes.Path>.  
@@ -32,5 +32,5 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Poin
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A>
 - [Übersicht über Animationen](animation-overview.md)
 - [Grafiken und Multimedia](index.md)
-- [Gewusst-wie-Themen zu Grafiken](graphics-how-to-topics.md)
-- [Gewusst-wie-Themen zu Animation und Zeitsteuerung](animation-and-timing-how-to-topics.md)
+- [Grafiken: Themen zur Vorgehensweise](graphics-how-to-topics.md)
+- [Das Animations- und Zeitsteuerungssystem Gewusst-wie-Themen](animation-and-timing-how-to-topics.md)

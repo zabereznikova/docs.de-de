@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863440"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Vorgehensweise: Übergeben von Argumenten an eine Prozedur (Visual Basic)
 Wenn Sie eine Prozedur aufrufen, verwenden Sie den Namen der Prozedur mit einer Argumentliste in Klammern angegeben. Sie geben Sie ein Argument für alle erforderlichen Parameter, die die Prozedur definiert, und geben Sie optional die Argumente, die `Optional` Parameter. Wenn Sie keinen angeben einer `Optional` Parameter im Aufruf, müssen Sie ein Komma, um seine Position in der Argumentliste zu markieren, wenn Sie alle nachfolgenden Argumente angeben einschließen.  
@@ -27,15 +27,15 @@ Wenn Sie eine Prozedur aufrufen, verwenden Sie den Namen der Prozedur mit einer 
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Um ein oder mehrere Argumente an eine Prozedur übergeben.  
   
-1.  Führen Sie den Namen der Prozedur mit Klammern, in der aufrufenden Anweisung.  
+1. Führen Sie den Namen der Prozedur mit Klammern, in der aufrufenden Anweisung.  
   
-2.  Fügen Sie in den Klammern einer Argumentliste aus. Fügen Sie ein Argument für die einzelnen erforderlichen Parameter an, dass die Prozedur definiert, und trennen Sie die Argumente durch Kommas.  
+2. Fügen Sie in den Klammern einer Argumentliste aus. Fügen Sie ein Argument für die einzelnen erforderlichen Parameter an, dass die Prozedur definiert, und trennen Sie die Argumente durch Kommas.  
   
-3.  Stellen Sie sicher, dass jedes Argument ist, dass ein gültiger Ausdruck, der einen Daten-Typ konvertierbar sein in den Typ der Prozedur ergibt für den entsprechenden Parameter definiert.  
+3. Stellen Sie sicher, dass jedes Argument ist, dass ein gültiger Ausdruck, der einen Daten-Typ konvertierbar sein in den Typ der Prozedur ergibt für den entsprechenden Parameter definiert.  
   
-4.  Wenn ein Parameter, als definiert ist [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), Sie können in der Argumentliste einfügen oder ihn auslassen. Wenn Sie ihn weglassen, verwendet die Prozedur den für diesen Parameter definierten Standardwert ein.  
+4. Wenn ein Parameter, als definiert ist [Optional](../../../../visual-basic/language-reference/modifiers/optional.md), Sie können in der Argumentliste einfügen oder ihn auslassen. Wenn Sie ihn weglassen, verwendet die Prozedur den für diesen Parameter definierten Standardwert ein.  
   
-5.  Wenn Sie weglassen, dass ein Argument für eine `Optional` Parameter ist ein weiterer Parameter nach ihm in der Parameterliste, Sie können den Platz von das ausgelassene Argument markieren, indem ein zusätzliches Komma in der Argumentliste.  
+5. Wenn Sie weglassen, dass ein Argument für eine `Optional` Parameter ist ein weiterer Parameter nach ihm in der Parameterliste, Sie können den Platz von das ausgelassene Argument markieren, indem ein zusätzliches Komma in der Argumentliste.  
   
      Im folgenden Beispiel wird die Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> Funktion.  
   

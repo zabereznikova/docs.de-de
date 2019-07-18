@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b136e1fa480e53bcacfd9ea832d1dc4d1bd69f74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b076c39ccf40ca5b613cab94ecc75716158d97a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780124"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage-Funktion
 Ruft eine binäre Darstellung des Assemblyimages an der angegebenen Speicheradresse ab.  
@@ -30,7 +30,7 @@ Ruft eine binäre Darstellung des Assemblyimages an der angegebenen Speicheradre
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 BOOLEAN StrongNameGetBlobFromImage (  
     [in]  BYTE        *pbBase,  
     [in]  DWORD       dwLength,  

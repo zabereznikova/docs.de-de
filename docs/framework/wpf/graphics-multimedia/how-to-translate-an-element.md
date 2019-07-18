@@ -5,11 +5,11 @@ helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
 ms.openlocfilehash: 9c1b873a89820e85efb99789f483c4832fb23cf7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051441"
 ---
 # <a name="how-to-translate-an-element"></a>Vorgehensweise: Übersetzen eines Elements
 In diesem Beispiel wird veranschaulicht, wie übersetzt (verschoben) ein Element mit einem <xref:System.Windows.Media.TranslateTransform>.  

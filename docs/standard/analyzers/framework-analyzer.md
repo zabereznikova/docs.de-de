@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634465"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769462"
 ---
 # <a name="the-net-framework-analyzer"></a>Der .NET Framework Analyzer
 
@@ -114,7 +114,6 @@ Wenn Sie unsichere <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> -Instanz
 
 Zusätzliche Informationen: [A3075: Unsichere DTD-Verarbeitung in XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Keine schwachen Kryptografiealgorithmen verwenden
 
 Kryptografiealgorithmen verlieren im Lauf der Zeit an Stärke, da Angriffe immer ausgefeilter werden. Je nach Typ und Anwendung dieses Kryptografiealgorithmus kann eine weitere Verschlechterung der kryptografischen Stärke dazu führen, dass Angreifer verschlüsselte Nachrichten lesen und manipulieren, digitale Signaturen fälschen, Hashinhalte manipulieren oder auf andere Weise ein Kryptografiesystem gefährden, das auf diesem Algorithmus basiert. Verwenden Sie für die Verschlüsselung einen AES-Algorithmus (AES-256, AES-192 und AES-128 sind akzeptabel) mit einer Schlüssellänge von mindestens 128 Bits. Verwenden Sie für das Hashing eine Hashfunktion in der SHA-2-Familie, wie z.B. SHA-2 512, SHA-2 384 oder SHA-2 256.
@@ -134,5 +133,3 @@ Es gibt einen Angriff, der es rechnerisch möglich macht, diesen Algorithmus zu 
 **Schweregrad**: Warnung
 
 Zusätzliche Informationen: [CA5351: Keine beschädigten kryptografischen Algorithmen verwenden](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

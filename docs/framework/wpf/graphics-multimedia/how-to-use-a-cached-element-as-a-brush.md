@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
 ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769251"
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>Vorgehensweise: Verwenden eines zwischengespeicherten Elements als Pinsel
 Verwenden der <xref:System.Windows.Media.BitmapCacheBrush> Klasse, um ein zwischengespeichertes Element so effizient wie möglich erneut zu verwenden. Erstellen Sie eine neue Instanz der zum Zwischenspeichern eines Elements, das <xref:System.Windows.Media.BitmapCache> -Klasse und weisen sie auf des Elements des <xref:System.Windows.UIElement.CacheMode%2A> Eigenschaft.  

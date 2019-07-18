@@ -2,12 +2,12 @@
 title: Methoden
 description: Erfahren Sie, wie ein F# Methode ist eine Funktion, die ein Typ, der verwendet werden, um verfügbar zu machen, und implementieren Sie die Funktionalität und Verhalten von Objekten und Typen zugeordnet.
 ms.date: 05/16/2016
-ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9b661a3ff7fa9a7704f5a31570acb62deaac2fcf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614024"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641754"
 ---
 # <a name="methods"></a>Methoden
 

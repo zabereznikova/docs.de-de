@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 22423877325806e6e6abe535ad98530eb924780e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835660"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625905"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 Erzwingt strenge Typsemantik, um implizite typkonvertierungen zu beschränken.  
@@ -39,15 +39,15 @@ Erzwingt strenge Typsemantik, um implizite typkonvertierungen zu beschränken.
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>-Optionstrict in Visual Studio-IDE festlegen  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften.**   
+1. Ein Projekt auswählen in **Projektmappen-Explorer**. Auf der **Projekt** Menü klicken Sie auf **Eigenschaften.**   
   
-2.  Klicken Sie auf die Registerkarte **Kompilieren**.  
+2. Klicken Sie auf die Registerkarte **Kompilieren**.  
   
-3.  Ändern Sie den Wert in der **Option Strict** Feld.  
+3. Ändern Sie den Wert in der **Option Strict** Feld.  
   
 ### <a name="to-set--optionstrict-programmatically"></a>-Optionstrict programmgesteuert festgelegt.  
   
--   Finden Sie unter [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
+- Finden Sie unter [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md).  
   
 ## <a name="example"></a>Beispiel  
  Der folgende code kompiliert `Test.vb` strikte Typsemantik zu verwenden.  

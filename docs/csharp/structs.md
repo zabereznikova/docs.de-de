@@ -3,12 +3,12 @@ title: Strukturen - Leitfaden für C#
 description: Erfahren Sie mehr über den Typ „Struktur“ und wie Sie diesen erstellen
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506978"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608018"
 ---
 # <a name="structs"></a>Strukturen
 Eine *Struktur* ist ein Werttyp. Wenn eine Struktur erstellt wird, enthält die Variable, der die Struktur zugewiesen wird, die eigentlichen Daten der Struktur. Wenn die Struktur einer neuen Variable zugewiesen wird, werden diese kopiert. Die neue Variable und die ursprüngliche Variable enthalten daher zwei separate Kopien der gleichen Daten. Änderungen an einer Kopie wirken sich nicht auf die andere Kopie aus.
@@ -35,21 +35,21 @@ Weitere Informationen über Werttypen im .NET Framework finden Sie unter [Allgem
     
 Strukturen teilen sich einen großen Teil der Syntax mit Klassen, obwohl Strukturen eingeschränkter als Klassen sind:  
   
--   Innerhalb einer Strukturdeklaration können Felder nicht initialisiert werden, außer Sie werden als `const` oder `static` deklariert.  
+- Innerhalb einer Strukturdeklaration können Felder nicht initialisiert werden, außer Sie werden als `const` oder `static` deklariert.  
   
--   Eine Struktur kann keinen Standardkonstruktor (ein Konstruktor ohne Parameter) oder Finalizer deklarieren.  
+- Eine Struktur kann keinen parameterlosen Konstruktor (einen Konstruktor ohne Parameter) oder Finalizer deklarieren.  
   
--   Strukturen werden bei Zuweisung kopiert. Wenn eine Struktur einer neuen Variable zugewiesen wird, werden alle Daten kopiert, und jede Änderung an der neuen Kopie ändert nicht die Daten für das Original. Es ist wichtig, sich das zu merken, wenn Sie mit Auflistungen von Wertetypen wie Dictionary<string, myStruct> arbeiten.  
+- Strukturen werden bei Zuweisung kopiert. Wenn eine Struktur einer neuen Variable zugewiesen wird, werden alle Daten kopiert, und jede Änderung an der neuen Kopie ändert nicht die Daten für das Original. Es ist wichtig, sich das zu merken, wenn Sie mit Auflistungen von Wertetypen wie Dictionary<string, myStruct> arbeiten.  
   
--   Strukturen sind Werttypen, und Klassen sind Verweistypen.  
+- Strukturen sind Werttypen, und Klassen sind Verweistypen.  
   
--   Strukturen können im Gegensatz zu Klassen ohne den Operator `new` instanziiert werden.  
+- Strukturen können im Gegensatz zu Klassen ohne den Operator `new` instanziiert werden.  
   
--   Strukturen können Konstruktoren deklarieren, die Parameter besitzen.  
+- Strukturen können Konstruktoren deklarieren, die Parameter besitzen.  
   
--   Eine Struktur kann nicht von einer anderen Struktur oder Klasse erben, und sie kann auch nicht die Basis einer Klasse sein. Alle Strukturen erben direkt von <xref:System.ValueType>, das von <xref:System.Object> erbt.  
+- Eine Struktur kann nicht von einer anderen Struktur oder Klasse erben, und sie kann auch nicht die Basis einer Klasse sein. Alle Strukturen erben direkt von <xref:System.ValueType>, das von <xref:System.Object> erbt.  
   
--   Eine Struktur kann Schnittstellen implementieren.
+- Eine Struktur kann Schnittstellen implementieren.
 
 ## <a name="literal-values"></a>Literalwerte  
 In C# erhalten Literalwerte einen Typ vom Compiler. Sie können festlegen, wie ein numerisches Literal eingegeben werden soll, indem Sie am Ende der Zahl einen Buchstaben anfügen. Um z. B. anzugeben, dass der Wert 4.56 als Gleitkommazahl behandelt werden soll, fügen Sie nach der Zahl `4.56f` ein "f" oder "F" an: Wenn kein Buchstabe angefügt wird, leitet der Compiler den `double`-Typ für das Literal ab. Weitere Informationen darüber, welche Typen mit Buchstabensuffixen angegeben werden können, finden Sie auf den Referenzseiten für einzelne Typen unter [Werttypen](./language-reference/keywords/value-types.md).  

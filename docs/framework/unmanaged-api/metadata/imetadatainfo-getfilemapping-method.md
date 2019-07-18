@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c6a9473a698e4635c8b5cc9fb58963334dfd65e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 22af95ef4bd1fca0a8253faa6ce0e1c7a862054d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081787"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782658"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping-Methode
 Ruft den Arbeitsspeicherbereich von der zugeordneten Datei und den Typ der Zuordnung ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetFileMapping (  
     [out] const void           **ppvData,   
     [out] ULONGLONG            *pcbData,   

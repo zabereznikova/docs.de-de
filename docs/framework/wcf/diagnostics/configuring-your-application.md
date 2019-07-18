@@ -2,21 +2,21 @@
 title: Konfigurieren der Anwendung
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: 94bf5f4bbee8bb8bb462c4bf91be75d1627ec567
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9a1365bb567c552fb087e67a10e48fe0bc2da873
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087169"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652032"
 ---
 # <a name="configuring-your-application"></a>Konfigurieren der Anwendung
 Windows Communication Foundation (WCF) verwendet das Konfigurationssystem von .NET und ermöglicht es Ihnen, im Bereich Computer- und anwendungsspezifische Dienste zu konfigurieren.  
   
  Von WCF definierte Konfigurationseinstellungen befinden sich in der `<system.serviceModel>` Abschnittsgruppe. Weitere Informationen zum Konfigurieren eines WCF-Diensts finden Sie unter den folgenden Themen:  
   
--   [Konfigurieren von Diensten](../../../../docs/framework/wcf/configuring-services.md)  
+- [Konfigurieren von Diensten](../../../../docs/framework/wcf/configuring-services.md)  
   
--   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+- [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
  Anwendungsdefinierte Konfigurationseinstellungen sind in der `<appSettings>`-Abschnittsgruppe definiert. Weitere Informationen zu Anwendungseinstellungen in .NET-Konfigurationsdateien finden Sie unter [ \<AppSettings >](https://go.microsoft.com/fwlink/?LinkId=95159).  
   

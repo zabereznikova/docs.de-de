@@ -8,11 +8,11 @@ helpviewer_keywords:
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
 ms.openlocfilehash: a7b70669131ae35135088418e4b33b3ae289d322
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761753"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>Übersicht zu XML-Literalen (Visual Basic)
 Ein *XML-Literal* können Sie XML direkt in Visual Basic-Code integriert. Stellt die XML-Literalsyntax [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekte, und es ähnelt der XML 1.0-Syntax. Dies erleichtert die XML-Elementen und Dokumenten programmgesteuert erstellt werden, da der Code die gleiche Struktur wie der endgültige XML-Code aufweist.  

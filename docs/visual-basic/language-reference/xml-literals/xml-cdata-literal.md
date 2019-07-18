@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 889ec7f93d0503edac51652dda217c6a9f654f9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828595"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621433"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML-CDATA-Literal (Visual Basic)
 Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XCData> Objekt.  
@@ -40,9 +40,9 @@ Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XCData> Objekt.
 ## <a name="remarks"></a>Hinweise  
  XML-CDATA-Abschnitten enthalten die unformatierten Text, der sollten enthalten, aber nicht analysiert werden, mit dem XML, das es enthält. Ein XML-CDATA-Abschnitt kann es sich um einen beliebigen Text enthalten. Dies schließt die reservierte XML-Zeichen. Die XML-CDATA-Abschnitt endet mit der Sequenz "]] >". Dies bedeutet Folgendes:  
   
--   Sie können keinen eingebetteten Ausdruck in eine XML CDATA-literal verwenden, da die Trennzeichen für eingebettete Ausdrücke gültige XML-CDATA-Inhalt sind.  
+- Sie können keinen eingebetteten Ausdruck in eine XML CDATA-literal verwenden, da die Trennzeichen für eingebettete Ausdrücke gültige XML-CDATA-Inhalt sind.  
   
--   XML-CDATA-Abschnitte können nicht geschachtelt werden, da `content` dürfen nicht den Wert "]] >".  
+- XML-CDATA-Abschnitte können nicht geschachtelt werden, da `content` dürfen nicht den Wert "]] >".  
   
  Sie können eine XML CDATA-literal einer Variablen zuweisen oder in einem XML-Elementliteral einzuschließen.  
   

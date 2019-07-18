@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
 ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054223"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary-Markuperweiterung
 Bietet Autoren von benutzerdefinierten Steuerelementen oder Anwendungen, die Steuerelemente von Drittanbietern integrieren, eine Möglichkeit, designspezifische Ressourcenverzeichnisse für das Formatieren der Steuerelemente zu verwenden.  
@@ -51,7 +51,7 @@ Bietet Autoren von benutzerdefinierten Steuerelementen oder Anwendungen, die Ste
   
  `ThemeDictionary` kann auch in der Objektelementsyntax verwendet werden. In diesem Fall geben Sie den Wert der <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> Eigenschaft ist erforderlich.  
   
- `ThemeDictionary` kann auch verwendet werden, in einer ausführlichen Attributverwendung, der angibt, die <xref:System.Windows.Markup.StaticExtension.Member%2A> Eigenschaft als Eigenschaft = Wert-Paar:  
+ `ThemeDictionary` kann zudem in einer ausführlichen Attributverwendung verwendet werden, die die <xref:System.Windows.Markup.StaticExtension.Member%2A>-Eigenschaft als Eigenschaft=Wert-Paar angibt:  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  

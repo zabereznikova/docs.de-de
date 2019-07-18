@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ae9a8e9e26f05675611ac4c6acd8ecfe5704b0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3680721c70ab69776c973913d929f7bdd9db3909
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104454"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779445"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies-Methode
 Ruft einen Schnittstellenzeiger auf ein [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , das die Liste der Assemblys, die der Host erwartet, die common Language Runtime (CLR) beim Laden dass darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetNonHostStoreAssemblies (  
     [out] ICLRAssemblyReferenceList **ppReferenceList  
 );  
@@ -54,13 +54,13 @@ HRESULT GetNonHostStoreAssemblies (
 ## <a name="remarks"></a>Hinweise  
  Die CLR löst Verweise, die mithilfe der folgenden Richtlinien:  
   
--   Zuerst herangezogen, die Liste von Assemblyverweisen, die vom `GetNonHostStoreAssemblies`.  
+- Zuerst herangezogen, die Liste von Assemblyverweisen, die vom `GetNonHostStoreAssemblies`.  
   
--   Wenn die Assembly in der Liste angezeigt wird, wird die CLR, die normalerweise gebunden.  
+- Wenn die Assembly in der Liste angezeigt wird, wird die CLR, die normalerweise gebunden.  
   
--   Wenn die Assembly nicht in der Liste angezeigt, und der Host eine Implementierung von stellt [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), die CLR ruft [IHostAssemblyStore:: ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) auf den Host ermöglichen die die Assembly zum Binden an.  
+- Wenn die Assembly nicht in der Liste angezeigt, und der Host eine Implementierung von stellt [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), die CLR ruft [IHostAssemblyStore:: ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) auf den Host ermöglichen die die Assembly zum Binden an.  
   
--   Andernfalls kann die CLR auf die Assembly zu binden.  
+- Andernfalls kann die CLR auf die Assembly zu binden.  
   
  Wenn der Host setzt `ppReferenceList` Aufrufe im globalen Assemblycache, null, durchsucht die CLR zuerst `ProvideAssembly`, und von Tests, klicken Sie dann die Anwendungsbasis, um einen Assemblyverweis aufzulösen.  
   

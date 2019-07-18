@@ -2,23 +2,23 @@
 title: Dynamisches Aktivieren der analytischen Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 677a97cedc766393a113f64554ce498547d4a231
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197476"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592098"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Dynamisches Aktivieren der analytischen Ablaufverfolgung
 Mit Tools, die im Lieferumfang des Windows-Betriebssystems enthalten sind, können Sie die Ablaufverfolgung mithilfe der Ereignisablaufverfolgung für Windows (ETW) aktivieren und deaktivieren. Für alle [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF)-Dienste, analytische Ablaufverfolgung kann aktivierten und deaktivierten dynamisch ohne Ändern der Datei Web.config oder Neustarten des Diensts sein. Auf diese Weise wird die Anwendung, die die Ablaufverfolgungsereignisse ausgibt, nicht beeinträchtigt.  
   
  Optionen für WCF-Ablaufverfolgung können auf ähnliche Weise konfiguriert werden. Sie können z. B. den Schweregrad von **Error** in **Information** ändern, ohne die Anwendung zu beeinträchtigen. Sie können dafür die folgenden Tools verwenden:  
   
--   **Logman** – Ein Befehlszeilentool zum Konfigurieren, Steuern und Abfragen von Ablaufverfolgungsdaten. Weitere Informationen finden Sie unter [Logman erstellen Ablaufverfolgung](https://go.microsoft.com/fwlink/?LinkId=165426) und [Logman Update Trace](https://go.microsoft.com/fwlink/?LinkId=165427).  
+- **Logman** – Ein Befehlszeilentool zum Konfigurieren, Steuern und Abfragen von Ablaufverfolgungsdaten. Weitere Informationen finden Sie unter [Logman erstellen Ablaufverfolgung](https://go.microsoft.com/fwlink/?LinkId=165426) und [Logman Update Trace](https://go.microsoft.com/fwlink/?LinkId=165427).  
   
--   **Ereignisanzeige (EventViewer)** – Grafisches Windows-Verwaltungstool zum Anzeigen der Ergebnisse einer Ablaufverfolgung. Weitere Informationen finden Sie unter [WCF-Dienste und Ereignisablaufverfolgung für Windows-Ereignis](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisanzeige](https://go.microsoft.com/fwlink/?LinkId=165428).  
+- **Ereignisanzeige (EventViewer)** – Grafisches Windows-Verwaltungstool zum Anzeigen der Ergebnisse einer Ablaufverfolgung. Weitere Informationen finden Sie unter [WCF-Dienste und Ereignisablaufverfolgung für Windows-Ereignis](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisanzeige](https://go.microsoft.com/fwlink/?LinkId=165428).  
   
--   **Perfmon** – Grafisches Windows-Verwaltungstool, das Indikatoren zum Überwachen der Ablaufverfolgung und der Auswirkungen der Ablaufverfolgung auf die Leistung verwendet. Weitere Informationen finden Sie unter [erstellen Sie eine Data Collector festgelegt manuell](https://go.microsoft.com/fwlink/?LinkId=165429).  
+- **Perfmon** – Grafisches Windows-Verwaltungstool, das Indikatoren zum Überwachen der Ablaufverfolgung und der Auswirkungen der Ablaufverfolgung auf die Leistung verwendet. Weitere Informationen finden Sie unter [erstellen Sie eine Data Collector festgelegt manuell](https://go.microsoft.com/fwlink/?LinkId=165429).  
   
 ### <a name="keywords"></a>Schlüsselwörter  
  Wenn Sie die <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> -Klasse verwenden, werden .NET Framework-Ablaufverfolgungsmeldungen im Allgemeinen nach dem Schweregrad gefiltert (z. B. "Error", "Warning" und "Information") gefiltert. ETW unterstützt das Schweregradkonzept, führt jedoch einen neuen, flexiblen Filtermechanismus mit Schlüsselwörtern ein. Schlüsselwörter sind beliebige Textwerte, über die Ablaufverfolgungsereignisse zusätzlichen Kontext zur Bedeutung eines Ereignisses bereitstellen können.  
@@ -31,11 +31,11 @@ Mit Tools, die im Lieferumfang des Windows-Betriebssystems enthalten sind, könn
 |`EndToEndMonitoring`|Ereignisse, die zum Unterstützen der Ablaufverfolgung des Nachrichtenflusses verwendet werden.|  
 |`Troubleshooting`|Genauere Ereignisse in Bezug auf den erweiterbaren Punkten von WCF.|  
   
- Die zweite Gruppe von Schlüsselwörtern definiert, welche Komponente von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] das Ereignis ausgegeben hat.  
+ Die zweite Gruppe von Schlüsselwörtern definiert, welche Komponente von .NET Framework das Ereignis ausgegeben.  
   
 |Stichwort|Beschreibung|  
 |-------------|-----------------|  
-|`UserEvents`|Vom Benutzercode und nicht von [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]ausgegebene Ereignisse.|  
+|`UserEvents`|Ereignisse, die durch den Benutzercode und nicht .NET Framework ausgegeben werden.|  
 |`ServiceModel`|Ereignisse, die von der WCF-Laufzeit ausgegeben werden.|  
 |`ServiceHost`|Vom Diensthost ausgegebene Ereignisse.|  
 |`WCFMessageLogging`|WCF-Nachricht Protokollieren von Ereignissen.|  

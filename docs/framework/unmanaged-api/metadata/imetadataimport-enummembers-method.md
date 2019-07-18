@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e8d871f2ecbd96d5bda781b2ae11b94efd409442
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 50035799fcfa4c4b08404d63fe91e7dba85722fa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128400"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758834"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers-Methode
 Zählt MemberDef-Token auf, die Elemente des angegebenen Typs darstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumMembers (   
    [in, out]  HCORENUM    *phEnum,   
    [in]  mdTypeDef   cl,   

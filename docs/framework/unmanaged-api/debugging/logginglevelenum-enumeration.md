@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe8e1355382273a681e927897f4a8ff5814b8de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9659dd835bb60adf8471f73ed45b6588cf15126f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086506"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752589"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum-Enumeration
 Gibt den Schweregrad einer beschreibenden Meldung an, die in das Ereignisprotokoll geschrieben wird, wenn ein verwalteter Thread ein Ereignis protokolliert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum LoggingLevelEnum {  
     LTraceLevel0 = 0,  
     LTraceLevel1,  
@@ -79,4 +79,4 @@ typedef enum LoggingLevelEnum {
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Diagnostics.EventLog>
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

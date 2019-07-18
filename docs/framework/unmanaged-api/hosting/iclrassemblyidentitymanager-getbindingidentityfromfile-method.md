@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3d5e53dd0845fbd01dbd9d20ce8feef12748c04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b1aabc5783e66893d13aed60e04d7ea5f6547c68
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213922"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773568"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile-Methode
 Ruft die Identität der Assembly Binden von Daten für die Assembly im angegebenen Dateipfad ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetBindingIdentityFromFile(  
     [in] LPCWSTR     pwzFilePath,  
     [in] DWORD       dwFlags,  

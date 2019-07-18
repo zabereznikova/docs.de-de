@@ -8,18 +8,18 @@ helpviewer_keywords:
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
 ms.openlocfilehash: f5992a6085c32d37f56319cf8b2c361542c441e7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674830"
 ---
 # <a name="assemblybinding-element-for-configuration"></a>\<AssemblyBinding >-Element für \<Configuration >
 
 Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<assemblyBinding>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,13 +39,13 @@ Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an.
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-element"></a>Untergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Gibt eine einzuschließende Konfigurationsdatei an. |
+| [ **\<linkedConfiguration>** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Gibt eine einzuschließende Konfigurationsdatei an. |
 
 ## <a name="remarks"></a>Hinweise
 

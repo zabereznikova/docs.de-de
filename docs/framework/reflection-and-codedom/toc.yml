@@ -1,61 +1,54 @@
-items:
 - name: Dynamische Programmierung
   href: index.md
   items:
-  - name: Spiegelung
-    href: reflection.md
-    items:
-    - name: Anzeigen von Typinformationen
-      href: viewing-type-information.md
-    - name: Reflektion und generische Typen
-      href: reflection-and-generic-types.md
-    - name: 'Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion'
-      href: how-to-examine-and-instantiate-generic-types-with-reflection.md
-    - name: Sicherheitsüberlegungen für die Reflektion
-      href: security-considerations-for-reflection.md
-    - name: Dynamisches Laden und Verwenden von Typen
-      href: dynamically-loading-and-using-types.md
-    - name: 'Vorgehensweise: Laden von Assemblys in den auf Reflektion beschränkten Kontext'
-      href: how-to-load-assemblies-into-the-reflection-only-context.md
-    - name: Zugreifen auf benutzerdefinierte Attribute
-      href: accessing-custom-attributes.md
-    - name: Angeben vollständig gekennzeichneter Typnamen
-      href: specifying-fully-qualified-type-names.md
-    - name: 'Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion'
-      href: how-to-hook-up-a-delegate-using-reflection.md
-    - name: Reflektion in .NET Framework für Windows Store-Apps
-      href: reflection-for-windows-store-apps.md
-  - name: Ausgeben von dynamischen Methoden und Assemblys
-    href: emitting-dynamic-methods-and-assemblies.md
-    items:
-    - name: Sicherheitsaspekte bei der Reflektionsausgabe
-      href: security-issues-in-reflection-emit.md
-    - name: 'Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit'
-      href: walkthrough-emitting-code-in-partial-trust-scenarios.md
-    - name: 'Vorgehensweise: Definieren und Ausführen von dynamischen Methoden'
-      href: how-to-define-and-execute-dynamic-methods.md
-    - name: 'Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe'
-      href: how-to-define-a-generic-type-with-reflection-emit.md
-    - name: 'Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe'
-      href: how-to-define-a-generic-method-with-reflection-emit.md
-    - name: Entladbare Assemblys für die dynamische Typgenerierung
-      href: collectible-assemblies.md
-  - name: Übersicht über die Dynamic Language Runtime
-    href: dynamic-language-runtime-overview.md
-  - name: Generieren und Kompilieren von dynamischem Quellcode
-    href: dynamic-source-code-generation-and-compilation.md
-    items:
-    - name: Verwenden von CodeDOM
-      href: using-the-codedom.md
-    - name: Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm
-      href: generating-and-compiling-source-code-from-a-codedom-graph.md
-    - name: 'Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM'
-      href: how-to-create-an-xml-documentation-file-using-codedom.md
-    - name: 'Vorgehensweise: Erstellen einer Klasse mit CodeDOM'
-      href: how-to-create-a-class-using-codedom.md
-ms.openlocfilehash: 00d24c89f04d5bfb257fa3e7835741190c8fcbdc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468808"
+    - name: Spiegelung
+      href: reflection.md
+      items:
+        - name: Anzeigen von Typinformationen
+          href: viewing-type-information.md
+        - name: Reflektion und generische Typen
+          href: reflection-and-generic-types.md
+        - name: 'Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion'
+          href: how-to-examine-and-instantiate-generic-types-with-reflection.md
+        - name: Sicherheitsüberlegungen für die Reflektion
+          href: security-considerations-for-reflection.md
+        - name: Dynamisches Laden und Verwenden von Typen
+          href: dynamically-loading-and-using-types.md
+        - name: 'Vorgehensweise: Laden von Assemblys in den auf Reflektion beschränkten Kontext'
+          href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: Zugreifen auf benutzerdefinierte Attribute
+          href: accessing-custom-attributes.md
+        - name: Angeben vollständig gekennzeichneter Typnamen
+          href: specifying-fully-qualified-type-names.md
+        - name: 'Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion'
+          href: how-to-hook-up-a-delegate-using-reflection.md
+        - name: Reflektion in .NET Framework für Windows Store-Apps
+          href: reflection-for-windows-store-apps.md
+    - name: Ausgeben von dynamischen Methoden und Assemblys
+      href: emitting-dynamic-methods-and-assemblies.md
+      items:
+        - name: Sicherheitsaspekte bei der Reflektionsausgabe
+          href: security-issues-in-reflection-emit.md
+        - name: 'Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit'
+          href: walkthrough-emitting-code-in-partial-trust-scenarios.md
+        - name: 'Vorgehensweise: Definieren und Ausführen von dynamischen Methoden'
+          href: how-to-define-and-execute-dynamic-methods.md
+        - name: 'Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe'
+          href: how-to-define-a-generic-type-with-reflection-emit.md
+        - name: 'Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe'
+          href: how-to-define-a-generic-method-with-reflection-emit.md
+        - name: Entladbare Assemblys für die dynamische Typgenerierung
+          href: collectible-assemblies.md
+    - name: Übersicht über die Dynamic Language Runtime
+      href: dynamic-language-runtime-overview.md
+    - name: Generieren und Kompilieren von dynamischem Quellcode
+      href: dynamic-source-code-generation-and-compilation.md
+      items:
+        - name: Verwenden von CodeDOM
+          href: using-the-codedom.md
+        - name: Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm
+          href: generating-and-compiling-source-code-from-a-codedom-graph.md
+        - name: 'Vorgehensweise: Erstellen einer XML-Dokumentationsdatei mit CodeDOM'
+          href: how-to-create-an-xml-documentation-file-using-codedom.md
+        - name: 'Vorgehensweise: Erstellen einer Klasse mit CodeDOM'
+          href: how-to-create-a-class-using-codedom.md

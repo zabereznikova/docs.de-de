@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 886f78a0561ebbd5470b7932123f67975d650693
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 489ea22e17178398f53e103da04a47e8fe15a936
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197346"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738925"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>ICLRDataEnumMemoryRegions::EnumMemoryRegions-Methode
 Listet die angegebenen Bereiche des Arbeitsspeichers.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumMemoryRegions (  
     [in] ICLRDataEnumMemoryRegionsCallback  *callback,  
     [in] ULONG32                            miniDumpFlags,  

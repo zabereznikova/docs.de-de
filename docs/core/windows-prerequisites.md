@@ -1,13 +1,14 @@
 ---
 title: Voraussetzungen für .NET Core unter Windows
 description: Erfahren Sie, welche Abhängigkeiten Ihr Windows-Computer aufweisen muss, damit Sie .NET Core-Anwendungen entwickeln und ausführen können.
-ms.date: 12/14/2018
-ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.custom: updateeachvsrelease
+ms.date: 04/08/2019
+ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656114"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539353"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Voraussetzungen für .NET Core unter Windows
 
@@ -56,15 +57,15 @@ Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Downloa
 > [!NOTE]
 > **Für Windows 8.1 und frühere Versionen oder Windows Server 2012 R2 und frühere Versionen:**
 >
-> Stellen Sie sicher, dass Ihre Windows-Installation auf dem neuesten Stand ist und [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) enthält, das über Windows Update installiert werden kann. Wenn Sie dieses Update noch nicht installiert haben, wird beim Ausführen einer .NET Core-Anwendung eine Fehlermeldung wie die folgende angezeigt: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`.
+> Stellen Sie sicher, dass Ihre Windows-Installation auf dem neuesten Stand ist und [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows) enthält, das über Windows Update installiert werden kann. Wenn Sie dieses Update noch nicht installiert haben, wird beim Ausführen einer .NET Core-Anwendung eine Fehlermeldung wie die folgende angezeigt: `The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`.
 >
 > **Für Windows 7 oder Windows Server 2008 R2:**
 >
-> Stellen Sie sicher, dass Sie neben KB2999226 auch [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) installiert haben. Wenn Sie dieses Update noch nicht installiert haben, wird beim Ausführen einer .NET Core-Anwendung eine Fehlermeldung ähnlich der folgenden angezeigt: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
+> Stellen Sie sicher, dass Sie neben KB2999226 auch [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) installiert haben. Wenn Sie dieses Update noch nicht installiert haben, wird beim Ausführen einer .NET Core-Anwendung eine Fehlermeldung ähnlich der folgenden angezeigt: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
-## <a name="prerequisites-for-net-core-30-preview-1"></a>Voraussetzungen für .NET Core 3.0 Vorschauversion 1
+## <a name="prerequisites-for-net-core-30-preview-3"></a>Voraussetzungen für .NET Core 3.0 Vorschauversion 3
 
-.NET Core 3.0 Vorschauversion 1 hat die gleichen Voraussetzungen wie andere Versionen von .NET Core. Wenn jedoch .NET Core 3.0-Projekte mit Visual Studio erstellt werden sollen, müssen Sie [Visual Studio 2019 Vorschau](https://visualstudio.microsoft.com/vs/preview/) verwenden. Visual Studio 2019 Vorschau kann parallel mit anderen Versionen von Visual Studio installiert werden, ohne dass dadurch Konflikte entstehen.
+.NET Core 3.0 Vorschauversion 3 hat die gleichen Voraussetzungen wie andere Versionen von .NET Core. Wenn jedoch .NET Core 3.0-Projekte mit Visual Studio erstellt werden sollen, müssen Sie [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) verwenden. Visual Studio 2019 kann parallel mit anderen Versionen von Visual Studio installiert werden, ohne dass dadurch Konflikte entstehen.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Voraussetzungen für Visual Studio 2017
     
@@ -122,7 +123,7 @@ Nach der Konfiguration von Visual Studio mit dem .NET Core 2.2 SDK können Sie f
 >
 > * Wählen Sie im **Hilfemenü** die Option **Info zu Microsoft Visual Studio**.
 > * Verifizieren Sie die Versionsnummer im Dialogfeld **Info zu Microsoft Visual Studio**.
->   * Für .NET Core 3.0 Preview 1-Apps muss dies Visual Studio 2019 Preview 1 oder höher sein.
+>   * Für .NET Core 3.0 Vorschauversion 3-Apps muss dies Visual Studio 2019 Version 16.0 oder höher sein.
 >   * Für .NET Core 2.2-Apps muss dies Visual Studio 2017 Version 15.9 oder höher sein.
 >   * Für .NET Core 2.1-Apps muss dies Visual Studio 2017 Version 15.7 oder höher sein.
 >   * Für .NET Core 1.x-Apps muss dies Visual Studio 2017 Version 15.0 oder höher sein.

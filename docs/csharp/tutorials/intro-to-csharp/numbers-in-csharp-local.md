@@ -3,12 +3,12 @@ title: Zahlen in C# – Einführung in das C#-Tutorial
 description: Machen Sie sich mit C# vertraut, indem Sie numerische Typen, ihre Eigenschaften und Methoden erkunden.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d95d5ce16abadf441158b7f8af93acc73b154e99
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673859"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661055"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Bearbeiten von Ganzzahlen und Gleitkommazahlen in C\#
 
@@ -320,8 +320,8 @@ Sie haben den Schnellstart „Zahlen in C#“ abgeschlossen. Sie können mit dem
 
 Weitere Informationen zu Zahlen in C# finden Sie auch unter folgenden Themen:
 
-- [Tabelle ganzzahliger Typen](../../language-reference/keywords/integral-types-table.md)
-- [Tabelle für Gleitkommatypen](../../language-reference/keywords/floating-point-types-table.md)
+- [Integrale Typen](../../language-reference/builtin-types/integral-numeric-types.md)
+- [Tabelle für Gleitkommatypen](../../language-reference/builtin-types/floating-point-numeric-types.md)
 - [Tabelle integrierter Typen](../../language-reference/keywords/built-in-types-table.md)
 - [Tabelle für implizite numerische Konvertierungen](../../language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabelle für explizite numerische Konvertierungen](../../language-reference/keywords/explicit-numeric-conversions-table.md)

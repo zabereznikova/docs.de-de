@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c71592537a31527bda6db08da8c36e798270d5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190852"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052854"
 ---
 # <a name="enumeration-format-strings"></a>Enumerationsformatzeichenfolgen
 
@@ -48,7 +48,7 @@ Zeigt den Enumerationseintrag in der kürzestmöglichen Darstellung als ganzzahl
 
 ## <a name="x-or-x"></a>X oder x
 
-Zeigt den Enumerationseintrag als Hexadezimalwert an. Der Wert wird mit so vielen führenden Nullen wie nötig dargestellt, um sicherzustellen, dass der Wert mindestens acht Stellen lang ist. Das folgende Beispiel veranschaulicht den Formatbezeichner „X“.
+Zeigt den Enumerationseintrag als Hexadezimalwert an. Der Wert wird ggf. mit führenden Nullen dargestellt, um sicherzustellen, dass die resultierende Zeichenfolge für jedes Byte im [zugrunde liegenden numerischen Typ](xref:System.Enum.GetUnderlyingType%2A) des Enumerationstyps über zwei Zeichen verfügt. Das folgende Beispiel veranschaulicht den Formatbezeichner „X“. Der zugrunde liegende Typ sowohl für <xref:System.ConsoleColor> als auch für <xref:System.IO.FileAttributes> in diesem Beispiel ist <xref:System.Int32> oder ein Integertyp mit 32 Bit (bzw. 4 Byte), wodurch eine Ergebniszeichenfolge mit 8 Zeichen erzeugt wird.
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f53c8290271391e52176f8364b592ce6b46faf71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0d287305934c7884d5474935e50de3d26e225975
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195942"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746163"
 ---
 # <a name="icordebugnativeframegetlocalregistervalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterValue-Methode
 Ruft den Wert eines Arguments oder einer lokalen Variablen, die im angegebenen Register für diesen Frame native gespeichert ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetLocalRegisterValue (  
     [in]  CorDebugRegister   reg,  
     [in]  ULONG              cbSigBlob,  

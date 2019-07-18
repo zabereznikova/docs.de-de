@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-ms.openlocfilehash: e1f0c9d5ba428f5379f8025c0e733cdbeb5204e0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 66f7d0b51e51f6d550a42cca55b3194c2e273969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822856"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662727"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Vorgehensweise: Senden von Zeichenfolgen an serielle Anschlüsse in Visual Basic
 Dieses Thema beschreibt, wie `My.Computer.Ports` zum Senden von Zeichenfolgen an serielle Ports des Computers in Visual Basic verwendet wird.  
@@ -30,7 +30,7 @@ Dieses Thema beschreibt, wie `My.Computer.Ports` zum Senden von Zeichenfolgen an
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   In diesem Beispiel wird davon ausgegangen, dass der Computer `COM1` verwendet.  
+- In diesem Beispiel wird davon ausgegangen, dass der Computer `COM1` verwendet.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  In diesem Beispiel wird davon ausgegangen, dass der Computer `COM1` verwendet; für eine erhöhte Flexibilität sollte der Code es dem Benutzer ermöglichen, den gewünschten seriellen Anschluss aus einer Liste von seriellen Anschlüssen auszuwählen. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  

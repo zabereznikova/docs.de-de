@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3cf2947380a7d48a261faf1bbc24ec5773b970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb57f6e1f87b9baf61de781033d7d8bfe1639684
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414329"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762636"
 ---
 # <a name="icordebugmodulegeteditandcontinuesnapshot-method"></a>ICorDebugModule::GetEditAndContinueSnapshot-Methode
 Veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetEditAndContinueSnapshot(  
     [out] ICorDebugEditAndContinueSnapshot **ppEditAndContinueSnapshot  
 );  
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

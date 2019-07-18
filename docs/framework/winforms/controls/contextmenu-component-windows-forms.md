@@ -11,11 +11,11 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
 ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955947"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu-Komponente (Windows Forms)
 > [!NOTE]
@@ -27,7 +27,7 @@ ms.locfileid: "59207954"
  [Übersicht über die ContextMenu-Komponente](contextmenu-component-overview-windows-forms.md)  
  Stellt die allgemeinen Konzepte des der `ContextMenu` -Komponente, die Benutzern ermöglicht, das Erstellen von Menüs mit häufig verwendeten Befehlen, die einem ausgewählten Objekt zugeordnet.  
   
- [Vorgehensweise: Hinzufügen und Entfernen von Menüelementen mit der ContextMenu-Komponente von Windows Forms](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [Vorgehensweise: Hinzufügen und Entfernen von Menüelementen mit der ContextMenu-Komponente in Windows Forms](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Erläutert das Hinzufügen und Entfernen von Tastenkombinations-Menüelemente in Windows Forms.  
   
 ## <a name="reference"></a>Referenz  
@@ -35,7 +35,7 @@ ms.locfileid: "59207954"
  Enthält Referenzinformationen zur <xref:System.Windows.Forms.ContextMenu>-Klasse und zu ihren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
 ## <a name="see-also"></a>Siehe auch

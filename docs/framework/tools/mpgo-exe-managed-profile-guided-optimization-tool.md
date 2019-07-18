@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496819"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616061"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (verwaltetes, profilgesteuertes Optimierungstool)
 
@@ -79,32 +79,32 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 ## <a name="to-use-mpgoexe"></a>So verwenden Sie Mpgo.exe  
   
-1.  Verwenden Sie einen Computer, auf dem Visual Studio Ultimate 2012 und Ihre Anwendung installiert ist.  
+1. Verwenden Sie einen Computer, auf dem Visual Studio Ultimate 2012 und Ihre Anwendung installiert ist.  
   
-2.  Führen Sie Mpgo.exe als Administrator mit den erforderlichen Parametern aus.  Beispielbefehle finden Sie im nächsten Abschnitt.  
+2. Führen Sie Mpgo.exe als Administrator mit den erforderlichen Parametern aus.  Beispielbefehle finden Sie im nächsten Abschnitt.  
   
      Die optimierten Intermediate Language (IL)- Assemblys werden in dem Ordner erstellt, der durch den `–OutDir`-Parameter angegeben wird (in den Beispielen ist dies der Ordner `C:\Optimized` ).  
   
-3.  Ersetzen Sie die für Ngen.exe verwendeten IL-Assemblys mit den neuen IL-Assemblys, die die Profilinformationen von dem Verzeichnis enthalten, das mit `–OutDir` angegeben wurde.  
+3. Ersetzen Sie die für Ngen.exe verwendeten IL-Assemblys mit den neuen IL-Assemblys, die die Profilinformationen von dem Verzeichnis enthalten, das mit `–OutDir` angegeben wurde.  
   
-4.  Das Anwendungssetup (mithilfe der von Mpgo.exe bereitgestellten Abbilder) installiert optimierte systemeigene Abbilder.  
+4. Das Anwendungssetup (mithilfe der von Mpgo.exe bereitgestellten Abbilder) installiert optimierte systemeigene Abbilder.  
   
 ## <a name="suggested-workflow"></a>Workflowvorschläge  
   
-1.  Erstellen Sie einen Satz optimierter IL-Assemblys, indem Sie Mpgo.exe mit dem `–Scenario`-Parameter verwenden.  
+1. Erstellen Sie einen Satz optimierter IL-Assemblys, indem Sie Mpgo.exe mit dem `–Scenario`-Parameter verwenden.  
   
-2.  Fügen Sie der Quellcodeverwaltung die optimierten IL-Assemblys hinzu.  
+2. Fügen Sie der Quellcodeverwaltung die optimierten IL-Assemblys hinzu.  
   
-3.  Im Buildprozess rufen Sie Mpgo.exe mit dem `–Import`-Parameter als Postbuildschritt auf, um optimierte IL-Abbilder zu generieren, die „Ngen.exe“ übergeben werden.  
+3. Im Buildprozess rufen Sie Mpgo.exe mit dem `–Import`-Parameter als Postbuildschritt auf, um optimierte IL-Abbilder zu generieren, die „Ngen.exe“ übergeben werden.  
   
  Dieser Prozess stellt sicher, dass alle Assemblys optimierte Daten haben. Durch häufiges Einchecken aktualisierter optimierter Assemblys (Schritte 1 und 2) werden die Leistungszahlen für die gesamte Produktentwicklung konsistenter.  
   
 ## <a name="using-mpgoexe-from-visual-studio"></a>Verwenden von Mpgo.exe in Visual Studio  
  Sie können Mpgo.exe von Visual Studio (siehe den Artikel [Vorgehensweise: Angeben von Buildereignissen (C#)](/visualstudio/ide/how-to-specify-build-events-csharp)) mit den folgenden Einschränkungen ausführen:  
   
--   Sie können Pfade in Anführungszeichen nicht mit nachgestellten Schrägstrichen verwenden, da Visual Studio-Makros standardmäßig nachgestellte Schrägstriche verwenden. (`–OutDir "C:\Output Folder\"` ist zum Beispiel ungültig.) Um diese Einschränkung zu umgehen, können Sie den nachgestellten Schrägstrich mit einem Escapezeichen versehen. (Verwenden Sie stattdessen z. B. `-OutDir "$(OutDir)\"`.)  
+- Sie können Pfade in Anführungszeichen nicht mit nachgestellten Schrägstrichen verwenden, da Visual Studio-Makros standardmäßig nachgestellte Schrägstriche verwenden. (`–OutDir "C:\Output Folder\"` ist zum Beispiel ungültig.) Um diese Einschränkung zu umgehen, können Sie den nachgestellten Schrägstrich mit einem Escapezeichen versehen. (Verwenden Sie stattdessen z. B. `-OutDir "$(OutDir)\"`.)  
   
--   Standardmäßig befindet sich Mpgo.exe nicht im Visual Studio-Buildpfad. Sie müssen entweder Visual Studio den Pfad hinzufügen oder auf der Mpgo-Befehlszeile den vollständigen Pfad angeben. Sie können entweder `–Scenario` oder `–Import` als Parameter im Postbuildereignis in Visual Studio angeben. Der typische Vorgang ist jedoch die einmalige Verwendung von `–Scenario` über eine Visual Studio Developer-Eingabeaufforderung. Dann wird `–Import` verwendet, um die optimierten Assemblys nach den einzelnen Builds zu aktualisieren. Beispiel: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
+- Standardmäßig befindet sich Mpgo.exe nicht im Visual Studio-Buildpfad. Sie müssen entweder Visual Studio den Pfad hinzufügen oder auf der Mpgo-Befehlszeile den vollständigen Pfad angeben. Sie können entweder `–Scenario` oder `–Import` als Parameter im Postbuildereignis in Visual Studio angeben. Der typische Vorgang ist jedoch die einmalige Verwendung von `–Scenario` über eine Visual Studio Developer-Eingabeaufforderung. Dann wird `–Import` verwendet, um die optimierten Assemblys nach den einzelnen Builds zu aktualisieren. Beispiel: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`.  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>Beispiele  
@@ -127,6 +127,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Improving Launch Performance for your Desktop Applications (Verbessern der Startleistung für Desktopanwendungen)](https://go.microsoft.com/fwlink/p/?LinkId=248943)

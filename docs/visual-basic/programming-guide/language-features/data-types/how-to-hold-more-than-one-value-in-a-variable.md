@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2c3df9873d184ead2de3f82b89a081955ade93b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825156"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601120"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Vorgehensweise: Ablegen von mehr als einen Wert in einer Variablen (Visual Basic)
 Eine Variable enthält mehr als einen Wert aus, wenn Sie vom deklariert eine *zusammengesetzten Datentyp*.  
@@ -25,21 +25,21 @@ Eine Variable enthält mehr als einen Wert aus, wenn Sie vom deklariert eine *zu
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>Um mehr als einen Wert in einer Variablen zu speichern.  
   
-1.  Bestimmen des Typs, zusammengesetzte Datenelemente für die Variable verwenden möchten.  
+1. Bestimmen des Typs, zusammengesetzte Datenelemente für die Variable verwenden möchten.  
   
-2.  Falls bereits nicht der zusammengesetzten Datentyp definiert ist, definieren sie, damit die Variable verwendet werden kann.  
+2. Falls bereits nicht der zusammengesetzten Datentyp definiert ist, definieren sie, damit die Variable verwendet werden kann.  
   
-    -   Definieren Sie eine Struktur mit einem [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md).  
+    - Definieren Sie eine Struktur mit einem [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
-    -   Definieren Sie ein Array mit einem [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md).  
+    - Definieren Sie ein Array mit einem [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-    -   Definieren einer Klasse mit einem [Class-Anweisung](../../../../visual-basic/language-reference/statements/class-statement.md).  
+    - Definieren einer Klasse mit einem [Class-Anweisung](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
-3.  Deklarieren Sie die Variable mit einem `Dim` Anweisung.  
+3. Deklarieren Sie die Variable mit einem `Dim` Anweisung.  
   
-4.  Gehen Sie vor dem Variablennamen ein `As` Klausel.  
+4. Gehen Sie vor dem Variablennamen ein `As` Klausel.  
   
-5.  Führen Sie die `As` Schlüsselwort mit dem Namen des entsprechenden zusammengesetzten-Datentyps.  
+5. Führen Sie die `As` Schlüsselwort mit dem Namen des entsprechenden zusammengesetzten-Datentyps.  
   
 ## <a name="see-also"></a>Siehe auch
 

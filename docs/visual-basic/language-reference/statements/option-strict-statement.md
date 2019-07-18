@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f911090bdf9b6f5aedaf540d8732b6ea0701fd78
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355128"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582796"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 Implizite datentypkonvertierungen auf erweiternde Konvertierungen eingeschränkt und lässt keine späte Bindung lässt keine impliziten Typisierung der Ergebnisse in eine `Object` Typ.  
@@ -37,11 +37,11 @@ Option Strict { On | Off }
 ## <a name="remarks"></a>Hinweise  
  Wenn `Option Strict On` oder `Option Strict` wird in einer Datei, die folgenden Bedingungen dazu führen, dass einen Fehler während der Kompilierung:  
   
--   Implizite Eingrenzungskonvertierungen  
+- Implizite Eingrenzungskonvertierungen  
   
--   Spätes Binden  
+- Spätes Binden  
   
--   Implizites Typisierung der Ergebnisse in einem `Object`-Typ  
+- Implizites Typisierung der Ergebnisse in einem `Object`-Typ  
   
 > [!NOTE]
 >  Die Warnung-Konfigurationen, die Sie für festlegen können die [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), es gibt drei Einstellungen, die mit den drei Bedingungen entsprechen, die dazu führen, einen Fehler während der Kompilierung dass. Informationen dazu, wie Sie diese Einstellungen verwenden, finden Sie unter [Warnungskonfigurationen festlegen, in der IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) weiter unten in diesem Thema.  
@@ -52,11 +52,11 @@ Option Strict { On | Off }
   
  Wenn Sie festlegen, `Option Strict` zu `On`, Visual Basic überprüft, dass die Datentypen für alle Programmiersprachen Elemente angegeben werden. Datentypen können explizit angegeben werden oder mithilfe von lokalem Typrückschluss angegeben werden. Angabe von Datentypen für alle Programmierelemente wird, den folgenden Gründen empfohlen:  
   
--   Sie können IntelliSense-Unterstützung für Ihre Variablen und Parameter. Dadurch können Sie die Eigenschaften und andere Member zu sehen, wie Sie Code eingeben.  
+- Sie können IntelliSense-Unterstützung für Ihre Variablen und Parameter. Dadurch können Sie die Eigenschaften und andere Member zu sehen, wie Sie Code eingeben.  
   
--   Sie können den Compiler an, führen Sie die Überprüfung des Typs. Typüberprüfung können Sie die Anweisungen zu finden, die aufgrund von Fehler bei der datentypkonvertierung zur Laufzeit fehlschlagen können. Er gibt außerdem Aufrufe von Methoden für Objekte, die diese Methoden nicht unterstützen.  
+- Sie können den Compiler an, führen Sie die Überprüfung des Typs. Typüberprüfung können Sie die Anweisungen zu finden, die aufgrund von Fehler bei der datentypkonvertierung zur Laufzeit fehlschlagen können. Er gibt außerdem Aufrufe von Methoden für Objekte, die diese Methoden nicht unterstützen.  
   
--   Es beschleunigt die Ausführung von Code. Ein Grund hierfür ist, wenn Sie einen Datentyp für ein Programmierelement nicht angeben, die Visual Basic-Compiler weist die `Object` Typ. Kompilierte Code möglicherweise zwischen hin und her konvertiert `Object` und andere Datentypen, die Leistung verringert.  
+- Es beschleunigt die Ausführung von Code. Ein Grund hierfür ist, wenn Sie einen Datentyp für ein Programmierelement nicht angeben, die Visual Basic-Compiler weist die `Object` Typ. Kompilierte Code möglicherweise zwischen hin und her konvertiert `Object` und andere Datentypen, die Leistung verringert.  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>Implizite Eingrenzungskonvertierungsfehler treten  
  Implizite Eingrenzungskonvertierungsfehler treten auf, wenn eine implizite Datentypkonvertierung vorhanden ist, die eine Eingrenzungskonvertierung ist.  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  Konvertierungen, die zu Fehlern führen können enthalten implizite Konvertierungen, die auftreten, in Ausdrücken. Weitere Informationen finden Sie unter den folgenden Themen:  
   
--   [+-Operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
+- [+-Operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+=-Operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+- [+=-Operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ =-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/ =-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char-Datentyp](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+- [Char-Datentyp](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Beim Verketten von Zeichenfolgen mithilfe der [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md), gelten alle Konvertierungen auf die Zeichenfolgen erweiternde sein. Damit diese Konvertierungen nicht, eine implizite einschränkende Konvertierungsfehler, auch wenn generiert werden `Option Strict` ist.  
   
@@ -96,8 +96,8 @@ Option Strict { On | Off }
   
 |Datentyp angegeben?|Initialisierung angegeben?|Beispiel|Ergebnis|  
 |---|---|---|---|  
-|Nein|Nein|`Dim qty`|Wenn `Option Strict` deaktiviert ist (Standard), ist die Variable auf `Nothing` eingestellt.<br /><br /> Wenn `Option Strict` aktiviert ist, tritt ein Kompilierungsfehler auf.|  
-|Nein|Ja|`Dim qty = 5`|Wenn `Option Infer` aktiviert ist (Standard), übernimmt die Variable den Datentyp des Initialisierers an. Finden Sie unter [lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Wenn `Option Infer` und `Option Strict` ausgeschaltet sind, nimmt die Variable den Datentyp des `Object` an.<br /><br /> Wenn `Option Infer` deaktiviert ist und `Option Strict` aktiviert ist, tritt ein Kompilierungsfehler auf.|  
+|Nein|Nein|`Dim qty`|Wenn `Option Strict` deaktiviert ist (Standard), ist die Variable auf `Nothing` eingestellt.<br /><br /> Wenn `Option Strict` aktiviert ist, tritt ein Kompilierzeitfehler auf.|  
+|Nein|Ja|`Dim qty = 5`|Wenn `Option Infer` aktiviert ist (Standard), übernimmt die Variable den Datentyp des Initialisierers an. Finden Sie unter [lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Wenn `Option Infer` und `Option Strict` ausgeschaltet sind, nimmt die Variable den Datentyp des `Object` an.<br /><br /> Wenn `Option Infer` deaktiviert ist und `Option Strict` aktiviert ist, tritt ein Kompilierzeitfehler auf.|  
 |Ja|Nein|`Dim qty As Integer`|Die Variable wird auf den Standardwert für den Datentyp initialisiert. Weitere Informationen finden Sie unter [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md).|  
 |Ja|Ja|`Dim qty  As Integer = 5`|Wenn der Datentyp der Initialisierung nicht in den angegebenen Datentyp konvertiert werden kann, tritt ein Fehler während der Kompilierung auf.|  
   
@@ -109,18 +109,18 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Option Strict festlegen, in der IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  Wählen Sie im **Projektmappen-Explorer** ein Projekt aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
+1. Wählen Sie im **Projektmappen-Explorer** ein Projekt aus. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
-2.  Auf der **Kompilieren** Registerkarte, legen Sie den Wert der **Option Strict** Feld.  
+2. Auf der **Kompilieren** Registerkarte, legen Sie den Wert der **Option Strict** Feld.  
   
 ### <a name="conditions"></a> Festlegen von Warnungskonfigurationen in der IDE  
  Bei Verwendung der [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) statt einer `Option Strict` -Anweisung, haben Sie zusätzliche Kontrolle über die Bedingungen, die zu Fehlern führen. Die **Warnungskonfigurationen** Teil der **Seite "Kompilieren"** verfügt über Einstellungen, die mit den drei Bedingungen entsprechen, die dazu führen, einen Fehler während der Kompilierung dass bei `Option Strict` ist. Die drei Einstellungen sind die folgenden:  
   
--   **Implizite Konvertierung**  
+- **Implizite Konvertierung**  
   
--   **Späte Bindung; Aufruf könnte zur Laufzeit einen Fehler verursachen**  
+- **Späte Bindung; Aufruf könnte zur Laufzeit einen Fehler verursachen**  
   
--   **Impliziter Typ; Objekt wird angenommen**  
+- **Impliziter Typ; Objekt wird angenommen**  
   
  Wenn Sie **Option Strict** auf **Ein** festlegen, werden alle drei Warnungskonfigurationseinstellungen auf **Fehler** festgelegt. Wenn Sie **Option Strict** auf **Aus** festlegen werden alle drei Einstellungen auf **Keine** festgelegt.  
   

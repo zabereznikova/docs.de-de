@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74eb098ee68f57477c8b9115db2bce60919f0b12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97a3ab62cda82526a7ad8b8e5d985d9fce7d6f07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580212"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783069"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance-Funktion
 Erstellt eine neue Instanz einer Klasse.    
@@ -30,7 +30,7 @@ Erstellt eine neue Instanz einer Klasse.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SpawnInstance (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -47,7 +47,7 @@ HRESULT SpawnInstance (
 [in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `lFlags`  
-[in]: Reserviert Dieser Parameter muss 0 sein.
+[in] Reserviert. Dieser Parameter muss 0 sein.
 
 `ppNewInstance`  
 [out] Erhält der Zeiger auf die neue Instanz der Klasse. Wenn ein Fehler auftritt, ist ein neues Objekt nicht zurückgegeben, und `ppNewInstance` wird links unverändert.
@@ -69,9 +69,6 @@ Diese Funktion umschließt einen Aufruf der [IWbemClassObject::SpawnInstance](/w
 
 `ptr` eine Definition einer Klasse muss aus der Verwaltung von Windows abgerufen werden. (Beachten Sie, dass erzeugen eine Instanz von einer Instanz unterstützt wird, aber die zurückgegebene Instanz ist leer.) Anschließend verwenden Sie diese Klassendefinition, um die neue Instanzen zu erstellen. Ein Aufruf der [PutInstanceWmi](putinstancewmi.md) Funktion ist erforderlich, wenn Sie beabsichtigen, die Instanz für die Verwaltung von Windows zu schreiben.
 
-
-
-
 Das neue Objekt im zurückgegebenen `ppNewClass` wird automatisch eine Unterklasse des aktuellen Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode, die von der Unterklasse (abgeleitete Klassen) erstellt werden können.
 
 ## <a name="requirements"></a>Anforderungen  
@@ -82,4 +79,5 @@ Das neue Objekt im zurückgegebenen `ppNewClass` wird automatisch eine Unterklas
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

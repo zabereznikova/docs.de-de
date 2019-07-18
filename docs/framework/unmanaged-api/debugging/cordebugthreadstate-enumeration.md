@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efb7f5b8e63742471123a0e0a38cebe605f3696f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ce252f5a4b5fbcdbbc7b70c8b1c829490f8f63e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092447"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739524"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState-Enumeration
 Gibt den Zustand eines Threads zum Debuggen an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorDebugThreadState {  
     THREAD_RUN,  
     THREAD_SUSPEND  
@@ -50,7 +50,7 @@ typedef enum CorDebugThreadState {
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDegug.h  
+ **Header:** CorDebug.idl, CorDebug.h  
   
  **Bibliothek:** CorGuids.lib  
   
@@ -58,4 +58,4 @@ typedef enum CorDebugThreadState {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

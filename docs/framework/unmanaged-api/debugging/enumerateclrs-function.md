@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7532218728aead72186b5156da87db6d3bc0a8c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ae668a40ba1510e0e3d4f509643022ebe822a4f0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469331"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738935"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs-Funktion
 Stellt einen Mechanismus für das Auflisten der CLRs in einem Prozess bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateCLRs (  
     [in]  DWORD      debuggeePID,  
     [out] HANDLE**   ppHandleArrayOut,  

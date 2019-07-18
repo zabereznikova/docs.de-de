@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8c65ec6acc5ff87501392eb41909fcd6ebf1e3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a8eb622b974de350f86a586a0f07b887bffdbd61
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092121"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483065"
 ---
 # <a name="corprofeunsupportedcallsequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
-Die CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT wurde in .NET Framework, Version 2.0 eingeführt. Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] gibt dieses HRESULT in zwei Szenarien:  
+Die CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT wurde in .NET Framework, Version 2.0 eingeführt. .NET Framework 4 gibt dieses HRESULT zurück, in zwei Szenarien:  
   
--   Ein Profiler Hijacking Erzwingen eines Threads zurückgesetzt registrieren Sie Kontext zu einem beliebigen Zeitpunkt ein, sodass der Thread versucht, Strukturen, die sich in einem inkonsistenten Zustand befinden, Zugriff auf.  
+- Ein Profiler Hijacking Erzwingen eines Threads zurückgesetzt registrieren Sie Kontext zu einem beliebigen Zeitpunkt ein, sodass der Thread versucht, Strukturen, die sich in einem inkonsistenten Zustand befinden, Zugriff auf.  
   
--   Wenn ein Profiler mit dem versucht, die eine Informationsmethode aufrufen, die Garbagecollection von eine Rückrufmethode auslöst, die Garbagecollection verbietet.  
+- Wenn ein Profiler mit dem versucht, die eine Informationsmethode aufrufen, die Garbagecollection von eine Rückrufmethode auslöst, die Garbagecollection verbietet.  
   
  Diese beiden Szenarien werden in den folgenden Abschnitten erläutert.  
   
@@ -37,37 +37,37 @@ Die CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT wurde in .NET Framework, Version
   
  Asynchrone Aufrufe sind in der Regel nicht sicher. Allerdings werden die folgenden Methoden sind sicher und insbesondere asynchrone Aufrufe unterstützen:  
   
--   [GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
+- [GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
   
--   [SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)  
+- [SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)  
   
--   [GetCurrentThreadID](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcurrentthreadid-method.md)  
+- [GetCurrentThreadID](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcurrentthreadid-method.md)  
   
--   [GetThreadContext](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getthreadcontext-method.md)  
+- [GetThreadContext](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getthreadcontext-method.md)  
   
--   [GetThreadAppDomain](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadappdomain-method.md)  
+- [GetThreadAppDomain](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadappdomain-method.md)  
   
--   [GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md)  
+- [GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md)  
   
--   [GetFunctionInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctioninfo-method.md)  
+- [GetFunctionInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctioninfo-method.md)  
   
--   [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)  
+- [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)  
   
--   [GetCodeInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcodeinfo-method.md)  
+- [GetCodeInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getcodeinfo-method.md)  
   
--   [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)  
+- [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)  
   
--   [GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)  
+- [GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)  
   
--   [GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md)  
+- [GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md)  
   
--   [GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)  
+- [GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)  
   
--   [IsArrayClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-isarrayclass-method.md)  
+- [IsArrayClass](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-isarrayclass-method.md)  
   
--   [SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)  
+- [SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)  
   
--   [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
+- [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
   
  Weitere Informationen finden Sie im Eintrag [warum wir CORPROF_E_UNSUPPORTED_CALL_SEQUENCE haben](https://go.microsoft.com/fwlink/?LinkId=169156) im CLR-Profilerstellungs-API-Blog.  
   

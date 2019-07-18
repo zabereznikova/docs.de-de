@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 458b53c9a2f1ea9774a61bb3439fe041cc8c2861
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709480"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744253"
 ---
 # <a name="c-guide"></a>Leitfaden für C#
 
@@ -35,7 +35,7 @@ Der Leitfaden für C# ist in mehrere Abschnitte unterteilt. Sie können diese na
 * [Erste Schritte](getting-started/index.md)
   * In diesem Abschnitt wird beschrieben, was Sie für die Installation einer C#-Entwicklungsumgebung auf Ihrer bevorzugten Plattform benötigen. In den verschiedenen Themen in diesem Abschnitt wird erläutert, wie Sie das erste C#-Programm in unterschiedlichen unterstützten Umgebungen erstellen.
 
-* [Einführung in die C#-Tutorials](tutorials/intro-to-csharp/index.md):
+* [Einführung in die C#-Tutorials:](tutorials/intro-to-csharp/index.md)
   * In „Einführung in die C#-Tutorials“ werden interaktive Tutorials vorgestellt, für die eine REPL-Schnittstelle (Read-Eval-Print-Loop) verwendet wird, damit neue Entwickler C# im Browser entdecken und erlernen können. Nachdem Sie diese interaktiven Übungen durchgearbeitet haben, können Sie ihre Programmierkenntnisse verbessern, indem Sie die gleichen Übungen auf Ihrem Computer durchführen.
 
 * [Tutorials](tutorials/index.md)

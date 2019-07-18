@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c997ab107ba3ceb7773bc9235b9c9dcd4d97df8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9861de733a9acb43c7e2a4b4941f9945fc5f0ba7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231447"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758376"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication-Funktion
 Startet die Anwendung im angegebenen Netzwerkpfad, wobei die angegebenen Manifeste und sonstigen Anwendungsdaten verwendet werden.  
   
- Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
+ Diese Funktion ist in .NET Framework 4 veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CorLaunchApplication (  
     [in]  HOST_TYPE                dwClickOnceHost,  
     [in]  LPCWSTR                  pwzAppFullName,  

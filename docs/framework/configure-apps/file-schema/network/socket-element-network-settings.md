@@ -1,5 +1,5 @@
 ---
-title: <socket> -Element (Netzwerkeinstellungen)
+title: <socket>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e8ec13a0bb991accff080db502552e46913c66d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160159"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607507"
 ---
 # <a name="socket-element-network-settings"></a>\<Socket >-Element (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.  
@@ -51,7 +51,7 @@ Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Einstellungen](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `alwaysUseCompletionPortsForAccept` und `alwaysUseCompletionPortsForConnect` Attribute werden an das Standardverhalten in Bezug auf die Verwendung von Abschlussanschlüsse verwendet, von den Klassen in der <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace. Abschlussports werden für Anwendungen mit hoher Leistungsfähigkeit Server empfohlen.  
@@ -64,9 +64,9 @@ Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.
   
  Dies `ipProtectionLevel` attributeinstellung wirkt sich auf nur die ersten eingehenden Datenverkehr:  
   
--   Ein TCP-Server lauscht für eingehende Verbindungen für einen Socket.  
+- Ein TCP-Server lauscht für eingehende Verbindungen für einen Socket.  
   
--   Eine UDP-Anwendung empfangen eines Pakets auf einem Socket.  
+- Eine UDP-Anwendung empfangen eines Pakets auf einem Socket.  
   
  Diese Einstellung wirkt sich nicht auf bereits eingerichtete TCP-Verbindungen (Datenverkehr ist in beide Richtungen unrestricted) und wirkt sich nicht auf eine Anwendung, die UDP-Pakete zu senden.  
   
@@ -110,4 +110,4 @@ Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.
 - <xref:System.Net.Sockets?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

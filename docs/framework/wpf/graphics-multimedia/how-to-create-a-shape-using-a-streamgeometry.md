@@ -8,15 +8,15 @@ helpviewer_keywords:
 - graphics [WPF], shapes
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
-ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ce2097568349ad376540163f5fe05d6a3e5b0643
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108601"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348030"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Vorgehensweise: Erstellen eines Shapes mit einer StreamGeometry
-<xref:System.Windows.Media.StreamGeometry> stellt einfache Alternative zu <xref:System.Windows.Media.PathGeometry> zum Erstellen geometrischer Formen. Verwenden einer <xref:System.Windows.Media.StreamGeometry> Wenn Sie eine komplexe Geometrie beschreiben müssen jedoch nicht den Mehraufwand für die Unterstützung von Datenbindung, Animation oder Änderung möchten. Beispielsweise aufgrund ihrer Effizienz der <xref:System.Windows.Media.StreamGeometry> Klasse ist eine gute Wahl zum Beschreiben von Adornern.  
+<xref:System.Windows.Media.StreamGeometry> ist der einfache Alternative zur <xref:System.Windows.Media.PathGeometry> zum Erstellen geometrischer Formen. Verwenden einer <xref:System.Windows.Media.StreamGeometry> Wenn Sie eine komplexe Geometrie beschreiben müssen jedoch nicht den Mehraufwand für die Unterstützung von Datenbindung, Animation oder Änderung möchten. Beispielsweise aufgrund ihrer Effizienz der <xref:System.Windows.Media.StreamGeometry> Klasse ist eine gute Wahl zum Beschreiben von Adornern.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine Attributsyntax eine dreieckige erstellen <xref:System.Windows.Media.StreamGeometry> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -42,5 +42,5 @@ ms.locfileid: "59108601"
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.StreamGeometryContext>
-- [Erstellen einer Form mithilfe einer PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)
-- [Übersicht über die Geometrie](geometry-overview.md)
+- [Erstellen einer Form mithilfe von PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)
+- [Übersicht über Geometrien](geometry-overview.md)

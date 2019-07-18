@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d90b3c23af39125d888824dbfabf798a3e73985
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 4a6c2b755b87f6f01f08f54a2f2fc567868dbb55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218735"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626347"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Verfügbarmachen von .NET Framework-Komponenten in COM
 Das Schreiben eines .NET-Typs und das Verwenden dieses Typs von nicht verwaltetem Code sind unterschiedliche Aktivitäten für Entwickler. Dieser Abschnitt beschreibt einige Tipps zum Schreiben von verwaltetem Code, der mit COM-Clients interagiert:  
   
--   [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+- [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
   
      Alle verwalteten Typen, Methoden, Eigenschaften, Felder und Ereignisse, die für COM verfügbar gemacht werden sollen, müssen öffentlich sein. Typen müssen über einen öffentlichen Standardkonstruktor verfügen, da dies der einzige Konstruktor ist, der über COM aufgerufen werden kann.  
   
--   [Anwenden von Interop-Attributen](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Anwenden von Interop-Attributen](../../../docs/framework/interop/applying-interop-attributes.md).  
   
      Benutzerdefinierte Attribute in verwaltetem Code können die Interoperabilität einer Komponente verbessern.  
   
--   [Verpacken einer Assembly für COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
+- [Verpacken einer Assembly für COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
   
      COM-Entwickler fordern möglicherweise, dass Sie die Schritte für Verweise und die Bereitstellung Ihrer Assemblys zusammenfassen.  
   
@@ -34,22 +34,23 @@ Das Schreiben eines .NET-Typs und das Verwenden dieses Typs von nicht verwaltete
   
 #### <a name="to-consume-a-managed-type-from-com"></a>Nutzen eines verwalteten Typs von COM  
   
-1.  [Registrieren von Assemblys bei COM](../../../docs/framework/interop/registering-assemblies-with-com.md).  
+1. [Registrieren von Assemblys bei COM](../../../docs/framework/interop/registering-assemblies-with-com.md).  
   
      Typen in einer Assembly (und Typbibliotheken) müssen zur Entwurfszeit registriert werden. Wenn ein Installer die Assembly nicht registriert, weisen Sie die COM-Entwickler zur Nutzung von Regasm.exe an.  
   
-2.  [Verweisen auf .NET-Typen in COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
+2. [Verweisen auf .NET-Typen in COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
   
      COM-Entwickler können auf Typen in einer Assembly verweisen, indem sie dieselben Tools und Techniken nutzen, die sie heute bereits verwenden.  
   
-3.  [Aufrufen eines .NET-Objekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
+3. [Aufrufen eines .NET-Objekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
   
      COM-Entwickler können Methoden so für das .NET-Objekt aufrufen, wie sie Methoden für alle nicht verwalteten Typen aufrufen. Z.B. aktiviert die COM-API **CoCreateInstance** .NET-Objekte.  
   
-4.  [Bereitstellen einer Anwendung für COM-Zugriff](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
+4. [Bereitstellen einer Anwendung für COM-Zugriff](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
   
      Eine Assembly mit starkem Namen kann im globalen Assemblycache installiert werden und erfordert eine Signatur des Herausgebers. Assemblys, die keinen starken Namen haben, müssen im Anwendungsverzeichnis des Clients installiert werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Interoperabilität mit nicht verwaltetem Code](../../../docs/framework/interop/index.md)
 - [COM-Interopbeispiel: COM-Client und .NET-Server](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

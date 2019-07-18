@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: af796affa669d0f21e9d503f5263ad26b537fb91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596144"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Vorgehensweise: Erstellen eines Schlüssels in der Registrierung (Visual C#)
 Dieses Beispiel fügt der Registrierung des aktuellen Benutzers unter dem Schlüssel "Names" das Wertepaar "Name" und "Isabella" hinzu.  
@@ -27,26 +27,26 @@ key.Close();
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Kopieren Sie den Code, und fügen Sie ihn in die `Main`-Methode einer Konsolenanwendung ein.  
+- Kopieren Sie den Code, und fügen Sie ihn in die `Main`-Methode einer Konsolenanwendung ein.  
   
--   Ersetzen Sie den `Names`-Parameter durch den Namen eines Schlüssels, der sich in der Registrierung direkt unter dem HKEY_CURRENT_USER-Knoten befindet.  
+- Ersetzen Sie den `Names`-Parameter durch den Namen eines Schlüssels, der sich in der Registrierung direkt unter dem HKEY_CURRENT_USER-Knoten befindet.  
   
--   Ersetzen Sie den `Name`-Parameter durch den Namen eines Werts, der sich direkt unterhalb des Names-Knotens befindet.  
+- Ersetzen Sie den `Name`-Parameter durch den Namen eines Werts, der sich direkt unterhalb des Names-Knotens befindet.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Untersuchen Sie die Registrierungsstruktur, um eine adäquate Position für den Schlüssel zu ermitteln. Sie können beispielsweise den Schlüssel Software des aktuellen Benutzers öffnen und einen Schlüssel mit dem Namen Ihres Unternehmens erstellen. Anschließend fügen Sie die Registrierungswerte dem Schlüssel für das Unternehmen hinzu.  
   
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
   
--   Der Name des Schlüssels ist NULL.  
+- Der Name des Schlüssels ist NULL.  
   
--   Der Benutzer ist nicht zum Erstellen von Registrierungsschlüsseln berechtigt.  
+- Der Benutzer ist nicht zum Erstellen von Registrierungsschlüsseln berechtigt.  
   
--   Der Name des Schlüssels ist länger als 255 Zeichen.  
+- Der Name des Schlüssels ist länger als 255 Zeichen.  
   
--   Der Schlüssel ist geschlossen.  
+- Der Schlüssel ist geschlossen.  
   
--   Der Registrierungsschlüssel ist schreibgeschützt.  
+- Der Registrierungsschlüssel ist schreibgeschützt.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Es ist sicherer, die Daten in den Benutzerordner (`Microsoft.Win32.Registry.CurrentUser`) anstatt auf den lokalen Computer (`Microsoft.Win32.Registry.LocalMachine`) zu schreiben.  

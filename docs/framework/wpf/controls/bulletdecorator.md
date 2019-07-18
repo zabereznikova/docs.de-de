@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
 ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052663"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
 <xref:System.Windows.Controls.Primitives.BulletDecorator> verfügt über zwei Inhaltseigenschaften: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> und <xref:System.Windows.Controls.Decorator.Child%2A>. Die <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> -Eigenschaft definiert die <xref:System.Windows.UIElement> als Aufzählungszeichen verwenden. Die <xref:System.Windows.Controls.Decorator.Child%2A> -Eigenschaft definiert eine <xref:System.Windows.UIElement> visuell ausgerichtet, die mit Aufzählungszeichen.  

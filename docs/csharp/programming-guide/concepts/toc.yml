@@ -1,34 +1,27 @@
-items:
 - name: Programmierkonzepte
   href: index.md
   items:
-  - name: Assemblys und der globale Assemblycache
-    href: assemblies-gac/
-  - name: Asynchrone Programmierung mit „async“ und „await“
-    href: async/
-  - name: Attribute
-    href: attributes/
-  - name: Aufruferinformationen
-    href: caller-information.md
-  - name: Auflistungen
-    href: collections.md
-  - name: Kovarianz und Kontravarianz
-    href: covariance-contravariance/
-  - name: Ausdrucksbaumstrukturen
-    href: expression-trees/
-  - name: Iterators
-    href: iterators.md
-  - name: Language-Integrated Query (LINQ)
-    href: linq/
-  - name: Objektorientierte Programmierung
-    href: object-oriented-programming.md
-  - name: Spiegelung
-    href: reflection.md
-  - name: Serialisierung (C#)
-    href: serialization/
-ms.openlocfilehash: 43357f3e4d438d96ba5778100585453792ed29c6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469483"
+    - name: Assemblys und der globale Assemblycache
+      href: assemblies-gac/
+    - name: Asynchrone Programmierung mit „async“ und „await“
+      href: async/
+    - name: Attribute
+      href: attributes/
+    - name: Aufruferinformationen
+      href: caller-information.md
+    - name: Auflistungen
+      href: collections.md
+    - name: Kovarianz und Kontravarianz
+      href: covariance-contravariance/
+    - name: Ausdrucksbaumstrukturen
+      href: expression-trees/
+    - name: Iterators
+      href: iterators.md
+    - name: Language-Integrated Query (LINQ)
+      href: linq/
+    - name: Objektorientierte Programmierung
+      href: object-oriented-programming.md
+    - name: Spiegelung
+      href: reflection.md
+    - name: 'Serialisierung (C#)'
+      href: serialization/

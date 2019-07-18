@@ -2,12 +2,12 @@
 title: Festlegen der Use- und Style-Eigenschaften - WCF-Beispiele
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: 64cf64cf5d53ef0dfb4bc38cf86f91c7acd2e5af
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 654bba8535ab253bdd34f64e7b6ab2fab66fd33b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281618"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637694"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Festlegen der Use-Eigenschaft und der Style-Eigenschaft
 

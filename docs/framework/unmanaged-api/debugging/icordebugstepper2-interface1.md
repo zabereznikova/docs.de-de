@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 256f67d21a22ee4692d88311cc150736e61563a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987414"
 ---
 # <a name="icordebugstepper2-interface"></a>ICorDebugStepper2-Schnittstelle
 Bietet Unterstützung für nur mein (JMC) Codedebuggen.  
@@ -48,4 +48,4 @@ Bietet Unterstützung für nur mein (JMC) Codedebuggen.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4bef609289cdbb192116469bac4fca66ee10fd09
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839680"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662522"
 ---
 # <a name="function-expression-visual-basic"></a>Funktionsausdruck (Visual Basic)
 Deklariert die Parameter und den Code, der einen Lambda-Ausdruck von Funktion definieren.  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>Lambdaausdruckssyntax  
  Die Syntax eines Lambda-Ausdrucks ähnelt einer standard-Funktion. Die Unterschiede sind wie folgt aus:  
   
--   Ein Lambda-Ausdruck ist nicht auf einen Namen haben.  
+- Ein Lambda-Ausdruck ist nicht auf einen Namen haben.  
   
--   Lambda-Ausdrücke sind keine Modifizierer, z. B. `Overloads` oder `Overrides`.  
+- Lambda-Ausdrücke sind keine Modifizierer, z. B. `Overloads` oder `Overrides`.  
   
--   Lambda-Ausdrücke verwenden Sie keine `As` -Klausel, um den Rückgabetyp der Funktion festlegen. Stattdessen wird der Typ der Wert, dem der Text eines einzeiligen Lambda-Ausdrucks ergibt, oder der Rückgabewert eines mehrzeiligen Lambda-Ausdrucks abgeleitet. Wenn der Text eines einzeiligen Lambda-Ausdrucks ist z. B. `Where cust.City = "London"`, dessen Rückgabetyp `Boolean`.  
+- Lambda-Ausdrücke verwenden Sie keine `As` -Klausel, um den Rückgabetyp der Funktion festlegen. Stattdessen wird der Typ der Wert, dem der Text eines einzeiligen Lambda-Ausdrucks ergibt, oder der Rückgabewert eines mehrzeiligen Lambda-Ausdrucks abgeleitet. Wenn der Text eines einzeiligen Lambda-Ausdrucks ist z. B. `Where cust.City = "London"`, dessen Rückgabetyp `Boolean`.  
   
--   Der Text eines einzeiligen Lambda-Ausdrucks muss es sich um einen Ausdruck, der keine Anweisung sein. Der Text kann aus einem Aufruf einer Funktionsprozedur, aber nicht aus einem Aufruf an eine Subprozedur bestehen.  
+- Der Text eines einzeiligen Lambda-Ausdrucks muss es sich um einen Ausdruck, der keine Anweisung sein. Der Text kann aus einem Aufruf einer Funktionsprozedur, aber nicht aus einem Aufruf an eine Subprozedur bestehen.  
   
--   Entweder für alle Parameter müssen angegeben haben, oder alle Datentypen per Rückschluss abgeleitet werden müssen.  
+- Entweder für alle Parameter müssen angegeben haben, oder alle Datentypen per Rückschluss abgeleitet werden müssen.  
   
--   Optional "und" Paramarray-Parameter sind nicht zulässig.  
+- Optional "und" Paramarray-Parameter sind nicht zulässig.  
   
--   Generische Parameter sind nicht zulässig.  
+- Generische Parameter sind nicht zulässig.  
   
 ## <a name="example"></a>Beispiel  
  Die folgenden Beispiele zeigen zwei Möglichkeiten zum Erstellen von einfachen Lambda-Ausdrücke. Im ersten Beispiel wird eine `Dim` einen Namen für die Funktion bereitstellen. Um die Funktion aufzurufen, senden Sie einen Wert für den Parameter.  

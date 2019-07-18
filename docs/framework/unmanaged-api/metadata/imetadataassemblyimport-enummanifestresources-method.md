@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7abcb7b69d0f0f2c53cd236c9b4092a94e0f421c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 717682bdcb2409a5f58f040a3ac2eafd73f01f7e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110676"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777953"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources-Methode
 Ruft einen Zeiger auf einen Enumerator für die Ressourcen, die in der aktuellen Assemblymanifest verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumManifestResources (  
     [in, out] HCORENUM         *phEnum,   
     [out] mdManifestResource   rManifestResources[],   

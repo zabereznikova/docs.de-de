@@ -3,11 +3,11 @@ title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
 ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783181"
 ---
 # <a name="policyimporter"></a>\<policyImporter>
 Gibt einen Richtlinienimporter an, der den Import von benutzerdefinierten Richtlinienerklärungen über Bindungen steuert.  

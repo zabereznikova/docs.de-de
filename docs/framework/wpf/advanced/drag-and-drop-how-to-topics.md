@@ -7,11 +7,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
 ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010435"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Gewusst-wie-Themen zu Drag &amp; Drop
 Die folgenden Beispiele veranschaulichen, wie Sie häufige Aufgaben mit der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Drag & Drop-Framework.  

@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ed8b85475dc7327c1aac6f920aba627215e27c7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b68624b962ed610dbeecd3e4cead769ab1400f4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492022"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739212"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule-Funktion
 Erstellt eine Versionszeichenfolge aus einem CLR-Pfad (Common Language Runtime) in einem Zielprozess.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CreateVersionStringFromModule (  
     [in]  DWORD      pidDebuggee,  
     [in]  LPCWSTR    szModuleName,  

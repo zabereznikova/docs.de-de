@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Then keyword [Visual Basic]
 ms.assetid: 41fdb422-d222-4c10-b5b0-c421c79e9070
 ms.openlocfilehash: d7e62e5a36abe917d8b16177fe76715f915ee769
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61958820"
 ---
 # <a name="then-statement"></a>Then-Anweisung
 Führt einen Anweisungsblock kompiliert oder ausgeführt wird, wenn eine getestete Bedingung wahr ist.  

@@ -1,22 +1,21 @@
 ---
-title: Machine Learning-Aufgaben – ML.NET
+title: Machine Learning-Aufgaben
 description: Untersuchen Sie die anderen in ML.NET unterstützten Machine Learning-Aufgaben und zugehörigen Aufgaben.
 ms.custom: seodec18
-ms.date: 01/15/2019
-author: jralexander
-ms.openlocfilehash: 02b454d18eca36c94c27ae15665af5df2ec87905
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.date: 04/23/2019
+author: natke
+ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415701"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063545"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Machine Learning-Aufgaben in ML.NET
 
-Wenn Sie ein Machine Learning-Modell erstellen, müssen Sie zuerst definieren, was Sie mit Ihren Daten erreichen möchten. Danach können Sie die richtige Machine Learning-Aufgabe für Ihren Zweck auswählen. In der folgenden Liste werden die verschiedenen Machine Learning-Aufgaben beschrieben, unter denen Sie auswählen können, und einige häufige Anwendungsfälle.
+Wenn Sie ein Machine Learning-Modell erstellen, müssen Sie zuerst definieren, was Sie mit Ihren Daten erreichen möchten. Dadurch können Sie die richtige Machine Learning-Aufgabe für Ihren Zweck auswählen. In der folgenden Liste werden die verschiedenen Machine Learning-Aufgaben beschrieben, unter denen Sie auswählen können, und einige häufige Anwendungsfälle.
 
-> [!NOTE]
-> ML.NET ist derzeit als Vorschauversion verfügbar. Nicht alle Machine Learning-Aufgaben werden derzeit unterstützt. Um eine Anforderung für eine bestimmte Aufgabe zu übermitteln, öffnen Sie einen Fall im [dotnet/machinelearning-Repository](https://github.com/dotnet/machinelearning/issues).
+Nachdem Sie entschieden haben, welche Aufgabe auf Ihr Szenario zutrifft, müssen Sie den besten Algorithmus zum Trainieren Ihres Modells auswählen. Die verfügbaren Algorithmen sind im Abschnitt zur jeweiligen Aufgabe aufgeführt.
 
 ## <a name="binary-classification"></a>Binäre Klassifizierung
 
@@ -29,30 +28,36 @@ Eine [überwachte Machine Learning](glossary.md#supervised-machine-learning)-Auf
 
 Weitere Informationen finden Sie auf Wikipedia im Artikel zur [binären Klassifizierung](https://en.wikipedia.org/wiki/Binary_classification).
 
-Empfohlene Lernmodule für binäre Klassifizierung:
+### <a name="binary-classification-trainers"></a>Trainer für die binäre Klassifizierung
 
-* AveragedPerceptronTrainer
-* StochasticGradientDescentClassificationTrainer
-* LightGbmBinaryTrainer
-* FastTreeBinaryClassificationTrainer
-* SymSgdClassificationTrainer
+Sie können ein binäres Klassifizierungsmodell mithilfe der folgenden Algorithmen trainieren:
 
-### <a name="binary-classification-learners"></a>Lernmodule für binäre Klassifizierung
+* <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> 
+* <xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer> 
+* <xref:Microsoft.ML.Trainers.PriorTrainer> 
+* <xref:Microsoft.ML.Trainers.LinearSvmTrainer>
 
-Die folgenden Lernmodule sind für binäre Klassifizierungsaufgaben verfügbar:
+### <a name="binary-classification-inputs-and-outputs"></a>Eingaben und Ausgaben für die binäre Klassifizierung
 
-* [AveragedPerceptronTrainer](xref:Microsoft.ML.Trainers.Online.AveragedPerceptronTrainer)
-* [BinaryClassificationGamTrainer](xref:Microsoft.ML.Trainers.FastTree.BinaryClassificationGamTrainer)
-* [FastForestClassification](xref:Microsoft.ML.Trainers.FastTree.FastForestClassification)
-* [FastTreeBinaryClassificationTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryClassificationTrainer)
-* [FieldAwareFactorizationMachineTrainer](xref:Microsoft.ML.FactorizationMachine.FieldAwareFactorizationMachineTrainer)
-* [LightGbmBinaryTrainer](xref:Microsoft.ML.LightGBM.LightGbmBinaryTrainer)
-* [LinearSvmTrainer](xref:Microsoft.ML.Trainers.Online.LinearSvmTrainer)
-* [LogisticRegression](xref:Microsoft.ML.Learners.LogisticRegression)
-* [PriorTrainer](xref:Microsoft.ML.Trainers.PriorTrainer)
-* [RandomTrainer](xref:Microsoft.ML.Trainers.RandomTrainer)
-* [StochasticGradientDescentClassificationTrainer](xref:Microsoft.ML.Trainers.StochasticGradientDescentClassificationTrainer)
-* [SymSgdClassificationTrainer](xref:Microsoft.ML.Trainers.SymSgd.SymSgdClassificationTrainer)
+Für optimale Ergebnisse bei der binären Klassifizierung sollten die Trainingsdaten ausgeglichen sein (d.h. eine gleiche Anzahl von positiven und negativen Trainingsdaten). Fehlende Werte sollten vor dem Training bearbeitet werden.
+
+Die Daten in der Spalte für die Eingabezeichnung müssen <xref:System.Boolean> sein.
+Die Daten in der Spalte für die Eingabefeatures müssen ein Vektor fester Größe von <xref:System.Single> sein.
+
+Diese Trainer geben die folgenden Spalten aus:
+
+| Name der Ausgabespalte | Spaltentyp | Beschreibung|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Die vom Modell berechnete unformatierte Bewertung|
+| `PredictedLabel` | <xref:System.Boolean> | Der vorhergesagte Bezeichnung, basierend auf dem Abzeichnen der Bewertung. Eine negative Bewertung wird `false` und eine positive Bewertung wird `true` zugeordnet.|
 
 ## <a name="multiclass-classification"></a>Multiklassenklassifizierung
 
@@ -64,26 +69,32 @@ Eine [überwachte Machine Learning](glossary.md#supervised-machine-learning)-Auf
 
 Weitere Informationen finden Sie auf Wikipedia im Artikel zur [Multiklassenklassifizierung](https://en.wikipedia.org/wiki/Multiclass_classification).
 
-Empfohlene Lernmodule für Multiklassenklassifizierung:
-
-* OVA-AveragedPerceptronTrainer
-* SdcaMultiClassTrainer
-* LightGbmMulticlassTrainer
-* OVA-FastTreeBinaryClassificationTrainer
-
 >[!NOTE]
->OVA und PKPD aktualisieren alle [Binärklassifizierungs-Lernmodule](#binary-classification), sodass sie Multiklassendatasets bearbeiten. Weitere Informationen finden Sie in [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
+>One-vs-All (OvA) aktualisiert alle [Binärklassifizierungs-Lernmodule](#binary-classification), sodass sie Multiklassendatasets bearbeiten. Weitere Informationen finden Sie in [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
-### <a name="multiclass-classification-learners"></a>Multiklassenklassifizierungs-Lernmodule
+### <a name="multiclass-classification-trainers"></a>Trainer für die Multiklassenklassifizierung
 
-Die folgenden Lernmodule sind für Multiklassenklassifizierungsaufgaben verfügbar:
+Sie können ein Modell zur Multiklassenklassifizierung mithilfe der folgenden Algorithmen trainieren:
 
-* [LightGbmMulticlassTrainer](xref:Microsoft.ML.LightGBM.LightGbmMulticlassTrainer)
-* [MetaMulticlassTrainer<TTransformer,TModel>](xref:Microsoft.ML.Learners.MetaMulticlassTrainer%602)
-* [MultiClassNaiveBayesTrainer](xref:Microsoft.ML.Trainers.MultiClassNaiveBayesTrainer)
-* [Ova](xref:Microsoft.ML.Trainers.Ova)
-* [Pkpd](xref:Microsoft.ML.Trainers.Pkpd)
-* [SdcaMultiClassTrainer](xref:Microsoft.ML.Trainers.SdcaMultiClassTrainer)
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer>
+* <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer> 
+* <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
+* <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer> 
+
+### <a name="multiclass-classification-inputs-and-outputs"></a>Eingaben und Ausgaben für die Multiklassenklassifizierung
+
+Die Daten in der Spalte für die Eingabezeichnung müssen vom Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) sein.
+Die Featurespalte muss ein Vektor fester Größe von <xref:System.Single> sein.
+
+Der Trainer gibt folgende Daten aus:
+
+| Ausgabename | Typ | Beschreibung|
+| -- | -- | -- |
+| `Score` | Vektor von <xref:System.Single> | Die Bewertungen aller Klassen. Ein höherer Wert bedeutet eine höhere Wahrscheinlichkeit, in die zugehörige Klasse zu fallen. Wenn das i-te Element den größten Wert hat, wäre der vorhergesagte Bezeichnungsindex i. Beachten Sie, dass „i“ ein nullbasierter Index ist. |
+| `PredictedLabel` | Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) | Der Index der vorhergesagten Bezeichnung. Wenn sein Wert i ist, wäre die eigentliche Bezeichnung die i-te Kategorie des Typs der Schlüssel-Wert-Eingabebezeichnung. |
 
 ## <a name="regression"></a>Regression
 
@@ -93,27 +104,29 @@ Eine [überwachte Machine Learning](glossary.md#supervised-machine-learning)-Auf
 * Vorhersagen zukünftiger Aktienkurse basierend auf historischen Daten und aktuellen Markttrends.
 * Vorhersagen für den Verkauf eines Produkts basierend auf Werbebudgets.
 
-Empfohlene Lernmodule für die Regression:
+### <a name="regression-trainers"></a>Regressionstrainer
 
-* FastTreeTweedieTrainer 
-* LightGbmRegressorTrainer 
-* SdcaRegressionTrainer 
-* FastTreeRegressionTrainer
+Sie können ein Regressionsmodell mithilfe der folgenden Algorithmen trainieren:
 
-### <a name="regression-learners"></a>Regressionslernmodule
+* <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.OlsTrainer>
+* <xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer> 
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>
 
-Die folgenden Lernmodule sind für Regressionsaufgaben verfügbar:
+### <a name="regression-inputs-and-outputs"></a>Eingaben und Ausgaben für die Regression
 
-* [FastTreeRegressionTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer)
-* [FastTreeTweedieTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer)
-* [LightGbmRegressorTrainer](xref:Microsoft.ML.LightGBM.LightGbmRegressorTrainer)
-* [OlsLinearRegressionTrainer](xref:Microsoft.ML.Trainers.HalLearners.OlsLinearRegressionTrainer)
-* [OnlineGradientDescentTrainer](xref:Microsoft.ML.Trainers.Online.OnlineGradientDescentTrainer)
-* [PoissonRegression](xref:Microsoft.ML.Trainers.PoissonRegression)
-* [RegressionGamTrainer](xref:Microsoft.ML.Trainers.FastTree.RegressionGamTrainer)
-* [SdcaRegressionTrainer](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)
-* [FastTree.SingleTrainer](xref:Microsoft.ML.Trainers.FastTree.SingleTrainer)
-* [LightGBM.SingleTrainer](xref:Microsoft.ML.LightGBM.SingleTrainer)
+Die Daten in der Spalte für die Eingabezeichnung müssen <xref:System.Single> sein.
+
+Die Trainer für diese Ausgabe geben folgende Daten aus:
+
+| Ausgabename | Typ | Beschreibung|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Die vom Modell vorhergesagte unformatierte Bewertung |
 
 ## <a name="clustering"></a>Clusterbildung
 
@@ -123,11 +136,22 @@ Eine [nicht überwachte Machine Learning](glossary.md#unsupervised-machine-learn
 * Identifizieren von Kundensegmenten und demografischen Daten, um gezielte Werbekampagnen erstellen zu können.
 * Kategorisieren des Lagerbestands basierend auf Produktionsmetriken.
 
-### <a name="clustering-learners"></a>Clusteringlernmodule
+### <a name="clustering-trainer"></a>Trainerclustering
 
-Die folgenden Lernmodule sind für Clusteringaufgaben verfügbar:
+Sie können ein Modell zur Clusterbildung mithilfe der folgenden Algorithmen trainieren:
 
-* [KMeansPlusPlusTrainer](xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer)
+* <xref:Microsoft.ML.Trainers.KMeansTrainer> 
+
+### <a name="clustering-inputs-and-outputs"></a>Eingaben und Ausgaben für das Clustering
+
+Die Daten der Eingabefeatures müssen <xref:System.Single> sein. Es sind keine Bezeichnungen erforderlich.
+
+Der Trainer gibt folgende Daten aus:
+
+| Ausgabename | Typ | Beschreibung|
+| -- | -- | -- |
+| `Score` | Vektor von <xref:System.Single> | Die Abstände der angegebenen Daten weisen auf die Schwerpunkte aller Cluster hin. |
+| `PredictedLabel` | Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) | Der Index des nächsten Clusters, der durch das Modell vorhergesagt wird. |
 
 ## <a name="anomaly-detection"></a>Anomalieerkennung
 
@@ -144,30 +168,51 @@ Die Anomalieerkennung umfasst viele wichtige Machine Learning-Aufgaben:
 
 Da Anomalien laut Definition selten sind, kann es schwierig sein, eine repräsentative Stichprobe von Daten zu sammeln, die für die Modellierung verwendet werden können. Die Algorithmen, die zu dieser Kategorie gehören, wurden insbesondere daraufhin konzipiert, den wesentlichen Herausforderungen beim Erstellen und Trainieren von Modellen mithilfe von unausgeglichenen Datasets gerecht zu werden.
 
-### <a name="anomaly-detection-learners"></a>Lernmodule zur Anomalieerkennung
+### <a name="anomaly-detection-trainer"></a>Trainer für die Anomalieerkennung
 
-Die folgenden Lernmodule sind für Anomalieerkennungsaufgaben verfügbar:
+Sie können ein Anomalieerkennungsmodell mithilfe der folgenden Algorithmen trainieren:
 
-* [RandomizedPcaTrainer](xref:Microsoft.ML.Trainers.PCA.RandomizedPcaTrainer)
+* <xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>
+
+### <a name="anomaly-detection-inputs-and-outputs"></a>Eingaben und Ausgaben für die Anomalieerkennung
+
+Die Eingabefeatures müssen ein Vektor fester Größe von <xref:System.Single> sein.
+
+Der Trainer gibt folgende Daten aus:
+
+| Ausgabename | Typ | Beschreibung|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Die nicht-negative, unbegrenzte Bewertung, die durch das Anomalieerkennungsmodell berechnet wurde. |
 
 ## <a name="ranking"></a>Rangfolge
 
 Eine Rangfolgenaufgabe erstellt für einen Satz bezeichneter Beispiele eine Rangfolge. Dieser Beispielsatz besteht aus Instanzengruppen, die nach bestimmten Kriterien bewertet werden können. Die Rangfolgenbezeichnungen sind {0, 1, 2, 3, 4} für jede Instanz.  Die Rangfolgenfunktion wird dafür trainiert, neue Instanzengruppen mit unbekannten Bewertungen für jede Instanz in die Rangfolge einzuordnen. ML.NET-Rangfolgen-Lernmodule basieren auf [Machine Learning-Rangfolge](https://en.wikipedia.org/wiki/Learning_to_rank).
 
-### <a name="ranking-learners"></a>Rangfolgen-Lernmodule
+### <a name="ranking-training-algorithms"></a>Trainingsalgorithmen für Rangfolge
 
-Die folgenden Lernmodule sind für Rangfolgenaufgaben verfügbar:
+Sie können ein Rangfolgemodell mithilfe der folgenden Algorithmen trainieren:
 
-* [FastTreeRankingTrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer)
-* [LightGbmRankingTrainer](xref:Microsoft.ML.LightGBM.LightGbmRankingTrainer)
+* <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>
+* <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer> 
+
+### <a name="ranking-input-and-outputs"></a>Eingaben und Ausgaben für die Rangfolge
+
+Der Datentyp für die Eingabebezeichnung muss ein Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) oder <xref:System.Single> sein. Der Wert der Bezeichnung bestimmt die Relevanz, wobei höhere Werte eine höhere Relevanz anzeigen. Wenn die Bezeichnung vom Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) ist, dann ist der Schlüsselindex der Relevanzwert, wobei der kleinste Index der am wenigsten relevante ist. Wenn die Bezeichnung ein <xref:System.Single> ist, zeigen höhere Werte eine höhere Relevanz an.
+
+Die Featuredaten müssen ein Vektor mit fester Größe von <xref:System.Single> sein, und die Gruppenspalte der Eingabezeilen muss vom Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) sein.
+
+Der Trainer gibt folgende Daten aus:
+
+| Ausgabename | Typ | Beschreibung|
+| -- | -- | -- |
+| `Score` | <xref:System.Single> | Die unbegrenzte Bewertung, die vom Modell berechnet wurde, um die Vorhersage zu bestimmen. |
 
 ## <a name="recommendation"></a>Empfehlung
 
 Mit einer Empfehlungsaufgabe kann eine Liste empfohlener Produkte oder Dienste erstellt werden. ML.NET verwendet für Empfehlungen [Matrixfaktorisierung (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29), einen Algorithmus für [kollaboratives Filtern](https://en.wikipedia.org/wiki/Collaborative_filtering), wenn Ihr Katalog Verlaufsproduktbewertungs-Daten enthält. Ihnen liegen z.B. Verlaufsfilmbewertungs-Daten Ihrer Benutzer vor, und Sie möchten andere Filme empfehlen, die sie wahrscheinlich als Nächstes sehen möchten.
 
-### <a name="recommendation-learners"></a>Empfehlungslernmodule
+### <a name="recommendation-training-algorithms"></a>Trainingsalgorithmen für Empfehlung
 
-Die folgenden Lernmodule sind für Empfehlungsaufgaben verfügbar:
+Sie können ein Empfehlungsmodell mithilfe der folgenden Algorithmen trainieren:
 
-* [MatrixFactorizationTrainer](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer)
-* [MatrixFactorizationPredictionTransformer](xref:Microsoft.ML.Trainers.Recommender.MatrixFactorizationPredictionTransformer)
+* <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>

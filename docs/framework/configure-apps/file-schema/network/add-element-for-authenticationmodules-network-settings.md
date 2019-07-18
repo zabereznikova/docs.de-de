@@ -1,5 +1,5 @@
 ---
-title: <add> -Element für AuthenticationModules (Netzwerkeinstellungen)
+title: <add>-Element für authenticationModules (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705154"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>\<Hinzufügen >-Element für AuthenticationModules (Netzwerkeinstellungen)
 Ein Modul für die Authentifizierung hinzugefügt der Anwendung.  
@@ -85,4 +85,4 @@ Ein Modul für die Authentifizierung hinzugefügt der Anwendung.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

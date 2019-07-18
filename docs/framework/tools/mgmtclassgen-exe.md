@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628850"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616091"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Mit dem Management Strongly Typed Class Generator-Tool können Sie schnell eine früh gebundene Klasse für eine angegebene WMI (Windows Management Instrumentation)-Klasse generieren. Die generierte Klasse vereinfacht den Code, den Sie für den Zugriff auf eine Instanz der WMI-Klasse schreiben müssen.  
@@ -45,7 +45,7 @@ WMIClass [options]
 |**/u** *benutzername*|Gibt den Benutzernamen für die Anmeldung an einem Computer an, der durch die **/m**-Option angegeben ist|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  "Mgmtclassgen.exe" verwendet die <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>-Methode. Sie können daher mit einem beliebigen benutzerdefinierten Codeanbieter Code in anderen verwalteten Sprachen als C#, Visual Basic und JScript generieren.  
   
  Beachten Sie, dass die generierten Klassen an das Schema gebunden sind, für das sie generiert werden. Änderungen am zugrunde liegenden Schema wirken sich auf die Klasse erst nach einer Neugenerierung aus.  
@@ -75,19 +75,19 @@ WMIClass [options]
   
  Beim Generieren einer WMI-Klasse werden Sie folgende Verhaltensweisen feststellen:  
   
--   Eine öffentliche Standardeigenschaft oder -methode darf den gleichen Namen wie eine vorhandene Eigenschaft oder Methode aufweisen. In diesem Fall wird der Name der Eigenschaft oder Methode in der generierten Klasse geändert, um Namenskonflikte zu vermeiden.  
+- Eine öffentliche Standardeigenschaft oder -methode darf den gleichen Namen wie eine vorhandene Eigenschaft oder Methode aufweisen. In diesem Fall wird der Name der Eigenschaft oder Methode in der generierten Klasse geändert, um Namenskonflikte zu vermeiden.  
   
--   Der Name einer Eigenschaft oder Methode in einer generierten Klasse darf ein Schlüsselwort der Zielprogrammiersprache sein. In diesem Fall wird der Name der Eigenschaft oder Methode in der generierten Klasse geändert, um Namenskonflikte zu vermeiden.  
+- Der Name einer Eigenschaft oder Methode in einer generierten Klasse darf ein Schlüsselwort der Zielprogrammiersprache sein. In diesem Fall wird der Name der Eigenschaft oder Methode in der generierten Klasse geändert, um Namenskonflikte zu vermeiden.  
   
--   Qualifizierer in WMI sind Modifizierer, die Informationen zum Beschreiben einer Klasse, Instanz, Eigenschaft oder Methode enthalten. In WMI werden Eigenschaften in einer generierten Klasse mithilfe von Standardqualifizierern wie **Read,** **Write** und **Key** beschrieben. Beispiel: Eine Eigenschaft, die mit einem **Read**-Qualifizierer modifiziert wird, wird in der generierten Klasse nur mit einer **Get**-Eigenschaftenzugriffsmethode definiert. Da eine mit dem **Read**-Qualifizierer markierte Eigenschaft schreibgeschützt sein soll, ist keine **Set**-Zugriffsmethode definiert.  
+- Qualifizierer in WMI sind Modifizierer, die Informationen zum Beschreiben einer Klasse, Instanz, Eigenschaft oder Methode enthalten. In WMI werden Eigenschaften in einer generierten Klasse mithilfe von Standardqualifizierern wie **Read,** **Write** und **Key** beschrieben. Beispiel: Eine Eigenschaft, die mit einem **Read**-Qualifizierer modifiziert wird, wird in der generierten Klasse nur mit einer **Get**-Eigenschaftenzugriffsmethode definiert. Da eine mit dem **Read**-Qualifizierer markierte Eigenschaft schreibgeschützt sein soll, ist keine **Set**-Zugriffsmethode definiert.  
   
--   Eine numerische Eigenschaft kann durch den **Values**-Qualifizierer und den **ValueMaps**-Qualifizierer modifiziert werden, um anzugeben, dass sie nur auf bestimmte zulässige Werte festgelegt werden kann. Mit diesen **Values** und **ValueMaps** wird eine Enumeration erstellt, und die Eigenschaft wird der Enumeration zugewiesen.  
+- Eine numerische Eigenschaft kann durch den **Values**-Qualifizierer und den **ValueMaps**-Qualifizierer modifiziert werden, um anzugeben, dass sie nur auf bestimmte zulässige Werte festgelegt werden kann. Mit diesen **Values** und **ValueMaps** wird eine Enumeration erstellt, und die Eigenschaft wird der Enumeration zugewiesen.  
   
--   Eine Klasse, die nur eine Instanz aufweisen darf, wird in WMI mit dem Begriff "Singleton" bezeichnet. Der Standardkonstruktor für eine Singleton-Klasse initialisiert die Klasse daher zur einzigen Instanz dieser Klasse.  
+- Eine Klasse, die nur eine Instanz aufweisen darf, wird in WMI mit dem Begriff "Singleton" bezeichnet. Der Standardkonstruktor für eine Singleton-Klasse initialisiert die Klasse daher zur einzigen Instanz dieser Klasse.  
   
--   Eine WMI-Klasse kann über Eigenschaften verfügen, bei denen es sich um Objekte handelt. Wenn Sie für eine solche WMI-Klasse eine stark typisierte Klasse generieren, empfiehlt es sich, für die Typen der eingebetteten Objekteigenschaften stark typisierte Klassen zu generieren. Dies ermöglicht Ihnen den stark typisierten Zugriff auf die eingebetteten Objekte. Beachten Sie, dass der generierte Code den Typ des eingebetteten Objekts möglicherweise nicht erkennen kann. In einem solchen Fall wird im generierten Code ein Kommentar erstellt, in dem Sie auf das Problem hingewiesen werden. Sie können den generierten Code dann ändern, um den Typ der Eigenschaft an den der anderen generierten Klasse anzugleichen.  
+- Eine WMI-Klasse kann über Eigenschaften verfügen, bei denen es sich um Objekte handelt. Wenn Sie für eine solche WMI-Klasse eine stark typisierte Klasse generieren, empfiehlt es sich, für die Typen der eingebetteten Objekteigenschaften stark typisierte Klassen zu generieren. Dies ermöglicht Ihnen den stark typisierten Zugriff auf die eingebetteten Objekte. Beachten Sie, dass der generierte Code den Typ des eingebetteten Objekts möglicherweise nicht erkennen kann. In einem solchen Fall wird im generierten Code ein Kommentar erstellt, in dem Sie auf das Problem hingewiesen werden. Sie können den generierten Code dann ändern, um den Typ der Eigenschaft an den der anderen generierten Klasse anzugleichen.  
   
--   Der Datenwert des CIM_DATETIME-Datentyps kann in WMI entweder einen bestimmten Zeitpunkt (Datum und Uhrzeit) oder ein Zeitintervall darstellen. Wenn der Datenwert einen Zeitpunkt (Datum und Uhrzeit) darstellt, ist der Datentyp in der generierten Klasse **DateTime**. Wenn der Datenwert ein Zeitintervall darstellt, ist der Datentyp in der generierten Klasse **TimeSpan**.  
+- Der Datenwert des CIM_DATETIME-Datentyps kann in WMI entweder einen bestimmten Zeitpunkt (Datum und Uhrzeit) oder ein Zeitintervall darstellen. Wenn der Datenwert einen Zeitpunkt (Datum und Uhrzeit) darstellt, ist der Datentyp in der generierten Klasse **DateTime**. Wenn der Datenwert ein Zeitintervall darstellt, ist der Datentyp in der generierten Klasse **TimeSpan**.  
   
  Es besteht auch die Möglichkeit, mithilfe der Verwaltungserweiterung für Server-Explorer in Visual Studio .NET eine stark typisierte Klasse zu generieren.  
   
@@ -151,6 +151,7 @@ public class App
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>

@@ -3,12 +3,12 @@ title: Einführung in Ereignisse
 description: Erfahren Sie in diesem Überblick etwas über Ereignisse in .NET Core und über Ziele beim Sprachentwurf für Ereignisse.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45747094"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051943"
 ---
 # <a name="introduction-to-events"></a>Einführung in Ereignisse
 
@@ -65,7 +65,8 @@ Sie abonnieren ein Ereignis mithilfe des `+=`-Operators:
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += onProgress;
+
+fileLister.Progress += onProgress;
 ```
 
 Die Handlermethode ist in der Regel das Präfix „On“ gefolgt vom Ereignisnamen, wie oben gezeigt.
@@ -73,7 +74,7 @@ Die Handlermethode ist in der Regel das Präfix „On“ gefolgt vom Ereignisnam
 Sie melden sich mithilfe des `-=`-Operators ab:
 
 ```csharp
-lister.Progress -= onProgress;
+fileLister.Progress -= onProgress;
 ```
 
 Es ist wichtig, zu beachten, dass ich eine lokale Variable für den Ausdruck deklariert habe, der den Ereignishandler darstellt. Damit wird sichergestellt, dass UNSUBSCRIBE den Handler entfernt.

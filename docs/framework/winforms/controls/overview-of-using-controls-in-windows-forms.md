@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207356"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654590"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Übersicht über die Verwendung von Steuerelementen in Windows Forms
 In diesem Thema wird beschrieben, die wesentlichen Bestandteile einer Windows Forms-Anwendung und bietet ein einfaches Beispiel, das Steuerelemente verwendet und behandelt Ereignisse, die in einer Windows Forms-Anwendung.  
@@ -22,9 +22,9 @@ In diesem Thema wird beschrieben, die wesentlichen Bestandteile einer Windows Fo
 ## <a name="simple-windows-forms-applications"></a>Einfaches Windows Forms-Anwendungen  
  Besteht aus mindestens eine Windows Forms-Anwendung die folgenden Elemente:  
   
--   Eine oder mehrere abgeleitete Klassen <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
+- Eine oder mehrere abgeleitete Klassen <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.  
   
--   Ein `Main` Methode, die aufruft der `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> -Methode auf und übergibt eine <xref:System.Windows.Forms.Form> Instanz darauf. Die <xref:System.Windows.Forms.Application.Run%2A> Methode verarbeitet Nachrichten aus dem Betriebssystem zur Anwendung.  
+- Ein `Main` Methode, die aufruft der `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> -Methode auf und übergibt eine <xref:System.Windows.Forms.Form> Instanz darauf. Die <xref:System.Windows.Forms.Application.Run%2A> Methode verarbeitet Nachrichten aus dem Betriebssystem zur Anwendung.  
   
  Das folgende Codebeispiel zeigt die wesentlichen Bestandteile einer Windows Forms-Anwendung.  
   
@@ -226,4 +226,4 @@ public class MyForm : Form {
 ## <a name="see-also"></a>Siehe auch
 
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)
-- [Grundlagen für das Entwickeln von Windows Forms-Steuerelementen](windows-forms-control-development-basics.md)
+- [Grundlagen für das Entwickeln von Windows Forms-Steuerelementen](windows-forms-control-development-basics.md)

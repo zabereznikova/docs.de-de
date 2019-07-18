@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 094358dea9054bf198ded77736dc45af1a436787
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 3982c97bc56b42237700343b2572d1bba930bbbd
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221127"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422777"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (Einschränkung des generischen Typs) (C#-Referenz)
 
@@ -67,6 +67,6 @@ Weitere Informationen zur Syntax und der Verwendung von Einschränkungen finden 
 
 - [C#-Referenz](../../../csharp/language-reference/index.md)
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Einführung in Generics](../../../csharp/programming-guide/generics/index.md)
 - [new-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md)
 - [Einschränkungen für Typparameter](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

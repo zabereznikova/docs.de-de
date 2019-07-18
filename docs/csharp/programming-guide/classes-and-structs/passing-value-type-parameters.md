@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: 0c9d8c33715b4baf11bfac05cd4881d1475f8844
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ba693948bce91fa80f0c6cd73f2d5fc537e5f900
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846997"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423740"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Übergeben von Werttypparametern (C#-Programmierhandbuch)
 In einer [Werttypvariablen](../../../csharp/language-reference/keywords/value-types.md) sind die Daten direkt enthalten, während eine [Verweistypvariable](../../../csharp/language-reference/keywords/reference-types.md) einen Verweis auf die Daten enthält. Wenn eine Werttypvariable als Wert an eine Methode übergeben wird, bedeutet dies die Übergabe einer Kopie der Variablen an die Methode. Alle Änderungen am Parameter, die innerhalb der Methode erfolgen, haben keine Auswirkung auf die ursprünglichen Daten, die in der Argumentvariable gespeichert sind. Wenn Sie möchten, dass mit der aufgerufenen Methode der Wert des Arguments geändert wird, müssen Sie ihn als Verweis übergeben, unter Verwendung des Schlüsselworts [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Sie können auch das Schlüsselwort [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) verwenden, um einen Wertparameter pro Verweis zu übergeben, um einerseits zwar eine Kopie zu vermeiden, andererseits aber zu garantieren, dass der Wert nicht verändert wird. Der Einfachheit halber wird im folgenden Beispiel `ref` verwendet.  
@@ -28,7 +28,7 @@ In einer [Werttypvariablen](../../../csharp/language-reference/keywords/value-ty
   
  [!code-csharp[csProgGuideParameters#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#4)]  
   
- In diesem Beispiel wird nicht der Wert von `n`, sondern ein Verweis auf `n` übergeben. Der Parameter `x` ist kein [int](../../../csharp/language-reference/keywords/int.md), sondern ein Verweis auf `int` – in diesem Fall ein Verweis auf `n`. Beim Quadrieren von `x` innerhalb der Methode wird deshalb tatsächlich das Element quadriert, auf das `x` verweist: `n`.  
+ In diesem Beispiel wird nicht der Wert von `n`, sondern ein Verweis auf `n` übergeben. Der Parameter `x` ist kein [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md), sondern ein Verweis auf `int` – in diesem Fall ein Verweis auf `n`. Beim Quadrieren von `x` innerhalb der Methode wird deshalb tatsächlich das Element quadriert, auf das `x` verweist: `n`.  
   
 ## <a name="swapping-value-types"></a>Austauschen von Werttypen  
  Ein allgemeines Beispiel zum Ändern der Werte von Argumenten ist eine swap-Methode, bei der Sie zwei Variablen an die Methode übergeben und die Methode deren Inhalte austauscht. Sie müssen die Argumente als Verweis an die swap-Methode übergeben. Andernfalls tauschen Sie lokale Kopien der Parameter innerhalb der Methode aus, und es erfolgt keine Änderung in der aufrufenden Methode. Im folgenden Beispiel werden ganzzahlige Werte getauscht.  

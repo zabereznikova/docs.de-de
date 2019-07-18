@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: a4054ee893ba8b8c290a447689d3aa58dcc84cbe
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "52742431"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859011"
 ---
 ### <a name="selector-selectionchanged-event-and-selectedvalue-property"></a>Selector-Klasse – SelectionChanged-Ereignis und SelectedValue-Eigenschaft
 

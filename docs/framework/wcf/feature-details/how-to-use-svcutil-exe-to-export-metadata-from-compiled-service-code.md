@@ -2,30 +2,30 @@
 title: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084916"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650228"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode
 "Svcutil.exe" kann Metadaten für Dienste, Verträge und Datentypen in kompilierten Assemblys wie folgt exportieren:  
   
--   Zum Exportieren von Metadaten für alle kompilierten Dienstverträge für eine Assemblygruppe mithilfe von "Svcutil.exe" geben Sie die Assemblys als Eingabeparameter an. Dies ist das Standardverhalten.  
+- Zum Exportieren von Metadaten für alle kompilierten Dienstverträge für eine Assemblygruppe mithilfe von "Svcutil.exe" geben Sie die Assemblys als Eingabeparameter an. Dies ist das Standardverhalten.  
   
--   Zum Exportieren von Metadaten für einen kompilierten Dienst mithilfe von "Svcutil.exe" geben Sie die Dienstassembly bzw. -assemblys als Eingabeparameter an. Sie müssen die `/serviceName`-Option verwenden, um den Konfigurationsnamen des Diensts anzugeben, den Sie exportieren möchten. "Svcutil.exe" lädt die Konfigurationsdatei für die angegebene ausführbare Assembly automatisch.  
+- Zum Exportieren von Metadaten für einen kompilierten Dienst mithilfe von "Svcutil.exe" geben Sie die Dienstassembly bzw. -assemblys als Eingabeparameter an. Sie müssen die `/serviceName`-Option verwenden, um den Konfigurationsnamen des Diensts anzugeben, den Sie exportieren möchten. "Svcutil.exe" lädt die Konfigurationsdatei für die angegebene ausführbare Assembly automatisch.  
   
--   Um alle Datenvertragstypen innerhalb einer Assemblygruppe zu exportieren, verwenden Sie die `/dataContractOnly`-Option.  
+- Um alle Datenvertragstypen innerhalb einer Assemblygruppe zu exportieren, verwenden Sie die `/dataContractOnly`-Option.  
   
 > [!NOTE]
 >  Zum Angeben von Dateipfaden zu abhängigen Assemblys verwenden Sie die `/reference`-Option.  
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>So exportieren Sie Metadaten für kompilierte Dienstverträge  
   
-1.  Kompilieren Sie die Dienstvertragsimplementierungen in eine oder mehrere Klassenbibliotheken.  
+1. Kompilieren Sie die Dienstvertragsimplementierungen in eine oder mehrere Klassenbibliotheken.  
   
-2.  Führen Sie "Svcutil.exe" auf den kompilierten Assemblys aus.  
+2. Führen Sie "Svcutil.exe" auf den kompilierten Assemblys aus.  
   
     > [!NOTE]
     >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
@@ -36,9 +36,9 @@ ms.locfileid: "59084916"
   
 ### <a name="to-export-metadata-for-a-compiled-service"></a>So exportieren Sie Metadaten füreinen kompilierten Dienst  
   
-1.  Kompilieren Sie die Dienstimplementierung in eine ausführbare Assembly.  
+1. Kompilieren Sie die Dienstimplementierung in eine ausführbare Assembly.  
   
-2.  Erstellen Sie eine Konfigurationsdatei für die ausführbare Dienstdatei, und fügen Sie eine Dienstkonfiguration hinzu.  
+2. Erstellen Sie eine Konfigurationsdatei für die ausführbare Dienstdatei, und fügen Sie eine Dienstkonfiguration hinzu.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -53,7 +53,7 @@ ms.locfileid: "59084916"
     </configuration>  
     ```  
   
-3.  Zum Angeben des Konfigurationsnamen des Diensts führen Sie "Svcutil.exe" für die kompilierte ausführbare Dienstdatei mithilfe des `/serviceName`-Schalters aus.  
+3. Zum Angeben des Konfigurationsnamen des Diensts führen Sie "Svcutil.exe" für die kompilierte ausführbare Dienstdatei mithilfe des `/serviceName`-Schalters aus.  
   
     > [!NOTE]
     >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
@@ -64,9 +64,9 @@ ms.locfileid: "59084916"
   
 ### <a name="to-export-metadata-for-compiled-data-contracts"></a>So exportieren Sie Metadaten für kompilierte Datenverträge  
   
-1.  Kompilieren Sie die Datenvertragsimplementierungen in eine oder mehrere Klassenbibliotheken.  
+1. Kompilieren Sie die Datenvertragsimplementierungen in eine oder mehrere Klassenbibliotheken.  
   
-2.  Führen Sie "Svcutil.exe" für die kompilierten Assemblys mithilfe des `/dataContract`-Schalters aus, um anzugeben, dass nur Metadaten für Datenverträge generiert werden sollen.  
+2. Führen Sie "Svcutil.exe" für die kompilierten Assemblys mithilfe des `/dataContract`-Schalters aus, um anzugeben, dass nur Metadaten für Datenverträge generiert werden sollen.  
   
     > [!NOTE]
     >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  

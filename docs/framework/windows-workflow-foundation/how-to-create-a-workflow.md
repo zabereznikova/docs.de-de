@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Erstellen eines Workflows'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: 4b24e57cce4d42645fc1750ac932e5f24cf24913
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773345"
 ---
 # <a name="how-to-create-a-workflow"></a>Vorgehensweise: Erstellen eines Workflows
 Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. Durchlaufen Sie, dass in die Themen in diesem Abschnitt erstellen einen Workflow, der integrierten Aktivitäten, wie z. B. verwendet die <xref:System.Activities.Statements.Flowchart> Aktivität und die benutzerdefinierten Aktivitäten aus dem vorherigen [wie: Erstellen einer Aktivität](how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät. Nur eines der Themen in diesem Abschnitt ist erforderlich, um das Lernprogramm abzuschließen. Sie sollten die Methode auswählen, die für Sie von Interesse ist, und die entsprechenden Schritte ausführen. Falls gewünscht, können Sie jedoch auch alle Themen durcharbeiten.  
@@ -25,7 +25,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
  [Vorgehensweise: Erstellen eines Flussdiagrammworkflows](how-to-create-a-flowchart-workflow.md)  
  Beschreibt, wie Sie einen Flussdiagrammworkflow mithilfe der <xref:System.Activities.Statements.Flowchart>-Aktivität erstellen.  
   
- [Vorgehensweise: Erstellen eines Zustandsautomatworkflows](how-to-create-a-state-machine-workflow.md)  
+ [Vorgehensweise: Erstellen eines Zustandsautomatenworkflows](how-to-create-a-state-machine-workflow.md)  
  Beschreibt das Erstellen eines Zustandsautomatenworkflows mithilfe der <xref:System.Activities.Statements.StateMachine>-Aktivität.  
   
 ## <a name="see-also"></a>Siehe auch

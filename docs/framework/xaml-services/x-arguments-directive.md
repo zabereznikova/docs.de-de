@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
 ms.openlocfilehash: a87542513ffeeec7efc526d4218f921d1b7579a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953958"
 ---
 # <a name="xarguments-directive"></a>x:Arguments-Anweisung
 Pakete Konstruktionsargumente für eine Elementdeklaration für nicht-Standardkonstruktors Objekt in XAML oder für eine Factory Methodendeklaration-Objekt.  

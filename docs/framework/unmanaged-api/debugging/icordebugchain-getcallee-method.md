@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed5a7657affde335acf79952d77bbdb7ac42c7a0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 79743b78ea3d19bab4756b580d2feddd07e0a23b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490462"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744983"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee-Methode
 Ruft die Zertifikatskette, die von dieser Kette aufgerufen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCallee (  
     [out] ICorDebugChain     **ppChain  
 );  

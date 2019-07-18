@@ -3,11 +3,11 @@ title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
 ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788439"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 Gibt Debugging- und hilfeinformationsfunktionen für einen Windows Communication Foundation (WCF)-Dienst.  

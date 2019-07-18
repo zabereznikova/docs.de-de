@@ -2,18 +2,18 @@
 title: WCF und internationale Domänennamen
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: c166f497117314dd8cea3b04b9b1072203374c52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c53c22e388ec352b1275018c0b945c9608565084
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932521"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF und internationale Domänennamen
 Unterstützung für WCF-Dienste mit internationalisierten Domänennamen (Internationalized Domain Names, IDNs) wurde hinzugefügt. Ein internationalisierter Domänenname ist ein Domänenname, der Nicht-ASCII-Zeichen enthält. Diese Unterstützung umfasst die Fähigkeit zum Hosten eines WCF-Diensts mit einem IDN und zum Kommunizieren eines WCF-Clients mit einem Webdienst, der über einen IDN verfügt.  
   
 ## <a name="systemuri-and-idn"></a>System.Uri und IDN  
- <xref:System.Uri> verfügt über zwei Eigenschaften <xref:System.Uri.Host%2A> und <xref:System.Uri.DnsSafeHost%2A>. Diese Eigenschaften enthalten abhängig von den IDN-Konfigurationseinstellungen Unicode- oder Punycode-Werte.  
+ <xref:System.Uri> verfügt über die beiden Eigenschaften <xref:System.Uri.Host%2A> und <xref:System.Uri.DnsSafeHost%2A>. Diese Eigenschaften enthalten abhängig von den IDN-Konfigurationseinstellungen Unicode- oder Punycode-Werte.  
   
  IDN wird in der Konfigurationsdatei einer Anwendung mit dem folgenden XML-Code aktiviert:  
   
@@ -27,11 +27,11 @@ Unterstützung für WCF-Dienste mit internationalisierten Domänennamen (Interna
   
  Die \<Idn >-Element enthält das aktivierte Attribut, das auf einen der folgenden Werte festgelegt werden kann:  
   
-1.  "None"  
+1. "None"  
   
-2.  "AllExceptIntranet"  
+2. "AllExceptIntranet"  
   
-3.  "Alle"  
+3. "Alle"  
   
  Wenn die IDN-Einstellung auf "None" festgelegt ist, werden keine Konvertierungen von Uri.Host oder Uri.DnsSafeHost durchgeführt. Wenn die IDN-Einstellung auf "All"-Uri festgelegt wird. Host bleibt Unicode und Uri. DnsSafeHost wird in Ihre Punycode-Entsprechungen konvertiert. Wenn die IDN-Einstellung auf "AllExceptIntranet", Uri festgelegt ist. DnsSafeHost für Internetadressen in Punycode konvertiert wird, und Unicode für Intranetadressen bleibt. Diese Einstellung ist für eine ordnungsgemäße DNS-Namensauflösung wichtig. Beachten Sie, dass diese Einstellung für Windows 8 und spätere Versionen nicht konfiguriert werden muss.  
   

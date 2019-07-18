@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa95a737747e9153eb844cddd8e0684585b9108b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 79b21613ba844ca4c749d9c04d75260e326e6512
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081133"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777132"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>IMetaDataEmit2::SaveDeltaToMemory-Methode
 Speichert Änderungen am Speicher aus der aktuellen Sitzung mit bearbeiten und fortfahren.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SaveDeltaToMemory (  
     [out] void        *pbData,   
     [in]  ULONG       cbData  

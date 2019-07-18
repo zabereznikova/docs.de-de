@@ -5,11 +5,11 @@ ms.assetid: c0b93609-631e-4b15-878a-189ede922631
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 382f3fc9377c25379809badac0bc580c3593cbde
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782589"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol-Schnittstelle
 Stellt die Debugsymbolinformationen für ein statisches Feld dar.  
@@ -40,5 +40,5 @@ Stellt die Debugsymbolinformationen für ein statisches Feld dar.
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugInstanceFieldSymbol-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

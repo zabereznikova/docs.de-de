@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: eede3359b195661ff89a387e9b226bc970c27942
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2568eed5a889f6c03e237875194b8adcb9334ef7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612569"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401810"
 ---
 # <a name="virtual-c-reference"></a>virtual (C#-Referenz)
 
@@ -28,7 +28,7 @@ public virtual double Area()
 
 Die Implementierung eines virtuellen Members kann durch einen [overriding member](override.md) (überschreibender Member) in einer abgeleiteten Klasse geändert werden. Weitere Informationen zur Verwendung des `virtual`-Schlüsselworts finden Sie unter [Versionsverwaltung mit den Schlüsselwörtern „override“ und „new“](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) und [Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden?](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Wenn eine virtuelle Methode aufgerufen wird, wird der Laufzeittyp des Objekts auf einen überschreibenden Member überprüft. Der überschreibende Member in der abgeleitetsten Klasse (bei dem es sich um den ursprünglichen Member handeln könnte) wird aufgerufen, wenn keine abgeleitete Klasse den Member außer Kraft gesetzt hat.
 
@@ -71,4 +71,4 @@ Das folgende Programm berechnet und zeigt den entsprechenden Bereich für jede A
 - [Polymorphismus](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)
 - [override](override.md)
-- [new](new.md)
+- [new (Modifizierer)](new-modifier.md)

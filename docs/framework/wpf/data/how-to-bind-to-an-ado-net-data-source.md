@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ADO.NET data sources [WPF], binding to
 - binding [WPF], to ADO.NET data sources
 ms.assetid: a70c6d7b-7b38-4fdf-b655-4804db7c8315
-ms.openlocfilehash: 08933e67c2cc4b7ccfb6ae0c9dfde34f40e4e5f5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 96f846db3f705972a4749460bf2c410483258572
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465545"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238424"
 ---
 # <a name="how-to-bind-to-an-adonet-data-source"></a>Vorgehensweise: Binden an eine ADO.NET-Datenquelle
 
-Dieses Beispiel zeigt, wie Sie binden ein [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> die Steuerung an eine [!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] `DataSet`.
+Dieses Beispiel zeigt, wie Sie binden ein [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Controls.ListBox> Steuerelement an eine ADO.NET `DataSet`.
 
 ## <a name="example"></a>Beispiel
 

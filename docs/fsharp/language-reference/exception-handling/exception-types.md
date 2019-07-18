@@ -2,12 +2,12 @@
 title: Ausnahmetypen
 description: Erfahren Sie, wie Sie definieren und Verwenden von F# Ausnahmetypen.
 ms.date: 05/16/2016
-ms.openlocfilehash: ed721dd0dc46a486fafeac2fa4c096800995ccb7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: b7203dc042c7207bca95cfd0372790bfe52e0226
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612828"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645568"
 ---
 # <a name="exception-types"></a>Ausnahmetypen
 

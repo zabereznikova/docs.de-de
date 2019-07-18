@@ -2,12 +2,12 @@
 title: Vererbung
 description: Erfahren Sie, wie an F# vererbungsbeziehungen, die mit dem Schlüsselwort "inherit".
 ms.date: 05/16/2016
-ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 2fad2ddafbc0174903d3d24be3ce5412f7e1f9ed
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610137"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641822"
 ---
 # <a name="inheritance"></a>Vererbung
 

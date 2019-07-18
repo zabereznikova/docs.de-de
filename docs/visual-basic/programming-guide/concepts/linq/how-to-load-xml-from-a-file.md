@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Laden von XML aus einer Datei (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
 ms.openlocfilehash: b4f1f9abfa33b76e702b51221715da80c3f66421
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942583"
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a>Vorgehensweise: Laden von XML aus einer Datei (Visual Basic)
 In diesem Thema wird gezeigt, wie mit der <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>-Methode XML aus einem URI geladen werden kann.  

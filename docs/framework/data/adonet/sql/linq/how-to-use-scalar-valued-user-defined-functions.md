@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 714e252f-c053-4bbb-b1f3-924111cd4d97
 ms.openlocfilehash: ffb24468c81cb4ec9f41645f8888c2c4ba021609
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033578"
 ---
 # <a name="how-to-use-scalar-valued-user-defined-functions"></a>Vorgehensweise: Verwenden von benutzerdefinierten Skalarwertfunktionen
 Sie können eine Clientmethode für eine Klasse einer benutzerdefinierten Funktion zuweisen. Verwenden Sie hierfür das <xref:System.Data.Linq.Mapping.FunctionAttribute>-Attribut. Beachten Sie, dass der Hauptteil der Methode einen Ausdruck erstellt, der die Absicht des Methodenaufrufs erfasst und diesen Ausdruck zur Übersetzung und Ausführung an den <xref:System.Data.Linq.DataContext> weiterleitet.  

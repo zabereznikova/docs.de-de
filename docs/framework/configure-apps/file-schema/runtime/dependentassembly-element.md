@@ -1,5 +1,5 @@
 ---
-title: <dependentAssembly> Element
+title: <dependentAssembly>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
@@ -12,11 +12,11 @@ ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704777"
 ---
 # <a name="dependentassembly-element"></a>\<DependentAssembly >-Element
 Kapselt die Bindungsrichtlinie und den Assemblyspeicherort für jede Assembly. Verwenden Sie eine `dependentAssembly` -Element für jede Assembly.  

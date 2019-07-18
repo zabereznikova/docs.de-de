@@ -2,12 +2,12 @@
 title: Peer-to-Peer-Zusammenarbeit
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 81900cac9bf3c4d2fb247c36f00d4aa8413944f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590539"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623177"
 ---
 # <a name="peer-to-peer-collaboration"></a>Peer-to-Peer-Zusammenarbeit
 
@@ -19,26 +19,27 @@ Die Peer-zu-Peer-Kollaborationsinfrastruktur ist eine vereinfachte Implementieru
 
  Eine typische Peer-zu-Peer-Kollaborationsanwendung umfasst die folgenden Schritte:  
   
--   Der Peer bestimmt die Identität eines Peers, der sich für das Hosten einer Kollaborationssitzung interessiert.  
+- Der Peer bestimmt die Identität eines Peers, der sich für das Hosten einer Kollaborationssitzung interessiert.  
   
--   Eine Anforderung zum Hosten einer Sitzung wird aus irgendeinem Grund gesendet, und der Peer erklärt sich dazu bereit, die Kollaborationstätigkeit zu verwalten.  
+- Eine Anforderung zum Hosten einer Sitzung wird aus irgendeinem Grund gesendet, und der Peer erklärt sich dazu bereit, die Kollaborationstätigkeit zu verwalten.  
   
--   Der Host lädt Kontakte im Subnetz (einschließlich des Anforderers) zu einer Sitzung ein.  
+- Der Host lädt Kontakte im Subnetz (einschließlich des Anforderers) zu einer Sitzung ein.  
   
--   Alle Peers, die kollaborieren möchten, können den Host zu Ihrem Kontaktmanager hinzufügen.  
+- Alle Peers, die kollaborieren möchten, können den Host zu Ihrem Kontaktmanager hinzufügen.  
   
--   Die meisten Peers senden die Antwort auf die Einladung, ob akzeptiert oder abgelehnt, zeitnah zurück an den Hostpeer.  
+- Die meisten Peers senden die Antwort auf die Einladung, ob akzeptiert oder abgelehnt, zeitnah zurück an den Hostpeer.  
   
--   Alle Peers, die kollaborieren möchten, abonnieren den Hostpeer.  
+- Alle Peers, die kollaborieren möchten, abonnieren den Hostpeer.  
   
--   Während die Peers ihre anfängliche Kollaborationsaktivität ausführen, kann der Hostpeer Remotepeers zu seinem Kontaktmanager hinzufügen. Er verarbeitet auch alle Antworten auf Einladungen, um zu bestimmen, wer die Einladung akzeptiert, wer sie abgelehnt, und wer nicht geantwortet hat.  Er kann möglicherweise Einladungen an jene, die nicht geantwortet haben, widerrufen oder einige andere Aktivitäten durchführen.  
+- Während die Peers ihre anfängliche Kollaborationsaktivität ausführen, kann der Hostpeer Remotepeers zu seinem Kontaktmanager hinzufügen. Er verarbeitet auch alle Antworten auf Einladungen, um zu bestimmen, wer die Einladung akzeptiert, wer sie abgelehnt, und wer nicht geantwortet hat.  Er kann möglicherweise Einladungen an jene, die nicht geantwortet haben, widerrufen oder einige andere Aktivitäten durchführen.  
   
--   An diesem Punkt kann der Hostpeer eine Kollaborationssitzung mit allen eingeladenen Peers starten oder eine Anwendung mit der Kollaborationsinfrastruktur registrieren.  P2P-Anwendungen verwenden die Infrastruktur für die Peer-zu-Peer-Kollaboration und den <xref:System.Net.PeerToPeer.Collaboration>-Namespace, um die Kommunikation für Spiele, Bulletin Boards, Konferenzen und andere serverlose Anwendungen zu koordinieren.  
+- An diesem Punkt kann der Hostpeer eine Kollaborationssitzung mit allen eingeladenen Peers starten oder eine Anwendung mit der Kollaborationsinfrastruktur registrieren.  P2P-Anwendungen verwenden die Infrastruktur für die Peer-zu-Peer-Kollaboration und den <xref:System.Net.PeerToPeer.Collaboration>-Namespace, um die Kommunikation für Spiele, Bulletin Boards, Konferenzen und andere serverlose Anwendungen zu koordinieren.  
   
 ## <a name="peer-to-peer-networking-security"></a>Sicherheit von Peer-to-Peer-Netzwerken  
 
  In einer Active Directory-Domäne bieten Domänencontroller Kerberos-Authentifizierungsdienste an. In einer serverlosen Peer-Umgebung müssen die Peers ihre eigene Authentifizierung bereitstellen. Für das Peer-zu-Peer-Netzwerk kann jeder beliebige Knoten als Zertifizierungsstelle fungieren, wobei die Anforderung für ein Stammzertifikat in jedem vertrauenswürdigen Stammspeicher des Peers wegfällt. Die Authentifizierung wird unter Verwendung selbstsignierter Zertifikate, formatiert als x. 509-Zertifikate, bereitgestellt. Hierbei handelt es sich um Zertifikate, die von jedem Peer erstellt werden, der den öffentlichen Schlüssel/das private Schlüsselpaar und das Zertifikat, das mit dem privaten Schlüssel signiert ist, generiert. Das selbstsignierte Zertifikat wird zur Authentifizierung und zum Bereitstellen von Informationen über die Peer-Entität verwendet. Wie bei der X.509-Authentifizierung, verlässt sich die Peer-Netzwerkauthentifizierung auf eine Kette von Zertifikaten, die auf einen öffentlichen Schlüssel zurückführen, der als vertrauenswürdig eingestuft wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.PeerToPeer.Collaboration>
 - [About the System.Net.PeerToPeer.Collaboration Namespace (Informationen zum System.NET.PeerToPeer.Kollaborations-Namespace)](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

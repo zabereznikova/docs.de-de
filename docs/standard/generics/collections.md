@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec3f8fb16245318cab8706a2ed136e51f3dc31db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa6cd032ecf3a35c1dc32d9907218c9b6efd4bcc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705796"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592268"
 ---
 # <a name="generic-collections-in-net"></a>Generische Auflistungen in .NET
 
@@ -44,7 +44,7 @@ ms.locfileid: "54705796"
   
  Die generische <xref:System.ArraySegment%601>-Struktur bietet eine Möglichkeit, einen Bereich von Elementen in einem eindimensionalen nullbasierten Array eines beliebigen Typs abzugrenzen. Der generische Typparameter ist der Typ der Elemente des Arrays.  
   
- Wird der generische <xref:System.EventHandler%601>-Delegat verwendet, muss kein Delegattyp zum Behandeln von Ereignissen mehr deklariert werden, wenn das Ereignis dem von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] verwendeten Muster für die Ereignisbehandlung folgt. Angenommen, Sie haben die von <xref:System.EventArgs> abgeleitete `MyEventArgs`-Klasse erstellt, um die Daten für das Ereignis zu speichern. Sie können das Ereignis dann wie folgt deklarieren:  
+ Wird der generische <xref:System.EventHandler%601>-Delegat verwendet, muss kein Delegattyp zum Behandeln von Ereignissen mehr deklariert werden, wenn für das Ereignis das von .NET Framework verwendete Muster für die Ereignisbehandlung befolgt wird. Angenommen, Sie haben die von <xref:System.EventArgs> abgeleitete `MyEventArgs`-Klasse erstellt, um die Daten für das Ereignis zu speichern. Sie können das Ereignis dann wie folgt deklarieren:  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]
@@ -54,6 +54,6 @@ ms.locfileid: "54705796"
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [Generika](../../../docs/standard/generics/index.md)
+- [Generics](../../../docs/standard/generics/index.md)
 - [Generische Delegaten zum Bearbeiten von Arrays und Listen](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [Generische Schnittstellen](../../../docs/standard/generics/interfaces.md)

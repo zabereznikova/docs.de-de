@@ -3,11 +3,11 @@ title: <transportConfigurationTypes>
 ms.date: 03/30/2017
 ms.assetid: 929c8b0a-5460-4f66-a098-2cb8d4e10b69
 ms.openlocfilehash: b3683a198ec403fb9966bb902c936108fd043bfa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788244"
 ---
 # <a name="transportconfigurationtypes"></a>\<transportConfigurationTypes>
 Stellt eine Auflistung von Konfigurationselementen dar, die den Typ eines bestimmten Transports identifizieren. Diese kann verwendet werden, um benutzerdefinierte WAS-Protokolle hinzuzufügen.  

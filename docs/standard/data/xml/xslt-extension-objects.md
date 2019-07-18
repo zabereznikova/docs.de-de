@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b662ca537bf33dc9702e99f279bd068f92de6664
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2efe31ce8ece241bdfeb95687c5496c7ba0fd626
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836447"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615299"
 ---
 # <a name="xslt-extension-objects"></a>XSLT-Erweiterungsobjekte
 Mit Erweiterungsobjekten kann der Funktionsumfang von Stylesheets erweitert werden. Erweiterungsobjekte werden von der <xref:System.Xml.Xsl.XsltArgumentList>-Klasse beibehalten.  
   
  Die Verwendung eines Erweiterungsobjekts bietet gegenüber der Verwendung eines eingebetteten Skripts folgende Vorteile:  
   
--   Sie ermöglicht eine bessere Kapselung und Wiederverwendung von Klassen.  
+- Sie ermöglicht eine bessere Kapselung und Wiederverwendung von Klassen.  
   
--   Stylesheets werden kleiner und sind besser verwaltbar.  
+- Stylesheets werden kleiner und sind besser verwaltbar.  
   
  XSLT-Erweiterungsobjekte werden dem <xref:System.Xml.Xsl.XsltArgumentList>-Objekt mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzugefügt. Dabei wird ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.  
   
@@ -32,11 +32,11 @@ Mit Erweiterungsobjekten kann der Funktionsumfang von Stylesheets erweitert werd
   
 ### <a name="to-use-an-xslt-extension-object"></a>So verwenden Sie ein XSLT-Erweiterungsobjekt  
   
-1.  Erstellen Sie ein <xref:System.Xml.Xsl.XsltArgumentList>-Objekt, und fügen Sie das Erweiterungsobjekt mit der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzu.  
+1. Erstellen Sie ein <xref:System.Xml.Xsl.XsltArgumentList>-Objekt, und fügen Sie das Erweiterungsobjekt mit der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzu.  
   
-2.  Rufen Sie das Erweiterungsobjekt aus dem Stylesheet auf.  
+2. Rufen Sie das Erweiterungsobjekt aus dem Stylesheet auf.  
   
-3.  Übergeben Sie das <xref:System.Xml.Xsl.XsltArgumentList>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
+3. Übergeben Sie das <xref:System.Xml.Xsl.XsltArgumentList>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
   
 ## <a name="see-also"></a>Siehe auch
 

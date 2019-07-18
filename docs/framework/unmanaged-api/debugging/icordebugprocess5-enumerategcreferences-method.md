@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0845165e3200d7a5e14715cbe116ea5255aa021
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d70797d810d6dd2fe97c1f0f3b9c45a18fb2afba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178892"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767555"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences-Methode
 Ruft einen Enumerator für alle Objekte, die in einem Prozess speicherbereinigt werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateGCReferences(  
     [in] Bool enumerateWeakReferences,   
     [out] ICorDebugGCReferenceEnum **ppEnum  
@@ -58,4 +58,4 @@ HRESULT EnumerateGCReferences(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugProcess5-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

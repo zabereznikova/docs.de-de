@@ -2,25 +2,25 @@
 title: Zuordnen von impliziten Beziehungen zwischen geschachtelten Schemaelementen
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 076e3ec6e5a00fd294fa3c6d7998cfab3a136240
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6fcb0b9bb7c947359c2334d3d116f5317f84af83
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182070"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586818"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Zuordnen von impliziten Beziehungen zwischen geschachtelten Schemaelementen
 Ein XSD-Schema (XML Schema Definition Language) kann komplexe Typen aufweisen, die ineinander geschachtelt sind. In diesem Fall wendet der Zuordnungsprozess die Standardzuordnung an und erstellt folgende Elemente im <xref:System.Data.DataSet>:  
   
--   Eine Tabelle für jeden der komplexen Typen (übergeordnet und untergeordnet).  
+- Eine Tabelle für jeden der komplexen Typen (übergeordnet und untergeordnet).  
   
--   Wenn keine unique-Einschränkung für das übergeordnete Element vorhanden ist, eine zusätzliche Primärschlüsselspalte pro Tabellendefinition mit dem Namen *TableName*_Id, in denen *TableName* ist der Name der übergeordneten Tabelle.  
+- Wenn keine unique-Einschränkung für das übergeordnete Element vorhanden ist, eine zusätzliche Primärschlüsselspalte pro Tabellendefinition mit dem Namen *TableName*_Id, in denen *TableName* ist der Name der übergeordneten Tabelle.  
   
--   Eine primary Key-Einschränkung für die übergeordnete Tabelle, die zusätzliche Spalte als Primärschlüssel identifiziert (durch Festlegen der **IsPrimaryKey** Eigenschaft **"true"**). Die Einschränkung wird mit "Constraint\#" benannt, wobei \# für 1, 2, 3 usw. steht. Beispielsweise lautet der Standardname für die erste Einschränkung "Constraint1".  
+- Eine primary Key-Einschränkung für die übergeordnete Tabelle, die zusätzliche Spalte als Primärschlüssel identifiziert (durch Festlegen der **IsPrimaryKey** Eigenschaft **"true"**). Die Einschränkung wird mit "Constraint\#" benannt, wobei \# für 1, 2, 3 usw. steht. Beispielsweise lautet der Standardname für die erste Einschränkung "Constraint1".  
   
--   Eine Fremdschlüsseleinschränkung für die untergeordnete Tabelle, die die zusätzliche Spalte als den auf den Primärschlüssel der übergeordneten Tabelle verweisenden Fremdschlüssel identifiziert. Die Einschränkung wird mit dem Namen *Übergeordnetetabelle_untergeordnetetabelle* , in denen *ParentTable* ist der Name der übergeordneten Tabelle und *untergeordneteTabelle* ist der Name der untergeordneten Tabelle.  
+- Eine Fremdschlüsseleinschränkung für die untergeordnete Tabelle, die die zusätzliche Spalte als den auf den Primärschlüssel der übergeordneten Tabelle verweisenden Fremdschlüssel identifiziert. Die Einschränkung wird mit dem Namen *Übergeordnetetabelle_untergeordnetetabelle* , in denen *ParentTable* ist der Name der übergeordneten Tabelle und *untergeordneteTabelle* ist der Name der untergeordneten Tabelle.  
   
--   Eine Datenbeziehung zwischen übergeordneten und untergeordneten Tabellen.  
+- Eine Datenbeziehung zwischen übergeordneten und untergeordneten Tabellen.  
   
  Das folgende Beispiel zeigt ein Schema, in denen **OrderDetail** ist ein untergeordnetes Element des **Reihenfolge**.  
   
@@ -56,14 +56,14 @@ Ein XSD-Schema (XML Schema Definition Language) kann komplexe Typen aufweisen, d
   
  Die XML-Schemazuordnungsprozess erstellt die folgenden in das **DataSet**:  
   
--   Ein **Reihenfolge** und **OrderDetail** Tabelle.  
+- Ein **Reihenfolge** und **OrderDetail** Tabelle.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Eine eindeutige Einschränkung für die **Reihenfolge** Tabelle. Beachten Sie, dass die **IsPrimaryKey** -Eigenschaftensatz auf **"true"**.  
+- Eine eindeutige Einschränkung für die **Reihenfolge** Tabelle. Beachten Sie, dass die **IsPrimaryKey** -Eigenschaftensatz auf **"true"**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ Ein XSD-Schema (XML Schema Definition Language) kann komplexe Typen aufweisen, d
     IsPrimaryKey: True  
     ```  
   
--   Eine foreign Key-Einschränkung für die **OrderDetail** Tabelle.  
+- Eine foreign Key-Einschränkung für die **OrderDetail** Tabelle.  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ Ein XSD-Schema (XML Schema Definition Language) kann komplexe Typen aufweisen, d
     RelatedColumns: Order_Id   
     ```  
   
--   Eine Beziehung zwischen der **Reihenfolge** und **OrderDetail** Tabellen. Die **geschachtelte** für diese Beziehung-Eigenschaftensatz auf **"true"** da die **Reihenfolge** und **OrderDetail** Elemente im Schema geschachtelt sind .  
+- Eine Beziehung zwischen der **Reihenfolge** und **OrderDetail** Tabellen. Die **geschachtelte** für diese Beziehung-Eigenschaftensatz auf **"true"** da die **Reihenfolge** und **OrderDetail** Elemente im Schema geschachtelt sind .  
   
     ```  
     ParentTable: Order  
@@ -100,5 +100,5 @@ Ein XSD-Schema (XML Schema Definition Language) kann komplexe Typen aufweisen, d
 ## <a name="see-also"></a>Siehe auch
 
 - [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410263"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306065"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Veröffentlichen von .NET Core-Apps mit der CLI
 
@@ -33,8 +33,7 @@ Benötigen Sie schnelle Hilfe zur Verwendung der CLI? In der folgenden Tabelle f
 |                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
 |                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
 
-> [!IMPORTANT]
-> \*Wenn Sie Version 3.0 des SDK verwenden, stellt die frameworkabhängige ausführbare Datei den Standardveröffentlichungsmodus bei der Ausführung des Basisbefehls `dotnet publish` dar. Dies gilt nur für Projekte für **.NET Core 2.1** oder **.NET Core 3.0**.
+\*Wenn Sie Version 3.0 des SDK verwenden, stellt die frameworkabhängige ausführbare Datei den Standardveröffentlichungsmodus bei der Ausführung des Basisbefehls `dotnet publish` dar. Dies gilt nur, wenn das Projekt entweder auf **.NET Core 2.1** oder **.NET Core 3.0** abzielt.
 
 ## <a name="publishing-basics"></a>Grundlagen der Veröffentlichung
 
@@ -129,7 +128,8 @@ Beim Veröffentlichen einer frameworkabhängigen ausführbaren Datei wird eine A
 
 Sie müssen die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden um eine frameworkabhängige ausführbare Datei zu veröffentlichen (dies gilt nicht, wenn Sie bei .NET Core 3.x die aktuelle Plattform als Zielplattform verwenden):
 
-- `-r <RID>` Dieser Switch verwendet einen Bezeichner (RID), um die Zielplattform anzugeben. Eine Liste der Runtimebezeichner (RID) finden Sie im [RID-Katalog](../rid-catalog.md).
+- `-r <RID>`
+  Dieser Switch verwendet einen Bezeichner (RID), um die Zielplattform anzugeben. Eine Liste der Runtimebezeichner (RID) finden Sie im [RID-Katalog](../rid-catalog.md).
 
 - `--self-contained false` Dieser Switch weist das .NET Core SDK an, eine ausführbare Datei als frameworkabhängige ausführbare Datei zu erstellen.
 
@@ -148,15 +148,15 @@ Beim Veröffentlichen einer eigenständigen Bereitstellung wird eine App erstell
 
 Sie müssen die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden, um eine eigenständige Bereitstellung zu veröffentlichen:
 
-- `-r <RID>` Dieser Switch verwendet einen Bezeichner (RID), um die Zielplattform anzugeben. Eine Liste der Runtimebezeichner (RID) finden Sie im [RID-Katalog](../rid-catalog.md).
+- `-r <RID>`
+  Dieser Switch verwendet einen Bezeichner (RID), um die Zielplattform anzugeben. Eine Liste der Runtimebezeichner (RID) finden Sie im [RID-Katalog](../rid-catalog.md).
 
 - `--self-contained true` Dieser Switch weist das .NET Core SDK an, eine ausführbare Datei als eigenständige Bereitstellung zu erstellen.
 
 > [!NOTE]
 > Sie können die Gesamtgröße Ihrer Bereitstellung reduzieren, indem Sie den **invarianten Globalisierungsmodus** aktivieren. Dieser Modus eignet sich für Anwendungen, die nicht für den globalen Einsatz ausgelegt sind, und Formatierungskonventionen, Groß-/Kleinschreibungskonventionen, Zeichenfolgenvergleiche und Sortierreihenfolgen der [invarianten Kultur](xref:System.Globalization.CultureInfo.InvariantCulture) verwenden können. Weitere Informationen zum **invarianten Globalisierungsmodus** und seiner Aktivierung finden Sie unter [.NET Core Globalization Invariant Mode (Invarianter Globalisierungsmodus von .NET Core)](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 
-
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Core Application Deployment Overview (Übersicht über die .NET Core-Anwendungsbereitstellung)](index.md)
-- [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
+- [Übersicht über die .NET Core-Anwendungsbereitstellung](index.md)
+- [.NET Core Runtime-ID-Katalog (RID)](../rid-catalog.md)

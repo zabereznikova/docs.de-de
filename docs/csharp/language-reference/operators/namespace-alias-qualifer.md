@@ -1,5 +1,5 @@
 ---
-title: ::-Operator – C#-Referenz
+title: 'Operator „::“: C#-Referenz'
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 2618131f27271e7c06cb6d425fc22b5bd9750c49
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: c494e8dbb18f44ce5520b21800a21d3feb03da59
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333316"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025076"
 ---
-# <a name="-operator-c-reference"></a>::-Operator (C#-Referenz)
+# <a name="-operator-c-reference"></a>Operator „::“ (C#-Referenz)
 
 Der Namespacealias-Qualifizierer (`::`) wird verwendet, um nach Bezeichnern zu suchen. Er befindet sich immer zwischen zwei Bezeichnern, wie im folgenden Beispiel:
 
@@ -29,7 +29,7 @@ Der Operator `::` kann auch mit einer *Alias-Direktive* verwendet werden:
 var numbers = new Col::List<int> { 1, 2, 3 };
 ```
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Der Namespacealias-Qualifizierer kann `global` sein. Dadurch wird eine Suche im globalen Namespace anstatt Namespacealias aufgerufen.
 
@@ -46,8 +46,6 @@ Ein Beispiel zur Verwendung des `::`-Operators finden Sie im folgenden Abschnitt
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
-- [Namespaceschlüsselwörter](../keywords/namespace-keywords.md)
-- [.-Operator](member-access-operator.md)
+- [.-Operator](member-access-operators.md#member-access-operator-)
 - [extern alias](../keywords/extern-alias.md)

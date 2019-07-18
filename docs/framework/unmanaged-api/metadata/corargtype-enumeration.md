@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af9ca932a4c4a12a2c89571f40162a4ecbd5c33d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4ae7b61d056c08691e19e639353b6ab6fb8443c6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144494"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780944"
 ---
 # <a name="corargtype-enumeration"></a>CorArgType-Enumeration
 Enthält Werte, die den systemeigenen Typ eines Laufzeithandles beschreiben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorArgType {  
   
     IMAGE_CEE_CS_END        = 0x0,  

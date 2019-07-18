@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e5d66b49782d5f26b6d487e655aca6fbd6bdfb1a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072388"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623865"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Vorgehensweise: Dynamisches Erstellen einer neuen Datenbank
 In LINQ to SQL wird einer relationalen Datenbank ein Objektmodell zugeordnet. Das Mapping wird durch attributbasiertes Mapping oder eine externe Mappingdatei zur Beschreibung der Struktur der relationalen Datenbank ermöglicht. In beiden Szenarien sind genügend Informationen über die relationale Datenbank vorhanden, dass mithilfe der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode eine neue Instanz der Datenbank erstellt werden kann.  
@@ -19,11 +19,11 @@ In LINQ to SQL wird einer relationalen Datenbank ein Objektmodell zugeordnet. Da
   
  Die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode kann in einer Vielzahl von Szenarien verwendet werden, insbesondere dann, wenn ein bekannter Datenanbieter wie Microsoft SQL Server 2008 verfügbar ist. Zu den typischen Szenarien zählen:  
   
--   Sie erstellen eine Anwendung, die sich automatisch auf einem Kundensystem installiert.  
+- Sie erstellen eine Anwendung, die sich automatisch auf einem Kundensystem installiert.  
   
--   Sie erstellen eine Clientanwendung, die eine lokale Datenbank benötigt, um den Offlinezustand zu speichern.  
+- Sie erstellen eine Clientanwendung, die eine lokale Datenbank benötigt, um den Offlinezustand zu speichern.  
   
- Sie können die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode auch in Verbindung mit SQL Server nutzen, indem Sie (je nach Verbindungszeichenfolge) eine MDF-Datei oder einen Katalognamen verwenden. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Mithilfe der Verbindungszeichenfolge zum Definieren der Datenbank erstellt werden soll, und der Server auf die Datenbank ist, erstellt werden.  
+ Sie können die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode auch in Verbindung mit SQL Server nutzen, indem Sie (je nach Verbindungszeichenfolge) eine MDF-Datei oder einen Katalognamen verwenden. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiert mithilfe der Verbindungszeichenfolge die zu erstellende Datenbank und den zu verwendenden Server.  
   
 > [!NOTE]
 >  Falls möglich, sollte die integrierte Sicherheit von Windows für die Verbindung mit der Datenbank verwendet werden, sodass in der Verbindungszeichenfolge keine Kennwörter erforderlich sind.  
@@ -50,8 +50,8 @@ In LINQ to SQL wird einer relationalen Datenbank ein Objektmodell zugeordnet. Da
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Attributbasiertes Zuordnen](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [External Mapping (Externe Zuordnung)](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Vornehmen und Übergeben von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

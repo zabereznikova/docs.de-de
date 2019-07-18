@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0637a2f32140081d310abf5f7254b526edc69fc6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152879"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743230"
 ---
 # <a name="how-to-map-database-relationships"></a>Vorgehensweise: Zuordnen von Datenbankbeziehungen
 Sie können in Ihrer Entitätsklasse alle Datenbeziehungen als Eigenschaftenverweise codieren, die stets gleich bleiben. Da Kunden in der Beispieldatenbank Northwind typischerweise Bestellungen übermitteln, besteht im Modell stets eine Beziehung zwischen Kunden und deren Bestellungen.  
@@ -22,13 +22,13 @@ Sie können in Ihrer Entitätsklasse alle Datenbeziehungen als Eigenschaftenverw
   
  Die meisten Beziehungen sind 1:n, wie im Beispiel weiter unten in diesem Abschnitt. Sie können auch 1:1- und n:n-Beziehungen wie folgt darstellen:  
   
--   1: 1: Diese Art von Beziehung darstellen, indem Sie einschließlich <xref:System.Data.Linq.EntitySet%601> auf beiden Seiten.  
+- 1: 1: Diese Art von Beziehung darstellen, indem Sie einschließlich <xref:System.Data.Linq.EntitySet%601> auf beiden Seiten.  
   
      Betrachten Sie beispielsweise eine `Customer` - `SecurityCode` Beziehung erstellt, sodass in Sicherheitscode des Kunden nicht gefunden werden, wird die `Customer` -Tabelle und kann nur von autorisierten Personen zugegriffen werden.  
   
--   M: n: In den primären Schlüssel des der Verknüpfungstabelle m: n Beziehungen (auch mit dem Namen der *Junction* Tabelle) wird häufig durch eine Kombination der Fremdschlüssel aus den beiden anderen Tabellen gebildet.  
+- M: n: In den primären Schlüssel des der Verknüpfungstabelle m: n Beziehungen (auch mit dem Namen der *Junction* Tabelle) wird häufig durch eine Kombination der Fremdschlüssel aus den beiden anderen Tabellen gebildet.  
   
-     Betrachten Sie beispielsweise eine `Employee` - `Project` m: n Beziehung aus, die mit der Verknüpfungstabelle `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfordert, dass eine solche Beziehung mit drei Klassen modelliert werden: `Employee`, `Project`, und `EmployeeProject`. In diesem Fall kann beim Ändern der Beziehung zwischen einem `Employee` und einem `Project` das Update des Primärschlüssels `EmployeeProject` erfordern. Diese Situation lässt sich jedoch durch Löschen eines vorhandenen `EmployeeProject` und Erstellen eines neuen `EmployeeProject` am besten modellieren.  
+     Betrachten Sie beispielsweise eine `Employee` - `Project` m: n Beziehung aus, die mit der Verknüpfungstabelle `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfordert, dass eine solche Beziehung unter Verwendung von drei Klassen modelliert wird: `Employee`, `Project` und `EmployeeProject`. In diesem Fall kann beim Ändern der Beziehung zwischen einem `Employee` und einem `Project` das Update des Primärschlüssels `EmployeeProject` erfordern. Diese Situation lässt sich jedoch durch Löschen eines vorhandenen `EmployeeProject` und Erstellen eines neuen `EmployeeProject` am besten modellieren.  
   
     > [!NOTE]
     >  Beziehungen in relationalen Datenbanken werden typischerweise als Fremdschlüsselwerte modelliert, die sich auf Fremdschlüssel in anderen Dateien beziehen. Navigation zwischen ihnen Sie explizit die beiden Tabellen mit einer relationalen zuordnen *Join* Vorgang.  
@@ -39,7 +39,7 @@ Sie können in Ihrer Entitätsklasse alle Datenbeziehungen als Eigenschaftenverw
  Im folgenden 1:n-Beispiel verfügt die `Customer`-Klasse über eine Eigenschaft, die die Beziehung zwischen Kunden und deren Bestellungen deklariert.  Die `Orders`-Eigenschaft ist vom Typ <xref:System.Data.Linq.EntitySet%601>. Dieser Typ bedeutet, dass diese Beziehung 1:n (ein Kunde zu vielen Bestellungen) ist. Die <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>-Eigenschaft wird zur Beschreibung der Zuweisung verwendet, d. h. durch Angeben des Namens der Eigenschaft in der zugehörigen Klasse, die mit dieser verglichen werden soll. In diesem Beispiel die `CustomerID` -Eigenschaft so verglichen, wie ein *Join* Spaltenwert vergleicht.  
   
 > [!NOTE]
->  Wenn Sie Visual Studio verwenden, können Sie die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zum Erstellen einer Zuordnung zwischen Klassen.  
+>  Wenn Sie Visual Studio verwenden, können Sie den Object Relational Designer, um eine Zuordnung zwischen Klassen zu erstellen.  
   
  [!code-csharp[DlinqCustomize#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#3)]
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36993a13ed085f59fd6002f33e7884bdb1b5db8d
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529816"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832890"
 ---
 # <a name="assembly-names"></a>Assemblynamen
 Der Name einer Assembly wird in Metadaten gespeichert und wirkt sich erheblich auf den Geltungsbereich einer Assembly aus. Zudem hat er Einfluss darauf, wie die Assembly von einer Anwendung verwendet wird. Eine Assembly mit starkem Namen hat einen vollqualifizierten Namen, der den Namen, die Kultur, den öffentlichen Schlüssel und die Versionsnummer der Assembly enthält. Dies wird häufig als Anzeigename bezeichnet. Für geladenen Assemblys kann er mit der <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft abgerufen werden.  
@@ -45,7 +45,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ```  
   
 > [!NOTE]
->  Die Runtime beachtet bei Assemblynamen keine Groß- und Kleinschreibung, wenn sie diese an Assemblys bindet. Die im Assemblynamen verwendete Schreibweise wird aber beibehalten. Mehrere Funktionen in [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] achten bei Assemblynamen auf Groß- und Kleinschreibung. Die besten Ergebnisse erhalten Sie, wenn Sie bei Assemblynamen Groß- und Kleinschreibung beachten.  
+>  Die Runtime beachtet bei Assemblynamen keine Groß- und Kleinschreibung, wenn sie diese an Assemblys bindet. Die im Assemblynamen verwendete Schreibweise wird aber beibehalten. Verschiedene Tools im Windows Software Development Kit (SDK) verarbeiten Assemblynamen unter Beachtung von Groß-/Kleinschreibung. Die besten Ergebnisse erhalten Sie, wenn Sie bei Assemblynamen Groß- und Kleinschreibung beachten.  
   
 ## <a name="naming-application-components"></a>Namensanwendungskomponenten  
  Die Runtime achtet nicht auf den Dateinamen, wenn sie die Identität einer Assembly bestimmt. Die Assemblyidentität, die aus dem Assemblynamen, deren Version, Kultur und starkem Namen besteht, muss für die Runtime eindeutig sein.  
@@ -58,6 +58,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Wenn Sie eine Assembly mit starkem Namen in den globalen Assemblycache einfügen, muss der Dateiname der Assembly mit dem Assemblynamen übereinstimmen (davon ausgenommen sind Erweiterungen des Dateinamen wie „.exe“ oder „.dll“). Wenn der Dateiname einer Assembly z.B. „meineAssembly.dll“ ist, muss der Assemblyname „meineAssembly“ sein. Private Assemblys, die nur im Stammanwendungsverzeichnis bereitgestellt wurden, können einen Assemblynamen haben, der sich vom Dateinamen unterscheidet.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Bestimmen des vollqualifizierten Namens einer Assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
 - [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)

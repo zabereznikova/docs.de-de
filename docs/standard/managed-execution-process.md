@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652019"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593451"
 ---
 # <a name="managed-execution-process"></a>Verwalteter Ausführungsprozess
 <a name="introduction"></a> Der verwaltete Ausführungsprozess schließt die folgenden Schritte ein, die weiter unten in diesem Thema ausführlich erläutert werden:  
   
-1.  [Auswählen eines Compilers](#choosing_a_compiler).  
+1. [Auswählen eines Compilers](#choosing_a_compiler).  
   
      Um die Vorzüge der Common Language Runtime nutzen zu können, müssen Sie mindestens einen Sprachcompiler mit Unterstützung der Laufzeit verwenden.  
   
-2.  [Kompilieren des Codes in MSIL](#compiling_to_msil).  
+2. [Kompilieren des Codes in MSIL](#compiling_to_msil).  
   
      Beim Kompilieren wird der Quellcode in Microsoft Intermediate Language (MSIL) übersetzt, und die erforderlichen Metadaten werden generiert.  
   
-3.  [Kompilieren von MSIL in systemeigenen Code](#compiling_msil_to_native_code).  
+3. [Kompilieren von MSIL in systemeigenen Code](#compiling_msil_to_native_code).  
   
      Zur Ausführungszeit übersetzt ein JIT-Compiler (Just-In-Time) die MSIL in systemeigenen Code. Während dieser Kompilierung muss der Code eine Überprüfung der MSIL und der Metadaten durchlaufen, um zu ermitteln, ob der Code als typsicher gelten kann.  
   
-4.  [Ausführen von Code](#running_code).  
+4. [Ausführen von Code](#running_code).  
   
      Die Common Language Runtime stellt eine Infrastruktur bereit, die die Ausführung des Codes sowie von Diensten ermöglicht, die während der Ausführung verwendet werden können.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "54652019"
   
 <a name="compiling_msil_to_native_code"></a>   
 ## <a name="compiling-msil-to-native-code"></a>Kompilieren von MSIL in systemeigenen Code  
- Bevor Microsoft Intermediate Language (MSIL) ausgeführt werden kann, muss sie in der Common Language Runtime in systemeigenen Code für die Architektur des Zielcomputers kompiliert werden. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] bietet zwei Möglichkeiten zum Ausführen dieser Konvertierung:  
+ Bevor Microsoft Intermediate Language (MSIL) ausgeführt werden kann, muss sie in der Common Language Runtime in systemeigenen Code für die Architektur des Zielcomputers kompiliert werden. .NET Framework bietet zwei Möglichkeiten zum Ausführen dieser Konvertierung:  
   
--   Einen .NET Framework-Just-In-Time (JIT)-Compiler.  
+- Einen .NET Framework-Just-In-Time (JIT)-Compiler.  
   
--   Den [Native Image Generator (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) von .NET Framework  
+- Den [Native Image Generator (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md) von .NET Framework  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Kompilierung durch den JIT-Compiler  
  Bei der JIT-Kompilierung wird MSIL zur Anwendungslaufzeit auf Abruf in systemeigenen Code konvertiert, sobald der Inhalt einer Assembly geladen und ausgeführt wird. Da die Common Language Runtime für jede unterstützte CPU-Architektur einen JIT-Compiler bereitstellt, können Entwickler eine Reihe von MSIL-Assemblys erstellen, die JIT-kompiliert und auf unterschiedlichen Computern mit abweichender Architektur ausgeführt werden können. Wenn der verwaltete Code jedoch plattformspezifische systemeigene APIs oder eine plattformspezifische Klassenbibliothek aufruft, kann er nur unter diesem Betriebssystem ausgeführt werden.  
@@ -70,22 +70,22 @@ ms.locfileid: "54652019"
 ### <a name="install-time-code-generation-using-ngenexe"></a>Codegenerierung bei der Installation mithilfe von NGen.exe  
  Da der JIT-Compiler die MSIL einer Assembly in systemeigenen Code konvertiert, wenn einzelne in dieser Assembly definierte Methoden aufgerufen werden, treten zur Laufzeit unweigerlich Leistungseinbußen auf. In den meisten Fällen sind diese Leistungseinbußen hinnehmbar. Eine größere Rolle spielt jedoch, dass der vom JIT-Compiler generierte Code an den Prozess gebunden ist, durch den die Kompilierung ausgelöst wurde. Er kann also nicht für mehrere Prozesse verwendet werden. Damit der generierte Code für mehrere Aufrufe einer Anwendung oder mehrere Prozesse verwendet werden kann, die eine Gruppe von Assemblys gemeinsam nutzen, unterstützt die Common Language Runtime einen vorzeitigen Kompilierungsmodus. Dieser vorzeitige Kompilierungsmodus verwendet den [Native Image Generator (Ngen.exe)](../../docs/framework/tools/ngen-exe-native-image-generator.md), um MSIL-Assemblys ähnlich wie der JIT-Compiler in nativen Code zu konvertieren. Die Ausführung von Ngen.exe unterscheidet sich jedoch auf drei Weisen von der Ausführung des JIT-Compilers:  
   
--   Die Konvertierung von MSIL in systemeigenen Code wird vor und nicht während der Ausführung der Anwendung durchgeführt.  
+- Die Konvertierung von MSIL in systemeigenen Code wird vor und nicht während der Ausführung der Anwendung durchgeführt.  
   
--   Es werden jeweils ganze Assemblys und nicht einzelne Methoden kompiliert.  
+- Es werden jeweils ganze Assemblys und nicht einzelne Methoden kompiliert.  
   
--   Der generierte Code im Cache für systemeigene Abbilder wird als Datei auf dem Datenträger beibehalten.  
+- Der generierte Code im Cache für systemeigene Abbilder wird als Datei auf dem Datenträger beibehalten.  
   
 ### <a name="code-verification"></a>Codeüberprüfung  
  Beim Kompilieren in systemeigenen Code muss der MSIL-Code eine Überprüfung durchlaufen. Dies ist nicht erforderlich, wenn der Administrator Sicherheitsrichtlinien erstellt hat, mit denen die Überprüfung des Codes umgangen werden kann. MSIL und Metadaten werden daraufhin überprüft, ob der Code typsicher ist, d. h., ob er nur auf Speicherorte zugreift, für die ihm der Zugriff gewährt ist. Typsicherheit ermöglicht das Isolieren von Objekten voneinander und trägt zum Schutz dieser Objekte vor unabsichtlicher oder böswilliger Beschädigung bei. Typsicherheit bietet außerdem die Gewissheit, dass Sicherheitsbeschränkung für Code zuverlässig erzwungen werden können.  
   
  Für die Laufzeit ist erforderlich, dass die folgenden Aussagen auf überprüfbar typsicheren Code zutreffen:  
   
--   Ein Verweis auf einen Typ ist vollständig kompatibel mit dem Typ, auf den verwiesen wird.  
+- Ein Verweis auf einen Typ ist vollständig kompatibel mit dem Typ, auf den verwiesen wird.  
   
--   Für ein Objekt werden nur angemessen definierte Operationen aufgerufen.  
+- Für ein Objekt werden nur angemessen definierte Operationen aufgerufen.  
   
--   Identitäten sind, was sie von sich behaupten.  
+- Identitäten sind, was sie von sich behaupten.  
   
  Während der Überprüfung von MSIL-Code wird versucht sicherzustellen, dass dieser nur über ordnungsgemäß definierte Typen auf Speicherorte zugreifen und Methoden aufrufen kann. Code muss z. B. die Überlastung von Speicherorten beim Zugriff auf Felder eines Objekts verhindern. Code wird außerdem daraufhin überprüft, ob die MSIL fehlerfrei generiert wurde, da fehlerhafte MSIL zu einer Verletzung der Regeln für die Typsicherheit führen kann. Bei der Überprüfung wird ein genau definierter Abschnitt typsicheren Codes übergeben, und es wird ausschließlich Code übergeben, der typsicher ist. Aufgrund einiger Einschränkungen während der Überprüfung ist es jedoch möglich, dass ein Teil des typsicheren Codes die Überprüfung nicht besteht. Zudem kann in einigen Sprachen kein überprüfbar typsicherer Code erstellt werden. Wenn die Sicherheitsrichtlinien typsicheren Code erfordern, aber der Code die Überprüfung nicht besteht, wird bei der Ausführung des Codes eine Ausnahme ausgelöst.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652019"
   
  Unter Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] und [!INCLUDE[windowsver](../../includes/windowsver-md.md)]sucht das Ladeprogramm des Betriebssystems nach verwalteten Modulen, indem ein Bit im COFF-Header überprüft wird. Das festgelegte Bit steht dabei für ein verwaltetes Modul. Wenn das Ladeprogramm verwaltete Module erkennt, lädt es mscoree.dll. `_CorValidateImage` und `_CorImageUnloading` benachrichtigen das Ladeprogramm, wenn die Images der verwalteten Module geladen und entladen werden. `_CorValidateImage` führt die folgenden Aktionen aus:  
   
-1.  Überprüfen, dass es sich um gültigen verwalteten Code handelt  
+1. Überprüfen, dass es sich um gültigen verwalteten Code handelt  
   
-2.  Ändern des Einstiegspunktes im Image in einen Einstiegspunkt zur Laufzeit  
+2. Ändern des Einstiegspunktes im Image in einen Einstiegspunkt zur Laufzeit  
   
  Bei 64-Bit-Versionen von Windows ändert `_CorValidateImage` das Image im Arbeitsspeicher vom Format PE32 in das Format PE32+.  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
 ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942154"
 ---
 # <a name="menu-overview"></a>Übersicht über Menu
 Die <xref:System.Windows.Controls.Menu> Klasse ermöglicht Ihnen, Elemente, die zu Befehlen und Ereignishandlern in einer hierarchischen Reihenfolge zu organisieren. Jede <xref:System.Windows.Controls.Menu> Element enthält eine Auflistung von <xref:System.Windows.Controls.MenuItem> Elemente.  

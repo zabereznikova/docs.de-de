@@ -2,13 +2,19 @@
 title: Protokollieren von Informationen aus der Anwendung (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - Log object
-  - My.Log object
-  - 'applications [Visual Basic], logging information from'
-  - logging
-  - My.Application.Log object
-  - 'examples [Visual Basic], logging application information'
+- Log object
+- My.Log object
+- applications [Visual Basic], logging information from
+- logging
+- My.Application.Log object
+- examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
+ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052507"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Protokollieren von Informationen aus der Anwendung (Visual Basic)
 Dieser Abschnitt enthält Themen zur Protokollierung von Anwendungsinformationen mithilfe der Objekte `My.Application.Log` oder `My.Log` und zur Erweiterung der Protokollierungsfunktionen der Anwendung.  

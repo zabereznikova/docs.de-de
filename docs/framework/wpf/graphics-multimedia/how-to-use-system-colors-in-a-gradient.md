@@ -6,11 +6,11 @@ helpviewer_keywords:
 - system colors in gradients [WPF]
 ms.assetid: 11942e7e-6300-4b50-8ed1-f50e8d20e7d2
 ms.openlocfilehash: 55c99640907a0c372f8c7bbc50b9b45c9f15ef3c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769238"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>Vorgehensweise: Verwenden von Systemfarben in einem Farbverlauf
 Um Systemfarben in einem Farbverlauf zu verwenden, verwenden Sie die  *\<SystemColor >* Farbe und  *\<SystemColor >* ColorKey statischen Eigenschaften der der <xref:System.Windows.SystemColors> Klasse zum Abrufen einer Verweis auf die Farbe, in denen  *\<SystemColor >* ist der Name der gewünschten Systemfarbe. Verwenden der  *\<SystemColor >* ColorKey-Eigenschaften, wenn Sie einen dynamischen Verweis erstellen, die automatisch die Systemdesigns aktualisiert werden sollen. Verwenden Sie andernfalls die  *\<SystemColor >* Color-Eigenschaften.  

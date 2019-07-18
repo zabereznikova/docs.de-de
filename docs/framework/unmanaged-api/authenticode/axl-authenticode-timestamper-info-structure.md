@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d82ed3299f967457fe967d096a238da6143751a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dce0e67479418cd8227c75fadd8872a41ae1a799
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219160"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741350"
 ---
 # <a name="axlauthenticodetimestamperinfo-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO-Struktur
 Definiert die Authenticode-Informationen des Zeitstempelgebers.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {  
     DWORD cbSize;  
     HRESULT dwError;  

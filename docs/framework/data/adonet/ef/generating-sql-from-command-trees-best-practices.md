@@ -3,11 +3,11 @@ title: Generieren von SQL aus Befehlsstrukturen – Best Practices
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
 ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606666"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generieren von SQL aus Befehlsstrukturen – Best Practices
 
@@ -119,9 +119,9 @@ Beachten Sie zur Erklärung der Eingabealiasumleitung die Struktur der relationa
 
 Jeder dieser Typen verfügt über mindestens eine Eingabeeigenschaft, die eine Eingabeauflistung beschreibt, sowie über eine Bindungsvariable, die den einzelnen Eingaben entspricht, die verwendet werden, um während eines Auflistungsdurchlaufs die jeweiligen Elemente dieser Eingabe darzustellen. Die Bindungsvariable wird verwendet, wenn auf das Eingabeelement verwiesen wird, z. B. in der "Predicate"-Eigenschaft von "DbFilterExpression" oder der "Projection"-Eigenschaft von "DbProjectExpression".
 
-Beim Aggregieren mehrerer relationaler Ausdrucksknoten in einer einzelnen SQL SELECT-Anweisung und beim Auswerten eines Ausdrucks, der Teil eines relationalen Ausdrucks ist (z. B. ein Teil der "Projection"-Eigenschaft von "DbProjectExpression"), handelt es sich bei der verwendeten Bindungsvariable möglicherweise nicht um den Alias der Eingabe, da mehrere Ausdrucksbindungen an einen einzelnen Bereich umgeleitet werden müssen.  Dieses Problem wird als Aliasumbenennung bezeichnet.
+Beim Aggregieren mehrerer relationaler Ausdrucksknoten in einer einzelnen SQL SELECT-Anweisung und beim Auswerten eines Ausdrucks, der Teil eines relationalen Ausdrucks ist (z. B. ein Teil der „Projection“-Eigenschaft von DbProjectExpression), handelt es sich bei der verwendeten Bindungsvariable möglicherweise nicht um den Alias der Eingabe, da mehrere Ausdrucksbindungen an einen einzelnen Bereich umgeleitet werden müssen.  Dieses Problem wird als Aliasumbenennung bezeichnet.
 
-Beachten Sie das erste Beispiel in diesem Thema. Bei der naiven Übersetzung trifft beim Übersetzen von "Projektion a.x (DbPropertyExpression(a, x))" die Übersetzung in `a.x` zu, da der Alias der Eingabe als "a" definiert wurde, sodass dieser mit der Bindungsvariable übereinstimmt.  Wenn jedoch beide Knoten in einer einzelnen SQL SELECT-Anweisung aggregiert werden, müssen Sie denselben "DbPropertyExpression" in `b.x` übersetzen, da der Alias der Eingabe als "b" definiert wurde.
+Beachten Sie das erste Beispiel in diesem Thema. Bei der naiven Übersetzung trifft beim Übersetzen von „Projektion a.x (DbPropertyExpression(a, x))“ die Übersetzung in `a.x` zu, da der Alias der Eingabe als „a“ definiert wurde, sodass dieser mit der Bindungsvariable übereinstimmt.  Wenn jedoch beide Knoten in einer einzelnen SQL SELECT-Anweisung aggregiert werden, müssen Sie denselben "DbPropertyExpression" in `b.x` übersetzen, da der Alias der Eingabe als "b" definiert wurde.
 
 ## <a name="join-alias-flattening"></a>Joinaliasvereinfachung
 

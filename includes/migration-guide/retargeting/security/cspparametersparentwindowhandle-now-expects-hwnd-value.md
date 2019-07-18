@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 47406da0e916451f5941f1acce7a3c46f5ed0df5
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: feae645fdb06d5a578832e0b18981668c42d4ad1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760257"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803989"
 ---
 ### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a>CspParameters.ParentWindowHandle erwartet nun einen HWND-Wert
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760257"
 |Version|4.7|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Security.Cryptography.CspParameters.ParentWindowHandle?displayProperty=nameWithType></li></ul>|
-

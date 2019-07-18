@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2d3dc99d78ee9ceb3e8e1cac22fc5571cc1545ba
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149629"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504103"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Generieren von stark typisierten "DataSets"
-Bei einem XML-Schema, das dem XSD-Standard (XML Schema Definition Language) entspricht, können Sie mit dem Tool <legacyBold>XSD.exe</legacyBold>, das zusammen mit dem <xref:System.Data.DataSet> ausgeliefert wird, ein stark typisiertes [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)] generieren.  
+Wenn ein XML-Schema, die die XML-Schemadefinitionssprache (XSD) standard entspricht, können Sie generieren ein stark typisiertes <xref:System.Data.DataSet> mit dem Tool XSD.exe mit dem Windows Software Development Kit (SDK) bereitgestellt.  
   
  (Um ein XSD-Schema aus Datenbanktabellen erstellen zu können, finden Sie unter <xref:System.Data.DataSet.WriteXmlSchema%2A> oder [arbeiten mit Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   
@@ -23,7 +23,7 @@ Bei einem XML-Schema, das dem XSD-Standard (XML Schema Definition Language) ents
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- In dieser Syntax der `/d` -Anweisung weist das Tool zum Generieren einer **DataSet**, und die `/l:` weist das Tool zu (z. B. c# oder Visual Basic .NET) zu verwendende Sprache. Der optionale `/eld` Richtlinie gibt an, dass Sie verwenden können, [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)] zum Abfragen des generierten **DataSet.** Diese Option wird verwendet, wenn auch die Option `/d` angegeben ist. Weitere Informationen finden Sie unter [Abfragen typisierter DataSets](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). Das optionale `/n:` -Anweisung weist das Tool auch generieren, einen Namespace für die **DataSet** namens **XSDSchema.Namespace**. Als Ergebnis dieses Befehls wird die Datei XSDSchemaFileName.cs ausgegeben, die kompiliert und in einer ADO.NET-Anwendung verwendet werden kann. Der generierte Code kann als Bibliothek oder Modul kompiliert werden.  
+ In dieser Syntax der `/d` -Anweisung weist das Tool zum Generieren einer **DataSet**, und die `/l:` weist das Tool zu (z. B. c# oder Visual Basic .NET) zu verwendende Sprache. Der optionale `/eld` -Direktive gibt an, dass Sie LINQ to DataSet, um Abfragen gegen die generierte verwenden können **DataSet.** Diese Option wird verwendet, wenn auch die Option `/d` angegeben ist. Weitere Informationen finden Sie unter [Abfragen typisierter DataSets](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). Das optionale `/n:` -Anweisung weist das Tool auch generieren, einen Namespace für die **DataSet** namens **XSDSchema.Namespace**. Als Ergebnis dieses Befehls wird die Datei XSDSchemaFileName.cs ausgegeben, die kompiliert und in einer ADO.NET-Anwendung verwendet werden kann. Der generierte Code kann als Bibliothek oder Modul kompiliert werden.  
   
  Im folgenden Codebeispiel wird die Syntax dargestellt, die zum Kompilieren des generierten Codes als Bibliothek mithilfe des C#-Compilers (csc.exe) verwendet wird.  
   
@@ -98,6 +98,6 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Typisierte "DataSets"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Typed DataSets (Typisierte DataSets)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
+- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

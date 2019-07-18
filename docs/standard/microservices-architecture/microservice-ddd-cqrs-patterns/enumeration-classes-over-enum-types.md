@@ -1,15 +1,13 @@
 ---
 title: Verwenden von Enumerationsklassen anstelle von Enumerationstypen
 description: .NET Microservicesarchitektur für Containerized .NET-Anwendungen | Nutzung von Enumerationsklassen anstelle von Enumerationen als Lösungsmöglichkeit für die Einschränkungen der Enumerationen
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9b66a7d372c76ac1675e55713bd5655e213e68fe
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 10b4c2f7b9f079ed535111e65b8154791f6575cd
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633620"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003835"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Verwenden von Enumerationsklassen anstelle von Enumerationstypen
 
@@ -69,7 +67,7 @@ public abstract class Enumeration : IComparable
 Sie können diese Klasse als Typ in einem beliebigen Entitäts- oder Wertobjekt verwenden, z.B. für die folgende `CardType`:`Enumeration`-Klasse:
 
 ```csharp
-public abstract class CardType : Enumeration
+public class CardType : Enumeration
 {
     public static CardType Amex = new CardType(1, "Amex");
     public static CardType Visa = new CardType(2, "Visa");
@@ -84,26 +82,26 @@ public abstract class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Enums are evil—Update (Warum Sie auf Enumerationen verzichten sollten (aktualisierte Version))** \
-  [https://www.planetgeek.ch/2009/07/01/enums-are-evil/](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
+- **Enums are evil—Update (Warum Sie auf Enumerationen verzichten sollten (aktualisierte Version))**  \
+  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
-- **Daniel Hardman. How Enums Spread Disease – And How To Cure It (Warum Enumerationen für Probleme sorgen und wie Sie diese vermeiden)** \
-  [https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
+- **Daniel Hardman. How Enums Spread Disease – And How To Cure It (Warum Enumerationen für Probleme sorgen und wie Sie diese vermeiden)**  \
+  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
-- **Jimmy Bogard. Enumeration classes (Enumerationsklassen)** \
-  [https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
+- **Jimmy Bogard. Enumeration classes (Enumerationsklassen)**  \
+  <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- **Steve Smith. Enum Alternatives in C# (Alternativen zu Enumerationen in C#)** \
-  [https://ardalis.com/enum-alternatives-in-c](https://ardalis.com/enum-alternatives-in-c)
+- **Steve Smith. Enum Alternatives in C# (Alternativen zu Enumerationen in C#)**  \
+  <https://ardalis.com/enum-alternatives-in-c>
 
 - **Enumeration.cs.** Base Enumeration class in eShopOnContainers (Die Basisklasse „Enumeration“ in eShopOnContainers)
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
 - **CardType.cs**. Beispielklasse für Enumerationen in eShopOnContainers. \
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
     
 - **SmartEnum**. Ardalis: Klassen zum Erzeugen von stark typisierten intelligenteren Enumerationen in .NET \
-  [https://www.nuget.org/packages/Ardalis.SmartEnum/](https://www.nuget.org/packages/Ardalis.SmartEnum/)
+  <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
 >[Zurück](implement-value-objects.md)

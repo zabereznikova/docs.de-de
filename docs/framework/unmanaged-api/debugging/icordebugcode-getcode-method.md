@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f396881ef16f63eaf198aec168e5e94ed887698b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e18097dd380ee354e5652886544d40da074f1230
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228535"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747623"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode-Methode
 Ruft den gesamten für die Disassembly formatierten Code für die angegebene Funktion ab. Diese Methode wurde in .NET Framework, Version 2.0 als veraltet markiert. Verwendung [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCode (  
     [in] ULONG32     startOffset,   
     [in] ULONG32     endOffset,  

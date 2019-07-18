@@ -3,11 +3,11 @@ title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
 ms.openlocfilehash: 626ae03d622221ab3e956bd03898b6cc30482c98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758027"
 ---
 # <a name="transactionflow"></a>\<transactionFlow>
 Gibt die Transaktionsflussunterstützung für die benutzerdefinierte Bindung an.  
@@ -54,7 +54,7 @@ Gibt die Transaktionsflussunterstützung für die benutzerdefinierte Bindung an.
 - <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [ServiceModel-Transaktionskonfiguration](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)
-- [Aktivieren des Transaktionsflusses](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [Aktivieren des Transaktionsdatenflusses](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)

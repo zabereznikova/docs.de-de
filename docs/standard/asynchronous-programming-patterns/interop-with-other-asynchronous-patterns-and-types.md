@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f6cb2d387e3b979ed0d4407e17287fb93fa0a20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678342"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457348"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>Interoperabilität mit anderen asynchronen Mustern und Typen
 Mit .NET Framework 1.0 wurde das <xref:System.IAsyncResult> -Muster vorgestellt, das auch als [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)- oder `Begin/End` -Muster bekannt ist.  Mit .NET Framework 2.0 wurde das [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)hinzugefügt.  Ab .NET Framework 4 löst das [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) APM und EAP ab. Es bietet aber die Möglichkeit, leicht Migrationsroutinen aus früheren Mustern zu erstellen.  
   
  In diesem Thema:  
   
--   [Aufgaben und APM](#APM) ([von APM zu TAP](#ApmToTap) oder [von TAP zu APM](#TapToApm))  
+- [Aufgaben und APM](#APM) ([von APM zu TAP](#ApmToTap) oder [von TAP zu APM](#TapToApm))  
   
--   [Aufgaben und EAP](#EAP)  
+- [Aufgaben und EAP](#EAP)  
   
--   [Aufgaben und Wait-Handles](#WaitHandles) ([von den Wait-Handles zu TAP](#WHToTap) oder [von TAP zu Wait-Handles](#TapToWH))  
+- [Aufgaben und Wait-Handles](#WaitHandles) ([von den Wait-Handles zu TAP](#WHToTap) oder [von TAP zu Wait-Handles](#TapToWH))  
   
 <a name="APM"></a>   
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>Aufgaben und das asynchrone Programmiermodell (Asynchronous Programming Model, APM)  
   
 <a name="ApmToTap"></a>   
 ### <a name="from-apm-to-tap"></a>von APM zu TAP  
- Da das [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) -Muster stark strukturiert ist, lässt sich ganz einfach ein Wrapper für eine APM-Implementierung erstellen, um sie als TAP-Implementierung verfügbar zu machen. .NET Framework enthält seit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]für diese Umwandlung Hilfsroutinen in Form von <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> -Methodenüberladungen.  
+ Da das [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) -Muster stark strukturiert ist, lässt sich ganz einfach ein Wrapper für eine APM-Implementierung erstellen, um sie als TAP-Implementierung verfügbar zu machen. .NET Framework enthält für diese Umwandlung seit .NET Framework 4 Hilfsroutinen in Form von <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>-Methodenüberladungen.  
   
  Betrachten Sie die <xref:System.IO.Stream> -Klasse und ihre Methoden <xref:System.IO.Stream.BeginRead%2A> / <xref:System.IO.Stream.EndRead%2A> , die die APM-Entsprechung zur synchronen <xref:System.IO.Stream.Read%2A> -Methode darstellen:  
   

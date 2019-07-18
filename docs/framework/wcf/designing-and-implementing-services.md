@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cbf7c16988d8b8858aa75f4e7a956fa371238dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216414"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652046"
 ---
 # <a name="designing-and-implementing-services"></a>Entwerfen und Implementieren von Diensten
 In diesem Abschnitt erfahren Sie, wie Sie definieren und Implementieren von WCF-Verträge. Ein Dienstvertrag gibt an, was ein Endpunkt an die Außenwelt kommuniziert. Konkreter gesagt ist er ein Anweisung zu mehreren bestimmten Nachrichten, die in grundlegende Nachrichtenaustauschmuster aufgeteilt sind, wie Anforderung/Antwort, unidirektional und Duplex. Wenn ein Dienstvertrag ein logisch zusammengehöriger Satz von Vorgängen des Nachrichtenaustauschs ist, dann ist ein Dienstvorgang ein einzelner Nachrichtenaustausch. Beispielsweise muss ein `Hello`-Vorgang natürlich eine Nachricht annehmen (damit der Aufrufer den Gruß ankündigen kann) und kann dann eine Nachricht zurückgeben (je nach Verfügung des Vorgangs).  
@@ -19,32 +19,32 @@ In diesem Abschnitt erfahren Sie, wie Sie definieren und Implementieren von WCF-
 ## <a name="overview"></a>Übersicht  
  Dieses Thema enthält eine allgemeine Orientierung über das Entwerfen und Implementieren von WCF-Dienste. Untergeordnete Themen bieten ausführlichere Informationen zu den Besonderheiten des Entwerfens und Implementierens. Vor dem Entwerfen und implementieren die WCF-Anwendung, es wird empfohlen, die Sie:  
   
--   Kenntnisse darüber, was ein Dienstvertrag ist, wie er funktioniert und erstellt wird.  
+- Kenntnisse darüber, was ein Dienstvertrag ist, wie er funktioniert und erstellt wird.  
   
--   Kenntnisse darüber, dass Verträge Mindestanforderungen angeben, die die Laufzeitkonfiguration oder die Hostumgebung möglicherweise nicht unterstützen.  
+- Kenntnisse darüber, dass Verträge Mindestanforderungen angeben, die die Laufzeitkonfiguration oder die Hostumgebung möglicherweise nicht unterstützen.  
   
 ## <a name="service-contracts"></a>Dienstverträge  
  Ein Dienstvertrag gibt Folgendes an:  
   
--   Die Vorgänge, die ein Vertrag verfügbar macht.  
+- Die Vorgänge, die ein Vertrag verfügbar macht.  
   
--   Die Signatur der Vorgänge in Bezug auf ausgetauschte Nachrichten.  
+- Die Signatur der Vorgänge in Bezug auf ausgetauschte Nachrichten.  
   
--   Die Datentypen dieser Nachrichten.  
+- Die Datentypen dieser Nachrichten.  
   
--   Der Speicherort der Vorgänge.  
+- Der Speicherort der Vorgänge.  
   
--   Die spezifischen Protokolle und Serialisierungsformate, die verwendet werden, um die erfolgreiche Kommunikation mit dem Dienst zu unterstützen.  
+- Die spezifischen Protokolle und Serialisierungsformate, die verwendet werden, um die erfolgreiche Kommunikation mit dem Dienst zu unterstützen.  
   
  Beispielsweise kann ein Vertrag für eine Bestellung einen `CreateOrder`-Vorgang aufweisen, der eine Eingabe von Bestellinformationstypen annimmt und Erfolgs- oder Fehlerinformationen einschließlich einer Bestellnummer zurückgibt. Er kann auch einen `GetOrderStatus`-Vorgang aufweisen, der eine Bestellnummer annimmt und Bestellstatusinformationen zurückgibt. Ein Dienstvertrag dieser Art würde Folgendes angeben:  
   
-1.  Dass der Vertrag für die Bestellung aus `CreateOrder`- und `GetOrderStatus`-Vorgänge besteht.  
+1. Dass der Vertrag für die Bestellung aus `CreateOrder`- und `GetOrderStatus`-Vorgänge besteht.  
   
-2.  Dass die Vorgänge Eingabemeldungen und Ausgabemeldungen angegeben haben.  
+2. Dass die Vorgänge Eingabemeldungen und Ausgabemeldungen angegeben haben.  
   
-3.  Die Daten, die diese Meldungen enthalten können.  
+3. Die Daten, die diese Meldungen enthalten können.  
   
-4.  Nach Kategorien geordnete Anweisungen zur für die erfolgreiche Verarbeitung der Meldungen erforderlichen Kommunikationsinfrastruktur. Beispielsweise schließen diese Details ein, ob und welche Formen von Sicherheit erforderlich sind, um eine erfolgreiche Kommunikation herzustellen.  
+4. Nach Kategorien geordnete Anweisungen zur für die erfolgreiche Verarbeitung der Meldungen erforderlichen Kommunikationsinfrastruktur. Beispielsweise schließen diese Details ein, ob und welche Formen von Sicherheit erforderlich sind, um eine erfolgreiche Kommunikation herzustellen.  
   
  Um diese Art von Informationen für andere Anwendungen auf vielen Plattformen (einschließlich nicht-Microsoft-Plattformen) zu vermitteln, XML-Dienstverträge sind öffentlich in XML-Standardformaten ausgedrückt, z. B. [Web Services Description Language](https://go.microsoft.com/fwlink/?LinkId=94952) () WSDL) und [XML-Schema](https://go.microsoft.com/fwlink/?LinkId=94953) (XSD), unter anderem. Entwickler für viele Plattformen können mithilfe dieser öffentlichen Vertragsinformationen Anwendungen erstellen, die mit dem Dienst kommunizieren können, da sie die Sprache der Spezifikation verstehen und diese Sprachen für das Ermöglichen der Interoperation konzipiert sind, indem sie die öffentlichen Formulare, Formate und Protokolle beschreiben, die der Dienst unterstützt. Weitere Informationen zur Behandlung dieser Art von Informationen von WCF finden Sie unter [Metadaten](../../../docs/framework/wcf/feature-details/metadata.md).  
   

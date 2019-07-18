@@ -5,11 +5,11 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 ms.assetid: 167f77d4-7cb2-4a31-9dc9-0fd0b26fda7e
 ms.openlocfilehash: 228713bc95be4096549092fcdda0e47feed30849
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802309"
 ---
 # <a name="arrays-summary-visual-basic"></a>Arrays: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  

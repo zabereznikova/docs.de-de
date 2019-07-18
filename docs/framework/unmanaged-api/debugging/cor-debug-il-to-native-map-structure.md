@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03ce77dd7407db8289abfefba13d71a9af053e10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 238e59978bd084379fe6c0576107d674812bce8d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142050"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740787"
 ---
 # <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP-Struktur
 Enthält die Offsets, die genutzt werden, um Microsoft Intermediate Language (MSIL)-Code nativem Code zuzuordnen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {  
     ULONG32  ilOffset;  
     ULONG32  nativeStartOffset;  

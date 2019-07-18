@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e780ed7e841809f21130822babe55ad4935670
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744303"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592737"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Arbeiten mit Assemblys und dem globalen Assemblychache
 Wenn Sie eine Assembly freigeben und für mehrere Anwendungen gemeinsam nutzen möchten, können Sie die Assembly im globalen Assemblycache installieren. Jeder Computer, auf dem die Common Language Runtime installiert ist, verfügt über diesen computerweiten Codecache. Im globalen Assemblycache werden Assemblys gespeichert, die speziell für die gemeinsame Verwendung durch mehrere Anwendungen auf dem Computer vorgesehen sind. Eine Assembly muss einen starken Namen haben, um im globalen Assemblycache installiert werden zu können.  
@@ -27,32 +27,32 @@ Wenn Sie eine Assembly freigeben und für mehrere Anwendungen gemeinsam nutzen m
   
  Es gibt verschiedene Gründe, eine Assembly im globalen Assemblycache zu installieren:  
   
--   Freigegebener Standort.  
+- Freigegebener Standort.  
   
      Assemblys, die für die Verwendung durch Anwendungen vorgesehen sind, können im globalen Assemblycache installiert werden. Wenn beispielsweise alle Anwendungen eine im globalen Assemblycache befindliche Assembly verwenden sollen, kann der Datei Machine.config eine Versionsrichtlinienanweisung hinzugefügt werden, die Verweise auf die Assembly umleitet.  
   
--   Dateisicherheit.  
+- Dateisicherheit.  
   
      Administratoren verwenden zum Schutz des Verzeichnisses systemroot oft eine Zugriffssteuerungsliste (ACL, Access Control List), um Schreib- und Ausführungszugriffe zu steuern. Da der globale Assemblycache im Verzeichnis systemroot installiert ist, erbt er die ACL dieses Verzeichnisses. Aus diesem Grund empfiehlt es sich, nur Benutzern mit Administratorrechten das Löschen von Dateien aus dem globalen Assemblycache zu gestatten.  
   
--   Paralleles Versioning.  
+- Paralleles Versioning.  
   
      Im globalen Assemblycache dürfen sich mehrere Assemblys mit demselben Namen befinden, solange sich ihre Versionsinformationen unterscheiden.  
   
--   Zusätzliche Suchposition.  
+- Zusätzliche Suchposition.  
   
      Die Common Language Runtime durchsucht den globalen Assemblycache nach der angeforderten Assembly, bevor CodeBase-Informationen in einer Konfigurationsdatei überprüft oder verwendet werden.  
   
  Beachten Sie, dass es Szenarien gibt, in denen eine Assembly ausdrücklich nicht im globalen Assemblycache installiert werden soll. Wenn Sie eine der Assemblys, aus denen eine Anwendung besteht, im globalen Assemblycache ablegen, können Sie die Anwendung anschließend weder replizieren noch installieren, indem Sie mit XCOPY das Anwendungsverzeichnis kopieren. In einem solchen Fall müssen Sie die Assembly ebenfalls im globalen Assemblycache ablegen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Installieren einer Assembly in den globalen Assemblycache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  Beschreibt die Möglichkeiten, eine Assembly im globalen Assemblycache zu installieren.  
   
- [Gewusst wie: Anzeigen der Inhalte des globalen Assemblycaches](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+ [Vorgehensweise: Anzeigen der Inhalte des globalen Assemblycaches](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
  Verwenden Sie das [Global Assembly Cache-Tool („gacutil.exe“)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), um den Inhalt des globalen Assemblycaches anzuzeigen.  
   
- [Gewusst wie: Entfernen einer Assembly aus dem globalen Assemblycache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+ [Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  Verwenden Sie das [Global Assembly Cache-Tool („gacutil.exe“)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), um eine Assembly aus dem globalen Assemblycache zu entfernen.  
   
  [Verwenden von Serviced Components mit dem globalen Assemblycache](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
@@ -65,7 +65,7 @@ Wenn Sie eine Assembly freigeben und für mehrere Anwendungen gemeinsam nutzen m
  [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
  Beschreibt den globalen Assemblycache.  
   
- [Gewusst wie: Anzeigen des Assemblyinhalts](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [Vorgehensweise: Anzeigen des Assemblyinhalts](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
  Erläutert, wie der [IL-Disassembler („ildasm.exe“)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwendet wird, um Microsoft Intermediate Language-Informationen (MSIL) in einer Assembly anzuzeigen.  
   
  [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

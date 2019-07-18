@@ -2,12 +2,12 @@
 title: PNRP-Clouds
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: d91bf1b68b8446e2700b601d818c493b8edc1b82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742197"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623032"
 ---
 # <a name="pnrp-clouds"></a>PNRP-Clouds
 Eine PNRP-Cloud stellt eine Gruppe von Knoten dar, die über das Netzwerk miteinander kommunizieren können. Der Begriff „Cloud“ wird synonym mit „Peermesh“ und „Peer-to-Peer-Diagramm“ verwendet.  
@@ -18,9 +18,9 @@ Eine PNRP-Cloud stellt eine Gruppe von Knoten dar, die über das Netzwerk mitein
   
  PNRP verwendet drei Cloudbereiche, wobei diese Bereiche eine Gruppe von Computern darstellen, die sich gegenseitig finden können:  
   
--   Die globale Cloud entspricht dem globalen IPv6-Adressbereich sowie globalen Adressen. Sie stellt alle Computer des gesamten IPv6-Internets dar. Es gibt nur eine einzige globale Cloud.  
+- Die globale Cloud entspricht dem globalen IPv6-Adressbereich sowie globalen Adressen. Sie stellt alle Computer des gesamten IPv6-Internets dar. Es gibt nur eine einzige globale Cloud.  
   
--   Die verbindungslokale Cloud entspricht dem verbindungslokalen IPv6-Adressbereich sowie verbindungslokalen Adressen. Eine verbindungslokale Cloud gilt für einen bestimmten Link, der in der Regel mit dem lokal verbundenen Subnetz identisch ist. Es können mehrere verbindungslokale Clouds vorhanden sein.  
+- Die verbindungslokale Cloud entspricht dem verbindungslokalen IPv6-Adressbereich sowie verbindungslokalen Adressen. Eine verbindungslokale Cloud gilt für einen bestimmten Link, der in der Regel mit dem lokal verbundenen Subnetz identisch ist. Es können mehrere verbindungslokale Clouds vorhanden sein.  
   
  Eine dritte Möglichkeit ist die standortspezifische Cloud, die dem standortspezifischen IPv6-Adressbereich sowie standortlokalen Adressen entspricht. Diese Cloud ist veraltet, wird jedoch weiterhin in PNRP unterstützt.  
   
@@ -32,5 +32,6 @@ Eine PNRP-Cloud stellt eine Gruppe von Knoten dar, die über das Netzwerk mitein
  Nachdem eine Cloudinstanz erstellt oder abgerufen wurde, können Peernamen darin registriert werden, um ein Netz aus bekannten Peers zu erstellen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.PeerToPeer.Cloud>
 - [Peer Name Resolution-Protokoll (PNRP)](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)

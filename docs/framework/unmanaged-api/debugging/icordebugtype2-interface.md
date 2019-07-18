@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 878941f7af71fa5e3de8e38c4a68a66cb964983d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9e953fa129308527f63df8dd8c5061252f8be57b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223159"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772441"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2-Schnittstelle
 Erweitert die Schnittstelle "ICorDebugType" die Typ-ID von einem Basistyp oder einen komplexen Typ auf (Benutzerdefiniert) abgerufen.  
@@ -41,7 +41,7 @@ Erweitert die Schnittstelle "ICorDebugType" die Typ-ID von einem Basistyp oder e
 ## <a name="example"></a>Beispiel  
  Das folgende Codefragment veranschaulicht die Verwendung von der [icordebugtype2:: GetTypeId](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) Methode.  
   
-```  
+```cpp  
 // (error checking omitted for brevity)  
 // given an ICorDebugType *pType  
   
@@ -65,4 +65,4 @@ pType2->GetTypeID(&id);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

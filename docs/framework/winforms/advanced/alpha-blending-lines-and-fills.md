@@ -11,15 +11,15 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], using with fills
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
-ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66061341ee6539e2172c537a0b2a6ec9ff87565c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715996"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506121"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Alphablending von Linien und Füllungen
-In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], eine Farbe ist ein 32-Bit-Wert, mit jeweils 8 Bit für Alpha, Rot, Grün und Blau. Der alpha-Wert gibt an, die Transparenz der Farbe, den Umfang, der die Farbe mit der Hintergrundfarbe vermischt wird. Alpha-Werte-Bereich von 0 bis 255, wobei 0 für eine vollständig transparente Farbe darstellt, und 255 stellt eine vollständig deckende Farbe dar.  
+In GDI + ist eine Farbe für einen 32-Bit-Wert, mit jeweils 8 Bit für den Alpha-, Rot-, Grün- und Blau. Der alpha-Wert gibt an, die Transparenz der Farbe, den Umfang, der die Farbe mit der Hintergrundfarbe vermischt wird. Alpha-Werte-Bereich von 0 bis 255, wobei 0 für eine vollständig transparente Farbe darstellt, und 255 stellt eine vollständig deckende Farbe dar.  
   
  Alphablending ist eine x-Pixel-Kombination von der Quell- und Hintergrund Farbdaten. Jede der drei Komponenten (Rot, Grün, Blau) eine Farbe für die angegebene Quelle wird mit der entsprechenden Komponente der Farbe des Hintergrunds, gemäß der folgenden Formel gemischt:  
   

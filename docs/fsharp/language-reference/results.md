@@ -2,12 +2,12 @@
 title: Ergebnisse
 description: Erfahren Sie, wie Sie mit der F# "Result" Geben Sie fehlertoleranten Code schreiben können.
 ms.date: 04/24/2017
-ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612711"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645324"
 ---
 # <a name="results"></a>Ergebnisse
 

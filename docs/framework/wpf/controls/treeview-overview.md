@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
 ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761402"
 ---
 # <a name="treeview-overview"></a>Übersicht über TreeView
 Die <xref:System.Windows.Controls.TreeView> -Steuerelement bietet eine Möglichkeit zum Anzeigen von Informationen in einer hierarchischen Struktur mit reduzierbaren Knoten. In diesem Thema werden die <xref:System.Windows.Controls.TreeView> und <xref:System.Windows.Controls.TreeViewItem> steuert und enthält einfache Beispiele für deren Verwendung.  
@@ -76,5 +76,5 @@ Die <xref:System.Windows.Controls.TreeView> -Steuerelement bietet eine Möglichk
 
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Gewusst wie-Themen](treeview-how-to-topics.md)
+- [Themen zu Vorgehensweisen](treeview-how-to-topics.md)
 - [WPF-Inhaltsmodell](wpf-content-model.md)

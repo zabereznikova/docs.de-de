@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac3daccfade4f5ae10fe2ebbf83a7a11af34b89b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3343710fbe4f1aba8c38e46a0a720f78944a1c10
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196982"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776919"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum-Methode
 Legt Prüfsummeninformationen fest.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetCheckSum(  
     [in]  GUID     algorithmId,  
     [in]  ULONG32  checkSumSize,  

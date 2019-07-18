@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8c1ca89af289dbcc6c68d5ace3e8a9f32672ec0d
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859299"
+---
 ### <a name="wcf-transport-security-supports-certificates-stored-using-cng"></a>Unterstützung der WCF-Transportsicherheit für Zertifikate, die mithilfe der CNG gespeichert wurden
 
 |   |   |

@@ -1,5 +1,5 @@
 ---
-title: 'Der Konstruktor "<name>" kann sich nicht selbst aufrufen:'
+title: "Der Konstruktor '<name>' kann sich nicht selbst aufrufen:"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30298
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: ef20f74055a07071ef9634973c6852ac58c3143c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936694"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>Konstruktor '\<Name >' kann nicht selbst aufrufen
 Ein `Sub New` Prozedur in einer Klasse oder Struktur ruft sich selbst.  
@@ -23,9 +23,9 @@ Ein `Sub New` Prozedur in einer Klasse oder Struktur ruft sich selbst.
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Überprüfen Sie die Parameterliste des Konstruktors aufgerufen wird. Es sollte sich von der Konstruktor den Aufruf sein.  
+1. Überprüfen Sie die Parameterliste des Konstruktors aufgerufen wird. Es sollte sich von der Konstruktor den Aufruf sein.  
   
-2.  Wenn Sie nicht beabsichtigen, einen anderen Konstruktor aufrufen, entfernen Sie die `Sub New` ganz aufgerufen.  
+2. Wenn Sie nicht beabsichtigen, einen anderen Konstruktor aufrufen, entfernen Sie die `Sub New` ganz aufgerufen.  
   
 ## <a name="see-also"></a>Siehe auch
 

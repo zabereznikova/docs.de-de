@@ -2,12 +2,12 @@
 title: Auswählen eines Nachrichtenencoders
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 93024258ddcf76444d48a19c071b0a18248ea46b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409483"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645457"
 ---
 # <a name="choosing-a-message-encoder"></a>Auswählen eines Nachrichtenencoders
 In diesem Thema wird erläutert, Kriterien zum Wählen einer der Nachrichtenencoder, die in Windows Communication Foundation (WCF) enthalten sind: Text, Binär und Message Transmission Optimization Mechanism (MTOM).  
@@ -21,11 +21,11 @@ In diesem Thema wird erläutert, Kriterien zum Wählen einer der Nachrichtenenco
 ## <a name="system-provided-encoders"></a>Vom System bereitgestellte Encoder  
  WCF umfasst drei Nachrichtenencoder ein, die durch die folgenden drei Klassen dargestellt werden:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, der Textnachrichtenencoder, unterstützt sowohl reine XML-Codierung als auch SOAP-Codierung. Der reine XML-Codierungsmodus des Textnachrichtenencoders wird als "Plain Old XML" (POX) bezeichnet, um ihn von der textbasierten SOAP-Codierung zu unterscheiden. Um POX zu aktivieren, legen Sie die <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A>-Eigenschaft auf <xref:System.ServiceModel.Channels.MessageVersion.None%2A> fest. Verwenden Sie den textnachrichtenencoder, Interoperabilität mit nicht-WCF-Endpunkten.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, der Textnachrichtenencoder, unterstützt sowohl reine XML-Codierung als auch SOAP-Codierung. Der reine XML-Codierungsmodus des Textnachrichtenencoders wird als "Plain Old XML" (POX) bezeichnet, um ihn von der textbasierten SOAP-Codierung zu unterscheiden. Um POX zu aktivieren, legen Sie die <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A>-Eigenschaft auf <xref:System.ServiceModel.Channels.MessageVersion.None%2A> fest. Verwenden Sie den textnachrichtenencoder, Interoperabilität mit nicht-WCF-Endpunkten.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, der binäre Nachrichtenencoder, verwendet ein kompaktes binäres Format sind für WCF optimiert, für die WCF-Kommunikation und ist daher nicht interoperabel. Dies ist auch die meisten leistungsstärkste Encoder, der alle Encoder, die WCF bietet.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, der binäre Nachrichtenencoder, verwendet ein kompaktes binäres Format sind für WCF optimiert, für die WCF-Kommunikation und ist daher nicht interoperabel. Dies ist auch die meisten leistungsstärkste Encoder, der alle Encoder, die WCF bietet.  
   
--   Das <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>-Bindungselement gibt die Zeichencodierung und die für MTOM verwendete Nachrichtenversionsverwaltung an. MTOM ist eine effiziente Technologie zum Übertragen von Binärdaten in WCF-Nachrichten. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu schaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung. Im Hinblick auf Effizienz zwischen der Encoder, die WCF bietet, die ist die MTOM (dem langsamsten) zwischen Text und Binärdaten (dem schnellsten).  
+- Das <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>-Bindungselement gibt die Zeichencodierung und die für MTOM verwendete Nachrichtenversionsverwaltung an. MTOM ist eine effiziente Technologie zum Übertragen von Binärdaten in WCF-Nachrichten. Der MTOM-Encoder versucht, einen Ausgleich zwischen Effizienz und Interoperabilität zu schaffen. Die MTOM-Verschlüsselung überträgt die meisten XML-Daten in Textform, optimiert aber große Binärdatenblöcke durch Übertragung ohne Textkonvertierung. Im Hinblick auf Effizienz zwischen der Encoder, die WCF bietet, die ist die MTOM (dem langsamsten) zwischen Text und Binärdaten (dem schnellsten).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>So wählen Sie einen Nachrichtenencoder aus  
  In der folgenden Tabelle werden allgemeine Faktoren beschrieben, die bei der Auswahl eines Nachrichtenencoders berücksichtigt werden. Priorisieren Sie die Faktoren, die für Ihre Anwendung wichtig sind, und wählen Sie dann die Nachrichtenencoder aus, die mit diesen Faktoren am besten funktionieren. Berücksichtigen Sie alle weiteren, in dieser Tabelle nicht aufgelisteten Faktoren sowie alle benutzerdefinierten Encoder, die eventuell für Ihre Anwendung erforderlich sind.  

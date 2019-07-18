@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8f830ca7e273b65dc9ec77566a02df6c32cd464
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0bfe30567bcd8e22a82d401e00b0a6ee50407def
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202390"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781672"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind-Enumeration
 Enthält Werte, die beschreiben, eine Datei (portable Executable)-Datei von einem Aufruf zurückgegeben [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorPEKind {  
   
     peNot           = 0x00000000,  

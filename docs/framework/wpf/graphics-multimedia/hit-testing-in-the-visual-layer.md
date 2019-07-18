@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a69e5922d2f66d295024149764c3836f9760b685
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591234"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Treffertests in der visuellen Ebene
 Dieses Thema enthält eine Übersicht über die Treffertestfunktionen der visuellen Ebene. Unterstützung für den Treffertest können Sie bestimmen, ob ein Geometrie- oder Punktwert Wert innerhalb des gerenderten Inhalts liegt eine <xref:System.Windows.Media.Visual>, sodass Sie Benutzeroberflächenverhalten, wie z. B. ein Positionierungsrechteck zum Auswählen von mehreren Objekten zu implementieren.  
@@ -22,13 +22,13 @@ Dieses Thema enthält eine Übersicht über die Treffertestfunktionen der visuel
 ## <a name="hit-testing-scenarios"></a>Treffertestszenarios  
  Die <xref:System.Windows.UIElement> -Klasse stellt die <xref:System.Windows.UIElement.InputHitTest%2A> -Methode, die Ihnen ermöglicht, einen Treffertest für ein Element mithilfe eines bestimmten Koordinatenwerts. In vielen Fällen die <xref:System.Windows.UIElement.InputHitTest%2A> Methode bietet die gewünschte Funktionalität aus, für Implementieren des Treffertests von Elementen. Es gibt jedoch mehrere Szenarios, bei denen es möglicherweise erforderlich ist, den Treffertest auf der visuellen Ebene zu implementieren.  
   
--   Treffertest für nicht-<xref:System.Windows.UIElement> Objekte: Dies gilt, wenn Treffertests für nicht-<xref:System.Windows.UIElement> Objekte, z. B. <xref:System.Windows.Media.DrawingVisual> - oder Grafikobjekte.  
+- Treffertest für nicht-<xref:System.Windows.UIElement> Objekte: Dies gilt, wenn Treffertests für nicht-<xref:System.Windows.UIElement> Objekte, z. B. <xref:System.Windows.Media.DrawingVisual> - oder Grafikobjekte.  
   
--   Treffertests unter Verwendung einer Geometrie: Dies gilt mit Geometry-Objekt statt der Koordinatenwert eines Punkts ein Treffertest ausgeführt werden sollen.  
+- Treffertests unter Verwendung einer Geometrie: Dies gilt mit Geometry-Objekt statt der Koordinatenwert eines Punkts ein Treffertest ausgeführt werden sollen.  
   
--   Treffertest für mehrere Objekte: Dies gilt, wenn Sie einen Treffertest für mehrere Objekte, wie z.B. überlappende Objekte müssen. Sie können Ergebnisse für alle grafischen Elemente abrufen, die eine Geometrie oder einen Punkt kreuzen, nicht nur für das erste.  
+- Treffertest für mehrere Objekte: Dies gilt, wenn Sie einen Treffertest für mehrere Objekte, wie z.B. überlappende Objekte müssen. Sie können Ergebnisse für alle grafischen Elemente abrufen, die eine Geometrie oder einen Punkt kreuzen, nicht nur für das erste.  
   
--   Ignorieren von <xref:System.Windows.UIElement> Treffertests für Richtlinie: Dies gilt, wenn für das Ignorieren der <xref:System.Windows.UIElement> Treffertests Richtlinie, die berücksichtigt Faktoren wie die, ob ein Element deaktiviert oder ausgeblendet ist.  
+- Ignorieren von <xref:System.Windows.UIElement> Treffertests für Richtlinie: Dies gilt, wenn für das Ignorieren der <xref:System.Windows.UIElement> Treffertests Richtlinie, die berücksichtigt Faktoren wie die, ob ein Element deaktiviert oder ausgeblendet ist.  
   
 > [!NOTE]
 >  Ein vollständiges Codebeispiel für einen Treffertest in der visuellen Ebene finden Sie unter [Beispiel für einen Treffertest mit DrawingVisuals](https://go.microsoft.com/fwlink/?LinkID=159994) und [Beispiel für einen Treffertest mit Win32-Interoperabilität](https://go.microsoft.com/fwlink/?LinkID=159995).  
@@ -145,5 +145,5 @@ Reduzieren der Verzweigungen in einer visuellen Struktur
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [Treffertest mit DrawingVisuals-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [Treffertests mit Win32-Interoperation](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [Treffertest für eine Geometrie in einem visuellen Objekt](how-to-hit-test-geometry-in-a-visual.md)
+- [Vorgehensweise: Treffertest für eine Geometrie in einem visuellen Objekt](how-to-hit-test-geometry-in-a-visual.md)
 - [Treffertest mithilfe eines Win32-Hostcontainers](how-to-hit-test-using-a-win32-host-container.md)

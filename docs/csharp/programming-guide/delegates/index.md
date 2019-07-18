@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 8dca99f5b6cd315b31bbefb9515cde5065601730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: faab42a7a2f7dda12f32a65890b795abfe0d11ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203508"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608720"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp darstellt. Nach Instanziierung eines Delegaten können Sie die Instanz mit einer beliebigen Methode verknüpfen, die eine kompatible Signatur und einen kompatiblen Rückgabetyp aufweist. Sie können die Methode über die Delegatinstanz aufrufen.  
@@ -30,35 +30,34 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
 ## <a name="delegates-overview"></a>Übersicht über Delegaten  
  Delegaten verfügen über folgende Eigenschaften:  
   
--   Delegaten ähneln C++-Funktionszeigern, sind aber vollständig objektorientiert, und im Gegensatz zu C++-Zeigern auf Memberfunktionen kapseln Delegaten sowohl eine Objektinstanz als auch eine Methode.
+- Delegaten ähneln C++-Funktionszeigern, sind aber vollständig objektorientiert, und im Gegensatz zu C++-Zeigern auf Memberfunktionen kapseln Delegaten sowohl eine Objektinstanz als auch eine Methode.
   
--   Delegaten ermöglichen es, Methoden als Parameter zu übergeben.  
+- Delegaten ermöglichen es, Methoden als Parameter zu übergeben.  
   
--   Delegaten können zum Definieren von Rückrufmethoden verwendet werden.  
+- Delegaten können zum Definieren von Rückrufmethoden verwendet werden.  
   
--   Delegaten können miteinander verkettet werden. So können beispielsweise mehrere Methoden für ein einziges Ereignis aufgerufen werden.  
+- Delegaten können miteinander verkettet werden. So können beispielsweise mehrere Methoden für ein einziges Ereignis aufgerufen werden.  
   
--   Methoden müssen nicht exakt mit dem Typ des Delegaten übereinstimmen. Weitere Informationen finden Sie unter [Verwenden von Varianz in Delegaten](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
+- Methoden müssen nicht exakt mit dem Typ des Delegaten übereinstimmen. Weitere Informationen finden Sie unter [Verwenden von Varianz in Delegaten](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
   
--   In C#, Version 2.0, wurde das Konzept der [anonymen Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) eingeführt, durch die anstelle einer separat definierten Methode Codeblöcke als Parameter übergeben werden können. In C# 3.0 wurden Lambdaausdrücke als eine präzisere Methode zum Schreiben von Inlinecodeblöcken eingeführt. Sowohl anonyme Methoden als auch Lambda-Ausdrücke werden (in bestimmten Kontexten) in Delegattypen kompiliert. Zusammen werden diese Funktionen jetzt als anonyme Funktionen bezeichnet. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+- In C#, Version 2.0, wurde das Konzept der [anonymen Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) eingeführt, durch die anstelle einer separat definierten Methode Codeblöcke als Parameter übergeben werden können. In C# 3.0 wurden Lambdaausdrücke als eine präzisere Methode zum Schreiben von Inlinecodeblöcken eingeführt. Sowohl anonyme Methoden als auch Lambda-Ausdrücke werden (in bestimmten Kontexten) in Delegattypen kompiliert. Zusammen werden diese Funktionen jetzt als anonyme Funktionen bezeichnet. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Verwenden von Delegaten](../../../csharp/programming-guide/delegates/using-delegates.md)  
+- [Verwenden von Delegaten](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [Verwenden von Delegaten anstelle Schnittstellen (C#-Programmierhandbuch)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
+- [Verwenden von Delegaten anstelle Schnittstellen (C#-Programmierhandbuch)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
--   [Delegate mit benannten im Vergleich zu anonymen Methoden](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+- [Delegate mit benannten im Vergleich zu anonymen Methoden](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
--   [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
--   [Verwenden von Varianz bei Delegaten](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
+- [Verwenden von Varianz bei Delegaten](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
--   [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   
--   [Vorgehensweise: Deklarieren, Instanziieren und Verwenden von Delegaten](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
-  
-  
+- [Vorgehensweise: Deklarieren, Instanziieren und Verwenden von Delegaten](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
+
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
 Weitere Informationen erhalten Sie unter [Delegaten](~/_csharplang/spec/delegates.md) in der [C#-Sprachspezifikation](../../language-reference/language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.

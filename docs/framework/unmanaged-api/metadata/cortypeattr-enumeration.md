@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43e7c973ee22350f26b4f86bcc8b4c4c727291ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5786f24f6543d4d262dd8a6389132aba02f9aacc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087286"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779203"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr-Enumeration
 Enthält Werte, die Typmetadaten angeben.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorTypeAttr {  
   
     tdVisibilityMask        =   0x00000007,  
@@ -100,7 +100,7 @@ typedef enum CorTypeAttr {
 |`tdSpecialName`|Gibt an, dass der Klassenname spezielle. Der Name wird beschrieben, wie.|  
 |`tdImport`|Gibt an, dass der Typ importiert wird.|  
 |`tdSerializable`|Gibt an, dass der Typ serialisierbar ist.|  
-|`tdWindowsRuntime`|Gibt an, dass dieser Typ ist ein [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typ.|  
+|`tdWindowsRuntime`|Gibt an, dass dieser Typ einen Windows-Runtime-Typ.|  
 |`tdStringFormatMask`|Ruft Informationen über die Zeichenfolgen codiert und formatiert werden.|  
 |`tdAnsiClass`|Gibt an, dass dieser Typ eine LPTSTR als ANSI interpretiert.|  
 |`tdUnicodeClass`|Gibt an, dass dieser Typ eine LPTSTR als Unicode interpretiert.|  

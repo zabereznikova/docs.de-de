@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a173c23ea33532f05e30d072677715e15d04018
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093682"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759347"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument-Methode
 Sucht ein Dokument an. Die Sprache des Dokuments, Hersteller und Typ sind optional.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetDocument (  
     [in]  WCHAR  *url,  
     [in]  GUID   language,  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195643"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592502"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Übersicht über Windows Forms und nicht verwaltete Anwendungen
 Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkungen mit nicht verwalteten Anwendungen zusammenarbeiten. In den folgenden Abschnitten werden die von Windows Forms-Anwendungen und -Steuerelementen unterstützten und nicht unterstützten Szenarien und Konfigurationen beschrieben.  
@@ -47,13 +47,13 @@ Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkunge
  Die Nachrichtenschleife einer Anwendung ist eine interne Programmschleife, die Nachrichten aus der Nachrichtenwarteschlange eines Threads abruft, diese übersetzt und dann an die zu behandelnde Anwendung sendet. Die Nachrichtenschleife für ein Windows Form hat nicht dieselbe Architektur wie Nachrichtenschleifen, die von früheren Anwendungen, z. B. Visual Basic 6.0-Anwendungen und MFC-Anwendungen, bereitgestellt werden. Die Windows-Nachrichten, die in der Nachrichtenschleife bereitgestellt werden, werden möglicherweise anders behandelt, als vom Windows Form erwartet. Daher kann es zu unerwartetem Verhalten kommen. Einige Tastenkombinationen funktionieren möglicherweise nicht, einige Mausaktivitäten funktionieren eventuell nicht, oder einige Ereignisse werden möglicherweise nicht wie erwartet ausgelöst.  
   
 ## <a name="resolving-interoperability-issues"></a>Beheben von Interoperabilitätsproblemen  
- Sie können diese Probleme beheben, indem Sie das Formular in einer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Nachrichtenschleife anzeigen, die unter Verwendung der <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> -Methode erstellt wird.  
+ Sie können diese Probleme beheben, durch Anzeigen des Formulars in einer .NET Framework-Nachrichtenschleife, die mit der <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> Methode.  
   
  Damit ein Windows Form aus einer COM-Clientanwendung heraus ordnungsgemäß funktioniert, müssen Sie es in einer Windows Forms-Nachrichtenschleife ausführen. Hierzu können Sie einen der folgenden Ansätze verwenden:  
   
--   Verwenden Sie die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>-Methode, um das Windows Form anzuzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode](com-interop-by-displaying-a-windows-form-shadow.md).  
+- Verwenden Sie die <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>-Methode, um das Windows Form anzuzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode](com-interop-by-displaying-a-windows-form-shadow.md).  
   
--   Zeigen Sie jedes Windows Form in einem neuen Thread an. Weitere Informationen finden Sie unter [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows-Formular in einem eigenen Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Zeigen Sie jedes Windows Form in einem neuen Thread an. Weitere Informationen finden Sie unter [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows-Formular in einem eigenen Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -64,6 +64,6 @@ Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkunge
 - [Aximp.exe (Windows Forms ActiveX Control Importer-Tool)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Verpacken einer Assembly für COM](../../interop/packaging-an-assembly-for-com.md)
-- [Registrieren von Assemblys mit COM](../../interop/registering-assemblies-with-com.md)
-- [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Vorgehensweise: Unterstützen von COM-Interop durch das Anzeigen einzelner Windows Forms in einem eigenen Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Registrieren von Assemblys bei COM](../../interop/registering-assemblies-with-com.md)
+- [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows-Formular in einem eigenen Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

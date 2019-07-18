@@ -8,30 +8,30 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: a4fe68ca4c2d4a58ecf561d17111fdf6a68a9118
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757050"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Vorgehensweise: Konfigurieren von Visual Studio zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] Führen Sie in einer teilweise vertrauenswürdigen Sicherheits-Sandbox, die auf das Internet Zone Berechtigungssatz beschränkt ist. Dieser Berechtigungssatz beschränkt Webdienstaufrufe nur Webdienste, die sich auf befinden die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Ursprungssite der Anwendung. Wenn ein [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] debuggt wird von Visual Studio 2005, allerdings gilt dies nicht als Standort für die gleichen Ursprungs wie der Webdienst, das sie verweisen. Dieser bewirkt, dass Ausnahmen zur Codezugriffssicherheit ausgelöst werden, wenn die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] versucht, den Webdienst aufzurufen. Allerdings eine Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] Projekt kann konfiguriert werden, um zu simulieren, müssen die gleiche Ursprungssite wie der Webdienst während des Debuggens ruft. Dadurch wird die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] zu sicher Aufrufen des Webdiensts ohne Sicherheitsausnahmen.
 
-## <a name="configuring-visual-studio"></a>Konfigurieren von Visual Studio
+## <a name="configuring-visual-studio"></a>Konfigurieren von Visual Studio 2017
  So konfigurieren Sie Visual Studio 2005 zum Debuggen einer [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] , die einen Webdienst aufruft:
 
-1.  Klicken Sie bei ausgewähltem Projekt im **Projektmappen-Explorer**im Menü **Projekt** auf **Eigenschaften**.
+1. Klicken Sie bei ausgewähltem Projekt im **Projektmappen-Explorer**im Menü **Projekt** auf **Eigenschaften**.
 
-2.  In der **Projekt-Designer**, klicken Sie auf die **Debuggen** Registerkarte.
+2. In der **Projekt-Designer**, klicken Sie auf die **Debuggen** Registerkarte.
 
-3.  In der **Startaktion** wählen Sie im Abschnitt **externes Programm starten** , und geben Sie Folgendes:
+3. In der **Startaktion** wählen Sie im Abschnitt **externes Programm starten** , und geben Sie Folgendes:
 
      `C:\WINDOWS\System32\PresentationHost.exe`
 
-4.  In der **Startoptionen** Geben Sie Folgendes in die **Befehlszeilenargumente** Textfeld:
+4. In der **Startoptionen** Geben Sie Folgendes in die **Befehlszeilenargumente** Textfeld:
 
-     `-debug`  *filename*
+     `-debug`  *Dateiname*
 
      Die *Filename* Wert für die **-Debuggen** -Parameter ist der XBAP-Dateiname, z. B.:
 
@@ -40,13 +40,13 @@ ms.locfileid: "59171839"
 > [!NOTE]
 >  Dies ist die Standardkonfiguration für Lösungen, die mit dem Visual Studio 2005 erstellten [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] Projektvorlage.
 
-1.  Klicken Sie bei ausgewähltem Projekt im **Projektmappen-Explorer**im Menü **Projekt** auf **Eigenschaften**.
+1. Klicken Sie bei ausgewähltem Projekt im **Projektmappen-Explorer**im Menü **Projekt** auf **Eigenschaften**.
 
-2.  In der **Projekt-Designer**, klicken Sie auf die **Debuggen** Registerkarte.
+2. In der **Projekt-Designer**, klicken Sie auf die **Debuggen** Registerkarte.
 
-3.  In der **Startoptionen** Abschnitt, fügen Sie die folgende Befehlszeilenparameter ein, um die **Befehlszeilenargumente** Textfeld:
+3. In der **Startoptionen** Abschnitt, fügen Sie die folgende Befehlszeilenparameter ein, um die **Befehlszeilenargumente** Textfeld:
 
-     `-debugSecurityZoneURL`  *URL*
+     `-debugSecurityZoneURL` *URL*
 
      Die *URL* Wert für die **- DebugSecurityZoneURL** -Parameter ist der [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] für den Speicherort an, die Sie als der Ursprungssite der Anwendung simulieren möchten.
 

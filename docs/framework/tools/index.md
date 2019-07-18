@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220105"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489651"
 ---
 # <a name="net-framework-tools"></a>.NET Framework-Tools
 Die .NET Framework-Tools erleichtern Ihnen das Erstellen, Bereitstellen und Verwalten von Anwendungen und Komponenten für .NET Framework.  
   
-Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden automatisch mit Visual Studio installiert. Sie können Visual Studio von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) herunterladen.
+Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden automatisch mit Visual Studio installiert. Sie können Visual Studio von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) herunterladen.
   
  Mit Ausnahme des Assembly Cache Viewer (Shfusion.dll) können Sie alle Tools von der Befehlszeile aus starten. Auf "Shfusion.dll" muss über den Datei-Explorer zugegriffen werden.  
   
@@ -36,7 +36,7 @@ Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden a
  Konvertiert Typdefinitionen in einer COM-Typbibliothek für ein ActiveX-Steuerelement in ein Windows Forms-Steuerelement.  
   
  [Caspol.exe (Richtlinientool für die Codezugriffssicherheit)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- Das Sicherheitsrichtlinientool für den Codezugriff ermöglicht es Ihnen, Sicherheitsrichtlinien auf der Ebene von Computer-, Benutzer- sowie Unternehmensrichtlinien anzuzeigen und zu konfigurieren. In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] und höheren Versionen hat dieses Tool nur dann Einfluss auf Richtlinien für die Codezugriffssicherheit (Code Access Security CAS), wenn das [\<legacyCasPolicy>-Element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) auf `true` festgelegt ist. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
+ Das Sicherheitsrichtlinientool für den Codezugriff ermöglicht es Ihnen, Sicherheitsrichtlinien auf der Ebene von Computer-, Benutzer- sowie Unternehmensrichtlinien anzuzeigen und zu konfigurieren. In .NET Framework 4 und höheren Versionen wirkt sich dieses Tool nur dann auf Richtlinien für die Codezugriffssicherheit (Code Access Security CAS) aus, wenn das [\<legacyCasPolicy>-Element](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) auf `true` festgelegt ist. Weitere Informationen finden Sie unter [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md).  
   
  [Cert2spc.exe (Software Publisher Certificate Test-Tool)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  Erstellt ein SPC (Software Publisher's Certificate, Softwareherausgeberzertifikat) aus einem oder mehreren X.509-Zertifikaten. Dieses Tool wird ausschließlich zu Testzwecken verwendet.  
@@ -63,10 +63,10 @@ Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden a
  Erfasst eine portierbare ausführbare Datei (PE-Datei), die Intermediate Language (IL)-Code enthält, und erstellt eine Textdatei, die in das IL Assembler-Tool (Ilasm.exe) eingegeben werden kann.  
   
  [Installutil.exe (Installer-Tool)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- Ermöglicht das Installieren und Deinstallieren von Serverressourcen durch Ausführen der Installerkomponenten in einer bestimmten Assembly. (Kann mit Klassen im <xref:System.Configuration.Install>-Namespace verwendet werden.) Ermöglicht das Installieren und Deinstallieren von Serverressourcen durch Ausführen der Installerkomponenten in einer bestimmten Assembly. (Kann mit Klassen im <xref:System.Configuration.Install>-Namespace verwendet werden.)  
+ Ermöglicht das Installieren und Deinstallieren von Serverressourcen durch Ausführen der Installerkomponenten in einer bestimmten Assembly. (Kann mit Klassen im <xref:System.Configuration.Install>-Namespace verwendet werden.) 
   
  [Lc.exe (License Compiler-Tool)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- Liest Textdateien mit Informationen über die Lizenzierung und erstellt eine LICENSES-Datei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann. Liest Textdateien mit Informationen über die Lizenzierung und erstellt eine LICENSES-Datei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.  
+ Liest Textdateien mit Informationen über die Lizenzierung und erstellt eine LICENSES-Datei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann. 
   
  [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  Ermöglicht das Erstellen, Bearbeiten und Signieren von Anwendungs- und Bereitstellungsmanifesten. Als Befehlszeilentool kann Mage.exe von Batchskripten und anderen Windows-basierten Anwendungen ausgeführt werden, beispielsweise ASP.NET-Anwendungen.  

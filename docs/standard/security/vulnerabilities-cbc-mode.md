@@ -1,17 +1,17 @@
 ---
-title: Zeitliche Steuerung Sicherheitsrisiken CBC-Modus symmetrische Entschlüsselung mithilfe von Abständen
+title: Verwenden der Auffüllung für die Zeitsteuerung bei Sicherheitsrisiken mit symmetrischer Entschlüsselung im CBC-Modus
 description: Erfahren Sie, wie Sie erkennen und Minimieren von Sicherheitsrisiken der zeitlichen Steuerung mit Cipher Block Chaining (CBC) Modus symmetrische Entschlüsselung mithilfe von Abständen.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
 ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933899"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zeitliche Steuerung Sicherheitsrisiken CBC-Modus symmetrische Entschlüsselung mithilfe von Abständen
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Verwenden der Auffüllung für die Zeitsteuerung bei Sicherheitsrisiken mit symmetrischer Entschlüsselung im CBC-Modus
 
 Microsoft ist davon überzeugt, dass es nicht mehr sicher ist, die Entschlüsselung von Daten, die mit dem Modus (Cipher Block Chaining, CBC), der symmetrischen Verschlüsselung verschlüsselt werden, wenn überprüfbare Auffüllung angewendet wurde, ohne zuerst die Integrität der verschlüsselte Text, sicherzustellen, mit Ausnahme von sehr spezifischen Bedingungen. Diese Bewertung basiert auf aktuell bekannte kryptografische Forschung. 
 

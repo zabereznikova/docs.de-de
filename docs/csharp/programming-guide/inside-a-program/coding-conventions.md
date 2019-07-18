@@ -7,99 +7,99 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 4bb5a8134bb9cbcdb70830628895338ec83b28a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a37109ab2712ea824baab95ca0b175cfa82aab3a
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614119"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267900"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Codekonventionen für C# (C#-Programmierhandbuch)
  Codierungskonventionen dienen den folgenden Zwecken:  
   
--   Sie kreieren ein konsistentes Erscheinungsbild des Codes, sodass Leser sich auf den Inhalt und nicht auf das Layout konzentrieren können.  
+- Sie kreieren ein konsistentes Erscheinungsbild des Codes, sodass Leser sich auf den Inhalt und nicht auf das Layout konzentrieren können.  
   
--   Sie ermöglichen es den Lesern, Code schneller zu verstehen, da Rückschlüsse basierend auf den bisherigen Erfahrungen gezogen werden können.  
+- Sie ermöglichen es den Lesern, Code schneller zu verstehen, da Rückschlüsse basierend auf den bisherigen Erfahrungen gezogen werden können.  
   
--   Sie erleichtern das Kopieren, Ändern und Pflegen des Codes.  
+- Sie erleichtern das Kopieren, Ändern und Pflegen des Codes.  
   
--   Sie zeigen die Best Practices für C#.  
+- Sie zeigen die Best Practices für C#.  
 
  Die Richtlinien in diesem Thema werden von Microsoft verwendet, um Beispiele und die Dokumentation zu entwickeln.  
   
 ## <a name="naming-conventions"></a>Namenskonventionen  
   
--   Verwenden Sie Namespacequalifizierungen in kurzen Beispielen, die keine [using-Anweisungen](../../../csharp/language-reference/keywords/using-directive.md) umfassen. Wenn Sie wissen, dass ein Namespace standardmäßig in ein Projekt importiert wird, müssen Sie den Namen aus diesem Namespace nicht voll qualifizieren. Qualifizierte Namen können nach einem Punkt (.) unterbrochen werden, wenn sie für eine einzelne Zeile zu lang sind, wie im folgenden Beispiel gezeigt.  
+- Verwenden Sie Namespacequalifizierungen in kurzen Beispielen, die keine [using-Anweisungen](../../../csharp/language-reference/keywords/using-directive.md) umfassen. Wenn Sie wissen, dass ein Namespace standardmäßig in ein Projekt importiert wird, müssen Sie den Namen aus diesem Namespace nicht voll qualifizieren. Qualifizierte Namen können nach einem Punkt (.) unterbrochen werden, wenn sie für eine einzelne Zeile zu lang sind, wie im folgenden Beispiel gezeigt.  
   
      [!code-csharp[csProgGuideCodingConventions#1](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#1)]  
   
--   Sie müssen nicht die Namen der Objekte ändern, die mit den Designertools von Visual Studio erstellt wurden, um sie an andere Richtlinien anzupassen.  
+- Sie müssen nicht die Namen der Objekte ändern, die mit den Designertools von Visual Studio erstellt wurden, um sie an andere Richtlinien anzupassen.  
   
 ## <a name="layout-conventions"></a>Layoutkonventionen  
  Ein gutes Layout verwendet Formatierungen, um die Struktur des Codes hervorzuheben und um den Code verständlicher zu gestalten. Microsoft-Beispiele entsprechen den folgenden Konventionen:  
   
--   Verwenden Sie die Code-Editor-Standardeinstellungen (Intelligenter Einzug, vierstelliger Einzug, als Leerzeichen gespeicherte Tabulatoren). Weitere Informationen finden Sie unter [Optionen, Text-Editor, C#, Formatierung](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
+- Verwenden Sie die Code-Editor-Standardeinstellungen (Intelligenter Einzug, vierstelliger Einzug, als Leerzeichen gespeicherte Tabulatoren). Weitere Informationen finden Sie unter [Optionen, Text-Editor, C#, Formatierung](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
--   Schreiben Sie pro Zeile nur eine Anweisung.  
+- Schreiben Sie pro Zeile nur eine Anweisung.  
   
--   Schreiben Sie pro Zeile nur eine Deklaration.  
+- Schreiben Sie pro Zeile nur eine Deklaration.  
   
--   Wenn Fortsetzungszeilen nicht automatisch eingezogen werden, rücken Sie diese um einen Tabstopp (vier Leerzeichen) ein.  
+- Wenn Fortsetzungszeilen nicht automatisch eingezogen werden, rücken Sie diese um einen Tabstopp (vier Leerzeichen) ein.  
   
--   Fügen Sie zwischen Methoden- und Eigenschaftsdefinitionen mindestens eine Leerzeile ein.  
+- Fügen Sie zwischen Methoden- und Eigenschaftsdefinitionen mindestens eine Leerzeile ein.  
   
--   Verwenden Sie Klammern, um Klauseln in einem Ausdruck zu kennzeichnen, wie im folgenden Code gezeigt.  
+- Verwenden Sie Klammern, um Klauseln in einem Ausdruck zu kennzeichnen, wie im folgenden Code gezeigt.  
   
      [!code-csharp[csProgGuideCodingConventions#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#2)]  
   
 ## <a name="commenting-conventions"></a>Konventionen für Kommentare  
   
--   Fügen Sie den Kommentar in einer eigenen Zeile und nicht am Ende einer Codezeile ein.  
+- Fügen Sie den Kommentar in einer eigenen Zeile und nicht am Ende einer Codezeile ein.  
   
--   Beginnen Sie Kommentartext mit einem Großbuchstaben.  
+- Beginnen Sie Kommentartext mit einem Großbuchstaben.  
   
--   Beenden Sie den Kommentartext mit einem Punkt.  
+- Beenden Sie den Kommentartext mit einem Punkt.  
   
--   Fügen Sie ein Leerzeichen zwischen dem Kommentartrennzeichen (//) und dem Kommentartext ein, wie im folgenden Beispiel gezeigt.  
+- Fügen Sie ein Leerzeichen zwischen dem Kommentartrennzeichen (//) und dem Kommentartext ein, wie im folgenden Beispiel gezeigt.  
   
      [!code-csharp[csProgGuideCodingConventions#3](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#3)]  
   
--   Erstellen Sie keine formatierten Blöcke mit Sternchen um Kommentare.  
+- Erstellen Sie keine formatierten Blöcke mit Sternchen um Kommentare.  
   
 ## <a name="language-guidelines"></a>Sprachrichtlinien  
  In den folgenden Abschnitten werden die Vorgehensweisen beschrieben, denen das C#-Team folgt, um Codebeispiele zu erstellen.  
   
 ### <a name="string-data-type"></a>String-Datentyp  
   
--   Verwenden Sie die [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md), um wie im folgenden Code gezeigt kurze Zeichenfolgen zu verketten.  
+- Verwenden Sie die [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md), um wie im folgenden Code gezeigt kurze Zeichenfolgen zu verketten.  
   
      [!code-csharp[csProgGuideCodingConventions#6](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#6)]  
   
--   Verwenden Sie ein <xref:System.Text.StringBuilder>-Objekt, um Zeichenfolgen in Schleifen anzufügen, besonders bei der Arbeit mit großen Textmengen.  
+- Verwenden Sie ein <xref:System.Text.StringBuilder>-Objekt, um Zeichenfolgen in Schleifen anzufügen, besonders bei der Arbeit mit großen Textmengen.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
 ### <a name="implicitly-typed-local-variables"></a>Implizit typisierte lokale Variablen  
   
--   Verwenden Sie die [implizite Typisierung](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) für lokale Variablen, wenn der Typ der Variablen auf der rechten Seite der Zuweisung offensichtlich ist oder wenn der genaue Typ nicht von Bedeutung ist.  
+- Verwenden Sie die [implizite Typisierung](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) für lokale Variablen, wenn der Typ der Variablen auf der rechten Seite der Zuweisung offensichtlich ist oder wenn der genaue Typ nicht von Bedeutung ist.  
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
--   Verwenden Sie nicht [var](../../../csharp/language-reference/keywords/var.md), wenn der Typ nicht von der rechten Seite der Zuweisung offensichtlich ist.  
+- Verwenden Sie nicht [var](../../../csharp/language-reference/keywords/var.md), wenn der Typ nicht von der rechten Seite der Zuweisung offensichtlich ist.  
   
      [!code-csharp[csProgGuideCodingConventions#9](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#9)]  
   
--   Verlassen Sie sich nicht auf den Variablennamen, um den Typ der Variable anzugeben. Er ist unter Umständen nicht korrekt.  
+- Verlassen Sie sich nicht auf den Variablennamen, um den Typ der Variable anzugeben. Er ist unter Umständen nicht korrekt.  
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
--   Vermeiden Sie den Einsatz von `var` anstelle von [dynamic](../../../csharp/language-reference/keywords/dynamic.md).  
+- Vermeiden Sie den Einsatz von `var` anstelle von [dynamic](../../../csharp/language-reference/keywords/dynamic.md).  
   
--   Verwenden Sie die implizite Typisierung, um den Typ der Schleifenvariablen in [for](../../../csharp/language-reference/keywords/for.md)- und [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Schleifen zu bestimmen.  
+- Verwenden Sie die implizite Typisierung, um den Typ der Schleifenvariablen in [for](../../../csharp/language-reference/keywords/for.md)- und [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Schleifen zu bestimmen.  
   
      Im folgenden Beispiel wird die implizite Typisierung in einer `for`-Anweisung verwendet.  
   
-     [!code-csharp[csProgGuideCodingConventions#11](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#11)]  
+     [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
      Im folgenden Beispiel wird die implizite Typisierung in einer `foreach`-Anweisung verwendet.  
   
@@ -107,17 +107,17 @@ ms.locfileid: "54614119"
   
 ### <a name="unsigned-data-type"></a>Datentyp ohne Vorzeichen  
   
--   Verwenden Sie im Allgemeinen `int` anstelle von Typen ohne Vorzeichen. Die Verwendung von `int` ist in C# üblich; durch den Einsatz von `int` wird die Interaktion mit anderen Bibliotheken vereinfacht.  
+- Verwenden Sie im Allgemeinen `int` anstelle von Typen ohne Vorzeichen. Die Verwendung von `int` ist in C# üblich; durch den Einsatz von `int` wird die Interaktion mit anderen Bibliotheken vereinfacht.  
   
 ### <a name="arrays"></a>Arrays  
   
--   Verwenden Sie die präzise Syntax, wenn Sie Arrays in der Deklarationszeile initialisieren.  
+- Verwenden Sie die präzise Syntax, wenn Sie Arrays in der Deklarationszeile initialisieren.  
   
      [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>Delegaten  
   
--   Verwenden Sie die präzise Syntax, um Instanzen eines Delegattyps zu erstellen.  
+- Verwenden Sie die präzise Syntax, um Instanzen eines Delegattyps zu erstellen.  
   
      [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
@@ -125,23 +125,23 @@ ms.locfileid: "54614119"
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>try-catch- und using-Anweisungen in der Ausnahmebehandlung  
   
--   Verwenden Sie eine [try-catch](../../../csharp/language-reference/keywords/try-catch.md)-Anweisung für die meisten Ausnahmebehandlungen.  
+- Verwenden Sie eine [try-catch](../../../csharp/language-reference/keywords/try-catch.md)-Anweisung für die meisten Ausnahmebehandlungen.  
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
--   Vereinfachen Sie den Code mithilfe der C#-Anweisung [using](../../../csharp/language-reference/keywords/using-statement.md). Verwenden Sie bei einer [try-finally](../../../csharp/language-reference/keywords/try-finally.md)-Anweisung, in der der einzige Code im `finally`-Block ein Aufruf der <xref:System.IDisposable.Dispose%2A>-Methode ist, stattdessen eine `using`-Anweisung.  
+- Vereinfachen Sie den Code mithilfe der C#-Anweisung [using](../../../csharp/language-reference/keywords/using-statement.md). Verwenden Sie bei einer [try-finally](../../../csharp/language-reference/keywords/try-finally.md)-Anweisung, in der der einzige Code im `finally`-Block ein Aufruf der <xref:System.IDisposable.Dispose%2A>-Methode ist, stattdessen eine `using`-Anweisung.  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
 ### <a name="-and-124124-operators"></a>&&- und &#124;&#124;-Operatoren  
   
--   Vermeiden Sie Ausnahmen und erhöhen Sie die Leistung durch Überspringen von unnötigen Vergleichen, indem Sie [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) anstelle von [&](../../../csharp/language-reference/operators/and-operator.md) und [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) anstelle von [&#124;](../../../csharp/language-reference/operators/or-operator.md) bei Vergleichen verwenden, wie im folgenden Beispiel gezeigt.  
+- Vermeiden Sie Ausnahmen und erhöhen Sie die Leistung durch Überspringen von unnötigen Vergleichen, indem Sie [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) anstelle von [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) und [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) anstelle von [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) bei Vergleichen verwenden, wie im folgenden Beispiel gezeigt.  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
 ### <a name="new-operator"></a>New-Operator  
   
--   Verwenden Sie die präzise Form der Objektinstanziierung mit impliziter Typisierung, wie in der folgenden Deklaration dargestellt.  
+- Verwenden Sie die präzise Form der Objektinstanziierung mit impliziter Typisierung, wie in der folgenden Deklaration dargestellt.  
   
      [!code-csharp[csProgGuideCodingConventions#19](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#19)]  
   
@@ -149,13 +149,13 @@ ms.locfileid: "54614119"
   
      [!code-csharp[csProgGuideCodingConventions#20](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#20)]  
   
--   Verwenden Sie Objektinitialisierer, um die Objekterstellung zu vereinfachen.  
+- Verwenden Sie Objektinitialisierer, um die Objekterstellung zu vereinfachen.  
   
      [!code-csharp[csProgGuideCodingConventions#21](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#21)]  
   
 ### <a name="event-handling"></a>Ereignisbehandlung  
   
--   Wenn Sie einen Ereignishandler definieren, den Sie später nicht entfernen müssen, verwenden Sie einen Lambdaausdruck.  
+- Wenn Sie einen Ereignishandler definieren, den Sie später nicht entfernen müssen, verwenden Sie einen Lambdaausdruck.  
   
      [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
@@ -163,33 +163,33 @@ ms.locfileid: "54614119"
   
 ### <a name="static-members"></a>Statische Member  
   
--   Rufen Sie [statische](../../../csharp/language-reference/keywords/static.md) Member über diesen Klassennamen auf: *ClassName.StaticMember*. Durch diese Empfehlung ist der Code besser lesbar, da der statische Zugriff eindeutig ist.  Qualifizieren Sie keinen statischen Member, der in einer Basisklasse mit dem Namen einer abgeleiteten Klasse definiert ist.  Während dieser Code kompiliert wird, ist die Lesbarkeit des Codes irreführend, und der Code kann später beschädigt werden, wenn Sie der abgeleiteten Klasse einen statischen Member mit dem gleichen Namen hinzufügen.  
+- Rufen Sie [statische](../../../csharp/language-reference/keywords/static.md) Member über diesen Klassennamen auf: *ClassName.StaticMember*. Durch diese Empfehlung ist der Code besser lesbar, da der statische Zugriff eindeutig ist.  Qualifizieren Sie keinen statischen Member, der in einer Basisklasse mit dem Namen einer abgeleiteten Klasse definiert ist.  Während dieser Code kompiliert wird, ist die Lesbarkeit des Codes irreführend, und der Code kann später beschädigt werden, wenn Sie der abgeleiteten Klasse einen statischen Member mit dem gleichen Namen hinzufügen.  
   
 ### <a name="linq-queries"></a>LINQ-Abfragen  
   
--   Verwenden Sie aussagekräftige Namen für Abfragevariablen. Im folgenden Beispiel wird `seattleCustomers` für Kunden in Seattle verwendet.  
+- Verwenden Sie aussagekräftige Namen für Abfragevariablen. Im folgenden Beispiel wird `seattleCustomers` für Kunden in Seattle verwendet.  
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
--   Verwenden Sie Aliase, um mithilfe der Pascal-Schreibweise sicherzustellen, dass die korrekte Großschreibung von Eigenschaftennamen anonymer Typen verwendet wird.  
+- Verwenden Sie Aliase, um mithilfe der Pascal-Schreibweise sicherzustellen, dass die korrekte Großschreibung von Eigenschaftennamen anonymer Typen verwendet wird.  
   
      [!code-csharp[csProgGuideCodingConventions#26](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#26)]  
   
--   Benennen Sie Eigenschaften um, wenn die Eigenschaftennamen im Ergebnis nicht eindeutig sind. Wenn die Abfrage beispielsweise einen Kundennamen und eine Händler-ID zurückgibt, anstatt sie als `Name` und `ID` im Ergebnis beizubehalten, benennen Sie sie um, um zu verdeutlichen, dass `Name` der Name eines Kunden und `ID` die ID eines Händlers ist.  
+- Benennen Sie Eigenschaften um, wenn die Eigenschaftennamen im Ergebnis nicht eindeutig sind. Wenn die Abfrage beispielsweise einen Kundennamen und eine Händler-ID zurückgibt, anstatt sie als `Name` und `ID` im Ergebnis beizubehalten, benennen Sie sie um, um zu verdeutlichen, dass `Name` der Name eines Kunden und `ID` die ID eines Händlers ist.  
   
      [!code-csharp[csProgGuideCodingConventions#27](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#27)]  
   
--   Verwenden Sie die implizierte Typisierung in der Deklaration von Abfragevariablen und Bereichsvariablen.  
+- Verwenden Sie die implizierte Typisierung in der Deklaration von Abfragevariablen und Bereichsvariablen.  
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
--   Richten Sie Abfrageklauseln unter der [from](../../../csharp/language-reference/keywords/from-clause.md)-Klausel aus, wie in den vorherigen Beispielen gezeigt.  
+- Richten Sie Abfrageklauseln unter der [from](../../../csharp/language-reference/keywords/from-clause.md)-Klausel aus, wie in den vorherigen Beispielen gezeigt.  
   
--   Verwenden Sie vor anderen Abfrageklauseln [where](../../../csharp/language-reference/keywords/where-clause.md)-Klauseln, um sicherzustellen, dass nachfolgende Abfrageklauseln für den reduzierten, gefilterten Datensatz ausgeführt werden.  
+- Verwenden Sie vor anderen Abfrageklauseln [where](../../../csharp/language-reference/keywords/where-clause.md)-Klauseln, um sicherzustellen, dass nachfolgende Abfrageklauseln für den reduzierten, gefilterten Datensatz ausgeführt werden.  
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
--   Verwenden Sie mehrere `from`-Klauseln anstelle einer [join](../../../csharp/language-reference/keywords/join-clause.md)-Klausel, um auf die inneren Auflistungen zuzugreifen. Eine Auflistung von `Student`-Objekten kann beispielsweise jeweils eine Auflistung von Testergebnissen enthalten. Wenn die folgende Abfrage ausgeführt wird, wird jedes Ergebnis über 90 zusammen mit dem Nachnamen des Studenten zurückgegeben, der das Testergebnis erzielt hat.  
+- Verwenden Sie mehrere `from`-Klauseln anstelle einer [join](../../../csharp/language-reference/keywords/join-clause.md)-Klausel, um auf die inneren Auflistungen zuzugreifen. Eine Auflistung von `Student`-Objekten kann beispielsweise jeweils eine Auflistung von Testergebnissen enthalten. Wenn die folgende Abfrage ausgeführt wird, wird jedes Ergebnis über 90 zusammen mit dem Nachnamen des Studenten zurückgegeben, der das Testergebnis erzielt hat.  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   

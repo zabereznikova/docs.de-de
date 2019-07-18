@@ -2,12 +2,12 @@
 title: Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005042"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch
 In diesem Beispiel wird gezeigt, wie die <xref:System.Activities.Statements.TryCatch>-Aktivität innerhalb einer komplexen Ablaufsteuerungsaktivität verwendet werden kann.
@@ -23,7 +23,7 @@ In diesem Beispiel wird gezeigt, wie die <xref:System.Activities.Statements.TryC
 
  Die `CreateFlowchartWithFaults`-Aktivität verwendet eine <xref:System.Activities.Statements.FlowSwitch%601>-Aktivität, die auf das `promoCode`-Argument umschaltet und den Rabatt mit der folgenden Formel berechnet.
 
-|Wert des `promoCode`|Rabatt (%)|
+|Wert von `promoCode`|Rabatt (%)|
 |--------------------------|--------------------|
 |Single|10|
 |MNK|15|
@@ -31,11 +31,11 @@ In diesem Beispiel wird gezeigt, wie die <xref:System.Activities.Statements.TryC
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1.  Öffnen Sie die Projektmappendatei "flowchartwithfaulthandling.sln" mit Visual Studio 2010.
+1. Öffnen Sie die Projektmappendatei "flowchartwithfaulthandling.sln" mit Visual Studio 2010.
 
-2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
 
-3.  Drücken Sie F5, um die Projektmappe auszuführen.
+3. Drücken Sie F5, um die Projektmappe auszuführen.
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

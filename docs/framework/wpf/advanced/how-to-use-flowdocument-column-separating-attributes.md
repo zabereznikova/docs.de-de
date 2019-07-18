@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], FlowDocument column-separating attributes
 ms.assetid: c7a822f8-aeca-45bd-a258-2852ff28005c
 ms.openlocfilehash: 27491b21da587fa198061ba52d8daed5d3f28de3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032048"
 ---
 # <a name="how-to-use-flowdocument-column-separating-attributes"></a>Vorgehensweise: Verwenden von FlowDocument-Attributen für die Trennung von Spalten
 Dieses Beispiel zeigt, wie Sie mit die Trennung von Spalten Features von einem <xref:System.Windows.Documents.FlowDocument>.  

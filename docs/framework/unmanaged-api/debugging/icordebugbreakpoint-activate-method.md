@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ac37df58762dac4e3a6161361cafd8ea87e2657
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0f056e4ae233e70223755c1961cd3ee5da68ec90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491359"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745177"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>ICorDebugBreakpoint::Activate-Methode
 Legt den aktiven Zustand dieses `ICorDebugBreakpoint`.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Activate (  
     [in] BOOL bActive  
 );  

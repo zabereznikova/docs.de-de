@@ -9,11 +9,11 @@ ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698511"
 ---
 # <a name="debugging-enumerations"></a>Debugenumerationen
 In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die die Debug-API verwendet.  
@@ -125,7 +125,7 @@ In diesem Abschnitt werden die nicht verwalteten Enumerationen beschrieben, die 
  Identifiziert die Quelle eines Objekts, das speicherbereinigt werden soll.  
   
  [ILCodeKind-Enumeration](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)  
- Stellt Werte bereit, die angeben, ob der Debugger auf lokale Variablen oder Code, die in der Profiler-ReJIT-Instrumentierung hinzugefügt wurden, zugreifen kann.  
+ Stellt Werte bereit, die angeben, ob der Debugger auf lokale Variablen oder Code, die in der Profiler-ReJIT-Instrumentation hinzugefügt wurden, zugreifen kann.  
   
  [LoggingLevelEnum-Enumeration](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)  
  Gibt den Schweregrad einer beschreibenden Meldung an, die in das Ereignisprotokoll geschrieben wird, wenn ein verwalteter Thread ein Ereignis protokolliert.  

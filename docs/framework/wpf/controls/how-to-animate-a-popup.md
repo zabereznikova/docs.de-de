@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], Popup controls
 ms.assetid: acaa2a0a-6137-4efd-9cd1-75ece222e390
 ms.openlocfilehash: b70d9c4cb1bca26a6c77d3a7c50add517ca8ef92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911286"
 ---
 # <a name="how-to-animate-a-popup"></a>Vorgehensweise: Animieren eines Popups
 Dieses Beispiel zeigt zwei Methoden zum Animieren einer <xref:System.Windows.Controls.Primitives.Popup> Steuerelement.  
@@ -35,5 +35,5 @@ Dieses Beispiel zeigt zwei Methoden zum Animieren einer <xref:System.Windows.Con
 - <xref:System.Windows.Media.RotateTransform>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - <xref:System.Windows.Controls.Primitives.Popup>
-- [Gewusst wie-Themen](popup-how-to-topics.md)
+- [Themen zu Vorgehensweisen](popup-how-to-topics.md)
 - [Übersicht über Popups](popup-overview.md)

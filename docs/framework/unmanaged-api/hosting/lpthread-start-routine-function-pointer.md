@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d1837f9f9f11ad34140f50ec41aa6fe8a62160
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 577526536e07172070a1e8a65e73fd15646681fb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119313"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768348"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE-Funktionszeiger
 Zeigt auf eine Funktion, die den Host benachrichtigt, dass eine Threadausführung begonnen hat.  
   
- Dieser Funktionszeiger ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Dieser Funktionszeiger wurde in .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (  
     [in] LPVOID lpThreadParameter  
 );  

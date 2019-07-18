@@ -9,11 +9,11 @@ helpviewer_keywords:
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
 ms.openlocfilehash: f40d7e8cb814344365e8b88c2659751903b79d77
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969142"
 ---
 # <a name="using-the-world-transformation"></a>Verwenden der globalen Transformation
 Die globale Transformation ist eine Eigenschaft der <xref:System.Drawing.Graphics> Klasse. Die Zahlen, die die globale Transformation angeben, befinden sich in einem <xref:System.Drawing.Drawing2D.Matrix> -Objekt, das eine 3 x 3-Matrix darstellt. Die <xref:System.Drawing.Drawing2D.Matrix> und <xref:System.Drawing.Graphics> Klassen verfügen über mehrere Methoden zum Festlegen der Zahlen in die globale Transformationsmatrix.  

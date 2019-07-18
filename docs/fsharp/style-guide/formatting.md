@@ -1,15 +1,15 @@
 ---
-title: F#Richtlinien für die codeformatierung
+title: Richtlinien für das Formatieren von F#-Code
 description: Erfahren Sie, Richtlinien für die Formatierung F# Code.
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093618"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833907"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#Richtlinien für die codeformatierung
+# <a name="f-code-formatting-guidelines"></a>Richtlinien für das Formatieren von F#-Code
 
 Dieser Artikel bietet Richtlinien für Ihren Code zu formatieren, damit Ihre F# Code ist:
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-Für jeden benutzerdefinierten Operator an, die mit beginnt `*`, Sie müssen eine durch Leerraum am Anfang der Definition, die ein Compiler Mehrdeutigkeiten zu vermeiden, hinzufügen. Aus diesem Grund empfiehlt es sich, dass Sie einfach die Definitionen aller Operatoren mit einem einzelnen Leerzeichen umschließen.
+Für jeden benutzerdefinierten Operator an, die mit beginnt `*` und, die mehr als ein Zeichen ist, müssen Sie ein Leerzeichen am Anfang der Definition, die ein Compiler Mehrdeutigkeiten zu vermeiden, hinzufügen. Aus diesem Grund empfehlen wir, dass Sie einfach die Definitionen aller Operatoren mit einem einzelnen Leerzeichen umschließen.
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>Setzen Sie die Funktion Parameter Pfeile mit einem Leerzeichen
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>Setzen Sie die Argumente der Funktion mit einem Leerzeichen
+
+Wenn Sie eine Funktion zu definieren, verwenden Sie Leerraum um jedes Argument.
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>Typanmerkungen
+
+#### <a name="right-pad-function-argument-type-annotations"></a>Argument-typanmerkungen rechts aufgefüllt-Funktion
+
+Wenn Sie Argumente mit typanmerkungen zu definieren, verwenden Sie Leerzeichen nach den `:` Symbol:
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>Umschließen Rückgabetyp Anmerkungen mit einem Leerzeichen
+
+Verwenden Sie in einer Let gebundenen Funktion oder einen Wert typanmerkung (Rückgabetyp bei einer Funktion), Leerzeichen vor und nach der `:` Symbol:
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>Formatieren von Leerzeilen
@@ -115,7 +155,7 @@ Inlinekommentare sollte der erste Buchstabe groß geschrieben.
 let f x = x + 1 // Increment by one.
 ```
 
-## <a name="naming-conventions"></a>Namenskonventionen 
+## <a name="naming-conventions"></a>Namenskonventionen
 
 ### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Verwenden Sie CamelCase für die Klasse, ausdrucksgebundenen als auch Muster – gebunden Werte und Funktionen
 
@@ -250,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Verwenden Sie Generika Präfix-Syntax (`Foo<T>`) statt Postfix-Syntax (`T Foo`)
 
-F#erbt sowohl den Postfix ML Stil für die Benennung von generischer Typen (z. B. `int list`) sowie das Präfix .NET Stil (z. B. `list<int>`). Bevorzugen Sie das .NET-Format, mit Ausnahme von vier bestimmte Typen:
+F#erbt sowohl den Postfix ML Stil für die Benennung von generischer Typen (z. B. `int list`) sowie das Präfix .NET Stil (z. B. `list<int>`). Bevorzugen Sie das .NET-Format, mit Ausnahme von fünf bestimmten Typen:
 
 1. Für F#-Listen, verwenden Sie die Postfix-Form: `int list` statt `list<int>`.
 2. Für F# ausprobiert haben, verwenden die Postfix-Form: `int option` statt `option<int>`.
-3. Für F# Arrays, verwenden Sie den syntaktischen Namen `int[]` statt `int array` oder `array<int>`.
-4. Verwenden Sie für Referenzzellen, `int ref` statt `ref<int>` oder `Ref<int>`.
+3. Für F# Wertoptionen, verwenden Sie die Postfix-Form: `int voption` statt `voption<int>`.
+4. Für F# Arrays, verwenden Sie den syntaktischen Namen `int[]` statt `int array` oder `array<int>`.
+5. Verwenden Sie für Referenzzellen, `int ref` statt `ref<int>` oder `Ref<int>`.
 
 Verwenden Sie für alle anderen Dateitypen die Präfix-Form.
 
@@ -285,6 +326,7 @@ let update model msg =
     | 1 -> model + 1, []
     | _ -> model, [ msg ]
 ```
+
 Zusammenfassend lässt sich sagen, lieber in Klammern gesetzte Tupel Instanziierungen, aber wenn Tupel für Musterabgleich oder einen Rückgabewert zu verwenden, gilt dies in Ordnung, Klammern zu vermeiden.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formatieren von Unterscheidungs-union-Deklarationen
@@ -344,10 +386,10 @@ type PostalAddress =
     City: string
     Zip: string }
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 // Unusual in F#
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
@@ -359,13 +401,13 @@ Das öffnendes-Token auf eine neue Zeile und dem schließenden-Token in einer ne
 ```fsharp
 // Declaring additional members on PostalAddress
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
     } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -407,7 +449,7 @@ let rainbow =
         Boss8 = "Jeffrey"
         Lackeys = ["Zippy"; "George"; "Bungle"]
     }
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -445,12 +487,12 @@ let rainbow2 =
 
 Und wie mit der Anleitung Datensatz möchten reservieren einzelne Zeilen für die geschweiften Klammern und einen Bereich auf der rechten Seite mit dem Ausdruck einziehen. Beachten Sie, dass in einigen besonderen Fällen, z. B. einen Wert mit einem optionalen ohne Klammern umschließen Sie möglicherweise eine geschweifte Klammer in einer Zeile beibehalten müssen:
 
-```fsharp    
+```fsharp
 type S = { F1: int; F2: string }
 type State = { F:  S option }
 
 let state = { F = Some { F1 = 1; F2 = "Hello" } }
-let newState = 
+let newState =
     {
         state with
             F = Some {
@@ -795,14 +837,14 @@ Wenn für einen Parameter angewendet wird, sie muss in der gleichen Zeile und ge
 
 ## <a name="formatting-literals"></a>Formatieren von literalen
 
-[F#Literale](../language-reference/literals.md) mithilfe der `Literal` Attribut sollte das Attribut in einer eigenen Zeile platzieren, und benennen CamelCase:
+[F#Literale](../language-reference/literals.md) mithilfe der `Literal` Attribut sollte das Attribut in einer eigenen Zeile platzieren, und Benennen von PascalCase:
 
 ```fsharp
 [<Literal>]
-let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let myUrl = "www.mywebsitethatiamworkingwith.com"
+let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 Verhindert, dass das Attribut auf derselben Zeile wie der Wert platziert.

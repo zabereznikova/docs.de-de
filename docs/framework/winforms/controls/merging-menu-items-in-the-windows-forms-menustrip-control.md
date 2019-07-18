@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9a1f59a065faaa3a08a9d8a68973adb1faa5ed09
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582930"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Zusammenführen von Menüelementen im MenuStrip-Steuerelement von Windows Forms
 Wenn Sie eine Anwendung für die Multiple Document Interface (MDI) verfügen, können Sie Menüelemente oder ganze Menüs aus dem untergeordnete Formular in den Menüs des übergeordneten Formulars zusammenführen.  
@@ -20,9 +20,9 @@ Wenn Sie eine Anwendung für die Multiple Document Interface (MDI) verfügen, k�
 ## <a name="general-concepts"></a>Allgemeine Konzepte  
  Das Zusammenführen von Prozeduren umfassen sowohl ein Ziel und ein Datenquellen-Steuerelement:  
   
--   Das Ziel ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement im Hauptformular oder das übergeordnete MDI-Formular, in dem Sie Menüelemente zusammengeführt werden.  
+- Das Ziel ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement im Hauptformular oder das übergeordnete MDI-Formular, in dem Sie Menüelemente zusammengeführt werden.  
   
--   Die Quelle ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement die untergeordneten MDI-Formulars, das die Menüelemente enthält, in dem Menü "Ziel" zusammenzuführen.  
+- Die Quelle ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement die untergeordneten MDI-Formulars, das die Menüelemente enthält, in dem Menü "Ziel" zusammenzuführen.  
   
  Die <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> identifiziert das Menüelement, deren Dropdown-Listenfeld, füllen Sie die Titel der aktuellen MDI, übergeordnete Formular des untergeordneten MDI-Objekte. Angenommen, Sie untergeordnete MDI-Fenster, die derzeit geöffnet sind in der Regel Auflisten der **Fenster** Menü.  
   
@@ -59,4 +59,4 @@ Wenn Sie eine Anwendung für die Multiple Document Interface (MDI) verfügen, k�
 - <xref:System.Windows.Forms.MenuStrip>
 - [MenuStrip-Steuerelement](menustrip-control-windows-forms.md)
 - [Vorgehensweise: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [Vorgehensweise: Einrichten des automatischem Zusammenführens von Menüs für MDI-Anwendungen (Multiple Document Interface)](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [Vorgehensweise: Richten Sie automatische Zusammenführen von Menüs für MDI-Anwendungen](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

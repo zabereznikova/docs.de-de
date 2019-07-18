@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Filtern nach Elementnamen (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 586c371fdd014eee6eb21563214d9e26a0e264fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18100e1097eca52531d28fac2eb6da18446204ef
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540779"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485699"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Vorgehensweise: Filtern nach Elementnamen (LINQ to XML) (C#)
 Wenn Sie eine Methode aufrufen, die eine <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement> zurückgibt, können Sie eine Filterung nach Elementnamen vornehmen.  
@@ -35,22 +35,22 @@ ProductName:Baby Monitor
   
  Die anderen Methoden, die eine <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement>-Auflistungen zurückgeben, folgen dem gleichen Muster. Ihre Signaturen entsprechen denen von <xref:System.Xml.Linq.XContainer.Elements%2A> und <xref:System.Xml.Linq.XContainer.Descendants%2A>. Im Folgenden finden Sie eine vollständige Liste der Methoden, die gleiche Methodensignaturen besitzen:  
   
--   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
+- <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [Working with XML Namespaces (C#) (Arbeiten mit XML-Namespaces (C#))](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Typische Bestellung in einem Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
@@ -73,4 +73,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML Axes (C#) (LINQ to XML-Achsen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)

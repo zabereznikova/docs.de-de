@@ -1,13 +1,13 @@
 ---
-title: <schemeSettings> -Element (Netzwerkeinstellungen)
+title: <schemeSettings>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705011"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<SchemeSettings >-Element (Netzwerkeinstellungen)
 Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.  
@@ -33,8 +33,8 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Hinzufügen](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Fügt eine Schema-Einstellung für ein Schemaname.|  
-|[nicht aktiviert](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Löscht alle vorhandenen Schema-Einstellungen.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Fügt eine Schema-Einstellung für ein Schemaname.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Löscht alle vorhandenen Schema-Einstellungen.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Entfernt eine Schema-Einstellung für einen Schemanamen an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -91,4 +91,4 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

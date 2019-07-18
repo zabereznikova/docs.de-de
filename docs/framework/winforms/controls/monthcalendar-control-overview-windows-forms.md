@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
 ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768484"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>Übersicht über das MonthCalendar-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement stellt eine intuitive grafische Benutzeroberfläche für Benutzer anzeigen und Festlegen von Datumsinformationen. Das Steuerelement zeigt einen Kalender: ein Raster mit die nummerierten Tage des Monats, um unter den Tagen der Woche mit den ausgewählten Datumsbereich hervorgehoben in Spalten angeordnet. Sie können einen anderen Monat auswählen, indem Sie auf die Pfeilschaltflächen auf beiden Seiten der Monat Beschriftung. Anders als die ähnliche <xref:System.Windows.Forms.DateTimePicker> -Steuerelement, können Sie mehr als ein Datum mit diesem Steuerelement auswählen. Weitere Informationen zu den <xref:System.Windows.Forms.DateTimePicker> steuern, finden Sie unter [DateTimePicker-Steuerelement](datetimepicker-control-windows-forms.md).  

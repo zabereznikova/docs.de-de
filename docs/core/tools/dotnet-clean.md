@@ -1,38 +1,43 @@
 ---
 title: Befehl „dotnet clean“
 description: Mit dem Befehl „dotnet clean“ wird das aktuelle Verzeichnis bereinigt.
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169858"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422017"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Dieses Thema gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
 
-## <a name="name"></a>Name
+<!-- todo: uncomment when all CLI commands are reviewed
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
+
+## <a name="name"></a>name
 
 `dotnet clean`: Löscht die Ausgabe eines Projekts.
 
 ## <a name="synopsis"></a>Übersicht
 
 ```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
 Der Befehl `dotnet clean` löscht die Ausgabe des vorherigen Builds. Er ist als [MSBuild-Ziel](/visualstudio/msbuild/msbuild-targets) implementiert, sodass das Projekt ausgewertet wird, wenn der Befehl ausgeführt wird. Es werden nur die Ausgaben gelöscht, die während des Builds erstellt wurden. Sowohl der Ordner für Zwischenausgabe (*obj*) als auch der Ordner für die endgültige Ausgabe (*bin*) werden bereinigt.
 
 ## <a name="arguments"></a>Argumente
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-Das zu bereinigende MSBuild-Projekt. Wenn Sie keine Projektdatei angeben, durchsucht MSBuild das aktuelle Arbeitsverzeichnis nach einer Dateierweiterung, die mit *proj* endet, und verwendet diese.
+MSBuild-Projekt oder Projektmappe, das/die bereinigt werden soll. Wenn Sie keine Projekt- oder Projektmappendatei angeben, durchsucht MSBuild das aktuelle Arbeitsverzeichnis nach einer Dateierweiterung, die mit *proj* oder *sln* endet, und verwendet diese.
 
 ## <a name="options"></a>Optionen
 
@@ -48,9 +53,17 @@ Das zu bereinigende MSBuild-Projekt. Wenn Sie keine Projektdatei angeben, durchs
 
   Druckt eine kurze Hilfe für den Befehl.
 
+* **`--interactive`**
+
+  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten. Beispielsweise, um die Authentifizierung abzuschließen. Verfügbar seit .NET Core 3.0 SDK.
+
+* **`--nologo`**
+
+  Unterdrückt die Anzeige von Startbanner und Copyrightmeldung. Verfügbar seit .NET Core 3.0 SDK.
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Verzeichnis, in dem die Buildausgaben abgelegt wurden. Geben Sie den `-f|--framework <FRAMEWORK>`-Schalter mit dem Schalter des Ausgabeverzeichnisses an, wenn Sie das Framework bei der Erstellung des Projekts angegeben haben.
+  Das Verzeichnis mit den zu bereinigenden Buildartefakten. Geben Sie den `-f|--framework <FRAMEWORK>`-Schalter mit dem Schalter des Ausgabeverzeichnisses an, wenn Sie das Framework bei der Erstellung des Projekts angegeben haben.
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -58,7 +71,7 @@ Das zu bereinigende MSBuild-Projekt. Wenn Sie keine Projektdatei angeben, durchs
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Legt den Ausführlichkeitsgrad für den Befehl fest. Zulässige Grade sind q[uiet], m[inimal], n[ormal], d[etailed] und diag[nostic].
+  Legt den MSBuild-Ausführlichkeitsgrad fest. Zulässige Werte sind `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` und `diag[nostic]`. Die Standardeinstellung ist `normal`.
 
 ## <a name="examples"></a>Beispiele
 

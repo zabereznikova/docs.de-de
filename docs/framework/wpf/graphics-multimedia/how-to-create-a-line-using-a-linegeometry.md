@@ -8,11 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
 ms.openlocfilehash: f8c334a54f78aec7af91064a447fd18f23dcfbdc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905202"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>Vorgehensweise: Erstellen einer Linie mit einer LineGeometry
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.LineGeometry> Klasse, die eine Zeile beschreibt. Ein <xref:System.Windows.Media.LineGeometry> wird durch die Anfangs- und Endpunkte definiert.  
@@ -32,6 +32,6 @@ Eine LineGeometry, gezeichnet von (10,20) bis (100,130)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die Geometrie](geometry-overview.md)
+- [Übersicht über Geometrien](geometry-overview.md)
 - [Erstellen einer zusammengesetzten Form](how-to-create-a-composite-shape.md)
-- [Erstellen einer Form mithilfe einer PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)
+- [Erstellen einer Form mithilfe von PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

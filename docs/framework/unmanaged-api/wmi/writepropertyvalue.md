@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98103367f497b18f9b8fbd61a37abf9816b8356
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 47120ff9de9e6e4802c5aea990841b235cd6c74c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107938"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783058"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue-Funktion
 Schreibt eine angegebene Anzahl von Bytes in eine Eigenschaft, die durch ein Eigenschaftenhandle identifiziert wird.
@@ -30,7 +30,7 @@ Schreibt eine angegebene Anzahl von Bytes in eine Eigenschaft, die durch ein Eig
     
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT WritePropertyValue (
    [in] int                  vFunc, 
    [in] IWbemObjectAccess*   ptr, 

@@ -3,11 +3,11 @@ title: Gleichheitsvorgänge (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1f2fcf87-6f52-4830-b9af-861f9ad999dc
 ms.openlocfilehash: e04fd037e0799a633902b491ad2c4b71fd317989
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644251"
 ---
 # <a name="equality-operations-visual-basic"></a>Gleichheitsvorgänge (Visual Basic)
 Zwei Sequenzen, deren entsprechende Elemente gleich sind und die gleiche Anzahl von Elementen aufweisen, werden als gleich betrachtet werden.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
 ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002230"
 ---
 # <a name="transformations-how-to-topics"></a>Gewusst-wie-Themen zu Transformationen
 Die Themen in diesem Abschnitt wird beschrieben, wie verschiedene Transformationen auf Objekte angewendet.  
@@ -28,7 +28,7 @@ Die Themen in diesem Abschnitt wird beschrieben, wie verschiedene Transformation
  [Neigen eines Elements](how-to-skew-an-element.md)  
  [Angeben des Ursprungs einer Transformation mithilfe von relativen Werten](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
  [Übersetzen eines Elements](how-to-translate-an-element.md)  
- [Verwenden eines MatrixTransform-Objekts zum Erstellen benutzerdefinierter Transformationen](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+ [Verwenden von MatrixTransform zum Erstellen benutzerdefinierter Transformationen](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

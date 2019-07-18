@@ -11,11 +11,11 @@ ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08f67ad363d0bd3efcc7a1eeedd1f48d3bae9407
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875705"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort-MDA
 Der `asynchronousThreadAbort`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein Thread versucht, einen asynchronen Abbruch in einem anderen Thread hervorzurufen. Der `asynchronousThreadAbort`-MDA wird nicht durch synchrone Threadabbrüche aktiviert.
@@ -73,4 +73,4 @@ void FireMda()
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.Thread>
-- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

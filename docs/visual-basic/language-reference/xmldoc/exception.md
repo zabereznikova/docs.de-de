@@ -6,11 +6,11 @@ helpviewer_keywords:
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
 ms.openlocfilehash: 4e2f441863d6a8677593a257cdb2cc841634d47c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940919"
 ---
 # <a name="exception-visual-basic"></a>\<Ausnahme > (Visual Basic)
 Gibt an, welche Ausnahmen ausgelöst werden können.  

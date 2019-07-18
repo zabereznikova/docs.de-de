@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775881"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Vorgehensweise: Kombinieren von Daten mit LINQ mithilfe von Joins (Visual Basic)
 Visual Basic bietet die `Join` und `Group Join` -Abfrageklauseln, um den Inhalt mehrerer Sammlungen basierend auf häufig verwendete Werte zwischen den Sammlungen kombinieren können. Diese Werte werden als bezeichnet *Schlüssel* Werte. Mit relationale Datenbank vertraute Entwickler erkennt die `Join` -Klausel als ein INNER JOIN und `Group Join` -Klausel so effektiv einen LEFT OUTER JOIN.  
@@ -25,9 +25,9 @@ Visual Basic bietet die `Join` und `Group Join` -Abfrageklauseln, um den Inhalt 
   
 #### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>Ein Projekt zu erstellen, die Beispieldaten und Typen enthält.  
   
-1.  Um die Beispiele in diesem Thema auszuführen, öffnen Sie Visual Studio, und fügen Sie ein neues Visual Basic-Konsolenanwendungsprojekt hinzu. Doppelklicken Sie auf die Datei "Module1.vb" von Visual Basic erstellt.  
+1. Um die Beispiele in diesem Thema auszuführen, öffnen Sie Visual Studio, und fügen Sie ein neues Visual Basic-Konsolenanwendungsprojekt hinzu. Doppelklicken Sie auf die Datei "Module1.vb" von Visual Basic erstellt.  
   
-2.  In den Beispielen in diesem Thema verwenden die `Person` und `Pet` Typen und Daten aus dem folgenden Codebeispiel. Kopieren Sie diesen Code in der Standardeinstellung `Module1` Modul von Visual Basic erstellt.  
+2. In den Beispielen in diesem Thema verwenden die `Person` und `Pet` Typen und Daten aus dem folgenden Codebeispiel. Kopieren Sie diesen Code in der Standardeinstellung `Module1` Modul von Visual Basic erstellt.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
@@ -43,7 +43,7 @@ Visual Basic bietet die `Join` und `Group Join` -Abfrageklauseln, um den Inhalt 
   
 #### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Ein Inner Join ausführen, mithilfe der Join-Klausel  
   
-1.  Fügen Sie den folgenden Code der `Module1` Modul in Ihrem Projekt aus, um Beispiele für beide eine implizite und explizite innere Verknüpfung anzuzeigen.  
+1. Fügen Sie den folgenden Code der `Module1` Modul in Ihrem Projekt aus, um Beispiele für beide eine implizite und explizite innere Verknüpfung anzuzeigen.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
@@ -56,7 +56,7 @@ Visual Basic bietet die `Join` und `Group Join` -Abfrageklauseln, um den Inhalt 
   
 #### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Um einen Left Outer Join ausführen, indem Sie mit der Group Join-Klausel  
   
-1.  Fügen Sie den folgenden Code der `Module1` Modul in Ihrem Projekt aus, um Beispiele für eine gruppierte linke äußere Verknüpfung und einen nicht gruppierten linken äußeren Join anzuzeigen.  
+1. Fügen Sie den folgenden Code der `Module1` Modul in Ihrem Projekt aus, um Beispiele für eine gruppierte linke äußere Verknüpfung und einen nicht gruppierten linken äußeren Join anzuzeigen.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
@@ -65,7 +65,7 @@ Visual Basic bietet die `Join` und `Group Join` -Abfrageklauseln, um den Inhalt 
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>Für einen Join mithilfe eines zusammengesetzten Schlüssels  
   
-1.  Fügen Sie den folgenden Code der `Module1` Modul in Ihrem Projekt aus, um Beispiele für einen Join anzuzeigen, die einen zusammengesetzten Schlüssel verwendet.  
+1. Fügen Sie den folgenden Code der `Module1` Modul in Ihrem Projekt aus, um Beispiele für einen Join anzuzeigen, die einen zusammengesetzten Schlüssel verwendet.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
@@ -73,11 +73,11 @@ Visual Basic bietet die `Join` und `Group Join` -Abfrageklauseln, um den Inhalt 
   
 #### <a name="to-add-code-to-run-the-examples"></a>Hinzufügen von Code zum Ausführen der Beispiele  
   
-1.  Ersetzen Sie die `Sub Main` in die `Module1` Modul in Ihrem Projekt durch den folgenden Code zum Ausführen der Beispiele in diesem Thema.  
+1. Ersetzen Sie die `Sub Main` in die `Module1` Modul in Ihrem Projekt durch den folgenden Code zum Ausführen der Beispiele in diesem Thema.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2.  Drücken Sie F5, um die Beispiele ausführen.  
+2. Drücken Sie F5, um die Beispiele ausführen.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0178e2a7877803644bb25e6700306d7ac2ef2d4f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 74e70f58600205d44a9ba052981b2cc67b3a44ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215890"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753806"
 ---
 # <a name="corprfgcgeneration-enumeration"></a>COR_PRF_GC_GENERATION-Enumeration
 Identifiziert eine Garbage Collection-Generation.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_GC_GEN_0 = 0,  
     COR_PRF_GC_GEN_1 = 1,  

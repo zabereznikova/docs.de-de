@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d2fb5a30e165b78fef797bf8bfe536b66cae9a1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524194"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640750"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Vorgehensweise: Schreiben von Text in eine Datei
 In diesem Artikel werden verschiedene Vorgehensweisen zum Schreiben von Text in eine Datei für eine .NET-Anwendung veranschaulicht. 
 
 Die folgenden Klassen und Methoden werden in der Regel zum Schreiben von Text in eine Datei verwendet:  
   
--   <xref:System.IO.StreamWriter> enthält Methoden zum synchronen (<xref:System.IO.StreamWriter.Write%2A> und <xref:System.IO.TextWriter.WriteLine%2A>) oder asynchronen (<xref:System.IO.StreamWriter.WriteAsync%2A> und <xref:System.IO.StreamWriter.WriteLineAsync%2A>) Schreiben in eine Datei.  
+- <xref:System.IO.StreamWriter> enthält Methoden zum synchronen (<xref:System.IO.StreamWriter.Write%2A> und <xref:System.IO.TextWriter.WriteLine%2A>) oder asynchronen (<xref:System.IO.StreamWriter.WriteAsync%2A> und <xref:System.IO.StreamWriter.WriteLineAsync%2A>) Schreiben in eine Datei.  
   
--   <xref:System.IO.File> stellt statische Methoden zum Schreiben von Text in eine Datei (z. B. <xref:System.IO.File.WriteAllLines%2A> und <xref:System.IO.File.WriteAllText%2A>) oder zum Anfügen von Text an eine Datei (z. B. <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> und <xref:System.IO.File.AppendText%2A>) bereit.  
+- <xref:System.IO.File> stellt statische Methoden zum Schreiben von Text in eine Datei (z. B. <xref:System.IO.File.WriteAllLines%2A> und <xref:System.IO.File.WriteAllText%2A>) oder zum Anfügen von Text an eine Datei (z. B. <xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> und <xref:System.IO.File.AppendText%2A>) bereit.  
   
 - <xref:System.IO.Path> wird für Zeichenfolgen verwendet, die Informationen zu Datei- oder Verzeichnispfaden enthalten. Diese Klasse enthält die <xref:System.IO.Path.Combine%2A>-Methode und ab .NET Core 2.1 die Methoden <xref:System.IO.Path.Join%2A> und <xref:System.IO.Path.TryJoin%2A>, mit denen die Verkettung von Zeichenfolgen zum Erstellen eines Datei- oder Verzeichnispfads ermöglicht wird.
 

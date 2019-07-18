@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Sperren von Endpunkten im Unternehmen'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ae4884cb0dcc1b1bdf81d98a9c7a7a87e836af1b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181341"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606236"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Vorgehensweise: Sperren von Endpunkten im Unternehmen
 Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der Sicherheitsrichtlinien der Unternehmen entwickelt werden. Im folgende Thema wird erläutert, wie zum Entwickeln und installieren eine clientendpunktbestätigung, die verwendet werden kann, überprüfen Sie alle Windows Communication Foundation (WCF)-Client-Anwendungen, die auf Computern installiert werden.  
@@ -25,33 +25,33 @@ Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der S
   
 ### <a name="to-create-the-endpoint-validator"></a>So erstellen Sie eine Endpunktbestätigung  
   
-1.  Erstellen Sie ein <xref:System.ServiceModel.Description.IEndpointBehavior> mit den gewünschten Validierungsschritten in der <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>-Methode. Der folgende Code veranschaulicht dies. (Die `InternetClientValidatorBehavior` stammt aus dem [Sicherheitsvalidierung](../../../../docs/framework/wcf/samples/security-validation.md) Beispiel.)  
+1. Erstellen Sie ein <xref:System.ServiceModel.Description.IEndpointBehavior> mit den gewünschten Validierungsschritten in der <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>-Methode. Der folgende Code veranschaulicht dies. (Die `InternetClientValidatorBehavior` stammt aus dem [Sicherheitsvalidierung](../../../../docs/framework/wcf/samples/security-validation.md) Beispiel.)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Erstellen Sie ein neues <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, des die in Schritt 1 erstellte Endpunktbestätigung registriert. Dies wird im folgenden Codebeispiel gezeigt. (Der ursprüngliche Code für dieses Beispiel befindet sich in der [Sicherheitsvalidierung](../../../../docs/framework/wcf/samples/security-validation.md) Beispiel.)  
+2. Erstellen Sie ein neues <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, des die in Schritt 1 erstellte Endpunktbestätigung registriert. Dies wird im folgenden Codebeispiel gezeigt. (Der ursprüngliche Code für dieses Beispiel befindet sich in der [Sicherheitsvalidierung](../../../../docs/framework/wcf/samples/security-validation.md) Beispiel.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Stellen Sie sicher, dass die kompilierte Assembly mit einem starken Namen signiert wird. Weitere Informationen finden Sie unter den [Strong Name-Tool ("sn". EXE-Datei)](https://go.microsoft.com/fwlink/?LinkId=248217) und den Compilerbefehlen für Ihre Sprache.  
+3. Stellen Sie sicher, dass die kompilierte Assembly mit einem starken Namen signiert wird. Weitere Informationen finden Sie unter den [Strong Name-Tool ("sn". EXE-Datei)](https://go.microsoft.com/fwlink/?LinkId=248217) und den Compilerbefehlen für Ihre Sprache.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>So installieren Sie die Bestätigung auf dem Zielcomputer  
   
-1.  Installieren Sie die Endpunktbestätigung mithilfe des entsprechenden Mechanismus. In einem Unternehmen kann dies die Verwendung der Gruppenrichtlinie und des Systems Management Server (SMS) sein.  
+1. Installieren Sie die Endpunktbestätigung mithilfe des entsprechenden Mechanismus. In einem Unternehmen kann dies die Verwendung der Gruppenrichtlinie und des Systems Management Server (SMS) sein.  
   
-2.  Installieren Sie die Assembly mit starkem Namen, in dem global Assembly Cache mithilfe der [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. Installieren Sie die Assembly mit starkem Namen, in dem global Assembly Cache mithilfe der [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-3.  Verwenden Sie die <xref:System.Configuration?displayProperty=nameWithType>-Namespacetypen, um Folgendes durchzuführen:  
+3. Verwenden Sie die <xref:System.Configuration?displayProperty=nameWithType>-Namespacetypen, um Folgendes durchzuführen:  
   
-    1.  Hinzufügen die Erweiterung für die [ \<BehaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) mit einem vollständig qualifizierten Typnamen und Sperren Sie das Element.  
+    1. Hinzufügen die Erweiterung für die [ \<BehaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) mit einem vollständig qualifizierten Typnamen und Sperren Sie das Element.  
   
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]  
   
-    2.  Fügen Sie das verhaltenselement der `EndpointBehaviors` Eigenschaft der [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) und Sperren Sie das Element. (Um eine Bestätigung auf der Dienstseite zu installieren, muss die Bestätigung ein <xref:System.ServiceModel.Description.IServiceBehavior> sein und zur `ServiceBehaviors`-Eigenschaft hinzugefügt werden.) Das folgende Codebeispiel veranschaulicht die ordnungsgemäße Konfiguration nach den Schritten a. und b. Der einzige Unterschied ist, dass hier kein starker Name vergeben wird.  
+    2. Fügen Sie das verhaltenselement der `EndpointBehaviors` Eigenschaft der [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) und Sperren Sie das Element. (Um eine Bestätigung auf der Dienstseite zu installieren, muss die Bestätigung ein <xref:System.ServiceModel.Description.IServiceBehavior> sein und zur `ServiceBehaviors`-Eigenschaft hinzugefügt werden.) Das folgende Codebeispiel veranschaulicht die ordnungsgemäße Konfiguration nach den Schritten a. und b. Der einzige Unterschied ist, dass hier kein starker Name vergeben wird.  
   
          [!code-csharp[LockdownValidation#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#6)]  
   
-    3.  Speichern Sie die Datei machine.config. Das folgende Codebeispiel führt alle Aufgaben in Schritt 3 durch, speichert aber eine lokale Kopie der geänderten Datei machine.config.  
+    3. Speichern Sie die Datei machine.config. Das folgende Codebeispiel führt alle Aufgaben in Schritt 3 durch, speichert aber eine lokale Kopie der geänderten Datei machine.config.  
   
          [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]  
   
@@ -65,5 +65,5 @@ Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der S
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verschlüsseln von Konfigurationsdateielementen mit DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
-- [Verschlüsseln von Konfigurationsdateielementen mit RSA](https://go.microsoft.com/fwlink/?LinkId=94955)
+- [Verschlüsseln von konfigurationsdateielementen mit DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Verschlüsseln von konfigurationsdateielementen mit RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

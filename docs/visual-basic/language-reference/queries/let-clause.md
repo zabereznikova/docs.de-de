@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
 ms.openlocfilehash: ff298f001a2d865446436e8099a2fbbef593a00a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054197"
 ---
 # <a name="let-clause-visual-basic"></a>Let-Klausel (Visual Basic)
 Berechnet einen Wert aus, und weist es eine neue Variable in der Abfrage.  

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1a468d1a2b15d1f92726d8d429fbc5ddece96e6d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990959"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647862"
 ---
 # <a name="namespace-support-in-the-dom"></a>Namespaceunterstützung im Dokumentobjektmodell
 Das XML-DOM (Dokumentobjektmodell) unterstützt Namespaces vollständig. Es werden nur XML-Dokumente unterstützt, die mit Namespaces arbeiten können. Gemäß einer Spezifikation des W3C (World Wide Web Consortium) können DOM-Anwendungen, bei denen Level 1 implementiert ist, Namespaces nicht unterstützen, und DOM-Funktionen mit Level 2 unterstützen Namespaces. Alle Funktionen des XML-DOMs sind jedoch namespacefähig, ungeachtet dessen, ob die Methode aus der Level 1- oder der Level 2-Empfehlung stammt.  
@@ -21,9 +21,9 @@ Das XML-DOM (Dokumentobjektmodell) unterstützt Namespaces vollständig. Es werd
   
  Daher ist für alle Methoden, die einen Namespaceparameter haben, auch ein Präfix für die Angabe des Names erforderlich. Der Namensparameter, z.B. `A:b` in der **setAttribute**-Methode aus dem DOM Level 1, wird wie folgt analysiert:  
   
--   Wenn keine Doppelpunktzeichen (:) vorhanden sind, wird für den lokalen Namen der `name`-Parameter festgelegt, und das Präfix und der NamespaceURI sind leere Zeichenfolgen.  
+- Wenn keine Doppelpunktzeichen (:) vorhanden sind, wird für den lokalen Namen der `name`-Parameter festgelegt, und das Präfix und der NamespaceURI sind leere Zeichenfolgen.  
   
--   Wenn Doppelpunkte vorhanden sind, wird der Name gemäß der Position des ersten Doppelpunktzeichens in zwei Abschnitte aufgeteilt. Als Präfix wird die Zeichenfolge festgelegt, die sich vor dem Doppelpunkt befindet, und als lokaler Name wird die Zeichenfolge festgelegt, die hinter dem Doppelpunkt steht. Bei Methoden, die keinen NamespaceURI-Wert haben, wird der NamespaceURI nicht aufgelöst und bleibt eine leere Zeichenfolge. Andernfalls wird für den NamespaceURI die Zeichenfolge festgelegt, die an die Methode übergeben wird. Wenn das Präfix nicht definiert ist, tritt bei der **Save**-Methode sowie der **InnerXml**-Eigenschaft und der **OuterXml**-Eigenschaft ein Fehler auf.  
+- Wenn Doppelpunkte vorhanden sind, wird der Name gemäß der Position des ersten Doppelpunktzeichens in zwei Abschnitte aufgeteilt. Als Präfix wird die Zeichenfolge festgelegt, die sich vor dem Doppelpunkt befindet, und als lokaler Name wird die Zeichenfolge festgelegt, die hinter dem Doppelpunkt steht. Bei Methoden, die keinen NamespaceURI-Wert haben, wird der NamespaceURI nicht aufgelöst und bleibt eine leere Zeichenfolge. Andernfalls wird für den NamespaceURI die Zeichenfolge festgelegt, die an die Methode übergeben wird. Wenn das Präfix nicht definiert ist, tritt bei der **Save**-Methode sowie der **InnerXml**-Eigenschaft und der **OuterXml**-Eigenschaft ein Fehler auf.  
   
 ## <a name="see-also"></a>Siehe auch
 

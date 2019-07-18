@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 245e00402196ab2a8c5998e9515205bb6f37cce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f9eb4c9e0eb92712b5ea1a4feef24f2bb95d70b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828406"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335458"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>Vorgehensweise: Schreiben von Text in Dateien im Verzeichnis „Eigene Dateien“ in Visual Basic
 Mit dem `My.Computer.FileSystem.SpecialDirectories`-Objekt können Sie auf besondere Verzeichnisse zugreifen, wie z.B. das Verzeichnis **MyDocuments**.  
@@ -21,11 +21,11 @@ Mit dem `My.Computer.FileSystem.SpecialDirectories`-Objekt können Sie auf beson
   
 #### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>Schreiben von Text in Dateien im Verzeichnis „Eigene Dokumente“  
   
-1.  Verwenden Sie die `My.Computer.FileSystem.SpecialDirectories.MyDocuments`-Eigenschaft, um den Pfad bereitzustellen.  
+1. Verwenden Sie die `My.Computer.FileSystem.SpecialDirectories.MyDocuments`-Eigenschaft, um den Pfad bereitzustellen.  
   
      [!code-vb[VbFileIOWrite#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#1)]  
   
-2.  Verwenden Sie die `WriteAllText`-Methode, um Text in eine angegebene Datei zu schreiben.  
+2. Verwenden Sie die `WriteAllText`-Methode, um Text in eine angegebene Datei zu schreiben.  
   
      [!code-vb[VbVbcnMyFileSystem#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#14)]  
   

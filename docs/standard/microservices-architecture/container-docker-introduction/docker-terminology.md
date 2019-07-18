@@ -1,15 +1,13 @@
 ---
 title: Docker-Terminologie
 description: .NET Microservicesarchitektur für .NET-Containeranwendungen | Docker-Terminologie
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9cfb8ceb4fa1b95603ccc9aa006dd6ee3e8e8b3a
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 700cd9a00c30b0a5fc87f9ffcd63821bb578b0cc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920973"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639879"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 

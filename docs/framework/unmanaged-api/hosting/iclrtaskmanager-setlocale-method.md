@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae097320ad7cd6e7c840122bf3f315812e9b2acd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fe45322808a0a756b31f27f9f5c1549ece348e11
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199205"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770119"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale-Methode
 Benachrichtigt, dass der Host den Wert des Gebietsschemabezeichners (die von der geografischen Kultur und Sprache zugeordnet wird) für die derzeit ausgeführte Aufgabe geändert hat der common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetLocale (  
     [in] LCID lcid  
 );  

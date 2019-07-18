@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28e6ad309af808638400fc27255acdee381b4c6e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a7d9874d4a609c353ae772b75a48af632bf4e85d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196696"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756543"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets-Methode
 Zählt Berechtigungen für die Objekte in einem angegebenen Metadatenbereich auf.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumPermissionSets  
    [in, out] HCORENUM      *phEnum,   
    [in]      mdToken       tk,   

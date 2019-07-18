@@ -11,29 +11,29 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9757a8c8327feb40018387473b479e467149f0ed
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224285"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611911"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimieren der Leistung: Weitere Empfehlungen
 <a name="introduction"></a> Dieses Thema enthält Empfehlungen zur Leistung zusätzlich zu denen im Abschnitt [Optimierung der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md).  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Opacity bei Brush-Elementen im Vergleich zu Opacity bei Elementen](#Opacity)  
+- [Opacity bei Brush-Elementen im Vergleich zu Opacity bei Elementen](#Opacity)  
   
--   [Navigation zum Objekt](#Navigation_Objects)  
+- [Navigation zum Objekt](#Navigation_Objects)  
   
--   [Treffertests auf großen 3D-Oberflächen](#Hit_Testing)  
+- [Treffertests auf großen 3D-Oberflächen](#Hit_Testing)  
   
--   [CompositionTarget.Rendering-Ereignis](#CompositionTarget_Rendering_Event)  
+- [CompositionTarget.Rendering-Ereignis](#CompositionTarget_Rendering_Event)  
   
--   [Vermeiden von ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
+- [Vermeiden von ScrollBarVisibility=Auto](#Avoid_Using_ScrollBarVisibility)  
   
--   [Konfigurieren des Diensts für den Schriftartencache zur Reduzierung der Startzeit](#FontCache)  
+- [Konfigurieren des Diensts für den Schriftartencache zur Reduzierung der Startzeit](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Opacity bei Brush-Elementen im Vergleich zu Opacity bei Elementen  
@@ -75,7 +75,7 @@ ms.locfileid: "59224285"
 ## <a name="see-also"></a>Siehe auch
 
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
-- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)
 - [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
 - [Objektverhalten](optimizing-performance-object-behavior.md)

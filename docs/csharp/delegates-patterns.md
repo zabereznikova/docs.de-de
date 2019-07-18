@@ -3,12 +3,12 @@ title: Gängige Muster für Delegate
 description: Erfahren Sie etwas über allgemeine Muster für die Verwendung von Delegaten in Ihrem Code, um starke Kopplung zwischen Komponenten zu vermeiden.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827019"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59095697"
 ---
 # <a name="common-patterns-for-delegates"></a>Gängige Muster für Delegate
 
@@ -98,7 +98,6 @@ Die Protokollierungskomponente kommt gut voran. Fügen wir eine weitere Ausgabe-
 Hier ist diese dateibasierte-Protokollierung:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
-
 
 Wenn Sie diese Klasse erstellt haben, können Sie sie instanziieren und sie fügt ihre LogMessage-Methode in die Protokollierungskomponente an:
 

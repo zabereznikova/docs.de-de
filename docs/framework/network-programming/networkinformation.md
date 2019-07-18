@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
-ms.openlocfilehash: de8cb03e6205a83d2cc93ee300eb3fcac1ac5b74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0820ad6a6d5000ef7ea575e856d883ba5325b1b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230979"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 Mit dem Namespace <xref:System.Net.NetworkInformation> können Sie Informationen über Netzwerkereignisse, Änderungen, Statistiken sowie Eigenschaften sammeln. Sie können auch bestimmen, ob ein remoter Host mithilfe der <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>-Klasse erreichbar ist.  
@@ -24,6 +24,7 @@ Mit dem Namespace <xref:System.Net.NetworkInformation> können Sie Informationen
  Sie können die <xref:System.Net.NetworkInformation.Ping>-Klasse verwenden, um zu bestimmen, ob ein Remotehost verfügbar, auf dem Netzwerk oder erreichbar ist. Weitere Informationen finden Sie unter [Vorgehensweise: Pingen eines Hosts](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Beispiel zur Netzwerk-Informationstechnologie](https://go.microsoft.com/fwlink/?LinkID=179564)
 - [Beispiel zur Technologie des NetStat-Tools](https://go.microsoft.com/fwlink/?LinkID=179562)

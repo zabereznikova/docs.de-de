@@ -2,12 +2,12 @@
 title: Verbindungszeichenfolgen-Syntax
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4ec2b8a0a478f59ca66f8699e7846004a3a409cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084956"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583603"
 ---
 # <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
 Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xref:System.Data.Common.DbConnection> erbt, sowie eine anbieterspezifische <xref:System.Data.Common.DbConnection.ConnectionString%2A>-Eigenschaft. Die spezifische Verbindungszeichenfolgensyntax für den jeweiligen Anbieter wird in dessen `ConnectionString`-Eigenschaft dokumentiert. In der folgenden Tabelle sind die vier Datenanbieter aufgelistet, die in .NET Framework enthalten sind.  
@@ -22,13 +22,13 @@ Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xre
 ## <a name="connection-string-builders"></a>Verbindungszeichenfolgen-Generatoren  
  In ADO.NET 2.0 wurden die folgenden Verbindungszeichenfolgen-Generatoren für .NET Framework-Datenanbieter eingeführt.  
   
--   <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
--   <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
+- <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
   
--   <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
+- <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
   
--   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
+- <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  Mit den Verbindungszeichenfolgen-Generatoren können Sie zur Laufzeit syntaktisch gültige Verbindungszeichenfolgen erstellen, sodass Sie die Werte der Verbindungszeichenfolgen nicht manuell im Code verketten müssen. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../../../../docs/framework/data/adonet/connection-string-builders.md).  
 
@@ -43,7 +43,7 @@ Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xre
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` löst eine Ausnahme bei der Verwendung mit der `OleDb` Anbieter.  
+>  Wenn der `Integrated Security=true`-Anbieter verwendet wird, wird bei `OleDb` eine Ausnahme ausgelöst.  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient-Verbindungszeichenfolgen  
 Die Syntax für eine <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge wird in der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>-Eigenschaft dokumentiert. Mit der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>-Eigenschaft können Sie eine Verbindungszeichenfolge für eine SQL Server-Datenbank abrufen oder festlegen. Wenn Sie eine Verbindung mit einer früheren Version von SQL Server herstellen müssen, müssen Sie den .NET Framework-Datenanbieter für OLE DB verwenden (<xref:System.Data.OleDb>). Für die meisten Schlüsselwörter in Verbindungszeichenfolgen gibt es bei den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>-Eigenschaften passende Entsprechungen.  
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  Es ist möglich, geben Sie Verbindungsinformationen für eine **OleDbConnection** in einer Datei (Universal Data Link, UDL), jedoch müssen dies zu vermeiden. UDL-Dateien sind nicht verschlüsselt und machen Informationen zur Verbindungszeichenfolge im Klartext verfügbar. Da es sich bei einer UDL-Datei um eine externe Ressource der Anwendung handelt, kann sie nicht mit .NET Framework gesichert werden. UDL-Dateien können nicht für **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Verwenden von "DataDirectory" zum Herstellen einer Verbindung mit Access/Jet  
- `DataDirectory` steht nicht exklusiv für `SqlClient`. Es kann auch für den <xref:System.Data.OleDb>- und den <xref:System.Data.Odbc>-.NET-Datenanbieter verwendet werden. Die folgende <xref:System.Data.OleDb.OleDbConnection>-Beispielzeichenfolge zeigt die Syntax, die erforderlich ist, um eine Verbindung mit der im Ordner &lt;legacyBold&gt;app_data&lt;/legacyBold&gt; der Anwendung befindlichen Datei &lt;legacyBold&gt;Northwind.mdb&lt;/legacyBold&gt; herzustellen. Die Systemdatenbank (System.mdw) ist ebenfalls an diesem Speicherort gespeichert.  
+ `DataDirectory` steht nicht exklusiv für `SqlClient` zur Verfügung. Es kann auch für den <xref:System.Data.OleDb>- und den <xref:System.Data.Odbc>-.NET-Datenanbieter verwendet werden. Die folgende <xref:System.Data.OleDb.OleDbConnection>-Beispielzeichenfolge zeigt die Syntax, die erforderlich ist, um eine Verbindung mit der im Ordner &lt;legacyBold&gt;app_data&lt;/legacyBold&gt; der Anwendung befindlichen Datei &lt;legacyBold&gt;Northwind.mdb&lt;/legacyBold&gt; herzustellen. Die Systemdatenbank (System.mdw) ist ebenfalls an diesem Speicherort gespeichert.  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
 ms.openlocfilehash: 131562e9ee0fbfde8c94f580bcb6d452918f42ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037582"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Vorgehensweise: Abrufen von Informationen als schreibgeschützt
 Wenn Sie nicht beabsichtigen, die Daten zu ändern, können Sie die Abfrageleistung steigern, indem Sie schreibgeschützte Ergebnisse verwenden.  

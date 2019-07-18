@@ -6,25 +6,23 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 1f1ac68e49b5f84a41e3091b1a81010e7aa7cc0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9042548c52a7a82f75b4287323097655ffec48bf
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363162"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610419"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Exemplarische Vorgehensweise: Hosten von WPF-Inhalt in Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie allerdings bereits erheblichen Aufwand für [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-Code betrieben haben, kann es effektiver sein, zumindest einen Teil dieses Codes in Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung wieder zu verwenden, anstatt ihn vollständig neu zu schreiben. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet ein einfaches Verfahren zum Hosten von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalte in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster.  
   
- In diesem Tutorial wird beschrieben, wie eine beispielanwendung schreiben [Hosten von WPF-Inhalt in einem Win32-Fenster](https://go.microsoft.com/fwlink/?LinkID=160004), die von Hosts [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalte in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster. Dieses Beispiel kann auf das Hosten beliebiger [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Fenster erweitert werden.  Da verwalteter und nicht verwalteter Code kombiniert werden muss, wird die Anwendung in [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] geschrieben.  
-  
- 
-  
+ In diesem Tutorial wird beschrieben, wie eine beispielanwendung schreiben [Hosten von WPF-Inhalt in einem Win32-Fenster](https://go.microsoft.com/fwlink/?LinkID=160004), die von Hosts [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalte in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster. Dieses Beispiel kann auf das Hosten beliebiger [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Fenster erweitert werden. Da verwalteter und nicht verwalteter Code kombiniert werden muss, wird die Anwendung in [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] geschrieben.  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Anforderungen  
  In diesem Lernprogramm wird vorausgesetzt, dass Sie mit den Grundlagen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Programmierung und der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Programmierung vertraut sind. Für eine grundlegende Einführung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Programmierung finden Sie [Einstieg](../getting-started/index.md). Eine Einführung in die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] , Sie-Programmierung zahlreichen Büchern zu diesem Thema, insbesondere *Programming Windows* von Charles Petzold.  
   
- Da das Beispiel, das in diesem Lernprogramm begleitet in implementiert ist [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], in diesem Tutorial wird davon ausgegangen, Vertrautheit mit der Verwendung von [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] Programm die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] sowie einen Überblick über die Programmierung von verwaltetem Code. Grundkenntnisse in [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] sind hilfreich, aber keine Voraussetzung.  
+ Da das Beispiel, das in diesem Lernprogramm begleitet in implementiert ist [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], in diesem Tutorial wird davon ausgegangen, Vertrautheit mit der Verwendung von [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] Programm die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-API sowie einen Überblick über verwalteten Code programmieren. Grundkenntnisse in [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] sind hilfreich, aber keine Voraussetzung.  
   
 > [!NOTE]
 >  Dieses Lernprogramm enthält eine Reihe von Codebeispielen aus dem genannten Beispiel. Aus Gründen der besseren Lesbarkeit wird jedoch nicht der gesamte Beispielcode aufgeführt. Den vollständigen Beispielcode finden Sie unter [Hosten von WPF-Inhalt in einem Win32-Fenster](https://go.microsoft.com/fwlink/?LinkID=160004).  
@@ -35,77 +33,77 @@ ms.locfileid: "57363162"
   
  Entscheidend für das Hosten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] von Inhalt an einen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster ist die <xref:System.Windows.Interop.HwndSource> Klasse. Diese Klasse umschließt die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalte in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster, sodass er integriert werden soll Ihre [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] als untergeordnetes Fenster. Bei folgender Vorgehensweise werden [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in einer einzigen Anwendung zusammengefasst.  
   
-1.  Implementieren Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Inhalt als verwaltete Klasse.  
+1. Implementieren Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Inhalt als verwaltete Klasse.  
   
-2.  Implementieren Sie eine [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Anwendung mit [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]. Wenn Sie mit einer vorhandenen Anwendung und nicht verwaltetem [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]-Code beginnen, können Sie diese in der Regel verwalteten Code aufrufen lassen, indem Sie das `/clr`-Compilerflag in die Projekteinstellungen aufnehmen.  
+2. Implementieren Sie eine [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Anwendung mit [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]. Wenn Sie mit einer vorhandenen Anwendung und nicht verwaltetem [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]-Code beginnen, können Sie diese in der Regel verwalteten Code aufrufen lassen, indem Sie das `/clr`-Compilerflag in die Projekteinstellungen aufnehmen.  
   
-3.  Legen Sie das Threadingmodell auf Singlethread-Apartment (STA) fest.  
+3. Legen Sie das Threadingmodell auf Singlethread-Apartment (STA) fest.  
   
-4.  Behandeln der [WM_CREATE](/windows/desktop/winmsg/wm-create)Benachrichtigung in Ihrer Fensterprozedur, und führen Sie folgende Schritte:  
+4. Behandeln der [WM_CREATE](/windows/desktop/winmsg/wm-create)Benachrichtigung in Ihrer Fensterprozedur, und führen Sie folgende Schritte:  
   
-    1.  Erstellen Sie ein neues <xref:System.Windows.Interop.HwndSource>-Objekt, und verwenden Sie das übergeordnete Fenster als `parent`-Parameter.  
+    1. Erstellen Sie ein neues <xref:System.Windows.Interop.HwndSource>-Objekt, und verwenden Sie das übergeordnete Fenster als `parent`-Parameter.  
   
-    2.  Erstellen Sie eine Instanz der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhaltsklasse.  
+    2. Erstellen Sie eine Instanz der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhaltsklasse.  
   
-    3.  Weisen Sie einen Verweis auf die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Inhaltsobjekt zu den <xref:System.Windows.Interop.HwndSource.RootVisual%2A> Eigenschaft der <xref:System.Windows.Interop.HwndSource>.  
+    3. Weisen Sie einen Verweis auf die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Inhaltsobjekt zu den <xref:System.Windows.Interop.HwndSource.RootVisual%2A> Eigenschaft der <xref:System.Windows.Interop.HwndSource>.  
   
-    4.  Rufen Sie HWND für den Inhalt ab. Die <xref:System.Windows.Interop.HwndSource.Handle%2A>-Eigenschaft des <xref:System.Windows.Interop.HwndSource>-Objekts enthält das Fensterhandle (HWND). Um ein HWND zu erhalten, das Sie im nicht verwalteten Teil der Anwendung verwenden können, wandeln Sie `Handle.ToPointer()` in ein HWND um.  
+    4. Rufen Sie HWND für den Inhalt ab. Die <xref:System.Windows.Interop.HwndSource.Handle%2A>-Eigenschaft des <xref:System.Windows.Interop.HwndSource>-Objekts enthält das Fensterhandle (HWND). Um ein HWND zu erhalten, das Sie im nicht verwalteten Teil der Anwendung verwenden können, wandeln Sie `Handle.ToPointer()` in ein HWND um.  
   
-5.  Implementieren Sie eine verwaltete Klasse, die ein statisches Feld mit einem Verweis auf den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt enthält. Diese Klasse ermöglicht Ihnen, einen Verweis auf den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt vom [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Code abzurufen.  
+5. Implementieren Sie eine verwaltete Klasse, die ein statisches Feld mit einem Verweis auf den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt enthält. Diese Klasse ermöglicht Ihnen, einen Verweis auf den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt vom [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Code abzurufen.  
   
-6.  Weisen Sie dem statischen Feld den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt zu.  
+6. Weisen Sie dem statischen Feld den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt zu.  
   
-7.  Empfangen von Benachrichtigungen vom die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -inhaltsobjektereignisse einen Handler an eine oder mehrere der Inhalt der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ereignisse.  
+7. Empfangen von Benachrichtigungen vom die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -inhaltsobjektereignisse einen Handler an eine oder mehrere der Inhalt der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ereignisse.  
   
-8.  Kommunizieren Sie mithilfe des im statischen Feld gespeicherten Verweises mit dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt, um Eigenschaften festzulegen usw.  
+8. Kommunizieren Sie mithilfe des im statischen Feld gespeicherten Verweises mit dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt, um Eigenschaften festzulegen usw.  
   
 > [!NOTE]
->  Sie können auch [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] zum Implementieren Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt. Sie müssen ihn allerdings separat als eine [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] kompilieren und auf diese [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] aus Ihrer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Anwendung heraus verweisen. Die übrigen Schritte ähneln dem oben beschriebenen Verfahren. 
+>  Sie können auch [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] zum Implementieren Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt. Sie müssen ihn allerdings separat als eine [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] kompilieren und auf diese [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] aus Ihrer [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Anwendung heraus verweisen. Die übrigen Schritte ähneln dem oben beschriebenen Verfahren.
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>Implementieren der Hostanwendung
  In diesem Abschnitt wird beschrieben, wie Sie Host [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Inhalt in einer grundlegenden [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Anwendung. Der Inhalt selbst wird in [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] als verwaltete Klasse implementiert. Größtenteils handelt es sich um eine einfache [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Programmierung. Die wichtigsten Aspekte der Content-Implementierung finden Sie im [Implementieren des WPF-Inhalts](#implementing_the_wpf_page).
 
 <a name="autoNestedSectionsOUTLINE1"></a>
--   [Die grundlegende Anwendung](#the_basic_application)
+- [Die grundlegende Anwendung](#the_basic_application)
 
--   [Hosten des WPF-Inhalts](#hosting_the_wpf_page)
+- [Hosten des WPF-Inhalts](#hosting_the_wpf_page)
 
--   [Verweisen auf den WPF-Inhalt](#holding_a_reference)
+- [Verweisen auf den WPF-Inhalt](#holding_a_reference)
 
--   [Kommunizieren mit dem WPF-Inhalt](#communicating_with_the_page)
+- [Kommunizieren mit dem WPF-Inhalt](#communicating_with_the_page)
 
 <a name="the_basic_application"></a>
 ### <a name="the-basic-application"></a>Die grundlegende Anwendung
  Der Ausgangspunkt für die hostanwendung bestand darin, eine Visual Studio 2005-Vorlage zu erstellen.
 
-1.  Öffnen Sie Visual Studio 2005, und wählen Sie **neues Projekt** aus der **Datei** Menü.
+1. Öffnen Sie Visual Studio 2005, und wählen Sie **neues Projekt** aus der **Datei** Menü.
 
-2.  Wählen Sie **Win32** aus der Liste der [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] Projekttypen. Wenn Ihre Standardsprache nicht [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], finden Sie diese Projekttypen unter **andere Sprachen**.
+2. Wählen Sie **Win32** aus der Liste der [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] Projekttypen. Wenn Ihre Standardsprache nicht [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], finden Sie diese Projekttypen unter **andere Sprachen**.
 
-3.  Wählen Sie eine **Win32-Projekt** -Vorlage aus, weisen Sie einen Namen für das Projekt, und klicken Sie auf **OK** zum Starten der **Win32-Anwendungsassistenten**.
+3. Wählen Sie eine **Win32-Projekt** -Vorlage aus, weisen Sie einen Namen für das Projekt, und klicken Sie auf **OK** zum Starten der **Win32-Anwendungsassistenten**.
 
-4.  Akzeptieren Sie die Standardeinstellungen des Assistenten, und klicken Sie auf **Fertig stellen** auf das Projekt zu starten.
+4. Akzeptieren Sie die Standardeinstellungen des Assistenten, und klicken Sie auf **Fertig stellen** auf das Projekt zu starten.
 
  Mit der Vorlage wird eine grundlegende [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Anwendung erstellt, die Folgendes enthält:
 
--   Einen Einstiegspunkt für die Anwendung.
+- Einen Einstiegspunkt für die Anwendung.
 
--   Ein Fenster mit einer zugeordneten Fensterprozedur (WndProc).
+- Ein Fenster mit einer zugeordneten Fensterprozedur (WndProc).
 
--   Ein Menü mit **Datei** und **Hilfe** Überschriften. Die **Datei** Menü enthält eine **beenden** Element, das die Anwendung geschlossen wird. Die **Hilfe** Menü enthält eine **zu** Element, ein einfaches Dialogfeld gestartet wird.
+- Ein Menü mit **Datei** und **Hilfe** Überschriften. Die **Datei** Menü enthält eine **beenden** Element, das die Anwendung geschlossen wird. Die **Hilfe** Menü enthält eine **zu** Element, ein einfaches Dialogfeld gestartet wird.
 
  Bevor Sie beginnen das Schreiben von Code zum Hosten der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt, müssen Sie zwei Änderungen an der grundlegenden Vorlage vornehmen.
 
  Die erste besteht darin, das Projekt als verwalteten Code zu kompilieren. Standardmäßig wird das Projekt als nicht verwalteter Code kompiliert. Da aber [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in verwaltetem Code implementiert wird, muss das Projekt entsprechend kompiliert werden.
 
-1.  Mit der rechten Maustaste in des Namens des Projekts **Projektmappen-Explorer** , und wählen Sie **Eigenschaften** aus dem Kontextmenü zum Starten der **Eigenschaftenseiten** Dialogfeld.
+1. Mit der rechten Maustaste in des Namens des Projekts **Projektmappen-Explorer** , und wählen Sie **Eigenschaften** aus dem Kontextmenü zum Starten der **Eigenschaftenseiten** Dialogfeld.
 
-2.  Wählen Sie **Konfigurationseigenschaften** aus der Strukturansicht im linken Bereich.
+2. Wählen Sie **Konfigurationseigenschaften** aus der Strukturansicht im linken Bereich.
 
-3.  Wählen Sie **Common Language Runtime** aus unterstützen, die die **Projektstandards** Liste im rechten Bereich.
+3. Wählen Sie **Common Language Runtime** aus unterstützen, die die **Projektstandards** Liste im rechten Bereich.
 
-4.  Wählen Sie **Common Language Runtime-Unterstützung (/ Clr)** aus dem Dropdown-Listenfeld.
+4. Wählen Sie **Common Language Runtime-Unterstützung (/ Clr)** aus dem Dropdown-Listenfeld.
 
 > [!NOTE]
 >  Das Compilerflag ermöglicht Ihnen, in der Anwendung verwalteten Code zu verwenden. Der nicht verwaltete Code wird jedoch wie zuvor kompiliert.
@@ -129,7 +127,7 @@ ms.locfileid: "57363162"
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 
- Sie können keine hosten die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt direkt im Anwendungsfenster. Stattdessen müssen Sie zuerst ein <xref:System.Windows.Interop.HwndSource>-Objekt erstellen, um den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt zu umschließen. Dieses Objekt stellt im Wesentlichen ein Fenster, das zum Hosten dient eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt. Sie hosten die <xref:System.Windows.Interop.HwndSource> Objekt im übergeordneten Fenster, indem es als untergeordnetes Element erstellen eine [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster, das Teil Ihrer Anwendung ist. Die <xref:System.Windows.Interop.HwndSource>-Konstruktorparameter enthalten größtenteils dieselben Informationen, die Sie beim Erstellen eines untergeordneten [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Fensters an CreateWindow übergeben würden. 
+ Sie können keine hosten die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt direkt im Anwendungsfenster. Stattdessen müssen Sie zuerst ein <xref:System.Windows.Interop.HwndSource>-Objekt erstellen, um den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt zu umschließen. Dieses Objekt stellt im Wesentlichen ein Fenster, das zum Hosten dient eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt. Sie hosten die <xref:System.Windows.Interop.HwndSource> Objekt im übergeordneten Fenster, indem es als untergeordnetes Element erstellen eine [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster, das Teil Ihrer Anwendung ist. Die <xref:System.Windows.Interop.HwndSource>-Konstruktorparameter enthalten größtenteils dieselben Informationen, die Sie beim Erstellen eines untergeordneten [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Fensters an CreateWindow übergeben würden.
 
  Als Nächstes erstellen Sie eine Instanz von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Content-Objekt. In diesem Fall wird der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt unter Verwendung von `WPFPage` als separate Klasse, nämlich [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], implementiert. Sie können den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt auch mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementieren. Hierzu Sie müssen allerdings ein separates Projekt einrichten, und erstellen die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalte als ein [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]. Sie können dem Projekt einen Verweis auf diese [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] hinzufügen und ihn zum Erstellen einer Instanz des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalts verwenden.
 
@@ -172,11 +170,11 @@ ms.locfileid: "57363162"
  Sie hosten können, und Verwenden der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt ohne Kenntnisse in der tatsächlichen Implementierung. Wenn die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Inhalt in einem separaten gepackt [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], es könnte erstellt wurden in einem [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Sprache. Es folgt eine kurze exemplarische Vorgehensweise zur [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]-Implementierung, die in diesem Beispiel verwendet wird. Dieser Abschnitt enthält folgende Unterabschnitte:
 
 <a name="autoNestedSectionsOUTLINE2"></a>
--   [Layout](#page_layout)
+- [Layout](#page_layout)
 
--   [Zurückgeben der Daten an das Hostfenster](#returning_data_to_window)
+- [Zurückgeben der Daten an das Hostfenster](#returning_data_to_window)
 
--   [Festlegen der WPF-Eigenschaften](#set_page_properties)
+- [Festlegen der WPF-Eigenschaften](#set_page_properties)
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>Layout
@@ -192,7 +190,7 @@ ms.locfileid: "57363162"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
 
- Die nächste Zeile enthält das <xref:System.Windows.Controls.Label>-Steuerelement für den Namen und das zugehörige <xref:System.Windows.Controls.TextBox>-Steuerelement. Da für jedes aus Beschriftung und Textfeld bestehende Paar derselbe Code verwendet wird, wird er in einem Paar privater Methoden platziert und für alle fünf Paare aus Beschriftung/Textfeld verwendet. Durch die Methoden wird das entsprechende Steuerelement erstellt, und es werden die statischen Methoden <xref:System.Windows.Controls.Grid.SetColumn%2A> und <xref:System.Windows.Controls.Grid.SetRow%2A> der <xref:System.Windows.Controls.Grid>-Klasse aufgerufen, um die Steuerelemente in der entsprechenden Zelle zu platzieren. Nachdem das Steuerelement erstellt wurde, wird im Beispiel die <xref:System.Windows.Controls.UIElementCollection.Add%2A>-Methode für die <xref:System.Windows.Controls.Panel.Children%2A>-Eigenschaft von <xref:System.Windows.Controls.Grid> aufgerufen, um das Steuerelement zum Raster hinzuzufügen. Der Code zum Hinzufügen der übrigen Beschriftung/Textfeld-Paare ist ähnlich. Sehen Sie sich den Beispielcode an, um ausführliche Informationen zu erhalten.
+ Die nächste Zeile enthält das <xref:System.Windows.Controls.Label>-Steuerelement für den Namen und das zugehörige <xref:System.Windows.Controls.TextBox>-Steuerelement. Da für jedes aus Beschriftung und Textfeld bestehende Paar derselbe Code verwendet wird, wird er in einem Paar privater Methoden platziert und für alle fünf Paare aus Beschriftung/Textfeld verwendet. Durch die Methoden wird das entsprechende Steuerelement erstellt, und es werden die statischen Methoden <xref:System.Windows.Controls.Grid> und <xref:System.Windows.Controls.Grid.SetColumn%2A> der <xref:System.Windows.Controls.Grid.SetRow%2A>-Klasse aufgerufen, um die Steuerelemente in der entsprechenden Zelle zu platzieren. Nachdem das Steuerelement erstellt wurde, wird im Beispiel die <xref:System.Windows.Controls.UIElementCollection.Add%2A>-Methode für die <xref:System.Windows.Controls.Panel.Children%2A>-Eigenschaft von <xref:System.Windows.Controls.Grid> aufgerufen, um das Steuerelement zum Raster hinzuzufügen. Der Code zum Hinzufügen der übrigen Beschriftung/Textfeld-Paare ist ähnlich. Sehen Sie sich den Beispielcode an, um ausführliche Informationen zu erhalten.
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
 

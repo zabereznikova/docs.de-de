@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36556
 ms.assetid: e3ba1f33-3a71-4f03-9b04-ed5ec17de17c
-ms.openlocfilehash: b798f296b62b51de34a7ec5ce5a8b608273f5748
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f657048a8aa9748104e40503e727a5e6d90a87ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819228"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646855"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>Der Membername eines anonymen Typs kann nur von einem einfachen oder qualifizierten Namen ohne Argumente abgeleitet werden
 Einen anonymer Typmembernamen aus einem komplexen Ausdruck kann nicht abgeleitet werden.  
@@ -29,7 +29,7 @@ Dim numbers() As Integer = {1, 2, 3, 4, 5}
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Weisen Sie den Ausdruck zu einem Elementnamen, wie im folgenden Code gezeigt:  
+- Weisen Sie den Ausdruck zu einem Elementnamen, wie im folgenden Code gezeigt:  
   
     ```  
     Dim instanceName2 = New With {.number = numbers(3)}  

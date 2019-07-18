@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a95008d98436161ac919ef307273bc797519f15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d3490477f30cd1c0badaa9cfd71433a5bf9d7a99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080617"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738994"
 ---
-# <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName-Funktion
+# <a name="efngetmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName-Funktion
 Ruft den Namen des Typs mithilfe der bereitgestellten verwalteten Objektzeiger ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT _EFN_GetManagedObjectName(  
     [in]  PDEBUG_CLIENT  Client,  
     [in]  ULONG64        objAddr,  

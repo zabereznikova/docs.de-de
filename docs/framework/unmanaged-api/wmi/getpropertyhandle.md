@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92d48caf7de873850135c7410a5e4b5861131212
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d1397188b38066bac6375da0c76e7d66724a75d7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366373"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636241"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle-Funktion
 

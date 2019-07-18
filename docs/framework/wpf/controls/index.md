@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0727bb8ac4f0ff25640ae6f8e292d89f903e4eb5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154413"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627322"
 ---
 # <a name="controls"></a>Steuerelemente
 <a name="introduction"></a>
@@ -33,11 +33,11 @@ ms.locfileid: "59154413"
 ## <a name="changing-the-appearance-of-a-control"></a>Ändern der Darstellung eines Steuerelements  
  Es ist üblich, die Darstellung eines Steuerelements zu ändern, sodass es zum Aussehen und Verhalten der Anwendung passt. Sie können die Darstellung eines Steuerelements je nach Absicht auf eine der folgenden Weisen ändern:  
   
--   Ändern des Werts einer Eigenschaft des Steuerelements.  
+- Ändern des Werts einer Eigenschaft des Steuerelements.  
   
--   Erstellen Sie eine <xref:System.Windows.Style> für das Steuerelement.  
+- Erstellen Sie eine <xref:System.Windows.Style> für das Steuerelement.  
   
--   Erstellen Sie ein neues <xref:System.Windows.Controls.ControlTemplate> für das Steuerelement.  
+- Erstellen Sie ein neues <xref:System.Windows.Controls.ControlTemplate> für das Steuerelement.  
   
 ### <a name="changing-a-controls-property-value"></a>Ändern eines Eigenschaftswerts eines Steuerelements  
  Viele Steuerelemente haben Eigenschaften, mit denen Sie so ändern Sie die Anzeige des Steuerelements, wie z. B. die <xref:System.Windows.Controls.Control.Background%2A> von einem <xref:System.Windows.Controls.Button>. Sie können die Eigenschaften festlegen, in beiden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und Code. Im folgenden Beispiel wird die <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, und <xref:System.Windows.Controls.Control.FontWeight%2A> Eigenschaften für eine <xref:System.Windows.Controls.Button> in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -87,13 +87,13 @@ ms.locfileid: "59154413"
 ## <a name="rich-content-in-controls"></a>Umfangreicher Inhalt in Steuerelementen  
  Die meisten Klassen, die von erben die <xref:System.Windows.Controls.Control> Klasse über die Kapazität für umfangreichen Inhalt verfügen. Z. B. eine <xref:System.Windows.Controls.Label> beliebige Objekte, z. B. eine Zeichenfolge, enthalten ein <xref:System.Windows.Controls.Image>, oder ein <xref:System.Windows.Controls.Panel>.  Die folgenden Klassen unterstützen umfangreichen Inhalt und dienen als Basisklassen für die meisten Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   <xref:System.Windows.Controls.ContentControl>: Einige Beispiele für Klassen, die von dieser Klasse erben sind <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, und <xref:System.Windows.Controls.ToolTip>.  
+- <xref:System.Windows.Controls.ContentControl>: Einige Beispiele für Klassen, die von dieser Klasse erben sind <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, und <xref:System.Windows.Controls.ToolTip>.  
   
--   <xref:System.Windows.Controls.ItemsControl>: Einige Beispiele für Klassen, die von dieser Klasse erben sind <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, und <xref:System.Windows.Controls.Primitives.StatusBar>.  
+- <xref:System.Windows.Controls.ItemsControl>: Einige Beispiele für Klassen, die von dieser Klasse erben sind <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, und <xref:System.Windows.Controls.Primitives.StatusBar>.  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>: Einige Beispiele für Klassen, die von dieser Klasse erben sind <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, und <xref:System.Windows.Controls.Expander>.  
+- <xref:System.Windows.Controls.HeaderedContentControl>: Einige Beispiele für Klassen, die von dieser Klasse erben sind <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, und <xref:System.Windows.Controls.Expander>.  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>: Einige Beispiele für Klassen, die von dieser Klasse erben sind <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, und <xref:System.Windows.Controls.ToolBar>.  
+- <xref:System.Windows.Controls.HeaderedItemsControl>: Einige Beispiele für Klassen, die von dieser Klasse erben sind <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, und <xref:System.Windows.Controls.ToolBar>.  
 
  Weitere Informationen zu diesen Basisklassen finden Sie unter [WPF-Inhaltsmodell](wpf-content-model.md).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "59154413"
 - [Kategorien von Steuerelementen](controls-by-category.md)
 - [Steuerelementbibliothek](control-library.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)
-- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
+- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
 - [Eingabe](../advanced/input-wpf.md)
 - [Aktivieren eines Befehls](../advanced/how-to-enable-a-command.md)
 - [Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche](walkthroughs-create-a-custom-animated-button.md)

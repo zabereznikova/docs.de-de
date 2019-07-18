@@ -2,12 +2,12 @@
 title: Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856684"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
 ## <a name="error-handling-in-windows-communication-foundation"></a>Fehlerbehandlung in Windows Communication Foundation  
@@ -34,15 +34,15 @@ ms.locfileid: "59136434"
   
  Mit einem IErrorHandler können Sie das Verhalten der Anwendung explizit steuern, wenn eine Ausnahme ausgelöst wird. Sie haben folgende Möglichkeiten:  
   
-1.  Entscheiden, ob ein Fehler an den Client gesendet wird  
+1. Entscheiden, ob ein Fehler an den Client gesendet wird  
   
-2.  Ersetzen einer Ausnahme durch einen Fehler  
+2. Ersetzen einer Ausnahme durch einen Fehler  
   
-3.  Ersetzen eines Fehlers durch einen anderen Fehler  
+3. Ersetzen eines Fehlers durch einen anderen Fehler  
   
-4.  Ausführen von Protokollierung oder Ablaufverfolgung  
+4. Ausführen von Protokollierung oder Ablaufverfolgung  
   
-5.  Ausführen von anderen benutzerdefinierten Aktivitäten  
+5. Ausführen von anderen benutzerdefinierten Aktivitäten  
   
  Sie können einen benutzerdefinierten Fehlerhandler installieren, indem Sie ihn der ErrorHandlers-Eigenschaft der Kanalverteiler für den Dienst hinzufügen.  Es ist zulässig, mehrere Fehlerhandler zu verwenden. Sie werden in der Reihenfolge aufgerufen, in der sie der Auflistung hinzugefügt wurden.  
   
@@ -69,4 +69,4 @@ ms.locfileid: "59136434"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Basis-WCF-Programmierung](../basic-wcf-programming.md)
+- [Einfache WCF-Programmierung](../basic-wcf-programming.md)

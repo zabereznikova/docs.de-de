@@ -2,12 +2,12 @@
 title: Anzeigen von Nachrichtenprotokollen
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e72aef7addb1e517bdf8cab4e300f6f8df5f833
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139060"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662836"
 ---
 # <a name="viewing-message-logs"></a>Anzeigen von Nachrichtenprotokollen
 In diesem Thema wird beschrieben, wie Sie Nachrichtenprotokolle anzeigen können.  
@@ -29,9 +29,9 @@ In diesem Thema wird beschrieben, wie Sie Nachrichtenprotokolle anzeigen können
   
  Sie können eine der folgenden Methoden verwenden, um dieses Problem zu lösen.  
   
--   Zeigen Sie nur zwei der drei Nachrichtenprotokolle im der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zu einem beliebigen Zeitpunkt.  
+- Zeigen Sie nur zwei der drei Nachrichtenprotokolle im der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zu einem beliebigen Zeitpunkt.  
   
--   Wenn Sie alle drei Protokolle anzeigen, müssen die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zur gleichen Zeit, können Sie den Relaydienst ändern, indem Sie beim Erstellen eines neuen <xref:System.ServiceModel.Channels.Message> Instanz. Bei dieser Instanz sollte es sich um eine Kopie des Textes der eingehenden Nachricht handeln und zusätzlich um alle Header mit Ausnahme des `ActivityId`-Headers und des `Action`-Headers. Der folgende Beispielcode veranschaulicht, wie Sie dabei vorgehen:  
+- Wenn Sie alle drei Protokolle anzeigen, müssen die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) zur gleichen Zeit, können Sie den Relaydienst ändern, indem Sie beim Erstellen eines neuen <xref:System.ServiceModel.Channels.Message> Instanz. Bei dieser Instanz sollte es sich um eine Kopie des Textes der eingehenden Nachricht handeln und zusätzlich um alle Header mit Ausnahme des `ActivityId`-Headers und des `Action`-Headers. Der folgende Beispielcode veranschaulicht, wie Sie dabei vorgehen:  
   
 ```csharp
 Message outgoingMessage = Message.CreateMessage(incomingMessage.Version, incomingMessage.Headers.Action, incomingMessage.GetReaderAtBodyContents());  
@@ -50,18 +50,18 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
 ## <a name="exceptional-cases-for-inaccurate-message-logging-content"></a>Ausnahmefälle für ungenauen Nachrichtenprotokollierungsinhalt  
  Unter den folgenden Bedingungen entsprechen die protokollierten Nachrichten eventuell nicht genau der Darstellung des in der Verbindung vorhandenen octet-Streams.  
   
--   Für BasicHttpBinding werden Umschlagheader für die eingehenden Nachrichten im /adressing/non-Namespace protokolliert.  
+- Für BasicHttpBinding werden Umschlagheader für die eingehenden Nachrichten im /adressing/non-Namespace protokolliert.  
   
--   Leerräume können unpassend gepaart werden.  
+- Leerräume können unpassend gepaart werden.  
   
--   Für eingehende Nachrichten können leere Elemente unterschiedlich dargestellt werden. Z. B. \<Tag >\</-Tag > anstelle von \<Tag / >  
+- Für eingehende Nachrichten können leere Elemente unterschiedlich dargestellt werden. Z. B. \<Tag >\</-Tag > anstelle von \<Tag / >  
   
--   Wenn die bekannte PII-Protokollierung deaktiviert ist, indem standardmäßig oder ausdrücklich enableLoggingKnownPii auf "true" festgelegt wird.  
+- Wenn die bekannte PII-Protokollierung deaktiviert ist, indem standardmäßig oder ausdrücklich enableLoggingKnownPii auf "true" festgelegt wird.  
   
--   Die Codierung wird für die Transformation in UTF-8 aktiviert.  
+- Die Codierung wird für die Transformation in UTF-8 aktiviert.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
-- [Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)

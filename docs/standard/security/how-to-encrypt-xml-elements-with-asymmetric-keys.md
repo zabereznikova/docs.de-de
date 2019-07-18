@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln'
+title: 'Vorgehensweise: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: a164ba4f-e596-4bbe-a9ca-f214fe89ed48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a38c2264bac92e9c2c0627718bf53539e6bec72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fc959ee2e29224d6d2598291141e6c922223529
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518266"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645351"
 ---
-# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Vorgehensweise: Verschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln
+# <a name="how-to-encrypt-xml-elements-with-asymmetric-keys"></a>Vorgehensweise: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln
 Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.  XML-Verschlüsselung ist ein gängiges Verfahren zum Austauschen oder Speichern von verschlüsselten XML-Daten, ohne sich Gedanken machen zu müssen, dass die Daten einfach gelesen werden können.  Weitere Informationen zu XML-Verschlüsselungsstandard, finden Sie die Spezifikation des World Wide Web Consortium (W3C) XML-Verschlüsselung im Pfad <https://www.w3.org/TR/xmldsig-core/>.  
   
- Sie können die XML-Verschlüsselung verwenden, um jedes XML-Element oder XML-Dokument durch ein <`EncryptedData`>-Element zu ersetzen, das die verschlüsselten XML-Daten enthält.  Das <`EncryptedData`>-Element kann auch Unterelemente mit Informationen über die bei der Verschlüsselung verwendeten Schlüssel und Prozesse enthalten.  XML-Verschlüsselung unterstützt, dass ein Dokument mehrere verschlüsselte Elemente enthält und dass ein Element mehrfach verschlüsselt ist.  Das Codebeispiel in dieser Vorgehensweise veranschaulicht das Erstellen eines <`EncryptedData`>-Elements zusammen mit weiteren Unterelementen, die Sie später bei der Entschlüsselung verwenden können.  
+ Sie können die XML-Verschlüsselung verwenden, um jedes XML-Element oder XML-Dokument durch ein <`EncryptedData`>-Element zu ersetzen, das die verschlüsselten XML-Daten enthält.  Die <`EncryptedData`>-Element kann auch Unterelemente mit Informationen über die Schlüssel und Prozesse, die bei der Verschlüsselung verwendeten enthalten enthalten.  XML-Verschlüsselung unterstützt, dass ein Dokument mehrere verschlüsselte Elemente enthält und dass ein Element mehrfach verschlüsselt ist.  Das Codebeispiel in diesem Verfahren zeigt, wie zum Erstellen einer <`EncryptedData`>-Elements zusammen mit weiteren Unterelementen, die Sie später bei der Entschlüsselung verwenden können.  
   
- In diesem Beispiel wird ein XML-Element mithilfe zweier Schlüssel verschlüsselt.  Es wird ein öffentliches/privates RSA-Schlüsselpaar generiert und in einem sicheren Schlüsselcontainer gespeichert.  Anschließend wird ein separater Sitzungsschlüssel mithilfe des AES-Algorithmus (Advanced Encryption Standard) erstellt, der auch als Rijndael-Algorithmus bezeichnet wird.  Dieser AES-Sitzungsschlüssel wird verwendet, um das XML-Dokument zu verschlüsseln, und anschließend wird der öffentliche RSA-Schlüssel verwendet, um den AES-Sitzungsschlüssel zu verschlüsseln.  Schließlich werden in diesem Beispiel der verschlüsselte AES-Sitzungsschlüssel sowie die verschlüsselten XML-Daten im XML-Dokument innerhalb eines neuen <`EncryptedData`>-Elements gespeichert.  
+ In diesem Beispiel wird ein XML-Element mithilfe zweier Schlüssel verschlüsselt.  Es wird ein öffentliches/privates RSA-Schlüsselpaar generiert und in einem sicheren Schlüsselcontainer gespeichert.  Anschließend wird ein separater Sitzungsschlüssel mithilfe des AES-Algorithmus (Advanced Encryption Standard) erstellt, der auch als Rijndael-Algorithmus bezeichnet wird.  Dieser AES-Sitzungsschlüssel wird verwendet, um das XML-Dokument zu verschlüsseln, und anschließend wird der öffentliche RSA-Schlüssel verwendet, um den AES-Sitzungsschlüssel zu verschlüsseln.  Zum Schluss das Beispiel speichert der verschlüsselte AES-Sitzungsschlüssel und die verschlüsselten XML-Daten im XML-Dokument innerhalb eines neuen <`EncryptedData`> Element.  
   
  Um das XML-Element zu entschlüsseln, rufen Sie den privaten RSA-Schlüssel aus dem Schlüsselcontainer ab, verwenden ihn zum Entschlüsseln des Sitzungsschlüssels und entschlüsseln mit diesem Sitzungsschlüssel das Dokument.  Weitere Informationen dazu, wie Sie ein XML-Element zu entschlüsseln, die mit dieser Vorgehensweise verschlüsselt wurde, finden Sie unter [Vorgehensweise: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln](../../../docs/standard/security/how-to-decrypt-xml-elements-with-asymmetric-keys.md).  
   
@@ -39,42 +39,42 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
   
 ### <a name="to-encrypt-an-xml-element-with-an-asymmetric-key"></a>So verschlüsseln Sie ein XML-Element mit einem asymmetrischen Schlüsseln  
   
-1.  Erstellen Sie ein <xref:System.Security.Cryptography.CspParameters>-Objekt, und geben Sie den Namen des Schlüsselcontainers an.  
+1. Erstellen Sie ein <xref:System.Security.Cryptography.CspParameters>-Objekt, und geben Sie den Namen des Schlüsselcontainers an.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#2)]  
   
-2.  Generieren Sie mit der <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Klasse einen symmetrischen Schlüssel.  Der Schlüssel wird automatisch im Schlüsselcontainer gespeichert, wenn Sie das <xref:System.Security.Cryptography.CspParameters>-Objekt an den Konstruktor der <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Klasse übergeben.  Dieser Schlüssel wird zum Verschlüsseln des AES-Sitzungsschlüssels verwendet und kann später abgerufen werden, um den Sitzungsschlüssel zu entschlüsseln.  
+2. Generieren Sie mit der <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Klasse einen symmetrischen Schlüssel.  Der Schlüssel wird automatisch im Schlüsselcontainer gespeichert, wenn Sie das <xref:System.Security.Cryptography.CspParameters>-Objekt an den Konstruktor der <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Klasse übergeben.  Dieser Schlüssel wird zum Verschlüsseln des AES-Sitzungsschlüssels verwendet und kann später abgerufen werden, um den Sitzungsschlüssel zu entschlüsseln.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#3)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#3)]  
   
-3.  Erstellen Sie ein <xref:System.Xml.XmlDocument>-Objekt, indem Sie eine XML-Datei von einem Datenträger laden.  Das <xref:System.Xml.XmlDocument>-Objekt enthält das zu verschlüsselnde XML-Element.  
+3. Erstellen Sie ein <xref:System.Xml.XmlDocument>-Objekt, indem Sie eine XML-Datei von einem Datenträger laden.  Das <xref:System.Xml.XmlDocument>-Objekt enthält das zu verschlüsselnde XML-Element.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#4)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#4)]  
   
-4.  Suchen Sie das angegebene Element im <xref:System.Xml.XmlDocument>-Objekt, und erstellen Sie ein neues <xref:System.Xml.XmlElement>-Objekt, das dem Element entspricht, das Sie verschlüsseln möchten. In diesem Beispiel wird das `"creditcard"`-Element verschlüsselt.  
+4. Suchen Sie das angegebene Element im <xref:System.Xml.XmlDocument>-Objekt, und erstellen Sie ein neues <xref:System.Xml.XmlElement>-Objekt, das dem Element entspricht, das Sie verschlüsseln möchten. In diesem Beispiel wird das `"creditcard"`-Element verschlüsselt.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-5.  Erstellen Sie mit der <xref:System.Security.Cryptography.RijndaelManaged>-Klasse einen neuen Sitzungsschlüssel.  Dieser Schlüssel verschlüsselt das XML-Element und wird dann selbst verschlüsselt und im XML-Dokument platziert.  
+5. Erstellen Sie mit der <xref:System.Security.Cryptography.RijndaelManaged>-Klasse einen neuen Sitzungsschlüssel.  Dieser Schlüssel verschlüsselt das XML-Element und wird dann selbst verschlüsselt und im XML-Dokument platziert.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#6)]  
   
-6.  Erstellen Sie eine neue Instanz der <xref:System.Security.Cryptography.Xml.EncryptedXml>-Klasse, und verwenden Sie diese zusammen mit dem Sitzungsschlüssel zum Verschlüsseln des angegebenen Elements.  Die <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A>-Methode gibt das verschlüsselte Element als Array von verschlüsselten Bytes zurück.  
+6. Erstellen Sie eine neue Instanz der <xref:System.Security.Cryptography.Xml.EncryptedXml>-Klasse, und verwenden Sie diese zusammen mit dem Sitzungsschlüssel zum Verschlüsseln des angegebenen Elements.  Die <xref:System.Security.Cryptography.Xml.EncryptedXml.EncryptData%2A>-Methode gibt das verschlüsselte Element als Array von verschlüsselten Bytes zurück.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#7)]  
   
-7.  Erstellen Sie ein <xref:System.Security.Cryptography.Xml.EncryptedData>-Objekt, und weisen Sie ihm den URL-Bezeichner des verschlüsselten XML-Elements zu.  Dieser URL-Bezeichner teilt einem entschlüsselnden Teilnehmer mit, dass das XML-Dokument ein verschlüsseltes Element enthält.  Sie können das <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl>-Feld verwenden, um den URL-Bezeichner anzugeben.  Das Klartext-XML-Element wird durch ein `EncryptedData`-Element ersetzt, das von diesem <xref:System.Security.Cryptography.Xml.EncryptedData>-Objekt gekapselt wird.  
+7. Erstellen Sie ein <xref:System.Security.Cryptography.Xml.EncryptedData>-Objekt, und weisen Sie ihm den URL-Bezeichner des verschlüsselten XML-Elements zu.  Dieser URL-Bezeichner teilt einem entschlüsselnden Teilnehmer mit, dass das XML-Dokument ein verschlüsseltes Element enthält.  Sie können das <xref:System.Security.Cryptography.Xml.EncryptedXml.XmlEncElementUrl>-Feld verwenden, um den URL-Bezeichner anzugeben.  Das Klartext-XML-Element wird ersetzt durch eine <`EncryptedData`> gekapselt, die von diesem Element <xref:System.Security.Cryptography.Xml.EncryptedData> Objekt.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#8)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#8)]  
   
-8.  Erstellen Sie ein <xref:System.Security.Cryptography.Xml.EncryptionMethod>-Objekt, das mit dem URL-Bezeichner des kryptografischen Algorithmus initialisiert wird, mit dem der Sitzungsschlüssel generiert wurde.  Übergeben Sie das <xref:System.Security.Cryptography.Xml.EncryptionMethod>-Objekt an die <xref:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod%2A>-Eigenschaft.  
+8. Erstellen Sie ein <xref:System.Security.Cryptography.Xml.EncryptionMethod>-Objekt, das mit dem URL-Bezeichner des kryptografischen Algorithmus initialisiert wird, mit dem der Sitzungsschlüssel generiert wurde.  Übergeben Sie das <xref:System.Security.Cryptography.Xml.EncryptionMethod>-Objekt an die <xref:System.Security.Cryptography.Xml.EncryptedType.EncryptionMethod%2A>-Eigenschaft.  
   
      [!code-csharp[HowToEncryptXMLElementAsymmetric#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/cs/sample.cs#9)]
      [!code-vb[HowToEncryptXMLElementAsymmetric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementAsymmetric/vb/sample.vb#9)]  
@@ -131,9 +131,9 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Um dieses Beispiel zu kompilieren, müssen Sie einen Verweis auf `System.Security.dll` einfügen.  
+- Um dieses Beispiel zu kompilieren, müssen Sie einen Verweis auf `System.Security.dll` einfügen.  
   
--   Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.  
+- Fügen Sie die folgenden Namespaces hinzu: <xref:System.Xml>, <xref:System.Security.Cryptography> und <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Speichern Sie einen symmetrischen kryptografischen Schlüssel nie im Klartextformat, und übertragen Sie einen symmetrischen Schlüssel nie im Klartextformat zwischen Computern.  Außerdem sollten Sie den privaten Schlüssel eines asymmetrischen Schlüsselpaars niemals in Klartext speichern oder übertragen.  Weitere Informationen über symmetrische und asymmetrische kryptografische Schlüssel finden Sie unter [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md).  

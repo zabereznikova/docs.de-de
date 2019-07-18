@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
 ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913353"
 ---
 # <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>Vorgehensweise: Wiedergeben eines in einer Ressource aus Windows Forms eingebetteten Sounds
 Sie können die <xref:System.Media.SoundPlayer> Klasse zum Abspielen eines Sounds aus einer eingebetteten Ressource.  
@@ -36,5 +36,5 @@ Sie können die <xref:System.Media.SoundPlayer> Klasse zum Abspielen eines Sound
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Media.SoundPlayer>
-- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
-- [Vorgehensweise: Starten einer Schleife eines wiedergegebenen Sounds in Windows Forms](how-to-loop-a-sound-playing-on-a-windows-form.md)
+- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Vorgehensweise: Schleife ein wiedergegebenen Sounds in Windows Forms](how-to-loop-a-sound-playing-on-a-windows-form.md)

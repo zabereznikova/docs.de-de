@@ -8,15 +8,15 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ef8ac62d9d969ce4463931d69b0302376ca0ccc4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827574"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881550"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Eingebettete Ausdrücke in XML (Visual Basic)
-Eingebettete Ausdrücke ermöglichen Ihnen die Erstellung von XML-Literale, die Ausdrücke enthalten, die zur Laufzeit ausgewertet werden. Die Syntax für einen eingebetteten Ausdruck ist `<%=` `expression` `%>`, das ist identisch mit der Syntax in verwendet [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
+Eingebettete Ausdrücke ermöglichen Ihnen die Erstellung von XML-Literale, die Ausdrücke enthalten, die zur Laufzeit ausgewertet werden. Die Syntax für einen eingebetteten Ausdruck ist `<%=` `expression` `%>`, das ist identisch mit der Syntax in ASP.NET.  
   
  Beispielsweise können Sie ein XML-Element Zeichenliteral erstellen eingebettete Ausdrücke mit Inhalt für Literaltext kombinieren.  
   
@@ -42,27 +42,27 @@ Eingebettete Ausdrücke ermöglichen Ihnen die Erstellung von XML-Literale, die 
 |XML-Element-Attribut|<xref:System.Xml.Linq.XAttribute> oder eine Auflistung von <xref:System.Xml.Linq.XAttribute>|Ignoriert|  
 |Stammelement des XML-Dokuments|<xref:System.Xml.Linq.XElement> oder eine Auflistung von einem <xref:System.Xml.Linq.XElement> -Objekt und eine beliebige Anzahl von <xref:System.Xml.Linq.XProcessingInstruction> und <xref:System.Xml.Linq.XComment> Objekte|Ignoriert|  
   
--   Beispiel für einen eingebetteten Ausdruck in ein XML-Elementname:  
+- Beispiel für einen eingebetteten Ausdruck in ein XML-Elementname:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
--   Beispiel für einen eingebetteten Ausdruck in den Inhalt eines XML-Elements:  
+- Beispiel für einen eingebetteten Ausdruck in den Inhalt eines XML-Elements:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
--   Beispiel für einen eingebetteten Ausdruck in eine XML-Elementname-Attribut:  
+- Beispiel für einen eingebetteten Ausdruck in eine XML-Elementname-Attribut:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
--   Beispiel für einen eingebetteten Ausdruck in einem XML-Element-Attributwert:  
+- Beispiel für einen eingebetteten Ausdruck in einem XML-Element-Attributwert:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
--   Beispiel für einen eingebetteten Ausdruck in ein XML-Element-Attribut:  
+- Beispiel für einen eingebetteten Ausdruck in ein XML-Element-Attribut:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
--   Beispiel für einen eingebetteten Ausdruck in das Stammelement eines XML-Dokuments:  
+- Beispiel für einen eingebetteten Ausdruck in das Stammelement eines XML-Dokuments:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   

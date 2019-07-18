@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e770602858761dbcf15c233dceebfd35be106aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 120d00bd329db17b98a439aa2e9c36d2d04968d3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214130"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761297"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly-Methode
 Benachrichtigt den Debugger, dass eine common Language Runtime-Assembly entladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT UnloadAssembly (  
     [in] IcorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugAssembly   *pAssembly  

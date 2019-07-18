@@ -1,25 +1,29 @@
 ---
 title: Befehl „dotnet-add reference“
-description: Der Befehl „dotnet-add reference“ bietet eine praktische Option zum Hinzufügen von Projekt-zu-Projekt-Verweisen.
-ms.date: 12/04/2018
-ms.openlocfilehash: 8df9fa3c9469f74b27a9cb8120936f03532b016c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+description: Der dotnet add-Verweisbefehl bietet eine praktische Option zum Hinzufügen von Projekt-zu-Projekt-Verweisen.
+ms.date: 06/26/2019
+ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169761"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422005"
 ---
-# <a name="dotnet-add-reference"></a>dotnet-add reference
+# <a name="dotnet-add-reference"></a>dotnet-add-Verweis
 
+**Dieser Artikel gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet add reference`: Fügt Projekt-zu-Projekt (P2P)-Verweise hinzu.
 
 ## <a name="synopsis"></a>Übersicht
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
+`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
 ## <a name="description"></a>Beschreibung
 
@@ -52,6 +56,10 @@ Der `dotnet add reference`-Befehl bietet eine praktische Option zum Hinzufügen 
 * **`-f|--framework <FRAMEWORK>`**
 
   Fügt Projektverweise nur hinzu, wenn auf ein bestimmtes [Framework](../../standard/frameworks.md) abgezielt wird.
+
+* **`--interactive`**
+
+  Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu warten (z.B. um die Authentifizierung abzuschließen). Verfügbar seit .NET Core 3.0 SDK.
 
 ## <a name="examples"></a>Beispiele
 

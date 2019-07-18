@@ -3,11 +3,11 @@ title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
 ms.openlocfilehash: 589bae5d1f91e0424eb19cee62fe758aa7846191
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772332"
 ---
 # <a name="nettcp"></a>\<net.tcp>
 Gibt Konfigurationseinstellungen für den NET.TCP-Anschlussfreigabedienst an, der ermöglicht, dass mehrere Prozesse den gleichen TCP-Anschluss nutzen.  
@@ -76,5 +76,5 @@ Gibt Konfigurationseinstellungen für den NET.TCP-Anschlussfreigabedienst an, de
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
-- [Net.TCP-Anschlussfreigabe](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
+- [Net.TCP-Portfreigabe](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
 - [Konfigurieren des Net.TCP-Portfreigabediensts](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

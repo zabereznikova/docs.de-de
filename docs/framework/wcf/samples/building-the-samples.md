@@ -2,12 +2,12 @@
 title: Erstellen der Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944065"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Erstellen der Windows Communication Foundation-Beispiele
 
@@ -18,9 +18,9 @@ Die Beispiele für Windows Communication Foundation (WCF) erstellt werden könne
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>So erstellen Sie das Beispiel mithilfe einer Eingabeaufforderung
 
-1.  Öffnen Sie die Developer-Eingabeaufforderung für Visual Studio, und navigieren Sie zu dem sprachspezifischen Unterverzeichnis unterhalb des Verzeichnisses, in dem Sie das Beispiel installiert.
+1. Öffnen Sie die Developer-Eingabeaufforderung für Visual Studio, und navigieren Sie zu dem sprachspezifischen Unterverzeichnis unterhalb des Verzeichnisses, in dem Sie das Beispiel installiert.
 
-2.  Typ `msbuild` an der Befehlszeile eingeben. Die Clientprogrammdateien werden erstellt, um *Client\bin* und die Dienstprogrammdateien werden erstellt, um *"\service\bin"*. Wenn der Dienst von IIS (Internetinformationsdienste) gehostet wird, werden die Dienstprogrammdateien auch in kopiert die *Servicemodelsamples* Verzeichnis und dessen *\bin* Unterverzeichnis.
+2. Typ `msbuild` an der Befehlszeile eingeben. Die Clientprogrammdateien werden erstellt, um *Client\bin* und die Dienstprogrammdateien werden erstellt, um *"\service\bin"* . Wenn der Dienst von IIS (Internetinformationsdienste) gehostet wird, werden die Dienstprogrammdateien auch in kopiert die *Servicemodelsamples* Verzeichnis und dessen *\bin* Unterverzeichnis.
 
 > [!NOTE]
 > Sie müssen die ACLs für festlegen *%systemdrive%\inetpub\wwwroot* gewähren Ändern von Berechtigungen für das Dienstkonto, unter dem Sie ausgeführt werden. Andernfalls führen einige Postbuildereignisse zu Fehlern. Sie können aber auch die ACLs unverändert lassen und die SDK-Eingabeaufforderung als Administrator ausführen.
@@ -50,9 +50,9 @@ Die Beispiele für Windows Communication Foundation (WCF) erstellt werden könne
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>So generieren Sie den Client und die Konfigurationsdateien neu
 
-1.  Öffnen Sie eine SDK-Eingabeaufforderung, und navigieren Sie zu dem sprachspezifischen Unterverzeichnis unterhalb des Verzeichnisses, in dem Sie das Beispiel installiert haben.
+1. Öffnen Sie eine SDK-Eingabeaufforderung, und navigieren Sie zu dem sprachspezifischen Unterverzeichnis unterhalb des Verzeichnisses, in dem Sie das Beispiel installiert haben.
 
-2.  Wenn der Dienst im Internet gehostet wird, verwenden Sie den folgenden Befehl.
+2. Wenn der Dienst im Internet gehostet wird, verwenden Sie den folgenden Befehl.
 
     ```
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs

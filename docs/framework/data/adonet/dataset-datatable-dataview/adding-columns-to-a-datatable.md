@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
 ms.openlocfilehash: 2e7008f6693d7d76520a7ff6ae9172e28e4990c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207005"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Hinzufügen von Spalten zu einer "DataTable"
@@ -49,7 +49,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
 > [!CAUTION]
 >  Wenn ein Spaltenname nicht für eine Spalte angegeben wird, erhält die Spalte einen Standardnamen der Spalte*N,* beginnend mit "Column1", wenn es hinzugefügt wird die **DataColumnCollection**. Es wird empfohlen, dass Sie die Benennungskonvention "Spalte*N*" Wenn Sie einen Spaltennamen angeben, daran, dass der Name, die Sie bereitstellen steht in Konflikt mit einem bereits vorhandenen Standardspaltennamen in der **DataColumnCollection**. Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.  
   
- Wenn Sie das <xref:System.Xml.Linq.XElement>-Element als <xref:System.Data.DataColumn.DataType%2A> einer <xref:System.Data.DataColumn> in der <xref:System.Data.DataTable> verwenden, funktioniert die XML-Serialisierung beim Einlesen von Daten nicht. Wenn Sie beispielsweise ein <xref:System.Xml.XmlDocument> mit der `DataTable.WriteXml`-Methode schreiben, wird bei der Serialisierung in XML ein zusätzlicher übergeordneter Knoten im <xref:System.Xml.Linq.XElement>-Element hinzugefügt. Um dieses Problem zu umgehen, verwenden Sie den <xref:System.Data.SqlTypes.SqlXml>-Typ statt des <xref:System.Xml.Linq.XElement>-Elements. `ReadXml` und `WriteXml` funktionieren ordnungsgemäß mit <xref:System.Data.SqlTypes.SqlXml>.  
+ Wenn Sie das <xref:System.Xml.Linq.XElement>-Element als <xref:System.Data.DataColumn.DataType%2A> einer <xref:System.Data.DataColumn> in der <xref:System.Data.DataTable> verwenden, funktioniert die XML-Serialisierung beim Einlesen von Daten nicht. Wenn Sie beispielsweise ein <xref:System.Xml.XmlDocument> mit der `DataTable.WriteXml`-Methode schreiben, wird bei der Serialisierung in XML ein zusätzlicher übergeordneter Knoten im <xref:System.Xml.Linq.XElement>-Element hinzugefügt. Um dieses Problem zu umgehen, verwenden Sie den <xref:System.Data.SqlTypes.SqlXml>-Typ statt des <xref:System.Xml.Linq.XElement>-Elements. `ReadXml` und `WriteXml` funktionieren mit <xref:System.Data.SqlTypes.SqlXml> ordnungsgemäß.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -57,5 +57,5 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataTable>
 - [DataTable-Schemadefinition](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- ["DataTables"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

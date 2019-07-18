@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 98dc2899fd2c6a294f9f878ccbf87f60520bbe78
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111409"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238683"
 ---
 # <a name="typography-in-wpf"></a>Typografie in WPF
 In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt. Diese Funktionen umfassen die verbesserte Qualität und Leistung beim Textrendering, die Unterstützung von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Typografie, einen verbesserten internationalen Text, eine verbesserte Unterstützung für Schriftarten sowie neue Text-Anwendungsprogrammierschnittstellen (APIs).  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Verbesserte Textqualität und -leistung  
- Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird mit [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] gerendert , was die Übersichtlichkeit und Lesbarkeit von Text verbessert. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine softwaretechnologie von entwickelte [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , verbessert die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), z. B. Laptopbildschirmen, Pocket PC-Bildschirmen und Flachbildschirmen. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] verwendet die Subpixel-Rendering, wodurch Ausrichten von Zeichen an Bruchteilen eines Pixels mit größerer Genauigkeit und Wiedergabetreue auf die richtige Form anzuzeigende Text. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert. Eine weitere Verbesserung von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist das Antialiasing in y-Richtung, das flache Kurven von Textzeichen oben und unten glättet. Weitere Informationen zu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Funktionen finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
+ Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird mit [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] gerendert , was die Übersichtlichkeit und Lesbarkeit von Text verbessert. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), z.B. auf Laptopbildschirmen, Pocket PC-Bildschirmen und Flachbildschirmen, optimiert wird. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] verwendet Sub-Pixel-Rendering, das durch das Ausrichten von Zeichen an Bruchteilen eines Pixels eine Textdarstellung mit größerer Genauigkeit und Wiedergabetreue ermöglicht. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert. Eine weitere Verbesserung von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist das Antialiasing in y-Richtung, das flache Kurven von Textzeichen oben und unten glättet. Weitere Informationen zu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Funktionen finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
   
  ![Text mit ClearType-Y-Richtung-Antialiasing](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 Text mit ClearType-Antialiasing auf der y-Achse  
@@ -43,47 +43,47 @@ Text mit ClearType-Antialiasing auf der y-Achse
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>Verbesserte Unterstützung für internationalen Text  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Unterstützung für verbesserten internationalen Text durch die folgenden Funktionen:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet durch die folgenden Funktionen eine verbesserte Unterstützung für internationalen Text:  
   
--   Automatischer Zeilenabstand in allen Schriftsystem mithilfe adaptiver Maßeinheiten.  
+- Automatischer Zeilenabstand in allen Schriftsystem mithilfe adaptiver Maßeinheiten.  
   
--   Umfassende Unterstützung für internationalen Text. Weitere Informationen finden Sie unter [Globalisierung für WPF](globalization-for-wpf.md).  
+- Umfassende Unterstützung für internationalen Text. Weitere Informationen finden Sie unter [Globalisierung für WPF](globalization-for-wpf.md).  
   
--   An der Sprache orientierter Zeilenumbruch, Silbentrennung und Ausrichtung.  
+- An der Sprache orientierter Zeilenumbruch, Silbentrennung und Ausrichtung.  
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>Verbesserte Unterstützung für Schriftarten  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet verbesserte Unterstützung für Schriftarten durch die folgenden Funktionen:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet durch die folgenden Funktionen eine verbesserte Unterstützung für Schriftarten:  
   
--   Unicode für den jeden Text. Für Schriftartverhalten und -auswahl wird Charset oder Codepage nicht mehr benötigt.  
+- Unicode für den jeden Text. Für Schriftartverhalten und -auswahl wird Charset oder Codepage nicht mehr benötigt.  
   
--   Von globalen Einstellungen unabhängige Schriftartverhalten, z.B. Systemgebietsschema.  
+- Von globalen Einstellungen unabhängige Schriftartverhalten, z.B. Systemgebietsschema.  
   
--   Separate <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, und <xref:System.Windows.FontStyle> Typen, die zum Definieren einer <xref:System.Windows.Media.FontFamily>. Dies bietet mehr Flexibilität gegenüber der Programmierung in [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], bei der boolesche Kombinationen aus Kursiv und Fett zum Definieren einer Schriftfamilie verwendet werden.  
+- Separate <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch>, und <xref:System.Windows.FontStyle> Typen, die zum Definieren einer <xref:System.Windows.Media.FontFamily>. Dies bietet mehr Flexibilität gegenüber der Programmierung in [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], bei der boolesche Kombinationen aus Kursiv und Fett zum Definieren einer Schriftfamilie verwendet werden.  
   
--   Die Schreibrichtung (horizontal oder vertikal) wird unabhängig von dem Schriftnamen behandelt.  
+- Die Schreibrichtung (horizontal oder vertikal) wird unabhängig von dem Schriftnamen behandelt.  
   
--   Verknüpfung von Schriftart und alternativer Schriftart (Fallback) in einer tragbaren [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]-Datei mithilfe der Technologie für zusammengesetzte Schriftarten. Zusammengesetzte Schriftarten ermöglichen die Erstellung von vollständigen mehrsprachigen Schriftarten. Zusammengesetzte Schriftarten verfügen zudem über einen Mechanismus, der das Anzeigen fehlender Glyphen verhindert. Weitere Informationen finden Sie unter den Hinweisen in der <xref:System.Windows.Media.FontFamily> Klasse.  
+- Verknüpfung von Schriftart und alternativer Schriftart (Fallback) in einer tragbaren [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]-Datei mithilfe der Technologie für zusammengesetzte Schriftarten. Zusammengesetzte Schriftarten ermöglichen die Erstellung von vollständigen mehrsprachigen Schriftarten. Zusammengesetzte Schriftarten verfügen zudem über einen Mechanismus, der das Anzeigen fehlender Glyphen verhindert. Weitere Informationen finden Sie unter den Hinweisen in der <xref:System.Windows.Media.FontFamily> Klasse.  
   
--   Erstellen internationaler Schriftarten aus zusammengesetzten Schriftarten mithilfe einer Gruppe an Einzelsprachenschriftarten. Dadurch werden Ressourcenkosten bei der Entwicklung von Schriftarten für mehrere Sprachen gespart.  
+- Erstellen internationaler Schriftarten aus zusammengesetzten Schriftarten mithilfe einer Gruppe an Einzelsprachenschriftarten. Dadurch werden Ressourcenkosten bei der Entwicklung von Schriftarten für mehrere Sprachen gespart.  
   
--   In einem Dokument eingebettete zusammengesetzte Schriftarten für die Portierung von Dokumenten. Weitere Informationen finden Sie unter den Hinweisen in der <xref:System.Windows.Media.FontFamily> Klasse.  
+- In einem Dokument eingebettete zusammengesetzte Schriftarten für die Portierung von Dokumenten. Weitere Informationen finden Sie unter den Hinweisen in der <xref:System.Windows.Media.FontFamily> Klasse.  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>Standardisierte APIs (Application Programming Interface)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet mehrere Text [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] für Entwickler zu verwenden, wenn der Text in ihre Anwendungen einschließen. Diese [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] werden in drei Kategorien unterteilt:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt mehrere Text-APIs für Entwickler, die zu verwendende einschließlich Text in ihre Anwendungen bereit. Diese APIs sind in drei Kategorien unterteilt:  
   
--   **Layout und Benutzeroberfläche**. Die allgemeinen Textsteuerelemente für die [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
+- **Layout und Benutzeroberfläche**. Die allgemeinen Textsteuerelemente für die [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)].  
   
--   **Einfache Textzeichnung**. Ermöglicht das direkte Zeichnen von Text auf Objekten.  
+- **Einfache Textzeichnung**. Ermöglicht das direkte Zeichnen von Text auf Objekten.  
   
--   **Erweiterte Textformatierung**. Ermöglicht Ihnen, eine benutzerdefinierte Text-Engine zu implementieren.  
+- **Erweiterte Textformatierung**. Ermöglicht Ihnen, eine benutzerdefinierte Text-Engine zu implementieren.  
   
 ### <a name="layout-and-user-interface"></a>Layout und Benutzeroberfläche  
- Auf der höchsten Ebene der Funktionen, die den Text [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] bieten allgemeine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] steuert, wie z. B. <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, und <xref:System.Windows.Controls.TextBox>. Diese Steuerelemente stellen innerhalb einer Anwendung die grundlegenden [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Elemente zur Verfügung und bieten eine einfache Möglichkeit, Text darzustellen und zu bearbeiten. Steuert, wie z. B. <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.PasswordBox> aktivieren mehr erweiterte oder spezialisierte Textbehandlung. Klassen wie <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, und <xref:System.Windows.Documents.TextPointer> sinnvollen Text-Bearbeitung zu aktivieren. Diese [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] -Steuerelemente stellen Eigenschaften wie z. B. <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, und <xref:System.Windows.Controls.Control.FontStyle%2A>, das können Sie die Schriftart zu steuern, die zum Rendern von Text verwendet wird.  
+ Auf der höchsten Ebene der Funktionen,-der Text-APIs sind allgemeine [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] steuert, wie z. B. <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>, und <xref:System.Windows.Controls.TextBox>. Diese Steuerelemente stellen innerhalb einer Anwendung die grundlegenden [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Elemente zur Verfügung und bieten eine einfache Möglichkeit, Text darzustellen und zu bearbeiten. Steuert, wie z. B. <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.PasswordBox> aktivieren mehr erweiterte oder spezialisierte Textbehandlung. Klassen wie <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>, und <xref:System.Windows.Documents.TextPointer> sinnvollen Text-Bearbeitung zu aktivieren. Diese [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] -Steuerelemente stellen Eigenschaften wie z. B. <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, und <xref:System.Windows.Controls.Control.FontStyle%2A>, das können Sie die Schriftart zu steuern, die zum Rendern von Text verwendet wird.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Verwenden von Bitmapeffekten, Transformationen und Texteffekten  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie visuell interessante mithilfe von Text mithilfe von Funktionen wie Bitmapeffekten, Transformationen und Texteffekten erstellen. Das folgende Beispiel zeigt einen typischen auf einen Text angewandten Schlagschatteneffekt.  
+ Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie visuell interessante Texte mithilfe von Funktionen wie Bitmapeffekten, Transformationen und Texteffekten erstellen. Das folgende Beispiel zeigt einen typischen auf einen Text angewandten Schlagschatteneffekt.  
   
  ![Textschatten mit Weichheit &#61; 0,25](./media/typography-in-wpf/drop-shadow-text-effect.jpg) 
   
@@ -140,9 +140,9 @@ Text mit ClearType-Antialiasing auf der y-Achse
  Weitere Informationen zu den <xref:System.Windows.Media.FormattedText> Objekt, finden Sie unter [Drawing Formatted Text](drawing-formatted-text.md).  
   
 ### <a name="advanced-text-formatting"></a>Erweiterte Textformatierung  
- Auf der höchsten Ebene des Texts [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet die Möglichkeit zum Erstellen von benutzerdefinierten Textlayouts mithilfe der <xref:System.Windows.Media.TextFormatting.TextFormatter> -Objekt und anderen Typen in der <xref:System.Windows.Media.TextFormatting> Namespace. Die <xref:System.Windows.Media.TextFormatting.TextFormatter> und die zugeordneten Klassen ermöglichen Ihnen die Implementierung von benutzerdefinierten Textlayouts, die Ihre eigene Definitionen der Zeichenformate, Absatzformatvorlagen, unterstützt die Regeln für den Zeilenumbruch Zeile und andere Layoutfeatures für internationalen Text. Es gibt nur sehr wenige Fälle, in denen es sinnvoll ist, die Standardimplementierung der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Textlayoutunterstützung zu überschreiben. Wenn Sie jedoch ein Steuerelement oder eine Anwendung erstellen, kann möglicherweise eine andere Implementierung als die standardmäßige [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung benötigt werden.  
+ Auf der höchsten Ebene des Texts APIs [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet die Möglichkeit zum Erstellen von benutzerdefinierten Textlayouts mithilfe der <xref:System.Windows.Media.TextFormatting.TextFormatter> -Objekt und anderen Typen in der <xref:System.Windows.Media.TextFormatting> Namespace. Die <xref:System.Windows.Media.TextFormatting.TextFormatter> und die zugeordneten Klassen ermöglichen Ihnen die Implementierung von benutzerdefinierten Textlayouts, die Ihre eigene Definitionen der Zeichenformate, Absatzformatvorlagen, unterstützt die Regeln für den Zeilenumbruch Zeile und andere Layoutfeatures für internationalen Text. Es gibt nur sehr wenige Fälle, in denen es sinnvoll ist, die Standardimplementierung der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Textlayoutunterstützung zu überschreiben. Wenn Sie jedoch ein Steuerelement oder eine Anwendung erstellen, kann möglicherweise eine andere Implementierung als die standardmäßige [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung benötigt werden.  
   
- Im Gegensatz zu einer herkömmlichen Text- [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> interagiert mit einem Textlayoutclient durch eine Reihe von Rückrufmethoden. Der Client muss diese Methoden in einer Implementierung der Bereitstellen der <xref:System.Windows.Media.TextFormatting.TextSource> Klasse. Das folgende Diagramm veranschaulicht die Textlayoutinteraktion zwischen der Clientanwendung und <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
+ Im Gegensatz zu einer herkömmlichen Text--API die <xref:System.Windows.Media.TextFormatting.TextFormatter> interagiert mit einem Textlayoutclient durch eine Reihe von Rückrufmethoden. Der Client muss diese Methoden in einer Implementierung der Bereitstellen der <xref:System.Windows.Media.TextFormatting.TextSource> Klasse. Das folgende Diagramm veranschaulicht die Textlayoutinteraktion zwischen der Clientanwendung und <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Diagramm des Textlayout-Clients und TextFormatter](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   

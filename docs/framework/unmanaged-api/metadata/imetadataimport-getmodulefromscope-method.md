@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f40e6bfdbebdadc41da52564348c6070c18372c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 05ce699669095e9c0b45882b18a01ec326640038
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194681"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779007"
 ---
 # <a name="imetadataimportgetmodulefromscope-method"></a>IMetaDataImport::GetModuleFromScope-Methode
 Ruft Metadaten für das Modul verwiesen wird, im aktuellen Metadatenbereich ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetModuleFromScope (  
    [out] mdModule    *pmd  
 );  

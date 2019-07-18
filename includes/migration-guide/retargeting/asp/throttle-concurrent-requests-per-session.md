@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: db8eb017bdf166b0f1a241f5a8f7db9b9430898a
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760287"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859146"
 ---
 ### <a name="throttle-concurrent-requests-per-session"></a>Einschränken von gleichzeitigen Anforderungen pro Sitzung
 

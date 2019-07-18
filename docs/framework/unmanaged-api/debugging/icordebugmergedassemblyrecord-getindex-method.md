@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 98701444-b9bc-4978-9548-89ac3394147d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8ba470325098125aee8ef7de01fa6aa70596d42
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0c869c829acbfb9b0281537c7355229acbf2c5a7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202598"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752723"
 ---
 # <a name="icordebugmergedassemblyrecordgetindex-method"></a>ICorDebugMergedAssemblyRecord::GetIndex-Methode
 Ruft den Präfixindex der Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetIndex(  
    [out] ULONG32 *pIndex  
 );  
@@ -44,4 +44,4 @@ HRESULT GetIndex(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugMergedAssemblyRecord-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
 ms.openlocfilehash: 1507ab4db0c91b670d8bca754f6fd67d887c7041
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931499"
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>Vorgehensweise: Navigieren durch die Objekte in einer Datensammlungsansicht
 Sichten können die Datenerfassung auf unterschiedliche Weise je nach Sortierung, Filterung oder Gruppierung angezeigt werden. Ansichten auch ein Konzept für aktuellen Datensatz Zeiger bereitstellen und aktivieren Sie den Zeiger bewegen. Dieses Beispiel zeigt, wie Sie das aktuelle Objekt abgerufen sowie zum Navigieren durch die Objekte in einer Datensammlung, die die Funktion verwenden, der <xref:System.Windows.Data.CollectionView> Klasse.  
@@ -31,8 +31,8 @@ Sichten können die Datenerfassung auf unterschiedliche Weise je nach Sortierung
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
 - [Sortieren von Daten in einer Ansicht](how-to-sort-data-in-a-view.md)
 - [Filtern von Daten in einer Ansicht](how-to-filter-data-in-a-view.md)
 - [Sortieren und Gruppieren von Daten mit einer Ansicht in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

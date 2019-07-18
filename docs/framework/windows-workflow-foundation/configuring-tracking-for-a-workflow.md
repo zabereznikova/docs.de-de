@@ -2,12 +2,12 @@
 title: Konfigurieren der Nachverfolgung für einen Workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126200"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690567"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurieren der Nachverfolgung für einen Workflow
 
@@ -52,7 +52,7 @@ instance.Extensions.Add(trackingParticipant);
 
 Ein Workflow kann als beim Hosten in WCF-Dienst verfügbar gemacht werden die <xref:System.ServiceModel.Activities.WorkflowServiceHost> Diensthost. <xref:System.ServiceModel.Activities.WorkflowServiceHost> ist eine spezialisierte .NET ServiceHost-Implementierung für einen workflowbasierten Dienst. In diesem Abschnitt wird erläutert, wie Sie die Nachverfolgung für einen im [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] ausgeführten <xref:System.ServiceModel.Activities.WorkflowServiceHost>-Workflowdienst konfigurieren. Er wird durch eine Web.config-Datei (für einen im Web gehosteten Dienst) oder eine App.config-Datei (für einen Dienst, der in einer eigenständigen Anwendung, z. B. einer Konsolenanwendung, gehostet wird) konfiguriert, indem ein Dienstverhalten angegeben wird, oder durch Code, indem der <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>-Auflistung für den Diensthost ein nachverfolgungsspezifisches Verhalten hinzugefügt wird.
 
-Bei einem Workflowhost, der im <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, können Sie den <xref:System.Activities.Tracking.EtwTrackingParticipant> mithilfe des <`behavior`>-Elements in einer Konfigurationsdatei hinzufügen. Dies wird im folgenden Beispiel demonstriert.
+Für die in ein Workflowdienst gehostet <xref:System.ServiceModel.WorkflowServiceHost>, hinzufügbaren den <xref:System.Activities.Tracking.EtwTrackingParticipant> mithilfe der <`behavior`> Element in einer Konfigurationsdatei, wie im folgenden Beispiel gezeigt.
 
 ```xml
 <behaviors>
@@ -199,7 +199,7 @@ Wenn Ereignisse in ein bestimmtes Anwendungsprotokoll geschrieben werden müssen
     </system.serviceModel>
     ```
 
-2. Kopieren Sie die Manifestdatei aus %windir%\Microsoft.NET\Framework\\< neueste Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie sie in "Microsoft.Windows.ApplicationServer.applications_provider1.man" um
+2. Kopieren Sie die Manifestdatei aus %windir%\Microsoft.NET\Framework\\\<neueste Version von [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man an einen temporären Speicherort, und benennen Sie sie in "Microsoft.Windows.ApplicationServer.applications_provider1.man" um
 
 3. Ändern Sie die GUID in der Manifestdatei in die neue GUID.
 

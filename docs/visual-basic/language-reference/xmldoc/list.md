@@ -14,11 +14,11 @@ helpviewer_keywords:
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
 ms.openlocfilehash: 7d7b85867f4c701322c5e6c31f2d89ab38fad05d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940875"
 ---
 # <a name="list-visual-basic"></a>\<list> (Visual Basic)
 Definiert eine Liste oder Tabelle.  

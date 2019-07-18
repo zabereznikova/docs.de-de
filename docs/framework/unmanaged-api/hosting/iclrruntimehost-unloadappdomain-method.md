@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad87599de1b6c3227f4b413ea84558ad690d250f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0e1a2358590b95b39b6495b74078f079c5b34876
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494388"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765679"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>ICLRRuntimeHost::UnloadAppDomain-Methode
 Entlädt die verwaltete <xref:System.AppDomain> , die dem angegebenen numerischen Bezeichner entspricht.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT UnloadAppDomain(  
     [in] DWORD dwAppDomainId  
     [in] BOOL  fWaitUntilDone  
@@ -67,4 +67,5 @@ HRESULT UnloadAppDomain(
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICLRRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

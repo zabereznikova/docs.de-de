@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 286ec3c67e296eb49776e0f2882954c75c53eed8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194811"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833986"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>
@@ -23,15 +23,15 @@ ms.locfileid: "59194811"
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Erstellen einer neuen XAML-Browseranwendung (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
+- [Erstellen einer neuen XAML-Browseranwendung (XBAP)](#creating_a_new_xaml_browser_application_xbap)  
   
--   [Bereitstellen einer XBAP](#deploying_a_xbap)  
+- [Bereitstellen einer XBAP](#deploying_a_xbap)  
   
--   [Kommunizieren mit der Hostwebseite](#communicating_with_the_host_web_page)  
+- [Kommunizieren mit der Hostwebseite](#communicating_with_the_host_web_page)  
   
--   [XBAP-Sicherheitsüberlegungen](#xbap_security_considerations)  
+- [XBAP-Sicherheitsüberlegungen](#xbap_security_considerations)  
   
--   [Überlegungen zur XBAP-Startzeitleistung](#xbap_start_time_performance_considerations)  
+- [Überlegungen zur XBAP-Startzeitleistung](#xbap_start_time_performance_considerations)  
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Erstellen einer neuen XAML-Browseranwendung (XBAP)  
@@ -100,25 +100,25 @@ ms.locfileid: "59194811"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>Debuggen von XBAPs, die HostScript verwenden  
  Wenn die XBAP verwendet die <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> Objekt für die Kommunikation mit dem HTML-Fenster, es gibt zwei Einstellungen, die Sie angeben müssen, um die Anwendung in Visual Studio ausführen und Debuggen. Die Anwendung muss Zugriff auf ihre Ursprungssite haben, und Sie müssen die Anwendung mit der HTML-Seite starten, die die XBAP enthält. Die folgenden Schritte beschreiben, wie diese beiden Einstellungen überprüft werden:  
   
-1.  Öffnen Sie die Projekteigenschaften in Visual Studio.  
+1. Öffnen Sie die Projekteigenschaften in Visual Studio.  
   
-2.  Klicken Sie auf der Registerkarte **Sicherheit** auf **Erweitert**.  
+2. Klicken Sie auf der Registerkarte **Sicherheit** auf **Erweitert**.  
   
      Das Dialogfeld „Erweiterte Sicherheitseinstellungen“wird angezeigt.  
   
-3.  Stellen Sie sicher, dass das Kontrollkästchen **Der Anwendung Zugriff auf die Ursprungssite gewähren** aktiviert ist, und klicken Sie dann auf **OK**.  
+3. Stellen Sie sicher, dass das Kontrollkästchen **Der Anwendung Zugriff auf die Ursprungssite gewähren** aktiviert ist, und klicken Sie dann auf **OK**.  
   
-4.  Wählen Sie auf der Registerkarte **Debuggen** die Option **Browser mit folgender URL starten** aus, und geben Sie die URL für die HTML-Seite an, die die XBAP enthält.  
+4. Wählen Sie auf der Registerkarte **Debuggen** die Option **Browser mit folgender URL starten** aus, und geben Sie die URL für die HTML-Seite an, die die XBAP enthält.  
   
-5.  Klicken Sie in Internet Explorer auf die Schaltfläche **Extras**, und wählen Sie dann **Internetoptionen** aus.  
+5. Klicken Sie in Internet Explorer auf die Schaltfläche **Extras**, und wählen Sie dann **Internetoptionen** aus.  
   
      Das Dialogfeld "Internetoptionen" wird angezeigt.  
   
-6.  Klicken Sie auf die Registerkarte **Erweitert**.  
+6. Klicken Sie auf die Registerkarte **Erweitert**.  
   
-7.  Aktivieren Sie in der Liste **Einstellungen** unter **Sicherheit** das Kontrollkästchen **Ausführung aktiver Inhalte in Dateien auf dem lokalen Computer zulassen**.  
+7. Aktivieren Sie in der Liste **Einstellungen** unter **Sicherheit** das Kontrollkästchen **Ausführung aktiver Inhalte in Dateien auf dem lokalen Computer zulassen**.  
   
-8.  Klicken Sie auf **OK**.  
+8. Klicken Sie auf **OK**.  
   
      Die Änderungen werden wirksam, nachdem Sie Internet Explorer neu gestartet haben.  
   
@@ -131,30 +131,30 @@ ms.locfileid: "59194811"
   
  Bei Verwendung einer <xref:System.Windows.Controls.WebBrowser> Steuerelement in der WPF-Anwendung instanziiert intern das native WebBrowser ActiveX-Steuerelement. Wenn die Anwendung eine teilweise vertrauenswürdige XBAP ist, die in Internet Explorer ausgeführt wird, wird das ActiveX-Steuerelement in einem dedizierten Thread des Internet Explorer-Prozesses ausgeführt. Daher gelten die folgenden Einschränkungen:  
   
--   Die <xref:System.Windows.Controls.WebBrowser> Steuerelement sollte an den Hostbrowser, einschließlich sicherheitseinschränkungen ein ähnliches Verhalten bereitstellen. Einige dieser Sicherheitseinschränkungen können durch die Internet Explorer-Sicherheitseinstellungen gesteuert werden. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../security-wpf.md).  
+- Die <xref:System.Windows.Controls.WebBrowser> Steuerelement sollte an den Hostbrowser, einschließlich sicherheitseinschränkungen ein ähnliches Verhalten bereitstellen. Einige dieser Sicherheitseinschränkungen können durch die Internet Explorer-Sicherheitseinstellungen gesteuert werden. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../security-wpf.md).  
   
--   Eine Ausnahme wird ausgelöst, wenn eine XBAP domänenübergreifend in eine HTML-Seite geladen wird.  
+- Eine Ausnahme wird ausgelöst, wenn eine XBAP domänenübergreifend in eine HTML-Seite geladen wird.  
   
--   Die Eingabe erfolgt in einem separaten Thread aus dem WPF- <xref:System.Windows.Controls.WebBrowser>, sodass Tastatureingaben nicht abgefangen werden können, und der IME-Zustand nicht freigegeben.  
+- Die Eingabe erfolgt in einem separaten Thread aus dem WPF- <xref:System.Windows.Controls.WebBrowser>, sodass Tastatureingaben nicht abgefangen werden können, und der IME-Zustand nicht freigegeben.  
   
--   Die zeitliche Steuerung oder die Reihenfolge der Navigation weicht möglicherweise ab, da das ActiveX-Steuerelement in einem anderen Thread ausgeführt wird. Zum Beispiel wird die Navigation zu einer Seite nicht immer abgebrochen, indem eine andere Navigationsanforderung gestartet wird.  
+- Die zeitliche Steuerung oder die Reihenfolge der Navigation weicht möglicherweise ab, da das ActiveX-Steuerelement in einem anderen Thread ausgeführt wird. Zum Beispiel wird die Navigation zu einer Seite nicht immer abgebrochen, indem eine andere Navigationsanforderung gestartet wird.  
   
--   Ein benutzerdefiniertes ActiveX-Steuerelement hat möglicherweise Probleme mit Kommunikation, da die WPF-Anwendung in einem separaten Thread ausgeführt wird.  
+- Ein benutzerdefiniertes ActiveX-Steuerelement hat möglicherweise Probleme mit Kommunikation, da die WPF-Anwendung in einem separaten Thread ausgeführt wird.  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook> wird nicht ausgelöst, da <xref:System.Windows.Interop.HwndHost> kann nicht als Unterklasse eines Fensters in einem anderen Thread oder Prozess ausgeführt wird.  
+- <xref:System.Windows.Interop.HwndHost.MessageHook> wird nicht ausgelöst, da <xref:System.Windows.Interop.HwndHost> kann nicht als Unterklasse eines Fensters in einem anderen Thread oder Prozess ausgeführt wird.  
   
 ### <a name="creating-a-full-trust-xbap"></a>Erstellen einer XBAP mit voller Vertrauenswürdigkeit  
  Wenn die XBAP volle Vertrauenswürdigkeit erfordert, können Sie das Projekt ändern, um diese Berechtigung zu aktivieren. Die folgenden Schritte beschreiben, wie volle Vertrauenswürdigkeit aktiviert wird:  
   
-1.  Öffnen Sie die Projekteigenschaften in Visual Studio.  
+1. Öffnen Sie die Projekteigenschaften in Visual Studio.  
   
-2.  Aktivieren Sie die Option **Voll vertrauenswürdige Anwendung** auf der Registerkarte **Sicherheit**.  
+2. Aktivieren Sie die Option **Voll vertrauenswürdige Anwendung** auf der Registerkarte **Sicherheit**.  
   
  Diese Einstellung nimmt die folgenden Änderungen vor:  
   
--   In der Projektdatei wird der `<TargetZone>`-Elementwert in `Custom` geändert.  
+- In der Projektdatei wird der `<TargetZone>`-Elementwert in `Custom` geändert.  
   
--   Im Anwendungsmanifest (app.manifest) wird eine `Unrestricted="true"` -Attribut hinzugefügt, die "<xref:System.Security.PermissionSet> Element.  
+- Im Anwendungsmanifest (app.manifest) wird eine `Unrestricted="true"` -Attribut hinzugefügt, die "<xref:System.Security.PermissionSet> Element.  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   
@@ -182,11 +182,11 @@ ms.locfileid: "59194811"
 ## <a name="xbap-start-time-performance-considerations"></a>Überlegungen zur XBAP-Startzeitleistung  
  Ein wichtiger Aspekt der XBAP-Leistung ist ihre Startzeit. Falls eine XPAB die erste zu ladende WPF-Anwendung darstellt, kann die *Kaltstartzeit* zehn Sekunden oder mehr betragen. Dies ist darauf zurückzuführen, dass die Statusseite von WPF gerendert wird und sowohl die CLR als auch WPF für die Anzeige der Anwendung kaltgestartet werden müssen.  
   
- Wenn Sie in [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] starten, wird die XBAP-Kaltstartzeit reduziert, indem eine nicht verwaltete Statusseite in einer frühen Phase im Bereitstellungszyklus angezeigt wird. Die Statusseite wird fast unmittelbar nach dem Start der Anwendung angezeigt, da sie mit nativen Hostingcode angezeigt und in HTML gerendert wird.  
+ Ab .NET Framework 3.5 SP1, XBAP-Kaltstartzeit wird verringert, indem Sie eine nicht verwaltete Statusseite in einem frühen Zeitpunkt im Bereitstellungszyklus angezeigt wird. Die Statusseite wird fast unmittelbar nach dem Start der Anwendung angezeigt, da sie mit nativen Hostingcode angezeigt und in HTML gerendert wird.  
   
  Darüber hinaus wird die verbesserte Parallelität von der ClickOnce-Download-Sequenz Startzeit um bis zu zehn Prozent verbessert. Nachdem ClickOnce heruntergeladen und überprüft wird Manifeste, beginnt der Anwendungsdownload und die Statusanzeige aktualisiert.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurieren von Visual Studio zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [Vorgehensweise: Konfigurieren von Visual Studio 2005 zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [Bereitstellen von WPF-Anwendungen](deploying-a-wpf-application-wpf.md)

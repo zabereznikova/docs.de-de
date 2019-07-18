@@ -4,14 +4,17 @@ description: LINQ bietet Abfragefunktionen auf Sprachebene und eine API für C# 
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
+dev_langs:
+- csharp
+- vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2ee2ef57385d7fb0a396a1c08110fd810e6b0abd
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968035"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857113"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -27,11 +30,22 @@ var linqExperts = from p in programmers
                   select new LINQExpert(p);
 ```
 
+```vb
+Dim linqExperts = From p in programmers
+                  Where p.IsNewToLINQ
+                  Select New LINQExpert(p)
+```
+
 Gleiches Beispiel mit der `IEnumerable<T>`-API:
 
 ```csharp
 var linqExperts = programmers.Where(p => p.IsNewToLINQ)
                              .Select(p => new LINQExpert(p));
+```
+
+```vb
+Dim linqExperts = programmers.Where(Function(p) p.IsNewToLINQ).
+                             Select(Function(p) New LINQExpert(p))
 ```
 
 ## <a name="linq-is-expressive"></a>LINQ ist ausdrucksstark
@@ -49,12 +63,24 @@ foreach (var pet in pets)
 }
 ```
 
+```vb
+Dim petLookup = New Dictionary(Of Integer, Pet)()
+
+For Each pet in pets
+    petLookup.Add(pet.RFID, pet)
+Next
+```
+
 Der Zweck des Codes ist nicht, ein neues `Dictionary<int, Pet>` zu erstellen und es über eine Schleife zu erweitern, sondern eine vorhandene Liste in ein Wörterbuch zu konvertieren. Mit LINQ bleibt dieser Zweck erhalten, mit imperativem Code hingegen nicht.
 
 Entsprechender LINQ-Ausdruck:
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
+```
+
+```vb
+Dim petLookup = pets.ToDictionary(Function(pet) pet.RFID)
 ```
 
 Der Code mit LINQ ist hilfreich, da er aus der Perspektive eines Programmierers einen Ausgleich zwischen Zweck und Code schafft. Ein weiter Bonus ist die Kürze des Codes. Stellen Sie sich vor, Sie könnten große Teile einer Codebasis um 1/3 reduzieren, wie oben dargestellt. Klingt das nicht überzeugend?
@@ -75,6 +101,16 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 }
 ```
 
+```vb
+Public Shared Function FindAllElementsWithAttribute(documentRoot As XElement, elementName As String,
+                                           attributeName As String, value As String) As IEnumerable(Of XElement)
+    Return From el In documentRoot.Elements(elementName)
+           Where el.Element(attributeName).ToString() = value
+           Select el
+End Function
+
+```
+
 Code zu schreiben, um das XML-Dokument zu diesem Zweck manuell zu durchlaufen, wäre eine wesentlich größere Herausforderung.
 
 LINQ-Anbieter ermöglichen nicht nur die Interaktion mit XML. [LINQ to SQL](../../docs/framework/data/adonet/sql/linq/index.md) ist ein ziemlich reduzierter objektrelationaler Mapper (ORM) für eine MSSQL Server-Datenbank. Die [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm)-Bibliothek bietet einen effizienten Durchlauf von JSON-Dokumenten über LINQ. Wenn es allerdings keine Bibliothek gibt, die Ihre Anforderungen erfüllt, können Sie auch [Ihren eigenen LINQ-Anbieter schreiben](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110)).
@@ -87,12 +123,22 @@ Dies ist eine Frage, die häufig gestellt wird. Im Grunde ist dies:
 var filteredItems = myItems.Where(item => item.Foo);
 ```
 
+```vb
+Dim filteredItems = myItems.Where(Function(item) item.Foo)
+```
+
 sehr viel präziser als dies:
 
 ```csharp
 var filteredItems = from item in myItems
                     where item.Foo
                     select item;
+```
+
+```vb
+Dim filteredItems = From item In myItems
+                    Where item.Foo
+                    Select item
 ```
 
 Ist die API-Syntax nicht nur eine präzisere Methode für die Abfragesyntax?
@@ -103,15 +149,15 @@ Daher stellt sich die folgende Frage: **Sollten Sie einfach die Abfragesyntax ve
 
 Die Antwort auf diese Frage ist **Ja**, wenn...
 
-*   Ihre vorhandene Codebasis bereits die Abfragesyntax verwendet
-*   Sie den Bereich von Variablen in Ihren Abfragen aufgrund der Komplexität festlegen müssen
-*   Sie die Abfragesyntax bevorzugen und Sie dadurch nicht von Ihrer Codebasis abgelenkt werden
+* Ihre vorhandene Codebasis bereits die Abfragesyntax verwendet
+* Sie den Bereich von Variablen in Ihren Abfragen aufgrund der Komplexität festlegen müssen
+* Sie die Abfragesyntax bevorzugen und Sie dadurch nicht von Ihrer Codebasis abgelenkt werden
 
 Die Antwort auf diese Frage ist **Nein**, wenn...
 
-*   Ihre vorhandene Codebasis die API-Syntax bereits verwendet
-*   Sie den Bereich von Variablen in Ihren Abfragen nicht festlegen müssen
-*   Sie die API-Syntax bevorzugen und Sie dadurch nicht von Ihrer Codebasis abgelenkt werden
+* Ihre vorhandene Codebasis die API-Syntax bereits verwendet
+* Sie den Bereich von Variablen in Ihren Abfragen nicht festlegen müssen
+* Sie die API-Syntax bevorzugen und Sie dadurch nicht von Ihrer Codebasis abgelenkt werden
 
 ## <a name="essential-samples"></a>Grundlegende Beispiele
 
@@ -119,37 +165,63 @@ Eine umfassende Liste der LINQ-Beispiele finden Sie unter [101 LINQ Samples](htt
 
 Im Folgenden finden eine kurze Darstellung einiger der grundlegenden Bestandteile von LINQ. Sie ist bei weitem nicht vollständig, da LINQ erheblich mehr Funktionen bietet, als hier präsentiert werden.
 
-*   Die Grundbestandteile sind `Where`, `Select` und `Aggregate`:
+* Die Grundbestandteile sind `Where`, `Select` und `Aggregate`:
 
 ```csharp
-// Filtering a list
+// Filtering a list.
 var germanShepards = dogs.Where(dog => dog.Breed == DogBreed.GermanShepard);
 
-// Using the query syntax
+// Using the query syntax.
 var queryGermanShepards = from dog in dogs
                           where dog.Breed == DogBreed.GermanShepard
                           select dog;
 
-// Mapping a list from type A to type B
+// Mapping a list from type A to type B.
 var cats = dogs.Select(dog => dog.TurnIntoACat());
 
-// Using the query syntax
+// Using the query syntax.
 var queryCats = from dog in dogs
                 select dog.TurnIntoACat();
 
-// Summing the lengths of a set of strings
+// Summing the lengths of a set of strings.
 int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   Reduzieren einer Liste mit Listen:
+```vb
+' Filtering a list.
+Dim germanShepards = dogs.Where(Function(dog) dog.Breed = DogBreed.GermanShepard)
+
+' Using the query syntax.
+Dim queryGermanShepards = From dog In dogs
+                          Where dog.Breed = DogBreed.GermanShepard
+                          Select dog
+
+' Mapping a list from type A to type B.
+Dim cats = dogs.Select(Function(dog) dog.TurnIntoACat())
+
+' Using the query syntax.
+Dim queryCats = From dog In dogs
+                Select dog.TurnIntoACat()
+
+' Summing the lengths of a set of strings.
+Dim seed As Integer = 0
+Dim sumOfStrings As Integer = strings.Aggregate(seed, Function(s1, s2) s1.Length + s2.Length)
+```
+
+* Reduzieren einer Liste mit Listen:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   Vereinigung von zwei Gruppen (mit benutzerdefiniertem Vergleichsoperator):
+```vb
+' Transforms the list of kennels into a list of all their dogs.
+Dim allDogsFromKennels = kennels.SelectMany(Function(kennel) kennel.Dogs)
+```
+
+* Vereinigung von zwei Gruppen (mit benutzerdefiniertem Vergleichsoperator):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -173,18 +245,45 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 
     public int GetHashCode(Dog d)
     {
-        // default hashcode is enough here, as these are simple objects.
+        // Default hashcode is enough here, as these are simple objects.
         return d.GetHashCode();
     }
 }
 
 ...
 
-// Gets all the short-haired dogs between two different kennels
+// Gets all the short-haired dogs between two different kennels.
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   Schnittmenge zwischen zwei Gruppen:
+```vb
+Public Class DogHairLengthComparer 
+  Inherits IEqualityComparer(Of Dog)
+
+  Public Function Equals(a As Dog,b As Dog) As Boolean
+      If a Is Nothing AndAlso b Is Nothing Then
+          Return True
+      ElseIf (a Is Nothing AndAlso b IsNot Nothing) OrElse (a IsNot Nothing AndAlso b Is Nothing) Then
+          Return False
+      Else
+          Return a.HairLengthType = b.HairLengthType
+      End If
+  End Function
+
+  Public Function GetHashCode(d As Dog) As Integer
+      ' Default hashcode is enough here, as these are simple objects.
+      Return d.GetHashCode()
+  End Function
+End Class
+
+...
+
+' Gets all the short-haired dogs between two different kennels.
+Dim allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, New DogHairLengthComparer())
+```
+
+
+* Schnittmenge zwischen zwei Gruppen:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +291,13 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   Sortierung:
+```vb
+' Gets the volunteers who spend share time with two humane societies.
+Dim volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
+                                                     New VolunteerTimeComparer())
+```
+
+* Sortierung:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +306,14 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   Schließlich ein erweitertes Beispiel: Ermitteln, ob die Werte der Eigenschaften von zwei Instanzen desselben Typs gleich sind (aus [diesem StackOverflow-Beitrag](https://stackoverflow.com/a/844855) übernommen und geändert):
+```vb
+' Get driving directions, ordering by if it's toll-free before estimated driving time.
+Dim results = DirectionsProcessor.GetDirections(start, end).
+                OrderBy(Function(direction) direction.HasNoTolls).
+                ThenBy(Function(direction) direction.EstimatedTime)
+```
+
+* Schließlich ein erweitertes Beispiel: Ermitteln, ob die Werte der Eigenschaften von zwei Instanzen desselben Typs gleich sind (aus [diesem StackOverflow-Beitrag](https://stackoverflow.com/a/844855) übernommen und geändert):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -220,6 +332,23 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
                             select property;
     return !unequalProperties.Any();
 }
+```
+
+```vb
+<System.Runtime.CompilerServices.Extension()> 
+Public Function PublicInstancePropertiesEqual(Of T As Class)(self As T, [to] As T, ParamArray ignore As String()) As Boolean
+    If self Is Nothing OrElse [to] Is Nothing Then
+        Return self Is [to]
+    End If
+
+    ' Selects the properties which have unequal values into a sequence of those properties.
+    Dim unequalProperties = From [property] In GetType(T).GetProperties(BindingFlags.Public Or BindingFlags.Instance) 
+                            Where Not ignore.Contains([property].Name)
+                            Let selfValue = [property].GetValue(self, Nothing)
+                            Let toValue = [property].GetValue([to], Nothing)
+                            Where Not Equals(selfValue, toValue) Select [property]
+    Return Not unequalProperties.Any()
+End Function
 ```
 
 ## <a name="plinq"></a>PLINQ
@@ -242,6 +371,20 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
 }
 ```
 
+```vb
+Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of FacebookUser)) As String
+{
+    Dim seed As UInt64 = 0
+
+    Dim threadAccumulator As Func(Of UInt64, UInt64, UInt64) = Function(t1, t2) t1 + t2
+    Dim threadResultAccumulator As Func(Of UInt64, UInt64, UInt64) = Function(t1, t2) t1 + t2
+    Dim resultSelector As Func(Of Uint64, string) = Function(total) $"Facebook has {total} likes!"
+
+    Return facebookUsers.AsParallel().
+                        Aggregate(seed, threadAccumulator, threadResultAccumulator, resultSelector)
+}
+```
+
 Dieser Code partitioniert bei Bedarf `facebookUsers` über Systemthreads, summiert die Gesamtanzahl der „Likes“ parallel für jeden Thread, summiert die von allen Threads berechneten Ergebnisse und bringt das Ergebnis in eine nützliche Zeichenfolge.
 
 In Diagrammform:
@@ -252,6 +395,6 @@ Parallelisierbare CPU-gebundene Aufträge, die problemlos über LINQ ausgedrück
 
 ## <a name="further-resources"></a>Weitere Ressourcen:
 
-*   [101 LINQ-Beispiele](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/), eine Umgebung und eine Datenbankabfrage-Engine für C#/F#/VB
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), ein E-Book, in dem die Implementierung von LINQ to Objects erläutert wird
+* [101 LINQ-Beispiele](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/), eine Umgebung und eine Datenbankabfrage-Engine für C#/F#/VB
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), ein E-Book, in dem die Implementierung von LINQ to Objects erläutert wird

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
 ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784136"
 ---
 # <a name="namespace-statement"></a>Namespace-Anweisung
 Der Name eines Namespace deklariert und bewirkt, dass den Quellcode, der die Deklaration innerhalb dieses Namespace kompiliert werden.  

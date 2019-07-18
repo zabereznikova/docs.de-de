@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a70aca33d0830f3b23ff985f17c469cb7c4ff35c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774401"
+---
 ### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a>Die bidirektionale Datenbindung an eine Eigenschaft mit einem nicht öffentlichen Setter wird nicht unterstützt
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5.1|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType></li></ul>|
-

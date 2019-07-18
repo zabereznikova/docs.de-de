@@ -2,12 +2,12 @@
 title: Beispiel zu WebContentTypeMapper
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 7858b07c3da8684326b931b54f825c87a6e35717
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006294"
 ---
 # <a name="webcontenttypemapper-sample"></a>Beispiel zu WebContentTypeMapper
 In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF) Text Nachrichtenformate neue Inhaltstypen zugeordnet werden.  
@@ -54,11 +54,11 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Erstellen Sie die Projektmappe WebContentTypeMapperSample.sln, wie in beschrieben [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Erstellen Sie die Projektmappe WebContentTypeMapperSample.sln, wie in beschrieben [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Navigieren Sie zu `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (Öffnen Sie JCTMClientPage.htm nicht im Browser aus dem Projektverzeichnis).  
+3. Navigieren Sie zu `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (Öffnen Sie JCTMClientPage.htm nicht im Browser aus dem Projektverzeichnis).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

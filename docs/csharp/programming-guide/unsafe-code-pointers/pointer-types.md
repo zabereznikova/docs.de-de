@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724043"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661086"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 
@@ -23,11 +23,11 @@ void* identifier; //allowed but not recommended
 
 Der Typ, der vor `*` in einem Zeigertyp angegeben wird, wird als **Verweistyp** bezeichnet. Die folgenden Typen können Verweistypen sein:
 
-- Ein beliebiger integraler Typ: [sbyte](../../language-reference/keywords/sbyte.md), [byte](../../language-reference/keywords/byte.md), [short](../../language-reference/keywords/short.md), [ushort](../../language-reference/keywords/ushort.md), [int](../../language-reference/keywords/int.md), [uint](../../language-reference/keywords/uint.md), [long](../../language-reference/keywords/long.md) oder [ulong](../../language-reference/keywords/ulong.md).
-- Ein beliebiger Gleitkommatyp: [float](../../language-reference/keywords/float.md) oder [double](../../language-reference/keywords/double.md).
+- Ein beliebiger integraler Typ: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md), [byte](../../language-reference/builtin-types/integral-numeric-types.md), [short](../../language-reference/builtin-types/integral-numeric-types.md), [ushort](../../language-reference/builtin-types/integral-numeric-types.md), [int](../../language-reference/builtin-types/integral-numeric-types.md), [uint](../../language-reference/builtin-types/integral-numeric-types.md), [long](../../language-reference/builtin-types/integral-numeric-types.md) oder [ulong](../../language-reference/builtin-types/integral-numeric-types.md).
+- Ein beliebiger Gleitkommatyp: [float](../../language-reference/builtin-types/floating-point-numeric-types.md) oder [double](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - [char](../../language-reference/keywords/char.md).
 - [bool](../../language-reference/keywords/bool.md).
-- [decimal](../../language-reference/keywords/decimal.md).
+- [decimal](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - Beliebiger [enum](../../language-reference/keywords/enum.md)-Typ.
 - Beliebiger Zeigertyp. Dadurch können Sie Ausdrücke wie `void**` verwenden.
 - Beliebiger benutzerdefinierter Strukturtyp, der nur Felder von nicht verwalteten Typen enthält.
@@ -45,7 +45,7 @@ Ein Zeiger kann nicht auf einen Verweis oder eine [Struktur](../../language-refe
 
 Der Wert der Zeigervariablen vom Typ `myType*` ist die Adresse einer Variablen vom Typ `myType`. Im Folgenden finden Sie Beispiele für Zeigertypdeklarationen:
 
-|Beispiel|Beschreibung|
+|Beispiel|BESCHREIBUNG|
 |-------------|-----------------|
 |`int* p`|`p` ist ein Zeiger auf einen ganzzahligen Wert.|
 |`int** p`|`p` ist ein Zeiger auf einen Zeiger auf einen ganzzahligen Wert.|
@@ -73,30 +73,28 @@ Die Übergabe von Zeigern zwischen Methoden kann zu nicht definiertem Verhalten 
 
 In der folgenden Tabelle werden die Operatoren und Anweisungen aufgelistet, die in einem unsicheren Kontext auf Zeiger angewendet werden können.
 
-|Operator/Anweisung|Mit|
+|Operator/Anweisung|Verwendung|
 |-------------------------|---------|
-|*|Führt eine Zeigerdereferenzierung aus.|
-|->|Greift über einen Zeiger auf einen Member einer Struktur zu.|
-|[]|Indiziert einen Zeiger.|
+|`*`|Führt eine Zeigerdereferenzierung aus.|
+|`->`|Greift über einen Zeiger auf einen Member einer Struktur zu.|
+|`[]`|Indiziert einen Zeiger.|
 |`&`|Ruft die Adresse einer Variablen ab.|
-|++ und --|Inkrementiert und dekrementiert Zeiger.|
-|+ und -|Führt Zeigerarithmetik aus.|
-|==, !=, \<, >, \<=, und >=|Vergleicht Zeiger.|
-|`stackalloc`|Belegt Speicher für den Stapel.|
-|`fixed`-Anweisung|Fixiert eine Variable vorübergehend, damit ihre Adresse gefunden werden kann.|
+|`++` und `--`|Inkrementiert und dekrementiert Zeiger.|
+|`+` und `-`|Führt Zeigerarithmetik aus.|
+|`==`, `!=`, `<`, `>`, `<=` und `>=`|Vergleicht Zeiger.|
+|[`stackalloc`-Operator](../../language-reference/operators/stackalloc.md)|Belegt Speicher für den Stapel.|
+|[`fixed`-Anweisung](../../language-reference/keywords/fixed-statement.md)|Fixiert eine Variable vorübergehend, damit ihre Adresse gefunden werden kann.|
 
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+Weitere Informationen zu Zeigeroperatoren finden Sie unter [Operatoren im Zusammenhang mit Zeigern](../../language-reference/operators/pointer-related-operators.md).
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie im Abschnitt [Zeigertypen](~/_csharplang/spec/unsafe-code.md#pointer-types) der [Spezifikation für die Sprache C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Unsicherer Code und Zeiger](index.md)
 - [Zeigerkonvertierungen](pointer-conversions.md)
-- [Zeigerausdrücke](pointer-expressions.md)
 - [Typen](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [fixed-Anweisung](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [Boxing und Unboxing](../types/boxing-and-unboxing.md)

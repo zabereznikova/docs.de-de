@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa341c726ba84dc1d12b6c5628253a100d65a719
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b052aac7a71308486676aa688fd5ad655c2015f3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167101"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765292"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next-Methode
 Ruft die Anzahl der "ICorDebugModule"-Instanzen, die anhand des `celt` aus der Enumeration, die an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next (  
     [in]  ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  

@@ -3,11 +3,11 @@ title: Form von WordprocessingML-Dokumenten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
 ms.openlocfilehash: 265da66329128e610c491c3ff50cec1bca434f6d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786424"
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Form von WordprocessingML-Dokumenten (Visual Basic)
 Dieses Thema enthält eine Einführung in die XML-Form von WordprocessingML-Dokumenten.  

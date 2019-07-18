@@ -2,12 +2,12 @@
 title: Asynchrone Programmierung
 description: Erfahren Sie, wie F# asynchrone Programmierung erfolgt über ein Programmiermodell auf Sprachebene, das einfach zu verwenden und natürlich für die Sprache ist.
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980086"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753595"
 ---
 # <a name="async-programming-in-f"></a>Asynchrone Programmierung in F\#
 
@@ -26,7 +26,7 @@ Angenommen Sie, dass Sie den HTML-Code aus dotnetfoundation.org herunterladen, o
 open System
 open System.Net
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -45,11 +45,11 @@ Und das ist schon alles! Abgesehen von der Verwendung von `async`, `let!`, und `
 
 Es gibt einige syntaktische Konstrukte, die beachtet sollten werden:
 
-*   `let!` Bindet das Ergebnis einer Async-Ausdrucks (die auf einem anderen Kontext ausgeführt wird).
-*   `use!` funktioniert wie `let!`, aber die gebundenen Ressourcen frei, wenn sie den Gültigkeitsbereich verlässt.
-*   `do!` wird einen Async-Workflow "await" der nichts zurückgegeben wird nicht.
-*   `return` einfach gibt ein Ergebnis aus einem Async-Ausdruck zurück.
-*   `return!` Führt einen weiteren asynchronen Workflow aus, und gibt den Rückgabewert als Ergebnis zurück.
+* `let!` Bindet das Ergebnis einer Async-Ausdrucks (die auf einem anderen Kontext ausgeführt wird).
+* `use!` funktioniert wie `let!`, aber die gebundenen Ressourcen frei, wenn sie den Gültigkeitsbereich verlässt.
+* `do!` wird einen Async-Workflow "await" der nichts zurückgegeben wird nicht.
+* `return` einfach gibt ein Ergebnis aus einem Async-Ausdruck zurück.
+* `return!` Führt einen weiteren asynchronen Workflow aus, und gibt den Rückgabewert als Ergebnis zurück.
 
 Darüber hinaus normalen `let`, `use`, und `do` Schlüsselwörter können zusammen mit die asynchronen Versionen verwendet werden, genauso wie in einer normalen-Funktion.
 
@@ -57,47 +57,47 @@ Darüber hinaus normalen `let`, `use`, und `do` Schlüsselwörter können zusamm
 
 Wie bereits erwähnt, ist Async-Code eine Spezifikation der Arbeit in einem anderen Kontext ausgeführt werden, die explizit gestartet werden muss. Hier sind zwei Hauptmethoden, um dies zu erreichen:
 
-1.  `Async.RunSynchronously` Startet einen asynchronen Workflow in einem anderen Thread und wartet auf das Ergebnis.
+1. `Async.RunSynchronously` Startet einen asynchronen Workflow in einem anderen Thread und wartet auf das Ergebnis.
 
-```fsharp
-open System
-open System.Net
+    ```fsharp
+    open System
+    open System.Net
 
-let fetchHtmlAsync url = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
-    }
+    let fetchHtmlAsync url =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            let! html = webClient.AsyncDownloadString(uri)
+            return html
+        }
 
- // Execution will pause until fetchHtmlAsync finishes
- let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+    // Execution will pause until fetchHtmlAsync finishes
+    let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 
- // you actually have the result from fetchHtmlAsync now!
- printfn "%s" html
- ```
+    // you actually have the result from fetchHtmlAsync now!
+    printfn "%s" html
+    ```
 
-2.  `Async.Start` Startet einen asynchronen Workflow in einem anderen Thread, und wird **nicht** wartet auf das Ergebnis.
+2. `Async.Start` Startet einen asynchronen Workflow in einem anderen Thread, und wird **nicht** wartet auf das Ergebnis.
 
-```fsharp
-open System
-open System.Net
-  
-let uploadDataAsync url data = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        webClient.UploadStringAsync(uri, data)
-    }
+    ```fsharp
+    open System
+    open System.Net
 
-let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
+    let uploadDataAsync url data =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            webClient.UploadStringAsync(uri, data)
+        }
 
-// Execution will continue after calling this!
-Async.Start(workflow)
+    let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
-printfn "%s" "uploadDataAsync is running in the background..."
- ```
+    // Execution will continue after calling this!
+    Async.Start(workflow)
+
+    printfn "%s" "uploadDataAsync is running in the background..."
+    ```
 
 Es gibt andere Möglichkeiten zum Starten einer Async-Workflows, die für spezifische Szenarien verfügbar. Sie werden beschrieben [in der Referenz zur asynchronen](https://msdn.microsoft.com/library/ee370232.aspx).
 
@@ -115,13 +115,13 @@ Das folgende Beispiel verwendet `Async.Parallel` zum Herunterladen des HTML-Code
 open System
 open System.Net
 
-let urlList = 
+let urlList =
     [ "https://www.microsoft.com"
       "https://www.google.com"
       "https://www.amazon.com"
       "https://www.facebook.com" ]
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -144,13 +144,13 @@ for html in htmlList do
 
 ## <a name="important-info-and-advice"></a>Wichtige Informationen und Hinweise
 
-*   Fügen Sie "Async" am Ende der Funktionen, die Sie nutzen werde
+* Fügen Sie "Async" am Ende der Funktionen, die Sie nutzen werde
 
  Obwohl dies nur eine Benennungskonvention ist, z.B. API-Erkennbarkeit erleichtern. Insbesondere dann, wenn Sie synchrone und asynchrone Versionen der gleichen Routine verfügbar sind, ist es eine gute Idee, explizit angeben, die über den Namen asynchron ist.
 
-*   Hören Sie sich an den Compiler.
+* Hören Sie sich an den Compiler.
 
- F#der Compiler ist sehr strenge, machen es nahezu unmöglich, etwas beunruhigend wie "Async" Code synchron ausgeführt. Wenn Sie über eine Warnung stammen, ist, die ein Zeichen dafür, dass der Code ausgeführt wird nicht wie Meinung, dass es klappt. Wenn Sie den Compiler glücklich machen können, wird Ihr Code in den meisten Fällen ausgeführt werden, wie erwartet.
+F#der Compiler ist sehr strenge, machen es nahezu unmöglich, etwas beunruhigend wie "Async" Code synchron ausgeführt. Wenn Sie über eine Warnung stammen, ist, die ein Zeichen dafür, dass der Code ausgeführt wird nicht wie Meinung, dass es klappt. Wenn Sie den Compiler glücklich machen können, wird Ihr Code in den meisten Fällen ausgeführt werden, wie erwartet.
 
 ## <a name="for-the-cvb-programmer-looking-into-f"></a>Für die C#/VB-Programmierer, die Suche in F\#
 
@@ -164,29 +164,29 @@ Es gibt einige andere ähnlichkeiten und Unterschiede zu beachten.
 
 ### <a name="similarities"></a>Ähnlichkeiten
 
-*   `let!`, `use!`, und `do!` sind analog zu den `await` beim Aufrufen von eines Async-Auftrags innerhalb einer `async{ }` Block.
+* `let!`, `use!`, und `do!` sind analog zu den `await` beim Aufrufen von eines Async-Auftrags innerhalb einer `async{ }` Block.
 
- Die drei Schlüsselwörter können nur verwendet werden, innerhalb einer `async { }` Block, ähnlich wie `await` kann nur aufgerufen werden, in eine `async` Methode. Kurz gesagt, `let!` ist für, wenn Sie möchten, erfassen und verwenden daher `use!` ist der gleiche aber etwas, deren Ressourcen bereinigt zu erhalten, müssen nachdem es verwendet wird, und `do!` ist, wenn Sie für einen asynchronen Workflow mit keinen Wert zurückgibt, um den Vorgang abzuschließen warten möchten Bevor Sie fortfahren.
+  Die drei Schlüsselwörter können nur verwendet werden, innerhalb einer `async { }` Block, ähnlich wie `await` kann nur aufgerufen werden, in eine `async` Methode. Kurz gesagt, `let!` ist für, wenn Sie möchten, erfassen und verwenden daher `use!` ist der gleiche aber etwas, deren Ressourcen bereinigt zu erhalten, müssen nachdem es verwendet wird, und `do!` ist, wenn Sie für einen asynchronen Workflow mit keinen Wert zurückgibt, um den Vorgang abzuschließen warten möchten Bevor Sie fortfahren.
 
-*   F#unterstützt Datenparallelität auf ähnliche Weise.
+* F#unterstützt Datenparallelität auf ähnliche Weise.
 
- Obwohl es sehr unterschiedlich arbeitet `Async.Parallel` entspricht `Task.WhenAll` für das Szenario möchten die Ergebnisse einer Reihe von asynchronen Aufträge aus, wenn alle abgeschlossen.
+  Obwohl es sehr unterschiedlich arbeitet `Async.Parallel` entspricht `Task.WhenAll` für das Szenario möchten die Ergebnisse einer Reihe von asynchronen Aufträge aus, wenn alle abgeschlossen.
 
 ### <a name="differences"></a>Unterschiede
 
-*   Geschachtelte `let!` ist nicht zulässig, im Gegensatz zu geschachtelten `await`
+* Geschachtelte `let!` ist nicht zulässig, im Gegensatz zu geschachtelten `await`
 
- Im Gegensatz zu `await`, der unendlich geschachtelt werden kann `let!` kann nicht aus, und das Ergebnis gebunden werden, bevor Sie ihn in eine andere verwenden müssen `let!`, `do!`, oder `use!`.
+  Im Gegensatz zu `await`, der unendlich geschachtelt werden kann `let!` kann nicht aus, und das Ergebnis gebunden werden, bevor Sie ihn in eine andere verwenden müssen `let!`, `do!`, oder `use!`.
 
-*   Unterstützung für den Abbruch ist in einfacher F# als in C#/VB.
+* Unterstützung für den Abbruch ist in einfacher F# als in C#/VB.
 
- Unterstützen von Abbruch einer Aufgabe in der Mitte über die Ausführung in C#/VB erfordert die Prüfung der `IsCancellationRequested` -Eigenschaft oder Aufrufe `ThrowIfCancellationRequested()` auf eine `CancellationToken` -Objekt, das an die Async-Methode übergeben wird.
+  Unterstützen von Abbruch einer Aufgabe in der Mitte über die Ausführung in C#/VB erfordert die Prüfung der `IsCancellationRequested` -Eigenschaft oder Aufrufe `ThrowIfCancellationRequested()` auf eine `CancellationToken` -Objekt, das an die Async-Methode übergeben wird.
 
 Im Gegensatz dazu F# asynchrone Workflows sind also ganz natürlich abgebrochen werden können. Abbruch ist ein einfacher dreistufigen Prozess.
 
-1.  Erstellen Sie einen neuen `CancellationTokenSource`.
-2.  Übergeben Sie ihn in eine Funktion ab.
-3.  Rufen Sie `Cancel` im Token.
+1. Erstellen Sie einen neuen `CancellationTokenSource`.
+2. Übergeben Sie ihn in eine Funktion ab.
+3. Rufen Sie `Cancel` im Token.
 
 Beispiel:
 
@@ -200,7 +200,7 @@ let workflow =
             printfn "Working..."
             do! Async.Sleep 1000
     }
-    
+
 let tokenSource = new CancellationTokenSource()
 
 // Start the workflow in the background
@@ -214,6 +214,6 @@ Und das ist schon alles!
 
 ## <a name="further-resources"></a>Weitere Ressourcen:
 
-*   [Asynchrone Workflows auf MSDN](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [Asynchroner Sequenzen fürF#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F#Data-HTTP-Hilfsprogrammen](https://fsharp.github.io/FSharp.Data/library/Http.html)
+* [Asynchrone Workflows auf MSDN](https://msdn.microsoft.com/library/dd233250.aspx)
+* [Asynchroner Sequenzen fürF#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+* [F#Data-HTTP-Hilfsprogrammen](https://fsharp.github.io/FSharp.Data/library/Http.html)

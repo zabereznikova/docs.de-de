@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 564e9e424b8b82e8837a0a58cb8c11389920c297
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 84d2355a78c7d33bf712baf158f28861e59e75d1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139632"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881939"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Vorgehensweise: Erstellen eines Zustandsautomatworkflows
 Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. Dieses Thema führt durch Erstellen eines Workflows, der integrierten Aktivitäten, wie z. B. verwendet die <xref:System.Activities.Statements.StateMachine> Aktivität und die benutzerdefinierten Aktivitäten aus dem vorherigen [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
@@ -23,31 +23,31 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 ### <a name="to-create-the-workflow"></a>So erstellen Sie den Workflow  
   
-1.  Mit der rechten Maustaste **NumberGuessWorkflowActivities** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Element**.  
+1. Mit der rechten Maustaste **NumberGuessWorkflowActivities** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Element**.  
   
-2.  In der **installiert**, **gemeinsame Elemente** Knoten **Workflow**. Wählen Sie **Aktivität** aus der **Workflow** Liste.  
+2. In der **installiert**, **gemeinsame Elemente** Knoten **Workflow**. Wählen Sie **Aktivität** aus der **Workflow** Liste.  
   
-3.  Typ `StateMachineNumberGuessWorkflow` in die **Namen** ein, und klicken Sie auf **hinzufügen**.  
+3. Typ `StateMachineNumberGuessWorkflow` in die **Namen** ein, und klicken Sie auf **hinzufügen**.  
   
-4.  Ziehen Sie eine **StateMachine** Aktivität aus der **State Machine** Teil der **Toolbox** und legen ihn auf die **Aktivität hier ablegen** Beschriftung im die Workflow-Entwurfsoberfläche.  
+4. Ziehen Sie eine **StateMachine** Aktivität aus der **State Machine** Teil der **Toolbox** und legen ihn auf die **Aktivität hier ablegen** Beschriftung im die Workflow-Entwurfsoberfläche.  
   
 ### <a name="to-create-the-workflow-variables-and-arguments"></a>So erstellen Sie die Workflowvariablen und -argumente  
   
-1.  Doppelklicken Sie auf **StateMachineNumberGuessWorkflow.xaml** in **Projektmappen-Explorer** um den Workflow im Designer anzuzeigen, wenn er nicht bereits angezeigt wird.  
+1. Doppelklicken Sie auf **StateMachineNumberGuessWorkflow.xaml** in **Projektmappen-Explorer** um den Workflow im Designer anzuzeigen, wenn er nicht bereits angezeigt wird.  
   
-2.  Klicken Sie auf **Argumente** in der unteren linken Seite des Workflow-Designers zum Anzeigen der **Argumente** Bereich.  
+2. Klicken Sie auf **Argumente** in der unteren linken Seite des Workflow-Designers zum Anzeigen der **Argumente** Bereich.  
   
-3.  Klicken Sie auf **Argument erstellen**.  
+3. Klicken Sie auf **Argument erstellen**.  
   
-4.  Typ `MaxNumber` in die **Namen** wählen Sie im **In** aus der **Richtung** Dropdown-Liste **Int32** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
+4. Typ `MaxNumber` in die **Namen** wählen Sie im **In** aus der **Richtung** Dropdown-Liste **Int32** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE, um das Argument zu speichern.  
   
-5.  Klicken Sie auf **Argument erstellen**.  
+5. Klicken Sie auf **Argument erstellen**.  
   
-6.  Typ `Turns` in die **Namen** Feld unterhalb des neu erstellten `MaxNumber` Argument die Option **Out** aus der **Richtung** Dropdown-Liste  **Int32** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE.  
+6. Typ `Turns` in die **Namen** Feld unterhalb des neu erstellten `MaxNumber` Argument die Option **Out** aus der **Richtung** Dropdown-Liste  **Int32** aus der **Argumenttyp** Dropdown-Liste, und drücken Sie dann die EINGABETASTE.  
   
-7.  Klicken Sie auf **Argumente** in der unteren linken Seite des Aktivitätsdesigners zu schließen die **Argumente** Bereich.  
+7. Klicken Sie auf **Argumente** in der unteren linken Seite des Aktivitätsdesigners zu schließen die **Argumente** Bereich.  
   
-8.  Klicken Sie auf **Variablen** in der unteren linken Seite des Workflow-Designers zum Anzeigen der **Variablen** Bereich.  
+8. Klicken Sie auf **Variablen** in der unteren linken Seite des Workflow-Designers zum Anzeigen der **Variablen** Bereich.  
   
 9. Klicken Sie auf **erstellen Variable**.  
   
@@ -64,14 +64,14 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 ### <a name="to-add-the-workflow-activities"></a>So fügen Sie die Workflowaktivitäten hinzu  
   
-1.  Klicken Sie auf **State1** um es auszuwählen. In der **Fenster "Eigenschaften"**, ändern Sie die **"DisplayName"** zu `Initialize Target`.  
+1. Klicken Sie auf **State1** um es auszuwählen. In der **Fenster "Eigenschaften"**, ändern Sie die **"DisplayName"** zu `Initialize Target`.  
   
     > [!TIP]
     >  Wenn die **Fenster "Eigenschaften"** als nicht angezeigt, aktivieren **Fenster "Eigenschaften"** aus der **Ansicht** Menü.  
   
-2.  Doppelklicken Sie auf das gerade umbenannte **Ziel initialisieren** Zustand im Workflow-Designer, um ihn zu erweitern.  
+2. Doppelklicken Sie auf das gerade umbenannte **Ziel initialisieren** Zustand im Workflow-Designer, um ihn zu erweitern.  
   
-3.  Ziehen Sie ein **zuweisen** Aktivität aus der **primitive** Teil der **Toolbox** und legen ihn auf die **Eintrag** -Abschnitt des Zustands. Typ `Target` in die **zu** Feld und den folgenden Ausdruck in der **Geben Sie einen C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld.  
+3. Ziehen Sie ein **zuweisen** Aktivität aus der **primitive** Teil der **Toolbox** und legen ihn auf die **Eintrag** -Abschnitt des Zustands. Typ `Target` in die **zu** Feld und den folgenden Ausdruck in der **Geben Sie einen C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld.  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,15 +84,15 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
     > [!TIP]
     >  Wenn die **Toolbox** Fenster nicht angezeigt wird, wählen Sie **Toolbox** aus der **Ansicht** Menü.  
   
-4.  Zurück zur allgemeinen zustandsautomatenansicht im Workflow-Designer durch Klicken auf **StateMachine** in der Brotkrümelnavigation angezeigt werden soll, am oberen Rand der Workflow-Designer.  
+4. Zurück zur allgemeinen zustandsautomatenansicht im Workflow-Designer durch Klicken auf **StateMachine** in der Brotkrümelnavigation angezeigt werden soll, am oberen Rand der Workflow-Designer.  
   
-5.  Ziehen Sie eine **Zustand** Aktivität aus der **Zustandsautomat** im Abschnitt der **Toolbox** im Workflow-Designer und zeigen sie die **Ziel initialisieren** Zustand. Beachten Sie, dass vier Dreiecke, um angezeigt werden die **Ziel initialisieren** Status, wenn der neue Zustand darüber befindet. Löschen Sie den neuen Zustand auf dem Dreieck ab, direkt unterhalb der **Ziel initialisieren** Zustand. Dadurch wird der neuen Zustand im Workflow, und erstellt einen Übergang von der **Ziel initialisieren** -Zustand in den neuen Zustand.  
+5. Ziehen Sie eine **Zustand** Aktivität aus der **Zustandsautomat** im Abschnitt der **Toolbox** im Workflow-Designer und zeigen sie die **Ziel initialisieren** Zustand. Beachten Sie, dass vier Dreiecke, um angezeigt werden die **Ziel initialisieren** Status, wenn der neue Zustand darüber befindet. Löschen Sie den neuen Zustand auf dem Dreieck ab, direkt unterhalb der **Ziel initialisieren** Zustand. Dadurch wird der neuen Zustand im Workflow, und erstellt einen Übergang von der **Ziel initialisieren** -Zustand in den neuen Zustand.  
   
-6.  Klicken Sie auf **State1** ändern, um ihn auszuwählen, die **"DisplayName"** zu `Enter Guess`, und doppelklicken Sie dann auf den Zustand im Workflow-Designer, um ihn zu erweitern.  
+6. Klicken Sie auf **State1** ändern, um ihn auszuwählen, die **"DisplayName"** zu `Enter Guess`, und doppelklicken Sie dann auf den Zustand im Workflow-Designer, um ihn zu erweitern.  
   
-7.  Ziehen Sie eine **WriteLine** Aktivität aus der **primitive** Teil der **Toolbox** und legen ihn auf die **Eintrag** -Abschnitt des Zustands.  
+7. Ziehen Sie eine **WriteLine** Aktivität aus der **primitive** Teil der **Toolbox** und legen ihn auf die **Eintrag** -Abschnitt des Zustands.  
   
-8.  Geben Sie den folgenden Ausdruck in der **Text** Eigenschaftenfeld die **WriteLine**.  
+8. Geben Sie den folgenden Ausdruck in der **Text** Eigenschaftenfeld die **WriteLine**.  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -179,11 +179,11 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
      Im folgenden Beispiel wird der abgeschlossene Workflow dargestellt.  
   
-     ![Abgeschlossener Zustandsautomatenworkflow](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+     ![Abbildung der abgeschlossenen Zustandsautomatworkflow.](./media/how-to-create-a-state-machine-workflow/complete-state-machine-workflow.jpg)  
   
 ### <a name="to-build-the-workflow"></a>So erstellen Sie den Workflow  
   
-1.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
+1. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
      Informationen zum Ausführen des Workflows finden Sie im nächste Thema, [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md). Wenn Sie bereits abgeschlossen haben die [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md) Schritt mit einer anderen workflowart und ihn mithilfe der Zustandsautomatworkflows aus diesem Schritt ausführen möchten, fahren Sie mit der [erstellen und Ausführen der Anwendungs](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) Abschnitt [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md).  
   
@@ -193,6 +193,6 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 - <xref:System.Activities.Statements.FlowDecision>
 - [Windows Workflow Foundation-Programmierung](programming.md)
 - [Entwerfen von Workflows](designing-workflows.md)
-- [Lernprogramm 'Erste Schritte'](getting-started-tutorial.md)
+- [Tutorial mit ersten Schritten](getting-started-tutorial.md)
 - [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md)
 - [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md)

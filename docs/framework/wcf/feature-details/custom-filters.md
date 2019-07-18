@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Filter
 ms.date: 03/30/2017
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ef94d95737fb743af56f411bcc0f39ceea679a0
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489754"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912684"
 ---
 # <a name="custom-filters"></a>Benutzerdefinierte Filter
 Mit benutzerdefinierten Filtern können Sie eine Übereinstimmungslogik definieren, was mit den vom System bereitgestellten Nachrichtenfiltern nicht möglich ist. Sie können z. B. einen benutzerdefinierten Filter erstellen, der einen Hashwert für ein bestimmtes Nachrichtenelement erstellt und dann untersucht, um zu ermitteln, ob der Filter "true" oder "false" zurückgeben soll.  
@@ -39,23 +39,23 @@ public class MyMessageFilter: MessageFilter
 ```  
   
 > [!NOTE]
->  In einer wirklichen Implementierung enthält die Übereinstimmung Methode(n) Logik, die die Nachricht, um festzustellen, ob dieser Nachrichtenfilter zurückgeben soll untersucht **"true"** oder **"false"**.  
+>  In einer wirklichen Implementierung enthalten die Match-Methoden enthält eine Logik, die die Nachricht zu bestimmen, ob dieser Nachrichtenfilter zurückgeben soll untersucht **"true"** oder **"false"**.  
   
 ### <a name="performance"></a>Leistung  
  Wenn ein benutzerdefinierter Filter implementiert wird, ist es wichtig, die maximale Zeitspanne zu berücksichtigen, die für den Abschluss der Auswertung einer Meldung durch den Filter erforderlich ist. Da eine Meldung möglicherweise mit mehreren Filtern ausgewertet wird, bevor eine Übereinstimmung gefunden wird, ist es wichtig sicherzustellen, dass die Clientanforderung kein Timeout zurückgibt, bevor alle Filter ausgewertet werden können. Daher sollte ein benutzerdefinierter Filter nur den erforderlichen Code für die Auswertung des Inhalts oder die Attribute einer Meldung enthalten, damit bestimmt werden kann, ob es eine Entsprechung für die Filterkriterien findet.  
   
  Im Allgemeinen sollten Sie bei der Implementierung eines benutzerdefinierten Filters Folgendes vermeiden:  
   
--   E/A, z. B. Speichern von Daten auf einem Datenträger oder in einer Datenbank.  
+- E/A, z. B. Speichern von Daten auf einem Datenträger oder in einer Datenbank.  
   
--   Unnötige Verarbeitungsvorgänge, z. B. Ausführung von Schleifen für mehrere Datensätze in einem Dokument.  
+- Unnötige Verarbeitungsvorgänge, z. B. Ausführung von Schleifen für mehrere Datensätze in einem Dokument.  
   
--   Blockieren von Vorgängen, z. B. Aufrufe, die das Abrufen einer Sperre für freigegebene Ressourcen oder das Ausführen von Suchabfragen für eine Datenbank enthalten.  
+- Blockieren von Vorgängen, z. B. Aufrufe, die das Abrufen einer Sperre für freigegebene Ressourcen oder das Ausführen von Suchabfragen für eine Datenbank enthalten.  
   
  Vor der Verwendung eines benutzerdefinierten Filters in einer Produktionsumgebung sollten Sie Leistungstests ausführen, um die durchschnittliche erforderliche Zeit zur Auswertung einer Meldung zu bestimmen. In Kombination mit der durchschnittlichen Verarbeitungszeit der anderen in der Filtertabelle verwendeten Filter können Sie so genau den maximalen Timeoutwert bestimmen, der von der Clientanwendung angegeben werden sollte.  
   
 ## <a name="usage"></a>Verwendung  
- Um den benutzerdefinierten Filter mit dem Routingdienst zu verwenden, müssen Sie es der Filtertabelle hinzufügen durch angeben einen neuen Filtereintrag vom Typ "Custom", den voll qualifizierten Typnamen des Nachrichtenfilters und den Namen der Assembly.  Wie bei anderen MessageFilters auch, können Sie unter "filterData" eine Zeichenfolge angeben, die an den Konstruktor des benutzerdefinierten Filters übergeben wird.  
+ Um Ihren benutzerdefinierten Filter mit dem Routingdienst zu verwenden, müssen Sie sie der Filtertabelle hinzufügen durch Angabe einen neuen Filtereintrag vom Typ "Custom", den vollqualifizierten Typnamen des Nachrichtenfilters und den Namen der Assembly.  Wie bei anderen MessageFilters auch, können Sie unter "filterData" eine Zeichenfolge angeben, die an den Konstruktor des benutzerdefinierten Filters übergeben wird.  
   
  In den folgenden Beispielen wird veranschaulicht, wie Sie einen benutzerdefinierten Filter mit dem Routingdienst verwenden:  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
 ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926410"
 ---
 # <a name="base-elements"></a>Basiselemente
 Vier Hauptklassen –<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.FrameworkContentElement>– Implementieren von unwesentlicher Teil der allgemeinen Elementfunktionen, die in WPF-Programmierung verfügbar. Diese vier Klassen werden in diesem SDK als Basiselementklassen bezeichnet.  

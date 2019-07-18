@@ -1,15 +1,13 @@
 ---
 title: Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmöglichkeiten des API-Gatewaymusters und der direkten Kommunikation zwischen Client und Microservice zu verstehen.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 0e2db3629d504065a122a69b916f19aa3b838aab
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462954"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690360"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -148,7 +146,7 @@ In diesem Leitfaden und in der Referenzbeispielanwendung (eShopOnContainers) ist
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) ist ein einfaches API-Gateway, das sich für weniger komplexe Anforderungen empfiehlt. Ocelot ist ein .NET Core-basiertes Open Source-API-Gateway, das speziell für Microservicearchitekturen entwickelt wurde, für die einheitliche Eintrittspunkte in das System benötigt werden. Das Gateway ist schlank, schnell und skalierbar und bietet Routing und Authentifizierung sowie viele weitere Funktionen.
 
-Der Hauptgrund, aus dem Ocelot für die [eShopOnContainers-Referenzanwendung](https://github.com/dotnet-architecture/eShopOnContainers) ausgewählt wurde, liegt darin, dass Ocelot ein schlankes .NET Core-API-Gateway ist, das Sie in der gleichen Anwendungsbereitstellungsumgebung bereitstellen können, in der Sie auch Ihre Microservices/Container bereitstellen, z.B. Docker-Host, Kubernetes, Service Fabric usw. Und da es auf .NET Core basiert, funktioniert es plattformübergreifend, sodass Sie Ihre Anwendung sowohl unter Linux als auch unter Windows bereitstellen können.
+Der Hauptgrund Ocelot für Auswählen der [referenzanwendung eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) ist, da Ocelot eine einfache API-Gateway von .NET Core, die Sie in der gleichen Anwendung bereitstellungsumgebung bereitstellen können ist, in denen Sie bereitstellen, Ihre Microservices /-Container, z. B. ein Docker-Host, Kubernetes usw. Und da es auf .NET Core basiert, funktioniert es plattformübergreifend, sodass Sie Ihre Anwendung sowohl unter Linux als auch unter Windows bereitstellen können.
 
 Die Diagramme oben zeigen benutzerdefinierte API-Gateways, die in Containern ausgeführt werden – genau so können Sie auch Ocelot in einer container- und microservicebasierten Anwendung ausführen.
 
@@ -172,26 +170,26 @@ Nachdem wir Architektur und Muster beschrieben haben, wird in den nächsten Absc
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Charles Richardson. Pattern: API Gateway / Backend for Frontend (Muster: API-Gateway/Back-End für Front-End)** \
-  [https://microservices.io/patterns/apigateway.html](https://microservices.io/patterns/apigateway.html)
+- **Charles Richardson. Pattern: API Gateway / Backend for Frontend (Muster: API-Gateway/Back-End für Front-End)**  \
+  <https://microservices.io/patterns/apigateway.html>
 
 - **API-Gatewaymuster** \
-  [https://docs.microsoft.com/azure/architecture/microservices/gateway](https://docs.microsoft.com/azure/architecture/microservices/gateway)
+  <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
-- **Aggregation and composition pattern (Aggregations- und Kompositionsmuster)** \
-  [https://microservices.io/patterns/data/api-composition.html](https://microservices.io/patterns/data/api-composition.html)
+- **Aggregation and composition pattern (Aggregations- und Kompositionsmuster)**  \
+  <https://microservices.io/patterns/data/api-composition.html>
 
 - **Azure API Management** \
-  [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
+  <https://azure.microsoft.com/services/api-management/>
 
-- **Udi Dahan. Service Oriented Composition (Dienstorientierte Komposition)** \
-  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+- **Udi Dahan. Service Oriented Composition (Dienstorientierte Komposition)**  \
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Video) (Messaging und Microservices auf der GOTO 2016)** \
-  [https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+- **Clemens Vasters. Messaging and Microservices at GOTO 2016 (Video) (Messaging und Microservices auf der GOTO 2016)**  \
+  <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **API Gateway in a Nutshell (API-Gateway in aller Kürze)** (ASP.net Core API Gateway Tutorial Series (ASP.net Core API-Gateway-Tutorial-Reihe))
-  [https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
+  <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
 >[Zurück](identify-microservice-domain-model-boundaries.md)

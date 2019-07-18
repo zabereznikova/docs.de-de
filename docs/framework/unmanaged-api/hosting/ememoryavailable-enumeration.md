@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d98a0c1c3187b81c44fae6eee91d975169a40045
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 76fc5f578e6da731ffd6406344d00cda8b57f493
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072804"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772407"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable-Enumeration
 Enthält Werte, die die Menge des freien physischen Arbeitsspeichers auf dem Computer angeben. Diese Werte logisch sind die Ereignisse für die oberen und unteren zurückgegebene Arbeitsspeicher aus dem `CreateMemoryResourceNotification` -Funktion in der Windows-API.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     eMemoryAvailableLow     = 1,  
     eMemoryAvailableNeutral = 2,  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1f1ea6e8ef0b94aa46a4bf8177d59e59297d6e3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074975"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605836"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Vorgehensweise: Festlegen von Stiftbreite und -ausrichtung
 Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite als eines der Argumente an den Konstruktor bereitstellen. Sie können auch die Stiftbreite mit Ändern der <xref:System.Drawing.Pen.Width%2A> Eigenschaft der <xref:System.Drawing.Pen> Klasse.  
@@ -26,7 +26,7 @@ Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite 
   
 ### <a name="to-vary-the-width-of-a-pen"></a>Um die Breite des Stifts zu variieren.  
   
--   Legen Sie den Wert, der die <xref:System.Drawing.Pen.Alignment%2A> Eigenschaft <xref:System.Drawing.Drawing2D.PenAlignment.Center> (Standard), um anzugeben, dass mit dem grünen Stift gezeichneten Pixel auf der theoretischen Linie zentriert werden soll. Die folgende Abbildung zeigt die resultierende Linie.  
+- Legen Sie den Wert, der die <xref:System.Drawing.Pen.Alignment%2A> Eigenschaft <xref:System.Drawing.Drawing2D.PenAlignment.Center> (Standard), um anzugeben, dass mit dem grünen Stift gezeichneten Pixel auf der theoretischen Linie zentriert werden soll. Die folgende Abbildung zeigt die resultierende Linie.  
   
      ![Ein schwarzer thin Grün hervorgehobene Linie.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
@@ -37,7 +37,7 @@ Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite 
   
 ### <a name="to-change-the-alignment-of-a-pen"></a>So ändern Sie die Ausrichtung eines Stifts  
   
--   Legen Sie den Wert von der <xref:System.Drawing.Pen.Alignment%2A> Eigenschaft <xref:System.Drawing.Drawing2D.PenAlignment.Center> um anzugeben, dass die mit dem grünen Stift gezeichneten Pixel soll, auf die Begrenzung des Rechtecks zentriert werden.  
+- Legen Sie den Wert von der <xref:System.Drawing.Pen.Alignment%2A> Eigenschaft <xref:System.Drawing.Drawing2D.PenAlignment.Center> um anzugeben, dass die mit dem grünen Stift gezeichneten Pixel soll, auf die Begrenzung des Rechtecks zentriert werden.  
   
      Die folgende Abbildung zeigt das sich ergebende Rechteck:
   
@@ -48,7 +48,7 @@ Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite 
   
 ### <a name="to-create-an-inset-pen"></a>Ein abgesenkter Stift erstellen  
   
--   Ändern Sie den grünen Stift-Ausrichtung, indem Sie im obigen Codebeispiel wird die dritte Anweisung wie folgt ändern:  
+- Ändern Sie den grünen Stift-Ausrichtung, indem Sie im obigen Codebeispiel wird die dritte Anweisung wie folgt ändern:  
   
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
@@ -59,5 +59,5 @@ Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden eines Stiftes zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
+- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)

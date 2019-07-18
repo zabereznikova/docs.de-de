@@ -2,12 +2,12 @@
 title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178775"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959965"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WCF) einige bestimmte Sicherheitsszenarien nicht. Z. B. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI- oder Kerberos-Authentifizierungsprotokolle nicht implementiert, und daher WCF unterstützt nicht das Ausführen eines Diensts mit Windows-Authentifizierung auf dieser Plattform. Andere Authentifizierungsmechanismen, wie z. B. Benutzername/Kennwort und die HTTP/HTTPS-integrierte Authentifizierung werden unterstützt, wenn WCF unter Windows XP Home Edition ausgeführt wird.  
@@ -20,13 +20,13 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP und Sicherheitskontexttoken-Cookie aktiviert  
  WCF unterstützt keinen Identitätswechsel und <xref:System.InvalidOperationException> wird ausgelöst, wenn die folgenden Bedingungen erfüllt sein:  
   
--   Das Betriebssystem ist [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- Das Betriebssystem ist [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Der Authentifizierungsmodus ruft eine Windows-Identität hervor.  
+- Der Authentifizierungsmodus ruft eine Windows-Identität hervor.  
   
--   Die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>-Eigenschaft von <xref:System.ServiceModel.OperationBehaviorAttribute> wird auf <xref:System.ServiceModel.ImpersonationOption.Required> festgelegt.  
+- Die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>-Eigenschaft von <xref:System.ServiceModel.OperationBehaviorAttribute> wird auf <xref:System.ServiceModel.ImpersonationOption.Required> festgelegt.  
   
--   Ein statusbasiertes Sicherheitszustandskontexttoken (SCT) wird erstellt. (Standardmäßig ist die Erstellung deaktiviert.)  
+- Ein statusbasiertes Sicherheitszustandskontexttoken (SCT) wird erstellt. (Standardmäßig ist die Erstellung deaktiviert.)  
   
  Das statusbasierte SCT kann nur mit einer benutzerdefinierten Bindung erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Sicherheitskontext für eine sichere Sitzung Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Im Code wird das Token aktiviert, indem ein Sicherheitsbindungselement erstellt wird (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>), wobei die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType>-Methode oder die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode verwendet wird und der `requireCancellation`-Parameter auf `false` festgelegt wird. Der Parameter bezieht sich auf die Zwischenspeicherung des SCT. Wenn Sie den Wert auf `false` festlegen, wird die statusbasierte SCT-Funktion aktiviert.  
   
@@ -36,7 +36,7 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 >  Die zuvor genannten Anforderungen sind spezifisch. Beispielsweise erstellt das <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> ein Bindungselement, das zu einer Windows-Identität führt, wobei aber kein SCT eingerichtet wird. Sie können es daher mit der `Required`-Option unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] verwenden.  
   
 ### <a name="possible-aspnet-conflict"></a>Möglicher ASP.NET-Konflikt  
- WCF und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] können sowohl Identitätswechsel aktivieren oder deaktivieren. Wenn [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hostet eine WCF-Anwendung ist möglicherweise ein Konflikt zwischen dem WCF vorhanden und [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Konfigurationseinstellungen. Bei einem Konflikt hat die WCF-Einstellung Vorrang, es sei denn, die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> -Eigenschaftensatz auf <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, in diesem Fall die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -identitätswechseleinstellung Vorrang.  
+ WCF und ASP.NET kann sowohl Identitätswechsel aktivieren oder deaktivieren. Wenn ASP.NET eine WCF-Anwendung hostet, kann ein Konflikt zwischen der Konfigurationseinstellungen für WCF und ASP.NET vorhanden sein. Bei einem Konflikt hat die WCF-Einstellung Vorrang, es sei denn, die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> -Eigenschaftensatz auf <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, in diesem Fall die Einstellung für ASP.NET Identitätswechsel Vorrang hat.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Assembly-Ladevorgänge können beim Identitätswechsel fehlschlagen  
  Wenn der Identitätswechselkontext keine Zugriffsberechtigungen zum Laden einer Assembly hat und es das erste Mal ist, dass die Common Language Runtime (CLR) versucht, die Assembly für diese Anwendungsdomäne zu laden, speichert die <xref:System.AppDomain> den Fehler zwischen. Nachfolgende Versuche, diese Assembly(s) zu laden, schlagen fehl, selbst nach dem Zurücksetzen des Identitätswechsels und sogar wenn der zurückgesetzte Kontext die Zugriffsberechtigungen hat, die Assembly zu laden. Die Ursache dafür ist, dass die CLR nach der Änderung des Benutzerkontextes keinen weiteren Ladeversuch unternimmt. Sie müssen die Anwendungsdomäne neu starten, um nach dem Fehler wiederhergestellt zu werden.  
@@ -50,7 +50,7 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 ## <a name="cryptography"></a>Kryptografie  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>Unterstützt HA-256 nur für den Einsatz mit symmetrischen Schlüsseln  
- WCF unterstützt eine Vielzahl von Verschlüsselung und Signatur Digest-erstellungsalgorithmen, die Sie angeben können, mit der algorithmussuite in den vom System bereitgestellten Bindungen. Zur Verbesserung der Sicherheit unterstützt WCF Secure Hash Algorithm (SHA) 2-Algorithmen, insbesondere SHA-256, für die Erstellung von Signatur-Hashwert-Hashes. Dieses Release unterstützt SHA-256 nur für Einsätze mit symmetrischen Schlüsseln, z. B. Kerberos-Schlüssel und wenn kein X.509-Zertifikat zum Signieren der Nachricht verwendet wird. WCF unterstützt keine RSA-Signaturen (in x. 509-Zertifikaten) mit SHA-256-Hash aufgrund der derzeitigen fehlenden Supports für RSA-SHA256, in der [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ WCF unterstützt eine Vielzahl von Verschlüsselung und Signatur Digest-erstellungsalgorithmen, die Sie angeben können, mit der algorithmussuite in den vom System bereitgestellten Bindungen. Zur Verbesserung der Sicherheit unterstützt WCF Secure Hash Algorithm (SHA) 2-Algorithmen, insbesondere SHA-256, für die Erstellung von Signatur-Hashwert-Hashes. Dieses Release unterstützt SHA-256 nur für Einsätze mit symmetrischen Schlüsseln, z. B. Kerberos-Schlüssel und wenn kein X.509-Zertifikat zum Signieren der Nachricht verwendet wird. WCF unterstützt keine RSA-Signaturen (in x. 509-Zertifikaten) mit SHA-256-Hash aufgrund der derzeitigen fehlenden Supports für RSA-SHA256 in der "WinFX".  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>FIPS-kompatible SHA-256-Hashes werden nicht unterstützt  
  WCF unterstützt keine SHA-256-FIPS-kompatiblen Hashes, sodass algorithmussuites, die SHA-256 Verwenden von WCF auf Systemen nicht unterstützt werden, wenn für die Verwendung von FIPS-konformen Algorithmus erforderlich ist.  
@@ -68,20 +68,20 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
   
  Ob KSP von einem Zertifikat verwendet wird, kann auf zwei Arten ermittelt werden:  
   
--   Führen Sie `p/invoke` für die `CertGetCertificateContextProperty` aus, und überprüfen Sie `dwProvType` in der zurückgegebenen `CertGetCertificateContextProperty`.  
+- Führen Sie `p/invoke` für die `CertGetCertificateContextProperty` aus, und überprüfen Sie `dwProvType` in der zurückgegebenen `CertGetCertificateContextProperty`.  
   
--   Verwenden der `certutil` Befehl über die Befehlszeile zum Abfragen von Zertifikaten. Weitere Informationen finden Sie unter [Aufgaben von Certutil für die Problembehandlung bei Zertifikaten](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Verwenden der `certutil` Befehl über die Befehlszeile zum Abfragen von Zertifikaten. Weitere Informationen finden Sie unter [Aufgaben von Certutil für die Problembehandlung bei Zertifikaten](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Nachrichtensicherheit schlägt fehlt, wenn der ASP.NET-Identitätswechsel verwendet wird und die ASP.NET-Kompatibilität erforderlich ist  
  WCF unterstützt nicht die folgende Kombination von Einstellungen, da sie auftreten der Clientauthentifizierung verhindern können:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Identitätswechsel ist aktiviert. Dies erfolgt in der Datei "Web.config" durch Festlegen der `impersonate` Attribut der <`identity`>-Element `true`.  
+- ASP.NET-Identitätswechsel ist aktiviert. Dies erfolgt in der Datei "Web.config" durch Festlegen der `impersonate` Attribut der <`identity`>-Element `true`.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] im Kompatibilitätsmodus ist aktiviert, indem die `aspNetCompatibilityEnabled` Attribut der [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) zu `true`.  
+- ASP.NET-Kompatibilitätsmodus wird aktiviert, indem die `aspNetCompatibilityEnabled` Attribut der [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) zu `true`.  
   
--   Die Nachrichtenmodussicherheit wird verwendet.  
+- Die Nachrichtenmodussicherheit wird verwendet.  
   
- Sie können alternativ auch den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Kompatibilitätsmodus deaktivieren. Oder, wenn Sie die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Kompatibilitätsmodus erforderlich ist, deaktivieren Sie die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Identitätswechsel feature aus, und verwenden Sie stattdessen die von WCF bereitgestellter Identitätswechsel. Weitere Informationen finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Die problemumgehung ist, deaktivieren Sie den ASP.NET-Kompatibilitätsmodus. Oder wenn der ASP.NET-Kompatibilitätsmodus erforderlich ist, deaktivieren Sie die ASP.NET Identitätswechsel-Funktion, und verwenden Sie stattdessen die von WCF bereitgestellter Identitätswechsel. Weitere Informationen finden Sie unter [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6-Literal-Adressfehler  
  Bei Sicherheitsanforderungen tritt ein Fehler auf, wenn sich Client und Dienst auf dem gleichen Computer befinden und für den Dienst IPv6-Literaladressen verwendet werden.  
@@ -111,8 +111,8 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 ## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Veröffentlichung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Angriffe durch Rechteerweiterung](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Dienstverweigerung (Denial of Service)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Verfälschungen](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Wiederholungsangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

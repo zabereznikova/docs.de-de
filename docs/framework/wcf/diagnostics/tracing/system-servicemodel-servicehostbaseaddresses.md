@@ -3,11 +3,11 @@ title: System.ServiceModel.ServiceHostBaseAddresses
 ms.date: 03/30/2017
 ms.assetid: a36b8d38-8719-4d51-923a-420ec6c009e7
 ms.openlocfilehash: fe16208a3ff277fe8322d75f27bcdd961f031ae8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703438"
 ---
 # <a name="systemservicemodelservicehostbaseaddresses"></a>System.ServiceModel.ServiceHostBaseAddresses
 System.ServiceModel.ServiceHostBaseAddresses  

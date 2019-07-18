@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CheckBox control [WPF], ListView control
 ms.assetid: f6d66c7f-906c-4f65-a55a-0ede9d00e26a
 ms.openlocfilehash: b09d5ad11b0961febf524cec1e19cb1e59832e44
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910779"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>Vorgehensweise: Erstellen von ListViewItems mit einem Kontrollkästchen
 In diesem Beispiel wird veranschaulicht, wie eine Spalte mit angezeigt <xref:System.Windows.Controls.CheckBox> -Steuerelemente in eine <xref:System.Windows.Controls.ListView> -Steuerelements, verwendet eine <xref:System.Windows.Controls.GridView>.  
@@ -34,5 +34,5 @@ In diesem Beispiel wird veranschaulicht, wie eine Spalte mit angezeigt <xref:Sys
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [Übersicht über ListView](listview-overview.md)
-- [Gewusst wie-Themen](listview-how-to-topics.md)
+- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
 - [Übersicht über GridView](gridview-overview.md)

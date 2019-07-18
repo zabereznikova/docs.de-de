@@ -10,29 +10,29 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792028"
 ---
 # <a name="overload-resolution-visual-basic"></a>Überladungsauflösung (Visual Basic)
 Stößt der Visual Basic-Compiler einen Aufruf an eine Prozedur, die in mehreren überladenen Versionen definiert ist, müssen Sie von der Compiler entscheiden, welche Überladung aufrufen. Hierzu werden die folgenden Schritte ausführen:  
   
-1.  **Barrierefreiheit.** Überladung mit der Zugriffsebene, die verhindert, dass den aufrufenden Code Aufrufen dieser beseitigt.  
+1. **Barrierefreiheit.** Überladung mit der Zugriffsebene, die verhindert, dass den aufrufenden Code Aufrufen dieser beseitigt.  
   
-2.  **Anzahl von Parametern.** Überladung, die eine andere Anzahl von Parametern definiert als bereitgestellt werden, in dem Aufruf beseitigt.  
+2. **Anzahl von Parametern.** Überladung, die eine andere Anzahl von Parametern definiert als bereitgestellt werden, in dem Aufruf beseitigt.  
   
-3.  **Parameterdatentypen.** Der Compiler zieht Instanzmethoden über Erweiterungsmethoden. Wenn eine beliebige Instanzmethode, dass erfordert erweiterungskonvertierungen entsprechend den Prozeduraufruf gefunden wird, alle Erweiterungsmethoden werden gelöscht, und der Compiler, die mit nur den Instanzmethoden wird fortgesetzt. Wenn keine solche Instanzmethode gefunden wird, weiterhin mit sowohl die Instanz als auch die Erweiterungsmethoden.  
+3. **Parameterdatentypen.** Der Compiler zieht Instanzmethoden über Erweiterungsmethoden. Wenn eine beliebige Instanzmethode, dass erfordert erweiterungskonvertierungen entsprechend den Prozeduraufruf gefunden wird, alle Erweiterungsmethoden werden gelöscht, und der Compiler, die mit nur den Instanzmethoden wird fortgesetzt. Wenn keine solche Instanzmethode gefunden wird, weiterhin mit sowohl die Instanz als auch die Erweiterungsmethoden.  
   
      In diesem Schritt entfällt diese alle Überladungen, die für die die Datentypen der Argumente der Aufruf mit den Parametertypen in der Überladung definiert konvertiert werden können.  
   
-4.  **Einschränkende Konvertierungen.** Überladung, die eine einschränkende Konvertierung von der aufrufenden Argumenttypen definierten Parametertypen erfordert beseitigt. Dies ist "true" gibt an, ob die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `On` oder `Off`.  
+4. **Einschränkende Konvertierungen.** Überladung, die eine einschränkende Konvertierung von der aufrufenden Argumenttypen definierten Parametertypen erfordert beseitigt. Dies ist "true" gibt an, ob die Überprüfung des Typs wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `On` oder `Off`.  
   
-5.  **Geringste Erweiterung.** Der Compiler betrachtet die verbleibenden Überladungen in Paaren. Für jedes Paar werden die Datentypen der definierten Parameter verglichen. Wenn die Typen in einer der Überladungen, die alle auf die entsprechenden Typen in der anderen erweitert werden kann, beseitigt der Compiler die zweite. D. h., bleibt die Überladung, die die geringste Menge an erweiternde erforderlich sind.  
+5. **Geringste Erweiterung.** Der Compiler betrachtet die verbleibenden Überladungen in Paaren. Für jedes Paar werden die Datentypen der definierten Parameter verglichen. Wenn die Typen in einer der Überladungen, die alle auf die entsprechenden Typen in der anderen erweitert werden kann, beseitigt der Compiler die zweite. D. h., bleibt die Überladung, die die geringste Menge an erweiternde erforderlich sind.  
   
-6.  **Einzelne Kandidat.** Da die Überladungen, bis nur eine paarweise überladen bleibt und löst des Aufrufs von dieser Überladung wird fortgesetzt. Wenn der Compiler die Überladungen, die einem einzelnen Kandidaten reduzieren kann, wird einen Fehler generiert.  
+6. **Einzelne Kandidat.** Da die Überladungen, bis nur eine paarweise überladen bleibt und löst des Aufrufs von dieser Überladung wird fortgesetzt. Wenn der Compiler die Überladungen, die einem einzelnen Kandidaten reduzieren kann, wird einen Fehler generiert.  
   
  Die folgende Abbildung zeigt den Prozess, der bestimmt, die einem Satz von überladenen Versionen aufgerufen.  
   

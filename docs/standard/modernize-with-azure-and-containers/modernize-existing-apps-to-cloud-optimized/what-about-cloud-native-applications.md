@@ -1,17 +1,15 @@
 ---
-title: Was geschieht mit Cloudnativen Anwendungen?
+title: Was gilt für cloudnative Anwendungen?
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Was geschieht mit Cloudnativen Anwendungen?
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 2d459b4ab3e015bb328699aa1d53159593e06da0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679280"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643658"
 ---
-# <a name="what-about-cloud-native-applications"></a>Was geschieht mit Cloudnativen Anwendungen?
+# <a name="what-about-cloud-native-applications"></a>Was gilt für cloudnative Anwendungen?
 
 Obwohl [Cloudnative](https://azure.microsoft.com/overview/cloudnative/) Anwendungen sind nicht im Mittelpunkt dieses Handbuchs, es ist hilfreich, um einen Überblick über diese modernisierungsreifegrad zu erhalten, und klicken Sie zur Unterscheidung von Cloudoptimierte Anwendungen.
 

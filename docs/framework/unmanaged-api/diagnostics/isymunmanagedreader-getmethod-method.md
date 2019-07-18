@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab6228866434b35525b16e97b8cba718b849dea1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 35dd8dd272ea8b4fc21cb9d7dce6899ceb836265
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213206"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777005"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod-Methode
 Ruft ein Methodenobjekt des Symbolreaders, mit dem angegebenen ein Methodentoken ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetMethod (  
     [in]  mdMethodDef  token,  
     [out, retval] ISymUnmanagedMethod**  pRetVal);  

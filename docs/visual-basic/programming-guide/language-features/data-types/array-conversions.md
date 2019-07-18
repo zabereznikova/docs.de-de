@@ -12,21 +12,21 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f69ed6e0040f33f810d324a76859d448e9dc7632
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830200"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601139"
 ---
 # <a name="array-conversions-visual-basic"></a>Arraykonvertierungen (Visual Basic)
 Sie können einen Arraytyp in einen anderen Arraytyp konvertieren, sofern Sie die folgenden Bedingungen erfüllen:  
   
--   **Gleich Rang.** Die Zahl der die beiden Arrays müssen identisch sein, also verfügen, müssen die gleiche Anzahl von Dimensionen. Die Länge der jeweiligen Dimensionen müssen allerdings nicht identisch sein.  
+- **Gleich Rang.** Die Zahl der die beiden Arrays müssen identisch sein, also verfügen, müssen die gleiche Anzahl von Dimensionen. Die Länge der jeweiligen Dimensionen müssen allerdings nicht identisch sein.  
   
--   **Datentyp des Elements.** Die Datentypen der Elemente beider Arrays müssen Referenztypen sein. Sie können nicht konvertiert werden ein `Integer` array an eine `Long` array oder sogar um eine `Object` array, da mindestens ein Werttyp ist. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Datentyp des Elements.** Die Datentypen der Elemente beider Arrays müssen Referenztypen sein. Sie können nicht konvertiert werden ein `Integer` array an eine `Long` array oder sogar um eine `Object` array, da mindestens ein Werttyp ist. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
--   **Die Konvertierung.** Eine Konvertierung, erweiternd oder einschränkend, muss zwischen den Elementtypen der beiden Arrays sein. Ein Beispiel, das diese Anforderung nicht erfüllt, wird ein Versuch einer Konvertierung zwischen einem `String` Array und einem Array von einer Klasse abgeleitet <xref:System.Attribute?displayProperty=nameWithType>. Diese beiden Typen haben nichts gemeinsam, und keine Konvertierung jeglicher Art, die zwischen ihnen vorhanden ist.  
+- **Die Konvertierung.** Eine Konvertierung, erweiternd oder einschränkend, muss zwischen den Elementtypen der beiden Arrays sein. Ein Beispiel, das diese Anforderung nicht erfüllt, wird ein Versuch einer Konvertierung zwischen einem `String` Array und einem Array von einer Klasse abgeleitet <xref:System.Attribute?displayProperty=nameWithType>. Diese beiden Typen haben nichts gemeinsam, und keine Konvertierung jeglicher Art, die zwischen ihnen vorhanden ist.  
   
  Eine Konvertierung von einem Arraytyp ist erweiternde oder einschränkende, je nachdem, ob die Konvertierung der jeweiligen Elemente erweiternde oder einschränkende ist. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   

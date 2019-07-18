@@ -2,12 +2,12 @@
 title: Form der Befehlsstrukturen
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763983"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Form der Befehlsstrukturen
 
@@ -23,7 +23,7 @@ Bei einer Abfragebefehlsstruktur handelt es sich um die Objektmodelldarstellung 
 
 Abfragebefehlsstrukturen unterstützen eine umfangreichere Semantik als SQL:1999-kompatible Abfragen. Dies umfasst die Unterstützung von geschachtelten Auflistungen und Typvorgängen, z. B. bei der Prüfung, ob es sich bei einer Entität um einen bestimmten Typ handelt, oder beim Filtern von Sätzen anhand eines Typs.
 
-Die "DBQueryCommandTree.Query"-Eigenschaft ist der Stamm der Ausdrucksstruktur, die die Abfragelogik beschreibt. Die "DBQueryCommandTree.Parameters"-Eigenschaft enthält eine Liste der in der Abfrage verwendeten Parameter. Die Ausdrucksstruktur besteht aus "DbExpression"-Objekten.
+Die „DBQueryCommandTree.Query“-Eigenschaft ist der Stamm der Ausdrucksbaumstruktur, die die Abfragelogik beschreibt. Die "DBQueryCommandTree.Parameters"-Eigenschaft enthält eine Liste der in der Abfrage verwendeten Parameter. Die Ausdrucksstruktur besteht aus "DbExpression"-Objekten.
 
 Ein "DbExpression"-Objekt stellt eine Berechnung dar. Zum Verfassen von Abfrageausdrücken werden in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verschiedene Ausdrucksarten bereitgestellt, darunter Konstanten, Variablen, Funktionen, Konstruktoren und relationale Standardoperatoren, wie z. B. Filter und Join. Alle "DbExpression"-Objekt verfügt über eine ResultType-Eigenschaft, die den Typ des von diesem Ausdruck erzeugten Ergebnisses darstellt. Dieser Typ wird als "TypeUsage" ausgedrückt.
 
@@ -85,9 +85,9 @@ Zudem verfügen Funktionen mit dem "NiladicFunction"-Attribut nicht über Argume
 
 - Als Projektionseigenschaft von "DbProjectExpression".  Bei dieser Verwendungsart gelten die folgenden Einschränkungen:
 
-    - Der Ergebnistyp muss ein Zeilentyp sein.
+  - Der Ergebnistyp muss ein Zeilentyp sein.
 
-    - Bei allen Argumenten handelt es sich um einen Ausdruck, der ein Ergebnis mit einem primitiven Typ erzeugt. In der Regel handelt es sich bei allen Argumenten um Skalarausdrücke, wie z. B. ein "PropertyExpression" über einem "DbVariableReferenceExpression", ein Funktionsaufruf oder eine arithmetische Berechnung von "DbPropertyExpression" über einem "DbVariableReferenceExpression" oder über einem Funktionsaufruf. In der Liste der Argumente für einen "DbNewInstanceExpression" können jedoch auch Ausdrücke auftreten, bei denen es sich um skalare Unterabfragen handelt. Ein Ausdruck, der einer skalaren Unterabfrage entspricht, wird eine Ausdrucksbaumstruktur, die eine Unterabfrage darstellt, die genau eine Zeile und eine Spalte eines primitiven Typs mit einer DbElementExpression-Objektstamm zurückgibt
+  - Bei allen Argumenten handelt es sich um einen Ausdruck, der ein Ergebnis mit einem primitiven Typ erzeugt. In der Regel handelt es sich bei allen Argumenten um Skalarausdrücke, wie z. B. ein "PropertyExpression" über einem "DbVariableReferenceExpression", ein Funktionsaufruf oder eine arithmetische Berechnung von "DbPropertyExpression" über einem "DbVariableReferenceExpression" oder über einem Funktionsaufruf. In der Liste der Argumente für einen "DbNewInstanceExpression" können jedoch auch Ausdrücke auftreten, bei denen es sich um skalare Unterabfragen handelt. Ein Ausdruck, der einer skalaren Unterabfrage entspricht, wird eine Ausdrucksbaumstruktur, die eine Unterabfrage darstellt, die genau eine Zeile und eine Spalte eines primitiven Typs mit einer DbElementExpression-Objektstamm zurückgibt
 
 - Mit einem Auflistungsrückgabetyp. In diesem Fall wird eine neue Auflistung der als Argumente bereitgestellten Ausdrücke definiert.
 

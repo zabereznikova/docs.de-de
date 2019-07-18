@@ -17,29 +17,29 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2ef09fdc755480205b9929037277162349afa135
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707611"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423818"
 ---
 # <a name="backgroundworker-component-overview"></a>Übersicht über die BackgroundWorker-Komponente
-Es gibt viele häufig verwendete Operationen, deren Ausführung lange dauern kann. Beispiel:  
+Es gibt viele häufig verwendete Operationen, deren Ausführung lange dauern kann. Zum Beispiel:  
   
--   Bilddownloads  
+- Bilddownloads  
   
--   Webdienstaufrufe  
+- Webdienstaufrufe  
   
--   Dateidownloads und -uploads (einschließlich für Peer-to-Peer-Anwendungen)  
+- Dateidownloads und -uploads (einschließlich für Peer-to-Peer-Anwendungen)  
   
--   Komplexe lokale Berechnungen  
+- Komplexe lokale Berechnungen  
   
--   Datenbanktransaktionen  
+- Datenbanktransaktionen  
   
--   Lokaler Festplattenzugriff, angesichts der langsamen Geschwindigkeit relativ zum Arbeitsspeicherzugriff  
+- Lokaler Festplattenzugriff, angesichts der langsamen Geschwindigkeit relativ zum Arbeitsspeicherzugriff  
   
- Operationen wie diese können bewirken, dass die Benutzeroberfläche während der Ausführung der Operation nicht mehr reagiert. Wenn Sie dies vermeiden möchten und bei solchen Operationen lange Verzögerungen auftreten, stellt die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine geeignete Alternative dar.  
+ Operationen wie diese können dazu führen, dass die Benutzeroberfläche zu blockieren, während sie ausgeführt werden. Wenn Sie dies vermeiden möchten und bei solchen Operationen lange Verzögerungen auftreten, stellt die <xref:System.ComponentModel.BackgroundWorker>-Komponente eine geeignete Alternative dar.  
   
  Die <xref:System.ComponentModel.BackgroundWorker>-Komponente ermöglicht es Ihnen, zeitaufwändige Operationen asynchron ("im Hintergrund") auf einem anderen Thread als dem primären UI-Thread der Anwendung auszuführen. Um einen <xref:System.ComponentModel.BackgroundWorker> zu verwenden, müssen Sie lediglich festlegen, welche zeitaufwändige Workermethode im Hintergrund ausgeführt werden soll, und anschließend die <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>-Methode aufrufen. Der aufrufende Thread wird weiterhin wie gewohnt ausgeführt, während die Workermethode asynchron ausgeführt wird. Nach Abschluss der Methode gibt der <xref:System.ComponentModel.BackgroundWorker> eine Warnung an den aufrufenden Thread aus, indem er das <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>-Ereignis auslöst, das optional die Ergebnisse der Operation enthält.  
   

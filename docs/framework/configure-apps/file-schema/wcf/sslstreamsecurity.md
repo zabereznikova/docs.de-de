@@ -3,11 +3,11 @@ title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
 ms.openlocfilehash: 67ec30b2bf3c322b949700789ce942e4281b77a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757988"
 ---
 # <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
 Stellt ein benutzerdefiniertes Bindungselement dar, das die Kanalsicherheit mit einem SSL-Stream unterstützt.  

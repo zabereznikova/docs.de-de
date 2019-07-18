@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: d17d2ad3fd99c6d563c21ddd646396ccb1c1ca48
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 46564d2c509fe2b53b9662ee441ab8b85fccc693
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921311"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642131"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Auf NULL festlegbare Werttypen (Visual Basic)
 
@@ -109,12 +109,12 @@ Eine Datenbank ist eine der wichtigsten Quellen für die nullable-Typen zu verwe
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
-- [Verwenden von auf NULL festlegbaren Typen](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Verwenden von Typen mit Nullwert](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Datentypen](index.md)
-- [Wert- und Verweistypen](value-types-and-reference-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
 - [Problembehandlung bei Datentypen](troubleshooting-data-types.md)
 - [Füllen von Datasets mit TableAdapters](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
-- [Operator If](../../../language-reference/operators/if-operator.md)
+- [If-Operator](../../../language-reference/operators/if-operator.md)
 - [Lokaler Typrückschluss](../variables/local-type-inference.md)
 - [Is-Operator](../../../language-reference/operators/is-operator.md)
 - [IsNot-Operator](../../../language-reference/operators/isnot-operator.md)

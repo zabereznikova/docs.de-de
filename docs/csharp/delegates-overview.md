@@ -3,16 +3,14 @@ title: Einführung in Delegaten
 description: Erfahren Sie in diesem Überblick etwas über die Grundlagen und die Ziele beim Sprachentwurf von Delegaten.
 ms.date: 06/20/2016
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: d42d9d10aeaa153f12933fa3a59e58719f7741e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43cdf9345f0bae9d5c4d0e6a31d80bc269c37fec
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212186"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879034"
 ---
 # <a name="introduction-to-delegates"></a>Einführung in Delegaten
-
-[Vorheriges](delegates-events.md)
 
 Delegaten bieten einen Mechanismus mit *später Bindung* in .NET. Späte Bindung bedeutet, dass Sie einen Algorithmus erstellen, in dem der Aufrufer auch mindestens eine Methode bereitstellt, die einen Teil des Algorithmus implementiert.
 
@@ -32,11 +30,11 @@ Die Sprachentwickler haben mehrere Ziele für die Funktion aufgezählt, die schl
 
 Das Team wollte ein allgemeines Sprachkonstrukt entwerfen, das für alle Algorithmen mit später Bindung verwendet werden kann. Dadurch können Softwareentwickler ein Konzept erlernen und dasselbe Konzept bei vielen verschiedenen Softwareproblemen anwenden.
 
-Außerdem sollten sowohl einzelne als auch Multicast-Methodenaufrufe unterstützt werden. Multicastdelegaten sind Delegaten, in denen mehrere Methoden miteinander verbunden wurden. Beispiele dafür finden Sie [später in dieser Serie](delegate-class.md). 
+Außerdem sollten sowohl einzelne als auch Multicast-Methodenaufrufe unterstützt werden. (Multicastdelegaten sind Delegaten, mit denen mehrere Methodenaufrufe verkettet werden. Beispiele hierfür finden Sie in [einem der folgenden Artikel dieser Reihe](delegate-class.md).) 
 
 Delegaten sollten dieselbe Typsicherheit unterstützen, die Entwickler von allen C#-Konstrukten erwarten. 
 
-Die Sprachentwickler erkannten schließlich, dass ein Ereignismuster ein bestimmtes Muster ist, in dem Delegaten (oder jeder beliebige Algorithmus mit später Bindung) sehr nützlich sind. Daher sollte sichergestellt werden, dass der Code für den Delegaten die Basis für das .NET-Ereignismuster bereitstellen konnte.
+Die Sprachentwickler haben schließlich erkannt, dass ein Ereignismuster ein bestimmtes Muster ist, für das Delegaten – bzw. jeder beliebige Algorithmus mit später Bindung – sehr nützlich sind. Daher sollte sichergestellt werden, dass der Code für den Delegaten die Basis für das .NET-Ereignismuster bereitstellen konnte.
 
 Das Ergebnis dieser Arbeit war die Delegat- und Ereignisunterstützung in C# und .NET. Die übrigen Artikel in diesem Abschnitt behandeln die Sprachfunktionen, die Bibliotheksunterstützung und die allgemeinen Ausdrücke, die bei der Arbeit mit Delegaten verwendet werden.
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89fda72371f197efeeeef8f31ec396c334cfcb2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3b4d143d8dd5391283736d0140e8f1ced1dec53e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122030"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775321"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType-Methode
 Erstellt eine `ExportedType`-Struktur, die Metadaten für den angegebenen exportierten Typ enthält, und gibt das zugeordnete Metadatentoken zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT DefineExportedType (  
     [in]  LPCWSTR             szName,  
     [in]  mdToken             tkImplementation,   
@@ -46,13 +46,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in] Ein Token, die angeben, in dem die exportierte Typ implementiert wird. Die gültigen Werte und deren jeweilige Bedeutung sind:  
   
--   `mdFile` Der Typ wird in einer anderen Datei in dieser Assembly implementiert.  
+- `mdFile` Der Typ wird in einer anderen Datei in dieser Assembly implementiert.  
   
--   `mdAssemblyRef` Der Typ wird in einer anderen Assembly implementiert.  
+- `mdAssemblyRef` Der Typ wird in einer anderen Assembly implementiert.  
   
--   `mdExportedTYpe` Der Typ wird in einem anderen Typ geschachtelt.  
+- `mdExportedTYpe` Der Typ wird in einem anderen Typ geschachtelt.  
   
--   `mdFileNil` Der Typ befindet sich in derselben Datei wie das Manifest und kein geschachtelter Typ ist.  
+- `mdFileNil` Der Typ befindet sich in derselben Datei wie das Manifest und kein geschachtelter Typ ist.  
   
  `tkTypeDef`  
  [in] Ein Token an den Metadaten, der den zu exportierenden angibt. Dieser Wert wird eingegeben die `TypeDef` Tabelle in der Datei, die den Typ implementiert und ist nur relevant, wenn diese Datei in dieser Assembly ist.  

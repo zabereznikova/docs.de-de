@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6018b5b06a138b38b7b97df280a3e4c4ea0512d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9279e50630ea074b70955ca8ed218cd39a613b58
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208409"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781290"
 ---
 # <a name="functionenter-function"></a>FunctionEnter-Funktion
 Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übergeben wird.  
@@ -31,7 +31,7 @@ Benachrichtigt den Profiler, dass das Steuerelement an eine Funktion übergeben 
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void __stdcall FunctionEnter (  
     [in]  FunctionID funcID  
 );  
@@ -46,9 +46,9 @@ void __stdcall FunctionEnter (
   
  Die ausführungs-Engine werden keine Register gespeichert, vor dem Aufrufen dieser Funktion.  
   
--   Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
+- Auf den Eintrag müssen Sie alle Register speichern, die Sie, einschließlich derer in die Gleitkommaeinheit (FPU verwenden).  
   
--   Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
+- Beim Beenden müssen Sie im Stapel wiederherstellen, indem Sie alle Parameter, die durch den Aufrufer weitergegeben wurden entfernt.  
   
  Die Implementierung der `FunctionEnter` sollten nicht blockiert werden, da die Garbagecollection verzögert wird. Die Implementierung sollten eine Garbagecollection nicht versuchen, da der Stapel möglicherweise nicht in eine Garbage Collection geeigneten Zustand. Wenn eine Garbagecollection versucht wird, wird die Laufzeit blockiert, bis `FunctionEnter` zurückgibt.  
   

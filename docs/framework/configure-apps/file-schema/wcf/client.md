@@ -6,11 +6,11 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
 ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704296"
 ---
 # <a name="client"></a>\<client>
 Das `client`-Element definiert eine Liste der Endpunkte, mit denen ein Client eine Verbindung herstellen kann.  

@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: c796a93f7ea5ad4664f35788b766117c712b9766
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654353"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487055"
 ---
 # <a name="memory-mapped-files"></a>Speicherabbilddateien
-Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher. Diese Zuordnung zwischen einer Datei und Speicherplatz ermöglicht es einer Anwendung mit mehreren Prozessen, die Datei durch direktes Lesen und Schreiben im Arbeitsspeicher zu ändern. Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie verwalteten Code verwenden, um auf die gleiche Weise auf Speicherabbilddateien zuzugreifen wie native Windows-Funktionen. Dies wird unter [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Verwalten von Speicherabbilddateien) beschrieben.  
+Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher. Diese Zuordnung zwischen einer Datei und Speicherplatz ermöglicht es einer Anwendung mit mehreren Prozessen, die Datei durch direktes Lesen und Schreiben im Arbeitsspeicher zu ändern. Ab .NET Framework 4 können Sie verwalteten Code verwenden, um auf die gleiche Weise auf Speicherabbilddateien zuzugreifen wie native Windows-Funktionen. Dies wird unter [Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) (Verwalten von im Speicher abgebildeten Dateien) beschrieben.  
   
  Es gibt zwei Arten von Speicherabbilddateien:  
   
--   Beibehaltene Speicherabbilddateien  
+- Beibehaltene Speicherabbilddateien  
   
      Persistent gespeicherte Dateien sind Speicherabbilddateien, die einer Quelldatei auf einem Datenträger zugeordnet sind. Wenn der letzte Prozess die Verwendung der Datei beendet, werden die Daten in der Quelldatei auf dem Datenträger gespeichert. Diese Speicherabbilddateien eignen sich für extrem große Quelldateien.  
   
--   Nicht beibehaltene Speicherabbilddateien  
+- Nicht beibehaltene Speicherabbilddateien  
   
      Nicht persistent gespeicherte Dateien sind Speicherabbilddateien, die keiner Datei auf einem Datenträger zugeordnet sind. Wenn der letzte Prozess die Verwendung der Datei beendet, gehen die Daten verloren, und die Datei wird von der Garbage Collection freigegeben. Diese Dateien eignen sich zum Erstellen von freigegebenen Speicherbereichen für die prozessübergreifende Kommunikation (IPC).  
   
@@ -64,11 +64,11 @@ Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher.
 ### <a name="security"></a>Sicherheit  
  Mit den folgenden Methoden, die eine <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess>-Enumeration als Parameter akzeptieren, können beim Erstellen einer Speicherabbilddatei Zugriffsrechte angewendet werden:  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
  Sie können mit den <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A>-Methoden, die <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> als Parameter akzeptieren, Zugriffsrechte für das Öffnen einer vorhandenen Speicherabbilddatei angeben.  
   
@@ -96,29 +96,29 @@ Eine Speicherabbilddatei enthält den Inhalt einer Datei im virtuellen Speicher.
   
  Das folgende Beispiel umfasst drei separate Prozesse (Konsolenanwendungen), die boolesche Werte in eine Speicherabbilddatei schreiben. Die folgende Sequenz von Aktionen wird ausgeführt:  
   
-1.  `Process A` erstellt die Speicherabbilddatei und schreibt in diese einen Wert.  
+1. `Process A` erstellt die Speicherabbilddatei und schreibt in diese einen Wert.  
   
-2.  `Process B` erstellt die Speicherabbilddatei und schreibt in diese einen Wert.  
+2. `Process B` erstellt die Speicherabbilddatei und schreibt in diese einen Wert.  
   
-3.  `Process C` erstellt die Speicherabbilddatei und schreibt in diese einen Wert.  
+3. `Process C` erstellt die Speicherabbilddatei und schreibt in diese einen Wert.  
   
-4.  `Process A` liest die Werte in der Speicherabbilddatei und zeigt diese an.  
+4. `Process A` liest die Werte in der Speicherabbilddatei und zeigt diese an.  
   
-5.  Nachdem die Bearbeitung der Speicherabbilddatei durch `Process A` abgeschlossen ist, wird die Datei sofort von der Garbage Collection freigegeben.  
+5. Nachdem die Bearbeitung der Speicherabbilddatei durch `Process A` abgeschlossen ist, wird die Datei sofort von der Garbage Collection freigegeben.  
   
  Gehen Sie folgendermaßen vor, um dieses Beispiel auszuführen:  
   
-1.  Kompilieren Sie die Anwendungen, und öffnen Sie drei Eingabeaufforderungsfenster.  
+1. Kompilieren Sie die Anwendungen, und öffnen Sie drei Eingabeaufforderungsfenster.  
   
-2.  Führen Sie `Process A` im ersten Eingabeaufforderungsfenster aus.  
+2. Führen Sie `Process A` im ersten Eingabeaufforderungsfenster aus.  
   
-3.  Führen Sie `Process B` im zweiten Eingabeaufforderungsfenster aus.  
+3. Führen Sie `Process B` im zweiten Eingabeaufforderungsfenster aus.  
   
-4.  Kehren Sie zu `Process A` zurück, und drücken Sie die EINGABETASTE.  
+4. Kehren Sie zu `Process A` zurück, und drücken Sie die EINGABETASTE.  
   
-5.  Führen Sie `Process C` im dritten Eingabeaufforderungsfenster aus.  
+5. Führen Sie `Process C` im dritten Eingabeaufforderungsfenster aus.  
   
-6.  Kehren Sie zu `Process A` zurück, und drücken Sie die EINGABETASTE.  
+6. Kehren Sie zu `Process A` zurück, und drücken Sie die EINGABETASTE.  
   
  Die Ausgabe von `Process A` lautet wie folgt:  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
 ms.openlocfilehash: 18681935d0380f9be3970fdb5d17ffb089152f59
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802543"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur innerhalb der Assembly zugegriffen werden, die ihre Deklaration enthält.  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b00afc900a27aea94389ee81065ea22ae359440d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a683f1531ed28fbd8ef085414bb7cb365762ffde
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498340"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738041"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>ICorDebugAppDomain::EnumerateBreakpoints-Methode
 Ruft einen Enumerator für alle aktiven Haltepunkte in der Anwendungsdomäne ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateBreakpoints (  
     [out] ICorDebugBreakpointEnum   **ppBreakpoints  
 );  

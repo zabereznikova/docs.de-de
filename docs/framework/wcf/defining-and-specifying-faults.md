@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785046"
 ---
 # <a name="defining-and-specifying-faults"></a>Definieren und Angeben von Fehlern
 SOAP-Fehler vermitteln Informationen zu Fehlerbedingungen auf interoperable Weise von einem Dienst an einen Client und bei Duplexkommunikation von einem Client an einen Dienst. In diesem Thema wird beschrieben, wann und wie Sie benutzerdefinierten Fehlerinhalt definieren und wie Sie angeben, welche Vorgänge diesen zurückgeben können. Weitere Informationen wie ein Dienst oder ein duplexclient diese Fehler senden kann und wie eine Client- oder dienstanwendung diese Fehler verarbeitet, finden Sie unter [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md). Einen Überblick über die Fehlerbehandlung in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -21,11 +21,11 @@ SOAP-Fehler vermitteln Informationen zu Fehlerbedingungen auf interoperable Weis
 ## <a name="overview"></a>Übersicht  
  Bei deklarierten SOAP-Fehlern verfügt ein Vorgang über ein <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>, das einen benutzerdefinierten SOAP-Fehlertyp angibt. Nicht deklarierte SOAP-Fehler sind Fehler, die nicht im Vertrag eines Vorgangs festgelegt sind. Dieses Thema enthält Informationen zur Identifizierung der Fehlerbedingungen und zur Erstellung eines Fehlervertrags für Ihren Dienst, den Clients verwenden können, um die Fehlerbedingungen richtig zu verarbeiten, wenn sie anhand von benutzerdefinierten SOAP-Fehlern darüber informiert werden. Die folgenden grundlegenden Aufgaben gelten in dieser Reihenfolge:  
   
-1.  Definieren Sie die Fehlerbedingungen, über die ein Client Ihres Dienstes informiert werden sollte.  
+1. Definieren Sie die Fehlerbedingungen, über die ein Client Ihres Dienstes informiert werden sollte.  
   
-2.  Definieren Sie für diese Fehlerbedingungen den benutzerdefinierten Inhalt der SOAP-Fehler.  
+2. Definieren Sie für diese Fehlerbedingungen den benutzerdefinierten Inhalt der SOAP-Fehler.  
   
-3.  Kennzeichnen Sie Ihre Vorgänge, damit die spezifischen SOAP-Fehler, die diese Vorgänge auslösen, für Clients in WSDL offengelegt werden.  
+3. Kennzeichnen Sie Ihre Vorgänge, damit die spezifischen SOAP-Fehler, die diese Vorgänge auslösen, für Clients in WSDL offengelegt werden.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Definieren von Fehlerbedingungen, über die Clients informiert werden sollen  
  SOAP-Fehler sind öffentlich beschriebene Meldungen, die Fehlerinformationen für einen besonderen Vorgang enthalten. Da sie zusammen mit anderen Vorgangsmeldungen in WSDL beschrieben sind, sind Clients darüber informiert und erwarten beim Aufrufen eines Vorgangs, dass sie diese ggf. verarbeiten müssen. Aber da WCF-Dienste in verwaltetem Code, die Entscheidung, welche Fehler, fehlerbedingungen in verwaltetem Code in Fehler konvertiert werden sollen und an den Client zurückgegebenen, bietet Ihnen die Möglichkeit, fehlerbedingungen und Fehler in Ihrem Dienst von der formalen Fehler trennen geschrieben werden Die Konversation mit einem Client.  
@@ -96,5 +96,5 @@ End Class
 - [Senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md)
 - [Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [Grundlagen der Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md)
-- [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Angeben von Datenübertragung in Dienstverträgen](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

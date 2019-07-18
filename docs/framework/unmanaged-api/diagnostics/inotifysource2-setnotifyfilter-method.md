@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e4abeebce155a4c332e864b4dfb6cf5a1141ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: abe1c8881330ebba5f7b68452cf3db0666ac20c3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151748"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736235"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter-Methode
 Weist einen Benachrichtigungsfilter für die Verwendung mit dieser Quelle.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetNotifyFilter  
 (  
     [in]  NOTIFY_FILTER   in_NotifyFilter,  

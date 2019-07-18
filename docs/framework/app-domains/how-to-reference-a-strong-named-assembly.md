@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596071"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59301021"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen
 Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen handelt es sich in der Regel um einen transparenten Prozess. Sie können den Verweis zur Kompilierzeit (frühes Binden) oder zur Runtime vornehmen.  
@@ -30,7 +30,7 @@ Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen han
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>So verweisen Sie zur Kompilierzeit auf eine Assembly mit starkem Namen  
   
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
+1. Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
   
      \<*Compilerbefehl*> **/reference:**\<*Assemblyname*>  
   
@@ -44,7 +44,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 ### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>So verweisen Sie zur Runtime auf eine Assembly mit starkem Namen  
   
-1.  Wenn Sie zur Runtime auf eine Assembly mit starkem Namen verweisen (z.B. mit der <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>- oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>-Methode), müssen Sie den Anzeigenamen der referenzierten Assembly mit starkem Namen verwenden. Die Syntax eines Anzeigenamens lautet wie folgt:  
+1. Wenn Sie zur Runtime auf eine Assembly mit starkem Namen verweisen (z.B. mit der <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>- oder <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>-Methode), müssen Sie den Anzeigenamen der referenzierten Assembly mit starkem Namen verwenden. Die Syntax eines Anzeigenamens lautet wie folgt:  
   
      \<*Assemblyname*>**,** \<*Versionsnummer*>**,** \<*Kultur*>**,** \<*öffentliches Schlüsseltoken*>  
   
@@ -71,4 +71,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
  **sn -tp \<** *öffentliche Schlüsseldatei* **>**  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

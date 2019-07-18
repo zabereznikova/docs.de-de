@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef1b8dce5c84382a9039787d2205f1ac8ccbc5bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bf8cca7751dd9705fd3c4371e36e836ca19be5c9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166464"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736208"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethodCount-Methode
 Ruft die Anzahl der Dokumente, die diese Methode in Zeilen umfasst.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetDocumentsForMethodCount(  
     [out, retval] ULONG32* pRetVal);  
 ```  

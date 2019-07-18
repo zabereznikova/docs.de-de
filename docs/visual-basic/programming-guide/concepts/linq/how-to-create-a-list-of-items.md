@@ -6,11 +6,11 @@ helpviewer_keywords:
 - objects [Visual Basic], list of items
 ms.assetid: fe941aba-6340-455c-8b1f-ffd9c3eb1ac5
 ms.openlocfilehash: 97952c2240a5ec1d5e41bd9b2b59aeed3eb43ab6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855455"
 ---
 # <a name="how-to-create-a-list-of-items"></a>Vorgehensweise: Erstellen einer Liste von Elementen
 Der Code in diesem Thema definiert eine `Student`-Klasse und erstellt eine Liste von Instanzen der Klasse. Die Liste dient zur Unterstützung der im Themas [Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md). Sie kann auch für jede Anwendung verwendet werden, die eine Liste von Objekten benötigt. Der Code definiert die Elemente in der Liste der Schüler mithilfe von Objektinitialisierern.  

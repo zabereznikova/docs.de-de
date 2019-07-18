@@ -17,31 +17,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f663f5134cf34bf9beb66da20bbb5886baff5415
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36a33b74a692761d772a888ce918aa28a2d92678
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419165"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760559"
 ---
 # <a name="icordebugstepperstepout-method"></a>ICorDebugStepper::StepOut-Methode
-Bewirkt, dass dieser ICorDebugStepper, Schritt für Schritt durch den enthaltenden Thread und abgeschlossen, wenn der aktuelle Rahmen ist die Steuerung an den aufrufenden Rahmen zurückgibt.  
+Bewirkt, dass dieser ICorDebugStepper, Schritt für Schritt durch den enthaltenen Thread bis zum Abschließen, wenn der aktuelle Frame die Steuerung an den aufrufenden Rahmen zurückgibt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT StepOut ();  
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `StepOut` Vorgang kann nach der Rückkehr normalerweise von den aktuellen Frame an den aufrufenden Rahmen abgeschlossen.  
+ Ein `StepOut` Vorgang wird abgeschlossen, nachdem die Rückgabe Normal aus den aktuellen Frame an den aufrufenden Rahmen.  
   
- Wenn `StepOut` wird aufgerufen, wenn in nicht verwaltetem Code, der Schritt abgeschlossen, wenn der aktuelle Rahmen an den verwalteten Code zurückgegeben, die diese aufgerufen.  
+ Wenn `StepOut` wird aufgerufen, wenn in nicht verwaltetem Code, den Schritt abgeschlossen, wenn der aktuelle Rahmen auf den verwalteten Code zurückgibt, die diese aufgerufen.  
   
- In .NET Framework, Version 2.0, verwenden Sie keine `StepOut` mit STOP_UNMANAGED flag festgelegt, da es nicht. (Verwenden [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) Flags für die schrittweise Ausführung festlegen.) Interop-Debugger müssen in systemeigenen Code selbst ausführen bis Rücksprung.  
+ In .NET Framework, Version 2.0, verwenden Sie keine `StepOut` mit STOP_UNMANAGED flag festgelegt, da es nicht funktioniert. (Verwenden [ICorDebugStepper:: SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) festzulegende Flags für die schrittweise Ausführung.) Interop-Debugger müssen in systemeigenen Code selbst ausführen bis Rücksprung.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

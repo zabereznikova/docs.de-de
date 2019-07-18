@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
 ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911735"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 Die <xref:System.Windows.Controls.FlowDocumentPageViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> von Inhalt auf einer Basis pro Seite. Vergleichen Sie mit der <xref:System.Windows.Controls.FlowDocumentScrollViewer>, welche zeigt <xref:System.Windows.Documents.FlowDocument> Inhalte in einem Bildlauf-Viewer.  
@@ -21,5 +21,5 @@ Die <xref:System.Windows.Controls.FlowDocumentPageViewer> Steuerelement dient zu
 
 - <xref:System.Windows.Documents.FlowDocument>
 - [Übersicht über Flussdokumente](../advanced/flow-document-overview.md)
-- [Gewusst wie-Themen](../advanced/flow-content-elements-how-to-topics.md)
+- [Themen zu Vorgehensweisen](../advanced/flow-content-elements-how-to-topics.md)
 - [Dokumente in WPF](../advanced/documents-in-wpf.md)

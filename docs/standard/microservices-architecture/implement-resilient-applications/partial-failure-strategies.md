@@ -1,15 +1,13 @@
 ---
 title: Strategien zum Beheben von Teilfehlern
 description: Lernen Sie verschiedene Strategien zum ordnungsgemäßen Behandeln von Teilfehlern kennen.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: dd485eae7163ecf5e5622b960448385e33ae718a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464267"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644183"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>Strategien zum Behandeln von Teilfehlern
 
@@ -36,7 +34,7 @@ Zu den Strategien für den Umgang mit Teilfehlern zählen die folgenden:
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Bulkhead:** GitHub-Repository. Implementierung mit Polly-Richtlinie
-  [https://github.com/App-vNext/Polly/wiki/Bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+  <https://github.com/App-vNext/Polly/wiki/Bulkhead>
 
 - **Entwerfen von robusten Anwendungen für Azure**\
   [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)

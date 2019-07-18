@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
 ms.openlocfilehash: a31c07e6be26f67cc29813a14745ecf4a83ab98a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931513"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>Vorgehensweise: Filtern von Daten in einer Ansicht
 Dieses Beispiel zeigt, wie Sie Daten in einer Ansicht zu filtern.  
@@ -51,6 +51,6 @@ Dieses Beispiel zeigt, wie Sie Daten in einer Ansicht zu filtern.
 
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
-- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
 - [Sortieren von Daten in einer Ansicht](how-to-sort-data-in-a-view.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

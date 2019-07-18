@@ -9,11 +9,11 @@ helpviewer_keywords:
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
 ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757455"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>Vorgehensweise: Implementieren einer Abhängigkeitseigenschaft
 Dieses Beispiel zeigt, wie Sie eine [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Eigenschaft mit einer <xref:System.Windows.DependencyProperty> Feld so eine Abhängigkeitseigenschaft definieren. Wenn Sie eigene Eigenschaften definieren und diese viele Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Funktionalität unterstützen sollen, einschließlich Stile, Datenbindung, Vererbung, Animation und Standardwerte, müssen Sie sie als eine Abhängigkeitseigenschaft implementieren.  
@@ -35,4 +35,4 @@ Dieses Beispiel zeigt, wie Sie eine [!INCLUDE[TLA#tla_clr](../../../../includes/
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
-- [Gewusst wie-Themen](properties-how-to-topics.md)
+- [Themen zu Vorgehensweisen](properties-how-to-topics.md)

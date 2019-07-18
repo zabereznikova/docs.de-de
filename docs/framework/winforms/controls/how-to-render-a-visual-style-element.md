@@ -10,25 +10,25 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a2b9524b6a3e3c77d3c68c4d9e138b8c0e2a9373
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099832"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662288"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Vorgehensweise: Rendern eines visuellen Stilelements
 Die <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespace weist <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> den Windows-Benutzer darstellende – Objekte Schnittstellenelemente (UI) von visuellen Stilen unterstützt. In diesem Thema wird veranschaulicht, wie Sie mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klasse zum Rendern der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> darstellt, die die **Abmelden** und **Herunterfahren** Schaltflächen des Startmenüs auf.  
   
 ### <a name="to-render-a-visual-style-element"></a>Um ein visuelles Stilelement zu rendern.  
   
-1.  Erstellen Sie eine <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> und legen Sie es auf das Element, das Sie zeichnen möchten. Beachten Sie die Verwendung der <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> Eigenschaft und die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A?displayProperty=nameWithType> Methode; die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%2A> Konstruktor wird eine Ausnahme ausgelöst, wenn visuelle Stile deaktiviert sind, oder ein Element nicht definiert ist.  
+1. Erstellen Sie eine <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> und legen Sie es auf das Element, das Sie zeichnen möchten. Beachten Sie die Verwendung der <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A?displayProperty=nameWithType> Eigenschaft und die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.IsElementDefined%2A?displayProperty=nameWithType> Methode; die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.%23ctor%2A> Konstruktor wird eine Ausnahme ausgelöst, wenn visuelle Stile deaktiviert sind, oder ein Element nicht definiert ist.  
   
      [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/cpp/form1.cpp#4)]
      [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/VB/form1.vb#4)]  
   
-2.  Rufen Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> Methode, um dem Element gerendert werden, die die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> darstellt.  
+2. Rufen Sie die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawBackground%2A> Methode, um dem Element gerendert werden, die die <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> darstellt.  
   
      [!code-cpp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/cpp/form1.cpp#6)]
      [!code-csharp[System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.VisualStyles.VisualStyleRenderer_Simple/CS/form1.cs#6)]
@@ -37,11 +37,11 @@ Die <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namesp
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein benutzerdefiniertes Steuerelement abgeleitet wird, aus der <xref:System.Windows.Forms.Control> Klasse.  
+- Ein benutzerdefiniertes Steuerelement abgeleitet wird, aus der <xref:System.Windows.Forms.Control> Klasse.  
   
--   Ein <xref:System.Windows.Forms.Form> , die das benutzerdefinierte Steuerelement hostet.  
+- Ein <xref:System.Windows.Forms.Form> , die das benutzerdefinierte Steuerelement hostet.  
   
--   Verweise auf die <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, und <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespaces.  
+- Verweise auf die <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, und <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespaces.  
   
 ## <a name="see-also"></a>Siehe auch
 

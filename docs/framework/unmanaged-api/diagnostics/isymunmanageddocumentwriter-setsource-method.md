@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64982308c6eb7e9df4b94b4e123857c65939f044
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 555926e0e6a669f70bdeff484cff0eb62ae11f7b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142479"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776942"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource-Methode
 Legt die eingebettete Quelle für ein Dokument, das geschrieben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetSource(  
     [in]  ULONG32  sourceSize,  
     [in, size_is(sourceSize)] BYTE  source[]);  

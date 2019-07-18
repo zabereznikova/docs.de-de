@@ -3,11 +3,11 @@ title: TransactedBatchingBehavior
 ms.date: 03/30/2017
 ms.assetid: 2d03e6ae-f06c-4ada-b279-e01838b2ecdc
 ms.openlocfilehash: 0b083e46b3f53a0080308deccc0e37768af40fe3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641722"
 ---
 # <a name="transactedbatchingbehavior"></a>TransactedBatchingBehavior
 TransactedBatchingBehavior  

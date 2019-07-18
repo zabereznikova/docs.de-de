@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c4c56712460d772426a2d8d6d328cba9bb03373d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409327"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648664"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identifizieren von Funktionen in DLLs
 Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:  
   
--   Funktionsname oder Ordinalzahl  
+- Funktionsname oder Ordinalzahl  
   
--   Name der DLL-Datei, in der die Implementierung gefunden werden kann  
+- Name der DLL-Datei, in der die Implementierung gefunden werden kann  
   
  Die Angabe der **MessageBox**-Funktion in der „User32.dll“ gibt beispielsweise die Funktion (**MessageBox**) und deren Speicherort (User32.dll, User32 oder user32) an. Die Microsoft Windows-Anwendungsprogrammierschnittstelle (Windows-API) kann zwei Versionen jeder Funktion enthalten, die Zeichen und Zeichenfolgen verarbeitet: eine ANSI-Version mit 1-Byte-Zeichen und eine Unicode-Version mit 2-Byte-Zeichen. Ohne Angabe wird der Zeichensatz, der durch das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld dargestellt wird, standardmäßig auf ANSI festgelegt. Einige Funktionen können über mehr als zwei Versionen verfügen.  
   
@@ -46,6 +46,7 @@ Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:
  Eine vollständige Dokumentation der Windows-API finden Sie im Plattform SDK. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden nicht verwalteter DLL-Funktionen](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [Angeben eines Einstiegspunktes](../../../docs/framework/interop/specifying-an-entry-point.md)
 - [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d5cbdd19fa14a41d8bd2eadec80dbafcea7b720d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470076"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766431"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread-Methode
 Ruft den Thread dieses Prozesses, die die angegebenen Betriebssystem (OS)-Thread-ID.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetThread(  
     [in] DWORD dwThreadId,  
     [out] ICorDebugThread **ppThread);  

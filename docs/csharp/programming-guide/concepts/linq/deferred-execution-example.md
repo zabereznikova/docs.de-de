@@ -2,12 +2,12 @@
 title: Beispiel für eine verzögerte Ausführung (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: 9697f3e4c120c7d8bc184181ad99df08634e791e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9ac87cf2b2af4114e5a20c211b4a6b3f7fced6b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598879"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486107"
 ---
 # <a name="deferred-execution-example-c"></a>Beispiel für eine verzögerte Ausführung (C#)
 In diesem Thema wird gezeigt, wie sich die verzögerte Ausführung (Deferred Execution) und die verzögerte Auswertung (Lazy Evaluation) auf die Ausführung Ihrer LINQ to XML-Abfragen auswirken.  
@@ -61,8 +61,8 @@ Main: str GHI
   
  Im nächsten Thema dieses Lernprogramms wird das Verketten von Abfragen gezeigt:  
   
--   [Beispiel für das Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
+- [Beispiel für das Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

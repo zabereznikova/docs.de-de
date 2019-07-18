@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4221dbea2b5ad98f889e04eb8a9b6d992b59066e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5ccf39c019094d896ca20534fccbbccf38ab1dd3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212296"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761801"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration-Funktion
 Setzt einen Enumerator zurück zum Anfang der Enumeration zurück.  
@@ -30,7 +30,7 @@ Setzt einen Enumerator zurück zum Anfang der Enumeration zurück.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT BeginEnumeration (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 

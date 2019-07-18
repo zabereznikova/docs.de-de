@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 321298ce942b35d11a861c87cdf6b8714179ea97
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3037fc704ffc3aac4d050cef7857261f138f7d35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080837"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738071"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate-Methode
 Beendet die `ICorDebug` Objekt.  
@@ -32,7 +32,7 @@ Beendet die `ICorDebug` Objekt.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Terminate ();  
 ```  
   

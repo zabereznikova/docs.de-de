@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649711"
 ---
 # <a name="-delaysign"></a>-delaysign
 Gibt an, ob die Assembly vollständig oder teilweise signiert wird.  
@@ -37,11 +37,11 @@ Gibt an, ob die Assembly vollständig oder teilweise signiert wird.
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>-Delaysign in der integrierten Entwicklungsumgebung von Visual Studio festlegen.  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
+1. Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
   
-2.  Klicken Sie auf die Registerkarte **Signierung**.  
+2. Klicken Sie auf die Registerkarte **Signierung**.  
   
-3.  Legen Sie den Wert der **nur verzögerte Signierung** Feld.  
+3. Legen Sie den Wert der **nur verzögerte Signierung** Feld.  
   
 ## <a name="see-also"></a>Siehe auch
 

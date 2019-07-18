@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Attribute in C# funktionieren.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975601"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59481230"
 ---
 # <a name="using-attributes-in-c"></a>Verwenden von Attributen in C\#
 
@@ -147,4 +147,4 @@ Im Code oben ist keine literale `"Name"`-Zeichenfolge erforderlich. Dies kann da
 
 ## <a name="summary"></a>Zusammenfassung
 
-Attribute ermöglichen eine deklarative Programmierung in C#. Es handelt sich jedoch um eine Form von Metadaten, die Attribute können nicht selbst agieren.
+Attribute verschaffen C# ein deklaratives Potenzial, aber sie sind eine Metadatenform von Code und agieren nicht selbst.

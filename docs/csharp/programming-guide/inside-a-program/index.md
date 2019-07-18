@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: dc4cb8aa63d4a63325e887e134fcda6aeb9d27fa
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 7a18285e6eec8f4e71c1b0e8cb3a0ebdc4203939
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221114"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635255"
 ---
 # <a name="inside-a-c-program"></a>Einblicke in ein C#-Programm
 

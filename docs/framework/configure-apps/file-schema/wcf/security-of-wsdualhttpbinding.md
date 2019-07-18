@@ -2,12 +2,12 @@
 title: <security> von <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
-ms.openlocfilehash: 8bc35b3bc8f0cbe1a51ceab63d876d5859d6b325
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c6f9e34724ccc3a0d05da3e1886b4f0bcbaae064
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670442"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<security> of \<wsDualHttpBinding>
 Definiert die Sicherheitsfunktionen von der [ \<WsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
@@ -35,13 +35,13 @@ Definiert die Sicherheitsfunktionen von der [ \<WsDualHttpBinding >](../../../..
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|mode|-   Optional. Gibt den angewendeten Sicherheitstyp an. Der Standardwert ist `Message`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSDualHttpSecurityMode>.|  
+|Modus|-   Optional. Gibt den angewendeten Sicherheitstyp an. Der Standardwert ist `Message`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSDualHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Mode-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
+|Keiner|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Meldung|Sicherheit wird über die SOAP-Nachrichtensicherheit bereitgestellt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -60,6 +60,7 @@ Definiert die Sicherheitsfunktionen von der [ \<WsDualHttpBinding >](../../../..
  Eine Dualbindung macht die IP-Adresse des Clients für den Dienst verfügbar. Der Client sollte Sicherheitseinstellungen verwenden, um sicherzustellen, dass nur Verbindungen zu vertrauenswürdigen Diensten hergestellt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.WSDualHttpSecurity>
 - <xref:System.ServiceModel.BasicHttpSecurity>
 - [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

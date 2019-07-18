@@ -9,31 +9,31 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93556d8345b09dcd196354e618f4d20f5db68998
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231122"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348524"
 ---
 # <a name="layout"></a>Layout
 Dieses Thema beschreibt das Layoutsystem von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Das Verstehen, wie und wann Layoutberechnungen auftreten, ist wichtige für die Erstellung von Benutzeroberflächen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Umgebende Felder für Elemente](#LayoutSystem_BoundingBox)  
+- [Umgebende Felder für Elemente](#LayoutSystem_BoundingBox)  
   
--   [Das Layoutsystem](#LayoutSystem_Overview)  
+- [Das Layoutsystem](#LayoutSystem_Overview)  
   
--   [Messen und Anordnen von untergeordneten Elementen](#LayoutSystem_Measure_Arrange)  
+- [Messen und Anordnen von untergeordneten Elementen](#LayoutSystem_Measure_Arrange)  
   
--   [Panel-Elemente und benutzerdefiniertes Layoutverhalten](#LayoutSystem_PanelsCustom)  
+- [Panel-Elemente und benutzerdefiniertes Layoutverhalten](#LayoutSystem_PanelsCustom)  
   
--   [Überlegungen zur Layoutleistung](#LayoutSystem_Performance)  
+- [Überlegungen zur Layoutleistung](#LayoutSystem_Performance)  
   
--   [Subpixel-Rendering und Layoutglättung](#LayoutSystem_LayoutRounding)  
+- [Subpixel-Rendering und Layoutrundung](#LayoutSystem_LayoutRounding)  
   
--   [Weitere Informationen](#LayoutSystem_whatsnext)  
+- [Weitere Informationen](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Umgebende Felder für Elemente  
@@ -64,17 +64,17 @@ Dieses Thema beschreibt das Layoutsystem von [!INCLUDE[TLA#tla_winclient](../../
   
  Jedes Mal, das ein untergeordnetes Element <xref:System.Windows.UIElement> seine Position ändert, hat die Möglichkeit, einen neuen Durchlauf des Layoutsystems auslösen. Daher ist es wichtig, die Ereignisse zu verstehen, die das Layoutsystem aufrufen können, da unnötige Aufrufe zu schlechter Anwendungsleistung führen können. Im Folgenden wird der Prozess beschrieben, der auftritt, wenn das Layoutsystem aufgerufen wird.  
   
-1.  Ein untergeordnetes Element <xref:System.Windows.UIElement> startet den Layoutvorgang, indem zuerst dessen Kerneigenschaften gemessen.  
+1. Ein untergeordnetes Element <xref:System.Windows.UIElement> startet den Layoutvorgang, indem zuerst dessen Kerneigenschaften gemessen.  
   
-2.  Für definierten Größeneigenschaften <xref:System.Windows.FrameworkElement> ausgewertet werden, z. B. <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, und <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. Für definierten Größeneigenschaften <xref:System.Windows.FrameworkElement> ausgewertet werden, z. B. <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, und <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>-spezifische Logik angewendet wird, wie z. B. <xref:System.Windows.Controls.Dock> Richtung oder Stapeln <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel>-spezifische Logik angewendet wird, wie z. B. <xref:System.Windows.Controls.Dock> Richtung oder Stapeln <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  Der Inhalt wird neu angeordnet, nachdem alle untergeordneten Elemente gemessen wurden.  
+4. Der Inhalt wird neu angeordnet, nachdem alle untergeordneten Elemente gemessen wurden.  
   
-5.  Die <xref:System.Windows.Controls.Panel.Children%2A> Auflistung auf dem Bildschirm gezeichnet wird.  
+5. Die <xref:System.Windows.Controls.Panel.Children%2A> Auflistung auf dem Bildschirm gezeichnet wird.  
   
-6.  Der Prozess wird erneut aufgerufen, wenn zusätzliche <xref:System.Windows.Controls.Panel.Children%2A> der Auflistung hinzugefügt werden eine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> angewendet wird, oder die <xref:System.Windows.UIElement.UpdateLayout%2A> Methode wird aufgerufen.  
+6. Der Prozess wird erneut aufgerufen, wenn zusätzliche <xref:System.Windows.Controls.Panel.Children%2A> der Auflistung hinzugefügt werden eine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> angewendet wird, oder die <xref:System.Windows.UIElement.UpdateLayout%2A> Methode wird aufgerufen.  
   
  Dieser Prozess und wie er aufgerufen wird, werden in den folgenden Abschnitten ausführlicher definiert.  
   
@@ -120,19 +120,19 @@ Dieses Thema beschreibt das Layoutsystem von [!INCLUDE[TLA#tla_winclient](../../
 ## <a name="layout-performance-considerations"></a>Überlegungen zur Layoutleistung  
  Layout ist ein rekursiver Prozess. Jedes untergeordnete Element in einem <xref:System.Windows.Controls.Panel.Children%2A> Auflistung bei jedem Aufruf des Layoutsystems verarbeitet wird. Daher sollte das Auslösen des Layoutsystems vermieden werden, wenn es nicht erforderlich ist. Folgendes können Sie für eine bessere Leistung tun.  
   
--   Achten Sie darauf, welche Änderungen des Eigenschaftswerts ein rekursives Update durch das Layoutsystem erzwingt.  
+- Achten Sie darauf, welche Änderungen des Eigenschaftswerts ein rekursives Update durch das Layoutsystem erzwingt.  
   
      Abhängigkeitseigenschaften, deren Werte bewirken, dass das Layoutsystem initialisiert werden kann, werden mit öffentlichen Flags gekennzeichnet. <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> und <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A> bieten nützliche Hinweise darüber, welche Änderungen einen rekursiven erzwingt aktualisieren, indem Sie das Layoutsystem. Jede Eigenschaft, die die Größe des umgebenden Felds eines Elements beeinflussen kann müssen im Allgemeinen eine <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> flag auf True festgelegt ist. Weitere Informationen finden Sie unter [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).  
   
--   Verwenden Sie nach Möglichkeit eine <xref:System.Windows.UIElement.RenderTransform%2A> statt einer <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
+- Verwenden Sie nach Möglichkeit eine <xref:System.Windows.UIElement.RenderTransform%2A> statt einer <xref:System.Windows.FrameworkElement.LayoutTransform%2A>.  
   
      Ein <xref:System.Windows.FrameworkElement.LayoutTransform%2A> möglich, dass eine sehr gute Möglichkeit, eine Beeinflussung des Inhalts einer [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Allerdings verfügt der Effekt der Umwandlung nicht auf die Position anderer Elemente auswirken, ist es am besten, verwenden eine <xref:System.Windows.UIElement.RenderTransform%2A> stattdessen da <xref:System.Windows.UIElement.RenderTransform%2A> das Layoutsystem nicht aufruft. <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Wendet die Transformation, und erzwingt ein rekursives Layoutupdate, um die neue Position des betroffenen Elements zu berücksichtigen.  
   
--   Vermeiden Sie unnötige Aufrufe zu <xref:System.Windows.UIElement.UpdateLayout%2A>.  
+- Vermeiden Sie unnötige Aufrufe zu <xref:System.Windows.UIElement.UpdateLayout%2A>.  
   
      Die <xref:System.Windows.UIElement.UpdateLayout%2A> Methode erzwingt ein rekursives Layoutupdate und ist häufig nicht erforderlich. Wenn Sie sicher sind, dass eine vollständige Aktualisierung erforderlich ist, verlassen Sie sich auf das Layoutsystem, das diese Methode für Sie aufruft.  
   
--   Bei der Arbeit mit einer großen <xref:System.Windows.Controls.Panel.Children%2A> -Auflistung, erwägen Sie die Verwendung einer <xref:System.Windows.Controls.VirtualizingStackPanel> anstatt einer regulären <xref:System.Windows.Controls.StackPanel>.  
+- Bei der Arbeit mit einer großen <xref:System.Windows.Controls.Panel.Children%2A> -Auflistung, erwägen Sie die Verwendung einer <xref:System.Windows.Controls.VirtualizingStackPanel> anstatt einer regulären <xref:System.Windows.Controls.StackPanel>.  
   
      Die untergeordnete Auflistung virtualisiert das <xref:System.Windows.Controls.VirtualizingStackPanel> behält nur die Objekte im Arbeitsspeicher, die zurzeit innerhalb des ViewPort der übergeordneten sind. Daher wird die Leistung in den meisten Szenarios erheblich verbessert.  
   
@@ -146,7 +146,7 @@ Dieses Thema beschreibt das Layoutsystem von [!INCLUDE[TLA#tla_winclient](../../
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Weitere Informationen  
- Das Verstehen, wie Elemente gemessen und angeordnet werden, ist der erste Schritt zum Verstehen von Layout. Weitere Informationen zu den verfügbaren <xref:System.Windows.Controls.Panel> Elemente finden Sie unter [Panels Overview](../controls/panels-overview.md). Weitere Informationen über die verschiedenen Positionierungseigenschaften, die Layout beeinflussen können, finden Sie unter [Übersicht über Alignment, Margin und Padding](alignment-margins-and-padding-overview.md). Ein Beispiel für eine benutzerdefinierte <xref:System.Windows.Controls.Panel> Element finden Sie unter [Custom Radial Panel Sample](https://go.microsoft.com/fwlink/?LinkID=159982). Wenn Sie alles in einer Anwendung leicht zusammenführen möchten, finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+ Das Verstehen, wie Elemente gemessen und angeordnet werden, ist der erste Schritt zum Verstehen von Layout. Weitere Informationen zu den verfügbaren <xref:System.Windows.Controls.Panel> Elemente finden Sie unter [Panels Overview](../controls/panels-overview.md). Weitere Informationen über die verschiedenen Positionierungseigenschaften, die Layout beeinflussen können, finden Sie unter [Übersicht über Alignment, Margin und Padding](alignment-margins-and-padding-overview.md). Ein Beispiel für eine benutzerdefinierte <xref:System.Windows.Controls.Panel> Element finden Sie unter [Custom Radial Panel Sample](https://go.microsoft.com/fwlink/?LinkID=159982). Wenn Sie alles in einer einfachen Anwendung zusammenführen möchten, finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

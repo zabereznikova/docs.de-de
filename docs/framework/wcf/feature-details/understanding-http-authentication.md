@@ -2,12 +2,12 @@
 title: Grundlagen der HTTP-Authentifizierung
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ebfb5920fcd5c1a8faac8780dc1c32c92f9f6255
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614818"
 ---
 # <a name="understanding-http-authentication"></a>Grundlagen der HTTP-Authentifizierung
 Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt ist, auf eine Ressource zuzugreifen. Das HTTP-Protokoll unterstützt die Authentifizierung zum Aushandeln des Zugriffs auf eine sichere Ressource.  
@@ -29,14 +29,14 @@ Die Authentifizierung besteht in der Identifizierung, ob ein Client berechtigt i
 ## <a name="choosing-an-authentication-scheme"></a>Auswählen eines Authentifizierungsschemas  
  Bei potenziellen Authentifizierungsschemen für einen HTTP-Server müssen u. a. die folgenden Aspekte beachtet werden:  
   
--   Überprüfen Sie, ob die Ressourcen geschützt werden müssen. Für die HTTP-Authentifizierung müssen mehr Daten übertragen werden, zudem kann die Interoperabilität mit Clients eingeschränkt werden. Lassen Sie den anonymen Zugriff auf Ressourcen zu, die nicht geschützt werden müssen.  
+- Überprüfen Sie, ob die Ressourcen geschützt werden müssen. Für die HTTP-Authentifizierung müssen mehr Daten übertragen werden, zudem kann die Interoperabilität mit Clients eingeschränkt werden. Lassen Sie den anonymen Zugriff auf Ressourcen zu, die nicht geschützt werden müssen.  
   
--   Wenn die Ressource geschützt werden muss, überlegen Sie, welche Authentifizierungsschemen die gewünschte Sicherheitsstufe bieten. Das "schwächste", hier erläuterte Standardauthentifizierungsschema ist die Basic-Authentifizierung. Die Basic-Authentifizierung schützt nicht die Benutzeranmeldeinformationen. Das "stärkste" Standardauthentifizierungsschema ist die Negotiate-Authentifizierung, die zum Kerberos-Protokoll führt.  
+- Wenn die Ressource geschützt werden muss, überlegen Sie, welche Authentifizierungsschemen die gewünschte Sicherheitsstufe bieten. Das "schwächste", hier erläuterte Standardauthentifizierungsschema ist die Basic-Authentifizierung. Die Basic-Authentifizierung schützt nicht die Benutzeranmeldeinformationen. Das "stärkste" Standardauthentifizierungsschema ist die Negotiate-Authentifizierung, die zum Kerberos-Protokoll führt.  
   
--   Ein Server sollte kein Schema enthalten (in den WWW-Authentifizierungsheadern), das die geschützten Ressourcen nicht akzeptieren bzw. angemessen sichern kann. Clients können aus den unterschiedlichen Authentifizierungsschemen des Servers wählen. Einige Clients wählen standardmäßig ein schwaches Authentifizierungsschema oder das erste Authentifizierungsschema in der Liste des Servers.  
+- Ein Server sollte kein Schema enthalten (in den WWW-Authentifizierungsheadern), das die geschützten Ressourcen nicht akzeptieren bzw. angemessen sichern kann. Clients können aus den unterschiedlichen Authentifizierungsschemen des Servers wählen. Einige Clients wählen standardmäßig ein schwaches Authentifizierungsschema oder das erste Authentifizierungsschema in der Liste des Servers.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
-- [Identitätswechsel und Transportsicherheit](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [Verwenden von Identitätswechsel mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

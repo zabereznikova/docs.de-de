@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050518"
 ---
 # <a name="determining-object-type-visual-basic"></a>Bestimmen des Objekttyps (Visual Basic)
 Generisches Objektvariablen (d. h. deklarierte Variablen als `Object`) Objekte aus einer Klasse enthalten kann. Bei Verwendung von Variablen des Typs `Object`, müssen Sie möglicherweise verschiedene Aktionen basierend auf der Klasse des Objekts, z. B. einige Objekte können nicht unterstützen, eine bestimmte Eigenschaft oder Methode. Visual Basic bietet zwei Methoden ermitteln, welche Art von Objekt in eine Objektvariable gespeichert ist: die `TypeName` Funktion und die `TypeOf...Is` Operator.  
@@ -36,11 +36,11 @@ Generisches Objektvariablen (d. h. deklarierte Variablen als `Object`) Objekte a
   
 #### <a name="to-run-the-example"></a>So führen Sie das Beispiel aus  
   
-1.  Erstellen Sie ein neues Windows-Anwendungsprojekt und fügen eine <xref:System.Windows.Forms.Button> -Steuerelement, ein <xref:System.Windows.Forms.CheckBox> -Steuerelement, und ein <xref:System.Windows.Forms.RadioButton> -Steuerelement auf das Formular.  
+1. Erstellen Sie ein neues Windows-Anwendungsprojekt und fügen eine <xref:System.Windows.Forms.Button> -Steuerelement, ein <xref:System.Windows.Forms.CheckBox> -Steuerelement, und ein <xref:System.Windows.Forms.RadioButton> -Steuerelement auf das Formular.  
   
-2.  Rufen Sie über die Schaltfläche im Formular die `TestObject` Verfahren.  
+2. Rufen Sie über die Schaltfläche im Formular die `TestObject` Verfahren.  
   
-3.  Fügen Sie dem Formular den folgenden Code hinzu:  
+3. Fügen Sie dem Formular den folgenden Code hinzu:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   

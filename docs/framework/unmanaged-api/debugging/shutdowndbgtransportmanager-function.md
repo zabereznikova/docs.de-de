@@ -18,24 +18,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 213ca658e7a84f03b15f97cf07aa1ed7cb39205b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2e59ec88ea001640ba0dc3e923fa62a064a2d007
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424101"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752485"
 ---
 # <a name="shutdowndbgtransportmanager-function"></a>ShutdownDbgTransportManager-Funktion
 Fährt den Transport-Manager für eine Verbindung mit einem Remotecomputer herunter.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 void InitDbgTransportManager ();  
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CoreClrRemoteDebuggingInterfaces.h  
   

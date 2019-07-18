@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9d2e0c7b2b81a79f95fa852b3975f4512d87f8e0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835309"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623997"
 ---
 # <a name="const-statement-visual-basic"></a>Const-Anweisung (Visual Basic)
 Deklariert und definiert eine oder mehrere Konstanten.  
@@ -57,35 +57,35 @@ Const constantlist
   
 ## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** Eine Konstante deklariert, auf Modulebene außerhalb einer Prozedur, wird eine *Memberkonstante*; es ist ein Member der Klasse, Struktur oder Modul deklariert, die es.  
+- **Deklarationskontext.** Eine Konstante deklariert, auf Modulebene außerhalb einer Prozedur, wird eine *Memberkonstante*; es ist ein Member der Klasse, Struktur oder Modul deklariert, die es.  
   
      Eine Konstante, die auf Prozedurebene deklariert ist eine *lokale Konstante*; es lokal auf die Prozedur oder der Block, der sie deklariert ist.  
   
--   **Attribute.** Sie können Attribute anwenden, nur, Memberkonstanten, nicht für lokale Konstanten. Ein Attribut fügt Informationen an den Metadaten der Assembly, die hat keine Bedeutung für die temporäre Speicherung, z. B. lokale Konstanten.  
+- **Attribute.** Sie können Attribute anwenden, nur, Memberkonstanten, nicht für lokale Konstanten. Ein Attribut fügt Informationen an den Metadaten der Assembly, die hat keine Bedeutung für die temporäre Speicherung, z. B. lokale Konstanten.  
   
--   **Modifizierer.** Standardmäßig sind alle Konstanten `Shared`, `Static`, und `ReadOnly`. Sämtliche dieser Schlüsselwörter können keine beim Deklarieren einer Konstante.  
+- **Modifizierer.** Standardmäßig sind alle Konstanten `Shared`, `Static`, und `ReadOnly`. Sämtliche dieser Schlüsselwörter können keine beim Deklarieren einer Konstante.  
   
      Auf Prozedurebene, können keine `Shadows` Zugriffsmodifizierern zum Deklarieren von lokaler Konstanten.  
   
--   **Mehrere Konstanten.** Sie können mehrere Konstanten in der gleichen deklarationsanweisung deklarieren angeben der `constantname` für jeden einzelnen Teil. Mehrere Konstanten werden durch Kommas getrennt.  
+- **Mehrere Konstanten.** Sie können mehrere Konstanten in der gleichen deklarationsanweisung deklarieren angeben der `constantname` für jeden einzelnen Teil. Mehrere Konstanten werden durch Kommas getrennt.  
   
 ## <a name="data-type-rules"></a>Daten – Typenregeln  
   
--   **Datentypen.** Die `Const` -Anweisung kann den Datentyp einer Variablen deklarieren. Sie können einen beliebigen Datentyp aufweisen oder den Namen einer Enumeration angeben.  
+- **Datentypen.** Die `Const` -Anweisung kann den Datentyp einer Variablen deklarieren. Sie können einen beliebigen Datentyp aufweisen oder den Namen einer Enumeration angeben.  
   
--   **Standard-Typ.** Wenn Sie keinen angeben `datatype`, die Konstante hat den Datentyp der `initializer`. Wenn Sie beide angeben `datatype` und `initializer`, der Datentyp des `initializer` müssen konvertierbar sein `datatype`. Wenn weder `datatype` noch `initializer` vorhanden ist, geben Sie die Daten standardmäßig `Object`.  
+- **Standard-Typ.** Wenn Sie keinen angeben `datatype`, die Konstante hat den Datentyp der `initializer`. Wenn Sie beide angeben `datatype` und `initializer`, der Datentyp des `initializer` müssen konvertierbar sein `datatype`. Wenn weder `datatype` noch `initializer` vorhanden ist, geben Sie die Daten standardmäßig `Object`.  
   
--   **Verschiedene Typen.** Sie können für unterschiedliche Konstanten unterschiedliche Datentypen angeben, über ein separates `As` -Klausel für jede Variable, die Sie deklarieren. Allerdings kann nicht deklariert werden mehrere Konstanten desselben Typs mit einer gemeinsamen `As` Klausel.  
+- **Verschiedene Typen.** Sie können für unterschiedliche Konstanten unterschiedliche Datentypen angeben, über ein separates `As` -Klausel für jede Variable, die Sie deklarieren. Allerdings kann nicht deklariert werden mehrere Konstanten desselben Typs mit einer gemeinsamen `As` Klausel.  
   
--   **Die Initialisierung.** Sie müssen den Wert jedes Konstanten in initialisieren `constantlist`. Verwenden Sie `initializer` , geben Sie einen Ausdruck, der Konstante zugewiesen werden soll. Der Ausdruck kann eine beliebige Kombination aus Literalen, andere Konstanten, die bereits definiert sind und Enumerationsmember, die bereits definierte sein. Sie können arithmetische und logische Operatoren verwenden, zur Kombination dieser Elemente.  
+- **Die Initialisierung.** Sie müssen den Wert jedes Konstanten in initialisieren `constantlist`. Verwenden Sie `initializer` , geben Sie einen Ausdruck, der Konstante zugewiesen werden soll. Der Ausdruck kann eine beliebige Kombination aus Literalen, andere Konstanten, die bereits definiert sind und Enumerationsmember, die bereits definierte sein. Sie können arithmetische und logische Operatoren verwenden, zur Kombination dieser Elemente.  
   
      Sie können keine Variablen oder Funktionen in `initializer`. Sie können jedoch Konvertierungsschlüsselwörter wie z. B. `CByte` und `CShort`. Sie können auch `AscW` Aufruf mit einer Konstanten `String` oder `Char` -Argument, das zum Zeitpunkt der Kompilierung ausgewertet werden können.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Bereich.** Lokale Konstanten sind nur innerhalb ihrer Prozedur oder eines Blocks zugegriffen werden. Memberkonstanten sind an einer beliebigen Stelle innerhalb ihrer Klasse, Struktur oder Modul zugegriffen werden.  
+- **Bereich.** Lokale Konstanten sind nur innerhalb ihrer Prozedur oder eines Blocks zugegriffen werden. Memberkonstanten sind an einer beliebigen Stelle innerhalb ihrer Klasse, Struktur oder Modul zugegriffen werden.  
   
--   **Qualifizierung.** Code außerhalb einer Klasse, Struktur oder eines Moduls muss qualifizieren eine Memberkonstante Namen durch den Namen der Klasse, Struktur, bzw. des Moduls. Code außerhalb einer Prozedur oder einem Block kann auf alle lokalen Konstanten in dieser Prozedur oder eines Blocks verweisen.  
+- **Qualifizierung.** Code außerhalb einer Klasse, Struktur oder eines Moduls muss qualifizieren eine Memberkonstante Namen durch den Namen der Klasse, Struktur, bzw. des Moduls. Code außerhalb einer Prozedur oder einem Block kann auf alle lokalen Konstanten in dieser Prozedur oder eines Blocks verweisen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `Const` -Anweisung zum Deklarieren von Konstanten für die Verwendung anstelle von literalen Werten.  

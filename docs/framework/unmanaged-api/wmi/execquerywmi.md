@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 402bbcb9ad5e462a55c5ec2716417f512f03ee19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3db6ddf51b8e83635f594c4716b57551475dc96f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373217"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636583"
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi-Funktion
 

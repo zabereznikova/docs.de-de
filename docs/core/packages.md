@@ -4,12 +4,12 @@ description: Lernen Sie die Terminologie für Pakete, Metapakete und Frameworks.
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090497"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakete, Metapakete und Frameworks
 
@@ -97,7 +97,6 @@ Das Framework `.NETStandard,Version=1.3` ist ein paketbasiertes Framework. Es ve
 Es besteht eine bidirektionale Beziehung zwischen Frameworks und Paketen. Der erste Teil definiert die APIs, die für ein angegebenes Framework verfügbar sind, z.B. `netstandard1.3`. Pakete, die `netstandard1.3` (oder kompatible Frameworks wie `netstandard1.0`) als Ziel haben, definieren die APIs, die für `netstandard1.3` verfügbar sind. Das hört sich möglicherweise wie eine zirkuläre Definition an, das ist aber nicht der Fall. Aufgrund ihrer Eigenschaft „paketbasiert“ stammt die API-Definition für das Framework aus Paketen. Das Framework selbst definiert keine APIs.
 
 Der zweite Teil der Beziehung ist die Auswahl von Ressourcen. Pakete können Ressourcen für mehrere Frameworks enthalten. Bei einem Verweis auf eine Gruppe von Paketen und/oder Metapaketen ist das Framework erforderlich, um zu bestimmen, welche Ressource ausgewählt werden sollen, z.B. `net46` oder `netstandard1.3`. Es ist wichtig, dass Sie die richtige Ressource auswählen. Eine `net46`-Ressource zum Beispiel ist wahrscheinlich nicht mit .NET Framework 4.0 oder .NET Core 1.0 kompatibel.
-
 
 Sie können diese Beziehung in der folgenden Abbildung sehen. Die *API* hat das *Framework* als Ziel und definiert es. Das *Framework* wird zur *Ressourcenauswahl* verwendet. Von der *Ressource* erhalten Sie die API.
 

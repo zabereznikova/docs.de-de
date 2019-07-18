@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4b6dfe30268aef7dc61f130c2775e2cc0d1503e8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814925"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635633"
 ---
 # <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
 Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklarationsanweisung eingeschlossen (`Function`, `Sub`, `Operator`, `Get`, `Set`) und eine entsprechende `End` Deklaration. Alle ausführbare Anweisungen in Visual Basic müssen in einer Prozedur sein.  
@@ -24,11 +24,11 @@ Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklara
 ## <a name="returning-from-a-procedure"></a>Nach dem Abschluss der Prozedur  
  Wenn die Prozedur abgeschlossen wurde, übergibt sie die Kontrolle wieder an den aufrufenden Code. Dazu kann sie eine [Return-Anweisung](../../../../visual-basic/language-reference/statements/return-statement.md), die entsprechende [Exit-Anweisung](../../../../visual-basic/language-reference/statements/exit-statement.md) für die Prozedur oder die [End-\<Schlüsselwort>-Anweisung](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) der Prozedur verwenden. Dann wird die Kontrolle wieder an den aufrufenden Code im Anschluss an die Stelle des Prozeduraufrufs übergeben.  
   
--   Mit einer `Return`-Anweisung wird die Kontrolle sofort wieder an den aufrufenden Code übergeben. Anweisungen, die hinter der `Return`-Anweisung stehen, werden nicht ausgeführt. Es können sich mehrere `Return`-Anweisungen in derselben Prozedur befinden.  
+- Mit einer `Return`-Anweisung wird die Kontrolle sofort wieder an den aufrufenden Code übergeben. Anweisungen, die hinter der `Return`-Anweisung stehen, werden nicht ausgeführt. Es können sich mehrere `Return`-Anweisungen in derselben Prozedur befinden.  
   
--   Mit einer `Exit Sub`- oder `Exit Function`-Anweisung wird die Kontrolle sofort wieder an den aufrufenden Code übergeben. Anweisungen, die hinter der `Exit`-Anweisung stehen, werden nicht ausgeführt. Es können sich mehrere `Exit`-Anweisungen in derselben Prozedur befinden. Außerdem können sich sowohl `Return`- als auch `Exit`-Anweisungen in derselben Prozedur befinden.  
+- Mit einer `Exit Sub`- oder `Exit Function`-Anweisung wird die Kontrolle sofort wieder an den aufrufenden Code übergeben. Anweisungen, die hinter der `Exit`-Anweisung stehen, werden nicht ausgeführt. Es können sich mehrere `Exit`-Anweisungen in derselben Prozedur befinden. Außerdem können sich sowohl `Return`- als auch `Exit`-Anweisungen in derselben Prozedur befinden.  
   
--   Wenn eine Prozedur weder eine `Return`- noch eine `Exit`-Anweisung aufweist, schließt sie mit einer `End Sub`- oder `End Function`-, `End Get`- oder `End Set`-Anweisung hinter der letzten Anweisung des Texts der Prozedur ab. Die `End`-Anweisung übergibt die Kontrolle sofort wieder an den aufrufenden Code. Es darf sich nur eine `End`-Anweisung in einer Prozedur befinden.  
+- Wenn eine Prozedur weder eine `Return`- noch eine `Exit`-Anweisung aufweist, schließt sie mit einer `End Sub`- oder `End Function`-, `End Get`- oder `End Set`-Anweisung hinter der letzten Anweisung des Texts der Prozedur ab. Die `End`-Anweisung übergibt die Kontrolle sofort wieder an den aufrufenden Code. Es darf sich nur eine `End`-Anweisung in einer Prozedur befinden.  
   
 ## <a name="parameters-and-arguments"></a>Parameter und Argumente  
  In den meisten Fällen muss eine Prozedur bei jedem Aufruf unterschiedliche Daten verarbeiten. Diese Informationen können Sie im Rahmen eines Prozeduraufrufs an die Prozedur übergeben. Die Prozedur definiert keine oder mehrere *Parameter*. Diese Parameter stellen jeweils einen Wert dar, der von der Prozedur erwartet wird. Jedem Parameter in der Definition der Prozedur entspricht ein *Argument* im Prozeduraufruf. Ein Argument stellt einen Wert dar, den Sie an den entsprechenden Parameter in einem gegebenen Prozeduraufruf übergeben.  
@@ -36,19 +36,19 @@ Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklara
 ## <a name="types-of-procedures"></a>Prozedurtypen  
  Visual Basic verwendet mehrere Prozedurtypen:  
   
--   [Sub-Prozeduren](./sub-procedures.md) führen Aktionen aus, geben jedoch keinen Wert an den aufrufenden Code zurück.  
+- [Sub-Prozeduren](./sub-procedures.md) führen Aktionen aus, geben jedoch keinen Wert an den aufrufenden Code zurück.  
   
--   Ereignisbehandlungsprozeduren sind `Sub`-Prozeduren, die als Reaktion auf ein Ereignis ausgeführt werden, das durch eine Benutzeraktion oder durch Auftreten in einem Programm ausgelöst wurde.  
+- Ereignisbehandlungsprozeduren sind `Sub`-Prozeduren, die als Reaktion auf ein Ereignis ausgeführt werden, das durch eine Benutzeraktion oder durch Auftreten in einem Programm ausgelöst wurde.  
   
--   [Function-Prozeduren](./function-procedures.md) geben einen Wert an den aufrufenden Code zurück. Bevor sie einen Wert zurückgeben, können sie noch weitere Aktionen ausführen.
+- [Function-Prozeduren](./function-procedures.md) geben einen Wert an den aufrufenden Code zurück. Bevor sie einen Wert zurückgeben, können sie noch weitere Aktionen ausführen.
 
     Einige in C# geschriebene Funktionen geben einen *Verweisrückgabewert* zurück. Funktionsaufrufer modifizieren den Rückgabewert. Diese Modifizierung wird durch den Zustand des aufgerufenen Objekts widergespiegelt. Ab Visual Basic 2017 kann Code von Visual Basic Verweisrückgabewerte verarbeiten, auch wenn er einen Wert nicht nach Verweis zurückgeben kann. Weitere Informationen finden Sie unter [Verweisrückgabewerte](ref-return-values.md).
   
--   [Eigenschaftenprozeduren](./property-procedures.md) geben Werte von Eigenschaften auf Objekten und Modulen zurück und weisen diese zu.  
+- [Eigenschaftenprozeduren](./property-procedures.md) geben Werte von Eigenschaften auf Objekten und Modulen zurück und weisen diese zu.  
   
--   [Operatorprozeduren](./operator-procedures.md) definieren das Verhalten von Standardoperatoren, wenn mindestens einer der beiden Operanden eine neu definierte Klasse oder Struktur ist.  
+- [Operatorprozeduren](./operator-procedures.md) definieren das Verhalten von Standardoperatoren, wenn mindestens einer der beiden Operanden eine neu definierte Klasse oder Struktur ist.  
   
--   [Generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) definieren zusätzlich zu ihren normalen Parametern mindestens einen *Typparameter*, damit der aufrufende Code bei jedem Aufruf spezifische Datentypen übergeben kann.  
+- [Generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) definieren zusätzlich zu ihren normalen Parametern mindestens einen *Typparameter*, damit der aufrufende Code bei jedem Aufruf spezifische Datentypen übergeben kann.  
   
 ## <a name="procedures-and-structured-code"></a>Prozeduren und strukturierter Code  
  Jede Zeile ausführbaren Codes in Ihrer Anwendung muss sich in einer Prozedur befinden, wie z.B. `Main`, `calculate` oder `Button1_Click`. Wenn Sie große Prozeduren in kleinere austeilen, macht das Ihre Anwendung lesbarer.  
@@ -57,9 +57,9 @@ Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklara
   
  Wenn Sie Ihren Code mit Prozeduren strukturieren, bringt das folgende Vorteile:  
   
--   Mit Prozeduren können Sie Ihre Programme in diskrete logische Einheiten aufteilen. Außerdem ist es leichter, einzelne Einheiten zu debuggen als ein Programm ohne Prozeduren zu debuggen.  
+- Mit Prozeduren können Sie Ihre Programme in diskrete logische Einheiten aufteilen. Außerdem ist es leichter, einzelne Einheiten zu debuggen als ein Programm ohne Prozeduren zu debuggen.  
   
--   Nachdem Sie Prozeduren für ein Programm entwickelt haben, können Sie diese auch in anderen Programmen einsetzen, und das oft mit wenigen bis gar keinen Änderungen. So können Sie Codeduplikate vermeiden.  
+- Nachdem Sie Prozeduren für ein Programm entwickelt haben, können Sie diese auch in anderen Programmen einsetzen, und das oft mit wenigen bis gar keinen Änderungen. So können Sie Codeduplikate vermeiden.  
   
 ## <a name="see-also"></a>Siehe auch
 

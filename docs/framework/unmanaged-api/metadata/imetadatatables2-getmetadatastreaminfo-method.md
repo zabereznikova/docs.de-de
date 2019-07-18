@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f70187ba9bd71225162e6e10184e4992b5600f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4f559a269b48ceabfbe9c3a0cf3665458a2cf012
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228847"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769282"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo-Methode
 Ruft ab, der Name, Größe und Inhalt des Metadatenstreams am angegebenen Index.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetMetaDataStreamInfo (  
    [in]  ULONG        ix,  
    [out] const char   **ppchName,  

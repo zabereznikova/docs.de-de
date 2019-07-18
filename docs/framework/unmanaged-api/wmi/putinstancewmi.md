@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f657fd76f73c4016824511079e6f037bc3bc53
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9774656d010a3e52dd2392094ba6b529a573f3e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359375"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636570"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi-Funktion
 

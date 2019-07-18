@@ -2,18 +2,18 @@
 title: System.ServiceModel.Channels.PnrpUnregisteredAddresses
 ms.date: 03/30/2017
 ms.assetid: e726ab32-6923-4fdb-b0ce-bdf2a299ed6a
-ms.openlocfilehash: f14f0b20f2b7f65fa999b83d04b0da49b61fbc78
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2e705605ebf78ea3179f38ee87d3477ee414cc7c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181713"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424842"
 ---
 # <a name="systemservicemodelchannelspnrpunregisteredaddresses"></a>System.ServiceModel.Channels.PnrpUnregisteredAddresses
 Die Registrierung der Adressen des lokalen Knotens wurde vom Pnrp-Resolver aufgehoben.  
   
 ## <a name="description"></a>Beschreibung  
- Diese Ablaufverfolgung tritt auf, nachdem die Registrierung der Adressen des lokalen Knotens erfolgreich durch den PNRP-Dienst aufgehoben wurde.  
+ Diese Ablaufverfolgung tritt auf, nachdem der PNRP-Dienst erfolgreich Adressen des lokalen Knotens hebt die Registrierung.  
   
 ## <a name="see-also"></a>Siehe auch
 

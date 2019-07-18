@@ -3,11 +3,11 @@ title: Abrufen der Absätze und ihrer Stile (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
 ms.openlocfilehash: 3c6554c44c95db13aada0d9edf96cc2df595c6d1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787035"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Abrufen der Absätze und ihrer Stile (Visual Basic)
 In diesem Beispiel schreiben wir eine Abfrage, die die Absatzknoten aus einem WordprocessingML-Dokument abruft. Außerdem ermittelt es für jeden Absatz die verwendete Formatvorlage.  

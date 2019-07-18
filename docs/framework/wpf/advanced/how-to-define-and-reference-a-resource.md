@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Definieren und Verweisen auf eine Ressource'
+title: 'Vorgehensweise: Definieren einer Ressource und Verweisen auf eine Ressource'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resources [WPF], defining
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - referencing resources [WPF]
 ms.assetid: b86b876b-0a10-489b-9a5d-581ea9b32406
 ms.openlocfilehash: 80be1460906100072e6263c967c213df7968c705
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776505"
 ---
-# <a name="how-to-define-and-reference-a-resource"></a>Vorgehensweise: Definieren und Verweisen auf eine Ressource
+# <a name="how-to-define-and-reference-a-resource"></a>Vorgehensweise: Definieren einer Ressource und Verweisen auf eine Ressource
 
 Dieses Beispiel zeigt, wie Sie eine Ressource definieren und darauf verweisen, indem Sie mithilfe eines Attributs in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].
 

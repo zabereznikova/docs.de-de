@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 417f99c2b9fa7e77f8696c27cb3929c92956c08c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1272df17a9a9a500b84f62914811b8d109bf3cdd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494648"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768954"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID-Methode
 Ruft den Bezeichner des Tasks in diesem Thread ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetTaskID (  
     [out] TASKID  *pTaskId  
 );  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
 ms.openlocfilehash: b501d21efd02a0b96d98bc32af7968a61aae1f29
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774789"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>Logische/bitweise Operatoren (Visual Basic)
 Im folgenden sind die logische/bitweise Operatoren in Visual Basic.  

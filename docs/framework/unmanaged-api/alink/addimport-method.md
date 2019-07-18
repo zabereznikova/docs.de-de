@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbe8a43f44d59249abc713c95fce31f1fb9a5993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 31dec878c92e2e2196ab2d586a78578b7244a41a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148667"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742236"
 ---
 # <a name="addimport-method"></a>AddImport-Methode
 Importe und die Assembly hinzugefügt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT AddImport(  
     mdAssembly      AssemblyID,  
     mdToken         ImportToken,  
@@ -61,4 +61,4 @@ HRESULT AddImport(
 
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 649f44bd7966b9ca89d2d040b7eede662404aa0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 62eb5782071b42df1a035a4553b6cf9da53e24ac
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093552"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778096"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a>ISymUnmanagedSymbolSearchInfo::GetSearchPath-Methode
 Ruft den Pfad für die Suche.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSearchPathLength(  
     [out] ULONG32 *pcchPath);  
 ```  

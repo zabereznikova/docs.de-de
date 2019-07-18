@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
 ms.openlocfilehash: db57633e2de0c4ae898c242ea754c5f5c2fcd211
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802595"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>Zeichenfolgenbearbeitung: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  

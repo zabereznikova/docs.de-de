@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
 ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052910"
 ---
 # <a name="richtextbox-overview"></a>Übersicht über RichTextBox
 Die <xref:System.Windows.Controls.RichTextBox> -Steuerelement können Sie zum Anzeigen oder Bearbeiten von fortlaufenden Inhalt wie Absätze, Bilder, Tabellen und vieles mehr. In diesem Thema werden die <xref:System.Windows.Controls.TextBox> -Klasse und stellt Beispiele für die Verwendung in beiden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und C#.  
@@ -95,5 +95,5 @@ Die <xref:System.Windows.Controls.RichTextBox> -Steuerelement können Sie zum An
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Gewusst wie-Themen](richtextbox-how-to-topics.md)
+- [Themen zu Vorgehensweisen](richtextbox-how-to-topics.md)
 - [Übersicht über TextBox](textbox-overview.md)

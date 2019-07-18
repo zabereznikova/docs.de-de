@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ANSI
 ms.assetid: 4f1fa6ff-5557-41ab-b6da-90baf4c15917
 ms.openlocfilehash: 98dafab3e524ea371bba228eb231e28d46cc3b4e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802556"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
 Gibt an, dass es sich bei Visual Basic alle Zeichenfolgen in Werte American National Standards Institute (ANSI), unabhängig vom Namen des die deklarierte externe Prozedur marshallen soll.  

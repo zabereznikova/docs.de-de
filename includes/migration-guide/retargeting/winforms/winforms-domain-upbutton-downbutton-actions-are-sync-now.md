@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7344fddbc61d47d4ca735808f0b92f63e33e15a3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e73fe48467ede501bae0ddd9362d9d55b3ca998b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760814"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774054"
 ---
 ### <a name="winforms-domain-upbutton-and-downbutton-actions-are-in-sync-now"></a>Die UpButton- und DownButton-Aktionen der Domäne von WinForm sind jetzt synchronisiert
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760814"
 |Version|4.7.2|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType></li><li><xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType></li></ul>|
-

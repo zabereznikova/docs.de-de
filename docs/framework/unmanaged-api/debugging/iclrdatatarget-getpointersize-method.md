@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73645265821d5854776e412f8eb0f33b36db00d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 54abcd357c6f26f54432b39bfcb4a0d63afabfe4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130493"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738722"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize-Methode
 Ruft die Größe des Zeigertyps, mit denen das Ziel wird in Bytes ab. Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetPointerSize (  
     [out] ULONG32     *pointerSize  
 );  

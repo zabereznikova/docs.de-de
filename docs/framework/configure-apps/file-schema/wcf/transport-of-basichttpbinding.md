@@ -3,11 +3,11 @@ title: <transport> von <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
 ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788387"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<Transport > von \<BasicHttpBinding >
 Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport steuern.  

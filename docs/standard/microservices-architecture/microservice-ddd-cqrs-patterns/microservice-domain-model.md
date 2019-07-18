@@ -1,15 +1,13 @@
 ---
 title: Entwerfen eines Domänenmodells für Microservices
 description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Übersicht über die Grundkonzepte beim Entwerfen eines DDD-orientierten Domänenmodells
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 7df274e90d5466581b6f93fe210b6c9310815833
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465892"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644210"
 ---
 # <a name="design-a-microservice-domain-model"></a>Entwerfen eines Microservicedomänenmodells
 
@@ -58,13 +56,13 @@ Manche bezeichnen das anämische Domänenmodell als „Antimuster“. Dies häng
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **DevIQ. Domain Entity (Domänenentität)** \
-  [https://deviq.com/entity/](https://deviq.com/entity/)
+  <https://deviq.com/entity/>
 
 - **Martin Fowler. The Domain Model (Das Domänenmodell)** \
-  [https://martinfowler.com/eaaCatalog/domainModel.html](https://martinfowler.com/eaaCatalog/domainModel.html)
+  <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler. Anemic Domain Model (Anämisches Datenmodell)** \
-  [https://martinfowler.com/bliki/AnemicDomainModel.html](https://martinfowler.com/bliki/AnemicDomainModel.html)
+  <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>Das Wertobjektmuster
 
@@ -83,16 +81,16 @@ EF Core 2.0 umfasst die Funktion [Nicht eigenständige Entitäten](https://devbl
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Martin Fowler. Value Object pattern (Das Wertobjektmuster)** \
-  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
+  <https://martinfowler.com/bliki/ValueObject.html>
 
 - **Value Object (Das Wertobjekt)** \
-  [https://deviq.com/value-object/](https://deviq.com/value-object/)
+  <https://deviq.com/value-object/>
 
 - **Value Objects in Test-Driven Development (Wertobjekte in der testgesteuerten Entwicklung)** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 - **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software. (Domänengesteuertes Design (DDD): Umgang mit Komplexität im Kern einer Software.)** (Buch, das Erläuterungen zu Wertobjekten enthält) \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>Das Aggregatmuster
 
@@ -145,13 +143,13 @@ Für das Identifizieren von und Arbeiten mit Aggregaten sind Recherchen und Erfa
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. DDD Tactical Design Patterns (Taktische DDD-Entwurfsmuster)** \
-  [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+  <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
 - **Chris Richardson. Developing Transactional Microservices Using Aggregates (Entwickeln von Transaktionsmicroservices mit Aggregaten)** \
-  [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+  <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
 - **DevIQ. The Aggregate pattern (Das Aggregatmuster)** \
-  [https://deviq.com/aggregate-pattern/](https://deviq.com/aggregate-pattern/)
+  <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
 >[Zurück](ddd-oriented-microservice.md)

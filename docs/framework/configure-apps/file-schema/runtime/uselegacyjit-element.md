@@ -5,13 +5,13 @@ ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a467599084f01b1a48c95c5e25fb1f869156dffa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673887"
 ---
-# <a name="uselegacyjit-element"></a>\<UseLegacyJit >-Element
+# <a name="uselegacyjit-element"></a>\<useLegacyJit>-Element
 
 Legt fest, ob die Runtime den 64-Bit-JIT-Legacycompiler für die Just-in-Time-Kompilierung verwendet.  
   
@@ -46,7 +46,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine
+Keiner
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

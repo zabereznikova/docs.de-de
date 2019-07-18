@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 76fd6ad954b2cf004c6fdfcf51ef0c619e8c3892
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175590"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662784"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
 Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestellten Bindungen, die konfiguriert werden können, jedoch bieten keine vollständige Flexibilität, wenn die Sicherheitsoptionen zu konfigurieren, die von WCF unterstützt. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> unterstützt nicht die <xref:System.ServiceModel.Channels.IDuplexSessionChannel> Form, die wird von der verwendeten kanalform standardmäßig vom TCP-channel-transport beim <xref:System.ServiceModel.TransferMode> nastaven NA hodnotu <xref:System.ServiceModel.TransferMode.Buffered>. Sie müssen <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Streamed> festlegen, um <xref:System.ServiceModel.Channels.SecurityBindingElement> in diesem Szenario verwenden.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> unterstützt die <xref:System.ServiceModel.Channels.IDuplexSessionChannel>-Kanalform nicht, die der standardmäßig vom TCP-Transport verwendeten Kanalform entspricht, wenn <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Buffered> festgelegt ist. Sie müssen <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Streamed> festlegen, um <xref:System.ServiceModel.Channels.SecurityBindingElement> in diesem Szenario verwenden.  
   
 ## <a name="creating-a-custom-binding"></a>Erstellen einer benutzerdefinierten Bindung  
  In WCF Alle Bindungen bestehen *Bindungselemente*. Jedes Bindungselement wird von der <xref:System.ServiceModel.Channels.BindingElement>-Klasse abgeleitet. Bei den standardmäßigen, vom System bereitgestellten Bindungen werden die Bindungselemente für Sie erstellt und konfiguriert, einige der Eigenschaftseinstellungen können jedoch angepasst werden.  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestell
   
  Zusätzliche Klassen werden verwendet, wenn Sicherheit auf Transportebene bereitgestellt wird:  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>Erforderliche Bindungselemente  
  Es gibt eine große Anzahl von möglichen Bindungselementen, die zu einer Bindung kombiniert werden können. Nicht alle Kombinationen sind zulässig. In diesem Abschnitt werden die für eine Sicherheitsbindung erforderlichen Elemente beschrieben.  
   
  Gültige Sicherheitsbindungen hängen von vielen Faktoren ab, unter anderem von folgenden:  
   
--   Sicherheitsmodus  
+- Sicherheitsmodus  
   
--   Transportprotokoll  
+- Transportprotokoll  
   
--   Das im Vertrag angegebene Nachrichtenaustauschmuster (MEP)  
+- Das im Vertrag angegebene Nachrichtenaustauschmuster (MEP)  
   
  Die folgende Tabelle enthält die gültigen Konfigurationen von Bindungselementstapeln für jede Kombination der oben genannten Faktoren. Beachten Sie, dass es sich herbei um Mindestanforderungen handelt. Sie können der Bindung weitere Bindungselemente hinzufügen (beispielsweise Elemente zur Nachrichtencodierung, Transaktionsbindungselemente usw.).  
   
@@ -83,19 +83,19 @@ Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestell
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>So erstellen Sie eine benutzerdefinierte Bindung mit dem SymmetricSecurityBindingElement  
   
-1.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse mit dem Namen `outputBec`.  
+1. Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse mit dem Namen `outputBec`.  
   
-2.  Rufen Sie die statische `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`-Methode auf, durch die eine Instanz der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>-Klasse zurückgegeben wird.  
+2. Rufen Sie die statische `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`-Methode auf, durch die eine Instanz der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>-Klasse zurückgegeben wird.  
   
-3.  Fügen Sie das <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> zur Sammlung hinzu (`outputBec`), indem Sie die `Add`-Methode der <xref:System.Collections.ObjectModel.Collection%601> der <xref:System.ServiceModel.Channels.BindingElement>-Klasse aufrufen.  
+3. Fügen Sie das <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> zur Sammlung hinzu (`outputBec`), indem Sie die `Add`-Methode der <xref:System.Collections.ObjectModel.Collection%601> der <xref:System.ServiceModel.Channels.BindingElement>-Klasse aufrufen.  
   
-4.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>-Klasse, und fügen Sie diese der Sammlung hinzu (`outputBec`). Dies gibt die von der Bindung verwendete Codierung an.  
+4. Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>-Klasse, und fügen Sie diese der Sammlung hinzu (`outputBec`). Dies gibt die von der Bindung verwendete Codierung an.  
   
-5.  Erstellen Sie ein <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, und fügen Sie es der Sammlung hinzu (`outputBec`). Dadurch wird angegeben, dass die Bindung den HTTP-Transport nutzt.  
+5. Erstellen Sie ein <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, und fügen Sie es der Sammlung hinzu (`outputBec`). Dadurch wird angegeben, dass die Bindung den HTTP-Transport nutzt.  
   
-6.  Erstellen Sie eine neue benutzerdefinierte Bindung, indem Sie eine Instanz der <xref:System.ServiceModel.Channels.CustomBinding>-Klasse erstellen und die Sammlung `outputBec` an den Konstruktor weitergeben.  
+6. Erstellen Sie eine neue benutzerdefinierte Bindung, indem Sie eine Instanz der <xref:System.ServiceModel.Channels.CustomBinding>-Klasse erstellen und die Sammlung `outputBec` an den Konstruktor weitergeben.  
   
-7.  Die resultierenden benutzerdefinierten Bindungen teilen sich viele Eigenschaften mit dem Standard <xref:System.ServiceModel.WSHttpBinding>. Sicherheit wird auf Nachrichtenebene und Windows-Anmeldeinformationen festgelegt, aber sichere Sitzungen werden deaktiviert, eine Out-of-Band-Festlegung der Dienstanmeldeinformationen ist erforderlich und Signaturen werden nicht verschlüsselt. Die letzte kann nur durch Festlegen der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>-Eigenschaft gesteuert werden, wie in Schritt 4 angezeigt. Die anderen beiden können über Einstellungen auf der Standardbindung kontrolliert werden.  
+7. Die resultierenden benutzerdefinierten Bindungen teilen sich viele Eigenschaften mit dem Standard <xref:System.ServiceModel.WSHttpBinding>. Sicherheit wird auf Nachrichtenebene und Windows-Anmeldeinformationen festgelegt, aber sichere Sitzungen werden deaktiviert, eine Out-of-Band-Festlegung der Dienstanmeldeinformationen ist erforderlich und Signaturen werden nicht verschlüsselt. Die letzte kann nur durch Festlegen der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A>-Eigenschaft gesteuert werden, wie in Schritt 4 angezeigt. Die anderen beiden können über Einstellungen auf der Standardbindung kontrolliert werden.  
   
 ## <a name="example"></a>Beispiel  
   

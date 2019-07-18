@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ed6570e11008e52d4b1f97c2dc90e2ccbef2e35
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 23f248625753c15a4798ea69a1eb3b377b79f95d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471380"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747748"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus-Methode
 Für jede Methode der Klasse wird einen Wert, der angibt, ob die Methode benutzerdefinierten Code ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetJMCStatus (  
     [in] BOOL   bIsJustMyCode  
 );  

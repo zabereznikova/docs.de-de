@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49d7fb1de0b2ea63c1a766023b23acc42e027af8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 499f58cc0a3f2d1b3c159435ed7d9b523f25e29e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475657"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757891"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>ICorDebugILFrame::EnumerateArguments-Methode
 Ruft einen Enumerator für die Argumente in diesem Frame ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT EnumerateArguments (  
     [out] ICorDebugValueEnum    **ppValueEnum  
 );  

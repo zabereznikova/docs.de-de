@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a2c71f32dfd190e188bb28aad5d51c72160eb4bc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223757"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603242"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager-Schnittstelle
 Enthält Methoden, die Zugriff auf und Kontrolle über den Sicherheitskontext des gerade ausgeführten Threads zu ermöglichen.  
@@ -42,13 +42,13 @@ Enthält Methoden, die Zugriff auf und Kontrolle über den Sicherheitskontext de
   
  Die CLR behandelt die intern verwalteten Thread-Kontext. Die Prozess-spezifischen Abfragen `IHostSecurityManager` in den folgenden Situationen:  
   
--   Der Finalizer-Thread, während der Finalizerausführung.  
+- Der Finalizer-Thread, während der Finalizerausführung.  
   
--   Während der Ausführung der Klasse "und"-Modul-Konstruktor.  
+- Während der Ausführung der Klasse "und"-Modul-Konstruktor.  
   
--   Auf den Arbeitsthread, in Aufrufen von asynchronen Zeitpunkten der [IHostThreadPoolManager:: QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) Methode.  
+- Auf den Arbeitsthread, in Aufrufen von asynchronen Zeitpunkten der [IHostThreadPoolManager:: QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) Methode.  
   
--   Im Wartungsmodus von e/a-Abschlussports.  
+- Im Wartungsmodus von e/a-Abschlussports.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -62,4 +62,4 @@ Enthält Methoden, die Zugriff auf und Kontrolle über den Sicherheitskontext de
 ## <a name="see-also"></a>Siehe auch
 
 - [IHostSecurityContext-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

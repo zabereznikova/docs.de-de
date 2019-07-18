@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a4a8e5f99a845d2befe55f5939b41224f2aa47b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1cc02c1f69235403e2f5df28168e17a70f183682
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077302"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762411"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKeyToken-Methode
 Ruft das öffentliche Schlüsseltoken der Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetPublicKeyToken(  
    [in] ULONG32 cbPublicKeyToken,   
    [out] ULONG32 *pcbPublicKeyToken,   
@@ -52,4 +52,4 @@ HRESULT GetPublicKeyToken(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugMergedAssemblyRecord-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68098895b2ad7f5c08d30f222777e52d4ee3f063
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9be126e45d8428d8786e9aadf2195133d1957440
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476658"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754831"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next-Methode
 Ruft die angegebene Anzahl von ICorDebugFrame-Instanzen, beginnend bei der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  

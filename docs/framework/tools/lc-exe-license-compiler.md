@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601693"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59298967"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (License Compiler-Tool)
 Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung und erstellt eine Binärdatei, die als Ressource in eine ausführbare Datei der Common Language Runtime eingebettet werden kann.  
@@ -52,19 +52,19 @@ Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung un
   
 ## <a name="example"></a>Beispiel  
   
-1.  Wenn Sie das lizenzierte Steuerelement `MyCompany.Samples.LicControl1` verwenden, das in `Samples.DLL` in einer Anwendung namens `HostApp.exe`*,* enthalten ist, können Sie `HostAppLic.txt` mit folgendem Inhalt erstellen.  
+1. Wenn Sie das lizenzierte Steuerelement `MyCompany.Samples.LicControl1` verwenden, das in `Samples.DLL` in einer Anwendung namens `HostApp.exe`*,* enthalten ist, können Sie `HostAppLic.txt` mit folgendem Inhalt erstellen.  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Erstellen Sie die LICENSES-Datei `HostApp.exe.licenses` mit dem folgenden Befehl.  
+2. Erstellen Sie die LICENSES-Datei `HostApp.exe.licenses` mit dem folgenden Befehl.  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Erstellen Sie `HostApp.exe` mit der LICENSES-Datei als Ressource. Wenn Sie eine C#-Anwendung erstellt haben, erstellen Sie die Anwendung mit dem folgenden Befehl.  
+3. Erstellen Sie `HostApp.exe` mit der LICENSES-Datei als Ressource. Wenn Sie eine C#-Anwendung erstellt haben, erstellen Sie die Anwendung mit dem folgenden Befehl.  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
@@ -93,6 +93,7 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Extras](../../../docs/framework/tools/index.md)
 - [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

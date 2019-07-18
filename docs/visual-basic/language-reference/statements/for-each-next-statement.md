@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5c2332b7371ec4ac7b5cfc0681466536d49bb7be
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824345"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026072"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next-Anweisung (Visual Basic)
 Wird eine Gruppe von Anweisungen für jedes Element in einer Auflistung wiederholt.  
@@ -49,7 +49,7 @@ Next [ element ]
 |Begriff|Definition|  
 |---|---|  
 |`element`|Erforderlich, der `For Each` Anweisung. Optional Klicken Sie in der `Next` Anweisung. Variable. Zum Durchlaufen der Elemente der Auflistung verwendet.|  
-|`datatype`|Erforderlich, wenn `element` ist nicht bereits deklariert. Datentyp des `element`.|  
+|`datatype`|Optional, wenn [ `Option Infer` ](option-infer-statement.md) ist (Standardeinstellung) oder `element` ist bereits deklariert; erforderlich, wenn `Option Infer` ist deaktiviert und `element` ist nicht bereits deklariert. Der Datentyp von `element`.|  
 |`group`|Erforderlich. Eine Variable mit einem Typ, der einen Sammlungstyp oder ein Objekt ist. Verweist auf die Auflistung über den die `statements` wiederholt werden sollen.|  
 |`statements`|Dies ist optional. Eine oder mehrere Anweisungen zwischen `For Each` und `Next` , führen Sie für jedes Element in `group`.|  
 |`Continue For`|Dies ist optional. Überträgt die Steuerung an den Anfang der `For Each` Schleife.|  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` wird häufig verwendet werden, nachdem eine Auswertung einer Bedingung, z. B. in einer `If`... `Then`... `Else` Struktur. Möglicherweise möchten Sie verwenden `Exit For` für die folgenden Bedingungen:  
   
--   So durchlaufen Sie den Vorgang fortsetzen, ist nicht erforderlich oder unmöglich ist. Dies könnte durch einen fehlerhaften Wert oder eine Anforderung zum Beenden verursacht werden.  
+- So durchlaufen Sie den Vorgang fortsetzen, ist nicht erforderlich oder unmöglich ist. Dies könnte durch einen fehlerhaften Wert oder eine Anforderung zum Beenden verursacht werden.  
   
--   Wird eine Ausnahme einem `Try`... `Catch`... `Finally`. Sie können `Exit For` am Ende der `Finally` Block.  
+- Wird eine Ausnahme einem `Try`... `Catch`... `Finally`. Sie können `Exit For` am Ende der `Finally` Block.  
   
--   Es gibt eine Endlosschleife, wird eine Schleife, die eine lange oder sogar unendliche Anzahl von Malen ausgeführt werden konnte. Wenn Sie eine solche Bedingung erkennen, können Sie `Exit For` die Schleife mit Escapezeichen versehen. Weitere Informationen finden Sie unter [tun... Until...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Es gibt eine Endlosschleife, wird eine Schleife, die eine lange oder sogar unendliche Anzahl von Malen ausgeführt werden konnte. Wenn Sie eine solche Bedingung erkennen, können Sie `Exit For` die Schleife mit Escapezeichen versehen. Weitere Informationen finden Sie unter [tun... Until...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="iterators"></a>Iterators  
  Sie verwenden eine *Iterator* um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Funktion sein oder ein `Get` Accessor. Er verwendet eine `Yield` Anweisung, um jedes Element der Auflistung zu einem Zeitpunkt zurückzugeben.  
@@ -113,8 +113,8 @@ Next [ element ]
  Wenn eine `For Each`...`Next` Anweisung ausgeführt wird, Visual Basic wertet die Auflistung nur einmal, bevor die Schleife gestartet wird. Wenn Ihre Anweisungsblock ändert `element` oder `group`, diese Änderungen wirken sich nicht auf die Iteration der Schleife.  
   
  Wenn alle Elemente in der Auflistung zugewiesen wurden `element`, `For Each` -Schleife beendet und die Steuerung an die Anweisung nach übergeben die `Next` Anweisung.  
-  
- Wenn `element` wurde nicht deklariert wurde außerhalb dieser Schleife, müssen Sie deklarieren sie in der `For Each` Anweisung. Sie können deklarieren, dass den Typ des `element` explizit durch Verwenden einer `As` -Anweisung, oder Sie können sich verlassen, auf den Typrückschluss den Typ zugewiesen. In beiden Fällen den Bereich der `element` ist der Text der Schleife. Sie können jedoch nicht deklarieren `element` sowohl außerhalb und innerhalb der Schleife.  
+ 
+Wenn [Option Infer](option-infer-statement.md) wird auf (die Standardeinstellung), kann Visual Basic-Compiler ableiten, den den Datentyp des `element`. Wenn sie deaktiviert ist und `element` wurde nicht deklariert wurde außerhalb der Schleife, müssen Sie deklarieren sie in der `For Each` Anweisung. Deklarieren Sie den Datentyp der `element` explizit verwenden eine `As` Klausel. Wenn der Datentyp des Elements, außerhalb definiert ist der `For Each`... `Next` Konstrukt, dessen Bereich ist der Text der Schleife. Beachten Sie, die Sie deklarieren, können nicht `element` sowohl außerhalb und innerhalb der Schleife.
   
  Sie können optional angeben `element` in die `Next` Anweisung. Dies verbessert die Lesbarkeit des Programms, besonders bei geschachtelten `For Each` Schleifen. Sie müssen dieselbe Variable angeben, wie diejenige, die in der entsprechenden `For Each` Anweisung.  
   
@@ -124,7 +124,7 @@ Next [ element ]
   
  Wenn Ihr Code Durchlaufen einer Auflistung in einer bestimmten Reihenfolge, hängt von einer `For Each`... `Next` Schleife ist nicht die beste Wahl, es sei denn, Sie wissen, dass die Merkmale der Enumerator-Objekt der Auflistung verfügbar macht. Die Reihenfolge des Durchlaufs wird nicht von Visual Basic, bestimmt, sondern von der <xref:System.Collections.IEnumerator.MoveNext%2A> Methode des Enumeratorobjekts. Aus diesem Grund Sie möglicherweise nicht um vorherzusagen, welches Element der Auflistung der ersten zurückzugebenden ist `element`, oder die als Nächstes nach einem angegebenen Element zurückgegeben wird. Erzielen Sie möglicherweise zuverlässiger Ergebnisse, die mithilfe von einer anderen Schleife, wie z. B. `For`... `Next` oder `Do`... `Loop`.  
   
- Der Datentyp des `element` muss zulassen, dass der Datentyp der Elemente des `group` können konvertiert werden kann.  
+Die Laufzeit muss in der Lage, konvertieren Sie die Elemente im `group` zu `element`. Die [`Option Strict`]-Anweisung steuert, ob sowohl erweiternde und eingrenzende Konvertierungen zulässig sind (`Option Strict` deaktiviert ist, den Standardwert), oder ob nur erweiternde Konvertierungen zulässig sind (`Option Strict` ist). Weitere Informationen finden Sie unter [einschränkende Konvertierungen](#narrowing-conversions).
   
  Der Datentyp des `group` muss ein Verweistyp handelt, das auf eine Auflistung oder ein Array, das aufzählbar ist. Meistens bedeutet dies, dass `group` bezieht sich auf ein Objekt, das implementiert die <xref:System.Collections.IEnumerable> Schnittstelle die `System.Collections` Namespace oder die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle die `System.Collections.Generic` Namespace. `System.Collections.IEnumerable` definiert die <xref:System.Collections.IEnumerable.GetEnumerator%2A> Methode, die ein Enumeratorobjekt für die Auflistung zurückgibt. Enumerator-Objekt implementiert die `System.Collections.IEnumerator` Schnittstelle die `System.Collections` Namespace und macht die <xref:System.Collections.IEnumerator.Current%2A> Eigenschaft und die <xref:System.Collections.IEnumerator.Reset%2A> und <xref:System.Collections.IEnumerator.MoveNext%2A> Methoden. Visual Basic verwendet diese, um der Auflistung zu durchlaufen.  
   

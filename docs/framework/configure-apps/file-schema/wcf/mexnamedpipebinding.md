@@ -3,11 +3,11 @@ title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
 ms.openlocfilehash: 9ac2b967e33571cbe0b4ad5ee81e13b009ffddd3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772462"
 ---
 # <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding>
 Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Nachrichtenaustausch (WS-MEX) über eine benannte Pipe verwendet wird.  

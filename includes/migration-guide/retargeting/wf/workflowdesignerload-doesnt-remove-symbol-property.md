@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 97a92c6bce80b93e9a8bdd863bf881631eaffb27
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804648"
+---
 ### <a name="workflowdesignerload-doesnt-remove-symbol-property"></a>WorkflowDesigner.Load entfernt die Symbol-Eigenschaft nicht
 
 |   |   |

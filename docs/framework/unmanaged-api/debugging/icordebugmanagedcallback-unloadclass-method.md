@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3eb8bf59ee2a91c62a6ff74b1903d92607a9ffe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 629a4850d47940633c8c69a7e464cfae315b3c56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197863"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761246"
 ---
 # <a name="icordebugmanagedcallbackunloadclass-method"></a>ICorDebugManagedCallback::UnloadClass-Methode
 Benachrichtigt den Debugger, dass eine Klasse, entladen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT UnloadClass (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugClass      *c  

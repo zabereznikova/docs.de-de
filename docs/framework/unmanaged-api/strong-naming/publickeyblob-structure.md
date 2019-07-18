@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a361e04b6f8f39ec0083471d8cb47d5a29376c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214818"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774584"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob-Struktur
 Stellt den öffentlichen Schlüssel eines öffentlichen/privaten Schlüsselpaars im binären Format dar.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct {  
     unsigned int SigAlgId;  
     unsigned int HashAlgId;  

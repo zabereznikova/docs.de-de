@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 ms.date: 03/30/2017
 ms.assetid: e5b820ae-504d-405a-926a-9effa41d2369
 ms.openlocfilehash: 0c9e79709f5929e1fa123a8d1695ca720046e9e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997503"
 ---
 # <a name="microsofttransactionstransactionbridgereplaymessageretry"></a>Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 Einem nicht reagierenden Koordinator wurde eine Wiederholungsaufforderung für eine Wiederholungsnachricht geschickt.  

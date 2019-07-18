@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1169a30f25db6084b8d232c0696991b040e7ea59
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814982"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662533"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>Datentypen von Operatorergebnissen (Visual Basic)
 Visual Basic bestimmt den Datentyp des Ergebnisses eines Vorgangs auf Grundlage der Datentypen der Operanden. In einigen Fällen kann dies einen Datentyp mit einem größeren Bereich als ein Operand sein.  
@@ -22,21 +22,21 @@ Visual Basic bestimmt den Datentyp des Ergebnisses eines Vorgangs auf Grundlage 
 ## <a name="data-type-ranges"></a>Datentypbereiche  
  Die Bereiche der relevanten Datentypen, in der Reihenfolge vom kleinsten zum größten, lauten wie folgt aus:  
   
--   [Boolesche](../../../visual-basic/language-reference/data-types/boolean-data-type.md) – zwei mögliche Werte  
+- [Boolesche](../../../visual-basic/language-reference/data-types/boolean-data-type.md) – zwei mögliche Werte  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) – 256 mögliche ganzzahlige Werte  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md), [Byte](../../../visual-basic/language-reference/data-types/byte-data-type.md) – 256 mögliche ganzzahlige Werte  
   
--   [Kurze](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) – 65.536 (6.5... E + 4) mögliche ganzzahlige Werte  
+- [Kurze](../../../visual-basic/language-reference/data-types/short-data-type.md), [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) – 65.536 (6.5... E + 4) mögliche ganzzahlige Werte  
   
--   [Ganze Zahl](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) – 4.294.967.296 (4.2... E + 9) mögliche ganzzahlige Werte  
+- [Ganze Zahl](../../../visual-basic/language-reference/data-types/integer-data-type.md), [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) – 4.294.967.296 (4.2... E + 9) mögliche ganzzahlige Werte  
   
--   [Lange](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) – 18.446.744.073.709.551.615 (1.8... E + 19) mögliche ganzzahlige Werte  
+- [Lange](../../../visual-basic/language-reference/data-types/long-data-type.md), [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) – 18.446.744.073.709.551.615 (1.8... E + 19) mögliche ganzzahlige Werte  
   
--   [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) – 1,5... E + 29 möglich ganzzahlige Werte, maximalen Bereich 7.9... E + 28 (absoluter Wert)  
+- [Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md) – 1,5... E + 29 möglich ganzzahlige Werte, maximalen Bereich 7.9... E + 28 (absoluter Wert)  
   
--   [Einzelne](../../../visual-basic/language-reference/data-types/single-data-type.md) – maximalbereich 3.4... E + 38 (absoluter Wert)  
+- [Einzelne](../../../visual-basic/language-reference/data-types/single-data-type.md) – maximalbereich 3.4... E + 38 (absoluter Wert)  
   
--   [Doppelte](../../../visual-basic/language-reference/data-types/double-data-type.md) – maximalbereich 1.7... E + 308 (absoluter Wert)  
+- [Doppelte](../../../visual-basic/language-reference/data-types/double-data-type.md) – maximalbereich 1.7... E + 308 (absoluter Wert)  
   
  Weitere Informationen zu Visual Basic-Datentypen, finden Sie unter [Datentypen](../../../visual-basic/language-reference/data-types/index.md).  
   
@@ -68,11 +68,11 @@ Visual Basic bestimmt den Datentyp des Ergebnisses eines Vorgangs auf Grundlage 
 ## <a name="integer-arithmetic"></a>Ganzzahlarithmetik  
  Der Datentyp des Ergebnisses einer ganzzahligen Operation hängt von den Datentypen der Operanden ab. Im Allgemeinen verwendet Visual Basic die folgenden Richtlinien zur Bestimmung der Datentyp des Ergebnisses an:  
   
--   Wenn beide Operanden des binären Operators die gleiche haben-Datentyp, gibt das Ergebnis dieser Datentyp hat. Eine Ausnahme ist `Boolean`, die gezwungen, `Short`.  
+- Wenn beide Operanden des binären Operators die gleiche haben-Datentyp, gibt das Ergebnis dieser Datentyp hat. Eine Ausnahme ist `Boolean`, die gezwungen, `Short`.  
   
--   Wenn ein Operand ohne Vorzeichen mit einem signierten-Operanden beteiligt ist, hat das Ergebnis einen Typ mit Vorzeichen mit mindestens genauso groß wie einer der Operanden.  
+- Wenn ein Operand ohne Vorzeichen mit einem signierten-Operanden beteiligt ist, hat das Ergebnis einen Typ mit Vorzeichen mit mindestens genauso groß wie einer der Operanden.  
   
--   Andernfalls hat das Ergebnis in der Regel die größere der beiden Operandendatentypen.  
+- Andernfalls hat das Ergebnis in der Regel die größere der beiden Operandendatentypen.  
   
  Beachten Sie, dass der Ergebnistyp für die Daten möglicherweise nicht mit einem Operanden der Datentypen identisch.  
   

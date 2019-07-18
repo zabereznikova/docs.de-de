@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 01c0abb366e8605a9b153333e645fc3276b6bd16
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0f501b518d5b3f2d48ced33885da2afd353c609e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821724"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665673"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>Optionale Parameter müssen einen Standardwert bestimmen.
 Optionale Parameter müssen Standardwerte angeben, die verwendet werden kann, wenn von einer aufrufenden Prozedur keine Parameter angegeben wird.  
@@ -21,7 +21,7 @@ Optionale Parameter müssen Standardwerte angeben, die verwendet werden kann, we
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Angeben von Standardwerten für optionale Parameter; Zum Beispiel:  
+- Angeben von Standardwerten für optionale Parameter; Zum Beispiel:  
   
     ```  
     Sub Proc1(ByVal X As Integer,   

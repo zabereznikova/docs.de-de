@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705375"
 ---
 # <a name="compiler-element"></a>\<Compilerfehler >-Element
 
@@ -45,7 +45,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |---------------|-----------------|
 |`compilerOptions`|Optionales Attribut.<br /><br /> Gibt zusätzliche compilerspezifische Argumente für die Kompilierung an. Die Werte für die `compilerOptions` Attribut finden Sie in der Regel in einem Compileroptionen-Thema für den Compiler.|
 |`extension`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste der Dateinamenerweiterungen, die von Quelldateien verwendet werden, für den Sprachanbieter an. Z. B. ". cs".|
-|`language`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste von vom Sprachanbieter unterstützten Sprachnamen. Z. B. "C#; Cs; Csharp".|
+|`language`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste von vom Sprachanbieter unterstützten Sprachnamen. Z. B. "c#; Cs; Csharp".|
 |`type`|Erforderliches Attribut.<br /><br /> Gibt den Typnamen des Sprachanbieters, einschließlich des Namens der Assembly, die die anbieterimplementierung enthält. Der Typname muss die Anforderungen erfüllen [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
 |`warningLevel`|Optionales Attribut.<br /><br /> Gibt die Warnstufe des Compilers "Standard" an. Bestimmt die Ebene, die mit der des Sprachanbieters für compilerwarnungen als Fehler behandelt.|
 

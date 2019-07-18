@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 526805dff9fc59ed317a38b2512c8a97a711227a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661736"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615326"
 ---
 # <a name="xslt-security-considerations"></a>XSLT-Sicherheitsaspekte
 Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leistungsfähigkeit und Flexibilität. Sie enthält viele Funktionen, die zwar hilfreich sind, jedoch auch von externen Quellen ausgenutzt werden können. Um die XSLT-Sicherheit zu verwenden, müssen Sie die verschiedenen Arten von Sicherheitsproblemen kennen und die grundlegenden Strategien verstehen, mit denen Sie diese verringern können.  
@@ -18,9 +18,9 @@ Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leis
 ## <a name="xslt-extensions"></a>XSLT-Erweiterungen  
  Zwei häufig verwendete XSLT-Erweiterungen sind Stylesheet-Skriptobjekte und Erweiterungsobjekte. Diese Erweiterungen ermöglichen dem XSLT-Prozessor das Ausführen von Code.  
   
--   Mit Erweiterungsobjekten werden XSL-Transformationen Programmierfunktionen hinzugefügt.  
+- Mit Erweiterungsobjekten werden XSL-Transformationen Programmierfunktionen hinzugefügt.  
   
--   Skripts können mithilfe des `msxsl:script`-Erweiterungselements in das Stylesheet eingebettet werden.  
+- Skripts können mithilfe des `msxsl:script`-Erweiterungselements in das Stylesheet eingebettet werden.  
   
 ### <a name="extension-objects"></a>Erweiterungsobjekte  
  Erweiterungsobjekte werden mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzugefügt. Für die Unterstützung von Erweiterungsobjekten muss der FullTrust-Berechtigungssatz festgelegt sein. Dadurch wird sichergestellt, dass beim Ausführen von Erweiterungsobjektcode keine Erhöhung der Berechtigungen auftritt. Ohne FullTrust-Berechtigung wird durch den Versuch, die <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode aufzurufen, eine Sicherheitsausnahme ausgelöst.  
@@ -34,9 +34,9 @@ Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leis
 ## <a name="external-resources"></a>Externe Ressourcen  
  Die Sprache XSLT verfügt über Funktionen wie `xsl:import`, `xsl:include` oder die `document()`-Funktion, in denen der Prozessor URI-Verweise auflösen muss. Die <xref:System.Xml.XmlResolver>-Klasse wird zum Auflösen externer Ressourcen verwendet. Externe Ressourcen müssen u. U. in den folgenden zwei Fällen aufgelöst werden:  
   
--   Beim Kompilieren eines Stylesheets wird der <xref:System.Xml.XmlResolver> für die Auflösung von `xsl:import` und `xsl:include` verwendet.  
+- Beim Kompilieren eines Stylesheets wird der <xref:System.Xml.XmlResolver> für die Auflösung von `xsl:import` und `xsl:include` verwendet.  
   
--   Beim Ausführen der Transformation wird die <xref:System.Xml.XmlResolver>-Funktion mithilfe des `document()` aufgelöst.  
+- Beim Ausführen der Transformation wird die <xref:System.Xml.XmlResolver>-Funktion mithilfe des `document()` aufgelöst.  
   
     > [!NOTE]
     >  Die `document()`-Funktion ist für die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse in der Standardeinstellung deaktiviert. Diese Funktion kann aktiviert werden, indem die <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType>-Eigenschaft auf `true` festgelegt wird und das <xref:System.Xml.Xsl.XsltSettings>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>-Methode übergeben wird.  
@@ -48,13 +48,13 @@ Die Sprache XSLT verfügt über eine Vielzahl an Funktionen für eine hohe Leis
   
  In der folgenden Liste wird erläutert, wann ein <xref:System.Xml.XmlResolver>-Objekt angegeben werden kann.  
   
--   Wenn der XSLT-Vorgang auf eine Netzwerkressource zugreifen muss, die eine Authentifizierung erfordert, können Sie einen <xref:System.Xml.XmlResolver> mit den notwendigen Anmeldeinformationen verwenden.  
+- Wenn der XSLT-Vorgang auf eine Netzwerkressource zugreifen muss, die eine Authentifizierung erfordert, können Sie einen <xref:System.Xml.XmlResolver> mit den notwendigen Anmeldeinformationen verwenden.  
   
--   Wenn Sie die Ressourcen einschränken möchten, auf die der XSLT-Vorgang zugreifen kann, können Sie einen <xref:System.Xml.XmlSecureResolver> mit den korrekt festgelegten Einstellungen verwenden. Verwenden Sie die <xref:System.Xml.XmlSecureResolver>-Klasse, wenn Sie eine Ressource öffnen möchten, die nicht von Ihnen gesteuert wird oder die nicht vertrauenswürdig ist.  
+- Wenn Sie die Ressourcen einschränken möchten, auf die der XSLT-Vorgang zugreifen kann, können Sie einen <xref:System.Xml.XmlSecureResolver> mit den korrekt festgelegten Einstellungen verwenden. Verwenden Sie die <xref:System.Xml.XmlSecureResolver>-Klasse, wenn Sie eine Ressource öffnen möchten, die nicht von Ihnen gesteuert wird oder die nicht vertrauenswürdig ist.  
   
--   Wenn Sie das Verhalten anpassen möchten, können Sie eine eigene <xref:System.Xml.XmlResolver>-Klasse implementieren und diese zum Auflösen von Ressourcen verwenden.  
+- Wenn Sie das Verhalten anpassen möchten, können Sie eine eigene <xref:System.Xml.XmlResolver>-Klasse implementieren und diese zum Auflösen von Ressourcen verwenden.  
   
--   Wenn Sie sich vergewissern möchten, dass auf keine externe Ressource zugegriffen wird, können Sie für das `null`-Argument <xref:System.Xml.XmlResolver> angeben.  
+- Wenn Sie sich vergewissern möchten, dass auf keine externe Ressource zugegriffen wird, können Sie für das `null`-Argument <xref:System.Xml.XmlResolver> angeben.  
   
 ## <a name="see-also"></a>Siehe auch
 

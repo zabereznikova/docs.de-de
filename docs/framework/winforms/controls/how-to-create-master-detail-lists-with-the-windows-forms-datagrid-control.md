@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052169"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Vorgehensweise: Erstellen von Master/Detail-Listen mit dem DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "59094982"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>So legen Sie eine Master-/detailbeziehung programmgesteuert fest  
   
-1.  Erstellen Sie zwei neue <xref:System.Windows.Forms.DataGrid> steuert und deren Eigenschaften festlegen.  
+1. Erstellen Sie zwei neue <xref:System.Windows.Forms.DataGrid> steuert und deren Eigenschaften festlegen.  
   
-2.  Hinzufügen von Tabellen für das Dataset.  
+2. Hinzufügen von Tabellen für das Dataset.  
   
-3.  Deklarieren Sie eine Variable vom Typ <xref:System.Data.DataRelation> Beziehung darstellen, erstellt werden soll.  
+3. Deklarieren Sie eine Variable vom Typ <xref:System.Data.DataRelation> Beziehung darstellen, erstellt werden soll.  
   
-4.  Instanziieren Sie die Beziehung, indem Sie einen Namen für die Beziehung und Angeben der Tabellen-, Spalten- und Element, das die zwei Tabellen verknüpft werden.  
+4. Instanziieren Sie die Beziehung, indem Sie einen Namen für die Beziehung und Angeben der Tabellen-, Spalten- und Element, das die zwei Tabellen verknüpft werden.  
   
-5.  Fügen Sie die Beziehung zu den <xref:System.Data.DataSet> des Objekts <xref:System.Data.DataSet.Relations%2A> Auflistung.  
+5. Fügen Sie die Beziehung zu den <xref:System.Data.DataSet> des Objekts <xref:System.Data.DataSet.Relations%2A> Auflistung.  
   
-6.  Verwenden der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode der <xref:System.Windows.Forms.DataGrid> jedes der Raster zum Binden der <xref:System.Data.DataSet>.  
+6. Verwenden der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode der <xref:System.Windows.Forms.DataGrid> jedes der Raster zum Binden der <xref:System.Data.DataSet>.  
   
      Das folgende Beispiel zeigt, wie Sie eine Master/Detail-Beziehung zwischen den Tabellen Customers und Orders in einer zuvor generierten festlegen <xref:System.Data.DataSet> (`ds`).  
   
@@ -74,4 +74,4 @@ ms.locfileid: "59094982"
 
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
 - [Übersicht über das DataGrid-Steuerelement](datagrid-control-overview-windows-forms.md)
-- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

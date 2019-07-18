@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: a42bf12e6ee8275814898a0158348f56bfb2688e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 981b70011979e1e0fbd8fc6b22ba54774c824342
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608462"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 In diesem Beispiel wird veranschaulicht, wie die Serialisierungs- und Deserialisierungsprozesse mit der <xref:System.Runtime.Serialization.DataContractResolver>-Klasse angepasst werden können. In diesem Beispiel wird veranschaulicht, wie DataContractResolver verwendet wird, um bei der Serialisierung und der Deserialisierung CLR-Typen einer xsi:type-Darstellung zuzuordnen bzw. diese Zuordnung wieder aufzuheben.
@@ -152,9 +152,9 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1.  Öffnen Sie die Projektmappendatei dcrsample.sln mit Visual Studio 2012.
+1. Öffnen Sie die Projektmappendatei dcrsample.sln mit Visual Studio 2012.
 
-2.  Drücken Sie F5, um die Projektmappe auszuführen.
+2. Drücken Sie F5, um die Projektmappe auszuführen.
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

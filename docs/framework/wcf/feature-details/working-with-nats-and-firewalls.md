@@ -5,15 +5,15 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 9cecca0905baa4c0769359caf1fe1b477bf4d6bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5415fc173be10834f73b5959481951407bcee0b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518924"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637328"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Arbeiten mit NATs und Firewalls
-Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig nicht über eine direkte und offene Verbindung. Die Datenpakete werden gefiltert, weitergeleitet, analysiert und verändert – sowohl vom Absender und vom Empfänger als auch von den Zwischenstationen im Netzwerk. Netzwerkadressübersetzungen (NAT) und Firewalls sind gängige Beispiele für zwischengeschaltete Anwendungen, die an der Kommunikation im Netzwerk beteiligt sein können.  
+Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig nicht über eine direkte und offene Verbindung. Die Datenpakete werden gefiltert, weitergeleitet, analysiert und transformiert – sowohl vom Absender und vom Empfänger als auch von den Zwischenstationen im Netzwerk. Netzwerkadressübersetzungen (NAT) und Firewalls sind gängige Beispiele für zwischengeschaltete Anwendungen, die an der Kommunikation im Netzwerk beteiligt sein können.  
   
  Windows Communication Foundation (WCF)-Transporte und Meldung, dass die Exchange-Muster (mep) reagieren unterschiedlich auf das Vorhandensein von NATs und Firewalls. In diesem Thema wird beschrieben, wie die Netzwerkadressübersetzung und Firewalls in gängigen Netzwerktopologien funktionieren. Empfehlungen für bestimmte Kombinationen von WCF-Transporte und Nachrichtenaustauschmuster erhalten, die helfen, Ihre Anwendungen gegenüber Netzwerkadressübersetzungen und Firewalls im Netzwerk stabiler zu machen.  
   
@@ -37,19 +37,19 @@ Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig n
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Auswählen eines Transports und eines Nachrichtenaustauschmusters  
  Das Verfahren zum Auswählen eines Transports und eines Nachrichtenaustauschmusters besteht aus drei Schritten:  
   
-1.  Analysieren Sie zunächst die Adressierbarkeit der Endpunktcomputer. Unternehmensserver verfügen i. d. R. über eine direkte Adressierbarkeit, während die Adressierbarkeit bei Endbenutzern häufig durch die Netzwerkadressübersetzung verhindert wird. Wenn beide Endpunkte hinter einem NAT-Mechanismus liegen, z. B. in einem Peer-to-Peer-Szenario zwischen Endbenutzern, ist möglicherweise eine Technologie wie Teredo erforderlich, um die Adressierbarkeit sicherzustellen.  
+1. Analysieren Sie zunächst die Adressierbarkeit der Endpunktcomputer. Unternehmensserver verfügen i. d. R. über eine direkte Adressierbarkeit, während die Adressierbarkeit bei Endbenutzern häufig durch die Netzwerkadressübersetzung verhindert wird. Wenn beide Endpunkte hinter einem NAT-Mechanismus liegen, z. B. in einem Peer-to-Peer-Szenario zwischen Endbenutzern, ist möglicherweise eine Technologie wie Teredo erforderlich, um die Adressierbarkeit sicherzustellen.  
   
-2.  Analysieren Sie die Protokoll- und Anschlusseinschränkungen der Endpunktcomputer. Unternehmensserver werden i. d. R. durch leistungsstarke Firewalls geschützt, die viele Anschlüsse blockieren. Häufig werden jedoch der Anschluss 80 für HTTP- und der Anschluss 443 für HTTPS-Verbindungen geöffnet. Endbenutzer arbeiten normalerweise nicht mit Anschlusseinschränkungen. Sie verwenden jedoch häufig Firewalls, die nur eingehenden Datenverkehr zulassen. Einige Firewalls ermöglichen eine Verwaltung durch Anwendungen auf dem Endpunkt, um ausgewählte Verbindungen zu öffnen.  
+2. Analysieren Sie die Protokoll- und Anschlusseinschränkungen der Endpunktcomputer. Unternehmensserver werden i. d. R. durch leistungsstarke Firewalls geschützt, die viele Anschlüsse blockieren. Häufig werden jedoch der Anschluss 80 für HTTP- und der Anschluss 443 für HTTPS-Verbindungen geöffnet. Endbenutzer arbeiten normalerweise nicht mit Anschlusseinschränkungen. Sie verwenden jedoch häufig Firewalls, die nur eingehenden Datenverkehr zulassen. Einige Firewalls ermöglichen eine Verwaltung durch Anwendungen auf dem Endpunkt, um ausgewählte Verbindungen zu öffnen.  
   
-3.  Berechnen Sie die Transporte und Nachrichtenaustauschmuster, die von der Adressierbarkeit und den Anschlusseinschränkungen des Netzwerks ermöglicht werden.  
+3. Berechnen Sie die Transporte und Nachrichtenaustauschmuster, die von der Adressierbarkeit und den Anschlusseinschränkungen des Netzwerks ermöglicht werden.  
   
  In einer Standardtopologie für Client-Server-Anwendungen verfügen Clients hinter einer Netzwerkadressübersetzung ohne Teredo über eine Firewall nur für ausgehende Verbindungen, und der direkt adressierbare Server wird durch eine leistungsstarke Firewall geschützt. In diesem Szenario funktionieren der TCP-Transport mit einem Duplex-Nachrichtenaustauschmuster und ein HTTP-Transport mit einem Anforderung-Antwort-Nachrichtenaustauschmuster ordnungsgemäß. In einer gängigen Peer-to-Peer-Topologie befinden sich beide Endpunkte hinter einem NAT-Mechanismus sowie hinter einer Firewall. In diesem Szenario sowie in Szenarien mit einer unbekannten Netzwerktopologie sollten Sie folgende Empfehlungen beachten:  
   
--   Verwenden Sie keine dualen Transporte. Duale Transporte öffnen mehr Verbindungen. Dadurch sinkt die Chance, erfolgreich eine Verbindung herzustellen.  
+- Verwenden Sie keine dualen Transporte. Duale Transporte öffnen mehr Verbindungen. Dadurch sinkt die Chance, erfolgreich eine Verbindung herzustellen.  
   
--   Unterstützen Sie die Einrichtung von Rückkanälen über die ursprüngliche Verbindung. Durch Rückkanäle (wie bei Duplex-TCP) werden weniger Verbindungen geöffnet, und die Wahrscheinlichkeit steigt, dass eine Verbindung hergestellt werden kann.  
+- Unterstützen Sie die Einrichtung von Rückkanälen über die ursprüngliche Verbindung. Durch Rückkanäle (wie bei Duplex-TCP) werden weniger Verbindungen geöffnet, und die Wahrscheinlichkeit steigt, dass eine Verbindung hergestellt werden kann.  
   
--   Verwenden Sie einen erreichbaren Dienst zum Registrieren von Endpunkten oder zum Weiterleiten von Datenverkehr. Durch einen global erreichbaren Verbindungsdienst wie einem Teredo-Server wird die Wahrscheinlichkeit deutlich erhöht, eine Verbindung herzustellen, wenn die Netzwerktopologie eingeschränkt oder unbekannt ist.  
+- Verwenden Sie einen erreichbaren Dienst zum Registrieren von Endpunkten oder zum Weiterleiten von Datenverkehr. Durch einen global erreichbaren Verbindungsdienst wie einem Teredo-Server wird die Wahrscheinlichkeit deutlich erhöht, eine Verbindung herzustellen, wenn die Netzwerktopologie eingeschränkt oder unbekannt ist.  
   
  In den folgenden Tabellen untersuchen, der unidirektionale, Anforderung-Antwort und duplex-Nachrichtenaustauschmuster und den standardmäßigen TCP, TCP mit Teredo und Standard- und dual-HTTP-Transporte in WCF.  
   

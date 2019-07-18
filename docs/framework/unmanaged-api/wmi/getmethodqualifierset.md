@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9257ba57e0d087e3d6b9c7bb995b49a6b814c5f1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 329dcf66c5178a16d0f278c258f6f80f5a1b3e8d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373607"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636752"
 ---
 # <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet-Funktion
 

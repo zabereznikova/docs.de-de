@@ -8,15 +8,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-ms.openlocfilehash: 746d757510776b8d6894c456bb1860a5d68632c1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fef3361ca29ed3e118a54b3e81dd82e48b831bef
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707390"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505647"
 ---
 # <a name="lines-curves-and-shapes"></a>Linien, Kurven und Formen
-Der Vektorgrafiken [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] dient zum Zeichnen von Linien und Kurven zeichnen und zum Zeichnen von Formen und füllen.  
+Vektorgrafiken von GDI + dient zum Zeichnen von Linien und Kurven zeichnen und zum Zeichnen von Formen und füllen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Vektorgrafiken](vector-graphics-overview.md)  

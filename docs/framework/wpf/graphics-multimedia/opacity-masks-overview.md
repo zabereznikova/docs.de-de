@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080084"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238405"
 ---
 # <a name="opacity-masks-overview"></a>Übersicht über Durchlässigkeitsmasken
 Mit Deckkraftmasken können Sie Teile eines Elements oder visuellen Objekts transparent bzw. teilweise transparent machen. Zum Erstellen einer Deckkraftmaske wenden Sie eine <xref:System.Windows.Media.Brush> auf die <xref:System.Windows.UIElement.OpacityMask%2A> Eigenschaft eines Elements oder <xref:System.Windows.Media.Visual>.  Der Pinsel wird dem Element oder visuellen Objekt zugeordnet, und der Durchlässigkeitswert jedes Pinselpixels bestimmt die resultierende Durchlässigkeit der entsprechenden Pixel des Elements oder visuellen Objekts.  
@@ -36,21 +36,21 @@ Beispiel für eine Deckkraftmaske
 ## <a name="creating-an-opacity-mask"></a>Erstellen einer Deckkraftmaske  
  Um eine Deckkraftmaske zu erstellen, erstellen Sie eine <xref:System.Windows.Media.Brush> und wenden ihn auf die <xref:System.Windows.UIElement.OpacityMask%2A> Eigenschaft des Elements oder visuellen Elements. Sie können jede Art von <xref:System.Windows.Media.Brush> als Deckkraftmaske.  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Verwendet, um ein Element oder visuelles Element zu machen.  
+- <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>: Verwendet, um ein Element oder visuelles Element zu machen.  
   
      Die folgende Abbildung zeigt eine <xref:System.Windows.Media.LinearGradientBrush> als Deckkraftmaske verwendet.  
   
      ![Ein Objekt mit einer LinearGradientBrush-Deckkraftmaske](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "Wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 Beispiel für eine LinearGradientBrush-Deckkraftmaske  
   
--   <xref:System.Windows.Media.ImageBrush>: Verwendet, um Textur- und weiche oder ausgefranste Randeffekte zu erstellen.  
+- <xref:System.Windows.Media.ImageBrush>: Verwendet, um Textur- und weiche oder ausgefranste Randeffekte zu erstellen.  
   
      Die folgende Abbildung zeigt ein <xref:System.Windows.Media.ImageBrush> als Deckkraftmaske verwendet.  
   
      ![Objekt mit einer ImageBrush-Deckkraftmaske](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "Wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 Beispiel für eine LinearGradientBrush-Deckkraftmaske  
   
--   <xref:System.Windows.Media.DrawingBrush>: Verwendet, um komplexe Deckkraftmasken aus Mustern von Formen, Bildern und Farbverläufen zu erstellen.  
+- <xref:System.Windows.Media.DrawingBrush>: Verwendet, um komplexe Deckkraftmasken aus Mustern von Formen, Bildern und Farbverläufen zu erstellen.  
   
      Die folgende Abbildung zeigt eine <xref:System.Windows.Media.DrawingBrush> als Deckkraftmaske verwendet.  
   
@@ -69,15 +69,15 @@ Beispiel für eine DrawingBrush-Deckkraftmaske
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Angeben von Farbverlaufsstopps für eine Deckkraftmaske  
  Im vorherigen Beispiel die systemdefinierte Farbe <xref:System.Windows.Media.Colors.Black%2A> dient als die Anfangsfarbe des Farbverlaufs entspricht. Da alle Farben in der <xref:System.Windows.Media.Colors> -Klasse, mit Ausnahme von <xref:System.Windows.Media.Colors.Transparent%2A>, vollständig deckend, sie können verwendet werden, einfach eine Startfarbe für einen Farbverlauf einer Deckkraftmaske definiert werden.  
   
- Für zusätzliche Kontrolle über Alphawerte beim Definieren einer Deckkraftmaske, können Sie angeben, den Alphakanal für Farben mithilfe der [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] -Hexadezimalschreibweise in Markup oder mit der <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> Methode.  
+ Für zusätzliche Kontrolle über Alphawerte beim Definieren einer Deckkraftmaske, können Sie angeben, den Alphakanal von Farben mithilfe der über den ARGB--Hexadezimalschreibweise in Markup oder mit der <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> Methode.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Angeben der Deckkraft einer Farbe in „XAML“  
- In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] wird die [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)]-Hexadezimalschreibweise verwendet, um die Deckkraft einzelner Farben anzugeben. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] -Hexadezimalschreibweise verwendet die folgende Syntax:  
+ In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Sie über den ARGB-Hexadezimalschreibweise verwenden, um die Deckkraft einzelner Farben anzugeben. Über den ARGB--Hexadezimalschreibweise verwendet die folgende Syntax:  
   
  `#` **aa** *rrggbb*  
   
- *aa* in der vorherigen Zeile stellt einen zweistelligen Hexadezimalwert dar, der verwendet wird, um die Deckkraft der Farbe anzugeben. *rr*, *gg* und *bb* repräsentieren jeweils einen zweistelligen Hexadezimalwert, der die Anteile von Rot, Grün und Blau einer Farbe angibt. Jede Hexadezimalziffer kann einen Wert von 0-9 bzw. A-F haben. 0 ist der kleinste und F der größte Wert. Der Alphawert 00 gibt eine Farbe an, die vollständig transparent ist, während ein Alphawert FF eine vollständig deckende Farbe erstellt.  Im folgenden Beispiel wird [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)]-Hexadezimalschreibweise verwendet, um zwei Farben anzugeben. Die erste ist vollständig deckend, während die zweite vollkommen transparent ist.  
+ *aa* in der vorherigen Zeile stellt einen zweistelligen Hexadezimalwert dar, der verwendet wird, um die Deckkraft der Farbe anzugeben. *rr*, *gg* und *bb* repräsentieren jeweils einen zweistelligen Hexadezimalwert, der die Anteile von Rot, Grün und Blau einer Farbe angibt. Jede Hexadezimalziffer kann einen Wert von 0-9 bzw. A-F haben. 0 ist der kleinste und F der größte Wert. Der Alphawert 00 gibt eine Farbe an, die vollständig transparent ist, während ein Alphawert FF eine vollständig deckende Farbe erstellt.  Im folgenden Beispiel wird über den ARGB--Hexadezimalschreibweise verwendet, um zwei Farben anzugeben. Die erste ist vollständig deckend, während die zweite vollkommen transparent ist.  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   

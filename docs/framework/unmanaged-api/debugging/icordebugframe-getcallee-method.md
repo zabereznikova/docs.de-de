@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a179b68e2196eeadc712ae8f7d023b2943533335
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 10a5247632f242a4b4e0d33cf7fa7233d1b1e13b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471068"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754202"
 ---
 # <a name="icordebugframegetcallee-method"></a>ICorDebugFrame::GetCallee-Methode
 Ruft einen Zeiger auf das ICorDebugFrame-Objekt, in der aktuellen Kette, die diesem Frame aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCallee (  
     [out] ICorDebugFrame     **ppFrame  
 );  

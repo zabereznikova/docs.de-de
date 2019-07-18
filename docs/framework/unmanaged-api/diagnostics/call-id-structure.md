@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6fa729b131d12b2825a2def700fd918ce8acc40
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2823c018ff22607052cb9a298f69dbd0c4fe2c23
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220174"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769498"
 ---
 # <a name="callid-structure"></a>CALL_ID-Struktur
 Stellt Informationen bereit, an den Debugger zu einer Funktion, die aufgerufen wird. Finden Sie unter den [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) Schnittstelle für Weitere Informationen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct tagCALL_ID  
 {  
     LPCOLESTR       szMachine;  

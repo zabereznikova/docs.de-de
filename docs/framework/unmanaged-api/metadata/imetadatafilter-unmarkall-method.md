@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d084c3065bc23d45173a094bbfa9cc4c62cd4133
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 34922a56dbe43d12207fcf55e9e73847dfad29dc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085999"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757485"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll-Methode
 Entfernt die Markierungen für die Verarbeitung von allen Token im aktuellen Metadatenbereich.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT UnmarkAll ();  
 ```  
   

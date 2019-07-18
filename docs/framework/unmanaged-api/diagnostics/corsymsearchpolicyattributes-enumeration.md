@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a9b0f085820bac12638c0310ab23b2eafacb23b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 29766636cd151744d25cf66deb60cd2e066e1b32
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186172"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775779"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes-Enumeration
 Gibt die Richtlinie beim Ausführen einer Suche für einen Symbolreader verwendet werden. Diese Konstanten werden verwendet, durch die [ISymUnmanagedBinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) und [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) Methoden.  
@@ -31,7 +31,7 @@ Gibt die Richtlinie beim Ausführen einer Suche für einen Symbolreader verwende
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum CorSymSearchPolicyAttributes  
 {  
     AllowRegistryAccess      = 0x1,       

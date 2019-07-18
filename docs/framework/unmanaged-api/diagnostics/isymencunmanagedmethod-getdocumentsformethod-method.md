@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db119a94cb7df29697836ffda240c29a86922d60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8b329d096a23df673de038036fa5ea196cbe0eac
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214772"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736072"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod-Methode
 Ruft ab, die Dokumente, die diese Methode in Zeilen umfasst.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetDocumentsForMethod(  
     [in]  ULONG32  cDocs,  
     [out] ULONG32  *pcDocs,   

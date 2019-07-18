@@ -8,12 +8,12 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e11dbc453934f1aac4a8092cdc6539ec11f0cc21
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824285"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663184"
 ---
 # <a name="-operator-visual-basic"></a>\<\< -Operator (Visual Basic)
 Führt eine arithmetische linksverschiebung in einem Bitmuster aus.  
@@ -60,15 +60,15 @@ result = pattern << amount
   
  Die Ergebnisse des vorherigen Beispiels sind wie folgt aus:  
   
--   `result1` ist Sie 192 (0000 0000 1100 0000).  
+- `result1` ist Sie 192 (0000 0000 1100 0000).  
   
--   `result2` 3072 (1100-0000-0000 0000) ist.  
+- `result2` 3072 (1100-0000-0000 0000) ist.  
   
--   `result3` ist-32768 (1000-0000-0000-0000).  
+- `result3` ist-32768 (1000-0000-0000-0000).  
   
--   `result4` ist 384 (0000 0001 1000 0000).  
+- `result4` ist 384 (0000 0001 1000 0000).  
   
--   `result5` ist 0 (15 Stellen links verschoben).  
+- `result5` ist 0 (15 Stellen links verschoben).  
   
  Der Betrag der Verschiebung für `result4` wird berechnet als 17 und 15, die gleich 1 ist.  
   

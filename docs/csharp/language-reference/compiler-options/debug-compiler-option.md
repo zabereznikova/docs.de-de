@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: aa9e98e4ec805006c88188d1d19eb3e9781ad732
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4828e1cdd8b830f10b134b613bc96e69490091fe
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502973"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59338487"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C#-Compileroptionen)
 Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generiert und sie in der Ausgabedatei bzw. in Ausgabedateien platziert.  
@@ -32,7 +32,7 @@ Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generier
  `full` &#124; `pdbonly`  
  Gibt den Typ der Debuginformationen an, die vom Compiler generiert werden. Das vollständige Argument, das aktiv ist, wenn Sie **-debug:pdbonly** nicht angeben, ermöglicht das Anfügen eines Debuggers an das ausgeführte Programm. Durch die Angabe von pdbonly wird das Debuggen von Quellcode möglich, wenn das Programm im Debugger gestartet wird. Der Assembler wird jedoch nur angezeigt, wenn das aktive Programm an den Debugger angefügt ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Verwenden Sie diese Option, um Debugbuilds zu erstellen. Wenn **-debug**, **-debug+** oder **-debug:full** nicht angegeben ist, können Sie die Ausgabedatei Ihres Programms nicht debuggen.  
   
  Wenn Sie **-debug:full** verwenden, beachten Sie, dass dies Einfluss auf die Geschwindigkeit und Größe von optimiertem JIT-Code hat und die Codequalität mit **-debug:full** beeinträchtigt sein kann. Zum Generieren von Releasecode wird empfohlen, **-debug:pdbonly** oder keine PDB-Datei zu verwenden.  
@@ -46,13 +46,13 @@ Die Option **-debug** führt dazu, dass der Compiler Debuginformationen generier
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
+2. Klicken Sie auf die Eigenschaftenseite **Build** .  
   
-3.  Klicken Sie auf die Schaltfläche **Erweitert** .  
+3. Klicken Sie auf die Schaltfläche **Erweitert** .  
   
-4.  Ändern Sie die Eigenschaft der **Debuginformation**.  
+4. Ändern Sie die Eigenschaft der **Debuginformation**.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
   

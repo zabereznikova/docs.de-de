@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 11c4f119360af386fa2c5609ea7815b9ae7a64f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842290"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647005"
 ---
 # <a name="string-data-type-visual-basic"></a>String-Datentyp (Visual Basic)
 Enthält Sequenzen von unsignierten 16-Bit (2-Byte)-Codepunkte dieses Bereichs im Wert von 0 bis 65535 an. Jede *Codepunkt*, oder Zeichencode ein einzelnes Unicodezeichens darstellt. Eine Zeichenfolge kann zwischen 0 und etwa zwei Milliarden enthalten (2 ^ 31) Unicode-Zeichen.  
@@ -70,13 +70,13 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Negative Zahlen.** Beachten Sie, dass die Zeichen von gehalten `String` nicht signiert sind und keine negativen Werte darstellen. In jedem Fall sollten Sie nicht verwenden `String` für numerische Werte.  
+- **Negative Zahlen.** Beachten Sie, dass die Zeichen von gehalten `String` nicht signiert sind und keine negativen Werte darstellen. In jedem Fall sollten Sie nicht verwenden `String` für numerische Werte.  
   
--   **Interop-Überlegungen.** Wenn die Komponenten, die nicht für .NET Framework geschrieben wurden verbunden ist z. B. Automatisierungs- oder COM-Objekte, denken Sie daran, dass Zeichen der Zeichenfolge eine andere Datenbreite (8 Bit) verfügen in anderen Umgebungen. Wenn Sie ein Zeichenfolgenargument von 8-Bit-Zeichen an eine solche Komponente übergeben, deklarieren Sie sie als `Byte()`, ein Array von `Byte` Elemente anstelle von `String` im neuen Visual Basic-Code.  
+- **Interop-Überlegungen.** Wenn die Komponenten, die nicht für .NET Framework geschrieben wurden verbunden ist z. B. Automatisierungs- oder COM-Objekte, denken Sie daran, dass Zeichen der Zeichenfolge eine andere Datenbreite (8 Bit) verfügen in anderen Umgebungen. Wenn Sie ein Zeichenfolgenargument von 8-Bit-Zeichen an eine solche Komponente übergeben, deklarieren Sie sie als `Byte()`, ein Array von `Byte` Elemente anstelle von `String` im neuen Visual Basic-Code.  
   
--   **Typzeichen.** Der Bezeichner-Typzeichen Anfügen `$` an einen beliebigen Bezeichner wird die `String` -Datentyp. `String` hat kein literal-Typzeichen. Der Compiler behandelt jedoch Literale, die in Anführungszeichen eingeschlossen (`" "`) als `String`.  
+- **Typzeichen.** Der Bezeichner-Typzeichen Anfügen `$` an einen beliebigen Bezeichner wird die `String` -Datentyp. `String` hat kein literal-Typzeichen. Der Compiler behandelt jedoch Literale, die in Anführungszeichen eingeschlossen (`" "`) als `String`.  
   
--   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.String?displayProperty=nameWithType> Klasse.  
+- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.String?displayProperty=nameWithType> Klasse.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
 ms.openlocfilehash: d8201eeceeb39ffea888849eba32e77ee7c25ece
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054912"
 ---
 # <a name="flowdocumentreader"></a>FlowDocumentReader
 Die <xref:System.Windows.Controls.FlowDocumentReader> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> Inhalt. Es unterstützt mehrere Anzeigemodi.  

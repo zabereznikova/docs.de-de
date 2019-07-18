@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9634370b0031ac2e19ab5b357d7e9da5a5dcea1c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073727"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639857"
 ---
 # <a name="using-the-assert-method"></a>Verwenden der Assert-Methode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- <xref:System.Security.CodeAccessPermission.Assert%2A> ist eine Methode, die für Klassen von Codezugriffsberechtigungen aufgerufen werden kann und klicken Sie auf, die <xref:System.Security.PermissionSet> Klasse. Sie können **Assert** zu Ihrem Code (und die nachgeschalteten Aufrufern) zum Ausführen von Aktionen, die Ihr Code berechtigt ist, aber seine Aufrufer möglicherweise nicht ausgeführt werden können. Das normale Verfahren, das von der Runtime während einer Sicherheitsüberprüfung ausgeführt wird, wird durch eine Sicherheitserklärung (Sicherheitsassertion) geändert. Wenn Sie eine Berechtigung mit "Assert" erteilen, wird das Sicherheitssystem angewiesen, die Aufrufer Ihres Codes nicht hinsichtlich der erklärten Berechtigung zu überprüfen.  
+ <xref:System.Security.CodeAccessPermission.Assert%2A> ist eine Methode, die für Klassen von Codezugriffsberechtigungen und für die <xref:System.Security.PermissionSet>-Klasse aufgerufen werden kann. Sie können **Assert** zu Ihrem Code (und die nachgeschalteten Aufrufern) zum Ausführen von Aktionen, die Ihr Code berechtigt ist, aber seine Aufrufer möglicherweise nicht ausgeführt werden können. Das normale Verfahren, das von der Runtime während einer Sicherheitsüberprüfung ausgeführt wird, wird durch eine Sicherheitserklärung (Sicherheitsassertion) geändert. Wenn Sie eine Berechtigung mit "Assert" erteilen, wird das Sicherheitssystem angewiesen, die Aufrufer Ihres Codes nicht hinsichtlich der erklärten Berechtigung zu überprüfen.  
   
 > [!CAUTION]
 >  Verwenden Sie Assertionen mit Bedacht, da sie zu Sicherheitslücken führen und das Verfahren beeinträchtigen können, mit dem die Common Language Runtime Sicherheitsbeschränkungen erzwingt.  
@@ -43,19 +43,19 @@ ms.locfileid: "59073727"
   
  Die folgende Abbildung zeigt, was geschieht, wenn Sie **Assert**. Angenommen, die folgenden Aussagen gelten für die Assemblys A, B, C, E und F sowie für die beiden Berechtigungen P1 und P1A:  
   
--   P1A entspricht dem Recht zum Lesen von TXT-Dateien auf Laufwerk C.  
+- P1A entspricht dem Recht zum Lesen von TXT-Dateien auf Laufwerk C.  
   
--   P1 entspricht dem Recht zum Lesen aller Dateien auf Laufwerk C.  
+- P1 entspricht dem Recht zum Lesen aller Dateien auf Laufwerk C.  
   
--   Sowohl P1A auch P1 sind **FileIOPermission** Typen und P1A ist eine Teilmenge von P1.  
+- Sowohl P1A auch P1 sind **FileIOPermission** Typen und P1A ist eine Teilmenge von P1.  
   
--   Den Assemblys E und F wurde die Berechtigung P1A erteilt.  
+- Den Assemblys E und F wurde die Berechtigung P1A erteilt.  
   
--   Der Assembly C wurde die Berechtigung P1 erteilt.  
+- Der Assembly C wurde die Berechtigung P1 erteilt.  
   
--   Den Assemblys A und B wurde weder die Berechtigung P1 noch die Berechtigung P1A erteilt.  
+- Den Assemblys A und B wurde weder die Berechtigung P1 noch die Berechtigung P1A erteilt.  
   
--   Die Methode A ist in Assembly A enthalten, die Methode B ist in Assembly B enthalten usw.  
+- Die Methode A ist in Assembly A enthalten, die Methode B ist in Assembly B enthalten usw.  
   
  ![Diagramm, das die Assemblys der Assert-Methode veranschaulicht.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

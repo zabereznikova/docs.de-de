@@ -2,12 +2,12 @@
 title: 'Benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140685"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348425"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder
 In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder mit der Windows Communication Foundation (WCF)-Plattform implementiert werden.  
@@ -29,33 +29,33 @@ In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder m
   
  Das Beispiel veranschaulicht das Erstellen und integrieren einen benutzerdefinierten Nachrichtenencoder in einer WCF-Anwendung. Die Bibliothek "GZipEncoder.dll" wird sowohl mit dem Client als auch mit dem Dienst bereitgestellt. Das Beispiel zeigt auch, wie sich das Komprimieren von Nachrichten auswirkt. Der Code in der "GZipEncoder.dll" zeigt Folgendes:  
   
--   Das Erstellen eines benutzerdefinierten Encoders und einer Encoder-Factory.  
+- Das Erstellen eines benutzerdefinierten Encoders und einer Encoder-Factory.  
   
--   Das Entwickeln eines Bindungselements für einen benutzerdefinierten Encoder.  
+- Das Entwickeln eines Bindungselements für einen benutzerdefinierten Encoder.  
   
--   Das Verwenden der benutzerdefinierten Bindungskonfiguration zum Integrieren von benutzerdefinierten Bindungselementen.  
+- Das Verwenden der benutzerdefinierten Bindungskonfiguration zum Integrieren von benutzerdefinierten Bindungselementen.  
   
--   Das Entwickeln eines benutzerdefinierten Konfigurationshandlers, um die Dateikonfiguration eines benutzerdefinierten Bindungselements zu ermöglichen.  
+- Das Entwickeln eines benutzerdefinierten Konfigurationshandlers, um die Dateikonfiguration eines benutzerdefinierten Bindungselements zu ermöglichen.  
   
  Wie schon erwähnt, gibt es mehrere Ebenen, die in einem benutzerdefinierten Encoder implementiert werden. Um die Beziehungen zwischen den einzelnen Ebenen besser veranschaulichen zu können, enthält die folgende Liste eine vereinfachte Abfolge der Ereignisse beim Starten des Diensts.  
   
-1.  Der Server startet.  
+1. Der Server startet.  
   
-2.  Die Konfigurationsinformationen werden gelesen.  
+2. Die Konfigurationsinformationen werden gelesen.  
   
-    1.  Die Dienstkonfiguration registriert den benutzerdefinierten Konfigurationshandler.  
+    1. Die Dienstkonfiguration registriert den benutzerdefinierten Konfigurationshandler.  
   
-    2.  Der Diensthost wird erstellt und geöffnet.  
+    2. Der Diensthost wird erstellt und geöffnet.  
   
-    3.  Das benutzerdefinierte Konfigurationselement erstellt das benutzerdefinierte Bindungselement und gibt es zurück.  
+    3. Das benutzerdefinierte Konfigurationselement erstellt das benutzerdefinierte Bindungselement und gibt es zurück.  
   
-    4.  Das benutzerdefinierte Bindungselement erstellt eine Nachrichtenencoder-Factory und gibt sie zurück.  
+    4. Das benutzerdefinierte Bindungselement erstellt eine Nachrichtenencoder-Factory und gibt sie zurück.  
   
-3.  Eine Nachricht wird empfangen.  
+3. Eine Nachricht wird empfangen.  
   
-4.  Die Nachrichtenencoder-Factory gibt einen Nachrichtenencoder zum Lesen der Nachricht und Schreiben der Antwort zurück.  
+4. Die Nachrichtenencoder-Factory gibt einen Nachrichtenencoder zum Lesen der Nachricht und Schreiben der Antwort zurück.  
   
-5.  Die Encoderebene wird in Form einer Klassenfactory implementiert. Nur die Encoderklassenfactory muss für den benutzerdefinierten Encoder öffentlich verfügbar gemacht werden. Das Factoryobjekt wird vom Bindungselement zurückgegeben, wenn das <xref:System.ServiceModel.ServiceHost>-Objekt oder das <xref:System.ServiceModel.ChannelFactory%601>-Objekt erstellt wird. Nachrichtenencoder können im Puffermodus oder im Streamingmodus arbeiten. In diesem Beispiel werden sowohl der Puffermodus als auch der Streamingmodus veranschaulicht.  
+5. Die Encoderebene wird in Form einer Klassenfactory implementiert. Nur die Encoderklassenfactory muss für den benutzerdefinierten Encoder öffentlich verfügbar gemacht werden. Das Factoryobjekt wird vom Bindungselement zurückgegeben, wenn das <xref:System.ServiceModel.ServiceHost>-Objekt oder das <xref:System.ServiceModel.ChannelFactory%601>-Objekt erstellt wird. Nachrichtenencoder können im Puffermodus oder im Streamingmodus arbeiten. In diesem Beispiel werden sowohl der Puffermodus als auch der Streamingmodus veranschaulicht.  
   
  Für jeden Modus gibt es eine zugehörige `ReadMessage`- und `WriteMessage`-Methode in der abstrakten `MessageEncoder`-Klasse. In diesen Methoden findet der größte Teil der Codierungsarbeit statt. Das Beispiel schließt die vorhandenen Text- und Binärnachrichtenencoder ein. Auf diese Weise kann es das Lesen und Schreiben der Übertragungsdarstellung von Nachrichten an den inneren Encoder delegieren, und die Ergebnisse können vom Komprimierungsencoder komprimiert oder dekomprimiert werden. Da es keine Pipeline zur nachrichtencodierung ist, ist dies das einzige Modell zum Verwenden mehrerer Encoder in WCF. Nachdem die Nachricht dekomprimiert wurde, wird die resultierende Nachricht an den Stapel weitergegeben, um vom Kanalstapel verarbeitet zu werden. Während der Komprimierung wird die resultierende komprimierte Nachricht direkt in den bereitgestellten Stream geschrieben.  
   
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  Obwohl dies für die meisten Benutzerszenarios ausreichen sollte, ist die Unterstützung einer Dateikonfiguration wichtig, wenn der Dienst im Web gehostet werden soll. Zur Unterstützung des Webhostszenarios müssen Sie einen benutzerdefinierten Konfigurationshandler erstellen, damit ein benutzerdefiniertes Bindungselement in einer Datei konfiguriert werden kann.  
   
- Einen Konfigurationshandler für das Bindungselement können Sie auf dem von [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] bereitgestellten Konfigurationssystem erstellen. Der Konfigurationshandler für das Bindungselement muss von der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse abgeleitet sein. Mithilfe der `BindingElementType`-Eigenschaft wird dem Konfigurationssystem der Typ des Bindungselements, das für diesen Abschnitt erstellt werden soll, mitgeteilt. Sämtliche Aspekte des `BindingElement`, die festgelegt werden können, sollten in der abgeleiteten <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse als Eigenschaften zugänglich gemacht werden. Das <xref:System.Configuration.ConfigurationPropertyAttribute> dient als Hilfe beim Zuordnen der Konfigurationselementattribute zu den Eigenschaften und &amp;#150; wenn Attribute fehlen &amp;#150; beim Einstellen von Standardwerten. Nachdem die Werte aus der Konfiguration geladen und auf die Eigenschaften angewendet wurden, wird die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>-Methode aufgerufen, die die Eigenschaften in eine konkrete Instanz eines Bindungselements konvertiert. Mit der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A>-Methode werden die Eigenschaften aus der abgeleiteten <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse in die Werte konvertiert, die im neu erstellten Bindungselement festgelegt werden sollen.  
+ Sie können einen Konfigurationshandler für das Bindungselement, das auf das Konfigurationssystem erstellen. Der Konfigurationshandler für das Bindungselement muss von der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse abgeleitet sein. Die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> informiert das Konfigurationssystem, der den Typ des Bindungselements für diesen Abschnitt zu erstellen. Sämtliche Aspekte des `BindingElement`, die festgelegt werden können, sollten in der abgeleiteten <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse als Eigenschaften zugänglich gemacht werden. Die <xref:System.Configuration.ConfigurationPropertyAttribute> hilft bei der Zuordnung der konfigurationselementattribute zu den Eigenschaften und Festlegen von Standardwerten, wenn Attribute fehlen. Nachdem die Werte aus der Konfiguration geladen und auf die Eigenschaften angewendet wurden, wird die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType>-Methode aufgerufen, die die Eigenschaften in eine konkrete Instanz eines Bindungselements konvertiert. Die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> Methode wird verwendet, um die Eigenschaften konvertiert die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> abgeleitete Klasse in die Werte für den neu erstellten Bindungselement festgelegt werden soll.  
   
  Das folgenden Codebeispiel zeigt die Implementierung des `GZipMessageEncodingElement`.  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Installieren Sie [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 mithilfe des folgenden Befehls:  
+1. Installieren Sie ASP.NET 4.0, die mit dem folgenden Befehl ein:  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

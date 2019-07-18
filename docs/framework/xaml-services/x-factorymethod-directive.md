@@ -7,11 +7,11 @@ helpviewer_keywords:
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
 ms.openlocfilehash: 8fff4d62e07bdfd4ecc27d2692c391251afdd6d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971833"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod-Anweisung
 Gibt eine Methode als einen Konstruktor, den ein XAML-Prozessor verwenden soll, um ein Objekt zu initialisieren, nach dessen Unterstützungstyp auflösen.  
@@ -58,4 +58,4 @@ Gibt eine Methode als einen Konstruktor, den ein XAML-Prozessor verwenden soll, 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [x:Arguments-Anweisung](x-arguments-directive.md)
+- [x:Arguments-Direktive](x-arguments-directive.md)

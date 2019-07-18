@@ -4,12 +4,12 @@ description: In diesem Tutorial wird das Organisieren und Testen von .NET Core-P
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ef7263985288445fca273f37389876aeac2f136b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "57845907"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051954"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
 
@@ -108,14 +108,14 @@ Navigieren Sie zurück zum Ordner *src*, und erstellen Sie einen Ordner *test*, 
 Das Testprojekt kann derzeit nicht die Typen in `NewTypes` testen und benötigt einen Projektverweis auf das `NewTypes`-Projekt. Um einen Projektverweis hinzuzufügen, verwenden Sie den [`dotnet add reference`](../tools/dotnet-add-reference.md)-Befehl:
 
 ```
-dotnet add reference ../../NewTypes/NewTypes.csproj
+dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
 Alternativ haben Sie auch die Möglichkeit, den Projektverweis manuell hinzuzufügen, indem Sie der *NewTypesTests.csproj*-Datei einen `<ItemGroup>`-Knoten hinzufügen:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 

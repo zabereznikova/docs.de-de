@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verbessern der Bildlaufleistung eines Listenfelds'
+title: 'Vorgehensweise: Verbessern der Bildlaufleistung eines ListBox-Objekts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - ListBox control [WPF], improving scrolling performance
 ms.assetid: 1e2bf8f3-c8ce-47f7-a400-a7fe11d1a848
 ms.openlocfilehash: a9d1ca1d8ac2ef830984408f3052eb0ed0987c5d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770863"
 ---
-# <a name="how-to-improve-the-scrolling-performance-of-a-listbox"></a>Vorgehensweise: Verbessern der Bildlaufleistung eines Listenfelds
+# <a name="how-to-improve-the-scrolling-performance-of-a-listbox"></a>Vorgehensweise: Verbessern der Bildlaufleistung eines ListBox-Objekts
 Wenn eine <xref:System.Windows.Controls.ListBox> viele Elemente enthält, Reaktion der Benutzeroberfläche kann langsam sein, wenn ein Benutzer einen Bildlauf der <xref:System.Windows.Controls.ListBox> durch das Mausrad verwenden, oder ziehen das Thumb-Steuerelement eine Bildlaufleiste. Sie können die Leistung verbessern die <xref:System.Windows.Controls.ListBox> Wenn der Benutzer scrollt durch Festlegen der `VirtualizingStackPanel.VirtualizationMode` angefügte Eigenschaft zu <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Beispiel  

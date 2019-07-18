@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-ms.openlocfilehash: 26739ce4e6e188b71f3af9435d53105807aede92
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d716d7dcaaf338489c952615622f70f9d384ccd7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047083"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604137"
 ---
 # <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>Zeile \<Nummer > kann nicht gelesen werden, weil es sich um die maximale Zeilengröße überschreitet.
 Die Zeile kann nicht gelesen werden, weil sie die maximale Zeilengröße überschreitet. In der Regel bedeutet dies, dass in der Datei ein öffnendes Anführungszeichen, aber kein schließendes Anführungszeichen vorhanden ist.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Fügen Sie in der Datei ein schließendes Anführungszeichen ein.  
+- Fügen Sie in der Datei ein schließendes Anführungszeichen ein.  
   
 ## <a name="see-also"></a>Siehe auch
 

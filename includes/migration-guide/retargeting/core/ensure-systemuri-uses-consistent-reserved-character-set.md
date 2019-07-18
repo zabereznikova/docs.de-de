@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4f92d773197c914a74dd7e9c18f5aab5309358ae
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 2ec5224b1ab16c05f6f942f6084f1ab105b71b0f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760830"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774022"
 ---
 ### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>Sicherstellen, dass System.Uri einen konsistenten reservierten Zeichensatz verwendet
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760830"
 |Version|4.7.2|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
-

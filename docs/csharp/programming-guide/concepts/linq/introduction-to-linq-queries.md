@@ -7,24 +7,24 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 1f15867c76a3498ac49df0bff6a7953f668b1a6f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4276a1a7308e07b2dfb9cacb5670e97f6e2ca732
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462889"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879202"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Einführung in LINQ-Abfragen (C#)
-Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden normalerweise in einer spezialisierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für die verschiedenen Datenquellen entwickelt, beispielsweise SQL für relationale Datenbanken und XQuery für XML. Aus diesem Grund mussten Entwickler für jeden Typ von Datenquelle oder Datenformat, den sie unterstützen müssen, eine neue Abfragesprache erlernen. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungsmuster für die Abfrage und Transformation von Daten in XML-Dokumenten, SQL-Datenbanken, [!INCLUDE[vstecado](~/includes/vstecado-md.md)]-Datasets, .NET-Auflistungen sowie allen anderen Quellen und Formaten, für die ein [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter verfügbar ist.  
+Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden normalerweise in einer spezialisierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für die verschiedenen Datenquellen entwickelt, beispielsweise SQL für relationale Datenbanken und XQuery für XML. Aus diesem Grund mussten Entwickler für jeden Typ von Datenquelle oder Datenformat, den sie unterstützen müssen, eine neue Abfragesprache erlernen. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungsmuster für die Abfrage und Transformation von Daten in XML-Dokumenten, SQL-Datenbanken, ADO.NET-Datasets, .NET-Auflistungen sowie allen anderen Quellen und Formaten, für die ein [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter verfügbar ist.  
   
 ## <a name="three-parts-of-a-query-operation"></a>Drei Teile einer Abfrageoperation  
  Alle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageoperationen bestehen aus drei unterschiedlichen Aktionen:  
   
-1.  Abrufen der Datenquelle  
+1. Abrufen der Datenquelle  
   
-2.  Erstellen der Abfrage  
+2. Erstellen der Abfrage  
   
-3.  Ausführen der Abfrage  
+3. Ausführen der Abfrage  
   
  Im folgenden Beispiel wird gezeigt, wie die drei Teile einer Abfrageoperation in Quellcode ausgedrückt werden. Das Beispiel verwendet aus praktischen Gründen ein Array von Ganzzahlen als Datenquelle. Dieselben Konzepte gelten jedoch auch für andere Datenquellen. Auf dieses Beispiel wird im Rest dieses Themas Bezug genommen.  
   

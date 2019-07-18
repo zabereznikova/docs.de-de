@@ -12,12 +12,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], navigating to URLs
 - examples [Windows Forms], WebBrowser control
 ms.assetid: b3ec38cb-f509-4d0b-bd79-9f3611259c62
-ms.openlocfilehash: a174b6ae60f87e91e6f97e8fa7f8ad3892ef017a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bee16a388d823f74bc9c88bc34b510d2a5907393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132937"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649220"
 ---
 # <a name="how-to-navigate-to-a-url-with-the-webbrowser-control"></a>Vorgehensweise: Navigieren zu einem URL mit dem WebBrowser-Steuerelement
 Im folgenden Codebeispiel wird veranschaulicht, wie zum Navigieren der <xref:System.Windows.Forms.WebBrowser> Steuerelement an eine bestimmte URL.  
@@ -37,9 +37,9 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
   
--   Ein <xref:System.Windows.Forms.WebBrowser>-Steuerelement namens `webBrowser1`.  
+- Ein <xref:System.Windows.Forms.WebBrowser>-Steuerelement namens `webBrowser1`.  
   
--   Verweise auf die Assemblys `System` und `System.Windows.Forms`.  
+- Verweise auf die Assemblys `System` und `System.Windows.Forms`.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -48,4 +48,4 @@ this.webBrowser1.Navigate("http://www.microsoft.com");
 - <xref:System.Windows.Forms.WebBrowser.Navigating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.Navigated?displayProperty=nameWithType>
 - [WebBrowser-Steuerelement](webbrowser-control-windows-forms.md)
-- [Vorgehensweise: Drucken mit einem WebBrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)
+- [Vorgehensweise: Drucken Sie mit einem WebBrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)

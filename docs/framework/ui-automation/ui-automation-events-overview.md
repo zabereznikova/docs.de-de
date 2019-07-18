@@ -9,24 +9,24 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-ms.openlocfilehash: ae780da7d6c6d45cb791333e5f0edcf0690f297b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bf7cdc5074cfe6548a13610e6f0af090d2359177
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183741"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607145"
 ---
 # <a name="ui-automation-events-overview"></a>Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse
 > [!NOTE]
 >  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ereignisbenachrichtigung ist ein wesentliches Feature für hilfstechnologien wie Sprachausgabe und Bildschirmlupe. Diese Benutzeroberflächenautomatisierungs-Clients überwachen Ereignisse, die von den Benutzeroberflächenautomatisierungs-Anbietern ausgelöst werden, wenn etwas auf der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] passiert, und verwenden diese Informationen dann, um Endbenutzer zu benachrichtigen.  
+ Die[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Ereignisbenachrichtigung ist ein wesentliches Feature für Hilfstechnologien wie Sprachausgabe und Bildschirmlupe. Diese Benutzeroberflächenautomatisierungs-Clients überwachen Ereignisse, die von den Benutzeroberflächenautomatisierungs-Anbietern ausgelöst werden, wenn etwas auf der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] passiert, und verwenden diese Informationen dann, um Endbenutzer zu benachrichtigen.  
   
  Die Effizienz wird dadurch erhöht, dass Anbieteranwendungen Ereignisse selektiv (abhängig davon, ob Clients für diese Ereignisse abonniert sind) oder gar nicht auslösen dürfen (wenn kein Client auf Ereignisse wartet).  
   
 <a name="Types_of_Events"></a>   
 ## <a name="types-of-events"></a>Ereignistypen  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse werden in den folgenden Kategorien.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse werden in die folgenden Kategorien eingeteilt:  
   
 |event|Beschreibung|  
 |-----------|-----------------|  
@@ -39,17 +39,17 @@ ms.locfileid: "59183741"
   
  Die folgenden Ereignisse können auch dann ausgelöst werden, wenn sich der Zustand der Benutzeroberfläche nicht geändert hat.  
   
--   `AutomationPropertyChangedEvent` (abhängig von der geänderten Eigenschaft)  
+- `AutomationPropertyChangedEvent` (abhängig von der Eigenschaft, die sich geändert hat)  
   
--   `ElementSelectedEvent`  
+- `ElementSelectedEvent`  
   
--   `InvalidatedEvent`  
+- `InvalidatedEvent`  
   
--   `TextChangedEvent`  
+- `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>Bezeichner für Benutzeroberlächen-Automatisierungsereignisse  
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Ereignisse werden durch identifiziert <xref:System.Windows.Automation.AutomationEvent> Objekte. Die <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> -Eigenschaft enthält einen Wert, der die Ereignisart eindeutig bezeichnet.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Ereignisse werden mit <xref:System.Windows.Automation.AutomationEvent> -Objekten gekennzeichnet. Die <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> -Eigenschaft enthält einen Wert, der die Ereignisart eindeutig bezeichnet.  
   
  Die möglichen Werte für <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> sind in der folgenden Tabelle zusammen mit dem für die Ereignisargumente verwendeten Typ aufgeführt. Beachten Sie, dass es sich bei den von Clients und Anbietern verwendeten Bezeichnern um Felder mit identischen Namen aus verschiedenen Klassen handelt.  
   
@@ -84,5 +84,5 @@ ms.locfileid: "59183741"
 ## <a name="see-also"></a>Siehe auch
 
 - [Benutzeroberflächenautomatisierungs-Ereignisse für Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
+- [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)
 - [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)

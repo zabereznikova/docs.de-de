@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d75911c2087370cb9313c6694ce2630b80e635a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c261a025548b2d22f6df3051dbcdb637723d4324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686035"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599471"
 ---
 # <a name="mitigation-wpf-layout"></a>Entschärfung: WPF-Layout
 Das Layout der WPF-Steuerelemente kann sich leicht ändern.  
@@ -17,11 +17,11 @@ Das Layout der WPF-Steuerelemente kann sich leicht ändern.
 ## <a name="impact"></a>Auswirkungen  
  Auswirkungen durch diese Änderung:  
   
--   Die Breite oder Höhe der Elemente vergrößert oder verkleinert sich allenfalls um einen Pixel.  
+- Die Breite oder Höhe der Elemente vergrößert oder verkleinert sich allenfalls um einen Pixel.  
   
--   Die Platzierung eines Objekts kann sich allenfalls um einen Pixel verschieben.  
+- Die Platzierung eines Objekts kann sich allenfalls um einen Pixel verschieben.  
   
--   Zentrierte Elemente können sich vertikal oder horizontal um allenfalls ein Pixel von der Mitte verschieben.  
+- Zentrierte Elemente können sich vertikal oder horizontal um allenfalls ein Pixel von der Mitte verschieben.  
   
  Standardmäßig wird dieses neue Layout nur für Apps aktiviert, die auf .NET Framework 4.6 abzielen.  
   
@@ -39,4 +39,5 @@ Das Layout der WPF-Steuerelemente kann sich leicht ändern.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

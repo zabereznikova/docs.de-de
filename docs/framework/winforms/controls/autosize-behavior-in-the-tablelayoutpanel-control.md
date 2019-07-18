@@ -11,20 +11,20 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1f349981125097af4a3ca8a1950b820a0334bd11
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164969"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621482"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>Das AutoSize-Verhalten im TableLayoutPanel-Steuerelement
 ## <a name="distinct-autosize-behaviors"></a>Verschiedene AutoSize-Verhalten  
  Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement das automatische Größenanpassungsverhalten unterstützt, es gibt folgende Möglichkeiten:  
   
--   Durch die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft  
+- Durch die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft  
   
--   Über die <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaft für die <xref:System.Windows.Forms.TableLayoutPanel> Zeilen- und Spaltenstile des Steuerelements.  
+- Über die <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> Eigenschaft für die <xref:System.Windows.Forms.TableLayoutPanel> Zeilen- und Spaltenstile des Steuerelements.  
   
 ### <a name="the-autosize-property-with-row-and-column-styles"></a>Der AutoSize-Eigenschaft mit Zeilen- und Spaltenstile  
  Die folgende Tabelle beschreibt die Interaktion zwischen der <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft und die <xref:System.Windows.Forms.TableLayoutPanel> Zeilen- und Spaltenstile des Steuerelements.  

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04b0d9989d66888c33de0359e4c93529fcfbf8d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d69b12404459de5dbc1c7748deee6ca09c1e5182
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095359"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772410"
 ---
 # <a name="einitializenewdomainflags-enumeration"></a>EInitializeNewDomainFlags-Enumeration
 Kann der Host die Laufzeitumgebung mit Informationen zur Initialisierung einer Anwendungsdomäne bereitstellen.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     eInitializeNewDomainFlags_None              = 0x0000,  
     eInitializeNewDomainFlags_NoSecurityChanges = 0x0002  

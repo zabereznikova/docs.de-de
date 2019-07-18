@@ -3,11 +3,11 @@ title: Dienst
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
 ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991444"
 ---
 # <a name="service"></a>Dienst
 Dienst  
@@ -46,7 +46,7 @@ class Service
  Die vom Dienst verwendeten Basisadressen.  
   
 ### <a name="behaviors"></a>Verhalten  
- Datentyp: Behavior-Array  
+ Datentyp: Behavior-array  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -87,7 +87,7 @@ class Service
   
  Die Dienstmetadateneinstellungen.  
   
-### <a name="name"></a>name  
+### <a name="name"></a>Name  
  Datentyp: string (Zeichenfolge)  
   
  Zugriffstyp: Schreibgeschützt  
@@ -109,7 +109,7 @@ class Service
  Die Zeit, zu der der Dienst geöffnet wurde.  
   
 ### <a name="outgoingchannels"></a>OutgoingChannels  
- Data type: Channel array (Kanal-Array)  
+ Datentyp: Channel-array  
   
  Zugriffstyp: Schreibgeschützt  
   

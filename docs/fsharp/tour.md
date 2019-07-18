@@ -2,12 +2,12 @@
 title: Einführung in F#
 description: Untersuchen Sie in dieser Tour mithilfe von Codebeispielen einige der wichtigsten Funktionen der Programmiersprache F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 64394342777003b33dd77028739fb7209b9f3c86
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125576"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301252"
 ---
 # <a name="tour-of-f"></a>Einführung in F\#
 
@@ -17,7 +17,7 @@ Es gibt zwei primäre Konzepte in F#: Funktionen und Typen.   In dieser Tour wer
 
 ## <a name="executing-the-code-online"></a>Ausführen des Codes online
 
-Wenn Ihnen keine F# auf Ihrem Computer installiert ist, können Sie ausführen, alle Beispiele online mit den [Fable REPL](https://fable.io/repl/). Fable ist ein Dialekt von F# , die direkt in Ihrem Browser ausgeführt wird. Sehen Sie sich zum Anzeigen der Beispiele, in denen führen Sie in der REPL **Beispiele > erfahren Sie mehr > Überblick F#**  in der linken Menüleiste, der die Fable eine Repl
+Wenn Ihnen keine F# auf Ihrem Computer installiert ist, können Sie ausführen alle Beispiele in Ihrem Browser mit [versuchen F# auf WebAssembly](https://tryfsharp.fsbolero.io/). Fable ist ein Dialekt von F# , die direkt in Ihrem Browser ausgeführt wird. Sehen Sie sich zum Anzeigen der Beispiele, in denen führen Sie in der REPL **Beispiele > erfahren Sie mehr > Überblick F#**  in der linken Menüleiste, der die Fable eine Repl
 
 ## <a name="functions-and-modules"></a>Funktionen und Module
 
@@ -96,7 +96,7 @@ F#verfügt außerdem über vollständige Unterstützung für Ende aufrufen, Opti
 
 Datensatz- und Union-Typen werden zwei grundlegende Datentypen in verwendet F# code, und sind im Allgemeinen die beste Möglichkeit zum Darstellen der Daten in eine F# Programm.  Auch wenn sie ähneln Klassen in anderen Sprachen dadurch, ist ihre primäre Unterschied, dass sie die strukturelle Gleichheitssemantik aufweisen.  Dies bedeutet, dass sie "nativ" vergleichbar und Gleichheit einfach ist: nur überprüfen, ob eine gleich dem anderem ist.
 
-[Datensätze](language-reference/records.md) sind ein Aggregat benannter Werte, mit optionalen Elementen (z. B. Methoden).  Wenn Sie mit C# oder Java vertraut sind, sollten klicken Sie dann diese Poco-Klassen oder POJOs - ähnelt nur mit strukturelle Gleichheit und weniger Aufwand können.
+[Datensätze](language-reference/records.md) sind ein Aggregat benannter Werte, mit optionalen Elementen (z. B. Methoden).  Wenn Sie mit c# oder Java vertraut sind, sollten klicken Sie dann diese Poco-Klassen oder POJOs - ähnelt nur mit strukturelle Gleichheit und weniger Aufwand können.
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
@@ -187,7 +187,7 @@ Datensätze sind eine "Step-up" von Tupeln, dass mit dem Namen, Beschriftungen u
 
 Unterscheidungs-Unions sind vielseitig, aber die Kern-Benefit ist in der Lage, nutzen diese in Verbindung mit dem Mustervergleich berücksichtigen, die für alle möglichen "Formen", die eine Daten enthalten können.  
 
-Klassen eignen sich hervorragend für eine Vielzahl von Gründen, z. B. Wenn Sie Informationen darstellen und mit denen Sie diese Informationen an Funktionalität auch verknüpfen müssen.  Als Faustregel gilt Wenn Sie Funktionen verfügen, die im Prinzip um einige Daten gebunden ist ist mithilfe von Klassen und die Prinzipien der objektorientierten Programmierung ein großer Vorteil.  Klassen sind auch der bevorzugte Datentyp bei der Interaktion mit C# und Visual Basic, als diese Sprachen Klassen für nahezu alle verwenden.
+Klassen eignen sich hervorragend für eine Vielzahl von Gründen, z. B. Wenn Sie Informationen darstellen und mit denen Sie diese Informationen an Funktionalität auch verknüpfen müssen.  Als Faustregel gilt Wenn Sie Funktionen verfügen, die im Prinzip um einige Daten gebunden ist ist mithilfe von Klassen und die Prinzipien der objektorientierten Programmierung ein großer Vorteil.  Klassen sind auch der bevorzugte Datentyp bei der Interaktion mit c# und Visual Basic, als diese Sprachen Klassen für nahezu alle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

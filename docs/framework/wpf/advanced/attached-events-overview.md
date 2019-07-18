@@ -12,15 +12,15 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2b3f659a5916aa63d510959583e8ae038085460c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140854"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655497"
 ---
 # <a name="attached-events-overview"></a>Übersicht über angefügte Ereignisse
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definiert eine Sprachkomponente und den Typ des Ereignisses bezeichnet ein *angefügtes Ereignis*. Mit dem Konzept eines angefügten Ereignisses können Sie einen Handler für ein bestimmtes Ereignis zu einem beliebigen Element und nicht zu einem Element, das tatsächlich das Ereignis definiert oder erbt, hinzufügen. In diesem Fall definiert oder „besitzt“ weder das Objekt, das potenziell das Ereignis auslöst, noch die Instanz der Richtungsbehandlung das Ereignis.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definiert eine Sprachkomponente und einen Ereignistyp mit der Bezeichnung *angefügtes Ereignis*. Mit dem Konzept eines angefügten Ereignisses können Sie einen Handler für ein bestimmtes Ereignis zu einem beliebigen Element und nicht zu einem Element, das tatsächlich das Ereignis definiert oder erbt, hinzufügen. In diesem Fall definiert oder „besitzt“ weder das Objekt, das potenziell das Ereignis auslöst, noch die Instanz der Richtungsbehandlung das Ereignis.  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
@@ -64,9 +64,9 @@ ms.locfileid: "59140854"
   
  Das Muster ist wie folgt:  
   
--   Eine Methode **hinzufügen*EventName*Handler** mit zwei Parametern. Der erste Parameter muss das Ereignis identifizieren, und das identifizierte Ereignis muss Namen entsprechen den ***EventName*** im Methodennamen. Der zweite Parameter ist der hinzuzufügende Handler. Die Methode muss `public` und `static`, ohne Rückgabewert.  
+- Eine Methode **hinzufügen*EventName*Handler** mit zwei Parametern. Der erste Parameter ist die Instanz, die der Ereignishandler hinzugefügt wird. Der zweite Parameter ist der hinzuzufügende Ereignishandler. Die Methode muss `public` und `static`, ohne Rückgabewert.  
   
--   Eine Methode **entfernen*EventName*Handler** mit zwei Parametern. Der erste Parameter muss das Ereignis identifizieren, und das identifizierte Ereignis muss Namen entsprechen den ***EventName*** im Methodennamen. Der zweite Parameter ist der zu entfernende Handler. Die Methode muss `public` und `static`, ohne Rückgabewert.  
+- Eine Methode **entfernen*EventName*Handler** mit zwei Parametern. Der erste Parameter ist die Instanz, von der der Ereignishandler entfernt wird. Der zweite Parameter ist der zu entfernende Ereignishandler. Die Methode muss `public` und `static`, ohne Rückgabewert.  
   
  Die **hinzufügen*EventName*Handler** Accessormethode vereinfacht die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Verarbeitung, wenn von angefügten Ereignishandlern Attribute für ein Element deklariert werden. Die **hinzufügen*EventName*Handler** und **entfernen*EventName*Handler** Methoden können auch den Codezugriff auf den Speicher des ereignishandlers für das angefügte Ereignis.  
   

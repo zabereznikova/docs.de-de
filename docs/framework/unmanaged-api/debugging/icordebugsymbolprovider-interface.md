@@ -5,11 +5,11 @@ ms.assetid: 85b24196-b6c6-4bda-9de3-47180bd6ff96
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc33018f68f9634a29e2f5c52123a0215b446de7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953237"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>ICorDebugSymbolProvider-Schnittstelle
 Stellt Methoden bereit, die zum Abrufen von Debugsymbolinformationen verwendet werden können.  
@@ -46,5 +46,5 @@ Stellt Methoden bereit, die zum Abrufen von Debugsymbolinformationen verwendet w
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

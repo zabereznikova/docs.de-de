@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02c8ab3aa7fcc603b76fb4b1d09e7e73d04494be
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6fba929e5a1a1e4c2b69e15bf6c855211e25a67a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369192"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636623"
 ---
 # <a name="put-function"></a>Put-Funktion
 
@@ -54,7 +54,7 @@ HRESULT Put (
 [in] Der Name der Eigenschaft. Dieser Parameter darf nicht sein `null`.
 
 `lFlags`\
-[in]: Reserviert Dieser Parameter muss 0 sein.
+[in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pVal`\
 [in] Ein Zeiger auf ein gültiges `VARIANT` , wird der neue Eigenschaftswert. Wenn `pVal` ist `null` oder verweist auf eine `VARIANT` des Typs `VT_NULL`, die Eigenschaft wird festgelegt, um `null`.

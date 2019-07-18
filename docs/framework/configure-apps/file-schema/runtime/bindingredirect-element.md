@@ -1,5 +1,5 @@
 ---
-title: <bindingRedirect> Element
+title: <bindingRedirect>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 ms.openlocfilehash: dda99bb4b96efbdd274e24e7cd548e4ed4df8b66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704894"
 ---
 # <a name="bindingredirect-element"></a>\<BindingRedirect >-Element
 Leitet eine Assemblyversion in eine andere um.  

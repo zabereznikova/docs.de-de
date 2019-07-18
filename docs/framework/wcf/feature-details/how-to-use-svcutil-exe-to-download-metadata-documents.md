@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Metadatendokumenten'
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 01a27c21948e3030059ddd1416d8c7727ac6435c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc9fc4acaeafe4583b1e85a24cab97af1689c638
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972782"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Metadatendokumenten
 Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herunterzuladen und die Metadaten in lokalen Dateien zu speichern. Bei HTTP und HTTPS-URL-Schemas versucht Svcutil.exe zum Abrufen von Metadaten mit WS-MetadataExchange und [XML-Webdienstsuche](https://go.microsoft.com/fwlink/?LinkId=94950). Bei allen anderen URL-Schemas verwendet Svcutil.exe nur WS-MetadataExchange.  
@@ -23,11 +23,11 @@ Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herun
   
 ## <a name="to-download-metadata-using-svcutilexe"></a>So laden Sie Metadaten mit Svcutil.exe herunter  
   
-1.  Suchen Sie das Tool Svcutil.exe am folgenden Speicherort:  
+1. Suchen Sie das Tool Svcutil.exe am folgenden Speicherort:  
   
      C:\Programme\Microsoft SDKs\Windows\v1.0.\bin  
   
-2.  Starten Sie das Tool an der Eingabeaufforderung mit dem folgenden Format.  
+2. Starten Sie das Tool an der Eingabeaufforderung mit dem folgenden Format.  
   
     ```  
     svcutil.exe /t:metadata  <url>* | <epr>  
@@ -35,7 +35,7 @@ Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herun
   
      Um Metadaten herunterzuladen, müssen Sie die `/t:metadata`-Option angeben. Andernfalls werden Clientcode und -konfiguration generiert.  
   
-3.  Die <`url`>-Argument gibt die URL zu einem Dienstendpunkt, der Metadaten bereitstellt, oder zu einem online gehosteten Metadatendokument. Die <`epr`>-Argument gibt den Pfad einer XML-Datei, die eine WS-Adressierung enthält `EndpointAddress` für einen Dienstendpunkt, der WS-MetadataExchange unterstützt.  
+3. Die <`url`>-Argument gibt die URL zu einem Dienstendpunkt, der Metadaten bereitstellt, oder zu einem online gehosteten Metadatendokument. Die <`epr`>-Argument gibt den Pfad einer XML-Datei, die eine WS-Adressierung enthält `EndpointAddress` für einen Dienstendpunkt, der WS-MetadataExchange unterstützt.  
   
  Weitere Optionen zur Verwendung dieses Tools zum Herunterladen von Metadaten finden Sie unter [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   

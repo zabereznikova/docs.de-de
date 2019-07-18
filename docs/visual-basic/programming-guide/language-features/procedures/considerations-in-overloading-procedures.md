@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b5a26a8b68a2f786213aa49f30247d692b3de2f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815595"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649658"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Überlegungen zur Prozedurüberladung (Visual Basic)
 Wenn Sie eine Prozedur zu überladen, müssen Sie einen anderen verwenden *Signatur* für jede überladene Version. Dies bedeutet normalerweise, dass jede Version eine anderen Parameterliste angeben muss. Weitere Informationen finden Sie unter "Andere Signatur" in [Prozedurüberladung](./procedure-overloading.md).  
@@ -50,14 +50,14 @@ Wenn Sie eine Prozedur zu überladen, müssen Sie einen anderen verwenden *Signa
 #### <a name="when-to-use-overloaded-versions"></a>Überladene Versionen verwenden.  
  Sie können in Betracht ziehen, eine Reihe von überladenen Versionen definiert, in den folgenden Fällen:  
   
--   Die Logik im Code Prozedur unterscheidet sich erheblich abhängig davon, ob der aufrufende Code ein optionales Argument bereitstellt.  
+- Die Logik im Code Prozedur unterscheidet sich erheblich abhängig davon, ob der aufrufende Code ein optionales Argument bereitstellt.  
   
--   Code der Prozedur kann nicht zuverlässig zu testen, ob der aufrufende Code ein optionales Argument angegeben hat. Dies ist der Fall, z. B. liegt keine möglichen Kandidaten für einen Standardwert an, die der aufrufende Code konnte nicht zu erwarten.  
+- Code der Prozedur kann nicht zuverlässig zu testen, ob der aufrufende Code ein optionales Argument angegeben hat. Dies ist der Fall, z. B. liegt keine möglichen Kandidaten für einen Standardwert an, die der aufrufende Code konnte nicht zu erwarten.  
   
 #### <a name="when-to-use-optional-parameters"></a>Optionale Parameter verwenden.  
  Möglicherweise bevorzugen Sie einen oder mehrere optionale Parameter in den folgenden Fällen:  
   
--   Die einzige erforderliche Aktion, wenn der aufrufende Code ein optionale Argument nicht angegeben wird, ist den Parameter auf einen Standardwert festlegen. In diesem Fall der Code der Prozedur kann weniger kompliziert sein, wenn Sie eine einzelne Version mit einem oder mehreren definieren `Optional` Parameter.  
+- Die einzige erforderliche Aktion, wenn der aufrufende Code ein optionale Argument nicht angegeben wird, ist den Parameter auf einen Standardwert festlegen. In diesem Fall der Code der Prozedur kann weniger kompliziert sein, wenn Sie eine einzelne Version mit einem oder mehreren definieren `Optional` Parameter.  
   
  Weitere Informationen finden Sie unter [optionale Parameter](./optional-parameters.md).  
   
@@ -67,18 +67,18 @@ Wenn Sie eine Prozedur zu überladen, müssen Sie einen anderen verwenden *Signa
 #### <a name="when-to-use-overloaded-versions"></a>Überladene Versionen verwenden.  
  Sie können in Betracht ziehen, eine Reihe von überladenen Versionen definiert, in den folgenden Fällen:  
   
--   Sie wissen, dass der aufrufende Code nie mehr als eine kleine Anzahl von Werten für das Parameterarray erfolgreich war.  
+- Sie wissen, dass der aufrufende Code nie mehr als eine kleine Anzahl von Werten für das Parameterarray erfolgreich war.  
   
--   Die Logik im Code Prozedur ist erheblich variieren, je nachdem wie viele Werte, die der aufrufende Code übergeben.  
+- Die Logik im Code Prozedur ist erheblich variieren, je nachdem wie viele Werte, die der aufrufende Code übergeben.  
   
--   Der aufrufende Code kann es sich um die Werte mit unterschiedlichen Datentypen übergeben.  
+- Der aufrufende Code kann es sich um die Werte mit unterschiedlichen Datentypen übergeben.  
   
 #### <a name="when-to-use-a-parameter-array"></a>Ein Parameterarray verwenden.  
  Sie sind besser geeignet, indem eine `ParamArray` Parameter in den folgenden Fällen:  
   
--   Sie können nicht vorhersagen, wie viele Werte der aufrufende Code für das Parameterarray übergeben kann, und möglicherweise eine große Anzahl.  
+- Sie können nicht vorhersagen, wie viele Werte der aufrufende Code für das Parameterarray übergeben kann, und möglicherweise eine große Anzahl.  
   
--   Logik der Prozedur eignet sich für alle Werte, die der aufrufende Code im Wesentlichen die gleichen Vorgänge für jeden Wert ausführen besteht, durchlaufen.  
+- Logik der Prozedur eignet sich für alle Werte, die der aufrufende Code im Wesentlichen die gleichen Vorgänge für jeden Wert ausführen besteht, durchlaufen.  
   
  Weitere Informationen finden Sie unter [Parameterarrays](./parameter-arrays.md).  
   
@@ -96,11 +96,11 @@ Wenn Sie eine Prozedur zu überladen, müssen Sie einen anderen verwenden *Signa
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Implizite Überladungen für ParamArray-Parameter  
  Der Compiler betrachtet eine Prozedur mit einem [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) Parameter, um eine unbegrenzte Anzahl von Überladungen, die in der aufrufende Code wie folgt auf das Parameterarray übergibt sich dadurch voneinander unterscheiden zu erhalten:  
   
--   Eine Überladung für Wenn der aufrufende Code kein Argument übergibt die `ParamArray`  
+- Eine Überladung für Wenn der aufrufende Code kein Argument übergibt die `ParamArray`  
   
--   Eine Überladung für, wenn der aufrufende Code ein eindimensionales Array stellt die `ParamArray` Elementtyp  
+- Eine Überladung für, wenn der aufrufende Code ein eindimensionales Array stellt die `ParamArray` Elementtyp  
   
--   Für jede positive ganze Zahl, eine Überladung für, wenn der aufrufende Code diese Anzahl von Argumenten, die jeweils der stellt der `ParamArray` Elementtyp  
+- Für jede positive ganze Zahl, eine Überladung für, wenn der aufrufende Code diese Anzahl von Argumenten, die jeweils der stellt der `ParamArray` Elementtyp  
   
  Die folgenden Deklarationen veranschaulichen diese implizite Überladungen.  
   
@@ -115,11 +115,11 @@ Wenn Sie eine Prozedur zu überladen, müssen Sie einen anderen verwenden *Signa
 ## <a name="typeless-programming-as-an-alternative-to-overloading"></a>Programmierung ohne Datentypen als Alternative zum Überladen  
  Wenn den aufrufenden Code unterschiedliche Datentypen auf einen Parameter übergeben werden sollen, ist ein alternativer Ansatz Programmierung ohne Datentypen. Sie können festlegen, der Switch die typüberprüfung `Off` entweder mit der [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md) oder [/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) -Compileroption. Dann müssen Sie keinen Datentyp des Parameters zu deklarieren. Dieser Ansatz weist jedoch die folgenden Nachteile im Vergleich zum Überladen:  
   
--   Programmierung ohne Datentypen erzeugt Ausführungscode weniger effizient.  
+- Programmierung ohne Datentypen erzeugt Ausführungscode weniger effizient.  
   
--   Die Prozedur muss für jeden Datentyp testen dessen Übergabe.  
+- Die Prozedur muss für jeden Datentyp testen dessen Übergabe.  
   
--   Der Compiler kann nicht auf einen Fehler signalisieren, wenn der aufrufende Code einen Datentyp übergibt, den die Prozedur nicht unterstützt.  
+- Der Compiler kann nicht auf einen Fehler signalisieren, wenn der aufrufende Code einen Datentyp übergibt, den die Prozedur nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch
 

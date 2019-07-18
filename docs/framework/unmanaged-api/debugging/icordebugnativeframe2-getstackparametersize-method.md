@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47968d7550c3d16d201680caab705c0d7c85c784
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8a5f0f767a7057064e285bf6ac9dcefc86eb9d79
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200141"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757201"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize-Methode
 Gibt die kumulierte Größe der Parameter auf dem Stapel von Betriebssystemen X86 zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetStackParameterSize([out] ULONG32 * pSize)  
 ```  
   
@@ -44,7 +44,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 |-------------|-----------------|  
 |S_OK|Die Größe des Stapels wurde erfolgreich zurückgegeben.|  
 |S_FALSE|`GetStackParameterSize` wurde eine nicht-X86 Plattform aufgerufen.|  
-|E_FAIL|`The size of the parameters could not be returned`sein.|  
+|E_FAIL|`The size of the parameters could not be returned`.|  
 |E_INVALIDARG|`pSize` ist `null`.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
@@ -64,5 +64,5 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugNativeFrame2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

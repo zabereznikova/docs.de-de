@@ -2,12 +2,12 @@
 title: Ablaufsteuerung in asynchronen Programmen (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 45d349fa131daf3fdf39d29d53d8ec236c79f81f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8d9f1dd0963ee9074122473e0eeab9254866660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150601"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599735"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Ablaufsteuerung in asynchronen Programmen (C#)
 
@@ -17,9 +17,9 @@ Im Allgemeinen markieren Sie Methoden mit asynchronem Code mithilfe des [async (
 
 Im folgenden Beispiel werden asynchrone Methoden verwendet, um den Inhalt einer angegebenen Website als Zeichenfolge herunterzuladen und um die Länge der Zeichenfolge anzuzeigen. Das Beispiel enthält die folgenden beiden Methoden.
 
--   `startButton_Click`, die `AccessTheWebAsync` aufruft und das Ergebnis angezeigt.
+- `startButton_Click`, die `AccessTheWebAsync` aufruft und das Ergebnis angezeigt.
 
--   `AccessTheWebAsync`, die den Inhalt einer Website als Zeichenfolge herunterlädt und die Länge der Zeichenfolge zurückgibt. `AccessTheWebAsync` verwendet eine asynchrone <xref:System.Net.Http.HttpClient>-Methode, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, um den Inhalt herunterzuladen.
+- `AccessTheWebAsync`, die den Inhalt einer Website als Zeichenfolge herunterlädt und die Länge der Zeichenfolge zurückgibt. `AccessTheWebAsync` verwendet eine asynchrone <xref:System.Net.Http.HttpClient>-Methode, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, um den Inhalt herunterzuladen.
 
 Nummerierte Ausgabezeilen werden über das Programm verteilt an strategischen Stellen angezeigt, die dabei helfen sollen, die Ausführung des Programms nachzuvollziehen und zu verdeutlichen, was an den markierten Punkten geschieht. Die Ausgabezeilen werden durchgehend von "ONE" (Eins) bis "SIX" (Sechs) bezeichnet. Die Bezeichnungen entsprechen der Reihenfolge, in der das Programm diese Codezeilen erreicht.
 
@@ -97,13 +97,13 @@ Sie können den Code, der in diesem Thema verwendet wird, von MSDN herunterladen
 
 ### <a name="download-the-program"></a>Herunterladen des Programms
 
-Sie können die Anwendung für dieses Thema von [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) herunterladen. Mithilfe der folgenden Schritte wird das Programm geöffnet und ausgeführt.
+Sie können die Anwendung für dieses Thema von [Asynchrones Beispiel: Ablaufsteuerung in asynchronen Programmen](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) herunterladen. Mithilfe der folgenden Schritte wird das Programm geöffnet und ausgeführt.
 
-1.  Entzippen Sie die heruntergeladene Datei und starten Sie anschließend Visual Studio.
+1. Entzippen Sie die heruntergeladene Datei und starten Sie anschließend Visual Studio.
 
-2.  Wählen Sie auf der Menüleiste **Datei** > **Öffnen** > **Projekt/Projektmappe** aus.
+2. Wählen Sie auf der Menüleiste **Datei** > **Öffnen** > **Projekt/Projektmappe** aus.
 
-3.  Navigieren Sie zu dem Ordner, der den entzippten Beispielcode enthält, öffnen Sie die Projektmappendatei (SLN) und drücken Sie dann die **F5**-TASTE, um das Projekt zu erstellen und auszuführen.
+3. Navigieren Sie zu dem Ordner, der den entzippten Beispielcode enthält, öffnen Sie die Projektmappendatei (SLN) und drücken Sie dann die **F5**-TASTE, um das Projekt zu erstellen und auszuführen.
 
 ### <a name="create-the-program-yourself"></a>Das Programm selbst erstellen
 
@@ -111,23 +111,23 @@ Das folgende Windows Presentation Foundation (WPF)-Projekt enthält das Codebeis
 
 Um das Projekt auszuführen, führen Sie die folgenden Schritte aus:
 
-1.  Starten Sie Visual Studio.
+1. Starten Sie Visual Studio.
 
-2.  Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**.
+2. Klicken Sie in der Menüleiste auf **Datei** > **Neu** > **Projekt**.
 
      Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-3.  Wählen Sie die Kategorie **Installiert** > **Visual C#** > **Windows Desktop** und dann aus der Liste der Projektvorlagen **WPF-App** aus.
+3. Wählen Sie die Kategorie **Installiert** > **Visual C#** > **Windows Desktop** und dann aus der Liste der Projektvorlagen **WPF-App** aus.
 
-4.  Geben Sie `AsyncTracer` als Name für das Projekt ein, und wählen Sie dann die Schaltfläche **OK** aus.
+4. Geben Sie `AsyncTracer` als Name für das Projekt ein, und wählen Sie dann die Schaltfläche **OK** aus.
 
      Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.
 
-5.  Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.
+5. Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.
 
      Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für „MainWindow.xaml“ im **Projektmappen-Explorer**, und wählen Sie dann **Code anzeigen**aus.
 
-6.  Ersetzen Sie den automatisch generierten Code in der **XAML**-Ansicht der Datei „MainWindow.xaml“ durch den folgenden Code.
+6. Ersetzen Sie den automatisch generierten Code in der **XAML**-Ansicht der Datei „MainWindow.xaml“ durch den folgenden Code.
 
     ```csharp
     <Window
@@ -145,9 +145,9 @@ Um das Projekt auszuführen, führen Sie die folgenden Schritte aus:
 
      Ein einfaches Fenster, das ein Textfeld und eine Schaltfläche enthält, wird in der **Entwurfsansicht** der Datei „MainWindow.xaml“ angezeigt.
 
-7.  Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.
+7. Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.
 
-8.  Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für „MainWindow.xaml.cs“, und wählen Sie dann **Code anzeigen** aus.
+8. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für „MainWindow.xaml.cs“, und wählen Sie dann **Code anzeigen** aus.
 
 9. Ersetzen Sie den Code in „MainWindow.xaml.cs“ durch den folgenden Code.
 
@@ -389,5 +389,5 @@ int contentLength = await getLengthTask;
 
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Asynchrone Rückgabetypen (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Thema mit einem asynchronen Beispiel für die Ablaufsteuerung in asynchronen Programmen (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async Sample: Ablaufsteuerung in asynchronen Programmen (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

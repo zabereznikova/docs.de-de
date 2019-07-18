@@ -1,15 +1,13 @@
 ---
 title: Mit .NET-Containern angezieltes Betriebssystem
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Mit .NET-Containern angezieltes Betriebssystem
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 14a0fb7cd9ecb8dfd5369da6f6bd5b47b4aea37a
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 6f160aeba5257722490788271e6f89359342cc0d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921298"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639084"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Mit .NET-Containern angezieltes Betriebssystem
 

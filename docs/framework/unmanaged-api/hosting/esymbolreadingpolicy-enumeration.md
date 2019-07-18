@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ba29952fe4a6edfc6e9e80ec02f82de65ef0064
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 45b6b8593331801dd237d0a730afbd5a6a714bbf
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208422"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774180"
 ---
 # <a name="esymbolreadingpolicy-enumeration"></a>ESymbolReadingPolicy-Enumeration
 Enthält Werte, die die Richtlinie für das Lesen von Programmdatenbankdateien (PDB) festgelegt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     eSymbolReadingNever,  
     eSymbolReadingAlways,  

@@ -2,12 +2,12 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 8694f83a731363f83cb09de43214eb4b211ef5ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5d6bfb1e4aa1651cd8c3a869f681d71cfb15725c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145066"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751871"
 ---
 # <a name="comcontract"></a>\<comContract>
 Gibt einen Dienstvertrag für die COM+-Integration an.  
@@ -90,7 +90,6 @@ Gibt einen Dienstvertrag für die COM+-Integration an.
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)

@@ -3,11 +3,11 @@ title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
 ms.openlocfilehash: 84a5bc763f898b3d323a6cee468c6e22d27d85a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788205"
 ---
 # <a name="udpbinding"></a>\<udpBinding>
 Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.UdpBinding>-Bindung verwendet wird.  

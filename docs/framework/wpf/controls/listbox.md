@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
 ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766987"
 ---
 # <a name="listbox"></a>ListBox
 Ein <xref:System.Windows.Controls.ListBox> -Steuerelement stellt Benutzern eine Liste auswählbarer Elemente bereit.  
@@ -23,7 +23,7 @@ Ein <xref:System.Windows.Controls.ListBox> -Steuerelement stellt Benutzern eine 
 Typische ListBox-Element  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie-Themen](listbox-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](listbox-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.ListBox>  

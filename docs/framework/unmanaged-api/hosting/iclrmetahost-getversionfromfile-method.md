@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a6c7fd48269a3e8291a548b3e13efe5c8e70652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b17b36f66a9b8b78b16057ec37d3ee5f484f7ae2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150812"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779765"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile-Methode
 Ruft die Version einer Assembly ursprünglichen .NET Framework-Kompilierung (gespeichert in den Metadaten), Angabe des Dateipfads ab. Diese Methode ersetzt die [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetVersionFromFile (  
     [in] LPCWSTR pwzFilePath,  
     [out, size_is(*pcchBuffer)] LPWSTR pwzBuffer,  
@@ -58,7 +58,7 @@ HRESULT GetVersionFromFile (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_POINTER|`pwzbuffer` oder `pcchBuffer` ist null.|  
+|E_POINTER|`pwzbuffer` oder `pcchBuffer` ist NULL.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Der Puffer ist zu klein.|  
   
 ## <a name="requirements"></a>Anforderungen  

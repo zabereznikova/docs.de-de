@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen unterstützender Anmeldeinformationen'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2f922f2df424b0ca2a468ae2f6cb8e8753e1d8a1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093708"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635497"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Vorgehensweise: Erstellen unterstützender Anmeldeinformationen
 Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind. Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist. Anmeldeinformationen sind ein *unterstützende Anmeldeinformationen*. In diesem Thema wird erläutert, wie Sie solche Anmeldeinformationen in einem Windows Communication Foundation (WCF)-Client zu implementieren.  
@@ -39,28 +39,28 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
   
  Der erste Schritt beim Erstellen einer benutzerdefinierten Bindung ist das Erstellen eines Sicherheitsbindungselements, das einer der folgenden drei Typen sein kann:  
   
--   <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
  Alle Klassen erben vom <xref:System.ServiceModel.Channels.SecurityBindingElement>, das vier relevante Eigenschaften umfasst:  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
   
 #### <a name="scopes"></a>Bereiche  
  Für unterstützende Anmeldeinformationen existieren vier Bereiche:  
   
--   *Endpunkt unterstützende Token* unterstützen alle Vorgänge eines Endpunkts. Die Anmeldeinformationen, die das unterstützende Token darstellt, können beim Aufrufen eines beliebigen Endpunktvorgangs verwendet werden.  
+- *Endpunkt unterstützende Token* unterstützen alle Vorgänge eines Endpunkts. Die Anmeldeinformationen, die das unterstützende Token darstellt, können beim Aufrufen eines beliebigen Endpunktvorgangs verwendet werden.  
   
--   *Vorgang unterstützende Token* unterstützen nur einen bestimmten endpunktvorgang.  
+- *Vorgang unterstützende Token* unterstützen nur einen bestimmten endpunktvorgang.  
   
  Wie durch die Eigenschaftennamen angegeben, können unterstützende Anmeldeinformationen erforderlich oder optional sein. Die unterstützenden Anmeldeinformationen werden verwendet, wenn sie vorhanden, aber nicht erforderlich sind; die Authentifizierung schlägt jedoch nicht fehl, wenn sie nicht vorhanden sind.  
   
@@ -68,9 +68,9 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>So erstellen Sie eine benutzerdefinierte Bindung, die unterstützende Anmeldeinformationen enthält  
   
-1.  Erstellen Sie ein Sicherheitsbindungselement. Im nachfolgenden Beispiel wird ein <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> mit dem `UserNameForCertificate`-Authentifizierungsmodus erstellt. Verwenden Sie die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>-Methode.  
+1. Erstellen Sie ein Sicherheitsbindungselement. Im nachfolgenden Beispiel wird ein <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> mit dem `UserNameForCertificate`-Authentifizierungsmodus erstellt. Verwenden Sie die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A>-Methode.  
   
-2.  Fügen Sie den unterstützenden Parameter der von der entsprechenden Eigenschaft (`Endorsing`, `Signed`, `SignedEncrypted` oder `SignedEndorsed`) zurückgegebenen Auflistung von Typen hinzu. Die Typen im <xref:System.ServiceModel.Security.Tokens>-Namespace umfassen häufig verwendete Typen wie die <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
+2. Fügen Sie den unterstützenden Parameter der von der entsprechenden Eigenschaft (`Endorsing`, `Signed`, `SignedEncrypted` oder `SignedEndorsed`) zurückgegebenen Auflistung von Typen hinzu. Die Typen im <xref:System.ServiceModel.Security.Tokens>-Namespace umfassen häufig verwendete Typen wie die <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>.  
   
 ## <a name="example"></a>Beispiel  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b08149b2acd766aac428614205401e79246c5b21
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401715"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737252"
 ---
 # <a name="icordebugassemblygetcodebase-method"></a>ICorDebugAssembly::GetCodeBase-Methode
 Diese Methode ist nicht in der aktuellen Version von .NET Framework implementiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCodeBase (  
     [in] ULONG32  cchName,  
     [out] ULONG32 *pcchName,  

@@ -3,11 +3,11 @@ title: TransportAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: adbdbda0-de52-448c-a938-cc9f5db2980e
 ms.openlocfilehash: 99fd90dc4b2da0d1a0452a0e27ec45b6b8641ea6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944377"
 ---
 # <a name="transportauthenticationfailure"></a>TransportAuthenticationFailure
 ID: 174  

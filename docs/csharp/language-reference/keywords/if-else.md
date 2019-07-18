@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18b41446eb13f4b91db86d79316a5299b0f3020a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517837"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300478"
 ---
 # <a name="if-else-c-reference"></a>if-else (C#-Referenz)
 
@@ -82,7 +82,7 @@ Im folgenden Beispiel wird bestimmt, ob ein eingegebenes Zeichen ein Kleinbuchst
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-So, wie eine Anweisung im else-Block oder then-Block jede beliebige Anweisung sein kann, können Sie für die Bedingungen einen beliebigen gültigen booleschen Ausdruck verwenden. Sie können logische Operatoren wie z.B [&&](../operators/conditional-and-operator.md), [&](../operators/and-operator.md), [&#124;&#124;](../operators/conditional-or-operator.md), [&#124;](../operators/or-operator.md) und [!](../operators/logical-negation-operator.md) verwenden verwenden, um Verbundbedingungen zu erstellen. Der folgende Code enthält Beispiele.
+So, wie eine Anweisung im else-Block oder then-Block jede beliebige Anweisung sein kann, können Sie für die Bedingungen einen beliebigen gültigen booleschen Ausdruck verwenden. Sie können [logische Operatoren](../operators/boolean-logical-operators.md) wie `!`, `&&`, `||`, `&`, `|` und `^` verwenden, um Verbundbedingungen zu erstellen. Der folgende Code enthält Beispiele.
 
 ```csharp
 // NOT

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3e367a10a3e703241c7417d3ea17068018becb5a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825754"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649731"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Vorgehensweise: Berechnen von numerischen Werten (Visual Basic)
 Sie können numerische Werte durch die Verwendung von numerischen Ausdrücken berechnen. Ein *numerischer Ausdruck* ist ein Ausdruck mit Literalen, Konstanten und Variablen, die Darstellung von numerischer Werten und Operatoren, die für diese Werte dienen.  
@@ -25,7 +25,7 @@ Sie können numerische Werte durch die Verwendung von numerischen Ausdrücken be
   
 #### <a name="to-calculate-a-numeric-value"></a>Um einen numerischen Wert zu berechnen.  
   
--   Kombinieren Sie mindestens eine numerischen Literalen, Konstanten und Variablen in einen numerischen Ausdruck. Das folgende Beispiel zeigt einige gültige numerische Ausdrücke.  
+- Kombinieren Sie mindestens eine numerischen Literalen, Konstanten und Variablen in einen numerischen Ausdruck. Das folgende Beispiel zeigt einige gültige numerische Ausdrücke.  
   
      `93.217`  
   
@@ -41,7 +41,7 @@ Sie können numerische Werte durch die Verwendung von numerischen Ausdrücken be
   
 #### <a name="to-store-a-numeric-value"></a>Um einen numerischen Wert zu speichern.  
   
--   Sie können eine zuweisungsanweisung verwenden, den durch einen numerischen Ausdruck auf eine Variable dargestellten Wert zuweisen, wie im folgende Beispiel wird veranschaulicht.  
+- Sie können eine zuweisungsanweisung verwenden, den durch einen numerischen Ausdruck auf eine Variable dargestellten Wert zuweisen, wie im folgende Beispiel wird veranschaulicht.  
   
      [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
@@ -54,7 +54,7 @@ Sie können numerische Werte durch die Verwendung von numerischen Ausdrücken be
   
 #### <a name="to-override-normal-operator-precedence"></a>Überschreiben der normalen Operatorrangfolge  
   
--   Verwenden Sie Klammern, um die Vorgänge einzuschließen, die zuerst ausgeführt werden sollen. Das folgende Beispiel zeigt zwei unterschiedliche Ergebnisse mit dem gleichen Operanden und Operatoren.  
+- Verwenden Sie Klammern, um die Vorgänge einzuschließen, die zuerst ausgeführt werden sollen. Das folgende Beispiel zeigt zwei unterschiedliche Ergebnisse mit dem gleichen Operanden und Operatoren.  
   
      [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   

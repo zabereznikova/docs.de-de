@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49dc456df684d6905370ee6ab8c8883449bea990
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7dfaedad48291ac09f6959bc7b314ae0d9da76e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742046"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType-Methode
 Gibt geschachtelte Typen als "Exportierbar" markieren. Die [ExportType-Methode](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) kann auch geschachtelte Typen exportieren, aber diese Methode ist schneller.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ExportNestedType(  
     mdAssembly      AssemblyID,  
     mdToken         FileToken,  
@@ -70,6 +70,7 @@ HRESULT ExportNestedType(
  Erfordert alink.h  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

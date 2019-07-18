@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: 9869e647613ccf009954a5d65445947fbced40e7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d4513439594c9bceac3463a5b878f9059a16046e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709843"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645699"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>Übersicht über die ImageList-Komponente (Windows Forms)
 

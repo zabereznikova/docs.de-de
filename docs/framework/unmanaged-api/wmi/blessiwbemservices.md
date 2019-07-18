@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb83bc3c0c7724dbcd3133465d4e7ad3a9eea3a9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354608"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636505"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices-Funktion
 Gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf den angegebenen zulassen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Klasse.   

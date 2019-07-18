@@ -3,12 +3,12 @@ title: Grundlegende Typen | C#-Handbuch
 description: Erfahren Sie mehr über die grundlegenden Typen (numerische Werte, Zeichenfolgen und Objekte) in allen C#-Programmen
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c719177b6099104681f590b550014d9a67f3f3ba
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508045"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424455"
 ---
 # <a name="types-variables-and-values"></a>Typen, Variablen und Werte
 
@@ -28,12 +28,12 @@ Folgende Informationen können in einem Typ gespeichert sein:
   
 - Die Arten von zulässigen Vorgängen  
   
-Der Compiler verwendet Typinformationen, um sicherzustellen, dass alle im Code ausgeführten Vorgänge *typsicher* sind. Wenn Sie z.B. eine Variable vom Typ [int](language-reference/keywords/int.md) deklarieren, können Sie mit dem Compiler die Variable für Additions- und Subtraktionsvorgänge verwenden. Wenn Sie dieselben Vorgänge für eine Variable vom Typ [bool](language-reference/keywords/bool.md) ausführen möchten, generiert der Compiler einen Fehler, wie im folgenden Beispiel dargestellt:  
+Der Compiler verwendet Typinformationen, um sicherzustellen, dass alle im Code ausgeführten Vorgänge *typsicher* sind. Wenn Sie z.B. eine Variable vom Typ [int](language-reference/builtin-types/integral-numeric-types.md) deklarieren, können Sie mit dem Compiler die Variable für Additions- und Subtraktionsvorgänge verwenden. Wenn Sie dieselben Vorgänge für eine Variable vom Typ [bool](language-reference/keywords/bool.md) ausführen möchten, generiert der Compiler einen Fehler, wie im folgenden Beispiel dargestellt:  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C- und C++-Entwickler sollten beachten, dass in C# [bool](language-reference/keywords/bool.md) nicht in [int](language-reference/keywords/int.md) konvertiert werden kann.  
+> C- und C++-Entwickler sollten beachten, dass in C# [bool](language-reference/keywords/bool.md) nicht in [int](language-reference/builtin-types/integral-numeric-types.md) konvertiert werden kann.  
   
 Der Compiler bettet die Typinformationen als Metadaten in die ausführbare Datei ein. Die Common Language Runtime (CLR) verwendet diese Metadaten zur Laufzeit, um die Typsicherheit zu gewährleisten, wenn Speicherplatz belegt und freigegeben wird.  
 
@@ -43,17 +43,17 @@ Wenn Sie eine Variable oder Konstante in einem Programm deklarieren, müssen Sie
   
 [!code-csharp[Variable Declaration](../../samples/snippets/csharp/concepts/basic-types/variable-declaration.cs)]  
   
-Die Methodenparameter- und Rückgabewerttypen werden in der Methodensignatur angegeben. Die folgende Signatur zeigt eine Methode, für die ein [int](language-reference/keywords/int.md) als Eingabeargument benötigt wird und die eine Zeichenfolge zurückgibt:  
+Die Methodenparameter- und Rückgabewerttypen werden in der Methodensignatur angegeben. Die folgende Signatur zeigt eine Methode, für die ein [int](language-reference/builtin-types/integral-numeric-types.md) als Eingabeargument benötigt wird und die eine Zeichenfolge zurückgibt:  
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Zum Beispiel können Sie eine [int](language-reference/keywords/int.md) nicht deklarieren und dieser dann den booleschen Wert [true](language-reference/keywords/true.md) zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
+Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Zum Beispiel können Sie eine [int](language-reference/builtin-types/integral-numeric-types.md) nicht deklarieren und dieser dann den booleschen Wert [true](language-reference/keywords/true-literal.md) zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
 
 Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](programming-guide/types/casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Integrierte Typen
 
-C# liefert einen Standardsatz mit integrierten numerischen Typen zur Darstellung von ganzen Zahlen, Gleitkommawerten, booleschen Ausdrücken, Textzeichen, Dezimalwerten und anderen Datentypen. Es gibt auch integrierte **Zeichenfolgen**- und **Objekt**-Typen. Diese können Sie in jedem C#-Programm verwenden. Weitere Informationen über die integrierten Typen finden Sie unter [Referenztabellen für Typen](language-reference/keywords/reference-tables-for-types.md).  
+C# liefert einen Standardsatz mit integrierten numerischen Typen zur Darstellung von ganzen Zahlen, Gleitkommawerten, booleschen Ausdrücken, Textzeichen, Dezimalwerten und anderen Datentypen. Es gibt auch integrierte **Zeichenfolgen**- und **Objekt**-Typen. Diese können Sie in jedem C#-Programm verwenden. Weitere Informationen zu den integrierten Typen finden Sie in der [Referenztabelle für integrierte Typen](language-reference/keywords/built-in-types-table.md).  
   
 ## <a name="custom-types"></a>Benutzerdefinierte Typen
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01c0f9ca0299e817618d93133c0eaca9fc63788e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 705771bb04088edf8276bf36432ef88ff288ba34
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160315"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751726"
 ---
 # <a name="strongnamesignaturesize-function"></a>StrongNameSignatureSize-Funktion
 Gibt die Größe der Signatur mit starkem Namen zurück. `StrongNameSignatureSize` wird normalerweise vom Compiler verwendet, um zu bestimmen, wie viel Speicherplatz in der Datei reserviert, beim Erstellen einer mit Verzögerung signierten Assembly.  
@@ -30,7 +30,7 @@ Gibt die Größe der Signatur mit starkem Namen zurück. `StrongNameSignatureSiz
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureSize (   
     [in]  BYTE   *pbPublicKeyBlob,  
     [in]  ULONG  cbPublicKeyBlob,   

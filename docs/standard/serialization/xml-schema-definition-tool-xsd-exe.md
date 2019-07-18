@@ -3,11 +3,11 @@ title: XML Schema Definition-Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
 ms.openlocfilehash: fa90110a803a97cd7a610fd33f94557c44660e2b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028225"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition-Tool (Xsd.exe)
 
@@ -77,7 +77,7 @@ In der folgenden Tabelle werden die von Xsd.exe ausgeführten Operationen angeze
 |------------|-----------------|
 |XDR nach XSD|Generiert ein XML-Schema aus einer XDR-Schemadatei (XML-Data-Reduced). XDR ist ein früheres XML-Schemaformat.|
 |XML nach XSD|Generiert ein XML-Schema aus einer XML-Datei.|
-|XSD nach DataSet|Generiert <xref:System.Data.DataSet>-Klassen der Common&#160;Language&#160;Runtime aus einer XSD-Schemadatei. Die generierten Klassen stellen ein umfangreiches Objektmodell für reguläre XML-Daten bereit.|
+|XSD nach DataSet|Generiert <xref:System.Data.DataSet>-Klassen der Common&amp;#160;Language&amp;#160;Runtime aus einer XSD-Schemadatei. Die generierten Klassen stellen ein umfangreiches Objektmodell für reguläre XML-Daten bereit.|
 |XSD nach Klassen|Generiert Laufzeitklassen aus einer XSD-Schemadatei. Die generierten Klassen können in Verbindung mit <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> zum Lesen und Schreiben von XML-Code verwendet werden, der diesem Schema folgt.|
 |Klassen nach XSD| Generiert ein XML-Schema aus einem oder mehreren Typen in einer Laufzeitassemblydatei. Das generierte Schema definiert die XML-Format, das die <xref:System.Xml.Serialization.XmlSerializer>.|
 
@@ -85,7 +85,7 @@ In der folgenden Tabelle werden die von Xsd.exe ausgeführten Operationen angeze
 
 ## <a name="setting-options-with-an-xml-file"></a>Festlegen von Optionen mit einer XML-Datei
 
-Mithilfe des `/parameters`-Schalters können Sie eine einzelne XML-Datei angeben, durch die verschiedene Optionen festgelegt werden. Welche Optionen Sie festlegen können, richtet sich danach, wie Sie das Tool XSD.exe verwenden. Zu den möglichen Optionen gehören das Generieren von Schemas oder Codedateien sowie das Generieren von Codedateien, die `DataSet`-Funktionen umfassen. So können Sie z.&#160;B. das `<assembly>`-Element auf den Namen einer ausführbaren Datei (.exe) oder Typbibliothek (.dll) festlegen, wenn Sie ein Schema generieren. Dies gilt jedoch nicht für das Generieren von Codedateien. Die folgende XML veranschaulicht die Verwendung des `<generateSchemas>`-Elements mit einer angegebenen ausführbaren Datei:
+Mithilfe des `/parameters`-Schalters können Sie eine einzelne XML-Datei angeben, durch die verschiedene Optionen festgelegt werden. Welche Optionen Sie festlegen können, richtet sich danach, wie Sie das Tool XSD.exe verwenden. Zu den möglichen Optionen gehören das Generieren von Schemas oder Codedateien sowie das Generieren von Codedateien, die `DataSet`-Funktionen umfassen. So können Sie z.&amp;#160;B. das `<assembly>`-Element auf den Namen einer ausführbaren Datei (.exe) oder Typbibliothek (.dll) festlegen, wenn Sie ein Schema generieren. Dies gilt jedoch nicht für das Generieren von Codedateien. Die folgende XML veranschaulicht die Verwendung des `<generateSchemas>`-Elements mit einer angegebenen ausführbaren Datei:
 
 ```xml
 <!-- This is in a file named GenerateSchemas.xml. -->
@@ -138,7 +138,7 @@ Um eine Codedatei zu generieren, verwenden Sie das `<generateClasses>`-Element. 
 <!-- For example: xsd /p:genClasses mySchema.xsd -->
 ```
 
- Sie können u.&#160;a. folgende Optionen für das `<generateClasses>`-Element festlegen:
+ Sie können u.&amp;#160;a. folgende Optionen für das `<generateClasses>`-Element festlegen:
 
 |Element|Beschreibung|
 |-------------|-----------------|
@@ -163,7 +163,7 @@ In der folgenden Tabelle sind die Attribute aufgeführt, die zusätzlich mit dem
  </xsd>
 ```
 
-Sie können u.&#160;a. folgende Optionen für das `<generateDataSet>`-Element festlegen:
+Sie können u.&amp;#160;a. folgende Optionen für das `<generateDataSet>`-Element festlegen:
 
 |Element|Beschreibung|
 |-------------|-----------------|
@@ -177,7 +177,7 @@ Sie können u.&#160;a. folgende Optionen für das `<generateDataSet>`-Element fe
 |language|Gibt die zu verwendende Programmiersprache an. Wählen Sie unter `CS` (C#, dem Standard), `VB` (Visual Basic), `JS` (JScript) oder `VJS` (Visual J#) aus. Sie können auch einen vollqualifizierten Namen für eine Klasse angeben, die <xref:System.CodeDom.Compiler.CodeDomProvider> implementiert.|
 |namespace|Gibt den Namespace für den generierten Code an. Der Namespace muss CLR-Standards entsprechen (darf beispielsweise keine Leerzeichen oder umgekehrten Schrägstriche enthalten).|
 
- Einige Attribute können für das `<xsd>`-Element auf oberster Ebene festgelegt werden. Diese Optionen können mit einem beliebigen untergeordneten Element verwendet werden (`<generateSchemas>``<generateDataSet>`, `<generateClasses>` oder ). Im folgenden XML-Code wird Code für ein Element mit dem Namen "IDItems" im Ausgabeverzeichnis mit dem Namen "MyOutputDirectory" generiert.
+ Einige Attribute können für das `<xsd>`-Element auf oberster Ebene festgelegt werden. Diese Optionen können mit einem beliebigen untergeordneten Element verwendet werden (`<generateSchemas>`,`<generateClasses>` oder `<generateDataSet>`). Im folgenden XML-Code wird Code für ein Element mit dem Namen "IDItems" im Ausgabeverzeichnis mit dem Namen "MyOutputDirectory" generiert.
 
 ```xml
 <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/' output='MyOutputDirectory'>

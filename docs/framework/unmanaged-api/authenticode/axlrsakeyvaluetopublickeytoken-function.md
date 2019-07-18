@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4f9981c4cf2e45795576024b797f93831324dbc9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207824"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741270"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken-Funktion
 
@@ -23,7 +23,7 @@ Konvertiert einen Modulo und Exponenten in einen starken Namen des öffentlichen
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT _AxlRSAKeyValueToPublicKeyToken (  
     [in]  PCRYPT_DATA_BLOB pModulusBlob,  
     [in]  PCRYPT_DATA_BLOB pExponentBlob,  
@@ -42,7 +42,7 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
  [out] Ein Zeiger auf WCHAR *, um den hexadezimal codierten öffentlichen Schlüsseltoken zu erhalten.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` wenn die Funktion erfolgreich ausgeführt wird. Andernfalls wird ein Fehlercode zurückgegeben.  
+ `S_OK`, wenn die Funktion erfolgreich ausgeführt wurde. Andernfalls wird ein Fehlercode zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch
 

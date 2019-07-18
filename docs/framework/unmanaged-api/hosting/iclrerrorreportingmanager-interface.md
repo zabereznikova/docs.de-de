@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a20b79dd5eda9c431511cc49e7e3adaa9486b2aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969833"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager-Schnittstelle
 Bietet Methoden, mit die den Host benutzerdefinierte stapelabbilder für die Fehlerberichterstattung konfigurieren zu können.  
@@ -52,4 +52,4 @@ Bietet Methoden, mit die den Host benutzerdefinierte stapelabbilder für die Feh
 ## <a name="see-also"></a>Siehe auch
 
 - [ECustomDumpItemKind-Enumeration](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

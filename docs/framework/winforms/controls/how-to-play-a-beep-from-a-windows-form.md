@@ -12,11 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
 ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913431"
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Vorgehensweise: Wiedergabe eines Signaltons in Windows Forms
 In diesem Beispiel wird einen Signalton zur Laufzeit wiedergegeben.  
@@ -46,5 +46,5 @@ public void onePing()
 
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
-- [Vorgehensweise: Wiedergabe eines Systemsounds in Windows Forms](how-to-play-a-system-sound-from-a-windows-form.md)
-- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Vorgehensweise: Wiedergabe eines Systemsounds in Windows Forms](how-to-play-a-system-sound-from-a-windows-form.md)
+- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)

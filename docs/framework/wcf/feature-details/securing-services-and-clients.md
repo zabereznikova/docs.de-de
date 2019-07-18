@@ -5,11 +5,11 @@ helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990937"
 ---
 # <a name="securing-services-and-clients"></a>Sichern von Diensten und Clients
 Die Informationen in diesem Abschnitt programmiersicherheit in Windows Communication Foundation (WCF). Hierzu zählt im Allgemeinen das Auswählen einer geeigneten vom System bereitgestellten Bindung, das Festlegen der Eigenschaften des Sicherheitselements sowie das anschließende Festlegen von Eigenschaften für das Dienstverhalten, mit denen gesteuert wird, wie Anmeldeinformationen für die Verwendung durch den Dienst oder den Client abgerufen werden. Diese Techniken decken die sicherheitsanforderungen der meisten Benutzer in den meisten Fällen, siehe [häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Wenn Ihr Szenario mehr Funktionen erforderlich sind, lesen Sie zunächst [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); ist eine Lösung nicht offensichtlich ist, finden Sie unter [Erweitern von Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md). Wenn Sie erstellen (oder Interoperabilität mit) ein System, das umfangreiche Ansprüche verwendet, finden Sie unter den Themen in [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -27,7 +27,7 @@ Die Informationen in diesem Abschnitt programmiersicherheit in Windows Communica
  [Sichere Sitzungen](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
  Eine Erläuterung der Aspekte ist erforderlich, wenn eine WCF-Sitzung zu sichern.  
   
- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Eine Erläuterung einiger der allgemeinen Aufgaben, die bei Verwendung von X.509-Zertifikaten erforderlich sind.  
   
 ## <a name="reference"></a>Referenz  
@@ -54,5 +54,5 @@ Die Informationen in diesem Abschnitt programmiersicherheit in Windows Communica
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: Oracle-BFILEs
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d7db741cea5421b2391588c0479f44e2b478ca3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142388"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626428"
 ---
 # <a name="oracle-bfiles"></a>Oracle-BFILEs
 Der .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleBFile>-Klasse, die für das Arbeiten mit dem Oracle-<xref:System.Data.OracleClient.OracleType.BFile>-Datentyp verwendet wird.  
@@ -16,19 +16,19 @@ Der .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.Ora
   
  Andere Eigenschaften des eine **BFILE** -Datentyp, der Unterscheidung von einer **LOB** -Datentyp sind, dass die It:  
   
--   Er enthält unstrukturierte Daten.  
+- Er enthält unstrukturierte Daten.  
   
--   Er unterstützt das serverseitige Aufteilen in kleine Blöcke.  
+- Er unterstützt das serverseitige Aufteilen in kleine Blöcke.  
   
--   Er verwendet die Semantik zum Kopieren von Verweisen. Angenommen, Sie für einen Kopiervorgang Ausführen einer **BFILE**, wird nur die **BFILE** Locator (Dies ist ein Verweis auf die Datei ist) wird kopiert. Die Daten in der Datei werden nicht kopiert.  
+- Er verwendet die Semantik zum Kopieren von Verweisen. Angenommen, Sie für einen Kopiervorgang Ausführen einer **BFILE**, wird nur die **BFILE** Locator (Dies ist ein Verweis auf die Datei ist) wird kopiert. Die Daten in der Datei werden nicht kopiert.  
   
  Die **BFILE** Datentyp sollte verwendet werden, zum Verweisen auf LOBs, die in der Größe groß sind und daher nicht praktikabel ist, in der Datenbank gespeichert. Mehr Aufwand für Clients, Servern und Kommunikation beteiligt ist, bei Verwendung einer **BFILE** Datentyp im Vergleich mit der **LOB** -Datentyp. Es ist jedoch effizienter, den Zugriff auf eine **BFILE** Wenn Sie nur eine kleine Menge Daten zu erhalten müssen. Es ist effektiver, auf datenbankresidente LOBs zuzugreifen, wenn das ganze Objekt abgerufen werden soll.  
   
  Jedem von NULL **OracleBFile** Objekt bezieht sich auf zwei Entitäten, die den Speicherort der zugrunde liegenden physischen Datei definieren:  
   
-1.  Ein Oracle-DIRECTORY-Objekt, das als Datenbank-Alias für ein Verzeichnis im Dateisystem fungiert.  
+1. Ein Oracle-DIRECTORY-Objekt, das als Datenbank-Alias für ein Verzeichnis im Dateisystem fungiert.  
   
-2.  Der Dateiname der zugrunde liegenden physischen Datei, die sich in dem dem DIRECTORY-Objekt zugeordneten Verzeichnis befindet.  
+2. Der Dateiname der zugrunde liegenden physischen Datei, die sich in dem dem DIRECTORY-Objekt zugeordneten Verzeichnis befindet.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende C#-Beispiel wird veranschaulicht, wie Sie erstellen eine **BFILE** in einer Oracle-Tabelle, und rufen Sie ihn in der Form einer **OracleBFile** Objekt. Das Beispiel veranschaulicht die Verwendung der <xref:System.Data.OracleClient.OracleDataReader> Objekt und die **OracleBFile** **Seek** und **lesen** Methoden. Beachten Sie, um die Verwendung dieses Beispiels Sie zunächst ein Verzeichnis namens erstellen müssen "c:\\\bfiles" und die Datei "MyFile.jpg" auf dem Oracle-Server.  

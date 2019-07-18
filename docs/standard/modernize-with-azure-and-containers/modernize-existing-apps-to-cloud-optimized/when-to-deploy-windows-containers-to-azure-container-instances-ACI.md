@@ -1,15 +1,13 @@
 ---
 title: Wenn zum Bereitstellen von Windows-Containern zu Azure Container Instances (ACI)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Wenn zum Bereitstellen von Windows-Containern zu Azure Container Instances (ACI)
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 03ee7c8b65e1a92dcc7fd40b44e9ba081f571487
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674405"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758593"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Wenn zum Bereitstellen von Windows-Containern zu Azure Container Instances (ACI)
 
@@ -38,4 +36,4 @@ Kurz gesagt, können Sie apps mit ACI entwickeln, schnell voran, ohne virtuelle 
 
 > [!div class="step-by-step"]
 > [Zurück](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-> [Weiter](when-to-deploy-windows-containers-to-service-fabric.md)
+> [Weiter](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

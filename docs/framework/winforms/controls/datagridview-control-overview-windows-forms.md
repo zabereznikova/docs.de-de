@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4db2a8b0e30a6bb3db0c5c629d868bc01dc15a8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112878"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648080"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Übersicht über das DataGridView-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "59112878"
   
  Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die standardmäßige Windows Forms-Datenbindungsmodell verwendet, damit die Bindung an Instanzen von Klassen, die in der folgenden Liste beschrieben:  
   
--   Jede Klasse, implementiert die <xref:System.Collections.IList> -Schnittstelle, einschließlich eindimensionale Arrays.  
+- Jede Klasse, implementiert die <xref:System.Collections.IList> -Schnittstelle, einschließlich eindimensionale Arrays.  
   
--   Jede Klasse, implementiert die <xref:System.ComponentModel.IListSource> Schnittstelle, z. B. die <xref:System.Data.DataTable> und <xref:System.Data.DataSet> Klassen.  
+- Jede Klasse, implementiert die <xref:System.ComponentModel.IListSource> Schnittstelle, z. B. die <xref:System.Data.DataTable> und <xref:System.Data.DataSet> Klassen.  
   
--   Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingList> Schnittstelle, z. B. die <xref:System.ComponentModel.BindingList%601> Klasse.  
+- Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingList> Schnittstelle, z. B. die <xref:System.ComponentModel.BindingList%601> Klasse.  
   
--   Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingListView> Schnittstelle, z. B. die <xref:System.Windows.Forms.BindingSource> Klasse.  
+- Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingListView> Schnittstelle, z. B. die <xref:System.Windows.Forms.BindingSource> Klasse.  
   
  Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die Datenbindung an die öffentlichen Eigenschaften der Objekte, die von diesen Schnittstellen zurückgegeben und die Properties-Auflistung, die zurückgegeben werden, indem ein <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle, wenn auf die zurückgegebenen Objekte implementiert.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59112878"
  [Architektur des DataGridView-Steuerelements](datagridview-control-architecture-windows-forms.md)  
  Beschreibt die Architektur von der <xref:System.Windows.Forms.DataGridView> -Steuerelement, erläutert die zugehörige und Vererbung.  
   
- [Szenarios für das DataGridView-Steuerelement](datagridview-control-scenarios-windows-forms.md)  
+ [Szenarien für das DataGridView-Steuerelement](datagridview-control-scenarios-windows-forms.md)  
  Beschreibt die häufigsten Szenarien, in denen <xref:System.Windows.Forms.DataGridView> Steuerelemente verwendet werden.  
   
  [Codeverzeichnis für DataGridView-Steuerelementcode](datagridview-control-code-directory-windows-forms.md)  
@@ -84,4 +84,4 @@ ms.locfileid: "59112878"
 - <xref:System.Windows.Forms.BindingSource>
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
 - [Standardfunktionalität des DataGridView-Steuerelements von Windows Forms](default-functionality-in-the-windows-forms-datagridview-control.md)
-- [Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

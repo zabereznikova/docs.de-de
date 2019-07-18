@@ -10,19 +10,19 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abbf893b3d49101b5cc9d38ffc31b171ff023f8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cf7e997282351cc10dd6da1fc405366ea67c7307
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146925"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741092"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense-Funktion
 Überprüft die Gültigkeit einer Authenticode-XrML-Lizenz.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CertVerifyAuthenticodeLicense (  
     [in]   PCRYPT_DATA_BLOB                   pLicenseBlob,  
     [in]   OPTIONAL DWORD                     dwFlags,  
@@ -40,17 +40,17 @@ HRESULT CertVerifyAuthenticodeLicense (
  `dwFlags`  
  [in] Optional. Eine Kombination der folgenden Werte:  
   
--   AXL_REVOCATION_NO_CHECK  
+- AXL_REVOCATION_NO_CHECK  
   
--   AXL_REVOCATION_CHECK_END_CERT_ONLY  
+- AXL_REVOCATION_CHECK_END_CERT_ONLY  
   
--   AXL_REVOCATION_CHECK_ENTIRE_CHAIN  
+- AXL_REVOCATION_CHECK_ENTIRE_CHAIN  
   
--   AXL_URL_CACHE_ONLY_RETRIEVAL  
+- AXL_URL_CACHE_ONLY_RETRIEVAL  
   
--   AXL_LIFETIME_SIGNING  
+- AXL_LIFETIME_SIGNING  
   
--   AXL_TRUST_MICROSOFT_ROOT_ONLY  
+- AXL_TRUST_MICROSOFT_ROOT_ONLY  
   
  `pSignerInfo`  
  [out] Für den Erhalt von Informationen über den Signaturgeber. Wenn die Lizenz nicht signiert wurde, ist `dwError` auf TRUST_E_NOSIGNATURE eingestellt. Es ist der Verantwortung des Aufrufers, Ressourcen freizugeben, mit der [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) Funktion nach der Verwendung.  

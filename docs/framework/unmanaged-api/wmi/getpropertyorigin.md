@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42e5cd6ee438b33fd07fd7c3242cc3c2a6513dd9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 542c4a01a9fd56587d51421709ffb990707f2ae0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368872"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636785"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin-Funktion
 

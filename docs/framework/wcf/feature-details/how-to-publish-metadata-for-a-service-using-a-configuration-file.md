@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f3fda88f4ec2f2695d6026d6e4df79243124b7b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075202"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643660"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei
 Dies ist eines der beiden Gewusst-wie-Themen, die Veröffentlichung von Metadaten für einen Windows Communication Foundation (WCF)-Dienst zu veranschaulichen. Es gibt zwei Möglichkeiten, wie ein Dienst Metadaten veröffentlichen kann: mit einer Konfigurationsdatei und mit Code. In diesem Thema wird das Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei dargestellt.  
@@ -92,15 +92,15 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>So veröffentlichen Sie Metadaten für einen WCF-Dienst mithilfe einer Konfigurationsdatei  
   
-1.  Erstellen Sie in der App.config-Datei, nachdem Sie das `</services>`-Element geschlossen haben, ein `<behaviors>`-Element.  
+1. Erstellen Sie in der App.config-Datei, nachdem Sie das `</services>`-Element geschlossen haben, ein `<behaviors>`-Element.  
 
-2.  Fügen Sie im `<behaviors>`-Element ein `<serviceBehaviors>`-Element hinzu.  
+2. Fügen Sie im `<behaviors>`-Element ein `<serviceBehaviors>`-Element hinzu.  
 
-3.  Fügen Sie ein `<behavior>`-Element zum `<serviceBehaviors>`-Element hinzu, und geben Sie einen Wert für das `name`-Attribut des `<behavior>`-Elements an.  
+3. Fügen Sie ein `<behavior>`-Element zum `<serviceBehaviors>`-Element hinzu, und geben Sie einen Wert für das `name`-Attribut des `<behavior>`-Elements an.  
 
-4.  Fügen Sie dem `<serviceMetadata>`-Element ein `<behavior>`-Element hinzu. Legen Sie das `httpGetEnabled`-Attribut auf `true` und das `policyVersion`-Attribut auf Policy15 fest. `httpGetEnabled` ermöglicht dem Dienst, auf die Metadatenanforderungen einer HTTP GET-Anforderung zu reagieren. `policyVersion` weist den Dienst, um WS-Richtlinie 1.5 zu entsprechen, bei der Erstellung von Metadaten.  
+4. Fügen Sie dem `<serviceMetadata>`-Element ein `<behavior>`-Element hinzu. Legen Sie das `httpGetEnabled`-Attribut auf `true` und das `policyVersion`-Attribut auf Policy15 fest. `httpGetEnabled` ermöglicht es dem Dienst, auf die Metadatenanforderungen einer HTTP GET-Anforderung zu antworten. `policyVersion` teilt dem Dienst mit, bei der Erstellung von Metadaten der WS-Richtlinie 1.5 zu folgen.  
 
-5.  Fügen Sie dem `behaviorConfiguration`-Element ein `<service>`-Attribut hinzu, und geben Sie das `name`-Attribut des in Schritt&amp;#160;1 hinzugefügten `<behavior>`-Elements an, wie im folgenden Codebeispiel gezeigt.  
+5. Fügen Sie dem `behaviorConfiguration`-Element ein `<service>`-Attribut hinzu, und geben Sie das `name`-Attribut des in Schritt&amp;#160;1 hinzugefügten `<behavior>`-Elements an, wie im folgenden Codebeispiel gezeigt.  
   
     ```xml  
     <services>  
@@ -119,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  Fügen Sie ein oder mehrere `<endpoint>`-Elemente hinzu, wobei der Vertrag auf `IMetadataExchange` festgelegt ist, wie im folgenden Codebeispiel gezeigt.  
+6. Fügen Sie ein oder mehrere `<endpoint>`-Elemente hinzu, wobei der Vertrag auf `IMetadataExchange` festgelegt ist, wie im folgenden Codebeispiel gezeigt.  
   
     ```xml  
     <services>  
@@ -138,23 +138,23 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7.  Legen Sie für die im vorherigen Schritt hinzugefügten Metadatenendpunkte das `binding`-Attribut auf einen der folgenden Werte fest:  
+7. Legen Sie für die im vorherigen Schritt hinzugefügten Metadatenendpunkte das `binding`-Attribut auf einen der folgenden Werte fest:  
   
-    -   `mexHttpBinding` für HTTP-Veröffentlichung.  
+    - `mexHttpBinding` für HTTP-Veröffentlichung.  
   
-    -   `mexHttpsBinding` für HTTPS-Veröffentlichung.  
+    - `mexHttpsBinding` für HTTPS-Veröffentlichung.  
   
-    -   `mexNamedPipeBinding` für benannte pipeveröffentlichung.  
+    - `mexNamedPipeBinding` für benannte Pipeveröffentlichung.  
   
-    -   `mexTcpBinding` für TCP-Veröffentlichung.  
+    - `mexTcpBinding` für TCP-Veröffentlichung.  
   
-8.  Legen Sie die Adressen für die in einem vorherigen Schritt hinzugefügten Metadatenendpunkte auf Folgendes fest:  
+8. Legen Sie die Adressen für die in einem vorherigen Schritt hinzugefügten Metadatenendpunkte auf Folgendes fest:  
   
-    -   Eine leere Zeichenfolge, um die Basisadresse der Hostanwendung als Veröffentlichungspunkt zu verwenden, wenn die Basisadresse gleich der Metadatenbindung ist.  
+    - Eine leere Zeichenfolge, um die Basisadresse der Hostanwendung als Veröffentlichungspunkt zu verwenden, wenn die Basisadresse gleich der Metadatenbindung ist.  
   
-    -   Eine relative Adresse, wenn die Hostanwendung über eine Basisadresse verfügt.  
+    - Eine relative Adresse, wenn die Hostanwendung über eine Basisadresse verfügt.  
   
-    -   Eine absolute Adresse.  
+    - Eine absolute Adresse.  
   
 9. Erstellen Sie die Konsolenanwendung und führen Sie sie aus.  
   
@@ -162,7 +162,7 @@ namespace Metadata.Samples
   
 ### <a name="to-use-default-endpoints"></a>So verwenden Sie Standardendpunkte  
   
-1.  Um Metadaten für einen Dienst zu konfigurieren, der Standardendpunkte verwendet, geben Sie das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in der Konfigurationsdatei fest, so wie im vorherigen Beispiel. Legen Sie jedoch keine Endpunkte fest. Die Konfigurationsdatei sieht dann wie folgt aus.  
+1. Um Metadaten für einen Dienst zu konfigurieren, der Standardendpunkte verwendet, geben Sie das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> in der Konfigurationsdatei fest, so wie im vorherigen Beispiel. Legen Sie jedoch keine Endpunkte fest. Die Konfigurationsdatei sieht dann wie folgt aus.  
   
     ```xml  
     <configuration>  
@@ -260,4 +260,4 @@ namespace Metadata.Samples
 - [Selbst gehostete Dienste](../../../../docs/framework/wcf/samples/self-host.md)
 - [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst über den Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe von Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

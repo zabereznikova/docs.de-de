@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033605"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Vorgehensweise: Verwenden von gespeicherten Prozeduren, die Parameter annehmen
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ordnet die Output-Parameter, um Parameter zu verweisen, und für Werttypen wird den Parameter als auf NULL festlegbar deklariert.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ordnet Verweisparametern Ausgabeparameter zu, und für Werttypen wird der Parameter als auf NULL festlegbar deklariert.  
   
  Ein Beispiel dafür, wie Eingabeparameter in einer Abfrage verwenden, die ein Rowset zurückgibt, finden Sie [Vorgehensweise: Zurückgeben von Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
   
@@ -42,6 +42,6 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 ## <a name="see-also"></a>Siehe auch
 
 - [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Verwenden von auf NULL festlegbaren Typen](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Verwenden von Typen mit Nullwert](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Auf NULL festlegbare Werttypen](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

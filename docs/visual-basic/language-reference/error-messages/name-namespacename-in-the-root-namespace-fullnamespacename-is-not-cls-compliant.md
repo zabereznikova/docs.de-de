@@ -1,5 +1,5 @@
 ---
-title: Der Name "<namespacename>" im Stammnamespace "<fullnamespacename>" ist nicht CLS-kompatibel.
+title: Der Name '<namespacename>' im Stammnamespace '<fullnamespacename>' ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40039
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40039
 ms.assetid: c5bd5914-ae71-416a-8bed-f76f644f78be
-ms.openlocfilehash: 84706719d151ea8df478f88610df34842f6f8702
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: faed46eaf21513945ef4eb0c76d36780e960d380
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841536"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592022"
 ---
 # <a name="name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant"></a>Namen \<Namespacename > im Stammnamespace \<Fullnamespacename > ist nicht CLS-kompatibel.
 Eine Assembly ist als markiert `<CLSCompliant(True)>`, aber ein Element von der stammnamespacename beginnt mit einem Unterstrich (`_`).  
@@ -29,9 +29,9 @@ Eine Assembly ist als markiert `<CLSCompliant(True)>`, aber ein Element von der 
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn Sie CLS-Kompatibilität benötigen, ändern Sie den Stammnamespace-Name, sodass keines ihrer Elemente mit einem Unterstrich beginnt.  
+- Wenn Sie CLS-Kompatibilität benötigen, ändern Sie den Stammnamespace-Name, sodass keines ihrer Elemente mit einem Unterstrich beginnt.  
   
--   Wenn Sie benötigen, dass der Namespacename unverändert bleiben, entfernen Sie die <xref:System.CLSCompliantAttribute> aus der Assembly oder kennzeichnen Sie ihn als `<CLSCompliant(False)>`.  
+- Wenn Sie benötigen, dass der Namespacename unverändert bleiben, entfernen Sie die <xref:System.CLSCompliantAttribute> aus der Assembly oder kennzeichnen Sie ihn als `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Siehe auch
 

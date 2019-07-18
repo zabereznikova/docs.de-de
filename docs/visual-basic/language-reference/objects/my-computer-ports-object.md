@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
-ms.openlocfilehash: 6639499291f203f355ec6e7f9c70e19c7555cd9a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1c3d2904dfc2f7d2fecbe74552b4ba8416e425d3
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832449"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041751"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports-Objekt
 Stellt eine Eigenschaft und eine Methode bereit, mit deren Hilfe Sie auf die seriellen Anschlüsse eines Computer zugreifen können.  
@@ -28,7 +28,7 @@ Stellt eine Eigenschaft und eine Methode bereit, mit deren Hilfe Sie auf die ser
   
  **Klasse:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Siehe auch
 

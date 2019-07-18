@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609576"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170841"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementierung von freigegebenen Verhaltensweisen in der XslTransform-Klasse
 
 > [!NOTE]
-> Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](migrating-from-the-xsltransform-class.md).
+> Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](migrating-from-the-xsltransform-class.md).
 
 Freigegebene Verhaltensweisen sind die in der [World Wide Web Consortium (W3C) XSL Transformations (XSLT) Version 1.0 Recommendation](https://www.w3.org/TR/1999/REC-xslt-19991116), aufgelisteten Verhaltensweisen, bei denen der Implementierungsanbieter eine von mehreren Optionen zur Behandlung einer bestimmten Situation auswählt. Laut W3C-Empfehlung, Abschnitt 7.3, "Creating Processing Instructions", liegt z. B. ein Fehler vor, wenn durch Instanziierung des Inhalts von `xsl:processing-instruction` außer Textknoten auch andere Knoten erstellt werden. Bei bestimmten Problemen nennt das W3C auch Maßnahmen für den Fall, dass der Prozessor eine Wiederherstellung vom Fehler durchführt. Für das in Abschnitt 7.3 angeführte Problem empfiehlt das W3C, die Knoten einschließlich des Inhalts zu ignorieren, damit die Implementierung von diesem Fehler wiederherstellen kann.
 
-Daher enthält die folgende Tabelle alle freigegebenen Verhaltensweisen, die vom W3C zugelassen sind und die für die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Implementierung der <xref:System.Xml.Xsl.XslTransform>-Klasse implementiert sind, sowie jeweils den Abschnitt der W3C-Empfehlung zu XSLT 1.0, in der das entsprechende Problem behandelt wird.
+Daher enthält die folgende Tabelle alle freigegebenen Verhaltensweisen, die vom W3C zugelassen sind und für die .NET Framework-Implementierung der <xref:System.Xml.Xsl.XslTransform>-Klasse implementiert sind – sowie jeweils den Abschnitt der W3C-Empfehlung zu XSLT 1.0, in der das entsprechende Problem behandelt wird.
 
 |Problem|Verhalten|Bereich|
 |-------------|--------------|-------------|

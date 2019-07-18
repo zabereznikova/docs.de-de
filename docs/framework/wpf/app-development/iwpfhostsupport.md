@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 97a120c57624ada32e6661bd8a613c4ea1d01b2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376012"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591391"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Anwendungen, in denen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Inhalte über PresentationHost.exe implementieren diese Schnittstelle zum Bereitstellen eine Integration zwischen dem Host und PresentationHost.exe.  
@@ -19,11 +19,11 @@ Anwendungen, in denen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  Die Integration von aktiviert `IWpfHostSupport` PresentationHost.exe ermöglicht:  
   
--   Ermitteln Sie und registrieren Sie mit der Eingabegeräte für Rohdaten (Eingabegeräte), denen die hostanwendung interessant ist.  
+- Ermitteln Sie und registrieren Sie mit der Eingabegeräte für Rohdaten (Eingabegeräte), denen die hostanwendung interessant ist.  
   
--   Erhalten Sie eingehende Nachrichten aus der registrierten Geräten für unformatierte Eingabe und die entsprechenden Weiterleiten von Nachrichten an die hostanwendung.  
+- Erhalten Sie eingehende Nachrichten aus der registrierten Geräten für unformatierte Eingabe und die entsprechenden Weiterleiten von Nachrichten an die hostanwendung.  
   
--   Fragen Sie die hostanwendung für benutzerdefinierte Status- und Benutzeroberflächen.  
+- Fragen Sie die hostanwendung für benutzerdefinierte Status- und Benutzeroberflächen.  
   
 > [!NOTE]
 >  Diese API ist nur für die Verwendung auf dem lokalen Clientcomputer vorgesehen und wird nur zu diesem Zweck unterstützt.  

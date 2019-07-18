@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 909bcad035516c494d1f867b71bb8f52939eba13
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8769293364c111754f4bfe9360a0dca93c0ba13c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496429"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770603"
 ---
 # <a name="icordebugthreadgetregisterset-method"></a>ICorDebugThread::GetRegisterSet-Methode
 Ruft einen Schnittstellenzeiger auf das Register-Satz, der der aktive Teil dieses ICorDebugThread-Objekt zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetRegisterSet (  
     [out] ICorDebugRegisterSet **ppRegisters  
 );  

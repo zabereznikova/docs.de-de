@@ -10,11 +10,11 @@ helpviewer_keywords:
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
 ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674796"
 ---
 # <a name="systemcodedom-element"></a>\<System.CodeDom >-Element
 Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.  
@@ -92,5 +92,5 @@ Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schema für Compiler- und Sprachanbietereinstellungen](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<Compilerfehler >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [Compiler and Language Provider Settings Schema (Schema für Compiler- und Sprachanbietereinstellungen)](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
+- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 529d1b83c0637f705b725a64aa82e2c053bbfd19
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "58467068"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858432"
 ---
 ### <a name="contentdisposition-datetimes-returns-slightly-different-string"></a>Die DateTime-Elemente von „ContentDisposition“ geben eine etwas andere Zeichenfolge zurück
 

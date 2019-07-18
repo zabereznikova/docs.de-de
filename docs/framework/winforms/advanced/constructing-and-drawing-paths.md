@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], drawing paths
 ms.assetid: f16ec921-56cf-46d1-9741-d7316ad06b23
 ms.openlocfilehash: a698b93aac29a0a7f5c959b29a3feb41eb447e8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935407"
 ---
 # <a name="constructing-and-drawing-paths"></a>Erstellen und Zeichnen von Pfaden
 Ein Pfad ist eine Sequenz von Grafikprimitiven (Linien, Rechtecke, Kurven, Text und ähnliches), die bearbeitet und als einzelne Einheit gezeichnet werden können. Ein Pfad aufgeteilt werden kann *Abbildungen* offen oder geschlossen sind. Eine Abbildung kann mehrere primitive Typen enthalten.  

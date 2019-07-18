@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a01b4203145f6ffee4e3a11a3526f0b83e3dc741
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d500584afd608f79e41e932be259d29ae51db2db
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154621"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781581"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString-Methode
 Ruft die Version der Laufzeit, die verwendet wurde, zur Erstellung der Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetVersionString (  
    [out] LPWSTR      pwzBuf,  
    [in]  DWORD       ccBufSize,  

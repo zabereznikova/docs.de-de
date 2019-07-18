@@ -1,5 +1,5 @@
 ---
-title: <gcAllowVeryLargeObjects> Element
+title: <gcAllowVeryLargeObjects>-Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19103b2ac6e6dbba930050074fcea3cfd5a97661
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2988b054030df23ae8ccd8840f83c239f0401321
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098015"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607259"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Element
 Ermöglicht auf 64-Bit-Plattformen Arrays mit einer Gesamtgröße von mehr als 2 Gigabyte (GB).  
@@ -57,11 +57,11 @@ Ermöglicht auf 64-Bit-Plattformen Arrays mit einer Gesamtgröße von mehr als 2
 ## <a name="remarks"></a>Hinweise  
  Dieses Element in der Anwendungskonfigurationsdatei ermöglicht Arrays, die größer als 2 GB sind, es werden jedoch keine anderen Beschränkungen der Objekt- oder Arraygröße geändert:  
   
--   Die maximale Anzahl der Elemente in einem Array ist <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
+- Die maximale Anzahl der Elemente in einem Array ist <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
   
--   Der maximale Index in jeder einzelnen Dimension ist 2.147.483.591 (0x7FFFFFC7) für Bytearrays und Arrays von Einzelbytestrukturen sowie 2.146.435.071 (0X7FEFFFFF) für andere Typen.  
+- Der maximale Index in jeder einzelnen Dimension ist 2.147.483.591 (0x7FFFFFC7) für Bytearrays und Arrays von Einzelbytestrukturen sowie 2.146.435.071 (0X7FEFFFFF) für andere Typen.  
   
--   Die maximale Größe für Zeichenfolgen und andere Nichtarrayobjekte ist unverändert.  
+- Die maximale Größe für Zeichenfolgen und andere Nichtarrayobjekte ist unverändert.  
   
 > [!CAUTION]
 >  Bevor Sie diese Funktion aktivieren, stellen Sie sicher, dass Ihre Anwendung keinen unsicheren Code enthält, der davon ausgeht, dass alle Arrays weniger als 2 GB groß sind. Beispielsweise könnte unsicherer Code, der Arrays als Puffer verwendet, für Pufferüberläufe anfällig sein, wenn dieser ausgehend davon geschrieben wurde, dass Arrays 2 GB nicht überschreiten.  

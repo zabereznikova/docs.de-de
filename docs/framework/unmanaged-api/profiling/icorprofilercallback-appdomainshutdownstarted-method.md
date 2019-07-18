@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f422e99a5f6a4153368304ff0b33bbc55381575a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a9d1cf182eaf6f245baa5d898bac3ca7d3190234
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177111"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763091"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted-Methode
 Benachrichtigt den Profiler, dass von einem Prozess, eine Anwendungsdomäne entladen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT AppDomainShutdownStarted(  
     [in] AppDomainID appDomainId);  
 ```  

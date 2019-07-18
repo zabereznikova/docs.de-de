@@ -23,11 +23,11 @@ helpviewer_keywords:
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 ms.openlocfilehash: 0a5a5261e6b71178adce02a5635c1f91a1469f3d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784071"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error-Anweisung (Visual Basic)
 Aktiviert eine Fehlerbehandlungsroutine und gibt den Speicherort der Routine in einer Prozedur an. kann auch verwendet werden, um eine Fehlerbehandlungsroutine zu deaktivieren.  

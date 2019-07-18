@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f096c1f3898348141e13da44f39f2768417acd1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8dd5e2ecf22ce14765df8972611f1f95109f76ed
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152242"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769197"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>ICorProfilerCallback::ModuleUnloadFinished-Methode
 Benachrichtigt den Profiler, dass ein Modul entladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ModuleUnloadFinished(  
     [in] ModuleID moduleId,  
     [in] HRESULT  hrStatus);  

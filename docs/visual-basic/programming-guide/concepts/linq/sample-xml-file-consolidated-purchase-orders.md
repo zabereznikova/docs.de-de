@@ -3,11 +3,11 @@ title: 'Beispiel-XML-Datei: Konsolidierte Kauf Orders3'
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
 ms.openlocfilehash: edeb1381b674ee9f6fba45f14c7b6f12b363a37a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787061"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Beispiel-XML-Datei: Konsolidierte Bestellungen
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei besteht aus einem Satz von unterschiedlich geformten Aufträgen verschiedener Unternehmen. Für die Aufträge eines Unternehmens gibt es jeweils einen eigenen Namespace.  

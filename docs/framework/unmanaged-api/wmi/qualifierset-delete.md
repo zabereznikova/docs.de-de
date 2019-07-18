@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 543cc63b3e2188c11a6a8bf1eaa846461375be99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 956abe8ddf8075b7b8f8c057db0aa7187982e1d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180075"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782609"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete-Funktion
 Löscht einen angegebenen Qualifizierer anhand des Namens.  
@@ -30,7 +30,7 @@ Löscht einen angegebenen Qualifizierer anhand des Namens.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT QualifierSet_Delete (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 

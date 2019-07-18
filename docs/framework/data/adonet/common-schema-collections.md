@@ -3,10 +3,10 @@ title: Allgemeine Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 ms.openlocfilehash: f6307352cc2d976e4e9f47d1e111d40f96fc16c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209670"
 ---
 # <a name="common-schema-collections"></a>Allgemeine Schemaauflistungen
@@ -97,5 +97,5 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
 ## <a name="see-also"></a>Siehe auch
 
 - [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- ["GetSchema" und Schemaauflistungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
+- [GetSchema und Schemasammlungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

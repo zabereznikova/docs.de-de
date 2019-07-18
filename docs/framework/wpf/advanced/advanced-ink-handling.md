@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
 ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008940"
 ---
 # <a name="advanced-ink-handling"></a>Erweiterte Behandlung von Freihandeingaben
 Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] im Lieferumfang der <xref:System.Windows.Controls.InkCanvas>, und ist ein Element, das Sie in Ihrer Anwendung, um sofort zu starten, sammeln und Anzeigen von Freihandeingaben einfügen können. Aber wenn die <xref:System.Windows.Controls.InkCanvas> Steuerelement bietet nicht genug hochgradige Kontrolle, die Sie selbst steuern auf einer höheren Ebene durch Anpassen der eigenen Freihandeingaben und Freihand-Rendering-Klassen mit <xref:System.Windows.Input.StylusPlugIns>.  

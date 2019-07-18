@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7684804b5f3cb71c38ee498fcc9c80003e7169
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b35c0b7028a07e6b760c0e3142995599f30c4c1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203768"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766228"
 ---
 # <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a>ICorDebugObjectValue::SetFromManagedCopy-Methode
 `SetFromManagedCopy` ist veraltet. Rufen Sie diese Methode nicht.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetFromManagedCopy (  
     [in] IUnknown            *pObject  
 );  

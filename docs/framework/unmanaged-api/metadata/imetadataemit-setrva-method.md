@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e17a6846ba0276ec7ba423ab25e3f11baf278d03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 02331bb3b0c70b946eaa28c9cd316f109ac927b6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777237"
 ---
 # <a name="imetadataemitsetrva-method"></a>IMetaDataEmit::SetRVA-Methode
 Legt fest, die relative virtuelle Adresse der angegebenen Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT SetRVA (  
     [in]  mdMethodDef  md,   
     [in]  ULONG        ulRVA   

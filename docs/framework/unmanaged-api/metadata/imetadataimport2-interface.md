@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6717c48fca14f2200f783a984594388ef3b29c15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042470"
 ---
 # <a name="imetadataimport2-interface"></a>IMetaDataImport2-Schnittstelle
 Erweitert die [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) Schnittstelle, um die Funktion für die Arbeit mit generischen Typen bereitzustellen.  

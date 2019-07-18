@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c129f902937363972e6be1a6518ae5a97e467f44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625694"
 ---
 # <a name="tilebrush-overview"></a>Übersicht über TileBrush
 <xref:System.Windows.Media.TileBrush> -Objekte bieten Ihnen viel Kontrolle wie ein Bereich mit einem Bild, gezeichnet wird <xref:System.Windows.Media.Drawing>, oder <xref:System.Windows.Media.Visual>. In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.TileBrush> Funktionen erhalten Sie weitere steuern, wie ein <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, oder <xref:System.Windows.Media.VisualBrush> zeichnet einen Bereich.  
@@ -40,11 +40,11 @@ Komponenten eines TileBrush mit einer TileMode-Kachel
 ## <a name="brush-content"></a>Pinselinhalt  
  Es gibt drei verschiedene Typen von <xref:System.Windows.Media.TileBrush> und jeder Zeichnet mit einem anderen Typ des Inhalts.  
   
--   Ist der Pinsel ein <xref:System.Windows.Media.ImageBrush>, dieser Inhalt ist ein Bild der <xref:System.Windows.Media.ImageBrush.ImageSource%2A> Eigenschaft gibt an, den Inhalt der <xref:System.Windows.Media.ImageBrush>.  
+- Ist der Pinsel ein <xref:System.Windows.Media.ImageBrush>, dieser Inhalt ist ein Bild der <xref:System.Windows.Media.ImageBrush.ImageSource%2A> Eigenschaft gibt an, den Inhalt der <xref:System.Windows.Media.ImageBrush>.  
   
--   Wenn der Pinsel ein <xref:System.Windows.Media.DrawingBrush>, dieser Inhalt ist eine Zeichnung. Die <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Eigenschaft gibt an, den Inhalt der <xref:System.Windows.Media.DrawingBrush>.  
+- Wenn der Pinsel ein <xref:System.Windows.Media.DrawingBrush>, dieser Inhalt ist eine Zeichnung. Die <xref:System.Windows.Media.DrawingBrush.Drawing%2A> Eigenschaft gibt an, den Inhalt der <xref:System.Windows.Media.DrawingBrush>.  
   
--   Wenn der Pinsel ein <xref:System.Windows.Media.VisualBrush>, dieser Inhalt ist eine Visualisierung. Die <xref:System.Windows.Media.VisualBrush.Visual%2A> Eigenschaft gibt den Inhalt der <xref:System.Windows.Media.VisualBrush>.  
+- Wenn der Pinsel ein <xref:System.Windows.Media.VisualBrush>, dieser Inhalt ist eine Visualisierung. Die <xref:System.Windows.Media.VisualBrush.Visual%2A> Eigenschaft gibt den Inhalt der <xref:System.Windows.Media.VisualBrush>.  
   
  Können Sie angeben, die Position und Abmessungen des <xref:System.Windows.Media.TileBrush> Inhalt mithilfe der <xref:System.Windows.Media.TileBrush.Viewbox%2A> Eigenschaft zwar üblich, lassen die <xref:System.Windows.Media.TileBrush.Viewbox%2A> auf seinen Standardwert festgelegt. In der Standardeinstellung die <xref:System.Windows.Media.TileBrush.Viewbox%2A> ist konfiguriert, dass der Inhalt des Pinsels vollständig enthalten. Weitere Informationen zum Konfigurieren der <xref:System.Windows.Controls.Viewbox>, finden Sie unter den <xref:System.Windows.Controls.Viewbox> Eigenschaftenseite.  
   
@@ -52,13 +52,13 @@ Komponenten eines TileBrush mit einer TileMode-Kachel
 ## <a name="the-base-tile"></a>Basiskachel  
  Ein <xref:System.Windows.Media.TileBrush> projiziert seinen Inhalt auf eine Basiskachel. Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft steuert wie <xref:System.Windows.Media.TileBrush> Inhalt wird gestreckt, um die Basiskachel auszufüllen. Die <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft akzeptiert die folgenden Werte, die von definiert die <xref:System.Windows.Media.Stretch> Enumeration:  
   
--   <xref:System.Windows.Media.Stretch.None>: Der Inhalt des Pinsels wird nicht gestreckt, um die Kachel auszufüllen.  
+- <xref:System.Windows.Media.Stretch.None>: Der Inhalt des Pinsels wird nicht gestreckt, um die Kachel auszufüllen.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Der Inhalt des Pinsels wird skaliert, um die Kachel zu passen. Da Höhe und Breite des Inhalts unabhängig voneinander skaliert werden, wird das ursprüngliche Seitenverhältnis des Inhalts möglicherweise nicht beibehalten. Der Inhalt des Pinsels wird möglicherweise verzerrt, um die Ausgabekachel vollständig auszufüllen.  
+- <xref:System.Windows.Media.Stretch.Fill>: Der Inhalt des Pinsels wird skaliert, um die Kachel zu passen. Da Höhe und Breite des Inhalts unabhängig voneinander skaliert werden, wird das ursprüngliche Seitenverhältnis des Inhalts möglicherweise nicht beibehalten. Der Inhalt des Pinsels wird möglicherweise verzerrt, um die Ausgabekachel vollständig auszufüllen.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Der Inhalt des Pinsels wird so skaliert, dass er vollständig innerhalb des Felds passt. Das Seitenverhältnis des Inhalts wird beibehalten.  
+- <xref:System.Windows.Media.Stretch.Uniform>: Der Inhalt des Pinsels wird so skaliert, dass er vollständig innerhalb des Felds passt. Das Seitenverhältnis des Inhalts wird beibehalten.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Der Inhalt des Pinsels wird skaliert, sodass er den Ausgabebereich vollständig ausfüllt, und gleichzeitig den Inhalt des ursprünglichen Seitenverhältnisse beizubehalten.  
+- <xref:System.Windows.Media.Stretch.UniformToFill>: Der Inhalt des Pinsels wird skaliert, sodass er den Ausgabebereich vollständig ausfüllt, und gleichzeitig den Inhalt des ursprünglichen Seitenverhältnisse beizubehalten.  
   
  Die folgende Abbildung zeigt die verschiedenen <xref:System.Windows.Media.TileBrush.Stretch%2A> Einstellungen.  
   
@@ -99,15 +99,15 @@ Komponenten eines TileBrush mit einer TileMode-Kachel
 ### <a name="tiling-behavior"></a>Kachelverhalten  
  Ein <xref:System.Windows.Media.TileBrush> erzeugt ein Kachelmuster, wenn die Basiskachel den Ausgabebereich ausfüllt und ein anderer Kachelmodus nicht vollständig ausfüllt wird <xref:System.Windows.Media.TileMode.None> angegeben ist. Wenn Sie eine Kachel kachelpinsels den Ausgabebereich nicht vollständig ausfüllt seine <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaft gibt an, ob die Basiskachel dupliziert werden soll, um den Ausgabebereich auszufüllen, und wenn dies der Fall ist, wie die Basiskachel dupliziert werden soll. Die <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaft akzeptiert die folgenden Werte, die von definiert die <xref:System.Windows.Media.TileMode> Enumeration:  
   
--   <xref:System.Windows.Media.TileMode.None>: Nur die Basiskachel wird gezeichnet.  
+- <xref:System.Windows.Media.TileMode.None>: Nur die Basiskachel wird gezeichnet.  
   
--   <xref:System.Windows.Media.TileMode.Tile>: Die Basiskachel wird gezeichnet, und der verbleibende Bereich wird durch die Wiederholung der Basiskachel, dass die Rechte Kante einer Kachel neben bis zur linken Kante der nächsten und wird auf ähnliche Weise für die untere und obere Kante gefüllt.  
+- <xref:System.Windows.Media.TileMode.Tile>: Die Basiskachel wird gezeichnet, und der verbleibende Bereich wird durch die Wiederholung der Basiskachel, dass die Rechte Kante einer Kachel neben bis zur linken Kante der nächsten und wird auf ähnliche Weise für die untere und obere Kante gefüllt.  
   
--   <xref:System.Windows.Media.TileMode.FlipX>: Identisch mit <xref:System.Windows.Media.TileMode.Tile>, aber Kachelspalte horizontal gekippt werden.  
+- <xref:System.Windows.Media.TileMode.FlipX>: Identisch mit <xref:System.Windows.Media.TileMode.Tile>, aber Kachelspalte horizontal gekippt werden.  
   
--   <xref:System.Windows.Media.TileMode.FlipY>: Identisch mit <xref:System.Windows.Media.TileMode.Tile>, aber kachelreihe vertikal gekippt werden.  
+- <xref:System.Windows.Media.TileMode.FlipY>: Identisch mit <xref:System.Windows.Media.TileMode.Tile>, aber kachelreihe vertikal gekippt werden.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Die Kombination aus <xref:System.Windows.Media.TileMode.FlipX> und <xref:System.Windows.Media.TileMode.FlipY>.  
+- <xref:System.Windows.Media.TileMode.FlipXY>: Die Kombination aus <xref:System.Windows.Media.TileMode.FlipX> und <xref:System.Windows.Media.TileMode.FlipY>.  
   
  Die folgende Abbildung zeigt die unterschiedlichen Kachelmodi.  
   
@@ -127,7 +127,7 @@ Komponenten eines TileBrush mit einer TileMode-Kachel
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)
-- [Gewusst wie-Themen](brushes-how-to-topics.md)
+- [Themen zu Vorgehensweisen](brushes-how-to-topics.md)
 - [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md)
 - [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)

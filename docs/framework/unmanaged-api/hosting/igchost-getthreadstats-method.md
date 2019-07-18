@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88f86385ba4f4186d14994a2028ee11c42127546
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 87e318c4f2367e8c66910978f4a9c89f36c95632
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108347"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766506"
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats-Methode
 Ruft die Statistiken pro Thread für die Garbagecollection ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetThreadStats (  
     [in] DWORD *pFiberCookie,  
     [in, out] COR_GC_THREAD_STATS *pStats  

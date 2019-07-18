@@ -7,57 +7,57 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115699"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569556"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden häufig digitale X.509-Zertifikate zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieser Artikel bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in WCF und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit WCF und Zertifikaten erläutert werden.  
   
- Digitale Zertifikate sind Teil einer *Public Key-Infrastruktur* (PKI). Dabei handelt es sich um ein System aus digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen zur Überprüfung und Authentifizierung der Gültigkeit aller beteiligten Parteien in einer elektronischen Transaktion unter Verwendung der Public Key-Kryptografie. Die Zertifikate werden von einer Zertifizierungsstelle ausgestellt, und jedes Zertifikat enthält eine Reihe von Feldern mit Daten, z.B. *Antragsteller* (die Entität, für die das Zertifikat ausgestellt wird), Gültigkeitsdatum (das Datum, bis zu dem das Zertifikat gültig ist), Aussteller (die Entität, von der das Zertifikat ausgestellt wurde) und öffentlicher Schlüssel. In WCF werden diese Eigenschaften als <xref:System.IdentityModel.Claims.Claim> verarbeitet, und jeder Anspruch wird weiter in zwei Typen unterteilt: Identität und Recht. Weitere Informationen zu X.509-Zertifikaten finden Sie unter [X.509 Public Key Certificates (X.509-Zertifikate mit öffentlichem Schlüssel)](https://go.microsoft.com/fwlink/?LinkId=209952). Weitere Informationen über Ansprüche und Autorisierung in WCF finden Sie unter [Managing Claims and Authorization with the Identity Model (Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell)](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). Weitere Informationen zur Implementierung einer PKI finden Sie unter [Windows Server 2008 R2 - Certificate Services (Windows Server 2008 R2: Zertifikatdienste)](https://go.microsoft.com/fwlink/?LinkId=209949).  
+ Digitale Zertifikate sind Teil einer *Public Key-Infrastruktur* (PKI). Dabei handelt es sich um ein System aus digitalen Zertifikaten, Zertifizierungsstellen und anderen Registrierungsstellen zur Überprüfung und Authentifizierung der Gültigkeit aller beteiligten Parteien in einer elektronischen Transaktion unter Verwendung der Public Key-Kryptografie. Die Zertifikate werden von einer Zertifizierungsstelle ausgestellt, und jedes Zertifikat enthält eine Reihe von Feldern mit Daten, z.B. *Antragsteller* (die Entität, für die das Zertifikat ausgestellt wird), Gültigkeitsdatum (das Datum, bis zu dem das Zertifikat gültig ist), Aussteller (die Entität, von der das Zertifikat ausgestellt wurde) und öffentlicher Schlüssel. In WCF werden diese Eigenschaften als <xref:System.IdentityModel.Claims.Claim> verarbeitet, und jeder Anspruch wird weiter in zwei Typen unterteilt: Identität und Recht. Weitere Informationen zu X.509-Zertifikaten finden Sie unter [X.509 Public Key Certificates (X.509-Zertifikate mit öffentlichem Schlüssel)](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Weitere Informationen über Ansprüche und Autorisierung in WCF finden Sie unter [Managing Claims and Authorization with the Identity Model (Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell)](managing-claims-and-authorization-with-the-identity-model.md). Weitere Informationen zum Implementieren einer PKI finden Sie unter [Unternehmens-PKI mit Windows Server 2012 R2 Active Directory Certificate Services](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).  
   
  Die zentrale Funktion eines Zertifikats ist die Authentifizierung der Identität des Besitzers des Zertifikats gegenüber anderen. Ein Zertifikat enthält den *öffentlichen Schlüssel* des Besitzers, während der Besitzer den privaten Schlüssel behält. Der öffentliche Schlüssel kann zum Verschlüsseln von Nachrichten verwendet werden, die an den Besitzer des Zertifikats gesendet werden. Nur der Besitzer hat Zugriff auf den privaten Schlüssel, sodass niemand anders diese Nachrichten entschlüsseln kann.  
   
  Zertifikate müssen von einer Zertifizierungsstelle ausgestellt werden, bei der es sich oft um einen Drittanbieter-Zertifikataussteller handelt. Windows-Domänen verfügen über eine Zertifizierungsstelle, von der Zertifikate für Computer in der Domäne ausgestellt werden können.  
   
 ## <a name="viewing-certificates"></a>Anzeigen von Zertifikaten  
- Bei der Verwendung von Zertifikaten ist es oft erforderlich, die Zertifikate anzuzeigen und ihre Eigenschaften zu überprüfen. Die einfachste Methode dazu ist das MMC (Microsoft Management Console)-Snap-In-Tool. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Bei der Verwendung von Zertifikaten ist es oft erforderlich, die Zertifikate anzuzeigen und ihre Eigenschaften zu überprüfen. Die einfachste Methode dazu ist das MMC (Microsoft Management Console)-Snap-In-Tool. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Zertifikatspeicher  
  Zertifikate werden in Speichern abgelegt. Die zwei Hauptspeicherorte sind in weitere Unterspeicher unterteilt. Administratoren können beide Hauptspeicher mit dem MMC-Snap-In-Tool anzeigen. Alle anderen Benutzer können lediglich den Speicher des aktuellen Benutzers anzeigen.  
   
--   **Lokaler Computerspeicher** Dieser enthält die Zertifikate, die von den Prozessen des Computers verwendet werden, z. B. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Speichern Sie die Zertifikate zur Authentifizierung des Servers gegenüber Clients im lokalen Computerspeicher.  
+- **Lokaler Computerspeicher** Die Zertifikate, die von Computer-Prozessen, wie z. B. ASP.NET enthält. Speichern Sie die Zertifikate zur Authentifizierung des Servers gegenüber Clients im lokalen Computerspeicher.  
   
--   **Aktueller Benutzerspeicher** Interaktive Anwendungen legen Zertifikate für den aktuellen Benutzer des Computers normalerweise im aktuellen Benutzerspeicher ab. Beim Erstellen einer Clientanwendung werden die Zertifikate zur Authentifizierung eines Benutzers gegenüber einem Dienst normalerweise hier abgelegt.  
+- **Aktueller Benutzerspeicher** Interaktive Anwendungen legen Zertifikate für den aktuellen Benutzer des Computers normalerweise im aktuellen Benutzerspeicher ab. Beim Erstellen einer Clientanwendung werden die Zertifikate zur Authentifizierung eines Benutzers gegenüber einem Dienst normalerweise hier abgelegt.  
   
  Diese beiden Speicher teilen sich in weitere Unterspeicher auf. Die wichtigsten Unterspeicher für die Programmierung mit WCF sind folgende:  
   
--   **Vertrauenswürdige Stammzertifizierungsstellen** Mit den Zertifikaten in diesem Speicher können Sie eine Zertifikatkette erstellen, die zum Zertifikat einer Zertifizierungsstelle in diesem Speicher zurückverfolgt werden kann.  
+- **Vertrauenswürdige Stammzertifizierungsstellen** Mit den Zertifikaten in diesem Speicher können Sie eine Zertifikatkette erstellen, die zum Zertifikat einer Zertifizierungsstelle in diesem Speicher zurückverfolgt werden kann.  
   
     > [!IMPORTANT]
     >  Der lokale Computer stuft alle Zertifikate in diesem Speicher als implizit vertrauenswürdig ein; dies gilt auch, wenn das Zertifikat im Speicher nicht von einer vertrauenswürdigen Zertifizierungsstelle eines Drittanbieters stammt. Aus diesem Grund sollten Sie in diesem Speicher nur Zertifikate ablegen, wenn Sie dem Aussteller uneingeschränkt vertrauen und sich der möglichen Folgen bewusst sind.  
   
--   **Persönlich** Dieser Speicher wird für Zertifikate verwendet, die dem Benutzer eines Computers zugeordnet sind. Dieser Speicher wird normalerweise für Zertifikate verwendet, die von einem der Zertifikate der Zertifizierungsstelle im Speicher vertrauenswürdiger Stammzertifizierungsstellen stammen. Darüber hinaus können in diesem Speicher auch selbst ausgestellte Zertifikate abgelegt werden, die von einer Anwendung als vertrauenswürdig eingestuft werden.  
+- **Persönlich** Dieser Speicher wird für Zertifikate verwendet, die dem Benutzer eines Computers zugeordnet sind. Dieser Speicher wird normalerweise für Zertifikate verwendet, die von einem der Zertifikate der Zertifizierungsstelle im Speicher vertrauenswürdiger Stammzertifizierungsstellen stammen. Darüber hinaus können in diesem Speicher auch selbst ausgestellte Zertifikate abgelegt werden, die von einer Anwendung als vertrauenswürdig eingestuft werden.  
   
  Weitere Informationen zu den Zertifikatformaten finden Sie unter [Certificate Stores (Zertifikatspeicher)](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Auswählen eines Speichers  
  Die Auswahl des Speichers für ein Zertifikat hängt davon ab, wie und wann der Dienst oder Client ausgeführt wird. Dabei gelten folgende allgemeine Regeln:  
   
--   Wenn der WCF-Dienst in einem Windows-Dienst gehostet wird, wird der Speicher des **lokalen Computers** verwendet. Sie benötigen Administratorrechte, wenn Sie Zertifikate im lokalen Computerspeicher installieren möchten.  
+- Wenn der WCF-Dienst in einem Windows-Dienst gehostet wird, wird der Speicher des **lokalen Computers** verwendet. Sie benötigen Administratorrechte, wenn Sie Zertifikate im lokalen Computerspeicher installieren möchten.  
   
--   Wenn es sich beim Dienst oder Client um eine Anwendung handelt, die unter einem Benutzerkonto ausgeführt wird, wird der Speicher des **aktuellen Benutzers** verwendet.  
+- Wenn es sich beim Dienst oder Client um eine Anwendung handelt, die unter einem Benutzerkonto ausgeführt wird, wird der Speicher des **aktuellen Benutzers** verwendet.  
   
 ### <a name="accessing-stores"></a>Zugreifen auf Speicher  
- Speicher werden analog zu Ordnern auf einem Computer durch Zugriffssteuerungslisten (ACLs) geschützt. Beim Erstellen eines Diensts, der von Internet Information Services (IIS) gehostet wird, wird der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Prozess unter dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Konto ausgeführt. Dieses Konto muss über Zugriff auf den Speicher mit den Zertifikaten verfügen, die von einem Dienst verwendet werden. Die zentralen Speicher werden durch eine Standardzugriffssteuerungsliste geschützt, eine Änderung der Listen ist jedoch möglich. Wenn Sie eine separate Rolle für den Speicherzugriff erstellen, muss diese über die entsprechende Zugriffsberechtigung verfügen. Vorgehensweise: Ändern der Zugriffssteuerungsliste mit dem Tool WinHttpCertConfig.exe finden Sie unter [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Weitere Informationen zur Verwendung von Clientzertifikaten mit IIS finden Sie unter [Aufrufen eines Webdiensts mit einem Clientzertifikat zur Authentifizierung in einer ASP.NET-Webanwendung](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Speicher werden analog zu Ordnern auf einem Computer durch Zugriffssteuerungslisten (ACLs) geschützt. Wenn Sie einen von IIS (Internetinformationsdienste) gehosteten Dienst erstellen, wird der ASP.NET-Prozess unter das ASP.NET-Konto ausgeführt. Dieses Konto muss über Zugriff auf den Speicher mit den Zertifikaten verfügen, die von einem Dienst verwendet werden. Die zentralen Speicher werden durch eine Standardzugriffssteuerungsliste geschützt, eine Änderung der Listen ist jedoch möglich. Wenn Sie eine separate Rolle für den Speicherzugriff erstellen, muss diese über die entsprechende Zugriffsberechtigung verfügen. Vorgehensweise: Ändern der Zugriffssteuerungsliste mit dem Tool WinHttpCertConfig.exe finden Sie unter [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](how-to-create-temporary-certificates-for-use-during-development.md). Weitere Informationen zur Verwendung von Clientzertifikaten mit IIS finden Sie unter [Aufrufen eines Webdiensts mit einem Clientzertifikat zur Authentifizierung in einer ASP.NET-Webanwendung](https://support.microsoft.com/en-us/help/901183/how-to-call-a-web-service-by-using-a-client-certificate-for-authentica).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Vertrauensketten und Zertifizierungsstellen  
  Zertifikate werden in einer Hierarchie erstellt, in der jedes einzelne Zertifikat mit der Zertifizierungsstelle verknüpft ist, von der es ausgestellt wurde. Dieser Link verweist auf das Zertifikat der Zertifizierungsstelle. Der Zertifizierungsstelle das Zertifikat klicken Sie dann Links auf die Zertifizierungsstelle, die der ursprünglichen ZS-Zertifikat ausgestellt hat. Dieser Prozess wird wiederholt, bis das Zertifikat der Stammzertifizierungsstelle erreicht wird. Das Zertifikat der Stammzertifizierungsstelle ist grundsätzlich vertrauenswürdig.  
   
- Digitale Zertifikate werden verwendet, um eine Entität anhand dieser als *Zertifikatkette* bezeichneten Hierarchie zu authentifizieren. Sie können die Kette eines beliebigen Zertifikats mit dem MMC-Snap-In anzeigen, indem Sie auf das Zertifikat doppelklicken und anschließend auf die Registerkarte **Zertifikatpfad** klicken. Weitere Informationen zum Importieren von Zertifikatketten für Zertifizierungsstellen finden Sie unter [Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, der zum Überprüfen von Signaturen](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
+ Digitale Zertifikate werden verwendet, um eine Entität anhand dieser als *Zertifikatkette* bezeichneten Hierarchie zu authentifizieren. Sie können die Kette eines beliebigen Zertifikats mit dem MMC-Snap-In anzeigen, indem Sie auf das Zertifikat doppelklicken und anschließend auf die Registerkarte **Zertifikatpfad** klicken. Weitere Informationen zum Importieren von Zertifikatketten für Zertifizierungsstellen finden Sie unter [Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, der zum Überprüfen von Signaturen](specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   
 > [!NOTE]
 >  Sie können jeden Aussteller zu einer vertrauenswürdigen Stammzertifizierungsstelle machen, indem Sie das Zertifikat des Ausstellers im Zertifikatspeicher der Stammzertifizierungsstelle ablegen.  
@@ -74,29 +74,29 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
   
  Sie können die Eigenschaft auch in der Konfiguration festlegen. Folgende Elemente werden verwendet, um den Validierungsmodus anzugeben:  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Benutzerdefinierte Authentifizierung  
  Die `CertificateValidationMode`-Eigenschaft ermöglicht es auch, die Authentifizierung von Zertifikaten anzupassen. Die Standardvertrauensebene ist `ChainTrust`. Wenn Sie den <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>-Wert verwenden möchten, müssen Sie auch das `CustomCertificateValidatorType`-Attribut auf eine Assembly und einen Typ festlegen, die zur Validierung des Zertifikats verwendet werden. Wenn Sie eine benutzerdefinierte Überprüfung erstellen möchten, müssen Sie die abstrakte <xref:System.IdentityModel.Selectors.X509CertificateValidator>-Klasse vererben.  
   
  Wenn Sie eine benutzerdefinierte Authentifizierung erstellen, müssen Sie auf jeden Fall die <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>-Methode überschreiben. Ein Beispiel zur benutzerdefinierten Authentifizierung finden Sie im Beispiel zum [Validierungssteuerelement des X.509-Zertifikats](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md). Weitere Informationen finden Sie unter [Custom Credential and Credential Validation (Benutzerdefinierte Anmeldeinformationen und Validierung der Anmeldeinformationen)](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Verwendung des neuen Powershell-SelfSignedCertificate-Cmdlets zum Erstellen einer Zertifikatkette  
- Das New-SelfSignedCertificate des Powershell-Cmdlet erstellt x. 509-Zertifikaten und privaten und öffentlichen Schlüsselpaaren. Sie können den privaten Schlüssel speichern und zum Ausstellen und Signieren neuer Zertifikate verwenden, um eine Hierarchie von Zertifikaten in einer Kette zu simulieren. Das Cmdlet dient lediglich als Hilfe beim Entwickeln von services und sollte nie zum Erstellen von Zertifikaten für tatsächliche Bereitstellungen verwendet werden. Wenn Sie einen WCF-Dienst zu entwickeln, gehen Sie folgendermaßen vor, um eine Kette von Vertrauensstellungen mit dem Cmdlet "New-SelfSignedCertificate" zu erstellen.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Verwendung des neuen PowerShell-SelfSignedCertificate-Cmdlets zum Erstellen einer Zertifikatkette  
+ Das New-SelfSignedCertificate des PowerShell-Cmdlet erstellt x. 509-Zertifikaten und privaten und öffentlichen Schlüsselpaaren. Sie können den privaten Schlüssel speichern und zum Ausstellen und Signieren neuer Zertifikate verwenden, um eine Hierarchie von Zertifikaten in einer Kette zu simulieren. Das Cmdlet dient lediglich als Hilfe beim Entwickeln von services und sollte nie zum Erstellen von Zertifikaten für tatsächliche Bereitstellungen verwendet werden. Wenn Sie einen WCF-Dienst zu entwickeln, gehen Sie folgendermaßen vor, um eine Kette von Vertrauensstellungen mit dem Cmdlet "New-SelfSignedCertificate" zu erstellen.  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Erstellen Sie eine Kette von Vertrauensstellungen mit dem Cmdlet "New-SelfSignedCertificate"  
   
-1.  Erstellen Sie ein temporären Stammzertifizierungsstellen (selbst signiertes)-Zertifikat mit dem Cmdlet "New-SelfSignedCertificate". Speichern Sie den privaten Schlüssel.  
+1. Erstellen Sie ein temporären Stammzertifizierungsstellen (selbst signiertes)-Zertifikat mit dem Cmdlet "New-SelfSignedCertificate". Speichern Sie den privaten Schlüssel.  
   
-2.  Verwenden Sie das neue Zertifikat, um ein anderes Zertifikat auszustellen, das den öffentlichen Schlüssel enthält.  
+2. Verwenden Sie das neue Zertifikat, um ein anderes Zertifikat auszustellen, das den öffentlichen Schlüssel enthält.  
   
-3.  Importieren Sie das Zertifikat der Stammzertifizierungsstelle in den Speicher vertrauenswürdiger Stammzertifizierungsstellen.  
+3. Importieren Sie das Zertifikat der Stammzertifizierungsstelle in den Speicher vertrauenswürdiger Stammzertifizierungsstellen.  
   
-4.  Schrittweise Anweisungen finden Sie unter [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Schrittweise Anweisungen finden Sie unter [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Welches Zertifikat soll verwendet werden?  
  Im Zusammenhang mit Zertifikaten wird häufig danach gefragt, welches Zertifikat und warum dieses verwendet werden soll. Die Antwort hängt davon ab, ob Sie einen Client oder einen Dienst programmieren. Die folgenden Informationen bieten eine allgemeine Orientierung und stellen keine erschöpfende Antwort auf diese Fragen dar.  

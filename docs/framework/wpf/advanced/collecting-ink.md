@@ -13,12 +13,12 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 0d0796eae469f8a40e01e3de02c00149eb3f00c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d2178a4cbf888baaf0ae84b03b3d463b0de658b1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374673"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645727"
 ---
 # <a name="collect-ink"></a>Erfassen von Freihandeingaben
 

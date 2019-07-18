@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e8a842dd531576b1029c3924d12b1a4bd95bde37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8f8c18935069e4162236f99c411312087ce73bdc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115205"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782217"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress-Methode
 Ruft die Adresse des angegebenen threadstatischen Felds, das in den Bereich des angegebenen Threads ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetThreadStaticAddress(  
     [in] ClassID     classId,  
     [in] mdFieldDef  fieldToken,  
@@ -53,9 +53,9 @@ HRESULT GetThreadStaticAddress(
 ## <a name="remarks"></a>Hinweise  
  Die `GetThreadStaticAddress` Methode gibt möglicherweise einen der folgenden zurück:  
   
--   Ein HRESULT CORPROF_E_DATAINCOMPLETE, wenn das angegebene statische Feld eine Adresse im angegebenen Kontext nicht zugewiesen wurde.  
+- Ein HRESULT CORPROF_E_DATAINCOMPLETE, wenn das angegebene statische Feld eine Adresse im angegebenen Kontext nicht zugewiesen wurde.  
   
--   Die Adressen von Objekten, die möglicherweise in die Garbage Collection-Heap. Diese Adressen möglicherweise ungültig, nach der Garbagecollection, sodass nach dem Garbage Collection-Profiler nicht annehmen sollten, dass sie gültig sind.  
+- Die Adressen von Objekten, die möglicherweise in die Garbage Collection-Heap. Diese Adressen möglicherweise ungültig, nach der Garbagecollection, sodass nach dem Garbage Collection-Profiler nicht annehmen sollten, dass sie gültig sind.  
   
  Vor dem Abschluss einer Klasse Klassenkonstruktor `GetThreadStaticAddress` CORPROF_E_DATAINCOMPLETE zurück für alle seine statische Felder, obwohl einige der statischen Felder bereits initialisiert werden kann und rooting-Garbage Collection-Objekten.  
   

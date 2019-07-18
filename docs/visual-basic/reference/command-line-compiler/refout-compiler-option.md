@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
 ms.openlocfilehash: f2cdd228d8ce1912abbbe888c29c42f29299ebba
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788790"
 ---
 # <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 

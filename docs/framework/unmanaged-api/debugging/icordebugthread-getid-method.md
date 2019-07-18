@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8eef616d51febd1b919e0a1936406551f441b98c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 11e21e913e4749705ba6c7f91016be21b4de1712
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468974"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769966"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID-Methode
 Ruft den Bezeichner des aktuellen Betriebssystems des aktiven Teils des ICorDebugThread ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetID (  
     [out] DWORD *pdwThreadId  
 );  

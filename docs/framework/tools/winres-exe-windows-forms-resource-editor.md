@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221094"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296653"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
 
@@ -106,9 +106,9 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>Lokalisieren einer mit einem Formular verknüpfte RESX- oder RESOURCES-Datei
 
-1.  Geben Sie `winres` in der Developer-Eingabeaufforderung ein, um "Winres.exe" auszuführen.
+1. Geben Sie `winres` in der Developer-Eingabeaufforderung ein, um "Winres.exe" auszuführen.
 
-2.  Um die Standardressourcen für ein zu lokalisierendes Formular zu öffnen, klicken Sie im Menü **Datei** auf den Befehl **Öffnen**, und navigieren Sie zu der zu öffnenden Datei.
+2. Um die Standardressourcen für ein zu lokalisierendes Formular zu öffnen, klicken Sie im Menü **Datei** auf den Befehl **Öffnen**, und navigieren Sie zu der zu öffnenden Datei.
 
      - oder - 
 
@@ -129,11 +129,11 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
     > [!NOTE]
     > Wenn das Formular, dessen Ressourcen Sie bearbeiten, ein geerbtes Formular ist, muss sowohl die im geerbten Formular enthaltene Assembly als auch die Assembly, die das erbende (abgeleitete) Formular enthält, im globalen Assemblycache (GAC) registriert sein oder sich in demselben Verzeichnis wie "WinRes.exe" befinden. Weitere Informationen zur Installation von .NET Framework-Komponenten in GAC finden Sie unter [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md).
 
-3.  Wählen Sie Steuerelemente in dem Formular aus, und ändern Sie ihre <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft und andere Eigenschaften in die lokalisierte Kultur und die entsprechende Sprache. Damit der lokalisierte Text ordnungsgemäß angezeigt wird, verschieben Sie die Steuerelemente bei Bedarf bzw. ändern ihre Größe.
+3. Wählen Sie Steuerelemente in dem Formular aus, und ändern Sie ihre <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft und andere Eigenschaften in die lokalisierte Kultur und die entsprechende Sprache. Damit der lokalisierte Text ordnungsgemäß angezeigt wird, verschieben Sie die Steuerelemente bei Bedarf bzw. ändern ihre Größe.
 
-4.  Um die lokalisierte Version der RESX- bzw. RESOURCES-Datei zu speichern, klicken Sie auf das Symbol **Speichern** oder auf den entsprechenden Befehl im Menü **Datei**. Das Fenster **Kultur auswählen** wird angezeigt.
+4. Um die lokalisierte Version der RESX- bzw. RESOURCES-Datei zu speichern, klicken Sie auf das Symbol **Speichern** oder auf den entsprechenden Befehl im Menü **Datei**. Das Fenster **Kultur auswählen** wird angezeigt.
 
-5.  Wählen Sie die entsprechende Kultur und den entsprechenden Dateimodus aus, und klicken Sie dann auf **OK**.
+5. Wählen Sie die entsprechende Kultur und den entsprechenden Dateimodus aus, und klicken Sie dann auf **OK**.
 
    Die Datei wird gespeichert, wobei die Benennungskonvention verwendet wird, die die Laufzeit für lokalisierte Ressourcendateien erwartet. Wenn Sie beispielsweise `TestApp.resources` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resources`. Wenn Sie `TestApp.resx` für Deutsch (Deutschland) lokalisieren, speichert das Tool die Datei als `TestApp.de-DE.resx`. Weitere Informationen zu Benennungskonventionen für Ressourcen finden Sie unter [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Eine Liste der von der Runtime verwendeten vordefinierten Kulturnamen finden Sie unter der Klasse <xref:System.Globalization.CultureInfo>.
 

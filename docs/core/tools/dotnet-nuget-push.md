@@ -1,40 +1,36 @@
 ---
 title: Befehl „dotnet nuget push“
-description: Der Befehl „dotnet nuget push“ überträgt ein Paket auf den Server und veröffentlicht es.
+description: Der dotnet nuget push-Befehl überträgt ein Paket auf den Server und veröffentlicht es.
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: 4f0d127d8b9f37b1c381d8981f54035a2fc3b0e5
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 06/26/2019
+ms.openlocfilehash: 4d5efa94c6a4494158aea447be98256d2a307cd6
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169351"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539129"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**Dieses Thema gilt für: ✓**.NET Core 1.x SDK und spätere Versionen
 
-## <a name="name"></a>Name
+<!-- todo: uncomment when all CLI commands are reviewed
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
+
+## <a name="name"></a>name
 
 `dotnet nuget push` – Überträgt ein Paket auf den Server und veröffentlicht es.
 
 ## <a name="synopsis"></a>Übersicht
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
----
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
 Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffentlicht es. Der Pushbefehl verwendet Details zum Server und den Anmeldeinformationen aus der NuGet-Konfigurationsdatei oder der Kette von Konfigurationsdateien des Systems. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior) (Konfigurieren des Verhaltens von NuGet). Die NuGet-Standardkonfiguration wird abgerufen, indem *%AppData%\NuGet\NuGet.config* (Windows) oder *$HOME/.local/share* (Linux/macOS) geladen wird. Anschließend wird eine beliebige Datei *nuget.config* oder *.nuget\nuget.config* geladen (beginnend mit dem Stamm des Laufwerks und endend im aktuellen Verzeichnis).
 
@@ -45,8 +41,6 @@ Der `dotnet nuget push`-Befehl überträgt ein Paket auf den Server und veröffe
   Gibt den Dateipfad des Pakets an, das per Push übertragen werden soll.
 
 ## <a name="options"></a>Optionen
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`-d|--disable-buffering`**
 
@@ -92,46 +86,6 @@ Druckt eine kurze Hilfe für den Befehl.
 
   Gibt das Timeout für die Übertragung auf einen Server in Sekunden an. Der Standardwert ist 300 Sekunden (5 Minuten). Wenn 0 (null Sekunden) angegeben wird, gilt der Standardwert.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`-d|--disable-buffering`**
-
-  Deaktiviert die Pufferung bei Übertragungen an HTTP(S)-Server, um die Speicherauslastung zu reduzieren.
-
-* **`--force-english-output`**
-
-  Erzwingt die Ausführung der Anwendung mithilfe einer invarianten Kultur, die auf Englisch basiert.
-
-* **`-h|--help`**
-
-  Druckt eine kurze Hilfe für den Befehl.
-
-* **`-k|--api-key <API_KEY>`**
-
-  Der API-Schlüssel für den Server.
-
-* **`-n|--no-symbols`**
-
-  Überträgt keine Symbole (selbst wenn vorhanden).
-
-* **`-s|--source <SOURCE>`**
-
-  Gibt die Server-URL an. Diese Option ist erforderlich, es sei denn, der `DefaultPushSource`-Konfigurationswert wurde in der NuGet-Konfigurationsdatei festgelegt.
-
-* **`-sk|--symbol-api-key <API_KEY>`**
-
-  Der API-Schlüssel für den Symbolserver.
-
-* **`-ss|--symbol-source <SOURCE>`**
-
-  Gibt die Symbolserver-URL an.
-
-* **`-t|--timeout <TIMEOUT>`**
-
-  Gibt das Timeout für die Übertragung auf einen Server in Sekunden an. Der Standardwert ist 300 Sekunden (5 Minuten). Wenn 0 (null Sekunden) angegeben wird, gilt der Standardwert.
-
----
-
 ## <a name="examples"></a>Beispiele
 
 * Überträgt *foo.nupkg* an die Standardpushquelle und gibt einen API-Schlüssel an:
@@ -169,3 +123,7 @@ Druckt eine kurze Hilfe für den Befehl.
   ```console
   dotnet nuget push *.nupkg
   ```
+  
+  > [!NOTE]
+  > Wenn dieser Befehl nicht funktioniert, kann dies an einem Fehler aus früheren Versionen des SDK liegen (.NET Core 2.1 SDK und frühere Versionen).
+  > Führen Sie ein Upgrade für das SDK durch, oder führen Sie stattdessen den folgenden Befehl aus, um diesen Fehler zu beheben: `dotnet nuget push **/*.nupkg`.

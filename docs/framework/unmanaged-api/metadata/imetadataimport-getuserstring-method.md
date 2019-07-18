@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 358346af540c8b6b7ee1523e763bebbacf8cd2bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: edeaefd0792a5cc03ae6d4385ff669a343ffdfc9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127815"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778811"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString-Methode
 Ruft das Zeichenfolgenliteral ab, das durch das angegebene Metadatentoken dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetUserString (  
    [in]   mdString    stk,  
    [out]  LPWSTR      szString,  

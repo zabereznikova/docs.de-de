@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57f34ed1796f6fa411d31fca83baeff693f85d70
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760174"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager-Schnittstelle
 Enthält Methoden, mit denen die common Language Runtime (CLR) zum virtuellen Arbeitsspeicher Anforderungen über den Host, anstelle der Win32-Standardfunktionen der virtuellen Speicher an.  
@@ -56,4 +56,4 @@ Enthält Methoden, mit denen die common Language Runtime (CLR) zum virtuellen Ar
 ## <a name="see-also"></a>Siehe auch
 
 - [IHostMalloc-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

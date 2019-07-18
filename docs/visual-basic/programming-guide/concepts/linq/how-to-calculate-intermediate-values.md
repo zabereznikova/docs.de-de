@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Berechnen von Zwischenwerten (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
 ms.openlocfilehash: cb619784d487ae12b1fb8bb3adc97acb0f767455
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855442"
 ---
 # <a name="how-to-calculate-intermediate-values-visual-basic"></a>Vorgehensweise: Berechnen von Zwischenwerten (Visual Basic)
 In diesem Beispiel wird das Berechnen von Zwischenwerten gezeigt, die zum Sortieren, Filtern und Auswählen verwendet werden können.  

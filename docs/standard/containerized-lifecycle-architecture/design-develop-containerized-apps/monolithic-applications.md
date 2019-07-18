@@ -1,83 +1,81 @@
 ---
 title: Monolithische Anwendungen
-description: Verstehen Sie die grundlegenden Konzepte für das containerisieren monolithischer Anwendungen.
-author: CESARDELATORRE
-ms.author: wiwagn
+description: Verstehen der grundlegenden Konzepte für das Containerisieren monolithischer Anwendungen.
 ms.date: 02/15/2019
-ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: e577f9a8d9ce4f9d2c8180318b1df181db730e2f
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843544"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "65641294"
 ---
 # <a name="monolithic-applications"></a>Monolithische Anwendungen
 
-In diesem Szenario sind Sie erstellen eine einfachen und monolithischen Webanwendung oder einen Dienst und als Container bereitstellen. Innerhalb der Anwendung möglicherweise nicht die Struktur monolithische sein; Es kann mehrere Bibliotheken, Komponenten oder sogar Ebenen (Anwendungsebene, Domänenebene, Datenzugriffsebene, usw.) enthalten. Extern, ist es einem einzelnen Container, wie ein einzelner Prozess, einzelne Webanwendung oder einzelnen Dienst.
+In diesem Szenario erstellen Sie eine einzelne, monolithische Webanwendung oder einen Dienst und stellen sie/ihn als Container bereit. Innerhalb der Anwendung ist die Struktur nicht zwangsläufig monolithisch; sie kann z.B. mehrere Bibliotheken, Komponenten oder sogar Schichten umfassen (Anwendungsschicht, Domänenschicht, Datenzugriffsschicht usw.). Extern stellt sie jedoch einen einzelnen Container dar, wie einen einzelnen Prozess, eine einzelne Webanwendung oder einen einzelnen Dienst.
 
-Stellen Sie einen einzelnen Container bereit, der diese Anwendung darstellt, um dieses Modell zu verwalten. Für die Skalierung, fügen Sie einfach ein paar weitere Kopien mit einem vorangestellten Lastenausgleich hinzu. Die Einfachheit stammt aus der Verwaltung von einer einzelnen Bereitstellung in einem einzelnen Container oder virtuellen Computer (VM).
+Stellen Sie einen einzelnen Container bereit, der diese Anwendung darstellt, um dieses Modell zu verwalten. Um die Anwendung zu skalieren, fügen Sie einfach ein paar weitere Kopien mit einem davor platzierten Lastenausgleichsmodul hinzu. Die Einfachheit stammt aus der Verwaltung einer einzelnen Bereitstellung in einem einzelnen Container oder virtuellen Computer (VM).
 
-Ist nach dem Dienstprinzipal, dass ein Container nur eine Sache ist, und wird es in einem Prozess der monolithische Muster in Konflikt. Sie können mehrere Komponenten, Bibliotheken oder interne Schichten in jedem Container einschließen, wie in Abbildung 4-1 dargestellt.
+Dem Prinzip folgend, dass ein Container nur eine Aufgabe und das in einem Prozess ausführt, steht das monolithische Muster im Konflikt. Sie können mehrere Komponenten/Bibliotheken oder interne Schichten in jeden Container einschließen, wie in Abbildung 4–1 dargestellt.
 
-![Eine monolithische app verfügt über alle oder die meisten Funktionen innerhalb einer einzelnen Prozess oder Container, und es gegliedertes in internen Schichten und Bibliotheken.](./media/image1.png)
+![Eine monolithische Anwendung hat ihre Funktionalität ganz oder zum größten Teil innerhalb eines einzelnen Prozesses oder Containers und weist interne Schichten oder Bibliotheken als Komponenten auf.](./media/image1.png)
 
-**Abbildung 4-1.** Ein Beispiel der Architektur der monolithischen Anwendung
+**Abbildung 4-1.** Beispiel für eine monolithische Anwendungsarchitektur
 
-Der Nachteil dieses Ansatzes ist, wenn Warnungen oder die Anwendung und skaliert wächst. Wenn die gesamte Anwendung skaliert werden kann, ist dies kein Problem. Allerdings sind in den meisten Fällen einige Teile der Anwendung Engpässe, die erfordern, Skalierung, während andere Komponenten verwendet werden.
+Der Nachteil dieses Ansatzes wird offensichtlich, wenn die Anwendung wächst und skaliert werden muss. Wenn die gesamte Anwendung skaliert werden kann, ist dies kein Problem. In den meisten Fällen sind jedoch nur einige Teile der Anwendung Engpässe, die Skalierung erfordern, während andere Komponente weniger häufig verwendet werden.
 
-Bei Verwendung des typischen e-Commerce-Beispiels, benötigen Sie wahrscheinlich für die Komponente für die Produktinformationen skalieren ist. Viele Kunden suchen Produkte erst und kaufen sie anschließend. Mehr Kunden verwenden Ihren Warenkorb als die Zahlungspipeline. Weniger Kunden fügen Kommentare hinzu oder zeigen ihren Bestellungsverlauf an. Und Sie haben wahrscheinlich nur eine Handvoll Mitarbeiter in einer einzelnen Region, die den Inhalt und die Marketingkampagnen verwalten müssen. Durch das Skalieren des monolithischen Entwurfs der gesamte Code ist mehrmals bereitgestellt.
+Wenn Sie das gewöhnliche eCommerce-Beispiel verwenden, müssen Sie sehr wahrscheinlich die Komponente für die Produktinformationen skalieren. Viele Kunden suchen Produkte erst und kaufen sie anschließend. Mehr Kunden verwenden Ihren Warenkorb als die Zahlungspipeline. Weniger Kunden fügen Kommentare hinzu oder zeigen ihren Bestellungsverlauf an. Und Sie haben möglicherweise nur eine Handvoll Mitarbeiter in einer bestimmten Region, die den Inhalt und die Marketingkampagnen verwalten müssen. Wenn der monolithische Entwurf skaliert wird, wird der gesamte Code mehrmals bereitgestellt.
 
-Zusätzlich zu den "Skalieren – alles, was" Problem erfordern Änderungen einer einzelnen Komponente einen erneuten Test der gesamten Anwendung als auch eine vollständige erneute Bereitstellung aller Instanzen.
+Zusätzlich zu dem Problem, dass „alle Komponenten skaliert werden müssen“, erfordern Änderungen einer einzelnen Komponente einen erneuten Test der gesamten Anwendung und eine vollständige erneute Bereitstellung aller Instanzen.
 
-Der monolithische Ansatz wird häufig, und viele Organisationen mit dieser Architektur Methode entwickeln. Viele nutzen akzeptable Ergebnisse, gut auf, während andere Einschränkungen auftreten. Viele Anwendungen in diesem Modell entworfen, da Tools und Infrastruktur zum Erstellen dienstorientierter Architekturen zu schwierig waren, und sie nicht die Notwendigkeit sehen, bis die Anwendung gewachsen ist.
+Der monolithische Ansatz wird häufig verwendet, und viele Organisationen entwickeln nach dieser Architekturmethode. Viele freuen sich an akzeptablen Ergebnissen, während andere an Grenzen stoßen. Viele Unternehmen haben ihre Anwendungen unter Verwendung dieses Modells entworfen, da Tools und Infrastruktur schon seit Jahren zu komplex für die Erstellung einer SOA (Service-Oriented Architecture) sind. Sie haben die Notwendigkeit nicht erkannt, etwas zu ändern, bis die Anwendung gewachsen ist.
 
-Aus Sicht der Infrastruktur kann jeder Server viele Anwendungen auf dem gleichen Host auszuführen und verfügen über ein akzeptables effizienzverhältnis in Ihrer Nutzung von Ressourcen, wie in Abbildung 4-2 dargestellt.
+Aus Sicht der Infrastruktur kann jeder Server, wie in Abbildung 4-2 dargestellt, viele Anwendungen innerhalb desselben Hosts ausführen und ein akzeptables Effizienzverhältnis in Ihrer Ressourcenverwendung haben.
 
-![Ein einzelner Host kann mehrere apps in einem separaten Container ausführen.](./media/image2.png)
+![Ein einzelner Host kann mehrere Apps in separaten Containern ausführen.](./media/image2.png)
 
-**Abbildung 4-2**. Einem mehrere apps/Container-host
+**Abbildung 4-2**. Ein Host, der mehrere Apps/Container ausführt
 
-Aus Sicht der Verfügbarkeit müssen monolithische Anwendungen schließlich als Ganzes bereitgestellt werden. Dies bedeutet, dass für den Fall, dass Sie müssen *beenden und starten Sie*, alle Funktionen und alle Benutzer werden während des Zeitfensters für die Bereitstellung beeinflusst werden. In bestimmten Situationen die Verwendung von Azure und Container diesen Situationen und verringern die Wahrscheinlichkeit von Ausfallzeiten der Anwendung, wie Sie in Abbildung 4 – 3 sehen können.
+Schließlich müssen aus dem Blickwinkel der Verfügbarkeit monolithische Anwendungen als Ganzes bereitgestellt werden; das bedeutet, dass im Fall eines erforderlichen *Beendens und Startens* während des Bereitstellungsfensters die gesamte Funktionalität und alle Benutzer betroffen sind. In bestimmten Situationen kann die Verwendung von Azure und Containern diese Situationen minimieren und die Wahrscheinlichkeit von Ausfallzeiten Ihrer Anwendung verringern, wie in Abbildung 4–3 zu ersehen.
 
-Sie können mithilfe von dedizierten VMs für jede Instanz monolithische Anwendungen in Azure bereitstellen. Mithilfe von [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), Sie können die VMs problemlos skalieren.
+Sie können monolithische Anwendungen in Azure mithilfe dedizierter VMs für die einzelnen Instanzen bereitstellen. Mithilfe von [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/) lassen sich die VMs komfortabel skalieren.
 
-Sie können auch [Azure App Services](https://azure.microsoft.com/services/app-service/) monolithische Anwendungen ausführen und Instanzen problemlos skalieren, ohne die virtuellen Computer verwalten zu müssen. Azure App Services können einzelne Instanzen von Docker-Containern, ausführen, was die Bereitstellung vereinfacht.
+Sie können auch [Azure App Services](https://azure.microsoft.com/services/app-service/) verwenden, um monolithische Anwendungen auszuführen und Instanzen problemlos zu skalieren, ohne dass die VMs verwaltet werden müssen. Azure App Services kann ebenfalls einzelne Instanzen von Docker-Containern ausführen, was die Bereitstellung vereinfacht.
 
-Sie können mehrere virtuelle Computer als Docker-Hosts bereitstellen, und führen eine beliebige Anzahl von Containern pro virtuellem Computer. Anschließend können mithilfe von Azure Load Balancer, wie in Abbildung 4: 3, Sie Skalierung verwalten.
+Sie können mehrere VMs als Docker-Hosts bereitstellen und eine beliebige Anzahl von Containern pro VM ausführen. Dann können Sie mithilfe eines Azure Load Balancers die Skalierung verwalten, wie in Abbildung 4–3 dargestellt.
 
-![Eine monolithische app kann zu anderen Hosts skalierte werden, in denen jeweils die app im Container ausgeführt wird.](./media/image3.png)
+![Eine monolithische App kann horizontal auf verschiedene Hosts skaliert werden, von denen jeder die App in Containern ausführt.](./media/image3.png)
 
-**Abbildung 4-3**. Mehrere Hosts horizontalen Skalieren einer einzelnen Docker-apps/Anwendungscontainer
+**Abbildung 4-3**. Mehrere Hosts zur horizontalen Skalierung einer einzelnen Docker-Anwendung in Apps/Containern
 
-Sie können die Bereitstellung des Hosts selbst über die herkömmlichen Bereitstellungsverfahren verwalten.
+Die Verwaltung der Hosts selbst kann mithilfe herkömmlicher Bereitstellungsverfahren erfolgen.
 
-Sie können Docker-Container über die Befehlszeile verwalten, mit Befehlen wie `docker run` und `docker-compose up`, und Sie können auch die in Pipelines für Continuous Delivery (CD) zu automatisieren und Bereitstellen in Docker-Hosts aus Azure DevOps-Dienste, z. B.
+Sie können Docker-Container auf der Befehlszeile verwalten, indem Sie Befehle wie `docker run` und `docker-compose up` verwenden, und Sie können dies auch in CD-Pipelines (Continuous Delivery) automatisieren und beispielsweise aus Azure DevOps Services heraus auf Docker-Hosts bereitstellen.
 
 ## <a name="monolithic-application-deployed-as-a-container"></a>Monolithische Anwendung, die als Container bereitgestellt wird
 
-Es gibt Vorteile bei der Verwendung von Containern zur Verwaltung monolithischer Bereitstellungen. Das Skalieren von Containerinstanzen ist wesentlich schneller und einfacher als die Bereitstellung zusätzlicher VMs.
+Das Verwenden von Containern zur Verwaltung monolithischer Bereitstellungen hat Vorteile. Das Skalieren von Containerinstanzen ist wesentlich schneller und einfacher als die Bereitstellung zusätzlicher VMs.
 
-Die Bereitstellung von Updates, wie Docker-Images, ist wesentlich schneller und effizienter im Netzwerk. Docker-Container starten in der Regel in Sekunden, wodurch Rollouts beschleunigt. Löschen eines Docker-Containers ist so einfach wie das Aufrufen der `docker stop` Befehl aus, in der Regel in weniger als einer Sekunde abgeschlossen.
+Die Bereitstellung von Updates, wie Docker-Images, ist wesentlich schneller und effizienter im Netzwerk. Docker-Container starten in der Regel in Sekunden, wodurch Rollouts beschleunigt werden. Das Löschen eines Docker-Containers erschöpft sich im Aufrufen des `docker stop`-Befehls und ist in der Regel in weniger als einer Sekunde abgeschlossen.
 
-Da Container entwurfsbedingt grundsätzlich unveränderlich sind, müssen Sie sich nie über beschädigte VMs machen, weil ein Updateskript vergessen haben, um bestimmte Konfigurationen oder Dateien auf dem Datenträger zu berücksichtigen.
+Da Container unveränderlich sind, müssen Sie sich keine Gedanken über beschädigte VMs machen, etwa weil ein Updateskript bestimmte Konfigurationen oder restliche Dateien auf einem Datenträger nicht erfasst hat.
 
-Obwohl monolithische apps von Docker profitieren können, sind wir nur die Tipps von den Vorteilen besprochen. Die größere Vorteile der Verwaltung von Containern stammen aus der Bereitstellung mit containerorchestratoren, die die verschiedenen Instanzen und den Lebenszyklus jeder Containerinstanz verwalten. Das Aufteilen der monolithischen Anwendung in Subsysteme, die skaliert, entwickelt und einzeln bereitgestellt werden können, ist Ihr Einstiegspunkt in die Welt der Microservices.
+Zwar können monolithische Apps von Docker profitieren, wir behandeln hier aber gerade einmal die offenkundigsten Vorteile. Die größeren Vorteile für die Verwaltung von Containern stammen aus der Bereitstellung mit Containerorchestratoren, die die verschiedenen Instanzen und den Lebenszyklus jeder Containerinstanz verwalten. Das Aufteilen der monolithischen Anwendung in Subsysteme, die skaliert, entwickelt und einzeln bereitgestellt werden können, ist Ihr Einstiegspunkt in die Welt der Microservices.
 
-Weitere Informationen zu "lift and shift" monolithische Anwendungen mit Containern und wie Sie Ihre Anwendungen modernisieren können, lesen Sie diese zusätzliche Microsoft-Anleitung, [modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern ](../../modernize-with-azure-and-containers/index.md), die Sie können auch als PDF-Datei aus <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Informationen zum Lift-and-Shift monolithischer Anwendungen mithilfe von Containern und zum Modernisieren Ihrer Anwendungen finden Sie in diesem zusätzlichen Microsoft-Leitfaden [Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern](../../modernize-with-azure-and-containers/index.md), den Sie hier <https://aka.ms/LiftAndShiftWithContainersEbook> auch als PDF-Datei herunterladen können.
 
-## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Veröffentlichen Sie eine einzelne Docker-Container-app in Azure App Service
+## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Veröffentlichen einer einzelnen Docker-Container-App in Azure App Service
 
-Entweder bietet einfach eine einzelner Container-app, Azure App Services, weil eine schnelle Überprüfung eines Containers in Azure bereitgestellten abgerufen werden soll oder die app ist eine hervorragende Möglichkeit, skalierbare einzelner Container Services bereitstellen.
+Ob Sie eine schnelle Überprüfung eines in Azure bereitgestellten Containers wünschen oder die App einfach eine in einem Container bereitzustellende App ist, Azure App Services stellt eine hervorragende Möglichkeit dar, skalierbare Dienste auf der Grundlage einzelner Container bereitzustellen.
 
-Mit Azure App Service ist intuitiv und die Einrichtung und schnell ausgeführt werden, da sie über gute Git bietet Integration auszuführende Code, erstellen Sie sie in Microsoft Visual Studio, und direkt in Azure bereitstellen. Traditionell (mit keine Docker), ggf. andere Funktionen, Frameworks oder Abhängigkeiten, die in App Services nicht unterstützt werden Sie jedoch erforderlich, um dafür zu warten, bis das Azure-Team diese Abhängigkeiten im Anwendungsdienst aktualisiert oder zu anderen Diensten wie gewechselt Service Fabric, Cloud Services oder sogar VMs, für die Sie verfügen über zusätzliche Kontrolle und können eine erforderliche Komponente oder ein Framework für Ihre Anwendung installieren.
+Die Verwendung von Azure App Service ist intuitiv, und Sie sind aufgrund der hervorragenden Git-Integration zur Annahme Ihres Codes, seiner Erstellung in Microsoft Visual Studio und der direkten Bereitstellung in Azure schnell betriebsbereit. Aber wenn Sie bei herkömmlicher Bereitstellung (also ohne Docker) andere Funktionen, Frameworks oder Abhängigkeiten benötigten, die in App Services nicht unterstützt werden, mussten Sie warten, bis das Azure-Team ein Update dieser Abhängigkeiten in App Service vornahm oder zu anderen Diensten wechseln, wie Service Fabric, Cloud Services – eventuell sogar zu einfachen VMs, bei denen Sie mehr Kontrolle haben und eine erforderliche Komponente oder ein erforderliches Framework für Ihre Anwendung installieren können.
 
-Jetzt aber, wie in Abbildung 4-4 dargestellt kann bei der Verwendung von Visual Studio 2017 docker-Unterstützung in Azure App Service Sie sollen beliebig in Ihrer appumgebung. Wenn Sie eine Abhängigkeit zu Ihrer app hinzugefügt, da Sie es in einem Container ausführen, erhalten Sie die Möglichkeit, diese Abhängigkeiten in Ihrer dockerfile-Datei oder Docker-Image einschließen.
+Jetzt haben Sie, wie in Abbildung 4–4 dargestellt, bei der Verwendung von Visual Studio 2017 dank der Containerunterstützung in Azure App Service die Möglichkeit, Ihre App-Umgebung um beliebige Zusätze zu erweitern. Wenn Sie Ihrer App eine Abhängigkeit hinzugefügt haben, haben Sie die Möglichkeit, diese Abhängigkeiten in Ihr Dockerfile oder Ihr Docker-Image einzuschließen, da Sie Ihre App in einem Container ausführen.
 
-![Überblick über die Visual Studio-Assistenten zum Veröffentlichen in Azure app Service, markieren die Auswahl für die containerregistrierung.](./media/image4.png)
+![Ansicht des Visual Studio-Assistenten zum Veröffentlichen in einem Azure App Service mit hervorgehobener Auswahl für die Containerregistrierung.](./media/image4.png)
 
-**Abbildung 4-4**. Veröffentlichen Sie einen Container in Azure App Service aus Visual Studio-apps/Container
+**Abbildung 4-4**. Veröffentlichen eines Containers in Azure App Service aus Visual Studio-Apps/Containern
 
-Abbildung 4-4 zeigt auch, dass es sich bei der veröffentlichungsfluss überträgt ein Bild über eine Containerregistrierung, die möglicherweise die Azure-Containerregistrierung (eine Registrierung in der Nähe Ihrer Bereitstellungen in Azure und von Azure Active Directory-Gruppen und-Konten gesichert werden) oder andere Docker-Registrierungen wie Docker Hub oder in lokalen Registrierungen.
+Abbildung 4–4 zeigt außerdem, dass ein Image vom Veröffentlichungsfluss durch eine Containerregistrierung übertragen wird, wobei es sich um eine Azure-Containerregistrierung (eine Registrierung in der Nähe Ihrer Bereitstellungen in Azure, die von Azure Active Directory-Gruppen und -Konten gesichert wird) oder andere Docker-Registrierungen wie Docker Hub oder eine lokale Registrierung handeln kann.
 
 >[!div class="step-by-step"]
 >[Zurück](common-container-design-principles.md)

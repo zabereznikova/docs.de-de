@@ -5,27 +5,27 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3a9fa93b69c9abb42b2dd7eae623048f3628999e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823323"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663577"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Vorgehensweise: Erstellen Sie eine Variable, die nicht geändert wird, im Wert (Visual Basic)
 Das Konzept einer Variablen, die nicht den Wert geändert wird möglicherweise angezeigt, widersprüchliche sein. Aber es gibt Situationen, wenn eine Konstante nicht möglich ist, und es ist sinnvoll, eine Variable mit einem festen Wert aufweisen. In diesem Fall können Sie eine Membervariable mit definieren die [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) Schlüsselwort.  
   
  Sie können keine der [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md) zu deklarieren und Zuweisen eines konstanten Werts in den folgenden Situationen:  
   
--   Die `Const` Anweisung akzeptiert nicht den Datentyp, die Sie verwenden möchten  
+- Die `Const` Anweisung akzeptiert nicht den Datentyp, die Sie verwenden möchten  
   
--   Sie ist der Wert zum Zeitpunkt der Kompilierung nicht bekannt.  
+- Sie ist der Wert zum Zeitpunkt der Kompilierung nicht bekannt.  
   
--   Sie werden kann nicht den konstanten Wert zur Kompilierungszeit berechnet  
+- Sie werden kann nicht den konstanten Wert zur Kompilierungszeit berechnet  
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Erstellen Sie eine Variable, die nicht geändert wird, Wert  
   
-1.  Auf Modulebene, deklarieren Sie eine Membervariable mit dem [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md), und fügen die [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) Schlüsselwort.  
+1. Auf Modulebene, deklarieren Sie eine Membervariable mit dem [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md), und fügen die [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) Schlüsselwort.  
   
     ```  
     Dim ReadOnly timeStarted  
@@ -33,7 +33,7 @@ Das Konzept einer Variablen, die nicht den Wert geändert wird möglicherweise a
   
      Sie können angeben, `ReadOnly` nur in einer Membervariablen gespeichert. Dies bedeutet, dass Sie die Variable auf Modulebene außerhalb einer Prozedur definieren müssen.  
   
-2.  Wenn Sie den Wert in einer einzelnen Anweisung zum Zeitpunkt der Kompilierung berechnen können, verwenden Sie eine Initialisierungsklausel in der `Dim` Anweisung. Führen Sie die [als](../../../../visual-basic/language-reference/statements/as-clause.md) -Klausel mit einem Gleichheitszeichen (`=`), gefolgt von einem Ausdruck. Achten Sie darauf, dass der Compiler diesen Ausdruck mit einem konstanten Wert auswerten kann.  
+2. Wenn Sie den Wert in einer einzelnen Anweisung zum Zeitpunkt der Kompilierung berechnen können, verwenden Sie eine Initialisierungsklausel in der `Dim` Anweisung. Führen Sie die [als](../../../../visual-basic/language-reference/statements/as-clause.md) -Klausel mit einem Gleichheitszeichen (`=`), gefolgt von einem Ausdruck. Achten Sie darauf, dass der Compiler diesen Ausdruck mit einem konstanten Wert auswerten kann.  
   
     ```  
     Dim ReadOnly timeStarted As Date = Now  

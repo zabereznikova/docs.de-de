@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], Toolbox bitmaps
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
-ms.openlocfilehash: 9072f96bd6e3485e759ed72819229b3f0c33d641
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913210"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Vorgehensweise: Bereitstellen einer Toolboxbitmap für ein Steuerelement
 Wenn Sie möchten ein besonderes Symbol für das Steuerelement angezeigt werden, der **Toolbox**, Sie können ein bestimmtes Image angeben, mit der <xref:System.Drawing.ToolboxBitmapAttribute>. Diese Klasse ist ein *Attribut*, eine besondere Klassenform, die Sie an andere Klassen anfügen können. Weitere Informationen zu Attributen finden Sie unter [Übersicht über Attribute (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) für Visual Basic oder [Attribute (c#)](../../../csharp/programming-guide/concepts/attributes/index.md) für C#-Code.  
@@ -23,7 +23,7 @@ Wenn Sie möchten ein besonderes Symbol für das Steuerelement angezeigt werden,
   
 ### <a name="to-specify-a-toolbox-bitmap-for-your-control"></a>So geben sie eine Toolboxbitmap für Ihr Steuerelement an  
   
-1.  Hinzufügen der <xref:System.Drawing.ToolboxBitmapAttribute> zur Klassendeklaration Ihres Steuerelements vor dem `Class` Schlüsselwort oberhalb der Klassendeklaration für Visual c# und Visual Basic.  
+1. Hinzufügen der <xref:System.Drawing.ToolboxBitmapAttribute> zur Klassendeklaration Ihres Steuerelements vor dem `Class` Schlüsselwort oberhalb der Klassendeklaration für Visual c# und Visual Basic.  
   
     ```vb  
     ' Specifies the bitmap associated with the Button type.  
@@ -58,7 +58,7 @@ Wenn Sie möchten ein besonderes Symbol für das Steuerelement angezeigt werden,
     }  
     ```  
   
-2.  Erstellen Sie das Projekt neu.  
+2. Erstellen Sie das Projekt neu.  
   
     > [!NOTE]
     >  Die Bitmap wird nicht in der Toolbox für automatisch generierte Steuerelemente und Komponenten angezeigt. Laden Sie das Steuerelement mithilfe des Dialogfelds **Toolboxelemente auswählen** neu, um die Bitmap anzuzeigen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).  

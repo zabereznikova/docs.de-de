@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 70acbb571921c5f72ecaa26b26136a77532ad220
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774364"
+---
 ### <a name="workflow-30-types-are-obsolete"></a>WorkFlow 3.0-Typen sind veraltet
 
 |   |   |
@@ -7,4 +15,3 @@
 |Bereich|Hauptversion|
 |Version|4.5|
 |Typ|Neuzuweisung|
-

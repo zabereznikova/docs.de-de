@@ -2,19 +2,19 @@
 title: Asynchrone Rückgabetypen (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ca429db9b3ad81555df3c7e02d8827136734e26c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368180"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347739"
 ---
 # <a name="async-return-types-c"></a>Asynchrone Rückgabetypen (C#)
 Asynchrone Methoden können folgende Rückgabetypen haben:
 
 - <xref:System.Threading.Tasks.Task%601> für eine asynchrone Methode, die einen Wert zurückgibt. 
  
--  <xref:System.Threading.Tasks.Task> für eine asynchrone Methode, die einen Vorgang ausführt, aber keinen Wert zurückgibt.
+- <xref:System.Threading.Tasks.Task> für eine asynchrone Methode, die einen Vorgang ausführt, aber keinen Wert zurückgibt.
 
 - `void` für einen Ereignishandler. 
 

@@ -2,15 +2,15 @@
 title: 'Optimistische Nebenläufigkeit: Übersicht'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a6e654ea1ae199cb086e9377454d05e6eaa03ad6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106547"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609962"
 ---
 # <a name="optimistic-concurrency-overview"></a>Optimistische Nebenläufigkeit: Übersicht
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Steuerung für optimistische Parallelität. Die folgende Tabelle beschreibt die Bedingungen für optimistische Parallelität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Steuerung der vollständigen Parallelität. Die folgende Tabelle beschreibt die Bedingungen für optimistische Parallelität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation:  
   
 |Begriffe|Beschreibung|  
 |-----------|-----------------|  
@@ -18,13 +18,13 @@ ms.locfileid: "59106547"
 |Parallelitätskonflikt|Die Situation, in der zwei oder mehr Benutzer gleichzeitig versuchen, konkurrierende Werte an eine oder mehrere Datenbankzeilen zu übergeben.|  
 |Parallelitätssteuerung|Die Technik zur Behebung von Parallelitätskonflikten.|  
 |Steuerelement für vollständige Parallelität|Die Technik zur Prüfung, ob andere Transaktionen die Werte in einer Zeile geändert haben, bevor die Übergabe von Änderungen zugelassen wird.<br /><br /> Im Gegensatz dazu *Steuerung durch eingeschränkte Parallelität*, die den Datensatz, um Parallelitätskonflikte zu vermeiden sperrt.<br /><br /> *Vollständige* Steuerung verdankt Ihre da betrachtet die Wahrscheinlichkeit, dass ein Konflikt zwischen Transaktionen unwahrscheinlich ist.|  
-|Konfliktlösung|Der Prozess des Aktualisierens eines problematischen Elements durch eine erneute Datenbankabfrage und Ausgleichen der Unterschiede.<br /><br /> Wenn ein Objekt aktualisiert wird, enthält der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Änderungsprotokollierer die folgenden Daten:<br /><br /> – Die Werte, die ursprünglich aus der Datenbank erstellt und verwendet für das Update überprüfen.<br />– Die neuen Datenbankwerte aus der nachfolgenden Abfrage.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Klicken Sie dann bestimmt, ob das Objekt in Konflikt stehende (d. h., ob eine oder mehrere der Elementwerte geändert hat). Wenn das Objekt in Konflikt stehende, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] als Nächstes bestimmt, welche Member in Konflikt stehen.<br /><br /> Jeder von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erkannte Memberkonflikt wird einer Konfliktliste hinzugefügt.|  
+|Konfliktlösung|Der Prozess des Aktualisierens eines problematischen Elements durch eine erneute Datenbankabfrage und Ausgleichen der Unterschiede.<br /><br /> Wenn ein Objekt aktualisiert wird, enthält der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Änderungsprotokollierer die folgenden Daten:<br /><br /> – Die Werte, die ursprünglich aus der Datenbank erstellt und verwendet für das Update überprüfen.<br />– Die neuen Datenbankwerte aus der nachfolgenden Abfrage.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ermittelt dann, ob ein Objektkonflikt vorliegt (d. h., ob sich die Werte von einem oder mehreren Membern geändert haben). Wenn das Objekt in Konflikt stehende, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] als Nächstes bestimmt, welche Member in Konflikt stehen.<br /><br /> Jeder von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erkannte Memberkonflikt wird einer Konfliktliste hinzugefügt.|  
   
  In der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell eine *Konflikts der vollständigen Parallelität* tritt auf, wenn beide der folgenden Bedingungen zutreffen:  
   
--   Der Client versucht, Änderungen an die Datenbank zu übergeben.  
+- Der Client versucht, Änderungen an die Datenbank zu übergeben.  
   
--   Ein oder mehrere Werte der Updateprüfung wurden in der Datenbank aktualisiert, seit der Client sie zuletzt gelesen hat.  
+- Ein oder mehrere Werte der Updateprüfung wurden in der Datenbank aktualisiert, seit der Client sie zuletzt gelesen hat.  
   
  Die Behebung dieses Konflikts umfasst die Erkennung der Member, bei deren Objekten der Konflikt auftritt. Anschließend wird entschieden, wie weiter vorgegangen wird.  
   
@@ -49,44 +49,44 @@ ms.locfileid: "59106547"
 ## <a name="conflict-detection-and-resolution-checklist"></a>Checkliste für Konflikterkennung und -behebung  
  Sie können Konflikte auf jeder Detailebene erkennen und beheben. Einerseits können Sie alle Konflikte auf eine von drei Arten beheben (siehe <xref:System.Data.Linq.RefreshMode>). Hierbei müssen keine weiteren Aspekte berücksichtigt werden. Andererseits können Sie für jeden Konflikttyp bei jedem Member eine bestimmte Aktion zuweisen.  
   
--   Definieren oder überarbeiten Sie die <xref:System.Data.Linq.Mapping.UpdateCheck>-Optionen in Ihrem Objektmodell.  
+- Definieren oder überarbeiten Sie die <xref:System.Data.Linq.Mapping.UpdateCheck>-Optionen in Ihrem Objektmodell.  
   
      Weitere Informationen finden Sie unter [Vorgehensweise: Angeben, welche Member auf Parallelitätskonflikte getestet werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
   
--   Im Try/Catch-Block Ihres Aufrufs für <xref:System.Data.Linq.DataContext.SubmitChanges%2A> können Sie angeben, zu welchem Zeitpunkt die Ausnahmen ausgelöst werden sollen.  
+- Im Try/Catch-Block Ihres Aufrufs für <xref:System.Data.Linq.DataContext.SubmitChanges%2A> können Sie angeben, zu welchem Zeitpunkt die Ausnahmen ausgelöst werden sollen.  
   
      Weitere Informationen finden Sie unter [Vorgehensweise: Geben Sie bei der Parallelitätsausnahmen ausgelöst werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
   
--   Ermitteln Sie, wie viele Konfliktdetails Sie abrufen möchten, und gestalten Sie den Try/Catch-Block entsprechend.  
+- Ermitteln Sie, wie viele Konfliktdetails Sie abrufen möchten, und gestalten Sie den Try/Catch-Block entsprechend.  
   
      Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Entitätskonfliktinformationen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) und [Vorgehensweise: Abrufen von Memberkonfliktinformationen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
   
--   Schließen Sie in Ihrem `try` / `catch` code, wie Sie die verschiedenen Konflikte lösen Sie ermitteln möchten.  
+- Schließen Sie in Ihrem `try` / `catch` code, wie Sie die verschiedenen Konflikte lösen Sie ermitteln möchten.  
   
      Weitere Informationen finden Sie unter [Vorgehensweise: Auflösen von Parallelitätskonflikten durch Beibehalten von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [Vorgehensweise: Auflösen von Parallelitätskonflikten durch Überschreiben von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), und [Vorgehensweise: Auflösen von Parallelitätskonflikten durch Zusammenführen von Datenbankwerten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>LINQ to SQL-Typen, die Konfliktermittlung und -behebung unterstützen  
  Zu den Klassen und Funktionen, die die Behebung von Konflikten bei der vollständigen Parallelität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützen, zählen:  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Siehe auch
 

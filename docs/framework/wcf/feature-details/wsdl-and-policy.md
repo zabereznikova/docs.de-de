@@ -3,11 +3,11 @@ title: WSDL und Richtlinie
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
 ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929661"
 ---
 # <a name="wsdl-and-policy"></a>WSDL und Richtlinie
 Dieses Thema behandelt die Windows Communication Foundation (WCF)-WSDL 1.1, WS-Policy und WS-PolicyAttachment-Implementierungsdetails, sowie zusätzliche WS-Richtlinienassertionen und WSDL 1.1-Erweiterungen, die von WCF eingeführt.  
@@ -75,5 +75,5 @@ Dieses Thema behandelt die Windows Communication Foundation (WCF)-WSDL 1.1, WS-P
 ## <a name="see-also"></a>Siehe auch
 
 - [Benutzerdefinierte WSDL-Veröffentlichung](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Vorgehensweise: Exportieren von benutzerdefinierten WSDL-Informationen](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Vorgehensweise: Exportieren von benutzerdefinierter WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Vorgehensweise: Benutzerdefinierte WSDL importieren](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

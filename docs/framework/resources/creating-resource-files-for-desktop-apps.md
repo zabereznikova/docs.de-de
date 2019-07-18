@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e5ca80de113785904562ff1cef953de8a5a9460
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442138"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59313657"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Erstellen von Ressourcendateien für .NET-Apps
 
@@ -31,7 +31,7 @@ Sie können Ressourcen (z. B. Zeichenfolgen, Bilder oder Objektdaten) in Ressou
 
 - Erstellen Sie programmgesteuert eine binäre Ressourcendatei (.resources). Anschließend können Sie die Datei mit einem Sprachcompiler in eine ausführbare Datei der Anwendung oder eine Anwendungsbibliothek einbetten, oder Sie können sie mithilfe des [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) in eine Satellitenassembly einbetten. Weitere Informationen finden Sie im Abschnitt [Ressourcen in RESOURCES-Dateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
-- Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017), um eine Ressourcendatei zu erstellen und in das Projekt einzuschließen. Visual Studio stellt einen Ressourcen-Editor bereit, mit dem Sie Ressourcen hinzufügen, löschen und ändern können. Zur Kompilierzeit wird die Ressourcendatei automatisch in eine binäre RESOURCES-Datei konvertiert und in eine Anwendungsassembly oder eine Satellitenassembly eingebettet. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles).
+- Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), um eine Ressourcendatei zu erstellen und in das Projekt einzuschließen. Visual Studio stellt einen Ressourcen-Editor bereit, mit dem Sie Ressourcen hinzufügen, löschen und ändern können. Zur Kompilierzeit wird die Ressourcendatei automatisch in eine binäre RESOURCES-Datei konvertiert und in eine Anwendungsassembly oder eine Satellitenassembly eingebettet. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles).
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>Ressourcen in Textdateien
@@ -172,7 +172,7 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> Da RESX-Dateien aus wohlgeformtem XML in einem vordefinierten Format bestehen müssen, empfiehlt es sich nicht, mit RESX-Dateien manuell zu arbeiten, insbesondere, wenn die RESX-Dateien andere Ressourcen als Zeichenfolgen enthalten. Stattdessen bietet [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) eine transparente Schnittstelle zum Erstellen und Bearbeiten von RESX-Dateien. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles). Sie können RESX-Dateien auch programmgesteuert erstellen und bearbeiten. Weitere Informationen finden Sie unter [Programmgesteuertes Arbeiten mit RESX-Dateien](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
+> Da RESX-Dateien aus wohlgeformtem XML in einem vordefinierten Format bestehen müssen, empfiehlt es sich nicht, mit RESX-Dateien manuell zu arbeiten, insbesondere, wenn die RESX-Dateien andere Ressourcen als Zeichenfolgen enthalten. Stattdessen bietet [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) eine transparente Schnittstelle zum Erstellen und Bearbeiten von RESX-Dateien. Weitere Informationen finden Sie im Abschnitt [Ressourcendateien in Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles). Sie können RESX-Dateien auch programmgesteuert erstellen und bearbeiten. Weitere Informationen finden Sie unter [Programmgesteuertes Arbeiten mit RESX-Dateien](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>Ressourcen in RESOURCES-Dateien
@@ -198,7 +198,7 @@ Mit der <xref:System.Resources.ResourceWriter?displayProperty=nameWithType>-Klas
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Ressourcendateien in Visual Studio
 
-Wenn Sie dem [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)-Projekt eine Ressourcendatei hinzufügen, wird von Visual Studio im Projektverzeichnis eine RESX-Datei erstellt. Visual Studio stellt Ressourcen-Editoren bereit, die es Ihnen ermöglichen, Zeichenfolgen, Bilder und binäre Objekte hinzuzufügen. Da die Editoren nur dazu dienen, statische Daten zu behandeln, können sie nicht zum Speichern programmgesteuerter Objekte verwendet werden. Sie müssen Objektdaten programmgesteuert in eine RESX-Datei oder in eine RESOURCES-Datei schreiben. Weitere Informationen finden Sie in den Abschnitten [Programmgesteuertes Arbeiten mit RESX-Dateien](../../../docs/framework/resources/working-with-resx-files-programmatically.md) und [Ressourcen in RESOURCES-Dateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
+Wenn Sie dem [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)-Projekt eine Ressourcendatei hinzufügen, wird von Visual Studio im Projektverzeichnis eine RESX-Datei erstellt. Visual Studio stellt Ressourcen-Editoren bereit, die es Ihnen ermöglichen, Zeichenfolgen, Bilder und binäre Objekte hinzuzufügen. Da die Editoren nur dazu dienen, statische Daten zu behandeln, können sie nicht zum Speichern programmgesteuerter Objekte verwendet werden. Sie müssen Objektdaten programmgesteuert in eine RESX-Datei oder in eine RESOURCES-Datei schreiben. Weitere Informationen finden Sie in den Abschnitten [Programmgesteuertes Arbeiten mit RESX-Dateien](../../../docs/framework/resources/working-with-resx-files-programmatically.md) und [Ressourcen in RESOURCES-Dateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles).
 
 Wenn Sie lokalisierte Ressourcen hinzufügen, geben Sie ihnen den gleichen Stammdateinamen wie der Hauptressourcendatei. Sie sollten auch ihre Kultur im Dateinamen festlegen. Wenn Sie z. B. eine Ressourcendatei mit dem Namen "Ressourcen.resx" hinzufügen, können Sie auch Ressourcendateien mit dem Namen "Ressourcen.en-US.resx" und "Ressourcen.fr-FR.resx" erstellen, um lokalisierte Ressourcen für die englischen (USA) und französischen (Frankreich) Kulturen zu halten. Sie sollten auch die Standardkultur der Anwendung festlegen. Die Ressourcen dieser Kultur werden verwendet, wenn keine lokalisierten Ressourcen für eine bestimmte Kultur gefunden werden. Zum Angeben der Standardkultur klicken Sie in Visual Studio im Projektmappen-Explorer mit der rechten Maustaste auf den Projektnamen, zeigen Sie auf "Anwendung", klicken Sie auf **Assemblyinformationen**, und wählen Sie die entsprechende Sprache/Kultur in der Liste **Neutrale Sprache** aus.
 

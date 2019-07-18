@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683819"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170773"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Ergebnisstrukturfragment in Transformationen
 
 > [!NOTE]
-> Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](migrating-from-the-xsltransform-class.md).
+> Die <xref:System.Xml.Xsl.XslTransform>-Klasse ist in .NET Framework 2.0 veraltet. Mithilfe der <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse können Sie XSLT-Transformationen (Extensible Stylesheet Language for Transformations) vornehmen. Weitere Informationen finden Sie unter [Verwenden der XslCompiledTransform-Klasse](using-the-xslcompiledtransform-class.md) und [Migrieren von der XslTransform-Klasse](migrating-from-the-xsltransform-class.md).
 
  Ergebnisstrukturfragmente sind lediglich spezielle Knotengruppentypen. Für sie können dieselben Funktionen ausgeführt werden wie für Knotengruppen. Außerdem können Ergebnisstrukturfragmente mit der `node-set()`-Funktion in Knotengruppen konvertiert und anschließend überall verwendet werden, wo eine Knotengruppe verwendet werden kann.
 
@@ -35,7 +35,7 @@ Beim `parameter`-Element kann der Wert dem `Qname` (qualifizierter Name) auf ver
 
 Dem `variable`-Element kann der Wert ebenfalls auf verschiedene Weise zugewiesen werden. Die Zuordnung kann erfolgen, indem der Inhalt aus dem XPath-Ausdruck im `select`-Attribut zurückgegeben wird, oder indem der Inhalt des Vorlagenkörpers zugewiesen wird.
 
-Wenn bei einem `parameter`-Element und einem `variable`-Element der Wert durch den XPath-Ausdruck zugeordnet wird, wird einer der vier XPath-Grundtypen zurückgegeben: Boolean, String, Number oder node set. Wenn der Wert aus einem Vorlagenkörper mit Inhalt stammt, wird kein XPath-Datentyp zurückgegeben, sondern ein Ergebnisstrukturfragment.
+Wenn bei einem `parameter`-Element und einem `variable`-Element der Wert durch den XPath-Ausdruck zugeordnet wird, wird einer der vier XPath-Grundtypen zurückgegeben: Boolesch, Zeichenfolge, Zahl oder Knotengruppe. Wenn der Wert aus einem Vorlagenkörper mit Inhalt stammt, wird kein XPath-Datentyp zurückgegeben, sondern ein Ergebnisstrukturfragment.
 
 Nur wenn eine Variable nicht an einen der vier XPath-Grunddatentypen, sondern an ein Ergebnisstrukturfragment gebunden ist, gibt eine XPath-Abfrage einen Typ zurück, der nicht zu den vier XPath-Objekttypen gehört. Das Verhalten von Ergebnisstrukturfragmenten wird in der [W3C-Spezifikation](https://www.w3.org/TR/xslt-10/), [Abschnitt 11.1, „Result Tree Fragments“](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments), bis [Abschnitt 11.6, „Passing Parameters to Templates“](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates), erörtert. Darüber hinaus werden in [Abschnitt 1, „Introduction“](https://www.w3.org/TR/xslt-10/#section-Introduction) Möglichkeiten erläutert, wie Vorlagen auch Elemente aus dem XSLT-Namespace enthalten können, die Ergebnisstrukturfragmente zurückgeben oder erstellen.
 
@@ -194,7 +194,6 @@ Nachfolgend wird das Ergebnis der XML-Transformation mit diesem Stylesheet darge
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Xml.XPath.XPathNodeIterator>
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [XSLT-Transformationen mit der XslTransform-Klasse](xslt-transformations-with-the-xsltransform-class.md)
 - [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](xsltransform-class-implements-the-xslt-processor.md)

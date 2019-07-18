@@ -12,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 1283fea83cf77bbc898d460feedc72b898a65fb7
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 6bdf7bf5b998135652bc63d8d3e6c71a61475d20
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633945"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634291"
 ---
 # <a name="sqlstreamcharssetlengthint64-method"></a>SqlStreamChars.SetLength(Int64)-Methode
 

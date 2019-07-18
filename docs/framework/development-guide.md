@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092955"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052736"
 ---
 # <a name="net-framework-development-guide"></a>Entwicklungshandbuch für .NET Framework
 In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und Bereitstellen von .NET Framework-Apps beschrieben. Der Abschnitt enthält auch Informationen über Technologiebereiche, wie dynamische Programmierung, Interoperabilität, Erweiterbarkeit, Speicherverwaltung und Threading.  
@@ -48,7 +48,7 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  Erläutert die Verwendung von Konfigurationsdateien zum Ändern von Einstellungen, ohne die .NET Framework-Apps neu kompilieren zu müssen.  
   
  [Kompilieren von Apps mit .NET Native](../../docs/framework/net-native/index.md)  
- Erläutert, wie Sie die [!INCLUDE[net_native](../../includes/net-native-md.md)]-Vorkompilierungstechnologie verwenden können, um Windows Store-Apps zu erstellen und bereitzustellen. [!INCLUDE[net_native](../../includes/net-native-md.md)]kompiliert Apps, die in verwaltetem Code (C#) geschrieben sind und deren Ziel .NET Framework und dann die Umwandlung zu systemeigenem Code ist.  
+ Erläutert, wie Sie die .NET Native-Vorkompilierungstechnologie verwenden können, um Windows Store-Apps zu erstellen und bereitzustellen. .NET Native kompiliert Apps zu nativem Code, die in verwaltetem Code (C#) für .NET Framework geschrieben wurden.  
   
  [Sicherheit](../../docs/standard/security/index.md)  
  Enthält Informationen über die Klassen und Dienste in .NET Framework, die die sichere Appentwicklung erleichtern.  
@@ -67,7 +67,7 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
  
 ## <a name="reference"></a>Referenz  
  [.NET Framework-Klassenbibliothek](/dotnet/api/?view=netframework-4.7)  
- Stellt Syntax, Codebeispiele und Informationen zur Verwendung zu den einzelnen in den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Namespaces enthaltenen Klassen zur Verfügung.  
+ Stellt Syntax, Codebeispiele und Informationen zur Verwendung zu den einzelnen Klassen zur Verfügung, die in den .NET Framework-Namespaces enthalten sind.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Erste Schritte](../../docs/framework/get-started/index.md)  

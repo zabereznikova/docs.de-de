@@ -10,18 +10,18 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
 ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971001"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
 Die <xref:System.Windows.Controls.ScrollViewer> Steuerelement erstellt einen bildlauffähigen Bereich, in dem Inhalte horizontal oder vertikal Bildlauf möglich.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über ScrollViewer](scrollviewer-overview.md)  
- [Gewusst wie-Themen](scrollviewer-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b02f70f22a7d35bf0fe7816a52c490f88b31217
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fbdb9f6fc8376e080455957367dc79f4dfed8843
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218432"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781197"
 ---
 # <a name="icorprofilerthreadenumgetcount-method"></a>ICorProfilerThreadEnum::GetCount-Methode
 Ruft die Anzahl der Threads ab, die von der Anwendung verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCount (    [out] ULONG * pcelt  
 );  
 ```  

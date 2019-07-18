@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3f70d2d90df43fdfe759387bebd776736843a1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4e809cad8098ccb80685545c9e7f9deea2f73540
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087507"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752238"
 ---
 # <a name="icordebugenumreset-method"></a>ICorDebugEnum::Reset-Methode
 Verschiebt den Cursor auf den Anfang der Enumeration.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Reset ();  
 ```  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 163ec17f3ea96744290c54a73054ab132f842127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829023"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647661"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Gibt an, dass eine Eigenschaft geschrieben, jedoch nicht gelesen werden kann.  
@@ -34,15 +34,15 @@ Gibt an, dass eine Eigenschaft geschrieben, jedoch nicht gelesen werden kann.
 > [!IMPORTANT]
 >  Wenn Sie definieren und Verwenden einer `WriteOnly` -Eigenschaft, sollten Sie die folgenden zusätzlichen Schutzmaßnahmen:  
   
--   **Überschreiben.** Wenn die Eigenschaft auf einen Member einer Klasse ist, können sie standardmäßig [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), und nicht deklarieren `Overridable` oder `MustOverride`. Dadurch wird verhindert, dass eine abgeleitete Klasse unerwünschten Zugriff über eine Außerkraftsetzung.  
+- **Überschreiben.** Wenn die Eigenschaft auf einen Member einer Klasse ist, können sie standardmäßig [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), und nicht deklarieren `Overridable` oder `MustOverride`. Dadurch wird verhindert, dass eine abgeleitete Klasse unerwünschten Zugriff über eine Außerkraftsetzung.  
   
--   **Zugriffsebene.** Wenn Sie vertrauliche Daten von der Eigenschaft in eine oder mehrere Variablen enthalten, deklarieren sie [Private](../../../visual-basic/language-reference/modifiers/private.md) , damit kein anderer Code darauf zugreifen kann.  
+- **Zugriffsebene.** Wenn Sie vertrauliche Daten von der Eigenschaft in eine oder mehrere Variablen enthalten, deklarieren sie [Private](../../../visual-basic/language-reference/modifiers/private.md) , damit kein anderer Code darauf zugreifen kann.  
   
--   **Verschlüsselung.** Store Sie alle vertrauliche Daten in verschlüsselter Form und nicht im nur-Text. Wenn Schadsoftware aus irgendeinem Grund den Zugriff auf diesen Bereich des Arbeitsspeichers hinzugefügt werden, ist es schwieriger, stellen die Daten verwenden. Verschlüsselung ist auch nützlich, wenn es erforderlich, um die sensiblen Daten zu serialisieren ist.  
+- **Verschlüsselung.** Store Sie alle vertrauliche Daten in verschlüsselter Form und nicht im nur-Text. Wenn Schadsoftware aus irgendeinem Grund den Zugriff auf diesen Bereich des Arbeitsspeichers hinzugefügt werden, ist es schwieriger, stellen die Daten verwenden. Verschlüsselung ist auch nützlich, wenn es erforderlich, um die sensiblen Daten zu serialisieren ist.  
   
--   **Das Zurücksetzen.** Wenn die Klasse, Struktur oder Module, die die Eigenschaft wird beendet, die sensiblen Daten zurückzusetzen, auf die Standardwerte oder in andere Werte ohne Bedeutung. Dies bietet zusätzlichen Schutz, wenn dieser Bereich des Arbeitsspeichers für den allgemeinen Zugriff freigegeben wird.  
+- **Das Zurücksetzen.** Wenn die Klasse, Struktur oder Module, die die Eigenschaft wird beendet, die sensiblen Daten zurückzusetzen, auf die Standardwerte oder in andere Werte ohne Bedeutung. Dies bietet zusätzlichen Schutz, wenn dieser Bereich des Arbeitsspeichers für den allgemeinen Zugriff freigegeben wird.  
   
--   **Dauerhaftigkeit.** Erhalten Sie vertraulichen Daten, z. B. auf dem Datenträger bleiben nicht werden, wenn Sie es vermeiden können. Schreiben Sie auch nicht sensiblen Daten in die Zwischenablage.  
+- **Dauerhaftigkeit.** Erhalten Sie vertraulichen Daten, z. B. auf dem Datenträger bleiben nicht werden, wenn Sie es vermeiden können. Schreiben Sie auch nicht sensiblen Daten in die Zwischenablage.  
   
  Die `WriteOnly` Modifizierer kann in diesem Kontext verwendet werden:  
   

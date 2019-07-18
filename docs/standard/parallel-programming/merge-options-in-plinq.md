@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06f772b8d26ec87519efdaae7b621f3fd2d321c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7255ef11bfdf74afa6ae2032b0c86c8c44dbfe7d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714736"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647727"
 ---
 # <a name="merge-options-in-plinq"></a>Mergeoptionen in PLINQ
 Wenn eine Abfrage als parallel ausgeführt wird, partitioniert PLINQ die Quellsequenz, sodass mehrere Threads gleichzeitig an verschiedenen Teilen arbeiten können, in der Regel an separaten Threads. Wenn die Ergebnisse in einem einzelnen Thread verarbeitet werden sollen, z.B. in einer `foreach`-Schleife (`For Each` in Visual Basic), müssen die Ergebnisse der einzelnen Threads wieder zu einer einzigen Sequenz zusammengeführt werden. Welche Art der Zusammenführung PLINQ ausführt, hängt von den Operatoren ab, die in der Abfrage vorhanden sind. Beispielsweise müssen Operatoren, die die Ergebnisse in eine neue Reihenfolge stellen, alle Elemente aus allen Threads puffern. Aus der Perspektive des nutzenden Threads (die mit der des Anwendungsbenutzers identisch ist) könnte eine vollständig gepufferte Abfrage für einen beachtlichen Zeitraum ausgeführt werden, bevor sie das erste Ergebnis liefert. Andere Operatoren sind standardmäßig teilweise gepuffert. Sie stellen ihre Ergebnisse batchweise bereit. Ein Operator, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, wird nicht standardmäßig gepuffert. Er stellt alle Elemente aus allen Threads sofort bereit.  
@@ -32,15 +32,15 @@ Wenn eine Abfrage als parallel ausgeführt wird, partitioniert PLINQ die Quellse
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
  Die <xref:System.Linq.ParallelMergeOptions>-Enumeration enthält die folgenden Optionen, die für unterstützte Abfrageformen angeben, wie die endgültige Ausgabe der Abfrage bereitgestellt wird, wenn die Ergebnisse in einem einzelnen Thread verarbeitet werden:  
   
--   `Not Buffered`  
+- `Not Buffered`  
   
      Die <xref:System.Linq.ParallelMergeOptions.NotBuffered>-Option bewirkt, dass jedes verarbeitete Element aus jedem Thread zurückgegeben wird, sobald seine Verarbeitung abgeschlossen ist. Dieses Verhalten ist analog zum „Streamen“ der Ausgabe. Wenn der <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>-Operator in der Abfrage vorhanden ist, behält `NotBuffered` die Reihenfolge der Quellelemente bei. Obwohl `NotBuffered` beginnt, Ergebnisse bereitzustellen, sobald sie verfügbar sind, kann die Gesamtzeit zum Erzeugen aller Ergebnisse dennoch länger sein als mit einer der anderen Mergeoptionen.  
   
--   `Auto Buffered`  
+- `Auto Buffered`  
   
      Die <xref:System.Linq.ParallelMergeOptions.AutoBuffered>-Option bewirkt, dass die Abfrage Elemente in einem Puffer sammelt und dann in regelmäßigen Abständen den gesamten Pufferinhalt für den verarbeitenden Thread bereitstellt. Dies ist analog zum Bereitstellen der Quelldaten in „Blöcken“ statt Verwendung des „Streamverhaltens“ von `NotBuffered`. `AutoBuffered` benötigt möglicherweise mehr Zeit als `NotBuffered`, um das erste Element für den verarbeitenden Thread verfügbar zu machen. Die Größe des Puffers und das genaue Ausgabeverhalten sind nicht konfigurierbar und variieren abhängig von verschiedenen, von der Abfrage abhängigen Faktoren.  
   
--   `FullyBuffered`  
+- `FullyBuffered`  
   
      Die <xref:System.Linq.ParallelMergeOptions.FullyBuffered>-Option bewirkt, dass die Ausgabe der gesamten Abfrage gepuffert wird, bevor eines der Elemente bereitgestellt wird. Wenn Sie diese Option verwenden, kann es länger dauern, bis das erste Element für den verarbeitenden Thread verfügbar ist, aber die vollständigen Ergebnisse könnten dennoch schneller erzeugt werden als mit den anderen Optionen.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 05b1e6b646c519216eba2d4f0df7a3e32f3dafbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661262"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Gibt an, dass eine Klasse nur als Basisklasse verwendet werden kann und ein Objekt kann nicht direkt daraus erstellen.  
@@ -29,9 +29,9 @@ Gibt an, dass eine Klasse nur als Basisklasse verwendet werden kann und ein Obje
   
 ## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** Sie können `MustInherit` nur in einem `Class` Anweisung.  
+- **Deklarationskontext.** Sie können `MustInherit` nur in einem `Class` Anweisung.  
   
--   **Kombinierte Modifizierer.** Sie können keine angeben `MustInherit` zusammen mit `NotInheritable` in der gleichen Deklaration.  
+- **Kombinierte Modifizierer.** Sie können keine angeben `MustInherit` zusammen mit `NotInheritable` in der gleichen Deklaration.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die erzwungene Vererbung und erzwungene überschreiben. Die Basisklasse `shape` definiert eine Variable `acrossLine`. Die Klassen `circle` und `square` abgeleitet `shape`. Sie erben die Definition der `acrossLine`, jedoch müssen sie die Funktion definieren `area` , da die Berechnung für jede Art von Form unterscheidet.  

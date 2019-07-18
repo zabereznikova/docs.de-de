@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], BetweenShowDelay time property
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
-ms.openlocfilehash: b6d55c72c8264546949833fc086937a8b1fe2540
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9b63675ec21294496117860aa5b58af132c4284a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139593"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614532"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>Vorgehensweise: Verwenden der BetweenShowDelay-Eigenschaft
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> endzeiteigenschaft, sodass die QuickInfos schnell angezeigt werden – mit nur wenig oder keine Verzögerung, wenn ein Benutzer den Mauszeiger von einer QuickInfo bewegt direkt in einen anderen.  
@@ -20,9 +20,9 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.ToolTipServ
   
  In der folgenden beiden Szenarien die <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> angewendet wird, wodurch die QuickInfo für den zweiten Ellipse mit einer Sekunde, bevor sie angezeigt wird:  
   
--   Wenn die Zeit, um zu verschieben, ist die zweite Schaltfläche mehr als zwei Sekunden.  
+- Wenn die Zeit, um zu verschieben, ist die zweite Schaltfläche mehr als zwei Sekunden.  
   
--   Wenn die QuickInfo am Anfang des Zeitintervalls für die erste Ellipse nicht sichtbar ist.  
+- Wenn die QuickInfo am Anfang des Zeitintervalls für die erste Ellipse nicht sichtbar ist.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
 [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
@@ -31,5 +31,5 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.ToolTipServ
 
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Gewusst wie-Themen](tooltip-how-to-topics.md)
-- [Übersicht über die QuickInfo](tooltip-overview.md)
+- [Themen zu Vorgehensweisen](tooltip-how-to-topics.md)
+- [Übersicht über QuickInfo](tooltip-overview.md)

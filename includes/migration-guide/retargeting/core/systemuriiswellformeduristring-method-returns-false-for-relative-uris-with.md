@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 734041f5921571cd11225a359e794526cbd8d0e1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774381"
+---
 ### <a name="systemuriiswellformeduristring-method-returns-false-for-relative-uris-with-a-colon-char-in-first-segment"></a>Die Methode System.Uri.IsWellFormedUriString gibt für relative URIs mit einem Doppelpunktzeichen im ersten Segment FALSE zurück
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=nameWithType></li></ul>|
-

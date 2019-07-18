@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739461"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586266"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Exemplarische Vorgehensweisen für Visual Basic
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien, sodass sie der ideale Ausgangspunkt sind, um mehr über das Produkt oder einen bestimmten Funktionsbereich zu erfahren.  
@@ -72,7 +72,7 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  Veranschaulicht die Verwendung von Visual Basic-Funktionen zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei  
   
  [Manipulating Files Using .NET Framework Methods (Bearbeiten von Dateien mit .NET Framework-Methoden)](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Veranschaulicht die Verwendung von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Methoden zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei.  
+ Veranschaulicht die Verwendung von .NET Framework-Methoden zum Bestimmen von Informationen zu einer Datei, Suchen nach einer Zeichenfolge in einer Datei und zum Schreiben in eine Datei.  
   
  [Persisting an Object in Visual Basic (Beibehalten eines Objekts in Visual Studio)](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Veranschaulicht, wie man ein einfaches Objekt erstellt und dessen Daten in einer Datei beibehält.  

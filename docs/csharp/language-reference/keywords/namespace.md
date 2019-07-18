@@ -1,6 +1,6 @@
 ---
 title: namespace-Schlüsselwort – C#-Programmierreferenz
-ms.custom: seodec18
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242762"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422742"
 ---
-# <a name="namespace-c-reference"></a>namespace (C#-Referenz)
+# <a name="namespace-c-reference"></a>Namespace (C#-Referenz)
 
 Das `namespace`-Schlüsselwort wird verwendet, um einen Gültigkeitsbereich zu deklarieren, der eine Gruppe von verwandten Objekten enthält. Sie können einen Namespace verwenden, um Codeelemente zu organisieren und global eindeutige Typen zu erstellen.
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Innerhalb eines Namespace können Sie 0 (null) oder mehr der folgenden Typen deklarieren:
 
@@ -71,5 +71,5 @@ Weitere Informationen zur Verwendung von Namespaces finden Sie in den folgenden 
 - [C#-Referenz](../../language-reference/index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Namespaceschlüsselwörter](namespace-keywords.md)
-- [using](using.md)
+- [using](using-directive.md)
+- [using static](using-static.md)

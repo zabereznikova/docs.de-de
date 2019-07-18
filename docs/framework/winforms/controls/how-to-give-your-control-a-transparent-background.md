@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8a03d9afec5340cd77af465c4470b7484b8926be
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609704"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Vorgehensweise: Verwenden eines transparenten Hintergrunds für ein Steuerelement
 In früheren Versionen von .NET Framework wird für Steuerelemente ein Festlegen auf transparente Hintergrundfarben nur dann unterstützt, wenn zunächst die <xref:System.Windows.Forms.Control.SetStyle%2A> -Methode im Konstruktor der Formulare festgelegt wurde. In der aktuellen Framework-Version kann die Hintergrundfarbe für die meisten Steuerelemente zur Entwurfszeit im Fenster <xref:System.Drawing.Color.Transparent%2A> Eigenschaften **oder in Code im Konstruktor des Formulars auf** festgelegt werden.  
@@ -24,11 +24,11 @@ In früheren Versionen von .NET Framework wird für Steuerelemente ein Festlegen
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>So weisen Sie dem Steuerelement eine transparente Hintergrundfarbe zu  
   
--   Wählen Sie im Fenster Eigenschaften die <xref:System.Windows.Forms.ButtonBase.BackColor%2A> Eigenschaft, und legen Sie ihn auf <xref:System.Drawing.Color.Transparent%2A>  
+- Wählen Sie im Eigenschaftenfenster die <xref:System.Windows.Forms.ButtonBase.BackColor%2A> -Eigenschaft aus, und legen Sie diese auf <xref:System.Drawing.Color.Transparent%2A>fest.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)
 - [Verwenden von verwalteten Grafikklassen](../advanced/using-managed-graphics-classes.md)
-- [Vorgehensweise: Zeichnen deckender und halbtransparenter Linien](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [Vorgehensweise: Zeichnen Sie deckender und halbtransparente Linien](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

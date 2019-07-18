@@ -1,5 +1,5 @@
 ---
-title: <disableFusionUpdatesFromADManager> Element
+title: <disableFusionUpdatesFromADManager>-Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - disableFusionUpdatesFromADManager element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085882"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487661"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager> Element
 Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem Laufzeithost das Außerkraftsetzen von Konfigurationseinstellungen für eine Anwendungsdomäne zu ermöglichen.  
@@ -38,9 +38,9 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
-|Wert|Beschreibung|  
+|Wert|Description|  
 |-----------|-----------------|  
-|0|Deaktivieren Sie nicht die Möglichkeit, die Fusion-Einstellungen außer Kraft gesetzt. Dies ist das Standardverhalten, beginnend mit der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|0|Deaktivieren Sie nicht die Möglichkeit, die Fusion-Einstellungen außer Kraft gesetzt. Dies ist das Standardverhalten, beginnend mit .NET Framework 4.|  
 |1|Deaktivieren Sie die Möglichkeit, die Fusion-Einstellungen außer Kraft gesetzt. Dadurch wird das Verhalten von früheren Versionen von .NET Framework wieder.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -54,7 +54,7 @@ Gibt an, ob das Standardverhalten deaktiviert wird. Dieses besteht darin, dem La
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Beginnend mit der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], das Standardverhalten ist, können die <xref:System.AppDomainManager> Objekt, das mithilfe von Konfigurationseinstellungen zu überschreiben die <xref:System.AppDomainSetup.ConfigurationFile%2A> Eigenschaft oder der <xref:System.AppDomainSetup.SetConfigurationBytes%2A> -Methode der der <xref:System.AppDomainSetup> -Objekt, das für Ihre Implementierung übergeben wird von der <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> -Methode, in die Unterklasse von <xref:System.AppDomainManager>. Für die Standardanwendungsdomäne überschreiben die Einstellungen, die Sie ändern die Einstellungen, die von der Konfigurationsdatei der Anwendung angegeben wurden. Für andere Anwendungsdomänen, überschreiben sie die Konfigurationseinstellungen, die übergeben wurden, die <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> oder <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> Methode.  
+ Ab .NET Framework 4, das Standardverhalten ist, können die <xref:System.AppDomainManager> Objekt, das mithilfe von Konfigurationseinstellungen zu überschreiben die <xref:System.AppDomainSetup.ConfigurationFile%2A> Eigenschaft oder die <xref:System.AppDomainSetup.SetConfigurationBytes%2A> Methode der <xref:System.AppDomainSetup> -Objekt, das für Ihre Implementierung übergeben wird von der <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> -Methode, in die Unterklasse von <xref:System.AppDomainManager>. Für die Standardanwendungsdomäne überschreiben die Einstellungen, die Sie ändern die Einstellungen, die von der Konfigurationsdatei der Anwendung angegeben wurden. Für andere Anwendungsdomänen, überschreiben sie die Konfigurationseinstellungen, die übergeben wurden, die <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> oder <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> Methode.  
   
  Sie können neue Konfigurationsinformationen zu übergeben, oder übergeben Sie null (`Nothing` in Visual Basic), Konfigurationsinformationen zu beseitigen, die übergeben wurde.  
   

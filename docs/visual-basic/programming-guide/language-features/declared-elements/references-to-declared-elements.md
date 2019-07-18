@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 616599e15c0d3d4c2177622d6820269bcff3ea39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821451"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592803"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Verweise auf deklarierte Elemente (Visual Basic)
 Wenn Ihr Code auf einem deklarierten Element verweist, wird von Visual Basic-Compiler dem Namen in den Verweis auf die entsprechende Deklaration mit dem Namen übereinstimmt. Wenn mehr als ein Element mit demselben Namen deklariert wird, können Sie steuern, welches dieser Elemente wird auf das SKD *qualifizierenden* seinen Namen.  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Auf ein deklariertes Element durch Angabe ihres Namens zugreifen  
   
-1.  Bestimmen Sie den Speicherort, in dem das Element definiert wurde. Das kann es sich um einen Namespace oder sogar eine Hierarchie von Namespaces einschließen. In der untersten Ebene-Namespace muss das Element in einem Modul, Klasse oder Struktur enthalten sein.  
+1. Bestimmen Sie den Speicherort, in dem das Element definiert wurde. Das kann es sich um einen Namespace oder sogar eine Hierarchie von Namespaces einschließen. In der untersten Ebene-Namespace muss das Element in einem Modul, Klasse oder Struktur enthalten sein.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Bestimmen eines Qualifizierungspfads abhängig vom Standort für das Zielelement an. Beginnen Sie mit der Namespace der obersten Ebene, fahren Sie mit der Namespace der untersten Ebene fort und endet mit dem Modul, Klasse oder Struktur, die den Target-Element enthält. Jedes Element im Pfad muss es sich um das Element enthalten, das darauf folgt.  
+2. Bestimmen eines Qualifizierungspfads abhängig vom Standort für das Zielelement an. Beginnen Sie mit der Namespace der obersten Ebene, fahren Sie mit der Namespace der untersten Ebene fort und endet mit dem Modul, Klasse oder Struktur, die den Target-Element enthält. Jedes Element im Pfad muss es sich um das Element enthalten, das darauf folgt.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  Vorbereiten der qualifizierungszeichenfolge für das Zielelement an. Platzieren Sie einen Zeitraum (`.`) nach dem jedes Element im Pfad. Ihre Anwendung muss Zugriff auf jedes Element in der qualifizierungszeichenfolge verfügen.  
+3. Vorbereiten der qualifizierungszeichenfolge für das Zielelement an. Platzieren Sie einen Zeitraum (`.`) nach dem jedes Element im Pfad. Ihre Anwendung muss Zugriff auf jedes Element in der qualifizierungszeichenfolge verfügen.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  Schreiben Sie den Ausdruck oder eine zuweisungsanweisung verweisen auf die übliche Weise an das Zielelement.  
+4. Schreiben Sie den Ausdruck oder eine zuweisungsanweisung verweisen auf die übliche Weise an das Zielelement.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Stellen Sie den Ziel-Elementnamen mit der qualifizierungszeichenfolge voran. Der Name sollte unmittelbar folgen auf den Punkt (`.`), folgt das Modul, Klasse oder Struktur, die das Element enthält.  
+5. Stellen Sie den Ziel-Elementnamen mit der qualifizierungszeichenfolge voran. Der Name sollte unmittelbar folgen auf den Punkt (`.`), folgt das Modul, Klasse oder Struktur, die das Element enthält.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  Der Compiler verwendet den Qualifizierungspfad eine klare, eindeutige Deklaration gefunden, den Ziel-Elementverweis verglichen werden kann.  
+6. Der Compiler verwendet den Qualifizierungspfad eine klare, eindeutige Deklaration gefunden, den Ziel-Elementverweis verglichen werden kann.  
   
  Sie müssen möglicherweise auch einem Namensverweis auf zu qualifizieren, wenn die Anwendung den Zugriff auf mehr als ein Programmierelement ein Element verfügt, die den gleichen Namen hat. Z. B. die <xref:System.Windows.Forms> und <xref:System.Web.UI.WebControls> Namespaces, die beide enthalten eine `Label` Klasse (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> und <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Wenn Ihre Anwendung sowohl verwendet, oder eine eigene definiert `Label` -Klasse, Sie müssen die verschiedenen unterscheiden `Label` Objekte. Schließen Sie den Namespace oder Alias, in die Variablendeklaration. Im folgenden Beispiel wird den Importalias.  
   
@@ -152,7 +152,7 @@ End Module
 ## <a name="references-to-projects"></a>Verweise auf Projekte  
  Mit [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) Elemente, die in einem anderen Projekt definiert werden, müssen Sie zunächst Festlegen einer *Verweis* auf das Projekt die Assembly bzw. Typbibliothek. Klicken Sie zum Festlegen eines Verweises **Verweis hinzufügen** auf die **Projekt** Menü, oder verwenden Sie die [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) Befehlszeilencompiler-Option.  
   
- Sie können z. B. das XML-Objektmodell verwenden die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Wenn Sie einen Verweis auf die <xref:System.Xml> -Namespace können Sie deklarieren und verwenden Sie eine der Klassen, z. B. <xref:System.Xml.XmlDocument>. Im folgenden Beispiel wird <xref:System.Xml.XmlDocument>.  
+ Beispielsweise können Sie das XML-Objektmodell von .NET Framework. Wenn Sie einen Verweis auf die <xref:System.Xml> -Namespace können Sie deklarieren und verwenden Sie eine der Klassen, z. B. <xref:System.Xml.XmlDocument>. Im folgenden Beispiel wird <xref:System.Xml.XmlDocument>.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  

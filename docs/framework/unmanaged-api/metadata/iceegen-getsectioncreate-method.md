@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9768dfd43b6b60df1660c48cb6d6f498b049e256
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3de3a9c152f3074339dba330b7827cf795a7e537
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103310"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745977"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate-Methode
 Wird generiert, und ruft einen Codeabschnitt, der mit dem angegebenen Namen und der Flagwerte.  
@@ -31,7 +31,7 @@ Wird generiert, und ruft einen Codeabschnitt, der mit dem angegebenen Namen und 
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetSectionCreate (  
     [in]  const char     *name,  
     [in]  DWORD          flags,  

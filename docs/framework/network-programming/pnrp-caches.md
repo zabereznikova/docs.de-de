@@ -2,12 +2,12 @@
 title: PNRP-Caches
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736947"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622995"
 ---
 # <a name="pnrp-caches"></a>PNRP-Caches
 PNRP-Caches (Peer Name Resolution-Protokoll) sind lokale Sammlungen algorithmisch ausgewählter Peerendpunkte, die auf dem Peer verwaltet werden.  
@@ -15,9 +15,9 @@ PNRP-Caches (Peer Name Resolution-Protokoll) sind lokale Sammlungen algorithmisc
 ## <a name="pnrp-cache-initialization"></a>Initialisieren des PNRP-Caches  
  Der PNRP-Cache oder die Sammlung des Peernamendatensatzes kann beim Start eines Peerknotens mit den folgenden Methoden initialisiert werden:  
   
--   Dauerhafte Cacheeinträge, die beim Schließen des Knotens vorhanden waren, werden aus dem Festplattenspeicher geladen.  
+- Dauerhafte Cacheeinträge, die beim Schließen des Knotens vorhanden waren, werden aus dem Festplattenspeicher geladen.  
   
--   Verwendet eine Anwendung die P2P-Zusammenarbeitsinfrastruktur, sind die Zusammenarbeitsinformationen für diesen Knoten im Contact Manager verfügbar.  
+- Verwendet eine Anwendung die P2P-Zusammenarbeitsinfrastruktur, sind die Zusammenarbeitsinformationen für diesen Knoten im Contact Manager verfügbar.  
   
 ## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Skalieren des PNRP mithilfe eines Caches mit mehreren Ebenen  
  Damit die PNRP-Caches so klein wie möglich bleiben, verwenden Peerknoten einen Cache mit mehreren Ebenen, in dem jede Ebene eine maximale Anzahl von Einträgen enthält. Jede Ebene des Caches stellt einen um ein Zehntel kleineren Teil des PNRP-ID-Nummernbereichs dar (2<sup>256</sup>). Die niedrigste Ebene des Caches enthält eine lokal registrierte PNRP-ID sowie weitere PNRP-IDs, die ihr numerisch ähnlich sind. Sobald eine Ebene des Caches mit den maximal möglichen 20 Einträgen gefüllt ist, wird eine neue niedrigere Ebene erstellt. Die maximale Anzahl von Ebenen im Cache liegt bei etwa log10 (Gesamtzahl der PNRP-IDs in der Cloud). Für eine globale Cloud mit 100 Millionen PNRP-IDs sind beispielsweise nicht mehr als 8 (= log10(100.000.000)) Ebenen im Cache vorhanden sowie eine vergleichbare Anzahl von Hops, um eine PNRP-ID während der Namensauflösung aufzulösen. Dieser Mechanismus ermöglicht eine verteilte Hashtabelle, für die eine beliebige PNRP-ID aufgelöst werden kann, indem PNRP-Anforderungsnachrichten an den nächstgelegenen Peer weitergeleitet werden, bis der Peer mit der entsprechenden CPA gefunden ist.  
@@ -36,4 +36,5 @@ PNRP-Caches (Peer Name Resolution-Protokoll) sind lokale Sammlungen algorithmisc
  Peers können Interesse am Empfang von Objekten von anderen Peers registrieren. Wenn ein Objekt aktualisiert wird, wird die Zusammenarbeitsanwendung benachrichtigt und das neue Objekt an alle Abonnenten der Anwendung übergeben. Ein Peer in einer Gruppenchatanwendung kann z.B. Interesse an Anwendungsinformationen registrieren, wodurch er alle Chatdatensätze als Anwendungsdaten erhält.  Dadurch kann er die Chataktivität in der Cloud überwachen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.PeerToPeer>

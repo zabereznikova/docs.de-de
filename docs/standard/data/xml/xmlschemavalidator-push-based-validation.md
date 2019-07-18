@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4d1d5602ff224c1c8f3e0948fc93c9200b9661e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8e2b6ca8ef04ad6ff637a59f03f3b4cf04cb06ad
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189075"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615366"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>Pushbasierte Validierung mit „XmlSchemaValidator“
 Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse stellt eine effiziente leistungsstarke Methode zum Validieren von XML-Daten anhand von XML-Schemata in einem Push-Verfahren bereit. Zum Beispiel ermöglicht Ihnen die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse das direkte Validieren eines XML-Infosets, ohne es als XML-Dokument serialisieren zu müssen, und das anschließende erneute Analysieren des XML-Infosets mithilfe eines validierenden XML-Readers.  
@@ -76,9 +76,9 @@ Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse stellt eine effiziente le
 ### <a name="initializing-validation"></a>Initialisieren der Validierung  
  Nach dem Erstellen eines <xref:System.Xml.Schema.XmlSchemaValidator>-Objekts wird mit zwei überladenen <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Methoden der Zustand des <xref:System.Xml.Schema.XmlSchemaValidator>-Objekts initialisiert. Nachfolgend sind die zwei <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Methoden dargestellt.  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>  
   
  Die Standard-<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>-Methode initialisiert ein <xref:System.Xml.Schema.XmlSchemaValidator>-Objekt mit dessen Anfangszustand, und die überladene <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>-Methode, die ein <xref:System.Xml.Schema.XmlSchemaObject> als Parameter annimmt, initialisiert ein <xref:System.Xml.Schema.XmlSchemaValidator>-Objekt mit dessen Anfangszustand zur teilweisen Validierung.  
   
@@ -141,14 +141,14 @@ validator.ValidateEndElement(null);
 >   
 >  Wenn der <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema?displayProperty=nameWithType>-Wert nicht als Parameter an den <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A>-Konstruktor übergeben wurde, hat die <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A>-Methode keine Auswirkungen.  
   
- Das Ergebnis der <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A>-Methode hängt von dem aktuellen XML-Knotenkontext ab, der validiert wird. Weitere Informationen zu Validierungskontexten finden Sie in diesem Thema im Abschnitt "Validierungskontext".  
+ Das Ergebnis der <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A>-Methode hängt von dem aktuellen XML-Knotenkontext ab, der validiert wird. Weitere Informationen zu Validierungskontexten finden Sie in diesem Thema im Abschnitt „Validierungskontext“.  
   
  Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A>-Methode finden Sie in der Referenzdokumentation der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse.  
   
 ### <a name="validating-elements-attributes-and-content"></a>Validieren von Elementen, Attributen und Inhalt  
  Die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse stellt verschiedene Methoden zum Validieren von Elementen, Attributen und Inhalt in einem XML-Infoset anhand von XML-Schemata bereit. In der folgenden Tabelle werden diese Methoden beschrieben.  
   
-|Methode|Beschreibung |  
+|Methode|Beschreibung|  
 |------------|-----------------|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Validiert den Elementnamen im aktuellen Kontext.|  
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Validiert das Attribut im aktuellen Elementkontext oder anhand des <xref:System.Xml.Schema.XmlSchemaAttribute>-Objekts, das als Parameter an die <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>-Methode übergeben wurde.|  
@@ -171,11 +171,11 @@ validator.ValidateEndElement(null);
   
  Die folgenden Methoden der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse akzeptieren einen <xref:System.Xml.Schema.XmlValueGetter>`delegate` als Parameter.  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>  
   
  Im Folgenden wird ein Beispiel für <xref:System.Xml.Schema.XmlValueGetter>`delegate` aus dem Beispiel für die <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse in der Einleitung dargestellt. <xref:System.Xml.Schema.XmlValueGetter>`delegate` gibt den Wert eines Attributs als <xref:System.DateTime>-Objekt zurück. Zum Validieren dieses von <xref:System.DateTime> zurückgegebenen <xref:System.Xml.Schema.XmlValueGetter>-Objekts wird es zunächst vom <xref:System.Xml.Schema.XmlSchemaValidator>-Objekt in den ValueType (ValueType ist die Standard-CLR-Zuordnung für den XSD-Typ) des Datentyps des Attributs konvertiert und dann werden Facets des konvertierten Werts überprüft.  
   
@@ -216,21 +216,21 @@ static XmlValueGetter dateTimeGetter(DateTime dateTime)
   
  Die folgenden Methoden der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse akzeptieren ein <xref:System.Xml.Schema.XmlSchemaInfo>-Objekt als out-Parameter.  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>  
   
--   <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
+- <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>  
   
  Ein vollständiges Beispiel für die <xref:System.Xml.Schema.XmlSchemaInfo>-Klasse finden Sie im Beispiel in der Einleitung. Weitere Informationen zur <xref:System.Xml.Schema.XmlSchemaInfo>-Klasse finden Sie in der Referenzdokumentation der <xref:System.Xml.Schema.XmlSchemaInfo>-Klasse.  
   
@@ -448,7 +448,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  In der folgenden Tabelle wird beschrieben, welche Auswirkungen die Satzzeichen in der Tabelle der Zustandsübergänge oben auf die Methoden und andere Zustände haben, die für jeden Zustand im Zustandsübergang der <xref:System.Xml.Schema.XmlSchemaValidator>-Klasse aufgerufen werden können.  
   
-|Symbol|Beschreibung |  
+|Symbol|Beschreibung|  
 |------------|-----------------|  
 |&#124;|Entweder die Methode bzw. der Zustand vor oder die Methode bzw. der Zustand nach dem senkrechten Strich, kann aufgerufen werden.|  
 |?|Die Methode oder der Zustand nach dem Fragezeichen ist optional, es kann jedoch nur ein Aufruf der Methode bzw. des Zustands erfolgen.|  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c9b60cdef2af25ce712fcb2401b7f776d3add5b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158645"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660395"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen
 Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufverfolgungsausgabe als auch die Debugausgabe im Ausgabefenster von Visual Studio angezeigt. Allerdings müssen Sie Ihre instrumentierten Anwendungen mit aktivierter **TRACE**-Compilerdirektive kompilieren, um Ablaufverfolgungsfunktionen in eine bereitgestellte Anwendung aufzunehmen. Dadurch kann der Ablaufverfolgungscode in die Releaseversion der Anwendung kompiliert werden. Wenn Sie die **TRACE**-Anweisung nicht aktivieren, wird der gesamte Ablaufverfolgungscode bei der Kompilierung ignoriert und nicht in den ausführbaren Code aufgenommen, den Sie bereitstellen.  
@@ -28,25 +28,25 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
  Sie können die Compilereinstellungen für die Anwendung auf verschiedene Arten angeben:  
   
--   Eigenschaftenseiten  
+- Eigenschaftenseiten  
   
--   Die Befehlszeile  
+- Die Befehlszeile  
   
--   **#CONST** (für Visual Basic) und **#define** (für C#)  
+- **#CONST** (für Visual Basic) und **#define** (für C#)  
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>So ändern Sie die Kompilierungseinstellungen im Dialogfeld "Eigenschaftenseiten"  
   
-1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten.  
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten.  
   
-2.  Wählen Sie im Kontextmenü den Befehl **Eigenschaften** aus.  
+2. Wählen Sie im Kontextmenü den Befehl **Eigenschaften** aus.  
   
-    -   Klicken Sie in Visual Basic im linken Bereich der Eigenschaftenseite auf die Registerkarte **Kompilieren**, und klicken Sie dann auf die Schaltfläche **Erweiterte Kompilierungsoptionen**, um das Dialogfeld **Erweiterte Kompilierungsoptionen** anzuzeigen. Aktivieren Sie die Kontrollkästchen für die Compilereinstellungen, die aktiviert werden sollen. Deaktivieren Sie die Kontrollkästchen für die Einstellungen, die deaktiviert werden sollen.  
+    - Klicken Sie in Visual Basic im linken Bereich der Eigenschaftenseite auf die Registerkarte **Kompilieren**, und klicken Sie dann auf die Schaltfläche **Erweiterte Kompilierungsoptionen**, um das Dialogfeld **Erweiterte Kompilierungsoptionen** anzuzeigen. Aktivieren Sie die Kontrollkästchen für die Compilereinstellungen, die aktiviert werden sollen. Deaktivieren Sie die Kontrollkästchen für die Einstellungen, die deaktiviert werden sollen.  
   
-    -   Klicken Sie in C# auf die Registerkarte **Erstellen** im linken Bereich der Eigenschaftenseite, und aktivieren Sie dann die Kontrollkästchen für die Compilereinstellungen, die aktiviert werden sollen. Deaktivieren Sie die Kontrollkästchen für die Einstellungen, die deaktiviert werden sollen.  
+    - Klicken Sie in C# auf die Registerkarte **Erstellen** im linken Bereich der Eigenschaftenseite, und aktivieren Sie dann die Kontrollkästchen für die Compilereinstellungen, die aktiviert werden sollen. Deaktivieren Sie die Kontrollkästchen für die Einstellungen, die deaktiviert werden sollen.  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>So kompilieren Sie instrumentierten Code über die Befehlszeile  
   
-1.  Legen Sie über die Befehlszeile einen bedingten Compilerschalter fest. Der Compiler integriert Ablaufverfolgungs- oder Debugcode in die ausführbare Datei.  
+1. Legen Sie über die Befehlszeile einen bedingten Compilerschalter fest. Der Compiler integriert Ablaufverfolgungs- oder Debugcode in die ausführbare Datei.  
   
      Beispielsweise wird der Ablaufverfolgungscode in eine kompilierte ausführbare Datei aufgenommen, wenn die folgende Compileranweisung über die Befehlszeile eingegeben wird:  
   
@@ -59,7 +59,7 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
      Die in den obigen Beispielen verwendeten Anweisungen zur bedingten Kompilierung bedeuten Folgendes:  
   
-    |Direktive|Bedeutung|  
+    |Anweisung|Bedeutung|  
     |---------------|-------------|  
     |`vbc`|Visual Basic-Compiler|  
     |`csc`|C#-Compiler|  
@@ -71,7 +71,7 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>So führen Sie die bedingte Kompilierung mit #CONST oder #define durch  
   
-1.  Geben Sie am Anfang der Quellcodedatei die entsprechende Anweisung für Ihre Programmiersprache ein.  
+1. Geben Sie am Anfang der Quellcodedatei die entsprechende Anweisung für Ihre Programmiersprache ein.  
   
     |Sprache|Anweisung|Ergebnis|  
     |--------------|---------------|------------|  
@@ -80,9 +80,9 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
     ||**#CONST DEBUG = true**|Aktiviert das Debuggen|  
     ||**#CONST DEBUG = false**|Deaktiviert das Debuggen|  
     |**C#**|**#define TRACE**|Aktiviert die Ablaufverfolgung|  
-    ||**#undef TRACE**|Deaktiviert die Ablaufverfolgung|  
+    ||**#undefine TRACE**|Deaktiviert die Ablaufverfolgung|  
     ||**#define DEBUG**|Aktiviert das Debuggen|  
-    ||**#undef DEBUG**|Deaktiviert das Debuggen|  
+    ||**#undefine DEBUG**|Deaktiviert das Debuggen|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>So deaktivieren Sie die Ablaufverfolgung oder das Debuggen  
   
@@ -98,9 +98,9 @@ Kommentieren Sie die Compileranweisung aus.
 ## <a name="see-also"></a>Siehe auch
 
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Vorgehensweise: Aufrufen des Befehlszeilencompilers](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

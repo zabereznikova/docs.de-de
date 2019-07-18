@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: d3bbc8a7-b1c7-494f-b1cc-d71cf2ecb1bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43dc5f77d28535b8f0f000cf10323384e58e8148
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: daa0db44da10e41f742e99b11fcf8ea046f70f3c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450010"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490729"
 ---
 # <a name="metadata-global-static-functions"></a>Globale statische Metadatenfunktionen
-Beginnend mit der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], die Dokumentation für die `_Cor*`, `CoInitialize*`, `CoUninitialize*`, und `CoEEShutDownCOM` -Funktionen, die zum Hosten der beziehen, befindet sich im [Hosting CLR-Funktionen als veraltet markiert](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). Es gibt keine globalen statischen Funktionen, die Metadaten betreffen.  
+Ab .NET Framework 4, die Dokumentation für die `_Cor*`, `CoInitialize*`, `CoUninitialize*`, und `CoEEShutDownCOM` -Funktionen, die zum Hosten der beziehen, befindet sich im [Hosten von CLR-Funktionen als veraltet markiert](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md). Es gibt keine globalen statischen Funktionen, die Metadaten betreffen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

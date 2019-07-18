@@ -21,19 +21,19 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d3656b924ebaca67c90dc602701c4cef9ce088b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837740"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648782"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)
 Wenn Ihr Code schreiben, können Sie gelegentlich lange Anweisungen erstellen, die erfordern, horizontalen Bildlauf im Code-Editor. Obwohl dies Einfluss auf die nicht Ihr Code ausgeführt wird, erleichtert es schwierig für Sie oder andere Personen Lesen des Codes, wie er auf dem Bildschirm angezeigt wird. In solchen Fällen sollten Sie erwägen, die lange Anweisung in mehrere Zeilen unterteilt.  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>Eine einzelne Anweisung in mehrere Zeilen aufteilen  
   
--   Verwenden Sie das Zeilenfortsetzungszeichen, wird ein Unterstrich (`_`), an dem Punkt, an dem die Zeile umbrochen werden soll. Dem Unterstrich muss ein Leerzeichen direkt vorangestellt und ein Zeilenabschlusszeichen (Wagenrücklauf) direkt nachgestellt sein.  
+- Verwenden Sie das Zeilenfortsetzungszeichen, wird ein Unterstrich (`_`), an dem Punkt, an dem die Zeile umbrochen werden soll. Dem Unterstrich muss ein Leerzeichen direkt vorangestellt und ein Zeilenabschlusszeichen (Wagenrücklauf) direkt nachgestellt sein.  
   
     > [!NOTE]
     >  In einigen Fällen Wenn Sie das Zeilenfortsetzungszeichen weglassen wird Visual Basic-Compiler implizit die Anweisung in der nächsten Zeile des Codes fortgesetzt. Eine Liste der Syntaxelemente, die für die Sie dem Zeilenfortsetzungszeichen weglassen können, finden Sie unter "Implizite Zeilenfortsetzung" in [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md).  
@@ -54,7 +54,7 @@ Wenn Ihr Code schreiben, können Sie gelegentlich lange Anweisungen erstellen, d
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Mehrere Anweisungen in der gleichen Zeile platzieren  
   
--   Trennen Sie die Anweisungen durch einen Doppelpunkt (`:`), wie im folgenden Beispiel.  
+- Trennen Sie die Anweisungen durch einen Doppelpunkt (`:`), wie im folgenden Beispiel.  
   
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   

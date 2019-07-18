@@ -12,11 +12,11 @@ helpviewer_keywords:
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
 ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012762"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Implementierung von Methoden in benutzerdefinierten Steuerelementen
 Eine Methode wird genauso in ein Steuerelement implementiert, wie sie in eine beliebige andere Komponente implementiert würde.  
@@ -78,4 +78,4 @@ public void Spin(Widget driver)
 ## <a name="see-also"></a>Siehe auch
 
 - [Ereignisse](../../../standard/events/index.md)
-- [Eigenschaften von Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
+- [Eigenschaften in Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)

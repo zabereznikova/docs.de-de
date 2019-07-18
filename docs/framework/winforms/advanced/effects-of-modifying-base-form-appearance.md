@@ -9,11 +9,11 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
 ms.openlocfilehash: 6c87b3d29a1c55b2a7517da78a1951d94676dd68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756818"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>Auswirkungen beim Ändern der Darstellung von Basisformularen
 Während der Anwendungsentwicklung müssen Sie möglicherweise häufig die Darstellung des Basisformulars ändern, dessen Merkmale an andere Formulare im Projekt (oder in anderen Projekten) vererbt werden.  
@@ -27,6 +27,6 @@ Während der Anwendungsentwicklung müssen Sie möglicherweise häufig die Darst
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Basis](~/docs/csharp/language-reference/keywords/base.md)
-- [Vorgehensweise: Erben von Windows Forms](how-to-inherit-windows-forms.md)
-- [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)
+- [base](~/docs/csharp/language-reference/keywords/base.md)
+- [Vorgehensweise: Erben von Windows Forms](how-to-inherit-windows-forms.md)
+- [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)

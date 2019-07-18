@@ -37,27 +37,27 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dc0570bedb1e7dbe02994b7df943609a42ca092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea31dc154d5df2b0058af4c04035d096d5e850c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535307"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664661"
 ---
 # <a name="the-regular-expression-object-model"></a>Das Objektmodell für reguläre Ausdrücke
 <a name="introduction"></a> In diesem Thema wird das Objektmodell beschrieben, das beim Arbeiten mit regulären .NET-Ausdrücken verwendet wird. Es enthält die folgenden Abschnitte:  
   
--   [The Regular Expression Engine (Die Engine für reguläre Ausdrücke)](#Engine)  
+- [The Regular Expression Engine (Die Engine für reguläre Ausdrücke)](#Engine)  
   
--   [The MatchCollection and Match Objects (Die MatchCollection- und Match-Objekte)](#Match_and_MCollection)  
+- [The MatchCollection and Match Objects (Die MatchCollection- und Match-Objekte)](#Match_and_MCollection)  
   
--   [The Group Collection (Die Gruppenauflistung)](#GroupCollection)  
+- [The Group Collection (Die Gruppenauflistung)](#GroupCollection)  
   
--   [The Captured Group (Die erfasste Gruppe)](#the_captured_group)  
+- [The Captured Group (Die erfasste Gruppe)](#the_captured_group)  
   
--   [The Capture Collection (Die Erfassungsauflistung)](#CaptureCollection)  
+- [The Capture Collection (Die Erfassungsauflistung)](#CaptureCollection)  
   
--   [The Individual Capture (Die einzelne Erfassung)](#the_individual_capture)  
+- [The Individual Capture (Die einzelne Erfassung)](#the_individual_capture)  
   
 <a name="Engine"></a>   
 ## <a name="the-regular-expression-engine"></a>Die Engine für reguläre Ausdrücke  
@@ -65,21 +65,21 @@ ms.locfileid: "54535307"
   
  Die Engine für reguläre Ausdrücke kann auf zwei verschiedene Arten verwendet werden:  
   
--   Durch Aufrufen der statischen Methoden der <xref:System.Text.RegularExpressions.Regex>-Klasse. Die Methodenparameter schließen die Eingabezeichenfolge und das Muster eines regulären Ausdrucks ein. Die Engine für reguläre Ausdrücke führt eine Zwischenspeicherung der regulären Ausdrücke aus, die in statischen Methodenaufrufen verwendet werden. Daher zeigen wiederholte Aufrufe von statischen regulären Ausdrucksmethoden, für die der gleiche reguläre Ausdruck verwendet wird, eine relativ gute Leistung.  
+- Durch Aufrufen der statischen Methoden der <xref:System.Text.RegularExpressions.Regex>-Klasse. Die Methodenparameter schließen die Eingabezeichenfolge und das Muster eines regulären Ausdrucks ein. Die Engine für reguläre Ausdrücke führt eine Zwischenspeicherung der regulären Ausdrücke aus, die in statischen Methodenaufrufen verwendet werden. Daher zeigen wiederholte Aufrufe von statischen regulären Ausdrucksmethoden, für die der gleiche reguläre Ausdruck verwendet wird, eine relativ gute Leistung.  
   
--   Durch Instanziieren eines <xref:System.Text.RegularExpressions.Regex>-Objekts und durch Übergeben eines regulären Ausdrucks an den Klassenkonstruktor. In diesem Fall ist das <xref:System.Text.RegularExpressions.Regex>-Objekt unveränderlich (schreibgeschützt) und stellt eine Engine für reguläre Ausdrücke dar, das eng an einen einzelnen regulären Ausdruck gekoppelt ist. Da von <xref:System.Text.RegularExpressions.Regex>-Instanzen verwendete reguläre Ausdrücke nicht zwischengespeichert werden, sollte ein <xref:System.Text.RegularExpressions.Regex>-Objekt nicht mehrmals mit dem gleichen regulären Ausdruck instanziiert werden.  
+- Durch Instanziieren eines <xref:System.Text.RegularExpressions.Regex>-Objekts und durch Übergeben eines regulären Ausdrucks an den Klassenkonstruktor. In diesem Fall ist das <xref:System.Text.RegularExpressions.Regex>-Objekt unveränderlich (schreibgeschützt) und stellt eine Engine für reguläre Ausdrücke dar, das eng an einen einzelnen regulären Ausdruck gekoppelt ist. Da von <xref:System.Text.RegularExpressions.Regex>-Instanzen verwendete reguläre Ausdrücke nicht zwischengespeichert werden, sollte ein <xref:System.Text.RegularExpressions.Regex>-Objekt nicht mehrmals mit dem gleichen regulären Ausdruck instanziiert werden.  
   
  Sie können die Methoden der <xref:System.Text.RegularExpressions.Regex>-Klasse aufrufen, um die folgenden Vorgänge auszuführen:  
   
--   Bestimmen, ob eine Zeichenfolge mit einem Muster eines regulären Ausdrucks übereinstimmt.  
+- Bestimmen, ob eine Zeichenfolge mit einem Muster eines regulären Ausdrucks übereinstimmt.  
   
--   Extrahieren einer einzelnen Übereinstimmung oder der ersten Übereinstimmung.  
+- Extrahieren einer einzelnen Übereinstimmung oder der ersten Übereinstimmung.  
   
--   Extrahieren aller Übereinstimmungen.  
+- Extrahieren aller Übereinstimmungen.  
   
--   Ersetzen einer übereinstimmenden Teilzeichenfolge.  
+- Ersetzen einer übereinstimmenden Teilzeichenfolge.  
   
--   Teilen einer einzelnen Zeichenfolge in ein Zeichenfolgenarray.  
+- Teilen einer einzelnen Zeichenfolge in ein Zeichenfolgenarray.  
   
  Diese Vorgänge werden in den folgenden Abschnitten beschrieben.  
   
@@ -180,14 +180,14 @@ ms.locfileid: "54535307"
 ### <a name="the-match"></a>Die Übereinstimmung  
  Die <xref:System.Text.RegularExpressions.Match>-Klasse stellt das Ergebnis einer einzelnen regulären Ausdrucksübereinstimmung dar. Es gibt zwei Möglichkeiten für den Zugriff auf <xref:System.Text.RegularExpressions.Match>-Objekte:  
   
--   Sie können von dem <xref:System.Text.RegularExpressions.MatchCollection>-Objekt abgerufen werden, das von der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode zurückgegeben wird. Um einzelne <xref:System.Text.RegularExpressions.Match>-Objekte abzurufen, durchlaufen Sie die Auflistung mit einem `foreach`-Konstrukt (in C#) oder einem `For Each`...`Next`-Konstrukt (in Visual Basic), oder rufen Sie mithilfe der <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft ein bestimmtes <xref:System.Text.RegularExpressions.Match>-Objekt Objekt nach Index oder Name ab. Sie können auch einzelne <xref:System.Text.RegularExpressions.Match>-Objekte aus der Auflistung abrufen, indem Sie die Auflistung nach dem Index durchlaufen, von 0 (null) bis eins weniger, als es der Anzahl der Objekte in der Auflistung entspricht. Bei dieser Methode wird jedoch keine verzögerte Auswertung genutzt, da dabei auf die <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft zugegriffen wird.  
+- Sie können von dem <xref:System.Text.RegularExpressions.MatchCollection>-Objekt abgerufen werden, das von der <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode zurückgegeben wird. Um einzelne <xref:System.Text.RegularExpressions.Match>-Objekte abzurufen, durchlaufen Sie die Auflistung mit einem `foreach`-Konstrukt (in C#) oder einem `For Each`...`Next`-Konstrukt (in Visual Basic), oder rufen Sie mithilfe der <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft ein bestimmtes <xref:System.Text.RegularExpressions.Match>-Objekt Objekt nach Index oder Name ab. Sie können auch einzelne <xref:System.Text.RegularExpressions.Match>-Objekte aus der Auflistung abrufen, indem Sie die Auflistung nach dem Index durchlaufen, von 0 (null) bis eins weniger, als es der Anzahl der Objekte in der Auflistung entspricht. Bei dieser Methode wird jedoch keine verzögerte Auswertung genutzt, da dabei auf die <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType>-Eigenschaft zugegriffen wird.  
   
      Im folgenden Beispiel werden einzelne <xref:System.Text.RegularExpressions.Match>-Objekte aus einem <xref:System.Text.RegularExpressions.MatchCollection>-Objekt abgerufen, indem die Auflistung mit einem `foreach`- oder `For Each`...`Next`-Konstrukt durchlaufen wird. Der reguläre Ausdruck stimmt mit der Zeichenfolge "abc" in der Eingabezeichenfolge überein.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/match2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/match2.vb#7)]  
   
--   Durch Aufrufen der <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType>-Methode, die ein <xref:System.Text.RegularExpressions.Match>-Objekt zurückgibt, das die erste Übereinstimmung in einer Zeichenfolge oder einem Teil einer Zeichenfolge darstellt. Sie können bestimmen, ob die Übereinstimmung gefunden wurde, indem der Wert der `Match.Success`-Eigenschaft abgerufen wird. Um <xref:System.Text.RegularExpressions.Match>-Objekte abzurufen, die nachfolgende Übereinstimmungen darstellen, rufen Sie die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode wiederholt auf, bis die `Success`-Eigenschaft des zurückgegebenen <xref:System.Text.RegularExpressions.Match>-Objekts `false` ist.  
+- Durch Aufrufen der <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType>-Methode, die ein <xref:System.Text.RegularExpressions.Match>-Objekt zurückgibt, das die erste Übereinstimmung in einer Zeichenfolge oder einem Teil einer Zeichenfolge darstellt. Sie können bestimmen, ob die Übereinstimmung gefunden wurde, indem der Wert der `Match.Success`-Eigenschaft abgerufen wird. Um <xref:System.Text.RegularExpressions.Match>-Objekte abzurufen, die nachfolgende Übereinstimmungen darstellen, rufen Sie die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode wiederholt auf, bis die `Success`-Eigenschaft des zurückgegebenen <xref:System.Text.RegularExpressions.Match>-Objekts `false` ist.  
   
      Im folgenden Beispiel werden die <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>-Methode und die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode verwendet, um die Zeichenfolge "abc" in der Eingabezeichenfolge abzugleichen.  
   
@@ -196,9 +196,9 @@ ms.locfileid: "54535307"
   
  Zwei Eigenschaften der <xref:System.Text.RegularExpressions.Match>-Klasse geben Auflistungsobjekte zurück:  
   
--   Die <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft gibt ein <xref:System.Text.RegularExpressions.GroupCollection>-Objekt zurück, das Informationen zu den Teilzeichenfolgen enthält, die mit Erfassungsgruppen im Muster eines regulären Ausdrucks übereinstimmen.  
+- Die <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft gibt ein <xref:System.Text.RegularExpressions.GroupCollection>-Objekt zurück, das Informationen zu den Teilzeichenfolgen enthält, die mit Erfassungsgruppen im Muster eines regulären Ausdrucks übereinstimmen.  
   
--   Die `Match.Captures`-Eigenschaft gibt ein <xref:System.Text.RegularExpressions.CaptureCollection>-Objekt mit eingeschränkter Verwendung zurück. Die Auflistung wird nicht für ein <xref:System.Text.RegularExpressions.Match>-Objekt aufgefüllt, dessen `Success`-Eigenschaft `false` ist. Andernfalls enthält es ein einzelnes <xref:System.Text.RegularExpressions.Capture>-Objekt, das über die gleichen Informationen wie das <xref:System.Text.RegularExpressions.Match>-Objekt verfügt.  
+- Die `Match.Captures`-Eigenschaft gibt ein <xref:System.Text.RegularExpressions.CaptureCollection>-Objekt mit eingeschränkter Verwendung zurück. Die Auflistung wird nicht für ein <xref:System.Text.RegularExpressions.Match>-Objekt aufgefüllt, dessen `Success`-Eigenschaft `false` ist. Andernfalls enthält es ein einzelnes <xref:System.Text.RegularExpressions.Capture>-Objekt, das über die gleichen Informationen wie das <xref:System.Text.RegularExpressions.Match>-Objekt verfügt.  
   
  Weitere Informationen zu diesen Objekten finden Sie in den Abschnitten [Die Gruppensammlung](#GroupCollection) und [Die Erfassungssammlung](#CaptureCollection) im weiteren Verlauf dieses Themas.  
   
@@ -206,9 +206,9 @@ ms.locfileid: "54535307"
   
  Die <xref:System.Text.RegularExpressions.Match>-Klasse besitzt ebenfalls zwei Methoden zum Mustervergleich:  
   
--   Die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode sucht die Übereinstimmung nach der Übereinstimmung, die durch das aktuelle <xref:System.Text.RegularExpressions.Match>-Objekt dargestellt wird, und gibt ein <xref:System.Text.RegularExpressions.Match>-Objekt zurück, das diese Übereinstimmung darstellt.  
+- Die <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>-Methode sucht die Übereinstimmung nach der Übereinstimmung, die durch das aktuelle <xref:System.Text.RegularExpressions.Match>-Objekt dargestellt wird, und gibt ein <xref:System.Text.RegularExpressions.Match>-Objekt zurück, das diese Übereinstimmung darstellt.  
   
--   Die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode führt einen angegebenen Ersetzungsvorgang in der entsprechenden Zeichenfolge aus und gibt das Ergebnis zurück.  
+- Die <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode führt einen angegebenen Ersetzungsvorgang in der entsprechenden Zeichenfolge aus und gibt das Ergebnis zurück.  
   
  Im folgenden Beispiel werden mit der <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methode jeder Zahl, die zwei Bruchzahlen enthält, ein $-Symbol und ein Leerzeichen vorangestellt.  
   
@@ -288,7 +288,7 @@ ms.locfileid: "54535307"
   
  Durch Anwenden von Quantifizierern auf eine Gruppe (weitere Informationen finden Sie unter [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)) wird die Beziehung einer Erfassung pro Erfassungsgruppe in zweierlei Hinsicht geändert:  
   
--   Wenn der `*`-Quantifizierer oder der `*?`-Quantifizierer (der null oder mehr Übereinstimmungen angibt) für eine Gruppe übernommen wird, verfügt eine Erfassungsgruppe möglicherweise über keine Übereinstimmung in der Eingabezeichenfolge. Wenn kein erfasster Text vorhanden ist, werden die Eigenschaften des <xref:System.Text.RegularExpressions.Group>-Objekts entsprechend der Darstellung in der folgenden Tabelle festgelegt.  
+- Wenn der `*`-Quantifizierer oder der `*?`-Quantifizierer (der null oder mehr Übereinstimmungen angibt) für eine Gruppe übernommen wird, verfügt eine Erfassungsgruppe möglicherweise über keine Übereinstimmung in der Eingabezeichenfolge. Wenn kein erfasster Text vorhanden ist, werden die Eigenschaften des <xref:System.Text.RegularExpressions.Group>-Objekts entsprechend der Darstellung in der folgenden Tabelle festgelegt.  
   
     |Gruppeneigenschaft|Wert|  
     |--------------------|-----------|  
@@ -301,7 +301,7 @@ ms.locfileid: "54535307"
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/nocapture1.cs#11)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/nocapture1.vb#11)]  
   
--   Quantifizierer können mit mehreren Vorkommen eines Musters übereinstimmen, das durch eine Erfassungsgruppe definiert wird. In diesem Fall enthalten die `Value`-Eigenschaft und die `Length`-Eigenschaft eines <xref:System.Text.RegularExpressions.Group>-Objekts nur Informationen zur letzten erfassten Teilzeichenfolge. Der folgende reguläre Ausdruck entspricht z. B. einem einzelnen Satz, der mit einem Punkt endet. Es werden zwei Gruppierungskonstrukte verwendet: Mit dem ersten Konstrukt werden einzelne Wörter mit einem Leerstellenzeichen erfasst und mit dem zweiten einzelne Wörter. Wie die Ausgabe des Beispiels zeigt, erfasst die zweite Erfassungsgruppe nur das letzte Wort, obwohl mit dem regulären Ausdruck ein vollständiger Satz erfasst wird.  
+- Quantifizierer können mit mehreren Vorkommen eines Musters übereinstimmen, das durch eine Erfassungsgruppe definiert wird. In diesem Fall enthalten die `Value`-Eigenschaft und die `Length`-Eigenschaft eines <xref:System.Text.RegularExpressions.Group>-Objekts nur Informationen zur letzten erfassten Teilzeichenfolge. Der folgende reguläre Ausdruck entspricht z. B. einem einzelnen Satz, der mit einem Punkt endet. Es werden zwei Gruppierungskonstrukte verwendet: Mit dem ersten Konstrukt werden einzelne Wörter mit einem Leerstellenzeichen erfasst und mit dem zweiten einzelne Wörter. Wie die Ausgabe des Beispiels zeigt, erfasst die zweite Erfassungsgruppe nur das letzte Wort, obwohl mit dem regulären Ausdruck ein vollständiger Satz erfasst wird.  
   
      [!code-csharp[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/cs/lastcapture1.cs#12)]
      [!code-vb[Conceptual.RegularExpressions.ObjectModel#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.objectmodel/vb/lastcapture1.vb#12)]  
@@ -312,9 +312,9 @@ ms.locfileid: "54535307"
 ## <a name="the-capture-collection"></a>Die Erfassungsauflistung  
  Das <xref:System.Text.RegularExpressions.Group>-Objekt enthält nur Informationen zur letzten Erfassung. Allerdings sind alle Erfassungen, die von einer Erfassungsgruppe gemacht wurden, nach wie vor über das <xref:System.Text.RegularExpressions.CaptureCollection>-Objekt verfügbar, das von der <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird. Jeder Member der Auflistung ist ein <xref:System.Text.RegularExpressions.Capture>-Objekt, das eine von dieser Erfassungsgruppe gemachte Erfassung darstellt, und zwar in der Reihenfolge, in der sie erfasst wurden (und daher in der Reihenfolge, in der die erfassten Zeichenfolgen von links nach rechts in der Eingabezeichenfolge abgeglichen wurden). Einzelne <xref:System.Text.RegularExpressions.Capture>-Objekte können auf zwei unterschiedliche Arten aus der Auflistung abgerufen werden:  
   
--   Durch das Durchlaufen der Sammlung mit einem Konstrukt wie `foreach` (in C#) oder `For Each` (in Visual Basic).  
+- Durch das Durchlaufen der Sammlung mit einem Konstrukt wie `foreach` (in C#) oder `For Each` (in Visual Basic).  
   
--   Mit der <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft, um ein bestimmtes Objekt nach Index abzurufen. Die <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A>-Eigenschaft ist die Standardeigenschaft des <xref:System.Text.RegularExpressions.CaptureCollection>-Objekts (in Visual Basic) oder Indexer (in C#).  
+- Mit der <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType>-Eigenschaft, um ein bestimmtes Objekt nach Index abzurufen. Die <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A>-Eigenschaft ist die Standardeigenschaft des <xref:System.Text.RegularExpressions.CaptureCollection>-Objekts (in Visual Basic) oder Indexer (in C#).  
   
  Wenn ein Quantifizierer nicht für eine Erfassungsgruppe übernommen wird, enthält das <xref:System.Text.RegularExpressions.CaptureCollection>-Objekt ein einzelnes <xref:System.Text.RegularExpressions.Capture>-Objekt, das von geringem Interesse ist, da es Informationen zur gleichen Übereinstimmung wie das <xref:System.Text.RegularExpressions.Group>-Objekt enthält. Wenn ein Quantifizierer für eine Erfassungsgruppe übernommen wird, enthält das <xref:System.Text.RegularExpressions.CaptureCollection>-Objekt alle von der Erfassungsgruppe gemachten Erfassungen, und der letzte Member der Auflistung stellt die gleiche Erfassung wie das <xref:System.Text.RegularExpressions.Group>-Objekt dar.  
   

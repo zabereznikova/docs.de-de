@@ -1,5 +1,5 @@
 ---
-title: <clear> -Element für ConnectionManagement (Netzwerkeinstellungen)
+title: <clear>-Element für connectionManagement (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 ms.openlocfilehash: 733c70b0575de7e2635afaab58ad48591f035fc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705238"
 ---
 # <a name="clear-element-for-connectionmanagement-network-settings"></a>\<clear >-Element für ConnectionManagement (Netzwerkeinstellungen)
 Löscht der Verbindungsverwaltungsliste an.  
@@ -71,4 +71,4 @@ Löscht der Verbindungsverwaltungsliste an.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

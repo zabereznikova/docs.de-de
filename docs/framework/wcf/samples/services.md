@@ -2,12 +2,12 @@
 title: 'Beispiele: WCF-Dienste'
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 3fbca09a7b50a15299cb8e805ac84c60e4b78fa7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9c4c6c0083a685f2f85b01ed3a5bed377708dd13
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268738"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425464"
 ---
 # <a name="services"></a>Dienste
 

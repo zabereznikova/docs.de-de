@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2cfd8699afe48cb936ecf600c47508ef45781b43
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160692"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64605504"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF
 Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erstellen von Anwendungen. Jedoch wenn Sie eine erhebliche Investition in Win32-Code verfügen, es möglicherweise effektiver sein, mindestens einige wiederzuverwenden, Programmieren Sie in der WPF-Anwendung anstatt ihn vollständig neu zu schreiben. WPF bietet ein einfaches Verfahren zum Hosten eines Win32-Fensters, in einer WPF-Seite.  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
   
  Die grundlegende Vorgehensweise beim Hosten ist:  
   
-1.  Implementieren Sie eine WPF-Seite, um das Fenster hostet. Eine Möglichkeit ist die Erstellung einer <xref:System.Windows.Controls.Border> Element um einen Abschnitt der Seite für das gehostete Fenster zu reservieren.  
+1. Implementieren Sie eine WPF-Seite, um das Fenster hostet. Eine Möglichkeit ist die Erstellung einer <xref:System.Windows.Controls.Border> Element um einen Abschnitt der Seite für das gehostete Fenster zu reservieren.  
   
-2.  Implementieren Sie eine Klasse, um das Steuerelement zu hosten, die von erbt <xref:System.Windows.Interop.HwndHost>.  
+2. Implementieren Sie eine Klasse, um das Steuerelement zu hosten, die von erbt <xref:System.Windows.Interop.HwndHost>.  
   
-3.  In dieser Klasse außer Kraft setzen der <xref:System.Windows.Interop.HwndHost> Klassenmember <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+3. In dieser Klasse außer Kraft setzen der <xref:System.Windows.Interop.HwndHost> Klassenmember <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Erstellen Sie das gehostete Fenster als untergeordnetes Element des Fensters, das die WPF-Seite enthält. Obwohl der konventionellen WPF-Programmierung nicht explizit treffen muss es verwenden, die Hostseite ein Fenster mit einem Handle (HWND). Sie erhalten das HWND die Seite über die `hwndParent` Parameter, der die <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> Methode. Das gehostete Fenster sollte als untergeordnetes Element dieses HWND erstellt werden.  
+4. Erstellen Sie das gehostete Fenster als untergeordnetes Element des Fensters, das die WPF-Seite enthält. Obwohl der konventionellen WPF-Programmierung nicht explizit treffen muss es verwenden, die Hostseite ein Fenster mit einem Handle (HWND). Sie erhalten das HWND die Seite über die `hwndParent` Parameter, der die <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> Methode. Das gehostete Fenster sollte als untergeordnetes Element dieses HWND erstellt werden.  
   
-5.  Sobald Sie das Hostfenster erstellt haben, geben Sie das HWND des gehosteten Fensters zurück. Wenn Sie ein oder mehrere Win32-Steuerelemente hosten möchten, erstellen ein Hostfenster als untergeordnetes Element des HWND Sie in der Regel an und stellen die Steuerelemente zu untergeordneten Elementen dieses Hostfensters. Umschließen der Steuerelemente mit einem Hostfenster bietet eine einfache Möglichkeit für Ihre WPF-Seite zum Empfangen von Benachrichtigungen von den Steuerelementen, die bestimmten Win32-Probleme mit Benachrichtigungen über HWND-Grenze hinweg behandelt.  
+5. Sobald Sie das Hostfenster erstellt haben, geben Sie das HWND des gehosteten Fensters zurück. Wenn Sie ein oder mehrere Win32-Steuerelemente hosten möchten, erstellen ein Hostfenster als untergeordnetes Element des HWND Sie in der Regel an und stellen die Steuerelemente zu untergeordneten Elementen dieses Hostfensters. Umschließen der Steuerelemente mit einem Hostfenster bietet eine einfache Möglichkeit für Ihre WPF-Seite zum Empfangen von Benachrichtigungen von den Steuerelementen, die bestimmten Win32-Probleme mit Benachrichtigungen über HWND-Grenze hinweg behandelt.  
   
-6.  Behandeln Sie spezifische an das Hostfenster gesendete Nachrichten, z.B. Benachrichtigungen von untergeordneten Steuerelementen. Hierfür gibt es zwei Möglichkeiten.  
+6. Behandeln Sie spezifische an das Hostfenster gesendete Nachrichten, z.B. Benachrichtigungen von untergeordneten Steuerelementen. Hierfür gibt es zwei Möglichkeiten.  
   
-    -   Falls gewünscht, um Nachrichten in Ihrer Hostklasse zu behandeln, überschreiben die <xref:System.Windows.Interop.HwndHost.WndProc%2A> Methode der <xref:System.Windows.Interop.HwndHost> Klasse.  
+    - Falls gewünscht, um Nachrichten in Ihrer Hostklasse zu behandeln, überschreiben die <xref:System.Windows.Interop.HwndHost.WndProc%2A> Methode der <xref:System.Windows.Interop.HwndHost> Klasse.  
   
-    -   Wenn Sie möchten, dass die Nachrichten behandelt, behandeln Sie WPF die <xref:System.Windows.Interop.HwndHost> Klasse <xref:System.Windows.Interop.HwndHost.MessageHook> Ereignis im Code-Behind. Dieses Ereignis tritt für jede Nachricht auf, die vom gehosteten Fenster empfangen wird. Wenn Sie diese Option auswählen, müssen Sie immer noch überschreiben <xref:System.Windows.Interop.HwndHost.WndProc%2A>, aber Sie benötigen nur eine minimale Implementierung.  
+    - Wenn Sie möchten, dass die Nachrichten behandelt, behandeln Sie WPF die <xref:System.Windows.Interop.HwndHost> Klasse <xref:System.Windows.Interop.HwndHost.MessageHook> Ereignis im Code-Behind. Dieses Ereignis tritt für jede Nachricht auf, die vom gehosteten Fenster empfangen wird. Wenn Sie diese Option auswählen, müssen Sie immer noch überschreiben <xref:System.Windows.Interop.HwndHost.WndProc%2A>, aber Sie benötigen nur eine minimale Implementierung.  
   
-7.  Überschreiben der <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> und <xref:System.Windows.Interop.HwndHost.WndProc%2A> Methoden <xref:System.Windows.Interop.HwndHost>. Müssen Sie erfüllen diese Methoden überschreiben die <xref:System.Windows.Interop.HwndHost> Vertrag, aber Sie müssen möglicherweise nur eine minimale Implementierung.  
+7. Überschreiben der <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> und <xref:System.Windows.Interop.HwndHost.WndProc%2A> Methoden <xref:System.Windows.Interop.HwndHost>. Müssen Sie erfüllen diese Methoden überschreiben die <xref:System.Windows.Interop.HwndHost> Vertrag, aber Sie müssen möglicherweise nur eine minimale Implementierung.  
   
-8.  Klicken Sie in der CodeBehind-Datei erstellen Sie eine Instanz der Hostingklasse des Steuerelements, und stellen Sie es ein untergeordnetes Element des der <xref:System.Windows.Controls.Border> -Element, das das Fenster hosten soll.  
+8. Klicken Sie in der CodeBehind-Datei erstellen Sie eine Instanz der Hostingklasse des Steuerelements, und stellen Sie es ein untergeordnetes Element des der <xref:System.Windows.Controls.Border> -Element, das das Fenster hosten soll.  
   
 9. Durch das senden es mit dem gehosteten Fenster kommunizieren [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] und Behandlung von Nachrichten aus dessen untergeordneten Fenstern, z. B. von Steuerelementen gesendete Benachrichtigungen.  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Implementieren der Kommunikation zwischen dem Steuerelement und der Seite  
  Sie bearbeiten das Steuerelement von Windows-Nachrichten senden. Das Steuerelement benachrichtigt Sie, wenn der Benutzer durch Senden von Benachrichtigungen an das Hostfenster mit ihm interagiert. Die [Hosten eines Win32-ListBox-Steuerelements in WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) umfasst eine Benutzeroberfläche, die enthält einige Beispiele, wie dies funktioniert:  
   
--   Der Liste ein Element hinzufügen.  
+- Der Liste ein Element hinzufügen.  
   
--   Das markierte Element aus der Liste löschen  
+- Das markierte Element aus der Liste löschen  
   
--   Den Text des aktuell markierten Elements anzeigen.  
+- Den Text des aktuell markierten Elements anzeigen.  
   
--   Die Anzahl der Elemente in der Liste anzeigen.  
+- Die Anzahl der Elemente in der Liste anzeigen.  
   
  Der Benutzer kann auch ein Element im Listenfeld auswählen, indem er darauf klickt, genauso wie für eine herkömmliche Win32-Anwendung. Die angezeigten Daten werden bei jeder Zustandsänderung des Listenfelds durch den Benutzer aktualisiert, egal ob ein Element ausgewählt, hinzugefügt oder angefügt wurde.  
   
@@ -156,4 +156,4 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
 
 - <xref:System.Windows.Interop.HwndHost>
 - [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)
-- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

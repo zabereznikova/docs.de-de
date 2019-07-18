@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
 ms.openlocfilehash: e5f87a8e367e8c9df65b979fea3781b42ee3ce83
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801347"
 ---
 # <a name="math-functions-visual-basic"></a>Mathematische Funktionen (Visual Basic)
 Die Methoden der <xref:System.Math?displayProperty=nameWithType> Klasse bereitstellen, trigonometrische, logarithmische und andere gebräuchliche mathematische Funktionen.  

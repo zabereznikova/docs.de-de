@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35fdcd4bc3c9dbf6408f501256ce0df0174f9374
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2ec3dc37984228565b4a3fcc560d3857a1c1e46d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135654"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767331"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject-Methode
 Konvertiert eine Adresse des Objekts auf ein Objekt "ICorDebugObjectValue".  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetObject(  
     [in] CORDB_ADDRESS addr,   
     [out] ICorDebugObjectValue **ppObject  
@@ -58,4 +58,4 @@ HRESULT GetObject(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugProcess5-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

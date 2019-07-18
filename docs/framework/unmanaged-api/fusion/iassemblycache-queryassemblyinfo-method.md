@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81b647032b2e9474e3b4472552ed884cec92ffc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a336e2d4516eaa43decf156f25a62729859a3ff0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216416"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778721"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo-Methode
 Ruft die angeforderten Daten über die angegebene Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT QueryAssemblyInfo (  
     [in] DWORD dwFlags,  
     [in] LPCWSTR pszAssemblyName,  
@@ -41,9 +41,9 @@ HRESULT QueryAssemblyInfo (
  `dwFlags`  
  [in] Flags, die in Fusion.idl definiert sind. Die folgenden Werte werden unterstützt:  
   
--   QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
+- QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
--   QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
+- QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
  [in] Der Name der Assembly für die Daten abgerufen werden.  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4c77ade46d2401e2499a94504808efd94f79f93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152151"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741786"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob-Methode
 Ruft die Win32-Ressourcen-Blob ab. Rufen Sie diese Methode nach dem Festlegen von Assemblyoptionen für die an.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetWin32ResBlob(  
     mdAssembly    AssemblyID,  
     mdToken       FileToken,  
@@ -68,4 +68,4 @@ HRESULT GetWin32ResBlob(
 
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

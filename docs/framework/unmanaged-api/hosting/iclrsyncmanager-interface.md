@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d3e4affa363083ce55ac3764c26412a0d60ba3f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763580"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager-Schnittstelle
 Definiert Methoden, die den Host zum Abrufen von Informationen zu den angeforderten Aufgaben und zum Erkennen von Deadlocks in die Synchronisierung-Implementierung zu ermöglichen.  
@@ -48,5 +48,5 @@ Definiert Methoden, die den Host zum Abrufen von Informationen zu den angeforder
 
 - <xref:System.Threading.Thread>
 - [IHostSyncManager-Schnittstelle](ihostsyncmanager-interface.md)
-- [Verwaltetes und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
-- [Hostingschnittstellen](hosting-interfaces.md)
+- [Verwaltete und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [Hosten von Schnittstellen](hosting-interfaces.md)

@@ -2,12 +2,12 @@
 title: Parallel ForEach (eingeschränkt)
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
-ms.openlocfilehash: fd30a1ac587359a054a273b3deca2e9bb8bc2798
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2694173e203fae9b620e9594d6d4a494bdedafef
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261827"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637759"
 ---
 # <a name="throttled-parallel-foreach"></a>Parallel ForEach (eingeschränkt)
 

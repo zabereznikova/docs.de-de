@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9981e97e3be58f6646612dc5c3a50a9e7650e376
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108445"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760252"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback-Funktionszeiger
 Verweist auf eine Funktion, die von der common Language Runtime (CLR) zum Ausführen von verwalteten Codes aufgerufen wird.  
   
- Dieser Funktionszeiger ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Dieser Funktionszeiger wurde in .NET Framework 4 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (  
     [in] void  *cookie  
 );  

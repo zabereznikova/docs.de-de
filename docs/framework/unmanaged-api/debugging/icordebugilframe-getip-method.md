@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a7b8985e7580282d0e38205f9b1d6078f86cee6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4d7eca3c2825707c9190436377bba7e4bb0d5447
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479765"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757975"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP-Methode
 Ruft den Wert des Anweisungszeigers und eine bitweise Kombination-Wert, der beschreibt, wie der Wert des Anweisungszeigers abgerufen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetIP (  
     [out] ULONG32               *pnOffset,   
     [out] CorDebugMappingResult *pMappingResult  

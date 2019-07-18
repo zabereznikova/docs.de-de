@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 66cd704f-990c-4f8d-9b49-2b6aa76ca8fd
 ms.openlocfilehash: ce22781584ad31766058f59a7ebf3081cb5e11cf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971560"
 ---
 # <a name="how-to-access-xml-attributes-visual-basic"></a>Vorgehensweise: Access-XML-Attribute (Visual Basic)
 Dieses Beispiel zeigt, wie Sie mit, dass ein Attributachseneigenschaft XML-Attribute in ein XML-Element anhand Ihres Namens zugreifen. Insbesondere wird die `type` Attributachseneigenschaft Zugriff auf das Attribut mit dem Namen `type` in die `phone` Objekt.  

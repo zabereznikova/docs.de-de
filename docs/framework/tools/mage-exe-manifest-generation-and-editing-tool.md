@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 9ea293a3c96f193285f45f8d70ac038e785f548a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477661"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422354"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)
 
-Bei Manifest Generation and Editing Tool (*Mage.exe*) handelt es sich um ein Befehlszeilentool, das Sie beim Erstellen und Bearbeiten von Anwendungs- und Bereitstellungsmanifesten unterstützt. Als Befehlszeilentool kann *Mage.exe* von Batchskripten und anderen Windows-basierten Anwendungen aus ausgeführt werden, einschließlich [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendungen.
+Bei Manifest Generation and Editing Tool (*Mage.exe*) handelt es sich um ein Befehlszeilentool, das Sie beim Erstellen und Bearbeiten von Anwendungs- und Bereitstellungsmanifesten unterstützt. Als Befehlszeilentool kann *Mage.exe* von Batchskripten und anderen Windows-basierten Anwendungen ausgeführt werden, beispielsweise ASP.NET-Anwendungen.
 
 Sie können statt *Mage.exe* auch die grafische Anwendung *MageUI.exe* verwenden. Weitere Informationen finden Sie unter [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md).
 
@@ -32,7 +32,7 @@ Mage [commands] [commandOptions]
 
 In der folgenden Tabelle werden die von *Mage.exe* unterstützten Befehle angezeigt. Weitere Informationen zu den Optionen, die diese Befehle unterstützen, finden Sie unter [Befehlsoptionen für "New" und "Update"](#new-and-update-command-options) und ["Sign"-Befehlsoptionen](#sign-command-options).
 
-|Befehl|Beschreibung|
+|Befehl|BESCHREIBUNG|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|Löscht den heruntergeladenen Anwendungscache aller Anwendungen, die nur online ausgeführt werden.|
 |**-n, -New** *Dateityp [neue Optionen]*|Erstellt eine neue Datei des angegebenen Typs. Gültige Typen sind:<br /><br /> -   `Deployment`: Erstellt ein neues Bereitstellungsmanifest.<br />-   `Application`: Erstellt ein neues Anwendungsmanifest.<br /><br /> Wenn Sie mit diesem Befehl keine weiteren Parameter angeben, wird eine Datei des entsprechenden Typs mit den zugehörigen Standardtags und Attributwerten erstellt.<br /><br /> Verwenden Sie die Option **-ToFile** (siehe folgende Tabelle), um den Dateinamen und den Pfad der neuen Datei anzugeben.<br /><br /> Verwenden Sie die Option **-FromDirectory** (siehe folgende Tabelle), um ein Anwendungsmanifest mit allen Assemblys für eine dem \<dependency>-Abschnitt des Manifests hinzugefügte Anwendung zu erstellen.|
@@ -45,7 +45,7 @@ In der folgenden Tabelle werden die von *Mage.exe* unterstützten Befehle angeze
 
 In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `-New` und `-Update` unterstützt werden:
 
-|Optionen|Standardwert|Gilt für|Beschreibung|
+|Optionen|Standardwert|Gilt für|BESCHREIBUNG|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|Anwendungsmanifeste,<br /><br /> Bereitstellungsmanifeste|Gibt den Algorithmus an, mit dem Abhängigkeitsdigests generiert werden sollen. Der Wert muss "sha256RSA" oder "sha1RSA" lauten.<br /><br /> Verwenden Sie diese Option mit dem Befehl "-Update". Diese Option wird bei der Verwendung des Befehls "-Sign" ignoriert.|
 |**-appc, -AppCodeBase** `manifestReference`||Bereitstellungsmanifeste|Fügt einen URL- oder Dateipfadverweis in die Anwendungsmanifestdatei ein. Dieser Wert muss der vollständige Pfad zum Anwendungsmanifest sein.|
@@ -57,7 +57,7 @@ In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `
 |**-if, -IconFile**  `filePath`||Anwendungsmanifeste,|Gibt den vollständigen Pfad zu einer ICO-Symboldatei an. Dieses Symbol wird neben dem Anwendungsnamen im Startmenü und im zugehörigen Eintrag unter "Software" angezeigt. Wenn kein Symbol angegeben wird, wird ein Standardsymbol verwendet.|
 |**-ip, -IncludeProviderURL**  `url`|true|Bereitstellungsmanifeste|Gibt an, ob das Bereitstellungsmanifest den von **-ProviderURL**festgelegten Wert für den Updatespeicherort enthält.|
 |**-i, -Install** `willInstall`|true|Bereitstellungsmanifeste|Gibt an, ob die ClickOnce-Anwendung auf dem lokalen Computer installiert oder ob sie über das Web ausgeführt werden soll. Wenn eine Anwendung installiert wird, wird diese im **Startmenü** von Windows angezeigt. Gültige Werte sind "true" oder "t" und "false" oder "f".<br /><br /> Wenn Sie die Option **-MinVersion** angeben und ein Benutzer eine ältere Version als jene installiert hat, die **-MinVersion** entspricht, wird die Anwendung zur Installation gezwungen, unabhängig von dem Wert, den Sie an **-Install**übergeben.<br /><br /> Diese Option kann nicht mit der Option **-BrowserHosted** verwendet werden. Wenn Sie beide Optionen für das gleiche Manifest angeben, wird ein Fehler ausgelöst.|
-|**-kc, -KeyContainer** `name`||Alle Dateitypen|Gibt den Schlüsselcontainer an, der den Namen für den privaten Schlüssel enthält. Diese Option erfordert die Option **CyproProvider**.<br/><br/>Diese Option ist ab .NET Core 4.7 verfügbar.|
+|**-kc, -KeyContainer** `name`||Alle Dateitypen|Gibt den Schlüsselcontainer an, der den Namen für den privaten Schlüssel enthält. Diese Option erfordert die Option **CryptoProvider**.<br/><br/>Diese Option ist ab .NET Core 4.7 verfügbar.|
 |**-mv, -MinVersion**  `[version]`|Die im ClickOnce-Bereitstellungsmanifest aufgeführte Version, wie im Flag **-Version** angegeben.|Bereitstellungsmanifeste|Die Version dieser Anwendung, die ein Benutzer mindestens ausführen muss. Dieses Flag macht die genannte Version der Anwendung zu einem erforderlichen Update. Wenn Sie eine Version Ihres Produkts mit einer wichtigen Änderung oder einer Korrektur eines schwerwiegenden Sicherheitsmangels freigeben, können Sie mithilfe dieses Flags angeben, dass das Update installiert werden muss und der Benutzer keine früheren Versionen mehr ausführen kann.<br /><br /> `version` weist dieselbe Semantik wie das Argument für das Flag **-Version** auf.|
 |**-n, -Name** `nameString`|Bereitstellen|Alle Dateitypen|Der Name, der zum Angeben der Anwendung verwendet wird. ClickOnce verwendet diesen Namen zum Identifizieren der Anwendung im **Startmenü** (wenn die Anwendung so konfiguriert ist, dass sie sich selbst installiert) und in Dialogfeldern zum Erweitern von Berechtigungen. **Hinweis**:  Wenn Sie ein vorhandenes Manifest aktualisieren und keinen Herausgebernamen mit dieser Option angeben, aktualisiert *Mage.exe* das Manifest mit dem auf dem Computer definierten Organisationsnamen. Zur Verwendung eines anderen Namens müssen Sie diese Option verwenden und den gewünschten Herausgebernamen angeben.|
 |**-pwd, -Password** `passwd`||Alle Dateitypen|Das Kennwort, das zum Signieren eines Manifests mit einem digitalen Zertifikat verwendet wird. Muss zusammen mit der Option **-CertFile** verwendet werden.|
@@ -76,12 +76,12 @@ In der folgenden Tabelle werden die Optionen aufgeführt, die von den Befehlen `
 
 In der folgenden Tabelle werden die Optionen angezeigt, die von dem Befehl `-Sign` unterstützt werden und für alle Dateitypen gelten.
 
-|Optionen|Beschreibung|
+|Optionen|BESCHREIBUNG|
 |-------------|-----------------|
 |**-cf, -CertFile** `filePath`|Gibt den Speicherort eines digitalen Zertifikats zum Signieren eines Manifests an. Diese Option kann in Verbindung mit der Option **-Password** verwendet werden, wenn ein Zertifikat ein Kennwort für Personal Information Exchange (PFX)-Dateien erfordert. Ab .NET Framework 4.7 ist, wenn die Datei keinen privaten Schlüssel enthält, eine Kombination der Optionen **-CryptoProvider** und **-KeyContainer** erforderlich.<br/><br/>Ab .NET Framework 4.6.2 signiert *Mage.exe* Manifeste mit CNG- sowie CAPI-Zertifikaten.|
 |**-ch, -CertHash** `hashSignature`|Der Hash eines im persönlichen Zertifikatspeicher des Clientcomputers gespeicherten digitalen Zertifikats. Dieser entspricht der Eigenschaft "Fingerabdruck" eines digitalen Zertifikats, das in der Zertifikatkonsole von Windows angezeigt wird.<br /><br /> `hashSignature` kann groß oder klein geschrieben werden und als einzelne Zeichenfolge oder so angegeben werden, dass die einzelnen Oktette des Fingerabdrucks durch Leerzeichen getrennt sind und der vollständige Fingerabdruck in Anführungszeichen eingeschlossen ist.|
 **-csp, -CryptoProvider** `provider-name`|Gibt den Namen eines Kryptografiedienstanbieters (Cryptographic Service Provider,CSP) an, der den privaten Schlüsselcontainer enthält. Diese Option erfordert die Option **-KeyContainer**.<br/><br/>Diese Option ist ab .NET Core 4.7 verfügbar.|
-|**-kc, -KeyContainer** `name`|Gibt den Schlüsselcontainer an, der den Namen für den privaten Schlüssel enthält. Diese Option erfordert die Option **CyproProvider**.<br/><br/>Diese Option ist ab .NET Core 4.7 verfügbar.|
+|**-kc, -KeyContainer** `name`|Gibt den Schlüsselcontainer an, der den Namen für den privaten Schlüssel enthält. Diese Option erfordert die Option **CryptoProvider**.<br/><br/>Diese Option ist ab .NET Core 4.7 verfügbar.|
 |**-pwd, -Password** `passwd`|Das Kennwort, das zum Signieren eines Manifests mit einem digitalen Zertifikat verwendet wird. Muss zusammen mit der Option **-CertFile** verwendet werden.|
 |**-t, -ToFile** `filePath`|Gibt den Ausgabepfad der Datei an, die erstellt oder geändert wurde.|
 
@@ -214,7 +214,7 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 Im folgenden Beispiel wird ein vorhandenes Bereitstellungsmanifest mithilfe eines digitalen Zertifikats und eines privaten Schlüssels im aktuellen Arbeitsverzeichnis signiert.
 
 ```console
-mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>Siehe auch

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: b7018afa1272f4ae092863de6b7f9ef783001244
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c88219d03d40c814338a1b09ccd37cfc03c2d577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965591"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881012"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Vorgehensweise: Anzeigen von Befehlszeilenargumenten (C#-Programmierhandbuch)
 Auf die Argumente, die für eine ausführbare Datei in der Befehlszeile bereitgestellt wurden, können Sie über einen optionalen Parameter für `Main` zugreifen. Die Argumente werden in Form eines Arrays von Zeichenfolgen bereitgestellt. Jedes Element des Arrays enthält ein Argument. Leerzeichen zwischen Argumenten wird entfernt. Beachten Sie z.B. diese Befehlszeilenaufrufe einer fiktiven ausführbaren Datei:  
@@ -34,5 +34,4 @@ Auf die Argumente, die für eine ausführbare Datei in der Befehlszeile bereitge
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von „foreach“](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

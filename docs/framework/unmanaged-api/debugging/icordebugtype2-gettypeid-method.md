@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b19efdedc21f66e4692ce1850eb3947f856e436
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3098911bab2878876b93ee1ce23d9794d7e6cdbd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083750"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772470"
 ---
 # <a name="icordebugtype2gettypeid-method"></a>Icordebugtype2:: GetTypeId-Methode
 Ruft eine [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) für diesen Typ.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetTypeID(  
     ([out] COR_TYPEID *id  
 );  

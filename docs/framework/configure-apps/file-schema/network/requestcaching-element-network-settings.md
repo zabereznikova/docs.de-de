@@ -1,5 +1,5 @@
 ---
-title: <requestCaching> -Element (Netzwerkeinstellungen)
+title: <requestCaching>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 ms.openlocfilehash: af290e4b9258a08425a15e297ff538502edea916
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674427"
 ---
-# <a name="requestcaching-element-network-settings"></a>\<RequestCaching >-Element (Netzwerkeinstellungen)
+# <a name="requestcaching-element-network-settings"></a>\<requestCaching>-Element (Netzwerkeinstellungen)
 Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.  
   
  \<configuration>  
@@ -89,4 +89,4 @@ Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.Cache?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

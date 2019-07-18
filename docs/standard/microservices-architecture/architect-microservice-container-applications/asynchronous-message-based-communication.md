@@ -1,15 +1,13 @@
 ---
 title: Asynchrone nachrichtenbasierte Kommunikation
 description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die asynchrone nachrichtenbasierte Kommunikation ist ein wesentliches Konzept der Microservicearchitektur: Sie ist die ideale Option, damit Microservices unabhängig voneinander bleiben und zugleich synchronisiert werden.'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4285c37c90b01424de70a2ac4dd75d5d9c63dac0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 65bd0cd2b316fe7011ad8e878852547ee5949f09
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465567"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641379"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
@@ -86,25 +84,25 @@ Bei der Verwendung der asynchronen Kommunikation sollten darüber hinaus die Ide
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Event Driven Messaging (Ereignisgesteuertes Messaging)** \
-  [http://soapatterns.org/design_patterns/event_driven_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+  <http://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **Publish/Subscribe Channel (Veröffentlichungs-/Abonnementkanal)** \
-  [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+  <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Udi Dahan. Clarified CQRS (Erläuterung zu CQRS)** \
-  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
+  <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **Command and Query Responsibility Segregation (CQRS)** \
-  [https://docs.microsoft.com/azure/architecture/patterns/cqrs](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+  <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **Kommunizieren zwischen gebundenen Kontexten** \
-  [https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **Letztliche Konsistenz** \
-  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+  <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)
-  [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+  <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
 > [Zurück](communication-in-microservice-architecture.md)

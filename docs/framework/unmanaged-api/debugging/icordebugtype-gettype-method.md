@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6b36c524921a4fecf8bc5ddcbace62af6450b6d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 78f2733584e07433171c91d6a2674d3a67c8e283
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492425"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772521"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType-Methode
 Ruft einen CorElementType-Wert, der den systemeigenen Typ der common Language Runtime (CLR) beschreibt <xref:System.Type> ICorDebugType dargestellt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetType (  
     [out] CorElementType   *ty  
 );  

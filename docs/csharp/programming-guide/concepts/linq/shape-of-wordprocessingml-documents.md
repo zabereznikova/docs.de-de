@@ -2,12 +2,12 @@
 title: Form von WordprocessingML-Dokumenten (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 4c034950006b7ce09ad03e4579cc298f0b2dd218
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10f8ceea7651b207dcafe21b66e340ac39c6adf1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739244"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483437"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Form von WordprocessingML-Dokumenten (C#)
 Dieses Thema enthält eine Einführung in die XML-Form von WordprocessingML-Dokumenten.  
@@ -92,8 +92,8 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
  [Übersicht über WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)  
  [Anatomy of a WordProcessingML File (Aufbau einer WordprocessingML-Datei)](http://officeopenxml.com/anatomyofOOXML.php)  
  [Introduction to WordprocessingML (Einführung in WordprocessingML)](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
- [Office 2003: Downloadseite für XML-Referenzschemas](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
+ [Office 2003: Downloadseite für XML-Referenzschemas](https://www.microsoft.com/download/details.aspx?id=101)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)

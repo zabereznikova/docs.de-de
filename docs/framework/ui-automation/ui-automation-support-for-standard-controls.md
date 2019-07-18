@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 3fde9779205ea7d0902ddd99ed192f097a159d2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 641fc3f8dfca3ff6506354c076b98cc88073a1b7
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221478"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802116"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.locfileid: "59221478"
 |tooltips_class32|QuickInfo|  
 |#32774|QuickInfo|  
 |ReBarWindow32|Symbolleiste|  
-|SysTreeView32|Struktur|  
+|SysTreeView32|trEE|  
 |SysTreeView32|TreeItem|  
   
  **Hinweis** Das RichEdit-Steuerelement wird nur für mit [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] ausgelieferte Versionen unterstützt (in „RichEd20.dll“ ab Version 3.1 und „MsftEdit.dll“ ab Version 4.1).  
@@ -136,7 +136,7 @@ ms.locfileid: "59221478"
 |VscrollBar|  
 |Webbrowser|  
   
- Die folgenden Steuerelemente sind für [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] nur über ihre Unterstützung für [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]verfügbar. Möglicherweise sind nicht alle Funktionen verfügbar.  
+ Die folgenden Steuerelemente sind verfügbar, um [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] nur über ihre Unterstützung für Microsoft Active Accessibility. Möglicherweise sind nicht alle Funktionen verfügbar.  
   
 |Steuerelementname|  
 |------------------|  

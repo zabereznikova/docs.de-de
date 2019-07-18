@@ -3,12 +3,12 @@ title: Erste Schritte mit der Syntaxtransformation (Roslyn-APIs)
 description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788439"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306928"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Erste Schritte mit der Syntaxtransformation
 
@@ -30,7 +30,7 @@ Sie wählen eine von zwei Strategien für Syntaxtransformationen. **Factorymetho
 
 Durch die erste Syntaxtransformation werden die Factorymethoden demonstriert. Sie werden eine `using System.Collections;`-Anweisung durch eine `using System.Collections.Generic;`-Anweisung ersetzen. Dieses Beispiel zeigt, wie Sie <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType>-Objekte mit den <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>-Factorymethoden erstellen. Für jede Art von **Knoten**, **Token** oder **Trivia** gibt es eine Factorymethode, die eine Instanz dieses Typs erstellt. Sie erstellen Syntaxstrukturen, indem Sie Knoten hierarchisch von unten nach oben zusammensetzen. Anschließend transformieren Sie das vorhandene Programm, indem Sie bestehende Knoten durch die neue, von Ihnen erstellte Struktur ersetzen.
 
-Starten Sie Visual Studio, und erstellen Sie ein neues C#-Projekt namens **Stand-Alone Code Analysis Tool**. Wählen Sie in Visual Studio **Datei** > **Neu** > **Projekt** aus, um das Dialogfeld „Neues Projekt“ anzuzeigen. Wählen Sie unter **Visual C#** > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus. Dieser Schnellstart enthält zwei Beispielprojekte. Nennen Sie daher die Lösung **SyntaxTransformationQuickStart** und das Projekt **ConstructionCS**. Klicken Sie auf **OK**.
+Starten Sie Visual Studio, und erstellen Sie ein neues C#-Projekt namens **Stand-Alone Code Analysis Tool**. Wählen Sie in Visual Studio **Datei** > **Neu** > **Projekt** aus, um das Dialogfeld „Neues Projekt“ anzuzeigen. Wählen Sie unter **Visual C#**  > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus. Dieser Schnellstart enthält zwei Beispielprojekte. Nennen Sie daher die Lösung **SyntaxTransformationQuickStart** und das Projekt **ConstructionCS**. Klicken Sie auf **OK**.
 
 Dieses Projekt verwendet die Methoden der Klasse <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>, um ein <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>-Element zu erstellen, das den `System.Collections.Generic`-Namespace repräsentiert.
 
@@ -63,7 +63,7 @@ Starten Sie das Programm erneut, um zu sehen, dass Sie die Struktur für den hin
 
 ### <a name="create-a-modified-tree"></a>Erstellen einer geänderten Struktur
 
-Sie haben eine kleine Syntaxstruktur aufgebaut, die eine Anweisung enthält. Die APIs zum Erstellen neuer Knoten sind die richtige Wahl, um einzelne Anweisungen oder andere kleine Codeblöcke zu erstellen. Um jedoch größere Codeblöcke zu erstellen, sollten Sie Methoden verwenden, die Knoten ersetzen oder Knoten in eine bestehende Struktur einfügen. Denken Sie daran, dass Syntaxstrukturen unveränderlich sind. Die **Syntax-API** bietet keinen Mechanismus, um eine bestehende Syntaxstruktur nach deren Aufbau zu ändern. Stattdessen stellt sie Methoden zur Verfügung, die neue Strukturen auf der Grundlage von Änderungen an bestehenden Strukturen erzeugen. `With*`-Methoden werden in konkreten Klassen definiert, die von <xref:Microsoft.CodeAnalysis.SyntaxNode> abgeleitet sind, oder in Erweiterungsmethoden, die in der Klasse <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> deklariert sind. Diese Methoden erstellen einen neuen Knoten, indem sie Änderungen an den untergeordneten Eigenschaften eines vorhandenen Knotens vornehmen. Zusätzlich kann die <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A>-Erweiterungsmethode verwendet werden, um einen untergeordneten Knoten in einer Teilstruktur zu ersetzen. Diese Methode aktualisiert auch das übergeordnete Element, sodass dies auf das neu erstellte untergeordnete Element verweist. Dieser Prozess wird für die gesamte Struktur wiederholt und ist auch als _Umlaufen_ der Struktur bekannt.
+Sie haben eine kleine Syntaxstruktur aufgebaut, die eine Anweisung enthält. Die APIs zum Erstellen neuer Knoten sind die richtige Wahl, um einzelne Anweisungen oder andere kleine Codeblöcke zu erstellen. Um jedoch größere Codeblöcke zu erstellen, sollten Sie Methoden verwenden, die Knoten ersetzen oder Knoten in eine bestehende Struktur einfügen. Denken Sie daran, dass Syntaxstrukturen unveränderlich sind. Die **Syntax-API** bietet keinen Mechanismus, um eine bestehende Syntaxstruktur nach deren Aufbau zu ändern. Stattdessen stellt sie Methoden zur Verfügung, die neue Strukturen auf der Grundlage von Änderungen an bestehenden Strukturen erzeugen. `With*`-Methoden werden in konkreten Klassen definiert, die von <xref:Microsoft.CodeAnalysis.SyntaxNode> abgeleitet sind, oder in Erweiterungsmethoden, die in der Klasse <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> deklariert sind. Diese Methoden erstellen einen neuen Knoten, indem sie Änderungen an den untergeordneten Eigenschaften eines vorhandenen Knotens vornehmen. Zusätzlich kann die <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A>-Erweiterungsmethode verwendet werden, um einen untergeordneten Knoten in einer Teilstruktur zu ersetzen. Diese Methode aktualisiert auch das übergeordnete Element, sodass dieses auf das neu erstellte untergeordnete Element zeigt. Die Methode wiederholt diesen Prozess für die gesamte Struktur – dies ist auch als _Umlaufen_ der Struktur bekannt.
 
 Der nächste Schritt besteht darin, eine Struktur zu erstellen, die ein ganzes (kleines) Programm darstellt, und diese dann zu ändern. Fügen Sie den folgenden Code am Anfang der `Program`-Klasse hinzu:
 
@@ -94,7 +94,7 @@ Führen Sie das Programm erneut aus. Diesmal wird der `System.Collections.Generi
 
 Die Methoden `With*` und <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> bieten komfortable Möglichkeiten, einzelne Branches einer Syntaxstruktur zu transformieren. Die <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType>-Klasse führt mehrere Transformationen in einer Syntaxstruktur durch. Bei der <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType>-Klasse handelt es sich um eine Unterklasse von <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>. Der <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> wendet eine Transformation auf einen bestimmten Typ von <xref:Microsoft.CodeAnalysis.SyntaxNode> an. Sie können Transformationen auf mehrere Typen von <xref:Microsoft.CodeAnalysis.SyntaxNode>-Objekten anwenden, unabhängig von deren Stelle in der Syntaxstruktur. Beim zweiten Projekt in diesem Schnellstart erstellen Sie ein Kommandozeilenrefactoring, das explizite Typen in lokalen Variablendeklarationen überall dort entfernt, wo Typrückschlüsse verwendet werden könnten.
 
-Erstellen Sie ein neues C#-Projekt namens **Stand-Alone Code Analysis Tool**. Klicken Sie in Visual Studio mit der rechten Maustaste auf den Lösungsknoten `SyntaxTransformationQuickStart`. Wählen Sie **Hinzufügen** > **Neues Projekt**, um das Dialogfeld **Neues Projekt** anzuzeigen. Wählen Sie unter **Visual C#** > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus. Nennen Sie Ihr Projekt `TransformationCS`, und klicken Sie auf „OK“.
+Erstellen Sie ein neues C#-Projekt namens **Stand-Alone Code Analysis Tool**. Klicken Sie in Visual Studio mit der rechten Maustaste auf den Lösungsknoten `SyntaxTransformationQuickStart`. Wählen Sie **Hinzufügen** > **Neues Projekt**, um das Dialogfeld **Neues Projekt** anzuzeigen. Wählen Sie unter **Visual C#**  > **Erweiterbarkeit** die Option **Stand-Alone Code Analysis Tool** aus. Nennen Sie Ihr Projekt `TransformationCS`, und klicken Sie auf „OK“.
 
 Der erste Schritt besteht in der Erstellung einer Klasse, die von <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> abgeleitet ist, um Ihre Transformationen durchzuführen. Fügen Sie zum Projekt eine neue Klassendatei hinzu. Wählen Sie in Visual Studio **Projekt** > **Klasse hinzufügen...** aus. Geben Sie im Dialogfeld **Neues Element hinzufügen** `TypeInferenceRewriter.cs` als Dateinamen ein.
 
@@ -112,7 +112,7 @@ Fügen Sie den folgenden Code hinzu, um ein privates schreibgeschütztes Feld mi
 
 Überschreiben Sie die <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)>-Methode:
 
-```C#
+```csharp
 public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 {
 

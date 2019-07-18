@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
 ms.openlocfilehash: 462e32520393a1c23809cce8eb3c130c13bc882f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947262"
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Vorgehensweise: Ändern des Endes einer Zeile oder eines Segments
 In diesem Beispiel wird gezeigt, wie so ändern Sie die Form am Anfang oder Ende eines offenen <xref:System.Windows.Shapes.Shape> Element. So ändern Sie die Obergrenze zu Beginn eines geöffneten <xref:System.Windows.Shapes.Shape>, verwenden Sie die <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> Eigenschaft. So ändern Sie die Obergrenze am Ende eines geöffneten <xref:System.Windows.Shapes.Shape>, verwenden Sie die <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> Eigenschaft. Um die verfügbaren Zeilenenden finden Sie unter den <xref:System.Windows.Media.PenLineCap> Enumeration.  

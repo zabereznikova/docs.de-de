@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3f1d94ffde71962c848bece808bf2d982093896a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212517"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652164"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper-Schnittstelle
 Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgeführt wird, dient zwischen der Veröffentlichung und dem Abschluss eines Befehls als Bezeichner und ermöglicht das Abbrechen eines Schritts.  
@@ -42,11 +42,11 @@ Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgefü
 ## <a name="remarks"></a>Hinweise  
  Die `ICorDebugStepper` -Schnittstelle dient folgenden Zwecken:  
   
--   Er fungiert als Bezeichner zwischen ein Schrittbefehl, der ausgegeben wird und dem Abschluss dieses Befehls.  
+- Er fungiert als Bezeichner zwischen ein Schrittbefehl, der ausgegeben wird und dem Abschluss dieses Befehls.  
   
--   Es bietet eine zentrale Schnittstelle zum kapseln alle das schrittweise durchlaufen, die ausgeführt werden können.  
+- Es bietet eine zentrale Schnittstelle zum kapseln alle das schrittweise durchlaufen, die ausgeführt werden können.  
   
--   Es bietet eine Möglichkeit, einer schrittweisen Ausführung vorzeitig abbrechen.  
+- Es bietet eine Möglichkeit, einer schrittweisen Ausführung vorzeitig abbrechen.  
   
  Es können mehrere zugeordnetem pro Thread vorhanden sein. Z. B. ein Haltepunkt erreicht werden kann, während bei einem Prozedurschritt für eine Funktion, und der Benutzer eine neue schrittweisen Ausführung innerhalb dieser Funktion beginnen möchten. Es ist Aufgabe des Debuggers zu bestimmen, wie für diese Situation. Der Debugger sollten die ursprünglichen schrittweisen Ausführung abbrechen oder Schachteln von beiden Vorgänge. Die `ICorDebugStepper` Schnittstelle unterstützt beides.  
   
@@ -66,4 +66,4 @@ Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgefü
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

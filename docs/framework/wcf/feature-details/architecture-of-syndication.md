@@ -2,25 +2,25 @@
 title: Architektur von Syndication
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 18719c1a6ece24008cc97f36278e3ea8d3355393
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075911"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606222"
 ---
 # <a name="architecture-of-syndication"></a>Architektur von Syndication
 Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell zu bieten, mit dem es möglich ist, Schlagzeilen in verschiedenen Formaten zu schreiben und direkt zu übertragen. Das abstrakte Datenmodell besteht aus den folgenden Klassen:  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  Diese Klassen sind nahezu deckungsgleich mit den in der Atom&amp;#160;1.0-Spezifikation definierten Konstrukten, obwohl manche der Namen anders lauten.  
   
@@ -75,10 +75,10 @@ Die Syndication-API ist darauf ausgelegt, ein Format-neutrales Programmiermodell
   
 ## <a name="extensibility"></a>Erweiterungen  
   
--   Eine Hauptfunktion von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&amp;#160;1.0 als auch RSS&amp;#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Der WCF-Syndication-Programmiermodell bietet zwei Möglichkeiten zum Arbeiten mit benutzerdefinierten Attributen und Erweiterungen: ableiten, eine neue Klasse und typenlosen Zugriff. Weitere Informationen finden Sie unter [Syndication-Erweiterbarkeit](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+- Eine Hauptfunktion von Syndication-Protokollen ist die Erweiterbarkeit. Sowohl Atom&amp;#160;1.0 als auch RSS&amp;#160;2.0 lassen zu, dass Sie Syndication-Feeds Attribute und Elemente hinzufügen, die nicht in den Spezifikationen definiert sind. Der WCF-Syndication-Programmiermodell bietet zwei Möglichkeiten zum Arbeiten mit benutzerdefinierten Attributen und Erweiterungen: ableiten, eine neue Klasse und typenlosen Zugriff. Weitere Informationen finden Sie unter [Syndication-Erweiterbarkeit](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [Wie das WCF-Syndication-Objektmodell Atom und RSS zugeordnet wird](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
+- [Zuordnung des WCF-Syndication-Objektmodells zu Atom und RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
 - [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

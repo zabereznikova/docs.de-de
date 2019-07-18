@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c37e494431eae9d17f442b2c32dea5f0b4bcf2b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831981"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397799"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML-Integration mit relationalen Daten und ADO.NET
 Die **XmlDataDocument**-Klasse ist eine von der **XmlDocument**-Klasse abgeleitete Klasse und enthält XML-Daten. Der Vorteil der **XmlDataDocument**-Klasse liegt im Herstellen einer Brücke zwischen relationalen und hierarchischen Daten. Ein **XmlDocument** kann an ein **DataSet** gebunden werden, und Änderungen, die an den Dateien in den beiden Klassen vorgenommen wurden, können in beiden Klassen synchronisiert werden. Ein an ein **DataSet** gebundenes **XmlDocument** ermöglicht die Integration von XML in relationale Daten, und die Daten müssen nicht als XML oder in einem relationalen Format dargestellt werden. Sie können beide Möglichkeiten nutzen und sind somit nicht auf eine einzige Darstellung der Daten festgelegt.  
   
  Wenn die Daten in zwei Ansichten zur Verfügung stehen, ergeben sich folgende Vorteile:  
   
--   Der strukturierte Teil eines XML-Dokuments kann einem Dataset zugeordnet und effizient gespeichert, indiziert und durchsucht werden.  
+- Der strukturierte Teil eines XML-Dokuments kann einem Dataset zugeordnet und effizient gespeichert, indiziert und durchsucht werden.  
   
--   Transformationen, Validierungen und die Navigationen können mit einem Cursormodell in den relational gespeicherten XML-Daten effizient ausgeführt werden. Manchmal kann dies mit relationalen Strukturen effektiver ausgeführt werden als anhand von XML-Code, der in einem **XmlDocument**-Modell gespeichert ist.  
+- Transformationen, Validierungen und die Navigationen können mit einem Cursormodell in den relational gespeicherten XML-Daten effizient ausgeführt werden. Manchmal kann dies mit relationalen Strukturen effektiver ausgeführt werden als anhand von XML-Code, der in einem **XmlDocument**-Modell gespeichert ist.  
   
--   Im **DataSet** kann ein Teil des XML-Codes gespeichert werden. Das heißt, dass Sie mithilfe von **XPath** oder **XslTransform** nur die für Sie relevanten Elemente und Attribute in einem **DataSet** speichern können. Dort können Änderungen an der kleineren gefilterten Teilmenge der Daten vorgenommen werden, und diese Änderungen werden anschließend in den umfangreicheren Daten von **XmlDataDocument** verbreitet.  
+- Im **DataSet** kann ein Teil des XML-Codes gespeichert werden. Das heißt, dass Sie mithilfe von **XPath** oder **XslTransform** nur die für Sie relevanten Elemente und Attribute in einem **DataSet** speichern können. Dort können Änderungen an der kleineren gefilterten Teilmenge der Daten vorgenommen werden, und diese Änderungen werden anschließend in den umfangreicheren Daten von **XmlDataDocument** verbreitet.  
   
  Sie können auch eine Transformation von Daten vornehmen, die aus SQL Server in das **DataSet** geladen wurden. Eine andere Möglichkeit besteht darin, nach Klasse und Stil verwaltete WinForm- und WebForm-Steuerelemente aus .NET Framework an ein **DataSet** zu binden, das aus einem XML-Eingabestream aufgefüllt wurde.  
   

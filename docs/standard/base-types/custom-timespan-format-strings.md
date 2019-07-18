@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b06e367d119a93e872325a85cd951cc5087068be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14fbcbbd2e4042fa4f25b3c8993cf47fefd95052
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819631"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644999"
 ---
 # <a name="custom-timespan-format-strings"></a>Benutzerdefinierte TimeSpan-Formatzeichenfolgen
 

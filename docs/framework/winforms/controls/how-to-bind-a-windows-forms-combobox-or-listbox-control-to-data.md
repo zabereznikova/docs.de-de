@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054015"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Vorgehensweise: Binden eines ComboBox-Steuerelements oder ListBox-Steuerelements in Windows Forms an Daten
 Sie binden die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.ListBox> auf Daten für Aufgaben wie das Durchsuchen von Daten in einer Datenbank eingeben neuer Daten, oder Bearbeiten vorhandener Daten.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Zum Binden eines ComboBox-Steuerelements oder ListBox-Steuerelements  
   
-1.  Legen Sie die `DataSource` Eigenschaft, um ein Datenquellenobjekt. Mögliche Datenquellen umfassen eine <xref:System.Windows.Forms.BindingSource> an Daten, einer Datentabelle, eine Data source View, ein Dataset gebunden ist, eine Datenansicht Manager, ein Array oder eine beliebige Klasse, die implementiert die <xref:System.Collections.IList> Schnittstelle. Weitere Informationen finden Sie unter [von Windows Forms unterstützte Datenquellen](../data-sources-supported-by-windows-forms.md).  
+1. Legen Sie die `DataSource` Eigenschaft, um ein Datenquellenobjekt. Mögliche Datenquellen umfassen eine <xref:System.Windows.Forms.BindingSource> an Daten, einer Datentabelle, eine Data source View, ein Dataset gebunden ist, eine Datenansicht Manager, ein Array oder eine beliebige Klasse, die implementiert die <xref:System.Collections.IList> Schnittstelle. Weitere Informationen finden Sie unter [von Windows Forms unterstützte Datenquellen](../data-sources-supported-by-windows-forms.md).  
   
-2.  Wenn Sie in eine Tabelle binden, legen Sie die `DisplayMember` -Eigenschaft auf den Namen einer Spalte in der Datenquelle.  
+2. Wenn Sie in eine Tabelle binden, legen Sie die `DisplayMember` -Eigenschaft auf den Namen einer Spalte in der Datenquelle.  
   
      \- oder –  
   
@@ -57,6 +57,6 @@ Sie binden die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.For
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Datenbindung in Web Forms](../windows-forms-data-binding.md)
-- [Datenbindung und Windows Forms](../data-binding-and-windows-forms.md)
-- [Steuerelemente in Windows Forms zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)
+- [Windows Forms-Datenbindung](../windows-forms-data-binding.md)
+- [Datenbindung und Windows Forms](../data-binding-and-windows-forms.md)
+- [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)

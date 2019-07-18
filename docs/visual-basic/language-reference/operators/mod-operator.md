@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f1334ff7aa07f49139bfe684746ae9cc3cf8087c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840171"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663171"
 ---
 # <a name="mod-operator-visual-basic"></a>MOD-Operator (Visual Basic)
 Dividiert zwei Zahlen und gibt nur den Restwert zurück.  
@@ -70,9 +70,9 @@ End Module
   
  Die folgenden: zugehörige Operatoren  
   
--   Die [\-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) gibt den ganzzahligen Quotienten einer Division zurück. Beispiel: der Ausdruck `14 \ 4` 3 ergibt.  
+- Die [\-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) gibt den ganzzahligen Quotienten einer Division zurück. Beispiel: der Ausdruck `14 \ 4` 3 ergibt.  
   
--   Die [/-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) gibt zurück, der volle Quotient, einschließlich den Rest als Gleitkommazahl. Beispiel: der Ausdruck `14 / 4` 3.5 ergibt.  
+- Die [/-Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) gibt zurück, der volle Quotient, einschließlich den Rest als Gleitkommazahl. Beispiel: der Ausdruck `14 / 4` 3.5 ergibt.  
   
 ## <a name="attempted-division-by-zero"></a>Versuchte Division durch 0 (null)  
  Wenn `number2` ergibt NULL, das Verhalten der `Mod` Operator hängt von den Datentyp des Operanden. Ganzzahldivision wird eine <xref:System.DivideByZeroException> Ausnahme. Gibt eine Gleitkommadivision <xref:System.Double.NaN>.  

@@ -2,27 +2,27 @@
 title: Verwenden eines benutzerdefinierten Ausdrucks-Editors
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101275"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169967"
 ---
 # <a name="using-a-custom-expression-editor"></a>Verwenden eines benutzerdefinierten Ausdrucks-Editors
 Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen. Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:  
   
--   Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer. Diese Funktionalität muss angegeben werden, weil der standardmäßige Visual Studio-Ausdrucks-Editor im neu gehosteten Anwendungen verwendet werden kann.  
+- Zur Unterstützung von IntelliSense und anderen umfangreichen Bearbeitungsfunktionen in einem neu gehosteten Workflow-Designer. Diese Funktionalität muss angegeben werden, weil der standardmäßige Visual Studio-Ausdrucks-Editor im neu gehosteten Anwendungen verwendet werden kann.  
   
--   Zur Vereinfachung der ausdrucksbearbeitungsumgebung für die Business Analyst-Benutzer, damit sie nicht, z. B. Visual Basic kennen lernen oder befassen sich mit Visual Basic-Ausdrücke erforderlich sind.  
+- Zur Vereinfachung der ausdrucksbearbeitungsumgebung für die Business Analyst-Benutzer, damit sie nicht, z. B. Visual Basic kennen lernen oder befassen sich mit Visual Basic-Ausdrücke erforderlich sind.  
   
  Zur Implementierung eines benutzerdefinierten Ausdrucks-Editors sind drei einfache Schritte erforderlich:  
   
-1.  Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle. Über diese Schnittstelle wird die Erstellung und Löschung von Ausdrucks-Editoren verwaltet.  
+1. Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle. Über diese Schnittstelle wird die Erstellung und Löschung von Ausdrucks-Editoren verwaltet.  
   
-2.  Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle. Über diese Schnittstelle wird die Benutzeroberfläche zur Ausdrucksbearbeitung implementiert.  
+2. Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle. Über diese Schnittstelle wird die Benutzeroberfläche zur Ausdrucksbearbeitung implementiert.  
   
-3.  Veröffentlichen des <xref:System.Activities.Presentation.View.IExpressionEditorService> in der neu gehosteten Workflowanwendung.  
+3. Veröffentlichen des <xref:System.Activities.Presentation.View.IExpressionEditorService> in der neu gehosteten Workflowanwendung.  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Implementieren eines benutzerdefinierten Ausdrucks-Editors in einer Klassenbibliothek  
  Es folgt ein Codebeispiel für eine `MyEditorService`-Klasse (Machbarkeitsstudie) zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.  
@@ -222,7 +222,7 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>Veröffentlichen eines benutzerdefinierten Ausdrucks-Editors in einem WPF-Projekt  
- Dieser Code zeigt, wie der Designer in einer [!INCLUDE[avalon2](../../../includes/avalon2-md.md)]-Anwendung neu gehostet wird und wie der `MyEditorService`-Dienst erstellt und veröffentlicht wird. Vor der Verwendung dieses Codes fügen Sie von dem Projekt aus, das die Anwendung avalon2 enthält, einen Verweis auf das MyExpressionEditorService-Bibliotheksprojekt hinzu.  
+ Hier ist der Code, der anzeigt, zu den Designer in einer WPF-Anwendung zu hosten und zum Erstellen und veröffentlichen die `MyEditorService` Service. Vor der Verwendung dieses Codes fügen Sie von dem Projekt aus, das die Anwendung avalon2 enthält, einen Verweis auf das MyExpressionEditorService-Bibliotheksprojekt hinzu.  
   
 ```  
 using System.Windows;  

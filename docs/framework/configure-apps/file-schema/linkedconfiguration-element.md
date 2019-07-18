@@ -12,19 +12,19 @@ helpviewer_keywords:
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674648"
 ---
 # <a name="linkedconfiguration-element"></a>\<LinkedConfiguration >-Element
 
 Gibt eine einzuschließende Konfigurationsdatei an.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<assemblyBinding>**](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<linkedConfiguration>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Gibt eine einzuschließende Konfigurationsdatei an.
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an. |
+| [ **\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keine
+Keiner
 
 ## <a name="remarks"></a>Hinweise
 
@@ -65,7 +65,7 @@ Die folgenden Regeln bestimmen die Verwendung von verknüpfte Konfigurationsdate
 
 - Alle verknüpften Konfigurationsdateien werden zusammengeführt, um eine Datei, vergleichbar mit dem Verhalten von bilden die `#include` in C/C++-Direktive.
 
-- Die  **\<LinkedConfiguration >** Element ist nur in Anwendungskonfigurationsdateien zulässig; es wird ignoriert, *"Machine.config"*.
+- Die  **\<LinkedConfiguration >** Element ist nur in Anwendungskonfigurationsdateien zulässig; es wird ignoriert, *"Machine.config"* .
 
 - Zirkelverweise werden erkannt und beendet. D.h., wenn die  **\<LinkedConfiguration >** Elemente aus einer Reihe von Konfigurationsdateien bilden eine Schleife, die Schleife erkannt und gestoppt wird.
 
@@ -83,5 +83,5 @@ Das folgende Beispiel zeigt, wie Sie die Konfigurationsdatei aus der lokalen Fes
 
 ## <a name="see-also"></a>Siehe auch
 
-- [**\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
+- [ **\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
 - [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

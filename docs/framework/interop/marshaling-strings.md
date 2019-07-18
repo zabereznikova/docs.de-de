@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223029"
 ---
 # <a name="marshaling-strings"></a>Marshalling von Zeichenfolgen
 Der Plattformaufruf kopiert Zeichenfolgenparameter, wobei das .NET Framework-Format (Unicode) bei Bedarf in das nicht verwaltete Format (ANSI) konvertiert wird. Da verwaltete Zeichenfolgen unveränderlich sind, kopieren Plattformaufrufe sie bei Rückgabe der Funktion nicht aus dem nicht verwalteten Speicher in den verwalteten Arbeitsspeicher.  
@@ -39,7 +39,8 @@ Der Plattformaufruf kopiert Zeichenfolgenparameter, wobei das .NET Framework-For
 |Als ein Array von Strukturen, das Zeichenfolgen nach Wert enthält.|Erstellt ein Array von Strukturen, das Zeichenfolgen enthält, und das Array wird nach Wert übergeben.|[Arrays](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)
 - [Marshallen von Klassen, Strukturen und Unions](marshaling-classes-structures-and-unions.md)
-- [Maushallen verschiedener Typen von Arrays](marshaling-different-types-of-arrays.md)
+- [Marshallen verschiedener Typen von Arrays](marshaling-different-types-of-arrays.md)
 - [Verschiedene Marshallingbeispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))

@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05a29022d3ebad37322aef9826f10689d2b5b06b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221133"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739586"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange-Aufzählung
 
@@ -25,7 +25,7 @@ Beschreibt die Menge der zwischengespeicherten Daten, die auf der Grundlage von 
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 typedef enum CorDebugStateChange
 {
     PROCESS_RUNNING = 0x0000001,

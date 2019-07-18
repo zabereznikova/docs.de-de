@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865178"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377464"
 ---
 # <a name="exceptions-in-managed-threads"></a>Ausnahmen in verwalteten Threads
 Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meisten Ausnahmefehlern in Threads deren ordnungsgemäße Fortsetzung. Das für i. d R. dazu, dass die Anwendung durch die unbehandelte Ausnahme beendet wird.  
@@ -25,11 +25,11 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
   
  Die Common Language Runtime stellt für bestimmte unbehandelte Ausnahmen, die zum Steuern des Programmablaufs verwendet werden, ein Sicherheitsnetz bereit:  
   
--   In einem Thread wird eine <xref:System.Threading.ThreadAbortException> ausgelöst, da <xref:System.Threading.Thread.Abort%2A> aufgerufen wurde.  
+- In einem Thread wird eine <xref:System.Threading.ThreadAbortException> ausgelöst, da <xref:System.Threading.Thread.Abort%2A> aufgerufen wurde.  
   
--   In einem Thread wird eine <xref:System.AppDomainUnloadedException> ausgelöst, da die Anwendungsdomäne, in der der Thread ausgeführt wird, entladen wird.  
+- In einem Thread wird eine <xref:System.AppDomainUnloadedException> ausgelöst, da die Anwendungsdomäne, in der der Thread ausgeführt wird, entladen wird.  
   
--   Die Common Language Runtime oder ein Hostprozess beendet den Thread durch Auslösen einer internen Ausnahme.  
+- Die Common Language Runtime oder ein Hostprozess beendet den Thread durch Auslösen einer internen Ausnahme.  
   
  Wenn eine dieser Ausnahmen in Threads, die von der Common Language Runtime erstellt wurden, nicht behandelt werden, beendet die Ausnahme den Thread, die Common Language Runtime lässt jedoch die Weiterreichung der Ausnahme nicht zu.  
   
@@ -39,7 +39,7 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
 >  Die Laufzeit kann eine unbehandelte Ausnahme auslösen, bevor verwalteter Code einen Ausnahmehandler installieren kann. Auch wenn verwalteter Code eine derartige Ausnahme nicht behandeln könnte, kann die Ausnahme normal fortgesetzt werden.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Aufdecken von Threadingproblemen bei der Entwicklung  
- Wenn Threads unerkannt fehlschlagen können, ohne die Anwendung zu beenden, können Sie gravierende Programmierfehler übersehen. Dies ist insbesondere bei Diensten und anderen Anwendungen ein Problem, die über einen längeren Zeitraum ausgeführt werden. Durch das Fehlschlagen von Threads wird der Programmzustand allmählich beschädigt. Die Anwendungsleistung kann beeinträchtigt werden, oder es kann soweit kommen, dass die Anwendung gar nicht mehr reagiert.  
+ Wenn Threads unerkannt fehlschlagen können, ohne die Anwendung zu beenden, können Sie gravierende Programmierfehler übersehen. Dies ist insbesondere bei Diensten und anderen Anwendungen ein Problem, die über einen längeren Zeitraum ausgeführt werden. Durch das Fehlschlagen von Threads wird der Programmzustand allmählich beschädigt. Dadurch kann sich die Anwendungsleistung verschlechtern, und es kann passieren, dass die Anwendung nicht mehr reagiert.  
   
  Wenn Sie die normale Fortsetzung von unbehandelten Ausnahmen in Threads zulassen, bis das Programm vom Betriebssystem beendet wird, werden derartige Probleme bei der Entwicklung und beim Testen entdeckt. Fehlerberichte über Beendigungen des Programms unterstützen das Debuggen.  
   
@@ -47,11 +47,11 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
 ## <a name="change-from-previous-versions"></a>Änderung von früheren Versionen  
  Die wichtigste Änderung betrifft verwaltete Threads. In den .NET Framework-Versionen 1.0 und 1.1 stellt die Common Language Runtime für unbehandelte Ausnahmen in den folgenden Situationen ein Sicherheitsnetz bereit:  
   
--   In einem Threadpoolthread gibt es keine unbehandelten Ausnahmen. Wenn eine Aufgabe eine Ausnahme auslöst, die sie nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus, und gibt den Thread an den Threadpool zurück.  
+- In einem Threadpoolthread gibt es keine unbehandelten Ausnahmen. Wenn eine Aufgabe eine Ausnahme auslöst, die sie nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus, und gibt den Thread an den Threadpool zurück.  
   
--   In einem Thread, der mit der <xref:System.Threading.Thread.Start%2A>-Methode der <xref:System.Threading.Thread>-Klasse behandelt wird, gibt es keine unbehandelten Ausnahmen. Wenn Code, der in einem derartigen Thread ausgeführt wird, eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und beendet den Thread dann ordnungsgemäß.  
+- In einem Thread, der mit der <xref:System.Threading.Thread.Start%2A>-Methode der <xref:System.Threading.Thread>-Klasse behandelt wird, gibt es keine unbehandelten Ausnahmen. Wenn Code, der in einem derartigen Thread ausgeführt wird, eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und beendet den Thread dann ordnungsgemäß.  
   
--   In einem Finalizerthread gibt keine unbehandelten Ausnahmen. Wenn ein Finalizer eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und lässt den Finalizerthread dann die Ausführung von Finalizern fortsetzen.  
+- In einem Finalizerthread gibt keine unbehandelten Ausnahmen. Wenn ein Finalizer eine Ausnahme auslöst, die er nicht behandelt, gibt die Laufzeit die Ausnahmestapelüberwachung an die Konsole aus und lässt den Finalizerthread dann die Ausführung von Finalizern fortsetzen.  
   
  Der Vordergrund- oder Hintergrundstatus eines verwalteten Threads beeinflusst dieses Verhalten nicht.  
   
@@ -60,11 +60,11 @@ Ab .NET Framework, Version 2.0, erlaubt die Common Language Runtime bei den meis
 ### <a name="migrating-code"></a>Migrieren von Code  
  Die Änderung deckt im Allgemeinen zuvor unerkannte Programmierfehler auf, sodass diese behoben werden können. In einigen Fällen war das Sicherheitsnetz der Laufzeit jedoch für Programmierer praktisch, z. B. zum Beenden von Threads. Je nach Situation bietet sich eine der folgenden Migrationsstrategien an:  
   
--   Strukturieren Sie den Code so um, dass der Thread beim Empfang eines Signals ordnungsgemäß beendet wird.  
+- Strukturieren Sie den Code so um, dass der Thread beim Empfang eines Signals ordnungsgemäß beendet wird.  
   
--   Verwenden Sie die <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>-Methode, um den Thread abzubrechen.  
+- Verwenden Sie die <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>-Methode, um den Thread abzubrechen.  
   
--   Wenn ein Thread angehalten werden muss, um die Prozessbeendigung fortzusetzen, machen Sie den Thread zu einem Hintergrundthread, damit er beim Prozessende automatisch beendet wird.  
+- Wenn ein Thread angehalten werden muss, um die Prozessbeendigung fortzusetzen, machen Sie den Thread zu einem Hintergrundthread, damit er beim Prozessende automatisch beendet wird.  
   
  Sie sollten dabei auf jeden die Entwurfsrichtlinien für Ausnahmen einhalten. Siehe [Entwurfsrichtlinien für Ausnahmen](../../../docs/standard/design-guidelines/exceptions.md).  
   

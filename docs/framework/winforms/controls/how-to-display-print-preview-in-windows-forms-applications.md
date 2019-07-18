@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9efccc220bb27706448ae555db8958afb0ccd9fa
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154361"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053610"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Vorgehensweise: Anzeigen der Seitenansicht in Windows Forms-Anwendungen
 Sie können die <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement, damit Benutzer ein Dokument anzuzeigen, noch bevor es gedruckt werden.  
@@ -29,7 +29,7 @@ Sie können die <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement, da
   
 ### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>Zum Anzeigen von Seiten, die über das PrintPreviewDialog-Steuerelement  
   
--   Verwenden Sie die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> -Methode, um das Dialogfeld anzuzeigen, und geben Sie das zu verwendende <xref:System.Drawing.Printing.PrintDocument> an.  
+- Verwenden Sie die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> -Methode, um das Dialogfeld anzuzeigen, und geben Sie das zu verwendende <xref:System.Drawing.Printing.PrintDocument> an.  
   
      Das folgende Codebeispiel zeigt die <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Click> Ereignishandler öffnet eine Instanz von der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement. Der zu druckenden Dokuments wird angegeben, der <xref:System.Windows.Forms.PrintDialog.Document%2A> Eigenschaft. Im folgenden Beispiel wird keine zu druckenden Dokuments angegeben.  
   
@@ -70,7 +70,7 @@ Sie können die <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement, da
        }  
     ```  
   
-     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C#, Visual C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -85,5 +85,5 @@ Sie können die <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement, da
 
 - [PrintDocument-Komponente](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog-Steuerelement](printpreviewdialog-control-windows-forms.md)
-- [Druckunterstützung in Windows Forms](../advanced/windows-forms-print-support.md)
+- [Druckunterstützung in Windows Forms](../advanced/windows-forms-print-support.md)
 - [Windows Forms](../index.md)

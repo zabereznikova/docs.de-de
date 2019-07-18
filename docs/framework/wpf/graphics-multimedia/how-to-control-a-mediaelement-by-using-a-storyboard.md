@@ -12,11 +12,11 @@ helpviewer_keywords:
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
 ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032229"
 ---
 # <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Vorgehensweise: Steuern eines MediaElement-Objekts mit einem Storyboard
 Dieses Beispiel zeigt, wie Sie steuern eine <xref:System.Windows.Controls.MediaElement> mithilfe einer <xref:System.Windows.Media.MediaTimeline> in einem <xref:System.Windows.Media.Animation.Storyboard>.  
@@ -40,9 +40,9 @@ Dieses Beispiel zeigt, wie Sie steuern eine <xref:System.Windows.Controls.MediaE
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Steuern eines MediaElement-Objekts (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)
+- [Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)
 - [Übersicht über Storyboards](storyboards-overview.md)
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
 - [Übersicht über Animationen](animation-overview.md)
-- [Gewusst wie-Themen](audio-and-video-how-to-topics.md)
+- [Themen zu Vorgehensweisen](audio-and-video-how-to-topics.md)
 - [Grafiken und Multimedia](index.md)

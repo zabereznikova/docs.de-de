@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dedfa55cb7be7eed396c897dedc6bf375c34436e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189157"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626256"
 ---
 # <a name="understanding-generated-client-code"></a>Grundlagen des generierten Clientcodes
 Mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) werden Clientcode und eine Clientanwendungs-Konfigurationsdatei zum Erstellen von Clientanwendungen generiert. Dieses Thema bietet Beispiele für generierten Code für standardmäßige Dienstvertragszenarien. Weitere Informationen zum Erstellen einer Clientanwendung, die mit dem generierten Code finden Sie unter [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -20,15 +20,15 @@ Mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/fram
   
  Da Svcutil.exe über mehrere Optionen zum Ändern der generierten Typinformationen verfügt, werden in diesem Thema nicht alle Szenarien erläutert. Die folgenden Standardaufgaben schließen jedoch die Suche nach generiertem Code ein:  
   
--   Das Identifizieren von Dienstvertragsschnittstellen.  
+- Das Identifizieren von Dienstvertragsschnittstellen.  
   
--   Identifizieren die WCF-Client-Klasse.  
+- Identifizieren die WCF-Client-Klasse.  
   
--   Das Identifizieren von Datentypen.  
+- Das Identifizieren von Datentypen.  
   
--   Das Identifizieren von Rückrufverträgen für Duplexdienste.  
+- Das Identifizieren von Rückrufverträgen für Duplexdienste.  
   
--   Das Identifizieren der Hilfsdienstvertrag-Kanalschnittstelle.  
+- Das Identifizieren der Hilfsdienstvertrag-Kanalschnittstelle.  
   
 ### <a name="finding-service-contract-interfaces"></a>Das Suchen von Dienstvertragschnittstellen.  
  Suchen Sie bei der Suche nach Schnittstellen für Dienstvertragmodelle mit dem <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> -Attribut markierte Schnittstellen. Die Suche nach diesem Attribute mit schnellem Lesen kann wegen des Vorhandenseins anderer Attribute und der für das Attribut selbst festgelegten expliziten Eigenschaften häufig schwierig sein. Beachten Sie, dass die Dienstvertragschnittstelle und die Clientvertragschnittstelle zwei verschiedene Typen sind. Im folgenden Codebeispiel wird der ursprüngliche Dienstvertrag gezeigt.  

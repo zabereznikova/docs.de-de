@@ -2,12 +2,12 @@
 title: Referenz
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 659bd64fe06e2de7bd9dd8e929faa5d0353a5b58
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093358"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610566"
 ---
 # <a name="reference"></a>Referenz
 Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Entwickler.  
@@ -31,7 +31,7 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
  Bietet Antworten auf gängige Fragen zu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [SQL Server Compact und LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- Beschreibt, wie [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] unterscheidet sich von SQL Server auf [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Anwendungen.  
+ Beschreibt, wie SQL Server auf SQL Server Compact 3.5 unterscheidet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Anwendungen.  
   
  [Übersetzen von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  Beschreibt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt Standardabfrageoperatoren in SQL-Befehle.  
@@ -40,9 +40,9 @@ Dieser Abschnitt enthält Referenzinformationen für [!INCLUDE[vbtecdlinq](../..
  [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  Bietet ein Portal für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Themen.  
   
- [Language-Integrated Query (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
- [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Language Integrated Query (LINQ) – C#](../../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Language Integrated Query (LINQ) – Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  Stellt die Portale für [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Themen.  
   
  [Übersicht über LinqDataSource Webserver-Steuerelement](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- Erläutert, wie das <xref:System.Web.UI.WebControls.LinqDataSource>-Steuerelement über die [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Datenquellen-Steuerarchitektur [!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] für Web-Entwickler bereitstellt.
+ Beschreibt, wie die <xref:System.Web.UI.WebControls.LinqDataSource> -Steuerelement stellt [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] für Web-Entwickler in die ASP.NET-Architektur für Datenquellen-Steuerelement.

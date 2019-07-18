@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778364"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung
 
@@ -37,7 +37,7 @@ Die Quellkopie dieses Beispiels, finden Sie unter [zuverlässige WS-Sitzung](../
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  Ort der *"Service.svc"* Datei in das virtuelle Verzeichnis für Internetinformationsdienste (Internet Information Services, IIS).
+1. Ort der *"Service.svc"* Datei in das virtuelle Verzeichnis für Internetinformationsdienste (Internet Information Services, IIS).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Konfigurieren Sie den Client mit WSHttpBinding zur Verwendung einer zuverlässigen Sitzung
 

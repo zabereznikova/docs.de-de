@@ -12,15 +12,15 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 7162fcc24595bbb16d268d5d9e1ea4d82f6e67fb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e5cb1ddc130a8b1913f30b0d20d27941005dd9d3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829862"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063253"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf-Operator (Visual Basic)
-Vergleicht eine Objektverweisvariable mit einem Datentyp.  
+Überprüft, ob der Laufzeittyp des Ausdrucks Ergebnis kompatiblen Typ ist mit dem angegebenen Typ.
   
 ## <a name="syntax"></a>Syntax  
   

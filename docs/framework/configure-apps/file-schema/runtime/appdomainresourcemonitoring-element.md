@@ -1,5 +1,5 @@
 ---
-title: <appDomainResourceMonitoring> Element
+title: <appDomainResourceMonitoring>-Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainResourceMonitoring element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad0ae023215eeb1f42f9351369ee77d41d537b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224376"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487726"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<AppDomainResourceMonitoring >-Element
 Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Prozess für die Lebensdauer des Prozesses an.  
@@ -59,7 +59,7 @@ Weist die Runtime zum Sammeln von Statistiken für alle Anwendungsdomänen im Pr
   
  Verwenden Sie zum Überwachen von verwaltetem Code aktivieren die <xref:System.AppDomain.MonitoringIsEnabled%2A> Eigenschaft.  
   
- Dieses Konfigurationselement steht nur in der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher.  
+ Dieses Element ist nur in .NET Framework 4 und höher verfügbar.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel veranschaulicht das Aktivieren der ressourcenüberwachung der Anwendungsdomäne.  

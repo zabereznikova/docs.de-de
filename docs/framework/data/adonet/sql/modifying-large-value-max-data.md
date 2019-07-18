@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 417afd5f614aee8db0aeec2377973ad894e04384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 134759d729d6f291db61e6f64ebd51dfe5a4443b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119300"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648718"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
 Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengröße von 8 KB. SQL Server umfasst einen `max`-Spezifizierer für die Datentypen `varchar`, `nvarchar` und `varbinary`, der das Speichern Werten mit einer Größe bis zu 2^32 Bytes ermöglicht. Tabellenspalten und Transact-SQL-Variablen können die Datentypen `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` angeben. In ADO.NET können die `max`-Datentypen durch einen `DataReader` abgerufen werden. Außerdem können sie ohne spezielle Behandlung sowohl als Eingabe- als auch als Ausgabeparameterwerte angegeben werden. Bei großen `varchar`-Datentypen können Daten inkrementell abgerufen und aktualisiert werden.  
@@ -19,21 +19,21 @@ Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengr
   
  Die folgende Tabelle enthält Links zur Dokumentation in der SQL Server-Onlinedokumentation.  
   
- **SQL Server-Onlinedokumentation**  
+ **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
-1.  [Verwenden von Datentypen mit umfangreichen Werten](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Verwenden von Datentypen mit umfangreichen Werten](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Einschränkungen für große Werttypen  
  Für die `max`-Datentypen gelten die folgenden Einschränkungen, die für kleinere Datentypen nicht vorhanden sind:  
   
--   Ein `sql_variant` kann keinen großen `varchar`-Datentyp enthalten.  
+- Ein `sql_variant` kann keinen großen `varchar`-Datentyp enthalten.  
   
--   Große `varchar`-Spalten können nicht als Schlüsselspalte in einem Index angegeben werden. In einer eingeschlossenen Spalte in einem nicht gruppierten Index sind sie jedoch zulässig.  
+- Große `varchar`-Spalten können nicht als Schlüsselspalte in einem Index angegeben werden. In einer eingeschlossenen Spalte in einem nicht gruppierten Index sind sie jedoch zulässig.  
   
--   Große `varchar`-Spalten können nicht zum Partitionieren von Schlüsselspalten verwendet werden.  
+- Große `varchar`-Spalten können nicht zum Partitionieren von Schlüsselspalten verwendet werden.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Arbeiten mit großen Werttypen in Transact-SQL  
- Die Transact-SQL-`OPENROWSET`-Funktion ist eine für den Einmalgebrauch bestimmte Methode zum Herstellen einer Verbindung mit Remotedaten und den Zugriff auf diese Daten. Sie enthält alle erforderlichen Verbindungsinformationen für den Zugriff auf Remotedaten von einer OLE DB-Datenquelle. `OPENROWSET` kann in der FROM-Klausel einer Abfrage verwiesen werden, als wäre es ein Tabellenname. Abhängig von den Funktionen des OLE DB-Anbieters kann OPENROWSET auch als Zieltabelle einer INSERT-, UPDATE- oder DELETE-Anweisung dienen.  
+ Die Transact-SQL-`OPENROWSET`-Funktion ist eine für den Einmalgebrauch bestimmte Methode zum Herstellen einer Verbindung mit Remotedaten und den Zugriff auf diese Daten. Sie enthält alle erforderlichen Verbindungsinformationen für den Zugriff auf Remotedaten von einer OLE DB-Datenquelle. Auf `OPENROWSET` kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Abhängig von den Funktionen des OLE DB-Anbieters kann OPENROWSET auch als Zieltabelle einer INSERT-, UPDATE- oder DELETE-Anweisung dienen.  
   
  Die `OPENROWSET`-Funktion umfasst den `BULK`-Rowsetanbieter, mit dem Sie Daten direkt aus einer Datei lesen können, ohne sie in eine Zieltabelle zu laden. Auf diese Weise können Sie `OPENROWSET` in einer einfachen INSERT SELECT-Anweisung verwenden.  
   
@@ -68,9 +68,9 @@ FROM OPENROWSET
 |If|Then|  
 |--------|----------|  
 |Der Ausdruck ist auf NULL festgelegt.|`@Length` wird ignoriert, und der Wert im *Column_name* wird abgeschnitten, an der angegebenen `@Offset`.|  
-|`@Offset` is NULL|Hängt der Updatevorgang den Ausdruck am Ende des vorhandenen *Column_name* Wert und `@Length` wird ignoriert.|  
-|`@Offset` ist größer als die Länge des Werts|SQL Server gibt einen Fehler zurück.|  
-|`@Length` is NULL|Beim Updatevorgang werden alle Daten ab `@Offset` bis zum Ende des `column_name`-Werts entfernt.|  
+|`@Offset` ist NULL|Hängt der Updatevorgang den Ausdruck am Ende des vorhandenen *Column_name* Wert und `@Length` wird ignoriert.|  
+|`@Offset` ist größer als die Länge des &amp;amp;lt;legacyItalic&amp;amp;gt;column_name&amp;amp;lt;/legacyItalic&amp;amp;gt;-Werts|SQL Server gibt einen Fehler zurück.|  
+|`@Length` ist NULL|Beim Updatevorgang werden alle Daten ab `@Offset` bis zum Ende des `column_name`-Werts entfernt.|  
   
 > [!NOTE]
 >  Weder `@Offset` noch `@Length` darf eine negative Zahl sein.  
@@ -251,7 +251,7 @@ WHERE   DocumentID=@DocumentID
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Binäre Daten und Daten mit umfangreichen Werten in SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [SQL Server-Datenvorgänge in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

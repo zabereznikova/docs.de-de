@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e58d80896d11b4154c7197d4cdaf73a536fdd5e7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836284"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583547"
 ---
 # <a name="parameter-list-visual-basic"></a>Parameterliste (Visual Basic)
 Gibt die Parameter, die eine Prozedur erwartet wird, wenn sie aufgerufen wird. Mehrere Parameter werden durch Kommas getrennt. Folgendes ist die Syntax für einen Parameter.  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>Regeln  
   
--   **Klammern.** Wenn Sie eine Parameterliste angeben, müssen Sie ihn in Klammern setzen. Wenn keine Parameter vorhanden sind, können Sie weiterhin umschließendes Klammerpaar eine leere Liste. Dies verbessert die Lesbarkeit des Codes befassen, dass das Element eine Prozedur ist.  
+- **Klammern.** Wenn Sie eine Parameterliste angeben, müssen Sie ihn in Klammern setzen. Wenn keine Parameter vorhanden sind, können Sie weiterhin umschließendes Klammerpaar eine leere Liste. Dies verbessert die Lesbarkeit des Codes befassen, dass das Element eine Prozedur ist.  
   
--   **Optionale Parameter.** Bei Verwendung der `Optional` Modifizierer für Parameter, alle nachfolgenden Parameter in der Liste muss ebenfalls optional und werden deklariert, indem die `Optional` Modifizierer.  
+- **Optionale Parameter.** Bei Verwendung der `Optional` Modifizierer für Parameter, alle nachfolgenden Parameter in der Liste muss ebenfalls optional und werden deklariert, indem die `Optional` Modifizierer.  
   
      Jeder Deklaration optionale Parameter muss angeben, die `defaultvalue` Klausel.  
   
      Weitere Informationen finden Sie unter [optionale Parameter](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).  
   
--   **Parameterarrays.** Sie müssen angeben, `ByVal` für eine `ParamArray` Parameter.  
+- **Parameterarrays.** Sie müssen angeben, `ByVal` für eine `ParamArray` Parameter.  
   
      Sie können nicht beide verwenden `Optional` und `ParamArray` in derselben Parameterliste.  
   
      Weitere Informationen finden Sie unter [Parameterarrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
--   **Übergabemechanismus.** Ist der Standardmechanismus für jedes Argument `ByVal`, was bedeutet, dass die Prozedur kann nicht geändert werden die zugrunde liegende Variable-Element. Allerdings ist das Element einen Verweistyp handelt, kann die Prozedur den Inhalt oder die Member des zugrunde liegenden Objekts ändern, obwohl sie nicht ersetzen oder das Objekt selbst zuweisen.  
+- **Übergabemechanismus.** Ist der Standardmechanismus für jedes Argument `ByVal`, was bedeutet, dass die Prozedur kann nicht geändert werden die zugrunde liegende Variable-Element. Allerdings ist das Element einen Verweistyp handelt, kann die Prozedur den Inhalt oder die Member des zugrunde liegenden Objekts ändern, obwohl sie nicht ersetzen oder das Objekt selbst zuweisen.  
   
--   **Parameternamen.** Wenn der Datentyp des Parameters ein Array ist, führen Sie die `parametername` sofort mit Klammern. Weitere Informationen zu Parameternamen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+- **Parameternamen.** Wenn der Datentyp des Parameters ein Array ist, führen Sie die `parametername` sofort mit Klammern. Weitere Informationen zu Parameternamen finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine `Function` Prozedur, die zwei Parameter definiert.  

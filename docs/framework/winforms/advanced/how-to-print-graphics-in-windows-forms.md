@@ -9,21 +9,21 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 347c7064c199e953b496c9505f08c9e12c1ae670
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167205"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052816"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>Vorgehensweise: Drucken von Grafiken in Windows Forms
 In vielen Fällen möchten Sie Drucken von Grafiken in Ihrer Windows-basierten Anwendung. Die <xref:System.Drawing.Graphics> -Klasse stellt Methoden zum Zeichnen von Objekten auf einem Gerät, z. B. einem Bildschirm oder Drucker.  
   
 ### <a name="to-print-graphics"></a>Zum Drucken von Grafiken  
   
-1.  Hinzufügen einer <xref:System.Drawing.Printing.PrintDocument> Ihrem Formular.  
+1. Hinzufügen einer <xref:System.Drawing.Printing.PrintDocument> Ihrem Formular.  
   
-2.  In der <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignishandler der <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> Eigenschaft der <xref:System.Drawing.Printing.PrintPageEventArgs> Klasse an den Drucker auf welche Art von zu druckenden Grafiken.  
+2. In der <xref:System.Drawing.Printing.PrintDocument.PrintPage> -Ereignishandler der <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> Eigenschaft der <xref:System.Drawing.Printing.PrintPageEventArgs> Klasse an den Drucker auf welche Art von zu druckenden Grafiken.  
   
      Das folgende Codebeispiel zeigt einen Ereignishandler verwendet, um eine blaue Ellipse in ein umschließendes Rechteck zu erstellen. Das Rechteck hat den folgenden Speicherort und Dimensionen: beginnend bei 100, 150 mit einer Breite von 250 und eine Höhe von 250.  
   
@@ -52,7 +52,7 @@ In vielen Fällen möchten Sie Drucken von Grafiken in Ihrer Windows-basierten A
        }  
     ```  
   
-     (Visual C#- und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C# und visuelle C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -70,4 +70,4 @@ In vielen Fällen möchten Sie Drucken von Grafiken in Ihrer Windows-basierten A
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
+- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

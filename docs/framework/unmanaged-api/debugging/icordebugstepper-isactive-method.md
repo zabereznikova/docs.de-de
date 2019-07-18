@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4166b63e0bb0ae276c48abb961e381809cc9792
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9dde27f74ac59d033b6e25fba1dbb8e52c4b91af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471419"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760675"
 ---
 # <a name="icordebugstepperisactive-method"></a>ICorDebugStepper::IsActive-Methode
 Ruft einen Wert, der angibt, ob dieser ICorDebugStepper derzeit einen Schritt ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT IsActive (  
     [out] BOOL   *pbActive  
 );  

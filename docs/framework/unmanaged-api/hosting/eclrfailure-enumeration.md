@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19dacae05766566521f563d0d24980c01dfb7a0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144286"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769654"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure-Enumeration
 Beschreibt die Fehler, die für die ein Host Richtlinienaktionen festlegen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef enum {  
     FAIL_NonCriticalResource,  
     FAIL_CriticalResource,  
@@ -49,7 +49,7 @@ typedef enum {
 |`FAIL_FatalRuntime`|Die common Language Runtime (CLR) ist nicht mehr in der Lage, verwalteten Code im Prozess ausgeführt. Damit geben Aufrufe alle Hostingfunktionen HOST_E_CLRNOTAVAILABLE einen HRESULT-Wert zurück.|  
 |`FAIL_OrphanedLock`|Hat Fehler durch einen Thread eine Sperre nach dem Beenden einer <xref:System.AppDomain> Objekt. Der Host kann nicht dazu, die dazu führen, dass einen Thread abgebrochen festlegen.|  
 |`FAIL_StackOverflow`|Es ist ein Stapelüberlauf aufgetreten.|  
-|`FAIL_AccessViolation`|Es wurde versucht, das Lesen und Schreiben von geschütztem Arbeitsspeicher. Nicht unterstützt, die der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
+|`FAIL_AccessViolation`|Es wurde versucht, das Lesen und Schreiben von geschütztem Arbeitsspeicher. In .NET Framework 4 unterstützt nicht.|  
 |`FAIL_CodeContract`|Ein Code-Contract-Fehler aufgetreten. Finden Sie unter [Code Contracts](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Hinweise  

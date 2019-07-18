@@ -4,12 +4,12 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: ea5bedc9bd58ca0661524d7edf999e21037e0063
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "57558948"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960296"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
@@ -60,6 +60,10 @@ Dieses Beispiel veranschaulicht viele der Probleme, die mithilfe von Ausdrucksba
 **LINQ-Beispiele**
 
 Diese Beispielserie veranschaulicht viele der Funktionen von Language Integrated Query (sprachintegrierte Abfrage, LINQ). Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/linq/csharp) finden Sie im dotnet/samples-Repository auf GitHub.
+
+**Beispiel für einen verwalteten COM-Server**
+
+Das [COM-Server](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)-Beispiel veranschaulicht, wie ein verwalteter COM-Server erstellt wird und über eine registrierungsfreie COM-Instanz global registriert oder genutzt werden kann.
 
 **Beispiel zu Microsoft Office-PIAs**
 
@@ -112,6 +116,6 @@ Viele Themen enthalten Quellcode und Beispiele, die zum Anzeigen oder Herunterla
 1. Navigieren Sie in den Ordnern des Repositorys zum Speicherort des Beispiels. Der relative Pfad zum Speicherort des Beispiels wird in der Adressleiste Ihres Browsers angezeigt, wenn Sie dem Link zum Beispiel folgen.
 1. Zum Ausführen eines Beispiels stehen Ihnen verschiedene Optionen zur Verfügung:
    * Verwenden Sie die [dotnet-CLI-Tools](../core/tools/index.md): Navigieren Sie in einem Konsolenfenster zum Ordner des Beispiels, und verwenden Sie die dotnet-CLI-Tools.
-   * Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/) oder [Visual Studio für Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Öffnen > Projekt/Projektmappe** auswählen, zum Ordner des Beispielprojekts navigieren und die Projektdatei auswählen (*CSPROJ* oder *FSPROJ*).
+   * Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) oder [Visual Studio für Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Öffnen > Projekt/Projektmappe** auswählen, zum Ordner des Beispielprojekts navigieren und die Projektdatei auswählen (*CSPROJ* oder *FSPROJ*).
    * Verwenden Sie [Visual Studio Code](https://code.visualstudio.com/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Ordner öffnen** auswählen und dann den Projektordner des Beispiels auswählen.
    * Verwenden Sie eine andere IDE, die .NET Core-Projekte unterstützt.

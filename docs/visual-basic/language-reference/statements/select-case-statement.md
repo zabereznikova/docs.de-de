@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
 ms.openlocfilehash: f99db4f1dc224e5f75ee67ba94c3745f28438724
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783889"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case-Anweisung (Visual Basic)
 Führt eine von mehreren Anweisungsgruppen aus, abhängig vom Wert eines Ausdrucks.  

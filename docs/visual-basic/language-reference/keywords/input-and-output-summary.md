@@ -7,11 +7,11 @@ helpviewer_keywords:
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
 ms.openlocfilehash: 13013ee3dd9ee024cd3375003ed23c5ae4d620bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802504"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>Eingabe und Ausgabe: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  

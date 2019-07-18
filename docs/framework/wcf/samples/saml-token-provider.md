@@ -2,33 +2,33 @@
 title: SAML-Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 386e8f81d35d820809ee51355dfb0274be2278cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 19781b6b162034fb45587103d2a4af6684ab0fe1
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084224"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487507"
 ---
 # <a name="saml-token-provider"></a>SAML-Tokenanbieter
-Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client-SAML-Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) Dient zum Angeben von Anmeldeinformationen, um der Sicherheitsinfrastruktur. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. Außerdem Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:
+Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client-SAML-Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) Dient zum Angeben von Anmeldeinformationen, um der Sicherheitsinfrastruktur. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. WCF umfasst auch mit einem CardSpace-Sicherheitstoken-Anbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:
 
--   Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem diese Tokenanbieter nicht umgehen können.
+- Wenn Sie einen Speicher für Anmeldeinformationen verwenden, mit dem diese Tokenanbieter nicht umgehen können.
 
--   Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Clientframework die Anmeldeinformationen verwendet werden sollen.
+- Wenn geben Sie eigene benutzerdefinierte Mechanismen zur Transformation angibt, die Anmeldeinformationen vom Zeitpunkt der Benutzer gibt, die Informationen, wenn der WCF-Clientframework die Anmeldeinformationen verwendet werden sollen.
 
--   Wenn Sie ein benutzerdefiniertes Token erstellen.
+- Wenn Sie ein benutzerdefiniertes Token erstellen.
 
  Dieses Beispiel zeigt, wie Sie einen benutzerdefinierten Tokenanbieter erstellen, der einem SAML-Token von außerhalb des WCF-Client-Frameworks verwendet werden können.
 
  Kurz gesagt, veranschaulicht dieses Beispiel folgende Punkte:
 
--   Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.
+- Wie ein Client mit einem benutzerdefinierten Tokenanbieter konfiguriert werden kann.
 
--   Wie ein SAML-Token an die benutzerdefinierten Clientanmeldeinformationen übergeben werden kann.
+- Wie ein SAML-Token an die benutzerdefinierten Clientanmeldeinformationen übergeben werden kann.
 
--   Wie wird das SAML-Token für die WCF-Clientframework bereitgestellt.
+- Wie wird das SAML-Token für die WCF-Clientframework bereitgestellt.
 
--   Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.
+- Wie der Server über das X.509-Zertifikat des Servers vom Client authentifiziert wird.
 
  Der Dienst macht zwei Endpunkte zur Kommunikation mit dem Dienst verfügbar, die mit der Konfigurationsdatei "App.conf" definiert werden. Jeder Endpunkt besteht aus einer Adresse, einer Bindung und einem Vertrag. Die Bindung wird mit einer Standard-`wsFederationHttpBinding` konfiguriert, die Nachrichtensicherheit verwendet. Ein Endpunkt erwartet, dass der Client sich mit einem SAML-Token authentifiziert, das einen symmetrischen Prüfschlüssel verwendet, während der andere erwartet, dass sich der Client mit einem SAML-Token authentifiziert, das einen asymmetrischen Prüfschlüssel verwendet. Außerdem konfiguriert der Dienst das Dienstzertifikat mit `serviceCredentials`-Verhalten. Mit dem `serviceCredentials`-Verhalten können Sie ein Dienstzertifikat erstellen. Ein Dienstzertifikat wird von einem Client verwendet, um den Dienst zu authentifizieren und Nachrichtenschutz bereitzustellen. Die folgende Konfiguration verweist auf das Zertifikat localhost, das während des Beispielsetups installiert wird (in den Setupanweisungen am Ende dieses Themas beschrieben). Das `serviceCredentials`-Verhalten ermöglicht es Ihnen außerdem, Zertifikate zu konfigurieren, die die Befugnis zum signieren von SAML-Token haben. Die folgende Konfiguration verweist auf das im Beispiel installierte Zertifikat "Alice".
 
@@ -113,7 +113,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
  Die folgenden Schritte zeigen, wie Sie die Entwicklung von eines benutzerdefinierten SAML-tokenanbieters und seine Integration mit WCF:-Framework zur Sicherheit:
 
-1.  Schreiben Sie einen benutzerdefinierten SAML-Tokenanbieter.
+1. Schreiben Sie einen benutzerdefinierten SAML-Tokenanbieter.
 
      Im Beispiel wird ein benutzerdefinierter SAML-Tokenanbieter implementiert, der auf der Basis einer SAML-Assertion, die zum Zeitpunkt der Erstellung angegeben wurde, ein Sicherheitstoken zurückgibt.
 
@@ -156,7 +156,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     }
     ```
 
-2.  Schreiben Sie den benutzerdefiniertem Sicherheitstoken-Manager.
+2. Schreiben Sie den benutzerdefiniertem Sicherheitstoken-Manager.
 
      Die <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Klasse dient zur Erstellung von <xref:System.IdentityModel.Selectors.SecurityTokenProvider> für eine bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, die in der `CreateSecurityTokenProvider`-Methode übergeben wird. Ein Sicherheitstoken-Manager dient außerdem zum Erstellen von Tokenauthentifizierern und eines Token-Serialisierungsprogramms. Diese Vorgänge werden jedoch in diesem Beispiel nicht behandelt. In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken-Manager aus der Klasse <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> und setzt die Methode `CreateSecurityTokenProvider` außer Kraft, um den benutzerdefinierten SAML-Tokenanbieter zurückzugeben, wenn die übergebenen Sicherheitstokenanforderungen angeben, dass das SAML-Token angefordert wird. Wenn die Clientanmeldeinformationsklasse (siehe Schritt 3) keine Assertion angegeben hat, erstellt der Sicherheitstoken-Manager eine entsprechende Instanz.
 
@@ -228,7 +228,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     }
     ```
 
-3.  Schreiben Sie benutzerdefinierte Clientanmeldeinformationen.
+3. Schreiben Sie benutzerdefinierte Clientanmeldeinformationen.
 
      Die Klasse der Clientanmeldeinformationen stellt die Anmeldeinformationen dar, die für den Clientproxy konfiguriert werden, und erstellt einen Sicherheitstoken-Manager, mit dem Tokenauthentifizierer, Tokenanbieter und Token-Serialisierungsprogramme abgerufen werden können.
 
@@ -271,7 +271,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     }
     ```
 
-4.  Konfigurieren Sie den Client für die Verwendung der benutzerdefinierten Clientanmeldeinformationen.
+4. Konfigurieren Sie den Client für die Verwendung der benutzerdefinierten Clientanmeldeinformationen.
 
      Im Beispiel wird die Standardklasse für die Clientanmeldeinformationen gelöscht und die neue Klasse für Clientanmeldeinformationen angegeben, sodass der Client die benutzerdefinierten Clientanmeldeinformationen verwenden kann.
 
@@ -303,7 +303,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
  Nachfolgend erhalten Sie einen kurzen Überblick über die verschiedenen Abschnitte der Batchdateien, damit Sie sie so ändern können, dass sie in der entsprechenden Konfiguration ausgeführt werden.
 
--   Erstellen des Serverzertifikats
+- Erstellen des Serverzertifikats
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Serverzertifikat erstellt. Die Variable `%SERVER_NAME%` gibt den Servernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Servernamen an. Der Standardwert in dieser Batchdatei lautet localhost.
 
@@ -319,7 +319,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   Installieren des Serverzertifikats im Speicher für vertrauenswürdige Zertifikate des Clients:
+- Installieren des Serverzertifikats im Speicher für vertrauenswürdige Zertifikate des Clients:
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Clientzertifikatspeichers mit dem Serverzertifikat nicht erforderlich.
 
@@ -327,7 +327,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   Erstellen des Herausgeberzertifikats.
+- Erstellen des Herausgeberzertifikats.
 
      Mit den folgenden Zeilen aus der Batchdatei "Setup.bat" wird das zu verwendende Herausgeberzertifikat erstellt. Die Variable `%USER_NAME%` gibt den Herausgebernamen an. Ändern Sie diese Variable, und geben Sie Ihren eigenen Herausgebernamen an. Der Standardwert in dieser Batchdatei lautet "Alice".
 
@@ -343,7 +343,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   Installieren des Herausgeberzertifikats im Speicher für vertrauenswürdige Zertifikate des Servers.
+- Installieren des Herausgeberzertifikats im Speicher für vertrauenswürdige Zertifikate des Servers.
 
      Mit den folgenden Zeilen in der Batchdatei Setup.bat wird das Serverzertifikat in den Clientspeicher für vertrauenswürdige Personen kopiert. Dieser Schritt ist erforderlich, da von "Makecert.exe" generierte Zertifikate nicht implizit vom Clientsystem als vertrauenswürdig eingestuft werden. Wenn Sie bereits über ein Zertifikat verfügen, das von einem vertrauenswürdigen Clientstammzertifikat stammt (z. B. ein von Microsoft ausgegebenes Zertifikat), ist dieser Schritt zum Füllen des Serverzertifikatspeichers mit dem Herausgeberzertifikat nicht erforderlich.
 
@@ -353,43 +353,43 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
 
 #### <a name="to-set-up-and-build-the-sample"></a>So richten Sie das Beispiel ein und erstellen es
 
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 > [!NOTE]
 >  Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei Svcutil.exe verwenden, müssen Sie den Endpunktnamen in der Clientkonfiguration so ändern, dass er mit dem Clientcode übereinstimmt.
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus
 
-1.  Führen Sie Setup.bat aus dem beispielinstallationsordner eine Visual Studio 2012-Eingabeaufforderung mit Administratorrechten ausgeführt. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
+1. Führen Sie Setup.bat aus dem beispielinstallationsordner eine Visual Studio 2012-Eingabeaufforderung mit Administratorrechten ausgeführt. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
 
     > [!NOTE]
     >  Die Batchdatei "Setup.bat" wird aus einer Visual Studio 2012-Eingabeaufforderung ausgeführt werden soll. Die PATH-Umgebungsvariable festgelegt in der Visual Studio 2012-Eingabeaufforderung verweist auf das Verzeichnis mit ausführbaren Dateien, die durch das Skript Setup.bat erforderlich sind.  
   
-2.  Starten Sie Service.exe aus dem Ordner \service\bin.  
+2. Starten Sie Service.exe aus dem Ordner \service\bin.  
   
-3.  Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
+3. Starten Sie Client.exe aus dem Ordner \client\bin. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-4.  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
-1.  Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.  
+1. Erstellen Sie auf dem Dienstcomputer ein Verzeichnis für die Dienstbinärdateien.  
   
-2.  Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
+2. Kopieren Sie die Dienstprogrammdateien in das Dienstverzeichnis auf dem Dienstcomputer. Kopieren Sie außerdem die Dateien Setup.bat und Cleanup.bat auf den Dienstcomputer.  
   
-3.  Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Die Datei Service.exe.config muss so aktualisiert werden, dass sie diesem neuen Zertifikatsnamen entspricht. Sie können das Serverzertifikat erstellen, indem Sie die Batchdatei Setup.bat ändern. Beachten Sie, dass die Datei "Setup.bat" im Developer-Eingabeaufforderung für Visual Studio-Fenster mit Administratorrechten geöffnet ausgeführt werden muss. Sie müssen die Variable `%SERVER_NAME%` auf den vollqualifizierten Hostnamen des Computers festlegen, der als Host für den Dienst dienen soll.  
+3. Sie benötigen ein Serverzertifikat mit dem Antragstellernamen, das den vollqualifizierten Domänennamen des Computers enthält. Die Datei Service.exe.config muss so aktualisiert werden, dass sie diesem neuen Zertifikatsnamen entspricht. Sie können das Serverzertifikat erstellen, indem Sie die Batchdatei Setup.bat ändern. Beachten Sie, dass die Datei "Setup.bat" im Developer-Eingabeaufforderung für Visual Studio-Fenster mit Administratorrechten geöffnet ausgeführt werden muss. Sie müssen die Variable `%SERVER_NAME%` auf den vollqualifizierten Hostnamen des Computers festlegen, der als Host für den Dienst dienen soll.  
   
-4.  Kopieren Sie das Serverzertifikat in den Speicher CurrentUser – TrustedPeople des Clients. Dieser Schritt ist nicht notwendig, wenn das Serverzertifikat von einem Aussteller stammt, der vom Client als vertrauenswürdig eingestuft wurde.  
+4. Kopieren Sie das Serverzertifikat in den Speicher CurrentUser – TrustedPeople des Clients. Dieser Schritt ist nicht notwendig, wenn das Serverzertifikat von einem Aussteller stammt, der vom Client als vertrauenswürdig eingestuft wurde.  
   
-5.  Ändern Sie in der Datei Service.exe.config auf dem Dienstcomputer den Wert der Basisadresse, und geben Sie anstelle von localhost einen vollqualifizierten Computernamen an.  
+5. Ändern Sie in der Datei Service.exe.config auf dem Dienstcomputer den Wert der Basisadresse, und geben Sie anstelle von localhost einen vollqualifizierten Computernamen an.  
   
-6.  Führen Sie auf dem Dienstcomputer Service.exe an einer Eingabeaufforderung aus.  
+6. Führen Sie auf dem Dienstcomputer Service.exe an einer Eingabeaufforderung aus.  
   
-7.  Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.  
+7. Kopieren Sie die Clientprogrammdateien aus dem Ordner \client\bin\ (unterhalb des sprachspezifischen Ordners) auf den Clientcomputer.  
   
-8.  Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.  
+8. Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt.  
   
 9. Starten Sie auf dem Clientcomputer `Client.exe` in einem Eingabeaufforderungsfenster.  
   
@@ -397,4 +397,4 @@ Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Cli
   
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
-1.  Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
+1. Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  

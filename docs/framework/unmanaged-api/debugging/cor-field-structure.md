@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 691041632312bf8ac7c82a11724dcd725e14a420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2efe159eaa8b49d4d3825e9737593d0a12fc4d4c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231057"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740735"
 ---
 # <a name="corfield-structure"></a>COR_FIELD-Struktur
 Bietet Informationen zu einem Feld in einem Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 typedef struct COR_FIELD{  
     mdFieldDef token;  
     ULONG32 offset;  

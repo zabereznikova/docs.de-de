@@ -2,12 +2,12 @@
 title: Beispiel für das Verketten von Abfragen (C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: b77de6b1e5bd81ac70165640aecf0d4ce89be03d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8685db7461a1ce97c7a9c0045ed842fa4ac1a1f6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677347"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486193"
 ---
 # <a name="chaining-queries-example-c"></a>Beispiel für das Verketten von Abfragen (C#)
 Dieses Beispiel baut auf dem vorherigen Beispiel auf und zeigt, was passiert, wenn Sie zwei Abfragen miteinander verketten, die beide mit verzögerter Ausführung und verzögerter Auswertung arbeiten.  
@@ -84,8 +84,8 @@ Main: str >GHI!!!<
   
  Im nächsten Thema dieses Lernprogramms wird die Zwischenmaterialisierung erläutert:  
   
--   [Zwischenmaterialisierung (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [Zwischenmaterialisierung (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

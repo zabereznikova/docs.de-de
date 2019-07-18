@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 970c69b36eecd110dd81b6a3700fbb0a7eea2834
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821374"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424034"
 ---
 # <a name="date-data-type-visual-basic"></a>Date-Datentyp (Visual Basic)
 Enthält IEEE-64-Bit(8-Byte)-Werte, die Datumsangaben im Bereich vom 1. Januar des Jahres 0001 bis zum 31. Dezember des Jahres 9999 und Uhrzeiten von 00:00:00 Uhr (Mitternacht) bis 23:59:59.9999999 Uhr darstellen. Jedes Inkrement stellt 100 Nanosekunden verstrichener Zeit seit Beginn des 1. Januar des Jahres 1 im gregorianischen Kalender dar. Der maximale Wert stellt 100 Nanosekunden vor Beginn des 1. Januar des Jahres 10000 dar.  
@@ -35,7 +35,7 @@ Enthält IEEE-64-Bit(8-Byte)-Werte, die Datumsangaben im Bereich vom 1. Januar 
 ## <a name="format-requirements"></a>Formatanforderungen  
  Sie müssen einen `Date`-Literal zwischen Nummernzeichen (`# #`) einschließen. Sie müssen den Datumswert im Format M/T/JJJJ angeben, z. B. `#5/31/1993#`, oder JJJJ-MM-TT, z. B. `#1993-5-31#`. Wenn Sie das Jahr zuerst angeben, können Sie Schrägstriche verwenden.  Dies gilt unabhängig vom Gebietsschema und den Formateinstellungen für Datum und Uhrzeit Ihres Computers.  
   
- Der Grund für diese Einschränkung ist, dass sich die Bedeutung des Codes nicht je nach dem Gebietsschema, in dem die Anwendung ausgeführt wird, ändern soll. Angenommen, Sie möchten ein `Date`-Literal von `#3/4/1998#` als vordefinierten Code aufnehmen und die Bedeutung 4. März 1998 festlegen. In einem Gebietsschema, das MM/TT/JJJJ verwendet, wird 3/4/1998 wie gewünscht kompiliert. Aber nehmen wir an, dass Sie die Anwendung in vielen Ländern bereitstellen. In einem Gebietsschema, das TT/MM/JJJJ verwendet, würde das als vordefinierter Code aufgenommene Literal als 3. April 1998 kompiliert. In einem Gebietsschema, das JJJJ/MM/TT verwendet, wäre das Literal ungültig (1998. April 0003) und würde einen Compilerfehler verursachen.  
+ Der Grund für diese Einschränkung ist, dass sich die Bedeutung des Codes nicht je nach dem Gebietsschema, in dem die Anwendung ausgeführt wird, ändern soll. Angenommen, Sie möchten ein `Date`-Literal von `#3/4/1998#` als vordefinierten Code aufnehmen und die Bedeutung 4. März 1998 festlegen. In einem Gebietsschema, das MM/TT/JJJJ verwendet, wird 3/4/1998 wie gewünscht kompiliert. Aber nehmen wir an, dass Sie Ihre Anwendung in vielen Ländern/Regionen bereitstellen. In einem Gebietsschema, das TT/MM/JJJJ verwendet, würde das als vordefinierter Code aufgenommene Literal als 3. April 1998 kompiliert. In einem Gebietsschema, das JJJJ/MM/TT verwendet, wäre das Literal ungültig (1998. April 0003) und würde einen Compilerfehler verursachen.  
   
 ## <a name="workarounds"></a>Problemumgehung  
  Um ein `Date`-Literal in das Format Ihres Gebietsschemas oder in ein benutzerdefiniertes Format zu konvertieren, müssen Sie das Literal für die <xref:Microsoft.VisualBasic.Strings.Format%2A>-Funktion bereitstellen und entweder ein vordefiniertes oder ein benutzerdefiniertes Datumsformat angeben. Dies wird im folgenden Beispiel veranschaulicht:  
@@ -61,11 +61,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Interop-Überlegungen.** Wenn Sie Komponenten anbinden, die nicht für .NET Framework geschrieben wurden (z. B. Automatisierungs- oder COM-Objekte), müssen Sie beachten, dass Datums-/Uhrzeittypen in anderen Umgebungen nicht zum `Date`-Typ von Visual Basic kompatibel sind. Wenn Sie ein Datums-/Uhrzeitargument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic-Code als `Double` und nicht als `Date`, und verwenden Sie die Konvertierungsmethoden <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> und <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
+- **Interop-Überlegungen.** Wenn Sie Komponenten anbinden, die nicht für .NET Framework geschrieben wurden (z. B. Automatisierungs- oder COM-Objekte), müssen Sie beachten, dass Datums-/Uhrzeittypen in anderen Umgebungen nicht zum `Date`-Typ von Visual Basic kompatibel sind. Wenn Sie ein Datums-/Uhrzeitargument an eine solche Komponente übergeben, deklarieren Sie es im neuen Visual Basic-Code als `Double` und nicht als `Date`, und verwenden Sie die Konvertierungsmethoden <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> und <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Typzeichen.** `Date` hat kein literal-Typzeichen oder Bezeichner-Typzeichen. Der Compiler behandelt jedoch Literale, die in Nummernzeichen (`# #`) eingeschlossen sind, als `Date`.  
+- **Typzeichen.** `Date` hat kein literal-Typzeichen oder Bezeichner-Typzeichen. Der Compiler behandelt jedoch Literale, die in Nummernzeichen (`# #`) eingeschlossen sind, als `Date`.  
   
--   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.DateTime?displayProperty=nameWithType>-Struktur.  
+- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.DateTime?displayProperty=nameWithType>-Struktur.  
   
 ## <a name="example"></a>Beispiel  
  Eine Variable oder Konstante des `Date`-Datentyps enthält das Datum und die Uhrzeit. Dies wird anhand des folgenden Beispiels veranschaulicht.  

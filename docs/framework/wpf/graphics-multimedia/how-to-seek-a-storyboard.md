@@ -9,11 +9,11 @@ helpviewer_keywords:
 - seeking Storyboards [WPF]
 ms.assetid: 887bb39a-0c2a-4ae8-956d-1d9f6f8ebbfc
 ms.openlocfilehash: a57272c17a5bc6f5baaa21fb77233fc5693d1914
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651219"
 ---
 # <a name="how-to-seek-a-storyboard"></a>Vorgehensweise: Durchsuchen eines Storyboards
 Das folgende Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> Methode eine <xref:System.Windows.Media.Animation.Storyboard> springen zu einer beliebigen Position in einer Storyboard-Animation.  

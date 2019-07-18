@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
 ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910532"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Vorgehensweise: Suchen eines TreeViewItem-Elements in einem TreeView-Objekt
 Die <xref:System.Windows.Controls.TreeView> Steuerelement bietet eine bequeme Möglichkeit zum Anzeigen hierarchischer Daten. Wenn Ihre <xref:System.Windows.Controls.TreeView> an eine Datenquelle gebunden ist die <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Eigenschaft bietet eine bequeme Möglichkeit, schnell auf ausgewählten Datenobjekts abzurufen. Es empfiehlt sich in der Regel mit der zugrunde liegende Datenobjekt funktioniert, aber manchmal müssen u. u. zur programmgesteuerten Bearbeitung der Daten mit <xref:System.Windows.Controls.TreeViewItem>. Angenommen, Sie müssen möglicherweise programmgesteuert erweitern die <xref:System.Windows.Controls.TreeViewItem>, oder wählen Sie ein anderes Element in der <xref:System.Windows.Controls.TreeView>.  
@@ -43,4 +43,4 @@ Die <xref:System.Windows.Controls.TreeView> Steuerelement bietet eine bequeme M�
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verbessern der Leistung eines TreeView-Objekts](how-to-improve-the-performance-of-a-treeview.md)
+- [Verbessern der Leistung von TreeView](how-to-improve-the-performance-of-a-treeview.md)

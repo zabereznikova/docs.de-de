@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771724"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo-Schnittstelle
 Bietet Methoden, die Informationen zu einer bestimmten common Language Runtime (CLR), einschließlich Version, Verzeichnis und Ladestatus zurückgeben. Diese Schnittstelle bietet auch Common Language Runtime-spezifische Funktionen, ohne die persistenzwarteschlange. Es enthält die Common Language Runtime-Relative [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) -Methode, die Laufzeit modulspezifischen [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) -Methode, und die Common Language Runtime bereitgestellten Schnittstellen durch die [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)Methode.  
@@ -54,5 +54,5 @@ Bietet Methoden, die Informationen zu einer bestimmten common Language Runtime (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

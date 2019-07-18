@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5760287e01257e3f0fc99a18ba20f2f2a1b2b3af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d3aa76b88d89e83c400b3f372d846c1a31add255
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083360"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761482"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>ICorDebugManagedCallback::LoadAssembly-Methode
 Benachrichtigt den Debugger, dass es sich bei eine Assembly der common Language Runtime (CLR) erfolgreich geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT LoadAssembly (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugAssembly  *pAssembly  

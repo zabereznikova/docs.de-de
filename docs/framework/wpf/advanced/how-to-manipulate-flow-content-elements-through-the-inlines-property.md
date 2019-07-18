@@ -10,27 +10,27 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 92f23fbf44464eb7658f3382f873f3db63f7cb26
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186068"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614583"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Vorgehensweise: Bearbeiten von fortlaufenden Inhaltselementen mit der Inlines-Eigenschaft
 Diese Beispiele veranschaulichen einige der häufigeren Vorgänge, die für Inlineinhaltselemente ausgeführt werden können (und Container dieser Elemente, wie z. B. <xref:System.Windows.Controls.TextBlock>) über die **Inlines** Eigenschaft. Diese Eigenschaft wird verwendet, um das Hinzufügen und Entfernen von Elementen <xref:System.Windows.Documents.InlineCollection>. Fortlaufende Inhaltselemente, ein **Inlines** -Eigenschaft enthalten:  
   
--   <xref:System.Windows.Documents.Bold>  
+- <xref:System.Windows.Documents.Bold>  
   
--   <xref:System.Windows.Documents.Hyperlink>  
+- <xref:System.Windows.Documents.Hyperlink>  
   
--   <xref:System.Windows.Documents.Italic>  
+- <xref:System.Windows.Documents.Italic>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Span>  
+- <xref:System.Windows.Documents.Span>  
   
--   <xref:System.Windows.Documents.Underline>  
+- <xref:System.Windows.Documents.Underline>  
   
  In diesen Beispielen auftreten, verwenden Sie <xref:System.Windows.Documents.Span> wie der Flow Content-Element, aber diese Verfahren gelten für alle Elemente oder Steuerelemente, die Hosten einer <xref:System.Windows.Documents.InlineCollection> Auflistung.  
   

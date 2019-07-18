@@ -6,11 +6,11 @@ helpviewer_keywords:
 - graphics [WPF], GuidelineSet property
 ms.assetid: 45f3e0b4-8820-45a7-b865-b8ea5b17b0c8
 ms.openlocfilehash: 134236c5beca806b747d45f20764cc82ddd8a4e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699054"
 ---
 # <a name="how-to-apply-a-guidelineset-to-a-drawing"></a>Vorgehensweise: Anwenden eines Führungsliniensatzes auf eine Zeichnung
 Dieses Beispiel veranschaulicht das Anwenden einer <xref:System.Windows.Media.GuidelineSet> auf eine <xref:System.Windows.Media.DrawingGroup>.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 1e2bdce0-afe8-4507-9b18-f33de43de25a
 ms.openlocfilehash: ad64382b871bae9114a1e63257de3f8595376923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696189"
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Vorgehensweise: Verwenden von Triggern zum Formatieren ausgewählter Elemente in einem ListView-Objekt
 In diesem Beispiel wird gezeigt, wie definiert <xref:System.Windows.Style.Triggers%2A> für eine <xref:System.Windows.Controls.ListViewItem> Steuerelement, damit Wenn ein Eigenschaftswert, der eine <xref:System.Windows.Controls.ListViewItem> Änderungen, die <xref:System.Windows.Style> von der <xref:System.Windows.Controls.ListViewItem> Änderungen als Reaktion.  
@@ -34,6 +34,6 @@ In diesem Beispiel wird gezeigt, wie definiert <xref:System.Windows.Style.Trigge
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Gewusst wie-Themen](listview-how-to-topics.md)
+- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
 - [Übersicht über ListView](listview-overview.md)
 - [Übersicht über GridView](gridview-overview.md)

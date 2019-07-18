@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 98940c075a01de2ebe061b6dff53917247fc5193
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197710"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489914"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Ermittelt, ob ein bestimmter Zeichen-`String` mit einem angegebenen Muster übereinstimmt.  
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  Legt fest, dass das Ergebnis von LIKE negiert werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn die `string` mit dem Muster übereinstimmt, andernfalls `false`.  
+ `true`, wenn `string` mit dem Muster übereinstimmt, andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator werden im Wesentlichen die gleiche Weise wie Ausdrücke ausgewertet, die auf Gleichheit als Filterkriterium verwenden. Allerdings [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator verwenden können sowohl Literale als auch Platzhalterzeichen enthalten.  
@@ -49,7 +49,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > [!NOTE]
 >  Der LIKE-Operator und die ESCAPE-Klausel von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] können nicht auf `System.DateTime`-Werte oder `System.Guid`-Werte angewendet werden.  
   
- LIKE unterstützt Mustervergleiche im ASCII- und Unicode-Format. Wenn alle Parameter ASCII-Zeichen sind, wird ein ASCII-Mustervergleich ausgeführt. Wenn eines oder mehrere der Argumente von einem Unicode-Datentyp sind, werden alle Argumente in Unicode konvertiert, und ein Unicode-Mustervergleich wird durchgeführt. Bei der Verwendung von Unicode mit dem LIKE-Operator werden nachfolgende Leerzeichen berücksichtigt. Wird nicht der Typ Unicode verwendet, werden nachfolgende Leerzeichen ignoriert. Syntax für die Musterzeichenfolge des [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist identisch mit der [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
+ LIKE unterstützt Mustervergleiche im ASCII- und Unicode-Format. Wenn alle Parameter ASCII-Zeichen sind, wird ein ASCII-Mustervergleich ausgeführt. Wenn eines oder mehrere der Argumente von einem Unicode-Datentyp sind, werden alle Argumente in Unicode konvertiert, und ein Unicode-Mustervergleich wird durchgeführt. Bei der Verwendung von Unicode mit dem LIKE-Operator werden nachfolgende Leerzeichen berücksichtigt. Wird nicht der Typ Unicode verwendet, werden nachfolgende Leerzeichen ignoriert. Syntax für die Musterzeichenfolge des [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist identisch mit der Transact-SQL.  
   
  Zu einem Muster können normale Zeichen und Platzhalter gehören. Bei einem Mustervergleich müssen normale Zeichen exakt mit den im `string` angegebenen Zeichen übereinstimmen. Platzhalterzeichen können mit beliebigen Teilen der Zeichenfolge übereinstimmen. Wenn der LIKE-Operator mit Platzhalterzeichen verwendet wird, ist er flexibler als die Zeichenfolgen-Vergleichsoperatoren „=“ und „!=“.  
   
@@ -68,9 +68,9 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>Beispiel  
  Die folgenden beiden [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfragen verwenden die LIKE und ESCAPE-Operatoren, um festzustellen, ob eine bestimmte Zeichenfolge mit einem angegebenes Muster übereinstimmt. Die erste Abfrage sucht die `Name` , beginnt mit den Zeichen `Down_`. In dieser Abfrage wird die ESCAPE-Option verwendet, da der Unterstrich (`_`) ein Platzhalterzeichen ist. Ohne Angeben der ESCAPE`Name`-Option würde die Abfrage alle `Down`-Werte zurückgeben, die mit dem Wort  beginnen, gefolgt von einem einzelnen Zeichen, das kein Unterstrich ist. Die Abfragen basieren auf dem AdventureWorks Sales-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1.  Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die PrimitiveType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:  
+2. Übergeben Sie die folgende Abfrage als Argument an die `ExecutePrimitiveTypeQuery` -Methode:  
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   

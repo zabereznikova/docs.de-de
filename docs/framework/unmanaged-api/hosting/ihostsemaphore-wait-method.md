@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d9fcbca92b1615679be57fb4c9b872339fef8a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c1d578fa0f8e80ae2c8fbada9e383bcd849ff2f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118214"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753609"
 ---
 # <a name="ihostsemaphorewait-method"></a>IHostSemaphore::Wait-Methode
 Bewirkt, dass die aktuelle [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md) Instanz warten, bis sie einen Besitzer hat oder die angegebene Zeitspanne verstrichen ist.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT Wait (  
     [in] DWORD dwMilliseconds,  
     [in] DWORD option  

@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029488"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65880565"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    Sie haben gerade eine Liste von Zeichenfolgen erstellt, dieser Liste drei Namen hinzugefügt und die Namen in GROSSBUCHSTABEN ausgegeben. Sie verwenden Konzepte, die Sie in früheren Tutorials kennengelernt haben, um die Liste zu durchlaufen.
+    Sie haben eine Liste mit Zeichenfolgen erstellt, dieser Liste drei Namen hinzugefügt und die Namen in Großbuchstaben ausgegeben. Sie verwenden Konzepte, die Sie in früheren Tutorials kennengelernt haben, um die Liste zu durchlaufen.
 
 
     Im Code zum Anzeigen von Namen wird das Feature [Zeichenfolgeninterpolation](../../language-reference/tokens/interpolated.md) genutzt. Wenn Sie einem `string` ein `$`-Zeichen voranstellen, können Sie C#-Code in die Zeichenfolgendeklaration einbetten. Der Wert, den dieser C#-Code generiert, ist eine Zeichenfolge, durch die der C#-Code ersetzt wird. In diesem Beispiel wird `{name.ToUpper()}` mit dem jeweiligen in Großbuchstaben konvertierten Namen ersetzt, da Sie die <xref:System.String.ToUpper%2A?displayProperty=nameWithType>-Methode aufgerufen haben.
@@ -56,7 +56,7 @@ items:
     Die Sammlung, die Sie erstellt haben, nutzt den <xref:System.Collections.Generic.List%601>-Typ. Dieser Typ speichert Elementsequenzen. Sie geben den Typ der Elemente zwischen den spitzen Klammern an.
 
 
-    Ein wichtiger Aspekt dieses <xref:System.Collections.Generic.List%601>-Typs ist, dass er wachsen oder schrumpfen kann, sodass Sie Elemente hinzufügen oder entfernen können. Fügen Sie den folgenden Code unter dem Code hinzu, den Sie bereits geschrieben haben:
+    Ein wichtiger Aspekt dieses <xref:System.Collections.Generic.List%601>-Typs ist, dass er wachsen oder schrumpfen kann, sodass Sie Elemente hinzufügen oder entfernen können. Sie sehen die Ergebnisse, indem Sie den Inhalt ändern, nachdem Sie ihn angezeigt haben. Fügen Sie den folgenden Code unter dem bereits geschriebenen Code hinzu (unter der Schleife, die den Inhalt ausgibt):
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    Sie haben am Ende der Liste zwei weitere Namen hinzugefügt. Sie haben auch einen entfernt.
+    Sie haben am Ende der Liste zwei weitere Namen hinzugefügt. Sie haben auch einen entfernt. In der Ausgabe dieses Codeblocks wird der Anfangsinhalt angezeigt, und anschließend wird eine neue Zeile und der neue Inhalt ausgegeben.
 
 
     <xref:System.Collections.Generic.List%601> ermöglicht Ihnen auch, mithilfe des **Indexes** auf einzelne Elemente zu verweisen. Sie greifen mit den Zeichen `[` und `]` auf Elemente zu. Fügen Sie den folgenden Code unter dem Code hinzu, den Sie bereits geschrieben haben, und probieren Sie es aus:
@@ -152,7 +152,7 @@ items:
 - title: Listen mit anderen Typen
   durationInMinutes: 5
   content: >
-    Sie haben bisher den `string`-Typ in Listen verwendet. Nun erstellen wir eine <xref:System.Collections.Generic.List%601> mithilfe eines anderen Typs. Zunächst erstellen wir einen Satz von Zahlen. Löschen Sie den bisher geschriebenen Code, und ersetzen Sie ihn mit diesem:
+    Sie haben bisher den `string`-Typ in Listen verwendet. Nun erstellen wir eine <xref:System.Collections.Generic.List%601> mithilfe eines anderen Typs. Zunächst erstellen wir einen Satz von Zahlen. Löschen Sie den bisher geschriebenen Code, und ersetzen Sie ihn durch den folgenden Code:
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    Damit wird eine Liste von Ganzzahlen erstellt und für die ersten beiden Ganzzahlen der Wert 1 festgelegt. Dies sind die ersten beiden Werte einer *Fibonacci-Sequenz* – einer Sequenz von Zahlen. Jede nächste Fibonacci-Zahl wird ermittelt, indem die Summe der beiden vorherigen Zahlen gebildet wird. Fügen Sie diesen Code hinzu:
+    Damit wird eine Liste von Ganzzahlen erstellt und für die ersten beiden Ganzzahlen der Wert 1 festgelegt. Die *Fibonacci-Folge* (Folge von Zahlen) beginnt mit zwei Einsen. Jede nächste Fibonacci-Zahl wird ermittelt, indem die Summe der beiden vorherigen Zahlen gebildet wird. Fügen Sie diesen Code hinzu:
 
 
     ```csharp
@@ -230,7 +230,7 @@ items:
     Sie haben das interaktive Listentutorial abgeschlossen. Das ist die finale Einführung in das interaktive C#-Tutorial. Sie können die [.NET-Website](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) besuchen, um das .NET Core SDK herunterzuladen, ein Projekt auf Ihrem Computer zu erstellen und mit dem Programmieren fortzufahren. Über den Schritt „Weiterlernen“ gelangen Sie wieder zu diesen Tutorials, um Projekte auf Ihrem Computer zu erstellen.
 
 
-    Weitere Informationen zu [.NET-Sammlungen](../../../standard/collections/index.md) finden Sie auch unter folgenden Themen:
+    Weitere Informationen zu [.NET-Sammlungen](../../../standard/collections/index.md) finden Sie in den folgenden Artikeln:
 
     - [Auswählen eines Auflistungstyps](../../../standard/collections/selecting-a-collection-class.md)
 

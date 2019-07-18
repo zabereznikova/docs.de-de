@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf23a8f1893aa0f992d554d3c7533c3dc42f4e95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150981"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778672"
 ---
 # <a name="getcachepath-function"></a>GetCachePath-Funktion
 Ruft den Pfad auf der zwischengespeicherte Assembly, die mit den angegebenen Flags.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetCachePath (  
     [in]      ASM_CACHE_FLAGS  dwCacheFlags,  
     [in]      LPWSTR           pwzCachePath,  
@@ -58,4 +58,4 @@ HRESULT GetCachePath (
 ## <a name="see-also"></a>Siehe auch
 
 - [ASM_CACHE_FLAGS-Enumeration](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
-- [Fusion – Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

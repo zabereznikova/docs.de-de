@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863687"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Vorgehensweise: Deklarieren Sie eine Eigenschaft mit gemischten Zugriffsebenen (Visual Basic)
 Wenn Sie möchten die `Get` und `Set` Prozeduren für eine Eigenschaft, um unterschiedliche Zugriffsebenen haben, können Sie die weniger restriktive Ebene in der `Property` -Anweisung und die weniger einschränkende Zugriffsebene in einem der `Get` oder `Set` -Anweisung. Verwenden Sie gemischten Zugriffsebenen auf eine Eigenschaft, wenn Sie bestimmte Teile des Codes, um den Wert der Eigenschaft abrufen zu können, und bestimmte andere Teile des Codes, um den Wert ändern zu können möchten.  
@@ -24,11 +24,11 @@ Wenn Sie möchten die `Get` und `Set` Prozeduren für eine Eigenschaft, um unter
   
 ### <a name="to-declare-a-property-with-mixed-access-levels"></a>Um eine Eigenschaft mit gemischten Zugriffsebenen zu deklarieren.  
   
-1.  Deklarieren Sie die Eigenschaft auf die übliche Weise, und geben Sie die weniger restriktive Zugriffsebene (z. B. `Public`) in der `Property` Anweisung.  
+1. Deklarieren Sie die Eigenschaft auf die übliche Weise, und geben Sie die weniger restriktive Zugriffsebene (z. B. `Public`) in der `Property` Anweisung.  
   
-2.  Deklarieren Sie entweder die `Get` oder `Set` Prozedur, die stärker einschränkende Zugriffsebene angeben (z. B. `Friend`).  
+2. Deklarieren Sie entweder die `Get` oder `Set` Prozedur, die stärker einschränkende Zugriffsebene angeben (z. B. `Friend`).  
   
-3.  Geben Sie eine Zugriffsebene nicht auf die anderen Eigenschaftenprozedur. Es wird davon ausgegangen, die Zugriffsebene in deklariert die `Property` Anweisung. Sie können den Zugriff auf nur einer der Eigenschaftenprozeduren einschränken.  
+3. Geben Sie eine Zugriffsebene nicht auf die anderen Eigenschaftenprozedur. Es wird davon ausgegangen, die Zugriffsebene in deklariert die `Property` Anweisung. Sie können den Zugriff auf nur einer der Eigenschaftenprozeduren einschränken.  
   
      [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   

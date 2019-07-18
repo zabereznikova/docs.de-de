@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132056"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486864"
 ---
 # <a name="distributed-application-security"></a>Sicherheit bei verteilten Anwendungen
 Windows Communication Foundation (WCF)-Sicherheit wird in drei funktionelle Hauptbereiche unterteilt: übertragungssicherheit, Zugriffssteuerung und Überwachung. Durch die Übertragungssicherheit werden Integrität, Vertraulichkeit und Authentifizierung bereitgestellt. Die Übertragungssicherheit wird durch eine der folgenden Funktionen bereitgestellt: Transportsicherheit, Nachrichtensicherheit oder `TransportWithMessageCredential`.  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF)-Sicherheit wird in drei funktionelle Haup
 ## <a name="transfer-security-scenarios"></a>Szenarien für die Übertragungssicherheit  
  Die folgenden: allgemeinen Szenarien, die Übertragung der WCF-Sicherheit einsetzen  
   
--   Sichere Übertragung mittels Windows: WCF-Client und Dienst werden in einer Windows-Domäne (oder einer Windows-Gesamtstruktur) bereitgestellt. Da die Nachrichten persönliche Daten enthalten, sind unter anderem eine gegenseitige Authentifizierung von Client und Dienst sowie die Integrität und Vertraulichkeit der Nachrichten erforderlich. Darüber hinaus muss belegt werden, dass eine bestimmte Transaktion stattgefunden hat. So sollten beim Empfänger der Nachricht zum Beispiel Signaturinformationen aufgezeichnet werden.  
+- Sichere Übertragung mittels Windows: WCF-Client und Dienst werden in einer Windows-Domäne (oder einer Windows-Gesamtstruktur) bereitgestellt. Da die Nachrichten persönliche Daten enthalten, sind unter anderem eine gegenseitige Authentifizierung von Client und Dienst sowie die Integrität und Vertraulichkeit der Nachrichten erforderlich. Darüber hinaus muss belegt werden, dass eine bestimmte Transaktion stattgefunden hat. So sollten beim Empfänger der Nachricht zum Beispiel Signaturinformationen aufgezeichnet werden.  
   
--   Sichere Übertragung mittels `UserName` und HTTPS: Müssen einen WCF-Client und Dienst entwickelt werden, um über das Internet zu arbeiten. Die Clientanmeldeinformationen werden anhand einer Datenbank mit Benutzername-/Kennwort-Paaren authentifiziert. Der Dienst wird unter einer HTTPS-Adresse mithilfe eines vertrauenswürdigen SSL-Zertifikats (SSL = Secure Sockets Layer) bereitgestellt. Da die Nachrichten über das Internet gesendet werden, müssen sich Client und Dienst gegenseitig authentifizieren und die Integrität und Vertraulichkeit der Nachrichten muss während der Übertragung gewahrt werden.  
+- Sichere Übertragung mittels `UserName` und HTTPS: Müssen einen WCF-Client und Dienst entwickelt werden, um über das Internet zu arbeiten. Die Clientanmeldeinformationen werden anhand einer Datenbank mit Benutzername-/Kennwort-Paaren authentifiziert. Der Dienst wird unter einer HTTPS-Adresse mithilfe eines vertrauenswürdigen SSL-Zertifikats (SSL = Secure Sockets Layer) bereitgestellt. Da die Nachrichten über das Internet gesendet werden, müssen sich Client und Dienst gegenseitig authentifizieren und die Integrität und Vertraulichkeit der Nachrichten muss während der Übertragung gewahrt werden.  
   
--   Sichere Übertragung mittels Zertifikaten: Müssen einen WCF-Client und Dienst entwickelt werden, um über das öffentliche Internet zu arbeiten. Client und Dienst verfügen beide über Zertifikate, mit denen die Nachrichten geschützt werden können. Client und Dienst verwenden das Internet, um miteinander zu kommunizieren und Transaktionen von hohem Wert auszuführen, für die Nachrichtenintegrität, Vertraulichkeit und eine gegenseitige Authentifizierung erforderlich sind.  
+- Sichere Übertragung mittels Zertifikaten: Müssen einen WCF-Client und Dienst entwickelt werden, um über das öffentliche Internet zu arbeiten. Client und Dienst verfügen beide über Zertifikate, mit denen die Nachrichten geschützt werden können. Client und Dienst verwenden das Internet, um miteinander zu kommunizieren und Transaktionen von hohem Wert auszuführen, für die Nachrichtenintegrität, Vertraulichkeit und eine gegenseitige Authentifizierung erforderlich sind.  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>Integrität, Vertraulichkeit und Authentifizierung  
  Die drei Funktionen Integrität, Vertraulichkeit und Authentifizierung ergeben zusammen die Übertragungssicherheit. Durch die Übertragungssicherheit werden die Funktionen bereitgestellt, die Ihnen dabei helfen, die Bedrohungen für eine verteilte Anwendung zu mindern. In der folgenden Tabelle werden kurz die drei Funktionen beschrieben, aus denen sich die Übertragungssicherheit zusammensetzt.  
@@ -80,7 +80,7 @@ Windows Communication Foundation (WCF)-Sicherheit wird in drei funktionelle Haup
 |Windows|Ermöglicht den SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen. Es wird mittels SSPI-Aushandlung entweder das Kerberos-Protokoll oder NTLM als Authentifizierungsdienst ausgewählt.|  
 |Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass alle kryptografischen Vorgänge mit den Benutzernamen ein, z. B. das Erzeugen einer Signatur oder Verschlüsseln von Daten von WCF nicht zulässig ist. Daher setzt WCF an, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen.|  
 |Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
-|[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|Ermöglicht dem Dienst die Forderung, dass der Client über eine [!INCLUDE[infocard](../../../../includes/infocard-md.md)] authentifiziert werden muss.|  
+|CardSpace|Ermöglicht den Dienst zu verlangen, der Client die Authentifizierung mit einem CardSpace.|  
   
 ### <a name="programming-credentials"></a>Programmieren von Anmeldeinformationen  
  Für jeden der Typen von Clientanmeldeinformationen kann die WCF-Programmiermodell Sie zum Angeben der clientanmeldeinformationswerte und Validierungssteuerelemente mithilfe von Dienstverhalten und Kanalverhalten Anmeldeinformationen an.  

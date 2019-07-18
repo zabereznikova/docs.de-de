@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8a39c50bfc452c807a18a9bf0a65e56cb75d20aa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170338"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655626"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Vorgehensweise: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben
 Wenn bei der Arbeit mit Datenbindung in Windows Forms sind mehrere Steuerelemente an die gleiche Datenquelle gebunden. In einigen Fällen kann es erforderlich sein einige zusätzliche Schritte durchführen, um sicherzustellen, dass die gebundenen Eigenschaften der Steuerelemente mit miteinander und mit der Datenquelle synchronisiert bleiben. Diese Schritte sind in zwei Situationen erforderlich:  
   
--   Wenn die Datenquelle keine implementiert <xref:System.ComponentModel.IBindingList>, und generieren Sie aus diesem Grund <xref:System.ComponentModel.IBindingList.ListChanged> Ereignisse des Typs <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
+- Wenn die Datenquelle keine implementiert <xref:System.ComponentModel.IBindingList>, und generieren Sie aus diesem Grund <xref:System.ComponentModel.IBindingList.ListChanged> Ereignisse des Typs <xref:System.ComponentModel.ListChangedType.ItemChanged>.  
   
--   Wenn die Datenquelle implementiert <xref:System.ComponentModel.IEditableObject>.  
+- Wenn die Datenquelle implementiert <xref:System.ComponentModel.IEditableObject>.  
   
  Im ersten Fall können Sie eine <xref:System.Windows.Forms.BindingSource> auf die Datenquelle an Steuerelemente binden. In letzterem Fall verwenden Sie eine <xref:System.Windows.Forms.BindingSource> und behandeln die <xref:System.Windows.Forms.BindingSource.BindingComplete> Ereignis, und rufen <xref:System.Windows.Forms.BindingManagerBase.EndCurrentEdit%2A> für das zugeordnete <xref:System.Windows.Forms.BindingManagerBase>.  
   
@@ -34,15 +34,15 @@ Wenn bei der Arbeit mit Datenbindung in Windows Forms sind mehrere Steuerelement
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
--   Dieses Codebeispiel erfordert  
+- Dieses Codebeispiel erfordert  
   
--   Verweise auf die Assemblys <xref:System>, <xref:System.Windows.Forms> und <xref:System.Drawing>.  
+- Verweise auf die Assemblys <xref:System>, <xref:System.Windows.Forms> und <xref:System.Drawing>.  
   
--   Ein Formular mit den <xref:System.Windows.Forms.Form.Load> Ereignis als behandelt und einem Aufruf an die `InitializeControlsAndDataSource` -Methode in der im Beispiel des Formulars <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
+- Ein Formular mit den <xref:System.Windows.Forms.Form.Load> Ereignis als behandelt und einem Aufruf an die `InitializeControlsAndDataSource` -Methode in der im Beispiel des Formulars <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Freigeben von gebundenen Daten in Formularen mithilfe der BindingSource-Komponente](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
 - [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](change-notification-in-windows-forms-data-binding.md)
 - [Auf Datenbindung bezogene Schnittstellen](interfaces-related-to-data-binding.md)
-- [Datenbindung in Web Forms](windows-forms-data-binding.md)
+- [Windows Forms-Datenbindung](windows-forms-data-binding.md)

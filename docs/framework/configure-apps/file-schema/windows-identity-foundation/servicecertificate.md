@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
 ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793821"
 ---
 # <a name="servicecertificate"></a>\<serviceCertificate>
 Konfiguriert das x. 509-Zertifikat, das zum Verschlüsseln und Entschlüsseln von Token verwendet wird.  
@@ -32,7 +32,7 @@ Konfiguriert das x. 509-Zertifikat, das zum Verschlüsseln und Entschlüsseln vo
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ Keiner  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

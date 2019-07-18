@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902498"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Übersicht über das RichTextBox-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement zum Anzeigen, eingeben und Bearbeiten von Text mit Formatierung verwendet wird. Die <xref:System.Windows.Forms.RichTextBox> -Steuerelement besitzt dieselben Funktionen der <xref:System.Windows.Forms.TextBox> -Steuerelement, kann jedoch auch anzeigen, Schriftarten, Farben und Links, Text und eingebettete Bilder aus einer Datei laden und nach bestimmten Zeichen suchen. Die <xref:System.Windows.Forms.RichTextBox> Steuerelement dient normalerweise zum Bereitstellen und Anzeigen von Funktionen, wie Sie Textverarbeitungsprogrammen wie Microsoft Word. Wie die <xref:System.Windows.Forms.TextBox> -Steuerelement, das <xref:System.Windows.Forms.RichTextBox> -Steuerelement Schiebeleisten können angezeigt werden, aber im Gegensatz zu der <xref:System.Windows.Forms.TextBox> -Steuerelement, die Standardeinstellung beträgt, horizontale und vertikale Scrollleisten angezeigt, je nach Bedarf und kann zusätzliche Einstellungen.  

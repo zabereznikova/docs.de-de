@@ -1,5 +1,5 @@
 ---
-title: <assert> Element
+title: <assert>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701358"
 ---
 # <a name="assert-element"></a>\<Assert->-Element
 Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>-Methode aufrufen. Außerdem wird der Name der Datei angegeben, in die die Meldung geschrieben werden soll.  
@@ -72,4 +72,4 @@ Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnosti
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Diagnostics.Debug>
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

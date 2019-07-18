@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d12cbb66464baba4ee706ccb076764fbf025fc5f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 916d62a2b79a44d92611e735c6f9bbb3e01970e2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148537"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782740"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo-Funktion
 Gibt Informationen über die angegebene Typbibliothek durch Untersuchen der [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) Struktur.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetTypeLibInfo(  
     [in]   LPWSTR     szFile,  
     [out]  GUID      *pTypeLibID,  

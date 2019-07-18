@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 59a25eb9b854f0f303d8b1d97db40406c2818df8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143766"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626274"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Richtlinien für das Schreiben von sicherem, nicht verwaltetem Code
 Bestimmter Bibliothekscode muss nicht verwalteten Code aufrufen (z. B. APIs in systemeigenem Code, etwa Win32). Hierbei ist größte Vorsicht geboten, denn dies bedeutet, dass der Sicherheitsbereich für verwalteten Code verlassen wird. Wenn Ihr Code sicherheitsneutral ist, müssen sowohl Ihr Code als auch jeder Code, der Ihren Code aufruft, eine Berechtigung für nicht verwalteten Code haben (<xref:System.Security.Permissions.SecurityPermission> mit angegebenem <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> -Flag).  
@@ -25,9 +25,9 @@ Bestimmter Bibliothekscode muss nicht verwalteten Code aufrufen (z. B. APIs in s
   
  Da verwalteter Code, der einen Codepfad zu systemeigenem Code bereitstellt, ein potenzielles Ziel für Schadsoftware ist, muss mit besonderer Sorgfalt ermittelt werden, welcher Code sicher verwendet werden kann und wie dieser Code zu verwenden ist. Üblicherweise sollte nicht verwalteter Code nie direkt für teilweise vertrauenswürdige Aufrufer verfügbar gemacht werden. Es gibt zwei Hauptaspekte für die Bewertung der Sicherheit des Verwendens von nicht verwaltetem Code in Bibliotheken, die von teilweise vertrauenswürdigem Code aufgerufen werden können:  
   
--   **Funktionalität**. Stellt die nicht verwaltete API Funktionen bereit, die Aufrufer daran hindern, potenziell gefährliche Vorgänge auszuführen? Für Codezugriffssicherheit werden Berechtigungen verwendet, um Zugriff auf Ressourcen zu erzwingen. Ermitteln Sie also, ob die API Dateien, eine Benutzeroberfläche oder Threading verwendet oder ob sie geschützte Informationen verfügbar macht. Ist dies der Fall ist, muss der verwaltete Code, in den die API eingebettet ist, die erforderlichen Berechtigungen anfordern, bevor zugelassen wird, dass sie ausgeführt wird. Darüber hinaus muss Speicherzugriff, solange er nicht durch eine Berechtigung geschützt ist, auf strikte Typsicherheit beschränkt werden.  
+- **Funktionalität**. Stellt die nicht verwaltete API Funktionen bereit, die Aufrufer daran hindern, potenziell gefährliche Vorgänge auszuführen? Für Codezugriffssicherheit werden Berechtigungen verwendet, um Zugriff auf Ressourcen zu erzwingen. Ermitteln Sie also, ob die API Dateien, eine Benutzeroberfläche oder Threading verwendet oder ob sie geschützte Informationen verfügbar macht. Ist dies der Fall ist, muss der verwaltete Code, in den die API eingebettet ist, die erforderlichen Berechtigungen anfordern, bevor zugelassen wird, dass sie ausgeführt wird. Darüber hinaus muss Speicherzugriff, solange er nicht durch eine Berechtigung geschützt ist, auf strikte Typsicherheit beschränkt werden.  
   
--   **Parameterüberprüfung**. Bei einem verbreiteten Angriff werden unerwartete Parameter an verfügbar gemachte nicht verwaltete API-Methoden übergeben, um diese zu einer nicht ordnungsgemäßen Ausführung zu veranlassen. Pufferüberläufe mit bereichsüberschreitenden Index- oder Offsetwerten sind ein typisches Beispiel für diese Art von Angriffen wie auch jegliche Parameter, die möglicherweise einen Fehler im zugrunde liegenden Code ausnutzen. Daher muss verwalteter Code selbst dann, wenn der nicht verwaltete Code einer API (nach den nötigen Anforderungen) für teilweise vertrauenswürdige Aufrufer funktional sicher ist, auch umfassend die Parametergültigkeit prüfen, um sicherzustellen, dass aus Schadsoftware keine unbeabsichtigten Aufrufe möglich sind, indem die Wrapperebene von verwaltetem Code verwendet wird.  
+- **Parameterüberprüfung**. Bei einem verbreiteten Angriff werden unerwartete Parameter an verfügbar gemachte nicht verwaltete API-Methoden übergeben, um diese zu einer nicht ordnungsgemäßen Ausführung zu veranlassen. Pufferüberläufe mit bereichsüberschreitenden Index- oder Offsetwerten sind ein typisches Beispiel für diese Art von Angriffen wie auch jegliche Parameter, die möglicherweise einen Fehler im zugrunde liegenden Code ausnutzen. Daher muss verwalteter Code selbst dann, wenn der nicht verwaltete Code einer API (nach den nötigen Anforderungen) für teilweise vertrauenswürdige Aufrufer funktional sicher ist, auch umfassend die Parametergültigkeit prüfen, um sicherzustellen, dass aus Schadsoftware keine unbeabsichtigten Aufrufe möglich sind, indem die Wrapperebene von verwaltetem Code verwendet wird.  
   
 ## <a name="using-suppressunmanagedcodesecurityattribute"></a>Verwenden von SuppressUnmanagedCodeSecurityAttribute  
  Für ein Bestätigen und anschließendes Aufrufen von nicht verwaltetem Code ist ein Leistungsaspekt zu beachten. Für jeden solchen Aufruf fordert das Sicherheitssystem automatisch die Berechtigung für den nicht verwalteten Code an, wodurch jedes Mal ein Stackwalk ausgelöst wird. Wenn Sie nicht verwalteten Code bestätigen und sofort aufrufen, kann der Stackwalk bedeutungslos sein: Er besteht aus Ihrer Bestätigung und Ihrem Aufruf des nicht verwalteten Codes.  
@@ -36,11 +36,11 @@ Bestimmter Bibliothekscode muss nicht verwalteten Code aufrufen (z. B. APIs in s
   
  Wenn Sie **SuppressUnmanagedCodeSecurityAttribute**verwenden, sollten Sie die folgenden Punkte überprüfen:  
   
--   Definieren Sie den Einstiegspunkt in nicht verwalteten Code so, dass er intern ist oder außerhalb Ihres Codes auf andere Weise nicht zugänglich ist.  
+- Definieren Sie den Einstiegspunkt in nicht verwalteten Code so, dass er intern ist oder außerhalb Ihres Codes auf andere Weise nicht zugänglich ist.  
   
--   Jeder Aufruf von nicht verwaltetem Code ergibt eine potenzielle Sicherheitslücke. Vergewissern Sie sich, dass Ihr Code kein Zugang für Schadsoftware ist, um indirekt nicht verwalteten Code aufzurufen und eine Sicherheitsüberprüfung zu umgehen. Fordern Sie ggf. Berechtigungen an.  
+- Jeder Aufruf von nicht verwaltetem Code ergibt eine potenzielle Sicherheitslücke. Vergewissern Sie sich, dass Ihr Code kein Zugang für Schadsoftware ist, um indirekt nicht verwalteten Code aufzurufen und eine Sicherheitsüberprüfung zu umgehen. Fordern Sie ggf. Berechtigungen an.  
   
--   Verwenden Sie eine Benennungskonvention, um explizit erkennen zu können, ob Sie einen gefährlichen Pfad zu nicht verwaltetem Code erstellen, wie dies in diesem Abschnitt weiter unten beschrieben ist.  
+- Verwenden Sie eine Benennungskonvention, um explizit erkennen zu können, ob Sie einen gefährlichen Pfad zu nicht verwaltetem Code erstellen, wie dies in diesem Abschnitt weiter unten beschrieben ist.  
   
 ## <a name="naming-convention-for-unmanaged-code-methods"></a>Benennungskonventionen für Methoden in nicht verwaltetem Code  
  Für das Benennen von Methoden in nicht verwaltetem Code hat sich eine praktische und empfehlenswerte Konvention bewährt. Alle Methoden in nicht verwaltetem Code werden in drei Kategorien unterteilt: **safe**, **native**, und **unsafe**. Diese Schlüsselwörter können als Namen von Klassen verwendet werden, in denen die verschiedenen Arten von Einstiegspunkten für nicht verwalteten Code definiert sind. In Quellcode sollten diese Schlüsselwörter dem jeweiligen Klassennamen hinzugefügt werden, wie beispielsweise in `Safe.GetTimeOfDay`, `Native.Xyz`oder `Unsafe.DangerousAPI`. Jedes dieser Schlüsselwörter bietet nützliche Sicherheitsinformationen für Entwickler, die diese Klasse verwenden, wie in der folgenden Tabelle beschrieben.  

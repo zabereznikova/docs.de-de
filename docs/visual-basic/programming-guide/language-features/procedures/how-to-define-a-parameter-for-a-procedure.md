@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971792"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665376"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Vorgehensweise: Definieren eines Parameters für eine Prozedur (Visual Basic)
 Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben werden, wenn er aufgerufen. Jeder Parameter für eine Prozedur deklariert die gleiche Weise, wie Sie eine Variable deklarieren, die die Namen und den Datentyp angibt. Sie geben auch den Übergabemechanismus und gibt an, ob der Parameter optional ist.  
@@ -22,17 +22,17 @@ Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben 
   
 ### <a name="to-define-a-procedure-parameter"></a>Um Parameter einer Prozedur zu definieren.  
   
-1.  Fügen Sie in der Deklaration der Prozedur der Name des Parameters an der Prozedur bei der Parameterliste, durch die Trennung von anderen Parametern durch Kommas.  
+1. Fügen Sie in der Deklaration der Prozedur der Name des Parameters an der Prozedur bei der Parameterliste, durch die Trennung von anderen Parametern durch Kommas.  
   
-2.  Entscheiden Sie, den Datentyp des Parameters.  
+2. Entscheiden Sie, den Datentyp des Parameters.  
   
-3.  Führen Sie den Namen des Parameters mit einem `As` -Klausel, um den Datentyp anzugeben.  
+3. Führen Sie den Namen des Parameters mit einem `As` -Klausel, um den Datentyp anzugeben.  
   
-4.  Entscheiden Sie, den Übergabemechanismus, die, den Sie für den Parameter verwenden möchten. Übergeben Sie normalerweise einen Parameter ab, nach Wert, es sei denn, Sie möchten, dass das Verfahren, um ihren Wert in den aufrufenden Code ändern zu können.  
+4. Entscheiden Sie, den Übergabemechanismus, die, den Sie für den Parameter verwenden möchten. Übergeben Sie normalerweise einen Parameter ab, nach Wert, es sei denn, Sie möchten, dass das Verfahren, um ihren Wert in den aufrufenden Code ändern zu können.  
   
-5.  Der Parametername mit vorausgehen [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) den Übergabemechanismus angeben. Weitere Informationen finden Sie unter [Unterschiede zwischen Argumentübergabe nach Wert "und" By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Der Parametername mit vorausgehen [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) den Übergabemechanismus angeben. Weitere Informationen finden Sie unter [Unterschiede zwischen Argumentübergabe nach Wert "und" By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6.  Wenn der Parameter optional ist, geben Sie vor dem Übergabemechanismus [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) und folgen Sie den Datentyp des Parameters mit einem Gleichheitszeichen (`=`) und einen Standardwert.  
+6. Wenn der Parameter optional ist, geben Sie vor dem Übergabemechanismus [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) und folgen Sie den Datentyp des Parameters mit einem Gleichheitszeichen (`=`) und einen Standardwert.  
   
      Im folgende Beispiel wird die Gliederung definiert eine `Sub` Prozedur mit drei Parametern. Die ersten beiden sind erforderlich, und das dritte optional ist. Die Parameterdeklarationen werden in der Parameterliste durch Kommas getrennt.  
   
@@ -46,11 +46,11 @@ Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben 
   
      Angabe von Datentypen für alle von Programmierelementen heißt als *starke Typisierung*. Wenn Sie festlegen, `Option Strict On`, Visual Basic erzwingt eine starke Typisierung. Dies wird dringend empfohlen, den folgenden Gründen empfohlen:  
   
-    -   Sie können IntelliSense-Unterstützung für Ihre Variablen und Parameter. Dadurch können Sie die Eigenschaften und andere Member zu sehen, wie Sie in Ihren Code eingeben.  
+    - Sie können IntelliSense-Unterstützung für Ihre Variablen und Parameter. Dadurch können Sie die Eigenschaften und andere Member zu sehen, wie Sie in Ihren Code eingeben.  
   
-    -   Sie können den Compiler an, führen Sie die Überprüfung des Typs. Dadurch wird die catch-Anweisungen, die zur Laufzeit aufgrund von Fehlern wie z. B. Überlauf ausfallen können. Es fängt auch Aufrufe von Methoden für Objekte, die diese nicht unterstützen.  
+    - Sie können den Compiler an, führen Sie die Überprüfung des Typs. Dadurch wird die catch-Anweisungen, die zur Laufzeit aufgrund von Fehlern wie z. B. Überlauf ausfallen können. Es fängt auch Aufrufe von Methoden für Objekte, die diese nicht unterstützen.  
   
-    -   Es führt zu einer schnelleren Ausführung Ihres Codes. Ein Grund hierfür ist, wenn Sie einen Datentyp für ein Programmierelement nicht angeben, die Visual Basic-Compiler weist die `Object` Typ. Der kompilierte Code möglicherweise zwischen hin und her konvertiert `Object` und andere Datentypen, die Leistung verringert.  
+    - Es führt zu einer schnelleren Ausführung Ihres Codes. Ein Grund hierfür ist, wenn Sie einen Datentyp für ein Programmierelement nicht angeben, die Visual Basic-Compiler weist die `Object` Typ. Der kompilierte Code möglicherweise zwischen hin und her konvertiert `Object` und andere Datentypen, die Leistung verringert.  
   
 ## <a name="see-also"></a>Siehe auch
 

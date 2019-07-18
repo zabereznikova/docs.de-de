@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829380"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591282"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Exemplarische Vorgehensweise: Filterung der Ausgaben von „My.Application.Log“ (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßige Filtern von Protokollen für das `My.Application.Log`-Objekt ändern, um zu steuern, welche Informationen vom `Log`-Objekt an die Listener übergeben werden und welche Informationen von den Listenern geschrieben werden. Sie können das Protokollierungsverhalten auch nach dem Erstellen der Anwendung ändern, da die Konfigurationsinformationen in der Konfigurationsdatei der Anwendung gespeichert sind.  
@@ -21,17 +21,17 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
 #### <a name="to-build-the-sample-application"></a>So installieren Sie die Beispielanwendung  
   
-1.  Öffnen Sie ein neues Visual Basic-Windows-Anwendungsprojekt.  
+1. Öffnen Sie ein neues Visual Basic-Windows-Anwendungsprojekt.  
   
-2.  Fügen Sie eine Schaltfläche mit dem Namen „Button1“ zu „Form1“ hinzu.  
+2. Fügen Sie eine Schaltfläche mit dem Namen „Button1“ zu „Form1“ hinzu.  
   
-3.  Fügen Sie im <xref:System.Windows.Forms.Control.Click>-Ereignishandler den folgenden Code für „Button1“ hinzu:  
+3. Fügen Sie im <xref:System.Windows.Forms.Control.Click>-Ereignishandler den folgenden Code für „Button1“ hinzu:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  Führen Sie die Anwendung im Debugger aus.  
+4. Führen Sie die Anwendung im Debugger aus.  
   
-5.  Drücken Sie **Button1**.  
+5. Drücken Sie **Button1**.  
   
      Die Anwendung schreibt die folgenden Informationen in die Debugausgabe und die Protokolldatei der Anwendung.  
   
@@ -39,7 +39,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  Schließen Sie die Anwendung.  
+6. Schließen Sie die Anwendung.  
   
      Informationen zum Anzeigen des Ausgabefensters der Anwendung finden Sie unter [Ausgabefenster](/visualstudio/ide/reference/output-window). Informationen zum Speicherort der Protokolldatei der Anwendung finden Sie unter [Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
   
@@ -71,27 +71,27 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
 #### <a name="to-log-only-activity-tracing-events"></a>So protokollieren Sie nur Aktivitätsablauf-Verfolgungsereignisse  
   
-1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.  
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.  
   
      - oder -   
   
      Wenn keine app.config-Datei vorhanden ist:  
   
-    1.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
+    1. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
-    2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
+    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
   
-    3.  Klicken Sie auf **Hinzufügen**.  
+    3. Klicken Sie auf **Hinzufügen**.  
   
-2.  Suchen Sie den Abschnitt `<switches>`, der sich im Abschnitt `<system.diagnostics>` im Abschnitt `<configuration>` der obersten Ebene befindet.  
+2. Suchen Sie den Abschnitt `<switches>`, der sich im Abschnitt `<system.diagnostics>` im Abschnitt `<configuration>` der obersten Ebene befindet.  
   
-3.  Suchen Sie das Element, das `DefaultSwitch` zur Auflistung von Schaltern hinzufügt. Es sollte in etwa wie dieses Element aussehen:  
+3. Suchen Sie das Element, das `DefaultSwitch` zur Auflistung von Schaltern hinzufügt. Es sollte in etwa wie dieses Element aussehen:  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Ändern Sie den Wert des `value`-Attributs zu „ActivityTracing“.  
+4. Ändern Sie den Wert des `value`-Attributs zu „ActivityTracing“.  
   
-5.  Der Inhalt der app.config-Datei sollte ähnlich dem folgenden XML-Code sein:  
+5. Der Inhalt der app.config-Datei sollte ähnlich dem folgenden XML-Code sein:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
     </configuration>  
     ```  
   
-6.  Führen Sie die Anwendung im Debugger aus.  
+6. Führen Sie die Anwendung im Debugger aus.  
   
-7.  Drücken Sie **Button1**.  
+7. Drücken Sie **Button1**.  
   
      Die Anwendung schreibt die folgenden Informationen in die Debugausgabe und die Protokolldatei der Anwendung:  
   
@@ -130,12 +130,12 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  Schließen Sie die Anwendung.  
+8. Schließen Sie die Anwendung.  
   
 9. Ändern Sie den Wert des `value`-Attributs zurück zu „Information“.  
   
     > [!NOTE]
-    >  Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Das Verhalten der Klassen [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], <xref:System.Diagnostics.Trace?displayProperty=nameWithType> und <xref:System.Diagnostics.Debug?displayProperty=nameWithType> wird dadurch nicht verändert.  
+    >  Die Einstellung des Schalters `DefaultSwitch` steuert nur `My.Application.Log`. Hiermit wird nicht geändert, wie sich die .NET Framework-Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType> und <xref:System.Diagnostics.Debug?displayProperty=nameWithType> verhalten.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Einzelne Filterung für alle „My.Application.Log“-Listener  
  Im vorherige Beispiel wurde gezeigt, wie Sie die Filterung für alle `My.Application.Log`-Ausgaben ändern können. In diesem Beispiel wird veranschaulicht, wie Sie einen einzelnen Protokolllistener filtern. Standardmäßig verwendet eine Anwendung zwei Listener, die in die Debugausgabe und die Protokolldatei der Anwendung schreiben.  
@@ -146,23 +146,23 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
 #### <a name="to-log-only-activity-tracing-events"></a>So protokollieren Sie nur Aktivitätsablaufverfolgungs-Ereignisse  
   
-1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.  
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.  
   
      - oder -   
   
      Wenn keine app.config-Datei vorhanden ist:  
   
-    1.  Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
+    1. Klicken Sie im Menü **Projekt** auf **Neues Element hinzufügen**.  
   
-    2.  Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
+    2. Wählen Sie im Dialogfeld **Neues Element hinzufügen** den Eintrag **Anwendungskonfigurationsdatei**aus.  
   
-    3.  Klicken Sie auf **Hinzufügen**.  
+    3. Klicken Sie auf **Hinzufügen**.  
   
-2.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“. Wählen Sie **Öffnen** aus.  
+2. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“. Wählen Sie **Öffnen** aus.  
   
-3.  Suchen Sie den Abschnitt `<listeners>` im Abschnitt `<source>` mit dem `name`-Attribut „DefaultSource“, das sich im Abschnitt `<sources>` befindet. Der Abschnitt `<sources>` befindet sich im Abschnitt `<system.diagnostics>` im Abschnitt `<configuration>` der obersten Ebene.  
+3. Suchen Sie den Abschnitt `<listeners>` im Abschnitt `<source>` mit dem `name`-Attribut „DefaultSource“, das sich im Abschnitt `<sources>` befindet. Der Abschnitt `<sources>` befindet sich im Abschnitt `<system.diagnostics>` im Abschnitt `<configuration>` der obersten Ebene.  
   
-4.  Fügen Sie dem Abschnitt `<listeners>` dieses Element hinzu:  
+4. Fügen Sie dem Abschnitt `<listeners>` dieses Element hinzu:  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
     <add name="NewDefault"/>  
     ```  
   
-5.  Suchen Sie den Abschnitt `<sharedListeners>` im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
+5. Suchen Sie den Abschnitt `<sharedListeners>` im `<system.diagnostics>` -Abschnitt im Abschnitt `<configuration>` der obersten Ebene.  
   
-6.  Fügen Sie dem `<sharedListeners>` -Abschnitt dieses Element hinzu:  
+6. Fügen Sie dem `<sharedListeners>` -Abschnitt dieses Element hinzu:  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
      Der <xref:System.Diagnostics.EventTypeFilter>-Filter akzeptiert einen der <xref:System.Diagnostics.SourceLevels>-Enumerationswerte als sein `initializeData`-Attribut.  
   
-7.  Der Inhalt der app.config-Datei sollte ähnlich dem folgenden XML-Code sein:  
+7. Der Inhalt der app.config-Datei sollte ähnlich dem folgenden XML-Code sein:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
     </configuration>  
     ```  
   
-8.  Führen Sie die Anwendung im Debugger aus.  
+8. Führen Sie die Anwendung im Debugger aus.  
   
 9. Drücken Sie **Button1**.  
   

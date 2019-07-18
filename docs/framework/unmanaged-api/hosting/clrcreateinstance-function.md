@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3571e2698b980b12b89a5b689efb868a34a3ef71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f9dc3f87ce727076d561923fe35495bbfe4419e3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167660"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768126"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance-Funktion
 Stellt eine von drei Schnittstellen: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), oder [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT CLRCreateInstance(  
     [in]  REFCLSID  clsid,  
     [in]  REFIID     riid,  
@@ -53,7 +53,7 @@ HRESULT CLRCreateInstance(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_POINTER|`ppInterface` ist null.|  
+|E_POINTER|`ppInterface` ist NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle zeigt die unterstützten Kombinationen für `clsid` und `riid`.  
@@ -66,7 +66,7 @@ HRESULT CLRCreateInstance(
   
  Der folgende Code zeigt, wie Sie mit `CLRCreateInstance` alle drei Schnittstellen abgerufen:  
   
-```  
+```cpp  
 #include <metahost.h>  
 #pragma comment(lib, "mscoree.lib")  
   

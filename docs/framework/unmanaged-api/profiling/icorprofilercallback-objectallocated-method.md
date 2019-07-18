@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c07b37e58141f7aff747bd3772be265ae0da42ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 10a000fd98ad12dc39f8f8338485d6bb4093ee07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222015"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782983"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated-Methode
 Benachrichtigt den Profiler, die für ein Objekt Speicher im Heap belegt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ObjectAllocated(  
     [in] ObjectID objectId,  
     [in] ClassID classId);  

@@ -1,15 +1,13 @@
 ---
 title: Kommunikation in einer Microservicearchitektur
 description: Erkunden Sie verschiedene Kommunikationsmöglichkeiten zwischen Microservices, und lernen Sie die Auswirkungen synchroner und asynchroner Optionen kennen.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4b57607897e42ff68ff7566120bc3c932040a2a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466191"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690554"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Kommunikation in einer Microservicearchitektur
 
@@ -69,9 +67,9 @@ In den folgenden Abschnitten werden die verschiedenen Kommunikationsstile erläu
 
 ## <a name="communication-styles"></a>Kommunikationsstile
 
-Abhängig von dem zu verwendenden Kommunikationstyp können Sie zwischen vielen Protokollen und Optionen auswählen, die für die Kommunikation verwendet werden können. Wenn Sie einen synchronen, auf Anforderungen/Antworten basierenden Kommunikationsmechanismus verwenden, kommen am häufigsten HTTP- und REST-Protokolle zum Einsatz, insbesondere dann, wenn Sie Ihre Dienste außerhalb des Docker-Hosts oder des Microserviceclusters veröffentlichen. Bei der internen Kommunikation zwischen Diensten (innerhalb Ihres Docker-Hosts oder des Microserviceclusters) sollten Sie auch Kommunikationsmechanismen im Binärformat verwenden (z.B. Service Fabric-Remoting oder WCF über TCP und das Binärformat). Alternativ können Sie auch asynchrone, nachrichtenbasierte Kommunikationsmechanismen wie AMQP verwenden.
+Abhängig von dem zu verwendenden Kommunikationstyp können Sie zwischen vielen Protokollen und Optionen auswählen, die für die Kommunikation verwendet werden können. Wenn Sie einen synchronen, auf Anforderungen/Antworten basierenden Kommunikationsmechanismus verwenden, kommen am häufigsten HTTP- und REST-Protokolle zum Einsatz, insbesondere dann, wenn Sie Ihre Dienste außerhalb des Docker-Hosts oder des Microserviceclusters veröffentlichen. Bei der internen Kommunikation zwischen Diensten (innerhalb Ihres Docker-Hosts oder Microserviceclusters) können Sie auch Kommunikationsmechanismen im Binärformat verwenden (z.B. WCF über TCP und Binärformat). Alternativ können Sie auch asynchrone, nachrichtenbasierte Kommunikationsmechanismen wie AMQP verwenden.
 
-Es gibt auch mehrere Nachrichtenformate wie JSON, XML oder sogar Binärformate, die effizienter sein können. Wenn es sich bei dem von Ihnen ausgewählten Binärformat um keinen Standard handelt, sollten Sie Ihre Dienste nicht mit diesem Format öffentlich veröffentlichen. Sie könnten für die interne Kommunikation zwischen Ihren Microservices ein nicht standardmäßiges Format verwenden. Dies wäre bei der Kommunikation zwischen Microservices innerhalb Ihres Docker-Hosts oder Ihres Microservice-Clusters (Docker-Orchestratoren oder Azure Service Fabric) oder bei proprietären Clientanwendungen möglich, die mit den Microservices kommunizieren.
+Es gibt auch mehrere Nachrichtenformate wie JSON, XML oder sogar Binärformate, die effizienter sein können. Wenn es sich bei dem von Ihnen ausgewählten Binärformat um keinen Standard handelt, sollten Sie Ihre Dienste nicht mit diesem Format öffentlich veröffentlichen. Sie könnten für die interne Kommunikation zwischen Ihren Microservices ein nicht standardmäßiges Format verwenden. Dies wäre bei der Kommunikation zwischen Microservices innerhalb Ihres Docker-Hosts oder Microserviceclusters (z.B. Docker-Orchestratoren) oder bei proprietären Clientanwendungen möglich, die mit den Microservices kommunizieren.
 
 ### <a name="requestresponse-communication-with-http-and-rest"></a>Kommunikation über Anforderungen/Antworten mit HTTP und REST
 
@@ -90,10 +88,10 @@ Die Verwendung von HTTP-REST-Diensten als Interface Definition Language bietet e
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Martin Fowler. Richardson Maturity Model** (Beschreibung des REST-Modells). \
-  [https://martinfowler.com/articles/richardsonMaturityModel.html](https://martinfowler.com/articles/richardsonMaturityModel.html)
+  <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** (offizielle Website). \
-  [https://swagger.io/](https://swagger.io/)
+  <https://swagger.io/>
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Auf HTTP basierende Push- und Echtzeitkommunikation
 

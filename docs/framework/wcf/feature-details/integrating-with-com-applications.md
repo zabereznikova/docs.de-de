@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
 ms.openlocfilehash: 51626da6e97e346f43cfe606a5164024580a2ac7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046995"
 ---
 # <a name="integrating-with-com-applications"></a>Integrieren von COM-Anwendungen
 Windows Communication Foundation (WCF)-Dienste können direkt in den vorhandenen Code integriert werden, mithilfe des WCF-dienstmonikers. Der Dienstmoniker kann in vielen verschiedenen COM-basierten Entwicklungsumgebungen wie Office VBA, Visual Basic 6.0 oder Visual C++ 6.0 verwendet werden.  
@@ -35,7 +35,7 @@ Windows Communication Foundation (WCF)-Dienste können direkt in den vorhandenen
  [Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-metadata-exchange-contracts.md)  
  Beschreibt das Aufrufen von WCF-Beispiel verwenden einen WCF-Moniker, der einen Mex-Endpunkt angibt.  
   
- [Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit](../../../../docs/framework/wcf/feature-details/how-to-specify-channel-security-credentials.md)  
+ [Vorgehensweise: Geben Sie Anmeldeinformationen für Kanalsicherheit](../../../../docs/framework/wcf/feature-details/how-to-specify-channel-security-credentials.md)  
  Der WCF-Dienstmoniker unterstützt die `IChannelCredentials` Schnittstelle, die eine Reihe von alternativen Methoden für die Angabe von kanalanmeldeinformationen ermöglicht.  
   
 ## <a name="reference"></a>Referenz  

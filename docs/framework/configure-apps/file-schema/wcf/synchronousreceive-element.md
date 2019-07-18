@@ -1,13 +1,13 @@
 ---
-title: <synchronousReceive> Element
+title: <synchronousReceive>-Element
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
 ms.openlocfilehash: 20390f747c8beaccba1cfea7a9ea0ed366037ecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757923"
 ---
 # <a name="synchronousreceive-element"></a>\<SynchronousReceive >-Element
 Dieses Konfigurationselement wird zum Angeben des Laufzeitverhaltens für das Empfangen von Nachrichten in einem Dienst oder einer Clientanwendung verwendet. Es enthält keine Attribute oder untergeordnete Elemente.  

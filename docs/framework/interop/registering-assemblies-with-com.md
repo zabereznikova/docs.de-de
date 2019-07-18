@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e5d6c063fedf14559b20d1de49c1855d0fe1304
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219320"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648553"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrieren von Assemblys mit COM
 Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) ausführen, um eine Assembly für die Verwendung mit COM zu registrieren bzw. eine bestehende Registrierung aufzuheben. Regasm.exe fügt der Systemregistrierung Informationen über die Klasse hinzu, damit COM-Clients die .NET Framework-Klasse transparent nutzen können. Die Klasse <xref:System.Runtime.InteropServices.RegistrationServices> stellt gleichwertige Funktionen bereit.  
@@ -30,11 +30,11 @@ Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe
   
  Unter dem Schlüssel HKCR\CLSID\\{0000…0000} wird der Standardwert auf die ProgID der Klasse festgelegt, und zwei neue benannte Werte werden hinzugefügt, „Class“ und „Assembly“. Die Common Language Runtime liest den Wert „Assembly“ aus der Registrierung aus und übergibt ihn an den Assemblyresolver der Runtime. Der Assemblyresolver versucht, die Assembly anhand von Assemblyinformationen zu lokalisieren, z.B. Name und Versionsnummer. Damit der Assemblyresolver eine Assembly lokalisieren kann, muss sie sich an einem der folgenden Speicherorte befinden:  
   
--   Im globalen Assemblycache (die Assembly muss einen starken Namen haben)  
+- Im globalen Assemblycache (die Assembly muss einen starken Namen haben)  
   
--   Im Anwendungsverzeichnis. Auf aus einem Anwendungspfad geladene Assemblies kann nur über diese Anwendung zugegriffen werden.  
+- Im Anwendungsverzeichnis. Auf aus einem Anwendungspfad geladene Assemblies kann nur über diese Anwendung zugegriffen werden.  
   
--   Entlang eines Dateipfads, der in Regasm.exe mit der Option **/codebase** angegeben wurde.  
+- Entlang eines Dateipfads, der in Regasm.exe mit der Option **/codebase** angegeben wurde.  
   
  Regasm.exe erstellt auch unter dem Schlüssel HKCR\CLSID\\{0000…0000} den Schlüssel InProcServer32. Als Standardwert für den Schlüssel ist der Name der DLL festgelegt, die die Common Language Runtime initialisiert (Mscoree.dll).  
   
@@ -44,6 +44,7 @@ Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe
  Für den Unterschlüssel `InprocServer32` wird statt einer traditionellen Bibliothek der COM-Typen ein Verweis auf die Datei „Mscoree.dll“ angezeigt. So wird angegeben, dass die Common Language Runtime das verwaltete Objekt erstellt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
 - [Vorgehensweise: Verweisen auf .NET-Typen in COM](how-to-reference-net-types-from-com.md)
 - [Aufrufen eines .NET-Objekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5d4fe5d1b9048f4a8ae22a84e14456318ca38f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813911"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645858"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Benutzerdefinierte Konstanten (Visual Basic)
 Eine Konstante ist, einen aussagekräftigen Namen, der nimmt den Platz einer Zahl oder Zeichenfolge, die nicht geändert wird. Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung konstant bleiben. Konstanten, die definiert werden, indem Sie die Steuerelemente oder Komponenten, mit denen Sie zusammenarbeiten können, oder können Sie Ihre eigenen erstellen. Konstanten, die Sie selbst erstellen, werden als beschrieben *benutzerdefinierte*.  
@@ -37,13 +37,13 @@ Eine Konstante ist, einen aussagekräftigen Namen, der nimmt den Platz einer Zah
 ## <a name="scope-of-user-defined-constants"></a>Bereich der benutzerdefinierte Konstanten  
  Ein `Const` Anweisung-Bereich ist identisch mit einer Variablen, die sich am gleichen Standort deklariert. Sie können den Bereich in einem der folgenden Arten angeben:  
   
--   Um eine Konstante zu erstellen, die nur innerhalb einer Prozedur vorhanden ist, deklarieren Sie sie während dieser Prozedur aus.  
+- Um eine Konstante zu erstellen, die nur innerhalb einer Prozedur vorhanden ist, deklarieren Sie sie während dieser Prozedur aus.  
   
--   Um eine Konstante für alle Prozeduren innerhalb einer Klasse, aber nicht für Code außerhalb des Moduls zu erstellen, deklarieren Sie sie im Deklarationsabschnitt der Klasse.  
+- Um eine Konstante für alle Prozeduren innerhalb einer Klasse, aber nicht für Code außerhalb des Moduls zu erstellen, deklarieren Sie sie im Deklarationsabschnitt der Klasse.  
   
--   Um eine Konstante zu erstellen, die auf alle Elemente einer Assembly, aber nicht auf Clients außerhalb der Assembly verfügbar ist, deklarieren Sie sie mithilfe der `Friend` Schlüsselwort im Deklarationsabschnitt der Klasse.  
+- Um eine Konstante zu erstellen, die auf alle Elemente einer Assembly, aber nicht auf Clients außerhalb der Assembly verfügbar ist, deklarieren Sie sie mithilfe der `Friend` Schlüsselwort im Deklarationsabschnitt der Klasse.  
   
--   Um eine Konstante, die zur Verfügung, in der gesamten Anwendung zu erstellen, deklarieren Sie sie mithilfe der `Public` Schlüsselwort in den Deklarationen im Abschnitt der-Klasse.  
+- Um eine Konstante, die zur Verfügung, in der gesamten Anwendung zu erstellen, deklarieren Sie sie mithilfe der `Public` Schlüsselwort in den Deklarationen im Abschnitt der-Klasse.  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Deklarieren einer Konstante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md).  
   

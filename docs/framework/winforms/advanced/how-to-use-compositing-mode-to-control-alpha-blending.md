@@ -9,21 +9,21 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6863e59efa25323f80933bf8ab595316b430ef53
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210690"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590138"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>Vorgehensweise: Verwenden des Mischmodus zum Steuern des Alphablendings
 Möglicherweise gibt es Situationen, eine Offscreen-Bitmap zu erstellen, die die folgenden Eigenschaften besitzt:  
   
--   Farben haben alpha-Werte, die kleiner als 255 sind.  
+- Farben haben alpha-Werte, die kleiner als 255 sind.  
   
--   Farben sind nicht alpha miteinander kombiniert werden, wie Sie die Bitmap zu erstellen.  
+- Farben sind nicht alpha miteinander kombiniert werden, wie Sie die Bitmap zu erstellen.  
   
--   Wenn Sie die fertige Bitmap angezeigt wird, sind die Farben in der Bitmap Alphablending mit den Hintergrundfarben, auf dem Anzeigegerät.  
+- Wenn Sie die fertige Bitmap angezeigt wird, sind die Farben in der Bitmap Alphablending mit den Hintergrundfarben, auf dem Anzeigegerät.  
   
  Um eine solche Bitmap zu erstellen, erstellen Sie ein leeres <xref:System.Drawing.Bitmap> Objekt an, und erstellen dann eine <xref:System.Drawing.Graphics> -Objekt auf Grundlage dieser Bitmap. Legen Sie den Modus zusammensetzt, von der <xref:System.Drawing.Graphics> -Objekt <xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>.  
   
@@ -54,7 +54,7 @@ Möglicherweise gibt es Situationen, eine Offscreen-Bitmap zu erstellen, die die
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Siehe auch
 

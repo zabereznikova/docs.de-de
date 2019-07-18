@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fad8a73c41379cac7523db6266951b8abab26e27
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734515"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626295"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF
 Windows Communication Foundation (WCF) ist für Aufrufe von verwaltetem Code zwischen Servern und Clients in einer verteilten Umgebung die empfohlene und sichere Wahl im Vergleich zu DCOM (Distributed Component Object Model). In diesem Artikel wird für die folgenden Szenarien gezeigt, wie Sie Code aus DCOM zu WCF migrieren.  
   
--   Der Remotedienst gibt ein Objekt per Wert an den Client zurück.  
+- Der Remotedienst gibt ein Objekt per Wert an den Client zurück.  
   
--   Der Client sendet einen Objekt per Wert an den Remotedienst.  
+- Der Client sendet einen Objekt per Wert an den Remotedienst.  
   
--   Der Remotedienst gibt ein Objekt per Verweis an den Client zurück.  
+- Der Remotedienst gibt ein Objekt per Verweis an den Client zurück.  
   
  Aus Sicherheitsgründen ist es in WCF nicht zulässig, ein Objekt per Verweis vom Client an den Dienst zu senden. Ist zwischen Client und Server eine Konversation in beide Richtungen erforderlich, kann dies in WCF mit einem Duplexdienst erreicht werden.  Weitere Informationen zu Duplexdiensten finden Sie unter [Duplexdienste](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
@@ -239,7 +239,7 @@ customerManager.StoreCustomer(customer);
   
  Das Verhalten des Per-Verweis-Objekts in WCF, das in diesem Szenario dargestellt ist, unterscheidet sich von dem in DCOM.  In DCOM kann der Server ein Per-Verweis-Objekt direkt an den Client zurückgeben, und der Client kann die Methoden dieses Objekts aufrufen, die auf dem Server ausgeführt werden.  In WCF ist das zurückgegebene Objekt dagegen immer ein Per-Wert-Objekt.  Der Client muss dieses Per-Wert-Objekt, das durch <xref:System.ServiceModel.EndpointAddress10> dargestellt ist, übernehmen und aus dem Objekt sein eigenes sitzungsbasiertes Per-Verweis-Objekt erstellen.  Die Clientmethodenaufrufe für das sitzungsbasierte Objekt werden auf dem Server ausgeführt. Mit anderen Worten, dieses Per-Verweis-Objekt in WCF ist ein normaler WCF-Dienst, der als sitzungsbasiert konfiguriert ist.  
   
- In WCF ist eine Sitzung eine Möglichkeit, mehrere Nachrichten zuzuordnen, die zwischen zwei Endpunkten gesendet werden.  Dies bedeutet, dass zwischen dem Client und dem Server eine Sitzung eingerichtet wird, sobald der Client eine Verbindung mit diesem Dienst hergestellt hat.  Der Client verwendet eine einzelne eindeutige Instanz des serverseitigen Objekts für alle seine Vorgänge innerhalb dieser einzelnen Sitzung. Sitzungsbasierte WCF-Verträge sind vergleichbar mit verbindungsorientierten Netzwerkanforderung/Antwort-Mustern.  
+ In WCF ist eine Sitzung eine Möglichkeit, mehrere Nachrichten zuzuordnen, die zwischen zwei Endpunkten gesendet werden.  Dies bedeutet, dass zwischen dem Client und dem Server eine Sitzung eingerichtet wird, sobald der Client eine Verbindung mit diesem Dienst hergestellt hat.  Der Client verwendet eine einzelne eindeutige Instanz des serverseitigen Objekts für alle Interaktionen innerhalb dieser einzelnen Sitzung. Sitzungsbasierte WCF-Verträge sind vergleichbar mit verbindungsorientierten Netzwerkanforderung/Antwort-Mustern.  
   
  Dieses Szenario wird durch die folgenden DCOM-Methode dargestellt.  
   
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Schritt 3: Konfigurieren und Starten der WCF-Dienste  
  Damit diese Dienste gehostet werden können, müssen Sie die folgenden Erweiterungen in die Konfigurationsdatei (web.config) des Servers einfügen.  
   
-1.  Fügen Sie einen `<client>`-Abschnitt hinzu, in dem der Endpunkt für das sitzungsbasierte Objekts beschrieben wird.  In diesem Szenario fungiert der Server auch als Client und muss konfiguriert werden, um dies zu ermöglichen.  
+1. Fügen Sie einen `<client>`-Abschnitt hinzu, in dem der Endpunkt für das sitzungsbasierte Objekts beschrieben wird.  In diesem Szenario fungiert der Server auch als Client und muss konfiguriert werden, um dies zu ermöglichen.  
   
-2.  Deklarieren Sie im `<services>`-Abschnitt Dienstendpunkte für die Factory und das sitzungsbasierte Objekt.  Dadurch wird es dem Client ermöglicht, mit den Dienstendpunkten zu kommunizieren, die <xref:System.ServiceModel.EndpointAddress10>-Instanz abzurufen und den sitzungsbasierten Kanal zu erstellen.  
+2. Deklarieren Sie im `<services>`-Abschnitt Dienstendpunkte für die Factory und das sitzungsbasierte Objekt.  Dadurch wird es dem Client ermöglicht, mit den Dienstendpunkten zu kommunizieren, die <xref:System.ServiceModel.EndpointAddress10>-Instanz abzurufen und den sitzungsbasierten Kanal zu erstellen.  
   
  Es folgt eine Beispielkonfigurationsdatei mit diesen Einstellungen:  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  Um den Dienst aufzurufen, fügen Sie dem Client den Code hinzu, der Folgendes ausführt:  
   
-1.  Erstellen eines Kanals zu dem `ISessionBoundFactory`-Dienst.  
+1. Erstellen eines Kanals zu dem `ISessionBoundFactory`-Dienst.  
   
-2.  Verwenden des Kanals, um den `ISessionBoundFactory`-Dienst aufzurufen und ein <xref:System.ServiceModel.EndpointAddress10>-Objekt zu erhalten.  
+2. Verwenden des Kanals, um den `ISessionBoundFactory`-Dienst aufzurufen und ein <xref:System.ServiceModel.EndpointAddress10>-Objekt zu erhalten.  
   
-3.  Verwenden des <xref:System.ServiceModel.EndpointAddress10>-Objekts, um einen Kanal zu erstellen, um ein sitzungsbasiertes Objekt zu erhalten.  
+3. Verwenden des <xref:System.ServiceModel.EndpointAddress10>-Objekts, um einen Kanal zu erstellen, um ein sitzungsbasiertes Objekt zu erhalten.  
   
-4.  Aufrufen der Methoden `SetCurrentValue` und `GetCurrentValue`, um zu veranschaulichen, dass über mehrere Aufrufe hinweg dieselbe Objektinstanz verwendet wird.  
+4. Aufrufen der Methoden `SetCurrentValue` und `GetCurrentValue`, um zu veranschaulichen, dass über mehrere Aufrufe hinweg dieselbe Objektinstanz verwendet wird.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -422,6 +422,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einfache WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Entwerfen und Implementieren von Diensten](../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md)

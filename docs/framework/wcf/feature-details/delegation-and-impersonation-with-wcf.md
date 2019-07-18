@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13e58339e55b2071e4c1979de6c4e130fe4c9e32
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122238"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486954"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegierung und Identitätswechsel mit WCF
 Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um den Clientzugriff auf die Ressourcen einer Dienstdomäne zu beschränken. Dienstdomänenressourcen können entweder Computerressourcen, wie lokale Dateien (Identitätswechsel), oder eine Ressource auf einem anderen Computer, z. B. eine Dateifreigabe (Delegierung), sein. Eine Beispielanwendung finden Sie unter [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Ein Beispiel zur Verwendung von Identitätswechsel finden Sie unter [Vorgehensweise: Annehmen der Clientidentität für einen Dienst](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -37,27 +37,27 @@ Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um d
 ### <a name="cached-token-impersonation"></a>Identitätswechsel mit im Cache gespeichertem Token  
  Sie können einen Identitätswechsel mit einem im Cache gespeicherten Token folgendermaßen ausführen:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, und <xref:System.ServiceModel.NetTcpBinding> mit einem Windows-Clientanmeldeinformationen.  
+- Mit<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>und <xref:System.ServiceModel.NetTcpBinding> mit Windows-Clientanmeldeinformationen.  
   
--   <xref:System.ServiceModel.BasicHttpBinding> mit einem <xref:System.ServiceModel.BasicHttpSecurityMode> legen Sie auf die <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> Anmeldeinformationen oder einer anderen standardbindung, bei der präsentiert der Client Benutzernamen-Anmeldeinformationen, die der Dienst einem gültigen Windows-Konto zuordnen können.  
+- Mit<xref:System.ServiceModel.BasicHttpBinding> , mit einem <xref:System.ServiceModel.BasicHttpSecurityMode> , der auf die <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> -Anmeldeinformationen eingestellt ist, oder einer anderen Standardbindung, bei der der Client Benutzernamen-Anmeldeinformationen präsentiert, die der Dienst einem gültigen Windows-Konto zuordnen kann.  
   
--   Mit jeder <xref:System.ServiceModel.Channels.CustomBinding> , die Windows-Clientanmeldeinformationen verwendet, bei denen `requireCancellation` auf `true`eingestellt ist. (Die Eigenschaft ist für folgende Klassen verfügbar: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> und <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Bei Verwendung einer sicheren Konversation auf der Bindung muss die `requireCancellation`-Eigenschaft auch auf `true` eingestellt sein.  
+- Mit jeder <xref:System.ServiceModel.Channels.CustomBinding> , die Windows-Clientanmeldeinformationen verwendet, bei denen `requireCancellation` auf `true`eingestellt ist. (Die Eigenschaft ist für folgende Klassen verfügbar: <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>, <xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters> und <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters>.) Bei Verwendung einer sicheren Konversation auf der Bindung muss die `requireCancellation`-Eigenschaft auch auf `true` eingestellt sein.  
   
--   Mit jeder <xref:System.ServiceModel.Channels.CustomBinding> , bei der der Client Benutzernamen-Anmeldeinformationen präsentiert. Bei Verwendung einer sicheren Konversation auf der Bindung muss die `requireCancellation` -Eigenschaft auch auf `true`eingestellt sein.  
+- Mit jeder <xref:System.ServiceModel.Channels.CustomBinding> , bei der der Client Benutzernamen-Anmeldeinformationen präsentiert. Bei Verwendung einer sicheren Konversation auf der Bindung muss die `requireCancellation` -Eigenschaft auch auf `true`eingestellt sein.  
   
 ### <a name="s4u-based-impersonation"></a>Auf S4U basierender Identitätswechsel  
  Sie können einen auf S4U basierenden Identitätswechsel folgendermaßen ausführen:  
   
--   <xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>, und <xref:System.ServiceModel.NetTcpBinding> mit zertifikatclient-Anmeldeinformationen, die der Dienst einem gültigen Windows-Konto zuordnen können.  
+- Mit<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>und <xref:System.ServiceModel.NetTcpBinding> mit Zertifikatclient-Anmeldeinformationen, die der Dienst einem gültigen Windows-Konto zuordnen kann.  
   
--   Mit jeder <xref:System.ServiceModel.Channels.CustomBinding> , die Windows-Clientanmeldeinformationen verwendet, bei denen die `requireCancellation` -Eigenschaft auf `false`eingestellt ist.  
+- Mit jeder <xref:System.ServiceModel.Channels.CustomBinding> , die Windows-Clientanmeldeinformationen verwendet, bei denen die `requireCancellation` -Eigenschaft auf `false`eingestellt ist.  
   
--   Mit jeder <xref:System.ServiceModel.Channels.CustomBinding> , die einen Benutzernamen oder Windows-Clientanmeldeinformationen und eine sichere Konversation verwendet, wobei die `requireCancellation` -Eigenschaft auf `false`eingestellt ist.  
+- Mit jeder <xref:System.ServiceModel.Channels.CustomBinding> , die einen Benutzernamen oder Windows-Clientanmeldeinformationen und eine sichere Konversation verwendet, wobei die `requireCancellation` -Eigenschaft auf `false`eingestellt ist.  
   
  Inwieweit der Dienst die Identität des Clients annehmen kann, hängt von den Rechten ab, die das Dienstkonto beim Versuch des Identitätswechsels besitzt, vom verwendeten Typ des Identitätswechsels und möglicherweise vom Ausmaß des Identitätswechsels, den der Client zulässt.  
   
 > [!NOTE]
->  Wenn Client und Dienst auf demselben Computer ausgeführt werden und der Client unter einem Systemkonto (z. B. unter `Local System` oder `Network Service`) ausgeführt wird, kann kein Clientidentitätswechsel vorgenommen werden, wenn mit Token für den Sicherheitszustandskontext eine Sicherheitsverbindung hergestellt wird. Eine Windows Forms- oder Konsolenanwendung wird in der Regel unter dem derzeit angemeldeten Konto ausgeführt, sodass für dieses Konto standardmäßig ein Identitätswechsel durchgeführt werden kann. Wenn es sich bei dem Client jedoch um eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Seite handelt, die auf [!INCLUDE[iis601](../../../../includes/iis601-md.md)] oder [!INCLUDE[iisver](../../../../includes/iisver-md.md)]gehostet wird, wird der Client standardmäßig unter dem `Network Service` -Konto ausgeführt. Alle vom System bereitgestellten Bindungen, die Sicherheitssitzungen unterstützen, verwenden standardmäßig ein zustandsloses Token für den Sicherheitskontext. Wenn es sich bei dem Client jedoch um eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Seite handelt und sichere Sitzungen mit zustandsbehafteten SCTs verwendet werden, kann kein Clientidentitätswechsel durchgeführt werden. Weitere Informationen zur Verwendung von zustandsbehafteten SCTs in einer sicheren Sitzung finden Sie unter [Vorgehensweise: Erstellen Sie einen Sicherheitskontext für eine sichere Sitzung Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+>  Wenn Client und Dienst auf demselben Computer ausgeführt werden und der Client unter einem Systemkonto (z. B. unter `Local System` oder `Network Service`) ausgeführt wird, kann kein Clientidentitätswechsel vorgenommen werden, wenn mit Token für den Sicherheitszustandskontext eine Sicherheitsverbindung hergestellt wird. Eine Windows Forms- oder Konsolenanwendung wird in der Regel unter dem derzeit angemeldeten Konto ausgeführt, sodass für dieses Konto standardmäßig ein Identitätswechsel durchgeführt werden kann. Jedoch wenn der Client ist eine ASP.NET-Seite auf dieser Seite in IIS 6.0 oder IIS 7.0 gehostet wird, und der Client führt unter der `Network Service` standardmäßig ausgeführt werden. Alle vom System bereitgestellten Bindungen, die Sicherheitssitzungen unterstützen, verwenden standardmäßig ein zustandsloses Token für den Sicherheitskontext. Allerdings kann nicht wenn der Client eine ASP.NET-Seite ist und sichere Sitzungen mit zustandsbehafteten SCTs verwendet werden, der Client angenommen werden. Weitere Informationen zur Verwendung von zustandsbehafteten SCTs in einer sicheren Sitzung finden Sie unter [Vorgehensweise: Erstellen Sie einen Sicherheitskontext für eine sichere Sitzung Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>Identitätswechsel in einer Dienstmethode: Deklaratives Modell  
  Die meisten Identitätswechselszenarien umfassen das Ausführen der Dienstmethode im Aufruferkontext. WCF bietet eine Identitätswechselfunktion, die dadurch erleichtert, indem der Benutzer an die Identitätswechsel-Anforderung in die <xref:System.ServiceModel.OperationBehaviorAttribute> Attribut. Z. B. in den folgenden Code, die WCF-Infrastruktur nimmt die Identität des Aufrufers vor dem Ausführen der `Hello` Methode. Jeder Versuch, auf die systemeigenen Ressourcen innerhalb der `Hello` -Methode zuzugreifen, ist nur erfolgreich, wenn die Zugriffsteuerungsliste der Ressource dem Aufrufer Zugriffsrechte erlaubt. Zum Aktivieren des Identitätswechsels legen Sie die <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> -Eigenschaft auf einen der <xref:System.ServiceModel.ImpersonationOption> -Enumerationswerte fest, entweder auf <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> oder auf <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>, wie im folgenden Beispiel dargestellt.  
@@ -111,7 +111,7 @@ Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um d
   
  In der folgenden Tabelle wird die Identitätswechselebene angegeben, die der Dienst bei einem Identitätswechsel mit einem im Cache gespeicherten Token erhält.  
   
-|`AllowedImpersonationLevel` Wert|Dienst `SeImpersonatePrivilege`|Dienst und Client sind delegierungsfähig.|Zwischengespeicherte token `ImpersonationLevel`|  
+|`AllowedImpersonationLevel` -Wert|Der Dienst hat das `SeImpersonatePrivilege`|Dienst und Client sind delegierungsfähig.|`ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonym|Ja|n/v|Identitätswechsel|  
 |Anonym|Nein|n/v|Identifikation|  
@@ -125,7 +125,7 @@ Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um d
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Identitätswechselebene aus Benutzernamen-Anmeldeinformationen und Identitätswechsel mit im Cache gespeichertem Token  
  Übergeben Sie dem Dienst an, seinen Benutzernamen und Kennwort, einem Client ermöglicht WCF an, als dieser Benutzer anzumelden. dies dem Festlegen entspricht der `AllowedImpersonationLevel` Eigenschaft <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. (Die `AllowedImpersonationLevel` ist in der <xref:System.ServiceModel.Security.WindowsClientCredential>-Klasse und in der <xref:System.ServiceModel.Security.HttpDigestClientCredential>-Klasse verfügbar.) In der folgenden Tabelle wird die Identitätswechselebene angegeben, die erhalten wird, wenn der Dienst Benutzernamen-Anmeldeinformationen empfängt.  
   
-|`AllowedImpersonationLevel`|Dienst `SeImpersonatePrivilege`|Dienst und Client sind delegierungsfähig.|Zwischengespeicherte token `ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|Der Dienst hat das `SeImpersonatePrivilege`|Dienst und Client sind delegierungsfähig.|`ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |n/v|Ja|Ja|Delegierung|  
 |n/v|Ja|Nein|Identitätswechsel|  
@@ -133,7 +133,7 @@ Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um d
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>Identitätswechselebene aus einem auf S4U basierenden Identitätswechsel  
   
-|Dienst `SeTcbPrivilege`|Dienst `SeImpersonatePrivilege`|Dienst und Client sind delegierungsfähig.|Zwischengespeicherte token `ImpersonationLevel`|  
+|Der Dienst hat das `SeTcbPrivilege`|Der Dienst hat das `SeImpersonatePrivilege`|Dienst und Client sind delegierungsfähig.|`ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Ja|Ja|n/v|Identitätswechsel|  
 |Ja|Nein|n/v|Identifikation|  
@@ -191,19 +191,19 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Konfigurieren einer Anwendung für die Verwendung der eingeschränkten Delegierung  
  Die eingeschränkte Delegierung kann erst verwendet werden, nachdem Absender, Empfänger und Domänencontroller entsprechend konfiguriert wurden. Die folgende Prozedur listet die Schritte auf, die eine eingeschränkte Delegierung ermöglichen. Nähere Angaben zu den Unterschieden zwischen Delegierung und eingeschränkter Delegierung finden Sie in dem Abschnitt unter [Windows Server 2003 Kerberos Extensions](https://go.microsoft.com/fwlink/?LinkId=100194) , der sich mit eingeschränkter Delegierung befasst (Seite möglicherweise auf Englisch).  
   
-1.  Deaktivieren Sie auf dem Domänencontroller das Kontrollkästchen **Konto ist vertraulich und kann nicht delegiert werden** für das Konto, unter dem die Clientanwendung ausgeführt wird.  
+1. Deaktivieren Sie auf dem Domänencontroller das Kontrollkästchen **Konto ist vertraulich und kann nicht delegiert werden** für das Konto, unter dem die Clientanwendung ausgeführt wird.  
   
-2.  Aktivieren Sie auf dem Domänencontroller das Kontrollkästchen **Konto wird für Delegierungszwecke vertraut** für das Konto, unter dem die Clientanwendung ausgeführt wird.  
+2. Aktivieren Sie auf dem Domänencontroller das Kontrollkästchen **Konto wird für Delegierungszwecke vertraut** für das Konto, unter dem die Clientanwendung ausgeführt wird.  
   
-3.  Konfigurieren Sie auf dem Domänencontroller den Computer der mittleren Schicht, sodass diesem für Delegierungszwecke vertraut wird, indem Sie auf die Option **Computer für Delegierungszwecke vertrauen** klicken.  
+3. Konfigurieren Sie auf dem Domänencontroller den Computer der mittleren Schicht, sodass diesem für Delegierungszwecke vertraut wird, indem Sie auf die Option **Computer für Delegierungszwecke vertrauen** klicken.  
   
-4.  Konfigurieren Sie auf dem Domänencontroller den Computer der mittleren Schicht für die Verwendung der eingeschränkten Delegierung, indem Sie auf die Option **Computer nur für Delegierungszwecke angegebener Dienste vertrauen** klicken.  
+4. Konfigurieren Sie auf dem Domänencontroller den Computer der mittleren Schicht für die Verwendung der eingeschränkten Delegierung, indem Sie auf die Option **Computer nur für Delegierungszwecke angegebener Dienste vertrauen** klicken.  
   
  Ausführlichere Anweisungen zum Konfigurieren der eingeschränkten Delegierung finden Sie in den folgenden MSDN-Themen:  
   
--   [Problembehandlung der Kerberos-Delegierung (Seite möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [Problembehandlung der Kerberos-Delegierung (Seite möglicherweise auf Englisch)](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Kerberos-Protokollübergang und eingeschränkte Delegierung](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Kerberos-Protokollübergang und eingeschränkte Delegierung](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -220,7 +220,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ChannelFactory%601>
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
-- [Identitätswechsel und Transportsicherheit](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
+- [Verwenden von Identitätswechsel mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [Durchführen eines Identitätswechsels für den Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
-- [Vorgehensweise: Annahme der Clientidentität durch einen Dienst](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Vorgehensweise: Annehmen der Clientidentität für einen Dienst](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

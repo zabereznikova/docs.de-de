@@ -3,11 +3,11 @@ title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
 ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704127"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataContractSerializer>.  

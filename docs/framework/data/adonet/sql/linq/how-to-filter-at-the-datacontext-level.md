@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 15505cd7-0df2-427a-9f86-e0f96f60ee2e
 ms.openlocfilehash: 343cffa9b1c034068e5abcc652e936f89ee6a992
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903005"
 ---
 # <a name="how-to-filter-at-the-datacontext-level"></a>Vorgehensweise: Filtern auf DataContext-Ebene
 Sie können `EntitySets` auf `DataContext`-Ebene filtern. Solche Filter gelten für alle Abfragen, die mit dieser <xref:System.Data.Linq.DataContext>-Instanz erstellt wurden.  

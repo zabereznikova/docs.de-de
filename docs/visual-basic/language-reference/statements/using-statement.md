@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 111dba1316691b9c6c999b4c021ac06dac7c7a8d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843200"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615102"
 ---
 # <a name="using-statement-visual-basic"></a>Using-Anweisung (Visual Basic)
 Deklariert den Beginn einer `Using` blockieren und ruft optional die Systemressourcen, die steuert, der Block ab.  
@@ -61,11 +61,11 @@ End Using
   
  Ein `Using` Block besteht aus drei Teilen: Abruf, Verwendung und Freigabe.  
   
--   *Übernahme* bedeutet, dass eine Variable erstellen und initialisieren es auf die Systemressource verweist. Die `Using` Anweisung kann eine oder mehrere Ressourcen abrufen, oder Sie genau eine Ressource vor dem Eingeben des Blocks abrufen können, und stellen sie die `Using` Anweisung. Wenn Sie angeben, `resourceexpression`, Sie müssen die Ressource abrufen, bevor Sie übergeben der Steuerung an die `Using` Anweisung.  
+- *Übernahme* bedeutet, dass eine Variable erstellen und initialisieren es auf die Systemressource verweist. Die `Using` Anweisung kann eine oder mehrere Ressourcen abrufen, oder Sie genau eine Ressource vor dem Eingeben des Blocks abrufen können, und stellen sie die `Using` Anweisung. Wenn Sie angeben, `resourceexpression`, Sie müssen die Ressource abrufen, bevor Sie übergeben der Steuerung an die `Using` Anweisung.  
   
--   *Nutzung* bedeutet, dass Zugriff auf die Ressourcen und Aktionen mit der sie ausgeführt werden. Die Anweisungen zwischen `Using` und `End Using` die Nutzung von Ressourcen darstellen.  
+- *Nutzung* bedeutet, dass Zugriff auf die Ressourcen und Aktionen mit der sie ausgeführt werden. Die Anweisungen zwischen `Using` und `End Using` die Nutzung von Ressourcen darstellen.  
   
--   *Beseitigung* aufrufen bedeutet, dass die <xref:System.IDisposable.Dispose%2A> Methode für das Objekt in `resourcename`. Dadurch wird das Objekt seine Ressourcen sauber beendet. Die `End Using` Anweisung löscht Ressourcen in der `Using` des TextBlock-Steuerelement.  
+- *Beseitigung* aufrufen bedeutet, dass die <xref:System.IDisposable.Dispose%2A> Methode für das Objekt in `resourcename`. Dadurch wird das Objekt seine Ressourcen sauber beendet. Die `End Using` Anweisung löscht Ressourcen in der `Using` des TextBlock-Steuerelement.  
   
 ## <a name="behavior"></a>Verhalten  
  Ein `Using` Block verhält sich wie ein `Try`... `Finally` Konstruktion, in dem die `Try` Block verwendet die Ressourcen und die `Finally` Block freigegeben werden. Aus diesem Grund die `Using` Block gewährleistet die Freigabe von Ressourcen, unabhängig davon, wie Sie den Block zu beenden. Dies gilt auch bei einem Ausnahmefehler, mit Ausnahme von einer <xref:System.StackOverflowException>.  

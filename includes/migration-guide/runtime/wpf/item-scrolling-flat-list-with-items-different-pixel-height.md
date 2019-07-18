@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: eb3cfdfd39444536f423b65166a3413db67a0e01
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761293"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802941"
 ---
 ### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Elementscrolling durch eine flache Liste mit Elementen mit unterschiedlicher Pixelhöhe
 

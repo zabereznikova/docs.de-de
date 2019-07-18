@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8251d21fe535f85cc6abd0a7bc6c96ab320007f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090237"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773857"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx-Funktion
 Ruft den Anzeigenamen für die nach der Richtlinie für eine Assembly ab.  
@@ -30,7 +30,7 @@ Ruft den Anzeigenamen für die nach der Richtlinie für eine Assembly ab.
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT PreBindAssemblyEx (  
     [in]  IApplicationContext *pAppCtx,  
     [in]  IAssemblyName       *pName,  
@@ -74,4 +74,4 @@ HRESULT PreBindAssemblyEx (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Fusion – Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

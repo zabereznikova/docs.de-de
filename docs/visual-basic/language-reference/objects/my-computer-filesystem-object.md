@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
 ms.openlocfilehash: 5ebdf2ac42ddd4e6e201559d9fc6711b19cbdd60
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949330"
 ---
 # <a name="mycomputerfilesystem-object"></a>My.Computer.FileSystem-Objekt
 Stellt Eigenschaften und Methoden für die Arbeit mit Laufwerken, Dateien und Verzeichnissen bereit.  

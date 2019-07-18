@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 413e56a65f4966467f487787172973834ac4a65a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e6da6fabc6632bea58b28a00f55d05f4c2cc5b46
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496871"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762673"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a>ICorDebugModule::GetClassFromToken-Methode
 Ruft das Metadatentoken angegebene Klasse ab.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT GetClassFromToken(  
     [in]  mdTypeDef        typeDef,  
     [out] ICorDebugClass **ppClass  

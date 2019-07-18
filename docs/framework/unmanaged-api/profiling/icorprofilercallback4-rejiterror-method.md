@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66f152279a21f28b54acebbf0be7c65bb73efa70
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150591"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758151"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError-Methode
 Benachrichtigt den Profiler an, der just-in-Time-Compiler (JIT) ein Fehler im Prozess eine Neukompilierung.  
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```cpp  
 HRESULT ReJITError(  
     [in] ModuleID    moduleId,  
     [in] mdMethodDef methodId,  

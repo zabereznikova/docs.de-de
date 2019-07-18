@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 618fc88a2ca92ec911a3fbd82de580403d924430
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3335da503b6fb9c33e44266997cc945214a3a365
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841099"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913072"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>Die Verwendung der Iterationsvariablen in einem Lambda-Ausdruck kann zu unerwarteten Ergebnissen führen
 Verwendung der Iterationsvariablen in einem Lambda-Ausdruck möglicherweise unerwartete Ergebnisse. Stattdessen erstellen Sie eine lokale Variable innerhalb der Schleife aus, und weisen Sie diesem den Wert der Iterationsvariablen.  
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Weisen Sie den Wert für die Iterationsvariable zu einer lokalen Variablen, und verwenden Sie die lokale Variable im Lambda-Ausdruck.  
+- Weisen Sie den Wert für die Iterationsvariable zu einer lokalen Variablen, und verwenden Sie die lokale Variable im Lambda-Ausdruck.  
   
 ```vb  
 Module Module1  

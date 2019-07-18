@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afaa8e118bb21e5c1e4f1c53b1d0d29ca6bb3bf5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e5b6a32aa465700fb316bf2269c4d057ff823443
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030839"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590334"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Plattformübergreifende Entwicklung mit der portablen Klassenbibliothek
 
@@ -50,13 +50,13 @@ Wenn Sie die Portabilität auswerten möchten Ihre Assemblys, bevor Sie Änderun
 
 Die Typen und Member, die in Projekten für portable Klassenbibliotheken verfügbar sind, werden von mehreren Kompatibilitätsfaktoren beschränkt:
 
--   Sie müssen von allen Zielen, die Sie ausgewählt haben, gemeinsam nutzbar sein.
+- Sie müssen von allen Zielen, die Sie ausgewählt haben, gemeinsam nutzbar sein.
 
--   Sie müssen sich auf diesen Zielen in ähnlicher Weise verhalten.
+- Sie müssen sich auf diesen Zielen in ähnlicher Weise verhalten.
 
--   Sie dürfen keine Kandidaten für Veraltung sein.
+- Sie dürfen keine Kandidaten für Veraltung sein.
 
--   Sie müssen jedoch in einer übertragbaren Umgebung einen Sinn ergeben, insbesondere wenn sie nicht übertragbare Member unterstützen.
+- Sie müssen jedoch in einer übertragbaren Umgebung einen Sinn ergeben, insbesondere wenn sie nicht übertragbare Member unterstützen.
 
 Wird ein Member in der portablen Klassenbibliothek und für Ihre Ziele unterstützt, erscheint es in Ihrem Projekt in IntelliSense. Beachten Sie aber, dass eine API zwar in der portablen Klassenbibliothek unterstützt werden kann, ob Sie die API jedoch verwenden können, hängt von den gewählten Zielen ab.
 
@@ -78,9 +78,9 @@ Wenn Sie eine universelle Windows-app erstellen, die auf die Assembly einer port
 
 Wenn Sie eine .NET Framework-App bereitstellen, die auf eine Assembly einer portablen Klassenbibliothek verweist, müssen Sie eine Abhängigkeit von der richtigen Version von .NET Framework angeben. Durch die Angabe dieser Abhängigkeit stellen Sie sicher, dass die erforderliche Version mit der App installiert wird.
 
--   Um eine Abhängigkeit mit ClickOnce-Bereitstellung zu erstellen: In **Projektmappen-Explorer**, wählen Sie den Projektknoten für das Projekt, das Sie veröffentlichen möchten. (Dies ist das Projekt, mit dem auf das Projekt der portablen Klassenbibliothek verwiesen wird.) Wählen Sie auf der Menüleiste **Projekt** > **Eigenschaften**, und wählen Sie dann die **veröffentlichen** Registerkarte. Auf der **veröffentlichen** Seite **Voraussetzungen**. Wählen Sie die erforderliche .NET Framework-Version als erforderliche Komponente aus.
+- So erstellen eine Abhängigkeit mit ClickOnce-Bereitstellung: In **Projektmappen-Explorer**, wählen Sie den Projektknoten für das Projekt, das Sie veröffentlichen möchten. (Dies ist das Projekt, mit dem auf das Projekt der portablen Klassenbibliothek verwiesen wird.) Wählen Sie auf der Menüleiste **Projekt** > **Eigenschaften**, und wählen Sie dann die **veröffentlichen** Registerkarte. Auf der **veröffentlichen** Seite **Voraussetzungen**. Wählen Sie die erforderliche .NET Framework-Version als erforderliche Komponente aus.
 
--   Um eine Abhängigkeit mit einem Setup-Projekt zu erstellen: In **Projektmappen-Explorer**, wählen Sie das Setupprojekt. Wählen Sie auf der Menüleiste **Projekt** > **Eigenschaften** > **Voraussetzungen**. Wählen Sie die erforderliche .NET Framework-Version als erforderliche Komponente aus.
+- So erstellen eine Abhängigkeit mit einem Setup-Projekt: In **Projektmappen-Explorer**, wählen Sie das Setupprojekt. Wählen Sie auf der Menüleiste **Projekt** > **Eigenschaften** > **Voraussetzungen**. Wählen Sie die erforderliche .NET Framework-Version als erforderliche Komponente aus.
 
 Weitere Informationen zum Bereitstellen von .NET Framework-apps finden Sie unter [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md).
 

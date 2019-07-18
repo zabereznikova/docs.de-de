@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 209a0f03197e0f77e23be0dc1170789688f3e09a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2d7f50952a485c09e74462f3ad731d710b8f9198
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967216"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584263"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei (C#-Programmierhandbuch)
 In folgendem C#-Codebeispiel wird die Verwendung von Plattformaufrufdiensten zum Abspielen einer Audiodatei im Waveformat im Windows-Betriebssystem veranschaulicht.  
@@ -29,20 +29,15 @@ In folgendem C#-Codebeispiel wird die Verwendung von Plattformaufrufdiensten zum
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
-### <a name="to-compile-the-code"></a>Kompilieren des Codes  
+1. Erstellen Sie in Visual Studio ein neuen Windows-Anwendungsprojekt mit C# und nennen Sie es **WinSound**.  
   
-1.  Erstellen Sie in Visual Studio ein neuen Windows-Anwendungsprojekt mit C# und nennen Sie es **WinSound**.  
+2. Kopieren Sie den oben stehenden Code, und fügen Sie diesen über dem Inhalt der `Form1.cs`-Datei ein.  
   
-2.  Kopieren Sie den oben stehenden Code, und fügen Sie diesen über dem Inhalt der `Form1.cs`-Datei ein.  
-  
-3.  Kopieren Sie folgenden Code und fügen Sie ihn in der `Form1.Designer.cs`-Datei in der `InitializeComponent()`-Methode ein, und zwar immer nach vorhandenem Code.  
+3. Kopieren Sie folgenden Code und fügen Sie ihn in der `Form1.Designer.cs`-Datei in der `InitializeComponent()`-Methode ein, und zwar immer nach vorhandenem Code.  
   
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
-4.  Kompilieren Sie den Code, und führen Sie diesen aus.  
-  
-## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- Weitere Informationen finden Sie unter [Sicherheit in .NET](../../../standard/security/index.md).  
+4. Kompilieren Sie den Code, und führen Sie diesen aus.  
   
 ## <a name="see-also"></a>Siehe auch
 
