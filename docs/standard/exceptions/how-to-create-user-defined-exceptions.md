@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen benutzerdefinierter Ausnahmen'
+title: 'Vorgehensweise: Erstellen benutzerdefinierter Ausnahmen'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dca313fad896ac1c8eac37c853657bea44a8b777
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 42860f549877436f43bfdc20fb3abde91d36101d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192235"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783192"
 ---
-# <a name="how-to-create-user-defined-exceptions"></a><span data-ttu-id="1dd12-102">Erstellen benutzerdefinierter Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="1dd12-102">How to create user-defined exceptions</span></span>
+# <a name="how-to-create-user-defined-exceptions"></a><span data-ttu-id="c06db-102">Erstellen benutzerdefinierter Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="c06db-102">How to create user-defined exceptions</span></span>
 
-<span data-ttu-id="1dd12-103">.NET stellt eine Hierarchie aus Ausnahmeklassen bereit, die letztendlich von der <xref:System.Exception>-Basisklasse abgeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="1dd12-103">.NET provides a hierarchy of exception classes ultimately derived from the base class <xref:System.Exception>.</span></span> <span data-ttu-id="1dd12-104">Wenn keine der vordefinierten Ausnahmen Ihre Anforderungen erfüllt, können Sie durch Ableiten von der <xref:System.Exception>-Klasse eigene Ausnahmeklassen erstellen.</span><span class="sxs-lookup"><span data-stu-id="1dd12-104">However, if none of the predefined exceptions meets your needs, you can create your own exception classes by deriving from the <xref:System.Exception> class.</span></span>
+<span data-ttu-id="c06db-103">.NET stellt eine Hierarchie aus Ausnahmeklassen bereit, die letztendlich von der <xref:System.Exception>-Basisklasse abgeleitet werden.</span><span class="sxs-lookup"><span data-stu-id="c06db-103">.NET provides a hierarchy of exception classes ultimately derived from the base class <xref:System.Exception>.</span></span> <span data-ttu-id="c06db-104">Wenn keine der vordefinierten Ausnahmen Ihre Anforderungen erfüllt, können Sie durch Ableiten von der <xref:System.Exception>-Klasse eigene Ausnahmeklassen erstellen.</span><span class="sxs-lookup"><span data-stu-id="c06db-104">However, if none of the predefined exceptions meets your needs, you can create your own exception classes by deriving from the <xref:System.Exception> class.</span></span>
 
-<span data-ttu-id="1dd12-105">Beim Erstellen eigener Ausnahmen muss der Klassenname der benutzerdefinierten Ausnahme auf das Wort „Exception“ enden. Implementieren Sie außerdem die drei allgemeinen Konstruktoren, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="1dd12-105">When creating your own exceptions, end the class name of the user-defined exception with the word "Exception," and implement the three common constructors, as shown in the following example.</span></span> <span data-ttu-id="1dd12-106">Das Beispiel definiert eine neue Ausnahmeklasse namens `EmployeeListNotFoundException`.</span><span class="sxs-lookup"><span data-stu-id="1dd12-106">The example defines a new exception class named `EmployeeListNotFoundException`.</span></span> <span data-ttu-id="1dd12-107">Die Klasse wird von <xref:System.Exception> abgeleitet und enthält drei Konstruktoren.</span><span class="sxs-lookup"><span data-stu-id="1dd12-107">The class is derived from <xref:System.Exception> and includes three constructors.</span></span>
+<span data-ttu-id="c06db-105">Beim Erstellen eigener Ausnahmen muss der Klassenname der benutzerdefinierten Ausnahme auf das Wort „Exception“ enden. Implementieren Sie außerdem die drei allgemeinen Konstruktoren, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="c06db-105">When creating your own exceptions, end the class name of the user-defined exception with the word "Exception", and implement the three common constructors, as shown in the following example.</span></span> <span data-ttu-id="c06db-106">Das Beispiel definiert eine neue Ausnahmeklasse namens `EmployeeListNotFoundException`.</span><span class="sxs-lookup"><span data-stu-id="c06db-106">The example defines a new exception class named `EmployeeListNotFoundException`.</span></span> <span data-ttu-id="c06db-107">Die Klasse wird von <xref:System.Exception> abgeleitet und enthält drei Konstruktoren.</span><span class="sxs-lookup"><span data-stu-id="c06db-107">The class is derived from <xref:System.Exception> and includes three constructors.</span></span>
 
 [!code-cpp[dg_exceptionDesign#14](../../../samples/snippets/cpp/VS_Snippets_CLR/dg_exceptionDesign/cpp/example2.cpp#14)]
 [!code-csharp[dg_exceptionDesign#14](../../../samples/snippets/csharp/VS_Snippets_CLR/dg_exceptionDesign/cs/example2.cs#14)]
 [!code-vb[dg_exceptionDesign#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/dg_exceptionDesign/vb/example2.vb#14)]  
 
 > [!NOTE]
-> <span data-ttu-id="1dd12-108">In Situationen, in denen Sie Remoting verwenden, müssen Sie sicherstellen, dass die Metadaten für alle benutzerdefinierten Ausnahmen sowohl auf dem Server (Aufgerufener) als auch für den Client (Proxyobjekt oder Aufrufer) verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="1dd12-108">In situations where you are using remoting, you must ensure that the metadata for any user-defined exceptions is available at the server (callee) and to the client (the proxy object or caller).</span></span> <span data-ttu-id="1dd12-109">Weitere Informationen finden Sie unter [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="1dd12-109">For more information, see [Best practices for exceptions](best-practices-for-exceptions.md).</span></span>
+> <span data-ttu-id="c06db-108">In Situationen, in denen Sie Remoting verwenden, müssen Sie sicherstellen, dass die Metadaten für alle benutzerdefinierten Ausnahmen sowohl auf dem Server (Aufgerufener) als auch für den Client (Proxyobjekt oder Aufrufer) verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="c06db-108">In situations where you are using remoting, you must ensure that the metadata for any user-defined exceptions is available at the server (callee) and to the client (the proxy object or caller).</span></span> <span data-ttu-id="c06db-109">Weitere Informationen finden Sie unter [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md).</span><span class="sxs-lookup"><span data-stu-id="c06db-109">For more information, see [Best practices for exceptions](best-practices-for-exceptions.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1dd12-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1dd12-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c06db-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c06db-110">See also</span></span>
 
-- [<span data-ttu-id="1dd12-111">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="1dd12-111">Exceptions</span></span>](index.md)
+- [<span data-ttu-id="c06db-111">Ausnahmen</span><span class="sxs-lookup"><span data-stu-id="c06db-111">Exceptions</span></span>](index.md)
