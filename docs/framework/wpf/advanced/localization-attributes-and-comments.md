@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: a242dc1f69c79b2c1a67c1a9235d3e942553caf1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598729"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330996"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalisierungsattribute und -kommentare
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungskommentare sind Eigenschaften innerhalb des [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Quellcodes, die vom Entwickler verfügbar gemacht werden um Regeln und Hinweise für die Lokalisierung bereitzustellen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungkommentare enthalten zwei Arten von Informationen: Lokalisierbarkeitsattribute und formfreie Lokalisierungskommentare. Lokalisierbarkeitsattribute werden von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Lokalisierungs-API verwendet, um anzugeben, welche Ressourcen lokalisiert werden sollen. Formfreie Kommentare umfassen alle Informationen, die der Anwendungsentwickler beinhaltet haben möchte.  
@@ -33,7 +33,7 @@ ms.locfileid: "64598729"
   
     - **Alle** – Es werden sowohl Kommentare als auch Attribute aus der Assembly entfernt und in einer separaten LocFile abgelegt.  
   
-4. Wenn lokalisierbare Ressourcen aus [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] extrahiert werden, werden die Lokalisierbarkeitsattribute von der [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)]-Lokalisierungs-API berücksichtigt.  
+4. Wenn lokalisierbare Ressourcen aus BAML extrahiert werden, werden die Lokalisier barkeits Attribute von der BAML-Lokalisierungs-API berücksichtigt.  
   
 5. Lokalisierungskommentardateien, die nur formfreie Kommentare enthalten, werden zu einem späteren Zeitpunkt in den Lokalisierungsprozess integriert.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "64598729"
   
  Diese Attribute können in jeder Reihenfolge durch ein Leerzeichen getrennt angegeben werden. Falls doppelte Attribute angegeben werden, überschreibt das letzte Attribut die vorherigen Attribute. So legt Localization.Attributes = "Unmodifiable Modifiable" beispielsweise Modifiability auf Modifiable fest, da es sich hierbei um den letzten Wert handelt.  
   
- Bearbeitbarkeit und Lesbarkeit sind selbsterklärend. Das Category-Attribut stellt vordefinierte Kategorien bereit, die den Lokalisierungsexperten beim Übersetzen von Text unterstützen. Kategorien wie Text, Label und Title geben dem Lokalisierungsexperten Informationen zum Übersetzen des Texts. Es gibt auch spezielle Kategorien: Keine "," erben, zu ignorieren, und NeverLocalize.  
+ Bearbeitbarkeit und Lesbarkeit sind selbsterklärend. Das Category-Attribut stellt vordefinierte Kategorien bereit, die den Lokalisierungsexperten beim Übersetzen von Text unterstützen. Kategorien wie Text, Label und Title geben dem Lokalisierungsexperten Informationen zum Übersetzen des Texts. Es gibt auch spezielle Kategorien: None, Vererbung, ignorieren und NeverLocalize.  
   
  In der folgenden Tabelle werden die Bedeutung der speziellen Kategorien erläutert.  
   
 |Kategorie|Bedeutung|  
 |--------------|-------------|  
-|Keiner|Der Zielwert besitzt keine definierte Kategorie.|  
+|None|Der Zielwert besitzt keine definierte Kategorie.|  
 |Inherit|Der Zielwert erbt seine Kategorie von seinem übergeordneten Element.|  
 |Ignorieren|Der Zielwert wird im Lokalisierungsprozess ignoriert. Ignore wirkt sich nur auf den aktuellen Wert aus. Untergeordnete Knoten werden nicht beeinflusst.|  
 |NeverLocalize|Der aktuelle Wert kann nicht lokalisiert werden. Diese Kategorie wird von den untergeordneten Elementen eines Elements geerbt.|  

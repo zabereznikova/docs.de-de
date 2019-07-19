@@ -4,19 +4,19 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: b945edca8bd739e6f122ed8b3e950508ecc28510
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: d8a1e36c0932de9bf50c109ea979a1e358795388
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268167"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331541"
 ---
-# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic-Compileroptionen nach Kategorien sortiert
-Die Visual Basic-Befehlszeilencompiler wird als eine Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (IDE) von Visual Studio bereitgestellt. Im folgenden finden eine Liste der Visual Basic-Befehlszeilencompiler Optionen nach Funktionskategorie sortiert.  
+# <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic von der Kategorie aufgelisteten Compileroptionen
+Der Visual Basic-Befehlszeilen Compiler wird als Alternative zum Kompilieren von Programmen in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio bereitgestellt. Im folgenden finden Sie eine Liste der Visual Basic Befehlszeilen-Compileroptionen, sortiert nach Funktions Kategorie.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="compiler-output"></a>Compiler-Ausgabe  
+## <a name="compiler-output"></a>Compilerausgabe  
   
 |Option|Zweck|  
 |---|---|  
@@ -39,13 +39,13 @@ Die Visual Basic-Befehlszeilencompiler wird als eine Alternative zum Kompilieren
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Verarbeitet Dokumentationskommentare zu einer XML-Datei.|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Bewirkt, dass der Compiler eine Assembly ausgibt, deren Inhalt im Binärformat über Kompilierungen identisch ist, wenn die Eingaben identisch sind.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt fest, den Compiler an, die .NET Compact Framework.|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Legt den Compiler als Ziel für den .NET Compact Framework fest.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Gibt eine Ausgabedatei an.|  
-|[/refonly](refonly-compiler-option.md)|Gibt nur eine Referenzassembly an.|
-|[/refout](refout-compiler-option.md)|Gibt den Ausgabepfad der Verweisassembly.|
+|[/refonly](refonly-compiler-option.md)|Gibt nur eine Verweisassembly aus.|
+|[/refout](refout-compiler-option.md)|Gibt den Ausgabepfad einer Verweisassembly an.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Gibt das Format der Ausgabe an.|  
   
-## <a name="net-assemblies"></a>Assemblys für .NET  
+## <a name="net-assemblies"></a>.NET-Assembly  
   
 |Option|Zweck|  
 |---|---|  
@@ -54,13 +54,13 @@ Die Visual Basic-Befehlszeilencompiler wird als eine Alternative zum Kompilieren
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importiert einen Namespace aus einer angegebenen Assembly.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Gibt einen Schlüsselcontainernamen für ein Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Gibt eine Datei mit einem Schlüssel oder Schlüsselpaar an, um einer Assembly einen starken Namen zuzuweisen.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Gibt den Speicherort der Assemblys, die auf die verwiesen wird durch die [-Verweis](../../../visual-basic/reference/command-line-compiler/reference.md) Option.|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Gibt den Speicherort der Assemblys an, auf die die Option [-Reference verweist](../../../visual-basic/reference/command-line-compiler/reference.md) .|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Importiert Metadaten aus einer Assembly.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Gibt den Namen der Assembly an, zu der dieses Modul gehört.|  
 |`-analyzer`|Führt die Analysetools aus dieser Assembly aus (Kurzform: -a)|  
 |`-additionalfile`|Benennt zusätzliche Dateien, die möglicherweise vom Analyzer verwendet werden, um Fehler oder Warnungen zu erzeugen, sich aber nicht direkt auf die Codegenerierung auswirken.|  
   
-## <a name="debuggingerror-checking"></a>Debuggen/fehlerüberprüfung  
+## <a name="debuggingerror-checking"></a>Debuggen/Fehlerüberprüfung  
   
 |Option|Zweck|  
 |---|---|  
@@ -111,9 +111,9 @@ Die Visual Basic-Befehlszeilencompiler wird als eine Alternative zum Kompilieren
 |[@ (Antwortdatei festlegen)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Legt eine Antwortdatei fest.|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Gibt die Basisadresse einer DLL an.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Gibt die für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie interne Compilerfehler von der Visual Basic-Compiler gemeldet werden sollen.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Gibt an, wie der Visual Basic Compiler interne Compilerfehler melden soll.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Informiert den Windows-Kernel, ob eine bestimmte ausführbare Datei ASLR mit hoher Entropie (Address Space Layout Randomization, Zufällige Anordnung des Layouts des Adressraums) unterstützt.|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Gibt an, die Klasse enthält die `Sub Main` Prozedur beim Start verwendet.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Gibt die Klasse an, die `Sub Main` die beim Start zu verwendende Prozedur enthält.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Führen Sie die Kompilierung nicht mit Vbc.rsp durch.|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Bewirkt, dass der Compiler nicht auf die Standardbibliotheken verweist.|  
 |[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|Weist den Compiler an, kein Anwendungsmanifest in die ausführbare Datei einzubetten.|  
@@ -124,7 +124,7 @@ Die Visual Basic-Befehlszeilencompiler wird als eine Alternative zum Kompilieren
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Gibt an, dass der Compiler ohne einen Verweis auf die Visual Basic Runtime Library oder mit einem Verweis auf eine bestimmte Laufzeitbibliothek kompilieren soll.|  
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die übertragbare ausführbare Datei (PE) eines Projekts eingebettet werden soll.|  
 |`-parallel[+&#124;-]`|Gibt an, ob parallele Builds (+) verwendet werden sollen.|  
-|`-checksumalgorithm:<alg>`|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256.|  
+|`-checksumalgorithm:<alg>`|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256. <br>Aufgrund von Konnektivitätsproblemen mit SHA1 empfiehlt Microsoft SHA256 oder eine bessere.|  
   
 ## <a name="see-also"></a>Siehe auch
 
