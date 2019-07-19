@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb3120887a1a42d01b8d8ddc3351d1209294ffc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677564"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663980"
 ---
 # <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke
 
@@ -44,26 +44,26 @@ Sie können Optionen für reguläre Ausdrücke mit einer von drei Methoden angeb
 
 - Im `options`-Parameter eines <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktors oder einer statischen (`Shared` in Visual Basic) Mustervergleichsmethode, z. B. <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> oder <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. Der `options`-Parameter ist eine bitweise OR-Kombination von aufgezählten <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Werten.
 
-    Wenn Optionen mit dem `options`-Parameter eines Klassenkonstruktors an eine <xref:System.Text.RegularExpressions.Regex>-Instanz übergeben werden, werden die Optionen der <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft zugewiesen. Die <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft gibt jedoch nicht die Inlineoptionen des eigentlichen Musters des regulären Ausdrucks wieder.
+  Wenn Optionen mit dem `options`-Parameter eines Klassenkonstruktors an eine <xref:System.Text.RegularExpressions.Regex>-Instanz übergeben werden, werden die Optionen der <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft zugewiesen. Die <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft gibt jedoch nicht die Inlineoptionen des eigentlichen Musters des regulären Ausdrucks wieder.
 
-    Dies wird im folgenden Beispiel veranschaulicht. Es verwendet den `options`-Parameter der <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode, um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu ermöglichen und das Ignorieren von Leerzeichenmustern zu aktivieren, wenn Wörter identifiziert werden, die mit dem Buchstaben "d" beginnen.
+  Dies wird im folgenden Beispiel veranschaulicht. Es verwendet den `options`-Parameter der <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode, um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu ermöglichen und das Ignorieren von Leerzeichenmustern zu aktivieren, wenn Wörter identifiziert werden, die mit dem Buchstaben "d" beginnen.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
-    [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
+  [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
+  [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
 - Durch das Übernehmen von Inlineoptionen in einem Muster eines regulären Ausdrucks mit der Syntax `(?imnsx-imnsx)`. Die Option gilt für das Muster ab dem Punkt, an dem die Option definiert wird, bis zum Ende des Musters oder zu dem Punkt, an dem die Definition der Option von einer anderen Inlineoption aufgehoben wird. Beachten Sie, dass die <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>-Eigenschaft einer <xref:System.Text.RegularExpressions.Regex>-Instanz diese Inlineoptionen nicht wiedergibt. Weitere Informationen finden Sie im Thema [Verschiedene Konstrukte](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
 
-    Dies wird im folgenden Beispiel veranschaulicht. Dabei werden Inlineoptionen verwendet, um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu ermöglichen und das Ignorieren von Leerzeichenmustern zu aktivieren, wenn Wörter identifiziert werden, die mit dem Buchstaben "d" beginnen.
+  Dies wird im folgenden Beispiel veranschaulicht. Dabei werden Inlineoptionen verwendet, um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu ermöglichen und das Ignorieren von Leerzeichenmustern zu aktivieren, wenn Wörter identifiziert werden, die mit dem Buchstaben "d" beginnen.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
-    [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
+  [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
+  [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
 - Durch das Übernehmen von Inlineoptionen in einem bestimmten Gruppierungskonstrukt in einem Muster eines regulären Ausdrucks mit der Syntax `(?imnsx-imnsx:`*Teilausdruck*`)`. Kein Vorzeichen vor einer Gruppe von Optionen aktiviert diese Optionen. Ein Minuszeichen deaktiviert sie. (`?` ist ein fester Bestandteil der Syntax des Sprachkonstrukts, der immer erforderlich ist, unabhängig davon, ob Optionen aktiviert oder deaktiviert sind.) Die Option wird nur auf diese Gruppe angewendet. Weitere Informationen finden Sie unter [Gruppierungskonstrukte](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-    Dies wird im folgenden Beispiel veranschaulicht. Dabei werden Inlineoptionen in einem Gruppierungskonstrukt verwendet, um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu ermöglichen und das Ignorieren von Leerzeichenmustern zu aktivieren, wenn Wörter identifiziert werden, die mit dem Buchstaben "d" beginnen.
+  Dies wird im folgenden Beispiel veranschaulicht. Dabei werden Inlineoptionen in einem Gruppierungskonstrukt verwendet, um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu ermöglichen und das Ignorieren von Leerzeichenmustern zu aktivieren, wenn Wörter identifiziert werden, die mit dem Buchstaben "d" beginnen.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
-    [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
+  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
+  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
 
 Wenn Optionen inline angegeben sind, deaktiviert ein Minuszeichen (`-`) vor einer Option oder einer Gruppe von Optionen diese Optionen. Das Inlinekonstrukt `(?ix-ms)` aktiviert z. B. die <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option und die <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>-Option und deaktiviert die <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>-Option und die <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>-Option. Alle Optionen für reguläre Ausdrücke sind standardmäßig deaktiviert.
 
@@ -172,7 +172,7 @@ Im folgenden Beispiel werden die Namen und Ergebnisse von Bowlern extrahiert und
 
 Das Muster für reguläre Ausdrücke `^(\w+)\s(\d+)\r*$` wird entsprechend der folgenden Tabelle definiert:
 
-|Muster|Beschreibung|
+|Muster|BESCHREIBUNG|
 |-------------|-----------------|
 |`^`|Am Anfang der Zeile beginnen.|
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|
@@ -229,7 +229,7 @@ Das folgende Beispiel zeigt Informationen zu den Übereinstimmungen an, die vom 
 
 Das Muster für reguläre Ausdrücke `\b\(?((?>\w+),?\s?)+[\.!?]\)?` ist entsprechend der folgenden Tabelle definiert.
 
-|Muster|Beschreibung|
+|Muster|BESCHREIBUNG|
 |-------------|-----------------|
 |`\b`|Bei einer Wortgrenze beginnen.|
 |`\(?`|Sucht nach einer Übereinstimmung mit null oder einem Vorkommen der öffnenden Klammer ("(").|
@@ -296,9 +296,9 @@ In den folgenden Fällen werden Leerzeichen in regulären Ausdrücken jedoch nic
 
 - Leerzeichen sind in Zeichenfolgen, die Sprachelemente einleiten, nicht zulässig. Beispiel:
 
-    - Das Sprachelement `(?:`*Teilausdruck*`)` stellt eine nicht erfassende Gruppe dar, und der `(?:`-Teil des Elements darf keine eingebetteten Leerzeichen enthalten. Das Muster `(? :`*subexpression*`)` löst zur Laufzeit eine <xref:System.ArgumentException> aus, da die Engine für reguläre Ausdrücke das Muster nicht analysieren kann und das Muster `( ?:`*subexpression*`)` findet keine Übereinstimmung zu *subexpression*.
+  - Das Sprachelement `(?:`*Teilausdruck*`)` stellt eine nicht erfassende Gruppe dar, und der `(?:`-Teil des Elements darf keine eingebetteten Leerzeichen enthalten. Das Muster `(? :`*subexpression*`)` löst zur Laufzeit eine <xref:System.ArgumentException> aus, da die Engine für reguläre Ausdrücke das Muster nicht analysieren kann und das Muster `( ?:`*subexpression*`)` findet keine Übereinstimmung zu *subexpression*.
 
-    - Das Sprachelement `\p{`*Name*`}`, das für eine Unicode-Kategorie oder einen benannten Block steht, darf im `\p{`-Teil des Elements kein eingebettetes Leerzeichen enthalten. Falls Sie trotzdem ein Leerzeichen einfügen, löst das Element zur Laufzeit eine <xref:System.ArgumentException> aus.
+  - Das Sprachelement `\p{`*Name*`}`, das für eine Unicode-Kategorie oder einen benannten Block steht, darf im `\p{`-Teil des Elements kein eingebettetes Leerzeichen enthalten. Falls Sie trotzdem ein Leerzeichen einfügen, löst das Element zur Laufzeit eine <xref:System.ArgumentException> aus.
 
 Durch das Aktivieren dieser Option werden reguläre Ausdrücke vereinfacht, die oft schwierig zu analysieren und zu verstehen sind. Dadurch wird Lesbarkeit verbessert, und es wird möglich, einen regulären Ausdruck zu dokumentieren.
 
@@ -339,7 +339,7 @@ Beachten Sie auch, dass die Lookaheadassertion (das `(?=`*Teilausdruck*`)`-Sprac
 
 Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.
 
-|Muster|Beschreibung|
+|Muster|BESCHREIBUNG|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|Dem Anfang der Übereinstimmung müssen eine oder zwei von einem Leerzeichen gefolgte Dezimalstellen vorangestellt sein.|
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|
@@ -364,32 +364,32 @@ Das Verhalten von ECMAScript und kanonischen regulären Ausdrücke unterscheidet
 
 - Zeichenklassensyntax. Da kanonische reguläre Ausdrücke im Gegensatz zu ECMAScript Unicode unterstützen, weisen Zeichenklassen in ECMAScript eine beschränktere Syntax auf, und einige Zeichenklassensprachelemente haben eine andere Bedeutung. ECMAScript unterstützt z. B. keine Sprachelemente wie die Kategorie- oder Blockelemente `\p` und `\P` von Unicode. Entsprechend ist das `\w`-Element, das einem Wortzeichen entspricht, äquivalent zur `[a-zA-Z_0-9]`-Zeichenklasse beim Verwenden von ECMAScript bzw. äquivalent zu `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` beim Verwenden des kanonischen Verhaltens. Weitere Informationen finden Sie unter [Zeichenklassen in regulären Ausdrücken](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).
 
-    Im folgenden Beispiel wird der Unterschied zwischen kanonischen und ECMAScript-Mustervergleichen veranschaulicht. Dabei wird ein regulärer Ausdruck, `\b(\w+\s*)+`, definiert, der eine Entsprechung für Wörter findet, denen Leerstellenzeichen folgen. Die Eingabe besteht aus zwei Zeichenfolgen, einer mit dem lateinischen Zeichensatz und einer mit dem kyrillischen Zeichensatz. Wie die Ausgabe zeigt, findet der Aufruf der <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode, die ECMAScript verwendet, keine Entsprechung für die kyrillischen Wörter, wohingegen der Methodenaufruf, der einen kanonischen Vergleich verwendet, eine Entsprechung für diese Wörter findet.
+  Im folgenden Beispiel wird der Unterschied zwischen kanonischen und ECMAScript-Mustervergleichen veranschaulicht. Dabei wird ein regulärer Ausdruck, `\b(\w+\s*)+`, definiert, der eine Entsprechung für Wörter findet, denen Leerstellenzeichen folgen. Die Eingabe besteht aus zwei Zeichenfolgen, einer mit dem lateinischen Zeichensatz und einer mit dem kyrillischen Zeichensatz. Wie die Ausgabe zeigt, findet der Aufruf der <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>-Methode, die ECMAScript verwendet, keine Entsprechung für die kyrillischen Wörter, wohingegen der Methodenaufruf, der einen kanonischen Vergleich verwendet, eine Entsprechung für diese Wörter findet.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
-    [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
+  [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
+  [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
 
 - Auf sich selbst verweisende Erfassungsgruppen. Eine Aufzeichnungsklasse für einen regulären Ausdruck mit einem Rückverweis auf sich selbst muss mit jeder Aufzeichnungsiteration aktualisiert werden. Wie das folgende Beispiel zeigt, aktiviert diese Funktion den regulären Ausdruck `((a+)(\1) ?)+`, um eine Entsprechung für die Eingabezeichenfolge " aa aaaa aaaaaa " zu finden, wenn ECMAScript verwendet wird, jedoch nicht, wenn kanonische Vergleiche verwendet werden.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
-    [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
+  [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
+  [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
 
-    Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle definiert:
+  Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle definiert:
 
-    |Muster|Beschreibung|
-    |-------------|-----------------|
-    |(a+)|Entspricht einem oder mehreren Vorkommen des Buchstabens "a". Dies ist die zweite Erfassungsgruppe.|
-    |(\1)|Entspricht der Teilzeichenfolge, die von der ersten Erfassungsgruppe erfasst wurde. Dies ist die dritte Erfassungsgruppe.|
-    |?|Entspricht keinem oder einem Leerzeichen.|
-    |((a+)(\1) ?)+|Entspricht mindestens einem "a", ein- oder mehrmals gefolgt von einer Zeichenfolge, die der ersten Erfassungsgruppe entspricht, und keinem oder mehr Leerzeichen. Dies ist die erste Erfassungsgruppe.|
+  |Muster|BESCHREIBUNG|
+  |-------------|-----------------|
+  |(a+)|Entspricht einem oder mehreren Vorkommen des Buchstabens "a". Dies ist die zweite Erfassungsgruppe.|
+  |(\1)|Entspricht der Teilzeichenfolge, die von der ersten Erfassungsgruppe erfasst wurde. Dies ist die dritte Erfassungsgruppe.|
+  |?|Entspricht keinem oder einem Leerzeichen.|
+  |((a+)(\1) ?)+|Entspricht mindestens einem "a", ein- oder mehrmals gefolgt von einer Zeichenfolge, die der ersten Erfassungsgruppe entspricht, und keinem oder mehr Leerzeichen. Dies ist die erste Erfassungsgruppe.|
 
 - Auflösung von Zweideutigkeiten zwischen Oktalescapezeichen und Rückverweisen. Die folgende Tabelle fasst die Unterschiede zwischen der Oktal- und der Rückverweisinterpretation durch kanonische reguläre Ausdrücke und reguläre ECMAScript-Ausdrücke zusammen.
 
-    |Regulärer Ausdruck|Kanonisches Verhalten|ECMAScript-Verhalten|
-    |------------------------|------------------------|-------------------------|
-    |`\0` gefolgt von 0 bis 2 Oktalziffern|Als Oktalwert interpretieren. Zum Beispiel wird `\044` immer als Oktalwert interpretiert und bedeutet "$".|Gleiches Verhalten.|
-    |`\` gefolgt von einer Ziffer zwischen 1 und 9 ohne nachfolgende Dezimalziffern|Als Rückverweis interpretieren. Zum Beispiel bedeutet `\9` immer Rückverweis 9, auch wenn keine Erfassungsgruppe 9 vorhanden ist. Wenn die Aufzeichnungsgruppe nicht vorhanden ist, löst der Parser für den regulären Ausdruck eine <xref:System.ArgumentException> aus.|Wenn eine Erfassungsgruppe einer einzigen Dezimalziffer vorhanden ist, wird ein Rückverweis auf diese Ziffer ausgeführt. Andernfalls wird der Wert als Literal interpretiert.|
-    |`\` gefolgt von einer Ziffer zwischen 1 und 9 mit nachfolgenden Dezimalziffern|Ziffern als Dezimalwert interpretieren. Wenn diese Erfassungsgruppe vorhanden ist, wird der Ausdruck als Rückverweis interpretiert.<br /><br /> Ansonsten werden die vorangestellten Oktalziffern bis zur Oktalzahl 377 interpretiert. Das bedeutet, dass nur die unteren 8 Bits des Werts berücksichtigt werden. Verbleibende Ziffern als Literale interpretieren. Beispiel: Wenn im Ausdruck `\3000` die Erfassungsgruppe 300 vorhanden ist, wird der Ausdruck als Rückverweis 300 interpretiert. Wenn die Erfassungsgruppe 300 nicht vorhanden ist, wird er als Oktalzahl 300 gefolgt von 0 interpretiert.|Als Rückverweis interpretieren, indem so viele Ziffern wie möglich in einen Dezimalwert konvertiert werden, der auf eine Erfassung verweisen kann. Wenn keine Ziffern konvertiert werden können, wird der Ausdruck als Oktalzahl unter Verwendung der ersten Oktalziffern bis zu Oktalzahl 377 interpretiert, und die restlichen Ziffern werden als Literale interpretiert.|
+  |Regulärer Ausdruck|Kanonisches Verhalten|ECMAScript-Verhalten|
+  |------------------------|------------------------|-------------------------|
+  |`\0` gefolgt von 0 bis 2 Oktalziffern|Als Oktalwert interpretieren. Zum Beispiel wird `\044` immer als Oktalwert interpretiert und bedeutet "$".|Gleiches Verhalten.|
+  |`\` gefolgt von einer Ziffer zwischen 1 und 9 ohne nachfolgende Dezimalziffern|Als Rückverweis interpretieren. Zum Beispiel bedeutet `\9` immer Rückverweis 9, auch wenn keine Erfassungsgruppe 9 vorhanden ist. Wenn die Aufzeichnungsgruppe nicht vorhanden ist, löst der Parser für den regulären Ausdruck eine <xref:System.ArgumentException> aus.|Wenn eine Erfassungsgruppe einer einzigen Dezimalziffer vorhanden ist, wird ein Rückverweis auf diese Ziffer ausgeführt. Andernfalls wird der Wert als Literal interpretiert.|
+  |`\` gefolgt von einer Ziffer zwischen 1 und 9 mit nachfolgenden Dezimalziffern|Ziffern als Dezimalwert interpretieren. Wenn diese Erfassungsgruppe vorhanden ist, wird der Ausdruck als Rückverweis interpretiert.<br /><br /> Ansonsten werden die vorangestellten Oktalziffern bis zur Oktalzahl 377 interpretiert. Das bedeutet, dass nur die unteren 8 Bits des Werts berücksichtigt werden. Verbleibende Ziffern als Literale interpretieren. Beispiel: Wenn im Ausdruck `\3000` die Erfassungsgruppe 300 vorhanden ist, wird der Ausdruck als Rückverweis 300 interpretiert. Wenn die Erfassungsgruppe 300 nicht vorhanden ist, wird er als Oktalzahl 300 gefolgt von 0 interpretiert.|Als Rückverweis interpretieren, indem so viele Ziffern wie möglich in einen Dezimalwert konvertiert werden, der auf eine Erfassung verweisen kann. Wenn keine Ziffern konvertiert werden können, wird der Ausdruck als Oktalzahl unter Verwendung der ersten Oktalziffern bis zu Oktalzahl 377 interpretiert, und die restlichen Ziffern werden als Literale interpretiert.|
 
 [Zurück zum Anfang](#Top)
 

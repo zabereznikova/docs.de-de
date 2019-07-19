@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634645"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782630"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime deklariert, verwendet und verwaltet werden. Außerdem ist das System ein wichtiger Bestandteil der Laufzeitunterstützung für die sprachübergreifende Integration. Das allgemeine Typsystem hat die folgenden Funktionen:  
@@ -73,7 +73,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  In der folgenden Tabelle werden einige Eigenschaften beschrieben, über die eine Klasse verfügen kann. Jede für Laufzeitunterstützung ausgelegte Sprache bietet eine Möglichkeit, eines oder mehrere Merkmale für eine Klasse oder einen Klassenmember festzulegen. In einzelnen Programmiersprachen, die .NET als Ziel haben, sind jedoch möglicherweise nicht alle dieser Eigenschaften verfügbar.  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |sealed|Legt fest, dass von diesem Typ keine andere Klasse abgeleitet werden kann.|  
 |implements|Gibt an, dass die Klasse eine oder mehrere Schnittstellen verwendet; es werden Implementierungen von Schnittstellenmembern bereitgestellt.|  
@@ -86,7 +86,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
  Klassenmember, die keine Implementierung haben, sind abstrakte Member. Eine Klasse mit einem oder mehreren abstrakten Membern ist selbst abstrakt, und von dieser Klasse können keine Instanzen erstellt werden. Bei einigen Sprachen, die für die Laufzeit konzipiert sind, können Klassen selbst dann als abstrakt gekennzeichnet werden, wenn sie keine abstrakten Member haben. Sie können eine abstrakte Klasse verwenden, um eine gewisse Basisfunktionalität einzuschließen, die von abgeleiteten Klassen ggf. geerbt bzw. überschrieben werden kann. Nicht abstrakte Klassen werden als konkrete Klassen bezeichnet.  
   
- Eine Klasse kann eine beliebige Anzahl von Schnittstellen implementieren, sie kann jedoch nur von einer Basisklasse neben <xref:System.Object?displayProperty=nameWithType> erben. Hiervon erben alle Klassen implizit. Alle Klassen müssen über mindestens einen Konstruktor verfügen, durch den neue Instanzen der Klasse initialisiert werden. Wenn Sie nicht explizit einen Konstruktor definieren, stellen die meisten Compiler automatisch einen Standardkonstruktor (ohne Parameter) bereit.  
+ Eine Klasse kann eine beliebige Anzahl von Schnittstellen implementieren, sie kann jedoch nur von einer Basisklasse neben <xref:System.Object?displayProperty=nameWithType> erben. Hiervon erben alle Klassen implizit. Alle Klassen müssen über mindestens einen Konstruktor verfügen, durch den neue Instanzen der Klasse initialisiert werden. Wenn Sie nicht explizit einen Konstruktor definieren, stellen die meisten Compiler automatisch einen parameterlosen Konstruktor bereit.  
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Strukturen  
@@ -190,7 +190,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ### <a name="type-accessibility"></a>Typzugriff  
  Alle Typen verfügen über einen Modifizierer, der regelt, welche anderen Typen auf diesen Typ zugreifen können. In der folgenden Tabelle werden die von der Laufzeit unterstützten Zugriffsarten auf Typen beschrieben.  
   
-|Zugriff|Beschreibung|  
+|Zugriff|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |public|Auf diesen Typ kann von allen Assemblys zugegriffen werden.|  
 |Assembly|Auf diesen Typ kann nur innerhalb seiner Assembly zugegriffen werden.|  
@@ -273,9 +273,9 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ### <a name="constructors"></a>Konstruktoren  
  Ein Konstruktor ist eine spezielle Methodenform, durch die neue Instanzen einer Klasse oder Struktur erstellt werden. Wie jede andere Methode kann ein Konstruktor Parameter einschließen. Konstruktoren verfügen jedoch nicht über einen Rückgabewert (d. h., sie geben `void` zurück).  
   
- Wenn der Quellcode für eine Klasse nicht explizit einen Konstruktor definiert, schließt der Compiler einen Standardkonstruktor (ohne Parameter) ein. Wenn der Quellcode für eine Klasse jedoch nur parametrisierte Konstruktoren definiert, generieren der Visual Basic-Compiler und der C#-Compiler keinen parameterlosen Konstruktor.  
+ Wenn der Quellcode für eine Klasse nicht explizit einen Konstruktor definiert, schließt der Compiler einen parameterlosen Konstruktor ein. Wenn der Quellcode für eine Klasse jedoch nur parametrisierte Konstruktoren definiert, generieren der Visual Basic-Compiler und der C#-Compiler keinen parameterlosen Konstruktor.  
   
- Wenn der Quellcode für eine Struktur Konstruktoren definiert, müssen diese parametrisiert werden. Eine Struktur kann keinen Standardkonstruktor (parameterlos) definieren, und Compiler generieren keine parameterlosen Konstruktoren für Strukturen oder andere Werttypen. Alle Werttypen verfügen über einen impliziten Standardkonstruktor. Dieser Konstruktor wird von der Common Language Runtime implementiert und initialisiert alle Felder der Struktur mit ihren Standardwerten.  
+ Wenn der Quellcode für eine Struktur Konstruktoren definiert, müssen diese parametrisiert werden. Eine Struktur kann keinen parameterlosen Konstruktor definieren, und Compiler generieren keine parameterlosen Konstruktoren für Strukturen oder andere Werttypen. Alle Werttypen verfügen über einen impliziten parameterlosen Konstruktor. Dieser Konstruktor wird von der Common Language Runtime implementiert und initialisiert alle Felder der Struktur mit ihren Standardwerten.  
   
 <a name="Events"></a>   
 ### <a name="events"></a>Ereignisse  
@@ -291,7 +291,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
 ## <a name="characteristics-of-type-members"></a>Eigenschaften von Typmembern  
  Das allgemeine Typsystem unterstützt Typmember, die eine Vielzahl unterschiedlicher Merkmale haben können. Zur Unterstützung all dieser Merkmale sind jedoch keine speziellen Sprachen erforderlich. In der folgenden Tabelle sind diese Membermerkmale beschrieben.  
   
-|Merkmal|Anwendbar auf|Beschreibung|  
+|Merkmal|Anwendbar auf|BESCHREIBUNG|  
 |--------------------|------------------|-----------------|  
 |abstract|Methoden, Eigenschaften und Ereignisse|Der Typ stellt keine Methodenimplementierung bereit. Typen, die abstrakte Methoden erben oder implementieren, müssen eine Implementierung für die Methode bereitstellen. Die einzige Ausnahme liegt vor, wenn der abgeleitete Typ selbst vom Typ abstract ist. Alle Methoden vom Typ abstract sind auch virtual.|  
 |private, family, assembly, family und assembly, family oder assembly oder public|Alle|Definiert die Zugriffsart des Members:<br /><br /> private<br /> Zugriff ist nur innerhalb desselben Typs wie dem des Members oder innerhalb eines geschachtelten Typs möglich.<br /><br /> family<br /> Zugriff innerhalb desselben Typs wie dem des Members und von abgeleiteten Typen möglich, die davon erben.<br /><br /> Assembly<br /> Zugriff nur in der Assembly möglich, in der der Typ definiert ist.<br /><br /> family und assembly<br /> Zugriff nur von Typen möglich, die sowohl über den Zugriffstyp family als auch assembly verfügen.<br /><br /> family oder assembly<br /> Zugriff nur von Typen möglich, die über den Zugriffstyp "family" oder "assembly" verfügen.<br /><br /> public<br /> Zugriff von jedem Typ möglich.|  

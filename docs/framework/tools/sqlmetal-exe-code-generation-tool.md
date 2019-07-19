@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 56fed00ec049fd2746d5b07b9926b8abda998260
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610538"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742440"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Tool zur Codegenerierung)
 Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]-Komponente von .NET Framework. Durch Anwenden der später in diesem Thema behandelten Optionen können Sie SqlMetal anweisen, mehrere verschiedene Aktionen wie etwa die folgenden auszuführen:  
@@ -28,7 +28,7 @@ Das SqlMetal-Befehlszeilentool generiert Code und Zuordnungen für die [!INCLUDE
  Dieses Tool wird automatisch mit Visual Studio installiert. Standardmäßig befindet sich die Datei unter " `drive`:\Programme\Microsoft SDKs\Windows\v`n.nn`\bin". Wenn Sie Visual Studio nicht installieren, können Sie die SQLMetal-Datei auch über einen Download des [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)erhalten.  
   
 > [!NOTE]
->  Entwickler, die Visual Studio verwenden, können auch den [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] verwenden, um Entitätsklassen zu generieren. Die Befehlszeilenmethode ist für umfangreiche Datenbanken gut skalierbar. Da SqlMetal ein Befehlszeilentool ist, können Sie es in einem Buildprozess verwenden.  
+>  Entwickler, die Visual Studio verwenden, können auch den objektrelationalen Designer verwenden, um Entitätsklassen zu generieren. Die Befehlszeilenmethode ist für umfangreiche Datenbanken gut skalierbar. Da SqlMetal ein Befehlszeilentool ist, können Sie es in einem Buildprozess verwenden.  
   
  Verwenden Sie die Developer-Eingabeaufforderung für Visual Studio (oder die Visual Studio-Eingabeaufforderung in Windows 7), um das Tool auszuführen. Weitere Informationen finden Sie unter [Command Prompts (Eingabeaufforderung)](../../../docs/framework/tools/developer-command-prompt-for-vs.md). Geben Sie bei er Eingabeaufforderung Folgendes ein:  
   

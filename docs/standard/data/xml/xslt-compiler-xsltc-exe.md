@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065994"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774901"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT-Compiler (xsltc.exe)
 Der XSLT-Compiler (xsltc.exe) kompiliert XSLT-Stylesheets und generiert eine Assembly. Das kompilierte Stylesheet kann dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Sie können mit xsltc.exe keine signierten Assemblys generieren.  
@@ -25,26 +25,26 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
   
 ## <a name="argument"></a>Argument  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |`sourceFile`|Gibt den Namen des Stylesheets an. Das Stylesheet muss eine lokale Datei sein oder sich im Intranet befinden.|  
   
 ## <a name="options"></a>Optionen  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|`/c[lass]:` `name`|Gibt den Namen der Klasse für das folgende Stylesheet an. Der Klassenname kann vollqualifiziert sein.<br /><br /> In der Standardeinstellung ist der Klassenname mit dem Namen des Stylesheets identisch. Wenn zum Beispiel das Stylesheet <legacyBold>customers.xsl</legacyBold> kompiliert wird, lautet der standardmäßige Klassenname <legacyBold>customers</legacyBold>.|  
+|`/c[lass]:` `name`|Gibt den Namen der Klasse für das folgende Stylesheet an. Der Klassenname kann vollqualifiziert sein.<br /><br /> In der Standardeinstellung ist der Klassenname mit dem Namen des Stylesheets identisch. Wenn zum Beispiel das Stylesheet customers.xsl kompiliert wird, lautet der standardmäßige Klassenname customers.|  
 |`/debug[`+&#124;-`]`|Gibt an, ob Debuginformationen generiert werden sollen.<br /><br /> Wenn `+` oder `/debug` angegeben wird, generiert der Compiler Debuginformationen und speichert sie in einer Programmdatenbankdatei (PDB-Datei). Der Name der generierten PDB-Datei lautet `assemblyName`.pdb.<br /><br /> Wenn Sie `-` angeben, was im Endeffekt dasselbe ist, wie `/debug` nicht anzugeben, werden keine Debuginformationen erstellt. Es wird eine Retailassembly generiert. **Hinweis**:  Beim Kompilieren im Debugmodus kann sich die XSLT-Geschwindigkeit spürbar verringern.|  
 |`/help`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |`/nologo`|Unterdrückt die Anzeige der Compilercopyrightmeldung.|  
-|`/platform:` `string`|Gibt die Plattformen an, auf denen die Assembly ausgeführt werden kann. Im Folgenden werden die gültigen Plattformwerte beschrieben:<br /><br /> `x86` kompiliert die Assembly für die 32-Bit-x86-kompatible CLR (Common Language Runtime).<br /><br /> `x64` kompiliert die Assembly für die 64-Bit-CLR auf einem Computer, der den AMD64- oder EM64T-Anweisungssatz unterstützt.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] kompiliert die Assembly für die 64-Bit-CLR (Common Language Runtime) auf einem Computer mit einem [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)]-Prozessor.<br /><br /> `anycpu` kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Dies ist die Standardeinstellung.|  
-|`/out:` `assemblyName`|Gibt den Namen der Assembly an, die ausgegeben wird. Der Assemblyname entspricht standardmäßig dem Namen des Hauptstylesheets bzw. des ersten Stylesheets, falls es mehrere Stylesheets gibt.<br /><br /> Wenn das Stylesheet Skripts enthält, werden die Skripts in einer separaten Assembly gespeichert. Die Namen der Skriptassemblys werden auf der Grundlage des Namens der Hauptassembly generiert. Wenn Sie z. B. als Assemblynamen <legacyBold>CustOrders.dll</legacyBold> angegeben haben, wird die erste Skriptassembly <legacyBold>CustOrders_Script1.dll</legacyBold> genannt.|  
+|`/platform:` `string`|Gibt die Plattformen an, auf denen die Assembly ausgeführt werden kann. Im Folgenden werden die gültigen Plattformwerte beschrieben:<br /><br /> `x86` kompiliert die Assembly für die 32-Bit-x86-kompatible CLR (Common Language Runtime).<br /><br /> `x64` kompiliert die Assembly für die 64-Bit-CLR auf einem Computer, der den AMD64- oder EM64T-Anweisungssatz unterstützt.<br /><br /> Itanium kompiliert die Assembly für die 64-Bit-CLR auf einem Computer mit einem Itanium-Prozessor.<br /><br /> `anycpu` kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Dies ist die Standardeinstellung.|  
+|`/out:` `assemblyName`|Gibt den Namen der Assembly an, die ausgegeben wird. Der Assemblyname entspricht standardmäßig dem Namen des Hauptstylesheets bzw. des ersten Stylesheets, falls es mehrere Stylesheets gibt.<br /><br /> Wenn das Stylesheet Skripts enthält, werden die Skripts in einer separaten Assembly gespeichert. Die Namen der Skriptassemblys werden auf der Grundlage des Namens der Hauptassembly generiert. Wenn Sie z. B. als Assemblynamen CustOrders.dll angegeben haben, wird die erste Skriptassembly CustOrders_Script1.dll genannt.|  
 |`/settings:` `document+-, script+-, DTD+-,`|Gibt an, ob `document()`-Funktionen, XSLT-Skripts oder Dokumenttypdefinitionen (DTD) im Stylesheet zugelassen sind.<br /><br /> In der Standardeinstellung werden DTD, die `document()`-Funktion und Skripts nicht unterstützt.|  
 |`@` `file`|Ermöglicht die Angabe einer Datei, die Compileroptionen enthält.|  
 |`?`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
-## <a name="remarks"></a>Hinweise  
- XSLT-Lösungen können aus mehreren Stylesheetmodulen bestehen. Das Tool <legacyBold>xsltc.exe</legacyBold> generiert Assemblys auf der Grundlage von Stylesheets. Die Assemblys können dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Auf diese Weise lassen sich in einigen XSLT-Bereitstellungsszenarios die zu verzeichnenden Leistungseinbußen verringern.  
+## <a name="remarks"></a>Anmerkungen  
+ XSLT-Lösungen können aus mehreren Stylesheetmodulen bestehen. Das Tool &lt;legacyBold&gt;xsltc.exe&lt;/legacyBold&gt; generiert Assemblys auf der Grundlage von Stylesheets. Die Assemblys können dann direkt in die <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>-Methode übergeben werden. Auf diese Weise lassen sich in einigen XSLT-Bereitstellungsszenarios die zu verzeichnenden Leistungseinbußen verringern.  
   
 > [!NOTE]
 >  Sie müssen auch die kompilierte Assembly als Verweis in die Anwendung einschließen.  
@@ -52,31 +52,31 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  Das Tool „xsltc.exe“ überprüft weder den Namen der Klasse (`/class:`*name*) noch den der Assembly (`/out:`*assemblyName*). Wenn die Namen nicht gültig sind, gibt die CLR entsprechende Fehlermeldungen aus.  
   
 ## <a name="examples"></a>Beispiele  
- Der folgende Befehl kompiliert das Stylesheet und erstellt eine Assembly mit dem Namen <legacyBold>booksort.dll</legacyBold>.  
+ Der folgende Befehl kompiliert das Stylesheet und erstellt eine Assembly mit dem Namen booksort.dll.  
   
 ```  
 xsltc booksort.xsl  
 ```  
   
- Der folgende Befehl kompiliert das Stylesheet und erstellt eine Assembly mit dem Namen <legacyBold>booksort.dll</legacyBold> und eine PDB-Datei mit dem Namen <legacyBold>booksort.pdb</legacyBold>.  
+ Der folgende Befehl kompiliert das Stylesheet und erstellt eine Assembly mit dem Namen booksort.dll und eine PDB-Datei mit dem Namen booksort.pdb.  
   
 ```  
 xsltc booksort.xsl /debug  
 ```  
   
- Der folgende Befehl kompiliert ein Stylesheet, das ein <legacyBold>msxsl:script</legacyBold>-Element enthält, und erstellt zwei Assemblys namens <legacyBold>calc.dll</legacyBold> und <legacyBold>calc_Script1.dll</legacyBold>.  
+ Der folgende Befehl kompiliert ein Stylesheet, das ein &lt;legacyBold&gt;msxsl:script&lt;/legacyBold&gt;-Element enthält, und erstellt zwei Assemblys namens &lt;legacyBold&gt;calc.dll&lt;/legacyBold&gt; und &lt;legacyBold&gt;calc_Script1.dll&lt;/legacyBold&gt;.  
   
 ```  
 xsltc /settings:script+ calc.xsl  
 ```  
   
- Der folgende Befehl aktiviert die DTD-Verarbeitung und die Unterstützung für Skripts und erstellt zwei Assemblys namens <legacyBold>myTest.dll</legacyBold> und <legacyBold>myTest_Script1.dll</legacyBold>.  
+ Der folgende Befehl aktiviert die DTD-Verarbeitung und die Unterstützung für Skripts und erstellt zwei Assemblys namens myTest.dll und myTest_Script1.dll.  
   
 ```  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  
 ```  
   
- Der folgende Befehl kompiliert zwei Stylesheetmodule und eine Assembly mit dem Namen <legacyBold>booksort.dll</legacyBold>.  
+ Der folgende Befehl kompiliert zwei Stylesheetmodule und eine Assembly mit dem Namen booksort.dll.  
   
 ```  
 xsltc booksort.xsl output.xsl  

@@ -1,65 +1,70 @@
 ---
-title: 'Leitfaden für C#: Auswählen der C#-Sprachversion'
-description: Konfigurieren des Compilers zum Ausführen der Syntaxüberprüfung mithilfe einer spezifischen Compilerversion
-ms.date: 02/28/2019
-ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+title: Verwaltung der C#-Sprachversion – Leitfaden für C#
+description: Hier erfahren Sie, wie die C#-Sprachversion basierend auf Ihrem Projekt bestimmt wird, und Sie lernen die verschiedenen Werte kennen, die Sie manuell an die Sprachversion anpassen können.
+ms.date: 07/10/2019
+ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770879"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859606"
 ---
-# <a name="select-the-c-language-version"></a>Auswählen der C#-Sprachversion
+# <a name="c-language-versioning"></a>Verwaltung der C#-Sprachversion
 
-Der C#-Compiler bestimmt eine Standardsprachversion, basierend auf dem oder den Zielframeworks Ihres Projekts. Wenn Ihr Projekt auf eine Vorschauframework abzielt, das eine entsprechende Vorschausprachversion besitzt, wird die Vorschausprachversion als Sprachversion verwendet. Wenn Ihr Projekt nicht auf ein Vorschauframework abzielt, wird die höchste Nebenversion als Sprachversion verwendet.
+Der C#-Compiler bestimmt eine Standardsprachversion, basierend auf dem oder den Zielframeworks Ihres Projekts. Der Grund dafür ist, dass die Sprache C# Features enthalten kann, die von Typen oder Laufzeitkomponenten abhängig sind, die nicht in allen .NET-Implementierungen verfügbar sind. Damit wird sichergestellt, dass Sie die Sprachversion mit der höchsten Kompatibilität erhalten, ganz gleich, für welches Ziel Sie Ihr Projekt erstellen.
 
-Beispielsweise verwendet jedes Projekt, das während des Vorschauzeitraums für .NET Core 3.0 auf `netcoreapp3.0` oder `netstandard2.1` abzielt (beide in der Vorschauphase), die C# 8.0-Sprache (ebenfalls in der Vorschauphase). Projekte, die auf eine veröffentlichte Version abzielen, verwenden C# 7.3 (die neueste veröffentlichte Version). Dieses Verhalten bedeutet, dass jedes Projekt, das auf .NET Framework abzielt, die neueste Version verwendet (C# 7.3). 
+## <a name="defaults"></a>der Arbeitszeittabelle
 
-Diese Funktion entkoppelt das Installieren neuer Versionen vom SDK und den Tools in Ihrer Entwicklungsumgebung von der Entscheidung, neue Sprachfeatures in einem Projekt zu verwenden. Sie können das neueste SDK und die neuesten Tools auf Ihrem Buildcomputer installieren. Jedes Projekt kann dazu konfiguriert werden, eine spezifische Version der Sprache für das Build zu verwenden. Das Standardverhalten bedeutet, dass alle Sprachfunktionen, die von neuen Typen oder neuem CLR-Verhalten abhängig sind, nur aktiviert sind, wenn das Projekt auf diese Frameworks abzielt.
+Der Compiler bestimmt basierend auf den folgenden Regeln eine Standardversion:
 
-Sie können das Standardverhalten überschreiben, indem Sie eine Sprachversion angeben. Es gibt verschiedene Möglichkeiten, die Sprachversion einzurichten:
+|Zielframework|Version|C#-Sprachversionsstandard|
+|----------------|-------|---------------------------|
+|.NET Core|3.x|C# 8.0|
+|.NET Core|2.x|C# 7.3|
+|.NET-Standard|alle|C# 7.3|
+|.NET Framework|alle|C# 7.3|
 
-- Verwenden einer [Visual Studio-Schnellaktion](#visual-studio-quick-action)
-- Festlegen der Sprachversion in der [Visual Studio-Benutzeroberfläche](#set-the-language-version-in-visual-studio)
-- Manuelles Bearbeiten der [**CSPROJ**-Datei](#edit-the-csproj-file)
+## <a name="default-for-previews"></a>Standard für Vorschauversionen
+
+Wenn Ihr Projekt auf eine Vorschauframework abzielt, das eine entsprechende Vorschausprachversion besitzt, wird die Vorschausprachversion als Sprachversion verwendet. Damit wird sichergestellt, dass Sie die neuesten Features verwenden können, die garantiert mit dieser Vorschauversion in jeder Umgebung funktionieren ohne Auswirkungen auf Ihre Projekte, die auf eine freigegebene .NET Core-Version abzielen.
+
+## <a name="overriding-a-default"></a>Überschreiben eines Standardwerts
+
+Wenn Sie Ihre C#-Version explizit angeben müssen, haben Sie verschiedene Möglichkeiten:
+
+- Manuelles Bearbeiten der [Projektdatei](#edit-the-project-file)
 - Festlegen der Sprachversion [für mehrere Projekte in einem Unterverzeichnis](#configure-multiple-projects)
 - Konfigurieren der [Compileroption `-langversion`](#set-the-langversion-compiler-option)
 
-## <a name="visual-studio-quick-action"></a>Visual Studio-Schnellaktion
+### <a name="edit-the-project-file"></a>Bearbeiten der Projektdatei
 
-Visual Studio unterstützt Sie beim Auswählen der erforderlichen Sprachversion. Wenn Sie ein Sprachfeature verwenden, das in der derzeit konfigurierten Version nicht verfügbar ist, zeigt Visual Studio eine mögliche Lösung zum Aktualisieren der Sprachversion für das Projekt an.
-
-## <a name="set-the-language-version-in-visual-studio"></a>Festlegen der Sprachversion in Visual Studio
-
-Sie können die Version in Visual Studio festlegen. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Projektknoten, und wählen Sie **Eigenschaften** aus. Wählen Sie die Registerkarte **Build** aus, und klicken Sie auf **Erweitert**. Wählen Sie in der Dropdownliste die Version aus. Die folgende Abbildung zeigt die „aktuellste“ Einstellung:
-
-![Screenshot der erweiterten Buildeinstellungen, in denen Sie die Sprachversion festlegen können](./media/configure-language-version/advanced-build-settings.png)
-
-> [!NOTE]
-> Wenn Sie die Visual Studio-IDE verwenden, um Ihre CSPROJ-Dateien zu aktualisieren, werden separate Knoten für jede Buildkonfiguration von der IDE erstellt. In der Regel legen Sie den gleichen Wert in allen Buildkonfigurationen fest, dennoch müssen Sie ihn für jede Buildkonfiguration explizit festlegen oder beim Ändern dieser Einstellung „Alle Konfigurationen“ auswählen. Folgendes wird dann in Ihrer CSPROJ-Datei angezeigt:
->
->```xml
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-></PropertyGroup>
->
-> <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
->  <LangVersion>latest</LangVersion>
-> </PropertyGroup>
-> ```
->
-
-## <a name="edit-the-csproj-file"></a>Bearbeiten der CSPROJ-Datei
-
-Sie können die Sprachversion in der **CSPROJ**-Datei festlegen. Fügen Sie ein Element wie das Folgende ein:
+Sie können die Sprachversion in der Projektdatei festlegen. Wenn Sie beispielsweise expliziten Zugriff auf Previewfunktionen wünschen, können Sie ein Element wie folgt hinzufügen:
 
 ```xml
 <PropertyGroup>
-   <LangVersion>latest</LangVersion>
+   <LangVersion>preview</LangVersion>
 </PropertyGroup>
 ```
 
-Der Wert `latest` verwendet die neueste Nebenversion der C#-Sprache. Gültige Werte sind:
+Der Wert `preview` verwendet die neueste verfügbare C#-Vorschausprache, die Ihr Compiler unterstützt.
+
+### <a name="configure-multiple-projects"></a>Konfigurieren mehrerer Projekte
+
+Sie können eine **Directory.Build.props**-Datei erstellen, die das Element `<LangVersion>` enthält, um mehrere Verzeichnisse zu konfigurieren. In der Regel führen Sie dies im Projektmappenverzeichnis durch. Fügen Sie Folgendes in eine **Directory.Build.props**-Datei in Ihrem Projektmappenverzeichnis ein:
+
+```xml
+<Project>
+ <PropertyGroup>
+   <LangVersion>preview</LangVersion>
+ </PropertyGroup>
+</Project>
+```
+
+Nun verwenden alle Unterverzeichnisse des Verzeichnisses, das diese Datei enthält, die C#-Vorschauversion. Weitere Informationen finden Sie im Artikel zum [Anpassen Ihres Builds](/visualstudio/msbuild/customize-your-build).
+
+## <a name="c-language-version-reference"></a>Referenz zur C#-Sprachversion
+
+In der folgenden Tabelle sind alle aktuellen C#-Sprachversionen enthalten. Wenn Ihr Compiler älter ist, versteht er möglicherweise nicht alle Werte. Sie haben Zugriff auf alle aufgeführten Elemente, wenn Sie .NET Core 3.0 installieren.
 
 |Wert|Bedeutung|
 |------------|-------------|
@@ -77,21 +82,3 @@ Der Wert `latest` verwendet die neueste Nebenversion der C#-Sprache. Gültige We
 |3|Der Compiler akzeptiert nur Syntax, die in C# 3.0 oder früher enthalten ist.|
 |ISO-2|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2006 C# (2.0) enthalten ist. |
 |ISO-1|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2003 C# (1.0/1.2) enthalten ist. |
-
-## <a name="configure-multiple-projects"></a>Konfigurieren mehrerer Projekte
-
-Sie können eine **Directory.Build.props**-Datei erstellen, die das Element `<LangVersion>` enthält, um mehrere Verzeichnisse zu konfigurieren. In der Regel führen Sie dies im Projektmappenverzeichnis durch. Fügen Sie Folgendes in eine **Directory.Build.props**-Datei in Ihrem Projektmappenverzeichnis ein:
-
-```xml
-<Project>
- <PropertyGroup>
-   <LangVersion>7.3</LangVersion>
- </PropertyGroup>
-</Project>
-```
-
-Nun verwenden alle Unterverzeichnisse des Verzeichnisses, das diese Datei enthält, die Syntax der Version 7.3 von C#. Weitere Informationen finden Sie im Artikel zum [Anpassen Ihres Builds](/visualstudio/msbuild/customize-your-build).
-
-## <a name="set-the-langversion-compiler-option"></a>Festlegen der Compileroption „langversion“
-
-Sie können die Befehlszeilenoption `-langversion` verwenden. Weitere Informationen finden Sie im Artikel zur Compileroption [-langversion](../language-reference/compiler-options/langversion-compiler-option.md). Sie können eine Liste der gültigen Werte anzeigen, indem Sie `csc -langversion:?` eingeben.

@@ -3,12 +3,12 @@ title: 'Tutorial: Schreiben Ihres ersten Analysetools und Codefixes'
 description: Dieses Tutorial enthält Schritt-für-Schritt-Anleitungen zum Erstellen eines Analysetools und eines Codefixes mithilfe des .NET Compiler SDK (Roslyn-APIs).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870561"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Schreiben Ihres ersten Analysetools und Codefixes
 
@@ -18,9 +18,10 @@ In diesem Tutorial lernen Sie die Erstellung eines **Analysetools** und eines be
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* [Visual Studio 2017](https://www.visualstudio.com/downloads)
+* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+* [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Die Installation des **SDK für die .NET Compiler Platform** ist erforderlich.
+Installieren Sie zunächst das **SDK für die .NET Compiler Platform** über das Installationsprogramm von Visual Studio:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 

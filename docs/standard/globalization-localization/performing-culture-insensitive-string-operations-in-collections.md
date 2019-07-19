@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ddb4ed45479e483dde447983f6dc31edcc8930
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae1e5c89676eaebfed5bbcae76048c7c48db5a18
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738838"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779941"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Durchführen kulturunabhängiger Zeichenfolgenoperationen in Auflistungen
-Der <xref:System.Collections>-Namespace enthält Klassen und Member, die standardmäßig kulturabhängiges Verhalten bereitstellen. Die Standardkonstruktoren für die <xref:System.Collections.CaseInsensitiveComparer>- und <xref:System.Collections.CaseInsensitiveHashCodeProvider>-Klasse initialisieren eine neue Instanz mit der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft. Alle Überladungen der <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>-Methode erstellen eine neue Instanz der <xref:System.Collections.Hashtable>-Klasse standardmäßig mit der `Thread.CurrentCulture`-Eigenschaft. Überladungen der <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>-Methode führen kulturabhängige Sortierungen standardmäßig mit der `Thread.CurrentCulture`-Eigenschaft aus. Wenn Zeichenfolgen als Schlüssel verwendet werden, kann sich <xref:System.Collections.SortedList> auf das Sortieren und Nachschlagen in einer `Thread.CurrentCulture`-Instanz auswirken. Befolgen Sie die Verwendungsempfehlungen in diesem Abschnitt, um aus diesen Klassen und Methoden im `Collections`-Namespace kulturunabhängige Ergebnisse abzurufen.  
+Der <xref:System.Collections>-Namespace enthält Klassen und Member, die standardmäßig kulturabhängiges Verhalten bereitstellen. Die parameterlosen Konstruktoren für die <xref:System.Collections.CaseInsensitiveComparer>- und <xref:System.Collections.CaseInsensitiveHashCodeProvider>-Klasse initialisieren eine neue Instanz mit der <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft. Alle Überladungen der <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>-Methode erstellen eine neue Instanz der <xref:System.Collections.Hashtable>-Klasse standardmäßig mit der `Thread.CurrentCulture`-Eigenschaft. Überladungen der <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType>-Methode führen kulturabhängige Sortierungen standardmäßig mit der `Thread.CurrentCulture`-Eigenschaft aus. Wenn Zeichenfolgen als Schlüssel verwendet werden, kann sich <xref:System.Collections.SortedList> auf das Sortieren und Nachschlagen in einer `Thread.CurrentCulture`-Instanz auswirken. Befolgen Sie die Verwendungsempfehlungen in diesem Abschnitt, um aus diesen Klassen und Methoden im `Collections`-Namespace kulturunabhängige Ergebnisse abzurufen.  
   
  **Hinweis** Wenn Sie <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> an eine Vergleichsmethode übergeben, wird ein kulturunabhängiger Vergleich ausgeführt. Dies bewirkt jedoch keinen nicht linguistischen Vergleich, z. B. auf Dateipfade, Registrierungsschlüssel und Umgebungsvariablen. Und dadurch werden auch keine Sicherheitsentscheidungen anhand des Vergleichsergebnisses unterstützt. Für einen nicht linguistischen Vergleich oder Unterstützung für ergebnisbasierte Sicherheitsentscheidungen sollte die Anwendung eine Vergleichsmethode verwenden, die einen <xref:System.StringComparison>-Wert akzeptiert. Die Anwendung sollte dann <xref:System.StringComparison> übergeben.  
   
 ## <a name="using-the-caseinsensitivecomparer-and-caseinsensitivehashcodeprovider-classes"></a>Verwenden der CaseInsensitiveComparer- und der CaseInsensitiveHashCodeProvider-Klasse  
- Die Standardkonstruktoren für `CaseInsensitiveHashCodeProvider` und `CaseInsensitiveComparer` initialisieren eine neue Instanz der Klasse mit `Thread.CurrentCulture`, was zu kulturabhängigem Verhalten führt. Im folgenden Codebeispiel wird der Konstruktor für eine `Hashtable`-Instanz veranschaulicht, die kulturabhängig ist, weil für sie die Standardkonstruktoren für `CaseInsensitiveHashCodeProvider` und `CaseInsensitiveComparer` verwendet werden.  
+ Die parameterlosen Konstruktoren für `CaseInsensitiveHashCodeProvider` und `CaseInsensitiveComparer` initialisieren eine neue Instanz der Klasse mit `Thread.CurrentCulture`, was zu kulturabhängigem Verhalten führt. Im folgenden Codebeispiel wird der Konstruktor für eine `Hashtable`-Instanz veranschaulicht, die kulturabhängig ist, weil für sie die parameterlosen Konstruktoren für `CaseInsensitiveHashCodeProvider` und `CaseInsensitiveComparer` verwendet werden.  
   
 ```vb  
 internalHashtable = New Hashtable(CaseInsensitiveHashCodeProvider.Default, CaseInsensitiveComparer.Default)  

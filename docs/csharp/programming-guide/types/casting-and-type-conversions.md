@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 2aee15443172e753846574806565f7804f1716d1
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e46083a9b8261cf8635d07e3b16f9c291bcc69a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423678"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743798"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 
@@ -32,7 +32,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **Explizite Konvertierungen (Umwandlungen)** : Für explizite Konvertierungen ist ein Umwandlungsoperator erforderlich. Eine Umwandlung ist erforderlich, wenn Informationen bei einer Konvertierung verloren gehen können oder wenn die Konvertierung aus anderen Gründen fehlschlagen könnte.  Häufig auftretende Beispiele sind u.a. numerische Konvertierungen in einen Typen, der eine geringere Genauigkeit oder einen kleineren Bereich aufweist, oder Konvertierungen einer Instanz einer Basisklasse in eine abgeleitete Klasse.  
   
-- **Benutzerdefinierte Konvertierungen**: Benutzerdefinierte Konvertierungen werden anhand spezieller Methoden durchgeführt, die Sie definieren können, um explizite und implizite Konvertierungen zwischen benutzerdefinierten Typen zu ermöglichen, die nicht in einer Beziehung „Basisklasse – abgeleitete Klasse“ zueinander stehen. Weitere Informationen finden Sie unter [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md).  
+- **Benutzerdefinierte Konvertierungen**: Benutzerdefinierte Konvertierungen werden anhand spezieller Methoden durchgeführt, die Sie definieren können, um explizite und implizite Konvertierungen zwischen benutzerdefinierten Typen zu ermöglichen, die nicht in einer Beziehung „Basisklasse – abgeleitete Klasse“ zueinander stehen. Weitere Informationen finden Sie unter [Benutzerdefinierte Konvertierungsoperatoren](../../../csharp/language-reference/operators/user-defined-conversion-operators.md).  
   
 - **Konvertierungen mit Hilfsklassen**: Für eine Konvertierung von nicht kompatiblen Typen, z.B. von ganzen Zahlen und <xref:System.DateTime?displayProperty=nameWithType>-Objekten, oder von Hexadezimalzeichenfolgen und Bytearrays können Sie die <xref:System.BitConverter?displayProperty=nameWithType>-Klasse, die <xref:System.Convert?displayProperty=nameWithType>-Klasse und die `Parse`-Methoden der integrierten numerischen Typen (z.B. <xref:System.Int32.Parse%2A?displayProperty=nameWithType>) verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) und [Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
@@ -46,14 +46,14 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  Eine implizite Konvertierungen für Verweistypen von einer Klasse in jede ihrer direkten oder indirekten Basisklassen oder Schnittstellen ist immer möglich. Es ist keine spezielle Syntax erforderlich, da eine abgeleitete Klasse immer alle Member der Basisklasse enthält.  
   
-```  
+```csharp
 Derived d = new Derived();  
 Base b = d; // Always OK.  
 ```  
   
 ## <a name="explicit-conversions"></a>Explizite Konvertierungen
 
- Wenn allerdings eine Konvertierung nicht ohne möglichen Informationsverlust durchgeführt werden kann, fordert der Compiler eine explizite Konvertierung; diese wird als *Umwandlung* bezeichnet. Eine Umwandlung bietet die Möglichkeit, den Compiler explizit zu verständigen, dass Sie eine Konvertierung vornehmen möchten, und dass es Ihnen bewusst ist, dass dies einen Datenverlust zur Folge haben kann. Wenn Sie eine Umwandlung durchführen möchten, geben Sie den Typ, in den umgewandelt werden soll, in Klammern am Anfang des zu konvertierenden Wertes oder der zu konvertierenden Variablen an. Das folgende Programm wandelt ein [double](../../../csharp/language-reference/keywords/double.md) in ein [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) um. Das Programm führt ohne die Umwandlung keine Kompilierung durch.  
+ Wenn allerdings eine Konvertierung nicht ohne möglichen Informationsverlust durchgeführt werden kann, fordert der Compiler eine explizite Konvertierung; diese wird als *Umwandlung* bezeichnet. Eine Umwandlung bietet die Möglichkeit, den Compiler explizit zu verständigen, dass Sie eine Konvertierung vornehmen möchten, und dass es Ihnen bewusst ist, dass dies einen Datenverlust zur Folge haben kann. Wenn Sie eine Umwandlung durchführen möchten, geben Sie den Typ, in den umgewandelt werden soll, in Klammern am Anfang des zu konvertierenden Wertes oder der zu konvertierenden Variablen an. Das folgende Programm wandelt ein [double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) in ein [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) um. Das Programm führt ohne die Umwandlung keine Kompilierung durch.  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
@@ -87,15 +87,13 @@ Giraffe g2 = (Giraffe) a;
   
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Weitere Informationen finden Sie im Abschnitt [Konvertierungen](~/_csharplang/spec/conversions.md) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Typen](../../../csharp/programming-guide/types/index.md)
-- [()-Operator](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
-- [explicit](../../../csharp/language-reference/keywords/explicit.md)
-- [implicit](../../../csharp/language-reference/keywords/implicit.md)
-- [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)
+- [cast-Operator ()](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [Benutzerdefinierte Konvertierungsoperatoren](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
 - [Verallgemeinerte Typkonvertierung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

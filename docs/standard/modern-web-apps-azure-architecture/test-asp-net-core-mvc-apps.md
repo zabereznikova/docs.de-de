@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Test
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463708"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804722"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testen von ASP.NET Core MVC-Apps
 
@@ -34,7 +34,7 @@ Obwohl es eine gute Idee ist, Code zu kapseln, der mit Infrastruktur interagiert
 
 Integrationstests verfügen meistens über komplexere Setup- und Nachbereitungsprozeduren als Komponententests. Ein Integrationstest, der beispielsweise auf eine Datenbank angewendet wird, benötigt eine Möglichkeit, die Datenbank in einen bekannten Zustand zurückzusetzen, bevor jeder Test ausgeführt wird. Wenn neue Tests hinzugefügt werden und das Datenbankschema für die Produktion sich weiterentwickelt, werden die Testskripts größer und komplexer. In vielen großen Systemen ist es unpraktisch, vollständige Testsammlungen auf den Arbeitsstationen von Entwicklern auszuführen, bevor Änderungen in die Quellcodeverwaltung eingetragen werden. In diesen Fällen können Integrationstests auf einem Buildserver ausgeführt werden.
 
-Die Implementierungsklasse „LocalFileImageService“ implementiert die Logik zum Abrufen und Zurückgeben von Bytes einer Bilddatei aus einem bestimmten Ordner, dem eine ID zugewiesen wurde:
+Die Implementierungsklasse `LocalFileImageService` implementiert die Logik zum Abrufen und Zurückgeben von Bytes einer Bilddatei aus einem bestimmten Ordner, dem eine ID zugewiesen wurde:
 
 ```csharp
 public class LocalFileImageService : IImageService
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Wegen der direkten Abhängigkeit von „System.IO.File“, die diese Methode zum Lesen aus dem Dateisystem verwendet, ist es schwer, Komponententests für sie durchzuführen. Sie können dieses Verhalten testen, um sicherzustellen, dass es wie erwartet funktioniert. Wenn Sie dies jedoch mit echten Dateien durchführen, handelt es sich um einen Integrationstest. Beachten Sie, dass Sie die Route dieser Methode nicht mit Komponententests testen können. Wie Sie diese mit einem Funktionstest testen können, wird im Folgenden erläutert.
+Wegen der direkten Abhängigkeit von `System.IO.File`, die diese Methode zum Lesen aus dem Dateisystem verwendet, ist es schwer, Komponententests für sie durchzuführen. Sie können dieses Verhalten testen, um sicherzustellen, dass es wie erwartet funktioniert. Wenn Sie dies jedoch mit echten Dateien durchführen, handelt es sich um einen Integrationstest. Beachten Sie, dass Sie die Route dieser Methode nicht mit Komponententests testen können. Wie Sie diese mit einem Funktionstest testen können, wird im Folgenden erläutert.
 
 Wenn Sie keinen direkten Komponententest für das Verhalten des Dateisystems und die Route durchführen können, gibt es dennoch Tests, die Sie durchführen sollten. Nach dem Refactoring zum Ermöglichen von Komponententests werden Ihnen möglicherweise Testfälle und fehlendes Verhalten auffallen, wie z.B. die Problembehandlung. Wie reagiert die Methode, wenn eine Datei nicht gefunden werden kann? Wie sollte sie reagieren? In diesem Beispiel sieht die umgestaltete Methode wie folgt aus:
 
@@ -175,7 +175,7 @@ Für die meisten Fälle wird empfohlen, globale Ausnahmehandler in Ihren Control
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Integrationstests für ASP.NET Core-Apps
 
-Die meisten Integrationstests in Ihren ASP.NET Core-Apps sollten Testdienste und andere Implementierungstypen sein, die in Ihrem Infrastrukturprojekt definiert wurden. Das korrekte Verhalten Ihres MVC-Projekts in ASP.NET Core können Sie am besten mit Funktionstests testen, die Sie für Ihre App ausführen, welche in einem Testhost ausgeführt wird. Ein Beispiel für einen Integrationstest einer Datenzugriffsklasse ist im Abschnitt zu Integrationstests weiter oben dargestellt.
+Die meisten Integrationstests in Ihren ASP.NET Core-Apps sollten Testdienste und andere Implementierungstypen sein, die in Ihrem Infrastrukturprojekt definiert wurden. Sie könnten beispielsweise über Ihre Datenzugriffsklassen im Infrastrukturprojekt [prüfen, ob EF Core die erwarteten Daten erfolgreich aktualisiert und abruft](https://docs.microsoft.com/ef/core/miscellaneous/testing/). Das korrekte Verhalten Ihres MVC-Projekts in ASP.NET Core können Sie am besten mit Funktionstests testen, die Sie für Ihre App ausführen, welche in einem Testhost ausgeführt wird.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Funktionstests für ASP.NET Core-Apps
 
@@ -308,6 +308,15 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 ```
 
 Dieser Funktionstest führt den gesamten ASP.NET Core MVC/Razor Pages-Anwendungsstapel aus, einschließlich aller Middleware, Filter, Binder usw., die verfügbar sind. Er überprüft, ob eine bestimmte Route („/“) den erwarteten Erfolgsstatuscode und die HTML-Ausgabe zurückgibt. Das funktioniert, ohne dass ein echter Webserver eingerichtet werden muss, und vermeidet deshalb einen Großteil der Fehleranfälligkeit, die bei einem echten Webserver auftreten kann (z.B. Probleme mit den Einstellungen der Firewall). Funktionstests, die für den TestServer ausgeführt werden, sind in der Regel langsamer als Integrations- und Komponententests, aber deutlich schneller als Tests, die über das Netzwerk auf einem Testwebserver ausgeführt werden. Sie sollten Funktionstests verwenden, um sicherzustellen, dass der Front-End-Stapel Ihrer Anwendung wie erwartet funktioniert. Diese Tests sind besonders hilfreich, wenn Sie Duplizierung in Ihren Controllern oder Seiten finden und Sie diese durch Hinzufügen von Filtern behandeln. Im Idealfall ändert dieses Refactoring nicht das Verhalten der Anwendung, und eine Reihe von Funktionstests überprüft, ob dies der Fall ist.
+
+> ### <a name="references--test-aspnet-core-mvc-apps"></a>Ressourcen: Testen von ASP.NET Core MVC-Apps
+>
+> - **Testen in ASP.NET Core**  
+>   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **Namenskonvention für Komponententests**  
+>   <https://ardalis.com/unit-test-naming-convention>
+> - **Testen von EF Core**  
+>   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 
 >[!div class="step-by-step"]
 >[Zurück](work-with-data-in-asp-net-core-apps.md)

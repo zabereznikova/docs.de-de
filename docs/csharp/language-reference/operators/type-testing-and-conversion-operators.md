@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 4468bc86634ad97f2dfbdb5f842eb5206f957a79
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307522"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744073"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>Typtest- und Konvertierungsoperatoren (C#-Referenz)
 
@@ -109,7 +109,7 @@ Das folgende Beispiel zeigt explizite numerische und Verweiskonvertierungen:
 
 [!code-csharp-interactive[cast expression](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
 
-Informationen zu expliziten Konvertierungen finden Sie im Abschnitt [Explizite Konvertierungen](~/_csharplang/spec/conversions.md#explicit-conversions) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md). Informationen zum Definieren einer benutzerdefinierten expliziten oder impliziten Typkonvertierung finden Sie in den Artikeln zu den Schlüsselwörtern [explicit](../keywords/explicit.md) bzw. [implicit](../keywords/implicit.md).
+Informationen zu expliziten Konvertierungen finden Sie im Abschnitt [Explizite Konvertierungen](~/_csharplang/spec/conversions.md#explicit-conversions) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md). Informationen zum Definieren einer benutzerdefinierten expliziten oder impliziten Typkonvertierung finden Sie unter [Benutzerdefinierte Konvertierungsoperatoren](user-defined-conversion-operators.md).
 
 ### <a name="other-usages-of-"></a>Andere Verwendungen von „()“
 
@@ -139,7 +139,7 @@ Verwenden Sie den `typeof`-Operator, um zu überprüfen, ob der Laufzeittyp des 
 
 Die Operatoren `is`, `as` und `typeof` können nicht überladen werden.
 
-Ein benutzerdefinierter Typ kann den `()`-Operator nicht überladen, kann aber benutzerdefinierte Typkonvertierungen definieren, die durch einen cast-Ausdruck ausgeführt werden können. Weitere Informationen finden Sie in den Artikeln zu den Schlüsselwörtern [explicit](../keywords/explicit.md) und [implicit](../keywords/implicit.md).
+Ein benutzerdefinierter Typ kann den `()`-Operator nicht überladen, kann aber benutzerdefinierte Typkonvertierungen definieren, die durch einen cast-Ausdruck ausgeführt werden können. Weitere Informationen finden Sie unter [Benutzerdefinierte Konvertierungsoperatoren](user-defined-conversion-operators.md).
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2e2fd6f46a430424e6010adbe0662b5bd3db7ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 246e6572deefaf4546afe6fb5326ecc2286215a5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622654"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766805"
 ---
 # <a name="weak-references"></a>Schwache Verweise
 Der Garbage Collector kann kein Objekt sammeln, das von einer Anwendung verwendet wird, während der Anwendungscode dieses Objekt erreichen kann. Dies wird als starker Verweis der Anwendung auf das Objekt bezeichnet.  
@@ -35,7 +35,7 @@ Der Garbage Collector kann kein Objekt sammeln, das von einer Anwendung verwende
   
 - Short  
   
-     Das Ziel eines kurzen schwachen Verweises wird `null`, wenn das Objekt von der Garbage Collection freigegeben wird. Der schwache Verweis ist selbst ein verwaltetes Objekt und unterliegt wie jedes andere verwaltete Objekt der Garbage Collection.  Ein kurzer schwacher Verweis ist der Standardkonstruktor für <xref:System.WeakReference>.  
+     Das Ziel eines kurzen schwachen Verweises wird `null`, wenn das Objekt von der Garbage Collection freigegeben wird. Der schwache Verweis ist selbst ein verwaltetes Objekt und unterliegt wie jedes andere verwaltete Objekt der Garbage Collection.  Ein kurzer schwacher Verweis ist der parameterlose Konstruktor für <xref:System.WeakReference>.  
   
 - Long  
   

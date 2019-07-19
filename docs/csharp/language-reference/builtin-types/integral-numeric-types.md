@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: bde0b7cea52951cd72bde6cfd7d8f1c7dbcb8f46
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425595"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744212"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integrale numerische Typen (C#-Referenz)
 
@@ -76,14 +76,14 @@ var binaryLiteral = 0b_0010_1010;
 
 Für dezimale Literale ist kein Präfix erforderlich. Das Präfix `x` oder `X` bezeichnet ein *hexadezimales Literal*. Das Präfix `b` oder `B` bezeichnet ein *binäres Literal*. Die Deklaration von `binaryLiteral` zeigt die Verwendung von `_` als *Zifferntrennzeichen* an. Das Zifferntrennzeichen kann mit allen numerischen Literalen verwendet werden. Binäre Literale und das Zifferntrennzeichen `_` werden beginnend mit C# 7.0 unterstützt.
 
-## <a name="literal-suffixes"></a>Literalsuffixe 
+### <a name="literal-suffixes"></a>Literalsuffixe 
 
-Das Suffix `l` oder `L` gibt an, dass das integrale Literal vom Typ `long` sein soll. Das Suffix `ul` oder `UL` gibt den Typ `ulong` an. Wenn das Suffix `L` für ein Literal verwendet wird, das größer als 9.223.372.036.854.775.807 (der Maximalwert von `long`) ist, wird der Wert in den Typ `ulong` umgewandelt. Wenn der von einem Integer-Literal dargestellte Wert <xref:System.UInt64.MaxValue?displayProperty=nameWithType> überschreitet, tritt der Compilerfehler [CS1021](../../misc/cs1021.md) auf. 
+Das Suffix `l` oder `L` gibt an, dass das integrale Literal vom Typ `long` sein soll. Das Suffix `ul` oder `UL` gibt den Typ `ulong` an. Wenn das Suffix `L` für ein Literal verwendet wird, das größer als 9.223.372.036.854.775.807 (der Maximalwert von `long`) ist, wird der Wert in den Typ `ulong` umgewandelt. Wenn der von einem integralen Literal dargestellte Wert <xref:System.UInt64.MaxValue?displayProperty=nameWithType> überschreitet, tritt der Compilerfehler [CS1021](../../misc/cs1021.md) auf. 
 
 > [!NOTE]
 > Sie können den Kleinbuchstaben „l“ als Suffix verwenden. Allerdings erzeugt dies eine Compilerwarnung, weil der Buchstabe „l“ leicht mit der Zahl „1“ verwechselt wird. Verwenden Sie aus Gründen der Klarheit „L“.
 
-## <a name="type-of-an-integral-literal"></a>Typ eines integralen Literals
+### <a name="type-of-an-integral-literal"></a>Typ eines integralen Literals
 
 Wenn ein integrales Literal kein Suffix besitzt, ist sein Typ der erste dieser Typen, in dem sein Wert dargestellt werden kann:
 
@@ -118,8 +118,16 @@ Sie müssen eine explizite Umwandlung verwenden, um einen integralen Typ in eine
 
 - [C#-Sprachenspezifikation – Integrale Typen](~/_csharplang/spec/types.md#integral-types)
 - [C#-Referenz](../index.md)
-- [Tabelle für Gleitkommatypen](../keywords/floating-point-types-table.md)
+- [Gleitkommatypen](floating-point-numeric-types.md)
 - [Tabelle für Standardwerte](../keywords/default-values-table.md)
 - [Tabelle zur Formatierung numerischer Ergebnisse](../keywords/formatting-numeric-results-table.md)
 - [Tabelle integrierter Typen](../keywords/built-in-types-table.md)
 - [Numerische Ausdrücke in .NET](../../../standard/numerics.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- <xref:System.SByte?displayProperty=nameWithType>
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>

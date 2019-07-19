@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4f9741944dcf8a5fcc05c169a1c3c3f679902474
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200921"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859682"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Type Library Importer-Tool)
 Das Type Library Importer-Tool konvertiert die Typdefinitionen einer COM-Typbibliothek in äquivalente Definitionen einer Common Language Runtime-Assembly. Die Ausgabe von "Tlbimp.exe" besteht aus einer binären Datei (einer Assembly), die Laufzeitmetadaten für die in der ursprünglichen Typbibliothek definierten Typen enthält. Diese Datei können Sie mit Tools wie [Ildasm.exe](ildasm-exe-il-disassembler.md) überprüfen.  
@@ -34,16 +34,16 @@ tlbimp tlbFile [options]
   
 ## <a name="parameters"></a>Parameter  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |*tlbFile*|Der Name einer beliebigen Datei, die eine COM-Typbibliothek enthält.|  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|Gibt die Versionsnummer der zu erstellenden Assembly an. Geben Sie *versionnumber* im Format *major.minor.build.revision* an.|  
 |**/company:** `companyinformation`|Fügt der Ausgabeassembly Unternehmensinformationen hinzu.|  
 |**/copyright:** `copyrightinformation`|Fügt der Ausgabeassembly Copyrightinformationen hinzu. Diese Informationen können im Dialogfeld **Dateieigenschaften** für die Assembly angezeigt werden.|  
-|**/delaysign**|Legt fest, dass "Tlbimp.exe" die resultierende Assembly mit einem starken Namen verzögert signiert. Sie müssen diese Option entweder zusammen mit der Option **/keycontainer:**, **/keyfile:** oder **/publickey:** angeben. Weitere Informationen zum verzögerten Signieren finden Sie unter [Verzögertes Signieren einer Assembly](../app-domains/delay-sign-assembly.md).|  
+|**/delaysign**|Legt fest, dass "Tlbimp.exe" die resultierende Assembly mit einem starken Namen verzögert signiert. Sie müssen diese Option entweder zusammen mit der Option **/keycontainer:** , **/keyfile:** oder **/publickey:** angeben. Weitere Informationen zum verzögerten Signieren finden Sie unter [Verzögertes Signieren einer Assembly](../app-domains/delay-sign-assembly.md).|  
 |**/help**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |**/keycontainer:** *containername*|Signiert die resultierende Assembly mit einem starken Namen, wobei das Paar aus privatem und öffentlichem Schlüssel aus dem Schlüsselcontainer verwendet wird, der mit *containername* angegeben wurde.|  
 |**/keyfile:** *filename*|Signiert die resultierende Assembly unter Verwendung des unter *filename* angegebenen Paar aus privatem und öffentlichem Schlüssel mit einem starken Namen.|  
@@ -78,8 +78,10 @@ tlbimp tlbFile [options]
   
  Es ist oft hilfreich oder notwendig, Assemblys [starke Namen](../app-domains/strong-named-assemblies.md) zuweisen zu können. Daher beinhaltet "Tlbimp.exe" Optionen, um die zur Generierung von Assemblys mit starken Namen notwendigen Informationen bereitzustellen. Sowohl die Option **/keyfile:** als auch die Option **/keycontainer:** signieren Assemblys mit starken Namen. Darum ist es sinnvoll, jeweils nur eine dieser Optionen zur Verfügung zu stellen.  
   
- Sie können mehrere Verweisassemblys angeben, indem Sie die Option **/reference** mehrmals verwenden.  
-  
+ Sie können mehrere Verweisassemblys angeben, indem Sie die Option **/reference** mehrmals verwenden.
+ 
+ Aufgrund der Art, wie „Tlbimp.exe“ Assemblys generiert, ist es nicht möglich, eine Assembly einer anderen `mscorlib`-Version neu zuzuweisen. Wenn Sie beispielsweise eine Assembly generieren möchten, die .NET Framework 2.0 verwendet, müssen Sie die im .NET Framework 2.0/3.0/3.5 SDK enthaltene „Tlbimp.exe“-Datei verwenden. Bei Verwendung von .NET Framework 4.x müssen Sie die im .NET Framework 4.x SDK enthaltene „Tlbimp.exe“-Datei verwenden.
+ 
  Beim Importieren einer Typbibliothek aus einem Modul mit mehreren Typbibliotheken kann optional eine Ressourcen-ID an eine Typbibliothekdatei angehängt werden. "Tlbimp.exe" kann diese Datei nur finden, wenn sie sich im aktuellen Verzeichnis befindet oder der vollständige Pfad angegeben wird. Siehe das Beispiel weiter unten in diesem Thema.  
   
 ## <a name="examples"></a>Beispiele  
@@ -95,7 +97,7 @@ tlbimp myTest.tlb
 tlbimp  myTest.tlb  /out:myTest.dll  
 ```  
   
- Durch folgenden Befehl wird eine Assembly generiert, die den Namen der Typbibliothek, die von `MyModule.dll\1` angegeben wurde, und die Erweiterung „.dll“ aufweist. `MyModule.dll\1` muss im aktuellen Verzeichnis befinden.  
+ Durch folgenden Befehl wird eine Assembly generiert, die den Namen der Typbibliothek, die von `MyModule.dll\1` angegeben wurde, und die Erweiterung „.dll“ aufweist. `MyModule.dll\1` muss sich im aktuellen Verzeichnis befinden.  
   
 ```  
 tlbimp MyModule.dll\1  
@@ -127,11 +129,11 @@ void SomeMethod(out bool x);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tools](index.md)
+- [Extras](index.md)
 - [Tlbexp.exe (Type Library Exporter-Tool)](tlbexp-exe-type-library-exporter.md)
-- [Importieren einer Typbibliothek als Assembly](../interop/importing-a-type-library-as-an-assembly.md)
+- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](../interop/importing-a-type-library-as-an-assembly.md)
 - [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Ildasm.exe (IL Disassembler)](ildasm-exe-il-disassembler.md)
+- [Ildasm.exe (IL-Disassembler)](ildasm-exe-il-disassembler.md)
 - [Sn.exe (Strong Name-Tool)](sn-exe-strong-name-tool.md)
 - [Assemblys mit starkem Namen](../app-domains/strong-named-assemblies.md)
 - [Attribute zum Importieren von Typbibliotheken in Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))

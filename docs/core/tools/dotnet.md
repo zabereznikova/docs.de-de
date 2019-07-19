@@ -2,12 +2,12 @@
 title: dotnet-Befehl
 description: Informationen zum dotnet-Befehl (generischer Treiber für die .NET Core CLI-Tools) und dessen Verwendung.
 ms.date: 06/04/2018
-ms.openlocfilehash: 5278adf44d12e428cdeacf1d475377ce9155c314
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613004"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859551"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -42,7 +42,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ---
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
 `dotnet` ist ein Tool für das Verwalten von .NET-Quellcode und Binärdateien. Es stellt Befehle zur Verfügung, die bestimmte Aufgaben erfüllen, z.B. [`dotnet build`](dotnet-build.md) und [`dotnet run`](dotnet-run.md). Jeder Befehl definiert seine eigenen Argumente. Geben Sie nach jedem Befehl `--help` ein, um auf eine kurze Hilfsdokumentation zuzugreifen.
 
@@ -304,7 +304,7 @@ Führen Sie eine Anwendungs-DLL aus, z.B. `myapp.dll`:
 
 `DOTNET_PACKAGES`
 
-Der Cache des primären Pakets. Wenn er nicht festgelegt wird, wird standardmäßig `$HOME/.nuget/packages` unter Unix oder `%HOME%\NuGet\Packages` unter Windows verwendet.
+Der Ordner für globale Pakete. Wenn er nicht festgelegt wird, wird standardmäßig `~/.nuget/packages` unter Unix oder `%userprofile%\.nuget\packages` unter Windows verwendet.
 
 `DOTNET_SERVICING`
 
@@ -326,7 +326,7 @@ Deaktiviert Rollforward der Nebenversion, wenn `0` festgelegt ist. Weitere Infor
 
 `DOTNET_PACKAGES`
 
-Der Cache des primären Pakets. Wenn er nicht festgelegt wird, wird standardmäßig `$HOME/.nuget/packages` unter Unix oder `%HOME%\NuGet\Packages` unter Windows verwendet.
+Der Cache des primären Pakets. Wenn er nicht festgelegt wird, wird standardmäßig `$HOME/.nuget/packages` unter Unix oder `%userprofile%\.nuget\packages` unter Windows verwendet.
 
 `DOTNET_SERVICING`
 
@@ -344,7 +344,7 @@ Gibt an, ob die .NET Core-Runtime, das freigegebene Framework oder das SDK vom g
 
 `DOTNET_PACKAGES`
 
-Der Cache des primären Pakets. Wenn er nicht festgelegt wird, wird standardmäßig `$HOME/.nuget/packages` unter Unix oder `%HOME%\NuGet\Packages` unter Windows verwendet.
+Der Cache des primären Pakets. Wenn er nicht festgelegt wird, wird standardmäßig `$HOME/.nuget/packages` unter Unix oder `%userprofile%\.nuget\packages` unter Windows verwendet.
 
 `DOTNET_SERVICING`
 

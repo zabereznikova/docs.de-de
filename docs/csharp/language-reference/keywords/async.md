@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: f902d6a92f9d982dc00c3446f7b516c372f1a30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 346cfccd076866e9c321974aaa8c8ddd367a17ea
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709519"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859577"
 ---
 # <a name="async-c-reference"></a>async (C#-Referenz)
 Mit dem `async`-Modifizierer können Sie angeben, dass eine Methode, ein [Lambdaausdruck](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) oder eine [anonyme Methode](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) asynchron ist. Wenn Sie diesen Modifizierer auf Methoden oder Ausdrücke anwenden, wird dies als *asynchrone Methode* bezeichnet. Im folgenden Beispiel wird eine asynchrone Methode mit dem Namen `ExampleMethodAsync` definiert: 
@@ -70,7 +70,7 @@ Eine asynchrone Methode kann folgende Rückgabetypen haben:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](../../../csharp/language-reference/keywords/void.md), der nur für Ereignishandler verwendet werden sollte.
+- [void](../../../csharp/language-reference/keywords/void.md). Von den `async void`-Methoden wird außer für Code für Ereignishandler allgemein abgeraten, da aufrufende Funktionen für diese Methoden `await` nicht verwenden können und einen anderen Mechanismus implementieren müssen, um den erfolgreichen Abschluss oder Fehler zu melden.
 - Ab C# 7.0: jeder Typ, der über eine zugängliche `GetAwaiter`-Methode verfügt. Der Typ `System.Threading.Tasks.ValueTask<TResult>` ist eine solche Implementierung. Er ist verfügbar, wenn Sie das NuGet-Paket `System.Threading.Tasks.Extensions` hinzufügen. 
 
 Mit der asynchronen Methode können keine [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)-, [ref](../../../csharp/language-reference/keywords/ref.md)- oder [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md)-Parameter deklariert werden, und sie kann auch keinen [Verweisrückgabewert](../../programming-guide/classes-and-structs/ref-returns.md) aufweisen, es können mit ihr jedoch Methoden aufgerufen werden, die solche Parameter aufweisen.  

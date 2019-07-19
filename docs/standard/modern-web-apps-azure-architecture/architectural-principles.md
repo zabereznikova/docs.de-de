@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arch
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442983"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775902"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
@@ -50,7 +50,7 @@ Die **Abhängigkeitsumkehrung** ist ein wichtiger Bestandteil beim Erstellen von
 
 ### <a name="explicit-dependencies"></a>Explizite Abhängigkeiten
 
-**Methoden und Klassen sollten explizit alle benötigten zusammenarbeitenden Objekte erfordern, um ordnungsgemäß zu funktionieren.** Damit Klassen sich in einem gültigen Zustand befinden bzw. ordnungsgemäß funktionieren können, bieten Klassenkonstruktoren die Möglichkeit, dass Klassen die dafür benötigen Elemente identifizieren können. Wenn Sie Klassen identifizieren, die konstruiert und aufgerufen werden können, die jedoch nur ordnungsgemäß funktionieren, wenn bestimmte globale Komponenten bzw. Komponenten der Infrastruktur vorhanden sind, sind diese Klassen Ihren Kunden gegenüber *unehrlich*. Der Konstruktorvertrag sagt aus, dass der Kunde nur die angegebenen Elemente benötigt (wenn möglich auch nichts, wenn die Klasse nur einen Standardkonstruktor verwendet), aber zur Laufzeit wird angegeben, dass das Objekt etwas anderes benötigt.
+**Methoden und Klassen sollten explizit alle benötigten zusammenarbeitenden Objekte erfordern, um ordnungsgemäß zu funktionieren.** Damit Klassen sich in einem gültigen Zustand befinden bzw. ordnungsgemäß funktionieren können, bieten Klassenkonstruktoren die Möglichkeit, dass Klassen die dafür benötigen Elemente identifizieren können. Wenn Sie Klassen identifizieren, die konstruiert und aufgerufen werden können, die jedoch nur ordnungsgemäß funktionieren, wenn bestimmte globale Komponenten bzw. Komponenten der Infrastruktur vorhanden sind, sind diese Klassen Ihren Kunden gegenüber *unehrlich*. Der Konstruktorvertrag sagt aus, dass der Kunde nur die angegebenen Elemente benötigt (wenn möglich auch nichts, wenn die Klasse nur einen parameterlosen Konstruktor verwendet), aber zur Laufzeit wird angegeben, dass das Objekt etwas anderes benötigt.
 
 Durch Befolgen des expliziten Abhängigkeitsprinzips sind Ihre Klassen und Methoden gegenüber den Kunden ehrlich, wenn es um die Elemente geht, die sie benötigen, um ordnungsgemäß zu arbeiten. Dadurch dokumentiert Ihr Code vermehrt selbst, und Ihr Codierungsvertrag wird benutzerfreundlicher, da Benutzer größeres Vertrauen in dem Zusammenhang entwickeln, dass wenn sie das bereitstellen, was für Methoden oder Konstruktorparameter erforderlich ist, sich die Objekte, mit denen sie arbeiten, zur Laufzeit ordnungsgemäß verhalten.
 
@@ -85,7 +85,7 @@ Einige Beispiele für Verstöße gegen dieses Prinzip:
 
 - Klassen, die für die Speicherung von sich selbst verantwortlich sind (z. B. das Muster „Aktiver Datensatz“)
 
-- Erforderlicher Standardkonstruktor
+- Erforderlicher parameterloser Konstruktor
 
 - Eigenschaften, die ein virtuelles Schlüsselwort erfordern
 

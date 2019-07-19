@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Erneutes Trainieren der TensorFlow-Bildklassifizierung: Übertragungslernen'
 description: Erfahren Sie, wie ein TensorFlow-Modell für die Bildklassifizierung mit Übertragungslernen und ML.NET neu trainieren. Das ursprüngliche Modell war so trainiert, dass es einzelne Bilder klassifizieren konnte. Nach dem erneuten Training ordnet das neue Modell die Bilder in allgemeine Kategorien ein.
-ms.date: 06/12/2019
+ms.date: 07/09/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 9344d0757e140995dfd9ce7d1a355910a81c6d31
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 65f94fa5e725703d79d0dddae761cbfbc3f89e0e
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539848"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804761"
 ---
 # <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>Tutorial: Erneutes Trainieren einer TensorFlow-Bildklassifizierung mit Übertragungslernen und ML.NET
 
@@ -43,7 +43,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 * [Die ZIP-Datei mit dem Tutorialassetsverzeichnis ](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
-* [Die Machine Learning-Modelle von InceptionV3](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
+* [Das Machine Learning-Modell von InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Auswählen der entsprechenden Machine Learning-Aufgabe
 
@@ -77,7 +77,7 @@ Transfer Learning umfasst einige Strategien wie z.B. *erneutes Trainieren aller 
 
 Ihr Bildklassifizierungsmodell verwendet das [Inception-Modell](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip) erneut, ein gängiges, am `ImageNet`-Dataset trainiertes Bilderkennungsmodell, in dem das TensorFlow-Modell versucht, ganze Bilder in Tausenden von Klassen wie „Regenschirm“, „Jersey“ und „Spülmaschine“ zu klassifizieren.
 
-Das `Inception v3 model` kann als [Deep Convolutional Neural Network](https://en.wikipedia.org/wiki/Convolutional_neural_network) (tiefes faltendes neuronales Netzwerk) klassifiziert werden und kann eine angemessene Leistung bei schwierigen visuellen Erkennungsaufgaben erzielen, die in einigen Bereichen dem menschlichen Leistungsvermögen ebenbürtig ist oder es überschreitet. Das Modell / der Algorithmus wurde von mehreren Forschern entwickelt und basiert auf der ursprünglichen Arbeit: [„Rethinking the Inception Architecture for Computer Vision“ von Szegedy, et al.](https://arxiv.org/abs/1512.00567) (Neuer Ansatz der Inception-Architektur für maschinelles Sehen)
+Das `Inception v1 model` kann als [Deep Convolutional Neural Network](https://en.wikipedia.org/wiki/Convolutional_neural_network) (tiefes faltendes neuronales Netzwerk) klassifiziert werden und kann eine angemessene Leistung bei schwierigen visuellen Erkennungsaufgaben erzielen, die in einigen Bereichen dem menschlichen Leistungsvermögen ebenbürtig ist oder es überschreitet. Das Modell / der Algorithmus wurde von mehreren Forschern entwickelt und basiert auf der ursprünglichen Arbeit: [„Rethinking the Inception Architecture for Computer Vision“ von Szegedy, et al.](https://arxiv.org/abs/1512.00567) (Neuer Ansatz der Inception-Architektur für maschinelles Sehen)
 
 Da das `Inception model` bereits anhand von Tausenden anderer Bilder vortrainiert wurde, enthält es die zur Bildidentifizierung erforderlichen [Bildfeatures](https://en.wikipedia.org/wiki/Feature_(computer_vision)). Die unteren Bildfeatureebenen erkennen einfache Features (z.B. Kanten), und die höheren Ebenen erkennen komplexere Features (z.B. Formen). Die letzte Ebene wird anhand einer viel kleinerer Menge von Daten trainiert, da Sie mit einem vortrainierten Modell beginnen, das bereits weiß, wie Bilder klassifiziert werden. Da Sie mit Ihrem Modell mehr als zwei Kategorien klassifizieren können, ist dies ein Beispiel für eine [Multiklassenklassifizierung](../resources/tasks.md#multiclass-classification). 
 

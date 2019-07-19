@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690662"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860154"
 ---
 # <a name="best-practices-for-exceptions"></a>Best Practices für Ausnahmen
 
@@ -80,7 +80,7 @@ Wenn eine benutzerdefinierte Ausnahme erforderlich ist, benennen Sie diese entsp
 
 ## <a name="include-three-constructors-in-custom-exception-classes"></a>Einschließen von drei Konstruktoren in benutzerdefinierte Ausnahmeklassen
 
-Verwenden Sie beim Erstellen eigener Ausnahmeklassen mindestens die drei gängigen Konstruktoren: den Standardkonstruktor, einen Konstruktor, der eine Zeichenfolgenmeldung entgegennimmt, und einen Konstruktor, der eine Zeichenfolgenmeldung und eine innere Ausnahme entgegennimmt.
+Verwenden Sie beim Erstellen eigener Ausnahmeklassen mindestens die drei gängigen Konstruktoren: den parameterlosen Konstruktor, einen Konstruktor, der eine Zeichenfolgenmeldung entgegennimmt, und einen Konstruktor, der eine Zeichenfolgenmeldung und eine innere Ausnahme entgegennimmt.
 
 * <xref:System.Exception.%23ctor>, der Standardwerte verwendet.
 
@@ -143,6 +143,14 @@ public void TransferFunds(Account from, Account to, decimal amount)
 }
 ```
 
+```vb
+Public Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    from.Withdrawal(amount)
+    ' If the deposit fails, the withdrawal shouldn't remain in effect.
+    [to].Deposit(amount)
+End Sub
+```
+
 Die obige Methode löst Ausnahmen nicht direkt aus, sondern muss defensiv geschrieben werden, damit, wenn die Gutschrift fehlschlägt, die Abbuchung rückgängig gemacht wird.
 
 In dieser Situation besteht eine Möglichkeit darin, alle Ausnahmen abzufangen, die von der Gutschrifttransaktion ausgelöst wurden, und für die Abbuchung einen Rollback auszuführen.
@@ -163,19 +171,43 @@ private static void TransferFunds(Account from, Account to, decimal amount)
 }
 ```
 
+```vb
+Private Shared Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
+    Dim withdrawalTrxID As String = from.Withdrawal(amount)
+    Try
+        [to].Deposit(amount)
+    Catch
+        from.RollbackTransaction(withdrawalTrxID)
+        Throw
+    End Try
+End Sub
+```
+
 Dieses Beispiel veranschaulicht die Verwendung von `throw`, um die ursprüngliche Ausnahme erneut auszulösen, damit aufrufende Funktionen die tatsächliche Ursache des Problems erkennen können, ohne die <xref:System.Exception.InnerException>-Eigenschaft untersuchen zu müssen. Eine Alternative besteht darin, eine neue Ausnahme auszulösen und die ursprüngliche Ausnahme als innere Ausnahme einzuschließen:
 
 ```csharp
 catch (Exception ex)
 {
     from.RollbackTransaction(withdrawalTrxID);
-    throw new TransferFundsException("Withdrawal failed", innerException: ex)
+    throw new TransferFundsException("Withdrawal failed.", innerException: ex)
     {
         From = from,
         To = to,
         Amount = amount
     };
 }
+```
+
+```vb
+Catch ex As Exception
+    from.RollbackTransaction(withdrawalTrxID)
+    Throw New TransferFundsException("Withdrawal failed.", innerException:=ex) With
+    {
+        .From = from,
+        .[To] = [to],
+        .Amount = amount
+    }
+End Try
 ```
 
 ## <a name="see-also"></a>Siehe auch
