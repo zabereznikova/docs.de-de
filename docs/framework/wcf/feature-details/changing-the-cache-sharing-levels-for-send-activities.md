@@ -2,12 +2,12 @@
 title: Ändern der Cachefreigabeebenen für Send-Aktivitäten
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 079eb037f074155aec3ad5473480bbf5d4d341b2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425157"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363836"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Ändern der Cachefreigabeebenen für Send-Aktivitäten
 Mit der Erweiterung <xref:System.ServiceModel.Activities.SendMessageChannelCache> können Sie die Cachefreigabeebenen, die Einstellungen des Kanalfactorycaches und die Einstellungen des Kanalcaches für Workflows anpassen, die Nachrichten mit <xref:System.ServiceModel.Activities.Send>-Messagingaktivitäten an Dienstendpunkte senden. Diese Workflows sind in der Regel Clientworkflows, könnten jedoch auch Workflowdienste sein, die in einem <xref:System.ServiceModel.WorkflowServiceHost> gehostet werden. Der Kanalfactorycache enthält zwischengespeicherte <xref:System.ServiceModel.ChannelFactory%601>-Objekte. Der Kanalcache enthält zwischengespeicherte Kanäle.  
@@ -20,11 +20,11 @@ Mit der Erweiterung <xref:System.ServiceModel.Activities.SendMessageChannelCache
   
  Im Folgenden sind die unterschiedlichen Cachefreigabeebenen für <xref:System.ServiceModel.Activities.Send>-Aktivitäten in einem Workflow mit Empfehlungen zur Verwendung aufgelistet:  
   
-- **Hostebene**: Auf dem Host, Freigabestufe ist der Cache nur für die in dem Workflowdiensthost gehosteten Workflowinstanzen verfügbar. Ein Cache kann auch prozessweit für mehrere Workflowdiensthosts freigegeben werden.  
+- **Hostebene**: Auf der Host Freigabe Ebene ist der Cache nur für die Workflow Instanzen verfügbar, die auf dem Workflow Dienst Host gehostet werden. Ein Cache kann auch prozessweit für mehrere Workflowdiensthosts freigegeben werden.  
   
-- **Auf Instanzebene**: In der Instanz, Freigabestufe, der Cache ist während des Lebenszyklus einer bestimmten Workflowinstanz zur Verfügung, aber der Cache wird nicht für andere Workflowinstanzen verfügbar.  
+- **Instanzebene**: In der-instanzfreigabe ist der Cache für eine bestimmte Workflow Instanz während der gesamten Lebensdauer verfügbar, aber der Cache ist für andere Workflow Instanzen nicht verfügbar.  
   
-- **Kein Cache**: Der Cache ist standardmäßig deaktiviert, wenn Sie einen Workflow verfügen, der in der Konfiguration definierte Endpunkte verwendet. Es wird empfohlen, den Cache in diesem Fall nicht zu aktivieren, da dies unsicher sein kann. Beispiel: Wenn eine andere Identität (andere Anmeldeinformationen oder Identitätswechsel) für jeden Sendevorgang benötigt wird.  
+- **Kein Cache**: Der Cache ist standardmäßig deaktiviert, wenn Sie über einen Workflow verfügen, der in der Konfiguration definierte Endpunkte verwendet. Es wird empfohlen, den Cache in diesem Fall nicht zu aktivieren, da dies unsicher sein kann. Beispiel: Wenn eine andere Identität (andere Anmeldeinformationen oder Identitätswechsel) für jeden Sendevorgang benötigt wird.  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Ändern der Cachefreigabeebene für einen Clientworkflow  
  Um die Cachefreigabe für einen Clientworkflow festzulegen, fügen Sie dem gewünschten Satz von Workflowinstanzen eine Instanz der <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse als Erweiterung hinzu. So wird der Cache für alle Workflowinstanzen freigegeben. In den folgenden Codebeispielen wird die Ausführung dieser Schritte veranschaulicht.  
@@ -86,7 +86,7 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
 ```  
   
 ## <a name="customizing-cache-settings"></a>Anpassen von Cacheeinstellungen  
- Sie können die Cacheeinstellungen für den Kanalfactorycache und den Kanalcache anpassen. Die Cacheeinstellungen werden in der <xref:System.ServiceModel.Activities.ChannelCacheSettings>-Klasse definiert. Die <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse enthält Standardcacheeinstellungen für den Kanalfactorycache und den Kanalcache in ihrem Standardkonstruktor. In der folgenden Tabelle sind die Standardwerte für diese Cacheeinstellungen für die beiden Cachetypen aufgeführt.  
+ Sie können die Cacheeinstellungen für den Kanalfactorycache und den Kanalcache anpassen. Die Cacheeinstellungen werden in der <xref:System.ServiceModel.Activities.ChannelCacheSettings>-Klasse definiert. Die <xref:System.ServiceModel.Activities.SendMessageChannelCache> -Klasse definiert die Standard Cache Einstellungen für den kanalfactorycache und den channelcache im Parameter losen Konstruktor. In der folgenden Tabelle sind die Standardwerte für diese Cacheeinstellungen für die beiden Cachetypen aufgeführt.  
   
 |Einstellungen|LeaseTimeout (min)|IdleTimeout (min)|MaxItemsInCache|  
 |-|-|-|-|  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- In einem gehosteten Workflowdienst können Sie die Einstellungen für den Factorycache und den Channelcache in der Anwendungskonfigurationsdatei angeben. Fügen Sie dafür ein Dienstverhalten hinzu, das die Cacheeinstellungen für die Factory und den Channelcache enthält, und fügen Sie dieses Dienstverhalten dem Dienst hinzu. Das folgende Beispiel zeigt den Inhalt einer Konfigurationsdatei, die enthält die `MyChannelCacheBehavior` -Dienstverhalten mit dem benutzerdefinierten factorycache und den channelcache factorycacheeinstellungen. Dieses Dienstverhalten wird hinzugefügt, um den Dienst über die `behaviorConfiguration` Attribut.  
+ In einem gehosteten Workflowdienst können Sie die Einstellungen für den Factorycache und den Channelcache in der Anwendungskonfigurationsdatei angeben. Fügen Sie dafür ein Dienstverhalten hinzu, das die Cacheeinstellungen für die Factory und den Channelcache enthält, und fügen Sie dieses Dienstverhalten dem Dienst hinzu. Das folgende Beispiel zeigt den Inhalt einer Konfigurationsdatei, die das `MyChannelCacheBehavior` Dienst Verhalten mit den Einstellungen für den benutzerdefinierten factorycache und den channelcache enthält. Dieses Dienst Verhalten wird dem Dienst über das `behaviorConfiguration` -Attribut hinzugefügt.  
   
 ```xml  
 <configuration>    

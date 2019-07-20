@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d8e26ff197e22ffa18b4acdd020b80879023c0f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834068"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364090"
 ---
 # <a name="application-management-overview"></a>Übersicht über die Anwendungsverwaltung
-Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der für die Implementierung und Verwaltung der Anwendung gilt. Dieses Thema enthält eine Übersicht über die Funktionen in der <xref:System.Windows.Application> Klasse zum Erstellen und Verwalten von Anwendungen.  
+Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der für die Implementierung und Verwaltung der Anwendung gilt. Dieses Thema enthält eine Übersicht über die Funktionen <xref:System.Windows.Application> der-Klasse zum Erstellen und Verwalten von-Anwendungen.  
 
 ## <a name="the-application-class"></a>Die Application-Klasse  
- In WPF im Gültigkeitsbereich der Anwendung die Grundfunktionen gekapselt ist, der <xref:System.Windows.Application> Klasse. Die <xref:System.Windows.Application> Klasse enthält die folgenden Funktionen:  
+ In WPF werden allgemeine Funktionen für Anwendungsbereiche in der <xref:System.Windows.Application> -Klasse gekapselt. Die <xref:System.Windows.Application> -Klasse umfasst die folgenden Funktionen:  
   
 - Lebensdauer der Anwendung nachverfolgen und mit ihr interagieren  
   
@@ -34,31 +34,31 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>Ausführen allgemeiner Aufgaben mithilfe der Application-Klasse  
- Wenn Sie nicht alle Details der interessiert sind die <xref:System.Windows.Application> -Klasse, die folgende Tabelle enthält einige häufige Aufgaben für <xref:System.Windows.Application> und wie diese umgesetzt werden können. Weitere Informationen und entsprechenden Beispielcode finden Sie über die zugehörigen APIs und Themen.  
+ Wenn Sie nicht an allen Details der <xref:System.Windows.Application> -Klasse interessiert sind, finden Sie in der folgenden Tabelle einige allgemeine Aufgaben für <xref:System.Windows.Application> und deren Ausführung. Weitere Informationen und entsprechenden Beispielcode finden Sie über die zugehörigen APIs und Themen.  
   
 |Aufgabe|Ansatz|  
 |----------|--------------|  
 |Ein Objekt abrufen, das die aktuelle Anwendung darstellt.|Verwenden Sie die <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType>-Eigenschaft.|  
-|Einen Startbildschirm zu einer Anwendung hinzufügen.|Finden Sie unter [Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung](how-to-add-a-splash-screen-to-a-wpf-application.md).|  
+|Einen Startbildschirm zu einer Anwendung hinzufügen.|Siehe [Hinzufügen eines Begrüßungs Bildschirms zu einer WPF-Anwendung](how-to-add-a-splash-screen-to-a-wpf-application.md).|  
 |Eine Anwendung starten.|Verwenden Sie die <xref:System.Windows.Application.Run%2A?displayProperty=nameWithType>-Methode.|  
-|Eine Anwendung beenden.|Verwenden der <xref:System.Windows.Application.Shutdown%2A> Methode der <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> Objekt.|  
-|Argumente über die Befehlszeile abrufen.|Behandeln der <xref:System.Windows.Application.Startup?displayProperty=nameWithType> Ereignisses und verwenden Sie die <xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=nameWithType> Eigenschaft. Ein Beispiel finden Sie unter den <xref:System.Windows.Application.Startup?displayProperty=nameWithType> Ereignis.|  
-|Exitcode der Anwendung abrufen und festlegen.|Legen Sie die <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=nameWithType> -Eigenschaft in der <xref:System.Windows.Application.Exit?displayProperty=nameWithType> Ereignishandler oder der Aufruf der <xref:System.Windows.Application.Shutdown%2A> -Methode und übergeben Sie eine ganze Zahl.|  
-|Nicht behandelte Ausnahmen erkennen und darauf reagieren.|Behandeln der <xref:System.Windows.Application.DispatcherUnhandledException> Ereignis.|  
+|Eine Anwendung beenden.|Verwenden Sie <xref:System.Windows.Application.Shutdown%2A> die-Methode <xref:System.Windows.Application.Current%2A?displayProperty=nameWithType> des-Objekts.|  
+|Argumente über die Befehlszeile abrufen.|Behandeln Sie <xref:System.Windows.Application.Startup?displayProperty=nameWithType> das Ereignis, und <xref:System.Windows.StartupEventArgs.Args%2A?displayProperty=nameWithType> verwenden Sie die-Eigenschaft. Ein Beispiel finden Sie unter dem <xref:System.Windows.Application.Startup?displayProperty=nameWithType> -Ereignis.|  
+|Exitcode der Anwendung abrufen und festlegen.|Legen Sie <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A?displayProperty=nameWithType> die-Eigenschaft <xref:System.Windows.Application.Exit?displayProperty=nameWithType> im Ereignishandler fest, <xref:System.Windows.Application.Shutdown%2A> oder geben Sie die-Methode an, und übergeben Sie eine ganze Zahl|  
+|Nicht behandelte Ausnahmen erkennen und darauf reagieren.|Behandeln Sie <xref:System.Windows.Application.DispatcherUnhandledException> das-Ereignis.|  
 |Anwendungsspezifische Ressourcen abrufen und festlegen.|Verwenden Sie die <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>-Eigenschaft.|  
-|Ein anwendungsspezifisches Ressourcenverzeichnis verwenden.|Finden Sie unter [ein anwendungsspezifisches Ressourcenverzeichnis verwenden](how-to-use-an-application-scope-resource-dictionary.md).|  
+|Ein anwendungsspezifisches Ressourcenverzeichnis verwenden.|Siehe [Verwenden eines Ressourcen Wörterbuchs für den Anwendungsbereich](how-to-use-an-application-scope-resource-dictionary.md).|  
 |Anwendungsspezifische Eigenschaften abrufen und festlegen.|Verwenden Sie die <xref:System.Windows.Application.Properties%2A?displayProperty=nameWithType>-Eigenschaft.|  
-|Den Zustand einer Anwendung abrufen und speichern.|Finden Sie unter [beibehalten und Wiederherstellen von Anwendungsbereichseigenschaften über Anwendungssitzungen](persist-and-restore-application-scope-properties.md).|  
-|Datendateien ohne Code verwalten, einschließlich Ressourcendateien, Inhalts- und Ursprungssitedateien.|Finden Sie unter [WPF-Anwendungsressource, Inhalt und Datendateien](wpf-application-resource-content-and-data-files.md).|  
+|Den Zustand einer Anwendung abrufen und speichern.|Weitere Informationen finden Sie unter beibehalten [und Wiederherstellen von Anwendungsbereichs Eigenschaften über Anwendungs Sitzungen hinweg](persist-and-restore-application-scope-properties.md).|  
+|Datendateien ohne Code verwalten, einschließlich Ressourcendateien, Inhalts- und Ursprungssitedateien.|Weitere Informationen finden Sie [unter WPF-Anwendungs Ressource, Inhalts-und Datendateien](wpf-application-resource-content-and-data-files.md).|  
 |Fenster in eigenständigen Anwendungen verwalten.|Weitere Informationen finden Sie unter [Übersicht über WPF-Fenster](wpf-windows-overview.md).|  
-|Navigation überwachen und verwalten.|Finden Sie unter [Übersicht über die Navigation](navigation-overview.md).|  
+|Navigation überwachen und verwalten.|Siehe [Navigations Übersicht](navigation-overview.md).|  
   
 <a name="The_Application_Definition"></a>   
 ## <a name="the-application-definition"></a>Die Anwendungsdefinition  
- Nutzen Sie die Funktionalität der <xref:System.Windows.Application> -Klasse, müssen Sie eine Anwendungsdefinition implementieren. Eine Definition der WPF-Anwendung ist eine abgeleitete Klasse <xref:System.Windows.Application> und mit einer speziellen MSBuild-Einstellung konfiguriert ist.  
+ Um die Funktionalität <xref:System.Windows.Application> der-Klasse verwenden zu können, müssen Sie eine Anwendungs Definition implementieren. Eine WPF-Anwendungs Definition ist eine Klasse, die <xref:System.Windows.Application> von abgeleitet wird und mit einer speziellen MSBuild-Einstellung konfiguriert wird.  
 
 ### <a name="implementing-an-application-definition"></a>Implementieren einer Anwendungsdefinition  
- Eine typische Definition für die WPF-Anwendung wird mithilfe von Markup und CodeBehind implementiert. Dadurch können Sie Anwendungseigenschaften und Ressourcen deklarativ mithilfe des Markups festlegen und Ereignisse registrieren, während mit CodeBehind Ereignisse behandelt und anwendungsspezifisches Verhalten implementiert wird.  
+ Eine typische WPF-Anwendungs Definition wird sowohl mit Markup als auch mit Code Behind implementiert. Dadurch können Sie Anwendungseigenschaften und Ressourcen deklarativ mithilfe des Markups festlegen und Ereignisse registrieren, während mit CodeBehind Ereignisse behandelt und anwendungsspezifisches Verhalten implementiert wird.  
   
  Das folgende Beispiel veranschaulicht die Implementierung einer Anwendungsdefinition mithilfe von Markup und CodeBehind:  
   
@@ -69,19 +69,19 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
  Damit eine Markup- und eine CodeBehind-Datei zusammenarbeiten können, ist Folgendes erforderlich:  
   
-- Im Markup der `Application` -Element muss enthalten der `x:Class` Attribut. Wenn die Anwendung erstellt wird, wird das Vorhandensein des `x:Class` im Markup-Datei wird MSBuild zum Erstellen einer `partial` abgeleitete Klasse <xref:System.Windows.Application> und hat den Namen, die angegeben wird die `x:Class` Attribut. Dies erfordert das Hinzufügen einer XML-Namespacedeklaration für das XAML-Schema (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
+- Im Markup muss das `Application` -Element das `x:Class` -Attribut enthalten. Wenn die Anwendung erstellt wird, bewirkt das vorhanden `x:Class` sein von in der Markup Datei, dass MSBuild `partial` eine Klasse erstellt, <xref:System.Windows.Application> die von abgeleitet wird und den Namen `x:Class` hat, der vom-Attribut angegeben wird. Dies erfordert das Hinzufügen einer XML-Namespace Deklaration für das XAML`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`-Schema ().
   
-- Im Code-Behind muss die Klasse muss eine `partial` Klasse mit dem gleichen Namen, die angegeben wird die `x:Class` -Attribut im Markup und eine Ableitung muss <xref:System.Windows.Application>. Dadurch wird der Code-Behind-Datei zugeordnet werden die `partial` -Klasse, die für die Markupdatei generiert wird, wenn die Anwendung erstellt wird (finden Sie unter [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)).  
+- Bei Code-Behind muss die Klasse eine `partial` Klasse mit demselben Namen sein, der im Markup durch das `x:Class` -Attribut angegeben wird und von <xref:System.Windows.Application>abgeleitet werden muss. Dadurch kann die Code-Behind-Datei mit der `partial` -Klasse verknüpft werden, die beim Erstellen der Anwendung für die Markup Datei generiert wird (siehe [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
->  Wenn Sie ein neues WPF-Anwendungsprojekt oder WPF-Browseranwendungsprojekt mit Visual Studio erstellen, wird eine Anwendungsdefinition ist standardmäßig enthalten und wird mithilfe von Markup und CodeBehind definiert.  
+>  Wenn Sie ein neues WPF-Anwendungsprojekt oder ein WPF-Browser Anwendungsprojekt mithilfe von Visual Studio erstellen, ist standardmäßig eine Anwendungs Definition enthalten, die sowohl mit Markup als auch mit Code-Behind definiert wird.  
   
- Dieser Code ist die Mindestanforderung zum Implementieren einer Anwendungsdefinition. Muss jedoch eine zusätzliche MSBuild-Konfiguration, die Definition für die Anwendung vor dem Erstellen und Ausführen der Anwendung vorgenommen werden.  
+ Dieser Code ist die Mindestanforderung zum Implementieren einer Anwendungsdefinition. Vor dem Erstellen und Ausführen der Anwendung muss jedoch eine zusätzliche MSBuild-Konfiguration an der Anwendungs Definition vorgenommen werden.  
   
 ### <a name="configuring-the-application-definition-for-msbuild"></a>Konfigurieren der Anwendungsdefinition für MSBuild  
- Eigenständige Anwendungen und XAML-Browseranwendungen (XBAPs) erfordern die Implementierung ein gewisses Maß an die Infrastruktur, bevor sie ausgeführt werden können. Der wichtigste Teil dieser Infrastruktur ist der Einstiegspunkt. Wenn eine Anwendung von einem Benutzer gestartet wird, ruft das Betriebssystem den Einstiegspunkt auf, der eine bekannte Funktion zum Starten von Anwendungen ist.  
+ Eigenständige Anwendungen und XAML-Browser Anwendungen (XBAPs) erfordern die Implementierung einer bestimmten Infrastruktur Ebene, bevor Sie ausgeführt werden können. Der wichtigste Teil dieser Infrastruktur ist der Einstiegspunkt. Wenn eine Anwendung von einem Benutzer gestartet wird, ruft das Betriebssystem den Einstiegspunkt auf, der eine bekannte Funktion zum Starten von Anwendungen ist.  
   
- In der Vergangenheit mussten Entwickler je nach Technologie einen Teil oder sämtlichen Code selbst verfassen. Allerdings WPF generiert dieser Code für Sie, wenn die Markupdatei Ihrer Anwendungsdefinition, als ein MSBuild konfiguriert ist `ApplicationDefinition` -Element angegeben, wie in der folgenden MSBuild-Projektdatei dargestellt:  
+ In der Vergangenheit mussten Entwickler je nach Technologie einen Teil oder sämtlichen Code selbst verfassen. WPF generiert diesen Code jedoch für Sie, wenn die Markup Datei Ihrer Anwendungs Definition als MSBuild `ApplicationDefinition` -Element konfiguriert ist, wie in der folgenden MSBuild-Projektdatei dargestellt:  
   
 ```xml  
 <Project   
@@ -94,53 +94,53 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 </Project>  
 ```  
   
- Da die Code-Behind-Datei Code enthält, wird es als ein MSBuild gekennzeichnet `Compile` -Element angegeben, ist Sie normal.  
+ Da die Code-Behind-Datei Code enthält, wird Sie als MSBuild `Compile` -Element markiert, wie es normal ist.  
   
- Die Anwendung diese MSBuild-Konfigurationen auf die Markup- und Code-Behind-Dateien einer Anwendungsdefinition führt dazu, dass MSBuild zum Generieren von Code wie folgt:  
+ Die Anwendung dieser MSBuild-Konfigurationen auf die Markup-und Code Behind-Dateien einer Anwendungs Definition bewirkt, dass MSBuild Code wie den folgenden generiert:  
   
  [!code-csharp[auto-generated-code](~/samples/snippets/csharp/VS_Snippets_Wpf/AppDefAugSnippets/CSharp/App.cs)]
  [!code-vb[auto-generated-code](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppDefAugSnippets/VisualBasic/App.vb)]  
   
- Der resultierende Code ergänzt die Anwendungsdefinition um zusätzlichen Infrastrukturcode, einschließlich der Einstiegspunktmethode `Main`. Die <xref:System.STAThreadAttribute> Attribut gilt für die `Main` Methode, um anzugeben, dass der Hauptthread der Benutzeroberfläche für die WPF-Anwendung einen STA-Thread, der für WPF-Anwendungen erforderlich ist. Bei Aufruf `Main` erstellt eine neue Instanz der `App` vor dem Aufruf der `InitializeComponent` Methode zum Registrieren der Ereignisse, und legen Sie die Eigenschaften, die im Markup implementiert sind. Da `InitializeComponent` wird generiert, Sie müssen nicht explizit aufrufen `InitializeComponent` aus einer Anwendungsdefinition wie beim <xref:System.Windows.Controls.Page> und <xref:System.Windows.Window> Implementierungen. Zum Schluss die <xref:System.Windows.Application.Run%2A> aufgerufen, um die Anwendung zu starten.  
+ Der resultierende Code erweitert die Anwendungs Definition mit zusätzlichem Infrastruktur Code, der die Einstiegspunkt Methode `Main`einschließt. Das <xref:System.STAThreadAttribute> -Attribut wird auf die `Main` -Methode angewendet, um anzugeben, dass der Hauptbenutzer Oberflächen-Thread für die WPF-Anwendung ein STA-Thread ist, der für WPF-Anwendungen erforderlich ist. Beim Aufruf von `Main` wird eine neue Instanz von `App` erstellt, bevor `InitializeComponent` die-Methode aufgerufen wird, um die Ereignisse zu registrieren und die im Markup implementierten Eigenschaften festzulegen. Da `InitializeComponent` für Sie generiert wird, müssen Sie nicht explizit aus einer `InitializeComponent` Anwendungs Definition aufzurufen, wie dies bei <xref:System.Windows.Controls.Page> - <xref:System.Windows.Window> und-Implementierungen der Fall ist. Zum Schluss wird <xref:System.Windows.Application.Run%2A> die-Methode aufgerufen, um die Anwendung zu starten.  
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Abrufen der aktuellen Anwendungsdomäne  
- Da die Funktionalität der <xref:System.Windows.Application> Klasse in einer Anwendung freigegeben werden, es können nur eine Instanz vorhanden sein. die <xref:System.Windows.Application> pro Klasse <xref:System.AppDomain>. Um dies zu erzwingen die <xref:System.Windows.Application> Klasse wird als Singleton-Klasse implementiert (finden Sie unter [Implementieren von Singleton in c#](https://go.microsoft.com/fwlink/?LinkId=100567)), das eine einzelne Instanz von sich selbst erstellt und der SAS mit dem `static` <xref:System.Windows.Application.Current%2A> Diese Eigenschaft.  
+ Da die Funktionalität der- <xref:System.Windows.Application> Klasse für eine Anwendung freigegeben wird, kann pro <xref:System.AppDomain>nur eine Instanz <xref:System.Windows.Application> der-Klasse vorhanden sein. Um dies zu erzwingen, <xref:System.Windows.Application> wird die-Klasse als Singleton-Klasse implementiert (siehe [Implementieren von C#Singleton in ](https://go.microsoft.com/fwlink/?LinkId=100567)), mit der eine einzelne Instanz von sich selbst erstellt wird und mit `static` der <xref:System.Windows.Application.Current%2A> -Eigenschaft gemeinsamer Zugriff darauf ermöglicht wird.  
   
- Der folgende Code zeigt, wie Sie erhalten einen Verweis auf die <xref:System.Windows.Application> Objekt für die aktuelle <xref:System.AppDomain>.  
+ Der folgende Code zeigt, wie Sie einen Verweis auf das <xref:System.Windows.Application> -Objekt für das <xref:System.AppDomain>aktuelle-Objekt abrufen.  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getcurrentappcode)]  
   
- <xref:System.Windows.Application.Current%2A> Gibt einen Verweis auf eine Instanz von der <xref:System.Windows.Application> Klasse. Einen Verweis auf Wunsch Ihre <xref:System.Windows.Application> abgeleitete Klasse Sie den Wert wandelt müssen der <xref:System.Windows.Application.Current%2A> -Eigenschaft, wie im folgenden Beispiel gezeigt.  
+ <xref:System.Windows.Application.Current%2A>Gibt einen Verweis auf eine Instanz der <xref:System.Windows.Application> -Klasse zurück. Wenn Sie einen Verweis auf <xref:System.Windows.Application> die abgeleitete Klasse wünschen, müssen Sie den Wert <xref:System.Windows.Application.Current%2A> der-Eigenschaft umwandeln, wie im folgenden Beispiel gezeigt.  
   
  [!code-csharp[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/MainWindow.xaml.cs#getstcurrentappcode)]
  [!code-vb[ApplicationManagementOverviewSnippets#GetSTCurrentAppCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/VisualBasic/MainWindow.xaml.vb#getstcurrentappcode)]  
   
- Sie können den Wert der untersuchen <xref:System.Windows.Application.Current%2A> zu einem beliebigen Zeitpunkt während der Lebensdauer der ein <xref:System.Windows.Application> Objekt. Sie sollten dabei jedoch vorsichtig sein. Nach der <xref:System.Windows.Application> Klasse instanziiert wird, gibt es ein Zeitraum während der den Status der <xref:System.Windows.Application> -Objekts inkonsistent ist. Während dieses Zeitraums <xref:System.Windows.Application> ist die verschiedene Aufgaben Initialisierung, die von Ihrem Code erforderlich sind, ausgeführt wird, einschließlich der Einrichtung der Infrastruktur, Festlegen von Eigenschaften und Ereignisse registrieren. Wenn Sie versuchen, Sie verwenden die <xref:System.Windows.Application> Objekt während dieses Zeitraums wird der Code möglicherweise unerwartete Ergebnisse, insbesondere, wenn sie die verschiedenen abhängt <xref:System.Windows.Application> festzulegenden Eigenschaften.  
+ Sie können den Wert von <xref:System.Windows.Application.Current%2A> zu einem beliebigen Zeitpunkt während der Lebensdauer <xref:System.Windows.Application> eines Objekts überprüfen. Sie sollten dabei jedoch vorsichtig sein. Nachdem die <xref:System.Windows.Application> Klasse instanziiert wurde, gibt es einen Zeitraum, in dem der Status <xref:System.Windows.Application> des Objekts inkonsistent ist. Während dieses Zeitraums <xref:System.Windows.Application> führt die verschiedenen Initialisierungs Aufgaben aus, die von Ihrem Code für die Ausführung erforderlich sind, einschließlich dem Einrichten der Anwendungs Infrastruktur, dem Festlegen von Eigenschaften und dem Registrieren von Ereignissen. Wenn Sie versuchen, das- <xref:System.Windows.Application> Objekt während dieses Zeitraums zu verwenden, kann der Code unerwartete Ergebnisse aufweisen, insbesondere dann, wenn er <xref:System.Windows.Application> von den verschiedenen festgelegten Eigenschaften abhängig ist.  
   
- Wenn <xref:System.Windows.Application> nach Abschluss der Initialisierung, seine Lebensdauer wirklich beginnt.  
+ Wenn <xref:System.Windows.Application> die Initialisierungs Arbeit abgeschlossen ist, beginnt die Lebensdauer tatsächlich.  
   
 <a name="Application_Lifetime"></a>   
 ## <a name="application-lifetime"></a>Anwendungslebensdauer  
- Die Lebensdauer einer WPF-Anwendung wird durch verschiedene Ereignisse, die vom ausgelöst werden gekennzeichnet <xref:System.Windows.Application> , damit Sie benachrichtigt, wenn die Anwendung gestartet wurde, wurde aktiviert und deaktiviert, und heruntergefahren wurde.  
+ Die Lebensdauer einer WPF-Anwendung wird durch mehrere Ereignisse gekennzeichnet, die von <xref:System.Windows.Application> ausgelöst werden, um Sie zu informieren, wenn Ihre Anwendung gestartet wurde, aktiviert und deaktiviert wurde und heruntergefahren wurde.  
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Begrüßungsbildschirm  
- Ab .NET Framework 3.5 SP1, können Sie angeben, ein Bild in einem Startfenster verwendet werden oder *Begrüßungsbildschirm*. Die <xref:System.Windows.SplashScreen> -Klasse macht es einfach, ein Startfenster anzuzeigen, während die Anwendung geladen wird. Die <xref:System.Windows.SplashScreen> Fenster erstellt und angezeigt werden, bevor Sie <xref:System.Windows.Application.Run%2A> aufgerufen wird. Weitere Informationen finden Sie unter [Anwendungsstartzeit](../advanced/application-startup-time.md) und [Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung](how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ Ab der .NET Framework 3,5 SP1 können Sie ein Bild angeben, das in einem Startfenster oder einem Begrüßungs *Bildschirm*verwendet werden soll. Mit <xref:System.Windows.SplashScreen> der-Klasse können Sie problemlos ein Startfenster anzeigen, während die Anwendung geladen wird. Das <xref:System.Windows.SplashScreen> Fenster wird erstellt und angezeigt, <xref:System.Windows.Application.Run%2A> bevor aufgerufen wird. Weitere Informationen finden Sie unter [Startzeit der Anwendung](../advanced/application-startup-time.md) und [Hinzufügen eines Begrüßungs Bildschirms zu einer WPF-Anwendung](how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>Starten einer Anwendung  
- Nach dem <xref:System.Windows.Application.Run%2A> aufgerufen wird und die Anwendung initialisiert wird, die Anwendung für die Ausführung bereit ist. Derzeit gekennzeichnet ist, wenn die <xref:System.Windows.Application.Startup> Ereignis wird ausgelöst:  
+ Nachdem <xref:System.Windows.Application.Run%2A> aufgerufen und die Anwendung initialisiert wurde, ist die Anwendung zur Ausführung bereit. Dieser Moment ist gekennzeichnet, wenn das <xref:System.Windows.Application.Startup> -Ereignis ausgelöst wird:  
   
 [!code-csharp[Startup-event](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs?range=3-11,31-33)]
 [!code-vb[Startup-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb?range=5-11,30-32)]
   
- An diesem Punkt ist der am häufigsten verwendete Schritt das in der Lebensdauer einer Anwendung, um eine Benutzeroberfläche anzuzeigen.  
+ An diesem Punkt in der Lebensdauer einer Anwendung ist es am häufigsten, eine Benutzeroberfläche anzuzeigen.  
   
 <a name="Showing_a_User_Interface"></a>
 ### <a name="showing-a-user-interface"></a>Anzeigen einer Benutzeroberfläche  
- Öffnen Sie die meisten eigenständigen Windows-Anwendungen eine <xref:System.Windows.Window> wenn damit begonnen wird ausgeführt. Die <xref:System.Windows.Application.Startup> -Ereignishandler ist ein Speicherort, von dem Sie dies erreichen, wie im folgenden Code gezeigt.  
+ Die meisten eigenständigen Windows- <xref:System.Windows.Window> Anwendungen öffnen eine, wenn Sie gestartet werden. Der <xref:System.Windows.Application.Startup> Ereignishandler ist ein Speicherort, von dem aus Sie dies tun können, wie im folgenden Code veranschaulicht.  
   
  [!code-xaml[AppShowWindowHardSnippets#StartupEventMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/AppShowWindowHardSnippets/CSharp/App.xaml#startupeventmarkup)]  
   
@@ -148,58 +148,58 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  Die erste <xref:System.Windows.Window> um zu instanziierenden in einer eigenständigen Anwendung standardmäßig die Befugnisse Hauptfensters der Anwendung. Dies <xref:System.Windows.Window> Objekt verweist auf die <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> Eigenschaft. Der Wert des der <xref:System.Windows.Application.MainWindow%2A> Eigenschaft kann programmgesteuert geändert werden, wenn ein anderes Fenster als das erste instanziiert <xref:System.Windows.Window> das Hauptfenster sein soll.  
+>  Der erste <xref:System.Windows.Window> , der in einer eigenständigen Anwendung instanziiert werden soll, wird standardmäßig zum Hauptanwendungsfenster. Auf <xref:System.Windows.Window> dieses Objekt wird von der <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> -Eigenschaft verwiesen. Der Wert der <xref:System.Windows.Application.MainWindow%2A> Eigenschaft kann Programm gesteuert geändert werden, wenn ein anderes Fenster als das erste instanziierte <xref:System.Windows.Window> das Hauptfenster sein sollte.  
   
- Beim ersten Start eine XBAP wird navigiert diese wahrscheinlich zu einer <xref:System.Windows.Controls.Page>. Dies wird im folgenden Code veranschaulicht.  
+ Wenn eine XBAP zum ersten Mal gestartet wird, navigiert Sie wahrscheinlich <xref:System.Windows.Controls.Page>zu einer. Dies wird im folgenden Code veranschaulicht.  
   
  [!code-xaml[XBAPAppStartupSnippets#StartupXBAPMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml#startupxbapmarkup)]  
   
  [!code-csharp[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppStartupSnippets/CSharp/App.xaml.cs#startupxbapcodebehind)]
  [!code-vb[XBAPAppStartupSnippets#StartupXBAPCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppStartupSnippets/VisualBasic/Application.xaml.vb#startupxbapcodebehind)]  
   
- Verarbeitet <xref:System.Windows.Application.Startup> nur öffnen eine <xref:System.Windows.Window> oder navigieren Sie zu einer <xref:System.Windows.Controls.Page>, Sie können festlegen, die `StartupUri` Attribut im Markup.  
+ Wenn Sie behandeln <xref:System.Windows.Application.Startup> , um nur eine <xref:System.Windows.Window> zu öffnen oder zu <xref:System.Windows.Controls.Page>einer zu navigieren, können `StartupUri` Sie stattdessen das-Attribut im Markup festlegen.  
   
- Das folgende Beispiel zeigt, wie Sie mit der <xref:System.Windows.Application.StartupUri%2A> einer eigenständigen Anwendung zum Öffnen einer <xref:System.Windows.Window>.  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.Windows.Application.StartupUri%2A> aus einer eigenständigen Anwendung verwendet wird <xref:System.Windows.Window>, um eine zu öffnen.  
   
  [!code-xaml[ApplicationManagementOverviewSnippets#OverviewStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationManagementOverviewSnippets/CSharp/App.xaml#overviewstartupurimarkup)]  
   
- Das folgende Beispiel zeigt, wie Sie mit <xref:System.Windows.Application.StartupUri%2A> aus einer XBAP zum Navigieren zu einer <xref:System.Windows.Controls.Page>.  
+ Im folgenden Beispiel wird gezeigt, <xref:System.Windows.Application.StartupUri%2A> wie Sie von einer XBAP aus zu navigieren. <xref:System.Windows.Controls.Page>  
   
  [!code-xaml[PageSnippets#XBAPStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/PageSnippets/CSharp/App.xaml#xbapstartupurimarkup)]  
   
  Dieses Markup hat denselben Effekt wie der vorherige Code zum Öffnen eines Fensters.  
   
 > [!NOTE]
->  Weitere Informationen zur Navigation finden Sie unter [Übersicht über die Navigation](navigation-overview.md).  
+>  Weitere Informationen zur Navigation finden Sie unter [Übersicht](navigation-overview.md)über die Navigation.  
   
- Sie behandeln müssen die <xref:System.Windows.Application.Startup> Ereignis zu öffnen eine <xref:System.Windows.Window> , wenn Sie mit einem nicht standardmäßigen Konstruktors instanziieren müssen die Eigenschaften festlegen bzw. Ereignisse abonnieren, bevor es angezeigt werden sollen, oder Sie alle Befehlszeilenargumente verarbeiten müssen, wurden angegeben, wenn die Anwendung gestartet wurde.  
+ Sie müssen das-Ereignis <xref:System.Windows.Application.Startup> behandeln, um eine <xref:System.Windows.Window> zu öffnen, wenn Sie Sie mit einem nicht parameterlosen Konstruktor instanziieren müssen, oder Sie müssen die Eigenschaften festlegen oder die zugehörigen Ereignisse abonnieren, bevor Sie Sie darstellen, oder Sie müssen alle Befehlszeilenargumente verarbeiten. die beim Starten der Anwendung bereitgestellt wurden.  
   
 <a name="Processing_Command_Line_Arguments"></a>   
 ### <a name="processing-command-line-arguments"></a>Verarbeiten von Befehlszeilenargumenten  
- In Windows können eigenständige Anwendungen von einer Eingabeaufforderung oder dem Desktop gestartet werden. In beiden Fällen können Befehlszeilenargumente an die Anwendung übergeben werden. Im folgenden Beispiel sehen Sie eine Anwendung, die mit nur einem Befehlszeilenargument („/StartMinimized“) gestartet wird:  
+ In Windows können eigenständige Anwendungen entweder über eine Eingabeaufforderung oder über den Desktop gestartet werden. In beiden Fällen können Befehlszeilenargumente an die Anwendung übergeben werden. Im folgenden Beispiel sehen Sie eine Anwendung, die mit nur einem Befehlszeilenargument („/StartMinimized“) gestartet wird:  
   
  `wpfapplication.exe /StartMinimized`  
   
- Während der anwendungsinitialisierung WPF ruft die Befehlszeilenargumente vom Betriebssystem ab und übergibt sie an der <xref:System.Windows.Application.Startup> Ereignishandler über die <xref:System.Windows.StartupEventArgs.Args%2A> Eigenschaft der <xref:System.Windows.StartupEventArgs> Parameter. Mit Code wie dem folgenden können Sie Befehlszeilenargumente abrufen und speichern.  
+ Während der Anwendungs Initialisierung ruft WPF die Befehlszeilenargumente aus dem Betriebssystem ab und übergibt sie über die <xref:System.Windows.Application.Startup> <xref:System.Windows.StartupEventArgs.Args%2A> -Eigenschaft des <xref:System.Windows.StartupEventArgs> -Parameters an den-Ereignishandler. Mit Code wie dem folgenden können Sie Befehlszeilenargumente abrufen und speichern.  
   
  [!code-xaml[ApplicationStartupSnippets#HandleStartupXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml#handlestartupxaml)]  
   
  [!code-csharp[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationStartupSnippets/CSharp/App.xaml.cs#handlestartupcodebehind)]
  [!code-vb[ApplicationStartupSnippets#HandleStartupCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationStartupSnippets/visualbasic/application.xaml.vb#handlestartupcodebehind)]  
   
- Der Code behandelt <xref:System.Windows.Application.Startup> um zu überprüfen, ob die **/StartMinimized** -Befehlszeilenargument angegeben wurde; Wenn dies der Fall ist, wird es das Hauptfenster mit einer <xref:System.Windows.WindowState> von <xref:System.Windows.WindowState.Minimized>. Beachten Sie, dass die <xref:System.Windows.Window.WindowState%2A> Eigenschaft muss festgelegt werden, programmgesteuert Hauptfenster <xref:System.Windows.Window> muss explizit im Code geöffnet sein.  
+ Der Code Handles <xref:System.Windows.Application.Startup> , um zu überprüfen, ob das **/StartMinimized** -Befehlszeilenargument bereitgestellt wurde. wenn dies der Fall ist <xref:System.Windows.WindowState> , <xref:System.Windows.WindowState.Minimized>wird das Hauptfenster mit einem von geöffnet. Beachten Sie, dass <xref:System.Windows.Window.WindowState%2A> <xref:System.Windows.Window> die-Eigenschaft im Code explizit geöffnet werden muss, da die-Eigenschaft Programm gesteuert festgelegt werden muss.  
   
- XBAPs können nicht abgerufen werden und Befehlszeilenargumente verarbeiten, da sie mit der ClickOnce-Bereitstellung gestartet werden (finden Sie unter [Bereitstellen von WPF-Anwendungen](deploying-a-wpf-application-wpf.md)). Von den zum Starten verwendeten URLs können jedoch Abfragezeichenfolgenparameter abgerufen und verarbeitet werden.  
+ XBAPs können Befehlszeilenargumente nicht abrufen und verarbeiten, da Sie mithilfe der ClickOnce-Bereitstellung gestartet werden (siehe bereitstellen [einer WPF-Anwendung](deploying-a-wpf-application-wpf.md)). Von den zum Starten verwendeten URLs können jedoch Abfragezeichenfolgenparameter abgerufen und verarbeitet werden.  
   
 <a name="Application_Activation_and_Deactivation"></a>   
 ### <a name="application-activation-and-deactivation"></a>Aktivieren und Deaktivieren von Anwendungen  
- Windows kann Benutzer zwischen Anwendungen zu wechseln. Meistens wird dazu die Tastenkombination ALT+TAB verwendet. Eine Anwendung kann nur gewechselt werden, wenn sie ein sichtbares hat <xref:System.Windows.Window> , die ein Benutzer auswählen kann. Das derzeit ausgewählte <xref:System.Windows.Window> ist die *des aktiven Fensters* (auch bekannt als die *Vordergrundfenster*) und die <xref:System.Windows.Window> , das Benutzereingaben empfängt. Die Anwendung mit dem aktiven Fenster ist die *aktive Anwendung* (oder *vordergrundanwendung*). Eine Anwendung wird unter folgenden Umständen zur aktiven Anwendung:  
+ Windows ermöglicht es Benutzern, zwischen Anwendungen zu wechseln. Meistens wird dazu die Tastenkombination ALT+TAB verwendet. Eine Anwendung kann nur dann auf gewechselt werden, wenn Sie über <xref:System.Windows.Window> ein sichtbares verfügt, das ein Benutzer auswählen kann. Das aktuell ausgewählte <xref:System.Windows.Window> ist das *aktive Fenster* (auch als *Vordergrund Fenster*bezeichnet) und das <xref:System.Windows.Window> , das Benutzereingaben empfängt. Die Anwendung mit dem aktiven Fenster ist die *aktive Anwendung* (oder *Vordergrund Anwendung*). Eine Anwendung wird unter folgenden Umständen zur aktiven Anwendung:  
   
-- Es wird gestartet und zeigt eine <xref:System.Windows.Window>.  
+- Sie wird gestartet und zeigt eine <xref:System.Windows.Window>.  
   
-- Ein Benutzer wechselt von einer anderen Anwendung durch Auswahl einer <xref:System.Windows.Window> in der Anwendung.  
+- Ein Benutzer wechselt von einer anderen Anwendung, indem <xref:System.Windows.Window> er eine in der Anwendung auswählt.  
   
- Sie können erkennen, wenn eine Anwendung aktiv, durch behandeln wird der <xref:System.Windows.Application.Activated?displayProperty=nameWithType> Ereignis.  
+ Sie können erkennen, wann eine Anwendung aktiv wird, indem <xref:System.Windows.Application.Activated?displayProperty=nameWithType> Sie das-Ereignis behandeln.  
   
  Auf ähnliche Weise kann eine Anwendung unter folgenden Umständen inaktiv werden:  
   
@@ -207,19 +207,19 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
 - Wenn die Anwendung heruntergefahren wird.  
   
- Sie können erkennen, wenn eine Anwendung inaktiv, durch behandeln wird der <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> Ereignis.  
+ Sie können erkennen, wenn eine Anwendung inaktiv wird, <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> indem Sie das-Ereignis behandeln.  
   
- Der folgende Code zeigt, wie Sie behandelt die <xref:System.Windows.Application.Activated> und <xref:System.Windows.Application.Deactivated> Ereignisse, um zu bestimmen, ob eine Anwendung aktiv ist.  
+ Der folgende Code zeigt, wie die <xref:System.Windows.Application.Activated> -und- <xref:System.Windows.Application.Deactivated> Ereignisse behandelt werden, um zu bestimmen, ob eine Anwendung aktiv ist.  
   
  [!code-xaml[ApplicationActivationSnippets#DetectActivationStateXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml#detectactivationstatexaml)]  
   
  [!code-csharp[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationActivationSnippets/CSharp/App.xaml.cs#detectactivationstatecodebehind)]
  [!code-vb[ApplicationActivationSnippets#DetectActivationStateCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationActivationSnippets/visualbasic/application.xaml.vb#detectactivationstatecodebehind)]  
   
- Ein <xref:System.Windows.Window> auch aktiviert und deaktiviert werden kann. Weitere Informationen finden Sie unter <xref:System.Windows.Window.Activated?displayProperty=nameWithType> und <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>.  
+ Ein <xref:System.Windows.Window> kann auch aktiviert und deaktiviert werden. Weitere Informationen finden Sie unter <xref:System.Windows.Window.Activated?displayProperty=nameWithType> und <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Weder <xref:System.Windows.Application.Activated?displayProperty=nameWithType> noch <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> für XBAPs ausgelöst.  
+>  Weder <xref:System.Windows.Application.Activated?displayProperty=nameWithType> noch<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> wird für XBAPs ausgelöst.  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>Herunterfahren einer Anwendung  
@@ -227,19 +227,19 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
 - Ein Benutzer schließt alle <xref:System.Windows.Window>.  
   
-- Ein Benutzer schließt das Haupt- <xref:System.Windows.Window>.  
+- Ein Benutzer schließt den Haupt <xref:System.Windows.Window>Benutzer.  
   
-- Der Benutzer beendet die Windows-Sitzung durch abmelden oder Herunterfahren.  
+- Ein Benutzer beendet die Windows-Sitzung, indem er sich abmeldet oder herunterfährt.  
   
 - Eine anwendungsspezifische Bedingung wurde erfüllt.  
   
- Können Sie zum Beenden der Anwendung verwalten <xref:System.Windows.Application> bietet die <xref:System.Windows.Application.Shutdown%2A> -Methode, die <xref:System.Windows.Application.ShutdownMode%2A> -Eigenschaft, und die <xref:System.Windows.Application.SessionEnding> und <xref:System.Windows.Application.Exit> Ereignisse.  
+ Zur Unterstützung beim Herunterfahren der <xref:System.Windows.Application> Anwendung werden <xref:System.Windows.Application.Shutdown%2A> von die- <xref:System.Windows.Application.ShutdownMode%2A> Methode, die- <xref:System.Windows.Application.SessionEnding> Eigenschaft <xref:System.Windows.Application.Exit> sowie die-und-Ereignisse bereitstellt.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A> kann nur von Anwendungen, die aufgerufen werden <xref:System.Security.Permissions.UIPermission>. Standalone-WPF-Anwendungen verfügen immer über diese Berechtigung. Allerdings gilt dies nicht XBAPs, die in den Sicherheitssandkasten der Internetzone Sicherheit bei teilweiser Vertrauenswürdigkeit ausgeführt.  
+>  <xref:System.Windows.Application.Shutdown%2A>kann nur von Anwendungen aufgerufen werden, die <xref:System.Security.Permissions.UIPermission>über verfügen. Eigenständige WPF-Anwendungen verfügen immer über diese Berechtigung. XBAPs, die in der Sicherheits Sandbox mit teilweiser Vertrauenswürdigkeit der Internet Zone ausgeführt werden, ist jedoch nicht.  
   
 #### <a name="shutdown-mode"></a>Modus für das Herunterfahren  
- Anwendungen werden in der Regel entweder heruntergefahren, wenn alle Fenster geschlossen werden, oder wenn das Hauptfenster geschlossen wird. Manchmal kann jedoch auch durch andere anwendungsspezifische Bedingungen bestimmt werden, wann eine Anwendung heruntergefahren wird. Sie können angeben, die Bedingungen, unter dem Ihre Anwendung heruntergefahren durch Festlegen von wird <xref:System.Windows.Application.ShutdownMode%2A> mit einem der folgenden <xref:System.Windows.ShutdownMode> -Enumerationswerte fest:  
+ Anwendungen werden in der Regel entweder heruntergefahren, wenn alle Fenster geschlossen werden, oder wenn das Hauptfenster geschlossen wird. Manchmal kann jedoch auch durch andere anwendungsspezifische Bedingungen bestimmt werden, wann eine Anwendung heruntergefahren wird. Sie können die Bedingungen angeben, unter denen die Anwendung heruntergefahren wird, <xref:System.Windows.Application.ShutdownMode%2A> indem Sie mit einem der <xref:System.Windows.ShutdownMode> folgenden Enumerationswerte festlegen:  
   
 - <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
@@ -247,17 +247,17 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
 - <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
- Der Standardwert von <xref:System.Windows.Application.ShutdownMode%2A> ist <xref:System.Windows.ShutdownMode.OnLastWindowClose>, d. h., die eine Anwendung automatisch heruntergefahren wird, wenn das letzte Fenster in der Anwendung vom Benutzer geschlossen wird. Aber wenn Ihre Anwendung heruntergefahren werden soll, wenn das Hauptfenster geschlossen wird, WPF automatisch ausgeführt, wenn Sie festlegen, <xref:System.Windows.Application.ShutdownMode%2A> zu <xref:System.Windows.ShutdownMode.OnMainWindowClose>. Dies wird im folgenden Beispiel gezeigt.  
+ Der Standardwert von <xref:System.Windows.Application.ShutdownMode%2A> ist <xref:System.Windows.ShutdownMode.OnLastWindowClose>. Dies bedeutet, dass eine Anwendung automatisch heruntergefahren wird, wenn das letzte Fenster in der Anwendung vom Benutzer geschlossen wird. Wenn die Anwendung jedoch heruntergefahren werden soll, wenn das Hauptfenster geschlossen wird, führt WPF dies automatisch aus, wenn <xref:System.Windows.Application.ShutdownMode%2A> Sie <xref:System.Windows.ShutdownMode.OnMainWindowClose>auf festlegen. Dies wird im folgenden Beispiel gezeigt.  
   
  [!code-xaml[ApplicationShutdownModeSnippets#OnMainWindowCloseMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationShutdownModeSnippets/CS/Page1.xaml#onmainwindowclosemarkup)]  
   
- Wenn Ihre Bedingungen zum Herunterfahren die anwendungsspezifische können Sie festlegen, <xref:System.Windows.Application.ShutdownMode%2A> zu <xref:System.Windows.ShutdownMode.OnExplicitShutdown>. In diesem Fall ist es Ihrer Verantwortung, eine Anwendung heruntergefahren durch explizites Aufrufen der <xref:System.Windows.Application.Shutdown%2A> Methode; andernfalls, Ihre Anwendung weiterhin ausgeführt, auch wenn alle Fenster geschlossen sind. Beachten Sie, dass <xref:System.Windows.Application.Shutdown%2A> wird implizit aufgerufen, wenn die <xref:System.Windows.Application.ShutdownMode%2A> ist entweder <xref:System.Windows.ShutdownMode.OnLastWindowClose> oder <xref:System.Windows.ShutdownMode.OnMainWindowClose>.  
+ Wenn Sie anwendungsspezifische Bedingungen für das Herunterfahren haben, <xref:System.Windows.Application.ShutdownMode%2A> legen <xref:System.Windows.ShutdownMode.OnExplicitShutdown>Sie auf fest. In diesem Fall liegt es in ihrer Verantwortung, eine Anwendung durch explizites Aufrufen der <xref:System.Windows.Application.Shutdown%2A> -Methode zu beenden. andernfalls wird die Anwendung weiterhin ausgeführt, auch wenn alle Fenster geschlossen sind. Beachten Sie <xref:System.Windows.Application.Shutdown%2A> , dass implizit aufgerufen wird <xref:System.Windows.Application.ShutdownMode%2A> , wenn <xref:System.Windows.ShutdownMode.OnLastWindowClose> entweder <xref:System.Windows.ShutdownMode.OnMainWindowClose>oder ist.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A> eine XBAP festgelegt werden können, aber sie wird ignoriert; eine XBAP wird immer heruntergefahren, wenn die von ihr weg navigiert wird in einem Browser oder beim Schließen des Browsers, die die XBAP hostet. Weitere Informationen finden Sie unter [Übersicht über die Navigation](navigation-overview.md).  
+>  <xref:System.Windows.Application.ShutdownMode%2A>kann aus einer XBAP festgelegt werden, wird jedoch ignoriert. eine XBAP wird immer heruntergefahren, wenn Sie von einem Browser entfernt wird oder wenn der Browser, der die XBAP hostet, geschlossen ist. Weitere Informationen finden Sie unter [Übersicht über die Navigation](navigation-overview.md).  
   
 #### <a name="session-ending"></a>Beenden einer Sitzung  
- Die Bedingungen zum Herunterfahren, die beschrieben werden die <xref:System.Windows.Application.ShutdownMode%2A> Eigenschaft für eine Anwendung spezifisch sind. In einigen Fällen kann eine Anwendung aber auch als Ergebnis einer externen Bedingung heruntergefahren werden. Die gängigste externe Bedingung tritt auf, wenn ein Benutzer die Windows-Sitzung durch die folgenden Aktionen beendet:  
+ Die von der <xref:System.Windows.Application.ShutdownMode%2A> -Eigenschaft beschriebenen Shutdown-Bedingungen gelten für eine Anwendung. In einigen Fällen kann eine Anwendung aber auch als Ergebnis einer externen Bedingung heruntergefahren werden. Die häufigste externe Bedingung tritt auf, wenn ein Benutzer die Windows-Sitzung mit den folgenden Aktionen beendet:  
   
 - Abmelden  
   
@@ -267,61 +267,61 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
 - Wechseln in den Ruhezustand  
   
- Um zu erkennen, wenn eine Windows-Sitzung beendet wird, können Sie behandeln die <xref:System.Windows.Application.SessionEnding> Ereignis, wie im folgenden Beispiel dargestellt.  
+ Um zu erkennen, wann eine Windows-Sitzung beendet wird, <xref:System.Windows.Application.SessionEnding> können Sie das-Ereignis behandeln, wie im folgenden Beispiel veranschaulicht.  
   
  [!code-xaml[ApplicationSessionEndingSnippets#HandlingSessionEndingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml#handlingsessionendingxaml)]  
   
  [!code-csharp[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/CSharp/App.xaml.cs#handlingsessionendingcodebehind)]
  [!code-vb[ApplicationSessionEndingSnippets#HandlingSessionEndingCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationSessionEndingSnippets/visualbasic/application.xaml.vb#handlingsessionendingcodebehind)]  
   
- In diesem Beispiel überprüft der Code die <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> Eigenschaft, um zu bestimmen, wie die Windows-Sitzung beendet wird. Dieser Wert wird verwendet, um dem Benutzer eine Bestätigungsmeldung anzuzeigen. Der Code legt fest, wenn der Benutzer nicht die Sitzung beenden möchte, <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> zu `true` um zu verhindern, dass die Windows-Sitzung beendet.  
+ In diesem Beispiel überprüft der Code die <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> -Eigenschaft, um zu bestimmen, wie die Windows-Sitzung beendet wird. Dieser Wert wird verwendet, um dem Benutzer eine Bestätigungsmeldung anzuzeigen. Wenn der Benutzer die Sitzung nicht beenden möchte, legt <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> der Code auf `true` fest, um zu verhindern, dass die Windows-Sitzung beendet wird.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding> für XBAPs wird nicht ausgelöst werden.
+>  <xref:System.Windows.Application.SessionEnding>wird für XBAPs nicht ausgelöst.
 
 #### <a name="exit"></a>Schließen  
- Beim Herunterfahren einer Anwendung werden evtl. abschließende Verarbeitungsaufgaben ausgeführt, z. B. Beibehalten des Anwendungszustands. In diesen Situationen können Sie behandeln die <xref:System.Windows.Application.Exit> -Ereignis, als die `App_Exit` -Ereignishandler wird im folgenden Beispiel. Es wird definiert, wie ein Ereignishandler in der *"App.xaml"* Datei. Die Implementierung wird hervorgehoben, der *"App.Xaml.cs"* und *"Application.Xaml.vb"* Dateien.
+ Beim Herunterfahren einer Anwendung werden evtl. abschließende Verarbeitungsaufgaben ausgeführt, z. B. Beibehalten des Anwendungszustands. In diesen Fällen können Sie das <xref:System.Windows.Application.Exit> -Ereignis behandeln, wie dies im folgenden Beispiel der `App_Exit` Fall ist. Sie wird als Ereignishandler in der Datei " *app. XAML* " definiert. Die Implementierung wird in den Dateien *app.XAML.cs* und *Application. XAML. vb* hervorgehoben.
   
 [!code-xaml[Defining-the-Exit-event-handler](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml?highlight=1-7)]  
   
  [!code-csharp[Handling-the-Exit-event](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/CSharp/App.xaml.cs?highlight=42-55)]
  [!code-vb[Handling-the-Exit-event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOApplicationModelSnippets/visualbasic/application.xaml.vb?highlight=34-45)]  
   
- Das vollständige Beispiel finden Sie unter [beibehalten und Wiederherstellen mit Anwendungsbereich Eigenschaften über mehrere Anwendungssitzungen](persist-and-restore-application-scope-properties.md).  
+ Das komplette Beispiel finden Sie unter beibehalten [und Wiederherstellen von Anwendungsbereichs Eigenschaften über Anwendungs Sitzungen hinweg](persist-and-restore-application-scope-properties.md).  
   
- <xref:System.Windows.Application.Exit> kann von sowohl eigenständigen Anwendungen als auch XBAPs behandelt werden. Für XBAPs <xref:System.Windows.Application.Exit> wird ausgelöst, wenn Sie in den folgenden Situationen:  
+ <xref:System.Windows.Application.Exit>kann sowohl von eigenständigen Anwendungen als auch von XBAPs verarbeitet werden. Für XBAPs <xref:System.Windows.Application.Exit> wird in den folgenden Situationen ausgelöst:  
   
-- Eine XBAP ist weg navigiert.  
+- Eine XBAP wird von der navigiert.  
   
-- In [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], wenn die Registerkarte, die die XBAP gehostet wird geschlossen ist.  
+- In [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], wenn die Registerkarte, auf der die XBAP gehostet wird, geschlossen wird.  
   
 - Wenn der Browser geschlossen wird.  
   
 #### <a name="exit-code"></a>Exitcode  
- Anwendungen werden meistens durch das Betriebssystem als Reaktion auf eine Benutzeranforderung gestartet. Eine Anwendung kann aber auch von einer anderen Anwendung gestartet werden, um eine bestimmte Aufgabe zu übernehmen. Wenn die gestartete Anwendung heruntergefahren wird, muss die startende Anwendung möglicherweise über die Bedingung informiert werden, unter der die gestartete Anwendung heruntergefahren wurde. In diesen Fällen kann Windows Anwendungen einen Anwendungsexitcode zurückzugeben. Standardmäßig geben die WPF-Anwendungen Exitcodewert 0 zurück.  
+ Anwendungen werden meistens durch das Betriebssystem als Reaktion auf eine Benutzeranforderung gestartet. Eine Anwendung kann aber auch von einer anderen Anwendung gestartet werden, um eine bestimmte Aufgabe zu übernehmen. Wenn die gestartete Anwendung heruntergefahren wird, muss die startende Anwendung möglicherweise über die Bedingung informiert werden, unter der die gestartete Anwendung heruntergefahren wurde. In diesen Situationen ermöglicht Windows Anwendungen, beim Herunterfahren einen Anwendungsexitcode zurückzugeben. Standardmäßig geben WPF-Anwendungen einen Exitcodewert von 0 zurück.  
   
 > [!NOTE]
->  Beim Debuggen in Visual Studio wird ein Exitcode der Anwendung angezeigt, der **Ausgabe** Fenster, wenn die Anwendung in einer Meldung heruntergefahren, der folgendermaßen aussieht:  
+>  Wenn Sie in Visual Studio debuggen, wird der Anwendungsexitcode im Fenster **Ausgabe** angezeigt, wenn die Anwendung heruntergefahren wird, und zwar in einer Meldung, die wie folgt aussieht:  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
->  Öffnen Sie die **Ausgabe** Fenster, indem Sie auf **Ausgabe** auf die **Ansicht** Menü.  
+>  Öffnen Sie das **Ausgabe** Fenster, indem Sie im Menü **Ansicht** auf **Ausgabe** klicken.  
   
- Um den Exitcode ändern möchten, können Sie rufen die <xref:System.Windows.Application.Shutdown%28System.Int32%29> überladen ist, wird ein ganzzahliges Argument zum Exitcode akzeptiert:  
+ Um den Exitcode zu ändern, können Sie <xref:System.Windows.Application.Shutdown%28System.Int32%29> die-Überladung aufrufen, die als Exitcode ein ganzzahliges Argument akzeptiert:  
   
  [!code-csharp[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationExitSnippets/CSharp/MainWindow.xaml.cs#appexitcode)]
  [!code-vb[ApplicationExitSnippets#AppExitCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationExitSnippets/visualbasic/mainwindow.xaml.vb#appexitcode)]  
   
- Sie können den Wert des Exitcodes ermitteln und ändern, indem die Behandlung der <xref:System.Windows.Application.Exit> Ereignis. Die <xref:System.Windows.Application.Exit> -Ereignishandler übergeben wird ein <xref:System.Windows.ExitEventArgs> dem ermöglicht den Zugriff auf den Exitcode mit der <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> Eigenschaft. Weitere Informationen finden Sie unter <xref:System.Windows.Application.Exit>.  
+ Sie können den Wert des Exitcodes erkennen und ändern, indem Sie das <xref:System.Windows.Application.Exit> -Ereignis behandeln. An <xref:System.Windows.Application.Exit> den Ereignishandler wird ein <xref:System.Windows.ExitEventArgs> übermittelt, der den Zugriff auf den Exitcode mit der <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> -Eigenschaft ermöglicht. Weitere Informationen finden Sie unter <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
->  Sie können den Exitcode sowohl von eigenständigen Anwendungen als auch XBAPs in festlegen. Der Exitcodewert wird jedoch für XBAPs ignoriert.  
+>  Sie können den Exitcode sowohl in eigenständigen Anwendungen als auch in XBAPs festlegen. Der Exitcodewert wird für XBAPs jedoch ignoriert.  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>Nicht behandelte Ausnahmen  
  Es kommt vor, dass eine Anwendung unter nicht ordnungsgemäßen Bedingungen heruntergefahren wird, z. B. wenn eine unerwartete Ausnahme ausgelöst wird. In diesem Fall verfügt die Anwendung möglicherweise nicht über den Code, der zum Erkennen und Verarbeiten der Ausnahme erforderlich ist. Eine solche Ausnahme wird als nicht behandelte Ausnahme bezeichnet. Vor dem Schließen der Anwendung wird eine Meldung angezeigt, die der folgenden ähnelt.  
   
- ![Screenshot mit einer Benachrichtigung über Ausnahmefehler.](./media/application-management-overview/unhandled-exception-notification.png)  
+ ![Screenshot mit einer nicht behandelten Ausnahme Benachrichtigung.](./media/application-management-overview/unhandled-exception-notification.png)  
   
  Für die Benutzererfahrung ist es vorteilhafter, wenn eine Anwendung dieses Standardverhalten vermeidet. Dazu dienen mehrere oder alle der folgenden Aktionen:  
   
@@ -329,28 +329,28 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
 - Versuchen, eine Anwendung weiterhin auszuführen  
   
-- Aufzeichnen von detaillierten, entwicklerfreundlichen-Ausnahmeinformationen in die Windows-Ereignisprotokoll.  
+- Aufzeichnen detaillierter, Entwickler freundlicher Ausnahme Informationen im Windows-Ereignisprotokoll.  
   
- Implementierung dieser Unterstützung hängt von der nicht behandelte Ausnahmen zu erkennen, d. h. die <xref:System.Windows.Application.DispatcherUnhandledException> -Ereignis wird für ausgelöst.  
+ Die Implementierung dieser Unterstützung ist davon abhängig, dass nicht behandelte Ausnahmen erkannt werden können. <xref:System.Windows.Application.DispatcherUnhandledException> Dies ist das, wofür das Ereignis ausgelöst wird.  
   
 [!code-xaml[detecting-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml#handledispatcherunhandledexceptionxaml)]  
   
 [!code-csharp[code-to-detect-unhandled-exceptions](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/CSharp/App.xaml.cs)]
 [!code-vb[code-to-detect-unhandled-exceptions](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationDispatcherUnhandledExceptionSnippets/visualbasic/application.xaml.vb)]  
   
- Die <xref:System.Windows.Application.DispatcherUnhandledException> übergebene Ereignishandler wird ein <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> Parameter, der Kontextinformationen zur nicht behandelten Ausnahme, einschließlich der Ausnahme selbst enthält (<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>). Sie können anhand dieser Informationen feststellen, wie die Ausnahme behandelt werden soll.  
+ Dem <xref:System.Windows.Application.DispatcherUnhandledException> Ereignishandler wird ein <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs> Parameter übergeben, der Kontextinformationen bezüglich der nicht behandelten Ausnahme enthält, einschließlich der Ausnahme selbst<xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Exception%2A?displayProperty=nameWithType>(). Sie können anhand dieser Informationen feststellen, wie die Ausnahme behandelt werden soll.  
   
- Bei der Behandlung <xref:System.Windows.Application.DispatcherUnhandledException>, legen Sie die <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=nameWithType> Eigenschaft `true`ist, andernfalls WPF immer noch berücksichtigt die Ausnahme unbehandelt und wird auf die zuvor beschriebene Standardverhalten zurückgesetzt. Wenn eine nicht behandelte Ausnahme ausgelöst wird und entweder die <xref:System.Windows.Application.DispatcherUnhandledException> -Ereignis nicht behandelt wird oder das Ereignis behandelt wird und <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A> nastaven NA hodnotu `false`, die Anwendung sofort heruntergefahren. Darüber hinaus keine weiteren <xref:System.Windows.Application> Ereignisse ausgelöst werden. Folglich müssen Sie behandeln <xref:System.Windows.Application.DispatcherUnhandledException> , wenn Ihre Anwendung über Code, die ausgeführt werden muss verfügt, bevor die Anwendung beendet wird.  
+ Wenn Sie behandeln <xref:System.Windows.Application.DispatcherUnhandledException>, sollten Sie die <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A?displayProperty=nameWithType> -Eigenschaft auf `true`festlegen. andernfalls wird die Ausnahme von WPF weiterhin als nicht behandelt betrachtet, und das zuvor beschriebene Standardverhalten wird wieder hergestellt. Wenn eine nicht behandelte Ausnahme ausgelöst wird und entweder das <xref:System.Windows.Application.DispatcherUnhandledException> -Ereignis nicht behandelt wird, oder wenn das-Ereignis <xref:System.Windows.Threading.DispatcherUnhandledExceptionEventArgs.Handled%2A> behandelt wird und `false`auf festgelegt ist, wird die Anwendung sofort heruntergefahren. Außerdem werden keine anderen <xref:System.Windows.Application> Ereignisse ausgelöst. Folglich müssen Sie behandeln <xref:System.Windows.Application.DispatcherUnhandledException> , wenn Ihre Anwendung über Code verfügt, der ausgeführt werden muss, bevor die Anwendung heruntergefahren wird.  
   
  Obwohl eine Anwendung wegen einer nicht behandelten Ausnahme heruntergefahren werden kann, erfolgt das Herunterfahren normalerweise als Reaktion auf eine Benutzeranforderung, wie im nächsten Abschnitt beschrieben.  
   
 <a name="Application_Lifetime_Events"></a>   
 ### <a name="application-lifetime-events"></a>Anwendungslebensdauer-Ereignisse  
- Eigenständige Anwendungen als auch XBAPs haben nicht genau dieselbe Lebensdauer. Die folgende Abbildung veranschaulicht die wichtigsten Ereignisse in der Lebensdauer einer eigenständigen Anwendung und die Reihenfolge, in der sie ausgelöst werden.  
+ Eigenständige Anwendungen und XBAPs haben nicht genau die gleiche Lebensdauer. Die folgende Abbildung veranschaulicht die wichtigsten Ereignisse in der Lebensdauer einer eigenständigen Anwendung und die Reihenfolge, in der sie ausgelöst werden.  
   
  ![Eigenständige Anwendung &#45; Anwendungsobjektereignisse](./media/applicationmodeloverview-applicationobjectevents.png "ApplicationModelOverview_ApplicationObjectEvents")  
   
- Ebenso wird die folgende Abbildung veranschaulicht die wichtigsten Ereignisse in der Lebensdauer einer XBAP und zeigt die Reihenfolge, in der sie ausgelöst werden.  
+ Die folgende Abbildung veranschaulicht die wichtigsten Ereignisse in der Lebensdauer einer XBAP und zeigt die Reihenfolge an, in der Sie ausgelöst werden.  
   
  ![XBAP &#45; Anwendungsobjektereignisse](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
@@ -361,5 +361,5 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 - [Übersicht über die Navigation](navigation-overview.md)
 - [WPF-Anwendungsressource, Inhalts- und Datendateien](wpf-application-resource-content-and-data-files.md)
 - [Paket-URI in WPF](pack-uris-in-wpf.md)
-- [Anwendungsmodell: Gewusst-wie-Themen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Anwendungsmodell: Themen zur Vorgehensweise](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Anwendungsentwicklung](index.md)

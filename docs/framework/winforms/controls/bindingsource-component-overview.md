@@ -7,18 +7,18 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939105"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364451"
 ---
 # <a name="bindingsource-component-overview"></a>Übersicht über die BindingSource-Komponente
 Die <xref:System.Windows.Forms.BindingSource>-Komponente vereinfacht den Bindungsvorgang von Steuerelementen an eine zugrunde liegende Datenquelle. Die <xref:System.Windows.Forms.BindingSource>-Komponente fungiert als Kanal sowie als Datenquelle für andere Steuerelemente, an die eine Bindung erfolgen soll. Sie stellt eine Abstraktion der Datenverbindung Ihres Formulars bereit, während Befehle an die zugrunde liegende Liste der Daten übergeben werden. Außerdem können Sie Daten direkt hinzufügen. Die Komponente selbst fungiert daher als Datenquelle.  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>„BindingSource“-Komponente als Zwischenelement  
- Die <xref:System.Windows.Forms.BindingSource>-Komponente fungiert als Datenquelle für einige oder alle Steuerelemente im Formular. In Visual Studio die <xref:System.Windows.Forms.BindingSource> gebunden werden kann, auf ein Steuerelement von der `DataBindings` Eigenschaft, die über die **Eigenschaften** Fenster. Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Binden von Windows Forms-Steuerelementen mithilfe der BindingSource-Komponente, die mithilfe des Designers](bind-wf-controls-with-the-bindingsource.md).  
+ Die <xref:System.Windows.Forms.BindingSource>-Komponente fungiert als Datenquelle für einige oder alle Steuerelemente im Formular. In Visual Studio kann das <xref:System.Windows.Forms.BindingSource> mithilfe der `DataBindings` -Eigenschaft an ein Steuerelement gebunden werden, auf das über das **Eigenschaften** Fenster zugegriffen werden kann. Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Binden Sie Windows Forms Steuerelemente mithilfe des Designers](bind-wf-controls-with-the-bindingsource.md)an die BindingSource-Komponente.  
   
  Sie können die <xref:System.Windows.Forms.BindingSource>-Komponente an einfache Datenquellen (etwa eine einzelne Eigenschaft eines Objekts oder eine Basisauflistung wie <xref:System.Collections.ArrayList>) und komplexe Datenquellen (etwa eine Datenbanktabelle) binden. Die <xref:System.Windows.Forms.BindingSource>-Komponente fungiert als Zwischenelement, das Bindungs- und Währungsverwaltungsdienste bereitstellt. Sie können eine <xref:System.Windows.Forms.BindingSource>-Komponente zur Entwurfszeit oder zur Laufzeit an eine komplexe Datenquelle durch Festlegen der Eigenschaften <xref:System.Windows.Forms.BindingSource.DataSource%2A> und <xref:System.Windows.Forms.BindingSource.DataMember%2A> an die Datenbank bzw. die Tabelle binden. Die folgende Abbildung zeigt, wie sich die <xref:System.Windows.Forms.BindingSource>-Komponente in die vorhandene Datenbindungsarchitektur einfügt.  
   
@@ -47,7 +47,7 @@ Die <xref:System.Windows.Forms.BindingSource>-Komponente vereinfacht den Bindung
 |<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A>-Methode|Entfernt das aktuelle Element aus der Liste.|  
 |<xref:System.Windows.Forms.BindingSource.EndEdit%2A>-Methode|Wendet anstehende Änderungen auf die zugrunde liegende Datenquelle an.|  
 |<xref:System.Windows.Forms.BindingSource.CancelEdit%2A>-Methode|Bricht den aktuellen Bearbeitungsvorgang ab.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A>-Methode|Fügt der zugrunde liegenden Liste ein neues Element hinzu. Wenn die Datenquelle <xref:System.ComponentModel.IBindingList> implementiert und ein Element aus dem <xref:System.Windows.Forms.BindingSource.AddingNew>-Ereignis zurückgibt, wird dieses Element hinzugefügt. Andernfalls wird die Anforderung an die Methode <xref:System.ComponentModel.IBindingList.AddNew%2A> der Liste übergeben. Wenn die zugrunde liegende Liste keine <xref:System.ComponentModel.IBindingList> ist, wird das Element automatisch über seinen öffentlichen Standardkonstruktor erstellt.|  
+|<xref:System.Windows.Forms.BindingSource.AddNew%2A>-Methode|Fügt der zugrunde liegenden Liste ein neues Element hinzu. Wenn die Datenquelle <xref:System.ComponentModel.IBindingList> implementiert und ein Element aus dem <xref:System.Windows.Forms.BindingSource.AddingNew>-Ereignis zurückgibt, wird dieses Element hinzugefügt. Andernfalls wird die Anforderung an die Methode <xref:System.ComponentModel.IBindingList.AddNew%2A> der Liste übergeben. Wenn die zugrunde liegende Liste kein <xref:System.ComponentModel.IBindingList>ist, wird das Element automatisch über seinen öffentlichen Parameter losen Konstruktor erstellt.|  
   
 ## <a name="sorting-and-filtering"></a>Sortieren und Filtern  
  In der Regel sollten Sie mit einer sortierten oder gefilterten Sicht der Datenquelle arbeiten. Die folgende Tabelle zeigt die Elemente, die die <xref:System.Windows.Forms.BindingSource>-Komponentendatenquelle bereitstellt.  

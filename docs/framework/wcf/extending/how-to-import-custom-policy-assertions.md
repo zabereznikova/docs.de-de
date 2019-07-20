@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 64e639e5fd6200b525ef6face56f7df2e804d7ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 627b68d707dbedfaf6a291f2ab22dbc9a4f60835
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767103"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363856"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Vorgehensweise: Importieren von benutzerdefinierten Richtlinienassertionen
 Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienstendpunkts.  Clientanwendungen können Richtlinienassertionen in Dienstmetadaten nutzen, um die Clientbindung zu konfigurieren oder den Dienstvertrag für einen Dienstendpunkt anzupassen.  
   
- Benutzerdefinierte Richtlinienassertionen werden importiert, indem die <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>-Schnittstelle implementiert und das Objekt in das Metadatensystem übergeben wird oder durch die Registrierung des Implementierungstyps in Ihrer Anwendungskonfigurationsdatei.  Implementierungen der <xref:System.ServiceModel.Description.IPolicyImportExtension>-Schnittstelle müssen den Standardkonstruktor bereitstellen.  
+ Benutzerdefinierte Richtlinienassertionen werden importiert, indem die <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType>-Schnittstelle implementiert und das Objekt in das Metadatensystem übergeben wird oder durch die Registrierung des Implementierungstyps in Ihrer Anwendungskonfigurationsdatei.  Implementierungen der <xref:System.ServiceModel.Description.IPolicyImportExtension> -Schnittstelle müssen einen Parameter losen Konstruktor bereitstellen.  
   
 ### <a name="to-import-custom-policy-assertions"></a>So importieren Sie benutzerdefinierte Richtlinienassertionen  
   
@@ -25,7 +25,7 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 3. Verwenden einer Konfigurationsdatei. Anweisungen hierzu finden Sie in den folgenden Verfahren.  
   
-4. Mithilfe einer Konfigurationsdatei mit [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Anweisungen hierzu finden Sie in den folgenden Verfahren.  
+4. Verwenden einer Konfigurationsdatei mit dem [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Anweisungen hierzu finden Sie in den folgenden Verfahren.  
   
 5. Programmgesteuertes Einfügen des Richtlinienimportprogramms. Anweisungen hierzu finden Sie in den folgenden Verfahren.  
   
@@ -40,11 +40,11 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 3. Nehmen Sie die Anpassung an der Bindung oder am Vertrag vor, die bzw. der die von der Richtlinienassertion festgelegte Funktion oder Anforderung erfüllt. In der Regel geben Assertionen an, dass eine Bindung eine besondere Konfiguration oder ein bestimmtes Bindungselement erfordert. Nehmen Sie diese Änderungen vor, indem Sie auf die <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType>-Eigenschaft zugreifen. Andere Assertionen erfordern, dass Sie den Vertrag ändern.  Sie können über die <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType>-Eigenschaft auf den Vertrag zugreifen und diesen ändern.  Beachten Sie, dass Ihr Richtlinienimportprogramm möglicherweise mehrere Male für dieselbe Bindung und für denselben Vertrag, aber für unterschiedliche Richtlinienalternativen aufgerufen wird, wenn der Import einer Richtlinienalternative fehlschlägt. Der Code sollte diesem Verhalten gegenüber flexibel sein.  
   
-4. Entfernen Sie die die benutzerdefinierte Richtlinienassertion aus der Assertionsauflistung. Wenn Sie die Assertion nicht entfernen, wird Windows Communication Foundation (WCF) davon ausgegangen, dass der Richtlinienimport nicht erfolgreich war und die zugeordnete Bindung nicht importiert. Wenn Sie die <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType>-Methode verwendet haben, um die benutzerdefinierte Assertion ausfindig zu machen und diese in einem Schritt aus der Auflistung zu entfernen, müssen Sie diesen Schritt nicht durchführen.  
+4. Entfernen Sie die die benutzerdefinierte Richtlinienassertion aus der Assertionsauflistung. Wenn Sie die Assertionen nicht entfernen Windows Communication Foundation (WCF) geht davon aus, dass der Richtlinien Import nicht erfolgreich war und die zugeordnete Bindung nicht importiert. Wenn Sie die <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType>-Methode verwendet haben, um die benutzerdefinierte Assertion ausfindig zu machen und diese in einem Schritt aus der Auflistung zu entfernen, müssen Sie diesen Schritt nicht durchführen.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>So fügen Sie das benutzerdefinierte Richtlinienimportprogramm mit einer Konfigurationsdatei ins Metadatensystem ein  
   
-1. Typ des Importprogramms zum Hinzufügen der `<extensions>` Element innerhalb der [ \<PolicyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Element in der Clientkonfigurationsdatei.  
+1. Fügen Sie den Importertyp `<extensions>` zum-Element innerhalb der [ \<policyimporteurs->](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Element in der Client Konfigurationsdatei hinzu.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,9 +55,9 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>So fügen Sie das benutzerdefinierte Richtlinienimportprogramm mithilfe der Datei Svcutil.exe ins Metadatensystem ein  
   
-1. Typ des Importprogramms zum Hinzufügen der `<extensions>` Element innerhalb der [ \<PolicyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Element in der Datei "svcutil.exe.config". Über die Option `/svcutilConfig` können Sie Svcutil.exe darüber hinaus dazu bringen, Typen von Richtlinienprogrammen zu laden, die in einer anderen Konfigurationsdatei gespeichert sind.  
+1. Fügen Sie dem- `<extensions>` Element in [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) der Konfigurationsdatei "Svcutil. exe. config" den Importertyp hinzu. Über die Option `/svcutilConfig` können Sie Svcutil.exe darüber hinaus dazu bringen, Typen von Richtlinienprogrammen zu laden, die in einer anderen Konfigurationsdatei gespeichert sind.  
   
-2. Verwendung [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Importieren von Metadaten und das Importprogramm werden daraufhin automatisch ausgelöst.  
+2. Verwenden Sie das [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , um die Metadaten zu importieren, und das Import Programm wird automatisch aufgerufen.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>So fügen Sie das benutzerdefinierte Richtlinienimportprogramm programmgesteuert ins Metadatensystem ein  
   

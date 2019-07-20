@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617258"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364317"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Übersicht über Markuperweiterungen für XAML
 Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen eines Werts, der weder ein primitiver noch ein spezifischer XAML-Typ ist. Für die Attributverwendung verwenden Markuperweiterungen die bekannte Zeichensequenz einer öffnenden geschweiften Klammer `{` für den Anfang des Markuperweiterungsbereichs und eine schließende geschweifte Klammer `}` zum Beenden. Beim Verwenden von .NET Framework-XAML-Diensten können Sie einige der vordefinierten XAML-Sprachmarkuperweiterungen aus der Assembly „System.Xaml“ verwenden. Sie können zudem in „System.Xaml“ definierte Subklassen aus der Klasse <xref:System.Windows.Markup.MarkupExtension> verwenden und Ihre eigenen Markuperweiterungen definieren. Alternativ können Sie durch ein bestimmtes Framework definierte Markuperweiterungen verwenden, wenn Sie dieses Framework bereits referenzieren.  
@@ -22,7 +22,7 @@ Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen ei
  Zwecks XAML-Sprachunterstützung werden verschiedene Markuperweiterungen durch die .NET Framework-XAML-Dienste implementiert. Diese Markuperweiterungen entsprechen Teilen der Spezifikation von XAML als Sprache. Diese lassen sich für gewöhnlich durch das `x:` -Präfix in der Syntax bestimmen, wie dies unter der häufigen Verwendung zu sehen ist. Die .NET Framework-XAML-Dienstimplementierungen für diese XAML-Sprachelemente werden alle von der  <xref:System.Windows.Markup.MarkupExtension> -Basisklasse abgeleitet.  
   
 > [!NOTE]
->  Das Präfix `x:` wird für die typische XAML-Namespacezuordnung des XAML-Sprachnamespace im Stammelement einer XAML-Produktion verwendet. Beispielsweise initiieren die Visual Studio-Projekt- und-Seitenvorlagen für verschiedene spezifische Frameworks eine XAML-Datei, die mithilfe dieser `x:` Zuordnung. Sie können ein anderes Präfixtoken in Ihrer XAML-Namespacezuordnung auswählen. In dieser Dokumentation wird jedoch von der standardmäßigen `x:` -Zuordnung im Zuge der Ermittlung dieser Entitäten ausgegangen, die im Gegensatz zum standardmäßigen XAML-Namespace eines bestimmten Frameworks oder anderer willkürlicher CLR- oder XML-Namespaces ein definierter Bestandteil des XAML-Sprachennamespace sind.  
+>  Das Präfix `x:` wird für die typische XAML-Namespacezuordnung des XAML-Sprachnamespace im Stammelement einer XAML-Produktion verwendet. Beispielsweise initiieren die Visual Studio-Projekt-und-Seitenvorlagen für verschiedene spezifische Frameworks eine XAML `x:` -Datei, die diese Zuordnung verwendet. Sie können ein anderes Präfixtoken in Ihrer XAML-Namespacezuordnung auswählen. In dieser Dokumentation wird jedoch von der standardmäßigen `x:` -Zuordnung im Zuge der Ermittlung dieser Entitäten ausgegangen, die im Gegensatz zum standardmäßigen XAML-Namespace eines bestimmten Frameworks oder anderer willkürlicher CLR- oder XML-Namespaces ein definierter Bestandteil des XAML-Sprachennamespace sind.  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` stellt das <xref:System.Type> -Objekt für den benannten Typ bereit. Diese Funktionalität wird am häufigsten in Mechanismen mit Verzögerungen verwendet, die einen zugrunde liegenden CLR-Typ und eine Typenableitung als Gruppierungsmoniker oder Bezeichner verwenden. WPF-Style und -Vorlagen und deren Verwendung von `TargetType` -Eigenschaften sind ein bestimmtes Beispiel. Weitere Informationen finden Sie unter [x:Type Markup Extension](x-type-markup-extension.md).  
@@ -39,8 +39,8 @@ Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen ei
 ### <a name="xreference"></a>x:Reference  
  `x:Reference` ist ein Bestandteil von XAML 2009. Hierbei handelt es sich um eine Erweiterung des ursprünglichen (2006) Sprachsatzes. `x:Reference` repräsentiert einen Verweis auf ein anderes vorhandenes Objekt in einem Objektdiagramm. Dieses Objekt wird anhand seiner `x:Name`bestimmt. Weitere Informationen finden Sie unter [x:Reference Markup Extension](x-reference-markup-extension.md).  
   
-### <a name="other-x-constructs"></a>Andere x: Erstellt  
- Es sind weitere `x:` -Konstrukte für die Unterstützung von XAML-Sprachfeatures vorhanden. Diese sind jedoch nicht als Markuperweiterungen implementiert. Weitere Informationen finden Sie unter [XAML-Namespace (x:)) Sprachfunktionen](xaml-namespace-x-language-features.md).  
+### <a name="other-x-constructs"></a>Anderes x: Ungs  
+ Es sind weitere `x:` -Konstrukte für die Unterstützung von XAML-Sprachfeatures vorhanden. Diese sind jedoch nicht als Markuperweiterungen implementiert. Weitere Informationen finden [Sie unter XAML-Namespace (x:). Sprach Features](xaml-namespace-x-language-features.md).  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>Die MarkupExtension-Basisklasse  
@@ -63,9 +63,9 @@ Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen ei
  Aus Sicht der Markupverwendung ist das Einschließen des Suffixes `Extension` als Bestandteil der Verwendung gültig. Dies verhält sich jedoch so, als wäre `Extension` ein wirklicher Bestandteil des Klassennamens. So könnten XAML-Objekt-Writer eine Markuperweiterungs-Unterstützungsklasse für diese Verwendung nicht erfolgreich auflösen, wenn die Unterstützungsklasse nicht über das Suffix `Extension` verfügen würde.  
   
 ### <a name="the-default-constructor"></a>Der Standardkonstruktor  
- Sie sollten für alle Markup-Erweiterungsunterstützungstypen einen öffentlichen Standardkonstruktor verfügbar machen. Ein Standardkonstruktor ist erforderlich, wenn ein XAML-Objekt-Writer die Markuperweiterung über eine Objektelementverwendung instanziiert. Das Unterstützen der Objektelementverwendung ist eine angemessene Erwartung für eine Markuperweiterung, insbesondere für die Serialisierung. Sie können jedoch eine Markuperweiterung ohne einen öffentlichen Konstruktor implementieren, wenn Sie nur die Attributverwendungen der Markuperweiterung unterstützen möchten.  
+ Für alle Markup-Erweiterungs Unterstützungs Typen sollten Sie einen öffentlichen Parameter losen Konstruktor verfügbar machen. Ein Parameter loser Konstruktor ist erforderlich, wenn ein XAML-objektwriter die Markup Erweiterung aus einer Objekt Element Verwendung instanziiert. Das Unterstützen der Objektelementverwendung ist eine angemessene Erwartung für eine Markuperweiterung, insbesondere für die Serialisierung. Sie können jedoch eine Markuperweiterung ohne einen öffentlichen Konstruktor implementieren, wenn Sie nur die Attributverwendungen der Markuperweiterung unterstützen möchten.  
   
- Wenn Ihre Markuperweiterungsverwendung über keine Argument verfügt, ist der Standardkonstruktor erforderlich, um die Verwendung zu unterstützen.  
+ Wenn die Verwendung der Markup Erweiterung keine Argumente aufweist, ist der Parameter lose Konstruktor erforderlich, um die Verwendung zu unterstützen.  
   
 <a name="constructor_patterns_and_positional_arguments_for_a_custom_markup_extension"></a>   
 ## <a name="constructor-patterns-and-positional-arguments-for-a-custom-markup-extension"></a>Konstruktormuster und Positionsargumente für eine benutzerdefinierte Markuperweiterung  
@@ -81,7 +81,7 @@ public Collate(CollationMode collationMode) {...}
   
  Die Verarbeitung erfolgt konzeptionell, als ob die Markuperweiterung ein zu erstellendes Objekt wäre, anschließend werden die zugehörigen Memberwerte festgelegt. Jede festzulegende angegebene Eigenschaft wird in ähnlicher Weise ausgewertet, wie ein angegebenes Member in einem erstellten Objekt festgelegt werden kann, wenn XAML analysiert wird. Es gibt zwei wichtige Unterschiede:  
   
-- Ein Markup-Erweiterungsunterstützungstyp benötigt, wie bereits erwähnt, keinen Standardkonstruktor, um in XAML instanziiert zu werden. Seine Objektkonstruktion wird verzögert, bis seine möglichen Argumente in der Textsyntax als Positions- oder Namensargumente in Token übersetzt und ausgewertet werden und der entsprechende Konstruktor zu diesem Zeitpunkt aufgerufen wird.  
+- Wie bereits erwähnt, muss ein Markup-Erweiterungs Unterstützungs Typ keinen Parameter losen Konstruktor aufweisen, um in XAML instanziiert zu werden. Seine Objektkonstruktion wird verzögert, bis seine möglichen Argumente in der Textsyntax als Positions- oder Namensargumente in Token übersetzt und ausgewertet werden und der entsprechende Konstruktor zu diesem Zeitpunkt aufgerufen wird.  
   
 - Markuperweiterungsverwendungen können verschachtelt werden. Die innerste Markuperweiterung wird zuerst ausgewertet. Daher können Sie eine solche Verwendung annehmen und einen der Konstruktionsparameter als einen Typ deklarieren, für den ein zu generierender Wertkonverter (beispielsweise eine Markuperweiterung) erforderlich ist.  
   
@@ -116,7 +116,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="property-element-usage-of-a-markup-extension"></a>Eigenschaftselementverwendung einer Markuperweiterung  
  Die Szenarien für die Markuperweiterungsverwendungen werden oftmals um die Verwendung der Markuperweiterung in der Attributverwendung herum entworfen. Es ist jedoch auch potenziell möglich, die dahinterliegende Klasse zur Unterstützung von Eigenschaftselementen zu definieren.  
   
- Definieren Sie zum Unterstützen der Eigenschaftselementverwendung Ihrer Markuperweiterung einen öffentlichen Standardkonstruktor. Hierbei sollte es sich um einen Instanzkonstruktor und nicht um einen statischen Konstruktor handeln. Dies ist erforderlich, da ein XAML-Prozessor in der Regel den Standardkonstruktor für jedes Objektelement aufrufen muss, dass es über das Markup verarbeitet, und dies umfasst Markuperweiterungsklassen als Objektelemente. Für erweiterte Szenarien können Sie nicht standardmäßige Konstruktionspfade für Klassen definieren. (Weitere Informationen finden Sie unter [X: FactoryMethod-Direktive](x-factorymethod-directive.md).) Sie sollten diese Muster jedoch nicht für Markuperweiterungszwecke verwenden, da dadurch die Ermittlung des Verwendungsmusters viel komplizierter wird, und zwar sowohl für Designer als auch für die Benutzer des unformatierten Markups.  
+ Um die Eigenschafts Element Verwendung ihrer Markup Erweiterung zu unterstützen, definieren Sie einen öffentlichen Parameter losen Konstruktor. Hierbei sollte es sich um einen Instanzkonstruktor und nicht um einen statischen Konstruktor handeln. Dies ist erforderlich, da ein XAML-Prozessor in der Regel den Parameter losen Konstruktor für jedes Objekt Element aufrufen muss, das er von Markup verarbeitet, und dies umfasst Markup Erweiterungs Klassen als Objekt Elemente. Für erweiterte Szenarien können Sie nicht standardmäßige Konstruktionspfade für Klassen definieren. (Weitere Informationen finden Sie unter [x:factorymethod-Direktive](x-factorymethod-directive.md).) Sie sollten diese Muster jedoch nicht für Markuperweiterungszwecke verwenden, da dadurch die Ermittlung des Verwendungsmusters viel komplizierter wird, und zwar sowohl für Designer als auch für die Benutzer des unformatierten Markups.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>Attributierung für eine benutzerdefinierte Markuperweiterung  

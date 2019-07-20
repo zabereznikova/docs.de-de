@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 5c500e68013bbacbb1fb3aaaeb37402942a3eaef
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: d0a1441e9bae8d2c1f938e7399c11e736708da4d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663899"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363826"
 ---
 # <a name="toolstrip-control-architecture"></a>Architektur des ToolStrip-Steuerelements
 
-Die <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStripItem> Klassen bieten ein flexibles, erweiterbares System zum Anzeigen der Symbolleiste, Status und Menüelementen. Diese Klassen sind in enthalten die <xref:System.Windows.Forms> -Namespace, und sie werden alle in der Regel mit dem Präfix "ToolStrip" benannt (z. B. <xref:System.Windows.Forms.ToolStripOverflow>) oder mit dem Suffix "Entfernen" (z. B. <xref:System.Windows.Forms.MenuStrip>).
+Die <xref:System.Windows.Forms.ToolStrip> Klassen <xref:System.Windows.Forms.ToolStripItem> und stellen ein flexibles, erweiterbares System zum Anzeigen von Symbolleisten-, Status-und Menü Elementen bereit. Diese Klassen sind alle im- <xref:System.Windows.Forms> Namespace enthalten. Sie werden in der Regel mit dem Präfix "ToolStrip" ( <xref:System.Windows.Forms.ToolStripOverflow>z. b.) oder mit dem Suffix "Strip" <xref:System.Windows.Forms.MenuStrip>benannt (z. b.).
 
 ## <a name="toolstrip"></a>ToolStrip
 
-Die folgenden Themen beschreiben <xref:System.Windows.Forms.ToolStrip> und die Steuerelemente, die von ihr abgeleitet werden.
+In den folgenden Themen <xref:System.Windows.Forms.ToolStrip> werden und die Steuerelemente beschrieben, die davon abgeleitet sind.
 
-<xref:System.Windows.Forms.ToolStrip> ist die abstrakte Basisklasse für <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, und <xref:System.Windows.Forms.ContextMenuStrip>. Das folgende Objekt Modell zeigt das <xref:System.Windows.Forms.ToolStrip> Vererbungshierarchie.
+<xref:System.Windows.Forms.ToolStrip>ist die abstrakte Basisklasse für <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>und <xref:System.Windows.Forms.ContextMenuStrip>. Das folgende Objektmodell zeigt die <xref:System.Windows.Forms.ToolStrip> Vererbungs Hierarchie.
 
-![Diagramm das ToolStrip-Objektmodell zeigt.](./media/toolstrip-control-architecture/toolstrip-object-model.gif)
+![Diagramm, das das ToolStrip-Objektmodell anzeigt.](./media/toolstrip-control-architecture/toolstrip-object-model.gif)
 
-Es stehen alle Elemente in einem <xref:System.Windows.Forms.ToolStrip> über die <xref:System.Windows.Forms.ToolStrip.Items%2A> Auflistung. Es stehen alle Elemente in einem <xref:System.Windows.Forms.ToolStripDropDownItem> über die <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> Auflistung. In einer Klasse abgeleitet <xref:System.Windows.Forms.ToolStrip>, können Sie auch die <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> Eigenschaft, um nur die Elemente zuzugreifen, die gerade angezeigt werden. Dies sind die Elemente, die derzeit nicht in ein Überlaufmenü befinden.
+Sie können auf alle Elemente in einem <xref:System.Windows.Forms.ToolStrip> über die <xref:System.Windows.Forms.ToolStrip.Items%2A> -Auflistung zugreifen. Sie können auf alle Elemente in einem <xref:System.Windows.Forms.ToolStripDropDownItem> über die <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> -Auflistung zugreifen. In einer von <xref:System.Windows.Forms.ToolStrip>abgeleiteten Klasse können Sie auch die <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> -Eigenschaft verwenden, um nur auf die gegenwärtig angezeigten Elemente zuzugreifen. Dies sind die Elemente, die sich derzeit nicht in einem Überlauf Menü befinden.
 
-Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit sowohl <xref:System.Windows.Forms.ToolStripSystemRenderer> und <xref:System.Windows.Forms.ToolStripProfessionalRenderer> in alle Ausrichtungen. Sie stehen standardmäßig zur Entwurfszeit für die <xref:System.Windows.Forms.ToolStrip> Steuerelement:
+Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit <xref:System.Windows.Forms.ToolStripSystemRenderer> und <xref:System.Windows.Forms.ToolStripProfessionalRenderer> in allen Ausrichtungen konzipiert. Sie sind standardmäßig zur Entwurfszeit für das <xref:System.Windows.Forms.ToolStrip> -Steuerelement verfügbar:
 
 - <xref:System.Windows.Forms.ToolStripButton>
 
@@ -43,9 +43,9 @@ Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit sowohl
 
 ### <a name="menustrip"></a>MenuStrip
 
-<xref:System.Windows.Forms.MenuStrip> ist der Container der obersten Ebene, die ersetzt <xref:System.Windows.Forms.MainMenu>. Darüber hinaus schlüsselverarbeitung und mehrere Dokumente (Interface-) Funktionen. Funktionell <xref:System.Windows.Forms.ToolStripDropDownItem> und <xref:System.Windows.Forms.ToolStripMenuItem> arbeiten zusammen mit <xref:System.Windows.Forms.MenuStrip>, obwohl sie abgeleitet sind <xref:System.Windows.Forms.ToolStripItem>.
+<xref:System.Windows.Forms.MenuStrip>ist der Container der obersten Ebene, der den <xref:System.Windows.Forms.MainMenu>ablöst. Außerdem werden Schlüssel Behandlung und MDI-Funktionen (Multiple Document Interface) bereitstellt. <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.ToolStripItem>Funktional und funktionieren<xref:System.Windows.Forms.ToolStripMenuItem> zusammen mit, obwohl Sie von abgeleitet sind. <xref:System.Windows.Forms.ToolStripDropDownItem>
 
-Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit sowohl <xref:System.Windows.Forms.ToolStripSystemRenderer> und <xref:System.Windows.Forms.ToolStripProfessionalRenderer> in alle Ausrichtungen. Sie stehen standardmäßig zur Entwurfszeit für die <xref:System.Windows.Forms.MenuStrip> Steuerelement:
+Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit <xref:System.Windows.Forms.ToolStripSystemRenderer> und <xref:System.Windows.Forms.ToolStripProfessionalRenderer> in allen Ausrichtungen konzipiert. Sie sind standardmäßig zur Entwurfszeit für das <xref:System.Windows.Forms.MenuStrip> -Steuerelement verfügbar:
 
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 
@@ -55,9 +55,9 @@ Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit sowohl
 
 ### <a name="statusstrip"></a>StatusStrip
 
-<xref:System.Windows.Forms.StatusStrip> ersetzt die <xref:System.Windows.Forms.StatusBar> Steuerelement. Besondere Features von <xref:System.Windows.Forms.StatusStrip> ein benutzerdefiniertes Tabellenlayout enthalten, die Unterstützung für die Form der größenanpassung und verschieben zurechtzukommen, passte, und die `Spring` -Eigenschaft, die ermöglicht eine <xref:System.Windows.Forms.ToolStripStatusLabel> automatisch Platz zu füllen.
+<xref:System.Windows.Forms.StatusStrip>ersetzt das <xref:System.Windows.Forms.StatusBar> -Steuerelement. Zu den besonderen <xref:System.Windows.Forms.StatusStrip> Features von gehören ein benutzerdefiniertes Tabellenlayout, Unterstützung für die Größenanpassung und das `Spring` Verschieben des Formulars sowie die <xref:System.Windows.Forms.ToolStripStatusLabel> -Eigenschaft, mit der ein verfügbarer Speicher automatisch aufgefüllt werden kann.
 
-Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit sowohl <xref:System.Windows.Forms.ToolStripSystemRenderer> und <xref:System.Windows.Forms.ToolStripProfessionalRenderer> in alle Ausrichtungen. Sie stehen standardmäßig zur Entwurfszeit für die <xref:System.Windows.Forms.StatusStrip> Steuerelement:
+Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit <xref:System.Windows.Forms.ToolStripSystemRenderer> und <xref:System.Windows.Forms.ToolStripProfessionalRenderer> in allen Ausrichtungen konzipiert. Sie sind standardmäßig zur Entwurfszeit für das <xref:System.Windows.Forms.StatusStrip> -Steuerelement verfügbar:
 
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 
@@ -69,9 +69,9 @@ Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit sowohl
 
 ### <a name="contextmenustrip"></a>ContextMenuStrip
 
-<xref:System.Windows.Forms.ContextMenuStrip> ersetzt <xref:System.Windows.Forms.ContextMenu>. Sie können Zuordnen einer <xref:System.Windows.Forms.ContextMenuStrip> mit jedes Steuerelement, und der rechten Maustaste auf automatisch zeigt an, die Kontext-Menü (oder das Kontextmenü). Sie können anzeigen, eine <xref:System.Windows.Forms.ContextMenuStrip> programmgesteuert durch die Verwendung der <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> Methode. <xref:System.Windows.Forms.ContextMenuStrip> unterstützt abbrechbare <xref:System.Windows.Forms.ToolStripDropDown.Opening> und <xref:System.Windows.Forms.ToolStripDropDown.Closing> Ereignisse, um dynamische Auffüllung und auf mehrere Szenarien zu behandeln. <xref:System.Windows.Forms.ContextMenuStrip> Bilder, Menüelemente Aktivierungszustand, Text, Zugriffsschlüssel, Verknüpfungen und hierarchische Menüs unterstützt.
+<xref:System.Windows.Forms.ContextMenuStrip> ersetzt <xref:System.Windows.Forms.ContextMenu>. Sie können einem beliebiges Steuerelement einen <xref:System.Windows.Forms.ContextMenuStrip> zuordnen, und mit der rechten Maustaste wird automatisch das Kontextmenü (oder das Kontextmenü) angezeigt. Sie können einen <xref:System.Windows.Forms.ContextMenuStrip> Programm gesteuert mithilfe der <xref:System.Windows.Forms.ToolStripDropDown.Show%2A> -Methode anzeigen. <xref:System.Windows.Forms.ContextMenuStrip>unterstützt <xref:System.Windows.Forms.ToolStripDropDown.Opening> abgebrochen <xref:System.Windows.Forms.ToolStripDropDown.Closing> -und-Ereignisse zur Behandlung dynamischer auffüllungs-und multiclick-Szenarios. <xref:System.Windows.Forms.ContextMenuStrip>unterstützt Bilder, den Zustand der Menü Element Überprüfung, Text, Zugriffstasten, Verknüpfungen und Kaskadierende Menüs.
 
-Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit sowohl <xref:System.Windows.Forms.ToolStripSystemRenderer> und <xref:System.Windows.Forms.ToolStripProfessionalRenderer> in alle Ausrichtungen. Sie stehen standardmäßig zur Entwurfszeit für die <xref:System.Windows.Forms.ContextMenuStrip> Steuerelement:
+Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit <xref:System.Windows.Forms.ToolStripSystemRenderer> und <xref:System.Windows.Forms.ToolStripProfessionalRenderer> in allen Ausrichtungen konzipiert. Sie sind standardmäßig zur Entwurfszeit für das <xref:System.Windows.Forms.ContextMenuStrip> -Steuerelement verfügbar:
 
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 
@@ -81,39 +81,39 @@ Die folgenden Elemente sind speziell für die nahtlose Zusammenarbeit mit sowohl
 
 - <xref:System.Windows.Forms.ToolStripComboBox>
 
-### <a name="toolstrip-generic-features"></a>ToolStrip-generische Funktionen
+### <a name="toolstrip-generic-features"></a>Generische Funktionen von ToolStrip
 
-Die folgenden Themen beschreiben, Features und Verhaltensweisen, die generisch ist, sind die <xref:System.Windows.Forms.ToolStrip> und abgeleitete Steuerelemente.
+In den folgenden Themen werden Funktionen und das Verhalten beschrieben, die <xref:System.Windows.Forms.ToolStrip> für die abgeleiteten Steuerelemente und generisch sind.
 
-#### <a name="painting"></a>Zeichnen
+#### <a name="painting"></a>Be
 
-Sie tun können benutzerdefinierte Darstellung <xref:System.Windows.Forms.ToolStrip> Steuerelemente auf unterschiedliche Weise. Wie bei anderen Windows Forms-Steuerelemente, die <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStripItem> beide verfügen über eine überschreibbare `OnPaint` Methoden und `Paint` Ereignisse. Wie bei regulären zeichnen, das Koordinatensystem relativ zum Clientbereich des Steuerelements; der oberen linken Ecke des Steuerelements ist 0, 0. Die `Paint` Ereignis und `OnPaint` -Methode für eine <xref:System.Windows.Forms.ToolStripItem> Verhalten sich wie andere Steuerelement Paint-Ereignisse.
+Es gibt mehrere Möglichkeiten, Benutzer <xref:System.Windows.Forms.ToolStrip> definierte Zeichen in Steuerelementen zu zeichnen. Wie bei anderen Windows Forms-Steuerelementen <xref:System.Windows.Forms.ToolStrip> verfügen <xref:System.Windows.Forms.ToolStripItem> sowohl die-als auch `OnPaint` die- `Paint` Methode über schreibbare Methoden und Ereignisse. Wie bei der regulären Darstellung ist das Koordinatensystem relativ zum Client Bereich des Steuer Elements. Das heißt, die linke obere Ecke des Steuer Elements ist 0, 0. Das `Paint` Ereignis und `OnPaint` die Methode für <xref:System.Windows.Forms.ToolStripItem> ein Verhalten sich wie andere Steuerelemente zum Zeichnen von Steuerelementen.
 
-Die <xref:System.Windows.Forms.ToolStrip> Steuerelemente bieten auch eine präzisere Zugriff auf das Rendern der Elemente und der Container über die <xref:System.Windows.Forms.ToolStripRenderer> -Klasse, die überschreibbare Methoden für das Zeichnen der Hintergrund, Hintergrund des Elements, Bild, Element-Taste, Elementtext verfügt, und Rahmen der <xref:System.Windows.Forms.ToolStrip>. Die Ereignisargumente für diese Methoden verfügbar machen, mehrere Eigenschaften wie z. B. Rechtecke, Farben und Textformate, die Sie nach Bedarf anpassen können.
+Die <xref:System.Windows.Forms.ToolStrip> Steuerelemente bieten außerdem einen präziseteren Zugriff auf das Rendering von Elementen und <xref:System.Windows.Forms.ToolStripRenderer> Containern über die-Klasse, die über schreibbare Methoden zum Zeichnen von Hintergrund, Element Hintergrund, Element Bild, Element Pfeil, Element Text und Rahmen des <xref:System.Windows.Forms.ToolStrip>. Die Ereignis Argumente für diese Methoden machen verschiedene Eigenschaften verfügbar, z. b. Rechtecke, Farben und Textformate, die Sie nach Bedarf anpassen können.
 
-Um nur einige Aspekte wie ein Element gezeichnet wird angepasst, Sie in der Regel außer Kraft setzen der <xref:System.Windows.Forms.ToolStripRenderer>.
+Um nur einige Aspekte der Art und Weise anzupassen, wie ein Element gezeichnet wird, über <xref:System.Windows.Forms.ToolStripRenderer>schreiben Sie in der Regel den.
 
-Wenn Sie ein neues Element schreiben und alle Zeichenvorgänge steuern möchten, überschreiben die `OnPaint` Methode. Aus `OnPaint`, können Sie Methoden aus der <xref:System.Windows.Forms.ToolStripRenderer>.
+Wenn Sie ein neues Element schreiben und alle Aspekte des Bildes steuern möchten, überschreiben Sie die `OnPaint` -Methode. Innerhalb `OnPaint`von können Sie Methoden aus der <xref:System.Windows.Forms.ToolStripRenderer>verwenden.
 
-In der Standardeinstellung die <xref:System.Windows.Forms.ToolStrip> double wird gepuffert, nutzen die <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> festlegen.
+Standardmäßig ist der <xref:System.Windows.Forms.ToolStrip> doppelt gepuffert und nutzt die <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> -Einstellung.
 
-#### <a name="parenting"></a>Überordnen von
+#### <a name="parenting"></a>Geordnet
 
-Das Konzept der Container den Besitz und Überordnung ist komplexer in <xref:System.Windows.Forms.ToolStrip> als in anderen Containersteuerelementen Windows Forms steuert. Dies ist erforderlich zur Unterstützung dynamischer Szenarien wie z. B. Überlauf, gemeinsames Verwenden von Dropdown--Elementen über mehrere <xref:System.Windows.Forms.ToolStrip> Elemente, und unterstützen die Generierung einer <xref:System.Windows.Forms.ContextMenuStrip> von einem Steuerelement.
+Das Konzept von Container Besitz und-Verarbeitung ist in <xref:System.Windows.Forms.ToolStrip> Steuerelementen komplexer als in anderen Windows Forms Container-Steuerelementen. Dies ist für die Unterstützung dynamischer Szenarien erforderlich, wie z. b. Überlauf, Freigabe <xref:System.Windows.Forms.ToolStrip> von Dropdown Elementen über mehrere Elemente hinweg und <xref:System.Windows.Forms.ContextMenuStrip> Unterstützung der Generierung eines von einem-Steuerelement.
 
-Die folgende Liste beschreibt im Zusammenhang mit übergeordneter Elemente und erläutert deren Verwendung.
+In der folgenden Liste werden die Elemente beschrieben, die sich auf die über-und deren Verwendung beziehen.
 
-- <xref:System.Windows.Forms.ToolStripDropDown.OwnerItem%2A> greift auf das Element, das die Quelle des Dropdown-Elements ist. Dies ist vergleichbar mit <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>, anstatt ein Steuerelement zu verwenden, gibt jedoch eine <xref:System.Windows.Forms.ToolStripItem>.
+- <xref:System.Windows.Forms.ToolStripDropDown.OwnerItem%2A>greift auf das Element zu, bei dem es sich um die Quelle des Dropdown Elements handelt. Dies ist vergleichbar mit <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>, aber anstelle eines-Steuer Elements wird ein <xref:System.Windows.Forms.ToolStripItem>zurückgegeben.
 
-- <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A> Bestimmt, welches Steuerelement die Quelle ist von der <xref:System.Windows.Forms.ContextMenuStrip> Wenn mehrere Steuerelemente nutzen die gleiche <xref:System.Windows.Forms.ContextMenuStrip>.
+- <xref:System.Windows.Forms.ContextMenuStrip.SourceControl%2A>bestimmt, welches Steuerelement die Quelle von <xref:System.Windows.Forms.ContextMenuStrip> ist, wenn mehrere Steuerelemente <xref:System.Windows.Forms.ContextMenuStrip>gleich sind.
 
-- <xref:System.Windows.Forms.ToolStripItem.GetCurrentParent%2A> ist ein nur-Lese Accessor für die <xref:System.Windows.Forms.ToolStripItem.Parent%2A> Eigenschaft. Ein übergeordnetes Element unterscheidet sich von einem Besitzer, da ein übergeordnetes Element steht für die zurückgegebene aktuelle <xref:System.Windows.Forms.ToolStrip> in dem das Element angezeigt wird, die möglicherweise im Überlaufbereich,.
+- <xref:System.Windows.Forms.ToolStripItem.GetCurrentParent%2A>ist ein Schreib geschützter Accessor für die <xref:System.Windows.Forms.ToolStripItem.Parent%2A> -Eigenschaft. Ein übergeordnetes Element unterscheidet sich von einem Besitzer darin, dass ein über <xref:System.Windows.Forms.ToolStrip> geordnetes Element den zurückgegebenen aktuellen angibt, in dem das Element angezeigt wird, das möglicherweise im Überlauf Bereich angezeigt wird.
 
-- <xref:System.Windows.Forms.ToolStripItem.Owner%2A> Gibt die <xref:System.Windows.Forms.ToolStrip> , deren Auflistung Elemente enthält, die aktuelle <xref:System.Windows.Forms.ToolStripItem>. Dies ist die beste Möglichkeit zum Verweisen auf <xref:System.Windows.Forms.ToolStrip.ImageList%2A> oder andere Eigenschaften der obersten Ebene <xref:System.Windows.Forms.ToolStrip> ohne speziellen Code zur Behandlung des Überlaufs schreiben.
+- <xref:System.Windows.Forms.ToolStripItem.Owner%2A>Gibt das <xref:System.Windows.Forms.ToolStrip> -Element zurück, dessen Items <xref:System.Windows.Forms.ToolStripItem>-Auflistung den aktuellen enthält. Dies ist die beste Möglichkeit, auf <xref:System.Windows.Forms.ToolStrip.ImageList%2A> oder andere Eigenschaften in der obersten Ebene <xref:System.Windows.Forms.ToolStrip> zu verweisen, ohne speziellen Code zum Behandeln von Überlauf zu schreiben.
 
-#### <a name="behavior-of-inherited-controls"></a>Verhalten des geerbten-Steuerelementen
+#### <a name="behavior-of-inherited-controls"></a>Verhalten von geerbten Steuerelementen
 
-Die folgenden Steuerelemente sind gesperrt, wenn sie bei der Vererbung verwendet werden:
+Die folgenden Steuerelemente werden gesperrt, wenn Sie in Vererbung verwendet werden:
 
 - <xref:System.Windows.Forms.ToolStrip>
 
@@ -123,169 +123,169 @@ Die folgenden Steuerelemente sind gesperrt, wenn sie bei der Vererbung verwendet
 
 - <xref:System.Windows.Forms.StatusStrip>
 
-- <xref:System.Windows.Forms.ToolStripPanel> beinhaltet die Bereiche in einer <xref:System.Windows.Forms.ToolStripContainer> und einzelne <xref:System.Windows.Forms.ToolStripPanel> Steuerelemente.
+- <xref:System.Windows.Forms.ToolStripPanel>, die die Bereiche eines <xref:System.Windows.Forms.ToolStripContainer> und auch einzelner <xref:System.Windows.Forms.ToolStripPanel> Steuerelemente enthält.
 
-Erstellen Sie z. B. eine neue Windows Forms-Anwendung mit mindestens einem der Steuerelemente in der vorherigen Liste. Legen Sie den Zugriffsmodifizierer von ein oder mehrere Steuerelemente, `public` oder `protected`, und klicken Sie dann das Projekt zu erstellen. Fügen Sie ein Formular, das aus dem ersten Formular erbt, und wählen Sie dann ein geerbtes Steuerelement. Das Steuerelement wird gesperrt, verhält sich wie bei der Zugriffsmodifizierer wurde `private`.
+Erstellen Sie z. b. eine neue Windows Forms Anwendung, indem Sie eines oder mehrere der Steuerelemente in der vorherigen Liste verwenden. Legen Sie den Zugriffsmodifizierer für `public` ein `protected`oder mehrere Steuerelemente auf oder fest, und erstellen Sie dann das Projekt. Fügen Sie ein Formular hinzu, das vom ersten Formular erbt, und wählen Sie dann ein geerbtes Steuerelement aus. Das-Steuerelement wird als `private`gesperrt angezeigt
 
-#### <a name="toolstripcontainer-support-of-inheritance"></a>ToolStripContainer-Unterstützung von Vererbung
+#### <a name="toolstripcontainer-support-of-inheritance"></a>ToolStripContainer-Unterstützung für Vererbung
 
-Die <xref:System.Windows.Forms.ToolStripContainer> -Steuerelement unterstützt beschränkte geerbte Szenarien, die im folgenden Beispiel ähnelt:
+Das <xref:System.Windows.Forms.ToolStripContainer> -Steuerelement unterstützt eingeschränkte geerbte Szenarien, ähnlich wie im folgenden Beispiel:
 
 1. Erstellen Sie eine neue Windows Forms-Anwendung.
 
 2. Fügen Sie dem Formular eine <xref:System.Windows.Forms.ToolStripContainer> hinzu.
 
-3. Legen Sie den Zugriffsmodifizierer des der <xref:System.Windows.Forms.ToolStripContainer> zu `public` oder `protected`.
+3. Legen <xref:System.Windows.Forms.ToolStripContainer> Sie den Zugriffsmodifizierer von auf `public` oder `protected`fest.
 
-4. Fügen Sie eine beliebige Kombination von <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, und <xref:System.Windows.Forms.ContextMenuStrip> -Steuerelementen an die <xref:System.Windows.Forms.ToolStripPanel> Regionen die <xref:System.Windows.Forms.ToolStripContainer>.
+4. Fügen <xref:System.Windows.Forms.ToolStrip>Sie den Bereichendes<xref:System.Windows.Forms.ToolStripContainer>eine beliebige <xref:System.Windows.Forms.ContextMenuStrip> Kombination von-, <xref:System.Windows.Forms.MenuStrip>-und-Steuerelementen hinzu. <xref:System.Windows.Forms.ToolStripPanel>
 
 5. Erstellen Sie das Projekt.
 
-6. Fügen Sie ein Formular, das aus dem ersten Formular erbt.
+6. Fügen Sie ein Formular hinzu, das vom ersten Formular erbt.
 
-7. Wählen Sie den geerbten <xref:System.Windows.Forms.ToolStripContainer> auf dem Formular.
+7. Wählen Sie die <xref:System.Windows.Forms.ToolStripContainer> geerbte im Formular aus.
 
-#### <a name="inherited-behavior-of-child-controls"></a>Geerbte Verhalten der untergeordneten Steuerelemente
+#### <a name="inherited-behavior-of-child-controls"></a>Vererbte Verhalten von untergeordneten Steuerelementen
 
-Nachdem Sie die vorherigen Schritte abgeschlossen haben, tritt das folgende Verhalten des geerbte:
+Nachdem Sie die vorherigen Schritte ausgeführt haben, tritt das folgende geerbte Verhalten auf:
 
-- Wird Sie im Designer das Steuerelement mit einem geerbten Symbol angezeigt.
+- Im Designer wird das-Steuerelement mit einem geerbten Symbol angezeigt.
 
-- Die <xref:System.Windows.Forms.ToolStripPanel> Steuerelemente sind gesperrt, die Sie nicht auswählen oder neu anordnen von deren Inhalt.
+- Die <xref:System.Windows.Forms.ToolStripPanel> Steuerelemente sind gesperrt. Sie können ihren Inhalt nicht auswählen oder neu anordnen.
 
-- Sie können Steuerelemente zum Hinzufügen der <xref:System.Windows.Forms.ToolStripContentPanel>, verschieben Sie die Steuerelemente und untergeordnete Steuerelemente von machen die <xref:System.Windows.Forms.ToolStripContentPanel>.
+- Sie können der <xref:System.Windows.Forms.ToolStripContentPanel>Steuerelemente hinzufügen, die Steuerelemente verschieben und Sie als untergeordnete Steuer <xref:System.Windows.Forms.ToolStripContentPanel>Elemente des-Elements festlegen.
 
-- Ihre Änderungen bleiben erhalten, nach dem Erstellen des Formulars.
+- Die Änderungen bleiben nach dem Erstellen des Formulars erhalten.
 
   > [!NOTE]
-  > Entfernen Sie den Zugriffsmodifizierer aus allen <xref:System.Windows.Forms.ToolStripPanel> Steuerelemente, die Teil einer <xref:System.Windows.Forms.ToolStripContainer>. Der Zugriffsmodifizierer des der <xref:System.Windows.Forms.ToolStripContainer> steuert das gesamte Steuerelement.
+  > Entfernen Sie die Zugriffsmodifizierer aus allen <xref:System.Windows.Forms.ToolStripPanel> Steuerelementen, die Teil <xref:System.Windows.Forms.ToolStripContainer>eines sind. Der Zugriffsmodifizierer des <xref:System.Windows.Forms.ToolStripContainer> steuert das gesamte Steuerelement.
 
 #### <a name="partial-trust"></a>Teilweise Vertrauenswürdigkeit
 
-Die Einschränkungen des `ToolStrip`s mit teilweiser Vertrauenswürdigkeit dienen zum Verhindern von unbeabsichtigten Eingabe von persönlichen Informationen, die durch nicht autorisierte Personen oder Dienste verwendet werden kann. Die Schutzmaßnahmen lauten wie folgt aus:
+Die Einschränkungen von `ToolStrip`s bei teilweiser Vertrauenswürdigkeit sind so konzipiert, dass ein unbeabsichtigter Eintrag persönlicher Informationen vermieden wird, die möglicherweise von nicht autorisierten Personen oder Diensten verwendet werden. Die Schutzmaßnahmen lauten wie folgt:
 
-- `ToolStripDropDown` Steuerelemente erfordern <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> zum Anzeigen von Elementen in einem <xref:System.Windows.Forms.ToolStripControlHost>. Dies gilt für sowohl für systeminterne Steuerelemente wie z. B. <xref:System.Windows.Forms.ToolStripTextBox>, <xref:System.Windows.Forms.ToolStripComboBox>, und <xref:System.Windows.Forms.ToolStripProgressBar> wie auch, dass Benutzer erstellt steuert. Wenn diese Anforderung nicht erfüllt ist, werden diese Elemente nicht angezeigt. Es werden keine Ausnahmen ausgelöst.
+- `ToolStripDropDown`-Steuer <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> Elemente erfordern, dass Elemente <xref:System.Windows.Forms.ToolStripControlHost>in einer angezeigt werden. Dies gilt sowohl für systeminterne Steuerelemente <xref:System.Windows.Forms.ToolStripTextBox>, <xref:System.Windows.Forms.ToolStripComboBox>wie z <xref:System.Windows.Forms.ToolStripProgressBar> . b., und, als auch für Benutzer erstellte Steuerelemente. Wenn diese Anforderung nicht erfüllt wird, werden diese Elemente nicht angezeigt. Es werden keine Ausnahmen ausgelöst.
 
-- Festlegen der <xref:System.Windows.Forms.ToolStripDropDown.AutoClose%2A> Eigenschaft `false` ist nicht zulässig, und die abgebrochen werden <xref:System.Windows.Forms.ToolStripDropDown.Closing> Ereignisparameter wird ignoriert. Dies macht es unmöglich, die mehr als eine Tastenkombination, die ohne das Dropdownelement geschlossen wird, geben zu verwenden. Wenn diese Anforderung nicht erfüllt ist, werden diese Elemente nicht angezeigt. Es werden keine Ausnahmen ausgelöst.
+- Das Festlegen <xref:System.Windows.Forms.ToolStripDropDown.AutoClose%2A> der- `false` Eigenschaft auf ist nicht zulässig, und der <xref:System.Windows.Forms.ToolStripDropDown.Closing> abgebrochen-Ereignis Parameter wird ignoriert. Dadurch ist es unmöglich, mehr als einen Tastatur Strich einzugeben, ohne das Dropdown Element zu verwerfen. Wenn diese Anforderung nicht erfüllt wird, werden diese Elemente nicht angezeigt. Es werden keine Ausnahmen ausgelöst.
 
-- Viele Tastatureingaben Ereignisbehandlung wird nicht ausgelöst, wenn sie außer in teilweise vertrauenswürdigen Kontext auftreten <xref:System.Security.Permissions.UIPermissionWindow.AllWindows>.
+- Viele Tastatur Schlag Ereignisse werden nicht ausgelöst, wenn Sie in teilweise vertrauenswürdigen Kontexten als <xref:System.Security.Permissions.UIPermissionWindow.AllWindows>auftreten.
 
-- Zugriffsschlüssel werden nicht verarbeitet, wenn <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> nicht gewährt wird.
+- Zugriffsschlüssel werden nicht verarbeitet, <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> wenn nicht gewährt wird.
 
 #### <a name="usage"></a>Verwendung
 
-Die folgenden Verwendungsmuster haben einen Einfluss auf <xref:System.Windows.Forms.ToolStrip> Layout, Tastaturinteraktion und Endbenutzerverhalten:
+Die folgenden Verwendungs Muster haben einen Einfluss auf <xref:System.Windows.Forms.ToolStrip> Layout, Tastatur Interaktion und Endbenutzer Verhalten:
 
-- Kam ein <xref:System.Windows.Forms.ToolStripPanel>
+- Verknüpft in<xref:System.Windows.Forms.ToolStripPanel>
 
-  Die <xref:System.Windows.Forms.ToolStrip> neu angeordnet werden können, innerhalb der <xref:System.Windows.Forms.ToolStripPanel> und über <xref:System.Windows.Forms.ToolStripPanel>s. Die `Dock` Eigenschaft wird ignoriert, und, wenn die <xref:System.Windows.Forms.ToolStrip.Stretch%2A> -Eigenschaft ist `false`, wird die Größe des der <xref:System.Windows.Forms.ToolStrip> wächst, wenn Elemente hinzugefügt werden die <xref:System.Windows.Forms.ToolStripPanel>. In der Regel die <xref:System.Windows.Forms.ToolStrip> der Tab-Reihenfolge nicht beteiligt.
+  Der <xref:System.Windows.Forms.ToolStrip> kann <xref:System.Windows.Forms.ToolStripPanel>innerhalb von und über s neu positioniert werden. <xref:System.Windows.Forms.ToolStripPanel> Die `Dock` -Eigenschaft wird ignoriert, und wenn <xref:System.Windows.Forms.ToolStrip.Stretch%2A> die- `false`Eigenschaft den Wert hat, <xref:System.Windows.Forms.ToolStrip> wird die Größe der Vergrößerung <xref:System.Windows.Forms.ToolStripPanel>vergrößert. In der Regel <xref:System.Windows.Forms.ToolStrip> ist der nicht an der Aktivier Reihenfolge beteiligt.
 
 - Angedockt
 
-  Die <xref:System.Windows.Forms.ToolStrip> befindet sich auf einer Seite eines Containers in einer festen Position, und seine Größe erstreckt sich über die ganze Kante, die an dem er angedockt ist. In der Regel die <xref:System.Windows.Forms.ToolStrip> der Tab-Reihenfolge nicht beteiligt.
+  Die <xref:System.Windows.Forms.ToolStrip> wird auf einer Seite eines Containers an einer festgelegten Position platziert, und die Größe wird über den gesamten Rand erweitert, an dem Sie angedockt ist. In der Regel <xref:System.Windows.Forms.ToolStrip> ist der nicht an der Aktivier Reihenfolge beteiligt.
 
 - Absolut positioniert
 
-  Die <xref:System.Windows.Forms.ToolStrip> ist wie bei anderen Steuerelementen, da es gespeichert wird die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft, eine feste Größe hat, und in der Regel in der Aktivierreihenfolge beteiligt ist.
+  Die <xref:System.Windows.Forms.ToolStrip> ähnelt anderen Steuerelementen, da Sie von der <xref:System.Windows.Forms.Control.Location%2A> -Eigenschaft platziert wird, eine festgelegte Größe aufweist und in der Regel an der Aktivier Reihenfolge teilnimmt.
 
-#### <a name="keyboard-interaction"></a>Tastaturinteraktion
+#### <a name="keyboard-interaction"></a>Tastatur Interaktion
 
 ##### <a name="access-keys"></a>Zugriffsschlüssel
 
-In Kombination mit oder nach der ALT-Taste-Zugriffsschlüssel sind eine Möglichkeit zum Aktivieren eines Steuerelements über die Tastatur. <xref:System.Windows.Forms.ToolStrip> unterstützt sowohl explizite und implizite Tastenkombinationen. Explizite Definition verwendet, ein kaufmännisches und-Zeichen (&) vor dem Buchstaben. Implizite Definition verwendet einen Algorithmus, der versucht, finden ein übereinstimmendes Element entsprechend der Reihenfolge der Zeichen in einer bestimmten `Text` Eigenschaft.
+In Kombination mit oder nach der Alt-Taste sind Zugriffstasten eine Möglichkeit zum Aktivieren eines Steuer Elements über die Tastatur. <xref:System.Windows.Forms.ToolStrip>unterstützt sowohl explizite als auch implizite Zugriffsschlüssel. Eine explizite Definition verwendet ein kaufmännisches und-Zeichen (&), das dem Buchstaben vorangestellt ist. Die implizite Definition verwendet einen Algorithmus, der versucht, ein übereinstimmendes Element auf Grundlage der Reihenfolge der `Text` Zeichen in einer bestimmten Eigenschaft zu finden.
 
 ##### <a name="shortcut-keys"></a>Tastenkombinationen
 
-Die Tastenkombination ein, die eine <xref:System.Windows.Forms.MenuStrip> verwenden eine Kombination der <xref:System.Windows.Forms.Keys> -Aufzählung (nicht auftragsspezifische) definieren Sie die Tastenkombination. Sie können auch die <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> Eigenschaft, um eine Tastenkombination mit nur-Text anzuzeigen, z. B. das Anzeigen von "Del" anstelle von "Delete".
+Die Tastenkombinationen, die von <xref:System.Windows.Forms.MenuStrip> einem verwendet werden, verwenden <xref:System.Windows.Forms.Keys> eine Kombination aus der-Enumeration (die nicht Reihen folgen spezifisch ist), um die Tastenkombination zu definieren. Sie können auch die <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> -Eigenschaft verwenden, um eine Tastenkombination mit nur einem Text anzuzeigen, z. b. "del" anstelle von "Delete".
 
 ##### <a name="navigation"></a>Navigation
 
-Die ALT-Taste aktiviert die <xref:System.Windows.Forms.MenuStrip> verweist <xref:System.Windows.Forms.Form.MainMenuStrip%2A>. Von dort STRG + TAB zwischen navigiert <xref:System.Windows.Forms.ToolStrip> -Steuerelementen innerhalb `ToolStripPanel`s. Die TAB-Taste und die Pfeiltasten auf der Zehnertastatur Navigieren zwischen Elementen in einem <xref:System.Windows.Forms.ToolStrip>. Ein spezieller Algorithmus behandelt die Navigation im Überlaufbereich. LEERTASTE wählt eine <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, oder <xref:System.Windows.Forms.ToolStripSplitButton>.
+Die Alt-Taste aktiviert <xref:System.Windows.Forms.MenuStrip> den, auf <xref:System.Windows.Forms.Form.MainMenuStrip%2A>den von gezeigt wird. Von dort aus werden STRG + TAB zwischen <xref:System.Windows.Forms.ToolStrip> Steuerelementen in `ToolStripPanel`s navigiert. Die Tab-Taste und die Pfeiltasten auf der numerischen Tastatur werden zwischen den Elementen in <xref:System.Windows.Forms.ToolStrip>einem navigiert. Ein spezieller Algorithmus behandelt die Navigation im Überlauf Bereich. Leertaste wählt <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>oder <xref:System.Windows.Forms.ToolStripSplitButton>aus.
 
 ##### <a name="focus-and-validation"></a>Fokus und Validierung
 
-Bei der Aktivierung über die ALT-Taste, die <xref:System.Windows.Forms.MenuStrip> oder <xref:System.Windows.Forms.ToolStrip> in der Regel keine übernehmen und entfernen Sie den Fokus aus dem Steuerelement, der gerade den Fokus besitzt. Wenn ein gehostet wird Steuerelement, in der <xref:System.Windows.Forms.MenuStrip> oder eine Dropdownliste der <xref:System.Windows.Forms.MenuStrip>, das Steuerelement den Fokus erhält, wenn der Benutzer die TAB-Taste drückt. Im Allgemeinen die <xref:System.Windows.Forms.Control.GotFocus>, <xref:System.Windows.Forms.Control.LostFocus>, <xref:System.Windows.Forms.Control.Enter>, und <xref:System.Windows.Forms.Control.Leave> Ereignisse <xref:System.Windows.Forms.MenuStrip> möglicherweise nicht ausgelöst werden, wenn sie über die Tastatur aktiviert werden. In solchen Fällen verwenden die <xref:System.Windows.Forms.MenuStrip.MenuActivate> und <xref:System.Windows.Forms.MenuStrip.MenuDeactivate> Ereignisse stattdessen.
+Bei Aktivierung durch die Alt-Taste wird <xref:System.Windows.Forms.MenuStrip> der <xref:System.Windows.Forms.ToolStrip> Fokus von oder in der Regel weder von dem Steuerelement entfernt, das derzeit den Fokus besitzt. Wenn ein-Steuerelement innerhalb <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.MenuStrip>von oder in einem Dropdown Element von gehostet wird, erhält das Steuerelement den Fokus, wenn der Benutzer die Tab-Taste drückt. Im Allgemeinen werden die <xref:System.Windows.Forms.Control.GotFocus>- <xref:System.Windows.Forms.Control.LostFocus> <xref:System.Windows.Forms.Control.Enter>,-, <xref:System.Windows.Forms.Control.Leave> -und <xref:System.Windows.Forms.MenuStrip> -Ereignisse von möglicherweise nicht ausgelöst, wenn Sie von der Tastatur aktiviert werden. Verwenden Sie in solchen Fällen stattdessen <xref:System.Windows.Forms.MenuStrip.MenuActivate> das <xref:System.Windows.Forms.MenuStrip.MenuDeactivate> -Ereignis und das-Ereignis.
 
-In der Standardeinstellung <xref:System.Windows.Forms.ToolStrip.CausesValidation%2A> ist `false`. Rufen Sie <xref:System.Windows.Forms.ContainerControl.Validate%2A> explizit in Ihrem Formular eine Überprüfung durchführen.
+Standardmäßig <xref:System.Windows.Forms.ToolStrip.CausesValidation%2A> ist `false`. Geben <xref:System.Windows.Forms.ContainerControl.Validate%2A> Sie explizit auf dem Formular ein, um die Validierung auszuführen.
 
 #### <a name="layout"></a>Layout
 
-Sie steuern, <xref:System.Windows.Forms.ToolStrip> Layout durch Auswahl einer der Member der <xref:System.Windows.Forms.ToolStripLayoutStyle> mit der <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> Eigenschaft.
+Sie steuern <xref:System.Windows.Forms.ToolStrip> das Layout, indem Sie eines der Member <xref:System.Windows.Forms.ToolStripLayoutStyle> von mit <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> der-Eigenschaft auswählen.
 
-##### <a name="stack-layouts"></a>Stack-Layouts
+##### <a name="stack-layouts"></a>Stapel Layouts
 
-Stapeln wird das Anordnen der Elemente nebeneinander an beiden Enden der <xref:System.Windows.Forms.ToolStrip>. Die folgende Liste beschreibt die Stack-Layouts.
+Das Stapeln ist das Anordnen von Elementen an beiden Enden von <xref:System.Windows.Forms.ToolStrip>nebeneinander. In der folgenden Liste werden die Stapel Layouts beschrieben.
 
-- <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> Der Standardwert ist. Diese Einstellung bewirkt, dass die <xref:System.Windows.Forms.ToolStrip> sein Layout automatisch in Übereinstimmung mit der <xref:System.Windows.Forms.ToolStrip.Orientation%2A> Eigenschaft um Zieh- und zu verarbeiten.
+- <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow>der Standardwert ist. Diese Einstellung bewirkt, <xref:System.Windows.Forms.ToolStrip> dass das Layout automatisch in Übereinstimmung mit der <xref:System.Windows.Forms.ToolStrip.Orientation%2A> -Eigenschaft ändert, um Drag & amp; Andock Szenarios zu verarbeiten.
 
-- <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> Rendert die <xref:System.Windows.Forms.ToolStrip> Elemente nebeneinander vertikal.
+- <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow>Rendert <xref:System.Windows.Forms.ToolStrip> die Elemente nebeneinander nebeneinander.
 
-- <xref:System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow> Rendert die <xref:System.Windows.Forms.ToolStrip> horizontal nebeneinander Elemente.
+- <xref:System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow>Rendert <xref:System.Windows.Forms.ToolStrip> die Elemente nebeneinander nebeneinander.
 
-##### <a name="other-features-of-stack-layouts"></a>Andere Funktionen von Stapeln von Layouts
+##### <a name="other-features-of-stack-layouts"></a>Weitere Features von Stapel Layouts
 
-<xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Bestimmt das Ende der <xref:System.Windows.Forms.ToolStrip> an dem das Element ausgerichtet ist.
+<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>bestimmt das Ende der <xref:System.Windows.Forms.ToolStrip> , an die das Element ausgerichtet wird.
 
-Wenn Elemente nicht in passen die <xref:System.Windows.Forms.ToolStrip>, eine Schaltfläche "Überlauf" automatisch angezeigt wird. Die <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> eigenschafteneinstellung bestimmt, ob ein Element im Überlaufbereich stets, je nach Bedarf oder nie angezeigt wird.
+Wenn Elemente nicht in <xref:System.Windows.Forms.ToolStrip>passen, wird automatisch eine Überlauf Schaltfläche angezeigt. Die <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> -Eigenschafts Einstellung bestimmt, ob ein Element immer, bei Bedarf im Überlauf Bereich angezeigt wird, oder nie.
 
-In der <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> Ereignis können Sie überprüfen die <xref:System.Windows.Forms.ToolStripItem.Placement%2A> Eigenschaft, um zu bestimmen, ob ein Element, auf dem hauptblatt platziert wurde <xref:System.Windows.Forms.ToolStrip>, der Überlauf <xref:System.Windows.Forms.ToolStrip>, oder wenn Sie derzeit nicht angezeigt wird. Die typische Gründe, warum ein Element wird nicht angezeigt, werden, dass das Element nicht auf dem hauptblatt passen <xref:System.Windows.Forms.ToolStrip> und die zugehörige <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> -Eigenschaft wurde festgelegt, um <xref:System.Windows.Forms.ToolStripItemOverflow.Never>.
+Im- <xref:System.Windows.Forms.ToolStripItem.Placement%2A> <xref:System.Windows.Forms.ToolStrip>Ereignis können Sie die-Eigenschaft überprüfen, um zu bestimmen, ob ein Element auf dem Haupt- <xref:System.Windows.Forms.ToolStrip>, dem Überlauf oder derzeit überhaupt nicht angezeigt wird. <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> Der typische Grund, warum ein Element nicht angezeigt wird, ist, dass das Element nicht in den <xref:System.Windows.Forms.ToolStrip> Haupt- <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> und dessen-Eigenschaft <xref:System.Windows.Forms.ToolStripItemOverflow.Never>auf festgelegt wurde.
 
-Stellen eine <xref:System.Windows.Forms.ToolStrip> verschoben, wenn man diese Anwendungen einer <xref:System.Windows.Forms.ToolStripPanel> und seine <xref:System.Windows.Forms.ToolStrip.GripStyle%2A> zu <xref:System.Windows.Forms.ToolStripGripStyle.Visible>.
+Verschieben Sie <xref:System.Windows.Forms.ToolStrip> einen verschiebbaren Wert, <xref:System.Windows.Forms.ToolStripPanel> indem Sie ihn in <xref:System.Windows.Forms.ToolStripGripStyle.Visible>einem einfügen und dessen <xref:System.Windows.Forms.ToolStrip.GripStyle%2A> auf festlegen.
 
-##### <a name="other-layout-options"></a>Andere Optionen für Layout
+##### <a name="other-layout-options"></a>Weitere Layoutoptionen
 
-Die anderen Layoutoptionen sind <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> und <xref:System.Windows.Forms.ToolStripLayoutStyle.Table>.
+Die anderen Layoutoptionen <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> sind <xref:System.Windows.Forms.ToolStripLayoutStyle.Table>und.
 
 ##### <a name="flow-layout"></a>Flusslayout
 
-<xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> Layout ist die Standardeinstellung für <xref:System.Windows.Forms.ContextMenuStrip>, <xref:System.Windows.Forms.ToolStripDropDownMenu>, und <xref:System.Windows.Forms.ToolStripOverflow>. Es ähnelt der <xref:System.Windows.Forms.FlowLayoutPanel>. Die Funktionen von <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> Layout lauten wie folgt:
+<xref:System.Windows.Forms.ToolStripLayoutStyle.Flow>Layout ist die Standardeinstellung <xref:System.Windows.Forms.ContextMenuStrip>für <xref:System.Windows.Forms.ToolStripDropDownMenu>, und <xref:System.Windows.Forms.ToolStripOverflow>. Sie ähnelt dem <xref:System.Windows.Forms.FlowLayoutPanel>. Die Merkmale des <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> Layouts lauten wie folgt:
 
-- Alle Funktionen der <xref:System.Windows.Forms.FlowLayoutPanel> verfügbar gemacht werden die <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> Eigenschaft. Müssen Sie eine Umwandlung der <xref:System.Windows.Forms.LayoutSettings> -Klasse eine <xref:System.Windows.Forms.FlowLayoutSettings> Klasse.
+- Alle Funktionen von <xref:System.Windows.Forms.FlowLayoutPanel> werden von der <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> -Eigenschaft verfügbar gemacht. Sie müssen die <xref:System.Windows.Forms.LayoutSettings> Klasse in eine <xref:System.Windows.Forms.FlowLayoutSettings> Klasse umwandeln.
 
-- Sie können die <xref:System.Windows.Forms.ToolStripItem.Dock%2A> und <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> Eigenschaften im Code, um die Elemente in der Zeile ausgerichtet.
+- Sie können die <xref:System.Windows.Forms.ToolStripItem.Dock%2A> -Eigenschaft <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> und die-Eigenschaft im Code verwenden, um die Elemente in der Zeile auszurichten.
 
 - Die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>-Eigenschaft wird ignoriert.
 
-- In der <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> Ereignis können Sie überprüfen die <xref:System.Windows.Forms.ToolStripItem.Placement%2A> Eigenschaft, um zu bestimmen, ob ein Element, auf dem hauptblatt platziert wurde <xref:System.Windows.Forms.ToolStrip> oder nicht geeignet.
+- Im- <xref:System.Windows.Forms.ToolStripItem.Placement%2A> <xref:System.Windows.Forms.ToolStrip> Ereignis können Sie die-Eigenschaft überprüfen, um zu bestimmen, ob ein Element in den Haupt-oder nicht passt. <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>
 
-- Der Ziehpunkt wird nicht gerendert, und daher eine <xref:System.Windows.Forms.ToolStrip> in <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> Layoutstil in eine <xref:System.Windows.Forms.ToolStripPanel> kann nicht verschoben werden.
+- Der Ziehpunkt wird nicht gerendert, <xref:System.Windows.Forms.ToolStrip> daher <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> kann ein im Layoutstil in einem <xref:System.Windows.Forms.ToolStripPanel> nicht verschoben werden.
 
-- Die <xref:System.Windows.Forms.ToolStrip> dokumentüberlauf-Schaltfläche wird nicht gerendert, und <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> wird ignoriert.
+- Die <xref:System.Windows.Forms.ToolStrip> Überlauf Schaltfläche wird nicht gerendert und <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> wird ignoriert.
 
 ##### <a name="table-layout"></a>Tabellenlayout
 
-<xref:System.Windows.Forms.ToolStripLayoutStyle.Table> Layout ist die Standardeinstellung für <xref:System.Windows.Forms.StatusStrip>. Sie ähnelt damit <xref:System.Windows.Forms.TableLayoutPanel>. Die Funktionen von <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> Layout lauten wie folgt:
+<xref:System.Windows.Forms.ToolStripLayoutStyle.Table>Layout ist die Standardeinstellung <xref:System.Windows.Forms.StatusStrip>für. Dies ist vergleichbar mit <xref:System.Windows.Forms.TableLayoutPanel>. Die Merkmale des <xref:System.Windows.Forms.ToolStripLayoutStyle.Flow> Layouts lauten wie folgt:
 
-- Alle Funktionen der <xref:System.Windows.Forms.TableLayoutPanel> verfügbar gemacht werden die <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> Eigenschaft. Müssen Sie eine Umwandlung der <xref:System.Windows.Forms.LayoutSettings> -Klasse eine <xref:System.Windows.Forms.TableLayoutSettings> Klasse.
+- Alle Funktionen von <xref:System.Windows.Forms.TableLayoutPanel> werden von der <xref:System.Windows.Forms.ToolStrip.LayoutSettings%2A> -Eigenschaft verfügbar gemacht. Sie müssen die <xref:System.Windows.Forms.LayoutSettings> Klasse in eine <xref:System.Windows.Forms.TableLayoutSettings> Klasse umwandeln.
 
-- Sie können die <xref:System.Windows.Forms.ToolStripItem.Dock%2A> und <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> Eigenschaften im Code, um die Elemente in der Tabellenzelle ausrichten.
+- Sie können die <xref:System.Windows.Forms.ToolStripItem.Dock%2A> -Eigenschaft <xref:System.Windows.Forms.ToolStripItem.Anchor%2A> und die-Eigenschaft im Code verwenden, um die Elemente in der Tabellenzelle auszurichten.
 
 - Die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A>-Eigenschaft wird ignoriert.
 
-- In der <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> Ereignis können Sie überprüfen die <xref:System.Windows.Forms.ToolStripItem.Placement%2A> Eigenschaft, um zu bestimmen, ob ein Element, auf dem hauptblatt platziert wurde <xref:System.Windows.Forms.ToolStrip> oder nicht geeignet.
+- Im- <xref:System.Windows.Forms.ToolStripItem.Placement%2A> <xref:System.Windows.Forms.ToolStrip> Ereignis können Sie die-Eigenschaft überprüfen, um zu bestimmen, ob ein Element in den Haupt-oder nicht passt. <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>
 
-- Der Ziehpunkt wird nicht gerendert, und daher eine <xref:System.Windows.Forms.ToolStrip> in <xref:System.Windows.Forms.ToolStripLayoutStyle.Table> Layoutstil in eine <xref:System.Windows.Forms.ToolStripPanel> kann nicht verschoben werden.
+- Der Ziehpunkt wird nicht gerendert, <xref:System.Windows.Forms.ToolStrip> daher <xref:System.Windows.Forms.ToolStripLayoutStyle.Table> kann ein im Layoutstil in einem <xref:System.Windows.Forms.ToolStripPanel> nicht verschoben werden.
 
-- Die <xref:System.Windows.Forms.ToolStrip> dokumentüberlauf-Schaltfläche wird nicht gerendert, und <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> wird ignoriert.
+- Die <xref:System.Windows.Forms.ToolStrip> Überlauf Schaltfläche wird nicht gerendert und <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> wird ignoriert.
 
 ## <a name="toolstripitem"></a>ToolStripItem
 
-Die folgenden Themen beschreiben <xref:System.Windows.Forms.ToolStripItem> und die Steuerelemente, die von ihr abgeleitet werden.
+In den folgenden Themen <xref:System.Windows.Forms.ToolStripItem> werden und die Steuerelemente beschrieben, die davon abgeleitet sind.
 
-<xref:System.Windows.Forms.ToolStripItem> ist die abstrakte Basisklasse für alle Elemente, die näher betrachten einen <xref:System.Windows.Forms.ToolStrip>. Das folgende Objekt Modell zeigt das <xref:System.Windows.Forms.ToolStripItem> Vererbungshierarchie.
+<xref:System.Windows.Forms.ToolStripItem>ist die abstrakte Basisklasse für alle Elemente, die in ein <xref:System.Windows.Forms.ToolStrip>-Element gelangen. Das folgende Objektmodell zeigt die <xref:System.Windows.Forms.ToolStripItem> Vererbungs Hierarchie.
 
-![Diagramm das ToolStripItem-Objektmodell zeigt.](./media/toolstrip-control-architecture/toolstripitem-object-model.gif)
+![Diagramm, das das ToolStripItem-Objektmodell zeigt.](./media/toolstrip-control-architecture/toolstripitem-object-model.gif)
 
-<xref:System.Windows.Forms.ToolStripItem> Klassen, die entweder direkt von erben <xref:System.Windows.Forms.ToolStripItem>, oder indirekt von <xref:System.Windows.Forms.ToolStripItem> über <xref:System.Windows.Forms.ToolStripControlHost> oder <xref:System.Windows.Forms.ToolStripDropDownItem>.
+<xref:System.Windows.Forms.ToolStripItem>Klassen erben entweder direkt von <xref:System.Windows.Forms.ToolStripItem>, oder Sie erben indirekt von <xref:System.Windows.Forms.ToolStripItem> durch <xref:System.Windows.Forms.ToolStripControlHost> oder <xref:System.Windows.Forms.ToolStripDropDownItem>.
 
-<xref:System.Windows.Forms.ToolStripItem> Steuerelemente müssen enthalten sein, einem <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, oder <xref:System.Windows.Forms.ContextMenuStrip> und kann nicht direkt zu einem Formular hinzugefügt werden. Die verschiedenen Containerklassen enthalten eine geeignete Teilmenge von <xref:System.Windows.Forms.ToolStripItem> Steuerelemente.
+<xref:System.Windows.Forms.ToolStripItem>Steuerelemente müssen <xref:System.Windows.Forms.ToolStrip>in, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>oder <xref:System.Windows.Forms.ContextMenuStrip> enthalten sein und können nicht direkt zu einem Formular hinzugefügt werden. Die verschiedenen Containerklassen sind so konzipiert, dass Sie eine geeignete Teilmenge der <xref:System.Windows.Forms.ToolStripItem> Steuerelemente enthalten.
 
-Die folgende Tabelle enthält die Aktie <xref:System.Windows.Forms.ToolStripItem> Steuerelemente und die Container, in dem sie am besten aussehen. Obwohl alle <xref:System.Windows.Forms.ToolStrip> Element gehostet werden kann, in einem <xref:System.Windows.Forms.ToolStrip>-abgeleiteten Container diese Elemente wurden entworfen, um die beste, in den folgenden Containern suchen:
+In der folgenden Tabelle sind die <xref:System.Windows.Forms.ToolStripItem> Aktien Steuerelemente und die Container aufgeführt, in denen Sie am besten aussehen. Obwohl ein <xref:System.Windows.Forms.ToolStrip> beliebiges Element in einem beliebigen <xref:System.Windows.Forms.ToolStrip>von abgeleiteten Container gehostet werden kann, wurden diese Elemente so entworfen, dass Sie am besten in den folgenden Containern aussehen:
 
 > [!NOTE]
-> <xref:System.Windows.Forms.ToolStripDropDown> wird in der Designer-Toolbox nicht angezeigt.
+> <xref:System.Windows.Forms.ToolStripDropDown>wird nicht in der Designer-Toolbox angezeigt.
 
-|Enthaltene Element|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|
+|Enthaltenes Element|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|
 |<xref:System.Windows.Forms.ToolStripButton>|Ja|Nein|Nein|Nein|Ja|
 |<xref:System.Windows.Forms.ToolStripComboBox>|Ja|Ja|Ja|Nein|Ja|
@@ -301,123 +301,123 @@ Die folgende Tabelle enthält die Aktie <xref:System.Windows.Forms.ToolStripItem
 
 ### <a name="toolstripbutton"></a>ToolStripButton
 
-<xref:System.Windows.Forms.ToolStripButton> ist das Schaltflächenelement für <xref:System.Windows.Forms.ToolStrip>. Sie können mit verschiedenen Rahmenarten anzeigen, und können Sie sie zum darstellen und Betriebszustände aktivieren. Sie können auch definieren, um standardmäßig den Fokus haben.
+<xref:System.Windows.Forms.ToolStripButton>ist das Schaltflächen Element <xref:System.Windows.Forms.ToolStrip>für. Sie können Sie mit verschiedenen Rahmen Formaten anzeigen, und Sie können Sie verwenden, um Betriebszustände darzustellen und zu aktivieren. Sie können auch festlegen, dass der Fokus standardmäßig festgelegt wird.
 
 ### <a name="toolstriplabel"></a>ToolStripLabel
 
-Die <xref:System.Windows.Forms.ToolStripLabel> Bezeichnung ist der Funktionsumfang in <xref:System.Windows.Forms.ToolStrip> Steuerelemente. Die <xref:System.Windows.Forms.ToolStripLabel> ähnelt einem <xref:System.Windows.Forms.ToolStripButton> , die Fokus standardmäßig keine ab und, die nicht als mithilfe von Push übertragene oder ausgewählte gerendert.
+Bietet Bezeichnungs Funktionen in <xref:System.Windows.Forms.ToolStrip> -Steuerelementen. <xref:System.Windows.Forms.ToolStripLabel> Das <xref:System.Windows.Forms.ToolStripLabel> -ist wie <xref:System.Windows.Forms.ToolStripButton> ein, das nicht standardmäßig den Fokus erhält und nicht als per pushübertragung oder hervorgehoben dargestellt wird.
 
-<xref:System.Windows.Forms.ToolStripLabel> unterstützt als gehostetes Element Zugriffsschlüssel ein.
+<xref:System.Windows.Forms.ToolStripLabel>als gehostete Elemente unterstützt Zugriffsschlüssel.
 
-Verwenden der <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>, und <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> Eigenschaften für eine <xref:System.Windows.Forms.ToolStripLabel> zur Unterstützung von Link-Steuerelement in einem <xref:System.Windows.Forms.ToolStrip>.
+Verwenden Sie <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>die <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>Eigenschaften, <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> und in einem <xref:System.Windows.Forms.ToolStripLabel> , um das Link Steuerelement <xref:System.Windows.Forms.ToolStrip>in einem zu unterstützen.
 
 ### <a name="toolstripstatuslabel"></a>ToolStripStatusLabel
 
-<xref:System.Windows.Forms.ToolStripStatusLabel> ist eine Version von <xref:System.Windows.Forms.ToolStripLabel> entwickelt, die speziell zur Verwendung in <xref:System.Windows.Forms.StatusStrip>. Besondere Features umfassen <xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>, <xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>, und <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>.
+<xref:System.Windows.Forms.ToolStripStatusLabel>ist eine Version von <xref:System.Windows.Forms.ToolStripLabel> , die speziell für die <xref:System.Windows.Forms.StatusStrip>Verwendung in entworfen wurde. Zu den besonderen Features <xref:System.Windows.Forms.ToolStripStatusLabel.BorderStyle%2A>zählen <xref:System.Windows.Forms.ToolStripStatusLabel.BorderSides%2A>, und <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>.
 
 ### <a name="toolstripseparator"></a>ToolStripSeparator
 
-Die <xref:System.Windows.Forms.ToolStripSeparator> Fügt eine vertikale oder horizontale Linie zu einer Symbolleiste oder im Menü, je nach Ausrichtung. Mit dieser Lösung Gruppierung oder Unterschied zwischen den Elementen, z. B. in einem Menü.
+Der <xref:System.Windows.Forms.ToolStripSeparator> fügt einer Symbolleiste oder einem Menü abhängig von der Ausrichtung eine vertikale oder horizontale Linie hinzu. Sie ermöglicht das Gruppieren von oder unterschieden zwischen Elementen, z. b. in einem Menü.
 
-Sie können Hinzufügen einer <xref:System.Windows.Forms.ToolStripSeparator> zur Entwurfszeit durch Auswahl in einem Dropdown-Liste. Sie können jedoch auch automatisch erstellen eine <xref:System.Windows.Forms.ToolStripSeparator> durch Eingabe eines Bindestrichs (-) in den Designer Vorlagenknoten oder in der <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> Methode.
+Sie können ein <xref:System.Windows.Forms.ToolStripSeparator> zur Entwurfszeit hinzufügen, indem Sie es in einer Dropdown Liste auswählen. Sie können jedoch auch automatisch erstellen <xref:System.Windows.Forms.ToolStripSeparator> , indem Sie einen Bindestrich (-) entweder im Designer-Vorlagen Knoten oder in der <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> -Methode eingeben.
 
 ### <a name="toolstripcontrolhost"></a>ToolStripControlHost
 
-<xref:System.Windows.Forms.ToolStripControlHost> ist die abstrakte Basisklasse für <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>, und <xref:System.Windows.Forms.ToolStripProgressBar>. <xref:System.Windows.Forms.ToolStripControlHost> können andere Steuerelemente, einschließlich benutzerdefinierter Steuerelemente, auf zwei Arten hosten:
+<xref:System.Windows.Forms.ToolStripControlHost>ist die abstrakte Basisklasse für <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox>und <xref:System.Windows.Forms.ToolStripProgressBar>. <xref:System.Windows.Forms.ToolStripControlHost>kann andere Steuerelemente, einschließlich benutzerdefinierter Steuerelemente, auf zwei Arten hosten:
 
-- Erstellen einer <xref:System.Windows.Forms.ToolStripControlHost> mit eine abgeleitete Klasse <xref:System.Windows.Forms.Control>. Um das gehostete Steuerelement und Eigenschaften vollständig zugreifen zu können, müssen Sie eine Umwandlung der <xref:System.Windows.Forms.ToolStripControlHost.Control%2A> Eigenschaft, um die tatsächliche Klasse darstellt.
+- Erstellen Sie <xref:System.Windows.Forms.ToolStripControlHost> eine mit einer Klasse, die <xref:System.Windows.Forms.Control>von abgeleitet wird. Um vollständigen Zugriff auf das gehostete Steuerelement und die Eigenschaften <xref:System.Windows.Forms.ToolStripControlHost.Control%2A> zu erhalten, müssen Sie die Eigenschaft wieder in die tatsächliche Klasse umwandeln, die Sie repräsentiert
 
-- Erweitern Sie <xref:System.Windows.Forms.ToolStripControlHost>, und rufen Sie in der geerbten Klasse den Standardkonstruktor, den Konstruktor der Basisklasse übergeben eine abgeleitete Klasse <xref:System.Windows.Forms.Control>. Mit dieser Option können Sie das allgemeine Steuerelementmethoden und Eigenschaften für den leichteren Zugriff im umschließen einer <xref:System.Windows.Forms.ToolStrip>.
+- Erweitern <xref:System.Windows.Forms.ToolStripControlHost>Sie und im Parameter losen Konstruktor der geerbten Klasse den Basisklassenkonstruktor, und übergeben Sie eine Klasse, <xref:System.Windows.Forms.Control>die von abgeleitet wird. Mit dieser Option können Sie allgemeine Steuerelement Methoden und-Eigenschaften für den einfachen <xref:System.Windows.Forms.ToolStrip>Zugriff in einem einschließen.
 
 ### <a name="toolstripcombobox"></a>ToolStripComboBox
 
-<xref:System.Windows.Forms.ToolStripComboBox> ist die <xref:System.Windows.Forms.ComboBox> optimiert, für das Hosten in einem <xref:System.Windows.Forms.ToolStrip>. Eine Teilmenge der Eigenschaften und Ereignisse des gehosteten Steuerelements werden verfügbar gemacht, an die <xref:System.Windows.Forms.ToolStripComboBox> Ebene, aber die zugrunde liegende <xref:System.Windows.Forms.ComboBox> Steuerelement ist vollständig zugegriffen werden kann, über die <xref:System.Windows.Forms.ToolStripComboBox.ComboBox%2A> Eigenschaft.
+<xref:System.Windows.Forms.ToolStripComboBox>ist das <xref:System.Windows.Forms.ComboBox> für das Hosting in einem <xref:System.Windows.Forms.ToolStrip>optimierte. Eine Teilmenge der Eigenschaften und Ereignisse des gehosteten Steuer Elements wird auf der <xref:System.Windows.Forms.ToolStripComboBox> -Ebene verfügbar gemacht, <xref:System.Windows.Forms.ComboBox> aber auf das zugrunde liegende Steuer <xref:System.Windows.Forms.ToolStripComboBox.ComboBox%2A> Element kann über die-Eigenschaft vollständig zugegriffen werden.
 
 ### <a name="toolstriptextbox"></a>ToolStripTextBox
 
-<xref:System.Windows.Forms.ToolStripTextBox> ist die <xref:System.Windows.Forms.TextBox> optimiert, für das Hosten in einem <xref:System.Windows.Forms.ToolStrip>. Eine Teilmenge der Eigenschaften und Ereignisse des gehosteten Steuerelements werden verfügbar gemacht, an die <xref:System.Windows.Forms.ToolStripTextBox> Ebene, aber die zugrunde liegende <xref:System.Windows.Forms.TextBox> Steuerelement ist vollständig zugegriffen werden kann, über die <xref:System.Windows.Forms.ToolStripTextBox.TextBox%2A> Eigenschaft.
+<xref:System.Windows.Forms.ToolStripTextBox>ist das <xref:System.Windows.Forms.TextBox> für das Hosting in einem <xref:System.Windows.Forms.ToolStrip>optimierte. Eine Teilmenge der Eigenschaften und Ereignisse des gehosteten Steuer Elements wird auf der <xref:System.Windows.Forms.ToolStripTextBox> -Ebene verfügbar gemacht, <xref:System.Windows.Forms.TextBox> aber auf das zugrunde liegende Steuer <xref:System.Windows.Forms.ToolStripTextBox.TextBox%2A> Element kann über die-Eigenschaft vollständig zugegriffen werden.
 
 ### <a name="toolstripprogressbar"></a>ToolStripProgressBar
 
-<xref:System.Windows.Forms.ToolStripProgressBar> ist die <xref:System.Windows.Forms.ProgressBar> optimiert, für das Hosten in einem <xref:System.Windows.Forms.ToolStrip>. Eine Teilmenge der Eigenschaften und Ereignisse des gehosteten Steuerelements werden verfügbar gemacht, an die <xref:System.Windows.Forms.ToolStripProgressBar> Ebene, aber die zugrunde liegende <xref:System.Windows.Forms.ProgressBar> Steuerelement ist vollständig zugegriffen werden kann, über die <xref:System.Windows.Forms.ToolStripProgressBar.ProgressBar%2A> Eigenschaft.
+<xref:System.Windows.Forms.ToolStripProgressBar>ist das <xref:System.Windows.Forms.ProgressBar> für das Hosting in einem <xref:System.Windows.Forms.ToolStrip>optimierte. Eine Teilmenge der Eigenschaften und Ereignisse des gehosteten Steuer Elements wird auf der <xref:System.Windows.Forms.ToolStripProgressBar> -Ebene verfügbar gemacht, <xref:System.Windows.Forms.ProgressBar> aber auf das zugrunde liegende Steuer <xref:System.Windows.Forms.ToolStripProgressBar.ProgressBar%2A> Element kann über die-Eigenschaft vollständig zugegriffen werden.
 
 ### <a name="toolstripdropdownitem"></a>ToolStripDropDownItem
 
-<xref:System.Windows.Forms.ToolStripDropDownItem> ist die abstrakte Basisklasse für <xref:System.Windows.Forms.ToolStripMenuItem>, <xref:System.Windows.Forms.ToolStripDropDownButton>, und <xref:System.Windows.Forms.ToolStripSplitButton>, die können Elemente direkt hosten oder zusätzliche Elemente in einem Dropdown--Container hostet. Diesem Zweck legen die <xref:System.Windows.Forms.ToolStripDropDownItem.DropDown%2A> Eigenschaft, um eine <xref:System.Windows.Forms.ToolStripDropDown> und Einstellung der <xref:System.Windows.Forms.ToolStrip.Items%2A> Eigenschaft der <xref:System.Windows.Forms.ToolStripDropDown>. Zugriff auf diese Dropdown-Elemente, die direkt über die <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> Eigenschaft.
+<xref:System.Windows.Forms.ToolStripDropDownItem>ist die abstrakte Basisklasse für <xref:System.Windows.Forms.ToolStripMenuItem>, <xref:System.Windows.Forms.ToolStripDropDownButton>und <xref:System.Windows.Forms.ToolStripSplitButton>, die Elemente direkt hosten oder zusätzliche Elemente in einem Dropdown Container hosten kann. <xref:System.Windows.Forms.ToolStripDropDownItem.DropDown%2A> Hierzu legen Sie die <xref:System.Windows.Forms.ToolStripDropDown> -Eigenschaft auf fest und legen die <xref:System.Windows.Forms.ToolStrip.Items%2A> -Eigenschaft von <xref:System.Windows.Forms.ToolStripDropDown>fest. Greifen Sie direkt über die <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> -Eigenschaft auf diese Dropdown Elemente zu.
 
 ### <a name="toolstripmenuitem"></a>ToolStripMenuItem
 
-<xref:System.Windows.Forms.ToolStripMenuItem> ist eine <xref:System.Windows.Forms.ToolStripDropDownItem> dieses Produkt funktioniert mit <xref:System.Windows.Forms.ToolStripDropDownMenu> und <xref:System.Windows.Forms.ContextMenuStrip> die besondere Hervorhebung, Layout und Spalte Anordnung für Menüs zu behandeln.
+<xref:System.Windows.Forms.ToolStripMenuItem>ist eine <xref:System.Windows.Forms.ToolStripDropDownItem> , die mit <xref:System.Windows.Forms.ToolStripDropDownMenu> und <xref:System.Windows.Forms.ContextMenuStrip> verwendet wird, um die besondere Hervorhebung, das Layout und die Spalten Anordnung für Menüs zu verarbeiten.
 
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton
 
-<xref:System.Windows.Forms.ToolStripDropDownButton> sieht wie <xref:System.Windows.Forms.ToolStripButton>, aber es zeigt einen Dropdownbereich, wenn der Benutzer darauf klickt. Ein- oder Ausblenden der Dropdown-Pfeil durch Festlegen der <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> Eigenschaft. <xref:System.Windows.Forms.ToolStripDropDownButton> hostet eine <xref:System.Windows.Forms.ToolStripOverflowButton> , die Elemente angezeigt, die overflow der <xref:System.Windows.Forms.ToolStrip>.
+<xref:System.Windows.Forms.ToolStripDropDownButton>sieht wie <xref:System.Windows.Forms.ToolStripButton>aus, aber es wird ein Dropdown Bereich angezeigt, wenn der Benutzer darauf klickt. Blenden Sie den Dropdown Pfeil durch Festlegen der <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> -Eigenschaft aus, oder zeigen Sie ihn an. <xref:System.Windows.Forms.ToolStripDropDownButton>hostet <xref:System.Windows.Forms.ToolStripOverflowButton> einen, der Elemente anzeigt, <xref:System.Windows.Forms.ToolStrip>die überlaufen.
 
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton
 
-<xref:System.Windows.Forms.ToolStripSplitButton> kombiniert die Schaltfläche und Funktionalität der Dropdown-Schaltfläche.
+<xref:System.Windows.Forms.ToolStripSplitButton>kombiniert Schaltfläche und Dropdown-Schaltflächen Funktionalität.
 
-Verwenden der <xref:System.Windows.Forms.ToolStripSplitButton.DefaultItem%2A> Eigenschaft zum Synchronisieren der <xref:System.Windows.Forms.Control.Click> Ereignis des ausgewählten Dropdown-Elements mit dem Element, auf die Schaltfläche angezeigt.
+Verwenden Sie <xref:System.Windows.Forms.ToolStripSplitButton.DefaultItem%2A> die-Eigenschaft, <xref:System.Windows.Forms.Control.Click> um das-Ereignis des ausgewählten Dropdown Elements mit dem Element zu synchronisieren, das auf der Schaltfläche angezeigt wird.
 
-### <a name="toolstripitem-generic-features"></a>ToolStripItem-generische Funktionen
+### <a name="toolstripitem-generic-features"></a>Generische Features von ToolStripItem
 
-<xref:System.Windows.Forms.ToolStripItem> bietet die folgenden allgemeinen Features und Optionen für erbende Steuerelemente:
+<xref:System.Windows.Forms.ToolStripItem>bietet die folgenden allgemeinen Features und Optionen zum Erben von Steuerelementen:
 
 - Core-Ereignisse
 
-- Handhabung von Images
+- Bildverarbeitung
 
 - Ausrichtung
 
-- Die Beziehung zwischen Text und Bild
+- Text-und Bild Beziehung
 
-- Anzeigestil
+- Anzeige Stil
 
 #### <a name="core-events"></a>Core-Ereignisse
 
-<xref:System.Windows.Forms.ToolStripItem> Steuerelemente erhalten ihre eigenen klicken, Maus und Paint-Ereignisse und können einige vorverarbeitung auch Tastatur ausführen.
+<xref:System.Windows.Forms.ToolStripItem>Steuerelemente empfangen eigene Click-, Maus-und Zeichnungs Ereignisse und können auch eine bestimmte Tastatur Vorverarbeitung durchführen.
 
-#### <a name="image-handling"></a>Handhabung von Images
+#### <a name="image-handling"></a>Bildverarbeitung
 
-Die <xref:System.Windows.Forms.ToolStripItem.Image%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageIndex%2A>, <xref:System.Windows.Forms.ToolStripItem.ImageKey%2A>, und <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> Eigenschaften beziehen sich auf verschiedene Aspekte der Bildbehandlung. Verwenden von Bildern in <xref:System.Windows.Forms.ToolStrip> Steuerelemente durch Festlegen dieser Eigenschaften direkt oder durch Festlegen der Ausführung nur zur Laufzeit <xref:System.Windows.Forms.ToolStrip.ImageList%2A> Eigenschaft.
+Die <xref:System.Windows.Forms.ToolStripItem.Image%2A>Eigenschaften <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>, ,<xref:System.Windows.Forms.ToolStripItem.ImageIndex%2A> ,<xref:System.Windows.Forms.ToolStripItem.ImageKey%2A>und beziehen<xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> sich auf verschiedene Aspekte der Bildverarbeitung. Verwenden Sie Bilder <xref:System.Windows.Forms.ToolStrip> in Steuerelementen, indem Sie diese Eigenschaften direkt oder durch Festlegen der Eigenschaft Lauf <xref:System.Windows.Forms.ToolStrip.ImageList%2A> Zeit – only festlegen.
 
-Bildskalierung richtet sich nach die Interaktion der Eigenschaften, die in beiden <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStripItem>wie folgt:
+Die Bildskalierung wird durch die Interaktion von Eigenschaften sowohl <xref:System.Windows.Forms.ToolStrip> in <xref:System.Windows.Forms.ToolStripItem>als auch in festgelegt, wie im folgenden dargestellt:
 
-- <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A> die Dezimalstellen des das endgültige Bild wie festgelegt durch die Kombination des Bilds <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> Einstellung und des Containers <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> festlegen.
+- <xref:System.Windows.Forms.ToolStrip.ImageScalingSize%2A>die Skala des endgültigen Bilds, wie durch die Kombination der Image- <xref:System.Windows.Forms.ToolStripItem.ImageScaling%2A> Einstellung und der <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> Einstellung des Containers bestimmt.
 
-  - Wenn <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> ist `true` (Standard) und <xref:System.Windows.Forms.ToolStripItemImageScaling> ist <xref:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit>, keine Bildskalierung, und die <xref:System.Windows.Forms.ToolStrip> Größe ist, das größte Element oder eine vorgegebene Mindestgröße.
+  - Wenn <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> ( `true` der Standardwert) ist <xref:System.Windows.Forms.ToolStripItemImageScaling> und <xref:System.Windows.Forms.ToolStripItemImageScaling.SizeToFit>ist, wird keine Bildskalierung durch <xref:System.Windows.Forms.ToolStrip> geführt, und die Größe entspricht dem größten Element oder einer vorgeschriebenen Mindestgröße.
 
-  - Wenn <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> ist `false` und <xref:System.Windows.Forms.ToolStripItemImageScaling> ist <xref:System.Windows.Forms.ToolStripItemImageScaling.None>, weder das Bild noch <xref:System.Windows.Forms.ToolStrip> Skalierung erfolgt.
+  - Wenn <xref:System.Windows.Forms.ToolStrip.AutoSize%2A> ist `false` und <xref:System.Windows.Forms.ToolStripItemImageScaling> <xref:System.Windows.Forms.ToolStrip> den Wert hat,erfolgtwedereinBildnocheineSkalierung.<xref:System.Windows.Forms.ToolStripItemImageScaling.None>
 
 #### <a name="alignment"></a>Ausrichtung
 
-Der Wert des der <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> -Eigenschaft bestimmt das Ende der <xref:System.Windows.Forms.ToolStrip> an der ein Element erscheint. Die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Eigenschaft funktioniert nur, wenn den Layoutstil eines der <xref:System.Windows.Forms.ToolStrip> auf einen der Stack Overflow-Werte festgelegt ist.
+Der Wert <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> der-Eigenschaft bestimmt das Ende <xref:System.Windows.Forms.ToolStrip> der, an der ein Element angezeigt wird. Die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> -Eigenschaft kann nur verwendet werden, wenn die <xref:System.Windows.Forms.ToolStrip> layoutart des auf einen der Stapelüberlauf Werte festgelegt ist.
 
-Elemente befinden sich auf die <xref:System.Windows.Forms.ToolStrip> in der Reihenfolge, in dem die Elemente angezeigt, in der Items-Auflistung werden. Um programmgesteuert zu ändern, in dem ein Element angeordnet wird, verwenden Sie die <xref:System.Windows.Forms.ToolStripItemCollection.Insert%2A> Methode, um das Element in der Auflistung verschoben werden. Diese Methode verschiebt das Element aber nicht dupliziert werden.
+Elemente werden in der Reihen <xref:System.Windows.Forms.ToolStrip> Folge platziert, in der die Elemente in der Items-Auflistung angezeigt werden. Um die Position eines Elements Programm gesteuert zu ändern, verwenden Sie die <xref:System.Windows.Forms.ToolStripItemCollection.Insert%2A> -Methode, um das Element in der Auflistung zu verschieben. Mit dieser Methode wird das Element verschoben, aber nicht dupliziert.
 
-#### <a name="text-and-image-relationship"></a>Text- und Image-Beziehung
+#### <a name="text-and-image-relationship"></a>Text-und Bild Beziehung
 
-Die <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> -Eigenschaft definiert die relative Platzierung des Bilds in Bezug auf den Text auf einer <xref:System.Windows.Forms.ToolStripItem>. Elemente, die ein Bild, Text oder beide fehlen, werden als besondere Fälle behandelt, damit die <xref:System.Windows.Forms.ToolStripItem> einen leeren Bereich für die fehlt ein Element oder Elemente nicht angezeigt.
+Die <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> -Eigenschaft definiert die relative Platzierung des Bilds in Bezug auf den Text auf <xref:System.Windows.Forms.ToolStripItem>einem. Elemente, die nicht über ein Bild, Text oder beides verfügen, werden als Sonderfälle behandelt <xref:System.Windows.Forms.ToolStripItem> , sodass für das fehlende Element oder die fehlenden Elemente keine leere Stelle anzeigt.
 
-#### <a name="display-style"></a>Anzeigestil
+#### <a name="display-style"></a>Anzeige Stil
 
-<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> können Sie anzeigen, wie Sie möchten die Werte von Text- und Image-Eigenschaften eines Elements festgelegt. Dies wird normalerweise verwendet, um nur das Anzeigeformat zu ändern, wenn das gleiche Element in einem anderen Kontext angezeigt.
+<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>ermöglicht das Festlegen der Werte für die Text-und Bildeigenschaften eines Elements, während nur die gewünschten Elemente angezeigt werden. Dies wird normalerweise verwendet, um nur den Anzeige Stil zu ändern, wenn das gleiche Element in einem anderen Kontext angezeigt wird.
 
-## <a name="accessory-classes"></a>Zusätzliche Klassen
+## <a name="accessory-classes"></a>Zubehör Klassen
 
-Klassen, die verschiedene andere Funktionen zählen:
+Zu den Klassen, die verschiedene andere Funktionen bieten, gehören:
 
-- <xref:System.Windows.Forms.ToolStripManager> unterstützt <xref:System.Windows.Forms.ToolStrip>-Aufgaben für die gesamte Anwendungen, z. B. zusammenführen, Einstellungen und die Renderer.
+- <xref:System.Windows.Forms.ToolStripManager>unter <xref:System.Windows.Forms.ToolStrip>stützt-bezogene Aufgaben für ganze Anwendungen, wie z. b. Zusammenführung, Einstellungen und rendereroptionen.
 
-- <xref:System.Windows.Forms.ToolStripRenderer> können Sie einen bestimmten Stil oder eine Design anwenden einer <xref:System.Windows.Forms.ToolStrip> ganz einfach.
+- <xref:System.Windows.Forms.ToolStripRenderer>ermöglicht es Ihnen, ein bestimmtes Format oder Design auf <xref:System.Windows.Forms.ToolStrip> einfache Weise zu verwenden.
 
-- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> erstellt Stifte und Pinsel auf Grundlage einer austauschbaren Farbtabelle (<xref:System.Windows.Forms.ProfessionalColorTable>).
+- <xref:System.Windows.Forms.ToolStripProfessionalRenderer>erstellt Stifte und Pinsel auf der Grundlage einer ersetzbaren Farb<xref:System.Windows.Forms.ProfessionalColorTable>Tabelle ().
 
-- <xref:System.Windows.Forms.ToolStripSystemRenderer> Wendet Systemfarben und einem flachen visuellen Stil zu <xref:System.Windows.Forms.ToolStrip> Anwendungen.
+- <xref:System.Windows.Forms.ToolStripSystemRenderer>wendet Systemfarben und einen flachen visuellen Stil auf <xref:System.Windows.Forms.ToolStrip> Anwendungen an.
 
-- <xref:System.Windows.Forms.ToolStripContainer> ist vergleichbar mit <xref:System.Windows.Forms.SplitContainer>. Er verwendet die vier Bereiche der angedockten Seite (Instanzen von <xref:System.Windows.Forms.ToolStripPanel>) und einen zentralen Bereich (eine Instanz von <xref:System.Windows.Forms.ToolStripContentPanel>) um eine typische Anordnung zu erstellen. Die Seite Bereiche können nicht entfernt werden, jedoch können Sie sie ausblenden. Sie können weder entfernen noch den zentralen Bereich ausblenden. Sie können eine oder mehrere anordnen <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, oder <xref:System.Windows.Forms.StatusStrip> Steuerelemente in den Seitenbereichen, und Sie können den zentralen Bereich für andere Steuerelemente verwenden. Die <xref:System.Windows.Forms.ToolStripContentPanel> bietet auch eine Möglichkeit, renderunterstützung in den Text des Formulars für ein konsistentes Erscheinungsbild zu erhalten. <xref:System.Windows.Forms.ToolStripContainer> mehrfachen Dokumentschnittstelle (MDI) unterstützt nicht.
+- <xref:System.Windows.Forms.ToolStripContainer>ähnelt <xref:System.Windows.Forms.SplitContainer>. Er verwendet vier angedockte Seitenbereiche (Instanzen <xref:System.Windows.Forms.ToolStripPanel>von) und einen zentralen Bereich (eine Instanz <xref:System.Windows.Forms.ToolStripContentPanel>von), um eine typische Anordnung zu erstellen. Sie können die Seitenbereiche nicht entfernen, aber Sie können Sie ausblenden. Sie können den zentralen Bereich weder entfernen noch ausblenden. Sie können ein oder mehrere <xref:System.Windows.Forms.ToolStrip> <xref:System.Windows.Forms.MenuStrip>Steuerelemente, oder <xref:System.Windows.Forms.StatusStrip> in den Seiten Bereichen anordnen, und Sie können den zentralen Bereich für andere Steuerelemente verwenden. Bietet <xref:System.Windows.Forms.ToolStripContentPanel> auch eine Möglichkeit, rendererunterstützung für eine konsistente Darstellung in den Hauptteil Ihres Formulars zu bringen. <xref:System.Windows.Forms.ToolStripContainer>bietet keine Unterstützung für Multiple Document Interface (MDI).
 
-- <xref:System.Windows.Forms.ToolStripPanel> Dient zum Verschieben und Anordnen von <xref:System.Windows.Forms.ToolStrip> Steuerelemente. Sie können nur einen Bereich verwenden, wenn Sie möchten, und <xref:System.Windows.Forms.ToolStripPanel> funktioniert gut in MDI-Szenarien.
+- <xref:System.Windows.Forms.ToolStripPanel>bietet Platz zum Verschieben und anordnen <xref:System.Windows.Forms.ToolStrip> von Steuerelementen. Sie können nur einen Panel verwenden, wenn Sie dies auswählen, <xref:System.Windows.Forms.ToolStripPanel> und in MDI-Szenarien gut funktionieren.
 
 ## <a name="see-also"></a>Siehe auch
 

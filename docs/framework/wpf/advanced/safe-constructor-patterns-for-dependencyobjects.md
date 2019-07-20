@@ -6,19 +6,19 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9dffe06d340c7256ba8af687e30d90d51746ebe1
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053508"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364247"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Sichere Konstruktormuster für DependencyObjects
-Im Allgemeinen sollten Klassenkonstruktoren Rückrufe wie virtuelle Methoden oder Delegaten nicht aufrufen, da Konstruktoren als Basisinitialisierung von Konstruktoren für eine abgeleitete Klasse aufgerufen werden können. Eintritt in das Virtuelle kann möglicherweise bei einem unvollständigen Initialisierungszustand eines Objekts erfolgen. Allerdings ruft das Eigenschaftensystem Rückrufe intern als Teil des Abhängigkeitseigenschaftensystem selbst auf und macht diese verfügbar. So einfach Vorgang der Einstellung eines Abhängigkeitseigenschaftswerts mit <xref:System.Windows.DependencyObject.SetValue%2A> Aufruf möglicherweise umfasst einen Rückruf an einer beliebigen Stelle in der Bestimmung. Aus diesem Grund sollten Sie beim Einstellen der Eigenschaftswerte innerhalb des Texts eines Konstruktors vorsichtig sein, da dies problematisch werden kann, wenn Ihr Typ als Basisklasse verwendet wird. Es gibt ein bestimmtes Muster zum Implementieren von <xref:System.Windows.DependencyObject> Konstruktoren, die bestimmte Probleme mit abhängigkeitseigenschaftszuständen und den inhärenten Rückrufen, vermieden werden können, die hier dokumentiert ist.  
+Im Allgemeinen sollten Klassenkonstruktoren Rückrufe wie virtuelle Methoden oder Delegaten nicht aufrufen, da Konstruktoren als Basisinitialisierung von Konstruktoren für eine abgeleitete Klasse aufgerufen werden können. Eintritt in das Virtuelle kann möglicherweise bei einem unvollständigen Initialisierungszustand eines Objekts erfolgen. Allerdings ruft das Eigenschaftensystem Rückrufe intern als Teil des Abhängigkeitseigenschaftensystem selbst auf und macht diese verfügbar. Ein Vorgang, bei dem ein Abhängigkeits Eigenschafts Wert <xref:System.Windows.DependencyObject.SetValue%2A> mit einem-Befehl festgelegt wird, beinhaltet möglicherweise einen Rückruf an einer beliebigen Stelle Aus diesem Grund sollten Sie beim Einstellen der Eigenschaftswerte innerhalb des Texts eines Konstruktors vorsichtig sein, da dies problematisch werden kann, wenn Ihr Typ als Basisklasse verwendet wird. Es gibt ein bestimmtes Muster für die <xref:System.Windows.DependencyObject> Implementierung von Konstruktoren, die bestimmte Probleme mit den Abhängigkeits Eigenschafts Zuständen und die inhärenten Rückrufe, die hier dokumentiert sind, vermeidet.  
 
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Eigenschaftensystem – Virtuelle Methoden  
- Die folgenden virtuellen Methoden oder Rückrufe werden möglicherweise bei der Berechnung des Namens der <xref:System.Windows.DependencyObject.SetValue%2A> Aufruf, der einen Abhängigkeitseigenschaftenwert festlegt: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Diese virtuellen Methoden oder Rückrufe haben jeweils einen bestimmten Zweck bei der Erweiterung der Vielseitigkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems und der Abhängigkeitseigenschaften. Weitere Informationen zur Verwendung dieser virtuellen Methoden, um Eigenschaftswertbestimmungen anzupassen, finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](dependency-property-callbacks-and-validation.md).  
+ Die folgenden virtuellen Methoden oder Rückrufe werden bei den Berechnungen des Aufrufs, der <xref:System.Windows.DependencyObject.SetValue%2A> einen Wert für die Abhängigkeits Eigenschaft festlegt <xref:System.Windows.ValidateValueCallback>, potenziell aufgerufen <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>:, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>,. Diese virtuellen Methoden oder Rückrufe haben jeweils einen bestimmten Zweck bei der Erweiterung der Vielseitigkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems und der Abhängigkeitseigenschaften. Weitere Informationen zur Verwendung dieser virtuellen Methoden, um Eigenschaftswertbestimmungen anzupassen, finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](dependency-property-callbacks-and-validation.md).  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Erzwingung der FXCop-Regel vs. Virtuelle Methoden des Eigenschaftensystems  
  Wenn Sie das Microsoft-Tool FXCop als Teil des Buildprozesses verwenden und Sie entweder von bestimmten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Frameworkklassen ableiten, die den Basiskonstruktor aufrufen oder Ihre eigenen Abhängigkeitseigenschaften in abgeleiteten Klassen implementieren, treten möglicherweise bestimmte FXCop-Regelverstöße auf. Der Name für diesen Verstoß ist:  
@@ -31,7 +31,7 @@ Im Allgemeinen sollten Klassenkonstruktoren Rückrufe wie virtuelle Methoden ode
  Die von dieser Regel gemeldeten Probleme treten auf, wenn eine Klasse, die Sie mit virtuellen Methoden in der Konstruktionsreihenfolge implementieren, anschließend abgeleitet wird. Wenn Sie die Klasse versiegeln oder sonst erkennen oder erzwingen, dass die Klasse nicht abgeleitet wird, werden die hier erläuterten Aspekte und die Probleme, die die FXCop-Regel begründen, nicht für Sie gelten. Wenn Sie Klassen jedoch so entwickeln, dass sie dazu bestimmt sind, als Basisklassen verwendet zu werden, z.B. wenn Sie Vorlagen oder einen erweiterbaren Steuerelementbibliotheksatz erstellen, sollten Sie die hier empfohlenen Muster für Konstruktoren befolgen.  
   
 ### <a name="default-constructors-must-initialize-all-values-requested-by-callbacks"></a>Standardkonstruktoren, die alle von Rückrufen angeforderten Werte initialisieren müssen  
- Alle Instanzmember, die von Ihrer Klasse überschrieben werden oder von Rückrufen (die Rückrufe aus der Liste im Abschnitt Eigenschaftensystemmethoden) verwendet werden, müssen in Ihrem Standardkonstruktor der Klasse initialisiert werden, auch wenn einige dieser Werte durch „echte“ Werte über Parameter, die nicht standardmäßige Konstruktoren sind, ausgefüllt werden.  
+ Alle Instanzmember, die von der-Klasse verwendet werden, überschreiben oder Rückrufe (die Rückrufe aus der Liste im Abschnitt "Eigenschaften System-Virtuals") müssen in dem Parameter losen Konstruktor der Klasse initialisiert werden, auch wenn einige dieser Werte durch "Real"-Werte ausgefüllt werden. Parameter der nicht parameterlosen Konstruktoren.  
   
  Der folgende Beispielcode (und die nachfolgenden Beispiele), ist ein Pseudo-C#-Beispiel, das gegen diese Regel verstößt und das Problem erläutert:  
   
@@ -60,7 +60,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- Wenn der Anwendungscode `new MyClass(objectvalue)` aufruft, ruft dies den Standardkonstruktor und die Basisklassenkonstruktoren auf. Dann legt `Property1 = object1`, ruft die virtuelle Methode `OnPropertyChanged` für die besitzende `MyClass` <xref:System.Windows.DependencyObject>.  Die Überschreibung verweist auf `_myList`, was noch nicht initialisiert wurde.  
+ Wenn der Anwendungscode `new MyClass(objectvalue)`aufruft, werden dadurch der Parameter lose Konstruktor und die Basisklassenkonstruktoren aufgerufen. Anschließend wird fest `Property1 = object1`gelegt, wodurch die virtuelle Methode `OnPropertyChanged` für das Besitz `MyClass` <xref:System.Windows.DependencyObject>Ende aufgerufen wird.  Die Überschreibung verweist auf `_myList`, was noch nicht initialisiert wurde.  
   
  Eine Möglichkeit zur Vermeidung dieser Probleme, ist es sicherzustellen, dass Rückrufe nur andere Abhängigkeitseigenschaften verwenden, und dass jede dieser Abhängigkeitseigenschaften über einen festgelegten Standardwert als Teil ihrer registrierten Metadaten verfügt.  
   
@@ -68,7 +68,7 @@ public class MyClass : DependencyObject
 ## <a name="safe-constructor-patterns"></a>Sichere Konstruktormuster  
  Führen Sie diese Muster aus, um das Risiko einer unvollständigen Initialisierung zu vermeiden, wenn die Klasse als Basisklasse verwendet wird:  
   
-#### <a name="default-constructors-calling-base-initialization"></a>Standardkonstruktoren rufen Basisinitialisierung auf  
+#### <a name="parameterless-constructors-calling-base-initialization"></a>Parameter lose Konstruktoren, die die Basis Initialisierung aufrufen  
  Implementieren Sie diese Konstruktoren, in dem Sie den Basisstandardwert aufrufen:  
   
 ```  
@@ -81,7 +81,7 @@ public MyClass : SomeBaseClass {
 ```  
   
 #### <a name="non-default-convenience-constructors-not-matching-any-base-signatures"></a>Nicht-standardmäßige (Komfort) Konstruktoren, die nicht den Basissignaturen entsprechen  
- Wenn diese Konstruktoren Parameter verwenden, um Abhängigkeitseigenschaften in der Initialisierung festzulegen, rufen Sie zuerst Ihren eigenen Standardkonstruktor der Klasse für die Initialisierung auf, und verwenden Sie anschließend die Parameter zum Festlegen von Abhängigkeitseigenschaften. Dies können entweder von Ihrer Klasse definierte Abhängigkeitseigenschaften oder Abhängigkeitseigenschaften von Klassen sein, die von Basisklassen abstammen, verwenden Sie jedoch in beiden Fällen das folgende Muster:  
+ Wenn diese Konstruktoren die-Parameter verwenden, um Abhängigkeits Eigenschaften in der Initialisierung festzulegen, müssen Sie zuerst Ihren eigenen Klassen Parameter losen Konstruktor für die Initialisierung aufzurufen und dann die-Parameter verwenden, um Abhängigkeits Eigenschaften festzulegen. Dies können entweder von Ihrer Klasse definierte Abhängigkeitseigenschaften oder Abhängigkeitseigenschaften von Klassen sein, die von Basisklassen abstammen, verwenden Sie jedoch in beiden Fällen das folgende Muster:  
   
 ```  
 public MyClass : SomeBaseClass {  
@@ -94,7 +94,7 @@ public MyClass : SomeBaseClass {
 ```  
   
 #### <a name="non-default-convenience-constructors-which-do-match-base-signatures"></a>Nicht-standardmäßige (Komfort) Konstruktoren, die mit den Basissignaturen übereinstimmen  
- Anstatt den Basiskonstruktor mit der gleichen Parametrisierung aufzurufen, rufen Sie erneut den Standardkonstruktor Ihrer eigenen Klasse auf. Rufen Sie die Basisinitialisierung nicht auf. Rufen Sie stattdessen `this()` auf. Reproduzieren Sie anschließend das Verhalten des ursprünglichen Konstruktors, indem Sie die übergebenen Parameter als Werte zum Festlegen der entsprechenden Eigenschaften verwenden. Verwenden Sie die Dokumentation zur ursprünglichen Basisklasse als Hilfestellung bei der Ermittlung der Eigenschaften, die die einzelnen Parameter festlegen sollen:  
+ Anstatt den Basiskonstruktor mit derselben Parametrisierung aufzurufen, rufen Sie erneut den Parameter losen Konstruktor Ihrer eigenen Klasse auf. Rufen Sie die Basisinitialisierung nicht auf. Rufen Sie stattdessen `this()` auf. Reproduzieren Sie anschließend das Verhalten des ursprünglichen Konstruktors, indem Sie die übergebenen Parameter als Werte zum Festlegen der entsprechenden Eigenschaften verwenden. Verwenden Sie die Dokumentation zur ursprünglichen Basisklasse als Hilfestellung bei der Ermittlung der Eigenschaften, die die einzelnen Parameter festlegen sollen:  
   
 ```  
 public MyClass : SomeBaseClass {  
@@ -107,10 +107,10 @@ public MyClass : SomeBaseClass {
 ```  
   
 #### <a name="must-match-all-signatures"></a>Alle Signaturen müssen übereinstimmen  
- Für Fälle, in denen der Basistyp über mehrere Signaturen verfügt, müssen Sie absichtlich alle möglichen Signaturen Ihrer eigenen Konstruktorimplementierung zuordnen, die das empfohlene Muster vom Aufrufen der Standardkonstruktoren der Klasse verwenden, bevor Sie weitere Eigenschaften festlegen.  
+ In Fällen, in denen der Basistyp über mehrere Signaturen verfügt, müssen Sie absichtlich alle möglichen Signaturen mit einer Konstruktorimplementierung ihrer eigenen zuordnen, die das empfohlene Muster zum Aufrufen des Parametern für die Klassen Parameter losen Konstruktor vor der weiteren Festlegung verwendet. Eigenschaften.  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>Festlegen von Abhängigkeitseigenschaften mit SetValue  
- Diese gleichen Muster gelten, wenn Sie eine Eigenschaft, die nicht über einen Wrapper zum einfacheren Festlegen von Eigenschaften festlegen, und legen Sie Werte mit <xref:System.Windows.DependencyObject.SetValue%2A>. Ihre Aufrufe von <xref:System.Windows.DependencyObject.SetValue%2A> , Pass-through-Konstruktorparameter sollten auch den Standardkonstruktor der Klasse für die Initialisierung aufrufen.  
+ Diese Muster gelten, wenn Sie eine Eigenschaft festlegen, die keinen Wrapper für die Einstellung der Eigenschafts Einstellung hat, und Werte mit <xref:System.Windows.DependencyObject.SetValue%2A>festlegen. Ihre Aufrufe an <xref:System.Windows.DependencyObject.SetValue%2A> diese Parameter des Pass-Through-Konstruktors sollten auch den Parameter losen Konstruktor für die Initialisierung aufrufen.  
   
 ## <a name="see-also"></a>Siehe auch
 
