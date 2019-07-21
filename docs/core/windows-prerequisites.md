@@ -3,12 +3,12 @@ title: Voraussetzungen für .NET Core unter Windows
 description: Erfahren Sie, welche Abhängigkeiten Ihr Windows-Computer aufweisen muss, damit Sie .NET Core-Anwendungen entwickeln und ausführen können.
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c4c15a08e0988955ecdf442307059868cb377d1
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 1921ef565c2d04624009f7684e439ddba1cdf57e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539353"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331073"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Voraussetzungen für .NET Core unter Windows
 
@@ -19,18 +19,6 @@ Dieser Artikel beschreibt die zur Ausführung von .NET Core-Anwendungen auf Wind
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 Wenn Sie auf Windows mit Visual Studio 2017 entwickeln, nutzen Sie die ausführlicheren Informationen über die für die .NET Core-Entwicklung unterstützten Mindestversionen im Abschnitt [Voraussetzungen für Visual Studio 2017](#prerequisites-with-visual-studio-2017).
-
-## <a name="net-core-supported-windows-versions"></a>Von .NET Core unterstützte Windows-Versionen
-
-.NET Core wird von folgenden Versionen unterstützt:
-
-* Windows 7 SP1
-* Windows 8.1
-* Windows 10 Anniversary Update (Version 1607) oder höhere Versionen
-* Windows Server 2008 R2 SP1 (vollständiger Server oder Serverkern)
-* Windows Server 2012 SP1 (vollständiger Server oder Serverkern)
-* Windows Server 2012 R2 (vollständiger Server oder Serverkern)
-* Windows Server 2016 oder höhere Versionen (vollständiger Server, Serverkern oder Nano-Server)
 
 ## <a name="net-core-supported-operating-systems"></a>Von .NET Core unterstützte Betriebssysteme
 
