@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5b1547f596a0ff1c52a402f90457dced6ef604a0
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611795"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238646"
 ---
 # <a name="whats-new-for-visual-basic"></a>Neues in Visual Basic
 
@@ -122,7 +122,7 @@ Wenn Sie den Wert von Tupelelementen von Variablen zuweisen, leitet Visual Basic
 
 **Zusätzliche Compileroptionen**
 
-Der Visual Basic-Befehlszeilencompiler unterstützt nun die zusätzlichen Compileroptionen[**-refout**](../reference/command-line-compiler/refout-compiler-option.md) und [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) zur Steuerung der Ausgabe von Verweisassemblys. **-refout** definiert das Ausgabeverzeichnis der Referenzassembly, und **-refonly** legt fest, dass nur eine Referenzassembly bei der Kompilierung ausgegeben wird.
+Der Visual Basic-Befehlszeilencompiler unterstützt nun die zusätzlichen Compileroptionen[ **-refout**](../reference/command-line-compiler/refout-compiler-option.md) und [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) zur Steuerung der Ausgabe von Verweisassemblys. **-refout** definiert das Ausgabeverzeichnis der Referenzassembly, und **-refonly** legt fest, dass nur eine Referenzassembly bei der Kompilierung ausgegeben wird.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -150,7 +150,7 @@ Sie können ein binäres Literal definieren, indem Sie die Präfixe `&B` oder `&
 
 Weitere Informationen finden Sie im Abschnitt „Zuweisung von Literalen“ der Datentypen [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) und [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-[**Support for C# reference return values (Unterstützung für Verweisrückgabewerte von C#)**](../programming-guide/language-features/procedures/ref-return-values.md)
+[**Support for C# reference return values (Unterstützung für Verweisrückgabewerte von C#)** ](../programming-guide/language-features/procedures/ref-return-values.md)
 
 Ab C# 7.0 unterstützt C# Verweisrückgabewerte. Das heißt, wenn die aufrufende Methode einen von einem Verweis zurückgegebenen Wert erhält, kann sie den Wert des Verweises ändern. In Visual Basic können Sie keine Methoden mit Verweisrückgabewerten erstellen. Allerdings können Sie Verweisrückgabewerte verarbeiten und modifizieren.
 
@@ -174,7 +174,7 @@ Weitere Informationen finden Sie unter [Verweisrückgabewerte](../programming-gu
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[nameof](../../csharp/language-reference/keywords/nameof.md)
+[nameof](../../csharp/language-reference/operators/nameof.md)
 
 Sie können den nicht qualifizierten Zeichenfolgennamen eines Typs oder Members zur Verwendung in einer Fehlermeldung ohne Hartcodierung einer Zeichenfolge abrufen.  Dadurch bleibt der Code bei der Umgestaltung korrekt.  Diese Funktion eignet sich auch zum Einbinden von MVC-Links (Model-View-Controller) und das Auslösen von Ereignissen durch geänderte Eigenschaften.
 
