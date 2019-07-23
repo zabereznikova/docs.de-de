@@ -1,9 +1,0 @@
----
-ms.openlocfilehash: 6dcdd90a26e10c7319b395c26259f3042cdcdd88
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65672158"
----
-<span data-ttu-id="1b194-101">Binäre XAML (BAML)</span><span class="sxs-lookup"><span data-stu-id="1b194-101">binary XAML (BAML)</span></span>
