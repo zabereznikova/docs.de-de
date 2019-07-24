@@ -2,16 +2,16 @@
 title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859534"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400736"
 ---
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
-Im Abschnitt „Vorgehensweise“ des C#-Handbuchs finden Sie schnelle Antworten zu oft gestellten Fragen. In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein. Diese Artikel sollten somit über verschiedene Suchwege einfach zu finden sein. 
+Im Abschnitt „Vorgehensweise“ des C#-Handbuchs finden Sie schnelle Antworten zu oft gestellten Fragen. In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein. Diese Artikel sollten somit über verschiedene Suchwege einfach zu finden sein.
 
 ## <a name="general-c-concepts"></a>Allgemeine C#-Konzepte
 
@@ -19,7 +19,6 @@ Es gibt einige Tipps und Tricks, die allgemeine C#-Entwicklungsmethoden sind.
 
 - [Initialisieren von Objekten mithilfe eines Objektinitialisierers](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
-- [Verwenden von Lambdaausdrücken](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Lösen von Namenstypkonflikten durch das Verwenden des globalen Namespacealias](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 - [Verwenden der Operatorüberladung](../language-reference/operators/operator-overloading.md).
 - [Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
