@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 483710281feafdf97cfef9b72a67af035dcf0efa
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: b7401cd3e9551b378983193f4c5e8e4107954b74
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860174"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401419"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
 Windows Presentation Foundation (WPF) bietet eine Reihe von Diensten, die zum Erweitern der Funktionalität einer [Eigenschaft](../../../standard/base-types/common-type-system.md#Properties) eines Typs verwendet werden können. Zusammen werden diese Dienste normalerweise als WPF-Eigenschaftensystem bezeichnet. Eine Eigenschaft, die von der WPF-Eigenschaft unterstützt wird, wird als Abhängigkeitseigenschaft bezeichnet. In dieser Übersicht wird das WPF-Eigenschaftensystem und die Funktionen einer Abhängigkeitseigenschaft beschrieben. Dies schließt die Verwendung vorhandener Abhängigkeitseigenschaften in XAML und Code ein. In dieser Übersicht werden auch spezielle Aspekte von Abhängigkeitseigenschaften wie die Metadaten von Abhängigkeitseigenschaften sowie die Erstellung einer eigenen Abhängigkeitseigenschaft in einer benutzerdefinierten Klasse eingeführt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
-In diesem Thema wird vorausgesetzt, dass Sie über einige grundlegende Kenntnisse zum Typsystem von .NET und die objektorientierte Programmierung verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+## <a name="prerequisites"></a>Vorraussetzungen
+In diesem Thema wird vorausgesetzt, dass Sie über einige grundlegende Kenntnisse zum Typsystem von .NET und die objektorientierte Programmierung verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktop](../getting-started/walkthrough-my-first-wpf-desktop-application.md)Anwendung.  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Abhängigkeitseigenschaften und CLR-Eigenschaften
  Eigenschaften werden in der Regel als .NET-[Standardeigenschaften](../../../standard/base-types/common-type-system.md#Properties) verfügbar gemacht. Grundsätzlich können Sie direkt mit diesen Eigenschaften direkt interagieren, ohne zu wissen, dass sie als Abhängigkeitseigenschaft implementiert werden. Sie sollten aber mit einigen oder allen Funktionen des WPF-Eigenschaftensystems vertraut sein, damit Sie sie nutzen können.
@@ -40,11 +40,11 @@ Abhängigkeitseigenschaften und das WPF-Eigenschaftensystem erweitern die Funkti
 
 Nachfolgend ist die Terminologie aufgeführt, die mit Abhängigkeitseigenschaften verwendet wird:
 
-- **Abhängigkeitseigenschaft:** Eine Eigenschaft, die von unterstützt wird eine <xref:System.Windows.DependencyProperty>.
+- **Abhängigkeits Eigenschaft:** Eine Eigenschaft, die von einem <xref:System.Windows.DependencyProperty>unterstützt wird.
 
-- **Bezeichner der Abhängigkeitseigenschaft:** Ein <xref:System.Windows.DependencyProperty> -Instanz, die als Rückgabewert abgerufen werden, wenn Sie eine Abhängigkeitseigenschaft registrieren, und dann als ein statischer Member einer Klasse gespeichert. Dieser Bezeichner wird als Parameter für viele der APIs verwendet, die mit dem WPF-Eigenschaftenssystem interagieren.
+- **Bezeichner der Abhängigkeits Eigenschaft:** Eine <xref:System.Windows.DependencyProperty> -Instanz, die beim Registrieren einer Abhängigkeits Eigenschaft als Rückgabewert abgerufen und dann als statischer Member einer Klasse gespeichert wird. Dieser Bezeichner wird als Parameter für viele der APIs verwendet, die mit dem WPF-Eigenschaftenssystem interagieren.
 
-- **CLR "wrapper":** Die tatsächliche Abrufen und Festlegen von Implementierungen für die Eigenschaft. Diese Implementierungen beinhalten den Abhängigkeitseigenschaftenbezeichner, indem sie diesen in den Aufrufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> verwenden und so die Sicherung für die Eigenschaft über das WPF-Eigenschaftensystem bereitstellen.
+- **CLR "Wrapper":** Die tatsächlichen Get-und Set-Implementierungen für die-Eigenschaft. Diese Implementierungen beinhalten den Abhängigkeitseigenschaftenbezeichner, indem sie diesen in den Aufrufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> verwenden und so die Sicherung für die Eigenschaft über das WPF-Eigenschaftensystem bereitstellen.
 
 Das folgende Beispiel definiert die `IsSpinning`-Abhängigkeitseigenschaft und zeigt die Beziehung zwischen dem <xref:System.Windows.DependencyProperty>-Bezeichner zur Eigenschaft, die er unterstützt.
 
@@ -68,7 +68,7 @@ Im folgende XAML-Beispiel wird ein Beispiel für eine Syntax ohne Attribut und e
 [!code-xaml[PropertiesOvwSupport#PESyntaxProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml#pesyntaxproperty)]
 
 ### <a name="setting-properties-in-code"></a>Festlegen von Eigenschaften im Code
- Das Festlegen von Abhängigkeitseigenschaften im Code geschieht in der Regel über einen Aufruf der festgelegten Implementierung, die vom [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Wrapper verfügbar gemacht wird.
+ Beim Festlegen von Abhängigkeits Eigenschafts Werten im Code handelt es sich in der Regel nur um einen aufzurufenden Satz von CLR-Wrapper.
 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyset)]
 [!code-vb[PropertiesOvwSupport#ProceduralPropertySet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyset)]
@@ -78,7 +78,7 @@ Das Abrufen eines Eigenschaftswerts besteht auch im Grunde aus einem Aufruf der 
 [!code-csharp[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/Page1.xaml.cs#proceduralpropertyget)]
  [!code-vb[PropertiesOvwSupport#ProceduralPropertyGet](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page1.xaml.vb#proceduralpropertyget)]
 
-Sie können auch das Eigenschaftensystem APIs aufrufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> direkt. Dies ist nicht erforderlich, wenn Sie vorhandene Eigenschaften (die Wrapper sind besser geeignet und bieten bessere Offenlegung der Eigenschaft für die Entwicklertools) verwenden, aber die APIs direkt aufrufen eignet sich für bestimmte Szenarien.
+Sie können auch die Eigenschaften System-APIs <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> direkt aufzurufen. Dies ist in der Regel nicht erforderlich, wenn Sie vorhandene Eigenschaften verwenden (die Wrapper sind bequemer und bieten eine bessere Verfügbarkeit der Eigenschaft für Entwicklertools), aber der direkte Aufruf der APIs ist für bestimmte Szenarien geeignet.
 
 Eigenschaften können auch in XAML festgelegt und später über den Code (über die CodeBehind-Datei) darauf zugegriffen werden. Weitere Informationen finden Sie unter [CodeBehind und XAML in WPF](code-behind-and-xaml-in-wpf.md).
 
@@ -190,7 +190,7 @@ In der Regel sollen Stile nicht immer gelten und sogar einen lokal festgelegten 
 
 ## <a name="learning-more-about-dependency-properties"></a>Wissenswertes zu Abhängigkeitseigenschaften  
 
-- Eine angefügte Eigenschaft ist ein Eigenschaftstyp, die eine spezielle Syntax in XAML unterstützt. Eine angefügte Eigenschaft verfügt oft über keine 1:1-Entsprechung mit einer [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Eigenschaft und ist nicht unbedingt eine Abhängigkeitseigenschaft. Der Hauptzweck einer angefügten Eigenschaft ist es, den untergeordneten Elementen die Berichterstattung von Eigenschaftswerten an ein übergeordnetes Element zu ermöglichen, selbst wenn diese Eigenschaft in nicht den Klassenmemberlisten des übergeordneten und des untergeordneten Elements vorhanden ist. Ein primäres Szenario ist das Aktivieren von untergeordneten Elementen, um das übergeordnete Element darüber zu informieren, wie die untergeordneten Elemente in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dargestellt werden sollen. Ein Beispiel finden Sie unter <xref:System.Windows.Controls.DockPanel.Dock%2A> oder <xref:System.Windows.Controls.Canvas.Left%2A>. Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschaften](attached-properties-overview.md).
+- Eine angefügte Eigenschaft ist ein Eigenschaftstyp, die eine spezielle Syntax in XAML unterstützt. Eine angefügte Eigenschaft verfügt häufig nicht über eine 1:1-Entsprechung mit einer Common Language Runtime (CLR)-Eigenschaft und ist nicht notwendigerweise eine Abhängigkeits Eigenschaft. Der Hauptzweck einer angefügten Eigenschaft ist es, den untergeordneten Elementen die Berichterstattung von Eigenschaftswerten an ein übergeordnetes Element zu ermöglichen, selbst wenn diese Eigenschaft in nicht den Klassenmemberlisten des übergeordneten und des untergeordneten Elements vorhanden ist. Ein primäres Szenario ist das Aktivieren von untergeordneten Elementen, um das übergeordnete Element darüber zu informieren, wie die untergeordneten Elemente in [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dargestellt werden sollen. Ein Beispiel finden Sie unter <xref:System.Windows.Controls.DockPanel.Dock%2A> oder <xref:System.Windows.Controls.Canvas.Left%2A>. Weitere Informationen finden Sie unter [Übersicht über angefügte Eigenschaften](attached-properties-overview.md).
 
 - Komponenten- oder Anwendungsentwickler können ihre eigene Abhängigkeitseigenschaft erstellen, um Funktionen wie die Datenbindung oder die Unterstützung von Stilen oder die Invalidierung und die Erzwingung von Werten zu unterstützen. Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md).
 

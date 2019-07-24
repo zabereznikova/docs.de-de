@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020919"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401427"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Vorgehensweise: Erstellen und Binden eine ObservableCollection-Klasse
-Dieses Beispiel zeigt das Erstellen und Binden an eine Auflistung, die von abgeleitet ist die <xref:System.Collections.ObjectModel.ObservableCollection%601> Klasse, die eine Auflistungsklasse, die Benachrichtigungen bereitstellt, wenn Elemente hinzugefügt oder entfernt werden.  
+Dieses Beispiel zeigt, wie Sie eine Auflistung erstellen und binden, die von der <xref:System.Collections.ObjectModel.ObservableCollection%601> -Klasse abgeleitet wird. dabei handelt es sich um eine Auflistungs Klasse, die beim Hinzufügen oder Entfernen von Elementen Benachrichtigungen bereitstellt.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird die Implementierung einer `NameList`-Auflistung veranschaulicht:  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- Die Auflistung wird für die Bindung auf die gleiche Weise wie bei anderen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Objekten zur Verfügung gestellt. Informationen dazu finden Sie unter [Bereitstellen von Daten für die Bindung in XAML](how-to-make-data-available-for-binding-in-xaml.md). Sie können beispielsweise die Auflistung in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] instanziieren und sie als Ressource, wie hier dargestellt, angeben:  
+ Sie können die Auflistung für die Bindung auf die gleiche Weise wie andere Common Language Runtime (CLR)-Objekte zur Verfügung stellen, wie unter [Bereitstellen von Daten für die Bindung in XAML](how-to-make-data-available-for-binding-in-xaml.md)beschrieben. Sie können beispielsweise die Auflistung in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] instanziieren und sie als Ressource, wie hier dargestellt, angeben:  
   
 ```xaml  
 <Window  
@@ -136,7 +136,7 @@ End Class
  Die Definition von `NameItemTemplate` wird hier nicht gezeigt.  
   
 > [!NOTE]
->  Die Objekte in der Auflistung müssen die unter [Übersicht über Bindungsquellen](binding-sources-overview.md) beschriebenen Anforderungen erfüllen. Vor allem bei Verwendung von <xref:System.Windows.Data.BindingMode.OneWay> oder <xref:System.Windows.Data.BindingMode.TwoWay> (angenommen, Sie möchten Ihre [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] aktualisieren, wenn die Eigenschaften der dynamisch zu ändern), müssen Sie einen geeigneten Benachrichtigungsmechanismus, wie z. B. die implementieren<xref:System.ComponentModel.INotifyPropertyChanged>Schnittstelle.  
+>  Die Objekte in der Auflistung müssen die unter [Übersicht über Bindungsquellen](binding-sources-overview.md) beschriebenen Anforderungen erfüllen. Insbesondere wenn Sie oder <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> verwenden ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] z. b. Wenn Sie möchten, dass sich die Quell Eigenschaften dynamisch ändern), müssen Sie einen geeigneten Benachrichtigungs Mechanismus für geänderte Eigenschaften implementieren, z. b. den <xref:System.ComponentModel.INotifyPropertyChanged>Schnittstelle.  
   
  Weitere Informationen finden Sie in der [Übersicht über die Datenbindung](data-binding-overview.md) unter „Binden an Auflistungen“.  
   

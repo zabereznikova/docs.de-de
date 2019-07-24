@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 8d24314290e4f385362a3369836e4d18a23cc868
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663101"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401695"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Erstellen einer WPF-Anwendung (WPF)
 
-Windows Presentation Foundation (WPF)-Anwendungen können als .NET Framework ausführbare Dateien (.exe), Libraries (DLL) oder eine Kombination aus beiden Typen von Assemblys erstellt werden. In diesem Thema wird beschrieben, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen erstellt werden, und die wichtigsten Schritte im Buildprozess werden erläutert.
+WPF-Anwendungen (Windows Presentation Foundation) können als .NET Framework ausführbare Dateien (exe-Dateien), Bibliotheken (DLL-Dateien) oder eine Kombination aus beiden Assemblytypen erstellt werden. In diesem Thema wird beschrieben, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen erstellt werden, und die wichtigsten Schritte im Buildprozess werden erläutert.
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -44,7 +44,7 @@ Beim Erstellen eines [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-w
 
 Vor Beginn der Erstellung bestimmt [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] den Speicherort wichtiger Tools und Bibliotheken, darunter die folgenden:
 
-- .NET Framework.
+- Der .NET Framework.
 
 - Die [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]-Verzeichnisse.
 
@@ -58,7 +58,7 @@ Der erste Speicherort, an dem [!INCLUDE[TLA2#tla_msbuild](../../../../includes/t
 
 ### <a name="resolving-references"></a>Auflösen von Verweisen
 
-Der Buildprozess sucht und bindet die Assemblys, die zum Erstellen des Anwendungsprojekts erforderlich sind. Diese Logik ist in der `ResolveAssemblyReference`-Aufgabe enthalten. Alle in der Projektdatei als `Reference` deklarierten Assemblys werden der Aufgabe mit Informationen zu Suchpfaden und Metadaten für Assemblys, die bereits im System installiert sind, zur Verfügung gestellt. Die Aufgabe sucht Assemblys und verwendet die Metadaten der installierten Assembly, um die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Kernassemblys herauszufiltern, die in den Ausgabemanifesten nicht angezeigt werden müssen. Auf diese Weise vermeiden Sie redundante Informationen in den ClickOnce-Manifesten. Z. B. da "PresentationFramework.dll" repräsentativ berücksichtigt werden, können eine Anwendung erstellt und für die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] und außerdem da [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Assemblys, die am gleichen Ort auf jedem Computer mit .NET Framework vorhanden sein ist installiert, es nicht erforderlich alle Informationen für alle .NET Framework-Verweisassemblys in den Manifesten.
+Der Buildprozess sucht und bindet die Assemblys, die zum Erstellen des Anwendungsprojekts erforderlich sind. Diese Logik ist in der `ResolveAssemblyReference`-Aufgabe enthalten. Alle in der Projektdatei als `Reference` deklarierten Assemblys werden der Aufgabe mit Informationen zu Suchpfaden und Metadaten für Assemblys, die bereits im System installiert sind, zur Verfügung gestellt. Die Aufgabe sucht Assemblys und verwendet die Metadaten der installierten Assembly, um die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Kernassemblys herauszufiltern, die in den Ausgabemanifesten nicht angezeigt werden müssen. Auf diese Weise vermeiden Sie redundante Informationen in den ClickOnce-Manifesten. Da "presentationframework. dll" z. b. als repräsentativ für eine Anwendung angesehen werden kann, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] die auf und für [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] den erstellt wurde, und da alle Assemblys am gleichen Speicherort auf jedem Computer vorhanden sind, der über die .NET Framework installiert ist, müssen nicht alle Informationen zu allen .NET Framework Verweisassemblys in die Manifeste eingeschlossen werden.
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -74,9 +74,9 @@ In diesem Schritt werden für jede [!INCLUDE[TLA2#tla_xaml](../../../../includes
 
 3. Eine CodeDOM-Darstellung einer neuen Teilklasse wird erstellt und in den Ordner „obj\Release“ kopiert.
 
-Außerdem wird eine sprachspezifische Codedatei für jede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei generiert. Beispielsweise ist für eine "Page1.xaml" in Visual Basic-Projekt, eine Datei "Page1.g.vb" generiert. für eine "Page1.xaml" in einem C#-Projekt wird eine Datei "Page1.g.cs" generiert. Das „.g“ im Dateinamen gibt an, dass die Datei generierten Code darstellt, der über eine Deklaration der partiellen Klasse für das Element der oberen Ebene der Markupdatei entspricht (z. B. `Page` oder `Window`). Die Klasse wird deklariert, mit der `partial` in c# (`Extends` in Visual Basic) zum Angeben einer anderen Deklaration für die Klasse an anderer Stelle vorhanden ist, in der Regel in der CodeBehind-Datei "Page1.Xaml.cs".
+Außerdem wird eine sprachspezifische Codedatei für jede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei generiert. Beispielsweise wird für eine "Page1. XAML-Seite in einem Visual Basic Projekt eine" Page1. g. vb-Datei generiert. für eine "Page1. XAML-Seite in C# einem Projekt wird ein Page1.g.cs generiert. Das „.g“ im Dateinamen gibt an, dass die Datei generierten Code darstellt, der über eine Deklaration der partiellen Klasse für das Element der oberen Ebene der Markupdatei entspricht (z. B. `Page` oder `Window`). Die-Klasse wird mit dem `partial` -Modifizierer`Extends` in C# (in Visual Basic) deklariert, um anzugeben, dass an anderer Stelle eine andere Deklaration für die Klasse vorhanden ist, normalerweise in der Code Behind-Datei Page1.XAML.cs.
 
-Die partielle Klasse aus der entsprechenden Basisklasse erweitert (z. B. <xref:System.Windows.Controls.Page> für eine Seite) und implementiert die <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> Schnittstelle. Die <xref:System.Windows.Markup.IComponentConnector> Schnittstelle besitzt Methoden zum Initialisieren einer Komponente, und verbinden Sie Namen und Ereignissen für Elemente im Inhalt. Folglich sieht die Methodenimplementierung der generierten Codedatei folgendermaßen aus:
+Die partielle Klasse erstreckt sich von der entsprechenden Basisklasse ( <xref:System.Windows.Controls.Page> z. b. für eine Seite <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> ) und implementiert die-Schnittstelle. Die <xref:System.Windows.Markup.IComponentConnector> -Schnittstelle verfügt über Methoden, um eine Komponente zu initialisieren und Namen und Ereignisse für Elemente im Inhalt zu verbinden. Folglich sieht die Methodenimplementierung der generierten Codedatei folgendermaßen aus:
 
 ```csharp
 public void InitializeComponent() {
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-In der Standardeinstellung Markupkompilierung ausgeführt wird, in der gleichen <xref:System.AppDomain> als die [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] Engine. Dies ermöglicht einen erheblichen Leistungszuwachs. Dieses Verhalten kann mit der `AlwaysCompileMarkupFilesInSeparateDomain`-Eigenschaft umgeschaltet werden. Dies hat den Vorteil, dass alle Verweisassemblys durch Entladen der separates <xref:System.AppDomain>.
+Standardmäßig wird die Markup Kompilierung <xref:System.AppDomain> genauso wie die [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] -Engine ausgeführt. Dies ermöglicht einen erheblichen Leistungszuwachs. Dieses Verhalten kann mit der `AlwaysCompileMarkupFilesInSeparateDomain`-Eigenschaft umgeschaltet werden. Dies hat den Vorteil, dass alle Verweisassemblys durch <xref:System.AppDomain>Entladen des separaten entladen werden.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 
@@ -134,15 +134,15 @@ In dem Schritt der Kernkompilierung wird die Kompilierung von Codedateien ausgef
 
 ### <a name="manifest-generation"></a>Manifestgenerierung
 
-Nachdem alle Anwendungsassemblys und Inhaltsdateien fertiggestellt wurden, werden die [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Manifeste am Ende des Buildprozesses für die Anwendung generiert.
+Nachdem alle Anwendungsassemblys und Inhalts Dateien bereit sind, werden am Ende des Buildprozesses die ClickOnce-Manifeste für die Anwendung generiert.
 
 Mit der Bereiststellungsmanifestdatei wird das Bereitstellungsmodell beschrieben: die aktuelle Version, Aktualisierungsverhalten und die Identität des Herausgebers mit der digitalen Signatur. Dieses Manifest sollte von Administratoren erstellt werden, die für die Bereitstellung zuständig sind. Die Dateierweiterung ist .xbap (für [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]) und .application für installierte Anwendungen. Erstere wird durch die `HostInBrowser`-Projekteigenschaft vorgeschrieben. Als Ergebnis identifiziert das Manifest die Anwendung als vom Browser gehostet.
 
-Im Anwendungsmanifest (die Datei „.exe.manifest“) werden die Anwendungsassemblys und abhängigen Bibliotheken beschrieben und die von der Anwendung benötigten Berechtigungen aufgeführt. Diese Datei sollte vom Anwendungsentwickler erstellt werden. Um eine [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Anwendung zu starten, öffnet ein Benutzer die Bereitstellungsmanifestdatei der Anwendung.
+Im Anwendungsmanifest (die Datei „.exe.manifest“) werden die Anwendungsassemblys und abhängigen Bibliotheken beschrieben und die von der Anwendung benötigten Berechtigungen aufgeführt. Diese Datei sollte vom Anwendungsentwickler erstellt werden. Um eine ClickOnce-Anwendung zu starten, öffnet ein Benutzer die Bereitstellungs Manifest-Datei der Anwendung.
 
 Diese Manifestdateien werden stets für [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s erstellt. Für installierte Anwendungen werden sie nicht erstellt, sofern die `GenerateManifests`-Eigenschaft in der Projektdatei nicht mit dem Wert `true` angegeben wird.
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] erhalten Sie zwei zusätzliche Berechtigungen über die Berechtigungen hinaus, herkömmlichen Anwendungen der Internetzone zugewiesen: <xref:System.Security.Permissions.WebBrowserPermission> und <xref:System.Security.Permissions.MediaPermission>. Das [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Buildsystem deklariert diese Berechtigungen im Anwendungsmanifest.
+[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]erhalten Sie über die Berechtigungen, die typischen Internet Zonen Anwendungen zugewiesen sind, zwei zusätzliche <xref:System.Security.Permissions.WebBrowserPermission> Berechtigungen <xref:System.Security.Permissions.MediaPermission>: und. Das [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Buildsystem deklariert diese Berechtigungen im Anwendungsmanifest.
 
 <a name="Incremental_Build_Support"></a>
 
@@ -168,7 +168,7 @@ Im Folgenden finden Sie einen Satz von Regeln für inkrementelle Builds:
 
   - Wenn [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] als Page `Page` Projekt deklariert wird: Wenn [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] keine lokal definierten Typverweise besitzt, kompilieren Sie diese [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten mit lokalen Verweisen neu. Wenn [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lokale Verweise aufweist, kompilieren Sie alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten mit lokalen Verweisen neu.
 
-  - Wenn [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wird deklariert als `ApplicationDefinition` im Projekt: alle neu kompilieren [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seiten (Grund: jede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Verweis auf ein <xref:System.Windows.Application> Typ, der möglicherweise geändert wurde).
+  - Wenn [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] im Projekt als `ApplicationDefinition` deklariert wird: Kompilieren Sie alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seiten neu (Ursache: jede [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] weist einen Verweis auf <xref:System.Windows.Application> einen Typ auf, der sich möglicherweise geändert hat).
 
 - Wenn die Projektdatei statt einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei eine Codedatei als Anwendungsdefinition deklariert:
 

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ddc85d159b4bf81751428c13c234c5e53be8ad4
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777116"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401132"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Vorgehensweise: Hinzufügen eines Besitzertyps für eine Abhängigkeitseigenschaft
-Dieses Beispiel zeigt, wie Sie eine Klasse hinzugefügt werden, als Besitzer einer Abhängigkeitseigenschaft, die für einen anderen Typ registriert. Auf diese Weise die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Reader und Eigenschaftensystem sind beide erkennen, die Klasse als weiteren Besitzer der Eigenschaft. Optional als Besitzer hinzufügen, können die hinzufügende Klasse um typspezifische Metadaten bereitzustellen.  
+Dieses Beispiel zeigt, wie eine Klasse als Besitzer einer Abhängigkeits Eigenschaft hinzugefügt wird, die für einen anderen Typ registriert ist. Auf diese Weise können sowohl [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Reader als auch das Eigenschaften System die Klasse als zusätzlichen Besitzer der Eigenschaft erkennen. Durch das Hinzufügen als Besitzer kann die hinzu fügende Klasse optional typspezifische Metadaten bereitstellen.  
   
- Im folgenden Beispiel `StateProperty` wird durch eine Eigenschaft registriert die `MyStateControl` Klasse. Die Klasse `UnrelatedStateControl` fügt sich selbst als Besitzer der `StateProperty` mithilfe der <xref:System.Windows.DependencyProperty.AddOwner%2A> Methode, die speziell mit der Signatur, die neue Metadaten für die Abhängigkeitseigenschaft ermöglicht, wie sie auf der hinzufügen-Typ vorhanden ist. Beachten Sie, den Sie bereitstellen sollten [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Accessoren für die Eigenschaft ähnelt dem Beispiel in der [Implementieren einer Abhängigkeitseigenschaft](how-to-implement-a-dependency-property.md) , sowie die Bezeichner der Abhängigkeitseigenschaft in der Klasse hinzugefügt wird, erneut verfügbar machen als Besitzer.  
+ Im folgenden Beispiel ist eine `StateProperty` Eigenschaft, die von der `MyStateControl` -Klasse registriert wird. Die- `UnrelatedStateControl` Klasse fügt sich selbst als Besitzer `StateProperty` der mithilfe der <xref:System.Windows.DependencyProperty.AddOwner%2A> -Methode hinzu, insbesondere mithilfe der Signatur, die neue Metadaten für die Abhängigkeits Eigenschaft zulässt, wie Sie im hinzugefügten Typ vorhanden ist. Beachten Sie, dass Sie Common Language Runtime (CLR)-Accessoren für die-Eigenschaft bereitstellen sollten, ähnlich wie im Beispiel im Beispiel [Implementieren einer Abhängigkeits Eigenschaft](how-to-implement-a-dependency-property.md) , und machen Sie den Bezeichner der Abhängigkeits Eigenschaft für die Klasse, die als Besitzer hinzugefügt wird, erneut verfügbar.  
   
- Ohne Wrapper die Abhängigkeitseigenschaft funktioniert trotzdem aus der Perspektive des programmgesteuerten Zugriffs mit <xref:System.Windows.DependencyObject.GetValue%2A> oder <xref:System.Windows.DependencyObject.SetValue%2A>. Aber Sie möchten in der Regel parallel dieses Eigenschaftensystem Verhalten mit der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Eigenschaftenwrapper. Die Wrapper erleichtern es, die die Abhängigkeitseigenschaft programmgesteuert festgelegt und ermöglichen das Festlegen der Eigenschaften als [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Attribute.  
+ Ohne Wrapper funktioniert die Abhängigkeits Eigenschaft immer noch aus der Perspektive des programmgesteuerten Zugriffs mithilfe <xref:System.Windows.DependencyObject.GetValue%2A> von <xref:System.Windows.DependencyObject.SetValue%2A>oder. Allerdings möchten Sie dieses Eigenschaften Systemverhalten in der Regel mit den CLR-Eigenschaftenwrappern parallel durchlaufen. Die Wrapper vereinfachen die programmgesteuerte Festlegung der Abhängigkeits Eigenschaft und ermöglichen das Festlegen der Eigenschaften als [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Attribute.  
   
- Um herauszufinden, wie die standardmäßigen Metadaten überschrieben, finden Sie unter [Überschreiben von Metadaten für eine Abhängigkeitseigenschaft](how-to-override-metadata-for-a-dependency-property.md).  
+ Weitere Informationen zum Überschreiben von Standard Metadaten finden Sie unter [Überschreiben von Metadaten für eine Abhängigkeits Eigenschaft](how-to-override-metadata-for-a-dependency-property.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-csharp[PropertySystemEsoterics#MyStateControl](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertySystemEsoterics/CSharp/SDKSampleLibrary/class1.cs#mystatecontrol)]

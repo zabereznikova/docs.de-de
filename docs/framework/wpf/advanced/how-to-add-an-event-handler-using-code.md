@@ -8,26 +8,26 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 32e3926bb4c519b7be14a26484603d6d4ea88b6a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665795"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401167"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Vorgehensweise: Hinzufügen eines Ereignishandlers mithilfe von Code
-Dieses Beispiel zeigt, wie ein Element mithilfe von Code einen Ereignishandler hinzugefügt wird.  
+In diesem Beispiel wird gezeigt, wie einem Element mithilfe von Code ein Ereignishandler hinzugefügt wird.  
   
- Wenn Sie einen Ereignishandler hinzufügen möchten eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Element, und die Markupseite, die das Element enthält, bereits geladen wurde, müssen Sie den Handler, die mithilfe von Code. Sie können auch bei der Erstellung die Elementstruktur für eine Anwendung vollständig mithilfe von Code, und deklarieren keine Elemente mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], können Sie bestimmte Methoden zum Hinzufügen von Ereignishandlern an die Struktur der konstruierte Element aufrufen.  
+ Wenn Sie einem- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Element einen Ereignishandler hinzufügen möchten und die Markup Seite, die das-Element enthält, bereits geladen wurde, müssen Sie den Handler mithilfe von Code hinzufügen. Wenn Sie die Elementstruktur für eine Anwendung, die vollständig Code verwendet, und keine Elemente mithilfe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]von deklarieren, können Sie alternativ bestimmte Methoden zum Hinzufügen von Ereignis Handlern zur konstruierten Elementstruktur aufzurufen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein neues <xref:System.Windows.Controls.Button> zu einer vorhandenen Seite, die anfänglich in definiert ist [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Eine Code-Behind-Datei implementiert eine Ereignishandlermethode, und fügt diese Methode als einen neuen Ereignishandler für die <xref:System.Windows.Controls.Button>.  
+ Im folgenden Beispiel wird einer vorhandenen <xref:System.Windows.Controls.Button> Seite, die anfänglich in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]definiert ist, ein neues hinzugefügt. Eine Code Behind-Datei implementiert eine Ereignishandlermethode und fügt diese Methode dann als neuen Ereignishandler für <xref:System.Windows.Controls.Button>hinzu.  
   
- Die C# Beispiel verwendet die `+=` Operator, um ein Ereignis einen Handler zuzuweisen. Dies ist der gleiche Operator, der verwendet wird, weisen Sie einen Handler im der [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Modell für die Ereignisbehandlung. Microsoft Visual Basic unterstützt diesen Operator nicht als Mittel zum Hinzufügen von Ereignishandlern. Es muss stattdessen eine der beiden Methoden:  
+ Im C# Beispiel wird der `+=` -Operator verwendet, um einem Ereignis einen Handler zuzuweisen. Dabei handelt es sich um denselben Operator, der verwendet wird, um einen Handler im Ereignis Behandlungsmodell Common Language Runtime (CLR) zuzuweisen. Microsoft Visual Basic unterstützt diesen Operator nicht als Mittel zum Hinzufügen von Ereignis Handlern. Stattdessen ist eine von zwei Methoden erforderlich:  
   
-- Verwenden der <xref:System.Windows.UIElement.AddHandler%2A> -Methode zusammen mit einer `AddressOf` -Operator, um auf die Implementierung des Handlers zu verweisen.  
+- Verwenden Sie <xref:System.Windows.UIElement.AddHandler%2A> die-Methode und einen `AddressOf` -Operator, um auf die Ereignishandlerimplementierung zu verweisen.  
   
-- Verwenden der `Handles` -Schlüsselwort als Teil der Definition des Ereignis-Handler. Diese Technik ist hier nicht gezeigt; finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](visual-basic-and-wpf-event-handling.md).  
+- Verwenden Sie `Handles` das-Schlüsselwort als Teil der Ereignishandlerdefinition. Diese Technik wird hier nicht angezeigt. siehe [Visual Basic und WPF-Ereignis Behandlung](visual-basic-and-wpf-event-handling.md).  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   
@@ -35,7 +35,7 @@ Dieses Beispiel zeigt, wie ein Element mithilfe von Code einen Ereignishandler h
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  Hinzufügen eines ereignishandlers, der anfänglich analysierten [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite ist viel einfacher. Fügen Sie in der Object-Element, in dem Sie den Ereignishandler hinzufügen möchten ein Attribut, das mit dem Namen des Ereignisses übereinstimmt, die Sie behandeln möchten. Geben Sie den Wert dieses Attributs als Namen für die Ereignishandlermethode, die Sie in der CodeBehind-Datei definiert die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite. Weitere Informationen finden Sie unter [XAML Overview (WPF)](xaml-overview-wpf.md) oder [Übersicht über Routingereignisse](routed-events-overview.md).  
+>  Das Hinzufügen eines Ereignis Handlers in der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] anfänglich analysierten Seite ist viel einfacher. Fügen Sie innerhalb des Objekt Elements, dem Sie den Ereignishandler hinzufügen möchten, ein Attribut hinzu, das dem Namen des Ereignisses entspricht, das Sie behandeln möchten. Geben Sie dann den Wert dieses Attributs als Namen der Ereignishandlermethode an, die Sie in der Code Behind-Datei [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] der Seite definiert haben. Weitere Informationen finden Sie unter [Übersicht über](routed-events-overview.md) [XAML (WPF)](xaml-overview-wpf.md) oder Routing Ereignisse.  
   
 ## <a name="see-also"></a>Siehe auch
 
