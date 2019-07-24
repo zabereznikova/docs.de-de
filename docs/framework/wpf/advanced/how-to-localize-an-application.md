@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 8f1251195fdb21ac57030056abc7b5657edb49fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614623"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331553"
 ---
 # <a name="how-to-localize-an-application"></a>Vorgehensweise: Lokalisieren einer Anwendung
 In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem LocBaml-Tool erstellt wird.  
@@ -30,13 +30,13 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 ## <a name="requirements"></a>Anforderungen  
  Im Verlauf dieser Diskussion verwenden Sie [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], ein Compiler, der über die Befehlszeile ausgeführt wird.  
   
- Darüber hinaus werden Sie aufgefordert, eine Projektdatei zu verwenden. Anweisungen zur Verwendung von [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] und Projektdateien, finden Sie unter [erstellen und Bereitstellen von](../app-development/building-and-deploying-wpf-applications.md).  
+ Darüber hinaus werden Sie aufgefordert, eine Projektdatei zu verwenden. Anweisungen zur Verwendung [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] von-und-Projektdateien finden Sie unter [Erstellen und](../app-development/building-and-deploying-wpf-applications.md)bereitstellen.  
   
  Alle Beispiele in dieser Diskussion verwenden als Kultur US-amerikanisches Englisch (en-US, Englisch-US). Dies ermöglicht es Ihnen, die Beispielschritte durchzuarbeiten, ohne eine andere Sprache installieren zu müssen.  
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>Erstellen einer Beispielanwendung  
- In diesem Schritt bereiten Sie Ihre Anwendung für die Lokalisierung vor. In den [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Beispielen wird die Beispielanwendung HelloApp bereitgestellt, die für die Codebeispiele in dieser Diskussion verwendet wird. Wenn Sie dieses Beispiel verwenden möchten, laden Sie die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Dateien aus dem [Beispieltool LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+ In diesem Schritt bereiten Sie Ihre Anwendung für die Lokalisierung vor. In den [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Beispielen wird die Beispielanwendung HelloApp bereitgestellt, die für die Codebeispiele in dieser Diskussion verwendet wird. Wenn Sie dieses Beispiel verwenden möchten, laden Sie die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Dateien aus dem [LocBaml-Tool Beispiel](https://go.microsoft.com/fwlink/?LinkID=160016)herunter.  
   
 1. Entwickeln Sie Ihre Anwendung bis zu dem Punkt, an dem Sie die Lokalisierung starten möchten.  
   
@@ -44,15 +44,15 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
      `<UICulture>en-US</UICulture>`  
   
-3. Fügen Sie den [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dateien UIDs hinzu. UIDs werden verwendet, um Änderungen an Dateien nachzuverfolgen und die Elemente zu identifizieren, die übersetzt werden müssen. Um Ihre Dateien Uids hinzuzufügen, führen Sie **Updateuid** in Ihrer Projektdatei hinzu:  
+3. Fügen Sie den [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dateien UIDs hinzu. UIDs werden verwendet, um Änderungen an Dateien nachzuverfolgen und die Elemente zu identifizieren, die übersetzt werden müssen. Um den Dateien UIDs hinzuzufügen, führen Sie **updateuid** für die Projektdatei aus:  
   
      **msbuild -t:updateuid helloapp.csproj**  
   
-     Führen Sie zum Überprüfen, dass Sie keine fehlen bzw. doppelt Uids vorhanden **Checkuid**:  
+     Führen Sie **checkuid**aus, um sicherzustellen, dass Sie nicht über fehlende oder doppelte UIDs verfügen:  
   
      **msbuild -t:checkuid helloapp.csproj**  
   
-     Nach der Ausführung **Updateuid**, sollten Ihre Dateien Uids enthalten. Beispielsweise sollten Sie in der Datei "Pane1.xaml" von HelloApp Folgendes finden:  
+     Nachdem Sie **updateuid**ausgeführt haben, sollten Ihre Dateien UIDs enthalten. Beispielsweise sollten Sie in der Datei "Pane1.xaml" von HelloApp Folgendes finden:  
   
      `<StackPanel x:Uid="StackPanel_1">`  
   
@@ -81,7 +81,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Erstellen des LocBaml-Tools  
   
-1. Alle für das Erstellen von LocBaml notwendigen Dateien befinden sich in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Beispielen. Laden Sie die C#-Dateien aus dem [Beispieltool LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+1. Alle für das Erstellen von LocBaml notwendigen Dateien befinden sich in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Beispielen. Laden Sie C# die Dateien aus dem [LocBaml-Tool Beispiel](https://go.microsoft.com/fwlink/?LinkID=160016)herunter.  
   
 2. Führen Sie über die Befehlszeile die Projektdatei (locbaml.csproj) aus, um das Tool zu erstellen:  
   
@@ -91,24 +91,24 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
 4. Für ein Ausführen von LocBaml können Sie folgende Optionen angeben:  
   
-    - **Analysieren von** oder **-p:** Analysiert BAML-, oder [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] Dateien, um eine CSV- oder TXT-Datei zu generieren.  
+    - **analysieren** oder **-p:** Analysiert BAML, Ressourcen oder [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] Dateien, um eine CSV-oder txt-Datei zu generieren.  
   
-    - **Generieren von** oder **-g:** Generiert eine lokalisierte Binärdatei, indem eine übersetzte Datei.  
+    - **generieren** Sie oder **-g:** Generiert eine lokalisierte Binärdatei, indem eine übersetzte Datei verwendet wird.  
   
-    - **out** oder **- e/a** {*Dateiverzeichnis*] **:** Name der Ausgabedatei.  
+    - **out** oder **-o** {*Datei Verzeichnis*] **:** Der Name der Ausgabedatei.  
   
-    - **Kultur** oder **- Cul** {*Kultur*] **:** Gebietsschema der Ausgabeassemblys.  
+    - **Culture** oder **-cUL** {*Culture*] **:** Locale der Ausgabeassemblys  
   
-    - **Übersetzung** oder **- Trans** {*translation.csv*] **:** Übersetzte oder lokalisierte Datei.  
+    - **Übersetzung** oder **-Trans** {*Translation. CSV*] **:** Übersetzte oder lokalisierte Datei.  
   
-    - **Asmpath** oder **- Asmpath:** {*Dateiverzeichnis*] **:** Wenn Ihre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Code benutzerdefinierte Steuerelemente enthält, geben Sie an der **Asmpath** für die benutzerdefinierte Steuerelementassembly.  
+    - **asmpath** oder **-asmpath:** {*Datei Verzeichnis*] **:** Wenn Ihr [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Code benutzerdefinierte Steuerelemente enthält, müssen Sie den **asmpath** für die benutzerdefinierte Steuerelement-Assembly bereitstellen.  
   
-    - **nologo:** Werden keine Informationen Logo noch Copyrightinformationen angezeigt.  
+    - **nologo:** Zeigt kein Logo oder Copyright Informationen an.  
   
-    - **verbose:** Zeigt Informationen im ausführlichen Modus an.  
+    - **Ausführliche** Zeigt ausführliche Modusinformationen an.  
   
     > [!NOTE]
-    >  Wenn Sie eine Liste der Optionen benötigen, wenn Sie das Tool ausgeführt werden, geben Sie **LocBaml.exe** und drücken Sie EINGABETASTE.  
+    >  Wenn Sie beim Ausführen des Tools eine Liste der Optionen benötigen, geben Sie " **LocBaml. exe** " ein, und drücken Sie die EINGABETASTE.  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>Verwenden von LocBaml zum Analysieren einer Datei  
@@ -137,13 +137,13 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
    2. **Ressourcenschlüssel**. Der lokalisierte Ressourcenbezeichner.  
   
-   3. **Kategorie**. Der Werttyp. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
+   3. **Kategorie**. Der Werttyp. Siehe [Lokalisierungs Attribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   4. **Lesbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool gelesen werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
+   4. **Lesbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool gelesen werden kann. Siehe [Lokalisierungs Attribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   5. **Änderbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool geändert werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
+   5. **Änderbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool geändert werden kann. Siehe [Lokalisierungs Attribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   6. **Kommentare**. Zusätzliche Beschreibung des Werts, um zu ermitteln, wie ein Wert lokalisiert wird. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
+   6. **Kommentare**. Zusätzliche Beschreibung des Werts, um zu ermitteln, wie ein Wert lokalisiert wird. Siehe [Lokalisierungs Attribute und-Kommentare](localization-attributes-and-comments.md).  
   
    7. **Wert**. Der Textwert, der in die gewünschte Sprache übersetzt werden soll.  
   
@@ -152,12 +152,12 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
    |BAML-Name|Ressourcenschlüssel|Kategorie|Lesbarkeit|Änderbarkeit|Kommentare|Wert|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorieren|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Keiner|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Keiner|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|true|true||Goodbye World|
   
-   Beachten Sie, dass alle Werte für die **Kommentare** Feld keine Werte enthalten, wenn ein Feld einen Wert besitzt, ist es leer. Beachten Sie auch, dass das Element in der ersten Zeile weder lesbar noch änderbar ist und "ignorieren" als seine **Kategorie** Wert, der angegeben ist, dass der Wert nicht lokalisierbar ist.  
+   Beachten Sie, dass alle Werte für das Feld **Kommentare** keine Werte enthalten. Wenn ein Feld keinen Wert hat, ist es leer. Beachten Sie auch, dass das Element in der ersten Zeile weder lesbar noch änderbar ist und "Ignore" als **Kategoriewert** aufweist. Dies bedeutet, dass der Wert nicht lokalisierbar ist.  
   
-4. Zum Erkennen von lokalisierbaren Elementen in analysierten Dateien, insbesondere in großen Dateien zu vereinfachen, können Sie sortieren oder filtern Sie die Elemente nach **Kategorie**, **Lesbarkeit**, und **Änderbarkeit**. Beispielsweise können Sie nicht lesbare und nicht änderbare Werte herausfiltern.  
+4. Um die Ermittlung Lokalisier barer Elemente in analysierten Dateien, insbesondere in großen Dateien, zu vereinfachen, können Sie die Elemente nach **Kategorie**, **Lesbarkeit**und Änderbarkeit sortieren oder filtern. Beispielsweise können Sie nicht lesbare und nicht änderbare Werte herausfiltern.  
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>Übersetzen des lokalisierbaren Inhalts  
@@ -165,7 +165,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>Verwenden von LocBaml zum Generieren einer neuen .resources.dll-Datei  
- Die Inhalte, die durch das Analysieren von "HelloApp.resources.dll" mit LocBaml erkannt wurden, sind nun übersetzt und müssen wieder mit der ursprünglichen Anwendung zusammengeführt werden. Verwenden der **generieren** oder **-g** Option aus, um eine neue. resources.dll-Datei.  
+ Die Inhalte, die durch das Analysieren von "HelloApp.resources.dll" mit LocBaml erkannt wurden, sind nun übersetzt und müssen wieder mit der ursprünglichen Anwendung zusammengeführt werden. Verwenden Sie die Option **generieren** oder **-g** , um eine neue resources. dll-Datei zu generieren.  
   
 1. Verwenden Sie die folgende Syntax, um eine neue "HelloApp.resources.dll"-Datei zu generieren. Kennzeichnen Sie die Kultur als "en-US" (/cul:en-US).  
   
@@ -188,7 +188,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
 7. Um die neue Satellitenassembly zu testen, müssen Sie die Kultur ändern, unter der Ihre Anwendung ausgeführt wird. Dazu haben Sie zwei Möglichkeiten:  
   
-    - Ändern Sie die regionalen Einstellungen des Betriebssystems (**starten** &#124; **Systemsteuerung** &#124; **Regions- und Sprachoptionen**).  
+    - Ändern Sie die regionalen Einstellungen Ihres Betriebssystems (**Start** &#124; **Steuerungs** &#124; **Optionen Regions-und Sprachoptionen**).  
   
     - Fügen Sie in Ihrer Anwendung den folgenden Code in "App.xaml.cs" hinzu:  
   
@@ -199,7 +199,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>Einige Tipps zum Verwenden von LocBaml  
   
-- Alle abhängigen Assemblys, die benutzerdefinierte Steuerelemente definieren, müssen in das lokale Verzeichnis von LocBaml kopiert oder im globalen Assemblycache (GAC) installiert werden. Dies ist notwendig, da die Lokalisierungs-API Zugriff auf die abhängigen Assemblys haben muss, wenn sie die [!INCLUDE[TLA#tla_baml](../../../../includes/tlasharptla-baml-md.md)] liest.  
+- Alle abhängigen Assemblys, die benutzerdefinierte Steuerelemente definieren, müssen in das lokale Verzeichnis von LocBaml kopiert oder im globalen Assemblycache (GAC) installiert werden. Dies ist erforderlich, da die Lokalisierungs-API Zugriff auf die abhängigen Assemblys haben muss, wenn Sie das binäre XAML (BAML) liest.  
   
 - Wenn die Hauptassembly signiert ist, muss auch die generierte Ressourcen-DLL signiert sein, damit sie geladen werden kann.  
   

@@ -2,65 +2,72 @@
 title: Verbindungszeichenfolgen in ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881157"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363747"
 ---
 # <a name="connection-strings-in-adonet"></a>Verbindungszeichenfolgen in ADO.NET
 
-Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Parameter von einem Datenanbieter an eine Datenquelle übergeben werden. Der Datenanbieter empfängt die Verbindungszeichenfolge als Wert für die <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> Eigenschaft. Der Anbieter die Verbindungszeichenfolge analysiert, und es wird sichergestellt, dass die Syntax richtig ist und die Schlüsselwörter unterstützt werden. Die <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> Methode übergibt die analysierten Verbindungsparameter an die Datenquelle. Die Datenquelle weiter überprüft und stellt eine Verbindung her.
+Eine Verbindungszeichenfolge enthält Initialisierungsinformationen, die als Parameter von einem Datenanbieter an eine Datenquelle übergeben werden. Der Datenanbieter empfängt die Verbindungs Zeichenfolge als Wert <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> der-Eigenschaft. Der Anbieter analysiert die Verbindungs Zeichenfolge und stellt sicher, dass die Syntax korrekt ist und dass die Schlüsselwörter unterstützt werden. Anschließend übergibt <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> die-Methode die analysierten Verbindungsparameter an die Datenquelle. Die Datenquelle führt eine weitere Validierung durch und stellt eine Verbindung her.
 
-## <a name="connection-string-syntax"></a>Syntax für Verbindungszeichenfolgen
+## <a name="connection-string-syntax"></a>Verbindungs Zeichen folgen Syntax
 
-Eine Verbindungszeichenfolge ist eine durch Semikolons getrennte Liste von Schlüssel/Wert-Parameterpaaren:
+Eine Verbindungs Zeichenfolge ist eine durch Semikolons getrennte Liste von Schlüssel-Wert-Parameter Paaren:
 
 ```
 keyword1=value; keyword2=value;
 ```
 
-Schlüsselwörter sind nicht in der Groß-/Kleinschreibung beachtet. Werte, möglicherweise jedoch Groß-/Kleinschreibung beachtet, abhängig von der Datenquelle. Sowohl Schlüsselwörtern und Werten enthalten möglicherweise [aus Whitespace bestehenden Zeichen](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Führende und nachfolgende Leerzeichen ignoriert werden, Schlüsselwörter und ohne Anführungszeichen Werte.
+Bei Schlüsselwörtern wird Groß-/Kleinschreibung nicht beachtet. Bei Werten kann jedoch abhängig von der Datenquelle die Groß-/Kleinschreibung beachtet werden. Sowohl Schlüsselwörter als auch Werte können [Leerzeichen](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)enthalten. Führende und nachfolgende Leerzeichen werden in Schlüsselwörtern und Werten ohne Anführungszeichen ignoriert.
 
-Wenn Sie einen Wert enthält, Semikolon, [Unicode-Steuerzeichen](https://en.wikipedia.org/wiki/Unicode_control_characters), oder führende oder nachfolgende Leerzeichen, muss er in einfache oder doppelte Anführungszeichen eingeschlossen werden. Zum Beispiel:
+Wenn ein Wert das Semikolon oder [Unicode-Steuerzeichen](https://en.wikipedia.org/wiki/Unicode_control_characters)oder führende oder nachfolgende Leerzeichen enthält, muss er in einfache oder doppelte Anführungszeichen eingeschlossen werden. Beispiel:
 
 ```
 Keyword=" whitespace  ";
 Keyword='special;character';
 ```
 
-Die umschließende Zeichen kann nicht im Wert auftreten, die eingeschlossen. Aus diesem Grund kann ein Wert mit einfachen Anführungszeichen eingeschlossen werden, nur in doppelte Anführungszeichen (und umgekehrt):
+Das einschließende Zeichen darf nicht innerhalb des umschließenden Werts auftreten. Daher kann ein Wert, der einfache Anführungszeichen enthält, nur in doppelte Anführungszeichen eingeschlossen werden und umgekehrt:
 
 ```
 Keyword='double"quotation;mark';
 Keyword="single'quotation;mark";
 ```
 
-Die Anführungszeichen selbst als auch das Gleichheitszeichen erfordern Escapezeichen, keine daher die folgenden Verbindungszeichenfolgen gelten:
+Sie können das einschließende Zeichen auch mit Escapezeichen versehen, indem Sie zwei davon verwenden:
+
+```
+Keyword="double""quotation";
+Keyword='single''quotation';
+```
+
+Die Anführungszeichen selbst und das Gleichheitszeichen erfordern keinen Escapezeichen, sodass die folgenden Verbindungs Zeichenfolgen gültig sind:
 
 ```
 Keyword=no "escaping" 'required';
 Keyword=a=b=c
 ```
 
-Da jeder Wert bis zum nächsten Semikolon oder dem Ende der Zeichenfolge gelesen wird, wird der Wert im zweiten Beispiel `a=b=c`, und das letzte Semikolon ist optional.
+Da jeder Wert bis zum nächsten Semikolon oder Ende der Zeichenfolge gelesen wird, ist `a=b=c`der Wert im letzteren Beispiel, und das abschließende Semikolon ist optional.
 
-Alle Verbindungszeichenfolgen verwenden die gleiche grundlegende Syntax, die oben beschriebenen. Die erkannten Schlüsselwörter allerdings hängt von dem Anbieter und hat im Lauf der Jahre aus früheren APIs, wie z. B. entwickelt *ODBC*. Die *.NET Framework* -Datenanbieter für *SQL Server* (`SqlClient`) unterstützt viele Schlüsselwörter aus ältere APIs aber ist in der Regel eine flexiblere und akzeptiert Sie Synonyme für viele allgemeine Verbindungszeichenfolge Schlüsselwörter.
+Alle Verbindungs Zeichenfolgen haben dieselbe grundlegende Syntax, die oben beschrieben wird. Der Satz der erkannten Schlüsselwörter hängt jedoch vom Anbieter ab und hat sich über die Jahre von früheren APIs wie *ODBC*entwickelt. Der *.NET Framework* -Datenanbieter  für SQL Server`SqlClient`() unterstützt viele Schlüsselwörter aus älteren APIs, ist jedoch im Allgemeinen flexibler und akzeptiert Synonyme für viele der allgemeinen Schlüsselwörter der Verbindungs Zeichenfolge.
 
-Eingeben der Fehler kann Fehler verursachen. Z. B. `Integrated Security=true` gültig ist, aber `IntegratedSecurity=true` verursacht einen Fehler.
+Das Eingeben von Fehlern kann zu Fehlern führen. Beispielsweise `Integrated Security=true` ist gültig `IntegratedSecurity=true` , verursacht jedoch einen Fehler.
 
-Verbindungszeichenfolgen, die manuell zur Laufzeit aus nicht validierten Benutzereingaben konstruiert sind anfällig für Zeichenfolge-Injection-Angriffen und Sicherheit in der Datenquelle gefährden. Um diesen schwierigkeiten *ADO.NET* 2.0 enthält [Verbindungszeichenfolgen-Generatoren](../../../../docs/framework/data/adonet/connection-string-builders.md) für jede *.NET Framework* Datenanbieter. Diese Verbindungszeichenfolgen-Generatoren verfügbar machen Parameter als stark typisierte Eigenschaften, und Sie können sie die Verbindungszeichenfolge zu überprüfen, bevor sie mit der Datenquelle gesendet wird.
+Verbindungs Zeichenfolgen, die zur Laufzeit von nicht validierten Benutzereingaben manuell erstellt werden, sind anfällig für Angriffe durch Zeichen folgen Injektion und gefährden die Sicherheit in der Datenquelle. Um diese Probleme zu beheben, wurden von *ADO.net* 2,0 [Verbindungs](../../../../docs/framework/data/adonet/connection-string-builders.md) Zeichenfolgen-Generatoren für jeden *.NET Framework* -Datenanbieter eingeführt. Diese Verbindungs Zeichenfolgen-Generatoren machen Parameter als stark typisierte Eigenschaften verfügbar und ermöglichen es, die Verbindungs Zeichenfolge zu validieren, bevor Sie an die Datenquelle gesendet wird.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-[Verbindungszeichenfolgen-Generatoren](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[Verbindungs Zeichen folgen-Generatoren](../../../../docs/framework/data/adonet/connection-string-builders.md)\
 Zeigt, wie mit den `ConnectionStringBuilder`-Klassen gültige Verbindungszeichenfolgen zur Laufzeit erstellt werden können.
 
-[Verbindungszeichenfolgen und Konfigurationsdateien](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[Verbindungs Zeichenfolgen und Konfigurationsdateien](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
 Zeigt, wie Verbindungszeichenfolgen in Konfigurationsdateien gespeichert und abgerufen werden können.
 
-[Syntax für Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[Verbindungs Zeichen folgen Syntax](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
 Beschreibt das Konfigurieren anbieterspezifischer Verbindungszeichenfolgen für `SqlClient`, `OracleClient`, `OleDb` und `Odbc`.
 
 [Schützen von Verbindungsinformationen](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
