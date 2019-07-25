@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400674"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434079"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "68400674"
   
 - Die Eigenschaften und Ereignisse stellen Informationen zur Funktionalität des Steuerelementmusters sowie zum Status des Steuerelements zur Verfügung.  
   
- Steuerelementmuster beziehen sich so auf [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , wie sich Schnittstellen auf [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] -Objekte beziehen. In [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]können Sie ein Objekt daraufhin abfragen, welche Schnittstellen es unterstützt, und dann diese Schnittstellen verwenden, um auf die Funktionalität zuzugreifen. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]kann ein Benutzeroberflächenautomatisierungs-Client ein Steuerelement daraufhin abfragen, welche Steuerelementmuster es unterstützt, und anschließend über die Eigenschaften, Methoden, Ereignisse und Strukturen, die von den unterstützten Steuerelementmustern verfügbar gemacht werden, auf das Steuerelement zugreifen. Beispielsweise implementiert ein Benutzeroberflächenautomatisierungs-Anbieter für ein mehrzeiliges Bearbeitungsfeld eine <xref:System.Windows.Automation.Provider.IScrollProvider>-Schnittstelle. Wenn ein Client weiß, dass ein <xref:System.Windows.Automation.AutomationElement> das <xref:System.Windows.Automation.ScrollPattern> -Steuerelementmuster unterstützt, kann er die Eigenschaften, Methoden und Ereignisse, die von diesem Steuerelementmuster verfügbar gemacht werden, dazu verwenden, auf das Steuerelement oder auf Informationen über das Steuerelement zuzugreifen.  
+ Steuerelement Muster beziehen [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sich auf, wenn sich Schnittstellen auf Component Object Model (com)-Objekte beziehen. In com können Sie ein Objekt Abfragen, um zu ermitteln, welche Schnittstellen es unterstützt, und dann diese Schnittstellen verwenden, um auf die Funktionalität zuzugreifen. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]kann ein Benutzeroberflächenautomatisierungs-Client ein Steuerelement daraufhin abfragen, welche Steuerelementmuster es unterstützt, und anschließend über die Eigenschaften, Methoden, Ereignisse und Strukturen, die von den unterstützten Steuerelementmustern verfügbar gemacht werden, auf das Steuerelement zugreifen. Beispielsweise implementiert ein Benutzeroberflächenautomatisierungs-Anbieter für ein mehrzeiliges Bearbeitungsfeld eine <xref:System.Windows.Automation.Provider.IScrollProvider>-Schnittstelle. Wenn ein Client weiß, dass ein <xref:System.Windows.Automation.AutomationElement> das <xref:System.Windows.Automation.ScrollPattern> -Steuerelementmuster unterstützt, kann er die Eigenschaften, Methoden und Ereignisse, die von diesem Steuerelementmuster verfügbar gemacht werden, dazu verwenden, auf das Steuerelement oder auf Informationen über das Steuerelement zuzugreifen.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>Benutzeroberflächenautomatisierungs-Anbieter und -Clients  

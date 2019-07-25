@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: fe07b01cfa62d8d1cbc2e4a61cac814425af7da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 580a6e1caa78ea981b6d2be68a6e7c61e2ad55d7
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639835"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433813"
 ---
 # <a name="visual-basic-coding-conventions"></a>Codierungskonventionen in Visual Basic
 Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem Thema folgen. Wenn Sie dieselben Codierungskonventionen beachten, erhalten Sie möglicherweise folgende Vorteile:  
@@ -26,7 +26,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 ## <a name="naming-conventions"></a>Namenskonventionen  
   
-- Informationen zu Benennungsrichtlinien finden Sie unter [Benennungsrichtlinien für die](../../../standard/design-guidelines/naming-guidelines.md) Thema.  
+- Informationen zu Benennungs Richtlinien finden Sie im Thema [Benennungs Richtlinien](../../../standard/design-guidelines/naming-guidelines.md) .  
   
 - Verwenden Sie nicht "My" oder "my" als Teil eines Variablennamens. Diese Vorgehensweise führt zu Verwechslungen mit den `My`-Objekten.  
   
@@ -36,7 +36,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 - Fügen Sie Registerkarten als Leerzeichen ein, und verwenden Sie intelligenten Einzug mit vier Leerzeichen.  
   
-- Verwendung **Einrückung Einrückung des Codes** Neuformatieren von Code im Code-Editor. Weitere Informationen finden Sie unter [Optionen, Text-Editor, Standard (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
+- Verwenden Sie eine **ganz Zahl Auflistung (Neuformatierung) von Code** , um den Code im Code-Editor neu zu formatieren. Weitere Informationen finden Sie unter [Optionen, Text-Editor, Basic (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic).  
   
 - Verwenden Sie pro Zeile nur eine Anweisung. Verwenden Sie nicht das Visual Basic-Zeilentrennzeichen (:).  
   
@@ -44,7 +44,7 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 - Verwenden Sie pro Zeile nur eine Deklaration.  
   
-- Wenn **Einrückung Einrückung des Codes** nicht Fortsetzungszeilen automatisch zum einrücken manuell Fortsetzung einen Tabstopp. In einer Liste werden jedoch die Elemente immer links ausgerichtet.  
+- Wenn **durch eine Auflistung (Neuformatierung) des Codes** keine Fortsetzungs Zeilen automatisch formatiert werden, werden Fortsetzungs Zeilen manuell mit einem Tabstopp Einzug eingelesen. In einer Liste werden jedoch die Elemente immer links ausgerichtet.  
   
     ```  
     a As Integer,  
@@ -75,9 +75,11 @@ Microsoft entwickelt Beispiele und Dokumentation, die den Richtlinien in diesem 
   
 ### <a name="string-data-type"></a>String-Datentyp  
   
-- Verwenden Sie zum Verketten von Zeichenfolgen, ein kaufmännisches und-Zeichen (&).  
+- Verwenden Sie die [Zeichenfolgeninterpolation](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings), um wie im folgenden Code gezeigt kurze Zeichenfolgen zu verketten.
   
-     [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
+     ```vb
+     MsgBox($"hello{vbCrLf}goodbye")
+     ```
   
 - Verwenden Sie das <xref:System.Text.StringBuilder>-Objekt, um Zeichenfolgen in Schleifen anzuhängen.  
   

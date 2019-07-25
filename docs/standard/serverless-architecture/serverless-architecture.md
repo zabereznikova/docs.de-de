@@ -1,77 +1,77 @@
 ---
-title: Serverlose Architektur – serverlose apps
-description: Die Auswertung von verschiedenen Architekturen und apps, die durch serverlose Architekturen, einschließlich Web-apps, Mobile Apps und IoT unterstützt werden.
+title: Server lose Architektur-Server Lose apps
+description: Untersuchung verschiedener Architekturen und apps, die von Server losen Architekturen unterstützt werden, einschließlich Web-Apps, Mobile Apps und IOT.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b22fecfdc693154dbdeb3e872e0e246e8ca41f9
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967792"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434064"
 ---
 # <a name="serverless-architecture"></a>Serverlose Architektur
 
-Es gibt viele Ansätze mit [serverlose](http://azure.com/serverless) Architekturen. In diesem Kapitel werden Beispiele für allgemeine Architekturen, die serverlose integriert. Er behandelt auch bedenken, die möglicherweise zusätzliche Herausforderungen darstellen, oder benötigen zusätzliche Überlegung beim serverlosen implementieren. Schließlich sind einige entwurfsbeispielen bereitgestellt, die verschiedene serverlose Anwendungsfälle veranschaulichen.
+Es gibt viele Ansätze für die Verwendung [Server loser](https://azure.com/serverless) Architekturen. In diesem Kapitel werden Beispiele für gängige Architekturen erläutert, die Server lose integrieren. Außerdem werden Probleme behandelt, die möglicherweise zusätzliche Herausforderungen darstellen oder bei der Implementierung von Server losen Überlegungen erforderlich sind. Schließlich werden mehrere Entwurfs Beispiele bereitgestellt, die verschiedene Server lose Anwendungsfälle veranschaulichen.
 
-Serverlose Hosts verwenden häufig eine vorhandene containerbasierte oder PaaS-Schicht, um die serverlose-Instanzen zu verwalten. Azure Functions basiert beispielsweise auf [Azure App Service](https://docs.microsoft.com/azure/app-service/). App Service wird verwendet, um Instanzen skalieren und Verwalten von der Runtime, die Azure Functions-Code ausgeführt wird. Für Windows-basierten Funktionen out der Host ausgeführt wird, als PaaS und skaliert die .NET Runtime. Für Linux-basierten Funktionen nutzt der Host Container.
+Server lose Hosts verwenden häufig eine vorhandene Container basierte-oder-pas-Schicht, um die Server losen Instanzen zu verwalten. Azure Functions basiert z. b. auf [Azure App Service](https://docs.microsoft.com/azure/app-service/). Der APP Service wird zum horizontalen hochskalieren von Instanzen und zum Verwalten der Laufzeit verwendet, die Azure Functions Code ausführt. Für Windows-basierte Funktionen wird der Host als "Pas" ausgeführt, und die .NET-Laufzeit wird horizontal hochskaliert. Bei Linux-basierten Funktionen nutzt der Host Container.
 
 ![Azure Functions-Architektur](./media/azure-functions-architecture.png)
 
-Das WebJobs-Core bietet einen Ausführungskontext für die Funktion. Der Language Runtime Skripts ausgeführt, führt der Bibliotheken und hostet das Framework für die Zielsprache. Z. B. Node.js wird verwendet, um JavaScript-Funktionen und .NET Framework wird verwendet, um die C#-Funktionen ausgeführt werden. Erfahren Sie mehr zu Sprache und Plattform-Optionen in diesem Kapitel.
+Der webjobs-Kern bietet einen Ausführungs Kontext für die Funktion. Die Language Runtime führt Skripts aus, führt Bibliotheken aus und hostet das Framework für die Zielsprache. Beispielsweise wird Node. js zum Ausführen von JavaScript-Funktionen verwendet, und der .NET Framework wird zum C# Ausführen von Funktionen verwendet. Weitere Informationen zu Sprach-und Platt Form Optionen finden Sie weiter unten in diesem Kapitel.
 
-Einige Projekte können von einer "umfassendste" Ansatz zum serverlosen profitieren. Anwendungen, die häufig auf Microservices basieren, können alle Microservices mit serverloser Technologie implementieren. Die meisten apps sind hybride, ein N-Tier-Design und serverlose für die Komponenten, die sinnvoll, da die Komponenten modular und unabhängig skalierbar sind. Damit dieser Szenarien sinnvoll sein können, führt in diesem Abschnitt durchlaufen einige gängige architekturbeispiele, die serverlose verwenden.
+Einige Projekte können von einem "All-in"-Ansatz für Server lose genutzt werden. Anwendungen, die sich stark auf Mikro Services stützen, können alle Mikro Dienste mithilfe von Server losen Technologien implementieren. Bei den meisten apps handelt es sich um Hybridlösungen, die einem N-Tier-Design folgen und Server lose für die Komponenten verwenden, die sinnvoll sind, da die Komponenten modular und unabhängig skalierbar sind. Um diese Szenarien zu verstehen, werden in diesem Abschnitt einige gängige Architekturbeispiele erläutert, die Server lose verwenden.
 
-## <a name="full-serverless-back-end"></a>Vollständige serverlose Back-end
+## <a name="full-serverless-back-end"></a>Vollständiges Server Loses Back-End
 
-Das vollständige serverlose Back-End ist ideal für verschiedene Arten von Szenarien, insbesondere, wenn neu erstellen oder "green-Field"-Anwendungen. Eine Anwendung mit einer großen Oberfläche der APIs kann davon profitieren, implementieren jede API als eine serverlose Funktion. Apps, die auf Microservices-Architektur basieren, sind ein weiteres Beispiel, das als vollständige serverlose Back-End implementiert werden kann. Die Microservices über verschiedene Protokolle miteinander kommunizieren. Bestimmte Szenarien:
+Das vollständige Server lose Back-End eignet sich ideal für verschiedene Arten von Szenarien, insbesondere bei der Erstellung von neuen oder "grünen field"-Anwendungen. Eine Anwendung mit einem großen Oberflächen Bereich von APIs kann davon profitieren, jede API als Server lose Funktion zu implementieren. Apps, die auf der microservices-Architektur basieren, sind ein weiteres Beispiel, das als vollständiges Server Loses Back-End implementiert werden kann. Die-Webdienste kommunizieren untereinander über verschiedene Protokolle. Zu den spezifischen Szenarien zählen:
 
-* API-basierte SaaS-Produkten (Beispiel: finanzielle Zahlungen-Prozessor).
-* Nachrichtengesteuerter Anwendungen (Beispiel: Lösung für die geräteüberwachung).
-* Apps mit dem Schwerpunkt Integration zwischen Diensten (Beispiel: Fluggesellschaft buchungsanwendung).
-* Prozesse, die in regelmäßigen Abständen ausgeführt werden (Beispiel: Timer-basierten Datenbank bereinigen).
-* Apps mit dem Schwerpunkt Datentransformation (Beispiel: Importieren von Dateiuploads ausgelöst).
-* Extrahieren Sie, Transformieren und laden (ETL)-Prozesse.
+* API-basierte SaaS-Produkte (Beispiel: Finanzzahlungen-Prozessor).
+* Nachrichten gesteuerte Anwendungen (Beispiel: Geräte Überwachungslösung).
+* Apps, die sich auf die Integration zwischen Diensten konzentrieren (Beispiel: Anwendung für die Fluggesellschaft).
+* Prozesse, die regelmäßig ausgeführt werden (z. b. Zeit Geber basiertes Bereinigen der Datenbank).
+* Apps, die sich auf die Datentransformation konzentrieren (Beispiel: Import ausgelöst durch Datei Upload).
+* Extrahieren Sie Prozesse zum Transformieren und laden (ETL).
 
-Es gibt andere, spezifische Anwendungsfälle, die weiter unten in diesem Dokument behandelt werden.
+Es gibt weitere, spezifischere Anwendungsfälle, die später in diesem Dokument behandelt werden.
 
-## <a name="monoliths-and-starving-the-beast"></a>Mehr als Monolithen entwickelt und "belegen die Beast"
+## <a name="monoliths-and-starving-the-beast"></a>Monolithen und "hungern des Tieres"
 
-Eine gängige Herausforderung ist eine vorhandene monolithische Anwendung in die Cloud migrieren. Der ungefährlichste Ansatz besteht darin "lift and shift" ausschließlich auf virtuellen Computern. Viele Unternehmen möchten die Migration als Gelegenheit nutzen, um ihre Codebasis zu modernisieren. Eine praktische Methode zum Migrieren von heißt "belegen die Beast." In diesem Szenario wird die monolithische Anwendung migriert, "wie besehen" für den Einstieg. Anschließend werden die ausgewählten Dienste modernisiert. In einigen Fällen die Signatur des Diensts mit dem Original identisch ist: einfach gehostet wird als Funktion. Clients werden aktualisiert, um den neuen Dienst statt der monolithischen Anwendung-Endpunkt zu verwenden. In der Zwischenzeit ermöglichen Schritte aus, wie z. B. die Replikation der Microservices einen eigenen Speicher hosten, selbst wenn Transaktionen immer noch durch die monolithische Anwendung verarbeitet werden. Schließlich werden alle Clients die neuen Dienste migriert. Die monolithische Anwendung ist "blockiert" (seine Dienste nicht mehr aufgerufen), bis alle Funktionen ersetzt wurde. Die Kombination von serverlosen und Proxys können ein Großteil dieser Migration erleichtern.
+Eine gängige Herausforderung besteht darin, eine vorhandene monolithische Anwendung in die Cloud zu migrieren. Der am wenigsten riskante Ansatz besteht darin, vollständig auf virtuelle Computer zu migrieren. Viele Unternehmen bevorzugen die Migration als Gelegenheit, um die Codebasis zu modernisieren. Ein praktischer Ansatz für die Migration wird als "hungern des Tieres" bezeichnet. In diesem Szenario wird die monolithische "as is" migriert, um mit zu beginnen. Anschließend werden die ausgewählten Dienste modernisiert. In einigen Fällen ist die Signatur des Dienstanbieter mit dem Original identisch: Es wird einfach als Funktion gehostet. Clients werden so aktualisiert, dass Sie den neuen Dienst anstelle des monolithischen Endpunkts verwenden. In der Zwischenzeit ermöglichen durch Schritte wie z. b. die Daten Bank Replikation auch dann, wenn Transaktionen weiterhin von der monolithischen verarbeitet werden, ihre eigenen Speicher zu hosten Schließlich werden alle Clients zu den neuen Diensten migriert. Der monolithische Wert ist "verhungert" (seine Dienste werden nicht mehr aufgerufen), bis alle Funktionen ersetzt wurden. Die Kombination aus Server losen und Proxys kann einen Großteil dieser Migration ermöglichen.
 
-![Serverlose Monolith-migration](./media/serverless-monolith-migration.png)
+![Migration von Server losen monolithischen](./media/serverless-monolith-migration.png)
 
-Weitere Informationen zu diesem Ansatz wird das Video: [Bringen Sie Ihre app in die Cloud mit serverlosen Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102).
+Weitere Informationen zu diesem Ansatz finden Sie im Video: [Bringen Sie Ihre APP mit Server losem Azure Functions in die Cloud](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Web-Apps
 
-Web-apps sind gute Kandidaten für die serverlose Anwendungen. Heutzutage werden zwei allgemeine Ansätze zum Web-apps: Server, keysetgesteuerte und Client-gesteuerte (z. B. Single Page Application oder SPA). Servergesteuerte Web-apps verwenden eine Middleware-Ebene in der Regel zum Ausstellen von API-Aufrufe an die Web-Benutzeroberfläche zu rendern. SPA-Anwendungen Aufrufe von REST-API direkt über den Browser. In beiden Szenarien serverlose das Middleware oder die REST-API-Anforderung durch die Bereitstellung der erforderlichen Geschäftslogik aufnehmen kann. Eine allgemeine Architektur ist zum Einrichten eines einfachen Webservers für statisch. Die Single-Page Application (SPA) dient, HTML, CSS, JavaScript und andere Browser-Objekte. Die Web-app wird dann mit einer Microservices-Back-End verbunden.
+Web-Apps sind hervorragend für Server lose Anwendungen geeignet. Heutzutage gibt es zwei gängige Ansätze für Web-Apps: Server gesteuert und Client gesteuert (z. b. Single-Page-Anwendung oder Spa). Server gesteuerte Web-Apps verwenden in der Regel eine middlewareebene, um API-Aufrufe zum renderingbedarf der Webbenutzer Oberfläche auszugeben Spa-Anwendungen machen Rest-API-Aufrufe direkt aus dem Browser. In beiden Szenarien kann Server Lose die Middleware-oder Rest-API-Anforderung unterstützen, indem die erforderliche Geschäftslogik bereitgestellt wird. Eine gängige Architektur ist die Einrichtung eines einfachen statischen Webservers. Die Single-Page-Anwendung (Spa) bietet HTML-, CSS-, JavaScript-und andere browserassets. Die Web-App stellt dann eine Verbindung mit einem Back-End für die Webdienste her
 
-## <a name="mobile-back-ends"></a>Mobile back-ends
+## <a name="mobile-back-ends"></a>Mobile Back-Ends
 
-Das Paradigma ereignisgesteuerte serverlose Apps eignen sie sich hervorragend als Back-Ends für mobile. Das mobile Gerät löst Ereignisse aus, und der serverlose Code ausgeführt wird, um Anforderungen zu erfüllen. Nutzen eines serverlosen Modells ermöglicht Entwicklern, die Geschäftslogik zu verbessern, ohne ein Update für die vollständige Anwendung bereitstellen zu müssen. Der serverlosen Ansatzes kann Teams zum Teilen von Endpunkten und arbeiten parallel.
+Das ereignisgesteuerte Paradigma von Server losen apps stellt sie ideal als Mobile Back-Ends dar. Das Mobile Gerät löst die Ereignisse aus, und der Server lose Code wird ausgeführt, um Anforderungen zu erfüllen. Wenn Sie ein Server Loses Modell nutzen, können Entwickler die Geschäftslogik verbessern, ohne ein vollständiges Anwendungs Update bereitstellen zu müssen. Der Server lose Ansatz ermöglicht es Teams auch, Endpunkte gemeinsam zu nutzen und parallel zu arbeiten.
 
-Mobile-Entwickler können Geschäftslogik ohne Experten auf der Serverseite zu erstellen. Mobile apps in der Vergangenheit mit lokalen Diensten verbunden ist. Erstellen die Dienstschicht erforderlich, verstehen die Server-Plattform und Programmierung Paradigma. Entwickler arbeitet mit Vorgängen zum Server bereitstellen und konfigurieren sie entsprechend. Manchmal Tage oder sogar Wochen für aufgewendet wurden zum Erstellen einer Bereitstellungspipeline. All diese Herausforderungen werden durch serverlose adressiert.
+Mobile Entwickler können Geschäftslogik entwickeln, ohne zu Experten auf der Serverseite zu werden. Bisher waren Mobile Apps mit lokalen Diensten verbunden. Das Entwickeln der Dienst Schicht erforderte das Verständnis der Server Plattform und des Programmier Paradigmas. Entwickler haben mit Vorgängen gearbeitet, um Server bereitzustellen und entsprechend zu konfigurieren. Manchmal wurden Tage oder sogar Wochen für das Entwickeln einer Bereitstellungs Pipeline aufgewendet. Alle diese Herausforderungen werden von Serverless gelöst.
 
-Serverless abstrahiert die serverseitigen Abhängigkeiten, und es kann der Entwickler auf Geschäftslogik konzentrieren. Beispielsweise kann ein mobile-Entwickler, der apps mit JavaScript-Frameworks eines builds sowie serverlose Funktionen mit JavaScript erstellen. Die serverlose-Host verwaltet, das Betriebssystem, eine Node.js-Instanz zum Hosten des Codes, paketabhängigkeiten und mehr. Der Entwickler wird einen einfachen Satz von Eingaben und eine Standardvorlage für Ausgaben bereitgestellt werden. Sie können dann auf erstellen und testen die Geschäftslogik konzentrieren. Aus diesem Grund haben, können Ihre vorhandenen Kenntnisse nutzen, um die Back-End-Logik für die mobile app zu erstellen, ohne erfahren, neue Plattformen, oder werden Sie ein "serverseitige Entwickler".
+Serverless abstrahiert die serverseitigen Abhängigkeiten und ermöglicht es dem Entwickler, sich auf die Geschäftslogik zu konzentrieren. Beispielsweise kann ein mobiler Entwickler, der Apps mithilfe eines JavaScript-Frameworks erstellt, auch Server lose Funktionen mit JavaScript erstellen. Der Server lose Host verwaltet das Betriebssystem, eine Node. js-Instanz zum Hosten des Codes, Paketabhängigkeiten usw. Dem Entwickler wird ein einfacher Satz von Eingaben und eine Standardvorlage für Ausgaben bereitgestellt. Sie können sich dann auf das entwickeln und Testen der Geschäftslogik konzentrieren. Sie sind daher in der Lage, vorhandene Fähigkeiten zu nutzen, um die Back-End-Logik für die Mobile App zu erstellen, ohne neue Plattformen erlernen zu müssen oder "serverseitiger Entwickler" zu werden.
 
-![Serverlose Mobile back-end](./media/serverless-mobile-backend.png)
+![Server Loses mobiles Back-End](./media/serverless-mobile-backend.png)
 
-Die meisten Cloudanbieter bieten Mobile-basierte, serverlosen Produkte, die den gesamten mobilen Entwicklungslebenszyklus zu vereinfachen. Die Produkte können die Bereitstellung von Datenbanken zum Beibehalten von Daten, DevOps-Probleme behandeln, geben Sie cloudbasierte builds und Tests, Frameworks und die Möglichkeit, Skript-Geschäftsprozesse, die mithilfe des Entwicklers bevorzugte Sprache automatisieren. Einen Mobile Geräte konzipierte serverlose Ansatz folgen, kann den Prozess optimieren. Serverless entfernt den enormen Aufwand für die Bereitstellung, Konfiguration und Wartung von Servern für das mobile Back-End.
+Die meisten cloudanbieter bieten Mobile Server lose Produkte, die den gesamten Lebenszyklus der mobilen Entwicklung vereinfachen. Die Produkte können die Bereitstellung von Datenbanken automatisieren, um Daten beizubehalten, devops-Probleme zu behandeln, cloudbasierte Builds und Test-Frameworks bereitzustellen und Geschäftsprozesse mithilfe der bevorzugten Sprache des Entwicklers zu schreiben. Nach einem mobilen Server losen Ansatz kann der Prozess optimiert werden. Serverless entfernt den enormen mehr Aufwand für die Bereitstellung, Konfiguration und Wartung von Servern für das Mobile Back-End.
 
 ## <a name="internet-of-things-iot"></a>Internet der Dinge (IoT)
 
-IoT bezieht sich auf physische Objekte, die miteinander vernetzt sind. Sie sind als "connected Devices" oder "intelligenten Geräten." bezeichnet Alles von Autos und Verkaufsautomaten möglicherweise verbunden sind und Informationen, die von Inventar bis hin zu Daten von triebwerksensoren wie Temperatur- und luftfeuchtigkeitsdaten senden. Im Unternehmen bietet IoT Business prozessverbesserungen durch die Überwachung und Automatisierung. IoT-Daten können verwendet werden, zum Steuern der Klima in einer umfassenden Warehouse oder Nachverfolgen von Inventar der Lieferkette. IoT kann chemischen Überläufe ermitteln und die Feuerwache Wenn Rauch erkannt wird.
+IOT bezieht sich auf physische Objekte, die miteinander vernetzt sind. Sie werden mitunter auch als "verbundene Geräte" oder "intelligente Geräte" bezeichnet. Alles von Autos und Automaten kann verbunden sein und Informationen von der Inventur bis hin zu Sensordaten, z. b. Temperatur und Luftfeuchtigkeit, senden. Im Unternehmen bietet IOT Verbesserungen des Geschäftsprozesses durch Überwachung und Automatisierung. IOT-Daten können verwendet werden, um das Klima in einem großen Warehouse zu regulieren oder die Inventur durch die Lieferkette nachzuverfolgen. IOT kann chemische Lecks erkennen und die feuerwehrabteilung anrufen, wenn Rauch erkannt wird.
 
-Die schiere Menge der Geräte und häufig Informationen bestimmt eine ereignisgesteuerte Architektur, Route und Verarbeiten von Nachrichten. Serverlose ist eine ideale Lösung für verschiedene Gründe haben:
+Die schiere Menge von Geräten und Informationen ist häufig eine ereignisgesteuerte Architektur zum Weiterleiten und Verarbeiten von Nachrichten. Serverless ist aus verschiedenen Gründen eine ideale Lösung:
 
-* Ermöglicht das Skalieren als die Anzahl der Geräte und Daten erhöht.
-* Unterstützt das Hinzufügen neuer Endpunkte zur Unterstützung von neuen Geräten und Sensoren.
-* Unabhängige versionsverwaltung vereinfacht, damit Entwickler die Geschäftslogik für ein bestimmtes Gerät aktualisiert werden können, ohne das gesamte System bereitstellen zu müssen.
+* Ermöglicht die Skalierung, wenn sich die Menge der Geräte und Daten erhöht.
+* Ermöglicht das Hinzufügen neuer Endpunkte zur Unterstützung neuer Geräte und Sensoren.
+* Ermöglicht die unabhängige Versionsverwaltung, damit Entwickler die Geschäftslogik für ein bestimmtes Gerät aktualisieren können, ohne dass das gesamte System bereitgestellt werden muss.
 * Resilienz und weniger Ausfallzeiten.
 
-Die Verbreitung von IoT führt zur Anzeige mehrerer serverlose Produkte, deren Schwerpunkt liegt insbesondere auf IoT-Anforderungen, wie z. B. [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Serverless automatisiert Aufgaben wie z. B. Registrierung von Geräten, richtlinienerzwingung, nachverfolgen und sogar-Bereitstellung des Codes auf Geräte in *am Rand*. Der Rand bezieht sich auf Geräte wie Sensoren und stellantrieben, die mit verbunden sind, jedoch keiner aktiven Teil des Internets.
+Die pervasiativität von IOT führte zu mehreren Server losen Produkten, die sich speziell auf IOT-Probleme konzentrieren, wie z. b. [Azure IOT Hub](https://docs.microsoft.com/azure/iot-hub). Serverless automatisiert Aufgaben wie z. b. Geräteregistrierung, Richtlinien Erzwingung, Nachverfolgung und sogar Bereitstellung von Code auf Geräten im *Edge*-Bereich. Der Edge bezieht sich auf Geräte wie Sensoren und Server, die mit dem Internet verbunden sind, aber nicht aktiv sind.
 
 >[!div class="step-by-step"]
 >[Zurück](architecture-approaches.md)

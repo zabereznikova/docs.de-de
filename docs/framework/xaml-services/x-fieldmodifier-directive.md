@@ -6,15 +6,15 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 0394522b8a006d6b187219c8ef7dfccd6556ffca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 646ad1ca99d83f9fb2994f3c394eca27a60c0eac
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617082"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484726"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier-Anweisung
-XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise mit definiert werden <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> anstelle von Zugriff auf die <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Standardverhalten.  
+Ändert das XAML-Kompilierungs Verhalten, sodass Felder für benannte Objekt Verweise mit <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> Access anstelle <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> des Standard Verhaltens definiert werden.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
@@ -26,29 +26,29 @@ XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise 
   
 |||  
 |-|-|  
-|*Public*|Die genaue Zeichenfolge, die Sie zum Festlegen von übergeben <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> im Vergleich zu <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> variiert in Abhängigkeit von der Code-Behind-Programmiersprache, die verwendet wird. Siehe Hinweise.|  
+|*Public*|Die genaue Zeichenfolge, die Sie <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> an <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> übergeben, wenn Sie angeben, oder variiert, hängt von der verwendeten Code-Behind-Programmiersprache ab. Siehe Hinweise.|  
   
 ## <a name="dependencies"></a>Abhängigkeiten  
- Wenn eine XAML-Produktion verwendet `x:FieldModifier` , muss das Stammelement dieser XAML-Produktion deklarieren eine [X: Class-Anweisung](x-class-directive.md).  
+ Wenn eine XAML-Produktion `x:FieldModifier` einen beliebigen Speicherort verwendet, muss das Stamm Element dieser XAML-Produktion eine [x:Class-Direktive](x-class-directive.md)deklarieren.  
   
 ## <a name="remarks"></a>Hinweise  
- `x:FieldModifier` ist nicht relevant, für das Deklarieren von Klassen oder Membern der allgemeinen Zugriffsebene. Es ist nur für XAML-Verarbeitungsverhalten relevant, wenn ein bestimmtes XAML-Objekt, das Teil einer XAML-Produktion verarbeitet wird, wird ein Objekt, das potenziell in ein Objektdiagramm aus einer Anwendung zugegriffen werden kann. In der Standardeinstellung der Feldverweis für ein solches Objekt "private", bleibt die verhindern, dass Steuerelementconsumer das Objektdiagramm direkt ändern. Stattdessen Steuerelementconsumer erwartet, das Objektdiagramm mithilfe von standard-Muster, die von Programmiermodellen, wie z. B. aktiviert werden, durch Abrufen der Layoutstamm, das untergeordnete Element elementauflistungen, die dedizierte öffentliche Eigenschaften, ändern und so weiter.  
+ `x:FieldModifier`ist für das Deklarieren der allgemeinen Zugriffsebene einer Klasse oder ihrer Member nicht relevant. Sie ist nur für das XAML-Verarbeitungs Verhalten relevant, wenn ein bestimmtes XAML-Objekt, das Teil einer XAML-Produktion ist, verarbeitet wird, und wird zu einem Objekt, auf das im Objekt Diagramm einer Anwendung möglicherweise zugegriffen werden kann. Standardmäßig wird der Feldverweis für ein solches Objekt als privat gespeichert, wodurch verhindert wird, dass Steuerungs Consumer das Objekt Diagramm direkt ändern können. Stattdessen wird erwartet, dass Steuerungs Consumer das Objekt Diagramm mithilfe von Standard Mustern ändern, die von Programmier Modellen aktiviert werden, z. b. durch Abrufen des Layoutstamms, der untergeordneten Element Auflistungen, der dedizierten öffentlichen Eigenschaften usw.  
   
- Der Wert für die `x:FieldModifier` -Attributs variiert je nach Programmiersprache, und ihr Zweck kann in bestimmten Frameworks variieren. Wie jede Sprache implementiert, die zu verwendende Zeichenfolge hängt die <xref:System.CodeDom.Compiler.CodeDomProvider> und der Typkonverter wird zurückgegeben, um die Bedeutung für definieren <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> und <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, und gibt an, ob die entsprechende Sprache Groß-/Kleinschreibung beachtet wird.  
+ Der Wert `x:FieldModifier` des-Attributs variiert je nach Programmiersprache, und sein Zweck kann sich in bestimmten Frameworks unterscheiden. Die zu verwendende Zeichenfolge hängt davon ab, wie <xref:System.CodeDom.Compiler.CodeDomProvider> die jeweilige Sprache implementiert, und die Typkonverter, die <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> zurück <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>gegeben werden, um die Bedeutung für und zu definieren  
   
-- Für c# und die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist `public`.  
+- Für C# <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist`public`die an zu über gebende Zeichenfolge.  
   
-- Für Microsoft Visual Basic .NET ist die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist `Public`.  
+- Bei Microsoft Visual Basic .net <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist `Public`die Zeichenfolge, die an übergeben werden soll,.  
   
-- Für [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], keine Ziele für XAML derzeit vorhanden; aus diesem Grund ist die Zeichenfolge übergeben nicht definiert.  
+- Für C++/CLI sind derzeit keine Ziele für XAML vorhanden. Daher ist die zu über gebende Zeichenfolge nicht definiert.  
   
- Sie können auch angeben, <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> (`internal` in C#, `Friend` in Visual Basic) jedoch Angabe <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> ist ungewöhnlich, dass da `NotPublic` wie das Verhalten bereits die Standardeinstellung ist.  
+ Sie können auch ( <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> `internal` in C#, `Friend` in Visual Basic) angeben. die <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Angabe von ist `NotPublic` jedoch ungewöhnlich, da das Verhalten bereits der Standard ist.  
   
- <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> ist das Standardverhalten, da sie nur selten ist, dass Code außerhalb der Assembly, die die XAML kompiliert Zugriff auf ein Element mit XAML erstellten benötigt. WPF-Sicherheitsarchitektur zusammen mit XAML-Kompilierungsverhalten nicht Felder zum Speichern von Elementinstanzen als öffentlich, deklarieren, es sei denn, Sie ausdrücklich Festlegen der `x:FieldModifier` den öffentlichen Zugriff zulässt.  
+ <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>ist das Standardverhalten, da es selten auftritt, dass Code außerhalb der Assembly, die den XAML-Code kompiliert hat, Zugriff auf ein XAML-erstelltes Element benötigt. Die `x:FieldModifier` WPF-Sicherheitsarchitektur und das XAML-Kompilierungs Verhalten deklarieren keine Felder, die Element Instanzen als öffentlich speichern, es sei denn, Sie legen ausdrücklich fest, um öffentlichen Zugriff zuzulassen.  
   
- `x:FieldModifier` gilt nur für Elemente mit einem [X: Name Directive](x-name-directive.md) , da der Name verwendet wird, auf das Feld verwiesen wird, nachdem er öffentlich ist.  
+ `x:FieldModifier`ist nur für Elemente mit einer [x:Name-Direktive](x-name-directive.md) relevant, da dieser Name verwendet wird, um auf das Feld zu verweisen, nachdem es öffentlich ist.  
   
- Standardmäßig ist die partielle Klasse für das Stammelement öffentlich. Allerdings können Sie es machen nicht öffentliche mithilfe der [X: ClassModifier-Anweisung](x-classmodifier-directive.md). Die [X: ClassModifier-Anweisung](x-classmodifier-directive.md) wirkt sich auch auf die Zugriffsebene der Stammelementklasse-Instanz. Sie können beide einfügen `x:Name` und `x:FieldModifier` für den Stamm-Element, aber dies nur eine Kopie öffentliches Feld das Stammelement, mit der Zugriffsebene der "true"-Klasse weiterhin benutzergesteuert [X: ClassModifier-Anweisung](x-classmodifier-directive.md).  
+ Standardmäßig ist die partielle Klasse für das Stamm Element öffentlich. Sie können Sie jedoch nicht öffentlich machen, indem Sie die [x:ClassModifier-Direktive](x-classmodifier-directive.md)verwenden. Die [x:ClassModifier-Direktive](x-classmodifier-directive.md) wirkt sich auch auf die Zugriffsebene der Instanz der Stamm Element Klasse aus. Sie können sowohl `x:Name` als auch `x:FieldModifier` für das root-Element platzieren, aber dadurch wird nur eine öffentliche Feld Kopie des Stamm Elements erstellt, wobei die Zugriffsebene der echten Stamm Element Klasse weiterhin durch die [x:ClassModifier-Direktive](x-classmodifier-directive.md)gesteuert wird.  
   
 ## <a name="see-also"></a>Siehe auch
 

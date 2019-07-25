@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 98e48060bbb82764e1e541797c666ca33f247c39
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 27e1a2e88beeacf8c2cd98f61b11542ee2341e8f
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400477"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433976"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Exemplarische Vorgehensweise: Hosten einer WPF-Uhr in Win32
 
 Verwenden [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Sie zum Einfügen in Anwendungen, das das HWND bereitstellt, das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ihren Inhalt enthält. <xref:System.Windows.Interop.HwndSource> Erstellen Sie zunächst das <xref:System.Windows.Interop.HwndSource>, und geben Sie ihm Parameter ähnlich "kreatewindow". Dann geben Sie die <xref:System.Windows.Interop.HwndSource> Informationen über [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] den gewünschten Inhalt an. Schließlich erhalten Sie das HWND aus dem <xref:System.Windows.Interop.HwndSource>. In dieser exemplarischen Vorgehensweise wird veranschaulicht, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wie [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] ein gemischtes innerhalb der Anwendung erstellt wird, die das **Datum und die Uhrzeit-Eigenschaften** Dialogfeld des Betriebssystems
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Siehe [WPF-und Win32-Interoperation](wpf-and-win32-interoperation.md).
 
@@ -85,7 +85,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)
 ```
 
-Dieses Attribut teilt dem Common Language Runtime (CLR) mit, dass es beim [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]initialisieren ein Single Thread-Apartment-Modell (STA) verwenden sollte, das für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]) erforderlich ist.
+Dieses Attribut teilt dem Common Language Runtime (CLR) mit, dass beim Initialisieren Component Object Model (com) ein Single Thread-Apartment Modell (STA) verwendet werden muss, das für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]) erforderlich ist.
 
 ## <a name="create-a-windows-presentation-framework-page"></a>Erstellen einer Windows Presentation Framework-Seite
 
