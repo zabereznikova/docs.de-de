@@ -13,19 +13,17 @@
       items:
         - name: Übersicht
           href: anonymous-functions.md
-        - name: Lambda-Ausdrücke
+        - name: Lambdaausdrücke
           href: lambda-expressions.md
-        - name: 'Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage'
+        - name: Verwenden von Lambdaausdrücken in einer Abfrage
           href: how-to-use-lambda-expressions-in-a-query.md
-        - name: 'Vorgehensweise: Verwenden von Lambdaausdrücken außerhalb von LINQ'
-          href: how-to-use-lambda-expressions-outside-linq.md
     - name: Ausdrücke mit Standardwert
       href: default-value-expressions.md
     - name: Gleichheit und Gleichheitsvergleiche
       items:
         - name: Übereinstimmungsvergleiche
           href: equality-comparisons.md
-        - name: 'Vorgehensweise: Definieren von Wertgleichheit für einen Typ'
+        - name: Definieren von Wertgleichheit für einen Typ
           href: how-to-define-value-equality-for-a-type.md
-        - name: 'Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität)'
+        - name: Überprüfen auf Verweisgleichheit (Identität)
           href: how-to-test-for-reference-equality-identity.md
