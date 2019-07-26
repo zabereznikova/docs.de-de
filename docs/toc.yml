@@ -68,12 +68,7 @@
     - name: Behandeln und Auslösen von Ausnahmen
       href: standard/exceptions/
     - name: Assemblys in .NET
-      href: standard/assembly/index.md
-      items:
-        - name: .NET-Assemblydateiformat
-          href: standard/assembly/file-format.md
-        - name: 'Vorgehensweise: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core'
-          href: standard/assembly/unloadability-howto.md
+      href: standard/assembly/
     - name: Garbage Collection
       href: standard/garbage-collection/
     - name: Generische Typen

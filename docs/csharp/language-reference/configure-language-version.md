@@ -2,12 +2,12 @@
 title: Verwaltung der C#-Sprachversion – Leitfaden für C#
 description: Hier erfahren Sie, wie die C#-Sprachversion basierend auf Ihrem Projekt bestimmt wird, und Sie lernen die verschiedenen Werte kennen, die Sie manuell an die Sprachversion anpassen können.
 ms.date: 07/10/2019
-ms.openlocfilehash: 2d593ca0588f291c61cdf52fbc1eb60a1f3f7ecb
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859606"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236096"
 ---
 # <a name="c-language-versioning"></a>Verwaltung der C#-Sprachversion
 
@@ -34,7 +34,7 @@ Wenn Sie Ihre C#-Version explizit angeben müssen, haben Sie verschiedene Mögli
 
 - Manuelles Bearbeiten der [Projektdatei](#edit-the-project-file)
 - Festlegen der Sprachversion [für mehrere Projekte in einem Unterverzeichnis](#configure-multiple-projects)
-- Konfigurieren der [Compileroption `-langversion`](#set-the-langversion-compiler-option)
+- Konfigurieren der [Compileroption `-langversion`](compiler-options/langversion-compiler-option.md)
 
 ### <a name="edit-the-project-file"></a>Bearbeiten der Projektdatei
 

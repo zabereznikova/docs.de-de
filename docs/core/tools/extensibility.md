@@ -3,12 +3,12 @@ title: .NET Core-CLI-Erweiterbarkeitsmodell
 description: Erfahren Sie, wie Sie die Tools für die Befehlszeilenschnittstelle (CLI, Command-line Interface) erweitern können.
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: ca6bf30fb6aaf815a859a00bc391ef790566acaf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675094"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331004"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Erweiterbarkeitsmodell für .NET Core-CLI-Tools
 
@@ -69,7 +69,7 @@ Wie bereits erwähnt, sind Tools nur portable Konsolenanwendungen. Sie würden e
 Nachdem Sie es erstellt haben, führen Sie den [`dotnet pack`](dotnet-pack.md)-Befehl aus, um ein NuGet-Paket (NUPKG-Datei) zu erstellen, das Ihren Code, die Informationen zu seinen Abhängigkeiten usw. enthält. Die können den Paketnamen benennen, aber die Anwendung darin, das tatsächliche Binär-Tool, muss der `dotnet-<command>`-Konvention entsprechen, damit `dotnet` es aufrufen kann.
 
 > [!NOTE]
-> In Vor-RC3-Versionen der .NET Core-Befehlszeilentools hat der Befehl `dotnet pack` einen Fehler, der dazu führt, dass die Datei `runtime.config.json` nicht mit dem Tool gepackt wird. Fehlt diese Datei, treten zur Laufzeit Fehler auf. Wenn dieses Verhalten auftritt, sollten Sie auf die neuesten Tools aktualisieren und erneut versuchen, den Befehl `dotnet pack` auszuführen.
+> In Versionen der .NET Core-Befehlszeilentools vor RC3 hatte der Befehl `dotnet pack` einen Fehler, der dazu führte, dass die Datei *.runtimeconfig.json* nicht mit dem Tool gepackt wurde. Fehlt diese Datei, treten zur Laufzeit Fehler auf. Wenn dieses Verhalten auftritt, sollten Sie auf die neuesten Tools aktualisieren und erneut versuchen, den Befehl `dotnet pack` auszuführen.
 
 Da Tools portable Anwendungen sind, muss der Benutzer des Tools über die Version der .NET Core-Bibliotheken verfügen, für die das Tool entwickelt wurde, um das Tool auszuführen. Jede andere Abhängigkeit, die das Tool verwendet und nicht in den .NET Core-Bibliotheken enthalten ist, wird wiederhergestellt und im NuGet-Cache gespeichert. Das gesamte Tool wird daher mithilfe der Assemblys aus den .NET Core-Bibliotheken sowie Assemblys aus dem NuGet-Cache ausgeführt.
 

@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: eb5721d1c04ad761821bcdae03159f290a802ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979839"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363789"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Verwenden von Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der ähnlich einem Funktionszeiger in C und C++ eine Methode sicher kapselt. Im Gegensatz zu C-Funktionszeigern sind Delegate objektorientiert, typsicher und sicher. Der Typ eines Delegaten wird durch den Namen des Delegaten definiert. Im folgenden Beispiel wird ein Delegat mit dem Namen `Del` deklariert, der eine Methode kapseln kann, die eine [Zeichenfolge](../../../csharp/language-reference/keywords/string.md) als Argument übernimmt und [void](../../../csharp/language-reference/keywords/void.md) zurückgibt:  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- Ein Delegatobjekt wird normalerweise durch Angabe des Namens der Methode, die der Delegat umschließt, oder mit einer [anonymen Methode](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) erstellt. Sobald ein Delegat instanziiert ist, wird vom Delegaten ein Methodenaufruf an den Delegaten an diese Methode übergeben. Die vom Aufrufer an den Delegaten übergebenen Parameter werden an die Methode übergeben, und der Rückgabewert von der Methode wird ggf. durch den Delegaten an den Aufrufer zurückgegeben. Dies wird als Aufrufen des Delegaten bezeichnet. Ein instanziierter Delegat kann wie die eingeschlossene Methode selbst aufgerufen werden. Beispiel:  
+ Ein Delegatobjekt wird normalerweise durch Angabe des Namens der Methode, die der Delegat umschließt, oder mit einer [anonymen Funktion](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md) erstellt. Sobald ein Delegat instanziiert ist, wird vom Delegaten ein Methodenaufruf an den Delegaten an diese Methode übergeben. Die vom Aufrufer an den Delegaten übergebenen Parameter werden an die Methode übergeben, und der Rückgabewert von der Methode wird ggf. durch den Delegaten an den Aufrufer zurückgegeben. Dies wird als Aufrufen des Delegaten bezeichnet. Ein instanziierter Delegat kann wie die eingeschlossene Methode selbst aufgerufen werden. Beispiel:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
@@ -37,8 +37,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
  `The number is: 3`  
   
- Wenn Sie den Delegaten als Abstraktion verwenden, muss `MethodWithCallback` die Konsole nicht direkt aufrufen, d. h., bei der Entwicklung muss keine Konsole berücksichtigt werden. 
-  `MethodWithCallback` bereitet einfach eine Zeichenfolge vor und übergibt sie an eine andere Methode. Dies ist besonders leistungsstark, da eine delegierte Methode eine beliebige Anzahl Parameter verwenden kann.  
+ Wenn Sie den Delegaten als Abstraktion verwenden, muss `MethodWithCallback` die Konsole nicht direkt aufrufen, d. h., bei der Entwicklung muss keine Konsole berücksichtigt werden. `MethodWithCallback` bereitet einfach eine Zeichenfolge vor und übergibt sie an eine andere Methode. Dies ist besonders leistungsstark, da eine delegierte Methode eine beliebige Anzahl Parameter verwenden kann.  
   
  Wenn ein Delegat erstellt wurde, um eine Instanzenmethode zu umschließen, verweist der Delegat sowohl auf die Instanz als auch auf die Methode. Ein Delegat kennt nicht den Instanzentyp, abgesehen von der umschlossenen Methode, sodass ein Delegat auf jede Art von Objekt verweisen kann, sofern es eine Methode für das Objekt gibt, die mit der Signatur des Delegaten übereinstimmt. Wenn ein Delegat erstellt wurde, um eine statische Methode zu umschließen, verweist er nur auf die Methode. Betrachten Sie hierzu die folgenden Deklarationen:  
   

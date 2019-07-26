@@ -32,35 +32,40 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744212"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236074"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Integrale numerische Typen (C#-Referenz)
 
-Die **integralen numerischen Typen** sind eine Teilmenge der **einfachen Typen** und können mit [*Literalen*](#integral-literals) initialisiert werden. Alle integrale Typen sind auch Werttypen.
+Die **integralen numerischen Typen** sind eine Teilmenge der **einfachen Typen** und können mit [*Literalen*](#integral-literals) initialisiert werden. Alle integrale Typen sind auch Werttypen. Alle integral numerischen Typen unterstützen [arithmetic](../operators/arithmetic-operators.md)-, [bitwise logical](../operators/bitwise-and-shift-operators.md)-, [comparison- and equality](../operators/equality-operators.md)-Operatoren.
 
-Alle integral numerischen Typen unterstützen [arithmetic](../operators/arithmetic-operators.md)-, [bitwise logical](../operators/bitwise-and-shift-operators.md)-, [comparison- and equality](../operators/equality-operators.md)-Operatoren.
+## <a name="characteristics-of-the-integral-types"></a>Merkmale der integralen Typen
 
-## <a name="sizes-and-ranges"></a>Größen und Bereiche
+C# unterstützt die folgenden vordefinierten integralen Typen:
 
-Die folgende Tabelle enthält Größe und Bereich der integralen Typen:
+|C#-Typ/Schlüsselwort|Bereich|Größe|.NET-Typ|
+|----------|-----------|----------|-------------|
+|`sbyte`|–128 bis 127|Ganze 8-Bit-Zahl mit Vorzeichen|<xref:System.SByte?displayProperty=nameWithType>|
+|`byte`|0 bis 255|8-Bit-Ganzzahl ohne Vorzeichen|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|–32.768 bis 32.767|Ganze 16-Bit-Zahl mit Vorzeichen|<xref:System.Int16?displayProperty=nameWithType>|
+|`ushort`|0 bis 65.535|16-Bit-Ganzzahl ohne Vorzeichen|<xref:System.UInt16?displayProperty=nameWithType>|
+|`int`|-2,147,483,648 bis 2,147,483,647|Eine 32-Bit-Ganzzahl mit Vorzeichen|<xref:System.Int32?displayProperty=nameWithType>|
+|`uint`|0 bis 4.294.967.295|32-Bit Ganzzahl ohne Vorzeichen|<xref:System.UInt32?displayProperty=nameWithType>|
+|`long`|-9,223,372,036,854,775,808 bis 9,223,372,036,854,775,807|64-Bit-Ganzzahl mit Vorzeichen|<xref:System.Int64?displayProperty=nameWithType>|
+|`ulong`|0 bis 18.446.744.073.709.551.615|64-Bit-Ganzzahl ohne Vorzeichen|<xref:System.UInt64?displayProperty=nameWithType>|
 
-|Typ|Bereich|Größe|  
-|----------|-----------|----------|  
-|`sbyte`|–128 bis 127|Ganze 8-Bit-Zahl mit Vorzeichen|  
-|`byte`|0 bis 255|8-Bit-Ganzzahl ohne Vorzeichen|  
-|`short`|–32.768 bis 32.767|Ganze 16-Bit-Zahl mit Vorzeichen|  
-|`ushort`|0 bis 65.535|16-Bit-Ganzzahl ohne Vorzeichen|  
-|`int`|-2,147,483,648 bis 2,147,483,647|Eine 32-Bit-Ganzzahl mit Vorzeichen|  
-|`uint`|0 bis 4.294.967.295|32-Bit Ganzzahl ohne Vorzeichen|  
-|`long`|-9,223,372,036,854,775,808 bis 9,223,372,036,854,775,807|64-Bit-Ganzzahl mit Vorzeichen|  
-|`ulong`|0 bis 18.446.744.073.709.551.615|64-Bit-Ganzzahl ohne Vorzeichen|  
+In der obigen Tabelle ist jedes C#-Typschlüsselwort aus der äußerst linken Spalte ein Alias für den entsprechenden .NET-Typ. Sie können synonym verwendet werden. In den folgenden Deklarationen werden beispielsweise Variablen des gleichen Typs deklariert:
 
-Der Standardwert aller integralen Typen lautet `0`. Jeder der integralen Typen hat Konstanten mit den Namen `MinValue` und `MaxValue` für den minimalen und maximalen Wert für diesen Typ.
+```csharp
+int a = 123;
+System.Int32 b = 123;
+```
+
+Der Standardwert jedes integralen Typs ist Null (`0`). Die einzelnen integralen Typen verfügen jeweils über die Konstanten `MinValue` und `MaxValue`, die den minimalen und maximalen Wert des Typs angeben.
 
 Verwenden Sie die <xref:System.Numerics.BigInteger?displayProperty=nameWithType>-Struktur, um eine ganze Zahl mit Vorzeichen ohne obere oder untere Grenzen darzustellen.
 
@@ -76,7 +81,7 @@ var binaryLiteral = 0b_0010_1010;
 
 Für dezimale Literale ist kein Präfix erforderlich. Das Präfix `x` oder `X` bezeichnet ein *hexadezimales Literal*. Das Präfix `b` oder `B` bezeichnet ein *binäres Literal*. Die Deklaration von `binaryLiteral` zeigt die Verwendung von `_` als *Zifferntrennzeichen* an. Das Zifferntrennzeichen kann mit allen numerischen Literalen verwendet werden. Binäre Literale und das Zifferntrennzeichen `_` werden beginnend mit C# 7.0 unterstützt.
 
-### <a name="literal-suffixes"></a>Literalsuffixe 
+### <a name="literal-suffixes"></a>Literalsuffixe
 
 Das Suffix `l` oder `L` gibt an, dass das integrale Literal vom Typ `long` sein soll. Das Suffix `ul` oder `UL` gibt den Typ `ulong` an. Wenn das Suffix `L` für ein Literal verwendet wird, das größer als 9.223.372.036.854.775.807 (der Maximalwert von `long`) ist, wird der Wert in den Typ `ulong` umgewandelt. Wenn der von einem integralen Literal dargestellte Wert <xref:System.UInt64.MaxValue?displayProperty=nameWithType> überschreitet, tritt der Compilerfehler [CS1021](../../misc/cs1021.md) auf. 
 
@@ -123,11 +128,3 @@ Sie müssen eine explizite Umwandlung verwenden, um einen integralen Typ in eine
 - [Tabelle zur Formatierung numerischer Ergebnisse](../keywords/formatting-numeric-results-table.md)
 - [Tabelle integrierter Typen](../keywords/built-in-types-table.md)
 - [Numerische Ausdrücke in .NET](../../../standard/numerics.md)
-- <xref:System.Byte?displayProperty=nameWithType>
-- <xref:System.SByte?displayProperty=nameWithType>
-- <xref:System.Int16?displayProperty=nameWithType>
-- <xref:System.UInt16?displayProperty=nameWithType>
-- <xref:System.Int32?displayProperty=nameWithType>
-- <xref:System.UInt32?displayProperty=nameWithType>
-- <xref:System.Int64?displayProperty=nameWithType>
-- <xref:System.UInt64?displayProperty=nameWithType>

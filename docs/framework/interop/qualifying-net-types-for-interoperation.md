@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b2e14a7508d4a5e8069a3b98dee38a0ac62750c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648560"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363987"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualifizieren von .NET-Typen für die Interoperation
 Wenn Sie beabsichtigen, Typen in einer Assembly für eine COM-Anwendung verfügbar zu machen, beachten Sie zur Entwurfszeit die Anforderungen von Com-Interop. Verwaltete Typen (Klassen, Schnittstellen, Strukturen und Enumerationen) lassen sich nahtlos in COM-Typen integrieren, wenn Sie die folgenden Richtlinien einhalten:  
@@ -37,9 +37,9 @@ Wenn Sie beabsichtigen, Typen in einer Assembly für eine COM-Anwendung verfügb
   
      Member öffentlicher Typen müssen ebenfalls öffentlich sein, wenn sie im COM sichtbar sein sollen. Sie können die Sichtbarkeit einer Assembly, eines öffentlichen Typs oder öffentlicher Member eines öffentlichen Typs einschränken, indem Sie die Klasse <xref:System.Runtime.InteropServices.ComVisibleAttribute> anwenden. Standardmäßig sind alle öffentlichen Typen und Member sichtbar.  
   
-- Typen müssen über einen öffentlichen Standardkonstruktor verfügen, der sich über das COM aktivieren lässt.  
+- Typen müssen über einen öffentlichen parameterlosen Konstruktor verfügen, um über COM aktiviert werden zu können.  
   
-     Verwaltete, öffentliche Typen sind im COM sichtbar. Ohne einen öffentlichen Standardkonstruktor (d.h. einen Konstruktor ohne Argumente) können COM-Clients den Typ nicht erstellen. Wenn er auf andere Art und Weise aktiviert wird, können sie den Typ aber dennoch verwenden.  
+     Verwaltete, öffentliche Typen sind im COM sichtbar. Ohne öffentlichen parameterlosen Konstruktor (Konstruktor ohne Argumente) können COM-Clients den Typ nicht erstellen. Wenn er auf andere Art und Weise aktiviert wird, können sie den Typ aber dennoch verwenden.  
   
 - Typen können nicht abstrakt sein.  
   

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834041"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68362905"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Leitfaden zur Verwendung von Memory\<T> und Span\<T>
 
-.NET Core enthält eine Reihe von Typen, die eine beliebige zusammenhängende Speicherregion darstellen. .NET Core 2.0 hat <xref:System.Span%601> und <xref:System.ReadOnlySpan%601> eingeführt. Dabei handelt es sich um einfache Speicherpuffer, die durch verwalteten oder nicht verwalteten Speicher gesichert werden können. Da diese Typen auf dem Stapel gespeichert werden können, sind sie für eine Reihe von Szenarien ungeeignet, einschließlich asynchroner Methodenaufrufe. .NET Core 2.1 fügt eine Reihe von zusätzlichen Typen hinzu, einschließlich <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> und <xref:System.Buffers.MemoryPool%601>. Wie <xref:System.Span%601> kann auch <xref:System.Memory%601> und die verwandten Typen durch verwalteten und nicht verwalteten Speicher gesichert werden. Im Gegensatz zu <xref:System.Span%601> kann <xref:System.Memory%601> nur auf dem verwalteten Heap gespeichert werden.
+.NET Core enthält eine Reihe von Typen, die eine beliebige zusammenhängende Speicherregion darstellen. .NET Core 2.0 hat <xref:System.Span%601> und <xref:System.ReadOnlySpan%601> eingeführt. Dabei handelt es sich um einfache Speicherpuffer, die durch verwalteten oder nicht verwalteten Speicher gesichert werden können. Da diese Typen nur im Stapel gespeichert werden können, sind sie für eine Reihe von Szenarien ungeeignet. Hierzu zählen unter anderem asynchrone Methodenaufrufe. .NET Core 2.1 fügt eine Reihe von zusätzlichen Typen hinzu, einschließlich <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> und <xref:System.Buffers.MemoryPool%601>. Wie <xref:System.Span%601> kann auch <xref:System.Memory%601> und die verwandten Typen durch verwalteten und nicht verwalteten Speicher gesichert werden. Im Gegensatz zu <xref:System.Span%601> kann <xref:System.Memory%601> im verwalteten Heap gespeichert werden.
 
 Sowohl <xref:System.Span%601> als auch <xref:System.Memory%601> sind Puffer von strukturierten Daten, die in Pipelines verwendet werden können. Das heißt, sie sind so konzipiert, dass ein Teil oder alle Daten effizient an Komponenten in der Pipeline übergeben werden können, die sie verarbeiten und optional den Puffer modifizieren können. Da <xref:System.Memory%601> und die zugehörigen Typen von mehreren Komponenten oder von mehreren Threads aufgerufen werden können, ist es wichtig, dass Entwickler einige Standardnutzungsrichtlinien befolgen, um robusten Code zu generieren.
 

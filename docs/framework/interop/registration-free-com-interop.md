@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ed8525cad7dd56fe026070786b0f0cf51c0fec2d
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648524"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363971"
 ---
 # <a name="registration-free-com-interop"></a>COM-Interop ohne Registrierung
 COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Registrierung zum Speichern von Assemblyinformationen zu verwenden. Statt eine Komponente auf einem Computer während der Bereitstellung zu registrieren, erstellen Sie zur Entwurfszeit Win32-Manifestdateien, die Informationen zur Bindung und Aktivierung enthalten. Diese Manifestdateien steuern anstelle der Registrierungsschlüssel die Aktivierung eines Objekts.  
@@ -41,7 +41,7 @@ COM-Interop ohne Registrierung aktiviert eine Komponente, ohne die Windows-Regis
   
      Die Windows Server 2003-Produktfamilie unterstützt auch COM-Interop ohne Registrierung für .NET-basierte Assemblys.  
   
-     Damit eine .NET-basierte Klasse mit der Aktivierung ohne COM-Registrierung kompatibel ist, muss die Klasse über einen Standardkonstruktor verfügen und öffentlich sein.  
+     Damit eine .NET-basierte Klasse mit der Aktivierung ohne COM-Registrierung kompatibel ist, muss die Klasse über einen parameterlosen Konstruktor verfügen und öffentlich sein.  
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung  
   

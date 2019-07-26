@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09eb37fd2c1bf77e981a2eb7952b1fff5110e977
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bed67019fdd3bb81585d08349715a895dfe5a681
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357299"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363964"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Übersicht über das Modell der attributierten Programmierung (MEF)
 
@@ -268,7 +268,7 @@ Der Vertragsname und Vertragstyp kann im `Import` -Attribut für einen verzöger
 
 Exportierte MEF-Teile werden in der Regel von der Kompositions-Engine erstellt, und zwar als Antwort auf eine direkte Anforderung oder die Notwendigkeit, einen übereinstimmenden Import aufzufüllen. Standardmäßig verwendet die Kompositions-Engine beim Erstellen eines Teils den parameterlosen Konstruktor. Damit die Engine einen anderen Konstruktor verwendet, können Sie sie mit dem `ImportingConstructor`-Attribut markieren.
 
-Jeder Teil verfügt möglicherweise nur über einen Konstruktor für die Verwendung durch die Kompositions-Engine. Wenn kein Standardkonstruktor und kein `ImportingConstructor` -Attribut oder mehr als ein `ImportingConstructor` -Attribut angegeben wird, tritt ein Fehler auf.
+Jeder Teil verfügt möglicherweise nur über einen Konstruktor für die Verwendung durch die Kompositions-Engine. Wenn kein parameterloser Konstruktor und kein Attribut vom Typ `ImportingConstructor` oder aber mehrere Attribute vom Typ `ImportingConstructor` angegeben werden, tritt ein Fehler auf.
 
 Um die Parameter eines Konstruktors auszufüllen, der mit dem `ImportingConstructor` -Attribut markiert ist, werden alle diese Parameter automatisch als Importe deklariert. Dies ist eine einfache Möglichkeit zum Deklarieren von Importen, die während der Teileinitialisierung verwendet werden. Die folgende Klasse verwendet `ImportingConstructor` , um einen Import zu deklarieren.
 
@@ -277,7 +277,7 @@ Public Class MyClass1
 
     Private _theAddin As IMyAddin
 
-    'Default constructor will NOT be used
+    'Parameterless constructor will NOT be used
     'because the ImportingConstructor
     'attribute is present.
     Public Sub New()
@@ -300,7 +300,7 @@ public class MyClass
 {
     private IMyAddin _theAddin;
 
-    //Default constructor will NOT be
+    //Parameterless constructor will NOT be
     //used because the ImportingConstructor
     //attribute is present.
     public MyClass() { }

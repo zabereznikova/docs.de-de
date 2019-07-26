@@ -1,15 +1,15 @@
 ---
 title: .NET Portability Analyzer – .NET
 description: Erfahren Sie, wie Sie mit dem Tool .NET Portability Analyzer bewerten, wie portabel Ihr Code zwischen den verschiedenen .NET-Implementierungen, wie .NET Core, .NET Standard, UWP und Xamarin, ist.
-ms.date: 07/10/2019
+ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f05d4f4a2fce8fa9a4d2e334f44190ea37335038
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859800"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331741"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -52,7 +52,7 @@ Im Bericht werden nur die APIs angegeben, die von einer Zielplattform nicht unte
 
 ![Zusammenfassung zur Portabilität](./media/portability-analyzer/portabilitysummary.png)
 
-Im Abschnitt „Zusammenfassung zur Portabilität“ des Berichts wird für jede in der Ausführung enthaltene Assembly der Portabilitätsprozentsatz angezeigt. Im vorherigen Beispiel sind 89,74 % der in der `ConsoleAppFramework`-Anwendung verwendeten .NET Framework-APIs in .NET Core + Plattformerweiterungen v2.2 verfügbar. Wenn Sie das Tool .NET Portability Analyzer für mehrere Assemblys ausführen, gibt es im Bericht „Zusammenfassung zur Portabilität“ für jede Assembly eine Zeile.
+Im Berichtsabschnitt mit der Portabilitätszusammenfassung wird für jede in der Ausführung enthaltene Assembly der Portabilitätsprozentsatz angezeigt. Im vorherigen Beispiel sind 71,24 Prozent der in der App `svcutil` verwendeten .NET Framework-APIs in .NET Core und Plattformerweiterungen verfügbar. Wenn Sie das Tool .NET Portability Analyzer für mehrere Assemblys ausführen, gibt es im Bericht „Zusammenfassung zur Portabilität“ für jede Assembly eine Zeile.
 
 #### <a name="details"></a>Details
 
@@ -60,11 +60,11 @@ Im Abschnitt „Zusammenfassung zur Portabilität“ des Berichts wird für jede
 
 Im Abschnitt „Details“ des Berichts werden die APIs aufgeführt, die in einer der Zielplattformen fehlen. 
 
- - Zieltyp: Der Typ enthält APIs, die in einer Zielplattform fehlen. 
- - Zielmember: Die Methode fehlt in einer Zielplattform. 
- - Assemblyname: Die .NET Framework-Assembly, in der sich die fehlende API befindet. 
- - Jede ausgewählte Zielplattform wird als eine Spalte dargestellt, z. B. „.NET Core“: Der Wert „Nicht unterstützt“ bedeutet, dass die API auf dieser Zielplattform nicht unterstützt wird. 
- - Empfohlene Änderungen: Empfohlene API oder Technologie, zu der gewechselt werden sollte. Dieses Feld ist für viele APIs derzeit leer oder nicht mehr aktuell. Aufgrund der Vielzahl von APIs ist es eine große Herausforderung, auf dem Laufenden zu bleiben. Wir suchen nach alternativen Lösungen, um Kunden nützliche Informationen anbieten zu können.
+- Zieltyp: Der Typ enthält APIs, die in einer Zielplattform fehlen. 
+- Zielmember: Die Methode fehlt in einer Zielplattform. 
+- Assemblyname: Die .NET Framework-Assembly, in der sich die fehlende API befindet. 
+- Jede ausgewählte Zielplattform wird als eine Spalte dargestellt, z. B. „.NET Core“: Der Wert „Nicht unterstützt“ bedeutet, dass die API auf dieser Zielplattform nicht unterstützt wird. 
+- Empfohlene Änderungen: Empfohlene API oder Technologie, zu der gewechselt werden sollte. Dieses Feld ist für viele APIs derzeit leer oder nicht mehr aktuell. Aufgrund der Vielzahl von APIs ist es eine große Herausforderung, auf dem Laufenden zu bleiben. Wir suchen nach alternativen Lösungen, um Kunden nützliche Informationen anbieten zu können.
 
 #### <a name="missing-assemblies"></a>Fehlende Assemblys
 
@@ -73,5 +73,3 @@ Im Abschnitt „Details“ des Berichts werden die APIs aufgeführt, die in eine
 Ihr Bericht enthält möglicherweise einen Abschnitt mit der Überschrift „Fehlende Assemblys“. In diesem Abschnitt wird Ihnen mitgeteilt, dass die Assemblys in der Liste von Ihren analysierten Assemblys referenziert werden, aber nicht analysiert wurden. Wenn es sich um eine Assembly in Ihrem Besitz handelt, beziehen Sie sie in die Ausführung von API Portability Analyzer ein, sodass Sie dafür die im Portabilitätsbericht angegebene API-Ebene erhalten. Wenn es sich um die Bibliothek eines Drittanbieters handelt, erkundigen Sie sich, ob es eine neuere Version gibt, die Ihre Zielplattform unterstützt. Ist dies der Fall, sollten Sie zur neueren Version wechseln. Letztlich soll diese Liste alle Assemblys von Drittanbietern enthalten, von denen Ihre Anwendung abhängig ist, und diese müssen nachweislich eine Version aufweisen, die Ihre Zielplattform unterstützt.  
 
 Weitere Informationen zum .NET Portability Analyzer, finden Sie auf der [GitHub-Dokumentation](https://github.com/Microsoft/dotnet-apiport#documentation) und im Channel 9-Video [Eine kurze Betrachtung des .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer).
-
-
