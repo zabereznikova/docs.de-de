@@ -9,83 +9,90 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbc9e523e9b74cf380c65135e7416f1feba01a2e
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053716"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512897"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Arraydimensionen in Visual Basic
-Ein *Dimension* ist eine Richtung, in dem Sie die Spezifikation der Elemente eines Arrays können variieren. Ein Array, das den Umsatz für jeden Tag des Monats insgesamt enthält hat es sich um eine Dimension (Tag des Monats). Ein Array, das den Umsatz nach Abteilung für jeden Tag des Monats insgesamt enthält verfügt über zwei Dimensionen (die Abteilung-Anzahl und den Tag des Monats). Wird aufgerufen, die Anzahl der Dimensionen, die ein Array hat seine *Rang*.  
-  
+
+Eine *Dimension* ist eine Richtung, in der Sie die Spezifikation der Elemente eines Arrays variieren können. Ein Array, das die Gesamtumsätze für jeden Tag des Monats enthält, verfügt über eine Dimension (den Tag des Monats). Ein Array, das die Gesamtumsätze pro Abteilung für jeden Tag des Monats enthält, hat zwei Dimensionen (die Abteilungs Nummer und den Tag des Monats). Die Anzahl der Dimensionen, die ein Array hat, wird als *Rang*bezeichnet.
+
 > [!NOTE]
->  Sie können die <xref:System.Array.Rank%2A> Eigenschaft, um zu bestimmen, wie viele Dimensionen ein Array enthält.  
-  
-## <a name="working-with-dimensions"></a>Arbeiten mit Dimensionen  
- Sie geben Sie ein Element eines Arrays durch Angabe einer *Index* oder *Feldindex* für jeden seiner Dimensionen. Die Elemente sind über die einzelnen Dimensionen von Index 0 bis zum höchsten Indexwert für diese Dimension zusammenhängenden.  
-  
- Die folgenden Abbildungen zeigen die grundlegende Struktur von Arrays mit unterschiedlichem Rang. Jedes Element in den Abbildungen zeigt die Werte des Indexes, die darauf zugreifen. Sie können z. B. das erste Element der zweiten Zeile des zweidimensionalen Arrays zugreifen, durch Angabe von Indizes `(1, 0)`.  
-  
- ![Diagramm, das ein eindimensionales Array zeigt.](./media/array-dimensions/one-dimensional-array.gif)  
-  
- ![Diagramm, das ein zweidimensionales Array zeigt.](./media/array-dimensions/two-dimensional-array.gif)  
-  
- ![Diagramm ein dreidimensionales Arrays zeigt.](./media/array-dimensions/three-dimensional-array.gif)  
-  
-### <a name="one-dimension"></a>Eine Dimension  
- Viele Arrays haben nur eine Dimension, wie z. B. die Anzahl der einzelnen Altersgruppen. Die einzige Voraussetzung für ein Element angeben, ist das Alter, das die Anzahl die dieses Element enthält. Aus diesem Grund wird ein entsprechendes Array nur ein Index verwendet. Das folgende Beispiel deklariert eine Variable für eine *eindimensionales Array* ALT Anzahl der Zugriffe von 0 bis 120.  
-  
-```  
-Dim ageCounts(120) As UInteger  
-```  
-  
-### <a name="two-dimensions"></a>Zwei Dimensionen  
- Einige Arrays haben zwei Dimensionen, z. B. die Anzahl der Niederlassungen auf jede Boden der jedes Gebäude an einem Campus. Die Spezifikation eines Elements erfordert, Erstellen von Anzahl und der Boden und jedes Element enthält die Anzahl der für diese Kombination von Gebäude und Etage. Aus diesem Grund wird ein entsprechendes Array zwei Indizes verwendet. Das folgende Beispiel deklariert eine Variable für eine *zweidimensionales Array* der Anzahl der Büros, Gebäuden 0 bis 40 und Stockwerken 0 bis 5.  
-  
-```  
-Dim officeCounts(40, 5) As Byte  
-```  
-  
- Ein zweidimensionales Array wird auch bezeichnet ein *rechteckiges Array*.  
-  
-### <a name="three-dimensions"></a>Drei Dimensionen  
- Einige Arrays haben drei Dimensionen, z. B. Werte im dreidimensionalen Raum. Ein solches Array verwendet drei Indizes, die in diesem Fall die x-, y- und Z-Koordinaten des physischen Speicherplatzes darstellen. Das folgende Beispiel deklariert eine Variable für eine *dreidimensionale Array* Air temperaturspalte an verschiedenen Punkten in einem dreidimensionalen Volume.  
-  
-```  
-Dim airTemperatures(99, 99, 24) As Single  
-```  
-  
-### <a name="more-than-three-dimensions"></a>Mehr als drei Dimensionen  
- Obwohl ein Array mit bis zu 32 Dimensionen aufweisen kann, ist es selten um mehr als drei zu erhalten.  
-  
+> Sie können die <xref:System.Array.Rank%2A> -Eigenschaft verwenden, um die Anzahl der Dimensionen eines Arrays zu bestimmen.
+
+## <a name="working-with-dimensions"></a>Arbeiten mit Dimensionen
+
+Sie geben ein Element eines Arrays an, indem Sie einen Index bereit *stellen oder für* jede seiner Dimensionen einen *Index* festlegen. Die Elemente sind zusammenhängend entlang jeder Dimension von Index 0 bis zum höchsten Index für diese Dimension.
+
+Die folgenden Abbildungen zeigen die konzeptionelle Struktur von Arrays mit unterschiedlichen Rang folgen. Jedes Element in den Abbildungen zeigt die Indexwerte, die darauf zugreifen. Beispielsweise können Sie durch Angabe von Indizes `(1, 0)`auf das erste Element der zweiten Zeile des zweidimensionalen Arrays zugreifen.
+
+![Diagramm, das ein eindimensionales Array anzeigt.](./media/array-dimensions/one-dimensional-array.gif)
+
+![Diagramm, das ein zweidimensionales Array anzeigt.](./media/array-dimensions/two-dimensional-array.gif)
+
+![Diagramm, das ein dreidimensionales Array anzeigt.](./media/array-dimensions/three-dimensional-array.gif)
+
+### <a name="one-dimension"></a>Eine Dimension
+
+Viele Arrays verfügen nur über eine Dimension, z. b. die Anzahl der Personen jedes Alters. Die einzige Anforderung, ein Element anzugeben, ist das Alter, für das dieses Element die Anzahl enthält. Daher verwendet ein solches Array nur einen Index. Im folgenden Beispiel wird eine Variable deklariert, die ein *eindimensionales Array* von Alters Zählungen für die Alters Zahlen 0 bis 120 enthält.
+
+```vb
+Dim ageCounts(120) As UInteger
+```
+
+### <a name="two-dimensions"></a>Zwei Dimensionen
+
+Einige Arrays verfügen über zwei Dimensionen, z. b. die Anzahl der Niederlassungen in jeder Etage der einzelnen Gebäude auf einem Campus. Die Angabe eines Elements erfordert sowohl die Gebäude Nummer als auch die Etage, und jedes Element enthält die Anzahl für diese Kombination aus Gebäude und Etage. Daher verwendet ein solches Array zwei Indizes. Im folgenden Beispiel wird eine Variable deklariert, die ein *zweidimensionales Array* von Office-Zählungen enthält, für Gebäude 0 bis 40 und die Stock-Werte 0 bis 5.
+
+```vb
+Dim officeCounts(40, 5) As Byte
+```
+
+Ein zweidimensionales Array wird auch als *rechteckiges Array*bezeichnet.
+
+### <a name="three-dimensions"></a>Drei Dimensionen
+
+Einige Arrays verfügen über drei Dimensionen, z. b. Werte im dreidimensionalen Raum. Ein solches Array verwendet drei Indizes, die in diesem Fall die x-, y-und z-Koordinaten von physischem Raum darstellen. Im folgenden Beispiel wird eine Variable deklariert, die ein *dreidimensionales Array* von Lufttemperaturen an verschiedenen Punkten in einem dreidimensionalen Volume enthält.
+
+```vb
+Dim airTemperatures(99, 99, 24) As Single
+```
+
+### <a name="more-than-three-dimensions"></a>Mehr als drei Dimensionen
+
+Obwohl ein Array bis zu 32 Dimensionen aufweisen kann, ist es selten, dass mehr als drei Dimensionen vorhanden sind.
+
 > [!NOTE]
->  Wenn Sie die Dimensionen in ein Array hinzufügen, erhöht der gesamte Speicher erforderlich, die vom Array sind beträchtlich, also verwenden mehrdimensionale Arrays mit Vorsicht.  
-  
-## <a name="using-different-dimensions"></a>Verwenden von verschiedenen Dimensionen  
- Angenommen Sie, Sie Umsätze für jeden Tag des aktuellen Monats nachverfolgen möchten. Sie können ein eindimensionales Array mit 31 Elementen deklarieren, eine für jeden Tag des Monats, wie im folgenden Beispiel wird gezeigt.  
-  
-```  
-Dim salesAmounts(30) As Double  
-```  
-  
- Jetzt nehmen Sie die gleiche Informationen nicht nur für jeden Tag eines Monats, sondern auch für jeden Monat des Jahres nachverfolgen möchten. Sie können ein zweidimensionales Array mit 12 Zeilen (für die Monate) und 31 Spalten (für die Tage), wie im folgenden Beispiel gezeigt deklarieren.  
-  
-```  
-Dim salesAmounts(11, 30) As Double  
-```  
-  
- Angenommen, Sie entscheiden, damit Ihr Array enthalten jetzt Informationen für mehr als ein Jahr. Wenn Sie die Umsatzbeträge für fünf Jahre nachverfolgen möchten, können Sie ein dreidimensionales Array mit 5 Ebenen, 12 Zeilen und 31 Spalten, wie im folgenden Beispiel gezeigt deklarieren.  
-  
-```  
-Dim salesAmounts(4, 11, 30) As Double  
-```  
-  
- Beachten Sie Folgendes: Da jeder Index von 0 abweicht, die auf seinen Maximalwert, jede Dimension des `salesAmounts` als eins kleiner ist als die erforderliche Länge für diese Dimension deklariert wird. Beachten Sie, dass die Größe des Arrays mit jeder neuen Dimension zunimmt. Die drei Größen in den vorherigen Beispielen werden 31 372 und 1.860 Elementen.  
-  
+> Wenn Sie einem Array Dimensionen hinzufügen, erhöht sich der für das Array benötigte Gesamtspeicher erheblich. verwenden Sie daher mehrdimensionale Arrays mit Sorgfalt.
+
+## <a name="using-different-dimensions"></a>Verwenden verschiedener Dimensionen
+
+Angenommen, Sie möchten die Umsatz Beträge für jeden Tag des aktuellen Monats nachverfolgen. Sie können ein eindimensionales Array mit 31 Elementen deklarieren, eine für jeden Tag des Monats, wie im folgenden Beispiel gezeigt.
+
+```vb
+Dim salesAmounts(30) As Double
+```
+
+Nehmen Sie nun an, Sie möchten die gleichen Informationen nicht nur für jeden Tag eines Monats, sondern auch für jeden Monat des Jahres nachverfolgen. Sie können ein zweidimensionales Array mit 12 Zeilen (für die Monate) und 31 Spalten (für die Tage) deklarieren, wie im folgenden Beispiel gezeigt.
+
+```vb
+Dim salesAmounts(11, 30) As Double
+```
+
+Angenommen, Sie entscheiden sich dafür, dass Ihr Array Informationen für mehr als ein Jahr enthalten soll. Wenn Sie Umsatz Beträge für 5 Jahre nachverfolgen möchten, können Sie ein dreidimensionales Array mit 5 Ebenen, 12 Zeilen und 31 Spalten deklarieren, wie im folgenden Beispiel gezeigt.
+
+```vb
+Dim salesAmounts(4, 11, 30) As Double
+```
+
+Beachten Sie, dass jede Dimension von `salesAmounts` als eine kleiner als die für diese Dimension erforderliche Länge deklariert wird, da jeder Index von 0 bis zum Maximum abweicht. Beachten Sie auch, dass sich die Größe des Arrays mit jeder neuen Dimension vergrößert. Die drei Größen in den vorangehenden Beispielen sind die Elemente 31, 372 und 1.860.
+
 > [!NOTE]
->  Sie können ein Array erstellen, ohne die `Dim` Anweisung oder der `New` Klausel. Sie können z. B. Aufrufen der <xref:System.Array.CreateInstance%2A> Methode oder eine andere Komponente kann Ihren Code auf diese Weise erstellte Array übergeben. Ein Array dieser Art lassen sich auf eine unteren Grenze ungleich 0. Sie können immer auf die untere Grenze einer Dimension testen, mit der <xref:System.Array.GetLowerBound%2A> Methode oder der `LBound` Funktion.  
-  
+> Sie können ein Array erstellen, ohne die `Dim` -Anweisung oder `New` die-Klausel zu verwenden. Sie können z. b. die <xref:System.Array.CreateInstance%2A> -Methode oder eine andere Komponente den Code an ein auf diese Weise erstelltes Array übergeben. Ein solches Array kann eine untere Grenze aufweisen, die nicht 0 (null) ist. Mithilfe der <xref:System.Array.GetLowerBound%2A> -Methode oder der `LBound` -Funktion können Sie immer die untere Grenze einer Dimension testen.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Objekt-Datentyp (Visual Basic)
+title: Object-Datentyp (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Object
@@ -10,62 +10,67 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 593fda6a4949a55d77ae70edd19159a618cc6b6d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ac906494c49810e3d389591b1044f412e7320bc
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592078"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513046"
 ---
 # <a name="object-data-type"></a>Object Data Type
-Enthält die Adressen, die auf Objekte verweisen. Sie können den Verweistyp (Zeichenfolge, Array, Klasse oder Schnittstelle) zuweisen, um eine `Object` Variable. Ein `Object` Variablen finden Sie auch die Daten eines beliebigen Werttyps (numerisch, `Boolean`, `Char`, `Date`, Struktur oder Enumeration).  
-  
-## <a name="remarks"></a>Hinweise  
- Die `Object` -Datentyp kann auf Daten eines beliebigen Datentyps, einschließlich Objektinstanzen der Anwendung erkannt zeigen. Verwendung `Object` , wenn Sie nicht zur Kompilierzeit wissen welchen Datentyp die Variable möglicherweise zeigen Sie auf.  
-  
- Der Standardwert von `Object` ist `Nothing` (ein null-Verweis).  
-  
-## <a name="data-types"></a>Datentypen  
- Sie können eine Variable, eine Konstante oder ein Ausdruck eines beliebigen Datentyps, Zuweisen einer `Object` Variable. Um zu bestimmen, den Datentyp einer `Object` -Variable aktuell verweist, können Sie mit der <xref:System.Type.GetTypeCode%2A> -Methode der der <xref:System.Type?displayProperty=nameWithType> Klasse. Dies wird anhand des folgenden Beispiels veranschaulicht.  
-  
-```  
-Dim myObject As Object  
-' Suppose myObject has now had something assigned to it.  
-Dim datTyp As Integer  
-datTyp = Type.GetTypeCode(myObject.GetType())  
-```  
-  
- Die `Object` Datentyp ein Verweistyp ist. Visual Basic jedoch behandelt eine `Object` -Variable als einen Werttyp, wenn sie auf die Daten eines Werttyps verweist.  
-  
-## <a name="storage"></a>Speicher  
- Beliebige Datentyp verweist, eine `Object` sind keine enthalten dem Datenwert selbst, sondern stattdessen ein Zeiger auf den Wert. Sie verwendet stets die vier Bytes im Arbeitsspeicher des Computers, aber dies schließt nicht den Speicher für die Daten, die den Wert der Variablen darstellt. Aufgrund der Code, der den Zeiger verwendet, um die Daten zu suchen `Object` Variablen, die Werttypen sind etwas langsamer als explizit typisierte Variablen zugreifen.  
-  
-## <a name="programming-tips"></a>Programmiertipps  
-  
-- **Interop-Überlegungen.** Wenn Sie anbinden, Komponenten, die nicht für .NET Framework, z. B. Automatisierungs- oder COM-Objekte, geschriebenen müssen bedenken, dass Zeigertypen in anderen Umgebungen nicht mit den Visual Basic kompatibel sind `Object` Typ.  
-  
-- **Leistung:** Eine Variable, die Sie deklarieren, mit der `Object` flexibel genug, um einen Verweis auf ein Objekt enthalten ist. Jedoch beim Aufrufen einer Methode oder Eigenschaft auf eine solche Variable immer fallen *späte Bindung* (Laufzeit). Um zu erzwingen *frühe Bindung* (zum Zeitpunkt der Kompilierung) und eine bessere Leistung, deklarieren Sie die Variable mit einem bestimmten Klassennamen oder in der bestimmten Datentyp umzuwandeln.  
-  
-     Beim Deklarieren einer Objektvariablen, versuchen Sie es an einen bestimmten Klassentyp, z.B. <xref:System.OperatingSystem>, anstatt die generalisierte `Object` Typ. Verwenden Sie außerdem die spezifischste Klasse verfügbar sind, z. B. <xref:System.Windows.Forms.TextBox> anstelle von <xref:System.Windows.Forms.Control>, sodass Sie dessen Eigenschaften und Methoden zugreifen können. In der Regel können Sie die **Klassen** Liste der **Objektkatalog** verfügbaren Klassennamen zu finden.  
-  
-- **Erweiternde.** Alle Datentypen und alle Verweistypen werden erweitert, um die `Object` -Datentyp. Dies bedeutet, Sie können einen beliebigen Typ zu konvertieren `Object` unabhängig vom eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
-  
-     Allerdings, wenn die Konvertierung zwischen Werttypen und `Object`, Visual Basic führt Operationen mit Bezeichnung *Boxing* und *unboxing*, die Ausführung langsamer stellen.  
-  
-- **Typzeichen.** `Object` hat kein literal-Typzeichen oder Bezeichner-Typzeichen.  
-  
-- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Object?displayProperty=nameWithType> Klasse.  
-  
-## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht eine `Object` Variable, die auf eine Objektinstanz verweisen.  
-  
-```  
-Dim objDb As Object  
-Dim myCollection As New Collection()  
-' Suppose myCollection has now been populated.  
-objDb = myCollection.Item(1)  
-```  
-  
+
+Enthält Adressen, die auf-Objekte verweisen. Sie können einem beliebigen Verweistyp (Zeichenfolge, Array, Klasse oder Schnittstelle) eine `Object` Variable zuweisen. Eine `Object` Variable kann auch auf Daten eines beliebigen Werttyps (numerisch `Char`, `Date` `Boolean`,,, Struktur oder Enumeration) verweisen.
+
+## <a name="remarks"></a>Hinweise
+
+Der `Object` -Datentyp kann auf Daten eines beliebigen Datentyps verweisen, einschließlich aller von Ihrer Anwendung erkannten Objektinstanzen. Verwenden `Object` Sie, wenn Sie zum Zeitpunkt der Kompilierung nicht wissen, auf welchen Datentyp die Variable verweisen könnte.
+
+Der Standardwert von `Object` ist `Nothing` (ein NULL-Verweis).
+
+## <a name="data-types"></a>Datentypen
+
+Sie können einer `Object` Variablen eine Variable, eine Konstante oder einen Ausdruck eines beliebigen Datentyps zuweisen. Zum Ermitteln des Datentyps, auf den sich derzeit eine `Object` Variable bezieht, können Sie die <xref:System.Type.GetTypeCode%2A> -Methode der <xref:System.Type?displayProperty=nameWithType> -Klasse verwenden. Dies wird anhand des folgenden Beispiels veranschaulicht.
+
+```vb
+Dim myObject As Object
+' Suppose myObject has now had something assigned to it.
+Dim datTyp As Integer
+datTyp = Type.GetTypeCode(myObject.GetType())
+```
+
+Beim `Object` Datentyp handelt es sich um einen Verweistyp. Visual Basic behandelt eine `Object` Variable jedoch als Werttyp, wenn Sie auf Daten eines Werttyps verweist.
+
+## <a name="storage"></a>Speicher
+
+Jeder Datentyp, auf den er verweist `Object` , enthält eine Variable nicht den Daten Wert selbst, sondern einen Zeiger auf den Wert. Es werden immer vier Bytes im Arbeitsspeicher des Computers verwendet. Dies schließt jedoch nicht den Speicher für die Daten ein, die den Wert der Variablen darstellen. Aufgrund des Codes, in dem der-Zeiger verwendet wird, um `Object` die Daten zu suchen, sind Variablen, die Werttypen verwenden, etwas langsamer als die explizit typisierten Variablen.
+
+## <a name="programming-tips"></a>Programmiertipps
+
+- **Interop-Überlegungen.** Wenn Sie mit Komponenten verbunden sind, die nicht für die .NET Framework geschrieben wurden (z. b. Automatisierungs-oder COM-Objekte), beachten Sie, dass Zeiger Typen in anderen `Object` Umgebungen nicht mit dem Visual Basic Typ kompatibel sind.
+
+- **Leistung:** Eine Variable, die Sie mit `Object` dem-Typ deklarieren, ist flexibel genug, um einen Verweis auf jedes Objekt zu enthalten. Wenn Sie jedoch eine Methode oder Eigenschaft für eine solche Variable aufrufen, wird immer eine *späte Bindung* (zur Laufzeit) verursacht. Um eine *frühe Bindung* (zur Kompilierzeit) und eine bessere Leistung zu erzwingen, deklarieren Sie die Variable mit einem bestimmten Klassennamen, oder wandeln Sie Sie in den spezifischen Datentyp um.
+
+  Wenn Sie eine Objekt Variable deklarieren, versuchen Sie, einen bestimmten Klassentyp zu <xref:System.OperatingSystem>verwenden, z. b `Object` . anstelle des generalisierten Typs. Sie sollten auch die spezifischere verfügbare Klasse verwenden, z <xref:System.Windows.Forms.TextBox> . b <xref:System.Windows.Forms.Control>. anstelle von, damit Sie auf die Eigenschaften und Methoden zugreifen können. In der Regel können Sie die Liste **Klassen** im **Objektkatalog** verwenden, um nach verfügbaren Klassennamen zu suchen.
+
+- **Tet.** Alle Datentypen und alle Verweis Typen werden auf den `Object` -Datentyp erweitert. Dies bedeutet, dass Sie jeden Typ in `Object` konvertieren können, <xref:System.OverflowException?displayProperty=nameWithType> ohne dass ein Fehler auftritt.
+
+  Wenn Sie jedoch zwischen Werttypen und `Object`konvertieren, führt Visual Basic Vorgänge mit dem Namen *Boxing* und *Unboxing*aus, wodurch die Ausführung langsamer wird.
+
+- **Geben Sie Zeichen ein.** `Object`weist kein Literaltyp Zeichen oder Bezeichnertyp Zeichen auf.
+
+- **Frameworktyp.** Der entsprechende Typ in der .NET Framework ist die <xref:System.Object?displayProperty=nameWithType> -Klasse.
+
+## <a name="example"></a>Beispiel
+
+Im folgenden Beispiel wird eine `Object` Variable veranschaulicht, die auf eine Objektinstanz verweist.
+
+```vb
+Dim objDb As Object
+Dim myCollection As New Collection()
+' Suppose myCollection has now been populated.
+objDb = myCollection.Item(1)
+```
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Object>
@@ -73,5 +78,5 @@ objDb = myCollection.Item(1)
 - [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [Vorgehensweise: Bestimmen Sie, ob zwei Objekte verknüpft sind](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [Vorgehensweise: Bestimmt, ob zwei Objekte identisch sind.](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Vorgehensweise: Bestimmen, ob zwei Objekte verknüpft sind](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Vorgehensweise: Bestimmen, ob zwei Objekte identisch sind](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

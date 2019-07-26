@@ -7,56 +7,57 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d5aae4d30abbf9ed2af260412352a5e0452e0dcc
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665143"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513034"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Der Ausdruck ist ein Wert und kann nicht als Ziel einer Zuweisung verwendet werden
-Eine Anweisung versucht, ein Ausdruck einen Wert zuweisen. Sie können einen Wert nur auf eine schreibbare Variable, eine Eigenschaft oder ein Arrayelement zur Laufzeit zuweisen. Im folgende Beispiel wird veranschaulicht, wie dieser Fehler kann auftreten.  
-  
-```  
-Dim yesterday As Integer  
-ReadOnly maximum As Integer = 45  
-yesterday + 1 = DatePart(DateInterval.Day, Now)  
-' The preceding line is an ERROR because of an expression on the left.  
-maximum = 50  
-' The preceding line is an ERROR because maximum is declared ReadOnly.  
-```  
-  
- Ähnliche Beispiele können auf Eigenschaften und Elemente des Arrays anwenden.  
-  
- **Indirekten Zugriff.** Dieser Fehler kann auch von Indirekter Zugriff über einen Werttyp generiert werden. Beachten Sie im folgenden Codebeispiel wird, der versucht, den Wert festlegen <xref:System.Drawing.Point> von indirekten Zugriff über <xref:System.Windows.Forms.Control.Location%2A>.  
-  
-```  
-' Assume this code runs inside Form1.  
-Dim exitButton As New System.Windows.Forms.Button()  
-exitButton.Text = "Exit this form"  
-exitButton.Location.X = 140  
-' The preceding line is an ERROR because of no storage for Location.  
-```  
-  
- Die letzte Anweisung im obigen Beispiel schlägt fehl, da nur eine temporäre Zuordnung für erstellt die <xref:System.Drawing.Point> vom zurückgegebene Struktur der <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft. Eine Struktur ein Werttyp ist, und die temporäre Struktur wird nicht beibehalten, nachdem die Anweisung ausgeführt wird. Das Problem ist behoben, durch Deklarieren und verwenden eine Variable für <xref:System.Windows.Forms.Control.Location%2A>, erstellt eine permanente Zuordnung für die <xref:System.Drawing.Point> Struktur. Das folgende Beispiel zeigt Code, der die letzte Anweisung der im vorherigen Beispiel ersetzen kann.  
-  
-```  
-Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)  
-exitButton.Location = exitLocation  
-```  
-  
- **Fehler-ID:** BC30068  
-  
-## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
-  
-- Wenn die Anweisung ein Ausdruck einen Wert zuweist, ersetzen Sie den Ausdruck durch eine einzelne schreibbare Variable, eine Eigenschaft oder ein Arrayelement aus.  
-  
-- Wenn die Anweisung indirekten Zugriff über einen Werttyp (in der Regel eine Struktur) ist, erstellen Sie eine Variable für den Werttyp.  
-  
-- Weisen Sie die entsprechende Struktur (oder anderen Werttyp) auf die Variable an.  
-  
-- Verwenden Sie die Variable, um Zugriff auf die Eigenschaft es sich um einen Wert zuzuweisen.  
-  
+
+Eine Anweisung versucht, einem Ausdruck einen Wert zuzuweisen. Sie können einen Wert nur einer beschreibbaren Variablen, einer Eigenschaft oder einem Array Element zur Laufzeit zuweisen. Im folgenden Beispiel wird veranschaulicht, wie dieser Fehler auftreten kann.
+
+```vb
+Dim yesterday As Integer
+ReadOnly maximum As Integer = 45
+yesterday + 1 = DatePart(DateInterval.Day, Now)
+' The preceding line is an ERROR because of an expression on the left.
+maximum = 50
+' The preceding line is an ERROR because maximum is declared ReadOnly.
+```
+
+Ähnliche Beispiele können auf Eigenschaften und Array Elemente angewendet werden.
+
+**Indirekter Zugriff.** Dieser Fehler kann auch durch indirekten Zugriff durch einen Werttyp generiert werden. Sehen Sie sich das folgende Codebeispiel an, das versucht, den <xref:System.Drawing.Point> Wert von festzulegen, <xref:System.Windows.Forms.Control.Location%2A>indem Sie indirekt über darauf zugreifen.
+
+```vb
+' Assume this code runs inside Form1.
+Dim exitButton As New System.Windows.Forms.Button()
+exitButton.Text = "Exit this form"
+exitButton.Location.X = 140
+' The preceding line is an ERROR because of no storage for Location.
+```
+
+Die letzte Anweisung des vorangehenden Beispiels schlägt fehl, da Sie nur eine temporäre Zuordnung für <xref:System.Drawing.Point> die-Struktur erstellt <xref:System.Windows.Forms.Control.Location%2A> , die von der-Eigenschaft zurückgegeben wird. Eine Struktur ist ein Werttyp, und die temporäre Struktur wird nicht beibehalten, nachdem die Anweisung ausgeführt wurde. Das Problem wird durch Deklarieren und Verwenden einer Variablen für <xref:System.Windows.Forms.Control.Location%2A>gelöst, wodurch eine permanente Zuordnung für die <xref:System.Drawing.Point> Struktur erstellt wird. Das folgende Beispiel zeigt Code, der die letzte-Anweisung des vorangehenden Beispiels ersetzen kann.
+
+```vb
+Dim exitLocation as New System.Drawing.Point(140, exitButton.Location.Y)
+exitButton.Location = exitLocation
+```
+
+**Fehler-ID:** BC30068
+
+## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
+
+- Wenn die Anweisung einem Ausdruck einen Wert zuweist, ersetzen Sie den Ausdruck durch eine einzelne beschreibbare Variable, eine Eigenschaft oder ein Array Element.
+
+- Wenn die Anweisung indirekten Zugriff über einen Werttyp (in der Regel eine Struktur) gewährt, erstellen Sie eine Variable, die den Werttyp enthält.
+
+- Weisen Sie der Variablen die entsprechende Struktur (oder einen anderen Werttyp) zu.
+
+- Verwenden Sie die-Variable, um auf die-Eigenschaft zuzugreifen, um ihr einen Wert zuzuweisen.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
