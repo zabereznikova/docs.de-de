@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401442"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512355"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operatoren im Zusammenhang mit Zeigern (C#-Referenz)
 
@@ -124,7 +124,7 @@ Für einen Zeiger `p` vom Typ `T*` und einen Ausdruck `n` eines Typs, der impliz
 - Für die Ausdrücke `p + n` und `n + p` wird jeweils ein Zeiger vom Typ `T*` erzeugt, der sich aus dem Addieren von `n * sizeof(T)` zur Adresse von `p` ergibt.
 - Für den Ausdruck `p - n` wird ein Zeiger vom Typ `T*` erzeugt, der sich ergibt, indem `n * sizeof(T)` von der Adresse von `p` subtrahiert wird.
 
-Mit dem Operator [`sizeof`](../keywords/sizeof.md) wird die Größe eines Typs in Byte abgerufen.
+Mit dem Operator [`sizeof`](sizeof.md) wird die Größe eines Typs in Byte abgerufen.
 
 Im folgenden Beispiel wird die Verwendung des Operators `+` mit einem Zeiger veranschaulicht:
 
@@ -193,4 +193,4 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [unsafe (Schlüsselwort)](../keywords/unsafe.md)
 - [fixed (Schlüsselwort)](../keywords/fixed-statement.md)
 - [stackalloc (Operator)](stackalloc.md)
-- [sizeof (Operator)](../keywords/sizeof.md)
+- [sizeof (Operator)](sizeof.md)

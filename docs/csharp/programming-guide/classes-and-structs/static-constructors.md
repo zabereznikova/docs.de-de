@@ -6,12 +6,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: f053a74fcb87971506b83ca8ca2076517ddddf56
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: f8924f5a1e93a616b114506f383242fd2fde615c
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307106"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433573"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Statische Konstruktoren (C#-Programmierhandbuch)
 Ein statischer Konstruktor wird verwendet, um [static](../../../csharp/language-reference/keywords/static.md)-Daten zu initialisieren oder um eine bestimmte Aktion auszuführen, die nur einmal ausgeführt werden muss. Er wird automatisch aufgerufen, bevor die erste Instanz erstellt oder auf irgendwelche statischen Member verwiesen wird.  
@@ -67,4 +67,4 @@ Weitere Informationen finden Sie im Abschnitt [Statische Konstruktoren](~/_cshar
 - [Statische Klassen und statische Klassenmember](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [Finalizer](../../../csharp/programming-guide/classes-and-structs/destructors.md)
 - [Entwurfsrichtlinien für Konstruktoren](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
-- [Sicherheitswarnung – CA2121: Statische Konstruktoren sollten privat sein.](https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
+- [Sicherheitswarnung – CA2121: Statische Konstruktoren sollten privat sein.](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

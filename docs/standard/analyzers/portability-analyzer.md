@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit dem Tool .NET Portability Analyzer bewert
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331741"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433951"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -29,7 +29,7 @@ Laden Sie .NET Portability Analyzer in Visual Studio zunächst von [Visual Studi
 
 ![Screenshot zur Portabilität](./media/portability-analyzer/portability-screenshot.png)
 
-Sie können auch die ApiPort-Konsolenanwendung verwenden. Laden Sie sie aus dem [ApiPort-Repository](http://aka.ms/apiportdownload) herunter. Sie können die Befehlsoption `listTargets` verwenden, um die Liste mit verfügbaren Zielen anzuzeigen. Anschließend wählen Sie Zielplattformen aus, indem Sie die Befehlsoption `-t` oder `--target` angeben. 
+Sie können auch die ApiPort-Konsolenanwendung verwenden. Laden Sie sie aus dem [ApiPort-Repository](https://aka.ms/apiportdownload) herunter. Sie können die Befehlsoption `listTargets` verwenden, um die Liste mit verfügbaren Zielen anzuzeigen. Anschließend wählen Sie Zielplattformen aus, indem Sie die Befehlsoption `-t` oder `--target` angeben. 
 
 ### <a name="analyze-portability"></a>Analysieren der Portabilität
 Um das gesamte Projekt in Visual Studio zu analysieren, klicken Sie mit der rechten Maustaste im **Projektmappen-Explorer** auf Ihr Projekt, und wählen Sie **Assemblyportabilität analysieren** aus. Wechseln Sie andernfalls zum Menü **Analysieren**, und wählen Sie **Assemblyportabilität analysieren**. Wählen Sie dort die ausführbare Datei oder DLL-Datei des Projekts aus.
