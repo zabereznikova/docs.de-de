@@ -26,7 +26,7 @@ Ein Abfrageausdruck muss mit einer `from`-Klausel beginnen. Darüber hinaus kann
 
 Sowohl die Bereichsvariable als auch die Datenquelle sind stark typisiert. Die Datenquelle, auf die in der `from`-Klausel verwiesen wird, muss vom Typ <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601> oder von einem abgeleiteten Typ wie <xref:System.Linq.IQueryable%601> sein.
 
-Im folgenden Beispiel `numbers` ist die Datenquelle und `num` ist die Bereichsvariable. Beachten Sie, dass beide Variablen stark typisiert sind, obwohl das [var](var.md)-Schlüsselwort verwendet wird.
+Im folgenden Beispiel ist `numbers` die Datenquelle und `num` die Bereichsvariable. Beachten Sie, dass beide Variablen stark typisiert sind, obwohl das [var](var.md)-Schlüsselwort verwendet wird.
 
 [!code-csharp[cscsrefQueryKeywords#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/From.cs#1)]
 
