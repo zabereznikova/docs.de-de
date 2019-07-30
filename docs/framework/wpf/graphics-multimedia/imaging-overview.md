@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: dc7129e11a82741f5a095d7f1824de3f90421056
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: d1fcf15db750167a93344ff8efd5957933bed6c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331764"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629844"
 ---
 # <a name="imaging-overview"></a>Übersicht über die Bildverarbeitung
 Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ermöglicht es Entwicklern, Bilder anzuzeigen, zu transformieren und zu formatieren.  
@@ -165,7 +165,7 @@ Bildpinsel können Formen, Steuerelemente, Text usw. füllen.
 ## <a name="image-metadata"></a>Bildmetadaten  
  Einige Bilddateien enthalten Metadaten, die den Inhalt oder die Eigenschaften der Datei beschreiben. Die meisten Digitalkameras erstellen z.B. Bilder, die Metadaten zum Fabrikat und Modell der Kamera enthalten, mit der das Bild aufgenommen wurde. Jedes Bildformat behandelt Metadaten unterschiedlich, aber [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] bietet eine einheitliche Möglichkeit zum Speichern und Abrufen von Metadaten für jedes unterstützte Bildformat.  
   
- Der Zugriff auf Metadaten wird durch die <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> -Eigenschaft <xref:System.Windows.Media.Imaging.BitmapSource> eines-Objekts bereitgestellt. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Gibt ein <xref:System.Windows.Media.Imaging.BitmapMetadata> -Objekt zurück, das alle im Bild enthaltenen Metadaten enthält. Diese Daten können in einem Metadatenschema oder einer Kombination aus unterschiedlichen Schemas vorliegen. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] unterstützt die folgenden Schemas für Bildmetadaten: [!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)], tEXt (PNG-Textdaten), [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)], [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] und [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Der Zugriff auf Metadaten wird durch die <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> -Eigenschaft <xref:System.Windows.Media.Imaging.BitmapSource> eines-Objekts bereitgestellt. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>Gibt ein <xref:System.Windows.Media.Imaging.BitmapMetadata> -Objekt zurück, das alle im Bild enthaltenen Metadaten enthält. Diese Daten können in einem Metadatenschema oder einer Kombination aus unterschiedlichen Schemas vorliegen. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]unterstützt die folgenden bildmetadatenschemas: Austauschbare Bilddatei (EXIF), Text (PNG-Textdaten [!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]) [!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)],, [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]und.  
   
  Um den Prozess des Lesens von Metadaten zu vereinfachen, <xref:System.Windows.Media.Imaging.BitmapMetadata> stellt mehrere benannte Eigenschaften bereit, auf die leicht zugegriffen werden <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>kann <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, wie <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>z. b., und. Viele dieser benannten Eigenschaften können auch verwendet werden, um Metadaten zu schreiben. Zusätzliche Unterstützung für das Lesen von Metadaten wird vom Metadaten-Abfragereader bereitgestellt. Die <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> -Methode wird zum Abrufen eines Metadatenabfrage-Readers verwendet, indem eine Zeichen folgen Abfrage wie *"/app1/exif/"* bereitgestellt wird. Im folgenden Beispiel wird verwendet <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> , um den am Speicherort *"/Text/Description"* gespeicherten Text abzurufen.  
   

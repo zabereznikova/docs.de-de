@@ -1,17 +1,17 @@
 ---
 title: 'Ausnahmen: Der try...finally-Ausdruck'
-description: Erfahren Sie, wie die F# "try-finally' Ausdruck können Sie Bereinigungscode auszuführen, auch wenn Sie ein Codeblock eine Ausnahme auslöst.
+description: Erfahren Sie, F# wie die "Try... mithilfe von "Expression" können Sie auch dann Bereinigungs Code ausführen, wenn ein Codeblock eine Ausnahme auslöst.
 ms.date: 05/16/2016
-ms.openlocfilehash: d246bce52b5f30d5e8d7e3c36e9f7d7c48627913
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 03fbda1ef5d55560232f0217f603fc04c0af0eb4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645468"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630273"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Ausnahmen: Der try...finally-Ausdruck
 
-Die `try...finally` Ausdruck können Sie Bereinigungscode auszuführen, auch wenn Sie ein Codeblock eine Ausnahme auslöst.
+Der `try...finally` Ausdruck ermöglicht das Ausführen von Bereinigungs Code, auch wenn ein Codeblock eine Ausnahme auslöst.
 
 ## <a name="syntax"></a>Syntax
 
@@ -24,30 +24,30 @@ finally
 
 ## <a name="remarks"></a>Hinweise
 
-Die `try...finally` Ausdruck kann verwendet werden, zum Ausführen des Codes in *expression2* in der vorherigen Syntax unabhängig davon, ob eine Ausnahme, während der Ausführung des generiert wird *expression1*.
+Der `try...finally` Ausdruck kann verwendet werden, um den Code in *expression2* in der vorangehenden Syntax auszuführen, unabhängig davon, ob während der Ausführung von *expression1*eine Ausnahme generiert wird.
 
-Der Typ des *expression2* trägt nicht auf den Wert des gesamten Ausdrucks ist; der Typ zurückgegeben, wenn eine Ausnahme auftritt, wird der letzte Wert im *expression1*. Wenn eine Ausnahme auftritt, wird kein Wert zurückgegeben, und die ablaufsteuerung an den nächsten übereinstimmenden Ausnahmehandler der Aufrufliste nach oben übertragen. Wenn kein Ausnahmehandler gefunden wird, wird das Programm beendet. Bevor der Code in ein entsprechender Handler ausgeführt wird oder das Programm beendet wird, den Code in die `finally` Branch ausgeführt wird.
+Der *expression2* -Typ trägt nicht zum Wert des gesamten Ausdrucks bei. der Typ, der zurückgegeben wird, wenn keine Ausnahme auftritt, ist der letzte Wert in *expression1*. Wenn eine Ausnahme auftritt, wird kein Wert zurückgegeben, und die Ablauf Steuerung wird an den nächsten übereinstimmenden Ausnahmehandler in der aufrufsstapel übertragen. Wenn kein Ausnahmehandler gefunden wird, wird das Programm beendet. Bevor der Code in einem übereinstimmenden Handler ausgeführt oder das Programm beendet wird, wird der `finally` Code in der Verzweigung ausgeführt.
 
-Der folgende Code veranschaulicht die Verwendung der `try...finally` Ausdruck.
+Der folgende Code veranschaulicht die Verwendung des `try...finally` -Ausdrucks.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5701.fs)]
 
-Die Ausgabe an die Konsole ist wie folgt aus.
+Die Ausgabe an die Konsole lautet wie folgt.
 
 ```
 Closing stream
 Exception handled.
 ```
 
-Wie Sie in der Ausgabe sehen, wurde der Stream geschlossen, bevor die äußere Ausnahme behandelt wurde, und die Datei `test.txt` enthält den Text `test1`, was bedeutet, dass die Puffer geleert und auf den Datenträger, auch wenn die Ausnahme übertragen geschrieben wurden die Steuerung an den äußeren Ausnahmehandler übergeben.
+Wie Sie in der Ausgabe sehen können, wurde der Stream geschlossen, bevor die äußere Ausnahme behandelt wurde, und die `test.txt` Datei enthält den `test1`Text, der angibt, dass die Puffer geleert und auf den Datenträger geschrieben wurden, obwohl die Ausnahme übertragen wurde. Steuern Sie den äußeren Ausnahmehandler.
 
-Beachten Sie, dass die `try...with` -Konstrukt ist ein separater Konstrukt aus der `try...finally` zu erstellen. Aus diesem Grund Wenn der Code sowohl erfordert eine `with` Block und einem `finally` blockieren, müssen Sie die zwei Konstrukte schachteln, wie im folgenden Codebeispiel wird.
+Beachten Sie, `try...with` dass das-Konstrukt ein separates Konstrukt `try...finally` aus dem-Konstrukt ist. Wenn Ihr Code also sowohl einen `with` -Block als auch einen `finally` -Block erfordert, müssen Sie die beiden-Konstrukte Schachteln, wie im folgenden Codebeispiel gezeigt.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5702.fs)]
 
-Im Kontext des Berechnungsausdrücke, einschließlich der Sequence-Ausdrücke und asynchrone Workflows, **try-finally** Ausdrücke können eine benutzerdefinierte Implementierung haben. Weitere Informationen finden Sie unter [Berechnungsausdrücke](../computation-expressions.md).
+Versuchen Sie im Kontext von Berechnungs Ausdrücken, einschließlich Sequenz Ausdrücken und asynchronen Workflows, **... Schließlich** können Ausdrücke über eine benutzerdefinierte Implementierung verfügen. Weitere Informationen finden Sie unter [Berechnungs Ausdrücke](../computation-expressions.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Ausnahmebehandlung](index.md)
-- [Ausnahmen: Die `try...with` Ausdruck](the-try-with-expression.md)
+- [Ausnahmen: Der `try...with` Ausdruck](the-try-with-expression.md)

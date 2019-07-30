@@ -1,17 +1,17 @@
 ---
 title: let-Bindungen in Klassen
-description: Informationen zum Definieren der privaten Felder und private Funktionen für F# Klassen mit "let" Bindungen in der Klassendefinition.
+description: Erfahren Sie, wie Sie private Felder und private Funktionen F# für Klassen mithilfe von let-Bindungen in der Klassendefinition definieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 29f843e3e065837a53fd5eb26c79088bc0778c76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0086d3a91f85395c2bd0555f978c5d951c363357
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645175"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627486"
 ---
 # <a name="let-bindings-in-classes"></a>let-Bindungen in Klassen
 
-Sie können private Felder und private Funktionen für definieren F# Klassen mit `let` Bindungen in der Klassendefinition.
+Sie können private Felder und private Funktionen für F# Klassen definieren, indem `let` Sie in der Klassendefinition Bindungen verwenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -25,17 +25,17 @@ Sie können private Felder und private Funktionen für definieren F# Klassen mit
 
 ## <a name="remarks"></a>Hinweise
 
-Die vorherige Syntax wird nach den Klassendeklarationen Überschrift und Vererbung, aber vor Memberdefinitionen angezeigt. Die Syntax lautet wie `let` Bindungen außerhalb von Klassen, aber die Namen in einer Klasse definiert haben, einen Bereich, auf die Klasse beschränkt ist. Ein `let` Bindung erstellt wird, ein privates Feld bzw. die Funktion; zum Verfügbarmachen von Daten oder Funktionen zu einer Eigenschaft oder ein Membermethode öffentlich deklarieren.
+Die vorherige Syntax wird nach der Klassen Überschrift und den Vererbungs Deklarationen, jedoch vor allen Element Definitionen angezeigt. Die Syntax ähnelt `let` der Bindung außerhalb von Klassen, aber die in einer Klasse definierten Namen haben einen Bereich, der auf die Klasse beschränkt ist. Eine `let` Bindung erstellt ein privates Feld oder eine private Funktion. um Daten oder Funktionen öffentlich verfügbar zu machen, deklarieren Sie eine Eigenschaft oder eine Member-Methode.
 
-Ein `let` Bindung, ist nicht statisch ist eine Instanz namens `let` Bindung. Instanz `let` Bindungen ausgeführt, wenn Objekte erstellt werden. Statische `let` Bindungen sind Teil der statische Initialisierer für die Klasse, die unbedingt ausführen, bevor Sie der Typ zuerst verwendet wird.
+Eine `let` Bindung, die nicht statisch ist, wird als `let` instanzbindung bezeichnet. Instanzbindungen `let` werden ausgeführt, wenn Objekte erstellt werden. Statische `let` Bindungen sind Teil des statischen Initialisierers für die-Klasse, die vor der ersten Verwendung des Typs garantiert ausgeführt wird.
 
-Der Code innerhalb der Instanz `let` der primäre Konstruktor Parameter von Bindungen verwendet werden kann.
+Der Code in instanzbindungen `let` kann die Parameter des primären Konstruktors verwenden.
 
-Attribute und Zugriffsmodifizierer dürfen nicht auf `let` Bindungen in Klassen.
+Attribute und Zugriffsmodifizierer `let` sind für Bindungen in Klassen nicht zulässig.
 
-Die folgenden Codebeispiele veranschaulichen verschiedene Arten von `let` Bindungen in Klassen.
+In den folgenden Codebeispielen werden verschiedene Typen `let` von Bindungen in Klassen veranschaulicht.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
 
 Die Ausgabe lautet wie folgt.
 
@@ -45,12 +45,12 @@ Die Ausgabe lautet wie folgt.
 
 ## <a name="alternative-ways-to-create-fields"></a>Alternative Möglichkeiten zum Erstellen von Feldern
 
-Sie können auch die `val` Schlüsselwort, um ein privates Feld erstellen. Bei Verwendung der `val` -Schlüsselwort, das Feld ist kein Wert zugewiesen, wenn das Objekt wird erstellt, jedoch mit einem Standardwert initialisiert wird. Weitere Informationen finden Sie unter [explizite Felder: Das Val Schlüsselwort](explicit-fields-the-val-keyword.md).
+Sie können auch das `val` -Schlüsselwort verwenden, um ein privates Feld zu erstellen. Wenn Sie das `val` -Schlüsselwort verwenden, wird dem Feld kein Wert zugewiesen, wenn das Objekt erstellt wird, sondern mit einem Standardwert initialisiert wird. Weitere Informationen finden [Sie unter Explizite Felder: Das Val-](explicit-fields-the-val-keyword.md)Schlüsselwort.
 
-Sie können auch private Felder in einer Klasse definieren, indem Sie eine Elementdefinition und durch Hinzufügen des Schlüsselworts `private` der Definition. Dies kann nützlich sein, wenn Sie erwarten, um den Zugriff auf ein Element zu ändern, ohne den Code umzuschreiben. Weitere Informationen finden Sie unter [Zugriffssteuerung](../access-control.md).
+Sie können auch private Felder in einer Klasse definieren, indem Sie eine Element Definition verwenden und der `private` Definition das Schlüsselwort hinzufügen. Dies kann hilfreich sein, wenn Sie die Barrierefreiheit eines Members ändern möchten, ohne den Code neu zu schreiben. Weitere Informationen finden Sie unter [Zugriffssteuerung](../access-control.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Mitglieder](index.md)
 - [`do`-Bindungen in Klassen](do-bindings-in-classes.md)
-- [`let` Bindungen](../functions/let-bindings.md)
+- [`let`Land](../functions/let-bindings.md)

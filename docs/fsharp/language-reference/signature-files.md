@@ -1,13 +1,13 @@
 ---
-title: Signaturdateien
-description: Erfahren Sie, wie Sie mit F# Signaturdateien, um Informationen über die öffentlichen Signaturen einer Reihe von aufzunehmen F# Programmierelemente wie Typen, Namespaces und Modulen.
+title: Signatur Dateien
+description: Erfahren Sie, wie F# Sie Signatur Dateien zum Speichern von Informationen über die öffentlichen Signaturen eines Satzes F# von Programmelementen wie Typen, Namespaces und Module verwenden.
 ms.date: 06/15/2018
-ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c04ac8bf4ee360a2caa15be8f2bbea41105bd160
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770447"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627153"
 ---
 # <a name="signatures"></a>Signaturen
 
@@ -19,7 +19,7 @@ Für jede F#-Codedatei kann eine *Signaturdatei*vorhanden sein. Diese hat den gl
 
 Eine Signaturdatei beschreibt die Namespaces, Module, Typen und Member in der entsprechenden Implementierungsdatei. Mithilfe der Informationen in einer Signaturdatei geben Sie an, auf welche Teile des Codes in der entsprechenden Implementierungsdatei von Code außerhalb der Implementierungsdatei zugegriffen werden kann und welche Teile interner Code der Implementierungsdatei sind. Die Namespaces, Module und Typen in der Signaturdatei müssen eine Teilmenge der Namespaces, Module und Typen in der Implementierungsdatei sein. Abgesehen von einigen weiter unten in diesem Thema genannten Ausnahmen werden die Sprachelemente, die nicht in der Signaturdatei aufgeführt sind, als private Elemente der Implementierungsdatei betrachtet. Wenn im Projekt oder der Befehlszeile keine Signaturdatei gefunden wird, wird Standardzugriff verwendet.
 
-Weitere Informationen zum Standardzugriff finden Sie unter [Zugriffssteuerung](access-control.md).
+Weitere Informationen zur Standard Barrierefreiheit finden Sie unter [Access Control](access-control.md).
 
 In einer Signaturdatei werden die Definition der Typen und die Implementierungen der einzelnen Methoden oder Funktionen nicht wiederholt. Stattdessen verwenden Sie die Signatur für die jeweilige Methode bzw. Funktion, die als vollständige Spezifikation der von einem Modul- oder Namespacefragment implementierten Funktionalität fungiert. Die Syntax für eine Typsignatur ist mit der in abstrakten Methodendeklarationen in Schnittstellen und abstrakten Klassen verwendeten Syntax identisch. Sie wird auch von IntelliSense und dem F#-Interpreter "fsi.exe" dargestellt, wenn dieser eine ordnungsgemäß kompilierte Eingabe anzeigt.
 
@@ -56,15 +56,15 @@ Für Wertsignaturen gelten folgende Regeln:
 
 - Das Muster der Parameter (auch *Stelligkeit*) von Signaturen und Implementierungen muss konsistent sein.
 
-- Wenn Parameternamen in einer Signaturdatei von der entsprechenden Implementierungsdatei unterscheiden zu können, wird der Name in der Signaturdatei stattdessen Dies verursacht möglicherweise Probleme beim Debuggen oder die profilerstellung verwendet werden. Wenn Sie über solche Nichtübereinstimmungen, Enable 3218 in Ihrer Projektdatei Warnung benachrichtigt werden möchten, oder beim Aufrufen des Compilers (finden Sie unter `--warnon` unter [Compileroptionen](compiler-options.md)).
+- Wenn sich die Parameternamen in einer Signatur Datei von der entsprechenden Implementierungs Datei unterscheiden, wird stattdessen der Name in der Signatur Datei verwendet, was beim Debuggen oder bei der Profilerstellung Probleme verursachen kann. Wenn Sie über solche Konflikte benachrichtigt werden möchten, aktivieren Sie die Warnung 3218 in Ihrer Projektdatei oder beim Aufrufen des Compilers ( `--warnon` siehe unter [Compileroptionen](compiler-options.md)).
 
 Das folgende Codebeispiel veranschaulicht eine Signaturdatei, die Namespace-, Modul-, Funktionswert- und Typsignaturen sowie die entsprechenden Attribute enthält. Im Beispiel wird außerdem die entsprechende Implementierungsdatei gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9002.fs)]
 
 Im folgenden Code wird die Implementierungsdatei veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9001.fs)]
 
 ## <a name="see-also"></a>Siehe auch
 

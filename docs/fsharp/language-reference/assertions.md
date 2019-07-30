@@ -2,16 +2,16 @@
 title: Assertionen
 description: Erfahren Sie, wie Sie mit der Ausdruck "assert" als eine Debugfunktion zum Testen von Ausdrücken in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5fe24195c7548e9fbb927e4b95b752c7a963c6b3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b8b7e9662143b432d650f87515d4af31cced4149
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642040"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630024"
 ---
 # <a name="assertions"></a>Assertionen
 
-Die `assert` Ausdruck ist eine Debugfunktion, die Sie verwenden können, um einen Ausdruck zu testen. Bei einem Fehler im Debugmodus generiert eine Assertion ein Dialogfeld „Systemfehler“.
+Der `assert` Ausdruck ist ein Debugfeature, das Sie zum Testen eines Ausdrucks verwenden können. Bei einem Fehler im Debugmodus generiert eine Assertion ein Dialogfeld „Systemfehler“.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,22 +21,22 @@ assert condition
 
 ## <a name="remarks"></a>Hinweise
 
-Die `assert` Ausdruck weist Typ `bool -> unit`.
+Der `assert` Ausdruck weist den `bool -> unit`Typ auf.
 
-In der vorherigen Syntax *Bedingung* stellt einen booleschen Ausdruck, der getestet werden soll. Wenn der Ausdruck ergibt `true`, Ausführung wird fortgeführt, nicht betroffen. Ergibt die Auswertung `false`, wird ein Dialogfeld System Fehler generiert. Das Dialogfeld "Fehler" hat einer Beschriftung, die die Zeichenfolge enthält **Assertionsfehler**. Das Dialogfeld enthält eine stapelüberwachung, die angibt, in der Assertionsfehler aufgetreten ist.
+In der vorherigen Syntax stellt *Condition* einen booleschen Ausdruck dar, der getestet werden soll. Wenn der Ausdruck als `true`ausgewertet wird, wird die Ausführung nicht beeinträchtigt. Wenn ausgewertet `false`wird, wird ein Systemfehler Dialogfeld generiert. Das Fehler Dialogfeld enthält eine Beschriftung, die die **Zeichen folgen**-Assertionen enthält. Das Dialogfeld enthält eine Stapel Überwachung, die angibt, wo der Fehler bei der Übersetzung aufgetreten ist.
 
-Assertionsüberprüfung ist aktiviert, nur beim Kompilieren im Debugmodus befindet. d.h., wenn die Konstante `DEBUG` definiert ist. Im Projektsystem, standardmäßig die `DEBUG` Konstante wird definiert, in der Debug-Konfiguration jedoch nicht in der Releasekonfiguration.
+Die Überprüfung der Überprüfung ist nur aktiviert, wenn Sie im Debugmodus kompilieren. Das heißt, wenn die Konstante `DEBUG` definiert ist. Im Projekt System ist die `DEBUG` Konstante standardmäßig in der Debugkonfiguration definiert, jedoch nicht in der Releasekonfiguration.
 
-Der Assertionsfehler kann nicht abgefangen werden, mithilfe von F# Ausnahmebehandlung.
+Der Fehler bei der Fehlerbehebung kann nicht mithilfe F# der Ausnahmebehandlung abgefangen werden.
 
 > [!NOTE]
-> Die `assert` Funktion löst in <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
+> Die `assert` -Funktion wird <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>in aufgelöst.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Codebeispiel veranschaulicht die Verwendung von der `assert` Ausdruck.
+Im folgenden Codebeispiel wird die Verwendung des `assert` -Ausdrucks veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5401.fs)]
 
 ## <a name="see-also"></a>Siehe auch
 

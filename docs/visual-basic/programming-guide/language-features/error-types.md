@@ -10,28 +10,28 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 030986111a50ab59c605a1d683fedc118d10b260
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973172"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626616"
 ---
 # <a name="error-types-visual-basic"></a>Fehlertypen (Visual Basic)
-In Visual Basic Fehler (so genannte *Ausnahmen*) fallen in drei Kategorien unterteilt: Syntaxfehler, Laufzeitfehler und Logikfehler.  
-  
-## <a name="syntax-errors"></a>Syntaxfehler  
- *Syntaxfehler* sind diejenigen, die angezeigt werden, während Sie Code schreiben. Visual Basic überprüft Ihren Code während der Eingabe in die **Code-Editor** Fenster und warnt Sie, wenn Sie einen Fehler, z. B. Rechtschreibfehler, oder verwenden ein Sprachelement nicht ordnungsgemäß machen. Syntaxfehler sind am häufigsten verwendete Typ von Fehlern. Sie können sie ganz einfach in beheben die Programmierumgebung, sobald sie auftreten.  
-  
+In Visual Basic fallen Fehler in eine von drei Kategorien: Syntax Fehler, Laufzeitfehler und logische Fehler.
+
+## <a name="syntax-errors"></a>Syntaxfehler
+ *Syntax Fehler* sind solche, die beim Schreiben von Code angezeigt werden. Wenn Sie Visual Studio verwenden, prüft Visual Basic Ihren Code, während Sie ihn im Code- **Editor** -Fenster eingeben, und warnt Sie, wenn Sie einen Fehler auftreten, z. b. falsche Schreibweise eines Worts oder ein sprach Element nicht ordnungsgemäß. Wenn Sie über die Befehlszeile kompilieren, zeigt Visual Basic einen Compilerfehler mit Informationen zum Syntax Fehler an. Syntax Fehler sind die häufigste Art von Fehlern. Sie können Sie problemlos in der Codierungs Umgebung beheben, sobald sie auftreten.
+
 > [!NOTE]
->  Die `Option Explicit` -Anweisung ist eine Methode zur Vermeidung von Syntaxfehlern. Es erzwingt, dass Sie alle Variablen, die in der Anwendung verwendet werden vorab deklarieren. Daher, wenn diese Variablen im Code verwendet werden, typografische Fehler sofort und können behoben werden.  
+>  Die `Option Explicit` -Anweisung ist eine Möglichkeit, Syntax Fehler zu vermeiden. Sie zwingt Sie, im Voraus alle Variablen zu deklarieren, die in der Anwendung verwendet werden sollen. Wenn diese Variablen im Code verwendet werden, werden daher alle typografischen Fehler sofort abgefangen und können korrigiert werden.
+
+## <a name="run-time-errors"></a>Laufzeitfehler
+ *Laufzeitfehler* sind solche, die erst angezeigt werden, nachdem Sie den Code kompiliert und ausgeführt haben. Dabei handelt es sich um Code, der möglicherweise korrekt erscheint, da er keine Syntax Fehler aufweist, die jedoch nicht ausgeführt werden. Beispielsweise können Sie ordnungsgemäß eine Codezeile schreiben, um eine Datei zu öffnen. Wenn die Datei jedoch nicht vorhanden ist, kann die Anwendung die Datei nicht öffnen, und es wird eine Ausnahme ausgelöst. Sie können die meisten Laufzeitfehler beheben, indem Sie den fehlerhaften Code umschreiben oder die [Ausnahmebehandlung](../../language-reference/statements/try-catch-finally-statement.md)verwenden und dann erneut kompilieren und wiederholen.
   
-## <a name="run-time-errors"></a>Laufzeitfehler  
- *Laufzeitfehler* sind diejenigen, die angezeigt werden, nachdem Sie kompilieren und des Codes ausführen. Diese umfassen Code, der angezeigt werden, korrekt sein, es wurde keine Syntaxfehler vorhanden sind, jedoch, die nicht ausgeführt werden kann. Beispielsweise können Sie eine einzige Zeile Code zum Öffnen einer Datei ordnungsgemäß schreiben. Aber wenn die Datei beschädigt ist, die Anwendung nicht ausführen die `Open` -Funktion, und es nicht mehr ausgeführt wird. Sie können die meisten Laufzeitfehler beheben, indem Sie den fehlerhaften Code umschreiben und neu kompilieren zu müssen, und erneut durch.  
-  
-## <a name="logic-errors"></a>Logischer Fehler  
- *Logikfehler* sind diejenigen, die angezeigt werden, sobald die Anwendung verwendet wird. Sie sind die meisten häufig unerwünschten oder unerwartete Ergebnisse als Reaktion auf Benutzeraktionen. Z. B. einen falsch Schlüssel oder andere externe beeinflussen möglicherweise dazu führen, dass Ihre Anwendung nicht mehr funktioniert innerhalb der erwarteten Parameter oder vollständig. Logische Fehler sind im Allgemeinen am schwersten zu beheben, da es nicht immer klar ist, in dem sie stammen.  
-  
+## <a name="logic-errors"></a>Logische Fehler
+ *Logische Fehler* sind solche, die angezeigt werden, sobald die Anwendung verwendet wird. Sie sind am häufigsten fehlerhafte Annahmen des Entwicklers oder unerwünschte oder unerwartete Ergebnisse als Reaktion auf Benutzeraktionen. Beispielsweise kann eine falsch geschriebene Taste falsche Informationen für eine Methode bereitstellen, oder Sie gehen davon aus, dass ein gültiger Wert immer an eine Methode übergeben wird, wenn dies nicht der Fall ist. Obwohl Logikfehler durch die Verwendung der [Ausnahmebehandlung](../../language-reference/statements/try-catch-finally-statement.md) behandelt werden können (z. b. durch testen, `Nothing` ob ein Argument <xref:System.ArgumentNullException>ist und ein ausgelöst wird), sollten Sie am häufigsten adressiert werden, indem der Fehler in der Logik korrigiert und die Asyl.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

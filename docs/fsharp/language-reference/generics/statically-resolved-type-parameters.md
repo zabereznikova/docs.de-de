@@ -2,16 +2,16 @@
 title: Statisch aufgelöste Typparameter
 description: Informationen zum Verwenden von F#-Statisch aufgelöste Typparameter, der durch einen tatsächlichen Typ zur Kompilierzeit statt zur Laufzeit ersetzt wurde.
 ms.date: 05/16/2016
-ms.openlocfilehash: 337d4f40418ee76cb18397add27acba75f756091
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 43ed79b6e5f43a499a27b05e26472b021c455e44
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645255"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630592"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statisch aufgelöste Typparameter
 
-Ein *statisch aufgelöster Typparameter* ist ein Typparameter, die zur Kompilierzeit statt zur Laufzeit durch einen tatsächlichen Typ ersetzt wird. Ihnen wird ein Caretzeichen (^) vorangestellt.
+Ein *statisch aufgelöster Typparameter* ist ein Typparameter, der zur Kompilierzeit anstelle der Laufzeit durch einen tatsächlichen Typ ersetzt wird. Ihnen wird ein Caretzeichen (^) vorangestellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ Viele F#-Kernbibliotheksfunktionen, besonders Operatoren, verfügen über statis
 
 Inlinemethoden und -funktionen, die Operatoren oder andere Funktionen mit statisch aufgelösten Typparametern verwenden, können auch selbst statisch aufgelöste Typparameter verwenden. Oft leitet der Typrückschluss ab, dass solche Inlinefunktionen statisch aufgelöste Typparameter aufweisen. Im folgenden Beispiel wird eine Operatordefinition veranschaulicht, die so abgeleitet wird, dass sie einen statisch aufgelösten Typparameter hat.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
 Der aufgelöste Typ von `(+@)` basiert auf der Verwendung von `(+)` und `(*)`, durch die vom Typrückschluss Membereinschränkungen für die statisch aufgelösten Typparameter abgeleitet werden. Der aufgelöste Typ, wie im F#-Interpreter angezeigt, lautet wie folgt.
 
@@ -57,7 +57,7 @@ Die Ausgabe lautet wie folgt.
 1.500000
 ```
 
-Ab F# 4.1, können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben.  In früheren Versionen der Sprache der Typname kann tatsächlich vom Compiler abgeleitet werden, aber konnte nicht tatsächlich in der Signatur angegeben werden.  Ab F# 4.1 können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben. Im Folgenden ein Beispiel:
+Ab F# 4.1, können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben.  In früheren Versionen der Sprache konnte der Typname tatsächlich vom Compiler abgeleitet werden, konnte aber nicht in der Signatur angegeben werden.  Ab F# 4.1 können Sie auch konkrete Typnamen in statisch aufgelösten Typsignaturen-Parameter angeben. Im Folgenden ein Beispiel:
 
 ```fsharp
 let inline konst x _ = x

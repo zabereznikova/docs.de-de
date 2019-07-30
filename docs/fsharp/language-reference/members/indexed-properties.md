@@ -1,17 +1,17 @@
 ---
 title: Indizierte Eigenschaften
-description: Erfahren Sie mehr über indizierte Eigenschaften in F#, das arrayähnlichen Zugriff auf die sortierten Daten ermöglichen.
+description: Erfahren Sie mehr über indizierte Eigenschaften in F#, die einen Array ähnlichen Zugriff auf geordnete Daten ermöglichen.
 ms.date: 10/17/2018
-ms.openlocfilehash: 7fc8f46e029255c6ed985a43b92c8f7c2908c428
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489488"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627556"
 ---
 # <a name="indexed-properties"></a>Indizierte Eigenschaften
 
-Beim Definieren einer Klasse, die für sortierte Daten abstrahiert, kann es manchmal hilfreich, indizierten Zugriff auf diese Daten bereitstellen, ohne die zugrunde liegende Implementierung verfügbar zu machen sein. Dies erfolgt mit der `Item` Member.
+Beim Definieren einer Klasse, die geordnete Daten abstrahiert, kann es manchmal hilfreich sein, den indizierten Zugriff auf diese Daten bereitzustellen, ohne die zugrunde liegende Implementierung verfügbar zu machen. Dies erfolgt mit dem `Item` -Member.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,21 +36,21 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>Hinweise
 
-Die Formen der vorherigen Syntax zeigen, wie Sie indizierte Eigenschaften definiert, die sowohl eine `get` und ein `set` -Methode, haben eine `get` Methode nur oder über eine `set` Methode nur. Sie können auch kombiniert sowohl die Syntax für nur Get- und die Syntax für die Gruppe nur und erzeugen eine Eigenschaft, die sowohl get- und Set hat. Diese Form können Sie verschiedene Zugriffsmodifizierer und Attribute für die Get-und set-Methoden.
+Die Formen der vorherigen Syntax veranschaulichen, wie indizierte Eigenschaften definiert werden, die sowohl `get` eine- `set` als auch eine- `get` Methode aufweisen, nur über eine `set` -Methode verfügen oder nur über eine-Methode verfügen. Sie können auch die Syntax für "Get only" und die für "Set" angezeigte Syntax kombinieren und eine Eigenschaft mit "Get" und "Set" entwickeln. In diesem letzteren Formular können Sie verschiedene Zugriffsmodifizierer und Attribute für die Get-und Set-Methoden einfügen.
 
-Mit dem Namen `Item`, behandelt der Compiler die Eigenschaft als eine indizierte Standardeigenschaft. Ein *indizierte Standardeigenschaft* ist eine Eigenschaft, die Sie zugreifen können, mithilfe einer arrayähnlichen Syntax in der Objektinstanz. Z. B. wenn `o` ist ein Objekt des Typs, der diese Eigenschaft, die Syntax definiert `o.[index]` wird verwendet, um die Eigenschaft zugreifen.
+Wenn Sie den Namen `Item`verwenden, behandelt der Compiler die Eigenschaft als indizierte Standard Eigenschaft. Eine *indizierte Standard Eigenschaft* ist eine Eigenschaft, auf die Sie mithilfe einer Array ähnlichen Syntax für die Objektinstanz zugreifen können. Wenn `o` z. b. ein Objekt vom Typ ist, das diese Eigenschaft definiert, wird `o.[index]` die Syntax für den Zugriff auf die-Eigenschaft verwendet.
 
-Die Syntax für den Zugriff auf eine nicht standardmäßige indizierte Eigenschaft ist zum Bereitstellen des Namens der Eigenschaft und der Index in Klammern ein, wie ein reguläres Element. Z. B. wenn die Eigenschaft `o` heißt `Ordinal`, Sie schreiben `o.Ordinal(index)` , darauf zuzugreifen.
+Die Syntax für den Zugriff auf eine nicht standardmäßig indizierte Eigenschaft besteht darin, den Namen der Eigenschaft und den Index in Klammern wie einem regulären Member bereitzustellen. Wenn beispielsweise die-Eigenschaft `o` für aufgerufen `Ordinal`wird, schreiben `o.Ordinal(index)` Sie, um darauf zuzugreifen.
 
-Unabhängig davon, welche Form, die Sie verwenden, sollten Sie immer die Curry-Form für die Set-Methode für eine indizierte Eigenschaft verwenden. Weitere Informationen zu Funktionen mit Currying, finden Sie unter [Funktionen](../functions/index.md).
+Unabhängig davon, welches Formular Sie verwenden, sollten Sie immer das Curry-Formular für die Set-Methode für eine indizierte Eigenschaft verwenden. Weitere Informationen zu Curry-Funktionen finden Sie unter [Functions](../functions/index.md).
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Codebeispiel veranschaulicht die Definition und Verwendung von Standard- und nicht standardmäßigen indizierte Eigenschaften, die verfügen über get- und set-Methoden.
+Im folgenden Codebeispiel werden die Definition und die Verwendung von standardmäßigen und nicht standardmäßig indizierten Eigenschaften veranschaulicht, die über Get-und Set-Methoden verfügen.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3301.fs)]
 
-## <a name="output"></a>Output
+## <a name="output"></a>Ausgabe
 
 ```console
 ONE two three four five six seven eight nine ten
@@ -60,9 +60,9 @@ seven seventh eight eighth nine ninth ten tenth
 
 ## <a name="indexed-properties-with-multiple-index-values"></a>Indizierte Eigenschaften mit mehreren Indexwerten
 
-Indizierte Eigenschaften können mehr als ein Indexwert haben. In diesem Fall werden die Werte durch Kommas getrennt, wenn die Eigenschaft verwendet wird. Die Set-Methode in eine entsprechende Eigenschaft benötigen zwei Curry-Argumente, das erste Argument ist ein Tupel, die die Schlüssel und dem zweiten ist, das den festzulegenden Wert.
+Indizierte Eigenschaften können über mehr als einen Indexwert verfügen. In diesem Fall werden die Werte durch Kommas getrennt, wenn die-Eigenschaft verwendet wird. Die Set-Methode in einer solchen Eigenschaft muss zwei Curry-Argumente aufweisen, wobei das erste ein Tupel ist, das die Schlüssel enthält, und das zweite ist der festzulegende Wert.
 
-Der folgende Code veranschaulicht die Verwendung mit mehrere Indexwerte einer indizierten Eigenschaft.
+Der folgende Code veranschaulicht die Verwendung einer indizierten Eigenschaft mit mehreren Indexwerten.
 
 ```fsharp
 open System.Collections.Generic

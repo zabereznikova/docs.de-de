@@ -2,16 +2,16 @@
 title: Maßeinheiten
 description: Erfahren Sie, wie für Gleitkommawerte und signierten Integer-Werte in F# können Einheiten, die in der Regel verwendet werden, Länge, Volumen und die Masse an verknüpft haben.
 ms.date: 05/16/2016
-ms.openlocfilehash: 217ef67912625c0a4b187a7ee13a739de811cfcb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641636"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630160"
 ---
 # <a name="units-of-measure"></a>Maßeinheiten
 
-Gleitkomma- und signierten Integer-Werte in F# kann Maßeinheiten zugeordnet haben die in der Regel an Länge, Volumen, Masse usw. verwendet werden. Mengen mit Einheiten verwenden, aktivieren Sie den Compiler an, überprüfen Sie, ob arithmetische Beziehungen die richtigen Einheiten, die verhindert, dass Programmierfehler.
+Gleitkomma- und signierten Integer-Werte in F# kann Maßeinheiten zugeordnet haben die in der Regel an Länge, Volumen, Masse usw. verwendet werden. Durch die Verwendung von Mengen mit Einheiten ermöglichen Sie es dem Compiler, zu überprüfen, ob arithmetische Beziehungen über die richtigen Einheiten verfügen, sodass Programmierfehler vermieden werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,65 +21,65 @@ Gleitkomma- und signierten Integer-Werte in F# kann Maßeinheiten zugeordnet hab
 
 ## <a name="remarks"></a>Hinweise
 
-Die vorherige Syntax definiert *Einheitenname* als eine Einheit. Das optionale Teil wird verwendet, um ein neues Measure in Bezug auf die zuvor definierte Einheiten zu definieren. Die folgende Zeile definiert z. B. das Measure `cm` (Zentimeter).
+Die vorherige Syntax definiert *Unit-Name* als Maßeinheit. Der optionale Teil wird verwendet, um ein neues Measure in Bezug auf zuvor definierte Einheiten zu definieren. Die folgende Zeile definiert z. b. das `cm` Measure (Zentimeter).
 
 ```fsharp
 [<Measure>] type cm
 ```
 
-Die folgende Zeile definiert das Measure `ml` (Milliliter) als ein kubische Zentimeter (`cm^3`).
+Die folgende Zeile definiert das Measure `ml` (Milliliter) als kubischen Zentimeter (`cm^3`).
 
 ```fsharp
 [<Measure>] type ml = cm^3
 ```
 
-In der vorherigen Syntax *Measure* ist eine Formel, die Einheiten umfasst. Klicken Sie in Formeln, die Einheiten umfassen, ganzzahlige Potenzen werden unterstützt (positive und negative), Leerzeichen zwischen Einheiten geben ein Produkt der beiden Einheiten an, `*` gibt auch an einem Produkt Einheiten und `/` einen Quotienten von Einheiten angibt. Für eine gegenseitige Einheit, können Sie entweder eine negative ganze Zahl Potenz verwenden oder ein `/` , die eine Trennung zwischen der Zähler und Nenner eine Einheitenformel angibt. Mehrere Einheiten im Nenner müssen in Klammern eingeschlossen werden. Einheiten durch Leerzeichen getrennt nach einer `/` interpretiert werden, als Teil der Nenner jedoch Einheiten nach einer `*` als Teil der Zähler interpretiert werden.
+In der vorherigen Syntax ist *Measure* eine Formel, die Einheiten umfasst. In Formeln, die Einheiten einschließen, werden ganzzahlige Kräfte unterstützt (positiv und negativ), Leerzeichen zwischen Einheiten geben ein Produkt `*` der beiden Einheiten an, geben auch ein `/` Produkt von Einheiten an und geben einen Quotienten von Einheiten an. Für eine wechselseitige Einheit können Sie entweder eine negative ganzzahlige Potenz oder `/` eine verwenden, die eine Trennung zwischen dem Zähler und dem Nenner einer Einheitsformel angibt. Mehrere Einheiten im Nenner müssen in Klammern eingeschlossen werden. Einheiten, die nach `/` einem durch Leerzeichen getrennt sind, werden als Teil des Nenners interpretiert, aber alle nach einem `*` folgenden Einheiten werden als Teil des zähators interpretiert.
 
-Sie können 1 Einheitenausdrücke, entweder allein an eine dimensionslose Größe oder zusammen mit anderen Einheiten, z. B. in der Zähler verwenden. Beispielsweise würde die Einheit für die Geschwindigkeit geschrieben werden, als `1/s`, wobei `s` Sekunden angibt. In Komponententests Formeln werden keine Klammern verwendet. Sie angeben nicht numerische Konvertierungskonstanten in den Formeln für Komponententest; Allerdings können Sie Konvertierungskonstanten separat mit Einheiten definieren und deren Verwendung in Berechnungen Einheit überprüft.
+Sie können 1 in Einheiten Ausdrücken verwenden, und zwar entweder allein zum Angeben einer dimensionierten Menge oder in Verbindung mit anderen Einheiten, wie z. b. im Zähler. Beispielsweise werden die Einheiten für eine Rate als `1/s`geschrieben, wobei `s` die Sekunden angibt. In Einheits Formeln werden keine Klammern verwendet. Sie geben keine numerischen Konvertierungs Konstanten in den Einheits Formeln an; Allerdings können Sie Konvertierungs Konstanten mit Einheiten separat definieren und in Berechnungen mit Einheiten Prüfung verwenden.
 
-Unit-Formeln, die das gleiche gemeint, können auf verschiedene Weise geschrieben werden. Aus diesem Grund konvertiert der Compiler Einheitenformeln in ein konsistentes Format, der negative Zehnerpotenzen Umkehrwerte, die Gruppen-Einheiten in einer einzelnen Zähler und Nenner konvertiert werden soll, und sortiert sie alphabetisch die Einheiten, in der Zähler und Nenner.
+Einheits Formeln, die das gleiche bedeuten, können auf verschiedene Weise geschrieben werden. Daher konvertiert der Compiler Einheits Formeln in ein konsistentes Formular, das negative Kräfte in Rückstände konvertiert, Einheiten in einen einzelnen Zähler und einen Nenner gruppiert und die Einheiten im Zähler und Nenner alphabetisch sortiert.
 
-Z. B. die Einheitenformeln `kg m s^-2` und `m /s s * kg` werden in konvertiert `kg m/s^2`.
+Beispielsweise werden die Einheiten Formeln `kg m s^-2` und `m /s s * kg` in `kg m/s^2`konvertiert.
 
-Sie verwenden die Maßeinheiten in Gleitkommaausdrücken. Gleitkommazahlen zusammen mit zugehörigen Einheiten des Measures mit einer weiteren Ebene der typsicherheit hinzugefügt, und trägt so zur fehlervermeidung die Einheit Konflikt-Fehler, die bei der Verwendung von schwach typisierten Gleitkommazahlen in Formeln auftreten können. Wenn Sie einen Gleitkommawert schreiben Point-Ausdruck, der Einheiten, die Einheiten, in dem Ausdruck übereinstimmen.
+In Gleit Komma Ausdrücken verwenden Sie Maßeinheiten. Die Verwendung von Gleit Komma Zahlen zusammen mit zugeordneten Maßeinheiten fügt eine weitere Ebene der Typsicherheit hinzu und hilft dabei, die Fehler bei der Einheiten Übereinstimmung zu vermeiden, die bei der Verwendung von schwach typisierten Gleit Komma Zahlen in Formeln auftreten können. Wenn Sie einen Gleit Komma Ausdruck schreiben, der Einheiten verwendet, müssen die Einheiten im Ausdruck Stimmen.
 
-Sie können Literale mit einer Einheitenformel in spitzen Klammern versehen, wie in den folgenden Beispielen gezeigt.
+Literale können mit einer Einheitsformel in spitzen Klammern kommentiert werden, wie in den folgenden Beispielen gezeigt.
 
 ```fsharp
 1.0<cm>
 55.0<miles/hour>
 ```
 
-Sie sind nicht auf ein Leerzeichen zwischen der Anzahl und die Spitze Klammer abzulegen. Sie können jedoch einschließen, ein literales Suffix wie z. B. `f`, wie im folgenden Beispiel.
+Zwischen der Zahl und der Spitze Klammer wird kein Leerzeichen eingefügt. Sie können jedoch ein literales Suffix wie `f`im folgenden Beispiel einschließen.
 
 ```fsharp
 // The f indicates single-precision floating point.
 55.0f<miles/hour>
 ```
 
-Eine solche Anmerkung ändert den Typ des Literals aus einem primitiven Typ (z. B. `float`) in einem dimensionierten Typ, z. B. `float<cm>` oder, in diesem Fall `float<miles/hour>`. Eine Einheit Anmerkung `<1>` gibt an, dass eine dimensionslose Größe und Typ der primitive Typ ohne Parameter Einheit entspricht.
+Eine solche Anmerkung ändert den Typ des Literals vom primitiven Typ (z `float`. b `float<miles/hour>`.) in einen dimensionierten Typ, `float<cm>` wie z. b. oder, in diesem Fall. Eine Einheits Anmerkung von `<1>` gibt eine dimensionlose Menge an, und ihr Typ entspricht dem primitiven Typ ohne einen Unit-Parameter.
 
-Der Typ des eine Maßeinheit ist ein Gleitkomma oder ganzzahligen Typ mit Vorzeichen zusammen mit der eine zusätzliche Einheit-Anmerkung, die in Klammern angegeben. Daher beim Schreiben des Typs einer Konvertierung von `g` (g), `kg` (kg), geben Sie die Typen, die wie folgt.
+Der Typ einer Maßeinheit ist ein Gleit Komma Wert oder ein ganzzahliger ganzzahliger Typ mit einer zusätzlichen Einheiten Anmerkung, der in eckigen Klammern angegeben ist. Wenn Sie also den Typ einer Konvertierung von `g` (grams) in `kg` (Kilogramm) schreiben, beschreiben Sie die Typen wie folgt.
 
 ```fsharp
 let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 ```
 
-Maßeinheiten dienen zur Kompilierzeit Einheit überprüft jedoch nicht in der Runtime-Umgebung beibehalten werden. Aus diesem Grund sie die Leistung nicht beeinträchtigt.
+Maßeinheiten werden für die Kompilierzeit-Einheiten Überprüfung verwendet, aber nicht in der Laufzeitumgebung beibehalten. Daher wirken Sie sich nicht auf die Leistung aus.
 
-Maßeinheiten können auf einen beliebigen Typ, nicht nur die Gleitkommatypen angewendet werden. allerdings nur Gleitkommatypen, ganzzahlige Typen und Mengen von Dezimaltypen dimensioniert Unterstützung angemeldet. Aus diesem Grund ist es nur sinnvoll, Maßeinheiten zu verwenden, auf den primitiven Typen und Aggregate, die die primitive Typen enthalten.
+Maßeinheiten können auf jeden beliebigen Typ angewendet werden, nicht nur auf Gleit Komma Typen. Allerdings unterstützen nur Gleit Komma Typen, ganzzahlige ganzzahlige Typen und dezimale Typen dimensionierte Mengen. Daher ist es nur sinnvoll, Maßeinheiten für die primitiven Typen und für Aggregate zu verwenden, die diese primitiven Typen enthalten.
 
 Das folgende Beispiel veranschaulicht die Verwendung von Maßeinheiten.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
 
-Im folgenden Codebeispiel wird veranschaulicht, wie eine dimensionslose Gleitkommazahl in eine dimensionierten Gleitkommawert konvertiert wird. Sie multiplizieren Sie einfach mit 1,0, der Dimensionen auf der 1.0 angewendet. Sie können dies in einer Funktion wie abstrahieren `degreesFahrenheit`.
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie von einer dimensionlosen Gleit Komma Zahl in einen Wert mit einem Wert mit Dimensionswert konvertieren. Sie multiplizieren einfach um 1,0 und wenden die Dimensionen auf 1,0 an. Sie können dies in eine Funktion wie `degreesFahrenheit`abstrahieren.
 
-Auch wenn Sie dimensionierte Werte an Funktionen, die dimensionslose Gleitkommazahlen erwarten übergeben, müssen Sie die Einheiten oder umgewandelt `float` mithilfe der `float` Operator. In diesem Beispiel Teilen Sie Sie durch `1.0<degC>` für die Argumente `printf` da `printf` dimensionslose Größen erwartet.
+Wenn Sie dimensionierte Werte an Funktionen übergeben, die wenig Gleit Komma Zahlen erwarten, müssen Sie außerdem die Einheiten abbrechen oder mithilfe des `float` `float` -Operators in umwandeln. In diesem Beispiel Dividieren Sie durch `1.0<degC>` für die Argumente von `printf` , `printf` da eine dimensionlose Menge erwartet.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
 
-Die folgende beispielsitzung wird gezeigt, die von Eingaben und Ausgaben für diesen Code.
+Die folgende Beispielsitzung zeigt die Ausgaben von und Eingaben für diesen Code.
 
 ```
 Enter a temperature in degrees Fahrenheit.
@@ -87,35 +87,35 @@ Enter a temperature in degrees Fahrenheit.
 That temperature in degrees Celsius is    32.22.
 ```
 
-## <a name="using-generic-units"></a>Verwenden von generischen Einheiten
+## <a name="using-generic-units"></a>Verwenden generischer Einheiten
 
-Sie können generische Funktionen, die ausgeführt werden Daten schreiben, die über eine zugeordnete Maßeinheit verfügt. Sie dazu einen Typ zusammen mit einer generischen Einheit angeben, wie ein Typparameter, wie im folgenden Codebeispiel gezeigt.
+Sie können generische Funktionen schreiben, die auf Daten mit zugeordneten Maßeinheiten angewendet werden. Hierzu geben Sie einen Typ und eine generische Einheit als Typparameter an, wie im folgenden Codebeispiel gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
 
-## <a name="creating-aggregate-types-with-generic-units"></a>Erstellen von Aggregattypen mit generischen Einheiten
+## <a name="creating-aggregate-types-with-generic-units"></a>Erstellen von Aggregat Typen mit generischen Einheiten
 
-Der folgende Code zeigt, wie Sie einen aggregierten Typ erstellen, der von einzelnen Gleitkommawerte Einheiten besteht, die generisch sind. Dadurch wird einen einzelnen Typ erstellt werden, der mit einer Vielzahl von Einheiten funktioniert. Darüber hinaus beibehalten generische Einheiten typsicherheit, indem Sie sicherstellen, dass ein generischer Typ, der einen Satz von Einheiten hat einen anderen Typ als den gleichen generischen Typ mit einem anderen Satz von Einheiten ist. Diese Technik basiert auf, die die `Measure` Attribut kann auf den Typparameter angewendet werden.
+Der folgende Code zeigt, wie ein Aggregattyp erstellt wird, der aus einzelnen Gleit Komma Werten besteht, die generische Einheiten aufweisen. Dadurch kann ein einzelner Typ erstellt werden, der mit einer Vielzahl von Einheiten funktioniert. Außerdem behalten generische Einheiten die Typsicherheit bei, indem sichergestellt wird, dass ein generischer Typ mit einem Satz von Einheiten einen anderen Typ aufweist als derselbe generische Typ mit einem anderen Satz von Einheiten. Die Basis dieser Technik ist, dass das `Measure` -Attribut auf den Typparameter angewendet werden kann.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
 
 ## <a name="units-at-runtime"></a>Einheiten zur Laufzeit
 
-Maßeinheiten werden für die Überprüfung des statischen Typs verwendet. Wenn Gleitkommawerte kompiliert werden, werden die Einheiten entfernt, damit die Einheiten, die zur Laufzeit nicht mehr vorhanden sind. Jeder Versuch, die Funktionalität zu implementieren, der Überprüfung der Einheiten zur Laufzeit abhängig ist daher nicht möglich. Beispielsweise implementiert ein `ToString` Funktion zum Ausgeben der Einheiten ist nicht möglich.
+Maßeinheiten werden für die Überprüfung statischer Typen verwendet. Wenn Gleit Komma Werte kompiliert werden, werden die Maßeinheiten beseitigt, sodass die Einheiten zur Laufzeit verloren gehen. Daher ist jeder Versuch, Funktionen zu implementieren, die von der Überprüfung der Einheiten zur Laufzeit abhängen, nicht möglich. Beispielsweise ist die Implementierung `ToString` einer Funktion zum Ausdrucken der Einheiten nicht möglich.
 
 ## <a name="conversions"></a>Konvertierungen
 
-Zum Konvertieren eines Typs, die Einheiten (z. B. `float<'u>`) auf einen Typ, der nicht Einheiten verfügt, können Sie die standardkonvertierung-Funktion. Beispielsweise können Sie `float` zum Konvertieren einer `float` Wert, der nicht-Einheiten, wie im folgenden Code gezeigt.
+Um einen Typ mit Einheiten (z `float<'u>`. b.) in einen Typ zu konvertieren, der nicht über Einheiten verfügt, können Sie die Standard Konvertierungs Funktion verwenden. Beispielsweise können Sie verwenden `float` , um in einen `float` -Wert zu konvertieren, der keine-Einheiten enthält, wie im folgenden Code gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
 
-Um einen Wert ohne Einheiten auf einen Wert zu konvertieren, die Einheiten hat, können Sie multiplizieren mit Wert 1 oder 1,0, der mit Anmerkungen versehen wird mit den entsprechenden Einheiten. Für das Schreiben von Ebenen der Interoperabilität, gibt es jedoch auch einige explizite-Funktionen, die Sie verwenden können, ohne Einheiten Werte in Werte mit Einheiten zu konvertieren. Diese sind in der [Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) Modul. Beispielsweise, um ohne Einheiten in `float` auf eine `float<cm>`, verwenden Sie [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), wie im folgenden Code gezeigt.
+Um einen unitless-Wert in einen Wert mit Einheiten zu konvertieren, können Sie ihn mit einem Wert von 1 oder 1,0 multiplizieren, der mit den entsprechenden Einheiten kommentiert wird. Zum Schreiben von Interoperabilitäts Ebenen gibt es jedoch auch einige explizite Funktionen, die Sie verwenden können, um unitlose Werte in Werte mit Einheiten zu konvertieren. Diese befinden sich im Modul [Microsoft. FSharp. Core. LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) . Wenn Sie z. b. von einem `float` -Paar in einen `float<cm>`konvertieren möchten, verwenden Sie [floatwithmeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), wie im folgenden Code dargestellt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Maßeinheiten in das F# -Kernbibliothek
+## <a name="units-of-measure-in-the-f-core-library"></a>Maßeinheiten in der F# Kernbibliothek
 
-Eine Einheitenbibliothek finden Sie in der `FSharp.Data.UnitSystems.SI` Namespace. Er enthält sowohl die Symbol-Form SI-Einheiten (wie `m` für Verbrauchseinheit) in der `UnitSymbols` Sub-Namespace und der vollständige Name (wie `meter` für Verbrauchseinheit) in der `UnitNames` Sub-Namespace.
+Eine-Einheiten Bibliothek ist im `FSharp.Data.UnitSystems.SI` -Namespace verfügbar. Sie enthält SI-Einheiten in `m` ihrer Symbol Form (z. b. für die `UnitSymbols` Verbrauchseinheit) im untergeordneten Namespace und `meter` Ihren vollständigen Namen (z. `UnitNames` b. für die Verbrauchseinheit) im untergeordneten Namespace.
 
 ## <a name="see-also"></a>Siehe auch
 

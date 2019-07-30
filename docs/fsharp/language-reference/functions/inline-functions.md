@@ -1,43 +1,43 @@
 ---
 title: Inlinefunktionen
-description: Erfahren Sie, wie Sie mit F# Inline-Funktionen, die direkt in den aufrufenden Code integriert sind.
+description: Erfahren Sie, wie F# Inline Funktionen verwendet werden, die direkt in den aufrufenden Code integriert sind.
 ms.date: 05/16/2016
-ms.openlocfilehash: d1c3fb3d2721024febc95b3c5e01e06cd547f81e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2830d1ada5b3005c3fcae975a44e85a7c84554f7
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642071"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630677"
 ---
 # <a name="inline-functions"></a>Inlinefunktionen
 
-*Inlinefunktionen* sind Funktionen, die direkt in den aufrufenden Code integriert werden.
+*Inline Funktionen* sind Funktionen, die direkt in den aufrufenden Code integriert sind.
 
-## <a name="using-inline-functions"></a>Verwendung von Inlinefunktionen
+## <a name="using-inline-functions"></a>Verwenden von Inline Funktionen
 
-Wenn Sie statische Typparameter verwenden, müssen jede Funktion, die durch den Typparameter parametrisiert werden Inline sein. Dadurch wird sichergestellt, dass der Compiler diese Typparameter auflösen kann. Wenn Sie normale generischen Typparameter verwenden, besteht keine derartige Einschränkung.
+Wenn Sie statische Typparameter verwenden, müssen alle Funktionen, die von Typparametern parametrisiert werden, Inline sein. Dadurch wird sichergestellt, dass der Compiler diese Typparameter auflösen kann. Wenn Sie gewöhnliche generische Typparameter verwenden, gibt es keine derartige Einschränkung.
 
-Als die Verwendung der Member-Einschränkungen aktivieren, können Inline-Funktionen in die Optimierung von Code hilfreich sein. Übermäßiger Verwendung von Inlinefunktionen kann jedoch zu Ihrem Code weniger auf Änderungen compileroptimierungen und die Implementierung der Library-Funktionen zum Schutz vor Angriffen führen. Aus diesem Grund sollten Sie vermeiden, verwenden Inline-Funktionen für die Optimierung, es sei denn, Sie, alle anderen Techniken zur Optimierung versucht haben. Erstellen eine Funktion oder Methode Inline kann manchmal die Leistung verbessern, aber das ist nicht immer der Fall. Aus diesem Grund sollten Sie leistungsmessungen verwenden, um sicherzustellen, dass bestimmte Funktion Inline erstellen einen positiven Effekt in der Tat verfügt.
+Wenn Sie die Verwendung von Element Einschränkungen nicht aktivieren, können Inline Funktionen beim Optimieren von Code hilfreich sein. Die übermäßige Verwendung von Inline Funktionen kann jedoch dazu führen, dass Ihr Code weniger gegen Änderungen an Compileroptimierungen und die Implementierung von Bibliotheksfunktionen ist. Aus diesem Grund sollten Sie die Verwendung von Inline Funktionen für die Optimierung vermeiden, es sei denn, Sie haben alle anderen Optimierungstechniken ausprobiert. Wenn eine Funktion oder Methode Inline ist, kann die Leistung manchmal verbessert werden, dies ist jedoch nicht immer der Fall. Daher sollten Sie auch Leistungsmessungen verwenden, um zu überprüfen, ob das Erstellen einer bestimmten Funktion in der Tat eine positive Wirkung hat.
 
-Die `inline` Modifizierer auf Funktionen auf der obersten Ebene, auf der Modulebene oder auf der Ebene der in einer Klasse angewendet werden kann.
+Der `inline` -Modifizierer kann auf Funktionen auf der obersten Ebene, auf Modulebene oder auf Methoden Ebene in einer Klasse angewendet werden.
 
-Im folgenden Codebeispiel wird veranschaulicht, auf der obersten Ebene, die Methode eine Inline-Instanz und eine statische Inline-Methode eine Inline-Funktion.
+Im folgenden Codebeispiel wird eine Inline Funktion auf oberster Ebene, eine Inline-Instanzmethode und eine statische Inline-Methode veranschaulicht.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet201.fs)]
 
-## <a name="inline-functions-and-type-inference"></a>Inlinefunktionen und Typrückschluss
+## <a name="inline-functions-and-type-inference"></a>Inline Funktionen und Typrückschluss
 
-Das Vorhandensein von `inline` wirkt sich auf den Typrückschluss. Dies ist da Inlinefunktionen Statisch aufgelöste Typparameter aufweisen können, während nicht-Inline-Funktionen nicht möglich. Das folgende Codebeispiel zeigt einen Fall, in denen `inline` ist hilfreich, da Sie eine Funktion verwenden, der einen statisch aufgelösten Typparameter hat den `float` Konvertierungsoperator.
+Das vorhanden sein `inline` von beeinflusst den Typrückschluss. Dies liegt daran, dass Inline Funktionen statisch aufgelöste Typparameter aufweisen können, während nicht Inline Funktionen nicht. Das folgende Codebeispiel zeigt einen Fall, `inline` bei dem hilfreich ist, da Sie eine Funktion verwenden, die einen statisch aufgelösten Typparameter `float` aufweist, den Konvertierungs Operator.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet202.fs)]
 
-Ohne die `inline` Modifizierer, zwingt die Funktion ein bestimmtes Typs in diesem Fall wird der Typrückschluss `int`. Dabei sollen die `inline` Modifizierer, die Funktion so haben einen statisch aufgelösten Typparameter abgeleitet. Mit der `inline` Modifizierer, der Typ abgeleitet wird, werden die folgenden:
+Ohne den `inline` -Modifizierer zwingt der Typrückschluss, dass die Funktion einen bestimmten Typ annimmt `int`, in diesem Fall. Mit dem `inline` -Modifizierer wird jedoch auch die-Funktion abgeleitet, um einen statisch aufgelösten Typparameter zu erhalten. Mit dem `inline` -Modifizierer wird der Typ wie folgt abgeleitet:
 
 ```fsharp
 ^a -> unit when ^a : (static member op_Explicit : ^a -> float)
 ```
 
-Dies bedeutet, dass die Funktion jeden Typ akzeptiert, die eine Konvertierung in unterstützt **"float"**.
+Dies bedeutet, dass die Funktion einen beliebigen Typ akzeptiert, der eine Konvertierung in **float**unterstützt.
 
 ## <a name="see-also"></a>Siehe auch
 

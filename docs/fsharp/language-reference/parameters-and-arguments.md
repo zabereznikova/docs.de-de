@@ -1,33 +1,33 @@
 ---
 title: Parameter und Argumente
-description: Erfahren Sie mehr über F# sprachunterstützung zum Definieren von Parametern und übergeben von Argumenten an Funktionen, Methoden und Eigenschaften.
+description: Erfahren Sie F# mehr über die Sprachunterstützung zum Definieren von Parametern und zum Übergeben von Argumenten an Funktionen, Methoden und Eigenschaften.
 ms.date: 05/16/2016
-ms.openlocfilehash: b68b3fdd14a66a7312efa5adb709adaeceaae282
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666260"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627314"
 ---
 # <a name="parameters-and-arguments"></a>Parameter und Argumente
 
-Dieses Thema beschreibt die sprachunterstützung zum Definieren von Parametern und übergeben von Argumenten an Funktionen, Methoden und Eigenschaften. Sie enthält Informationen zur Übergabe als Verweis, und wie Sie definieren und Verwenden von Methoden, die eine Variable Anzahl von Argumenten akzeptieren können.
+In diesem Thema wird die Sprachunterstützung für das Definieren von Parametern und das Übergeben von Argumenten an Funktionen, Methoden und Eigenschaften beschrieben. Sie enthält Informationen zum übergeben als Verweis und zum Definieren und Verwenden von Methoden, die eine Variable Anzahl von Argumenten annehmen können.
 
 ## <a name="parameters-and-arguments"></a>Parameter und Argumente
 
-Der Begriff *Parameter* wird verwendet, um die Namen für Werte beschreiben, die bereitgestellt werden sollen. Der Begriff *Argument* wird verwendet, für die Werte für jeden Parameter bereitgestellt.
+Der Term- *Parameter* wird verwendet, um die Namen für Werte zu beschreiben, die bereitgestellt werden sollen. Das Begriffs *Argument* wird für die Werte verwendet, die für jeden Parameter bereitgestellt werden.
 
-Parameter können in Tupel oder Curry-Form oder in eine Kombination aus den beiden angegeben werden. Sie können mithilfe eines expliziten Parameternamens Argumente übergeben. Parameter der Methoden können als optional festgelegt und einen Standardwert angegeben werden.
+Parameter können in einem Tupel-oder Curry-Formular oder in einer Kombination der beiden Werte angegeben werden. Sie können Argumente übergeben, indem Sie einen expliziten Parameternamen verwenden. Parameter von Methoden können als optional und mit einem Standardwert angegeben werden.
 
-## <a name="parameter-patterns"></a>Parametermuster
+## <a name="parameter-patterns"></a>Parameter Muster
 
-Parameter, Funktionen und Methoden bereitgestellt sind, im allgemeinen Mustern, die durch Leerzeichen getrennt. Dies bedeutet, dass im Prinzip die Muster in beschrieben [Vergleichsausdrücke](match-expressions.md) in einer Parameterliste für eine Funktion oder Member verwendet werden können.
+Parameter, die für Funktionen und Methoden bereitgestellt werden, sind im Allgemeinen durch Leerzeichen getrennte Muster. Dies bedeutet, dass im Prinzip jedes der in [Match Expressions](match-expressions.md) beschriebenen Muster in einer Parameterliste für eine Funktion oder ein Member verwendet werden kann.
 
-In der Regel verwenden Sie Methoden Tupelform übergeben von Argumenten. Dies wird ein besseres Ergebnis aus der Perspektive der anderen erreicht, da die Tupelform wie übereinstimmt, die Argumente in .NET Methoden übergeben werden.
+Methoden verwenden normalerweise die tupelform der Übergabe von Argumenten. Dadurch wird ein deutlicheres Ergebnis aus der Perspektive anderer .NET-Sprachen erzielt, da das tupelformular mit der Art und Weise übereinstimmt, in der die Argumente in .NET-Methoden
 
-Die Curry-Form wird meistens verwendet, mit Funktionen, die mithilfe von erstellt `let` Bindungen.
+Das Curry-Formular wird am häufigsten mit Funktionen verwendet, die mithilfe `let` von Bindungen erstellt wurden.
 
-Der folgende Pseudocode zeigt Beispiele für Tupel und Curry-Argumente.
+Der folgende Pseudo Code zeigt Beispiele für Tupel-und Curry-Argumente.
 
 ```fsharp
 // Tuple form.
@@ -36,23 +36,23 @@ member this.SomeMethod(param1, param2) = ...
 let function1 param1 param2 = ...
 ```
 
-Kombinierte Formen sind möglich, wenn einige Argumente im Tupel sind und einige nicht.
+Kombinierte Formulare sind möglich, wenn sich einige Argumente in Tupeln befinden und andere nicht.
 
 ```fsharp
 let function2 param1 (param2a, param2b) param3 = ...
 ```
 
-Andere Muster können auch verwendet werden, in der Parameterliste, aber wenn das Muster der Parameter nicht alle Mögliche Eingaben übereinstimmt, gibt es möglicherweise eine unvollständige Übereinstimmung zur Laufzeit. Die Ausnahme `MatchFailureException` wird generiert, wenn der Wert eines Arguments nicht die in der Parameterliste angegebenen Mustern übereinstimmt. Der Compiler gibt eine Warnung, wenn ein Muster für die Parameter nach unvollständigen Übereinstimmungen zulässt. Mindestens eine andere Muster ist häufig nützlich für Parameterlisten, und das ist das Platzhaltermuster. Sie verwenden das Platzhaltermuster in einer Parameterliste, wenn Sie möchten einfach alle Argumente ignorieren, die bereitgestellt werden. Der folgende Code veranschaulicht die Verwendung des Platzhaltermusters in einer Argumentliste.
+Andere Muster können auch in Parameterlisten verwendet werden, aber wenn das Parameter Muster nicht allen möglichen Eingaben entspricht, gibt es möglicherweise eine unvollständige Entsprechung zur Laufzeit. Die- `MatchFailureException` Ausnahme wird generiert, wenn der Wert eines Arguments nicht mit den in der Parameterliste angegebenen Mustern identisch ist. Der Compiler gibt eine Warnung aus, wenn ein Parameter Muster unvollständige Übereinstimmungen zulässt. Mindestens ein anderes Muster ist häufig für Parameterlisten nützlich, und das ist das Platzhalter Muster. Sie verwenden das Platzhalter Muster in einer Parameterliste, wenn Sie einfach alle angegebenen Argumente ignorieren möchten. Der folgende Code veranschaulicht die Verwendung des Platzhalter Musters in einer Argumentliste.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3801.fs)]
 
-Das Platzhaltermuster kann sein, hilfreich, wenn Sie nicht, die übergebenen Argumenten benötigen, z. B. den Haupteinstiegspunkt für ein Programm, wenn Sie nicht die Befehlszeilenargumente interessiert sind, die normalerweise als Zeichenfolgenarray, wie im folgenden Code bereitgestellt werden.
+Das Platzhalter Muster kann nützlich sein, wenn Sie die übergebenen Argumente nicht benötigen, z. b. im Haupteinstiegspunkt an ein Programm, wenn Sie nicht an den Befehlszeilen Argumenten interessiert sind, die normalerweise als Zeichen folgen Array bereitgestellt werden, wie im folgenden Code.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3802.fs)]
 
-Sind andere Muster, die in-Argumente verwendet werden die `as` Muster und Bezeichnermuster Unterscheidungs-Unions und aktive Muster zugeordnet. Sie können wie folgt die Einzelfall-Unterscheidungs-union-Muster verwenden.
+Andere Muster, die manchmal in Argumenten verwendet werden, `as` sind das Muster und die bezeichnermuster, die mit Unterscheidungs-Unions und aktiven Mustern verknüpft sind. Sie können das Union-Muster mit einem einzelnen Fall wie folgt verwenden.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3803.fs)]
 
 Die Ausgabe lautet wie folgt.
 
@@ -61,7 +61,7 @@ Data begins at 0 and ends at 4 in string Et tu, Brute?
 Et tu
 ```
 
-Mit aktiven Mustern können als Parameter, z. B. nützlich bei der Transformation ein Argument in einem gewünschten Format wie im folgenden Beispiel gezeigt:
+Aktive Muster können als Parameter nützlich sein, z. b. beim Transformieren eines Arguments in ein gewünschtes Format, wie im folgenden Beispiel gezeigt:
 
 ```fsharp
 type Point = { x : float; y : float }
@@ -73,51 +73,51 @@ let radius (Polar(r, _)) = r
 let angle (Polar(_, theta)) = theta
 ```
 
-Sie können die `as` Muster, um einen übereinstimmenden Wert als ein lokaler Wert zu speichern, wie in der folgenden Zeile des Codes angezeigt wird.
+Sie können das `as` Muster verwenden, um einen übereinstimmenden Wert als lokalen Wert zu speichern, wie in der folgenden Codezeile dargestellt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3805.fs)]
 
-Ein weiteres Muster, das gelegentlich verwendet werden, ist eine Funktion, die das letzte Argument bereitstellen, als Text der Funktion unbenannte verlässt, ein Lambda-Ausdruck, der die implizite Argument sofort eine Musterübereinstimmung ausführt. Ein Beispiel hierfür ist die folgende Codezeile.
+Ein anderes Muster, das gelegentlich verwendet wird, ist eine Funktion, die das Letzte unbenannte Argument verlässt, indem als Text der Funktion ein Lambda-Ausdruck bereitgestellt wird, der sofort eine Muster Übereinstimmung für das implizite Argument ausführt. Ein Beispiel hierfür ist die folgende Codezeile.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3804.fs)]
 
-Dieser Code definiert eine Funktion, die eine generische Liste annimmt und zurückgibt `true` ist die Liste leer ist, und `false` andernfalls. Die Verwendung solcher Techniken betrachtet möglich Code schwieriger zu lesen.
+Dieser Code definiert eine Funktion, die eine generische Liste annimmt und `true` zurückgibt, wenn die Liste leer `false` ist, und andernfalls. Die Verwendung solcher Techniken kann das Lesen des Codes erschweren.
 
-In einigen Fällen Muster, bei denen unvollständige Übereinstimmungen sind nützlich, z. B. Wenn Sie wissen, dass die Listen in Ihrem Programm nur drei Elemente verfügen, können ein Muster wie folgt in einer Parameterliste.
+Gelegentlich sind Muster mit unvollständigen Übereinstimmungen nützlich, wenn Sie z. b. wissen, dass die Listen im Programm nur drei Elemente enthalten, können Sie ein Muster wie das folgende in einer Parameterliste verwenden.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3806.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3806.fs)]
 
-Die Verwendung von Mustern, die unvollständige Übereinstimmungen ist am besten für die schnelle Erstellung von Prototypen und andere temporäre Zwecke reserviert. Der Compiler gibt eine Warnung für diese Art von Code. Solche Muster nicht grundsätzlich alle möglichen Eingaben abdecken und sind daher nicht für die Komponenten-APIs geeignet ist.
+Die Verwendung von Mustern mit unvollständigen Übereinstimmungen ist am besten für die schnelle Prototyperstellung und andere temporäre Verwendungszwecke reserviert. Der Compiler gibt eine Warnung für diesen Code aus. Solche Muster können nicht den allgemeinen Fall aller möglichen Eingaben abdecken und sind daher nicht für Komponenten-APIs geeignet.
 
 ## <a name="named-arguments"></a>Benannte Argumente
 
-Argumente für Methoden Position in einer Argumentliste von durch Trennzeichen getrennte angegeben werden können, oder sie können übergeben werden an eine Methode explizit durch Eingabe des Namens, gefolgt von einem Gleichheitszeichen und dem Wert übergeben werden. Wenn angegeben, indem Sie den Namen angeben, können sie in einer anderen Reihenfolge aus, die verwendet werden, in der Deklaration angezeigt werden.
+Argumente für Methoden können durch die Position in einer durch Trennzeichen getrennten Argumentliste angegeben werden, oder Sie können explizit an eine Methode durch Angabe des Namens, gefolgt von einem Gleichheitszeichen und dem zu über gebenden Wert weitergeleitet werden. Wenn Sie durch Angabe des Namens angegeben werden, können Sie in einer anderen Reihenfolge als der in der Deklaration verwendeten angezeigt werden.
 
-Benannte Argumente können Code besser lesbar und besser anpassen auf bestimmte Arten von Änderungen in der API, z. B. eine neuanordnung der Parameter der Methode zu machen.
+Benannte Argumente können den Code besser lesbar machen und besser an bestimmte Typen von Änderungen in der API angepasst werden, z. b. eine Neuanordnung von Methoden Parametern.
 
-Benannte Argumente dürfen nur für Methoden, nicht für `let`-gebunden, Funktionen, Werte von Funktionen oder Lambda-Ausdrücke.
+Benannte Argumente sind nur für Methoden, nicht für `let`gebundene Funktionen, Funktions Werte oder Lambda Ausdrücke zulässig.
 
-Das folgende Codebeispiel veranschaulicht die Verwendung von benannten Argumente.
+Im folgenden Codebeispiel wird die Verwendung von benannten Argumenten veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3807.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3807.fs)]
 
-In einem Aufruf für einen Klassenkonstruktor können Sie die Werte der Eigenschaften der Klasse mit einer Syntax wie mit der benannten Argumente festlegen. Das folgende Beispiel zeigt diese Syntax.
+In einem-Klassenkonstruktor können Sie die Werte der Eigenschaften der-Klasse festlegen, indem Sie eine Syntax verwenden, die dem von benannten Argumenten ähnelt. Das folgende Beispiel zeigt diese Syntax.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 Weitere Informationen finden Sie unter [Konstruktoren (F#)](https://msdn.microsoft.com/library/2cd0ed07-d214-4125-8317-4f288af99f05).
 
 ## <a name="optional-parameters"></a>Optionale Parameter
 
-Sie können einen optionalen Parameter für eine Methode mit einem Fragezeichen angegeben vor den Parameternamen angeben. Optionale Parameter werden als interpretiert die F# Typ option, damit Sie auf die übliche Weise abgefragt werden können, dass Optionstypen, mithilfe abgefragt werden einer `match` Ausdruck mit `Some` und `None`. Optionale Parameter sind zulässig, nur für Elemente, die nicht auf Funktionen, die mithilfe von erstellt `let` Bindungen.
+Sie können einen optionalen Parameter für eine Methode angeben, indem Sie ein Fragezeichen vor dem Parameternamen verwenden. Optionale F# Parameter werden als Optionstyp interpretiert, sodass Sie Sie in regulärer Weise Abfragen können, indem Sie einen `match` -Ausdruck mit `Some` und `None`verwenden. Optionale Parameter sind nur für Member zulässig, nicht für Funktionen, die mithilfe `let` von Bindungen erstellt wurden.
 
-Sie können vorhandene optional Werte übergeben-Methode von Parameternamen, wie z. B. `?arg=None` oder `?arg=Some(3)` oder `?arg=arg`. Dies kann nützlich sein, wenn optionale Argumente Erstellen einer Methode, die an eine andere Methode übergeben werden.
+Sie können vorhandene optionale Werte an die-Methode über den Parameternamen übergeben `?arg=None` , `?arg=Some(3)` z `?arg=arg`. b. oder. Dies kann bei der Erstellung einer Methode nützlich sein, die optionale Argumente an eine andere Methode übergibt.
 
-Sie können auch eine Funktion `defaultArg`, wodurch einen Standardwert eines optionalen Arguments festgelegt. Die `defaultArg` Funktion akzeptiert den optionalen Parameter als erstes Argument und der Standardwert als das zweite.
+Sie können auch eine Funktion `defaultArg`verwenden, mit der ein Standardwert eines optionalen Arguments festgelegt wird. Die `defaultArg` -Funktion übernimmt den optionalen-Parameter als erstes Argument und den Standardwert als zweiten.
 
-Das folgende Beispiel veranschaulicht die Verwendung der optionalen Parameter.
+Das folgende Beispiel veranschaulicht die Verwendung optionaler Parameter.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3808.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3808.fs)]
 
 Die Ausgabe lautet wie folgt.
 
@@ -130,7 +130,7 @@ Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 ```
 
-Zum Zweck der C# und Visual Basic-Interop können Sie die Attribute `[<Optional; DefaultParameterValue<(...)>]` in F#, sodass Aufrufer ein Argument als optional angezeigt werden. Dies entspricht dem Argument in als optional definiert C# in `MyMethod(int i = 3)`.
+Im Hinblick auf C# und Visual Basic Interop können Sie die Attribute `[<Optional; DefaultParameterValue<(...)>]` in F#verwenden, damit Aufrufer ein Argument als optional sehen. Dies entspricht der Definition des Arguments als optional in C# wie in. `MyMethod(int i = 3)`
 
 ```fsharp
 open System
@@ -140,7 +140,7 @@ type C =
         printfn "%s" message
 ```
 
-Sie können auch ein neues Objekt als ein standardmäßiger Parameterwert angeben. Z. B. die `Foo` Member ist möglicherweise eine optionale `CancellationToken` stattdessen als Eingabe:
+Sie können auch ein neues-Objekt als Standardparameter Wert angeben. Der `Foo` Member könnte beispielsweise optional `CancellationToken` als Eingabe enthalten:
 
 ```fsharp
 open System.Threading
@@ -150,22 +150,22 @@ type C =
         printfn "%A" ct
 ```
 
-Der Wert, der als Argument für `DefaultParameterValue` muss dem Typ des Parameters entsprechen. Beispielsweise ist Folgendes nicht zulässig:
+Der als Argument angegebene Wert muss `DefaultParameterValue` mit dem Typ des Parameters identisch sein. Beispielsweise ist Folgendes nicht zulässig:
 
 ```fsharp
 type C =
     static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
 ```
 
-In diesem Fall wird der Compiler eine Warnung generiert, und beide Attribute vollständig ignoriert. Beachten Sie, dass der Standardwert `null` muss sein Typ kommentiert, anders leitet der Compiler den falschen Typ, d. h. `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.
+In diesem Fall generiert der Compiler eine Warnung und ignoriert beide Attribute vollständig. Beachten Sie, dass der `null` Standardwert typkommentiert werden muss, da der Compiler andernfalls den falschen Typ, d. h. `[<Optional; DefaultParameterValue(null:obj)>] o:obj`, anleitet.
 
 ## <a name="passing-by-reference"></a>Übergeben als Verweis
 
-Übergeben einer F# Wert nach Verweis umfasst [Byrefs](byrefs.md), die verwaltete Zeigertypen sind. Anleitung für die zu verwendende Typ wie folgt lautet:
+Das übergeben F# eines Werts als Verweis umfasst [ByRefs](byrefs.md), bei denen es sich um verwaltete Zeiger Typen handelt. Der zu verwendende Typ lautet wie folgt:
 
-* Verwendung `inref<'T>` , wenn Sie nur den Zeiger lesen müssen.
-* Verwendung `outref<'T>` , wenn Sie nur auf den Zeiger schreiben müssen.
-* Verwendung `byref<'T>` Wenn müssen Sie sowohl auslesen und Schreiben in den Zeiger.
+* Verwenden `inref<'T>` Sie, wenn Sie nur den Zeiger lesen müssen.
+* Verwenden `outref<'T>` Sie, wenn Sie nur in den Zeiger schreiben müssen.
+* Verwenden `byref<'T>` Sie, wenn Sie sowohl Lese-als auch Schreibzugriff auf den Zeiger benötigen.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x
@@ -186,25 +186,25 @@ example2 &y
 example3 &y // Now 'y' is 3
 ```
 
-Da der Parameter ein Zeiger ist, und der Wert kann geändert werden, werden alle Änderungen an den Wert nach der Ausführung der Funktion beibehalten.
+Da der-Parameter ein Zeiger ist und der Wert änderbar ist, werden alle Änderungen am Wert nach der Ausführung der Funktion beibehalten.
 
-Sie können ein Tupel als Rückgabewert einer speichern `out` Parameter in .NET-Methoden-Bibliothek. Alternativ können Sie behandeln die `out` Parameter als ein `byref` Parameter. Im folgenden Codebeispiel wird veranschaulicht, in beide Richtungen.
+Sie können ein Tupel als Rückgabewert verwenden, um `out` Parameter in .net-Bibliotheks Methoden zu speichern. Alternativ können Sie den `out` Parameter `byref` als Parameter behandeln. Im folgenden Codebeispiel werden beide Methoden veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-1/snippet3810.fs)]
 
 ## <a name="parameter-arrays"></a>Parameterarrays
 
-Gelegentlich ist es erforderlich, eine Funktion zu definieren, die eine beliebige Anzahl von Parametern heterogenen Typs akzeptiert. Es wäre nicht sehr praktisch, erstellen alle möglichen überladenen Methoden um für alle Typen zu berücksichtigen, die verwendet werden können. Die .NET Implementierungen bieten Unterstützung für solche Methoden über die Parameter-Array-Funktion. Eine Methode, die ein Parameterarray in der Signatur verwendet, werden, kann mit einer beliebigen Anzahl von Parametern angegeben werden. Die Parameter werden in ein Array eingefügt. Der Typ der Elemente des Arrays bestimmt die Parametertypen, die an die Funktion übergeben werden können. Wenn Sie das Parameterarray mit definieren `System.Object` als Typ des Elements, klicken Sie dann Clientcode kann Werte übergeben eines beliebigen Typs.
+Gelegentlich ist es erforderlich, eine Funktion zu definieren, die eine beliebige Anzahl von Parametern des heterogenen Typs annimmt. Es wäre nicht praktikabel, alle möglichen überladenen Methoden zu erstellen, um alle Typen zu berücksichtigen, die verwendet werden könnten. Die .net-Implementierungen unterstützen solche Methoden durch das Parameter Array Feature. Eine Methode, die ein Parameter Array in der Signatur annimmt, kann mit einer beliebigen Anzahl von Parametern bereitgestellt werden. Die Parameter werden in einem Array abgelegt. Der Typ der Array Elemente bestimmt die Parametertypen, die an die Funktion übergeben werden können. Wenn Sie das Parameter Array mit `System.Object` als Elementtyp definieren, kann der Client Code Werte eines beliebigen Typs übergeben.
 
-In F# können Parameterarrays nur in Methoden definiert werden. Sie können nicht verwendet werden, in der eigenständigen oder Funktionen, die in Modulen definiert sind.
+In F# können Parameterarrays nur in Methoden definiert werden. Sie können nicht in eigenständigen Funktionen oder Funktionen verwendet werden, die in Modulen definiert sind.
 
-Sie definieren ein Parameterarray mithilfe der `ParamArray` Attribut. Die `ParamArray` Attribut kann nur auf den letzten Parameter angewendet werden.
+Ein Parameter Array wird mithilfe des `ParamArray` -Attributs definiert. Das `ParamArray` -Attribut kann nur auf den letzten Parameter angewendet werden.
 
 Der folgende Code veranschaulicht beide eine .NET-Methode übergeben wird, die ein Parameterarray und die Definition eines Typs in F# verwendet wird, die eine Methode, die akzeptiert ein Parameterarray aufrufen.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 
-Wenn in einem Projekt ausführen, lautet die Ausgabe des obigen Codes wie folgt:
+Wenn Sie in einem Projekt ausführen, lautet die Ausgabe des vorherigen Codes wie folgt:
 
 ```console
 a 1 10 Hello world 1 True
@@ -218,4 +218,4 @@ true
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Mitglieder](members/index.md)
+- [Mitglieder](./members/index.md)

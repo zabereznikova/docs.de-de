@@ -1,13 +1,13 @@
 ---
 title: F#-Sprachreferenz
-description: Suchen F# Language Featureinformationen von diesem Verweis zum sprachtoken Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.
+description: Hier F# finden Sie Informationen zu sprach Features aus diesem Verweis zu sprach Token, Konzepten, Typen, Ausdrücken und vom Compiler unterstützten Erstellungs Themen.
 ms.date: 05/16/2016
-ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b37f9ddcd4fbf6939631f283be95ebf08cf072d6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666442"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630694"
 ---
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 
@@ -20,7 +20,7 @@ Die folgende Tabelle enthält Referenzthemen, die Tabellen der Schlüsselwörter
 |Titel|Beschreibung|
 |-----|-----------|
 |[Schlüsselwortreferenz](keyword-reference.md)|Enthält Links zu Informationen über alle F#-Schlüsselwörter.|
-|[Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)|Enthält eine Tabelle mit Symbolen und Operatoren, die in der Sprache F# verwendet werden.|
+|[Symbol- und Operatorenreferenz](./symbol-and-operator-reference/index.md)|Enthält eine Tabelle mit Symbolen und Operatoren, die in der Sprache F# verwendet werden.|
 |[Literale](literals.md)|Beschreibt die Syntax für literale Werte in F# und wie Typinformationen für F#-Literale angegeben werden.|
 
 ## <a name="f-language-concepts"></a>F#-Sprachkonzepte
@@ -29,12 +29,12 @@ Die folgende Tabelle listet die verfügbare Referenzthemen auf, die Sprachkonzep
 
 |Titel|Beschreibung|
 |-----|-----------|
-|[Funktionen](functions/index.md)|Funktionen sind die grundlegende Einheit für die Ausführung des Programms in einer beliebigen Programmiersprache. So wie in anderen Sprachen auch, verfügt eine F#-Funktion über einen Namen, kann Parameter besitzen und Argumente verwenden und verfügt über Text. F# unterstützt auch funktionale Konstrukte der Programmierung, z.B. das Behandeln von Funktionen als Werte, Verwenden von unbenannten Funktionen als Ausdrücke, die Zusammensetzung von Funktionen zum Bilden neuer Funktionen, Funktionen mit Currying sowie die implizite Definition von Funktionen mit der teilweise Anwendung von Funktionsargumenten.|
+|[Funktionen](./functions/index.md)|Funktionen sind die grundlegende Einheit für die Ausführung des Programms in einer beliebigen Programmiersprache. So wie in anderen Sprachen auch, verfügt eine F#-Funktion über einen Namen, kann Parameter besitzen und Argumente verwenden und verfügt über Text. F# unterstützt auch funktionale Konstrukte der Programmierung, z.B. das Behandeln von Funktionen als Werte, Verwenden von unbenannten Funktionen als Ausdrücke, die Zusammensetzung von Funktionen zum Bilden neuer Funktionen, Funktionen mit Currying sowie die implizite Definition von Funktionen mit der teilweise Anwendung von Funktionsargumenten.|
 |[F#-Typen](fsharp-types.md)|Beschreibt die Typen, die in F# verwendet werden und wie F#-Typen benannt und beschrieben werden.|
 |[Typableitung](type-inference.md)|Beschreibt, wie der F#-Compiler die Typen von Werten, Variablen, Parameter und Rückgabewerte herleitet.|
-|[Automatische Verallgemeinerung](generics/automatic-generalization.md)|Beschreibt generische Konstrukte in F#.|
+|[Automatische Verallgemeinerung](./generics/automatic-generalization.md)|Beschreibt generische Konstrukte in F#.|
 |[Vererbung](inheritance.md)|Beschreibt die Vererbung, die zur Modellierung der „ist-ein“-Beziehung oder von Untertypen in der objektorientierten Programmierung verwendet wird.|
-|[Mitglieder](members/index.md)|Beschreibt Member von F#-Objekttypen.|
+|[Mitglieder](./members/index.md)|Beschreibt Member von F#-Objekttypen.|
 |[Parameter und Argumente](Parameters-and-Arguments.md)|Beschreibt die Sprachunterstützung zum Definieren von Parametern und zum Übergeben von Argumenten an Funktionen, Methoden und Eigenschaften. Enthält Informationen zur Übergabe als Verweis.|
 |[Operatorüberladung](operator-overloading.md)|Beschreibt, wie arithmetische Operatoren in einer Klasse oder einem Datensatztyp sowie auf globaler Ebene überladen werden.|
 |[Umwandlung und Konvertierungen](casting-and-conversions.md)|Beschreibt die Unterstützung für Typumwandlungen in F#.|
@@ -42,7 +42,7 @@ Die folgende Tabelle listet die verfügbare Referenzthemen auf, die Sprachkonzep
 |[Mustervergleich](pattern-matching.md)|Beschreibt Muster,die Regeln zum Umwandeln von Eingabedaten sind, die in F# stets verwendet werden, um Vergleichsdaten mit einem Muster zu extrahieren, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten auf unterschiedliche Art zu extrahieren.|
 |[Aktive Muster](active-patterns.md)|Beschreibt aktive Muster. Mit aktiven Mustern können Sie benannte Partitionen definieren, die Eingabedaten unterteilen. Mit aktiven Mustern können Sie Daten benutzerdefiniert für jede Partition zerlegen.|
 |[Assertionen](assertions.md)|Beschreibt den Ausdruck `assert`, der eine Debugfunktion zum Testen eines Ausdrucks ist. Bei einem Fehler im Debugmodus generiert eine Assertion ein Dialogfeld „Systemfehler“.|
-|[Ausnahmebehandlung](exception-handling/index.md)|Enthält Informationen über die Unterstützung für die Ausnahmebehandlung in der Sprache F#.|
+|[Ausnahmebehandlung](/.exception-handling/index.md)|Enthält Informationen über die Unterstützung für die Ausnahmebehandlung in der Sprache F#.|
 |[Attribute](attributes.md)|Beschreibt die Attribute, mit denen Metadaten auf ein Programmierungskonstrukt angewendet werden können.|
 |[Ressourcenverwaltung: Das `use`-Schlüsselwort](resource-management-the-use-keyword.md)|Beschreibt die Schlüsselwörter `use` und `using`, die die Initialisierung und Freigabe von Ressourcen steuern können.|
 |[Namespaces](namespaces.md)|Beschreibt die Namespaceunterstützung in F#. Mit einem Namespace können Sie Code in Bereichen verwandter Funktionalität organisieren, indem Sie einen Namen an eine Gruppierung von Programmelementen anfügen.|
@@ -58,7 +58,7 @@ Die folgende Tabelle enthält verfügbare Referenzthemen, die von F# unterstütz
 
 |Titel|Beschreibung|
 |-----|-----------|
-|[Werte](values/index.md)|Beschreibt Werte, die unveränderliche Mengen darstellen und einen bestimmten Typ aufweisen. Werte können Ganzzahlen oder Gleitkommazahlen, Zeichen oder Text, Listen, Sequenzen, Arrays, Tupeln, Unterscheidungs-Unions, Datensätze, Klassentypen oder Funktionswerte sein.|
+|[Werte](./values/index.md)|Beschreibt Werte, die unveränderliche Mengen darstellen und einen bestimmten Typ aufweisen. Werte können Ganzzahlen oder Gleitkommazahlen, Zeichen oder Text, Listen, Sequenzen, Arrays, Tupeln, Unterscheidungs-Unions, Datensätze, Klassentypen oder Funktionswerte sein.|
 |[Grundlegende Typen](basic-types.md)|Beschreibt die grundlegenden grundlegenden Typen, die in der Sprache F# verwendet werden. Darüber hinaus werden die entsprechenden Typen in .NET und die minimalen und maximalen Werte für jeden Typ bereitgestellt.|
 |[Unit-Typ](unit-type.md)|Beschreibt den `unit`-Typ, der ein Typ ist, der das Fehlen eines bestimmten Werts beschreibt; der `unit`-Typ verfügt nur über einen einzigen Wert, der als Platzhalter fungiert, wenn kein anderer Wert vorhanden oder erforderlich ist.|
 |[Zeichenfolgen](strings.md)|Beschreibt Zeichenfolgen in F#. Die `string`-Typ stellt unveränderlichen Text als eine Sequenz von Unicode-Zeichen dar. `string` ist ein Alias für `System.String` in .NET Framework.|
@@ -91,11 +91,11 @@ Die folgende Tabelle enthält Themen, in denen F#-Ausdrücke beschrieben werden.
 |-----|-----------|
 |[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Beschreibt den `if...then...else`-Ausdruck, der unterschiedliche Codezweige ausführt und je nach angegebenem booleschen Ausdruck ebenso einen anderen Wert ergibt.|
 |[Vergleichsausdrücke](match-expressions.md)|Beschreibt den `match`-Ausdruck, der die Verzweigungssteuerung bereitstellt, die auf dem Vergleich eines Ausdrucks mit einer Reihe von Mustern basiert.|
-|[Schleifen: `for...to` Ausdruck](loops-for-to-expression.md)|Beschreibt den `for...to`-Ausdruck, der zum Durchlaufen einer Schleife eines Wertebereichs einer Schleifenvariable verwendet wird.|
-|[Schleifen: `for...in` Ausdruck](loops-for-in-expression.md)|Beschreibt den `for...in`-Ausdruck, ein Schleifenkonstrukt, das zum Durchlaufen der Übereinstimmungen eines Musters in einer aufzählbaren Auflistung verwendet wird, z.B. eine Reihe von Ausdrücken, eine Sequenz, Liste, ein Array oder ein anderes Konstrukt, das die Enumeration unterstützt.|
-|[Schleifen: `while...do` Ausdruck](loops-while-do-expression.md)|Beschreibt den `while...do`-Ausdruck, der verwendet wird, um iterative Ausführung (Schleifen) auszuführen, während eine bestimmte Testbedingung erfüllt ist.|
+|[Loops `for...to`Begriff](loops-for-to-expression.md)|Beschreibt den `for...to`-Ausdruck, der zum Durchlaufen einer Schleife eines Wertebereichs einer Schleifenvariable verwendet wird.|
+|[Loops `for...in`Begriff](loops-for-in-expression.md)|Beschreibt den `for...in`-Ausdruck, ein Schleifenkonstrukt, das zum Durchlaufen der Übereinstimmungen eines Musters in einer aufzählbaren Auflistung verwendet wird, z.B. eine Reihe von Ausdrücken, eine Sequenz, Liste, ein Array oder ein anderes Konstrukt, das die Enumeration unterstützt.|
+|[Loops `while...do`Begriff](loops-while-do-expression.md)|Beschreibt den `while...do`-Ausdruck, der verwendet wird, um iterative Ausführung (Schleifen) auszuführen, während eine bestimmte Testbedingung erfüllt ist.|
 |[Objektausdrücke](object-expressions.md)|Beschreibt Objektausdrücke, die Ausdrücke darstellen, die neue Instanzen eines dynamisch erstellten anonymen Objekttyps erstellen, der auf einem vorhandenen Basistyp, einer Schnittstelle oder einem Satz von Schnittstellen basiert.|
-|[Nicht strikte Ausdrücke](lazy-expressions.md)|Beschreibt verzögerte Ausdrücke, die Berechnungen sind, die nicht sofort ausgewertet, aber stattdessen ausgewertet, wenn das Ergebnis tatsächlich benötigt wird.|
+|[Nicht strikte Ausdrücke](lazy-expressions.md)|Beschreibt verzögerte Ausdrücke, bei denen es sich um Berechnungen handelt, die nicht sofort ausgewertet werden, sondern stattdessen ausgewertet werden, wenn das Ergebnis tatsächlich benötigt wird.|
 |[Berechnungsausdrücke](computation-expressions.md)|Beschreibt Berechnungsausdrücke in F#, die eine bequeme Syntax für das Schreiben von Berechnungen bereitstellen, die mithilfe von Ablaufsteuerungskonstrukten und Bindungen sequenziert und kombiniert werden können. Sie können verwendet werden, um eine einfache Syntax für *monads* bereitstellen, eine Funktion zur funktionalen Programmierung, die zur Verwaltung von Daten, Steuereffekte und Nebenwirkungen in funktionalen Programmen verwendet werden können. Ein Typ eines Berechnungsausdrucks, der asynchrone Workflow, bietet Unterstützung für asynchrone und gleichzeitige Berechnungen. Weitere Informationen finden Sie unter [Asynchrone Workflows](asynchronous-workflows.md).|
 |[Asynchrone Workflows](asynchronous-workflows.md)|Beschreibt asynchrone Workflows, eine Sprachfunktion, mit der Sie asynchronen Code in einer Weise schreiben können, die der Methode zum Schreiben von synchronem Code sehr ähnlich ist.|
 |[Zitieren von Code](code-quotations.md)|Beschreibt Codezitate, eine Sprachfunktion, die das programmgesteuerte Generieren und Arbeiten mit F#-Codeausdrücken ermöglicht.|

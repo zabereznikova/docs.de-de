@@ -1,17 +1,17 @@
 ---
 title: do-Bindungen
-description: Erfahren Sie, wie ein F# 'do', Bindung werden verwendet, um Code auszuführen, ohne die Definition einer Funktion oder Wert.
+description: Erfahren Sie, F# wie eine "Do"-Bindung verwendet wird, um Code auszuführen, ohne eine Funktion oder einen Wert zu definieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0755e36912fc4e5a645e55eb4bee5c730a56cadf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f98f523296bfaceeda35d4861eafbfeaa5a60c32
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641909"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630541"
 ---
 # <a name="do-bindings"></a>do-Bindungen
 
-Ein `do` Bindung wird verwendet, um Code auszuführen, ohne die Definition einer Funktion oder Wert. Darüber hinaus werden Bindungen möglich in Klassen finden Sie in [ `do` Bindungen in Klassen](../members/do-bindings-in-classes.md).
+Eine `do` Bindung wird verwendet, um Code auszuführen, ohne eine Funktion oder einen Wert zu definieren. Außerdem können do-Bindungen in Klassen verwendet werden. weitere [ `do` ](../members/do-bindings-in-classes.md)Informationen finden Sie unter Bindungen in Klassen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -22,11 +22,11 @@ Ein `do` Bindung wird verwendet, um Code auszuführen, ohne die Definition einer
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden einer `do` binden, wenn Sie möchten, dass zum Ausführen von Code unabhängig von der Definition einer Funktion oder Wert. Der Ausdruck in einem `do` Bindung muss zurückgeben `unit`. Code in einem der obersten Ebene `do` Bindung ausgeführt wird, wenn das Modul initialisiert wird. Das Schlüsselwort `do` ist optional.
+Verwenden Sie `do` eine Bindung, wenn Sie Code unabhängig von einer Funktions-oder Werte Definition ausführen möchten. Der Ausdruck in einer `do` Bindung muss zurück `unit`geben. Der Code in einer Bindung auf `do` oberster Ebene wird ausgeführt, wenn das Modul initialisiert wird. Das Schlüssel `do` Wort ist optional.
 
-Attribute können auf oberster Ebene angewendet werden `do` Bindung. Z. B. Wenn Ihr Programm COM-Interop verwendet, Sie möchten gelten die `STAThread` -Attribut auf Ihr Programm. Sie erreichen dies, indem Sie ein Attribut auf eine `do` binden, wie im folgenden Code gezeigt.
+Attribute können auf eine Bindung auf oberster Ebene `do` angewendet werden. Wenn das Programm z. b. com-Interop verwendet, sollten Sie das `STAThread` -Attribut auf Ihr Programm anwenden. Hierfür können Sie ein Attribut in einer `do` Bindung verwenden, wie im folgenden Code dargestellt.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet201.fs)]
 
 ## <a name="see-also"></a>Siehe auch
 

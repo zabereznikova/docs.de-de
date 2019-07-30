@@ -2,12 +2,12 @@
 title: Konstruktoren
 description: Informationen Sie zum Definieren und Verwenden von Konstruktoren in F# zu erstellen und initialisieren die Klasse und Struktur von Objekten.
 ms.date: 05/16/2016
-ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364360"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627595"
 ---
 # <a name="constructors"></a>Konstruktoren
 
@@ -23,7 +23,7 @@ Unabhängig davon, ob der Konstruktor, den Sie aufzurufen, ein primärer Konstru
 
 Der folgende Code veranschaulicht eine-Klasse, die über einen Konstruktor und verschiedene Methoden zum Erstellen von-Objekten verfügt.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
 Die Ausgabe lautet wie folgt.
 
@@ -40,7 +40,7 @@ Strukturen befolgen alle Regeln der Klassen. Daher können Sie über einen prim�
 
 Außerdem verfügen Strukturen häufig über Felder, die mithilfe des `val` Schlüssel Worts erstellt werden. Klassen können auch über diese Felder verfügen. Strukturen und Klassen, die mithilfe des `val` -Schlüssel Worts definierte Felder haben, können auch in zusätzlichen Konstruktoren mithilfe von Daten Satz Ausdrücken initialisiert werden, wie im folgenden Code gezeigt.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
 Weitere Informationen finden [Sie unter Explizite Felder: Das `val` Schlüssel](explicit-fields-the-val-keyword.md)Wort.
 
@@ -48,7 +48,7 @@ Weitere Informationen finden [Sie unter Explizite Felder: Das `val` Schlüssel](
 
 Ein primärer Konstruktor in einer Klasse kann Code in einer `do` Bindung ausführen. Was geschieht jedoch, wenn Sie Code in einem zusätzlichen Konstruktor ohne `do` Bindung ausführen müssen? Verwenden Sie hierzu das `then` -Schlüsselwort.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
 Die Nebeneffekte des primären Konstruktors werden weiterhin ausgeführt. Aus diesem Grund lautet die Ausgabe wie folgt.
 
@@ -62,11 +62,11 @@ Created an invalid person object.
 
 In anderen Membern geben Sie einen Namen für das aktuelle Objekt in der Definition der einzelnen Member an. Sie können auch den selbst Bezeichner in die erste Zeile der Klassendefinition einfügen, indem Sie `as` das Schlüsselwort direkt nach den Konstruktorparametern verwenden. Diese Syntax wird im folgenden Beispiel veranschaulicht.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
 In zusätzlichen Konstruktoren können Sie auch einen selbst Bezeichner definieren, indem Sie `as` die-Klausel direkt nach den Konstruktorparametern platzieren. Diese Syntax wird im folgenden Beispiel veranschaulicht.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
 Probleme können auftreten, wenn Sie versuchen, ein Objekt zu verwenden, bevor es vollständig definiert ist. Daher kann die Verwendung des Self-Bezeichners bewirken, dass der Compiler eine Warnung ausgibt und zusätzliche Überprüfungen einfügt, um sicherzustellen, dass auf die Member eines Objekts nicht zugegriffen wird, bevor das Objekt initialisiert wird. Sie sollten den Self-Identifier nur in den `do` Bindungen des primären Konstruktors oder nach dem `then` -Schlüsselwort in zusätzlichen Konstruktoren verwenden.
 
@@ -76,11 +76,11 @@ Der Name des selbst Bezeichners muss nicht sein `this`. Dies kann ein beliebiger
 
 Sie können den Eigenschaften eines Klassen Objekts im Initialisierungs Code Werte zuweisen, indem Sie eine Liste der Zuweisungen des Formulars `property = value` an die Argumentliste für einen Konstruktor anhängen. Dies wird im folgenden Codebeispiel gezeigt.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 In der folgenden Version des vorherigen Codes wird die Kombination aus normalen Argumenten, optionalen Argumenten und Eigenschafts Einstellungen in einem konstruktorbefehl veranschaulicht.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
 ## <a name="constructors-in-inherited-class"></a>Konstruktoren in der geerbten Klasse
 

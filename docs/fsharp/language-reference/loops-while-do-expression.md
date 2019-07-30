@@ -1,17 +1,17 @@
 ---
 title: 'Schleifen: while...do-Ausdruck'
-description: Finden Sie unter wie beim... führen Ausdruck wird verwendet, um iterative Ausführung (Schleifen) auszuführen, während eine bestimmte testbedingung erfüllt ist.
+description: Sehen Sie sich an, wie der while-... "Do Expression" wird verwendet, um iterative Ausführung (Schleifen) auszuführen, während eine angegebene Test Bedingung "true" ist.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5823ace27348ff4d4397a726bf2254f8fa0ee09b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f05bdd9f8f4b9446d59f68e1231fb75e18e9b526
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641836"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630754"
 ---
 # <a name="loops-whiledo-expression"></a>Schleifen: while...do-Ausdruck
 
-Die `while...do` Ausdruck wird verwendet, um iterative Ausführung (Schleifen) auszuführen, während eine bestimmte testbedingung erfüllt ist.
+Der `while...do` Ausdruck wird verwendet, um iterative Ausführung (Schleifen) auszuführen, während eine angegebene Test Bedingung "true" ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -22,13 +22,13 @@ while test-expression do
 
 ## <a name="remarks"></a>Hinweise
 
-Die *Testausdruck* ausgewertet wird, ist dies `true`, *Body-Ausdruck* ausgeführt wird und der Testausdruck erneut ausgewertet wird. Die *Body-Ausdruck* muss einen Typ aufweisen `unit`. Wenn der Testausdruck ist `false`, die Iteration beendet.
+Der *Test Ausdruck* wird ausgewertet. Wenn dies der `true`Fall ist, wird der *Text Ausdruck* ausgeführt, und der Test Ausdruck wird erneut ausgewertet. Der *Text Ausdruck* muss den Typ `unit`aufweisen. Wenn der Test Ausdruck ist `false`, wird die Iterationen beendet.
 
-Das folgende Beispiel veranschaulicht die Verwendung der `while...do` Ausdruck.
+Das folgende Beispiel veranschaulicht die Verwendung des `while...do` -Ausdrucks.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5301.fs)]
 
-Die Ausgabe des obigen Codes ist es sich um einen Stream von Zufallszahlen zwischen 1 und 20, die, der letzten der 10 ist.
+Die Ausgabe des vorherigen Codes ist ein Stream von Zufallszahlen zwischen 1 und 20, der letzte Wert ist 10.
 
 ```
 13 19 8 18 16 2 10
@@ -36,10 +36,10 @@ Found a 10!
 ```
 
 > [!NOTE]
-> Können Sie `while...do` in Sequenzausdrücken und anderen Berechnungsausdrücken in diesem Fall, dass eine angepasste Version von der `while...do` Ausdruck wird verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md), [asynchrone Workflows](asynchronous-workflows.md), und [Berechnungsausdrücke](computation-expressions.md).
+> Sie können in `while...do` Sequenz Ausdrücken und anderen Berechnungs Ausdrücken verwenden. in diesem Fall wird eine angepasste Version `while...do` des Ausdrucks verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md), [asynchrone Workflows](asynchronous-workflows.md)und [Berechnungs Ausdrücke](computation-expressions.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [F#-Sprachreferenz](index.md)
-- [Schleifen: `for...in` Ausdruck](loops-for-in-expression.md)
-- [Schleifen: `for...to` Ausdruck](loops-for-to-expression.md)
+- [Loops `for...in`Begriff](loops-for-in-expression.md)
+- [Loops `for...to`Begriff](loops-for-to-expression.md)

@@ -2,12 +2,12 @@
 title: Werte
 description: Erfahren Sie, wie Werte in F# Mengen sind, die einen bestimmten Typ aufweisen.
 ms.date: 05/16/2016
-ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed7a5b069a5a47aacf0cce4cfa754ded46f6e84a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641619"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630802"
 ---
 # <a name="values"></a>Werte
 
@@ -17,11 +17,11 @@ Werte in F# sind Mengen, die einen bestimmten Typ aufweisen. Werte können Ganzz
 
 Der Begriff *Bindung* bezeichnet das Zuordnen eines Namens zu einer Definition. Das `let`-Schlüsselwort bindet einen Wert, wie in den folgenden Beispielen:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
 Der Typ eines Werts wird aus der Definition abgeleitet. Für einen primitiven Datentyp, z.B. eine Ganzzahl oder Gleitkommazahl, wird der Typ vom Typ des Literals bestimmt. Aus diesem Grund leitet der Compiler im vorherigen Beispiel den Typ `b` ab, um `unsigned int` zu sein, hingegen leitet der Compiler den Typ `a` ab, damit er `int` wird. Der Typ eines Funktionswerts wird anhand des Rückgabewerts im Funktionsrumpf bestimmt. Weitere Informationen über Funktionswerttypen finden Sie unter [Funktionen](../functions/index.md). Weitere Informationen über Literaltypen finden Sie unter [Literale](../literals.md).
 
-Der Compiler gibt keine Diagnose zu nicht verwendeten Bindungen standardmäßig aus. Um diese Nachrichten erhalten, aktivieren Warnung 1182 in der Projektdatei oder beim Aufrufen des Compilers (finden Sie unter `--warnon` unter [Compileroptionen](../compiler-options.md)).
+Der Compiler gibt standardmäßig keine Diagnose über nicht verwendete Bindungen aus. Um diese Nachrichten zu empfangen, aktivieren Sie die Warnung 1182 in Ihrer Projektdatei oder beim Aufrufen `--warnon` des Compilers (siehe unter [Compileroptionen](../compiler-options.md)).
 
 ## <a name="why-immutable"></a>Warum unveränderlich?
 
@@ -37,15 +37,15 @@ Sie können mithilfe des Schlüsselworts `mutable` eine Variable angeben, die ge
 
 Sie können einen Anfangswert für eine änderbare Variable zuweisen, indem Sie das `let`-Schlüsselwort auf die gleiche Weise verwenden, wie Sie einen Wert definieren würden. Der Unterschied ist jedoch, dass Sie anschließend den änderbaren Variablen neue Werte zuweisen können, indem Sie den `<-`-Operator verwenden, wie im folgenden Beispiel.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
 
-Werte, die markiert `mutable` automatisch auf heraufgestuft werden `'a ref` Wenn durch eine Closure erfasst, einschließlich Formularen, die z. B. Erstellen von Abschlüssen, `seq` Generatoren. Wenn Sie in diesem Fall benachrichtigt werden möchten, aktivieren Sie die Warnung 3180 in der Projektdatei oder beim Aufrufen des Compilers.
+Werte, `mutable` die markiert werden, werden `'a ref` möglicherweise automatisch zu herauf gestuft, wenn Sie durch einen Abschluss aufgezeichnet werden `seq` , einschließlich Formularen, die Abschlüsse wie Generatoren erstellen. Wenn Sie benachrichtigt werden möchten, wenn dies auftritt, aktivieren Sie die Warnung 3180 in Ihrer Projektdatei oder beim Aufrufen des Compilers.
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 |Titel|Beschreibung|
 |-----|-----------|
-|[let-Bindungen](../functions/let-bindings.md)|Enthält Informationen zur Verwendung der `let` Schlüsselwort, um die Bindung von Namen an Werte und Funktionen.|
+|[let-Bindungen](../functions/let-bindings.md)|Stellt Informationen zur Verwendung des `let` -Schlüssel Worts zum Binden von Namen an Werte und Funktionen bereit.|
 |[Funktionen](../functions/index.md)|Bietet eine Übersicht über Funktionen in F#.|
 
 ## <a name="see-also"></a>Siehe auch

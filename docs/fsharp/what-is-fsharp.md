@@ -1,19 +1,19 @@
 ---
 title: Was ist F#
-description: Erfahren Sie, was der F#-Programmiersprache und F#-Programmierung wie. Informationen Sie zu Datentypen, Funktionen und deren Zusammenwirken.
+description: Erfahren Sie, was der F#-Programmiersprache und F#-Programmierung wie. Hier finden Sie Informationen zu umfangreichen Datentypen, Funktionen und deren Anpassung.
 ms.date: 08/03/2018
-ms.openlocfilehash: fc4f4db771c43a4ec08cc9d3a247cf1f38e60457
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486828"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630458"
 ---
-# <a name="what-is-f"></a>Was ist F\#
+# <a name="what-is-f"></a>Was ist F?\#
 
-F#ist eine funktionale Programmiersprache, die es einfach macht, die richtigen und verwaltbaren Code zu schreiben.
+F#ist eine funktionale Programmiersprache, die das Schreiben von korrekter und verwalbbarem Code erleichtert.
 
-F#Programmieren in erster Linie umfasst das Definieren von Typen und Funktionen, die automatisch generalisiert und Typ abgeleitet. Dadurch können sich der Fokus auf der Problemdomäne und bearbeiten die Details der Programmierung, anstatt die Daten verbleiben.
+F#die Programmierung umfasst hauptsächlich das Definieren von Typen und Funktionen, die vom Typ abgeleitet und automatisch generalisiert werden. Dies ermöglicht es Ihnen, sich auf die Problemdomäne zu konzentrieren und die Daten zu bearbeiten, statt die Programmier Details zu bearbeiten.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,21 +35,21 @@ let main args =
     0
 ```
 
-F#verfügt über zahlreiche Features, darunter:
+F#verfügt über zahlreiche Features, einschließlich:
 
-* Einfache syntax
+* Lightweight-Syntax
 * Standardmäßig unveränderlich
-* Typrückschluss und automatische Verallgemeinerung
+* Typrückschluss und automatische Generalisierung
 * Funktionen erster Klasse
-* Leistungsstarke-Datentypen
+* Leistungsstarke Datentypen
 * Musterabgleich
 * Asynchrone Programmierung
 
-Ein vollständiger Satz von Features sind in dokumentiert die [ F# Sprachreferenz](language-reference/index.md).
+Ein vollständiger Satz von Funktionen ist in der [ F# Sprachreferenz](./language-reference/index.md)dokumentiert.
 
 ## <a name="rich-data-types"></a>Rich-Datentypen
 
-Datentypen wie [Datensätze](language-reference/records.md) und [Unterscheidungs-Unions](language-reference/discriminated-unions.md) können Sie komplexe Daten und Domänen darstellen.
+Mit Datentypen wie [Datensätzen](./language-reference/records.md) und Unterscheidungs- [Unions](./language-reference/discriminated-unions.md) können Sie komplexe Daten und Domänen darstellen.
 
 ```fsharp
 // Group data with Records
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#Datensätze und Unterscheidungs-Unions sind ungleich Null, unveränderliche und vergleichbare standardmäßig, sodass sie sehr einfach zu verwenden.
+F#Datensätze und Unterscheidungs-Unions sind nicht NULL, unveränderlich und standardmäßig vergleichbar, sodass Sie sehr einfach zu verwenden sind.
 
-## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Erzwungene Richtigkeit mit Funktionen und des musterabgleichs
+## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Erzwingen der Richtigkeit mit Funktionen und Musterabgleich
 
-F#Funktionen sind einfach zu deklarieren und leistungsstarke in der Praxis. In Kombination mit [Musterabgleich](language-reference/pattern-matching.md), können Sie sich zur Verhalten definieren, deren Richtigkeit wird vom Compiler erzwungen.
+F#Funktionen sind in der Praxis leicht zu deklarieren und leistungsfähig. Wenn Sie mit [Muster](./language-reference/pattern-matching.md)Abgleich kombiniert werden, können Sie das Verhalten definieren, dessen Richtigkeit durch den Compiler erzwungen wird.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#Funktionen sind auch erstklassige, d. h., sie als Parameter übergeben und von anderen Funktionen zurückgegeben werden können.
+F#Funktionen sind ebenfalls die erste Klasse, d. h., Sie können als Parameter und von anderen Funktionen zurückgegeben werden.
 
-## <a name="functions-to-define-operations-on-objects"></a>Funktionen, um Vorgänge für Objekte zu definieren.
+## <a name="functions-to-define-operations-on-objects"></a>Funktionen zum Definieren von Vorgängen für Objekte
 
-F#bietet vollständige Unterstützung für Objekte, die nützliche Daten-Typen sind, wenn Sie Daten und Funktionen in blend müssen. F#Funktionen werden verwendet, um Objekte zu bearbeiten.
+F#bietet vollständige Unterstützung für-Objekte, bei denen es sich um nützliche Datentypen handelt, wenn Sie Daten und Funktionen mischen müssen. F#-Funktionen werden verwendet, um-Objekte zu bearbeiten.
 
 ```fsharp
 type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
@@ -119,8 +119,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-Anstatt das Schreiben von Code, der objektorientiert, in F# ist, Schreiben häufig Sie Code, die behandelt werden, wie ein anderer Datentyp für die Funktionen zum Bearbeiten. Funktionen, z. B. [generische Schnittstellen](language-reference/interfaces.md), [Objektausdrücke](language-reference/object-expressions.md), und zielgerichtete Verwendung von [Mitglieder](language-reference/members/index.md) werden häufig in größeren F# Programme.
+Anstatt das Schreiben von Code, der objektorientiert, in F# ist, Schreiben häufig Sie Code, die behandelt werden, wie ein anderer Datentyp für die Funktionen zum Bearbeiten. Funktionen wie [generische Schnittstellen](./language-reference/interfaces.md), [Objekt Ausdrücke](./language-reference/object-expressions.md)und eine kluge [Verwendung von](./language-reference/members/index.md) Membern werden häufig in größeren F# Programmen verwendet.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu einem größeren Satz F# Features sehen Sie sich die [ F# Tour](tour.md).
+Weitere Informationen zu einer größeren Anzahl von F# Features finden Sie in der [ F# Tour](tour.md).

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: ca40e6c8dcba3da29bdb68b29c91c852e477f8f7
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 8313c2282a3b4b7b035f9f3b685a786c4471f53a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512789"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630145"
 ---
 # <a name="char-data-type-visual-basic"></a>Char-Datentyp (Visual Basic)
 
@@ -37,16 +37,22 @@ Sie können Methoden wie <xref:System.Char.IsDigit%2A> und <xref:System.Char.IsP
 
 Visual Basic wandelt nicht direkt zwischen `Char` und den numerischen Typen um. Mit der-Funktion <xref:Microsoft.VisualBasic.Strings.Asc%2A> oder <xref:Microsoft.VisualBasic.Strings.AscW%2A> der-Funktion können `Char` Sie einen- `Integer` Wert in einen-Wert konvertieren, der den zugehörigen Codepunkt darstellt Sie können die- <xref:Microsoft.VisualBasic.Strings.Chr%2A> Funktion <xref:Microsoft.VisualBasic.Strings.ChrW%2A> oder die-Funktion `Integer` verwenden, um `Char` einen-Wert in einen-Wert zu konvertieren
 
-Wenn der Schalter für die Typüberprüfung ([Option Strict-Anweisung) aktiviert](../../../visual-basic/language-reference/statements/option-strict-statement.md)ist, müssen Sie das Literaltypzeichen an ein Einzelzeichen Zeichenfolgenliteralzeichen anfügen, um es als `Char` Datentyp zu identifizieren. Dies wird anhand des folgenden Beispiels veranschaulicht.
+Wenn der Schalter für die Typüberprüfung (die [Option Strict-Anweisung) aktiviert](../../../visual-basic/language-reference/statements/option-strict-statement.md)ist, müssen Sie das Literaltypzeichen an ein einzelzeichenfolgenliteralzeichen `Char` anfügen, um es als Datentyp zu identifizieren. Dies wird anhand des folgenden Beispiels veranschaulicht. Die erste Zuweisung zur `charVar` Variablen generiert den Compilerfehler [BC30512](../../misc/bc30512.md) , weil `Option Strict` auf ON fest steht. Die zweite wird erfolgreich kompiliert, da `c` das Literaltypzeichen das Literale `Char` als-Wert identifiziert.
 
 ```vb
 Option Strict On
-Dim charVar As Char
-' The following statement attempts to convert a String literal to Char.
-' Because Option Strict is On, it generates a compiler error.
-charVar = "Z"
-' The following statement succeeds because it specifies a Char literal.
-charVar = "Z"C
+
+Module CharType
+    Public Sub Main()
+        Dim charVar As Char
+
+        ' This statement generates compiler error BC30512 because Option Strict is On.  
+        charVar = "Z"  
+
+        ' The following statement succeeds because it specifies a Char literal.  
+        charVar = "Z"c
+    End Sub
+End Module
 ```
 
 ## <a name="programming-tips"></a>Programmiertipps
@@ -55,7 +61,7 @@ charVar = "Z"C
 
 - **Interop-Überlegungen.** Wenn Sie eine Schnittstelle mit Komponenten, die nicht für die .NET Framework geschrieben wurden, z. b. Automatisierungs-oder COM-Objekte, beachten Sie, dass die Zeichen Typen in anderen Umgebungen eine andere Daten Breite (8 Bits) aufweisen Wenn Sie ein 8-Bit-Argument an eine solche Komponente übergeben, deklarieren `Byte` Sie es `Char` im neuen Visual Basic Code als anstelle von.
 
-- **Tet.** Der `Char` -Datentyp wird zu `String`erweitert. Dies bedeutet, dass Sie `Char` in `String` konvertieren können <xref:System.OverflowException?displayProperty=nameWithType> und keinen Fehler finden.
+- **Tet.** Der `Char` -Datentyp wird zu `String`erweitert. Dies bedeutet, dass Sie `Char` in `String` konvertieren <xref:System.OverflowException?displayProperty=nameWithType>und keinen finden.
 
 - **Geben Sie Zeichen ein.** Das Anfügen des Literaltypzeichens an ein Zeichen folgen-Literalzeichen erzwingt das Zeichen `C` in den `Char` -Datentyp. `Char`hat kein Bezeichnertyp Zeichen.
 

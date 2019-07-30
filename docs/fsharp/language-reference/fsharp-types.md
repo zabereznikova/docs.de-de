@@ -1,72 +1,72 @@
 ---
 title: F#-Typen
-description: Erfahren Sie mehr über die Typen, die verwendet werden F# und wie F# Typen benannt und beschrieben.
+description: Erfahren Sie mehr über die Typen, die F# in verwendet F# werden, und wie Typen benannt und beschrieben werden.
 ms.date: 05/16/2016
-ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934640"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630230"
 ---
 # <a name="f-types"></a>F#-Typen
 
-In diesem Thema wird beschrieben, die Typen, die verwendet werden F# und wie F# Typen benannt und beschrieben.
+In diesem Thema werden die Typen beschrieben, die F# in verwendet F# werden, und wie Typen benannt und beschrieben werden.
 
-## <a name="summary-of-f-types"></a>Zusammenfassung der F# Typen
-Einige Typen werden als *primitive Typen*, z. B. den booleschen Typ `bool` und ganzzahlige Typen und Gleitkommatypen mit verschiedenen Größen, die Typen für Bytes und Zeichen enthalten. Diese Typen werden in beschrieben [Primitive Typen](primitive-types.md).
+## <a name="summary-of-f-types"></a>Zusammenfassung F# der Typen
+Einige Typen werden als *primitive Typen*betrachtet, z. b. der boolesche Typ `bool` und die ganzzahligen und Gleit Komma Typen verschiedener Größen, die Typen für Bytes und Zeichen einschließen. Diese Typen werden in [primitiven Typen](primitive-types.md)beschrieben.
 
-Andere Typen, die in der Sprache integriert sind enthalten, Tupeln, Listen, Arrays, Sequenzen, Datensätze und Unterscheidungs-Unions. Wenn Sie über Erfahrungen mit anderen .NET-Sprachen und Learning F#, lesen Sie in den Themen für jeden dieser Typen. Links zu weiteren Informationen zu diesen Typen sind in enthalten die [Themen](https://msdn.microsoft.com/library/#rel) Abschnitt dieses Themas. Diese F#-Unterstützung für bestimmte Formate der Programmierung, die zu funktionaler Programmiersprachen gelten. Viele dieser Module im verknüpft haben die F# Bibliothek, die gängige Vorgänge für diese Typen unterstützen.
+Andere Typen, die in die Sprache integriert sind, umfassen Tupel, Listen, Arrays, Sequenzen, Datensätze und Unterscheidungs-Unions. Wenn Sie mit anderen .NET-Sprachen vertraut sind und lernen F#, lesen Sie die Themen für die einzelnen Typen. Links zu weiteren Informationen zu diesen Typen finden Sie im Abschnitt [Verwandte Themen](https://msdn.microsoft.com/library/#rel) dieses Themas. Diese F#spezifischen Typen unterstützen Programmier Stile, die von funktionalen Programmiersprachen gemeinsam sind. Viele dieser Typen verfügen über zugeordnete Module in F# der Bibliothek, die gängige Vorgänge für diese Typen unterstützen.
 
-Der Typ einer Funktion enthält Informationen zu den Parametertypen und Rückgabetyp.
+Der Typ einer Funktion enthält Informationen über die Parametertypen und den Rückgabetyp.
 
-.NET Framework ist die Quelle der Objekte des Typs, Schnittstellentypen, Delegattypen und andere. Sie können Ihre eigenen Objekttypen definieren, ebenso wie in einer beliebigen anderen .NET-Sprache.
+Der .NET Framework ist die Quelle von Objekttypen, Schnittstellentypen, Delegattypen und anderen. Sie können eigene Objekttypen genau wie in jeder anderen .NET-Sprache definieren.
 
-Darüber hinaus F# Code kann definieren, Aliase, die benannt werden *typabkürzungen*, alternative Namen für Typen sind. Sie können die typabkürzungen verwenden, wenn der Typ in Zukunft ändern kann und um zu vermeiden, ändern den Code, der vom Typ abhängt. Oder Sie können eine typabkürzung als Anzeigenamen für einen Typ, mit denen kann Code einfacher zu lesen und zu verstehen.
+F# Code kann auch Aliase definieren, die benannte *typabkürzungen*sind, die Alternative Namen für-Typen sind. Sie können typabkürzungen verwenden, wenn sich der Typ in der Zukunft ändern kann, und Sie vermeiden möchten, den Code zu ändern, der vom Typ abhängt. Oder Sie können eine typabkürzung als anzeigen Amen für einen Typ verwenden, der den Code leichter lesbar und verständlich machen kann.
 
-F#funktionale Programmierung, denken Sie daran bietet nützliche Auflistungstypen, die entwickelt wurden. Verwenden diese Auflistungstypen können Sie Code schreiben, der im Format mehr funktionsfähig ist. Weitere Informationen finden Sie unter [ F# Auflistungstypen](fsharp-collection-types.md).
+F#bietet nützliche Auflistungs Typen, die mit der funktionalen Programmierung im Hinterkopf entworfen wurden. Mithilfe dieser Sammlungs Typen können Sie Code schreiben, der im Stil funktionaler ist. Weitere Informationen finden [ F# Sie unter Sammlungs Typen](fsharp-collection-types.md).
 
 ## <a name="syntax-for-types"></a>Syntax für Typen
-In F# Code häufig müssen Sie die Namen der Typen schreiben. Jeder Typ verfügt über eine syntaktischen Form, und Sie verwenden diese syntaktische Formulare in typanmerkungen, Abstrakte Methodendeklarationen, Delegatdeklarationen, Signaturen und andere Konstrukte. Wenn Sie ein neues Programmkonstrukt im Interpreter deklarieren, gibt der Interpreter den Namen des Konstrukts und die Syntax für den Typ an. Diese Syntax ist möglicherweise nur ein Bezeichner für einen benutzerdefinierten Typ oder ein integrierter Bezeichner, z. B. für `int` oder `string`, jedoch für komplexere Typen, die Syntax ist komplexer.
+Im F# Code müssen Sie häufig die Namen von Typen schreiben. Jeder Typ verfügt über ein syntaktisches Formular, und Sie verwenden diese syntaktischen Formen in Typanmerkungen, abstrakten Methoden Deklarationen, Delegatdeklarationen, Signaturen und anderen Konstrukten. Wenn Sie ein neues Programm Konstrukt im Interpreter deklarieren, druckt der Interpreter den Namen des Konstrukts und die Syntax für seinen Typ. Diese Syntax kann nur ein Bezeichner für einen benutzerdefinierten Typ oder ein integrierter Bezeichner wie z. b. `int` für `string`oder sein, aber bei komplexeren Typen ist die Syntax komplexer.
 
-Die folgende Tabelle zeigt die Bestandteile der Type-Syntax für F# Typen.
+Die folgende Tabelle zeigt Aspekte der Typsyntax für F# -Typen.
 
-|Typ|Type-syntax|Beispiele|
+|Typ|Typsyntax|Beispiele|
 |----|-----------|--------|
 |primitiver Typ|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
-|aggregierter Typ (Klasse, Struktur, Union, Datensatz, Enum, usw.)|*type-name*|`System.DateTime`<br /><br />`Color`|
-|-typabkürzung|*type-abbreviation-name*|`bigint`|
-|voll qualifizierte Typ|*namespaces.type-name*<br /><br />oder<br /><br />*modules.type-name*<br /><br />oder<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
-|array|*Typname*[] oder<br /><br />*Typname* Array|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
-|zweidimensionales array|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
-|dreidimensionale array|*type-name*[,,]|`float[,,]`|
-|tuple|*Typ: name1* &#42; *Typ-name2* ...|Z. B. `(1,'b',3)` weist den Typ `int * char * int`|
-|generischer Typ|*type-parameter* *generic-type-name*<br /><br />oder<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|konstruierter Typ (ein generischer Typ, der ein bestimmten Typargument verfügt)|*type-argument* *generic-type-name*<br /><br />oder<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|Typ der Funktion, die einen einzelnen Parameter|*parameter-type1* -&gt; *return-type*|Eine Funktion, verwendet eine `int` und gibt eine `string` weist den Typ `int -> string`|
-|Typ der Funktion, die über mehrere Parameter verfügt.|*Parameter-Typ1*  - &gt; *Parameter-type2*  - &gt; ... –&gt; *Rückgabetyp*|Eine Funktion, verwendet eine `int` und `float` und gibt eine `string` weist den Typ `int -> float -> string`|
-|Funktion höherer Ordnung als parameter|(*function-type*)|`List.map` weist den Typ `('a -> 'b) -> 'a list -> 'b list`|
-|delegate|Delegieren von *Funktionstyp:*|`delegate of unit -> int`|
-|flexiblen Typ|#*type-name*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
+|Aggregattyp (Klasse, Struktur, Union, Datensatz, Enumeration usw.)|*type-name*|`System.DateTime`<br /><br />`Color`|
+|typabkürzung|*type-abbreviation-name*|`bigint`|
+|voll qualifizierter Typ|*namespaces.type-name*<br /><br />oder<br /><br />*modules.type-name*<br /><br />oder<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
+|array|*Typname* [] oder<br /><br />*Type-Name-* Array|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
+|zweidimensionales Array|*Typname* [,]|`int[,]`<br /><br />`float[,]`|
+|dreidimensionales Array|*Typname* [,,]|`float[,,]`|
+|tuple|*Type-Name1* &#42; *Type-name2* ...|Beispielsweise `(1,'b',3)` weist den Typ auf.`int * char * int`|
+|generischer Typ|*Type-Parameter* *generischer Typname*<br /><br />oder<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|konstruierter Typ (ein generischer Typ, für den ein bestimmtes Typargument angegeben ist)|*Type-Argument* *generischer Typname*<br /><br />oder<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|Funktionstyp, der über einen einzelnen Parameter verfügt|*Parameter-Typ1*  - &gt; - *Rückgabetyp*|Eine Funktion, die einen `int` -Wert annimmt `string` und einen has-Typ zurückgibt`int -> string`|
+|Funktionstyp mit mehreren Parametern|*Parameter-Typ1*  -  - &gt;-Parameter *-Typ2* .&gt; ..-Rückgabetyp &gt;|Eine Funktion, die einen `int` und einen `float` annimmt und einen `string` has-Typ zurückgibt`int -> float -> string`|
+|höhere Reihenfolge Funktion als Parameter|(*Funktionstyp*)|`List.map`hat Typ`('a -> 'b) -> 'a list -> 'b list`|
+|delegate|Delegat von " *Function-Type* "|`delegate of unit -> int`|
+|flexibler Typ|#*Typname*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 |Thema|Beschreibung|
 |-----|-----------|
-|[Primitive Typen](primitive-types.md)|Beschreibt die integrierte einfache Typen wie z. B. ganzzahligen Typen, booleschen und Zeichentypen.|
-|[Unit-Typ](unit-type.md)|Beschreibt die `unit` Typ, ein Typ, der einen Wert aufweist, und, () angegeben wird, entspricht der `void` in C# und `Nothing` in Visual Basic.|
-|[Tupel](tuples.md)|Beschreibt den Tupeltyp, der ein Typ, der zugehörigen Werte eines beliebigen Typs, der in-Paare, -Tripel, Quadrupel und So weiter gruppiert besteht.|
-|[Optionen](options.md)|Beschreibt den Optionstyp, ein Typ, der möglicherweise einen Wert haben oder leer sein.|
-|[Listen](lists.md)|Beschreibt, Listen, die geordnete, unveränderliche Reihe von Elementen werden alle den gleichen Typ aufweisen.|
-|[Arrays](arrays.md)|Beschreibt Arrays, die Sätze des änderbar Elemente desselben Typs sortiert werden, die einen zusammenhängenden Speicherblock zu belegen und mit fester Größe an.|
-|[Sequenzen](sequences.md)|Beschreibt den Sequenz, die eine logische Reihe von Werten darstellt; einzelne Werte werden nur bei Bedarf berechnet.|
-|[Datensätze](records.md)|Beschreibt, der Eintragstyp, ein kleines Aggregat benannter Werte.|
-|[Unterscheidbare Unions](discriminated-unions.md)|Beschreibt die diskriminierte union-Typs ein Typ, dessen Werte eine einer Reihe von möglichen Typen sein können.|
-|[Funktionen](functions/index.md)|Beschreibt die Werte von Funktionen.|
-|[Klassen](classes.md)|Beschreibt den Klassentyp, einen Objekttyp, der in einen Verweistyp .NET entspricht. Klassentypen können Elemente, Eigenschaften, implementierten Schnittstellen und einen Basistyp enthalten.|
-|[Strukturen](structures.md)|Beschreibt die `struct` Typ, der einen Objekttyp, der ein entspricht. Die `struct` Typ wird in der Regel ein kleines Aggregat der Daten darstellt.|
-|[Schnittstellen](interfaces.md)|Beschreibt die Schnittstellentypen, die Typen, die eine Menge von Elementen darstellen, die bestimmte Funktionen bereitstellen, aber, die keine Daten enthalten. Ein Schnittstellentyp muss durch einen Objekttyp nützlich implementiert werden.|
-|[Delegaten](delegates.md)|Beschreibt den Delegattyp, der eine Funktion als ein Objekt darstellt.|
-|[Enumerationen](enumerations.md)|Beschreibt, Enumerationstypen, deren Werte zu einem Satz benannter Werte gehören.|
-|[Attribute](attributes.md)|Beschreibt die Attribute, die verwendet werden, um Metadaten für einen anderen Typ anzugeben.|
-|[Ausnahmetypen](exception-handling/exception-types.md)|Beschreibt die Ausnahmen, die Fehlerinformationen angeben.|
+|[Primitive Typen](primitive-types.md)|Beschreibt integrierte einfache Typen, z. b. ganzzahlige Typen, den booleschen Typ und Zeichen Typen.|
+|[Unit-Typ](unit-type.md)|Beschreibt den `unit` Typ, einen Typ, der über einen Wert verfügt und der durch () angegeben wird. `void` entspricht C# in `Nothing` und in Visual Basic.|
+|[Tupel](tuples.md)|Beschreibt den tupeltyp. dabei handelt es sich um einen Typ, der aus zugeordneten Werten eines beliebigen Typs besteht, der in Paaren, Paaren, verviereln usw. gruppiert ist.|
+|[Optionen](options.md)|Beschreibt den Optionstyp, einen Typ, der möglicherweise entweder einen Wert oder leer ist.|
+|[Listen](lists.md)|Beschreibt Listen, bei denen es sich um eine geordnete, unveränderliche Reihe von Elementen desselben Typs handelt.|
+|[Arrays](arrays.md)|Beschreibt Arrays, bei denen es sich um geordnete Sätze änderbarer Elemente desselben Typs handelt, die einen zusammenhängenden Speicherblock belegen und eine festgelegte Größe haben.|
+|[Sequenzen](sequences.md)|Beschreibt den Sequenztyp, der eine logische Reihenfolge von Werten darstellt. einzelne Werte werden nur bei Bedarf berechnet.|
+|[Datensätze](records.md)|Beschreibt den Daten Satz Typen, ein kleines Aggregat benannter Werte.|
+|[Unterscheidbare Unions](discriminated-unions.md)|Beschreibt den Unterscheidungs-Union-Typ, einen Typ, dessen Werte einen beliebigen Satz möglicher Typen aufweisen können.|
+|[Funktionen](./functions/index.md)|Beschreibt Funktions Werte.|
+|[Klassen](classes.md)|Beschreibt den Klassentyp, einen Objekttyp, der einem .net-Verweistyp entspricht. Klassentypen können Member, Eigenschaften, implementierte Schnittstellen und einen Basistyp enthalten.|
+|[Strukturen](structures.md)|Beschreibt den `struct` Typ, einen Objekttyp, der einem .net-Werttyp entspricht. Der `struct` -Typ stellt in der Regel ein kleines Aggregat von Daten dar.|
+|[Schnittstellen](interfaces.md)|Beschreibt Schnittstellentypen, bei denen es sich um Typen handelt, die eine Reihe von Membern darstellen, die bestimmte Funktionen bereitstellen, aber keine Daten enthalten. Ein Schnittstellentyp muss von einem Objekttyp implementiert werden, um nützlich zu sein.|
+|[Delegaten](delegates.md)|Beschreibt den Delegattyp, der eine Funktion als Objekt darstellt.|
+|[Enumerationen](enumerations.md)|Beschreibt Enumerationstypen, deren Werte zu einem Satz benannter Werte gehören.|
+|[Attribute](attributes.md)|Beschreibt Attribute, die verwendet werden, um Metadaten für einen anderen Typ anzugeben.|
+|[Ausnahmetypen](/.exception-handling/exception-types.md)|Beschreibt Ausnahmen, die Fehlerinformationen angeben.|

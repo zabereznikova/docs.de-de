@@ -3,30 +3,30 @@ title: Leitfaden für F#
 description: Dieses Handbuch enthält einen Überblick über die verschiedenen Lernmaterialien für F#, funktionalen Programmiersprachen, die auf .NET ausgeführt wird.
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd878fc907d1ebfe4c96a0b5a77151b70d74fb29
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772800"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629707"
 ---
 # <a name="f-guide"></a>Leitfaden für F#
 
 Leitfaden für F# enthält zahlreiche Ressourcen für die Sprache F# erlernen.
 
-## <a name="learning-f"></a>Learning F\#
+## <a name="learning-f"></a>Erlernen von F\#
 
-[Was ist F# ](what-is-fsharp.md) wird beschrieben, was die F# Sprache ist und welche Programmierung darin ähnelt, mit kurzen Codebeispielen. Dies wird empfohlen, wenn Sie mit F# vertraut sind.
+In diesem Thema wird beschrieben F# , was die Sprache ist und wie Sie mit kurzen Codebeispielen in der Sprache programmiert werden. [ F# ](what-is-fsharp.md) Dies wird empfohlen, wenn Sie mit F# vertraut sind.
 
-Die [Tour durch F#](tour.md) bietet einen Überblick über die wichtigsten Sprachfeatures und viele Codebeispiele. Dies wird empfohlen, wenn Sie Core interessiert F# Features in Aktion.
+Die [Tour durch F#](tour.md) bietet einen Überblick über die wichtigsten Sprachfeatures und viele Codebeispiele. Dies wird empfohlen, wenn Sie wichtige F# Features in Aktion sehen möchten.
 
-[Erste Schritte mit F# in Visual Studio](get-started/get-started-visual-studio.md) Wenn Sie Windows gearbeitet und möchten die umfassende Visual Studio-IDE (Integrated Development Environment)-Umgebung.
+[Erste Schritte mit F# in Visual Studio](./get-started/get-started-visual-studio.md) Wenn Sie Windows gearbeitet und möchten die umfassende Visual Studio-IDE (Integrated Development Environment)-Umgebung.
 
-Lesen Sie [Erste Schritte mit F# in Visual Studio für Mac](get-started/get-started-with-visual-studio-for-mac.md), wenn Sie MacOS nutzen und eine Visual Studio-IDE verwenden möchten.
+Lesen Sie [Erste Schritte mit F# in Visual Studio für Mac](./get-started/get-started-with-visual-studio-for-mac.md), wenn Sie MacOS nutzen und eine Visual Studio-IDE verwenden möchten.
 
-Lesen Sie [Erste Schritte mit F# in Visual Studio Code](get-started/get-started-vscode.md), wenn Sie eine schlanke, plattformübergreifende und leistungsstarke IDE nutzen möchten.
+Lesen Sie [Erste Schritte mit F# in Visual Studio Code](./get-started/get-started-vscode.md), wenn Sie eine schlanke, plattformübergreifende und leistungsstarke IDE nutzen möchten.
 
-[Erste Schritte mit F# mit der .NET Core-CL](get-started/get-started-command-line.md), wenn Sie die Befehlszeilentools verwenden möchten.
+[Erste Schritte mit F# mit der .NET Core-CL](./get-started/get-started-command-line.md), wenn Sie die Befehlszeilentools verwenden möchten.
 
 [Erste Schritte mit F#- und Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/) für die mobile-Programmierung mit F#.
 
@@ -34,11 +34,11 @@ Lesen Sie [Erste Schritte mit F# in Visual Studio Code](get-started/get-started-
 
 ## <a name="references"></a>Verweise
 
-Die [F#-Sprachreferenz](language-reference/index.md) ist die offizielle, umfassende Referenz zu allen F#-Funktionen. Jeder Artikel erklärt die Syntax und zeigt Codebeispiele. Nutzen Sie die Filterleiste im Inhaltsverzeichnis, um nach bestimmten Artikeln zu suchen.
+Die [F#-Sprachreferenz](./language-reference/index.md) ist die offizielle, umfassende Referenz zu allen F#-Funktionen. Jeder Artikel erklärt die Syntax und zeigt Codebeispiele. Nutzen Sie die Filterleiste im Inhaltsverzeichnis, um nach bestimmten Artikeln zu suchen.
 
 Die [Referenz zur F#-Kernbibliothek](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) (in englischer Sprache) ist die API-Referenz für die F#-Kernbibliothek.
 
-## <a name="additional-guides"></a>Zusätzliche Anleitungen
+## <a name="additional-guides"></a>Weitere Leitfäden
 
 [F# for Fun and Profit](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) (in englischer Sprache) ist ein umfassendes und sehr detailliertes Buch zum Erlernen von F#. Inhalt und Autor werden von der F#-Community hoch geschätzt. Die Zielgruppe sind in erster Linie Entwickler aus dem Bereich der objektorientierten Programmierung.
 
@@ -52,7 +52,7 @@ Das [Tutorial zu F# auf YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) (i
 
 [What's New in Visual Studio 2017 for F# For Developers](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) (in englischer Sprache) ist ein Videkours, der die neueren Funktionen von F# in Visual Studio 2017 zeigt. Die Zielgruppe sind Visual Studio-Entwickler, die neu in F# einsteigen.
 
-## <a name="other-useful-resources"></a>Andere nützliche Ressourcen
+## <a name="other-useful-resources"></a>Weitere nützliche Ressourcen
 
 Auf der [Website mit F#-Codeausschnitten](http://www.fssnip.net) (in englischer Sprache) werden vielfältige Codeausschnitte zu allen Aspekten von F# bereitgestellt. Interessant sowohl für F#-Einsteiger als auch für Fortgeschrittene.
 

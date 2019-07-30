@@ -1,159 +1,159 @@
 ---
 title: Erste Schritte mit Azure File Storage mit F#
-description: Store Dateidaten in der Cloud mit Azure File Storage, und binden Sie Ihre clouddateifreigabe von einem virtuellen Azure-Computer (VM) oder aus einer lokalen Anwendung Windows.
+description: Speichern Sie Datei Daten mit Azure File Storage in der Cloud, und stellen Sie Ihre clouddateifreigabe über einen virtuellen Azure-Computer (VM) oder eine lokale Anwendung unter Windows bereit.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: fa6dadc863bb9116cfac5afd7cd22a724bc7afe2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0e3cab56ba0f3db27335822616b4976a5d9de62
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031225"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630491"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Erste Schritte mit Azure File Storage mit F\#
+# <a name="get-started-with-azure-file-storage-using-f"></a>Einstieg in Azure File Storage mit F\#
 
-Azure File Storage ist ein Dienst, der bietet Dateifreigaben in der Cloud mit dem Standard [Server Message Block (SMB) Protokoll](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Es werden sowohl SMB 2.1 als auch SMB 3.0 unterstützt. Mit Azure File Storage können Sie ältere Anwendungen migrieren, die Dateifreigaben in Azure schnell und ohne teures abhängen. Anwendungen, die in Azure Virtual Machines oder Cloud Services oder von lokalen Clients ausgeführt, können eine Dateifreigabe in der Cloud bereitstellen, ebenso wie eine Desktopanwendung eine typische SMB-Freigabe einbindet. Eine beliebige Anzahl von Komponenten der Anwendung kann dann bereitstellen und gleichzeitig Zugriff auf die File Storage-Freigabe.
+Azure File Storage ist ein Dienst, bei dem Dateifreigaben in der Cloud unter Verwendung des standardmäßigen [SMB-Protokolls (Server Message Block)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)angeboten werden. Sowohl SMB 2,1 als auch SMB 3,0 werden unterstützt. Mit Azure File Storage können Sie Legacy Anwendungen, die auf Dateifreigaben basieren, schnell und ohne aufwändige Umschreibungen migrieren. Anwendungen, die auf virtuellen Azure-Computern oder Clouddiensten oder von lokalen Clients ausgeführt werden, können eine Dateifreigabe in der Cloud einbinden, ebenso wie eine Desktop Anwendung eine typische SMB-Freigabe bereitstellt. Eine beliebige Anzahl von Anwendungskomponenten kann dann gleichzeitig auf die Dateispeicher Freigabe zugreifen und darauf zugreifen.
 
-Eine grundlegende Übersicht von File Storage finden Sie unter [.NET Guide für File Storage](/azure/storage/storage-dotnet-how-to-use-files).
+Eine konzeptionelle Übersicht über den Dateispeicher finden Sie [im .net-Handbuch zum](/azure/storage/storage-dotnet-how-to-use-files)Speichern von Dateien.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account).
-Sie benötigen für dieses Konto auch Ihren speicherzugriffsschlüssel.
+Um dieses Handbuch verwenden zu können, müssen Sie zunächst [ein Azure Storage-Konto erstellen](/azure/storage/storage-create-storage-account).
+Sie benötigen auch ihren Speicherzugriffs Schlüssel für dieses Konto.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
-In die Beispielen in diesem Artikel verwendet werden können, entweder in eine F# Anwendung oder ein F# Skript. Zum Erstellen einer F# Skript, erstellen Sie eine Datei mit der `.fsx` Erweiterung, z. B. `files.fsx`in Ihre F# Entwicklungsumgebung.
+Die Beispiele in diesem Artikel können entweder in einer F# Anwendung oder in einem F# Skript verwendet werden. Um ein F# Skript zu erstellen, erstellen Sie `.fsx` F# eine Datei mit der Erweiterung, `files.fsx`z. b. in der Entwicklungsumgebung.
 
-Verwenden Sie als Nächstes eine [-Paket-Manager](package-management.md) wie z. B. [Paket-Abhängigkeits](https://fsprojects.github.io/Paket/) oder [NuGet](https://www.nuget.org/) zum Installieren der `WindowsAzure.Storage` Paket und Verweis `WindowsAzure.Storage.dll` in Ihrem Skript mithilfe einer `#r`Richtlinie.
+Verwenden Sie als nächstes [einen Paket-Manager](package-management.md) , z. b. [Paket](https://fsprojects.github.io/Paket/) oder `WindowsAzure.Storage` [nuget](https://www.nuget.org/) , um das Paket zu installieren `#r` , und verweisen `WindowsAzure.Storage.dll` Sie mithilfe einer-Anweisung in Ihrem Skript
 
-### <a name="add-namespace-declarations"></a>Hinzufügen von Namespacedeklarationen
+### <a name="add-namespace-declarations"></a>Namespace Deklarationen hinzufügen
 
-Fügen Sie die folgenden `open` Anweisungen am Anfang der `files.fsx` Datei:
+Fügen Sie am `open` Anfang `files.fsx` der Datei die folgenden-Anweisungen ein:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L1-L5)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a>Die Verbindungszeichenfolge abzurufen
+### <a name="get-your-connection-string"></a>Verbindungs Zeichenfolge erhalten
 
-Sie benötigen eine Azure Storage-Verbindungszeichenfolge für dieses Tutorial. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Konfigurieren von Speicher-Verbindungszeichenfolgen](/azure/storage/storage-configure-connection-string).
+Für dieses Tutorial benötigen Sie eine Azure Storage Verbindungs Zeichenfolge. Weitere Informationen zu Verbindungs Zeichenfolgen finden Sie unter [Konfigurieren von Speicher Verbindungs](/azure/storage/storage-configure-connection-string)Zeichenfolgen.
 
-Für das Lernprogramm Geben Sie die Verbindungszeichenfolge in Ihrem Skript wie folgt:
+Für das Tutorial geben Sie Ihre Verbindungs Zeichenfolge in Ihrem Skript ein, wie hier:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L11-L11)]
 
-Dies ist jedoch **nicht empfohlen,** für echte Projekte. Ihr speicherkontoschlüssel ähnelt das Stammkennwort für Ihr Speicherkonto. Achten Sie immer darauf zum Schützen der Schlüssel Ihres Speicherkontos. Vermeiden sie zu anderen Benutzern oder fest zu programmieren, oder speichern es in einer nur-Text-Datei, die an andere Personen zugänglich ist. Sie können Ihren Schlüssel mithilfe von Azure-Portal, wenn Sie glauben, dass es unter Umständen kompromittiert wurden neu generieren.
+Dies wird jedoch nicht für echte Projekte **empfohlen** . Ihr Speicherkonto Schlüssel ähnelt dem Stamm Kennwort für Ihr Speicherkonto. Achten Sie immer darauf, ihren Speicherkonto Schlüssel zu schützen. Verteilen Sie Sie nicht an andere Benutzer, hart codieren Sie Sie, oder speichern Sie Sie in einer nur-Text-Datei, auf die andere Benutzer zugreifen können. Sie können Ihren Schlüssel mithilfe des Azure-Portals neu generieren, wenn Sie der Meinung sind, dass er möglicherweise kompromittiert wurde
 
-Für reale Anwendungen, ist die beste Methode zum Verwalten Ihrer Speicher-Verbindungszeichenfolge in einer Konfigurationsdatei. Um die Verbindungszeichenfolge aus einer Konfigurationsdatei abzurufen, können Sie so vorgehen:
+Bei echten Anwendungen ist die beste Möglichkeit, Ihre Speicher Verbindungs Zeichenfolge beizubehalten, in einer Konfigurationsdatei. Wenn Sie die Verbindungs Zeichenfolge aus einer Konfigurationsdatei abrufen möchten, können Sie Folgendes tun:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L13-L15)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L13-L15)]
 
-Verwenden von Azure Configuration Manager ist optional. Sie können auch eine API wie die .NET Framework `ConfigurationManager` Typ.
+Die Verwendung von Azure Configuration Manager ist optional. Sie können auch eine API verwenden, z. b. `ConfigurationManager` den Typ der .NET Framework.
 
-### <a name="parse-the-connection-string"></a>Analysieren der Verbindungszeichenfolge
+### <a name="parse-the-connection-string"></a>Analysieren der Verbindungs Zeichenfolge
 
-Um die Verbindungszeichenfolge zu analysieren, verwenden Sie:
+Um die Verbindungs Zeichenfolge zu analysieren, verwenden Sie Folgendes:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L21-L22)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L21-L22)]
 
-Dies ergibt eine `CloudStorageAccount`.
+Dadurch wird eine `CloudStorageAccount`zurückgegeben.
 
-### <a name="create-the-file-service-client"></a>Erstellen des File-Dienstclients
+### <a name="create-the-file-service-client"></a>Erstellen des Datei Dienst Clients
 
-Die `CloudFileClient` Typ können Sie programmgesteuert Dateien, die in File Storage gespeichert. Hier ist eine Möglichkeit zum Erstellen des Dienstclients:
+Der `CloudFileClient` -Typ ermöglicht die programmgesteuerte Verwendung von Dateien, die in File Storage gespeichert sind. Dies ist eine Möglichkeit, den Dienst Client zu erstellen:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L28-L28)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L28-L28)]
 
-Jetzt können Sie Code schreiben, liest Daten aus und schreibt Daten in File Storage.
+Jetzt sind Sie bereit, Code zu schreiben, der Daten aus liest und Daten in den Dateispeicher schreibt.
 
 ## <a name="create-a-file-share"></a>Erstellen einer Dateifreigabe
 
-Dieses Beispiel zeigt, wie Sie eine Dateifreigabe zu erstellen, wenn es nicht bereits vorhanden ist:
+Dieses Beispiel zeigt, wie Sie eine Dateifreigabe erstellen, wenn Sie nicht bereits vorhanden ist:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L34-L35)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L34-L35)]
 
-## <a name="create-a-root-directory-and-a-subdirectory"></a>Erstellen Sie ein Stammverzeichnis und ein Unterverzeichnis
+## <a name="create-a-root-directory-and-a-subdirectory"></a>Erstellen Sie ein Stammverzeichnis und ein Unterverzeichnis.
 
-Hier erhalten Sie das Stammverzeichnis und erhalten Sie ein Unterverzeichnis des Stammverzeichnisses. Sie erstellen sowohl, wenn sie nicht bereits vorhanden sind.
+Hier erhalten Sie das Stammverzeichnis und erhalten ein Unterverzeichnis des Stamms. Sie erstellen beides, wenn Sie nicht bereits vorhanden sind.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L41-L43)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L41-L43)]
 
-## <a name="upload-text-as-a-file"></a>Text als eine Datei hochladen
+## <a name="upload-text-as-a-file"></a>Hochladen von Text als Datei
 
-Dieses Beispiel zeigt, wie Sie Text als eine Datei hochladen.
+In diesem Beispiel wird gezeigt, wie Text als Datei hochgeladen wird.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L49-L50)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L49-L50)]
 
-### <a name="download-a-file-to-a-local-copy-of-the-file"></a>Herunterladen einer Datei auf eine lokale Kopie der Datei
+### <a name="download-a-file-to-a-local-copy-of-the-file"></a>Herunterladen einer Datei in eine lokale Kopie der Datei
 
-Hier herunterladen Sie die Datei, die gerade erstellt haben, den Inhalt in eine lokale Datei anfügen.
+Hier laden Sie die soeben erstellte Datei herunter und fügen die Inhalte an eine lokale Datei an.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L56-L56)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L56-L56)]
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>Festlegen der maximalen Größe für eine Dateifreigabe
 
-Das folgende Beispiel zeigt, wie Sie die aktuelle Nutzung für eine Freigabe zu überprüfen und wie Sie das Kontingent für die Freigabe festgelegt. `FetchAttributes` muss aufgerufen werden, um einer Freigabe Auffüllen `Properties`, und `SetProperties` lokale Änderungen mit Azure File Storage weitergegeben werden.
+Das folgende Beispiel zeigt, wie Sie die aktuelle Nutzung einer Freigabe überprüfen und das Kontingent für die Freigabe festlegen. `FetchAttributes`muss aufgerufen werden, um den `Properties`zu füllen und `SetProperties` lokale Änderungen an Azure File Storage weiterzugeben.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
-### <a name="generate-a-shared-access-signature-for-a-file-or-file-share"></a>Generieren einer shared Access Signature für eine Datei oder Dateifreigabe
+### <a name="generate-a-shared-access-signature-for-a-file-or-file-share"></a>Generieren einer SAS (Shared Access Signature) für eine Datei oder Dateifreigabe
 
-Sie können eine shared Access Signature (SAS) für eine Dateifreigabe oder für eine einzelne Datei generieren. Sie können auch eine SAS-Richtlinie auf einer Dateifreigabe zum Verwalten von shared Access Signature erstellen. Erstellen einer SAS-Richtlinie wird empfohlen, da es bietet eine Möglichkeit, der die SAS zu widerrufen, wenn diese gefährdet sein sollte.
+Sie können eine Shared Access Signature (SAS) für eine Dateifreigabe oder eine einzelne Datei generieren. Sie können auch eine Richtlinie für den gemeinsamen Zugriff auf einer Dateifreigabe erstellen, um SAS zu verwalten. Es wird empfohlen, eine Richtlinie für den gemeinsamen Zugriff zu erstellen, da Sie eine Möglichkeit bietet, die SAS aufzuheben, wenn Sie kompromittiert werden soll.
 
-Hier erstellen Sie eine freigegebene Zugriffsrichtlinie auf einer Freigabe, und verwenden Sie dann die Richtlinie, die Einschränkungen für eine SAS für eine Datei in der Freigabe bereitzustellen.
+Hier erstellen Sie eine Richtlinie für den gemeinsamen Zugriff auf einer Freigabe und verwenden diese Richtlinie, um die Einschränkungen für eine SAS für eine Datei in der Freigabe bereitzustellen.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L78-L94)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L78-L94)]
 
-Weitere Informationen zum Erstellen und Verwenden von freigegebenen zugriffssignaturen finden Sie unter [mithilfe von Shared Access Signatures (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1) und [erstellen und Verwenden einer SAS mit Blob Storage](/azure/storage/storage-dotnet-shared-access-signature-part-2).
+Weitere Informationen zum Erstellen und Verwenden von Shared Access Signature finden [Sie unter Verwenden von Shared Access Signature (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1) und [Erstellen und Verwenden einer SAS mit BLOB Storage](/azure/storage/storage-dotnet-shared-access-signature-part-2).
 
-### <a name="copy-files"></a>Kopieren von Dateien
+### <a name="copy-files"></a>Dateien kopieren
 
-Sie können eine Datei in eine andere Datei oder ein Blob oder ein Blob in eine Datei kopieren. Wenn Sie einen Blob in eine Datei oder eine Datei in ein Blob, kopieren Sie *müssen* verwenden Sie eine shared Access Signature (SAS) das Quellobjekt zu authentifizieren, auch wenn Sie innerhalb desselben Speicherkontos kopieren.
+Sie können eine Datei in eine andere Datei oder in ein BLOB oder ein BLOB in eine Datei kopieren. Wenn Sie ein BLOB in eine Datei oder eine Datei in ein BLOB kopieren, *müssen* Sie eine Shared Access Signature (SAS) verwenden, um das Quell Objekt zu authentifizieren, auch wenn Sie innerhalb desselben Speicher Kontos kopieren.
 
 ### <a name="copy-a-file-to-another-file"></a>Kopieren einer Datei in eine andere Datei
 
-Hier wird eine Datei in eine andere Datei in der gleichen Freigabe kopiert. Da dieser Kopiervorgang zwischen Dateien im selben Speicherkonto kopiert, können Sie die Authentifizierung mit gemeinsam verwendetem Schlüssel verwenden, zum Durchführen des Kopiervorgangs.
+Hier kopieren Sie eine Datei in eine andere Datei in derselben Freigabe. Da dieser Kopiervorgang zwischen Dateien im gleichen Speicherkonto kopiert, können Sie die Authentifizierung mit gemeinsam verwendetem Schlüssel verwenden, um die Kopie auszuführen.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L100-L101)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L100-L101)]
 
-### <a name="copy-a-file-to-a-blob"></a>Kopieren einer Datei in ein blob
+### <a name="copy-a-file-to-a-blob"></a>Kopieren einer Datei in ein BLOB
 
-Hier erstellen Sie eine Datei und kopieren Sie ihn in ein Blob im gleichen Speicherkonto. Sie erstellen eine SAS für die Quelldatei, die der Dienst verwendet wird, um den Zugriff auf die Quelldatei während des Kopiervorgangs zu authentifizieren.
+Hier erstellen Sie eine Datei und kopieren Sie in ein BLOB innerhalb desselben Speicher Kontos. Sie erstellen eine SAS für die Quelldatei, die der Dienst verwendet, um während des Kopiervorgangs den Zugriff auf die Quelldatei zu authentifizieren.
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L107-L120)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L107-L120)]
 
-Sie können einen Blob in eine Datei kopieren, auf die gleiche Weise. Wenn das Quellobjekt ein Blob ist, erstellen Sie eine SAS, um den Zugriff auf dieses Blob während des Kopiervorgangs zu authentifizieren.
+Sie können ein BLOB auf die gleiche Weise in eine Datei kopieren. Wenn das Quell Objekt ein BLOB ist, erstellen Sie eine SAS, um den Zugriff auf dieses BLOB während des Kopiervorgangs zu authentifizieren.
 
-## <a name="troubleshooting-file-storage-using-metrics"></a>Problembehandlung für Dateispeicher mit Metriken
+## <a name="troubleshooting-file-storage-using-metrics"></a>Problembehandlung bei File Storage mit Metriken
 
-Azure Storage Analytics unterstützt die Metriken für Dateispeicher. Mit Metrikdaten können Sie Anforderungen verfolgen und Probleme zu diagnostizieren.
+Azure Storage Analytics unterstützt Metriken für den Dateispeicher. Mit Metrikdaten können Sie Anforderungen verfolgen und Probleme diagnostizieren.
 
-Sie können Metriken für Dateispeicher über die [Azure-Portal](https://portal.azure.com), oder Sie können dazu F# wie folgt aus:
+Sie können Metriken für den Dateispeicher im [Azure-Portal](https://portal.azure.com)aktivieren, oder Sie können dies F# wie folgt durchführen:
 
-[!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
+[!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Finden Sie unter diesen Links Weitere Informationen zu Azure File Storage.
+Weitere Informationen zu Azure File Storage finden Sie unter diesen Links.
 
-### <a name="conceptual-articles-and-videos"></a>Konzeptionelle Artikel und videos
+### <a name="conceptual-articles-and-videos"></a>Konzeptionelle Artikel und Videos
 
-- [Azure File Storage: ein reibungsloses Cloud-SMB-Dateisystem für Windows und Linux](https://azure.microsoft.com/resources/videos/azurecon-2015-azure-files-storage-a-frictionless-cloud-smb-file-system-for-windows-and-linux/)
-- [Gewusst wie: Verwenden des Azure File Storage unter Linux](/azure/storage/storage-how-to-use-files-linux)
+- [Azure files Storage: ein reibungsloses Cloud-SMB-Dateisystem für Windows und Linux](https://azure.microsoft.com/resources/videos/azurecon-2015-azure-files-storage-a-frictionless-cloud-smb-file-system-for-windows-and-linux/)
+- [Verwenden von Azure File Storage mit Linux](/azure/storage/storage-how-to-use-files-linux)
 
-### <a name="tooling-support-for-file-storage"></a>Toolunterstützung für Dateispeicher
+### <a name="tooling-support-for-file-storage"></a>Tool Unterstützung für File Storage
 
 - [Verwenden von Azure PowerShell mit Azure Storage](/azure/storage/storage-powershell-guide-full)
-- [Gewusst wie: Verwenden von AzCopy mit Microsoft Azure Storage](/azure/storage/storage-use-azcopy)
-- [Verwenden der Azure-Befehlszeilenschnittstelle mit Azure Storage](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
+- [Verwenden von azcopy mit Microsoft Azure Storage](/azure/storage/storage-use-azcopy)
+- [Verwenden der Azure CLI mit Azure Storage](/azure/storage/storage-azure-cli#create-and-manage-file-shares)
 
 ### <a name="reference"></a>Referenz
 
-- [Storage-Clientbibliothek für .NET-Referenz](https://msdn.microsoft.com/library/azure/mt347887.aspx)
-- [Datei-Dienst-REST-API-Referenz](/rest/api/storageservices/fileservices/File-Service-REST-API)
+- [Referenz zur Speicher Client Bibliothek für .net](https://msdn.microsoft.com/library/azure/mt347887.aspx)
+- [Referenz zur Rest-API für Dateidienste](/rest/api/storageservices/fileservices/File-Service-REST-API)
 
-### <a name="blog-posts"></a>Blogbeiträge
+### <a name="blog-posts"></a>Blog Beiträge
 
 - [Azure File Storage ist jetzt allgemein verfügbar](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
-- [Azure-Dateispeicher](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Einführung in Microsoft Azure-Dateidienst](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
-- [Beibehalten von Verbindungen mit Microsoft Azure Files](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)
+- [In Azure File Storage](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
+- [Einführung in Microsoft Azure Datei Dienstanbieter](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Beibehalten von Verbindungen zu Microsoft Azure Dateien](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

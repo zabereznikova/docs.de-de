@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 77694b2a86c91f3e6946ecd50f4765404750f37b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: b5bedae16a6c53aebf4d577b8cd812da992106f2
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664160"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629896"
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
 Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird.  
@@ -34,29 +34,29 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 ## <a name="rendering-tier-definitions"></a>Definitionen von Renderingebenen  
  Die Funktionen der Grafikhardware bestimmen die Renderingfunktion einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung. Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-System definiert drei Renderingebenen:  
   
-- **Renderingebene 0**: Keine Beschleunigung der Grafikhardware. Alle Grafikfunktionen verwenden Softwarebeschleunigung. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Versionsebene ist kleiner als die Version 9.0.  
+- **Renderingebene 0**: Keine Beschleunigung der Grafikhardware. Alle Grafikfunktionen verwenden Softwarebeschleunigung. Die DirectX-Versions Ebene ist kleiner als Version 9,0.  
   
-- **Renderingebene 1**: Einige Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Versionsebene ist größer als oder gleich der Version 9.0.  
+- **Renderingebene 1**: Einige Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die DirectX-Versions Ebene ist größer als oder gleich Version 9,0.  
   
-- **Renderingebene 2**: Die meisten Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Versionsebene ist größer als oder gleich der Version 9.0.  
+- **Renderingebene 2**: Die meisten Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die DirectX-Versions Ebene ist größer als oder gleich Version 9,0.  
   
- Die <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> Eigenschaft können Sie die Ebene der Anwendungslaufzeit abrufen. Sie verwenden die Renderingebene für die Bestimmung, ob das Gerät bestimmte hardwarebeschleunigte Grafikfunktionen unterstützt. Ihre Anwendung kann dann unterschiedliche Codepfade zur Laufzeit verwenden, je nach der vom Gerät unterstützten Renderingebene.  
+ Die <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> -Eigenschaft ermöglicht es Ihnen, die Renderingebene zur Laufzeit der Anwendung abzurufen. Sie verwenden die Renderingebene für die Bestimmung, ob das Gerät bestimmte hardwarebeschleunigte Grafikfunktionen unterstützt. Ihre Anwendung kann dann unterschiedliche Codepfade zur Laufzeit verwenden, je nach der vom Gerät unterstützten Renderingebene.  
   
 ### <a name="rendering-tier-0"></a>Renderingebene 0  
- Der Wert 0 der Renderingebene bedeutet, dass keine Beschleunigung der Grafikhardware vorhanden ist, die für die Anwendung auf dem Gerät verfügbar ist. Auf dieser Ebene sollten Sie davon ausgehen, dass alle Grafiken von Software ohne Hardwarebeschleunigung gerendert werden. Die Funktion dieser Ebene entspricht der [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Version, die kleiner als 9.0 ist.  
+ Der Wert 0 der Renderingebene bedeutet, dass keine Beschleunigung der Grafikhardware vorhanden ist, die für die Anwendung auf dem Gerät verfügbar ist. Auf dieser Ebene sollten Sie davon ausgehen, dass alle Grafiken von Software ohne Hardwarebeschleunigung gerendert werden. Die Funktionalität dieser Ebene entspricht einer DirectX-Version, die kleiner als 9,0 ist.  
   
 ### <a name="rendering-tier-1-and-rendering-tier-2"></a>Renderingebene 1 und Renderingebene 2  
   
 > [!NOTE]
->  Ab .NET Framework 4 wurde die Renderingebene 1 neu definiert, um nur Grafikhardware einzuschließen, die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 9.0 oder höher unterstützt. Grafikhardware, die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] 7 oder 8 unterstützt, wird jetzt als Renderingebene 0 definiert.  
+>  Ab dem .NET Framework 4 wurde die Renderingebene 1 neu definiert, sodass nur Grafikhardware enthalten ist, die DirectX 9,0 oder höher unterstützt. Grafikhardware, die DirectX 7 oder 8 unterstützt, ist nun als Renderingebene 0 definiert.  
   
- Renderingebene 1 oder 2 bedeutet, dass die meisten der Grafikfunktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hardwarebeschleunigung verwenden, wenn die erforderlichen Systemressourcen verfügbar sind und nicht ausgeschöpft wurden. Dies entspricht einer [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Version, die größer als oder gleich 9.0 ist.  
+ Renderingebene 1 oder 2 bedeutet, dass die meisten der Grafikfunktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hardwarebeschleunigung verwenden, wenn die erforderlichen Systemressourcen verfügbar sind und nicht ausgeschöpft wurden. Dies entspricht einer DirectX-Version, die größer oder gleich 9,0 ist.  
   
  Die folgende Tabelle zeigt die Unterschiede in den Anforderungen der Grafikhardware für die Renderingebene 1 und 2:  
   
 |Feature|Ebene 1|Ebene 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Version|Muss größer als oder gleich 9.0 sein.|Muss größer als oder gleich 9.0 sein.|  
+|DirectX-Version|Muss größer als oder gleich 9.0 sein.|Muss größer als oder gleich 9.0 sein.|  
 |Video-RAM|Muss größer als oder gleich 60 MB sein.|Muss größer als oder gleich 120 MB sein.|  
 |Pixel-Shader|Die Versionsebene muss größer als oder gleich 2.0 sein.|Die Versionsebene muss größer als oder gleich 2.0 sein.|  
 |Vertex-Shader|Keine Anforderung.|Die Versionsebene muss größer als oder gleich 2.0 sein.|  
@@ -69,8 +69,8 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |2D-Rendering|Das meiste 2D-Rendering wird unterstützt.|  
 |3D-Rasterung|Die meisten 3D-Rasterungen werden unterstützt.|  
 |Anisotrope 3D-Filterung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim Rendering von 3D-Inhalten anisotrope Filterung zu verwenden. Anisotrope Filterung bezieht sich auf die verbesserte Bildqualität von Texturen auf Oberflächen, die in Bezug auf die Kamera weit entfernt und stark angewinkelt sind.|  
-|3D-MIP-Zuordnung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim Rendering von 3D-Inhalten MIP-Zuordnung zu verwenden. MIP-Zuordnung verbessert die Qualität des Rendering von Texturen, wenn eine Textur ein kleineres Sichtfeld in belegt eine <xref:System.Windows.Controls.Viewport3D>.|  
-|Radiale Farbverläufe|Zwar unterstützt, vermeiden Sie die Verwendung von <xref:System.Windows.Media.RadialGradientBrush> für große Objekte.|  
+|3D-MIP-Zuordnung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim Rendering von 3D-Inhalten MIP-Zuordnung zu verwenden. Die MIP-Zuordnung verbessert die Qualität des Textur Rendering, wenn eine Textur ein kleineres Ansichts Feld <xref:System.Windows.Controls.Viewport3D>in einem einnimmt.|  
+|Radiale Farbverläufe|Vermeiden Sie die Verwendung von <xref:System.Windows.Media.RadialGradientBrush> für große Objekte, während dies unterstützt wird.|  
 |3D-Beleuchtungsberechnungen|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] führt die Pro-Vertex-Beleuchtung aus, was bedeutet, dass eine Lichtstärke bei jedem Vertex für jedes auf ein Mesh angewendetes Material berechnet werden muss.|  
 |Rendering von Text|Das Rendering der Subpixel-Schriftart verwendet verfügbare Pixel-Shader in der Grafikhardware.|  
   
@@ -85,11 +85,11 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |Feature|Hinweise|  
 |-------------|-----------|  
 |Gedruckter Inhalt|Jeder gedruckte Inhalt wird mithilfe der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Softwarepipeline gerendert.|  
-|Gerasterter Inhalt, der verwendet <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Alle Inhalte, der Rendering über die <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> -Methode der <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Gekachelter Inhalt, der verwendet <xref:System.Windows.Media.TileBrush>|Jeder gekachelte Inhalt, in dem die <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaft der <xref:System.Windows.Media.TileBrush> nastaven NA hodnotu <xref:System.Windows.Media.TileMode.Tile>.|  
+|Rasterierter Inhalt, der verwendet<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Alle Inhalte, die mit der <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> -Methode <xref:System.Windows.Media.Imaging.RenderTargetBitmap>von gerendert werden.|  
+|Gekachelter Inhalt, der verwendet<xref:System.Windows.Media.TileBrush>|Ein gekachelter Inhalt, <xref:System.Windows.Media.TileBrush.TileMode%2A> in dem die <xref:System.Windows.Media.TileBrush> -Eigenschaft von <xref:System.Windows.Media.TileMode.Tile>auf festgelegt ist.|  
 |Flächen, die die maximale Texturgröße der Grafikhardware überschreiten|Bei der meisten Grafikhardware sind große Flächen 2048 x 2048 oder 4096 x 4096 Pixel groß.|  
 |Jeder Vorgang, dessen Video-RAM-Anforderung den Arbeitsspeicher der Grafikhardware überschreitet|Sie können den Video-RAM-Verbrauch der Anwendung mithilfe des Perforatortools überwachen, das Bestandteil der [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) im Windows SDK ist.|  
-|Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Auf Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen, wie z.B. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] und [!INCLUDE[win7](../../../../includes/win7-md.md)], sind überlappende Fenster hardwarebeschleunigt. Auf anderen Systemen, wie z.B. [!INCLUDE[winxp](../../../../includes/winxp-md.md)], werden überlappende Fenster von Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] indem Sie folgende Einstellungen <xref:System.Windows.Window> Eigenschaften:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Auf Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen, wie z.B. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] und [!INCLUDE[win7](../../../../includes/win7-md.md)], sind überlappende Fenster hardwarebeschleunigt. Auf anderen Systemen, wie z.B. [!INCLUDE[winxp](../../../../includes/winxp-md.md)], werden überlappende Fenster von Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in aktivieren, indem <xref:System.Windows.Window> Sie die folgenden Eigenschaften festlegen:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Weitere Ressourcen  
@@ -101,7 +101,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**Option zum Deaktivieren der Hardwarebeschleunigung**|Gibt an, ob die Hardwarebeschleunigung aktiviert werden soll|  
-|**Maximaler Wert für Multisampling**|Gibt den multisamplinggrad für das Antialiasing von 3D-Inhalt Grad.|  
+|**Maximaler Wert für Multisampling**|Gibt den Grad des multisamplinggrad für das Antialiasing von 3D-Inhalten an.|  
 |**Einstellung für das erforderliche Videotreiberdatum**|Gibt an, ob das System die Hardwarebeschleunigung für Treiber deaktiviert, die vor November 2004 veröffentlicht wurden|  
 |**Option zum Verwenden des Referenzrasters**|Gibt an, ob [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] das Referenzraster verwendet werden soll|  
   
@@ -118,13 +118,13 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
  WPF Performance Suite bietet eine umfassende grafische Ansicht von Leistungsdaten. Weitere Informationen zu WPF-Leistungstools finden Sie unter [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)).  
   
 ### <a name="directx-diagnostic-tool"></a>DirectX-Diagnosetool  
- Das [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Diagnosetool „Dxdiag.exe“ dient zum Beheben von [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-bezogenen Problemen. Der Standardinstallationsordner für das [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Diagnosetool ist:  
+ Das DirectX-Diagnose Tool dxdiag. exe ist so konzipiert, dass Sie bei der Behandlung von DirectX-bezogenen Problemen helfen können. Der Standard Installationsordner für das DirectX-Diagnose Tool lautet wie folgt:  
   
  `~\Windows\System32`  
   
- Beim Ausführen des [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Diagnosetools enthält das Hauptfenster eine Reihe von Registerkarten, mit denen Sie [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-bezogene Informationen anzeigen und diagnostizieren können. Die **System**-Registerkarte enthält z.B. Systeminformationen über Ihren Computer und gibt die Version von [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] an, die auf Ihrem Computer installiert ist.  
+ Wenn Sie das DirectX-Diagnose Tool ausführen, enthält das Hauptfenster eine Reihe von Registerkarten, mit denen Sie DirectX-bezogene Informationen anzeigen und diagnostizieren können. Beispielsweise werden auf der Registerkarte **System** Systeminformationen zu Ihrem Computer und die auf dem Computer installierte DirectX-Version angegeben.  
   
- ![Screenhot: DirectX-Diagnosetool](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Bildschirm Abbildung DirectX-Diagnose]Tool(./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Hauptfenster des DirectX-Diagnosetools  
   
 ## <a name="see-also"></a>Siehe auch

@@ -2,12 +2,12 @@
 title: Operatorüberladung
 description: Erfahren Sie, wie arithmetische Operatoren in einer Klasse oder einem Datensatztyp sowie auf globaler Ebene in F# zu überladen.
 ms.date: 05/16/2016
-ms.openlocfilehash: f4b63818cbdc44d214dca6446162ec9a8922f601
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c656c1c47938e62386c8f063cf9a6caaaf69d0fe
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645362"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627390"
 ---
 # <a name="operator-overloading"></a>Operatorüberladung
 
@@ -25,9 +25,9 @@ let [inline] (operator-symbols) parameter-list = function-body
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax wird die *-Operatorsymbol* ist einer der `+`, `-`, `*`, `/`, `=`und so weiter. Die *Parameterliste* Operanden in der Reihenfolge in der üblichen Syntax für den Operator angibt. Die *Methodentext* erstellt den resultierenden Wert.
+In der vorherigen Syntax ist das *Operator-Symbol* eine `+`von, `*` `-`,, `/`, `=`usw. Der *Parameter-List* gibt die Operanden in der Reihenfolge an, in der Sie in der üblichen Syntax für diesen Operator angezeigt werden. Der *Methoden Text* erstellt den resultierenden Wert.
 
-Operatorüberladungen müssen statisch sein. Operatorüberladungen für unäre Operatoren, z. B. `+` und `-`, verwenden, muss eine Tilde (`~`) in der *-Operatorsymbol* um anzugeben, dass der Operator ein unäroperator und kein binärer Operator, siehe die folgende Deklaration.
+Operatorüberladungen müssen statisch sein. Operator Überladungen für unäre Operatoren, wie `+` z `-`. b. und, müssen eine`~`Tilde () im *Operator-Symbol* verwenden, um anzugeben, dass der Operator ein unärer Operator und kein binärer Operator ist, wie im folgenden Beispiel gezeigt. Zuverlässigkeits.
 
 ```fsharp
 static member (~-) (v : Vector)
@@ -35,19 +35,19 @@ static member (~-) (v : Vector)
 
 Im folgenden Code wird eine Vektorklasse veranschaulicht, die über nur zwei Operatoren verfügt, einer für unäres Minus und einer für Multiplikation mit einem Skalar. In dem Beispiel werden zwei Überladungen für skalare Multiplikation benötigt, da der Operator unabhängig von der Reihenfolge verwendet werden können muss, in der der Vektor und der Skalar angezeigt werden.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4001.fs)]
 
 ## <a name="creating-new-operators"></a>Erstellen von neuen Operatoren
 
-Sie können alle Standardoperatoren überladen, Sie können jedoch auch aus Sequenzen bestimmter Zeichen neue Operatoren erstellen. Zulässige Operatorzeichen sind `!`, `%`, `&`, `*`, `+`, `-`, `.`, `/`, `<`, `=`, `>`, `?`, `@`, `^`, `|`, und `~`. Das Zeichen `~` hat eine besondere Bedeutung, da mit ihm ein Operator als unärer Operator festgelegt wird. Es kann nicht in einer Operatorzeichenfolge verwendet werden. Nicht alle Operatoren können unär gemacht werden.
+Sie können alle Standardoperatoren überladen, Sie können jedoch auch aus Sequenzen bestimmter Zeichen neue Operatoren erstellen. Zulässige Operator Zeichen sind `!`, `%`, `&`, `*`, `+`, ,,`.`,, ,`=`, `/` `-` `<` `>` `?` ,`@`, ,`^` und`~`. `|` Das Zeichen `~` hat eine besondere Bedeutung, da mit ihm ein Operator als unärer Operator festgelegt wird. Es kann nicht in einer Operatorzeichenfolge verwendet werden. Nicht alle Operatoren können unär gemacht werden.
 
 Rangfolge und Assoziativität des Operators hängen von der verwendeten Zeichenfolge ab. Die Assoziativität kann entweder von links nach rechts oder von rechts nach links sein. Sie wird immer verwendet, wenn Operatoren der gleichen Rangfolge nacheinander ohne Klammern angezeigt werden.
 
 Das Operatorzeichen `.` wirkt sich nicht auf die Rangfolge aus. Wenn Sie eine eigene Version von Multiplikation definieren möchten, die die gleiche Rangfolge und Assoziativität wie die übliche Multiplikation aufweist, können Sie daher z. B. den Operator `.*` erstellen.
 
-Nur die Operatoren `?` und `?<-` integritätsdienststatus mit `?`.
+Nur die `?` Operatoren `?<-` und können mit `?`beginnen.
 
-Eine Tabelle mit der Rangfolge aller Operatoren in F# finden Sie im [Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md).
+Eine Tabelle mit der Rangfolge aller Operatoren in F# finden Sie im [Symbol- und Operatorenreferenz](./symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Namen von überladenen Operatoren
 
@@ -95,7 +95,7 @@ In der folgenden Tabelle werden die Standardoperatoren und die entsprechenden ge
 |`..`|`op_Range`|
 |`.. ..`|`op_RangeStep`|
 
-Andere, hier nicht aufgeführte Kombinationen von Operatorzeichen können als Operatoren verwendet werden, und ihre Namen werden durch das Verketten von Namen für die einzelnen Zeichen in der folgenden Tabelle gebildet. Z. B. +! wird `op_PlusBang`.
+Andere, hier nicht aufgeführte Kombinationen von Operatorzeichen können als Operatoren verwendet werden, und ihre Namen werden durch das Verketten von Namen für die einzelnen Zeichen in der folgenden Tabelle gebildet. Beispiel: +! wird `op_PlusBang`zu.
 
 |Operatorzeichen|name|
 |------------------|----|
@@ -123,7 +123,7 @@ Andere, hier nicht aufgeführte Kombinationen von Operatorzeichen können als Op
 
 ## <a name="prefix-and-infix-operators"></a>Präfix- und Infixoperatoren
 
-*Präfix* Operatoren vor einem Operanden oder Operanden, ähnlich wie eine Funktion platziert werden sollen. *Infix* Operatoren zwischen zwei Operanden platziert werden sollen.
+Es wird erwartet, dass *Präfix* Operatoren vor einem Operanden oder Operanden platziert werden, ähnlich wie eine Funktion. Es wird erwartet, dass *Infix* -Operatoren zwischen den beiden Operanden platziert werden.
 
 Nur bestimmte Operatoren können als Präfixoperatoren verwendet werden. Einige Operatoren sind immer Präfixoperatoren, andere können Infix- oder Präfixoperatoren sein und der Rest ist immer Infixoperatoren. Operatoren, die mit `!` beginnen, außer `!=` und der Operator `~` oder wiederholte Sequenzen von `~`, sind immer Präfixoperatoren. Die Operatoren `+`, `-`, `+.`, `-.`, `&`, `&&`, `%` und `%%` können Vorzeichenoperatoren oder Infixoperatoren sein. Sie unterscheiden die Präfix-Version dieser Operatoren von der Infix-Version, indem Sie `~` am Anfang eines Präfixoperators hinzufügen, wenn er definiert wird. Das Symbol `~` wird nicht verwendet, wenn Sie den Operator verwenden, sondern nur wenn definiert.
 
@@ -131,7 +131,7 @@ Nur bestimmte Operatoren können als Präfixoperatoren verwendet werden. Einige 
 
 Im folgenden Code wird veranschaulicht, wie mit Operatorüberladung ein Bruchtyp implementiert wird. Ein Bruch wird durch einen Zähler und einen Nenner dargestellt. Mit der Funktion `hcf` wird der größte gemeinsame Teiler zum Kürzen von Brüchen bestimmt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4002.fs)]
 
 **Ausgabe:**
 
@@ -147,14 +147,14 @@ Im folgenden Code wird veranschaulicht, wie mit Operatorüberladung ein Bruchtyp
 
 Sie können Operatoren auch auf globaler Ebene definieren. Der folgende Code definiert einen Operator `+?`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4003.fs)]
 
 Die Ausgabe des vorangehenden Codes lautet `12`.
 
 Sie können die normalen arithmetischen Operatoren auf diese Weise neu definieren, da gemäß den Bereichsregeln für F# neu definierte Operatoren Vorrang vor den integrierten Operatoren haben.
 
-Das Schlüsselwort `inline` wird oft mit globalen Operatoren verwendet, bei denen es sich häufig um kleine Funktionen handelt, die nach Möglichkeit in den aufrufenden Code integriert werden sollten. Wenn Sie Operatorfunktionen als Inlinefunktionen festlegen, können diese auch mit statisch aufgelösten Typparametern verwendet werden, um statisch aufgelösten generischen Code zu erstellen. Weitere Informationen finden Sie unter [Inlinefunktionen](functions/inline-functions.md) und [Statisch aufgelöste Typparameter](generics/statically-resolved-type-parameters.md).
+Das Schlüsselwort `inline` wird oft mit globalen Operatoren verwendet, bei denen es sich häufig um kleine Funktionen handelt, die nach Möglichkeit in den aufrufenden Code integriert werden sollten. Wenn Sie Operatorfunktionen als Inlinefunktionen festlegen, können diese auch mit statisch aufgelösten Typparametern verwendet werden, um statisch aufgelösten generischen Code zu erstellen. Weitere Informationen finden Sie unter [Inline Funktionen](./functions/inline-functions.md) und [statisch aufgelöste Typparameter](./generics/statically-resolved-type-parameters.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Mitglieder](members/index.md)
+- [Mitglieder](./members/index.md)

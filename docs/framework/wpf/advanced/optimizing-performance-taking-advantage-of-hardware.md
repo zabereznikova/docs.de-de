@@ -9,28 +9,28 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 7acf5a3f48ac4987037873c63111d988ec3a4979
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238452"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629651"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimieren der Leistung: Nutzen der Vorteile der Hardware
-Die interne Architektur des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über zwei Renderingpipelines, Hardware und Software. Dieses Thema enthält Informationen über diese Renderingpipelines, die Ihnen bei Ihren Entscheidungen zur leistungsoptimierung von Anwendungen helfen.  
+Die interne Architektur von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] umfasst zwei Renderingpipelines: Hardware und Software. Dieses Thema enthält Informationen zu diesen Renderingpipelines, die Ihnen helfen, Entscheidungen über Leistungsoptimierungen Ihrer Anwendungen zu treffen.  
   
-## <a name="hardware-rendering-pipeline"></a>Hardwarerenderingpipeline  
- Einer der wichtigsten Faktoren bei der Bestimmung [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Leistung besteht darin, dass es renderbegrenzung – je mehr Pixel, die Sie gerendert werden, desto größer sind die Kosten für die Leistung müssen. Allerdings können mehr, der rendering verlagert werden, um die [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)], die weitere Leistungsvorteile erhalten Sie. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hardwarerenderingpipeline Anwendung nutzt [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] Funktionen auf Hardware, die mindestens unterstützt [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] Version 7.0. Weitere Optimierungen gewonnen werden können, von der Hardware, die unterstützt [!INCLUDE[TLA#tla_dx](../../../../includes/tlasharptla-dx-md.md)] , Version 7.0 und PixelShader 2.0 +-Funktionen.  
+## <a name="hardware-rendering-pipeline"></a>Hardwarrenderpipeline  
+ Einer der wichtigsten Faktoren bei der Bestimmung [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] der Leistung besteht darin, dass er an das Rendering gebunden ist – abhängig von mehr Pixeln müssen Sie die Leistungseinbußen erhöhen. Wenn Sie jedoch mehr Rendering in die [!INCLUDE[TLA#tla_gpu](../../../../includes/tlasharptla-gpu-md.md)]auslagern können, desto mehr Leistungsvorteile können Sie erzielen. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungs Hardware-Renderingpipeline nutzt die Vorteile der Microsoft DirectX-Features auf Hardware, die mindestens die Microsoft DirectX-Version 7,0 unterstützt. Weitere Optimierungen können von Hardware erzielt werden, die die Features Microsoft DirectX, Version 7,0 und PixelShader 2.0 + unterstützt.  
   
-## <a name="software-rendering-pipeline"></a>Softwarerenderingpipeline  
- Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Softwarerenderingpipeline ist vollständig CPU-gebunden. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nutzt die SSE- und SSE2-Anweisung wird in der CPU auf eine optimierte, voll ausgestattete Softwarerasterisierungsfunktion implementieren. Fallback auf die Software ist ein nahtlos jedes Mal, die Funktionalität der Anwendung nicht die Hardwarerenderingpipeline gerendert werden kann.  
+## <a name="software-rendering-pipeline"></a>Software Rendering-Pipeline  
+ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Software Rendering-Pipeline ist vollständig CPU-gebunden. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]nutzt die SSE-und SSE2-Anweisungs Sätze in der CPU, um einen optimierten, voll funktionsfähigen Software-Rasterizer zu implementieren. Ein Fallback auf Software ist nahtlos, wenn die Anwendungs Funktionalität nicht mithilfe der Hardware-Renderingpipeline gerendert werden kann.  
   
- Die größten Leistungsprobleme treten Sie beim Rendern im Softwaremodus zusammenhängt Füllrate, die als die Anzahl der Pixel definiert ist, die gerendert werden. Wenn Sie über die Leistung in Softwarerenderingmodus Bedenken haben, versuchen Sie, wie oft zu minimieren, die eine Pixel neu gezeichnet wird. Z. B. wenn sich eine Anwendung mit einem blauen Hintergrund, die dann ein etwas transparentes Bild darüber gerendert wird, werden Sie alle Pixel in der Anwendung zweimal gerendert. Daher dauert zweimal so lange, um die Anwendung mit dem Image, als wenn Sie nur die blauen Hintergrund zu rendern.  
+ Das größte Leistungsproblem, das beim Rendern im Software Modus auftritt, bezieht sich auf die Füllrate, die als die Anzahl der Pixel definiert ist, die Sie rendern. Wenn Sie sich Gedanken über die Leistung im Softwarerendering-Modus machen, versuchen Sie, die Anzahl der Neuerstellung eines Pixels zu minimieren. Wenn Sie z. b. eine Anwendung mit einem blauen Hintergrund haben, die dann ein leicht transparentes Bild darüber rendert, werden Sie alle Pixel in der Anwendung zweimal rendern. Folglich dauert es doppelt so lange, bis die Anwendung mit dem Bild gerengt wird, als wenn Sie nur den blauen Hintergrund haben.  
   
 ### <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken  
- Es kann sehr schwierig sein, die Hardwarekonfiguration vorherzusagen, die Ihre Anwendung ausgeführt wird. Möglicherweise möchten jedoch einen Entwurf zu berücksichtigen, der können Ihre Anwendung nahtlos Features wechseln, wenn Sie auf andere Hardware ausgeführt, sodass sie alle Vorteile der einzelnen Konfigurationen anderer Hardware nutzen kann.  
+ Es kann sehr schwierig sein, die Hardwarekonfiguration vorherzusagen, auf der Ihre Anwendung ausgeführt wird. Möglicherweise möchten Sie jedoch ein Design in Erwägung ziehen, das es Ihrer Anwendung ermöglicht, Features bei der Ausführung auf einer anderen Hardware nahtlos zu wechseln, damit Sie die verschiedenen Hardware Konfigurationen voll ausschöpfen können.  
   
- Um dies zu erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Funktionen, um die Grafik-Funktion von einem System zur Laufzeit zu bestimmen. Grafikfunktionen wird durch die Kategorisierung der Videokarte als eine der drei Ebenen der Funktion bestimmt. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt eine API, die einer Anwendung auf die Ebene der Funktion Abfragen ermöglicht. Ihre Anwendung kann dann unterschiedliche Codepfade zur Laufzeit abhängig von der von der Hardware unterstützten Renderingebene ausführen.  
+ Um dies zu erreichen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , stellt die Funktionalität bereit, um die Grafik Funktion eines Systems zur Laufzeit zu bestimmen. Die Grafik Funktion wird bestimmt, indem die Grafikkarte als eine von drei renderingfunktionsstufen kategorisiert wird. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]macht eine API verfügbar, die einer Anwendung das Abfragen der renderingfunktionsebene ermöglicht. Abhängig von der von der Hardware unterstützten Renderingebene kann die Anwendung dann unterschiedliche Codepfade zur Laufzeit verwenden.  
   
  Die Funktionen der Grafikhardware, die sich am stärksten auf die Renderingebenen auswirken, sind:  
   
@@ -42,17 +42,17 @@ Die interne Architektur des [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
 - **Multitexturunterstützung**: Bei Multitexturunterstützung handelt es sich um die Möglichkeit, zwei oder mehr unterschiedliche Texturen während eines Mischvorgangs für ein 3D-Grafikobjekt anzuwenden. Der Grad der Multitexturunterstützung wird durch die Anzahl der Multitextureinheiten in der Grafikhardware bestimmt.  
   
- Die Pixel-Shader, Vertex-Shader und multitextur-Features werden verwendet, um bestimmte definieren [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Versionsebenen, die wiederum verwendet werden, definieren Sie die unterschiedlichen Ebenen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+ Die Pixel-Shader-, Vertex-Shader-und Multitextur-Funktionen werden verwendet, um bestimmte DirectX-Versions Ebenen zu definieren, die wiederum zum Definieren der verschiedenen renderingstufen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]verwendet werden.  
   
  Die Funktionen der Grafikhardware bestimmen die Renderingfunktion einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung. Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-System definiert drei Renderingebenen:  
   
-- **Renderingebene 0**: Keine Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] -Versionsebene ist kleiner als die Version 7.0.  
+- **Renderingebene 0**: Keine Beschleunigung der Grafikhardware. Die DirectX-Versions Ebene ist kleiner als Version 7,0.  
   
-- **Renderingebene 1** Beschleunigung der partiellen Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] -Versionsebene ist größer als oder gleich 7.0 verwenden, und **weniger** als die Version 9.0.  
+- **Renderingebene 1** Beschleunigung der Teil Grafikhardware. Die DirectX-Versions Ebene ist größer als oder gleich Version 7,0 und **kleiner** als Version 9,0.  
   
-- **Renderingebene 2**: Die meisten Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Versionsebene ist größer als oder gleich der Version 9.0.  
+- **Renderingebene 2**: Die meisten Grafikfunktionen verwenden die Beschleunigung der Grafikhardware. Die DirectX-Versions Ebene ist größer als oder gleich Version 9,0.  
   
- Weitere Informationen zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Renderingebenen finden Sie [Renderingebenen für Grafiken](graphics-rendering-tiers.md).  
+ Weitere Informationen zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderingstufen finden Sie unter Renderingebenen für [Grafiken](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

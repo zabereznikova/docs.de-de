@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: ee260d58cdb4dc971fc32ca5c889b459b6a48489
-ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
+ms.openlocfilehash: 10bdeae8fe46f78e60d278fdbe93883a1c6bd356
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484739"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629882"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hosten von Win32-Inhalt in WPF
 
@@ -48,11 +48,11 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 
 Aber nehmen wir [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] an, dass der Code nicht ganz so eigenständig ist? Wenn dies der Fall ist, können [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Sie ein Dialogfeld erstellen und seinen Inhalt in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eine größere Anwendung einbetten. Das Beispiel zeigt dies in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] und C++, obwohl dies auch in einer anderen Sprache oder über die Befehlszeile möglich ist.
 
-Beginnen Sie mit einem einfachen Dialogfeld, das in ein C++ [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] Projekt kompiliert wird.
+Beginnen Sie mit einem einfachen Dialogfeld, das in ein C++ DLL-Projekt kompiliert wird.
 
 Führen Sie als nächstes den Dialog in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] größeren Anwendung ein:
 
-- `/clr`Kompilieren Sie [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] als verwaltet ().
+- Kompilieren Sie die dll als verwaltet`/clr`().
 
 - Dialogfeld in ein Steuerelement umwandeln
 
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-Hier verwenden `CreateDialog` Sie, um das Dialogfeld zu erstellen, das tatsächlich ein Steuerelement ist. Da dies eine der ersten Methoden ist [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)], die innerhalb von aufgerufen `InitializeGlobals()`werden, sollten Sie auch eine [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Standard Initialisierung durchführen, indem Sie eine Funktion aufrufen, die Sie später definieren, wie folgt:
+Hier verwenden `CreateDialog` Sie, um das Dialogfeld zu erstellen, das tatsächlich ein Steuerelement ist. Da dies eine der ersten Methoden ist, die in der dll aufgerufen werden, sollten Sie auch eine [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Standard Initialisierung durchführen `InitializeGlobals()`, indem Sie eine Funktion aufrufen, die Sie später definieren, wie folgt:
 
 ```cpp
 bool initialized = false;

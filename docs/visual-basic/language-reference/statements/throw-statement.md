@@ -14,44 +14,37 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6d10982cf199e9285334e0d72e6622275d51b4d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766635"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626197"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw-Anweisung (Visual Basic)
-Löst eine Ausnahme in einer Prozedur.  
+Löst eine Ausnahme in einer Prozedur aus.
+
+## <a name="syntax"></a>Syntax
+
+```vb
+Throw [ expression ]
+```
+
+## <a name="part"></a>Segment
+ `expression`Stellt Informationen über die Ausnahme bereit, die ausgelöst werden soll. Optional, wenn in einer `Catch` -Anweisung gespeichert; andernfalls erforderlich.
   
-## <a name="syntax"></a>Syntax  
-  
-```  
-Throw [ expression ]  
-```  
-  
-## <a name="part"></a>Segment  
- `expression`  
- Enthält Informationen über die Ausnahme ausgelöst wird. Optional, wenn im wohnen eine `Catch` -Anweisung, andernfalls erforderlich.  
-  
-## <a name="remarks"></a>Hinweise  
- Die `Throw` -Anweisung löst eine Ausnahme, die Sie mit Code für die strukturierte Ausnahmebehandlung (`Try`... `Catch`... `Finally`) oder Code für die unstrukturierte Ausnahmebehandlung (`On Error GoTo`). Sie können die `Throw` Anweisung, um Fehler in Ihrem Code abfangen, da es sich bei Visual Basic die Aufrufliste nach oben verschoben, bis den entsprechenden Code für die Behandlung von Ausnahmen gefunden.  
-  
- Ein `Throw` -Anweisung keinen Ausdruck kann nur verwendet werden, einem `Catch` -Anweisung, in dem Fall die Anweisung die Ausnahme, die gerade verarbeitet wird, indem Sie erneut die `Catch` Anweisung.  
-  
- Die `Throw` Anweisung setzt die Aufrufliste für den `expression` Ausnahme. Wenn `expression` nicht angegeben wird, die Aufrufliste unverändert. Sie erreichen die Aufrufliste für die Ausnahme über die <xref:System.Exception.StackTrace%2A> Eigenschaft.  
-  
-## <a name="example"></a>Beispiel  
- Der folgende code verwendet die `Throw` Anweisung eine Ausnahme ausgelöst:  
-  
- [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]  
-  
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
-  
- **Modul:** `Interaction`  
-  
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+## <a name="remarks"></a>Hinweise
+ Die `Throw` -Anweisung löst eine Ausnahme aus, die Sie mit strukturiertem Ausnahme Behandlungs`Try`Code behandeln können (... `Catch`... ) oder unstrukturierter Ausnahme Behandlungs Code (`On Error GoTo`). `Finally` Sie können die `Throw` -Anweisung verwenden, um Fehler in Ihrem Code abzufangen, da Visual Basic die aufrufsstapel nach oben verschiebt, bis der entsprechende Ausnahme Behandlungs Code gefunden wird.
+ 
+ Eine `Throw` -Anweisung ohne-Ausdruck kann nur in einer `Catch` -Anweisung verwendet werden. in diesem Fall löst die-Anweisung die Ausnahme erneut aus, `Catch` die zurzeit von der-Anweisung verarbeitet wird.
+
+ Die `Throw` -Anweisung setzt die-aufrufsstapel für die `expression` Ausnahme zurück. Wenn `expression` nicht angegeben wird, bleibt die-aufrufsstapel unverändert. Sie können über die <xref:System.Exception.StackTrace%2A> -Eigenschaft auf die-aufrufsstapel für die Ausnahme zugreifen.
+
+## <a name="example"></a>Beispiel
+ Im folgenden Code wird die `Throw` -Anweisung verwendet, um eine Ausnahme auszulösen:
+ 
+ [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
+
   
 ## <a name="see-also"></a>Siehe auch
 

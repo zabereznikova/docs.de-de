@@ -1,13 +1,13 @@
 ---
 title: Abstrakte Klassen
-description: Erfahren Sie mehr über F# abstrakte Klassen, die einige oder alle Member nicht implementiert lassen, und stellen allgemeine Funktionen einem unterschiedlichen Satz von Objekttypen dar.
+description: Erfahren Sie F# mehr über abstrakte Klassen, bei denen einige oder alle Member nicht implementiert werden und allgemeine Funktionen eines unterschiedlichen Satzes von Objekttypen darstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8251d481c9056d40a0b13ae3c89353406986c116
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a6bbfc23b858d5f3833f3f52b6dca46753080f03
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645544"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629676"
 ---
 # <a name="abstract-classes"></a>Abstrakte Klassen
 
@@ -28,23 +28,23 @@ abstract member member-name : type-signature
 
 ## <a name="remarks"></a>Hinweise
 
-In der objektorientierten Programmierung eine abstrakte Klasse dient als Basisklasse einer Hierarchie und einen unterschiedlichen Satz von Objekttypen häufig verwendeten Funktionen darstellt. Wie "abstrakt" der Name schon sagt, entsprechen abstrakte Klassen häufig nicht direkt auf konkrete Entitäten in der Problemdomäne. Allerdings bedeuten sie, wie viele unterschiedliche konkrete Entitäten Gemeinsamkeit aufweisen.
+Bei der objektorientierten Programmierung wird eine abstrakte Klasse als Basisklasse einer Hierarchie verwendet und stellt die allgemeine Funktionalität eines unterschiedlichen Satzes von Objekttypen dar. Wie der Name "abstract" impliziert, Stimmen abstrakte Klassen häufig nicht direkt auf konkrete Entitäten in der Problemdomäne überein. Sie stellen jedoch dar, welche zahlreichen unterschiedlichen konkreten Entitäten gemeinsam sind.
 
-Abstrakte Klassen müssen die `AbstractClass` Attribut. Sie können implementiert und nicht die Member implementiert haben. Die Verwendung des Begriffs *abstrakte* bei Anwendung auf eine Klasse ist der gleiche wie in anderen, jedoch die Verwendung des Begriffs *abstrakte* bei Anwendung auf Methoden (und Eigenschaften) ist ein wenig anders in F# von der Verwenden Sie in anderen .NET-Sprachen. In F#, wenn eine Methode gekennzeichnet ist, mit der `abstract` -Schlüsselwort, dies gibt an, dass ein Element auf einen Eintrag, bekannt als hat eine *virtueller Dispatch-Slot*, in die interne Tabelle der virtuellen Funktionen für diesen Typ. Das heißt, die Methode virtuell ist, obwohl die `virtual` -Schlüsselwort nicht in der Sprache F# verwendet. Das Schlüsselwort `abstract` wird verwendet, auf die virtuellen Methoden, unabhängig davon, ob die Methode implementiert wird. Die Deklaration ein virtueller Dispatch-Slot unterscheidet sich von der Definition einer Methode für diesen Slot verteilen. Aus diesem Grund F# eine virtuelle Methodendeklaration und Definition in einer anderen .NET-Sprache, entspricht einer Kombination aus einer abstrakten Methodendeklaration und eine separate Definition, entweder mit der `default` Schlüsselwort oder `override` Schlüsselwort. Weitere Informationen und Beispiele finden Sie unter [Methoden](members/methods.md).
+Abstrakte Klassen müssen über das `AbstractClass` -Attribut verfügen. Sie können über implementierte und nicht implementierte Member verfügen. Die Verwendung des Begriffs *abstrakte* bei Anwendung auf eine Klasse ist der gleiche wie in anderen, jedoch die Verwendung des Begriffs *abstrakte* bei Anwendung auf Methoden (und Eigenschaften) ist ein wenig anders in F# von der Verwenden Sie in anderen .NET-Sprachen. Wenn F#eine Methode in mit dem `abstract` -Schlüsselwort markiert ist, weist dies darauf hin, dass ein Member einen Eintrag, der als *virtueller dispatchslot*bezeichnet wird, in der internen Tabelle der virtuellen Funktionen für diesen Typ enthält. Das heißt, die Methode virtuell ist, obwohl die `virtual` -Schlüsselwort nicht in der Sprache F# verwendet. Das- `abstract` Schlüsselwort wird für virtuelle Methoden verwendet, unabhängig davon, ob die Methode implementiert ist. Die Deklaration eines virtuellen dispatchslots ist von der Definition einer Methode für diesen dispatchslot getrennt. Aus diesem Grund F# eine virtuelle Methodendeklaration und Definition in einer anderen .NET-Sprache, entspricht einer Kombination aus einer abstrakten Methodendeklaration und eine separate Definition, entweder mit der `default` Schlüsselwort oder `override` Schlüsselwort. Weitere Informationen und Beispiele finden Sie unter [Methoden](./members/methods.md).
 
-Eine Klasse gilt als abstrakte nur, wenn es sind abstrakte Methoden, die deklariert, aber nicht definiert. Aus diesem Grund sind Klassen, die abstrakte Methoden verfügen über nicht zwangsläufig abstrakte Klassen. Es sei denn, eine Klasse, nicht die abstrakte Methoden definiert wurde, verwenden Sie nicht die **AbstractClass** Attribut.
+Eine Klasse gilt nur als abstrakt, wenn abstrakte Methoden deklariert sind, aber nicht definiert sind. Daher sind Klassen, die abstrakte Methoden haben, nicht notwendigerweise abstrakte Klassen. Verwenden Sie nicht das **abstractclass** -Attribut, es sei denn, eine Klasse hat nicht definierte abstrakte Methoden.
 
-In der vorherigen Syntax *Zugriffsmodifizierer* kann `public`, `private` oder `internal`. Weitere Informationen finden Sie unter [Zugriffssteuerung](access-control.md).
+In der vorherigen Syntax kann der Zugriffsmodifizierer `internal`, `private` oder sein `public`. Weitere Informationen finden Sie unter [Zugriffssteuerung](access-control.md).
 
-Wie bei anderen Typen können abstrakte Klassen eine Basisklasse und einer oder mehrere Basisschnittstellen haben. Jede Basisklasse oder Schnittstelle wird angezeigt, in einer separaten Zeile zusammen mit den `inherit` Schlüsselwort.
+Wie bei anderen Typen können abstrakte Klassen über eine Basisklasse und eine oder mehrere Basis Schnittstellen verfügen. Jede Basisklasse oder Schnittstelle wird in einer separaten Zeile mit dem `inherit` -Schlüsselwort angezeigt.
 
-Die Typendefinition einer abstrakten Klasse kann vollständig definierte Elemente enthalten, aber sie können auch abstrakte Member enthalten. Die Syntax für die abstrakten Member wird separat in der vorherigen Syntax angezeigt. In dieser Syntax der *Typsignatur* eines Elements wird eine Liste mit den Parametertypen in der Reihenfolge und die Rückgabetypen, getrennt durch `->` Token und/oder `*` Token nach Bedarf, um Curry und Tupel-Funktionswerts Parameter. Die Syntax für Typsignaturen abstrakten Member ist identisch mit, dass in der Signatur verwendet und dass die von IntelliSense in Visual Studio Code-Editor angezeigt.
+Die Typdefinition einer abstrakten Klasse kann vollständig definierte Member enthalten, kann aber auch abstrakte Member enthalten. Die Syntax für abstrakte Member wird separat in der vorherigen Syntax angezeigt. In dieser Syntax ist die *Typsignatur* eines Members eine Liste, die die Parametertypen in der Reihenfolge und die Rückgabe Typen enthält, getrennt `->` durch Token und/ `*` oder Token, je nach Bedarf für currried-und Tupel-Parameter. Die Syntax für die Signaturen abstrakter Member ist identisch mit der Syntax, die in Signatur Dateien verwendet wird und die von IntelliSense im Visual Studio Code-Editor angezeigt wird.
 
-Der folgende Code veranschaulicht eine abstrakte Klasse Shape, das zwei nicht abstrakte abgeleitete Klassen, Quadrat und den Kreis ist. Das Beispiel zeigt, wie Sie abstrakte Klassen, Methoden und Eigenschaften verwenden. Im Beispiel stellt die abstrakte Klasse Form der gemeinsame Elemente der konkreten Entitäten Kreis und Quadrat dar. Die gemeinsamen Funktionen aller Formen (in einem zweidimensionalen Koordinatensystem) werden in der Shape-Klasse abstrahiert: die Position im Raster und einen Drehwinkel um die Fläche und Umfang-Eigenschaften. Diese können mit Ausnahme der Position, die das Verhalten überschrieben werden, von denen nicht einzelne Formen ändern können.
+Der folgende Code veranschaulicht eine abstrakte Klassen Form, die zwei nicht abstrakte abgeleitete Klassen hat, Square und Circle. Das Beispiel zeigt, wie abstrakte Klassen, Methoden und Eigenschaften verwendet werden. Im Beispiel stellt die Form abstrakte Klasse die allgemeinen Elemente der konkreten Entitäten Circle und Square dar. Die allgemeinen Funktionen aller Formen (in einem zweidimensionalen Koordinatensystem) werden in die Shape-Klasse abstrahiert: die Position im Raster, ein Drehungs Winkel und die Bereichs-und Umkreis Eigenschaften. Diese können außer der Position überschrieben werden, das Verhalten, mit dem sich einzelne Formen nicht ändern können.
 
-Die Drehungsmethode kann überschrieben werden, wie in der Kreis-Klasse, die Drehung invariante aufgrund ihrer Symmetrie ist. Daher wird in der Kreis-Klasse, die Drehungsmethode mit einer anderen Methode ersetzt, die keine Aktionen ausführt.
+Die Rotations Methode kann überschrieben werden, wie in der Circle-Klasse, bei der es sich um eine Drehung aufgrund ihrer Symmetrie handelt. Daher wird die Rotations Methode in der Klasse "Circle" durch eine Methode ersetzt, die nichts bewirkt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
 
 **Ausgabe:**
 
@@ -58,6 +58,6 @@ Area of Circle: 78.539816
 ## <a name="see-also"></a>Siehe auch
 
 - [Klassen](classes.md)
-- [Mitglieder](members/index.md)
-- [Methoden](members/methods.md)
-- [Eigenschaften](members/Properties.md)
+- [Mitglieder](./members/index.md)
+- [Methoden](./members/methods.md)
+- [Eigenschaften](./members/Properties.md)

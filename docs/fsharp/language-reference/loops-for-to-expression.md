@@ -1,17 +1,17 @@
 ---
 title: 'Schleifen: for...to-Ausdruck'
-description: Finden Sie unter wie die F# for..-Ausdruck wird verwendet, um einen Bereich der Werte einer Schleifenvariablen in einer Schleife zu durchlaufen.
+description: Siehe How F# for... to-Ausdruck wird zum Durchlaufen einer Schleife über einen Wertebereich einer Schleifen Variablen verwendet.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5b7bb9bac659ddf1d457be1ce17e90a2593666de
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 910c04aa4ea6b2c637dcad147347c1c317b5e0c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645246"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626629"
 ---
 # <a name="loops-forto-expression"></a>Schleifen: for...to-Ausdruck
 
-Die `for...to` Ausdruck wird verwendet, um einen Bereich der Werte einer Schleifenvariablen in einer Schleife zu durchlaufen.
+Der `for...to` Ausdruck wird zum Durchlaufen einer Schleife über einen Wertebereich einer Schleifen Variablen verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -22,11 +22,11 @@ for identifier = start [ to | downto ] finish do
 
 ## <a name="remarks"></a>Hinweise
 
-Der Typ des Bezeichners wird abgeleitet, vom Typ des der *starten* und *Fertig stellen* Ausdrücke. Typen, die für diese Ausdrücke müssen es sich um 32-Bit-Ganzzahlen sein.
+Der Typ des Bezeichners wird vom Typ der Ausdrücke zum *starten* und *Beenden* abgeleitet. Typen für diese Ausdrücke müssen 32-Bit-Ganzzahlen sein.
 
-Obwohl technisch gesehen ist ein Ausdruck, `for...to` eher wie eine herkömmliche Anweisung in einem imperativen Programmiersprache. Der Rückgabetyp für die *Body-Ausdruck* muss `unit`. Die folgenden Beispiele zeigen verschiedene Verwendungsmöglichkeiten der der `for...to` Ausdruck.
+Obwohl es sich technisch gesehen `for...to` um einen Ausdruck handelt, ähnelt dies einer herkömmlichen Anweisung in einer imperativen Programmiersprache. Der Rückgabetyp für den *Text Ausdruck* muss `unit`lauten. In den folgenden Beispielen werden verschiedene Verwendungen `for...to` des-Ausdrucks veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
 
 Der obige Code gibt Folgendes aus.
 
@@ -39,5 +39,5 @@ Der obige Code gibt Folgendes aus.
 ## <a name="see-also"></a>Siehe auch
 
 - [F#-Sprachreferenz](index.md)
-- [Schleifen: `for...in` Ausdruck](loops-for-in-expression.md)
-- [Schleifen: `while...do` Ausdruck](loops-while-do-expression.md)
+- [Loops `for...in`Begriff](loops-for-in-expression.md)
+- [Loops `while...do`Begriff](loops-while-do-expression.md)

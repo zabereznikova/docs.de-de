@@ -1,199 +1,199 @@
 ---
 title: Erste Schritte mit Azure Table Storage mit F#
-description: Store strukturierte Daten in der Cloud mit Azure Table Storage oder Azure Cosmos DB.
+description: Speichern Sie strukturierte Daten mit Azure Table Storage oder Azure Cosmos DB in der Cloud.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8ab2d61048523ac52f305c7bd035c73ca0d3f60
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756350"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630469"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Erste Schritte mit Azure Table Storage und Azure Cosmos DB Table API mit F\#
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Beginnen Sie mit dem Azure-Tabellen Speicher und den Azure Cosmos DB Tabellen-API mit F\#
 
-Azure Table Storage ist ein Dienst, der strukturierte NoSQL-Daten in der Cloud gespeichert. Table Storage ist ein Schlüssel-/Attributspeicher mit einem schemalosen Design. Da der Tabellenspeicher schemalos ist, ist es einfach, Daten anzupassen, wenn sich die Anforderungen Ihrer Anwendung ändern. Zugriff auf Daten ist schnell und kostengünstig für alle Arten von Anwendungen. Table Storage ist in der Regel deutlich niedriger Kosten als herkömmliche SQL für ähnliche Datenmengen.
+Azure Table Storage ist ein Dienst, mit dem strukturierte nosql-Daten in der Cloud gespeichert werden. Table Storage ist ein Schlüssel-/Attributspeicher mit einem Schema losen Design. Da der Tabellen Speicher Schema Reich ist, ist es einfach, Ihre Daten anzupassen, wenn sich die Anforderungen Ihrer Anwendung weiterentwickeln. Der Zugriff auf Daten ist für alle Arten von Anwendungen schnell und kostengünstig. Der Tabellen Speicher ist in der Regel erheblich niedriger als herkömmlicher SQL für ähnliche Datenmengen.
 
-Sie können Table Storage verwenden, um flexible Datasets wie Benutzerdaten für Webanwendungen, Adressbücher, Geräteinformationen und andere Typen von Metadaten, die Ihr Dienst erfordert, zu speichern. Sie können eine beliebige Anzahl von Entitäten in einer Tabelle speichern, und ein Speicherkonto kann eine beliebige Anzahl von Tabellen, die bis zur speicherkapazitätsgrenze des Speicherkontos enthalten.
+Mit Table Storage können Sie flexible Datasets wie Benutzerdaten für Webanwendungen, Adressbücher, Geräteinformationen und andere Metadaten, die für Ihren Dienst erforderlich sind, speichern. Sie können eine beliebige Anzahl von Entitäten in einer Tabelle speichern, und ein Speicherkonto kann eine beliebige Anzahl von Tabellen enthalten, bis die Kapazitätsgrenze des Speicher Kontos erreicht ist.
 
-Azure Cosmos DB bietet die Table-API für Anwendungen, die für Azure Table Storage geschrieben sind und, wie z. B. Premium-Funktionen erfordern:
+Azure Cosmos DB stellt die Tabellen-API für Anwendungen bereit, die für Azure Table Storage geschrieben wurden und die Premium-Funktionen wie z. b.:
 
-- Sofort einsatzbereite globale Verteilung.
-- Dedizierter Durchsatz, die weltweit.
+- Sofort einsetzbare globale Verteilung.
+- Weltweit dedizierter Durchsatz.
 - Latenzen im einstelligen Millisekundenbereich im 99. Perzentil.
-- Garantierte hochverfügbarkeit.
+- Garantierte hohe Verfügbarkeit.
 - Automatische sekundäre Indizierung.
 
-Anwendungen für Azure Table Storage geschrieben wurden, können in Azure Cosmos DB mithilfe der Table-API ohne codeänderungen migrieren und profitieren Sie von Premium-Funktionen. Die Table-API enthält verfügbaren Client-SDKs für .NET, Java, Python und Node.js.
+Anwendungen, die für Azure Table Storage geschrieben wurden, können zu Azure Cosmos DB migriert werden, indem Sie die Tabellen-API ohne Codeänderungen verwenden und die Premium-Funktionen nutzen. In der Tabellen-API sind Client-sdjs für .net, Java, Python und Node. js verfügbar.
 
-Weitere Informationen finden Sie unter [Einführung in die Table-API von Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/table-introduction).
+Weitere Informationen finden Sie unter [Einführung in Azure Cosmos DB Tabellen-API](https://docs.microsoft.com/azure/cosmos-db/table-introduction).
 
-## <a name="about-this-tutorial"></a>Informationen zu diesem Lernprogramm
+## <a name="about-this-tutorial"></a>Informationen zu diesem Tutorial
 
-In diesem Tutorial wird gezeigt, wie zum Schreiben F# Code zum Durchführen allgemeinen Aufgaben mit Azure Table Storage oder Azure Cosmos DB Table API, einschließlich erstellen und Löschen einer Tabelle und einfügen, aktualisieren, löschen und Abfragen von Tabellendaten zu tun.
+In diesem Tutorial wird gezeigt, F# wie Sie Code schreiben können, um einige gängige Aufgaben mithilfe von Azure Table Storage oder der Azure Cosmos DB Tabellen-API auszuführen. dazu zählen das Erstellen und Löschen einer Tabelle sowie das Einfügen, aktualisieren, löschen und Abfragen von Tabellendaten.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account) oder [Azure Cosmos DB-Konto](https://azure.microsoft.com/try/cosmosdb/).
+Um dieses Handbuch verwenden zu können, müssen Sie zunächst [ein Azure-Speicherkonto](/azure/storage/storage-create-storage-account) oder [Azure Cosmos DB Konto](https://azure.microsoft.com/try/cosmosdb/)erstellen.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
-In die Beispielen in diesem Artikel verwendet werden können, entweder in eine F# Anwendung oder ein F# Skript. Zum Erstellen einer F# Skript, erstellen Sie eine Datei mit der `.fsx` Erweiterung, z. B. `tables.fsx`in Ihre F# Entwicklungsumgebung.
+Die Beispiele in diesem Artikel können entweder in einer F# Anwendung oder in einem F# Skript verwendet werden. Um ein F# Skript zu erstellen, erstellen Sie `.fsx` F# eine Datei mit der Erweiterung, `tables.fsx`z. b. in der Entwicklungsumgebung.
 
-Verwenden Sie als Nächstes eine [-Paket-Manager](package-management.md) wie z. B. [Paket-Abhängigkeits](https://fsprojects.github.io/Paket/) oder [NuGet](https://www.nuget.org/) zum Installieren der `WindowsAzure.Storage` Paket und Verweis `WindowsAzure.Storage.dll` in Ihrem Skript mithilfe einer `#r`Richtlinie. Führen Sie es noch mal `Microsoft.WindowsAzure.ConfigurationManager` um den Microsoft.Azure-Namespace zu erhalten.
+Verwenden Sie als nächstes [einen Paket-Manager](package-management.md) , z. b. [Paket](https://fsprojects.github.io/Paket/) oder `WindowsAzure.Storage` [nuget](https://www.nuget.org/) , um das Paket zu installieren `#r` , und verweisen `WindowsAzure.Storage.dll` Sie mithilfe einer-Anweisung in Ihrem Skript Führen Sie es erneut `Microsoft.WindowsAzure.ConfigurationManager` aus, um den Microsoft. Azure-Namespace zu erhalten.
 
-### <a name="add-namespace-declarations"></a>Hinzufügen von Namespacedeklarationen
+### <a name="add-namespace-declarations"></a>Namespace Deklarationen hinzufügen
 
-Fügen Sie die folgenden `open` Anweisungen am Anfang der `tables.fsx` Datei:
+Fügen Sie am `open` Anfang `tables.fsx` der Datei die folgenden-Anweisungen ein:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
-### <a name="get-your-azure-storage-connection-string"></a>Die Azure Storage-Verbindungszeichenfolge abzurufen
+### <a name="get-your-azure-storage-connection-string"></a>Azure Storage Verbindungs Zeichenfolge erhalten
 
-Wenn Sie mit Azure Table Storage-Dienst verbinden, benötigen Sie die Verbindungszeichenfolge für dieses Tutorial. Sie können die Verbindungszeichenfolge aus dem Azure-Portal kopieren. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Konfigurieren von Speicher-Verbindungszeichenfolgen](/azure/storage/storage-configure-connection-string).
+Wenn Sie eine Verbindung mit Azure Storage Tabellen Dienst herstellen, benötigen Sie die Verbindungs Zeichenfolge für dieses Tutorial. Sie können die Verbindungs Zeichenfolge aus der Azure-Portal kopieren. Weitere Informationen zu Verbindungs Zeichenfolgen finden Sie unter [Konfigurieren von Speicher Verbindungs](/azure/storage/storage-configure-connection-string)Zeichenfolgen.
 
-### <a name="get-your-azure-cosmos-db-connection-string"></a>Die Azure Cosmos DB-Verbindungszeichenfolge abzurufen
+### <a name="get-your-azure-cosmos-db-connection-string"></a>Azure Cosmos DB Verbindungs Zeichenfolge erhalten
 
-Wenn Sie mit Azure Cosmos DB verbinden, benötigen Sie die Verbindungszeichenfolge für dieses Tutorial. Sie können die Verbindungszeichenfolge aus dem Azure-Portal kopieren. Navigieren Sie im Azure-Portal in Ihrem Cosmos DB-Konto zu **Einstellungen** > **Verbindungszeichenfolge**, und klicken Sie auf die **Kopie** , um die primäre Verbindung zu kopieren. Eine Zeichenfolge. 
+Wenn Sie eine Verbindung mit Azure Cosmos DB herstellen, benötigen Sie die Verbindungs Zeichenfolge für dieses Tutorial. Sie können die Verbindungs Zeichenfolge aus der Azure-Portal kopieren. Wechseln Sie in der Azure-Portal in Ihrem Cosmos DB Konto zu **Einstellungen** > **Verbindungs Zeichenfolge**, und klicken Sie auf die Schaltfläche **Kopieren** , um die primäre Verbindungs Zeichenfolge zu kopieren. 
 
-Geben Sie Ihre Verbindungszeichenfolge für das Tutorial in Ihrem Skript verwenden, wie im folgenden Beispiel:
+Geben Sie für das Tutorial die Verbindungs Zeichenfolge in Ihrem Skript ein, wie im folgenden Beispiel gezeigt:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
-Dies ist jedoch **nicht empfohlen,** für echte Projekte. Ihr speicherkontoschlüssel ähnelt das Stammkennwort für Ihr Speicherkonto. Achten Sie immer darauf zum Schützen der Schlüssel Ihres Speicherkontos. Vermeiden sie zu anderen Benutzern oder fest zu programmieren, oder speichern es in einer nur-Text-Datei, die an andere Personen zugänglich ist. Sie können Ihren Schlüssel mithilfe von Azure-Portal, wenn Sie glauben, dass es unter Umständen kompromittiert wurden neu generieren.
+Dies wird jedoch nicht für echte Projekte **empfohlen** . Ihr Speicherkonto Schlüssel ähnelt dem Stamm Kennwort für Ihr Speicherkonto. Achten Sie immer darauf, ihren Speicherkonto Schlüssel zu schützen. Verteilen Sie Sie nicht an andere Benutzer, hart codieren Sie Sie, oder speichern Sie Sie in einer nur-Text-Datei, auf die andere Benutzer zugreifen können. Sie können Ihren Schlüssel mithilfe des Azure-Portals neu generieren, wenn Sie der Meinung sind, dass er möglicherweise kompromittiert wurde
 
-Für reale Anwendungen, ist die beste Methode zum Verwalten Ihrer Speicher-Verbindungszeichenfolge in einer Konfigurationsdatei. Um die Verbindungszeichenfolge aus einer Konfigurationsdatei abzurufen, können Sie so vorgehen:
+Bei echten Anwendungen ist die beste Möglichkeit, Ihre Speicher Verbindungs Zeichenfolge beizubehalten, in einer Konfigurationsdatei. Wenn Sie die Verbindungs Zeichenfolge aus einer Konfigurationsdatei abrufen möchten, können Sie Folgendes tun:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-Verwenden von Azure Configuration Manager ist optional. Sie können auch eine API wie die .NET Framework `ConfigurationManager` Typ.
+Die Verwendung von Azure Configuration Manager ist optional. Sie können auch eine API verwenden, z. b. `ConfigurationManager` den Typ der .NET Framework.
 
-### <a name="parse-the-connection-string"></a>Analysieren der Verbindungszeichenfolge
+### <a name="parse-the-connection-string"></a>Analysieren der Verbindungs Zeichenfolge
 
-Um die Verbindungszeichenfolge zu analysieren, verwenden Sie:
+Um die Verbindungs Zeichenfolge zu analysieren, verwenden Sie Folgendes:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
 
-Dies gibt eine `CloudStorageAccount`.
+Gibt einen `CloudStorageAccount`zurück.
 
-### <a name="create-the-table-service-client"></a>Erstellen des Tabellenspeicherdienst-Clients
+### <a name="create-the-table-service-client"></a>Erstellen des Tabellen Dienst Clients
 
-Die `CloudTableClient` -Klasse ermöglicht es Ihnen, Tabellen und Entitäten im Tabellenspeicher abrufen. Hier ist eine Möglichkeit zum Erstellen des Dienstclients:
+Mit `CloudTableClient` der-Klasse können Sie Tabellen und Entitäten im Tabellen Speicher abrufen. Dies ist eine Möglichkeit, den Dienst Client zu erstellen:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
-Jetzt können Sie Code schreiben, liest Daten aus und schreibt Daten in Table Storage.
+Jetzt können Sie Code schreiben, der Daten aus dem Tabellen Speicher liest und Daten in den Tabellen Speicher schreibt.
 
 ### <a name="create-a-table"></a>Erstellen einer Tabelle
 
-Dieses Beispiel zeigt, wie Sie eine Tabelle zu erstellen, wenn es nicht bereits vorhanden ist:
+Dieses Beispiel zeigt, wie eine Tabelle erstellt wird, wenn Sie nicht bereits vorhanden ist:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
 
 ### <a name="add-an-entity-to-a-table"></a>Hinzufügen einer Entität zu einer Tabelle
 
-Eine Entität muss einen Typ aufweisen, die von erbt `TableEntity`. Sie können die erweitern `TableEntity` beliebig, aber der Typ *müssen* einen parameterlosen Konstruktor aufweisen. Nur Eigenschaften, die sowohl `get` und `set` in Ihrem Azure-Tabelle gespeichert sind.
+Eine Entität muss über einen Typ verfügen, der von `TableEntity`erbt. Sie können in `TableEntity` beliebig erweitern, aber der Typ *muss* über einen Parameter losen Konstruktor verfügen. Nur Eigenschaften, die sowohl `get` als `set` auch aufweisen, werden in der Azure-Tabelle gespeichert.
 
-Eine Entität des Partitions- und Zeilenschlüssel identifiziert eindeutig die Entität in der Tabelle. Entitäten mit demselben Partitionsschlüssel können schneller abgerufen werden als Entitäten mit verschiedenen partitionsschlüsseln, aber die Verwendung verschiedener Partitionsschlüssel ermöglicht größere Skalierbarkeit paralleler Vorgänge.
+Mit dem Partitions-und Zeilen Schlüssel einer Entität wird die Entität in der Tabelle eindeutig identifiziert. Entitäten mit demselben Partitions Schlüssel können schneller abgefragt werden als solche mit unterschiedlichen Partitions Schlüsseln, die Verwendung verschiedener Partitions Schlüssel ermöglicht jedoch eine größere Skalierbarkeit paralleler Vorgänge.
 
-Hier ist ein Beispiel für eine `Customer` , verwendet der `lastName` als Partitionsschlüssel und die `firstName` als Zeilenschlüssel.
+Im folgenden finden Sie ein Beispiel `Customer` für einen, `lastName` der als Partitions Schlüssel und `firstName` als Zeilen Schlüssel verwendet.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-Fügen Sie jetzt hinzu `Customer` in die Tabelle. Zu diesem Zweck erstellen Sie eine `TableOperation` , für die Tabelle ausführt. In diesem Fall erstellen Sie eine `Insert` Vorgang.
+Fügen Sie `Customer` nun der Tabelle hinzu. Erstellen Sie hierzu einen `TableOperation` , der für die Tabelle ausgeführt wird. In diesem Fall erstellen Sie einen `Insert` Vorgang.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
-### <a name="insert-a-batch-of-entities"></a>Einfügen eines entitätsbatchs
+### <a name="insert-a-batch-of-entities"></a>Einfügen eines entitätenbatches
 
-Sie können einen entitätsbatch in einer Tabelle mit einem einzelnen Schreibvorgang einfügen. Batch-Vorgänge ermöglichen es Ihnen, Vorgänge in eine einzelne Ausführung zu kombinieren, verfügen jedoch über einige Einschränkungen:
+Sie können einen Batch von Entitäten in eine Tabelle einfügen, indem Sie einen einzelnen Schreibvorgang verwenden. Mit Batch Vorgängen können Sie Vorgänge in einer einzelnen Ausführung kombinieren, aber Sie haben einige Einschränkungen:
 
-- Sie können Updates ausführen Lösch- und Einfügevorgänge in einem Batchvorgang.
-- Ein Batchvorgang kann bis zu 100 Entitäten enthalten.
-- Alle Entitäten in einem Batchvorgang müssen den gleichen Partitionsschlüssel aufweisen.
-- Es ist, zwar möglich, eine Abfrage in einem Batchvorgang auszuführen muss es der einzige Vorgang im Batch sein.
+- Sie können Updates, Löschungen und Einfügungen im gleichen Batch Vorgang ausführen.
+- Ein Batch Vorgang kann bis zu 100 Entitäten umfassen.
+- Alle Entitäten in einem Batch Vorgang müssen über denselben Partitions Schlüssel verfügen.
+- Obwohl es möglich ist, eine Abfrage in einem Batch Vorgang auszuführen, muss dies der einzige Vorgang im Batch sein.
 
-Hier ist Code, der zwei Einfügevorgänge in einem Batchvorgang kombiniert:
+Hier ist ein Code, der zwei Einfügungen in einem Batch Vorgang kombiniert:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L62-L71)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L62-L71)]
 
-### <a name="retrieve-all-entities-in-a-partition"></a>Rufen Sie aller Entitäten in einer Partition ab
+### <a name="retrieve-all-entities-in-a-partition"></a>Abrufen aller Entitäten in einer Partition
 
-Um eine Tabelle für alle Entitäten in einer Partition abzufragen, verwenden eine `TableQuery` Objekt. Hier filtern Sie Entitäten, wobei "Smith" der Partitionsschlüssel ist.
+Um eine Tabelle für alle Entitäten in einer Partition abzufragen, `TableQuery` verwenden Sie ein-Objekt. Hier Filtern Sie nach Entitäten, bei denen "Smith" der Partitions Schlüssel ist.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
-Sie werden nun die Ergebnisse drucken:
+Sie drucken nun die Ergebnisse:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Abrufen eines entitätsbereichs in einer partition
+### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Abrufen eines Bereichs von Entitäten in einer Partition
 
-Wenn Sie nicht alle Entitäten in einer Partition abrufen möchten, können Sie einen Bereich angeben, indem Sie den partitionsschlüsselfilter mit einem zeilenschlüsselfilter kombinieren. Hier verwenden Sie zwei Filter auf alle Entitäten in der Partition "Smith" abzurufen, in dem der Zeilenschlüssel (Vorname) mit einem Buchstaben vor "M" im Alphabet beginnt.
+Wenn Sie nicht alle Entitäten in einer Partition Abfragen möchten, können Sie einen Bereich angeben, indem Sie den Partitions Schlüssel Filter mit einem Zeilen Schlüssel Filter kombinieren. Hier verwenden Sie zwei Filter, um alle Entitäten in der "Smith"-Partition zu erhalten, wobei der Zeilen Schlüssel (Vorname) mit einem Buchstaben vor "M" im Alphabet beginnt.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
 
-Sie werden nun die Ergebnisse drucken:
+Sie drucken nun die Ergebnisse:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L102-L103)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L102-L103)]
 
 ### <a name="retrieve-a-single-entity"></a>Abrufen einer einzelnen Entität
 
-Sie können eine Abfrage zum Abrufen einer bestimmten Entität schreiben. Hier ein `TableOperation` um den Kunden "Ben Smith" anzugeben. Anstatt einer Sammlung, erhalten Sie wieder eine `Customer`. Sowohl der Partitionsschlüssel und Zeilenschlüssel angeben, in einer Abfrage ist die schnellste Möglichkeit, eine einzelne Entität aus dem Tabellendienst abzurufen.
+Sie können eine Abfrage schreiben, um eine einzelne, bestimmte Entität abzurufen. Hier verwenden Sie einen `TableOperation` , um den Kunden "Ben Smith" anzugeben. Anstelle einer Auflistung erhalten Sie eine `Customer`. Das Angeben von Partitions Schlüssel und Zeilen Schlüssel in einer Abfrage ist die schnellste Möglichkeit, um eine einzelne Entität aus dem Tabellen Dienst abzurufen.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
-Sie werden nun die Ergebnisse drucken:
+Sie drucken nun die Ergebnisse:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
 
 ### <a name="replace-an-entity"></a>Ersetzen einer Entität
 
-Um eine Entität zu aktualisieren, rufen Sie sie aus dem Tabellendienst, ändern Sie das Entitätsobjekt und speichern Sie die Änderungen an den Tabellenspeicherdienst mit einem `Replace` Vorgang. Dies bewirkt, dass die Entität, die auf dem Server vollständig ersetzt werden, es sei denn, der die Entität, auf dem Server geändert wurde, seit sie abgerufen wurde, in diesem Fall schlägt der Vorgang fehl. Um zu verhindern, dass Ihre Anwendung von versehentlich überschriebenen Änderungen aus anderen Quellen für diesen Fehler ist.
+Um eine Entität zu aktualisieren, rufen Sie Sie aus dem Tabellen Dienst ab, ändern Sie das Entitäts Objekt, und speichern Sie die Änderungen dann `Replace` mit einem-Vorgang im Tabellen Dienst. Dadurch wird die Entität auf dem Server vollständig ersetzt, es sei denn, die Entität auf dem Server wurde seit dem Abrufen geändert. in diesem Fall schlägt der Vorgang fehl. Dieser Fehler soll verhindern, dass Ihre Anwendung versehentlich Änderungen aus anderen Quellen überschreibt.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
-### <a name="insert-or-replace-an-entity"></a>Einfügen-oder-Ersetzen einer Entität
+### <a name="insert-or-replace-an-entity"></a>Einfügen oder Ersetzen einer Entität
 
-In einigen Fällen wissen Sie nicht, ob eine Entität in der Tabelle vorhanden ist. Und wenn dies der Fall ist, werden die aktuellen Werte, die darin gespeicherten nicht mehr benötigt. Sie können `InsertOrReplace` zum Erstellen der Entitäts oder Ersetzen Sie ihn, falls es vorhanden, unabhängig von ihrem Status ist.
+Manchmal wissen Sie nicht, ob eine Entität in der Tabelle vorhanden ist. Wenn dies der Fall ist, werden die darin gespeicherten aktuellen Werte nicht mehr benötigt. Sie können verwenden `InsertOrReplace` , um die Entität zu erstellen oder zu ersetzen, wenn Sie vorhanden ist, unabhängig von Ihrem Zustand.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
-### <a name="query-a-subset-of-entity-properties"></a>Abfragen einer Teilmenge von Entitätseigenschaften
+### <a name="query-a-subset-of-entity-properties"></a>Abfragen einer Teilmenge von Entitäts Eigenschaften
 
-Eine Tabellenabfrage kann nur einige Eigenschaften aus einer Entität anstelle aller Textknoten abrufen. Diese Technik, die sogenannten Projektion, kann die abfrageleistung, besonders bei großen Entitäten verbessern. Hier ist Sie zurückkehren, nur e-Mail-Adressen, mit `DynamicTableEntity` und `EntityResolver`. Beachten Sie, dass Projektion nicht auf dem lokalen Speicheremulator unterstützt wird, damit dieser Code ausgeführt wird, nur, wenn Sie ein Konto für den Tabellendienst verwenden.
+Eine Tabellen Abfrage kann nur einige wenige Eigenschaften aus einer Entität abrufen, anstatt Sie zu verwenden. Diese Technik, die als Projektion bezeichnet wird, kann die Abfrageleistung verbessern, insbesondere bei großen Entitäten. Hier geben Sie nur e-Mail- `DynamicTableEntity` Adressen `EntityResolver`mit und zurück. Beachten Sie, dass die Projektion nicht auf dem lokalen Speicher Emulator unterstützt wird, sodass dieser Code nur ausgeführt wird, wenn Sie ein Konto für den Tabellen Speicherdienst verwenden.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
-### <a name="retrieve-entities-in-pages-asynchronously"></a>Abrufen von Entitäten in Seiten asynchron
+### <a name="retrieve-entities-in-pages-asynchronously"></a>Asynchrones Abrufen von Entitäten in Seiten
 
-Wenn Sie eine große Anzahl von Entitäten lesen und für die Verarbeitung warten, bis sie alle zurückgeben, können Sie eine segmentierte Abfrage verwenden, anstatt sie abgerufen werden sollen. Hier ist zurückgeben Sie Ergebnisse seitenweise mithilfe eines asynchronen Workflows, damit die Ausführung nicht blockiert wird, während Sie für eine große Anzahl zurückzugebender Ergebnisse warten.
+Wenn Sie eine große Anzahl von Entitäten lesen und diese beim Abrufen verarbeiten möchten, anstatt darauf zu warten, dass alle zurückgegeben werden, können Sie eine segmentierte Abfrage verwenden. Hier geben Sie die Ergebnisse in Seiten zurück, indem Sie einen asynchronen Workflow verwenden, sodass die Ausführung nicht blockiert wird, während Sie auf die Rückgabe eines großen Ergebnissatzes warten.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L163-L178)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L163-L178)]
 
-Sie führen Sie nun diese Berechnung synchron:
+Sie führen diese Berechnung nun synchron aus:
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L180-L180)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L180-L180)]
 
 ### <a name="delete-an-entity"></a>Löschen einer Entität
 
-Sie können eine Entität löschen, nachdem Sie es abgerufen haben. Wie bei der Aktualisierung einer Entitätstyps Fehler dies, wenn die Entität geändert wurde, seitdem Sie abgerufen.
+Sie können eine Entität löschen, nachdem Sie sie abgerufen haben. Wie beim Aktualisieren einer Entität schlägt dies fehl, wenn sich die Entität seit dem Abruf geändert hat.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L186-L187)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L186-L187)]
 
 ### <a name="delete-a-table"></a>Löschen einer Tabelle
 
-Sie können eine Tabelle aus einem Speicherkonto löschen. Eine Tabelle, die gelöscht wurde, werden als nicht verfügbar für eine bestimmte Zeitdauer nach dem Löschvorgang neu erstellt werden.
+Sie können eine Tabelle aus einem Speicherkonto löschen. Eine Tabelle, die gelöscht wurde, kann für einen bestimmten Zeitraum nach dem Löschvorgang nicht neu erstellt werden.
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
+[!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, da Sie die Grundlagen von Table Storage vertraut gemacht haben, führen Sie diesen Links Weitere Informationen zu komplexeren Speicheraufgaben und der Azure Cosmos DB-Tabellen-API.
+Nachdem Sie sich nun mit den Grundlagen von Table Storage vertraut gemacht haben, folgen Sie diesen Links, um mehr über komplexere Speicher Aufgaben und die Azure Cosmos DB Tabellen-API zu erfahren.
 
-- [Einführung in Azure Cosmos DB-Tabellen-API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [Storage-Clientbibliothek für .NET-Referenz](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Azure-Speicher-Typanbieter](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Azure Storage-Teamblog](https://blogs.msdn.com/b/windowsazurestorage/)
-- [Konfigurieren von Verbindungszeichenfolgen](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
-- [Erste Schritte mit Azure Table Storage in .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)
+- [Einführung in Azure Cosmos DB Tabellen-API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
+- [Referenz zur Speicher Client Bibliothek für .net](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [Azure Storage Typanbieter](https://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Azure Storage Teamblog](https://blogs.msdn.com/b/windowsazurestorage/)
+- [Verbindungs Zeichenfolgen konfigurieren](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
+- [Ersten Einstieg in Azure Table Storage in .net](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

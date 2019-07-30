@@ -1,13 +1,13 @@
 ---
 title: 'Ausnahmen: Der try...with-Ausdruck'
-description: Erfahren Sie, wie Sie mit der F# "try...with-" Ausdruck für die Ausnahmebehandlung.
+description: Erfahren Sie, wie Sie F# "Try... with ' Ausdruck für die Ausnahmebehandlung.
 ms.date: 05/16/2016
-ms.openlocfilehash: 3ba13227ac55eff770ceb7631d3406ad80b6ea45
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e4d615086a93e26b76cca460e797659ca13792b5
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641937"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630245"
 ---
 # <a name="exceptions-the-trywith-expression"></a>Ausnahmen: Der try...with-Ausdruck
 
@@ -26,38 +26,38 @@ with
 
 ## <a name="remarks"></a>Hinweise
 
-Die `try...with` Ausdruck wird verwendet, um die Behandlung von Ausnahmen in F#. Es ähnelt der `try...catch` -Anweisung in c#. In der vorherigen Syntax wird der Code in *expression1* möglicherweise eine Ausnahme generiert. Die `try...with` Ausdruck gibt einen Wert zurück. Wenn keine Ausnahme ausgelöst wird, wird der gesamte Ausdruck gibt den Wert der *expression1*. Wenn eine Ausnahme ausgelöst wird, jede *Muster* wiederum verglichen wird, mit der Ausnahme und für das erste übereinstimmende Muster, die den entsprechenden *Ausdruck*, bekannt als die *Ausnahmehandler*für diesen Branch ausgeführt wird und der gesamte Ausdruck den Wert des Ausdrucks, in dieser Ausnahmehandler gibt. Wenn keine übereinstimmt, wird die Ausnahme der Aufrufliste nach oben weitergegeben, bis ein entsprechender Handler gefunden wird. Die Typen der von jeder Ausdruck in die Ausnahmehandler zurückgegebenen Werte müssen der Rückgabetyp der Ausdruck in übereinstimmen der `try` Block.
+Der `try...with` Ausdruck wird zum Behandeln von Ausnahmen in F#verwendet. Sie ähnelt der `try...catch` -Anweisung in. C# In der vorangehenden Syntax generiert der Code in *expression1* möglicherweise eine Ausnahme. Der `try...with` Ausdruck gibt einen Wert zurück. Wenn keine Ausnahme ausgelöst wird, gibt der gesamte Ausdruck den Wert von *expression1*zurück. Wenn eine Ausnahme ausgelöst wird, wird jedes *Muster* wiederum mit der Ausnahme verglichen, und für das erste übereinstimmende Muster wird der entsprechende *Ausdruck*, der als *Ausnahmehandler*bezeichnet wird, für diesen Branch ausgeführt und der allgemeine Ausdruck Gibt den Wert des Ausdrucks in diesem Ausnahmehandler zurück. Wenn kein Muster übereinstimmt, wird die aufrufsstapel von der Ausnahme weitergegeben, bis ein übereinstimmender Handler gefunden wird. Die Typen der Werte, die von jedem Ausdruck in den Ausnahme Handlern zurückgegeben werden, müssen mit dem Typ identisch sein `try` , der vom Ausdruck im-Block zurückgegeben wird.
 
-In vielen Fällen bedeutet die Tatsache, dass Fehler auch, dass es keinen gültiger Wert, der die Ausdrücke in jeder Ausnahmehandler zurückgegeben werden kann. Ein häufig verwendetes Muster ist der Typ des Ausdrucks ein Optionstyp werden. Das folgende Codebeispiel veranschaulicht dieses Muster.
+Häufig bedeutet die Tatsache, dass ein Fehler aufgetreten ist, dass es keinen gültigen Wert gibt, der von den Ausdrücken in den einzelnen Ausnahme Handlern zurückgegeben werden kann. Ein häufiges Muster ist, dass der Typ des Ausdrucks ein Optionstyp ist. Dieses Muster wird im folgenden Codebeispiel veranschaulicht.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5601.fs)]
 
-Ausnahmen können .NET Ausnahmen sein, oder sie können F# Ausnahmen. Sie können definieren, F# Ausnahmen mithilfe der `exception` Schlüsselwort.
+Ausnahmen können .NET-Ausnahmen oder F# Ausnahmen sein. Ausnahmen können mithilfe F# des `exception` -Schlüssel Worts definiert werden.
 
-Eine Vielzahl von Mustern können Sie den Ausnahmetyp und andere Bedingungen filtern; die Optionen werden in der folgenden Tabelle zusammengefasst.
+Sie können eine Vielzahl von Mustern verwenden, um nach dem Ausnahmetyp und anderen Bedingungen zu filtern. die Optionen sind in der folgenden Tabelle zusammengefasst.
 
 |Muster|Beschreibung|
 |-------|-----------|
-|:? *exception-type*|Entspricht den angegebenen Ausnahmetyp von .NET.|
-|:? *Typ der Ausnahme* als *Bezeichner*|Mit der angegebenen Ausnahme .NET Typ übereinstimmt, doch bieten der Ausnahme einen benannten Wert.|
-|*exception-name*(*arguments*)|Entspricht einem F# Ausnahmetyp und bindet die Argumente.|
-|*identifier*|Entspricht einer beliebigen Ausnahme aus, und bindet den Namen an das Ausnahmeobjekt. Äquivalent zu **:? System.Exception als**_Bezeichner_|
-|*Bezeichner* beim *Bedingung*|Entspricht einer beliebigen Ausnahme aus, wenn die Bedingung "true" ist.|
+|:? *Ausnahmetyp*|Entspricht dem angegebenen .net-Ausnahmetyp.|
+|:? *Exception-Typ* als *Bezeichner*|Entspricht dem angegebenen .net-Ausnahmetyp, gibt jedoch der Ausnahme einen benannten Wert.|
+|*Ausnahme Name* (*Argumente*)|Entspricht einem F# Ausnahmetyp und bindet die Argumente.|
+|*identifier*|Findet eine Übereinstimmung mit jeder Ausnahme und bindet den Namen an das Ausnahme Objekt. Äquivalent zu **:? System. Exception als**_Bezeichner_|
+|*Bezeichner* , wenn *Bedingung*|Findet eine Übereinstimmung mit jeder Ausnahme, wenn die Bedingung erfüllt ist.|
 
 ## <a name="examples"></a>Beispiele
 
-Die folgenden Codebeispiele veranschaulichen die Verwendung der verschiedenen Ausnahme-Handler-Muster.
+Die folgenden Codebeispiele veranschaulichen die Verwendung der verschiedenen Ausnahmehandler.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5602.fs)]
-
-> [!NOTE]
-> Die `try...with` Konstrukt ist ein separater Ausdruck aus der `try...finally` Ausdruck. Aus diesem Grund Wenn der Code sowohl erfordert eine `with` Block und ein `finally` blockieren, müssen Sie die beiden Ausdrücke schachteln.
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5602.fs)]
 
 > [!NOTE]
-> Sie können `try...with` in asynchronen Workflows und anderen Berechnungsausdrücken, in dem Fall einer angepassten Version von der `try...with` Ausdruck wird verwendet. Weitere Informationen finden Sie unter [asynchrone Workflows](../asynchronous-workflows.md), und [Berechnungsausdrücke](../computation-expressions.md).
+> Das `try...with` Konstrukt ist ein separater Ausdruck aus dem `try...finally` Ausdruck. Wenn Ihr Code also sowohl einen `with` -Block als auch einen `finally` -Block erfordert, müssen Sie die beiden Ausdrücke verschachteln.
+
+> [!NOTE]
+> Sie können in `try...with` asynchronen Workflows und anderen Berechnungs Ausdrücken verwenden. in diesem Fall wird eine angepasste Version `try...with` des Ausdrucks verwendet. Weitere Informationen finden Sie unter [asynchrone Workflows](../asynchronous-workflows.md)und [Berechnungs Ausdrücke](../computation-expressions.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Ausnahmebehandlung](index.md)
 - [Ausnahmetypen](exception-types.md)
-- [Ausnahmen: Die `try...finally` Ausdruck](the-try-finally-expression.md)
+- [Ausnahmen: Der `try...finally` Ausdruck](the-try-finally-expression.md)

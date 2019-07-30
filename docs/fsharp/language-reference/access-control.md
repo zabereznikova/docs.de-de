@@ -2,55 +2,55 @@
 title: Zugriffssteuerung
 description: Informationen Sie zum Steuern des Zugriffs auf Programmierelemente wie Typen, Methoden und Funktionen, die in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: a284d2fa4f98e444279276f58b70a15560537ca4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645610"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629960"
 ---
 # <a name="access-control"></a>Zugriffssteuerung
 
-*Steuerung des Zugriffs* bezieht sich auf die deklarieren, welche Clients bestimmte Programmelemente, z. B. Typen, Methoden und Funktionen verwenden können.
+*Access Control* bezieht sich auf die Deklaration, welche Clients bestimmte Programmelemente verwenden können, z. b. Typen, Methoden und Funktionen.
 
-## <a name="basics-of-access-control"></a>Grundlagen der Zugriffssteuerung
+## <a name="basics-of-access-control"></a>Grundlagen von Access Control
 
 In F#, Steuern der Zugriff Spezifizierer `public`, `internal`, und `private` kann auf Module, Typen, Methoden, wertedefinitionen, Funktionen, Eigenschaften und explizite Felder angewendet werden.
 
-- `public` Gibt an, dass die Entität, die von allen Aufrufern zugegriffen werden kann.
+- `public`Gibt an, dass alle Aufrufer auf die Entität zugreifen können.
 
-- `internal` Gibt an, dass die Entität, die nur von der gleichen Assembly zugegriffen werden kann.
+- `internal`Gibt an, dass auf die Entität nur aus derselben Assembly zugegriffen werden kann.
 
-- `private` Gibt an, dass die Entität nur aus dem einschließenden Typ oder Modul zugegriffen werden kann.
+- `private`Gibt an, dass nur vom einschließenden Typ oder Modul auf die Entität zugegriffen werden kann.
 
 > [!NOTE]
-> Der Zugriffsspezifizierer `protected` wird nicht in F# verwendet, obwohl es akzeptabel ist, bei Verwendung von Typen, die in Sprachen, unterstützen erstellte `protected` Zugriff. Wenn Sie eine geschützte Methode überschreiben, bleibt die Methode aus diesem Grund nur innerhalb der Klasse und ihrer untergeordneten Klassen zugegriffen werden kann.
+> Der Zugriffsspezifizierer `protected` wird nicht in F# verwendet, obwohl es akzeptabel ist, bei Verwendung von Typen, die in Sprachen, unterstützen erstellte `protected` Zugriff. Wenn Sie also eine geschützte Methode überschreiben, bleibt die Methode nur innerhalb der Klasse und der untergeordneten Elemente zugänglich.
 
-Der Bezeichner wird in der Regel vor dem Namen der Entität, außer wenn versetzt einen `mutable` oder `inline` Bezeichner verwendet wird, die nach dem Zugriffsspezifizierer-Steuerelement angezeigt werden.
+Im Allgemeinen wird der Spezifizierer vor dem Namen der Entität eingefügt, es sei denn, es `mutable` wird `inline` ein-oder-Spezifizierer verwendet, der nach dem zugriffssteuerungsspezifizierer angezeigt wird.
 
-Wenn keine Zugriffsspezifizierer verwendet wird, wird der Standardwert ist `public`, mit Ausnahme von `let` Bindungen in einem Typ, der immer `private` in den Typ.
+Wenn kein Zugriffsspezifizierer verwendet wird, `public`ist der Standard `let` Wert, mit Ausnahme von Bindungen in einem `private` Typ, bei denen es sich immer um den-Typ handelt.
 
-Signaturen in F#-Geben Sie einen anderen Mechanismus zur Steuerung des Zugriffs auf Programmelemente in F#. Signaturen sind nicht erforderlich, für die Zugriffssteuerung. Weitere Informationen finden Sie unter [Signaturen](signatures.md).
+Signaturen in F#-Geben Sie einen anderen Mechanismus zur Steuerung des Zugriffs auf Programmelemente in F#. Signaturen sind für die Zugriffs Steuerung nicht erforderlich. Weitere Informationen finden Sie unter [Signaturen](signatures.md).
 
-## <a name="rules-for-access-control"></a>Regeln für die Zugriffssteuerung
+## <a name="rules-for-access-control"></a>Regeln für Access Control
 
-Die Zugriffssteuerung ist gemäß den folgenden Regeln:
+Die Zugriffs Steuerung unterliegt den folgenden Regeln:
 
-- , Vererbungsdeklarationen (, also die Verwendung von `inherit` auf eine Basisklasse für eine Klasse angeben), Schnittstellendeklarationen (das ist, gibt an, dass eine Klasse eine Schnittstelle implementiert) und abstrakten Member verfügen immer über den gleichen Zugriff wie der einschließende Typ. Aus diesem Grund kann ein Steuerelement-Zugriffsspezifizierer auf diese Konstrukte verwendet werden.
+- Vererbungs Deklarationen (d. h. `inherit` die Verwendung von, um eine Basisklasse für eine Klasse anzugeben), Schnittstellen Deklarationen (d. h. die Angabe, dass eine Klasse eine Schnittstelle implementiert) und abstrakte Member haben immer die gleiche Barrierefreiheit wie der einschließende Typ. Daher kann kein zugriffssteuerungsspezifizierer für diese Konstrukte verwendet werden.
 
-- Zugriff auf einzelne Fälle, in eine Unterscheidungs-Union wird durch den Zugriff auf die Unterscheidungs-Union selbst bestimmt. Ein bestimmter union-Fall ist, also nicht weniger zugreifbar als die Union selbst.
+- Barrierefreiheit für einzelne Fälle in einer Unterscheidungs-Union wird durch den Zugriff auf die Unterscheidungs-Union selbst festgelegt. Das heißt, dass ein bestimmter Union-Fall nicht weniger zugreifbar ist als die Union selbst.
 
-- Barrierefreiheit für einzelne Felder eines Datensatztyps nicht möglich, der durch den Zugriff auf den Datensatz selbst bestimmt wird. Eine Bezeichnung bestimmten Datensatz ist, also nicht kleiner als der Datensatz selbst zugegriffen werden kann.
+- Der Zugriff auf einzelne Felder eines Daten Satz Typs kann nicht durch die Barrierefreiheit des Datensatzes bestimmt werden. Das heißt, eine bestimmte Daten Satz Bezeichnung ist nicht weniger zugreifbar als der Datensatz selbst.
 
 ## <a name="example"></a>Beispiel
 
-Der folgende Code veranschaulicht die Verwendung von Steuerelement-Zugriffsspezifizierer. Es gibt zwei Dateien im Projekt `Module1.fs` und `Module2.fs`. Jede Datei ist implizit ein Modul. Aus diesem Grund sind die beiden Module, `Module1` und `Module2`. Ein privater Typ und einen internen Typ sind in definiert `Module1`. Der private Typ kann nicht zugegriffen werden, von `Module2`, aber Sie können der interne Typ.
+Der folgende Code veranschaulicht die Verwendung von zugriffssteuerungsorbezeichgern. Das Projekt enthält zwei Dateien, `Module1.fs` und. `Module2.fs` Jede Datei ist implizit ein Modul. Daher gibt es zwei Module: `Module1` und. `Module2` In `Module1`werden ein privater Typ und ein interner Typ definiert. Der Zugriff `Module2`auf den privaten Typ ist nicht möglich, aber der interne Typ ist möglich.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet1.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/access-control/snippet1.fs)]
 
-Der folgende Code überprüft den Zugriff auf die Typen, die im erstellten `Module1.fs`.
+Mit dem folgenden Code wird der Zugriff auf die Typen getestet `Module1.fs`, die in erstellt wurden.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet2.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/access-control/snippet2.fs)]
 
 ## <a name="see-also"></a>Siehe auch
 

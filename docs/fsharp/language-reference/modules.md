@@ -2,12 +2,12 @@
 title: Module
 description: Erfahren Sie, wie eine F#-Modul eine Gruppierung von F#-Code, z. B. Werte, Typen und Funktionswerte in einem F#-Programm.
 ms.date: 04/24/2017
-ms.openlocfilehash: 07ea1eb9ed06988a780fd3c5acccbc8383a4dc55
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 685ab638e7e1b6c8d47d1a316483abcc18e40199
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641777"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627428"
 ---
 # <a name="modules"></a>Module
 
@@ -26,69 +26,69 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Hinweise
 
-Eine F#-Modul ist eine Gruppierung von F#-Code-Konstrukte wie Typen, Werte, Werte von Funktionen und -Code in `do` Bindungen. Es wird als eine common Language Runtime (CLR)-Klasse implementiert, die nur statische Member verfügt. Es gibt zwei Arten von Moduldeklarationen, je nachdem, ob die gesamte Datei im Modul enthalten ist: eine Moduldeklaration der obersten Ebene und einem lokalen Modul-Deklaration. Eine Deklaration Modul auf oberster Ebene enthält die gesamte Datei im Modul an. Eine Moduldeklaration auf oberster Ebene kann nur als die erste Deklaration in einer Datei angezeigt werden.
+Eine F#-Modul ist eine Gruppierung von F#-Code-Konstrukte wie Typen, Werte, Werte von Funktionen und -Code in `do` Bindungen. Sie wird als Common Language Runtime (CLR)-Klasse implementiert, die nur statische Member aufweist. Je nachdem, ob die gesamte Datei im Modul enthalten ist, gibt es zwei Arten von Modul Deklarationen: eine Modul Deklaration der obersten Ebene und eine lokale Modul Deklaration. Eine Modul Deklaration der obersten Ebene enthält die gesamte Datei im Modul. Eine Modul Deklaration der obersten Ebene kann nur als erste Deklaration in einer Datei angezeigt werden.
 
-In der Syntax für die Deklaration Modul auf oberster Ebene, die den optionalen *qualifizierter Namespace* ist die Sequenz der geschachtelten Namespace-Namen, die das Modul enthält. Die vollqualifizierten Namespace muss nicht zuvor deklariert werden.
+In der Syntax für die Modul Deklaration der obersten Ebene ist der optionale *qualified-Namespace* die Sequenz von Namen in den Namen des in der Tabelle enthaltenen Namespace, die das Modul enthält. Der qualifizierte Namespace muss nicht zuvor deklariert werden.
 
-Sie müssen keinen Deklarationen in einem Modul auf oberster Ebene eingezogen. Sie müssen alle Deklarationen in den lokalen Modulen einziehen. In der Deklaration einer lokalen Modul sind nur Deklarationen, die unter diesem Moduldeklaration eingezogen werden Teil des Moduls.
+Sie müssen keine Deklarationen in einem Modul der obersten Ebene einfügen. Sie müssen alle Deklarationen in lokalen Modulen einziehen. In einer lokalen Modul Deklaration sind nur die Deklarationen, die in dieser Modul Deklaration eingezogen werden, Teil des Moduls.
 
-Wenn Sie eine Codedatei mit einer Deklaration Modul auf oberster Ebene oder eine Namespacedeklaration nicht startet, wird der gesamte Inhalt der Datei, einschließlich lokalen Module, Teil einer implizit erstellten Modul auf oberster Ebene, die den gleichen Namen wie die Datei ohne Erweiterung hat, mit dem ersten Buchstaben in Großbuchstaben konvertiert wurden. Betrachten Sie beispielsweise die folgende Datei aus.
+Wenn eine Codedatei nicht mit einer Modul Deklaration der obersten Ebene oder einer Namespace Deklaration beginnt, wird der gesamte Inhalt der Datei, einschließlich aller lokalen Module, Teil eines implizit erstellten Moduls auf oberster Ebene, das denselben Namen wie die Datei hat, ohne die Erweiterung. mit dem ersten Buchstaben, der in Großbuchstaben konvertiert wird. Sehen Sie sich beispielsweise die folgende Datei an.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6601.fs)]
 
-Diese Datei würde kompiliert werden, als ob sie auf diese Weise geschrieben wurden:
+Diese Datei würde so kompiliert werden, als ob Sie auf diese Weise geschrieben würde:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6602.fs)]
 
-Wenn Sie mehrere Module in einer Datei haben, müssen Sie eine lokale Moduldeklaration für jedes Modul verwenden. Wenn ein einschließenden Namespace deklariert wird, sind diese Module Teil des einschließenden Namespace an. Wenn Sie ein Namespace des einschließender nicht deklariert ist, werden die Module des Moduls implizit erstellten auf oberster Ebene. Das folgende Codebeispiel zeigt eine Codedatei, die mehrere Module enthält. Erstellt der Compiler implizit ein Modul auf oberster Ebene mit dem Namen `Multiplemodules`, und `MyModule1` und `MyModule2` in diesem Modul auf oberster Ebene geschachtelt sind.
+Wenn Sie über mehrere Module in einer Datei verfügen, müssen Sie für jedes Modul eine lokale Modul Deklaration verwenden. Wenn ein einschließender Namespace deklariert wird, sind diese Module Teil des einschließenden Namespace. Wenn kein einschließender Namespace deklariert wird, werden die Module Teil des implizit erstellten Moduls der obersten Ebene. Das folgende Codebeispiel zeigt eine Codedatei, die mehrere Module enthält. Der Compiler erstellt implizit ein Modul der obersten Ebene mit `Multiplemodules`dem Namen `MyModule1` , `MyModule2` und und sind in diesem Modul der obersten Ebene eingebettet.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6603.fs)]
 
-Wenn Sie mehrere Dateien in einem Projekt oder in einer einzigen Kompilierung haben oder wenn Sie eine Bibliothek erstellen, müssen Sie einen Standardnamespace-Deklaration oder Moduldeklaration am Anfang der Datei einschließen. Die F# Compiler nur bestimmt einen Modulnamen implizit Wenn es nur eine Datei in einer Befehlszeile Projekt oder die Kompilierung, und Sie eine Anwendung erstellen.
+Wenn Sie über mehrere Dateien in einem Projekt oder einer einzelnen Kompilierung verfügen oder wenn Sie eine Bibliothek erstellt haben, müssen Sie am Anfang der Datei eine Namespace Deklaration oder Modul Deklaration einschließen. Der F# Compiler bestimmt einen Modulnamen nur implizit, wenn sich nur eine Datei in einer Projekt-oder Kompilierungs Befehlszeile befindet und Sie eine Anwendung erstellen.
 
-Die *Zugriffsmodifizierer* kann einen der folgenden sein: `public`, `private`, `internal`. Weitere Informationen finden Sie unter [Zugriffssteuerung](access-control.md). Der Standardwert ist „öffentlich“.
+Der Zugriffsmodifizierer kann eine der folgenden `public`sein `private`: `internal`,,. Weitere Informationen finden Sie unter [Zugriffssteuerung](access-control.md). Der Standardwert ist „öffentlich“.
 
 ## <a name="referencing-code-in-modules"></a>Verweisen auf Code in Modulen
 
-Wenn Sie Funktionen, Typen und Werte aus einem anderen Modul verweisen, müssen Sie einen qualifizierten Namen verwenden oder öffnen Sie das Modul. Wenn Sie einen qualifizierten Namen verwenden, müssen Sie angeben, die Namespaces, die das Modul und der Bezeichner für das gewünschte Programmelement. Sie trennen Sie jedes Teil des vollqualifizierten Pfads durch einen Punkt (.), wie folgt.
+Wenn Sie auf Funktionen, Typen und Werte eines anderen Moduls verweisen, müssen Sie entweder einen qualifizierten Namen verwenden oder das Modul öffnen. Wenn Sie einen qualifizierten Namen verwenden, müssen Sie die Namespaces, das Modul und den Bezeichner für das gewünschte Programmelement angeben. Sie trennen die einzelnen Teile des qualifizierten Pfades wie folgt durch einen Punkt (.).
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-Öffnen Sie das Modul oder eine oder mehrere Namespaces auf den Code zu vereinfachen. Weitere Informationen zum Öffnen von Namespaces und Modulen finden Sie unter [Importdeklarationen: Die `open` Schlüsselwort](import-declarations-the-open-keyword.md).
+Sie können das Modul oder einen oder mehrere Namespaces öffnen, um den Code zu vereinfachen. Weitere Informationen zum Öffnen von Namespaces und Modulen finden [Sie unter Importieren von Deklarationen: Das `open` Schlüssel](import-declarations-the-open-keyword.md)Wort.
 
-Im folgenden Codebeispiel wird veranschaulicht, ein Modul auf oberster Ebene, die der gesamte Code bis zum Ende der Datei enthält.
+Das folgende Codebeispiel zeigt ein Modul der obersten Ebene, das den gesamten Code bis zum Ende der Datei enthält.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6604.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6604.fs)]
 
-Um diesen Code aus einer anderen Datei im gleichen Projekt verwenden, Sie qualifizierte Namen verwenden, oder Sie öffnen das Modul vor der Verwendung der Funktionen, wie in den folgenden Beispielen gezeigt.
+Wenn Sie diesen Code aus einer anderen Datei im selben Projekt verwenden möchten, verwenden Sie entweder qualifizierte Namen, oder öffnen Sie das Modul, bevor Sie die Funktionen verwenden, wie in den folgenden Beispielen gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6605.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6605.fs)]
 
-## <a name="nested-modules"></a>Geschachtelte Module
+## <a name="nested-modules"></a>Geduckte Module
 
-Module können geschachtelt werden. Inneren Module müssen eingezogen werden, so weit wie die äußere Moduldeklarationen, um anzugeben, dass sie die inneren Module, nicht um neue Module sind. Vergleichen Sie beispielsweise die folgenden beiden Beispiele. Modul `Z` ist ein inneres Modul in den folgenden Code.
+Module können eingebettet werden. Innere Module müssen in den Deklarationen äußerer Module eingezogen werden, um anzugeben, dass es sich um interne Module, nicht um neue Module handelt. Vergleichen Sie beispielsweise die folgenden beiden Beispiele. Das `Z` Modul ist ein internes Modul im folgenden Code.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6607.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6607.fs)]
 
-Aber Modul `Z` ein gleichgeordnetes Element Modul `Y` in den folgenden Code.
+Das Modul `Z` ist aber ein `Y` gleich geordnetes Modul im folgenden Code.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6608.fs)]
-Modul `Z` ist auch ein gleichgeordnetes Element-Modul in den folgenden Code, da sie nicht so weit wie die anderen Deklarationen in Modul eingezogen ist `Y`.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6608.fs)]
+Das `Z` Modul ist auch ein gleich geordnetes Modul im folgenden Code, da es nicht in das Modul eingefügt wird, das nicht in das `Y`Modul eingefügt wird.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6609.fs)]
-Schließlich, wenn das äußere Modul verfügt über keine Deklarationen, unmittelbar, von einem anderen Moduldeklaration gefolgt wird wird angenommen, dass der neue Moduldeklaration ein inneres Modul werden, aber der Compiler warnt Sie, wenn die zweite Moduldefinition konsequenter als nicht eingezogen ist die erste.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6609.fs)]
+Wenn das äußere Modul keine Deklarationen hat und unmittelbar eine andere Modul Deklaration folgt, wird angenommen, dass es sich bei der neuen Modul Deklaration um ein internes Modul handelt, aber der Compiler warnt Sie, wenn die zweite Modul Definition nicht weiter eingerückt wird. erstes.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6610.fs)]
-Um die Warnung zu vermeiden, Rücken Sie das innere-Modul.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6610.fs)]
+Um die Warnung auszuschließen, einziehen Sie das innere Modul.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6611.fs)]
-Wenn Sie sich der gesamte Code in einer Datei in ein einzelnes Modul des äußeren und inneren Module angezeigt werden sollen, das äußere Modul erfordert nicht das Gleichheitszeichen und die Deklarationen, einschließlich möglichen Moduldeklarationen inneren-, die in das äußere Modul gespeichert werden müssen nicht mit Einzug dargestellt werden. Deklarationen innerhalb der inneren Moduldeklarationen eingezogen werden müssen. Der folgende Code zeigt diesen Fall.
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6611.fs)]
+Wenn sich der gesamte Code in einer Datei in einem einzelnen äußeren Modul befinden soll und Sie innere Module benötigen, benötigt das äußere Modul nicht das Gleichheitszeichen, und die Deklarationen, einschließlich aller inneren Modul Deklarationen, die im äußeren Modul enthalten sind, müssen nicht eingezogen werden. Deklarationen innerhalb der inneren Modul Deklarationen müssen eingezogen werden. Der folgende Code zeigt diesen Fall.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/modules/snippet6612.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6612.fs)]
 
 ## <a name="recursive-modules"></a>Rekursive Module
 
-F#4.1 führt das Konzept der Module ein, die für alle enthaltenen Code gegenseitig rekursiver sein können.  Dies erfolgt über `module rec`.  Verwenden von `module rec` können einige Probleme, nicht mehr zum Schreiben von Code für sich gegenseitig referenzielle Typen und Module verringern.  Im folgenden finden ein Beispiel hierfür:
+F#4,1 führt das Konzept von Modulen ein, die es ermöglichen, dass der gesamte enthaltene Code gegenseitig rekursiv ist.  Dies erfolgt über `module rec`.  Die Verwendung `module rec` von kann einige Probleme verringern, die sich nicht gegenseitig referenziellen Code zwischen Typen und Modulen schreiben können.  Im folgenden finden Sie ein Beispiel hierfür:
 
 ```fsharp
 module rec RecursiveModule =
@@ -128,7 +128,7 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Beachten Sie, dass die Ausnahme `DontSqueezeTheBananaException` und die Klasse `Banana` beide sich aufeinander beziehen.  Darüber hinaus das Modul `BananaHelpers` und die Klasse `Banana` auch sich aufeinander beziehen.  Dies ist nicht möglich, die in F# zu express, wenn Sie entfernt die `rec` -Schlüsselwort aus der `RecursiveModule` Modul.
+Beachten Sie, dass `DontSqueezeTheBananaException` die Ausnahme und `Banana` die Klasse beide aufeinander verweisen.  Darüber hinaus verweisen das `BananaHelpers` Modul und die `Banana` Klasse auch aufeinander.  Dies ist nicht möglich, die in F# zu express, wenn Sie entfernt die `rec` -Schlüsselwort aus der `RecursiveModule` Modul.
 
 Diese Funktion ist auch möglich, im [Namespaces](namespaces.md) mit F# 4.1.
 
@@ -136,4 +136,4 @@ Diese Funktion ist auch möglich, im [Namespaces](namespaces.md) mit F# 4.1.
 
 - [F#-Sprachreferenz](index.md)
 - [Namespaces](namespaces.md)
-- [F#RFC-FS-1009 – lassen Sie sich gegenseitig referenzielle Typen und Module über größere Bereiche in Dateien](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009-zulassen von sich gegenseitig referenziellen Typen und Modulen über größere Bereiche innerhalb von Dateien](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

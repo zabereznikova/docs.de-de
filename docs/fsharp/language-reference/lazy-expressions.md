@@ -1,17 +1,17 @@
 ---
-title: Lazy-Ausdrücke
-description: Erfahren Sie, wie F# lazy Ausdrücken können die Leistung Ihrer apps und Bibliotheken verbessern.
+title: Nicht strikte Ausdrücke
+description: Erfahren Sie F# , wie verzögerte Ausdrücke die Leistung Ihrer Apps und Bibliotheken verbessern können.
 ms.date: 03/13/2019
-ms.openlocfilehash: 6d53d53093f4e93f53e1c956b94e2f1e4a1bbd55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97429e9a4c3838cbaa2ead197db4443e0820e8b3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904110"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630747"
 ---
-# <a name="lazy-expressions"></a>Lazy-Ausdrücke
+# <a name="lazy-expressions"></a>Nicht strikte Ausdrücke
 
-*Verzögerte Ausdrücke* sind Ausdrücke, die nicht sofort ausgewertet, aber stattdessen ausgewertet, wenn das Ergebnis benötigt wird. Dies kann helfen, um die Leistung Ihres Codes zu verbessern.
+Verzögerte *Ausdrücke* sind Ausdrücke, die nicht sofort ausgewertet werden, sondern stattdessen ausgewertet werden, wenn das Ergebnis benötigt wird. Dies kann helfen, die Leistung Ihres Codes zu verbessern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,17 +21,17 @@ let identifier = lazy ( expression )
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax *Ausdruck* ist Code, der ausgewertet wird, nur, wenn das Ergebnis erforderlich ist, und *Bezeichner* ist ein Wert, der das Ergebnis speichert. Der Wert ist vom Typ [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), in dem Typ, der tatsächlich dient zur `'T` wird aus dem Ergebnis des Ausdrucks bestimmt.
+In der vorherigen Syntax handelt es sich bei *Expression* um Code, der nur ausgewertet wird, wenn ein Ergebnis erforderlich ist, und der Bezeichner ist ein Wert, der das Ergebnis speichert. Der Wert ist vom Typ [`Lazy<'T>`](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), wobei der tatsächliche Typ, der für `'T` verwendet wird, vom Ergebnis des Ausdrucks bestimmt wird.
 
-Verzögerte Ausdrücken können Sie zur Verbesserung der Leistung durch Einschränken der Ausführung von einem Ausdrücke, die nur den Situationen, in dem ein Ergebnis benötigt wird.
+Mithilfe von Lazy Expressions können Sie die Leistung verbessern, indem Sie die Ausführung von Ausdrücken auf die Situationen beschränken, in denen ein Ergebnis erforderlich ist.
 
-Um die Ausdrücke, die ausgeführt werden zu erzwingen, rufen Sie die Methode `Force`. `Force` bewirkt, dass die Ausführung nur einmal ausgeführt werden. Nachfolgende Aufrufe von `Force` zurückgegeben werden, dieselben dazu führen, jedoch keinen Code nicht ausgeführt.
+Um die Ausführung der Ausdrücke zu erzwingen, wird die-Methode `Force`aufgerufen. `Force`bewirkt, dass die Ausführung nur einmal ausgeführt wird. Nachfolgende Aufrufe `Force` von geben das gleiche Ergebnis zurück, führen jedoch keinen Code aus.
 
-Der folgende Code veranschaulicht die Verwendung von verzögerten Ausdrücken und die Verwendung von `Force`. In diesem Code wird der Typ des `result` ist `Lazy<int>`, und die `Force` Methode gibt ein `int`.
+Der folgende Code veranschaulicht die Verwendung von Lazy Expressions und die Verwendung von `Force`. `result` In diesem Code ist `Lazy<int>`der Typ von, und die `Force` -Methode gibt einen `int`zurück.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-Verzögerte Auswertung, aber nicht die `Lazy` eingeben, wird auch für Sequenzen verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md).
+Die verzögerte Auswertung, aber nicht `Lazy` der-Typ, wird auch für Sequenzen verwendet. Weitere Informationen finden Sie unter [Sequenzen](sequences.md).
 
 ## <a name="see-also"></a>Siehe auch
 

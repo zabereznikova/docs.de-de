@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: 0fe09c0c261f36f1e9f241a6a6a8aacf3bf07d29
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: a29c31e93523e0843728d2fd7fa555946b139c55
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331492"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629599"
 ---
 # <a name="accessibility-best-practices"></a>Bewährte Methoden für Eingabehilfen
 > [!NOTE]
@@ -66,7 +66,7 @@ ms.locfileid: "68331492"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Gewährleisten der ordnungsgemäßen Skalierung aller Benutzeroberflächenelemente bei beliebiger DPI-Einstellung  
- Stellen Sie sicher, dass die gesamte [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] bei beliebiger [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] -Einstellung ordnungsgemäß skaliert wird. Stellen Sie außerdem sicher, dass [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente auf einen Bildschirm mit einer Auflösung von 1024 x 768 bei 120 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)]passen.  
+ Stellen Sie sicher [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , dass alle nach jeder dpi-Einstellung (dpi) ordnungsgemäß skaliert werden können. Stellen Sie außerdem sicher [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , dass die Elemente auf einem Bildschirm von 1024 x 768 mit 120 Punkten pro Zoll (dpi) passen.  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navigation  

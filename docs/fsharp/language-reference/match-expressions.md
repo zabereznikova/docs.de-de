@@ -1,17 +1,17 @@
 ---
-title: Vergleichsausdrücke
-description: Erfahren Sie, wie die F# Vergleichsausdruck stellt verzweigungssteuerung, die auf dem Vergleich eines Ausdrucks mit einem Satz von Mustern basiert.
+title: Ausdrücke vergleichen
+description: Erfahren Sie, F# wie der Übereinstimmungs Ausdruck eine Verzweigungs Steuerung bereitstellt, die auf dem Vergleich eines Ausdrucks mit einer Reihe von Mustern basiert.
 ms.date: 04/19/2018
-ms.openlocfilehash: 69ff8de1617e6b55d112d310bfcd8b2f967b6e8a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 222cb0604300039d86ed0c80293651631d212eb6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645199"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627605"
 ---
-# <a name="match-expressions"></a>Vergleichsausdrücke
+# <a name="match-expressions"></a>Ausdrücke vergleichen
 
-Die `match` Ausdruck liefert verzweigungssteuerung, die auf dem Vergleich eines Ausdrucks mit einem Satz von Mustern basiert.
+Der `match` Ausdruck stellt ein Verzweigungs Steuerelement bereit, das auf dem Vergleich eines Ausdrucks mit einer Reihe von Mustern basiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,9 +31,9 @@ function
 
 ## <a name="remarks"></a>Hinweise
 
-Die mustervergleichsausdrücke ermöglichen Verzweigungen durch komplexe auf Basis des Vergleichs eines Test-Ausdrucks mit einem Satz von Mustern. In der `match` Ausdruck, der *Testausdruck* mit jedes Muster verglichen wird, nacheinander, und wenn eine Übereinstimmung gefunden wird, wird das entsprechende *Ergebnisausdruck* wird ausgewertet, und der resultierende Wert als der Wert des Ausdrucks Übereinstimmung zurückgegeben.
+Die Muster Vergleichsausdrücke ermöglichen eine komplexe Verzweigung basierend auf dem Vergleich eines Test Ausdrucks mit einer Reihe von Mustern. Im Ausdruck wird der *Test Ausdruck* mit den einzelnen Mustern verglichen. Wenn eine Übereinstimmung gefunden wird, wird der entsprechende *Ergebnis Ausdruck* ausgewertet, und der resultierende Wert wird als Wert des Vergleichs Ausdrucks zurückgegeben. `match`
 
-Mustervergleich in der vorherigen Syntax gezeigt Funktion ist ein Lambda-Ausdruck, in welches, den Muster übereinstimmende sofort für das Argument ausgeführt wird. Der Musterabgleich-Funktion in der vorherigen Syntax ist äquivalent zu folgendem.
+Die in der vorherigen Syntax gezeigte Muster Vergleichsfunktion ist ein Lambda Ausdruck, in dem der Musterabgleich sofort auf dem Argument ausgeführt wird. Die in der vorherigen Syntax gezeigte Muster Vergleichsfunktion entspricht der folgenden.
 
 ```fsharp
 fun arg ->
@@ -43,27 +43,27 @@ fun arg ->
     | ...
 ```
 
-Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda-Ausdrücken: Die `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md).
+Weitere Informationen zu Lambda-Ausdrücken finden [Sie unter Lambda-Ausdrücke: Das `fun` Schlüssel](./functions/lambda-expressions-the-fun-keyword.md)Wort.
 
-Die gesamte Gruppe von Mustern sollten alle möglichen Übereinstimmungen der Eingabevariablen abdecken. In vielen Fällen verwenden Sie das Platzhaltermuster (`_`) als das letzte Muster entsprechend alle zuvor nicht übereinstimmende Eingabewerte.
+Der gesamte Satz von Mustern sollte alle möglichen Übereinstimmungen der Eingabevariablen abdecken. Häufig verwenden Sie das Platzhalter Muster (`_`) als letztes Muster, um alle zuvor nicht übereinstimmenden Eingabewerte abzugleichen.
 
-Der folgende Code zeigt einige der Methoden in der die `match` Ausdruck wird verwendet. Eine Referenz und Beispiele für alle Muster, die verwendet werden können, finden Sie unter [Musterabgleich](pattern-matching.md).
+Der folgende Code veranschaulicht einige der Methoden, mit denen der `match` Ausdruck verwendet wird. Einen Verweis und Beispiele für alle möglichen Muster, die verwendet werden können, finden Sie unter [Muster](pattern-matching.md)Abgleich.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
 
-## <a name="guards-on-patterns"></a>Wächter für Muster
+## <a name="guards-on-patterns"></a>Wächter bei Mustern
 
-Sie können eine `when` -Klausel, um eine zusätzliche Bedingung anzugeben, die die Variable ein Muster erfüllen müssen. Diese Klausel wird als bezeichnet ein *schützen*. Der Ausdruck nach den `when` Schlüsselwort wird nicht ausgewertet, wenn eine Übereinstimmung für das Muster, die dem Wächter zugeordnet ist.
+Sie können eine `when` -Klausel verwenden, um eine zusätzliche Bedingung anzugeben, die die Variable erfüllen muss, damit Sie einem Muster entspricht. Eine solche Klausel wird als *Wächter*bezeichnet. Der Ausdruck, der `when` auf das-Schlüsselwort folgt, wird nur ausgewertet, wenn eine Entsprechung für das diesem Guard zugeordnete Muster vorliegt.
 
-Das folgende Beispiel veranschaulicht die Verwendung von Wächter einen numerischen Bereich für ein Variablenmuster an. Beachten Sie, dass mehrere Bedingungen mit booleschen Operatoren kombiniert werden.
+Das folgende Beispiel veranschaulicht die Verwendung eines-Schutzes, um einen numerischen Bereich für ein Variablen Muster anzugeben. Beachten Sie, dass mehrere Bedingungen mithilfe von booleschen Operatoren kombiniert werden.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Beachten Sie, dass da andere Werte als Literale in das Muster verwendet werden können, müssen Sie verwenden eine `when` -Klausel, wenn einen Teil der Eingabe mit einem Wert zu vergleichen. Dies wird im folgenden Code gezeigt:
+Beachten Sie, dass Sie eine `when` -Klausel verwenden müssen, wenn Sie einen Teil der Eingabe mit einem Wert vergleichen müssen, weil andere Werte als Literale nicht im Muster verwendet werden können. Dies wird im folgenden Code veranschaulicht:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-Beachten Sie, dass bei einem union-Muster durch eine Guard abgedeckt ist, um der Wächter gilt **alle** der Muster, nicht nur die letzte Aktivität. Betrachten Sie den folgenden Code, den Wächter `when a > 12` gilt für `A a` und `B a`:
+Beachten Sie Folgendes: Wenn ein Union-Muster durch einen Wächter abgedeckt wird, gilt der Wächter für **alle** Muster, nicht nur für den letzten. Beispielsweise gilt für den folgenden Code, dass der `when a > 12` Wächter sowohl `A a` für als `B a`auch für gilt:
 
 ```fsharp
 type Union =

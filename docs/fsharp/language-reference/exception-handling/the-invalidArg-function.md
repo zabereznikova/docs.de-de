@@ -1,17 +1,17 @@
 ---
 title: 'Ausnahmen: Die invalidArg-Funktion'
-description: Erfahren Sie, wie die F# 'InvalidArg'-Funktion generiert einen Argument-Ausnahmefehler.
+description: Erfahren Sie, F# wie die InvalidArg-Funktion eine Argument Ausnahme generiert.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1f0cbc9b7e805822544d6d54bc1fc69adf82967a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 010dbfe313f539093b4ee7a19984ef54500b072d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645495"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630303"
 ---
 # <a name="exceptions-the-invalidarg-function"></a>Ausnahmen: Die invalidArg-Funktion
 
-Die `invalidArg` Funktion generiert einen Argument-Ausnahmefehler.
+Die `invalidArg` Funktion generiert eine Argument Ausnahme.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,13 +21,13 @@ invalidArg parameter-name error-message-string
 
 ## <a name="remarks"></a>Hinweise
 
-Der Parametername in der vorherigen Syntax ist eine Zeichenfolge mit dem Namen des Parameters, deren Argument ungültig war. Die *Fehlermeldungszeichenfolge* ist eine Literalzeichenfolge oder ein Wert vom Typ `string`. Es wird die `Message` -Eigenschaft des Ausnahmeobjekts.
+Der Parameter Name in der vorherigen Syntax ist eine Zeichenfolge mit dem Namen des Parameters, dessen Argument ungültig war. *Error-Message-String* ist eine Literalzeichenfolge oder ein Wert `string`vom Typ. Sie wird `Message` zur-Eigenschaft des Ausnahme Objekts.
 
-Die Ausnahme abrufen, indem `invalidArg` ist eine `System.ArgumentException` Ausnahme. Der folgende Code veranschaulicht die Verwendung von `invalidArg` eine Ausnahme ausgelöst.
+Die von `invalidArg` generierte Ausnahme ist eine `System.ArgumentException` -Ausnahme. Der folgende Code veranschaulicht die Verwendung von `invalidArg` , um eine Ausnahme auszulösen.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6101.fs)]
 
-Die Ausgabe ist Folgendes ein, gefolgt von einer stapelverfolgung (nicht dargestellt).
+Die Ausgabe ist wie folgt, gefolgt von einer Stapel Überwachung (nicht dargestellt).
 
 ```
 December
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [Ausnahmebehandlung](index.md)
 - [Ausnahmetypen](exception-types.md)
-- [Ausnahmen: Die `try...with` Ausdruck](the-try-with-expression.md)
-- [Ausnahmen: Die `try...finally` Ausdruck](the-try-finally-expression.md)
+- [Ausnahmen: Der `try...with` Ausdruck](the-try-with-expression.md)
+- [Ausnahmen: Der `try...finally` Ausdruck](the-try-finally-expression.md)
 - [Ausnahmen: Die `raise`-Funktion](the-raise-function.md)
-- [Ausnahmen: Die `failwith` Funktion](the-failwith-function.md)
+- [Ausnahmen: Die `failwith` -Funktion](the-failwith-function.md)

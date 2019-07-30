@@ -2,16 +2,16 @@
 title: Datensätze
 description: Erfahren Sie, wie F#-Datensätzen für einfache Aggregate benannter Werte, optional mit Membern darstellen.
 ms.date: 06/09/2019
-ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816190"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627281"
 ---
 # <a name="records"></a>Datensätze
 
-Datensätze stellen einfache Aggregate benannter Werte dar, optional mit Membern. Sie können entweder Strukturen oder Verweistypen sein.  Sie sind Verweistypen standardmäßig.
+Datensätze stellen einfache Aggregate benannter Werte dar, optional mit Membern. Sie können entweder Strukturen oder Verweis Typen sein.  Standardmäßig handelt es sich dabei um Verweis Typen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,55 +26,55 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax *Typename* ist der Name des Datensatztyps, *label1* und *label2* sind Namen von Werten, um genannte *Bezeichnungen*, und *type1* und *Typ2* sind die Typen dieser Werte. *Memberliste* ist die optionale Liste von Elementen für den Typ.  Sie können die `[<Struct>]` Attribut um einen Datensatz, der ein Verweistyp ist, statt einen Eintrag für die Struktur zu erstellen.
+In der vorherigen Syntax ist *tykame* der Name des Daten Satz Typs, *Label1* und *Label2* sind Namen von Werten, die als *Bezeichnungen*bezeichnet werden, und *Typ1* und *Typ2* sind die Typen dieser Werte. "Element *-List* " ist die optionale Liste der Member für den Typ.  Mit dem `[<Struct>]` -Attribut können Sie einen Strukturdaten Satz anstelle eines Datensatzes erstellen, bei dem es sich um einen Verweistyp handelt.
 
-Es folgen einige Beispiele.
+Im folgenden finden Sie einige Beispiele.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
 
-Wenn jede Bezeichnung in einer separaten Zeile ist, ist das Semikolon optional.
+Wenn sich jede Bezeichnung in einer separaten Zeile befindet, ist das Semikolon optional.
 
-Sie können Werte in Ausdrücken, die als bekannt festlegen *aufzeichnen Ausdrücke*. Der Compiler leitet den Typ von Bezeichnungen verwendet (wenn die Bezeichnungen ausreichend unterscheiden, andere Eintragstypen werden). Geschweifte Klammern ({}) einschließen der Datensatzausdruck. Der folgende Code zeigt einen Datensatzausdruck, der einen Datensatz mit drei Float-Elemente mit Bezeichnungen initialisiert `x`, `y` und `z`.
+Sie können Werte in Ausdrücken festlegen, die als *Daten Satz Ausdrücke*bezeichnet werden. Der Compiler leitet den Typ von den verwendeten Bezeichnungen ab (wenn sich die Bezeichnungen ausreichend von denen anderer Daten Satz Typen unterscheiden). Geschweifte Klammern ({}) schließen den Daten Satz Ausdruck ein. Der folgende Code zeigt einen Datensatz-Ausdruck, der einen Datensatz mit drei float-Elementen mit `x`den `y` Bezeichnungen `z`, und initialisiert.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
-Verwenden Sie nicht die abgekürzte Form aus, wenn möglicherweise einen anderen Typ, der auch die gleichen Bezeichnungen aufweist.
+Verwenden Sie das gekürzte Formular nicht, wenn ein anderer Typ vorhanden sein könnte, der auch über dieselben Bezeichnungen verfügt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-Die Bezeichnungen von der die zuletzt deklarierte Typ haben Vorrang gegenüber denen des zuvor deklarierten Typs im vorherigen Beispiel `mypoint3D` wird davon ausgegangen werden `Point3D`. Sie können den Datensatztyp, wie im folgenden Code explizit angeben.
+Die Bezeichnungen des zuletzt deklarierten Typs haben Vorrang vor denen des zuvor deklarierten Typs `mypoint3D` `Point3D`. im vorherigen Beispiel wird daher als abgeleitet. Sie können den Daten Satz Typen explizit angeben, wie im folgenden Code.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
-Methoden können für Record-Typen, genau wie bei Klassentypen definiert werden.
+Methoden können für Daten Satz Typen genau wie für Klassentypen definiert werden.
 
-## <a name="creating-records-by-using-record-expressions"></a>Erstellen von Datensätzen mithilfe von Datensatz-Ausdrücken
+## <a name="creating-records-by-using-record-expressions"></a>Erstellen von Datensätzen mithilfe von Daten Satz Ausdrücken
 
-Sie können Einträge initialisieren, indem Sie mit den Bezeichnungen, die im Datensatz definiert sind. Ein Ausdruck, der dieses wird als bezeichnet ein *aufzeichnen Ausdruck*. Verwenden Sie geschweifte Klammern zum Einschließen der Datensatzausdruck und verwenden Sie das Semikolon als Trennzeichen ein.
+Sie können Datensätze mit den Bezeichnungen initialisieren, die im Datensatz definiert sind. Ein Ausdruck, der dies bewirkt, wird als *Daten Satz Ausdruck*bezeichnet. Verwenden Sie geschweifte Klammern, um den Daten Satz Ausdruck einzuschließen und das Semikolon als Trennzeichen zu verwenden.
 
-Das folgende Beispiel zeigt, wie Sie einen Datensatz zu erstellen.
+Im folgenden Beispiel wird gezeigt, wie ein Datensatz erstellt wird.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
 
-Die Semikolons aus, nachdem das letzte Feld in der Datensatzausdruck und in der Typdefinition sind optional, unabhängig davon, ob die Felder in einer Zeile.
+Die Semikolons nach dem letzten Feld im Daten Satz Ausdruck und in der Typdefinition sind optional, unabhängig davon, ob sich die Felder in einer Zeile befinden.
 
-Wenn Sie einen Datensatz erstellen, müssen Sie Werte für jedes Feld angeben. Sie können nicht auf die Werte der anderen Felder in den Initialisierungsausdruck für ein Feld verweisen.
+Wenn Sie einen Datensatz erstellen, müssen Sie Werte für jedes Feld angeben. Sie können nicht auf die Werte anderer Felder im Initialisierungs Ausdruck für ein beliebiges Feld verweisen.
 
-Im folgenden Code, den Typ des `myRecord2` wird abgeleitet aus den Namen der Felder. Optional können Sie den Typnamen explizit angeben.
+Im folgenden Code `myRecord2` wird der Typ von aus den Namen der Felder abgeleitet. Optional können Sie den Typnamen explizit angeben.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-Eine andere Form der Datensatzkonstruktion kann nützlich sein, beim Kopieren eines vorhandenen Datensatzes, und möglicherweise einige Werte der Felder ändern. Die folgende Codezeile veranschaulicht dies.
+Eine andere Form der Daten Satz Erstellung kann nützlich sein, wenn Sie einen vorhandenen Datensatz kopieren und möglicherweise einige der Feldwerte ändern müssen. Dies wird in der folgenden Codezeile veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-Diese Form des datensatzausdrucks heißt die *kopieren und Aktualisieren des Datensatzes Ausdruck*.
+Diese Form des Daten Satz Ausdrucks wird als *Kopier-und Update Daten Satz Ausdruck*bezeichnet.
 
-Datensätze sind standardmäßig nicht verändert werden. Allerdings können Sie leicht geänderte Datensätze mithilfe eines Ausdrucks kopieren und aktualisieren erstellen. Sie können auch explizit ein veränderlichen Feld angeben.
+Datensätze sind standardmäßig unveränderlich. mithilfe eines Kopier-und Update Ausdrucks können Sie jedoch problemlos geänderte Datensätze erstellen. Sie können auch explizit ein änderbares Feld angeben.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
 
-Verwenden Sie das DefaultValue-Attribut nicht mit Feldern Datensatzes an. Ein besserer Ansatz ist Standardinstanzen von Datensätzen mit Feldern, die initialisiert werden, auf die Standardwerte definieren und dann eine Kopie verwenden und aktualisieren Datensatzausdruck ein, um alle Felder festgelegt, die von den Standardwerten abweichen.
+Verwenden Sie das DefaultValue-Attribut nicht mit Datensatz-Feldern. Ein besserer Ansatz besteht darin, Standard Instanzen von Datensätzen mit Feldern zu definieren, die mit Standardwerten initialisiert werden. Anschließend können Sie mithilfe eines Ausdrucks zum Kopieren und Aktualisieren von Datensätzen alle Felder festlegen, die von den Standardwerten abweichen.
 
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
@@ -90,13 +90,13 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
-## <a name="creating-mutually-recursive-records"></a>Erstellen von sich gegenseitig rekursiver-Datensätzen
+## <a name="creating-mutually-recursive-records"></a>Erstellen von rekursiven Datensätzen
 
-Einige Zeit, wenn Sie einen Datensatz zu erstellen, empfiehlt es sich so, dass sie von einem anderen Typ abhängen, die Sie später definieren möchten. Dies ist ein Fehler während der Kompilierung, es sei denn, Sie definieren, dass der Record-Typen, um sich gegenseitig rekursiv sein.
+Wenn Sie einen Datensatz erstellen, ist es möglicherweise von einem anderen Typ abhängig, den Sie später definieren möchten. Dies ist ein Kompilierungsfehler, es sei denn, Sie definieren die Daten Satz Typen, die gegenseitig rekursiv
 
-Definieren von sich gegenseitig rekursiver Datensätze erfolgt mit der `and` Schlüsselwort. Dadurch können Sie die Typen von 2 oder mehr Datensätze miteinander zu verknüpfen.
+Das Definieren von gegenseitig rekursiven Daten `and` Sätzen erfolgt mit dem Schlüsselwort. Auf diese Weise können Sie zwei oder mehr Daten Satz Typen miteinander verknüpfen.
 
-Der folgende Code definiert z. B. eine `Person` und `Address` Typ als sich gegenseitig rekursiver:
+Der folgende Code definiert z. b. `Person` einen `Address` -Typ und den-Typ als gegenseitig rekursiv:
 
 ```fsharp
 // Create a Person type and use the Address type that is not defined
@@ -111,15 +111,15 @@ and Address =
     PostCode: string }
 ```
 
-Würden Sie im vorherige Beispiel ohne definieren die `and` -Schlüsselwort, und es wird nicht kompiliert werden. Die `and` -Schlüsselwort ist erforderlich, sich gegenseitig rekursiver Definitionen.
+Wenn Sie das vorherige Beispiel ohne das `and` Schlüsselwort definieren, würde es nicht kompiliert. Das `and` Schlüsselwort ist für gegenseitig rekursive Definitionen erforderlich.
 
 ## <a name="pattern-matching-with-records"></a>Musterabgleich mit Datensätzen
 
-Datensätze können mit dem Mustervergleich verwendet werden. Sie können einige Felder explizit angeben und Bereitstellen von Variablen für die anderen Felder, die zugewiesen werden soll, wenn eine Übereinstimmung auftritt. Dies wird im folgenden Codebeispiel veranschaulicht.
+Datensätze können mit Musterabgleich verwendet werden. Sie können einige Felder explizit angeben und Variablen für andere Felder bereitstellen, die zugewiesen werden, wenn eine Entsprechung auftritt. Dies wird im folgenden Codebeispiel veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
 
-Die Ausgabe dieses Codes lautet wie folgt aus.
+Die Ausgabe dieses Codes lautet wie folgt.
 
 ```
 Point is at the origin.
@@ -129,26 +129,26 @@ Point is at (10.000000, 0.000000, -1.000000).
 
 ## <a name="differences-between-records-and-classes"></a>Unterschiede zwischen Datensätzen und Klassen
 
-Datensatzfelder unterscheiden sich von Klassen, sie werden automatisch als Eigenschaften verfügbar gemacht, und es handelt sich bei der Erstellung verwendet und der Datensätze kopieren. Datensatzkonstruktion unterscheidet sich auch von der Klassenkonstruktion. Einen Konstruktor kann nicht in einem Datensatz vom Typ definiert werden. Stattdessen gilt die Konstruktionssyntax, die in diesem Thema beschrieben. Klassen verfügen über keine direkte Beziehung zwischen Konstruktorparameter, Felder und Eigenschaften.
+Daten Satz Felder unterscheiden sich von Klassen darin, dass Sie automatisch als Eigenschaften verfügbar gemacht werden und beim Erstellen und Kopieren von Datensätzen verwendet werden. Die Daten Satz Erstellung unterscheidet sich auch von der Klassen Erstellung In einem Daten Recordtyp können Sie keinen Konstruktor definieren. Stattdessen gilt die in diesem Thema beschriebene Konstruktions Syntax. Klassen haben keine direkte Beziehung zwischen Konstruktorparametern, Feldern und Eigenschaften.
 
-Wie Union- und Struktur enthalten Datensätze strukturelle Gleichheit-Semantik. Klassen verfügen über Gleichheitssemantik auf. Dies wird im folgenden Codebeispiel veranschaulicht.
+Wie Union-und Strukturtypen haben Datensätze strukturelle Gleichheits Semantik. Klassen verfügen über eine Verweis Gleichheits Semantik. Dies wird im folgenden Codebeispiel veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
-Die Ausgabe dieses Codes lautet wie folgt aus:
+Die Ausgabe dieses Codes lautet wie folgt:
 
 ```
 The records are equal.
 ```
 
-Wenn Sie den gleichen Code mit Klassen schreiben, die beiden Klassenobjekte wäre ungleich daran, dass zwei Objekte auf dem Heap die beiden Werte darstellen, und nur die Adressen verglichen werden sollen (es sei denn, der den Klassentyp überschreibt die `System.Object.Equals` Methode).
+Wenn Sie denselben Code mit Klassen schreiben, sind die beiden Klassen Objekte ungleich, da die beiden Werte zwei Objekte auf dem Heap darstellen und nur die Adressen verglichen werden würden (es sei denn, der Klassentyp über `System.Object.Equals` schreibt die-Methode).
 
-Wenn Sie überprüft die Gleichheit für Datensätze verweisen müssen, fügen Sie das Attribut `[<ReferenceEquality>]` über dem Datensatz.
+Wenn Sie Verweis Gleichheit für Datensätze benötigen, fügen Sie `[<ReferenceEquality>]` das Attribut oberhalb des Datensatzes hinzu.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [F#-Typen](fsharp-types.md)
 - [Klassen](classes.md)
 - [F#-Sprachreferenz](index.md)
-- [Verweisgleichheit](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Verweis-Gleichheit](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
 - [Mustervergleich](pattern-matching.md)

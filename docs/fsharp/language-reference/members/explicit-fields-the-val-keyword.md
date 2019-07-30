@@ -1,17 +1,17 @@
 ---
-title: 'Explizite Felder: Das Val Schlüsselwort'
-description: Erfahren Sie mehr über die F# "Val"-Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs zu deklarieren.
+title: 'Explizite Felder: Das Val-Schlüsselwort'
+description: Erfahren Sie mehr F# über das Schlüsselwort "Val", das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder einem Strukturtyp zu deklarieren, ohne den Typ zu initialisieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13e0ba2875e8accfd1c0da0e1c6fef4973309f9b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904916"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627533"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das Val Schlüsselwort
+# <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das Val-Schlüsselwort
 
-Das `val`-Schlüsselwort wird zum Deklarieren eines Speicherort zum Speichern eines Werts in einer Klasse oder einem Strukturtyp verwendet, ohne ihn zu initialisieren. Speicherorte, die auf diese Weise deklariert heißen *explizite Felder*. Das `val`-Schlüsselwort kann auch zusammen mit dem `member`-Schlüsselwort verwendet werden, um eine automatisch implementierte Eigenschaft zu deklarieren. Weitere Informationen zu automatisch implementierte Eigenschaften finden Sie unter [Eigenschaften](properties.md).
+Das `val`-Schlüsselwort wird zum Deklarieren eines Speicherort zum Speichern eines Werts in einer Klasse oder einem Strukturtyp verwendet, ohne ihn zu initialisieren. Speicherorte, die auf diese Weise deklariert werden, werden als *Explizite Felder*bezeichnet. Das `val`-Schlüsselwort kann auch zusammen mit dem `member`-Schlüsselwort verwendet werden, um eine automatisch implementierte Eigenschaft zu deklarieren. Weitere Informationen zu automatisch implementierten Eigenschaften finden Sie unter [Eigenschaften](properties.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -23,9 +23,9 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 In der Regel werden Felder in einer Klasse oder einem Strukturtyp durch eine `let`-Bindung definiert. `let`-Bindungen müssen jedoch als Teil des Klassenkonstruktors initialisiert werden, was nicht immer möglich, notwendig oder gewünscht ist. Sie können das `val`-Schlüsselwort verwenden, wenn Sie ein nicht initialisiertes Feld implementieren möchten.
 
-Explizite Felder können statisch oder nicht statisch sein. Die *Zugriffsmodifizierer* kann `public`, `private`, oder `internal`. Standardmäßig sind explizite Felder öffentlich. Dies unterscheidet sich von `let`-Bindungen in Klassen, die immer privat sind.
+Explizite Felder können statisch oder nicht statisch sein. Der Zugriffsmodifizierer `private`kann, `internal`oder sein. `public` Standardmäßig sind explizite Felder öffentlich. Dies unterscheidet sich von `let`-Bindungen in Klassen, die immer privat sind.
 
-Die [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) Attribut muss für explizite Felder in Klassentypen, die einen primären Konstruktor verfügen. Dieses Attribut gibt an, dass das Feld mit 0 (null) initialisiert wird. Der Typ des Felds muss die Initialisierung mit 0 (null) unterstützen. Ein Typ unterstützt die Initialisierung mit 0 (null), wenn er eine der folgenden Bedingungen erfüllt:
+Das [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) -Attribut ist für explizite Felder in Klassentypen erforderlich, die über einen primären Konstruktor verfügen. Dieses Attribut gibt an, dass das Feld mit 0 (null) initialisiert wird. Der Typ des Felds muss die Initialisierung mit 0 (null) unterstützen. Ein Typ unterstützt die Initialisierung mit 0 (null), wenn er eine der folgenden Bedingungen erfüllt:
 
 - Ein primitiver Typ, der einen Wert von 0 (null) hat.
 
@@ -44,7 +44,7 @@ Bei einem veränderlichen Feld ist die kompilierte .NET-Darstellung ein .NET-Fel
 
 Der folgende Code zeigt die Verwendung expliziter Felder und zum Vergleich eine `let`-Bindung in einer Klasse, die über einen primären Konstruktor verfügt. Beachten Sie, dass das `let`-gebundene Feld `myInt1` privat ist. Wenn das `let`-gebundene Feld `myInt1` von einer Membermethode referenziert wird, ist der Selbstbezeichner `this` nicht erforderlich. Wenn Sie jedoch die expliziten Felder `myInt2` und `myString` referenzieren, ist der Selbstbezeichner erforderlich.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 
 Die Ausgabe lautet wie folgt:
 
@@ -55,19 +55,19 @@ Die Ausgabe lautet wie folgt:
 
 Der folgende Code zeigt die Verwendung von expliziten Feldern in einer Klasse, die nicht über einen primären Konstruktor verfügt. In diesem Fall ist das `DefaultValue`-Attribut nicht erforderlich, es müssen jedoch alle Felder in den Konstruktoren initialisiert werden, die für den Typ definiert sind.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6702.fs)]
 
 Die Ausgabe lautet `35 22`.
 
 Der folgende Code zeigt die Verwendung von expliziten Feldern in einer Struktur. Da eine Struktur ein Werttyp ist, verfügt sie automatisch über einen Standardkonstruktor, der die Werte der zugehörigen Felder auf 0 (null) festlegt. Daher ist das `DefaultValue`-Attribut nicht erforderlich.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
 Die Ausgabe lautet `11 xyz`.
 
-**Beachten Sie, dass**, wenn Sie beabsichtigen, initialisieren Sie die Struktur mit `mutable` Felder ohne `mutable` -Schlüsselwort, funktioniert Ihre Zuweisungen für eine Kopie der Struktur der direkt nach der Zuweisung verworfen wird. Aus diesem Grund wird nicht die Struktur ändern.
+**Vorsicht**: Wenn Sie die Struktur mit `mutable` Feldern ohne `mutable` Schlüsselwort initialisieren, funktionieren Ihre Zuweisungen an einer Kopie der Struktur, die direkt nach der Zuweisung verworfen wird. Daher ändert sich Ihre Struktur nicht.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
 Explizite Felder sind nicht für die routinemäßige Verwendung gedacht. Im Allgemeinen sollten Sie möglichst eine `let`-Bindung in einer Klasse verwenden, statt eines expliziten Felds. Explizite Felder sind in bestimmten Interoperabilitätsszenarios hilfreich, wenn Sie z. B. eine Struktur definieren müssen, die in einem Plattformaufruf einer systemeigenen API oder in COM-Interop-Szenarien verwendet wird. Weitere Informationen finden Sie unter [externe Funktionen](../functions/external-functions.md). Eine andere Situation, in der ein explizites Feld möglicherweise erforderlich, besteht dann, wenn Sie mit einem F#-Codegenerator arbeiten, der Klassen ohne primären Konstruktor ausgibt. Explizite Felder sind auch für threadstatische Variablen oder ähnliche Konstrukte sinnvoll. Weitere Informationen finden Sie unter `System.ThreadStaticAttribute`.
 

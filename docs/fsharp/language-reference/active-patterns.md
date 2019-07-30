@@ -2,16 +2,16 @@
 title: Aktive Muster
 description: Erfahren Sie, wie aktive Muster zu verwenden, um benannte Partitionen definieren, die Eingabedaten in der Programmiersprache F# zu unterteilen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 25ab255574390d3761fe788aeb413c8ee04fda2a
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 12f423abe05e649e0b527ed04124b991feb5d592
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690410"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629945"
 ---
 # <a name="active-patterns"></a>Aktive Muster
 
-*Aktive Muster* ermöglichen es Ihnen, definieren benannte Partitionen, die Eingabedaten unterteilen, sodass Sie diese Namen in einem musterabgleichsausdruck wie für eine Unterscheidungs-Union verwenden können. Mit aktiven Mustern können Sie Daten benutzerdefiniert für jede Partition zerlegen.
+Mit *aktiven Mustern* können Sie benannte Partitionen definieren, die Eingabedaten unterteilen, sodass Sie diese Namen wie bei einer Unterscheidungs-Union in einem Muster Vergleichs Ausdruck verwenden können. Mit aktiven Mustern können Sie Daten benutzerdefiniert für jede Partition zerlegen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,17 +30,17 @@ let (|identifier|_|) [arguments ] valueToMatch = expression
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax wird der Bezeichner sind die Namen für die Partitionen der Eingabedaten, die durch dargestellt werden *Argumente*, oder in anderen Worten: die Namen für Teilmengen der Menge aller Werte der Argumente. Es können bis zu sieben Partitionen in der Definition eines aktiven Musters vorhanden sein. Die *Ausdruck* beschreibt die Form, in dem die Daten zu zerlegen. Definition eines aktiven Musters können Sie definieren die Regeln zur Bestimmung der benannte Partitionen die Werte, die als Argumente zu gehören. Die (| und |) Symbole werden als bezeichnet *Bananenklammern* und die Funktion, die von diesem Typ der Let-Bindung erstellt haben, heißt ein *aktive Erkennung*.
+In der vorherigen Syntax sind die Bezeichner Namen für Partitionen der Eingabedaten, die durch *Argumente*dargestellt werden, d. h. Namen für Teilmengen der Menge aller Werte der Argumente. Eine aktive Muster Definition kann bis zu sieben Partitionen aufweisen. Der *Ausdruck* beschreibt das Formular, in das die Daten zerlegt werden. Sie können eine aktive Muster Definition verwenden, um die Regeln zum Bestimmen der benannten Partitionen zu definieren, zu denen die als Argumente angegebenen Werte gehören. Die Symbole (| und |) werden als *Bananen Clips* bezeichnet, und die von dieser Art der Let-Bindung erstellte Funktion wird als *aktive Erkennung*bezeichnet.
 
-Betrachten Sie beispielsweise das folgende aktive Muster mit einem Argument aus.
+Sehen Sie sich als Beispiel das folgende aktive Muster mit einem Argument an.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5001.fs)]
 
-Sie können das aktive Muster in einem musterabgleichsausdruck wie im folgenden Beispiel gezeigt verwenden.
+Sie können das aktive Muster in einem Muster Vergleichs Ausdruck verwenden, wie im folgenden Beispiel gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5002.fs)]
 
-Die Ausgabe dieses Programms lautet wie folgt aus:
+Die Ausgabe dieses Programms lautet wie folgt:
 
 ```
 7 is odd
@@ -48,11 +48,11 @@ Die Ausgabe dieses Programms lautet wie folgt aus:
 32 is even
 ```
 
-Eine weitere Verwendungsmöglichkeit der aktive Muster ist Zerlegen von Datentypen auf verschiedene Weise, wie z. B. wenn die gleichen zugrunde liegenden Daten mögliche Darstellungen aufweist. Z. B. eine `Color` Objekt in eine RGB-Darstellung oder eine HSB-Darstellung zerlegt werden kann.
+Eine andere Verwendung von aktiven Mustern besteht darin, Datentypen auf verschiedene Weise zu zerlegen, z. b. wenn die gleichen zugrunde liegenden Daten verschiedene mögliche Darstellungen haben. Beispielsweise kann ein `Color` -Objekt in eine RGB-Darstellung oder eine HSB-Darstellung zerlegt werden.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
-Die Ausgabe des obigen Programms lautet wie folgt aus:
+Die Ausgabe des obigen Programms lautet wie folgt:
 
 ```
 Red
@@ -72,17 +72,17 @@ BlanchedAlmond
  Hue: 36.000000 Saturation: 1.000000 Brightness: 0.901961
 ```
 
-In Kombination mit aktiven Mustern diese beiden Methoden ermöglichen Ihnen die Partition Daten in nur das entsprechende Formular zu zerlegen und führen Sie die entsprechenden Berechnungen für die entsprechenden Daten in der Form, die am einfachsten, für die Berechnung.
+In Kombination können Sie mit diesen beiden Methoden zum Verwenden von aktiven Mustern Daten in das entsprechende Formular partitionieren und Zerlegen sowie die entsprechenden Berechnungen für die entsprechenden Daten in der für die Berechnung am besten geeigneten Form ausführen.
 
-Die resultierende mustervergleichsausdrücke ermöglichen, Daten auf einfache Weise geschrieben werden, die sehr gut lesbar, erheblich vereinfachen potenziell komplexen Branchen und Datencode für die Analyse ist.
+Die sich ergebenden Muster Vergleichsausdrücke ermöglichen es, Daten auf bequeme Weise zu schreiben, die sehr lesbar ist, und potenziell komplexe Verzweigungen und Datenanalyse Code erheblich zu vereinfachen.
 
-## <a name="partial-active-patterns"></a>Partielle aktive Muster
+## <a name="partial-active-patterns"></a>Teilweise aktive Muster
 
-In einigen Fällen müssen Sie nur einen Teil der Eingabe Speicherplatz zu partitionieren. In diesem Fall schreiben Sie eine Gruppe von partiellen Mustern, von denen einige Eingaben überein, aber nicht andere Eingaben entsprechen. Aktive Muster, die keine immer einen Wert produzieren heißen *partielle aktive Muster*; sie haben einen Rückgabewert, der ein Optionstyp ist. Um eine partielle aktive Muster zu definieren, verwenden Sie ein Platzhalterzeichen (\_) am Ende der Liste der Muster innerhalb der Bananenklammern. Der folgende Code veranschaulicht die Verwendung von partiellen aktiven Musters.
+Manchmal müssen Sie nur einen Teil des Eingabe Raums partitionieren. In diesem Fall schreiben Sie eine Reihe von partiellen Mustern, von denen jedes mit einigen Eingaben identisch ist, aber nicht mit anderen Eingaben verglichen werden kann. Aktive Muster, die nicht immer einen Wert ergeben, werden als *teilweise aktive Muster*bezeichnet. Sie verfügen über einen Rückgabewert, der ein Optionstyp ist. Wenn Sie ein teilweise aktives Muster definieren möchten, verwenden Sie ein Platz\_Halter Zeichen () am Ende der Liste der Muster innerhalb der Bananen Clips. Der folgende Code veranschaulicht die Verwendung eines teilweise aktiven Musters.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
-Die Ausgabe des vorherigen Beispiels lautet wie folgt aus:
+Die Ausgabe des vorherigen Beispiels lautet wie folgt:
 
 ```
 1.100000 : Floating point
@@ -92,7 +92,7 @@ Die Ausgabe des vorherigen Beispiels lautet wie folgt aus:
 Something else : Not matched.
 ```
 
-Wenn Sie partielle aktive Muster zu verwenden, können manchmal die einzelnen Optionen zusammenhanglosen oder sich gegenseitig ausschließende, jedoch keine sein müssen. Im folgenden Beispiel sind das Muster Quadrat und den Cube-Muster nicht zusammenhanglos, da einige Zahlen sowohl Quadrate und Cubes, z. B. 64 sind. Das folgende Programm verwendet die AND-Muster, das Quadrat und den Cube-Muster kombiniert. Drucken alle ganzen Zahlen bis zu 1000, die sowohl Quadrate und Cubes, als auch diejenigen, bei die nur auf Cubes sind. 
+Wenn Sie teilweise aktive Muster verwenden, kann es vorkommen, dass die einzelnen Optionen zusammen hanglos oder sich gegenseitig ausschließen, aber nicht sein müssen. Im folgenden Beispiel sind das Muster Quadrat und der Pattern-Cube nicht zusammen hanglos, da einige Zahlen sowohl Quadrate als auch Cubes sind, z. b. 64. Im folgenden Programm werden das-Muster und das-Muster verwendet, um die Quadrat-und die Cube-Muster Dabei werden alle ganzen Zahlen bis zu 1000 gedruckt, bei denen es sich um Quadrate und Cubes handelt, sowie um diejenigen, bei denen es sich nur um Cubes handelt. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
@@ -113,21 +113,21 @@ Die Ausgabe lautet wie folgt:
 
 ## <a name="parameterized-active-patterns"></a>Parametrisierte aktive Muster
 
-Aktive Muster akzeptieren immer mindestens ein Argument für das Element, das abgeglichen wird, aber unter Umständen akzeptieren sie zusätzliche Argumente ebenfalls in diesem Fall, dass der Name *parametrisiertes aktives Muster* gilt. Mit zusätzlichen Argumenten kann es sich um ein allgemeines Muster spezialisiert werden. Aktive Muster, mit denen reguläre Ausdrücke zum Analysieren von Zeichenfolgen häufig kann beispielsweise den regulären Ausdruck als zusätzlichen Parameter, wie im folgenden Code, der auch das partielle aktive Muster verwendet `Integer` im vorherigen Codebeispiel definiert. In diesem Beispiel werden Zeichenfolgen, die reguläre Ausdrücke für verschiedene Datumsformate verwenden angegeben, um das allgemeine ParseRegex-aktiv-Muster anzupassen. Ganzzahl aktiven Musters wird verwendet, die übereinstimmenden Zeichenfolgen in ganze Zahlen zu konvertieren, die an den DateTime-Konstruktor übergeben werden kann.
+Aktive Muster akzeptieren immer mindestens ein Argument für das Element, das abgeglichen wird, Sie können jedoch auch zusätzliche Argumente annehmen. in diesem Fall gilt das *parametrisierte aktive Muster* für den Namen. Mit zusätzlichen Argumenten kann ein allgemeines Muster spezialisiert werden. Beispielsweise enthalten aktive Muster, die reguläre Ausdrücke zum Analysieren von Zeichen folgen verwenden, häufig den regulären Ausdruck als zusätzlichen Parameter, wie im folgenden Code gezeigt, in dem auch das im vorherigen `Integer` Codebeispiel definierte Teil aktive Muster verwendet wird. In diesem Beispiel werden Zeichen folgen, die reguläre Ausdrücke für verschiedene Datumsformate verwenden, angegeben, um das allgemeine allgemeine parametopx-Muster anzupassen. Das aktive integermuster wird verwendet, um die übereinstimmenden Zeichen folgen in ganze Zahlen zu konvertieren, die an den DateTime-Konstruktor übergeben werden können.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
-Die Ausgabe des vorherigen Codes lautet wie folgt aus:
+Die Ausgabe des vorherigen Codes lautet wie folgt:
 
 ```
 12/22/2008 12:00:00 AM 1/1/2009 12:00:00 AM 1/15/2008 12:00:00 AM 12/28/1995 12:00:00 AM
 ```
 
-Aktive Muster sind nicht nur für Muster übereinstimmende Ausdrücke beschränkt, Sie können sie auch in Let-Bindungen verwenden.
+Aktive Muster sind nicht auf Muster Vergleichsausdrücke beschränkt, Sie können Sie auch bei let-Bindungen verwenden.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
-Die Ausgabe des vorherigen Codes lautet wie folgt aus:
+Die Ausgabe des vorherigen Codes lautet wie folgt:
 
 ```
 Hello, random citizen!

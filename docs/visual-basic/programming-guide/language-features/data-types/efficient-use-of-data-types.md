@@ -13,41 +13,41 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: f85acfe7592d7b90423107e0d45bb007fce5f4a8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68371a9f8d4dcc5d0a2b67955d5e88943a83b085
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601155"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68631106"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>Effiziente Verwendung von Datentypen (Visual Basic)
-Nicht deklarierte Variablen und Variablen, die ohne einen Datentyp zugewiesen sind die `Object` -Datentyp. Dies erleichtert es, Programme zu schreiben, schnell, aber es kann dazu führen, dass sie langsamer ausgeführt.  
-  
-## <a name="strong-typing"></a>Starke Typisierung  
- Die Angabe von Datentypen für alle Variablen wird bezeichnet als *starke Typisierung*. Mit starker Typisierung hat mehrere Vorteile:  
-  
-- Sie können IntelliSense-Unterstützung für Variablen. Dadurch können Sie die Eigenschaften und andere Member anzeigen, während der Eingabe im Code.  
-  
-- Es nutzt die Vorteile der typüberprüfung zur Compiler. Anweisungen, die zur Laufzeit aufgrund von Fehlern wie z. B. Überlauf möglich abzufangen. Es fängt auch Aufrufe von Methoden für Objekte, die diese nicht unterstützen.  
-  
-- Es führt zu einer schnelleren Ausführung Ihres Codes.  
-  
-## <a name="most-efficient-data-types"></a>Die effizienteste-Datentypen  
- Für Variablen, die niemals Bruchzahlen enthalten, werden die ganzzahligen Datentypen effizienter als die nicht ganzzahligen Typen. In Visual Basic `Integer` und `UInteger` die effizientesten numerischen Typen sind.  
-  
- Für Bruchzahlen `Double` der effizienteste Datentyp ist, da die Prozessoren auf den aktuellen Plattformen Operationen mit Gleitkommazahlen mit doppelter Genauigkeit ausführen. Allerdings Vorgänge mit `Double` sind nicht so schnell wie bei ganzzahligen Typen wie z. B. `Integer`.  
-  
-## <a name="specifying-data-type"></a>Angeben eines Datentyps  
- Verwenden der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) zum Deklarieren einer Variablen eines bestimmten Typs. Können Sie gleichzeitig ihre Zugriffsebene angeben, mit der [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md), [geschützte](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), oder [Private](../../../../visual-basic/language-reference/modifiers/private.md) Schlüsselwort, wie in der folgende Beispiel.  
-  
-```  
-Private x As Double  
-Protected s As String  
-```  
-  
-## <a name="character-conversion"></a>Zeichen-Konvertierung  
- Die `AscW` und `ChrW` Funktionen, die im Unicode-Format verwendet werden. Verwenden Sie diese vorzuziehen, `Asc` und `Chr`, die müssen in und aus Unicode-übersetzen.  
-  
+Nicht deklarierte Variablen und Variablen, die ohne Datentyp deklariert `Object` werden, wird der-Datentyp zugewiesen. Dies vereinfacht das schnelle Schreiben von Programmen, kann jedoch dazu führen, dass Sie langsamer ausgeführt werden.
+
+## <a name="strong-typing"></a>Starke Typisierung
+ Das Angeben von Datentypen für alle Variablen wird als *starke Typisierung*bezeichnet. Die Verwendung der starken Typisierung bietet mehrere Vorteile:
+
+- Sie ermöglicht die IntelliSense-Unterstützung für die Variablen. Dies ermöglicht es Ihnen, ihre Eigenschaften und andere Member anzuzeigen, während Sie den Code eingeben.
+
+- Es nutzt die Compilertypüberprüfung. Dadurch werden Anweisungen abgefangen, die zur Laufzeit aufgrund von Fehlern wie einem Überlauf fehlschlagen können. Sie fängt auch Aufrufe von Methoden für Objekte ab, die Sie nicht unterstützen.
+
+- Dies führt zu einer schnelleren Ausführung des Codes.
+
+## <a name="most-efficient-data-types"></a>Effizienteste Datentypen
+ Für Variablen, die niemals Bruchteile enthalten, sind die ganzzahligen Datentypen effizienter als die nicht ganzzahligen Typen. In Visual Basic `Integer` sind und `UInteger` die effizientesten numerischen Typen.
+
+ Bei Bruchzahlen `Double` ist der effizienteste Datentyp, da die Prozessoren auf aktuellen Plattformen Gleit Komma Vorgänge mit doppelter Genauigkeit ausführen. Vorgänge mit `Double` sind jedoch nicht so schnell wie bei den ganzzahligen Typen `Integer`wie.
+
+## <a name="specifying-data-type"></a>Angeben von Datentyp
+ Verwenden Sie die [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) , um eine Variable eines bestimmten Typs zu deklarieren. Sie können die Zugriffsebene gleichzeitig mithilfe des Schlüssel Worts [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)oder [private](../../../../visual-basic/language-reference/modifiers/private.md) angeben, wie im folgenden Beispiel gezeigt.
+
+```vb
+Private x As Double
+Protected s As String
+```
+
+## <a name="character-conversion"></a>Zeichen Konvertierung
+ Die `AscW` Funktionen `ChrW` und funktionieren in Unicode. Sie sollten diese bevorzugt für `Asc` und `Chr`verwenden, die in und aus Unicode übersetzt werden müssen.
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>

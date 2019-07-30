@@ -2,60 +2,60 @@
 title: Erste Schritte mit F# in Visual Studio
 description: Erfahren Sie, wie Sie F# in Visual Studio verwenden.
 ms.date: 07/03/2018
-ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 24c9a81cfa61dc904db9b2213224677696d7eb9b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754866"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629770"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Erste Schritte mit F# in Visual Studio
 
-F#und das visuelle F# Tools in Visual Studio-IDE unterstützt werden.
+F#und die visuellen F# Tools werden in der Visual Studio-IDE unterstützt.
 
 Um zu beginnen, stellen Sie sicher, dass man [Visual Studio installiert, die mit F#](install-fsharp.md#install-f-with-visual-studio).
 
 ## <a name="creating-a-console-application"></a>Erstellen einer Konsolenanwendung
 
-Eine der grundlegendsten Projekte in Visual Studio ist die Konsolenanwendung.  Und so gehen Sie dabei vor.  Sobald Visual Studio geöffnet ist:
+Eines der grundlegendsten Projekte in Visual Studio ist die Konsolenanwendung.  Und so gehen Sie dabei vor.  Nachdem Visual Studio geöffnet wurde:
 
-1. Auf der **Datei** Startmenü **neu**, und wählen Sie dann **Projekt**.
+1. Zeigen Sie im Menü **Datei** auf **neu**, und wählen Sie dann **Projekt**aus.
 
-2. In das neue Projekt im Dialogfeld unter **Vorlagen**, sollte **Visual F#** .  Wählen Sie diese Option, um das Anzeigen der F# Vorlagen.
+2. Im Dialogfeld Neues Projekt unter **Vorlagen**sollte **Visualisierung F#** angezeigt werden.  Wählen Sie diese Option aus F# , um die Vorlagen anzuzeigen.
 
-3. Wählen Sie entweder **.NET Core-Konsolen-app** oder **Konsolen-app**.
+3. Wählen Sie entweder **.net Core-Konsolen-App** oder Konsolen- **App**aus.
 
 4. Wählen Sie die **OK** klicken, um den F#-Projekt zu erstellen!  Eine F#-Projekt im Projektmappen-Explorer sollte nun angezeigt werden.
 
-## <a name="writing-your-code"></a>Das Schreiben von code
+## <a name="writing-your-code"></a>Schreiben von Code
 
-Erste Schritte zunächst, Code zu schreiben.  Stellen Sie sicher, dass die `Program.fs` Datei geöffnet ist, und Ersetzen Sie deren Inhalt durch Folgendes:
+Beginnen wir, indem wir zuerst Code schreiben.  Stellen Sie sicher, `Program.fs` dass die Datei geöffnet ist, und ersetzen Sie deren Inhalt durch Folgendes:
 
-[!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
+[!code-fsharp[HelloSquare](~/samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Im vorherigen Beispiel, eine Funktion `square` wurde der Eingabe mit dem Namen akzeptiert definiert `x` und von sich selbst multipliziert.  Da F# verwendet [Typrückschluss](../language-reference/type-inference.md), den Typ des `x` muss nicht angegeben werden.  Die F# Compiler versteht die Typen, in denen Multiplikation gültig ist, und weist einen Typ `x` basieren, wie `square` aufgerufen wird.  Wenn Sie darauf zeigen `square`, sollte Folgendes angezeigt:
+Im vorherigen Codebeispiel wurde eine Funktion `square` definiert, die eine Eingabe mit dem Namen `x` annimmt und Sie selbst multipliziert.  Da F# verwendet [Typrückschluss](../language-reference/type-inference.md), den Typ des `x` muss nicht angegeben werden.  Der F# Compiler versteht die Typen, bei denen die Multiplikation gültig ist, und weist `x` basierend auf der `square` Aufruf von einen Typ zu.  Wenn Sie den Maus `square`Zeiger darüber bewegen, sollte Folgendes angezeigt werden:
 
 ```fsharp
 val square: x:int -> int
 ```
 
-Dies ist als die Signatur der Funktion Typ bezeichnet wird.  Sie können wie folgt gelesen werden: "Quadrat ist eine Funktion, die nimmt eine ganze Zahl, die mit dem Namen X und erzeugt eine ganze Zahl".  Beachten Sie, die der Compiler hat `square` der `int` Typ vorerst - Dies liegt daran Multiplikation nicht für generische *alle* Typen, aber stattdessen über einen vollständigen Satz von Typen ist generisch.  Die F# Compiler ausgewählt `int` an diesem Punkt, aber es passt die Datentyp-Signatur Aufrufen `square` mit einem anderen Eingabetyp, z. B. eine `float`.
+Dies wird als Typsignatur der Funktion bezeichnet.  Sie kann wie folgt gelesen werden: "Square ist eine Funktion, die eine ganze Zahl mit dem Namen" x "annimmt und eine ganze Zahl erstellt.  Beachten Sie, dass der `square` Compiler `int` den Typ für den Moment erteilt hat. Dies liegt daran, dass die Multiplikation nicht für *alle* Typen generisch ist, sondern für einen geschlossenen Satz von Typen generisch ist.  Der F# Compiler hat `int` an dieser Stelle gewählt, aber er passt die Typsignatur an, wenn `square` Sie mit einem `float`anderen Eingabetyp, z. b., aufruft.
 
-Eine andere Funktion, `main`, definiert ist, wird die ergänzt, mit der `EntryPoint` Attribut Teilen der F# Compiler, mit dem Programm Ausführung sollte es starten.  Dabei wird die gleiche Konvention wie andere [Programmiersprachen C-Stil](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), in dem Befehlszeilenargumente an diese Funktion übergeben werden können und ein ganzzahligen Code wird zurückgegeben (in der Regel `0`).
+Eine weitere Funktion `main`,, ist definiert und wird mit dem `EntryPoint` -Attribut versehen, um F# dem Compiler mitzuteilen, dass die Programmausführung gestartet werden soll.  Es folgt derselben Konvention wie andere [Programmiersprachen im C-Stil](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), bei denen Befehlszeilenargumente an diese Funktion übermittelt werden können, und ein ganzzahliger Code zurück `0`gegeben wird (in der Regel).
 
-Es ist in dieser Funktion, die wir Aufrufen der `square` Funktion mit dem Argument `12`.  Die F# Compiler weist dann den Typ des `square` sein `int -> int` (, also eine Funktion, die nimmt eine `int` und erzeugt eine `int`).  Der Aufruf von `printfn` ist eine formatierte drucken Funktion, die eine Formatzeichenfolge, die Programmiersprachen C-Stil, Parameter ähnelt, verwendet die in der Formatzeichenfolge angegeben entsprechen, und gibt dann das Ergebnis und eine neue Zeile.
+In dieser Funktion wird die `square` Funktion mit einem Argument von `12`aufgerufen.  Der F# Compiler weist dann den Typ von `square` zu `int -> int` , d. h. eine Funktion, die einen `int` annimmt und einen `int`erzeugt.  Der-Befehl ist eine formatierte Druckfunktion, die eine Format Zeichenfolge verwendet, ähnlich wie Programmiersprachen im C-Stil, Parameter, die den in der Format Zeichenfolge angegebenen entsprechen, und dann das Ergebnis und eine neue Zeile ausgibt. `printfn`
 
 ## <a name="running-your-code"></a>Ausführen des Codes
 
-Sie können den Code auszuführen und Ergebnisse angezeigt, durch Drücken von **STRG**+**F5**.  Dies führt das Programm ohne Debuggen und ermöglicht Ihnen, um die Ergebnisse anzuzeigen.  Alternativ können Sie auch die **Debuggen** Menü der obersten Ebene in Visual Studio, und wählen Sie **Starten ohne Debugging**.
+Sie können den Code ausführen und die Ergebnisse anzeigen, indem Sie **STRG**+**F5**drücken.  Dadurch wird das Programm ohne Debuggen ausgeführt, und Sie können die Ergebnisse anzeigen.  Alternativ können Sie in Visual Studio das Menü Element der obersten Ebene **Debuggen** auswählen und dann **Starten ohne Debugging**auswählen.
 
-Sie sollten jetzt sehen, dass die folgenden im Konsolenfenster anzuzeigen, die Visual Studio eingeblendet wird, wird ausgegeben:
+Im Konsolenfenster, in dem Visual Studio angezeigt wird, sollte nun Folgendes angezeigt werden:
 
 ```
 12 squared is 144!
 ```
 
-Herzlichen Glückwunsch!  Sie haben Ihre erste erstellt F# Projekt in Visual Studio geschrieben ein F# Funktion ausgegeben, die Ergebnisse des Aufrufs, die Funktion, und führen Sie das Projekt aus, um einige Ergebnisse anzuzeigen.
+Herzlichen Glückwunsch!  Sie haben ihr erstes F# Projekt in Visual Studio erstellt, eine F# Funktion geschrieben, die die Ergebnisse des Aufrufs dieser Funktion gedruckt hat, und das Projekt ausführen, um einige Ergebnisse anzuzeigen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -64,6 +64,6 @@ Wenn Sie nicht bereits getan haben, sehen Sie sich die [Einführung in F#](../to
 ## <a name="see-also"></a>Siehe auch
 
 - [Einführung in F#](../tour.md)
-- [F#Referenz zur Abfragesprache](../language-reference/index.md)
+- [F#Sprachreferenz](../language-reference/index.md)
 - [Typrückschluss](../language-reference/type-inference.md)
-- [Symbol und dem Operator-Referenz](../language-reference/symbol-and-operator-reference/index.md)
+- [Symbol-und Operator Verweis](../language-reference/symbol-and-operator-reference/index.md)

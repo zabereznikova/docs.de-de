@@ -1,17 +1,17 @@
 ---
 title: Ausnahmetypen
-description: Erfahren Sie, wie Sie definieren und Verwenden von F# Ausnahmetypen.
+description: Erfahren Sie, wie Sie Ausnahme F# Typen definieren und verwenden.
 ms.date: 05/16/2016
-ms.openlocfilehash: b7203dc042c7207bca95cfd0372790bfe52e0226
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8545fab50ff6338d1f1621710a838a200f9ac705
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645568"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630310"
 ---
 # <a name="exception-types"></a>Ausnahmetypen
 
-Es gibt zwei Kategorien von Ausnahmen in F#: Ausnahmetypen in .NET und F#-Typen. In diesem Thema wird beschrieben, wie Sie definieren und verwenden F# Ausnahmetypen.
+Es gibt zwei Kategorien von Ausnahmen in F#: Ausnahmetypen in .NET und F#-Typen. In diesem Thema wird beschrieben, wie Ausnahme F# Typen definiert und verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,19 +21,19 @@ exception exception-type of argument-type
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax *Ausnahmetyp* ist der Name eines neuen F# Ausnahmetyp und *Argumenttyp* stellt den Typ eines Arguments, die beim Auslösen einer Ausnahme dieses Typs bereitgestellt werden kann. Sie können mehrere Argumente angeben, indem Sie verwenden einen Tupeltyp für *Argumenttyp*.
+In der vorherigen Syntax ist *Exception-Type* der Name eines neuen F# Ausnahme Typs, und der *Argumenttyp* stellt den Typ eines Arguments dar, das bereitgestellt werden kann, wenn Sie eine Ausnahme dieses Typs auslöst. Sie können mehrere Argumente angeben, indem Sie einen tupeltyp für den *Argumenttyp*verwenden.
 
-Eine typische Definition für eine F# Ausnahme der folgenden Darstellung ähnelt.
+Eine typische Definition für eine F# Ausnahme ähnelt der folgenden.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5501.fs)]
 
-Sie können eine Ausnahme dieses Typs generieren, mit der `raise` -Funktion wie folgt.
+Sie können eine Ausnahme dieses Typs generieren, indem Sie die `raise` -Funktion wie folgt verwenden.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5502.fs)]
 
-Können Sie eine F# Ausnahmetyp direkt in die Filter in einem `try...with` Ausdruck wie im folgenden Beispiel gezeigt.
+Sie können einen F# Ausnahmetyp direkt in den Filtern in einem `try...with` -Ausdruck verwenden, wie im folgenden Beispiel gezeigt.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5503.fs)]
 
 Der Typ der Ausnahme, die Sie definieren, mit der `exception` Schlüsselwort in F# ist eine neue Art, die von erbt `System.Exception`.
 

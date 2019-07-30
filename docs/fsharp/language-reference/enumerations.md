@@ -1,17 +1,17 @@
 ---
 title: Enumerationen
-description: Erfahren Sie, wie Sie mit F# Enumerationen anstelle von Literalen, um den Code besser lesbar und verwaltbar zu gestalten.
+description: Erfahren Sie, wie F# Sie anstelle von literalen Enumerationen verwenden, um den Code besser lesbar und verwallegbar zu machen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7ff62b1c0a6ab0fda58a30de9387acbb547f6b81
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 784cd9612b199e4648bb64432d3b4422ad35f649
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645555"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630337"
 ---
 # <a name="enumerations"></a>Enumerationen
 
-*Enumerationen*, auch bekannt als *Enumerationen*, integrale Typen sind, in dem Bezeichnungen auf eine Teilmenge der Werte zugewiesen werden. Sie können diese anstelle von Literalen verwenden, um Code lesbarer und verwaltbarer zu machen.
+*Enumerationen*, die *auch als*Enumerationen bezeichnet werden, sind ganzzahlige Typen, bei denen Bezeichnungen einer Teilmenge der Werte zugewiesen werden. Sie können diese anstelle von Literalen verwenden, um Code lesbarer und verwaltbarer zu machen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -24,31 +24,31 @@ type enum-name =
 
 ## <a name="remarks"></a>Hinweise
 
-Eine Enumeration sieht ähnlich wie eine Unterscheidungs-Union, die einfache Werte, mit dem Unterschied, dass die Werte angegeben werden können. Die Werte sind in der Regel an ganzen Zahlen, die mit 0 oder 1 beginnen, oder ganze Zahlen, die Bitpositionen darstellen. Wenn eine Enumeration Bitpositionen darstellen soll, verwenden Sie auch die [Flags](xref:System.FlagsAttribute) Attribut.
+Eine Enumeration sieht in etwa wie eine Unterscheidungs-Union mit einfachen Werten aus, mit dem Unterschied, dass die Werte angegeben werden können. Bei den Werten handelt es sich in der Regel um ganze Zahlen, die bei 0 oder 1 beginnen, oder ganze Zahlen, die Bitpositionen darstellen. Wenn eine Enumeration Bitpositionen darstellen soll, sollten Sie auch das [Flags](xref:System.FlagsAttribute) -Attribut verwenden.
 
-Der zugrunde liegende Typ der Enumeration wird durch das Literal, das verwendet wird, bestimmt, sodass z. B. Sie z. B. Literale mit Suffix verwenden können `1u`, `2u`usw., für die ganze Zahl ohne Vorzeichen (`uint32`) Typ.
+Der zugrunde liegende Typ der Enumeration wird vom verwendeten Literaltyp bestimmt, sodass Sie z. b. Literale mit einem Suffix, z `1u`. b., `2u`usw., für einen ganzzahligen ganzzahligen Typ (`uint32`) verwenden können.
 
-Wenn Sie auf die benannten Werte verweisen, müssen Sie die Namen verwenden des Enumerationstyps selbst als Qualifizierer, d. h. `enum-name.value1`und nicht nur `value1`. Dieses Verhalten unterscheidet sich von der Unterscheidungs-Unions. Dies ist, da-Enumerationen verfügen immer über die [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) Attribut.
+Wenn Sie auf die benannten Werte verweisen, müssen Sie den Namen des Enumerationstyps selbst als Qualifizierer verwenden, `enum-name.value1`d. h., nicht nur. `value1` Dieses Verhalten unterscheidet sich von der Unterscheidungs-Unions. Dies liegt daran, dass Enumerationen immer das Attribut "Requirements [qualifiedaccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) " aufweisen.
 
 Der folgende Code zeigt die Deklaration und Verwendung einer Enumeration.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2101.fs)]
 
-Sie können problemlos Enumerationen in den zugrunde liegenden Typ konvertieren mit den geeigneten Operator an, wie im folgenden Code gezeigt.
+Sie können Enumerationen problemlos in den zugrunde liegenden Typ konvertieren, indem Sie den entsprechenden-Operator verwenden, wie im folgenden Code gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2102.fs)]
 
-Aufgelistete Typen können einen der folgenden zugrunde liegende Typen aufweisen: `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, und `char`. Enumerationstypen werden in .NET Framework dargestellt, wie Typen, die von übernommenen `System.Enum`, die wiederum von geerbt `System.ValueType`. Daher sind sie Werttypen, die auf dem Stapel oder Inline in dem Objekt gespeichert sind, und jeder Wert des zugrunde liegenden Typs ist, einen gültigen Wert der Enumeration. Dies ist wichtig, beim Musterabgleich für Enumeration Werte, denn Sie müssen ein Muster bereit, die die unbenannte Werte abfängt.
+Enumerierte Typen können einen der folgenden zugrunde liegenden Typen aufweisen `sbyte`: `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, und `char`. Enumerationstypen werden in der .NET Framework als Typen dargestellt, die `System.Enum`von geerbt werden, die wiederum von `System.ValueType`geerbt werden. Daher handelt es sich um Werttypen, die sich auf dem Stapel oder Inline im enthaltenden Objekt befinden, und jeder Wert des zugrunde liegenden Typs ist ein gültiger Wert der Enumeration. Dies ist bei einem Muster Vergleich für Enumerationswerte von Bedeutung, da Sie ein Muster angeben müssen, das die unbenannten Werte abfängt.
 
-Die `enum` Funktion in der F# Bibliothek kann verwendet werden, generieren Sie einen Enumerationswert, der auch einen anderen Wert als eine der vordefinierten, benannte Werte. Sie verwenden die `enum` -Funktion wie folgt.
+Die `enum` -Funktion in F# der-Bibliothek kann verwendet werden, um einen Enumerationswert zu generieren, sogar einen anderen Wert als einen der vordefinierten benannten Werte. Sie verwenden die `enum` -Funktion wie folgt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 
-Der Standardwert `enum` Funktion arbeitet mit dem Typ `int32`. Es kann nicht aus diesem Grund mit Enumerationstypen verwendet werden, die andere zugrunde liegende Typen aufweisen. Verwenden Sie stattdessen die folgenden Schritte aus.
+Die Standard `enum` Funktion funktioniert mit dem `int32`-Typ. Daher kann Sie nicht mit Enumerationstypen verwendet werden, die andere zugrunde liegende Typen aufweisen. Verwenden Sie stattdessen Folgendes:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
-Darüber hinaus Fällen für Enumerationen immer als ausgegeben werden `public`. Dies ist so, dass sie mit c# und den Rest der .NET-Plattform ausgerichtet sind.
+Außerdem werden Fälle für-Aufgaben immer als `public`ausgegeben. Dies ist so, dass Sie sich C# an und dem Rest der .NET-Plattform orientieren.
 
 ## <a name="see-also"></a>Siehe auch
 

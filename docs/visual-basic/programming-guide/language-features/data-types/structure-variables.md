@@ -7,51 +7,54 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a86a60def9ac1b8140194ecb6f5e784c62a0e101
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663387"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630965"
 ---
 # <a name="structure-variables-visual-basic"></a>Strukturvariablen (Visual Basic)
-Nachdem Sie eine Struktur erstellt haben, können Sie Variablen auf Prozedurebene und auf Modulebene wie dieser Typ deklarieren. Beispielsweise können Sie eine Struktur, zeichnet Informationen zu einem Computersystem erstellen. Dies wird im folgenden Beispiel veranschaulicht:  
-  
-```  
-Public Structure systemInfo  
-    Public cPU As String  
-    Public memory As Long  
-    Public purchaseDate As Date  
-End Structure  
-```  
-  
- Nun können Sie die Variablen dieses Typs deklarieren. Dies wird in die folgende Deklaration veranschaulicht.  
-  
-```  
-Dim mySystem, yourSystem As systemInfo  
-```  
-  
+
+Nachdem Sie eine Struktur erstellt haben, können Sie Variablen auf Prozedur-und Modulebene als diesen Typ deklarieren. Beispielsweise können Sie eine Struktur erstellen, die Informationen zu einem Computersystem aufzeichnet. Dies wird im folgenden Beispiel veranschaulicht:
+
+```vb
+Public Structure systemInfo
+    Public cPU As String
+    Public memory As Long
+    Public purchaseDate As Date
+End Structure
+```
+
+Sie können jetzt Variablen dieses Typs deklarieren. Dies wird in der folgenden Deklaration veranschaulicht.
+
+```vb
+Dim mySystem, yourSystem As systemInfo
+```
+
 > [!NOTE]
->  In Klassen und Modulen, Strukturen deklariert mit dem [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) standardmäßig öffentlichen Zugriff auf. Wenn Sie eine Struktur privat festlegen möchten deklarieren Sie sie mithilfe, der [Private](../../../../visual-basic/language-reference/modifiers/private.md) Schlüsselwort.  
-  
-## <a name="access-to-structure-values"></a>Zugriff auf die Strukturwerte  
- Zum Zuweisen und Abrufen von Werten aus den Elementen einer Strukturvariablen, verwenden Sie die gleiche Syntax wie zum Festlegen und Abrufen von Eigenschaften für ein Objekt. Platzieren Sie den Memberzugriffsoperator (`.`) zwischen der Name der Struktur und der Elementname. Das folgende Beispiel greift auf die Elemente der zuvor als Typ deklarierten Variablen `systemInfo`.  
-  
-```  
-mySystem.cPU = "486"  
-Dim tooOld As Boolean  
-If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True  
-```  
-  
-## <a name="assigning-structure-variables"></a>Zuweisen von Strukturvariablen  
- Sie können auch eine Variable in einen anderen zuweisen, wenn vom selben Strukturtyp angehören. Dies kopiert alle Elemente einer Struktur in die entsprechenden Elemente im anderen. Dies wird in die folgende Deklaration veranschaulicht.  
-  
-```  
-yourSystem = mySystem  
-```  
-  
- Wenn ein Strukturelement einen Referenztyp darstellt, z. B. eine `String`, `Object`, oder ein Array, das Zeiger auf die Daten werden kopiert. Im vorherigen Beispiel wenn `systemInfo` hatte eine Objektvariable enthalten, und klicken Sie dann im vorherigen Beispiel wird den Zeiger von kopiert haben, würden `mySystem` zu `yourSystem`, und eine Änderung an den Daten des Objekts durch eine Struktur wäre in Kraft, beim Zugriff auf über die andere Struktur.  
-  
+> In Klassen und Modulen werden Strukturen, die mithilfe der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) deklariert werden, standardmäßig auf öffentlichen Zugriff eingestellt. Wenn Sie beabsichtigen, eine Struktur als privat zu verwenden, stellen Sie sicher, dass Sie Sie mit dem [privaten](../../../../visual-basic/language-reference/modifiers/private.md) Schlüsselwort deklarieren.
+
+## <a name="access-to-structure-values"></a>Zugriff auf Struktur Werte
+
+Zum Zuweisen und Abrufen von Werten aus den Elementen einer Struktur Variablen verwenden Sie dieselbe Syntax wie zum Festlegen und Abrufen von Eigenschaften für ein Objekt. Der Member Access Operator (`.`) wird zwischen dem Namen der Struktur Variablen und dem Elementnamen platziert. Im folgenden Beispiel wird auf Elemente der Variablen zugegriffen, die zuvor `systemInfo`als Typ deklariert wurden.
+
+```vb
+mySystem.cPU = "486"
+Dim tooOld As Boolean
+If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
+```
+
+## <a name="assigning-structure-variables"></a>Zuweisen von Struktur Variablen
+
+Sie können eine Variable auch einer anderen zuweisen, wenn beide denselben Strukturtyp haben. Dadurch werden alle Elemente einer Struktur in die entsprechenden Elemente in der anderen kopiert. Dies wird in der folgenden Deklaration veranschaulicht.
+
+```vb
+yourSystem = mySystem
+```
+
+Wenn ein Strukturelement ein Verweistyp ist, z. b `String`. `Object`ein-,-oder-Array, wird der Zeiger auf die Daten kopiert. Wenn `systemInfo` im vorherigen Beispiel eine Objekt Variable eingefügt hätte, hätte das vorangehende Beispiel den Zeiger von `mySystem` in `yourSystem`kopiert, und eine Änderung an den Daten des Objekts durch eine Struktur wäre in Kraft, wenn darauf zugegriffen wird. durch die andere-Struktur.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

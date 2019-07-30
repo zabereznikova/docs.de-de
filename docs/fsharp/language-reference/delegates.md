@@ -1,17 +1,17 @@
 ---
 title: Delegaten
-description: Informationen zum Arbeiten mit Delegaten F#.
+description: Erfahren Sie, wie Sie in F#mit Delegaten arbeiten.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0596b67530b0399df41dffdf855a07bce2bf4761
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 65875897d5fc4b2ac66f1dfbe913f29fb74137cd
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641971"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630369"
 ---
 # <a name="delegates"></a>Delegaten
 
-Ein Delegat stellt einen Funktionsaufruf dar, wie ein Objekt. In F#, normalerweise verwenden Sie Werte von Funktionen zum Darstellen von Funktionen als erstrangige Werte; Allerdings Delegaten in .NET Framework verwendet werden und daher sind erforderlich, wenn Interoperation mit APIs, die sie erwarten. Sie können auch authoring Bibliotheken zur Verwendung von anderen .NET Framework-Sprachen verwendet werden.
+Ein Delegat stellt einen Funktionsaufruf als-Objekt dar. In F#sollten Sie in der Regel Funktions Werte verwenden, um Funktionen als First Class-Werte darzustellen. Delegaten werden jedoch im .NET Framework verwendet und sind daher erforderlich, wenn Sie mit APIs interagieren, die Sie erwarten. Sie können auch beim Erstellen von Bibliotheken verwendet werden, die für die Verwendung in anderen .NET Framework Sprachen entwickelt wurden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,21 +21,21 @@ type delegate-typename = delegate of type1 -> type2
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax `type1` stellt den Argumenttyp bzw. die Datentypen und `type2` den Rückgabetyp darstellt. Die Argumenttypen, das von dargestellt sind `type1` werden automatisch mit Currying. Dies deutet darauf hin, die für diesen Typ, der Sie ein Tupel-Formular verwenden, wenn die Argumente der Zielfunktion Currying verarbeitet werden, und ein Tupel in Klammern für Argumente, die bereits in der Tupelform sind. Die automatische currying entfernt einen Satz von Klammern, sodass ein Tupelargument, das die Zielmethode entspricht. Finden Sie im Codebeispiel wird die Syntax, die Sie in jedem Fall verwenden sollten.
+In der vorherigen Syntax `type1` stellt den Argumenttyp oder die Typen dar und `type2` stellt den Rückgabetyp dar. Die Argument Typen, die durch `type1` dargestellt werden, werden automatisch Curry. Dies deutet darauf hin, dass Sie bei diesem Typ ein tupelformular verwenden, wenn die Argumente der Zielfunktion "currried" sind, und ein Tupel in Klammern für Argumente, die sich bereits im tupelformular befinden. Bei der automatischen Currying wird eine Reihe von Klammern entfernt, wobei ein tupelargument, das mit der Ziel Methode übereinstimmt, erhalten bleibt. Die Syntax, die Sie in jedem Fall verwenden sollten, finden Sie im Codebeispiel.
 
-Delegaten angefügt werden können, um F#-Funktionswerte, und statische oder Instanzmethoden. F#Werte von Funktionen können direkt als Argumente für das Delegieren von Konstruktoren übergeben werden. Für eine statische Methode erstellen Sie den Delegaten, mit dem Namen der Klasse und Methode. Für eine Instanzmethode stellen Sie die Objektinstanz und der-Methode in ein Argument bereit. In beiden Fällen der Memberzugriffsoperator (`.`) verwendet wird.
+Delegaten angefügt werden können, um F#-Funktionswerte, und statische oder Instanzmethoden. F#Funktions Werte können direkt als Argumente an Delegatkonstruktoren übergeben werden. Bei einer statischen Methode erstellen Sie den Delegaten mit dem Namen der Klasse und der-Methode. Bei einer Instanzmethode stellen Sie die Objektinstanz und-Methode in einem Argument bereit. In beiden Fällen wird der Member Access-Operator`.`() verwendet.
 
-Die `Invoke` Methode auf dem Delegattyp die gekapselte Funktion aufruft. Darüber hinaus können Delegaten durch Verweisen auf den Namen des Invoke-Methode ohne Klammern als Werte von Funktionen übergeben werden.
+Die `Invoke` Methode für den Delegattyp Ruft die gekapselte Funktion auf. Delegaten können auch als Funktions Werte übergeben werden, indem auf den Aufruf Methodennamen ohne Klammern verwiesen wird.
 
-Der folgende Code zeigt die Syntax zum Erstellen von Delegaten, die verschiedene Methoden in einer Klasse darstellen. Je nachdem, ob die Methode eine statische Methode oder eine Instanzmethode ist, und gibt an, ob Argumente im Tupel Format oder die Curry-Form verfügt ist die Syntax zum Deklarieren und Zuweisen von Delegaten ein wenig anders.
+Der folgende Code zeigt die Syntax zum Erstellen von Delegaten, die verschiedene Methoden in einer Klasse darstellen. Abhängig davon, ob es sich bei der Methode um eine statische Methode oder eine Instanzmethode handelt und ob Sie über Argumente im tupelformular oder in der geschweifenden Form verfügt, ist die Syntax zum Deklarieren und Zuweisen des Delegaten etwas anders.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4201.fs)]
 
-Der folgende Code zeigt einige der Möglichkeiten, mit denen, die Sie Delegaten zusammenarbeiten können.
+Der folgende Code zeigt einige der verschiedenen Möglichkeiten, mit Delegaten zu arbeiten.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4202.fs)]
 
-Die Ausgabe des vorherigen Codebeispiel lautet wie folgt aus.
+Die Ausgabe des vorherigen Code Beispiels lautet wie folgt.
 
 ```console
 aaaaa
@@ -48,4 +48,4 @@ ccccc
 
 - [F#-Sprachreferenz](index.md)
 - [Parameter und Argumente](parameters-and-arguments.md)
-- [Ereignisse](members/events.md)
+- [Ereignisse](./members/events.md)

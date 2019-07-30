@@ -2,12 +2,12 @@
 title: Generics
 description: Erfahren Sie, wie Sie mithilfe generischer F#-Funktionen und Typen, die Sie Code schreiben, die mit einer Vielzahl von Typen funktioniert, ohne Code wiederholen zu ermöglichen.
 ms.date: 05/16/2016
-ms.openlocfilehash: e30b00343e48d3a8abd51f62c003ba0d1984db18
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641853"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630610"
 ---
 # <a name="generics"></a>Generics
 
@@ -49,19 +49,19 @@ Wenn der F#-Compiler die Typen im Code ableitet, behandelt es automatisch alle F
 
 Im folgenden Codebeispiel ist `makeList` generisch, obwohl weder es noch seine Parameter explizit als generisch deklariert werden.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
 
 Die Signatur der Funktion wird als `'a -> 'a -> 'a list` abgeleitet. Beachten Sie, dass `a` und `b` in diesem Beispiel abgeleitet werden, um über den gleichen Typ zu verfügen. Dies ist, da sie zusammen in einer Liste enthalten sind, und alle Elemente einer Liste müssen vom gleichen Typ sein.
 
 Sie können auch eine Funktion generisch erstellen, indem Sie die Syntax für einfache Anführungszeichen in einer Typanmerkung verwenden, um anzugeben, dass ein Parametertyp ein generischer Typparameter ist. Im folgenden Code ist `function1` generisch, da seine Parameter auf diese Weise als Typparameter deklariert werden.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
 
 ## <a name="explicitly-generic-constructs"></a>Explizit generische Konstrukte
 
 Sie können eine Funktion auch generisch erstellen, indem Sie seine Typparameter explizit in spitzen Klammern (`<type-parameter>`) deklarieren. Dies wird im folgenden Code veranschaulicht.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
 
 ## <a name="using-generic-constructs"></a>Verwenden von generischen Konstrukten
 
@@ -69,7 +69,7 @@ Wenn Sie generische Funktionen oder Methoden verwenden, müssen Sie möglicherwe
 
 Der folgende Code zeigt die Verwendung der Funktionen, die in den vorherigen Abschnitten definiert sind.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
 > [!NOTE]
 > Es gibt zwei Möglichkeiten zum Verweisen auf einen generischen Typ anhand des Namens. Beispielsweise sind `list<int>` und `int list` zwei Methoden zum Verweisen auf einen generischen Typ `list`, der über ein einzelnes Typargument `int` verfügt. Die letztgenannte Form wird konventionell nur mit integrierten F#-Typen verwendet, wie z.B. `list` und `option`. Wenn mehrere Typargumente vorhanden sind, verwenden Sie normalerweise die Syntax `Dictionary<int, string>`, aber Sie können auch die Syntax `(int, string) Dictionary` verwenden.
@@ -78,7 +78,7 @@ Der folgende Code zeigt die Verwendung der Funktionen, die in den vorherigen Abs
 
 Um anzugeben, dass ein Typargument vom Compiler abgeleitet werden soll, können Sie den Unterstrich bzw. das Platzhaltersymbol (`_`) anstatt eines benannten Typarguments verwenden. Dies wird im folgenden Code veranschaulicht.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
 
 ## <a name="constraints-in-generic-types-and-functions"></a>Einschränkungen bei generischen Typen und Funktionen
 
@@ -90,7 +90,7 @@ Es gibt zwei Arten von Typparametern, die in F#-Programmen verwendet werden kön
 
 ## <a name="examples"></a>Beispiele
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
 
 ## <a name="see-also"></a>Siehe auch
 

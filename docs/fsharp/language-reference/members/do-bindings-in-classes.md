@@ -1,17 +1,17 @@
 ---
 title: do-Bindungen in Klassen
-description: Erfahren Sie, wie Sie mit einem F# 'do'-Bindung in einer Klassendefinition, Aktionen ausgeführt werden, wenn das Objekt erstellt wird, oder wenn der Typ zuerst verwendet wird.
+description: Erfahren Sie, wie Sie F# eine "Do"-Bindung in einer Klassendefinition verwenden, die Aktionen ausführt, wenn das Objekt erstellt wird oder wenn der Typ zum ersten Mal verwendet wird.
 ms.date: 05/16/2016
-ms.openlocfilehash: c924c882974989436d8ea404ebee0a7ef3c54fd3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ced4f1bb17d9e23bf51cc79b5a275cc334cca013
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641796"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627586"
 ---
 # <a name="do-bindings-in-classes"></a>do-Bindungen in Klassen
 
-Ein `do` Bindung in einer Klassendefinition führt Aktionen aus, wenn das Objekt erstellt wird, oder, für eine statische `do` binden, wenn der Typ zuerst verwendet wird.
+Eine `do` Bindung in einer Klassendefinition führt Aktionen aus, wenn das Objekt erstellt wird, oder für `do` eine statische Bindung, wenn der Typ zum ersten Mal verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,21 +21,21 @@ Ein `do` Bindung in einer Klassendefinition führt Aktionen aus, wenn das Objekt
 
 ## <a name="remarks"></a>Hinweise
 
-Ein `do` Bindung angezeigt wird, zusammen mit oder nach `let` Bindungen, aber vor den Definitionen der Elemente in einer Klassendefinition. Obwohl die `do` -Schlüsselwort ist optional für `do` Bindungen auf Modulebene, es ist nicht optional für `do` Bindungen in einer Klassendefinition.
+Eine `do` Bindung wird mit oder nach `let` Bindungen, aber vor Member-Definitionen in einer Klassendefinition angezeigt. Obwohl das `do` -Schlüsselwort für `do` Bindungen auf Modulebene optional ist, ist es für `do` Bindungen in einer Klassendefinition nicht optional.
 
-Für die Erstellung der jedes Objekt eines beliebigen angegebenen Typs, die nicht statische `do` Bindungen und nicht statische `let` Bindungen werden in der Reihenfolge in der Definition der Klasse ausgeführt. Mehrere `do` Bindungen in einem Typ auftreten können. Die nicht statische `let` Bindungen und die nicht statische `do` Bindungen werden der Text des primären Konstruktors. Der Code in der nicht statischen `do` Parameter des primären Konstruktors und alle Werte oder Funktionen, die definiert sind, kann im Abschnitt über Bindungen verweisen die `let` im Abschnitt über Bindungen.
+Bei der Erstellung jedes Objekts eines beliebigen Typs werden nicht statische `do` Bindungen und nicht statische `let` Bindungen in der Reihenfolge ausgeführt, in der Sie in der Klassendefinition angezeigt werden. Mehrere `do` Bindungen können in einem Typ auftreten. Die nicht statischen `let` Bindungen und die nicht statischen `do` Bindungen werden zum Hauptteil des primären Konstruktors. Der Code im Abschnitt nicht statische `do` Bindungen kann auf die primären Konstruktorparameter und alle Werte oder Funktionen verweisen, die `let` im Bindungs Abschnitt definiert sind.
 
-Nicht statische `do` Bindungen können auf Member der Klasse zugreifen, solange die Klasse verfügt über ein Self-Bezeichner, die von definiert ist ein `as` Schlüsselwort in der Klasse, die Spaltenüberschrift, und so lange, wie Sie alle Vorkommen dieser Elemente mit der Selbstbezeichner für die Klasse qualifiziert sind.
+Nicht statische `do` Bindungen können auf Member der Klasse zugreifen, sofern die Klasse über einen selbst Bezeichner verfügt, der durch ein `as` -Schlüsselwort in der Überschrift der-Klasse definiert wird, und solange alle Verwendungen dieser Member mit dem selbst Bezeichner für die Klasse qualifiziert sind.
 
-Da `let` Bindungen initialisieren die privaten Felder einer Klasse, die häufig notwendig ist, um sicherzustellen, dass Mitglieder Verhalten sich wie erwartet, `do` Bindungen werden in der Regel fügen Sie nach dem `let` Bindungen, so dass der code in die `do` Bindung kann Führen Sie mit der ein vollständig initialisiertes Objekt. Wenn Ihr Code versucht, einen Member zu verwenden, bevor die Initialisierung abgeschlossen ist, wird eine "InvalidOperationException" ausgelöst.
+Da `let` Bindungen die privaten Felder einer Klasse initialisieren, was häufig notwendig ist, um sicherzustellen, dass sich die Member `do` wie erwartet Verhalten, werden `let` Bindungen in der Regel nach Bindungen `do` eingefügt, sodass der Code in der Bindung Führen Sie mit einem vollständig initialisierten Objekt aus. Wenn Ihr Code versucht, einen Member zu verwenden, bevor die Initialisierung beendet ist, wird eine InvalidOperationException ausgelöst.
 
-Statische `do` Bindungen können auf statische Member verweisen oder Felder der einschließenden Klasse aber für die Instanz nicht, Member oder Felder. Statische `do` Bindungen Teil der statische Initialisierer für die Klasse, die Ausführung vor der ersten Verwendung die Klasse gewährleistet ist.
+Statische `do` Bindungen können auf statische Member oder Felder der einschließenden Klasse verweisen, jedoch nicht auf Instanzmember oder-Felder. Statische `do` Bindungen werden Teil des statischen Initialisierers für die Klasse, die vor der ersten Verwendung der Klasse garantiert ausgeführt wird.
 
-Attribute werden ignoriert, für die `do` Bindungen in Typen. Wenn ein Attribut für Code erforderlich ist, der ausgeführt wird ein `do` binden, muss angewendet werden auf den primären Konstruktor.
+Attribute werden bei `do` Bindungen in Typen ignoriert. Wenn ein Attribut für Code erforderlich ist, der in einer `do` Bindung ausgeführt wird, muss er auf den primären Konstruktor angewendet werden.
 
-Im folgenden Code wird eine Klasse weist eine statische `do` Bindung und eine nicht statische `do` Bindung. Das Objekt hat einen Konstruktor, der zwei Parameter verfügt `a` und `b`, zwei private Felder werden in definiert die `let` Bindungen für die Klasse. Außerdem werden die zwei Eigenschaften definiert. Alle diese befinden sich im Gültigkeitsbereich, in der nicht statischen `do` Bindungsabschnitt, wie durch die Linie dargestellt wird, die alle diese Werte ausgibt.
+Im folgenden Code verfügt eine Klasse über eine statische `do` Bindung und eine nicht statische `do` Bindung. Das-Objekt verfügt über einen Konstruktor mit zwei para `a` Metern `b`: und, und zwei private Felder werden in `let` den Bindungen für die-Klasse definiert. Außerdem werden zwei Eigenschaften definiert. Alle diese Werte befinden sich im Bereich "nicht statische `do` Bindungen", wie in der Zeile veranschaulicht, in der alle diese Werte gedruckt werden.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3101.fs)]
 
 Die Ausgabe lautet wie folgt.
 
@@ -50,4 +50,4 @@ Initializing object 1 2 2 4 8 16
 - [Klassen](../classes.md)
 - [Konstruktoren](constructors.md)
 - [`let`-Bindungen in Klassen](let-bindings-in-classes.md)
-- [`do` Bindungen](../functions/do-Bindings.md)
+- [`do`Land](../functions/do-Bindings.md)

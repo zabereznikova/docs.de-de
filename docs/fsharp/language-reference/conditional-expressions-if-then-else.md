@@ -1,17 +1,17 @@
 ---
-title: 'Bedingte Ausdrücke: if... then... else'
+title: 'Bedingte Ausdrücke: If... dann... woanders'
 description: Erfahren Sie, wie Sie bedingte Ausdrücke in F# zum Ausführen der unterschiedliche Codezweige geschrieben.
 ms.date: 05/16/2016
-ms.openlocfilehash: db2d5ce5b75ecda171f2623c986878dcee1cf4d9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 825149bf296eded3cc2b4d8847ba4d82bea40cdc
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641990"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630393"
 ---
-# <a name="conditional-expressions-ifthenelse"></a>Bedingte Ausdrücke: `if...then...else`
+# <a name="conditional-expressions-ifthenelse"></a>Bedingte Ausdrücke:`if...then...else`
 
-Die `if...then...else` Ausdruck unterschiedliche Codezweige ausführt und auch auf einen anderen Wert je nach angegebenem booleschen Ausdruck ausgewertet wird.
+Der `if...then...else` Ausdruck führt verschiedene Code Verzweigungen aus und wird abhängig vom angegebenen booleschen Ausdruck auch zu einem anderen Wert ausgewertet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,15 +21,15 @@ if boolean-expression then expression1 [ else expression2 ]
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax *expression1* ausgeführt wird, wenn der boolesche Ausdruck ergibt `true`ist, andernfalls *expression2* ausgeführt wird.
+In der vorherigen Syntax wird *expression1* ausgeführt, wenn der boolesche Ausdruck `true`ergibt; andernfalls wird *expression2* ausgeführt.
 
-Anders als in anderen Sprachen, die `if...then...else` Konstrukt ist ein Ausdruck, der keine Anweisung. Das bedeutet, dass sie einen Wert erzeugt, das den Wert des letzten Ausdrucks im Branch, der ausgeführt wird. Die Typen der Werte produziert, die in jeder Verzweigung müssen übereinstimmen. Wenn es keine explizite ist `else` Branch, der Typ ist `unit`. Aus diesem Grund, wenn der Typ des der `then` Branch ist ein beliebiger Typ außer `unit`, muss vorhanden sein ein `else` Branch mit den gleichen Rückgabetyp. Beim Verketten `if...then...else` Ausdrücke, können Sie das Schlüsselwort `elif` anstelle von `else if`; sie gleichwertig sind.
+Anders als in anderen Sprachen ist `if...then...else` das Konstrukt ein Ausdruck, nicht eine-Anweisung. Dies bedeutet, dass ein Wert erzeugt wird, bei dem es sich um den Wert des letzten Ausdrucks in der Verzweigung handelt, die ausgeführt wird. Die Typen der in den einzelnen Verzweigungen erzeugten Werte müssen mit identisch sein. Wenn keine explizite `else` Verzweigung vorhanden ist, ist `unit`der Typ. Wenn der Typ der `then` Verzweigung ein anderer Typ als `unit`ist, muss daher eine `else` Verzweigung mit dem gleichen Rückgabetyp vorhanden sein. Wenn Sie `if...then...else` Ausdrücke verketten, können Sie das-Schlüssel `elif` Wort anstelle `else if`von verwenden. Sie sind gleichwertig.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht, wie Sie mit der `if...then...else` Ausdruck.
+Im folgenden Beispiel wird veranschaulicht, wie der `if...then...else` -Ausdruck verwendet wird.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
 ```
 10 is less than 20

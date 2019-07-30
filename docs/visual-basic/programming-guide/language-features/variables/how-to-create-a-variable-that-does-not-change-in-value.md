@@ -1,48 +1,49 @@
 ---
-title: 'Vorgehensweise: Erstellen Sie eine Variable, die nicht geändert wird, im Wert (Visual Basic)'
+title: 'Vorgehensweise: Eine Variable erstellen, die sich nicht im Wert ändert (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 3a9fa93b69c9abb42b2dd7eae623048f3628999e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d201e95463dd0431825fee03ebfd340ac80cc552
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663577"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630884"
 ---
-# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Vorgehensweise: Erstellen Sie eine Variable, die nicht geändert wird, im Wert (Visual Basic)
-Das Konzept einer Variablen, die nicht den Wert geändert wird möglicherweise angezeigt, widersprüchliche sein. Aber es gibt Situationen, wenn eine Konstante nicht möglich ist, und es ist sinnvoll, eine Variable mit einem festen Wert aufweisen. In diesem Fall können Sie eine Membervariable mit definieren die [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) Schlüsselwort.  
-  
- Sie können keine der [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md) zu deklarieren und Zuweisen eines konstanten Werts in den folgenden Situationen:  
-  
-- Die `Const` Anweisung akzeptiert nicht den Datentyp, die Sie verwenden möchten  
-  
-- Sie ist der Wert zum Zeitpunkt der Kompilierung nicht bekannt.  
-  
-- Sie werden kann nicht den konstanten Wert zur Kompilierungszeit berechnet  
-  
-### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Erstellen Sie eine Variable, die nicht geändert wird, Wert  
-  
-1. Auf Modulebene, deklarieren Sie eine Membervariable mit dem [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md), und fügen die [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) Schlüsselwort.  
-  
-    ```  
-    Dim ReadOnly timeStarted  
-    ```  
-  
-     Sie können angeben, `ReadOnly` nur in einer Membervariablen gespeichert. Dies bedeutet, dass Sie die Variable auf Modulebene außerhalb einer Prozedur definieren müssen.  
-  
-2. Wenn Sie den Wert in einer einzelnen Anweisung zum Zeitpunkt der Kompilierung berechnen können, verwenden Sie eine Initialisierungsklausel in der `Dim` Anweisung. Führen Sie die [als](../../../../visual-basic/language-reference/statements/as-clause.md) -Klausel mit einem Gleichheitszeichen (`=`), gefolgt von einem Ausdruck. Achten Sie darauf, dass der Compiler diesen Ausdruck mit einem konstanten Wert auswerten kann.  
-  
-    ```  
-    Dim ReadOnly timeStarted As Date = Now  
-    ```  
-  
-     Sie können einen Wert zuweisen einer `ReadOnly` Variable nur einmal. Sobald Sie dies tun, kann keinen Code immer den Wert ändern.  
-  
-     Wenn Sie den Wert zur Kompilierzeit nicht kennen, oder können nicht zum Zeitpunkt der Kompilierung in einer einzelnen Anweisung berechnen, können Sie es noch zur Laufzeit in einem Konstruktor zuweisen. Zu diesem Zweck müssen Sie deklarieren die `ReadOnly` Variable, Klasse oder Struktur auf. Klicken Sie im Konstruktor für diese Klasse oder Struktur berechnen Sie festen Wert für den Wert der Variablen zu, und weisen sie der Variablen vor der Rückgabe aus dem Konstruktor.  
-  
+# <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Vorgehensweise: Eine Variable erstellen, die sich nicht im Wert ändert (Visual Basic)
+
+Das Konzept einer Variablen, deren Wert nicht geändert wird, mag widersprüchlich erscheinen. Es gibt jedoch Situationen, in denen eine Konstante nicht realisierbar ist, und es sinnvoll ist, eine Variable mit einem Fixed-Wert zu haben. In einem solchen Fall können Sie eine Member-Variable [mit dem Schlüssel](../../../../visual-basic/language-reference/modifiers/readonly.md) Wort "schreibgeschützt" definieren.
+
+In den folgenden Situationen können Sie die Konstante [Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md) nicht verwenden, um einen konstanten Wert zu deklarieren und zuzuweisen:
+
+- Die `Const` Anweisung akzeptiert nicht den Datentyp, den Sie verwenden möchten.
+
+- Der Wert ist zur Kompilierzeit nicht bekannt.
+
+- Der Konstante Wert kann zur Kompilierzeit nicht berechnet werden.
+
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a>So erstellen Sie eine Variable, die den Wert nicht ändert
+
+1. Deklarieren Sie auf Modulebene eine Member-Variable mit der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md), und schließen Sie [das Schlüsselwort](../../../../visual-basic/language-reference/modifiers/readonly.md) "schreibgeschützt" ein.
+
+    ```vb
+    Dim ReadOnly timeStarted
+    ```
+
+    Sie können nur `ReadOnly` für eine Element Variable angeben. Dies bedeutet, dass Sie die Variable auf Modulebene außerhalb der Prozeduren definieren müssen.
+
+2. Wenn Sie den Wert in einer einzelnen Anweisung zur Kompilierzeit berechnen können, verwenden Sie eine Initialisierungs Klausel in `Dim` der-Anweisung. Befolgen Sie die [As](../../../../visual-basic/language-reference/statements/as-clause.md) -Klausel mit einem Gleichheitszeichen (`=`), gefolgt von einem Ausdruck. Stellen Sie sicher, dass der Compiler diesen Ausdruck mit einem konstanten Wert auswerten kann.
+
+    ```vb
+    Dim ReadOnly timeStarted As Date = Now
+    ```
+
+    Sie können einer `ReadOnly` Variablen nur einmal einen Wert zuweisen. Nachdem Sie dies getan haben, kann kein Code mehr seinen Wert ändern.
+
+    Wenn Sie den Wert zur Kompilierzeit nicht kennen oder ihn zur Kompilierzeit nicht in einer einzelnen Anweisung berechnen können, können Sie ihn trotzdem zur Laufzeit in einem Konstruktor zuweisen. Zu diesem Zweck müssen Sie die `ReadOnly` Variable auf Klassen-oder Struktur Ebene deklarieren. Berechnen Sie im Konstruktor für diese Klasse oder Struktur den festgelegten Wert der Variablen, und weisen Sie ihn der Variablen zu, bevor Sie den Konstruktor zurückgeben.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)

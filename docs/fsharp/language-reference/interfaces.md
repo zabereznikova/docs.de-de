@@ -1,17 +1,17 @@
 ---
 title: Schnittstellen
-description: Erfahren Sie, wie F# Schnittstellen geben Sätze von verwandten Elementen, die anderen Klassen implementiert.
+description: Erfahren Sie F# , wie Schnittstellen Sätze verwandter Member angeben, die von anderen Klassen implementiert werden.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5b57769af6c05b83b3a112635033abf4efaca772
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8f054a668ad0fbc2453a45883e8052471280eca3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645378"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627648"
 ---
 # <a name="interfaces"></a>Schnittstellen
 
-*Schnittstellen* angeben von Gruppen von verwandten Elementen, die anderen Klassen implementiert.
+*Schnittstellen* geben Sätze verwandter Member an, die von anderen Klassen implementiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,53 +43,53 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>Hinweise
 
-Deklarationen von Schnittstellen entsprechen Klassendeklarationen keine Member implementiert werden. Stattdessen werden alle Member abstrakt, wie durch das Schlüsselwort `abstract`. Sie bieten keine Methodentext für abstrakte Methoden. Sie können jedoch eine standardmäßige Implementierung bereitstellen, dazu auch eine separate Definition des Members als Methode zusammen mit den `default` Schlüsselwort. Auf diese Weise ist gleichbedeutend mit eine virtuelle Methode in einer Basisklasse in anderen .NET-Sprachen erstellen. In Klassen, die die Schnittstelle implementieren, kann solche eine virtuelle Methode überschrieben werden.
+Schnittstellen Deklarationen ähneln Klassen Deklarationen, außer dass keine Member implementiert werden. Stattdessen sind alle Member abstrakt, wie durch das-Schlüsselwort `abstract`angegeben. Sie stellen keinen Methoden Text für abstrakte Methoden bereit. Sie können jedoch auch eine Standard Implementierung bereitstellen, indem Sie eine separate Definition des Members als Methode in Verbindung mit dem `default` -Schlüsselwort einschließen. Dies entspricht dem Erstellen einer virtuellen Methode in einer Basisklasse in anderen .NET-Sprachen. Eine solche virtuelle Methode kann in Klassen, die die-Schnittstelle implementieren, überschrieben werden.
 
-Der Standardzugriff für Schnittstellen ist `public`.
+Der Standard Zugriff für Schnittstellen `public`ist.
 
-Sie können optional benennen Sie jeden Methodenparameter mithilfe von Standardprozessen F# Syntax:
+Optional können Sie jedem Methoden Parameter einen Namen über die normale F# Syntax übergeben:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 
-In der obigen `ISprintable` beispielsweise die `Print` Methode verfügt über einen einzelnen Parameter des Typs `string` mit dem Namen `format`.
+Im obigen `ISprintable` Beispiel verfügt die `Print` -Methode über einen einzelnen Parameter vom Typ `string` mit dem Namen `format`.
 
-Es gibt zwei Möglichkeiten, um Schnittstellen zu implementieren: mithilfe von Object-Ausdrücke und mithilfe von Klassentypen. In beiden Fällen bietet der Klasse Typ oder ein Objekt Ausdruck Methodentext für abstrakte Methoden der Schnittstelle an. Implementierungen sind spezifisch für jeden Typ, der die Schnittstelle implementiert. Aus diesem Grund können Schnittstellenmethoden auf verschiedene Arten voneinander abweichen.
+Es gibt zwei Möglichkeiten zum Implementieren von Schnittstellen: mithilfe von Objekt Ausdrücken und mithilfe von Klassentypen. In beiden Fällen stellt der Klassentyp oder der Objekt Ausdruck Methoden Körper für abstrakte Methoden der Schnittstelle bereit. Implementierungen sind spezifisch für jeden Typ, der die-Schnittstelle implementiert. Daher können sich Schnittstellen Methoden für verschiedene Typen voneinander unterscheiden.
 
-Die Schlüsselwörter `interface` und `end`, die Anfang und Ende der Definition kennzeichnen, sind optional, wenn Sie einfache Syntax verwenden. Wenn Sie diese Schlüsselwörter nicht verwenden, versucht der Compiler, um rückzufolgern, ob der Typ ist eine Klasse oder Schnittstelle, durch die Analyse der erstellt, die Sie verwenden. Wenn Sie ein Element definieren oder andere Klassensyntax verwenden, wird der Typ als eine Klasse interpretiert.
+Die Schlüssel `interface` Wörter `end`und, die den Anfang und das Ende der Definition markieren, sind optional, wenn Sie die Lightweight-Syntax verwenden. Wenn Sie diese Schlüsselwörter nicht verwenden, versucht der Compiler zu ableiten, ob der Typ eine Klasse oder eine Schnittstelle ist, indem die Konstrukte analysiert werden, die Sie verwenden. Wenn Sie einen Member definieren oder eine andere Klassen Syntax verwenden, wird der Typ als Klasse interpretiert.
 
-Das .NET codierstil begonnen werden soll alle Schnittstellen im wahrsten Sinne `I`.
+Der .net-Codierungsstil besteht darin, alle Schnittstellen `I`mit einem Kapital zu beginnen.
 
-## <a name="implementing-interfaces-by-using-class-types"></a>Implementieren von Schnittstellen mit Klassentypen
+## <a name="implementing-interfaces-by-using-class-types"></a>Implementieren von Schnittstellen mithilfe von Klassentypen
 
-Sie können in einem Klassentyp eine oder mehrere Schnittstellen implementieren, mit der `interface` Schlüsselwort, den Namen der Schnittstelle und die `with` -Schlüsselwort, gefolgt von den Definitionen für Schnittstellen Member, wie im folgenden Code gezeigt.
+Sie können eine oder mehrere Schnittstellen in einem Klassentyp mithilfe des `interface` -Schlüssel Worts, des Namens der-Schnittstelle `with` und des-Schlüssel Worts implementieren, gefolgt von den Schnittstellen Element Definitionen, wie im folgenden Code gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2801.fs)]
 
-Schnittstellenimplementierungen werden geerbt, sodass keine abgeleiteten Klassen nicht erneut implementieren, sie benötigen.
+Schnittstellen Implementierungen werden geerbt, sodass alle abgeleiteten Klassen Sie nicht neu implementieren müssen.
 
-## <a name="calling-interface-methods"></a>Aufrufen von Schnittstellenmethoden
+## <a name="calling-interface-methods"></a>Aufrufen von Schnittstellen Methoden
 
-Schnittstellenmethoden können nur über die Schnittstelle, nicht über ein Objekt des Typs aufgerufen werden, die die Schnittstelle implementiert. Daher möglicherweise müssen Sie Typumwandlung nach oben in den Schnittstellentyp mithilfe der `:>` Operator oder die `upcast` Operator, um diese Methoden aufrufen.
+Schnittstellen Methoden können nur über die-Schnittstelle aufgerufen werden, nicht über ein Objekt des Typs, der die-Schnittstelle implementiert. Folglich müssen Sie ggf. den `:>` -Operator oder den `upcast` -Operator verwenden, um diese Methoden aufzurufen.
 
-Die Schnittstellenmethode aufrufen, wenn Sie ein Objekt des Typs haben `SomeClass`, müssen Sie Typumwandlung nach oben das Objekt, das den Schnittstellentyp an, wie im folgenden Code gezeigt.
+Um die Schnittstellen Methode aufzurufen, wenn Sie ein Objekt vom `SomeClass`Typ haben, müssen Sie das Objekt in den Schnittstellentyp umwandeln, wie im folgenden Code gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2802.fs)]
 
-Eine Alternative besteht darin, eine Methode für das Objekt deklariert wird, werden und ruft die Schnittstellenmethode, wie im folgenden Beispiel gezeigt.
+Eine Alternative besteht darin, eine Methode für das Objekt zu deklarieren, das die Schnittstellen Methode upwandelt und aufruft, wie im folgenden Beispiel gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2803.fs)]
 
-## <a name="implementing-interfaces-by-using-object-expressions"></a>Implementieren von Schnittstellen mit Objektausdrücken
+## <a name="implementing-interfaces-by-using-object-expressions"></a>Implementieren von Schnittstellen mithilfe von Objekt Ausdrücken
 
-Object-Ausdrücke bieten eine mühelose Möglichkeit, eine Schnittstelle implementieren. Sie sind hilfreich, wenn Sie keinen benannten Typ erstellen, und sollen einfach nur ein Objekt, das die Schnittstellenmethoden, ohne zusätzlichen Methoden unterstützt. Ein Object-Ausdruck wird im folgenden Code veranschaulicht.
+Objekt Ausdrücke bieten eine kurze Möglichkeit, eine Schnittstelle zu implementieren. Sie sind nützlich, wenn Sie keinen benannten Typ erstellen müssen und nur ein Objekt, das die Schnittstellen Methoden unterstützt, ohne zusätzliche Methoden. Ein Objekt Ausdruck wird im folgenden Code veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2804.fs)]
 
 ## <a name="interface-inheritance"></a>Schnittstellenvererbung
 
-Schnittstellen können von einem oder mehreren Basisschnittstellen erben.
+Schnittstellen können von einer oder mehreren Basis Schnittstellen erben.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2805.fs)]
 
 ## <a name="see-also"></a>Siehe auch
 

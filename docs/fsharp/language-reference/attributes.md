@@ -1,17 +1,17 @@
 ---
 title: Attribute
-description: Erfahren Sie, wie F# Attribute ermöglichen, Metadaten, die auf ein Programmierungskonstrukt angewendet werden.
+description: Erfahren Sie F# , wie Attribute das Anwenden von Metadaten auf ein Programmierkonstrukt ermöglichen.
 ms.date: 05/16/2016
-ms.openlocfilehash: fed4c549b95d6d3701ab81cf5d62add411c16038
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3f3c3469192c09aa51f31ef3f00aca0196e3c382
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642025"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630076"
 ---
 # <a name="attributes"></a>Attribute
 
-Attribute ermöglichen, Metadaten, die auf ein Programmierungskonstrukt angewendet werden.
+Attribute ermöglichen das Anwenden von Metadaten auf ein Programmierkonstrukt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -21,51 +21,51 @@ Attribute ermöglichen, Metadaten, die auf ein Programmierungskonstrukt angewend
 
 ## <a name="remarks"></a>Hinweise
 
-In der vorherigen Syntax wird die *Ziel* ist optional, und, falls vorhanden, gibt die Art der Programmentität, die auf das Attribut angewendet wird. Gültige Werte für *Ziel* werden angezeigt, in der Tabelle, die weiter unten in diesem Dokument angezeigt wird.
+In der vorherigen Syntax ist das *Ziel* optional und gibt, sofern vorhanden, die Art der Programm Entität an, für die das Attribut gilt. Gültige Werte für das *Ziel* werden in der Tabelle angezeigt, die später in diesem Dokument angezeigt wird.
 
-Die *Attributname* bezieht sich auf der (möglicherweise mit Namespaces qualifizierte) Name, der einen gültigen Attributtyp, mit oder ohne das Suffix `Attribute` , die in der Regel in den Typnamen des Attributs verwendet wird. Z. B. den Typ `ObsoleteAttribute` können verkürzt werden `Obsolete` in diesem Kontext.
+Der *Attribut Name* verweist auf den Namen (möglicherweise mit Namespaces qualifiziert) eines gültigen Attributtyps mit oder ohne das Suffix `Attribute` , das normalerweise in Attributtyp Namen verwendet wird. Der Typ `ObsoleteAttribute` kann z. b. nur `Obsolete` in diesem Kontext verkürzt werden.
 
-Die *Argumente* sind die Argumente an den Konstruktor für den Attributtyp. Wenn ein Attribut einen Standardkonstruktor verfügt, können die Liste von Argumenten und die Klammern weggelassen werden. Attribute unterstützen sowohl Positionsargumente als auch benannte Argumente. *Positionelle Argumente* sind Argumente, die in der Reihenfolge verwendet werden, in der sie angezeigt werden. Benannte Argumente können verwendet werden, wenn das Attribut mit öffentliche Eigenschaften aufweist. Sie können diese mit der folgenden Syntax in der Argumentliste festlegen.
+Die *Argumente* sind die Argumente für den Konstruktor für den Attributtyp. Wenn ein Attribut über einen Standardkonstruktor verfügt, können die Argumentliste und die Klammern ausgelassen werden. Attribute unterstützen sowohl positionelle Argumente als auch benannte Argumente. *Positions Argumente* sind Argumente, die in der Reihenfolge verwendet werden, in der Sie angezeigt werden. Benannte Argumente können verwendet werden, wenn das Attribut öffentliche Eigenschaften hat. Sie können diese mithilfe der folgenden Syntax in der Argumentliste festlegen.
 
 ```
 *property-name* = *property-value*
 ```
 
-Solche eigenschafteninitialisierungen in beliebiger Reihenfolge möglich, aber sie müssen keine positionellen Argumente folgen. Es folgt ein Beispiel für ein Attribut, das positionelle Argumente und eigenschafteninitialisierungen verwendet.
+Solche Eigenschafts Initialisierungen können in beliebiger Reihenfolge vorliegen, aber Sie müssen beliebige Positions Argumente einhalten. Im folgenden finden Sie ein Beispiel für ein Attribut, das Positions Argumente und Eigenschafts Initialisierungen verwendet.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
-In diesem Beispiel wird das Attribut `DllImportAttribute`, hier in Kurzform verwendet. Das erste Argument ist ein Positionsparameter, und die zweite ist eine Eigenschaft.
+In diesem Beispiel ist `DllImportAttribute`das-Attribut, das in kürzerer Form verwendet wird. Das erste Argument ist ein Positions Parameter, und das zweite Argument ist eine Eigenschaft.
 
-Attribute sind ein .NET programming Konstrukt, ein Objekt, bekannt als ein *Attribut* , einen Typ oder anderes Programmelement zugeordnet werden soll. Das Programmelement, das auf das ein Attribut angewendet wird, wird als bezeichnet die *Attributziel*. Das Attribut enthält in der Regel die Metadaten zum Ziel. In diesem Kontext möglicherweise Metadaten von Daten zu den anderen Typ als ihre Felder und Elemente.
+Attribute sind ein .net-Programmierkonstrukt, mit dem ein Objekt, das als *Attribut* bezeichnet wird, einem Typ oder einem anderen Programmelement zugeordnet werden kann. Das Programmelement, auf das ein Attribut angewendet wird, wird als *Attribut Ziel*bezeichnet. Das Attribut enthält normalerweise Metadaten zum Ziel. In diesem Kontext können Metadaten beliebige Daten über den Typ sein, der nicht die Felder und Member ist.
 
-Attribute in F# können angewendet werden, um die folgenden Konstrukte der Programmierung: Funktionen, Methoden, Assemblys, Modulen, Typen (Klassen, Datensätze, Strukturen, Schnittstellen, Delegaten, Enumerationen, Unions und So weiter), Konstruktoren, Eigenschaften, Felder, Parameter Geben Sie Parameter und Rückgabewerte. Attribute dürfen nicht auf `let` Bindungen in Klassen, Ausdrücke oder Ausdrücke für Workflows.
+Attribute in F# können angewendet werden, um die folgenden Konstrukte der Programmierung: Funktionen, Methoden, Assemblys, Modulen, Typen (Klassen, Datensätze, Strukturen, Schnittstellen, Delegaten, Enumerationen, Unions und So weiter), Konstruktoren, Eigenschaften, Felder, Parameter Geben Sie Parameter und Rückgabewerte. Attribute sind für Bindungen innerhalb `let` von Klassen, Ausdrücken oder Workflow Ausdrücken nicht zulässig.
 
-In der Regel wird die Deklaration des Attributs direkt vor der Deklaration des Attributziels angezeigt. Mehrere Attributdeklarationen können verwendet werden, zusammen, wie folgt.
+In der Regel wird die Attribut Deklaration direkt vor der Deklaration des Attribut Ziels angezeigt. Mehrere Attribut Deklarationen können wie folgt verwendet werden.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
-Sie können Attribute zur Laufzeit mit .NET-Reflektion Abfragen.
+Sie können Attribute zur Laufzeit mithilfe der .NET-Reflektion Abfragen.
 
-Sie können mehrere Attribute einzeln zu deklarieren, wie im vorherigen Codebeispiel, oder Sie können diese in einem Satz von Klammern deklarieren, wenn Sie ein Semikolon verwenden, den einzelnen Attributen und Konstruktoren, wie hier gezeigt.
+Sie können mehrere Attribute einzeln deklarieren, wie im vorherigen Codebeispiel, oder Sie können Sie in einer Gruppe von Klammern deklarieren, wenn Sie die einzelnen Attribute und Konstruktoren mit einem Semikolon trennen, wie hier gezeigt.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
-Gängigen Attributen zählen die `Obsolete` -Attribut, Attribute, sicherheitsüberlegungen, Attribute, für COM-Unterstützung, Attribute, die im Zusammenhang mit den Besitz des Codes und Attribute, die angibt, ob ein Typ serialisiert werden kann. Das folgende Beispiel zeigt die Verwendung der `Obsolete` Attribut.
+Zu den Attributen zählen in `Obsolete` der Regel das Attribut, Attribute für Sicherheitsüberlegungen, Attribute für COM-Unterstützung, Attribute, die sich auf den Besitz von Code beziehen, und Attribute, die angeben, ob ein Typ serialisiert werden kann Im folgenden Beispiel wird die Verwendung des `Obsolete` -Attributs veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-Für das Attribut abzielt `assembly` und `module`, wenden Sie die Attribute auf oberster Ebene `do` in der Assembly binden. Sie können das Wort einschließen `assembly` oder `module` in der Attributdeklaration, wie folgt.
+Für die Attribut Ziele `assembly` und `module`wenden Sie die Attribute auf eine Bindung der obersten Ebene `do` in der Assembly an. Sie können das Wort `assembly` oder `module` in die Attribut Deklaration wie folgt einschließen.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-Wenn Sie weglassen, dass das Attributziel für ein Attribut auf eine `do` Bindung, die F#-Compiler versucht, das Attributziel zu bestimmen, die sinnvoll für dieses Attribut ist. Viele Attributklassen verfügen über ein Attribut des Typs `System.AttributeUsageAttribute` , enthält Informationen zu den möglichen Zielen, die für dieses Attribut unterstützt. Wenn die `System.AttributeUsageAttribute` gibt an, dass das Attribut unterstützt die Funktionen als Ziele, die das Attribut verwendet, um auf den primären Einstiegspunkt des Programms anzuwenden. Wenn die `System.AttributeUsageAttribute` gibt an, dass das Attribut unterstützt Assemblys als Ziele, nimmt der Compiler das Attribut, auf die Assembly angewendet werden soll. Die meisten Attribute nicht für Funktionen und Assemblys, aber in Fällen, in denen dies der Fall, wird das Attribut zuweisen des Programms "main"-Funktion erstellt. Wenn das Attributziel explizit angegeben wird, wird das Attribut auf das angegebene Ziel angewendet.
+Wenn Sie weglassen, dass das Attributziel für ein Attribut auf eine `do` Bindung, die F#-Compiler versucht, das Attributziel zu bestimmen, die sinnvoll für dieses Attribut ist. Viele Attribut Klassen verfügen über ein Attribut vom `System.AttributeUsageAttribute` Typ, das Informationen über die möglichen Ziele enthält, die für dieses Attribut unterstützt werden. Wenn das `System.AttributeUsageAttribute` angibt, dass das Attribut Funktionen als Ziele unterstützt, wird das Attribut auf den Haupteinstiegspunkt des Programms angewendet. Wenn das `System.AttributeUsageAttribute` angibt, dass das Attribut Assemblys als Ziele unterstützt, übernimmt der Compiler das-Attribut, das auf die Assembly angewendet wird. Die meisten Attribute gelten nicht für Funktionen und Assemblys, aber in Fällen, in denen Sie dies tun, wird das Attribut für die Hauptfunktion des Programms übernommen. Wenn das Attribut Ziel explizit angegeben wird, wird das Attribut auf das angegebene Ziel angewendet.
 
-Obwohl Sie nicht in der Regel benötigen, geben Sie das Attributziel explizit gültige Werte für *Ziel* werden in einem Attribut in der folgenden Tabelle, und Beispiele für die Nutzung angezeigt.
+Obwohl Sie in der Regel das Attribut Ziel nicht explizit angeben müssen, sind in der folgenden Tabelle die gültigen Werte für *target* in einem Attribut sowie Beispiele für die Verwendung aufgeführt.
 
 <table>
   <tr>
-    <th>Attributziel</td>
+    <th>Attribut Ziel</td>
     <th>Beispiel</td> 
   </tr>
   <tr>

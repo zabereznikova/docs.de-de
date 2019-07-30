@@ -2,12 +2,12 @@
 title: Musterabgleich
 description: Erfahren Sie, wie Muster werden in F# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: f76a5fb675f83df87dd896f471a3552495f39e7e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641769"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627297"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -15,9 +15,9 @@ Muster sind Regeln zum Transformieren von Eingabedaten. Sie werden in F# stets v
 
 ## <a name="remarks"></a>Hinweise
 
-Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Vergleichsausdrücke](match-expressions.md), [let-Bindungen](functions/let-bindings.md), [Lambda-Ausdrücken: Die `fun` Schlüsselwort](functions/lambda-expressions-the-fun-keyword.md), und [Ausnahmen: Die `try...with` Ausdruck](exception-handling/the-try-with-expression.md).
+Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Match Expressions](match-expressions.md), [Let](./functions/let-bindings.md)-Bindungen [, Lambda-Ausdrücke: Das `fun` Schlüssel](./functions/lambda-expressions-the-fun-keyword.md)Wort und[Ausnahmen: Der `try...with` Ausdruck](/.exception-handling/the-try-with-expression.md).
 
-Z. B. in der `match` Ausdruck, der *Muster* ist, was dem Pipesymbol angegeben.
+Im `match` Ausdruck ist das *Muster* z. b. das, was dem Pipe-Symbol folgt.
 
 ```fsharp
 match expression with
@@ -25,7 +25,7 @@ match expression with
 ...
 ```
 
-Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausdruck wird jedes Muster einzeln untersucht, um zu ermitteln, ob die Eingabedaten mit dem Muster kompatibel sind. Wenn eine Übereinstimmung gefunden wird, wird der Ergebnisausdruck ausgeführt. Wenn keine Übereinstimmung gefunden wird, wird die nächste Musterregel getestet. Der optionale When *Bedingung* Teil wird erläutert, [Vergleichsausdrücke](match-expressions.md).
+Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausdruck wird jedes Muster einzeln untersucht, um zu ermitteln, ob die Eingabedaten mit dem Muster kompatibel sind. Wenn eine Übereinstimmung gefunden wird, wird der Ergebnisausdruck ausgeführt. Wenn keine Übereinstimmung gefunden wird, wird die nächste Musterregel getestet. Der *optionale when-* Bedingungs Teil wird in [Match-Ausdrücken](match-expressions.md)erläutert.
 
 In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit wird die Eingabe anhand jedes der folgenden Muster in der in der Tabelle aufgeführten Reihenfolge überprüft. Die Muster werden rekursiv vom ersten bis zum letzten Muster im Code und von links nach rechts in den einzelnen Zeilen angewendet.
 
@@ -35,17 +35,17 @@ In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit w
 |Bezeichnermuster|Der Wert eines Falls einer Unterscheidungs-Union, eine Ausnahmebezeichnung oder ein Fall eines aktiven Musters.|`Some(x)`<br /><br />`Failure(msg)`|
 |Variablenmuster|*identifier*|`a`|
 |`as`-Muster|*Muster* als *Bezeichner*|`(a, b) as tuple1`|
-|OR-Muster|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
+|OR-Muster|*muster1* &#124; *muster2*|<code>([h] &#124; [h; _])</code>|
 |AND-Muster|*muster1* &amp; *muster2*|`(a, b) & (_, "test")`|
-|Cons-Muster|*identifier* :: *list-identifier*|`h :: t`|
-|Listenmuster|[ *Muster_1*;...; *Pattern_n* ]|`[ a; b; c ]`|
-|Arraymuster|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Cons-Muster|*Bezeichner* :: *List-Identifier*|`h :: t`|
+|Listenmuster|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
+|Arraymuster|[&#124; *pattern_1*;..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |Muster in Klammern|( *Muster* )|`( a )`|
-|Tupelmuster|( *Muster_1*,..., *Pattern_n* )|`( a, b )`|
-|Datensatzmuster|{ *identifier1* = *pattern_1*; ... ; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
+|Tupelmuster|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
+|Datensatzmuster|{ *Bezeichner1* = *pattern_1*;...; *identifier_n*  =  *pattern_n* }|`{ Name = name; }`|
 |Platzhaltermuster|_|`_`|
-|Muster zusammen mit Typanmerkung|*Muster* : *Typ*|`a : int`|
-|Typtestmuster|:? *Typ* [als *Bezeichner* ]|`:? System.DateTime as dt`|
+|Muster zusammen mit Typanmerkung|*Pattern* : *Type*|`a : int`|
+|Typtestmuster|:? *Typ* [ *Bezeichner* ]|`:? System.DateTime as dt`|
 |NULL-Muster|NULL|`null`|
 
 ## <a name="constant-patterns"></a>Konstantenmuster
@@ -54,11 +54,11 @@ Konstantenmuster sind numerische Literale, Zeichenliterale und Zeichenfolgenlite
 
 Im folgenden Beispiel wird die Verwendung von Literalmustern veranschaulicht, und es werden außerdem ein Variablenmuster und ein OR-Muster verwendet.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
 
 Ein weiteres Beispiel für ein Literalmuster ist ein auf Enumerationskonstanten basierendes Muster. Wenn Sie Enumerationskonstanten verwenden, müssen Sie den Enumerationstypnamen angeben.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
 
 ## <a name="identifier-patterns"></a>Bezeichnermuster
 
@@ -68,11 +68,11 @@ Unterscheidungs-Union-Muster können einfache benannte Fälle sein oder über ei
 
 Der `option`-Typ ist eine Unterscheidungs-Union mit den beiden Fällen `Some` und `None`. Ein Fall (`Some`) verfügt über einen Wert, der andere Fall (`None`) ist jedoch lediglich ein benannter Fall. Daher muss `Some` über eine Variable für den dem Fall `Some` zugeordneten Wert verfügen, `None` muss jedoch als None angegeben werden. Im folgenden Code wird der Variablen `var1` der Wert zugewiesen, der durch den Vergleich mit dem Fall `Some` ermittelt wurde.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
 
 Im folgenden Beispiel enthält die Unterscheidungs-Union `PersonName` eine Kombination von Zeichenfolgen und Zeichen, die mögliche Formen von Namen darstellen. Die Fälle der Unterscheidungs-Union lauten `FirstOnly`, `LastOnly` und `FirstLast`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
 
 Für Unterscheidungs-Unions, die über benannte Felder verfügen, verwenden Sie das Gleichheitszeichen (=), um den Wert eines benannten Felds zu extrahieren. Betrachten Sie zum Beispiel eine Unterscheidungs-Union mit einer Deklaration wie der folgenden.
 
@@ -101,9 +101,9 @@ match shape with
 | _ -> ()
 ```
 
-Mit aktiven Mustern können Sie komplexere benutzerdefinierte Musterabgleiche definieren. Weitere Informationen über aktive Muster finden Sie unter [mit aktiven Mustern](active-patterns.md).
+Mit aktiven Mustern können Sie komplexere benutzerdefinierte Musterabgleiche definieren. Weitere Informationen zu aktiven Mustern finden Sie unter [aktive Muster](active-patterns.md).
 
-Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Musterabgleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen über Mustervergleich bei der Behandlung von Ausnahmen finden Sie unter [Ausnahmen: Die `try...with` Ausdruck](exception-handling/the-try-with-expression.md).
+Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Musterabgleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen zum Musterabgleich bei der Ausnahmebehandlung [finden Sie unter Ausnahmen: Der `try...with` Ausdruck](/.exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Variablenmuster
 
@@ -111,7 +111,7 @@ Im Variablenmuster wird dem zu vergleichenden Wert ein Variablenname zugewiesen,
 
 Im folgenden Beispiel wird ein Variablenmuster in einem Tupelmuster veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
 
 ## <a name="as-pattern"></a>as-Muster
 
@@ -119,7 +119,7 @@ Das `as`-Muster ist ein Muster, an das eine `as`-Klausel angefügt ist. Die `as`
 
 Im folgenden Beispiel wird ein `as`-Muster verwendet.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
 
 ## <a name="or-pattern"></a>OR-Muster
 
@@ -127,39 +127,39 @@ Das OR-Muster wird verwendet, wenn Eingabedaten mit mehreren Mustern übereinsti
 
 Das OR-Muster wird im folgenden Beispiel veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
 
 ## <a name="and-pattern"></a>AND-Muster
 
 Das AND-Muster erfordert, dass die Eingabe mit zwei Mustern übereinstimmt. Die Typen beider Seiten des AND-Musters müssen kompatibel sein.
 
-Das folgende Beispiel ähnelt `detectZeroTuple` angezeigt, der [Tupelmuster](https://msdn.microsoft.com/library/#tuple) weiter unten in diesem Thema, jedoch werden hier `var1` und `var2` als Werte abgerufen werden, die mit dem AND-Muster.
+Das folgende Beispiel ist ähnlich `detectZeroTuple` wie im Abschnitt [tupelmuster](https://msdn.microsoft.com/library/#tuple) weiter unten in diesem Thema dargestellt. hier werden `var1` jedoch `var2` sowohl als auch Werte mithilfe des-Musters und des-Musters abgerufen.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
 ## <a name="cons-pattern"></a>Cons-Muster
 
-Cons-Muster wird verwendet, um eine Liste in das erste Element, zerlegt die *Head*, und eine Liste mit den restlichen Elementen der *Tail*.
+Das Cons-Muster wird verwendet, um eine Liste in das erste Element, den *Kopf*und eine Liste mit den restlichen Elementen, dem Ende, zu *zerlegen.*
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
 ## <a name="list-pattern"></a>Listenmuster
 
 Mit dem Listenmuster können Listen in eine Reihe von Elementen zerlegt werden. Das Listenmuster selbst darf nur mit Listen einer bestimmten Anzahl von Elementen übereinstimmen.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
 
 ## <a name="array-pattern"></a>Arraymuster
 
 Das Arraymuster ähnelt dem Listenmuster, und es kann zum Zerlegen von Arrays einer bestimmten Länge verwendet werden.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
 
 ## <a name="parenthesized-pattern"></a>Muster in Klammern
 
 Muster können in Klammern eingeschlossen werden, um die gewünschte Assoziativität zu erreichen. Im folgenden Beispiel werden Klammern verwendet, um die Assoziativität zwischen einem AND-Muster und einem Cons-Muster zu steuern.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
 
 ## <a name="tuple-pattern"></a>Tupelmuster
 
@@ -167,13 +167,13 @@ Mithilfe des Tupelmusters werden Eingabe in Tupelform verglichen. Es ermöglicht
 
 Im folgenden Beispiel wird die Verwendung des Tupelmusters veranschaulicht, und es werden außerdem Literalmuster, Variablenmuster und das Platzhaltermuster verwendet.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
 
 ## <a name="record-pattern"></a>Datensatzmuster
 
 Mit dem Datensatzmuster werden Datensätze zerlegt, um die Werte von Feldern zu extrahieren. Das Muster muss nicht auf alle Felder des Datensatzes verweisen. Weggelassene Felder werden nicht verglichen und nicht extrahiert.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
 
 ## <a name="wildcard-pattern"></a>Platzhaltermuster
 
@@ -183,7 +183,7 @@ Das Platzhaltermuster wird durch den Unterstrich (`_`) dargestellt und stimmt wi
 
 Muster können Typanmerkungen aufweisen. Diese verhalten sich wie andere Typanmerkungen und steuern Typrückschluss wie diese. Typanmerkungen in Mustern müssen in Klammern eingeschlossen werden. Im folgenden Code wird ein Muster veranschaulicht, das eine Typanmerkung aufweist.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
 
 ## <a name="type-test-pattern"></a>Typtestmuster
 
@@ -191,15 +191,15 @@ Das Typtestmuster wird verwendet, um die Eingabe anhand eines Typs zu vergleiche
 
 Das Typtestmuster wird im folgenden Beispiel veranschaulicht.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
 ## <a name="null-pattern"></a>NULL-Muster
 
-Das NULL-Muster wird mit dem NULL-Wert verglichen, der beim Arbeiten mit Typen, die NULL-Werte zulassen, vorhanden sein kann. NULL-Muster werden häufig verwendet, bei der Interaktion mit .NET Framework-Code. Beispielsweise kann der Rückgabewert einer .NET-API die Eingabe für einen `match`-Ausdruck sein. Die Steuerung des Programmablaufs kann von Eigenschaften des Rückgabewerts abhängig gemacht werden, beispielsweise davon, ob der Rückgabewert NULL ist. Mithilfe des NULL-Musters können Sie verhindern, dass NULL-Werte an den Rest des Programms weitergegeben werden.
+Das NULL-Muster wird mit dem NULL-Wert verglichen, der beim Arbeiten mit Typen, die NULL-Werte zulassen, vorhanden sein kann. NULL-Muster werden häufig verwendet, wenn Sie mit .NET Framework Code interagieren. Beispielsweise kann der Rückgabewert einer .NET-API die Eingabe für einen `match`-Ausdruck sein. Die Steuerung des Programmablaufs kann von Eigenschaften des Rückgabewerts abhängig gemacht werden, beispielsweise davon, ob der Rückgabewert NULL ist. Mithilfe des NULL-Musters können Sie verhindern, dass NULL-Werte an den Rest des Programms weitergegeben werden.
 
 Im folgenden Beispiel werden das NULL-Muster und das Variablenmuster verwendet.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
 ## <a name="see-also"></a>Siehe auch
 
