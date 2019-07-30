@@ -19,10 +19,6 @@
     - name: Verfügbarmachen von .NET Framework-Komponenten in COM
       href: exposing-dotnet-components-to-com.md
       items:
-        - name: Qualifizieren von .NET-Typen für die Interoperation
-          href: qualifying-net-types-for-interoperation.md
-        - name: Anwenden von Interop-Attributen
-          href: applying-interop-attributes.md
         - name: Verpacken einer Assembly für COM
           href: packaging-an-assembly-for-com.md
         - name: Registrieren von Assemblys mit COM
@@ -94,15 +90,8 @@
               href: how-to-migrate-managed-code-dcom-to-wcf.md
     - name: 'Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen'
       href: how-to-map-hresults-and-exceptions.md
-    - name: COM-Wrapper
-      href: com-wrappers.md
-      items:
-        - name: Runtime Callable Wrapper (RCW)
-          href: runtime-callable-wrapper.md
-        - name: COM Callable Wrapper (CCW)
-          href: com-callable-wrapper.md
-        - name: 'Vorgehensweise: Erstellen von COM-Wrappern'
-          href: how-to-create-com-wrappers.md
+    - name: 'Vorgehensweise: Erstellen von COM-Wrappern'
+      href: how-to-create-com-wrappers.md
     - name: Typäquivalenz und eingebettete Interop-Typen
       href: type-equivalence-and-embedded-interop-types.md
     - name: 'Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“'
