@@ -6,16 +6,18 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 3be4e827e75e4e26a34d9ed70423af5aa317e7fb
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: f211acaa8c47ab42a1f7f06cff6c35570cd22b75
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025002"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433830"
 ---
 # <a name="stackalloc-operator-c-reference"></a>stackalloc-Operator (C#-Referenz)
 
 Der `stackalloc`-Operator ordnet einen Speicherblock im Stapel zu. Ein während der Ausführung der Methode im Stapel zugeordneter Speicherblock wird automatisch verworfen, wenn diese Methode zurückgegeben wird. Sie können den mit dem `stackalloc`-Operator zugeordneten Speicher nicht explizit freigeben. Ein im Stapel zugeordneter Speicherblock unterliegt nicht der [automatischen](../../../standard/garbage-collection/index.md) Speicherbereinigung und muss nicht mit den [`fixed`-Anweisungen](../keywords/fixed-statement.md) angeheftet werden.
+
+In Ausdruck `stackalloc T[E]` muss `T` ein [nicht verwalteter Typ](../builtin-types/unmanaged-types.md) und `E` ein Ausdruck des Typs `int` sein.
 
 Sie können das Ergebnis des `stackalloc`-Operators einer Variablen mit einem der folgenden Typen zuweisen:
 

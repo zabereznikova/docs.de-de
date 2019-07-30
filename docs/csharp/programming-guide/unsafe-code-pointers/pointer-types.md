@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 704af9aae23571abdb82ae851066e3c03dbe7161
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661086"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433546"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Zeigertypen (C#-Programmierhandbuch)
 
@@ -21,16 +21,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-Der Typ, der vor `*` in einem Zeigertyp angegeben wird, wird als **Verweistyp** bezeichnet. Die folgenden Typen können Verweistypen sein:
-
-- Ein beliebiger integraler Typ: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md), [byte](../../language-reference/builtin-types/integral-numeric-types.md), [short](../../language-reference/builtin-types/integral-numeric-types.md), [ushort](../../language-reference/builtin-types/integral-numeric-types.md), [int](../../language-reference/builtin-types/integral-numeric-types.md), [uint](../../language-reference/builtin-types/integral-numeric-types.md), [long](../../language-reference/builtin-types/integral-numeric-types.md) oder [ulong](../../language-reference/builtin-types/integral-numeric-types.md).
-- Ein beliebiger Gleitkommatyp: [float](../../language-reference/builtin-types/floating-point-numeric-types.md) oder [double](../../language-reference/builtin-types/floating-point-numeric-types.md).
-- [char](../../language-reference/keywords/char.md).
-- [bool](../../language-reference/keywords/bool.md).
-- [decimal](../../language-reference/builtin-types/floating-point-numeric-types.md).
-- Beliebiger [enum](../../language-reference/keywords/enum.md)-Typ.
-- Beliebiger Zeigertyp. Dadurch können Sie Ausdrücke wie `void**` verwenden.
-- Beliebiger benutzerdefinierter Strukturtyp, der nur Felder von nicht verwalteten Typen enthält.
+Der Typ, der vor `*` in einem Zeigertyp angegeben wird, wird als **Verweistyp** bezeichnet. Nur ein [nicht verwalteter Typ](../../language-reference/builtin-types/unmanaged-types.md) kann ein Verweistyp sein.
 
 Zeigertypen erben nicht von [object`object`, und es ist keine Konvertierung zwischen Zeigertypen und ](../../language-reference/keywords/object.md) möglich. Weiterhin unterstützen Boxing und Unboxing keine Zeiger. Es ist jedoch möglich, Konvertierungen zwischen verschiedenen Zeigertypen sowie zwischen Zeigertypen und ganzzahligen Typen durchzuführen.
 

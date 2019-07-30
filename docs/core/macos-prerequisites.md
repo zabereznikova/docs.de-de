@@ -4,13 +4,13 @@ description: Unterstützte Versionen von macOS-Versionen und .NET Core-Abhängig
 author: mairaw
 ms.author: adegeo
 ms.custom: updateeachvsrelease
-ms.date: 12/14/2018
-ms.openlocfilehash: 57346eb5cfdcc9f51c3aab173ed575067b124150
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.date: 07/13/2019
+ms.openlocfilehash: 5086b185ee2d49c7b569ed0cb62b4c8995f9982c
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66299988"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433914"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Erforderliche Komponenten für .NET Core unter macOS
 
@@ -41,9 +41,9 @@ Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 1.
 
 # <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-.NET Core 3.0 Vorschauversion 3 wird von folgenden macOS-Versionen unterstützt:
+.NET Core 3.0 wird von folgenden macOS-Versionen unterstützt:
 
-* macOS 10.12 „Sierra“ und höher
+* macOS 10.13 „High Sierra“ und höher
 
 Unter [.NET Core 3.0 Supported OS Versions (Von .NET Core 3.0 unterstützte Betriebssystemversionen)](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) finden Sie die vollständige Liste der Betriebssysteme, Verteilungen und Versionen, die von .NET Core 3.0 unterstützt werden, außerdem nicht mehr unterstützte Betriebssystemversionen und Links zu Lebenszyklusrichtlinien.
 
