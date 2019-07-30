@@ -1,8 +1,24 @@
 - name: Programmierkonzepte
   href: index.md
   items:
-    - name: Assemblys und der globale Assemblycache
-      href: assemblies-gac/
+    - name: Assemblys
+      items:
+        - name: Friend-Assemblys
+          items:
+            - name: 'Vorgehensweise: Erstellen von unsignierten Friend-Assemblys'
+              href: assemblies-gac/how-to-create-unsigned-friend-assemblies.md
+            - name: 'Vorgehensweise: Erstellen von signierten Friend-Assemblys'
+              href: assemblies-gac/how-to-create-signed-friend-assemblies.md
+        - name: 'Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile'
+          href: assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
+        - name: 'Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist'
+          href: assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
+        - name: 'Vorgehensweise: Laden und Entladen von Assemblys'
+          href: assemblies-gac/how-to-load-and-unload-assemblies.md
+        - name: 'Vorgehensweise: Freigeben einer Assembly für andere Anwendungen'
+          href: assemblies-gac/how-to-share-an-assembly-with-other-applications.md
+        - name: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio'
+          href: assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md
     - name: Asynchrone Programmierung mit „async“ und „await“
       href: async/
     - name: Attribute
