@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400818"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672000"
 ---
 # <a name="xaml-overview-wpf"></a>Übersicht über XAML (WPF)
+
 Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen verwenden können. Dieses Thema beschreibt speziell XAML entsprechend der Implementierung durch [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML selbst geht über das in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementierte Sprachkonzept hinaus.  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>Was ist XAML?  
- XAML ist eine deklarative Markupsprache. Wie auf das .NET Framework Programmiermodell angewendet, vereinfacht XAML das Erstellen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eines für eine .NET Framework Anwendung. Sie können sichtbare Elemente der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] im deklarativen XAML-Markup erstellen und anschließend die Definition der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] mithilfe von CodeBehind-Dateien, die über partielle Klassendefinitionen an das Markup geknüpft sind, von der Laufzeitlogik trennen. XAML repräsentiert direkt die Instanziierung von Objekten in einem spezifischen Satz von in Assemblys definierten Unterstützungstypen dar. Dies ist ein anderer Ansatz als der anderer Markupsprachen, die üblicherweise interpretierte Sprachen sind, die keine direkte Verbindung zu einem System von Unterstützungstypen besitzen. XAML ermöglicht einen Workflow, bei dem separate Parteien auf der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] und der Logik einer Anwendung unter der Verwendung möglicherweise unterschiedlicher Tools arbeiten können.  
+ XAML ist eine deklarative Markupsprache. Wie auf das .NET Framework Programmiermodell angewendet, vereinfacht XAML das Erstellen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] eines für eine .NET Framework Anwendung. Sie können sichtbare [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elemente im deklarativen XAML-Markup erstellen und dann die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Definition von der Lauf Zeit Logik trennen, indem Sie Code Behind-Dateien verwenden, die mit dem Markup über partielle Klassendefinitionen verknüpft sind. XAML repräsentiert direkt die Instanziierung von Objekten in einem spezifischen Satz von in Assemblys definierten Unterstützungstypen dar. Dies ist ein anderer Ansatz als der anderer Markupsprachen, die üblicherweise interpretierte Sprachen sind, die keine direkte Verbindung zu einem System von Unterstützungstypen besitzen. XAML ermöglicht einen Workflow, bei dem separate Parteien auf der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] und der Logik einer Anwendung unter der Verwendung möglicherweise unterschiedlicher Tools arbeiten können.  
   
  Bei der Darstellung als Text sind XAML-Dateien XML-Dateien, die in der Regel die `.xaml`-Erweiterung haben. Die Dateien können in jeder XML-Codierung codiert sein, üblich ist jedoch UTF-8-Codierung.  
   
@@ -104,7 +105,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
   
  In der XAML-Sprache gilt die Regel, dass der Wert einer XAML-Inhaltseigenschaft nur vor oder nach allen anderen Eigenschaftenelemente für dieses Objektelement festgelegt werden darf. Daher wird das folgende Markup beispielsweise nicht kompilieren:  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -188,7 +189,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  Es gibt auch eine begrenzte Anzahl von Objekten, bei denen die Typkonvertierung die einzige öffentliche Methode zum Festlegen einer Eigenschaft auf diesen Typ ist, ohne eine Unterklasse einzubeziehen, da der Typ selbst keinen Parameter losen Konstruktor hat. Ein Beispiel hierfür <xref:System.Windows.Input.Cursor>ist.  
+> Es gibt auch eine begrenzte Anzahl von Objekten, bei denen die Typkonvertierung die einzige öffentliche Methode zum Festlegen einer Eigenschaft auf diesen Typ ist, ohne eine Unterklasse einzubeziehen, da der Typ selbst keinen Parameter losen Konstruktor hat. Ein Beispiel hierfür <xref:System.Windows.Input.Cursor>ist.  
   
  Weitere Informationen zu Typkonvertierung und wie deren Verwendung in Attributsyntax unterstützt wird, finden Sie unter [TypeConverter und XAML](typeconverters-and-xaml.md).  
   
@@ -228,7 +229,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
   
  Im Folgenden sehen Sie ein einfaches Beispiel dafür, wie benutzerdefinierte Präfixe in XAML-Markup funktionieren. Das Präfix `custom` ist im Stammelement definiert und einer bestimmten Assembly zugeordnet, die mit der Anwendung verpackt wird und verfügbar ist. Diese Assembly enthält einen Typ `NumericUpDown`, der für die Unterstützung allgemeiner XAML-Verwendung implementiert ist und eine Klassenvererbung verwendet, die ihre Einfügung an diesem bestimmten Punkt im WPF-XAML-Inhaltsmodell zulässt. Eine Instanz dieses `NumericUpDown`-Steuerelements wird mithilfe des Präfix als Objektelement deklariert, damit der XAML-Parser weiß, welcher XAML-Namespace den Typ enthält und damit auch, wo sich die Unterstützungsassembly befindet, die die Typdefinition enthält.  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629866"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671834"
 ---
 # <a name="technology-regions-overview"></a>Übersicht über die Technologieregionen
 Wenn mehrere Präsentationstechnologien in einer Anwendung verwendet werden, wie z.B. WPF, Win32 oder DirectX, müssen diese die Renderingbereiche in einem gemeinsamen Fenster auf der obersten Ebene gemeinsam verwenden. In diesem Thema werden die Probleme beschrieben, welche die Präsentation und Eingabe für Ihre WPF-Interoperationsanwendung beeinflussen können.  
@@ -52,13 +52,13 @@ Wenn mehrere Präsentationstechnologien in einer Anwendung verwendet werden, wie
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]unterstützt HRGNs; für diese Funktionalität gibt es jedoch keine verwalteten APIs. Sie können den Platt Form Aufruf <xref:System.Windows.Interop.HwndSource> und zum Aufrufen der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] relevanten APIs verwenden. Weitere Informationen finden Sie unter [Aufrufen nativer Funktionen aus verwaltetem Code](/cpp/dotnet/calling-native-functions-from-managed-code).  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] überlappende Fenster haben auf verschiedenen Betriebssystemen verschiedene Funktionen. Dies liegt daran [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , dass DirectX zum Rendern verwendet und überlappende Fenster [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] primär für das Rendering und nicht für das DirectX-Rendering entworfen wurden.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] überlappende Fenster haben auf verschiedenen Betriebssystemen verschiedene Funktionen. Dies liegt daran [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , dass DirectX zum Rendern verwendet und überlappende Fenster primär für GDI-Rendering, nicht für DirectX-Rendering entwickelt wurden.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt hardwarebeschleunigte überlappende Fenster unter [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] und höher. Hardware beschleunigter Windows on [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] erfordert Unterstützung von Microsoft DirectX, sodass die Funktionen von der Version von Microsoft DirectX auf diesem Computer abhängen.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt keine Transparenz-Hintergrundfarben, da [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nicht das Rendering der genaue Farbe, die Sie angefordert haben, nicht garantieren kann, insbesondere wenn das Rendering hardwarebeschleunigt ist.  
   
-- Wenn Ihre Anwendung auf [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]ausgeführt wird, werden überlappende Fenster oberhalb von DirectX auf DirectX angezeigt, wenn die DirectX-Anwendung gerendert wird.  (Die tatsächliche Renderingsequenz [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ist, dass das überlappende Fenster ausblendet [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] , dann DirectX zeichnet und dann das überlappende Fenster wieder zurück).  Überlappende Fenster ohne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] besitzen diese Einschränkung ebenfalls.  
+- Wenn Ihre Anwendung auf [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]ausgeführt wird, werden überlappende Fenster oberhalb von DirectX auf DirectX angezeigt, wenn die DirectX-Anwendung gerendert wird.  (Die tatsächliche Renderingsequenz ist, dass Microsoft Windows Graphics Device Interface (GDI) das überlappende Fenster verbirgt, dann DirectX zeichnet, und Microsoft Windows Graphics Device Interface (GDI) versetzt das überlappende Fenster wieder zurück).  Überlappende Fenster ohne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] besitzen diese Einschränkung ebenfalls.  
   
 ## <a name="see-also"></a>Siehe auch
 
