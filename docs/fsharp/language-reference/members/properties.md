@@ -1,17 +1,17 @@
 ---
 title: Eigenschaften
-description: Erfahren Sie mehr über F# Eigenschaften, die Mitglieder sind, die einem Objekt zugeordneten Werte darstellen.
+description: Erfahren Sie F# mehr über Eigenschaften, die Elemente darstellen, die einem Objekt zugeordneten Werten entsprechen.
 ms.date: 05/16/2016
-ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c202927fd0022e042703640cd55fb632c7e36068
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666364"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627410"
 ---
 # <a name="properties"></a>Eigenschaften
 
-*Eigenschaften* angehören, die einem Objekt zugeordneten Werte darstellen.
+*Eigenschaften* sind Elemente, die mit einem Objekt verknüpfte Werte darstellen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,17 +57,17 @@ with set parameter =
 
 ## <a name="remarks"></a>Hinweise
 
-Eigenschaften stellen die "verfügt über eine" Beziehung in der objektorientierten Programmierung datendarstellung, die Objektinstanzen oder, für statische Eigenschaften, mit dem Typ zugeordnet ist.
+Eigenschaften stellen die Beziehung "hat eine" in der objektorientierten Programmierung dar, die Daten darstellen, die Objektinstanzen zugeordnet sind, oder für statische Eigenschaften mit dem Typ.
 
-Sie können deklarieren, Eigenschaften, die auf zwei Arten, abhängig davon, ob Sie explizit den zugrunde liegenden Wert (auch als "Sicherungsspeicher" bezeichnet) für die Eigenschaft angeben möchten oder wenn den Compiler automatisch der Sicherungsspeicher für Sie generiert werden sollen. Im Allgemeinen sollten Sie die explizitere Weise, wenn die Eigenschaft eine nicht triviale Implementierung verfügt und die automatische Methode verwenden, wenn die Eigenschaft nur ein einfacher Wrapper für ein Wert oder eine Variable ist. Um eine Eigenschaft explizit deklarieren, verwenden die `member` Schlüsselwort. Diese deklarative Syntax folgt die Syntax, der angibt, die `get` und `set` Methoden, die auch mit dem Namen *Accessoren*. Die verschiedenen Formen der expliziten Syntax im Syntaxabschnitt dargestellt werden für Lese-/Schreibzugriff, schreibgeschützte und lesegeschützte Eigenschaften verwendet. Für schreibgeschützte Eigenschaften, definieren Sie nur eine `get` Methode für nur-schreiben-Eigenschaften, definieren Sie nur eine `set` Methode. Beachten Sie, dass, wenn eine Eigenschaft sowohl hat `get` und `set` -Accessor angeben, die alternative Syntax können Sie angeben, Attribute und Zugriffsmodifizierer, die sich für jeden Accessor, wie im folgenden Code gezeigt werden.
+Sie können Eigenschaften auf zwei Arten deklarieren, je nachdem, ob Sie den zugrunde liegenden Wert (auch als Sicherungs Speicher bezeichnet) für die Eigenschaft explizit angeben möchten, oder wenn Sie zulassen möchten, dass der Compiler automatisch den Sicherungs Speicher für Sie generiert. Im Allgemeinen sollten Sie die explizitere Methode verwenden, wenn die Eigenschaft eine nicht triviale Implementierung hat, und die automatische Methode, wenn die Eigenschaft nur ein einfacher Wrapper für einen Wert oder eine Variable ist. Verwenden Sie das `member` -Schlüsselwort, um eine Eigenschaft explizit zu deklarieren. Auf diese deklarative Syntax folgt die Syntax, die die- `get` Methode `set` und die-Methode angibt, auch namens *Accessoren*. Die verschiedenen Formen der expliziten Syntax, die im Syntax Abschnitt angezeigt werden, werden für Lese-/Schreib-, schreibgeschützte und Lese geschützte Eigenschaften verwendet. Für schreibgeschützte Eigenschaften definieren Sie nur eine `get` -Methode. bei schreibgeschützten Eigenschaften definieren Sie nur eine `set` -Methode. Beachten Sie, dass die alternative Syntax `get` es `set` Ihnen ermöglicht, Attribute und Zugriffsmodifizierer anzugeben, die für jeden Accessor unterschiedlich sind, wie im folgenden Code gezeigt, wenn eine Eigenschaft sowohl-als auch-Accessoren aufweist.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3201.fs)]
 
-Eigenschaften von Lese-/Schreibzugriff, die jeweils eine `get` und `set` -Methode, die Reihenfolge der `get` und `set` rückgängig gemacht werden kann. Alternativ können Sie die Syntax für die bereitstellen `get` nur und die Syntax für `set` nur anstelle der kombinierten Syntax. Dies macht es einfacher, kommentieren Sie die einzelnen `get` oder `set` -Methode, wenn dies etwas ist müssen Sie Sie. Diese Alternative zur Verwendung von der kombinierten Syntax ist in den folgenden Code dargestellt.
+Für Lese-/Schreibeigenschaften, die `get` sowohl `set` die-als auch die `get` - `set` Methode aufweisen, kann die Reihenfolge von und umgekehrt werden. Alternativ können Sie die nur für `get` angezeigte Syntax und die Syntax angeben, die nur für angezeigt wird, anstatt die kombinierte Syntax zu `set` verwenden. Dies erleichtert das Auskommentieren der einzelnen `get` -oder `set` -Methode, wenn dies etwas ist, was Sie möglicherweise tun müssen. Diese Alternative zur Verwendung der kombinierten Syntax wird im folgenden Code dargestellt.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-Private Werte, die Daten für Eigenschaften heißen, halten *Sicherungsspeicher*. Damit den Compiler automatisch den Sicherungsspeicher zu erstellen, verwenden Sie die Schlüsselwörter `member val`, lassen Sie die Self-ID, und geben Sie einen Ausdruck, um die Eigenschaft zu initialisieren. Wenn die Eigenschaft ist veränderlich sein müssen, schließen Sie `with get, set`. Der folgende Klassentyp enthält beispielsweise zwei automatisch implementierte Eigenschaften. `Property1` ist schreibgeschützt und wird mit dem Argument bereitgestellt, um den primären Konstruktor, initialisiert und `Property2` ist eine Eigenschaft festgelegt werden kann, die auf eine leere Zeichenfolge initialisiert:
+Private Werte, die die Daten für Eigenschaften enthalten, werden als *Sicherungs Speicher*bezeichnet. Damit der Compiler den Sicherungs Speicher automatisch erstellen kann, verwenden Sie die `member val`Schlüsselwörter, lassen Sie den Self-Identifier aus, und geben Sie dann einen Ausdruck an, um die Eigenschaft zu initialisieren. Wenn die Eigenschaft änderbar sein soll, fügen `with get, set`Sie ein. Der folgende Klassentyp enthält z. b. zwei automatisch implementierte Eigenschaften. `Property1`ist schreibgeschützt und wird mit dem-Argument initialisiert, das für den primären Konstruktor bereit `Property2` gestellt wird, und ist eine festleg Bare Eigenschaft, die auf eine leere Zeichenfolge initialisiert wird:
 
 ```fsharp
 type MyClass(property1 : int) =
@@ -75,7 +75,7 @@ member val Property1 = property1
 member val Property2 = "" with get, set
 ```
 
-Automatisch implementierte Eigenschaften sind Teil der Initialisierung eines Typs an, damit sie genau wie vor anderen Memberdefinitionen aufgenommen werden müssen `let` Bindungen und `do` Bindungen in einer Typdefinition. Beachten Sie, dass der Ausdruck, der eine automatisch implementierte Eigenschaft initialisiert nur ausgewertet wird, bei der Initialisierung und nicht jedes Mal, wenn die Eigenschaft zugegriffen wird. Dieses Verhalten unterscheidet sich das Verhalten einer explizit implementierte Eigenschaft. Was dies bedeutet, die den Code zum Initialisieren dieser Eigenschaften ist, wird an den Konstruktor einer Klasse hinzugefügt. Betrachten Sie den folgenden Code, der diese Abweichung zeigt:
+Automatisch implementierte Eigenschaften sind Teil der Initialisierung eines Typs, sodass Sie vor allen anderen Element Definitionen eingeschlossen werden müssen, genauso wie `let` Bindungen und `do` Bindungen in einer Typdefinition. Beachten Sie, dass der Ausdruck, der eine automatisch implementierte Eigenschaft initialisiert, nur bei der Initialisierung ausgewertet wird und nicht jedes Mal, wenn auf die Eigenschaft zugegriffen wird. Dieses Verhalten steht im Gegensatz zum Verhalten einer explizit implementierten Eigenschaft. Dies bedeutet, dass der Code zum Initialisieren dieser Eigenschaften dem Konstruktor einer Klasse hinzugefügt wird. Sehen Sie sich den folgenden Code an, der diesen Unterschied zeigt:
 
 ```fsharp
 type MyClass() =
@@ -103,45 +103,45 @@ class1.ExplicitProperty = 1131210765
 Die Ausgabe des obigen Codes zeigt, dass der Wert der AutoProperty unverändert ist, wenn er wiederholt aufgerufen wird, während die ExplicitProperty sich jedes Mal ändert, wenn sie aufgerufen wird. Dies zeigt, dass der Ausdruck für eine automatisch implementierte Eigenschaft nicht jedes Mal ausgewertet wird, wie die Gettermethode für die explizite Eigenschaft.
 
 >[!WARNING]
->Es gibt einige Bibliotheken, z. B. Entity Framework (`System.Data.Entity`), die benutzerdefinierte Vorgänge in den Konstruktoren ausführen, die auch mit der Initialisierung der automatisch implementierten Eigenschaften nicht funktionieren. Verwenden Sie in diesen Fällen explizite Eigenschaften.
+>Es gibt einige Bibliotheken, z. B. Entity Framework (`System.Data.Entity`), die benutzerdefinierte Vorgänge in den Konstruktoren ausführen, die auch mit der Initialisierung der automatisch implementierten Eigenschaften nicht funktionieren. Versuchen Sie in diesen Fällen, explizite Eigenschaften zu verwenden.
 
-Eigenschaften können Mitglieder der Klassen, Strukturen, Unterscheidungs-Unions, Datensätze, Schnittstellen und Erweiterungen des Typs sein, und es können auch in Object-Ausdrücke definiert werden.
+Eigenschaften können Member von Klassen, Strukturen, Unterscheidungs-Unions, Datensätzen, Schnittstellen und Typerweiterungen sein und können auch in Objekt Ausdrücken definiert werden.
 
-Attribute können auf Eigenschaften angewendet werden. Schreiben Sie zum Anwenden eines Attributs auf eine Eigenschaft des Attributs in einer separaten Zeile vor der Eigenschaft ein. Weitere Informationen finden Sie unter [Attribute](../attributes.md).
+Attribute können auf Eigenschaften angewendet werden. Wenn Sie ein Attribut auf eine Eigenschaft anwenden möchten, schreiben Sie das-Attribut in einer separaten Zeile vor der-Eigenschaft. Weitere Informationen finden Sie unter [Attribute](../attributes.md).
 
-Werden standardmäßig sind öffentlich Eigenschaften. Zugriffsmodifizierer können auch auf Eigenschaften angewendet werden. Zum Anwenden eines Zugriffsmodifizierers hinzufügen unmittelbar vor den Namen der Eigenschaft, wenn es für beide gelten sollen, ist die `get` und `set` Methoden vor dem Hinzufügen der `get` und `set` -Schlüsselwörter verwenden, wenn ein anderer Zugriff ist für jeden Accessor erforderlich. Die *Zugriffsmodifizierer* kann einen der folgenden sein: `public`, `private`, `internal`. Weitere Informationen finden Sie unter [Zugriffssteuerung](../access-control.md).
+Standardmäßig sind Eigenschaften öffentlich. Zugriffsmodifizierer können auch auf Eigenschaften angewendet werden. Wenn Sie einen Zugriffsmodifizierer anwenden möchten, fügen Sie ihn direkt vor dem Namen der Eigenschaft ein, wenn `get` er `set` auf die-Methode und die `get` - `set` Methode angewendet werden soll. Fügen Sie ihn vor den Schlüsselwörtern und vor erforderlich für jeden Accessor. Der Zugriffsmodifizierer kann eine der folgenden `public`sein `private`: `internal`,,. Weitere Informationen finden Sie unter [Zugriffssteuerung](../access-control.md).
 
-Eigenschaft-Implementierungen werden jedes Mal ausgeführt, die eine Eigenschaft zugegriffen wird.
+Eigenschafts Implementierungen werden jedes Mal ausgeführt, wenn auf eine Eigenschaft zugegriffen wird.
 
-## <a name="static-and-instance-properties"></a>Statische und -Instanzeigenschaften
+## <a name="static-and-instance-properties"></a>Statische Eigenschaften und Instanzeigenschaften
 
-Eigenschaften können statisch sein oder Instanzeigenschaften. Statische Eigenschaften aufgerufen werden können, ohne eine Instanz und werden für Werte, die dem Typ, nicht mit einzelnen Objekten zugeordnet. Lassen Sie für statische Eigenschaften die Self-ID ein. Die Self-ID ist für Instanzeigenschaften erforderlich.
+Eigenschaften können statische Eigenschaften oder Instanzeigenschaften sein. Statische Eigenschaften können ohne eine Instanz aufgerufen werden und werden für Werte verwendet, die dem Typ zugeordnet sind, nicht für einzelne Objekte. Lassen Sie für statische Eigenschaften den selbst Bezeichner aus. Der Self-Identifier ist für Instanzeigenschaften erforderlich.
 
-Die folgende Definition für die statische Eigenschaft basiert darauf, dass ein Szenario in dem Sie ein statisches Feld `myStaticValue` d. h. der Sicherungsspeicher für die Eigenschaft.
+Die folgende statische Eigenschafts Definition basiert auf einem Szenario, in dem Sie über ein statisches Feld `myStaticValue` verfügen, das den Sicherungs Speicher für die Eigenschaft ist.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3204.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3204.fs)]
 
-Eigenschaften können auch arrayähnlichen, in diesem Fall werden sie aufgerufen werden *indizierte Eigenschaften*. Weitere Informationen finden Sie unter [indizierte Eigenschaften](indexed-properties.md).
+Eigenschaften können auch Array ähnlich sein. in diesem Fall werden Sie als *indizierte Eigenschaften*bezeichnet. Weitere Informationen finden Sie unter [indizierte Eigenschaften](indexed-properties.md).
 
-## <a name="type-annotation-for-properties"></a>Typ-Anmerkung für Eigenschaften
+## <a name="type-annotation-for-properties"></a>Typanmerkung für Eigenschaften
 
-In vielen Fällen der Compiler verfügt über genügend Informationen, um den Typ einer Eigenschaft vom Typ des Sicherungsspeichers ableiten, aber Sie können den Typ explizit festlegen, durch das Hinzufügen einer Typ-Anmerkung.
+In vielen Fällen verfügt der Compiler über ausreichende Informationen, um den Typ einer Eigenschaft vom Typ des Sicherungs Speicher abzuleiten, aber Sie können den Typ explizit festlegen, indem Sie eine Typanmerkung hinzufügen.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3205.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3205.fs)]
 
-## <a name="using-property-set-accessors"></a>Set-Accessoren mit der Eigenschaft
+## <a name="using-property-set-accessors"></a>Verwenden von Eigenschaften Satz Accessoren
 
-Sie Eigenschaften festlegen, die bieten `set` Accessoren mit der `<-` Operator.
+Sie können Eigenschaften festlegen, die `set` Accessoren bereitstellen, `<-` indem Sie den-Operator verwenden.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3206.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3206.fs)]
 
-Die Ausgabe ist **20**.
+Die Ausgabe beträgt **20**.
 
 ## <a name="abstract-properties"></a>Abstrakte Eigenschaften
 
-Eigenschaften können abstrakt sein. Wie bei Methoden `abstract` bedeutet lediglich, dass ein virtueller Dispatch, die der Eigenschaft zugeordnet ist. Abstrakte Eigenschaften können tatsächlich abstrakt sein, d. h. ohne Definition in der gleichen Klasse sein. Klasse, die diese Eigenschaft enthält, ist daher eine abstrakte Klasse. Alternativ kann nur abstrakt bedeuten, dass eine Eigenschaft virtuell ist und in diesem Fall muss eine Definition in der gleichen Klasse vorhanden sein. Beachten Sie, dass abstrakte Eigenschaften müssen nicht privat sein, wenn ein Accessor abstrakt ist, die andere auch muss sein abstrakt. Weitere Informationen zu abstrakten Klassen finden Sie unter [abstrakte Klassen](../abstract-classes.md).
+Eigenschaften können abstrakt sein. Wie bei Methoden bedeutet `abstract` nur, dass der Eigenschaft ein virtueller Verteiler zugeordnet ist. Abstrakte Eigenschaften können wirklich abstrakt sein, d. h. ohne eine Definition in der gleichen Klasse. Die Klasse, die eine solche Eigenschaft enthält, ist daher eine abstrakte Klasse. Alternativ kann Abstract nur bedeuten, dass eine Eigenschaft virtuell ist, und in diesem Fall muss eine Definition in der gleichen Klasse vorhanden sein. Beachten Sie, dass abstrakte Eigenschaften nicht privat sein dürfen, und wenn ein Accessor abstrakt ist, muss der andere ebenfalls abstrakt sein. Weitere Informationen zu abstrakten Klassen finden Sie unter [abstrakte Klassen](../abstract-classes.md).
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3207.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3207.fs)]
 
 ## <a name="see-also"></a>Siehe auch
 
