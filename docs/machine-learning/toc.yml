@@ -23,6 +23,8 @@
       href: tutorials/image-classification.md
     - name: Produktvertriebsanalyse (Anomalieerkennung)
       href: tutorials/sales-anomaly-detection.md
+    - name: Erkennen von Objekten in Bildern (Objekterkennung)
+      href: tutorials/object-detection-onnx.md
 - name: Anleitungen
   items:
     - name: Laden von Daten
