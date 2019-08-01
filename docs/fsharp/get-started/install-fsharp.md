@@ -60,7 +60,7 @@ Installieren Sie auch die [.NET Core SDK](https://www.microsoft.com/net/download
 
 ---
 
-Sie müssen dann [Visual Studio Code](https://code.visualstudio.com) installiert.
+Sie müssen dann [Visual Studio Code](https://code.visualstudio.com) installieren.
 
 Klicken Sie dann auf das Symbol "Erweiterungen" und suchen Sie nach "Ionide":
 
