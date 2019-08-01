@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Leere Abfrage Resultsets Debuggen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 076e7109dc89294ba0c1706bf9a66120e6a0b85d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cc6a370545b9e4d8c28e0096f5cff73f4d937bd3
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630979"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710436"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Vorgehensweise: Leere Abfrage Resultsets Debuggen (Visual Basic)
 
@@ -17,7 +17,7 @@ Der erste Satz von Beispielen in diesem Thema zeigt eine typische Vorgehensweise
 
 Der zweite Satz von Beispielen zeigt die notwendigen Korrekturen, die durchgeführt werden müssen, damit XML in einem Namespace abgefragt werden kann.
 
-Weitere Informationen finden Sie unter [Arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).
+Weitere Informationen finden Sie unter [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).
 
 ## <a name="example"></a>Beispiel
 

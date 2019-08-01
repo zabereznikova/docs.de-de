@@ -1,21 +1,21 @@
 ---
-title: 'Vorgehensweise: Control-Namespace-Präfixe (Visual Basic) (LINQ to XML)'
+title: 'Vorgehensweise: Steuerelement-Namespace Präfixe (Visual Basic) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b89b49aa76df526c08143cad49685386ffd5e7c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855399"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709822"
 ---
-# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Vorgehensweise: Control-Namespace-Präfixe (Visual Basic) (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Vorgehensweise: Steuerelement-Namespace Präfixe (Visual Basic) (LINQ to XML)
 In diesem Thema wird beschrieben, wie Sie Namespacepräfixe steuern können.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Dieses Beispiel deklariert zwei Namespaces. Gibt an, dass die `http://www.adventure-works.com` Namespace verfügt über das Präfix `aw`, und dass die `www.fourthcoffee.com` Namespace verfügt über das Präfix des `fc`.  
+ Dieses Beispiel deklariert zwei Namespaces. Er gibt an `http://www.adventure-works.com` `www.fourthcoffee.com` `aw` ,dassderNamespacedasPräfixhatunddassderNamespacedas`fc`Präfix hat.  
   
 ### <a name="code"></a>Code  
   
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

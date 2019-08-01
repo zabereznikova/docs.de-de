@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 13225779cb3ed844e6ea8622ad559db83fadc166
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942804"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710210"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Erweitert (Windows Presentation Foundation)
 Dieser Abschnitt beschreibt einige der erweiterten Bereiche in WPF.  
   
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [WPF-Architektur](wpf-architecture.md)  
- [Basiselemente](base-elements.md)  
- [Elementstruktur und Serialisierung](element-tree-and-serialization.md)  
- [Drag & Drop](drag-and-drop.md)  
- [Dokumente](documents.md)  
- [Globalisierung und Lokalisierung](globalization-and-localization.md)  
- [Migration und Interoperabilität](migration-and-interoperability.md)  
- [Leistung](performance.md)  
- [Threadmodell](threading-model.md)  
- [Übersicht über WPF-Add-Ins](../app-development/wpf-add-ins-overview.md)  
- [Unmanaged WPF API Reference (Referenz zur nicht verwalteten WPF-API)](wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[WPF-Architektur](wpf-architecture.md)  
+[XAML in WPF](xaml-in-wpf.md)  
+[Basis Element Klassen](base-elements.md)  
+[Elementstruktur und Serialisierung](element-tree-and-serialization.md)  
+[WPF-Eigenschaften System](properties-wpf.md)  
+[Ereignisse in WPF](events-wpf.md)  
+[Eingabe](input-wpf.md)  
+[Drag & Drop](drag-and-drop.md)  
+[Ressourcen](resources-wpf.md)  
+[Dokumente](documents.md)  
+[Globalisierung und Lokalisierung](globalization-and-localization.md)  
+[Layout](layout.md)  
+[Migration und Interoperabilität](migration-and-interoperability.md)  
+[Leistung](performance.md)  
+[Threadmodell](threading-model.md)  
+[Unmanaged WPF API Reference (Referenz zur nicht verwalteten WPF-API)](wpf-unmanaged-api-reference.md)  

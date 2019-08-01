@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Berechnen von Zwischenwerten (Visual Basic)'
+title: 'Vorgehensweise: Berechnen von zwischen Werten (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
-ms.openlocfilehash: cb619784d487ae12b1fb8bb3adc97acb0f767455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3af616fc3de4baa4bb42d9f9c04d654b7438ab0
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855442"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710478"
 ---
-# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Vorgehensweise: Berechnen von Zwischenwerten (Visual Basic)
+# <a name="how-to-calculate-intermediate-values-visual-basic"></a>Vorgehensweise: Berechnen von zwischen Werten (Visual Basic)
 In diesem Beispiel wird das Berechnen von Zwischenwerten gezeigt, die zum Sortieren, Filtern und Auswählen verwendet werden können.  
   
 ## <a name="example"></a>Beispiel  
@@ -41,7 +41,7 @@ Next
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Numerische Daten in einem Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
@@ -76,4 +76,4 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Grundlegende Abfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

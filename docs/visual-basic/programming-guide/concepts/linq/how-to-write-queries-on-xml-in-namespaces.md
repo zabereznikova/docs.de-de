@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614829"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709877"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (Visual Basic)
 Wenn Sie eine Abfrage für XML in einem Namespace schreiben möchten, müssen Sie <xref:System.Xml.Linq.XName>-Objekte verwenden, die den richtigen Namespace enthalten.  
@@ -90,4 +90,4 @@ End Module
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

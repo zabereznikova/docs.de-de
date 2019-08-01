@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Sortieren von Elementen (Visual Basic)'
+title: 'Vorgehensweise: Sort-Elemente (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: b6f2e0056582e60066b2c0715a663022b72a6c9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f92d8ca36d1b322bb8d1538fd199e7256c982b85
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614383"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710488"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Vorgehensweise: Sortieren von Elementen (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>Vorgehensweise: Sort-Elemente (Visual Basic)
 In diesem Beispiel wird gezeigt, wie Sie eine Abfrage schreiben können, die ihre Ergebnisse sortiert.  
   
 ## <a name="example"></a>Beispiel  
@@ -40,7 +40,7 @@ Next
 ```  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [Übersicht über Namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Numerische Daten in einem Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   
@@ -77,4 +77,4 @@ End Module
 ## <a name="see-also"></a>Siehe auch
 
 - [Sortieren von Daten](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
-- [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Grundlegende Abfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

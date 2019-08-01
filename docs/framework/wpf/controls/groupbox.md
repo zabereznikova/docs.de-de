@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: 6baee12c04e93a94736acacb1e4774b3cc20a3ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1808fefab2d15ce57da4b381f258dc8e5207e358
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008736"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709105"
 ---
 # <a name="groupbox"></a>GroupBox
-Die <xref:System.Windows.Controls.GroupBox> Steuerelement ist ein <xref:System.Windows.Controls.HeaderedContentControl> , die für einen benannten Container bereitstellt [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] Inhalt.  
+Das <xref:System.Windows.Controls.GroupBox> -Steuerelement <xref:System.Windows.Controls.HeaderedContentControl> ist ein-Element, das einen gleichnamigen Container für den Inhalt grafischer Benutzeroberfläche (GUI) bereitstellt.  
   
- Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.GroupBox> , enthält eine <xref:System.Windows.Controls.TabControl> und <xref:System.Windows.Controls.Button> , die in eingeschlossen sind ein <xref:System.Windows.Controls.StackPanel>.  
+ Die folgende Abbildung zeigt ein <xref:System.Windows.Controls.GroupBox> -Wert, <xref:System.Windows.Controls.TabControl> der eine <xref:System.Windows.Controls.Button> und eine enthält, die <xref:System.Windows.Controls.StackPanel>in einem eingeschlossen sind.  
   
- ![Screenshot mit einer GroupBox-Steuerelement.](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
+ ![Screenshot, der eine GroupBox anzeigt.](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Definieren einer GroupBox-Vorlage](how-to-define-a-groupbox-template.md)  
