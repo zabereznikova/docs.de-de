@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-ms.openlocfilehash: 07b17ae1ed89c84bac4ac40e9934a0d36fda357f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9cab4dbbcd3302a6e74783eaefdbbd8463332224
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625838"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710253"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementieren des Window-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
   
  Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.IWindowProvider>, einschließlich Informationen über <xref:System.Windows.Automation.WindowPattern> -Eigenschaften, -Methoden und -Ereignisse. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
   
- Das <xref:System.Windows.Automation.WindowPattern> -Steuerelementmuster wird zur Unterstützung von Steuerelementen verwendet, die grundlegende fensterbasierte Funktionen in einer herkömmlichen [!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]bereitstellen. Beispiele für Steuerelemente, für die dieses Steuerelementmuster implementiert werden muss, sind Anwendungsfenster der obersten Ebene, untergeordnete [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] -Fenster, Teilbereichs-Steuerelemente, deren Größe geändert werden kann, modale Dialogfelder und Hilfefenster in Sprechblasenform.  
+ Das <xref:System.Windows.Automation.WindowPattern> -Steuerelement Muster wird zur Unterstützung von Steuerelementen verwendet, die grundlegende fensterbasierte Funktionen in einer herkömmlichen grafischen Benutzeroberfläche (GUI) bereitstellen. Beispiele für Steuerelemente, für die dieses Steuerelementmuster implementiert werden muss, sind Anwendungsfenster der obersten Ebene, untergeordnete [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] -Fenster, Teilbereichs-Steuerelemente, deren Größe geändert werden kann, modale Dialogfelder und Hilfefenster in Sprechblasenform.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
@@ -41,18 +41,18 @@ ms.locfileid: "64625838"
   
 |Erforderlicher Member|Memberart|Hinweise|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|Keiner|  
-|<xref:System.Windows.Automation.WindowInteractionState>|event| <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Methode|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Methode|None|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Methode|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|None|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|None|  
+|<xref:System.Windows.Automation.WindowInteractionState>|event|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Ausnahmen  
@@ -60,8 +60,8 @@ ms.locfileid: "64625838"
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> – Wenn ein Steuerelement ein gefordertes Verhalten nicht unterstützt.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> – Wenn der Parameter keine gültige Zahl ist.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> : Wenn ein Steuerelement ein angefordertes Verhalten nicht unterstützt.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -Wenn der-Parameter keine gültige Zahl ist.|  
   
 ## <a name="see-also"></a>Siehe auch
 
