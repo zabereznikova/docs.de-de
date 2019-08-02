@@ -2,12 +2,12 @@
 title: Musterabgleich
 description: Erfahren Sie, wie Muster werden in F# Vergleichen von Daten mit logischen Strukturen, Daten in konstituierende Teile zu zerlegen oder Informationen aus Daten extrahieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627297"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733467"
 ---
 # <a name="pattern-matching"></a>Musterabgleich
 
@@ -15,7 +15,7 @@ Muster sind Regeln zum Transformieren von Eingabedaten. Sie werden in F# stets v
 
 ## <a name="remarks"></a>Hinweise
 
-Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Match Expressions](match-expressions.md), [Let](./functions/let-bindings.md)-Bindungen [, Lambda-Ausdrücke: Das `fun` Schlüssel](./functions/lambda-expressions-the-fun-keyword.md)Wort und[Ausnahmen: Der `try...with` Ausdruck](/.exception-handling/the-try-with-expression.md).
+Muster werden in vielen Sprachkonstrukten verwendet, z. B. im `match`-Ausdruck. Sie werden verwendet, wenn Argumente für Funktionen in `let`-Bindungen oder Lambda-Ausdrücken verarbeitet werden, sowie in den dem `try...with`-Ausdruck zugeordneten Ausnahmehandlern. Weitere Informationen finden Sie unter [Match Expressions](match-expressions.md), [Let](./functions/let-bindings.md)-Bindungen [, Lambda-Ausdrücke: Das `fun` Schlüssel](./functions/lambda-expressions-the-fun-keyword.md)Wort und[Ausnahmen: Der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
 
 Im `match` Ausdruck ist das *Muster* z. b. das, was dem Pipe-Symbol folgt.
 
@@ -25,7 +25,7 @@ match expression with
 ...
 ```
 
-Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausdruck wird jedes Muster einzeln untersucht, um zu ermitteln, ob die Eingabedaten mit dem Muster kompatibel sind. Wenn eine Übereinstimmung gefunden wird, wird der Ergebnisausdruck ausgeführt. Wenn keine Übereinstimmung gefunden wird, wird die nächste Musterregel getestet. Der *optionale when-* Bedingungs Teil wird in [Match-Ausdrücken](match-expressions.md)erläutert.
+Jedes Muster fungiert als Regel zum Transformieren von Eingaben. Im `match`-Ausdruck wird jedes Muster einzeln untersucht, um zu ermitteln, ob die Eingabedaten mit dem Muster kompatibel sind. Wenn eine Übereinstimmung gefunden wird, wird der Ergebnisausdruck ausgeführt. Wenn keine Übereinstimmung gefunden wird, wird die nächste Musterregel getestet. Der optionale when -Bedingungs Teil wird in [Match-Ausdrücken](match-expressions.md)erläutert.
 
 In der folgenden Tabelle werden unterstützte Muster aufgeführt. Zur Laufzeit wird die Eingabe anhand jedes der folgenden Muster in der in der Tabelle aufgeführten Reihenfolge überprüft. Die Muster werden rekursiv vom ersten bis zum letzten Muster im Code und von links nach rechts in den einzelnen Zeilen angewendet.
 
@@ -103,7 +103,7 @@ match shape with
 
 Mit aktiven Mustern können Sie komplexere benutzerdefinierte Musterabgleiche definieren. Weitere Informationen zu aktiven Mustern finden Sie unter [aktive Muster](active-patterns.md).
 
-Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Musterabgleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen zum Musterabgleich bei der Ausnahmebehandlung [finden Sie unter Ausnahmen: Der `try...with` Ausdruck](/.exception-handling/the-try-with-expression.md).
+Der Fall, in dem der Bezeichner eine Ausnahme ist, wird beim Musterabgleich im Kontext von Ausnahmehandlern verwendet. Weitere Informationen zum Musterabgleich bei der Ausnahmebehandlung [finden Sie unter Ausnahmen: Der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Variablenmuster
 
@@ -139,7 +139,7 @@ Das folgende Beispiel ist ähnlich `detectZeroTuple` wie im Abschnitt [tupelmust
 
 ## <a name="cons-pattern"></a>Cons-Muster
 
-Das Cons-Muster wird verwendet, um eine Liste in das erste Element, den *Kopf*und eine Liste mit den restlichen Elementen, dem Ende, zu *zerlegen.*
+Das Cons-Muster wird verwendet, um eine Liste in das erste Element, den *Kopf*und eine Liste mit den restlichen Elementen, dem Ende,zu zerlegen.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 

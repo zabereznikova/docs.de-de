@@ -7,52 +7,52 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], about MenuStrip control
 - menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
-ms.openlocfilehash: b72fcf75aeebc297d09cbaa9dbf00bb2370b1222
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 46a3a25415db77ee261f5fb1c3bf114b2275a2d4
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625763"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733456"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>Übersicht über das MenuStrip-Steuerelement (Windows Forms)
-Menüs stellen die Funktionalität für Ihre Benutzer von Befehlen, die von einem gemeinsamen Thema zusammengefasst sind.  
+Menüs machen die Funktionalität für Ihre Benutzer verfügbar, indem Sie Befehle halten, die nach einem allgemeinen Design gruppiert sind.  
   
- Die <xref:System.Windows.Forms.MenuStrip> Steuerelement ist in dieser Version von Visual Studio und .NET Framework neu. Mit dem Steuerelement können Sie problemlos Menüs wie in Microsoft Office erstellen.  
+ Das <xref:System.Windows.Forms.MenuStrip> -Steuerelement wurde in Version 2,0 des .NET Framework eingeführt. Mit dem <xref:System.Windows.Forms.MenuStrip> -Steuerelement können Sie problemlos Menüs wie die in Microsoft Office erstellen.  
   
- Die <xref:System.Windows.Forms.MenuStrip> -Steuerelement unterstützt die Multiple Document Interface (MDI) und das Zusammenführen von Menüs, QuickInfos und Überlauf. Sie können die benutzerfreundlichkeit und die Lesbarkeit des Menüs durch Hinzufügen der Zugriffsschlüssel, Tastenkombinationen, Häkchen, Bildern und Trennlinien verbessern.  
+ Das <xref:System.Windows.Forms.MenuStrip> -Steuerelement unterstützt die MDI (Multiple Document Interface) und die Zusammenführung von Menüs, Quick Infos und Überlauf. Sie können die Benutzerfreundlichkeit und Lesbarkeit Ihrer Menüs verbessern, indem Sie Zugriffstasten, Tastenkombinationen, Häkchen, Bilder und Trenn leisten hinzufügen.  
   
- Die <xref:System.Windows.Forms.MenuStrip> -Steuerelement ersetzt und funktionell erweitert die <xref:System.Windows.Forms.MainMenu> steuern; allerdings die <xref:System.Windows.Forms.MainMenu> Steuerelement wird für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, falls gewünscht.  
+ Das <xref:System.Windows.Forms.MenuStrip> -Steuerelement ersetzt und fügt Funktionen <xref:System.Windows.Forms.MainMenu> zum-Steuerelement hinzu <xref:System.Windows.Forms.MainMenu> . das-Steuerelement wird jedoch aus Gründen der Abwärtskompatibilität und zukünftiger Verwendung beibehalten, wenn Sie es auswählen.  
   
-## <a name="ways-to-use-the-menustrip-control"></a>Möglichkeiten, das MenuStrip-Steuerelement zu verwenden.  
- Verwenden der <xref:System.Windows.Forms.MenuStrip> zu steuern:  
+## <a name="ways-to-use-the-menustrip-control"></a>Möglichkeiten der Verwendung des MenuStrip-Steuer Elements  
+ Verwenden Sie <xref:System.Windows.Forms.MenuStrip> das Steuerelement für Folgendes:  
   
-- Erstellen Sie ganz einfach benutzerdefinierte, häufig verwendete Menüs, die unterstützen erweiterte Benutzer Schnittstelle und das Layout-Funktionen, z. B. Text und Bild Sortierung und Ausrichtung, Drag & Drop-Vorgänge, MDI, Überlauf und alternative Modi für den Zugriff auf Befehle im Menü.  
+- Erstellen Sie problemlos angepasste, häufig verwendete Menüs, die erweiterte Benutzeroberflächen-und Layoutfeatures unterstützen, wie z. b. Text-und Bild Anordnung und-Ausrichtung, Drag & Drop-Vorgänge, MDI, Überlauf und Alternative Zugriffsmöglichkeiten für Menübefehle.  
   
-- Unterstützt das typische Aussehen und Verhalten des Betriebssystems.  
+- Unterstützen Sie das typische Aussehen und Verhalten des Betriebssystems.  
   
-- Behandeln von Ereignissen konsistent für alle Container und enthaltene Elemente, auf die gleiche Weise, die Sie behandeln Ereignisse für andere Steuerelemente.  
+- Behandeln Sie Ereignisse konsistent für alle Container und enthaltenen Elemente auf die gleiche Weise wie Ereignisse für andere Steuerelemente.  
   
- Die folgende Tabelle zeigt einige besonders wichtigen Eigenschaften der <xref:System.Windows.Forms.MenuStrip> und die zugehörigen Klassen.  
+ In der folgenden Tabelle werden einige besonders wichtige Eigenschaften <xref:System.Windows.Forms.MenuStrip> von und zugeordneten Klassen angezeigt.  
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Ruft ab oder legt die <xref:System.Windows.Forms.ToolStripMenuItem> , die zum Anzeigen einer Liste von untergeordneten MDI-Formularen verwendet wird.|  
-|<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Ruft ab oder legt sie fest, wie untergeordnete Menüs mit übergeordneten Menüs in MDI-Anwendungen zusammengeführt werden.|  
-|<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A?displayProperty=nameWithType>|Übernimmt oder bestimmt die Position eines zusammengeführten Elements in einem Menü in MDI-Anwendungen.|  
-|<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|Ruft ab oder legt einen Wert, der angibt, ob das Formular ein Container für untergeordnete MDI-Formulare ist.|  
-|<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|Ruft ab oder legt einen Wert, der angibt, ob QuickInfos, für angezeigt werden die <xref:System.Windows.Forms.MenuStrip>.|  
+|<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|Ruft den ab, <xref:System.Windows.Forms.ToolStripMenuItem> mit dem eine Liste von untergeordneten MDI-Formularen angezeigt wird, oder legt diesen fest.|  
+|<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|Ruft ab oder legt fest, wie untergeordnete Menüs mit übergeordneten Menüs in MDI-Anwendungen zusammengeführt werden.|  
+|<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A?displayProperty=nameWithType>|Ruft die Position eines zusammengeführten Elements in einem Menü in MDI-Anwendungen ab oder legt diese fest.|  
+|<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|Dient zum Abrufen oder Festlegen eines Werts, der angibt, ob das Formular ein Container für untergeordnete MDI-Formulare ist.|  
+|<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|Ruft einen Wert ab, der <xref:System.Windows.Forms.MenuStrip>angibt, ob Quick Infos für angezeigt werden, oder legt diesen fest.|  
 |<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|Ruft einen Wert ab, der angibt, ob <xref:System.Windows.Forms.MenuStrip> Überlauffunktionen unterstützt, bzw. legt diesen fest.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Übernimmt oder bestimmt die zugeordneten Tastenkombinationen der <xref:System.Windows.Forms.ToolStripMenuItem>.|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Ruft ab oder legt ein Wert, der angibt, ob die Tastenkombinationen, zugeordnet sind die <xref:System.Windows.Forms.ToolStripMenuItem> neben der <xref:System.Windows.Forms.ToolStripMenuItem>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|Ruft die dem zugeordneten <xref:System.Windows.Forms.ToolStripMenuItem>Tastenkombinationen ab oder legt diese fest.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|Ruft einen Wert ab, der angibt, ob die Tastenkombinationen, die dem <xref:System.Windows.Forms.ToolStripMenuItem> zugeordnet sind, neben dem <xref:System.Windows.Forms.ToolStripMenuItem>angezeigt werden, oder legt diesen fest.|  
   
- Die folgende Tabelle zeigt die wichtigen <xref:System.Windows.Forms.MenuStrip> Assistentenklassen.  
+ In der folgenden Tabelle sind die <xref:System.Windows.Forms.MenuStrip> wichtigen Begleit Klassen aufgeführt.  
   
 |Klasse|Beschreibung|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Stellt eine auswählbare Option angezeigt, die auf eine <xref:System.Windows.Forms.MenuStrip> oder <xref:System.Windows.Forms.ContextMenuStrip>.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|Stellt eine auswählbare Option dar <xref:System.Windows.Forms.MenuStrip> , <xref:System.Windows.Forms.ContextMenuStrip>die in oder angezeigt wird.|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|Stellt ein Kontextmenü dar.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Stellt ein Steuerelement, mit dem Benutzer um ein einzelnes Element aus einer Liste auszuwählen, die angezeigt wird, wenn der Benutzer klickt, ein <xref:System.Windows.Forms.ToolStripDropDownButton> eines Menüelements auf höherer Ebene.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Stellt grundlegende Funktionen für Steuerelemente abgeleitet <xref:System.Windows.Forms.ToolStripItem> , Dropdown-Elemente beim Klicken auf anzeigen.|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|Stellt ein Steuerelement dar, mit dem der Benutzer ein einzelnes Element aus einer Liste auswählen kann, die angezeigt wird, <xref:System.Windows.Forms.ToolStripDropDownButton> wenn der Benutzer auf ein Menü Element oder ein höheres Menü Element klickt.|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|Stellt grundlegende Funktionen für Steuerelemente <xref:System.Windows.Forms.ToolStripItem> bereit, die von diesen Dropdown Elementen angezeigt werden, wenn darauf geklickt wird.|  
   
 ## <a name="see-also"></a>Siehe auch
 

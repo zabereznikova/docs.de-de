@@ -2,12 +2,12 @@
 title: Schlüsselwortreferenz
 description: Hier finden Sie Links zu Informationen über alle F# sprach Schlüsselwörter.
 ms.date: 05/16/2016
-ms.openlocfilehash: f845db74fd7ffd4164cc74acd192e39df7d2d6b1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627619"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733483"
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
 
@@ -35,10 +35,10 @@ In der folgenden Tabelle werden F# Alle Schlüsselwörter in alphabetischer Reih
 |`elif`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Wird bei der bedingten Verzweigung verwendet. Eine Kurzform von `else if`.|
 |`else`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Wird bei der bedingten Verzweigung verwendet.|
 |`end`|[Strukturen](structures.md)<br /><br />[Unterscheidbare Unions](discriminated-unions.md)<br /><br />[Datensätze](records.md)<br /><br />[Typerweiterungen](type-extensions.md)<br /><br />[Ausführliche Syntax](verbose-syntax.md)|Gibt in Typdefinitionen und Typerweiterungen das Ende eines Abschnitts von Element Definitionen an.<br /><br />In ausführlicher Syntax wird verwendet, um das Ende eines Code Blocks anzugeben, der mit dem `begin` -Schlüsselwort beginnt.|
-|`exception`|[Ausnahmebehandlung](/.exception-handling/index.md)<br /><br />[Ausnahmetypen](/.exception-handling/exception-types.md)|Wird verwendet, um einen Ausnahmetyp zu deklarieren.|
+|`exception`|[Ausnahmebehandlung](./exception-handling/index.md)<br /><br />[Ausnahmetypen](./exception-handling/exception-types.md)|Wird verwendet, um einen Ausnahmetyp zu deklarieren.|
 |`extern`|[Externe Funktionen](./functions/external-functions.md)|Gibt an, dass ein deklariertes Programmelement in einer anderen Binärdatei oder Assembly definiert ist.|
 |`false`|[Primitive Typen](primitive-types.md)|Wird als boolesches Literale verwendet.|
-|`finally`|[Ausnahmen: Der `try...finally` Ausdruck](/.exception-handling/the-try-finally-expression.md)|Wird in Verbindung `try` mit verwendet, um einen Codeblock einzuführen, der unabhängig davon ausgeführt wird, ob eine Ausnahme auftritt.|
+|`finally`|[Ausnahmen: Der `try...finally` Ausdruck](./exception-handling/the-try-finally-expression.md)|Wird in Verbindung `try` mit verwendet, um einen Codeblock einzuführen, der unabhängig davon ausgeführt wird, ob eine Ausnahme auftritt.|
 |`fixed`|[Festen](fixed.md)|Wird verwendet, um einen Zeiger auf den Stapel zu "anheften", um eine Garbage Collection zu verhindern.|
 |`for`|[Loops `for...to`Begriff](loops-for-to-expression.md)<br /><br />[Schleifen: for...in-Ausdruck](loops-for-in-expression.md)|Wird in Schleifen Konstrukten verwendet.|
 |`fun`|[Lambda-Ausdrücke: Das `fun`-Schlüsselwort](./functions/lambda-expressions-the-fun-keyword.md)|Wird in Lambda Ausdrücken verwendet, auch als anonyme Funktionen bezeichnet.|
@@ -62,7 +62,7 @@ In der folgenden Tabelle werden F# Alle Schlüsselwörter in alphabetischer Reih
 |`new`|[Konstruktoren](./members/constructors.md)<br /><br />[Einschränkungen](./generics/constraints.md)|Wird verwendet, um einen Konstruktor zu deklarieren, zu definieren oder aufzurufen, mit dem ein Objekt erstellt oder erstellt werden kann.<br /><br />Wird auch in generischen Parameter Einschränkungen verwendet, um anzugeben, dass ein Typ über einen bestimmten Konstruktor verfügen muss.|
 |`not`|[Symbol- und Operatorenreferenz](./symbol-and-operator-reference/index.md)<br /><br />[Einschränkungen](./generics/constraints.md)|Nicht tatsächlich ein Schlüsselwort. `not struct` In Kombination wird jedoch als generische Parameter Einschränkung verwendet.|
 |`null`|[NULL-Werte](./values/null-values.md)<br /><br />[Einschränkungen](./generics/constraints.md)|Gibt an, dass ein Objekt nicht vorhanden ist.<br /><br />Wird auch in generischen Parameter Einschränkungen verwendet.|
-|`of`|[Unterscheidbare Unions](discriminated-unions.md)<br /><br />[Delegaten](delegates.md)<br /><br />[Ausnahmetypen](/.exception-handling/exception-types.md)|Wird in Unterscheidungs-Unions verwendet, um den Typ der Kategorien von Werten anzugeben, und in Delegaten-und Ausnahme Deklarationen.|
+|`of`|[Unterscheidbare Unions](discriminated-unions.md)<br /><br />[Delegaten](delegates.md)<br /><br />[Ausnahmetypen](./exception-handling/exception-types.md)|Wird in Unterscheidungs-Unions verwendet, um den Typ der Kategorien von Werten anzugeben, und in Delegaten-und Ausnahme Deklarationen.|
 |`open`|[Importdeklarationen: Das `open`-Schlüsselwort](import-declarations-the-open-keyword.md)|Wird verwendet, um den Inhalt eines Namespaces oder Moduls ohne Qualifizierung verfügbar zu machen.|
 |`or`|[Symbol- und Operatorenreferenz](./symbol-and-operator-reference/index.md)<br /><br />[Einschränkungen](./generics/constraints.md)|Wird mit booleschen Bedingungen als boolescher `or` Operator verwendet. Entspricht `||`.<br /><br />Wird auch in Member-Einschränkungen verwendet.|
 |`override`|[Mitglieder](./members/index.md)|Wird verwendet, um eine Version einer abstrakten oder virtuellen Methode zu implementieren, die sich von der Basisversion unterscheidet.|
@@ -77,7 +77,7 @@ In der folgenden Tabelle werden F# Alle Schlüsselwörter in alphabetischer Reih
 |`then`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Konstruktoren](./members/constructors.md)|Wird in bedingten Ausdrücken verwendet.<br /><br />Wird auch verwendet, um Nebeneffekte nach der Objekt Erstellung auszuführen.|
 |`to`|[Loops `for...to`Begriff](loops-for-to-expression.md)|Wird in `for` Schleifen verwendet, um einen Bereich anzugeben.|
 |`true`|[Primitive Typen](primitive-types.md)|Wird als boolesches Literale verwendet.|
-|`try`|[Ausnahmen: Der Try... with-Ausdruck](/.exception-handling/the-try-with-expression.md)<br /><br />[Ausnahmen: Der Try... Ausdruck zum Schluss](/.exception-handling/the-try-finally-expression.md)|Wird verwendet, um einen Codeblock einzuführen, der möglicherweise eine Ausnahme generiert. Wird in Verbindung `with` mit `finally`oder verwendet.|
+|`try`|[Ausnahmen: Der Try... with-Ausdruck](./exception-handling/the-try-with-expression.md)<br /><br />[Ausnahmen: Der Try... Ausdruck zum Schluss](./exception-handling/the-try-finally-expression.md)|Wird verwendet, um einen Codeblock einzuführen, der möglicherweise eine Ausnahme generiert. Wird in Verbindung `with` mit `finally`oder verwendet.|
 |`type`|[F#-Typen](fsharp-types.md)<br /><br />[Klassen](classes.md)<br /><br />[Datensätze](records.md)<br /><br />[Strukturen](structures.md)<br /><br />[Enumerationen](enumerations.md)<br /><br />[Unterscheidbare Unions](discriminated-unions.md)<br /><br />[Typabkürzungen](type-abbreviations.md)<br /><br />[Maßeinheiten](units-of-measure.md)|Dient zum Deklarieren einer Klasse, eines Datensatzes, einer Struktur, einer Unterscheidungs Union, eines Enumerationstyps, einer Maßeinheit oder einer typabkürzung.|
 |`upcast`|[Umwandlung und Konvertierungen](casting-and-conversions.md)|Wird verwendet, um in einen Typ zu konvertieren, der in der Vererbungs Kette höher ist.|
 |`use`|[Ressourcenverwaltung: Das `use`-Schlüsselwort](resource-management-the-use-keyword.md)|Wird anstelle von `let` für Werte verwendet `Dispose` , die zum Freigeben von Ressourcen aufgerufen werden müssen.|
@@ -86,7 +86,7 @@ In der folgenden Tabelle werden F# Alle Schlüsselwörter in alphabetischer Reih
 |`void`|[Primitive Typen](primitive-types.md)|Gibt den .net `void` -Typ an. Wird verwendet, wenn mit anderen .NET-Sprachen interagiert wird.|
 |`when`|[Einschränkungen](./generics/constraints.md)|Wird für boolesche Bedingungen (*Wenn Wächter*) für Muster Übereinstimmungen verwendet und eine Einschränkungs Klausel für einen generischen Typparameter eingeführt.|
 |`while`|[Loops `while...do`Begriff](loops-while-do-expression.md)|Führt ein Schleifen Konstrukt ein.|
-|`with`|[Vergleichsausdrücke](match-expressions.md)<br /><br />[Objektausdrücke](object-expressions.md)<br /><br />[Kopieren und Aktualisieren von Datensatzausdrücken](copy-and-update-record-expressions.md)<br /><br />[Typerweiterungen](type-extensions.md)<br /><br />[Ausnahmen: Der `try...with` Ausdruck](/.exception-handling/the-try-with-expression.md)|Wird in Übereinstimmung `match` mit dem-Schlüsselwort in Muster Vergleichs Ausdrücken verwendet. Wird auch in Objekt Ausdrücken verwendet, das Kopieren von Ausdrücken und die Typerweiterungen zum Einführen von Element Definitionen und das Einführen von Ausnahme Handlern.|
+|`with`|[Vergleichsausdrücke](match-expressions.md)<br /><br />[Objektausdrücke](object-expressions.md)<br /><br />[Kopieren und Aktualisieren von Datensatzausdrücken](copy-and-update-record-expressions.md)<br /><br />[Typerweiterungen](type-extensions.md)<br /><br />[Ausnahmen: Der `try...with` Ausdruck](./exception-handling/the-try-with-expression.md)|Wird in Übereinstimmung `match` mit dem-Schlüsselwort in Muster Vergleichs Ausdrücken verwendet. Wird auch in Objekt Ausdrücken verwendet, das Kopieren von Ausdrücken und die Typerweiterungen zum Einführen von Element Definitionen und das Einführen von Ausnahme Handlern.|
 |`yield`|[Sequenzen](sequences.md)|Wird in einem Sequenz Ausdruck verwendet, um einen Wert für eine Sequenz zu erhalten.|
 |`yield!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|Wird in einem Berechnungs Ausdruck verwendet, um das Ergebnis eines angegebenen Berechnungs Ausdrucks an eine Auflistung von Ergebnissen für den enthaltenden Berechnungs Ausdruck anzufügen.|
 

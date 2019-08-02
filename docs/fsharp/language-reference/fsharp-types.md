@@ -2,12 +2,12 @@
 title: F#-Typen
 description: Erfahren Sie mehr über die Typen, die F# in verwendet F# werden, und wie Typen benannt und beschrieben werden.
 ms.date: 05/16/2016
-ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 826bcb56aad3b50fbfcf8f807bb34e9cdcdecaf7
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630230"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733490"
 ---
 # <a name="f-types"></a>F#-Typen
 
@@ -69,4 +69,4 @@ Die folgende Tabelle zeigt Aspekte der Typsyntax für F# -Typen.
 |[Delegaten](delegates.md)|Beschreibt den Delegattyp, der eine Funktion als Objekt darstellt.|
 |[Enumerationen](enumerations.md)|Beschreibt Enumerationstypen, deren Werte zu einem Satz benannter Werte gehören.|
 |[Attribute](attributes.md)|Beschreibt Attribute, die verwendet werden, um Metadaten für einen anderen Typ anzugeben.|
-|[Ausnahmetypen](/.exception-handling/exception-types.md)|Beschreibt Ausnahmen, die Fehlerinformationen angeben.|
+|[Ausnahmetypen](./exception-handling/exception-types.md)|Beschreibt Ausnahmen, die Fehlerinformationen angeben.|

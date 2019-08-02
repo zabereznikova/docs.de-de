@@ -1,41 +1,41 @@
 ---
-title: Aktivieren oder Deaktivieren von automatisch generierten bindungsumleitungen
+title: Aktivieren oder Deaktivieren von automatisch generierten Bindungs Umleitungen
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: d914310559403fba2f1fe8e4a60469ec3a867c24
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380103"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733440"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung
 
-Beim Kompilieren von apps in Visual Studio mit der Zielversion .NET Framework 4.5.1 und höheren Versionen können bindungsumleitungen automatisch Assemblyvereinheitlichung überschrieben app-Konfigurationsdatei hinzugefügt werden. Bindungsumleitungen werden hinzugefügt, wenn die App oder ihre Komponenten auf mehr als eine Version der gleichen Assembly verweisen, auch wenn Sie manuell Bindungsumleitungen in der Konfigurationsdatei für Ihre App angeben. Die automatische bindungsumleitung wirkt sich auf desktop-apps und Web-apps für .NET Framework 4.5.1 oder höher, obwohl das Verhalten für eine Web-app etwas anders ist. Sie können die automatische bindungsumleitung aktivieren, wenn Sie vorhandene apps, die frühere Versionen von .NET Framework abzielen, oder Sie diese Funktion deaktivieren können, wenn Sie manuell bindungsumleitungen erstellen möchten.
+Wenn Sie apps in Visual Studio kompilieren, die auf .NET Framework 4.5.1 und höhere Versionen ausgerichtet sind, können der APP-Konfigurationsdatei automatisch Bindungs Umleitungen hinzugefügt werden, um die Assemblyvereinheitlichung zu überschreiben. Bindungsumleitungen werden hinzugefügt, wenn die App oder ihre Komponenten auf mehr als eine Version der gleichen Assembly verweisen, auch wenn Sie manuell Bindungsumleitungen in der Konfigurationsdatei für Ihre App angeben. Die Funktion zur automatischen Bindungs Umleitung wirkt sich auf Desktop-Apps und Web-Apps aus, die auf die .NET Framework 4.5.1 oder eine höhere Version abzielen, obwohl das Verhalten für eine Web-App etwas abweicht. Sie können die automatische Bindungs Umleitung aktivieren, wenn Sie über vorhandene apps verfügen, die auf frühere Versionen des .NET Framework abzielen, oder Sie können diese Funktion deaktivieren, wenn Sie Bindungs Umleitungen manuell erstellen möchten.
 
-## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Deaktivieren Sie automatische bindungsumleitungen in desktop-apps
+## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Deaktivieren von automatischen Bindungs Umleitungen in Desktop-Apps
 
-Automatische bindungsumleitungen sind standardmäßig für Windows desktop-apps aktiviert, die auf .NET Framework 4.5.1 und höheren Versionen abzielen. Die bindungsumleitungen werden hinzugefügt, um die Ausgabekonfigurationsdatei ( **"App.config"** )-Datei, wenn die app kompiliert wurde, und überschreiben Sie die Assemblyvereinheitlichung, die sonst erfolgen würde. Die Quelle **"App.config"** Datei wird nicht geändert. Sie können dieses Feature deaktivieren, indem die Projektdatei für die app ändern oder deaktivieren ein Kontrollkästchen in den Eigenschaften des Projekts in Visual Studio.
+Automatische Bindungs Umleitungen sind standardmäßig für Windows-Desktop-Apps aktiviert, die auf .NET Framework 4.5.1 und höhere Versionen abzielen. Die Bindungs Umleitungen werden der Ausgabe Konfigurationsdatei (**app. config**) hinzugefügt, wenn die APP kompiliert wird, und überschreiben die Assemblyvereinheitlichung, die andernfalls möglicherweise stattfindet. Die Datei " **app. config** " der Quelldatei wird nicht geändert. Sie können diese Funktion deaktivieren, indem Sie die Projektdatei für die APP ändern oder ein Kontrollkästchen in den Eigenschaften des Projekts in Visual Studio deaktivieren.
 
-### <a name="disable-through-project-properties"></a>Deaktivieren Sie über Projekteigenschaften
+### <a name="disable-through-project-properties"></a>Durch Projekteigenschaften deaktivieren
 
-Wenn Sie Visual Studio 2017 Version 15.7 oder höher verfügen, können Sie ganz einfach automatisch generierten bindungsumleitungen in den Eigenschaftenseiten des Projekts deaktivieren.
+Wenn Sie über Visual Studio 2017 Version 15,7 oder höher verfügen, können Sie automatisch generierte Bindungs Umleitungen auf den Eigenschaften Seiten des Projekts problemlos deaktivieren.
 
 1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** aus.
 
-2. Auf der **Anwendung** Seite aus, deaktivieren Sie die **Automatisches Generieren von bindungsumleitungen** Option.
+2. Deaktivieren Sie auf der Seite **Anwendung** die Option **Bindungs Umleitungen automatisch generieren** .
 
-3. Drücken Sie **STRG**+**S** um die Änderung zu speichern.
+3. Drücken Sie **STRG**+**S** , um die Änderung zu speichern.
 
-### <a name="disable-manually-in-the-project-file"></a>Deaktivieren Sie manuell in der Projektdatei
+### <a name="disable-manually-in-the-project-file"></a>Manuelles Deaktivieren in der Projektdatei
 
-1. Öffnen Sie die Projektdatei für die Bearbeitung mit einem der folgenden Methoden:
+1. Öffnen Sie die Projektdatei zur Bearbeitung, indem Sie eine der folgenden Methoden verwenden:
 
-   - Wählen Sie in Visual Studio das Projekt im **Projektmappen-Explorer**, und wählen Sie dann **Ordner in Datei-Explorer öffnen** aus dem Kontextmenü. Klicken Sie im Datei-Explorer finden Sie die Projektdatei (CSPROJ oder VBPROJ), und öffnen sie im Editor.
-   - In Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**. Mit der rechten Maustaste erneut auf des entladen Projekts, und wählen Sie dann **bearbeiten [Projektname.csproj]** .
+   - Wählen Sie in Visual Studio das Projekt in **Projektmappen-Explorer**aus, und wählen Sie dann im Kontextmenü **Ordner in Datei-Explorer öffnen** aus. Suchen Sie im Datei-Explorer die Projektdatei (CSPROJ-oder VBPROJ-Datei), und öffnen Sie Sie im Editor.
+   - Klicken Sie in Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**aus. Klicken Sie erneut mit der rechten Maustaste auf das entladene Projekt, und wählen Sie dann **bearbeiten [ProjectName. csproj]** aus.
 
 2. Suchen Sie in der Projektdatei den folgende Eigenschafteneintrag:
 
@@ -49,57 +49,57 @@ Wenn Sie Visual Studio 2017 Version 15.7 oder höher verfügen, können Sie ganz
    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
    ```
 
-## <a name="enable-automatic-binding-redirects-manually"></a>Aktivieren Sie automatische bindungsumleitungen manuell
+## <a name="enable-automatic-binding-redirects-manually"></a>Manuelles Aktivieren automatischer Bindungs Umleitungen
 
-Sie können automatische bindungsumleitungen in vorhandenen apps ermöglichen dieses Ziel in älteren Versionen von .NET Framework oder in Fällen, in denen Sie nicht automatisch aufgefordert werden, Hinzufügen einer Umleitung. Wenn Sie eine neuere Version des Frameworks abzielen, jedoch werden nicht automatisch zum Hinzufügen einer Umleitung aufgefordert, erhalten Sie wahrscheinlich Buildausgabe, die schlägt vor, dass Sie die Assemblys neu zuordnen.
+Sie können automatische Bindungs Umleitungen in vorhandenen apps aktivieren, die auf ältere Versionen der .NET Framework abzielen, oder in Fällen, in denen Sie nicht automatisch aufgefordert werden, eine Umleitung hinzuzufügen. Wenn Sie auf eine neuere Version des Frameworks abzielen, aber nicht automatisch aufgefordert werden, eine Umleitung hinzuzufügen, erhalten Sie wahrscheinlich eine Buildausgabe, die eine Neuzuordnung der Assemblys vorschlägt.
 
-1. Öffnen Sie die Projektdatei für die Bearbeitung mit einem der folgenden Methoden:
+1. Öffnen Sie die Projektdatei zur Bearbeitung, indem Sie eine der folgenden Methoden verwenden:
 
-   - Wählen Sie in Visual Studio das Projekt im **Projektmappen-Explorer**, und wählen Sie dann **Ordner in Datei-Explorer öffnen** aus dem Kontextmenü. Klicken Sie im Datei-Explorer finden Sie die Projektdatei (CSPROJ oder VBPROJ), und öffnen sie im Editor.
-   - In Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**. Mit der rechten Maustaste erneut auf des entladen Projekts, und wählen Sie dann **bearbeiten [Projektname.csproj]** .
+   - Wählen Sie in Visual Studio das Projekt in **Projektmappen-Explorer**aus, und wählen Sie dann im Kontextmenü **Ordner in Datei-Explorer öffnen** aus. Suchen Sie im Datei-Explorer die Projektdatei (CSPROJ-oder VBPROJ-Datei), und öffnen Sie Sie im Editor.
+   - Klicken Sie in Visual Studio in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und wählen Sie **Projekt entladen**aus. Klicken Sie erneut mit der rechten Maustaste auf das entladene Projekt, und wählen Sie dann **bearbeiten [ProjectName. csproj]** aus.
 
-2. Das folgende Element hinzufügen, um den ersten konfigurationseigenschaftengruppe (unter der \<PropertyGroup > Tag):
+2. Fügen Sie das folgende Element der ersten Konfigurations Eigenschaften Gruppe hinzu (unter \<dem > Tag PropertyGroup):
 
    ```xml
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
    ```
 
-   Das folgende Beispiel zeigt eine beispielhafte Projektdatei mit dem eingefügten Element:
+   Im folgenden sehen Sie eine Beispiel Projektdatei, in der das Element eingefügt wurde:
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
    <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
      <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-       <PropertyGroup>
-         <Configuration Condition=" '$(Configuration)' == ''     ">Debug</Configuration>
-         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-         <ProjectGuid>{123334}</ProjectGuid>
-         ...
-         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-       </PropertyGroup>
+     <PropertyGroup>
+       <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+       <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+       <ProjectGuid>{123334}</ProjectGuid>
+       ...
+       <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+     </PropertyGroup>
      ...
    </Project>
    ```
 
 3. Kompilieren Sie Ihre App.
 
-## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Aktivieren Sie automatische bindungsumleitungen in Web-apps
+## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Aktivieren von automatischen Bindungs Umleitungen in Web-Apps
 
-Bei Web-Apps werden automatische Bindungsumleitungen auf andere Weise implementiert. Da der Quellkonfiguration ( **"Web.config"** ) Datei muss geändert werden, für die Web-apps, bindungsumleitungen werden nicht automatisch hinzugefügt, die Konfigurationsdatei. Allerdings benachrichtigt Visual Studio Sie bei Bindungskonflikten, und Sie können Bindungsumleitungen hinzufügen, um die Konflikte zu lösen. Da Sie immer zum Hinzufügen bindungsumleitungen aufgefordert werden, müssen Sie nicht explizit deaktivieren Sie dieses Feature für eine Web-app.
+Bei Web-Apps werden automatische Bindungsumleitungen auf andere Weise implementiert. Da die Quell Konfigurationsdatei (**Web. config**) für Web-Apps geändert werden muss, werden die Bindungs Umleitungen nicht automatisch zur Konfigurationsdatei hinzugefügt. Allerdings benachrichtigt Visual Studio Sie bei Bindungskonflikten, und Sie können Bindungsumleitungen hinzufügen, um die Konflikte zu lösen. Da Sie immer aufgefordert werden, Bindungs Umleitungen hinzuzufügen, müssen Sie diese Funktion für eine Web-App nicht explizit deaktivieren.
 
-Zum Hinzufügen bindungsumleitungen zu einer **"Web.config"** Datei:
+So fügen Sie einer **Web. config** -Datei Bindungs Umleitungen hinzu:
 
 1. Kompilieren Sie die Anwendung in Visual Studio, und prüfen Sie, ob Buildwarnungen vorliegen.
 
-   ![Buildwarnung für assemblyverweiskonflikte](../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
+   ![Buildwarnung für] assemblyverweiskonflikte (../../../docs/framework/configure-apps/media/clr-assemblyrefwarning.png "CLR_AssemblyRefWarning")
 
-2. Wenn Konflikte für eine Assemblybindung bestehen, wird eine Warnung angezeigt. Doppelklicken Sie auf die Warnung aus, oder wählen Sie den Warnhinweis, und drücken Sie **EINGABETASTE**.
+2. Wenn Konflikte für eine Assemblybindung bestehen, wird eine Warnung angezeigt. Doppelklicken Sie auf die Warnung, oder wählen Sie die Warnung, und drücken **Sie die Eingabe**Taste.
 
-   Ein Dialogfeld, das Ihnen ermöglicht, automatisch die erforderlichen Bindung hinzuzufügen leitet an die Quelle **"Web.config"** -Datei angezeigt wird.
+   Ein Dialogfeld, in dem Sie die erforderlichen Bindungs Umleitungen automatisch zur **Web. config** -Quelldatei hinzufügen können.
 
-   ![Dialogfeld "portbindung umleitungs-Berechtigung"](../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
+   ![Dialogfeld "Bindungs Umleitung] " (../../../docs/framework/configure-apps/media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 
 ## <a name="see-also"></a>Siehe auch
 
-- [\<BindingRedirect >-Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
+- [\<bindingRedirect-> Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
