@@ -2,59 +2,59 @@
 title: XML-Dokumentation (F#)
 description: Erfahren Sie mehr über Unterstützung für in F#, zum Generieren von Dokumentation aus Kommentaren.
 ms.date: 05/16/2016
-ms.openlocfilehash: c5305dea8832112644710b2863269ef00feddd10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b89ab4117f4dd71126f8e203f4a5271ab3c30021
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902173"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630820"
 ---
 # <a name="xml-documentation"></a>XML-Dokumentation
 
-Sie können die Dokumentation von drei Schrägstrichen (/ / /) erstellen code in F#. XML-Kommentaren können Deklarationen in Codedateien (sein) oder Signaturdateien (".FSI") vorangestellt sein.
+Sie können die Dokumentation von drei Schrägstrichen (/ / /) erstellen code in F#. XML-Kommentare können Deklarationen in Code Dateien (. FS) oder Signatur Dateien (. FSI) vorangestellt werden.
 
-## <a name="generating-documentation-from-comments"></a>Generieren von Dokumentation aus Kommentaren
+## <a name="generating-documentation-from-comments"></a>Erstellen einer Dokumentation aus Kommentaren
 
-Die Unterstützung in F# für das Generieren von Dokumentation aus Kommentaren ist identisch, die in anderen .NET Framework-Sprachen. Wie in anderen .NET Framework-Sprachen die [-Doc-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) ermöglicht es Ihnen, eine XML-Datei zu erzeugen, die Informationen, die Sie in der Dokumentation konvertieren können enthält, mithilfe eines Tools wie z. B. [DocFX](https://dotnet.github.io/docfx/) oder [ Sandcastle](https://github.com/EWSoftware/SHFB). Die Dokumentation mithilfe von Tools, sind für die Verwendung mit Assemblys, die in anderen .NET Framework-Sprachen, in der Regel geschrieben wurden generiert erzeugen einen Überblick über die APIs, die basierend auf der kompilierten Form eines F#-Konstrukte. Es sei denn, insbesondere toolunterstützung F#, Dokumentation, die mit diesen Tools generierte stimmt nicht überein. die F# Ansicht einer API.
+Die Unterstützung in F# für das Generieren von Dokumentation aus Kommentaren ist identisch, die in anderen .NET Framework-Sprachen. Wie in anderen .NET Framework Sprachen ermöglicht die [-doc-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) das Entwickeln einer XML-Datei, die Informationen enthält, die Sie mithilfe eines Tools wie [docfx](https://dotnet.github.io/docfx/) oder [Sandcastle](https://github.com/EWSoftware/SHFB)in die Dokumentation konvertieren können. Die Dokumentation mithilfe von Tools, sind für die Verwendung mit Assemblys, die in anderen .NET Framework-Sprachen, in der Regel geschrieben wurden generiert erzeugen einen Überblick über die APIs, die basierend auf der kompilierten Form eines F#-Konstrukte. Wenn die Tools nicht F#speziell unterstützen, entspricht die von diesen Tools generierte F# Dokumentation nicht der Ansicht einer API.
 
-Weitere Informationen zum Generieren von Dokumentation aus XML finden Sie unter [XML-Dokumentationskommentare &#40;C&#35; Programming Guide&#41;](https://msdn.microsoft.com/library/b2s063f7).
+Weitere Informationen zum Generieren von Dokumentationen aus XML finden Sie unter [XML-Dokumentations Kommentare &#40;C&#35; -Programmier&#41;Handbuch](https://msdn.microsoft.com/library/b2s063f7).
 
 ## <a name="recommended-tags"></a>Empfohlene Tags
 
-Es gibt zwei Möglichkeiten zum Schreiben von XML-Dokumentationskommentare. Eine ist die Dokumentation direkt in einen Kommentar mit drei Schrägstrichen, einfach zu schreiben, ohne Verwendung von XML-Tags. Wenn Sie dies tun, stammen die gesamte Kommentartext mit der Zusammenfassung Dokumentation für das Codekonstrukt, die unmittelbar folgt. Verwenden Sie diese Methode aus, wenn Sie nur eine kurze Zusammenfassung für jedes Konstrukt schreiben möchten. Die andere Methode werden XML-Tags verwenden, um strukturiertere Dokumentation bereitzustellen. Die zweite Methode ermöglicht Ihnen die Angabe separate Notizen für eine kurze Zusammenfassung, zusätzliche Hinweise, die Dokumentation für jeden Parameter und Typparameter und ausgelösten Ausnahmen und eine Beschreibung des Rückgabewerts. Die folgende Tabelle beschreibt die XML-Tags, die im erkannt werden F# XML-Codekommentaren.
+Es gibt zwei Möglichkeiten zum Schreiben von XML-Dokumentations Kommentaren. Eine besteht darin, die Dokumentation einfach direkt in einem Kommentar mit drei Schrägstrichen zu schreiben, ohne XML-Tags zu verwenden. Wenn Sie dies tun, wird der gesamte Kommentartext als Zusammenfassungs Dokumentation für das direkt nachfolgende Code Konstrukt entnommen. Verwenden Sie diese Methode, wenn Sie nur eine kurze Zusammenfassung für jedes Konstrukt schreiben möchten. Die andere Methode ist die Verwendung von XML-Tags, um eine strukturiertere Dokumentation bereitzustellen. Die zweite Methode ermöglicht es Ihnen, separate Hinweise für eine kurze Zusammenfassung, zusätzliche Hinweise, eine Dokumentation für jeden Parameter und Typparameter und die ausgelösten Ausnahmen sowie eine Beschreibung des Rückgabewerts anzugeben. In der folgenden Tabelle werden XML-Tags beschrieben, F# die in XML-Code Kommentaren erkannt werden.
 
 |Tagsyntax|Beschreibung|
 |----------|-----------|
-|**\<c\>**_text_**\</c\>**|Gibt an, dass *Text* Code. Dieses Tag kann von Dokumentationsgeneratoren verwendet werden, zum Anzeigen von Text in einer Schriftart an, die für Code geeignet ist.|
-|**\<summary\>**_text_**\</summary\>**|Gibt an, dass *Text* ist eine kurze Beschreibung des Programms-Elements. Die Beschreibung ist in der Regel ein oder zwei Sätze an.|
-|**\<remarks\>**_text_**\</remarks\>**|Gibt an, dass *Text* enthält zusätzliche Informationen über das Programmelement.|
-|**\<param name="**_name_**"\>**_description_**\</param\>**|Gibt den Namen und eine Beschreibung für einen Parameter-Funktion oder Methode.|
-|**\<typeparam name="**_name_**"\>**_description_**\</typeparam\>**|Gibt den Namen und eine Beschreibung für einen Typparameter an.|
-|**\<returns\>**_text_**\</returns\>**|Gibt an, dass *Text* beschreibt den Rückgabewert einer Funktion oder Methode.|
-|**\<exception cref="**_type_**"\>**_description_**\</exception\>**|Gibt den Typ der Ausnahme, die generiert werden kann und die Umstände, unter denen sie ausgelöst wird.|
-|**\<see cref="**_reference_**"\>**_text_**\</see\>**|Gibt einen Inlinelink auf ein anderes Programmelement. Die *Verweis* ist der Name, wie er in die XML-Dokumentationsdatei angezeigt wird. Die *Text* ist der Text im Link angezeigt.|
-|**\<seealso cref="**_reference_**"/\>**|Gibt einen Link "Siehe auch" in der Dokumentation für einen anderen Typ. Die *Verweis* ist der Name, wie er in die XML-Dokumentationsdatei angezeigt wird. Siehe auch Links in der Regel am unteren Rand eine Dokumentationsseite angezeigt werden.|
-|**\<para\>**_text_**\</para\>**|Gibt einen Textabsatz an. Dient zum Trennen von Text in die **"Hinweise"** Tag.|
+|**\<c\>** _text_ **\</c\>**|Gibt an, dass der *Text* Code ist. Dieses Tag kann von Dokumentations Generatoren zum Anzeigen von Text in einer Schriftart verwendet werden, die für Code geeignet ist.|
+|**ZusammenfassungsText\>/Summary \<** **\<\>**|Gibt an, dass der *Text* eine kurze Beschreibung des Programm Elements ist. Die Beschreibung ist in der Regel ein oder zwei Sätze.|
+|**HinweiseText\>/Remarks \<** **\<\>**|Gibt an, dass der *Text* zusätzliche Informationen zum Programmelement enthält.|
+|**\>** **param\> Name=\<** "Name" Description/param Returns  **\<**|Gibt den Namen und die Beschreibung für einen Funktions-oder Methoden Parameter an.|
+|**\>** **\<typeparamName\>**  = "Name" Description/typeparam  **\<**|Gibt den Namen und die Beschreibung für einen Typparameter an.|
+|**\<returns\>** _text_ **\</returns\>**|Gibt an, dass *Text* den Rückgabewert einer Funktion oder Methode beschreibt.|
+|**\>** **Exceptionkref\> = "Type" Description/Exception\<**  **\<**|Gibt den Typ der Ausnahme an, die generiert werden kann, sowie die Umstände, unter denen Sie ausgelöst wird.|
+|**\>** **\<siehe kref=\>**  "Reference"-Text/See  **\<**|Gibt einen Inline Link zu einem anderen Programmelement an. Der *Verweis* ist der Name, wie er in der XML-Dokumentations Datei angezeigt wird. Der *Text* ist der Text, der im Link angezeigt wird.|
+|**\>**   **\<seeauch kref = "** Verweis"/|Gibt einen Link zum Anzeigen von Links zur Dokumentation für einen anderen Typ an. Der *Verweis* ist der Name, wie er in der XML-Dokumentations Datei angezeigt wird. Siehe auch Links unten auf einer Dokumentationsseite.|
+|**paraText\>/para \<** **\<\>**|Gibt einen Absatz von Text an. Hiermit **wird der Text** innerhalb des Kommentartags getrennt.|
 
 ## <a name="example"></a>Beispiel
 
 ### <a name="description"></a>Beschreibung
 
-Im folgenden finden eine typische XML-Dokumentationskommentar in einer Signaturdatei.
+Im folgenden finden Sie einen typischen XML-Dokumentations Kommentar in einer Signatur Datei.
 
 ### <a name="code"></a>Code
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7101.fs)]
 
 ## <a name="example"></a>Beispiel
 
 ### <a name="description"></a>Beschreibung
 
-Das folgende Beispiel zeigt die alternative Methode verwenden, ohne XML-Tags. In diesem Beispiel wird der gesamte Text im Kommentar als Zusammenfassung betrachtet. Beachten Sie, dass wenn Sie ein summary-Tag nicht explizit angeben, Sie nicht andere Tags, wie z. B. angeben sollten **Param** oder **gibt** Tags.
+Das folgende Beispiel zeigt die alternative Methode ohne XML-Tags. In diesem Beispiel wird der gesamte Text im Kommentar als Zusammenfassung angesehen. Beachten Sie Folgendes: Wenn Sie kein Zusammenfassungs-Tag explizit angeben, sollten Sie keine anderen Tags angeben, z. b. " **param** " oder " **Returns** Tags".
 
 ### <a name="code"></a>Code
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7102.fs)]
 
 ## <a name="see-also"></a>Siehe auch
 

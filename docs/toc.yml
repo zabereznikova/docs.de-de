@@ -595,14 +595,16 @@
       items:
         - name: 'C#-Typsystem'
           href: csharp/programming-guide/types/index.md
+        - name: Nullwerte zulassende Verweistypen
+          href: csharp/nullable-references.md
+        - name: Beschreiben von Nullwerte zulassenden APIs mithilfe von Attributen und Einschränkungen
+          href: csharp/nullable-attributes.md
         - name: Namespaces
           href: csharp/programming-guide/namespaces/index.md
         - name: Grundlegende Typen
           href: csharp/basic-types.md
         - name: Klassen
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: Nullwerte zulassende Verweistypen
-          href: csharp/nullable-references.md
         - name: Strukturen
           href: csharp/structs.md
         - name: Tupel
