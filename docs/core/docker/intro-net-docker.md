@@ -3,12 +3,12 @@ title: Einführung in Docker
 description: Dieser Artikel bietet eine Einführung und einen Überblick über Docker im Rahmen einer.NET Core-Anwendung.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d0bce09d7acdcf474fbb8849c8fc82dae4a69598
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5da71215e3b539f10993677d23d89e2b8a49cb39
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753295"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626477"
 ---
 # <a name="introduction-to-net-and-docker"></a>Einführung zu .NET und Docker
 
@@ -32,7 +32,7 @@ Ein Container ist eine ausgeführte Instanz eines Images. Wenn Sie Ihr Image ers
 
 ### <a name="registries"></a>Registrierungen
 
-Containerregistrierungen sind eine Sammlung von Imagerepositorys. Sie können Ihre Images auf einem Registrierungsimage basieren. Sie können Container direkt aus einem Image in einer Registrierung erstellen. Die [Beziehung zwischen Docker-Containern, -Images und -Registrys](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md) ist ein wichtiges Konzept beim [Entwurf und Aufbau von Containeranwendungen oder Microservices](../../standard/microservices-architecture/architect-microservice-container-applications/index.md). Durch diese Vorgehensweise wird die Zeit zwischen Entwicklung und Bereitstellung deutlich verkürzt.
+Containerregistrierungen sind eine Sammlung von Imagerepositorys. Sie können Ihre Images auf einem Registrierungsimage basieren. Sie können Container direkt aus einem Image in einer Registrierung erstellen. Die [Beziehung zwischen Docker-Containern, -Images und -Registrys](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md) ist ein wichtiges Konzept beim [Entwurf und Aufbau von Containeranwendungen oder Microservices](../../architecture/microservices/architect-microservice-container-applications/index.md). Durch diese Vorgehensweise wird die Zeit zwischen Entwicklung und Bereitstellung deutlich verkürzt.
 
 Docker verfügt über eine öffentliche Registrierung, die auf dem [Docker-Hub](https://hub.docker.com/) gehostet wird, die Sie verwenden können. Images, die sich auf [.NET Core beziehen](https://hub.docker.com/_/microsoft-dotnet-core/), werden auf dem Docker-Hub aufgeführt. 
 

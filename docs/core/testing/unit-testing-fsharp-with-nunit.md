@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 926e47c277c8649627482a8036ca3704be142f33
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7b559d94c03081a8ef67cf91ccfb7d08ff5b6c60
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631880"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626456"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Unittests für F#-Bibliotheken in .NET Core mit „dotnet test“ und NUnit
 
@@ -154,7 +154,7 @@ Beachten Sie, dass die Sequenz `expected` zu einer Liste konvertiert wurde. Das 
 
 Bei der Ausführung des Tests stellen Sie fest, dass der Test fehlerhaft ist. Sie haben die Implementierung noch nicht erstellt. Sorgen Sie dafür, dass dieser Test erfolgreich verläuft, indem Sie in der *Library.fs*-Klasse in Ihrem MathService-Projekt sehr einfachen Code schreiben, der funktioniert:
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```

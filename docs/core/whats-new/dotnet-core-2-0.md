@@ -4,12 +4,12 @@ description: Informationen zu den neuen Funktionen in .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464072"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626362"
 ---
 # <a name="whats-new-in-net-core-20"></a>Neuigkeiten in .NET Core 2.0
 
@@ -156,8 +156,8 @@ Sie können das .NET Core-SDK jetzt unabhängig von Visual Studio installieren. 
 
 [.NET-Anwendungsarchitektur](https://www.microsoft.com/net/learn/architecture) ermöglicht Ihnen Zugriff auf eine Sammlung von E-Books, die Hilfestellung, bewährte Methoden und Beispielanwendungen zur Verwendung von .NET beim Erstellen folgender Software bieten:
 
-- [Microservices und Docker-Container](../../standard/microservices-architecture/index.md)
-- [Webanwendungen mit ASP.NET](../../standard/modern-web-apps-azure-architecture/index.md)
+- [Microservices und Docker-Container](../../architecture/microservices/index.md)
+- [Webanwendungen mit ASP.NET](../../architecture/modern-web-apps-azure/index.md)
 - [Mobile applications with Xamarin (Mobile Anwendungen mit Xamarin)](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Anwendungen, die mit Azure in der Cloud bereitgestellt werden](/azure/architecture/reference-architectures/index)
 

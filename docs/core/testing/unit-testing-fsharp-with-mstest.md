@@ -4,15 +4,13 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests für F# i
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3b93f4ed21d9d5eccf1dd02f253e7456aec02807
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747491"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626463"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Komponententests für F#-Bibliotheken in .NET Core mit „dotnet test“ und MSTest
 
@@ -125,7 +123,7 @@ Beachten Sie, dass die Sequenz `expected` zu einer Liste konvertiert wurde. Die 
 
 Bei der Ausführung des Tests stellen Sie fest, dass der Test fehlerhaft ist. Sie haben die Implementierung noch nicht erstellt. Damit dieser Test erfolgreich verläuft, schreiben Sie einen ganz einfachen Code in die `Mathservice`-Klasse:
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int> |> Seq.toList
 ```

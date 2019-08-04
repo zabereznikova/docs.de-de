@@ -4,15 +4,13 @@ description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET C
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-dev_langs:
-- vb
 ms.custom: seodec18
-ms.openlocfilehash: 193746e8efda5d7bc9e086bb0abf934cfeb1741a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e8d5b565bc04a0beb30142247b4ee8d94dcce86b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748595"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626437"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und xUnit
 
@@ -102,7 +100,7 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <Fact>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
             Assert.False(result, "1 should not be prime")
@@ -121,7 +119,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 

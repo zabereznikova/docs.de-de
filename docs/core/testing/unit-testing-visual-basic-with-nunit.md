@@ -3,15 +3,13 @@ title: Komponententests für Visual Basic in .NET Core mit „dotnet test“ und
 description: Erfahren Sie mehr über die Konzepte von Komponententests in .NET Core, indem Sie im Rahmen eines interaktiven Tutorials Schritt für Schritt eine Visual Basic-Beispielprojektmappe mithilfe von NUnit erstellen.
 author: rprouse
 ms.date: 10/04/2018
-dev_langs:
-- vb
 ms.custom: seodec18
-ms.openlocfilehash: cf8a81241c93a6eeecf04052aba57750774aa050
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 84287a94504594c731c0fbccf2e61a957a15a36f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397504"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626400"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Unittests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und NUnit
 
@@ -52,7 +50,7 @@ Imports System
 Namespace Prime.Services
     Public Class PrimeService
         Public Function IsPrime(candidate As Integer) As Boolean
-            Throw New NotImplementedException("Please create a test first")
+            Throw New NotImplementedException("Please create a test first.")
         End Function
     End Class
 End Namespace
@@ -127,7 +125,7 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <Test>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
             Assert.False(result, "1 should not be prime")
@@ -146,7 +144,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 
