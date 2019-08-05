@@ -4,12 +4,12 @@ description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellu
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641156"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630867"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -46,7 +46,7 @@ Durch eine Microservicearchitektur ist eine dienstübergreifende Kombination aus
 
 Es stehen viele verschiedene Infrastrukturplattformen zur Verfügung. [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) wurde für große und komplexe Microservicesysteme entwickelt. [Azure App Service](https://azure.microsoft.com/services/app-service/) ist eine gute Wahl bei zustandslosen Microservices. Auf Docker basierende Alternativen zu Microservices sind – wie im Abschnitt [Container](#containers) erläutert – mit allen Arten von Microserviceimplementierungen kompatibel. All diese Plattformen unterstützen .NET Core und eignen sich daher ideal zum Hosten Ihrer Microservices.
 
-Weitere Informationen zur Microservicearchitektur finden Sie unter [ NET Microservices: Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md).
+Weitere Informationen zur Microservicearchitektur finden Sie unter [ NET Microservices: Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](../architecture/microservices/index.md).
 
 ### <a name="containers"></a>Container
 
@@ -110,4 +110,4 @@ Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nic
 - [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)
 - [Einführung in .NET and Docker](../core/docker/intro-net-docker.md)
 - [.NET-Komponenten – Übersicht](components.md)
-- [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md)
+- [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](../architecture/microservices/index.md)
