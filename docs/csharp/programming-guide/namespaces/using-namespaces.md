@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: abd4c34661d96d8c3188e92dd2d76f847e17aae7
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433536"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629493"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Verwenden von Namespaces (C#-Programmierhandbuch)
 Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwendet. Erstens: Die .NET Framework-Klassen verwenden Namespaces, um ihre zahlreichen Klassen zu organisieren. Zweitens: Eigene Namespaces zu deklarieren kann Ihnen dabei helfen, den Umfang der Klassen- und Methodennamen in größeren Programmierprojekten zu steuern.  
@@ -93,5 +93,5 @@ Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwende
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
 - [. Operator](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
-- [extern](../../../csharp/language-reference/keywords/extern.md)
+- [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)

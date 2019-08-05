@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2b2f550b21a8d64968c6280cc1a29c1d18bfabd
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c88466df32a4167b2b32a7cc0f64eb306e392611
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364006"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629336"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Verfügbarmachen von .NET Framework-Komponenten in COM
 Das Schreiben eines .NET-Typs und das Verwenden dieses Typs von nicht verwaltetem Code sind unterschiedliche Aktivitäten für Entwickler. Dieser Abschnitt beschreibt einige Tipps zum Schreiben von verwaltetem Code, der mit COM-Clients interagiert:  
   
-- [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+- [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).  
   
      Alle verwalteten Typen, Methoden, Eigenschaften, Felder und Ereignisse, die für COM verfügbar gemacht werden sollen, müssen öffentlich sein. Typen müssen über einen öffentlichen parameterlosen Konstruktor verfügen, da dies der einzige Konstruktor ist, der über COM aufgerufen werden kann.  
   
-- [Anwenden von Interop-Attributen](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Anwenden von Interop-Attributen](../../../docs/standard/native-interop/apply-interop-attributes.md).  
   
      Benutzerdefinierte Attribute in verwaltetem Code können die Interoperabilität einer Komponente verbessern.  
   
