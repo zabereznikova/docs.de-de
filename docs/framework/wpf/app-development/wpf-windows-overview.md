@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ffb397c673333b26649a815fce7a5d4e63e5b987
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401725"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796784"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren über Windows Windows Presentation Foundation mit eigenständigen WPF-Anwendungen (WPF). Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ständige Anwendungen stellen ihre eigenen Fenster mithilfe der <xref:System.Windows.Window> -Klasse bereit. In diesem Thema <xref:System.Windows.Window> wird erläutert, bevor die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt werden.  
@@ -77,7 +77,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Implementieren eines Fensters  
- Die Implementierung eines typischen Fensters umfasst Darstellung und Verhalten *, wobei Darstellung* definiert, wie ein Fenster für Benutzer und *Verhalten* aussieht, wie ein Fenster funktioniert, wenn Benutzer damit interagieren. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]können Sie die Darstellung und das Verhalten eines Fensters mithilfe von Code oder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup implementieren.  
+ Die Implementierung eines typischen Fensters umfasst Darstellung und Verhalten, wobei Darstellung definiert , wie ein Fenster für Benutzer und *Verhalten* aussieht, wie ein Fenster funktioniert, wenn Benutzer damit interagieren. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]können Sie die Darstellung und das Verhalten eines Fensters mithilfe von Code oder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup implementieren.  
   
  Im Allgemeinen wird jedoch das Aussehen eines Fensters mithilfe [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] von Markup implementiert, und das Verhalten wird mithilfe von Code Behind implementiert, wie im folgenden Beispiel gezeigt.  
   
@@ -167,7 +167,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
 - Es wird minimiert, maximiert und wiederhergestellt, ohne das andere zu beeinflussen.  
   
- Bei einigen Fenstern ist eine Beziehung zu dem Fenster erforderlich, durch das es geöffnet wird. Beispielsweise kann eine [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] Anwendung Eigenschaften Fenster und Tool Fenster öffnen, deren typisches Verhalten darin besteht, das Fenster abzudecken, in dem Sie erstellt werden. Darüber hinaus sollten solche Fenster stets mit den Fenstern geschlossen, minimiert, maximiert und wiederhergestellt werden, durch die sie erstellt wurden. Eine solche Beziehung kann hergestellt werden, indem *ein Fenster in* einem anderen Fenster erstellt wird. Dies wird <xref:System.Windows.Window.Owner%2A> erreicht, indem die-Eigenschaft des *Fensters im Besitz* mit einem Verweis auf das *Besitzer Fenster*festgelegt wird. Dies wird im folgenden Beispiel gezeigt.  
+ Bei einigen Fenstern ist eine Beziehung zu dem Fenster erforderlich, durch das es geöffnet wird. Beispielsweise kann eine integrierte Entwicklungsumgebung (IDE) Eigenschaften Fenster und Tool Fenster öffnen, deren typisches Verhalten darin besteht, das Fenster abzudecken, in dem Sie erstellt werden. Darüber hinaus sollten solche Fenster stets mit den Fenstern geschlossen, minimiert, maximiert und wiederhergestellt werden, durch die sie erstellt wurden. Eine solche Beziehung kann hergestellt werden, indem ein Fenster in einem anderen Fenster erstellt wird. Dies wird <xref:System.Windows.Window.Owner%2A> erreicht, indem die-Eigenschaft des *Fensters im Besitz* mit einem Verweis auf das *Besitzer Fenster*festgelegt wird. Dies wird im folgenden Beispiel gezeigt.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -235,7 +235,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Zum Schließen eines Fensters können Sie dem Clientbereich weitere Mechanismen hinzufügen. Zu den gebräuchlichsten zählen:  
   
-- Ein  Beendigungs Element im Menü **Datei** (in der Regel für Hauptanwendungsfenster).  
+- Ein Beendigungs Element im Menü **Datei** (in der Regel für Hauptanwendungsfenster).  
   
 - Ein Schließ **Ende** Element im Menü **Datei** , in der Regel in einem sekundären Anwendungsfenster.  
   
@@ -327,11 +327,11 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
 - <xref:System.Windows.SizeToContent.Manual> Keine Auswirkung (Standard).  
   
-- <xref:System.Windows.SizeToContent.Width>. An Inhalts Breite anpassen, was die gleiche Wirkung hat wie das Festlegen <xref:System.Windows.FrameworkElement.MinWidth%2A> von <xref:System.Windows.FrameworkElement.MaxWidth%2A> sowohl als auch der Breite des Inhalts.  
+- <xref:System.Windows.SizeToContent.Width> An Inhalts Breite anpassen, was die gleiche Wirkung hat wie das Festlegen <xref:System.Windows.FrameworkElement.MinWidth%2A> von <xref:System.Windows.FrameworkElement.MaxWidth%2A> sowohl als auch der Breite des Inhalts.  
   
 - <xref:System.Windows.SizeToContent.Height> An die Höhe des Inhalts anpassen. Dies hat die gleiche Wirkung wie <xref:System.Windows.FrameworkElement.MinHeight%2A> das <xref:System.Windows.FrameworkElement.MaxHeight%2A> Festlegen von und auf die Höhe des Inhalts.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>. An Inhalts Breite und-Höhe anpassen, was die gleiche Wirkung hat wie das <xref:System.Windows.FrameworkElement.MinHeight%2A> festlegen <xref:System.Windows.FrameworkElement.MaxHeight%2A> von und auf die Höhe des <xref:System.Windows.FrameworkElement.MinWidth%2A> Inhalts und das Festlegen von <xref:System.Windows.FrameworkElement.MaxWidth%2A> und auf die Breite des Inhalts.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight> An Inhalts Breite und-Höhe anpassen, was die gleiche Wirkung hat wie das <xref:System.Windows.FrameworkElement.MinHeight%2A> festlegen <xref:System.Windows.FrameworkElement.MaxHeight%2A> von und auf die Höhe des <xref:System.Windows.FrameworkElement.MinWidth%2A> Inhalts und das Festlegen von <xref:System.Windows.FrameworkElement.MaxWidth%2A> und auf die Breite des Inhalts.  
   
  Im folgenden Beispiel wird ein Fenster dass die Größe automatisch an seinen Inhalt vertikal und horizontal an, wenn es zuerst angezeigt wird.  
   

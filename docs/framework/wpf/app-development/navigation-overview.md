@@ -24,18 +24,18 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 24b872fcf58db3ef0ef7d04165129804dc46d641
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: ee2f6050eeea6eec840156ed5dce9fb9b6172149
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364289"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796866"
 ---
 # <a name="navigation-overview"></a>Übersicht über die Navigation
 
 Windows Presentation Foundation (WPF) unterstützt die Navigation im Browser Stil, die in zwei Anwendungs Typen verwendet werden kann: Eigen [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]ständige Anwendungen und. Zum Verpacken von Inhalten für die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Navigation stellt <xref:System.Windows.Controls.Page> die-Klasse bereit. Sie können mithilfe <xref:System.Windows.Controls.Page> vonvon<xref:System.Windows.Documents.Hyperlink>einer zu einer anderen deklarativ und mithilfe von oder Programm gesteuert navigieren. <xref:System.Windows.Navigation.NavigationService> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwendet das Journal, um Seiten zu speichern, von denen weg navigiert wurde, und um wieder zu den Seiten zurück zu navigieren.
 
-<xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], <xref:System.Windows.Navigation.NavigationService>und das Journal bilden den Kern der Navigationsunterstützung, die von angeboten wird. In dieser Übersicht werden diese Features ausführlich erläutert, bevor die erweiterte Navigationsunterstützung behandelt wird, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] die die [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] Navigation zu losen Dateien, Dateien und Objekten einschließt.
+<xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink> [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], <xref:System.Windows.Navigation.NavigationService>und das Journal bilden den Kern der Navigationsunterstützung, die von angeboten wird. In dieser Übersicht werden diese Features ausführlich erläutert, bevor die erweiterte Navigationsunterstützung behandelt wird, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] die die Navigation zu losen Dateien, HTML-Dateien und Objekten umfasst.
 
 > [!NOTE]
 > In diesem Thema bezieht sich der Begriff "Browser" nur auf Browser, die- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen hosten können, [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] die derzeit und Firefox enthalten. Wenn bestimmte [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Funktionen nur von einem bestimmten Browser unterstützt werden, wird auf die Browserversion verwiesen.
@@ -79,7 +79,7 @@ In diesem Abschnitt werden die folgenden Aspekte der Navigation erklärt und ver
 
 ### <a name="implementing-a-page"></a>Implementieren einer Seite
 
-In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]können Sie zu verschiedenen Inhaltstypen navigieren, die .NET Framework-Objekte, benutzerdefinierte Objekte, Enumerationswerte, Benutzer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Steuerelemente, [!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)] Dateien und Dateien einschließen. Sie werden jedoch feststellen, dass die gängigste und bequeme Methode zum Verpacken von Inhalten die <xref:System.Windows.Controls.Page>Verwendung von ist. <xref:System.Windows.Controls.Page> Außerdem implementiert Navigations spezifische Features, um ihre Darstellung zu verbessern und die Entwicklung zu vereinfachen.
+In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]können Sie zu verschiedenen Inhaltstypen navigieren, die .NET Framework-Objekte, benutzerdefinierte Objekte, Enumerationswerte, Benutzer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Steuerelemente, Dateien und HTML-Dateien enthalten. Sie werden jedoch feststellen, dass die gängigste und bequeme Methode zum Verpacken von Inhalten die <xref:System.Windows.Controls.Page>Verwendung von ist. <xref:System.Windows.Controls.Page> Außerdem implementiert Navigations spezifische Features, um ihre Darstellung zu verbessern und die Entwicklung zu vereinfachen.
 
 Mithilfe <xref:System.Windows.Controls.Page>von können Sie eine Navigier Bare [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite mit Inhalt deklarativ implementieren, indem Sie ein Markup wie das folgende verwenden.
 
@@ -218,7 +218,7 @@ Im folgenden finden Sie ein Beispiel für `Hyperlink` einen, der für die Naviga
 > In diesem Abschnitt wird die Standard Implementierung der FragmentNavigation in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]beschrieben. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]mit können Sie auch Ihr eigenes fragmentnavigationschema implementieren, das teilweise die Behandlung des <xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType> -Ereignisses erfordert.
 
 > [!IMPORTANT]
-> Sie können [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zu Fragmenten in losen Seiten (nur [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Markup-Dateien mit `Page` als Stamm Element) navigieren, wenn die Seiten über durch [!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)]sucht werden können.
+> Sie können zu Fragmenten in losen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seiten (nur [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Markup-Dateien mit `Page` als Stamm Element) navigieren, wenn die Seiten über HTTP durchsucht werden können.
 >
 > Eine lose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite kann jedoch zu ihren eigenen Fragmenten navigieren.
 
@@ -310,11 +310,11 @@ Ein <xref:System.Windows.Controls.Page> -Objekt wird nicht heruntergeladen [!INC
 
 Wie Sie sehen, gibt es viele Möglichkeiten zum Einleiten der Navigation. Wenn die Navigation initiiert wird und während der Navigation ausgeführt wird, können Sie die Navigation mithilfe der folgenden Ereignisse, die von <xref:System.Windows.Navigation.NavigationService>implementiert werden, nachverfolgen und beeinflussen:
 
-- <xref:System.Windows.Navigation.NavigationService.Navigating>. Tritt ein, wenn eine neue Navigation angefordert wird. Kann zum Abbrechen der Navigation verwendet werden.
+- <xref:System.Windows.Navigation.NavigationService.Navigating> Tritt ein, wenn eine neue Navigation angefordert wird. Kann zum Abbrechen der Navigation verwendet werden.
 
 - <xref:System.Windows.Navigation.NavigationService.NavigationProgress> Tritt regelmäßig während eines Downloadvorgangs auf, um Informationen zum Navigationsstatus bereitzustellen.
 
-- <xref:System.Windows.Navigation.NavigationService.Navigated>. Tritt ein, nachdem die Seite gefunden und heruntergeladen wurde.
+- <xref:System.Windows.Navigation.NavigationService.Navigated> Tritt ein, nachdem die Seite gefunden und heruntergeladen wurde.
 
 - <xref:System.Windows.Navigation.NavigationService.NavigationStopped> Tritt auf, wenn die Navigation beendet wird ( <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>durch Aufrufen von) oder wenn eine neue Navigation angefordert wird, während eine aktuelle Navigation ausgeführt wird.
 
@@ -322,7 +322,7 @@ Wie Sie sehen, gibt es viele Möglichkeiten zum Einleiten der Navigation. Wenn d
 
 - <xref:System.Windows.Navigation.NavigationService.LoadCompleted> Tritt ein, wenn der Inhalt, zu dem navigiert wurde, geladen und analysiert wird und mit dem Rendering begonnen wurde.
 
-- <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>. Tritt ein, wenn die Navigation zu einem Inhaltsfragment beginnt, was in folgenden Fällen geschieht:
+- <xref:System.Windows.Navigation.NavigationService.FragmentNavigation> Tritt ein, wenn die Navigation zu einem Inhaltsfragment beginnt, was in folgenden Fällen geschieht:
 
   - Sofort, falls sich das gewünschte Fragment im aktuellen Inhalt befindet.
 
@@ -539,7 +539,7 @@ Im folgenden finden Sie einige Möglichkeiten, wie Cookies in [!INCLUDE[TLA2#tla
 
 - [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s aus derselben Domäne können Cookies erstellen und gemeinsam verwenden.
 
-- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]und [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] Seiten aus derselben Domäne können Cookies erstellen und freigeben.
+- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]und HTML-Seiten aus derselben Domäne können Cookies erstellen und freigeben.
 
 - Cookies werden gesendet, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] wenn und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lose Seiten Webanforderungen stellen.
 
@@ -610,7 +610,7 @@ Wie Sie sehen <xref:System.Windows.Navigation.NavigationWindow> , zeigt [!INCLUD
 
 ![Zurück-und vorwärts-Schaltflächen in einem NavigationWindow](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "Zurück-und vorwärts-Schaltflächen in einem Navigationsfenster")
 
-Wenn Ihre Seiten eine eigene Journal Navigationsunterstützung und eine Benutzeroberfläche bereitstellen, können Sie die  <xref:System.Windows.Navigation.NavigationWindow> Schaltflächen " **zurück** " und "Vorwärts" ausblenden <xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A> , indem `false`Sie den Wert der-Eigenschaft auf festlegen.
+Wenn Ihre Seiten eine eigene Journal Navigationsunterstützung und eine Benutzeroberfläche bereitstellen, können Sie die <xref:System.Windows.Navigation.NavigationWindow> Schaltflächen " **zurück** " und "Vorwärts" ausblenden <xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A> , indem `false`Sie den Wert der-Eigenschaft auf festlegen.
 
 Alternativ können Sie die Anpassungs Unterstützung in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwenden, um den [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] von <xref:System.Windows.Navigation.NavigationWindow> sich selbst zu ersetzen.
 
@@ -683,7 +683,7 @@ Wie bereits erwähnt, können in einer Anwendung mehrere Journale vorhanden sein
 
 In diesem Thema werden <xref:System.Windows.Controls.Page> die verschiedenen [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] Navigationsfunktionen von mithilfe von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Pack veranschaulicht. Eine <xref:System.Windows.Controls.Page> , die in eine Anwendung kompiliert wird, ist jedoch nicht die einzige Art von Inhalt, zu der navigiert werden kann, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] und Pack ist nicht die einzige Möglichkeit, Inhalte zu identifizieren.
 
-Wie in diesem Abschnitt gezeigt, können Sie auch zu " [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lose Dateien [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] ", "Dateien" und "Objekte" navigieren.
+Wie in diesem Abschnitt gezeigt, können Sie auch zu lose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dateien, HTML-Dateien und Objekten navigieren.
 
 <a name="Navigating_to_Loose_XAML_Files"></a>
 
@@ -724,19 +724,19 @@ Eine Einschränkung in Bezug auf Loose [!INCLUDE[TLA2#tla_xaml](../../../../incl
 
 ### <a name="navigating-to-html-files-by-using-frame"></a>Navigieren zu HTML-Dateien mit Frame
 
-Wie Sie vielleicht schon erwartet haben, können Sie [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]auch zu navigieren. Sie müssen lediglich eine [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bereitstellen, die das http-Schema verwendet. Im folgenden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Beispiel wird ein <xref:System.Windows.Controls.Frame> -Wert angezeigt, der zu einer [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] -Seite navigiert.
+Wie Sie vielleicht erwarten, können Sie auch zu HTML navigieren. Sie müssen lediglich eine [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] bereitstellen, die das http-Schema verwendet. Im folgenden [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Beispiel wird ein <xref:System.Windows.Controls.Frame> -Wert angezeigt, der zu einer HTML-Seite navigiert.
 
 [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]
 
-Die Navigation [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] zu erfordert spezielle Berechtigungen. Beispielsweise können Sie nicht von einer [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] navigieren, die in der Sicherheits Sandbox für die teilweise vertrauenswürdige Zone der Internet Zone ausgeführt wird. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../wpf-partial-trust-security.md).
+Zum Navigieren zu HTML sind spezielle Berechtigungen erforderlich. Beispielsweise können Sie nicht von einer [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] navigieren, die in der Sicherheits Sandbox für die teilweise vertrauenswürdige Zone der Internet Zone ausgeführt wird. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../wpf-partial-trust-security.md).
 
 <a name="Navigating_to_HTML_Files_Using_WebBrowser"></a>
 
 ### <a name="navigating-to-html-files-by-using-the-webbrowser-control"></a>Navigieren mit dem WebBrowser-Steuerelement zu HTML-Dateien
 
-Das <xref:System.Windows.Controls.WebBrowser> -Steuer [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] Element unterstützt die Interoperabilität von Dokument Hosting, Navigation und Skript/verwaltetem Code. Ausführliche Informationen <xref:System.Windows.Controls.WebBrowser> zum-Steuerelement finden <xref:System.Windows.Controls.WebBrowser>Sie unter.
+Das <xref:System.Windows.Controls.WebBrowser> -Steuerelement unterstützt die Interoperabilität von HTML-Dokumenten, Navigation und Skript/verwaltetem Code. Ausführliche Informationen <xref:System.Windows.Controls.WebBrowser> zum-Steuerelement finden <xref:System.Windows.Controls.WebBrowser>Sie unter.
 
-Wie <xref:System.Windows.Controls.Frame>beim Navigieren zu [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] mithilfe <xref:System.Windows.Controls.WebBrowser> von sind spezielle Berechtigungen erforderlich. Beispielsweise können Sie von einer teilweise vertrauenswürdigen Anwendung nur zu [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] navigieren, die sich auf der Ursprungs Site befindet. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../wpf-partial-trust-security.md).
+Wie <xref:System.Windows.Controls.Frame>bei der Navigation zu HTML <xref:System.Windows.Controls.WebBrowser> mithilfe von sind spezielle Berechtigungen erforderlich. Beispielsweise können Sie in einer teilweise vertrauenswürdigen Anwendung nur zu HTML navigieren, das sich auf der Ursprungs Site befindet. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../wpf-partial-trust-security.md).
 
 <a name="Navigating_to_Objects"></a>
 
