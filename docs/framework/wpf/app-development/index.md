@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 56dbdfd70dd335d32224d11c31a5e64abd3124af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655466"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817985"
 ---
 # <a name="application-development"></a>Anwendungsentwicklung
-<a name="introduction"></a> Windows Presentation Foundation (WPF) ist ein Präsentationsframework, das verwendet werden kann, um die folgenden Arten von Anwendungen zu entwickeln:  
+<a name="introduction"></a>Windows Presentation Foundation (WPF) ist ein Präsentations Framework, das zum Entwickeln der folgenden Anwendungs Typen verwendet werden kann:  
   
 - Eigenständige Anwendungen: Herkömmliche [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Anwendungen, die als ausführbare Assemblys erstellt, auf dem Clientcomputer installiert und von dort ausgeführt werden.  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]: Aus Navigationsseiten bestehende Anwendungen, die als ausführbare Assemblys erstellt und von Webbrowsern wie [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] oder Mozilla Firefox gehostet werden.  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](Anwendungen, die sich aus Navigations Seiten zusammensetzen, die als ausführbare Assemblys erstellt und von Webbrowsern wie Microsoft Internet Explorer oder Mozilla Firefox gehostet werden).  
   
 - Benutzerdefinierte Steuerelementbibliotheken: Nicht ausführbare Assemblys mit wiederverwendbaren Steuerelementen.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64655466"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Erweitert die Core-Unterstützung in Microsoft .NET Framework für eingebettete Ressourcen mit Unterstützung für drei Arten von nicht ausführbaren Datendateien: Ressourcen, Inhalt und Daten. Weitere Informationen finden Sie unter [WPF-Anwendungsressource, Inhalts- und Datendateien](wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]erweitert die kernunterstützung im Microsoft .NET Framework für eingebettete Ressourcen mit Unterstützung für drei Arten von nicht ausführbaren Datendateien: Ressource, Inhalt und Daten. Weitere Informationen finden Sie unter [WPF-Anwendungsressource, Inhalts- und Datendateien](wpf-application-resource-content-and-data-files.md).  
   
  Ein wesentlicher Faktor der Unterstützung von nicht ausführbaren WPF-Datendateien ist die Möglichkeit, diese mit einem eindeutigen [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zu identifizieren und zu laden. Weitere Informationen finden Sie unter [Paket-URI in WPF](pack-uris-in-wpf.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "64655466"
   
  <xref:System.Windows.Window> unterstützt die Erstellung einer besonderen Art von Fenster, nämlich von Dialogfeldern. Es können sowohl modale als auch nicht modale Dialogfelder (Dialogfelder ohne Modus) erstellt werden.  
   
- Zur Vereinfachung und die Vorteile der wiederverwendbarkeit und Benutzern eine konsistente Umgebung für Anwendungen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] macht drei von der Windows-Standarddialogfelder: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, und <xref:System.Windows.Controls.PrintDialog>.  
+ Der Benutzerfreundlichkeit und die Vorteile der Wiederverwendbarkeit und der konsistenten Benutzerfreundlichkeit bei [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] allen Anwendungen macht drei der allgemeinen Windows-Dialog <xref:Microsoft.Win32.OpenFileDialog>Felder <xref:Microsoft.Win32.SaveFileDialog>verfügbar: <xref:System.Windows.Controls.PrintDialog>, und.  
   
  Ein Meldungsfeld ist eine besondere Art von Dialogfeld, in dem Benutzern wichtige Informationen angezeigt und einfache Ja/Nein/OK/Abbrechen-Fragen gestellt werden. Sie verwenden die <xref:System.Windows.MessageBox>-Klasse zum Erstellen und Anzeigen von Meldungsfeldern.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "64655466"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hosting  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s können in [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] oder Firefox gehostet werden. Bei jedem Hostmodell sind spezifische Punkte und Einschränkungen zu beachten, die unter [Hosten](hosting-wpf-applications.md) erläutert werden.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]kann in Microsoft Internet Explorer oder Firefox gehostet werden. Bei jedem Hostmodell sind spezifische Punkte und Einschränkungen zu beachten, die unter [Hosten](hosting-wpf-applications.md) erläutert werden.  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Erstellen und Bereitstellen  

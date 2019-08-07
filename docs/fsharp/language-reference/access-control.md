@@ -2,12 +2,12 @@
 title: Zugriffssteuerung
 description: Informationen Sie zum Steuern des Zugriffs auf Programmierelemente wie Typen, Methoden und Funktionen, die in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 38f8f3fd4114c0428fbe8baca71594cd07740b2c
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629960"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817852"
 ---
 # <a name="access-control"></a>Zugriffssteuerung
 
@@ -40,7 +40,7 @@ Die Zugriffs Steuerung unterliegt den folgenden Regeln:
 
 - Barrierefreiheit für einzelne Fälle in einer Unterscheidungs-Union wird durch den Zugriff auf die Unterscheidungs-Union selbst festgelegt. Das heißt, dass ein bestimmter Union-Fall nicht weniger zugreifbar ist als die Union selbst.
 
-- Der Zugriff auf einzelne Felder eines Daten Satz Typs kann nicht durch die Barrierefreiheit des Datensatzes bestimmt werden. Das heißt, eine bestimmte Daten Satz Bezeichnung ist nicht weniger zugreifbar als der Datensatz selbst.
+- Der Zugriff auf einzelne Felder eines Daten Satz Typs wird durch die Barrierefreiheit des Datensatzes bestimmt. Das heißt, eine bestimmte Daten Satz Bezeichnung ist nicht weniger zugreifbar als der Datensatz selbst.
 
 ## <a name="example"></a>Beispiel
 

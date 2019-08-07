@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: d5bcd5b06f6d922b29c2a494f1f63da1217e2b2d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663344"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817870"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF-Sicherheitsstrategie – Sicherheitsentwicklung
 Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, dass sicherer Code entwickelt wird. Ein Schlüsselelement der Trustworthy Computing-Initiative ist der [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] ist ein Entwicklungsverfahren, das in Verbindung mit standardmäßigen Entwicklungsprozessen verwendet wird, um die Erstellung von sicherem Code zu erleichtern. Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] besteht aus zehn Phasen, die bewährte Methoden mit Formalisierung, Messbarkeit und zusätzlichen Strukturen kombinieren, darunter:  
@@ -67,32 +67,32 @@ Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, das
 ### <a name="source-analysis-and-editing-tools"></a>Quellcodeanalyse und Bearbeitungstools  
  Über die manuellen Elemente der Codesicherheitsprüfung im [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] hinaus verwendet das [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Team eine Reihe von Tools für die Quellcodeanalyse und die zugeordneten Bearbeitungsschritte, um Sicherheitsschwachstellen zu vermindern. Es wird eine breite Palette von Tools für den Quellcode verwendet, darunter die folgenden:  
   
-- **FXCop**: Findet häufige Sicherheitsprobleme in verwaltetem Code von Vererbungsregeln bis hin zu Codeverwendung der zugriffssicherheit zum sicheren Zusammenwirken mit nicht verwaltetem Code. Weitere Informationen finden Sie unter [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
+- **FxCop**: Findet häufige Sicherheitsprobleme in verwaltetem Code, die von Vererbungs Regeln bis zur Verwendung von Code Zugriffssicherheit bis hin zur sicher Interaktion mit nicht verwaltetem Code reichen. Weitere Informationen finden Sie unter [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
-- **Prefix/Prefast**: Findet Schwachstellen des Sicherheit und häufige Sicherheitsprobleme in nicht verwaltetem Code, z. B. Pufferüberläufe, Probleme bei Formatzeichenfolgen von Format und Überprüfung von Fehlern an.  
+- **Präfix/schnell**: Findet Sicherheitsrisiken und häufige Sicherheitsprobleme in nicht verwaltetem Code, wie z. b. Pufferüberläufe, Formatierungszeichen folgen Probleme und Fehlerüberprüfung.  
   
-- **Gesperrte APIs**: Durchsucht den Quellcode um die versehentliche Verwendung von Funktionen zu identifizieren, die für Sicherheitsprobleme, z. B. bekannt sind `strcpy`. Nachdem identifiziert, werden diese Funktionen durch alternativen ersetzt, die sicherer sind.  
+- **Verbotene APIs**: Durchsucht den Quellcode, um die versehentliche Verwendung von Funktionen zu ermitteln, die für Sicherheitsprobleme bekannt `strcpy`sind, wie z. b. Nach der Identifizierung werden diese Funktionen durch Alternativen ersetzt, die sicherer sind.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Testverfahren  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet eine Reihe von Techniken zum Testen der Sicherheit, darunter:  
   
-- **Whiteboxtests**: Tester Anzeigen von Quellcode und entwickeln dann exploittests.
+- **Whitebox-Tests**: Tester zeigen Quellcode an und erstellen dann exploittests.
   
-- **Blackboxtests**: Tester versuchen, die zum Suchen Sicherheitsexploits, indem Sie APIs und Funktionen untersuchen und dann versuchen, das Produkt anzugreifen.  
+- **Blackbox-Tests**: Tester versuchen, Sicherheits Exploits zu finden, indem Sie die API und Features untersuchen und dann versuchen, das Produkt anzugreifen.  
   
-- **Zurückverfolgen von Sicherheitsproblemen anderer Produkte**: Sofern Sie relevant sind, werden Sicherheitsprobleme von verwandten Produkten getestet. Beispielsweise wurden entsprechende Varianten von nahezu 60 Sicherheitsproblemen bei [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)] erkannt und auf ihre Gültigkeit für [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] hin überprüft.  
+- **Regressing von Sicherheitsproblemen von anderen Produkten**: Wenn relevant, werden Sicherheitsprobleme von verwandten Produkten getestet. Beispielsweise wurden entsprechende Varianten von ungefähr 60 Sicherheitsproblemen für Internet Explorer identifiziert und für ihre Anwendbarkeit in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]getestet.  
   
-- **Toolbasierte Penetrationstests durch Dateitests testen**: Datei-fuzzing ist, dass die Ausnutzung eines dateilesemodulen durch eine Vielzahl von Eingaben zur Eingabe gehört. Ein Beispiel, wo diese Technik in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet wird, besteht in der Prüfung von Code zur Bildentschlüsselung auf Fehler.  
+- **Tool basierte Penetrationstests durch Datei fuzzingvorgang**: Datei fuzzingvorgang ist die Ausnutzung des Eingabe Bereichs eines Datei Readers durch eine Vielzahl von Eingaben. Ein Beispiel, wo diese Technik in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet wird, besteht in der Prüfung von Code zur Bildentschlüsselung auf Fehler.  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Verwaltung von sicherheitsrelevantem Code  
- Für [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] erstellt eine Sicherheitssandbox mithilfe von .NET Framework-Unterstützung für das kennzeichnen und Nachverfolgen von sicherheitskritischem Code, der Berechtigungen heraufstuft (siehe **sicherheitsrelevante Methode** in [WPF -Sicherheitsstrategie – Plattformsicherheit](wpf-security-strategy-platform-security.md)). Angesichts der hohen Qualitätsanforderungen bei sicherheitskritischem Code wird derartiger Code durch eine zusätzliche Ebene der Quellcodeverwaltung und Sicherheitsüberwachung geschützt. Annähernd 5 % bis 10 % von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] bestehen aus sicherheitskritischem Code, der von einem dedizierten Team überprüft wird. Der Quellcode und der Eincheckvorgang werden verwaltet, indem sicherheitskritischer Code nachverfolgt und jede kritischen Entität (d. h. eine Methode, die kritischen Code enthält) ihrem abgezeichneten Zustand zugeordnet wird. Der abgezeichnete Zustand schließt die Namen eines oder mehrerer Prüfer ein. Bei jedem täglichen Build von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] wird der kritische Code mit dem in vorhergehenden Builds verglichen, um nicht genehmigte Änderungen aufzuspüren. Wenn ein Programmierer kritischen Code ohne Genehmigung des Prüferteams ändert, wird der betreffende Code erkannt und sofort ersetzt. Dieses Vorgehen ermöglicht die Anwendung und Aufrechterhaltung eines sehr hohen Maßes an Genauigkeit bei [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Sandboxcode.  
+ Für [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]erstellt eine Sicherheits Sandbox mithilfe .NET Framework-Unterstützung für das Markieren und Nachverfolgen von Sicherheits kritischem Code, der Berechtigungen erhöht (siehe **sicherheitskritische Methodik** in WPF-Sicherheitsstrategie-Plattform). [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] [ Sicherheit](wpf-security-strategy-platform-security.md)). Angesichts der hohen Qualitätsanforderungen bei sicherheitskritischem Code wird derartiger Code durch eine zusätzliche Ebene der Quellcodeverwaltung und Sicherheitsüberwachung geschützt. Annähernd 5 % bis 10 % von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] bestehen aus sicherheitskritischem Code, der von einem dedizierten Team überprüft wird. Der Quellcode und der Eincheckvorgang werden verwaltet, indem sicherheitskritischer Code nachverfolgt und jede kritischen Entität (d. h. eine Methode, die kritischen Code enthält) ihrem abgezeichneten Zustand zugeordnet wird. Der abgezeichnete Zustand schließt die Namen eines oder mehrerer Prüfer ein. Bei jedem täglichen Build von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] wird der kritische Code mit dem in vorhergehenden Builds verglichen, um nicht genehmigte Änderungen aufzuspüren. Wenn ein Programmierer kritischen Code ohne Genehmigung des Prüferteams ändert, wird der betreffende Code erkannt und sofort ersetzt. Dieses Vorgehen ermöglicht die Anwendung und Aufrechterhaltung eines sehr hohen Maßes an Genauigkeit bei [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Sandboxcode.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Sicherheit](security-wpf.md)
 - [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](wpf-partial-trust-security.md)
 - [WPF-Sicherheitsstrategie – Plattformsicherheit](wpf-security-strategy-platform-security.md)
-- [Trustworthy Computing](https://www.microsoft.com/mscorp/twc/default.mspx)
+- [Vertrauenswürdiges Computing](https://www.microsoft.com/mscorp/twc/default.mspx)
 - [Sicherheit in .NET](../../standard/security/index.md)

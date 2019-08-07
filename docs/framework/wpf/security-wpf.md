@@ -13,17 +13,17 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6bd597cd2719fb96b8633f724da46a76e416b454
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629812"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817896"
 ---
 # <a name="security-wpf"></a>Sicherheit (WPF)
 <a name="introduction"></a>Beim Entwickeln von eigenständigen und im Browser gehosteten Anwendungen für Windows Presentation Foundation (WPF) müssen Sie das Sicherheitsmodell in Erwägung gezogen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]eigenständige Anwendungen werden mit uneingeschränkten Berechtigungen (CAS**FullTrust** -Berechtigungs Satz) ausgeführt, unabhängig davon, ob Sie mit Windows Installer (MSI), xcopy oder ClickOnce bereitgestellt werden. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Allerdings kann eine voll vertrauenswürdige Host Anwendung eine teilweise Vertrauens <xref:System.AppDomain> würdige Anwendung mithilfe des .NET Framework Add-in-Modells erstellen. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-ins](./app-development/wpf-add-ins-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]im Browser gehostete Anwendungen werden von [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] oder Firefox gehostet. Weitere Informationen finden [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] Sie unter [Übersicht über WPF-XAML-Browser Anwendungen](./app-development/wpf-xaml-browser-applications-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]im Browser gehostete Anwendungen werden von Windows Internet Explorer oder Firefox gehostet. Weitere Informationen finden [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] Sie unter [Übersicht über WPF-XAML-Browser Anwendungen](./app-development/wpf-xaml-browser-applications-overview.md).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]im Browser gehostete Anwendungen werden standardmäßig in einer teilweise vertrauenswürdigen Sicherheits Sandbox ausgeführt, die auf den Standard Berechtigungs Satz der CAS-**Internet** Zone beschränkt ist. Dadurch werden vom [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Browser gehostete Anwendungen praktisch auf die gleiche Weise isoliert wie herkömmliche Webanwendungen. Eine XBAP kann, abhängig von der Sicherheitszone der Bereitstellungs-URL und der Sicherheitskonfiguration des Clients, Berechtigungen bis zur vollen Vertrauenswürdigkeit erhöhen. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](wpf-partial-trust-security.md).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "68629812"
 ## <a name="web-browsing-software-security-settings"></a>Sicherheitseinstellungen für webbrowsende Software  
  Die Sicherheitseinstellungen auf dem Computer bestimmen, welcher Zugriff jeder webbrowsenden Software gewährt wird. Die Webbrowsersoftware umfasst alle Anwendungen oder Komponenten, die die [WinInet](https://go.microsoft.com/fwlink/?LinkId=179379) -oder [URLMON](https://go.microsoft.com/fwlink/?LinkId=179383) -APIs verwenden, einschließlich Internet Explorer und PresentationHost. exe.  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]stellt einen Mechanismus bereit, mit dem Sie die Funktionalität konfigurieren können, die von oder von [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]ausgeführt werden darf, einschließlich der folgenden:  
+ Internet Explorer bietet einen Mechanismus, mit dem Sie die Funktionalität konfigurieren können, die von oder aus Internet Explorer ausgeführt werden darf, einschließlich der folgenden:  
   
 - .NET Framework abhängige Komponenten  
   
@@ -118,13 +118,13 @@ ms.locfileid: "68629812"
      ![Screenshot, der das Dialogfeld "Sicherheitseinstellungen" anzeigt.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
->  Sie können auch aus Internet Explorer zum Dialogfeld „Internetoptionen“ gelangen. Klicken Sie auf **Extras und dann** auf **Internet Optionen**.  
+>  Sie können auch aus Internet Explorer zum Dialogfeld „Internetoptionen“ gelangen. Klicken Sie auf Extras und dann auf **Internet Optionen**.  
   
- [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]Ab sind die folgenden Sicherheitseinstellungen speziell für .NET Framework enthalten:  
+ Ab Windows Internet Explorer 7 sind die folgenden Sicherheitseinstellungen speziell für .NET Framework enthalten:  
   
-- **Loose XAML**. Steuert, [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] ob zu Dateien navigieren und [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] diese verlieren kann. (Optionen „Aktivieren“, „Deaktivieren“ und „Bestätigen“.)  
+- **Loose XAML**. Steuert, ob Internet Explorer zu Dateien navigieren und [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] diese verlieren kann. (Optionen „Aktivieren“, „Deaktivieren“ und „Bestätigen“.)  
   
-- **XAML-Browseranwendungen**. Steuert, [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] ob zu navigieren und ausgeführt [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]werden kann. (Optionen „Aktivieren“, „Deaktivieren“ und „Bestätigen“.)  
+- **XAML-Browseranwendungen**. Steuert, ob Internet Explorer navigiert und ausgeführt [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]werden kann. (Optionen „Aktivieren“, „Deaktivieren“ und „Bestätigen“.)  
   
  Standardmäßig sind diese Einstellungen für die Zonen " **Internet**", " **Lokales Intranet**" und " **Vertrauenswürdige Sites** " aktiviert und für die Zone der **eingeschränkten Sites** deaktiviert.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "68629812"
 |---------------------|  
 |FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT|  
   
- Wenn Sie eine teilweise Vertrauens [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] Würdigkeit ausführen, die ein WPF <xref:System.Windows.Controls.WebBrowser> -Steuerelement in [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]einschließt, hostet WPF das WebBrowser-ActiveX-Steuerelement im Adressraum des Internet Explorer-Prozesses. Da das WebBrowser-ActiveX-Steuerelement im [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] Prozess gehostet wird, sind alle Featuresteuerelemente für Internet Explorer auch für das WebBrowser-ActiveX-Steuerelement aktiviert.  
+ Wenn Sie eine teilweise Vertrauens [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] würdige Anwendung ausführen, die ein WPF <xref:System.Windows.Controls.WebBrowser> -Steuerelement in Windows Internet Explorer enthält, hostet WPF das WebBrowser-ActiveX-Steuerelement im Adressraum des Internet Explorer-Prozesses. Da das WebBrowser-ActiveX-Steuerelement im Internet Explorer-Prozess gehostet wird, sind alle Featuresteuerelemente für Internet Explorer auch für das WebBrowser-ActiveX-Steuerelement aktiviert.  
   
  XBAPs, die in Internet Explorer ausgeführt werden, haben im Vergleich zu normalen eigenständigen Anwendungen ebenfalls ein höheres Maß an Sicherheit. Diese zusätzliche Sicherheit besteht darin, dass Internet Explorer und somit das WebBrowser-ActiveX-Steuerelement in [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] und [!INCLUDE[win7](../../../includes/win7-md.md)]standardmäßig im geschützten Modus ausgeführt wird. Weitere Informationen zum geschützten Modus finden Sie unter [Understanding and working in Protected Mode Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   

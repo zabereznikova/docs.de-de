@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796784"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817955"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren über Windows Windows Presentation Foundation mit eigenständigen WPF-Anwendungen (WPF). Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ständige Anwendungen stellen ihre eigenen Fenster mithilfe der <xref:System.Windows.Window> -Klasse bereit. In diesem Thema <xref:System.Windows.Window> wird erläutert, bevor die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt werden.  
   
 > [!NOTE]
->  Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] einschließlich und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] loser Seiten, stellen keine eigenen Fenster bereit. Stattdessen werden Sie in Windows gehostet, das von [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]bereitgestellt wird. Siehe [Übersicht über WPF-XAML-Browser Anwendungen](wpf-xaml-browser-applications-overview.md).  
+>  Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] einschließlich und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] loser Seiten, stellen keine eigenen Fenster bereit. Stattdessen werden Sie in Windows von Windows Internet Explorer bereitgestellt. Siehe [Übersicht über WPF-XAML-Browser Anwendungen](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Die Fensterklasse  
@@ -325,7 +325,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Wenn Sie möchten, dass die Breite und Höhe des Fensters auf die Größe des Fenster Inhalts zugeschnitten ist, können Sie die <xref:System.Windows.Window.SizeToContent%2A> -Eigenschaft mit den folgenden Werten verwenden:  
   
-- <xref:System.Windows.SizeToContent.Manual> Keine Auswirkung (Standard).  
+- <xref:System.Windows.SizeToContent.Manual>. Keine Auswirkung (Standard).  
   
 - <xref:System.Windows.SizeToContent.Width> An Inhalts Breite anpassen, was die gleiche Wirkung hat wie das Festlegen <xref:System.Windows.FrameworkElement.MinWidth%2A> von <xref:System.Windows.FrameworkElement.MaxWidth%2A> sowohl als auch der Breite des Inhalts.  
   

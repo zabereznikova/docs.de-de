@@ -8,36 +8,36 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: 00a41fcf85583ec0d081a2fa099f3a77cfcd2900
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85d3562246170901d83d6314caec5747d52fb9a0
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625359"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817962"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Vorgehensweise: Im Navigationsverlauf vor oder zurück navigieren
-In diesem Beispiel wird veranschaulicht, wie vorwärts oder rückwärts zu Einträge im Navigationsverlauf navigiert.  
+In diesem Beispiel wird veranschaulicht, wie vorwärts oder zurück zu Einträgen im Navigationsverlauf navigiert wird.  
   
 ## <a name="example"></a>Beispiel  
- Code, der von Inhalt in die folgenden Hosts ausgeführt wird, kann vorwärts oder rückwärts durch den Navigationsverlauf einen Eintrag zu einem Zeitpunkt navigieren.  
+ Code, der aus dem Inhalt der folgenden Hosts ausgeführt wird, kann vorwärts oder rückwärts durch den Navigationsverlauf navigieren, jeweils ein Eintrag.  
   
-- <xref:System.Windows.Navigation.NavigationWindow> Mithilfe von <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow>genutzt<xref:System.Windows.Navigation.NavigationService>  
   
-- <xref:System.Windows.Controls.Frame> Mithilfe von <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame>genutzt<xref:System.Windows.Navigation.NavigationService>  
   
-- [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- Internet Explorer  
   
- Bevor Sie einen Eintrag navigieren können, Sie müssen zuerst überprüfen, dass es Einträge im Navigationsverlauf durch Überprüfen der **CanGoForward** Eigenschaft. Um einen Eintrag zu navigieren, rufen Sie die **GoForward** Methode. Dies wird im folgenden Beispiel veranschaulicht:  
+ Bevor Sie einen Eintrag vorwärts navigieren können, müssen Sie zunächst überprüfen, ob im vorwärts Navigationsverlauf Einträge vorhanden sind, indem Sie die **CanGoForward** -Eigenschaft überprüfen. Um einen Eintrag vorwärts zu navigieren, rufen Sie die **GoForward** -Methode auf. Dies wird im folgenden Beispiel veranschaulicht:  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigateforwardcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigateforwardcode)]  
   
- Bevor Sie navigieren können, einen Eintrag zurück, Sie müssen zuerst überprüfen Sie, ob Einträge im Navigationsverlauf zurück durch Überprüfen der **CanGoBack** Eigenschaft. Um Back ein Eintrag zu navigieren, rufen Sie die **GoBack** Methode. Dies wird im folgenden Beispiel veranschaulicht:  
+ Bevor Sie zu einem Eintrag zurück navigieren können, müssen Sie zunächst überprüfen, ob im Navigationsverlauf zurück Einträge vorhanden sind, indem Sie die Eigenschaft **CanGoBack** überprüfen. Um zurück zu einem Eintrag zu navigieren, rufen Sie die **GoBack** -Methode auf. Dies wird im folgenden Beispiel veranschaulicht:  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
- **CanGoForward**, **GoForward**, **CanGoBack**, und **GoBack** werden implementiert, indem <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, und <xref:System.Windows.Navigation.NavigationService>.  
+ **"CanGoForward**", " **GoForward**", " **CanGoBack**" und <xref:System.Windows.Navigation.NavigationWindow>" <xref:System.Windows.Controls.Frame> **GoBack** " werden von, und <xref:System.Windows.Navigation.NavigationService>implementiert.  
   
 > [!NOTE]
->  Aufrufen **GoForward**, und es sind keine Einträge im Navigationsverlauf vor, oder rufen Sie **GoBack**, und es sind keine Einträge im Navigationsverlauf zurück, eine <xref:System.InvalidOperationException> ausgelöst.
+>  Wenn Sie " **GoForward**" und im Navigationsverlauf "Vorwärts" keine Einträge vorhanden sind oder wenn Sie " **GoBack**" aufgerufen haben und keine Einträge im Navigationsverlauf zurück vorhanden <xref:System.InvalidOperationException> sind, wird eine ausgelöst.

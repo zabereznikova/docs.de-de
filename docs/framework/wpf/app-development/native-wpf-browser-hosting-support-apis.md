@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864460"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817934"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Systemeigene WPF-APIs mit Unterstützung für das Hosten in Browsern
-Hosten von [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Anwendungen im Webbrowser wird vereinfacht, indem ein Active Document-Server (auch bekannt als DocObject) aus der WPF-Host registriert. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] können Sie direkt zu aktivieren und mit einem aktiven Dokument zu integrieren. Für das Hosten von XBAPs und loose XAML-Dokumente in Mozilla-Browser, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] bietet ein NPAPI-Plug-in, bietet eine ähnliche Hostingumgebung, die [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Active Document-Server als [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] ist. Allerdings wird die einfachste praktische Möglichkeit zum Hosten von XBAPs und XAML-Dokumente in anderen Browsern und eigenständige Anwendungen über das Internet Explorer-Webbrowser-Steuerelement ist. Das Webbrowser-Steuerelement stellt die komplexen Active Document-Server-hostumgebung bereit, aber sie können einen eigenen Host anpassen und erweitern diese Umgebung und kommunizieren direkt mit dem aktuellen Active Document-Objekt.  
+Das Hosten von [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Anwendungen in Webbrowsern wird durch einen aktiven Dokument Server (auch als DocObject bezeichnet) ermöglicht, der beim WPF-Host registriert ist. Internet Explorer kann direkt aktiviert und in ein aktives Dokument integriert werden. Zum Hosting von XBAPs und losen XAML-Dokumenten in Mozilla- [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Browsern bietet ein NPAPI-Plug-in, das eine ähnliche Hostingumgebung wie in Internet Explorer für den [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aktiven Dokument Server bereitstellt. Die einfachste Möglichkeit zum Hosten von XBAPs-und XAML-Dokumenten in anderen Browsern und eigenständigen Anwendungen ist jedoch das Internet Explorer-Webbrowser-Steuerelement. Das WebBrowser-Steuerelement stellt die komplexe aktive Dokument Server-Hostingumgebung bereit, ermöglicht aber seinen eigenen Host, diese Umgebung anzupassen und zu erweitern und direkt mit dem aktuellen aktiven Dokument Objekt zu kommunizieren.  
   
- Die [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Active Document-Server implementiert mehrere allgemeine Hostingschnittstellen, einschließlich [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Wenn im Webbrowser-Steuerelement gehostet wird, können diese Schnittstellen werden Abfragen aus dem zurückgegebenes Objekt der [IWebBrowser2::Document](https://go.microsoft.com/fwlink/?LinkId=162048) Eigenschaft.  
+ Der [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aktive Dokument Server implementiert verschiedene gängige Hostingschnittstellen, einschließlich [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [ipersistmoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Wenn Sie im Webbrowser-Steuerelement gehostet werden, können diese Schnittstellen Abfragen aus dem-Objekt sein, das von der [IWebBrowser2::D ocumschlag](https://go.microsoft.com/fwlink/?LinkId=162048) -Eigenschaft zurückgegeben wird.  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- Implementierung des aktiven Dokuments WPF-Servers von [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) unterstützt zahlreiche Befehle von navigationsbezogenen und browserspezifischen der standard OLE-Befehlsgruppe (mit einer null Befehlsgruppen-GUID). Darüber hinaus erkennt sie eine benutzerdefinierte Befehlsgruppe CGID_PresentationHost. Derzeit ist nur ein Befehl, die in dieser Gruppe definiert.  
+ Die [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) -Implementierung des aktiven WPF-Dokument Servers unterstützt zahlreiche Navigations bezogene und browserspezifische Befehle der Standard-OLE-Befehlsgruppe (mit einer Befehls Gruppen-GUID mit null). Außerdem wird eine benutzerdefinierte Befehlsgruppe mit dem Namen CGID_PresentationHost erkannt. Zurzeit ist nur ein Befehl innerhalb dieser Gruppe definiert.  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO weist den PresentationHost, um den Fokus auf das erste oder letzte fokussierbare Element in seinem Inhalt, abhängig vom Status der UMSCHALTTASTE zu ändern.  
+ PHCMDID_TABINTO weist PresentationHost an, den Fokus abhängig vom Zustand der UMSCHALTTASTE auf das erste oder letzte Fokussier Bare Element in seinem Inhalt zu wechseln.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
