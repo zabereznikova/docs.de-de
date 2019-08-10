@@ -1,24 +1,24 @@
 ---
-title: Expressions1
+title: Ausdrücke-WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 047f0f5d0214926fde2fe21efd9a24c4b645ed8e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 092272db2f7979cf12917dfe35e116295db79bf3
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380167"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868896"
 ---
-# <a name="expressions"></a><span data-ttu-id="51acc-102">Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="51acc-102">Expressions</span></span>
-<span data-ttu-id="51acc-103">Ein Windows Workflow Foundation (WF)-Ausdruck ist Aktivität, die ein Ergebnis zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="51acc-103">A Windows Workflow Foundation (WF) expression is any activity that returns a result.</span></span> <span data-ttu-id="51acc-104">Alle Ausdrucksaktivitäten werden indirekt von <xref:System.Activities.Activity%601> abgeleitet, die eine <xref:System.Activities.OutArgument>-Eigenschaft mit dem Namen <xref:System.Activities.Activity%601.Result%2A> als Rückgabewert der Aktivität enthält.</span><span class="sxs-lookup"><span data-stu-id="51acc-104">All expression activities derive indirectly from <xref:System.Activities.Activity%601>, which contains an <xref:System.Activities.OutArgument> property named <xref:System.Activities.Activity%601.Result%2A> as the activity’s return value.</span></span> <span data-ttu-id="51acc-105">Im Lieferumfang von [!INCLUDE[wf1](../../../includes/wf1-md.md)] ist eine Vielzahl von Ausdrucksaktivitäten enthalten, darunter einfache Ausdrucksaktivitäten wie <xref:System.Activities.Expressions.VariableValue%601> und <xref:System.Activities.Expressions.VariableReference%601>, die den Zugriff auf einzelne Workflowvariablen über Operatoraktivitäten ermöglichen, sowie komplexe Aktivitäten wie <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> und <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>, die zum Erzielen des gewünschten Ergebnisses den Zugriff auf die volle Bandbreite der Visual Basic-Programmiersprache ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="51acc-105">[!INCLUDE[wf1](../../../includes/wf1-md.md)] ships with a wide range of expression activities from simple ones like <xref:System.Activities.Expressions.VariableValue%601> and <xref:System.Activities.Expressions.VariableReference%601>, which provide access to single workflow variable through operator activities, to complex activities such as <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> that offer access to the full breadth of Visual Basic language to produce the result.</span></span> <span data-ttu-id="51acc-106">Zusätzliche Ausdrucksaktivitäten können durch Ableitungen von <xref:System.Activities.CodeActivity%601> oder <xref:System.Activities.NativeActivity%601> erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="51acc-106">Additional expression activities can be created by deriving from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.</span></span>  
+# <a name="expressions"></a><span data-ttu-id="689d3-102">Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="689d3-102">Expressions</span></span>
+<span data-ttu-id="689d3-103">Ein Windows Workflow Foundation (WF)-Ausdruck ist eine beliebige Aktivität, die ein Ergebnis zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="689d3-103">A Windows Workflow Foundation (WF) expression is any activity that returns a result.</span></span> <span data-ttu-id="689d3-104">Alle Ausdrucksaktivitäten werden indirekt von <xref:System.Activities.Activity%601> abgeleitet, die eine <xref:System.Activities.OutArgument>-Eigenschaft mit dem Namen <xref:System.Activities.Activity%601.Result%2A> als Rückgabewert der Aktivität enthält.</span><span class="sxs-lookup"><span data-stu-id="689d3-104">All expression activities derive indirectly from <xref:System.Activities.Activity%601>, which contains an <xref:System.Activities.OutArgument> property named <xref:System.Activities.Activity%601.Result%2A> as the activity’s return value.</span></span> <span data-ttu-id="689d3-105">Im Lieferumfang von [!INCLUDE[wf1](../../../includes/wf1-md.md)] ist eine Vielzahl von Ausdrucksaktivitäten enthalten, darunter einfache Ausdrucksaktivitäten wie <xref:System.Activities.Expressions.VariableValue%601> und <xref:System.Activities.Expressions.VariableReference%601>, die den Zugriff auf einzelne Workflowvariablen über Operatoraktivitäten ermöglichen, sowie komplexe Aktivitäten wie <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> und <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>, die zum Erzielen des gewünschten Ergebnisses den Zugriff auf die volle Bandbreite der Visual Basic-Programmiersprache ermöglichen.</span><span class="sxs-lookup"><span data-stu-id="689d3-105">[!INCLUDE[wf1](../../../includes/wf1-md.md)] ships with a wide range of expression activities from simple ones like <xref:System.Activities.Expressions.VariableValue%601> and <xref:System.Activities.Expressions.VariableReference%601>, which provide access to single workflow variable through operator activities, to complex activities such as <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> that offer access to the full breadth of Visual Basic language to produce the result.</span></span> <span data-ttu-id="689d3-106">Zusätzliche Ausdrucksaktivitäten können durch Ableitungen von <xref:System.Activities.CodeActivity%601> oder <xref:System.Activities.NativeActivity%601> erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="689d3-106">Additional expression activities can be created by deriving from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.</span></span>  
   
-## <a name="using-expressions"></a><span data-ttu-id="51acc-107">Verwenden von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="51acc-107">Using Expressions</span></span>  
- <span data-ttu-id="51acc-108">Workflow-Designer verwendet <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> und <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> für alle Ausdrücke in Visual Basic-Projekten sowie <xref:Microsoft.CSharp.Activities.CSharpValue%601> und <xref:Microsoft.CSharp.Activities.CSharpReference%601> für Ausdrücke in den C#-Workflowprojekten.</span><span class="sxs-lookup"><span data-stu-id="51acc-108">Workflow designer uses <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> for all expressions in Visual Basic projects, and <xref:Microsoft.CSharp.Activities.CSharpValue%601> and <xref:Microsoft.CSharp.Activities.CSharpReference%601> for expressions in C# workflow projects.</span></span>  
+## <a name="using-expressions"></a><span data-ttu-id="689d3-107">Verwenden von Ausdrücken</span><span class="sxs-lookup"><span data-stu-id="689d3-107">Using Expressions</span></span>  
+ <span data-ttu-id="689d3-108">Workflow-Designer verwendet <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> und <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> für alle Ausdrücke in Visual Basic-Projekten sowie <xref:Microsoft.CSharp.Activities.CSharpValue%601> und <xref:Microsoft.CSharp.Activities.CSharpReference%601> für Ausdrücke in den C#-Workflowprojekten.</span><span class="sxs-lookup"><span data-stu-id="689d3-108">Workflow designer uses <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> for all expressions in Visual Basic projects, and <xref:Microsoft.CSharp.Activities.CSharpValue%601> and <xref:Microsoft.CSharp.Activities.CSharpReference%601> for expressions in C# workflow projects.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="51acc-109">Unterstützung für C# Ausdrücke in Workflowprojekten wurde in .NET Framework 4.5 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="51acc-109">Support for C# expressions in workflow projects was introduced in .NET Framework 4.5.</span></span> <span data-ttu-id="51acc-110">Weitere Informationen finden Sie unter [ C# Ausdrücke](csharp-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="51acc-110">For more information, see [C# Expressions](csharp-expressions.md).</span></span>  
+>  <span data-ttu-id="689d3-109">Die unter C# Stützung für Ausdrücke in Workflow Projekten wurde in .NET Framework 4,5 eingeführt.</span><span class="sxs-lookup"><span data-stu-id="689d3-109">Support for C# expressions in workflow projects was introduced in .NET Framework 4.5.</span></span> <span data-ttu-id="689d3-110">Weitere Informationen finden [ C# ](csharp-expressions.md)Sie unter Ausdrücke.</span><span class="sxs-lookup"><span data-stu-id="689d3-110">For more information, see [C# Expressions](csharp-expressions.md).</span></span>  
   
- <span data-ttu-id="51acc-111">Vom Designer erzeugte Workflows werden im XAML-Format gespeichert, bei dem Ausdrücke in eckige Klammern eingeschlossen sind. Dies wird im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="51acc-111">Workflows produced by designer are saved in XAML, where expressions appear enclosed in square brackets, as in the following example.</span></span>  
+ <span data-ttu-id="689d3-111">Vom Designer erzeugte Workflows werden im XAML-Format gespeichert, bei dem Ausdrücke in eckige Klammern eingeschlossen sind. Dies wird im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="689d3-111">Workflows produced by designer are saved in XAML, where expressions appear enclosed in square brackets, as in the following example.</span></span>  
   
 ```xml  
 <Sequence xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">  
@@ -39,7 +39,7 @@ ms.locfileid: "66380167"
 </Sequence>  
 ```  
   
- <span data-ttu-id="51acc-112">Sie können beim Definieren eines Workflows im Code beliebige Ausdrucksaktivitäten verwenden.</span><span class="sxs-lookup"><span data-stu-id="51acc-112">When defining a workflow in code, any expression activities can be used.</span></span> <span data-ttu-id="51acc-113">Im folgenden Beispiel wird die Verwendung von Operatoraktivitäten zum Hinzufügen von drei Zahlen veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="51acc-113">The following example shows the usage of a composition of operator activities to add three numbers.</span></span>  
+ <span data-ttu-id="689d3-112">Sie können beim Definieren eines Workflows im Code beliebige Ausdrucksaktivitäten verwenden.</span><span class="sxs-lookup"><span data-stu-id="689d3-112">When defining a workflow in code, any expression activities can be used.</span></span> <span data-ttu-id="689d3-113">Im folgenden Beispiel wird die Verwendung von Operatoraktivitäten zum Hinzufügen von drei Zahlen veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="689d3-113">The following example shows the usage of a composition of operator activities to add three numbers.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -68,7 +68,7 @@ Sequence w = new Sequence
 };  
 ```  
   
- <span data-ttu-id="51acc-114">Der gleiche Workflow kann auch kürzer ausgedrückt werden, indem C#-Lambdaausdrücke verwendet werden. Dies ist im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="51acc-114">The same workflow can be expressed more compactly by using C# lambda expressions, as shown in the following example.</span></span>  
+ <span data-ttu-id="689d3-114">Der gleiche Workflow kann auch kürzer ausgedrückt werden, indem C#-Lambdaausdrücke verwendet werden. Dies ist im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="689d3-114">The same workflow can be expressed more compactly by using C# lambda expressions, as shown in the following example.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -89,7 +89,7 @@ Sequence w = new Sequence
 };  
 ```  
   
- <span data-ttu-id="51acc-115">Außerdem können Sie den Workflow mithilfe von Visual Basic-Ausdrucksaktivitäten ausdrücken, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="51acc-115">The workflow can also be expressed by using Visual Basic expression activities, as shown in the following example.</span></span>  
+ <span data-ttu-id="689d3-115">Außerdem können Sie den Workflow mithilfe von Visual Basic-Ausdrucksaktivitäten ausdrücken, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="689d3-115">The workflow can also be expressed by using Visual Basic expression activities, as shown in the following example.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -110,8 +110,8 @@ Sequence w = new Sequence
 };  
 ```  
   
-## <a name="extending-available-expressions-with-custom-expression-activities"></a><span data-ttu-id="51acc-116">Erweitern von verfügbaren Ausdrücken mit benutzerdefinierten Ausdrucksaktivitäten</span><span class="sxs-lookup"><span data-stu-id="51acc-116">Extending Available Expressions with Custom Expression Activities</span></span>  
- <span data-ttu-id="51acc-117">Ausdrücke in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] sind erweiterbar und ermöglichen das Erstellen zusätzlicher Ausdrucksaktivitäten.</span><span class="sxs-lookup"><span data-stu-id="51acc-117">Expressions in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] are extensible allowing for additional expression activities to be created.</span></span> <span data-ttu-id="51acc-118">Das folgende Beispiel zeigt eine Aktivität, die eine Summe aus drei ganzzahligen Werten zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="51acc-118">The following example shows an activity that returns a sum of three integer values.</span></span>  
+## <a name="extending-available-expressions-with-custom-expression-activities"></a><span data-ttu-id="689d3-116">Erweitern von verfügbaren Ausdrücken mit benutzerdefinierten Ausdrucksaktivitäten</span><span class="sxs-lookup"><span data-stu-id="689d3-116">Extending Available Expressions with Custom Expression Activities</span></span>  
+ <span data-ttu-id="689d3-117">Ausdrücke in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] sind erweiterbar und ermöglichen das Erstellen zusätzlicher Ausdrucksaktivitäten.</span><span class="sxs-lookup"><span data-stu-id="689d3-117">Expressions in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] are extensible allowing for additional expression activities to be created.</span></span> <span data-ttu-id="689d3-118">Das folgende Beispiel zeigt eine Aktivität, die eine Summe aus drei ganzzahligen Werten zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="689d3-118">The following example shows an activity that returns a sum of three integer values.</span></span>  
   
 ```  
 using System;  
@@ -138,7 +138,7 @@ namespace ExpressionsDemo
 }  
 ```  
   
- <span data-ttu-id="51acc-119">Mit dieser neuen Aktivität können Sie den vorherigen Workflow umschreiben, in dem drei Werte hinzugefügt wurden. Dies ist im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="51acc-119">With this new activity you can rewrite the previous workflow that added three values as shown in the following example.</span></span>  
+ <span data-ttu-id="689d3-119">Mit dieser neuen Aktivität können Sie den vorherigen Workflow umschreiben, in dem drei Werte hinzugefügt wurden. Dies ist im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="689d3-119">With this new activity you can rewrite the previous workflow that added three values as shown in the following example.</span></span>  
   
 ```  
 Variable<int> a = new Variable<int>("a", 1);  
@@ -165,4 +165,4 @@ Sequence w = new Sequence
 };  
 ```  
   
- <span data-ttu-id="51acc-120">Weitere Informationen zur Verwendung von Ausdrücken im Code finden Sie unter [Entwickeln von Workflows, Aktivitäten und Ausdrücken mithilfe von imperativem Code](authoring-workflows-activities-and-expressions-using-imperative-code.md).</span><span class="sxs-lookup"><span data-stu-id="51acc-120">For more information about using expressions in code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](authoring-workflows-activities-and-expressions-using-imperative-code.md).</span></span>
+ <span data-ttu-id="689d3-120">Weitere Informationen zur Verwendung von Ausdrücken im Code finden [Sie unter Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](authoring-workflows-activities-and-expressions-using-imperative-code.md).</span><span class="sxs-lookup"><span data-stu-id="689d3-120">For more information about using expressions in code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](authoring-workflows-activities-and-expressions-using-imperative-code.md).</span></span>
