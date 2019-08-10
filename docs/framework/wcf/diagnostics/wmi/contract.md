@@ -1,13 +1,13 @@
 ---
-title: Contract1
+title: Vertrag
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 10789f9a2940c239ae20c8fd1e9d48bca0e820ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a21e95a6f1f1860ed36c968d17bb8ac8465dce
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963695"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868435"
 ---
 # <a name="contract"></a>Vertrag
 Vertrag  
@@ -43,7 +43,7 @@ class Contract
  Die Anwendungsdomänen-ID der Anwendungsdomäne, die den Vertrag hostet.  
   
 ### <a name="behaviors"></a>Verhalten  
- Datentyp: Behavior-array  
+ Datentyp: Behavior-Array  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -64,7 +64,7 @@ class Contract
  Der Namespace des `portType`-Elements in WSDL.  
   
 ### <a name="operations"></a>Vorgänge  
- Datentyp: Operation-array  
+ Datentyp: Vorgangs Array  
   
  Zugriffstyp: Schreibgeschützt  
   

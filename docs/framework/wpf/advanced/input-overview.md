@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 8fa9f2dd668efca6a3108973ff792cc17b37b410
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 5eaf83f259abe4ee574dfd4d2269dfa1e9373c94
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818041"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869074"
 ---
 # <a name="input-overview"></a>Übersicht über die Eingabe
 <a name="introduction"></a>Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Subsystem bietet eine leistungsstarke API zum Abrufen von Eingaben von einer Vielzahl von Geräten, einschließlich Maus, Tastatur, Fingereingabe und Tablettstift. In diesem Thema werden die Dienste beschrieben, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bereitgestellt werden sowie die Architektur des Eingabesystems.
@@ -115,7 +115,7 @@ ms.locfileid: "68818041"
 
  Für Tastatureingaben [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sendet zunächst die / entsprechenden <xref:System.Windows.ContentElement.KeyDown> <xref:System.Windows.ContentElement.KeyUp> Ereignisse. Wenn diese Ereignisse nicht behandelt werden und es sich bei dem Schlüssel um einen Text handelt (anstelle eines Steuer Elements, z. b. direktionale Pfeile oder Funktionstasten), wird ein <xref:System.Windows.ContentElement.TextInput> -Ereignis ausgelöst.  Zwischen <xref:System.Windows.ContentElement.KeyDown> dem-Ereignis/ und<xref:System.Windows.ContentElement.TextInput> dem-Ereignis besteht nicht immer eine einfache 1: Eins-Zuordnung, da mehrere Tastatureingaben ein einzelnes Zeichen von Texteingabe generieren können und einzelne Tastatureingaben mehrere Zeichen generieren können. <xref:System.Windows.ContentElement.KeyUp> Folgen.  Dies gilt insbesondere für Sprachen wie Chinesisch, Japanisch und Koreanisch, die Eingabemethoden-Editoren (Input Method Editors, IMEs) verwenden, um Tausende von möglichen Zeichen in den entsprechenden Alphabets zu generieren.
 
- Wenn [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ein <xref:System.Windows.ContentElement.KeyUp> <xref:System.Windows.Input.KeyEventArgs.Key%2A> <xref:System.Windows.ContentElement.TextInput> -Ereignis sendet, wird auf<xref:System.Windows.Input.Key.System?displayProperty=nameWithType> festgelegt, wenn die Tastatureingaben Teil eines-Ereignisses werden könnten (Wenn z. b. ALT + S gedrückt wird). / <xref:System.Windows.ContentElement.KeyDown> Dies ermöglicht es dem Code <xref:System.Windows.ContentElement.KeyDown> in einem <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> -Ereignishandler, die Verarbeitung des- <xref:System.Windows.ContentElement.TextInput> Handlers des nachfolgend ausgelössten Ereignisses zu überprüfen und, wenn er gefunden wird. In diesen Fällen können die verschiedenen Eigenschaften des <xref:System.Windows.Input.TextCompositionEventArgs> Arguments verwendet werden, um die ursprünglichen Tastatureingaben zu bestimmen. Ebenso gilt, wenn [!INCLUDE[TLA2#tla_ime](../../../../includes/tla2sharptla-ime-md.md)] eine aktiv ist <xref:System.Windows.Input.Key> , den Wert <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>hat und <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> den ursprünglichen Tastatur Strich oder Tastatureingaben übergibt.
+ Wenn [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ein <xref:System.Windows.ContentElement.KeyUp> <xref:System.Windows.Input.KeyEventArgs.Key%2A> <xref:System.Windows.ContentElement.TextInput> -Ereignis sendet, wird auf<xref:System.Windows.Input.Key.System?displayProperty=nameWithType> festgelegt, wenn die Tastatureingaben Teil eines-Ereignisses werden könnten (Wenn z. b. ALT + S gedrückt wird). / <xref:System.Windows.ContentElement.KeyDown> Dies ermöglicht es dem Code <xref:System.Windows.ContentElement.KeyDown> in einem <xref:System.Windows.Input.Key.System?displayProperty=nameWithType> -Ereignishandler, die Verarbeitung des- <xref:System.Windows.ContentElement.TextInput> Handlers des nachfolgend ausgelössten Ereignisses zu überprüfen und, wenn er gefunden wird. In diesen Fällen können die verschiedenen Eigenschaften des <xref:System.Windows.Input.TextCompositionEventArgs> Arguments verwendet werden, um die ursprünglichen Tastatureingaben zu bestimmen. Wenn ein IME aktiv ist, <xref:System.Windows.Input.Key> hat gleichermaßen den Wert, und <xref:System.Windows.Input.KeyEventArgs.ImeProcessedKey%2A> gibt die ursprüngliche Tastatureingabe oder Tastatureingaben aus <xref:System.Windows.Input.Key.ImeProcessed?displayProperty=nameWithType>.
 
  Im folgenden Beispiel wird ein Handler für das <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignis und ein-Handler <xref:System.Windows.UIElement.KeyDown> für das-Ereignis definiert.
 

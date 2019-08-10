@@ -1,13 +1,13 @@
 ---
-title: Bookmarks1
+title: Lesezeichen-WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a15a28cc39a4227765c238a6f2b86c72197f1a39
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774119"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868917"
 ---
 # <a name="bookmarks"></a>Lesezeichen
 Lesezeichen stellen für eine Aktivität eine Möglichkeit dar, passiv auf eine Eingabe zu warten, ohne einen Workflowthread weiter auszuführen. Wenn eine Aktivität signalisiert, dass sie auf eine Reaktion wartet, kann sie ein Lesezeichen erstellen. Damit wird der Laufzeit angezeigt, dass die Ausführung der Aktivität nicht als abgeschlossen betrachtet werden kann, auch wenn die momentan ausgeführte Methode (die das <xref:System.Activities.Bookmark> erstellt hat) zurückkehrt.  

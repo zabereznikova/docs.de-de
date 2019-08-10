@@ -1,5 +1,5 @@
 ---
-title: CorElementType-Enumeration1
+title: CorElementType-Enumeration
 ms.date: 03/30/2017
 api_name:
 - CorElementType
@@ -16,16 +16,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d47e250a35640d15bd494d99442271a070a1dd0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781904"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868565"
 ---
-# <a name="corelementtype-enumeration1"></a>CorElementType-Enumeration1
+# <a name="corelementtype-enumeration"></a>CorElementType-Enumeration
 
-Gibt an, eine common Language Runtime <xref:System.Type>, einen Typmodifizierer oder Informationen zu einem Typ in einer Signatur der Metadaten-Typ.
+Gibt eine Common Language Runtime <xref:System.Type>, einen Typmodifizierer oder Informationen zu einem Typ in einer Signatur des metadatentyps an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -85,64 +85,64 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_VOID`|Ein void-Typ.|
 |`ELEMENT_TYPE_BOOLEAN`|Ein boolescher Typ|
 |`ELEMENT_TYPE_CHAR`|Ein Zeichentyp.|
-|`ELEMENT_TYPE_I1`|Eine 1-Byte-Ganzzahl.|
+|`ELEMENT_TYPE_I1`|Eine ganze 1-Byte-Ganzzahl mit Vorzeichen.|
 |`ELEMENT_TYPE_U1`|Ein unsignierter 1-Byte-Ganzzahltyp.|
-|`ELEMENT_TYPE_I2`|Eine 2-Byte-Ganzzahl.|
+|`ELEMENT_TYPE_I2`|Eine ganze 2-Byte-Ganzzahl mit Vorzeichen.|
 |`ELEMENT_TYPE_U2`|Eine 2-Byte-Ganzzahl ohne Vorzeichen.|
-|`ELEMENT_TYPE_I4`|Eine 4-Byte-Ganzzahl.|
-|`ELEMENT_TYPE_U4`|Eine 4-Byte-Ganzzahl ohne Vorzeichen.|
-|`ELEMENT_TYPE_I8`|Eine 8-Byte-Ganzzahl.|
+|`ELEMENT_TYPE_I4`|Eine ganze 4-Byte-Ganzzahl mit Vorzeichen.|
+|`ELEMENT_TYPE_U4`|Eine ganze 4-Byte-Ganzzahl ohne Vorzeichen.|
+|`ELEMENT_TYPE_I8`|Eine 8-Byte-Ganzzahl mit Vorzeichen.|
 |`ELEMENT_TYPE_U8`|Eine 8-Byte-Ganzzahl ohne Vorzeichen.|
-|`ELEMENT_TYPE_R4`|Eine 4-Byte-Gleitkommazahl.|
-|`ELEMENT_TYPE_R8`|Eine 8-Byte-Gleitkommazahl.|
-|`ELEMENT_TYPE_STRING`|Ein System.String-Typ.|
-|`ELEMENT_TYPE_PTR`|Ein Typmodifizierer "Zeiger".|
-|`ELEMENT_TYPE_BYREF`|Ein Modifizierer für den Verweis-Typ.|
-|`ELEMENT_TYPE_VALUETYPE`|Typmodifizierer Wert.|
-|`ELEMENT_TYPE_CLASS`|Ein Typmodifizierer "Klasse".|
-|`ELEMENT_TYPE_VAR`|Ein Variablentyp Modifizierer der Klasse.|
-|`ELEMENT_TYPE_ARRAY`|Ein mehrdimensionales Array-Typ-Modifizierer.|
+|`ELEMENT_TYPE_R4`|Ein 4-Byte-Gleit Komma Wert.|
+|`ELEMENT_TYPE_R8`|Ein 8-Byte-Gleit Komma Wert.|
+|`ELEMENT_TYPE_STRING`|Ein System. String-Typ.|
+|`ELEMENT_TYPE_PTR`|Ein zeigertypmodifizierer.|
+|`ELEMENT_TYPE_BYREF`|Ein Verweistyp Modifizierer.|
+|`ELEMENT_TYPE_VALUETYPE`|Ein Werttyp-Modifizierer.|
+|`ELEMENT_TYPE_CLASS`|Ein Klassentyp Modifizierer.|
+|`ELEMENT_TYPE_VAR`|Ein Klassen variablentypmodifizierer.|
+|`ELEMENT_TYPE_ARRAY`|Ein mehrdimensionaler Arraytypmodifizierer.|
 |`ELEMENT_TYPE_GENERICINST`|Ein Typmodifizierer für generische Typen.|
 |`ELEMENT_TYPE_TYPEDBYREF`|Ein typisierter Verweis.|
-|`ELEMENT_TYPE_I`|Die Größe des eine systemeigene ganze Zahl.|
-|`ELEMENT_TYPE_U`|Die Größe des systemeigenen Ganzzahl ohne Vorzeichen.|
+|`ELEMENT_TYPE_I`|Größe einer nativen Ganzzahl.|
+|`ELEMENT_TYPE_U`|Größe einer nativen Ganzzahl ohne Vorzeichen.|
 |`ELEMENT_TYPE_FNPTR`|Ein Zeiger auf eine Funktion.|
-|`ELEMENT_TYPE_OBJECT`|Ein System.Object-Typ.|
-|`ELEMENT_TYPE_SZARRAY`|Ein eindimensionales, NULL Typmodifizierer Untergrenze Array.|
-|`ELEMENT_TYPE_MVAR`|Methodenmodifizierer Variablentyp.|
-|`ELEMENT_TYPE_CMOD_REQD`|Eine C#-Sprache erforderlich Modifizierer.|
-|`ELEMENT_TYPE_CMOD_OPT`|Eine C#-Sprache Optionaler Modifizierer.|
+|`ELEMENT_TYPE_OBJECT`|Ein System. Object-Typ.|
+|`ELEMENT_TYPE_SZARRAY`|Ein eindimensionaler Arraytypmodifizierer (null).|
+|`ELEMENT_TYPE_MVAR`|Ein Typmodifizierer für die-Methode.|
+|`ELEMENT_TYPE_CMOD_REQD`|Ein Modifizierer der C-Sprache erforderlich.|
+|`ELEMENT_TYPE_CMOD_OPT`|Ein optionaler C-sprach Modifizierer.|
 |`ELEMENT_TYPE_INTERNAL`|Wird intern verwendet.|
 |`ELEMENT_TYPE_MAX`|Ein ungültiger Typ.|
 |`ELEMENT_TYPE_MODIFIER`|Wird intern verwendet.|
-|`ELEMENT_TYPE_SENTINEL`|Ein Typmodifizierer, der eine Liste der eine Variable Anzahl von Parametern Sentinel ist.|
+|`ELEMENT_TYPE_SENTINEL`|Ein Typmodifizierer, bei dem es sich um einen Sentinel für eine Liste mit einer Variablen Anzahl von Parametern handelt.|
 |`ELEMENT_TYPE_PINNED`|Wird intern verwendet.|
 
 ## <a name="remarks"></a>Hinweise
 
-Der Typmodifizierer bilden die Grundlage für komplexere Typen darstellt. Ein `CorElementType` Typwert-Modifizierer wird angewendet, auf den Wert, der durch den sie in der Typsignatur unmittelbar folgt. Der Wert, der `CorElementType` Modifizierer Typwert möglich ein `CorElementType` einfacher Werttyp, ein Metadatentoken, oder ein anderer Wert als in der folgenden Tabelle angegeben.
+Die typmodifiziererer bilden die Grundlage für das darstellen komplexer Typen. Ein `CorElementType` Typmodifiziererwert wird auf den Wert angewendet, der in der Typsignatur unmittelbar darauf folgt. Der Wert, der auf `CorElementType` den Typmodifiziererwert folgt `CorElementType` , kann ein einfacher Typwert, ein Metadatentoken oder ein anderer Wert sein, wie in der folgenden Tabelle angegeben.
 
 > [!NOTE]
-> Alle Zahlen (*Anzahl*, *Argumentanzahl*, *Metadatentoken*, *Rang*, *Anzahl*, und *gebunden*) als komprimierte ganze Zahlen gespeichert werden. Finden Sie unter [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) auf der ECMA-Website für Details.
+> Alle Zahlen (*Anzahl*, *Argument Anzahl*,Metadatentoken, *Rang*, *Anzahl*und *gebunden*) werden als komprimierte ganze Zahlen gespeichert. Weitere Informationen finden Sie in der ECMA [-Website Standard-ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) .
 
 |Typmodifizierer|Format|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<eine `CorElementType` Wert >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<eine `CorElementType` Wert >|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<ein `mdTypeDef` Metadatentoken >|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<ein `mdTypeDef` Metadatentoken >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \< ein`CorElementType` Wert >|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \< ein`CorElementType` Wert >|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \< ein`mdTypeDef` Metadatentoken >|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \< ein`mdTypeDef` Metadatentoken >|
 |`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<Anzahl >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<eine `CorElementType` Wert > \<Rang > \<count1 > \<bound1 >... \<CountN > \<BoundN >|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<ein `mdTypeDef` Metadatentoken > \<Argumentanzahl > \<arg1 >... \<ArgN >|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<vollständige Signatur für die Funktion, einschließlich der Aufrufkonvention >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<eine `CorElementType` Wert >|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<ein `CorElementType` Wert > \<Rang > \<count1 >\<bound1 >... \< >\<boundn >|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \< \< \<ein `mdTypeDef` Metadatentoken > Argument Anzahl > arg1 >... \<argN->|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<vervollständigen der Signatur für die Funktion, einschließlich der Aufruf Konvention >|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \< ein`CorElementType` Wert >|
 |`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<Anzahl >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<eine `mdTypeRef` oder `mdTypeDef` Metadatentoken >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<eine `mdTypeRef` oder `mdTypeDef` Metadatentoken >|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<ein `mdTypeRef` - oder`mdTypeDef` -Metadatentoken >|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<ein `mdTypeRef` - oder`mdTypeDef` -Metadatentoken >|
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
 **Header:** CorHdr.h
 
