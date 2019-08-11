@@ -1,5 +1,5 @@
 ---
-title: Verpacken einer Assembly für COM
+title: Verpacken einer .NET Framework-Assembly für COM
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -18,28 +18,28 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb45fc253e24c9770436432d2734ba8fce249453
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662367"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629324"
 ---
-# <a name="packaging-an-assembly-for-com"></a>Verpacken einer Assembly für COM
+# <a name="packaging-a-net-framework-assembly-for-com"></a>Verpacken einer .NET Framework-Assembly für COM
 
 COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Typen, die sie in ihre Anwendung integrieren möchten:
 
 - Eine Liste von Typen, die COM-Anwendungen nutzen können
 
-  Einige verwalteten Typen sind nicht für COM sichtbar; einige sind sichtbar, aber nicht erstellbar, und andere sind sichtbar und erstellbar. Eine Assembly kann eine beliebige Kombination von nicht sichtbaren, sichtbaren, nicht erstellbaren und erstellbaren Typen umfassen. Aus Gründen der Vollständigkeit identifizieren Sie die Typen in einer Assembly, die für COM verfügbar gemacht werden sollen, insbesondere, wenn diese Typen eine Teilmenge der Typen sind, die für .NET Framework verfügbar gemacht werden sollen.
+  Einige verwaltete Typen sind nicht für COM sichtbar; einige sind sichtbar, aber nicht erstellbar, und andere sind sichtbar und erstellbar. Eine Assembly kann eine beliebige Kombination von nicht sichtbaren, sichtbaren, nicht erstellbaren und erstellbaren Typen umfassen. Aus Gründen der Vollständigkeit identifizieren Sie die Typen in einer Assembly, die für COM verfügbar gemacht werden sollen, insbesondere, wenn diese Typen eine Teilmenge der Typen sind, die für .NET Framework verfügbar gemacht werden sollen.
 
-  Weitere Informationen finden Sie unter [Qualifizieren von .NET-Typen für die Interoperation](qualifying-net-types-for-interoperation.md).
+  Weitere Informationen finden Sie unter [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).
 
 - Anweisungen der Versionsverwaltung
 
   Verwaltete Klassen, die die Klassenschnittstelle (eine von COM-Interop generierte Schnittstelle) implementieren, unterliegen Einschränkungen der Versionsverwaltung.
 
-  Richtlinien zur Verwendung der Klassenschnittstelle finden Sie unter [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface).
+  Richtlinien zur Verwendung der Klassenschnittstelle finden Sie unter [Einführung in die Klassenschnittstelle](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).
 
 - Anweisungen zur Bereitstellung
 
@@ -94,8 +94,8 @@ Das [.NET Services Installation-Tool (Regsvcs.exe)](../tools/regsvcs-exe-net-ser
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
-- [Qualifizieren von .NET-Typen für die Interoperation](qualifying-net-types-for-interoperation.md)
-- [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface)
+- [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [Einführung in die Klassenschnittstelle](../../../docs/standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)
 - [Überlegungen zur Assemblysicherheit](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (Type Library Exporter-Tool)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md)

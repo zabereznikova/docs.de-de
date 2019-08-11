@@ -4,12 +4,12 @@ description: Untersuchen Sie die anderen in ML.NET unterstützten Machine Learni
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: ed6361fdcbca11c100ee5cae4ca76e152ddfba11
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063545"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630052"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Machine Learning-Aufgaben in ML.NET
 
@@ -54,7 +54,7 @@ Die Daten in der Spalte für die Eingabefeatures müssen ein Vektor fester Grö�
 
 Diese Trainer geben die folgenden Spalten aus:
 
-| Name der Ausgabespalte | Spaltentyp | Beschreibung|
+| Name der Ausgabespalte | Spaltentyp | BESCHREIBUNG|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die vom Modell berechnete unformatierte Bewertung|
 | `PredictedLabel` | <xref:System.Boolean> | Der vorhergesagte Bezeichnung, basierend auf dem Abzeichnen der Bewertung. Eine negative Bewertung wird `false` und eine positive Bewertung wird `true` zugeordnet.|
@@ -91,7 +91,7 @@ Die Featurespalte muss ein Vektor fester Größe von <xref:System.Single> sein.
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Typ | Beschreibung|
+| Ausgabename | Typ | BESCHREIBUNG|
 | -- | -- | -- |
 | `Score` | Vektor von <xref:System.Single> | Die Bewertungen aller Klassen. Ein höherer Wert bedeutet eine höhere Wahrscheinlichkeit, in die zugehörige Klasse zu fallen. Wenn das i-te Element den größten Wert hat, wäre der vorhergesagte Bezeichnungsindex i. Beachten Sie, dass „i“ ein nullbasierter Index ist. |
 | `PredictedLabel` | Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) | Der Index der vorhergesagten Bezeichnung. Wenn sein Wert i ist, wäre die eigentliche Bezeichnung die i-te Kategorie des Typs der Schlüssel-Wert-Eingabebezeichnung. |
@@ -124,7 +124,7 @@ Die Daten in der Spalte für die Eingabezeichnung müssen <xref:System.Single> s
 
 Die Trainer für diese Ausgabe geben folgende Daten aus:
 
-| Ausgabename | Typ | Beschreibung|
+| Ausgabename | Typ | BESCHREIBUNG|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die vom Modell vorhergesagte unformatierte Bewertung |
 
@@ -148,7 +148,7 @@ Die Daten der Eingabefeatures müssen <xref:System.Single> sein. Es sind keine B
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Typ | Beschreibung|
+| Ausgabename | Typ | BESCHREIBUNG|
 | -- | -- | -- |
 | `Score` | Vektor von <xref:System.Single> | Die Abstände der angegebenen Daten weisen auf die Schwerpunkte aller Cluster hin. |
 | `PredictedLabel` | Typ [key](xref:Microsoft.ML.Data.KeyDataViewType) | Der Index des nächsten Clusters, der durch das Modell vorhergesagt wird. |
@@ -180,7 +180,7 @@ Die Eingabefeatures müssen ein Vektor fester Größe von <xref:System.Single> s
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Typ | Beschreibung|
+| Ausgabename | Typ | BESCHREIBUNG|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die nicht-negative, unbegrenzte Bewertung, die durch das Anomalieerkennungsmodell berechnet wurde. |
 
@@ -203,7 +203,7 @@ Die Featuredaten müssen ein Vektor mit fester Größe von <xref:System.Single> 
 
 Der Trainer gibt folgende Daten aus:
 
-| Ausgabename | Typ | Beschreibung|
+| Ausgabename | Typ | BESCHREIBUNG|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Die unbegrenzte Bewertung, die vom Modell berechnet wurde, um die Vorhersage zu bestimmen. |
 

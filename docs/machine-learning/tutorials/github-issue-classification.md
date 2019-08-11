@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Kategorisieren von Supportproblemen (Multiklassenklassifizierung)'
 description: Erfahren Sie hier, wie Sie mit ML.NET in einem Szenario zur Multiklassenklassifizierung GitHub-Issues klassifizieren, um sie einem bestimmten Bereich zuzuweisen.
-ms.date: 05/16/2019
+ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195585"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710306"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Kategorisieren von Supportproblemen unter Verwendung von Multiklassenklassifizierung mit ML.NET
 
@@ -285,6 +285,25 @@ Verwenden Sie den folgenden Code, um die Metriken anzuzeigen, die Ergebnisse fre
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
+### <a name="save-the-model-to-a-file"></a>Speichern des Modells in einer Datei
+
+Wenn Sie mit Ihrem Modell zufrieden sind, speichern Sie es in einer Datei, um Vorhersagen zu einem späteren Zeitpunkt oder in einer anderen Anwendung zu treffen. Fügen Sie der `Evaluate` -Methode folgenden Code hinzu. 
+
+[!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
+
+Erstellen Sie die `SaveModelAsFile`-Methode unter der `Evaluate`-Methode.
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
+{
+
+}
+```
+
+Fügen Sie der `SaveModelAsFile`-Methode den folgenden Code hinzu. Dieser Code verwendet die [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*)-Methode, um das trainierte Modell zu serialisieren und als ZIP-Datei zu speichern.
+
+[!code-csharp[SnippetSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetSaveModel)]
+
 ## <a name="deploy-and-predict-with-a-model"></a>Bereitstellen eines Modells und Treffen von Vorhersagen
 
 Fügen Sie einen Aufruf der neuen Methode aus der `Main`-Methode mit dem folgenden Code direkt unter dem `Evaluate`-Methodenaufruf hinzu:
@@ -302,10 +321,15 @@ private static void PredictIssue()
 
 Die `PredictIssue`-Methode führt die folgenden Aufgaben aus:
 
+* Laden des gespeicherte Modells
 * Erstellen eines einzelnen Issues aus Testdaten
 * Vorhersagen des Bereichs basierend auf Testdaten
 * Kombinieren von Testdaten und Vorhersagen für die Berichterstattung.
 * Anzeigen der vorhergesagten Ergebnisse.
+
+Laden Sie das gespeicherte Modell in Ihre Anwendung, indem Sie der `PredictIssue`-Methode den folgenden Code hinzufügen:
+
+[!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
 Fügen Sie ein GitHub-Issue hinzu, um die Vorhersage des trainierten Modells in der `Predict`-Methode zu testen, indem Sie eine `GitHubIssue`-Instanz erstellen:
 

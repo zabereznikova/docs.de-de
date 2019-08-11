@@ -2,13 +2,14 @@
 title: Maschinelles Lernen – Glossar
 description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle unterstützen.
 ms.custom: seodec18
-ms.date: 05/09/2019
-ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.topic: reference
+ms.date: 07/31/2019
+ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557980"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710542"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -109,6 +110,10 @@ Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) n
 
 Ein Funktionsextraktionsschema für Textdaten: jede Sequenz von N Wörtern wird in einen [Funktionswert](#feature) umgewandelt.
 
+## <a name="normalization"></a>Normalisierung
+
+Normalisierung ist der Prozess der Skalierung von Gleitkommadaten in Werte zwischen 0 und 1. Viele der in ML.NET verwendeten Trainingsalgorithmen erfordern das Normalisieren von Merkmalseingabedaten. ML.NET stellt eine Reihe von [Transformationen für die Normalisierung](transforms.md#normalization-and-scaling) bereit.
+
 ## <a name="numerical-feature-vector"></a>Numerischer Funktionsvektor
 
 Ein Vektor aus [Funktionen](#feature) besteht ausschließlich aus numerischen Werten. Dies ist vergleichbar mit `double[]`.
@@ -147,6 +152,10 @@ Bei der [Regression](#regression) steht diese Auswertungsmetrik für die Summe a
 ## <a name="root-of-mean-squared-error-rmse"></a>Wurzel des mittleren quadratischen Fehlers (Root of mean squared error, RMSE)
 
 Bei der [Regression](#regression) steht diese Auswertungsmetrik für die Quadratwurzel aus dem Durchschnitt der Quadrate der Fehler.
+
+## <a name="scoring"></a>Bewertung
+
+Bewertung ist der Prozess, bei dem neue Daten auf ein trainiertes Machine Learning-Modell angewendet und Vorhersagen generiert werden. Bewertung wird auch als Rückschluss bezeichnet. Abhängig vom Modelltyp kann die Bewertung ein Rohwert, eine Wahrscheinlichkeit oder eine Kategorie sein.
 
 ## <a name="supervised-machine-learning"></a>Überwachtes maschinelles Lernen
 

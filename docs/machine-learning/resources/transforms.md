@@ -4,16 +4,21 @@ description: Untersuchen Sie die in ML.NET unterstützten herausragenden technis
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: cbcdef5b8f5f6334d5545f100976347ade9ee6fd
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65558014"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671875"
 ---
 # <a name="data-transformations"></a>Datentransformationen
 
-Datentransformationen dienen zur Vorbereitung von Daten für das Trainieren des Modells. Die Transformationen in diesem Handbuch geben Klassen zurück, die die [IEstimator](xref:Microsoft.ML.IEstimator%601)-Schnittstelle implementieren. Datentransformationen können miteinander verkettet werden. Jede Transformation erwartet und erzeugt Daten bestimmter Typen und Formate, die in der verknüpften Referenzdokumentation angegeben werden.
+Datentransformationen werden für Folgendes verwendet:
+- Aufbereiten von Daten für das Modelltraining
+- Anwenden eines importierten Modells im TensorFlow- oder ONNX-Format
+- Nachverarbeiten von Daten nach dem Durchlaufen eines Modells
+
+Die Transformationen in diesem Handbuch geben Klassen zurück, die die [IEstimator](xref:Microsoft.ML.IEstimator%601)-Schnittstelle implementieren. Datentransformationen können miteinander verkettet werden. Jede Transformation erwartet und erzeugt Daten bestimmter Typen und Formate, die in der verknüpften Referenzdokumentation angegeben werden.
 
 Einige Datentransformationen erfordern Trainingsdaten, um ihre Parameter zu berechnen. Beispiel: Der <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A>-Transformator berechnet den Mittelwert und die Varianz der Trainingsdaten während des `Fit()`-Vorgangs und verwendet diese Parameter im `Transform()`-Vorgang. 
 
@@ -78,13 +83,25 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*> | Konvertieren von Pixeln eines Eingabebilds in einen Vektor aus Zahlen |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*> | Laden von Bildern aus einem Ordner in den Arbeitsspeicher |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*> | Ändern der Größe von Bildern |
+| <xref:Microsoft.ML.OnnxCatalog.DnnFeaturizeImage*> | Wendet ein vortrainiertes DNN-Modell (Deep Neural Network) an, um ein Eingabebild in einen Merkmalsvektor zu transformieren |
 
 ## <a name="categorical-data-transformations"></a>Kategorische Datentransformationen
 
 | Transformation | Definition |
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | Konvertieren einer oder mehrerer Textspalten in mit [1-aus-n-Code](https://en.wikipedia.org/wiki/One-hot) codierte Vektoren |
-| <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | Konvertieren einer oder mehrerer Textspalten in hashbasierte mit 1-aus-n-Code codierte Vektoren |
+| <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | Konvertieren mindestens einer Textspalte in hashbasierte one-hot-codierte Vektoren |
+
+## <a name="time-series-data-transformations"></a>Zeitreihendaten-Transformationen
+
+| Transformation | Definition |
+| --- | --- |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn*> | Erkennen von Anomalien in den Eingabe-Zeitreihendaten mit dem SR-Algorithmus (Spectral Residual Algorithm) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa*> | Erkennen von Änderungspunkten in Zeitreihendaten mithilfe von SSA (Singular Spectrum Analysis) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidChangePoint*> | Erkennen von Änderungspunkten in unabhängigen und identisch verteilten Zeitreihendaten (IID) mithilfe adaptiver Kerneldichteschätzungen und Martingalbewertungen |
+| <xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*> | Vorhersagen von Zeitreihendaten mithilfe von SSA (Singular Spectrum Analysis) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa*> | Erkennen von Spitzen in Zeitreihendaten mithilfe von SSA (Singular Spectrum Analysis) |
+| <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike*> | Erkennen von Spitzen in unabhängigen und identisch verteilten Zeitreihendaten (IID) mithilfe adaptiver Kerneldichteschätzungen und Martingalbewertungen |
 
 ## <a name="missing-values"></a>Fehlende Werte
 
@@ -99,6 +116,35 @@ Andere Datentransformationen erfordern keine Trainingsdaten. Beispiel: Die <xref
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | Auswählen von Features, deren nicht standardmäßige Werte größer als der Schwellenwert sind |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | Wählen Sie die Features aus, von denen die Daten in der Bezeichnungsspalte am meisten abhängen |
+
+## <a name="feature-transformations"></a>Merkmalstransformationen
+
+| Transformation | Definition |
+| --- | --- |
+| <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap*> | Zuordnen jedes Eingabevektors zu einem Merkmalsraum einer niedrigeren Dimension, wobei die inneren Produkte einer Kernelfunktion nahe kommen, damit die Merkmale als Eingaben für die linearen Algorithmen verwendet werden können |
+| <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents*> | Verringern der Dimensionen des Eingabemerkmalsvektors durch Anwenden des Algorithmus für die Hauptkomponentenanalyse |
+
+## <a name="explainability-transformations"></a>Erklärbarkeitstransformationen
+
+| Transformation | Definition |
+| --- | --- |
+| <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution*> | Berechnen der Beitragsbewertungen für jedes Element eines Merkmalsvektors |
+
+## <a name="calibration-transformations"></a>Kalibrierungstransformationen
+
+| Transformation | Definition |
+| --- | --- |
+|<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | Transformieren der Rohbewertung eines binären Klassifizierers in eine Klassenwahrscheinlichkeit unter Verwendung der logistischen Regression mit anhand der Trainingsdaten geschätzten Parametern |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | Transformieren der Rohbewertung eines binären Klassifizierers in eine Klassenwahrscheinlichkeit unter Verwendung der logistischen Regression mit festen Parametern |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Naive*> | Transformieren der Rohbewertung eines binären Klassifizierers in eine Klassenwahrscheinlichkeit durch Zuweisen von Bewertungen zu Fächern und Berechnen der Wahrscheinlichkeit basierend auf der Binominalverteilung |
+| <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Isotonic*> | Transformieren der Rohbewertung eines binären Klassifizierers in eine Klassenwahrscheinlichkeit durch Zuweisen von Bewertungen zu Fächern, wobei die Position der Begrenzungen und die Größe der Fächer anhand der Trainingsdaten geschätzt werden  |
+
+## <a name="deep-learning-transformations"></a>Deep Learning-Transformationen
+
+| Transformation | Definition |
+| --- | --- |
+| <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*> | Transformieren der Eingabedaten mit einem importierten ONNX-Modell |
+| <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel*> | Transformieren der Eingabedaten mit einem importierten TensorFlow-Modell |
 
 ## <a name="custom-transformations"></a>Benutzerdefinierte Transformationen
 
