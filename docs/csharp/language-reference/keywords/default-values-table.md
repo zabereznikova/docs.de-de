@@ -1,75 +1,62 @@
 ---
-title: Tabelle für Standardwerte – C#-Referenz
+title: 'Tabelle für Standardwerte: C#-Referenz'
 ms.custom: seodec18
-description: Erfahren Sie, was die Standardwerte der C#-Werttypen sind.
-ms.date: 08/23/2018
+description: Erfahren Sie, wie die Standardwerte der C#-Typen lauten.
+ms.date: 07/29/2019
 helpviewer_keywords:
-- constructors [C#], return values
-- keywords [C#], new
+- default [C#]
 - parameterless constructor [C#]
-- defaults [C#]
-- value types [C#], initializing
-- variables [C#], value types
-- constructors [C#], parameterless constructor
-- types [C#], parameterless constructor return values
-ms.openlocfilehash: ec5fb4681f0e0562c5aefdf336841416f96bdf98
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661413"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627744"
 ---
-# <a name="default-values-table-c-reference"></a><span data-ttu-id="eac59-103">Tabelle für Standardwerte (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="eac59-103">Default values table (C# Reference)</span></span>
+# <a name="default-values-table-c-reference"></a><span data-ttu-id="ecc47-103">Tabelle für Standardwerte (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="ecc47-103">Default values table (C# reference)</span></span>
 
-<span data-ttu-id="eac59-104">In der folgenden Tabelle werden die Standardwerte von [Werttypen](value-types.md) gezeigt.</span><span class="sxs-lookup"><span data-stu-id="eac59-104">The following table shows the default values of [value types](value-types.md).</span></span>
+<span data-ttu-id="ecc47-104">In der folgenden Tabelle werden die Standardwerte von C#-Typen gezeigt:</span><span class="sxs-lookup"><span data-stu-id="ecc47-104">The following table shows the default values of C# types:</span></span>
 
-|<span data-ttu-id="eac59-105">Werttyp</span><span class="sxs-lookup"><span data-stu-id="eac59-105">Value type</span></span>|<span data-ttu-id="eac59-106">Standardwert</span><span class="sxs-lookup"><span data-stu-id="eac59-106">Default value</span></span>|
-|----------------|-------------------|
-|[<span data-ttu-id="eac59-107">bool</span><span class="sxs-lookup"><span data-stu-id="eac59-107">bool</span></span>](bool.md)|`false`|
-|[<span data-ttu-id="eac59-108">byte</span><span class="sxs-lookup"><span data-stu-id="eac59-108">byte</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="eac59-109">0</span><span class="sxs-lookup"><span data-stu-id="eac59-109">0</span></span>|
-|[<span data-ttu-id="eac59-110">char</span><span class="sxs-lookup"><span data-stu-id="eac59-110">char</span></span>](char.md)|<span data-ttu-id="eac59-111">'\0'</span><span class="sxs-lookup"><span data-stu-id="eac59-111">'\0'</span></span>|
-|[<span data-ttu-id="eac59-112">decimal</span><span class="sxs-lookup"><span data-stu-id="eac59-112">decimal</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="eac59-113">0M</span><span class="sxs-lookup"><span data-stu-id="eac59-113">0M</span></span>|
-|[<span data-ttu-id="eac59-114">double</span><span class="sxs-lookup"><span data-stu-id="eac59-114">double</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="eac59-115">0.0D</span><span class="sxs-lookup"><span data-stu-id="eac59-115">0.0D</span></span>|
-|[<span data-ttu-id="eac59-116">enum</span><span class="sxs-lookup"><span data-stu-id="eac59-116">enum</span></span>](enum.md)|<span data-ttu-id="eac59-117">Der Wert, der vom Ausdruck `(E)0` erzeugt wird, bei dem `E` der Enumerationsbezeichner ist.</span><span class="sxs-lookup"><span data-stu-id="eac59-117">The value produced by the expression `(E)0`, where `E` is the enum identifier.</span></span>|
-|[<span data-ttu-id="eac59-118">float</span><span class="sxs-lookup"><span data-stu-id="eac59-118">float</span></span>](../builtin-types/floating-point-numeric-types.md)|<span data-ttu-id="eac59-119">0.0F</span><span class="sxs-lookup"><span data-stu-id="eac59-119">0.0F</span></span>|
-|[<span data-ttu-id="eac59-120">int</span><span class="sxs-lookup"><span data-stu-id="eac59-120">int</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="eac59-121">0</span><span class="sxs-lookup"><span data-stu-id="eac59-121">0</span></span>|
-|[<span data-ttu-id="eac59-122">long</span><span class="sxs-lookup"><span data-stu-id="eac59-122">long</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="eac59-123">0L</span><span class="sxs-lookup"><span data-stu-id="eac59-123">0L</span></span>|
-|[<span data-ttu-id="eac59-124">sbyte</span><span class="sxs-lookup"><span data-stu-id="eac59-124">sbyte</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="eac59-125">0</span><span class="sxs-lookup"><span data-stu-id="eac59-125">0</span></span>|
-|[<span data-ttu-id="eac59-126">short</span><span class="sxs-lookup"><span data-stu-id="eac59-126">short</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="eac59-127">0</span><span class="sxs-lookup"><span data-stu-id="eac59-127">0</span></span>|
-|[<span data-ttu-id="eac59-128">struct</span><span class="sxs-lookup"><span data-stu-id="eac59-128">struct</span></span>](struct.md)|<span data-ttu-id="eac59-129">Der Wert, der erzeugt wird, indem alle Werttypfelder auf ihre Standardwerte festgelegt werden und alle Verweistypfelder auf `null`.</span><span class="sxs-lookup"><span data-stu-id="eac59-129">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
-|[<span data-ttu-id="eac59-130">uint</span><span class="sxs-lookup"><span data-stu-id="eac59-130">uint</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="eac59-131">0</span><span class="sxs-lookup"><span data-stu-id="eac59-131">0</span></span>|
-|[<span data-ttu-id="eac59-132">ulong</span><span class="sxs-lookup"><span data-stu-id="eac59-132">ulong</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="eac59-133">0</span><span class="sxs-lookup"><span data-stu-id="eac59-133">0</span></span>|
-|[<span data-ttu-id="eac59-134">ushort</span><span class="sxs-lookup"><span data-stu-id="eac59-134">ushort</span></span>](../builtin-types/integral-numeric-types.md)|<span data-ttu-id="eac59-135">0</span><span class="sxs-lookup"><span data-stu-id="eac59-135">0</span></span>|
+|<span data-ttu-id="ecc47-105">Typ</span><span class="sxs-lookup"><span data-stu-id="ecc47-105">Type</span></span>|<span data-ttu-id="ecc47-106">Standardwert</span><span class="sxs-lookup"><span data-stu-id="ecc47-106">Default value</span></span>|
+|---------|------------------|
+|<span data-ttu-id="ecc47-107">Verweistyp</span><span class="sxs-lookup"><span data-stu-id="ecc47-107">Any reference type</span></span>|`null`|
+|<span data-ttu-id="ecc47-108">Beliebiger [integrierter integraler numerischer Typ](../builtin-types/integral-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="ecc47-108">Any [built-in integral numeric type](../builtin-types/integral-numeric-types.md)</span></span>|<span data-ttu-id="ecc47-109">0 (null)</span><span class="sxs-lookup"><span data-stu-id="ecc47-109">0 (zero)</span></span>|
+|<span data-ttu-id="ecc47-110">Beliebiger [integrierter numerischer Gleitkommatyp](../builtin-types/floating-point-numeric-types.md)</span><span class="sxs-lookup"><span data-stu-id="ecc47-110">Any [built-in floating-point numeric type](../builtin-types/floating-point-numeric-types.md)</span></span>|<span data-ttu-id="ecc47-111">0 (null)</span><span class="sxs-lookup"><span data-stu-id="ecc47-111">0 (zero)</span></span>|
+|[<span data-ttu-id="ecc47-112">bool</span><span class="sxs-lookup"><span data-stu-id="ecc47-112">bool</span></span>](bool.md)|`false`|
+|[<span data-ttu-id="ecc47-113">char</span><span class="sxs-lookup"><span data-stu-id="ecc47-113">char</span></span>](char.md)|<span data-ttu-id="ecc47-114">`'\0'` (U+0000)</span><span class="sxs-lookup"><span data-stu-id="ecc47-114">`'\0'` (U+0000)</span></span>|
+|[<span data-ttu-id="ecc47-115">enum</span><span class="sxs-lookup"><span data-stu-id="ecc47-115">enum</span></span>](enum.md)|<span data-ttu-id="ecc47-116">Der Wert, der vom Ausdruck `(E)0` erzeugt wird, bei dem `E` der Enumerationsbezeichner ist.</span><span class="sxs-lookup"><span data-stu-id="ecc47-116">The value produced by the expression `(E)0`, where `E` is the enum identifier.</span></span>|
+|[<span data-ttu-id="ecc47-117">struct</span><span class="sxs-lookup"><span data-stu-id="ecc47-117">struct</span></span>](struct.md)|<span data-ttu-id="ecc47-118">Der Wert, der erzeugt wird, indem alle Werttypfelder auf ihre Standardwerte festgelegt werden und alle Verweistypfelder auf `null`.</span><span class="sxs-lookup"><span data-stu-id="ecc47-118">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
+|<span data-ttu-id="ecc47-119">Ein [Werttyp, der NULL-Werte zulässt](../../programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="ecc47-119">Any [nullable value type](../../programming-guide/nullable-types/index.md)</span></span>|<span data-ttu-id="ecc47-120">Eine Instanz, für die die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft `false` und die <xref:System.Nullable%601.Value%2A>-Eigenschaft nicht definiert ist.</span><span class="sxs-lookup"><span data-stu-id="ecc47-120">An instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined.</span></span> <span data-ttu-id="ecc47-121">Dieser Standardwert wird auch als *NULL*-Wert des Werttyps bezeichnet, der NULL-Werte zulässt.</span><span class="sxs-lookup"><span data-stu-id="ecc47-121">That default value is also known as the *null* value of the nullable value type.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="eac59-136">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="eac59-136">Remarks</span></span>
-
-<span data-ttu-id="eac59-137">Sie können keine nicht initialisierten Variablen in C# verwenden.</span><span class="sxs-lookup"><span data-stu-id="eac59-137">You cannot use uninitialized variables in C#.</span></span> <span data-ttu-id="eac59-138">Sie können eine Variable mit dem Standardwert des Typs initialisieren.</span><span class="sxs-lookup"><span data-stu-id="eac59-138">You can initialize a variable with the default value of its type.</span></span> <span data-ttu-id="eac59-139">Sie können den Standardwert eines Typs verwenden, um den Standardwert des [optionalen Arguments](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) einer Methode festzulegen.</span><span class="sxs-lookup"><span data-stu-id="eac59-139">You also can use the default value of a type to specify the default value of a method's [optional argument](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments).</span></span>
-
-<span data-ttu-id="eac59-140">Verwenden Sie den [Standardwertausdruck](../../programming-guide/statements-expressions-operators/default-value-expressions.md), um den Standardwert eines Typs wie im folgenden Beispiel zu erzeugen:</span><span class="sxs-lookup"><span data-stu-id="eac59-140">Use the [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type, as the following example shows:</span></span>
+<span data-ttu-id="ecc47-122">Verwenden Sie den [Standardwertausdruck](../../programming-guide/statements-expressions-operators/default-value-expressions.md), um den Standardwert eines Typs wie im folgenden Beispiel zu erzeugen:</span><span class="sxs-lookup"><span data-stu-id="ecc47-122">Use the [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type, as the following example shows:</span></span>
 
 ```csharp
 int a = default(int);
 ```
 
-<span data-ttu-id="eac59-141">Ab C# 7.1 können Sie das [`default`-Literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) verwenden, um eine Variable mit dem Standardwert des Typs zu initialisieren:</span><span class="sxs-lookup"><span data-stu-id="eac59-141">Beginning with C# 7.1, you can use the [`default` literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) to initialize a variable with the default value of its type:</span></span>
+<span data-ttu-id="ecc47-123">Ab C# 7.1 können Sie das [`default`-Literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) verwenden, um eine Variable mit dem Standardwert des Typs zu initialisieren:</span><span class="sxs-lookup"><span data-stu-id="ecc47-123">Beginning with C# 7.1, you can use the [`default` literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) to initialize a variable with the default value of its type:</span></span>
 
 ```csharp
 int a = default;
 ```
 
-<span data-ttu-id="eac59-142">Sie können auch den parameterlosen Konstruktor oder den impliziten parameterlosen Konstruktor verwenden, um den Standardwert eines Werttyps zu erzeugen. Dies wird im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="eac59-142">You also can use the parameterless constructor or the implicit parameterless constructor to produce the default value of a value type, as the following example shows.</span></span> <span data-ttu-id="eac59-143">Weitere Informationen zu Konstruktoren finden Sie im Artikel [Konstruktoren](../../programming-guide/classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="eac59-143">For more information about constructors, see the [Constructors](../../programming-guide/classes-and-structs/constructors.md) article.</span></span>
+<span data-ttu-id="ecc47-124">Für eine Wertart generiert der implizite parameterlose Konstruktor auch den Standardwert des Typs, wie das folgende Beispiel zeigt:</span><span class="sxs-lookup"><span data-stu-id="ecc47-124">For a value type, the implicit parameterless constructor also produces the default value of the type, as the following example shows:</span></span>
 
-```csharp
-int a = new int();
+```csharp-interactive
+var n = new System.Numerics.Complex();
+Console.WriteLine(n);  // output: (0, 0)
 ```
 
-<span data-ttu-id="eac59-144">Der Standardwert eines beliebigen [Verweistyps](reference-types.md) ist `null`.</span><span class="sxs-lookup"><span data-stu-id="eac59-144">The default value of any [reference type](reference-types.md) is `null`.</span></span> <span data-ttu-id="eac59-145">Der Standardwert eines [Nullable-Typs](../../programming-guide/nullable-types/index.md) ist eine Instanz, deren <xref:System.Nullable%601.HasValue%2A>-Eigenschaft `false` und die <xref:System.Nullable%601.Value%2A>-Eigenschaft nicht definiert ist.</span><span class="sxs-lookup"><span data-stu-id="eac59-145">The default value of a [nullable type](../../programming-guide/nullable-types/index.md) is an instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined.</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="ecc47-125">C#-Sprachspezifikation</span><span class="sxs-lookup"><span data-stu-id="ecc47-125">C# language specification</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="eac59-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eac59-146">See also</span></span>
+<span data-ttu-id="ecc47-126">Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md):</span><span class="sxs-lookup"><span data-stu-id="ecc47-126">For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):</span></span>
 
-- [<span data-ttu-id="eac59-147">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="eac59-147">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="eac59-148">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="eac59-148">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="eac59-149">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="eac59-149">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="eac59-150">Werttypen</span><span class="sxs-lookup"><span data-stu-id="eac59-150">Value types</span></span>](value-types.md)
-- [<span data-ttu-id="eac59-151">Tabelle der Werttypen</span><span class="sxs-lookup"><span data-stu-id="eac59-151">Value types table</span></span>](value-types-table.md)
-- [<span data-ttu-id="eac59-152">Tabelle integrierter Typen</span><span class="sxs-lookup"><span data-stu-id="eac59-152">Built-in types table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="ecc47-127">Standardwerte</span><span class="sxs-lookup"><span data-stu-id="ecc47-127">Default values</span></span>](~/_csharplang/spec/variables.md#default-values)
+- [<span data-ttu-id="ecc47-128">Standardkonstruktoren</span><span class="sxs-lookup"><span data-stu-id="ecc47-128">Default constructors</span></span>](~/_csharplang/spec/types.md#default-constructors)
+
+## <a name="see-also"></a><span data-ttu-id="ecc47-129">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ecc47-129">See also</span></span>
+
+- [<span data-ttu-id="ecc47-130">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="ecc47-130">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="ecc47-131">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="ecc47-131">C# keywords</span></span>](index.md)
+- [<span data-ttu-id="ecc47-132">Tabelle integrierter Typen</span><span class="sxs-lookup"><span data-stu-id="ecc47-132">Built-in types table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="ecc47-133">Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="ecc47-133">Constructors</span></span>](../../programming-guide/classes-and-structs/constructors.md)

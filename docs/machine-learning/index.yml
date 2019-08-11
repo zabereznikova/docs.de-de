@@ -29,10 +29,11 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Iris-Clustering mithilfe eines Clusteringlernmoduls – ML.NET</a>
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Erstellen eines Filmempfehlungssystems mit ML.NET</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Erstellen einer benutzerdefinierten ML.NET-Bildklassifizierung mit TensorFlow</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">Erkennen von Objekten in Bildern mit ONNX</a>
   - title: Referenz und Ressourcen
     items:
       - type: paragraph
-        text: 'Die ML.NET-API verfügt über zwei Sätze von Paketen: Freigabekomponenten und Vorschaukomponenten. Die API-Version enthält Komponenten für Datenverarbeitung, Algorithmen für die binäre Klassifizierung, Multiklassenklassifizierung, Regression, Anomalieerkennung und Rangfolge, Speichern und Laden des Modells und noch viel mehr! Die Vorschau-API enthält ONNX- und TensorFlow-Modellverarbeitung, Algorithmen für Empfehlungsaufgaben und Komponenten zum Verarbeiten von Zeitreihendaten.'
+        text: 'Die ML.NET-API verfügt über zwei Sätze von Paketen: Freigabekomponenten und Vorschaukomponenten. Die Release-API enthält Komponenten für die Datenverarbeitung, Algorithmen für die Binärklassifizierung, Multiklassenklassifizierung, Regression, Anomalieerkennung, Zeitreihen und Vorhersagen, Rangfolge, Modellspeicherungs- und -ladefunktionen, ONNX- und TensorFlow-Modellverarbeitung und vieles mehr! Die Vorschau-API enthält Algorithmen für Empfehlungsaufgaben sowie Unterstützung für Deep Learning-Standardmodelle.'
       - type: list
         style: unordered
         items:
