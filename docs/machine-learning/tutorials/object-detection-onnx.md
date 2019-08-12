@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/01/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3e5b6b482dfbd1ff06347883a93a561944200a9f
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733400"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868727"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: Erkennen von Objekten mithilfe von ONNX in ML.NET
 
@@ -344,7 +344,6 @@ Da nun die Klassen für Dimensionen und Begrenzungsrahmen erstellt wurden, ist e
     - `CELL_HEIGHT` ist die Höhe einer Zelle im Bildraster.
     - `channelStride` ist die Anfangsposition der aktuellen Zelle im Raster.
 
-
     Wenn das Modell ein Bild bewertet, teilt es die `416px x 416px`-Eingabe auf ein Raster von Zellen mit der Größe `13 x 13` auf. Jede enthaltene Zelle ist `32px x 32px` groß. In jeder Zelle sind fünf Begrenzungsrahmen enthalten, die jeweils fünf Merkmale enthalten (x, y, Breite, Höhe, Konfidenz). Außerdem enthält jeder Begrenzungsrahmen die Wahrscheinlichkeit der einzelnen Klassen (in diesem Fall ist sie 20). Daher enthält jede Zelle 125 Informationen (5 Merkmale und 20 Klassenwahrscheinlichkeiten). 
 
 Erstellen Sie eine Liste der Anker unter `channelStride` für alle 5 Begrenzungsrahmen:
@@ -654,7 +653,6 @@ Verwenden Sie darunter die `DrawBoundingBox`-Methode, um die Begrenzungsrahmen a
 Fügen Sie schließlich mit der `LogDetectedObjects`-Methode Protokollierungslogik hinzu.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
-
 
 Fügen Sie nach der try-catch-Anweisung zusätzliche Logik hinzu, um anzugeben, dass die Ausführung des Prozesses abgeschlossen wurde.
 

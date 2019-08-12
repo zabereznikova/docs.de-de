@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dc7653b1d792c66b40c0ab1d55a1614c7a69b7d1
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052785"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869060"
 ---
 # <a name="additional-resources"></a>Zusätzliche Ressourcen
 
@@ -23,40 +23,39 @@ Die folgenden Websites bieten Tipps und Hinweise und helfen Ihnen möglicherweis
 
 ### <a name="on-the-web"></a>Online
 
-|Begriff|Definition|
+|URL|BESCHREIBUNG|
 |----------|----------------|
 |[Visual Basic .NET-Sprachentwurf](https://github.com/dotnet/vblang)|Offizielles Repository auf Git-Hub für den Visual Basic .NET-Sprachentwurf.|
 |[Microsoft Visual Basic-Team-Blog](https://devblogs.microsoft.com/vbteam/)|Bietet Zugriff auf das Visual Basic-Team-Blog.|
 
 ### <a name="code-samples"></a>Codebeispiele
 
-|Begriff|Definition|
+|URL|BESCHREIBUNG|
 |----------|----------------|
-|[Codegalerie](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|Hier können Sie Beispielanwendungen und andere Ressourcen herunterladen und an die Entwickler-Community weitergeben.|
 |[Visual Basic– Dokumentationsbeispiele](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Enthält die Beispiele, die in der Visual Basic- und .NET-Dokumentation verwendet werden.|
 
 ### <a name="forums"></a>Foren
 
-|Begriff|Definition|
+|URL|BESCHREIBUNG|
 |----------|----------------|
 |[Visual Basic-Foren](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Hier werden allgemeine Visual Basic-Probleme besprochen.|
 
 ### <a name="videos-and-webcasts"></a>Videos und Webcasts
 
-|Begriff|Definition|
+|URL|BESCHREIBUNG|
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|Bietet eine dauerhafte Community anhand von Videos, Wikis und Foren.|
 
 ### <a name="support"></a>Support
 
-|Begriff|Definition|
+|URL|BESCHREIBUNG|
 |----------|----------------|
 |[Microsoft-Support](https://support.microsoft.com)|Bietet Zugriff auf Knowledge Base-Artikel, Downloads und Updates, Support-Webcasts und andere Dienste.|
 |[Fragen zu Visual Studio](https://developercommunity.visualstudio.com)|Ermöglicht das Übermitteln von Problemen oder Vorschlägen rund um Visual Studio und .NET an Microsoft. Sie können ein Problem in Visual Studio auch über **Hilfe** > **Feedback senden** > **Ein Problem melden** einreichen.|
 
 ## <a name="third-party-resources"></a>Ressourcen von Drittanbietern
 
-|Begriff|Definition|
+|URL|BESCHREIBUNG|
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|Ein Forum, in dem u.a. über Visual Basic und .NET gesprochen werden kann.|
 |[vbCity](http://vbcity.com/)|Eine Communitywebsite, auf der Benutzer Visual Basic und .NET kennenlernen und Fragen dazu stellen können.|

@@ -2,12 +2,12 @@
 title: Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 description: Die Microservicesarchitektur eignet sich nicht nur für das Back-End. Verschaffen Sie sich einen Einblick in der Verwendung für das Front-End.
 ms.date: 09/20/2018
-ms.openlocfilehash: 55cb2a8096cc8122c94cae50af4384e9392868cf
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0d1825d6183b79a0e10f70fc6cfee6ca79a837d8
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672997"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817831"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>Erstellen einer zusammengesetzten Benutzeroberfläche anhand von Microservices
 
@@ -43,7 +43,7 @@ Wir empfehlen Ihnen, sich in den folgenden Ressourcen weiter über die mithilfe 
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
 - **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture (Das monolithische Front-End in der Microservicesarchitektur)**  \
-  <https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/>
+  <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
 - **Mauro Servienti. The secret of better UI composition (Das Geheimnis besserer Benutzeroberflächenzusammenstellung)**  \
   <https://particular.net/blog/secret-of-better-ui-composition>
