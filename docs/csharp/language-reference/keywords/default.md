@@ -8,21 +8,22 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: d1ee9dc731f3cb96bd40935b94113c7c2aa91ff4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f64cab1f6666a0b6c6816eb0d6deeec21dcb454d
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183195"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796310"
 ---
-# <a name="default-c-reference"></a><span data-ttu-id="e6d0f-102">default (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="e6d0f-102">default (C# Reference)</span></span>
+# <a name="default-c-reference"></a><span data-ttu-id="9d07b-102">default (C#-Referenz)</span><span class="sxs-lookup"><span data-stu-id="9d07b-102">default (C# Reference)</span></span>
 
-<span data-ttu-id="e6d0f-103">Das `default`-Schlüsselwort kann auf zwei Arten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="e6d0f-103">The `default` keyword can be used in two ways:</span></span>
-- <span data-ttu-id="e6d0f-104">Die [`switch`-Anweisung](switch.md) zum Angeben der Standardbezeichnung.</span><span class="sxs-lookup"><span data-stu-id="e6d0f-104">The [`switch` statement](switch.md) to specify the default label.</span></span>
-- <span data-ttu-id="e6d0f-105">Ein [Standardwertausdruck](../../programming-guide/statements-expressions-operators/default-value-expressions.md) zum Erzeugen des Standardwerts für einen Typ.</span><span class="sxs-lookup"><span data-stu-id="e6d0f-105">A [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type.</span></span>
+<span data-ttu-id="9d07b-103">Das `default`-Schlüsselwort kann auf zwei Arten verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="9d07b-103">The `default` keyword can be used in two ways:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e6d0f-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e6d0f-106">See also</span></span>
+- <span data-ttu-id="9d07b-104">Zum Angeben der Standardbezeichnung in der [`switch`-Anweisung](switch.md).</span><span class="sxs-lookup"><span data-stu-id="9d07b-104">To specify the default label in the [`switch` statement](switch.md).</span></span>
+- <span data-ttu-id="9d07b-105">Als [Standardoperator oder -literal](../operators/default.md) zum Erzeugen des Standardwerts eines Typs.</span><span class="sxs-lookup"><span data-stu-id="9d07b-105">As the [default operator or literal](../operators/default.md) to produce the default value of a type.</span></span>
 
-- [<span data-ttu-id="e6d0f-107">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="e6d0f-107">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="e6d0f-108">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="e6d0f-108">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="e6d0f-109">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="e6d0f-109">C# Keywords</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="9d07b-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9d07b-106">See also</span></span>
+
+- [<span data-ttu-id="9d07b-107">C#-Referenz</span><span class="sxs-lookup"><span data-stu-id="9d07b-107">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="9d07b-108">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="9d07b-108">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="9d07b-109">C#-Schlüsselwörter</span><span class="sxs-lookup"><span data-stu-id="9d07b-109">C# Keywords</span></span>](index.md)
