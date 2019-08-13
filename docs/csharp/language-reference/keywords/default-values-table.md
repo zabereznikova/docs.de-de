@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 23fba8269670156000cb68b3aa07ae7c770eada1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d9889ce389eed73a9af0a3f72dcca6ec476cae15
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627744"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796502"
 ---
 # <a name="default-values-table-c-reference"></a>Tabelle für Standardwerte (C#-Referenz)
 
@@ -28,13 +28,13 @@ In der folgenden Tabelle werden die Standardwerte von C#-Typen gezeigt:
 |[struct](struct.md)|Der Wert, der erzeugt wird, indem alle Werttypfelder auf ihre Standardwerte festgelegt werden und alle Verweistypfelder auf `null`.|
 |Ein [Werttyp, der NULL-Werte zulässt](../../programming-guide/nullable-types/index.md).|Eine Instanz, für die die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft `false` und die <xref:System.Nullable%601.Value%2A>-Eigenschaft nicht definiert ist. Dieser Standardwert wird auch als *NULL*-Wert des Werttyps bezeichnet, der NULL-Werte zulässt.|
 
-Verwenden Sie den [Standardwertausdruck](../../programming-guide/statements-expressions-operators/default-value-expressions.md), um den Standardwert eines Typs wie im folgenden Beispiel zu erzeugen:
+Verwenden Sie den [default-Operator](../operators/default.md), um wie im folgenden Beispiel den Standardwert eines Typs zu erzeugen:
 
 ```csharp
 int a = default(int);
 ```
 
-Ab C# 7.1 können Sie das [`default`-Literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) verwenden, um eine Variable mit dem Standardwert des Typs zu initialisieren:
+Ab C# 7.1 können Sie das [`default`-Literal](../operators/default.md#default-literal) verwenden, um eine Variable mit dem Standardwert des Typs zu initialisieren:
 
 ```csharp
 int a = default;

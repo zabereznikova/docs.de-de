@@ -2,12 +2,12 @@
 title: Verwaltung der C#-Sprachversion – Leitfaden für C#
 description: Hier erfahren Sie, wie die C#-Sprachversion basierend auf Ihrem Projekt bestimmt wird, und Sie lernen die verschiedenen Werte kennen, die Sie manuell an die Sprachversion anpassen können.
 ms.date: 07/10/2019
-ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236096"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796534"
 ---
 # <a name="c-language-versioning"></a>Verwaltung der C#-Sprachversion
 
@@ -28,7 +28,7 @@ Der Compiler bestimmt basierend auf den folgenden Regeln eine Standardversion:
 
 Wenn Ihr Projekt auf eine Vorschauframework abzielt, das eine entsprechende Vorschausprachversion besitzt, wird die Vorschausprachversion als Sprachversion verwendet. Damit wird sichergestellt, dass Sie die neuesten Features verwenden können, die garantiert mit dieser Vorschauversion in jeder Umgebung funktionieren ohne Auswirkungen auf Ihre Projekte, die auf eine freigegebene .NET Core-Version abzielen.
 
-## <a name="overriding-a-default"></a>Überschreiben eines Standardwerts
+## <a name="override-a-default"></a>Überschreiben eines Standardwerts
 
 Wenn Sie Ihre C#-Version explizit angeben müssen, haben Sie verschiedene Möglichkeiten:
 
@@ -38,7 +38,7 @@ Wenn Sie Ihre C#-Version explizit angeben müssen, haben Sie verschiedene Mögli
 
 ### <a name="edit-the-project-file"></a>Bearbeiten der Projektdatei
 
-Sie können die Sprachversion in der Projektdatei festlegen. Wenn Sie beispielsweise expliziten Zugriff auf Previewfunktionen wünschen, können Sie ein Element wie folgt hinzufügen:
+Sie können die Sprachversion in der Projektdatei festlegen. Wenn Sie beispielsweise expliziten Zugriff auf Previewfunktionen wünschen, fügen Sie ein Element wie folgt hinzu:
 
 ```xml
 <PropertyGroup>
@@ -46,7 +46,7 @@ Sie können die Sprachversion in der Projektdatei festlegen. Wenn Sie beispielsw
 </PropertyGroup>
 ```
 
-Der Wert `preview` verwendet die neueste verfügbare C#-Vorschausprache, die Ihr Compiler unterstützt.
+Der Wert `preview` verwendet die neueste verfügbare Vorschauversion der Sprache C#, die Ihr Compiler unterstützt.
 
 ### <a name="configure-multiple-projects"></a>Konfigurieren mehrerer Projekte
 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363789"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868835"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Verwenden von Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der ähnlich einem Funktionszeiger in C und C++ eine Methode sicher kapselt. Im Gegensatz zu C-Funktionszeigern sind Delegate objektorientiert, typsicher und sicher. Der Typ eines Delegaten wird durch den Namen des Delegaten definiert. Im folgenden Beispiel wird ein Delegat mit dem Namen `Del` deklariert, der eine Methode kapseln kann, die eine [Zeichenfolge](../../../csharp/language-reference/keywords/string.md) als Argument übernimmt und [void](../../../csharp/language-reference/keywords/void.md) zurückgibt:  
@@ -49,7 +49,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
  [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]  
   
- Zu diesem Zeitpunkt enthält `allMethodsDelegate` drei Methoden in der Aufrufliste: `Method1`, `Method2` und `DelegateMethod`. Die ursprünglichen drei Delegaten, `d1`, `d2` und `d3`, bleiben unverändert. Wenn `allMethodsDelegate` aufgerufen wird, werden alle drei Methoden nacheinander aufgerufen. Wenn der Delegat Verweisparameter verwendet, wird der Verweis wiederum nacheinander an jede der drei Methoden übergeben, und alle Änderungen einer Methode sind für die nächste Methode sichtbar. Wenn eine der Methoden eine Ausnahme auslöst, die nicht innerhalb der Methode abgefangen wird, wird diese Ausnahme an den Aufrufer des Delegaten übergeben und keine der nachfolgenden Methoden in der Aufrufliste wird aufgerufen. Wenn der Delegat über einen Rückgabewert und/oder out-Parameter verfügt, gibt er den Rückgabewert und die Parameter der letzten aufgerufenen Methode zurück. Entfernen Sie eine Methode aus der Aufrufliste, indem Sie den Subtraktions- oder Subtraktionszuweisungsoperator ('-' oder '-=') verwenden. Beispiel:  
+ Zu diesem Zeitpunkt enthält `allMethodsDelegate` drei Methoden in der Aufrufliste: `Method1`, `Method2` und `DelegateMethod`. Die ursprünglichen drei Delegaten, `d1`, `d2` und `d3`, bleiben unverändert. Wenn `allMethodsDelegate` aufgerufen wird, werden alle drei Methoden nacheinander aufgerufen. Wenn der Delegat Verweisparameter verwendet, wird der Verweis wiederum nacheinander an jede der drei Methoden übergeben, und alle Änderungen einer Methode sind für die nächste Methode sichtbar. Wenn eine der Methoden eine Ausnahme auslöst, die nicht innerhalb der Methode abgefangen wird, wird diese Ausnahme an den Aufrufer des Delegaten übergeben und keine der nachfolgenden Methoden in der Aufrufliste wird aufgerufen. Wenn der Delegat über einen Rückgabewert und/oder out-Parameter verfügt, gibt er den Rückgabewert und die Parameter der letzten aufgerufenen Methode zurück. Um eine Methode aus der Aufrufliste zu entfernen, verwenden Sie die [Subtraktions- oder Subtraktionszuweisungsoperatoren](../../language-reference/operators/subtraction-operator.md) (`-` oder `-=`). Beispiel:  
   
  [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]  
   

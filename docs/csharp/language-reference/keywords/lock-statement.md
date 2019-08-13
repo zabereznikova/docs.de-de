@@ -1,5 +1,5 @@
 ---
-title: lock-Anweisung – C#-Referenz
+title: 'lock-Anweisung: C#-Referenz'
 ms.custom: seodec18
 description: Verwenden Sie die lock-Anweisung von C#, um den Threadzugriff auf eine freigegebene Ressource zu synchronisieren.
 ms.date: 10/01/2018
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306652"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796452"
 ---
 # <a name="lock-statement-c-reference"></a>lock-Anweisung (C#-Referenz)
 
@@ -65,7 +65,7 @@ Im folgenden Beispiel wird eine `Account`-Klasse definiert, die den Zugriff auf 
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Weitere Informationen finden Sie im Abschnitt [Die lock-Anweisung](~/_csharplang/spec/statements.md#the-lock-statement) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -74,5 +74,4 @@ Im folgenden Beispiel wird eine `Account`-Klasse definiert, die den Zugriff auf 
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
 - [C#-Referenz](../index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Anweisungsschlüsselwörter](statement-keywords.md)
 - [Übersicht über Synchronisierungsprimitiven](../../../standard/threading/overview-of-synchronization-primitives.md)

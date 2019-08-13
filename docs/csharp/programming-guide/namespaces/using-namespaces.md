@@ -8,17 +8,19 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: bf194e207262ecea0511a0b67bbafeadd8d5d31d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 06ebb9edfaf4753b98c3305a90b52e93ee7b4486
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629493"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796636"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Verwenden von Namespaces (C#-Programmierhandbuch)
+
 Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwendet. Erstens: Die .NET Framework-Klassen verwenden Namespaces, um ihre zahlreichen Klassen zu organisieren. Zweitens: Eigene Namespaces zu deklarieren kann Ihnen dabei helfen, den Umfang der Klassen- und Methodennamen in größeren Programmierprojekten zu steuern.  
   
-## <a name="accessing-namespaces"></a>Zugriff auf Namespaces  
+## <a name="accessing-namespaces"></a>Zugriff auf Namespaces
+
  Die meisten C#-Anwendungen beginnen mit einem Abschnitt von `using`-Anweisungen. Dieser Abschnitt enthält die von der Anwendung häufig verwendeten Namespaces und erspart dem Programmierer die Angabe eines vollqualifizierten Namens bei jedem Verwenden einer enthaltenen Methode.  
   
  Z.B. durch das Einfügen der Zeile  
@@ -33,17 +35,20 @@ Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwende
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
-## <a name="namespace-aliases"></a>Namespacealiase  
- Die [using-Anweisungen](../../../csharp/language-reference/keywords/using-directive.md) kann auch zum Erstellen eines Alias für einen [Namespace](../../../csharp/language-reference/keywords/namespace.md) verwendet werden. Wenn Sie einen bereits vorhandenen Namespace verwenden, der geschachtelte Namespaces enthält, können Sie einen Alias deklarieren, als schnelle Möglichkeit um auf einen bestimmten geschachtelten Namespace zu verweisen, wie im folgenden Beispiel gezeigt:  
+## <a name="namespace-aliases"></a>Namespacealiase
+
+ Sie können auch die [`using`-Anweisung](../../language-reference/keywords/using-directive.md) verwenden, um einen Alias für einen Namespace zu erstellen. Verwenden Sie [den Namespacealias-Qualifizierer`::`](../../language-reference/operators/namespace-alias-qualifier.md), um auf die Member des Namespace mit Alias zuzugreifen. Im folgenden Beispiel wird gezeigt, wie ein Namespacealias erstellt und verwendet wird:
   
- [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
+[!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
-## <a name="using-namespaces-to-control-scope"></a>Verwenden von Namespaces zur Steuerung des Gültigkeitsbereichs  
+## <a name="using-namespaces-to-control-scope"></a>Verwenden von Namespaces zur Steuerung des Gültigkeitsbereichs
+
  Mit dem Schlüsselwort `namespace` wird ein Bereich deklariert. Die Möglichkeit zum Erstellen von Bereichen innerhalb des Projekts, hilft Ihnen den Code zu organisieren und ermöglicht Ihnen die Erstellung von global eindeutigen Typen. Im folgenden Beispiel, wird eine Klasse mit dem Titel `SampleClass` in zwei ineinander geschachtelten Namespaces definiert. Der [Operator `.` für den Memberzugriff](../../language-reference/operators/member-access-operators.md#member-access-operator-) wird verwendet, um zu unterscheiden, welche Methode aufgerufen wird.  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
-## <a name="fully-qualified-names"></a>Vollqualifizierte Namen  
+## <a name="fully-qualified-names"></a>Vollqualifizierte Namen
+
  Namespaces und Typen verfügen über eindeutige durch den vollqualifizierten Namen, die eine logische Hierarchie an. Beispielsweise impliziert die Anweisung `A.B`, dass `A` der Name des Namespaces oder des Typs ist und, dass `B` darin geschachtelt ist.  
   
  Im folgenden Beispiel gibt es geschachtelte Klassen und Namespaces. Der vollqualifizierte Name ist als Kommentar angegeben, der auf jede Entität folgt.  
@@ -92,6 +97,6 @@ Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwende
 
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
-- [. Operator](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
+- [.-Operator](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
+- [::-Operator](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
 - [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)
