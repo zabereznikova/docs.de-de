@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file extensions [WPF], registering
 - registering MIME types [WPF]
 ms.assetid: c6e8c2cb-9ba2-4e75-a0d5-180ec9639433
-ms.openlocfilehash: a1e58aef6d02b6cf05a126b6afd25ab2a6004002
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 3179679abcf32e40374c7f02e64466a326a73195
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972291"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69013023"
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen
 
@@ -128,7 +128,7 @@ End Sub
 > [!NOTE]
 > Wenn Sie dieses Skript mehrmals ausführen, werden mehrere MIME-Zuordnungs [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] Einträge in der [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] -oder-Metabase erstellt.
 
-Nachdem Sie dieses Skript ausgeführt haben, werden möglicherweise keine zusätzlichen MIME-Typen aus [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] der [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] oder [!INCLUDE[TLA#tla_mmc](../../../../includes/tlasharptla-mmc-md.md)]angezeigt. Diese MIME-Typen wurden jedoch der [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] -oder [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] -Metabase hinzugefügt. Im folgenden Skript werden alle MIME-Typen in der [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] -oder [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] -Metabase angezeigt.
+Nachdem Sie dieses Skript ausgeführt haben, werden möglicherweise keine weiteren MIME-Typen aus [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] der [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] oder Microsoft Management Console (MMC) angezeigt. Diese MIME-Typen wurden jedoch der [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] -oder [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] -Metabase hinzugefügt. Im folgenden Skript werden alle MIME-Typen in der [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] -oder [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] -Metabase angezeigt.
 
 ```vb
 ' This script lists the MIME types for an IIS Server.
