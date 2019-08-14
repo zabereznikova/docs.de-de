@@ -2,12 +2,12 @@
 title: Befehl „dotnet restore“
 description: Erfahren Sie mehr über das Wiederherstellen von Abhängigkeiten und projektspezifischen Tools mit dem Befehl dotnet-restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613969"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626356"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -37,19 +37,35 @@ dotnet restore [-h|--help]
 
 ---
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
 Der Befehl `dotnet restore` verwendet NuGet zum Wiederherstellen von Abhängigkeiten sowie projektspezifischen Tools, die in der Projektdatei angegeben sind. Die Wiederherstellung von Abhängigkeiten und Tools wird standardmäßig parallel ausgeführt.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Zum Wiederherstellen der Abhängigkeiten benötigt NuGet die Feeds, wo sich die Pakete befinden. Feeds werden in der Regel über die Konfigurationsdatei *NuGet.config* bereitgestellt. Eine standardmäßige Konfigurationsdatei wird bereitgestellt, wenn die CLI-Tools installiert sind. Sie geben zusätzliche Feeds an, indem Sie eine eigene *NuGet.config*-Datei im Projektverzeichnis erstellen. Sie können auch zusätzliche Feeds pro Aufruf an der Eingabeaufforderung angeben.
+Zum Wiederherstellen der Abhängigkeiten benötigt NuGet die Feeds, wo sich die Pakete befinden. Feeds werden normalerweise über die *nuget.config*-Konfigurationsdatei bereitgestellt. Eine standardmäßige Konfigurationsdatei wird bereitgestellt, wenn die CLI-Tools installiert sind. Sie geben zusätzliche Feeds an, indem Sie eine eigene *nuget.config*-Datei im Projektverzeichnis erstellen. Sie können auch zusätzliche Feeds pro Aufruf an der Eingabeaufforderung angeben.
 
 Für Abhängigkeiten geben Sie mithilfe des Arguments `--packages` an, wo die wiederhergestellten Pakete während der Wiederherstellung platziert werden. Wenn nichts angegeben wurde, wird der Standardcache des NuGet-Pakets verwendet. Er befindet sich im Verzeichnis `.nuget/packages` im Basisverzeichnis des Benutzers auf allen Betriebssystemen. Zum Beispiel */home/user1* unter Linux oder *C:\Users\user1* unter Windows.
 
 Für projektspezifische Tools stellt `dotnet restore` zunächst das Paket wieder her, in dem sich das Tool befindet, und danach die Abhängigkeiten des Tools gemäß seiner Projektdatei.
 
-Das Verhalten des Befehls `dotnet restore` wird durch einige Einstellungen in der *NuGet.Config*-Datei (falls vorhanden) beeinflusst. Das Festlegen von `globalPackagesFolder` in *NuGet.Config* platziert z.B. die wiederhergestellten NuGet-Pakete in den angegebenen Ordner. Dies ist eine Alternative zur Angabe der Option `--packages` im `dotnet restore`-Befehl. Weitere Informationen finden Sie im [NuGet.Config-Referenzthema](/nuget/schema/nuget-config-file).
+### <a name="nugetconfig-differences"></a>Unterschiede bei „nuget.config“
+
+Das Verhalten des Befehls `dotnet restore` wird durch Einstellungen in der *nuget.config*-Datei (falls vorhanden) beeinflusst. Das Festlegen von `globalPackagesFolder` in *nuget.config* platziert z. B. die wiederhergestellten NuGet-Pakete in den angegebenen Ordner. Dies ist eine Alternative zur Angabe der Option `--packages` im `dotnet restore`-Befehl. Weitere Informationen finden Sie in der [Referenz zu „nuget.config“](/nuget/schema/nuget-config-file).
+
+Es gibt drei bestimmte Einstellungen, die von `dotnet restore` ignoriert werden:
+
+* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+
+  Bindungsumleitungen funktionieren nicht mit `<PackageReference>`-Elementen, und .NET Core unterstützt nur `<PackageReference>`-Elemente für NuGet-Pakete.
+
+* [solution](/nuget/schema/nuget-config-file#solution-section)
+
+  Diese Einstellung ist spezifisch für Visual Studio und gilt nicht für .NET Core. .NET Core verwendet keine `packages.config`-Datei, aber stattdessen `<PackageReference>`-Elemente für NuGet-Pakete.
+
+* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+
+  Diese Einstellung ist nicht anwendbar, da [NuGet noch keine plattformübergreifende Überprüfung](https://github.com/NuGet/Home/issues/7939) vertrauenswürdiger Pakete unterstützt.
 
 ## <a name="implicit-dotnet-restore"></a>Impliziter `dotnet restore`
 
@@ -79,7 +95,7 @@ Optionaler Pfad zur wiederherzustellenden Projektdatei.
 
 `--configfile <FILE>`
 
-Die NuGet-Konfigurationsdatei (*NuGet.config*) für den Wiederherstellungsvorgang.
+Die NuGet-Konfigurationsdatei (*nuget.config*) für den Wiederherstellungsvorgang.
 
 `--disable-parallel`
 
@@ -115,7 +131,7 @@ Gibt eine Laufzeit für die Wiederherstellung des Pakets an. Wird für das Wiede
 
 `-s|--source <SOURCE>`
 
-Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu verwenden ist. Diese Einstellung überschreibt alle Quellen, die in den *NuGet.config*-Dateien angegeben sind. Es können mehrere Quellen bereitgestellt werden, indem diese Option mehrmals angegeben wird.
+Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu verwenden ist. Diese Einstellung überschreibt alle Quellen, die in den *nuget.config*-Dateien angegeben sind. Es können mehrere Quellen bereitgestellt werden, indem diese Option mehrmals angegeben wird.
 
 `--verbosity <LEVEL>`
 
@@ -129,7 +145,7 @@ Ermöglicht dem Befehl, anzuhalten und auf Benutzereingaben oder Aktionen zu war
 
 `--configfile <FILE>`
 
-Die NuGet-Konfigurationsdatei (*NuGet.config*) für den Wiederherstellungsvorgang.
+Die NuGet-Konfigurationsdatei (*nuget.config*) für den Wiederherstellungsvorgang.
 
 `--disable-parallel`
 
@@ -161,7 +177,7 @@ Gibt eine Laufzeit für die Wiederherstellung des Pakets an. Wird für das Wiede
 
 `-s|--source <SOURCE>`
 
-Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu verwenden ist. Dies überschreibt alle Quellen, die in den *NuGet.config*-Dateien angegeben sind. Es können mehrere Quellen bereitgestellt werden, indem diese Option mehrmals angegeben wird.
+Gibt eine NuGet-Paketquelle an, die während des Wiederherstellungsvorgangs zu verwenden ist. Dies überschreibt alle Quellen, die in den *nuget.config*-Dateien angegeben sind. Es können mehrere Quellen bereitgestellt werden, indem diese Option mehrmals angegeben wird.
 
 `--verbosity <LEVEL>`
 

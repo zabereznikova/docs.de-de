@@ -6,12 +6,12 @@ title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589991"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972387"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -309,7 +309,7 @@ ms.locfileid: "65589991"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589991"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Was ist ASP.NET?</h3>
-                                                    <p>Erfahren Sie, wie ASP.NET-Webanwendungen erstellt werden.</p>
+                                                    <h3>Was ist ASP.NET Core?</h3>
+                                                    <p>Erfahren Sie, wie ASP.NET Core-Webanwendungen erstellt werden.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,7 +453,7 @@ ms.locfileid: "65589991"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Mobile</a>
+                        <a href="#mobile">Mobil</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">

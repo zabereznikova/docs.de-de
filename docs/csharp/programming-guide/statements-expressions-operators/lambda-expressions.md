@@ -1,7 +1,7 @@
 ---
 title: Lambdaausdrücke – C#-Programmierhandbuch
 ms.custom: seodec18
-ms.date: 03/14/2019
+ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,38 +9,44 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 36dab520d67d08d1b3304f1453bfb2c07a2f1c32
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363909"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671704"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambdaausdrücke (C#-Programmierhandbuch)
 
-Ein *Lambdaausdruck* ist ein Codeblock (bzw. ein Ausdrucks- oder ein Anweisungsblock), der wie ein Objekt behandelt wird. Er kann als Argument an eine Methode übergeben werden, und er kann auch von Methodenaufrufen zurückgegeben werden. Lambdaausdrücke finden bei folgenden Aktionen Anwendung:
+Ein *Lambdaausdruck* ist ein Ausdruck in einer der beiden folgenden Formen:
 
-- Bei der Übergabe von Code, der als asynchrone Methode ausgeführt wird, wie z.B. <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>.
+- Ein [Ausdruckslambda](#expression-lambdas) mit einem Ausdruck als Text:
 
-- Bei [LINQ-Abfrageausdrücken](../../linq/index.md).
+  ```csharp
+  (input-parameters) => expression
+  ```
 
-- Bei Erstellen von [Ausdrucksbaumstrukturen](../concepts/expression-trees/index.md).
+- Ein [Anweisungslambda](#statement-lambdas) mit einem Anweisungsblock als Text:
 
-Lambdaausdrücke sind Code, der entweder als Delegat oder als eine Ausdrucksbaumstruktur repräsentiert werden kann, die an einen Delegat kompiliert. Der genaue Delegattyp eines Lambdaausdrucks hängt von dessen Parametern und Rückgabewert ab. Lambdaausdrücke, die keinen Wert zurückgeben, korrespondieren mit einem bestimmten `Action`-Delegat, abhängig von der Anzahl seiner Parameter. Lambdaausdrücke, die keinen Wert zurückgeben, entsprechen einem bestimmten `Func`-Delegat, abhängig von der Anzahl seiner Parameter. Ein Lambdaausdruck, der beispielsweise zwei Parameter hat, aber einen Wert zurückgibt, entspricht einem <xref:System.Action%602>-Delegat. Ein Lambdaausdruck, der beispielsweise zwei Parameter hat, aber einen Wert zurückgibt, entspricht einem <xref:System.Func%602>-Delegat.
+  ```csharp  
+  (input-parameters) => { <sequence-of-statements> }
+  ```
 
-Ein Lambdaausdruck verwendet `=>`, den [Lambdadeklarationsoperator](../../language-reference/operators/lambda-operator.md), um die Parameterliste des Lambdas von dessen ausführbarem Code zu trennen. Zum Erstellen eines Lambdaausdrucks geben Sie Eingabeparameter (falls vorhanden) auf der linken Seite des Lambdaoperators an und stellen den Ausdrucks- oder Anweisungsblock auf die andere Seite. Beispielsweise gibt der Einzelzeilen-Lambdaausdruck `x => x * x` einen Parameter an, der `x` heißt und das Quadrat des Werts von `x` zurückgibt. Dieser Ausdruck kann einem Delegattyp zuwiesen werden, wie im folgenden Beispiel dargestellt:
+Verwenden Sie den [Lambdadeklarationsoperator `=>`](../../language-reference/operators/lambda-operator.md), um die Parameterliste des Lambdas von dessen Text zu trennen. Geben Sie zum Erstellen eines Lambdaausdrucks Eingabeparameter (falls vorhanden) auf der linken Seite des Lambdaoperators und einen Ausdruck oder Anweisungsblock auf der anderen Seite an.
+
+Jeder Lambdaausdruck kann in einen [Delegat](../../language-reference/builtin-types/reference-types.md#the-delegate-type)-Typ konvertiert werden. Der Delegattyp, in den ein Lambdaausdruck konvertiert werden kann, wird durch die Typen seiner Parameter und Rückgabewerte definiert. Wenn ein Lambdaausdruck keinen Wert zurückgibt, kann er in einen der `Action`-Delegattypen konvertiert werden. Andernfalls kann er in einen der `Func`-Delegattypen konvertiert werden. Ein Lambdaausdruck, der beispielsweise zwei Parameter hat und keinen Wert zurückgibt, kann in einen <xref:System.Action%602>-Delegat konvertiert werden. Außerdem kann ein Lambdaausdruck, der einen Parameter hat und einen Wert zurückgibt, in einen <xref:System.Func%602>-Delegat konvertiert werden. Im folgenden Beispiel wird der Lambdaausdruck `x => x * x`, der einen Parameter `x` angibt und den Wert von `x` im Quadrat zurückgibt, einer Variablen eines Delegattyps zugewiesen:
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-Sie können auch einen Lambdaausdruck einer Ausdrucksbaumstruktur zuweisen:
+Zudem lassen sich Ausdruckslambdas in [Ausdrucksbaumstruktur](../concepts/expression-trees/index.md)-Typen konvertieren, wie im folgenden Beispiel gezeigt:
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-Sie können ihn aber auch als Methodenargument übergeben:
+Sie können Lambdaausdrücke in jedem Code verwenden, der Instanzen von Delegattypen oder Ausdrucksbaumstrukturen erfordert, z.B. als Argument für die <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType>-Methode, um den im Hintergrund auszuführenden Code zu übergeben. Beim Schreiben von [LINQ-Abfrageausdrücken](../../linq/index.md) können Sie ebenfalls Lambdaausdrücke verwenden, wie im folgenden Beispiel gezeigt:
 
-[!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
+[!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-Wenn Sie zum Aufrufen der <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType>-Methode in der <xref:System.Linq.Enumerable?displayProperty=nameWithType>-Klasse methodenbasierte Syntax verwenden (wie in LINQ to Objects und LINQ to XML), ist der Parameter ein Delegattyp <xref:System.Func%602?displayProperty=nameWithType>. Ein Lambda-Ausdruck ist die einfachste Möglichkeit zum Erstellen dieses Delegaten. Wenn Sie die <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>-Methode in der <xref:System.Linq.Queryable?displayProperty=nameWithType>-Klasse aufrufen (wie in LINQ to SQL) ist der Parametertyp ein Ausdrucksbaumstruktur-Typ [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>). Wie gesagt, ein Lambda-Ausdruck ist eine sehr präzise Methode, diese Ausdrucksbaumstruktur zu erstellen. Durch die Lambdas können die `Select` -Aufrufe ähnlich aussehen, obwohl sich der mithilfe des Lambdas erstellte Objekttyp unterscheidet.
+Wenn Sie zum Aufrufen der <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType>-Methode in der <xref:System.Linq.Enumerable?displayProperty=nameWithType>-Klasse methodenbasierte Syntax verwenden, wie in LINQ to Objects und LINQ to XML, ist der Parameter ein Delegattyp <xref:System.Func%602?displayProperty=nameWithType>. Wenn Sie die <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>-Methode in der <xref:System.Linq.Queryable?displayProperty=nameWithType>-Klasse aufrufen, wie in LINQ to SQL, ist der Parametertyp ein Ausdrucksbaumstruktur-Typ [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>). In beiden Fällen können Sie denselben Lambdaausdruck verwenden, um die Parameterwerte anzugeben. Dadurch sehen die `Select`-Aufrufe ähnlich aus, obwohl sich der mithilfe der Lambdas erstellte Objekttyp unterscheidet.
   
 ## <a name="expression-lambdas"></a>Ausdruckslambdas
 
@@ -73,7 +79,7 @@ Der Text eines Ausdruckslambdas kann aus einem Methodenaufruf bestehen. Wenn Sie
 Ein Anweisungslambda ähnelt einem Ausdruckslambda, allerdings sind die Anweisungen in Klammern eingeschlossen:
 
 ```csharp  
-(input-parameters) => { statement; }
+(input-parameters) => { <sequence-of-statements> }
 ```
 
 Der Text eines Anweisungslambdas kann aus einer beliebigen Anzahl von Anweisungen bestehen, wobei es sich meistens um höchstens zwei oder drei Anweisungen handelt.
