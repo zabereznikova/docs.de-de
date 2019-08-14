@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434079"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971811"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "68434079"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Wird für Steuerelemente verwendet, deren Zustand umgeschaltet werden kann. Beispielsweise Kontrollkästchen und aktivierbare Menüeinträge.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Wird für Steuerelemente verwendet, die in der Größe geändert, verschoben und gedreht werden können. Typische Einsatzfälle für das Transform-Steuerelementmuster sind Designer, Formulare, Grafik-Editoren und Zeichnungsanwendung.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Ermöglicht Clients das Abrufen oder Festlegen eines Werts für ein Steuerelement, das keinen Wertebereich unterstützt. Beispielsweise eine Datums-/Zeitauswahl.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Macht fensterspezifische Informationen verfügbar. Dies ist ein grundlegendes Konzept für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Zu den Beispielen für Steuerelemente, die Fenster sind, gehören Anwendungsfenster der obersten Ebene ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]usw.), untergeordnete [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] -Fenster und Dialogfelder.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Macht fensterspezifische Informationen verfügbar. Dies ist ein grundlegendes Konzept für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Beispiele für Steuerelemente, die Fenster sind, sind Anwendungsfenster der[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]obersten [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]Ebene (, usw.), untergeordnete MDI-Fenster (Multiple Document Interface) und Dialogfelder.|  
   
 ## <a name="see-also"></a>Siehe auch
 

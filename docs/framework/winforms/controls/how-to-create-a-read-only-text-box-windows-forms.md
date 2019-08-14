@@ -6,30 +6,31 @@ helpviewer_keywords:
 - read-only text boxes
 - text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
-ms.openlocfilehash: 72dc188993474ad4b39f0cfa74cadffdb99ff46f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18d2f5ed2530957487ac25c3eb6240f8bc50a938
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746832"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971944"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>Vorgehensweise: Erstellen eines schreibgeschützten Textfelds (Windows Forms)
-Sie können ein bearbeitbares Windows Forms-Text-Feld in ein schreibgeschütztes Steuerelement umwandeln. Beispielsweise kann im Textfeld einen Wert angezeigt, der in der Regel bearbeitet wird, aber möglicherweise nicht aktuell, aufgrund des Zustands der Anwendung.  
-  
-### <a name="to-create-a-read-only-text-box"></a>Erstellen ein schreibgeschützten Textfelds  
-  
-1. Legen Sie die <xref:System.Windows.Forms.TextBox> des Steuerelements <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> Eigenschaft `true`. Die Eigenschaft auf festgelegt `true`, Benutzer können weiterhin scrollen und Hervorheben von Text in einem Textfeld ohne Änderungen. Ein **Kopie** Befehl funktioniert in einem Textfeld, aber **Ausschneiden** und **einfügen** Befehle sind nicht.  
-  
+
+Sie können eine bearbeitbare Windows Forms Textfeld in ein Schreib geschütztes Steuerelement umwandeln. Beispielsweise kann im Textfeld ein Wert angezeigt werden, der normalerweise bearbeitet wird, aber aufgrund des Status der Anwendung möglicherweise nicht aktuell ist.
+
+## <a name="to-create-a-read-only-text-box"></a>So erstellen Sie ein Schreib geschütztes Textfeld
+
+1. Legen Sie <xref:System.Windows.Forms.TextBox> die- <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> Eigenschaft des `true`-Steuer Elements auf fest. Wenn die-Eigenschaft auf `true`festgelegt ist, können Benutzer einen Bildlauf durchführen und Text in einem Textfeld hervorheben, ohne Änderungen zuzulassen. Ein **Kopier** Befehl ist in einem Textfeld funktionsfähig, **Ausschneide** -und **Einfüge** Befehle hingegen nicht.
+
     > [!NOTE]
-    >  Die <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> Eigenschaft wirkt sich nur auf eine Benutzerinteraktion bei der Ausführung. Sie können weiterhin textfeldinhalte programmgesteuert ändern zur Laufzeit durch Ändern der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft des Textfelds.  
-  
+    > Die <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> -Eigenschaft wirkt sich nur auf die Benutzerinteraktion zur Laufzeit aus. Text Feldinhalte können zur Laufzeit weiterhin Programm gesteuert geändert werden, indem Sie die <xref:System.Windows.Forms.TextBox.Text%2A> -Eigenschaft des Textfelds ändern.
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Steuern der Einfügemarke in einem Windows Forms TextBox-Steuerelement](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Vorgehensweise: Textfeld "Kennwort" mit dem Windows Forms TextBox-Steuerelement erstellen](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Anführungszeichen in eine Zeichenfolge einfügen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Vorgehensweise: Text im TextBox-Steuerelement Windows Forms auswählen](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox-Steuerelement](textbox-control-windows-forms.md)

@@ -8,45 +8,46 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 6bdf7c3df0ffd97dd88a4c442a8a73593a0447ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d95d5baafa42c7dea40933ba837b684d90b7b2b
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941062"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972373"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>Vorgehensweise: Laden eines Bilds mithilfe des Designers (Windows Forms)
-Mit der Windows Forms <xref:System.Windows.Forms.PictureBox> -Steuerelement, können Sie laden und anzeigen ein Bilds auf einem Formular zur Entwurfszeit durch Festlegen der <xref:System.Windows.Forms.PictureBox.Image%2A> Eigenschaft, um ein gültiges Bild. Die folgende Tabelle zeigt die zulässigen Dateitypen.  
-  
-|Typ|Dateinamenerweiterung|  
-|----------|-------------------------|  
-|Bitmap|.bmp|  
-|Symbol|.ico|  
-|GIF|GIF|  
-|Metadatei|.wmf|  
-|JPEG|.jpg|  
-  
+
+Mit dem Windows Forms <xref:System.Windows.Forms.PictureBox> -Steuerelement können Sie ein Bild auf einem Formular zur Entwurfszeit laden und anzeigen, indem <xref:System.Windows.Forms.PictureBox.Image%2A> Sie die-Eigenschaft auf ein gültiges Bild festlegen. In der folgenden Tabelle sind die zulässigen Dateitypen aufgeführt.
+
+|Typ|Dateinamenerweiterung|
+|----------|-------------------------|
+|Bitmap|. bmp|
+|Symbol|.ico|
+|GIF|GIF|
+|Metadatei|. WMF|
+|JPEG|JPG|
+
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-display-a-picture-at-design-time"></a>Zur Entwurfszeit ein Bild anzeigen  
-  
-1. Zeichnen einer <xref:System.Windows.Forms.PictureBox> Steuerelement in einem Formular.  
-  
-2. Wählen Sie im Fenster Eigenschaften die <xref:System.Windows.Forms.PictureBox.Image%2A> -Eigenschaft, und klicken Sie dann auf klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um anzuzeigen die **öffnen** Dialogfeld.  
-  
-3. Wenn Sie für einen bestimmten Dateityp (z. B. GIF-Dateien) suchen, wählen Sie sie in der **Dateityp** Feld.  
-  
-4. Wählen Sie die Datei, die Sie anzeigen möchten.  
-  
-### <a name="to-clear-the-picture-at-design-time"></a>Um das Bild zur Entwurfszeit zu löschen.  
-  
-1. Auf der **Eigenschaften** wählen Sie im Fenster der <xref:System.Windows.Forms.PictureBox.Image%2A> -Eigenschaft und mit der rechten Maustaste die kleine Miniaturansicht, die auf der linken Seite den Namen des Image-Objekt angezeigt wird. Wählen Sie **zurücksetzen**.  
-  
+>  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
+
+## <a name="to-display-a-picture-at-design-time"></a>So zeigen Sie ein Bild zur Entwurfszeit an
+
+1. Zeichnen Sie <xref:System.Windows.Forms.PictureBox> ein-Steuerelement in einem Formular.
+
+2. Wählen Sie auf der Eigenschaftenfenster die <xref:System.Windows.Forms.PictureBox.Image%2A> Eigenschaft aus, und klicken Sie auf die Schaltfläche mit den Auslassungs Punkten, um das Dialogfeld **Öffnen** anzuzeigen.
+
+3. Wenn Sie nach einem bestimmten Dateityp suchen (z. b. GIF-Dateien), wählen Sie ihn im Feld **Dateityp aus** .
+
+4. Wählen Sie die Datei aus, die Sie anzeigen möchten.
+
+## <a name="to-clear-the-picture-at-design-time"></a>So löschen Sie das Bild zur Entwurfszeit
+
+1. Wählen Sie im Fenster **Eigenschaften** die <xref:System.Windows.Forms.PictureBox.Image%2A> Eigenschaft aus, und klicken Sie mit der rechten Maustaste auf das kleine Miniaturbild, das links neben dem Namen des Bildobjekts angezeigt wird. Wählen Sie **Zurücksetzen**.
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.PictureBox>
 - [Übersicht über das PictureBox-Steuerelement](picturebox-control-overview-windows-forms.md)
-- [Vorgehensweise: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Vorgehensweise: Ändern der Größe oder Platzierung eines Bilds zur Laufzeit](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [Vorgehensweise: Festlegen von Bildern zur Laufzeit](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox-Steuerelement](picturebox-control-windows-forms.md)

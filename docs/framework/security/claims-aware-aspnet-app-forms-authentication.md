@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwe
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792743"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971832"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit formularbasierter Authentifizierung
 
@@ -60,7 +60,7 @@ Die Formularauthentifizierung profitiert von der Integration von WIF in .NET 4.5
 
 In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung.
 
-#### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung
+### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung
 
 1. Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.
 
@@ -72,7 +72,7 @@ In diesem Schritt erstellen Sie eine neue ASP.NET Web Forms-Anwendung.
 
 In diesem Schritt fügen Sie einen Konfigurationseintrag zur Konfigurationsdatei *Web.config* hinzu und bearbeiten die Datei *Default.aspx*, damit diese die Informationen zu den Ansprüchen eines Kontos anzeigt.
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Konfigurieren einer ASP.NET-Anwendung für Ansprüche bei Verwendung der Formularauthentifizierung
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Konfigurieren einer ASP.NET-Anwendung für Ansprüche bei Verwendung der Formularauthentifizierung
 
 1. Ersetzten Sie das vorhandene Markup in der Datei *Default.aspx* durch das folgende Markup:
 
@@ -126,7 +126,7 @@ In diesem Schritt fügen Sie einen Konfigurationseintrag zur Konfigurationsdatei
 
 In diesem Schritt testen Sie Ihre ASP.NET Web Forms-Anwendung und überprüfen, ob Ansprüche dargestellt werden, wenn sich ein Benutzer mit der Formularauthentifizierung anmeldet.
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Testen der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Formularauthentifizierung
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Testen der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Formularauthentifizierung
 
 1. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. *Default.aspx* sollte mit den Links **Registrieren** und **Anmelden** rechts oben auf der Seite angezeigt werden. Klicken Sie auf **Registrieren**.
 
