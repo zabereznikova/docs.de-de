@@ -4,150 +4,154 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 2dfa70515fb257740015e4d6d75ef9d8a6007006
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 3d8fb3fbbf31b547644ae171aaf81654812d8a20
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512817"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971903"
 ---
-# <a name="walkthrough-create-a-button-by-using-xaml"></a><span data-ttu-id="782c8-102">Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML</span><span class="sxs-lookup"><span data-stu-id="782c8-102">Walkthrough: Create a Button by Using XAML</span></span>
-<span data-ttu-id="782c8-103">In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie eine animierte Schaltfläche zur Verwendung in einer Windows Presentation Foundation (WPF)-Anwendung erstellen.</span><span class="sxs-lookup"><span data-stu-id="782c8-103">The objective of this walkthrough is to learn how to create an animated button for use in a Windows Presentation Foundation (WPF) application.</span></span> <span data-ttu-id="782c8-104">Diese exemplarische Vorgehensweise verwendet Stile und eine Vorlage, um eine angepasste Schaltflächen Ressource zu erstellen, die die Wiederverwendung von Code und die Trennung der Schaltflächen Logik von der Schaltflächen Deklaration</span><span class="sxs-lookup"><span data-stu-id="782c8-104">This walkthrough uses styles and a template to create a customized button resource that allows reuse of code and separation of button logic from the button declaration.</span></span> <span data-ttu-id="782c8-105">Diese exemplarische Vorgehensweise ist voll [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ständig in geschrieben.</span><span class="sxs-lookup"><span data-stu-id="782c8-105">This walkthrough is written entirely in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
-  
+# <a name="walkthrough-create-a-button-by-using-xaml"></a><span data-ttu-id="db616-102">Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML</span><span class="sxs-lookup"><span data-stu-id="db616-102">Walkthrough: Create a Button by Using XAML</span></span>
+
+<span data-ttu-id="db616-103">In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie eine animierte Schaltfläche zur Verwendung in einer Windows Presentation Foundation (WPF)-Anwendung erstellen.</span><span class="sxs-lookup"><span data-stu-id="db616-103">The objective of this walkthrough is to learn how to create an animated button for use in a Windows Presentation Foundation (WPF) application.</span></span> <span data-ttu-id="db616-104">Diese exemplarische Vorgehensweise verwendet Stile und eine Vorlage, um eine angepasste Schaltflächen Ressource zu erstellen, die die Wiederverwendung von Code und die Trennung der Schaltflächen Logik von der Schaltflächen Deklaration</span><span class="sxs-lookup"><span data-stu-id="db616-104">This walkthrough uses styles and a template to create a customized button resource that allows reuse of code and separation of button logic from the button declaration.</span></span> <span data-ttu-id="db616-105">Diese exemplarische Vorgehensweise ist voll [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ständig in geschrieben.</span><span class="sxs-lookup"><span data-stu-id="db616-105">This walkthrough is written entirely in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="782c8-106">Diese exemplarische Vorgehensweise führt Sie durch die Schritte zum Erstellen der Anwendung durch Eingabe oder kopieren und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] einfügen in Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="782c8-106">This walkthrough guides you through the steps for creating the application by typing or copying and pasting [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] into Microsoft Visual Studio.</span></span> <span data-ttu-id="782c8-107">Wenn Sie lieber erfahren möchten, wie Sie ein Entwurfs Tool (Microsoft Expression Blend) zum Erstellen der gleichen Anwendung verwenden, finden Sie weitere Informationen unter [Erstellen einer Schaltfläche mit Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).</span><span class="sxs-lookup"><span data-stu-id="782c8-107">If you would prefer to learn how to use a design tool (Microsoft Expression Blend) to create the same application, see [Create a Button by Using Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).</span></span>  
-  
- <span data-ttu-id="782c8-108">In der folgenden Abbildung sind die Schaltflächen fertig angezeigt.</span><span class="sxs-lookup"><span data-stu-id="782c8-108">The following figure shows the finished buttons.</span></span>  
-  
- <span data-ttu-id="782c8-109">![Benutzerdefinierte Schaltflächen, die mit XAML erstellt wurden](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")</span><span class="sxs-lookup"><span data-stu-id="782c8-109">![Custom buttons that were created by using XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")</span></span>  
-  
-## <a name="create-basic-buttons"></a><span data-ttu-id="782c8-110">Grundlegende Schaltflächen erstellen</span><span class="sxs-lookup"><span data-stu-id="782c8-110">Create Basic Buttons</span></span>  
- <span data-ttu-id="782c8-111">Erstellen Sie zunächst ein neues Projekt, und fügen Sie dem Fenster einige Schaltflächen hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-111">Let's start by creating a new project and adding a few buttons to the window.</span></span>  
-  
-#### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a><span data-ttu-id="782c8-112">So erstellen Sie ein neues WPF-Projekt und fügen dem Fenster Schaltflächen hinzu</span><span class="sxs-lookup"><span data-stu-id="782c8-112">To create a new WPF project and add buttons to the window</span></span>  
-  
-1. <span data-ttu-id="782c8-113">Starten Sie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="782c8-113">Start Visual Studio.</span></span>  
-  
-2. <span data-ttu-id="782c8-114">**Erstellen Sie ein neues WPF-Projekt:** Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.</span><span class="sxs-lookup"><span data-stu-id="782c8-114">**Create a new WPF project:** On the **File** menu, point to **New**, and then click **Project**.</span></span> <span data-ttu-id="782c8-115">Suchen Sie die Vorlage **Windows-Anwendung (WPF)** , und benennen Sie das Projekt mit dem Namen "AnimatedButton".</span><span class="sxs-lookup"><span data-stu-id="782c8-115">Find the **Windows Application (WPF)** template and name the project "AnimatedButton".</span></span> <span data-ttu-id="782c8-116">Dadurch wird das Gerüst für die Anwendung erstellt.</span><span class="sxs-lookup"><span data-stu-id="782c8-116">This will create the skeleton for the application.</span></span>  
-  
-3. <span data-ttu-id="782c8-117">**Einfache Standard Schaltflächen hinzufügen:** Alle Dateien, die Sie für diese exemplarische Vorgehensweise benötigen, werden von der Vorlage bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="782c8-117">**Add basic default buttons:** All the files you need for this walkthrough are provided by the template.</span></span> <span data-ttu-id="782c8-118">Öffnen Sie die Datei Window1. XAML, indem Sie in Projektmappen-Explorer auf die Datei doppelklicken.</span><span class="sxs-lookup"><span data-stu-id="782c8-118">Open the Window1.xaml file by double clicking it in Solution Explorer.</span></span> <span data-ttu-id="782c8-119">Standardmäßig ist ein <xref:System.Windows.Controls.Grid> -Element in Window1. XAML vorhanden.</span><span class="sxs-lookup"><span data-stu-id="782c8-119">By default, there is a <xref:System.Windows.Controls.Grid> element in Window1.xaml.</span></span> <span data-ttu-id="782c8-120">Entfernen Sie <xref:System.Windows.Controls.Grid> das-Element [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , und fügen Sie der Seite einige Schaltflächen hinzu, indem Sie den folgenden hervorgehobenen Code in Window1. xaml eingeben oder kopieren und einfügen:</span><span class="sxs-lookup"><span data-stu-id="782c8-120">Remove the <xref:System.Windows.Controls.Grid> element and add a few buttons to the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page by typing or copy and pasting the following highlighted code to Window1.xaml:</span></span>  
-  
-    ```xaml  
-    <Window x:Class="AnimatedButton.Window1"  
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-      Title="AnimatedButton" Height="300" Width="300"   
+> <span data-ttu-id="db616-106">Diese exemplarische Vorgehensweise führt Sie durch die Schritte zum Erstellen der Anwendung durch Eingabe oder kopieren und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] einfügen in Microsoft Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="db616-106">This walkthrough guides you through the steps for creating the application by typing or copying and pasting [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] into Microsoft Visual Studio.</span></span> <span data-ttu-id="db616-107">Wenn Sie lieber erfahren möchten, wie Sie ein Entwurfs Tool (Microsoft Expression Blend) zum Erstellen der gleichen Anwendung verwenden, finden Sie weitere Informationen unter [Erstellen einer Schaltfläche mit Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).</span><span class="sxs-lookup"><span data-stu-id="db616-107">If you would prefer to learn how to use a design tool (Microsoft Expression Blend) to create the same application, see [Create a Button by Using Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md).</span></span>
+
+<span data-ttu-id="db616-108">In der folgenden Abbildung sind die Schaltflächen fertig angezeigt.</span><span class="sxs-lookup"><span data-stu-id="db616-108">The following figure shows the finished buttons.</span></span>
+
+<span data-ttu-id="db616-109">![Benutzerdefinierte Schaltflächen, die mit XAML erstellt wurden](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")</span><span class="sxs-lookup"><span data-stu-id="db616-109">![Custom buttons that were created by using XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")</span></span>
+
+## <a name="create-basic-buttons"></a><span data-ttu-id="db616-110">Grundlegende Schaltflächen erstellen</span><span class="sxs-lookup"><span data-stu-id="db616-110">Create Basic Buttons</span></span>
+
+<span data-ttu-id="db616-111">Erstellen Sie zunächst ein neues Projekt, und fügen Sie dem Fenster einige Schaltflächen hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-111">Let's start by creating a new project and adding a few buttons to the window.</span></span>
+
+### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a><span data-ttu-id="db616-112">So erstellen Sie ein neues WPF-Projekt und fügen dem Fenster Schaltflächen hinzu</span><span class="sxs-lookup"><span data-stu-id="db616-112">To create a new WPF project and add buttons to the window</span></span>
+
+1. <span data-ttu-id="db616-113">Starten Sie Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="db616-113">Start Visual Studio.</span></span>
+
+2. <span data-ttu-id="db616-114">**Erstellen Sie ein neues WPF-Projekt:** Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.</span><span class="sxs-lookup"><span data-stu-id="db616-114">**Create a new WPF project:** On the **File** menu, point to **New**, and then click **Project**.</span></span> <span data-ttu-id="db616-115">Suchen Sie die Vorlage **Windows-Anwendung (WPF)** , und benennen Sie das Projekt mit dem Namen "AnimatedButton".</span><span class="sxs-lookup"><span data-stu-id="db616-115">Find the **Windows Application (WPF)** template and name the project "AnimatedButton".</span></span> <span data-ttu-id="db616-116">Dadurch wird das Gerüst für die Anwendung erstellt.</span><span class="sxs-lookup"><span data-stu-id="db616-116">This will create the skeleton for the application.</span></span>
+
+3. <span data-ttu-id="db616-117">**Einfache Standard Schaltflächen hinzufügen:** Alle Dateien, die Sie für diese exemplarische Vorgehensweise benötigen, werden von der Vorlage bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="db616-117">**Add basic default buttons:** All the files you need for this walkthrough are provided by the template.</span></span> <span data-ttu-id="db616-118">Öffnen Sie die Datei Window1. XAML, indem Sie in Projektmappen-Explorer auf die Datei doppelklicken.</span><span class="sxs-lookup"><span data-stu-id="db616-118">Open the Window1.xaml file by double clicking it in Solution Explorer.</span></span> <span data-ttu-id="db616-119">Standardmäßig ist ein <xref:System.Windows.Controls.Grid> -Element in Window1. XAML vorhanden.</span><span class="sxs-lookup"><span data-stu-id="db616-119">By default, there is a <xref:System.Windows.Controls.Grid> element in Window1.xaml.</span></span> <span data-ttu-id="db616-120">Entfernen Sie <xref:System.Windows.Controls.Grid> das-Element [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , und fügen Sie der Seite einige Schaltflächen hinzu, indem Sie den folgenden hervorgehobenen Code in Window1. xaml eingeben oder kopieren und einfügen:</span><span class="sxs-lookup"><span data-stu-id="db616-120">Remove the <xref:System.Windows.Controls.Grid> element and add a few buttons to the [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] page by typing or copy and pasting the following highlighted code to Window1.xaml:</span></span>
+
+    ```xaml
+    <Window x:Class="AnimatedButton.Window1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="AnimatedButton" Height="300" Width="300"
       Background="Black">
       <!-- Buttons arranged vertically inside a StackPanel. -->
       <StackPanel HorizontalAlignment="Left">
           <Button>Button 1</Button>
           <Button>Button 2</Button>
           <Button>Button 3</Button>
-      </StackPanel>  
-    </Window>  
-    ```  
-  
-     <span data-ttu-id="782c8-121">Drücken Sie F5, um die Anwendung auszuführen. Es sollte eine Reihe von Schaltflächen angezeigt werden, die wie in der folgenden Abbildung aussehen.</span><span class="sxs-lookup"><span data-stu-id="782c8-121">Press F5 to run the application; you should see a set of buttons that looks like the following figure.</span></span>  
-  
-     <span data-ttu-id="782c8-122">![Drei grundlegende Schalt] Flächen (./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")</span><span class="sxs-lookup"><span data-stu-id="782c8-122">![Three basic buttons](./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")</span></span>  
-  
-     <span data-ttu-id="782c8-123">Nachdem Sie nun die grundlegenden Schaltflächen erstellt haben, sind Sie mit der Arbeit in der Datei Window1. XAML fertig.</span><span class="sxs-lookup"><span data-stu-id="782c8-123">Now that you have created the basic buttons, you are finished working in the Window1.xaml file.</span></span> <span data-ttu-id="782c8-124">Der Rest der exemplarischen Vorgehensweise konzentriert sich auf die Datei app. XAML, in der Stile und eine Vorlage für die Schaltflächen definiert werden.</span><span class="sxs-lookup"><span data-stu-id="782c8-124">The rest of the walkthrough focuses on the app.xaml file, defining styles and a template for the buttons.</span></span>  
-  
-## <a name="set-basic-properties"></a><span data-ttu-id="782c8-125">Festlegen von grundlegenden Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="782c8-125">Set Basic Properties</span></span>  
- <span data-ttu-id="782c8-126">Als nächstes legen wir einige Eigenschaften für diese Schaltflächen fest, um die Darstellung und das Layout der Schaltfläche zu steuern.</span><span class="sxs-lookup"><span data-stu-id="782c8-126">Next, let's set some properties on these buttons to control the button appearance and layout.</span></span> <span data-ttu-id="782c8-127">Anstatt die Eigenschaften für die Schaltflächen einzeln festzulegen, verwenden Sie Ressourcen, um Schaltflächen Eigenschaften für die gesamte Anwendung zu definieren.</span><span class="sxs-lookup"><span data-stu-id="782c8-127">Rather than setting properties on the buttons individually, you will use resources to define button properties for the entire application.</span></span> <span data-ttu-id="782c8-128">Anwendungs Ressourcen sind konzeptionell vergleichbar mit externen Cascading Stylesheets (CSS) für Webseiten. Ressourcen sind jedoch viel leistungsfähiger als Cascading Stylesheets (CSS), wie Sie am Ende dieser exemplarischen Vorgehensweise sehen werden.</span><span class="sxs-lookup"><span data-stu-id="782c8-128">Application resources are conceptually similar to external Cascading Style Sheets (CSS) for Web pages; however, resources are much more powerful than Cascading Style Sheets (CSS), as you will see by the end of this walkthrough.</span></span> <span data-ttu-id="782c8-129">Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="782c8-129">To learn more about resources, see [XAML Resources](../advanced/xaml-resources.md).</span></span>  
-  
-#### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a><span data-ttu-id="782c8-130">So verwenden Sie Stile zum Festlegen grundlegender Eigenschaften auf den Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="782c8-130">To use styles to set basic properties on the buttons</span></span>  
-  
-1. <span data-ttu-id="782c8-131">**Definieren eines "Application. Resources"-Blocks:** Öffnen Sie App. XAML, und fügen Sie das folgende hervorgehobene Markup hinzu, wenn es nicht bereits vorhanden ist:</span><span class="sxs-lookup"><span data-stu-id="782c8-131">**Define an Application.Resources block:** Open app.xaml and add the following highlighted markup if it is not already there:</span></span>  
-  
-    ```xaml  
-    <Application x:Class="AnimatedButton.App"  
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-      StartupUri="Window1.xaml"  
-      >  
+      </StackPanel>
+    </Window>
+    ```
+
+     <span data-ttu-id="db616-121">Drücken Sie F5, um die Anwendung auszuführen. Es sollte eine Reihe von Schaltflächen angezeigt werden, die wie in der folgenden Abbildung aussehen.</span><span class="sxs-lookup"><span data-stu-id="db616-121">Press F5 to run the application; you should see a set of buttons that looks like the following figure.</span></span>
+
+     <span data-ttu-id="db616-122">![Drei grundlegende Schalt] Flächen (./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")</span><span class="sxs-lookup"><span data-stu-id="db616-122">![Three basic buttons](./media/custom-button-animatedbutton-1.gif "custom_button_AnimatedButton_1")</span></span>
+
+     <span data-ttu-id="db616-123">Nachdem Sie nun die grundlegenden Schaltflächen erstellt haben, sind Sie mit der Arbeit in der Datei Window1. XAML fertig.</span><span class="sxs-lookup"><span data-stu-id="db616-123">Now that you have created the basic buttons, you are finished working in the Window1.xaml file.</span></span> <span data-ttu-id="db616-124">Der Rest der exemplarischen Vorgehensweise konzentriert sich auf die Datei app. XAML, in der Stile und eine Vorlage für die Schaltflächen definiert werden.</span><span class="sxs-lookup"><span data-stu-id="db616-124">The rest of the walkthrough focuses on the app.xaml file, defining styles and a template for the buttons.</span></span>
+
+## <a name="set-basic-properties"></a><span data-ttu-id="db616-125">Festlegen von grundlegenden Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="db616-125">Set Basic Properties</span></span>
+
+<span data-ttu-id="db616-126">Als nächstes legen wir einige Eigenschaften für diese Schaltflächen fest, um die Darstellung und das Layout der Schaltfläche zu steuern.</span><span class="sxs-lookup"><span data-stu-id="db616-126">Next, let's set some properties on these buttons to control the button appearance and layout.</span></span> <span data-ttu-id="db616-127">Anstatt die Eigenschaften für die Schaltflächen einzeln festzulegen, verwenden Sie Ressourcen, um Schaltflächen Eigenschaften für die gesamte Anwendung zu definieren.</span><span class="sxs-lookup"><span data-stu-id="db616-127">Rather than setting properties on the buttons individually, you will use resources to define button properties for the entire application.</span></span> <span data-ttu-id="db616-128">Anwendungs Ressourcen sind konzeptionell vergleichbar mit externen Cascading Stylesheets (CSS) für Webseiten. Ressourcen sind jedoch viel leistungsfähiger als Cascading Stylesheets (CSS), wie Sie am Ende dieser exemplarischen Vorgehensweise sehen werden.</span><span class="sxs-lookup"><span data-stu-id="db616-128">Application resources are conceptually similar to external Cascading Style Sheets (CSS) for Web pages; however, resources are much more powerful than Cascading Style Sheets (CSS), as you will see by the end of this walkthrough.</span></span> <span data-ttu-id="db616-129">Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="db616-129">To learn more about resources, see [XAML Resources](../advanced/xaml-resources.md).</span></span>
+
+### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a><span data-ttu-id="db616-130">So verwenden Sie Stile zum Festlegen grundlegender Eigenschaften auf den Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="db616-130">To use styles to set basic properties on the buttons</span></span>
+
+1. <span data-ttu-id="db616-131">**Definieren eines "Application. Resources"-Blocks:** Öffnen Sie App. XAML, und fügen Sie das folgende hervorgehobene Markup hinzu, wenn es nicht bereits vorhanden ist:</span><span class="sxs-lookup"><span data-stu-id="db616-131">**Define an Application.Resources block:** Open app.xaml and add the following highlighted markup if it is not already there:</span></span>
+
+    ```xaml
+    <Application x:Class="AnimatedButton.App"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      StartupUri="Window1.xaml"
+      >
       <Application.Resources>
         <!-- Resources for the entire application can be defined here. -->
-      </Application.Resources>  
-    </Application>  
-    ```  
-  
-     <span data-ttu-id="782c8-132">Der Ressourcenbereich wird bestimmt, wo Sie die Ressource definieren.</span><span class="sxs-lookup"><span data-stu-id="782c8-132">Resource scope is determined by where you define the resource.</span></span> <span data-ttu-id="782c8-133">Durch Definieren von `Application.Resources` Ressourcen in in der Datei "App. XAML" kann die Ressource von überall in der Anwendung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="782c8-133">Defining resources in `Application.Resources` in the app.xaml file enables the resource to be used from anywhere in the application.</span></span> <span data-ttu-id="782c8-134">Weitere Informationen zum Definieren des Umfangs ihrer Ressourcen finden Sie unter [XAML-Ressourcen](../advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="782c8-134">To learn more about defining the scope of your resources, see [XAML Resources](../advanced/xaml-resources.md).</span></span>  
-  
-2. <span data-ttu-id="782c8-135">**Erstellen Sie einen Stil, und definieren Sie grundlegende Eigenschaftswerte damit:** Fügen Sie dem- `Application.Resources` Block das folgende Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-135">**Create a style and define basic property values with it:** Add the following markup to the `Application.Resources` block.</span></span> <span data-ttu-id="782c8-136">Dieses Markup erstellt eine <xref:System.Windows.Style> , die für alle Schaltflächen in der Anwendung gilt, <xref:System.Windows.FrameworkElement.Width%2A> wobei der der <xref:System.Windows.FrameworkElement.Margin%2A> Schaltflächen auf 90 und auf 10 festgelegt wird:</span><span class="sxs-lookup"><span data-stu-id="782c8-136">This markup creates a <xref:System.Windows.Style> that applies to all buttons in the application, setting the <xref:System.Windows.FrameworkElement.Width%2A> of the buttons to 90 and the <xref:System.Windows.FrameworkElement.Margin%2A> to 10:</span></span>  
-  
-    ```xaml  
-    <Application.Resources>  
+      </Application.Resources>
+    </Application>
+    ```
+
+     <span data-ttu-id="db616-132">Der Ressourcenbereich wird bestimmt, wo Sie die Ressource definieren.</span><span class="sxs-lookup"><span data-stu-id="db616-132">Resource scope is determined by where you define the resource.</span></span> <span data-ttu-id="db616-133">Durch Definieren von `Application.Resources` Ressourcen in in der Datei "App. XAML" kann die Ressource von überall in der Anwendung verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="db616-133">Defining resources in `Application.Resources` in the app.xaml file enables the resource to be used from anywhere in the application.</span></span> <span data-ttu-id="db616-134">Weitere Informationen zum Definieren des Umfangs ihrer Ressourcen finden Sie unter [XAML-Ressourcen](../advanced/xaml-resources.md).</span><span class="sxs-lookup"><span data-stu-id="db616-134">To learn more about defining the scope of your resources, see [XAML Resources](../advanced/xaml-resources.md).</span></span>
+
+2. <span data-ttu-id="db616-135">**Erstellen Sie einen Stil, und definieren Sie grundlegende Eigenschaftswerte damit:** Fügen Sie dem- `Application.Resources` Block das folgende Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-135">**Create a style and define basic property values with it:** Add the following markup to the `Application.Resources` block.</span></span> <span data-ttu-id="db616-136">Dieses Markup erstellt eine <xref:System.Windows.Style> , die für alle Schaltflächen in der Anwendung gilt, <xref:System.Windows.FrameworkElement.Width%2A> wobei der der <xref:System.Windows.FrameworkElement.Margin%2A> Schaltflächen auf 90 und auf 10 festgelegt wird:</span><span class="sxs-lookup"><span data-stu-id="db616-136">This markup creates a <xref:System.Windows.Style> that applies to all buttons in the application, setting the <xref:System.Windows.FrameworkElement.Width%2A> of the buttons to 90 and the <xref:System.Windows.FrameworkElement.Margin%2A> to 10:</span></span>
+
+    ```xaml
+    <Application.Resources>
       <Style TargetType="Button">
         <Setter Property="Width" Value="90" />
         <Setter Property="Margin" Value="10" />
-      </Style>  
-    </Application.Resources>  
-    ```  
-  
-     <span data-ttu-id="782c8-137">Die <xref:System.Windows.Style.TargetType%2A> -Eigenschaft gibt an, dass der Stil für alle Objekte <xref:System.Windows.Controls.Button>vom Typ gilt.</span><span class="sxs-lookup"><span data-stu-id="782c8-137">The <xref:System.Windows.Style.TargetType%2A> property specifies that the style applies to all objects of type <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="782c8-138">Jeder <xref:System.Windows.Setter> legt einen anderen Eigenschafts Wert <xref:System.Windows.Style>für fest.</span><span class="sxs-lookup"><span data-stu-id="782c8-138">Each <xref:System.Windows.Setter> sets a different property value for the <xref:System.Windows.Style>.</span></span> <span data-ttu-id="782c8-139">Daher hat an diesem Punkt jede Schaltfläche in der Anwendung eine Breite von 90 und einen Rand von 10.</span><span class="sxs-lookup"><span data-stu-id="782c8-139">Therefore, at this point every button in the application has a width of 90 and a margin of 10.</span></span>  <span data-ttu-id="782c8-140">Wenn Sie F5 drücken, um die Anwendung auszuführen, wird das folgende Fenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="782c8-140">If you press F5 to run the application, you see the following window.</span></span>  
-  
-     <span data-ttu-id="782c8-141">![Schaltflächen mit einer Breite von 90 und einem Rand von 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")</span><span class="sxs-lookup"><span data-stu-id="782c8-141">![Buttons with a width of 90 and a margin of 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")</span></span>  
-  
-     <span data-ttu-id="782c8-142">Es gibt noch viel mehr Möglichkeiten mit Stilen, einschließlich einer Vielzahl von Möglichkeiten, um zu optimieren, welche Objekte als Ziel verwendet werden, wie komplexe Eigenschaftswerte angegeben werden, und sogar Stile als Eingabe für andere Stile verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="782c8-142">There is much more you can do with styles, including a variety of ways to fine-tune what objects are targeted, specifying complex property values, and even using styles as input for other styles.</span></span> <span data-ttu-id="782c8-143">Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](styling-and-templating.md).</span><span class="sxs-lookup"><span data-stu-id="782c8-143">For more information, see [Styling and Templating](styling-and-templating.md).</span></span>  
-  
-3. <span data-ttu-id="782c8-144">**Legen Sie einen Stil Eigenschafts Wert auf eine Ressource fest:** Ressourcen ermöglichen eine einfache Möglichkeit, häufig definierte Objekte und Werte wiederzuverwenden.</span><span class="sxs-lookup"><span data-stu-id="782c8-144">**Set a style property value to a resource:** Resources enable a simple way to reuse commonly defined objects and values.</span></span> <span data-ttu-id="782c8-145">Es ist besonders hilfreich, komplexe Werte mithilfe von Ressourcen zu definieren, um den Code modularer zu gestalten.</span><span class="sxs-lookup"><span data-stu-id="782c8-145">It is especially useful to define complex values using resources to make your code more modular.</span></span> <span data-ttu-id="782c8-146">Fügen Sie der Datei "App. XAML" das folgende hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-146">Add the following highlighted markup to app.xaml.</span></span>  
-  
-    ```xaml  
-    <Application.Resources>  
+      </Style>
+    </Application.Resources>
+    ```
+
+     <span data-ttu-id="db616-137">Die <xref:System.Windows.Style.TargetType%2A> -Eigenschaft gibt an, dass der Stil für alle Objekte <xref:System.Windows.Controls.Button>vom Typ gilt.</span><span class="sxs-lookup"><span data-stu-id="db616-137">The <xref:System.Windows.Style.TargetType%2A> property specifies that the style applies to all objects of type <xref:System.Windows.Controls.Button>.</span></span> <span data-ttu-id="db616-138">Jeder <xref:System.Windows.Setter> legt einen anderen Eigenschafts Wert <xref:System.Windows.Style>für fest.</span><span class="sxs-lookup"><span data-stu-id="db616-138">Each <xref:System.Windows.Setter> sets a different property value for the <xref:System.Windows.Style>.</span></span> <span data-ttu-id="db616-139">Daher hat an diesem Punkt jede Schaltfläche in der Anwendung eine Breite von 90 und einen Rand von 10.</span><span class="sxs-lookup"><span data-stu-id="db616-139">Therefore, at this point every button in the application has a width of 90 and a margin of 10.</span></span>  <span data-ttu-id="db616-140">Wenn Sie F5 drücken, um die Anwendung auszuführen, wird das folgende Fenster angezeigt.</span><span class="sxs-lookup"><span data-stu-id="db616-140">If you press F5 to run the application, you see the following window.</span></span>
+
+     <span data-ttu-id="db616-141">![Schaltflächen mit einer Breite von 90 und einem Rand von 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")</span><span class="sxs-lookup"><span data-stu-id="db616-141">![Buttons with a width of 90 and a margin of 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")</span></span>
+
+     <span data-ttu-id="db616-142">Es gibt noch viel mehr Möglichkeiten mit Stilen, einschließlich einer Vielzahl von Möglichkeiten, um zu optimieren, welche Objekte als Ziel verwendet werden, wie komplexe Eigenschaftswerte angegeben werden, und sogar Stile als Eingabe für andere Stile verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="db616-142">There is much more you can do with styles, including a variety of ways to fine-tune what objects are targeted, specifying complex property values, and even using styles as input for other styles.</span></span> <span data-ttu-id="db616-143">Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](styling-and-templating.md).</span><span class="sxs-lookup"><span data-stu-id="db616-143">For more information, see [Styling and Templating](styling-and-templating.md).</span></span>
+
+3. <span data-ttu-id="db616-144">**Legen Sie einen Stil Eigenschafts Wert auf eine Ressource fest:** Ressourcen ermöglichen eine einfache Möglichkeit, häufig definierte Objekte und Werte wiederzuverwenden.</span><span class="sxs-lookup"><span data-stu-id="db616-144">**Set a style property value to a resource:** Resources enable a simple way to reuse commonly defined objects and values.</span></span> <span data-ttu-id="db616-145">Es ist besonders hilfreich, komplexe Werte mithilfe von Ressourcen zu definieren, um den Code modularer zu gestalten.</span><span class="sxs-lookup"><span data-stu-id="db616-145">It is especially useful to define complex values using resources to make your code more modular.</span></span> <span data-ttu-id="db616-146">Fügen Sie der Datei "App. XAML" das folgende hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-146">Add the following highlighted markup to app.xaml.</span></span>
+
+    ```xaml
+    <Application.Resources>
       <LinearGradientBrush x:Key="GrayBlueGradientBrush" StartPoint="0,0" EndPoint="1,1">
         <GradientStop Color="DarkGray" Offset="0" />
         <GradientStop Color="#CCCCFF" Offset="0.5" />
         <GradientStop Color="DarkGray" Offset="1" />
-      </LinearGradientBrush>  
-      <Style TargetType="{x:Type Button}">  
-        <Setter Property="Background" Value="{StaticResource GrayBlueGradientBrush}" />  
-        <Setter Property="Width" Value="80" />  
-        <Setter Property="Margin" Value="10" />  
-      </Style>  
-    </Application.Resources>  
-    ```  
-  
-     <span data-ttu-id="782c8-147">Direkt unter dem `Application.Resources` -Block haben Sie eine Ressource mit dem Namen "GrayBlueGradientBrush" erstellt.</span><span class="sxs-lookup"><span data-stu-id="782c8-147">Directly under the `Application.Resources` block, you created a resource called "GrayBlueGradientBrush".</span></span> <span data-ttu-id="782c8-148">Diese Ressource definiert einen horizontalen Farbverlauf.</span><span class="sxs-lookup"><span data-stu-id="782c8-148">This resource defines a horizontal gradient.</span></span> <span data-ttu-id="782c8-149">Diese Ressource kann als Eigenschafts Wert von jeder beliebigen Stelle in der Anwendung verwendet werden, einschließlich der Schaltfläche für den <xref:System.Windows.Controls.Control.Background%2A> Schaltflächen Stil für die Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="782c8-149">This resource can be used as a property value from anywhere in the application, including inside the button style setter for the <xref:System.Windows.Controls.Control.Background%2A> property.</span></span> <span data-ttu-id="782c8-150">Jetzt haben alle Schaltflächen einen <xref:System.Windows.Controls.Control.Background%2A> Eigenschafts Wert dieses Farbverlaufs.</span><span class="sxs-lookup"><span data-stu-id="782c8-150">Now, all the buttons have a <xref:System.Windows.Controls.Control.Background%2A> property value of this gradient.</span></span>  
-  
-     <span data-ttu-id="782c8-151">Drücken Sie F5, um die Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="782c8-151">Press F5 to run the application.</span></span> <span data-ttu-id="782c8-152">Es sollte wie folgt aussehen.</span><span class="sxs-lookup"><span data-stu-id="782c8-152">It should look like the following.</span></span>  
-  
-     <span data-ttu-id="782c8-153">![Schaltflächen mit einem Farbverlaufs Hintergrund](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")</span><span class="sxs-lookup"><span data-stu-id="782c8-153">![Buttons with a gradient background](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")</span></span>  
-  
-## <a name="create-a-template-that-defines-the-look-of-the-button"></a><span data-ttu-id="782c8-154">Erstellen einer Vorlage, die das Aussehen der Schaltfläche definiert</span><span class="sxs-lookup"><span data-stu-id="782c8-154">Create a Template That Defines the Look of the Button</span></span>  
- <span data-ttu-id="782c8-155">In diesem Abschnitt erstellen Sie eine Vorlage, mit der die Darstellung (Darstellung) der Schaltfläche angepasst wird.</span><span class="sxs-lookup"><span data-stu-id="782c8-155">In this section, you create a template that customizes the appearance (presentation) of the button.</span></span> <span data-ttu-id="782c8-156">Die Darstellung der Schaltfläche besteht aus mehreren Objekten, einschließlich Rechtecke und anderen Komponenten, um der Schaltfläche ein eindeutiges aussehen zu verschaffen.</span><span class="sxs-lookup"><span data-stu-id="782c8-156">The button presentation is made up of several objects including rectangles and other components to give the button a unique look.</span></span>  
-  
- <span data-ttu-id="782c8-157">Bisher wurde die Steuerung, wie Schaltflächen in der Anwendung aussehen, auf das Ändern der Eigenschaften der Schaltfläche beschränkt.</span><span class="sxs-lookup"><span data-stu-id="782c8-157">So far, the control of how buttons look in the application has been confined to changing properties of the button.</span></span> <span data-ttu-id="782c8-158">Was geschieht, wenn Sie radikale Änderungen an der Darstellung der Schaltfläche vornehmen möchten?</span><span class="sxs-lookup"><span data-stu-id="782c8-158">What if you want to make more radical changes to the button's appearance?</span></span> <span data-ttu-id="782c8-159">Vorlagen ermöglichen eine leistungsstarke Kontrolle über die Darstellung eines Objekts.</span><span class="sxs-lookup"><span data-stu-id="782c8-159">Templates enable powerful control over the presentation of an object.</span></span> <span data-ttu-id="782c8-160">Da Vorlagen in Stilen verwendet werden können, können Sie eine Vorlage auf alle Objekte anwenden, auf die sich der Stil bezieht (in dieser exemplarischen Vorgehensweise die Schaltfläche).</span><span class="sxs-lookup"><span data-stu-id="782c8-160">Because templates can be used within styles, you can apply a template to all objects that the style applies to (in this walkthrough, the button).</span></span>  
-  
-#### <a name="to-use-the-template-to-define-the-look-of-the-button"></a><span data-ttu-id="782c8-161">So definieren Sie mit der Vorlage das Aussehen der Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="782c8-161">To use the template to define the look of the button</span></span>  
-  
-1. <span data-ttu-id="782c8-162">**Einrichten der Vorlage:** Da Steuerelemente <xref:System.Windows.Controls.Button> wie über <xref:System.Windows.Controls.Control.Template%2A> eine-Eigenschaft verfügen, können Sie den Eigenschafts Wert der Vorlage genau wie die anderen Eigenschaftswerte <xref:System.Windows.Style> definieren, <xref:System.Windows.Setter>die wir in einem mithilfe von festgelegt haben.</span><span class="sxs-lookup"><span data-stu-id="782c8-162">**Set up the template:** Because controls like <xref:System.Windows.Controls.Button> have a <xref:System.Windows.Controls.Control.Template%2A> property, you can define the template property value just like the other property values we have set in a <xref:System.Windows.Style> using a <xref:System.Windows.Setter>.</span></span> <span data-ttu-id="782c8-163">Fügen Sie dem Schaltflächen Stil das folgende hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-163">Add the following highlighted markup to your button style.</span></span>  
-  
+      </LinearGradientBrush>
+      <Style TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource GrayBlueGradientBrush}" />
+        <Setter Property="Width" Value="80" />
+        <Setter Property="Margin" Value="10" />
+      </Style>
+    </Application.Resources>
+    ```
+
+     <span data-ttu-id="db616-147">Direkt unter dem `Application.Resources` -Block haben Sie eine Ressource mit dem Namen "GrayBlueGradientBrush" erstellt.</span><span class="sxs-lookup"><span data-stu-id="db616-147">Directly under the `Application.Resources` block, you created a resource called "GrayBlueGradientBrush".</span></span> <span data-ttu-id="db616-148">Diese Ressource definiert einen horizontalen Farbverlauf.</span><span class="sxs-lookup"><span data-stu-id="db616-148">This resource defines a horizontal gradient.</span></span> <span data-ttu-id="db616-149">Diese Ressource kann als Eigenschafts Wert von jeder beliebigen Stelle in der Anwendung verwendet werden, einschließlich der Schaltfläche für den <xref:System.Windows.Controls.Control.Background%2A> Schaltflächen Stil für die Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="db616-149">This resource can be used as a property value from anywhere in the application, including inside the button style setter for the <xref:System.Windows.Controls.Control.Background%2A> property.</span></span> <span data-ttu-id="db616-150">Jetzt haben alle Schaltflächen einen <xref:System.Windows.Controls.Control.Background%2A> Eigenschafts Wert dieses Farbverlaufs.</span><span class="sxs-lookup"><span data-stu-id="db616-150">Now, all the buttons have a <xref:System.Windows.Controls.Control.Background%2A> property value of this gradient.</span></span>
+
+     <span data-ttu-id="db616-151">Drücken Sie F5, um die Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="db616-151">Press F5 to run the application.</span></span> <span data-ttu-id="db616-152">Es sollte wie folgt aussehen.</span><span class="sxs-lookup"><span data-stu-id="db616-152">It should look like the following.</span></span>
+
+     <span data-ttu-id="db616-153">![Schaltflächen mit einem Farbverlaufs Hintergrund](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")</span><span class="sxs-lookup"><span data-stu-id="db616-153">![Buttons with a gradient background](./media/custom-button-animatedbutton-3.gif "custom_button_AnimatedButton_3")</span></span>
+
+## <a name="create-a-template-that-defines-the-look-of-the-button"></a><span data-ttu-id="db616-154">Erstellen einer Vorlage, die das Aussehen der Schaltfläche definiert</span><span class="sxs-lookup"><span data-stu-id="db616-154">Create a Template That Defines the Look of the Button</span></span>
+
+<span data-ttu-id="db616-155">In diesem Abschnitt erstellen Sie eine Vorlage, mit der die Darstellung (Darstellung) der Schaltfläche angepasst wird.</span><span class="sxs-lookup"><span data-stu-id="db616-155">In this section, you create a template that customizes the appearance (presentation) of the button.</span></span> <span data-ttu-id="db616-156">Die Darstellung der Schaltfläche besteht aus mehreren Objekten, einschließlich Rechtecke und anderen Komponenten, um der Schaltfläche ein eindeutiges aussehen zu verschaffen.</span><span class="sxs-lookup"><span data-stu-id="db616-156">The button presentation is made up of several objects including rectangles and other components to give the button a unique look.</span></span>
+
+<span data-ttu-id="db616-157">Bisher wurde die Steuerung, wie Schaltflächen in der Anwendung aussehen, auf das Ändern der Eigenschaften der Schaltfläche beschränkt.</span><span class="sxs-lookup"><span data-stu-id="db616-157">So far, the control of how buttons look in the application has been confined to changing properties of the button.</span></span> <span data-ttu-id="db616-158">Was geschieht, wenn Sie radikale Änderungen an der Darstellung der Schaltfläche vornehmen möchten?</span><span class="sxs-lookup"><span data-stu-id="db616-158">What if you want to make more radical changes to the button's appearance?</span></span> <span data-ttu-id="db616-159">Vorlagen ermöglichen eine leistungsstarke Kontrolle über die Darstellung eines Objekts.</span><span class="sxs-lookup"><span data-stu-id="db616-159">Templates enable powerful control over the presentation of an object.</span></span> <span data-ttu-id="db616-160">Da Vorlagen in Stilen verwendet werden können, können Sie eine Vorlage auf alle Objekte anwenden, auf die sich der Stil bezieht (in dieser exemplarischen Vorgehensweise die Schaltfläche).</span><span class="sxs-lookup"><span data-stu-id="db616-160">Because templates can be used within styles, you can apply a template to all objects that the style applies to (in this walkthrough, the button).</span></span>
+
+### <a name="to-use-the-template-to-define-the-look-of-the-button"></a><span data-ttu-id="db616-161">So definieren Sie mit der Vorlage das Aussehen der Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="db616-161">To use the template to define the look of the button</span></span>
+
+1. <span data-ttu-id="db616-162">**Einrichten der Vorlage:** Da Steuerelemente <xref:System.Windows.Controls.Button> wie über <xref:System.Windows.Controls.Control.Template%2A> eine-Eigenschaft verfügen, können Sie den Eigenschafts Wert der Vorlage genau wie die anderen Eigenschaftswerte <xref:System.Windows.Style> definieren, <xref:System.Windows.Setter>die wir in einem mithilfe von festgelegt haben.</span><span class="sxs-lookup"><span data-stu-id="db616-162">**Set up the template:** Because controls like <xref:System.Windows.Controls.Button> have a <xref:System.Windows.Controls.Control.Template%2A> property, you can define the template property value just like the other property values we have set in a <xref:System.Windows.Style> using a <xref:System.Windows.Setter>.</span></span> <span data-ttu-id="db616-163">Fügen Sie dem Schaltflächen Stil das folgende hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-163">Add the following highlighted markup to your button style.</span></span>
+
     ```xaml
-    <Application.Resources>  
-      <LinearGradientBrush x:Key="GrayBlueGradientBrush"   
-        StartPoint="0,0" EndPoint="1,1">  
-        <GradientStop Color="DarkGray" Offset="0" />  
-        <GradientStop Color="#CCCCFF" Offset="0.5" />  
-        <GradientStop Color="DarkGray" Offset="1" />  
-      </LinearGradientBrush>  
-      <Style TargetType="{x:Type Button}">  
-        <Setter Property="Background" Value="{StaticResource GrayBlueGradientBrush}" />  
-        <Setter Property="Width" Value="80" />  
-        <Setter Property="Margin" Value="10" />  
+    <Application.Resources>
+      <LinearGradientBrush x:Key="GrayBlueGradientBrush"
+        StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="DarkGray" Offset="0" />
+        <GradientStop Color="#CCCCFF" Offset="0.5" />
+        <GradientStop Color="DarkGray" Offset="1" />
+      </LinearGradientBrush>
+      <Style TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource GrayBlueGradientBrush}" />
+        <Setter Property="Width" Value="80" />
+        <Setter Property="Margin" Value="10" />
         <Setter Property="Template">
           <Setter.Value>
             <!-- The button template is defined here. -->
           </Setter.Value>
-        </Setter>  
-      </Style>  
-    </Application.Resources>  
-    ```  
-  
-2. <span data-ttu-id="782c8-164">**Alter Button-Präsentation:** An diesem Punkt müssen Sie die Vorlage definieren.</span><span class="sxs-lookup"><span data-stu-id="782c8-164">**Alter button presentation:** At this point, you need to define the template.</span></span> <span data-ttu-id="782c8-165">Fügen Sie das folgende hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-165">Add the following highlighted markup.</span></span> <span data-ttu-id="782c8-166">Dieses Markup gibt zwei <xref:System.Windows.Shapes.Rectangle> Elemente mit abgerundeten Kanten an, gefolgt von <xref:System.Windows.Controls.DockPanel>einer.</span><span class="sxs-lookup"><span data-stu-id="782c8-166">This markup specifies two <xref:System.Windows.Shapes.Rectangle> elements with rounded edges, followed by a <xref:System.Windows.Controls.DockPanel>.</span></span> <span data-ttu-id="782c8-167">Der <xref:System.Windows.Controls.DockPanel> wird zum <xref:System.Windows.Controls.ContentPresenter> Hosten des der Schaltfläche verwendet.</span><span class="sxs-lookup"><span data-stu-id="782c8-167">The <xref:System.Windows.Controls.DockPanel> is used to host the <xref:System.Windows.Controls.ContentPresenter> of the button.</span></span> <span data-ttu-id="782c8-168">Ein <xref:System.Windows.Controls.ContentPresenter> zeigt den Inhalt der Schaltfläche an.</span><span class="sxs-lookup"><span data-stu-id="782c8-168">A <xref:System.Windows.Controls.ContentPresenter> displays the content of the button.</span></span> <span data-ttu-id="782c8-169">In dieser exemplarischen Vorgehensweise ist der Inhalt Text ("Button 1", "Button 2", "Schaltfläche 3").</span><span class="sxs-lookup"><span data-stu-id="782c8-169">In this walkthrough, the content is text ("Button 1", "Button 2", "Button 3").</span></span> <span data-ttu-id="782c8-170">Alle Vorlagen Komponenten (Rechtecke und <xref:System.Windows.Controls.DockPanel>) werden in einer <xref:System.Windows.Controls.Grid>angeordnet.</span><span class="sxs-lookup"><span data-stu-id="782c8-170">All of the template components (the rectangles and the <xref:System.Windows.Controls.DockPanel>) are laid out inside of a <xref:System.Windows.Controls.Grid>.</span></span>  
-  
-    ```xaml  
-    <Setter.Value>  
+        </Setter>
+      </Style>
+    </Application.Resources>
+    ```
+
+2. <span data-ttu-id="db616-164">**Alter Button-Präsentation:** An diesem Punkt müssen Sie die Vorlage definieren.</span><span class="sxs-lookup"><span data-stu-id="db616-164">**Alter button presentation:** At this point, you need to define the template.</span></span> <span data-ttu-id="db616-165">Fügen Sie das folgende hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-165">Add the following highlighted markup.</span></span> <span data-ttu-id="db616-166">Dieses Markup gibt zwei <xref:System.Windows.Shapes.Rectangle> Elemente mit abgerundeten Kanten an, gefolgt von <xref:System.Windows.Controls.DockPanel>einer.</span><span class="sxs-lookup"><span data-stu-id="db616-166">This markup specifies two <xref:System.Windows.Shapes.Rectangle> elements with rounded edges, followed by a <xref:System.Windows.Controls.DockPanel>.</span></span> <span data-ttu-id="db616-167">Der <xref:System.Windows.Controls.DockPanel> wird zum <xref:System.Windows.Controls.ContentPresenter> Hosten des der Schaltfläche verwendet.</span><span class="sxs-lookup"><span data-stu-id="db616-167">The <xref:System.Windows.Controls.DockPanel> is used to host the <xref:System.Windows.Controls.ContentPresenter> of the button.</span></span> <span data-ttu-id="db616-168">Ein <xref:System.Windows.Controls.ContentPresenter> zeigt den Inhalt der Schaltfläche an.</span><span class="sxs-lookup"><span data-stu-id="db616-168">A <xref:System.Windows.Controls.ContentPresenter> displays the content of the button.</span></span> <span data-ttu-id="db616-169">In dieser exemplarischen Vorgehensweise ist der Inhalt Text ("Button 1", "Button 2", "Schaltfläche 3").</span><span class="sxs-lookup"><span data-stu-id="db616-169">In this walkthrough, the content is text ("Button 1", "Button 2", "Button 3").</span></span> <span data-ttu-id="db616-170">Alle Vorlagen Komponenten (Rechtecke und <xref:System.Windows.Controls.DockPanel>) werden in einer <xref:System.Windows.Controls.Grid>angeordnet.</span><span class="sxs-lookup"><span data-stu-id="db616-170">All of the template components (the rectangles and the <xref:System.Windows.Controls.DockPanel>) are laid out inside of a <xref:System.Windows.Controls.Grid>.</span></span>
+
+    ```xaml
+    <Setter.Value>
       <ControlTemplate TargetType="Button">
         <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" ClipToBounds="True">
           <!-- Outer Rectangle with rounded corners. -->
@@ -159,67 +163,67 @@ ms.locfileid: "68512817"
             <ContentPresenter x:Name="myContentPresenter" Margin="20" Content="{TemplateBinding  Content}" TextBlock.Foreground="Black" />
           </DockPanel>
         </Grid>
-      </ControlTemplate>  
-    </Setter.Value>  
-    ```  
-  
-     <span data-ttu-id="782c8-171">Drücken Sie F5, um die Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="782c8-171">Press F5 to run the application.</span></span> <span data-ttu-id="782c8-172">Es sollte wie folgt aussehen.</span><span class="sxs-lookup"><span data-stu-id="782c8-172">It should look like the following.</span></span>  
-  
-     <span data-ttu-id="782c8-173">![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")</span><span class="sxs-lookup"><span data-stu-id="782c8-173">![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")</span></span>  
-  
-3. <span data-ttu-id="782c8-174">**Fügen Sie der Vorlage einen glasseffect hinzu:** Als Nächstes fügen Sie das Glas hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-174">**Add a glasseffect to the template:** Next you will add the glass.</span></span> <span data-ttu-id="782c8-175">Zuerst erstellen Sie einige Ressourcen, die einen Glas Farbverlaufs Effekt erzeugen.</span><span class="sxs-lookup"><span data-stu-id="782c8-175">First you create some resources that create a glass gradient effect.</span></span> <span data-ttu-id="782c8-176">Fügen Sie diese Farbverlaufs Ressourcen `Application.Resources` an einer beliebigen Stelle innerhalb des Blocks</span><span class="sxs-lookup"><span data-stu-id="782c8-176">Add these gradient resources anywhere within the `Application.Resources` block:</span></span>  
-  
-    ```xaml  
-    <Application.Resources>  
-      <GradientStopCollection x:Key="MyGlassGradientStopsResource">
-        <GradientStop Color="WhiteSmoke" Offset="0.2" />     
-        <GradientStop Color="Transparent" Offset="0.4" />    
-        <GradientStop Color="WhiteSmoke" Offset="0.5" />     
-        <GradientStop Color="Transparent" Offset="0.75" />     
-        <GradientStop Color="WhiteSmoke" Offset="0.9" />     
-        <GradientStop Color="Transparent" Offset="1" />   
-      </GradientStopCollection>   
-      <LinearGradientBrush x:Key="MyGlassBrushResource"    
-        StartPoint="0,0" EndPoint="1,1" Opacity="0.75"
-        GradientStops="{StaticResource MyGlassGradientStopsResource}" />  
-    <!-- Styles and other resources below here. -->  
-    ```  
-  
-     <span data-ttu-id="782c8-177">Diese Ressourcen werden als <xref:System.Windows.Shapes.Shape.Fill%2A> für ein Rechteck verwendet, das in die <xref:System.Windows.Controls.Grid> der Schaltflächen Vorlage eingefügt wird.</span><span class="sxs-lookup"><span data-stu-id="782c8-177">These resources are used as the <xref:System.Windows.Shapes.Shape.Fill%2A> for a rectangle that we insert into the <xref:System.Windows.Controls.Grid> of the button template.</span></span> <span data-ttu-id="782c8-178">Fügen Sie der Vorlage das folgende hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-178">Add the following highlighted markup to the template.</span></span>  
-  
+      </ControlTemplate>
+    </Setter.Value>
+    ```
+
+     <span data-ttu-id="db616-171">Drücken Sie F5, um die Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="db616-171">Press F5 to run the application.</span></span> <span data-ttu-id="db616-172">Es sollte wie folgt aussehen.</span><span class="sxs-lookup"><span data-stu-id="db616-172">It should look like the following.</span></span>
+
+     <span data-ttu-id="db616-173">![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")</span><span class="sxs-lookup"><span data-stu-id="db616-173">![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")</span></span>
+
+3. <span data-ttu-id="db616-174">**Fügen Sie der Vorlage einen glasseffect hinzu:** Als Nächstes fügen Sie das Glas hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-174">**Add a glasseffect to the template:** Next you will add the glass.</span></span> <span data-ttu-id="db616-175">Zuerst erstellen Sie einige Ressourcen, die einen Glas Farbverlaufs Effekt erzeugen.</span><span class="sxs-lookup"><span data-stu-id="db616-175">First you create some resources that create a glass gradient effect.</span></span> <span data-ttu-id="db616-176">Fügen Sie diese Farbverlaufs Ressourcen `Application.Resources` an einer beliebigen Stelle innerhalb des Blocks</span><span class="sxs-lookup"><span data-stu-id="db616-176">Add these gradient resources anywhere within the `Application.Resources` block:</span></span>
+
     ```xaml
-    <Setter.Value>  
-      <ControlTemplate TargetType="{x:Type Button}">  
-        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"  
-          ClipToBounds="True">  
-  
-        <!-- Outer Rectangle with rounded corners. -->  
-        <Rectangle x:Name="outerRectangle" HorizontalAlignment="Stretch"   
-          VerticalAlignment="Stretch" Stroke="{TemplateBinding Background}"   
-          RadiusX="20" RadiusY="20" StrokeThickness="5" Fill="Transparent" />  
-  
-        <!-- Inner Rectangle with rounded corners. -->  
-        <Rectangle x:Name="innerRectangle" HorizontalAlignment="Stretch"   
-          VerticalAlignment="Stretch" Stroke="Transparent" StrokeThickness="20"   
-          Fill="{TemplateBinding Background}" RadiusX="20" RadiusY="20" />  
-  
-        <!-- Glass Rectangle -->     
-        <Rectangle x:Name="glassCube" HorizontalAlignment="Stretch"       
-          VerticalAlignment="Stretch"       
-          StrokeThickness="2" RadiusX="10" RadiusY="10" Opacity="0"       
-          Fill="{StaticResource MyGlassBrushResource}"       
+    <Application.Resources>
+      <GradientStopCollection x:Key="MyGlassGradientStopsResource">
+        <GradientStop Color="WhiteSmoke" Offset="0.2" />
+        <GradientStop Color="Transparent" Offset="0.4" />
+        <GradientStop Color="WhiteSmoke" Offset="0.5" />
+        <GradientStop Color="Transparent" Offset="0.75" />
+        <GradientStop Color="WhiteSmoke" Offset="0.9" />
+        <GradientStop Color="Transparent" Offset="1" />
+      </GradientStopCollection>
+      <LinearGradientBrush x:Key="MyGlassBrushResource"
+        StartPoint="0,0" EndPoint="1,1" Opacity="0.75"
+        GradientStops="{StaticResource MyGlassGradientStopsResource}" />
+    <!-- Styles and other resources below here. -->
+    ```
+
+     <span data-ttu-id="db616-177">Diese Ressourcen werden als <xref:System.Windows.Shapes.Shape.Fill%2A> für ein Rechteck verwendet, das in die <xref:System.Windows.Controls.Grid> der Schaltflächen Vorlage eingefügt wird.</span><span class="sxs-lookup"><span data-stu-id="db616-177">These resources are used as the <xref:System.Windows.Shapes.Shape.Fill%2A> for a rectangle that we insert into the <xref:System.Windows.Controls.Grid> of the button template.</span></span> <span data-ttu-id="db616-178">Fügen Sie der Vorlage das folgende hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-178">Add the following highlighted markup to the template.</span></span>
+
+    ```xaml
+    <Setter.Value>
+      <ControlTemplate TargetType="{x:Type Button}">
+        <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+          ClipToBounds="True">
+
+        <!-- Outer Rectangle with rounded corners. -->
+        <Rectangle x:Name="outerRectangle" HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch" Stroke="{TemplateBinding Background}"
+          RadiusX="20" RadiusY="20" StrokeThickness="5" Fill="Transparent" />
+
+        <!-- Inner Rectangle with rounded corners. -->
+        <Rectangle x:Name="innerRectangle" HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch" Stroke="Transparent" StrokeThickness="20"
+          Fill="{TemplateBinding Background}" RadiusX="20" RadiusY="20" />
+
+        <!-- Glass Rectangle -->
+        <Rectangle x:Name="glassCube" HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch"
+          StrokeThickness="2" RadiusX="10" RadiusY="10" Opacity="0"
+          Fill="{StaticResource MyGlassBrushResource}"
           RenderTransformOrigin="0.5,0.5">
-          <Rectangle.Stroke>         
+          <Rectangle.Stroke>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
               <LinearGradientBrush.GradientStops>
                 <GradientStop Offset="0.0" Color="LightBlue" />
                 <GradientStop Offset="1.0" Color="Gray" />
               </LinearGradientBrush.GradientStops>
-            </LinearGradientBrush>       
-          </Rectangle.Stroke>       
+            </LinearGradientBrush>
+          </Rectangle.Stroke>
           <!-- These transforms have no effect as they are declared here.
           The reason the transforms are included is to be targets
-          for animation (see later). -->       
+          for animation (see later). -->
           <Rectangle.RenderTransform>
             <TransformGroup>
               <ScaleTransform />
@@ -230,211 +234,212 @@ ms.locfileid: "68512817"
           <Rectangle.BitmapEffect>
             <BevelBitmapEffect />
           </Rectangle.BitmapEffect>
-        </Rectangle>  
-  
-        <!-- Present Text of the button. -->  
-        <DockPanel Name="myContentPresenterDockPanel">  
-          <ContentPresenter x:Name="myContentPresenter" Margin="20"   
-            Content="{TemplateBinding  Content}" TextBlock.Foreground="Black" />  
-        </DockPanel>  
-      </Grid>  
-    </ControlTemplate>  
-    </Setter.Value>  
-    ```  
-  
-     <span data-ttu-id="782c8-179">Beachten Sie, <xref:System.Windows.UIElement.Opacity%2A> dass der des Rechtecks mit der `x:Name` -Eigenschaft von "glassCube" den Wert 0 hat. Wenn Sie das Beispiel ausführen, wird das Glas Rechteck nicht oberhalb der oberen Position angezeigt.</span><span class="sxs-lookup"><span data-stu-id="782c8-179">Notice that the <xref:System.Windows.UIElement.Opacity%2A> of the rectangle with the `x:Name` property of "glassCube" is 0, so when you run the sample, you do not see the glass rectangle overlaid on top.</span></span> <span data-ttu-id="782c8-180">Dies liegt daran, dass später der Vorlage Trigger hinzugefügt werden, wenn der Benutzer mit der Schaltfläche interagiert.</span><span class="sxs-lookup"><span data-stu-id="782c8-180">This is because we will later add triggers to the template for when the user interacts with the button.</span></span> <span data-ttu-id="782c8-181">Sie können jedoch sehen, wie die Schaltfläche jetzt aussieht, indem Sie <xref:System.Windows.UIElement.Opacity%2A> den Wert in 1 ändern und die Anwendung ausführen.</span><span class="sxs-lookup"><span data-stu-id="782c8-181">However, you can see what the button looks like now by changing the <xref:System.Windows.UIElement.Opacity%2A> value to 1 and running the application.</span></span> <span data-ttu-id="782c8-182">Das Ergebnis wird in der folgende Abbildung gezeigt.</span><span class="sxs-lookup"><span data-stu-id="782c8-182">See the following figure.</span></span> <span data-ttu-id="782c8-183">Bevor Sie mit dem nächsten Schritt fortfahren, <xref:System.Windows.UIElement.Opacity%2A> ändern Sie zurück in 0.</span><span class="sxs-lookup"><span data-stu-id="782c8-183">Before proceeding to the next step, change the <xref:System.Windows.UIElement.Opacity%2A> back to 0.</span></span>  
-  
-     <span data-ttu-id="782c8-184">![Benutzerdefinierte Schaltflächen, die mit XAML erstellt wurden](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")</span><span class="sxs-lookup"><span data-stu-id="782c8-184">![Custom buttons that were created by using XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")</span></span>  
-  
-## <a name="create-button-interactivity"></a><span data-ttu-id="782c8-185">Interaktivität zum Erstellen einer Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="782c8-185">Create Button Interactivity</span></span>  
- <span data-ttu-id="782c8-186">In diesem Abschnitt erstellen Sie Eigenschafts Trigger und Ereignis Trigger, um Eigenschaftswerte zu ändern und Animationen als Reaktion auf Benutzeraktionen auszuführen, z. b. das Bewegen des Mauszeigers über die Schaltfläche und das Klicken auf.</span><span class="sxs-lookup"><span data-stu-id="782c8-186">In this section, you will create property triggers and event triggers to change property values and run animations in response to user actions such as moving the mouse pointer over the button and clicking.</span></span>  
-  
- <span data-ttu-id="782c8-187">Eine einfache Möglichkeit, Interaktivität hinzuzufügen (Mouseover, Mouseover, Click usw.), besteht darin, Trigger innerhalb Ihrer Vorlage oder Ihres Stils zu definieren.</span><span class="sxs-lookup"><span data-stu-id="782c8-187">An easy way to add interactivity (mouse-over, mouse-leave, click, and so on) is to define triggers within your template or style.</span></span> <span data-ttu-id="782c8-188">Um einen <xref:System.Windows.Trigger>zu erstellen, definieren Sie eine Eigenschaft "Bedingung" wie z. b.: Der Eigenschafts Wert der Schalt <xref:System.Windows.UIElement.IsMouseOver%2A> Fläche `true`ist gleich.</span><span class="sxs-lookup"><span data-stu-id="782c8-188">To create a <xref:System.Windows.Trigger>, you define a property "condition" such as: The button <xref:System.Windows.UIElement.IsMouseOver%2A> property value is equal to `true`.</span></span> <span data-ttu-id="782c8-189">Dann definieren Sie Setter (Aktionen), die stattfinden, wenn die Auslöserbedingung erfüllt ist.</span><span class="sxs-lookup"><span data-stu-id="782c8-189">You then define setters (actions) that take place when the trigger condition is true.</span></span>  
-  
-#### <a name="to-create-button-interactivity"></a><span data-ttu-id="782c8-190">So erstellen Sie Schaltflächen-Interaktivität</span><span class="sxs-lookup"><span data-stu-id="782c8-190">To create button interactivity</span></span>  
-  
-1. <span data-ttu-id="782c8-191">**Vorlagen Trigger hinzufügen:** Fügen Sie der Vorlage das hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-191">**Add template triggers:** Add the highlighted markup to your template.</span></span>  
-  
-    ```xaml
-    <Setter.Value>  
-      <ControlTemplate TargetType="{x:Type Button}">  
-        <Grid Width="{TemplateBinding Width}"   
-          Height="{TemplateBinding Height}" ClipToBounds="True">  
-  
-          <!-- Outer Rectangle with rounded corners. -->  
-          <Rectangle x:Name="outerRectangle" HorizontalAlignment="Stretch"   
-          VerticalAlignment="Stretch" Stroke="{TemplateBinding Background}"   
-          RadiusX="20" RadiusY="20" StrokeThickness="5" Fill="Transparent" />  
-  
-          <!-- Inner Rectangle with rounded corners. -->  
-          <Rectangle x:Name="innerRectangle" HorizontalAlignment="Stretch"   
-            VerticalAlignment="Stretch" Stroke="Transparent"   
-            StrokeThickness="20"   
-            Fill="{TemplateBinding Background}" RadiusX="20" RadiusY="20"   
-          />  
-  
-          <!-- Glass Rectangle -->  
-          <Rectangle x:Name="glassCube" HorizontalAlignment="Stretch"  
-            VerticalAlignment="Stretch"  
-            StrokeThickness="2" RadiusX="10" RadiusY="10" Opacity="0"  
-            Fill="{StaticResource MyGlassBrushResource}"  
-            RenderTransformOrigin="0.5,0.5">  
-            <Rectangle.Stroke>  
-              <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">  
-                <LinearGradientBrush.GradientStops>  
-                  <GradientStop Offset="0.0" Color="LightBlue" />  
-                  <GradientStop Offset="1.0" Color="Gray" />  
-                </LinearGradientBrush.GradientStops>  
-              </LinearGradientBrush>  
-            </Rectangle.Stroke>  
-  
-            <!-- These transforms have no effect as they   
-                 are declared here.   
-                 The reason the transforms are included is to be targets   
-                 for animation (see later). -->  
-            <Rectangle.RenderTransform>  
-              <TransformGroup>  
-                <ScaleTransform />  
-                <RotateTransform />  
-              </TransformGroup>  
-            </Rectangle.RenderTransform>  
-  
-              <!-- A BevelBitmapEffect is applied to give the button a   
-                   "Beveled" look. -->  
-            <Rectangle.BitmapEffect>  
-              <BevelBitmapEffect />  
-            </Rectangle.BitmapEffect>  
-          </Rectangle>  
-  
-          <!-- Present Text of the button. -->  
-          <DockPanel Name="myContentPresenterDockPanel">  
-            <ContentPresenter x:Name="myContentPresenter" Margin="20"   
-              Content="{TemplateBinding  Content}" TextBlock.Foreground="Black" />  
-          </DockPanel>  
-        </Grid>  
-  
-        <ControlTemplate.Triggers>       <!-- Set action triggers for the buttons and define            what the button does in response to those triggers. -->     </ControlTemplate.Triggers>  
-      </ControlTemplate>  
-    </Setter.Value>  
-    ```  
-  
-2. <span data-ttu-id="782c8-192">**Eigenschafts Trigger hinzufügen:** Fügen Sie dem `ControlTemplate.Triggers` Block das hervorgehobene Markup hinzu:</span><span class="sxs-lookup"><span data-stu-id="782c8-192">**Add property triggers:** Add the highlighted markup to the `ControlTemplate.Triggers` block:</span></span>  
-  
-    ```xaml
-    <ControlTemplate.Triggers>  
-  
-      <!-- Set properties when mouse pointer is over the button. -->   <Trigger Property="IsMouseOver" Value="True">     <!-- Below are three property settings that occur when the           condition is met (user mouses over button).  -->     <!-- Change the color of the outer rectangle when user           mouses over it. -->     <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <!-- Sets the glass opacity to 1, therefore, the           glass "appears" when user mouses over it. -->     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />     <!-- Makes the text slightly blurry as though you           were looking at it through blurry glass. -->     <Setter Property="ContentPresenter.BitmapEffect"        TargetName="myContentPresenter">       <Setter.Value>         <BlurBitmapEffect Radius="1" />       </Setter.Value>     </Setter>   </Trigger>  
-  
-    <ControlTemplate.Triggers/>  
-    ```  
-  
-     <span data-ttu-id="782c8-193">Drücken Sie F5, um die Anwendung auszuführen, und sehen Sie sich den Effekt an, während Sie den Mauszeiger über den Schaltflächen ausführen.</span><span class="sxs-lookup"><span data-stu-id="782c8-193">Press F5 to run the application and see the effect as you run the mouse pointer over the buttons.</span></span>  
-  
-3. <span data-ttu-id="782c8-194">**Hinzufügen eines Fokus Auslösers:** Als Nächstes fügen wir einige ähnliche Setter hinzu, um den Fall zu behandeln, dass die Schaltfläche den Fokus besitzt (z. b. Nachdem der Benutzer darauf geklickt hat).</span><span class="sxs-lookup"><span data-stu-id="782c8-194">**Add a focus trigger:** Next, we'll add some similar setters to handle the case when the button has focus (for example, after the user clicks it).</span></span>  
-  
-    ```xaml  
-    <ControlTemplate.Triggers>  
-  
-      <!-- Set properties when mouse pointer is over the button. -->  
-      <Trigger Property="IsMouseOver" Value="True">  
-  
-        <!-- Below are three property settings that occur when the   
-             condition is met (user mouses over button).  -->  
-        <!-- Change the color of the outer rectangle when user          mouses over it. -->  
-        <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"  
-          Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />  
-  
-        <!-- Sets the glass opacity to 1, therefore, the          glass "appears" when user mouses over it. -->  
-        <Setter Property="Rectangle.Opacity" Value="1"       TargetName="glassCube" />  
-  
-        <!-- Makes the text slightly blurry as though you were          looking at it through blurry glass. -->  
-        <Setter Property="ContentPresenter.BitmapEffect"       TargetName="myContentPresenter">  
-          <Setter.Value>  
-            <BlurBitmapEffect Radius="1" />  
-          </Setter.Value>  
-        </Setter>  
-      </Trigger>  
-      <!-- Set properties when button has focus. -->   <Trigger Property="IsFocused" Value="true">     <Setter Property="Rectangle.Opacity" Value="1"       TargetName="glassCube" />     <Setter Property="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />   </Trigger>  
-  
-    </ControlTemplate.Triggers>  
-    ```  
-  
-     <span data-ttu-id="782c8-195">Drücken Sie F5, um die Anwendung auszuführen, und klicken Sie auf eine der Schaltflächen.</span><span class="sxs-lookup"><span data-stu-id="782c8-195">Press F5 to run the application and click on one of the buttons.</span></span> <span data-ttu-id="782c8-196">Beachten Sie, dass die Schaltfläche hervorgehoben bleibt, nachdem Sie darauf geklickt haben, da Sie noch den Fokus besitzt</span><span class="sxs-lookup"><span data-stu-id="782c8-196">Notice that the button stays highlighted after you click it because it still has focus.</span></span> <span data-ttu-id="782c8-197">Wenn Sie auf eine andere Schaltfläche klicken, erhält die neue Schaltfläche den Fokus, während der letzte die Schaltfläche verliert.</span><span class="sxs-lookup"><span data-stu-id="782c8-197">If you click another button, the new button gains focus while the last one loses it.</span></span>  
-  
-4. <span data-ttu-id="782c8-198">**Fügen Sie Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> hinzu **:**   Als Nächstes fügen wir den Triggern einige Animationen hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-198">**Add animations for**  <xref:System.Windows.UIElement.MouseEnter> **and** <xref:System.Windows.UIElement.MouseLeave> **:** Next we add some animations to the triggers.</span></span> <span data-ttu-id="782c8-199">Fügen Sie das folgende Markup an einer beliebigen `ControlTemplate.Triggers` Stelle innerhalb des-Blocks hinzu.</span><span class="sxs-lookup"><span data-stu-id="782c8-199">Add the following markup anywhere inside of the `ControlTemplate.Triggers` block.</span></span>  
-  
-    ```xaml
-    <!-- Animations that start when mouse enters and leaves button. -->  
-    <EventTrigger RoutedEvent="Mouse.MouseEnter">  
-      <EventTrigger.Actions>  
-        <BeginStoryboard Name="mouseEnterBeginStoryboard">  
-          <Storyboard>  
-          <!-- This animation makes the glass rectangle shrink in the X direction. -->  
-            <DoubleAnimation Storyboard.TargetName="glassCube"   
-              Storyboard.TargetProperty=  
-              "(Rectangle.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"  
-              By="-0.1" Duration="0:0:0.5" />  
-            <!-- This animation makes the glass rectangle shrink in the Y direction. -->  
-            <DoubleAnimation  
-            Storyboard.TargetName="glassCube"   
-              Storyboard.TargetProperty=  
-              "(Rectangle.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"   
-              By="-0.1" Duration="0:0:0.5" />  
-          </Storyboard>  
-        </BeginStoryboard>  
-      </EventTrigger.Actions>  
-    </EventTrigger>  
-    <EventTrigger RoutedEvent="Mouse.MouseLeave">  
-      <EventTrigger.Actions>  
-        <!-- Stopping the storyboard sets all animated properties back to default. -->  
-        <StopStoryboard BeginStoryboardName="mouseEnterBeginStoryboard" />  
-      </EventTrigger.Actions>  
-    </EventTrigger>  
-    ```  
-  
-     <span data-ttu-id="782c8-200">Das Glas Rechteck verkleinert sich, wenn der Mauszeiger über die Schaltfläche bewegt wird, und kehrt zur normalen Größe zurück, wenn der Zeiger verlässt.</span><span class="sxs-lookup"><span data-stu-id="782c8-200">The glass rectangle shrinks when the mouse pointer moves over the button and returns back to normal size when the pointer leaves.</span></span>  
-  
-     <span data-ttu-id="782c8-201">Zwei Animationen werden ausgelöst, wenn der Mauszeiger über die Schaltfläche bewegt wird<xref:System.Windows.UIElement.MouseEnter> (das-Ereignis wird ausgelöst).</span><span class="sxs-lookup"><span data-stu-id="782c8-201">There are two animations that are triggered when the pointer goes over the button (<xref:System.Windows.UIElement.MouseEnter> event is raised).</span></span> <span data-ttu-id="782c8-202">Diese Animationen verkleinern das Glas Rechteck entlang der X-und Y-Achse.</span><span class="sxs-lookup"><span data-stu-id="782c8-202">These animations shrink the glass rectangle along the X and Y axis.</span></span> <span data-ttu-id="782c8-203">Beachten Sie die Eigenschaften <xref:System.Windows.Media.Animation.DoubleAnimation> der Elemente – <xref:System.Windows.Media.Animation.Timeline.Duration%2A> und. <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A></span><span class="sxs-lookup"><span data-stu-id="782c8-203">Notice the properties on the <xref:System.Windows.Media.Animation.DoubleAnimation> elements — <xref:System.Windows.Media.Animation.Timeline.Duration%2A> and <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>.</span></span> <span data-ttu-id="782c8-204">Der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> gibt an, dass die Animation über eine halbe Sekunde ausgeführt <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> wird, und gibt an, dass das Glas um 10% verkleinert wird.</span><span class="sxs-lookup"><span data-stu-id="782c8-204">The <xref:System.Windows.Media.Animation.Timeline.Duration%2A> specifies that the animation occurs over half a second, and <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> specifies that the glass shrinks by 10%.</span></span>  
-  
-     <span data-ttu-id="782c8-205">Der zweite Ereignis auslöst (<xref:System.Windows.UIElement.MouseLeave>) beendet einfach den ersten.</span><span class="sxs-lookup"><span data-stu-id="782c8-205">The second event trigger (<xref:System.Windows.UIElement.MouseLeave>) simply stops the first one.</span></span> <span data-ttu-id="782c8-206">Wenn Sie ein <xref:System.Windows.Media.Animation.Storyboard>beenden, werden alle animierten Eigenschaften auf die Standardwerte zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="782c8-206">When you stop a <xref:System.Windows.Media.Animation.Storyboard>, all the animated properties return to their default values.</span></span> <span data-ttu-id="782c8-207">Wenn der Benutzer den Mauszeiger auf die Schaltfläche verschiebt, wird die Schaltfläche auf die Art und Weise zurückgesetzt, in der sich der Mauszeiger über die Schaltfläche bewegt hat.</span><span class="sxs-lookup"><span data-stu-id="782c8-207">Therefore, when the user moves the pointer off the button, the button goes back to the way it was before the mouse pointer moved over the button.</span></span> <span data-ttu-id="782c8-208">Weitere Informationen zu Animationen finden Sie unter [Übersicht](../graphics-multimedia/animation-overview.md)über Animationen.</span><span class="sxs-lookup"><span data-stu-id="782c8-208">For more information about animations, see [Animation Overview](../graphics-multimedia/animation-overview.md).</span></span>  
-  
-5. <span data-ttu-id="782c8-209">**Fügen Sie eine Animation für hinzu, wenn auf die Schaltfläche geklickt wird:** Der letzte Schritt ist das Hinzufügen eines-Auslösers, wenn der Benutzer auf die Schaltfläche klickt.</span><span class="sxs-lookup"><span data-stu-id="782c8-209">**Add an animation for when the button is clicked:** The final step is to add a trigger for when the user clicks the button.</span></span> <span data-ttu-id="782c8-210">Fügen Sie das folgende Markup an einer beliebigen `ControlTemplate.Triggers` Stelle innerhalb des-Blocks hinzu:</span><span class="sxs-lookup"><span data-stu-id="782c8-210">Add the following markup anywhere inside of the `ControlTemplate.Triggers` block:</span></span>  
-  
-    ```xaml
-    <!-- Animation fires when button is clicked, causing glass to spin.  -->  
-    <EventTrigger RoutedEvent="Button.Click">  
-      <EventTrigger.Actions>  
-        <BeginStoryboard>  
-          <Storyboard>  
-            <DoubleAnimation Storyboard.TargetName="glassCube"   
-              Storyboard.TargetProperty=  
-              "(Rectangle.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)"   
-              By="360" Duration="0:0:0.5" />  
-          </Storyboard>  
-        </BeginStoryboard>  
-      </EventTrigger.Actions>  
-    </EventTrigger>  
-    ```  
-  
-     <span data-ttu-id="782c8-211">Drücken Sie F5, um die Anwendung auszuführen, und klicken Sie auf eine der Schaltflächen.</span><span class="sxs-lookup"><span data-stu-id="782c8-211">Press F5 to run the application, and click one of the buttons.</span></span> <span data-ttu-id="782c8-212">Wenn Sie auf eine Schaltfläche klicken, dreht sich das Glas Rechteck herum.</span><span class="sxs-lookup"><span data-stu-id="782c8-212">When you click a button, the glass rectangle spins around.</span></span>  
-  
-## <a name="summary"></a><span data-ttu-id="782c8-213">Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="782c8-213">Summary</span></span>  
- <span data-ttu-id="782c8-214">In dieser exemplarischen Vorgehensweise haben Sie die folgenden Übungen ausgeführt:</span><span class="sxs-lookup"><span data-stu-id="782c8-214">In this walkthrough, you performed the following exercises:</span></span>  
-  
-- <span data-ttu-id="782c8-215">Als <xref:System.Windows.Style> Ziel für einen Objekttyp (<xref:System.Windows.Controls.Button>).</span><span class="sxs-lookup"><span data-stu-id="782c8-215">Targeted a <xref:System.Windows.Style> to an object type (<xref:System.Windows.Controls.Button>).</span></span>  
-  
-- <span data-ttu-id="782c8-216">Die grundlegenden Eigenschaften der Schaltflächen in der gesamten Anwendung werden <xref:System.Windows.Style>mithilfe von gesteuert.</span><span class="sxs-lookup"><span data-stu-id="782c8-216">Controlled basic properties of the buttons in the entire application using the <xref:System.Windows.Style>.</span></span>  
-  
-- <span data-ttu-id="782c8-217">Es wurden Ressourcen wie Farbverläufe erstellt, die <xref:System.Windows.Style> für Eigenschaftswerte der Setter verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="782c8-217">Created resources like gradients to use for property values of the <xref:System.Windows.Style> setters.</span></span>  
-  
-- <span data-ttu-id="782c8-218">Sie haben das Aussehen von Schaltflächen in der gesamten Anwendung angepasst, indem Sie eine Vorlage auf die Schaltflächen anwenden.</span><span class="sxs-lookup"><span data-stu-id="782c8-218">Customized the look of buttons in the entire application by applying a template to the buttons.</span></span>  
-  
-- <span data-ttu-id="782c8-219">Benutzerdefiniertes Verhalten für die Schaltflächen als Reaktion auf Benutzeraktionen <xref:System.Windows.UIElement.MouseEnter>( <xref:System.Windows.UIElement.MouseLeave>z. <xref:System.Windows.Controls.Primitives.ButtonBase.Click>b., und), die Animationseffekte enthalten.</span><span class="sxs-lookup"><span data-stu-id="782c8-219">Customized behavior for the buttons in response to user actions (such as <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, and <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) that included animation effects.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="782c8-220">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="782c8-220">See also</span></span>
+        </Rectangle>
 
-- [<span data-ttu-id="782c8-221">Erstellen einer Schaltfläche mit Microsoft Expression Blend</span><span class="sxs-lookup"><span data-stu-id="782c8-221">Create a Button by Using Microsoft Expression Blend</span></span>](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [<span data-ttu-id="782c8-222">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="782c8-222">Styling and Templating</span></span>](styling-and-templating.md)
-- [<span data-ttu-id="782c8-223">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="782c8-223">Animation Overview</span></span>](../graphics-multimedia/animation-overview.md)
-- [<span data-ttu-id="782c8-224">Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen</span><span class="sxs-lookup"><span data-stu-id="782c8-224">Painting with Solid Colors and Gradients Overview</span></span>](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [<span data-ttu-id="782c8-225">Übersicht über Bitmapeffekte</span><span class="sxs-lookup"><span data-stu-id="782c8-225">Bitmap Effects Overview</span></span>](../graphics-multimedia/bitmap-effects-overview.md)
+        <!-- Present Text of the button. -->
+        <DockPanel Name="myContentPresenterDockPanel">
+          <ContentPresenter x:Name="myContentPresenter" Margin="20"
+            Content="{TemplateBinding  Content}" TextBlock.Foreground="Black" />
+        </DockPanel>
+      </Grid>
+    </ControlTemplate>
+    </Setter.Value>
+    ```
+
+     <span data-ttu-id="db616-179">Beachten Sie, <xref:System.Windows.UIElement.Opacity%2A> dass der des Rechtecks mit der `x:Name` -Eigenschaft von "glassCube" den Wert 0 hat. Wenn Sie das Beispiel ausführen, wird das Glas Rechteck nicht oberhalb der oberen Position angezeigt.</span><span class="sxs-lookup"><span data-stu-id="db616-179">Notice that the <xref:System.Windows.UIElement.Opacity%2A> of the rectangle with the `x:Name` property of "glassCube" is 0, so when you run the sample, you do not see the glass rectangle overlaid on top.</span></span> <span data-ttu-id="db616-180">Dies liegt daran, dass später der Vorlage Trigger hinzugefügt werden, wenn der Benutzer mit der Schaltfläche interagiert.</span><span class="sxs-lookup"><span data-stu-id="db616-180">This is because we will later add triggers to the template for when the user interacts with the button.</span></span> <span data-ttu-id="db616-181">Sie können jedoch sehen, wie die Schaltfläche jetzt aussieht, indem Sie <xref:System.Windows.UIElement.Opacity%2A> den Wert in 1 ändern und die Anwendung ausführen.</span><span class="sxs-lookup"><span data-stu-id="db616-181">However, you can see what the button looks like now by changing the <xref:System.Windows.UIElement.Opacity%2A> value to 1 and running the application.</span></span> <span data-ttu-id="db616-182">Das Ergebnis wird in der folgende Abbildung gezeigt.</span><span class="sxs-lookup"><span data-stu-id="db616-182">See the following figure.</span></span> <span data-ttu-id="db616-183">Bevor Sie mit dem nächsten Schritt fortfahren, <xref:System.Windows.UIElement.Opacity%2A> ändern Sie zurück in 0.</span><span class="sxs-lookup"><span data-stu-id="db616-183">Before proceeding to the next step, change the <xref:System.Windows.UIElement.Opacity%2A> back to 0.</span></span>
+
+     <span data-ttu-id="db616-184">![Benutzerdefinierte Schaltflächen, die mit XAML erstellt wurden](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")</span><span class="sxs-lookup"><span data-stu-id="db616-184">![Custom buttons that were created by using XAML](./media/custom-button-animatedbutton-5.gif "custom_button_AnimatedButton_5")</span></span>
+
+## <a name="create-button-interactivity"></a><span data-ttu-id="db616-185">Interaktivität zum Erstellen einer Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="db616-185">Create Button Interactivity</span></span>
+
+<span data-ttu-id="db616-186">In diesem Abschnitt erstellen Sie Eigenschafts Trigger und Ereignis Trigger, um Eigenschaftswerte zu ändern und Animationen als Reaktion auf Benutzeraktionen auszuführen, z. b. das Bewegen des Mauszeigers über die Schaltfläche und das Klicken auf.</span><span class="sxs-lookup"><span data-stu-id="db616-186">In this section, you will create property triggers and event triggers to change property values and run animations in response to user actions such as moving the mouse pointer over the button and clicking.</span></span>
+
+<span data-ttu-id="db616-187">Eine einfache Möglichkeit, Interaktivität hinzuzufügen (Mouseover, Mouseover, Click usw.), besteht darin, Trigger innerhalb Ihrer Vorlage oder Ihres Stils zu definieren.</span><span class="sxs-lookup"><span data-stu-id="db616-187">An easy way to add interactivity (mouse-over, mouse-leave, click, and so on) is to define triggers within your template or style.</span></span> <span data-ttu-id="db616-188">Um einen <xref:System.Windows.Trigger>zu erstellen, definieren Sie eine Eigenschaft "Bedingung" wie z. b.: Der Eigenschafts Wert der Schalt <xref:System.Windows.UIElement.IsMouseOver%2A> Fläche `true`ist gleich.</span><span class="sxs-lookup"><span data-stu-id="db616-188">To create a <xref:System.Windows.Trigger>, you define a property "condition" such as: The button <xref:System.Windows.UIElement.IsMouseOver%2A> property value is equal to `true`.</span></span> <span data-ttu-id="db616-189">Dann definieren Sie Setter (Aktionen), die stattfinden, wenn die Auslöserbedingung erfüllt ist.</span><span class="sxs-lookup"><span data-stu-id="db616-189">You then define setters (actions) that take place when the trigger condition is true.</span></span>
+
+### <a name="to-create-button-interactivity"></a><span data-ttu-id="db616-190">So erstellen Sie Schaltflächen-Interaktivität</span><span class="sxs-lookup"><span data-stu-id="db616-190">To create button interactivity</span></span>
+
+1. <span data-ttu-id="db616-191">**Vorlagen Trigger hinzufügen:** Fügen Sie der Vorlage das hervorgehobene Markup hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-191">**Add template triggers:** Add the highlighted markup to your template.</span></span>
+
+    ```xaml
+    <Setter.Value>
+      <ControlTemplate TargetType="{x:Type Button}">
+        <Grid Width="{TemplateBinding Width}"
+          Height="{TemplateBinding Height}" ClipToBounds="True">
+
+          <!-- Outer Rectangle with rounded corners. -->
+          <Rectangle x:Name="outerRectangle" HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch" Stroke="{TemplateBinding Background}"
+          RadiusX="20" RadiusY="20" StrokeThickness="5" Fill="Transparent" />
+
+          <!-- Inner Rectangle with rounded corners. -->
+          <Rectangle x:Name="innerRectangle" HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch" Stroke="Transparent"
+            StrokeThickness="20"
+            Fill="{TemplateBinding Background}" RadiusX="20" RadiusY="20"
+          />
+
+          <!-- Glass Rectangle -->
+          <Rectangle x:Name="glassCube" HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            StrokeThickness="2" RadiusX="10" RadiusY="10" Opacity="0"
+            Fill="{StaticResource MyGlassBrushResource}"
+            RenderTransformOrigin="0.5,0.5">
+            <Rectangle.Stroke>
+              <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <LinearGradientBrush.GradientStops>
+                  <GradientStop Offset="0.0" Color="LightBlue" />
+                  <GradientStop Offset="1.0" Color="Gray" />
+                </LinearGradientBrush.GradientStops>
+              </LinearGradientBrush>
+            </Rectangle.Stroke>
+
+            <!-- These transforms have no effect as they
+                 are declared here.
+                 The reason the transforms are included is to be targets
+                 for animation (see later). -->
+            <Rectangle.RenderTransform>
+              <TransformGroup>
+                <ScaleTransform />
+                <RotateTransform />
+              </TransformGroup>
+            </Rectangle.RenderTransform>
+
+              <!-- A BevelBitmapEffect is applied to give the button a
+                   "Beveled" look. -->
+            <Rectangle.BitmapEffect>
+              <BevelBitmapEffect />
+            </Rectangle.BitmapEffect>
+          </Rectangle>
+
+          <!-- Present Text of the button. -->
+          <DockPanel Name="myContentPresenterDockPanel">
+            <ContentPresenter x:Name="myContentPresenter" Margin="20"
+              Content="{TemplateBinding  Content}" TextBlock.Foreground="Black" />
+          </DockPanel>
+        </Grid>
+
+        <ControlTemplate.Triggers>       <!-- Set action triggers for the buttons and define            what the button does in response to those triggers. -->     </ControlTemplate.Triggers>
+      </ControlTemplate>
+    </Setter.Value>
+    ```
+
+2. <span data-ttu-id="db616-192">**Eigenschafts Trigger hinzufügen:** Fügen Sie dem `ControlTemplate.Triggers` Block das hervorgehobene Markup hinzu:</span><span class="sxs-lookup"><span data-stu-id="db616-192">**Add property triggers:** Add the highlighted markup to the `ControlTemplate.Triggers` block:</span></span>
+
+    ```xaml
+    <ControlTemplate.Triggers>
+
+      <!-- Set properties when mouse pointer is over the button. -->   <Trigger Property="IsMouseOver" Value="True">     <!-- Below are three property settings that occur when the           condition is met (user mouses over button).  -->     <!-- Change the color of the outer rectangle when user           mouses over it. -->     <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <!-- Sets the glass opacity to 1, therefore, the           glass "appears" when user mouses over it. -->     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />     <!-- Makes the text slightly blurry as though you           were looking at it through blurry glass. -->     <Setter Property="ContentPresenter.BitmapEffect"        TargetName="myContentPresenter">       <Setter.Value>         <BlurBitmapEffect Radius="1" />       </Setter.Value>     </Setter>   </Trigger>
+
+    <ControlTemplate.Triggers/>
+    ```
+
+     <span data-ttu-id="db616-193">Drücken Sie F5, um die Anwendung auszuführen, und sehen Sie sich den Effekt an, während Sie den Mauszeiger über den Schaltflächen ausführen.</span><span class="sxs-lookup"><span data-stu-id="db616-193">Press F5 to run the application and see the effect as you run the mouse pointer over the buttons.</span></span>
+
+3. <span data-ttu-id="db616-194">**Hinzufügen eines Fokus Auslösers:** Als Nächstes fügen wir einige ähnliche Setter hinzu, um den Fall zu behandeln, dass die Schaltfläche den Fokus besitzt (z. b. Nachdem der Benutzer darauf geklickt hat).</span><span class="sxs-lookup"><span data-stu-id="db616-194">**Add a focus trigger:** Next, we'll add some similar setters to handle the case when the button has focus (for example, after the user clicks it).</span></span>
+
+    ```xaml
+    <ControlTemplate.Triggers>
+
+      <!-- Set properties when mouse pointer is over the button. -->
+      <Trigger Property="IsMouseOver" Value="True">
+
+        <!-- Below are three property settings that occur when the
+             condition is met (user mouses over button).  -->
+        <!-- Change the color of the outer rectangle when user          mouses over it. -->
+        <Setter Property ="Rectangle.Stroke" TargetName="outerRectangle"
+          Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />
+
+        <!-- Sets the glass opacity to 1, therefore, the          glass "appears" when user mouses over it. -->
+        <Setter Property="Rectangle.Opacity" Value="1"       TargetName="glassCube" />
+
+        <!-- Makes the text slightly blurry as though you were          looking at it through blurry glass. -->
+        <Setter Property="ContentPresenter.BitmapEffect"       TargetName="myContentPresenter">
+          <Setter.Value>
+            <BlurBitmapEffect Radius="1" />
+          </Setter.Value>
+        </Setter>
+      </Trigger>
+      <!-- Set properties when button has focus. -->   <Trigger Property="IsFocused" Value="true">     <Setter Property="Rectangle.Opacity" Value="1"       TargetName="glassCube" />     <Setter Property="Rectangle.Stroke" TargetName="outerRectangle"       Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" />     <Setter Property="Rectangle.Opacity" Value="1" TargetName="glassCube" />   </Trigger>
+
+    </ControlTemplate.Triggers>
+    ```
+
+     <span data-ttu-id="db616-195">Drücken Sie F5, um die Anwendung auszuführen, und klicken Sie auf eine der Schaltflächen.</span><span class="sxs-lookup"><span data-stu-id="db616-195">Press F5 to run the application and click on one of the buttons.</span></span> <span data-ttu-id="db616-196">Beachten Sie, dass die Schaltfläche hervorgehoben bleibt, nachdem Sie darauf geklickt haben, da Sie noch den Fokus besitzt</span><span class="sxs-lookup"><span data-stu-id="db616-196">Notice that the button stays highlighted after you click it because it still has focus.</span></span> <span data-ttu-id="db616-197">Wenn Sie auf eine andere Schaltfläche klicken, erhält die neue Schaltfläche den Fokus, während der letzte die Schaltfläche verliert.</span><span class="sxs-lookup"><span data-stu-id="db616-197">If you click another button, the new button gains focus while the last one loses it.</span></span>
+
+4. <span data-ttu-id="db616-198">**Fügen Sie Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> hinzu **:**   Als Nächstes fügen wir den Triggern einige Animationen hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-198">**Add animations for**  <xref:System.Windows.UIElement.MouseEnter> **and** <xref:System.Windows.UIElement.MouseLeave> **:** Next we add some animations to the triggers.</span></span> <span data-ttu-id="db616-199">Fügen Sie das folgende Markup an einer beliebigen `ControlTemplate.Triggers` Stelle innerhalb des-Blocks hinzu.</span><span class="sxs-lookup"><span data-stu-id="db616-199">Add the following markup anywhere inside of the `ControlTemplate.Triggers` block.</span></span>
+
+    ```xaml
+    <!-- Animations that start when mouse enters and leaves button. -->
+    <EventTrigger RoutedEvent="Mouse.MouseEnter">
+      <EventTrigger.Actions>
+        <BeginStoryboard Name="mouseEnterBeginStoryboard">
+          <Storyboard>
+          <!-- This animation makes the glass rectangle shrink in the X direction. -->
+            <DoubleAnimation Storyboard.TargetName="glassCube"
+              Storyboard.TargetProperty=
+              "(Rectangle.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)"
+              By="-0.1" Duration="0:0:0.5" />
+            <!-- This animation makes the glass rectangle shrink in the Y direction. -->
+            <DoubleAnimation
+            Storyboard.TargetName="glassCube"
+              Storyboard.TargetProperty=
+              "(Rectangle.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+              By="-0.1" Duration="0:0:0.5" />
+          </Storyboard>
+        </BeginStoryboard>
+      </EventTrigger.Actions>
+    </EventTrigger>
+    <EventTrigger RoutedEvent="Mouse.MouseLeave">
+      <EventTrigger.Actions>
+        <!-- Stopping the storyboard sets all animated properties back to default. -->
+        <StopStoryboard BeginStoryboardName="mouseEnterBeginStoryboard" />
+      </EventTrigger.Actions>
+    </EventTrigger>
+    ```
+
+     <span data-ttu-id="db616-200">Das Glas Rechteck verkleinert sich, wenn der Mauszeiger über die Schaltfläche bewegt wird, und kehrt zur normalen Größe zurück, wenn der Zeiger verlässt.</span><span class="sxs-lookup"><span data-stu-id="db616-200">The glass rectangle shrinks when the mouse pointer moves over the button and returns back to normal size when the pointer leaves.</span></span>
+
+     <span data-ttu-id="db616-201">Zwei Animationen werden ausgelöst, wenn der Mauszeiger über die Schaltfläche bewegt wird<xref:System.Windows.UIElement.MouseEnter> (das-Ereignis wird ausgelöst).</span><span class="sxs-lookup"><span data-stu-id="db616-201">There are two animations that are triggered when the pointer goes over the button (<xref:System.Windows.UIElement.MouseEnter> event is raised).</span></span> <span data-ttu-id="db616-202">Diese Animationen verkleinern das Glas Rechteck entlang der X-und Y-Achse.</span><span class="sxs-lookup"><span data-stu-id="db616-202">These animations shrink the glass rectangle along the X and Y axis.</span></span> <span data-ttu-id="db616-203">Beachten Sie die Eigenschaften <xref:System.Windows.Media.Animation.DoubleAnimation> der Elemente – <xref:System.Windows.Media.Animation.Timeline.Duration%2A> und. <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A></span><span class="sxs-lookup"><span data-stu-id="db616-203">Notice the properties on the <xref:System.Windows.Media.Animation.DoubleAnimation> elements — <xref:System.Windows.Media.Animation.Timeline.Duration%2A> and <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>.</span></span> <span data-ttu-id="db616-204">Der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> gibt an, dass die Animation über eine halbe Sekunde ausgeführt <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> wird, und gibt an, dass das Glas um 10% verkleinert wird.</span><span class="sxs-lookup"><span data-stu-id="db616-204">The <xref:System.Windows.Media.Animation.Timeline.Duration%2A> specifies that the animation occurs over half a second, and <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> specifies that the glass shrinks by 10%.</span></span>
+
+     <span data-ttu-id="db616-205">Der zweite Ereignis auslöst (<xref:System.Windows.UIElement.MouseLeave>) beendet einfach den ersten.</span><span class="sxs-lookup"><span data-stu-id="db616-205">The second event trigger (<xref:System.Windows.UIElement.MouseLeave>) simply stops the first one.</span></span> <span data-ttu-id="db616-206">Wenn Sie ein <xref:System.Windows.Media.Animation.Storyboard>beenden, werden alle animierten Eigenschaften auf die Standardwerte zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="db616-206">When you stop a <xref:System.Windows.Media.Animation.Storyboard>, all the animated properties return to their default values.</span></span> <span data-ttu-id="db616-207">Wenn der Benutzer den Mauszeiger auf die Schaltfläche verschiebt, wird die Schaltfläche auf die Art und Weise zurückgesetzt, in der sich der Mauszeiger über die Schaltfläche bewegt hat.</span><span class="sxs-lookup"><span data-stu-id="db616-207">Therefore, when the user moves the pointer off the button, the button goes back to the way it was before the mouse pointer moved over the button.</span></span> <span data-ttu-id="db616-208">Weitere Informationen zu Animationen finden Sie unter [Übersicht](../graphics-multimedia/animation-overview.md)über Animationen.</span><span class="sxs-lookup"><span data-stu-id="db616-208">For more information about animations, see [Animation Overview](../graphics-multimedia/animation-overview.md).</span></span>
+
+5. <span data-ttu-id="db616-209">**Fügen Sie eine Animation für hinzu, wenn auf die Schaltfläche geklickt wird:** Der letzte Schritt ist das Hinzufügen eines-Auslösers, wenn der Benutzer auf die Schaltfläche klickt.</span><span class="sxs-lookup"><span data-stu-id="db616-209">**Add an animation for when the button is clicked:** The final step is to add a trigger for when the user clicks the button.</span></span> <span data-ttu-id="db616-210">Fügen Sie das folgende Markup an einer beliebigen `ControlTemplate.Triggers` Stelle innerhalb des-Blocks hinzu:</span><span class="sxs-lookup"><span data-stu-id="db616-210">Add the following markup anywhere inside of the `ControlTemplate.Triggers` block:</span></span>
+
+    ```xaml
+    <!-- Animation fires when button is clicked, causing glass to spin.  -->
+    <EventTrigger RoutedEvent="Button.Click">
+      <EventTrigger.Actions>
+        <BeginStoryboard>
+          <Storyboard>
+            <DoubleAnimation Storyboard.TargetName="glassCube"
+              Storyboard.TargetProperty=
+              "(Rectangle.RenderTransform).(TransformGroup.Children)[1].(RotateTransform.Angle)"
+              By="360" Duration="0:0:0.5" />
+          </Storyboard>
+        </BeginStoryboard>
+      </EventTrigger.Actions>
+    </EventTrigger>
+    ```
+
+     <span data-ttu-id="db616-211">Drücken Sie F5, um die Anwendung auszuführen, und klicken Sie auf eine der Schaltflächen.</span><span class="sxs-lookup"><span data-stu-id="db616-211">Press F5 to run the application, and click one of the buttons.</span></span> <span data-ttu-id="db616-212">Wenn Sie auf eine Schaltfläche klicken, dreht sich das Glas Rechteck herum.</span><span class="sxs-lookup"><span data-stu-id="db616-212">When you click a button, the glass rectangle spins around.</span></span>
+
+## <a name="summary"></a><span data-ttu-id="db616-213">Zusammenfassung</span><span class="sxs-lookup"><span data-stu-id="db616-213">Summary</span></span>
+ <span data-ttu-id="db616-214">In dieser exemplarischen Vorgehensweise haben Sie die folgenden Übungen ausgeführt:</span><span class="sxs-lookup"><span data-stu-id="db616-214">In this walkthrough, you performed the following exercises:</span></span>
+
+- <span data-ttu-id="db616-215">Als <xref:System.Windows.Style> Ziel für einen Objekttyp (<xref:System.Windows.Controls.Button>).</span><span class="sxs-lookup"><span data-stu-id="db616-215">Targeted a <xref:System.Windows.Style> to an object type (<xref:System.Windows.Controls.Button>).</span></span>
+
+- <span data-ttu-id="db616-216">Die grundlegenden Eigenschaften der Schaltflächen in der gesamten Anwendung werden <xref:System.Windows.Style>mithilfe von gesteuert.</span><span class="sxs-lookup"><span data-stu-id="db616-216">Controlled basic properties of the buttons in the entire application using the <xref:System.Windows.Style>.</span></span>
+
+- <span data-ttu-id="db616-217">Es wurden Ressourcen wie Farbverläufe erstellt, die <xref:System.Windows.Style> für Eigenschaftswerte der Setter verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="db616-217">Created resources like gradients to use for property values of the <xref:System.Windows.Style> setters.</span></span>
+
+- <span data-ttu-id="db616-218">Sie haben das Aussehen von Schaltflächen in der gesamten Anwendung angepasst, indem Sie eine Vorlage auf die Schaltflächen anwenden.</span><span class="sxs-lookup"><span data-stu-id="db616-218">Customized the look of buttons in the entire application by applying a template to the buttons.</span></span>
+
+- <span data-ttu-id="db616-219">Benutzerdefiniertes Verhalten für die Schaltflächen als Reaktion auf Benutzeraktionen <xref:System.Windows.UIElement.MouseEnter>( <xref:System.Windows.UIElement.MouseLeave>z. <xref:System.Windows.Controls.Primitives.ButtonBase.Click>b., und), die Animationseffekte enthalten.</span><span class="sxs-lookup"><span data-stu-id="db616-219">Customized behavior for the buttons in response to user actions (such as <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, and <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) that included animation effects.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="db616-220">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="db616-220">See also</span></span>
+
+- [<span data-ttu-id="db616-221">Erstellen einer Schaltfläche mit Microsoft Expression Blend</span><span class="sxs-lookup"><span data-stu-id="db616-221">Create a Button by Using Microsoft Expression Blend</span></span>](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [<span data-ttu-id="db616-222">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="db616-222">Styling and Templating</span></span>](styling-and-templating.md)
+- [<span data-ttu-id="db616-223">Übersicht über Animationen</span><span class="sxs-lookup"><span data-stu-id="db616-223">Animation Overview</span></span>](../graphics-multimedia/animation-overview.md)
+- [<span data-ttu-id="db616-224">Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen</span><span class="sxs-lookup"><span data-stu-id="db616-224">Painting with Solid Colors and Gradients Overview</span></span>](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [<span data-ttu-id="db616-225">Übersicht über Bitmapeffekte</span><span class="sxs-lookup"><span data-stu-id="db616-225">Bitmap Effects Overview</span></span>](../graphics-multimedia/bitmap-effects-overview.md)
