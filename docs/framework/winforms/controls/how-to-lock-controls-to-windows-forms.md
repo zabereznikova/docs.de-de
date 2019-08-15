@@ -5,47 +5,44 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cbf82f1481ee9779cec5cfbf3fb057b7ea399a1c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638566"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039906"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Vorgehensweise: Sperren von Steuerelementen für Windows Forms
-Wenn Sie die Benutzeroberfläche (UI) Ihrer Windows-Anwendung entwerfen, können Sie die Steuerelemente sperren, sobald sie die richtige Position sind, damit Sie nicht versehentlich zu verschieben oder deren Größe ändern, wenn Sie andere Eigenschaften festlegen.  
-  
- Darüber hinaus sperren und entsperren Sie alle Steuerelemente im Formular gleichzeitig angezeigt werden, die bei Formularen mit zahlreichen Steuerelementen hilfreich sind, oder Sie können einzelne Steuerelemente entsperren. Nachdem Sie alle Steuerelemente platziert haben, Sie möchten diese auf dem Formular, Sperren Sie diese um fehlerhafte Bewegung zu verhindern.  
-  
-> [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-lock-a-control"></a>Um ein Steuerelement zu sperren.  
-  
-1. In der **Eigenschaften** Fenster, klicken Sie auf die **gesperrt** Eigenschaft, und wählen `true`. (Mit durch Doppelklicken auf den Namen wird die Einstellung der Eigenschaft.)  
-  
-     Alternativ klicken Sie auf das Steuerelement, und wählen Sie **Steuerelemente sperren**.  
-  
+Wenn Sie die Benutzeroberfläche der Windows-Anwendung entwerfen, können Sie die Steuerelemente nach der ordnungsgemäßen Positionierung sperren, damit Sie Sie nicht versehentlich verschieben oder ändern, wenn Sie andere Eigenschaften festlegen.
+
+ Darüber hinaus können Sie alle Steuerelemente im Formular auf einmal Sperren und entsperren, was für Formulare mit vielen Steuerelementen hilfreich ist, oder Sie können einzelne Steuerelemente entsperren. Nachdem Sie alle Steuerelemente auf dem Formular abgelegt haben, Sperren Sie Sie alle an Ort und Stelle, um eine fehlerhafte Bewegung zu verhindern.
+
+## <a name="to-lock-a-control"></a>So sperren Sie ein Steuerelement
+
+1. Klicken Sie im Fenster **Eigenschaften** auf die Eigenschaft **gesperrt** , und `true`wählen Sie aus. (Doppelklicken Sie auf den Namen, um die Eigenschafts Einstellung zu wechseln.)
+
+     Klicken Sie alternativ mit der rechten Maustaste auf das Steuerelement, und wählen Sie Steuer **Elemente sperren**
+
     > [!NOTE]
-    >  Steuerelemente Sperren verhindert werden, die auf eine neue Größe oder Position auf der Entwurfsoberfläche gezogen wird. Sie können jedoch weiterhin ändern die Größe oder Position der Steuerelemente von der **Eigenschaften** Fenster oder im Code.  
-  
-### <a name="to-lock-all-the-controls-on-a-form"></a>Um alle Steuerelemente in einem Formular zu sperren.  
-  
-1. Von der **Format** Menü wählen **Steuerelemente sperren**.  
-  
+    >  Sperr Steuerelemente verhindern, dass Sie auf der Entwurfs Oberfläche an eine neue Größe oder Position gezogen werden. Sie können jedoch weiterhin die Größe oder Position von Steuerelementen mithilfe des **Eigenschaften** Fensters oder im Code ändern.
+
+## <a name="to-lock-all-the-controls-on-a-form"></a>So sperren Sie alle Steuerelemente auf einem Formular
+
+1. Wählen Sie im Menü **Format** die Option Steuer **Elemente sperren**aus.
+
     > [!NOTE]
-    >  Mit diesem Befehl sperrt auch die Größe des Formulars auf, da ein Formular ein Steuerelement handelt.  
-  
-### <a name="to-unlock-all-locked-controls-on-a-form"></a>Um alle gesperrten Steuerelemente in einem Formular zu entsperren.  
-  
-1. Von der **Format** Menü wählen **Steuerelemente sperren**.  
-  
-     Alle zuvor gesperrten Steuerelemente im Formular sind jetzt entsperrt.  
-  
-### <a name="to-unlock-locked-controls-individually"></a>Um gesperrte Steuerelemente einzeln zu entsperren.  
-  
-1. In der **Eigenschaften** Fenster, klicken Sie auf die **gesperrt** Eigenschaft, und wählen `false`. (Mit durch Doppelklicken auf den Namen wird die Einstellung der Eigenschaft.)  
-  
+    >  Dieser Befehl sperrt auch die Größe des Formulars, da ein Formular ein Steuerelement ist.
+
+## <a name="to-unlock-all-locked-controls-on-a-form"></a>So entsperren Sie alle gesperrten Steuerelemente auf einem Formular
+
+1. Wählen Sie im Menü **Format** die Option Steuer **Elemente sperren**aus.
+
+     Alle zuvor gesperrten Steuerelemente auf dem Formular sind nun entsperrt.
+
+## <a name="to-unlock-locked-controls-individually"></a>So entsperren Sie gesperrte Steuerelemente einzeln
+
+1. Klicken Sie im Fenster **Eigenschaften** auf die Eigenschaft **gesperrt** , und `false`wählen Sie aus. (Doppelklicken Sie auf den Namen, um die Eigenschafts Einstellung zu wechseln.)
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)

@@ -1,6 +1,6 @@
 ---
-title: FormatFromRawValue-Funktion (Referenz zur nicht verwalteten API)
-description: FormatFromRawValue-Funktion konvertiert rohleistungsdaten mehr in einem angegebenen Format.
+title: Formatfromrawvalue-Funktion (Referenz zur nicht verwalteten API)
+description: Die Funktion "formatfromrawvalue" konvertiert rohleistungs Daten in ein angegebenes Format.
 ms.date: 11/21/2017
 api_name:
 - FormatFromRawValue
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f92122eddf3cc8e6aec19d75fd2a95f76e9973
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 681d7ce42b2b8d16353e4f5b3523f1a953a49d95
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746699"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037885"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue-Funktion
 Konvertiert einen Rohdatenleistungswert in das angegebene Format oder zwei Rohdatenleistungswerte, wenn die Formatkonvertierung zeitabhängig ist. 
@@ -44,54 +44,54 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parameter
 
 `dwCounterType`\
-[in] Der Leistungsindikator-Typ. Eine Liste der Indikatortypen, finden Sie unter [WMI Performance Counter Types](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` kann jeder Typ Leistungsindikator, mit Ausnahme von sein `PERF_LARGE_RAW_FRACTION` und `PERF_LARGE_RAW_BASE`. 
+in Der zähtertyp. Eine Liste der Leistungs Zählers finden Sie unter [WMI-Leistungsdaten Typen](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`kann ein beliebiger zähtertyp `PERF_LARGE_RAW_FRACTION` mit `PERF_LARGE_RAW_BASE`Ausnahme von und sein. 
 
 `dwFormat`\
-[in] Das Format, die die unformatierte Leistungsdaten konvertiert werden soll. Es kann eine der folgenden Werte sein:
+in Das Format, in das die rohleistungs Daten konvertiert werden sollen. Dies kann einer der folgenden Werte sein:
 
 |Konstante  |Wert  |Beschreibung |
 |---------|---------|---------|
-| `PDH_FMT_DOUBLE` |0x00000200 | Geben Sie den berechneten Wert als einen Gleitkommawert mit doppelter Genauigkeit zurück. | 
-| `PDH_FMT_LARGE` | 0x00000400 | Geben Sie den berechneten Wert als eine 64-Bit-Ganzzahl zurück. |
-| `PDH_FMT_LONG` | 0x00000100 | Geben Sie den berechneten Wert als eine 32-Bit-Ganzzahl zurück. |
+| `PDH_FMT_DOUBLE` |0x00000200 | Gibt den berechneten Wert als Gleit Komma Wert mit doppelter Genauigkeit zurück. | 
+| `PDH_FMT_LARGE` | 0x00000400 | Gibt den berechneten Wert als 64-Bit-Ganzzahl zurück. |
+| `PDH_FMT_LONG` | 0x00000100 | Gibt den berechneten Wert als 32-Bit-Ganzzahl zurück. |
 
-Die vorherigen Werte kann ORed mit einem der folgenden Flags, die Skalierung möglich:
+Einer der vorherigen Werte kann mit einem der folgenden Skalierungsflags ORed lauten:
 
 |Konstante  |Wert  |Beschreibung |
 |---------|---------|---------|
-| `PDH_FMT_NOSCALE` | 0x00001000 | Skalierungsfaktoren des Zählers werden nicht angewendet werden. |
-| `PDH_FMT_1000` | 0x00002000 | Multiplizieren Sie den endgültigen Wert von 1.000 ein. | 
+| `PDH_FMT_NOSCALE` | 0x00001000 | Wenden Sie die Skalierungsfaktoren des Zählers nicht an. |
+| `PDH_FMT_1000` | 0x00002000 | Multiplizieren Sie den endgültigen Wert um 1.000. | 
 
 `pTimeBase`\
-[in] Ein Zeiger auf die Basis, bei Bedarf für die formatkonvertierung. Wenn Basis Uhrzeitinformationen nicht für die formatkonvertierung erforderlich ist, wird der Wert dieses Parameters ignoriert.
+in Ein Zeiger auf die Zeitbasis, falls dies für die Formatkonvertierung erforderlich ist. Wenn für die Formatkonvertierung keine Zeit Basisinformationen erforderlich sind, wird der Wert dieses Parameters ignoriert.
 
-`pRawValue1`\ [in] ein Zeiger auf eine [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) -Struktur, die einen rohleistung-Wert darstellt.
+`pRawValue1`[in] ein Zeiger auf eine [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) -Struktur, die einen rohleistungs Wert darstellt.
 
 `pRawValue2`\
-[in] Ein Zeiger auf eine [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) Struktur, die einen zweiten rohleistung-Wert darstellt. Dieser Parameter sollte sein, wenn Sie ein zweiter rohleistung bei der Wert nicht erforderlich ist, `null`.
+in Ein Zeiger auf eine [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) -Struktur, die einen zweiten rohleistungs Wert darstellt. Wenn ein zweiter rohleistungs Wert nicht erforderlich ist, sollte dieser Parameter lauten `null`.
 
 `pFmtValue`\
-[out] Ein Zeiger auf eine [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) Struktur, die dem Wert für die formatierte empfängt.
+vorgenommen Ein Zeiger auf eine [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) -Struktur, die den formatierten Leistungswert empfängt.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte werden von dieser Funktion zurückgegeben:
+Von dieser Funktion werden die folgenden Werte zurückgegeben:
 
 |Konstante  |Wert  |Description  |
 |---------|---------|---------|
-| `ERROR_SUCCESS` | 0 | Der Funktionsaufruf ist erfolgreich. |
-| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Ein erforderliches Argument ist nicht vorhanden oder falsch. | 
+| `ERROR_SUCCESS` | 0 | Der Funktions Aufrufvorgang ist erfolgreich. |
+| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Ein erforderliches Argument fehlt oder ist falsch. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | Das Handle ist kein gültiges PDH-Objekt. |
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) Funktion.
+Diese Funktion umschließt einen Aufrufen der [formatfromrawvalue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) -Funktion.
 
 ## <a name="requirements"></a>Anforderungen
 
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
- **Bibliothek:** PerfCounter.dll
+ **Fern** PerfCounter.dll
 
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 

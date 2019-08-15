@@ -12,46 +12,43 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 6000adeffcc991557e046461f93fec24e1262f54
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80973e16445079876e01c89f20b5ecbdca602eb8
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651686"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039722"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Vorgehensweise: Überlagern von Objekten in Windows Forms
-Beim Erstellen einer komplexen Benutzeroberfläche, oder mit einem Formular der multiple Document Interface (MDI) arbeiten, sollten Sie häufig layer-Steuerelemente und untergeordnete Formulare komplexere Benutzeroberflächen (UI) erstellen. Zum Verschieben und das Verfolgen von Steuerelemente und Fenster innerhalb des Kontexts einer Gruppe, bearbeiten Sie die Z-Reihenfolge. *Z-Reihenfolge* ist die Schichtung der Steuerelemente in einem Formular entlang des Formulars z-Achse (Tiefe). Das Fenster am Anfang der Z-Reihenfolge überschneidet sich mit allen anderen Fenstern. Alle anderen Fenster überlappen, das Fenster am unteren Rand der Z-Reihenfolge.  
-  
+Beim Erstellen einer komplexen Benutzeroberfläche oder bei Verwendung eines MDI-Formulars (Multiple Document Interface) empfiehlt es sich, sowohl Steuerelemente als auch untergeordnete Formulare zu verlagern, um komplexere Benutzeroberflächen (UI) zu erstellen. Um Steuerelemente und Fenster innerhalb des Kontexts einer Gruppe zu verschieben und zu verfolgen, bearbeiten Sie Ihre z-Reihenfolge. Die *z-Reihenfolge* ist das visuelle Schichten von Steuerelementen in einem Formular entlang der Z-Achse (Tiefe) des Formulars. Das Fenster oben in der z-Reihenfolge überlappt alle anderen Fenster. Alle anderen Fenster überlappen das Fenster am unteren Rand der z-Reihenfolge.
+
+## <a name="to-layer-controls-at-design-time"></a>Auf ebenensteuerelemente zur Entwurfszeit
+
+1. Wählen Sie ein Steuerelement aus, das Sie Ebenen möchten.
+
+2. Zeigen Sie im Menü **Format** auf **Reihenfolge**, und klicken Sie dann auf **in den Vorder** Grund oder in den **Hintergrund**.
+
+## <a name="to-layer-controls-programmatically"></a>Zum programmgesteuerten ebenensteuerelement
+
+- Verwenden Sie <xref:System.Windows.Forms.Control.BringToFront%2A> die <xref:System.Windows.Forms.Control.SendToBack%2A> Methoden und, um die z-Reihenfolge der Steuerelemente zu bearbeiten.
+
+     Wenn sich z. b <xref:System.Windows.Forms.TextBox> . ein `txtFirstName`Steuerelement,, unter einem anderen Steuerelement befindet und Sie es oben verwenden möchten, verwenden Sie den folgenden Code:
+
+    ```vb
+    txtFirstName.BringToFront()
+    ```
+
+    ```csharp
+    txtFirstName.BringToFront();
+    ```
+
+    ```cpp
+    txtFirstName->BringToFront();
+    ```
+
 > [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-layer-controls-at-design-time"></a>Auf der Ebene von Steuerelementen zur Entwurfszeit  
-  
-1. Wählen Sie ein Steuerelement, das Sie überlagern möchten.  
-  
-2. Auf der **Format** Startmenü **Reihenfolge**, und klicken Sie dann auf **in den Vordergrund** oder **in den Hintergrund**.  
-  
-### <a name="to-layer-controls-programmatically"></a>Layer-Steuerelemente programmgesteuert  
-  
-- Verwenden der <xref:System.Windows.Forms.Control.BringToFront%2A> und <xref:System.Windows.Forms.Control.SendToBack%2A> Methoden, um die Z-Anordnung der Steuerelemente ändern.  
-  
-     Z. B. wenn ein <xref:System.Windows.Forms.TextBox> Steuerelement `txtFirstName`, wird darunter ein anderes Steuerelement und Sie möchten im Vordergrund soll, verwenden Sie den folgenden Code:  
-  
-    ```vb  
-    txtFirstName.BringToFront()  
-    ```  
-  
-    ```csharp  
-    txtFirstName.BringToFront();  
-    ```  
-  
-    ```cpp  
-    txtFirstName->BringToFront();  
-    ```  
-  
-> [!NOTE]
->  Windows Forms unterstützt *steuerelementkapselung*. Steuerelementkapselung umfasst eine Reihe von Steuerelementen in einem enthaltenden Steuerelement, z. B. eine Anzahl von platzieren <xref:System.Windows.Forms.RadioButton> -Steuerelementen innerhalb einer <xref:System.Windows.Forms.GroupBox> Steuerelement. Sie können dann die Steuerelemente innerhalb des enthaltenden Steuerelements zusätzliche. Die Steuerelemente, verschieben das Gruppenfeld verschoben werden, da sie darin enthalten sind.  
-  
+>  Windows Forms unterstützt die Einschluss *Steuerung*. Die Einschluss Steuerung umfasst das Platzieren einer Reihe von Steuerelementen innerhalb eines enthaltenden Steuer Elements <xref:System.Windows.Forms.RadioButton> , z. <xref:System.Windows.Forms.GroupBox> b. eine Reihe von Steuerelementen in einem Steuerelement Anschließend können Sie die Steuerelemente innerhalb des enthaltenden Steuer Elements Schichten. Wenn Sie das Gruppenfeld verschieben, werden auch die Steuerelemente verschoben, da Sie darin enthalten sind.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)

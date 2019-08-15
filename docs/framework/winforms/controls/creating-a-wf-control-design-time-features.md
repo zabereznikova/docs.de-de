@@ -10,145 +10,143 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 733f22c122dd6acdad41371419375e55e977c016
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882316"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039931"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt
 
-Die zur Entwurfszeit für ein benutzerdefiniertes Steuerelement kann verbessert werden, indem Sie einen zugeordneten benutzerdefinierten Designer erstellen.
+Die Entwurfszeit Darstellung eines benutzerdefinierten Steuer Elements kann durch die Erstellung eines zugeordneten benutzerdefinierten Designers verbessert werden.
 
-Diese exemplarische Vorgehensweise veranschaulicht, wie Sie einen benutzerdefinierten Designer für ein benutzerdefiniertes Steuerelement zu erstellen. Implementieren Sie eine `MarqueeControl` Typ und einen zugeordneten Designer Klasse namens `MarqueeControlRootDesigner`.
+Diese exemplarische Vorgehensweise veranschaulicht das Erstellen eines benutzerdefinierten Designers für ein benutzerdefiniertes Steuerelement. Sie implementieren einen `MarqueeControl` Typ und eine zugeordnete Designer Klasse mit dem `MarqueeControlRootDesigner`Namen.
 
-Die `MarqueeControl` Typ implementiert eine Anzeige ähnlich wie eine Laufschrift Theater mit animierten Lichtern und blinkenden Text.
+Der `MarqueeControl` Typ implementiert eine Anzeige ähnlich einem Theater-Marquee mit animierten Lichtern und blinkenden Text.
 
-Der Designer für dieses Steuerelement interagiert mit der entwurfsumgebung, um eine benutzerdefinierte während der Entwurfszeit-Erlebnis zu bieten. Mit dem benutzerdefinierten Designer können Sie eine benutzerdefinierte zusammenstellen `MarqueeControl` -Implementierung mit animierten Lichtern und blinkenden Text in verschiedenen Kombinationen. Sie können das erstellte Steuerelement in einem Formular wie jedes andere Windows Forms-Steuerelement verwenden.
+Der Designer für dieses Steuerelement interagiert mit der Entwurfs Umgebung, um eine benutzerdefinierte Entwurfszeit Umgebung bereitzustellen. Mit dem benutzerdefinierten Designer können Sie eine benutzerdefinierte `MarqueeControl` Implementierung mit animierten Lichtern und blinkenden Text in vielen Kombinationen zusammenstellen. Sie können das assemblierte Steuerelement wie jedes andere Windows Forms Steuerelement in einem Formular verwenden.
 
 In dieser exemplarischen Vorgehensweise werden u. a. folgende Aufgaben veranschaulicht:
 
 - Erstellen des Projekts
 
-- Erstellen ein Steuerelementbibliothek-Projekt
+- Erstellen eines Steuerelement Bibliothek-Projekts
 
-- Verweisen auf das Projekt des benutzerdefinierten Steuerelements
+- Verweisen auf das benutzerdefinierte Steuerelement Projekt
 
-- Definieren ein benutzerdefiniertes Steuerelement und seinen benutzerdefinierte Designer
+- Definieren eines benutzerdefinierten Steuer Elements und seines benutzerdefinierten Designers
 
-- Erstellen einer Instanz des benutzerdefinierten Steuerelements
+- Erstellen einer Instanz des benutzerdefinierten Steuer Elements
 
 - Einrichten des Projekts für das Debuggen zur Entwurfszeit
 
-- Implementieren des benutzerdefinierten Steuerelements
+- Implementieren des benutzerdefinierten Steuer Elements
 
-- Erstellen ein untergeordnetes Steuerelement für das benutzerdefinierte Steuerelement
+- Erstellen eines untergeordneten Steuer Elements für das benutzerdefinierte Steuerelement
 
-- Erstellen des untergeordneten MarqueeBorder-Steuerelements
+- Erstellen des untergeordneten MarqueeBorder-Steuer Elements
 
-- Erstellen eines benutzerdefinierten Designers Schatten und Filtereigenschaften
+- Erstellen eines benutzerdefinierten Designers zum überschatten und Filtern von Eigenschaften
 
-- Behandeln Änderungen an der Clientkomponenten
+- Verarbeiten von Komponenten Änderungen
 
-- Hinzufügen von Designerverben zu Ihrem benutzerdefinierten Designer
+- Hinzufügen von Designer Verben zum benutzerdefinierten Designer
 
-- Erstellen eine benutzerdefinierte UITypeEditor
+- Erstellen eines benutzerdefinierten uitypeer-Editors
 
-- Testen das benutzerdefinierte Steuerelement im Designer
+- Testen des benutzerdefinierten Steuer Elements im Designer
 
-Wenn Sie fertig sind, wird das benutzerdefinierte Steuerelement etwa wie folgt aussehen:
+Wenn Sie fertig sind, sieht Ihr benutzerdefiniertes Steuerelement in etwa wie folgt aus:
 
-![Die app einen Auswahlbereich sagen, Text und ein Start- und Stop-Schaltflächen angezeigt.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
+![Die APP zeigt ein Marquee an, das Text und eine Schaltfläche zum Starten und Abbrechen anzeigt.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
-Die vollständige codeauflistung finden Sie unter [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).
+Das komplette Codelisting finden [Sie unter Gewusst wie: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeit Funktionen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))nutzt.
 
-> [!NOTE]
-> Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um diese exemplarische Vorgehensweise abzuschließen, benötigen Sie Visual Studio.
 
 ## <a name="creating-the-project"></a>Erstellen des Projekts
 
-Der erste Schritt ist das Anwendungsprojekt zu erstellen. Sie können dieses Projekt zum Erstellen der Anwendung, die das benutzerdefinierte Steuerelement hostet.
+Der erste Schritt besteht darin, das Anwendungsprojekt zu erstellen. Sie verwenden dieses Projekt, um die Anwendung zu erstellen, die das benutzerdefinierte Steuerelement hostet.
 
-Öffnen Sie Visual Studio, und erstellen Sie eine Windows Forms-Anwendung mit dem Namen "MarqueeControlTest" (**Datei** > **neu** > **Projekt**  >  **Visual C#**  oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).
+Öffnen Sie Visual Studio, und erstellen Sie ein Windows Forms-Anwendungsprojekt mit dem Namen "MarqueeControlTest" (**Datei** > "**Neues** > **Projekt** > **C#** " oder **Visual Basic**  >  **Klassischer Desktop** **Windows Forms Anwendung).**  > 
 
-## <a name="creating-a-control-library-project"></a>Erstellen ein Steuerelementbibliothek-Projekt
+## <a name="creating-a-control-library-project"></a>Erstellen eines Steuerelement Bibliothek-Projekts
 
-Der nächste Schritt besteht darin die Steuerelementbibliothek-Projekt zu erstellen. Erstellen Sie ein neues benutzerdefiniertes Steuerelement und den entsprechenden benutzerdefinierten Designer.
+Der nächste Schritt besteht darin, das Steuerelement Bibliotheksprojekt zu erstellen. Sie erstellen ein neues benutzerdefiniertes Steuerelement und den entsprechenden benutzerdefinierten Designer.
 
-### <a name="to-create-the-control-library-project"></a>Um die Steuerelementbibliothek-Projekt zu erstellen.
+### <a name="to-create-the-control-library-project"></a>So erstellen Sie das Steuerelement Bibliothek-Projekt
 
-1. Fügen Sie ein Windows Forms-Steuerelementbibliothek-Projekt zur Projektmappe hinzu. Nennen Sie das Projekt "MarqueeControlLibrary."
+1. Fügen Sie der Projekt Mappe ein Windows Forms-Steuerelement Bibliothek-Projekt hinzu. Nennen Sie das Projekt "MarqueeControlLibrary".
 
-2. Mithilfe von **Projektmappen-Explorer**, löschen Sie Standardsteuerelement des Projekts, indem Sie die Quelldatei, die mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von der Sprache Ihrer Wahl löschen. Weitere Informationen finden Sie unter [Vorgehensweise: Entfernen, löschen und Ausschließen von Elementen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
+2. Löschen Sie mithilfe **Projektmappen-Explorer**das Standard Steuerelement des Projekts, indem Sie die Quelldatei mit dem Namen "UserControl1.cs" oder "UserControl1. vb" löschen, je nach ihrer Sprache Ihrer Wahl. Weitere Informationen finden Sie unter [Vorgehensweise: Entfernen, löschen und Ausschließen von Elementen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
 
-3. Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element für die `MarqueeControlLibrary` Projekt. Weisen Sie der neuen Quelldatei Basisnamen "MarqueeControl."
+3. Fügen Sie dem <xref:System.Windows.Forms.UserControl> `MarqueeControlLibrary` Projekt ein neues Element hinzu. Benennen Sie die neue Quelldatei mit dem Basis Namen "MarqueeControl".
 
-4. Mithilfe von **Projektmappen-Explorer**, erstellen Sie einen neuen Ordner in der `MarqueeControlLibrary` Projekt. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen neuer Projektelemente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Nennen Sie den neuen Ordner "Entwurf".
+4. Erstellen Sie mit **Projektmappen-Explorer**einen neuen Ordner im `MarqueeControlLibrary` Projekt. Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie neue Projekt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))Elemente hinzu. Benennen Sie den neuen Ordner "Design".
 
-5. Mit der rechten Maustaste die **Entwurf** Ordner, und fügen Sie eine neue Klasse hinzu. Benennen Sie der Quelldatei Basis von "MarqueeControlRootDesigner."
+5. Klicken Sie mit der rechten Maustaste auf den **Entwurfs** Ordner, und fügen Sie eine neue Klasse hinzu Nennen Sie die Quelldatei als Basis Namen "MarqueeControlRootDesigner".
 
-6. Sie benötigen zum Verwenden von Typen aus der Assembly "System.Design" so fügen Sie dieser Verweis auf die `MarqueeControlLibrary` Projekt.
+6. Sie müssen Typen aus der Assembly "System. Design" verwenden, um diesen Verweis dem `MarqueeControlLibrary` Projekt hinzuzufügen.
 
     > [!NOTE]
-    > Um die Assembly "System.Design" verwenden zu können, muss Ihr Projekt als Ziel die Vollversion von .NET Framework, nicht die .NET Framework Client Profile. Wenn das Zielframework ändern möchten, finden Sie unter [Vorgehensweise: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+    > Um die System. Design-Assembly verwenden zu können, muss das Projekt auf die Vollversion des .NET Framework und nicht auf das .NET Framework Client Profil ausgerichtet sein. Informationen zum Ändern des Ziel-Frame [Works finden Sie unter Gewusst wie: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
-## <a name="referencing-the-custom-control-project"></a>Verweisen auf das Projekt des benutzerdefinierten Steuerelements
+## <a name="referencing-the-custom-control-project"></a>Verweisen auf das benutzerdefinierte Steuerelement Projekt
 
-Verwenden Sie die `MarqueeControlTest` Projekt zum Testen des benutzerdefinierten Steuerelements. Das Testprojekt werden über das benutzerdefinierte Steuerelement, wenn Sie einen Projektverweis zum Hinzufügen der `MarqueeControlLibrary` Assembly.
+Sie verwenden das `MarqueeControlTest` Projekt, um das benutzerdefinierte Steuerelement zu testen. Das Testprojekt wird das benutzerdefinierte Steuerelement beachten, wenn Sie der `MarqueeControlLibrary` Assembly einen Projekt Verweis hinzufügen.
 
-### <a name="to-reference-the-custom-control-project"></a>Um auf das benutzerdefinierte Steuerelement-Projekt zu verweisen.
+### <a name="to-reference-the-custom-control-project"></a>So verweisen Sie auf das benutzerdefinierte Steuerelement Projekt
 
-- In der `MarqueeControlTest` fügen einen Projektverweis auf die `MarqueeControlLibrary` Assembly. Verwenden Sie die **Projekte** Registerkarte die **Verweis hinzufügen** Dialogfeld anstelle von Verweisen auf die `MarqueeControlLibrary` Assembly direkt.
+- Fügen Sie im- `MarqueeControlLibrary` ProjekteinenProjektVerweisaufdieAssemblyhinzu.`MarqueeControlTest` Stellen Sie sicher, dass Sie die Registerkarte **Projekte** im Dialogfeld **Verweis hinzufügen** verwenden, `MarqueeControlLibrary` anstatt direkt auf die Assembly zu verweisen.
 
-## <a name="defining-a-custom-control-and-its-custom-designer"></a>Definieren ein benutzerdefiniertes Steuerelement und seinen benutzerdefinierte Designer
- Das benutzerdefinierte Steuerelement abgeleitet wird die <xref:System.Windows.Forms.UserControl> Klasse. Dadurch wird das Steuerelement andere Steuerelemente enthalten, und sie erhalten dem Steuerelement auf einen Großteil der Standardfunktionen.
+## <a name="defining-a-custom-control-and-its-custom-designer"></a>Definieren eines benutzerdefinierten Steuer Elements und seines benutzerdefinierten Designers
+ Das benutzerdefinierte Steuerelement wird von <xref:System.Windows.Forms.UserControl> der-Klasse abgeleitet. Dies ermöglicht es dem Steuerelement, andere Steuerelemente zu enthalten, und bietet Ihnen eine große Menge an Standardfunktionen.
 
- Das benutzerdefinierte Steuerelement müssen einen zugeordneten Designer. Dadurch können Sie einen eindeutigen Eindruck maßgeschneidert für Ihr benutzerdefiniertes Steuerelement zu erstellen.
+ Das benutzerdefinierte Steuerelement verfügt über einen zugeordneten benutzerdefinierten Designer. Dies ermöglicht es Ihnen, ein eindeutiges Design zu erstellen, das speziell auf das benutzerdefinierte Steuerelement zugeschnitten ist.
 
- Sie ordnen das Steuerelement den Designer mit der <xref:System.ComponentModel.DesignerAttribute> Klasse. Da Sie das gesamte Design-Time-Verhalten des benutzerdefinierten Steuerelements entwickeln, implementiert der benutzerdefinierte Designer die <xref:System.ComponentModel.Design.IRootDesigner> Schnittstelle.
+ Das Steuerelement wird mithilfe der-Klasse mit dem <xref:System.ComponentModel.DesignerAttribute> Designer verknüpft. Da Sie das gesamte Entwurfszeit Verhalten des benutzerdefinierten Steuer Elements entwickeln, wird die- <xref:System.ComponentModel.Design.IRootDesigner> Schnittstelle vom benutzerdefinierten Designer implementiert.
 
-### <a name="to-define-a-custom-control-and-its-custom-designer"></a>Zum Definieren eines benutzerdefinierten Steuerelements und der benutzerdefinierten designer
+### <a name="to-define-a-custom-control-and-its-custom-designer"></a>So definieren Sie ein benutzerdefiniertes Steuerelement und seinen benutzerdefinierten Designer
 
-1. Öffnen der `MarqueeControl` Quelldatei in die **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces ein:
+1. Öffnen Sie `MarqueeControl` die Quelldatei im **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces:
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#220](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#220)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#220](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#220)]
 
-2. Hinzufügen der <xref:System.ComponentModel.DesignerAttribute> auf die `MarqueeControl` Klassendeklaration. Dadurch wird das benutzerdefinierte Steuerelement mit ihren Designer verknüpft.
+2. Fügen Sie <xref:System.ComponentModel.DesignerAttribute> der `MarqueeControl` Klassen Deklaration hinzu. Dadurch wird das benutzerdefinierte Steuerelement dem Designer zugeordnet.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#240](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#240)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#240](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#240)]
 
-3. Öffnen der `MarqueeControlRootDesigner` Quelldatei in die **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces ein:
+3. Öffnen Sie `MarqueeControlRootDesigner` die Quelldatei im **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces:
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#520](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#520)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#520](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#520)]
 
-4. Ändern Sie die Deklaration der `MarqueeControlRootDesigner` das erben die <xref:System.Windows.Forms.Design.DocumentDesigner> Klasse. Anwenden der <xref:System.ComponentModel.ToolboxItemFilterAttribute> an die Designer-Interaktion mit der **Toolbox**.
+4. Ändern Sie die Deklaration von `MarqueeControlRootDesigner` , um von der <xref:System.Windows.Forms.Design.DocumentDesigner> -Klasse zu erben. Wenden Sie <xref:System.ComponentModel.ToolboxItemFilterAttribute> das an, um die Designer Interaktion mit der **Toolbox**anzugeben.
 
-     **Beachten Sie** die Definition für die `MarqueeControlRootDesigner` Klasse verfügt über eingeschlossen wurde, in einem Namespace namens "MarqueeControlLibrary.Design." Diese Deklaration setzt der Designer in einer speziellen Namespace für die Design-bezogenen Typen reserviert.
+     **Hinweis** Die Definition für die `MarqueeControlRootDesigner` Klasse wurde in einen Namespace mit dem Namen "MarqueeControlLibrary. Design" eingeschlossen. Diese Deklaration platziert den Designer in einem speziellen Namespace, der für Entwurfs bezogene Typen reserviert ist.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#530](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#530)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#530](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#530)]
 
-5. Definieren Sie den Konstruktor für die `MarqueeControlRootDesigner` Klasse. Fügen Sie eine <xref:System.Diagnostics.Trace.WriteLine%2A> -Anweisung in den Text des Konstruktors. Dies wird zu Debugzwecken nützlich sein.
+5. Definieren Sie den Konstruktor für `MarqueeControlRootDesigner` die-Klasse. Fügen Sie <xref:System.Diagnostics.Trace.WriteLine%2A> eine-Anweisung in den Konstruktortext ein. Dies wird für Debuggingzwecke nützlich sein.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#540](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#540)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#540](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#540)]
 
-## <a name="creating-an-instance-of-your-custom-control"></a>Erstellen einer Instanz des benutzerdefinierten Steuerelements
- Um das benutzerdefinierte während der Entwurfszeit Verhalten des Steuerelements zu beobachten, setzen Sie eine Instanz des Steuerelements im Formular in `MarqueeControlTest` Projekt.
+## <a name="creating-an-instance-of-your-custom-control"></a>Erstellen einer Instanz des benutzerdefinierten Steuer Elements
+ Um das benutzerdefinierte Entwurfszeit Verhalten des Steuer Elements zu beobachten, platzieren Sie eine Instanz des Steuer Elements in der Form in `MarqueeControlTest` Project.
 
-### <a name="to-create-an-instance-of-your-custom-control"></a>Zum Erstellen einer Instanz des benutzerdefinierten Steuerelements
+### <a name="to-create-an-instance-of-your-custom-control"></a>So erstellen Sie eine Instanz des benutzerdefinierten Steuer Elements
 
-1. Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element für die `MarqueeControlTest` Projekt. Weisen Sie der neuen Quelldatei Basisnamen "DemoMarqueeControl."
+1. Fügen Sie dem <xref:System.Windows.Forms.UserControl> `MarqueeControlTest` Projekt ein neues Element hinzu. Benennen Sie die neue Quelldatei mit dem Basis Namen "DemoMarqueeControl".
 
-2. Öffnen der `DemoMarqueeControl` Datei die **Code-Editor**. Importieren Sie am Anfang der Datei, die `MarqueeControlLibrary` Namespace:
+2. Öffnen Sie `DemoMarqueeControl` die Datei im **Code-Editor**. Importieren Sie am Anfang der Datei den `MarqueeControlLibrary` -Namespace:
 
 ```vb
 Imports MarqueeControlLibrary
@@ -158,59 +156,59 @@ Imports MarqueeControlLibrary
 using MarqueeControlLibrary;
 ```
 
-1. Ändern Sie die Deklaration der `DemoMarqueeControl` das erben die `MarqueeControl` Klasse.
+1. Ändern Sie die Deklaration von `DemoMarqueeControl` , um von der `MarqueeControl` -Klasse zu erben.
 
 2. Erstellen Sie das Projekt.
 
 3. Öffnen Sie `Form1` im Windows Forms-Designer.
 
-4. Suchen der **MarqueeControlTest Komponenten** Registerkarte die **Toolbox** und öffnen Sie sie. Ziehen Sie eine `DemoMarqueeControl` aus der **Toolbox** auf das Formular.
+4. Suchen Sie in der **Toolbox** die Registerkarte " **MarqueeControlTest Components** ", und öffnen Sie Sie. Ziehen Sie `DemoMarqueeControl` ein aus der **Toolbox** auf das Formular.
 
 5. Erstellen Sie das Projekt.
 
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>Einrichten des Projekts für das Debuggen zur Entwurfszeit
 
-Wenn Sie eine benutzerdefinierte während der Entwurfszeit-Benutzeroberfläche entwickeln, werden Debuggen Sie Ihre Steuerelemente und Komponenten erforderlich. Es ist eine einfache Möglichkeit, Ihr Projekt einzurichten, um Debuggen zur Entwurfszeit zu ermöglichen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).
+Wenn Sie ein benutzerdefiniertes Entwurfszeit Verhalten entwickeln, müssen Sie die Steuerelemente und Komponenten debuggen. Es gibt eine einfache Möglichkeit zum Einrichten des Projekts, um das Debuggen zur Entwurfszeit zuzulassen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)Steuerelementen zur Entwurfszeit
 
-### <a name="to-set-up-the-project-for-design-time-debugging"></a>Zum Einrichten des Projekts für Design-Time-Debuggen
+### <a name="to-set-up-the-project-for-design-time-debugging"></a>So richten Sie das Projekt für das Debuggen zur Entwurfszeit ein
 
-1. Mit der rechten Maustaste die `MarqueeControlLibrary` Projekt, und wählen **Eigenschaften**.
+1. Klicken Sie mit der `MarqueeControlLibrary` rechten Maustaste auf das Projekt und wählen Sie **Eigenschaften**.
 
-2. Wählen Sie in das Dialogfeld "MarqueeControlLibrary-Eigenschaftenseiten" die **Debuggen** Seite.
+2. Wählen Sie im Dialogfeld "MarqueeControlLibrary-Eigenschaften Seiten" die Seite **Debuggen** aus.
 
-3. In der **Startaktion** wählen Sie im Abschnitt **externes Startprogramm**. Sie Debuggen eine separate Instanz von Visual Studio, klicken Sie auf die Auslassungspunkte (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) Schaltfläche, um für die Visual Studio-IDE navigieren. Der Name der ausführbaren Datei lautet devenv.exe aus, und wenn Sie am Standardspeicherort installiert haben, wird der Pfad ist %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+3. Wählen Sie im Abschnitt **Start Aktion** die Option **externes Programm starten**aus. Sie Debuggen eine separate Instanz von Visual Studio und klicken auf die Auslassungs Punkte![(die Schaltfläche mit den Auslassungs Punkten (...) in der](./media/visual-studio-ellipsis-button.png)Eigenschaftenfenster von Visual Studio.), um nach der Visual Studio-IDE zu suchen. Der Name der ausführbaren Datei lautet devenv. exe. Wenn Sie am Standard Speicherort installiert haben, lautet der Pfad%ProgramFiles%\Microsoft Visual Studio 9.0 \ Common7\IDE\devenv.exe.
 
 4. Klicken Sie auf OK, um das Dialogfeld zu schließen.
 
-5. Mit der rechten Maustaste die `MarqueeControlLibrary` Projekt, und wählen Sie "Als Startprojekt festlegen" aus, um diese Konfiguration für Remotedebugging zu ermöglichen.
+5. Klicken Sie mit der `MarqueeControlLibrary` rechten Maustaste auf das Projekt, und wählen Sie "als Startprojekt festlegen", um diese Debugkonfiguration zu aktivieren
 
 ## <a name="checkpoint"></a>Checkpoint
 
-Sie können nun das Entwurfszeit-Verhalten des benutzerdefinierten Steuerelements zu debuggen. Nachdem Sie ermittelt haben, dass die debugging-Umgebung ordnungsgemäß eingerichtet ist, testen Sie die Zuordnung zwischen das benutzerdefinierte Steuerelement und dem benutzerdefinierten Designer.
+Sie können jetzt das Entwurfszeit Verhalten des benutzerdefinierten Steuer Elements Debuggen. Nachdem Sie festgestellt haben, dass die Debuggingumgebung ordnungsgemäß eingerichtet wurde, testen Sie die Zuordnung zwischen dem benutzerdefinierten Steuerelement und dem benutzerdefinierten Designer.
 
-### <a name="to-test-the-debugging-environment-and-the-designer-association"></a>Zum Testen der Debugumgebung und die designerzuordnung
+### <a name="to-test-the-debugging-environment-and-the-designer-association"></a>So testen Sie die Debugumgebung und die Designer Zuordnung
 
-1. Öffnen der `MarqueeControlRootDesigner` Quelldatei in die **Code-Editor** und platzieren Sie einen Haltepunkt auf der <xref:System.Diagnostics.Trace.WriteLine%2A> Anweisung.
+1. Öffnen Sie `MarqueeControlRootDesigner` die Quelldatei im **Code-Editor** , und platzieren Sie einen halte <xref:System.Diagnostics.Trace.WriteLine%2A> Punkt in der-Anweisung.
 
 2. Drücken Sie F5, um die Debugsitzung zu starten. Beachten Sie, dass eine neue Instanz von Visual Studio erstellt wird.
 
-3. Öffnen Sie in der neuen Instanz von Visual Studio die Projektmappe "MarqueeControlTest". Finden Sie die Projektmappe durch Auswahl **zuletzt geöffnete Projekte** aus der **Datei** Menü. Die Projektmappendatei "MarqueeControlTest.sln" wird als die zuletzt Datei verwendete aufgeführt.
+3. Öffnen Sie in der neuen Instanz von Visual Studio die Projekt Mappe "MarqueeControlTest". Sie können die Lösung problemlos finden, indem Sie im Menü **Datei** die Option **zuletzt verwendete Projekte** auswählen. Die Projektmappendatei "MarqueeControlTest. sln" wird als zuletzt verwendete Datei aufgeführt.
 
-4. Öffnen der `DemoMarqueeControl` im Designer. Beachten Sie, dass die Debuginstanz von Visual Studio aktiviert und die Ausführung am Haltepunkt an. Drücken Sie F5, um die Debugsitzung fortzusetzen.
+4. Öffnen Sie `DemoMarqueeControl` im Designer. Beachten Sie, dass die debugginginstanz von Visual Studio den Fokus erhält und die Ausführung am Haltepunkt anhält. Drücken Sie F5, um die Debugsitzung fortzusetzen.
 
-An diesem Punkt ist alles, was für Sie zum Entwickeln und Debuggen das benutzerdefinierte Steuerelement und seinen zugeordneten Designer. Der Rest dieser exemplarischen Vorgehensweise wird auf die Details der Implementierung von Features des Steuerelements und dem Designer konzentrieren.
+An diesem Punkt ist alles vorhanden, um das benutzerdefinierte Steuerelement und den zugehörigen benutzerdefinierten Designer zu entwickeln und zu debuggen. Im weiteren Verlauf dieser exemplarischen Vorgehensweise werden die Details der Implementierung von Features des-Steuer Elements und des-Designers konzentriert.
 
-## <a name="implementing-your-custom-control"></a>Implementieren des benutzerdefinierten Steuerelements
+## <a name="implementing-your-custom-control"></a>Implementieren des benutzerdefinierten Steuer Elements
 
-Die `MarqueeControl` ist eine <xref:System.Windows.Forms.UserControl> mit ein wenig anpassen. Es macht zwei Methoden verfügbar: `Start`, dem die Animation beginnt und `Stop`, die die Animation beendet. Da die `MarqueeControl` enthält untergeordnete Steuerelemente, die implementieren die `IMarqueeWidget` -Schnittstelle, `Start` und `Stop` aufzählen jedes untergeordnete Steuerelement und rufen die `StartMarquee` und `StopMarquee` Methoden auf jedes untergeordnete Steuerelement bzw. implementiert `IMarqueeWidget`.
+`MarqueeControl` Ist ein<xref:System.Windows.Forms.UserControl> mit etwas Anpassung. Es macht zwei Methoden verfügbar `Start`:, die die Marquee-Animation startet `Stop`, und, wodurch die Animation beendet wird. Da die `MarqueeControl` untergeordnete Steuerelemente enthält, `IMarqueeWidget` die die `Start` - `Stop` Schnittstelle implementieren, und jedes untergeordnete `StartMarquee` Steuer `StopMarquee` Element auflisten und die-und-Methoden für jedes untergeordnete Steuerelement aufzählen. , der `IMarqueeWidget`implementiert.
 
-Die Darstellung der `MarqueeBorder` und `MarqueeText` Steuerelemente ist abhängig von das Layout an, damit `MarqueeControl` überschreibt der <xref:System.Windows.Forms.Control.OnLayout%2A> -Methode und ruft <xref:System.Windows.Forms.Control.PerformLayout%2A> auf untergeordnete Steuerelemente von diesem Typ.
+`MarqueeBorder` Die Darstellung des-Steuer `MarqueeText` Elements und des-Steuer Elements hängt vom `MarqueeControl` Layout ab. <xref:System.Windows.Forms.Control.OnLayout%2A> daher wird die <xref:System.Windows.Forms.Control.PerformLayout%2A> -Methode überschrieben und für untergeordnete Steuerelemente dieses Typs aufgerufen.
 
-Dies ist das Ausmaß der der `MarqueeControl` Anpassungen. Die Run-Time-Features werden von implementiert die `MarqueeBorder` und `MarqueeText` Steuerelemente und die Design-Time-Features werden von implementiert die `MarqueeBorderDesigner` und `MarqueeControlRootDesigner` Klassen.
+Dies ist der Umfang der `MarqueeControl` Anpassungen. Die Lauf Zeitfunktionen `MarqueeBorder` werden von den-und `MarqueeText` -Steuerelementen implementiert, und die Entwurfszeit Funktionen werden von der `MarqueeBorderDesigner` - `MarqueeControlRootDesigner` Klasse und der-Klasse implementiert.
 
-### <a name="to-implement-your-custom-control"></a>Um Ihr benutzerdefiniertes Steuerelement zu implementieren.
+### <a name="to-implement-your-custom-control"></a>So implementieren Sie das benutzerdefinierte Steuerelement
 
-1. Öffnen der `MarqueeControl` Quelldatei in die **Code-Editor**. Implementieren der `Start` und `Stop` Methoden.
+1. Öffnen Sie `MarqueeControl` die Quelldatei im **Code-Editor**. Implementieren Sie `Start` die `Stop` Methoden und.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#260)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#260](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#260)]
@@ -220,175 +218,175 @@ Dies ist das Ausmaß der der `MarqueeControl` Anpassungen. Die Run-Time-Features
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#270)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#270)]
 
-## <a name="creating-a-child-control-for-your-custom-control"></a>Erstellen ein untergeordnetes Steuerelement für das benutzerdefinierte Steuerelement
+## <a name="creating-a-child-control-for-your-custom-control"></a>Erstellen eines untergeordneten Steuer Elements für das benutzerdefinierte Steuerelement
 
-Die `MarqueeControl` hostet zwei Arten des untergeordneten Steuerelements: die `MarqueeBorder` Steuerelement und die `MarqueeText` Steuerelement.
+Der `MarqueeControl` hostet zwei Arten von untergeordnetem Steuer `MarqueeBorder` Element: das `MarqueeText` -Steuerelement und das-Steuerelement.
 
-- `MarqueeBorder`: Dieses Steuerelement zeichnet einen Rahmen mit "Lichtern", um seinen Rändern. Die LED blinkt nacheinander, damit sie angezeigt werden, um den Rahmen verschieben. Die Geschwindigkeit an, an dem die Lichter Flash, wird gesteuert, durch eine Eigenschaft namens `UpdatePeriod`. Mehrere andere benutzerdefinierten Eigenschaften bestimmen, andere Aspekte der Darstellung des Steuerelements. Zwei Methoden, nämlich `StartMarquee` und `StopMarquee`, steuern, wann die Animation wird gestartet und beendet.
+- `MarqueeBorder`: Dieses Steuerelement zeichnet einen Rahmen von "Lights" um seine Ränder. Die Lichter werden nacheinander blinkt, sodass Sie sich um den Rahmen bewegen. Die Geschwindigkeit, mit der der Lichtblitz durch eine Eigenschaft namens `UpdatePeriod`gesteuert wird. Verschiedene andere benutzerdefinierte Eigenschaften bestimmen andere Aspekte der Darstellung des Steuer Elements. Die zwei Methoden, `StartMarquee` und `StopMarquee`, Steuern, wann die Animation gestartet und beendet wird.
 
-- `MarqueeText`: Dieses Steuerelement zeichnet eine blinkende Zeichenfolge. Wie die `MarqueeBorder` -Steuerelement, die Geschwindigkeit, mit der der Text aufblinkt, wird gesteuert, indem die `UpdatePeriod` Eigenschaft. Die `MarqueeText` -Steuerelement verfügt auch über die `StartMarquee` und `StopMarquee` Methoden gemeinsam mit der `MarqueeBorder` Steuerelement.
+- `MarqueeText`: Dieses Steuerelement zeichnet eine blinkende Zeichenfolge. Wie das `MarqueeBorder` -Steuerelement wird die Geschwindigkeit, mit der der Text blinkt `UpdatePeriod` , von der-Eigenschaft gesteuert. Das `MarqueeText` -Steuerelement verfügt `StartMarquee` auch `StopMarquee` über die-und- `MarqueeBorder` Methoden, die mit dem-Steuerelement
 
-Zur Entwurfszeit die `MarqueeControlRootDesigner` können Sie diese beiden Steuerelementtypen hinzugefügt werden eine `MarqueeControl` in beliebiger Kombination.
+Zur Entwurfszeit `MarqueeControlRootDesigner` können diese beiden Steuerelement Typen `MarqueeControl` in beliebiger Kombination zu hinzugefügt werden.
 
-Allgemeine Funktionen der beiden Steuerelemente sind in der eine Schnittstelle namens berücksichtigt `IMarqueeWidget`. Dadurch wird die `MarqueeControl` Marquee-bezogene untergeordnete Steuerelemente zu ermitteln und diese besondere Behandlung.
+Allgemeine Funktionen der beiden Steuerelemente werden in eine Schnittstelle mit dem Namen `IMarqueeWidget`integriert. Dies ermöglicht es `MarqueeControl` , alle untergeordneten Steuerelemente mit Marquee zu ermitteln und Ihnen eine besondere Behandlung zu ermöglichen.
 
-Um das Animationsfeature für regelmäßige zu implementieren, verwenden Sie <xref:System.ComponentModel.BackgroundWorker> Objekte aus der <xref:System.ComponentModel?displayProperty=nameWithType> Namespace. Sie können <xref:System.Windows.Forms.Timer> Objekte, wenn jedoch viele `IMarqueeWidget` Objekte vorhanden sind, die einzelnen UI-Thread ist möglicherweise nicht mit der Animation zu halten.
+Zum Implementieren des regelmäßigen Animations Features verwenden <xref:System.ComponentModel.BackgroundWorker> Sie Objekte aus dem <xref:System.ComponentModel?displayProperty=nameWithType> -Namespace. Sie können Objekte <xref:System.Windows.Forms.Timer> verwenden, aber wenn viele `IMarqueeWidget` Objekte vorhanden sind, kann der einzelne UI-Thread die Animation möglicherweise nicht in der Hand halten.
 
-### <a name="to-create-a-child-control-for-your-custom-control"></a>Um ein untergeordnetes Steuerelement für das benutzerdefinierte Steuerelement zu erstellen.
+### <a name="to-create-a-child-control-for-your-custom-control"></a>So erstellen Sie ein untergeordnetes Steuerelement für das benutzerdefinierte Steuerelement
 
-1. Eine neue Klasse zum Hinzufügen der `MarqueeControlLibrary` Projekt. Weisen Sie der neuen Quelldatei Basisnamen "IMarqueeWidget."
+1. Fügen Sie dem `MarqueeControlLibrary` Projekt ein neues Klassen Element hinzu. Benennen Sie die neue Quelldatei mit dem Basis Namen "IMarqueeWidget".
 
-2. Öffnen der `IMarqueeWidget` Quelldatei in die **Code-Editor** und ändern Sie die Deklaration von `class` zu `interface`:
+2. Öffnen Sie `IMarqueeWidget` die Quelldatei im **Code-Editor** , und ändern Sie `class` `interface`die Deklaration von in:
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/imarqueewidget.cs#2)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/imarqueewidget.vb#2)]
 
-3. Fügen Sie den folgenden Code der `IMarqueeWidget` verfügbar gemacht werden zwei Methoden und eine Eigenschaft, die die Animation bearbeitet:
+3. Fügen Sie der- `IMarqueeWidget` Schnittstelle den folgenden Code hinzu, um zwei Methoden und eine-Eigenschaft zur Bearbeitung der Marquee-Animation verfügbar zu machen:
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/imarqueewidget.cs#3)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/imarqueewidget.vb#3)]
 
-4. Fügen Sie einen neuen **benutzerdefiniertes Steuerelement** Element für die `MarqueeControlLibrary` Projekt. Weisen Sie der neuen Quelldatei Basisnamen "MarqueeText."
+4. Fügen Sie dem `MarqueeControlLibrary` Projekt ein neues **benutzerdefiniertes Steuer** Element hinzu. Benennen Sie die neue Quelldatei mit dem Basis Namen "MarqueeText".
 
-5. Ziehen Sie eine <xref:System.ComponentModel.BackgroundWorker> -Komponente aus der **Toolbox** auf Ihre `MarqueeText` Steuerelement. Diese Komponente ermöglicht die `MarqueeText` Steuerelement selbst asynchron aktualisiert.
+5. Ziehen Sie <xref:System.ComponentModel.BackgroundWorker> eine Komponente aus der **Toolbox** auf `MarqueeText` das Steuerelement. Diese Komponente ermöglicht es dem `MarqueeText` Steuerelement, sich selbst asynchron zu aktualisieren.
 
-6. Legen Sie im Fenster Eigenschaften die <xref:System.ComponentModel.BackgroundWorker> Komponente `WorkerReportsProgress` und <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> Eigenschaften `true`. Mit diesen Einstellungen können die <xref:System.ComponentModel.BackgroundWorker> Komponente zum Auslösen von in regelmäßigen Abständen die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignis und asynchrone Updates abgebrochen. Weitere Informationen finden Sie unter [BackgroundWorker-Komponente](backgroundworker-component.md).
+6. Legen Sie im Eigenschaftenfenster die- <xref:System.ComponentModel.BackgroundWorker> Eigenschaft und `WorkerReportsProgress` <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> die-Eigenschaft `true`der-Komponente auf fest. Diese Einstellungen ermöglichen es <xref:System.ComponentModel.BackgroundWorker> der Komponente, das <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> -Ereignis in regelmäßigen Abständen zu erhöhen und asynchrone Updates abzubrechen. Weitere Informationen finden Sie unter [BackgroundWorker-Komponente](backgroundworker-component.md).
 
-7. Öffnen der `MarqueeText` Quelldatei in die **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces ein:
+7. Öffnen Sie `MarqueeText` die Quelldatei im **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces:
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#120)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#120)]
 
-8. Ändern Sie die Deklaration der `MarqueeText` zu vererben <xref:System.Windows.Forms.Label> und zum Implementieren der `IMarqueeWidget` Schnittstelle:
+8. Ändern Sie die Deklaration von `MarqueeText` , um von <xref:System.Windows.Forms.Label> zu erben `IMarqueeWidget` und die-Schnittstelle zu implementieren:
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#130)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#130)]
 
-9. Deklarieren Sie die Instanzvariablen, die den verfügbar gemachten Eigenschaften entsprechen, und initialisieren sie im Konstruktor. Die `isLit` Feld bestimmt, ob der Text ist in der vorgegebenen durch Farbe gezeichnet werden die `LightColor` Eigenschaft.
+9. Deklarieren Sie die Instanzvariablen, die den verfügbar gemachten Eigenschaften entsprechen, und initialisieren Sie Sie im Konstruktor. Das `isLit` -Feld bestimmt, ob der Text in der Farbe gezeichnet werden soll, die `LightColor` von der-Eigenschaft angegeben wird.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#140)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#140)]
 
 10. Implementieren Sie die `IMarqueeWidget`-Schnittstelle.
 
-    Die `StartMarquee` und `StopMarquee` Aufrufen von Methoden der <xref:System.ComponentModel.BackgroundWorker> Komponente <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> und <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> Methoden zum Starten und beenden die Animation.
+    Die `StartMarquee` - `StopMarquee` Methode und die <xref:System.ComponentModel.BackgroundWorker> -Methode rufen <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> die-und-Methoden der- <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> Komponente auf, um die Animation zu starten
 
-    Die <xref:System.ComponentModel.CategoryAttribute.Category%2A> und <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> Attribute gelten für die `UpdatePeriod` Eigenschaft, sodass er in einem benutzerdefinierten Abschnitt des Fensters Eigenschaften namens "Marquee." angezeigt wird.
+    Das <xref:System.ComponentModel.CategoryAttribute.Category%2A> - <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> Attribut und das-Attribut `UpdatePeriod` werden auf die-Eigenschaft angewendet, sodass Sie in einem benutzerdefinierten Abschnitt des Eigenschaftenfenster mit dem Namen "Marquee" angezeigt wird.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#150)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#150)]
 
-11. Implementieren Sie die Eigenschaftenaccessoren. Sie werden zwei Eigenschaften für Clients verfügbar zu machen: `LightColor` und `DarkColor`. Die <xref:System.ComponentModel.CategoryAttribute.Category%2A> und <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> Attribute werden auf diese Eigenschaften angewendet, sodass die Eigenschaften in einem benutzerdefinierten Abschnitt des Fensters Eigenschaften namens "Marquee." angezeigt werden
+11. Implementieren Sie die Eigenschaftenaccessoren. Es werden zwei Eigenschaften für Clients verfügbar gemacht `LightColor` : `DarkColor`und. Die <xref:System.ComponentModel.CategoryAttribute.Category%2A> Attribute <xref:System.ComponentModel.BrowsableAttribute.Browsable%2A> und werden auf diese Eigenschaften angewendet, sodass die Eigenschaften in einem benutzerdefinierten Abschnitt des Eigenschaftenfenster mit dem Namen "Marquee" angezeigt werden.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#160)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#160)]
 
-12. Implementieren Sie die Handler für die <xref:System.ComponentModel.BackgroundWorker> Komponente <xref:System.ComponentModel.BackgroundWorker.DoWork> und <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignisse.
+12. Implementieren Sie die Handler für das <xref:System.ComponentModel.BackgroundWorker> -Ereignis <xref:System.ComponentModel.BackgroundWorker.DoWork> und <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> das-Ereignis der Komponente.
 
-    Die <xref:System.ComponentModel.BackgroundWorker.DoWork> Ereignishandler wartet die angegebene Anzahl von Millisekunden von `UpdatePeriod` löst dann die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignis, bis der Code die Animation durch den Aufruf beendet <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>.
+    Der <xref:System.ComponentModel.BackgroundWorker.DoWork> -Ereignishandler wird für die Anzahl von Millisekunden, `UpdatePeriod` die durch angegeben <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> wird, mit dem-Ereignis ausgelöst, bis der <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>Code die Animation durch Aufrufen von beendet.
 
-    Die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> -Ereignishandler schaltet den Text zwischen den hellen und dunklen Zustand Geben Sie die Darstellung der blinken.
+    Der <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignishandler schaltet den Text zwischen seinem hellen und dem dunklen Zustand um, um die Darstellung des blinkendes zu gestalten.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#180](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#180)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#180](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#180)]
 
-13. Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um die Animation zu aktivieren.
+13. Überschreiben <xref:System.Windows.Forms.Control.OnPaint%2A> Sie die-Methode zum Aktivieren der Animation.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]
 
 14. Drücken Sie F6, um die Projektmappe zu erstellen.
 
-## <a name="create-the-marqueeborder-child-control"></a>Erstellen des untergeordneten MarqueeBorder-Steuerelements
+## <a name="create-the-marqueeborder-child-control"></a>Erstellen des untergeordneten MarqueeBorder-Steuer Elements
 
-Die `MarqueeBorder` Steuerelement ist etwas komplexer als die `MarqueeText` Steuerelement. Sie verfügt über mehr Eigenschaften und die Animation in der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode ist etwas komplexer. Im Prinzip ist es sehr ähnlich, mit der `MarqueeText` Steuerelement.
+Das `MarqueeBorder` -Steuerelement ist etwas komplexer als `MarqueeText` das-Steuerelement. Sie verfügt über mehr Eigenschaften, und die Animation <xref:System.Windows.Forms.Control.OnPaint%2A> in der-Methode ist eher beteiligt. Im Prinzip ist es dem `MarqueeText` -Steuerelement sehr ähnlich.
 
-Da die `MarqueeBorder` Steuerelement kann die untergeordneten Steuerelemente haben, muss Sie achten <xref:System.Windows.Forms.Control.Layout> Ereignisse.
+Da das `MarqueeBorder` Steuerelement über untergeordnete Steuerelemente verfügen kann, muss es <xref:System.Windows.Forms.Control.Layout> die Ereignisse beachten.
 
-### <a name="to-create-the-marqueeborder-control"></a>Beim Erstellen des Steuerelements MarqueeBorder
+### <a name="to-create-the-marqueeborder-control"></a>So erstellen Sie das MarqueeBorder-Steuerelement
 
-1. Fügen Sie einen neuen **benutzerdefiniertes Steuerelement** Element für die `MarqueeControlLibrary` Projekt. Weisen Sie der neuen Quelldatei Basisnamen "MarqueeBorder."
+1. Fügen Sie dem `MarqueeControlLibrary` Projekt ein neues **benutzerdefiniertes Steuer** Element hinzu. Benennen Sie die neue Quelldatei mit dem Basis Namen "MarqueeBorder".
 
-2. Ziehen Sie eine <xref:System.ComponentModel.BackgroundWorker> -Komponente aus der **Toolbox** auf Ihre `MarqueeBorder` Steuerelement. Diese Komponente ermöglicht die `MarqueeBorder` Steuerelement selbst asynchron aktualisiert.
+2. Ziehen Sie <xref:System.ComponentModel.BackgroundWorker> eine Komponente aus der **Toolbox** auf `MarqueeBorder` das Steuerelement. Diese Komponente ermöglicht es dem `MarqueeBorder` Steuerelement, sich selbst asynchron zu aktualisieren.
 
-3. Legen Sie im Fenster Eigenschaften die <xref:System.ComponentModel.BackgroundWorker> Komponente `WorkerReportsProgress` und <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> Eigenschaften `true`. Mit diesen Einstellungen können die <xref:System.ComponentModel.BackgroundWorker> Komponente zum Auslösen von in regelmäßigen Abständen die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignis und asynchrone Updates abgebrochen. Weitere Informationen finden Sie unter [BackgroundWorker-Komponente](backgroundworker-component.md).
+3. Legen Sie im Eigenschaftenfenster die- <xref:System.ComponentModel.BackgroundWorker> Eigenschaft und `WorkerReportsProgress` <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> die-Eigenschaft `true`der-Komponente auf fest. Diese Einstellungen ermöglichen es <xref:System.ComponentModel.BackgroundWorker> der Komponente, das <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> -Ereignis in regelmäßigen Abständen zu erhöhen und asynchrone Updates abzubrechen. Weitere Informationen finden Sie unter [BackgroundWorker-Komponente](backgroundworker-component.md).
 
-4. Klicken Sie im Eigenschaftenfenster auf die Schaltfläche "Ereignisse". Fügen Sie Handler für die <xref:System.ComponentModel.BackgroundWorker.DoWork> und <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignisse.
+4. Klicken Sie im Eigenschaftenfenster auf die Schaltfläche Ereignisse. Anfügen von Handlern <xref:System.ComponentModel.BackgroundWorker.DoWork> für <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> die Ereignisse und.
 
-5. Öffnen der `MarqueeBorder` Quelldatei in die **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces ein:
+5. Öffnen Sie `MarqueeBorder` die Quelldatei im **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces:
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#20)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#20)]
 
-6. Ändern Sie die Deklaration der `MarqueeBorder` zu vererben <xref:System.Windows.Forms.Panel> und zum Implementieren der `IMarqueeWidget` Schnittstelle.
+6. Ändern Sie die Deklaration von `MarqueeBorder` , um von <xref:System.Windows.Forms.Panel> zu erben `IMarqueeWidget` und die-Schnittstelle zu implementieren.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#30)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#30)]
 
-7. Deklarieren Sie zwei Enumerationen für die Verwaltung der `MarqueeBorder` Zustand des Steuerelements: `MarqueeSpinDirection`, welche die Richtung, in dem die Lichter "um den Rahmen, und `MarqueeLightShape`, bestimmt die Form der Lichter (quadratische oder zirkuläre). Platzieren Sie diese Deklarationen, bevor Sie die `MarqueeBorder` Klassendeklaration.
+7. Deklarieren Sie zwei Enumerationen zum `MarqueeBorder` Verwalten des Zustands des `MarqueeSpinDirection`Steuer Elements:, das die Richtung bestimmt, in der die Lichter um den Rahmen drehen `MarqueeLightShape`, und, das die Form der Beleuchtung bestimmt (quadratisch oder zirkulär). Platzieren Sie diese Deklarationen `MarqueeBorder` vor der Klassen Deklaration.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#97](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#97)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#97](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#97)]
 
-8. Deklarieren Sie die Instanzvariablen, die den verfügbar gemachten Eigenschaften entsprechen, und initialisieren sie im Konstruktor.
+8. Deklarieren Sie die Instanzvariablen, die den verfügbar gemachten Eigenschaften entsprechen, und initialisieren Sie Sie im Konstruktor.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#40)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#40)]
 
 9. Implementieren Sie die `IMarqueeWidget`-Schnittstelle.
 
-    Die `StartMarquee` und `StopMarquee` Aufrufen von Methoden der <xref:System.ComponentModel.BackgroundWorker> Komponente <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> und <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> Methoden zum Starten und beenden die Animation.
+    Die `StartMarquee` - `StopMarquee` Methode und die <xref:System.ComponentModel.BackgroundWorker> -Methode rufen <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> die-und-Methoden der- <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> Komponente auf, um die Animation zu starten
 
-    Da die `MarqueeBorder` Steuerelement kann die untergeordneten Steuerelemente enthalten die `StartMarquee` Methode listet alle untergeordneten Steuerelemente und Aufrufe `StartMarquee` auf die implementieren `IMarqueeWidget`. Die `StopMarquee` Methode verfügt über eine ähnliche Implementierung.
+    Da das `MarqueeBorder` Steuerelement untergeordnete Steuerelemente enthalten `StartMarquee` kann, listet die-Methode alle untergeordneten `StartMarquee` Steuerelemente auf und `IMarqueeWidget`Ruft die auf, die implementieren. Die `StopMarquee` -Methode verfügt über eine ähnliche Implementierung.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#50)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#50)]
 
-10. Implementieren Sie die Eigenschaftenaccessoren. Die `MarqueeBorder` Steuerelement besitzt mehrere Eigenschaften steuern die Darstellung.
+10. Implementieren Sie die Eigenschaftenaccessoren. Das `MarqueeBorder` -Steuerelement verfügt über mehrere Eigenschaften zum Steuern des Erscheinungs Bilds.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#60)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#60)]
 
-11. Implementieren Sie die Handler für die <xref:System.ComponentModel.BackgroundWorker> Komponente <xref:System.ComponentModel.BackgroundWorker.DoWork> und <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignisse.
+11. Implementieren Sie die Handler für das <xref:System.ComponentModel.BackgroundWorker> -Ereignis <xref:System.ComponentModel.BackgroundWorker.DoWork> und <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> das-Ereignis der Komponente.
 
-    Die <xref:System.ComponentModel.BackgroundWorker.DoWork> Ereignishandler wartet die angegebene Anzahl von Millisekunden von `UpdatePeriod` löst dann die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignis, bis der Code die Animation durch den Aufruf beendet <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>.
+    Der <xref:System.ComponentModel.BackgroundWorker.DoWork> -Ereignishandler wird für die Anzahl von Millisekunden, `UpdatePeriod` die durch angegeben <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> wird, mit dem-Ereignis ausgelöst, bis der <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A>Code die Animation durch Aufrufen von beendet.
 
-    Die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignishandler erhöht die Position des Lichts "base", aus dem der hellen/dunklen Status der anderen Lichter bestimmt ist, und ruft die <xref:System.Windows.Forms.Control.Refresh%2A> Methode, um das Steuerelement sich selbst neu zeichnet.
+    Der <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignishandler erhöht die Position des "Basis"-Lichts, von dem der helle/dunkle Zustand der anderen Lichter bestimmt wird, und ruft die <xref:System.Windows.Forms.Control.Refresh%2A> -Methode auf, um das Steuerelement neu zu zeichnen.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#90](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#90)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#90](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#90)]
 
-12. Implementieren Sie die Hilfemethoden `IsLit` und `DrawLight`.
+12. Implementieren Sie die Hilfsmethoden `IsLit` und `DrawLight`.
 
-    Die `IsLit` Methode bestimmt die Farbe eines Lichts an einer bestimmten Position. Beleuchtung, die "markiert sind" in der vorgegebenen durch Farbe gezeichnet werden die `LightColor` -Eigenschaft, und solche, die "dunklen" sind in der vorgegebenen durch Farbe gezeichnet werden die `DarkColor` Eigenschaft.
+    Die `IsLit` -Methode bestimmt die Farbe eines Lichts an einer bestimmten Position. Beleuchtung, die "beleuchtet" sind, werden in der durch die `LightColor` -Eigenschaft angegebenen Farbe gezeichnet, und diejenigen, die "dunkel" sind, werden in der durch die `DarkColor` -Eigenschaft angegebenen Farbe gezeichnet.
 
-    Die `DrawLight` Methode zeichnet ein Licht mithilfe der entsprechenden Farbe, Form und Position.
+    Die `DrawLight` -Methode zeichnet ein Licht mit der entsprechenden Farbe, Form und Position.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#80](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#80)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#80](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#80)]
 
-13. Überschreiben der <xref:System.Windows.Forms.Control.OnLayout%2A> und <xref:System.Windows.Forms.Control.OnPaint%2A> Methoden.
+13. Überschreiben <xref:System.Windows.Forms.Control.OnLayout%2A> Sie <xref:System.Windows.Forms.Control.OnPaint%2A> die Methoden und.
 
-    Die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode zeichnet die Lichter an den Rändern der `MarqueeBorder` Steuerelement.
+    Die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode zeichnet die Lichter entlang der Ränder `MarqueeBorder` des-Steuer Elements.
 
-    Da die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, die die Abmessungen des hängt die `MarqueeBorder` -Steuerelement, müssen Sie sie aufrufen, sobald das Layout geändert wird. Um dies zu erreichen, außer Kraft setzen <xref:System.Windows.Forms.Control.OnLayout%2A> , und rufen Sie <xref:System.Windows.Forms.Control.Refresh%2A>.
+    Da die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode von den Abmessungen `MarqueeBorder` des Steuer Elements abhängt, müssen Sie diese immer dann aufzurufen, wenn das Layout geändert wird. Überschreiben <xref:System.Windows.Forms.Control.OnLayout%2A> Sie hierzu, und wenden <xref:System.Windows.Forms.Control.Refresh%2A>Sie an.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#70)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#70)]
 
-## <a name="creating-a-custom-designer-to-shadow-and-filter-properties"></a>Erstellen eines benutzerdefinierten Designers Schatten und Filtereigenschaften
+## <a name="creating-a-custom-designer-to-shadow-and-filter-properties"></a>Erstellen eines benutzerdefinierten Designers zum überschatten und Filtern von Eigenschaften
 
-Die `MarqueeControlRootDesigner` Klasse stellt die Implementierung für den Stamm-Designer. Zusätzlich zu diesem Designer, der die benutzerzertifikatauthentifizierung die `MarqueeControl`, benötigen Sie einen benutzerdefinierten Designer, der speziell zugeordnet ist die `MarqueeBorder` Steuerelement. Dieser Designer stellt benutzerdefiniertes Verhalten, das im Rahmen der benutzerdefinierten Stamm-Designer geeignet ist.
+Die `MarqueeControlRootDesigner` -Klasse stellt die-Implementierung für den Stamm Designer bereit. Zusätzlich zu diesem Designer, der auf dem `MarqueeControl`arbeitet, benötigen Sie einen benutzerdefinierten Designer, der speziell dem `MarqueeBorder` -Steuerelement zugeordnet ist. Dieser Designer stellt ein benutzerdefiniertes Verhalten bereit, das im Kontext des benutzerdefinierten root-Designers geeignet ist.
 
-Insbesondere die `MarqueeBorderDesigner` "Beschatten" und Filtern Sie nach bestimmten Eigenschaften wird die `MarqueeBorder` Steuerelement, das ihre Interaktion mit der entwurfsumgebung ändern.
+Insbesondere werden bestimmte `MarqueeBorderDesigner` Eigenschaften `MarqueeBorder` im Steuerelement durch den "Schatten" und gefiltert, sodass die Interaktion mit der Entwurfs Umgebung geändert wird.
 
-Abfangen von Aufrufen von einer Komponente-Eigenschaftenaccessor wird als "shadowing." bezeichnet. Es ermöglicht einem Designer zum Nachverfolgen des Wert, der vom Benutzer festgelegt wird, und übergeben Sie optional den Wert der entworfenen Komponente.
+Das Abfangen von Aufrufen an den Eigenschafts Accessor einer Komponente wird als "shadodown" bezeichnet. Sie ermöglicht es einem Designer, den vom Benutzer festgelegten Wert zu verfolgen und den Wert optional an die entworfene Komponente zu übergeben.
 
-In diesem Beispiel die <xref:System.Windows.Forms.Control.Visible%2A> und <xref:System.Windows.Forms.Control.Enabled%2A> werden Eigenschaften durch ein Shadowing ausgeführt werden die `MarqueeBorderDesigner`, die verhindert, dass die Benutzer können die `MarqueeBorder` Steuerelement unsichtbar oder deaktiviert, während der Entwurfszeit.
+<xref:System.Windows.Forms.Control.Visible%2A> In diesem Beispiel werden die- <xref:System.Windows.Forms.Control.Enabled%2A> Eigenschaft und die-Eigenschaft durch `MarqueeBorderDesigner`das schattiert `MarqueeBorder` , wodurch verhindert wird, dass das Steuerelement während der Entwurfszeit unsichtbar oder deaktiviert wird.
 
-Designer können auch hinzufügen und Entfernen von Eigenschaften. In diesem Beispiel die <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft wird zur Entwurfszeit entfernt werden, da die `MarqueeBorder` Steuerelement programmgesteuert festgelegt, der die Auffüllung basierend auf der Größe der Lichter durch die `LightSize` Eigenschaft.
+Designer können auch Eigenschaften hinzufügen und entfernen. In diesem Beispiel wird die <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaft zur Entwurfszeit entfernt, da das `MarqueeBorder` -Steuerelement den Abstand basierend auf der Größe der von der `LightSize` -Eigenschaft angegebenen Beleuchtung Programm gesteuert festlegt.
 
-Die Basisklasse für `MarqueeBorderDesigner` ist <xref:System.ComponentModel.Design.ComponentDesigner>, das hat es sich um Methoden, die die Attribute, Eigenschaften und Ereignisse verfügbar gemacht werden von einem Steuerelement zur Entwurfszeit ändern können:
+Die Basisklasse für `MarqueeBorderDesigner` ist <xref:System.ComponentModel.Design.ComponentDesigner>, die über Methoden verfügt, die die Attribute, Eigenschaften und Ereignisse ändern können, die von einem Steuerelement zur Entwurfszeit verfügbar gemacht werden:
 
 - <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A>
 
@@ -402,128 +400,128 @@ Die Basisklasse für `MarqueeBorderDesigner` ist <xref:System.ComponentModel.Des
 
 - <xref:System.ComponentModel.Design.ComponentDesigner.PostFilterEvents%2A>
 
-Wenn Sie die öffentliche Schnittstelle einer Komponente, die mit diesen Methoden ändern, müssen Sie die folgenden Regeln einhalten:
+Wenn Sie die öffentliche Schnittstelle einer Komponente mithilfe dieser Methoden ändern, müssen Sie diese Regeln befolgen:
 
-- Hinzufügen oder Entfernen von Elementen in der `PreFilter` nur Methoden
+- Nur Elemente in den `PreFilter` Methoden hinzufügen oder entfernen
 
-- Ändern Sie vorhandene Elemente in der `PostFilter` nur Methoden
+- Nur vorhandene Elemente in den `PostFilter` Methoden ändern
 
-- Rufen Sie die basisimplementierung immer zuerst die `PreFilter` Methoden
+- Die Basis Implementierung sollte immer zuerst in den `PreFilter` Methoden aufgerufen werden.
 
-- Rufen Sie die basisimplementierung immer zuletzt die `PostFilter` Methoden
+- Die Basis Implementierung sollte immer zuletzt in den `PostFilter` Methoden aufgerufen werden.
 
-Die folgenden Regeln einhalten wird sichergestellt, dass alle Designer in der Umgebung zur Entwurfszeit eine konsistente Sicht aller Komponenten entworfen wird.
+Durch Einhalten dieser Regeln wird sichergestellt, dass alle Designer in der Entwurfszeit Umgebung über eine konsistente Ansicht aller entworfenen Komponenten verfügen.
 
-Die <xref:System.ComponentModel.Design.ComponentDesigner> -Klasse stellt ein Wörterbuch für die Verwaltung von die Werte der Eigenschaften, die Shadowing durchgeführt wurde, sodass Sie keine bestimmte Nachrichteninstanzvariablen erstellen zu müssen.
+Die <xref:System.ComponentModel.Design.ComponentDesigner> -Klasse stellt ein Wörterbuch zum Verwalten der Werte von Shadowing-Eigenschaften bereit, sodass Sie keine bestimmten Instanzvariablen erstellen müssen.
 
-### <a name="to-create-a-custom-designer-to-shadow-and-filter-properties"></a>Erstellen ein benutzerdefiniertes Designers für Schattenkopien und filter
+### <a name="to-create-a-custom-designer-to-shadow-and-filter-properties"></a>So erstellen Sie einen benutzerdefinierten Designer zum überschatten und Filtern von Eigenschaften
 
-1. Mit der rechten Maustaste die **Entwurf** Ordner, und fügen Sie eine neue Klasse hinzu. Benennen Sie der Quelldatei Basis von "MarqueeBorderDesigner."
+1. Klicken Sie mit der rechten Maustaste auf den **Entwurfs** Ordner, und fügen Sie eine neue Klasse hinzu Benennen Sie die Quelldatei mit dem Basis Namen "MarqueeBorderDesigner".
 
-2. Öffnen der `MarqueeBorderDesigner` Quelldatei in die **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces ein:
+2. Öffnen Sie `MarqueeBorderDesigner` die Quelldatei im **Code-Editor**. Importieren Sie am Anfang der Datei die folgenden Namespaces:
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#420](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#420)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#420](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#420)]
 
-3. Ändern Sie die Deklaration der `MarqueeBorderDesigner` zu vererben <xref:System.Windows.Forms.Design.ParentControlDesigner>.
+3. Ändern Sie die Deklaration von `MarqueeBorderDesigner` , um von <xref:System.Windows.Forms.Design.ParentControlDesigner>zu erben.
 
-    Da die `MarqueeBorder` Steuerelement die untergeordneten Steuerelemente enthalten kann `MarqueeBorderDesigner` erbt <xref:System.Windows.Forms.Design.ParentControlDesigner>, behandelt die über-und untergeordneten Aktivität.
+    Da das `MarqueeBorder` Steuerelement untergeordnete Steuerelemente `MarqueeBorderDesigner` enthalten kann, <xref:System.Windows.Forms.Design.ParentControlDesigner>erbt von, wodurch die über-/unterordnungsinteraktion verarbeitet wird.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#430](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#430)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#430](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#430)]
 
-4. Überschreiben die basisimplementierung der <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A>.
+4. Überschreiben Sie die Basis <xref:System.ComponentModel.Design.ComponentDesigner.PreFilterProperties%2A>Implementierung von.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#450](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#450)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#450](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#450)]
 
-5. Implementieren Sie die <xref:System.Windows.Forms.Control.Enabled%2A>-Eigenschaft und die <xref:System.Windows.Forms.Control.Visible%2A>-Eigenschaft. Diese Implementierungen Shadowing für Eigenschaften des Steuerelements.
+5. Implementieren Sie die <xref:System.Windows.Forms.Control.Enabled%2A>-Eigenschaft und die <xref:System.Windows.Forms.Control.Visible%2A>-Eigenschaft. Diese Implementierungen schattieren die Eigenschaften des Steuer Elements.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#440](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#440)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#440](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#440)]
 
-## <a name="handling-component-changes"></a>Behandeln Änderungen an der Clientkomponenten
- Die `MarqueeControlRootDesigner` Klasse enthält die benutzerdefinierte während der Entwurfszeit-Erfahrung für Ihre `MarqueeControl` Instanzen. Die meisten Funktionen während der Entwurfszeit wird geerbt von der <xref:System.Windows.Forms.Design.DocumentDesigner> -Klasse, die Ihr Code werden zwei spezielle Anpassungen zu implementieren: Verarbeitung von Änderungen an der Clientkomponenten und die Designerverben hinzufügen.
+## <a name="handling-component-changes"></a>Verarbeiten von Komponenten Änderungen
+ Die `MarqueeControlRootDesigner` -Klasse stellt die benutzerdefinierte Entwurfszeit Darstellung für `MarqueeControl` Ihre-Instanzen bereit. Die meisten Entwurfszeit Funktionen werden von der <xref:System.Windows.Forms.Design.DocumentDesigner> -Klasse geerbt. der Code implementiert zwei spezifische Anpassungen: Verarbeiten von Komponenten Änderungen und Hinzufügen von Designer Verben.
 
- Als Benutzern beim Entwerfen ihrer `MarqueeControl` -Instanzen, die Ihre Stamm-Designer wird überwacht Änderungen an der `MarqueeControl` und seine untergeordneten Steuerelemente. Die entwurfszeitumgebung stellt einen geeigneten Dienst, <xref:System.ComponentModel.Design.IComponentChangeService>für nachverfolgung Komponente Zustand ändert.
+ Wenn Benutzer ihre `MarqueeControl` Instanzen entwerfen, verfolgt der Stamm-Designer Änderungen an und `MarqueeControl` den untergeordneten Steuerelementen. Die Entwurfszeit Umgebung bietet einen bequemen Dienst, <xref:System.ComponentModel.Design.IComponentChangeService>, zum Nachverfolgen von Änderungen am Komponenten Status.
 
- Sie erhalten einen Verweis auf diesen Dienst, durch Abfragen der Umgebung mit der <xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A> Methode. Wenn die Abfrage erfolgreich ist, kann Designer anfügen ein Handlers für die <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis und führen Sie alle Aufgaben zum Erhaltung des konsistenten Zustands zur Entwurfszeit erforderlich sind.
+ Sie erhalten einen Verweis auf diesen Dienst, indem Sie die-Umgebung mit <xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A> der-Methode Abfragen. Wenn die Abfrage erfolgreich ist, kann der Designer einen Handler für das <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> Ereignis anfügen und alle Aufgaben ausführen, die erforderlich sind, um einen konsistenten Zustand zur Entwurfszeit aufrechtzuerhalten.
 
- Im Fall von der `MarqueeControlRootDesigner` -Klasse, rufen Sie die <xref:System.Windows.Forms.Control.Refresh%2A> -Methode für jede `IMarqueeWidget` enthaltene Objekt das `MarqueeControl`. Dies bewirkt, dass die `IMarqueeWidget` Objekt sich selbst entsprechend neu zeichnet, wenn Eigenschaften des übergeordneten Elements wie <xref:System.Windows.Forms.Control.Size%2A> geändert werden.
+ Im Fall der `MarqueeControlRootDesigner` -Klasse wird die <xref:System.Windows.Forms.Control.Refresh%2A> -Methode für jedes `IMarqueeWidget` Objekt aufgerufen, das `MarqueeControl`in enthalten ist. Dadurch wird das `IMarqueeWidget` Objekt selbst ordnungsgemäß neu gezeichnet, wenn Eigenschaften wie die der über <xref:System.Windows.Forms.Control.Size%2A> geordneten Elemente geändert werden.
 
-### <a name="to-handle-component-changes"></a>So behandeln Sie komponentenänderungen
+### <a name="to-handle-component-changes"></a>So verarbeiten Sie Komponenten Änderungen
 
-1. Öffnen der `MarqueeControlRootDesigner` Quelldatei in die **Code-Editor** und überschreiben die <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> Methode. Rufen Sie die basisimplementierung für <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> und Abfragen für die <xref:System.ComponentModel.Design.IComponentChangeService>.
+1. Öffnen Sie `MarqueeControlRootDesigner` die Quelldatei im **Code-Editor** , und <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> überschreiben Sie die-Methode. Nennen Sie die Basis Implementierung <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> von, und Fragen <xref:System.ComponentModel.Design.IComponentChangeService>Sie den ab.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#580](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#580)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#580](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#580)]
 
-2. Implementieren der <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A> -Ereignishandler. Testen Sie die sendende Komponente, und es ist ein `IMarqueeWidget`, rufen Sie die <xref:System.Windows.Forms.Control.Refresh%2A> Methode.
+2. Implementieren Sie <xref:System.ComponentModel.Design.IComponentChangeService.OnComponentChanged%2A> den-Ereignishandler. Testen Sie den Typ der sendenden Komponente, und wenn es `IMarqueeWidget`sich um eine <xref:System.Windows.Forms.Control.Refresh%2A> handelt, müssen Sie die zugehörige-Methode
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#560](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#560)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#560](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#560)]
 
-## <a name="adding-designer-verbs-to-your-custom-designer"></a>Hinzufügen von Designerverben zu Ihrem benutzerdefinierten Designer
+## <a name="adding-designer-verbs-to-your-custom-designer"></a>Hinzufügen von Designer Verben zum benutzerdefinierten Designer
 
-Ein Designerverb ist ein mit einem Ereignishandler verknüpfter Menübefehl. Designerverben werden Kontextmenü einer Komponente zur Entwurfszeit hinzugefügt. Weitere Informationen finden Sie unter <xref:System.ComponentModel.Design.DesignerVerb>.
+Ein Designer Verb ist ein Menübefehl, der mit einem Ereignishandler verknüpft ist. Designer Verben werden dem Kontextmenü einer Komponente zur Entwurfszeit hinzugefügt. Weitere Informationen finden Sie unter <xref:System.ComponentModel.Design.DesignerVerb>.
 
-Sie werden den Designern zwei Designerverben hinzufügen: **Test ausführen** und **beenden Test**. Diese Verben ermöglichen Sie das Laufzeitverhalten des Anzeigen der `MarqueeControl` zur Entwurfszeit. Diese Verben werden hinzugefügt, die `MarqueeControlRootDesigner`.
+Sie fügen den Designern zwei Designer Verben hinzu: Test **Ausführen** und **Test abbrechen**. Diese Verben ermöglichen es Ihnen, das Laufzeitverhalten von `MarqueeControl` zur Entwurfszeit anzuzeigen. Diese Verben werden dem `MarqueeControlRootDesigner`hinzugefügt.
 
-Bei **Test ausführen** wird aufgerufen, der Verb-Ereignishandler ruft die `StartMarquee` Methode für die `MarqueeControl`. Bei **Test beenden** wird aufgerufen, der Verb-Ereignishandler ruft die `StopMarquee` Methode für die `MarqueeControl`. Die Implementierung der `StartMarquee` und `StopMarquee` Methoden Aufrufen dieser Methoden für enthaltene Steuerelemente, die implementieren `IMarqueeWidget`, sodass jedes enthaltene `IMarqueeWidget` Steuerelemente im Test ebenfalls einbezogen werden.
+Wenn **Run Test** aufgerufen wird, ruft der Verb-Ereignishandler die `StartMarquee` -Methode für `MarqueeControl`den auf. Wenn **Test beenden** aufgerufen wird, ruft der Verb-Ereignishandler die `StopMarquee` -Methode für `MarqueeControl`den auf. Die Implementierung `StartMarquee` der-Methode `StopMarquee` und der-Methode ruft diese Methoden für enthaltene `IMarqueeWidget`Steuerelemente auf, `IMarqueeWidget` die implementieren, sodass alle darin enthaltenen Steuerelemente auch an dem Test teilnehmen.
 
-### <a name="to-add-designer-verbs-to-your-custom-designers"></a>So fügen den benutzerdefinierten Designern Designerverben hinzu
+### <a name="to-add-designer-verbs-to-your-custom-designers"></a>So fügen Sie Designer Verben zu Ihren benutzerdefinierten Designern hinzu
 
-1. In der `MarqueeControlRootDesigner` -Klasse verwenden, fügen Sie Ereignishandler mit dem Namen `OnVerbRunTest` und `OnVerbStopTest`.
+1. Fügen Sie `MarqueeControlRootDesigner` in der-Klasse Ereignishandler mit `OnVerbRunTest` dem `OnVerbStopTest`Namen und hinzu.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#570](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#570)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#570](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#570)]
 
-2. Verbinden Sie diese Ereignishandler mit den entsprechenden Designerverben an. `MarqueeControlRootDesigner` erbt einen <xref:System.ComponentModel.Design.DesignerVerbCollection> von der Basisklasse. Erstellen Sie zwei neue <xref:System.ComponentModel.Design.DesignerVerb> -Objekte und fügen sie dieser Auflistung in der <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> Methode.
+2. Verbinden Sie diese Ereignishandler mit ihren entsprechenden Designer Verben. `MarqueeControlRootDesigner`erbt eine <xref:System.ComponentModel.Design.DesignerVerbCollection> von ihrer Basisklasse. Sie erstellen zwei neue <xref:System.ComponentModel.Design.DesignerVerb> -Objekte und fügen diese dieser Auflistung in der <xref:System.Windows.Forms.Design.DocumentDesigner.Initialize%2A> -Methode hinzu.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#590](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#590)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]
 
-## <a name="creating-a-custom-uitypeeditor"></a>Erstellen eine benutzerdefinierte UITypeEditor
+## <a name="creating-a-custom-uitypeeditor"></a>Erstellen eines benutzerdefinierten uitypeer-Editors
 
-Wenn Sie eine benutzerdefinierte während der Entwurfszeit-Erfahrung für Benutzer erstellen, ist es oft wünschenswert, eine benutzerdefinierte Aktivität mit dem Fenster "Eigenschaften" erstellen. Sie erreichen dies durch das Erstellen einer <xref:System.Drawing.Design.UITypeEditor>. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Typeditor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120)).
+Wenn Sie benutzerdefinierte Entwurfszeit Funktionen für Benutzer erstellen, ist es häufig wünschenswert, eine benutzerdefinierte Interaktion mit dem Eigenschaftenfenster zu erstellen. Dies können Sie erreichen, indem Sie <xref:System.Drawing.Design.UITypeEditor>einen erstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen UI-](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120))Typ-Editor.
 
-Die `MarqueeBorder` Steuerelement macht mehrere Eigenschaften im Eigenschaftenfenster verfügbar. Zwei dieser Eigenschaften `MarqueeSpinDirection` und `MarqueeLightShape` durch Enumerationen dargestellt werden. Veranschaulicht die Verwendung von einer UI-Typ-Editor die `MarqueeLightShape` Eigenschaft weist eine zugeordnete <xref:System.Drawing.Design.UITypeEditor> Klasse.
+Das `MarqueeBorder` -Steuerelement macht mehrere Eigenschaften im Eigenschaftenfenster verfügbar. Zwei dieser Eigenschaften `MarqueeSpinDirection` und `MarqueeLightShape` werden durch Enumerationen dargestellt. Um die Verwendung eines UI-typeditors zu veranschaulichen, `MarqueeLightShape` wird der-Eigenschaft <xref:System.Drawing.Design.UITypeEditor> eine zugeordnete-Klasse zugeordnet.
 
-### <a name="to-create-a-custom-ui-type-editor"></a>So erstellen einen benutzerdefinierte UI-Typ-editor
+### <a name="to-create-a-custom-ui-type-editor"></a>So erstellen Sie einen benutzerdefinierten UI-Typ-Editor
 
-1. Öffnen der `MarqueeBorder` Quelldatei in die **Code-Editor**.
+1. Öffnen Sie `MarqueeBorder` die Quelldatei im **Code-Editor**.
 
-2. In der Definition der `MarqueeBorder` Klasse, deklarieren Sie eine Klasse namens `LightShapeEditor` abgeleitet, die <xref:System.Drawing.Design.UITypeEditor>.
+2. Deklarieren Sie in der `MarqueeBorder` Definition der-Klasse eine Klasse `LightShapeEditor` mit dem Namen <xref:System.Drawing.Design.UITypeEditor>, die von abgeleitet wird.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#96](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#96)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#96](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#96)]
 
-3. Deklarieren Sie eine <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> Instanzvariable mit dem Namen `editorService`.
+3. Deklarieren <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> Sie eine Instanzvariable namens. `editorService`
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#92)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#92](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#92)]
 
-4. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>-Methode. Diese Implementierung gibt <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>, wodurch angewiesen wird, der entwurfsumgebung Vorgehensweise beim Anzeigen der `LightShapeEditor`.
+4. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>-Methode. Diese Implementierung gibt <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>zurück, die der Entwurfs Umgebung mitteilt, wie das `LightShapeEditor`angezeigt werden soll.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#93)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#93](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#93)]
 
-5. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>-Methode. Diese Implementierung fragt die entwurfsumgebung für eine <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> Objekt. Wenn erfolgreich, er erstellt eine `LightShapeSelectionControl`. Die <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> Methode wird aufgerufen, um das Starten der `LightShapeEditor`. Der Rückgabewert von diesem Aufruf wird die entwurfsumgebung zurückgegeben.
+5. Überschreiben Sie die <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>-Methode. Mit dieser Implementierung wird die Entwurfs Umgebung für <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> ein Objekt abgefragt. Bei erfolgreicher Ausführung wird ein `LightShapeSelectionControl`erstellt. Die <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> -Methode wird aufgerufen, um `LightShapeEditor`das zu starten. Der Rückgabewert dieses aufzurufenden wird an die Entwurfs Umgebung zurückgegeben.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#94)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#94)]
 
-## <a name="creating-a-view-control-for-your-custom-uitypeeditor"></a>Erstellen ein Steuerelement für Ihre benutzerdefinierte UITypeEditor
+## <a name="creating-a-view-control-for-your-custom-uitypeeditor"></a>Erstellen eines View-Steuer Elements für Ihren benutzerdefinierten uitypeer-Editor
 
-1. Die `MarqueeLightShape` Eigenschaft unterstützt zwei Arten von Licht Shapes: `Square` und `Circle`. Erstellen Sie ein benutzerdefiniertes Steuerelement, das ausschließlich zum Zweck der Anzeige dieser Werte im Fenster Eigenschaften verwendet. Dieses benutzerdefinierte Steuerelement verwendet werden durch Ihre <xref:System.Drawing.Design.UITypeEditor> für die Interaktion mit dem Fenster "Eigenschaften".
+1. Die `MarqueeLightShape` -Eigenschaft unterstützt zwei Arten von hellen `Square` Formen `Circle`: und. Sie erstellen ein benutzerdefiniertes Steuerelement, das ausschließlich zum Zweck der grafischen Darstellung dieser Werte in der Eigenschaftenfenster verwendet wird. Dieses benutzerdefinierte Steuerelement wird von Ihrem <xref:System.Drawing.Design.UITypeEditor> für die Interaktion mit dem Eigenschaftenfenster verwendet.
 
-### <a name="to-create-a-view-control-for-your-custom-ui-type-editor"></a>So erstellen einem Steuerelement für die benutzerdefinierte Benutzeroberfläche Typ-editor
+### <a name="to-create-a-view-control-for-your-custom-ui-type-editor"></a>So erstellen Sie ein View-Steuerelement für den benutzerdefinierten Typ-Editor
 
-1. Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element für die `MarqueeControlLibrary` Projekt. Weisen Sie der neuen Quelldatei Basisnamen "LightShapeSelectionControl."
+1. Fügen Sie dem <xref:System.Windows.Forms.UserControl> `MarqueeControlLibrary` Projekt ein neues Element hinzu. Benennen Sie die neue Quelldatei mit dem Basis Namen "LightShapeSelectionControl".
 
-2. Ziehen Sie zwei <xref:System.Windows.Forms.Panel> -Steuerelemente aus der **Toolbox** auf die `LightShapeSelectionControl`. Nennen Sie diese `squarePanel` und `circlePanel`. Ordnen Sie sie nebeneinander an. Legen Sie die <xref:System.Windows.Forms.Control.Size%2A> -Eigenschaft beider <xref:System.Windows.Forms.Panel> -Steuerelementen an (60, 60). Legen Sie die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft der `squarePanel` zu steuern (8, 10). Legen Sie die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft der `circlePanel` die Steuerung an ("80", "10"). Legen Sie schließlich die <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft der `LightShapeSelectionControl` auf (150, 80).
+2. Ziehen Sie <xref:System.Windows.Forms.Panel> zwei-Steuerelemente aus der `LightShapeSelectionControl` **Toolbox** auf das. Benennen Sie `squarePanel` Sie `circlePanel`und. Anordnen Sie diese nebeneinander. Legen Sie <xref:System.Windows.Forms.Control.Size%2A> die-Eigenschaft <xref:System.Windows.Forms.Panel> beider Steuerelemente auf (60, 60) fest. Legen Sie <xref:System.Windows.Forms.Control.Location%2A> die-Eigenschaft `squarePanel` des-Steuer Elements auf (8, 10) fest. Legen Sie <xref:System.Windows.Forms.Control.Location%2A> die-Eigenschaft `circlePanel` des-Steuer Elements auf (80, 10) fest. Legen `LightShapeSelectionControl` Sie abschließend die <xref:System.Windows.Forms.Control.Size%2A> -Eigenschaft von auf (150, 80) fest.
 
-3. Öffnen der `LightShapeSelectionControl` Quelldatei in die **Code-Editor**. Importieren Sie am Anfang der Datei, die <xref:System.Windows.Forms.Design?displayProperty=nameWithType> Namespace:
+3. Öffnen Sie `LightShapeSelectionControl` die Quelldatei im **Code-Editor**. Importieren Sie am Anfang der Datei den <xref:System.Windows.Forms.Design?displayProperty=nameWithType> -Namespace:
 
 ```vb
 Imports System.Windows.Forms.Design
@@ -533,12 +531,12 @@ Imports System.Windows.Forms.Design
 using System.Windows.Forms.Design;
 ```
 
-1. Implementieren <xref:System.Windows.Forms.Control.Click> -Ereignishandlern für die `squarePanel` und `circlePanel` Steuerelemente. Diese Methoden rufen <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown%2A> zum Beenden des benutzerdefiniertes <xref:System.Drawing.Design.UITypeEditor> -offlinebearbeitungssitzung zu starten.
+1. Implementieren <xref:System.Windows.Forms.Control.Click> Sie Ereignishandler für die `squarePanel` Steuer `circlePanel` Elemente und. Diese Methoden rufen <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown%2A> auf, um die <xref:System.Drawing.Design.UITypeEditor> benutzerdefinierte Bearbeitungs Sitzung zu beenden.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#390](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#390)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#390](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#390)]
 
-2. Deklarieren Sie eine <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> Instanzvariable mit dem Namen `editorService`.
+2. Deklarieren <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> Sie eine Instanzvariable namens. `editorService`
 
 ```vb
 Private editorService As IWindowsFormsEditorService
@@ -548,62 +546,62 @@ Private editorService As IWindowsFormsEditorService
 private IWindowsFormsEditorService editorService;
 ```
 
-1. Deklarieren Sie eine `MarqueeLightShape` Instanzvariable mit dem Namen `lightShapeValue`.
+1. Deklarieren `MarqueeLightShape` Sie eine Instanzvariable namens. `lightShapeValue`
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#330](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#330)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#330](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#330)]
 
-2. In der `LightShapeSelectionControl` -Konstruktor, fügen Sie der <xref:System.Windows.Forms.Control.Click> Ereignishandler die `squarePanel` und `circlePanel` Steuerelemente <xref:System.Windows.Forms.Control.Click> Ereignisse. Darüber hinaus definieren Sie eine Überladung des Konstruktors, der zugewiesen der `MarqueeLightShape` Wert über die entwurfsumgebung für die `lightShapeValue` Feld.
+2. <xref:System.Windows.Forms.Control.Click> `squarePanel` Fügen Sie im `circlePanel`Konstruktor die Ereignishandler an die EreignisseundderSteuerelementean.<xref:System.Windows.Forms.Control.Click> `LightShapeSelectionControl` Definieren Sie außerdem eine Konstruktorüberladung, die `MarqueeLightShape` den Wert aus der Entwurfs Umgebung dem `lightShapeValue` Feld zuweist.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#340](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#340)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#340](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#340)]
 
-3. In der <xref:System.ComponentModel.Component.Dispose%2A> -Methode, trennen Sie die <xref:System.Windows.Forms.Control.Click> -Ereignishandler.
+3. Trennen Sie <xref:System.ComponentModel.Component.Dispose%2A> in der-Methode die <xref:System.Windows.Forms.Control.Click> Ereignishandler.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#350](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#350)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#350](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#350)]
 
-4. Klicken Sie im **Projektmappen-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**. Öffnen Sie die Datei LightShapeSelectionControl.Designer.cs oder LightShapeSelectionControl.Designer.vb-Datei, und entfernen Sie die Standarddefinition des der <xref:System.ComponentModel.Component.Dispose%2A> Methode.
+4. Klicken Sie im **Projektmappen-Explorer** auf die Schaltfläche **Alle Dateien anzeigen**. Öffnen Sie die Datei LightShapeSelectionControl.Designer.cs oder LightShapeSelectionControl. Designer. vb, und entfernen Sie die Standard Definition <xref:System.ComponentModel.Component.Dispose%2A> der Methode.
 
 5. Implementiert die `LightShape`-Eigenschaft.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]
 
-6. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnPaint%2A>-Methode. Diese Implementierung wird ein ausgefülltes Quadrat und der Kreis gezeichnet. Es wird auch den ausgewählten Wert hervorheben, durch Zeichnen eines Rahmens um eine Form vom Typ oder die andere.
+6. Überschreiben Sie die <xref:System.Windows.Forms.Control.OnPaint%2A>-Methode. Diese Implementierung zeichnet ein ausgefülltes Quadrat und einen Kreis. Außerdem wird der ausgewählte Wert hervorgehoben, indem ein Rahmen um eine Form gezeichnet wird.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#380)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#380)]
 
-## <a name="testing-your-custom-control-in-the-designer"></a>Testen das benutzerdefinierte Steuerelement im Designer
+## <a name="testing-your-custom-control-in-the-designer"></a>Testen des benutzerdefinierten Steuer Elements im Designer
 
-An diesem Punkt können Sie erstellen die `MarqueeControlLibrary` Projekt. Testen Sie die Implementierung durch Erstellen eines Steuerelements, die von erbt die `MarqueeControl` -Klasse und verwenden es in einem Formular.
+An diesem Punkt können Sie das `MarqueeControlLibrary` Projekt erstellen. Testen Sie Ihre Implementierung, indem Sie ein Steuerelement erstellen, `MarqueeControl` das von der-Klasse erbt und es in einem Formular verwendet.
 
-### <a name="to-create-a-custom-marqueecontrol-implementation"></a>Erstellen Sie eine benutzerdefinierte Implementierung der MarqueeControl
+### <a name="to-create-a-custom-marqueecontrol-implementation"></a>So erstellen Sie eine benutzerdefinierte MarqueeControl-Implementierung
 
-1. Öffnen Sie `DemoMarqueeControl` im Windows Forms-Designer. Dies erstellt eine Instanz der `DemoMarqueeControl` geben, und zeigt ihn in einer Instanz von der `MarqueeControlRootDesigner` Typ.
+1. Öffnen Sie `DemoMarqueeControl` im Windows Forms-Designer. Dadurch wird eine Instanz des `DemoMarqueeControl` Typs erstellt und in einer Instanz `MarqueeControlRootDesigner` des Typs angezeigt.
 
-2. In der **Toolbox**öffnen die **MarqueeControlLibrary Komponenten** Registerkarte. Sie sehen die `MarqueeBorder` und `MarqueeText` Steuerelemente zur Auswahl zur Verfügung.
+2. Öffnen Sie in der **Toolbox**die Registerkarte **MarqueeControlLibrary Components** . Sie sehen, dass `MarqueeBorder` die `MarqueeText` Steuerelemente und verfügbar sind.
 
-3. Ziehen Sie eine Instanz von der `MarqueeBorder` -Steuerelement auf die `DemoMarqueeControl` Entwurfsoberfläche. Docken Sie dieses `MarqueeBorder` Steuerelement an das übergeordnete Steuerelement.
+3. Ziehen Sie eine Instanz des `MarqueeBorder` Steuer Elements auf `DemoMarqueeControl` die Entwurfs Oberfläche. Docken `MarqueeBorder` Sie dieses Steuerelement an das übergeordnete Steuerelement
 
-4. Ziehen Sie eine Instanz von der `MarqueeText` -Steuerelement auf die `DemoMarqueeControl` Entwurfsoberfläche.
+4. Ziehen Sie eine Instanz des `MarqueeText` Steuer Elements auf `DemoMarqueeControl` die Entwurfs Oberfläche.
 
 5. Erstellen Sie die Projektmappe.
 
-6. Mit der rechten Maustaste die `DemoMarqueeControl` , und wählen Sie in der Verknüpfung im Menü der **Test ausführen** Option aus, um die Animation zu starten. Klicken Sie auf **Test beenden** die Animation beendet.
+6. Klicken Sie mit der `DemoMarqueeControl` rechten Maustaste auf das, und wählen Sie im Kontextmenü die Option **Test ausführen** aus, um die Animation zu starten. Klicken Sie auf **Test abbrechen** , um die Animation anzuhalten.
 
 7. Öffnen Sie **Form1** in der Designansicht.
 
-8. Platzieren Sie zwei <xref:System.Windows.Forms.Button> Steuerelemente im Formular. Nennen Sie diese `startButton` und `stopButton`, und ändern Sie die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaftswerte **starten** und **beenden**bzw.
+8. Platzieren Sie <xref:System.Windows.Forms.Button> zwei-Steuerelemente auf dem Formular. Benennen Sie `startButton` Sie `stopButton`und, und ändern <xref:System.Windows.Forms.Control.Text%2A> Sie die Eigenschaftswerte zum **starten** bzw. zum **Ende**.
 
-9. Implementieren <xref:System.Windows.Forms.Control.Click> -Ereignishandlern für beide <xref:System.Windows.Forms.Button> Steuerelemente.
+9. Implementieren <xref:System.Windows.Forms.Control.Click> Sie Ereignishandler für beide <xref:System.Windows.Forms.Button> Steuerelemente.
 
-10. In der **Toolbox**öffnen die **MarqueeControlTest Komponenten** Registerkarte. Sie sehen die `DemoMarqueeControl` zur Auswahl zur Verfügung.
+10. Öffnen Sie in der **Toolbox**die Registerkarte **MarqueeControlTest Components** . Sie sehen, dass `DemoMarqueeControl` die Auswahl verfügbar ist.
 
-11. Ziehen Sie eine Instanz des `DemoMarqueeControl` auf die **Form1** Entwurfsoberfläche.
+11. Ziehen Sie eine Instanz `DemoMarqueeControl` von auf die **Form1** -Entwurfs Oberfläche.
 
-12. In der <xref:System.Windows.Forms.Control.Click> Ereignishandler Aufrufen der `Start` und `Stop` Methoden für die `DemoMarqueeControl`.
+12. Rufen Sie <xref:System.Windows.Forms.Control.Click> in den-Ereignis Handlern `Start` die `Stop` -Methode und `DemoMarqueeControl`die-Methode für auf.
 
 ```vb
 Private Sub startButton_Click(sender As Object, e As System.EventArgs)
@@ -627,21 +625,21 @@ private void stopButton_Click(object sender, System.EventArgs e)
 }
 ```
 
-1. Legen Sie die `MarqueeControlTest` -Projekt als Startprojekt fest, und führen Sie sie. Sie sehen, dass die Anzeige des Formulars Ihre `DemoMarqueeControl`. Klicken Sie auf die **starten** Schaltfläche, um die Animation zu starten. Sie sollten den Text blinken und die Lichter, um den Rahmen angezeigt werden.
+1. Legen Sie `MarqueeControlTest` das Projekt als Startprojekt fest, und führen Sie es aus. Das Formular wird angezeigt `DemoMarqueeControl`. Klicken Sie auf die Schaltfläche **Start** , um die Animation zu starten. Der Text wird blinkt, und die Lichter bewegen sich um den Rahmen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Die `MarqueeControlLibrary` veranschaulicht eine einfache Implementierung von benutzerdefinierten Steuerelementen und den zugeordneten Designer. Sie können dieses Beispiel auf verschiedene Weise komplexere vornehmen:
+Der `MarqueeControlLibrary` veranschaulicht eine einfache Implementierung von benutzerdefinierten Steuerelementen und zugeordneten Designern. Sie können dieses Beispiel auf verschiedene Weise anspruchsvoller gestalten:
 
-- Ändern Sie die Eigenschaftswerte für die `DemoMarqueeControl` im Designer. Fügen Sie weitere `MarqueBorder` Steuerelemente und docken Sie sie innerhalb ihrer übergeordneten-Instanzen, um einen verschachtelten Effekt zu erstellen. Experimentieren Sie mit verschiedenen Einstellungen für die `UpdatePeriod` und die Light-bezogene Eigenschaften.
+- Ändern Sie die Eigenschaftswerte `DemoMarqueeControl` für im Designer. Fügen Sie `MarqueBorder` weitere Steuerelemente hinzu, und docken Sie Sie in ihren übergeordneten Instanzen an, um einen geschachtelten Experimentieren Sie mit verschiedenen Einstellungen für `UpdatePeriod` und den hell bezogenen Eigenschaften.
 
-- Erstellen Sie eigene Implementierungen von `IMarqueeWidget`. Sie könnten z. B. ein blinkendes "Neon anmelden" oder ein animiertes Symbol mit mehreren Abbildern erstellen.
+- Erstellen Sie Ihre eigenen Implementierungen `IMarqueeWidget`von. Sie könnten z. b. ein blindes "Neon Sign" oder ein animiertes Zeichen mit mehreren Bildern erstellen.
 
-- Weiter passen Sie an, die während der Entwurfszeit-Benutzeroberfläche. Sie können versuchen, mehr Eigenschaften als shadowing <xref:System.Windows.Forms.Control.Enabled%2A> und <xref:System.Windows.Forms.Control.Visible%2A>, und neue Eigenschaften hinzufügen. Fügen Sie neue Designerverben um häufige Aufgaben wie das Andocken von untergeordneten Steuerelemente zu vereinfachen.
+- Passen Sie die Entwurfszeit Funktion weiter an. Sie könnten versuchen, mehr Eigenschaften als <xref:System.Windows.Forms.Control.Enabled%2A> und <xref:System.Windows.Forms.Control.Visible%2A>zu shadoauen, und Sie können neue Eigenschaften hinzufügen. Fügen Sie neue Designer Verben hinzu, um häufige Aufgaben wie das Andocken von untergeordneten
 
-- Lizenz die `MarqueeControl`. Weitere Informationen finden Sie unter [Vorgehensweise: Lizenzieren von Komponenten und Steuerelementen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120)).
+- Lizenzieren `MarqueeControl`Sie den. Weitere Informationen finden Sie unter [Vorgehensweise: Lizenz Komponenten und-](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))Steuerelemente.
 
-- Steuern Sie, wie die Steuerelemente serialisiert werden und wie Code für sie generiert wird. Weitere Informationen finden Sie unter [dynamische Quelle-Codegenerierung und-Kompilierung](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
+- Steuern Sie, wie Ihre Steuerelemente serialisiert werden und wie Code für Sie generiert wird. Weitere Informationen finden Sie unter [dynamische Quell Code Generierung und-Kompilierung](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -652,6 +650,6 @@ Die `MarqueeControlLibrary` veranschaulicht eine einfache Implementierung von be
 - <xref:System.ComponentModel.Design.DesignerVerb>
 - <xref:System.Drawing.Design.UITypeEditor>
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Vorgehensweise: Erstellen eines Windows Forms-Steuer Elements, das Entwurfszeit Features nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
 - [Erweitern der Entwurfszeitunterstützung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Benutzerdefinierte Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

@@ -9,29 +9,23 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: b914509656d3ce67d62dcd23cebdcc3b74278d72
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 77461cf6aed9dd992ee8491dc80e4cbe00028767
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882011"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037935"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes mithilfe des Designers
-Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein Symbol, das den Zweck des Steuerelements, z. B. auf eine Schaltfläche, ein Datenträgersymbol wird ermittelt, werden die **speichern** Befehl. Alternativ kann das Symbol ein Hintergrundbild auf dem Steuerelement der gewünschten Eindruck sein.  
-  
-> [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-set-the-image-displayed-by-a-control"></a>Das von einem Steuerelement angezeigte Bild festlegen  
-  
-1. In der **Eigenschaften** wählen Sie im Fenster der **Image** oder **BackgroundImage** -Eigenschaft des Steuerelements, klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten ()  
-  
-     ![Schaltfläche mit den Auslassungspunkten (...) im Eigenschaftenfenster von Visual Studio.](./media/visual-studio-ellipsis-button.png))  
-  
-     ) zum Anzeigen der **Ressource auswählen** Dialogfeld.  
-  
-2. Wählen Sie das Bild, die, das Sie anzeigen möchten.  
-  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Vorgehensweise: Festlegen des von einem Windows Forms Steuerelement angezeigten Bilds mithilfe des Designers
+
+Mehrere Windows Forms Steuerelemente können Bilder anzeigen. Das Bild kann ein Symbol sein, das den Zweck des Steuer Elements verdeutlicht, z. b. ein Datenträger Symbol auf einer Schaltfläche, die den Befehl " **Speichern** " bezeichnet. Oder das Symbol kann ein Hintergrundbild sein, um dem Steuerelement die gewünschte Darstellung zu geben.
+
+## <a name="to-set-the-image-displayed-by-a-control"></a>So legen Sie das von einem Steuerelement angezeigte Bild fest
+
+1. Wählen Sie im Fenster **Eigenschaften** die **Bild** -oder **BackgroundImage** -Eigenschaft des Steuer Elements aus, und klicken Sie dann auf![die Auslassungs Punkte (die Schalt](./media/visual-studio-ellipsis-button.png)Fläche mit den Auslassungs Punkten in Visual Studio), um die **Ressource auswählen** anzuzeigen. (Dialogfeld).
+
+2. Wählen Sie das Abbild aus, das Sie anzeigen möchten.
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Drawing.Image.FromFile%2A>

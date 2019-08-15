@@ -6,40 +6,38 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 57c124f19d208192cb2d4500274f7f897948252a
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 63692a797ad49f0adc3a0c5b0bfff1aebbc65257
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960155"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038266"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Vorgehensweise: Hinzufügen oder Entfernen von ImageList-Bildern mithilfe des Designers
 
-Sie können Bilder zum Hinzufügen einer <xref:System.Windows.Forms.ImageList> Komponente mehrere Möglichkeiten. Sie können Bilder sehr schnell hinzufügen, indem Sie mithilfe des Smarttags zugeordnet der <xref:System.Windows.Forms.ImageList>, oder wenn Sie mehrere weitere Eigenschaften für Festlegen der <xref:System.Windows.Forms.ImageList>, Umständen ist es praktischer, Hinzufügen von Bildern mit dem Fenster "Eigenschaften". Sie können auch Bilder hinzufügen, indem Sie Code. Weitere Informationen zur Vorgehensweise beim Hinzufügen von Bildern mithilfe von Code finden Sie unter [Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der Windows Forms ImageList-Komponente](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Füllen Sie in der Regel die <xref:System.Windows.Forms.ImageList> Komponente mit Bildern, bevor Sie mit einem Steuerelement verknüpft ist, aber dies ist nicht erforderlich.
+Sie können einer <xref:System.Windows.Forms.ImageList> -Komponente auf verschiedene Weise Bilder hinzufügen. Sie können Bilder sehr schnell mithilfe des Smarttags hinzufügen <xref:System.Windows.Forms.ImageList>, das zugeordnet ist, oder wenn Sie mehrere andere Eigenschaften <xref:System.Windows.Forms.ImageList>im festlegen, ist es möglicherweise bequemer, Bilder mit dem Eigenschaftenfenster hinzuzufügen. Mithilfe von Code können Sie auch Bilder hinzufügen. Weitere Informationen zum Hinzufügen von Bildern mit Code finden [Sie unter Gewusst wie: Hinzufügen oder Entfernen von Bildern mit der Windows Forms ImageList-Komponente](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). In der Regel füllen Sie <xref:System.Windows.Forms.ImageList> die Komponente mit Bildern auf, bevor Sie einem-Steuerelement zugeordnet wird, dies ist jedoch nicht erforderlich.
 
-> [!NOTE]
-> Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>Zum Hinzufügen oder Entfernen von Bildern mithilfe des Eigenschaften-Fensters
+### <a name="to-add-or-remove-images-by-using-the-properties-window"></a>So können Sie Images mithilfe der Eigenschaftenfenster hinzufügen oder entfernen
 
-1. Wählen Sie die <xref:System.Windows.Forms.ImageList> -Komponente, oder fügen Sie eine auf das Formular.
+1. Wählen Sie <xref:System.Windows.Forms.ImageList> die Komponente aus, oder fügen Sie eine dem Formular hinzu.
 
-2. Klicken Sie im Fenster Eigenschaften auf die Schaltfläche mit den Auslassungspunkten (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben dem <xref:System.Windows.Forms.ImageList.Images%2A> Eigenschaft.
+2. Klicken Sie im Eigenschaftenfenster auf die Schaltfläche mit den![Auslassungs Punkten (die Schaltfläche mit den Auslassungs Punkten (...](./media/visual-studio-ellipsis-button.png)) in der Eigenschaftenfenster <xref:System.Windows.Forms.ImageList.Images%2A> von Visual Studio.) neben der-Eigenschaft.
 
-3. In der **Image-Auflistungs-Editor**, klicken Sie auf **hinzufügen** oder **entfernen** zum Hinzufügen oder Entfernen von Bildern aus der Liste.
+3. Klicken Sie im Bildauflistungs- **Editor**auf **Hinzufügen** oder **Entfernen** , um Bilder in der Liste hinzuzufügen oder zu entfernen.
 
-### <a name="to-add-or-remove-images-using-the-smart-tag"></a>Hinzufügen oder Entfernen von Bildern mithilfe des Smarttags
+### <a name="to-add-or-remove-images-using-the-smart-tag"></a>So können Sie Images mithilfe des Smarttags hinzufügen oder entfernen
 
-1. Wählen Sie die <xref:System.Windows.Forms.ImageList> -Komponente, oder fügen Sie eine auf das Formular.
+1. Wählen Sie <xref:System.Windows.Forms.ImageList> die Komponente aus, oder fügen Sie eine dem Formular hinzu.
 
-2. Klicken Sie auf die Smarttag-Glyphe (![Smarttag-Glyphe](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))
+2. Klicken Sie auf das Smarttagsymbol (![Smarttag-Glyphe](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")).
 
-3. In der **ImageList-Aufgaben** wählen Sie im Dialogfeld **Bilder auswählen**.
+3. Wählen Sie im Dialogfeld **ImageList-Aufgaben** die Option **Bilder auswählen**aus.
 
-4. In der **Editor Kolekce Images** klicken Sie auf **hinzufügen** oder **entfernen** zum Hinzufügen oder Entfernen von Bildern aus der Liste.
+4. Klicken Sie im Bild Auflistungs- **Editor** auf **Hinzufügen** oder **Entfernen** , um Bilder in der Liste hinzuzufügen oder zu entfernen
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Bilder, Bitmaps und Metadateien](../advanced/images-bitmaps-and-metafiles.md)
-- [Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags Tags auf Windows Forms-Steuerelemente](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+- [Exemplarische Vorgehensweise: Ausführen allgemeiner Aufgaben mit Smarttags auf Windows Forms Steuerelementen](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [ImageList-Komponente](imagelist-component-windows-forms.md)

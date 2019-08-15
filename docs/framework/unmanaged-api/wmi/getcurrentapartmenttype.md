@@ -1,6 +1,6 @@
 ---
-title: GetCurrentApartmentType-Funktion (Referenz zur nicht verwalteten API)
-description: Die GetCurrentApartmentType-Funktion ruft ab, der Typ des Apartment, in dem der Aufrufer ausgeführt wird.
+title: Getcurrentapartmenttype-Funktion (Referenz zur nicht verwalteten API)
+description: Die getcurrentapartmenttype-Funktion Ruft den Typ des Apartment ab, in dem der Aufrufer ausgeführt wird.
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76c852ac81126895ea3a2e1b40473722c8445201
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746555"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037965"
 ---
-# <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType-Funktion
+# <a name="getcurrentapartmenttype-function"></a>Getcurrentapartmenttype-Funktion
 Ruft den Typ des Apartments ab, in dem die aufrufende Funktion ausgeführt wird.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,27 +41,27 @@ HRESULT GetCurrentApartmentType (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`  
-[in] Dieser Parameter wird nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`  
-[in] Ein Zeiger auf ein [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) Instanz.
+in Ein Zeiger auf eine [icomthreadinginfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) -Instanz.
 
 `aptType`  
-[out] Ein Zeiger auf ein [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) Enumerationswert, der Aufrufer Apartment angibt.
+vorgenommen Ein Zeiger auf einen [apttype](/windows/win32/api/objidlbase/ne-objidlbase-apttype) -Enumerationswert, der das Apartment des Aufrufers angibt.
 
 ## <a name="return-value"></a>Rückgabewert
 
 |Konstante  |Wert  |Description  |
 |---------|---------|---------|
 | `S_OK` | 0 | Die Funktion wurde erfolgreich abgeschlossen. |
-| `E_FAIL` | 0x80000008 | Der Aufrufer eine Wohnung nicht ausgeführt. |
+| `E_FAIL` | 0x80000008 | Der Aufrufer wird nicht in einem Apartment ausgeführt. |
   
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) Methode.
+Diese Funktion umschließt einen Aufrufen der [icomthreadinginfo:: getcurrentapartmenttype](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) -Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   

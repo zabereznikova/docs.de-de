@@ -15,26 +15,23 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: 410fc0134046c5fa7e05bfcd38ce6818244a0a54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01bed04483702ba2e62162b675aa1138bc1b0e01
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746842"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039522"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente mithilfe des Designers
-Ein *Zugriffsschlüssel* ist ein unterstrichenes Zeichen im Text eines Menüs, Menüelement oder die Bezeichnung eines Steuerelements wie einer Schaltfläche. Dadurch wird den Benutzer auf eine Schaltfläche "klicken", durch Drücken der ALT-Taste in Kombination mit dem vordefinierten Zugriffsschlüssel. Angenommen, eine Schaltfläche eine Prozedur zum Drucken eines Formulars ausgeführt wird und daher seine `Text` -Eigenschaftensatz "Print", ein kaufmännisches und-Zeichen (&) vor dem Buchstaben "P" bewirkt, die Buchstaben "P dass" unterstrichen werden in den Text der Schaltfläche zur Laufzeit. Der Benutzer kann den Befehl mit der Schaltfläche durch Drücken von ALT + P verknüpften ausführen. Sie keine Zugriffstaste für ein Steuerelement, die keinen Fokus erhalten kann.  
-  
-> [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-create-an-access-key-for-a-control"></a>Um einen Zugriffsschlüssel für ein Steuerelement zu erstellen.  
-  
-1. In der **Eigenschaften** legen die `Text` Eigenschaft eine Zeichenfolge, die ein kaufmännisches und-Zeichen (&) vor dem Buchstaben, die den Zugriffsschlüssel. Geben Sie den Buchstaben "P" als Zugriffstaste festlegen, z. B. **& Drucken** in das Raster.  
-  
+Eine *Zugriffstaste* ist ein unterstrichenes Zeichen im Text eines Menüs, Menü Elements oder der Bezeichnung eines Steuer Elements, z. b. einer Schaltfläche. Dadurch kann der Benutzer auf eine Schaltfläche klicken, indem er die Alt-Taste in Kombination mit der vordefinierten Zugriffstaste drückt. Wenn z. b. eine Schaltfläche eine Prozedur zum Drucken eines Formulars ausführt und die `Text` -Eigenschaft daher auf "Print" festgelegt ist, wird durch das Hinzufügen eines kaufmännischen und-Zeichens (&) vor dem Buchstaben "p" der Buchstabe "p" im Schaltflächen Text zur Laufzeit unterstrichen. Der Benutzer kann den Befehl ausführen, der der Schaltfläche zugeordnet ist, indem er alt + P drückt. Sie können keinen Zugriffsschlüssel für ein Steuerelement haben, das keinen Fokus erhalten kann.
+
+## <a name="to-create-an-access-key-for-a-control"></a>So erstellen Sie einen Zugriffsschlüssel für ein Steuerelement
+
+1. Legen Sie im Fenster **Eigenschaften** die `Text` -Eigenschaft auf eine Zeichenfolge fest, die ein kaufmännisches und-Zeichen (&) vor dem Buchstaben enthält, der als Zugriffstaste verwendet wird. Wenn Sie z. b. den Buchstaben "P" als Zugriffsschlüssel festlegen möchten, geben Sie **& Drucken** im Raster ein.
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.Button>
-- [Vorgehensweise: Reagieren Sie auf eine Windows Forms-Schaltfläche geklickt](how-to-respond-to-windows-forms-button-clicks.md)
-- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Vorgehensweise: Antworten auf Windows Forms Schaltflächen Klicks](how-to-respond-to-windows-forms-button-clicks.md)
+- [Vorgehensweise: Festlegen des von einem Windows Forms-Steuerelement angezeigten Texts](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

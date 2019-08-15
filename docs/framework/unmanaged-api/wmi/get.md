@@ -1,6 +1,6 @@
 ---
 title: Get-Funktion (Referenz zur nicht verwalteten API)
-description: Die Get-Funktion ruft den angegebenen Eigenschaftswert ab.
+description: Die Get-Funktion Ruft den angegebenen Eigenschafts Wert ab.
 ms.date: 11/06/2017
 api_name:
 - Get
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 265d3edbd3175eebcf6fd35be24f5b66144c960f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746659"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037954"
 ---
 # <a name="get-function"></a>Get-Funktion
 
-Ruft den angegebenen Eigenschaftswert ab, falls vorhanden.
+Ruft den angegebenen Eigenschafts Wert ab, falls vorhanden.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -46,55 +46,55 @@ HRESULT Get (
 ## <a name="parameters"></a>Parameter
 
 `vFunc`\
-[in] Dieser Parameter wird nicht verwendet.
+in Dieser Parameter wird nicht verwendet.
 
 `ptr`\
-[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
+in Ein Zeiger auf eine [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) -Instanz.
 
 `wszName`\
-[in] Der Name der Eigenschaft.
+in Der Name der Eigenschaft.
 
 `lFlags`\
 [in] Reserviert. Dieser Parameter muss 0 sein.
 
 `pVal`\
-[out] Wenn die Funktion erfolgreich zurückgegeben wird, enthält Sie den Wert des der `wszName` Eigenschaft. Die `pval` Argument erhält, den richtigen Typ und Wert für den Qualifizierer.
+vorgenommen Wenn die Funktion erfolgreich zurückgegeben wird, enthält Sie den `wszName` Wert der-Eigenschaft. Dem `pval` -Argument werden der richtige Typ und der richtige Wert für den Qualifizierer zugewiesen.
 
 `pvtType`\
-[out] Wenn die Funktion erfolgreich zurückgegeben wird, enthält eine [CIM-Typ Konstante](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) , der den Eigenschaftentyp angibt. Der Wert kann auch sein `null`. 
+vorgenommen Wenn die Funktion erfolgreich zurückgegeben wird, enthält eine [CIM-Type-Konstante](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) , die den Eigenschaftentyp angibt. Der Wert kann auch sein `null`. 
 
 `plFlavor`\
-[out] Wenn die Funktion erfolgreich zurückgegeben wird, erhält Informationen über den Ursprung der Eigenschaft. Die Werte sind möglich `null`, oder eine der folgenden WBEM_FLAVOR_TYPE Konstanten definiert in der *WbemCli.h* Headerdatei: 
+vorgenommen Wenn die Funktion erfolgreich zurückgegeben wird, empfängt Informationen über den Ursprung der Eigenschaft. Der Wert kann oder `null`eine der folgenden WBEM_FLAVOR_TYPE-Konstanten sein, die in der Header Datei " *wbemcli. h* " definiert sind: 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Die Eigenschaft ist eine standard-Systemeigenschaft. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Für eine Klasse: Die Eigenschaft wird von der übergeordneten Klasse geerbt. <br> Für eine Instanz: Die Eigenschaft wurde während der von der übergeordneten Klasse geerbt nicht von der Instanz geändert.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Für eine Klasse: Die Eigenschaft gehört der abgeleiteten Klasse. <br> Für eine Instanz: Die Eigenschaft wird von der Instanz geändert werden. d. h. ein Wert angegeben wurde, oder ein Qualifizierer hinzugefügt oder geändert wurde. |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Die-Eigenschaft ist eine Standardsystem Eigenschaft. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Für eine Klasse: Die Eigenschaft wird von der übergeordneten Klasse geerbt. <br> Für eine-Instanz: Die-Eigenschaft, die von der übergeordneten Klasse geerbt wurde, wurde von der-Instanz nicht geändert.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Für eine Klasse: Die-Eigenschaft gehört zur abgeleiteten Klasse. <br> Für eine-Instanz: Die-Eigenschaft wird von der-Instanz geändert. Das heißt, es wurde ein Wert angegeben, oder es wurde ein Qualifizierer hinzugefügt oder geändert. |
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
+Die folgenden Werte, die von dieser Funktion zurückgegeben werden, sind in der *wbemcli. h* -Header Datei definiert, oder Sie können Sie als Konstanten im Code definieren:
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Es wurde ein allgemeiner Fehler. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein oder mehrere Parameter sind ungültig. |
+|`WBEM_E_FAILED` | 0x80041001 | Es ist ein allgemeiner Fehler aufgetreten. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Mindestens ein Parameter ist ungültig. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Eigenschaft wurde nicht gefunden. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
-|`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
+|`WBEM_S_NO_ERROR` | 0 | Der Funktions Aufrufvorgang war erfolgreich.  |
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion umschließt einen Aufruf der [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) Methode.
+Diese Funktion umschließt einen aufrufsbefehl an die [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) -Methode.
 
-Die `Get` Funktion kann auch Systemeigenschaften zurückzugeben.
+Die `Get` -Funktion kann auch Systemeigenschaften zurückgeben.
 
-Die `pVal` Argument erhält, den richtigen Typ und Wert für den Qualifizierer und die COM- [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) Funktion
+Dem `pVal` -Argument werden der richtige Typ und Wert für den Qualifizierer und die com- [variantit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) -Funktion zugewiesen.
 
 ## <a name="requirements"></a>Anforderungen
 
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
 
  **Header:** WMINet_Utils.idl
 

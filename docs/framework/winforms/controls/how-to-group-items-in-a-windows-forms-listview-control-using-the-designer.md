@@ -6,45 +6,43 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 9249eef281237f61d103a7c865042aafe537dea5
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: b63bcd9e5e357db350cc2987e09af84eb58bdcff
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960217"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039400"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Vorgehensweise: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms mithilfe des Designers
 
-Die Grouping-Funktion von der <xref:System.Windows.Forms.ListView> -Steuerelement ermöglicht Ihnen, verwandte Elemente in Gruppen anzuzeigen. Diese Gruppen werden auf dem Bildschirm durch horizontale Gruppenheader getrennt, die die Gruppentitel enthalten. Sie können <xref:System.Windows.Forms.ListView> Gruppen zum Navigieren in umfangreichen Listen einfacher durch Gruppieren von Elementen alphabetisch nach Datum oder eine beliebige andere logische Gruppierung. Die folgende Abbildung zeigt einige gruppierte Elemente:
+Mit der Gruppierungs Funktion <xref:System.Windows.Forms.ListView> des-Steuer Elements können Sie Verwandte Gruppen von Elementen in Gruppen anzeigen. Diese Gruppen werden auf dem Bildschirm durch horizontale Gruppen Kopfzeilen getrennt, die die Gruppentitel enthalten. Mithilfe von <xref:System.Windows.Forms.ListView> Gruppen können Sie die Navigation durch große Listen vereinfachen, indem Sie Elemente alphabetisch, nach Datum oder nach einer anderen logischen Gruppierung gruppieren. Die folgende Abbildung zeigt einige gruppierte Elemente:
 
-![Zahlen, die in geraden und ungeraden Gruppen unterteilt werden.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)
+![Zahlen, die in ungerade und gerade Gruppen aufgeteilt sind.](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)
 
-Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt ein Formular mit eine <xref:System.Windows.Forms.ListView> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows Forms-Anwendungsprojekts](/visualstudio/ide/step-1-create-a-windows-forms-application-project) und [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md).
+Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Formular, <xref:System.Windows.Forms.ListView> das ein-Steuerelement enthält. Weitere Informationen zum Einrichten eines solchen Projekts finden [Sie unter Gewusst wie: Erstellen Sie ein Windows Forms-](/visualstudio/ide/step-1-create-a-windows-forms-application-project) Anwendungs [Projekt, und Gewusst wie: Fügen Sie Windows Forms](how-to-add-controls-to-windows-forms.md)Steuerelemente hinzu.
 
-Aktivieren der Gruppierung, müssen Sie zunächst eine oder mehrere erstellen <xref:System.Windows.Forms.ListViewGroup> Objekte, die entweder im Designer oder programmgesteuert. Sobald eine Gruppe definiert wurde, können Sie Elemente darin zuweisen.
+Um die Gruppierung zu aktivieren, müssen Sie zunächst ein oder <xref:System.Windows.Forms.ListViewGroup> mehrere Objekte entweder im Designer oder Programm gesteuert erstellen. Nachdem eine Gruppe definiert wurde, können Sie Ihr Elemente zuweisen.
 
 > [!NOTE]
-> <xref:System.Windows.Forms.ListView> Gruppen stehen nur auf [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] bei einem Aufruf der <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode. Unter früheren Betriebssystemen Code im Zusammenhang mit Gruppen hat keine Auswirkungen, und die Gruppen werden nicht angezeigt. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.
->
-> Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> <xref:System.Windows.Forms.ListView>Gruppen sind nur in [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] verfügbar, wenn die Anwendung die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> -Methode aufruft. Unter früheren Betriebssystemen hat Code in Bezug auf Gruppen keine Auswirkung, und die Gruppen werden nicht angezeigt. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>.
 
-### <a name="to-add-or-remove-groups-in-the-designer"></a>Zum Hinzufügen oder Entfernen von Gruppen im designer
+## <a name="to-add-or-remove-groups-in-the-designer"></a>So können Sie Gruppen im Designer hinzufügen oder entfernen
 
-1. In der **Eigenschaften** Fenster, klicken Sie auf die **mit den Auslassungspunkten** (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben der <xref:System.Windows.Forms.ListView.Groups%2A> Eigenschaft .
+1. Klicken Sie im **Eigenschaften** Fenster auf die Auslassungs Punkte![(die Schaltfläche mit den Auslassungs Punkten (...) in der](./media/visual-studio-ellipsis-button.png)Eigenschaftenfenster von Visual Studio. <xref:System.Windows.Forms.ListView.Groups%2A> ) neben der-Eigenschaft.
 
-     Die **ListViewGroup Auflistungs-Editor** angezeigt wird.
+     Der **ListViewGroup-Sammlungs-Editor** wird angezeigt.
 
-2. Um eine Gruppe hinzuzufügen, klicken Sie auf die **hinzufügen** Schaltfläche. Sie können dann Eigenschaften der neuen Gruppe festlegen, wie z. B. die <xref:System.Windows.Forms.ListViewGroup.Header%2A> und <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> Eigenschaften. Um eine Gruppe zu entfernen, wählen Sie ihn, und klicken Sie auf die **entfernen** Schaltfläche.
+2. Um eine Gruppe hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** . Sie können dann Eigenschaften der neuen Gruppe festlegen, z. b. <xref:System.Windows.Forms.ListViewGroup.Header%2A> die <xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A> -Eigenschaft und die-Eigenschaft. Um eine Gruppe zu entfernen, wählen Sie Sie aus und klicken auf die Schaltfläche **Entfernen** .
 
-### <a name="to-assign-items-to-groups-in-the-designer"></a>Zuweisen von Elementen zu Gruppen im designer
+## <a name="to-assign-items-to-groups-in-the-designer"></a>So weisen Sie Gruppen im Designer Elemente zu
 
-1. In der **Eigenschaften** Fenster, klicken Sie auf die **mit den Auslassungspunkten** (![die Auslassungszeichen (...) im Eigenschaftenfenster von Visual Studio](./media/visual-studio-ellipsis-button.png)) neben der <xref:System.Windows.Forms.ListView.Items%2A> Eigenschaft .
+1. Klicken Sie im **Eigenschaften** Fenster auf die Auslassungs Punkte![(die Schaltfläche mit den Auslassungs Punkten (...) in der](./media/visual-studio-ellipsis-button.png)Eigenschaftenfenster von Visual Studio. <xref:System.Windows.Forms.ListView.Items%2A> ) neben der-Eigenschaft.
 
-     Die **ListViewItem Auflistungs-Editor** angezeigt wird.
+     Der **ListViewItem** -Auflistungs-Editor wird angezeigt.
 
-2. Um ein neues Element hinzuzufügen, klicken Sie auf die **hinzufügen** Schaltfläche. Sie können dann Eigenschaften des neuen Elements, z. B. Festlegen der <xref:System.Windows.Forms.ListViewItem.Text%2A> und <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> Eigenschaften.
+2. Um ein neues Element hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** . Sie können dann die Eigenschaften des neuen Elements festlegen, z. b <xref:System.Windows.Forms.ListViewItem.Text%2A> . <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> die-Eigenschaft und die-Eigenschaft.
 
-3. Wählen Sie die <xref:System.Windows.Forms.ListViewItem.Group%2A> Eigenschaft, und wählen Sie eine Gruppe aus der Dropdown-Liste.
+3. Wählen Sie <xref:System.Windows.Forms.ListViewItem.Group%2A> die Eigenschaft aus, und wählen Sie eine Gruppe aus der Dropdown Liste aus.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -53,4 +51,4 @@ Aktivieren der Gruppierung, müssen Sie zunächst eine oder mehrere erstellen <x
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView-Steuerelement](listview-control-windows-forms.md)
 - [Übersicht über das ListView-Steuerelement](listview-control-overview-windows-forms.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem Windows Forms ListView-Steuerelement](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

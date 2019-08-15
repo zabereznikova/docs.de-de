@@ -6,31 +6,28 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b7ea0fc953be5360e38bef9439347529986908f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011241"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039767"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte mithilfe des Designers
-Die Verwendung des Windows Forms <xref:System.Windows.Forms.TabControl> besteht darin, andere Steuerelemente in einer strukturierten Weise anzuzeigen. Sie können diese Anweisungen verwenden, um ein Bild auf den Hauptteil einer Registerkarte angezeigt werden sollen. Informationen zum Hinzufügen eines Symbols auf die Bezeichnung eine Registerkarte, finden Sie unter [Vorgehensweise: Ändern der Darstellung der TabControl-Steuerelement in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
-  
- Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt ein Formular mit eine <xref:System.Windows.Forms.TabControl> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows Forms-Anwendungsprojekts](/visualstudio/ide/step-1-create-a-windows-forms-application-project) und [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md).  
-  
-> [!NOTE]
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-add-a-control-using-the-designer"></a>Hinzufügen des Steuerelements mithilfe des Designers  
-  
-1. Klicken Sie auf die entsprechende Registerkarte, sodass es im Vordergrund angezeigt wird.  
-  
-2. Ziehen Sie das Steuerelement auf der Registerkarte.  
-  
+Die Verwendung des Windows Forms <xref:System.Windows.Forms.TabControl> besteht darin, andere Steuerelemente organisiert anzuzeigen. Mit diesen Anweisungen können Sie ein Bild auf dem Hauptteil einer Registerkarte anzeigen. Weitere Informationen zum Hinzufügen eines Symbols zum Bezeichnungs Teil einer Registerkarte finden [Sie unter Gewusst wie: Ändern Sie die Darstellung der Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).
+
+ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Formular, <xref:System.Windows.Forms.TabControl> das ein-Steuerelement enthält. Weitere Informationen zum Einrichten eines solchen Projekts finden [Sie unter Gewusst wie: Erstellen Sie ein Windows Forms-](/visualstudio/ide/step-1-create-a-windows-forms-application-project) Anwendungs [Projekt, und Gewusst wie: Fügen Sie Windows Forms](how-to-add-controls-to-windows-forms.md)Steuerelemente hinzu.
+
+## <a name="to-add-a-control-using-the-designer"></a>So fügen Sie ein Steuerelement mithilfe des Designers hinzu
+
+1. Klicken Sie auf die entsprechende Registerkarte, sodass Sie im oberen Bereich angezeigt wird.
+
+2. Zeichnen Sie das Steuerelement auf der Registerkarte.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [TabControl-Steuerelement](tabcontrol-control-windows-forms.md)
 - [Übersicht über das TabControl-Steuerelement](tabcontrol-control-overview-windows-forms.md)
-- [Vorgehensweise: Ändern der Darstellung der TabControl-Steuerelement in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [Vorgehensweise: Deaktivieren von Registerkarten](how-to-disable-tab-pages.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Vorgehensweise: Ändern des Erscheinungs Bilds der Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Vorgehensweise: Deaktivieren von Registerkarten Seiten](how-to-disable-tab-pages.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten mit dem TabControl-Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

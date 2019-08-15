@@ -8,112 +8,112 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: a1eebc3d384d2efef050672a9c589b14559977f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648757"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039985"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Main-Prozedur in Visual Basic
-Alle Visual Basic-Anwendung muss eine Prozedur namens enthalten `Main`. Dieses Verfahren dient, wie die Start- und gesamtsteuerung für Ihre Anwendung. Die .NET Framework-Aufrufe Ihrer `Main` Verfahren, wenn die Anwendung geladen wurde und bereit für die Steuerung an sie übergeben wird. Wenn Sie eine Windows Forms-Anwendung erstellen, müssen Sie schreiben die `Main` Verfahren für Anwendungen, die auf ihre eigenen ausgeführt.  
-  
- `Main` enthält den Code, der zuerst ausgeführt wird. In `Main`, Sie können bestimmen, welche Form wird zuerst geladen werden, wenn das Programm gestartet wird, finden Sie heraus, wenn eine Kopie der Anwendung bereits auf dem System ausgeführt wird, richten Sie einen Satz von Variablen für Ihre Anwendung oder öffnen Sie eine Datenbank, die die Anwendung erfordert.  
-  
-## <a name="requirements-for-the-main-procedure"></a>Anforderungen für die Main-Prozedur  
- Eine Datei, die eigenständig (in der Regel mit der Erweiterung .exe) ausgeführt wird, darf enthalten eine `Main` Verfahren. Eine Bibliothek (z. B. mit der Erweiterung .dll) wird nicht eigenständig ausgeführt und erfordert keine `Main` Verfahren. Die Anforderungen für die verschiedenen Typen von Projekten, die Sie erstellen können, lauten folgendermaßen:  
-  
-- Konsolenanwendungen führen Sie auf ihre eigenen, und geben Sie an mindestens eine `Main` Verfahren. sein.  
-  
-- Windows Forms-Anwendungen führen Sie auf ihre eigenen. Allerdings Visual Basic-Compiler automatisch generiert eine `Main` Verfahren wie eine Anwendung, und Sie müssen nicht einen schreiben.  
-  
-- Klassenbibliotheken ist nicht erforderlich. eine `Main` Verfahren. Dazu gehören Windows-Steuerelementbibliotheken und Websteuerelementbibliotheken. Webanwendungen werden als Klassenbibliotheken bereitgestellt.  
-  
-## <a name="declaring-the-main-procedure"></a>Deklarieren Sie die Main-Prozedur  
- Es gibt vier Möglichkeiten zum Deklarieren der `Main` Verfahren. Sie können Argumente oder nicht, und sie können einen Wert zurückgeben, oder nicht.  
-  
+Jede Visual Basic Anwendung muss eine Prozedur mit dem `Main`Namen enthalten. Diese Prozedur dient als Ausgangspunkt und allgemeine Kontrolle für Ihre Anwendung. Der .NET Framework ruft `Main` die Prozedur auf, wenn Sie Ihre Anwendung geladen hat, und ist bereit, die Steuerung an Sie zu übergeben. Wenn Sie keine Windows Forms Anwendung erstellen, müssen Sie das `Main` Verfahren für Anwendungen schreiben, die eigenständig ausgeführt werden.
+
+ `Main`enthält den Code, der zuerst ausgeführt wird. In `Main`können Sie bestimmen, welches Formular zuerst geladen werden soll, wenn das Programm gestartet wird. Sie können herausfinden, ob bereits eine Kopie der Anwendung auf dem System ausgeführt wird, eine Gruppe von Variablen für die Anwendung einrichten oder eine Datenbank öffnen, die für die Anwendung erforderlich ist.
+
+## <a name="requirements-for-the-main-procedure"></a>Anforderungen für die Main-Prozedur
+ Eine Datei, die eigenständig (normalerweise mit der Erweiterung. exe) ausgeführt wird `Main` , muss eine Prozedur enthalten. Eine Bibliothek (z. b. mit der Erweiterung. dll) wird nicht eigenständig ausgeführt und erfordert `Main` keine Prozedur. Folgende Anforderungen gelten für die verschiedenen Projekttypen, die Sie erstellen können:
+
+- Konsolen Anwendungen werden nacheinander ausgeführt, und Sie müssen mindestens ein `Main` Verfahren angeben.
+
+- Windows Forms Anwendungen selbst ausgeführt werden. Der Visual Basic Compiler generiert jedoch automatisch eine `Main` Prozedur in einer solchen Anwendung, die Sie nicht schreiben müssen.
+
+- Klassenbibliotheken erfordern `Main` keine-Prozedur. Hierzu gehören Windows-Steuerelement Bibliotheken und websteuer Element Bibliotheken. Webanwendungen werden als Klassenbibliotheken bereitgestellt.
+
+## <a name="declaring-the-main-procedure"></a>Deklarieren der Main-Prozedur
+ Es gibt vier Möglichkeiten, die `Main` Prozedur zu deklarieren. Sie kann Argumente annehmen oder nicht, und Sie kann einen Wert zurückgeben.
+
 > [!NOTE]
->  Wenn Sie deklarieren `Main` in einer Klasse müssen Sie verwenden die `Shared` Schlüsselwort. In einem Modul `Main` muss nicht werden `Shared`.  
-  
-- Die einfachste Möglichkeit ist das Deklarieren einer `Sub` Prozedur, die keine Argumente annehmen und einen Wert zurückgeben.  
-  
-    ```  
-    Module mainModule  
-        Sub Main()  
-            MsgBox("The Main procedure is starting the application.")  
-            ' Insert call to appropriate starting place in your code.  
-            MsgBox("The application is terminating.")  
-        End Sub  
-    End Module  
-    ```  
-  
-- `Main` kann auch Zurückgeben einer `Integer` -Wert, der das Betriebssystem als Exitcode für Ihr Programm verwendet. Andere Programme können diesen Code testen, mithilfe den Windows-ERRORLEVEL-Wert. Um einen Exitcode zurückzugeben, müssen Sie deklarieren `Main` als eine `Function` Prozedur anstelle von einem `Sub` Verfahren.  
-  
-    ```  
-    Module mainModule  
-        Function Main() As Integer  
-            MsgBox("The Main procedure is starting the application.")  
-            Dim returnValue As Integer = 0  
-            ' Insert call to appropriate starting place in your code.  
-            ' On return, assign appropriate value to returnValue.  
-            ' 0 usually means successful completion.  
-            MsgBox("The application is terminating with error level " &  
-                 CStr(returnValue) & ".")  
-            Return returnValue  
-        End Function  
-    End Module  
-    ```  
-  
-- `Main` Bringen Sie auch eine `String` Array als Argument. Jede Zeichenfolge in das Array enthält einen der Befehlszeilenargumente verwendet, um das Programm aufzurufen. Sie können unterschiedliche Aktionen abhängig von ihren Werten nutzen.  
-  
-    ```  
-    Module mainModule  
-        Function Main(ByVal cmdArgs() As String) As Integer  
-            MsgBox("The Main procedure is starting the application.")  
-            Dim returnValue As Integer = 0  
-            ' See if there are any arguments.  
-            If cmdArgs.Length > 0 Then  
-                For argNum As Integer = 0 To UBound(cmdArgs, 1)  
-                    ' Insert code to examine cmdArgs(argNum) and take  
-                    ' appropriate action based on its value.  
-                Next argNum  
-            End If  
-            ' Insert call to appropriate starting place in your code.  
-            ' On return, assign appropriate value to returnValue.  
-            ' 0 usually means successful completion.  
-            MsgBox("The application is terminating with error level " &  
-                 CStr(returnValue) & ".")  
-            Return returnValue  
-        End Function  
-    End Module  
-    ```  
-  
-- Sie können deklarieren, `Main` , überprüfen die Befehlszeilenargumente, ohne einen Exitcode wie folgt zurückzugeben.  
-  
-    ```  
-    Module mainModule  
-        Sub Main(ByVal cmdArgs() As String)  
-            MsgBox("The Main procedure is starting the application.")  
-            Dim returnValue As Integer = 0  
-            ' See if there are any arguments.  
-            If cmdArgs.Length > 0 Then  
-                For argNum As Integer = 0 To UBound(cmdArgs, 1)  
-                    ' Insert code to examine cmdArgs(argNum) and take  
-                    ' appropriate action based on its value.  
-                Next argNum  
-            End If  
-            ' Insert call to appropriate starting place in your code.  
-            MsgBox("The application is terminating.")  
-        End Sub  
-    End Module  
-    ```  
+>  Wenn Sie in `Main` einer Klasse deklarieren, müssen Sie das `Shared` -Schlüsselwort verwenden. In einem Modul `Main` muss nicht sein `Shared`.
+
+- Die einfachste Möglichkeit besteht darin, eine `Sub` Prozedur zu deklarieren, die keine Argumente annimmt oder einen Wert zurückgibt.
+
+    ```vb
+    Module mainModule
+        Sub Main()
+            MsgBox("The Main procedure is starting the application.")
+            ' Insert call to appropriate starting place in your code.
+            MsgBox("The application is terminating.")
+        End Sub
+    End Module
+    ```
+
+- `Main`kann auch einen `Integer` -Wert zurückgeben, den das Betriebssystem als Exitcode für das Programm verwendet. Andere Programme können diesen Code testen, indem Sie den Windows ERRORLEVEL-Wert untersuchen. Um einen `Function` Exitcode zurückzugeben, müssen `Main` Sie anstelle einer `Sub` Prozedur als Prozedur deklarieren.
+
+    ```vb
+    Module mainModule
+        Function Main() As Integer
+            MsgBox("The Main procedure is starting the application.")
+            Dim returnValue As Integer = 0
+            ' Insert call to appropriate starting place in your code.
+            ' On return, assign appropriate value to returnValue.
+            ' 0 usually means successful completion.
+            MsgBox("The application is terminating with error level " &
+                 CStr(returnValue) & ".")
+            Return returnValue
+        End Function
+    End Module
+    ```
+
+- `Main`kann auch ein `String` Array als Argument annehmen. Jede Zeichenfolge im Array enthält eines der Befehlszeilenargumente, die zum Aufrufen des Programms verwendet werden. Sie können je nach ihren Werten unterschiedliche Aktionen ausführen.
+
+    ```vb
+    Module mainModule
+        Function Main(ByVal cmdArgs() As String) As Integer
+            MsgBox("The Main procedure is starting the application.")
+            Dim returnValue As Integer = 0
+            ' See if there are any arguments.
+            If cmdArgs.Length > 0 Then
+                For argNum As Integer = 0 To UBound(cmdArgs, 1)
+                    ' Insert code to examine cmdArgs(argNum) and take
+                    ' appropriate action based on its value.
+                Next
+            End If
+            ' Insert call to appropriate starting place in your code.
+            ' On return, assign appropriate value to returnValue.
+            ' 0 usually means successful completion.
+            MsgBox("The application is terminating with error level " &
+                 CStr(returnValue) & ".")
+            Return returnValue
+        End Function
+    End Module
+    ```
+
+- Sie können deklarieren `Main` , um die Befehlszeilenargumente zu untersuchen, aber nicht wie folgt einen Exitcode zurückgeben.
+
+    ```vb
+    Module mainModule
+        Sub Main(ByVal cmdArgs() As String)
+            MsgBox("The Main procedure is starting the application.")
+            Dim returnValue As Integer = 0
+            ' See if there are any arguments.
+            If cmdArgs.Length > 0 Then
+                For argNum As Integer = 0 To UBound(cmdArgs, 1)
+                    ' Insert code to examine cmdArgs(argNum) and take
+                    ' appropriate action based on its value.
+                Next
+            End If
+            ' Insert call to appropriate starting place in your code.
+            MsgBox("The application is terminating.")
+        End Sub
+    End Module
+    ```
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [Struktur der Visual Basic-Programmen](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
+- [Struktur eines Visual Basic Programms](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
 - [/main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916d62a2b79a44d92611e735c6f9bbb3e01970e2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7da0986269189ba5c2dfa0f10d509bf51deb446d
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782740"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040209"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo-Funktion
-Gibt Informationen über die angegebene Typbibliothek durch Untersuchen der [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr) Struktur.  
+Gibt Informationen über die angegebene Typbibliothek zurück, indem die [TLIBATTR](https://docs.microsoft.com/windows/win32/api/oaidl/ns-oaidl-tlibattr) -Struktur überprüft wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,34 +41,34 @@ HRESULT GetTypeLibInfo(
   
 ## <a name="parameters"></a>Parameter  
  `szFile`  
- [in] Der Dateiname der Typbibliothek.  
+ in Der Dateiname der Typbibliothek.  
   
  `pTypeLibID`  
- [out] Die GUID der Typbibliothek.  
+ vorgenommen Die GUID der Typbibliothek.  
   
  `pTypeLibLCID`  
- [out] Die Lokalisierungs-ID der Typbibliothek.  
+ vorgenommen Die Lokalisierungs-ID der Typbibliothek.  
   
  `pTypeLibPlatform`  
- [out] Ein [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) Flag, das das Zielbetriebssystem für die Typbibliothek identifiziert. Häufig verwendete Werte sind SYS_WIN32 und SYS_WIN64.  
+ vorgenommen Ein [SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind) -Flag, das das Ziel Betriebssystem für die Typbibliothek identifiziert. Allgemeine Werte sind SYS_WIN32 und SYS_WIN64.  
   
  `pTypeLibMajorVer`  
- [out] Die Hauptversionsnummer der Typbibliothek. Z. B. für Version *x.y*, ist die Hauptversionsnummer *x*.  
+ vorgenommen Die Hauptversionsnummer der Typbibliothek. Bei Version *x. y*lautet die Hauptversionsnummer z. b. *x*.  
   
  `pTypeLibMinorVer`  
- [out] Die Nebenversionsnummer der Typbibliothek. Z. B. für Version *x.y*, ist die Nummer der Nebenversion *y*.  
+ vorgenommen Die neben Versionsnummer der Typbibliothek. Beispielsweise ist für Version *x. y*die neben Versionsnummer *y*.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetTypeLibInfo` Funktion wird aufgerufen, indem die [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md). Dieses Tool generiert eine Typbibliothek, die die Typen in einer Assembly der common Language Runtime (CLR) beschreibt.  
+ Die `GetTypeLibInfo` -Funktion wird von [Tlbexp. exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)aufgerufen. Dieses Tool generiert eine Typbibliothek, die die Typen in einer Common Language Runtime-Assembly (CLR) beschreibt.  
   
- Wenn alle Parameter null ist, gibt die Funktion eine `HRESULT` von `E_POINTER`. Andernfalls wird `S_OK`zurückgegeben.  
+ Wenn ein beliebiger Parameter NULL ist, gibt die `HRESULT` Funktion `E_POINTER`einen von zurück. Andernfalls wird `S_OK`zurückgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** TlbRef.h  
   
- **Bibliothek:** TlbRef.lib  
+ **Fern** TlbRef.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

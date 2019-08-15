@@ -6,35 +6,33 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: f8c8a1b2e3d2adfa7daadd609051ffc304150efe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a45a8a484bd373f53585b1b113a51e59b30fca2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972123"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040361"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Vorgehensweise: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement in Windows Forms mithilfe des Designers
-Die Funktion der Tile-Ansicht der <xref:System.Windows.Forms.ListView> -Steuerelement können Sie eine visuelle Balance zwischen grafischen und textbasierten Daten bereitstellen. Die textbasierten Daten, die für ein Element in der Ansicht "Nebeneinander" angezeigt werden, sind die gleichen wie die Spalteninformationen, die für die Detailansicht definiert wurden. Markieren Sie Funktionen in Funktionen der Tile-Ansicht in Kombination mit der Gruppierung oder Einfügen der <xref:System.Windows.Forms.ListView> Steuerelement.  
-  
- Die Ansicht "Nebeneinander" verwendet ein 32 x 32-Symbol und mehreren Textzeilen, wie in der folgenden Abbildung gezeigt.  
-  
- ![Ansicht in einem ListView-Steuerelement "Nebeneinander"](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "Kachel Ansichtssymbole und Text")  
-  
- Kachel anzeigen, dass die Eigenschaften und Methoden können Sie angeben, welche Spaltenfelder für jedes Element angezeigt werden soll, und die Größe und die Darstellung aller Elemente in einem Zeitfenster von Tile-Ansicht zusammen zu steuern. Aus Gründen der Übersichtlichkeit ist die erste Textzeile in einer Kachel immer der Name des Elements. Er kann nicht geändert werden.  
-  
- Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt ein Formular mit eine <xref:System.Windows.Forms.ListView> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows Forms-Anwendungsprojekts](/visualstudio/ide/step-1-create-a-windows-forms-application-project) und [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md).  
-  
+Mit der Kachel Ansicht des <xref:System.Windows.Forms.ListView> -Steuer Elements können Sie eine visuelle Balance zwischen grafischen und Textinformationen bereitstellen. Die textbasierten Daten, die für ein Element in der Ansicht "Nebeneinander" angezeigt werden, sind die gleichen wie die Spalteninformationen, die für die Detailansicht definiert wurden. Die Kachel Ansicht funktioniert in Kombination mit den Funktionen "Gruppieren" oder " <xref:System.Windows.Forms.ListView> Einfügemarke" im Steuerelement.
+
+ In der Kachel Ansicht werden ein 32 x 32-Symbol und mehrere Textzeilen verwendet, wie in der folgenden Abbildung dargestellt.
+
+ ![Kachel Ansicht in einem ListView-Steuer] Element (./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "Symbole und Text der Kachel Ansicht")
+
+ Mit den Eigenschaften und Methoden der Kachel Ansicht können Sie angeben, welche Spalten Felder für die einzelnen Elemente angezeigt werden sollen. Darüber hinaus können Sie die Größe und Darstellung aller Elemente innerhalb eines Kachel Ansichts Fensters gemeinsam steuern. Aus Gründen der Übersichtlichkeit ist die erste Textzeile in einer Kachel immer der Name des Elements. Sie kann nicht geändert werden.
+
+ Das folgende Verfahren erfordert ein **Windows-Anwendungs** Projekt mit einem Formular, <xref:System.Windows.Forms.ListView> das ein-Steuerelement enthält. Weitere Informationen zum Einrichten eines solchen Projekts finden [Sie unter Gewusst wie: Erstellen Sie ein Windows Forms-](/visualstudio/ide/step-1-create-a-windows-forms-application-project) Anwendungs [Projekt, und Gewusst wie: Fügen Sie Windows Forms](how-to-add-controls-to-windows-forms.md)Steuerelemente hinzu.
+
 > [!NOTE]
->  Die Ansicht "Nebeneinander" steht unter [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] nur zur Verfügung, wenn die Anwendung die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>-Methode aufruft. Unter älteren Betriebssystemen hat Code in Bezug auf die Ansicht "Nebeneinander" keine Auswirkungen, und das <xref:System.Windows.Forms.ListView>-Steuerelement wird in der Ansicht "Große Symbole" angezeigt. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
->   
->  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-set-tile-view-in-the-designer"></a>Ansicht "Nebeneinander" im Designer festgelegt.  
-  
-1. Wählen Sie die <xref:System.Windows.Forms.ListView> Steuerelement auf Ihrem Formular.  
-  
-2. In der **Eigenschaften** wählen Sie im Fenster der <xref:System.Windows.Forms.ListView.View%2A> Eigenschaft, und wählen Sie **Kachel**.  
-  
+> Die Ansicht "Nebeneinander" steht unter [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] nur zur Verfügung, wenn die Anwendung die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>-Methode aufruft. Unter älteren Betriebssystemen hat Code in Bezug auf die Ansicht "Nebeneinander" keine Auswirkungen, und das <xref:System.Windows.Forms.ListView>-Steuerelement wird in der Ansicht "Große Symbole" angezeigt. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.
+
+## <a name="to-set-tile-view-in-the-designer"></a>So legen Sie die Kachel Ansicht im Designer fest
+
+1. Wählen Sie in Visual Studio das <xref:System.Windows.Forms.ListView> Steuerelement auf dem Formular aus.
+
+2. Wählen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.ListView.View%2A> aus, und wählen Sie dann die **Kachel**aus.
+
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
