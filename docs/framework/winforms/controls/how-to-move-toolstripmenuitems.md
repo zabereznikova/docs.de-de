@@ -11,67 +11,64 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adf25973fde790937461007bd0106cca02dd83be
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913626"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039796"
 ---
-# <a name="how-to-move-toolstripmenuitems"></a><span data-ttu-id="8afee-102">Vorgehensweise: Verschieben von ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="8afee-102">How to: Move ToolStripMenuItems</span></span>
-<span data-ttu-id="8afee-103">Zur Entwurfszeit Sie ganze Menüs der obersten Ebene und ihre Menüelemente an eine andere Stelle auf Verschieben der <xref:System.Windows.Forms.MenuStrip>.</span><span class="sxs-lookup"><span data-stu-id="8afee-103">At design time, you can move entire top-level menus and their menu items to a different place on the <xref:System.Windows.Forms.MenuStrip>.</span></span> <span data-ttu-id="8afee-104">Sie können auch einzelne Menüelemente zwischen Menüs der obersten Ebene verschieben oder Ändern der Position der Menüelemente in einem Menü.</span><span class="sxs-lookup"><span data-stu-id="8afee-104">You can also move individual menu items between top-level menus or change the position of menu items within a menu.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="8afee-105">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="8afee-105">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="8afee-106">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="8afee-106">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="8afee-107">Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="8afee-107">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a><span data-ttu-id="8afee-108">Um ein Menü der obersten Ebene und den Menüelementen auf oberster Ebene verschieben</span><span class="sxs-lookup"><span data-stu-id="8afee-108">To move a top-level menu and its menu items to another top-level location</span></span>  
-  
-1. <span data-ttu-id="8afee-109">Klicken Sie auf, und halten Sie die linke Maustaste auf das Menü, das Sie verschieben möchten.</span><span class="sxs-lookup"><span data-stu-id="8afee-109">Click and hold down the left mouse button on the menu that you want to move.</span></span>  
-  
-2. <span data-ttu-id="8afee-110">Ziehen Sie die Einfügemarke auf das Menü der obersten Ebene, die vor der beabsichtigten neuen Position befindet, und lassen Sie die linke Maustaste los.</span><span class="sxs-lookup"><span data-stu-id="8afee-110">Drag the insertion point to the top-level menu that is before the intended new location and release the left mouse button.</span></span>  
-  
-     <span data-ttu-id="8afee-111">Das ausgewählte Menü wird rechts neben der Einfügemarke verschoben werden.</span><span class="sxs-lookup"><span data-stu-id="8afee-111">The selected menu moves to the right of the insertion point.</span></span>  
-  
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a><span data-ttu-id="8afee-112">Ein Menü der obersten Ebene und seine Menüelemente an eine Dropdown-Speicherort zu verschieben</span><span class="sxs-lookup"><span data-stu-id="8afee-112">To move a top-level menu and its menu items to a drop-down location</span></span>  
-  
-1. <span data-ttu-id="8afee-113">Klicken Sie auf das Menü, das Sie verwenden möchten, verschieben, und drücken STRG + X, und mit der rechten Maustaste im Menüs, und wählen Sie **Ausschneiden** aus dem Kontextmenü.</span><span class="sxs-lookup"><span data-stu-id="8afee-113">Left-click the menu that you want to move and press CTRL+X, or right-click the menu and select **Cut** from the shortcut menu.</span></span>  
-  
-2. <span data-ttu-id="8afee-114">Klicken Sie im Menü der obersten Ebene Ziel einen Menüpunkt oberhalb der beabsichtigten neuen Position und drücken Sie STRG + V, oder mit der rechten Maustaste in des Menüelements oberhalb der beabsichtigten neuen Position und wählen Sie **einfügen** aus dem Kontextmenü.</span><span class="sxs-lookup"><span data-stu-id="8afee-114">In the destination top-level menu, left-click the menu item above the intended new location and press CTRL+V, or right-click the menu item above the intended new location and select **Paste** from the shortcut menu.</span></span>  
-  
-     <span data-ttu-id="8afee-115">Das Menü, das Sie Ausschneiden wird nach dem das ausgewählte Menüelement eingefügt.</span><span class="sxs-lookup"><span data-stu-id="8afee-115">The menu that you cut is inserted after the selected menu item.</span></span>  
-  
-### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a><span data-ttu-id="8afee-116">Verschieben Sie ein Menüelement innerhalb eines Menüs mit dem Elementauflistungs-Editor</span><span class="sxs-lookup"><span data-stu-id="8afee-116">To move a menu item within a menu using the Items Collection Editor</span></span>  
-  
-1. <span data-ttu-id="8afee-117">Mit der rechten Maustaste in des Menüs, das das Menüelement enthält, die, das Sie verschieben möchten.</span><span class="sxs-lookup"><span data-stu-id="8afee-117">Right-click the menu that contains the menu item you want to move.</span></span>  
-  
-2. <span data-ttu-id="8afee-118">Wählen Sie im Kontextmenü den Befehl **DropDownItems bearbeiten**.</span><span class="sxs-lookup"><span data-stu-id="8afee-118">From the shortcut menu, choose **Edit DropDownItems**.</span></span>  
-  
-3. <span data-ttu-id="8afee-119">In der **-Elementauflistungs-Editor**, klicken Sie auf das Menüelement, das Sie verschieben möchten.</span><span class="sxs-lookup"><span data-stu-id="8afee-119">In the **Items Collection Editor**, left-click the menu item you want to move.</span></span>  
-  
-4. <span data-ttu-id="8afee-120">Klicken Sie auf die Pfeiltasten oben und nach unten, um das Menüelement im Menü zu verschieben.</span><span class="sxs-lookup"><span data-stu-id="8afee-120">Click the UP and DOWN ARROW keys to move the menu item within the menu.</span></span>  
-  
-5. <span data-ttu-id="8afee-121">Klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="8afee-121">Click **OK**.</span></span>  
-  
-### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a><span data-ttu-id="8afee-122">Um ein Menüelement in einem Menü mit der Tastatur zu verschieben.</span><span class="sxs-lookup"><span data-stu-id="8afee-122">To move a menu item within a menu using the keyboard</span></span>  
-  
-1. <span data-ttu-id="8afee-123">Drücken Sie die EINGABETASTE, und halten Sie die ALT-Taste.</span><span class="sxs-lookup"><span data-stu-id="8afee-123">Press and hold down the ALT key.</span></span>  
-  
-2. <span data-ttu-id="8afee-124">Klicken Sie auf, und halten der linken Maustaste auf das Menüelement, das Sie verschieben möchten.</span><span class="sxs-lookup"><span data-stu-id="8afee-124">Click and hold the left mouse button on the menu item that you want to move.</span></span>  
-  
-3. <span data-ttu-id="8afee-125">Ziehen Sie das Menüelement an den neuen Speicherort aus, und lassen Sie die linke Maustaste gedrückt.</span><span class="sxs-lookup"><span data-stu-id="8afee-125">Drag the menu item to the new location and release the left mouse button.</span></span>  
-  
-### <a name="to-move-a-menu-item-to-another-menu"></a><span data-ttu-id="8afee-126">So verschieben ein Menüelement zu einer anderen Menüressource</span><span class="sxs-lookup"><span data-stu-id="8afee-126">To move a menu item to another menu</span></span>  
-  
-1. <span data-ttu-id="8afee-127">Klicken Sie auf das Menüelement, das Sie verwenden möchten, verschieben, und drücken STRG + X, oder mit der rechten Maustaste in des Menüelements, und wählen **Ausschneiden** aus dem Kontextmenü.</span><span class="sxs-lookup"><span data-stu-id="8afee-127">Left-click the menu item that you want to move and press CTRL+X, or right-click the menu item and choose **Cut** from the shortcut menu.</span></span>  
-  
-2. <span data-ttu-id="8afee-128">Klicken Sie auf das Menü, das das Menüelement enthält, das für Sie gelten.</span><span class="sxs-lookup"><span data-stu-id="8afee-128">Left-click the menu that will contain the menu item that you cut.</span></span>  
-  
-3. <span data-ttu-id="8afee-129">Klicken Sie auf das Menüelement, das vor der beabsichtigten neuen Position befindet, und drücken Sie STRG + V, oder mit der rechten Maustaste in des Menüelements, das vor der beabsichtigten neuen Position, und wählen **einfügen** aus dem Kontextmenü.</span><span class="sxs-lookup"><span data-stu-id="8afee-129">Left-click the menu item that is before the intended new location and press CTRL+V, or right-click the menu item that is before the intended new location and select **Paste** from the shortcut menu.</span></span>  
-  
-     <span data-ttu-id="8afee-130">Dem Menüelement, das das ausgeschnittene wird nach dem das ausgewählte Menüelement eingefügt.</span><span class="sxs-lookup"><span data-stu-id="8afee-130">The menu item that you cut is inserted after the selected menu item.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="8afee-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8afee-131">See also</span></span>
+# <a name="how-to-move-toolstripmenuitems"></a><span data-ttu-id="2e7db-102">Vorgehensweise: Verschieben von ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="2e7db-102">How to: Move ToolStripMenuItems</span></span>
+<span data-ttu-id="2e7db-103">Zur Entwurfszeit können Sie ganze Menüs der obersten Ebene und ihre Menü Elemente an eine andere Stelle auf dem <xref:System.Windows.Forms.MenuStrip>verschieben.</span><span class="sxs-lookup"><span data-stu-id="2e7db-103">At design time, you can move entire top-level menus and their menu items to a different place on the <xref:System.Windows.Forms.MenuStrip>.</span></span> <span data-ttu-id="2e7db-104">Sie können auch einzelne Menü Elemente zwischen Menüs der obersten Ebene verschieben oder die Position von Menü Elementen innerhalb eines Menüs ändern.</span><span class="sxs-lookup"><span data-stu-id="2e7db-104">You can also move individual menu items between top-level menus or change the position of menu items within a menu.</span></span>
+
+## <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a><span data-ttu-id="2e7db-105">So verschieben Sie ein Menü der obersten Ebene und die zugehörigen Menü Elemente an eine andere Position der obersten Ebene</span><span class="sxs-lookup"><span data-stu-id="2e7db-105">To move a top-level menu and its menu items to another top-level location</span></span>
+
+1. <span data-ttu-id="2e7db-106">Klicken Sie mit der linken Maustaste auf das Menü, das Sie verschieben möchten.</span><span class="sxs-lookup"><span data-stu-id="2e7db-106">Click and hold down the left mouse button on the menu that you want to move.</span></span>
+
+2. <span data-ttu-id="2e7db-107">Ziehen Sie die Einfügemarke in das Menü der obersten Ebene, das sich vor der beabsichtigten neuen Position befindet, und lassen Sie die linke Maustaste los.</span><span class="sxs-lookup"><span data-stu-id="2e7db-107">Drag the insertion point to the top-level menu that is before the intended new location and release the left mouse button.</span></span>
+
+     <span data-ttu-id="2e7db-108">Das ausgewählte Menü wechselt nach rechts von der Einfügemarke.</span><span class="sxs-lookup"><span data-stu-id="2e7db-108">The selected menu moves to the right of the insertion point.</span></span>
+
+## <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a><span data-ttu-id="2e7db-109">So verschieben Sie ein Menü der obersten Ebene und die zugehörigen Menü Elemente an eine Dropdown-Position</span><span class="sxs-lookup"><span data-stu-id="2e7db-109">To move a top-level menu and its menu items to a drop-down location</span></span>
+
+1. <span data-ttu-id="2e7db-110">Klicken Sie mit der linken Maustaste auf das Menü, das Sie verschieben möchten, und drücken Sie STRG + X, oder klicken Sie mit der rechten Maustaste auf das Menü, und wählen Sie aus dem Kontextmenü</span><span class="sxs-lookup"><span data-stu-id="2e7db-110">Left-click the menu that you want to move and press CTRL+X, or right-click the menu and select **Cut** from the shortcut menu.</span></span>
+
+2. <span data-ttu-id="2e7db-111">Klicken Sie im Menü der obersten Ebene des Ziels mit der linken Maustaste auf das Menü Element oberhalb der vorgesehenen neuen Position, und drücken Sie STRG + V, oder klicken Sie mit der rechten Maustaste auf das Menü Element oberhalb der vorgesehenen neuen Position, und wählen Sie aus dem Kontextmenü **Einfügen** aus.</span><span class="sxs-lookup"><span data-stu-id="2e7db-111">In the destination top-level menu, left-click the menu item above the intended new location and press CTRL+V, or right-click the menu item above the intended new location and select **Paste** from the shortcut menu.</span></span>
+
+     <span data-ttu-id="2e7db-112">Das Menü, das Sie Ausschneiden, wird nach dem ausgewählten Menü Element eingefügt.</span><span class="sxs-lookup"><span data-stu-id="2e7db-112">The menu that you cut is inserted after the selected menu item.</span></span>
+
+## <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a><span data-ttu-id="2e7db-113">So verschieben Sie ein Menü Element in einem Menü mithilfe des Items-Auflistungs-Editors</span><span class="sxs-lookup"><span data-stu-id="2e7db-113">To move a menu item within a menu using the Items Collection Editor</span></span>
+
+1. <span data-ttu-id="2e7db-114">Klicken Sie mit der rechten Maustaste auf das Menü, das das Menü Element enthält, das Sie verschieben möchten.</span><span class="sxs-lookup"><span data-stu-id="2e7db-114">Right-click the menu that contains the menu item you want to move.</span></span>
+
+2. <span data-ttu-id="2e7db-115">Wählen Sie im Kontextmenü die Option **DropDownItems bearbeiten**aus.</span><span class="sxs-lookup"><span data-stu-id="2e7db-115">From the shortcut menu, choose **Edit DropDownItems**.</span></span>
+
+3. <span data-ttu-id="2e7db-116">Klicken Sie im Elementauflistungs- **Editor**mit der linken Maustaste auf das Menü Element, das Sie verschieben möchten.</span><span class="sxs-lookup"><span data-stu-id="2e7db-116">In the **Items Collection Editor**, left-click the menu item you want to move.</span></span>
+
+4. <span data-ttu-id="2e7db-117">Klicken Sie auf die Pfeiltasten nach oben und nach unten, um das Menü Element im Menü zu verschieben.</span><span class="sxs-lookup"><span data-stu-id="2e7db-117">Click the UP and DOWN ARROW keys to move the menu item within the menu.</span></span>
+
+5. <span data-ttu-id="2e7db-118">Klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="2e7db-118">Click **OK**.</span></span>
+
+## <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a><span data-ttu-id="2e7db-119">So verschieben Sie ein Menü Element in einem Menü mithilfe der Tastatur</span><span class="sxs-lookup"><span data-stu-id="2e7db-119">To move a menu item within a menu using the keyboard</span></span>
+
+1. <span data-ttu-id="2e7db-120">Halten Sie die Alt-Taste gedrückt.</span><span class="sxs-lookup"><span data-stu-id="2e7db-120">Press and hold down the ALT key.</span></span>
+
+2. <span data-ttu-id="2e7db-121">Klicken Sie mit der linken Maustaste auf das Menü Element, das Sie verschieben möchten.</span><span class="sxs-lookup"><span data-stu-id="2e7db-121">Click and hold the left mouse button on the menu item that you want to move.</span></span>
+
+3. <span data-ttu-id="2e7db-122">Ziehen Sie das Menü Element an die neue Stelle, und lassen Sie die linke Maustaste los.</span><span class="sxs-lookup"><span data-stu-id="2e7db-122">Drag the menu item to the new location and release the left mouse button.</span></span>
+
+## <a name="to-move-a-menu-item-to-another-menu"></a><span data-ttu-id="2e7db-123">So verschieben Sie ein Menü Element in ein anderes Menü</span><span class="sxs-lookup"><span data-stu-id="2e7db-123">To move a menu item to another menu</span></span>
+
+1. <span data-ttu-id="2e7db-124">Klicken Sie mit der linken Maustaste auf das Menü Element, das Sie verschieben möchten, und drücken Sie STRG + X, oder klicken Sie mit der rechten Maustaste auf das Menü Element, und wählen Sie aus dem Kontextmenü aus</span><span class="sxs-lookup"><span data-stu-id="2e7db-124">Left-click the menu item that you want to move and press CTRL+X, or right-click the menu item and choose **Cut** from the shortcut menu.</span></span>
+
+2. <span data-ttu-id="2e7db-125">Klicken Sie mit der linken Maustaste auf das Menü, das das von Ihnen ausgeschnittene Menü Element enthalten soll.</span><span class="sxs-lookup"><span data-stu-id="2e7db-125">Left-click the menu that will contain the menu item that you cut.</span></span>
+
+3. <span data-ttu-id="2e7db-126">Klicken Sie mit der linken Maustaste auf das Menü Element, das sich vor der beabsichtigten neuen Position befindet, und drücken Sie STRG + V, oder klicken Sie mit der rechten Maustaste auf das Menü Element vor der vorgesehenen neuen Position, und wählen Sie aus dem Kontextmenü **Einfügen** aus.</span><span class="sxs-lookup"><span data-stu-id="2e7db-126">Left-click the menu item that is before the intended new location and press CTRL+V, or right-click the menu item that is before the intended new location and select **Paste** from the shortcut menu.</span></span>
+
+     <span data-ttu-id="2e7db-127">Das Menü Element, das Sie Ausschneiden, wird nach dem ausgewählten Menü Element eingefügt.</span><span class="sxs-lookup"><span data-stu-id="2e7db-127">The menu item that you cut is inserted after the selected menu item.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="2e7db-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2e7db-128">See also</span></span>
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [<span data-ttu-id="8afee-132">Übersicht über das MenuStrip-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="8afee-132">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="2e7db-129">Übersicht über das MenuStrip-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="2e7db-129">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
