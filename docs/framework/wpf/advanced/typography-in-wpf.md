@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 5f3560c899373b9835e2ead79590cf73777b2375
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 7c83cfa22770695861b07e3bff29a38fcd125dd2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972410"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545245"
 ---
 # <a name="typography-in-wpf"></a>Typografie in WPF
-In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt. Diese Funktionen umfassen die verbesserte Qualität und Leistung beim Textrendering, die Unterstützung von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Typografie, einen verbesserten internationalen Text, eine verbesserte Unterstützung für Schriftarten sowie neue Text-Anwendungsprogrammierschnittstellen (APIs).  
+In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt. Zu diesen Features gehören verbesserte Qualität und Leistung von Text Rendering, Unterstützung von OpenType-typografiken, erweiterter internationaler Text, verbesserte Schriftart Unterstützung und neue Text-Anwendungs Programmierschnittstellen (APIs).  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Verbesserte Textqualität und -leistung  
@@ -29,9 +29,9 @@ Text mit ClearType-Antialiasing auf der y-Achse
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Umfangreiche Typografie  
- Das [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftartformat ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]-Schriftartformats. Das [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftartformat wurde gemeinsam von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe entwickelt und bietet eine umfangreiche Auswahl an erweiterten typografischen Funktionen. Das <xref:System.Windows.Documents.Typography> -Objekt macht viele erweiterte Funktionen von [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Schriftarten verfügbar, wie z. b. Stilvarianten und Swashes. Der Windows SDK bietet eine Reihe von Beispiel [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Schriftarten, die mit umfangreichen Funktionen wie den Schriftarten "Pericles" und "Pescadero" entworfen wurden. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
+ Das OpenType-Schriftformat ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftart Formats. Das OpenType-Schriftformat wurde von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe gemeinsam entwickelt und bietet eine umfangreiche Palette an erweiterten typografischen Features. Das <xref:System.Windows.Documents.Typography> -Objekt macht viele erweiterte Funktionen von OpenType-Schriftarten verfügbar, wie z. b. Stilvarianten und Swashes. Der Windows SDK bietet eine Reihe von OpenType-Beispiel Schriftarten, die mit umfangreichen Funktionen wie den Schriftarten "Pericles" und "Pescadero" entworfen wurden. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
   
- Die [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftart Pericles enthält zusätzliche Glyphen, die alternative Stile für den Standardsatz von Glyphen bieten. Im folgenden Text werden Symbole im alternativen Stil gezeigt.  
+ Die Schriftart "Pericles OpenType" enthält zusätzliche Symbole, die eine stilistische Alternative zum Standardsatz von Symbolen bereitstellen. Im folgenden Text werden Symbole im alternativen Stil gezeigt.  
   
  ![Text mit alternativen OpenType] -Symbolen (./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "Text mit alternativen OpenType") -Symbolen  
   
@@ -39,7 +39,7 @@ Text mit ClearType-Antialiasing auf der y-Achse
   
  ![Text mit OpenType-Standard-und Swash-] Symbolen (./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "Text mit OpenType-Standard-und Swash-") Symbolen  
   
- Weitere Informationen zu [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Funktionen finden Sie unter [OpenType-Schriftarteigenschaften](opentype-font-features.md).  
+ Weitere Informationen zu OpenType-Funktionen finden Sie unter [OpenType-Schriftart Features](opentype-font-features.md).  
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>Verbesserte Unterstützung für internationalen Text  

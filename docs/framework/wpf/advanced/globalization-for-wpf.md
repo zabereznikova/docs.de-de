@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 099d6b94f9094ac9baed25e5060d8a166e27573b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629924"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545251"
 ---
 # <a name="globalization-for-wpf"></a>Globalisierung für WPF
 In diesem Thema werden Probleme vorgestellt, die Sie beim Schreiben [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] von Anwendungen für den globalen Markt berücksichtigen sollten. Die Globalisierungs Programmier Elemente werden in [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`definiert.
@@ -123,9 +123,9 @@ Das folgende Beispiel zeigt einen hexadezimalen Zeichen Verweis. Beachten Sie, d
 
 - Singhalesisch
 
- Alle Schreibsystem-Engines unter [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] stützen Schriftarten. [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]Schriftarten können [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Layouttabellen enthalten, mit denen Schriftart Ersteller bessere internationale und High-End-typografische Schriftarten entwerfen können. Die [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Schriftart Layout-Tabellen enthalten Informationen über Symbol Ersetzungen, Symbol Positionierung, Begründung und Baseline-Positionierung, sodass Textverarbeitungsanwendungen das Text Layout verbessern können.
+ Alle Schreibsystem-Engines unterstützen OpenType-Schriftarten. OpenType-Schriftarten können die OpenType-Layouttabellen enthalten, die es Schriftart Entwicklern ermöglichen, bessere internationale und High-End-typografische Schriftarten zu entwerfen. Die OpenType-Schriftart Layout-Tabellen enthalten Informationen über Symbol Ersetzungen, Symbol Positionierung, Begründung und Baseline-Positionierung, sodass Textverarbeitungsanwendungen das Text Layout verbessern können.
 
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]Schriftarten ermöglichen die Behandlung großer Glyphe mithilfe [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] von Codierung. Diese Codierung gewährleistet eine umfassende internationale Unterstützung sowie typografische Symbolvarianten.
+ OpenType-Schriftarten ermöglichen die Handhabung von großen Glyphe [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] -Sätzen mithilfe von Codierung. Diese Codierung gewährleistet eine umfassende internationale Unterstützung sowie typografische Symbolvarianten.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]das Text Rendering wird von der Microsoft ClearType-subpixeltechnologie unterstützt, die die Unabhängigkeit der Lösung unterstützt. Dies verbessert die Lesbarkeit erheblich und bietet die Möglichkeit der Unterstützung für hochwertige Dokumente im Magazinstil für alle Skripts.
 

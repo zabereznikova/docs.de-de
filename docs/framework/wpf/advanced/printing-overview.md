@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 4f8fd92105bd5ae09e0c1daa2e0db48b74cde77c
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672040"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545303"
 ---
 # <a name="printing-overview"></a>Übersicht über das Drucken
 Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Presentation Foundation (WPF) verwenden, über einen umfangreichen neuen Satz von Druck-und drucksystemverwaltungs-APIs. Mit [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] stehen einige dieser Erweiterungen des Drucksystems auch Entwicklern zur Verfügung, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Anwendungen erstellen, sowie Entwicklern, die nicht verwalteten Code verwenden. Im Zentrum dieser neuen Funktionen stehen das neue [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]-Dateiformat und der [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Druckpfad.  
@@ -29,7 +29,7 @@ Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Present
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>Info über XPS  
- XPS ist ein elektronisches Dokumentformat, ein spooldateiformat und eine Seitenbeschreibungssprache. Es handelt sich um ein offenes Dokumentformat, das [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] und andere Branchenstandards verwendet, um plattformübergreifend nutzbare Dokumente zu erstellen. XPS vereinfacht den Prozess, mit dem digitale Dokumente erstellt, freigegeben, gedruckt, angezeigt und archiviert werden. Weitere Informationen zu XPS finden Sie unter [XPS-Dokumente](/windows/desktop/printdocs/documents).  
+ XPS ist ein elektronisches Dokumentformat, ein spooldateiformat und eine Seitenbeschreibungssprache. Es handelt sich um ein offenes Dokumentformat [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], das, Open Packaging Conventions (OPC) und andere Industriestandards verwendet, um plattformübergreifende Dokumente zu erstellen. XPS vereinfacht den Prozess, mit dem digitale Dokumente erstellt, freigegeben, gedruckt, angezeigt und archiviert werden. Weitere Informationen zu XPS finden Sie unter [XPS-Dokumente](/windows/desktop/printdocs/documents).  
   
  Verschiedene Techniken für das Drucken von XPS-basierten [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Inhalten mithilfe von sind in Programm gesteuertes [Drucken von XPS-Dateien](how-to-programmatically-print-xps-files.md)dargestellt. Es kann sinnvoll sein, diese Beispiele beim Durcharbeiten der in diesem Thema enthaltenen Inhalte hinzuzuziehen. (Entwicklern von nicht verwaltetem Code sollte die Dokumentation für die [MXDC_ESCAPE-Funktion](/windows/desktop/printdocs/mxdc-escape)angezeigt werden. Windows Forms Entwickler müssen die API im <xref:System.Drawing.Printing> -Namespace verwenden, der nicht den vollständigen [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] -Druckpfad unterstützt, aber einen Hybriden GDI-zu-XPS-Druckpfad unterstützt. Weitere Informationen finden Sie unter **Druckpfadarchitektur** unten.)  
   

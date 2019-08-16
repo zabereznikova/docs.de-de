@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 58dc070e1642773f39f9ab2a9037ca60175b27cf
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401280"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545269"
 ---
 # <a name="panels-overview"></a>Übersicht über Panel-Elemente
 <xref:System.Windows.Controls.Panel>Elemente sind Komponenten, die das Rendering von Elementen steuern – ihre Größe und Größe, ihre Position und die Anordnung ihres untergeordneten Inhalts. Bietet eine Reihe vordefinierter <xref:System.Windows.Controls.Panel> Elemente sowie die Möglichkeit, benutzerdefinierte <xref:System.Windows.Controls.Panel> Elemente zu erstellen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -118,7 +118,7 @@ ms.locfileid: "68401280"
 ### <a name="dockpanel"></a>DockPanel  
  Das <xref:System.Windows.Controls.DockPanel> -Element verwendet <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> die angefügte-Eigenschaft, die in untergeordneten Inhalts Elementen festgelegt ist, um Inhalt an den Rändern eines Containers zu positionieren. Wenn <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> auf <xref:System.Windows.Controls.Dock.Top> oder<xref:System.Windows.Controls.Dock.Bottom>festgelegt ist, positioniert es untergeordnete Elemente oberhalb oder unter einander. Wenn <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> auf <xref:System.Windows.Controls.Dock.Left> oder<xref:System.Windows.Controls.Dock.Right>festgelegt ist, positioniert es untergeordnete Elemente links oder rechts voneinander. Die <xref:System.Windows.Controls.DockPanel.LastChildFill%2A> -Eigenschaft bestimmt die Position des letzten Elements, das als <xref:System.Windows.Controls.DockPanel>untergeordnetes Element hinzugefügt wurde.  
   
- Sie können verwenden <xref:System.Windows.Controls.DockPanel> , um eine Gruppe verwandter Steuerelemente wie z. b. eine Reihe von Schaltflächen zu positionieren. Alternativ können Sie sie verwenden, um ein „gerastertes“ [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Element zu erstellen, ähnlich wie das in [!INCLUDE[TLA#tla_outlook](../../../../includes/tlasharptla-outlook-md.md)].  
+ Sie können verwenden <xref:System.Windows.Controls.DockPanel> , um eine Gruppe verwandter Steuerelemente wie z. b. eine Reihe von Schaltflächen zu positionieren. Alternativ können Sie damit auch ein "schwenken" [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]erstellen, ähnlich dem, das in Microsoft Outlook gefunden wurde.  
   
 #### <a name="sizing-to-content"></a>Anpassen der Größe an Inhalt  
  Wenn seine <xref:System.Windows.FrameworkElement.Height%2A> - <xref:System.Windows.FrameworkElement.Width%2A> Eigenschaft und die-Eigenschaft <xref:System.Windows.Controls.DockPanel> nicht angegeben sind, werden die Größen für den Inhalt der Die Größe kann sich erhöhen oder verringern, um die Größe der untergeordneten Elemente aufnehmen zu können. Wenn diese Eigenschaften jedoch angegeben werden und kein Platz mehr für das nächste angegebene untergeordnete Element vorhanden ist, <xref:System.Windows.Controls.DockPanel> wird dieses untergeordnete Element oder nachfolgende untergeordnete Elemente von nicht angezeigt, und nachfolgende untergeordnete Elemente werden nicht gemessen.  
