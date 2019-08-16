@@ -3,7 +3,5 @@
   items:
     - name: Verwenden von Namespaces
       href: using-namespaces.md
-    - name: 'Vorgehensweise: Verwenden des globalen Namespacealias'
-      href: how-to-use-the-global-namespace-alias.md
-    - name: 'Vorgehensweise: Verwenden des My-Namespaces'
+    - name: 'Gewusst wie: Verwenden des My-Namespaces'
       href: how-to-use-the-my-namespace.md
