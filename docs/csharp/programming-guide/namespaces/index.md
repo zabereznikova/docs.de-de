@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 79b7057b1f6a9cdba2215124160b28efb9a1c0be
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cf5a7f239cf7d3cd3a6e39f31d16adb830646afc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629520"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039494"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
 
@@ -42,15 +42,14 @@ Namespaces verfügen über die folgenden Eigenschaften:
 - Durch die `using`-Direktive besteht keine Notwendigkeit, den Namen des Namespace für jede Klasse anzugeben.  
 - Der `global`-Namespace ist der Stammnamespace: `global::System` verweist immer auf den .NET-Namespace <xref:System>.  
 
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+Weitere Informationen finden Sie im Abschnitt [Namespaces](~/_csharplang/spec/namespaces.md) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../index.md)
 - [Using-Namespaces](using-namespaces.md)
-- [Vorgehensweise: Verwenden des globalen Namespacealias](how-to-use-the-global-namespace-alias.md)
 - [Vorgehensweise: Verwenden des My-Namespaces](how-to-use-the-my-namespace.md)
 - [Bezeichnernamen](../inside-a-program/identifier-names.md)
 - [using-Direktive](../../language-reference/keywords/using-directive.md)
