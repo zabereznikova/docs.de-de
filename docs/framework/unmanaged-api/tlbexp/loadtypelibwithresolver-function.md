@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d2f5ad2afb2e73acead82369782f142aa10aac3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b9bec757071a98e085ccdeee3fc66bfc07f52bc
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782708"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040166"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver-Funktion
-Lädt eine Typbibliothek und verwendet die angegebene [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) intern referenzierte Typbibliotheken aufgelöst.  
+Lädt eine Typbibliothek und verwendet die angegebene [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) , um alle intern referenzierten Typbibliotheken aufzulösen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,60 +38,60 @@ HRESULT LoadTypeLibWithResolver(
   
 ## <a name="parameters"></a>Parameter  
  `szFile`  
- [in] Der Dateipfad der Typbibliothek.  
+ in Der Dateipfad der Typbibliothek.  
   
  `regkind`  
- [in] Ein [REGKIND Enumeration](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) Flag, das steuert, wie die Typbibliothek registriert wird. Die Werte sind möglich:  
+ in Ein [REGKIND](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind) -Enumerationsflag, das steuert, wie die Typbibliothek registriert wird. Folgende Werte sind möglich:  
   
-- `REGKIND_DEFAULT`: Verwenden Sie Standardverhalten für die Registrierung.  
+- `REGKIND_DEFAULT`: Verwenden Sie das Standard Registrierungs Verhalten.  
   
-- `REGKIND_REGISTER`: Diese Typbibliothek zu registrieren.  
+- `REGKIND_REGISTER`: Registrieren Sie diese Typbibliothek.  
   
-- `REGKIND_NONE`: Führen Sie diese Typbibliothek nicht registriert werden.  
+- `REGKIND_NONE`: Registrieren Sie diese Typbibliothek nicht.  
   
  `pTlbResolver`  
- [in] Ein Zeiger auf die Implementierung der [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  
+ in Ein Zeiger auf die Implementierung der [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  
   
  `pptlib`  
- [out] Ein Verweis auf die Typbibliothek, die geladen wird.  
+ vorgenommen Ein Verweis auf die Typbibliothek, die geladen wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Einer der in der folgenden Tabelle aufgeführten HRESULT-Werte.  
+ Einer der HRESULT-Werte, der in der folgenden Tabelle aufgeführt ist.  
   
 |Rückgabewert|Bedeutung|  
 |------------------|-------------|  
 |`S_OK`|Erfolgreich.|  
 |`E_OUTOFMEMORY`|Nicht genügend Arbeitsspeicher.|  
-|`E_POINTER`|Eine oder mehrere der Zeiger sind ungültig.|  
-|`E_INVALIDARG`|Eine oder mehrere der Argumente sind ungültig.|  
+|`E_POINTER`|Mindestens ein Zeiger ist ungültig.|  
+|`E_INVALIDARG`|Mindestens eines der Argumente ist ungültig.|  
 |`TYPE_E_IOERROR`|Die Funktion konnte nicht in die Datei schreiben.|  
-|`TYPE_E_REGISTRYACCESS`|Die Systemdatenbank für die Registrierung konnte nicht geöffnet werden.|  
+|`TYPE_E_REGISTRYACCESS`|Die System Registrierungsdatenbank konnte nicht geöffnet werden.|  
 |`TYPE_E_INVALIDSTATE`|Die Typbibliothek konnte nicht geöffnet werden.|  
-|`TYPE_E_CANTLOADLIBRARY`|Die Typbibliothek oder einer DLL konnte nicht geladen werden.|  
+|`TYPE_E_CANTLOADLIBRARY`|Die Typbibliothek oder dll konnte nicht geladen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) Aufrufe der `LoadTypeLibWithResolver` Funktion während der Konvertierung der Assembly in den Typ in der Bibliothek.  
+ " [Tlbexp. exe" (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) ruft `LoadTypeLibWithResolver` die-Funktion während des Konvertierungsprozesses der Assembly in die Typbibliothek auf.  
   
- Diese Funktion lädt die angegebene Typbibliothek mit minimalen Zugriff auf die Registrierung. Die Funktion überprüft dann die Typbibliothek für Typbibliotheken intern auf die verwiesen wird, von die jede geladen und der übergeordnete Typ-Bibliothek hinzugefügt werden muss.  
+ Diese Funktion lädt die angegebene Typbibliothek mit minimalem Zugriff auf die Registrierung. Die-Funktion untersucht dann die Typbibliothek für intern referenzierte Typbibliotheken, die jeweils geladen und der übergeordneten Typbibliothek hinzugefügt werden müssen.  
   
- Bevor eine referenzierte Typbibliothek geladen werden kann, muss die Verweis-Dateipfad in einen vollständigen Dateipfad aufgelöst werden. Dies erfolgt über die [ResolveTypeLib-Methode](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) , erfolgt über die [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), im übergeben wird die `pTlbResolver` Parameter.  
+ Bevor eine Typbibliothek, auf die verwiesen wird, geladen werden kann, muss der Verweis Datei Pfad in einen vollständigen Dateipfad aufgelöst werden. Dies erfolgt über die [ResolveTypeLib-Methode](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) , die von der [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)bereitgestellt wird, die `pTlbResolver` im-Parameter übergeben wird.  
   
- Wenn Sie der vollständigen Pfad der Typbibliothek, auf die verwiesen wird, bekannt ist, die `LoadTypeLibWithResolver` Funktion lädt und die Bibliothek mit übergeordneten, erstellen eine kombinierte master Typbibliothek die referenzierte Bibliothek hinzugefügt.  
+ Wenn der vollständige Dateipfad der Typbibliothek, auf die verwiesen `LoadTypeLibWithResolver` wird, bekannt ist, lädt die Funktion die Typbibliothek, auf die verwiesen wird, und fügt Sie der übergeordneten Typbibliothek hinzu  
   
- Nachdem die Funktion aufgelöst und alle intern Typbibliotheken lädt, gibt es einen Verweis auf master aufgelöst Typbibliothek in der `pptlib` Parameter.  
+ Nachdem die Funktion alle intern referenzierten Typbibliotheken aufgelöst und geladen hat, gibt Sie einen Verweis auf die vom Master aufgelöste `pptlib` Typbibliothek im-Parameter zurück.  
   
- Die `LoadTypeLibWithResolver` Funktion ist in der Regel aufgerufen, indem die [Tlbexp.exe (Type Library Exporter-Tool)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), die stellt eine eigene, interne [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) -Implementierung in der `pTlbResolver` der Parameter.  
+ Die `LoadTypeLibWithResolver` -Funktion wird in der Regel von [Tlbexp. exe (Type Library Exporter)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)aufgerufen, das im- `pTlbResolver` Parameter eine eigene interne [ITypeLibResolver-Schnittstellen](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) Implementierung bereitstellt.  
   
- Wenn Sie aufrufen `LoadTypeLibWithResolver` direkt, geben Sie an Ihre eigenen [ITypeLibResolver-Schnittstelle](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) Implementierung.  
+ Wenn Sie direkt `LoadTypeLibWithResolver` aufrufen, müssen Sie eine eigene [ITypeLibResolver-Schnittstellen](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) Implementierung angeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** TlbRef.h  
   
- **Bibliothek:** TlbRef.lib  
+ **Fern** TlbRef.lib  
   
- **.NET Framework Version:** 3.5, 3.0, 2.0  
+ **.NET Framework Version:** 3,5, 3,0, 2,0  
   
 ## <a name="see-also"></a>Siehe auch
 
