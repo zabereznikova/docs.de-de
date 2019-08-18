@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400699"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567514"
 ---
 # <a name="data-binding-overview"></a>Übersicht über die Datenbindung
 Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von Common Language Runtime (CLR)-Objekten und [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]gebunden werden. <xref:System.Windows.Controls.ContentControl>z <xref:System.Windows.Controls.Button> . b. <xref:System.Windows.Controls.ItemsControl>und s, <xref:System.Windows.Controls.ListBox> wie <xref:System.Windows.Controls.ListView> z. b. und, verfügen über integrierte Funktionen, die eine flexible Formatierung einzelner Datenelemente oder Auflistungen von Datenelementen ermöglichen. Sortier-, Filter- und Gruppenansichten können übergreifend für die Daten generiert werden.  
@@ -70,7 +70,7 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
 - Obwohl nicht in der Abbildung angegeben, sollte beachtet werden, dass das Bindungs Quell Objekt nicht auf ein benutzerdefiniertes CLR-Objekt beschränkt ist. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]die Datenbindung unterstützt Daten in Form von CLR- [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]Objekten und. Um einige Beispiele anzugeben, kann die Bindungs Quelle ein <xref:System.Windows.UIElement>, ein beliebiges Listen Objekt, ein CLR-Objekt, das ADO.NET-Daten oder Webdiensten zugeordnet ist, oder ein XmlNode-Objekt sein, das Ihre [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten enthält. Weitere Informationen finden Sie unter [Übersicht über Bindungsquellen](binding-sources-overview.md).  
   
- Beim Lesen anderer [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]-Themen sollten Sie daran denken, dass Sie beim Einrichten einer Bindung ein Bindungsziel *an* eine Bindungsquelle binden. Wenn Sie z. b. einige zugrunde liegende [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten in einem <xref:System.Windows.Controls.ListBox> mithilfe der Datenbindung anzeigen, binden Sie <xref:System.Windows.Controls.ListBox> ihre an [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] die Daten.  
+ Beim Lesen anderer SDK-Themen ist es wichtig zu beachten, dass beim Einrichten einer Bindung ein Bindungs Ziel *an* eine Bindungs Quelle gebunden wird. Wenn Sie z. b. einige zugrunde liegende [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten in einem <xref:System.Windows.Controls.ListBox> mithilfe der Datenbindung anzeigen, binden Sie <xref:System.Windows.Controls.ListBox> ihre an [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] die Daten.  
   
  Zum Einrichten einer Bindung verwenden Sie das <xref:System.Windows.Data.Binding> -Objekt. Im restlichen Teil dieses Themas werden viele der mit und einigen der Eigenschaften und der Verwendung des <xref:System.Windows.Data.Binding> Objekts verknüpften Konzepte erläutert.  
   

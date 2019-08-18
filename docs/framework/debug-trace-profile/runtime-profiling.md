@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: a31a42362e934d14b9cb66724618814e2b232c06
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833758"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567280"
 ---
 # <a name="runtime-profiling"></a>Laufzeit-Profilerstellung
 Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Bereitstellung oder einem Bereitstellungsszenario. Dieser Abschnitt ist für Entwickler und Systemadministratoren vorgesehen, die Informationen zur Leistung der Anwendung erfassen möchten.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Verfolgen der Leistung mithilfe des Systemmonitors (Perfmon.exe)  
- Der Systemmonitor ist das einfachste Tool verwenden, um Ihre .NET Framework-Anwendung ein Profil. Der Systemmonitor stellt die Daten in der .NET Framework-Leistungsindikatoren, die mit der common Language Runtime und das Windows Software Development Kit (SDK) installiert sind. Mithilfe dieser Leistungsindikatoren können Sie von der Speicherverwaltung bis zur JIT-Compilerleistung (JIT) sämtliche Informationen überwachen. Sie informieren Sie über die von der Anwendung verwendeten Ressourcen, die ein indirektes Maß für die Leistung der Anwendung sind. Verwenden Sie diese Leistungsindikatoren, um zu verstehen, wie die Anwendung intern funktioniert.  
+ Der System Monitor ist das einfachste Tool, mit dem Sie ein Profil für Ihre .NET Framework Anwendung erstellen können. Der System Monitor stellt Daten grafisch dar, die in den .NET Framework Leistungsindikatoren gefunden werden, die mit dem Common Language Runtime und dem Windows SDK installiert werden. Mithilfe dieser Leistungsindikatoren können Sie von der Speicherverwaltung bis zur JIT-Compilerleistung (JIT) sämtliche Informationen überwachen. Sie informieren Sie über die von der Anwendung verwendeten Ressourcen, die ein indirektes Maß für die Leistung der Anwendung sind. Verwenden Sie diese Leistungsindikatoren, um zu verstehen, wie die Anwendung intern funktioniert.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>So führen Sie „Perfmon.exe“ unter Windows Vista und höheren Versionen aus  
   
@@ -42,7 +42,7 @@ Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Be
   
 6. Klicken Sie im Listenfeld **Instanzen des ausgewählten Objekts** auf **\<Alle Instanzen>** , um anzugeben, dass Sie den Leistungsindikator für die Common Language Runtime global (d.h. systemweit) überwachen möchten.  
   
-     - oder -  
+     -oder-  
   
      Klicken Sie im Listenfeld **Instanzen des ausgewählten Objekts** auf einen Anwendungsnamen, um den Leistungsindikator für diese Anwendung zu überwachen.  
   
@@ -54,10 +54,10 @@ Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Be
  Wenn Sie für eine Assembly ein Profil erstellen möchten, die sich in einer Zone oder auf einer Remotefreigabe befindet, stellen Sie sicher, dass die Remoteassembly auf dem Computer über volle Vertrauenswürdigkeit verfügt, auf dem die Leistungsindikatoren ausgeführt werden. Ist die Vertrauenswürdigkeit der Assembly zu gering bemessen, funktionieren die Leistungsindikatoren nicht. Informationen zum Gewähren von Vertrauenswürdigkeit für verschiedene Zonen finden Sie unter [Caspol.exe (Code Access Security Policy-Tool)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
->  Auf Systemen, die auf dem .NET Framework 4 installiert ist, zeigt der Systemmonitor möglicherweise keine Daten für Leistungsindikatoren in einigen Kategorien, z. B. **Data .NET CLR** und **.NET CLR-Netzwerk**, für die Anwendungen, die mithilfe von .NET Framework 1.1 entwickelt wurden. Wenn dies der Fall ist, können Sie den Systemmonitor entsprechend konfigurieren, um diese Daten durch Hinzufügen des [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)-Elements in der Konfigurationsdatei der Anwendung anzuzeigen.  
+>  Auf Systemen, auf denen die .NET Framework 4 installiert ist, zeigt der System Monitor möglicherweise in einigen Kategorien, z. b. **.NET CLR-Daten** und **.NET CLR-Netzwerk**, keine Daten für Leistungsindikatoren für Anwendungen an, die mithilfe von .net entwickelt wurden. Framework 1,1. Wenn dies der Fall ist, können Sie den Systemmonitor entsprechend konfigurieren, um diese Daten durch Hinzufügen des [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)-Elements in der Konfigurationsdatei der Anwendung anzuzeigen.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Programmgesteuertes Lesen und Erstellen von Leistungsindikatoren  
- .NET Framework bietet Klassen, die Sie verwenden können, um programmgesteuert auf dieselben Leistungsdaten zugreifen, die in der Leistungskonsole verfügbar ist. Mithilfe dieser Klassen können Sie auch benutzerdefinierte Leistungsindikatoren erstellen. Die folgende Tabelle beschreibt einige der systemmonitorklassen, die in .NET Framework bereitgestellt werden.  
+ Der .NET Framework stellt Klassen bereit, mit denen Sie Programm gesteuert auf dieselben Leistungsinformationen zugreifen können, die in der Leistungs Konsole verfügbar sind. Mithilfe dieser Klassen können Sie auch benutzerdefinierte Leistungsindikatoren erstellen. In der folgenden Tabelle werden einige der Leistungs Überwachungs Klassen beschrieben, die in der .NET Framework bereitgestellt werden.  
   
 |Klasse|Beschreibung|  
 |-----------|-----------------|  

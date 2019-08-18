@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 683d0a28fa151cf2116b4125dfb7a604605c7c4a
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972242"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567530"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit
 <a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. Standardmäßig können HTML-und Client seitige Skriptsprachen nicht auf wichtige Systemressourcen zugreifen. Windows Presentation Foundation da vom Browser gehostete WPF-Anwendungen (WPF) über den Browser gestartet werden können, sollten Sie einen ähnlichen Satz von Einschränkungen einhalten. Um diese Einschränkungen zu erzwingen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , stützt sich sowohl auf die Code Zugriffssicherheit (CAS) als auch auf ClickOnce (siehe [WPF Security Strategy-Platform Security](wpf-security-strategy-platform-security.md)). Standardmäßig fordern von einem Browser gehostete Anwendungen den Berechtigungs Satz für Internet Zonen-CAS an, unabhängig davon, ob Sie über das Internet, das lokale Intranet oder den lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
@@ -50,7 +50,7 @@ ms.locfileid: "68972242"
 |Bearbeiten|Rechtschreibprüfung<br /><br /> RichTextBox<br /><br /> Unterstützung der Zwischenablage bei Nur-Text und Freihand<br /><br /> Vom Benutzer initiiertes Einfügen<br /><br /> Kopieren von markiertem Inhalt|  
 |Steuerelemente|Allgemeine Steuerelemente|  
   
- In dieser Tabelle werden [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] die Features auf hoher Ebene behandelt. Ausführlichere Informationen finden Sie unter das Windows Software Development Kit (SDK) dokumentiert die Berechtigungen, die für jedes Mitglied in [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]erforderlich sind. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
+ In dieser Tabelle werden [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] die Features auf hoher Ebene behandelt. Ausführlichere Informationen finden Sie in der-Windows SDK, in der die Berechtigungen dokumentiert werden, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]die für jedes Mitglied in erforderlich sind. Zusätzlich gibt es für die folgenden Funktionen ausführlichere Informationen hinsichtlich des Ausführens bei teilweiser Vertrauenswürdigkeit, wozu auch spezielle Aspekte gehören.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](siehe [Übersicht über XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
   

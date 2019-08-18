@@ -1,5 +1,5 @@
 ---
-title: My.Response-Objekt (Visual Basic)
+title: My. Response-Objekt (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWebExtension.Response
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 0e49a3b5732ee1a3626666ce06e366c4940eca05
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a50701998011c25c600c2a3763459c1aba3cc59a
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881965"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567453"
 ---
 # <a name="myresponse-object"></a>My.Response-Objekt
-Ruft die <xref:System.Web.HttpResponse> zugeordnete Objekt der <xref:System.Web.UI.Page>. Mit diesem Objekt können Sie HTTP-Antwortdaten an einen Client senden. Es enthält außerdem Informationen über diese Antwort.  
+Ruft das <xref:System.Web.HttpResponse> -Objekt ab, <xref:System.Web.UI.Page>das zugeordnet ist. Mit diesem Objekt können Sie HTTP-Antwortdaten an einen Client senden. Es enthält außerdem Informationen über diese Antwort.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `My.Response` Objekt enthält die aktuelle <xref:System.Web.HttpResponse> Objekt, mit der Seite verknüpft ist.  
+ Das `My.Response` -Objekt enthält das <xref:System.Web.HttpResponse> aktuelle-Objekt, das der Seite zugeordnet ist.  
   
- Die `My.Response` -Objekts ist nur für ASP.NET-Anwendungen verfügbar.  
+ Das `My.Response` -Objekt ist nur für ASP.NET-Anwendungen verfügbar.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die headerauflistung aus der `My.Request` -Objekt und verwendet die `My.Response` es in die ASP.NET-Seite zu schreibende Objekt.  
+ Im folgenden Beispiel wird die Header Auflistung aus dem `My.Request` -Objekt abgerufen, `My.Response` und das-Objekt wird verwendet, um Sie auf die ASP.NET-Seite zu schreiben.  
   
- [!code-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
+ [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
 ## <a name="see-also"></a>Siehe auch
 
