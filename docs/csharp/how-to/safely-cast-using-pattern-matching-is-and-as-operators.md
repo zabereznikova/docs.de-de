@@ -6,16 +6,16 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306351"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566288"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Vorgehensweise: Sicheres Umwandeln mit Musterabgleich und die Operatoren „is“ und „as“
 
-Da Objekte polymorph sind, ist es möglich, dass eine Variable eines Basisklassentyps einen abgeleiteten [Typ](../programming-guide/types/index.md) enthalten kann. Für den Zugriff auf die Instanzmember des abgeleiteten Typs ist es erforderlich, dass Sie den Wert wieder in den abgeleiteten Typ [umwandeln](../programming-guide/types/casting-and-type-conversions.md). Allerdings entsteht durch eine Umwandlung das Risiko, eine <xref:System.InvalidCastException>-Ausnahme auszulösen. C# stellt [Musterabgleich](../pattern-matching.md)-Anweisungen bereit, die eine Umwandlung unter der Bedingung ausführen, dass sie erfolgreich sein wird. C# bietet außerdem die Operatoren [is](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) und [as](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator), um zu testen, ob ein Wert einen bestimmten Typ aufweist.
+Da Objekte polymorph sind, ist es möglich, dass eine Variable eines Basisklassentyps einen abgeleiteten [Typ](../programming-guide/types/index.md) enthalten kann. Für den Zugriff auf die Instanzmember des abgeleiteten Typs ist es erforderlich, dass Sie den Wert wieder in den abgeleiteten Typ [umwandeln](../programming-guide/types/casting-and-type-conversions.md). Allerdings entsteht durch eine Umwandlung das Risiko, eine <xref:System.InvalidCastException>-Ausnahme auszulösen. C# stellt [Musterabgleich](../pattern-matching.md)-Anweisungen bereit, die eine Umwandlung unter der Bedingung ausführen, dass sie erfolgreich sein wird. C# bietet außerdem die Operatoren [is](../language-reference/operators/type-testing-and-cast.md#is-operator) und [as](../language-reference/operators/type-testing-and-cast.md#as-operator), um zu testen, ob ein Wert einen bestimmten Typ aufweist.
 
 Im folgenden Code wird der Musterabgleich mit der `is`-Anweisung veranschaulicht. Sie enthält Methoden, die ein Methodenargument testen, um zu ermitteln, ob es einer möglichen Gruppe von abgeleiteten Typen angehört:
 

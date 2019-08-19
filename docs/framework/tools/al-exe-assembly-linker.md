@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832775"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567191"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker-Tool)
 
@@ -108,7 +108,7 @@ In der folgende Tabelle werden die durch *Al.exe* generierten Fehler aufgelistet
 |al1015|Die Nachrichtendatei "alinkui.dll" wurde nicht gefunden.<br /><br /> *Al.exe* erfordert *Alinkui.dll*. Stellen Sie sicher, dass sich diese Datei in Ihrem Pfad befindet. Falls erforderlich, kopieren Sie sie von der Produkt-CD.|
 |al1016|Es wurden keine gültigen Eingabedateien angegeben.<br /><br /> *Al.exe* benötigt mindestens eine Eingabedatei, die keine Assemblyinformationen enthält.|
 |al1017|Es wurde kein Zieldateiname angegeben.<br /><br /> Die erforderliche Option **/out**, die den Zieldateinamen angibt, fehlte.|
-|al1018|Die erforderliche Datei "file" konnte nicht geladen werden.<br /><br /> Bestimmte DLL-Dateien können nicht geladen werden. Installieren Sie Visual Studio oder das Windows Software Development Kit (SDK) neu.|
+|al1018|Die erforderliche Datei "file" konnte nicht geladen werden.<br /><br /> Bestimmte DLL-Dateien können nicht geladen werden. Installieren Sie Visual Studio oder das Windows SDK erneut.|
 |al1019|Metadatenfehler beim Erstellen der Assembly - Ursache<br /><br /> Die Generierung der Assembly wurde aufgrund der angegebenen Ursache unterbrochen. Dieser Fehler tritt z.B. auf, wenn eine Datei, die Sie mit der Option **/win32res** angeben, nicht gefunden wurde.|
 |al1020|Die enthaltene Assembly "file" wird ignoriert.<br /><br /> Eine Eingabedatei, die eine Assembly enthält, wurde angegeben. *Al.exe*-Eingabedateien dürfen keine Assemblys enthalten.|
 |al1021|"setting": Überschreiben der vorherigen Einstellung.<br /><br /> Ein Modul weist einen Wert für eine bestimmte Einstellung auf, der ggf. über benutzerdefinierte Attribute zugewiesen und mit einem Wert überschrieben wurde, der mithilfe einer *Al.exe*-Befehlszeilenoption übergeben wurde.|

@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065983"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040155"
 ---
 # <a name="customizing-structure-marshaling"></a>Anpassen des Marshallings für Strukturen
 
@@ -319,7 +319,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Anpassen des Marshallens von Dezimalfeldern
 
-Wenn Sie Windows verwenden, treffen Sie möglicherweise auf einige APIs, die die native [`CY`- oder `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy)-Struktur verwenden. Standardmäßig marshallt der .NET-`decimal`-Typ in die native [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec)-Struktur. Sie können jedoch ein <xref:System.Runtime.InteropServices.MarshalAsAttribute> mit dem Wert <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> verwenden, um den Marshaller zur Konvertierung eines `decimal`-Werts in einen nativen `CY`-Wert anzuweisen.
+Wenn Sie Windows verwenden, treffen Sie möglicherweise auf einige APIs, die die native [`CY`- oder `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1)-Struktur verwenden. Standardmäßig marshallt der .NET-`decimal`-Typ in die native [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1)-Struktur. Sie können jedoch ein <xref:System.Runtime.InteropServices.MarshalAsAttribute> mit dem Wert <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> verwenden, um den Marshaller zur Konvertierung eines `decimal`-Werts in einen nativen `CY`-Wert anzuweisen.
 
 ```csharp
 public struct Currency
@@ -339,7 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>Marshalling von `System.Object`
 
 Unter Windows können Sie Felder vom Typ `object` in nativen Code marshallen. Diese Felder können in einen der drei folgenden Typen gemarshallt werden:
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 

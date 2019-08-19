@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2a99b6fe288cfa8b8a5d60bb127849323ed3a9
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751820"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545321"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Erstellen einer Windows-Dienst-App
 
@@ -24,9 +24,9 @@ In diesem Artikel wird beschrieben, wie Sie eine Windows-Dienstanwendung in Visu
 
 Erstellen Sie zunächst das Projekt, und legen Sie die Werte fest, die für die korrekte Funktion des Diensts erforderlich sind.
 
-1. Wählen Sie in Visual Studio auf der Menüleiste **Datei****Neu** > **Projekt** aus (oder drücken Sie **STRG**+**UMSCHALT**+**N**), um das Fenster **Neues Projekt** zu öffnen.
+1. Wählen Sie in Visual Studio auf der Menüleiste **Datei** **Neu** > **Projekt** aus (oder drücken Sie **STRG**+**UMSCHALT**+**N**), um das Fenster **Neues Projekt** zu öffnen.
 
-2. Navigieren Sie zur Projektvorlage **Windows-Dienst (.NET Framework)**, und wählen Sie sie aus. Sie finden diese, indem Sie **Installiert** und **Visual C#** aufklappen oder **Visual Basic**, und dann **Windows-Desktop** auswählen. Alternativ können Sie im Suchfeld oben rechts *Windows-Dienst* eingeben und die **EINGABETASTE** drücken.
+2. Navigieren Sie zur Projektvorlage **Windows-Dienst (.NET Framework)** , und wählen Sie sie aus. Sie finden diese, indem Sie **Installiert** und **Visual C#** aufklappen oder **Visual Basic**, und dann **Windows-Desktop** auswählen. Alternativ können Sie im Suchfeld oben rechts *Windows-Dienst* eingeben und die **EINGABETASTE** drücken.
 
    ![Windows-Dienstvorlage im Dialogfeld „Neues Projekt“ in Visual Studio](media/new-project-dialog.png)
 
@@ -37,7 +37,7 @@ Erstellen Sie zunächst das Projekt, und legen Sie die Werte fest, die für die 
 
 3. Geben Sie als **Name** *MyNewService* ein, und klicken Sie dann auf **OK**.
 
-   Die Registerkarte **Design** wird angezeigt (**Service1.cs [Design]** oder **Service1.vb [Design]**).
+   Die Registerkarte **Design** wird angezeigt (**Service1.cs [Design]** oder **Service1.vb [Design]** ).
 
    Die Projektvorlage beinhaltet eine Komponentenklasse mit dem Namen `Service1`, die von <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> erbt. Sie enthält einen großen Teil des grundlegenden Dienstcodes, etwa den Code zum Starten des Diensts.
 
@@ -67,7 +67,7 @@ In diesem Abschnitt fügen Sie dem Windows-Dienst ein benutzerdefiniertes Ereign
 
 1. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für **MyNewService.cs** oder **MyNewService.vb**, und wählen Sie dann **Designer anzeigen** aus.
 
-2. Erweitern Sie in der **Toolbox** die Option **Komponenten**, und ziehen Sie dann die **EventLog**-Komponente in eine der Registerkarten **Service1.cs [Design]** oder **Service1.vb [Design]**.
+2. Erweitern Sie in der **Toolbox** die Option **Komponenten**, und ziehen Sie dann die **EventLog**-Komponente in eine der Registerkarten **Service1.cs [Design]** oder **Service1.vb [Design]** .
 
 3. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für **MyNewService.cs** oder **MyNewService.vb**, und wählen Sie dann **Code anzeigen** aus.
 
@@ -249,7 +249,7 @@ Sie können auch die Statuseinstellungen SERVICE_START_PENDING und SERVICE_STOP_
     ```
 
     > [!NOTE]
-    > Der Dienststeuerungs-Manager verwendet die Member `dwWaitHint` und `dwCheckpoint` der [SERVICE_STATUS-Struktur](/windows/desktop/api/winsvc/ns-winsvc-_service_status), um zu bestimmen, wie lange bis zum Starten oder Herunterfahren eines Windows-Diensts gewartet werden muss. Wenn Ihre Methoden `OnStart` und `OnStop` eine lange Ausführungszeit haben, kann Ihr Dienst durch das erneute Aufrufen von `SetServiceStatus` mit einem erhöhten `dwCheckPoint`-Wert mehr Zeit anfordern.
+    > Der Dienststeuerungs-Manager verwendet die Member `dwWaitHint` und `dwCheckpoint` der [SERVICE_STATUS-Struktur](/windows/win32/api/winsvc/ns-winsvc-service_status), um zu bestimmen, wie lange bis zum Starten oder Herunterfahren eines Windows-Diensts gewartet werden muss. Wenn Ihre Methoden `OnStart` und `OnStop` eine lange Ausführungszeit haben, kann Ihr Dienst durch das erneute Aufrufen von `SetServiceStatus` mit einem erhöhten `dwCheckPoint`-Wert mehr Zeit anfordern.
 
 3. Deklarieren Sie nun in der Klasse `MyNewService` die Funktion [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) mithilfe eines [Plattformaufrufs](../interop/consuming-unmanaged-dll-functions.md):
 
@@ -538,7 +538,7 @@ Wenn Sie die Windows-Dienst-App nicht länger benötigen, können Sie sie entfer
 
 Nach der Erstellung des Diensts haben Sie nun folgende Möglichkeiten:
 
-- Erstellen eines eigenständigen Setupprogramms, damit andere Personen Ihren Windows-Dienst installieren können. Verwenden Sie das [WiX-Toolset](http://wixtoolset.org/), um einen Installer für einen Windows-Dienst zu erstellen. Weitere Ideen finden Sie unter [Erstellen eines Installationspakets](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+- Erstellen eines eigenständigen Setupprogramms, damit andere Personen Ihren Windows-Dienst installieren können. Verwenden Sie das [WiX-Toolset](https://wixtoolset.org/), um einen Installer für einen Windows-Dienst zu erstellen. Weitere Ideen finden Sie unter [Erstellen eines Installationspakets](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 - Sie können die Verwendung einer <xref:System.ServiceProcess.ServiceController>-Komponente untersuchen, die es Ihnen ermöglicht, Befehle an den installierten Dienst zu senden.
 

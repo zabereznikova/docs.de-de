@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: f11137b3c13bb9e8670c4df25fedf3251724a088
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610064"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566898"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -22,7 +22,7 @@ Das `ref`-Schlüsselwort gibt einen Wert an, der als Verweis übergeben wird. Es
 - In einer Methodensignatur und in einem Methodenaufruf, um ein Argument an eine Methode als Verweis zu übergeben. Weitere Informationen finden Sie unter [Übergeben eines Arguments als Verweis](#passing-an-argument-by-reference).
 - In einer Methodensignatur, um einen Wert an den Aufrufer als Verweis zurückzugeben. Weitere Informationen finden Sie unter [Verweisrückgabewerte](#reference-return-values).
 - In einem Memberkörper, um anzugeben, dass ein Verweisrückgabewert, den der Aufrufer ändern möchte, lokal als Verweis gespeichert ist oder dass eine lokale Variable auf einen anderen Wert per Verweis zugreift. Weitere Informationen finden Sie unter [Lokale ref-Variablen](#ref-locals).
-- In einer `struct`-Deklaration, um `ref struct` oder `ref readonly struct` zu deklarieren. Weitere Informationen finden Sie unter [ref-Strukturtypen](#ref-struct-types).
+- In einer `struct`-Deklaration, um `ref struct` oder `readonly ref struct` zu deklarieren. Weitere Informationen finden Sie unter [ref-Strukturtypen](#ref-struct-types).
 
 ## <a name="passing-an-argument-by-reference"></a>Übergeben eines Arguments als Verweis
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: e46083a9b8261cf8635d07e3b16f9c291bcc69a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ec18f9afed04882f26b5d2f34f64c25be042ed5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743798"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566869"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C# stellt den [is](../../language-reference/operators/type-testing-and-conversion-operators.md#is-operator)-Operator bereit, sodass Sie die Kompatibilität prüfen können, bevor Sie die Umwandlung tatsächlich ausführen. Weitere Informationen finden Sie unter [Vorgehensweise: Sicheres Umwandeln mit Musterabgleich und den Operatoren „as“ und „is“](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ C# stellt den [is](../../language-reference/operators/type-testing-and-cast.md#is-operator)-Operator bereit, sodass Sie die Kompatibilität prüfen können, bevor Sie die Umwandlung tatsächlich ausführen. Weitere Informationen finden Sie unter [Vorgehensweise: Sicheres Umwandeln mit Musterabgleich und den Operatoren „as“ und „is“](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -93,7 +93,7 @@ Weitere Informationen finden Sie im Abschnitt [Konvertierungen](~/_csharplang/sp
 
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Typen](../../../csharp/programming-guide/types/index.md)
-- [cast-Operator ()](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [cast-Operator ()](../../../csharp/language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [Benutzerdefinierte Konvertierungsoperatoren](../../../csharp/language-reference/operators/user-defined-conversion-operators.md)
 - [Verallgemeinerte Typkonvertierung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

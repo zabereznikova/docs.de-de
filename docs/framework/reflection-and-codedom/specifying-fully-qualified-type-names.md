@@ -17,11 +17,11 @@ ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612861"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "61793002"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Angeben vollqualifizierter Typnamen
 
@@ -143,7 +143,7 @@ Wenn der Namespace z.B. `Ozzy.Out+Back` ist, muss vor dem Pluszeichen ein umgeke
 
 Eine Assemblynamenspezifikation muss mindestens den wörtlichen Namen (IDENTIFIER) der Assembly enthalten. Auf den IDENTIFIER kann eine durch Kommas getrennte Liste von Eigenschaft/Wert-Paaren folgen, wie in der folgenden Tabelle beschrieben. Das Benennen von IDENTIFIER sollte die Regeln für das Benennen von Dateien einhalten. Beim IDENTIFIER wird Groß- und Kleinschreibung beachtet.
 
-|Name der Eigenschaft|Beschreibung|Zulässige Werte|
+|Name der Eigenschaft|BESCHREIBUNG|Zulässige Werte|
 |-------------------|-----------------|----------------------|
 |**Version**|Assemblyversionsnummer|*Major.Minor.Build.Revision*, wobei es sich bei *Major*, *Minor*, *Build* und *Revision* um ganze Zahlen zwischen 0 und einschließlich 65535 handelt|
 |**PublicKey**|Vollständiger öffentlicher Schlüssel|Zeichenfolgenwert des vollständigen öffentlichen Schlüssels im Hexadezimalformat. Geben Sie einen NULL-Verweis an (**Nothing** in Visual Basic), um eine private Assembly explizit zu kennzeichnen.|
