@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 65a7fbb2ef8fd24e80b4ccf979a7f3fc7cf19934
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 422613a9016efb55c299f24c50cd2eec6c2c1069
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423644"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588399"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 
@@ -39,44 +39,44 @@ Folgende Informationen können in einem Typ gespeichert sein:
 
 - Die Arten von zulässigen Vorgängen
 
-Der Compiler verwendet Typinformationen, um sicherzustellen, dass alle im Code ausgeführten Vorgänge *typsicher* sind. Wenn Sie z.B. eine Variable vom Typ [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) deklarieren, können Sie mit dem Compiler die Variable für Additions- und Subtraktionsvorgänge verwenden. Wenn Sie dieselben Vorgänge für eine Variable vom Typ [bool](../../../csharp/language-reference/keywords/bool.md) ausführen möchten, generiert der Compiler einen Fehler, wie im folgenden Beispiel dargestellt:
+Der Compiler verwendet Typinformationen, um sicherzustellen, dass alle im Code ausgeführten Vorgänge *typsicher* sind. Wenn Sie z.B. eine Variable vom Typ [int](../../language-reference/builtin-types/integral-numeric-types.md) deklarieren, können Sie mit dem Compiler die Variable für Additions- und Subtraktionsvorgänge verwenden. Wenn Sie dieselben Vorgänge für eine Variable vom Typ [bool](../../language-reference/keywords/bool.md) ausführen möchten, generiert der Compiler einen Fehler, wie im folgenden Beispiel dargestellt:
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> C- und C++-Entwickler sollten beachten, dass in C# [bool](../../../csharp/language-reference/keywords/bool.md) nicht in [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) konvertiert werden kann.
+> C- und C++-Entwickler sollten beachten, dass in C# [bool](../../language-reference/keywords/bool.md) nicht in [int](../../language-reference/builtin-types/integral-numeric-types.md) konvertiert werden kann.
 
 Der Compiler bettet die Typinformationen als Metadaten in die ausführbare Datei ein. Die Common Language Runtime (CLR) verwendet diese Metadaten zur Laufzeit, um die Typsicherheit zu gewährleisten, wenn Speicherplatz belegt und freigegeben wird.
 
 ### <a name="specifying-types-in-variable-declarations"></a>Angeben von Typen in Variablendeklarationen
 
-Wenn Sie eine Variable oder Konstante in einem Programm deklarieren, müssen Sie ihren Typ festlegen oder das [var](../../../csharp/language-reference/keywords/var.md)-Schlüsselwort verwenden, damit der Typ vom Compiler abgeleitet wird. Im folgenden Beispiel werden einige Variablendeklarationen dargestellt, die sowohl integrierte numerische Typen als auch komplexe benutzerdefinierte Typen verwenden:
+Wenn Sie eine Variable oder Konstante in einem Programm deklarieren, müssen Sie ihren Typ festlegen oder das [var](../../language-reference/keywords/var.md)-Schlüsselwort verwenden, damit der Typ vom Compiler abgeleitet wird. Im folgenden Beispiel werden einige Variablendeklarationen dargestellt, die sowohl integrierte numerische Typen als auch komplexe benutzerdefinierte Typen verwenden:
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-Die Methodenparameter- und Rückgabewerttypen werden in der Methodensignatur angegeben. Die folgende Signatur zeigt eine Methode, für die ein [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) als Eingabeargument benötigt wird und die eine Zeichenfolge zurückgibt:
+Die Methodenparameter- und Rückgabewerttypen werden in der Methodensignatur angegeben. Die folgende Signatur zeigt eine Methode, für die ein [int](../../language-reference/builtin-types/integral-numeric-types.md) als Eingabeargument benötigt wird und die eine Zeichenfolge zurückgibt:
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Zum Beispiel können Sie eine [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) nicht deklarieren und dieser dann den booleschen Wert [true](../../../csharp/language-reference/keywords/true-literal.md) zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
+Nachdem eine Variable deklariert wurde, kann sie nicht erneut mit einem neuen Typ deklariert werden. Außerdem kann ihr kein Wert zugewiesen werden, der nicht mit dem deklarierten Typ kompatibel ist. Zum Beispiel können Sie eine [int](../../language-reference/builtin-types/integral-numeric-types.md) nicht deklarieren und dieser dann den booleschen Wert [true](../../language-reference/keywords/true-literal.md) zuweisen. Werte können jedoch in andere Typen konvertiert werden, z. B., wenn diese neuen Variablen zugewiesen oder als Methodenargumente übergeben werden. Eine *Typkonvertierung*, die keinen Datenverlust verursacht, wird automatisch vom Compiler ausgeführt. Eine Konvertierung, die möglicherweise Datenverlust verursacht, erfordert eine *Umwandlung* in den Quellcode.
 
-Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md).
+Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](./casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Integrierte Typen
 
-C# liefert einen Standardsatz mit integrierten numerischen Typen zur Darstellung von ganzen Zahlen, Gleitkommawerten, booleschen Ausdrücken, Textzeichen, Dezimalwerten und anderen Datentypen. Es gibt auch integrierte `string`-Typen und `object`-Typen. Diese können Sie in jedem C#-Programm verwenden. Weitere Informationen über die integrierten Typen finden Sie in den [Referenztabellen für integrierte Typen](../../../csharp/language-reference/keywords/built-in-types-table.md).
+C# liefert einen Standardsatz mit integrierten numerischen Typen zur Darstellung von ganzen Zahlen, Gleitkommawerten, booleschen Ausdrücken, Textzeichen, Dezimalwerten und anderen Datentypen. Es gibt auch integrierte `string`-Typen und `object`-Typen. Diese können Sie in jedem C#-Programm verwenden. Weitere Informationen über die integrierten Typen finden Sie in den [Referenztabellen für integrierte Typen](../../language-reference/keywords/built-in-types-table.md).
 
 ## <a name="custom-types"></a>Benutzerdefinierte Typen
 
-Sie verwenden die Konstrukte [struct](../../../csharp/language-reference/keywords/struct.md), [class](../../../csharp/language-reference/keywords/class.md), [interface](../../../csharp/language-reference/keywords/interface.md) und [enum](../../../csharp/language-reference/keywords/enum.md), um eigene benutzerdefinierte Typen zu erstellen. Die .NET-Klassenbibliothek ist eine Auflistung benutzerdefinierter, von Microsoft bereitgestellter Typen, die Sie in Ihren eigenen Anwendungen verwenden können. Standardmäßig sind die am häufigsten verwendeten Typen in der Klassenbibliothek in jedem C#-Programm verfügbar. Andere stehen nur zur Verfügung, wenn Sie ausdrücklich einen Projektverweis auf die Assembly hinzufügen, in der diese definiert sind. Wenn der Compiler über einen Verweis auf die Assembly verfügt, können Sie Variablen (und Konstanten) des in dieser Assembly deklarierten Typs im Quellcode deklarieren. Weitere Informationen finden Sie in der Dokumentation zur [.NET-Klassenbibliothek](../../../standard/class-library-overview.md).
+Sie verwenden die Konstrukte [struct](../../language-reference/keywords/struct.md), [class](../../language-reference/keywords/class.md), [interface](../../language-reference/keywords/interface.md) und [enum](../../language-reference/keywords/enum.md), um eigene benutzerdefinierte Typen zu erstellen. Die .NET-Klassenbibliothek ist eine Auflistung benutzerdefinierter, von Microsoft bereitgestellter Typen, die Sie in Ihren eigenen Anwendungen verwenden können. Standardmäßig sind die am häufigsten verwendeten Typen in der Klassenbibliothek in jedem C#-Programm verfügbar. Andere stehen nur zur Verfügung, wenn Sie ausdrücklich einen Projektverweis auf die Assembly hinzufügen, in der diese definiert sind. Wenn der Compiler über einen Verweis auf die Assembly verfügt, können Sie Variablen (und Konstanten) des in dieser Assembly deklarierten Typs im Quellcode deklarieren. Weitere Informationen finden Sie in der Dokumentation zur [.NET-Klassenbibliothek](../../../standard/class-library-overview.md).
 
 ## <a name="the-common-type-system"></a>Das allgemeine Typsystem
 
 Mit zwei grundlegenden Punkten über das System der Typen in .NET sollten Sie vertraut sein:
 
-- Es unterstützt das Prinzip der Vererbung. Typen können von anderen Typen abgeleitet werden, die als *Basistypen* bezeichnet werden. Der abgeleitete Typ erbt (mit einigen Beschränkungen) die Methoden, Eigenschaften und anderen Member des Basistyps. Der Basistyp kann wiederum von einem anderen Typ abgeleitet sein. In diesem Fall erbt der abgeleitete Typ die Member beider Basistypen in der Vererbungshierarchie. Alle Typen, einschließlich integrierter numerischer Typen, z. B. <xref:System.Int32?displayProperty=nameWithType> (C#-Schlüsselwort: [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)), werden letztendlich von einem einzelnen Basistyp abgeleitet, nämlich <xref:System.Object?displayProperty=nameWithType> (C#-Schlüsselwort: [object](../../../csharp/language-reference/keywords/object.md)). Diese einheitliche Typhierarchie wird als [Allgemeines Typsystem](../../../standard/base-types/common-type-system.md) (CTS) bezeichnet. Weitere Informationen zur Vererbung in C# finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
+- Es unterstützt das Prinzip der Vererbung. Typen können von anderen Typen abgeleitet werden, die als *Basistypen* bezeichnet werden. Der abgeleitete Typ erbt (mit einigen Beschränkungen) die Methoden, Eigenschaften und anderen Member des Basistyps. Der Basistyp kann wiederum von einem anderen Typ abgeleitet sein. In diesem Fall erbt der abgeleitete Typ die Member beider Basistypen in der Vererbungshierarchie. Alle Typen, einschließlich integrierter numerischer Typen, z. B. <xref:System.Int32?displayProperty=nameWithType> (C#-Schlüsselwort: [int](../../language-reference/builtin-types/integral-numeric-types.md)), werden letztendlich von einem einzelnen Basistyp abgeleitet, nämlich <xref:System.Object?displayProperty=nameWithType> (C#-Schlüsselwort: [object](../../language-reference/keywords/object.md)). Diese einheitliche Typhierarchie wird als [Allgemeines Typsystem](../../../standard/base-types/common-type-system.md) (CTS) bezeichnet. Weitere Informationen zur Vererbung in C# finden Sie unter [Vererbung](../classes-and-structs/inheritance.md).
 
-- Jeder Typ im CTS ist als *Werttyp* oder *Referenztyp* definiert. Dies betrifft auch alle benutzerdefinierten Typen in der .NET-Klassenbibliothek und Ihre eigenen benutzerdefinierten Typen. Typen, die Sie mithilfe des [struct](../../../csharp/language-reference/keywords/struct.md)-Schlüsselworts definieren, sind Werttypen. Alle integrierten numerischen Typen sind `structs`. Typen, die Sie mithilfe des [class](../../../csharp/language-reference/keywords/class.md)-Schlüsselworts definieren, sind Referenztypen. Für Referenztypen und Werttypen gelten unterschiedliche Kompilierzeitregeln und ein anderes Laufzeitverhalten.
+- Jeder Typ im CTS ist als *Werttyp* oder *Referenztyp* definiert. Dies betrifft auch alle benutzerdefinierten Typen in der .NET-Klassenbibliothek und Ihre eigenen benutzerdefinierten Typen. Typen, die Sie mithilfe des [struct](../../language-reference/keywords/struct.md)-Schlüsselworts definieren, sind Werttypen. Alle integrierten numerischen Typen sind `structs`. Typen, die Sie mithilfe des [class](../../language-reference/keywords/class.md)-Schlüsselworts definieren, sind Referenztypen. Für Referenztypen und Werttypen gelten unterschiedliche Kompilierzeitregeln und ein anderes Laufzeitverhalten.
 
 In der folgenden Abbildung wird die Beziehung zwischen Werttypen und Referenztypen im CTS dargestellt.
 
@@ -91,7 +91,7 @@ Die folgende Abbildung zeigt Werttypen und Verweistypen im CTS:
 
 Werttypen werden von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet, was wiederum von <xref:System.Object?displayProperty=nameWithType> abgeleitet wird. Typen, die von <xref:System.ValueType?displayProperty=nameWithType> abgeleitet werden, weisen ein besonderes Verhalten in der CLR auf. Werttypvariablen enthalten die zugehörigen Werte direkt, d. h., der Speicher wird inline in dem Kontext belegt, in dem die Variable deklariert ist. Für Werttypvariablen erfolgt keine getrennte Heapzuordnung oder ein Mehraufwand für die Garbage Collection.
 
-Zwei Kategorien von Werttypen sind verfügbar: [struct](../../../csharp/language-reference/keywords/struct.md) und [enum](../../../csharp/language-reference/keywords/enum.md).
+Zwei Kategorien von Werttypen sind verfügbar: [struct](../../language-reference/keywords/struct.md) und [enum](../../language-reference/keywords/enum.md).
 
 Die integrierten numerischen Typen sind Strukturen und verfügen über Eigenschaften und Methoden, auf die Sie zugreifen können:
 
@@ -108,25 +108,25 @@ int i = 5;
 char c = 'Z';
 ```
 
-Werttypen sind *versiegelt* (sealed). Dies bedeutet z.B., dass Sie keinen Typ von <xref:System.Int32?displayProperty=nameWithType> ableiten können und dass eine Struktur nicht von einer benutzerdefinierten Klasse oder Struktur erben kann, weil eine Struktur nur von <xref:System.ValueType?displayProperty=nameWithType> erben kann. Eine Struktur kann jedoch eine oder mehrere Schnittstellen implementieren. Sie können einen Strukturtyp in einen Schnittstellentyp umwandeln, der von diesem implementiert wird. Dadurch wird ein *Boxing*-Vorgang gestartet, mit dem die Struktur von einem Verweistypobjekt im verwalteten Heap umschlossen wird. Boxing-Vorgänge werden auch ausgeführt, wenn Sie einen Werttyp an eine Methode übergeben, die <xref:System.Object?displayProperty=nameWithType> oder einen beliebigen Schnittstellentyp als Eingabeparameter akzeptiert. Weitere Informationen finden Sie unter [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md).
+Werttypen sind *versiegelt* (sealed). Dies bedeutet z.B., dass Sie keinen Typ von <xref:System.Int32?displayProperty=nameWithType> ableiten können und dass eine Struktur nicht von einer benutzerdefinierten Klasse oder Struktur erben kann, weil eine Struktur nur von <xref:System.ValueType?displayProperty=nameWithType> erben kann. Eine Struktur kann jedoch eine oder mehrere Schnittstellen implementieren. Sie können einen Strukturtyp in einen Schnittstellentyp umwandeln, der von diesem implementiert wird. Dadurch wird ein *Boxing*-Vorgang gestartet, mit dem die Struktur von einem Verweistypobjekt im verwalteten Heap umschlossen wird. Boxing-Vorgänge werden auch ausgeführt, wenn Sie einen Werttyp an eine Methode übergeben, die <xref:System.Object?displayProperty=nameWithType> oder einen beliebigen Schnittstellentyp als Eingabeparameter akzeptiert. Weitere Informationen finden Sie unter [Boxing und Unboxing](./boxing-and-unboxing.md).
 
-Sie können das [struct](../../../csharp/language-reference/keywords/struct.md)-Schlüsselwort verwenden, um eigene benutzerdefinierte Werttypen zu erstellen. In der Regel wird eine Struktur als Container für einen kleinen Satz verwandter Variablen verwendet, wie im folgenden Beispiel dargestellt:
+Sie können das [struct](../../language-reference/keywords/struct.md)-Schlüsselwort verwenden, um eigene benutzerdefinierte Werttypen zu erstellen. In der Regel wird eine Struktur als Container für einen kleinen Satz verwandter Variablen verwendet, wie im folgenden Beispiel dargestellt:
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Weitere Informationen über Strukturen finden Sie unter [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md). Weitere Informationen über Werttypen in .NET finden Sie unter [Werttypen](../../../csharp/language-reference/keywords/value-types.md).
+Weitere Informationen über Strukturen finden Sie unter [Strukturen](../classes-and-structs/structs.md). Weitere Informationen über Werttypen in .NET finden Sie unter [Werttypen](../../language-reference/keywords/value-types.md).
 
-Die andere Kategorie von Werttypen ist [enum](../../../csharp/language-reference/keywords/enum.md). Eine Enumeration definiert einen Satz benannter ganzzahliger Konstanten. So enthält z.B. die <xref:System.IO.FileMode?displayProperty=nameWithType>-Enumeration in der .NET-Klassenbibliothek mehrere benannte ganzzahlige Konstanten, die festlegen, wie eine Datei geöffnet werden soll. Die Definition erfolgt wie im folgenden Beispiel:
+Die andere Kategorie von Werttypen ist [enum](../../language-reference/keywords/enum.md). Eine Enumeration definiert einen Satz benannter ganzzahliger Konstanten. So enthält z.B. die <xref:System.IO.FileMode?displayProperty=nameWithType>-Enumeration in der .NET-Klassenbibliothek mehrere benannte ganzzahlige Konstanten, die festlegen, wie eine Datei geöffnet werden soll. Die Definition erfolgt wie im folgenden Beispiel:
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
 Die `System.IO.FileMode.Create`-Konstante besitzt den Wert 2. Der Name ist jedoch für Personen, die den Quellcode lesen, viel aussagekräftiger. Aus diesem Grund ist es besser, anstelle von Konstantenliteralen Enumerationen zu verwenden. Weitere Informationen finden Sie unter <xref:System.IO.FileMode?displayProperty=nameWithType>.
 
-Alle Enumerationen erben von <xref:System.Enum?displayProperty=nameWithType>, was wiederum von <xref:System.ValueType?displayProperty=nameWithType> erbt. Alle Regeln, die für Strukturen gelten, gelten auch für Enumerationen. Weitere Informationen über Enumerationen finden Sie unter [Enumerationstypen](../../../csharp/programming-guide/enumeration-types.md).
+Alle Enumerationen erben von <xref:System.Enum?displayProperty=nameWithType>, was wiederum von <xref:System.ValueType?displayProperty=nameWithType> erbt. Alle Regeln, die für Strukturen gelten, gelten auch für Enumerationen. Weitere Informationen über Enumerationen finden Sie unter [Enumerationstypen](../enumeration-types.md).
 
 ### <a name="reference-types"></a>Verweistypen
 
-Ein Typ, der als [Klasse](../../../csharp/language-reference/keywords/class.md), [Delegat](../../../csharp/language-reference/keywords/delegate.md), Array oder [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) definiert ist, ist ein *Referenztyp*. Wenn Sie zur Laufzeit eine Variable eines Referenztyps deklarieren, enthält die Variable zunächst den Wert [NULL](../../../csharp/language-reference/keywords/null.md), bis Sie explizit ein Objekt mithilfe des Operators [new](../../../csharp/language-reference/operators/new-operator.md) erstellen oder ihr ein Objekt zuweisen, das, wie im folgenden Beispiel gezeigt wird, an anderer Stelle mithilfe des Operators `new` erstellt wurde:
+Ein Typ, der als [Klasse](../../language-reference/keywords/class.md), [Delegat](../../language-reference/keywords/delegate.md), Array oder [Schnittstelle](../../language-reference/keywords/interface.md) definiert ist, ist ein *Referenztyp*. Wenn Sie zur Laufzeit eine Variable eines Referenztyps deklarieren, enthält die Variable zunächst den Wert [NULL](../../language-reference/keywords/null.md), bis Sie explizit ein Objekt mithilfe des Operators [new](../../language-reference/operators/new-operator.md) erstellen oder ihr ein Objekt zuweisen, das, wie im folgenden Beispiel gezeigt wird, an anderer Stelle mithilfe des Operators `new` erstellt wurde:
 
 ```csharp
 MyClass mc = new MyClass();
@@ -145,11 +145,11 @@ Alle Arrays sind Referenztypen, selbst wenn ihre Elemente Werttypen sind. Arrays
 
 [!code-csharp[csProgGuideTypes#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#45)]
 
-Referenztypen bieten volle Vererbungsunterstützung. Wenn Sie eine Klasse erstellen, können Sie von einer anderen Schnittstelle oder Klasse erben, die nicht als [versiegelt](../../../csharp/language-reference/keywords/sealed.md) definiert ist. Andere Klassen können von Ihrer Klasse erben und die virtuellen Methoden überschreiben. Weitere Informationen zum Erstellen eigener Klassen finden Sie unter [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md). Weitere Informationen zur Vererbung und zu virtuellen Methoden finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).
+Referenztypen bieten volle Vererbungsunterstützung. Wenn Sie eine Klasse erstellen, können Sie von einer anderen Schnittstelle oder Klasse erben, die nicht als [versiegelt](../../language-reference/keywords/sealed.md) definiert ist. Andere Klassen können von Ihrer Klasse erben und die virtuellen Methoden überschreiben. Weitere Informationen zum Erstellen eigener Klassen finden Sie unter [Klassen und Strukturen](../classes-and-structs/index.md). Weitere Informationen zur Vererbung und zu virtuellen Methoden finden Sie unter [Vererbung](../classes-and-structs/inheritance.md).
 
 ## <a name="types-of-literal-values"></a>Typen von Literalwerten
 
-In C# erhalten Literalwerte einen Typ vom Compiler. Sie können festlegen, wie ein numerisches Literal eingegeben werden soll, indem Sie am Ende der Zahl einen Buchstaben anfügen. Um z. B. anzugeben, dass der Wert 4.56 als Gleitkommazahl behandelt werden soll, fügen Sie nach der Zahl `4.56f` ein "f" oder "F" an: Wenn kein Buchstabe angefügt wird, leitet der Compiler einen Typ für das Literal ab. Weitere Informationen darüber, welche Typen mit Buchstabensuffixen angegeben werden können, finden Sie auf den Referenzseiten für einzelne Typen unter [Werttypen](../../../csharp/language-reference/keywords/value-types.md).
+In C# erhalten Literalwerte einen Typ vom Compiler. Sie können festlegen, wie ein numerisches Literal eingegeben werden soll, indem Sie am Ende der Zahl einen Buchstaben anfügen. Um z. B. anzugeben, dass der Wert 4.56 als Gleitkommazahl behandelt werden soll, fügen Sie nach der Zahl `4.56f` ein "f" oder "F" an: Wenn kein Buchstabe angefügt wird, leitet der Compiler einen Typ für das Literal ab. Weitere Informationen darüber, welche Typen mit Buchstabensuffixen angegeben werden können, finden Sie auf den Referenzseiten für einzelne Typen unter [Werttypen](../../language-reference/keywords/value-types.md).
 
 Da Literale typisiert sind und alle Typen letztlich von <xref:System.Object?displayProperty=nameWithType> abgeleitet werden, können Sie Code der folgenden Art erstellen und kompilieren:
 
@@ -166,35 +166,35 @@ stringList.Add("String example");
 stringList.Add(4);
 ```
 
-Die Verwendung des Typparameters ermöglicht die Wiederverwendung der Klasse für beliebige Elementtypen, ohne die einzelnen Elemente in [object](../../../csharp/language-reference/keywords/object.md) konvertieren zu müssen. Generische Auflistungsklassen werden als *stark typisierte Auflistungen* bezeichnet, weil der Compiler den jeweiligen Typ der Elemente in der Auflistung kennt und zur Kompilierzeit einen Fehler auslösen kann, wenn Sie beispielsweise versuchen, dem `stringList`-Objekt im vorherigen Beispiel eine ganze Zahl hinzuzufügen. Weitere Informationen finden Sie unter [Generics](../../../csharp/programming-guide/generics/index.md).
+Die Verwendung des Typparameters ermöglicht die Wiederverwendung der Klasse für beliebige Elementtypen, ohne die einzelnen Elemente in [object](../../language-reference/keywords/object.md) konvertieren zu müssen. Generische Auflistungsklassen werden als *stark typisierte Auflistungen* bezeichnet, weil der Compiler den jeweiligen Typ der Elemente in der Auflistung kennt und zur Kompilierzeit einen Fehler auslösen kann, wenn Sie beispielsweise versuchen, dem `stringList`-Objekt im vorherigen Beispiel eine ganze Zahl hinzuzufügen. Weitere Informationen finden Sie unter [Generics](../generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-nullable-types"></a>Implizite Typen, anonyme Typen und Typen, die NULL-Werte zulassen
 
-Wie bereits zuvor erläutert, können Sie eine lokale Variable (jedoch keine Klassenmember) implizit eingeben, indem Sie das [var](../../../csharp/language-reference/keywords/var.md)-Schlüsselwort verwenden. Die Variable erhält weiterhin zur Kompilierzeit einen Typ, aber der Typ wird vom Compiler bereitgestellt. Weitere Informationen zu finden Sie unter [Implizit typisierte lokale Variablen](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).
+Wie bereits zuvor erläutert, können Sie eine lokale Variable (jedoch keine Klassenmember) implizit eingeben, indem Sie das [var](../../language-reference/keywords/var.md)-Schlüsselwort verwenden. Die Variable erhält weiterhin zur Kompilierzeit einen Typ, aber der Typ wird vom Compiler bereitgestellt. Weitere Informationen zu finden Sie unter [Implizit typisierte lokale Variablen](../classes-and-structs/implicitly-typed-local-variables.md).
 
-In einigen Fällen ist es unpraktisch, einen benannten Typ für einfache Sätze verwandter Werte zu erstellen, die nicht außerhalb von Methodengrenzen gespeichert oder übergeben werden sollen. Sie können für diesen Zweck *anonyme Typen* erstellen. Weitere Informationen finden Sie unter [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).
+In einigen Fällen ist es unpraktisch, einen benannten Typ für einfache Sätze verwandter Werte zu erstellen, die nicht außerhalb von Methodengrenzen gespeichert oder übergeben werden sollen. Sie können für diesen Zweck *anonyme Typen* erstellen. Weitere Informationen finden Sie unter [Anonyme Typen](../classes-and-structs/anonymous-types.md).
 
-Gewöhnliche Werttypen können den Wert [NULL](../../../csharp/language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein `?` anfügen. Zum Beispiel ist `int?` ein `int`-Typ, der auch den Wert [NULL](../../../csharp/language-reference/keywords/null.md) aufweisen kann. Im CTS sind Typen, die NULL-Werte zulassen, Instanzen vom generischen Strukturtyp <xref:System.Nullable%601?displayProperty=nameWithType>. Typen, die NULL-Werte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Nullable-Typen](../../../csharp/programming-guide/nullable-types/index.md).
+Gewöhnliche Werttypen können den Wert [NULL](../../language-reference/keywords/null.md) nicht aufweisen. Sie können jedoch auf NULL festlegbare Werttypen erstellen, indem Sie nach dem Typ ein `?` anfügen. Zum Beispiel ist `int?` ein `int`-Typ, der auch den Wert [NULL](../../language-reference/keywords/null.md) aufweisen kann. Im CTS sind Typen, die NULL-Werte zulassen, Instanzen vom generischen Strukturtyp <xref:System.Nullable%601?displayProperty=nameWithType>. Typen, die NULL-Werte zulassen, sind besonders hilfreich, wenn Sie Daten an und aus Datenbanken übergeben, in denen die numerischen Werte NULL sein können. Weitere Informationen finden Sie unter [Nullable-Typen](../nullable-types/index.md).
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
 Weitere Informationen finden Sie unter den folgenden Themen:
 
-- [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+- [Umwandlung und Typkonvertierungen](./casting-and-type-conversions.md)
 
-- [Boxing und Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+- [Boxing und Unboxing](./boxing-and-unboxing.md)
 
-- [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Verwenden von dynamischen Typen](./using-type-dynamic.md)
 
-- [Werttypen](../../../csharp/language-reference/keywords/value-types.md)
+- [Werttypen](../../language-reference/keywords/value-types.md)
 
-- [Verweistypen](../../../csharp/language-reference/keywords/reference-types.md)
+- [Verweistypen](../../language-reference/keywords/reference-types.md)
 
-- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Klassen und Strukturen](../classes-and-structs/index.md)
 
-- [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [Anonyme Typen](../classes-and-structs/anonymous-types.md)
 
-- [Generics](../../../csharp/programming-guide/generics/index.md)
+- [Generics](../generics/index.md)
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
 
@@ -202,7 +202,7 @@ Weitere Informationen finden Sie unter den folgenden Themen:
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [C#-Referenz](../../language-reference/index.md)
+- [C#-Programmierhandbuch](../index.md)
 - [Konvertierung von XML-Datentypen](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Integrale Typen](../../language-reference/builtin-types/integral-numeric-types.md)

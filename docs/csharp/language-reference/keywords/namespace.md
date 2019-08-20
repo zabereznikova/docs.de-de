@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: df921ecc670bf12411dc8b0d828d6c19bb0a1aec
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422742"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039449"
 ---
 # <a name="namespace-c-reference"></a>Namespace (C#-Referenz)
 
@@ -52,24 +52,15 @@ Im folgenden Beispiel wird veranschaulicht, wie eine statische Methode in einem 
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="related-resources"></a>Weitere Informationen
-
-Weitere Informationen zur Verwendung von Namespaces finden Sie in den folgenden Themen:
-
-- [Namespaces](../../programming-guide/namespaces/index.md)
-
-- [Using-Namespaces](../../programming-guide/namespaces/using-namespaces.md)
-
-- [Vorgehensweise: Verwenden des globalen Namespacealias](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Weitere Informationen finden Sie im Abschnitt [Namespaces](~/_csharplang/spec/namespaces.md) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../language-reference/index.md)
-- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Referenz](../index.md)
 - [C#-Schlüsselwörter](index.md)
 - [using](using-directive.md)
 - [using static](using-static.md)
+- [Namespacealias-Qualifizierer `::`](../operators/namespace-alias-qualifier.md)
+- [Namespaces](../../programming-guide/namespaces/index.md)

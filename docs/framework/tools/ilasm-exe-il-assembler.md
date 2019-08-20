@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833886"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567064"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
@@ -104,7 +104,7 @@ Damit dieses Zusammenspiel von *Ildasm.exe* und *Ilasm.exe* so exakt wie möglic
 > [!NOTE]
 > *Ildasm.exe* kann nur für Dateien auf der Festplatte verwendet werden. Bei Dateien, die im globalen Assemblycache installiert sind, funktioniert dieses Tool nicht.
 
-Weitere Informationen zur Grammatik von IL finden Sie in der Datei „asmparse.grammar“ im Windows Software Development Kit (SDK).
+Weitere Informationen zur Grammatik von IL finden Sie in der Datei „asmparse.grammar“ im Windows SDK.
 
 ## <a name="version-information"></a>Versionsinformationen
 
@@ -137,7 +137,7 @@ Ab .NET Framework 4.5 können Sie ein beliebiges Marshall-BLOB (Binary Large O
         Test(object A_1) cil managed
 ```
 
-Weitere Informationen zur Grammatik von IL finden Sie in der Datei „asmparse.grammar“ im Windows Software Development Kit (SDK).
+Weitere Informationen zur Grammatik von IL finden Sie in der Datei „asmparse.grammar“ im Windows SDK.
 
 ## <a name="examples"></a>Beispiele
 

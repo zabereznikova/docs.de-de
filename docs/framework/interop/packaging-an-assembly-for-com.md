@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ca87d688d6802df967ea81b8297b099350f1c86
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 11777f21d34da8b529352122bbf185f1938d3eb5
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629324"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567232"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Verpacken einer .NET Framework-Assembly für COM
 
@@ -31,7 +31,7 @@ COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Ty
 
 - Eine Liste von Typen, die COM-Anwendungen nutzen können
 
-  Einige verwaltete Typen sind nicht für COM sichtbar; einige sind sichtbar, aber nicht erstellbar, und andere sind sichtbar und erstellbar. Eine Assembly kann eine beliebige Kombination von nicht sichtbaren, sichtbaren, nicht erstellbaren und erstellbaren Typen umfassen. Aus Gründen der Vollständigkeit identifizieren Sie die Typen in einer Assembly, die für COM verfügbar gemacht werden sollen, insbesondere, wenn diese Typen eine Teilmenge der Typen sind, die für .NET Framework verfügbar gemacht werden sollen.
+  Einige verwalteten Typen sind nicht für COM sichtbar; einige sind sichtbar, aber nicht erstellbar, und andere sind sichtbar und erstellbar. Eine Assembly kann eine beliebige Kombination von nicht sichtbaren, sichtbaren, nicht erstellbaren und erstellbaren Typen umfassen. Aus Gründen der Vollständigkeit identifizieren Sie die Typen in einer Assembly, die für COM verfügbar gemacht werden sollen, insbesondere, wenn diese Typen eine Teilmenge der Typen sind, die für .NET Framework verfügbar gemacht werden sollen.
 
   Weitere Informationen finden Sie unter [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md).
 
@@ -49,7 +49,7 @@ COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Ty
 
 - Einbindung der Typbibliothek
 
-  Die meisten Typen erfordern eine Typbibliothek, wenn sie von einer COM-Anwendung genutzt werden. Sie können eine Typbibliothek generieren oder COM-Entwickler mit der Ausführung dieser Aufgabe betreuen. Das Windows Software Development Kit (SDK) bietet die folgenden Optionen zum Generieren einer Typbibliothek:
+  Die meisten Typen erfordern eine Typbibliothek, wenn sie von einer COM-Anwendung genutzt werden. Sie können eine Typbibliothek generieren oder COM-Entwickler mit der Ausführung dieser Aufgabe betreuen. Das Windows SDK bietet die folgenden Optionen zum Generieren einer Typbibliothek:
 
   - [Type Library Exporter-Tool](#cpconpackagingassemblyforcomanchor1)
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744253"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608297"
 ---
 # <a name="c-guide"></a>Leitfaden für C#
 
@@ -52,16 +52,16 @@ Der Leitfaden für C# ist in mehrere Abschnitte unterteilt. Sie können diese na
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [C#-Programmierhandbuch](../csharp/programming-guide/index.md)
+* [C#-Programmierhandbuch](./programming-guide/index.md)
   * Stellt Informationen und praktische Beispiele zum Verwenden von C#-Sprachkonstrukten bereit.
 
-* [Exemplarische Vorgehensweisen](../csharp/walkthroughs.md)
+* [Exemplarische Vorgehensweisen](./walkthroughs.md)
   * Enthält Links zu exemplarischen Vorgehensweisen für die Programmierung in C# und eine kurze Beschreibung jeder exemplarischen Vorgehensweise.
 
 * [Sprachreferenz](language-reference/index.md)
   * Dieser Abschnitt enthält das Referenzmaterial zur C#-Sprache. Dieses Material hilft Ihnen beim Verständnis der Syntax und der Semantik von C#. Sie erhalten auch Referenzmaterialien zu Typen, Operatoren, Attributen, Präprozessoranweisungen, Compilerschaltern, Compilerfehlern und Compilerwarnungen.
 
-* [C#-Programmiersprachenspezifikation](../csharp/language-reference/language-specification/index.md)
+* [C#-Programmiersprachenspezifikation](./language-reference/language-specification/index.md)
   * Links zu den neuesten Versionen der C#-Sprachspezifikation.
 
 ## <a name="see-also"></a>Siehe auch

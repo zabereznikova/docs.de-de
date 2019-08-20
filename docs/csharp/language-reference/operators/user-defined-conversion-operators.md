@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 5d1882048b2af12c29a3771055cbeba9565b7dab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8788883a6c60032de2ffab658fcf2721654fc6f7
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67787396"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566675"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Benutzerdefinierte Konvertierungsoperatoren (C#-Referenz)
 
@@ -23,7 +23,7 @@ Ein benutzerdefinierter Typ kann eine benutzerdefinierte implizite oder explizit
 
 Zum Aufrufen von impliziten Konvertierungen ist keine spezielle Syntax erforderlich. Implizite Konvertierungen können in verschiedenen Situationen auftreten, beispielswiese in Arbeitsaufträgen und Methodenaufrufen. Vordefinierte implizite Konvertierungen in C# werden immer erfolgreich ausgeführt. Bei deren Ausführung wird nie eine Ausnahme ausgelöst, und es gehen nie Informationen verloren. Benutzerdefinierte Konvertierungen sollten sich ebenso verhalten. Wenn bei einer benutzerdefinierten Konvertierung eine Ausnahme ausgelöst werden kann oder Informationen verloren gehen können, definieren Sie sie als explizite Konvertierung.
 
-Benutzerdefinierte Konvertierungen werden vom [is](type-testing-and-conversion-operators.md#is-operator)- und [as](type-testing-and-conversion-operators.md#as-operator)-Operator nicht berücksichtigt. Verwenden Sie den [cast-Operator ()](type-testing-and-conversion-operators.md#cast-operator-), um eine benutzerdefinierte explizite Konvertierung aufzurufen.
+Benutzerdefinierte Konvertierungen werden vom [is](type-testing-and-cast.md#is-operator)- und [as](type-testing-and-cast.md#as-operator)-Operator nicht berücksichtigt. Verwenden Sie den [cast-Operator ()](type-testing-and-cast.md#cast-operator-), um eine benutzerdefinierte explizite Konvertierung aufzurufen.
 
 Verwenden Sie zum Definieren einer impliziten bzw. expliziten Konvertierung die Schlüsselwörter `operator` und `implicit` bzw. `explicit`. Bei dem Typ, der eine Konvertierung definiert, muss es sich um einen Quelltyp oder um einen Zieltyp dieser Konvertierung handeln. Eine Konvertierung zwischen zwei benutzerdefinierten Typen kann in einem der beiden Typen definiert werden.
 
@@ -47,6 +47,6 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [C#-Referenz](../index.md)
 - [C#-Operatoren](index.md)
 - [Operatorüberladung](operator-overloading.md)
-- [Typtest- und Konvertierungsoperatoren](type-testing-and-conversion-operators.md)
+- [Typtest- und Umwandlungsoperatoren](type-testing-and-cast.md)
 - [Umwandlung und Typkonvertierung](../../programming-guide/types/casting-and-type-conversions.md)
 - [Chained user-defined explicit conversions in C# (Verkettete benutzerdefinierte, explizite Konvertierungen in C#)](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

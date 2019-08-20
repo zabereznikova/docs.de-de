@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062957"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604223"
 ---
 # <a name="get-started-with-c"></a>Erste Schritte mit C\#
 
@@ -43,15 +43,15 @@ Folgende Themen sind verfügbar:
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-* [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)
+* [C#-Programmierhandbuch](../programming-guide/index.md)
 
     Enthält Informationen über C#-Programmierkonzepte und beschreibt das Ausführen verschiedener Aufgaben in C#.
 
-* [C#-Referenz](../../csharp/language-reference/index.md)
+* [C#-Referenz](../language-reference/index.md)
 
     Enthält ausführliche Referenzinformationen zu C#-Schlüsselwörtern, -Operatoren, -Präprozessoranweisungen, -Compileroptionen sowie -Compilerfehlern und -warnmeldungen.
 
-* [Exemplarische Vorgehensweisen](../../csharp/walkthroughs.md)
+* [Exemplarische Vorgehensweisen](../walkthroughs.md)
 
     Enthält Links zu exemplarischen Vorgehensweisen für die Programmierung in C# und eine kurze Beschreibung jeder exemplarischen Vorgehensweise.
 

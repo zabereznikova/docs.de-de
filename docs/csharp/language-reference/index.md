@@ -8,33 +8,33 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 45352d97372e556627ead75d969f088de9c85bd0
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 96fd360342a3bc0f82df37761abb372bdcaa8d7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833243"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606125"
 ---
 # <a name="c-reference"></a>C#-Referenz
 Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, Sonderzeichen, Präprozessordirektiven, Compileroptionen sowie Compilerfehlern und -warnmeldungen von C#.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [C#-Schlüsselwörter](../../csharp/language-reference/keywords/index.md)  
+ [C#-Schlüsselwörter](./keywords/index.md)  
  Enthält Links zu Informationen über C#-Schlüsselwörtern und zur Syntax.  
   
- [C#-Operatoren](../../csharp/language-reference/operators/index.md)  
+ [C#-Operatoren](./operators/index.md)  
  Enthält Links zu Informationen über C#-Operatoren und zur Syntax.  
 
- [C#-Sonderzeichen](../../csharp/language-reference/tokens/index.md)  
+ [C#-Sonderzeichen](./tokens/index.md)  
  Enthält Links zu Informationen über kontextbezogene Sonderzeichen in C# und deren Verwendung.  
 
- [C#-Präprozessoranweisungen](../../csharp/language-reference/preprocessor-directives/index.md)  
+ [C#-Präprozessoranweisungen](./preprocessor-directives/index.md)  
  Enthält Links zu Informationen über die Compilerbefehle zum Einbetten in C#-Quellcode.  
   
- [C#-Compileroptionen](../../csharp/language-reference/compiler-options/index.md)  
+ [C#-Compileroptionen](./compiler-options/index.md)  
  Enthält Informationen über Compileroptionen und ihre Verwendung.  
   
- [C#-Compilerfehler](../../csharp/language-reference/compiler-messages/index.md)  
+ [C#-Compilerfehler](./compiler-messages/index.md)  
  Enthält Codeausschnitte, die die Ursache und Korrektur der C#-Compilerfehler und -warnungen veranschaulichen.  
   
  [C#-Programmiersprachenspezifikation](../../../_csharplang/spec/introduction.md)  
@@ -58,11 +58,11 @@ Die Features, die in C#-Versionen nach 6.0 implementiert wurden, werden in Sprac
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
- [Leitfaden für C#](../../csharp/index.md)  
+ [Leitfaden für C#](../index.md)  
  Enthält ein Portal für die Visual C#-Dokumentation.  
   
  [Verwenden der Visual Studio-Entwicklungsumgebung für C#](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  Enthält Links zu konzeptionellen und aufgabenspezifischen Themen, in denen IDE und Editor beschrieben werden.  
   
- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
+ [C#-Programmierhandbuch](../programming-guide/index.md)  
  Enthält Informationen zur Verwendung der C#-Programmiersprache.

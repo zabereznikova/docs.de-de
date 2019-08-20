@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306590"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566304"
 ---
 # <a name="is-c-reference"></a>is (C#-Referenz)
 
-Der `is`-Operator überprüft, ob das Ergebnis eines Ausdrucks mit einem angegebenen Typ kompatibel ist, oder (ab C# 7.0) testet einen Ausdruck anhand eines Musters. Informationen zum `is`-Operator für Typtests finden Sie im Abschnitt [is-Operator](../operators/type-testing-and-conversion-operators.md#is-operator) des Artikels [Typtest- und Konvertierungsoperatoren](../operators/type-testing-and-conversion-operators.md).
+Der `is`-Operator überprüft, ob das Ergebnis eines Ausdrucks mit einem angegebenen Typ kompatibel ist, oder (ab C# 7.0) testet einen Ausdruck anhand eines Musters. Informationen zum `is`-Operator für Typtests finden Sie im Abschnitt [is-Operator](../operators/type-testing-and-cast.md#is-operator) des Artikels [Typtest- und Umwandlungsoperatoren](../operators/type-testing-and-cast.md).
 
 ## <a name="pattern-matching-with-is"></a>Musterabgleich mit `is`
 
@@ -128,4 +128,4 @@ Weitere Informationen finden Sie im Abschnitt [is-Operator](~/_csharplang/spec/e
 
 - [C#-Referenz](../index.md)
 - [C#-Schlüsselwörter](index.md)
-- [Typtest- und Konvertierungsoperatoren](../operators/type-testing-and-conversion-operators.md)
+- [Typtest- und Umwandlungsoperatoren](../operators/type-testing-and-cast.md)

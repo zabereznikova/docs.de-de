@@ -3,12 +3,12 @@ title: Sicheres Aktualisieren von Schnittstellen mit Standardschnittstellenmembe
 description: In diesem fortgeschrittenen Tutorial wird erläutert, wie Sie vorhandenen Schnittstellendefinitionen problemlos neue Funktionen hinzufügen können, ohne alle Klassen und Strukturen zu brechen, die diese Schnittstelle implementieren.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877914"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971434"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Aktualisieren von Schnittstellen mit Standardschnittstellenmembern in C# 8.0
 
@@ -87,6 +87,6 @@ In einer Implementierung einer Klasse, die diese Schnittstelle implementiert, ka
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
-Sie können den gesamten fertig gestellten Code in unseren [Beispielrepositorys auf GitHub] sehen (Sie können die Startanwendung von unseren [Beispielrepositorys auf GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship) erhalten).
+Den vollständigen Code finden Sie in unserem [Beispielrepository auf GitHub.](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship) Sie erhalten die Startanwendung von unserem [Beispielerepository auf GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship).
 
 Diese neuen Features bedeuten, dass Schnittstellen problemlos aktualisiert werden können, wenn eine vernünftige Standardimplementierung für diese neuen Member vorhanden ist. Entwerfen Sie Schnittstellen sorgfältig, um einzelne funktionale Konzepte auszudrücken, die von mehreren Klassen implementiert werden können. Dies erleichtert das Aktualisieren dieser Schnittstellendefinitionen, wenn neue Anforderungen für diese gleichen funktionalen Konzept entdeckt werden.

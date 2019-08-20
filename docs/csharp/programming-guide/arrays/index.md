@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: 258ade63ab7c9008f6c892ed109bf5ea5ab974f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 24c6d54c3fe92ada661e732adec582e87ab62417
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584606"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597531"
 ---
 # <a name="arrays-c-programming-guide"></a>Arrays (C#-Programmierhandbuch)
 
@@ -27,7 +27,7 @@ Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur spei
 
  Ein Array verfügt über die folgenden Eigenschaften:  
   
-- Ein Array kann [eindimensional](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md), [mehrdimensional](../../../csharp/programming-guide/arrays/multidimensional-arrays.md) oder [verzweigt](../../../csharp/programming-guide/arrays/jagged-arrays.md) sein.  
+- Ein Array kann [eindimensional](./single-dimensional-arrays.md), [mehrdimensional](./multidimensional-arrays.md) oder [verzweigt](./jagged-arrays.md) sein.  
   
 - Die Anzahl der Dimensionen und die Länge der einzelnen Dimensionen werden festgelegt, wenn die Arrayinstanz erstellt wird. Diese Werte können während der Lebensdauer der Instanz nicht geändert werden.  
   
@@ -39,15 +39,15 @@ Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur spei
   
 - Arrayelemente können einen beliebigen Typ aufweisen, z. B. auch einen Arraytyp.  
   
-- Arraytypen sind [Referenztypen](../../../csharp/language-reference/keywords/reference-types.md), die vom abstrakten Basistyp <xref:System.Array> abgeleitet werden. Da dieser Typ <xref:System.Collections.IEnumerable> und <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Iteration für alle Arrays in C# verwenden.  
+- Arraytypen sind [Referenztypen](../../language-reference/keywords/reference-types.md), die vom abstrakten Basistyp <xref:System.Array> abgeleitet werden. Da dieser Typ <xref:System.Collections.IEnumerable> und <xref:System.Collections.Generic.IEnumerable%601> implementiert, können Sie die [foreach](../../language-reference/keywords/foreach-in.md)-Iteration für alle Arrays in C# verwenden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   
-- [Arrays als Objekte](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
+- [Arrays als Objekte](./arrays-as-objects.md)  
   
-- [Verwenden von foreach mit Arrays](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
+- [Verwenden von foreach mit Arrays](./using-foreach-with-arrays.md)  
   
-- [Übergeben von Arrays als Argumente](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
+- [Übergeben von Arrays als Argumente](./passing-arrays-as-arguments.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
 
@@ -55,5 +55,5 @@ Sie können mehrere Variablen des gleichen Typs in einer Arraydatenstruktur spei
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Sammlungen](../../../csharp/programming-guide/concepts/collections.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Sammlungen](../concepts/collections.md)

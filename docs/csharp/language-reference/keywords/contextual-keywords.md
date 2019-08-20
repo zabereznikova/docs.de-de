@@ -5,24 +5,25 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f8dc21b407e7286010b7425b835a481cc90287a
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708440"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971319"
 ---
 # <a name="contextual-keywords-c-reference"></a>Kontextabhängige Schlüsselwörter (C#-Referenz)
+
 Ein Kontextschlüsselwort wird verwendet, um eine spezifische Bedeutung im Code bereitzustellen, es ist jedoch kein reserviertes Wort in C#. In diesem Abschnitt werden die folgenden Kontextschlüsselwörter eingeführt:  
   
-|Stichwort|Beschreibung|  
+|Stichwort|BESCHREIBUNG|  
 |-------------|-----------------|  
 |[add](../../../csharp/language-reference/keywords/add.md)|Definiert einen benutzerdefinierten Ereignisaccessor, der aufgerufen wird, wenn der Clientcode das Ereignis abonniert|  
 |[async](../../../csharp/language-reference/keywords/async.md)|Zeigt an, dass die geänderte Methode, der Lambdaausdruck oder die anonyme Methode asynchron ist.|  
 |[await](../../../csharp/language-reference/keywords/await.md)|Hält eine async-Methode an, bis ein erwarteter Task abgeschlossen ist|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|Definiert einen Verweistyp, der Vorgänge ermöglicht, in denen er auftritt, um die Typüberprüfung zur Kompilierzeit zu umgehen|  
 |[get](../../../csharp/language-reference/keywords/get.md)|Definiert eine Accessormethode für eine Eigenschaft oder einen Indexer|  
-|[global](../../../csharp/language-reference/keywords/global.md)|Gibt den globalen Standardnamespace an, der andernfalls unbenannt ist|  
+|[global](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)|Alias des globalen Namespace, der andernfalls unbenannt ist.|  
 |[partial](../../../csharp/language-reference/keywords/partial-type.md)|Definiert partielle Klassen, Strukturen und Schnittstellen innerhalb derselben Kompilierungseinheit|  
 |[remove](../../../csharp/language-reference/keywords/remove.md)|Definiert einen benutzerdefinierten Ereignisaccessor, der aufgerufen wird, wenn der Clientcode das Abonnement vom Ereignis aufhebt|  
 |[set](../../../csharp/language-reference/keywords/set.md)|Definiert eine Accessormethode für eine Eigenschaft oder einen Indexer|  

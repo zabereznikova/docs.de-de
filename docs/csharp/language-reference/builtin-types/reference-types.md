@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: 4bc93216d74e2732870e08edd4bdb9570391cf5f
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67872168"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566259"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Integrierte Verweistypen (C#-Referenz)
 
@@ -177,7 +177,7 @@ Das folgende Beispiel verwendet `dynamic` in einigen Deklarationen. Die `Main`-M
 - [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../standard/base-types/best-practices-strings.md)
 - [Grundlegende Zeichenfolgenoperationen](../../../standard/base-types/basic-string-operations.md)
 - [Erstellen neuer Zeichenfolgen](../../../standard/base-types/creating-new.md)
-- [Typtest- und Konvertierungsoperatoren](../operators/type-testing-and-conversion-operators.md)
+- [Typtest- und Umwandlungsoperatoren](../operators/type-testing-and-cast.md)
 - [Vorgehensweise: Sicheres Umwandeln mit Musterabgleich mit den Operatoren „as“ und „is“](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>

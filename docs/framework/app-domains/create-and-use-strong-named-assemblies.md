@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5dcdf6a88b12d12e67056657fd532dfa28c40299
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832879"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566812"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Erstellen und Verwenden von Assemblys mit starkem Namen
 
@@ -38,7 +38,7 @@ Im folgenden Szenario wird kurz umrissen, wie eine Assembly mit einem starken Na
 
     - Durch Verwenden einer Entwicklungsumgebung, die das Erstellen starker Namen unterstützt, wie z.B. Visual Studio.
 
-    - Durch Erstellen eines kryptografischen Schlüsselpaars mithilfe des [Strong Name-Tools (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) und Zuweisen dieses Schlüsselpaars zur Assembly unter Verwendung eines Befehlszeilencompilers oder mit dem [Assemblylinker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Das Windows Software Development Kit (SDK) stellt sowohl Sn.exe als auch Al.exe zur Verfügung.
+    - Durch Erstellen eines kryptografischen Schlüsselpaars mithilfe des [Strong Name-Tools (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) und Zuweisen dieses Schlüsselpaars zur Assembly unter Verwendung eines Befehlszeilencompilers oder mit dem [Assemblylinker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Das Windows SDK stellt sowohl „Sn“.exe als auch „Al.exe“ zur Verfügung.
 
 2. Die Entwicklungsumgebung oder das Tool signiert den Hash der Datei, die das Assemblymanifest enthält, mit dem privaten Schlüssel des Entwicklers. Diese digitale Signatur wird in der PE (Portable Executable)-Datei gespeichert, die das Manifest von Assembly A enthält.
 

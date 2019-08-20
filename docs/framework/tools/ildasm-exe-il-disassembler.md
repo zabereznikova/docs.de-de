@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025970"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567311"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -100,7 +100,7 @@ Die von *Ildasm.exe* erstellte Textdatei kann als Eingabe für den IL-Assembler 
 > [!NOTE]
 > Für PE-Dateien, die eingebetteten systemeigenen Code enthalten (z. B. von Visual C++ erstellte PE-Dateien), ist dieses Verfahren gegenwärtig jedoch nicht geeignet.  
 
-In der als Standard festgelegten grafischen Benutzeroberfläche des IL-Disassemblers können Sie sich die Metadaten und den disassemblierten Code aller vorhandenen PE-Dateien als hierarchische Struktur anzeigen lassen. Geben Sie zum Aufrufen der Benutzeroberfläche an der Befehlszeile **ildasm** ein, ohne dabei das *PEfilename*-Argument oder Optionen anzugeben. Im Menü **Datei** können Sie zu der PE-Datei navigieren, die Sie in *Ildasm.exe* laden möchten. Um die Metadaten und den disassemblierten Code zu speichern, die für die ausgewählte PE angezeigt werden, wählen Sie im Menü **Datei** den Befehl **Sichern** aus. Wenn Sie nur die angezeigte hierarchische Struktur speichern möchten, wählen Sie im Menü **Datei** den Befehl **Strukturansicht sichern** aus. Ausführliche Anleitungen zum Laden einer Datei in *Ildasm.exe* und zum Interpretieren der Ausgabe finden Sie im Tutorial für *Ildasm.exe*. Dies ist im Funktionsumfang des Windows Software Development Kit (SDK) enthalten und befindet sich im Ordner „Samples“.
+In der als Standard festgelegten grafischen Benutzeroberfläche des IL-Disassemblers können Sie sich die Metadaten und den disassemblierten Code aller vorhandenen PE-Dateien als hierarchische Struktur anzeigen lassen. Geben Sie zum Aufrufen der Benutzeroberfläche an der Befehlszeile **ildasm** ein, ohne dabei das *PEfilename*-Argument oder Optionen anzugeben. Im Menü **Datei** können Sie zu der PE-Datei navigieren, die Sie in *Ildasm.exe* laden möchten. Um die Metadaten und den disassemblierten Code zu speichern, die für die ausgewählte PE angezeigt werden, wählen Sie im Menü **Datei** den Befehl **Sichern** aus. Wenn Sie nur die angezeigte hierarchische Struktur speichern möchten, wählen Sie im Menü **Datei** den Befehl **Strukturansicht sichern** aus. Ausführliche Anleitungen zum Laden einer Datei in *Ildasm.exe* und zum Interpretieren der Ausgabe finden Sie im Tutorial für *Ildasm.exe*. Dies ist im Lieferumfang des Windows SDK enthalten und befindet sich im Ordner „Samples“.
 
 Wenn Sie *Ildasm.exe* mit dem *PEfilename*-Argument angeben, das eingebettete Ressourcen enthält, erstellt das Tool mehrere Ausgabedateien: eine Textdatei mit IL-Code und für jede eingebettete verwaltete Ressource eine RESOURCES-Datei, die unter Verwendung des Ressourcennamens aus Metadaten erstellt wird. Wenn in *PEfilename* eine nicht verwaltete Ressource eingebettet ist, wird eine RES-Datei unter Verwendung des Dateinamens erstellt, der durch die Option **/output** für die IL-Ausgabe angegeben wird.
 

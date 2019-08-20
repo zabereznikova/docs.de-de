@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 34357ac313e20c5bab5505984f92ea06df80a5c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2b991a45a53ce4a8295d6181da11cb09fda6ddb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595399"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590194"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Ausnahmen und Ausnahmebehandlung (C#-Programmierhandbuch)
 Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder außergewöhnliche Situationen zu verarbeiten, die beim Ausführen von Programmen auftreten können. Die Ausnahmebehandlung verwendet die Schlüsselwörter `try`, `catch` und `finally`, um Aktionen zu testen, die möglicherweise nicht erfolgreich sind, um Fehler zu behandeln, wenn Sie entscheiden, dass dies vernünftig ist, und um später Ressourcen zu bereinigen. Ausnahmen können von der Common Language Runtime (CLR), vom .NET Framework bzw. anderen Drittanbieterbibliotheken oder vom Anwendungscode generiert werden. Ausnahmen werden mit dem Schlüsselwort `throw` erstellt.  
@@ -49,17 +49,17 @@ Die C#-Funktionen zur Ausnahmebehandlung helfen Ihnen dabei, unerwartete oder au
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  Weitere Informationen zu Ausnahmen und zur Ausnahmebehandlung finden Sie in den folgenden Themen:  
   
-- [Verwenden von Ausnahmen](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [Verwenden von Ausnahmen](./using-exceptions.md)  
   
-- [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [Ausnahmebehandlung](./exception-handling.md)  
   
-- [Erstellen und Auslösen von Ausnahmen](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [Erstellen und Auslösen von Ausnahmen](./creating-and-throwing-exceptions.md)  
   
-- [Vom Compiler generierte Ausnahmen](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [Vom Compiler generierte Ausnahmen](./compiler-generated-exceptions.md)  
   
-- [Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“ (C#-Programmierhandbuch)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [Vorgehensweise: Behandeln einer Ausnahme mit „try/catch“ (C#-Programmierhandbuch)](./how-to-handle-an-exception-using-try-catch.md)  
   
-- [Vorgehensweise: Ausführen von Bereinigungscode mit „finally“](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [Vorgehensweise: Ausführen von Bereinigungscode mit „finally“](./how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
 
@@ -68,10 +68,10 @@ Weitere Informationen erhalten Sie unter [Ausnahmen](~/_csharplang/spec/exceptio
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.SystemException>
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
-- [throw](../../../csharp/language-reference/keywords/throw.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [C#-Programmierhandbuch](../index.md)
+- [C#-Schlüsselwörter](../../language-reference/keywords/index.md)
+- [throw](../../language-reference/keywords/throw.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
 - [Ausnahmen](../../../standard/exceptions/index.md)
