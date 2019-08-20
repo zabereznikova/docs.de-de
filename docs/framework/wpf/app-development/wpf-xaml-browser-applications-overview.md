@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: ebaa5c2f3a2e1770a50a401fb6771d8c5ad3ba63
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972231"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611475"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>
@@ -52,7 +52,7 @@ ms.locfileid: "68972231"
 |Anwendungsmanifest (.manifest)|Dieses enthält die der Anwendung zugeordneten Metadaten und hat die Erweiterung MANIFEST.|  
 |Bereitstellungsmanifest (.xbap)|Diese Datei enthält die Informationen, die von ClickOnce zum Bereitstellen der Anwendung verwendet werden, und hat die Erweiterung ". XBAP".|  
   
- Sie stellen XBAPs auf einem Webserver, z.B. [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] oder höheren Versionen, bereit. Sie müssen die .NET Framework nicht auf dem Webserver installieren, aber Sie müssen die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Multipurpose Internet Mail Extensions (MIME)-Typen und Dateinamen Erweiterungen registrieren. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Sie können XBAPs auf einem Webserver bereitstellen, z. b. Microsoft Internetinformationsdienste (IIS) 5,0 oder höher. Sie müssen die .NET Framework nicht auf dem Webserver installieren, aber Sie müssen die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Multipurpose Internet Mail Extensions (MIME)-Typen und Dateinamen Erweiterungen registrieren. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Zum Vorbereiten der XBAP für die Bereitstellung kopieren Sie die EXE-Datei und die zugeordneten Manifeste auf den Webserver. Erstellen Sie eine HTML-Seite, die einen Link enthält, um das Bereitstellungsmanifest zu öffnen. Dabei handelt es sich um die Datei mit der Erweiterung XBAP. Wenn der Benutzer auf den Link zur XBAP-Datei klickt, verarbeitet ClickOnce automatisch die Mechanismen zum herunterladen und Starten der Anwendung. Im folgenden Beispielcode wird eine HTML-Seite dargestellt, die einen Link enthält, der auf eine XBAP zeigt.  
   
