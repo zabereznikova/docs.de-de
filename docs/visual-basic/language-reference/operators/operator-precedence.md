@@ -14,103 +14,103 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: 95505fd593881ff27418c69550952d072b4e3949
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c420a34a18f9e8fb55411a062e6a47ab38e98978
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628873"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611491"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Operatorrangfolge in Visual Basic
-Treten mehrere Operationen in einem Ausdruck, wird jeder Teil ausgewertet und in einer vorbestimmten Reihenfolge aufgelöst *Operatorrangfolge*.  
-  
-## <a name="precedence-rules"></a>Regeln für die Berechnungsrangfolge  
- Ausdrücke, Operatoren, die von mehr als einer Kategorie enthalten, werden sie gemäß den folgenden Regeln ausgewertet:  
-  
-- Die arithmetischen Operatoren und Verkettungsoperatoren haben die Rangfolge, die im folgenden Abschnitt beschrieben, und alle haben der Rangfolge höher eingestuft als die Vergleichsoperatoren, logische und bitweise Operatoren.  
-  
-- Alle Vergleichsoperatoren haben denselben Rang, und alles, was der Rangfolge höher eingestuft als die logischen und bitweisen Operatoren, jedoch geringere Rangfolge als der arithmetischen Operatoren und Verkettungsoperatoren.  
-  
-- Die logischen und bitweisen Operatoren die Reihenfolge der Rangfolge, die im folgenden Abschnitt beschrieben, und alle niedrigeren Rangfolge als der arithmetische, Verkettung und Vergleichsoperatoren.  
-  
-- Operatoren mit gleichem Rang werden links nach rechts ausgewertet in der Reihenfolge, in der sie den Ausdruck angezeigt werden.  
-  
-## <a name="precedence-order"></a>Rangfolge  
- Operatoren werden in der folgenden Rangfolge ausgewertet:  
-  
-### <a name="await-operator"></a>Await-Operator  
- Await-  
-  
-### <a name="arithmetic-and-concatenation-operators"></a>Arithmetische Operatoren und Verkettungsoperatoren  
- Potenzierung (`^`)  
-  
- Unäre Identität und Negation (`+`, `–`)  
-  
- Multiplikation und Gleitkommadivision (`*`, `/`)  
-  
- Division ganzer Zahlen (`\`)  
-  
- Arithmetischer Modulo (`Mod`)  
-  
- Addition und Subtraktion (`+`, `–`)  
-  
- Verketten von Zeichenfolgen (`&`)  
-  
- Arithmetische-Bit-Verschiebung (`<<`, `>>`)  
-  
-### <a name="comparison-operators"></a>Vergleichsoperatoren  
- Alle Vergleichsoperatoren (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
-  
-### <a name="logical-and-bitwise-operators"></a>Logische und bitweise Operatoren  
- Negation (`Not`)  
-  
- Verbindung (`And`, `AndAlso`)  
-  
- Inklusive Disjunktion (`Or`, `OrElse`)  
-  
- Exklusive Disjunktion (`Xor`)  
-  
-### <a name="comments"></a>Kommentare  
- Die `=` Operator wird nur der Gleichheitsvergleichsoperator, nicht der Zuweisungsoperator.  
-  
- Der Operator für zeichenfolgenverkettung (`&`) kein arithmetischer Operator, sondern in der Rangfolge mit den arithmetischen Operatoren gruppieren.  
-  
- Die `Is` und `IsNot` Operatoren sind die Vergleichsoperatoren für Objekt-Verweis. Sie führen nicht die Werte von zwei Objekten Vergleich. Sie überprüfen, nur um zu bestimmen, ob zwei Objektvariablen auf die gleiche Objektinstanz verweisen.  
-  
-## <a name="associativity"></a>Assoziativität  
- Wenn Operatoren mit gleichem Rang zusammen in einem Ausdruck, z. B. die Multiplikations- und Divisionsaufgaben, angezeigt werden wertet der Compiler jeder Vorgang, wie sie von links nach rechts gefundenen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
-  
-```  
-Dim n1 As Integer = 96 / 8 / 4  
-Dim n2 As Integer = (96 / 8) / 4  
-Dim n3 As Integer = 96 / (8 / 4)  
-```  
-  
- Der erste Ausdruck wertet die Division 96 / 8 (wodurch 12), und klicken Sie dann die Division 12 / 4, die in drei führt. Da der Compiler die Vorgänge für wertet `n1` von links nach rechts, die Auswertung ist identisch, wenn diese Reihenfolge explizit angegeben wird, für die `n2`. Beide `n1` und `n2` Ergebnis 3 haben. Im Gegensatz dazu `n3` ein Ergebnis 48, hat, da die Klammern erzwingen, den Compiler zum Auswerten von 8 dass / 4 ersten.  
-  
- Aufgrund dieses Verhaltens der Operatoren gelten als *linksassoziativ* in Visual Basic.  
-  
-## <a name="overriding-precedence-and-associativity"></a>Überschreiben der Rangfolge und Assoziativität  
- Sie können mithilfe von Klammern zu erzwingen, dass einige Teile eines Ausdrucks vor anderen ausgewertet werden soll. Dadurch kann sowohl die Reihenfolge der Rangfolge und Assoziativität von links auf die überschrieben werden. Visual Basic führt immer Vorgänge, die in Klammern vor den außerhalb eingeschlossen sind. Es verwaltet jedoch innerhalb der Klammern normale Rangfolge und Assoziativität, es sei denn, Sie mithilfe von Klammern innerhalb der Klammern. Dies wird anhand des folgenden Beispiels veranschaulicht.  
-  
-```  
-Dim a, b, c, d, e, f, g As Double  
-a = 8.0  
-b = 3.0  
-c = 4.0  
-d = 2.0  
-e = 1.0  
-f = a - b + c / d * e  
-' The preceding line sets f to 7.0. Because of natural operator   
-' precedence and associativity, it is exactly equivalent to the   
-' following line.  
-f = (a - b) + ((c / d) * e)  
-' The following line overrides the natural operator precedence   
-' and left associativity.  
-g = (a - (b + c)) / (d * e)  
-' The preceding line sets g to 0.5.  
-```  
-  
+Wenn mehrere Vorgänge in einem Ausdruck auftreten, wird jeder Teil in einer vordefinierten Reihenfolge ausgewertet und aufgelöst, die als *Operator Rangfolge*bezeichnet wird.
+
+## <a name="precedence-rules"></a>Rang Folge Regeln
+ Wenn Ausdrücke Operatoren aus mehr als einer Kategorie enthalten, werden Sie gemäß den folgenden Regeln ausgewertet:
+
+- Der arithmetische und der Verkettungs Operator haben die Rangfolge, die im folgenden Abschnitt beschrieben wird, und alle haben Vorrang vor den Vergleichs-, logischen und bitweisen Operatoren.
+
+- Alle Vergleichs Operatoren weisen die gleiche Rangfolge auf und haben Vorrang vor den logischen und bitweisen Operatoren, aber eine niedrigere Rangfolge als die arithmetischen Operatoren und die Verkettungs Operatoren.
+
+- Die logischen und bitweisen Operatoren haben die Rangfolge, die im folgenden Abschnitt beschrieben wird, und alle haben Vorrang vor den Operatoren arithmetischer, Verkettungs-und Vergleichs Operatoren.
+
+- Operatoren mit gleicher Rangfolge werden in der Reihenfolge, in der Sie im Ausdruck angezeigt werden, von links nach rechts ausgewertet.
+
+## <a name="precedence-order"></a>Rangfolge
+ Operatoren werden in der folgenden Rangfolge ausgewertet:
+
+### <a name="await-operator"></a>Await-Operator
+ Await-
+
+### <a name="arithmetic-and-concatenation-operators"></a>Arithmetische Operatoren und Verkettungs Operatoren
+ Exponentiierung (`^`)
+
+ Unäre Identität und Negation (`+`, `–`)
+
+ Multiplikation und Gleit Komma Division (`*`, `/`)
+
+ Ganzzahlige`\`Division ()
+
+ Modulus Arithmetik`Mod`()
+
+ Addition und Subtraktion (`+`, `–`)
+
+ Zeichen folgen Verkettung (`&`)
+
+ Arithmetische Bitverschiebung`<<`( `>>`,)
+
+### <a name="comparison-operators"></a>Vergleichsoperatoren
+ Alle Vergleichs Operatoren`=`( `<>`, `<`, `<=`, `>`,, `>=`, ,`IsNot`,, ..`TypeOf`. `Is` `Like` `Is`)
+
+### <a name="logical-and-bitwise-operators"></a>Logische und bitweise Operatoren
+ Negation (`Not`)
+
+ Verbindung (`And`, `AndAlso`)
+
+ Inklusive Disjunktion`Or`( `OrElse`,)
+
+ Exklusive Disjunktion`Xor`()
+
+### <a name="comments"></a>Kommentare
+ Der `=` Operator ist nur der Gleichheits Vergleichs Operator, nicht der Zuweisungs Operator.
+
+ Der Operator für die Zeichen folgen Verkettung (`&`) ist kein arithmetischer Operator, aber in der Rangfolge ist er mit den arithmetischen Operatoren gruppiert.
+
+ Die `Is` Operatoren und `IsNot` sind objektverweisvergleichs-Operatoren. Die Werte von zwei Objekten werden nicht verglichen. Sie überprüfen lediglich, ob zwei Objektvariablen auf dieselbe Objektinstanz verweisen.
+
+## <a name="associativity"></a>Assoziativität
+ Wenn Operatoren mit gleicher Rangfolge in einem Ausdruck angezeigt werden, z. b. Multiplikation und Division, wertet der Compiler jeden Vorgang aus, der von links nach rechts erkannt wird. Dies wird anhand des folgenden Beispiels veranschaulicht.
+
+```vb
+Dim n1 As Integer = 96 / 8 / 4
+Dim n2 As Integer = (96 / 8) / 4
+Dim n3 As Integer = 96 / (8 / 4)
+```
+
+ Der erste Ausdruck wertet die Division 96/8 aus (die sich in 12 ergibt) und dann die Division 12/4, die drei ergibt. Da der Compiler die Vorgänge für `n1` von links nach rechts auswertet, ist die Auswertung identisch, wenn diese Reihenfolge explizit für `n2`angegeben wird. Sowohl `n1` als `n2` auch haben drei Ergebnisse. Im Gegensatz dazu `n3` hat das Ergebnis 48, da die Klammern den Compiler zwingen, zuerst 8/4 auszuwerten.
+
+ Aufgrund dieses Verhaltens werden Operatoren als *links assoziativ* in Visual Basic bezeichnet.
+
+## <a name="overriding-precedence-and-associativity"></a>Überschreiben von Rangfolge und Assoziativität
+ Sie können Klammern verwenden, um zu erzwingen, dass einige Teile eines Ausdrucks vor anderen ausgewertet werden. Dies kann die Reihenfolge der Rangfolge und die linke Assoziativität überschreiben. Visual Basic führt immer Vorgänge aus, die in Klammern eingeschlossen werden, bevor Sie außerhalb von stehen. Innerhalb von Klammern behält sie jedoch die normale Rangfolge und Assoziativität bei, es sei denn, Sie verwenden Klammern innerhalb der Klammern. Dies wird anhand des folgenden Beispiels veranschaulicht.
+
+```vb
+Dim a, b, c, d, e, f, g As Double
+a = 8.0
+b = 3.0
+c = 4.0
+d = 2.0
+e = 1.0
+f = a - b + c / d * e
+' The preceding line sets f to 7.0. Because of natural operator
+' precedence and associativity, it is exactly equivalent to the
+' following line.
+f = (a - b) + ((c / d) * e)
+' The following line overrides the natural operator precedence
+' and left associativity.
+g = (a - (b + c)) / (d * e)
+' The preceding line sets g to 0.5.
+```
+
 ## <a name="see-also"></a>Siehe auch
 
 - [=-Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)

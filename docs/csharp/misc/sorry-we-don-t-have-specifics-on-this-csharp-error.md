@@ -882,33 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6f5a76e5d90a8d3b1cf6284af2e753f56494af74
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052758"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597369"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Leider haben wir keine Einzelheiten zu diesem C#-Fehler
-Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren stellen:  
+Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren Fragen:  
   
  [Visual C# Language](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zu des visuellen Elements C# -Sprachsyntax und -Compiler.  
+ Bietet ein Forum für Fragen und allgemeine Diskussionen über die Syntax und C# den Compiler der visuellen Sprache.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
- Bietet ein Forum für Fragen dazu, wie Sie in Visual Studio-Umgebung arbeiten.  
+ Bietet ein Forum für Fragen zum Arbeiten in der Visual Studio-Umgebung.  
   
  [Visual C# General](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
- Bietet ein Forum für Fragen und Probleme mit Visual C# , die in anderen Foren nicht diskutiert werden.  
+ Bietet ein Forum für Fragen und Probleme mit visuellen C# Informationen, die in anderen Foren nicht erläutert werden.  
   
  [Stapelüberlauf](https://stackoverflow.com/questions/tagged/c%23)  
  Bietet ein Forum für Fragen und Probleme mit Visual C#.  
   
  Siehe auch:  
- [Zusätzliche Ressourcen für Visual C#-Programmierer](../../csharp/getting-started/additional-resources.md)  
+ [Zusätzliche Ressourcen für Visual C#-Programmierer](../getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)
-- [C#-Referenz](../../csharp/language-reference/index.md)
+- [C#-Programmierhandbuch](../programming-guide/index.md)
+- [C#-Referenz](../language-reference/index.md)
 - [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
