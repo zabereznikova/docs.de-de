@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733378"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039437"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>Neuerungen in .NET Core 3.0 (Preview 7)
 
@@ -159,7 +159,7 @@ Weitere Informationen zum Tool IL Linker finden Sie in der [Dokumentation](https
 
 Die [mehrstufige Kompilierung](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (Tiered Compilation, TC) ist bei .NET Core 3.0 standardmäßig aktiviert. Dieses Feature ermöglicht der Runtime, den Just-In-Time-Compiler (JIT) adaptiver zu nutzen, um eine bessere Leistung zu erzielen.
 
-Der Hauptvorteil von TC ist, Methoden zur (erneuten) Just-in-Time-Kompilierung mit „Slower-but-faster“- oder „Higher-Quality-but-slower“-Verfahren zum Erzeugen von Code zu ermöglichen. Dies steigert die Leistung einer Anwendung, während sie verschiedene Phasen der Ausführung vom Start bis zum stabilen Zustand durchläuft. Dies steht im Gegensatz zum Nicht-TC-Ansatz, wo jede Methode auf eine einzelne Art kompiliert wird (identisch mit der Hochwertigkeitsstufe) und der Trend eher zum stabilen Zustand als zur Startleistung geht.
+Der Hauptvorteil von TC ist, Methoden zur (erneuten) Just-in-Time-Kompilierung mit einer „Lower-Quality-but-faster“- oder „Higher-Quality-but-slower“-Stufe zu ermöglichen. Dies steigert die Leistung einer Anwendung, während sie verschiedene Phasen der Ausführung vom Start bis zum stabilen Zustand durchläuft. Dies steht im Gegensatz zum Nicht-TC-Ansatz, wo jede Methode auf eine einzelne Art kompiliert wird (identisch mit der Hochwertigkeitsstufe) und der Trend eher zum stabilen Zustand als zur Startleistung geht.
 
 Um schnelle Just-in-Time-Kompilierung (auf Stufe 0 Just-in-Time-kompilierter Code) zu aktivieren, verwenden Sie diese Einstellung in Ihrer Projektdatei:
 
@@ -291,7 +291,7 @@ Die unterstützten Laufzeiten müssen in der `<RuntimeIdentifiers>`-Eigenschaft 
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="winforms-highdpi"></a>WinForms – hohe DPI-Werte
+## <a name="winforms-high-dpi"></a>WinForms mit hohem DPI-Wert
 
 .NET Core-Windows Forms-Anwendungen können den Modus für hohe DPI-Werte mit <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType> festlegen. Die `SetHighDpiMode`-Methode legt den entsprechenden Modus für hohe DPI-Werte fest, sofern er nicht mit anderen Mitteln wie `App.Manifest` oder „P/Invoke“ vor dem `Application.Run` festgelegt wurde.
 
@@ -305,7 +305,7 @@ Die möglichen `highDpiMode`-Werte, wie durch die <xref:System.Windows.Forms.Hig
 
 Weitere Informationen zu hohen DPI-Werten finden Sie unter [Entwicklung von Desktopanwendungen mit hohen DPI-Werten unter Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
-### <a name="ranges-and-indices"></a>Bereiche und Indizes
+## <a name="ranges-and-indices"></a>Bereiche und Indizes
 
 Der neue <xref:System.Index?displayProperty=nameWithType>-Typ kann für die Indizierung verwendet werden. Sie können einen aus einem `int` erstellen, der vom Anfang aus zählt, oder mit einem Präfix-`^`-Operator (C#), der vom Ende aus zählt:
 
@@ -324,7 +324,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 Weitere Informationen finden Sie im Tutorial [Bereiche und Indizes](../../csharp/tutorials/ranges-indexes.md).
 
-### <a name="async-streams"></a>Asynchrone Datenströme
+## <a name="async-streams"></a>Asynchrone Datenströme
 
 Die <xref:System.Collections.Generic.IAsyncEnumerable%601>-Typ ist eine neue asynchrone Version von <xref:System.Collections.Generic.IEnumerable%601>. In C# 8.0 können Sie `await foreach` zur Verarbeitung der `IAsyncEnumerable<T>`-Elemente nutzen und anschließend `yield return` zum Erstellen von Elementen verwenden.
 
@@ -403,17 +403,15 @@ Mit <xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> lassen s
 
 Das folgende Beispiel enthält für `JsonDocument` und `JsonElement` ein Anwendungsszenario, das als Ausgangspunkt verwendet werden kann:
 
-Es folgt ein Beispiel für C# 8.0 des Lesens der von Visual Studio Code erstellten Datei [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json):
-
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
+
+Es folgt ein Beispiel für C# 8.0 des Lesens der von Visual Studio Code erstellten Datei [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json):
 
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
 <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> ist auf der Basis von <xref:System.Text.Json.Utf8JsonReader> und <xref:System.Text.Json.Utf8JsonWriter> erstellt, um eine schnelle Serialisierungsoption mit geringer Arbeitsspeicherzuweisung zur Arbeit mit JSON-Dokumenten und -Fragmenten bereitzustellen.
-
-UNTERSUCHEN: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md auf ein Beispiel zum Portieren in diesen Artikel
 
 Hier ist ein Beispiel für die Serialisierung eines Objekts in JSON:
 

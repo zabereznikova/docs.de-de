@@ -3,12 +3,12 @@ title: .NET Core-CLI-Erweiterbarkeitsmodell
 description: Erfahren Sie, wie Sie die Tools für die Befehlszeilenschnittstelle (CLI, Command-line Interface) erweitern können.
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331004"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012976"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Erweiterbarkeitsmodell für .NET Core-CLI-Tools
 
@@ -79,7 +79,8 @@ Umfangreichere Beispiele und verschiedene Kombinationen dessen finden Sie im [.N
 Sie finden auch die [Implementierung von verwendeten Tools](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) im gleichen Repository.
 
 ## <a name="custom-targets"></a>Benutzerdefinierte Ziele
-NuGet kann [benutzerdefinierte MSBuild-Ziele und PROPS-Dateien packen](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Mit dem Schritt der .NET Core-CLI-Tools zum Verwenden von MSBuild gilt nun derselbe Mechanismus für Erweiterbarkeit für .NET Core-Projekte. Sie nutzen diese Art von Erweiterbarkeit, wenn Sie den Buildprozess erweitern möchten, im Buildprozess auf Artefakte wie generierte Dateien zugreifen oder die Konfiguration überprüfen möchten, in der der Build aufgerufen wird usw.
+
+NuGet kann [benutzerdefinierte MSBuild-Ziele und PROPS-Dateien packen](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package). Mit dem Schritt der .NET Core-CLI-Tools zum Verwenden von MSBuild gilt nun derselbe Mechanismus für Erweiterbarkeit für .NET Core-Projekte. Sie nutzen diese Art von Erweiterbarkeit, wenn Sie den Buildprozess erweitern möchten, im Buildprozess auf Artefakte wie generierte Dateien zugreifen oder die Konfiguration überprüfen möchten, in der der Build aufgerufen wird usw.
 
 Im folgenden Beispiel können Sie die Projektdatei des Ziels mithilfe der `csproj`-Syntax anzeigen. Dies zeigt dem [`dotnet pack`](dotnet-pack.md)-Befehl, was genau gepackt werden soll, wobei die Zieldateien sowie die Assemblys in den Ordner *Erstellen* im Paket platziert werden. Beachten Sie das `<ItemGroup>`-Element, das über die Eigenschaft `Label` verfügt, die auf `dotnet pack instructions` festgelegt ist, sowie das Ziel, das darunter definiert ist.
 
