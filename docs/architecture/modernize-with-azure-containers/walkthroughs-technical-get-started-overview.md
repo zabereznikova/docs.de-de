@@ -2,12 +2,12 @@
 title: Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure Cloud und Windows-Containern | Exemplarische Vorgehensweisen und technische Übersicht über den Einstieg
 ms.date: 04/28/2018
-ms.openlocfilehash: 81f7d9fbf596a23b83e2dc9251788b33a8817e16
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 190b33c4307b09bab0543d481e66ac9328074a0d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69577853"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660881"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Exemplarische Vorgehensweisen und technische erste Schritte (Übersicht)
 
@@ -308,4 +308,4 @@ Erkunden Sie diesen Inhalt ausführlicher im GitHub-wiki:<https://github.com/dot
 
 > [!div class="step-by-step"]
 > [Zurück](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
-> [Weiter](conclusions.md)
+> [Weiter](conclusions.md) <!-- Next Chapter -->

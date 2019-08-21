@@ -13,15 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 73d4a5cc8fd4bad41ead1fda830504b19877a8d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08268fd473a3a916f41f2f46090e3245acda07dd
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625475"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68513010"
 ---
 # <a name="module-statement"></a>Module-Anweisung
-Deklariert den Namen eines Moduls, und führt die Definitionen der Variablen, Eigenschaften, Ereignisse und Prozeduren ein, denen das Modul enthält.  
+Deklariert den Namen eines Moduls und führt die Definition der Variablen, Eigenschaften, Ereignisse und Prozeduren ein, die das Modul umfasst.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,12 +33,12 @@ End Module
   
 ## <a name="parts"></a>Teile  
  `attributelist`  
- Dies ist optional. Finden Sie unter [Liste](../../../visual-basic/language-reference/statements/attribute-list.md).  
+ Dies ist optional. Siehe [Attribut Liste](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
  `accessmodifier`  
- Dies ist optional. Einer der folgenden Werte ist möglich:  
+ Dies ist optional. Kann einen der folgenden Werte annehmen:  
   
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+- [Öffentlich](../../../visual-basic/language-reference/modifiers/public.md)  
   
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
@@ -48,50 +48,50 @@ End Module
  Erforderlich. Der Name dieses Moduls. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `statements`  
- Dies ist optional. Anweisungen, die definieren, die Variablen, Eigenschaften, Ereignisse, Verfahren und geschachtelte Typen dieses Moduls.  
+ Optional. Anweisungen, die die Variablen, Eigenschaften, Ereignisse, Prozeduren und die Typen dieses Moduls definieren.  
   
  `End Module`  
  Beendet die `Module`-Definition.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `Module` -Anweisung definiert einen Verweistyp handelt, die im gesamten Namespace verfügbar. Ein *Modul* (bezeichnet ein *Standardmodul*) wird der ähnlich wie eine Klasse jedoch einige wichtige Unterschiede. Jedes Modul verfügt über genau eine Instanz, und es muss nicht erstellt oder einer Variablen zugewiesen werden. Module nicht unterstützen die Vererbung und Schnittstellen implementieren. Beachten Sie, dass ein Modul kein *Typ* in dem Sinne, dass eine Klasse oder Struktur ist – ein Programmierelement, damit Sie den Datentyp eines Moduls kann nicht deklariert werden.  
+ Eine `Module` -Anweisung definiert einen Referenztyp, der im gesamten Namespace verfügbar ist. Ein *Modul* (manchmal auch als *Standardmodul*bezeichnet) ähnelt einer Klasse, jedoch mit einigen wichtigen unterschieden. Jedes Modul verfügt über genau eine Instanz und muss weder erstellt noch einer Variablen zugewiesen werden. Module unterstützen keine Vererbung oder Implementierung von Schnittstellen. Beachten Sie, dass ein Modul kein *Typ* in dem Sinn ist, dass eine Klasse oder Struktur ist – Sie können kein Programmier Element deklarieren, um den Datentyp eines Moduls zu erhalten.  
   
- Sie können `Module` nur auf Namespaceebene. Dies bedeutet, dass die *Deklarationskontext* für ein Modul, eine Quelldatei oder der Namespace sein muss, und nicht, eine Klasse, Struktur, Modul, Schnittstelle, Prozedur oder Block möglich. Sie können ein Modul in einem anderen Modul oder in einen beliebigen Typ nicht schachteln. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Sie können nur `Module` auf Namespace Ebene verwenden. Dies bedeutet, dass der *Deklarations Kontext* für ein Modul eine Quelldatei oder ein Namespace sein muss und weder eine Klasse noch eine Struktur, ein Modul, eine Schnittstelle, eine Prozedur oder einen Block sein kann. Sie können ein Modul nicht in einem anderen Modul oder in einem beliebigen Typ Schachteln. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Ein Modul hat die gleiche Lebensdauer wie Ihr Programm. Da die Member aller werden `Shared`, sie verfügen auch über eine Lebensdauer, die gleich dem des Programms.  
+ Ein Modul hat die gleiche Lebensdauer wie das Programm. Da ihre Member alle `Shared`sind, haben Sie auch die Lebensdauer, die der des Programms entspricht.  
   
- Module standardmäßig [Friend](../../../visual-basic/language-reference/modifiers/friend.md) Zugriff. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Module haben standardmäßig den [Friend](../../../visual-basic/language-reference/modifiers/friend.md) -Zugriff. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- Alle Elemente eines Moduls handelt es sich implizit `Shared`.  
+ Alle Member eines Moduls sind implizit `Shared`.  
   
-## <a name="classes-and-modules"></a>Klassen und Modulen  
- Diese Elemente verfügen über viele ähnlichkeiten, aber es gibt auch einige wichtige Unterschiede.  
+## <a name="classes-and-modules"></a>Klassen und Module  
+ Diese Elemente weisen viele Ähnlichkeiten auf, aber es gibt auch einige wichtige Unterschiede.  
   
-- **-Terminologie verwenden.** Zwei Arten von Modulen zur Erkennung von früheren Versionen von Visual Basic: *Klassenmodule* (CLS-Dateien) und *Standardmodulen* (BAS-Dateien). Der aktuellen Version werden diese *Klassen* und *Module*bzw.  
+- **Begriffs.** In früheren Versionen von Visual Basic werden zwei Arten von Modulen erkannt: *Klassen Module* (CLS-Dateien) und *Standardmodule* (Bas-Dateien). Mit der aktuellen Version werden diese *Klassen* bzw. *Module*aufgerufen.  
   
-- **Freigegebene Member.** Sie können steuern, ob ein Member einer Klasse eines freigegebenen oder Instanzmember.  
+- **Freigegebene Member.** Sie können steuern, ob ein Member einer Klasse ein frei Gegebenes oder ein Instanzmember ist.  
   
-- **Objektorientierung.** Klassen sind objektorientiert, Module jedoch nicht. Damit nur Klassen als Objekte instanziiert werden können. Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
+- **Objekt Ausrichtung.** Klassen sind objektorientiert, aber Module sind nicht. Daher können nur Klassen als Objekte instanziiert werden. Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="rules"></a>Regeln  
   
-- **Modifizierer.** Alle Member des Moduls handelt es sich implizit [Shared](../../../visual-basic/language-reference/modifiers/shared.md). Sie können keine der `Shared` -Schlüsselwort deklariert einen Member, und Sie den freigegebenen Status aller Mitglieder ändern kann nicht.  
+- **Modifizierer.** Alle Modulmember werden implizit frei [gegeben](../../../visual-basic/language-reference/modifiers/shared.md). Sie können das `Shared` -Schlüsselwort nicht verwenden, wenn Sie einen Member deklarieren, und Sie können den freigegebenen Status eines beliebigen Members nicht ändern.  
   
-- **Vererbung.** Ein Modul kann nicht von einem Typ erben, außer <xref:System.Object>, von dem alle Module zu erben. Ein Modul kann nicht vor allem von einem anderen erben.  
+- **Vererbung.** Ein Modul kann nicht von einem anderen Typ als <xref:System.Object>erben, von dem alle Module erben. Insbesondere kann ein Modul nicht von einem anderen Modul erben.  
   
-     Sie können keine der [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) auch nicht zum angeben, in der Moduldefinition eines <xref:System.Object>.  
+     Die [erbt-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md) kann nicht in einer Modul Definition verwendet werden, auch <xref:System.Object>um anzugeben.  
   
-- **Standardeigenschaft.** Sie können keine standardmäßigen Eigenschaften in einem Modul definieren. Weitere Informationen finden Sie unter [Standard](../../../visual-basic/language-reference/modifiers/default.md).  
+- **Standard Eigenschaft.** In einem Modul können keine Standardeigenschaften definiert werden. Weitere Informationen finden Sie unter [default (Standard](../../../visual-basic/language-reference/modifiers/default.md)).  
   
 ## <a name="behavior"></a>Verhalten  
   
-- **Zugriffsebene.** Innerhalb eines Moduls können Sie jeden Member mit einer eigenen Zugriffsebene deklarieren. Standardzugriff für Module [öffentliche](../../../visual-basic/language-reference/modifiers/public.md) zuzugreifen, mit Ausnahme von Variablen und Konstanten, die standardmäßig [Private](../../../visual-basic/language-reference/modifiers/private.md) Zugriff. Wenn ein Modul mehr als einen seiner Member Zugriff eingeschränktem, hat die Zugriffsebene des angegebenen Moduls Vorrang vor.  
+- **Zugriffsebene.** Innerhalb eines Moduls können Sie jeden Member mit einer eigenen Zugriffsebene deklarieren. Modul Elemente haben standardmäßig den [öffentlichen](../../../visual-basic/language-reference/modifiers/public.md) Zugriff, mit Ausnahme von Variablen und Konstanten, die standardmäßig den [privaten](../../../visual-basic/language-reference/modifiers/private.md) Zugriff haben. Wenn ein Modul über einen eingeschränkteren Zugriff als einen seiner Mitglieder verfügt, hat die angegebene Modul Zugriffsebene Vorrang.  
   
-- **Bereich.** Ein Modul ist im Bereich im gesamten Namespace.  
+- **Umfang.** Ein Modul befindet sich im gesamten Namespace im Gültigkeitsbereich.  
   
-     Der Gültigkeitsbereich jedes Modul-Element ist das gesamte Modul. Beachten Sie, die alle Elemente werden *typerweiterung*, wodurch ihres Bereichs, die auf den Namespace, die das Modul höher gestuft werden. Weitere Informationen finden Sie unter [Typerweiterung](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+     Der Gültigkeitsbereich jedes Modulmembers ist das gesamte Modul. Beachten Sie, dass alleMember eine typherauf Stufung durchlaufen, was bewirkt, dass Ihr Bereich in den Namespace herauf gestuft wird, der das Modul enthält. Weitere Informationen finden Sie unter [Typerweiterung](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
-- **Qualifizierung.** Sie haben mehrere Module in einem Projekt, und Sie können Member mit demselben Namen in zwei oder mehrere Module deklarieren. Allerdings müssen Sie alle Verweise auf einen solchen Member mit dem entsprechenden Modulnamen qualifizieren, wenn der Verweis von außerhalb des Moduls ist. Weitere Informationen finden Sie unter [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+- **Abschluss.** Sie können über mehrere Module in einem Projekt verfügen, und Sie können in zwei oder mehr Modulen Member mit demselben Namen deklarieren. Sie müssen allerdings einen beliebigen Verweis auf ein solches Element mit dem entsprechenden Modulnamen qualifizieren, wenn der Verweis von außerhalb dieses Moduls liegt. Weitere Informationen finden Sie unter [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  

@@ -35,8 +35,6 @@
           items:
             - name: 'Vorgehensweise: Reagieren auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung'
               href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
-            - name: Deaktivieren der DPI-Fähigkeit in Visual Studio
-              href: disable-dpi-awareness-visual-studio.md
         - name: Unterstützung für hohe DPI-Werte in Windows Forms
           href: high-dpi-support-in-windows-forms.md
     - name: Ändern der Darstellung von Windows Forms

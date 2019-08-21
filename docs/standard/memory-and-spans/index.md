@@ -9,18 +9,18 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fbfd091c821f59febfc8c7a203334454e7b59c12
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833975"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666419"
 ---
 # <a name="memory--and-span-related-types"></a>Memory- und Span-bezogene Typen
 
 Ab .NET Core 2.1 umfasst .NET eine Reihe von zueinander in Beziehung stehender Typen, die eine zusammenhängende, stark typisierte Region eines beliebigen Speichers darstellen. Dazu gehören:
 
-- <xref:System.Span%601?displayProperty=nameWithType>: Dieser Typ wird verwendet, um auf einen zusammenhängenden Speicherbereich zuzugreifen. Eine <xref:System.Span%601>-Instanz kann sich auf ein Array vom Typ `T`, ein <xref:System.String>, einen mit [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) zugeordneten Puffer oder auf einen Zeiger auf nicht verwalteten Speicher stützen. Da die Zuordnung im Stapel erfolgen muss, gelten einige Einschränkungen. Beispielsweise kann ein Feld in einer Klasse nicht den Typ <xref:System.Span%601> aufweisen, und ein Span-Element kann nicht in asynchronen Vorgängen verwendet werden.
+- <xref:System.Span%601?displayProperty=nameWithType>: Dieser Typ wird verwendet, um auf einen zusammenhängenden Speicherbereich zuzugreifen. Eine <xref:System.Span%601>-Instanz kann sich auf ein Array vom Typ `T`, ein <xref:System.String>, einen mit [stackalloc](../../csharp/language-reference/operators/stackalloc.md) zugeordneten Puffer oder auf einen Zeiger auf nicht verwalteten Speicher stützen. Da die Zuordnung im Stapel erfolgen muss, gelten einige Einschränkungen. Beispielsweise kann ein Feld in einer Klasse nicht den Typ <xref:System.Span%601> aufweisen, und ein Span-Element kann nicht in asynchronen Vorgängen verwendet werden.
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>: Eine unveränderliche Version der <xref:System.Span%601>-Struktur.
 
