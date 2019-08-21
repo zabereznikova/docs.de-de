@@ -47,22 +47,17 @@
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Aspekte beim Hosten eines ActiveX-Steuerelements in Windows Forms
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
-    - name: "Beschriften einzelner Steuerelemente für Windows\_Forms und Konfigurieren von Shortcuts für diese Elemente"
-      href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+    - name: Bezeichnen von Steuerelementen und Bereitstellen von Verknüpfungen
       items:
-        - name: "Vorgehensweise: Erstellen von Zugriffstasten für Windows\_Forms-Steuerelemente"
+        - name: Übersicht
+          href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+        - name: Erstellen von Zugriffsschlüsseln für Steuerelemente
           href: how-to-create-access-keys-for-windows-forms-controls.md
-        - name: "Vorgehensweise: Erstellen von Zugriffstasten für Windows\_Forms-Steuerelemente mithilfe des Designers"
-          href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
-        - name: "Vorgehensweise: Festlegen des durch ein Windows\_Forms-Steuerelement angezeigten Textes"
+        - name: Festlegen des von einem Steuerelement angezeigten Texts
           href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
-        - name: "Vorgehensweise: Festlegen des durch ein Windows\_Forms-Steuerelement angezeigten Textes mithilfe des Designers"
-          href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: "Vorgehensweise: Festlegen des durch ein Windows\_Forms-Steuerelement angezeigten Bildes"
+        - name: Festlegen des von einem Steuerelement angezeigten Bilds
           href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
-        - name: "Vorgehensweise: Festlegen des durch ein Windows\_Forms-Steuerelement angezeigten Bildes mithilfe des Designers"
-          href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
-        - name: Informationen über Eingabehilfen für Steuerelemente in Windows Forms
+        - name: Bereitstellen von Informationen zur Barrierefreiheit für Steuerelemente
           href: providing-accessibility-information-for-controls-on-a-windows-form.md
     - name: Steuerelemente für Windows Forms
       href: controls-to-use-on-windows-forms.md

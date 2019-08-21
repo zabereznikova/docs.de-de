@@ -2,12 +2,12 @@
 title: Assemblys in .NET
 ms.date: 07/10/2018
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 4a92eea623abc8aaad170dafc4bc3c917a36a474
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09dc44141a4eea7601df3f918e8740efdb99aeda
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627823"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666593"
 ---
 # <a name="assemblies-in-net"></a>Assemblys in .NET
 
@@ -25,7 +25,7 @@ Assemblys verfügen über folgende Eigenschaften:
 
 - Sie können mithilfe der Reflektion programmgesteuert Informationen zu einer Assembly abrufen. Weitere Informationen finden Sie unter [Reflektion (C#)](../../csharp/programming-guide/concepts/reflection.md) oder [Reflektion (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md).
 
-- Sie können eine Assembly lediglich zur Überprüfung laden, indem Sie die Methode <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> aufrufen.
+- Sie können eine Assembly nur zur Untersuchung laden, indem Sie die <xref:System.Reflection.MetadataLoadContext>-Klasse verwenden.
 
 ## <a name="assembly-manifest"></a>Assemblymanifest
 
