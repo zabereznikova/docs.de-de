@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634424"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567483"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Einzelheiten zum Verhalten regulärer Ausdrücke
 Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende Engine zum Abgleich regulärer Ausdrücke, die eine herkömmliche NFA-Engine (Nondeterministic Finite Automaton) beinhaltet, wie sie beispielsweise auch von Perl, Python, Emacs und Tcl verwendet wird. Dadurch unterscheidet es sich von schnelleren, aber vom Umfang her beschränkten DFA-Engines (Deterministic Finite Automaton), die reine reguläre Ausdrücke verwenden. Diese werden z.B. in awk, egrep oder lex verwendet. Außerdem unterscheidet es sich dadurch von standardisierten, aber langsameren POSIX-NFAs. Im folgenden Abschnitt werden die drei Typen von Engines für reguläre Ausdrücke beschrieben, und es wird erklärt, warum reguläre Ausdrücke in .NET Framework mit einer herkömmlichen NFA-Engine implementiert werden.  
@@ -43,9 +43,9 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
-     Die gierigen und verzögerten Versionen dieses regulären Ausdrucks werden der folgenden Tabelle entsprechend definiert.  
+     Die gierigen und trägen Versionen dieses regulären Ausdrucks werden der folgenden Tabelle entsprechend definiert:
   
-    |Muster|Beschreibung|  
+    |Muster|BESCHREIBUNG|  
     |-------------|-----------------|  
     |`.+` (gieriger Quantifizierer)|Sucht nach mindestens einem Vorkommen eines beliebigen Zeichens. Dadurch sucht die Engine für reguläre Ausdrücke nach einer Übereinstimmung mit der gesamten Zeichenfolge und führt dann bei Bedarf die Rückverfolgung aus, um im Rest des Musters eine Übereinstimmung zu finden.|  
     |`.+?` (träger Quantifizierer)|Sucht nach mindestens einem Vorkommen eines beliebigen Zeichens, jedoch so wenigen wie möglich.|  
@@ -61,7 +61,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
   
      Der reguläre Ausdruck `\b[A-Z]+\b(?=\P{P})` wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-    |Muster|Beschreibung|  
+    |Muster|BESCHREIBUNG|  
     |-------------|-----------------|  
     |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
     |`[A-Z]+`|Sucht ein- oder mehrmals nach einer Übereinstimmung mit einem beliebigen Buchstabenzeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
@@ -77,7 +77,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
   
      Das Muster für reguläre Ausdrücke `\b(?!non)\w+\b` wird entsprechend der folgenden Tabelle definiert:  
   
-    |Muster|Beschreibung|  
+    |Muster|BESCHREIBUNG|  
     |-------------|-----------------|  
     |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
     |`(?!non)`|Lookahead, um sicherzustellen, dass die aktuelle Zeichenfolge nicht mit „non“ beginnt. Andernfalls wird keine Übereinstimmung gefunden.|  
@@ -93,7 +93,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
   
      Das Muster für reguläre Ausdrücke ist wie in der folgenden Tabelle gezeigt definiert.  
   
-    |Muster|Beschreibung|  
+    |Muster|BESCHREIBUNG|  
     |-------------|-----------------|  
     |`^`|Beginnt den Abgleich am Anfang einer Zeile.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Sucht nach 0 oder 1 Vorkommen der Zeichenfolge `<PRIVATE>`, gefolgt von einem Leerzeichen. Weist die Übereinstimmung der Erfassungsgruppe `Pvt` zu.|  
@@ -129,13 +129,13 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     Der reguläre Ausdruck `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` wird entsprechend der Darstellung in der folgenden Tabelle definiert.  
+     Der reguläre Ausdruck ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-    |Muster|Beschreibung|  
+    |Muster|BESCHREIBUNG|  
     |-------------|-----------------|  
     |`^`|Beginnt die Suche am Anfang der Zeichenfolge.|  
     |`[A-Z0-9]`|Übereinstimmung mit beliebigem numerischen oder alphanumerischen Zeichen. (Beim Vergleich wird die Groß-und Kleinschreibung nicht berücksichtigt.)|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|Übereinstimmung mit null oder mehr Vorkommen eines beliebigen Wortzeichens oder eines der folgenden Zeichen: -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124; oder ~.|  
     |`(?<=[A-Z0-9])`|Lookbehind für vorheriges Zeichen, das numerisch oder alphanumerisch sein muss. (Beim Vergleich wird die Groß-und Kleinschreibung nicht berücksichtigt.)|  
     |`$`|Beendet die Suche am Ende der Zeichenfolge.|  
   
@@ -143,7 +143,7 @@ Die .NET Framework-Engine für reguläre Ausdrücke ist eine zurückverfolgende 
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Informationen über die Verwendung der Rückverfolgung bei regulären Ausdrücken, um mit Verzweigungen nach alternativen Übereinstimmungen zu suchen.|  
 |[Kompilierung und Wiederverwendung](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Informationen zum Kompilieren und Wiederverwenden regulärer Ausdrücke mit dem Ziel der Leistungsverbesserung.|  
