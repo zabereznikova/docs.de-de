@@ -8,22 +8,22 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674367"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659044"
 ---
-# <a name="webproxyscript-element-network-settings"></a><span data-ttu-id="8fd52-102">\<WebProxyScript >-Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="8fd52-102">\<webProxyScript> Element (Network Settings)</span></span>
-<span data-ttu-id="8fd52-103">Konfiguriert die Eigenschaften des Skripts zur Ermittlung von Webproxys, verwendet.</span><span class="sxs-lookup"><span data-stu-id="8fd52-103">Configures the characteristics of the script used to discover Web proxies.</span></span>  
+# <a name="webproxyscript-element-network-settings"></a><span data-ttu-id="02c41-102">\<WebProxyScript >-Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="02c41-102">\<webProxyScript> Element (Network Settings)</span></span>
+<span data-ttu-id="02c41-103">Konfiguriert die Merkmale des Skripts, das zum Ermitteln von Webproxys verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="02c41-103">Configures the characteristics of the script used to discover Web proxies.</span></span>  
   
- <span data-ttu-id="8fd52-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="8fd52-104">\<configuration></span></span>  
-<span data-ttu-id="8fd52-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="8fd52-105">\<system.net></span></span>  
-<span data-ttu-id="8fd52-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="8fd52-106">\<settings></span></span>  
-<span data-ttu-id="8fd52-107">\<webProxyScript></span><span class="sxs-lookup"><span data-stu-id="8fd52-107">\<webProxyScript></span></span>  
+ <span data-ttu-id="02c41-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="02c41-104">\<configuration></span></span>  
+<span data-ttu-id="02c41-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="02c41-105">\<system.net></span></span>  
+<span data-ttu-id="02c41-106">\<settings></span><span class="sxs-lookup"><span data-stu-id="02c41-106">\<settings></span></span>  
+<span data-ttu-id="02c41-107">\<webProxyScript></span><span class="sxs-lookup"><span data-stu-id="02c41-107">\<webProxyScript></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8fd52-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="8fd52-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02c41-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="02c41-108">Syntax</span></span>  
   
 ```xml  
 <webProxyScript  
@@ -31,29 +31,29 @@ ms.locfileid: "61674367"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8fd52-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="8fd52-109">Attributes and Elements</span></span>  
- <span data-ttu-id="8fd52-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="8fd52-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="02c41-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="02c41-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="02c41-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="02c41-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8fd52-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="8fd52-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="02c41-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="02c41-111">Attributes</span></span>  
   
-|<span data-ttu-id="8fd52-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="8fd52-112">Attribute</span></span>|<span data-ttu-id="8fd52-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8fd52-113">Description</span></span>|  
+|<span data-ttu-id="02c41-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="02c41-112">Attribute</span></span>|<span data-ttu-id="02c41-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="02c41-113">Description</span></span>|  
 |---------------|-----------------|  
-|`downloadTimeout`|<span data-ttu-id="8fd52-114">Gibt die maximale Zeit, in Stunden, Minuten und Sekunden das Skript herunterzuladen.</span><span class="sxs-lookup"><span data-stu-id="8fd52-114">Specifies the maximum time to download the script in hours, minutes, and seconds.</span></span> <span data-ttu-id="8fd52-115">Der Standardwert beträgt eine Minute.</span><span class="sxs-lookup"><span data-stu-id="8fd52-115">The default value is one minute.</span></span>|  
+|`downloadTimeout`|<span data-ttu-id="02c41-114">Gibt die maximale Zeit für das Herunterladen des Skripts in Stunden, Minuten und Sekunden an.</span><span class="sxs-lookup"><span data-stu-id="02c41-114">Specifies the maximum time to download the script in hours, minutes, and seconds.</span></span> <span data-ttu-id="02c41-115">Der Standardwert ist eine Minute.</span><span class="sxs-lookup"><span data-stu-id="02c41-115">The default value is one minute.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8fd52-116">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="8fd52-116">Child Elements</span></span>  
- <span data-ttu-id="8fd52-117">Keine</span><span class="sxs-lookup"><span data-stu-id="8fd52-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="02c41-116">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="02c41-116">Child Elements</span></span>  
+ <span data-ttu-id="02c41-117">Keine</span><span class="sxs-lookup"><span data-stu-id="02c41-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="8fd52-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="8fd52-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="02c41-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="02c41-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="8fd52-119">Element</span><span class="sxs-lookup"><span data-stu-id="8fd52-119">Element</span></span>|<span data-ttu-id="8fd52-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8fd52-120">Description</span></span>|  
+|<span data-ttu-id="02c41-119">Element</span><span class="sxs-lookup"><span data-stu-id="02c41-119">Element</span></span>|<span data-ttu-id="02c41-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="02c41-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8fd52-121">settings</span><span class="sxs-lookup"><span data-stu-id="8fd52-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="8fd52-122">Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.</span><span class="sxs-lookup"><span data-stu-id="8fd52-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="02c41-121">settings</span><span class="sxs-lookup"><span data-stu-id="02c41-121">settings</span></span>](settings-element-network-settings.md)|<span data-ttu-id="02c41-122">Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.</span><span class="sxs-lookup"><span data-stu-id="02c41-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8fd52-123">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8fd52-123">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="02c41-123">Hinweise</span><span class="sxs-lookup"><span data-stu-id="02c41-123">Remarks</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="8fd52-124">Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="8fd52-124">Configuration Files</span></span>  
- <span data-ttu-id="8fd52-125">Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="8fd52-125">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="02c41-124">Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="02c41-124">Configuration Files</span></span>  
+ <span data-ttu-id="02c41-125">Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="02c41-125">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8fd52-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8fd52-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02c41-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="02c41-126">See also</span></span>
 
-- [<span data-ttu-id="8fd52-127">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="8fd52-127">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="02c41-127">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="02c41-127">Network Settings Schema</span></span>](index.md)

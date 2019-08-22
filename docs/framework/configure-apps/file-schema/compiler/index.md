@@ -11,34 +11,34 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: fe08ac5dc0600e0861bb349ce99875af8658eb4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4900c391ae94447cdf4be331a27f6f3398e9129a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675272"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659717"
 ---
-# <a name="compiler-and-language-provider-settings-schema"></a><span data-ttu-id="97147-102">Schema für Compiler- und Sprachanbietereinstellungen</span><span class="sxs-lookup"><span data-stu-id="97147-102">Compiler and Language Provider Settings Schema</span></span>
-<span data-ttu-id="97147-103">Die Compiler- und Sprachanbietereinstellungen geben Compilerkonfigurationselemente für verfügbare Sprachanbieter an.</span><span class="sxs-lookup"><span data-stu-id="97147-103">Compiler and language provider settings specify compiler configuration elements for available language providers.</span></span> <span data-ttu-id="97147-104">Jedes Compilerkonfigurationselement gibt den Typnamen des Codeanbieters, Compilerparameter, unterstützte Sprachnamen und unterstützte Dateierweiterungen an.</span><span class="sxs-lookup"><span data-stu-id="97147-104">Each compiler configuration element specifies the code provider type name, compiler parameters, supported language names, and supported file extensions.</span></span>  
+# <a name="compiler-and-language-provider-settings-schema"></a><span data-ttu-id="3e311-102">Schema für Compiler- und Sprachanbietereinstellungen</span><span class="sxs-lookup"><span data-stu-id="3e311-102">Compiler and Language Provider Settings Schema</span></span>
+<span data-ttu-id="3e311-103">Die Compiler- und Sprachanbietereinstellungen geben Compilerkonfigurationselemente für verfügbare Sprachanbieter an.</span><span class="sxs-lookup"><span data-stu-id="3e311-103">Compiler and language provider settings specify compiler configuration elements for available language providers.</span></span> <span data-ttu-id="3e311-104">Jedes Compilerkonfigurationselement gibt den Typnamen des Codeanbieters, Compilerparameter, unterstützte Sprachnamen und unterstützte Dateierweiterungen an.</span><span class="sxs-lookup"><span data-stu-id="3e311-104">Each compiler configuration element specifies the code provider type name, compiler parameters, supported language names, and supported file extensions.</span></span>  
   
- <span data-ttu-id="97147-105">.NET Framework definiert die ursprünglichen Compilereinstellungen in der Computerkonfigurationsdatei (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="97147-105">The .NET Framework defines the initial compiler settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="97147-106">Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider>-Implementierung hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="97147-106">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="97147-107">Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="97147-107">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
+ <span data-ttu-id="3e311-105">.NET Framework definiert die ursprünglichen Compilereinstellungen in der Computerkonfigurationsdatei (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="3e311-105">The .NET Framework defines the initial compiler settings in the machine configuration file (Machine.config).</span></span> <span data-ttu-id="3e311-106">Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider>-Implementierung hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="3e311-106">Developers and compiler vendors can add configuration settings for a new <xref:System.CodeDom.Compiler.CodeDomProvider> implementation.</span></span> <span data-ttu-id="3e311-107">Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="3e311-107">Use the <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> method to programmatically enumerate language provider and compiler configuration settings on a computer.</span></span>  
   
- [<span data-ttu-id="97147-108">\<configuration> Element</span><span class="sxs-lookup"><span data-stu-id="97147-108">\<configuration> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [<span data-ttu-id="3e311-108">\<configuration> Element</span><span class="sxs-lookup"><span data-stu-id="3e311-108">\<configuration> Element</span></span>](../configuration-element.md)  
   
- [<span data-ttu-id="97147-109">\<system.codedom></span><span class="sxs-lookup"><span data-stu-id="97147-109">\<system.codedom></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
+ [<span data-ttu-id="3e311-109">\<system.codedom></span><span class="sxs-lookup"><span data-stu-id="3e311-109">\<system.codedom></span></span>](system-codedom-element.md)  
   
- [<span data-ttu-id="97147-110">\<compilers></span><span class="sxs-lookup"><span data-stu-id="97147-110">\<compilers></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ [<span data-ttu-id="3e311-110">\<compilers></span><span class="sxs-lookup"><span data-stu-id="3e311-110">\<compilers></span></span>](compilers-element.md)  
   
- [<span data-ttu-id="97147-111">\<compiler></span><span class="sxs-lookup"><span data-stu-id="97147-111">\<compiler></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)  
+ [<span data-ttu-id="3e311-111">\<compiler></span><span class="sxs-lookup"><span data-stu-id="3e311-111">\<compiler></span></span>](compiler-element.md)  
   
-|<span data-ttu-id="97147-112">Element</span><span class="sxs-lookup"><span data-stu-id="97147-112">Element</span></span>|<span data-ttu-id="97147-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="97147-113">Description</span></span>|  
+|<span data-ttu-id="3e311-112">Element</span><span class="sxs-lookup"><span data-stu-id="3e311-112">Element</span></span>|<span data-ttu-id="3e311-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3e311-113">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="97147-114">\<system.codedom></span><span class="sxs-lookup"><span data-stu-id="97147-114">\<system.codedom></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|<span data-ttu-id="97147-115">Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.</span><span class="sxs-lookup"><span data-stu-id="97147-115">Specifies compiler configuration settings for available language providers.</span></span>|  
-|[<span data-ttu-id="97147-116">\<compilers></span><span class="sxs-lookup"><span data-stu-id="97147-116">\<compilers></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|<span data-ttu-id="97147-117">Der Container für Compilerkonfigurationselemente, dieser enthält 0 (null) oder mehr [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)-Elemente.</span><span class="sxs-lookup"><span data-stu-id="97147-117">Container for compiler configuration elements; contains zero or more [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) elements.</span></span>|  
-|[<span data-ttu-id="97147-118">\<compiler></span><span class="sxs-lookup"><span data-stu-id="97147-118">\<compiler></span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|<span data-ttu-id="97147-119">Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.</span><span class="sxs-lookup"><span data-stu-id="97147-119">Specifies the compiler configuration attributes for a language provider.</span></span>|  
+|[<span data-ttu-id="3e311-114">\<system.codedom></span><span class="sxs-lookup"><span data-stu-id="3e311-114">\<system.codedom></span></span>](system-codedom-element.md)|<span data-ttu-id="3e311-115">Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.</span><span class="sxs-lookup"><span data-stu-id="3e311-115">Specifies compiler configuration settings for available language providers.</span></span>|  
+|[<span data-ttu-id="3e311-116">\<compilers></span><span class="sxs-lookup"><span data-stu-id="3e311-116">\<compilers></span></span>](compilers-element.md)|<span data-ttu-id="3e311-117">Der Container für Compilerkonfigurationselemente, dieser enthält 0 (null) oder mehr [\<compiler>](compiler-element.md)-Elemente.</span><span class="sxs-lookup"><span data-stu-id="3e311-117">Container for compiler configuration elements; contains zero or more [\<compiler>](compiler-element.md) elements.</span></span>|  
+|[<span data-ttu-id="3e311-118">\<compiler></span><span class="sxs-lookup"><span data-stu-id="3e311-118">\<compiler></span></span>](compiler-element.md)|<span data-ttu-id="3e311-119">Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.</span><span class="sxs-lookup"><span data-stu-id="3e311-119">Specifies the compiler configuration attributes for a language provider.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="97147-120">Beispiel</span><span class="sxs-lookup"><span data-stu-id="97147-120">Example</span></span>  
- <span data-ttu-id="97147-121">Das folgende Beispiel veranschaulicht ein typisches Compilerkonfigurationselement.</span><span class="sxs-lookup"><span data-stu-id="97147-121">The following example illustrates a typical compiler configuration element.</span></span>  
+## <a name="example"></a><span data-ttu-id="3e311-120">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3e311-120">Example</span></span>  
+ <span data-ttu-id="3e311-121">Das folgende Beispiel veranschaulicht ein typisches Compilerkonfigurationselement.</span><span class="sxs-lookup"><span data-stu-id="3e311-121">The following example illustrates a typical compiler configuration element.</span></span>  
   
 ```xml  
 <configuration>  
@@ -56,9 +56,9 @@ ms.locfileid: "61675272"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="97147-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="97147-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3e311-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3e311-122">See also</span></span>
 
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [<span data-ttu-id="97147-123">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="97147-123">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [<span data-ttu-id="97147-124">\<compiler> Element</span><span class="sxs-lookup"><span data-stu-id="97147-124">\<compiler> Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [<span data-ttu-id="3e311-123">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="3e311-123">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="3e311-124">\<compiler> Element</span><span class="sxs-lookup"><span data-stu-id="3e311-124">\<compiler> Element</span></span>](compiler-element.md)
