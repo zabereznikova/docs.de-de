@@ -10,22 +10,22 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705154"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664240"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="e9c35-102">\<Hinzufügen >-Element für AuthenticationModules (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="e9c35-102">\<add> Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="e9c35-103">Ein Modul für die Authentifizierung hinzugefügt der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="e9c35-103">Adds an authentication module to the application.</span></span>  
+# <a name="add-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="802ae-102">\<Add >-Element für authenticationModules (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="802ae-102">\<add> Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="802ae-103">Fügt der Anwendung ein Authentifizierungs Modul hinzu.</span><span class="sxs-lookup"><span data-stu-id="802ae-103">Adds an authentication module to the application.</span></span>  
   
- <span data-ttu-id="e9c35-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e9c35-104">\<configuration></span></span>  
-<span data-ttu-id="e9c35-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="e9c35-105">\<system.net></span></span>  
-<span data-ttu-id="e9c35-106">\<authenticationModules></span><span class="sxs-lookup"><span data-stu-id="e9c35-106">\<authenticationModules></span></span>  
-<span data-ttu-id="e9c35-107">\<add></span><span class="sxs-lookup"><span data-stu-id="e9c35-107">\<add></span></span>  
+ <span data-ttu-id="802ae-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="802ae-104">\<configuration></span></span>  
+<span data-ttu-id="802ae-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="802ae-105">\<system.net></span></span>  
+<span data-ttu-id="802ae-106">\<authenticationModules></span><span class="sxs-lookup"><span data-stu-id="802ae-106">\<authenticationModules></span></span>  
+<span data-ttu-id="802ae-107">\<add></span><span class="sxs-lookup"><span data-stu-id="802ae-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9c35-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="e9c35-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="802ae-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="802ae-108">Syntax</span></span>  
   
 ```xml  
 <add
@@ -33,34 +33,34 @@ ms.locfileid: "61705154"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="e9c35-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="e9c35-109">Attributes and Elements</span></span>  
- <span data-ttu-id="e9c35-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="e9c35-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="802ae-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="802ae-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="802ae-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="802ae-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="e9c35-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="e9c35-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="802ae-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="802ae-111">Attributes</span></span>  
   
-|<span data-ttu-id="e9c35-112">**Attribut**</span><span class="sxs-lookup"><span data-stu-id="e9c35-112">**Attribute**</span></span>|<span data-ttu-id="e9c35-113">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="e9c35-113">**Description**</span></span>|  
+|<span data-ttu-id="802ae-112">**Attribut**</span><span class="sxs-lookup"><span data-stu-id="802ae-112">**Attribute**</span></span>|<span data-ttu-id="802ae-113">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="802ae-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`type`|<span data-ttu-id="e9c35-114">Den vollqualifizierten Typnamen (angegeben durch die <xref:System.Type.FullName%2A> Eigenschaft) und den Assemblynamen (erkennbar der <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft) und durch ein Komma getrennt.</span><span class="sxs-lookup"><span data-stu-id="e9c35-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
+|`type`|<span data-ttu-id="802ae-114">Der voll qualifizierte Typname (angegeben durch die <xref:System.Type.FullName%2A> -Eigenschaft) und der AssemblyName ( <xref:System.Reflection.Assembly.FullName%2A> angegeben durch die-Eigenschaft), getrennt durch ein Komma.</span><span class="sxs-lookup"><span data-stu-id="802ae-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="e9c35-115">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="e9c35-115">Child Elements</span></span>  
- <span data-ttu-id="e9c35-116">Keine</span><span class="sxs-lookup"><span data-stu-id="e9c35-116">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="802ae-115">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="802ae-115">Child Elements</span></span>  
+ <span data-ttu-id="802ae-116">Keine</span><span class="sxs-lookup"><span data-stu-id="802ae-116">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="e9c35-117">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="e9c35-117">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="802ae-117">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="802ae-117">Parent Elements</span></span>  
   
-|<span data-ttu-id="e9c35-118">**Element**</span><span class="sxs-lookup"><span data-stu-id="e9c35-118">**Element**</span></span>|<span data-ttu-id="e9c35-119">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="e9c35-119">**Description**</span></span>|  
+|<span data-ttu-id="802ae-118">**Element**</span><span class="sxs-lookup"><span data-stu-id="802ae-118">**Element**</span></span>|<span data-ttu-id="802ae-119">**Beschreibung**</span><span class="sxs-lookup"><span data-stu-id="802ae-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="e9c35-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="e9c35-120">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="e9c35-121">Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.</span><span class="sxs-lookup"><span data-stu-id="e9c35-121">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="802ae-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="802ae-120">authenticationModules</span></span>](authenticationmodules-element-network-settings.md)|<span data-ttu-id="802ae-121">Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="802ae-121">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e9c35-122">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e9c35-122">Remarks</span></span>  
- <span data-ttu-id="e9c35-123">Die `add` -Element fügt ein Authentifizierungsmodul an das Ende der Liste der registrierten Authentifizierungsmodule.</span><span class="sxs-lookup"><span data-stu-id="e9c35-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="e9c35-124">Authentifizierungsmodule werden in der Reihenfolge aufgerufen, in denen sie zur Liste hinzugefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="e9c35-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="802ae-122">Hinweise</span><span class="sxs-lookup"><span data-stu-id="802ae-122">Remarks</span></span>  
+ <span data-ttu-id="802ae-123">Das `add` -Element fügt ein Authentifizierungs Modul am Ende der Liste registrierter Authentifizierungs Module hinzu.</span><span class="sxs-lookup"><span data-stu-id="802ae-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="802ae-124">Authentifizierungs Module werden in der Reihenfolge aufgerufen, in der Sie der Liste hinzugefügt wurden.</span><span class="sxs-lookup"><span data-stu-id="802ae-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
   
- <span data-ttu-id="e9c35-125">Der Wert für die `type` Attribut sollte einen gültigen Typnamen und den entsprechenden Assemblynamen, die durch ein Komma getrennt sein.</span><span class="sxs-lookup"><span data-stu-id="e9c35-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
+ <span data-ttu-id="802ae-125">Der Wert für das `type` -Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.</span><span class="sxs-lookup"><span data-stu-id="802ae-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="e9c35-126">Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="e9c35-126">Configuration Files</span></span>  
- <span data-ttu-id="e9c35-127">Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e9c35-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="802ae-126">Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="802ae-126">Configuration Files</span></span>  
+ <span data-ttu-id="802ae-127">Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="802ae-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e9c35-128">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e9c35-128">Example</span></span>  
- <span data-ttu-id="e9c35-129">Im folgenden Beispiel wird die Standard-Authentifizierungsmodule.</span><span class="sxs-lookup"><span data-stu-id="e9c35-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="e9c35-130">Sie sollten die Werte für die Version und ' PublicKeyToken ' machen durch die richtigen Werte für das angegebene Modul ersetzen.</span><span class="sxs-lookup"><span data-stu-id="e9c35-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="802ae-128">Beispiel</span><span class="sxs-lookup"><span data-stu-id="802ae-128">Example</span></span>  
+ <span data-ttu-id="802ae-129">Im folgenden Beispiel werden die Standard Authentifizierungs Module aktiviert.</span><span class="sxs-lookup"><span data-stu-id="802ae-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="802ae-130">Sie sollten die Werte für Version und PublicKeyToken durch die korrekten Werte für das angegebene Modul ersetzen.</span><span class="sxs-lookup"><span data-stu-id="802ae-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,8 +81,8 @@ ms.locfileid: "61705154"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e9c35-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e9c35-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="802ae-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="802ae-131">See also</span></span>
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [<span data-ttu-id="e9c35-132">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="e9c35-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="802ae-132">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="802ae-132">Network Settings Schema</span></span>](index.md)

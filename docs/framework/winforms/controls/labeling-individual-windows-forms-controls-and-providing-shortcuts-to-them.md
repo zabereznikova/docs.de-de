@@ -7,31 +7,32 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892761ae52b8b3546c86a849d2d2eecc7442be53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013009"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666137"
 ---
-# <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a><span data-ttu-id="aface-102">Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente</span><span class="sxs-lookup"><span data-stu-id="aface-102">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>
-<span data-ttu-id="aface-103">In Windows Forms hinzugefügte Steuerelemente haben Eigenschaften und Methoden, die dazu verwendet werden, die Benutzerfreundlichkeit weiter zu spezialisieren.</span><span class="sxs-lookup"><span data-stu-id="aface-103">Controls added to Windows Forms have properties and methods that are used to further specialize the user experience.</span></span> <span data-ttu-id="aface-104">Ein Anpassen der Benutzeroberfläche an die Bedürfnisse der Benutzer ist äußerst wichtig für gut gestaltete Windows-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="aface-104">Customizing your user interface to suit the needs of the user is extremely important for well-designed Windows applications.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="aface-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="aface-105">In This Section</span></span>  
- [<span data-ttu-id="aface-106">Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="aface-106">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- <span data-ttu-id="aface-107">Beschreibt das Zuweisen einer Textbezeichnung zu einem Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="aface-107">Describes how to assign a text label to a control.</span></span>  
-  
- [<span data-ttu-id="aface-108">Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="aface-108">How to: Set the Image Displayed by a Windows Forms Control</span></span>](how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
- <span data-ttu-id="aface-109">Erläutert, wie ein Steuerelement konfiguriert wird, um Bilder anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="aface-109">Explains how to configure a control to display images.</span></span>  
-  
- [<span data-ttu-id="aface-110">Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="aface-110">How to: Create Access Keys for Windows Forms Controls</span></span>](how-to-create-access-keys-for-windows-forms-controls.md)  
- <span data-ttu-id="aface-111">Enthält Informationen über das Erstellen von vordefinierten Tastenkombinationen.</span><span class="sxs-lookup"><span data-stu-id="aface-111">Gives information about creating predefined keyboard shortcuts.</span></span>  
-  
- [<span data-ttu-id="aface-112">Informationen über Eingabehilfen für Steuerelemente in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="aface-112">Providing Accessibility Information for Controls on a Windows Form</span></span>](providing-accessibility-information-for-controls-on-a-windows-form.md)  
- <span data-ttu-id="aface-113">Enthält Informationen über das Einrichten von Steuerelementen für die Arbeit mit Hilfen zur Barrierefreiheit.</span><span class="sxs-lookup"><span data-stu-id="aface-113">Gives information about enabling your controls to work with accessibility aids.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="aface-114">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="aface-114">Related Sections</span></span>  
- [<span data-ttu-id="aface-115">Windows Forms-Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="aface-115">Windows Forms Controls</span></span>](index.md)  
- <span data-ttu-id="aface-116">Enthält Links zu weiteren grundlegenden Verwendungsmöglichkeiten für Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="aface-116">Links to other basic things you can do with controls.</span></span>  
-  
- <span data-ttu-id="aface-117">Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente, die mithilfe des Designers](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement mithilfe des Designers](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement mithilfe des Designers](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).</span><span class="sxs-lookup"><span data-stu-id="aface-117">Also see [How to: Create Access Keys for Windows Forms Controls Using the Designer](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [How to: Set the Text Displayed by a Windows Forms Control Using the Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [How to: Set the Image Displayed by a Windows Forms Control Using the Designer](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).</span></span>
+# <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a><span data-ttu-id="32695-102">Bezeichnung einzelner Windows Forms Steuerelemente und Bereitstellen von Tastenkombinationen</span><span class="sxs-lookup"><span data-stu-id="32695-102">Label individual Windows Forms controls and provide shortcuts</span></span>
+
+<span data-ttu-id="32695-103">In Windows Forms hinzugefügte Steuerelemente haben Eigenschaften und Methoden, die dazu verwendet werden, die Benutzerfreundlichkeit weiter zu spezialisieren.</span><span class="sxs-lookup"><span data-stu-id="32695-103">Controls added to Windows Forms have properties and methods that are used to further specialize the user experience.</span></span> <span data-ttu-id="32695-104">Ein Anpassen der Benutzeroberfläche an die Bedürfnisse der Benutzer ist äußerst wichtig für gut gestaltete Windows-Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="32695-104">Customizing your user interface to suit the needs of the user is extremely important for well-designed Windows applications.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="32695-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="32695-105">In this section</span></span>
+
+<span data-ttu-id="32695-106">[Vorgehensweise: Festlegen des von einem Windows Forms-Steuerelement angezeigten Texts](how-to-set-the-text-displayed-by-a-windows-forms-control.md)</span><span class="sxs-lookup"><span data-stu-id="32695-106">[How to: Set the Text Displayed by a Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)</span></span>\
+<span data-ttu-id="32695-107">Beschreibt das Zuweisen einer Textbezeichnung zu einem Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="32695-107">Describes how to assign a text label to a control.</span></span>
+
+<span data-ttu-id="32695-108">[Vorgehensweise: Festlegen des von einem Windows Forms Steuerelement angezeigten Bilds](how-to-set-the-image-displayed-by-a-windows-forms-control.md)</span><span class="sxs-lookup"><span data-stu-id="32695-108">[How to: Set the Image Displayed by a Windows Forms Control](how-to-set-the-image-displayed-by-a-windows-forms-control.md)</span></span>\
+<span data-ttu-id="32695-109">Erläutert, wie ein Steuerelement konfiguriert wird, um Bilder anzuzeigen.</span><span class="sxs-lookup"><span data-stu-id="32695-109">Explains how to configure a control to display images.</span></span>
+
+<span data-ttu-id="32695-110">[Vorgehensweise: Erstellen von Zugriffs Schlüsseln für Windows Forms Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)</span><span class="sxs-lookup"><span data-stu-id="32695-110">[How to: Create Access Keys for Windows Forms Controls](how-to-create-access-keys-for-windows-forms-controls.md)</span></span>\
+<span data-ttu-id="32695-111">Enthält Informationen über das Erstellen von vordefinierten Tastenkombinationen.</span><span class="sxs-lookup"><span data-stu-id="32695-111">Gives information about creating predefined keyboard shortcuts.</span></span>
+
+<span data-ttu-id="32695-112">[Bereitstellen von Barrierefreiheits Informationen für Steuerelemente in einem Windows Form](providing-accessibility-information-for-controls-on-a-windows-form.md)</span><span class="sxs-lookup"><span data-stu-id="32695-112">[Providing Accessibility Information for Controls on a Windows Form](providing-accessibility-information-for-controls-on-a-windows-form.md)</span></span>\
+<span data-ttu-id="32695-113">Enthält Informationen über das Einrichten von Steuerelementen für die Arbeit mit Hilfen zur Barrierefreiheit.</span><span class="sxs-lookup"><span data-stu-id="32695-113">Gives information about enabling your controls to work with accessibility aids.</span></span>
+
+## <a name="related-sections"></a><span data-ttu-id="32695-114">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="32695-114">Related sections</span></span>
+
+<span data-ttu-id="32695-115">[Windows Forms Steuerelemente](index.md)</span><span class="sxs-lookup"><span data-stu-id="32695-115">[Windows Forms Controls](index.md)</span></span>\
+<span data-ttu-id="32695-116">Enthält Links zu weiteren grundlegenden Verwendungsmöglichkeiten für Steuerelemente.</span><span class="sxs-lookup"><span data-stu-id="32695-116">Links to other basic things you can do with controls.</span></span>
