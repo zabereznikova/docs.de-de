@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e01cdd942237141b8ef35495d3b74d6b2282a865
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705167"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664258"
 ---
-# <a name="oidmap-element"></a>\<OidMap >-Element
-Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.  
+# <a name="oidmap-element"></a>\<oidmap-> Element
+Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.  
   
  \<configuration>  
 \<mscorlib>  
@@ -40,7 +40,7 @@ Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Ordnet einen ASN. 1-Objektbezeichner in einen Anzeigenamen an.|  
+|[\<oidEntry>](oidentry-element.md)|Ordnet eine ASN. 1-OID einem anzeigen Amen zu.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -48,10 +48,10 @@ Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`cryptographySettings`|Enthält Kryptografieeinstellungen.|  
-|`mscorlib`|Enthält die `cryptographySettings` Element.|  
+|`mscorlib`|Enthält das `cryptographySettings` -Element.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der  **\<OidMap >** Element, in eine Zuordnung der OID für RIPEMD-160 Hashalgorithmus, der eine Implementierung dieses Hashalgorithmus.  
+ Im folgenden Beispiel wird gezeigt, wie das  **\<oidmap->** -Element verwendet wird, um eine Zuordnung einer OID für den RIPEMD-160-Hash Algorithmus zu einer Implementierung dieses Hash Algorithmus zu enthalten.  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Konfigurationsdateischema](../index.md)
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Konfigurieren kryptografischer Klassen](../../configure-cryptography-classes.md)
+- [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../map-object-identifiers-to-cryptography-algorithms.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b00a5349e22feb3cce404ff504edd798ff9e304
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704608"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663523"
 ---
-# <a name="probing-element"></a>\<Probing >-Element
-Gibt Unterverzeichnisse der Anwendungsbasis für die common Language Runtime beim Laden von Assemblys zu suchen.  
+# <a name="probing-element"></a>\<Überprüfung > Elements
+Gibt Anwendungs Basis Verzeichnisse für das Common Language Runtime an, das beim Laden von Assemblys gesucht werden soll.  
   
  \<configuration>  
-\<runtime>  
+\<Lauf Zeit >  
 \<assemblyBinding>  
 \<probing>  
   
@@ -39,7 +39,7 @@ Gibt Unterverzeichnisse der Anwendungsbasis für die common Language Runtime bei
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`privatePath`|Erforderliches Attribut.<br /><br /> Gibt Unterverzeichnisse des Basisverzeichnisses der Anwendung, die Assemblys enthalten kann. Trennen Sie jedes Unterverzeichnis mit einem Semikolon.|  
+|`privatePath`|Erforderliches Attribut.<br /><br /> Gibt die Unterverzeichnisse des Basisverzeichnisses der Anwendung an, die Assemblys enthalten können. Trennen Sie jedes Unterverzeichnis mit einem Semikolon.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -53,7 +53,7 @@ Gibt Unterverzeichnisse der Anwendungsbasis für die common Language Runtime bei
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie Unterverzeichnisse der Anwendungsbasis angeben, die die Common Language Runtime nach Assemblys suchen soll.  
+ Im folgenden Beispiel wird gezeigt, wie Sie Anwendungs Basis Verzeichnisse angeben, die die Laufzeit nach Assemblys durchsuchen soll.  
   
 ```xml  
 <configuration>  
@@ -67,7 +67,7 @@ Gibt Unterverzeichnisse der Anwendungsbasis für die common Language Runtime bei
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Festlegen des Speicherortes einer Assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)
+- [Festlegen des Speicherortes einer Assembly](../../specify-assembly-location.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../deployment/how-the-runtime-locates-assemblies.md)

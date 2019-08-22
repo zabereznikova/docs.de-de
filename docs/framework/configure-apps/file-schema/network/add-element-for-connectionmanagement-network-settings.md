@@ -10,14 +10,14 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 608c591b910252dd60950bf2aa7565d6df04d5fc
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705271"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664226"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Hinzufügen >-Element für ConnectionManagement (Netzwerkeinstellungen)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<Add >-Element für connectionManagement (Netzwerkeinstellungen)
 Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu.  
   
  \<configuration>  
@@ -51,7 +51,7 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Der Wert des `address`-Attributs muss entweder ein Sternchen zur Angabe aller Verbindungen oder eine Zeichenfolge im Format `<schema>://<idn_hostname>[:<port>]` sein.  
@@ -62,7 +62,7 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine Anwendung für die Verwendung von vier Verbindungen mit dem Server `www.contoso.com` und zwei Verbindungen mit allen anderen Servern.  
+ Im folgenden Beispiel wird eine Anwendung so konfiguriert, dass vier Verbindungen mit dem `www.contoso.com` Server und zwei Verbindungen mit allen anderen Servern verwendet werden.  
   
 ```xml  
 <configuration>  
@@ -79,4 +79,4 @@ Fügt der Verbindungsverwaltungsliste eine IP-Adresse oder einen DNS-Namen hinzu
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

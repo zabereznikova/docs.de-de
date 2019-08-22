@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 53faf31c8dd3be1606c491e95594c4aae5aedf98
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6d7d867b7c9e83b68589e046565bfb0199692f5f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039671"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658514"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Vorgehensweise: Festlegen von standardmäßigen Zellenstilen und Datenformaten für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 
@@ -23,7 +23,6 @@ Weitere Informationen zu Zell Formaten finden Sie unter [Zellen Stile im Windows
 Sie können auch Stile mithilfe der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> -Eigenschaft festlegen, um alle Zeilen zu beeinflussen, die dem Steuerelement hinzugefügt werden. Weitere Informationen zur Zeilen Vorlage finden [Sie unter Gewusst wie: Verwenden Sie die Zeilen Vorlage, um Zeilen im Windows Forms DataGridView-](use-the-row-template-to-customize-rows-in-the-datagrid.md)Steuerelement anzupassen.
 
 Die folgenden Prozeduren erfordern ein **Windows-Anwendungs** Projekt mit einem <xref:System.Windows.Forms.DataGridView> Formular, das ein-Steuerelement enthält. Weitere Informationen zum Einrichten eines solchen Projekts finden [Sie unter Gewusst wie: Erstellen Sie ein Windows Forms-](/visualstudio/ide/step-1-create-a-windows-forms-application-project) Anwendungs [Projekt, und Gewusst wie: Fügen Sie Windows Forms](how-to-add-controls-to-windows-forms.md)Steuerelemente hinzu.
-
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>So legen Sie Standard Stile für alle Zellen im Steuerelement fest
 

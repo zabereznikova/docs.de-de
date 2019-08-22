@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c13dd2f00e08539d2ba502058c74aa4a1525e3ff
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: eb28eddf7e9f13bceaf47de28633073f59f3920d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816121"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663744"
 ---
-# <a name="enforcefipspolicy-element"></a>\<EnforceFIPSPolicy >-Element
+# <a name="enforcefipspolicy-element"></a>\<enforcemepspolicy > Element
 Gibt an, ob die Computerkonfigurationsanforderung durchgesetzt wird, dass kryptografische Algorithmen den Federal Information Processing Standards (FIPS) entsprechen müssen.  
   
  \<Configuration >-Element  
-\<Common Language Runtime >-Element  
-\<EnforceFIPSPolicy >-Element  
+\<Runtime-> Element  
+\<enforcemepspolicy > Element  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,14 +36,14 @@ Gibt an, ob die Computerkonfigurationsanforderung durchgesetzt wird, dass krypto
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob die Erzwingung von computerkonfigurationsanforderung, dass kryptografische Algorithmen mit FIPS konform sein müssen.|  
+|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob die Erzwingung einer Computer Konfigurations Anforderung aktiviert werden soll, dass Kryptografiealgorithmen mit "fps" kompatibel sein müssen.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`true`|Wenn Ihr Computer konfiguriert ist, um kryptografische Algorithmen, die mit FIPS konform sein müssen, wird die Anforderung erzwungen. Wenn eine Klasse einen Algorithmus implementiert, die nicht mit FIPS, die Konstruktoren kompatibel ist oder `Create` Methoden für diese Klasse die Ausnahmen auslösen, wenn sie auf diesem Computer ausgeführt werden. Dies ist die Standardeinstellung.|  
-|`false`|Kryptografische Algorithmen, die von der Anwendung verwendet werden, sind nicht erforderlich, um die Kompatibilität mit FIPS, unabhängig von der Konfiguration des Computers.|  
+|`true`|Wenn Ihr Computer so konfiguriert ist, dass Kryptografiealgorithmen für die Kompatibilität mit der Konformität erforderlich sind, wird diese Anforderung erzwungen. Wenn eine Klasse einen Algorithmus implementiert, der nicht mit "fps" kompatibel ist, lösen `Create` die Konstruktoren oder Methoden für diese Klasse Ausnahmen aus, wenn Sie auf diesem Computer ausgeführt werden. Dies ist die Standardeinstellung.|  
+|`false`|Kryptografiealgorithmen, die von der Anwendung verwendet werden, müssen unabhängig von der Computerkonfiguration nicht mit dem PPS kompatibel sein.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -56,12 +56,12 @@ Gibt an, ob die Computerkonfigurationsanforderung durchgesetzt wird, dass krypto
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ab .NET Framework 2.0, wird die Erstellung von Klassen, die Kryptografiealgorithmen implementieren von der Konfiguration des Computers gesteuert. Wenn der Computer so konfiguriert ist, dass die Algorithmen mit FIPS kompatibel sein müssen und eine Klasse implementiert einen Algorithmus, der nicht mit FIPS kompatibel ist, löst jeder Versuch, eine Instanz dieser Klasse erstellt eine Ausnahme aus. Auslösen von Konstruktoren eine <xref:System.InvalidOperationException> Ausnahme und `Create` Methoden lösen eine <xref:System.Reflection.TargetInvocationException> Ausnahme mit einer internen <xref:System.InvalidOperationException> Ausnahme.  
+ Beginnend mit dem .NET Framework 2,0 wird die Erstellung von Klassen, die Kryptografiealgorithmen implementieren, von der Konfiguration des Computers gesteuert. Wenn der Computer so konfiguriert ist, dass er Algorithmen erfordert, dass er mit der Verwendung von "fps" kompatibel ist, und eine Klasse einen Algorithmus implementiert, der nicht mit "fps" kompatibel ist, löst jeder Versuch, eine Instanz dieser Klasse zu erstellen, eine Konstruktoren lösen eine <xref:System.InvalidOperationException> Ausnahme aus, `Create` und-Methoden <xref:System.Reflection.TargetInvocationException> lösen eine-Ausnahme <xref:System.InvalidOperationException> mit einer inneren Ausnahme aus.  
   
- Wenn Ihre Anwendung ausgeführt, auf Computern wird, deren Konfigurationen erfordern, dass die Kompatibilität mit FIPS, und die Anwendung verwendet einen Algorithmus, der nicht mit FIPS kompatibel ist, können Sie dieses Element in der Konfigurationsdatei verwenden, um zu verhindern, dass die common Language Runtime (CLR) aus FIPS-Kompatibilität zu erzwingen. Dieses Element wurde in .NET Framework 2.0 Service Pack 1 eingeführt.  
+ Wenn die Anwendung auf Computern ausgeführt wird, deren Konfigurationen Kompatibilität mit dem-Konfigurationsserver erfordern, und die Anwendung einen Algorithmus verwendet, der nicht mit dem-fps kompatibel ist, können Sie dieses Element in der Konfigurationsdatei verwenden, um zu verhindern, dass die Common Language Runtime (CLR) von Erzwingen der Konformität mit dem PPS Dieses Element wurde in .NET Framework 2,0 Service Pack 1 eingeführt.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie verhindern, dass die CLR FIPS-Kompatibilität zu erzwingen.  
+ Im folgenden Beispiel wird gezeigt, wie verhindert wird, dass die CLR die Konformität mit der Konformität erzwingt.  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,6 @@ Gibt an, ob die Computerkonfigurationsanforderung durchgesetzt wird, dass krypto
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)
 - [Kryptografiemodell](../../../../../docs/standard/security/cryptography-model.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-ms.openlocfilehash: 36d174beea58ff96674bd873bfbcb8be89591669
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ff44f0251936d51b4e396c37c53322efa110227
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674557"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659424"
 ---
 # <a name="defaultftpcachepolicy-element-network-settings"></a>\<DefaultFtpCachePolicy >-Element (Netzwerkeinstellungen)
-Beschreibt, ob der FTP-caching ist aktiv und wird beschrieben, die Standardcachingrichtlinie.  
+Beschreibt, ob das FTP-Caching aktiv ist, und beschreibt die Standard Cache Richtlinie.  
   
  \<configuration>  
 \<system.net>  
@@ -38,20 +38,20 @@ Beschreibt, ob der FTP-caching ist aktiv und wird beschrieben, die Standardcachi
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`policyLevel`|Gibt die FTP-Cachingrichtlinie an. Der Standardwert ist `Default`.|  
+|`policyLevel`|Gibt die FTP-Caching-Richtlinie an. Der Standardwert ist `Default`.|  
   
 ## <a name="policylevel-attribute"></a>PolicyLevel-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`Default`|Gibt die zwischengespeicherte Ressource zurück, wenn die Ressource aktuell ist, die Inhaltslänge genau ist und den Ablauf, Änderungen und Content-Length-Attribute vorhanden sind.|  
+|`Default`|Gibt die zwischengespeicherte Ressource zurück, wenn die Ressource neu ist, die Länge des Inhalts genau ist und die Attribute für die Ablauf-, Änderungs-und Inhalts Länge vorhanden sind.|  
 |`BypassCache`|Gibt die Ressource vom Server zurück.|  
-|`CacheOnly`|Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge vorhanden ist und der Größe des Eintrags übereinstimmt.|  
-|`CacheIfAvailable`|Gibt die zwischengespeicherte Ressource zurück, wenn die Inhaltslänge bereitgestellt wird und der Größe des Eintrags übereinstimmt. Andernfalls wird die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben wird.|  
-|`Revalidate`|Gibt die zwischengespeicherte Ressource zurück, wenn es sich bei der Timestamp der zwischengespeicherten Ressource dem Timestamp der Ressource auf dem Server identisch ist; Andernfalls wird die Ressource vom Server heruntergeladen, im Cache gespeichert und an den Aufrufer zurückgegeben.|  
-|`Reload`|Lädt die Ressource vom Server herunter, speichert sie in den Cache und die Ressource an den Aufrufer zurückgegeben.|  
-|`NoCacheNoStore`|Wenn eine zwischengespeicherte Ressource vorhanden ist, wird sie gelöscht. Die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben wird.|  
-|`Revalidate`|Führt eine Anforderung mithilfe die zwischengespeicherte Kopie der Ressource, wenn der Zeitstempel der Zeitstempel der Ressource auf dem Server identisch ist. Andernfalls ist die Ressource vom Server heruntergeladen, an den Aufrufer angezeigt und im Cache gespeichert.|  
+|`CacheOnly`|Gibt die zwischengespeicherte Ressource zurück, wenn die Inhalts Länge vorhanden ist und mit der Eingabe Größe übereinstimmt.|  
+|`CacheIfAvailable`|Gibt die zwischengespeicherte Ressource zurück, wenn die Inhalts Länge angegeben wird und mit der Eintrags Größe übereinstimmt. Andernfalls wird die Ressource vom Server heruntergeladen und an den Aufrufer zurückgegeben.|  
+|`Revalidate`|Gibt die zwischengespeicherte Ressource zurück, wenn der Zeitstempel der zwischengespeicherten Ressource mit dem Zeitstempel der Ressource auf dem Server identisch ist. Andernfalls wird die Ressource vom Server heruntergeladen, im Cache gespeichert und an den Aufrufer zurückgegeben.|  
+|`Reload`|Lädt die Ressource vom Server herunter, speichert Sie im Cache und gibt die Ressource an den Aufrufer zurück.|  
+|`NoCacheNoStore`|Wenn eine zwischengespeicherte Ressource vorhanden ist, wird Sie gelöscht. Die Ressource wird vom Server heruntergeladen und an den Aufrufer zurückgegeben.|  
+|`Revalidate`|Erfüllt eine Anforderung mithilfe der zwischengespeicherten Kopie der Ressource, wenn der Zeitstempel mit dem Zeitstempel der Ressource auf dem Server identisch ist. Andernfalls wird die Ressource vom Server heruntergeladen, dem Aufrufer angezeigt und im Cache gespeichert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -60,12 +60,12 @@ Beschreibt, ob der FTP-caching ist aktiv und wird beschrieben, die Standardcachi
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.|  
+|[requestCaching](requestcaching-element-network-settings.md)|Steuert den zwischen Speicherungs Mechanismus für Netzwerk Anforderungen.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie eine FTP-Cachingrichtlinie angeben `NoCacheNoStore`.  
+ Im folgenden Beispiel wird gezeigt, wie eine FTP-Cachingrichtlinie von `NoCacheNoStore`angegeben wird.  
   
 ```xml  
 <configuration>  
@@ -84,4 +84,4 @@ Beschreibt, ob der FTP-caching ist aktiv und wird beschrieben, die Standardcachi
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

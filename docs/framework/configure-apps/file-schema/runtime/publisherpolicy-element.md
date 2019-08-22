@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c8f8744d3ef1ca30eb05a4c8c3290d8a514714b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674076"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663513"
 ---
-# <a name="publisherpolicy-element"></a>\<PublisherPolicy >-Element
+# <a name="publisherpolicy-element"></a>\<publisherPolicy-> Element
 Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.  
   
  \<configuration>  
-\<runtime>  
+\<Lauf Zeit >  
 \<assemblyBinding>  
 \<dependentAssembly>  
 \<publisherPolicy>  
@@ -41,14 +41,14 @@ Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`apply`|Gibt an, ob die Herausgeberrichtlinie angewendet werden soll.|  
+|`apply`|Gibt an, ob Herausgeber Richtlinien angewendet werden sollen.|  
   
 ## <a name="apply-attribute"></a>Attribut anwenden  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`yes`|Wendet die Verleger-Richtlinie. Dies ist die Standardeinstellung.|  
-|`no`|Herausgeberrichtlinie wird nicht angewendet werden.|  
+|`yes`|Wendet Herausgeber Richtlinien an. Dies ist die Standardeinstellung.|  
+|`no`|Die Herausgeber Richtlinie wird nicht angewendet.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -61,14 +61,14 @@ Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Bei einem Komponentenanbieter eine neue Version einer Assembly der Veröffentlichung kann der Anbieter eine Herausgeberrichtlinie enthalten, sodass Anwendungen, die die alte Version nun verwenden die neue Version verwenden. Um anzugeben, ob Herausgeberrichtlinie für eine bestimmte Assembly anzuwenden, fügen die  **\<PublisherPolicy >** Element in der  **\<DependentAssembly >** Element.  
+ Wenn ein Komponentenhersteller eine neue Version einer Assembly freigibt, kann der Hersteller eine Herausgeber Richtlinie einschließen, damit Anwendungen, die die alte Version verwenden, nun die neue Version verwenden. Um anzugeben, ob die Herausgeber Richtlinie für eine bestimmte Assembly angewendet werden soll, fügen Sie das  **\<Element publisherPolicy >** in das  **\<> Element dependentAssembly** ein.  
   
- Die Standardeinstellung für die **anwenden** Attribut **Ja**. Festlegen der **anwenden** Attribut **keine** überschreibt alle vorherigen **Ja** Einstellungen für eine Assembly.  
+ Die Standardeinstellung für das **Apply** -Attribut ist " **Yes**". Wenn Sie das **Apply** -Attribut auf **No** festlegen, werden alle vorherigen **Yes** -Einstellungen für eine Assembly überschrieben.  
   
- Berechtigung ist erforderlich, damit eine Anwendung explizit ignoriert Herausgeberrichtlinie mithilfe der [ \<PublisherPolicy anwenden = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) Element in der Konfigurationsdatei der Anwendung. Die Berechtigung wird erteilt, indem die <xref:System.Security.Permissions.SecurityPermissionFlag> flag für die <xref:System.Security.Permissions.SecurityPermission>. Weitere Informationen finden Sie unter [Sicherheitsberechtigung für die Umleitung der Assemblybindung](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ Die Berechtigung ist erforderlich, damit eine Anwendung die Herausgeber Richtlinie mithilfe des [ \<publisherPolicy Apply = "No"/>-](publisherpolicy-element.md) Elements in der Anwendungs Konfigurationsdatei explizit ignoriert. Die Berechtigung wird erteilt, indem das <xref:System.Security.Permissions.SecurityPermissionFlag> -Flag <xref:System.Security.Permissions.SecurityPermission>auf festgelegt wird. Weitere Informationen finden Sie unter [Sicherheits Berechtigung](../../assembly-binding-redirection-security-permission.md)für die assemblybindungsumleitung.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel deaktiviert die Herausgeberrichtlinie für die Assembly `myAssembly`.  
+ Im folgenden Beispiel wird die Herausgeber Richtlinie für die `myAssembly`Assembly deaktiviert.  
   
 ```xml  
 <configuration>  
@@ -87,7 +87,7 @@ Gibt an, ob die Common Language Runtime die Herausgeberrichtlinie anwendet.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Umleiten von Assemblyversionen](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [Umleiten von Assemblyversionen](../../redirect-assembly-versions.md)

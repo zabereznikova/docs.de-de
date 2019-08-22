@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705037"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664043"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Entfernen Sie >-Element für AuthenticationModules (Netzwerkeinstellungen)
-Entfernt ein Authentifizierungsmodul aus der Anwendung an.  
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Entfernen von >-Element für authenticationModules (Netzwerkeinstellungen)
+Entfernt ein Authentifizierungs Modul aus der Anwendung.  
   
  \<configuration>  
 \<system.net>  
@@ -40,7 +40,7 @@ Entfernt ein Authentifizierungsmodul aus der Anwendung an.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|**Typ**|Der Name des Authentifizierungsmoduls "zu entfernen.|  
+|**Typ**|Der Name des zu entfernenden Authentifizierungs Moduls.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -49,18 +49,18 @@ Entfernt ein Authentifizierungsmodul aus der Anwendung an.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `remove` Element entfernt die Authentifizierungsmodule, die weiter oben in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationshierarchie definiert wurden.  
+ Das `remove` -Element entfernt Authentifizierungs Module, die zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert wurden.  
   
- Der Wert für die `type` Attribut sollte ein gültiger Klassenname sein.  
+ Der Wert für das `type` -Attribut muss ein gültiger Klassenname sein.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel entfernt ein Authentifizierungsmodul.  
+ Im folgenden Beispiel wird ein Authentifizierungs Modul entfernt.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ Entfernt ein Authentifizierungsmodul aus der Anwendung an.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

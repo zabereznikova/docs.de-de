@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 733f22c122dd6acdad41371419375e55e977c016
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c8d04725a576c9e24a4b7d4aec1251516a8c544c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039931"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666230"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt
 
@@ -63,14 +63,13 @@ Wenn Sie fertig sind, sieht Ihr benutzerdefiniertes Steuerelement in etwa wie fo
 
 Das komplette Codelisting finden [Sie unter Gewusst wie: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeit Funktionen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))nutzt.
 
-
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Um diese exemplarische Vorgehensweise abzuschließen, benötigen Sie Visual Studio.
 
 ## <a name="creating-the-project"></a>Erstellen des Projekts
 
-Der erste Schritt besteht darin, das Anwendungsprojekt zu erstellen. Sie verwenden dieses Projekt, um die Anwendung zu erstellen, die das benutzerdefinierte Steuerelement hostet.
+Im ersten Schritt erstellen Sie das Anwendungsprojekt. Sie verwenden dieses Projekt, um die Anwendung zu erstellen, die das benutzerdefinierte Steuerelement hostet.
 
 Öffnen Sie Visual Studio, und erstellen Sie ein Windows Forms-Anwendungsprojekt mit dem Namen "MarqueeControlTest" (**Datei** > "**Neues** > **Projekt** > **C#** " oder **Visual Basic**  >  **Klassischer Desktop** **Windows Forms Anwendung).**  > 
 

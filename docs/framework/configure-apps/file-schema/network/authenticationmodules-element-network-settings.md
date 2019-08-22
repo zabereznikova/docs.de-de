@@ -8,15 +8,15 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6488bfcd97e27a184b4a8cd1498d1c60f32babda
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674713"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659484"
 ---
-# <a name="authenticationmodules-element-network-settings"></a>\<AuthenticationModules >-Element (Netzwerkeinstellungen)
-Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.  
+# <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules >-Element (Netzwerkeinstellungen)
+Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.  
   
  \<configuration>  
 \<system.net>  
@@ -39,24 +39,24 @@ Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Ein Modul für die Authentifizierung hinzugefügt der Anwendung.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungsmodule aus der Anwendung an.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|Entfernt ein Authentifizierungsmodul aus der Anwendung an.|  
+|[add](add-element-for-authenticationmodules-network-settings.md)|Fügt der Anwendung ein Authentifizierungs Modul hinzu.|  
+|[clear](clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungs Module aus der Anwendung.|  
+|[remove](remove-element-for-authenticationmodules-network-settings.md)|Entfernt ein Authentifizierungs Modul aus der Anwendung.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
+|[system.net](system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `authenticationModule` Element gibt die Authentifizierungsmodule, die den Authentifizierungsprozess mit einem Server durchführen. Es muss ein Authentifizierungsmodul implementieren die <xref:System.Net.IAuthenticationModule> Schnittstelle.  
+ Das `authenticationModule` -Element gibt die Authentifizierungs Module an, die den Authentifizierungsprozess mit einem-Server durchführen. Ein Authentifizierungs Modul muss die <xref:System.Net.IAuthenticationModule> -Schnittstelle implementieren.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Authentifizierungsmodul. Sie sollten die Werte für die Version und ' PublicKeyToken ' machen durch die richtigen Werte für das angegebene Modul ersetzen.  
+ Im folgenden Beispiel wird ein Authentifizierungs Modul aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die korrekten Werte für das angegebene Modul ersetzen.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

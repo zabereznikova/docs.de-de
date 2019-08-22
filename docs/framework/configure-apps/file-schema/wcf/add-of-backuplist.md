@@ -2,14 +2,14 @@
 title: <add> von <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 03bf1bbb8156e4722d987e171d9034747ac6bb61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53af01a519c244376b262db1f6515a438dcc554f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701202"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663367"
 ---
-# <a name="add-of-backuplist"></a>\<Hinzufügen > der \<BackupList >
+# <a name="add-of-backuplist"></a>\<> von \<backuplist hinzufügen >
 Stellt ein Konfigurationselement dar, das ein Sicherungsendpunktelement definiert.  
   
  \<system.serviceModel>  
@@ -30,9 +30,6 @@ Stellt ein Konfigurationselement dar, das ein Sicherungsendpunktelement definier
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
@@ -49,7 +46,7 @@ Stellt ein Konfigurationselement dar, das ein Sicherungsendpunktelement definier
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Enthält eine Liste der Endpunkte, die Sie möchten den Routingdienst verwenden soll, falls der primäre Endpunkt nicht erreicht werden kann.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Enthält eine Liste von Endpunkten, die der Routing Dienst verwenden soll, falls der primäre Endpunkt nicht erreicht werden kann.|  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: a459fee557285935c383dcfaf512c8a8a9aea570
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b2e31dee4f5aff2bf6cedf5c4e9ca235695b0a53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674368"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659100"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<"specifiedPickupDirectory" >-Element (Netzwerkeinstellungen)
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<SpecifiedPickupDirectory-> Element (Netzwerkeinstellungen)
 Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Protocol)-Server.  
   
  \<configuration>  
@@ -39,7 +39,7 @@ Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Proto
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|Das Verzeichnis, in dem Anwendungen für e-Mail-Adresse, zur späteren Verarbeitung durch den SMTP-Server speichern.|  
+|`pickupDirectoryLocation`|Das Verzeichnis, in dem Anwendungen e-Mails zur späteren Verarbeitung durch den SMTP-Server speichern.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -48,13 +48,13 @@ Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Proto
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<SMTP >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Konfiguriert (SMTP, Simple Mail Transport Protocol) e-Mail-Sendeoptionen.|  
+|[\<SMTP->-Element (Netzwerkeinstellungen)](smtp-element-network-settings.md)|Konfiguriert SMTP (Simple Mail Transport Protocol)-e-Mail-Sende Optionen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `specifiedPickupDirectory` Attribut legt das Verzeichnis, in dem Anwendungen vom SMTP-Server zu verarbeitende e-Mail-Nachrichten speichern.  
+ Das `specifiedPickupDirectory` -Attribut legt das Verzeichnis fest, in dem Anwendungen vom SMTP-Server zu verarbeitende e-Mail-Nachrichten speichern.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die c:\maildrop als e-Mail-pickup-Verzeichnis.  
+ Im folgenden Beispiel wird c:\maildrop als e-Mail-Abhol Verzeichnis angegeben.  
   
 ```xml  
 <configuration>  
@@ -75,4 +75,4 @@ Konfiguriert das lokale Verzeichnis für einen SMTP (Simple Mail Transport Proto
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

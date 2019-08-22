@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674367"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659044"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<WebProxyScript >-Element (Netzwerkeinstellungen)
-Konfiguriert die Eigenschaften des Skripts zur Ermittlung von Webproxys, verwendet.  
+Konfiguriert die Merkmale des Skripts, das zum Ermitteln von Webproxys verwendet wird.  
   
  \<configuration>  
 \<system.net>  
@@ -38,7 +38,7 @@ Konfiguriert die Eigenschaften des Skripts zur Ermittlung von Webproxys, verwend
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`downloadTimeout`|Gibt die maximale Zeit, in Stunden, Minuten und Sekunden das Skript herunterzuladen. Der Standardwert beträgt eine Minute.|  
+|`downloadTimeout`|Gibt die maximale Zeit für das Herunterladen des Skripts in Stunden, Minuten und Sekunden an. Der Standardwert ist eine Minute.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -47,7 +47,7 @@ Konfiguriert die Eigenschaften des Skripts zur Ermittlung von Webproxys, verwend
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[settings](settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -56,4 +56,4 @@ Konfiguriert die Eigenschaften des Skripts zur Ermittlung von Webproxys, verwend
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

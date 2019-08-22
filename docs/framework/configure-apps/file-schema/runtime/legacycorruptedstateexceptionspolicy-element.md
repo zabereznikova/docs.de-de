@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2715548a40579375cebbdd5fb9003738a42ff714
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489431"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663655"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy> Element
-Gibt an, ob die common Language Runtime verwalteten Code zum Abfangen von zugriffsverletzungen und anderen Beschädigungen hervorgerufenen Ausnahmen zulässt.  
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacykorruptedstateexceptionspolicy > Element
+Gibt an, ob durch den Common Language Runtime verwalteter Code Zugriffs Verletzungen und andere beschädigte Zustands Ausnahmen abfangen kann.  
   
  \<configuration>  
-\<runtime>  
+\<Lauf Zeit >  
 \<legacyCorruptedStateExceptionsPolicy>  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,14 +34,14 @@ Gibt an, ob die common Language Runtime verwalteten Code zum Abfangen von zugrif
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, dass die Anwendung abgefangen werden Fehler wie z. B. zugriffsverletzungen beschädigen.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, dass die Anwendung beschädigte Zustands Ausnahme Fehler abfängt, wie z. b. Zugriffs Verletzungen.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`false`|Die Anwendung fängt keine Fehler z.B. zugriffsverletzungen beschädigen. Dies ist die Standardeinstellung.|  
-|`true`|Die Anwendung fängt Fehler z.B. zugriffsverletzungen beschädigen.|  
+|`false`|Die Anwendung fängt keine Beschädigung von Zustands Ausnahme Fehlern, z. b. Zugriffs Verletzungen, ab. Dies ist die Standardeinstellung.|  
+|`true`|Die Anwendung fängt beschädigte Zustands Ausnahme Fehler wie z. b. Zugriffs Verletzungen auf.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -54,20 +54,20 @@ Gibt an, ob die common Language Runtime verwalteten Code zum Abfangen von zugrif
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- In .NET Framework, Version 3.5 und früher darf die common Language Runtime verwalteten Code zum Abfangen von Ausnahmen, die vom Status der beschädigten Prozess ausgelöst wurden. Eine zugriffsverletzung ist ein Beispiel für diese Art von Ausnahme.  
+ In der .NET Framework Version 3,5 und früher ermöglichte der Common Language Runtime verwalteten Code das Abfangen von Ausnahmen, die von beschädigten Prozesszuständen ausgelöst wurden. Eine Zugriffsverletzung ist ein Beispiel für diese Art von Ausnahme.  
   
- Ab .NET Framework 4, fängt verwalteter Code nicht mehr diese Arten von Ausnahmen in `catch` Blöcke. Allerdings können außer Kraft setzen diese Änderung und verwaltet die Behandlung von Beschädigungen hervorgerufenen Ausnahmen gibt es zwei Möglichkeiten:  
+ Ab .NET Framework 4 fängt der verwaltete Code diese Typen von Ausnahmen in `catch` -Blöcken nicht mehr ab. Sie können diese Änderung jedoch außer Kraft setzen und die Behandlung von beschädigten Zustands Ausnahmen auf zwei Arten beibehalten:  
   
-- Legen Sie die `<legacyCorruptedStateExceptionsPolicy>` des Elements `enabled` Attribut `true`. Diese Konfigurationseinstellung wird angewendeten Processwide und wirkt sich auf alle Methoden.  
+- Legen Sie `<legacyCorruptedStateExceptionsPolicy>` das- `enabled` Attribut des `true`-Elements auf fest. Diese Konfigurationseinstellung wird Processwide angewendet und wirkt sich auf alle Methoden aus.  
   
- - oder -  
+ -oder-  
   
-- Anwenden der <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> -Attribut auf die Methode, die die Ausnahmen enthält `catch` Block.  
+- Wenden Sie <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> das-Attribut auf die Methode an, `catch` die den Ausnahmen Block enthält.  
   
- Dieses Element ist nur in .NET Framework 4 und höher verfügbar.  
+ Dieses Konfigurationselement ist nur in den .NET Framework 4 und höher verfügbar.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie angeben, dass die Anwendung sollte auf das Verhalten vor .NET Framework 4 zurückgesetzt und alle Beschädigung Fehler abgefangen wird.  
+ Im folgenden Beispiel wird gezeigt, wie angegeben wird, dass die Anwendung auf das Verhalten vor dem .NET Framework 4 zurückgesetzt werden soll, und alle Fehler bei der Beschädigung von Zustands Fehlern abgefangen werden.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ Gibt an, ob die common Language Runtime verwalteten Code zum Abfangen von zugrif
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)

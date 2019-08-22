@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705193"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664033"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<Entfernen Sie >-Element für ConnectionManagement (Netzwerkeinstellungen)
-Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder DNS-Namen.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<Entfernen von >-Element für connectionManagement (Netzwerkeinstellungen)
+Entfernt eine IP-Adresse oder einen DNS-Namen aus der Verbindungs Verwaltungsliste.  
   
  \<configuration>  
 \<system.net>  
@@ -40,7 +40,7 @@ Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder DNS-Namen.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`address`|Eine IP-Adresse oder DNS-Namen.|  
+|`address`|Eine IP-Adresse oder ein DNS-Name.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -49,18 +49,18 @@ Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder DNS-Namen.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Gibt die maximale Anzahl von Verbindungen mit einem Netzwerkhost an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `remove` Element entfernt den Verbindungs-Eintrag für den angegebenen Server.  
+ Das `remove` -Element entfernt den Verbindungs Verwaltungs Listeneintrag für den angegebenen Server.  
   
- Der Wert des der `address` Attribut sollte einen gültigen Namen von IP-Adresse oder Hostname sein.  
+ Der Wert des `address` -Attributs muss eine gültige IP-Adresse oder ein gültiger Hostname sein.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel entfernt die Einträge für den Server für jede Verbindung Management Liste `www.adventure-works.com` und konfiguriert dann eine Anwendung zur Verwendung von vier Verbindungen mit dem Server `www.contoso.com` und zwei Verbindungen mit allen anderen Servern.  
+ Im folgenden Beispiel werden alle Verbindungs Verwaltungs Listeneinträge für den- `www.adventure-works.com` Server entfernt. Anschließend wird eine Anwendung so konfiguriert, dass vier Verbindungen `www.contoso.com` mit dem Server und zwei Verbindungen mit allen anderen Servern verwendet werden.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder DNS-Namen.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

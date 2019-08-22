@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 572a5856c9f92f105e727df1ecd8eb2e0a92fc09
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705219"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664283"
 ---
-# <a name="cryptographysettings-element"></a>\<CryptographySettings >-Element
+# <a name="cryptographysettings-element"></a>\<cryptographySettings >-Element
 Enthält Kryptografieeinstellungen.  
   
  \<configuration>  
@@ -39,18 +39,18 @@ Enthält Kryptografieeinstellungen.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Enthält die Zuordnung von Klassen zu den Anzeigenamen.|  
-|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.|  
+|[\<cryptoNameMapping>](cryptonamemapping-element.md)|Enthält die Zuordnung von Klassen zu den Anzeigenamen.|  
+|[\<oidMap>](oidmap-element.md)|Enthält ASN. 1 objektbezeichnermappings (OID) zu Klassen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
-|`mscorlib`|Enthält die `cryptographySettings` Element.|  
+|`mscorlib`|Enthält das `cryptographySettings` -Element.|  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird gezeigt, wie mithilfe der  **\<CryptographySettings >** Element namenszuordnungen Kryptografie und OID-Zuordnungen enthalten. In diesem Beispiel wird die Laufzeit, damit <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> gibt eine `MyHashClass` Objekt und die `MyCryptoClass` Zuordnungen, die die Objekt-ID 1.3.36.2.1 Klasse.  
+ Im folgenden Beispiel wird gezeigt, wie das  **\<cryptographySettings >** -Element verwendet wird, um kryptografienamenszuordnungen und OID-Zuordnungen zu enthalten. In diesem Beispiel wird die Laufzeit so konfiguriert <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> , dass `MyHashClass` ein-Objekt `MyCryptoClass` zurückgibt, und die-Klasse wird dem Objekt Bezeichner 1.3.36.2.1 zugeordnet.  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,6 @@ Enthält Kryptografieeinstellungen.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Konfigurationsdateischema](../index.md)
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

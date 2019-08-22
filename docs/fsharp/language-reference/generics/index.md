@@ -2,12 +2,12 @@
 title: Generics
 description: Erfahren Sie, wie Sie mithilfe generischer F#-Funktionen und Typen, die Sie Code schreiben, die mit einer Vielzahl von Typen funktioniert, ohne Code wiederholen zu ermöglichen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d6e57762095e44836425f90d21a6c1dc71edaaa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630610"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666692"
 ---
 # <a name="generics"></a>Generics
 
@@ -97,6 +97,6 @@ Es gibt zwei Arten von Typparametern, die in F#-Programmen verwendet werden kön
 - [Sprachreferenz](../index.md)
 - [Typen](../fsharp-types.md)
 - [Statisch aufgelöste Typparameter](statically-resolved-type-parameters.md)
-- [Generika in .NET Framework](~/docs/standard/generics/index.md)
+- [Generika](../../../standard/generics/index.md)
 - [Automatische Verallgemeinerung](automatic-generalization.md)
 - [Einschränkungen](constraints.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_ArrayDimensionsDontMatch
 ms.assetid: 71809e3b-8147-4314-9c4c-e4a5bc9a5530
-ms.openlocfilehash: 3948b85525c5ad8aa7f05fdd0d3557b72b5b7c28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f954f7ef317018b2022793967acce0e8877a91b9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659024"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658798"
 ---
 # <a name="array-dimensions-do-not-match-those-specified-in-the-vbfixedarray-attribute"></a>Die Arraydimensionen stimmen nicht mit den im "VBFixedArray"-Attribut angegebenen Dimensionen überein
 Die Dimensionen des Arrays stimmen nicht mit den Dimensionen überein, die Sie im `VBFixedArray` -Attribut angegeben haben.  
@@ -20,6 +20,6 @@ Die Dimensionen des Arrays stimmen nicht mit den Dimensionen überein, die Sie i
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Arrays in Visual Basic](~/docs/visual-basic/programming-guide/language-features/arrays/index.md)
+- [Arrays in Visual Basic](../programming-guide/language-features/arrays/index.md)
 - [ReDim-Anweisung](../../visual-basic/language-reference/statements/redim-statement.md)
 - <xref:Microsoft.VisualBasic.VBFixedArrayAttribute>

@@ -2,21 +2,21 @@
 title: <add> von <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3052a7570d1d93836603454817be921b37d26060
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673640"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658837"
 ---
-# <a name="add-of-entries"></a>\<Hinzufügen > der \<Einträge >
+# <a name="add-of-entries"></a>\<Fügen Sie > \<von Einträgen hinzu >
 Stellt einen Routingeintrag dar, der einem Clientendpunkt, der zuvor definiert wurde, einen Filter zuordnet. Meldungen, die diesem Filter entsprechen, werden an dieses Ziel gesendet.  
   
  \<system.serviceModel>  
 \<routing>  
 \<filterTables>  
 \<filterTable>  
-\<entries>  
+\<Einträge >  
 \<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -36,9 +36,6 @@ Stellt einen Routingeintrag dar, der einem Clientendpunkt, der zuvor definiert w
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>Attribute und Elemente  
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
@@ -47,7 +44,7 @@ Stellt einen Routingeintrag dar, der einem Clientendpunkt, der zuvor definiert w
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |backupList|Eine Zeichenfolge, die einen Verweis auf eine Sicherungsliste von Endpunkten angibt.|  
-|Endpunkt (endpoint)|Eine Zeichenfolge, die einen Verweis auf einen Clientendpunkt angibt, der Meldungen empfängt, die dem mit dem `filterName`-Attribut angegebenen Filter entsprechen.|  
+|Endpunkt|Eine Zeichenfolge, die einen Verweis auf einen Clientendpunkt angibt, der Meldungen empfängt, die dem mit dem `filterName`-Attribut angegebenen Filter entsprechen.|  
 |filterName|Eine Zeichenfolge, die einen Verweis auf ein Filterelement angibt.|  
 |priority|Eine ganze Zahl, die die Priorität dieses Eintrags angibt.<br /><br /> Die Einträge in der Routingtabelle werden auf Grundlage der Priorität ausgewertet, wobei 0 für die niedrigste Priorität steht. Alle Einträge für eine bestimmte Priorität werden gleichzeitig ausgewertet; wenn kein übereinstimmender Eintrag für die aktuelle Priorität gefunden wird, wird die nächste Prioritätsstufe ausgewertet.<br /><br /> Dieser Wert ist optional.|  
   

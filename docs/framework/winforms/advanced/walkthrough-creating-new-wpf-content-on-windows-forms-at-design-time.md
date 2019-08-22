@@ -8,30 +8,23 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: 889e81053d4e2264755468446a4e1681216ae22e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: e3fb6e42270cc0a530646b656470ec99fcfc7f1f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040374"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666245"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Exemplarische Vorgehensweise: Erstellen eines neuen WPF-Inhalts auf Windows Forms zur Entwurfszeit
 
 In diesem Artikel erfahren Sie, wie Sie ein Windows Presentation Foundation-Steuerelement (WPF) für die Verwendung in Ihren Windows Forms basierten Anwendungen erstellen.
 
-Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- Erstellen eines Projekts
-
-- Erstellen eines neuen WPF-Steuerelements
-
-- Hinzufügen des neuen WPF-Steuerelements zu einem Windows Form. Das WPF-Steuerelement wird in einem <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement gehostet.
-
-## <a name="prerequisites"></a>Vorraussetzungen
-
-Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:
-
-- Visual Studio
+Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 ## <a name="create-the-project"></a>Erstellen eines Projekts
 
@@ -51,17 +44,17 @@ So erstellen Sie ein neues WPF-Steuerelement:
 
 1. Fügen Sie in **Projektmappen-Explorer**der Projekt Mappe ein neues Projekt für eine **WPF-Benutzer Steuerelement Bibliothek (.NET Framework)** hinzu. Verwenden Sie den Standardnamen `WpfControlLibrary1` für die Steuerelementbibliothek. Der Standardname für das Steuerelement lautet `UserControl1.xaml`.
 
-     Das Hinzufügen des neuen Steuer Elements hat die folgenden Auswirkungen:
+   Das Hinzufügen des neuen Steuer Elements hat die folgenden Auswirkungen:
 
-    - Die Datei UserControl1.xaml wird hinzugefügt.
+   - Die Datei UserControl1.xaml wird hinzugefügt.
 
-    - Hinzugefügt wird entweder die Datei UserControl1.xaml.cs oder die Datei UserControl1.xaml.vb. Diese Datei enthält das Code-Behind-Modell für Ereignishandler und andere Implementierungen.
+   - Die Datei UserControl1.XAML.cs (oder UserControl1. XAML. vb) wurde hinzugefügt. Diese Datei enthält das Code-Behind-Modell für Ereignishandler und andere Implementierungen.
 
-    - Es werden Verweise auf die WPF-Assemblys hinzugefügt.
+   - Es werden Verweise auf die WPF-Assemblys hinzugefügt.
 
-    - Die Datei UserControl1.xaml wird in [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] geöffnet.
+   - Die Datei UserControl1. XAML wird im WPF-Designer für Visual Studio geöffnet.
 
-2. Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist. Weitere Informationen finden Sie unter [Vorgehensweise: Auswählen und Verschieben von Elementen auf der](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))Designoberfläche
+2. Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist.
 
 3. Legen Sie im Fenster **Eigenschaften** den Wert <xref:System.Windows.FrameworkElement.Width%2A> der-Eigenschaft und der- <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaft auf 200 fest.
 
@@ -69,8 +62,8 @@ So erstellen Sie ein neues WPF-Steuerelement:
 
 5. Legen Sie im Fenster **Eigenschaften** den Wert <xref:System.Windows.Controls.TextBox.Text%2A> der-Eigenschaft auf **gehosteter Inhalt**fest.
 
-    > [!NOTE]
-    > Normalerweise sollten Sie anspruchsvolleren WPF-Inhalt hosten. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>-Steuerelement wird hier nur zur Veranschaulichung verwendet.
+   > [!NOTE]
+   > Normalerweise sollten Sie anspruchsvolleren WPF-Inhalt hosten. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>-Steuerelement wird hier nur zur Veranschaulichung verwendet.
 
 6. Erstellen Sie das Projekt.
 

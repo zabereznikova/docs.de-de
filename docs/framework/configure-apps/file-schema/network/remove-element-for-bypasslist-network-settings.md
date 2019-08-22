@@ -10,18 +10,18 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd8de9af00aa861d92c8c201ef89545e108c790
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674466"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659235"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<Entfernen Sie >-Element für Bypasslist (Netzwerkeinstellungen)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<Entfernen von >-Element für bypasslist (Netzwerkeinstellungen)
 
-Entfernt eine IP-Adresse oder DNS-Namen, aus der Proxyumgehungsliste enthalten.
+Entfernt eine IP-Adresse oder einen DNS-Namen aus der Proxy Umgehungs Liste.
 
-\<configuration>\
+\<Konfigurations > \
 \<system.net>\
 \<defaultProxy>\
 \<bypasslist>\
@@ -43,7 +43,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |**Attribut**|**Beschreibung**|
 |-------------------|---------------------|
-|`address`|Ein regulärer Ausdruck, ein IP-Adresse oder DNS-Namen beschreibt.|
+|`address`|Einen regulären Ausdruck, der eine IP-Adresse oder einen DNS-Namen beschreibt.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -53,15 +53,15 @@ Keine
 
 |**Element**|**Beschreibung**|
 |-----------------|---------------------|
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bietet eine Reihe von regulären Ausdrücken, die Adressen beschreiben, die einen Proxy nicht verwenden.|
+|[bypasslist](bypasslist-element-network-settings.md)|Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, die keinen Proxy verwenden.|
 
 ## <a name="remarks"></a>Hinweise
 
-Die `remove` -Element entfernt reguläre Ausdrücke, die beschreiben, IP-Adressen oder DNS-Servernamen aus der Liste der Adressen, die einen Proxyserver zu umgehen. Die Adressen wurden früher in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationshierarchie definiert.
+Das `remove` -Element entfernt reguläre Ausdrücke, in denen IP-Adressen oder DNS-Servernamen aus der Liste der Adressen, die einen Proxy Server umgehen, beschrieben werden. Die Adressen wurden zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert.
 
-Der Wert für die `address` Attribut sollte sein, einen regulären Ausdruck, der einen Satz von IP-Adressen oder Hostnamen beschreibt.
+Der Wert für das `address` -Attribut muss ein regulärer Ausdruck sein, der einen Satz von IP-Adressen oder Hostnamen beschreibt.
 
-Weitere Informationen zu regulären Ausdrücken finden Sie unter. [Reguläre Ausdrücke von .NET Framework](../../../../../docs/standard/base-types/regular-expressions.md).
+Weitere Informationen zu regulären Ausdrücken finden Sie unter. [.NET Framework reguläre Ausdrücke](../../../../../docs/standard/base-types/regular-expressions.md).
 
 ## <a name="configuration-files"></a>Konfigurationsdateien
 
@@ -69,7 +69,7 @@ Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkon
 
 ## <a name="example"></a>Beispiel
 
-Im folgende Beispiel entfernt jede vorherige Definition für die Domäne Adventure-works.com und anschließend wird der Umgehungsliste der Domäne "contoso.com" hinzugefügt.
+Im folgenden Beispiel werden alle vorherigen Definitionen für die Domäne Adventure-Works.com entfernt und dann der Umgehungs Liste die contoso.com-Domäne hinzugefügt.
 
 ```xml
 <configuration>
@@ -87,4 +87,4 @@ Im folgende Beispiel entfernt jede vorherige Definition für die Domäne Adventu
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

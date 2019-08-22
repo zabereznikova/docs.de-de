@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00af9cf60d0bd2bac60950617b1315579d1a5a4d
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 96d38abad37f9460230164de784a1258e7e937a4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347341"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663723"
 ---
-# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
+# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forceperformancecounteruniquesharedmemoryreads > Element
 Gibt an, ob „PerfCounter.dll“ die Registrierungseinstellung „CategoryOptions“ in einer .NET Framework Version 1.1-Anwendung verwendet, um zu bestimmen, ob Leistungsindikatordaten aus kategoriespezifischem, gemeinsam genutztem Arbeitsspeicher oder aus dem globalen Arbeitsspeicher geladen werden.  
   
  \<configuration>  
-\<runtime>  
+\<Lauf Zeit >  
 \<forcePerformanceCounterUniqueSharedMemoryReads>  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,14 +35,14 @@ enabled="true|false"/>
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob "PerfCounter.dll" die registrierungseinstellung CategoryOptions verwendet, um zu ermitteln, ob Leistungsindikatordaten aus kategoriespezifischem, gemeinsam genutzten Speicher oder globalen Arbeitsspeicher zu laden.|  
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob PerfCounter. dll die categoryoptions-Registrierungs Einstellung verwendet, um zu bestimmen, ob Leistungsdaten aus dem kategoriespezifischen freigegebenen oder globalen Arbeitsspeicher geladen werden sollen.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`false`|"PerfCounter.dll" verwendet nicht die CategoryOptions Registrierung durch Festlegen dieses Werts ist die Standardeinstellung.|  
-|`true`|"PerfCounter.dll" wird die registrierungseinstellung CategoryOptions verwendet.|  
+|`false`|PerfCounter. dll verwendet nicht die Registrierungs Einstellung categoryoptions, dies ist die Standardeinstellung.|  
+|`true`|PerfCounter. dll verwendet die Registrierungs Einstellung categoryoptions.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -55,21 +55,21 @@ enabled="true|false"/>
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Entsprach in Versionen von .NET Framework vor .NET Framework 4 wird die Version von "PerfCounter.dll", das geladen wurde, an die Laufzeit, die im Prozess geladen wurde. Wenn ein Computer sowohl .NET Framework, Version 1.1 als auch die .NET Framework 2.0 installiert haben, würde eine .NET Framework 1.1-Anwendung die .NET Framework 1.1-Version von "PerfCounter.dll" laden. Ab .NET Framework 4, wird die neueste installierte Version von "PerfCounter.dll" geladen. Dies bedeutet, dass eine .NET Framework 1.1-Anwendung die .NET Framework 4-Version von "PerfCounter.dll" geladen werden, wenn .NET Framework 4 auf dem Computer installiert ist.  
+ In Versionen der .NET Framework vor dem .NET Framework 4 entsprach die Version von PerfCounter. dll, die geladen wurde, der Laufzeit, die in den Prozess geladen wurde. Wenn auf einem Computer sowohl der .NET Framework Version 1,1 als auch der .NET Framework 2,0 installiert war, würde eine .NET Framework 1,1-Anwendung die .NET Framework Version 1,1 von PerfCounter. dll laden. Beginnend mit dem .NET Framework 4 wird die neueste installierte Version von "PerfCounter. dll" geladen. Dies bedeutet, dass eine .NET Framework 1,1-Anwendung die .NET Framework 4-Version von "PerfCounter. dll" lädt, wenn die .NET Framework 4 auf dem Computer installiert ist.  
   
- Ab .NET Framework 4, bei der Nutzung von Leistungsindikatoren, überprüft "PerfCounter.dll" CategoryOptions Registrierungseintrag für jeden Anbieter, um zu bestimmen, ob er aus kategoriespezifischem, gemeinsam genutzten Speicher oder der globale freigegebene Speicher lesen soll. Die .NET Framework 1.1 PerfCounter.dll Lesen dieses Registrierungseintrags nicht, da es nicht an gemeinsam genutztem Speicher kategoriespezifische bekannt ist; Es liest aus der globale freigegebene Speicher.  
+ Beginnend mit dem .NET Framework 4 überprüft PerfCounter. dll bei der Nutzung von Leistungsindikatoren den Registrierungs Eintrag categoryoptions für jeden Anbieter, um zu bestimmen, ob er aus dem kategoriespezifischen freigegebenen Arbeitsspeicher oder dem globalen gemeinsam genutzten Speicher lesen soll. Der .NET Framework 1,1 PerfCounter. dll liest diesen Registrierungs Eintrag nicht, da er keinen kategoriespezifischen freigegebenen Arbeitsspeicher kennt. Er liest immer aus dem globalen gemeinsam genutzten Speicher.  
   
- Um Abwärtskompatibilität zu gewährleisten überprüft der .NET Framework 4 "PerfCounter.dll" nicht den Registrierungseintrag "CategoryOptions", wenn in einer .NET Framework 1.1-Anwendung ausgeführt wird. Sie verwendet einfach globalen freigegebenen Speicher, genau wie die .NET Framework 1.1 "PerfCounter.dll". Sie können jedoch anweisen, die .NET Framework 4 PerfCounter.dll, überprüfen Sie die registrierungseinstellung durch Aktivieren der `<forcePerformanceCounterUniqueSharedMemoryReads>` Element.  
+ Aus Gründen der Abwärtskompatibilität überprüft das .NET Framework 4 PerfCounter. dll den Registrierungs Eintrag categoryoptions nicht, wenn er in einer .NET Framework 1,1-Anwendung ausgeführt wird. Es verwendet einfach den globalen gemeinsam genutzten Speicher, genau wie die .NET Framework 1,1 PerfCounter. dll. Sie können jedoch die .NET Framework 4 PerfCounter. dll anweisen, die Registrierungs Einstellung durch Aktivieren des `<forcePerformanceCounterUniqueSharedMemoryReads>` -Elements zu überprüfen.  
   
 > [!NOTE]
->  Aktivieren der `<forcePerformanceCounterUniqueSharedMemoryReads>` Element garantiert nicht, dass kategoriespezifische gemeinsam genutzten Speicher verwendet werden. Aktivierter Einstellung `true` bewirkt nur, dass "PerfCounter.dll", um auf die registrierungseinstellung CategoryOptions zu verweisen. Die Standardeinstellung für CategoryOptions ist die Verwendung von gemeinsam genutzten Speicher kategoriespezifische; Sie können jedoch ändern, dass CategoryOptions, um anzugeben, dass der globaler freigegebener Speicher verwendet werden soll.  
+>  Das aktivieren `<forcePerformanceCounterUniqueSharedMemoryReads>` des-Elements garantiert nicht, dass kategoriespezifischer gemeinsam genutzter Arbeitsspeicher verwendet wird. Wenn die Einstellung `true` aktiviert ist, verweist PerfCounter. dll nur auf die Registrierungs Einstellung categoryoptions. Die Standardeinstellung für categoryoptions ist die Verwendung des kategoriespezifischen freigegebenen Speichers. Sie können jedoch categoryoptions ändern, um anzugeben, dass der globale gemeinsame Arbeitsspeicher verwendet werden soll.  
   
- Der Registrierungsschlüssel, der die Einstellung der CategoryOptions enthält ist HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< "CategoryName"\>\Performance. Standardmäßig wird CategoryOptions auf 3 festgelegt "PerfCounter.dll" weist kategoriespezifische freigegebenen Speicher verwenden. Wenn CategoryOptions auf 0 festgelegt ist, wird "PerfCounter.dll" globalen freigegebenen Speicher verwendet. Instanzdaten werden wiederverwendet werden, nur, wenn der Name des zu erstellenden Instanz mit der Instanz, die wiederverwendet werden identisch ist. Alle Versionen werden in der Kategorie "" schreiben. Wenn CategoryOptions auf 1 festgelegt ist, globaler freigegebener Speicher wird verwendet, aber Instanzdaten wiederverwendet werden können, den Namen der Kategorie ist die gleiche Länge wie der Kategorie, die wiederverwendet werden.  
+ Der Registrierungsschlüssel, der die Einstellung categoryoptions enthält,\\ist HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services < CategoryName\>\Performance. Standardmäßig ist "categoryoptions" auf "3" festgelegt, was PerfCounter. dll anweist, kategoriespezifischen freigegebenen Arbeitsspeicher zu verwenden. Wenn categoryoptions auf 0 festgelegt ist, verwendet PerfCounter. dll globalen gemeinsam genutzten Arbeitsspeicher. Instanzdaten werden nur dann wieder verwendet, wenn der Name der Instanz, die erstellt wird, mit der Instanz identisch ist, die wieder verwendet wird. Alle Versionen können in die Kategorie schreiben. Wenn categoryoptions auf 1 festgelegt ist, wird der globale freigegebene Speicher verwendet, aber Instanzdaten können wieder verwendet werden, wenn der Kategoriename dieselbe Länge wie die wiederverwendbare Kategorie hat.  
   
- Die Einstellungen, 0 und 1 können der schnell an Größe zunimmt Leistungsindikator-Arbeitsspeichers zu Speicherverlusten führen.  
+ Die Einstellungen 0 und 1 können zu Speicher Verlusten und zum Auffüllen des Leistungs Zählers führen.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie angeben, dass "PerfCounter.dll" verweisen soll, den Registrierungseintrag CategoryOptions, um festzustellen, ob kategoriespezifische gemeinsam genutzten Speicher verwendet werden soll.  
+ Im folgenden Beispiel wird gezeigt, wie Sie angeben können, dass "PerfCounter. dll" auf den Registrierungs Eintrag "categoryoptions" verweisen soll, um zu bestimmen, ob der kategorisierte Speicher verwendet werden soll.  
   
 ```xml  
 <configuration>  
@@ -81,5 +81,5 @@ enabled="true|false"/>
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)

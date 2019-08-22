@@ -2,40 +2,40 @@
 title: Codegenerierung in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: fbc70669b9c03b59468f4f6a67c1f73432883193
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743612"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666129"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Codegenerierung in LINQ to SQL
-Sie können Code zur Darstellung einer Datenbank mithilfe der Object Relational Designer oder das Befehlszeilentool SQLMetal verwenden generieren. Die End-to-End-Codegenerierung findet grundsätzlich in drei Phasen statt:  
+Sie können Code generieren, um eine Datenbank mit dem-objektrelationaler Designer oder dem SQLMetal-Befehlszeilen Tool darzustellen. Die End-to-End-Codegenerierung findet grundsätzlich in drei Phasen statt:  
   
-1. Die *DBML-Extrahierungsprogramm* extrahiert Schemainformationen aus der Datenbank und das Farmupgrade der Informationen in eine XML-formatierten DBML-Datei.  
+1. Der *DBML-Extraktor* extrahiert Schema Informationen aus der Datenbank und teilt die Informationen in eine XML-formatierte DBML-Datei auf.  
   
-2. Die DBML-Datei wird überprüft, indem die *DBML-Validierungsprogramm* auf Fehler.  
+2. Die DBML-Datei wird vom *DBML-Validierungs* Steuerelement auf Fehler überprüft.  
   
 3. Wenn keine Validierungsfehler auftreten, wird die Datei an den Code-Generator übergeben.  
   
- Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Entwickler, die mit Visual Studio können auch den Object Relational Designer zum Generieren von Code. Finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Entwickler, die Visual Studio verwenden, können auch den objektrelationaler Designer verwenden, um Code zu generieren. Weitere Informationen finden Sie [unter LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>DBML-Extrahierungsprogramm  
- Die DBML-Extrahierungsprogramm ist eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Komponente, die Datenbank-Metadaten als Eingabe akzeptiert und eine DBML-Datei als Ausgabe erzeugt.  
+ Der DBML-Extraktor ist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Komponente, die Daten Bank Metadaten als Eingabe annimmt und eine DBML-Datei als Ausgabe erzeugt.  
   
 ## <a name="code-generator"></a>Code-Generator  
- Der Code-Generator ist eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Komponente, die DBML-Dateien in Visual Basic übersetzt C#, oder XML-Zuordnungsdateien.  
+ Der Code-Generator ist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Komponente, die DBML-Dateien in C#Visual Basic-,-oder-XML-Mapping-Dateien übersetzt.  
   
 ## <a name="xml-schema-definition-file"></a>XML-Schemadefinitionsdatei  
  Die DBML-Datei muss gegenüber der folgenden Schemadefinition als XSD-Datei gültig sein.  
   
- Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer externen Zuordnungsdatei verwendet wird. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
+ Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer externen Zuordnungsdatei verwendet wird. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
->  Visual Studio-Benutzer findet auch diese XSD-Datei in das Dialogfeld für die XML-Schemas wie "Datei"DbmlSchema.xsd". Der XSD-Datei ordnungsgemäß zum Überprüfen einer DBML-Datei finden Sie unter [Vorgehensweise: Überprüfen von DBML- und externen Zuordnungsdateien](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+>  Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "DbmlSchema. xsd". Informationen zur korrekten Verwendung der XSD-Datei zum Validieren einer DBML- [Datei finden Sie unter Gewusst wie: Validieren von DBML-und](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
   
-```  
-?<?xml version="1.0" encoding="utf-16"?>  
+```xml  
+<?xml version="1.0" encoding="utf-16"?>  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/linqtosql/dbml/2007" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007"  
 elementFormDefault="qualified" >  
   <xs:element name="Database" type="Database" />  
@@ -243,7 +243,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="sample-dbml-file"></a>Beispiel einer DBML-Datei  
- Der folgende Code entspricht einem Auszug aus der DBML-Datei, die aus der Beispieldatenbank Northwind erzeugt wurde. Sie können die gesamte Datei generieren, indem Sie SQLMetal mit der **/XML** Option. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+ Der folgende Code entspricht einem Auszug aus der DBML-Datei, die aus der Beispieldatenbank Northwind erzeugt wurde. Sie können die gesamte Datei generieren, indem Sie SQLMetal mit der **/XML** -Option verwenden. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  

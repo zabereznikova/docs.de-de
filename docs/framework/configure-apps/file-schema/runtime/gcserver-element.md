@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378035"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663681"
 ---
-# <a name="gcserver-element"></a>\<GcServer >-Element
+# <a name="gcserver-element"></a>\<gcserver->-Element
 Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server ausführt.  
   
  \<configuration>  
-\<runtime>  
+\<Lauf Zeit >  
 \<gcServer>  
   
 ## <a name="syntax"></a>Syntax  
@@ -65,7 +65,7 @@ Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server au
  Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden. Wenn es in der Computerkonfigurationsdatei enthalten ist, wird es ignoriert.  
   
 > [!NOTE]
->  In .NET Framework 4 und früheren Versionen ist die gleichzeitige Garbage Collection nicht verfügbar, wenn die Garbage Collection auf dem Server aktiviert ist. Ab .NET Framework 4.5 ist Garbagecollection auf dem Server gleichzeitig. Um Garbagecollection für nicht-parallele Server verwenden möchten, legen die `<gcServer>` Element `true` und die [ \<GcConcurrent >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) zu `false`.  
+>  In .NET Framework 4 und früheren Versionen ist die gleichzeitige Garbage Collection nicht verfügbar, wenn die Garbage Collection auf dem Server aktiviert ist. Beginnend mit dem .NET Framework 4,5 ist der Server Garbage Collection gleichzeitig. Um nicht gleichzeitige Server Garbage Collection zu verwenden, legen `<gcServer>` Sie das `true` -Element auf und das [ \<gcConcurrent-> Element](gcconcurrent-element.md) auf `false`fest.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Garbage Collection auf dem Server aktiviert.  
@@ -81,6 +81,6 @@ Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server au
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Zum Deaktivieren der gleichzeitigen Garbagecollection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)
+- [So deaktivieren Sie die parallele Garbage Collection](gcconcurrent-element.md#to-disable-background-garbage-collection)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5305d9aed09b6c4d1ad4201e5e08e007a14c7c0
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674635"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664187"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<clear >-Element für Bypasslist (Netzwerkeinstellungen)
-Löscht der Proxyumgehungsliste enthalten.  
+# <a name="clear-element-for-bypasslist-network-settings"></a>\<Löschen von >-Element für bypasslist (Netzwerkeinstellungen)
+Löscht die Proxy Umgehungs Liste.  
   
  \<configuration>  
 \<system.net>  
@@ -45,16 +45,16 @@ Löscht der Proxyumgehungsliste enthalten.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bietet eine Reihe von regulären Ausdrücken, die Adressen beschreiben, die einen Proxy nicht verwenden.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Stellt eine Reihe von regulären Ausdrücken bereit, die Adressen beschreiben, die keinen Proxy verwenden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `clear` Element löscht alle Einträge in der Umgehungsliste aufgeführt.  
+ Das `clear` -Element löscht alle Einträge aus der Umgehungs Liste.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel löscht die Bypass-Liste und klicken Sie dann die Bypass-Liste zwei Adressen hinzugefügt. Die erste umgeht den Proxy für alle Server in der Domäne "contoso.com"; die zweite wird der Proxy für alle Server, dessen IP-Adresse beginnt, mit 192.168. umgangen.  
+ Im folgenden Beispiel wird die Umgehungs Liste gelöscht und dann der Umgehungs Liste zwei Adressen hinzugefügt. Der erste umgeht den Proxy für alle Server in der contoso.com-Domäne. mit dem zweiten wird der Proxy für alle Server umgangen, deren IP-Adresse mit 192,168 beginnt.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ Löscht der Proxyumgehungsliste enthalten.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

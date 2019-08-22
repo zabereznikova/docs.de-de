@@ -9,16 +9,16 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: b5825efcc613689e73fb56b6695fe7c75ff09136
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674193"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663866"
 ---
-# <a name="codebase-element"></a>\<codeBase >-Element
+# <a name="codebase-element"></a>\<CodeBase >-Element
 
-Gibt an, in dem die common Language Runtime eine Assembly finden kann.
+Gibt an, wo die Common Language Runtime eine Assembly finden kann.
 
 \<configuration> \<runtime> \<assemblyBinding> \<dependentAssembly> \<codeBase>
 
@@ -38,10 +38,10 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|`href`|Erforderliches Attribut.<br /><br /> Gibt die URL, in dem die Runtime die angegebene Version der Assembly finden kann.|
-|`version`|Erforderliches Attribut.<br /><br /> Gibt die Version der Assembly, die, der auf die Codebasis angewendet wird. Hat das Format einer Assemblyversionsnummer *"Hauptversion.Nebenversion.Build.Revision"*.|
+|`href`|Erforderliches Attribut.<br /><br /> Gibt die URL an, unter der die Laufzeit die angegebene Version der Assembly finden kann.|
+|`version`|Erforderliches Attribut.<br /><br /> Gibt die Version der Assembly an, auf die sich die Codebasis bezieht. Das Format einer Assemblyversionsnummer ist *Hauptversion. neben Version. Build. Revision*.|
 
-## <a name="version-attribute"></a>Version-Attribut
+## <a name="version-attribute"></a>Versions Attribut
 
 |Wert|Beschreibung|
 |-----------|-----------------|
@@ -56,21 +56,21 @@ Keine
 |Element|Beschreibung|
 |-------------|-----------------|
 |`buildproviders`|Definiert eine Auflistung von Buildanbietern, die zum Kompilieren benutzerdefinierter Ressourcendateien verwendet werden. Sie können eine beliebige Anzahl von Buildanbietern verwenden.|
-|`compilation`|Konfiguriert alle kompilierungseinstellungen, mit denen ASP.NET an.|
+|`compilation`|Konfiguriert alle von ASP.NET verwendeten Kompilierungs Einstellungen.|
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|
 |`System.web`|Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.|
 
 ## <a name="remarks"></a>Hinweise
 
-Für die Laufzeit die  **\<codeBase >** in einer Konfigurationsdatei des Computers oder der Herausgeberrichtliniendatei festlegen, die Datei muss auch umleiten, die Version der Assembly. Anwendungskonfigurationsdateien haben eine Codebase-Einstellung, ohne die Version der Assembly umleiten. Nachdem die zu verwendende Assemblyversion ermittelt wurde, gilt die Runtime die Codebase-Einstellung aus der Datei, die die Version bestimmt. Wenn keine Codebase angegeben, durchsucht die Runtime für die Assembly, auf die übliche Weise.
+Damit die Laufzeit die  **\<CodeBase->** Einstellung in einer Computer Konfigurationsdatei oder Herausgeber Richtlinien Datei verwendet, muss die Datei auch die Assemblyversion umleiten. Anwendungs Konfigurationsdateien können eine Codebasis-Einstellung aufweisen, ohne die Assemblyversion umzuleiten. Nachdem Sie bestimmt haben, welche Assemblyversion verwendet werden soll, wendet die Laufzeit die Codebasis-Einstellung aus der Datei an, die die Version bestimmt. Wenn keine Codebasis angegeben ist, testet die Runtime die Assembly auf die übliche Weise.
 
-Wenn die Assembly einen starken Namen aufweist, kann die Codebase-Einstellung an eine beliebige Stelle im lokalen Intranet oder Internet sein. Wenn die Assembly über eine private Assembly handelt, muss die Codebase-Einstellung auf einen Pfad relativ zum Verzeichnis der Anwendung sein.
+Wenn die Assembly einen starken Namen hat, kann sich die Codebasis-Einstellung im lokalen Intranet oder im Internet befinden. Wenn die Assembly eine private Assembly ist, muss die Codebasis-Einstellung ein Pfad relativ zum Anwendungsverzeichnis sein.
 
-Für Assemblys ohne starken Namen, Version ignoriert, und das Ladeprogramm verwendet das erste Vorkommen von \<codebase > in \<DependentAssembly >. Wenn ein Eintrag vorhanden, in der Konfigurationsdatei der Anwendung, die Bindung an eine andere Assembly umleitet ist, hat die Umleitung Vorrang, selbst wenn die Version der Assembly nicht mit der bindungsanforderung übereinstimmt.
+Für Assemblys ohne starken Namen wird die Version ignoriert, und das Lade Modul verwendet die \<erste Darstellung der CodeBase-> in \<dependentAssembly >. Wenn in der Anwendungs Konfigurationsdatei ein Eintrag vorhanden ist, der die Bindung an eine andere Assembly umleitet, hat die Umleitung Vorrang, auch wenn die Assemblyversion nicht mit der Bindungs Anforderung identisch ist.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie angeben, in dem die Runtime eine Assembly finden kann.
+Im folgenden Beispiel wird gezeigt, wie angegeben wird, wo die Common Language Runtime eine Assembly finden kann.
 
 ```xml
 <configuration>
@@ -90,7 +90,7 @@ Das folgende Beispiel zeigt, wie Sie angeben, in dem die Runtime eine Assembly f
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Festlegen des Speicherortes einer Assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [So sucht Common Language Runtime nach Assemblys](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)
+- [Festlegen des Speicherortes einer Assembly](../../specify-assembly-location.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../deployment/how-the-runtime-locates-assemblies.md)

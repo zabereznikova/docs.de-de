@@ -5,14 +5,14 @@ helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9b126cee83bc8109606d915ea48549beea970c9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704718"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663478"
 ---
-# <a name="remove-element-for-namedcaches"></a>\<Entfernen Sie >-Element für \<NamedCaches >
+# <a name="remove-element-for-namedcaches"></a>\<Entfernen Sie >- \<Element für NamedCaches >
 Entfernt einen benannten Cacheeintrag aus der `namedCaches`-Sammlung für einen Speichercache.  
   
  \<system.runtime.caching>  
@@ -45,11 +45,11 @@ Entfernt einen benannten Cacheeintrag aus der `namedCaches`-Sammlung für einen 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Enthält eine Auflistung von Konfigurationseinstellungen für den benannten <xref:System.Runtime.Caching.MemoryCache> Instanzen.|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|Enthält eine Sammlung von Konfigurationseinstellungen für die benannten <xref:System.Runtime.Caching.MemoryCache> Instanzen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `remove` -Element entfernt eine `namedCache` Eintrag aus der Auflistung benannter Caches für einen Speichercache.  
+ Das `remove` -Element entfernt `namedCache` einen Eintrag aus der Auflistung benannter Caches für einen Speicher Cache.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<NamedCaches >-Element (Cacheeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<NamedCaches > Element (Cache Einstellungen)](namedcaches-element-cache-settings.md)

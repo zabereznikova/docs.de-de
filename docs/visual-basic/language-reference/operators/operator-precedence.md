@@ -14,12 +14,12 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: c420a34a18f9e8fb55411a062e6a47ab38e98978
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: df40aced45442c9c7895c8d10ece64b21e292508
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611491"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659930"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Operatorrangfolge in Visual Basic
 Wenn mehrere Vorgänge in einem Ausdruck auftreten, wird jeder Teil in einer vordefinierten Reihenfolge ausgewertet und aufgelöst, die als *Operator Rangfolge*bezeichnet wird.
@@ -50,7 +50,7 @@ Wenn mehrere Vorgänge in einem Ausdruck auftreten, wird jeder Teil in einer vor
 
  Ganzzahlige`\`Division ()
 
- Modulus Arithmetik`Mod`()
+ Modulare Arithmetik`Mod`()
 
  Addition und Subtraktion (`+`, `–`)
 

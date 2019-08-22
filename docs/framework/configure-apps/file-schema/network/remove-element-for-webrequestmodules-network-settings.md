@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: c57e2849d608b1706c41beca91ff8026ebd9ca45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20a586e945a889d1fd8a8d4c5c09c8b790c56fc3
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705024"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664016"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<Entfernen Sie >-Element für WebRequestModules (Netzwerkeinstellungen)
-Entfernt ein benutzerdefinierte Webanforderungsmodul aus der Anwendung an.  
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<Remove >-Element für webRequestModules (Netzwerkeinstellungen)
+Entfernt ein benutzerdefiniertes Webanforderungs Modul aus der Anwendung.  
   
  \<configuration>  
 \<system.net>  
@@ -40,7 +40,7 @@ Entfernt ein benutzerdefinierte Webanforderungsmodul aus der Anwendung an.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`prefix`|Das URI-Präfix für Anforderungen, die von diesem Webanforderungsmodul behandelt werden soll.|  
+|`prefix`|Das URI-Präfix für Anforderungen, die von diesem Webanforderungs Modul behandelt werden.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -49,19 +49,19 @@ Entfernt ein benutzerdefinierte Webanforderungsmodul aus der Anwendung an.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module zu verwenden, um Informationen aus der Hosts im Netzwerk anzufordern.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `remove` -Element entfernt die eingetragene Webanforderungsmodul für das angegebene URI-Präfix.  
+ Das `remove` -Element entfernt das registrierte Webanforderungs Modul für das angegebene URI-Präfix.  
   
- Der Wert für die `prefix` Attribut muss die führenden Zeichen eine gültige URI sein – z. B. "`http`", oder "`http://www.contoso.com`".  
+ Der Wert für das `prefix` -Attribut muss die führenden Zeichen eines gültigen URIs sein, z. b. "`http`" oder "`http://www.contoso.com`".  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
 
-Im folgenden Beispiel wird das vorhandene Webanforderungsmodul für HTTP und registriert dann ein neues benutzerdefinierte Webanforderungsmodul für HTTP-Anforderungen an `www.contoso.com`.
+Im folgenden Beispiel wird das vorhandene Webanforderungs Modul für http entfernt und dann ein neues benutzerdefiniertes Webanforderungs Modul `www.contoso.com`für HTTP-Anforderungen an registriert.
   
 ```xml  
 <configuration>  
@@ -80,4 +80,4 @@ Im folgenden Beispiel wird das vorhandene Webanforderungsmodul für HTTP und reg
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebRequest>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

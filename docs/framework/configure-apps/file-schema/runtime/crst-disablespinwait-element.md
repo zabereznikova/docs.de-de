@@ -1,5 +1,5 @@
 ---
-title: < Crst_DisableSpinWait >-element
+title: < Crst_DisableSpinWait >-Element
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754678"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663837"
 ---
-# <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait >-Element
+# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait >-Element
 
-Gibt an, ob die Spin-warten auf einen kritischen Abschnitt bei Konflikten deaktiviert.  
+Gibt an, ob das warten auf einen kritischen Abschnitt beim Konflikten deaktiviert werden soll.  
   
  \<configuration>  
-\<runtime>  
-\<Crst_DisableSpinWait>  
+\<Lauf Zeit >  
+\<Crst_DisableSpinWait >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,14 +36,14 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**enabled**|Gibt an, ob Spin-warten auf kritische Abschnitte, wenn diese Anzahl von Konflikten vorliegt deaktiviert ist.|  
+|**wodurch**|Gibt an, ob das Drehfeld für kritische Abschnitte, bei denen ein Konflikt besteht, deaktiviert ist.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|1|Deaktivieren Sie Spin-Waiting aus, wenn ein Kritischer Abschnitt kann nicht abgerufen werden.|  
-|0|Drehfeld-Waiting kann nicht deaktiviert werden, wenn ein Kritischer Abschnitt kann nicht abgerufen werden. Dies ist der Standardwert.|  
+|1|Die Drehung wird deaktiviert, wenn ein kritischer Abschnitt nicht abgerufen werden kann.|  
+|0|"Spin-warten" nicht deaktivieren, wenn ein kritischer Abschnitt nicht abgerufen werden kann. Dies ist der Standardwert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -53,11 +53,11 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
-|`runtime`|Enthält Informationen über verschiedene Konfigurationseinstellungen für die Common Language Runtime.|  
+|`runtime`|Enthält Informationen zu verschiedenen Lauf Zeit Konfigurationseinstellungen.|  
   
 ## <a name="example"></a>Beispiel  
 
-Das folgende Beispiel deaktiviert die Spin-Waiting in kritischen Abschnitten bei Konflikten.  
+Im folgenden Beispiel wird die Drehung beim Konflikt in kritischen Abschnitten deaktiviert.  
   
 ```xml  
 <configuration>  
@@ -69,5 +69,5 @@ Das folgende Beispiel deaktiviert die Spin-Waiting in kritischen Abschnitten bei
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)
