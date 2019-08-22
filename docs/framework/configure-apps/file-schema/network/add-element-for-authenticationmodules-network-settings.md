@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d72371921a85ff5a68dd9017f0fe8cf5d28557dd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705154"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664240"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Hinzufügen >-Element für AuthenticationModules (Netzwerkeinstellungen)
-Ein Modul für die Authentifizierung hinzugefügt der Anwendung.  
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<Add >-Element für authenticationModules (Netzwerkeinstellungen)
+Fügt der Anwendung ein Authentifizierungs Modul hinzu.  
   
  \<configuration>  
 \<system.net>  
@@ -40,7 +40,7 @@ Ein Modul für die Authentifizierung hinzugefügt der Anwendung.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|`type`|Den vollqualifizierten Typnamen (angegeben durch die <xref:System.Type.FullName%2A> Eigenschaft) und den Assemblynamen (erkennbar der <xref:System.Reflection.Assembly.FullName%2A> Eigenschaft) und durch ein Komma getrennt.|  
+|`type`|Der voll qualifizierte Typname (angegeben durch die <xref:System.Type.FullName%2A> -Eigenschaft) und der AssemblyName ( <xref:System.Reflection.Assembly.FullName%2A> angegeben durch die-Eigenschaft), getrennt durch ein Komma.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -49,18 +49,18 @@ Ein Modul für die Authentifizierung hinzugefügt der Anwendung.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Gibt Module an, die zum Authentifizieren von Netzwerk Anforderungen verwendet werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `add` -Element fügt ein Authentifizierungsmodul an das Ende der Liste der registrierten Authentifizierungsmodule. Authentifizierungsmodule werden in der Reihenfolge aufgerufen, in denen sie zur Liste hinzugefügt wurden.  
+ Das `add` -Element fügt ein Authentifizierungs Modul am Ende der Liste registrierter Authentifizierungs Module hinzu. Authentifizierungs Module werden in der Reihenfolge aufgerufen, in der Sie der Liste hinzugefügt wurden.  
   
- Der Wert für die `type` Attribut sollte einen gültigen Typnamen und den entsprechenden Assemblynamen, die durch ein Komma getrennt sein.  
+ Der Wert für das `type` -Attribut muss ein gültiger Typname und der zugehörige AssemblyName sein, getrennt durch ein Komma.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die Standard-Authentifizierungsmodule. Sie sollten die Werte für die Version und ' PublicKeyToken ' machen durch die richtigen Werte für das angegebene Modul ersetzen.  
+ Im folgenden Beispiel werden die Standard Authentifizierungs Module aktiviert. Sie sollten die Werte für Version und PublicKeyToken durch die korrekten Werte für das angegebene Modul ersetzen.  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ Ein Modul für die Authentifizierung hinzugefügt der Anwendung.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)

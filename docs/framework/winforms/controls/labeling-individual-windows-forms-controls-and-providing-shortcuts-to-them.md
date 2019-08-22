@@ -7,31 +7,32 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 8d7ae8c807b8c5347a455b81c2c1a1b0897430c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892761ae52b8b3546c86a849d2d2eecc7442be53
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013009"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666137"
 ---
-# <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente
-In Windows Forms hinzugefügte Steuerelemente haben Eigenschaften und Methoden, die dazu verwendet werden, die Benutzerfreundlichkeit weiter zu spezialisieren. Ein Anpassen der Benutzeroberfläche an die Bedürfnisse der Benutzer ist äußerst wichtig für gut gestaltete Windows-Anwendungen.  
-  
-## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- Beschreibt das Zuweisen einer Textbezeichnung zu einem Steuerelement.  
-  
- [Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement](how-to-set-the-image-displayed-by-a-windows-forms-control.md)  
- Erläutert, wie ein Steuerelement konfiguriert wird, um Bilder anzuzeigen.  
-  
- [Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)  
- Enthält Informationen über das Erstellen von vordefinierten Tastenkombinationen.  
-  
- [Informationen über Eingabehilfen für Steuerelemente in Windows Forms](providing-accessibility-information-for-controls-on-a-windows-form.md)  
- Enthält Informationen über das Einrichten von Steuerelementen für die Arbeit mit Hilfen zur Barrierefreiheit.  
-  
-## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](index.md)  
- Enthält Links zu weiteren grundlegenden Verwendungsmöglichkeiten für Steuerelemente.  
-  
- Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente, die mithilfe des Designers](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement mithilfe des Designers](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement mithilfe des Designers](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).
+# <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a>Bezeichnung einzelner Windows Forms Steuerelemente und Bereitstellen von Tastenkombinationen
+
+In Windows Forms hinzugefügte Steuerelemente haben Eigenschaften und Methoden, die dazu verwendet werden, die Benutzerfreundlichkeit weiter zu spezialisieren. Ein Anpassen der Benutzeroberfläche an die Bedürfnisse der Benutzer ist äußerst wichtig für gut gestaltete Windows-Anwendungen.
+
+## <a name="in-this-section"></a>In diesem Abschnitt
+
+[Vorgehensweise: Festlegen des von einem Windows Forms-Steuerelement angezeigten Texts](how-to-set-the-text-displayed-by-a-windows-forms-control.md)\
+Beschreibt das Zuweisen einer Textbezeichnung zu einem Steuerelement.
+
+[Vorgehensweise: Festlegen des von einem Windows Forms Steuerelement angezeigten Bilds](how-to-set-the-image-displayed-by-a-windows-forms-control.md)\
+Erläutert, wie ein Steuerelement konfiguriert wird, um Bilder anzuzeigen.
+
+[Vorgehensweise: Erstellen von Zugriffs Schlüsseln für Windows Forms Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)\
+Enthält Informationen über das Erstellen von vordefinierten Tastenkombinationen.
+
+[Bereitstellen von Barrierefreiheits Informationen für Steuerelemente in einem Windows Form](providing-accessibility-information-for-controls-on-a-windows-form.md)\
+Enthält Informationen über das Einrichten von Steuerelementen für die Arbeit mit Hilfen zur Barrierefreiheit.
+
+## <a name="related-sections"></a>Verwandte Abschnitte
+
+[Windows Forms Steuerelemente](index.md)\
+Enthält Links zu weiteren grundlegenden Verwendungsmöglichkeiten für Steuerelemente.

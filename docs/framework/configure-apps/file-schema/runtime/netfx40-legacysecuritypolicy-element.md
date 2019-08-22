@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bfa5449ece1b24d4f47fe3e77e36b26bbe430c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689842"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663561"
 ---
-# <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy >-Element
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy >-Element
 
 Gibt an, ob die Runtime die Legacyrichtlinie für Code Access Security (CAS) verwendet.
 
-\<configuration>\
-\<runtime>\
+\<Konfigurations > \
+\<Lauf Zeit > \
 \<NetFx40_LegacySecurityPolicy>
 
 ## <a name="syntax"></a>Syntax
@@ -37,14 +37,14 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Runtime die CAS-legacyrichtlinie verwendet.|
+|`enabled`|Erforderliches Attribut.<br /><br /> Gibt an, ob die Runtime die Legacy-CAS-Richtlinie verwendet|
 
 ## <a name="enabled-attribute"></a>Enabled-Attribut
 
 |Wert|Beschreibung|
 |-----------|-----------------|
-|`false`|Die Runtime verwendet nicht CAS-legacyrichtlinie. Dies ist die Standardeinstellung.|
-|`true`|Die Runtime verwendet die legacy-CAS-Richtlinie.|
+|`false`|Die Common-CAS-Richtlinie wird von der Laufzeit nicht verwendet. Dies ist die Standardeinstellung.|
+|`true`|Die Laufzeit verwendet die Legacy-CAS-Richtlinie.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -59,28 +59,28 @@ Keine
 
 ## <a name="remarks"></a>Hinweise
 
-CAS-Richtlinie ist in der .NET Framework, Version 3.5 und früheren Versionen immer wirksam. In .NET Framework 4 muss CAS-Richtlinie aktiviert sein.
+In den .NET Framework Version 3,5 und früheren Versionen ist die CAS-Richtlinie immer wirksam. In der .NET Framework 4 muss die CAS-Richtlinie aktiviert werden.
 
-CAS-Richtlinie ist versionsspezifisch. Benutzerdefinierte CAS-Richtlinien, die in früheren Versionen von .NET Framework vorhanden sind, müssen in .NET Framework 4 erneut angegeben werden.
+Die CAS-Richtlinie ist Versions spezifisch. Benutzerdefinierte CAS-Richtlinien, die in früheren Versionen der .NET Framework vorhanden sind, müssen in der .NET Framework 4 neu angegeben werden.
 
-Anwenden der `<NetFx40_LegacySecurityPolicy>` Element auf eine Assembly von .NET Framework 4 hat keinen Einfluss auf [Sicherheitstransparenter Code](../../../../../docs/framework/misc/security-transparent-code.md); die Transparenzregeln gelten weiterhin.
+Das Anwenden `<NetFx40_LegacySecurityPolicy>` des-Elements auf eine .NET Framework 4-Assembly wirkt sich nicht auf [Sicherheits transparenten Code](../../../misc/security-transparent-code.md)aus; die Transparenzregeln gelten weiterhin.
 
 > [!IMPORTANT]
-> Anwenden der `<NetFx40_LegacySecurityPolicy>` Elements kann dazu führen, Leistungseinbußen für Assemblys systemeigener Abbilder, die erstellt werden, indem der [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) nicht im installierten der [globalen Assemblycache ](../../../../../docs/framework/app-domains/gac.md). Die Leistungsminderung wird verursacht, wenn die Unmöglichkeit der Runtime, die die Assemblys als native Bilder geladen werden, wenn das Attribut angewendet wird, und ihre wird als just-in-Time-Assemblys geladen.
+> Das Anwenden `<NetFx40_LegacySecurityPolicy>` des-Elements kann zu erheblichen Leistungseinbußen für Native Image-Assemblys führen, die vom [Native Image Generator (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) erstellt werden, die nicht im [globalen](../../../app-domains/gac.md)Assemblycache installiert sind. Die Leistungsminderung wird dadurch verursacht, dass die Common Language Runtime die Assemblys nicht als systemeigene Images lädt, wenn das Attribut angewendet wird, was dazu führt, dass Sie als Just-in-Time-Assemblys geladen werden.
 
 > [!NOTE]
-> Wenn Sie eine .NET Framework-Zielversion, die älter als .NET Framework 4 in den projekteinstellungen für Visual Studio-Projekt ist angeben, wird die CAS-Richtlinie aktiviert werden, einschließlich benutzerdefinierten CAS-Richtlinien, die Sie für diese Version angegeben. Allerdings werden Sie nicht neue .NET Framework 4-Typen und Member verwenden können. Sie können auch eine frühere Version von .NET Framework angeben, indem die [ \<SupportedRuntime >-Element](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in das Schema für starteinstellungen in Ihrer [Konfigurationsdatei der Anwendung](../../../../../docs/framework/configure-apps/index.md).
+> Wenn Sie in den Projekteinstellungen für das Visual Studio-Projekt eine Ziel .NET Framework Version angeben, die älter als die .NET Framework 4 ist, wird die CAS-Richtlinie aktiviert, einschließlich aller benutzerdefinierten CAS-Richtlinien, die Sie für diese Version angegeben haben. Sie können jedoch keine neuen .NET Framework 4-Typen und-Member verwenden. Sie können auch eine frühere Version der .NET Framework angeben, indem Sie das [ \<supportedRuntime-> Element](../startup/supportedruntime-element.md) im Schema der Start Einstellungen in der [Anwendungs Konfigurationsdatei](../../index.md)verwenden.
 
 > [!NOTE]
-> Syntax von Konfigurationsdateien wird Groß-/Kleinschreibung beachtet. Sie sollten die Syntax verwenden, wie in den Abschnitten zu Syntax und Beispiel bereitgestellt.
+> Bei der Syntax der Konfigurationsdatei wird die groß-/klein Sie sollten die Syntax verwenden, wie in den Abschnitten Syntax und example bereitgestellt.
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.
+Dieses Element kann nur in der Anwendungs Konfigurationsdatei verwendet werden.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie die legacy-CAS-Richtlinie für eine Anwendung zu aktivieren.
+Im folgenden Beispiel wird gezeigt, wie die Legacy-CAS-Richtlinie für eine Anwendung aktiviert wird.
 
 ```xml
 <configuration>
@@ -92,5 +92,5 @@ Das folgende Beispiel zeigt, wie Sie die legacy-CAS-Richtlinie für eine Anwendu
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)

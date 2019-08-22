@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704803"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663735"
 ---
-# <a name="etwenable-element"></a>\<EtwEnable >-Element
+# <a name="etwenable-element"></a>\<EtwEnable-> Element
 Gibt an, ob die Ereignisablaufverfolgung für Windows (ETW) für Common Language Runtime-Ereignisse aktiviert wird.  
   
  \<Configuration >-Element  
-\<Common Language Runtime >-Element  
+\<Runtime-> Element  
 \<etwEnabled>  
   
 ## <a name="syntax"></a>Syntax  
@@ -34,14 +34,14 @@ Gibt an, ob die Ereignisablaufverfolgung für Windows (ETW) für Common Language
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob es sich bei ETW aktiviert werden soll.|  
+|enabled|Erforderliches Attribut.<br /><br /> Gibt an, ob etw aktiviert werden soll.|  
   
 ## <a name="enabled-attribute"></a>Enabled-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|true|Aktivieren Sie ETW. Dies ist die Standardeinstellung für Versionen von Windows ab Windows Vista und Windows Server 2008-Betriebssysteme.|  
-|False|Deaktivieren Sie ETW. Dies ist die Standardeinstellung für frühere Versionen von Windows.|  
+|true|Etw aktivieren. Dies ist die Standardeinstellung für Windows-Versionen, die mit den Betriebssystemen Windows Vista und Windows Server 2008 beginnen.|  
+|false|Deaktivieren Sie etw. Dies ist die Standardeinstellung für frühere Versionen von Windows.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -54,13 +54,13 @@ Gibt an, ob die Ereignisablaufverfolgung für Windows (ETW) für Common Language
 |`runtime`|Enthält Informationen über die Assemblybindung und die Garbage Collection.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ab Windows Vista ist ETW standardmäßig aktiviert. Verwenden Sie dieses Element, um ETW für eine Anwendung zu deaktivieren. Verwenden Sie dieses Element in früheren Versionen von Windows ETW für eine Anwendung zu aktivieren.  
+ Ab Windows Vista ist etw standardmäßig aktiviert. Verwenden Sie dieses Element, um etw für eine Anwendung zu deaktivieren. In früheren Versionen von Windows verwenden Sie dieses Element, um etw für eine Anwendung zu aktivieren.  
   
 > [!NOTE]
->  ETW kann aktiviert oder deaktiviert global auf einem Server mit einer registrierungseinstellung. Finden Sie unter [Steuern der Protokollierung in .NET Framework](../../../../../docs/framework/performance/controlling-logging.md).  
+>  Etw kann mithilfe einer Registrierungs Einstellung Global auf einem Server aktiviert oder deaktiviert werden. Siehe [Steuern der .NET Framework Protokollierung](../../../performance/controlling-logging.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie die ETW-Ablaufverfolgung für eine Anwendung aktiviert wird.  
+ Im folgenden Beispiel wird gezeigt, wie die ETW-Ablauf Verfolgung für eine Anwendung aktiviert wird.  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ Gibt an, ob die Ereignisablaufverfolgung für Windows (ETW) für Common Language
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Controlling .NET Framework Logging (Steuern der Protokollierung in .NET Framework)](../../../../../docs/framework/performance/controlling-logging.md)
+- [Schema für Laufzeiteinstellungen](index.md)
+- [Konfigurationsdateischema](../index.md)
+- [Controlling .NET Framework Logging (Steuern der Protokollierung in .NET Framework)](../../../performance/controlling-logging.md)

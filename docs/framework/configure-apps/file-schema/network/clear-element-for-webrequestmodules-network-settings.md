@@ -10,15 +10,15 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 5dea238629b282776cb45f7b388e655fa557d084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e175c70bd4932d6a8f9428e8cd9159a47df52558
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674596"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659426"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<clear >-Element für WebRequestModules (Netzwerkeinstellungen)
-Entfernt alle registrierte Webanforderungsmodulen aus der Anwendung an.  
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<Löschen von >-Element für webRequestModules (Netzwerkeinstellungen)
+Entfernt alle registrierten Webanforderungs Module aus der Anwendung.  
   
  \<configuration>  
 \<system.net>  
@@ -44,16 +44,16 @@ Entfernt alle registrierte Webanforderungsmodulen aus der Anwendung an.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Gibt die Module zu verwenden, um Informationen aus der Hosts im Netzwerk anzufordern.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|Gibt Module an, die zum Anfordern von Informationen von Netzwerk Hosts verwendet werden sollen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `clear` -Element entfernt alle registrierte Webanforderungsmodulen, die weiter oben in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurationshierarchie definiert wurden.  
+ Das `clear` -Element entfernt alle registrierten Webanforderungs Module, die zuvor in der Konfigurationsdatei oder auf einer höheren Ebene in der Konfigurations Hierarchie definiert wurden.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel löscht alle Webanforderungsmodule und registriert anschließend ein Webanforderungsmodul für HTTP.  
+ Im folgenden Beispiel werden alle Webanforderungs Module gelöscht und anschließend ein Webanforderungs Modul für http registriert.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Entfernt alle registrierte Webanforderungsmodulen aus der Anwendung an.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebRequest>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](index.md)
