@@ -1,5 +1,5 @@
 ---
-title: <filter> -Element für <add> für <listeners> für <trace>
+title: <filter>-Element <add> für <listeners> für für<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: 5961125e1b8d0d0f5711f8b942b68ba71d61888f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afde5381a7dd7dfe6a1a9d238a2029511bd9bae2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701306"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927136"
 ---
-# <a name="filter-element-for-add-for-listeners-for-trace"></a><span data-ttu-id="37de6-102">\<Filter >-Element für \<hinzufügen > für \<Listener > für \<Ablaufverfolgung ></span><span class="sxs-lookup"><span data-stu-id="37de6-102">\<filter> Element for \<add> for \<listeners> for \<trace></span></span>
-<span data-ttu-id="37de6-103">Fügt einen Filter zu einem Listener in der `Listeners` Sammlung für eine Ablaufverfolgung.</span><span class="sxs-lookup"><span data-stu-id="37de6-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  
+# <a name="filter-element-for-add-for-listeners-for-trace"></a><span data-ttu-id="c0cc4-102">\<Filter > Element für \<Add > for \<Listener > for \<Trace ></span><span class="sxs-lookup"><span data-stu-id="c0cc4-102">\<filter> Element for \<add> for \<listeners> for \<trace></span></span>
+<span data-ttu-id="c0cc4-103">Fügt einen Filter zu einem Listener in der `Listeners` -Auflistung für eine Ablauf Verfolgung hinzu.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-103">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>  
   
- <span data-ttu-id="37de6-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="37de6-104">\<configuration></span></span>  
-<span data-ttu-id="37de6-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="37de6-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="37de6-106">\<trace></span><span class="sxs-lookup"><span data-stu-id="37de6-106">\<trace></span></span>  
-<span data-ttu-id="37de6-107">\<listeners></span><span class="sxs-lookup"><span data-stu-id="37de6-107">\<listeners></span></span>  
-<span data-ttu-id="37de6-108">\<add></span><span class="sxs-lookup"><span data-stu-id="37de6-108">\<add></span></span>  
-<span data-ttu-id="37de6-109">\<filter></span><span class="sxs-lookup"><span data-stu-id="37de6-109">\<filter></span></span>  
+ <span data-ttu-id="c0cc4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c0cc4-104">\<configuration></span></span>  
+<span data-ttu-id="c0cc4-105">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="c0cc4-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="c0cc4-106">\<Ablauf Verfolgungs ></span><span class="sxs-lookup"><span data-stu-id="c0cc4-106">\<trace></span></span>  
+<span data-ttu-id="c0cc4-107">\<Listener ></span><span class="sxs-lookup"><span data-stu-id="c0cc4-107">\<listeners></span></span>  
+<span data-ttu-id="c0cc4-108">\<add></span><span class="sxs-lookup"><span data-stu-id="c0cc4-108">\<add></span></span>  
+<span data-ttu-id="c0cc4-109">\<Filter ></span><span class="sxs-lookup"><span data-stu-id="c0cc4-109">\<filter></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37de6-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="37de6-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0cc4-110">Syntax</span><span class="sxs-lookup"><span data-stu-id="c0cc4-110">Syntax</span></span>  
   
 ```xml  
 <filter   
@@ -33,36 +33,36 @@ ms.locfileid: "61701306"
   initializeData="data" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="37de6-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="37de6-111">Attributes and Elements</span></span>  
- <span data-ttu-id="37de6-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="37de6-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c0cc4-111">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="c0cc4-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="c0cc4-112">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="37de6-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="37de6-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c0cc4-113">Attribute</span><span class="sxs-lookup"><span data-stu-id="c0cc4-113">Attributes</span></span>  
   
-|<span data-ttu-id="37de6-114">Attribut</span><span class="sxs-lookup"><span data-stu-id="37de6-114">Attribute</span></span>|<span data-ttu-id="37de6-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="37de6-115">Description</span></span>|  
+|<span data-ttu-id="c0cc4-114">Attribut</span><span class="sxs-lookup"><span data-stu-id="c0cc4-114">Attribute</span></span>|<span data-ttu-id="c0cc4-115">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c0cc4-115">Description</span></span>|  
 |---------------|-----------------|  
-|`type`|<span data-ttu-id="37de6-116">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="37de6-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="37de6-117">Gibt den Typ des Filters an, der von erben soll die <xref:System.Diagnostics.TraceFilter> Klasse.</span><span class="sxs-lookup"><span data-stu-id="37de6-117">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="37de6-118">Sie können den Namespace-qualifizierten Namen des Typs, der des Typs entspricht <xref:System.Type.FullName%2A> -Eigenschaft, oder Sie können den vollqualifizierten Typnamen einschließlich der Assemblyinformationen, die entspricht der <xref:System.Type.AssemblyQualifiedName%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="37de6-118">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="37de6-119">Weitere Informationen zu vollqualifizierten Typnamen, finden Sie unter [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="37de6-119">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
-|`initializeData`|<span data-ttu-id="37de6-120">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="37de6-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="37de6-121">Die Zeichenfolge, die für die angegebenen Filter-Klasse an den Konstruktor übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="37de6-121">The string passed to the constructor for the specified filter class.</span></span>|  
+|`type`|<span data-ttu-id="c0cc4-116">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="c0cc4-117">Gibt den Typ des Filters an, der von der <xref:System.Diagnostics.TraceFilter> -Klasse erben soll.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-117">Specifies the type of the filter, which should inherit from the <xref:System.Diagnostics.TraceFilter> class.</span></span> <span data-ttu-id="c0cc4-118">Sie können den mit dem Namespace qualifizierten Namen des Typs verwenden, der der-Eigenschaft des Typs <xref:System.Type.FullName%2A> entspricht, oder Sie können den voll qualifizierten Typnamen einschließlich der Assemblyinformationen verwenden, die der <xref:System.Type.AssemblyQualifiedName%2A> -Eigenschaft entsprechen.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-118">You can use the namespace-qualified name of the type, which corresponds to the type's <xref:System.Type.FullName%2A> property, or you can use the fully qualified type name including the assembly information, which corresponds to the <xref:System.Type.AssemblyQualifiedName%2A> property.</span></span> <span data-ttu-id="c0cc4-119">Informationen zu voll qualifizierten Typnamen finden Sie unter [Angeben von voll qualifizierten Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).</span><span class="sxs-lookup"><span data-stu-id="c0cc4-119">For information about fully qualified type names, see [Specifying Fully Qualified Type Names](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|`initializeData`|<span data-ttu-id="c0cc4-120">Optionales Attribut.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="c0cc4-121">Die Zeichenfolge, die an den Konstruktor für die angegebene Filterklasse übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-121">The string passed to the constructor for the specified filter class.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="37de6-122">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="37de6-122">Child Elements</span></span>  
- <span data-ttu-id="37de6-123">Keine</span><span class="sxs-lookup"><span data-stu-id="37de6-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c0cc4-122">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c0cc4-122">Child Elements</span></span>  
+ <span data-ttu-id="c0cc4-123">Keine</span><span class="sxs-lookup"><span data-stu-id="c0cc4-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="37de6-124">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="37de6-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c0cc4-124">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="c0cc4-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="37de6-125">Element</span><span class="sxs-lookup"><span data-stu-id="37de6-125">Element</span></span>|<span data-ttu-id="37de6-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="37de6-126">Description</span></span>|  
+|<span data-ttu-id="c0cc4-125">Element</span><span class="sxs-lookup"><span data-stu-id="c0cc4-125">Element</span></span>|<span data-ttu-id="c0cc4-126">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c0cc4-126">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="37de6-127">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="37de6-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="37de6-128">Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="37de6-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
-|`trace`|<span data-ttu-id="37de6-129">Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.</span><span class="sxs-lookup"><span data-stu-id="37de6-129">Contains listeners that collect, store, and route tracing messages.</span></span>|  
-|`listeners`|<span data-ttu-id="37de6-130">Enthält Listener, die sammeln, speichern und Weiterleiten von Nachrichten.</span><span class="sxs-lookup"><span data-stu-id="37de6-130">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="37de6-131">Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel.</span><span class="sxs-lookup"><span data-stu-id="37de6-131">Listeners direct the tracing output to an appropriate target.</span></span>|  
-|`add`|<span data-ttu-id="37de6-132">Fügt einen Listener zu der `Listeners`-Sammlung hinzu.</span><span class="sxs-lookup"><span data-stu-id="37de6-132">Adds a listener to the `Listeners` collection.</span></span>|  
+|`configuration`|<span data-ttu-id="c0cc4-127">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="c0cc4-128">Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-128">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|`trace`|<span data-ttu-id="c0cc4-129">Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-129">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|`listeners`|<span data-ttu-id="c0cc4-130">Enthält Listener, die Nachrichten erfassen, speichern und weiterleiten.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-130">Contains listeners that collect, store, and route messages.</span></span> <span data-ttu-id="c0cc4-131">Listener leiten die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel weiter.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-131">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`add`|<span data-ttu-id="c0cc4-132">Fügt einen Listener zu der `Listeners`-Sammlung hinzu.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-132">Adds a listener to the `Listeners` collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="37de6-133">Hinweise</span><span class="sxs-lookup"><span data-stu-id="37de6-133">Remarks</span></span>  
- <span data-ttu-id="37de6-134">Die `<filter>` Element muss enthalten sein, eine `<add>` -Element für einen Ablaufverfolgungslistener, der den Typ des Listeners, der angibt, die nicht nur der Namen eines Listeners in definiert eine [ \<SharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span><span class="sxs-lookup"><span data-stu-id="37de6-134">The `<filter>` element must be contained in an `<add>` element for a trace listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md).</span></span> <span data-ttu-id="37de6-135">Wenn der Listener in definiert ist eine [ \<SharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), muss der Filter für diesen Listener in diesem Element definiert werden.</span><span class="sxs-lookup"><span data-stu-id="37de6-135">If the listener is defined in a [\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c0cc4-133">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c0cc4-133">Remarks</span></span>  
+ <span data-ttu-id="c0cc4-134">Das `<filter>` -Element muss in einem `<add>` -Element für einen Ablaufverfolgungslistener enthalten sein, der den Typ des Listener angibt, nicht nur den Namen eines Listener, der in einem [ \<sharedlistener->](sharedlisteners-element.md)definiert ist.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-134">The `<filter>` element must be contained in an `<add>` element for a trace listener that specifies the type of the listener, not just the name of a listener defined in a [\<sharedListeners>](sharedlisteners-element.md).</span></span> <span data-ttu-id="c0cc4-135">Wenn der Listener in einem [ \<sharedlistener->](sharedlisteners-element.md)definiert ist, muss der Filter für diesen Listener in diesem Element definiert werden.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-135">If the listener is defined in a [\<sharedListeners>](sharedlisteners-element.md), the filter for that listener must be defined in that element.</span></span>  
   
- <span data-ttu-id="37de6-136">Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="37de6-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="c0cc4-136">Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-136">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="37de6-137">Beispiel</span><span class="sxs-lookup"><span data-stu-id="37de6-137">Example</span></span>  
- <span data-ttu-id="37de6-138">Das folgende Beispiel zeigt, wie Sie mit der `<filter>` Element um einen Filter hinzuzufügen, mit dem Listener `console` in die `Listeners` -Sammlung für die Ablaufverfolgung, die Angabe der Ebene des Filter-Ereignis als `Error`.</span><span class="sxs-lookup"><span data-stu-id="37de6-138">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for trace, specifying the filter event level as `Error`.</span></span>  
+## <a name="example"></a><span data-ttu-id="c0cc4-137">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c0cc4-137">Example</span></span>  
+ <span data-ttu-id="c0cc4-138">Im folgenden Beispiel wird gezeigt, wie das `<filter>` -Element verwendet wird, um dem Listener `console` in der `Listeners` -Auflistung für die Ablauf Verfolgung einen Filter hinzuzufügen `Error`, wobei die Filter Ereignis Ebene als angegeben wird.</span><span class="sxs-lookup"><span data-stu-id="c0cc4-138">The following example shows how to use the `<filter>` element to add a filter to the listener `console` in the `Listeners` collection for trace, specifying the filter event level as `Error`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,10 +81,10 @@ ms.locfileid: "61701306"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="37de6-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37de6-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c0cc4-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c0cc4-139">See also</span></span>
 
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [<span data-ttu-id="37de6-140">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="37de6-140">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="c0cc4-140">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="c0cc4-140">Trace and Debug Settings Schema</span></span>](index.md)

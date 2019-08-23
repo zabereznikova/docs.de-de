@@ -8,57 +8,57 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4848dec148bc528e7a30940643e3364f1bb5f805
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788920"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939205"
 ---
-# <a name="-optioninfer"></a><span data-ttu-id="bf530-102">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="bf530-102">-optioninfer</span></span>
-<span data-ttu-id="bf530-103">Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.</span><span class="sxs-lookup"><span data-stu-id="bf530-103">Enables the use of local type inference in variable declarations.</span></span>  
+# <a name="-optioninfer"></a><span data-ttu-id="a564b-102">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="a564b-102">-optioninfer</span></span>
+<span data-ttu-id="a564b-103">Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.</span><span class="sxs-lookup"><span data-stu-id="a564b-103">Enables the use of local type inference in variable declarations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf530-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="bf530-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a564b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a564b-104">Syntax</span></span>  
   
 ```  
 -optioninfer[+ | -]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="bf530-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="bf530-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="a564b-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="a564b-105">Arguments</span></span>  
   
-|<span data-ttu-id="bf530-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="bf530-106">Term</span></span>|<span data-ttu-id="bf530-107">Definition</span><span class="sxs-lookup"><span data-stu-id="bf530-107">Definition</span></span>|  
+|<span data-ttu-id="a564b-106">Begriff</span><span class="sxs-lookup"><span data-stu-id="a564b-106">Term</span></span>|<span data-ttu-id="a564b-107">Definition</span><span class="sxs-lookup"><span data-stu-id="a564b-107">Definition</span></span>|  
 |---|---|  
-|<span data-ttu-id="bf530-108">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="bf530-108">`+` &#124; `-`</span></span>|<span data-ttu-id="bf530-109">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="bf530-109">Optional.</span></span> <span data-ttu-id="bf530-110">Geben Sie `-optioninfer+` an, um lokalen Typrückschluss zu aktivieren oder `-optioninfer-` zu blockieren.</span><span class="sxs-lookup"><span data-stu-id="bf530-110">Specify `-optioninfer+` to enable local type inference, or `-optioninfer-` to block it.</span></span> <span data-ttu-id="bf530-111">Die `-optioninfer` -Option ohne angegebenen Wert entspricht dem `-optioninfer+`.</span><span class="sxs-lookup"><span data-stu-id="bf530-111">The `-optioninfer` option, with no value specified, is the same as `-optioninfer+`.</span></span> <span data-ttu-id="bf530-112">Der Standardwert, wenn die `-optioninfer` Switch nicht vorhanden ist, ist auch `-optioninfer+`.</span><span class="sxs-lookup"><span data-stu-id="bf530-112">The default value when the `-optioninfer` switch is not present is also `-optioninfer+`.</span></span> <span data-ttu-id="bf530-113">Der Standardwert ist in der Vbc.rsp-Antwortdatei festgelegt.</span><span class="sxs-lookup"><span data-stu-id="bf530-113">The default value is set in the Vbc.rsp response file.</span></span>|  
+|<span data-ttu-id="a564b-108">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="a564b-108">`+` &#124; `-`</span></span>|<span data-ttu-id="a564b-109">Optional.</span><span class="sxs-lookup"><span data-stu-id="a564b-109">Optional.</span></span> <span data-ttu-id="a564b-110">Geben Sie `-optioninfer+` an, um lokalen Typrückschluss zu aktivieren oder `-optioninfer-` zu blockieren.</span><span class="sxs-lookup"><span data-stu-id="a564b-110">Specify `-optioninfer+` to enable local type inference, or `-optioninfer-` to block it.</span></span> <span data-ttu-id="a564b-111">Die `-optioninfer` -Option ohne angegebenen Wert entspricht dem `-optioninfer+`.</span><span class="sxs-lookup"><span data-stu-id="a564b-111">The `-optioninfer` option, with no value specified, is the same as `-optioninfer+`.</span></span> <span data-ttu-id="a564b-112">Der Standardwert, wenn die `-optioninfer` Switch nicht vorhanden ist, ist auch `-optioninfer+`.</span><span class="sxs-lookup"><span data-stu-id="a564b-112">The default value when the `-optioninfer` switch is not present is also `-optioninfer+`.</span></span> <span data-ttu-id="a564b-113">Der Standardwert ist in der Vbc.rsp-Antwortdatei festgelegt.</span><span class="sxs-lookup"><span data-stu-id="a564b-113">The default value is set in the Vbc.rsp response file.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="bf530-114">Sie können die `-noconfig` Option nutzen, um die internen Standardwerte des Compilers, anstelle der Werte in vbc.rsp, beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="bf530-114">You can use the `-noconfig` option to retain the compiler's internal defaults instead of those specified in vbc.rsp.</span></span> <span data-ttu-id="bf530-115">Der Compilerstandardwert für diese Option ist `-optioninfer-`.</span><span class="sxs-lookup"><span data-stu-id="bf530-115">The compiler default for this option is `-optioninfer-`.</span></span>  
+> <span data-ttu-id="a564b-114">Sie können die `-noconfig` Option nutzen, um die internen Standardwerte des Compilers, anstelle der Werte in vbc.rsp, beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="a564b-114">You can use the `-noconfig` option to retain the compiler's internal defaults instead of those specified in vbc.rsp.</span></span> <span data-ttu-id="a564b-115">Der Compilerstandardwert für diese Option ist `-optioninfer-`.</span><span class="sxs-lookup"><span data-stu-id="a564b-115">The compiler default for this option is `-optioninfer-`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bf530-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="bf530-116">Remarks</span></span>  
- <span data-ttu-id="bf530-117">Wenn die Quellcodedatei enthält einen [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md), überschreibt die Anweisung die `-optioninfer` Befehlszeilencompiler-Einstellung.</span><span class="sxs-lookup"><span data-stu-id="bf530-117">If the source code file contains an [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), the statement overrides the `-optioninfer` command-line compiler setting.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a564b-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a564b-116">Remarks</span></span>  
+ <span data-ttu-id="a564b-117">Wenn die Quell Code Datei eine [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)enthält, überschreibt die- `-optioninfer` Anweisung die Befehlszeilen-Compilereinstellung.</span><span class="sxs-lookup"><span data-stu-id="a564b-117">If the source code file contains an [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md), the statement overrides the `-optioninfer` command-line compiler setting.</span></span>  
   
-### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a><span data-ttu-id="bf530-118">-Optioninfer in Visual Studio-IDE festlegen</span><span class="sxs-lookup"><span data-stu-id="bf530-118">To set -optioninfer in the Visual Studio IDE</span></span>  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a><span data-ttu-id="a564b-118">So legen Sie-optioninfer in der Visual Studio-IDE fest</span><span class="sxs-lookup"><span data-stu-id="a564b-118">To set -optioninfer in the Visual Studio IDE</span></span>  
   
-1. <span data-ttu-id="bf530-119">Wählen Sie ein Projekt in **Projektmappen-Explorer**.</span><span class="sxs-lookup"><span data-stu-id="bf530-119">Select a project in **Solution Explorer**.</span></span> <span data-ttu-id="bf530-120">Klicken Sie im Menü **Projekt** auf **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="bf530-120">On the **Project** menu, click **Properties**.</span></span>  
+1. <span data-ttu-id="a564b-119">Wählen Sie ein Projekt in **Projektmappen-Explorer**aus.</span><span class="sxs-lookup"><span data-stu-id="a564b-119">Select a project in **Solution Explorer**.</span></span> <span data-ttu-id="a564b-120">Klicken Sie im Menü **Projekt** auf **Eigenschaften**.</span><span class="sxs-lookup"><span data-stu-id="a564b-120">On the **Project** menu, click **Properties**.</span></span>  
   
-2. <span data-ttu-id="bf530-121">Auf der **Kompilieren** Registerkarte, ändern Sie den Wert in der **Option infer-** Feld.</span><span class="sxs-lookup"><span data-stu-id="bf530-121">On the **Compile** tab, modify the value in the **Option infer** box.</span></span>  
+2. <span data-ttu-id="a564b-121">Ändern Sie auf der Registerkarte **Kompilieren** den Wert im Feld **Option ableiten** .</span><span class="sxs-lookup"><span data-stu-id="a564b-121">On the **Compile** tab, modify the value in the **Option infer** box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bf530-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="bf530-122">Example</span></span>  
- <span data-ttu-id="bf530-123">Der folgende Code kompiliert `test.vb` mit aktiviertem lokalen Typrückschluss.</span><span class="sxs-lookup"><span data-stu-id="bf530-123">The following code compiles `test.vb` with local type inference enabled.</span></span>  
+## <a name="example"></a><span data-ttu-id="a564b-122">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a564b-122">Example</span></span>  
+ <span data-ttu-id="a564b-123">Der folgende Code kompiliert `test.vb` mit aktiviertem lokalen Typrückschluss.</span><span class="sxs-lookup"><span data-stu-id="a564b-123">The following code compiles `test.vb` with local type inference enabled.</span></span>  
   
 ```console
 vbc -optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bf530-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bf530-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a564b-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a564b-124">See also</span></span>
 
-- [<span data-ttu-id="bf530-125">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="bf530-125">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="bf530-126">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="bf530-126">-optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [<span data-ttu-id="bf530-127">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="bf530-127">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [<span data-ttu-id="bf530-128">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="bf530-128">-optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [<span data-ttu-id="bf530-129">Beispiele für Kompilierungsbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="bf530-129">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [<span data-ttu-id="bf530-130">Option Infer-Anweisung</span><span class="sxs-lookup"><span data-stu-id="bf530-130">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [<span data-ttu-id="bf530-131">Lokaler Typrückschluss</span><span class="sxs-lookup"><span data-stu-id="bf530-131">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [<span data-ttu-id="bf530-132">VB-Standard, Projekte, Dialogfeld „Optionen“</span><span class="sxs-lookup"><span data-stu-id="bf530-132">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [<span data-ttu-id="bf530-133">Seite „Kompilieren“, Projekt-Designer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bf530-133">Compile Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [<span data-ttu-id="bf530-134">/noconfig</span><span class="sxs-lookup"><span data-stu-id="bf530-134">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [<span data-ttu-id="bf530-135">Erstellen von der Befehlszeile aus</span><span class="sxs-lookup"><span data-stu-id="bf530-135">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+- [<span data-ttu-id="a564b-125">Visual Basic-Befehlszeilencompiler</span><span class="sxs-lookup"><span data-stu-id="a564b-125">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="a564b-126">-optioncompare</span><span class="sxs-lookup"><span data-stu-id="a564b-126">-optioncompare</span></span>](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [<span data-ttu-id="a564b-127">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="a564b-127">-optionexplicit</span></span>](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [<span data-ttu-id="a564b-128">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="a564b-128">-optionstrict</span></span>](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [<span data-ttu-id="a564b-129">Beispiele für Kompilierungsbefehlszeilen</span><span class="sxs-lookup"><span data-stu-id="a564b-129">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="a564b-130">Option Infer-Anweisung</span><span class="sxs-lookup"><span data-stu-id="a564b-130">Option Infer Statement</span></span>](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [<span data-ttu-id="a564b-131">Lokaler Typrückschluss</span><span class="sxs-lookup"><span data-stu-id="a564b-131">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [<span data-ttu-id="a564b-132">VB-Standard, Projekte, Dialogfeld „Optionen“</span><span class="sxs-lookup"><span data-stu-id="a564b-132">Visual Basic Defaults, Projects, Options Dialog Box</span></span>](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [<span data-ttu-id="a564b-133">Seite „Kompilieren“, Projekt-Designer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a564b-133">Compile Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [<span data-ttu-id="a564b-134">/noconfig</span><span class="sxs-lookup"><span data-stu-id="a564b-134">/noconfig</span></span>](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [<span data-ttu-id="a564b-135">Erstellen von der Befehlszeile aus</span><span class="sxs-lookup"><span data-stu-id="a564b-135">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8ab1fa8fc163ed50e51801769d40e61483e8ed5b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343687"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912630"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="d52e7-102">Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d52e7-102">How to: Add Buttons to a ToolBar Control</span></span>
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a><span data-ttu-id="4445c-102">Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4445c-102">How to: Add Buttons to a ToolBar Control</span></span>
 > [!NOTE]
->  <span data-ttu-id="d52e7-103">Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="d52e7-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+> <span data-ttu-id="4445c-103">Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="4445c-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="d52e7-104">Ein wesentlicher Bestandteil der <xref:System.Windows.Forms.ToolBar> Steuerelement ist, die Sie, damit hinzufügen Schaltflächen.</span><span class="sxs-lookup"><span data-stu-id="d52e7-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="d52e7-105">Diese können verwendet werden, um den einfachen Zugriff auf Befehle im Menü, oder sie können alternativ abgelegt werden, in einem anderen Bereich der Benutzeroberfläche der Anwendung, um Befehle aus, um Ihre Benutzer verfügbar zu machen, die nicht in der Menüstruktur verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="d52e7-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
+ <span data-ttu-id="4445c-104">Ein integraler Bestandteil des <xref:System.Windows.Forms.ToolBar> -Steuer Elements sind die Schaltflächen, die Sie hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="4445c-104">An integral part of the <xref:System.Windows.Forms.ToolBar> control is the buttons you add to it.</span></span> <span data-ttu-id="4445c-105">Diese können verwendet werden, um einen einfachen Zugriff auf Menübefehle bereitzustellen. Alternativ können Sie auch in einem anderen Bereich der Benutzeroberfläche der Anwendung platziert werden, um den Benutzern Befehle zur Verfügung zu stellen, die in der Menüstruktur nicht verfügbar sind.</span><span class="sxs-lookup"><span data-stu-id="4445c-105">These can be used to provide easy access to menu commands or, alternately, they can be placed in another area of the user interface of your application to expose commands to your users that are not available in the menu structure.</span></span>  
   
- <span data-ttu-id="d52e7-106">Die folgenden Beispielen wird angenommen, dass eine <xref:System.Windows.Forms.ToolBar> -Steuerelement zu einem Windows-Formular hinzugefügt wurde (`Form1`).</span><span class="sxs-lookup"><span data-stu-id="d52e7-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
+ <span data-ttu-id="4445c-106">In den folgenden Beispielen wird davon <xref:System.Windows.Forms.ToolBar> ausgegangen, dass ein-Steuerelement zu einem`Form1`Windows Form hinzugefügt wurde ().</span><span class="sxs-lookup"><span data-stu-id="4445c-106">The examples below assume that a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form (`Form1`).</span></span>  
   
-### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="d52e7-107">Programmgesteuertes Hinzufügen von Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="d52e7-107">To add buttons programmatically</span></span>  
+### <a name="to-add-buttons-programmatically"></a><span data-ttu-id="4445c-107">So fügen Sie Schaltflächen Programm gesteuert hinzu</span><span class="sxs-lookup"><span data-stu-id="4445c-107">To add buttons programmatically</span></span>  
   
-1. <span data-ttu-id="d52e7-108">Erstellen Sie in einer Prozedur Symbolleistenschaltflächen durch Hinzufügen der <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung.</span><span class="sxs-lookup"><span data-stu-id="d52e7-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
+1. <span data-ttu-id="4445c-108">Erstellen Sie in einer Prozedur Symbolleisten Schaltflächen, indem <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Sie Sie der Auflistung hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="4445c-108">In a procedure, create toolbar buttons by adding them to the <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection.</span></span>  
   
-2. <span data-ttu-id="d52e7-109">Geben Sie die eigenschafteneinstellungen für eine einzelne Schaltfläche durch Übergeben der Schaltfläche Index über die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="d52e7-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
+2. <span data-ttu-id="4445c-109">Geben Sie Eigenschaften Einstellungen für eine einzelne Schaltfläche an, indem Sie den Index <xref:System.Windows.Forms.ToolBar.Buttons%2A> der Schaltfläche über die-Eigenschaft übergeben.</span><span class="sxs-lookup"><span data-stu-id="4445c-109">Specify property settings for an individual button by passing the button's index via the <xref:System.Windows.Forms.ToolBar.Buttons%2A> property.</span></span>  
   
-     <span data-ttu-id="d52e7-110">Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.ToolBar> Steuerelement bereits hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="d52e7-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
+     <span data-ttu-id="4445c-110">Im folgenden Beispiel wird davon ausgegangen, dass <xref:System.Windows.Forms.ToolBar> ein Formular bereits hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="4445c-110">The example below assumes a form with a <xref:System.Windows.Forms.ToolBar> control already added.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="d52e7-111">Die <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung ist nullbasiert, sodass Code entsprechend fortgesetzt werden soll.</span><span class="sxs-lookup"><span data-stu-id="d52e7-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
+    > <span data-ttu-id="4445c-111">Die <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung ist eine Null basierte Auflistung, sodass der Code entsprechend fortgesetzt werden sollte.</span><span class="sxs-lookup"><span data-stu-id="4445c-111">The <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> collection is a zero-based collection, so code should proceed accordingly.</span></span>  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -148,10 +148,10 @@ ms.locfileid: "59343687"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d52e7-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d52e7-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4445c-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4445c-112">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolBar>
-- [<span data-ttu-id="d52e7-113">Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="d52e7-113">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
-- [<span data-ttu-id="d52e7-114">Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen</span><span class="sxs-lookup"><span data-stu-id="d52e7-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [<span data-ttu-id="d52e7-115">Übersicht über das ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d52e7-115">ToolBar Control Overview</span></span>](toolbar-control-overview-windows-forms.md)
-- [<span data-ttu-id="d52e7-116">ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d52e7-116">ToolBar Control</span></span>](toolbar-control-windows-forms.md)
+- [<span data-ttu-id="4445c-113">Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche</span><span class="sxs-lookup"><span data-stu-id="4445c-113">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
+- [<span data-ttu-id="4445c-114">Vorgehensweise: Triggermenü Ereignisse für Symbolleisten-Schaltflächen</span><span class="sxs-lookup"><span data-stu-id="4445c-114">How to: Trigger Menu Events for Toolbar Buttons</span></span>](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [<span data-ttu-id="4445c-115">Übersicht über das ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4445c-115">ToolBar Control Overview</span></span>](toolbar-control-overview-windows-forms.md)
+- [<span data-ttu-id="4445c-116">ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="4445c-116">ToolBar Control</span></span>](toolbar-control-windows-forms.md)

@@ -2,23 +2,23 @@
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65488c34931f6d7c424ece58a4855e746ea455bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670377"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936415"
 ---
-# <a name="serviceauthenticationmanager"></a><span data-ttu-id="20158-101">\<serviceAuthenticationManager></span><span class="sxs-lookup"><span data-stu-id="20158-101">\<serviceAuthenticationManager></span></span>
-<span data-ttu-id="20158-102">Stellt ein Workflowkonfigurationselement bereit, das die Gültigkeit einer Übertragung, Meldung oder eines Absenders auf Dienstebene festlegt.</span><span class="sxs-lookup"><span data-stu-id="20158-102">Provides a workflow configuration element that establishes at the service level the validity of a transmission, message, or originator.</span></span>  
+# <a name="serviceauthenticationmanager"></a><span data-ttu-id="5a3b1-101">\<serviceAuthenticationManager></span><span class="sxs-lookup"><span data-stu-id="5a3b1-101">\<serviceAuthenticationManager></span></span>
+<span data-ttu-id="5a3b1-102">Stellt ein Workflowkonfigurationselement bereit, das die Gültigkeit einer Übertragung, Meldung oder eines Absenders auf Dienstebene festlegt.</span><span class="sxs-lookup"><span data-stu-id="5a3b1-102">Provides a workflow configuration element that establishes at the service level the validity of a transmission, message, or originator.</span></span>  
   
-<span data-ttu-id="20158-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="20158-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="20158-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="20158-104">\<behaviors></span></span>  
-<span data-ttu-id="20158-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="20158-105">\<serviceBehaviors></span></span>  
-<span data-ttu-id="20158-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="20158-106">\<behavior></span></span>  
-<span data-ttu-id="20158-107">\<serviceAuthenticationManager></span><span class="sxs-lookup"><span data-stu-id="20158-107">\<serviceAuthenticationManager></span></span>  
+<span data-ttu-id="5a3b1-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="5a3b1-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="5a3b1-104">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="5a3b1-104">\<behaviors></span></span>  
+<span data-ttu-id="5a3b1-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="5a3b1-105">\<serviceBehaviors></span></span>  
+<span data-ttu-id="5a3b1-106">\<behavior></span><span class="sxs-lookup"><span data-stu-id="5a3b1-106">\<behavior></span></span>  
+<span data-ttu-id="5a3b1-107">\<serviceAuthenticationManager></span><span class="sxs-lookup"><span data-stu-id="5a3b1-107">\<serviceAuthenticationManager></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20158-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="20158-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a3b1-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="5a3b1-108">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -30,24 +30,24 @@ ms.locfileid: "61670377"
 </behaviors>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="20158-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="20158-109">Attributes and Elements</span></span>  
- <span data-ttu-id="20158-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="20158-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5a3b1-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="5a3b1-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="5a3b1-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="5a3b1-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="20158-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="20158-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5a3b1-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="5a3b1-111">Attributes</span></span>  
   
-|<span data-ttu-id="20158-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="20158-112">Attribute</span></span>|<span data-ttu-id="20158-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20158-113">Description</span></span>|  
+|<span data-ttu-id="5a3b1-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="5a3b1-112">Attribute</span></span>|<span data-ttu-id="5a3b1-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5a3b1-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="20158-114">serviceAuthenticationManagerType</span><span class="sxs-lookup"><span data-stu-id="20158-114">serviceAuthenticationManagerType</span></span>|<span data-ttu-id="20158-115">Eine Zeichenfolge, die den Typ der Authentifizierungsrichtlinie für das aktuelle Verhalten angibt.</span><span class="sxs-lookup"><span data-stu-id="20158-115">A string that specifies the type of the authentication policy for the current behavior.</span></span>|  
+|<span data-ttu-id="5a3b1-114">serviceAuthenticationManagerType</span><span class="sxs-lookup"><span data-stu-id="5a3b1-114">serviceAuthenticationManagerType</span></span>|<span data-ttu-id="5a3b1-115">Eine Zeichenfolge, die den Typ der Authentifizierungsrichtlinie für das aktuelle Verhalten angibt.</span><span class="sxs-lookup"><span data-stu-id="5a3b1-115">A string that specifies the type of the authentication policy for the current behavior.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="20158-116">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="20158-116">Child Elements</span></span>  
- <span data-ttu-id="20158-117">Keine</span><span class="sxs-lookup"><span data-stu-id="20158-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5a3b1-116">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="5a3b1-116">Child Elements</span></span>  
+ <span data-ttu-id="5a3b1-117">Keine</span><span class="sxs-lookup"><span data-stu-id="5a3b1-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="20158-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="20158-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5a3b1-118">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="5a3b1-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="20158-119">Element</span><span class="sxs-lookup"><span data-stu-id="20158-119">Element</span></span>|<span data-ttu-id="20158-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="20158-120">Description</span></span>|  
+|<span data-ttu-id="5a3b1-119">Element</span><span class="sxs-lookup"><span data-stu-id="5a3b1-119">Element</span></span>|<span data-ttu-id="5a3b1-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5a3b1-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="20158-121">\<behavior></span><span class="sxs-lookup"><span data-stu-id="20158-121">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="20158-122">Gibt ein Verhaltenselement an.</span><span class="sxs-lookup"><span data-stu-id="20158-122">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="5a3b1-121">\<behavior></span><span class="sxs-lookup"><span data-stu-id="5a3b1-121">\<behavior></span></span>](behavior-of-endpointbehaviors.md)|<span data-ttu-id="5a3b1-122">Gibt ein Verhaltenselement an.</span><span class="sxs-lookup"><span data-stu-id="5a3b1-122">Specifies a behavior element.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="20158-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="20158-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a3b1-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5a3b1-123">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.ServiceAuthenticationElement>
