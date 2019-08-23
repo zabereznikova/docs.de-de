@@ -8,26 +8,26 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68c9653e616388374aad2ad33ac7dab68446241d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051051"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923419"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Vorgehensweise: Erstellen eines Benutzeroberflächen-Standarddialogfelds mithilfe von Grid
-In diesem Beispiel wird gezeigt, wie eine Standard- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Dialogfeld mithilfe der <xref:System.Windows.Controls.Grid> Element.  
+In diesem Beispiel wird gezeigt, wie ein [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Standard Dialogfeld mit <xref:System.Windows.Controls.Grid> dem-Element erstellt wird.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt ein Dialogfeld wie das **ausführen** im Dialogfeld die [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Betriebssystem.  
+ Im folgenden Beispiel wird ein Dialogfeld wie das Dialogfeld **Ausführen** im Windows-Betriebssystem erstellt.  
   
- Das Beispiel erstellt eine <xref:System.Windows.Controls.Grid> und verwendet die <xref:System.Windows.Controls.ColumnDefinition> und <xref:System.Windows.Controls.RowDefinition> Klassen zum Definieren von fünf Spalten und vier Zeilen.  
+ Im Beispiel wird ein <xref:System.Windows.Controls.Grid> erstellt und die <xref:System.Windows.Controls.ColumnDefinition> - <xref:System.Windows.Controls.RowDefinition> Klasse und die-Klasse verwendet, um fünf Spalten und vier Zeilen zu definieren.  
   
- Anschließend fügt hinzu und platziert eine <xref:System.Windows.Controls.Image>, `RunIcon.png`, zum Darstellen des Bilds, die Sie im Dialogfeld befindet. Das Bild wird in der ersten Spalte und Zeile platziert die <xref:System.Windows.Controls.Grid> (linke obere Ecke).  
+ Im Beispiel wird dann ein <xref:System.Windows.Controls.Image>, `RunIcon.png`, hinzugefügt und positioniert, um das Bild darzustellen, das im Dialogfeld gefunden wird. Das Bild wird in der ersten Spalte und Zeile der <xref:System.Windows.Controls.Grid> (der oberen linken Ecke) platziert.  
   
- Als Nächstes das Beispiel fügt eine <xref:System.Windows.Controls.TextBlock> Element der ersten Spalte, die die verbleibenden Spalten der ersten Zeile erstreckt. Fügt einen anderen <xref:System.Windows.Controls.TextBlock> Element der zweiten Zeile in der ersten Spalte zur Darstellung der **öffnen** Textfeld. Ein <xref:System.Windows.Controls.TextBlock> folgt, das den Dateneingabebereich darstellt.  
+ Im folgenden Beispiel wird der ersten <xref:System.Windows.Controls.TextBlock> Spalte, die die restlichen Spalten der ersten Zeile umfasst, ein-Element hinzugefügt. Der zweiten Zeile <xref:System.Windows.Controls.TextBlock> in der ersten Spalte wird ein weiteres Element hinzugefügt, das das **geöffnete** Textfeld darstellt. Ein <xref:System.Windows.Controls.TextBlock> folgt, das den Dateneingabe Bereich darstellt.  
   
- Zum Schluss das Beispiel fügt drei <xref:System.Windows.Controls.Button> Elemente der letzten Zeile, die darstellen der **OK**, **Abbrechen**, und **Durchsuchen** Ereignisse.  
+ Schließlich werden in diesem Beispiel der <xref:System.Windows.Controls.Button> letzten Zeile drei Elemente hinzugefügt, die die Ereignisse " **OK**", " **Abbrechen**" und " **Durchsuchen** " darstellen.  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

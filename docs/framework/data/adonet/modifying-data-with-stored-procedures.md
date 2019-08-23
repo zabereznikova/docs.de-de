@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: 7dfd4f07ba0a0473975d87c7cd166635473344a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf5c61010a6f658d846ed435ea3a7d18d0d3832
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772098"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934435"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Ändern von Daten mit gespeicherten Prozeduren
 Gespeicherte Prozeduren können Daten als Eingabeparameter akzeptieren und Daten als Ausgabeparameter, Resultsets oder Rückgabewerte zurückgeben. Im Beispiel unten wird gezeigt, wie ADO.NET Eingabeparameter, Ausgabeparameter und Rückgabewerte sendet und empfängt. Das Beispiel fügt in eine Tabelle, deren Primärschlüsselspalte eine Identitätsspalte in einer SQL Server-Datenbank ist, einen neuen Datensatz ein.  
   
 > [!NOTE]
->  Wenn Sie zum Bearbeiten oder Löschen von Daten mit einem <xref:System.Data.SqlClient.SqlDataAdapter> gespeicherte SQL Server-Prozeduren verwenden, müssen Sie sicherstellen, dass in der Definition der gespeicherten Prozedur nicht SET NOCOUNT ON verwendet wird. Anderenfalls ist die zurückgegebene Anzahl der betroffenen Zeilen gleich Null (0), was der `DataAdapter` als Parallelitätskonflikt interpretiert. In diesem Fall wird eine <xref:System.Data.DBConcurrencyException> ausgelöst.  
+> Wenn Sie zum Bearbeiten oder Löschen von Daten mit einem <xref:System.Data.SqlClient.SqlDataAdapter> gespeicherte SQL Server-Prozeduren verwenden, müssen Sie sicherstellen, dass in der Definition der gespeicherten Prozedur nicht SET NOCOUNT ON verwendet wird. Anderenfalls ist die zurückgegebene Anzahl der betroffenen Zeilen gleich Null (0), was der `DataAdapter` als Parallelitätskonflikt interpretiert. In diesem Fall wird eine <xref:System.Data.DBConcurrencyException> ausgelöst.  
   
 ## <a name="example"></a>Beispiel  
- Das Beispiel verwendet die folgende gespeicherte Prozedur zum Einfügen einer neuen Kategorie in der **Northwind** **Kategorien** Tabelle. Die gespeicherte Prozedur nimmt den Wert in der **"CategoryName"** Spalte als Eingabeparameter, verwendet die SCOPE_IDENTITY()-Funktion,-Funktion zum Abrufen des neuen Wert des Identitätsfelds **CategoryID**, und gibt ihn zurück in einer Output-Parameter. Die RETURN-Anweisung verwendet die @@ROWCOUNT Funktion, um die Anzahl der eingefügten Zeilen zurück.  
+ Im Beispiel wird die folgende gespeicherte Prozedur verwendet, um eine neue Kategorie in die Tabelle " **Northwind** **Categories** " einzufügen. Die gespeicherte Prozedur übernimmt den Wert in der **CategoryName** -Spalte als Eingabeparameter und verwendet die SCOPE_IDENTITY ()-Funktion, um den neuen Wert des Identitäts Felds ( **CategoryID**) abzurufen und in einem Output-Parameter zurückzugeben. Die Return-Anweisung verwendet die@ROWCOUNT @-Funktion, um die Anzahl der eingefügten Zeilen zurückzugeben.  
   
 ```sql
 CREATE PROCEDURE dbo.InsertCategory  
@@ -34,7 +34,7 @@ RETURN @@ROWCOUNT
  Im folgenden Codebeispiel wird die oben beschriebene gespeicherte Prozedur `InsertCategory` als Quelle für den <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> des <xref:System.Data.SqlClient.SqlDataAdapter> verwendet. Der `@Identity`-Ausgabeparameter erscheint im <xref:System.Data.DataSet>, nachdem der Datensatz in die Datenbank eingefügt und die `Update`-Methode des <xref:System.Data.SqlClient.SqlDataAdapter> aufgerufen wurde. Der Code ruft auch den Rückgabewert ab.  
   
 > [!NOTE]
->  Bei Verwendung der <xref:System.Data.OleDb.OleDbDataAdapter>, müssen Sie Parameter durch Angeben einer <xref:System.Data.ParameterDirection> von **ReturnValue** vor den anderen Parametern.  
+> Wenn Sie verwenden <xref:System.Data.OleDb.OleDbDataAdapter>, müssen Sie Parameter mit einem <xref:System.Data.ParameterDirection> von **ReturnValue** vor den anderen Parametern angeben.  
   
  [!code-csharp[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/VB/source.vb#1)]  

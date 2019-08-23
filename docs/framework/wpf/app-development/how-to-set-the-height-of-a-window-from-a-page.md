@@ -6,20 +6,20 @@ helpviewer_keywords:
 - pages [WPF], setting window height from
 - height of window [WPF], setting from a page
 ms.assetid: 4e4488ff-ab5c-4ee9-81a4-e1addb55c5cc
-ms.openlocfilehash: c99ea134478635f368b71443f43e4d8f772cb5aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1041af88241011b51c96d7b61423344a32b25ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007301"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940798"
 ---
 # <a name="how-to-set-the-height-of-a-window-from-a-page"></a>Vorgehensweise: Festlegen der Höhe eines Fensters einer Seite
-In diesem Beispiel wird veranschaulicht, wie der Höhe des Fensters aus einem <xref:System.Windows.Controls.Page>.  
+In diesem Beispiel wird veranschaulicht, wie die Höhe des Fensters von einem <xref:System.Windows.Controls.Page>festgelegt wird.  
   
 ## <a name="example"></a>Beispiel  
- Ein <xref:System.Windows.Controls.Page> die Höhe des Hostfensters festlegen können, durch Festlegen von <xref:System.Windows.Controls.Page.WindowHeight%2A>. Diese Eigenschaft ermöglicht die <xref:System.Windows.Controls.Page> keine explizite Kenntnisse in den Typ des Fensters, die darunter gehostet.  
+ Ein <xref:System.Windows.Controls.Page> kann die Höhe des Host Fensters durch Festlegen <xref:System.Windows.Controls.Page.WindowHeight%2A>von festlegen. Diese Eigenschaft ermöglicht es <xref:System.Windows.Controls.Page> dem nicht, explizite Informationen über den Typ des Fensters zu haben, in dem es gehostet wird.  
   
 > [!NOTE]
->  Die Höhe eines Fensters mit festlegen <xref:System.Windows.Controls.Page.WindowHeight%2A>, <xref:System.Windows.Controls.Page> muss das untergeordnete Element eines Fensters.  
+> Um die Höhe eines Fensters mit <xref:System.Windows.Controls.Page.WindowHeight%2A>festzulegen, muss ein <xref:System.Windows.Controls.Page> untergeordnetes Element eines Fensters sein.  
   
  [!code-xaml[HOWTONavigationSnippets#SetPageWindowHeightXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/SetWindowHeightPage.xaml#setpagewindowheightxaml)]

@@ -2,14 +2,14 @@
 title: <scopes>
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 8bc720238ca3039106345783381cd26134fc46b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd6513930798e9e1ab263f75c9350511c2dcdcd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670624"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935187"
 ---
-# <a name="scopes"></a>\<scopes>
+# <a name="scopes"></a>\<Bereiche >
 Enthält eine Auflistung von Konfigurationselementen, die benutzerdefinierte Bereichs-URIs angeben, die verwendet werden können, um Dienstendpunkte während der Abfrage zu filtern.  
   
 \<system.ServiceModel>  
@@ -17,7 +17,7 @@ Enthält eine Auflistung von Konfigurationselementen, die benutzerdefinierte Ber
 \<endpointBehaviors>  
 \<behavior>  
 \<endpointDiscovery>  
-\<scopes>  
+\<Bereiche >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,13 +45,13 @@ Enthält eine Auflistung von Konfigurationselementen, die benutzerdefinierte Ber
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopes.md)|Fügt die Bereichsinformationen für den Endpunkt hinzu, die zum Vergleichen von Kriterien bei der Dienstsuche verwendet werden können.|  
+|[\<add>](add-of-scopes.md)|Fügt die Bereichsinformationen für den Endpunkt hinzu, die zum Vergleichen von Kriterien bei der Dienstsuche verwendet werden können.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<endpointDiscovery>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointdiscovery.md)|Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. seine Ermittelbarkeit, seine Bereiche und benutzerdefinierte Erweiterungen seiner Metadaten.|  
+|[\<endpointDiscovery>](endpointdiscovery.md)|Gibt die verschiedenen Ermittlungseinstellungen für einen Endpunkt an, z. B. seine Ermittelbarkeit, seine Bereiche und benutzerdefinierte Erweiterungen seiner Metadaten.|  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,25 +6,25 @@ helpviewer_keywords:
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d36009fa4fc7b9299708768fe34a75f1fde6797
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61869745"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910737"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Sicherheit und schreibgeschützte öffentliche Arrayfelder
-Verwenden Sie niemals schreibgeschützte öffentliche Arrayfelder aus verwalteten Bibliotheken, die Verhalten oder die Sicherheit Ihrer Anwendungen zu definieren, da schreibgeschützte öffentliche Arrayfelder geändert werden können.  
+Verwenden Sie niemals schreibgeschützte öffentliche Array Felder aus verwalteten Bibliotheken, um das Begrenzungs Verhalten oder die Sicherheit Ihrer Anwendungen zu definieren, da schreibgeschützte öffentliche Array Felder geändert werden können.  
   
 ## <a name="remarks"></a>Hinweise  
- Einige .NET Framework-Klassen sind schreibgeschützte öffentliche Felder, die plattformspezifische Grenzen-Parameter enthalten.  Z. B. die <xref:System.IO.Path.InvalidPathChars> Feld ist ein Array, das die Zeichen beschreibt, die nicht in einer Pfadzeichenfolge Datei zulässig sind.  Viele ähnliche Felder, die in .NET Framework vorhanden sind.  
+ Einige .NET Framework-Klassen enthalten schreibgeschützte öffentliche Felder, die plattformspezifische Begrenzungs Parameter enthalten.  Das <xref:System.IO.Path.InvalidPathChars> -Feld ist beispielsweise ein Array, in dem die Zeichen beschrieben werden, die in einer Dateipfad-Zeichenfolge nicht zulässig sind.  Viele ähnliche Felder sind im gesamten .NET Framework vorhanden.  
   
- Die Werte der öffentliche schreibgeschützte Felder wie <xref:System.IO.Path.InvalidPathChars> kann geändert werden, von Ihrem Code oder Code, der in derselben Anwendungsdomäne Ihres Codes verwendet.  Sie sollten nicht schreibgeschützte öffentliche Arrayfelder wie folgt verwenden, um das Verhalten Ihrer Anwendungen zu definieren.  Wenn Sie dies tun, kann schädlichen Code die Grenzdefinitionen alter und verwenden Ihren Code auf unerwartete Weise.  
+ Die Werte von öffentlichen schreibgeschützten Feldern wie <xref:System.IO.Path.InvalidPathChars> können durch Ihren Code oder Code geändert werden, der die Anwendungsdomäne Ihres Codes freigibt.  Verwenden Sie keine schreibgeschützten öffentlichen Array Felder wie diese, um das Begrenzungs Verhalten Ihrer Anwendungen zu definieren.  Wenn Sie dies tun, kann bösartiger Code die Begrenzungs Definitionen ändern und Ihren Code auf unerwartete Weise verwenden.  
   
- In Version 2.0 oder höher von .NET Framework sollten Sie Methoden verwenden, die ein neues Array, statt öffentliche Arrayfelder zurückgeben.  Z. B. statt der <xref:System.IO.Path.InvalidPathChars> Feld, verwenden Sie die <xref:System.IO.Path.GetInvalidPathChars%2A> Methode.  
+ In Version 2,0 und höher der .NET Framework sollten Sie Methoden verwenden, die ein neues Array zurückgeben, anstatt öffentliche Array Felder zu verwenden.  Anstatt das <xref:System.IO.Path.InvalidPathChars> -Feld zu verwenden, sollten Sie z. b. <xref:System.IO.Path.GetInvalidPathChars%2A> die-Methode verwenden.  
   
- Beachten Sie, die .NET Framework-Typen nicht öffentlichen Felder verwenden, um grenztypen intern zu definieren.  Stattdessen verwendet das .NET Framework separate private Felder.  Ändern Sie die Werte dieser öffentlichen Felder wird das Verhalten der .NET Framework-Typen nicht geändert werden.  
+ Beachten Sie, dass die .NET Framework Typen die öffentlichen Felder nicht zum internen definieren von Begrenzungs Typen verwenden.  Stattdessen verwendet der .NET Framework separate private Felder.  Wenn Sie die Werte dieser öffentlichen Felder ändern, ändert sich das Verhalten von .NET Framework Typen nicht.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

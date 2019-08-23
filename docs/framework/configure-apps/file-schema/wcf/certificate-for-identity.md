@@ -2,17 +2,17 @@
 title: <certificate> für <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
-ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52d1fa31cebd949c91809464976739ef1334af29
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673348"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919617"
 ---
-# <a name="certificate-for-identity"></a>\<Zertifikat > für \<Identität >
+# <a name="certificate-for-identity"></a>\<Zertifikat > für \<Identity >
 Gibt ein zum Überprüfen eines Servers an einem Client verwendetes X.509-Zertifikat an.  
   
- Weitere Informationen zum Festlegen der Elementwerte finden Sie unter [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Weitere Informationen zum Festlegen des Element Werts finden Sie unter [Dienst Identität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
  \<identity>  
 \<certificate>  
@@ -39,7 +39,7 @@ Gibt ein zum Überprüfen eines Servers an einem Client verwendetes X.509-Zertif
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Gibt die Identität des Diensts für die Authentifizierung durch den Client an.|  
+|[\<identity>](identity.md)|Gibt die Identität des Diensts für die Authentifizierung durch den Client an.|  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Code wird die codierte Darstellung eines Zertifikats dargestellt, das zum Überprüfen eines Servers an einem Client verwendet wird.  
@@ -56,5 +56,5 @@ Gibt ein zum Überprüfen eines Servers an einem Client verwendetes X.509-Zertif
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.EndpointIdentity>
-- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Dienstidentität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von Master / Detail-Listen mit dem DataGrid-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Erstellen von Master-/Detaillisten mit dem Windows Forms DataGrid-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0fd95cf0cd66e9a5105c0b8ff77d8c536a5822d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052169"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914761"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Vorgehensweise: Erstellen von Master/Detail-Listen mit dem DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Wenn Ihre <xref:System.Data.DataSet> enthält eine Reihe verknüpfter Tabellen, können Sie mithilfe von zwei <xref:System.Windows.Forms.DataGrid> Steuerelemente zum Anzeigen der Daten in einem Master/Detail-Format. Eine <xref:System.Windows.Forms.DataGrid> als master-Raster, festgelegt und die Sekunde als das Raster festgelegt. Wenn Sie einen Eintrag in der master-Liste auswählen, werden alle zugehörigen untergeordneten Einträge in der Liste angezeigt. Beispielsweise wenn Ihre <xref:System.Data.DataSet> enthält eine Kundentabelle und einer verknüpften Tabelle Orders würden Sie angeben, der Customers-Tabelle der master-Raster sein und die Tabelle Orders, das Detailraster sein. Wenn ein Kunde aus der master-Raster ausgewählt ist, würden alle Bestellungen dieses Kunden in der Orders-Tabelle zugeordnet im Raster angezeigt werden.  
+ Wenn Ihr <xref:System.Data.DataSet> eine Reihe verwandter Tabellen enthält, können Sie zwei <xref:System.Windows.Forms.DataGrid> -Steuerelemente verwenden, um die Daten im Master-/Detail-Format anzuzeigen. Eine <xref:System.Windows.Forms.DataGrid> ist als Haupt Raster festgelegt, und die zweite ist als das Detail Raster festgelegt. Wenn Sie in der Liste Master einen Eintrag auswählen, werden alle zugehörigen untergeordneten Einträge in der Detail Liste angezeigt. Wenn Ihr <xref:System.Data.DataSet> z. b. eine Customers-Tabelle und eine zugehörige Orders-Tabelle enthält, geben Sie die Customers-Tabelle als Haupt Raster und die Orders-Tabelle als Detail Raster an. Wenn ein Kunde aus dem Haupt Raster ausgewählt wird, werden alle Bestellungen, die diesem Kunden in der Tabelle Orders zugeordnet sind, im Detail Raster angezeigt.  
   
-### <a name="to-set-a-masterdetail-relationship-programmatically"></a>So legen Sie eine Master-/detailbeziehung programmgesteuert fest  
+### <a name="to-set-a-masterdetail-relationship-programmatically"></a>So legen Sie eine Master/Detail-Beziehung Programm gesteuert fest  
   
-1. Erstellen Sie zwei neue <xref:System.Windows.Forms.DataGrid> steuert und deren Eigenschaften festlegen.  
+1. Erstellen Sie zwei <xref:System.Windows.Forms.DataGrid> neue Steuerelemente, und legen Sie deren Eigenschaften fest.  
   
-2. Hinzufügen von Tabellen für das Dataset.  
+2. Fügen Sie dem Dataset Tabellen hinzu.  
   
-3. Deklarieren Sie eine Variable vom Typ <xref:System.Data.DataRelation> Beziehung darstellen, erstellt werden soll.  
+3. Deklarieren Sie eine Variable <xref:System.Data.DataRelation> vom Typ zur Darstellung der Beziehung, die Sie erstellen möchten.  
   
-4. Instanziieren Sie die Beziehung, indem Sie einen Namen für die Beziehung und Angeben der Tabellen-, Spalten- und Element, das die zwei Tabellen verknüpft werden.  
+4. Instanziieren Sie die Beziehung, indem Sie einen Namen für die Beziehung angeben und die Tabelle, die Spalte und das Element angeben, mit denen die beiden Tabellen verknüpft werden.  
   
-5. Fügen Sie die Beziehung zu den <xref:System.Data.DataSet> des Objekts <xref:System.Data.DataSet.Relations%2A> Auflistung.  
+5. Fügen Sie die Beziehung der <xref:System.Data.DataSet> -Auflistung <xref:System.Data.DataSet.Relations%2A> des-Objekts hinzu.  
   
-6. Verwenden der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode der <xref:System.Windows.Forms.DataGrid> jedes der Raster zum Binden der <xref:System.Data.DataSet>.  
+6. Verwenden <xref:System.Windows.Forms.DataGrid> Sie <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> die-Methode des, um die einzelnen Raster an die <xref:System.Data.DataSet>zu binden.  
   
-     Das folgende Beispiel zeigt, wie Sie eine Master/Detail-Beziehung zwischen den Tabellen Customers und Orders in einer zuvor generierten festlegen <xref:System.Data.DataSet> (`ds`).  
+     Im folgenden Beispiel wird gezeigt, wie eine Master/Detail-Beziehung zwischen den Tabellen Customers und Orders in einem zuvor <xref:System.Data.DataSet> generierten`ds`() festgelegt wird.  
   
     ```vb  
     Dim myDataRelation As DataRelation  
@@ -74,4 +74,4 @@ ms.locfileid: "62052169"
 
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
 - [Übersicht über das DataGrid-Steuerelement](datagrid-control-overview-windows-forms.md)
-- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Vorgehensweise: Binden des Windows Forms DataGrid-Steuer Elements an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

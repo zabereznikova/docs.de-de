@@ -5,22 +5,22 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: d6c931ec904e9a7e58d5b747c74898208863b8e9
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 786f667bcba7959ac485b4abe667239b05059c45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486725"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941445"
 ---
-# <a name="applicationpool-element-web-settings"></a>\<ApplicationPool >-Element (Webeinstellungen)
-Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozessübergreifende Verhalten zu verwalten, wenn eine ASP.NET-Anwendung unter IIS 7.0 oder höher im integrierten Modus ausgeführt wird.  
+# <a name="applicationpool-element-web-settings"></a>\<ApplicationPool > Element (Webeinstellungen)
+Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um Prozess weites Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus unter IIS 7,0 oder einer höheren Version ausgeführt wird.  
   
 > [!IMPORTANT]
->  Dieses Element und das Feature unterstützt nur möglich, wenn Ihre ASP.NET-Anwendung auf IIS 7.0 oder höher gehostet wird.  
+> Dieses Element und die Funktion, die es unterstützt, funktionieren nur, wenn Ihre ASP.NET-Anwendung auf IIS 7,0 oder höher gehostet wird.  
   
  \<configuration>  
-\<System.Web >-Element (Webeinstellungen)  
-\<ApplicationPool >-Element (Webeinstellungen)  
+\<System. Web >-Element (Webeinstellungen)  
+\<ApplicationPool > Element (Webeinstellungen)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,9 +38,9 @@ Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozes
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`maxConcurrentRequestsPerCPU`|Gibt an, wie viele gleichzeitige Anforderungen pro CPU ASP.NET erlaubt.|  
-|`maxConcurrentThreadsPerCPU`|Gibt an, wie viele gleichzeitige Threads für jede CPU für einen Anwendungspool ausgeführt werden können. Dies bietet eine alternative Möglichkeit zum Steuern von ASP.NET Parallelität, da Sie die Anzahl der verwalteten Threads beschränken können, die pro CPU verwendet werden können, um Anforderungen zu verarbeiten. Standardmäßig ist diese Einstellung 0, d. h., dass ASP.NET die Anzahl der Threads pro CPU, erstellt werden können, die nicht begrenzt, obwohl die CLR-Threadpool auch die Anzahl der Threads beschränkt, die erstellt werden können.|  
-|`requestQueueLimit`|Gibt die maximale Anzahl von Anforderungen, die für ASP.NET in einem einzigen Prozess in die Warteschlange eingereiht werden können. Wenn zwei oder mehr ASP.NET-Anwendungen in einen einzelnen Anwendungspool ausführen möchten, unterliegt die kumulative Satz von Anforderungen an jede Anwendung im Anwendungspool, der mit dieser Einstellung.|  
+|`maxConcurrentRequestsPerCPU`|Gibt an, wie viele gleichzeitige Anforderungen ASP.net pro CPU zulässt.|  
+|`maxConcurrentThreadsPerCPU`|Gibt an, wie viele gleichzeitige Threads für einen Anwendungs Pool für jede CPU ausgeführt werden können. Dies bietet eine alternative Möglichkeit zum Steuern der ASP.net-Parallelität, da Sie die Anzahl verwalteter Threads, die pro CPU verwendet werden können, für die Verarbeitung von Anforderungen einschränken können. Diese Einstellung ist standardmäßig auf 0 festgelegt. Dies bedeutet, dass ASP.net die Anzahl der Threads, die pro CPU erstellt werden können, nicht einschränkt, obwohl der CLR-Thread Pool auch die Anzahl der Threads einschränkt, die erstellt werden können.|  
+|`requestQueueLimit`|Gibt die maximale Anzahl von Anforderungen an, die in einem einzelnen Prozess in eine Warteschlange eingereiht werden können. Wenn mindestens zwei ASP.NET-Anwendungen in einem einzelnen Anwendungs Pool ausgeführt werden, unterliegt der kumulative Satz von Anforderungen, die an eine beliebige Anwendung im Anwendungs Pool vorgenommen werden, dieser Einstellung.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -49,30 +49,30 @@ Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozes
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Enthält Informationen zur Interaktion von ASP.NET mit einer hostanwendung.|  
+|[\<system.web>](system-web-element-web-settings.md)|Enthält Informationen dazu, wie ASP.net mit einer Host Anwendung interagiert.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie IIS 7.0 oder höher im integrierten Modus ausführen, Sie können diese Kombination Element konfigurieren, wie ASP.NET Anfragen von Threads und Warteschlangen verwaltet, wenn die Anwendung in einem IIS-Anwendungspool gehostet wird. Wenn Sie die IIS 6 ausführen oder Ausführen von IIS 7.0 im klassischen Modus oder im ISAPI-Modus, werden diese Einstellungen ignoriert.  
+ Wenn Sie IIS 7,0 oder eine höhere Version im integrierten Modus ausführen, können Sie mit dieser Element Kombination konfigurieren, wie ASP.NET Threads und Warteschlangen Anforderungen verwaltet, wenn die Anwendung in einem IIS-Anwendungs Pool gehostet wird. Wenn Sie IIS 6 ausführen oder IIS 7,0 im klassischen Modus oder im ISAPI-Modus ausführen, werden diese Einstellungen ignoriert.  
   
- Die `applicationPool` Einstellungen gelten für alle Anwendungspools, die auf eine bestimmte Version von .NET Framework ausgeführt. Die Einstellungen sind in einer Datei "aspnet.config" enthalten. Es gibt eine Version dieser Datei für die Versionen 2.0 und 4.0 von .NET Framework. (Die Versionen 3.0 und 3.5 von .NET Framework Freigeben der Datei "aspnet.config" mit Version 2.0.)  
+ Die `applicationPool` Einstellungen gelten für alle Anwendungs Pools, die auf einer bestimmten Version des .NET Framework ausgeführt werden. Die Einstellungen sind in einer ASPNET. config-Datei enthalten. Es gibt eine Version dieser Datei für die Versionen 2,0 und 4,0 der .NET Framework. (In den Versionen 3,0 und 3,5 des .NET Framework wird die Datei Aspnet. config mit Version 2,0 gemeinsam genutzt.)  
   
 > [!IMPORTANT]
->  Wenn Sie IIS 7.0 ausführen, auf [!INCLUDE[win7](../../../../../includes/win7-md.md)], Sie können eine separate aspnet.config-Datei für jeden Anwendungspool konfigurieren. Dadurch können Sie die Leistung des Threads für jeden Anwendungspool anpassen.  
+> Wenn Sie IIS 7,0 auf [!INCLUDE[win7](../../../../../includes/win7-md.md)]ausführen, können Sie für jeden Anwendungs Pool eine separate ASPNET. config-Datei konfigurieren. Auf diese Weise können Sie die Leistung der Threads für jeden Anwendungs Pool anpassen.  
   
- Für die `maxConcurrentRequestsPerCPU` festlegen, die Standardeinstellung "5000" in .NET Framework 4 effektiv deaktiviert eine Drosselung der Anforderungen, die von ASP.NET gesteuert wird, wenn Sie sich tatsächlich um 5000 oder mehrere Anforderungen pro CPU verfügen. Die Standardeinstellung hängt stattdessen die CLR-Threadpool Parallelität pro CPU automatisch verwaltet. Anwendungen, die machen umfassenden Gebrauch von der Verarbeitung von asynchronen Anforderungen oder viele lang andauernder Anforderungen, die Netzwerk-e/a blockiert deren, profitieren von der erhöhten Standardgrenzwert in .NET Framework 4. Festlegen von `maxConcurrentRequestsPerCPU` auf 0 (null) deaktiviert die Verwendung von verwalteten Threads für die Verarbeitung von ASP.NET-Anforderungen. Wenn eine Anwendung in einem IIS-Anwendungspool ausgeführt wird, Anforderungen, die auf dem IIS-e/a-Thread bleiben und aus diesem Grund wird die Parallelität durch die Einstellungen der IIS-Thread gedrosselt.  
+ Bei der `maxConcurrentRequestsPerCPU` Einstellung deaktiviert die Standardeinstellung "5000" in der .NET Framework 4 effektiv die Anforderungs Drosselung, die von ASP.net gesteuert wird, es sei denn, Sie haben tatsächlich 5000 oder mehr Anforderungen pro CPU. Die Standardeinstellung hängt stattdessen vom CLR-Thread Pool ab, um Parallelität pro CPU automatisch zu verwalten. Anwendungen, die eine umfangreiche Verwendung asynchroner Anforderungs Verarbeitung oder viele Anforderungen mit langer Ausführungszeit in Netzwerk-e/a blockieren, profitieren von der erhöhten Standardgrenze in der .NET Framework 4. Wenn `maxConcurrentRequestsPerCPU` Sie auf NULL festlegen, wird die Verwendung verwalteter Threads für die Verarbeitung von ASP.NET-Anforderungen deaktiviert. Wenn eine Anwendung in einem IIS-Anwendungs Pool ausgeführt wird, bleiben Anforderungen im IIS-e/a-Thread erhalten. Daher wird die Parallelität durch IIS-Thread Einstellungen gedrosselt.  
   
- Die `requestQueueLimit` Einstellung funktioniert genauso wie die `requestQueueLimit` Attribut der [ProcessModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) -Element, das in den Dateien "Web.config" für ASP.NET-Anwendungen festgelegt ist. Allerdings die `requestQueueLimit` Einstellung in einer Datei "aspnet.config" überschreibt die `requestQueueLimit` in einer Datei "Web.config" festlegen. Das heißt, wenn beide Attribute festgelegt werden (Dies wird standardmäßig "true"), die `requestQueueLimit` Einstellung in der Datei "aspnet.config" hat Vorrang vor.  
+ Die `requestQueueLimit` -Einstellung funktioniert genauso wie das `requestQueueLimit` -Attribut des [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) -Elements, das in den Web. config-Dateien für ASP.NET-Anwendungen festgelegt ist. Die `requestQueueLimit` -Einstellung in einer ASPNET. config-Datei überschreibt jedoch `requestQueueLimit` die-Einstellung in einer Web. config-Datei. Anders ausgedrückt: Wenn beide Attribute festgelegt sind (Standardmäßig ist dies true), hat die `requestQueueLimit` Einstellung in der Datei Aspnet. config Vorrang.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie ASP.NET prozessübergreifende Verhalten in der Datei "aspnet.config" in den folgenden Situationen konfigurieren:  
+ Im folgenden Beispiel wird gezeigt, wie Sie das Prozess weite Verhalten von ASP.net in der Datei Aspnet. config in den folgenden Situationen konfigurieren:  
   
-- Die Anwendung wird in einem Anwendungspool von IIS 7.0 gehostet.  
+- Die Anwendung wird in einem IIS 7,0-Anwendungs Pool gehostet.  
   
-- IIS 7.0 wird im integrierten Modus ausgeführt.  
+- IIS 7,0 wird im integrierten Modus ausgeführt.  
   
-- Die Anwendung ist .NET Framework 3.5 SP1 oder höher verwenden.  
+- Die Anwendung verwendet den .NET Framework 3,5 SP1 oder eine höhere Version.  
   
- Die Werte im Beispiel werden die Standardwerte.  
+ Bei den Werten im Beispiel handelt es sich um die Standardwerte.  
   
 ```xml  
 <configuration>  
@@ -92,8 +92,8 @@ Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozes
 |Namespace||  
 |Schemaname||  
 |Validierungsdatei||  
-|Leer kann sein||  
+|Kann leer sein||  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<system.web>-Element (Webeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+- [\<system.web>-Element (Webeinstellungen)](system-web-element-web-settings.md)

@@ -7,28 +7,28 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: d04278cd2814106dacad53f268ef03227083274e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5fccd49b4f6fa64e5902197423d732ba0b31790e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650811"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917439"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interaktion zwischen WPF und Direct3D9
-Sie können Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwendung einschließen. In diesem Thema wird beschrieben, wie zum Erstellen von Direct3D9-Inhalt, damit sie effizient mit WPF interagiert wird.  
+Sie können von Direct3D9-Inhalt in eine WPF-Anwendung (Windows Presentation Foundation) einschließen. In diesem Thema wird beschrieben, wie von Direct3D9-Inhalte erstellt werden, sodass Sie effizient mit WPF interagieren.  
   
 > [!NOTE]
->  Bei Verwendung von Direct3D9-Inhalt in WPF müssen Sie auch über die Leistung nachdenken. Weitere Informationen dazu, wie Sie die Leistung zu optimieren, finden Sie unter [Leistungsüberlegungen hinsichtlich Direct3D9 und WPF-Interoperabilität](performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
+> Wenn Sie von Direct3D9-Inhalte in WPF verwenden, müssen Sie auch die Leistung berücksichtigen. Weitere Informationen zur Leistungsoptimierung finden Sie unter [Überlegungen zur Leistung bei der von Direct3D9-und WPF-Interoperabilität](performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
   
-## <a name="display-buffers"></a>Anzeigen von Puffern  
- Die <xref:System.Windows.Interop.D3DImage> Klasse verwaltet zwei Anzeigepuffer, die aufgerufen werden, die *Hintergrundpuffer* und *Frontpuffer*. Der Hintergrundpuffer ist Ihre Direct3D9-Oberfläche. Änderungen an den Hintergrundpuffer werden in den Frontpuffer vorwärts kopiert, beim Aufrufen der <xref:System.Windows.Interop.D3DImage.Unlock%2A> Methode.  
+## <a name="display-buffers"></a>Puffer anzeigen  
+ Die <xref:System.Windows.Interop.D3DImage> -Klasse verwaltet zwei Anzeige Puffer, die als *Hintergrund Puffer* und Vordergrund *Puffer*bezeichnet werden. Der Hintergrund Puffer ist die von Direct3D9-Oberfläche. Änderungen am Hintergrund Puffer werden in den Vordergrund Puffer kopiert, wenn Sie die <xref:System.Windows.Interop.D3DImage.Unlock%2A> -Methode aufgerufen haben.  
   
- Die folgende Abbildung zeigt die Beziehung zwischen den Hintergrundpuffer und der Front-Puffer.  
+ Die folgende Abbildung zeigt die Beziehung zwischen dem Hintergrund Puffer und dem Vorder-Puffer.  
   
- ![D3DImage-Anzeigepuffer](./media/d3dimage-buffers.png "D3DImage_buffers")  
+ ![D3DImage-Anzeige Puffer](./media/d3dimage-buffers.png "D3DImage_buffers")  
   
-## <a name="direct3d9-device-creation"></a>Erstellen von Direct3D9-Geräts  
- Um Direct3D9 Inhalt rendern, müssen Sie ein Direct3D9-Gerät erstellen. Es gibt zwei Direct3D9-Objekte, die Sie, zum Erstellen eines Geräts verwenden können, `IDirect3D9` und `IDirect3D9Ex`. Verwenden Sie zum Erstellen dieser Objekte `IDirect3DDevice9` und `IDirect3DDevice9Ex` Geräten bzw.  
+## <a name="direct3d9-device-creation"></a>Von Direct3D9 Geräte Erstellung  
+ Zum Rendering von von Direct3D9-Inhalt müssen Sie ein von Direct3D9-Gerät erstellen. Es gibt zwei von Direct3D9-Objekte, die Sie zum Erstellen eines Geräts verwenden `IDirect3D9` können `IDirect3D9Ex`: und. Verwenden Sie diese Objekte, `IDirect3DDevice9` um `IDirect3DDevice9Ex` bzw. Geräte zu erstellen.  
   
  Erstellen Sie ein Gerät, indem Sie eine der folgenden Methoden aufrufen.  
   
@@ -36,101 +36,101 @@ Sie können Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwe
   
 - `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
- Auf Windows Vista oder höher verwendet wird, verwenden Sie die `Direct3DCreate9Ex` -Methode mit einer Anzeige ab, die Verwendung der Windows anzeigen Driver Model (WDDM) konfiguriert ist. Verwenden der `Direct3DCreate9` Methode für eine andere Plattform.  
+ Verwenden Sie unter Windows Vista oder einem späteren Betriebssystem `Direct3DCreate9Ex` die-Methode mit einer Anzeige, die für die Verwendung des Windows-Anzeigetreiber Modells (WDDM) konfiguriert ist. Verwenden Sie `Direct3DCreate9` die-Methode auf einer beliebigen anderen Plattform.  
   
 ### <a name="availability-of-the-direct3dcreate9ex-method"></a>Verfügbarkeit der Direct3DCreate9Ex-Methode  
- Die Datei d3d9.dll bietet die `Direct3DCreate9Ex` Methode nur auf Windows Vista oder höher verwendet wird. Wenn Sie direkt über die Funktion unter Windows XP verknüpfen, wird die Anwendung nicht geladen werden. Um zu bestimmen, ob die `Direct3DCreate9Ex` -Methode unterstützt wird, laden Sie die DLL aus, und suchen Sie nach der Prozeduradresse. Der folgende Code zeigt, wie Sie testen die `Direct3DCreate9Ex` Methode. Ein vollständiges Codebeispiel finden Sie unter [Exemplarische Vorgehensweise: Erstellen von Direct3D9-Inhalten zum Hosten in WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
+ D3d9. dll verfügt über die `Direct3DCreate9Ex` -Methode nur unter Windows Vista oder einem späteren Betriebssystem. Wenn Sie die Funktion unter Windows XP direkt verknüpfen, kann die Anwendung nicht geladen werden. Um zu ermitteln, `Direct3DCreate9Ex` ob die Methode unterstützt wird, laden Sie die dll, und suchen Sie nach der proc-Adresse. Der folgende Code zeigt, wie Sie die `Direct3DCreate9Ex` -Methode testen. Ein vollständiges Codebeispiel finden [Sie unter Exemplarische Vorgehensweise: Erstellen von von Direct3D9-Inhalt für das Hosting](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)in WPF.  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
   
 ### <a name="hwnd-creation"></a>HWND-Erstellung  
- Erstellen ein Gerät erfordert ein HWND. Im Allgemeinen erstellen Sie eine dummy-HWND für Direct3D9 verwenden. Im folgenden Codebeispiel wird veranschaulicht, einen dummy-HWND zu erstellen.  
+ Zum Erstellen eines Geräts ist ein HWND erforderlich. Im Allgemeinen erstellen Sie ein dummyhwnd für von Direct3D9, das verwendet werden soll. Im folgenden Codebeispiel wird gezeigt, wie ein dummyhwnd erstellt wird.  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
   
 ### <a name="present-parameters"></a>Vorhandene Parameter  
- Erstellen ein Gerät erfordert auch eine `D3DPRESENT_PARAMETERS` -Struktur, aber nur ein paar Parameter wichtig sind. Diese Parameter werden ausgewählt, um den Speicherbedarf zu minimieren.  
+ Zum Erstellen eines Geräts ist auch `D3DPRESENT_PARAMETERS` eine Struktur erforderlich, aber es sind nur einige Parameter wichtig. Diese Parameter werden ausgewählt, um den Speicherbedarf zu minimieren.  
   
- Legen Sie die `BackBufferHeight` und `BackBufferWidth` Felder auf 1. Wenn sie auf ' 0 bewirkt, dass sie auf die Dimensionen des HWND festgelegt werden.  
+ Legen Sie `BackBufferHeight` die `BackBufferWidth` Felder und auf 1 fest. Wenn Sie Sie auf 0 festlegen, werden Sie auf die Dimensionen des HWND festgelegt.  
   
- Immer Festlegen der `D3DCREATE_MULTITHREADED` und `D3DCREATE_FPU_PRESERVE` Flags festlegen, um zu verhindern, dass Beschädigung des Speichers von Direct3D9 und zu verhindern, dass Direct3D9 FPU ändern verwendet.  
+ Legen Sie immer `D3DCREATE_MULTITHREADED` die `D3DCREATE_FPU_PRESERVE` Flags und fest, um zu verhindern, dass von von Direct3D9 verwendeter Arbeitsspeicher beschädigt wird, und um zu verhindern, dass von Direct3D9 die FPU  
   
- Der folgende Code zeigt, wie Sie initialisieren den `D3DPRESENT_PARAMETERS` Struktur.  
+ Der folgende Code zeigt, wie die `D3DPRESENT_PARAMETERS` Struktur initialisiert wird.  
   
  [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
   
-## <a name="creating-the-back-buffer-render-target"></a>Erstellen das Renderziel Hintergrundpuffer  
- Zum Anzeigen von Direct3D9-Inhalten in einem <xref:System.Windows.Interop.D3DImage>, Sie erstellen eine Direct3D9-Oberfläche, und weisen Sie sie durch Aufrufen der <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> Methode.  
+## <a name="creating-the-back-buffer-render-target"></a>Erstellen des backpufferrenderziels  
+ Um von Direct3D9-Inhalt in einem <xref:System.Windows.Interop.D3DImage>anzuzeigen, erstellen Sie eine von Direct3D9-Oberfläche und weisen Sie <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> durch Aufrufen der-Methode zu.  
   
-### <a name="verifying-adapter-support"></a>Überprüfen der Unterstützung für Adapter  
- Vor dem Erstellen einer Oberfläche, stellen Sie sicher, dass alle Adapter die Oberflächen Eigenschaften unterstützen, die Sie benötigen. Auch wenn Sie nur einen Adapter rendern, kann das WPF-Fenster auf alle Adapter im System angezeigt. Schreiben Sie immer Direct3D9-Code, der mit mehreren Adapterkonfigurationen behandelt, und überprüfen Sie alle Adapter unterstützt, da die Oberfläche für die verfügbaren Adapter WPF verschoben werden kann.  
+### <a name="verifying-adapter-support"></a>Überprüfen der Adapter Unterstützung  
+ Vergewissern Sie sich vor dem Erstellen einer Oberfläche, dass alle Adapter die benötigten Oberflächeneigenschaften unterstützen. Auch wenn Sie nur zu einem Adapter gerenden werden, kann das WPF-Fenster auf jedem Adapter im System angezeigt werden. Sie sollten immer von Direct3D9-Code schreiben, der Konfigurationen mit mehreren Adaptern behandelt, und Sie sollten alle Adapter auf Unterstützung überprüfen, da WPF die Oberfläche möglicherweise zwischen den verfügbaren Adaptern verschiebt.  
   
- Im folgenden Codebeispiel wird veranschaulicht, überprüfen Sie alle Adapter auf dem System für Direct3D9 unterstützen.  
+ Im folgenden Codebeispiel wird gezeigt, wie alle Adapter im System auf von Direct3D9-Unterstützung überprüft werden.  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
   
 ### <a name="creating-the-surface"></a>Erstellen der Oberfläche  
- Vor dem Erstellen einer Oberfläche, stellen Sie sicher, dass die Gerätefunktionen guten Leistung auf dem Ziel-Betriebssystem unterstützt. Weitere Informationen finden Sie unter [Leistungsüberlegungen hinsichtlich Direct3D9 und WPF-Interoperabilität](performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
+ Vergewissern Sie sich vor dem Erstellen einer Oberfläche, dass die Gerätefunktionen eine gute Leistung für das Ziel Betriebssystem unterstützen. Weitere Informationen finden Sie unter [Überlegungen zur Leistung bei der von Direct3D9-und WPF-Interoperabilität](performance-considerations-for-direct3d9-and-wpf-interoperability.md).  
   
- Wenn Sie auf die Funktionen überprüft haben, können Sie die Oberfläche erstellen. Im folgenden Codebeispiel wird veranschaulicht, wie das Renderziel erstellt.  
+ Wenn Sie die Gerätefunktionen überprüft haben, können Sie die-Oberfläche erstellen. Im folgenden Codebeispiel wird gezeigt, wie das Renderziel erstellt wird.  
   
  [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
   
 ### <a name="wddm"></a>WDDM  
- Auf Windows Vista und späteren Betriebssystemen zur Verfügung, die für die Verwendung der WDDM konfiguriert sind, können Sie erstellen Sie eine Textur der Render-Ziel und übergeben Sie die Oberfläche der Ebene 0, die <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> Methode. Dieser Ansatz wird unter Windows XP nicht empfohlen, da eine sperrbare Textur kann nicht erstellt und die Leistung reduziert.  
+ Unter Windows Vista und neueren Betriebssystemen, die für die Verwendung von WDDM konfiguriert sind, können Sie eine renderzieltextur erstellen und die Oberfläche der Ebene <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 0 an die-Methode übergeben. Diese Vorgehensweise wird unter Windows XP nicht empfohlen, da Sie keine versperrbare renderzieltextur erstellen können und die Leistung reduziert wird.  
   
-## <a name="handling-device-state"></a>Behandlung von Gerätestatus  
- Die <xref:System.Windows.Interop.D3DImage> Klasse verwaltet zwei Anzeigepuffer, die aufgerufen werden, die *Hintergrundpuffer* und *Frontpuffer*. Der Hintergrundpuffer ist Ihrer Direct3D-Oberfläche.  Änderungen an den Hintergrundpuffer werden in den Frontpuffer vorwärts kopiert, beim Aufrufen der <xref:System.Windows.Interop.D3DImage.Unlock%2A> -Methode, in dem sie auf die Hardware angezeigt wird. In einigen Fällen wird der Front-Puffer nicht verfügbar. Diese mangelnde Verfügbarkeit kann durch Bildschirm sperren, Vollbild-exklusive Direct3D-Anwendungen, wechseln von Benutzern oder anderen Systemaktivitäten, die verursacht werden. In diesem Fall wird die WPF-Anwendung benachrichtigt, durch Behandeln der <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> Ereignis.  Wie Ihre Anwendung in den Frontpuffer nicht verfügbar reagiert, hängt davon ab, ob WPF aktiviert ist, um auf Softwarerendering zurückzugreifen. Die <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> Methode verfügt über eine Überladung, die einen Parameter, der angibt annimmt, ob WPF auf Softwarerendering zurückgegriffen.  
+## <a name="handling-device-state"></a>Umgang mit Gerätestatus  
+ Die <xref:System.Windows.Interop.D3DImage> -Klasse verwaltet zwei Anzeige Puffer, die als *Hintergrund Puffer* und Vordergrund *Puffer*bezeichnet werden. Der Hintergrund Puffer ist die Direct3D-Oberfläche.  Änderungen am Hintergrund Puffer werden in den Vordergrund Puffer kopiert, wenn Sie die <xref:System.Windows.Interop.D3DImage.Unlock%2A> -Methode aufzurufen, wo Sie auf der Hardware angezeigt wird. Gelegentlich ist der Vorder-Puffer nicht mehr verfügbar. Diese fehlende Verfügbarkeit kann durch eine Bildschirmsperre, voll Bild exklusive Direct3D Anwendungen, Benutzerwechsel oder andere Systemaktivitäten verursacht werden. In diesem Fall wird die WPF-Anwendung durch Behandeln des <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> -Ereignisses benachrichtigt.  Wie die Anwendung auf den Vordergrund Puffer reagiert, hängt davon ab, ob WPF auf das Software Rendering zurückgreifen kann. Die <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> -Methode verfügt über eine-Überladung, die einen-Parameter annimmt, der angibt, ob WPF auf Software Rendering zurückgreift.  
   
- Beim Aufrufen der <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> überladen, oder rufen Sie die <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> -Überladung mit der `enableSoftwareFallback` Parametersatz zu `false`, das rendernde System gibt seinen Verweis auf den Hintergrundpuffer frei, wenn es sich bei der Front-Puffer mehr verfügbar ist, und "nothing" ist angezeigt. Wenn die Frontpuffer wieder verfügbar ist, löst das Renderingsystem die <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> Ereignis, um die WPF-Anwendung zu benachrichtigen.  Sie können angeben, erstellen einen Ereignishandler für die <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> Ereignis, um das Rendering erneut mit einer gültigen Direct3D-Oberfläche neu zu starten. Um Rendering neu zu starten, rufen Sie <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>.  
+ Wenn <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> Sie die-Überladung aufrufen oder <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> die-über `enableSoftwareFallback` Ladung aufrufen, `false`wobei der-Parameter auf festgelegt ist, gibt das Renderingsystem seinen Verweis auf den Hintergrund Puffer frei, wenn der Frontpuffer nicht mehr verfügbar ist gestellte. Wenn der Front-Puffer wieder verfügbar ist, löst das Renderingsystem das-Ereignis aus, um die <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> WPF-Anwendung zu benachrichtigen.  Sie können einen Ereignishandler für das- <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> Ereignis erstellen, um das Rendering erneut mit einer gültigen Direct3D-Oberfläche zu starten. Um das Rendering neu zu starten, <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>müssen Sie aufzurufen.  
   
- Beim Aufrufen der <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> -Überladung mit dem `enableSoftwareFallback` Parametersatz zu `true`, das rendernde System behält seinen Verweis auf den Hintergrundpuffer, wird der Front-Puffer nicht verfügbar, daher keine Notwendigkeit zum Aufrufen besteht <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> beim im Vordergrund Puffer ist wieder verfügbar.  
+ Wenn Sie <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> die-Überladung mit `enableSoftwareFallback` dem auf `true`festgelegten-Parameter aufrufen, behält das Renderingsystem seinen Verweis auf den Hintergrund Puffer bei, wenn der Vorder-Puffer nicht <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> mehr verfügbar ist. Daher müssen Sie nicht aufrufen, wenn der Vordergrund der Puffer ist wieder verfügbar.  
   
- Wenn Softwarerendering aktiviert ist, gibt es möglicherweise Situationen, in dem das Gerät des Benutzers nicht mehr verfügbar ist, aber das rendernde System behält einen Verweis auf die Direct3D-Oberfläche. Um zu überprüfen, ob ein Direct3D9-Gerät nicht verfügbar ist, rufen Sie die `TestCooperativeLevel` Methode. Um einen Aufruf der Direct3D9Ex Geräte überprüfen die `CheckDeviceState` -Methode, da die `TestCooperativeLevel` Methode ist veraltet und immer erfolgreich zurückgegeben. Wenn das Gerät des Benutzers nicht mehr verfügbar ist, rufen Sie <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> WPF Verweis auf den Hintergrundpuffer freigibt.  Wenn Sie Ihr Gerät zurücksetzen möchten, rufen Sie <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> mit der `backBuffer` Parametersatz zu `null`, und rufen Sie anschließend <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> mit `backBuffer` legen Sie auf eine gültige Direct3D-Oberfläche.  
+ Wenn das Software Rendering aktiviert ist, kann es Situationen geben, in denen das Gerät des Benutzers nicht mehr verfügbar ist, aber das Renderingsystem einen Verweis auf die Direct3D-Oberfläche beibehält. Um zu überprüfen, ob ein von Direct3D9-Gerät nicht `TestCooperativeLevel` verfügbar ist, müssen Sie die-Methode Um einen Direct3D9Ex-Geräte zu über `CheckDeviceState` prüfen, wird die `TestCooperativeLevel` -Methode aufgerufen, da die-Methode veraltet ist und immer Erfolg zurückgibt. Wenn das Benutzergerät nicht mehr verfügbar ist, <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> geben Sie an, um den WPF-Verweis auf den Hintergrund Puffer freizugeben.  Wenn Sie Ihr Gerät zurücksetzen müssen, müssen <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> Sie aufrufen `backBuffer` , wobei der `null`-Parameter auf fest <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> gelegt ist `backBuffer` , und dann erneut aufrufen, wobei auf eine gültige Direct3D-Oberfläche festgelegt  
   
- Rufen Sie die `Reset` Methode zur Wiederherstellung nach eines ungültigen Geräts nur dann, wenn Sie Unterstützung für mehrere Adapter implementieren. Klicken Sie andernfalls alle Direct3D9-Schnittstellen freigeben, und vollständig neu erstellt werden. Wenn das Adapterlayout geändert wurde, werden Direct3D9-Objekte, die vor der Änderung erstellt nicht aktualisiert werden.  
+ Wenden Sie `Reset` die Methode zum Wiederherstellen von einem ungültigen Gerät nur an, wenn Sie die Unterstützung für mehrere Adapter implementieren. Geben Sie andernfalls alle von Direct3D9-Schnittstellen frei, und erstellen Sie sie vollständig neu. Wenn das Adapter Layout geändert wurde, werden von Direct3D9-Objekte, die vor der Änderung erstellt wurden, nicht aktualisiert.  
   
-## <a name="handling-resizing"></a>Behandeln von Ändern der Größe  
- Wenn eine <xref:System.Windows.Interop.D3DImage> wird mit einer Auflösung als der systemeigenen Größe, wird sie gemäß der aktuellen skaliert <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>, außer dass <xref:System.Windows.Media.Effects.SamplingMode.Bilinear> durch ersetzt, <xref:System.Windows.Media.BitmapScalingMode.Fant>.  
+## <a name="handling-resizing"></a>Behandeln der Größe von Anpassungen  
+ Wenn eine <xref:System.Windows.Interop.D3DImage> mit einer anderen Auflösung als der systemeigenen Größe angezeigt wird, wird Sie entsprechend der aktuellen <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>skaliert, <xref:System.Windows.Media.BitmapScalingMode.Fant>mit <xref:System.Windows.Media.Effects.SamplingMode.Bilinear> der Ausnahme, dass durch ersetzt wird.  
   
- Wenn Sie eine höhere Genauigkeit erforderlich ist, müssen Sie ein neues erstellen auftreten, wenn der Container die <xref:System.Windows.Interop.D3DImage> ändert die Größe.  
+ Wenn Sie eine höhere Genauigkeit benötigen, müssen Sie eine neue Oberfläche erstellen, wenn der <xref:System.Windows.Interop.D3DImage> Container der Größe geändert wird.  
   
- Es gibt drei mögliche Vorgehensweisen für das Ändern der Größe zu behandeln.  
+ Es gibt drei mögliche Ansätze zum Ändern der Größe.  
   
-- Das Layoutsystem teilnehmen Sie, und erstellen Sie eine neue Oberfläche, wenn die Größe ändert. Zu viele Oberflächen, kann nicht erstellt werden, weil Sie möglicherweise erschöpft oder Videospeicher fragment.  
+- Nehmen Sie am Layoutsystem Teil, und erstellen Sie eine neue Oberfläche, wenn sich die Größe ändert. Erstellen Sie nicht zu viele Oberflächen, da Sie den Videospeicher möglicherweise abschöpfen oder fragmentieren.  
   
-- Warten Sie, bis ein Resize-Ereignis nicht für einen festen Zeitraum zum Erstellen der neuen Oberfläche aufgetreten ist.  
+- Warten Sie, bis ein Ereignis zur Größenänderung für einen bestimmten Zeitraum aufgetreten ist, um die neue Oberfläche zu erstellen.  
   
-- Erstellen Sie eine <xref:System.Windows.Threading.DispatcherTimer> die überprüft, ob die Abmessungen der Container mehrere Male pro Sekunde.  
+- Erstellen Sie <xref:System.Windows.Threading.DispatcherTimer> einen, mit dem die Container Dimensionen mehrmals pro Sekunde überprüft werden.  
   
-## <a name="multi-monitor-optimization"></a>Optimierung mit mehreren Bildschirmen  
- Kann zu erheblichen Leistungseinbußen führen, wenn bewegt, der Renderingsystem wird eine <xref:System.Windows.Interop.D3DImage> auf einen anderen Bildschirm.  
+## <a name="multi-monitor-optimization"></a>Multi-Monitor-Optimierung  
+ Die Leistung kann erheblich reduziert werden, wenn das Renderingsystem einen <xref:System.Windows.Interop.D3DImage> auf einen anderen Monitor verschiebt.  
   
- WDDM, solange die Monitore auf dem gleichen video-Karte und Sie verwenden `Direct3DCreate9Ex`, es gibt keine Verringerung der Leistung. Wenn die Monitore auf separaten Videokarten sind, wird die Leistung beeinträchtigt. Unter Windows XP wird die Leistung immer reduziert.  
+ In WDDM ist die Leistung nicht beeinträchtigt, solange sich die Monitore auf derselben Grafikkarte befinden `Direct3DCreate9Ex`und Sie verwenden. Wenn sich die Monitore auf separaten Grafikkarten befinden, verringert sich die Leistung. Unter Windows XP wird die Leistung immer reduziert.  
   
- Wenn die <xref:System.Windows.Interop.D3DImage> verschiebt auf einen anderen Bildschirm können Sie eine neue Oberfläche auf den entsprechenden Adapter Wiederherstellung einer guten Leistung erstellen.  
+ Wenn der <xref:System.Windows.Interop.D3DImage> auf einen anderen Monitor verschoben wird, können Sie eine neue Oberfläche auf dem entsprechenden Adapter erstellen, um eine gute Leistung wiederherzustellen.  
   
- Um die Leistungseinbuße zu vermeiden, Schreiben Sie Code speziell für den Fall von mehreren Bildschirmen. Die folgende Liste zeigt eine Möglichkeit, mehrere Monitore Code zu schreiben.  
+ Um die Leistungseinbußen zu vermeiden, schreiben Sie Code speziell für den Fall mit mehreren Monitoren. Die folgende Liste zeigt eine Möglichkeit zum Schreiben von Code mit mehreren Monitoren.  
   
-1. Suchen Sie einen Punkt von der <xref:System.Windows.Interop.D3DImage> in Platz auf dem Bildschirm mit der `Visual.ProjectToScreen` Methode.  
+1. Suchen Sie mit der <xref:System.Windows.Interop.D3DImage> `Visual.ProjectToScreen` -Methode einen Punkt im Bildschirmbereich.  
   
-2. Verwenden der `MonitorFromPoint` GDI-Methode, um den Monitor zu ermitteln, die den Punkt angezeigt wird.  
+2. Verwenden Sie `MonitorFromPoint` die GDI-Methode, um den Monitor zu finden, der den Punkt anzeigt.  
   
-3. Verwenden der `IDirect3D9::GetAdapterMonitor` Methode zu welcher Direct3D9-Adapter finden Sie den Monitor befindet sich auf.  
+3. Verwenden Sie `IDirect3D9::GetAdapterMonitor` die-Methode, um zu ermitteln, auf welchem von Direct3D9 Adapter sich der Monitor befindet.  
   
-4. Wenn der Adapter nicht identisch mit den Adapter mit den Hintergrundpuffer ist, erstellen Sie einen neuen Back-Puffer für den neuen Bildschirm, und weisen sie Sie der <xref:System.Windows.Interop.D3DImage> Hintergrundpuffer.  
+4. Wenn der Adapter nicht mit dem Adapter mit dem Hintergrund Puffer identisch ist, erstellen Sie einen neuen BackBuffer auf dem neuen Monitor, und weisen Sie ihn <xref:System.Windows.Interop.D3DImage> dem Hintergrund Puffer zu.  
   
 > [!NOTE]
->  Wenn die <xref:System.Windows.Interop.D3DImage> umspannt Monitore, die Leistung ist langsam sein, außer im Fall von WDDM und `IDirect3D9Ex` für denselben Adapter. Es gibt keine Möglichkeit zur Verbesserung der Leistung in dieser Situation.  
+> Bei den <xref:System.Windows.Interop.D3DImage> überwachten Monitoren ist die Leistung langsam, außer im Fall von WDDM und `IDirect3D9Ex` auf demselben Adapter. In dieser Situation gibt es keine Möglichkeit, die Leistung zu verbessern.  
   
- Im folgenden Codebeispiel wird veranschaulicht, die den aktuellen Bildschirm zu suchen.  
+ Im folgenden Codebeispiel wird gezeigt, wie Sie den aktuellen Monitor suchen.  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
   
- Aktualisieren Sie den Monitor bei der <xref:System.Windows.Interop.D3DImage> des Containers Größe oder Position Änderungen oder Updates der Monitor mit einer `DispatcherTimer` , aktualisiert einige Male pro Sekunde.  
+ Aktualisieren Sie den Monitor, <xref:System.Windows.Interop.D3DImage> wenn sich die Größe oder Position des Containers ändert, oder aktualisieren Sie den `DispatcherTimer` Monitor mit einem, der mehrmals pro Sekunde aktualisiert wird.  
   
-## <a name="wpf-software-rendering"></a>Rendern von WPF-Software  
- WPF wird synchron im UI-Thread in der Software in den folgenden Situationen gerendert.  
+## <a name="wpf-software-rendering"></a>WPF-Software Rendering  
+ WPF wird in den folgenden Situationen synchron im UI-Thread in Software gerendert.  
   
 - Drucken  
   
@@ -138,18 +138,18 @@ Sie können Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwe
   
 - <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
- Tritt eine der folgenden Situationen auf, der Renderingsystem Ruft die <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> Methode, um den Puffer für die Hardware auf Software zu kopieren. Die Standardimplementierung Ruft die `GetRenderTargetData` -Methode mit Ihrer Oberfläche. Da dieser Aufruf außerhalb des Musters Sperren/Entsperren auftritt, kann es fehlschlagen. In diesem Fall die `CopyBackBuffer` Methodenrückgabe `null` und kein Bild angezeigt wird.  
+ Wenn eine dieser Situationen eintritt, ruft das Renderingsystem <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> die-Methode auf, um den Hardware Puffer in Software zu kopieren. Die Standard Implementierung ruft die `GetRenderTargetData` -Methode mit der-Oberfläche auf. Da dieser-Vorgang außerhalb des Sperr-/entsperrungs Musters erfolgt, tritt möglicherweise ein Fehler auf. In diesem Fall gibt die `CopyBackBuffer` Methode zurück `null` , und es wird kein Bild angezeigt.  
   
- Können Sie überschreiben die <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> -Methode aufrufen die basisimplementierung wird und gibt `null`, können Sie einen Platzhalter zurückkehren <xref:System.Windows.Media.Imaging.BitmapSource>.  
+ Sie können die <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> -Methode überschreiben, die Basis Implementierung aufzurufen. Wenn `null`Sie zurückgibt, können Sie einen <xref:System.Windows.Media.Imaging.BitmapSource>Platzhalter zurückgeben.  
   
- Sie können auch Ihre eigenen Softwarerendering anstelle von Aufrufen der basisimplementierung implementieren.  
+ Sie können auch Ihr eigenes Software Rendering implementieren, anstatt die Basis Implementierung aufrufen zu können.  
   
 > [!NOTE]
->  Wenn WPF vollständig in Software, rendert <xref:System.Windows.Interop.D3DImage> wird nicht angezeigt werden, da WPF keinen Frontpuffer verfügt.  
+> Wenn WPF vollständig in der Software gerendert wird, wird nicht angezeigt, <xref:System.Windows.Interop.D3DImage> da WPF keinen Vorder-Puffer enthält.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Überlegungen zur Leistung für die Interoperabilität zwischen Direct3D9 und WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [Exemplarische Vorgehensweise: Erstellen von Direct3D9-Inhalten zum Hosten in WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Exemplarische Vorgehensweise: Erstellen von von Direct3D9-Inhalt für das Hosting in WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosting von Direct3D9 Inhalt in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

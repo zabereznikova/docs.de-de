@@ -2,12 +2,12 @@
 title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: 5c2f0ef7ad509eb5d6c686802c3fe5a75ea1a258
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1792fec4f86c9ac31107c043b976cfafcfa4c13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758092"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937091"
 ---
 # <a name="servicetimeouts"></a>\<serviceTimeouts>
 Gibt den Timeout für einen Dienst an.  
@@ -34,7 +34,7 @@ Gibt den Timeout für einen Dienst an.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`transactionTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall angibt, in dem eine Transaktion vom Client an den Server weitergegeben werden muss. Der Standardwert ist "00: 00:00".|  
+|`transactionTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall angibt, in dem eine Transaktion vom Client an den Server weitergegeben werden muss. Der Standardwert ist "00:00:00".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -43,7 +43,7 @@ Gibt den Timeout für einen Dienst an.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Verhaltenselement an.|  
   
 ## <a name="see-also"></a>Siehe auch
 

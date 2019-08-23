@@ -3,12 +3,12 @@ title: Übersicht über das WSFederation-Authentifizierungsmodul
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0bd6c7432f79894c9e31952b72f3426fc88f9d03
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: MT
+ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877193"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915514"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Übersicht über das WSFederation-Authentifizierungsmodul
 Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NET-Anwendungen über das WS-Verbundauthentifizierungsmodul (WS-FAM). In diesem Thema wird beschrieben, wie Verbundauthentifizierung funktioniert und verwendet wird.  
@@ -16,7 +16,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
 ### <a name="overview-of-federated-authentication"></a>Übersicht über die Verbundauthentifizierung  
  Mit Verbundauthentifizierung kann ein Sicherheitstokendienst (STS) in einer vertrauenswürdigen Domäne Authentifizierungsinformationen für ein STS in einer anderen vertrauenswürdigen Domäne bereitstellen, wenn zwischen den beiden Domänen eine Vertrauensstellung besteht. Ein Beispiel hierfür ist in der folgenden Abbildung dargestellt:  
   
- ![Das Diagramm zeigt das Szenario für Verbundauthentifizierung.](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
+ ![Das Diagramm zeigt das Verbund Authentifizierungs Szenario.](./media/wsfederation-authentication-module-overview/federated-authentication.gif)  
   
 1. Ein Client in der vertrauenswürdigen Fabrikam-Domäne sendet eine Anforderung an eine Anwendung der vertrauenden Seite (Relying Party, RP) in der vertrauenswürdigen Contoso-Domäne.  
   
@@ -31,26 +31,26 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
 6. Die vertrauende Seite extrahiert die Ansprüche des Clients aus dem Sicherheitstoken und trifft eine Autorisierungsentscheidung.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Verwenden des Verbundauthentifizierungsmoduls mit ASP.NET  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) ist ein HTTP-Modul, in dem Sie eine ASP.NET-Anwendung Verbundauthentifizierung hinzufügen kann. Mit Verbundauthentifizierung kann der STS Authentifizierungslogik verwenden, sodass Sie sich auf das Schreiben von Geschäftslogik konzentrieren können.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WS-FAM) ist ein HTTP-Modul, mit dem Sie eine Verbund Authentifizierung zu einer ASP.NET-Anwendung hinzufügen können. Mit Verbundauthentifizierung kann der STS Authentifizierungslogik verwenden, sodass Sie sich auf das Schreiben von Geschäftslogik konzentrieren können.  
   
  Bei der Konfiguration des WS-FAM geben Sie den STS an, an den nicht authentifizierte Anforderungen umgeleitet werden sollen. Mit WIF können Sie einen Benutzer auf zwei Arten authentifizieren:  
   
-1. Passive Umleitung: Wenn ein nicht authentifizierter Benutzer versucht, eine geschützte Ressource zuzugreifen, und Sie einfach diese an einen STS umleiten ohne eine Anmeldeseite möchten, ist dies der richtige Ansatz. Der STS überprüft die Identität des Benutzers und gibt ein Sicherheitstoken aus, das die entsprechenden Ansprüche für diesen Benutzer enthält. Für diese Option muss das WS-FAM in der HTTP-Modulpipeline hinzugefügt werden. Mit dem Identitäts- und Zugriffs-Tool können Sie in Visual Studio 2012 die Konfigurationsdatei der Anwendung ändern, damit das WS-FAM verwendet und ein Verbund-STS erstellt wird. Weitere Informationen finden Sie unter [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1. Passive Umleitung: Wenn ein nicht authentifizierter Benutzer versucht, auf eine geschützte Ressource zuzugreifen, und Sie diese einfach an einen STS umleiten möchten, ohne dass eine Anmeldeseite erforderlich ist, dann ist dies der richtige Ansatz. Der STS überprüft die Identität des Benutzers und gibt ein Sicherheitstoken aus, das die entsprechenden Ansprüche für diesen Benutzer enthält. Für diese Option muss das WS-FAM in der HTTP-Modulpipeline hinzugefügt werden. Mit dem Identitäts- und Zugriffs-Tool können Sie in Visual Studio 2012 die Konfigurationsdatei der Anwendung ändern, damit das WS-FAM verwendet und ein Verbund-STS erstellt wird. Weitere Informationen finden Sie unter [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
 2. Sie können die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType>-Methode oder die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A>-Methode aus dem zugrunde liegenden Code einer Anmeldeseite in der Anwendung der vertrauenden Seiten aufrufen.  
   
  In der passiven Umleitung wird die gesamte Kommunikation durch Antwort/Umleitung vom Client ausgeführt (in der Regel ein Browser). Sie können der HTTP-Pipeline der Anwendung das WS-FAM hinzufügen. Hier sucht es nach nicht authentifizierten Benutzeranforderungen und leitet die Benutzer an den angegebenen STS um.  
   
- Das WS-FAM löst außerdem verschiedene Ereignisse, mit die Sie seine Funktionalität in einer ASP.NET-Anwendung anpassen können.  
+ Das WS-fam löst auch mehrere Ereignisse aus, mit denen Sie seine Funktionalität in einer ASP.NET-Anwendung anpassen können.  
   
 ### <a name="how-the-ws-fam-works"></a>So funktioniert das WS-FAM  
- Das WS-FAM wird in der <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>-Klasse implementiert. In der Regel fügen Sie das WS-FAM der HTTP-Pipeline der Anwendung der Vertrauenden für ASP.NET. Wenn ein nicht authentifizierter Benutzer versucht, auf eine geschützte Ressource zuzugreifen, gibt die vertrauende Seite die HTTP-Antwort „401 Autorisierung verweigert“ zurück. Das WS-FAM fängt diese Antwort ab und lässt nicht zu, dass der Client sie erhält. Dann wird der Benutzer direkt auf den angegebenen STS umgeleitet. Der STS gibt ein Sicherheitstoken aus, das das WS-FAM erneut abfängt. Das WS-FAM verwendet das Token zum Erstellen einer Instanz von <xref:System.Security.Claims.ClaimsPrincipal> für den authentifizierten Benutzer, die reguläre .NET Framework--Autorisierungsmechanismen funktionieren können.  
+ Das WS-FAM wird in der <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>-Klasse implementiert. In der Regel fügen Sie der HTTP-Pipeline Ihrer ASP.net RP-Anwendung das WS-fam hinzu. Wenn ein nicht authentifizierter Benutzer versucht, auf eine geschützte Ressource zuzugreifen, gibt die vertrauende Seite die HTTP-Antwort „401 Autorisierung verweigert“ zurück. Das WS-FAM fängt diese Antwort ab und lässt nicht zu, dass der Client sie erhält. Dann wird der Benutzer direkt auf den angegebenen STS umgeleitet. Der STS gibt ein Sicherheitstoken aus, das das WS-FAM erneut abfängt. Das WS-fam verwendet das Token, um eine Instanz von <xref:System.Security.Claims.ClaimsPrincipal> für den authentifizierten Benutzer zu erstellen, die die Funktionsweise regulärer .NET Framework Autorisierungs Mechanismen ermöglicht.  
   
  Da HTTP statusfrei ist, benötigen wir eine Methode, mit der verhindert wird, dass der gesamte Prozess jedes Mal wiederholt wird, wenn der Benutzer versucht, auf eine andere geschützte Ressource zuzugreifen. Hier setzt das <xref:System.IdentityModel.Services.SessionAuthenticationModule> an. Wenn der STS ein Sicherheitstoken für den Benutzer ausgibt, erstellt <xref:System.IdentityModel.Services.SessionAuthenticationModule> auch ein Sitzungssicherheitstoken für den Benutzer und legt es in einem Cookie ab. Bei nachfolgenden Anforderungen wird dieses Cookie durch das <xref:System.IdentityModel.Services.SessionAuthenticationModule> abgefangen und dazu verwendet, den <xref:System.Security.Claims.ClaimsPrincipal> des Benutzers zu rekonstruieren.  
   
  Im folgenden Diagramm ist der Gesamtinformationsfluss für eine passive Umleitung dargestellt. Die Anforderung wird automatisch über STS umgeleitet, sodass Anmeldeinformationen ohne eine Anmeldeseite erstellt werden:  
   
- ![Das Diagramm, die Anmeldung mithilfe passiver Umleitung zeigt.](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
+ ![Diagramm, das die Anmeldung mit passiver Umleitung anzeigt.](./media/wsfederation-authentication-module-overview/sign-in-using-passive-redirect.gif)  
   
  Das folgende Diagramm zeigt weitere Details dazu, was geschieht, wenn der Benutzer für den STS authentifiziert ist und seine Sicherheitstoken von <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> verarbeitet werden:  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
  ![Diagramm für die zeitliche Steuerung von SAM, das die Anmeldung mithilfe von Steuerelementen zeigt](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>Ereignisse  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> und die übergeordnete Klasse <xref:System.IdentityModel.Services.HttpModuleBase> lösen an verschiedenen Punkten der Verarbeitung einer HTTP-Anforderung Ereignisse aus. Sie können diese Ereignisse in der `global.asax` Datei der ASP.NET-Anwendung.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> und die übergeordnete Klasse <xref:System.IdentityModel.Services.HttpModuleBase> lösen an verschiedenen Punkten der Verarbeitung einer HTTP-Anforderung Ereignisse aus. Sie können diese Ereignisse in der `global.asax` Datei Ihrer ASP.NET-Anwendung behandeln.  
   
 - Die ASP.NET-Infrastruktur ruft die <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A>-Methode des Moduls auf, um das Modul zu initialisieren.  
   
@@ -91,7 +91,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
 - Das WS-FAM löst das <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SigningOut>-Ereignis einmal pro Sitzung aus, da die Sitzung für jeden Benutzer geschlossen wird. Es wird nicht ausgelöst, wenn die Sitzung clientseitig geschlossen wird (beispielsweise durch Löschen des Sitzungscookie). In einer SSO-Umgebung kann der IP-STS auch anfordern, dass sich jede vertrauende Seite abmeldet. Damit wird dieses Ereignis ebenfalls ausgelöst, wenn <xref:System.IdentityModel.Services.SigningOutEventArgs.IsIPInitiated%2A> auf `true` festgelegt ist.  
   
 > [!NOTE]
->  Sie sollten die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft nicht während jedes Ereignisses verwenden, das von <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> oder <xref:System.IdentityModel.Services.SessionAuthenticationModule> ausgelöst wird. Der Grund dafür ist, dass <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> nach den Authentifizierungsprozess festgelegt wird, während Ereignisse während des Authentifizierungsprozesses ausgelöst werden.  
+> Sie sollten die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft nicht während jedes Ereignisses verwenden, das von <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> oder <xref:System.IdentityModel.Services.SessionAuthenticationModule> ausgelöst wird. Der Grund dafür ist, dass <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> nach den Authentifizierungsprozess festgelegt wird, während Ereignisse während des Authentifizierungsprozesses ausgelöst werden.  
   
 ### <a name="configuration-of-federated-authentication"></a>Konfiguration der Verbundauthentifizierung  
  Das WS-FAM und SAM werden über das [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)-Element konfiguriert. Das untergeordnete Element [\<wsFederation>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md) konfiguriert Standardwerte für die WS-FAM-Eigenschaften; dazu gehören z.B. die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Issuer%2A>- und die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.Realm%2A>-Eigenschaft. (Diese Werte können für einzelne Anforderungen geändert werden. Dazu stellen Sie Handler für einige der WS-FAM-Ereignisse bereit; beispielsweise <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectingToIdentityProvider>.) Der von SAM verwendete Cookiehandler wird über das untergeordnete [\<cookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)-Element konfiguriert. WIF stellt einen Standardcookiehandler bereit, der in der <xref:System.IdentityModel.Services.ChunkedCookieHandler>-Klasse implementiert wird, deren Segmentgröße über das [\<chunkedCookieHandler>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)-Element festgelegt werden kann. Das `<federationConfiguration>`-Element verweist auf ein <xref:System.IdentityModel.Configuration.IdentityConfiguration>, das die Konfiguration für andere WIF-Komponenten bereitstellt, die in der Anwendung verwendet werden, wie z. B. <xref:System.Security.Claims.ClaimsAuthenticationManager> und <xref:System.Security.Claims.ClaimsAuthorizationManager>. Auf die Identitätskonfiguration kann explizit durch Angabe eines benannten [\<identityConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)-Elements im `identityConfigurationName`-Attribut des `<federationConfiguration>`-Elements verwiesen werden. Wenn nicht explizit auf die Identitätskonfiguration verwiesen wird, wird die Standardidentitätskonfiguration verwendet.  

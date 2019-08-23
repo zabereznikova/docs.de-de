@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: bd1b38b434f9932a575745d7a1761ff18b009115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917808"
 ---
 # <a name="bindingsource-component-overview"></a>Übersicht über die BindingSource-Komponente
 Die <xref:System.Windows.Forms.BindingSource>-Komponente vereinfacht den Bindungsvorgang von Steuerelementen an eine zugrunde liegende Datenquelle. Die <xref:System.Windows.Forms.BindingSource>-Komponente fungiert als Kanal sowie als Datenquelle für andere Steuerelemente, an die eine Bindung erfolgen soll. Sie stellt eine Abstraktion der Datenverbindung Ihres Formulars bereit, während Befehle an die zugrunde liegende Liste der Daten übergeben werden. Außerdem können Sie Daten direkt hinzufügen. Die Komponente selbst fungiert daher als Datenquelle.  
@@ -25,7 +25,7 @@ Die <xref:System.Windows.Forms.BindingSource>-Komponente vereinfacht den Bindung
  ![Bindungsquelle und Datenbindungsarchitektur](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
->  Zur Entwurfszeit erstellen einige Aktionen (z. B. das Ziehen einer Datenbanktabelle aus einem Datenfenster in ein leeres Formular) die <xref:System.Windows.Forms.BindingSource>-Komponente, binden diese an die zugrunde liegenden Datenquelle und fügen datenkompatible Steuerelemente in einem Vorgang hinzu. Siehe auch [Binden von Windows Forms-Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
+> Zur Entwurfszeit erstellen einige Aktionen (z. B. das Ziehen einer Datenbanktabelle aus einem Datenfenster in ein leeres Formular) die <xref:System.Windows.Forms.BindingSource>-Komponente, binden diese an die zugrunde liegenden Datenquelle und fügen datenkompatible Steuerelemente in einem Vorgang hinzu. Siehe auch [Binden von Windows Forms-Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
   
 ## <a name="bindingsource-component-as-a-data-source"></a>BindingSource-Komponente als Datenquelle  
  Wenn Sie damit beginnen, der <xref:System.Windows.Forms.BindingSource>-Komponente Elemente hinzuzufügen, ohne zunächst eine Liste anzugeben, an die die Bindung erfolgen soll, agiert die Komponente wie eine Listendatenquelle und akzeptiert diese hinzugefügten Elemente.  

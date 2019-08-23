@@ -11,17 +11,17 @@ api_type:
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a6e00d55157046679ee1de0a7ff8e2764c1e357
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 860ecde22dead112a42b6ac868e34f0e9cd3531d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758055"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916201"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7::ModuleInMemorySymbolsUpdated Method
 [Wird nur in .NET Framework 4.6.1 und höheren Versionen unterstützt]  
   
- Benachrichtigt den Profiler an, wenn der symbolstream ein in-Memory-Modul aktualisiert wird.  
+ Benachrichtigt den Profiler, wenn der einem in-Memory-Modul zugeordnete Symbol Datenstrom aktualisiert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,22 +33,22 @@ HRESULT ModuleInMemorySymbolsUpdated(
   
 ## <a name="parameters"></a>Parameter  
  [in] `moduleId`  
- Der Bezeichner des Moduls im Arbeitsspeicher, deren symbolstream aktualisiert wird.  
+ Der Bezeichner des Moduls im Arbeitsspeicher, dessen symbolstream aktualisiert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Dieser Rückruf wird gesteuert, indem die [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) ereignismaskenkennzeichnens beim Aufrufen der [icorprofilercallback5:: Seteventmask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) Methode.  
+ Dieser Rückruf wird gesteuert, indem das [COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) -Ereignis Masken Flag beim Aufrufen der [ICorProfilerCallback5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) -Methode festgelegt wird.  
   
 > [!NOTE]
->  Dieses Ereignis wird derzeit nicht für Symbole implizit erstellt oder geändert wird, über ausgelöst <xref:System.Reflection.Emit> APIs.  
+> Dieses Ereignis wird derzeit nicht für Symbole ausgelöst, die über <xref:System.Reflection.Emit> APIs implizit erstellt oder geändert werden.  
   
- Auch wenn Symbole vorab in einem Aufruf einer Überladung der verwalteten bereitgestellt werden <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> Methoden, die umfasst eine `rawSymbolStore` Argument an die Symbole für die Assembly, die Laufzeit kann die symbolische Daten nicht tatsächlich mit dem Modul zuordnen erst nachdem der [ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) Rückruf ist aufgetreten. Dieses Ereignis bietet eine höhere Chance Symbole für diese Module zu sammeln.  
+ Auch wenn Symbole im Vordergrund in einem Rückruf einer der über Ladungen der verwalteten <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> Methoden bereitgestellt werden, die ein `rawSymbolStore` -Argument zum Angeben der Symbole für die Assembly enthalten, ordnet die Runtime die symbolischen Daten möglicherweise nicht dem Modul zu. bis zur Ausführung des [moduleloadbeendeten](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) -Rückrufs. Dieses Ereignis bietet eine spätere Gelegenheit, Symbole für solche Module zu erfassen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Header:** Corprof. idl, Corprof. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   

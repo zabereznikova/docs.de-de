@@ -2,12 +2,12 @@
 title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: eedf0ce6cf75b8fb56daf98f2005e66162ce10d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e67cc316b8747ee785055ceb4f954988fa82a44c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769849"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940614"
 ---
 # <a name="usemanagedpresentation"></a>\<useManagedPresentation>
 Ein Bindungselement, das zur Kommunikation mit einem CardSpace-Sicherheitstokendienst verwendet wird, der das CardSpace-Profil von WS-Trust unterstützt. Dieses Element verfügt über kein Attribut und ist als leerer Schalter vorhanden.  
@@ -31,13 +31,13 @@ Ein Bindungselement, das zur Kommunikation mit einem CardSpace-Sicherheitstokend
  Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
+|[\<binding>](../../../misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
 ## <a name="remarks"></a>Hinweise  
  Dieses Element wird von einem Identitätsanbieter verwendet, um in der eigenen Richtlinie anzugeben, dass es das CardSpace-Profil von WS-Trust unterstützt. Identitätsanbieter, die solche Richtlinienassertionen veröffentlichen, sollten basierend auf diesem CardSpace-Profil Token ausstellen können.  
@@ -47,7 +47,7 @@ Ein Bindungselement, das zur Kommunikation mit einem CardSpace-Sicherheitstokend
 - <xref:System.ServiceModel.Configuration.UseManagedPresentationElement>
 - <xref:System.ServiceModel.Channels.UseManagedPresentationBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
-- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Bindungen](../../../wcf/bindings.md)
+- [Erweitern von Bindungen](../../../wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

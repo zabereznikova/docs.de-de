@@ -2,23 +2,23 @@
 title: Anpassen von Insert-, Update- und Delete-Operationen
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: 114447fd45806e567b4fde8e9e74138c096bff07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f75f4b4caf6b72076a83bde2f2c659aab4c9707d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743570"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912568"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>Anpassen von Insert-, Update- und Delete-Operationen
 Standardmäßig generiert [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dynamisches SQL, um Insert-, Read-, Update und Delete-Operationen zu implementieren. In der Praxis passen Sie die Anwendung i. d. R. an, um die Geschäftsanforderungen zu erfüllen.  
   
 > [!NOTE]
->  Wenn Sie Visual Studio verwenden, können Sie den Object Relational Designer verwenden, zum Anpassen von INSERT-, Update- und delete-Aktionen.  
+> Wenn Sie Visual Studio verwenden, können Sie die objektrelationaler Designer zum Anpassen von INSERT-, Update-und DELETE-Aktionen verwenden.  
   
  Dieser Abschnitt beschreibt die Techniken, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zur Anpassung von Insert-, Update- und Delete-Operationen in Ihrer Anwendung zur Verfügung stellt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Anpassen von Operationen: Übersicht](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
+ [Anpassen von Vorgängen: Übersicht](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
  Beschreibt die verschiedenen Techniken, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für das Anpassen von Insert-, Update- und Delete-Operationen zur Verfügung stellt.  
   
  [Insert-, Update- und Delete-Operationen](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  

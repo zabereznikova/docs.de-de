@@ -8,15 +8,15 @@ helpviewer_keywords:
 - typography [WPF], special characters
 - special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-ms.openlocfilehash: 18934e06f45ca4b88f48bce8a310a07b460a5f53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61ee38319b2f0aa46690fb063f6ffe6612f993ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051082"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918433"
 ---
 # <a name="how-to-use-special-characters-in-xaml"></a>Vorgehensweise: Verwenden von Sonderzeichen in XAML
-Markup-Dateien, die in erstellt werden [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] werden automatisch gespeichert, der [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF-8-Dateiformat, das bedeutet, dass die meisten Sonderzeichen, z.B. Akzentzeichen, richtig codiert werden. Es gibt jedoch eine Reihe von häufig verwendeten Sonderzeichen, die anders behandelt werden. Diese Sonderzeichen befolgen den [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] standard zum Codieren.  
+Markup Dateien, die in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] erstellt werden, werden automatisch [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] im UTF-8-Dateiformat gespeichert, was bedeutet, dass die meisten Sonderzeichen (z. b. Akzentzeichen) ordnungsgemäß codiert werden. Es gibt jedoch eine Reihe von häufig verwendeten Sonderzeichen, die anders behandelt werden. Diese Sonderzeichen folgen dem [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] Standard für die [!INCLUDE[TL A#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Codierung.  
   
  Die folgende Tabelle zeigt die Syntax zum Codieren dieser Sonderzeichen:  
   
@@ -28,7 +28,7 @@ Markup-Dateien, die in erstellt werden [!INCLUDE[TLA#tla_visualstu](../../../../
 |"|`&quot;`|Doppeltes Anführungszeichen|  
   
 > [!NOTE]
->  Wenn eine Markup-Datei, die mit einem Text-Editor, z. B. Erstellung [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Notepad, müssen Sie die Datei im Speichern der [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF-8-Dateiformat erhalten alle codierten Sonderzeichen.  
+> Wenn Sie mit einem Text-Editor, z. b. Windows Notepad, eine Markup Datei erstellen, müssen Sie die [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] Datei im UTF-8-Dateiformat speichern, um codierte Sonderzeichen beizubehalten.  
   
  Das folgende Beispiel zeigt, wie Sie Sonderzeichen im Text beim Erstellen von Markup verwenden können.  
   

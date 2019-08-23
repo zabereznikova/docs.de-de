@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 2bbd81867b3c20d8ac16bdd79fcc9a3cc7bbb55c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 43bc3c40bfc0b0ce4c0b18683092faf8b67e1c04
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927695"
 ---
 # <a name="systemcodedom-element"></a>\<System. CodeDom >-Element
 Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.  
@@ -56,7 +56,7 @@ Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.
  Entwickler und Compileranbieter können der Computer Konfigurationsdatei (Machine. config) für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider> Implementierung Konfigurationseinstellungen hinzufügen. Verwenden Sie <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> die-Methode, um die Standard Sprachanbieter und Sprachanbieter, die von den Compilerkonfigurationseinstellungen eines Computers identifiziert werden, Programm gesteuert aufzuzählen.  
   
 > [!NOTE]
->  In den .NET Framework Versionen 1,0 und 1,1 werden die von der .NET Framework bereitgestellten Standard Sprachanbieter im [ \<Compiler >](compilers-element.md) -Element identifiziert. In der .NET Framework Version 2,0 werden die Standard Sprachanbieter nicht im [ \<Compiler >](compilers-element.md) Element identifiziert, können aber mithilfe der <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> -Methode aufgelistet werden.  
+> In den .NET Framework Versionen 1,0 und 1,1 werden die von der .NET Framework bereitgestellten Standard Sprachanbieter im [ \<Compiler >](compilers-element.md) -Element identifiziert. In der .NET Framework Version 2,0 werden die Standard Sprachanbieter nicht im [ \<Compiler >](compilers-element.md) Element identifiziert, können aber mithilfe der <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A> -Methode aufgelistet werden.  
   
 ## <a name="net-framework-versions-10-and-11"></a>.NET Framework Versionen 1,0 und 1,1  
  [ Das\<System. CodeDom->](system-codedom-element.md) -Element enthält die Compilerkonfigurationseinstellungen für Sprachanbieter auf einem Computer. [ \<](compiler-element.md) [ Die\<Compiler >](compilers-element.md) -Elements enthalten keine oder mehrere Compiler>-Elemente. [ Jedes\<Compiler >](compiler-element.md) -Element gibt die Compilerkonfigurationsattribute für einen bestimmten Sprachanbieter an.  

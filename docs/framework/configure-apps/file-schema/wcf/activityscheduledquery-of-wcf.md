@@ -1,23 +1,23 @@
 ---
-title: <activityScheduledQuery> von WCF
+title: <activityScheduledQuery>von WCF
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 5087d56092296f8c68b719ec0945993adeb3de0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7787ada68210ff832ff3fd1ec93c9d346e4d2eaa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704713"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926928"
 ---
-# <a name="activityscheduledquery-of-wcf"></a>\<ActivityScheduledQuery > von WCF
+# <a name="activityscheduledquery-of-wcf"></a>\<ActivityScheduledQuery-> von WCF
 
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um eine Aktivität zu verfolgen, deren Ausführung von einer übergeordneten Aktivität geplant wurde. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer die Datensätze der geplanten Aktivität abonnieren kann.  
   
-Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
 \<system.serviceModel>  
-\<tracking>  
-\<profiles>  
+\<Überwachungs >  
+\<Profile >  
 \<trackingProfile>  
 \<workflow>  
 \<activityScheduledQueries>  
@@ -59,11 +59,11 @@ Keine
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|Eine Auflistung von Abfragen, die verwendet werden, um eine Aktivität, die für die Ausführung eingeplant, von einer übergeordneten Aktivität zu verfolgen.|  
+|[\<activityScheduledQueries>](activityscheduledqueries-of-wcf.md)|Eine Auflistung von Abfragen, die verwendet werden, um eine Aktivität zu verfolgen, die für die Ausführung durch eine übergeordnete Aktivität geplant ist.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>
-- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsprofile](../../../windows-workflow-foundation/tracking-profiles.md)

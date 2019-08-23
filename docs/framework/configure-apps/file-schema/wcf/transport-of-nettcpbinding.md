@@ -2,15 +2,15 @@
 title: <transport> von <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 265b68e058919d1d5c5f1dbcfb1419b57be9aeab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788309"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915551"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport> von \<netTcpBinding>
-Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen Endpunkt konfiguriert, mit der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+Definiert den Typ der Sicherheitsanforderungen auf Nachrichten Ebene für einen Endpunkt, der mit dem [ \<NetTcpBinding->](nettcpbinding.md)konfiguriert ist.  
   
  \<system.ServiceModel>  
 \<bindings>  
@@ -46,35 +46,35 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|clientCredentialType|Dies ist optional. Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mit Transportsicherheit verwendet werden.<br /><br /> – Der Standardwert ist `Windows`.<br />– Dieses Attribut ist vom Typ <xref:System.ServiceModel.TcpClientCredentialType>.|  
-|protectionLevel|Dies ist optional. Definiert die Sicherheit auf der Ebene des TCP-Transports. Durch das Signieren von Nachrichten wird das Risiko reduziert, dass ein Dritter während der Übertragung auf die Nachricht zugreifen kann. Die Verschlüsselung sorgt während des Transports für Datenebenensicherheit.<br /><br /> Der Standardwert ist `EncryptAndSign`.|  
-|sslProtocols|Ein SslProtocols Enum-Flagwert, der angibt, welche SslProtocols unterstützt werden. Der Standardwert ist Tls&#124;Tls11&#124;Tls12.|  
+|clientCredentialType|Optional. Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mit Transportsicherheit verwendet werden.<br /><br /> -Der Standardwert ist `Windows`.<br />: Dieses Attribut ist vom Typ <xref:System.ServiceModel.TcpClientCredentialType>.|  
+|protectionLevel|Optional. Definiert die Sicherheit auf der Ebene des TCP-Transports. Durch das Signieren von Nachrichten wird das Risiko reduziert, dass ein Dritter während der Übertragung auf die Nachricht zugreifen kann. Die Verschlüsselung sorgt während des Transports für Datenebenensicherheit.<br /><br /> Der Standardwert ist `EncryptAndSign`.|  
+|sslProtocols|Ein SslProtocols Enum-Flagwert, der angibt, welche SslProtocols unterstützt werden. Der Standardwert ist&#124;TLS&#124;Tls11 Tls12.|  
 |policyEnforcement|Diese Enumeration gibt an, wann die <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> erzwungen werden soll.<br /><br /> 1.  Never – die Richtlinie wird nie erzwungen (erweiterter Schutz ist deaktiviert).<br />2.  WhenSupported – die Richtlinie wird nur erzwungen, wenn der Client erweiterten Schutz unterstützt.<br />3.  Always – die Richtlinie wird immer erzwungen. Clients, die erweiterten Schutz nicht unterstützen, werden nicht authentifiziert.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
   
-|Wert|Beschreibung|  
+|Wert|Description|  
 |-----------|-----------------|  
-|Keiner|Der Client ist anonym. Dies erfordert ein Zertifikat für den Dienst.|  
+|None|Der Client ist anonym. Dies erfordert ein Zertifikat für den Dienst.|  
 |Windows|Gibt die Windows-Authentifizierung des Clients mit SP-Aushandlung (Kerberos-Aushandlung) an.|  
 |Zertifikat|Der Client wird mit einem Zertifikat authentifiziert. Dabei wird SSL-Aushandlung verwendet und ein Zertifikat für den Dienst angefordert.|  
   
 ## <a name="protectionlevel-attribute"></a>protectionLevel-Attribut  
   
-|Wert|Beschreibung|  
+|Wert|Description|  
 |-----------|-----------------|  
-|Keiner|Kein Schutz.|  
+|None|Kein Schutz.|  
 |Sign|Nachrichten werden signiert.|  
 |EncryptAndSign|-Nachrichten werden verschlüsselt und signiert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Gibt an, die Sicherheitsfunktionen des der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
+|[\<security>](security-of-nettcpbinding.md)|Gibt die Sicherheitsfunktionen der [ \<NetTcpBinding->](nettcpbinding.md)an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie Transportsicherheit für die Integrität und Vertraulichkeit der SOAP-Nachricht und für gegenseitige Authentifizierung. Wurde dieser Sicherheitsmodus für eine Bindung ausgewählt, wird der Kanalstapel mit einem geschützten Transport konfiguriert, und die SOAP-Nachrichten werden mit Transportsicherheit geschützt, wie zum Beispiel Windows (Aushandeln) oder SSL über TCP.  
@@ -85,8 +85,8 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
-- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Sichern von Diensten und Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

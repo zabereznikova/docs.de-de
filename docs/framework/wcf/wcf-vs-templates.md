@@ -2,37 +2,37 @@
 title: WCF Visual Studio-Vorlagen
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 2e192e671d37e096e4199b295d4f533194ab89b6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f7eb9ef5175c41a3378201f2f25f1fd914aef55
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613234"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916790"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio-Vorlagen
-Windows Communication Foundation (WCF) von Visual Studio-Vorlagen sind vordefinierte Projekt- und Elementvorlagen, die Sie in Visual Studio verwenden können, um WCF-Dienste und entsprechende Anwendungen schnell zu erstellen.  
+Windows Communication Foundation (WCF) Visual Studio-Vorlagen sind vordefinierte Projekt-und Element Vorlagen, die Sie in Visual Studio verwenden können, um schnell WCF-Dienste und umgebende Anwendungen zu erstellen.  
   
 ## <a name="using-the-wcf-templates"></a>Verwenden der WCF-Vorlagen  
- WCF Visual Studio-Vorlagen stellen eine grundlegende Klassenstruktur zur Dienstentwicklung bereit. Diese Vorlagen stellen genau genommen die grundlegenden Definitionen für den Dienstvertrag, den Datenvertrag, die Dienstimplementierung und die Konfiguration bereit. Mit diesen Vorlagen können Sie einen einfachen Dienst mit minimaler Codeinteraktion sowie einen Baustein für komplexere Dienste erstellen.  
+ WCF-Visual Studio-Vorlagen stellen eine grundlegende Klassenstruktur für die Dienst Entwicklung dar. Diese Vorlagen stellen genau genommen die grundlegenden Definitionen für den Dienstvertrag, den Datenvertrag, die Dienstimplementierung und die Konfiguration bereit. Mit diesen Vorlagen können Sie einen einfachen Dienst mit minimaler Codeinteraktion sowie einen Baustein für komplexere Dienste erstellen.  
   
 ### <a name="wcf-service-library-project-template"></a>WCF-Dienstbibliotheksprojektvorlage  
- Der WCF-Dienstbibliothek-Projektvorlage ist verfügbar, in das Dialogfeld Neues Projekt unter **Visual C# \WCF** und **Visual Basic\WCF**.  
+ Die Projektvorlage der WCF-Dienst Bibliothek steht im Dialogfeld Neues Projekt unter **Visual C#\WCF** und **Visual Basic\WCF**zur Verfügung.  
   
- Bei der Erstellung ein neues Projekt mit der **WCF-Dienst** Vorlage für das neue Projekt schließt automatisch die folgenden drei Dateien:  
+ Wenn Sie ein neues Projekt mit der **WCF-Dienst** Vorlage erstellen, enthält das neue Projekt automatisch die folgenden drei Dateien:  
   
-- Dienstvertragsdatei ("IService1.cs" oder "IService1.vb"). Die dienstvertragsdatei ist eine Schnittstelle, die WCF-Dienst-Attribute, die angewendet wurde. Diese Datei enthält eine Definition eines einfachen Diensts, anhand derer Sie sehen können, wie Sie Ihre Dienste definieren können, sowie Parameter-basierte Vorgänge und ein Beispiel für einen einfachen Datenvertrag. Dies ist die Standarddatei, die nach dem Erstellen eines WCF-Dienst-Projekts im Code-Editor angezeigt.  
+- Dienstvertragsdatei ("IService1.cs" oder "IService1.vb"). Die Dienstvertrags Datei ist eine Schnittstelle, auf die WCF-Dienst Attribute angewendet werden. Diese Datei enthält eine Definition eines einfachen Diensts, anhand derer Sie sehen können, wie Sie Ihre Dienste definieren können, sowie Parameter-basierte Vorgänge und ein Beispiel für einen einfachen Datenvertrag. Dies ist die Standarddatei, die nach dem Erstellen eines WCF-Dienst Projekts im Code-Editor angezeigt wird.  
   
 - Dienstimplementierungsdatei (Service1.cs oder Service1.vb). Die Dienstimplementierungsdatei implementiert den in der Dienstvertragsdatei definierten Vertrag.  
   
-- Anwendungskonfigurationsdatei (App.config). Die Konfigurationsdatei enthält die grundlegenden Elemente eines WCF-Dienstmodells mit einer sicheren HTTP-Bindung. Sie enthält auch einen Endpunkt für den Dienst und aktiviert den Metadatenaustausch.  
+- Anwendungskonfigurationsdatei (App.config). Die Konfigurationsdatei stellt die grundlegenden Elemente eines WCF-Dienst Modells mit einer sicheren HTTP-Bindung bereit. Sie enthält auch einen Endpunkt für den Dienst und aktiviert den Metadatenaustausch.  
   
 > [!NOTE]
->  Visual Studio ist so konfiguriert, dass die Datei "App.config" als der Konfigurationsdatei für das Projekt erkannt wird, wenn er ausgeführt wird, mit der [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), dies ist die Standardkonfiguration. Wenn als Host für die Dienstbibliothek eine EXE-Datei verwendet wird, müssen Sie den Konfigurationscode in die Konfigurationsdatei der EXE-Datei verschieben, da Konfigurationsdateien für DLL-Dateien ungültig sind.  
+> Visual Studio ist so konfiguriert, dass die Datei app. config als Konfigurationsdatei für das Projekt erkannt wird, wenn es mit dem [WCF-Dienst Host (WcfSvcHost. exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)ausgeführt wird. Dies ist die Standardkonfiguration. Wenn als Host für die Dienstbibliothek eine EXE-Datei verwendet wird, müssen Sie den Konfigurationscode in die Konfigurationsdatei der EXE-Datei verschieben, da Konfigurationsdateien für DLL-Dateien ungültig sind.  
   
 ### <a name="wcf-service-application-template"></a>Vorlage für WCF-Dienstanwendungen  
- Die Dienstanwendung für WCF-Vorlage steht im Dialogfeld "Neues Projekt" unter **Visual C# \WCF** und **Visual Basic\WCF**.  
+ Die Vorlage WCF-Dienst Anwendung steht im Dialogfeld Neues Projekt unter  **C#Visual \WCF** und **Visual Basic\WCF**zur Verfügung.  
   
- Bei der Erstellung ein neues Projekt mit der **WCF-Webanwendungsdienst** Vorlage für das Projekt enthält die folgenden vier Dateien:  
+ Wenn Sie ein neues Projekt mit der WCF-Webanwendungs- **Dienst** Vorlage erstellen, enthält das Projekt die folgenden vier Dateien:  
   
 - Diensthostdatei ("service1.svc").  
   
@@ -45,12 +45,12 @@ Windows Communication Foundation (WCF) von Visual Studio-Vorlagen sind vordefini
  Die Vorlage erstellt automatisch eine Website, die in einem virtuellen Verzeichnis eingerichtet wird, und dient zugleich als Host für einen Dienst.  
   
 ### <a name="wcf-web-site-template"></a>Websitevorlage für den WCF-Dienst  
- Der WCF--Websitevorlage steht im Dialogfeld "Neues Projekt" unter **Visual C# \Web Site\WCF Service** und **basic\website\wcf-Dienst von Visual Basic\Web**. Dadurch werden die gleichen Dateien wie durch die Vorlage für WCF-Dienstanwendungen erstellt, diese werden aber wie für eine ASP.NET-Website organisiert. Die Ordner App_Code und App_Data werden erstellt.  
+ Die Vorlage für die WCF-Website steht im Dialogfeld Neues Projekt unter **Visual C#\website\wcf-Dienst** und **Visual basic\website\wcf-Dienst**zur Verfügung. Dadurch werden die gleichen Dateien wie durch die Vorlage für WCF-Dienstanwendungen erstellt, diese werden aber wie für eine ASP.NET-Website organisiert. Die Ordner App_Code und App_Data werden erstellt.  
   
 ### <a name="wcf-service-item-template"></a>WCF-Dienstelementvorlage  
- Die Elementvorlage für WCF-Dienst ist eine benutzerdefinierte Vorlage, die eine schnelle Möglichkeit zum Hinzufügen von WCF-Dienste auf Ihren vorhandenen Visual Studio-Projekten bereitstellt.  
+ Die WCF-Dienst Element Vorlage ist eine benutzerdefinierte Vorlage, mit der Sie Ihren vorhandenen Visual Studio-Projekten schnell WCF-Dienste hinzufügen können.  
   
- Um diese Vorlage verwenden möchten, wechseln Sie zu der **Projektmappen-Explorer** Bereich mit der rechten Maustaste des Projektnamen, zeigen Sie auf **hinzufügen**, und klicken Sie dann auf **neues Element** zum Starten der **neu hinzufügen Element** Dialogfeld.  
+ Um diese Vorlage zu verwenden, wechseln Sie zum **Projektmappen-Explorer** Bereich, klicken Sie mit der rechten Maustaste auf den Projektnamen, zeigen Sie auf **Hinzufügen**, und klicken Sie dann auf **Neues Element** , um das Dialogfeld **Neues Element hinzufügen** aufzurufen  
   
  Die Dienstschnittstelle und die Implementierungsdateien werden im Stammprojektordner abgelegt.  
   
@@ -59,28 +59,28 @@ Windows Communication Foundation (WCF) von Visual Studio-Vorlagen sind vordefini
  Eine Diensthostdatei (service1.svc) wird auch dann erstellt, wenn das vorhandene Projekt ein Webprojekt ist.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>WCF-WF-Dienstprojektvorlage und Elementvorlage.  
- Diese Vorlagen erstellen WCF-Dienste, Hosten eines Workflowdiensts, d.h., dass ein Workflow, der wie ein Webdienst zugegriffen werden kann. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Workflowtypen finden Sie unter [Vorgehensweise: Erstellen eines Workflows](../windows-workflow-foundation/how-to-create-a-workflow.md). Weitere Informationen zum Erstellen von Workflowprojekten finden Sie unter [Erstellen von Legacyworkflowprojekten](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Diese Vorlagen erstellen WCF-Dienste, die einen Workflow Dienst hosten. dabei handelt es sich um einen Workflow, auf den wie ein Webdienst zugegriffen werden kann. Für XAML oder imperative Programmiermodelle gibt es unterschiedliche Vorlagen. Wenn Sie die Vorlagen verwenden, können Sie einen sequenziellen Workflow oder einen Zustandsautomat-Workflow erstellen. Weitere Informationen zu diesen Workflow Typen finden [Sie unter Gewusst wie: Erstellen Sie einen](../windows-workflow-foundation/how-to-create-a-workflow.md)Workflow. Weitere Informationen zum Erstellen von Workflow Projekten finden Sie unter [Erstellen von Legacy Workflow Projekten](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
- Visual Studio-Designer reagiert besser aus, wenn Typs XOML Workflows verwendet werden stattdessen Code solche basierend. Der XOML-Workflow ist der Standardworkflowtyp, der erstellt werden sollte.  
+ Der Visual Studio-Designer reagiert besser, wenn XOML-typworkflows anstelle von Code basierten Workflows verwendet werden. Der XOML-Workflow ist der Standardworkflowtyp, der erstellt werden sollte.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Vorlage für WCF/Syndication-Dienstbibliotheken  
- Mit dieser Vorlage können Sie den Feed im RSS- oder ATOM-Format als WCF-Dienst verfügbar machen. Weitere Informationen finden Sie unter [WCF Syndication](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
+ Mit dieser Vorlage können Sie Ihren Feed im RSS-oder Atom-Format als WCF-Dienst verfügbar machen. Weitere Informationen finden Sie unter [WCF-Syndikation](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Ändern der Adresse des Feeds  
- Die Syndication-Vorlage verwendet während der Ausführung Internet Explorer. Wenn Sie mit der rechten Maustaste des Projekts im **Projektmappen-Explorer** wählen Sie in Visual Studio **Eigenschaften**, und wählen Sie dann die **Debuggen** Registerkarte, und Sie sehen die Standardadresse für die Vorlage. Internet Explorer versucht, den Feed unter dieser Adresse zu öffnen.  
+ Die Syndication-Vorlage verwendet während der Ausführung Internet Explorer. Wenn Sie im Projektmappen- **Explorer** in Visual Studio mit der rechten Maustaste auf das Projekt klicken, wählen Sie **Eigenschaften**aus, und wählen Sie dann die Registerkarte **Debuggen** , um die Standardadresse der Vorlage anzuzeigen. Internet Explorer versucht, den Feed unter dieser Adresse zu öffnen.  
   
- Wenn Sie die Adresse Ihres Feed ändern, müssen Sie auch ändern, auf die Adresse in der **Debuggen** Registerkarte. Andernfalls versucht Internet Explorer, den Feed unter der Standardadresse zu öffnen, und dieser Versuch scheitert.  
+ Wenn Sie die Adresse des Feeds ändern, müssen Sie auch die Adresse auf der Registerkarte " **Debuggen** " ändern. Andernfalls versucht Internet Explorer, den Feed unter der Standardadresse zu öffnen, und dieser Versuch scheitert.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX-aktivierte WCF-Dienstelementvorlage  
- Diese Vorlage stellt ein AJAX-Steuerelement als ein WCF-Dienst. Weitere Informationen zu AJAX-Steuerelementen finden Sie unter den [AJAX-Steuerelement Dokumentation](https://go.microsoft.com/fwlink/?LinkId=96717).  
+ Diese Vorlage stellt ein AJAX-Steuerelement als WCF-Dienst zur Verfügung. Weitere Informationen zu AJAX-Steuerelementen finden Sie in der [Dokumentation zu AJAX-Steuer](https://go.microsoft.com/fwlink/?LinkId=96717)Elementen.  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Silverlight-aktivierte WCF-Dienstelementvorlage  
- Diese Vorlage erstellt einen Webdienst, der Daten für einen Silverlight-Client oder für ein Silverlight-Front-End bereitstellt. Die Vorlage kann einem Website- oder Webanwendungsprojekt-Anwendungsprojekt, um einen WCF-Dienst zu erstellen, der Dienstcode und-Konfiguration für die Kommunikation mit einem Silverlight-Client umfasst hinzugefügt werden. Anschließend können Sie **Hinzufügen eines Dienstverweises** einen Clientproxy des Diensts an den Client hinzufügen und Austauschen von Daten zwischen der Silverlight-Client und dem Silverlight-aktivierte WCF-Dienst.  
+ Diese Vorlage erstellt einen Webdienst, der Daten für einen Silverlight-Client oder für ein Silverlight-Front-End bereitstellt. Die Vorlage kann einem Website-oder Webanwendungs Projekt hinzugefügt werden, um einen WCF-Dienst zu erstellen, der Dienst Code und die Konfiguration enthält, die die Kommunikation mit einem Silverlight-Client unterstützen. Anschließend können Sie mit **Dienstverweis hinzufügen** einen Client Proxy des Dienstanbieter zum Client hinzufügen und Daten zwischen dem Silverlight-Client und dem Silverlight-fähigen WCF-Dienst austauschen.  
   
- Maustaste Sie diese Vorlage für den Zugriff auf eine Website oder einem Webanwendungsprojekt in **Projektmappen-Explorer**, klicken Sie auf **Hinzufügen eines neuen Elements**, und klicken Sie auf **Silverlight-aktivierter WCF-Dienst**.  
+ Um auf diese Vorlage zuzugreifen, klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf ein Website-oder ein Webanwendungs Projekt, klicken Sie auf **Neues Element hinzufügen**, und klicken Sie auf **Silverlight-aktivierter WCF**  
   
 > [!NOTE]
->  Der Silverlight-aktivierte WCF-Dienst macht einen `basicHttpBinding`-Endpunkt ohne aktivierte Sicherheitseinstellungen verfügbar. Deshalb können Dienstinformationen von allen Clients abgerufen werden, die eine Verbindung mit diesem Dienst herstellen. Zudem werden zwischen dem Dienst und dem Client ausgetauschte Nachrichten weder signiert noch verschlüsselt. Sichern Sie den Endpunkt nach Möglichkeit per ASP.NET-Authentifizierung, per HTTPS oder mit einem anderen Mechanismus.  
+> Der Silverlight-aktivierte WCF-Dienst macht einen `basicHttpBinding`-Endpunkt ohne aktivierte Sicherheitseinstellungen verfügbar. Deshalb können Dienstinformationen von allen Clients abgerufen werden, die eine Verbindung mit diesem Dienst herstellen. Zudem werden zwischen dem Dienst und dem Client ausgetauschte Nachrichten weder signiert noch verschlüsselt. Sichern Sie den Endpunkt nach Möglichkeit per ASP.NET-Authentifizierung, per HTTPS oder mit einem anderen Mechanismus.  
   
 ## <a name="see-also"></a>Siehe auch
 

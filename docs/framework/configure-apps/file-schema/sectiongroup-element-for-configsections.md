@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 750708483f9680745eef4531d86fa7ecaa329f51
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4e28e8ccea1090e6a5704b541e09dc11681278ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301193"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920651"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<SectionGroup >-Element für \<ConfigSections >
+# <a name="sectiongroup-element-for-configsections"></a>\<SectionGroup > Element für \<configabschnitts >
 
-Definiert einen Namespace für Konfigurationsabschnitte.
+Definiert einen Namespace für Konfigurations Abschnitte.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup>**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<SectionGroup->**
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,27 +36,27 @@ Definiert einen Namespace für Konfigurationsabschnitte.
 
 |           | Beschreibung |
 | --------- | ----------- |
-| **name**  | Erforderliches Attribut.<br><br>Gibt den Namen der Abschnittsgruppe, die Sie definieren. |
+| **name**  | Erforderliches Attribut.<br><br>Gibt den Namen der Abschnitts Gruppe an, die Sie definieren. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Enthält die Konfiguration im Abschnitt und Namespacedeklarationen. |
+| [ **\<configSections>** Element](configsections-element-for-configuration.md) | Enthält Konfigurations Abschnitts-und Namespace Deklarationen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<section>** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Enthält die Deklaration einer Konfigurations-Abschnitt. |
+| [ **\<Abschnitts >** ](section-element.md) | Enthält eine Konfigurations Abschnitts Deklaration. |
 
 ## <a name="remarks"></a>Hinweise
 
-Deklarieren einer Abschnittsgruppe erstellt ein Containertag für Konfigurationsabschnitte und stellt sicher, dass keine Namenskonflikte mit Konfigurationsabschnitte, die von einer anderen Person definiert. Sie können schachteln  **\<SectionGroup >** Elemente in einem anderen.
+Beim Deklarieren einer Abschnitts Gruppe wird ein containertag für Konfigurations Abschnitte erstellt, und es wird sichergestellt, dass keine Namenskonflikte mit von einer anderen Person definierten Konfigurations Abschnitten bestehen. Sie können  **\<sectionGroup->** Elemente in einander Schachteln.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt das Deklarieren einer Abschnittsgruppe und Abschnitte innerhalb einer Abschnittsgruppe deklarieren:
+Im folgenden Beispiel wird gezeigt, wie Sie eine Abschnitts Gruppe deklarieren und Abschnitte innerhalb einer Abschnitts Gruppe deklarieren:
 
 ```xml
 <configuration>
@@ -76,8 +76,8 @@ Das folgende Beispiel zeigt das Deklarieren einer Abschnittsgruppe und Abschnitt
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden ( *"Machine.config"* ), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

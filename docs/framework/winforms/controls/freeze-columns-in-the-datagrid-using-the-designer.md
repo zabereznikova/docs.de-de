@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: d38c8d73bc70e7e521b476ca78c8f102d003c538
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7ebdf7a1598ac3cd61005ae607e5bfbe7cb49059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040336"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933714"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Vorgehensweise: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Wenn Benutzer Daten anzeigen, die in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement in Windows Forms angezeigt werden, müssen sie mitunter häufig auf eine bestimmte Spalte oder Gruppe von Spalten zugreifen. Wenn Sie z. b. eine Tabelle mit Kundeninformationen anzeigen, die viele Spalten enthält, ist es hilfreich, den Kundennamen jederzeit anzuzeigen, während andere Spalten einen Bildlauf außerhalb des sichtbaren Bereichs ermöglichen.
@@ -30,7 +30,7 @@ Wenn Benutzer Daten anzeigen, die in einem <xref:System.Windows.Forms.DataGridVi
 3. Legen Sie im Raster **Spalten Eigenschaften** die <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> -Eigenschaft auf `true`fest.
 
     > [!NOTE]
-    >  Sie können eine Spalte auch beim Hinzufügen fixieren, indem Sie im Dialogfeld **Spalte hinzufügen** das Feld fixiert auswählen.
+    > Sie können eine Spalte auch beim Hinzufügen fixieren, indem Sie im Dialogfeld **Spalte hinzufügen** das Feld fixiert auswählen.
 
 ## <a name="see-also"></a>Siehe auch
 

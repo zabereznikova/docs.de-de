@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039961"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930167"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers
 Im folgenden Verfahren erstellen Sie eine Multipane-Benutzeroberfläche, die der in Microsoft Outlook verwendeten Benutzeroberfläche mit einer **Ordner** Liste, einem Meldungs Bereich und einem **Vorschau** Bereich ähnelt. Diese Anordnung wird hauptsächlich durch Andocken von Steuerelementen im Formular erreicht.
@@ -39,7 +39,7 @@ Im folgenden Verfahren erstellen Sie eine Multipane-Benutzeroberfläche, die der
      Wenn Sie an diesem Punkt F5 drücken, um die Anwendung auszuführen, zeigt das Formular eine dreiteilige Benutzeroberfläche ähnlich der von Microsoft Outlook an.
 
     > [!NOTE]
-    >  Wenn Sie den Mauszeiger über einen der Aufteilungen innerhalb der <xref:System.Windows.Forms.SplitContainer> Steuerelemente bewegen, können Sie die Größe der internen Dimensionen ändern.
+    > Wenn Sie den Mauszeiger über einen der Aufteilungen innerhalb der <xref:System.Windows.Forms.SplitContainer> Steuerelemente bewegen, können Sie die Größe der internen Dimensionen ändern.
 
 An dieser Stelle der Anwendungsentwicklung haben Sie eine ausgereifte Benutzeroberfläche entwickelt. Der nächste Schritt ist das Fortsetzen der Programmierung der Anwendung selbst, indem das Steuerelement <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> die Steuerelemente mit einer Art von Datenquelle verbunden werden. Weitere Informationen zum Verbinden von Steuerelementen mit Daten finden Sie unter [Datenbindung und Windows Forms](../data-binding-and-windows-forms.md).
 

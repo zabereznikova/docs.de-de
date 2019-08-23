@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663855"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927452"
 ---
 # <a name="compatsortnlsversion-element"></a>\<Compatsortnlsversion >-Element
 Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleichen von Zeichenfolgen verwenden soll.  
@@ -60,7 +60,7 @@ Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleic
  Da Zeichen folgen Vergleichs-, Sortier-und Schreibvorgänge, <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> die von der-Klasse in .NET Framework 4 ausgeführt werden, dem Unicode 5,1-Standard entsprechen, können sich <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> die <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> Ergebnisse von Zeichen folgen Vergleichsmethoden wie und von frühere Versionen des .NET Framework. Wenn Ihre Anwendung von Legacy Verhalten abhängig ist, können Sie den Zeichen folgen Vergleich und die Sortierregeln, die in der .NET Framework 3,5 und früheren Versionen `<CompatSortNLSVersion>` verwendet werden, wiederherstellen, indem Sie das-Element in die Konfigurationsdatei der Anwendung einschließen.  
   
 > [!IMPORTANT]
->  Zum Wiederherstellen von Zeichenfolgenvergleichs- und Zeichenfolgensortierregeln von Legacyversionen muss auch die sort00001000.dll-Dynamic Link Library auf dem lokalen System verfügbar sein.  
+> Zum Wiederherstellen von Zeichenfolgenvergleichs- und Zeichenfolgensortierregeln von Legacyversionen muss auch die sort00001000.dll-Dynamic Link Library auf dem lokalen System verfügbar sein.  
   
  Sie können Zeichenfolgensortier- und Zeichenfolgenvergleichsregeln von Legacyversionen auch in einer bestimmten Anwendungsdomäne verwenden, indem Sie die Zeichenfolge "NetFx40_Legacy20SortingBehavior" an die <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A>-Methode beim Erstellen der Anwendungsdomäne übergeben.  
   

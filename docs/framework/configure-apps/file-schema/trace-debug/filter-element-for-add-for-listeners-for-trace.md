@@ -1,5 +1,5 @@
 ---
-title: <filter> -Element für <add> für <listeners> für <trace>
+title: <filter>-Element <add> für <listeners> für für<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-ms.openlocfilehash: 5961125e1b8d0d0f5711f8b942b68ba71d61888f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afde5381a7dd7dfe6a1a9d238a2029511bd9bae2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701306"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927136"
 ---
-# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<Filter >-Element für \<hinzufügen > für \<Listener > für \<Ablaufverfolgung >
-Fügt einen Filter zu einem Listener in der `Listeners` Sammlung für eine Ablaufverfolgung.  
+# <a name="filter-element-for-add-for-listeners-for-trace"></a>\<Filter > Element für \<Add > for \<Listener > for \<Trace >
+Fügt einen Filter zu einem Listener in der `Listeners` -Auflistung für eine Ablauf Verfolgung hinzu.  
   
  \<configuration>  
 \<system.diagnostics>  
-\<trace>  
-\<listeners>  
+\<Ablauf Verfolgungs >  
+\<Listener >  
 \<add>  
-\<filter>  
+\<Filter >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,8 +40,8 @@ Fügt einen Filter zu einem Listener in der `Listeners` Sammlung für eine Ablau
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Filters an, der von erben soll die <xref:System.Diagnostics.TraceFilter> Klasse. Sie können den Namespace-qualifizierten Namen des Typs, der des Typs entspricht <xref:System.Type.FullName%2A> -Eigenschaft, oder Sie können den vollqualifizierten Typnamen einschließlich der Assemblyinformationen, die entspricht der <xref:System.Type.AssemblyQualifiedName%2A> Eigenschaft. Weitere Informationen zu vollqualifizierten Typnamen, finden Sie unter [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Optionales Attribut.<br /><br /> Die Zeichenfolge, die für die angegebenen Filter-Klasse an den Konstruktor übergeben werden.|  
+|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Filters an, der von der <xref:System.Diagnostics.TraceFilter> -Klasse erben soll. Sie können den mit dem Namespace qualifizierten Namen des Typs verwenden, der der-Eigenschaft des Typs <xref:System.Type.FullName%2A> entspricht, oder Sie können den voll qualifizierten Typnamen einschließlich der Assemblyinformationen verwenden, die der <xref:System.Type.AssemblyQualifiedName%2A> -Eigenschaft entsprechen. Informationen zu voll qualifizierten Typnamen finden Sie unter [Angeben von voll qualifizierten Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`initializeData`|Optionales Attribut.<br /><br /> Die Zeichenfolge, die an den Konstruktor für die angegebene Filterklasse übergeben wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -53,16 +53,16 @@ Fügt einen Filter zu einem Listener in der `Listeners` Sammlung für eine Ablau
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
 |`trace`|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  
-|`listeners`|Enthält Listener, die sammeln, speichern und Weiterleiten von Nachrichten. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel.|  
+|`listeners`|Enthält Listener, die Nachrichten erfassen, speichern und weiterleiten. Listener leiten die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel weiter.|  
 |`add`|Fügt einen Listener zu der `Listeners`-Sammlung hinzu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<filter>` Element muss enthalten sein, eine `<add>` -Element für einen Ablaufverfolgungslistener, der den Typ des Listeners, der angibt, die nicht nur der Namen eines Listeners in definiert eine [ \<SharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md). Wenn der Listener in definiert ist eine [ \<SharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md), muss der Filter für diesen Listener in diesem Element definiert werden.  
+ Das `<filter>` -Element muss in einem `<add>` -Element für einen Ablaufverfolgungslistener enthalten sein, der den Typ des Listener angibt, nicht nur den Namen eines Listener, der in einem [ \<sharedlistener->](sharedlisteners-element.md)definiert ist. Wenn der Listener in einem [ \<sharedlistener->](sharedlisteners-element.md)definiert ist, muss der Filter für diesen Listener in diesem Element definiert werden.  
   
- Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der `<filter>` Element um einen Filter hinzuzufügen, mit dem Listener `console` in die `Listeners` -Sammlung für die Ablaufverfolgung, die Angabe der Ebene des Filter-Ereignis als `Error`.  
+ Im folgenden Beispiel wird gezeigt, wie das `<filter>` -Element verwendet wird, um dem Listener `console` in der `Listeners` -Auflistung für die Ablauf Verfolgung einen Filter hinzuzufügen `Error`, wobei die Filter Ereignis Ebene als angegeben wird.  
   
 ```xml  
 <configuration>  
@@ -87,4 +87,4 @@ Fügt einen Filter zu einem Listener in der `Listeners` Sammlung für eine Ablau
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)

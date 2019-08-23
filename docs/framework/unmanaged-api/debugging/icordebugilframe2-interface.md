@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f57f27ec92e7977b46ebfa5967b0590674d2a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d02dab01eca3bd4f8ce3ae7ace7f9d4be8233dca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946470"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917008"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2-Schnittstelle
 
@@ -31,20 +31,20 @@ Eine logische Erweiterung der ICorDebugILFrame-Schnittstelle.
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[EnumerateTypeParameters-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Ruft ein ICorDebugTypeEnum-Objekt, enthält die <xref:System.Type> Parameter in diesem Frame.|  
-|[RemapFunction-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Ordnet eine bearbeitete Funktion durch Angabe des neuen MSIL-Offsets neu.|  
+|[EnumerateTypeParameters-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Ruft ein ICorDebugTypeEnum-Objekt ab, <xref:System.Type> das die Parameter in diesem Frame enthält.|  
+|[RemapFunction-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Ordnet eine bearbeitete Funktion neu zu, indem der neue MSIL-Offset angegeben wird.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
+> Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

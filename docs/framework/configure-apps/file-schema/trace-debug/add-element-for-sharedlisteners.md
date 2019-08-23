@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4b83834fb7aaf64a696b85bd2c8da47cfba2397
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701371"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927209"
 ---
-# <a name="add-element-for-sharedlisteners"></a>\<Hinzufügen >-Element für \<SharedListeners >
-Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` eine Sammlung von Listenern, die von jedem ist [ \<Quelle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oder [ \<Ablaufverfolgung >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) verweisen können.  Standardmäßig werden von Listenern in der `sharedListeners` Auflistung befinden sich keine `Listeners` Auflistung. Sie müssen hinzugefügt werden, anhand des Namens der [ \<Quelle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oder [ \<Ablaufverfolgung >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Es ist nicht möglich, um die Listener in der `sharedListeners` Auflistung im Code zur Laufzeit.  
+# <a name="add-element-for-sharedlisteners"></a>\<Fügen Sie >- \<Element für sharedlistener hinzu >
+Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners`eine Auflistung von Listenern, auf die beliebige [ \<Quell >](source-element.md) oder [ \<Ablauf Verfolgungs >](trace-element.md) verweisen können.  Standardmäßig werden Listener in der `sharedListeners` Auflistung nicht in eine `Listeners` Auflistung eingefügt. Sie müssen dem [ \<Quell->](source-element.md) oder [ \<Ablauf Verfolgungs >](trace-element.md)nach Name hinzugefügt werden. Es ist nicht möglich, die Listener in der `sharedListeners` Auflistung zur Laufzeit im Code zu erhalten.  
   
  \<configuration>  
-&nbsp;&nbsp;\<system.diagnostics>  
-&nbsp;&nbsp;&nbsp;&nbsp;\<SharedListeners >-Element  
+&nbsp;&nbsp;\<System. Diagnostics->  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedlistener-> Element  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,16 +40,16 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` 
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`name`|Erforderliches Attribut.<br /><br /> Gibt den Namen des Listeners, mit dem den freigegebenen Listener zum Hinzufügen, einer `Listeners` Auflistung.|  
-|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Listeners. Sie müssen eine Zeichenfolge, die die in angegebenen Anforderungen erfüllt verwenden [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|`initializeData`|Optionales Attribut.<br /><br /> Die Zeichenfolge, die für die angegebene Klasse an den Konstruktor übergeben werden.|  
-|`traceOutputOptions`|Optionales Attribut.<br/><br/>Die Zeichenfolgendarstellung von einem oder mehreren <xref:System.Diagnostics.TraceOptions> Enumerationsmember, der die Daten in die Ablaufverfolgungsausgabe geschrieben werden angibt. Mehrere Elemente werden durch Kommas getrennt. Der Standardwert ist "None".|
+|`name`|Erforderliches Attribut.<br /><br /> Gibt den Namen des Listener an, der verwendet wird, um den freigegebenen Listener `Listeners` einer Auflistung hinzuzufügen.|  
+|`type`|Erforderliches Attribut.<br /><br /> Gibt den Typ des Listener an. Sie müssen eine Zeichenfolge verwenden, die den unter [Angeben von voll qualifizierten Typnamen](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)angegebenen Anforderungen entspricht.|  
+|`initializeData`|Optionales Attribut.<br /><br /> Die Zeichenfolge, die an den Konstruktor für die angegebene Klasse übergeben wird.|  
+|`traceOutputOptions`|Optionales Attribut.<br/><br/>Die Zeichen folgen Darstellung eines oder mehrerer <xref:System.Diagnostics.TraceOptions> Enumerationsmember, die die Daten angibt, die in die Ablauf Verfolgungs Ausgabe geschrieben werden sollen. Mehrere Elemente werden durch Kommas getrennt. Der Standardwert ist "None".|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.|  
+|[\<filter>](filter-element-for-add-for-sharedlisteners.md)|Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -57,30 +57,30 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` 
 |-------------|-----------------|  
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
-|`sharedListeners`|Eine Auflistung der Listener, die jedes Quell- oder Ablaufverfolgungselement verweisen kann.|  
+|`sharedListeners`|Eine Auflistung von Listenern, auf die beliebige Quell-oder Ablauf Verfolgungs Elemente verweisen können.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Listenerklassen, die im Lieferumfang von .NET Framework leiten sich von der <xref:System.Diagnostics.TraceListener> Klasse. Der Wert für die `name` Attribut wird verwendet, um den freigegebenen Listener zum Hinzufügen einer `Listeners` Sammlung für eine Ablaufverfolgung oder eine Ablaufverfolgungsquelle. Der Wert für die `initializeData` -Attributs hängt der Typ des Listeners, die Sie erstellen. Nicht alle Ablaufverfolgungslistener erfordern die Angabe `initializeData`.  
+ Die Listenerklassen, die mit dem .NET Framework ausgeliefert <xref:System.Diagnostics.TraceListener> werden, werden von der-Klasse abgeleitet Der Wert für das `name` -Attribut wird verwendet, um den freigegebenen Listener `Listeners` einer Auflistung entweder für eine Ablauf Verfolgung oder eine Ablauf Verfolgungs Quelle hinzuzufügen. Der Wert für das `initializeData` -Attribut ist abhängig vom Typ des von Ihnen erstellten Listener. Nicht alle Ablaufverfolgungslistener erfordern, dass Sie angeben `initializeData`  
   
 > [!NOTE]
->  Bei Verwendung der `initializeData` -Attribut, erhalten Sie möglicherweise die compilerwarnung "das Attribut"InitializeData"ist nicht deklariert." Diese Warnung tritt auf, da die Konfigurationseinstellungen für die abstrakte Basisklasse überprüft werden <xref:System.Diagnostics.TraceListener>, die nicht erkennt die `initializeData` Attribut. In der Regel können Sie Ablaufverfolgungs-Listener-Implementierungen diese Warnung ignorieren, die über einen Konstruktor verfügen, der einen Parameter akzeptiert.  
+> Wenn Sie das `initializeData` -Attribut verwenden, erhalten Sie möglicherweise die Compilerwarnung, dass das initializeData-Attribut nicht deklariert ist. Diese Warnung tritt auf, weil die Konfigurationseinstellungen anhand der abstrakten Basisklasse <xref:System.Diagnostics.TraceListener>überprüft werden, die das `initializeData` -Attribut nicht erkennt. Normalerweise können Sie diese Warnung für Ablaufverfolgungslistener-Implementierungen ignorieren, die über einen Konstruktor verfügen, der einen Parameter annimmt  
   
- In der folgende Tabelle werden die Ablaufverfolgungslistener, die mit .NET Framework enthalten sind, und beschreibt den Wert der ihre `initializeData` Attribute.  
+ In der folgenden Tabelle werden die Ablaufverfolgungslistener angezeigt, die im .NET Framework enthalten `initializeData` sind, und der Wert ihrer Attribute wird beschrieben.  
   
-|Trace Listenerklasse|InitializeData-Attributwert|  
+|Trace-Listenerklasse|initializeData-Attribut Wert|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener>|Die `useErrorStream` Wert für die <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> Konstruktor.  Legen Sie die `initializeData` -Attribut auf "`true`"Schreiben Ausgabe von Ablaufverfolgungs- und Debugeinstellungen in den Standardfehlerstream; so eingestellt, es"`false`" zum Schreiben in den Standardausgabestream.|  
-|<xref:System.Diagnostics.DelimitedListTraceListener>|Der Name der Datei die <xref:System.Diagnostics.DelimitedListTraceListener> schreibt in.|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Der Name einer vorhandenen Ereignisprotokollquelle.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Der Name der Datei, die die <xref:System.Diagnostics.EventSchemaTraceListener> schreibt in.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Der Name der Datei, die die <xref:System.Diagnostics.TextWriterTraceListener> schreibt in.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener>|Der Name der Datei, die die <xref:System.Diagnostics.XmlWriterTraceListener> schreibt in.|  
+|<xref:System.Diagnostics.ConsoleTraceListener>|Der `useErrorStream` Wert für den <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> Konstruktor.  Legen Sie `initializeData` das-Attribut`true`auf "" fest, um die Ablauf Verfolgung und Debugausgabe in den Standardfehlerstream zu schreiben. Legen Sie Sie auf "`false`" fest|  
+|<xref:System.Diagnostics.DelimitedListTraceListener>|Der Name der Datei, in <xref:System.Diagnostics.DelimitedListTraceListener> die geschrieben wird.|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|Der Name einer vorhandenen Ereignisprotokoll Quelle.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|Der Name der Datei, in die <xref:System.Diagnostics.EventSchemaTraceListener> geschrieben wird.|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|Der Name der Datei, in die <xref:System.Diagnostics.TextWriterTraceListener> geschrieben wird.|  
+|<xref:System.Diagnostics.XmlWriterTraceListener>|Der Name der Datei, in die <xref:System.Diagnostics.XmlWriterTraceListener> geschrieben wird.|  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit `<add>` hinzuzufügenden Elemente der <xref:System.Diagnostics.TextWriterTraceListener> `textListener` auf die `sharedListeners` Auflistung.   `textListener` wurde anhand des Namens der `Listeners` Auflistung für die Ablaufverfolgungsquelle `TraceSourceApp`. Die `textListener` -Listener schreibt die Ausgabe der Ablaufverfolgung in die Datei myListener.log.  
+ Im folgenden Beispiel wird gezeigt, wie `<add>` -Elemente verwendet werden <xref:System.Diagnostics.TextWriterTraceListener> , um `sharedListeners` der `textListener` -Auflistung hinzuzufügen.   `textListener`wird der `Listeners` -Auflistung für die Ablauf Verfolgungs Quelle `TraceSourceApp`nach Name hinzugefügt. Der `textListener` Listener schreibt die Ablauf Verfolgungs Ausgabe in die Datei "MyListener. log".  
   
 ```xml  
 <configuration>  
@@ -112,5 +112,5 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` 
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../debug-trace-profile/trace-listeners.md)

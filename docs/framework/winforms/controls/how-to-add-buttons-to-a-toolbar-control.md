@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 8ab1fa8fc163ed50e51801769d40e61483e8ed5b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343687"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912630"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
+> Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
- Ein wesentlicher Bestandteil der <xref:System.Windows.Forms.ToolBar> Steuerelement ist, die Sie, damit hinzufügen Schaltflächen. Diese können verwendet werden, um den einfachen Zugriff auf Befehle im Menü, oder sie können alternativ abgelegt werden, in einem anderen Bereich der Benutzeroberfläche der Anwendung, um Befehle aus, um Ihre Benutzer verfügbar zu machen, die nicht in der Menüstruktur verfügbar sind.  
+ Ein integraler Bestandteil des <xref:System.Windows.Forms.ToolBar> -Steuer Elements sind die Schaltflächen, die Sie hinzufügen. Diese können verwendet werden, um einen einfachen Zugriff auf Menübefehle bereitzustellen. Alternativ können Sie auch in einem anderen Bereich der Benutzeroberfläche der Anwendung platziert werden, um den Benutzern Befehle zur Verfügung zu stellen, die in der Menüstruktur nicht verfügbar sind.  
   
- Die folgenden Beispielen wird angenommen, dass eine <xref:System.Windows.Forms.ToolBar> -Steuerelement zu einem Windows-Formular hinzugefügt wurde (`Form1`).  
+ In den folgenden Beispielen wird davon <xref:System.Windows.Forms.ToolBar> ausgegangen, dass ein-Steuerelement zu einem`Form1`Windows Form hinzugefügt wurde ().  
   
-### <a name="to-add-buttons-programmatically"></a>Programmgesteuertes Hinzufügen von Schaltflächen  
+### <a name="to-add-buttons-programmatically"></a>So fügen Sie Schaltflächen Programm gesteuert hinzu  
   
-1. Erstellen Sie in einer Prozedur Symbolleistenschaltflächen durch Hinzufügen der <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung.  
+1. Erstellen Sie in einer Prozedur Symbolleisten Schaltflächen, indem <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Sie Sie der Auflistung hinzufügen.  
   
-2. Geben Sie die eigenschafteneinstellungen für eine einzelne Schaltfläche durch Übergeben der Schaltfläche Index über die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft.  
+2. Geben Sie Eigenschaften Einstellungen für eine einzelne Schaltfläche an, indem Sie den Index <xref:System.Windows.Forms.ToolBar.Buttons%2A> der Schaltfläche über die-Eigenschaft übergeben.  
   
-     Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.ToolBar> Steuerelement bereits hinzugefügt.  
+     Im folgenden Beispiel wird davon ausgegangen, dass <xref:System.Windows.Forms.ToolBar> ein Formular bereits hinzugefügt wurde.  
   
     > [!NOTE]
-    >  Die <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung ist nullbasiert, sodass Code entsprechend fortgesetzt werden soll.  
+    > Die <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung ist eine Null basierte Auflistung, sodass der Code entsprechend fortgesetzt werden sollte.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -152,6 +152,6 @@ ms.locfileid: "59343687"
 
 - <xref:System.Windows.Forms.ToolBar>
 - [Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Vorgehensweise: Triggermenü Ereignisse für Symbolleisten-Schaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Übersicht über das ToolBar-Steuerelement](toolbar-control-overview-windows-forms.md)
 - [ToolBar-Steuerelement](toolbar-control-windows-forms.md)

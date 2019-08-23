@@ -2,21 +2,21 @@
 title: <knownType>
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: 4d3dd9042951ffb46b8e0a3f7bb7bcdee23fd58b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0794314cfcb87df00d66b6832356fb130787eba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760687"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928864"
 ---
 # <a name="knowntype"></a>\<knownType>
-Gibt einen Typ an, der vom <xref:System.Runtime.Serialization.DataContractSerializer> während der Deserialisierung verwendet werden sollte. Dieses Element gibt einen "bekannten Typ" an, der von einem Feld oder einer Eigenschaft eines "deklarierten Typs" zurückgegeben werden kann. Weitere Informationen finden Sie unter [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+Gibt einen Typ an, der vom <xref:System.Runtime.Serialization.DataContractSerializer> während der Deserialisierung verwendet werden sollte. Dieses Element gibt einen "bekannten Typ" an, der von einem Feld oder einer Eigenschaft eines "deklarierten Typs" zurückgegeben werden kann. Weitere Informationen finden Sie unter [Data Contract Known Types](../../../wcf/feature-details/data-contract-known-types.md).  
   
  \<system.runtime.serialization>  
-\<dataContractSerializer>  
-\<DeclaredTypes >-Element  
-\<add> of \<declaredTypes>  
-\<KnownType >-Element  
+\<DataContractSerializer->  
+\<DeclaredTypes > Element  
+\<Fügen Sie > \<von DeclaredTypes hinzu >  
+\<KnownType-> Element  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,18 +43,18 @@ Gibt einen Typ an, der vom <xref:System.Runtime.Serialization.DataContractSerial
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<parameter>](../../../../../docs/framework/configure-apps/file-schema/wcf/parameter.md)|Gibt einen Parameterindex an, wenn der deklarierte Typ ein generischer Typ ist.|  
+|[\<parameter>](parameter.md)|Gibt einen Parameterindex an, wenn der deklarierte Typ ein generischer Typ ist.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)|Fügt der Auflistung deklarierter Typen einen deklarierten Typ hinzu.|  
+|[\<add>](add-of-declaredtypes-element.md)|Fügt der Auflistung deklarierter Typen einen deklarierten Typ hinzu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Weitere Informationen zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) und <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Weitere Informationen zu bekannten Typen finden Sie unter [Data Contract Known Types](../../../wcf/feature-details/data-contract-known-types.md) and <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- Finden Sie unter den [ \<DataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) ein Beispiel für die Verwendung dieses Elements.  
+ Ein Beispiel für die Verwendung dieses Elements finden Sie im [ \<> DataContractSerializer](datacontractserializer-element.md) .  
   
 ## <a name="example"></a>Beispiel  
   
@@ -72,6 +72,6 @@ Gibt einen Typ an, der vom <xref:System.Runtime.Serialization.DataContractSerial
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Bekannte Typen in Datenverträgen](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [Bekannte Typen in Datenverträgen](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer>](datacontractserializer-element.md)
+- [\<add>](add-of-declaredtypes-element.md)

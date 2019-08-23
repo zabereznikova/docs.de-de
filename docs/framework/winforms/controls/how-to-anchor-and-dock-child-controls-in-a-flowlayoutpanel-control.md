@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: f67733b89d2bde652449e2338362868fdb84bcf3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a00fcd53211dd126c0e9203d6d577959b971e70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922908"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement
 Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement unterstützt die Eigenschaften <xref:System.Windows.Forms.Control.Anchor%2A> und <xref:System.Windows.Forms.Control.Dock%2A> in seinen untergeordneten Steuerelementen.  
@@ -21,16 +21,16 @@ Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement unterstützt die E
   
 1. Erstellen Sie ein <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement auf dem Formular.  
   
-2. Festlegen der <xref:System.Windows.Forms.Control.Width%2A> von der <xref:System.Windows.Forms.FlowLayoutPanel> die Steuerung an **300**, und legen Sie seine <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> zu <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. Legen Sie <xref:System.Windows.Forms.Control.Width%2A> für das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement den Wert **300**fest <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> , <xref:System.Windows.Forms.FlowDirection.TopDown>und legen Sie dessen auf fest.  
   
 3. Erstellen Sie zwei <xref:System.Windows.Forms.Button>-Steuerelemente, und platzieren Sie diese im <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.  
   
-4. Legen Sie die <xref:System.Windows.Forms.Control.Width%2A> der ersten Schaltfläche auf **200**.  
+4. Legen Sie <xref:System.Windows.Forms.Control.Width%2A> die der ersten Schaltfläche auf **200**fest.  
   
 5. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft der zweiten Schaltfläche auf <xref:System.Windows.Forms.DockStyle.Fill> fest.  
   
     > [!NOTE]
-    >  Für die zweite Schaltfläche wird dieselbe Breite angenommen wie für die erste Schaltfläche. Die Schaltfläche erstreckt sich nicht über die Breite des <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelements.  
+    > Für die zweite Schaltfläche wird dieselbe Breite angenommen wie für die erste Schaltfläche. Die Schaltfläche erstreckt sich nicht über die Breite des <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelements.  
   
 6. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft der zweiten Schaltfläche auf `None` fest. Dadurch wird die Schaltfläche auf ihre ursprüngliche Breite zurückgesetzt.  
   

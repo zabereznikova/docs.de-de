@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666769"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918295"
 ---
 # <a name="layout"></a>Layout
 In diesem Thema wird das WPF-Layoutsystem (Windows Presentation Foundation) beschrieben. Das Verständnis, wie und wann Layoutberechnungen auftreten, ist wesentlich für das Erstellen von Benutzeroberflächen in WPF.  
@@ -89,7 +89,7 @@ In diesem Thema wird das WPF-Layoutsystem (Windows Presentation Foundation) besc
  Zweitens werden Framework-Eigenschaften, <xref:System.Windows.FrameworkElement> die für definiert sind, verarbeitet. dies `constraintSize`wirkt sich auf den Wert von aus. Diese Eigenschaften beschreiben in der Regel die Größen Anpassungs Merkmale <xref:System.Windows.UIElement>der zugrunde liegenden, <xref:System.Windows.FrameworkElement.Height%2A>wie <xref:System.Windows.FrameworkElement.Width%2A>z. b <xref:System.Windows.FrameworkElement.Style%2A>.,, <xref:System.Windows.FrameworkElement.Margin%2A>und. Jede dieser Eigenschaften kann den Bereich ändern, der zum Anzeigen des Elements nötig ist. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>wird dann mit `constraintSize` als Parameter aufgerufen.  
   
 > [!NOTE]
->  Es gibt einen Unterschied zwischen den Eigenschaften <xref:System.Windows.FrameworkElement.Height%2A> von <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.ActualHeight%2A> und <xref:System.Windows.FrameworkElement.ActualWidth%2A>und. Beispielsweise ist die <xref:System.Windows.FrameworkElement.ActualHeight%2A> -Eigenschaft ein berechneter Wert, der auf anderen Höhen Eingaben und dem Layoutsystem basiert. Der Wert wird vom Layoutsystem selbst festgelegt, basierend auf einem tatsächlichen Renderingdurchlauf, und kann daher etwas hinter dem festgelegten Wert von Eigenschaften <xref:System.Windows.FrameworkElement.Height%2A>, wie z. b., liegen, der die Grundlage für die Eingabe Änderung ist.  
+> Es gibt einen Unterschied zwischen den Eigenschaften <xref:System.Windows.FrameworkElement.Height%2A> von <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.ActualHeight%2A> und <xref:System.Windows.FrameworkElement.ActualWidth%2A>und. Beispielsweise ist die <xref:System.Windows.FrameworkElement.ActualHeight%2A> -Eigenschaft ein berechneter Wert, der auf anderen Höhen Eingaben und dem Layoutsystem basiert. Der Wert wird vom Layoutsystem selbst festgelegt, basierend auf einem tatsächlichen Renderingdurchlauf, und kann daher etwas hinter dem festgelegten Wert von Eigenschaften <xref:System.Windows.FrameworkElement.Height%2A>, wie z. b., liegen, der die Grundlage für die Eingabe Änderung ist.  
 >   
 >  Da <xref:System.Windows.FrameworkElement.ActualHeight%2A> ein berechneter Wert ist, sollten Sie beachten, dass es möglicherweise mehrere oder inkrementell gemeldete Änderungen an ihm aufgrund von verschiedenen Vorgängen durch das Layoutsystem gibt. Das Layoutsystem berechnet möglicherweise den Bereich für untergeordnete Elemente, Einschränkungen durch übergeordnete Elemente usw.  
   

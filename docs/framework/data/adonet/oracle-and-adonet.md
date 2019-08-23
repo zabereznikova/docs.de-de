@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 381f796bec31bece354001ad46bf5079381d1b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877948"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914555"
 ---
 # <a name="oracle-and-adonet"></a>Oracle und ADO.NET
 > [!NOTE]
->  Die Typen in <xref:System.Data.OracleClient> sind veraltet. Die Typen werden in der aktuellen .NET Framework-Version weiterhin unterstützt, die Unterstützung wird jedoch in einem zukünftigen Release eingestellt. Microsoft empfiehlt, einen anderen Oracle-Anbieter zu verwenden.  
+> Die Typen in <xref:System.Data.OracleClient> sind veraltet. Die Typen werden in der aktuellen .NET Framework-Version weiterhin unterstützt, die Unterstützung wird jedoch in einem zukünftigen Release eingestellt. Microsoft empfiehlt, einen anderen Oracle-Anbieter zu verwenden.  
   
- Dieser Abschnitt beschreibt die Funktionen und Verhaltensweisen, die spezifisch für die .NET Framework-Datenanbieter für Oracle sind.  
+ In diesem Abschnitt werden Funktionen und Verhaltensweisen beschrieben, die für die .NET Framework Datenanbieter für Oracle spezifisch sind.  
   
- Die .NET Framework-Datenanbieter für Oracle ermöglicht den Zugriff auf eine Oracle-Datenbank, die mit der Oracle aufrufen-Schnittstelle (OCI) von Oracle-Clientsoftware bereitgestellt. Die Funktionalität des Datenanbieters soll ähnelt der von der .NET Framework-Datenanbieter für SQL Server, OLE DB und ODBC werden.  
+ Der .NET Framework Datenanbieter für Oracle ermöglicht den Zugriff auf eine Oracle-Datenbank mithilfe von OCI (Oracle callinterface), wie von der Oracle-Client Software bereitgestellt. Die Funktionalität des Datenanbieters ist so konzipiert, dass Sie mit der .NET Framework Datenanbieter für SQL Server, OLE DB und ODBC vergleichbar ist.  
   
- Um den .NET Framework-Datenanbieter für Oracle verwenden zu können, muss eine Anwendung verweisen die <xref:System.Data.OracleClient> Namespace wie folgt:  
+ Um die .NET Framework Datenanbieter für Oracle zu verwenden, muss eine Anwendung wie <xref:System.Data.OracleClient> folgt auf den-Namespace verweisen:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Systemanforderungen](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Beschreibt die Anforderungen für die Verwendung der .NET Framework-Datenanbieter für Oracle und eine Reihe von Problemen, zu berücksichtigen, dass bei dessen Verwendung beschreibt.  
+ Beschreibt die Anforderungen für die Verwendung der .NET Framework Datenanbieter für Oracle und beschreibt eine Reihe von Problemen, die bei der Verwendung von zu beachten sind.  
   
  [Oracle-BFILEs](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Beschreibt die <xref:System.Data.OracleClient.OracleBFile>-Klasse, die zum Arbeiten mit dem BFILE-Datentyp von Oracle verwendet wird.  

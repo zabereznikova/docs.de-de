@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 645d19219481d22ade90f44aaecb62471eb915d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801991"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930849"
 ---
 # <a name="string-functions-visual-basic"></a>String-Funktionen (Visual Basic)
 In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum Suchen und Bearbeiten von Zeichenfolgen bereitstellt.  
@@ -46,7 +46,7 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne führende oder nachgestellte Leerzeichen enthält.|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Gibt eine Zeichenfolge oder ein Zeichen zurück, die bzw. das die angegebene Zeichenfolge in Großbuchstaben enthält.|  
   
- Können Sie die [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) Anweisung, um festzulegen, ob die Zeichenfolgen verglichen mit einem Groß-/Kleinschreibung Text bestimmt, indem das Gebietsschema des Systems Sortierreihenfolge (`Text`) oder durch den internen binären Darstellungen von den Zeichen () `Binary`). Die Standardmethode zum Textvergleich ist `Binary`.  
+ Mithilfe der [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) -Anweisung können Sie festlegen, ob Zeichen folgen mithilfe einer Text Sortierreihenfolge ohne Beachtung der Groß-/Kleinschreibung`Text`verglichen werden, die durch das Gebiets Schema des Systems (`Binary`) oder durch die internen binären Darstellungen der Zeichen () bestimmt wird. Die Standardmethode zum Textvergleich ist `Binary`.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die `UCase`-Funktion verwendet, um eine Zeichenfolge in Großbuchstaben zurückzugeben:  
@@ -77,7 +77,7 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
  Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`-Funktion zur Formatierung von Werten mit `String`-Formaten und benutzerdefinierten Formaten. Die tatsächlich von Ihrem System ausgegebene Formatierung von Datumstrennzeichen (`/`), Trennzeichen für Zeitangaben (`:`) und AM/PM-Indikatoren (`t` und `tt`) richtet sich nach den Gebietsschemaeinstellungen des Codes. Wenn Datums- und Zeitangaben in der Entwicklungsumgebung angezeigt werden, werden das 24-Stunden-Zeitformat und das kurze Datumsformat des für den Code ausgewählten Gebietsschemas verwendet.  
   
 > [!NOTE]
->  Für Gebietsschemas, die das 24-Stunden-Format verwenden, zeigen die AM/PM-Indikatoren (`t` und `tt`) nichts an.  
+> Für Gebietsschemas, die das 24-Stunden-Format verwenden, zeigen die AM/PM-Indikatoren (`t` und `tt`) nichts an.  
   
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   

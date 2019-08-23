@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a62199563c620156885c941204207b185834beb4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30500e8ea55f8298b9a980e34dc611b58a51bdcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752145"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916397"
 ---
-# <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE-Enumeration
+# <a name="cor_prf_jit_cache-enumeration"></a>COR_PRF_JIT_CACHE-Enumeration
 Zeigt das Ergebnis einer zwischengespeicherten Funktionssuche.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` hat den Wert 0 (null), also `COR_PRF_JIT_CACHE` kann nicht als boolesches Ersatzzeichen verwendet werden.  
+> `COR_PRF_CACHED_FUNCTION_FOUND`hat den Wert 0 (null) `COR_PRF_JIT_CACHE` und kann daher nicht als boolesches Ersatz Zeichen verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,15 +42,15 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|Die Suche finden Sie die Funktion.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|Die Suche wurde die Funktion nicht gefunden werden.|  
+|`COR_PRF_FUNCTION_FOUND`|Bei der Suche wurde die-Funktion gefunden.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Die Funktion wurde von der Suche nicht gefunden.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Header:** Corprof. idl, Corprof. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

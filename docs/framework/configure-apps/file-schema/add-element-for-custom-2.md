@@ -1,5 +1,5 @@
 ---
-title: <add> Element für NameValueSectionHandler und DictionarySectionHandler
+title: <add>-Element für NameValueSectionHandler und diktarysectionhandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 3bbe4ad6559e324db5853b95e797f50a7b908dcb
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ec6d5045580e887de5f05a05c8f39fa62c6e3f2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301431"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921333"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Hinzufügen >-Element für NameValueSectionHandler und DictionarySectionHandler
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Add >-Element für NameValueSectionHandler und "diktarysectionhandler"
 
-Fügt benutzerdefinierte Anwendungseinstellungen hinzu. Jede  **\<hinzufügen >** -Tag enthält ein Schlüssel/Wert-Paar.
+Fügt benutzerdefinierte Anwendungseinstellungen hinzu. **Jedes\<Add >** -Tag enthält ein Schlüssel-Wert-Paar.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>Syntax
@@ -34,22 +34,22 @@ Fügt benutzerdefinierte Anwendungseinstellungen hinzu. Jede  **\<hinzufügen >*
 
 | Attribut | Beschreibung |
 | --------- | ----------- |
-| **key**   | Erforderliches Attribut.<br><br>Gibt den Namen der Einstellung. |
-| **value** | Erforderliches Attribut.<br><br>Gibt den Wert der Einstellung. |
+| **key**   | Erforderliches Attribut.<br><br>Gibt den Namen der Einstellung an. |
+| **value** | Erforderliches Attribut.<br><br>Gibt den Wert der Einstellung an. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 | Element | Beschreibung |
 | ------- | ------------|
-| [ **\<sectionName>** Element](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definiert die Einstellungen für die benutzerdefinierten Konfigurationsabschnitte, mit denen die <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> Klassen. |
+| [sectionName > Element  **\<** ](custom-element-2.md) | Definiert Einstellungen für benutzerdefinierte Konfigurations Abschnitte, die <xref:System.Configuration.NameValueSectionHandler> die <xref:System.Configuration.DictionarySectionHandler> -Klasse und die-Klasse verwenden. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+None
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie zum Definieren eines benutzerdefinierten Konfigurationsabschnitts und Verwenden der  **\<hinzufügen >** Element, Einstellungen in den Abschnitt zu speichern:
+Im folgenden Beispiel wird gezeigt, wie ein benutzerdefinierter Konfigurations Abschnitt definiert wird und wie mit dem  **\<Add >** -Element Einstellungen in den Abschnitt eingefügt werden:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ Das folgende Beispiel zeigt, wie zum Definieren eines benutzerdefinierten Konfig
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden ( *"Machine.config"* ), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

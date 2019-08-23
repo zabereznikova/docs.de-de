@@ -2,141 +2,141 @@
 title: WCF-Testclient (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 9044dc2479e8e0a31a6152321231ee1936b74351
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 56074bf051478e9da1bc11479284883f7321bd63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916800"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF-Testclient (WcfTestClient.exe)
-Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GUI-Tool, das kann Benutzer Testparameter eingeben, die Eingabe an den Dienst senden, und zeigen die Antwort, die der Dienst zurücksendet. Es bietet eine nahtlose diensttest mit WCF-Diensthost kombiniert.  
+Windows Communication Foundation (WCF)-Test Client (WcfTestClient. exe) ist ein GUI-Tool, mit dem Benutzer Testparameter eingeben, die Eingabe an den Dienst senden und die vom Dienst zurück gesendete Antwort anzeigen können. Diese Funktion bietet eine nahtlose Dienst Testfunktion, wenn Sie mit dem WCF-Dienst Host kombiniert wird.  
   
- Finden Sie in der Regel WCF-Testclient (WcfTestClient.exe) an folgendem Speicherort: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` – Community möglicherweise eines der "Enterprise", "Professional" oder "Community" abhängig von der Ebene von Visual Studio installiert ist.
+ Der WCF-Test Client (WcfTestClient. exe) befindet sich in der Regel am folgenden Speicherort:-Community kann je nach installierter Ebene von Visual Studio eine der folgenden Werte sein: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` "Enterprise", "Professional" oder "Community".
   
 ## <a name="scenarios-for-using-test-client"></a>Szenarien für das Verwenden des Testclients  
- Den folgenden Abschnitten werden die häufigsten Szenarien, in denen Sie WCF-Testclient verwenden können, um Ihren Entwicklungsprozess zu optimieren.  
+ In den folgenden Abschnitten werden die häufigsten Szenarien erläutert, in denen Sie den WCF-Test Client verwenden können, um Ihren Entwicklungsprozess zu optimieren.  
   
 ### <a name="inside-visual-studio"></a>In Visual Studio  
   
 #### <a name="wcf-service-host-starts-wcf-test-client-with-a-single-service"></a>Der WCF-Diensthost startet den WCF-Testclient mit einem einzelnen Dienst.  
- Nachdem Sie ein neues Projekt des WCF-Dienst erstellen, und drücken Sie F5, um den Debugger zu starten, beginnt der WCF-Diensthost, zum Hosten des Diensts in Ihrem Projekt. Klicken Sie dann WCF-Testclient wird geöffnet und zeigt eine Liste der in der Konfigurationsdatei definierten Dienstendpunkte. Sie können die Parameter testen und den Dienst aufrufen und anschließend den Vorgang wiederholen, um den Dienst kontinuierlich zu testen und zu validieren.  
+ Nachdem Sie ein neues WCF-Dienstprojekt erstellt und F5 drücken, um den Debugger zu starten, beginnt der WCF-Dienst Host mit dem Hosten des Diensts in Ihrem Projekt. Anschließend wird der WCF-Test Client geöffnet, und es wird eine Liste der in der Konfigurationsdatei definierten Dienst Endpunkte angezeigt. Sie können die Parameter testen und den Dienst aufrufen und anschließend den Vorgang wiederholen, um den Dienst kontinuierlich zu testen und zu validieren.  
   
 #### <a name="wcf-service-host-starts-wcf-test-client-with-multiple-services"></a>Der WCF-Diensthost startet den WCF-Testclient mit mehreren Diensten.  
- Sie können die WCF-Testclient auch verwenden, um ein Dienstprojekt Debuggen, die mehrere Dienste enthält. Wenn WCF-Testclient geöffnet wird, durchläuft die Liste der Dienste in Ihrem Projekt wird automatisch an und öffnet sie zum Testen.  
+ Sie können auch den WCF-Test Client verwenden, um ein Dienstprojekt zu debuggen, das mehrere Dienste enthält. Wenn der WCF-Test Client geöffnet wird, durchläuft er automatisch die Liste der Dienste in Ihrem Projekt und öffnet diese zum Testen.  
   
 ### <a name="outside-visual-studio"></a>Außerhalb von Visual Studio  
- Sie können auch die WCF-Testclient (WcfTestClient.exe) außerhalb von Visual Studio So testen Sie einen beliebigen Dienst im Internet aufrufen. Das Tool befindet sich im folgenden Verzeichnis:  
+ Sie können auch den WCF-Test Client (WcfTestClient. exe) außerhalb von Visual Studio aufrufen, um einen beliebigen Dienst im Internet zu testen. Das Tool befindet sich im folgenden Verzeichnis:  
   
- `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (wobei Community sein kann "Enterprise", "Professional" oder "Community", je nachdem, welche Ebene der Visual Studio auf dem Computer installiert ist)
+ `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(wobei die Community abhängig davon, welche Ebene von Visual Studio auf dem Computer installiert ist, eine "Enterprise", "Professional" oder "Community" sein kann)
   
  Doppelklicken Sie zum Verwenden des Tools auf den Dateinamen, um das Tool von dessen Verzeichnis aus zu öffnen, oder starten Sie das Tool mithilfe einer Befehlszeile.  
   
- WCF-Testclient nimmt eine beliebige Anzahl von URIs als Befehlszeilenargumente an.  Bei diesen handelt es sich um die URIs der Dienste, die getestet werden können.  
+ Der WCF-Test Client nimmt eine beliebige Anzahl von URIs als Befehlszeilenargumente an.  Bei diesen handelt es sich um die URIs der Dienste, die getestet werden können.  
   
  `wcfTestClient.exe URI1 URI2 …`  
   
- Nachdem das Fenster des WCF-Testclient geöffnet wird, klicken Sie auf **Datei**->**Dienst hinzufügen**, und geben Sie die Endpunktadresse des Diensts, die Sie öffnen möchten.  
+ Nachdem das Fenster WCF-Test Client geöffnet wurde, klicken Sie auf **Datei**->**Dienst hinzufügen**, und geben Sie die Endpunkt Adresse des Dienstanbieter ein, den Sie öffnen möchten.  
   
 ## <a name="wcf-test-client-user-interface"></a>WCF-Testclient-Benutzeroberfläche  
- Sie können WCF-Testclient mit einem einzelnen Dienst oder mehrere Dienste verwenden.  
+ Sie können den WCF-Test Client mit einem einzelnen Dienst oder mehreren Diensten verwenden.  
   
 ### <a name="service-operations"></a>Dienstvorgänge  
- Linke Bereich des Hauptfensters WCF-Testclient Listet alle verfügbaren Dienste sowie die entsprechenden Endpunkte und Vorgänge.  
+ Im linken Bereich des Hauptfensters des WCF-Test Clients werden alle verfügbaren Dienste zusammen mit den jeweiligen Endpunkten und Vorgängen aufgelistet.  
   
  Durch Doppelklicken auf einen Vorgang wird dessen Inhalt im rechten Bereich auf einer neuen Registerkarte angezeigt, die mit dem Namen des Vorgangs versehen ist.  
   
  Im linken Bereich werden auch die Clientkonfigurationsdateien aufgeführt. Doppelklicken Sie auf eines der Elemente, um den Inhalt der Datei im rechten Bereich in einem neuen Fenster mit Registerkarten anzuzeigen.  
   
 ### <a name="entering-test-parameters"></a>Eingeben der Testparameter  
- Doppelklicken Sie zur Anzeige der Testparameter auf einen Vorgang, um ihn im rechten Bereich zu öffnen. Die Parameter werden im gezeigten **formatierte** Ansicht, und Sie können beliebige Werte für die Parameter zum Testen des Diensts eingeben.  
+ Doppelklicken Sie zur Anzeige der Testparameter auf einen Vorgang, um ihn im rechten Bereich zu öffnen. Die Parameter werden standardmäßig in der formatierten Ansicht angezeigt, und Sie können beliebige Werte für die Parameter eingeben, um den Dienst zu testen.  
   
- Klicken Sie zum Anzeigen der Nachricht XML **XML**. Um diese an den Dienst senden, klicken Sie auf **Invoke**.  
+ Um den XML-Code der Nachricht anzuzeigen, klicken Sie auf **XML**. Klicken Sie auf **aufrufen**, um Sie an den Dienst zu senden.  
   
- Für einen datasetparameter, klicken Sie auf die **...** neben **bearbeiten...** in einem neuen Fenster mit DataGrid bearbeiten. Beachten Sie die Anzeige der **DataSet kopieren** und **DataSet einfügen** Schaltflächen. Wenn das Schema des DataSet-Objekts bei der ersten Bearbeitung unbekannt ist, ist das DataGrid leer. Sie müssen ein DataSet-Objekt mit dem gleichen Schema in das aktuelle Objekt im DataGrid einfügen. (Beachten Sie, dass Sie das Schema vor dem Einfügevorgang an anderer Stelle kopieren müssen.) Sie können auch ein Dataset-Objekt, für die zukünftige Verwendung kopieren, indem Sie auf die **DataSet kopieren** Schaltfläche.  
+ Für einen Datasetparameter klicken Sie auf **...** Schaltfläche neben **Bearbeiten..** . , um Sie in einem neuen Fenster zu bearbeiten, das das DataGrid anzeigt. Beachten Sie die Darstellung der Schaltflächen **DataSet kopieren** und **DataSet einfügen** . Wenn das Schema des DataSet-Objekts bei der ersten Bearbeitung unbekannt ist, ist das DataGrid leer. Sie müssen ein DataSet-Objekt mit dem gleichen Schema in das aktuelle Objekt im DataGrid einfügen. (Beachten Sie, dass Sie das Schema vor dem Einfügevorgang an anderer Stelle kopieren müssen.) Sie können auch ein DataSet-Objekt zur späteren Verwendung kopieren, indem Sie auf die Schaltfläche **DataSet kopieren** klicken.  
   
  Die Antwort des Dienstes wird unter den Testparametern angezeigt.  
   
 > [!NOTE]
->  Ist der erwartete Rückgabewert eine Zeichenfolge, wird das Ergebnis als Zeichenfolge in Anführungszeichen angezeigt, auch wenn die Eingabe selbst nicht in Anführungszeichen angegeben wurde.  
+> Ist der erwartete Rückgabewert eine Zeichenfolge, wird das Ergebnis als Zeichenfolge in Anführungszeichen angezeigt, auch wenn die Eingabe selbst nicht in Anführungszeichen angegeben wurde.  
   
  Wenn Sie einen bestimmten Vorgang beim Erstellen des Dienstvertrags als einseitig festgelegt haben, wird keine Dienstantwort angezeigt. Sobald die Nachricht für die Lieferung in die Warteschlange gestellt wird, wird ein Dialogfeld angezeigt, dass die Nachricht erfolgreich gesendet wurde.  
   
 ### <a name="session-support"></a>Sitzungsunterstützung  
- Die **neuen Proxy starten** Kontrollkästchen auf der Registerkarte "eines Dienstvorgangs" können Sie sitzungsunterstützung. Dieses Kontrollkästchen ist in der Standardeinstellung deaktiviert.  
+ Mit dem Kontrollkästchen **neuen Proxy starten** auf der Registerkarte eines Dienst Vorgangs können Sie die Sitzungsunterstützung umschalten. Dieses Kontrollkästchen ist in der Standardeinstellung deaktiviert.  
   
- Wenn Sie Testparameter für einen bestimmten Vorgang (oder einen anderen Vorgang im gleichen Dienstendpunkt) eingeben, und klicken Sie auf **Invoke** mehrmals mit dem das Kontrollkästchen deaktiviert ist, diese Vorgänge gleiche Proxy und der Dienststatus über mehrere Vorgänge hinweg beibehalten.  
+ Wenn Sie Testparameter für einen bestimmten Vorgang (oder einen anderen Vorgang im gleichen Dienst Endpunkt) eingeben und mehrmals auf **aufrufen** klicken, wenn das Kontrollkästchen deaktiviert ist, nutzen diese Vorgänge einen Proxy gemeinsam, und der Dienststatus wird über mehrere Operations.  
   
- Wenn die **neuen Proxy starten** das Kontrollkästchen aktiviert ist, wird ein neuer Proxy gestartet, für die einzelnen **Invoke**, das vorherige sitzungsszenario wird beendet, und der Dienststatus wird zurückgesetzt.  
+ Wenn das Kontrollkästchen **neuen Proxy starten** aktiviert ist, wird für jeden **Aufruf**ein neuer Proxy gestartet, das vorherige Sitzungs Szenario wurde beendet, und der Dienststatus wird zurückgesetzt.  
   
 ### <a name="editing-client-configuration"></a>Bearbeiten der Clientkonfiguration  
- Linke Bereich des Hauptfensters WCF-Testclient Clientkonfigurationsdateien aufgeführt. Doppelklicken Sie auf eines der Elemente, um im rechten Bereich die Inhalte der Datei anzuzeigen.  
+ Im linken Bereich des Hauptfensters des WCF-Test Clients werden die Client Konfigurationsdateien aufgelistet. Doppelklicken Sie auf eines der Elemente, um im rechten Bereich die Inhalte der Datei anzuzeigen.  
   
 #### <a name="edit-with-service-configuration-editor"></a>Bearbeiten mit dem Service Configuration Editor  
- Mit der rechten Maustaste **Konfigurationsdatei** im linken Bereich, und wählen im Kontextmenü **mit SvcConfigEditor bearbeiten**. Der Service Configuration Editor wird mit dem Clientkonfigurationsinhalt gestartet. Sie können die Konfiguration bearbeiten und innerhalb des Tools speichern.  
+ Klicken Sie im linken Bereich mit der rechten Maustaste auf **Konfigurationsdatei** , und wählen Sie das Kontextmenü **mit SvcConfigEditor bearbeiten**aus. Der Service Configuration Editor wird mit dem Clientkonfigurationsinhalt gestartet. Sie können die Konfiguration bearbeiten und innerhalb des Tools speichern.  
   
- Nach dem Speichern der Datei in der Service Configuration Editor zeigt die WCF-Testclient eine Warnmeldung an, die Sie informiert werden, die die Datei wurde außerhalb von geändert, und fragt, ob Sie sie erneut laden möchten.  
+ Nach dem Speichern der Datei im Dienstkonfigurations-Editor zeigt der WCF-Test Client eine Warnmeldung an, die Sie darüber informiert, dass die Datei außerhalb von geändert wurde, und fragt, ob Sie Sie erneut laden möchten.  
   
- Bei Auswahl von **Ja**, der konfigurationsinhalt auf der Registerkarte "Client.dll.config" spiegelt wider, die Sie im Editor vorgenommenen Änderungen.  
+ Wenn Sie **Ja**auswählen, gibt der Konfigurations Inhalt auf der Registerkarte "Client. dll. config" die im Editor vorgenommenen Änderungen wieder.  
   
- Bei Auswahl von **keine**, es bleibt der konfigurationsinhalt auf der Registerkarte "Client.dll.config" unverändert, und der geänderte Inhalt wird automatisch zur Quelldatei gespeichert.  
+ Wenn Sie **Nein**auswählen, bleibt der Konfigurations Inhalt auf der Registerkarte "Client. dll. config" unverändert, und der geänderte Inhalt wird automatisch in der Quelldatei gespeichert.  
   
 #### <a name="restore-to-default-configuration"></a>Wiederherstellen der Standardkonfiguration  
- Wenn Sie möchten verwerfen aller Änderungen und Wiederherstellen der Standardkonfiguration für den Client, mit der rechten Maustaste **Konfigurationsdatei** im linken Bereich, und wählen im Kontextmenü **Standardkonfiguration wiederherstellen**. Der standardkonfigurationswert wird geladen und Inhalt in der Registerkarte "Client.dll.config" wird wiederhergestellt.  
+ Wenn Sie alle Änderungen abbrechen und in der standardmäßigen Client Konfiguration wiederherstellen möchten, klicken Sie im linken Bereich mit der rechten Maustaste auf **Konfigurationsdatei** , und wählen Sie das Kontextmenü in **Standardkonfiguration wiederherstellen**aus. Der Standard Konfigurations Wert wird geladen, und der Inhalt der Registerkarte "Client. dll. config" wird wieder hergestellt.  
   
 #### <a name="validate-changes"></a>Überprüfen von Änderungen  
- Bei der gespeicherte Änderungen in WCF-Testclient geladen werden, wird die Konfiguration auf Gültigkeit für WCF-Schema überprüft. Sind Fehler vorhanden, wird ein Dialogfeld mit Fehlerdetails angezeigt.  
+ Wenn gespeicherte Änderungen in den WCF-Test Client geladen werden, wird die Konfiguration auf Gültigkeit des WCF-Schemas überprüft. Sind Fehler vorhanden, wird ein Dialogfeld mit Fehlerdetails angezeigt.  
   
- Während der Proxygenerierung, binäre kompilieren oder Dienst aufgerufen werden sind die Menüelemente, bearbeiten (d. h. "Bearbeiten...", "..." Wiederherstellen"usw.) unterstützen, deaktiviert. Aufrufen von Diensten ist auch deaktiviert werden, wenn WCF-Testclient laden Konfiguration aktualisiert.  
+ Während der Proxy Generierung, Binär Kompilierung oder Dienst Aufruf werden Menü Elemente, die die Bearbeitung unterstützen (d. h. "bearbeiten...", "wiederherstellen..." usw.), deaktiviert. Der Dienst Aufruf ist auch beim Laden der aktualisierten Konfiguration in den WCF-Test Client deaktiviert.  
   
 #### <a name="persist-client-configuration"></a>Beibehalten der Clientkonfiguration  
- Die **Tools**->**Optionen**->**Clientkonfiguration** Registerkarte enthält eine **immer neu generieren Konfiguration beim Starten Dienste** Option, die standardmäßig aktiviert ist. Diese Option gibt an, dass jedes Mal, wenn einen Dienst von WCF-Testclient geladen wird, eine Konfigurationsdatei, die basierend auf dem aktuellen Dienstvertrag und die Dateien "App.config" generiert.  
+ -> Die Registerkarte Extras Optionen Client Konfiguration enthält die Option Konfiguration beim Starten von Diensten immer neu generieren, die standardmäßig aktiviert ist.-> Diese Option gibt an, dass jedes Mal, wenn der WCF-Test Client einen Dienst lädt, eine Konfigurationsdatei auf der Grundlage der aktuellen Dienstvertrags-und Dienst-app. config-Dateien erneut generiert wird.  
   
- Wenn Sie die Clientkonfiguration für den WCF-Dienst bearbeitet haben, und möchten, immer diese aktualisierte Datei verwenden, um Ihren Dienst zu debuggen, deaktivieren Sie die **generieren** Option. Auf diese Weise auch, wenn Sie den Dienst aktualisieren, und öffnen Sie die WCF-Testclient erneut wird die Datei "Client.dll.config" diejenige aus, die Sie zuvor anstelle einer neu aktualisiert eine abhängig von den aktualisierten Dienst.  
+ Wenn Sie die Client Konfiguration für den WCF-Dienst bearbeitet haben und diese aktualisierte Datei immer zum Debuggen des diensdienstanbieter verwenden möchten, können Sie die Option neu **generieren** deaktivieren. Auf diese Weise können Sie die Datei "Client. dll. config", selbst wenn Sie den Dienst aktualisieren und den WCF-Test Client erneut öffnen, anstelle eines erneuten generierten Dienstanbieter aktualisieren.  
   
  Die Konfigurationsdatei muss jedoch möglicherweise bearbeitet werden, um sie mit dem neu generierten Proxy abzustimmen. Stimmen der neu generierte Proxy und die Konfigurationsdatei aufgrund eines aktualisierten Diensts nicht überein, treten beim Aufrufen des Diensts entsprechende Fehler auf.  
   
 > [!CAUTION]
 >  Für den Fall, dass Sie die Clientkonfigurationsdatei geändert haben und später wieder verwenden möchten, finden Sie die Datei im folgenden Verzeichnis:  
 >   
->  \Documents and Settings\\[Benutzerkonto] \My Documents\Test Clientprojekte.  
+>  \Dokumente und Einstellungen\\[Benutzerkonto] \Eigene documents\testclientprojekte.  
 >   
 >  Aktualisierte Anmeldeinformationen, die in der Clientkonfigurationsdatei gespeichert sind, sind durch die Zugriffsteuerungsliste (Access Control List, ACL) dieses Ordners geschützt.  
   
 ### <a name="adding-removing-and-refreshing-services"></a>Hinzufügen, Entfernen und Aktualisieren von Diensten  
   
 #### <a name="add-service"></a>Hinzufügen eines Diensts  
- Klicken Sie auf **Datei**->**Dienst hinzufügen** WCF-Testclient einen Dienst hinzu. Geben Sie anschließend den URI (die Endpunktadresse) des hinzuzufügenden Diensts ein. Bei der Adresse des Diensts kann es sich um eine mex-Adresse oder um eine WSDL-Adresse handeln.  
+ Klicken Sie auf **Datei**->**Dienst hinzufügen** , um dem WCF-Test Client einen Dienst hinzuzufügen. Geben Sie anschließend den URI (die Endpunktadresse) des hinzuzufügenden Diensts ein. Bei der Adresse des Diensts kann es sich um eine mex-Adresse oder um eine WSDL-Adresse handeln.  
   
- Sie erhalten auch eine Liste der 10 zuletzt hinzugefügten Dienstendpunkten in die **zuletzt verwendete Dienste** Untermenü. Wenn Sie einen davon auswählen, wird der angegebene Dienst WCF-Testclient hinzugefügt.  
+ Sie können auch eine Liste der 10 zuletzt hinzugefügten Dienst Endpunkte im Untermenü " **zuletzt verwendete Dienste** " finden. Wenn Sie einen dieser Werte auswählen, wird der angegebene Dienst dem WCF-Test Client hinzugefügt.  
   
- Sie können auch mit der rechten Maustaste den Stamm der Dienststruktur **Meine Dienstprojekte**, und wählen Sie **Dienst hinzufügen** um das gleiche Ergebnis zu erzielen.  
+ Sie können auch mit der rechten Maustaste auf den Stamm der Dienststruktur **meine Dienstprojekte**klicken und **Dienst hinzufügen** auswählen, um das gleiche Ergebnis zu erzielen.  
   
  Menüelemente, die das Hinzufügen eines Diensts unterstützen, sind während der Proxygenerierung, Binärkompilierung sowie während Dienstaufrufen deaktiviert. Auch das Aufrufen von Diensten ist deaktiviert.  
   
 #### <a name="remove-service"></a>Entfernen eines Diensts  
- Mit der rechten Maustaste des dienststamms des Diensts entfernt werden soll, und wählen Sie **Dienst entfernen** von WCF-Testclient einen Dienst zu entfernen.  
+ Klicken Sie mit der rechten Maustaste auf den Dienst Stamm des zu entfernenden Dienstes, und wählen Sie **Dienst entfernen** aus, um einen Dienst vom WCF-Test Client zu entfernen.  
   
  Menüelemente, die das Entfernen eines Diensts unterstützen, sind während der Proxygenerierung, Binärkompilierung sowie während Dienstaufrufen deaktiviert. Auch das Aufrufen von Diensten ist deaktiviert.  
   
 #### <a name="refresh-service"></a>Aktualisieren eines Diensts  
- Wenn eine Änderung an den Dienst vorgenommen wird während WCF-Testclient ausgeführt wird, und Sie möchten sicherstellen, dass die WCF-Testclient-Implementierung für diesen Dienst auf dem neuesten Stand ist, mit der rechten Maustaste des dienststamms des Diensts, und wählen Sie **Dienst aktualisieren**. Der Dienststatus wird nach der Aktualisierung zurückgesetzt.  
+ Wenn an dem Dienst eine Änderung vorgenommen wird, während der WCF-Test Client ausgeführt wird und Sie sicherstellen möchten, dass die Implementierung des WCF-Test Clients für diesen Dienst auf dem neuesten Stand ist, klicken Sie mit der rechten Maustaste auf den Dienst Stamm des Dienstanbieter, und wählen Sie **Dienst aktualisieren**aus. Der Dienststatus wird nach der Aktualisierung zurückgesetzt.  
   
  Menüelemente, die das Aktualisieren eines Diensts unterstützen, sind während der Proxygenerierung, Binärkompilierung sowie während Dienstaufrufen deaktiviert. Auch das Aufrufen von Diensten ist deaktiviert.  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>Speicherort der vom Testclient generierten Dateien  
- Standardmäßig generiert die WCF-Testclient Anwendungscode und Konfigurationsdateien von Client im Ordner "%appdata%\Local\temp\Test Client Projects". Dieser Ordner wird gelöscht, nach dem Beenden des WCF-Testclient. Wenn eine Konfigurationsdatei im WCF-Testclient geändert wird und die **immer neu generieren Konfiguration beim Starten von Diensten** Option ist deaktiviert, die geänderte Datei wird kopiert, zu dem Ordner "CachedConfig" unter "Eigene Dateien\test Client Projects" mit einer Zuordnung (Metadaten-Adressen zu Datei-Namen) XML-Datei als Index.  
+ Standardmäßig speichert der WCF-Test Client generierten Client Code und die Konfigurationsdateien im Ordner "%APPDATA%\Local\temp\Test Client Projects". Dieser Ordner wird gelöscht, nachdem der WCF-Test Client beendet wurde. Wenn eine Konfigurationsdatei im WCF-Test Client geändert wird und die Option **Konfiguration beim Starten von Diensten immer neu generieren** deaktiviert ist, wird die geänderte Datei in den Ordner "cachedconfig" unter "eigene Dateien\Test Client Projects" mit einer Zuordnung kopiert ( die XML-Datei "Metadata-Address-to-File-Name" als Index.  
   
- Sie können auch WCF-Testclient starten, in einer Befehlszeile, mithilfe der `/ProjectPath` wechseln, um einen neuen Pfad zum Speichern der generierten Dateien anzugeben, oder verwenden Sie die `/RestoreProjectPath` Wechsel zu den standardmäßigen Speicherort wiederherzustellen. Die Syntax lautet wie folgt:  
+ Sie können den WCF-Test Client auch in einer Befehlszeile starten, `/ProjectPath` den Schalter verwenden, um einen neuen gewünschten Pfad zum Speichern generierter Dateien anzugeben `/RestoreProjectPath` , oder den-Schalter verwenden, um den Standard Speicherort wiederherzustellen. Die Syntax lautet wie folgt:  
   
  `wcfTestClient.exe /ProjectPath [desired location]`  
   
- Mit diesem Befehl wird die WCF-Testclient nicht geöffnet. Nur der Speicherort des Ordners wird geändert. Sie können diesen Befehl ausführen, ob der WCF-Testclient ausgeführt wird oder nicht. Der neue Speicherort wird übernommen, wenn WCF-Testclient neu gestartet wird. Informationen zum Speicherort der kann in der Registrierung oder in der WcfTestClient.exe.option-Datei im Ordner "%appdata%\Local\temp\Test Client Projects" gespeichert werden.  
+ Beim Ausführen dieses Befehls wird der WCF-Test Client nicht geöffnet. Nur der Speicherort des Ordners wird geändert. Sie können diesen Befehl ausführen, unabhängig davon, ob der WCF-Test Client ausgeführt wird oder nicht. Der neue Speicherort wird angewendet, wenn der WCF-Test Client neu gestartet wird. Die Speicherort Informationen können in der Registrierung oder in der Datei "WcfTestClient. exe. Option" im Ordner "%APPDATA%\Local\temp\Test Client Projects" gespeichert werden.  
   
 ## <a name="features-supported-by-wcf-test-client"></a>Vom WCF-Testclient unterstützte Funktionen  
- Im folgenden finden eine Liste von WCF-Testclient unterstützten Funktionen:  
+ Im folgenden finden Sie eine Liste der Funktionen, die vom WCF-Test Client unterstützt werden:  
   
-- Aufrufen von Diensten: Anforderung/Antwort und unidirektionale Nachricht.  
+- Dienst Aufruf: Anforderungs-/Antwort-und unidirektionale Nachricht.  
   
 - Bindungen: alle von Svcutil.exe unterstützten Bindungen.  
   
@@ -146,7 +146,7 @@ Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GU
   
 - XML-Serialisierung  
   
- Im folgenden finden eine Liste der Funktionen von WCF-Testclient nicht unterstützt:  
+ Im folgenden finden Sie eine Liste der Funktionen, die nicht vom WCF-Test Client unterstützt werden:  
   
 - Typen: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, Typen, die die <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle implementieren, einschließlich des zugehörigen <xref:System.Xml.Serialization.XmlSchemaProviderAttribute>-Attributs, sowie die Typen <xref:System.Xml.Linq.XDocument> und <xref:System.Xml.Linq.XElement> und der ADO.NET-Typ <xref:System.Data.DataTable>.  
   
@@ -156,14 +156,14 @@ Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GU
   
 - Sicherheit: CardSpace, Zertifikat und Benutzername/Kennwort.  
   
-- Bindungen: WSFederationbinding, beliebige kontextbindungen und Https-Bindung, WebHttpbinding (Unterstützung für Json-Antwort-Nachrichten).  
+- Land WSFederationbinding, beliebige Kontext Bindungen und HTTPS-Bindung, WebHttpBinding (Unterstützung für JSON-Antwort Nachrichten).  
   
 ## <a name="closing-wcf-test-client"></a>Schließen des WCF-Testclients  
- Sie können WCF-Testclient schließen, es gibt folgende Möglichkeiten:  
+ Sie können den WCF-Test Client auf folgende Weise schließen:  
   
-- Klicken Sie im Menü **Datei** auf **Beenden**. Klicken Sie alternativ im Hauptfenster von WCF-Testclient auf **schließen**. Sowohl der folgenden Aktionen auch WCF-Dienst-Auto-Host heruntergefahren und der Visual Studio-Debug-Vorgang zu beenden, wenn WCF-Testclient von Visual Studio gestartet wurde.  
+- Klicken Sie im Menü **Datei** auf **Beenden**. Alternativ können Sie im Hauptfenster des WCF-Test Clients auf **Schließen**klicken. Beide Aktionen beenden auch den automatischen WCF-Dienst Host und beenden den Visual Studio-Debugvorgang, wenn der WCF-Test Client von Visual Studio gestartet wurde.  
   
-- Mit der rechten Maustaste die **WCF-Diensthost** Symbol im Infobereich der Taskleiste, und klicken Sie dann auf **beenden.** Dies sowohl die WCF-Dienst-Auto-Host als auch die WCF-Testclient heruntergefahren und der Visual Studio-debuggenvorgang beendet.  
+- Klicken Sie im Benachrichtigungsbereich mit der rechten Maustaste auf das Symbol **WCF-Dienst Host** , und klicken Sie dann auf **beenden.** Dadurch wird der WCF-Dienst-Auto-Host und der WCF-Test Client heruntergefahren und der Visual Studio-Debugprozess beendet.  
   
 ## <a name="see-also"></a>Siehe auch
 

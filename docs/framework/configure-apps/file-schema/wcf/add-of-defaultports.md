@@ -2,14 +2,14 @@
 title: <add> von <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 5200c8893a89488b72c2c71d1a3703bf2aad1235
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2723dad14a63c4b05fdb70157f7eb21d193d3ab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704556"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926708"
 ---
-# <a name="add-of-defaultports"></a>\<Hinzufügen > der \<DefaultPorts >
+# <a name="add-of-defaultports"></a>\<Fügen Sie > \<von defaultports hinzu >
 Ein Standardkommunikationsendpunkt, den die Clientanwendung überwacht.  
   
  \<system.ServiceModel>  
@@ -48,7 +48,7 @@ Ein Standardkommunikationsendpunkt, den die Clientanwendung überwacht.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Eine Auflistung von Standardports mit den Standardkommunikationsendpunkten, die von der Clientanwendung überwacht werden.|  
+|[\<defaultPorts>](defaultports.md)|Eine Auflistung von Standardports mit den Standardkommunikationsendpunkten, die von der Clientanwendung überwacht werden.|  
   
 ## <a name="see-also"></a>Siehe auch
 

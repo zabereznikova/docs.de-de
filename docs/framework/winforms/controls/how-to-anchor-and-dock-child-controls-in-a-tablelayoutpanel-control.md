@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 7adbf9a98b25b237ee49d2689154e903d8fc0b5a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0e565b56c31d0776f6e89bbbe0b0681ae184758e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586177"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922823"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement
 Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement unterstützt die Eigenschaften <xref:System.Windows.Forms.Control.Anchor%2A> und <xref:System.Windows.Forms.Control.Dock%2A> in seinen untergeordneten Steuerelementen.  
@@ -26,25 +26,25 @@ Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement unterstützt die 
   
 1. Erstellen Sie ein <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement auf dem Formular.  
   
-2. Legen Sie den Wert, der die <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> und <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> Eigenschaften **1**.  
+2. Legen Sie den Wert der <xref:System.Windows.Forms.TableLayoutPanel> -und <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> -Eigenschaften des-Steuer Elements auf **1**fest.  
   
 3. Erstellen Sie ein <xref:System.Windows.Forms.Button>-Steuerelement im <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement. Das <xref:System.Windows.Forms.Button> nimmt die obere linke Ecke der Zelle ein.  
   
 4. Ändern Sie den Wert der <xref:System.Windows.Forms.Button> -Eigenschaft des <xref:System.Windows.Forms.Control.Anchor%2A> -Steuerelements in `Left`. Das <xref:System.Windows.Forms.Button>-Steuerelement wird so verschoben, dass es sich am linken Rand der Zelle ausrichtet.  
   
     > [!NOTE]
-    >  Dieses Verhalten weicht vom Verhalten anderer Containersteuerelemente ab. Bei anderen Containersteuerelementen wird das untergeordnete Steuerelement nicht verschoben, wenn die <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaft festgelegt wird, und der Abstand zwischen dem verankerten Steuerelement und der Grenze des übergeordneten Containers ist zum Zeitpunkt der Festlegung der <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaft fixiert.  
+    > Dieses Verhalten weicht vom Verhalten anderer Containersteuerelemente ab. Bei anderen Containersteuerelementen wird das untergeordnete Steuerelement nicht verschoben, wenn die <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaft festgelegt wird, und der Abstand zwischen dem verankerten Steuerelement und der Grenze des übergeordneten Containers ist zum Zeitpunkt der Festlegung der <xref:System.Windows.Forms.Control.Anchor%2A>-Eigenschaft fixiert.  
   
 5. Ändern Sie den Wert der <xref:System.Windows.Forms.Button> -Eigenschaft des <xref:System.Windows.Forms.Control.Anchor%2A> -Steuerelements in `Top, Left`. Das <xref:System.Windows.Forms.Button>-Steuerelement wird so verschoben, dass es die ober linke Ecke der Zelle einnimmt.  
   
-6. Wiederholen Sie Schritt 5 mit dem Wert des `Top, Right` zum Verschieben der <xref:System.Windows.Forms.Button> Steuerelement auf der oberen rechten Ecke der Zelle. Wiederholen Sie diesen Schritt mit den Werten `Bottom, Left` und `Bottom, Right`.  
+6. Wiederholen Sie Schritt 5 mit dem `Top, Right` Wert, um <xref:System.Windows.Forms.Button> das Steuerelement in die obere rechte Ecke der Zelle zu verschieben. Wiederholen Sie diesen Schritt mit den Werten `Bottom, Left` und `Bottom, Right`.  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>So strecken Sie ein untergeordnetes Steuerelement in einer TableLayoutPanel-Zelle  
   
 1. Ändern Sie den Wert der <xref:System.Windows.Forms.Button> -Eigenschaft des <xref:System.Windows.Forms.Control.Anchor%2A> -Steuerelements in `Left, Right`. Die Größe des <xref:System.Windows.Forms.Button>-Steuerelements wird so angepasst, dass es die gesamte Breite der Zelle einnimmt.  
   
     > [!NOTE]
-    >  Dieses Verhalten weicht vom Verhalten anderer Containersteuerelemente ab. In anderen Containersteuerelementen wird das untergeordnete Steuerelement nicht angepasst, wenn die <xref:System.Windows.Forms.Control.Anchor%2A> -Eigenschaftensatz auf `Left, Right` oder `Top, Bottom`.  
+    > Dieses Verhalten weicht vom Verhalten anderer Containersteuerelemente ab. In anderen Container Steuerelementen wird die Größe des untergeordneten Steuer Elements nicht <xref:System.Windows.Forms.Control.Anchor%2A> geändert, wenn die `Left, Right` - `Top, Bottom`Eigenschaft auf oder festgelegt ist.  
   
 2. Ändern Sie den Wert der <xref:System.Windows.Forms.Button> -Eigenschaft des <xref:System.Windows.Forms.Control.Anchor%2A> -Steuerelements in `Top, Bottom`. Die Größe des <xref:System.Windows.Forms.Button>-Steuerelements wird so angepasst, dass es die gesamte Höhe der Zelle einnimmt.  
   
@@ -55,7 +55,7 @@ Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement unterstützt die 
 5. Ändern Sie den Wert der <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft des <xref:System.Windows.Forms.Button>-Steuerelements in <xref:System.Windows.Forms.DockStyle.Left>. Das <xref:System.Windows.Forms.Button>-Steuerelement wird so verschoben, dass es sich am linken Rand der Zelle ausrichtet. Das <xref:System.Windows.Forms.Button>-Steuerelement behält seine Breite, aber seine Höhe wird so angepasst, dass es die gesamte Zellenhöhe einnimmt.  
   
     > [!NOTE]
-    >  Dies ist dasselbe Verhalten, das in anderen Containersteuerelementen auftritt.  
+    > Dies ist dasselbe Verhalten, das in anderen Containersteuerelementen auftritt.  
   
 6. Ändern Sie den Wert der <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft des <xref:System.Windows.Forms.Button>-Steuerelements in <xref:System.Windows.Forms.DockStyle.Fill>. Die Größe des <xref:System.Windows.Forms.Button>-Steuerelements wird so geändert, dass es die gesamte Zelle ausfüllt.  
   

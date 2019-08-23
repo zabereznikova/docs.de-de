@@ -2,17 +2,17 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 26b45b17ecd7bbd3fffb5d03553834ec22eedc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35d33fd4d174c8e4ccdaaf1ac33884663340e16a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700929"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919126"
 ---
 # <a name="dns"></a>\<dns>
 Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.509-Zertifikat-Authentifizierungsmodus gültig, wenn das Serverzertifikat eine DNS mit dem gleichen Wert enthält. Sie ist auch für den Windows-Authentifizierungsmodus gültig, wenn der SPN den gleichen Wert hat.  
   
- Weitere Informationen zum Festlegen der Elementwerte finden Sie unter [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Weitere Informationen zum Festlegen des Element Werts finden Sie unter [Dienst Identität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md).  
   
  \<identity>  
 \<dns>  
@@ -30,7 +30,7 @@ Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.50
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Wert|Der DNS des Zertifikats. DNS ist ein standardmäßiges Protokoll, das verwendet wird, um Computer in einem IP-basierten Netzwerk zu suchen. Benutzer können die Anzeigenamen, wie z. B. merken <https://go.microsoft.com/fwlink/?prd=10929> oder [ https://go.microsoft.com/fwlink/?LinkID=96165 ](https://go.microsoft.com/fwlink/?LinkID=96165), leichter merken als zahlenbasierte Adressen, beispielsweise 207.46.131.137.|  
+|Wert|Der DNS des Zertifikats. DNS ist ein standardmäßiges Protokoll, das verwendet wird, um Computer in einem IP-basierten Netzwerk zu suchen. Benutzer können anzeigen Amen <https://go.microsoft.com/fwlink/?prd=10929> wie oder [https://go.microsoft.com/fwlink/?LinkID=96165](https://go.microsoft.com/fwlink/?LinkID=96165)einfacher als Zahlen basierte Adressen, wie z. b. 207.46.131.137, merken.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -39,7 +39,7 @@ Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.50
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Gibt die Identität des Diensts für die Authentifizierung durch den Client an.|  
+|[\<identity>](identity.md)|Gibt die Identität des Diensts für die Authentifizierung durch den Client an.|  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Konfigurationscode gibt den DNS eines X.509-Zertifikats an, das für die Authentifizierung eines Servers verwendet wird.  
@@ -56,5 +56,5 @@ Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.50
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.DnsEndpointIdentity>
-- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Dienstidentität und Authentifizierung](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](identity.md)

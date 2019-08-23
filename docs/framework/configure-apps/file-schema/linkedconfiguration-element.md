@@ -11,19 +11,19 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0b56ac66302f11c59c149197a84bb96691282a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674648"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921015"
 ---
-# <a name="linkedconfiguration-element"></a>\<LinkedConfiguration >-Element
+# <a name="linkedconfiguration-element"></a>\<linkedconfiguration > Element
 
 Gibt eine einzuschließende Konfigurationsdatei an.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<assemblyBinding>** ](assemblybinding-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<linkedConfiguration>**
 
 ## <a name="syntax"></a>Syntax
@@ -36,42 +36,42 @@ Gibt eine einzuschließende Konfigurationsdatei an.
 
 |           | Beschreibung |
 | --------- | ----------- |
-| **href**  | Erforderliches Attribut.<br><br>Die URL der Konfigurationsdatei eingeschlossen werden soll. Die einzige unterstützte Format für die **Href** Attribut `file://`. Lokale Dateien und UNC-Dateien werden unterstützt. |
+| **href**  | Erforderliches Attribut.<br><br>Die URL der einzuschließenden Konfigurationsdatei. Das einzige unterstützte Format für das **href** - `file://`Attribut ist. Lokale Dateien und UNC-Dateien werden unterstützt. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an. |
+| [assemblyBinding-> Element  **\<** ](assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+None
 
 ## <a name="remarks"></a>Hinweise
 
-Die  **\<LinkedConfiguration >** Element vereinfacht die Wartung für Komponentenassemblys. Wenn eine oder mehrere Anwendungen eine Assembly zu, die über eine Konfigurationsdatei, die sich in einem bekannten Speicherort befinden verwenden, können die Konfigurationsdateien der Anwendungen, die die Assembly der  **\<LinkedConfiguration >** Element, das die Konfigurationsdatei der Assembly, anstatt direkt darunter von Konfigurationsinformationen enthalten. Wenn die Komponentenassembly gewartet wird, stellt das Aktualisieren der allgemeinen Konfigurationsdatei aktualisierte Konfigurationsinformationen für alle Anwendungen, die die Assembly zu verwenden.
+Das  **\<linkedconfiguration->** Element vereinfacht die Wartung für Komponentenassemblys. Wenn eine oder mehrere Anwendungen eine Assembly verwenden, die eine Konfigurationsdatei an einem bekannten Speicherort enthält, können die Konfigurationsdateien der Anwendungen, die die Assembly verwenden, das  **\<linkedconfiguration->** Element verwenden, um das Assemblykonfigurationsdatei, anstatt Konfigurationsinformationen direkt einzubeziehen. Wenn die Komponentenassembly gewartet wird, werden bei der Aktualisierung der allgemeinen Konfigurationsdatei für alle Anwendungen, die die Assembly verwenden, aktualisierte Konfigurationsinformationen bereitgestellt.
 
 > [!NOTE]
-> Die  **\<LinkedConfiguration >** Element wird für Anwendungen mit Windows-Seite-an-Seite-Manifeste nicht unterstützt.
+> **Das\<linkedconfiguration->** Element wird nicht für Anwendungen mit parallelen Windows-Manifesten unterstützt.
 
-Die folgenden Regeln bestimmen die Verwendung von verknüpfte Konfigurationsdateien:
+Die folgenden Regeln bestimmen die Verwendung von verknüpften Konfigurationsdateien:
 
-- Die Einstellungen in Konfigurationsdateien enthalten nur Auswirkungen auf das Ladeprogramm Bindungsrichtlinie und werden nur vom Ladeprogramm verwendet. Die enthaltenen Konfigurationsdateien haben Einstellungen als die Bindung von Richtlinien, aber diese Einstellungen haben keinerlei Auswirkung.
+- Die Einstellungen in den enthaltenen Konfigurationsdateien wirken sich nur auf die Richtlinie für die Lade Programme aus und werden nur vom Lade Modul verwendet. Die enthaltenen Konfigurationsdateien können andere Einstellungen als Bindungs Richtlinien aufweisen. diese Einstellungen haben jedoch keine Auswirkungen.
 
-- Die einzige unterstützte Format für die `href` Attribut `file://`. Lokale Dateien und UNC-Dateien werden unterstützt.
+- Das einzige unterstützte Format für `href` das- `file://`Attribut ist. Lokale Dateien und UNC-Dateien werden unterstützt.
 
 - Es gibt keine Einschränkung für die Anzahl der verknüpften Konfigurationen pro Konfigurationsdatei.
 
-- Alle verknüpften Konfigurationsdateien werden zusammengeführt, um eine Datei, vergleichbar mit dem Verhalten von bilden die `#include` in C/C++-Direktive.
+- Alle verknüpften Konfigurationsdateien werden zusammengeführt, um eine Datei zu bilden, ähnlich wie `#include` das Verhalten der-C++Direktive in C/.
 
-- Die  **\<LinkedConfiguration >** Element ist nur in Anwendungskonfigurationsdateien zulässig; es wird ignoriert, *"Machine.config"* .
+- **Das\<linkedconfiguration->** Element ist nur in Anwendungs Konfigurationsdateien zulässig. es wird in " *Machine. config*" ignoriert.
 
-- Zirkelverweise werden erkannt und beendet. D.h., wenn die  **\<LinkedConfiguration >** Elemente aus einer Reihe von Konfigurationsdateien bilden eine Schleife, die Schleife erkannt und gestoppt wird.
+- Zirkuläre Verweise werden erkannt und beendet. Das heißt, wenn die  **\<linkedconfiguration->** Elemente einer Reihe von Konfigurationsdateien eine Schleife bilden, wird die Schleife erkannt und beendet.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie die Konfigurationsdatei aus der lokalen Festplatte enthalten:
+Das folgende Beispiel zeigt, wie Sie die Konfigurationsdatei von der lokalen Festplatte einschließen:
 
 ```xml
 <configuration>
@@ -83,5 +83,5 @@ Das folgende Beispiel zeigt, wie Sie die Konfigurationsdatei aus der lokalen Fes
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ **\<assemblyBinding>** Element](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [assemblyBinding-> Element  **\<** ](assemblybinding-element-for-configuration.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

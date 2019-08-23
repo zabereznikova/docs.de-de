@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aaa0e83de1b1c3e2ce436de04a36addef16c057
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e1104a98afb32dea687949e9c723124014c1e62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758515"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925317"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess-Funktion
 Beendet den aktuellen nicht verwalteten Prozess.  
   
- Diese Funktion ist in .NET Framework 4 veraltet. Verwenden der [ICLRMetaHost:: ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) Methode stattdessen.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert. Verwenden Sie stattdessen die [ICLRMetaHost:: ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,19 +42,19 @@ void STDMETHODCALLTYPE CorExitProcess (
   
 ## <a name="parameters"></a>Parameter  
  `exitCode`  
- Eine ganze Zahl, die Exitcode des Prozesses angibt.  
+ Eine ganze Zahl, die den Prozessexitcode angibt.  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Ab .NET Framework 4, `CorExitProcess` jede gestartete Laufzeit im Prozess nicht nur die Laufzeit, die legacy-APIs gebunden wurden, beendet.  
+> Beginnend mit dem .NET Framework 4 wird `CorExitProcess` jede gestartete Laufzeit im Prozess beendet, nicht nur die Laufzeit, an die die Legacy-APIs gebunden wurden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** MSCorEE.dll  
+ **Fern** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

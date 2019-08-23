@@ -8,18 +8,18 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: 48dd1d76a42661df6ba642c032c991be4d6a2900
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6655652a7c5dedb8e183356688972c07a705cbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756584"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931837"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Vorgehensweise: Manuelles Rendern von gepufferten Grafiken
 Wenn Sie Ihre eigenen gepufferten Grafiken verwalten, müssen Sie Grafikpuffer erstellen und rendern können. Sie können Instanzen der <xref:System.Drawing.BufferedGraphics>-Klasse erstellen, die mit Zeichenflächen auf dem Bildschirm verknüpft ist. Dazu rufen Sie die <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>-Methode auf. Diese Methode erstellt eine <xref:System.Drawing.BufferedGraphics>-Instanz, die mit einer bestimmten Darstellungsoberfläche verknüpft ist, beispielsweise mit einem Formular oder Steuerelement. Nachdem Sie eine <xref:System.Drawing.BufferedGraphics>-Instanz erstellt haben, können Sie mit der<xref:System.Drawing.BufferedGraphics.Graphics%2A>-Eigenschaft Grafiken in den Puffer schreiben, dem die Instanz entspricht. Nachdem Sie alle Grafikvorgänge ausgeführt haben, können Sie den Inhalt des Puffers auf den Bildschirm kopieren, indem Sie die <xref:System.Drawing.BufferedGraphics.Render%2A>-Methode aufrufen.  
   
 > [!NOTE]
->  Wenn Sie Ihr eigenes Rendering ausführen, erhöht sich die Arbeitsspeichernutzung, allerdings wahrscheinlich nur geringfügig.  
+> Wenn Sie Ihr eigenes Rendering ausführen, erhöht sich die Arbeitsspeichernutzung, allerdings wahrscheinlich nur geringfügig.  
   
 ### <a name="to-manually-display-buffered-graphics"></a>So zeigen Sie gepufferte Grafiken manuell an  
   
@@ -30,7 +30,7 @@ Wenn Sie Ihre eigenen gepufferten Grafiken verwalten, müssen Sie Grafikpuffer e
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#21)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#21)]  
   
-3. Zeichnen Sie Grafiken in den Grafikpuffer, indem Sie die <xref:System.Drawing.BufferedGraphics.Graphics%2A>-Eigenschaft festlegen. Zum Beispiel:  
+3. Zeichnen Sie Grafiken in den Grafikpuffer, indem Sie die <xref:System.Drawing.BufferedGraphics.Graphics%2A>-Eigenschaft festlegen. Beispiel:  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#22)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#22)]  
@@ -50,4 +50,4 @@ Wenn Sie Ihre eigenen gepufferten Grafiken verwalten, müssen Sie Grafikpuffer e
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
 - [Doppelt gepufferte Grafiken](double-buffered-graphics.md)
-- [Vorgehensweise: Manuelles Verwalten von gepufferten Grafiken](how-to-manually-manage-buffered-graphics.md)
+- [Vorgehensweise: Manuelles Verwalten gepufferter Grafiken](how-to-manually-manage-buffered-graphics.md)

@@ -1,5 +1,5 @@
 ---
-title: <clear> -Element für <listeners> für <trace>
+title: <clear>-Element <listeners> für für<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 97b18f9d6baa618b0f535955b232e2119c758b11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9816ba0f8e4ddd4c38537eb4e014a4240ff20407
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701319"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927171"
 ---
-# <a name="clear-element-for-listeners-for-trace"></a>\<clear >-Element für \<Listener > für \<Ablaufverfolgung >
+# <a name="clear-element-for-listeners-for-trace"></a>\<Löschen Sie > Element \<für Listener > \<für die Ablauf Verfolgung >
 Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.  
   
  \<configuration>  
 \<system.diagnostics>  
-\<trace>  
-\<listeners>  
+\<Ablauf Verfolgungs >  
+\<Listener >  
 \<clear>  
   
 ## <a name="syntax"></a>Syntax  
@@ -45,20 +45,20 @@ Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.
 |`configuration`|Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.|  
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
 |`trace`|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  
-|`listeners`|Enthält Listener, die sammeln, speichern und Weiterleiten von Nachrichten. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel.|  
+|`listeners`|Enthält Listener, die Nachrichten erfassen, speichern und weiterleiten. Listener leiten die Ablauf Verfolgungs Ausgabe an ein entsprechendes Ziel weiter.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<clear>` -Element entfernt alle Listener aus der `Listeners` -Sammlung für die Ablaufverfolgung. Können Sie die `<clear>` Element vor der Verwendung der `<add>` Element, stellen Sie sicher, dass keine anderen aktiven Listener in der Auflistung vorhanden sind.  
+ Das `<clear>` -Element entfernt alle Listener aus `Listeners` der-Auflistung für die Ablauf Verfolgung. Sie können das `<clear>` -Element verwenden, bevor `<add>` Sie das-Element verwenden, um sicher zu sein, dass keine anderen aktiven Listener in der Auflistung vorhanden sind.  
   
- Können Sie löschen die `Listeners` Auflistung programmgesteuert durch Aufrufen der <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> Methode für die <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> Eigenschaft (`System.Diagnostics.Trace.Listeners.Clear()`).  
+ Sie können `Listeners` die Auflistung Programm gesteuert löschen, indem Sie <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> die-Methode <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> für die`System.Diagnostics.Trace.Listeners.Clear()`-Eigenschaft () aufrufen.  
   
- Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 > [!NOTE]
->  Die `<clear>` -Element entfernt die <xref:System.Diagnostics.DefaultTraceListener> aus der `Listeners` Auflistung, die Änderung des Verhaltens der <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, und <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> Methoden. Aufrufen einer `Assert` oder `Fail` -Methode führt normalerweise in der Anzeige eines Meldungsfelds. Allerdings das Meldungsfeld wird nicht angezeigt, wenn die <xref:System.Diagnostics.DefaultTraceListener> befindet sich nicht in der `Listeners` Auflistung.  
+> Das `<clear>` -Element entfernt <xref:System.Diagnostics.DefaultTraceListener> das- `Listeners` Element aus der-Auflistung und ändert <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>das <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>Verhalten der Methoden <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> ,, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>und. Wenn eine `Assert` - `Fail` Methode oder eine-Methode aufgerufen wird, wird normalerweise ein Meldungs Feld angezeigt. Das Meldungs Feld wird jedoch nicht angezeigt, wenn <xref:System.Diagnostics.DefaultTraceListener> sich nicht in der `Listeners` Auflistung befindet.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der `<clear>` Element vor der Verwendung der `<add>` Element, um den Listener hinzuzufügen `console` auf die `Listeners` -Sammlung für die Ablaufverfolgung.  
+ Das folgende Beispiel `<clear>` zeigt, wie das-Element verwendet wird, bevor `<add>` das-Element verwendet wird, `Listeners` um der-Auflistung für die Ablauf Verfolgung den Listener `console` hinzuzufügen.  
   
 ```xml  
 <configuration>  
@@ -83,6 +83,6 @@ Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.TraceSource>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)
+- [\<remove>](remove-element-for-listeners-for-trace.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../debug-trace-profile/trace-listeners.md)

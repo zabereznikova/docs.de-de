@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 5d4d96143dbd1db440de2247a7dc2f0c66f20403
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301299"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921313"
 ---
-# <a name="clear-element-for-appsettings"></a>\<clear >-Element für \<AppSettings >
+# <a name="clear-element-for-appsettings"></a>\<> Element für \<appSettings löschen >
 
-Löscht die benutzerdefinierte Anwendungseinstellungen.
+Löscht benutzerdefinierte Anwendungseinstellungen.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Löschen >**
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,21 +34,21 @@ Löscht die benutzerdefinierte Anwendungseinstellungen.
 
 ## <a name="attributes"></a>Attribute
 
-Keiner
+None
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Enthält benutzerdefinierte anwendungseinstellung, z.B. Dateipfade, URLs für den XML-Webdienst oder andere benutzerdefinierte Anwendung-Konfigurationsinformationen. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Enthält benutzerdefinierte Anwendungseinstellungen, z. b. Dateipfade, XML-Webdienst-URLs oder andere benutzerdefinierte Konfigurationsinformationen für die Anwendung. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+None
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie benutzerdefinierte Konfigurationseinstellungen deaktivieren:
+Im folgenden Beispiel wird gezeigt, wie benutzerdefinierte Konfigurationseinstellungen gelöscht werden:
 
 ```xml
 <appSettings>
@@ -58,4 +58,4 @@ Das folgende Beispiel zeigt, wie Sie benutzerdefinierte Konfigurationseinstellun
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](../index.md)

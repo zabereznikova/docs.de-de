@@ -2,18 +2,18 @@
 title: Installationsanleitung für IIS-Serverzertifikate (Internetinformationsdienste)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 728232c4e1d6309ae0cfacb407417173ece145da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50fa7f1094d4b05bcadb229072293da233a18a2b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648353"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931870"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Installationsanleitung für IIS-Serverzertifikate (Internetinformationsdienste)
 Zum Ausführen der Beispiele, die über eine sichere Kommunikation mit Internetinformationsdiensten (IIS) verbunden sind, müssen Sie ein Serverzertifikat erstellen und installieren.  
   
 ## <a name="step-1-creating-certificates"></a>Schritt 1. Erstellen von Zertifikaten  
- Um ein Zertifikat für den Computer zu erstellen, öffnen Sie eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, und führen Sie die Datei Setup.bat aus, die in den einzelnen Beispielen enthalten ist, die sicheren Kommunikation mit IIS zu verwenden. Stellen Sie vor dem Ausführen dieser Batchdatei sicher, dass der Pfad den Ordner einschließt, in dem sich die Datei Makecert.exe befindet. Der folgende Befehl wird zum Erstellen des Zertifikats in Setup.bat verwendet.  
+ Um ein Zertifikat für Ihren Computer zu erstellen, öffnen Sie eine Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten, und führen Sie die Datei Setup. bat aus, die in jedem der Beispiele enthalten ist, in denen die sichere Kommunikation mit IIS verwendet wird. Stellen Sie vor dem Ausführen dieser Batchdatei sicher, dass der Pfad den Ordner einschließt, in dem sich die Datei Makecert.exe befindet. Der folgende Befehl wird zum Erstellen des Zertifikats in Setup.bat verwendet.  
   
 ```  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  
@@ -26,17 +26,17 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 1. Öffnen Sie das MMC-Snap-In Internetinformationsdienste-Manager.  
   
-2. Mit der rechten Maustaste die Standardwebsite, und wählen Sie **Eigenschaften**.  
+2. Klicken Sie mit der rechten Maustaste auf die Standard Website, und wählen Sie **Eigenschaften**.  
   
-3. Wählen Sie die **Verzeichnissicherheit** Registerkarte.  
+3. Wählen Sie die Registerkarte **Verzeichnis Sicherheit** .  
   
-4. Klicken Sie auf die **Serverzertifikat** Schaltfläche. Der Assistent für Webserverzertifikate wird gestartet.  
+4. Klicken Sie auf die Schaltfläche **Server Zertifikat** . Der Assistent für Webserverzertifikate wird gestartet.  
   
 5. Durchlaufen Sie den Assistenten. Wählen Sie die Option zum Zuweisen eines Zertifikats aus. Wählen Sie aus der angezeigten Liste mit Zertifikaten das Zertifikat ServiceModelSamples-HTTPS-Server aus.  
   
-     ![IIS-Zertifikat-Assistent](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
+     ![Assistent für IIS-Zertifikate](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6. Testen Sie den Zugriff auf den Dienst unter Verwendung der HTTPS-Adresse in einem Browser `https://localhost/servicemodelsamples/service.svc`.  
+6. Testen Sie den Zugriff auf den Dienst in einem Browser mithilfe der HTTPS `https://localhost/servicemodelsamples/service.svc`-Adresse.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Wenn zuvor SSL mit Httpcfg.exe konfiguriert wurde  
   
@@ -53,22 +53,22 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
-#### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>Installation mit IIS&amp;#160;7.0 (Windows&amp;#160;Vista und Windows Server&amp;#160;2008)  
+#### <a name="to-install-iis-on-iis-70-windows-vista-and-windows-server-2008"></a>Installation mit IIS&#160;7.0 (Windows&#160;Vista und Windows Server&#160;2008)  
   
-1. Von der **starten** Menü klicken Sie auf **ausführen**, geben Sie dann **Inetmgr** auf das Internet Information Services (IIS)-MMC-Snap-in zu öffnen.  
+1. Klicken Sie im Startmenü auf **Ausführen**, und geben Sie **inetmgr** ein, um das MMC-Snap-in Internetinformationsdienste (IIS) zu öffnen.  
   
-2. Mit der rechten Maustaste die **Default Web Site** , und wählen Sie **Bindungen bearbeiten...**  
+2. Klicken Sie mit der rechten Maustaste auf die **Standard Website** , und wählen Sie **Bindungen bearbeiten...**  
   
-3. Klicken Sie auf die **hinzufügen** -Schaltfläche der **Sitebindungen** Dialogfeld.  
+3. Klicken Sie im Dialogfeld **Site Bindungen** auf die Schaltfläche **Hinzufügen** .  
   
-4. Wählen Sie **HTTPS** aus der **Typ** Dropdown-Liste.  
+4. Wählen Sie in der Dropdown Liste **Typ** die Option **https** aus.  
   
-5. Wählen Sie die **ServiceModelSamples-HTTPS-Server** aus der **SSL-Zertifikat** Dropdown-Liste und klicken Sie auf **OK**.  
+5. Wählen Sie in der Dropdown Liste **SSL-Zertifikat** den **Ordner Service Model Samples-HTTPS-Server** aus, und klicken Sie auf **OK**.  
   
-6. Testen Sie den Zugriff auf den Dienst unter Verwendung der HTTPS-Adresse in einem Browser `https://localhost/servicemodelsamples/service.svc`.  
+6. Testen Sie den Zugriff auf den Dienst in einem Browser mithilfe der HTTPS `https://localhost/servicemodelsamples/service.svc`-Adresse.  
   
 > [!NOTE]
->  Da es sich bei dem gerade installierten Testzertifikat nicht um ein vertrauenswürdiges Zertifikat handelt, werden im Internet Explorer möglicherweise zusätzliche Sicherheitswarnungen angezeigt, wenn Sie zu lokalen Webseiten navigieren, die dieses Zertifikat verwenden.  
+> Da es sich bei dem gerade installierten Testzertifikat nicht um ein vertrauenswürdiges Zertifikat handelt, werden im Internet Explorer möglicherweise zusätzliche Sicherheitswarnungen angezeigt, wenn Sie zu lokalen Webseiten navigieren, die dieses Zertifikat verwenden.  
   
 ## <a name="removing-certificates"></a>Entfernen von Zertifikaten  
   

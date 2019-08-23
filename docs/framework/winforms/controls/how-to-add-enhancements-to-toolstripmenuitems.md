@@ -24,63 +24,63 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 2aa2315667b34ac448ac34cd29402e39d59e79dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9e95c3623bf9bad8395f586392a0557ad1cde880
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624100"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912585"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Vorgehensweise: Hinzufügen von Erweiterungen zu ToolStripMenuItems
-Sie können die benutzerfreundlichkeit verbessern <xref:System.Windows.Forms.MenuStrip> und <xref:System.Windows.Forms.ContextMenuStrip> Steuerelemente es gibt folgende Möglichkeiten:  
+Es gibt folgende Möglichkeiten, um <xref:System.Windows.Forms.MenuStrip> die <xref:System.Windows.Forms.ContextMenuStrip> Verwendbarkeit von-und-Steuerelementen zu verbessern:  
   
-- Hinzufügen von Häkchen, um festzulegen, ob ein Feature aktiviert ist, aktiviert oder deaktiviert, wie z. B., ob ein Lineal am Rand des eine textverarbeitungsanwendung angezeigt wird, oder, um anzugeben, welche Datei in einer Liste von Dateien angezeigt, z. B. auf wird eine **Fenster** ein Menü.  
+- Fügen Sie Kontrollzeichen hinzu, um anzugeben, ob eine Funktion aktiviert oder deaktiviert ist, z. b. ob ein Lineal am Rand einer Textverarbeitungsanwendung angezeigt wird, oder um anzugeben, welche Datei in einer Liste von Dateien angezeigt wird, z. b. in einem **Fenster** Menü.  
   
-- Hinzufügen von Bildern, die Befehle im Menü visuell darstellen.  
+- Fügen Sie Bilder hinzu, die Menübefehle visuell darstellen.  
   
-- Zeigen Sie die Tastenkombinationen für die eine Alternative, die der Maus, die zum Ausführen der Befehle bereitzustellen. Drücken STRG + C führt z. B. die **Kopie** Befehl.  
+- Zeigen Sie Tastenkombinationen an, um eine Tastatur Alternative zur Maus zum Ausführen von Befehlen bereitzustellen. Wenn Sie z. b. STRG + C drücken, wird der Befehl **Kopieren** durchführt.  
   
-- Anzeigen von Tastenkombinationen Menünavigation eine Alternative zur Maus bereit. Z. B. durch Drücken von ALT + F wählt die **Datei** Menü.  
+- Zeigen Sie Zugriffstasten an, um eine Tastatur Alternative zur Maus zur Menü Navigation bereitzustellen. Wenn Sie z. b. ALT + F drücken, wird das Menü **Datei** ausgewählt.  
   
-- Anzeigen von Trennleisten gruppiert Befehle und Menüs besser lesbar machen.  
+- Trennlinien zum Gruppieren verwandter Befehle anzeigen und Menüs besser lesbar machen.  
   
-### <a name="to-display-a-check-mark-on-a-menu-command"></a>So zeigen Sie ein Häkchen auf einen Menübefehl an  
+### <a name="to-display-a-check-mark-on-a-menu-command"></a>So zeigen Sie ein Häkchen in einem Menübefehl an  
   
-- Legen Sie dessen <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> Eigenschaft `true`.  
+- Legen Sie <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> die- `true`Eigenschaft auf fest.  
   
-     Hiermit auch die <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> Eigenschaft `true`. Verwenden Sie dieses Verfahren nur, wenn Sie die Menübefehls so, als unabhängig davon, ob diese Option ausgewählt ist standardmäßig als aktiviert dargestellt werden soll.  
+     Dadurch wird auch die <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> -Eigenschaft `true`auf festgelegt. Verwenden Sie dieses Verfahren nur, wenn der Menübefehl standardmäßig als aktiviert angezeigt werden soll, unabhängig davon, ob er ausgewählt ist.  
   
-### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>Um ein Häkchen anzuzeigen, die mit jedem Klick Zustandsänderungen  
+### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>So zeigen Sie ein Häkchen an, das den Zustand bei jedem Klick ändert  
   
-- Legen Sie des Menübefehls <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> Eigenschaft `true`.  
+- Legen Sie die- <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> Eigenschaft des Menübefehls auf `true`fest.  
   
-### <a name="to-add-an-image-to-a-menu-command"></a>Hinzufügen eines Bilds zu einem Menübefehl  
+### <a name="to-add-an-image-to-a-menu-command"></a>So fügen Sie einem Menübefehl ein Bild hinzu  
   
-- Legen Sie des Menübefehls <xref:System.Windows.Forms.ToolStripItem.Image%2A> -Eigenschaft auf den Namen des Bilds. Wenn die <xref:System.Windows.Forms.ToolStripItemDisplayStyle> dieses Menübefehls-Eigenschaftensatz auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> oder <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, das Bild kann nicht angezeigt werden.  
-  
-> [!NOTE]
->  Bildrand kann auch mit einem Häkchen versehen anzeigen, wenn Sie es wünschen. Sie können auch festlegen, die <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> Eigenschaft des Bildes, das `true`, und das Bild wird zur Laufzeit mit einem schraffierten Rahmen angezeigt.  
-  
-### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>Um eine Tastenkombination für einen Menübefehl anzuzeigen.  
-  
-- Legen Sie des Menübefehls <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> Eigenschaft, um die gewünschte Tastenkombination wie STRG + O, für die **öffnen** Kontextmenübefehl von "", und legen die <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> Eigenschaft `true`.  
-  
-### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a>Benutzerdefinierte Tastenkombinationen für einen Menübefehl angezeigt.  
-  
-- Legen Sie des Menübefehls <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> Eigenschaft, um die gewünschte Tastenkombination wie STRG + UMSCHALT + O anstatt UMSCHALT + STRG + O und Menge der <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> Eigenschaft `true`.  
-  
-### <a name="to-display-an-access-key-for-a-menu-command"></a>Eine Zugriffstaste für einen Menübefehl angezeigt.  
-  
-- Beim Festlegen der <xref:System.Windows.Forms.ToolStripItem.Text%2A> -Eigenschaft für den Menübefehl aus, geben Sie ein kaufmännisches und-Zeichen (&) vor dem Buchstaben als Zugriffstaste unterstrichen werden sollen. Geben Sie z. B. `&Open` als die <xref:System.Windows.Forms.ToolStripItem.Text%2A> -Eigenschaft eines Menüelements führt dazu, einen Menübefehl, der als erscheint <u>O</u>Stift.
-  
-     Drücken Sie ALT, um den Fokus erhalten, navigieren Sie zu dieser Menübefehl, der <xref:System.Windows.Forms.MenuStrip>, und drücken Sie den Zugriffsschlüssel, der den Namen des Menüs. Wenn das Menü geöffnet und Elemente mit Zugriffstasten zeigt, müssen Sie nur die Access-Taste auf den Menübefehl auszuwählen.  
+- Legen Sie die-Eigenschaft <xref:System.Windows.Forms.ToolStripItem.Image%2A> des Menübefehls auf den Namen des Bilds fest. Wenn die <xref:System.Windows.Forms.ToolStripItemDisplayStyle> -Eigenschaft dieses Menübefehls auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> oder <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>festgelegt ist, kann das Bild nicht angezeigt werden.  
   
 > [!NOTE]
->  Vermeiden Sie doppelte Zugriffstasten, dazu gehört das Definieren von ALT + F zweimal im gleichen Menüsystem definieren. Die Reihenfolge der Auswahl der doppelte Zugriffstasten kann nicht garantiert werden.  
+> Der Bildrand kann auch ein Häkchen anzeigen, wenn Sie diese Option auswählen. Außerdem können Sie die <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> -Eigenschaft des Bilds auf `true`festlegen, und das Bild wird zur Laufzeit mit einem ausgebrüpften Rahmen herum angezeigt.  
   
-### <a name="to-display-a-separator-bar-between-menu-commands"></a>Eine Trennlinie zwischen Befehle im Menü angezeigt.  
+### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>So zeigen Sie eine Tastenkombination für einen Menübefehl an  
   
-- Nach der Definition Ihrer <xref:System.Windows.Forms.MenuStrip> und die Elemente enthält, verwenden die <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> oder <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> Methode, um die Befehle im Menü hinzuzufügen und <xref:System.Windows.Forms.ToolStripSeparator> -Steuerelementen an die <xref:System.Windows.Forms.MenuStrip> in der gewünschten Reihenfolge.  
+- Legen Sie die-Eigenschaft <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> des Menübefehls auf die gewünschte Tastaturkombination fest, z. b. STRG + O für den Menübefehl <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> **Öffnen** , `true`und legen Sie die-Eigenschaft auf fest.  
+  
+### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a>So zeigen Sie benutzerdefinierte Tastenkombinationen für einen Menübefehl an  
+  
+- Legen Sie die-Eigenschaft <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> des Menübefehls auf die gewünschte Tastaturkombination fest, z. b. STRG + UMSCHALT + o anstelle von UMSCHALT + STRG + <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> o, `true`und legen Sie die-Eigenschaft auf fest.  
+  
+### <a name="to-display-an-access-key-for-a-menu-command"></a>So zeigen Sie eine Zugriffstaste für einen Menübefehl an  
+  
+- Wenn Sie die <xref:System.Windows.Forms.ToolStripItem.Text%2A> -Eigenschaft für den Menübefehl festgelegt haben, geben Sie vor dem Buchstaben, den Sie als Zugriffsschlüssel unterstrichen möchten, ein kaufmännisches und-Objekt (&) ein. Wenn Sie z. `&Open` b. <xref:System.Windows.Forms.ToolStripItem.Text%2A> als Eigenschaft eines Menü Elements eingeben, führt dies zu einem Menübefehl, der als <u>O</u>Pen angezeigt wird.
+  
+     Zum Navigieren zu diesem Menübefehl drücken Sie alt, um den <xref:System.Windows.Forms.MenuStrip>Fokus auf zu setzen, und drücken Sie die Zugriffstaste des Menü namens. Wenn das Menü geöffnet wird und Elemente mit Zugriffs Schlüsseln angezeigt werden, müssen Sie nur die Zugriffstaste drücken, um den Menübefehl auszuwählen.  
+  
+> [!NOTE]
+> Vermeiden Sie das definieren doppelter Zugriffsschlüssel, z. b. das doppelte definieren von Alt + F im gleichen Menüsystem. Die Auswahl Reihenfolge doppelter Zugriffsschlüssel kann nicht garantiert werden.  
+  
+### <a name="to-display-a-separator-bar-between-menu-commands"></a>So zeigen Sie eine Trennlinie zwischen Menübefehlen an  
+  
+- Nachdem Sie <xref:System.Windows.Forms.MenuStrip> das und die darin enthaltenen Elemente definiert haben, verwenden Sie <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> die <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> -Methode oder die-Methode, <xref:System.Windows.Forms.ToolStripSeparator> um die Menü <xref:System.Windows.Forms.MenuStrip> Befehle und-Steuerelemente in der gewünschten Reihenfolge hinzuzufügen.  
   
     ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  

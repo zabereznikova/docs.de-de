@@ -1,15 +1,15 @@
 ---
-title: <windows> der <clientCredentials> Element
+title: <windows>of <clientCredentials> -Element
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f0ed9879cc42ea25b83e6b626139a40a593112
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769719"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940308"
 ---
-# <a name="windows-of-clientcredentials-element"></a>\<Windows > des \<ClientCredentials >-Element
+# <a name="windows-of-clientcredentials-element"></a>\<Windows-> \<von Clientanmelde Informationen >-Element
 Gibt die Einstellungen für Windows-Anmeldeinformationen an, die zum Darstellen des Clients verwendet werden.  
   
  \<system.ServiceModel>  
@@ -33,8 +33,8 @@ Gibt die Einstellungen für Windows-Anmeldeinformationen an, die zum Darstellen 
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|Legt die Identitätswechseleinstellungen fest, die der Client an den Server weitergibt. Der Identitätswechselmodus, den der Client auswählt, wird nicht auf dem Server durchgesetzt. Folgende Werte sind gültig:<br /><br /> -ID: Der Server kann die Identitäts- und Berechtigungsinformationen des Clients abrufen, aber den Client nicht imitieren.<br />-Identitätswechsel: Der Server kann der Clientsicherheitskontext auf dem lokalen System imitieren.<br />-Delegierung: Der Server kann der Clientsicherheitskontext auf Remotesystemen imitieren.<br />– Anonymous: Der Server kann nicht imitieren oder identifizieren den Client.<br />– None: Ebene des Identitätswechsels wird nicht zugewiesen.<br /><br /> Die Standardeinstellung ist Identification. Dieses Attribut ist vom Typ <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Durch das Festlegen dieser Eigenschaft auf `true` kann die Authentifizierung auf NTLM herabgestuft werden, wenn Kerberos nicht verfügbar ist.<br /><br /> Wenn diese Eigenschaft auf `false` bewirkt, dass Windows Communication Foundation (WCF) stellen einen Best-Effort-Prinzip eine Ausnahme ausgelöst, wenn NTLM verwendet wird. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.|  
+|`allowedImpersonationLevel`|Legt die Identitätswechseleinstellungen fest, die der Client an den Server weitergibt. Der Identitätswechselmodus, den der Client auswählt, wird nicht auf dem Server durchgesetzt. Folgende Werte sind gültig:<br /><br /> Identifi Der Server kann die Identität und die Berechtigungen des Clients erhalten, kann jedoch nicht die Identität des Clients annehmen.<br />Identitätswechsel Der Server kann den Sicherheitskontext des Clients auf dem lokalen System imitieren.<br />Delegations Der Server kann den Sicherheitskontext des Clients auf Remote Systemen imitieren.<br />Anonymous Der Server kann den Client nicht annehmen oder ihn identifizieren.<br />Gar Eine Identitätswechsel Ebene ist nicht zugewiesen.<br /><br /> Die Standardeinstellung ist Identification. Dieses Attribut ist vom Typ <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowNtlm`|Durch das Festlegen dieser Eigenschaft auf `true` kann die Authentifizierung auf NTLM herabgestuft werden, wenn Kerberos nicht verfügbar ist.<br /><br /> Wenn diese Eigenschaft auf `false` festgelegt wird, bewirkt Windows Communication Foundation (WCF), dass eine Ausnahme ausgelöst wird, wenn NTLM verwendet wird. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -43,7 +43,7 @@ Gibt die Einstellungen für Windows-Anmeldeinformationen an, die zum Darstellen 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an.|  
+|[\<clientCredentials>](clientcredentials.md)|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an.|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -54,6 +54,6 @@ Gibt die Einstellungen für Windows-Anmeldeinformationen an, die zum Darstellen 
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
-- [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)
-- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sichern von Clients](../../../wcf/securing-clients.md)
+- [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
+- [Sichern von Diensten und Clients](../../../wcf/feature-details/securing-services-and-clients.md)

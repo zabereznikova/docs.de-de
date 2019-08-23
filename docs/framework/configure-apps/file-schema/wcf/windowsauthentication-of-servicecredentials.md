@@ -2,14 +2,14 @@
 title: <windowsAuthentication> von <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: ffddbae7effabcdafdc2638d588bbbf3e42d2c2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81793b0d58a95166bc23f98d46ce94a5f1e1d018
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769693"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940292"
 ---
-# <a name="windowsauthentication-of-servicecredentials"></a>\<WindowsAuthentication > von \<ServiceCredentials >
+# <a name="windowsauthentication-of-servicecredentials"></a>\<WindowsAuthentication > von \<servicecreden->
 Gibt die Einstellungen der Windows-Dienstanmeldeinformationen an.  
   
  \<system.ServiceModel>  
@@ -43,7 +43,7 @@ Gibt die Einstellungen der Windows-Dienstanmeldeinformationen an.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Gibt die Anmeldeinformationen an, die für die Authentifizierung des Diensts verwendet werden sollen, sowie die Einstellungen für die Validierung der Clientanmeldeinformationen.|  
+|[\<serviceCredentials>](servicecredentials.md)|Gibt die Anmeldeinformationen an, die für die Authentifizierung des Diensts verwendet werden sollen, sowie die Einstellungen für die Validierung der Clientanmeldeinformationen.|  
   
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie dieses Element, um anzugeben, ob anonyme Windows-Benutzer Zugriff haben, indem Sie das `allowAnonymousLogons`-Attribut festlegen. Weiterhin können Sie angeben, ob Informationen zu der Gruppe, der die Benutzer angehören, in den Autorisierungskontext eingeschlossen werden, indem Sie das `includeWindowsGroups`-Attribut festlegen. Wenn das Attribut auf `true` (Standardeinstellung) festgelegt ist, kann der Dienst die Windows-Gruppen ermitteln, zu denen der Client gehört.  

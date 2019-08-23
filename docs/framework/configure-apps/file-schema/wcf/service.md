@@ -2,19 +2,19 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69f3c70514fc2bcab1b4ef6a45036de98d1af7b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670396"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936522"
 ---
-# <a name="service"></a>\<service>
+# <a name="service"></a>\<Dienst >
 Das `service`-Element enthält die Einstellungen für einen Windows Communication Foundation (WCF)-Dienst. Es enthält außerdem Endpunkte, die den Dienst verfügbar machen.  
   
  \<system.ServiceModel>  
 \<services>  
-\<service>  
+\<Dienst >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,14 +38,14 @@ Das `service`-Element enthält die Einstellungen für einen Windows Communicatio
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|Eine Auflistung von `endpoint`-Elementen, die diesen Dienst verfügbar machen.|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Gibt den Host dieser Dienstinstanz an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.HostElement>.|  
+|[\<Endpunkt >](endpoint-element.md)|Eine Auflistung von `endpoint`-Elementen, die diesen Dienst verfügbar machen.|  
+|[\<host>](host.md)|Gibt den Host dieser Dienstinstanz an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.HostElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Das Stammelement aller WCF-Konfigurationselemente.|  
+|[\<services>](services.md)|Das Stammelement aller WCF-Konfigurationselemente.|  
   
 ## <a name="remarks"></a>Hinweise  
  Dienste werden im `services`-Abschnitt der Konfigurationsdatei definiert. Eine Assembly kann eine beliebige Anzahl von Diensten enthalten. Jeder Dienst hat seinen eigenen `service`-Konfigurationsabschnitt. Dieser Abschnitt und sein Inhalt definieren den Dienstvertrag, das Verhalten und die Endpunkte des Diensts.  
@@ -71,4 +71,4 @@ Das `service`-Element enthält die Einstellungen für einen Windows Communicatio
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
-- [Konfigurieren von Diensten](../../../../../docs/framework/wcf/configuring-services.md)
+- [Konfigurieren von Diensten](../../../wcf/configuring-services.md)

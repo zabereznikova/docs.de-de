@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode'
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650228"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932572"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode
 "Svcutil.exe" kann Metadaten für Dienste, Verträge und Datentypen in kompilierten Assemblys wie folgt exportieren:  
@@ -19,7 +19,7 @@ ms.locfileid: "64650228"
 - Um alle Datenvertragstypen innerhalb einer Assemblygruppe zu exportieren, verwenden Sie die `/dataContractOnly`-Option.  
   
 > [!NOTE]
->  Zum Angeben von Dateipfaden zu abhängigen Assemblys verwenden Sie die `/reference`-Option.  
+> Zum Angeben von Dateipfaden zu abhängigen Assemblys verwenden Sie die `/reference`-Option.  
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>So exportieren Sie Metadaten für kompilierte Dienstverträge  
   
@@ -28,7 +28,7 @@ ms.locfileid: "64650228"
 2. Führen Sie "Svcutil.exe" auf den kompilierten Assemblys aus.  
   
     > [!NOTE]
-    >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
+    > Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
   
     ```  
     svcutil.exe Contracts.dll  
@@ -56,7 +56,7 @@ ms.locfileid: "64650228"
 3. Zum Angeben des Konfigurationsnamen des Diensts führen Sie "Svcutil.exe" für die kompilierte ausführbare Dienstdatei mithilfe des `/serviceName`-Schalters aus.  
   
     > [!NOTE]
-    >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
+    > Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
@@ -69,7 +69,7 @@ ms.locfileid: "64650228"
 2. Führen Sie "Svcutil.exe" für die kompilierten Assemblys mithilfe des `/dataContract`-Schalters aus, um anzugeben, dass nur Metadaten für Datenverträge generiert werden sollen.  
   
     > [!NOTE]
-    >  Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
+    > Zum Angeben des Dateipfads zur abhängigen Assembly müssen Sie möglicherweise den `/reference`-Schalter verwenden.  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  

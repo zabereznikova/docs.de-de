@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefiniertes Element für NameValueSectionHandler und DictionarySectionHandler
+title: Benutzerdefiniertes Element für NameValueSectionHandler und diktarysectionhandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
@@ -8,54 +8,54 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 8636050b2618d1b2c2da0c08c756b0ed221c7f6f
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 890269857aaa00ce62195ccb2f4cb184b363b61e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921044"
 ---
-# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Benutzerdefiniertes Element für NameValueSectionHandler und DictionarySectionHandler
+# <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>Benutzerdefiniertes Element für NameValueSectionHandler und diktarysectionhandler
 
-Definiert die Einstellungen für die benutzerdefinierten Konfigurationsabschnitte, mit denen die <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> Klassen.
+Definiert Einstellungen für benutzerdefinierte Konfigurations Abschnitte, die <xref:System.Configuration.NameValueSectionHandler> die <xref:System.Configuration.DictionarySectionHandler> -Klasse und die-Klasse verwenden.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
+[ **\<configuration>** ](configuration-element.md)\
 &nbsp;&nbsp; **\<sectionName>**
 
 ## <a name="attributes"></a>Attribute
 
-Keiner
+None
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
+| [ **\<configuration>** ](configuration-element.md) | Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<Hinzufügen >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler>  | Fügt benutzerdefinierte Anwendungseinstellungen hinzu. |
-| [ **\<Entfernen Sie >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> | Entfernt eine zuvor definierte Einstellung. |
-| [ **\<Deaktivieren Sie >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md) für <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> | Löscht alle zuvor definierte Einstellungen in einem Abschnitt. |
+| Hinzufügen von <xref:System.Configuration.NameValueSectionHandler> > für und [ **\<** ](add-element-for-custom-2.md)<xref:System.Configuration.DictionarySectionHandler>  | Fügt benutzerdefinierte Anwendungseinstellungen hinzu. |
+| Entfernen Sie <xref:System.Configuration.NameValueSectionHandler> > für und. [ **\<** ](remove-element-for-custom-2.md)<xref:System.Configuration.DictionarySectionHandler> | Entfernt eine zuvor definierte Einstellung. |
+| Löschen von <xref:System.Configuration.NameValueSectionHandler> > für und [ **\<** ](clear-element-for-custom-2.md)<xref:System.Configuration.DictionarySectionHandler> | Löscht alle zuvor definierten Einstellungen in einem Abschnitt. |
 
 ## <a name="remarks"></a>Hinweise
 
-Die  **\<SectionName >** Element ist ein benutzerdefiniertes Element, das definiert, indem eine  **\<Abschnitt >** -Tag in die  **\<ConfigSections >** Element.
+**Das\<Element sectionName >** ist ein benutzerdefiniertes Element, das durch einen  **\<Abschnitt >** -Tag im  **\<>** -Element von configabschnitts definiert wird.
 
-Die folgende Tabelle zeigt, dass der Typ des Objekts die ConfigurationSettings.GetConfig-Methode für jede Konfigurationsabschnittshandler zurückgibt:
+In der folgenden Tabelle wird der Objekttyp angezeigt, der von der ConfigurationSettings. GetConfig-Methode für jeden Konfigurations Abschnitts Handler zurückgegeben wird:
 
-| Konfigurationsabschnittshandler                        | Rückgabetyp                                                |
+| Konfigurations Abschnitts Handler                        | Rückgabetyp                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
 | <xref:System.Configuration.NameValueSectionHandler>  | <xref:System.Collections.Specialized.NameValueCollection>  |
 | <xref:System.Configuration.DictionarySectionHandler> | <xref:System.Collections.IDictionary>                      |
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie die Abschnitte zu deklarieren, mit denen die <xref:System.Configuration.DictionarySectionHandler> und <xref:System.Configuration.NameValueSectionHandler> Klassen.
+Im folgenden Beispiel wird gezeigt, wie Sie Abschnitte deklarieren <xref:System.Configuration.DictionarySectionHandler> , <xref:System.Configuration.NameValueSectionHandler> die die Klassen und verwenden.
 
-Das erste benutzerdefinierte Element ist  **\<DictionarySample >** , das Lesen von Einstellungen enthält die <xref:System.Configuration.DictionarySectionHandler> -Klasse in der `System.dll` Assembly. Das zweite benutzerdefinierte Element ist  **\<MySection >** , das Lesen von Einstellungen enthält die <xref:System.Configuration.NameValueSectionHandler> -Klasse in der `System.dll` Assembly.
+Das erste benutzerdefinierte Element ist <xref:System.Configuration.DictionarySectionHandler> `System.dll`  **\<eine "ditionarysample >** ", die die von der-Klasse in der Assembly gelesenen Einstellungen enthält. Das zweite benutzerdefinierte Element ist  **\<mySection >** , das die von der <xref:System.Configuration.NameValueSectionHandler> -Klasse in der `System.dll` Assembly gelesenen Einstellungen enthält.
 
 ```xml
 <configuration>
@@ -78,8 +78,8 @@ Das erste benutzerdefinierte Element ist  **\<DictionarySample >** , das Lesen v
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden ( *"Machine.config"* ), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungs Konfigurationsdatei, in der Computer Konfigurationsdatei (*Machine. config*) und in den *Web. config* -Dateien verwendet werden, die sich nicht auf der Ebene des Anwendungs Verzeichnisses befinden.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

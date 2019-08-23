@@ -2,12 +2,12 @@
 title: <callbackTimeouts>
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
-ms.openlocfilehash: e666bac0be772e417f140e1482649f82ea70e2f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d57a888a19e684ac13632c1ab2476e304667c3e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673419"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919667"
 ---
 # <a name="callbacktimeouts"></a>\<callbackTimeouts>
 Gibt den Timeoutwert bei der Weitergabe von Transaktionen vom Server zum Client in einem Duplexrückrufvertragsszenario an.  
@@ -34,7 +34,7 @@ Gibt den Timeoutwert bei der Weitergabe von Transaktionen vom Server zum Client 
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`transactionTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall angibt, in dem Transaktionen abgeschlossen oder automatisch beendet werden müssen. Der Standardwert ist "00: 00:00".|  
+|`transactionTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall angibt, in dem Transaktionen abgeschlossen oder automatisch beendet werden müssen. Der Standardwert ist "00:00:00".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -43,7 +43,7 @@ Gibt den Timeoutwert bei der Weitergabe von Transaktionen vom Server zum Client 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|  
   
 ## <a name="see-also"></a>Siehe auch
 

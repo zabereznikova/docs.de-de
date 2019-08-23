@@ -1,27 +1,27 @@
 ---
-title: <states> of WCF, <workflowInstanceQuery>
+title: <states>von WCF,<workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: fad6f9c8871f79e4a1e26c893eed86ba168f6d01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef4ce4b6fa6e60ead10b196b10a7c1489e15ac25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938983"
 ---
-# <a name="states-of-wcf-workflowinstancequery"></a>\<states> of WCF, \<workflowInstanceQuery>
+# <a name="states-of-wcf-workflowinstancequery"></a>\<Zustände > von WCF, \<WorkflowInstanceQuery >
 
 Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz dar.  
   
-Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
-\<system.serviceModel> \<tracking>  
-\<profiles>  
+\<System. Service Model > \<nach Verfolgungs >  
+\<Profile >  
 \<trackingProfile>  
 \<workflow>  
 \<workflowInstanceQueries>  
 \<workflowInstanceQuery>  
-\<states>  
+\<Status >  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,13 +55,13 @@ Keine
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<states>](state-of-wcf-workflowinstancequery.md)|Ein abonnierter Zustand der verfolgten Workflowinstanz, wenn der Nachverfolgungsdatensatz erstellt wird.|  
+|[\<Status >](state-of-wcf-workflowinstancequery.md)|Ein abonnierter Zustand der verfolgten Workflowinstanz, wenn der Nachverfolgungsdatensatz erstellt wird.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Eine Abfrage, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgt, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.|  
+|[\<workflowInstanceQuery>](../windows-workflow-foundation/workflowinstancequery.md)|Eine Abfrage, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgt, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.|  
   
 ## <a name="remarks"></a>Hinweise
 
@@ -69,7 +69,7 @@ Die zurückgegebenen Datensätze werden entsprechend den Zuständen in dieser Au
   
 Eine Beschreibung der möglichen Zustandswerte finden Sie in der folgenden Tabelle.  
   
-|Zustand|Beschreibung|  
+|Status|Beschreibung|  
 |-----------|-----------------|  
 |Aborted|Die Workflowinstanz wurde abgebrochen.|  
 |Abgeschlossen|Die Workflowinstanz wurde abgeschlossen.|  
@@ -104,5 +104,5 @@ In der folgende Konfiguration werden mithilfe einer Abfrage Workflownachverfolgu
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsprofile](../../../windows-workflow-foundation/tracking-profiles.md)

@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f16b4628215bee2410708edeb337b41fbdc0311
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9764cdcd07a09f5192a8f43b9baa5be40305c40b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946372"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910170"
 ---
 # <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame-Schnittstelle
 
-Stellt einen internen Common Language Runtime-Frame im Stapel dar. Diese Schnittstelle ist eine Unterklasse der ICorDebugFrame-Schnittstelle.  
+Stellt einen Lauf Zeit internen Frame im Stapel dar. Diese Schnittstelle ist eine Unterklasse der ICorDebugFrame-Schnittstelle.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetFrameType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Ruft den Typ des diesem internen Frames.|  
+|[GetFrameType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|Ruft den Typ dieses internen Frames ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
+> Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

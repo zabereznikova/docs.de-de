@@ -5,33 +5,33 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: ba4e7e790860696f4489e9ef7b73bddcb8c4e399
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b59689e78f901637674c0a1df28ed74411e8e7c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705427"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921373"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Sicherheitsberechtigung für die Umleitung der Assemblybindung
-Für die explizite Umleitung einer Assemblybindung in einer Anwendungskonfigurationsdatei ist eine Sicherheitsberechtigung erforderlich. Dies betrifft die Umleitung von .NET Framework-Assemblys und Assemblys von Drittanbietern. Die Berechtigung wird erteilt, indem die <xref:System.Security.Permissions.SecurityPermissionFlag> flag für die <xref:System.Security.Permissions.SecurityPermission>. Verwaltete Assemblys verfügen standardmäßig über keine Berechtigungen zu.  
+Für die explizite Umleitung einer Assemblybindung in einer Anwendungskonfigurationsdatei ist eine Sicherheitsberechtigung erforderlich. Dies betrifft die Umleitung von .NET Framework-Assemblys und Assemblys von Drittanbietern. Die Berechtigung wird erteilt, indem das <xref:System.Security.Permissions.SecurityPermissionFlag> -Flag <xref:System.Security.Permissions.SecurityPermission>auf festgelegt wird. Verwaltete Assemblys haben standardmäßig keine Berechtigungen.  
   
- Anwendungen, die in der Zone der vertrauenswürdigen (lokaler Computer) und der Intranetzone ausgeführt wird die Sicherheitsberechtigung gewährt. Anwendungen, die in der Internetzone ausgeführt werden streng untersagt, von der Durchführung der Umleitung der Assemblybindung.  
+ Die Sicherheits Berechtigung wird Anwendungen gewährt, die in der vertrauenswürdigen Zone (dem lokalen Computer) und in der Intranetzone ausgeführt werden. Anwendungen, die in der Internet Zone ausgeführt werden, dürfen keine Umleitung der Assemblybindung durchführen.  
   
- Die Berechtigung ist nicht erforderlich, wenn Assemblyumleitungen durchgeführt wird, in eine Herausgeberrichtliniendatei, die von der Komponentenherausgeber gesteuert wird, oder in der Konfigurationsdatei des Computers ein, die vom Administrator gesteuert wird. Die Berechtigung ist jedoch erforderlich, damit eine Anwendung explizit ignoriert Herausgeberrichtlinie mithilfe der [ \<PublisherPolicy anwenden = "no" / >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) Element in der Konfigurationsdatei der Anwendung.  
+ Die Berechtigung ist nicht erforderlich, wenn die Assemblyumleitung in einer Herausgeber Richtlinien Datei durchgeführt wird, die vom Komponenten Verleger gesteuert wird, oder in der vom Administrator kontrollierten Computer Konfigurationsdatei. Allerdings ist die-Berechtigung erforderlich, damit eine Anwendung die Herausgeber Richtlinie mithilfe des [ \<publisherPolicy Apply = "No"/>-](./file-schema/runtime/publisherpolicy-element.md) Elements in der Anwendungs Konfigurationsdatei explizit ignoriert.  
   
- Die folgende Tabelle zeigt die Sicherheitseinstellungen für die **BindingRedirects** Flag.  
+ In der folgenden Tabelle werden die Standard Sicherheitseinstellungen für das **bindingreumleitungen** -Flag aufgeführt.  
   
-|Zone|BindingRedirects-Flags|  
+|Zone|Einstellung für das bindingreumgeleitet-Flag|  
 |----------|-----------------------------------|  
-|Vertrauenswürdigen Zone (lokaler Computer)|**ON**|  
-|Intranetzone|**ON**|  
+|Vertrauenswürdige Zone (lokaler Computer)|**AUF**|  
+|Intranetzone|**AUF**|  
 |Internetzone|**OFF**|  
 |Nicht vertrauenswürdige Zonen|**OFF**|  
   
- Diese Sicherheitseinstellungen für die Unterstützung oder bestimmte Szenarien auf einem Computer zu beschränken, kann ein Administrator ändern. Es sind keine Tools zum Ändern der **BindingRedirects** Flag, das auf den Standard die Security.config-Datei auf dem Computer eines Benutzers muss von ein Administrator manuell bearbeiten.  
+ Ein Administrator kann diese Sicherheitseinstellungen ändern, um bestimmte Szenarien auf einem bestimmten Computer zu unterstützen oder einzuschränken. Es gibt keine Tools zum Ändern der Einstellung für das **bindingreumleitungen** -Flag von der Standardeinstellung. ein Administrator muss die Datei "Security. config" auf dem Computer eines Benutzers manuell bearbeiten.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Herausgeberrichtliniendateien und Seite-an-Seite-Ausführung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
-- [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
-- [Parallele Ausführung](../../../docs/framework/deployment/side-by-side-execution.md)
+- [Herausgeber Richtlinien Dateien und parallele Ausführung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
+- [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Parallele Ausführung](../deployment/side-by-side-execution.md)

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95dbaddc59a80b4f499a629dd00a52be678b4665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868800"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910877"
 ---
 # <a name="securing-exception-handling"></a>Sichern der Ausnahmebehandlung
-In Visual C++ und Visual Basic können ein Filterausdruck weiter oben im Stapel ausgeführt wird, vor allen **schließlich** Anweisung. Die **catch** Block zugeordnet ist, dass der Filter ausgeführt wird, nachdem die **schließlich** Anweisung. Weitere Informationen finden Sie unter [Verwenden benutzergefilterter Ausnahmen](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Sicherheitsaspekte bei der angegebenen Reihenfolge untersucht. Betrachten Sie das folgende Pseudocodebeispiel, die die Reihenfolge, in welche filteranweisungen veranschaulicht und **schließlich** Anweisungen ausführen.  
+In Visual C++ und Visual Basic wird ein Filter Ausdruck, der den Stapel weiter oben aufführt, vor jeder **abschließend** -Anweisung ausgeführt. Der **catch** -Block, der diesem Filter zugeordnet ist , wird nach der letztanweisung ausgeführt. Weitere Informationen finden Sie unter [Verwenden von Benutzer gefilterten Ausnahmen](../../standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Sicherheitsauswirkungen dieser Bestellung erläutert. Sehen Sie sich das folgende Pseudo Codebeispiel an, das die Reihenfolge veranschaulicht, in der Filter Anweisungen und **schließlich** -Anweisungen ausgeführt werden.  
   
 ```cpp  
 void Main()   
@@ -51,7 +51,7 @@ void Sub()
 }                        
 ```  
   
- Dieser Code gibt Folgendes aus.  
+ Dieser Code druckt Folgendes:  
   
 ```  
 Throw  
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- Der Filter ausgeführt wird, bevor die **schließlich** Anweisung, daher Sicherheitsprobleme von etwas eingeführt werden können, die einen Zustand zu ändern, wenn die Ausführung von anderem Code nutzen kann. Zum Beispiel:  
+ Der Filter wird vor der letzten-Anweisung ausgeführt, sodass Sicherheitsprobleme von allen Änderungen verursacht werden können, die eine Zustandsänderung vornehmen, wenn die Ausführung anderer Codes ausgenutzt werden könnte. Beispiel:  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- Dieser Pseudocode ermöglicht einen Filter, die weiter oben im Stapel, beliebigen Code auszuführen. Weitere Beispiele für Vorgänge, die eine ähnliche Wirkung hätte sind temporäre Identitätswechsel von einer anderen Identität, die ein internes Flag, das die umgeht einige sicherheitsüberprüfung festlegen oder Ändern der Kultur mit dem Thread zugeordnet. Die empfohlene Lösung ist einen Ausnahmehandler, um auf den Zustand des Threads des Codes Änderungen zu isolieren, vom Aufrufer Filter blockiert einführen. Allerdings es ist wichtig, dass der Ausnahmehandler ordnungsgemäß eingeführt werden, oder wird dieses Problem nicht behoben werden. Das folgende Beispiel schaltet die Kultur der Benutzeroberfläche, aber jede Art von Thread Zustandsänderung auf ähnliche Weise verfügbar gemacht werden.  
+ Mit diesem Pseudo Code kann ein Filter höher im Stapel nach oben ausgeführt werden, um beliebigen Code auszuführen. Weitere Beispiele für Vorgänge, die einen ähnlichen Effekt haben würden, sind der temporäre Identitätswechsel einer anderen Identität, das Festlegen eines internen Flags, das eine Sicherheitsüberprüfung umgeht, oder das Ändern der dem Thread zugeordneten Kultur. Die empfohlene Lösung ist das Einführen eines Ausnahme Handlers, um die Änderungen des Codes von den Filter Blöcken der Aufrufer an den Thread Zustand zu isolieren. Es ist jedoch wichtig, dass der Ausnahmehandler ordnungsgemäß eingeführt wird oder dieses Problem nicht behoben wird. Im folgenden Beispiel wird die Benutzeroberflächen Kultur gewechselt, aber jede Art von Thread Zustandsänderung kann auf ähnliche Weise verfügbar gemacht werden.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Die richtige Lösung in diesem Fall ist, um die vorhandene umschließen **versuchen Sie es**/**schließlich** -block in eine **versuchen**/**catch** Block. Einführung einfach in eine **Catch-Throw** Klausel in der vorhandenen **versuchen Sie es**/**schließlich** Block nicht das Problem wird behoben, wie im folgenden Beispiel gezeigt.  
+ Die korrekte Behebung in diesem Fall besteht darin, den vorhandenen **try**/-Block in einem **try**/-**catch** -Block zu wrappen. Wenn Sie einfach eine **catch-throw-** Klausel in den vorhandenen **try**/-Block einführen, wird das Problem nicht behoben, wie im folgenden Beispiel gezeigt.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- Dadurch wird das Problem nicht behoben, da die **schließlich** Anweisung nicht ausgeführt wurde, bevor Sie die `FilterFunc` ruft Steuerelement ab.  
+ Dadurch wird das Problem nicht behoben, weil die letzte-Anweisung nicht ausgeführt wurde `FilterFunc` , bevor das-Steuerelement abruft.  
   
- Im folgende Beispiel wird das Problem behebt, indem sichergestellt wird, die die **schließlich** Klausel ausgeführt wurde, bevor eine Ausnahme des Aufrufers Ausnahme Filter wird angeboten.  
+ Im folgenden Beispiel wird das Problem behoben, indem sicher gestellt wird, dass die letzte-Klausel ausgeführt wurde, bevor die Ausnahme Filter Blöcke der Aufrufer ausgelöst werden.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -162,4 +162,4 @@ YourObject.YourMethod()
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

@@ -11,33 +11,33 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 18d9b93b78d3ed588eafa48831448983ccd61fe8
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3245caa3b7f001ecd68f30b8d30437ec26074a1a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053511"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914963"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Vorgehensweise: Speichern von Dateien mit der SaveFileDialog-Komponente
-Die <xref:System.Windows.Forms.SaveFileDialog> -Komponente können Benutzer das Dateisystem durchsuchen, und wählen Sie die Dateien gespeichert werden soll. Das Dialogfeld gibt den Pfad und den Namen der ausgewählten Datei zurück. Sie müssen jedoch den Code schreiben, mit dem die Dateien letztendlich auf den Datenträger geschrieben werden.  
+Die <xref:System.Windows.Forms.SaveFileDialog> -Komponente ermöglicht es Benutzern, das Dateisystem zu durchsuchen und die zu speichernden Dateien auszuwählen. Das Dialogfeld gibt den Pfad und den Namen der ausgewählten Datei zurück. Sie müssen jedoch den Code schreiben, mit dem die Dateien letztendlich auf den Datenträger geschrieben werden.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>So speichern Sie eine Datei mit der SaveFileDialog-Komponente  
   
 - Zeigen Sie das Dialogfeld **Datei öffnen** an, und rufen Sie eine Methode zum Öffnen der vom Benutzer ausgewählten Datei auf.  
   
-     Verwenden der <xref:System.Windows.Forms.SaveFileDialog> Komponente <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Methode, um die Datei zu speichern. Diese Methode gibt Ihnen eine <xref:System.IO.Stream> Objekt können Sie zu schreiben.  
+     Verwenden Sie <xref:System.Windows.Forms.SaveFileDialog> die- <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Methode der-Komponente, um die Datei zu speichern. Diese Methode gibt Ihnen ein <xref:System.IO.Stream> -Objekt, in das geschrieben werden kann.  
   
-     Im folgenden Beispiel wird die <xref:System.Windows.Forms.DialogResult> Eigenschaft, um den Namen der Datei abzurufen und die <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> Methode, um die Datei zu speichern. Die <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> Methode erhalten Sie einen Stream zum Schreiben der Datei an.  
+     Im folgenden Beispiel wird die <xref:System.Windows.Forms.DialogResult> -Eigenschaft verwendet, um den Namen der Datei zu erhalten <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> , und die-Methode, um die Datei zu speichern. Die <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> -Methode gibt Ihnen einen Stream, in den die Datei geschrieben werden soll.  
   
-     Im folgenden Beispiel besteht eine <xref:System.Windows.Forms.Button> -Steuerelement mit einem Bild zugewiesen wurde. Wenn Sie auf die Schaltfläche klicken eine <xref:System.Windows.Forms.SaveFileDialog> Komponente instanziiert wird, mit einem Filter, die Dateien vom Typ GIF, JPEG und BMP zulässt. Wenn eine Datei diesen Typs im Dialogfeld „Datei speichern“ ausgewählt wird, wird das Bild der Schaltfläche gespeichert.  
+     Im folgenden Beispiel ist ein <xref:System.Windows.Forms.Button> Steuerelement mit einem zugeordneten Bild vorhanden. Wenn Sie auf die Schaltfläche klicken <xref:System.Windows.Forms.SaveFileDialog> , wird eine Komponente mit einem Filter instanziiert, der Dateien vom Typ. gif,. JPEG und BMP zulässt. Wenn eine Datei diesen Typs im Dialogfeld „Datei speichern“ ausgewählt wird, wird das Bild der Schaltfläche gespeichert.  
   
     > [!IMPORTANT]
-    >  Zum Abrufen oder Festlegen der <xref:System.Windows.Forms.FileDialog.FileName%2A> -Eigenschaft muss die Assembly eine Berechtigungsebene gewährt durch die <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> Klasse. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../misc/code-access-security-basics.md).  
+    >  Um die <xref:System.Windows.Forms.FileDialog.FileName%2A> Eigenschaft zu erhalten oder festzulegen, erfordert die Assembly eine von der <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> -Klasse gewährte Berechtigungsebene. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../misc/code-access-security-basics.md).  
   
-     Im Beispiel wird vorausgesetzt, das Formular enthält ein <xref:System.Windows.Forms.Button> steuern Sie mit der <xref:System.Windows.Forms.ButtonBase.Image%2A> -Eigenschaft auf eine Datei der Dateityp GIF, JPEG oder BMP festgelegt.  
+     Im Beispiel wird davon ausgegangen, dass <xref:System.Windows.Forms.Button> das Formular über <xref:System.Windows.Forms.ButtonBase.Image%2A> ein-Steuerelement verfügt, dessen-Eigenschaft auf eine Datei vom Typ. gif,. JPEG oder. BMP festgelegt ist.  
   
     > [!NOTE]
-    >  Die <xref:System.Windows.Forms.FileDialog> Klasse <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> Eigenschaft (, die aufgrund von Vererbung ist Teil der <xref:System.Windows.Forms.SaveFileDialog> Klasse) verwendet einen einsbasierten Index. Dies ist von Bedeutung, wenn Sie Code zum Speichern von Daten in einem bestimmten Format schreiben (z. B. Speichern einer Datei im Nur-Text-Format statt im Binärformat). Diese Eigenschaft ist im nachfolgenden Beispiel enthalten.  
+    > Die <xref:System.Windows.Forms.FileDialog> -Eigenschaft <xref:System.Windows.Forms.FileDialog.FilterIndex%2A> der-Klasse (die aufgrund der Vererbung Teil der <xref:System.Windows.Forms.SaveFileDialog> -Klasse ist) verwendet einen 1-basierten Index. Dies ist von Bedeutung, wenn Sie Code zum Speichern von Daten in einem bestimmten Format schreiben (z. B. Speichern einer Datei im Nur-Text-Format statt im Binärformat). Diese Eigenschaft ist im nachfolgenden Beispiel enthalten.  
   
     ```vb  
     Private Sub Button2_Click(ByVal sender As System.Object, _  
@@ -161,7 +161,7 @@ Die <xref:System.Windows.Forms.SaveFileDialog> -Komponente können Benutzer das 
        }  
     ```  
   
-     (Visual C# und visuelle C++) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visualisierung C# und Visualisierung C++) Fügen Sie den folgenden Code in den Konstruktor des Formulars ein, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  
@@ -172,10 +172,10 @@ Die <xref:System.Windows.Forms.SaveFileDialog> -Komponente können Benutzer das 
        System::EventHandler(this, &Form1::button2_Click);  
     ```  
   
-     Weitere Informationen zum Schreiben von Dateistreams finden Sie unter <xref:System.IO.FileStream.BeginWrite%2A> und <xref:System.IO.FileStream.Write%2A>.  
+     Weitere Informationen zum Schreiben von Dateistreams finden <xref:System.IO.FileStream.BeginWrite%2A> Sie <xref:System.IO.FileStream.Write%2A>unter und.  
   
     > [!NOTE]
-    >  Bestimmte Steuerelemente, z. B. die <xref:System.Windows.Forms.RichTextBox> steuern, haben die Möglichkeit, Dateien zu speichern. Weitere Informationen finden Sie im MSDN-Artikel [Wichtiger Code für Windows Forms-Dialogfelder](https://go.microsoft.com/fwlink/?LinkID=102575) im Abschnitt „"SaveFileDialog"-Komponente“.  
+    > Bestimmte Steuerelemente, z. <xref:System.Windows.Forms.RichTextBox> b. das-Steuerelement, können Dateien speichern. Weitere Informationen finden Sie im MSDN-Artikel [Wichtiger Code für Windows Forms-Dialogfelder](https://go.microsoft.com/fwlink/?LinkID=102575) im Abschnitt „"SaveFileDialog"-Komponente“.  
   
 ## <a name="see-also"></a>Siehe auch
 

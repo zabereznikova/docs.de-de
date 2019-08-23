@@ -6,36 +6,36 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b38ed931cab3a333a56dd027d5843b1c8f00dcb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699726"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916684"
 ---
 # <a name="application-settings-attributes"></a>Attribute für Anwendungseinstellungen
-Architektur der Anwendungseinstellungen enthält viele Attribute, die entweder auf die Anwendungen Einstellungen-Wrapperklasse oder ihre individuellen Eigenschaften angewendet werden können. Diese Attribute werden zur Laufzeit durch die Einstellungen Anwendungsstruktur, häufig speziell der Einstellungsanbieter, untersucht, um anzupassen, die funktioniert auf die angegebenen Anforderungen von den benutzerdefinierten Wrapper.  
+Die Architektur der Anwendungseinstellungen bietet viele Attribute, die entweder auf die Wrapper Klasse für Anwendungseinstellungen oder die jeweiligen Eigenschaften angewendet werden können. Diese Attribute werden zur Laufzeit von der Infrastruktur für Anwendungseinstellungen untersucht, häufig insbesondere vom Einstellungs Anbieter, um die Funktionsweise an die für den benutzerdefinierten Wrapper angewenden Anforderungen anzupassen.  
   
- Die folgende Tabelle enthält die Attribute, die auf die Wrapperklasse für Anwendungseinstellungen, einzelne Eigenschaften dieser Klasse oder beides angewendet werden können. Per definitionem nur ein einziges Bereichsattribut –**UserScopedSettingAttribute** oder **ApplicationScopedSettingAttribute**– muss auf jede Eigenschaft angewendet werden.  
+ In der folgenden Tabelle werden die Attribute aufgelistet, die auf die Wrapper Klasse für Anwendungseinstellungen, die einzelnen Eigenschaften dieser Klasse oder beides angewendet werden können. Definitionsgemäß muss nur ein einzelnes Bereichs Attribut –**UserScopedSettingAttribute** oder **ApplicationScopedSettingAttribute**– auf jede Settings-Eigenschaft angewendet werden.  
   
 > [!NOTE]
->  Ein benutzerdefinierten Einstellungsanbieter, abgeleitet aus den <xref:System.Configuration.SettingsProvider> Klasse, muss nur die folgenden drei Attribute erkennen: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, und **DefaultSettingValueAttribute**.  
+> Ein von der <xref:System.Configuration.SettingsProvider> -Klasse abgeleiteter benutzerdefinierter Einstellungs Anbieter ist nur erforderlich, um die folgenden drei Attribute zu erkennen: " **ApplicationScopedSettingAttribute**", " **UserScopedSettingAttribute**" und " **DefaultSettingValueAttribute**".  
   
-|Attribut|Target|Beschreibung|  
+|Attribut|Ziel|Beschreibung|  
 |---------------|------------|-----------------|  
-|<xref:System.Configuration.SettingsProviderAttribute>|Beides|Gibt den kurzen Namen des Einstellungsanbieters für Persistenz verwendet.<br /><br /> Wenn dieses Attribut nicht angegeben ist, der Standardanbieter <xref:System.Configuration.LocalFileSettingsProvider>, wird angenommen.|  
-|<xref:System.Configuration.UserScopedSettingAttribute>|Beides|Definiert eine Eigenschaft als eine benutzerspezifische anwendungseinstellung an.|  
-|<xref:System.Configuration.ApplicationScopedSettingAttribute>|Beides|Definiert eine Eigenschaft als im Gültigkeitsbereich der Anwendung anwendungseinstellung an.|  
-|<xref:System.Configuration.DefaultSettingValueAttribute>|Eigenschaft|Gibt eine Zeichenfolge, die in den Wert fest codierter Standardwert für diese Eigenschaft vom Anbieter deserialisiert werden kann.<br /><br /> Die <xref:System.Configuration.LocalFileSettingsProvider> dieses Attribut ist nicht erforderlich und durch einen beliebigen Wert überschrieben werden, bereitgestellt von diesem Attribut liegt ein Wert bereits erhalten bleibt.|  
-|<xref:System.Configuration.SettingsDescriptionAttribute>|Eigenschaft|Enthält den beschreibenden Text für eine einzelne Einstellung, die in erster Linie von der Laufzeit und Entwurfszeit-Tools verwendet.|  
-|<xref:System.Configuration.SettingsGroupNameAttribute>|Klasse|Stellt einen expliziten Namen für eine Gruppe "Einstellungen". Wenn dieses Attribut fehlt, ist <xref:System.Configuration.ApplicationSettingsBase> der Wrapper-Klassenname verwendet.|  
-|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|Klasse|Enthält den beschreibenden Text für eine Gruppe "Einstellungen" in erster Linie von der Laufzeit und Entwurfszeit-Tools verwendet.|  
-|<xref:System.Configuration.SettingsManageabilityAttribute>|Beides|Gibt NULL oder mehr Verwaltbarkeit-Dienste, die der Gruppe "Einstellungen" oder die Eigenschaft bereitgestellt werden soll. Die verfügbaren Dienste gelten die <xref:System.Configuration.SettingsManageability> Enumeration.|  
-|<xref:System.Configuration.SpecialSettingAttribute>|Eigenschaft|Gibt an, dass eine Einstellung auf eine spezielle, vordefinierte Kategorie, z. B. eine Verbindungszeichenfolge gehört, die spezielle Verarbeitung durch den Einstellungsanbieter vorschlägt. Die vordefinierten Kategorien für dieses Attribut definieren, indem die <xref:System.Configuration.SpecialSetting> Enumeration.|  
-|<xref:System.Configuration.SettingsSerializeAsAttribute>|Beides|Gibt einen bevorzugten Serialisierungsmechanismus für eine Gruppe oder Eigenschaft an. Die verfügbaren Serialisierungsmechanismen werden definiert, indem die <xref:System.Configuration.SettingsSerializeAs> Enumeration.|  
-|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|Eigenschaft|Gibt an, dass ein Einstellungsanbieter alle Upgrade Anwendungsfunktionalität für die markierte Eigenschaft deaktivieren soll.|  
+|<xref:System.Configuration.SettingsProviderAttribute>|Beides|Gibt den Kurznamen des Einstellungs Anbieters an, der für Persistenz verwendet werden soll.<br /><br /> Wenn dieses Attribut nicht angegeben wird, wird der Standardanbieter <xref:System.Configuration.LocalFileSettingsProvider>,, angenommen.|  
+|<xref:System.Configuration.UserScopedSettingAttribute>|Beides|Definiert eine Eigenschaft als benutzerspezifische Anwendungs Einstellung.|  
+|<xref:System.Configuration.ApplicationScopedSettingAttribute>|Beides|Definiert eine Eigenschaft als anwendungsspezifische Anwendungs Einstellung.|  
+|<xref:System.Configuration.DefaultSettingValueAttribute>|Eigenschaft|Gibt eine Zeichenfolge an, die vom Anbieter in den hart codierten Standardwert für diese Eigenschaft deserialisiert werden kann.<br /><br /> Erfordert <xref:System.Configuration.LocalFileSettingsProvider> dieses Attribut nicht und überschreibt alle Werte, die von diesem Attribut bereitgestellt werden, wenn bereits ein Wert persistent ist.|  
+|<xref:System.Configuration.SettingsDescriptionAttribute>|Eigenschaft|Stellt den beschreibenden Test für eine individuelle Einstellung bereit, die in erster Linie von Lauf Zeit-und Entwurfszeit Tools verwendet wird.|  
+|<xref:System.Configuration.SettingsGroupNameAttribute>|Klasse|Stellt einen expliziten Namen für eine Einstellungs Gruppe bereit. Wenn dieses Attribut fehlt, <xref:System.Configuration.ApplicationSettingsBase> wird der Wrapper Klassenname verwendet.|  
+|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|Klasse|Stellt den beschreibenden Test für eine Einstellungs Gruppe bereit, die in erster Linie von Lauf Zeit-und Entwurfszeit Tools verwendet wird.|  
+|<xref:System.Configuration.SettingsManageabilityAttribute>|Beides|Gibt NULL oder mehr verwaltbarkeitsdienste an, die für die Einstellungs Gruppe oder-Eigenschaft bereitgestellt werden sollen. Die verfügbaren Dienste werden von der <xref:System.Configuration.SettingsManageability> -Enumeration beschrieben.|  
+|<xref:System.Configuration.SpecialSettingAttribute>|Eigenschaft|Gibt an, dass eine Einstellung zu einer speziellen, vordefinierten Kategorie gehört, z. b. eine Verbindungs Zeichenfolge, die eine besondere Verarbeitung durch den Einstellungs Anbieter vorschlägt. Die vordefinierten Kategorien für dieses Attribut werden durch die <xref:System.Configuration.SpecialSetting> -Enumeration definiert.|  
+|<xref:System.Configuration.SettingsSerializeAsAttribute>|Beides|Gibt einen bevorzugten Serialisierungsmechanismus für eine Einstellungs Gruppe oder Eigenschaft an. Die verfügbaren Serialisierungsmechanismen werden von <xref:System.Configuration.SettingsSerializeAs> der-Enumeration definiert.|  
+|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|Eigenschaft|Gibt an, dass ein Einstellungs Anbieter alle anwendungsupgradefunktionen für die markierte Eigenschaft deaktivieren soll.|  
   
- *Klasse* gibt an, dass das Attribut nur auf eine Wrapperklasse für Anwendungseinstellungen angewendet werden kann. *Eigenschaft* gibt an, dass das Attribut nur Einstellungseigenschaften angewendet werden kann. *Beide* gibt an, dass das Attribut auf beiden Ebenen angewendet werden kann.  
+ *Klasse* gibt an, dass das Attribut nur auf eine Wrapper Klasse für Anwendungseinstellungen angewendet werden kann. *Eigenschaft* gibt an, dass das Attribut nur Einstellungs Eigenschaften angewendet werden kann. *Beide* gibt an, dass das Attribut auf jeder Ebene angewendet werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
 

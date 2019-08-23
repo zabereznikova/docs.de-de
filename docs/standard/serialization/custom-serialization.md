@@ -17,12 +17,12 @@ helpviewer_keywords:
 - OnDeserializedAttribute class, custom serialization
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
-ms.openlocfilehash: 983860c680b7c9bcf36406f61582a6b641fd26a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd0010ccd3c7f6b2f4433fe8ce234bc806754260
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645301"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916240"
 ---
 # <a name="custom-serialization"></a>Benutzerdefinierte Serialisierung
 Unter benutzerdefinierter Serialisierung wird die Steuerung der Serialisierung und Deserialisierung eines Typs verstanden. Durch die Steuerung der Serialisierung lässt sich die Serialisierungskompatibilität sicherstellen. Damit ist die Fähigkeit gemeint, Objekte unterschiedlicher Versionen eines Typs serialisieren und deserialisieren zu können, ohne die Kernfunktionalität des Typs zu beeinträchtigen. Zum Beispiel kann die erste Version eines Typs nur zwei Felder umfassen. In der nächsten Version des Typs werden mehrere weitere Felder hinzugefügt. Die zweite Version einer Anwendung muss jedoch fähig sein, beide Typen zu serialisieren und zu deserialisieren. In den folgenden Abschnitten wird beschrieben, wie Serialisierung gesteuert wird.
@@ -30,10 +30,10 @@ Unter benutzerdefinierter Serialisierung wird die Steuerung der Serialisierung u
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
 > [!IMPORTANT]
->  In Versionen vor .NET Framework 4.0 wurde die Serialisierung benutzerdefinierter Benutzerdaten in einer teilweise vertrauenswürdigen Assembly mit GetObjectData erreicht. Ab Version 4 wird diese Methode mit dem <xref:System.Security.SecurityCriticalAttribute>-Attribut markiert, das die Ausführung in teilweise vertrauenswürdigen Assemblys verhindert. Um diese Bedingung zu umgehen, implementieren Sie die <xref:System.Runtime.Serialization.ISafeSerializationData>-Schnittstelle.  
+> In Versionen vor .NET Framework 4.0 wurde die Serialisierung benutzerdefinierter Benutzerdaten in einer teilweise vertrauenswürdigen Assembly mit GetObjectData erreicht. Ab Version 4 wird diese Methode mit dem <xref:System.Security.SecurityCriticalAttribute>-Attribut markiert, das die Ausführung in teilweise vertrauenswürdigen Assemblys verhindert. Um diese Bedingung zu umgehen, implementieren Sie die <xref:System.Runtime.Serialization.ISafeSerializationData>-Schnittstelle.  
   
 ## <a name="running-custom-methods-during-and-after-serialization"></a>Ausführen von benutzerdefinierten Methoden während und nach der Serialisierung  
- Die empfohlene und einfachste Vorgehensweise (eingeführt in Version&amp;#160;2.0 von .NET&amp;#160;Framework) ist es, die folgenden Attribute für Methoden zu verwenden, die zum Korrigieren von Daten während und nach der Serialisierung verwendet werden:  
+ Die empfohlene und einfachste Vorgehensweise (eingeführt in Version&#160;2.0 von .NET&#160;Framework) ist es, die folgenden Attribute für Methoden zu verwenden, die zum Korrigieren von Daten während und nach der Serialisierung verwendet werden:  
   
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
@@ -119,7 +119,7 @@ End Class
   
  Der aktuelle Entwurf wurde einer <xref:System.Runtime.Serialization.ISerializationSurrogate.SetObjectData%2A>-Methode vorgezogen, um potenzielle Sicherheits- und Versionsprobleme zu umgehen. Eine `SetObjectData`-Methode muss beispielsweise öffentlich sein, wenn sie als Teil einer Schnittstelle definiert wird. Die Benutzer müssen demnach einen Code schreiben, um zu verhindern, dass die **SetObjectData**-Methode mehrfach aufgerufen wird. Andernfalls kann eine bösartige Anwendung, die die **SetObjectData**-Methode für ein Objekt während der Ausführung eines Vorgangs aufruft, Probleme verursachen.  
   
- Während der Deserialisierung wird <xref:System.Runtime.Serialization.SerializationInfo> an die Klasse übergeben, die den für diesen Zweck bereitgestellten Konstruktor verwendet. Die für den Konstruktor geltenden Sichtbarkeitseinschränkungen werden bei der Deserialisierung des Objekts ignoriert, d.&amp;#160;h., Sie können die Klasse als öffentlich, geschützt, intern oder privat markieren. Der Konstruktor sollte jedoch als geschützt markiert werden, sofern die Klasse nicht versiegelt ist. Ist dies der Fall, sollte der Konstruktor als privat markiert werden Der Konstruktor sollte außerdem eine gründliche Validierung der Eingaben durchführen. Um Missbrauch durch bösartigen Code zu verhindern, muss der Konstruktor dieselben Sicherheitsüberprüfungen und Berechtigungen erzwingen, die zum Abrufen einer Instanz der Klasse durch einen anderen Konstruktor erforderlich sind. Wenn Sie diese Empfehlung nicht umsetzen, kann bösartiger Code ein Objekt im Voraus serialisieren. Der Code kann dann mit der Berechtigung [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) unter Angabe des <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter>-Flags die Steuerung übernehmen und das Objekt auf einem Clientcomputer deserialisieren, wobei alle Sicherheitseinstellungen umgangen werden, die bei einer standardmäßigen Instanzerstellung mit einem öffentlichen Konstruktor gelten.  
+ Während der Deserialisierung wird <xref:System.Runtime.Serialization.SerializationInfo> an die Klasse übergeben, die den für diesen Zweck bereitgestellten Konstruktor verwendet. Die für den Konstruktor geltenden Sichtbarkeitseinschränkungen werden bei der Deserialisierung des Objekts ignoriert, d.&#160;h., Sie können die Klasse als öffentlich, geschützt, intern oder privat markieren. Der Konstruktor sollte jedoch als geschützt markiert werden, sofern die Klasse nicht versiegelt ist. Ist dies der Fall, sollte der Konstruktor als privat markiert werden Der Konstruktor sollte außerdem eine gründliche Validierung der Eingaben durchführen. Um Missbrauch durch bösartigen Code zu verhindern, muss der Konstruktor dieselben Sicherheitsüberprüfungen und Berechtigungen erzwingen, die zum Abrufen einer Instanz der Klasse durch einen anderen Konstruktor erforderlich sind. Wenn Sie diese Empfehlung nicht umsetzen, kann bösartiger Code ein Objekt im Voraus serialisieren. Der Code kann dann mit der Berechtigung [SecurityPermission](xref:System.Security.Permissions.SecurityPermissionAttribute) unter Angabe des <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter>-Flags die Steuerung übernehmen und das Objekt auf einem Clientcomputer deserialisieren, wobei alle Sicherheitseinstellungen umgangen werden, die bei einer standardmäßigen Instanzerstellung mit einem öffentlichen Konstruktor gelten.  
   
  Um den Zustand des Objekts wiederherzustellen, müssen nur die Werte der Variablen aus <xref:System.Runtime.Serialization.SerializationInfo> mithilfe der bei der Serialisierung verwendeten Namen abgerufen werden. Wenn die Basisklasse <xref:System.Runtime.Serialization.ISerializable> implementiert, sollte der Basiskonstruktor aufgerufen werden, damit das Basisobjekt seine Variablen wiederherstellen kann.  
   

@@ -2,12 +2,12 @@
 title: Eigenschaften der Workflowausführung
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669380"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913611"
 ---
 # <a name="workflow-execution-properties"></a>Eigenschaften der Workflowausführung
 Durch TLS (Thread Local Storage, threadlokaler Speicher) behält die CLR einen Ausführungskontext für jeden Thread bei. Dieser Ausführungskontext bestimmt bekannte Threadeigenschaften wie die Threadidentität, die Ambient-Transaktion und den aktuellen Berechtigungssatz zusätzlich zu benutzerdefinierten Threadeigenschaften, z. B. benannte Slots.  
@@ -157,7 +157,7 @@ End default text.
 ```  
   
 > [!NOTE]
->  Obwohl keine entsprechende Anzeige in der vorangehenden Ausgabe erfolgt, wird jede Textzeile im Konsolenfenster in der angegebenen Farbe angezeigt.  
+> Obwohl keine entsprechende Anzeige in der vorangehenden Ausgabe erfolgt, wird jede Textzeile im Konsolenfenster in der angegebenen Farbe angezeigt.  
   
  Die Eigenschaften der Workflowausführung können von benutzerdefinierten Aktivitätsautoren verwendet werden. Sie stellen außerdem einen Mechanismus zur Handleverwaltung für Aktivitäten bereit, z. B. für die <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität und <xref:System.Activities.Statements.TransactionScope>-Aktivität.  
   

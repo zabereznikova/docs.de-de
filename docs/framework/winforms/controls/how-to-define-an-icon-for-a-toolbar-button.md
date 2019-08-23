@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 2c1c3d8529662c1e1f1a3d28e3853d31f5d940ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b85f734a5f8b31531cfe48f87681d98304db09b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929632"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Vorgehensweise: Definieren eines Symbols für eine Symbolleistenschaltfläche
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
+> Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
- <xref:System.Windows.Forms.ToolBar> Schaltflächen sind Symbole, die darin enthaltenen zur leichteren Identifizierung von Benutzern anzeigen. Erfolgt dies durch das Hinzufügen von Bildern, um die [ImageList-Komponente](imagelist-component-windows-forms.md) Komponente und anschließend zu den <xref:System.Windows.Forms.ImageList> Komponente mit dem die <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+ <xref:System.Windows.Forms.ToolBar>mithilfe von Schaltflächen können darin Symbole angezeigt werden, die von Benutzern leichter identifiziert werden können. Dies wird erreicht, indem der [ImageList-Komponenten](imagelist-component-windows-forms.md) Komponente Bilder hinzugefügt und die <xref:System.Windows.Forms.ImageList> Komponente dann dem <xref:System.Windows.Forms.ToolBar> Steuerelement zugeordnet wird.  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>So legen Sie ein Symbol für eine Symbolleisten-Schaltfläche programmgesteuert fest  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>So legen Sie ein Symbol für eine Symbolleisten Schaltfläche Programm gesteuert fest  
   
-1. Instanziieren Sie in einer Prozedur eine <xref:System.Windows.Forms.ImageList> Komponente und eine <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+1. Instanziieren Sie in einer-Prozedur <xref:System.Windows.Forms.ImageList> eine-Komponente <xref:System.Windows.Forms.ToolBar> und ein-Steuerelement.  
   
-2. Weisen Sie in dieselbe Prozedur, ein Bild, das die <xref:System.Windows.Forms.ImageList> Komponente.  
+2. Weisen Sie der <xref:System.Windows.Forms.ImageList> Komponente in derselben Prozedur ein Image zu.  
   
-3. Weisen Sie in dieselbe Prozedur, die <xref:System.Windows.Forms.ImageList> die Steuerung an die <xref:System.Windows.Forms.ToolBar> steuern und weisen Sie die <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> Eigenschaft der einzelnen Symbolleisten-Schaltflächen.  
+3. Weisen <xref:System.Windows.Forms.ImageList> Siedas<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> Steuerelement in derselben Prozedur dem- Steuerelementzu,undweisenSiedie-EigenschaftdereinzelnenSymbolleistenSchaltflächenzu.<xref:System.Windows.Forms.ToolBar>  
   
-     Das folgende Codebeispiel zeigt der Pfad festgelegt, für der Speicherort des Images ist der **eigene** Ordner. Dies geschieht, da Sie davon ausgehen können, dass die meisten Computer, die das Windows-Betriebssystem ausgeführt wird dieses Verzeichnis enthält. Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.PictureBox> Steuerelement bereits hinzugefügt.  
+     Im folgenden Codebeispiel ist der Pfad, der für den Speicherort des Bilds festgelegt wurde, der Ordner " **eigene** Dateien". Dies geschieht, da Sie davon ausgehen können, dass die meisten Computer, auf denen das Windows-Betriebssystem ausgeführt wird, dieses Verzeichnis enthalten. Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird davon ausgegangen, dass <xref:System.Windows.Forms.PictureBox> ein Formular bereits hinzugefügt wurde.  
   
-     Gemäß den obigen Schritten sollten Sie Code wie unten angezeigten geschrieben haben.  
+     Nachdem Sie die obigen Schritte ausgeführt haben, sollten Sie Code schreiben, der dem unten gezeigten ähnelt.  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -118,6 +118,6 @@ ms.locfileid: "62054275"
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Vorgehensweise: Triggermenü Ereignisse für Symbolleisten-Schaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar-Steuerelement](toolbar-control-windows-forms.md)
 - [ImageList-Komponente](imagelist-component-windows-forms.md)

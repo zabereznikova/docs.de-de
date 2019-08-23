@@ -2,20 +2,20 @@
 title: 'Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d6131a7488d9932118a988095791dd06fd46c49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038869"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933449"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit
-Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendungen zum Aufrufen von WCF-Diensten. Die meisten WCF-Dienste erfordern den Client Anmeldeinformationen für Authentifizierung und Autorisierung angeben. Beim Aufrufen eines WCF-Diensts aus einem WCF-Client können Sie diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angeben. Beim Aufrufen eines WCF-Diensts aus einer COM-Anwendung können Sie die <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Schnittstelle, um die Anmeldeinformationen angeben. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
+Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht com-Anwendungen das Aufrufen von WCF-Diensten. Die meisten WCF-Dienste erfordern, dass der Client Anmelde Informationen für die Authentifizierung und Autorisierung angibt. Wenn Sie einen WCF-Dienst von einem WCF-Client aufrufen, können Sie diese Anmelde Informationen in verwaltetem Code oder in einer Anwendungs Konfigurationsdatei angeben. Wenn Sie einen WCF-Dienst aus einer COM-Anwendung aufrufen, können <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Sie die-Schnittstelle verwenden, um Anmelde Informationen anzugeben. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> ist eine IDispatch-basierte Schnittstelle, und Sie erhalten keine IntelliSense-Funktionen in der Visual Studio-Umgebung.  
+> <xref:System.ServiceModel.ComIntegration.IChannelCredentials> ist eine IDispatch-basierte Schnittstelle, und Sie erhalten keine IntelliSense-Funktionen in der Visual Studio-Umgebung.  
   
- In diesem Artikel verwendet den WCF-Dienst, der definiert, der [Nachrichtensicherheitsbeispiel](../../../../docs/framework/wcf/samples/message-security-sample.md).  
+ In diesem Artikel wird der im [Nachrichten Sicherheits Beispiel](../../../../docs/framework/wcf/samples/message-security-sample.md)definierte WCF-Dienst verwendet.  
   
 ### <a name="to-specify-a-client-certificate"></a>So geben Sie ein Clientzertifikat an:  
   
@@ -23,11 +23,11 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
   
 2. Öffnen Sie das Nachrichtensicherheitsprojekt.  
   
-3. Hinzufügen `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` auf die `ICalculator` Schnittstellendefinition.  
+3. Fügen `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` Sie der `ICalculator` Schnittstellen Definition hinzu.  
   
-4. Hinzufügen `bindingNamespace="http://Microsoft.ServiceModel.Samples"` dem endpunkttag in "App.config" für den Dienst.  
+4. Fügen `bindingNamespace="http://Microsoft.ServiceModel.Samples"` Sie dem Endpunkt-Tag in der app. config-Datei für den Dienst hinzu.  
   
-5. Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des Diensts (http://localhost:8000/ServiceModelSamples/Service) um sicherzustellen, dass der Dienst funktioniert.  
+5. Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des http://localhost:8000/ServiceModelSamples/Service) Dienstanbieter (um sicherzustellen, dass der Dienst funktioniert.  
   
 6. Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   
@@ -57,10 +57,10 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
     ```  
   
 > [!NOTE]
->  Damit dieser Aufruf funktioniert, muss das Clientzertifikat auf dem Computer, auf dem der Client ausgeführt wird, als vertrauenswürdig eingestuft sein.  
+> Damit dieser Aufruf funktioniert, muss das Clientzertifikat auf dem Computer, auf dem der Client ausgeführt wird, als vertrauenswürdig eingestuft sein.  
   
 > [!NOTE]
->  Ist der Moniker nicht ordnungsgemäß formatiert oder der Dienst nicht verfügbar, wird nach dem `GetObject`-Aufruf ein Syntaxfehler zurückgegeben. Vergewissern Sie sich bei Auftreten dieses Fehlers, dass der verwendete Moniker korrekt und der Dienst verfügbar ist.  
+> Ist der Moniker nicht ordnungsgemäß formatiert oder der Dienst nicht verfügbar, wird nach dem `GetObject`-Aufruf ein Syntaxfehler zurückgegeben. Vergewissern Sie sich bei Auftreten dieses Fehlers, dass der verwendete Moniker korrekt und der Dienst verfügbar ist.  
   
 ### <a name="to-specify-user-name-and-password"></a>So geben Sie einen Benutzernamen und ein Kennwort an:  
   
@@ -87,7 +87,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
 4. Führen Sie die Visual Basic-Anwendung aus, und überprüfen Sie die Ergebnisse. Die Visual Basic-Anwendung zeigt ein Meldungsfeld mit dem Ergebnis des Aufrufs von Add(3, 4) an.  
   
     > [!NOTE]
-    >  Die im Dienstmoniker in diesem Beispiel angegebene Bindung wurde in WSHttpBinding_ICalculator geändert. Zudem müssen beim Aufruf von <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> ein gültiger Benutzername und ein Kennwort angegeben werden.  
+    > Die im Dienstmoniker in diesem Beispiel angegebene Bindung wurde in WSHttpBinding_ICalculator geändert. Zudem müssen beim Aufruf von <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetUserNameCredential%28System.String%2CSystem.String%29> ein gültiger Benutzername und ein Kennwort angegeben werden.  
   
 ### <a name="to-specify-windows-credentials"></a>So geben Sie Windows-Anmeldeinformationen an:  
   
@@ -111,11 +111,11 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
 3. Führen Sie die Visual Basic-Anwendung aus, und überprüfen Sie die Ergebnisse. Die Visual Basic-Anwendung zeigt ein Meldungsfeld mit dem Ergebnis des Aufrufs von Add(3, 4) an.  
   
     > [!NOTE]
-    >  "Domäne", "Benutzer-ID" und "Kennwort" müssen durch gültige Werte ersetzt werden.  
+    > "Domäne", "Benutzer-ID" und "Kennwort" müssen durch gültige Werte ersetzt werden.  
   
 ### <a name="to-specify-an-issue-token"></a>So geben Sie ein Problemtoken an:  
   
-1. Problemtoken werden nur für Anwendungen, die verbundene Sicherheit verwenden, eingesetzt. Weitere Informationen zu verbundener Sicherheit finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) und [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
+1. Problemtoken werden nur für Anwendungen, die verbundene Sicherheit verwenden, eingesetzt. Weitere Informationen zur Verbund Sicherheit finden Sie unter Verbund [-und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) und Verbund [Beispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
      Im folgenden Visual Basic-Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>-Methode aufgerufen wird:  
   
@@ -134,7 +134,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
 ## <a name="see-also"></a>Siehe auch
 
 - [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Vorgehensweise: Konfigurieren von Anmelde Informationen für eine Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Vorgehensweise: Erstellen eines Verbund Clients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

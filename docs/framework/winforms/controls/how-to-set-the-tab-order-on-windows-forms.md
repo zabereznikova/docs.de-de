@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 5559a3a3e4e62ce9e620de23feef3cbfa0ab8f60
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 0a6cd8b16148d28049549b241b568966239b9b01
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039854"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923618"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Vorgehensweise: Festlegen der Aktivierreihenfolge in Windows Forms
 Die Aktivier Reihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von einem Steuerelement zum anderen verschiebt, indem er die Tab-Taste drückt Jedes Formular hat eine eigene Aktivier Reihenfolge. Standardmäßig ist die Aktivier Reihenfolge mit der Reihenfolge identisch, in der Sie die Steuerelemente erstellt haben. Die Nummerierung der Tab-Reihenfolge beginnt bei Null.
@@ -29,12 +29,12 @@ Die Aktivier Reihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von 
 2. Klicken Sie nacheinander auf die Steuerelemente, um die gewünschte Aktivier Reihenfolge festzulegen.
 
     > [!NOTE]
-    >  Die Position eines Steuer Elements in der Aktivier Reihenfolge kann auf einen beliebigen Wert größer oder gleich 0 (null) festgelegt werden. Wenn Duplikate auftreten, wird die z-Reihenfolge der beiden Steuerelemente ausgewertet, und das Steuerelement oben wird zuerst als Registerkarte angezeigt. (Die z-Reihenfolge ist das visuelle Schichten von Steuerelementen in einem Formular entlang der z-Achse des Formulars [Tiefe]. Die z-Reihenfolge bestimmt, welche Steuerelemente vor anderen Steuerelementen stehen.) Weitere Informationen zur z-Reihenfolge finden Sie unter [Layering objects on Windows Forms](how-to-layer-objects-on-windows-forms.md).
+    > Die Position eines Steuer Elements in der Aktivier Reihenfolge kann auf einen beliebigen Wert größer oder gleich 0 (null) festgelegt werden. Wenn Duplikate auftreten, wird die z-Reihenfolge der beiden Steuerelemente ausgewertet, und das Steuerelement oben wird zuerst als Registerkarte angezeigt. (Die z-Reihenfolge ist das visuelle Schichten von Steuerelementen in einem Formular entlang der z-Achse des Formulars [Tiefe]. Die z-Reihenfolge bestimmt, welche Steuerelemente vor anderen Steuerelementen stehen.) Weitere Informationen zur z-Reihenfolge finden Sie unter [Layering objects on Windows Forms](how-to-layer-objects-on-windows-forms.md).
 
 3. Wenn Sie fertig sind, klicken Sie im Menü **Ansicht** erneut auf **Tab-Reihenfolge** , um den Tab-Reihen Folgen Modus zu verlassen.
 
     > [!NOTE]
-    >  Steuerelemente, die den Fokus nicht erhalten können, sowie deaktivierte und unsichtbare Steuerelemente verfügen <xref:System.Windows.Forms.Control.TabIndex%2A> nicht über eine-Eigenschaft und sind nicht in der Aktivier Reihenfolge enthalten. Wenn ein Benutzer die Tab-Taste drückt, werden diese Steuerelemente übersprungen.
+    > Steuerelemente, die den Fokus nicht erhalten können, sowie deaktivierte und unsichtbare Steuerelemente verfügen <xref:System.Windows.Forms.Control.TabIndex%2A> nicht über eine-Eigenschaft und sind nicht in der Aktivier Reihenfolge enthalten. Wenn ein Benutzer die Tab-Taste drückt, werden diese Steuerelemente übersprungen.
 
  Alternativ kann die Aktivier Reihenfolge in der Eigenschaftenfenster mit <xref:System.Windows.Forms.Control.TabIndex%2A> der-Eigenschaft festgelegt werden. Die <xref:System.Windows.Forms.Control.TabIndex%2A> -Eigenschaft eines-Steuer Elements bestimmt, wo es in der Aktivier Reihenfolge positioniert ist. Standardmäßig hat <xref:System.Windows.Forms.Control.TabIndex%2A> das erste gezeichnete Steuerelement den Wert 0, das zweite <xref:System.Windows.Forms.Control.TabIndex%2A> hat den Wert 1 usw.
 
@@ -49,7 +49,7 @@ Die Aktivier Reihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von 
      Ein-Steuer <xref:System.Windows.Forms.Control.TabStop%2A> Element, dessen-Eigenschaft `false` auf festgelegt wurde, behält seine Position weiterhin in der Aktivier Reihenfolge, obwohl das Steuerelement übersprungen wird, wenn Sie die Steuerelemente mit der Tab-Taste durchlaufen.
 
     > [!NOTE]
-    >  Eine Optionsfeld Gruppe verfügt zur Laufzeit über einen einzelnen Tabstopp. Die ausgewählte Schaltfläche (d. h. die- <xref:System.Windows.Forms.RadioButton.Checked%2A> Schaltfläche, `true`bei der die <xref:System.Windows.Forms.Control.TabStop%2A> -Eigenschaft auf fest `true`gelegt ist) ist <xref:System.Windows.Forms.Control.TabStop%2A> für die-Eigenschaft automatisch auf `false`festgelegt, während die-Eigenschaft der anderen Schaltflächen auf Weitere Informationen zum Gruppieren <xref:System.Windows.Forms.RadioButton> von Steuerelementen finden [Sie unter Gruppieren von Windows Forms RadioButton-Steuerelementen, die als Gruppe fungieren](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
+    > Eine Optionsfeld Gruppe verfügt zur Laufzeit über einen einzelnen Tabstopp. Die ausgewählte Schaltfläche (d. h. die- <xref:System.Windows.Forms.RadioButton.Checked%2A> Schaltfläche, `true`bei der die <xref:System.Windows.Forms.Control.TabStop%2A> -Eigenschaft auf fest `true`gelegt ist) ist <xref:System.Windows.Forms.Control.TabStop%2A> für die-Eigenschaft automatisch auf `false`festgelegt, während die-Eigenschaft der anderen Schaltflächen auf Weitere Informationen zum Gruppieren <xref:System.Windows.Forms.RadioButton> von Steuerelementen finden [Sie unter Gruppieren von Windows Forms RadioButton-Steuerelementen, die als Gruppe fungieren](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
 ## <a name="see-also"></a>Siehe auch
 

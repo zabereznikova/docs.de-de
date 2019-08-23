@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 0ab071bf7996a296563fbda68dfdc731e95ed897
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 334e9fe7ca6931f87c75023f3322638b36001b6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923066"
 ---
 # <a name="routing-scenarios"></a>Routingszenarien
 Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein, beim Erstellen einer völlig neuen Konfiguration eine effiziente Routinglogik zu entwerfen.  Es gibt jedoch einige allgemeine Szenarios, auf denen die meisten Routingdienstkonfigurationen basieren. Auch wenn diese Szenarios ggf. nicht genau mit Ihrer jeweiligen Konfiguration übereinstimmen, trägt es zum Verständnis des Routingdiensts bei, wenn Sie wissen, wie dieser in bestimmten Szenarios konfiguriert werden kann.  
@@ -27,31 +27,31 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
 |Fehlerbehandlung|Sie müssen für die Widerstandsfähigkeit gegen Netzwerkausfälle und Kommunikationsfehler sorgen.|  
   
 > [!NOTE]
->  Viele der beschriebenen Szenarios gelten nur für bestimmte Geschäftsanforderungen oder Verarbeitungsanforderungen, aber die Planung der Unterstützung dynamischer Updates und die Verwendung der Fehlerbehandlung zählen zu den bewährten Vorgehensweise. Sie können damit die Routinglogik zur Laufzeit und die Wiederherstellung bei vorübergehenden Netzwerkfehlern und Kommunikationsfehlern sicherstellen.  
+> Viele der beschriebenen Szenarios gelten nur für bestimmte Geschäftsanforderungen oder Verarbeitungsanforderungen, aber die Planung der Unterstützung dynamischer Updates und die Verwendung der Fehlerbehandlung zählen zu den bewährten Vorgehensweise. Sie können damit die Routinglogik zur Laufzeit und die Wiederherstellung bei vorübergehenden Netzwerkfehlern und Kommunikationsfehlern sicherstellen.  
   
 ### <a name="service-versioning"></a>Dienstversionsverwaltung  
  Wenn Sie eine neue Version eines Diensts einführen, müssen Sie die ältere Version häufig noch so lange weiter pflegen, bis alle Clients auf den neuen Dienst umgestellt wurden. Dies ist besonders wichtig, wenn es sich bei dem Dienst um einen Prozess mit langer Laufzeit handelt, der Tage, Wochen oder sogar Monate dauert. Normalerweise erfordert dies die Implementierung einer neuen Endpunktadresse für den neuen Dienst, während der ursprüngliche Endpunkt für den vorherigen Dienst weiter verwaltet wird.  
   
  Mithilfe des Routingdiensts können Sie einen Endpunkt verfügbar machen, um Nachrichten von Clientanwendungen zu empfangen und dann jede Nachricht anhand ihres Inhalts an die richtige Endversion weiterzuleiten. Die Basisimplementierung erfordert das Hinzufügen eines benutzerdefinierten Headers zur Nachricht, der die Version des Diensts angibt, von der die Nachricht verarbeitet werden soll. Der Routingdienst kann den XPathMessageFilter verwenden, um jede Nachricht auf das Vorhandensein des benutzerdefinierten Headers zu überprüfen und die Nachricht an den entsprechenden Zielendpunkt weiterzuleiten.  
   
- Die Schritte zum Erstellen einer dienstversionskonfiguration finden Sie unter [so wird's gemacht: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
+ Die Schritte zum Erstellen einer Dienst Versionsverwaltung finden [Sie unter Gewusst wie: Dienst Versions](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)Verwaltung.
   
 ### <a name="service-data-partitioning"></a>Dienstdatenpartitionierung  
  Beim Entwerfen einer verteilten Umgebung ist es häufig ratsam, die Verarbeitungslast auf mehrere Computer zu verteilen, um Hochverfügbarkeit sicherzustellen, die Verarbeitungslast für einzelne Computer zu verringern oder für eine bestimmte Teilmenge von Nachrichten dedizierte Ressourcen bereitzustellen. Der Routingdienst ist zwar kein Ersatz für eine dedizierte Lösung für den Lastenausgleich, aber Sie können die Funktion für das inhaltsbasierte Routing verwenden, um Nachrichten, die einander ansonsten ähnlich sind, an bestimmte Ziele weiterzuleiten. Es kann z. B. sein, dass Sie Nachrichten eines bestimmten Clients gesondert von den Nachrichten verarbeiten müssen, die Sie von anderen Clients empfangen.  
   
- Die Schritte zum Erstellen einer dienstdatenpartitionierung finden Sie unter [so wird's gemacht: Partitionieren von Daten in Service](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
+ Die Schritte zum Erstellen einer Konfiguration für die Dienst Daten Partitionierung finden [Sie unter Gewusst wie: Dienst Daten Partitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Dynamisches Routing  
  Häufig ist es ratsam, die Routingkonfiguration zu ändern, um auf sich ändernde Geschäftsanforderungen zu reagieren. Dies kann das Hinzufügen einer Route zu einer neueren Version eines Diensts, das Ändern von Routingkriterien oder das Ändern des Zielendpunkts einer bestimmten Nachricht sein, an den der Filter Nachrichten weiterleitet. Mit dem Routingdienst können Sie dies mithilfe von <xref:System.ServiceModel.Routing.RoutingExtension> durchführen. Sie können damit zur Laufzeit ein neues RoutingConfiguration-Objekt bereitstellen. Die neue Konfiguration ist sofort wirksam. Sie gilt jedoch nur für die neuen Sitzungen, die vom Routingdienst verarbeitet werden.  
   
- Die Schritte zum Implementieren des dynamischen Routings finden Sie unter [so wird's gemacht: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
+ Die Schritte zum Implementieren des dynamischen Routings finden [Sie unter Gewusst wie: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Multicast  
  Beim Weiterleiten von Nachrichten werden Nachrichten normalerweise an einen bestimmten Zielendpunkt weitergeleitet.  Es kann jedoch sein, dass Sie gelegentlich eine Kopie der Nachricht an mehrere Zielendpunkte weiterleiten müssen. Um das Routing per Multicast durchzuführen, müssen die folgenden Bedingungen erfüllt sein:  
   
 - Die Kanalform darf nicht vom Typ "Anforderung-Antwort" sein (unidirektional oder duplex ist jedoch möglich), weil dabei vorgegeben ist, dass die Clientanwendung als Antwort auf die Anforderung nur eine Antwort empfangen kann.  
   
-- Mehrere Filter müssen zurückgeben **"true"** beim Auswerten der Nachricht.  
+- Mehrere Filter müssen beim Auswerten der Nachricht **true** zurückgeben.  
   
  Wenn diese Bedingungen erfüllt sind, empfängt jeder Zielendpunkt, der einem Filter mit der Rückgabe "true" zugeordnet ist, eine Kopie der Nachricht.  
   
@@ -63,12 +63,12 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
   
  Der Routingdienst versucht, dieses Szenario zu beheben, indem er robuste Fehlerbehandlungsfunktionen für Nachrichten bereitstellt, für die Netzwerk- oder Kommunikationsfehler auftreten. Wenn Sie eine Liste möglicher Zielendpunkte erstellen und diese Liste jedem Nachrichtenfilter zuordnen, beseitigen Sie die Fehlerquelle (Single Point of Failure), deren Ursache die Verwendung von nur einem möglichen Ziel ist. Bei einem Fehler versucht der Routingdienst, die Nachricht an den nächsten Endpunkt in der Liste zu übermitteln, bis die Nachricht übermittelt wurde, ein anderer Fehler als ein Kommunikationsfehler aufgetreten ist oder alle Endpunkte abgearbeitet wurden.  
   
- Die Schritte zum Konfigurieren der Fehlerbehandlung verwendet wird, finden Sie unter [so wird's gemacht: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
+ Die Schritte zum Konfigurieren der Fehlerbehandlung finden [Sie unter Gewusst wie: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
- [How To: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [How To: Dienst Versionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [How To: Dienstdatenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [How To: Partitionierung von Dienst Daten](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
  [How To: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   

@@ -3,15 +3,15 @@ title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74ca031f7017d51adaa7a71593f537b64abbeae6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667313"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942892"
 ---
 # <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
-Registriert einen anspruchsautorisierungs-Manager für die eingehenden Ansprüche.  
+Registriert einen Anspruchs Autorisierungs-Manager für die eingehenden Ansprüche.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -36,27 +36,27 @@ Registriert einen anspruchsautorisierungs-Manager für die eingehenden Ansprüch
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Einen benutzerdefinierten Typ abgeleitet, die die <xref:System.Security.Claims.ClaimsAuthorizationManager> Klasse. Weitere Informationen zur Vorgehensweise beim Angeben der `type` Attribut, finden Sie unter [benutzerdefinierte Typverweise](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|Typ|Ein benutzerdefinierter Typ, der von <xref:System.Security.Claims.ClaimsAuthorizationManager> der-Klasse abgeleitet wird. Weitere Informationen zum Angeben des `type` -Attributs finden Sie unter [benutzerdefinierte Typverweise](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Liegt keine `type` -Attribut, oder wenn die `type` attributverweise der <xref:System.Security.Claims.ClaimsAuthenticationManager> -Klasse, die `<claimsAuthorizationManager>` Element nimmt keine untergeordneten Elemente, aber von abgeleiteten Klassen <xref:System.Security.Claims.ClaimsAuthorizationManager> können untergeordnete Konfigurationselemente definieren.  
+ Wenn kein `type` -Attribut vorhanden ist, oder wenn `type` das-Attribut <xref:System.Security.Claims.ClaimsAuthenticationManager> auf die- `<claimsAuthorizationManager>` Klasse verweist, nimmt das-Element keine untergeordneten Elemente an <xref:System.Security.Claims.ClaimsAuthorizationManager> . von abgeleitete Klassen können jedoch untergeordnete Konfigurationselemente definieren.  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Gibt die identitätseinstellungen der Servicelevel.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Gibt Identitäts Einstellungen auf Dienst Ebene an.|  
   
 ## <a name="remarks"></a>Hinweise  
- Das Standardverhalten durch die <xref:System.Security.Claims.ClaimsAuthorizationManager> Klasse immer autorisiert die eingehenden Ansprüche. Wenn kein `type` -Attribut angegeben ist oder wenn die `type` -Attribut gibt an, die <xref:System.Security.Claims.ClaimsAuthorizationManager> -Klasse, die `<claimsAuthorizationManager>` Element nimmt keine untergeordneten Elemente. Können Sie angeben, die `type` Attribut, um einen Typ registrieren, abgeleitet aus den <xref:System.Security.Claims.ClaimsAuthorizationManager> Klasse, um benutzerdefiniertes Verhalten zu implementieren. Abgeleitete Klassen können die Konfiguration über untergeordnete Elemente des unterstützen die `<claimsAuthorizationManager>` Element durch das Überschreiben der <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> Methode, um diese Elemente zu verarbeiten. Das Schema für die untergeordneten Elemente definiert ist, bis zu den Designer der-Klasse.  
+ Das Standardverhalten, das durch <xref:System.Security.Claims.ClaimsAuthorizationManager> die-Klasse bereitgestellt wird, autorisiert immer eingehende Ansprüche. Wenn kein `type` -Attribut angegeben wird oder wenn `type` das-Attribut <xref:System.Security.Claims.ClaimsAuthorizationManager> die-Klasse `<claimsAuthorizationManager>` angibt, nimmt das-Element keine untergeordneten Elemente an. Sie können das `type` Attribut angeben, um einen von der <xref:System.Security.Claims.ClaimsAuthorizationManager> -Klasse abgeleiteten Typ zu registrieren, um benutzerdefiniertes Verhalten zu implementieren Abgeleitete Klassen können die Konfiguration durch untergeordnete Elemente `<claimsAuthorizationManager>` des-Elements unter <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> stützen, indem Sie die-Methode zum Verarbeiten dieser Elemente überschreiben. Das Schema, das für die untergeordneten Elemente definiert ist, ist der Designer der-Klasse.  
   
 > [!IMPORTANT]
->  Bei Verwendung der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse, um anspruchsbasierte Zugriffssteuerung in Ihrem Code die identitätskonfiguration bereitzustellen, auf die verweist, die `<federationConfiguration>` -Element konfiguriert die anspruchsautorisierungs-Manager und die Richtlinie, die verwendet wird, um sicherzustellen autorisierungsentscheidungen. Dies gilt, auch in Szenarien, die nicht passiven Webszenarien, z. B. Anwendungen für Windows Communication Foundation (WCF) oder eine Anwendung, die nicht webbasierte ist. Wenn die Anwendung nicht mit einer passiven Webanwendung ist die `<claimsAuthorizationManager>` -Element (und seine untergeordneten Richtlinienelemente, sofern vorhanden) der identitätskonfiguration verwiesen wird die einzigen Einstellungen, die angewendet werden. Alle anderen Einstellungen werden ignoriert. Weitere Informationen finden Sie unter den [ \<FederationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) Element.  
+> Wenn Sie die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> -oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> die-Klasse verwenden, um eine Anspruchs basierte Zugriffs Steuerung im Code bereitzustellen, konfiguriert die Identitäts Konfiguration `<federationConfiguration>` , auf die das-Element verweist, den anspruchsautorisierungs-Manager und die Richtlinie, die verwendet wird, um Autorisierungs Entscheidungen. Dies gilt auch für Szenarien, bei denen es sich nicht um passive Webszenarien handelt, z. b. Windows Communication Foundation (WCF)-Anwendungen oder eine nicht webbasierte Anwendung. Wenn es sich bei der Anwendung nicht um eine passive Webanwendung handelt, `<claimsAuthorizationManager>` werden das-Element (und seine untergeordneten Richtlinien Elemente, falls vorhanden) der Identitäts Konfiguration, auf die verwiesen wird, als einzige Einstellung angewendet. Alle anderen Einstellungen werden ignoriert. Weitere Informationen finden Sie unter dem [ \<Element federationconfiguration >](federationconfiguration.md) .  
   
- Dieses Element legt die <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> Eigenschaft.  
+ Mit diesem Element wird <xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthorizationManager%2A?displayProperty=nameWithType> die-Eigenschaft festgelegt.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende XML zeigt die Konfiguration für eine Autorisierung von Ansprüchen-Manager, bestehend aus Ressourcen-Aktionspaare Richtlinie implementiert, von denen jede boolesche Kombinationen von Ansprüchen angibt, die ein anforderer zum Ausführen der Aktion für die Ressource besitzen muss. Der Code, den anspruchsautorisierungs-Manager verwenden Sie diese Richtlinie implementiert, finden Sie der `ClaimsBasedAuthorization` Beispiel.  
+ Der folgende XML-Code zeigt die Konfiguration für einen anspruchsautorisierungs-Manager, der eine Richtlinie implementiert, die aus Ressourcen Aktions Paaren besteht, von denen jede boolesche Kombinationen der Ansprüche angibt, die ein Anforderer besitzen muss, um die Aktion für die Ressource auszuführen. Der Code, der den Anspruchs Autorisierungs-Manager implementiert, der diese Richtlinie verwenden kann `ClaimsBasedAuthorization` , finden Sie im Beispiel.  
   
 ```xml  
 <system.identityModel>  

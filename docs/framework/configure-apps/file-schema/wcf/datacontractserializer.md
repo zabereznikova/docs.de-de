@@ -2,12 +2,12 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8814a48df8933cf08db78e397c24d42f2da26026
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704127"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919230"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -16,7 +16,7 @@ Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataCon
 \<behaviors>  
 \<endpointBehaviors>  
 \<behavior>  
-\<dataContractSerializer>  
+\<DataContractSerializer->  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataCon
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Weitere Informationen zu bekannten Typen finden Sie in der <xref:System.Runtime.Serialization.DataContractSerializer>-Dokumentation.  
@@ -55,5 +55,5 @@ Enthält Konfigurationsdaten für den <xref:System.Runtime.Serialization.DataCon
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [Bekannte Typen in Datenverträgen](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Datenübertragung und Serialisierung](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [Bekannte Typen in Datenverträgen](../../../wcf/feature-details/data-contract-known-types.md)
+- [Datenübertragung und Serialisierung](../../../wcf/feature-details/data-transfer-and-serialization.md)

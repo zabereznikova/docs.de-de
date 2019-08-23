@@ -3,15 +3,15 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf1f7f3de1b44dba63977bf524dea9af2690fb1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791728"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942781"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
-Legt fest, den Handlertyp der benutzerdefinierten Cookies. Dieses Element kann nur vorhanden sein, wenn die `mode` Attribut der `<cookieHandler>` Element ist "Custom". Aus der benutzerdefinierte Typ abgeleitet werden die <xref:System.IdentityModel.Services.CookieHandler> Klasse.  
+Legt den Typ des benutzerdefinierten Cookie-Handlers fest. Dieses Element kann nur vorhanden sein, wenn `mode` das-Attribut `<cookieHandler>` des-Elements "Custom" ist. Der benutzerdefinierte Typ muss von der <xref:System.IdentityModel.Services.CookieHandler> -Klasse abgeleitet werden.  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -38,24 +38,24 @@ Legt fest, den Handlertyp der benutzerdefinierten Cookies. Dieses Element kann n
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Gibt einen benutzerdefinierten Typ abgeleitet, die die <xref:System.IdentityModel.Services.CookieHandler> Klasse. Weitere Informationen zur Vorgehensweise beim Angeben der `type` Attribut, finden Sie unter [benutzerdefinierte Typverweise](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|Typ|Gibt einen benutzerdefinierten Typ an, der <xref:System.IdentityModel.Services.CookieHandler> von der-Klasse abgeleitet wird. Weitere Informationen zum Angeben des `type` -Attributs finden Sie unter [benutzerdefinierte Typverweise](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> , die die <xref:System.IdentityModel.Services.SessionAuthenticationModule> zum Lesen und Schreiben von Cookies verwendet.|  
+|[\<cookieHandler>](cookiehandler.md)|Konfiguriert den <xref:System.IdentityModel.Services.CookieHandler> , der <xref:System.IdentityModel.Services.SessionAuthenticationModule> von verwendet wird, um Cookies zu lesen und zu schreiben.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie einen benutzerdefinierten cookiehandler angeben, indem Sie festlegen der `mode` Attribut der `<cookieHandler>` Element in "Benutzerdefiniert", geben Sie den Typ des der benutzerdefinierten cookiehandler dazu eine `<customCookieHandler>` untergeordnetes Element, das den Cookie Handlertyp verweist. Dieses Element nicht angegeben, wenn die `mode` -Attribut auf "Chunked" oder "Default" festgelegt ist. Benutzerdefiniertes Cookie Handler müssen abgeleitet werden, aus der <xref:System.IdentityModel.Services.CookieHandler> Klasse.  
+ Wenn Sie einen benutzerdefinierten cookiehandler `mode` angeben, indem `<cookieHandler>` Sie das-Attribut des-Elements auf "Custom" festlegen, müssen Sie den Typ des Benutzer `<customCookieHandler>` definierten cookiehandlers angeben, indem Sie ein untergeordnetes-Element einschließen, das auf den Typ der Dieses Element kann nicht angegeben werden, `mode` wenn das-Attribut auf "Chunked" oder "Default" festgelegt ist. Benutzerdefinierte Cookie-Handler müssen von der <xref:System.IdentityModel.Services.CookieHandler> -Klasse abgeleitet werden.  
   
- Die `<customCookieHandler>` Element wird dargestellt, durch die <xref:System.IdentityModel.Configuration.CustomTypeElement> Klasse.  
+ Das `<customCookieHandler>` -Element wird durch die <xref:System.IdentityModel.Configuration.CustomTypeElement> -Klasse dargestellt.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird das SAM um einen benutzerdefinierten cookiehandler des Typs verwenden `MyNamespace.MyCustomCookieHandler`.  
+ Im folgenden Beispiel wird Sam für die Verwendung eines benutzerdefinierten cookiehandlers vom Typ `MyNamespace.MyCustomCookieHandler`konfiguriert.  
   
 ```xml  
 <cookieHandler mode="Custom">  

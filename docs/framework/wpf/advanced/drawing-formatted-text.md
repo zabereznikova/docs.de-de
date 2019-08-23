@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 3b410bcf609aca2cb201042247b8768f243ac93a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eeba54ebd63b26a50c8c01a2478e847b3e660a3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629742"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937693"
 ---
 # <a name="drawing-formatted-text"></a>Zeichnen von formatiertem Text
 Dieses Thema enthält eine Übersicht über die Funktionen des <xref:System.Windows.Media.FormattedText> -Objekts. Dieses Objekt bietet die Steuerung auf niedriger Ebene für das Zeichnen von Text in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen.  
@@ -26,7 +26,7 @@ Dieses Thema enthält eine Übersicht über die Funktionen des <xref:System.Wind
  ![Mit dem FormattedText-Objekt angezeigter Text](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
->  Für Entwickler, die von der [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-API migrieren, listet die Tabelle im [Win32-Migration](#win32_migration)-Abschnitt die [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-DrawText-Flags und deren ungefähre Entsprechung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] auf.  
+> Für Entwickler, die von der [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-API migrieren, listet die Tabelle im [Win32-Migration](#win32_migration)-Abschnitt die [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-DrawText-Flags und deren ungefähre Entsprechung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] auf.  
   
 ### <a name="reasons-for-using-formatted-text"></a>Gründe für das Verwenden von formatiertem Text  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente für das Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen sollte das <xref:System.Windows.Controls.TextBlock> -Element verwendet werden, wenn eingeschränkte Textunterstützung erforderlich ist, z. b. ein kurzer [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]Satz in einer. <xref:System.Windows.Controls.Label>kann verwendet werden, wenn nur minimale Textunterstützung erforderlich ist. Weitere Informationen finden Sie unter [Dokumente in WPF](documents-in-wpf.md).  
@@ -97,15 +97,15 @@ Kugel, die der Pfadgeometrie des Textes folgt
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|Verwenden Sie <xref:System.Windows.Media.FormattedText.Trimming%2A> die-Eigenschaft mit <xref:System.Windows.TextTrimming.CharacterEllipsis>dem Wert.<br /><br /> Verwenden <xref:System.Windows.TextTrimming.WordEllipsis> Sie, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] um DT_END_ELLIPSIS mit DT_WORD_ELIPSIS End-Ellipsen zu erhalten – in diesem Fall treten Zeichen Auslassungs Zeichen nur bei Wörtern auf, die nicht in eine einzelne Zeile passen.|  
 |DT_EXPAND_TABS|None|Nicht erforderlich Registerkarten werden automatisch auf Zwischenstopps nach jeweils 4 em erweitert. Dies entspricht etwa der Breite von 8 sprachunabhängigen Zeichen.|  
 |DT_EXTERNALLEADING|None|Nicht erforderlich Der externe Abstand ist immer im Zeilenabstand enthalten. Verwenden Sie <xref:System.Windows.Media.FormattedText.LineHeight%2A> die-Eigenschaft, um einen benutzerdefinierten Zeilenabstand zu erstellen.|  
-|DT_HIDEPREFIX|None|Wird nicht unterstützt. Entfernen Sie das "&" aus der Zeichenfolge, <xref:System.Windows.Media.FormattedText> bevor Sie das Objekt erstellen.|  
+|DT_HIDEPREFIX|None|Nicht unterstützt. Entfernen Sie das "&" aus der Zeichenfolge, <xref:System.Windows.Media.FormattedText> bevor Sie das Objekt erstellen.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Dies ist die standardmäßige Textausrichtung. Verwenden Sie <xref:System.Windows.Media.FormattedText.TextAlignment%2A> die-Eigenschaft, wobei der <xref:System.Windows.TextAlignment.Left>Wert auf festgelegt ist. (nur für WPF)|  
-|DT_MODIFYSTRING|None|Wird nicht unterstützt.|  
+|DT_MODIFYSTRING|None|Nicht unterstützt.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|Clipping geschieht nicht automatisch. Wenn Sie Text abschneiden möchten, verwenden Sie die <xref:System.Windows.Media.Visual.VisualClip%2A> -Eigenschaft.|  
-|DT_NOFULLWIDTHCHARBREAK|None|Wird nicht unterstützt.|  
+|DT_NOFULLWIDTHCHARBREAK|None|Nicht unterstützt.|  
 |DT_NOPREFIX|None|Nicht erforderlich Das &-Zeichen innerhalb der Zeichenfolgen wird immer als normales Zeichen behandelt.|  
 |DT_PATHELLIPSIS|None|Verwenden Sie <xref:System.Windows.Media.FormattedText.Trimming%2A> die-Eigenschaft mit <xref:System.Windows.TextTrimming.WordEllipsis>dem Wert.|  
-|DT_PREFIX|None|Wird nicht unterstützt. Wenn Sie Unterstriche für Text verwenden möchten, z. b. eine Zugriffstaste oder einen Link <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> , verwenden Sie die-Methode.|  
-|DT_PREFIXONLY|None|Wird nicht unterstützt.|  
+|DT_PREFIX|None|Nicht unterstützt. Wenn Sie Unterstriche für Text verwenden möchten, z. b. eine Zugriffstaste oder einen Link <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> , verwenden Sie die-Methode.|  
+|DT_PREFIXONLY|None|Nicht unterstützt.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Verwenden Sie <xref:System.Windows.Media.FormattedText.TextAlignment%2A> die-Eigenschaft, wobei der <xref:System.Windows.TextAlignment.Right>Wert auf festgelegt ist. (nur für WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|Legen Sie die <xref:System.Windows.Media.FormattedText.FlowDirection%2A> -Eigenschaft auf <xref:System.Windows.FlowDirection.RightToLeft>fest.|  
 |DT_SINGLELINE|None|Nicht erforderlich <xref:System.Windows.Media.FormattedText>-Objekte verhalten sich als einzeilige Steuerelemente, <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> es sei denn, die-Eigenschaft ist festgelegt, oder der Text enthält einen Wagen Rücklauf/Zeilenvorschub (CR/LF).|  

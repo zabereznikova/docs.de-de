@@ -2,19 +2,19 @@
 title: <defaultCertificate>-Element
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93410e815a156f91db1962f05fb1aa6baca7f955
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919252"
 ---
-# <a name="defaultcertificate-element"></a>\<DefaultCertificate >-Element
+# <a name="defaultcertificate-element"></a>\<defaultCertificate-> Element
 Gibt ein X.509-Zertifikat an, das verwendet wird, wenn ein Dienst oder STS kein Zertifikat über ein Aushandlungsprotokoll bereitstellt.  
   
  \<system.ServiceModel>  
 \<behaviors>  
-EndpointBehaviors-Abschnitt  
+endpointverhaltenbereich  
 \<behavior>  
 \<clientCredentials>  
 \<serviceCertificate>  
@@ -51,7 +51,7 @@ EndpointBehaviors-Abschnitt
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Mögliche Werte: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Enumeration|Mögliche Werte: FindByThumbprint, findbysubjetname, findbysubjetissushedname, FindByIssuerName, findbyissuererkennbar shedname, findbyserialnumber, FindByTimeValid, FindByTimeNotYetValid, findbyserialnumber, findbytimeabgelauf, findbytemplatename , Findbyapplicationpolicy, findbycertificatepolicy, findbyextension, findbykeyusage, findbysubjetkeyidentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation-Attribut  
   
@@ -63,7 +63,7 @@ EndpointBehaviors-Abschnitt
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Enumeration|Mögliche Werte: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople und TrustedPublisher.|  
+|Enumeration|Mögliche Werte: Addressbook, AuthRoot, CertificateAuthority, unallowed, my, root, treuhändpeople und Treuhänder Publisher.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -72,13 +72,13 @@ EndpointBehaviors-Abschnitt
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Gibt ein Zertifikat an, das Sie zum Authentifizieren eines Diensts für den Client verwenden können.|  
+|[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|Gibt ein Zertifikat an, das Sie zum Authentifizieren eines Diensts für den Client verwenden können.|  
   
 ## <a name="remarks"></a>Hinweise  
  Bei Bindungen mit Zertifikat-basierter Nachrichtensicherheit wird das durch dieses Konfigurationselement angegebene Zertifikat zum Verschlüsseln von Nachrichten für den Dienst sowie für die Signierung von Antworten an den Client verwendet. Es speichert ein einzelnes Zertifikat, das verwendent werden soll, wenn kein Zertifikat von einem Dienst angegeben wird.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Zertifikat für Endpunkte verwenden, deren URI beginnt mit `http://www.contoso.com` und ein Zertifikat für alle anderen Endpunkte, die keine zertifikatsaushandlung durchführen.  
+ Das folgende Beispiel gibt ein Zertifikat an, das für Endpunkte verwendet wird, `http://www.contoso.com` deren URI mit beginnt, und ein Zertifikat, das für alle anderen Endpunkte verwendet werden soll, die keine Zertifikats Aushandlung ausführen.  
   
 ```xml  
 <serviceCertificate>
@@ -103,7 +103,7 @@ EndpointBehaviors-Abschnitt
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
-- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)
-- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Arbeiten mit Zertifikaten](../../../wcf/feature-details/working-with-certificates.md)
+- [\<authentication>](authentication-of-clientcertificate-element.md)
+- [Sichern von Clients](../../../wcf/securing-clients.md)
+- [Sichern von Diensten und Clients](../../../wcf/feature-details/securing-services-and-clients.md)

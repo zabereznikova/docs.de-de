@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fb6d30d9-54f3-462b-8ebf-ce0440791ad5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68dae3839cfb4d04797d81bca41ee212a64cca51
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb158b383745cd7e44c8fede6ddd43ae81ced2d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751565"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930766"
 ---
 # <a name="icordebugprocess6processstatechanged-method"></a>ICorDebugProcess6::ProcessStateChanged-Methode
-Benachrichtigt [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) , die der Prozess ausgeführt wird.  
+Benachrichtigt [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) , dass der Prozess ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -22,20 +22,20 @@ HRESULT ProcessStateChanged(   [in] CorDebugStateChange change);
   
 ## <a name="parameters"></a>Parameter  
  `change`  
- [in] Ein Mitglied der [ProcessStateChanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) Enumeration  
+ in Ein Member der [processstatechanged](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-processstatechanged-method.md) -Enumeration.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Debugger ruft diese Methode benachrichtigt [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) , die der Prozess ausgeführt wird.  
+ Der Debugger ruft diese Methode auf, um [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) zu benachrichtigen, dass der Prozess ausgeführt wird.  
   
 > [!NOTE]
->  Diese Methode ist nur mit .NET Native verfügbar.  
+> Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

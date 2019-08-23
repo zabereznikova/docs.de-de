@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bd74460c7d5d077686c723936d140b07ac21dd0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f16a2bbd2470b4aec9e95ab67ccb0e736c4c6d02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663390"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920689"
 ---
 # <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode >-Element
 
@@ -64,7 +64,7 @@ Keine
 
 Beginnend mit dem .NET Framework 4 implementiert die <xref:System.TimeSpan?displayProperty=nameWithType> -Struktur die <xref:System.IFormattable> -Schnittstelle und unterstützt Formatierungs Vorgänge mit standardmäßigen und benutzerdefinierten Format Zeichenfolgen. Wenn eine Methode für die Methode einen nicht unterstützten Format Bezeichner oder eine Format Zeichenfolge <xref:System.FormatException>erkennt, wird eine ausgelöst.
 
-In früheren Versionen der .NET Framework wurde die <xref:System.TimeSpan> -Struktur nicht implementiert <xref:System.IFormattable> , und es wurden keine Format Zeichenfolgen unterstützt. Viele Entwickler haben jedoch fälschlicherweise angenommen, <xref:System.TimeSpan> dass eine Reihe von Format Zeichenfolgen unterstützt und Sie in zusammen [gesetzten Formatierungs Vorgängen](../../../../../docs/standard/base-types/composite-formatting.md) <xref:System.String.Format%2A?displayProperty=nameWithType>mit Methoden wie verwendet. Wenn ein Typ eine Format Zeichenfolge implementiert <xref:System.IFormattable> und unterstützt, lösen Aufrufe von Formatierungs Methoden mit nicht unterstützten Format Zeichenfolgen normalerweise einen <xref:System.FormatException>aus. Da <xref:System.TimeSpan> jedoch nicht implementiert <xref:System.IFormattable>hat, hat die Laufzeit die Format Zeichenfolge ignoriert und stattdessen <xref:System.TimeSpan.ToString?displayProperty=nameWithType> die-Methode aufgerufen. Dies bedeutet, dass die Format Zeichenfolgen zwar keine Auswirkung auf den Formatierungs Vorgang haben, das vorhanden sein aller <xref:System.FormatException>dings nicht zu einer führte.
+In früheren Versionen der .NET Framework wurde die <xref:System.TimeSpan> -Struktur nicht implementiert <xref:System.IFormattable> , und es wurden keine Format Zeichenfolgen unterstützt. Viele Entwickler haben jedoch fälschlicherweise angenommen, <xref:System.TimeSpan> dass eine Reihe von Format Zeichenfolgen unterstützt und Sie in zusammen [gesetzten Formatierungs Vorgängen](../../../../standard/base-types/composite-formatting.md) <xref:System.String.Format%2A?displayProperty=nameWithType>mit Methoden wie verwendet. Wenn ein Typ eine Format Zeichenfolge implementiert <xref:System.IFormattable> und unterstützt, lösen Aufrufe von Formatierungs Methoden mit nicht unterstützten Format Zeichenfolgen normalerweise einen <xref:System.FormatException>aus. Da <xref:System.TimeSpan> jedoch nicht implementiert <xref:System.IFormattable>hat, hat die Laufzeit die Format Zeichenfolge ignoriert und stattdessen <xref:System.TimeSpan.ToString?displayProperty=nameWithType> die-Methode aufgerufen. Dies bedeutet, dass die Format Zeichenfolgen zwar keine Auswirkung auf den Formatierungs Vorgang haben, das vorhanden sein aller <xref:System.FormatException>dings nicht zu einer führte.
 
 In Fällen, in denen Legacy Code eine kombinierte Formatierungs Methode und eine ungültige Format Zeichenfolge übergibt und dieser Code nicht erneut kompiliert werden kann `<TimeSpan_LegacyFormatMode>` , können Sie das Legacy <xref:System.TimeSpan> Verhalten mit dem-Element wiederherstellen. Wenn Sie `enabled` das-Attribut dieses Elements auf <xref:System.TimeSpan.ToString?displayProperty=nameWithType> `true`festlegen, führt die kombinierte Formatierungs Methode dazu, dass anstelle <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>von aufgerufen wird, <xref:System.FormatException> und wird nicht ausgelöst.
 
