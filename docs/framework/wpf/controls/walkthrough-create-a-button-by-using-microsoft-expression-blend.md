@@ -6,246 +6,246 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: 9a0b3e5cf64e7977ba68f5bb2a3b110d9615cfa8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b4c775ea0680dcd8252a98c722dfe8f7e62548f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665223"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942506"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit Microsoft Expression Blend
-Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Erstellung einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] benutzerdefinierte Schaltfläche mit Microsoft Expression Blend.  
+Diese exemplarische Vorgehensweise führt Sie durch den Prozess der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Erstellung einer angepassten Schaltfläche mit Microsoft Expression Blend.  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend funktioniert durch die Erstellung [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] , kompiliert um das ausführbare Programm zu erstellen. Wenn Sie lieber mit arbeiten [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] direkt, besteht eine weitere exemplarische Vorgehensweise, die die gleiche Anwendung wie diese erstellt [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] mit Visual Studio anstelle von Blend. Finden Sie unter [Erstellen einer Schaltfläche durch Verwenden von XAML](walkthrough-create-a-button-by-using-xaml.md) für Weitere Informationen.  
+> Microsoft Expression Blend funktioniert, indem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] es erzeugt, das dann kompiliert wird, um das ausführbare Programm zu erstellen. Wenn Sie lieber direkt mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] arbeiten, gibt es eine weitere Exemplarische Vorgehensweise, in der dieselbe Anwendung wie diese [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] mit Visual Studio und nicht Blend erstellt wird. Weitere Informationen finden [Sie unter Erstellen einer Schaltfläche mit XAML](walkthrough-create-a-button-by-using-xaml.md) .  
   
- Die folgende Abbildung zeigt der benutzerdefinierten Schaltfläche, die Sie erstellen.  
+ Die folgende Abbildung zeigt die angepasste Schaltfläche, die Sie erstellen werden.  
   
- ![Die benutzerdefinierte Schaltfläche, die Sie erstellen](./media/custom-button-blend-intro.jpg "Custom_button_blend_Intro")  
+ ![Die angepasste Schaltfläche, die Sie erstellen](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
   
-## <a name="convert-a-shape-to-a-button"></a>Konvertieren von Formen in einer Schaltfläche  
- Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie die benutzerdefinierte Darstellung der benutzerdefinierten Schaltfläche. Hierzu konvertieren Sie zuerst ein Rechteck auf eine Schaltfläche. Fügen Sie dann zusätzliche Formen hinzu die Vorlage für die Schaltfläche, erstellen eine komplexere Schaltfläche. Warum nicht beginnen Sie mit der eine normale Schaltfläche aus, und passen sie an? Da eine Schaltfläche verfügt über integrierte Funktionen, die Sie nicht benötigen, für benutzerdefinierte Schaltflächen ist es einfacher, mit einem Rechteck zu beginnen.  
+## <a name="convert-a-shape-to-a-button"></a>Konvertieren einer Form in eine Schaltfläche  
+ Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie das benutzerdefinierte Aussehen der benutzerdefinierten Schaltfläche. Zu diesem Zweck konvertieren Sie zuerst ein Rechteck in eine Schaltfläche. Fügen Sie dann der Vorlage der Schaltfläche Weitere Formen hinzu, und erstellen Sie eine komplexere Schaltfläche. Warum beginnen Sie nicht mit einer regulären Schaltfläche, und passen Sie Sie an? Eine Schaltfläche verfügt über integrierte Funktionen, die Sie nicht benötigen. bei benutzerdefinierten Schaltflächen ist es einfacher, mit einem Rechteck zu beginnen.  
   
-#### <a name="to-create-a-new-project-in-expression-blend"></a>Zum Erstellen eines neuen Projekts in Expression Blend  
+#### <a name="to-create-a-new-project-in-expression-blend"></a>So erstellen Sie ein neues Projekt in Expression Blend  
   
-1. Starten Sie Expression Blend. (Klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft Expression**, und klicken Sie dann auf **Microsoft Expression Blend**.)  
+1. Starten Sie Expression Blend. (Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf **Microsoft Expression**, und klicken Sie dann auf **Microsoft Expression Blend**.)  
   
 2. Maximieren Sie die Anwendung bei Bedarf.  
   
 3. Klicken Sie im Menü **Datei** auf **Neues Projekt**.  
   
-4. Wählen Sie **Standardanwendungen (.exe)**.  
+4. Wählen Sie **Standard Anwendung (. exe)** aus.  
   
-5. Nennen Sie das Projekt `CustomButton` , und drücken Sie **OK**.  
+5. Benennen Sie das `CustomButton` Projekt, und klicken Sie auf **OK**.  
   
- An diesem Punkt haben Sie ein leeres [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Projekt. Sie können zum Ausführen der Anwendung F5 drücken. Wie zu erwarten, besteht die Anwendung nur ein leeres Fenster aus. Als Nächstes Sie ein abgerundetes Rechteck erstellen und in eine Schaltfläche zu konvertieren.  
+ An diesem Punkt verfügen Sie über ein [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] leeres Projekt. Sie können F5 drücken, um die Anwendung auszuführen. Wie Sie vielleicht erwarten, besteht die Anwendung nur aus einem leeren Fenster. Als Nächstes erstellen Sie ein abgerundetes Rechteck und konvertieren es in eine Schaltfläche.  
   
-#### <a name="to-convert-a-rectangle-to-a-button"></a>Um ein Rechteck auf eine Schaltfläche zu konvertieren.  
+#### <a name="to-convert-a-rectangle-to-a-button"></a>So konvertieren Sie ein Rechteck in eine Schaltfläche  
   
-1. **Legen Sie die Fenster Background-Eigenschaft auf Schwarz fest:** Wählen Sie das Fenster aus, klicken Sie auf die **Registerkarte "Eigenschaften"**, und legen Sie die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft `Black`.  
+1. **Legen Sie die Eigenschaft Window Background auf Black fest:** Wählen Sie das Fenster aus, klicken Sie auf die **Registerkarte Eigenschaften**, `Black`und legen Sie die <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft auf fest.  
   
-     ![Wie Sie den Hintergrund einer Schaltfläche auf Schwarz festgelegt](./media/custom-button-blend-changebackground.png "Custom_button_blend_ChangeBackground")  
+     ![Festlegen des Hintergrunds einer Schaltfläche auf schwarz](./media/custom-button-blend-changebackground.png "custom_button_blend_ChangeBackground")  
   
-2. **Zeichnen Sie ein Rechteck ungefähr der Größe einer Schaltfläche im Fenster ein:** Wählen Sie das Rechteck auf der linken Seite Tool Bereich, und ziehen Sie das Rechteck in das Fenster.  
+2. **Zeichnen Sie ein Rechteck ungefähr die Größe einer Schaltfläche im Fenster:** Wählen Sie im linken Werkzeug Panel das Rechteck Tool aus, und ziehen Sie das Rechteck in das Fenster.  
   
-     ![Gewusst wie: Zeichnen eines Rechtecks](./media/custom-button-blend-drawrect.png "Custom_button_blend_DrawRect")  
+     ![Zeichnen eines Rechtecks](./media/custom-button-blend-drawrect.png "custom_button_blend_DrawRect")  
   
-3. **Runden Sie die Ecken des Rechtecks:** Ziehen Sie die Steuerpunkte des Rechtecks, oder legen Sie direkt die <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> und <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> Eigenschaften. Legen Sie die Werte der <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> und <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> auf 20.  
+3. **Runden Sie die Ecken des Rechtecks ab:** Ziehen Sie entweder die Steuerpunkte des Rechtecks, oder <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> legen <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> Sie die Eigenschaften und direkt fest. Legen Sie die Werte <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> von <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> und auf 20 fest.  
   
-     ![Wie Sie die Ecken eines Rechtecks round](./media/custom-button-blend-roundcorners.png "Custom_button_blend_RoundCorners")  
+     ![So machen Sie die Ecken eines Rechtecks abgerundet](./media/custom-button-blend-roundcorners.png "custom_button_blend_RoundCorners")  
   
-4. **Ändern Sie das Rechteck, in eine Schaltfläche:** Wählen Sie das Rechteck. Auf der **Tools** Menü klicken Sie auf **stellen Schaltfläche**.  
+4. **Ändern Sie das Rechteck in eine Schaltfläche:** Wählen Sie das Rechteck aus. Klicken Sie im Menü Extras auf die **Schaltfläche erstellen**.  
   
-     ![Wie Sie eine Form in eine Schaltfläche](./media/custom-button-blend-makebutton.png "Custom_button_blend_MakeButton")  
+     ![So machen Sie eine Form in eine Schaltfläche](./media/custom-button-blend-makebutton.png "custom_button_blend_MakeButton")  
   
-5. **Geben Sie den Geltungsbereich der Stilvorlage:** Es wird ein Dialogfeld wie folgt angezeigt.  
+5. **Geben Sie den Bereich des Stils/der Vorlage an:** Ein Dialogfeld wie das folgende wird angezeigt.  
   
-     ![Das Dialogfeld "Stilressource erstellen"](./media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
+     ![Dialogfeld "Stil Ressource erstellen"](./media/custom-button-blend-makebutton2.gif "custom_button_blend_MakeButton2")  
   
-     Für **Ressourcenname (Schlüssel)** Option **auf alle anwenden**.  Dies veranlasst den resultierenden Stil und eine Schaltflächenvorlage auf alle Objekte angewendet, die Schaltflächen sind. Für **definieren in**Option **Anwendung**. Dies veranlasst den resultierenden Stil und eine Schaltflächenvorlage Bereich über die gesamte Anwendung haben. Wenn Sie die Werte in diesen beiden Felder festlegen, die Schaltflächen-Formatvorlage und die Vorlage gelten für alle Schaltflächen innerhalb der gesamten Anwendung und eine beliebige Schaltfläche, die Sie in der Anwendung zu erstellen, in der Standardeinstellung verwenden diese Vorlage.  
+     Wählen Sie unter **Ressourcen Name (Schlüssel)** **die Option auf alle anwenden**aus.  Dadurch wird die resultierende Stil-und Schaltflächen Vorlage auf alle Objekte angewendet, bei denen es sich um Schaltflächen handelt. Wählen Sie **unter Definieren in**die Option **Anwendung**aus. Dadurch wird der resultierende Stil und die Schaltflächen Vorlage über die gesamte Anwendung verfügen. Wenn Sie die Werte in diesen beiden Feldern festlegen, werden der Schaltflächen Stil und die Vorlage auf alle Schaltflächen innerhalb der gesamten Anwendung angewendet, und jede Schaltfläche, die Sie in der Anwendung erstellen, wird standardmäßig diese Vorlage verwenden.  
   
-## <a name="edit-the-button-template"></a>Bearbeiten Sie die Schaltflächenvorlage  
- Sie haben jetzt ein Rechteck, das auf eine Schaltfläche geändert wurde. In diesem Abschnitt Sie die Vorlage der Schaltfläche ändern, und weiter anpassen, wie er aussieht.  
+## <a name="edit-the-button-template"></a>Bearbeiten der Schaltflächen Vorlage  
+ Sie verfügen jetzt über ein Rechteck, das in eine Schaltfläche geändert wurde. In diesem Abschnitt ändern Sie die Vorlage der Schaltfläche und passen Sie an, wie Sie aussieht.  
   
-#### <a name="to-edit-the-button-template-to-change-the-button-appearance"></a>So bearbeiten Sie die Schaltflächenvorlage, um die Darstellung der Schaltfläche ändern  
+#### <a name="to-edit-the-button-template-to-change-the-button-appearance"></a>So bearbeiten Sie die Schaltflächen Vorlage zum Ändern der Schaltflächen Darstellung  
   
-1. **Wechseln Sie in der Vorlage-Bearbeitungsansicht:** Um das Aussehen der Schaltfläche weiter anpassen zu können, müssen wir die Schaltflächenvorlage zu bearbeiten. Mit dieser Vorlage erstellt wurde, wenn wir das Rechteck in eine Schaltfläche konvertiert. Um die Schaltflächenvorlage zu bearbeiten, der rechten Maustaste, und wählen Sie **Steuerelementteile (Vorlage)** und dann **Vorlage bearbeiten**.  
+1. **Wechseln Sie in Vorlagen Ansicht bearbeiten:** Um das Aussehen unserer Schaltfläche weiter anzupassen, müssen wir die Schaltflächen Vorlage bearbeiten. Diese Vorlage wurde erstellt, als das Rechteck in eine Schaltfläche konvertiert wurde. Klicken Sie zum Bearbeiten der Schaltflächen Vorlage mit der rechten Maustaste auf die Schaltfläche, und wählen Sie **Steuerelemente bearbeiten (Vorlage)** und dann **Vorlage bearbeiten**aus.  
   
-     ![Gewusst wie: Bearbeiten Sie eine Vorlage](./media/custom-button-blend-edittemplate.jpg "Custom_button_blend_EditTemplate")  
+     ![Bearbeiten einer Vorlage](./media/custom-button-blend-edittemplate.jpg "custom_button_blend_EditTemplate")  
   
-     Die Vorlagen-Editor, beachten Sie, dass die Schaltfläche mit der jetzt in aufgeteilt wird eine <xref:System.Windows.Shapes.Rectangle> und <xref:System.Windows.Controls.ContentPresenter>. Die <xref:System.Windows.Controls.ContentPresenter> wird verwendet, um Inhalt innerhalb der Schaltfläche (z. B. die Zeichenfolge "Button"). Sowohl das Rechteck und <xref:System.Windows.Controls.ContentPresenter> angeordnet wird innerhalb von einer <xref:System.Windows.Controls.Grid>.  
+     Beachten Sie im Vorlagen-Editor, dass die Schaltfläche jetzt in ein <xref:System.Windows.Shapes.Rectangle> und in <xref:System.Windows.Controls.ContentPresenter>den getrennt ist. <xref:System.Windows.Controls.ContentPresenter> Wird verwendet, um Inhalt in der Schaltfläche darzustellen (z. b. die Zeichenfolge "Button"). Sowohl das Rechteck als <xref:System.Windows.Controls.ContentPresenter> auch werden innerhalb <xref:System.Windows.Controls.Grid>eines angeordnet.  
   
-     ![Komponenten in der Darstellung eines Rechtecks](./media/custom-button-blend-templatepanel.png "Custom_button_blend_TemplatePanel")  
+     ![Komponenten in der Darstellung eines Rechtecks](./media/custom-button-blend-templatepanel.png "custom_button_blend_TemplatePanel")  
   
-2. **Ändern Sie die Namen der Komponenten der Dienstvorlage:** Mit der rechten Maustaste in des Rechtecks in der Vorlage Inventar Änderung der <xref:System.Windows.Shapes.Rectangle> in "Rechteck" in "OuterRectangle", und Ändern von "[ContentPresenter]" in "MyContentPresenter".  
+2. **Ändern Sie die Namen der Vorlagen Komponenten:** Klicken Sie mit der rechten Maustaste auf das Rechteck im Vorlagen bestand <xref:System.Windows.Shapes.Rectangle> , ändern Sie den Namen von "[Rechteck]" in "outerrechteck", und ändern Sie "[ContentPresenter]" in "myContentPresenter".  
   
-     ![Vorgehensweise beim Umbenennen einer Komponente einer Vorlage](./media/custom-button-blend-renamecomponents.png "Custom_button_blend_RenameComponents")  
+     ![Umbenennen einer Komponente einer Vorlage](./media/custom-button-blend-renamecomponents.png "custom_button_blend_RenameComponents")  
   
-3. **Ändern Sie das Rechteck aus, sodass sie innerhalb von (z. B. ein Rad) leer ist:** Wählen Sie **OuterRectangle** und <xref:System.Windows.Shapes.Shape.Fill%2A> auf "Transparent" und <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> auf 5.  
+3. **Ändern Sie das Rechteck so, dass es in (z. b. in einem Ring) leer ist:** Wählen Sie **outerrechteck** aus <xref:System.Windows.Shapes.Shape.Fill%2A> , und legen Sie auf <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> "transparent" und auf 5 fest.  
   
-     ![Wie Sie ein Rechteck leer](./media/custom-button-blend-changerectproperties.png "Custom_button_blend_ChangeRectProperties")  
+     ![Erstellen eines leeren Rechtecks](./media/custom-button-blend-changerectproperties.png "custom_button_blend_ChangeRectProperties")  
   
-     Legen Sie dann die <xref:System.Windows.Shapes.Shape.Stroke%2A> die Farbe von der Vorlage verwendet werden wird. Zu diesem Zweck klicken Sie auf das kleine weiße Feld neben **Stroke**Option **CustomExpression**, und geben Sie im Dialogfeld "{TemplateBinding Background}".  
+     Legen Sie dann <xref:System.Windows.Shapes.Shape.Stroke%2A> die Farbe der Vorlage fest. Klicken Sie hierzu auf das kleine weiße Feld neben **Stroke**, wählen Sie **CustomExpression**aus, und geben Sie im Dialogfeld "{TemplateBinding Background}" ein.  
   
-     ![Gewusst wie: Festlegen der Farbe der Vorlage durch der Verwendung](./media/custom-button-blend-templatestroke.png "Custom_button_blend_TemplateStroke")  
+     ![Festlegen der Verwendung der Vorlage](./media/custom-button-blend-templatestroke.png "custom_button_blend_TemplateStroke")  
   
-4. **Erstellen Sie ein inneres Rechteck:** Erstellen Sie nun ein weiteres Rechteck (nennen es "InnerRectangle"), und positionieren Sie es symmetrisch auf der Innenseite der **OuterRectangle** . Für diese Art der Arbeit empfiehlt es sich zum Zoomen, um die Schaltfläche mit den in den Arbeitsbereich zu vergrößern.  
-  
-    > [!NOTE]
-    >  Das Rechteck kann nicht in der Abbildung aussehen (z. B. es möglicherweise abgerundete Ecken haben).  
-  
-     ![Vorgehensweise: Erstellen Sie ein Rechteck in einem anderen Rechteck](./media/custom-button-blend-innerrectangleproperties.png "Custom_button_blend_innerRectangleProperties")  
-  
-5. **Verschoben Sie ContentPresenter-Element nach oben:** An diesem Punkt ist es möglich, dass der Text "Button" nicht mehr sichtbar sind. Wenn dies der Fall ist, ist dies, da **InnerRectangle** wird auf der die **MyContentPresenter**. Um dieses Problem zu beheben, ziehen Sie **MyContentPresenter** unten **InnerRectangle**. Verschieben von Rechtecken und **MyContentPresenter** sieht etwa folgendermaßen aussehen.  
+4. **Erstellen eines inneren Rechtecks:** Erstellen Sie nun ein weiteres Rechteck (benennen Sie es "innerrechteck"), und positionieren Sie es symmetrisch im Inneren von **outerrechteck** . Für diese Art von Arbeit möchten Sie wahrscheinlich vergrößern, um die Schaltfläche im Bearbeitungsbereich zu vergrößern.  
   
     > [!NOTE]
-    >  Alternativ können Sie auch platzieren **MyContentPresenter** oben, indem sie durch Drücken auf **vorwärts senden**.  
+    > Das Rechteck kann sich von dem in der Abbildung abweichenden (z. b. möglicherweise gerundete Ecken) unterscheiden.  
   
-     ![Gewusst wie: Verschieben Sie eine Schaltfläche über eine andere Schaltfläche](./media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")  
+     ![Erstellen eines Rechtecks innerhalb eines anderen Rechtecks](./media/custom-button-blend-innerrectangleproperties.png "custom_button_blend_innerRectangleProperties")  
   
-6. **Ändern Sie die Darstellung von InnerRectangle:** Legen Sie die <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>, <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>, und <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Werte auf 20. In Addition, legen Sie die <xref:System.Windows.Shapes.Shape.Fill%2A> in den Hintergrund der Vorlage mithilfe des benutzerdefinierten Ausdrucks "{TemplateBinding Background}") und legen Sie <xref:System.Windows.Shapes.Shape.Stroke%2A> "transparent". Beachten Sie, dass die Einstellungen für die <xref:System.Windows.Shapes.Shape.Fill%2A> und <xref:System.Windows.Shapes.Shape.Stroke%2A> von **InnerRectangle** sind das Gegenteil davon für **OuterRectangle**.  
+5. **Verschieben Sie ContentPresenter an den Anfang:** An diesem Punkt ist es möglich, dass der Text "Button" nicht mehr sichtbar ist. Wenn dies der Fall ist, liegt dies daran, dass **innerrechteck** oberhalb von **myContentPresenter**liegt. Um dieses Problem zu beheben, ziehen Sie **myContentPresenter** unterhalb des **innerrechtecks**. Ordnen Sie Rechtecke und **myContentPresenter** so an, dass Sie in etwa wie folgt aussehen.  
   
-     ![Gewusst wie: Ändern Sie die Darstellung eines Rechtecks](./media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")  
+    > [!NOTE]
+    > Alternativ können Sie **myContentPresenter** auch oben positionieren, indem Sie mit der rechten Maustaste darauf klicken und dann auf **senden**klicken.  
   
-7. **Fügen Sie oben auf einer Glasebene hinzu:** Das letzte Stück des Anpassen des Aussehens der Schaltfläche ist zum Hinzufügen einer Glass-Ebene im Vordergrund. Diese Glass-Ebene besteht aus einem dritten Rechteck. Da die ganz auf die Schaltfläche mit den gesamten beschrieben wird, ähnelt das Glasrechteck in Dimensionen aus, die die **OuterRectangle**. Aus diesem Grund erstellen Sie das Rechteck einfach, indem Sie das eine Kopie der **OuterRectangle**. Markieren Sie **OuterRectangle** und verwenden Sie STRG + C und STRG + V, um eine Kopie zu erstellen. Benennen Sie diese neue Rechteck "GlassCube".  
+     ![Verschieben einer Schaltfläche über eine andere Schaltfläche](./media/custom-button-blend-innerrectangle2.png "custom_button_blend_innerRectangle2")  
   
-8. **Verschieben Sie bei Bedarf GlassCube:** Wenn **GlassCube** ist noch nicht positioniert, sodass es die gesamte Schaltfläche einnimmt, ziehen Sie es in Position.  
+6. **Ändern Sie das Aussehen des innerrechtecks:** Legen Sie <xref:System.Windows.Shapes.Rectangle.RadiusX%2A>die <xref:System.Windows.Shapes.Rectangle.RadiusY%2A>Werte für <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> , und auf 20 fest. Legen Sie außerdem den <xref:System.Windows.Shapes.Shape.Fill%2A> auf den Hintergrund der Vorlage fest, indem Sie den benutzerdefinierten Ausdruck "{TemplateBinding Background}" verwenden) und auf "transparent" festlegen. <xref:System.Windows.Shapes.Shape.Stroke%2A> Beachten Sie, dass die Einstellungen <xref:System.Windows.Shapes.Shape.Fill%2A> für <xref:System.Windows.Shapes.Shape.Stroke%2A> und von **innerrechteck** das Gegenteil von denen für **outerrechteck**sind.  
   
-9. **Geben Sie eine etwas andere Form als OuterRectangle GlassCube:** Ändern der Eigenschaften eines **GlassCube**. Beginnen Sie damit, Ändern der <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> und <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> Eigenschaften auf 10 und der <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> auf 2.  
+     ![Ändern der Darstellung eines Rechtecks](./media/custom-button-blend-glassrectangleproperties1.png "custom_button_blend_glassRectangleProperties1")  
   
-     ![Die darstellungseinstellungen für GlassCube](./media/custom-button-blend-glasscubeappearance.gif "Custom_button_blend_GlassCubeAppearance")  
+7. **Fügen Sie oben eine Glasebene hinzu:** Das letzte Mal, das Aussehen der Schaltfläche anzupassen, besteht darin, eine Glasebene oben hinzuzufügen. Diese Glasschicht besteht aus einem dritten Rechteck. Da das Glas die gesamte Schaltfläche abdeckt, ähnelt das Glas Rechteck den Abmessungen des **outerrechtecks**. Erstellen Sie daher das Rechteck, indem Sie einfach eine Kopie des **outerrechtecks**erstellen. Markieren Sie **outerrechteck** , und verwenden Sie STRG + C und STRG + V, um eine Kopie zu erstellen. Nennen Sie dieses neue Rechteck "glassCube".  
   
-10. **Stellen Sie GlassCube Glas aussehen:** Legen Sie die <xref:System.Windows.Shapes.Shape.Fill%2A> so einen Glaseffekt mit ein linearer Farbverlauf, die 75 % deckend und wechselt zwischen den Farbe Weiß und Transparent über 6 ungefähr gleichmäßig Intervallen Abstand. Hierfür gibt es die Farbverlaufsstopps festgelegt werden soll:  
+8. **Neupositionieren von glassCube, falls erforderlich:** Wenn **glassCube** nicht bereits so positioniert ist, dass es die gesamte Schaltfläche abdeckt, ziehen Sie es in die Position.  
   
-    - Farbverlaufsstopp 1: Weiß mit einem Alphawert von 75 %  
+9. **Geben Sie glassCube eine etwas andere Form als outerrechteck an:** Ändern Sie die Eigenschaften von " **glassCube**". Beginnen Sie, indem Sie <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> die <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> -Eigenschaft und die- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Eigenschaft auf 10 und den auf 2 ändern.  
   
-    - Farbverlaufsstopp 2: Transparent  
+     ![Die Darstellungs Einstellungen für "glassCube] " (./media/custom-button-blend-glasscubeappearance.gif "custom_button_blend_GlassCubeAppearance")  
   
-    - Farbverlaufsstopp 3: Weiß mit einem Alphawert von 75 %  
+10. **Lassen Sie glassCube wie Glas aussehen:** Legen Sie <xref:System.Windows.Shapes.Shape.Fill%2A> den auf einen Glassy-Look fest, indem Sie einen linearen Farbverlauf verwenden, der 75% deckend ist, und zwischen den Farben weiß und transparent über 6 in ungefähr gleichmäßigen Abständen wechseln. So legen Sie die Farbverlaufs Stopps fest:  
   
-    - Farbverlaufsstopp 4: Transparent  
+    - Farbverlaufs Ende 1: Weiß mit Alpha-Wert von 75%  
   
-    - Farbverlaufsstopp 5: Weiß mit einem Alphawert von 75 %  
+    - Farbverlaufs Ende 2: Transparent  
   
-    - Farbverlaufsstopp 6: Transparent  
+    - Farbverlaufs Ende 3: Weiß mit Alpha-Wert von 75%  
   
-     Dies erstellt einen Blick "wellenförmige" klicken.  
+    - Farbverlaufs Ende 4: Transparent  
   
-     ![Ein Rechteck, das wie aus Glas dargestellt](./media/custom-button-blend-glassrectangleproperties2.png "custom_button_blend_glassRectangleProperties2")  
+    - Farbverlaufs Ende 5: Weiß mit Alpha-Wert von 75%  
   
-11. **Blenden Sie die Ebene klicken:** Nun, Sie sehen, wie die Glasebene Ebene aussieht, wechseln Sie in der **Darstellungsbereich** von der **Eigenschaftenpanel** und legen Sie die Deckkraft 0 %, um es auszublenden. In den Abschnitten nun verwenden wir Eigenschaftstrigger und Ereignisse zum Anzeigen und bearbeiten die Ebene klicken.  
+    - Farbverlaufs Ende 6: Transparent  
   
-     ![Wie Sie das Glasrechteck ausblenden](./media/custom-button-glassrectangleproperties3.gif "custom_button_glassRectangleProperties3")  
+     Dadurch wird eine "wellenförmige" Glas Suche erstellt.  
   
-## <a name="customize-the-button-behavior"></a>Passen Sie das Schaltflächenverhalten  
- An diesem Punkt haben Sie die Darstellung der Schaltfläche durch Bearbeiten der Vorlage angepasst, aber die Schaltfläche nicht auf Benutzeraktionen reagieren, haben (z. B. Ändern der Darstellung auf die Mouseovereffekte, den Fokus erhält, und klicken.) Die folgenden beiden Verfahren wird das Verhalten, wie diese in die benutzerdefinierte Schaltfläche erstellen, veranschaulicht. Wir beginnen mit einfachen Eigenschaftstrigger und dann Ereignistriggern und Animationen hinzufügen.  
+     ![Ein Rechteck, das wie Glas aussieht] . (./media/custom-button-blend-glassrectangleproperties2.png "custom_button_blend_glassRectangleProperties2")  
   
-#### <a name="to-set-property-triggers"></a>Festlegen von Eigenschaftstriggern  
+11. **Die Glasebene ausblenden:** Nachdem Sie nun sehen, wie die Glassy-Schicht aussieht, wechseln Sie in den Bereich Darstellung des **Eigenschaften Panels** , und legen Sie die Deckkraft auf 0% fest, um sie auszublenden. In den Abschnitten weiter oben verwenden wir Eigenschafts Trigger und-Ereignisse, um die Glasschicht anzuzeigen und zu bearbeiten.  
   
-1. **Erstellen Sie einen neuen Eigenschaftentrigger ein:** Mit **GlassCube** ausgewählt ist, klicken Sie auf **+ Eigenschaft** in die **Trigger** Bereich (siehe die Abbildung im nächsten Schritt). Dadurch wird einen Eigenschaftsauslöser mit ein standardeigenschaftstrigger erstellt.  
+     ![Ausblenden des Glas Rechtecks](./media/custom-button-glassrectangleproperties3.gif "custom_button_glassRectangleProperties3")  
   
-2. **Stellen Sie IsMouseOver den Eigenschaft, die vom Trigger verwendet:** Ändern Sie die Eigenschaft in <xref:System.Windows.UIElement.IsMouseOver%2A>. Dadurch wird der Eigenschaftsauslöser aktiviert, wenn die <xref:System.Windows.UIElement.IsMouseOver%2A> Eigenschaft `true` (wenn der Benutzer mit der Maus auf die Schaltfläche zeigt).  
+## <a name="customize-the-button-behavior"></a>Anpassen des Schaltflächen Verhaltens  
+ An diesem Punkt haben Sie die Darstellung der Schaltfläche angepasst, indem Sie die zugehörige Vorlage bearbeiten, aber die Schaltfläche reagiert nicht auf Benutzeraktionen wie normale Schaltflächen (z. b. das Ändern der Darstellung nach dem Mauszeiger, das Empfangen des Fokus und das Klicken auf). In den nächsten zwei Prozeduren wird veranschaulicht, wie Sie Verhalten wie diese in der benutzerdefinierten Schaltfläche erstellen. Wir beginnen mit einfachen Eigenschafts Triggern und fügen dann Ereignis Trigger und Animationen hinzu.  
   
-     ![Gewusst wie: Festlegen ein Triggers für eine Eigenschaft](./media/custom-button-blend-ismousedoverpropertytrigger.png "Custom_button_blend_IsMousedOverPropertyTrigger")  
+#### <a name="to-set-property-triggers"></a>So legen Sie Eigenschafts Trigger fest  
   
-3. **IsMouseOver löst die Deckkraft von 100 % für GlassCube:** Beachten Sie, dass die **triggeraufzeichnung ist** (siehe Abbildung oben). Dies bedeutet, dass alle Änderungen, die Sie, um die Eigenschaftswerte vornehmen **GlassCube** werden während der Aufzeichnung auf ist eine Aktion, wenn findet <xref:System.Windows.UIElement.IsMouseOver%2A> ist `true`. Ändern Sie während der Aufzeichnung der <xref:System.Windows.UIElement.Opacity%2A> von **GlassCube** auf 100 %.  
+1. **Erstellen Sie einen neuen Eigenschafts--Auslöse** Wenn Sie die Option " **glassCube** " ausgewählt haben , klicken Sie im triggerpanel auf **+ Eigenschaft** (siehe die Abbildung, die dem nächsten Schritt folgt). Dadurch wird ein Eigenschafts-und ein Standard Eigenschafts-Auslösung erstellt.  
   
-     ![Gewusst wie: Festlegen der Deckkraft einer Schaltfläche](./media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")  
+2. **Machen Sie IsMouseOver der Eigenschaft, die vom-Auslösers verwendet wird:** Ändern Sie die- <xref:System.Windows.UIElement.IsMouseOver%2A>Eigenschaft in. Dadurch wird der Eigenschafts-und- <xref:System.Windows.UIElement.IsMouseOver%2A> Wert aktiviert `true` , wenn die-Eigenschaft ist (wenn der Benutzer auf die Schaltfläche mit der Maus zeigt).  
   
-     Sie haben nun Ihre erste Eigenschaftstrigger erstellt. Beachten Sie, dass die **triggerpanel** des Editors aufgezeichnet hat die <xref:System.Windows.UIElement.Opacity%2A> auf 100 % geändert wird.  
+     ![Festlegen eines Auslösers für eine Eigenschaft](./media/custom-button-blend-ismousedoverpropertytrigger.png "custom_button_blend_IsMousedOverPropertyTrigger")  
+  
+3. **IsMouseOver löst die Deckkraft von 100% für glassCube aus:** Beachten Sie, dass die **triggeraufzeichnung auf ON fest steht** (siehe vorherige Abbildung). Dies bedeutet, dass alle Änderungen, die Sie an den Eigenschafts Werten von **glassCube** vornehmen, während die Aufzeichnung aktiviert ist, zu <xref:System.Windows.UIElement.IsMouseOver%2A> einer `true`Aktion werden, die ausgeführt wird, wenn ist. Ändern Sie beim Aufzeichnen der <xref:System.Windows.UIElement.Opacity%2A> von **glassCube** in 100%.  
+  
+     ![Festlegen der Deckkraft einer Schaltfläche](./media/custom-button-blend-ismousedoverpropertytrigger2.gif "custom_button_blend_IsMousedOverPropertyTrigger2")  
+  
+     Sie haben jetzt Ihren ersten Eigenschafts--Auslösers erstellt. Beachten Sie, dass das **triggerpanel** des Editors aufgezeichnet <xref:System.Windows.UIElement.Opacity%2A> hat, dass der Wert in 100% geändert wird.  
   
      ![Der Bereich „Trigger“](./media/custom-button-blend-propertytriggerinfo.png "custom_button_blend_PropertyTriggerInfo")  
   
-     Drücken Sie F5, um die Anwendung auszuführen, und bewegen den Mauszeiger über und der Schaltfläche weg. Daraufhin sollte die Glass-Ebene angezeigt, wenn Sie Maus über die Schaltfläche, und nicht mehr angezeigt, wenn der Mauszeiger verlässt.  
+     Drücken Sie F5, um die Anwendung auszuführen, und bewegen Sie den Mauszeiger über die Schaltfläche. Sie sollten sehen, dass die Glasebene angezeigt wird, wenn Sie mit dem Mauszeiger auf die Schaltfläche klicken.  
   
-4. **Änderung eines Werts zu IsMouseOver-Trigger Zeichnen:** So ordnen Sie einige andere Aktionen mit der <xref:System.Windows.UIElement.IsMouseOver%2A> Trigger. Während der Aufzeichnung fortgesetzt wird, wechseln Sie die Auswahl von **GlassCube** zu **OuterRectangle**. Legen Sie dann die <xref:System.Windows.Shapes.Shape.Stroke%2A> von **OuterRectangle** auf den benutzerdefinierten Ausdruck von "{DynamicResource {X: Static SystemColors.HighlightBrushKey}}". Hiermit wird die <xref:System.Windows.Shapes.Shape.Stroke%2A> markieren Sie die typischen Schaltflächen Tabellentitelleisten-Farbe. Drücken Sie F5, um die Auswirkungen angezeigt werden soll, wenn Sie den Mauszeiger über der Schaltfläche.  
+4. **IsMouseOver-Trigger: Änderung von Strich Werten:** Im folgenden werden einige weitere Aktionen mit dem <xref:System.Windows.UIElement.IsMouseOver%2A> -Auslösung verknüpft. Wenn die Aufzeichnung fortgesetzt wird, ändern Sie die Auswahl von **glassCube** zu **outerrechteck**. Legen Sie dann <xref:System.Windows.Shapes.Shape.Stroke%2A> den von **outerrechteck** auf den benutzerdefinierten Ausdruck "{dynamikresource {x:static SystemColors. HighlightBrushKey}}" fest. Dadurch wird der <xref:System.Windows.Shapes.Shape.Stroke%2A> auf die von Schaltflächen verwendete typische Hervorhebungs Farbe festgelegt. Drücken Sie F5, um die Auswirkung anzuzeigen, wenn Sie mit dem Mauszeiger auf die Schaltfläche  
   
-     ![Zum Festlegen den Strich auf die Hervorhebungsfarbe](./media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")  
+     ![Festlegen des Strichs auf die] Hervorhebungs Farbe (./media/custom-button-blend-ismousedoverpropertytrigger3.png "custom_button_blend_IsMousedOverPropertyTrigger3")  
   
-5. **IsMouseOver löst verschwommenen Text:** So ordnen Sie eine weitere Aktion zu den <xref:System.Windows.UIElement.IsMouseOver%2A> Eigenschaftstrigger. Stellen Sie den Inhalt der Schaltfläche ein wenig verschwommen angezeigt werden, wenn das Glas darüber angezeigt wird. Zu diesem Zweck können wir einen Weichzeichnungseffekt anwenden <xref:System.Windows.Media.Effects.BitmapEffect> auf die <xref:System.Windows.Controls.ContentPresenter> (**MyContentPresenter**).  
+5. **IsMouseOver löst verschwommene Text aus:** Ordnen Sie dem <xref:System.Windows.UIElement.IsMouseOver%2A> Eigenschafts-Triggervorgang eine weitere Aktion zu. Legen Sie den Inhalt der Schaltfläche ein wenig verschwommen, wenn das Glas darüber angezeigt wird. Zu diesem Zweck können wir einen <xref:System.Windows.Media.Effects.BitmapEffect> Weichzeichner <xref:System.Windows.Controls.ContentPresenter> auf (**myContentPresenter**) anwenden.  
   
-     ![Wie Sie den Inhalt einer Schaltfläche blur](./media/custom-button-blend-propertytriggerwithbitmapeffect.png "Custom_button_blend_PropertyTriggerWithBitMapEffect")  
-  
-    > [!NOTE]
-    >  Zurückgeben der **Eigenschaftenpanel** an It-Administrator war, bevor haben Sie die Suche nach <xref:System.Windows.Media.Effects.BitmapEffect>, löschen Sie den Text aus der **Suchfeld**.  
-  
-     An diesem Punkt haben wir einen Eigenschaftsauslöser mit mehreren zugeordneten Aktionen verwendet, um Hervorhebungen Verhalten für zu erstellen, wenn der Mauszeiger in den und den unteren Bereich verlässt. Eine andere normale Verhalten für eine Schaltfläche ist, um hervorzuheben, wenn es den Fokus besitzt (wie nachdem darauf geklickt wurde). Wir können ein solches Verhalten hinzufügen, durch das Hinzufügen einer anderen Eigenschaftsauslöser für die <xref:System.Windows.UIElement.IsFocused%2A> Eigenschaft.  
-  
-6. **Erstellen Sie Eigenschaftstrigger für IsFocused:** Mit dem gleichen Verfahren wie für <xref:System.Windows.UIElement.IsMouseOver%2A> (Siehe den ersten Schritt in diesem Abschnitt), erstellen Sie eine andere Eigenschaftentrigger für die <xref:System.Windows.UIElement.IsFocused%2A> Eigenschaft. Während **triggeraufzeichnung ist**, des Triggers die folgenden Aktionen hinzugefügt:  
-  
-    - **GlassCube** Ruft eine <xref:System.Windows.UIElement.Opacity%2A> von 100 %.  
-  
-    - **OuterRectangle** Ruft eine <xref:System.Windows.Shapes.Shape.Stroke%2A> benutzerdefinierten Ausdrucks-Wert von "{DynamicResource {X: Static SystemColors.HighlightBrushKey}}".  
-  
- Als letzten Schritt in dieser exemplarischen Vorgehensweise fügen wir Animationen auf die Schaltfläche hinzu. Diese Animationen werden durch Ereignisse ausgelöst werden – insbesondere die <xref:System.Windows.UIElement.MouseEnter> und <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignisse.  
-  
-#### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a>Verwenden von Ereignistriggern und Animationen, Interaktivität hinzuzufügen  
-  
-1. **Erstellen Sie einen MouseEnter-Ereignisauslöser:** Fügen Sie einen neuen Ereignistrigger hinzu, und wählen Sie <xref:System.Windows.UIElement.MouseEnter> als das Ereignis, das im Trigger verwendet.  
-  
-     ![Vorgehensweise: Erstellen Sie einen MouseEnter-Ereignisauslöser](./media/custom-button-blend-mouseovereventtrigger.png "Custom_button_blend_MouseOverEventTrigger")  
-  
-2. **Erstellen Sie eine Animationszeitachse:** Als Nächstes ordnen Sie eine Animationszeitachse, die <xref:System.Windows.UIElement.MouseEnter> Ereignis.  
-  
-     ![Hinzufügen eine Animationszeitachse auf ein Ereignis](./media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")  
-  
-     Nach dem Drücken der **OK** um eine neue Zeitachse erstellen eine **Zeitachsen (Bereich)** angezeigt wird und "Zeitachse Aufzeichnung aktiviert ist" ist im Bereich Entwurf sichtbar. Dies bedeutet, dass wir die eigenschaftenänderungen aufzeichnen, in der Zeitachse (animieren eigenschaftenänderungen) beginnen können.  
+     ![So verwischen Sie den Inhalt einer Schaltfläche](./media/custom-button-blend-propertytriggerwithbitmapeffect.png "custom_button_blend_PropertyTriggerWithBitMapEffect")  
   
     > [!NOTE]
-    >  Sie müssen möglicherweise ändern der Größe des Fensters und/oder der Bereiche, um die Anzeige.  
+    > Löschen Sie den Text aus dem <xref:System.Windows.Media.Effects.BitmapEffect> **Suchfeld**, um den Eigenschaften Bereich wieder auf den Wert zurückzusetzen, den Sie vor dem Ausführen der Suche hatten.  
   
-     ![Der Zeitachsenbereich](./media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")  
+     An diesem Punkt haben wir einen Eigenschafts-und mehrere zugeordneten Aktionen verwendet, um das Hervorhebungs Verhalten zu erstellen, wenn der Mauszeiger in den Schaltflächen Bereich wechselt und verlässt. Ein weiteres typisches Verhalten für eine Schaltfläche besteht darin, zu markieren, wann Sie den Fokus besitzt (wie nach dem klicken). Dieses Verhalten kann durch Hinzufügen eines weiteren Eigenschafts Auslösers für die <xref:System.Windows.UIElement.IsFocused%2A> Eigenschaft hinzugefügt werden.  
   
-3. **Erstellen Sie einen Keyframe an:** Um eine Animation zu erstellen, wählen Sie das Objekt, die, das Sie animieren, erstellen zwei oder mehr Keyframes auf der Zeitachse, und klicken Sie für diese Keyframes, die Eigenschaftswerte, die Sie die Animation interpoliert zwischen möchten festlegen möchten. In der folgende Abbildung führt Sie durch die Erstellung eines Keyframes.  
+6. **Erstellen eines Eigenschafts Auslösers für isfokussiert:** Erstellen Sie mit der gleichen Prozedur <xref:System.Windows.UIElement.IsMouseOver%2A> wie für (siehe den ersten Schritt dieses Abschnitts) einen weiteren Eigenschafts-- <xref:System.Windows.UIElement.IsFocused%2A> Auslösers für die-Eigenschaft. Während die **triggeraufzeichnung auf on basiert**, fügen Sie dem-Triggern die folgenden Aktionen hinzu:  
   
-     ![Gewusst wie: Erstellen eines Keyframes](./media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")  
+    - **glassCube** erhält einen <xref:System.Windows.UIElement.Opacity%2A> von 100%.  
   
-4. **Verkleinern von GlassCube bei diesen Keyframe:** Mit den zweiten Keyframe ausgewählt, deren Größe die **GlassCube** 90 % der vollständigen Größe mithilfe der **Größe transformieren**.  
+    - **outerrechteck** <xref:System.Windows.Shapes.Shape.Stroke%2A> Ruft den benutzerdefinierten Ausdruckswert "{dynamikresource {x:static SystemColors. HighlightBrushKey}}" ab.  
   
-     ![Gewusst wie: Verkleinern Sie eine Schaltfläche](./media/custom-button-blend-sizetransform.png "Custom_button_blend_SizeTransform")  
+ Als letzten Schritt in dieser exemplarischen Vorgehensweise fügen wir der Schaltfläche Animationen hinzu. Diese Animationen werden durch Ereignisse ausgelöst – insbesondere das-Ereignis <xref:System.Windows.UIElement.MouseEnter> und <xref:System.Windows.Controls.Primitives.ButtonBase.Click> das-Ereignis.  
   
-     Drücken Sie F5, um die Anwendung auszuführen. Verschieben Sie den Mauszeiger über der Schaltfläche. Beachten Sie, dass die Glass-Ebene auf die Schaltfläche mit den verkleinert wird.  
+#### <a name="to-use-event-triggers-and-animations-to-add-interactivity"></a>So verwenden Sie Ereignis Trigger und Animationen zum Hinzufügen von Interaktivität  
   
-5. **Erstellen Sie einen weiteren Ereignistrigger, und ordnen ihm eine andere Animation zu:** Fügen Sie eine weitere Animation an. Verwenden Sie ein ähnliches Verfahren, was Sie zum Erstellen von der vorherigen Ereignis Trigger Animation verwendet:  
+1. **Erstellen eines mouevent Enter-Ereignis Auslösers:** Fügen Sie einen neuen Ereignis-- <xref:System.Windows.UIElement.MouseEnter> Auslösers hinzu, und wählen Sie als Ereignis aus, das Sie im-  
   
-    1. Erstellen Sie ein neues Ereignis Trigger mit dem <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+     ![Erstellen eines mouevent Enter-Ereignis Auslösers](./media/custom-button-blend-mouseovereventtrigger.png "custom_button_blend_MouseOverEventTrigger")  
   
-    2. Ordnen Sie eine neue Zeitachse mit den <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+2. **Erstellen Sie eine Animations Zeitachse:** Ordnen Sie als nächstes dem <xref:System.Windows.UIElement.MouseEnter> Ereignis eine Animations Zeitachse zu.  
   
-     ![Vorgehensweise: Erstellen Sie eine neue Zeitachse](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
+     Vorgehens ![Weise beim Hinzufügen einer Animations Zeitachse zu einem Ereignis](./media/custom-button-blend-mouseovereventtrigger2.png "custom_button_blend_MouseOverEventTrigger2")  
   
-    1. Erstellen Sie für diese Zeitachse zwei Keyframes, nacheinander 0,0 Sekunden und das zweite Argument bei 0,3 Sekunden.  
+     Nachdem Sie auf **OK** geklickt haben, um eine neue Zeitachse zu erstellen, wird ein **Zeitachsen Panel** angezeigt, und "Zeitachsen Aufzeichnung ist eingeschaltet" ist im Entwurfs Panel sichtbar. Dies bedeutet, dass die Aufzeichnung von Eigenschafts Änderungen in der Zeitachse gestartet werden kann (Animieren von Eigenschaften Änderungen)  
   
-    2. Legen Sie den Keyframe bei 0,3 Sekunden hervor, die **transformieren Winkel drehen** und 360 Grad.  
+    > [!NOTE]
+    > Möglicherweise müssen Sie die Größe des Fensters und/oder der Panels ändern, damit die Anzeige angezeigt wird.  
   
-     ![Vorgehensweise: Erstellen Sie eine Rotationstransformation](./media/custom-button-blend-rotatetransform.gif "Custom_button_blend_RotateTransform")  
+     ![Zeitachsen Panel](./media/custom-button-blend-mouseovereventtrigger3.png "custom_button_blend_MouseOverEventTrigger3")  
   
-    1. Drücken Sie F5, um die Anwendung auszuführen. Klicken Sie auf die Schaltfläche. Beachten Sie, dass die Glass-Ebene dreht.  
+3. **Erstellen Sie einen Keyframe:** Wählen Sie zum Erstellen einer Animation das zu animierende Objekt aus, erstellen Sie zwei oder mehr Keyframes auf der Zeitachse, und legen Sie für diese Keyframes die Eigenschaftswerte fest, zwischen denen die Animation interpolieren soll. Die folgende Abbildung führt Sie durch die Erstellung eines Keyframes.  
+  
+     ![Erstellen eines Keyframes](./media/custom-button-blend-mouseovereventtrigger4.png "custom_button_blend_MouseOverEventTrigger4")  
+  
+4. **Verkleinern von glassCube an diesem Keyframe:** Wenn der zweite Keyframe ausgewählt ist, verkleinern Sie die Größe des **glassCube** auf 90% seiner vollen Größe, indem Sie die **Transformation Größe**verwenden.  
+  
+     ![Verkleinern der Größe einer Schaltfläche](./media/custom-button-blend-sizetransform.png "custom_button_blend_SizeTransform")  
+  
+     Drücken Sie F5, um die Anwendung auszuführen. Bewegen Sie den Mauszeiger über die Schaltfläche. Beachten Sie, dass sich die Glasschicht oberhalb der Schaltfläche verkleinert.  
+  
+5. **Erstellen eines weiteren Ereignis Auslösers und Zuordnen einer anderen Animation:** Fügen wir eine weitere Animation hinzu. Verwenden Sie ein ähnliches Verfahren, das Sie zum Erstellen der vorherigen Ereignis auslöseranimation verwendet haben:  
+  
+    1. Erstellen Sie mithilfe des <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignisses einen neuen Ereignis Auslösers.  
+  
+    2. Ordnen Sie dem <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis eine neue Zeitachse zu.  
+  
+     ![Erstellen einer neuen Zeitachse](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
+  
+    1. Erstellen Sie für diese Zeitachse zwei Keyframes, eine mit 0,0 Sekunden und die zweite für 0,3 Sekunden.  
+  
+    2. Legen Sie bei markiertem Keyframe um 0,3 Sekunden den **Winkel Drehung drehen** auf 360 Grad fest.  
+  
+     ![Erstellen einer Transformation zum Drehen](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
+  
+    1. Drücken Sie F5, um die Anwendung auszuführen. Klicken Sie auf die Schaltfläche. Beachten Sie, dass sich die Glasschicht dreht.  
   
 ## <a name="conclusion"></a>Schlussbemerkung  
- Sie haben eine benutzerdefinierte Schaltfläche abgeschlossen. Sie haben dazu eine Schaltflächenvorlage, die auf alle Schaltflächen in der Anwendung angewendet wurde. Wenn Sie den Vorlagenbearbeitungsmodus lassen (siehe die folgende Abbildung) und weitere Schaltflächen erstellen, sehen Sie, dass ihr Aussehen und Verhalten sich wie Ihre benutzerdefinierte Schaltfläche und nicht wie die Schaltfläche "Standard".  
+ Sie haben eine angepasste Schaltfläche abgeschlossen. Dazu haben Sie eine Schaltflächen Vorlage verwendet, die auf alle Schaltflächen in der Anwendung angewendet wurde. Wenn Sie den Vorlagen Bearbeitungsmodus verlassen (siehe folgende Abbildung) und weitere Schaltflächen erstellen, sehen Sie, dass Sie sich wie die benutzerdefinierte Schaltfläche und nicht wie die Standard Schaltfläche Verhalten.  
   
- ![Die benutzerdefinierte Schaltflächenvorlage](./media/custom-button-blend-scopeup.gif "Custom_button_blend_ScopeUp")  
+ ![Die Vorlage für benutzerdefinierte Schalt] Flächen (./media/custom-button-blend-scopeup.gif "custom_button_blend_ScopeUp")  
   
- ![Mehrere Schaltflächen, die dieselbe Vorlage nutzen](./media/custom-button-blend-createmultiplebuttons.png "Custom_button_blend_CreateMultipleButtons")  
+ ![Mehrere Schaltflächen, die dieselbe Vorlage verwenden](./media/custom-button-blend-createmultiplebuttons.png "custom_button_blend_CreateMultipleButtons")  
   
- Drücken Sie F5, um die Anwendung auszuführen. Klicken Sie auf die Schaltflächen, und beachten Sie, wie sie alle dasselbe Verhalten.  
+ Drücken Sie F5, um die Anwendung auszuführen. Klicken Sie auf die Schaltflächen, und sehen Sie sich an, wie sich alle Verhalten.  
   
- Beachten Sie, dass die Vorlage anpassen haben, Sie legen die <xref:System.Windows.Shapes.Shape.Fill%2A> Eigenschaft **InnerRectangle** und <xref:System.Windows.Shapes.Shape.Stroke%2A> Eigenschaft **OuterRectangle** in den Vorlagenhintergrund ({} TemplateBinding Hintergrund}). Aus diesem Grund beim Festlegen der Hintergrundfarbe der einzelnen Schaltflächen, werden die erforderlichen Hintergrundinformationen, die Sie festlegen, für die jeweiligen Eigenschaften verwendet werden. Versuchen Sie es jetzt den Hintergrund zu ändern. In der folgenden Abbildung werden unterschiedliche Verläufe verwendet. Daher auch eine Vorlage für allgemeine Anpassung von Steuerelementen wie Schaltfläche hilfreich ist, können Steuerelemente mit Vorlagen noch geändert werden um voneinander zu suchen.  
+ Beachten Sie, dass Sie beim Anpassen <xref:System.Windows.Shapes.Shape.Fill%2A> der Vorlage die-Eigenschaft von **innerrechteck** und die <xref:System.Windows.Shapes.Shape.Stroke%2A> -Eigenschaft **outerrechteck** auf den Vorlagen Hintergrund ({TemplateBinding background}) festgelegt haben. Wenn Sie daher die Hintergrundfarbe der einzelnen Schaltflächen festlegen, wird der von Ihnen festgelegte Hintergrund für die jeweiligen Eigenschaften verwendet. Ändern Sie nun die Hintergründe. In der folgenden Abbildung werden verschiedene Farbverläufe verwendet. Obwohl eine Vorlage für die allgemeine Anpassung von Steuerelementen wie Schaltfläche nützlich ist, können Steuerelemente mit Vorlagen so geändert werden, dass Sie unterschiedlich aussehen.  
   
- ![Schaltflächen mit der gleichen Vorlage, die andere aussehen](./media/custom-button-blend-blendconclusion.jpg "Custom_button_blend_BlendConclusion")  
+ ![Schaltflächen mit derselben Vorlage, die diferent aussehen](./media/custom-button-blend-blendconclusion.jpg "custom_button_blend_BlendConclusion")  
   
- Das bedeutet, haben Sie gerade eine Schaltflächenvorlage anpassen Vorgehensweise gehen in Microsoft Expression Blend gelernt:  
+ Im Zuge der Anpassung einer Schaltflächen Vorlage haben Sie in Microsoft Expression Blend Folgendes gelernt:  
   
-- Passen Sie das Aussehen eines Steuerelements an.  
+- Passen Sie das Aussehen eines Steuer Elements an.  
   
-- Festlegen von Eigenschaftstriggern. Eigenschaftstrigger sind sehr nützlich, da sie für die meisten Objekte, nicht nur für Steuerelemente verwendet werden können.  
+- Festlegen von Eigenschafts Triggern. Eigenschafts Trigger sind sehr nützlich, da Sie für die meisten Objekte verwendet werden können, nicht nur für Steuerelemente.  
   
-- Festlegen von Ereignistriggern. Ereignistrigger sind sehr nützlich, da sie für die meisten Objekte, nicht nur für Steuerelemente verwendet werden können.  
+- Legen Sie Ereignis Trigger fest. Ereignis Trigger sind sehr nützlich, da Sie für die meisten Objekte verwendet werden können, nicht nur für Steuerelemente.  
   
-- Erstellen von Animationen.  
+- Erstellen von Animationen  
   
-- Sonstiges: Erstellen von Farbverläufen, BitmapEffects hinzufügen, verwenden von Transformationen und legen Sie die grundlegende Eigenschaften von Objekten.  
+- Sonstige: Erstellen von Farbverläufen, Hinzufügen von bitmapeer-ffects, verwenden von Transformationen und Festlegen grundlegender Eigenschaften von Objekten.  
   
 ## <a name="see-also"></a>Siehe auch
 

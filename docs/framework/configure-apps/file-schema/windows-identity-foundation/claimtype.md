@@ -3,15 +3,15 @@ title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4253aec961b812b6893ee201861d2ab38048032a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667222"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942883"
 ---
 # <a name="claimtype"></a>\<claimType>
-Gibt einen einzelnen erforderliche oder optionale Anspruch eingehender Sicherheitstoken an.  
+Gibt einen einzelnen optionalen oder erforderlichen Anspruch für eingehende Sicherheits Token an.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -39,13 +39,13 @@ Gibt einen einzelnen erforderliche oder optionale Anspruch eingehender Sicherhei
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |Typ|Der Anspruchstyp. In der Regel ein URI. Erforderlich.|  
-|Optional|Ein boolescher Wert, der angibt, ob der Typ des Anspruchs optional ist. Dies ist optional.|  
+|Optional|Ein boolescher Wert, der angibt, ob der Anspruchstyp optional ist. Optional.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Gibt den Satz von erforderlichen Ansprüchen für eingehende Sicherheitstoken.|
+|[\<claimTypeRequired>](claimtyperequired.md)|Gibt den Satz erforderlicher Ansprüche für eingehende Sicherheits Token an.|

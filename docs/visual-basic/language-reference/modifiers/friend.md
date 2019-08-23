@@ -10,40 +10,40 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 18681935d0380f9be3970fdb5d17ffb089152f59
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e30267c8aa11ce97b3b3064ff0954378dab57af
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802543"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959801"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
-Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur innerhalb der Assembly zugegriffen werden, die ihre Deklaration enthält.  
+Gibt an, dass auf ein oder mehrere deklarierte Programmier Elemente nur innerhalb der Assembly, die ihre Deklaration enthält, zugegriffen werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
- In vielen Fällen möchten Sie die Programmierelemente wie Klassen und Strukturen, um die gesamte Assembly, nicht nur von der Komponente verwendet werden, der sie deklariert. Jedoch möglicherweise nicht diese sollen von Code außerhalb der Assembly (z. B., wenn die Anwendung proprietäre ist) zugegriffen werden. Wenn Sie den Zugriff auf ein Element auf diese Weise beschränken möchten, können Sie sie deklarieren, indem die `Friend` Modifizierer.  
+ In vielen Fällen sollen Programmier Elemente, wie z. b. Klassen und Strukturen, von der gesamten Assembly verwendet werden, nicht nur von der Komponente, von der Sie deklariert werden. Allerdings möchten Sie möglicherweise nicht, dass Sie über Code außerhalb der Assembly zugänglich sind (z. b. wenn die Anwendung proprietär ist). Wenn Sie den Zugriff auf ein Element auf diese Weise einschränken möchten, können Sie es mit dem `Friend` -Modifizierer deklarieren.  
   
- Code in anderen Klassen, Strukturen und -Module, die auf die gleiche kompiliert werden Assembly kann auf alle zugreifen der `Friend` Elemente in dieser Assembly.  
+ Code in anderen Klassen, Strukturen und Modulen, die in derselben Assembly kompiliert werden, kann auf alle `Friend` Elemente in der Assembly zugreifen.  
   
- `Friend` Zugriff ist häufig die bevorzugte für Programmierelemente von einer Anwendung, und `Friend` der Standardzugriff von einer Schnittstelle, ein Modul, eine Klasse oder eine Struktur ist.  
+ `Friend`der Zugriff ist oft die bevorzugte Ebene für die Programmier Elemente einer Anwendung, `Friend` und ist die Standard Zugriffsebene einer Schnittstelle, eines Moduls, einer Klasse oder einer Struktur.  
   
- Sie können `Friend` nur auf das Modul, Schnittstelle oder Namespace-Ebene. Aus diesem Grund der Deklarationskontext für eine `Friend` Element muss eine Quelldatei, einem Namespace, eine Schnittstelle, ein Modul, eine Klasse oder eine Struktur sein und keine Prozedur sein.  
+ Sie können nur `Friend` auf der Ebene "Module", "Interface" oder "Namespace" verwenden. Daher muss der Deklarations Kontext für `Friend` ein-Element eine Quelldatei, ein Namespace, eine Schnittstelle, ein Modul, eine Klasse oder eine Struktur sein. es kann sich dabei nicht um eine Prozedur handeln.  
 
 > [!NOTE]
-> Sie können auch die [Protected Friend](protected-friend.md) Zugriffsmodifizierer, wodurch einen Klassenmember kann innerhalb dieser Klasse, aus der gleichen Assembly, die in der die Klasse definiert ist und von abgeleiteten Klassen zugegriffen werden. Zum Einschränken des Zugriffs auf ein Element innerhalb seiner Klasse und von abgeleiteten Klassen in der gleichen Assembly, die Sie verwenden die [Private Protected](private-protected.md) Zugriffsmodifizierer.
+> Sie können auch den [geschützten Friend](protected-friend.md) -Zugriffsmodifizierer verwenden, der einen Klassenmember aus dieser Klasse, aus abgeleiteten Klassen und aus der gleichen Assembly, in der die Klasse definiert ist, zugänglich macht. Um den Zugriff auf ein Member innerhalb seiner Klasse und von abgeleiteten Klassen in derselben Assembly einzuschränken, verwenden Sie den [privaten geschützten](private-protected.md) Zugriffsmodifizierer.
 
- Einen Vergleich der `Friend` und die andere Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Einen Vergleich `Friend` und die anderen Zugriffsmodifizierer finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 > [!NOTE]
->  Sie können angeben, dass eine andere Assembly Friend-Assembly, die ermöglicht, damit ein Zugriff auf alle Typen und Member, die als markiert sind `Friend`. Weitere Informationen finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend-assemblies.md).  
+> Sie können angeben, dass eine andere Assembly eine Friend-Assembly ist, die es ermöglicht, auf alle Typen und Member zuzugreifen `Friend`, die als markiert sind. Weitere Informationen finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend-assemblies.md).  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Klasse verwendet die `Friend` Modifizierer, um anderen Programmierungselementen innerhalb der gleichen Assembly auf bestimmte Member zugreifen zu können.  
+ Die folgende Klasse verwendet den `Friend` -Modifizierer, damit andere Programmier Elemente innerhalb derselben Assembly auf bestimmte Member zugreifen können.  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>Verwendung  
- Sie können die `Friend` Modifizierer in den folgenden Kontexten:  
+ Sie können den `Friend` -Modifizierer in diesen Kontexten verwenden:  
   
  [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -74,7 +74,7 @@ Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur innerhalb de
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Öffentlich](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [Private Protected](./private-protected.md)

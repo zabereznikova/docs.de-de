@@ -2,12 +2,12 @@
 title: Codegenerierung in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666129"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939178"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Codegenerierung in LINQ to SQL
 Sie können Code generieren, um eine Datenbank mit dem-objektrelationaler Designer oder dem SQLMetal-Befehlszeilen Tool darzustellen. Die End-to-End-Codegenerierung findet grundsätzlich in drei Phasen statt:  
@@ -32,7 +32,7 @@ Sie können Code generieren, um eine Datenbank mit dem-objektrelationaler Design
  Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer externen Zuordnungsdatei verwendet wird. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
->  Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "DbmlSchema. xsd". Informationen zur korrekten Verwendung der XSD-Datei zum Validieren einer DBML- [Datei finden Sie unter Gewusst wie: Validieren von DBML-und](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
+> Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "DbmlSchema. xsd". Informationen zur korrekten Verwendung der XSD-Datei zum Validieren einer DBML- [Datei finden Sie unter Gewusst wie: Validieren von DBML-und](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  

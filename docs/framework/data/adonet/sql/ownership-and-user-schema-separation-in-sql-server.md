@@ -2,18 +2,18 @@
 title: Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 2702f56e8b3b339487ffacf7bc1ceb077d4d8b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 520772acc5edd812f64c61cc7fdda9db3441c87c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645734"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961113"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 Eines der Hauptkonzepte der SQL Server-Sicherheit besteht darin, dass die Besitzer von Objekten unwiderrufbare Berechtigungen für deren Verwaltung besitzen. Es ist nicht möglich, dem Besitzer eines Objekts dessen Privilegien zu entziehen, und Sie können auch keine Besitzer aus der Datenbank entfernen, wenn diese Objekte in der Datenbank besitzen.  
   
 ## <a name="user-schema-separation"></a>Trennung von Benutzer und Schema  
- Durch die Trennung von Benutzer und Schema können die Berechtigungen für Datenbankobjekte flexibler verwaltet werden. Ein *Schema* ist ein benannter Container für Datenbankobjekte, die Sie zum Gruppieren von Objekten in separaten Namespaces ermöglicht. So enthält die AdventureWorks-Beispieldatenbank z. B. Schemas wie Production, Sales und HumanResources.  
+ Durch die Trennung von Benutzer und Schema können die Berechtigungen für Datenbankobjekte flexibler verwaltet werden. Ein *Schema* ist ein benannter Container für Datenbankobjekte, der es Ihnen ermöglicht, Objekte in separaten Namespaces zu gruppieren. So enthält die AdventureWorks-Beispieldatenbank z. B. Schemas wie Production, Sales und HumanResources.  
   
  Die vierteilige Benennungssyntax zum Verweisen auf Objekte gibt den Schemanamen an.  
   
@@ -40,7 +40,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  Wenn Sie sie aus der Modelldatenbank entfernen, werden sie in neuen Datenbanken nicht mehr angezeigt.  
   
 > [!NOTE]
->  Die Schemas `sys` und `INFORMATION_SCHEMA` sind für Systemobjekte reserviert. Sie können in diesen Schemas keine Objekte erstellen, und Sie können die Schemas nicht löschen.  
+> Die Schemas `sys` und `INFORMATION_SCHEMA` sind für Systemobjekte reserviert. Sie können in diesen Schemas keine Objekte erstellen, und Sie können die Schemas nicht löschen.  
   
 #### <a name="the-dbo-schema"></a>Das "dbo"-Schema  
  Das `dbo`-Schema ist das Standardschema für neu erstellte Datenbanken. Das `dbo`-Schema gehört dem `dbo`-Benutzerkonto. Für Benutzer, die mit dem Transact-SQL-CREATE USER-Befehl erstellt werden, ist `dbo` standardmäßig das Standardschema.  
@@ -48,7 +48,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  Benutzer, denen das `dbo`-Schema zugewiesen ist, erben nicht die Berechtigungen des `dbo`-Benutzerkontos. Es werden keine Berechtigungen aus einem Schema an die Benutzer vererbt; die Schemaberechtigungen werden von den im Schema enthaltenen Datenbankobjekten geerbt.  
   
 > [!NOTE]
->  Wenn mit einem einteiligen Namen auf Datenbankobjekte verwiesen wird, durchsucht SQL Server zunächst das Standardschema des Benutzers. Wenn das Objekt dort nicht gefunden wird, sucht SQL Server als Nächstes im `dbo`-Schema. Wenn sich das Objekt nicht im `dbo`-Schema befindet, wird eine Fehlermeldung zurückgegeben.  
+> Wenn mit einem einteiligen Namen auf Datenbankobjekte verwiesen wird, durchsucht SQL Server zunächst das Standardschema des Benutzers. Wenn das Objekt dort nicht gefunden wird, sucht SQL Server als Nächstes im `dbo`-Schema. Wenn sich das Objekt nicht im `dbo`-Schema befindet, wird eine Fehlermeldung zurückgegeben.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen zu Objektbesitz und Schemas finden Sie in den folgenden Ressourcen:  

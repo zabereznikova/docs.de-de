@@ -2,21 +2,21 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758131"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918674"
 ---
 # <a name="transactedbatching"></a>\<transactedBatching>
 
 Gibt an, ob Transaktionsbatching für Empfangsvorgänge unterstützt wird.
 
 \<system.ServiceModel>\
-\<behaviors>\
-\<endpointBehaviors>\
-\<behavior>\
+\<Verhalten > \
+\<endpointverhaltensweisen > \
+\<Verhalten > \
 \<transactedBatching>
 
 ## <a name="syntax"></a>Syntax
@@ -33,7 +33,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|`maxBatchSize`|Eine ganze Zahl, die die maximale Anzahl an Empfangsvorgängen angibt, die in einer Transaktion zusammengefasst werden können. Der Standard ist 0.|
+|`maxBatchSize`|Eine ganze Zahl, die die maximale Anzahl an Empfangsvorgängen angibt, die in einer Transaktion zusammengefasst werden können. Die Standardeinstellung ist 0.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -43,7 +43,7 @@ Keine
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|
+|[\<behavior>](behavior-of-endpointbehaviors.md)|Gibt ein Endpunktverhalten an.|
 
 ## <a name="remarks"></a>Hinweise
 

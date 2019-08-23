@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 745917af176de47999737c87833c23df9c75ea7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cfd29067f819ba69305f7ae8620729cd443915a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995955"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931951"
 ---
 # <a name="icordebugeval-interface"></a>ICorDebugEval-Schnittstelle
 
@@ -31,35 +31,35 @@ Stellt Methoden bereit, mit denen der Debugger Code innerhalb des Kontexts des g
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Abort-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Bricht die Berechnung dieses `ICorDebugEval` Objekt gerade ausführt.|  
-|[CallFunction-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Richtet einen Aufruf der angegebenen Funktion. (In .NET Framework, Version 2.0 veraltet; verwenden Sie [ICorDebugEval2:: CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) stattdessen.)|  
-|[CreateValue-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Ruft einen Schnittstellenzeiger auf ein Objekt "ICorDebugValue" des angegebenen Typs mit einem Anfangswert von 0 (null) oder Null ab. (In .NET Framework 2.0 veraltet; verwenden Sie [ICorDebugEval2:: CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) stattdessen.)|  
-|[GetResult-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Ruft einen Schnittstellenzeiger auf ein `ICorDebugValue` , die die Ergebnisse der Auswertung enthält.|  
-|[GetThread-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getthread-method.md)|Ruft einen Schnittstellenzeiger auf das "ICorDebugThread", in denen diese Auswertung wird ausgeführt, oder ausgeführt wird.|  
-|[IsActive-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|Ruft einen Wert, der angibt, ob dies `ICorDebugEval` Objekt wird gerade ausgeführt.|  
-|[NewArray-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an. (In .NET Framework 2.0 veraltet; verwenden Sie [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) stattdessen.)|  
-|[NewObject-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobject-method.md)|Reserviert eine neue Objektinstanz, und der angegebene Konstruktor-Methode aufgerufen. (In .NET Framework 2.0 veraltet; verwenden Sie [ICorDebugEval2:: NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) stattdessen.)|  
-|[NewObjectNoConstructor-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|Weist eine neue Objektinstanz des angegebenen Typs, ohne zu versuchen, eine Konstruktormethode aufrufen. (In .NET Framework 2.0 veraltet; verwenden Sie [ICorDebugEval2:: NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) stattdessen.)|  
-|[NewString-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newstring-method.md)|Ordnet ein neues Zeichenfolgenobjekt mit dem angegebenen Inhalt.|  
+|[Abort-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Bricht die Berechnung ab, `ICorDebugEval` die von diesem Objekt gerade durchgeführt wird.|  
+|[CallFunction-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Richtet einen Rückruf für die angegebene Funktion ein. (Veraltet in der .NET Framework Version 2,0; verwenden Sie stattdessen [ICorDebugEval2:: CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) .)|  
+|[CreateValue-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Ruft einen Schnittstellen Zeiger auf ein ICorDebugValue-Objekt des angegebenen Typs mit einem Anfangswert von 0 (null) oder NULL ab. (Veraltet im .NET Framework 2,0; verwenden Sie stattdessen [ICorDebugEval2:: foratevaluefortype](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) .)|  
+|[GetResult-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Ruft einen Schnittstellen Zeiger auf einen `ICorDebugValue` -Wert ab, der die Ergebnisse der Auswertung enthält.|  
+|[GetThread-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getthread-method.md)|Ruft einen Schnittstellen Zeiger auf den "ICorDebugThread" ab, in dem diese Auswertung ausgeführt wird oder ausgeführt wird.|  
+|[IsActive-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|Ruft einen Wert ab, der angibt `ICorDebugEval` , ob dieses-Objekt gerade ausgeführt wird.|  
+|[NewArray-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|Ordnet ein neues Array vom angegebenen Elementtyp und den angegebenen Dimensionen zu. (Veraltet im .NET Framework 2,0; verwenden Sie stattdessen [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) .)|  
+|[NewObject-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobject-method.md)|Ordnet eine neue Objektinstanz zu und ruft die angegebene Konstruktormethode auf. (Veraltet im .NET Framework 2,0; verwenden Sie stattdessen [ICorDebugEval2:: NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) .)|  
+|[NewObjectNoConstructor-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|Ordnet eine neue Objektinstanz des angegebenen Typs zu, ohne zu versuchen, eine Konstruktormethode aufzurufen. (Veraltet im .NET Framework 2,0; verwenden Sie stattdessen [ICorDebugEval2:: NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) .)|  
+|[NewString-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newstring-method.md)|Ordnet ein neues String-Objekt mit dem angegebenen Inhalt zu.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `ICorDebugEval` Objekt im Kontext eines bestimmten Threads, die zum Ausführen der auswertungen erstellt wird. Alle Objekte und Typen, die in einer bestimmten Auswertung verwendet, müssen innerhalb der gleichen Anwendungsdomäne befinden. Dieser Anwendungsdomäne muss nicht identisch mit der aktuellen Anwendungsdomäne des Threads sein. Evaluierungen können geschachtelt werden.  
+ Ein `ICorDebugEval` -Objekt wird im Kontext eines bestimmten Threads erstellt, der zum Ausführen der Auswertungen verwendet wird. Alle Objekte und Typen, die in einer bestimmten Auswertung verwendet werden, müssen sich in derselben Anwendungsdomäne befinden. Diese Anwendungsdomäne muss nicht mit der aktuellen Anwendungsdomäne des Threads identisch sein. Auswertungen können eingebettet werden.  
   
- Die Vorgänge der Auswertung nicht vollständig bis der Debugger ruft [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md), und klicken Sie dann empfängt eine [ICorDebugManagedCallback:: EvalComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md) Rückruf. Wenn benötigten die Evaluierungsfunktion zu verwenden, ohne die Ausführung anderer Threads zugelassen, Threads anhalten, indem Sie entweder [ICorDebugController:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) oder [ICorDebugController:: Stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)vor dem Aufruf [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).  
+ Die Vorgänge der Auswertung werden erst ausgeführt, wenn der Debugger [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)aufruft und dann einen [ICorDebugManagedCallback:: EvalComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md) -Rückruf empfängt. Wenn Sie die Evaluierungs Funktionalität verwenden müssen, ohne dass andere Threads ausgeführt werden dürfen, halten Sie die Threads mithilfe von [ICorDebugController:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) oder [ICorDebugController:: beenden](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md) vor dem Aufrufen [von an. Icorentbugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md).  
   
- Da Benutzercode ausgeführt wird, wenn die Auswertung ausgeführt wird, können jeder Debug-Ereignisse auftreten, einschließlich Klasse lädt und Haltepunkte. Der Debugger wird wie üblich, für diese Ereignisse Rückrufe ausgegeben. Der Status der Überprüfung werden im Rahmen der Überprüfung des Zustands normales Programm angezeigt. Die Stapelkette werden eine `CHAIN_FUNC_EVAL` Kette (finden Sie unter "CorDebugStepReason"-Enumeration und die [ICorDebugChain:: GetReason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) Methode). Die vollständige Debugger-API wird weiterhin wie gewohnt.  
+ Da Benutzercode ausgeführt wird, während die Auswertung ausgeführt wird, können alle Debugereignisse auftreten, einschließlich Klassen Ladevorgängen und Breakpoints. Der Debugger empfängt die Rückrufe für diese Ereignisse wie üblich. Der Status der Auswertung wird im Rahmen der Überprüfung des normalen Programmstatus angezeigt. Die Stapel Kette ist eine `CHAIN_FUNC_EVAL` Kette (siehe die "CorDebugStepReason"-Enumeration und die [ICorDebugChain:: geverrat](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md) -Methode). Die vollständige Debugger-API wird weiterhin wie gewohnt ausgeführt.  
   
- Wenn ein Deadlock oder eine Endlosschleife eintritt, kann der Code des Benutzer nie abgeschlossen. In diesem Fall müssen Sie aufrufen [ICorDebugEval:: Abort](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md) vor dem Fortsetzen des Programms.  
+ Wenn eine Deadlocksituation oder unendliche Schleifen Situation auftritt, wird der Benutzercode möglicherweise nie beendet. In einem solchen Fall müssen Sie [ICorDebugEval:: Abort](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md) aufrufen, bevor Sie das Programm fortsetzen.  
   
 > [!NOTE]
->  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
+> Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

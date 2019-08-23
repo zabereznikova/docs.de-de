@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Anzeigen des Anmeldestatus mit WIF'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: 6d81bd2023886799f939fc9851db516a00aa92df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e44dc80260e46b81ac723ada32085390a18a153a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945705"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Vorgehensweise: Anzeigen des Anmeldestatus mit WIF
 ## <a name="applies-to"></a>Gilt für  
@@ -117,7 +117,7 @@ ms.locfileid: "67742452"
 3. Speichern Sie die Datei **Default.aspx**, und öffnen Sie dann die CodeBehind-Datei **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** ist möglicherweise im Projektmappen-Explorer unter **Default.aspx** ausgeblendet. Wenn **Default.aspx.cs** nicht sichtbar ist, erweitern Sie **Default.aspx**, indem Sie auf das Dreieck daneben klicken.  
+    > **Default.aspx.cs** ist möglicherweise im Projektmappen-Explorer unter **Default.aspx** ausgeblendet. Wenn **Default.aspx.cs** nicht sichtbar ist, erweitern Sie **Default.aspx**, indem Sie auf das Dreieck daneben klicken.  
   
 4. Ersetzen Sie den vorhandenen Code in **Default.aspx.cs** durch den folgenden Code:  
   
@@ -153,4 +153,4 @@ ms.locfileid: "67742452"
   
 1. Drücken Sie in Visual Studio die **F5**-TASTE, um die Anwendung zu debuggen. Wenn keine Fehler gefunden werden, wird ein neues Browserfenster geöffnet.  
   
-2. Der Browser leitet möglicherweise die Anforderung automatisch an den STS um und öffnet dann die Seite "Default.aspx". Wenn WIF ordnungsgemäß konfiguriert ist, sehen Sie die Website der folgende Text angezeigt: **"Sie sind angemeldet"** .
+2. Der Browser leitet möglicherweise die Anforderung automatisch an den STS um und öffnet dann die Seite "Default.aspx". Wenn WIF ordnungsgemäß konfiguriert ist, wird auf der Website der folgende Text angezeigt: **"Sie sind angemeldet"** .

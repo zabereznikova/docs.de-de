@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: ac2f89619c3e87ebfe5e568bbf27274834b0866d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9900b96bf04668805b841c842f7c625b86e76d39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012450"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960551"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Vorgehensweise: Ausführen von Prozeduren in festgelegten Abständen mit der Timer-Komponente in Windows Forms
 In einigen Fällen möchten Sie möglicherweise eine Prozedur erstellen, die entweder in bestimmten Zeitintervallen bis zum Ende einer Schleife oder nach Ablauf eines festgelegten Zeitintervalls ausgeführt wird. Die <xref:System.Windows.Forms.Timer>-Komponente ermöglicht eine solche Prozedur.  
@@ -26,25 +26,25 @@ In einigen Fällen möchten Sie möglicherweise eine Prozedur erstellen, die ent
  Diese Komponente wurde für eine Windows Forms-Umgebung entwickelt. Wenn Sie einen für eine Serverumgebung geeigneten Timer benötigen, lesen Sie die Informationen unter [Introduction to Server-Based Timers (Einführung in serverbasierte Timer)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 > [!NOTE]
->  Die Verwendung der <xref:System.Windows.Forms.Timer>-Komponente unterliegt einigen Einschränkungen. Weitere Informationen finden Sie unter [Einschränkungen für die Windows Forms Timer-Komponente Interval-Eigenschaft](limitations-of-the-timer-component-interval-property.md).  
+> Die Verwendung der <xref:System.Windows.Forms.Timer>-Komponente unterliegt einigen Einschränkungen. Weitere Informationen finden Sie unter [Einschränkungen der Interval-Eigenschaft der Windows Forms Timer-Komponente](limitations-of-the-timer-component-interval-property.md).  
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>So führen Sie eine Prozedur in festgelegten Intervallen mit der Timer-Komponente aus  
   
-1. Fügen Sie Ihrem Formular einen <xref:System.Windows.Forms.Timer> hinzu. Im folgenden Beispielabschnitt finden Sie eine Abbildung zur entsprechenden programmgesteuerten Vorgehensweise. Visual Studio bietet auch Unterstützung für das Hinzufügen von Komponenten zu einem Formular. Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md).  
+1. Fügen Sie Ihrem Formular einen <xref:System.Windows.Forms.Timer> hinzu. Im folgenden Beispielabschnitt finden Sie eine Abbildung zur entsprechenden programmgesteuerten Vorgehensweise. Visual Studio unterstützt auch das Hinzufügen von Komponenten zu einem Formular. Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Hinzufügen von Steuerelementen ohne Benutzeroberfläche](how-to-add-controls-without-a-user-interface-to-windows-forms.md)zum Windows Forms.  
   
 2. Legen Sie die <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft (in Millisekunden) für den Timer fest. Diese Eigenschaft bestimmt, in welchem Zeitabstand die Prozedur erneut ausgeführt werden soll.  
   
     > [!NOTE]
-    >  Je öfter ein Timerereignis auftritt, desto mehr Prozessorzeit wird für die Reaktion auf das Ereignis aufgewendet. Dadurch kann sich die Gesamtleistung verringern. Legen Sie kein kleineres Intervall als erforderlich fest.  
+    > Je öfter ein Timerereignis auftritt, desto mehr Prozessorzeit wird für die Reaktion auf das Ereignis aufgewendet. Dadurch kann sich die Gesamtleistung verringern. Legen Sie kein kleineres Intervall als erforderlich fest.  
   
 3. Schreiben Sie den entsprechenden Code in den <xref:System.Windows.Forms.Timer.Tick> Ereignishandler. Der in dieses Ereignis geschriebene Code wird in dem in der <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft angegebenen Intervall ausgeführt.  
   
 4. Legen Sie die <xref:System.Windows.Forms.Timer.Enabled%2A>-Eigenschaft auf `true` fest, um den Timer zu starten. Das <xref:System.Windows.Forms.Timer.Tick>-Ereignis tritt nun ein und führt die Prozedur im festgelegten Intervall aus.  
   
-5. Legen Sie die <xref:System.Windows.Forms.Timer.Enabled%2A>-Eigenschaft zu gegebener Zeit auf `false` fest, um die weitere Ausführung der Prozedur zu verhindern. Festlegen des Intervalls auf `0` bewirkt nicht, dass den Zeitgeber zu beenden.  
+5. Legen Sie die <xref:System.Windows.Forms.Timer.Enabled%2A>-Eigenschaft zu gegebener Zeit auf `false` fest, um die weitere Ausführung der Prozedur zu verhindern. Das Festlegen des Intervalls auf `0` führt nicht dazu, dass der Timer angehalten wird.  
   
 ## <a name="example"></a>Beispiel  
- In diesem ersten Codebeispiel wird die Tageszeit in 1-Sekunden-Schritten erfasst. Darin werden Komponenten vom Typ <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Label> und <xref:System.Windows.Forms.Timer> in einem Formular verwendet. Die <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft ist auf 1000 (entspricht einer Sekunde) festgelegt. Im <xref:System.Windows.Forms.Timer.Tick>-Ereignis ist die Beschriftung der Label-Komponente auf die aktuelle Zeit festgelegt. Wenn Sie auf die Schaltfläche klicken, wird die <xref:System.Windows.Forms.Timer.Enabled%2A>-Eigenschaft auf `false` festgelegt, sodass der Zeitgeber die Beschriftung der Label-Komponente nicht mehr aktualisiert. Im folgenden Codebeispiel erfordert, dass ein Formular mit einem <xref:System.Windows.Forms.Button> Steuerelement mit dem Namen `Button1`, <xref:System.Windows.Forms.Timer> Steuerelement mit dem Namen `Timer1`, und ein <xref:System.Windows.Forms.Label> Steuerelement mit dem Namen `Label1`.  
+ In diesem ersten Codebeispiel wird die Tageszeit in 1-Sekunden-Schritten erfasst. Darin werden Komponenten vom Typ <xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.Label> und <xref:System.Windows.Forms.Timer> in einem Formular verwendet. Die <xref:System.Windows.Forms.Timer.Interval%2A>-Eigenschaft ist auf 1000 (entspricht einer Sekunde) festgelegt. Im <xref:System.Windows.Forms.Timer.Tick>-Ereignis ist die Beschriftung der Label-Komponente auf die aktuelle Zeit festgelegt. Wenn Sie auf die Schaltfläche klicken, wird die <xref:System.Windows.Forms.Timer.Enabled%2A>-Eigenschaft auf `false` festgelegt, sodass der Zeitgeber die Beschriftung der Label-Komponente nicht mehr aktualisiert. Für das folgende Codebeispiel ist es erforderlich, dass Sie über <xref:System.Windows.Forms.Button> ein Formular `Button1`mit dem <xref:System.Windows.Forms.Timer> Namen, `Timer1`ein-Steuer <xref:System.Windows.Forms.Label> Element mit `Label1`dem Namen und ein-Steuerelement namens verfügen.  
   
 ```vb  
 Private Sub InitializeTimer()  
@@ -149,7 +149,7 @@ private:
 ```  
   
 ## <a name="example"></a>Beispiel  
- In diesem zweiten Codebeispiel wird eine Prozedur alle 600 Millisekunden bis zum Ende einer Schleife ausgeführt. Im folgenden Codebeispiel erfordert, dass ein Formular mit einem <xref:System.Windows.Forms.Button> Steuerelement mit dem Namen `Button1`, <xref:System.Windows.Forms.Timer> Steuerelement mit dem Namen `Timer1`, und ein <xref:System.Windows.Forms.Label> Steuerelement mit dem Namen `Label1`.  
+ In diesem zweiten Codebeispiel wird eine Prozedur alle 600 Millisekunden bis zum Ende einer Schleife ausgeführt. Für das folgende Codebeispiel ist es erforderlich, dass Sie über <xref:System.Windows.Forms.Button> ein Formular `Button1`mit dem <xref:System.Windows.Forms.Timer> Namen, `Timer1`ein-Steuer <xref:System.Windows.Forms.Label> Element mit `Label1`dem Namen und ein-Steuerelement namens verfügen.  
   
 ```vb  
 ' This variable will be the loop counter.  

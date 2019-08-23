@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: e1382c4daa513477011a1d1c2132840dfae84de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15664da02189dd618784d55c07aaf4db38a2f656
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879566"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929293"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 Behandelt ein Objekt eines bestimmten Basistyps als Objekt des angegebenen abgeleiteten Typs.  
@@ -23,13 +23,13 @@ TREAT ( expression as type)
  Jeder gültige Abfrageausdruck, der eine Entität zurückgibt.  
   
 > [!NOTE]
->  Beim Typ des angegebenen Ausdrucks muss es sich um einen Untertyp des angegebenen Datentyps oder umgekehrt handeln.  
+> Beim Typ des angegebenen Ausdrucks muss es sich um einen Untertyp des angegebenen Datentyps oder umgekehrt handeln.  
   
  `type`  
  Ein Entitätstyp. Der Typ muss mit einem Namespace qualifiziert werden.  
   
 > [!NOTE]
->  Beim Typ des angegebenen Ausdrucks muss es sich um einen Untertyp des angegebenen Datentyps oder umgekehrt handeln.  
+> Beim Typ des angegebenen Ausdrucks muss es sich um einen Untertyp des angegebenen Datentyps oder umgekehrt handeln.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert des angegebenen Datentyps.  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  In dieser Abfrage werden `Person` -Entitäten in den `Employee` -Typ umgewandelt. Wenn der Wert von "p" nicht tatsächlich vom Typ `Employee`ist, gibt der Ausdruck den Wert `null`zurück.  
   
 > [!NOTE]
->  Der angegebene Ausdruck `Employee` muss sich um einen Untertyp des angegebenen Datentyps `Person`, oder der Datentyp muss es sich um einen Untertyp des Ausdrucks. Andernfalls führt der Ausdruck zu einem Kompilierungsfehler.  
+> Der angegebene Ausdruck `Employee` muss ein Untertyp des angegebenen Datentyps `Person`sein, oder der Datentyp muss ein Untertyp des Ausdrucks sein. Andernfalls führt der Ausdruck zu einem Kompilierungsfehler.  
   
  In der folgenden Tabelle wird das Verhalten von TREAT für einige typische und weniger typische Muster dargestellt. Alle Ausnahmen werden von der Clientseite ausgelöst, bevor der Anbieter aufgerufen wird:  
   

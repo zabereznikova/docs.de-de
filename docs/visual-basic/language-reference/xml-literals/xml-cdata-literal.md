@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 889ec7f93d0503edac51652dda217c6a9f654f9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 248f3cf31f686de3af2ea06012aa4a6d4f3f29fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621433"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942919"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML-CDATA-Literal (Visual Basic)
-Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XCData> Objekt.  
+Ein Literalwert <xref:System.Xml.Linq.XCData> , der ein Objekt darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,33 +26,33 @@ Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XCData> Objekt.
   
 ## <a name="parts"></a>Teile  
  `<![CDATA[`  
- Erforderlich. Kennzeichnet den Anfang des XML-CDATA-Abschnitts.  
+ Erforderlich. Bezeichnet den Anfang des XML-CDATA-Abschnitts.  
   
  `content`  
- Erforderlich. Der Textinhalt in einem XML-CDATA-Abschnitt angezeigt werden.  
+ Erforderlich. Text Inhalt, der im XML-CDATA-Abschnitt angezeigt werden soll.  
   
  `]]>`  
- Erforderlich. Kennzeichnet das Ende des Abschnitts.  
+ Erforderlich. Bezeichnet das Ende des Abschnitts.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein <xref:System.Xml.Linq.XCData>-Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- XML-CDATA-Abschnitten enthalten die unformatierten Text, der sollten enthalten, aber nicht analysiert werden, mit dem XML, das es enthält. Ein XML-CDATA-Abschnitt kann es sich um einen beliebigen Text enthalten. Dies schließt die reservierte XML-Zeichen. Die XML-CDATA-Abschnitt endet mit der Sequenz "]] >". Dies bedeutet Folgendes:  
+ XML-CDATA-Abschnitte enthalten Rohtext, der eingeschlossen, aber nicht analysiert werden soll, mit dem XML-Code, der ihn enthält. Ein XML-CDATA-Abschnitt kann beliebigen Text enthalten. Dies schließt reservierte XML-Zeichen ein. Der XML-CDATA-Abschnitt endet mit der Sequenz "]] >". Dies impliziert die folgenden Punkte:  
   
-- Sie können keinen eingebetteten Ausdruck in eine XML CDATA-literal verwenden, da die Trennzeichen für eingebettete Ausdrücke gültige XML-CDATA-Inhalt sind.  
+- Sie können keinen eingebetteten Ausdruck in einem XML-CDATA-Literalformat verwenden, da die eingebetteten Ausdrucks Trennzeichen gültige XML-CDATA-Inhalte sind.  
   
-- XML-CDATA-Abschnitte können nicht geschachtelt werden, da `content` dürfen nicht den Wert "]] >".  
+- XML-CDATA-Abschnitte können nicht eingebettet werden `content` , da den Wert "]] >" nicht enthalten kann.  
   
- Sie können eine XML CDATA-literal einer Variablen zuweisen oder in einem XML-Elementliteral einzuschließen.  
+ Sie können eine XML-CDATA-Literale einer Variablen zuweisen oder in ein XML-Elementliteral einschließen.  
   
 > [!NOTE]
->  Ein XML-literal kann mehrere Zeilen umfassen, aber keine Zeilenfortsetzungszeichen verwendet. Dadurch können Sie zum Kopieren von Inhalt aus einem XML-Dokument, und fügen ihn direkt in Visual Basic-Programms.  
+> XML-Literale können sich über mehrere Zeilen erstrecken, verwenden jedoch keine Zeilen Fortsetzungs Zeichen. Auf diese Weise können Sie Inhalte aus einem XML-Dokument kopieren und direkt in ein Visual Basic Programm einfügen.  
   
- Visual Basic-Compiler konvertiert XML CDATA-literal in einem Aufruf der <xref:System.Xml.Linq.XCData.%23ctor%2A> Konstruktor.  
+ Der Visual Basic Compiler konvertiert das XML-CDATA-Literale in einen <xref:System.Xml.Linq.XCData.%23ctor%2A> -Konstruktor-Konstruktor.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt einen CDATA-Abschnitt mit dem Text "darf Literale \<XML > Tags".  
+ Im folgenden Beispiel wird ein CDATA-Abschnitt erstellt, der den Text "kann \<Literale XML-> Tags enthalten" enthält.  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   

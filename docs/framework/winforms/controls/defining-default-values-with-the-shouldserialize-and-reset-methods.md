@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 5c95272c672d9b35d61e2fca8cccdbc532ef6776
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 609fe4896a2b01b8a69ff8a3d0854c85ddbd6a26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211300"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969096"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode
-`ShouldSerialize` und `Reset` sind optionale Methoden, die Sie für eine Eigenschaft angeben können, wenn die Eigenschaft nicht der Fall ist eine einfache Standardwert aufweisen. Wenn die Eigenschaft einen einfachen Standardwert verfügt, sollten Sie anwenden der <xref:System.ComponentModel.DefaultValueAttribute> , und geben Sie stattdessen den Standardwert an den Attributkonstruktor-Klasse. Einen dieser Mechanismen können im Designer die folgenden Funktionen:
+`ShouldSerialize`und `Reset` sind optionale Methoden, die Sie für eine-Eigenschaft bereitstellen können, wenn die-Eigenschaft keinen einfachen Standardwert hat. Wenn die Eigenschaft über einen einfachen Standardwert verfügt, sollten Sie den <xref:System.ComponentModel.DefaultValueAttribute> anwenden und stattdessen den Standardwert für den attributklassenkonstruktor angeben. Beide Mechanismen ermöglichen die folgenden Funktionen im Designer:
 
-- Die Eigenschaft enthält visuelle Anzeige im Eigenschaftenbrowser an, wenn er von seinem Standardwert geändert wurde.
+- Die-Eigenschaft stellt im Eigenschaften Browser eine visuelle Anzeige dar, wenn Sie von ihrem Standardwert geändert wurde.
 
-- Der Benutzer kann mit der rechten Maustaste auf die Eigenschaft, und wählen Sie **zurücksetzen** die Eigenschaft auf den Standardwert wiederherzustellen.
+- Der Benutzer kann mit der rechten Maustaste auf die Eigenschaft klicken und **Zurücksetzen** auswählen, um die Eigenschaft auf den Standardwert wiederherzustellen.
 
 - Der Designer generiert effizienteren Code.
 
     > [!NOTE]
-    >  Eine erfüllt die <xref:System.ComponentModel.DefaultValueAttribute> , oder geben Sie `Reset` *PropertyName* und `ShouldSerialize` *PropertyName* Methoden. Verwenden Sie nicht beide.
+    > Wenden Sie entweder <xref:System.ComponentModel.DefaultValueAttribute> an, `Reset`oder stellen Sie die `ShouldSerialize`Methoden *propertyName* und *propertyName* bereit. Verwenden Sie nicht beides.
 
- Die `Reset` *PropertyName* Methode legt eine Eigenschaft auf den Standardwert fest, wie im folgenden Codefragment dargestellt.
+ Mit `Reset`der *propertyName* -Methode wird eine Eigenschaft auf ihren Standardwert festgelegt, wie im folgenden Code Fragment dargestellt.
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
->  Wenn eine Eigenschaft keine `Reset` -Methode ist nicht mit gekennzeichnet eine <xref:System.ComponentModel.DefaultValueAttribute>, und verfügt nicht über einen Standardwert, der in der Deklaration angegeben die `Reset` option für diese Eigenschaft, im Kontextmenü des deaktiviert ist der **Eigenschaften** Fenster der Windows Forms-Designer in Visual Studio.
+> Wenn eine Eigenschaft nicht über `Reset` eine-Methode verfügt, nicht mit einem <xref:System.ComponentModel.DefaultValueAttribute>gekennzeichnet ist und in der Deklaration kein Standardwert angegeben ist, wird die `Reset` Option für diese Eigenschaft im Kontextmenü des **Eigenschaften** Fensters von deaktiviert. der Windows Forms-Designer in Visual Studio.
 
- Verwenden Sie die Designer wie Visual Studio die `ShouldSerialize` *PropertyName* Methode, um zu überprüfen, ob eine Eigenschaft von seinem Standardwert geändert hat und Code schreiben, in das Formular nur, wenn eine Eigenschaft geändert wird, sodass für eine effizientere Code die Generierung. Zum Beispiel:
+ Designer wie Visual Studio verwenden die `ShouldSerialize` *propertyName* -Methode, um zu überprüfen, ob sich eine Eigenschaft von ihrem Standardwert geändert hat, und schreiben Code nur in das Formular, wenn eine Eigenschaft geändert wird, was eine effizientere Codegenerierung ermöglicht. Beispiel:
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,7 +62,7 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- Ein vollständiges Codebeispiel folgt.
+ Ein umfassendes Codebeispiel folgt.
 
 ```vb
 Option Explicit
@@ -141,7 +141,7 @@ public class MyControl : Control {
 }
 ```
 
- In diesem Fall, auch wenn der Wert der privaten Variablen zugreifen der `MyFont` -Eigenschaft ist `null`, der Eigenschaftenbrowser zeigt keine `null`; stattdessen wird die <xref:System.Windows.Forms.Control.Font%2A> Eigenschaft des übergeordneten Elements, wenn er nicht ist `null`, Der Standardwert <xref:System.Windows.Forms.Control.Font%2A> in definierten <xref:System.Windows.Forms.Control>. Daher ist der Standardwert für `MyFont` kann nicht einfach festgelegt werden, und ein <xref:System.ComponentModel.DefaultValueAttribute> nicht auf diese Eigenschaft angewendet werden. Stattdessen die `ShouldSerialize` und `Reset` -Methode müssen implementiert werden, für die `MyFont` Eigenschaft.
+ In diesem Fall wird der Eigenschaften Browser nicht angezeigt, auch wenn der Wert der `MyFont` privaten Variablen, auf die von der-Eigenschaft `null`zugegriffen wird, nicht angezeigt wird <xref:System.Windows.Forms.Control.Font%2A> `null`. stattdessen wird die-Eigenschaft des übergeordneten `null`Elements angezeigt, wenn dies nicht der Fall ist. oder der Standard <xref:System.Windows.Forms.Control.Font%2A> Wert, der <xref:System.Windows.Forms.Control>in definiert ist. Daher kann der Standardwert `MyFont` für nicht einfach festgelegt werden, <xref:System.ComponentModel.DefaultValueAttribute> und ein kann nicht auf diese Eigenschaft angewendet werden. Stattdessen müssen die `ShouldSerialize` - `Reset` Methode und die-Methode für `MyFont` die-Eigenschaft implementiert werden.
 
 ## <a name="see-also"></a>Siehe auch
 

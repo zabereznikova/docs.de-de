@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401695"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958708"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Erstellen einer WPF-Anwendung (WPF)
 
@@ -24,7 +24,7 @@ WPF-Anwendungen (Windows Presentation Foundation) können als .NET Framework aus
 
 Zum Kompilieren einer WPF-Anwendung stehen folgende Methoden zur Verfügung:
 
-- Befehlszeile. Die Anwendung darf nur Code (kein XAML) und eine Anwendungsdefinitionsdatei enthalten. Weitere Informationen finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) oder [Erstellen von der Befehlszeile aus (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
+- Befehlszeile. Die Anwendung darf nur Code (kein XAML) und eine Anwendungsdefinitionsdatei enthalten. Weitere Informationen finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) oder [Erstellen von der Befehlszeile aus (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
 
 - Microsoft Build Engine (MSBuild). Neben dem Code und XAML-Dateien muss die Anwendung eine MSBuild-Projektdatei enthalten. Weitere Informationen finden Sie unter „MSBuild“.
 
@@ -42,7 +42,7 @@ Beim Erstellen eines [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-w
 
 ### <a name="pre-build-initializations"></a>Präbuildinitialisierungen
 
-Vor Beginn der Erstellung bestimmt [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] den Speicherort wichtiger Tools und Bibliotheken, darunter die folgenden:
+Vor dem Erstellen bestimmt MSBuild den Speicherort wichtiger Tools und Bibliotheken, einschließlich der folgenden:
 
 - Der .NET Framework.
 
@@ -52,7 +52,7 @@ Vor Beginn der Erstellung bestimmt [!INCLUDE[TLA2#tla_msbuild](../../../../inclu
 
 - Die Eigenschaft für die Assemblysuchpfade.
 
-Der erste Speicherort, an dem [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] nach Assemblys sucht, ist das Verzeichnis für Verweisassemblys (%Programme%\Reference Assemblies\Microsoft\Framework\v3.0\\). In diesem Schritt initialisiert der Buildprozess auch die verschiedenen Eigenschaften und Elementgruppen und führt die erforderlichen Bereinigungen durch.
+Der erste Speicherort, an dem MSBuild nach Assemblys sucht, ist das verweisassemblyverzeichnis (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\). In diesem Schritt initialisiert der Buildprozess auch die verschiedenen Eigenschaften und Elementgruppen und führt die erforderlichen Bereinigungen durch.
 
 <a name="Resolving_references"></a>
 
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-Standardmäßig wird die Markup Kompilierung <xref:System.AppDomain> genauso wie die [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] -Engine ausgeführt. Dies ermöglicht einen erheblichen Leistungszuwachs. Dieses Verhalten kann mit der `AlwaysCompileMarkupFilesInSeparateDomain`-Eigenschaft umgeschaltet werden. Dies hat den Vorteil, dass alle Verweisassemblys durch <xref:System.AppDomain>Entladen des separaten entladen werden.
+Standardmäßig wird die <xref:System.AppDomain> Markup Kompilierung mit der MSBuild-Engine ausgeführt. Dies ermöglicht einen erheblichen Leistungszuwachs. Dieses Verhalten kann mit der `AlwaysCompileMarkupFilesInSeparateDomain`-Eigenschaft umgeschaltet werden. Dies hat den Vorteil, dass alle Verweisassemblys durch <xref:System.AppDomain>Entladen des separaten entladen werden.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 

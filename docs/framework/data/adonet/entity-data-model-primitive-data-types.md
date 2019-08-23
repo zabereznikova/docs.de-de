@@ -2,23 +2,23 @@
 title: 'Entity Data Model: primitive Datentypen'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c58a3db1eb7ffdb65c7e603d9a76ac7f19f2230f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667131"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959284"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Entity Data Model: primitive Datentypen
-Das Entity Data Model (EDM) unterstützt einen Satz von abstrakten primitiven Datentypen (z. B. eine Zeichenfolge, boolescher Wert, Int32 und So weiter), die verwendet werden, um zu definieren [Eigenschaften](../../../../docs/framework/data/adonet/property.md) in einem konzeptionellen Modell. Diese primitiven Datentypen sind Proxys für tatsächliche primitive Datentypen, die in der Speicher- oder Hostingumgebung unterstützt werden, z. B. eine SQL Server-Datenbank oder die Common Language Runtime (CLR). Das EDM definiert keine Semantik von Vorgängen oder Konvertierungen für primitive Datentypen. Diese Semantik wird von der Speicher- oder Hostingumgebung definiert. In der Regel werden primitive Datentypen im EDM entsprechenden primitiven Datentypen in der Speicher- oder Hostingumgebung zugeordnet. Informationen dazu, wie das Entity Framework primitive Typen im EDM in SQL Server-Datentypen zuordnet, finden Sie unter [SqlClient für Entity Framework-Typen](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+Der Entity Data Model (EDM) unterstützt einen Satz abstrakter primitiver Datentypen (z. b. String, Boolean, Int32 usw.), die verwendet werden, um [Eigenschaften](../../../../docs/framework/data/adonet/property.md) in einem konzeptionellen Modell zu definieren. Diese primitiven Datentypen sind Proxys für tatsächliche primitive Datentypen, die in der Speicher- oder Hostingumgebung unterstützt werden, z. B. eine SQL Server-Datenbank oder die Common Language Runtime (CLR). Das EDM definiert keine Semantik von Vorgängen oder Konvertierungen für primitive Datentypen. Diese Semantik wird von der Speicher- oder Hostingumgebung definiert. In der Regel werden primitive Datentypen im EDM entsprechenden primitiven Datentypen in der Speicher- oder Hostingumgebung zugeordnet. Informationen dazu, wie die Entity Framework primitive Typen im EDM SQL Server Datentypen zuordnet, finden Sie unter [SqlClient für Entity frameworktypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
   
 > [!NOTE]
->  Das EDM unterstützt keine Auflistungen primitiver Datentypen.  
+> Das EDM unterstützt keine Auflistungen primitiver Datentypen.  
   
- Weitere Informationen zu strukturierten Datentypen im EDM finden Sie unter [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) und [komplexen Typ](../../../../docs/framework/data/adonet/complex-type.md).  
+ Informationen zu strukturierten Datentypen im EDM finden Sie unter [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) und [komplexer Typ](../../../../docs/framework/data/adonet/complex-type.md).  
   
 ## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>Im Entity Data Model unterstützte primitive Datentypen  
- In der nachfolgenden Tabelle werden die vom EDM unterstützten primitiven Datentypen aufgeführt. Die Tabelle enthält außerdem die [Facets](../../../../docs/framework/data/adonet/facet.md) , die auf jeden primitiven Datentyp angewendet werden kann.  
+ In der nachfolgenden Tabelle werden die vom EDM unterstützten primitiven Datentypen aufgeführt. In der Tabelle werden auch die [Facetten](../../../../docs/framework/data/adonet/facet.md) aufgelistet, die auf jeden primitiven Datentyp angewendet werden können.  
   
 |Primitiver Datentyp|Beschreibung|Anwendbare Facets|  
 |-------------------------|-----------------|-----------------------|  
@@ -36,7 +36,7 @@ Das Entity Data Model (EDM) unterstützt einen Satz von abstrakten primitiven Da
 |Int64|Enthält einen 64-Bit-Ganzzahlwert mit Vorzeichen.|Precision, Nullable, Default|  
 |SByte|Enthält einen 8-Bit-Ganzzahlwert mit Vorzeichen.|Precision, Nullable, Default|  
 |Zeichenfolge|Enthält Zeichendaten.|Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default|  
-|zeit|Enthält eine Uhrzeit.|Precision, Nullable, Default|  
+|Uhrzeit|Enthält eine Uhrzeit.|Precision, Nullable, Default|  
   
 ## <a name="see-also"></a>Siehe auch
 

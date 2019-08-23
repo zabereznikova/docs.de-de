@@ -2,20 +2,20 @@
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0316e983446644671ead2f8f843dc91b493b29c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772410"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933169"
 ---
 # <a name="namespacetable"></a>\<namespaceTable>
 
 Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von Elementen dar, die Namespace-/Präfix-Zuordnungen enthalten, die zu Routingzwecken in XPath-Filtern verwendet werden können.
 
-**\<system.serviceModel>**   
-&nbsp;&nbsp;**\<routing>**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable>**
+**\<system.serviceModel>**    
+&nbsp;&nbsp; **\<Routing >**    
+&nbsp;&nbsp;&nbsp;&nbsp; **\<namespacetable->**
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,19 +36,19 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="attributes"></a>Attribute
 
-Keiner
+None
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<filter>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | Definiert eine für XPath-Ausdrücke verwendete Namespace-/Präfix-Zuordnung. |
+| [ **\<filter>** ](filter.md) | Definiert eine für XPath-Ausdrücke verwendete Namespace-/Präfix-Zuordnung. |
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [**\<routing>**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von routingfiltern, die den Typ der Windows Communication Foundation (WCF) bestimmen<xref:System.ServiceModel.Dispatcher.MessageFilter> verwendet werden, bei der Auswertung eingehender Nachrichten sowie das routing, Tabellen, die die zielendpunkten, definieren Senden von Nachrichten bei filterübereinstimmung. |
+| [ **\<Routing >** ](routing.md) | Stellt einen Konfigurations Abschnitt zum Definieren eines Satzes von Routing Filtern dar, die den Typ des Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> bestimmen, der bei der Auswertung eingehender Nachrichten verwendet werden soll, sowie Routing Tabellen, die die Ziel Endpunkte definieren. Senden von Nachrichten an, wenn ein Filter übereinstimmt. |
 
 ## <a name="see-also"></a>Siehe auch
 

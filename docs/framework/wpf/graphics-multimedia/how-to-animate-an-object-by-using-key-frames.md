@@ -5,29 +5,29 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ffbe1845b634c8f94eb6a10dfa44fcf9903e0cd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020152"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933908"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Vorgehensweise: Animieren eines Objekts mithilfe von Keyframes
-In diesem Beispiel wird gezeigt, wie zum Animieren eines Objekts, die in diesem Beispiel wird die <xref:System.Windows.Controls.Page.Background%2A> Eigenschaft eine <xref:System.Windows.Controls.Page> -Steuerelement, mithilfe von Keyframes.  
+In diesem Beispiel wird gezeigt, wie ein Objekt, das in diesem Beispiel die <xref:System.Windows.Controls.Page.Background%2A> -Eigenschaft <xref:System.Windows.Controls.Page> eines-Steuer Elements ist, mithilfe von Keyframes animiert wird.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> -Klasse zum Animieren der Farbe ändert, für die <xref:System.Windows.Controls.Page.Background%2A> Eigenschaft eine <xref:System.Windows.Controls.Page> Steuerelement. Beispiel ändert sich die Animation in einen anderen Hintergrundpinsel in regelmäßigen Abständen. Diese Animation verwendet die <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> Klasse, um drei verschiedene Keyframes zu erstellen. Die Animation werden Keyframes folgendermaßen verwendet:  
+ Im folgenden Beispiel wird die <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> -Klasse verwendet, um Farbänderungen <xref:System.Windows.Controls.Page.Background%2A> für die- <xref:System.Windows.Controls.Page> Eigenschaft eines-Steuer Elements zu animieren. Die Beispiel Animation ändert sich in regelmäßigen Abständen in einen anderen Hintergrund Pinsel. Diese Animation verwendet die <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> -Klasse, um drei verschiedene Keyframes zu erstellen. Die Animation verwendet Keyframes wie folgt:  
   
-1. Am Ende der ersten Sekunde, eine Animation auf eine Instanz von der <xref:System.Windows.Media.LinearGradientBrush> Klasse. In diesem Abschnitt des Beispiels gilt die Farbe des Hintergrunds ein lineares Farbverlaufs, damit die Farbe von Gelb zu Orange zu rot ändert.  
+1. Am Ende der ersten Sekunde animiert eine Instanz der <xref:System.Windows.Media.LinearGradientBrush> -Klasse. In diesem Abschnitt des Beispiels wird ein linearer Farbverlauf auf die Hintergrundfarbe angewendet, sodass die Farbe von Gelb in Orange in rot übergeht.  
   
-2. Am Ende der nächsten Sekunde, eine Animation auf eine Instanz von der <xref:System.Windows.Media.RadialGradientBrush> Klasse. In diesem Abschnitt des Beispiels gilt die Farbe des Hintergrunds ein radiales Farbverlaufs, damit die Farbe von weiß zu Schwarz Blau wechselt.  
+2. Am Ende der nächsten Sekunde animiert eine Instanz der <xref:System.Windows.Media.RadialGradientBrush> -Klasse. In diesem Abschnitt des Beispiels wird ein Radialer Farbverlauf auf die Hintergrundfarbe angewendet, sodass die Farbe von weiß zu blau in schwarz übergeht.  
   
-3. Am Ende des dritten zweiten, eine Animation auf eine Instanz von der <xref:System.Windows.Media.DrawingBrush> Klasse. In diesem Abschnitt des Beispiels wird ein Schachbrettmuster in den Hintergrund.  
+3. Am Ende der dritten Sekunde animiert eine Instanz der <xref:System.Windows.Media.DrawingBrush> -Klasse. In diesem Abschnitt des Beispiels wird ein checkboard-Muster auf den Hintergrund angewendet.  
   
-4. Die Animation erneut gestartet, und es wird auf unbestimmte Zeit wiederholt.  
+4. Die Animation beginnt wieder und wird unbegrenzt wiederholt.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> ist die einzige Art des Keyframes, mit denen Sie mit der <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> Klasse. Schlüssel wie frames <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> können abrupte Veränderungen in den Werten, d. h., ändert sich die Farbe, in diesem Beispiel treten plötzlich.  
+> <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>ist der einzige schlüsselframe, den Sie mit der <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> -Klasse verwenden können. Keyframes wie <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> z. b. eine plötzliche Änderung von Werten, d. h. die Farbänderungen in diesem Beispiel treten plötzlich auf.  
   
  [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   

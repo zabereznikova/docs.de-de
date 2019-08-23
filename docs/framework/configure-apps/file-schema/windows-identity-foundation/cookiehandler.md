@@ -3,15 +3,15 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 5238ea7b96c09fb976a25bc00b952539ddd44b49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791741"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942800"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
-Konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> , die die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) zum Lesen und Schreiben von Cookies verwendet.  
+Konfiguriert den <xref:System.IdentityModel.Services.CookieHandler> , den der <xref:System.IdentityModel.Services.SessionAuthenticationModule> (Sam) zum Lesen und Schreiben von Cookies verwendet.  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -43,41 +43,41 @@ Konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> , die die <x
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Name|Gibt den Basisnamen für Cookies geschrieben. Der Standardwert ist "FedAuth".|  
-|path|Gibt den Pfadwert für alle Cookies geschrieben. Der Standardwert ist "HttpRuntime.AppDomainAppVirtualPath".|  
-|Modus|Eines der <xref:System.IdentityModel.Services.CookieHandlerMode> Werte, der die Art der von SAM verwendete cookiehandler angibt. Die folgenden Werte können verwendet werden:<br /><br /> -"Default", "Chunked" identisch.<br />-"Aufgeteilte" – wird eine Instanz der dem <xref:System.IdentityModel.Services.ChunkedCookieHandler> Klasse. Dieses Cookie-Handler wird sichergestellt, dass es sich bei einzelner Cookies eine festgelegte maximale Größe nicht überschreiten. Dabei wird "chunking" möglicherweise eine logische Cookie in eine Anzahl von Cookies auf das Netzwerk.<br />-"Custom" – wird eine Instanz einer benutzerdefinierten Klasse, die von abgeleiteten <xref:System.IdentityModel.Services.CookieHandler>. Die abgeleitete Klasse verweist auf die `<customCookieHandler>` untergeordnetes Element.<br /><br /> Der Standardwert ist "Default".|  
-|persistentSessionLifetime|Gibt die Lebensdauer permanenter Sitzungen. Bei NULL werden immer flüchtige Sitzungen verwendet. Der Standardwert ist "0:0:0", die eine vorübergehende Sitzung angibt. Der maximale Wert ist "365:0:0", die eine Sitzung von 365 Tagen angibt. Der Wert muss angegeben werden, entsprechend die folgende Einschränkung: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, wobei der äußeren linken Wert gibt die Tage an, der Mittelwert (falls vorhanden) gibt die Stunden und der äußeren rechten Wert (falls vorhanden) gibt die Minuten.|  
-|requireSsl|Gibt an, ob die Kennzeichen "Secure" für jede geschriebene Cookies ausgegeben werden. Wenn dieser Wert festgelegt ist, werden die Anmeldung Sitzungscookies über HTTPS nur verfügbar sein. Der Standardwert ist "true".|  
-|hideFromScript|Steuert, ob das Flag "HttpOnly" für jede geschriebene Cookies ausgegeben wird. Bestimmte Webbrowser berücksichtigt dieses Flag werden, da der Client-seitige Skript Zugriff auf den Cookiewert an. Der Standardwert ist "true".|  
-|Domäne|Der Domänenwert für Cookies geschrieben. Der Standardwert ist "".|  
+|Name|Gibt den Basis Namen für alle geschriebenen Cookies an. Der Standardwert ist "fedauth".|  
+|path|Gibt den Pfadwert für alle geschriebenen Cookies an. Der Standardwert ist "HttpRuntime. AppDomainAppVirtualPath".|  
+|Modus|Einer der <xref:System.IdentityModel.Services.CookieHandlerMode> -Werte, der die Art des von Sam verwendeten Cookie-Handlers angibt. Die folgenden Werte können verwendet werden:<br /><br /> -"Default" – identisch mit "segmentiert".<br />-"Chunked" – verwendet eine Instanz der <xref:System.IdentityModel.Services.ChunkedCookieHandler> -Klasse. Dieser cookiehandler stellt sicher, dass einzelne Cookies eine festgelegte maximale Größe nicht überschreiten. Dies wird erreicht, indem ein logisches Cookie ggf. in eine Reihe von Cookies übertragen wird.<br />-"Custom" – verwendet eine Instanz einer benutzerdefinierten Klasse, die <xref:System.IdentityModel.Services.CookieHandler>von abgeleitet ist. Auf die abgeleitete Klasse wird durch `<customCookieHandler>` das untergeordnete-Element verwiesen.<br /><br /> Der Standardwert ist "Default".|  
+|persistentSessionLifetime|Gibt die Lebensdauer von persistenten Sitzungen an. Wenn 0 (null), werden vorübergehende Sitzungen immer verwendet. Der Standardwert ist "0:0:0", der eine vorübergehende Sitzung angibt. Der Höchstwert ist "365:0:0", wodurch eine Sitzung von 365 Tagen angegeben wird. Der Wert sollte gemäß der folgenden Einschränkung angegeben werden: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, wobei der äußteste Wert Days angibt, der mittlere Wert (falls vorhanden) Stunden angibt und der äußteste Wert (falls vorhanden) Minuten angibt.|  
+|requireSsl|Gibt an, ob das Flag "Secure" für geschriebene Cookies ausgegeben wird. Wenn dieser Wert festgelegt ist, sind die Anmelde Sitzungs Cookies nur über HTTPS verfügbar. Der Standardwert ist "true".|  
+|hideFromScript|Steuert, ob das Flag "HttpOnly" für geschriebene Cookies ausgegeben wird. Bestimmte Webbrowser berücksichtigen dieses Flag, indem das Client seitige Skript keinen Zugriff auf den Cookie-Wert hat. Der Standardwert ist "true".|  
+|Domäne|Der Domänen Wert für alle geschriebenen Cookies. Der Standardwert ist "".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<chunkedCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Dieses Element kann nur vorhanden sein, wenn die `mode` Attribut der `<cookieHandler>` -Element ist "Default" oder "Aufgeteilte".|  
-|[\<customCookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|Legt fest, den Handlertyp der benutzerdefinierten Cookies. Dieses Element muss vorhanden sein wenn die `mode` Attribut der `<cookieHandler>` Element ist "Custom". Es kann nicht für alle anderen Werte vorhanden sein. die `mode` Attribut. Aus der benutzerdefinierte Typ abgeleitet werden die <xref:System.IdentityModel.Services.CookieHandler> Klasse.|  
+|[\<chunkedCookieHandler>](chunkedcookiehandler.md)|Konfiguriert den <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Dieses Element kann nur vorhanden sein, wenn `mode` das-Attribut `<cookieHandler>` des-Elements "Default" oder "Chunked" ist.|  
+|[\<customCookieHandler>](customcookiehandler.md)|Legt den Typ des benutzerdefinierten Cookie-Handlers fest. Dieses Element muss vorhanden sein, wenn `mode` das-Attribut `<cookieHandler>` des-Elements "Custom" ist. Er darf nicht für andere Werte des `mode` Attributs vorhanden sein. Der benutzerdefinierte Typ muss von der <xref:System.IdentityModel.Services.CookieHandler> -Klasse abgeleitet werden.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Enthält Einstellungen, konfigurieren die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Enthält die Einstellungen, mit denen <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (wsfam) <xref:System.IdentityModel.Services.SessionAuthenticationModule> und (Sam) konfiguriert werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die <xref:System.IdentityModel.Services.CookieHandler> ist verantwortlich für das Lesen und Schreiben von Rohdaten-Cookies auf den HTTP-Protokoll auf. Sie können konfigurieren, entweder eine <xref:System.IdentityModel.Services.ChunkedCookieHandler> oder ein benutzerdefinierten cookiehandler abgeleitet der <xref:System.IdentityModel.Services.CookieHandler> Klasse.  
+ Der <xref:System.IdentityModel.Services.CookieHandler> ist für das Lesen und Schreiben von unformatierten Cookies auf der http-Protokollebene verantwortlich. Sie können einen <xref:System.IdentityModel.Services.ChunkedCookieHandler> oder einen benutzerdefinierten cookiehandler konfigurieren <xref:System.IdentityModel.Services.CookieHandler> , der von der-Klasse abgeleitet wird.  
   
- Um einen segmentierten cookiehandler konfigurieren zu können, legen Sie das Mode-Attribut auf "Chunked" oder "Default". Die standardmäßige Segmentgröße beträgt 2000 Bytes, aber optional können Sie eine andere Blockgröße angeben, durch Einschließen einer `<chunkedCookieHandler>` untergeordnetes Element.  
+ Legen Sie zum Konfigurieren eines segmentierten cookiehandlers das Mode-Attribut auf "aufgeteilte" oder "Default" fest. Die Standard Segmentgröße beträgt 2000 Bytes, aber Sie können optional eine andere Segmentgröße angeben, indem Sie ein `<chunkedCookieHandler>` untergeordnetes Element einschließen.  
   
- Um einen benutzerdefinierten cookiehandler konfigurieren zu können, legen Sie das Mode-Attribut auf "Benutzerdefiniert". Sie müssen auch angeben, ein `<customCookieHandler>` untergeordneten-Element, das den Typ des benutzerdefinierten Handler verweist.  
+ Legen Sie zum Konfigurieren eines benutzerdefinierten cookiehandlers das Mode-Attribut auf "Custom" fest. Sie müssen auch ein `<customCookieHandler>` untergeordnetes Element angeben, das auf den Typ des benutzerdefinierten Handlers verweist.  
   
- Die `<cookieHandler>` Element wird dargestellt, durch die <xref:System.IdentityModel.Services.CookieHandlerElement> Klasse. Steht der cookiehandler, der in der Konfiguration angegeben wurde der <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> Eigenschaft der <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Objekt festgelegt werden, auf die <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> Eigenschaft.  
+ Das `<cookieHandler>` -Element wird durch die <xref:System.IdentityModel.Services.CookieHandlerElement> -Klasse dargestellt. Der in der Konfiguration angegebene cookiehandler ist über <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> die-Eigenschaft <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> des-Objekts verfügbar <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> , das in der-Eigenschaft festgelegt ist.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende XML zeigt ein `<cookieHandler>` Element. In diesem Beispiel da die `mode` Attribut nicht angegeben ist, der standardcookiehandler von SAM verwendet werden. Dies ist eine Instanz der <xref:System.IdentityModel.Services.ChunkedCookieHandler> Klasse. Da die `<chunkedCookieHandler>` untergeordnete Element nicht angegeben ist, wird die standardmäßige Segmentgröße verwendet werden. HTTPS wird nicht benötigt werden, da die `requireSsl` -Attribut festgelegt ist `false`.  
+ Der folgende XML-Code `<cookieHandler>` zeigt ein-Element. Da das `mode` -Attribut in diesem Beispiel nicht angegeben wird, wird der standardmäßige Cookie-Handler von Sam verwendet. Dies ist eine Instanz der <xref:System.IdentityModel.Services.ChunkedCookieHandler> -Klasse. Da das `<chunkedCookieHandler>` untergeordnete-Element nicht angegeben ist, wird die Standard Segmentgröße verwendet. HTTPS ist nicht erforderlich, da das `requireSsl` -Attribut fest `false`gelegt ist.  
   
 > [!WARNING]
->  In diesem Beispiel ist HTTPS nicht erforderlich, um Sitzungscookies zu schreiben. Grund hierfür ist, die `requireSsl` -Attribut für die `<cookieHandler>` Element nastaven NA hodnotu `false`. Diese Einstellung ist für die meisten produktionsumgebungen nicht empfohlen, wie sie ein Sicherheitsrisiko darstellen kann.  
+>  In diesem Beispiel ist HTTPS nicht erforderlich, um Sitzungs Cookies zu schreiben. Dies liegt daran, `requireSsl` dass das- `<cookieHandler>` Attribut des-Elements `false`auf festgelegt ist. Diese Einstellung wird für die meisten Produktionsumgebungen nicht empfohlen, da Sie ein Sicherheitsrisiko darstellen kann.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

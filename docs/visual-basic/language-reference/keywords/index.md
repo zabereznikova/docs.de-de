@@ -10,21 +10,21 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801556"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959964"
 ---
 # <a name="keywords-visual-basic"></a>Schlüsselwörter (Visual Basic)
-Die folgenden Tabellen enthalten alle Schlüsselwörter von Visual Basic.  
+In den folgenden Tabellen sind alle Schlüsselwörter der Visual Basic Sprache aufgeführt.  
   
 ## <a name="reserved-keywords"></a>Reservierte Schlüsselwörter  
  Die folgenden Schlüsselwörter sind *reserviert*. Das bedeutet, dass Sie sie nicht als Namen von Programmierelementen wie Variablen oder Prozeduren verwenden können. Sie können diese Beschränkung umgehen, indem Sie den Namen in eckige Klammern (`[]`) einschließen. Weitere Informationen finden Sie unter „Escaped Names“ (Namen mit Escapezeichen) in [Declared Element Names (Deklarierte Elementnamen)](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 > [!NOTE]
->  Die Verwendung von Namen mit Escapezeichen wird nicht empfohlen, da der Code dadurch möglicherweise schwer lesbar ist und Fehler auftreten können, die schwer zu finden sind.  
+> Die Verwendung von Namen mit Escapezeichen wird nicht empfohlen, da der Code dadurch möglicherweise schwer lesbar ist und Fehler auftreten können, die schwer zu finden sind.  
   
 |||||  
 |---|---|---|---|  
@@ -57,7 +57,7 @@ Die folgenden Tabellen enthalten alle Schlüsselwörter von Visual Basic.
 |[Objekt](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
 |[Option](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Optional](../../../visual-basic/language-reference/modifiers/optional.md)|[Or](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
 |[out (generischer Modifizierer)](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)|[Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|  
-|[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Private](../../../visual-basic/language-reference/modifiers/private.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|  
+|[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Private](../../../visual-basic/language-reference/modifiers/private.md)|[Eigenschaft](../../../visual-basic/language-reference/statements/property-statement.md)|  
 |[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|[Public](../../../visual-basic/language-reference/modifiers/public.md)|[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)|  
 |[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|[Auswählen](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
@@ -77,7 +77,7 @@ Die folgenden Tabellen enthalten alle Schlüsselwörter von Visual Basic.
 |[>>-Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>=-Operator](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant`, und `Wend` reservierte Schlüsselwörter, beibehalten werden, obwohl sie nicht mehr in Visual Basic verwendet werden. Die Bedeutung des `Let`-Schlüsselworts hat sich geändert. `Let` wird jetzt in LINQ-Abfragen verwendet. Weitere Informationen finden Sie unter [let-Klausel](../../../visual-basic/language-reference/queries/let-clause.md).  
+> `EndIf`, `GoSub`, `Variant` und`Wend` werden als reservierte Schlüsselwörter aufbewahrt, auch wenn Sie nicht mehr in Visual Basic verwendet werden. Die Bedeutung des `Let`-Schlüsselworts hat sich geändert. `Let` wird jetzt in LINQ-Abfragen verwendet. Weitere Informationen finden Sie unter [let-Klausel](../../../visual-basic/language-reference/queries/let-clause.md).  
   
 ## <a name="unreserved-keywords"></a>Nicht reservierte Schlüsselwörter  
  Die folgenden Schlüsselwörter sind nicht reserviert. Das bedeutet, dass Sie sie als Namen von Programmierelementen verwenden können. Dieses Vorgehen wird jedoch nicht empfohlen, da der Code dadurch möglicherweise schwer lesbar ist und Fehler auftreten können, die schwer zu finden sind.  
@@ -85,7 +85,7 @@ Die folgenden Tabellen enthalten alle Schlüsselwörter von Visual Basic.
 |||||  
 |---|---|---|---|  
 |[Aggregat](../../../visual-basic/language-reference/queries/aggregate-clause.md)|[ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)|[Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)|[Async](../../../visual-basic/language-reference/modifiers/async.md)|  
-|[Auto](../../../visual-basic/language-reference/modifiers/auto.md)|[Await](../../../visual-basic/language-reference/operators/await-operator.md)|[Binary](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
+|[Automatisch](../../../visual-basic/language-reference/modifiers/auto.md)|[Await](../../../visual-basic/language-reference/operators/await-operator.md)|[Binary](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)|  
 |[Benutzerdefiniert](../../../visual-basic/language-reference/statements/event-statement.md)|[Distinct](../../../visual-basic/language-reference/queries/distinct-clause.md)|[Equals](../../../visual-basic/language-reference/queries/equals-clause.md)|[Explicit](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|  
 |[From](../../../visual-basic/language-reference/queries/from-clause.md)|[Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)|[Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)|[Into](../../../visual-basic/language-reference/statements/into-clause.md)|  
 |[IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)|[IsTrue](../../../visual-basic/language-reference/operators/istrue-operator.md)|[Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)|[Join](../../../visual-basic/language-reference/queries/join-clause.md)|  

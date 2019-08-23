@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545269"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944821"
 ---
 # <a name="panels-overview"></a>Übersicht über Panel-Elemente
 <xref:System.Windows.Controls.Panel>Elemente sind Komponenten, die das Rendering von Elementen steuern – ihre Größe und Größe, ihre Position und die Anordnung ihres untergeordneten Inhalts. Bietet eine Reihe vordefinierter <xref:System.Windows.Controls.Panel> Elemente sowie die Möglichkeit, benutzerdefinierte <xref:System.Windows.Controls.Panel> Elemente zu erstellen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -149,7 +149,7 @@ ms.locfileid: "69545269"
  Spalten und Zeilen, die innerhalb <xref:System.Windows.Controls.Grid> eines definiert sind, <xref:System.Windows.GridUnitType.Star> können die Größe der Größe nutzen, um den verbleibenden Platz proportional zu verteilen. Wenn <xref:System.Windows.GridUnitType.Star> als Höhe oder Breite einer Zeile oder Spalte ausgewählt ist, erhält diese Spalte bzw. Zeile einen gewichteten Anteil des verbleibenden verfügbaren Speicherplatzes. Dies steht im Gegensatz zu <xref:System.Windows.GridUnitType.Auto>, wodurch der Speicherplatz gleichmäßig basierend auf der Größe des Inhalts in einer Spalte oder Zeile verteilt wird. Dieser Wert wird als `*` oder `2*` ausgedrückt, wenn [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] verwendet wird. Im ersten Fall würde die Zeile oder Spalte den verfügbaren Platz einmal erhalten, im zweiten Fall zweimal, usw. Durch die Kombination dieser Technik zum proportionalen Verteilen von <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> Speicher <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> Platz mit `Stretch` einem-Wert und einem-Wert ist es möglich, den Layoutbereich anhand des Prozentsatzes des Bildschirm Raums <xref:System.Windows.Controls.Grid>ist das einzige Layoutpanel, mit dem Speicherplatz auf diese Weise verteilt werden kann.  
   
 #### <a name="defining-and-using-a-grid"></a>Definieren und Verwenden eines Rasters  
- Das folgende Beispiel veranschaulicht das Erstellen eines [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Elements, das dem Element im Dialogfeld „Ausführen“ im [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Startmenü ähnelt.  
+ Im folgenden Beispiel wird veranschaulicht, wie Sie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] einen ähnlich dem Erstellen, der im Dialogfeld "ausführen" im Windows-Startmenü verfügbar ist.  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

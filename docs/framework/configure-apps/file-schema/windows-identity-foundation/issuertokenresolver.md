@@ -3,15 +3,15 @@ title: <issuerTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: f74392f6-3f5b-4880-bd8a-3a9130d31e65
 author: BrucePerlerMS
-ms.openlocfilehash: 08082d2e6647f07f33df72ab79dac00c15a1cd1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da591940910b16d42ef8ab1a05c4b244dbe543f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791611"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942625"
 ---
 # <a name="issuertokenresolver"></a>\<issuerTokenResolver>
-Registriert die Aussteller-tokenresolver, der von Handlern in die Auflistung der Tokenhandler verwendet wird. Die Aussteller-tokenresolver wird zum Auflösen des Signaturtokens auf eingehende Tokens und Nachrichten.  
+Registriert den Aussteller-tokenresolver, der von Handlern in der tokenhandlerauflistung verwendet wird. Der Aussteller-tokenresolver wird verwendet, um das Signatur Token für eingehende Token und Nachrichten aufzulösen.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -41,27 +41,27 @@ Registriert die Aussteller-tokenresolver, der von Handlern in die Auflistung der
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Gibt den Typ der Aussteller-tokenresolvers. Muss entweder die <xref:System.IdentityModel.Tokens.IssuerTokenResolver> Klasse oder ein Typ, der von abgeleitet ist die <xref:System.IdentityModel.Tokens.IssuerTokenResolver> Klasse. Erforderlich.|  
+|Typ|Gibt den Typ des Aussteller-tokenresolvers an. Muss entweder die <xref:System.IdentityModel.Tokens.IssuerTokenResolver> -Klasse oder ein Typ sein, der von <xref:System.IdentityModel.Tokens.IssuerTokenResolver> der-Klasse abgeleitet wird. Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung der Tokenhandler.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung von Sicherheitstokenhandlern bereit.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Aussteller-tokenresolver wird zum Auflösen des Signaturtokens auf eingehende Tokens und Nachrichten. Es wird verwendet, um das kryptografische Material abzurufen, das für die Überprüfung der Signatur verwendet wird. Sie müssen angeben, die `type` Attribut. Der angegebene Typ kann es sich entweder <xref:System.IdentityModel.Tokens.IssuerTokenResolver> oder einen benutzerdefinierten Typ abgeleitet, die die <xref:System.IdentityModel.Tokens.IssuerTokenResolver> Klasse.  
+ Der Aussteller-tokenresolver wird verwendet, um das Signatur Token für eingehende Token und Nachrichten aufzulösen. Sie wird verwendet, um das kryptografische Material abzurufen, das zum Überprüfen der Signatur verwendet wird. Sie müssen das `type` -Attribut angeben. Der angegebene Typ kann entweder <xref:System.IdentityModel.Tokens.IssuerTokenResolver> oder ein benutzerdefinierter Typ sein, der von der <xref:System.IdentityModel.Tokens.IssuerTokenResolver> -Klasse abgeleitet wird.  
   
- Einige Tokenhandler können Sie Aussteller-tokenresolver Einstellungen in der Konfiguration anzugeben. Einstellungen für einzelne Tokenhandler außer Kraft setzen auf der Sicherheitstoken-Handlerauflistung angegeben.  
+ Einige Tokenhandler ermöglichen es Ihnen, Einstellungen für Aussteller-tokenresolver in der Konfiguration anzugeben. Einstellungen in einzelnen tokenhandlern überschreiben die in der Auflistung der Sicherheitstokenhandler angegebenen.  
   
 > [!NOTE]
->  Angeben der `<issuerTokenResolver>` -Element als untergeordnetes Element von der [ \<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element ist veraltet, jedoch wird für die Abwärtskompatibilität weiterhin unterstützt. Einstellungen für die `<securityTokenHandlerConfiguration>` Element überschreiben diejenigen auf dem `<identityConfiguration>` Element.  
+> Die Angabe `<issuerTokenResolver>` des-Elements als untergeordnetes Element [ \<des identityconfiguration->](identityconfiguration.md) Elements ist veraltet, wird jedoch aus Gründen der Abwärtskompatibilität weiterhin unterstützt. Die Einstellungen für `<securityTokenHandlerConfiguration>` das-Element überschreiben `<identityConfiguration>` die für das-Element.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende XML zeigt die Konfiguration für einen Aussteller-tokenresolver, der für eine benutzerdefinierte Klasse basiert, die von abgeleitet <xref:System.IdentityModel.Tokens.IssuerTokenResolver>. Der tokenresolver verwaltet ein Wörterbuch der Zielgruppe-Schlüssel-Paare, die über ein benutzerdefiniertes Konfigurationselement initialisiert wird (`<AddAudienceKeyPair>`) für die Klasse definiert. Die Klasse überschreibt die <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> Methode, um dieses Element zu verarbeiten. Die Außerkraftsetzung wurde im folgenden Beispiel dargestellt. Allerdings werden die Methoden, die er aufruft, aus Gründen der Übersichtlichkeit nicht angezeigt. Das vollständige Beispiel finden Sie unter den `CustomToken` Beispiel.  
+ Der folgende XML-Code zeigt die Konfiguration für einen Aussteller-tokenresolver, der auf einer Benutzer <xref:System.IdentityModel.Tokens.IssuerTokenResolver>definierten Klasse basiert, die von abgeleitet wird. Der tokenresolver verwaltet ein Wörterbuch von Audience-Key-Paaren, die von einem benutzerdefinierten Konfigurations`<AddAudienceKeyPair>`Element () initialisiert werden, das für die Klasse definiert ist. Die-Klasse überschreibt <xref:System.IdentityModel.Selectors.SecurityTokenResolver.LoadCustomConfiguration%2A> die-Methode, um dieses Element zu verarbeiten. Die außer Kraft setzung wird im folgenden Beispiel gezeigt. die Methoden, die Sie aufruft, werden jedoch nicht aus Gründen der Kürze angezeigt. Das gesamte Beispiel finden Sie im `CustomToken` Beispiel.  
   
 ```xml  
 <issuerTokenResolver type="SimpleWebToken.CustomIssuerTokenResolver, SimpleWebToken">  

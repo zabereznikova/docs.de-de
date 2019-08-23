@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947995"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern
 Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivieren, deaktivieren und filtern.  
@@ -65,7 +65,7 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
  Zusätzlich zum Angeben des Namens eines Schalters, der konfiguriert werden soll, müssen Sie auch einen Wert für den Schalter angeben. Dieser Wert ist eine ganze Zahl. Für <xref:System.Diagnostics.BooleanSwitch> entspricht der Wert 0 **Deaktiviert**, und ein Wert ungleich 0 entspricht **Aktiviert**. Für <xref:System.Diagnostics.TraceSwitch> entsprechen 0,1,2,3 bzw. 4 **Deaktiviert**, **Fehler**, **Warnung**, **Info** bzw. **Ausführlich**. Jede Zahl, die größer als 4 ist, wird als **Ausführlich**, und jede Anzahl, die kleiner als 0 ist, wird als **Deaktiviert** angesehen.  
   
 > [!NOTE]
->  In .NET Framework 2.0 können Sie Text verwenden, um den Wert eines Schalters anzugeben. Beispielsweise `true` für einen <xref:System.Diagnostics.BooleanSwitch> oder den Text, der einem Enumerationswert entspricht, etwa `Error`, für einen <xref:System.Diagnostics.TraceSwitch>. Die Zeile `<add name="myTraceSwitch" value="Error" />` ist gleichbedeutend mit `<add name="myTraceSwitch" value="1" />`.  
+> In .NET Framework 2.0 können Sie Text verwenden, um den Wert eines Schalters anzugeben. Beispielsweise `true` für einen <xref:System.Diagnostics.BooleanSwitch> oder den Text, der einem Enumerationswert entspricht, etwa `Error`, für einen <xref:System.Diagnostics.TraceSwitch>. Die Zeile `<add name="myTraceSwitch" value="Error" />` ist gleichbedeutend mit `<add name="myTraceSwitch" value="1" />`.  
   
  Damit Endbenutzer die Möglichkeit haben, die Ablaufverfolgungsschalter einer Anwendung konfigurieren zu können, müssen Sie eine detaillierte Dokumentation zu den Schaltern in Ihrer Anwendung bereitstellen. Sie sollten ausführlich beschreiben, welche Schalter welche Vorgänge steuern und wie die Schalter aktiviert und deaktiviert werden. Außerdem sollten Sie Ihren Endbenutzern eine .config-Datei bereitstellen, die entsprechende Hilfen in den Kommentaren enthält.  
   
@@ -75,11 +75,11 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
 2. Enthält Ihr Projekt keine Konfigurationsdatei („app.config“ oder „Web.config“), dann wählen Sie im Menü **Projekt** den Befehl **Neues Element hinzufügen** aus.  
   
-    - **Visual Basic:** In der **neues Element hinzufügen** Dialogfeld wählen **Anwendungskonfigurationsdatei**.  
+    - **Visual Basic:** Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Anwendungs Konfigurationsdatei**aus.  
   
          Die Anwendungskonfigurationsdatei wird erstellt und geöffnet. Diese Datei ist ein XML-Dokument mit dem Stammelement `<configuration>.`  
   
-    - **Visual C#:** In der **neues Element hinzufügen** Dialogfeld wählen **XML-Datei**. Geben Sie dieser Datei den Namen **app.config**. Fügen Sie im XML-Editor nach der XML-Deklaration die folgende XML hinzu:  
+    - **Visualisierung C#:** Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **XML-Datei**aus. Geben Sie dieser Datei den Namen **app.config**. Fügen Sie im XML-Editor nach der XML-Deklaration die folgende XML hinzu:  
   
         ```xml  
         <configuration>  
@@ -128,6 +128,6 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
 ## <a name="see-also"></a>Siehe auch
 
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Vorgehensweise: Hinzufügen von Ablauf Verfolgungs Anweisungen zum Anwendungs Code](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

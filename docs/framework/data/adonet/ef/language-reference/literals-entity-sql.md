@@ -2,22 +2,22 @@
 title: Literale (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953285"
 ---
 # <a name="literals-entity-sql"></a>Literale (Entity SQL)
 In diesem Thema wird die [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Unterstützung für Literale beschrieben.  
   
-## <a name="null"></a>Null  
+## <a name="null"></a>NULL  
  Das NULL-Literal wird verwendet, um für einen beliebigen Typ den Wert Null darzustellen. Das NULL-Literal ist mit jedem Typ kompatibel.  
   
- Typisierte Nullen können durch Umwandlung eines NULL-Literals erstellt werden. Weitere Informationen finden Sie unter [Umwandlung](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ Typisierte Nullen können durch Umwandlung eines NULL-Literals erstellt werden. Weitere Informationen finden Sie unter [Cast](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
   
- Für Regeln zur typisierten null-Literale verwendet werden kann, finden Sie unter [Null-Literale und Typrückschluss](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Regeln für die Verwendung von freien Gleit Komma-null-literalen finden Sie unter [NULL-Literale und Typrückschluss](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Boolesch  
  Boolesche Literale werden durch die Schlüsselwörter `true` und `false` dargestellt.  
@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  Ein datetime-Literal ist unabhängig vom Gebietsschema und besteht aus einem Datums- und einem Uhrzeitteil. Datums- und einem Uhrzeitteile sind obligatorisch, und es gibt keine Standardwerte.  
   
- Der Datumsteil muss Folgendes Format aufweisen: `YYYY` - `MM` - `DD`, wobei `YYYY` ist ein Jahreswert der vier Ziffern zwischen 0001 und 9999, `MM` ist der Monat zwischen 1 und 12 und `DD` ist der Tageswert, der für den gegebenen Monat gültig ist `MM`.  
+ Der Datums Teil muss folgendes Format aufweisen: `YYYY` - - `MM` `DD` `MM` , wobei `YYYY` ein vierstelliger Jahreswert zwischen 0001 und 9999 ist, der Monat zwischen 1 und 12 ist und `DD` der tagewert, der für den angegebenen Monat `MM`gültig ist.  
   
  Der Zeitteil muss folgendes Format aufweisen: `HH`:`MM`[:`SS`[.fffffff]], wobei `HH` ein Stundenwert zwischen 0 und 23, `MM` ein Minutenwert zwischen 0 und einschließlich 59, `SS` ein Sekundenwert zwischen 0 und einschließlich 59 und fffffff der Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist. Alle Wertbereiche sind inklusive. Der Wert für die Sekundenbruchteile ist optional. Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich. Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet.  
   
@@ -56,7 +56,7 @@ DATETIME'2006-10-1 23:11'
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
   
-## <a name="time"></a>zeit  
+## <a name="time"></a>Uhrzeit  
  Das time-Literal ist unabhängig vom Gebietsschema und besteht ausschließlich aus einem Uhrzeitteil. Der Uhrzeitteil ist zwingend erforderlich, und hierfür ist kein Standardwert vorhanden. Der Uhrzeitteil muss folgendes Format aufweisen: HH:MM[:SS[.fffffff]], wobei "HH" ein Stundenwert zwischen 0 und 23, "MM" ein Minutenwert zwischen 0 und 59, "SS" ein Sekundenwert zwischen 0 und einschließlich 59 und "fffffff" der Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist. Alle Wertbereiche sind inklusive. Der Wert für die Sekundenbruchteile ist optional. Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich. Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet.  
   
  Zwischen dem TIME-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.  
@@ -67,7 +67,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- Ein datetimeoffset-Literal ist unabhängig vom Gebietsschema und besteht aus einem Datums-, einem Uhrzeit- und einem Offsetteil. Alle Datums-, Uhrzeit- und Offsetteile sind obligatorisch, und es gibt keine Standardwerte. Der Datumsteil muss folgendes Format aufweisen: JJJJ-MM-TT, wobei "JJJJ" eine Jahresangabe mit vier Ziffern zwischen 0001 und 9999, "MM" der Wert für den Monat zwischen 1 und 12 und "DD" der Wert für den Tag ist, der für den gegebenen Monat gültig ist. Der Uhrzeitteil muss folgendes Format aufweisen: HH:MM[:SS[.fffffff]], wobei "HH" ein Stundenwert zwischen 0 und 23, "MM" ein Minutenwert zwischen 0 und 59, "SS" ein Sekundenwert zwischen 0 und 59 und "fffffff" ein Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist. Alle Wertbereiche sind inklusive. Der Wert für die Sekundenbruchteile ist optional. Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich. Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet. Der offsetteil muss Folgendes Format aufweisen {+&#124;-} hh: mm, HH als auch für MM, in denen die gleiche Bedeutung wie die Time-Komponente haben. Der Wert für den Offsetbereich muss jedoch zwischen -14:00 und +14:00 liegen.  
+ Ein datetimeoffset-Literal ist unabhängig vom Gebietsschema und besteht aus einem Datums-, einem Uhrzeit- und einem Offsetteil. Alle Datums-, Uhrzeit- und Offsetteile sind obligatorisch, und es gibt keine Standardwerte. Der Datumsteil muss folgendes Format aufweisen: JJJJ-MM-TT, wobei "JJJJ" eine Jahresangabe mit vier Ziffern zwischen 0001 und 9999, "MM" der Wert für den Monat zwischen 1 und 12 und "DD" der Wert für den Tag ist, der für den gegebenen Monat gültig ist. Der Uhrzeitteil muss folgendes Format aufweisen: HH:MM[:SS[.fffffff]], wobei "HH" ein Stundenwert zwischen 0 und 23, "MM" ein Minutenwert zwischen 0 und 59, "SS" ein Sekundenwert zwischen 0 und 59 und "fffffff" ein Wert für die Sekundenbruchteile zwischen 0 und 9999999 ist. Alle Wertbereiche sind inklusive. Der Wert für die Sekundenbruchteile ist optional. Der Wert für die Sekunden ist optional, außer wenn Sekundenbruchteile angegeben werden. In diesem Fall ist der Sekundenwert erforderlich. Werden keine Werte für Sekunden oder Sekundenbruchteile angegeben, wird als Standardwert 0 verwendet. Der Offset Teil muss das Format {+&#124;-} hh: mm aufweisen, wobei HH und mm die gleiche Bedeutung wie im Zeit Teil haben. Der Wert für den Offsetbereich muss jedoch zwischen -14:00 und +14:00 liegen.  
   
  Zwischen dem DATETIMEOFFSET-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.  
   
@@ -77,7 +77,7 @@ DATETIMEOFFSET‘2006-12-25 01:01:00.0000000 -08:30’
 ```  
   
 > [!NOTE]
->  Ein gültiger Entity SQL-Literalwert kann aus den unterstützten Bereichen für CLR oder die Datenquelle herausfallen. Dies könnte zu einer Ausnahme führen.  
+> Ein gültiger Entity SQL-Literalwert kann aus den unterstützten Bereichen für CLR oder die Datenquelle herausfallen. Dies könnte zu einer Ausnahme führen.  
   
 ## <a name="binary"></a>Binär  
  Ein binäres Zeichenfolgenliteral ist eine in einfache Anführungszeichen eingeschlossene Folge von Hexadezimalziffern, die auf das Binary-Schlüsselwort oder das Symbol `X` oder `x` folgt. Beim Symbol `X`wird die Groß- und Kleinschreibung nicht berücksichtigt. Zwischen dem `binary`-Schlüsselwort und dem binären Zeichenfolgenwert können null oder mehr Leerzeichen stehen.  
@@ -92,7 +92,7 @@ X'' –- empty binary string
 ```  
   
 ## <a name="guid"></a>GUID  
- Ein `GUID`-Literal stellt einen global eindeutigen Bezeichner dar. Es ist eine Sequenz gebildet, indem das Schlüsselwort `GUID` gefolgt von hexadezimalen Ziffern in der Form, bekannt als *Registrierung* Format: 8-4-4-4-12 in einfache Anführungszeichen eingeschlossen. Bei den Hexadezimalzeichen wird die Groß/- Kleinschreibung nicht berücksichtigt.  
+ Ein `GUID`-Literal stellt einen global eindeutigen Bezeichner dar. Dabei handelt es sich um eine Sequenz, `GUID` die durch das-Schlüsselwort gefolgt von hexadezimalen Ziffern in der Form des *Registrierungs* Formats gebildet wird: 8-4-4-4-12 in einfache Anführungszeichen eingeschlossen. Bei den Hexadezimalzeichen wird die Groß/- Kleinschreibung nicht berücksichtigt.  
   
  Zwischen dem GUID-Symbol und dem Inhalt des Literals darf eine beliebige Anzahl von Leerzeichen, aber keine neue Zeile enthalten sein.  
   

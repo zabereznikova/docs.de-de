@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364232"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956412"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>XAML-bezogene CLR-Attribute für benutzerdefinierte Typen und Bibliotheken
 In diesem Thema werden die Common Language Runtime (CLR)-Attribute beschrieben, die durch .NET Framework XAML-Dienste definiert werden. Außerdem werden andere CLR-Attribute beschrieben, die in den .NET Framework definiert sind, die ein XAML-bezogenes Szenario für die Anwendung auf Assemblys oder Typen aufweisen. Das Zuweisen von Assemblys, Typen oder Membern mit diesen CLR-Attributen bietet XAML-typsysteminformationen, die sich auf Ihre Typen beziehen. Informationen werden für alle XAML-Consumer bereitgestellt, die .NET Framework XAML-Dienste verwenden, um den XAML-knotenstream direkt oder über die dedizierten XAML-Reader und XAML-Writer zu verarbeiten.  
@@ -266,7 +266,7 @@ In diesem Thema werden die Common Language Runtime (CLR)-Attribute beschrieben, 
 - Sie definieren die XAML-Sprachunterstützung in der Assembly und <xref:System.Windows.Markup.XmlnsDefinitionAttribute> verfügen `http://schemas.microsoft.com/winfx/2006/xaml`über eine für. In diesem Fall sollten Sie das Präfix `x`in der Regel höher stufen.  
   
 > [!NOTE]
->  .NET Framework XAML-Dienste definieren auch das XAML-bezogene <xref:System.Windows.Markup.RootNamespaceAttribute>Attribut. Dieses Attribut ist ein Attribut auf Assemblyebene für die Unterstützung von Project System und ist für benutzerdefinierte XAML-Typen nicht relevant.  
+> .NET Framework XAML-Dienste definieren auch das XAML-bezogene <xref:System.Windows.Markup.RootNamespaceAttribute>Attribut. Dieses Attribut ist ein Attribut auf Assemblyebene für die Unterstützung von Project System und ist für benutzerdefinierte XAML-Typen nicht relevant.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 25f6cbbc1df8a4a2b4ad9025b2381d26153e4b66
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: f0eb4a90b09f49ced45fa8453356e1d6fb3b4af1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965280"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Markuperweiterungen und WPF-XAML
 Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XAML und enthält eine Erläuterung der Syntaxregeln, des Zweck und des zugrunde liegenden Klassenobjektmodels. Markuperweiterungen sind eine allgemeine Funktion der XAML-Sprache und der .NET-Implementierung von XAML-Diensten. In diesem Thema werden speziell Markuperweiterungen zur Verwendung in WPF XAML beschrieben.  
@@ -50,7 +50,7 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 - `x:Array` bietet Unterstützung für die Erstellung von allgemeinen Arrays in XAML-Syntax, wenn die Auflistungsunterstützung von WPF-Basiselementen und Steuerelementmodellen bewusst nicht verwendet wird. Weitere Informationen finden Sie unter [x:Array-Markuperweiterung](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  Das `x:`-Präfix wird für die typische XAML-Namespacezuordnung der systeminternen XAML-Sprache im Stammelement einer XAML-Datei oder Produktion verwendet. Beispielsweise initiieren die Visual Studio-Vorlagen für WPF-Anwendungen eine XAML-Datei `x:` , die diese Zuordnung verwendet. Sie können ein anderes Präfixtoken in Ihrer eigenen XAML-Namespacezuordnung auswählen, dieser Dokumentation wird jedoch die `x:`-Standardzuordnung für die Identifizierung der Entitäten zugrunde gelegt, die als Teil des XAML-Sprachnamespace definiert sind (im Gegensatz zu einem standardmäßigen WPF-Namespace oder anderen XAML-Namespaces, die keinem bestimmten Framework zugeordnet sind).  
+> Das `x:`-Präfix wird für die typische XAML-Namespacezuordnung der systeminternen XAML-Sprache im Stammelement einer XAML-Datei oder Produktion verwendet. Beispielsweise initiieren die Visual Studio-Vorlagen für WPF-Anwendungen eine XAML-Datei `x:` , die diese Zuordnung verwendet. Sie können ein anderes Präfixtoken in Ihrer eigenen XAML-Namespacezuordnung auswählen, dieser Dokumentation wird jedoch die `x:`-Standardzuordnung für die Identifizierung der Entitäten zugrunde gelegt, die als Teil des XAML-Sprachnamespace definiert sind (im Gegensatz zu einem standardmäßigen WPF-Namespace oder anderen XAML-Namespaces, die keinem bestimmten Framework zugeordnet sind).  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>WPF-spezifische Markuperweiterungen  
@@ -71,7 +71,7 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 - `ComponentResourceKey` und `ThemeDictionary` unterstützen Aspekte der Ressourcensuche, insbesondere für Ressourcen und Designs, mit benutzerdefinierten Steuerelementen enthalten sind. Weitere Informationen finden Sie unter [ComponentResourceKey-Markuperweiterung](componentresourcekey-markup-extension.md), [ThemeDictionary-Markuperweiterung](themedictionary-markup-extension.md), oder [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
-## <a name="extension-classes"></a>*Erweiterungsklassen  
+## <a name="extension-classes"></a>\*Erweiterungs Klassen  
  Sowohl für die allgemeine XAML-Sprache als auch für WPF-spezifische Markup Erweiterungen wird das Verhalten der einzelnen Markup Erweiterungen durch eine `*Extension` Klasse, die von <xref:System.Windows.Markup.MarkupExtension>abgeleitet wird, auf einen XAML-Prozessor festgelegt <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A> , und es wird eine Implementierung des anzuwenden. Diese für jede Erweiterung verwendete Methode stellt das Objekt bereit, das bei der Auswertung der Markuperweiterung zurückgegeben wird Das zurückgegebene Objekt wird normalerweise auf Grundlage der verschiedenen Zeichenfolgentoken ausgewertet, die an die Markuperweiterung übergeben werden.  
   
  Beispielsweise stellt die <xref:System.Windows.StaticResourceExtension> -Klasse die Oberflächen Implementierung der tatsächlichen Ressourcen Suche bereit, sodass <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> die Implementierung das angeforderte Objekt zurückgibt, wobei die Eingabe dieser speziellen Implementierung eine Zeichenfolge ist, die verwendet wird, um Suchen Sie nach `x:Key`der Ressource. Ein großer Teil dieser Implementierungsdetails ist nicht von Bedeutung, wenn Sie eine bestehende Markuperweiterung verwenden.  
@@ -88,7 +88,7 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 - Wenn die einzelnen getrennten Token keine Gleichheitszeichen enthalten, wird jedes Token als Konstruktorargument behandelt. Jeder Konstruktorparameter muss als Typ angegeben werden, der von der Signatur erwartet wird, und die Angabe muss in der von der Signatur erwarteten Reihenfolge erfolgen.  
   
     > [!NOTE]
-    >  Ein XAML-Prozessor muss den Konstruktor aufrufen, der der Argumentanzahl der Anzahl von Paaren entspricht. Wenn Sie eine benutzerdefinierte Markup Erweiterung implementieren, stellen Sie daher nicht mehrere Konstruktoren mit der gleichen Argument Anzahl bereit. Das Verhalten eines XAML-Prozessors, wenn mehrere Konstruktorpfade der Markuperweiterung mit derselben Parameteranzahl vorhanden sind, ist nicht definiert. Sie sollten jedoch davon ausgehen, dass ein XAML-Prozessor eine Ausnahme auslösen kann, wenn diese Situation in den Typdefinitionen der Markuperweiterung vorliegt.  
+    > Ein XAML-Prozessor muss den Konstruktor aufrufen, der der Argumentanzahl der Anzahl von Paaren entspricht. Wenn Sie eine benutzerdefinierte Markup Erweiterung implementieren, stellen Sie daher nicht mehrere Konstruktoren mit der gleichen Argument Anzahl bereit. Das Verhalten eines XAML-Prozessors, wenn mehrere Konstruktorpfade der Markuperweiterung mit derselben Parameteranzahl vorhanden sind, ist nicht definiert. Sie sollten jedoch davon ausgehen, dass ein XAML-Prozessor eine Ausnahme auslösen kann, wenn diese Situation in den Typdefinitionen der Markuperweiterung vorliegt.  
   
 - Wenn die einzelnen getrennten Token Gleichheitszeichen enthalten, Ruft ein XAML-Prozessor zuerst den Parameter losen Konstruktor für die Markup Erweiterung auf. Dann wird jedes Name=Wert-Paar als in der Markuperweiterung vorhandener Eigenschaftenname und als Wert interpretiert, der der Eigenschaft zuzuweisen ist.  
   

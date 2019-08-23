@@ -6,47 +6,47 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962587"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs von bekannten Ordnern für benutzerdefinierte Speicherorte im Dateidialogfeld
-Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bekannten Ordner, wenn Sie Ordner Hinzufügen einer <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Auflistung. Bekannte Ordner-GUIDs wird die Groß-/ Kleinschreibung nicht und werden in der Datei "KnownFolders.h" im Windows SDK definiert.  
+Sie verwenden einen <xref:System.Guid> , um einen [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bekannten Ordner anzugeben, wenn Sie einer <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Sammlung Ordner hinzufügen. Für bekannte Ordner-GUIDs wird die Groß-/Kleinschreibung nicht beachtet und in der Datei "KnownFolders. h" in der Windows SDK definiert.  
   
 > [!NOTE]
->  In einigen Fällen einen bekannten Ordner hinzugefügt werden, um die <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> wird nicht angezeigt werden, der **Linkfavoriten** Bereich. Wenn der angegebene bekannte Ordner nicht auf dem Computer vorhanden, die die Anwendung ausgeführt wird ist, wird z. B. die bekannten Ordner nicht angezeigt.  
+> In einigen Fällen wird ein bekannter Ordner, der der <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> hinzugefügt wird, nicht im Bereich **Favoriten Verknüpfungen** angezeigt. Wenn z. b. der angegebene bekannte Ordner nicht auf dem Computer vorhanden ist, auf dem die Anwendung ausgeführt wird, wird der bekannte Ordner nicht angezeigt.  
   
-## <a name="list-of-guids"></a>Liste von GUIDs  
- Die folgende Tabelle enthält [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bekannte Ordner und ihre zugeordneten <xref:System.Guid>.  
+## <a name="list-of-guids"></a>Liste der GUIDs  
+ In der folgenden Tabelle [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] sind die bekannten Ordner und <xref:System.Guid>die zugehörigen aufgeführt.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
   
- AdminTools  
+ Admintools  
  724EF170-A42D-4FEF-9F26-B60E846FBA4F  
   
- AppDataLow  
+ Appdatalow  
  A520A1A4-1780-4FF6-BD18-167343C5AF16  
   
  AppUpdates  
  A305CE99-F527-492B-8B1A-7E76FA98D6E4  
   
- CDBurning  
+ Cdbrennen  
  9E52AB10-F80D-49DF-ACB8-4330F5687855  
   
  ChangeRemovePrograms  
  DF7266AC-9274-4867-8D55-3BD661DE872D  
   
- CommonAdminTools  
+ Commonadmintools  
  D0384E7D-BAC3-4797-8F14-CBA229B392B5  
   
  CommonOEMLinks  
  C1BAE2D0-10DF-4334-BEDD-7AA20B227A9D  
   
- CommonPrograms  
+ Commonprograms  
  0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8  
   
  CommonStartMenu  
@@ -55,13 +55,13 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  CommonStartup  
  82A5EA35-D9CD-47C5-9629-E15D2F714E6E  
   
- CommonTemplates  
+ Commontemplates  
  B94237E7-57AC-4347-9151-B08C6C32D1F7  
   
  Computer  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
- Konflikt  
+ Konflikts  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
  Verbindungen  
@@ -70,7 +70,7 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  Kontaktpersonen  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- ControlPanel  
+ Steuerung  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
  Cookies  
@@ -118,19 +118,19 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  Musik  
  4BD8D571-6D19-48D3-BE97-422220080E43  
   
- NetHood  
+ Nicht mehr  
  C5ABBF53-E17F-4121-8900-86626FC2C973  
   
- Netzwerk  
+ Network  
  D20BEEC4-5CA8-4905-AE3B-BF251EA09B53  
   
- OriginalImages  
+ Originalimages  
  2C36C0AA-5812-4B87-BFD0-4CD0DFB19B39  
   
- PhotoAlbums  
+ Fotoalben  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
- Bilder  
+ Filmen  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
  Wiedergabelisten  
@@ -139,7 +139,7 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  Drucker  
  76FC4E2D-D6AD-4519-A663-37BD56068185  
   
- PrintHood  
+ Printhood  
  9274BD8D-CFD1-41C3-B35E-B13F55A758F4  
   
  Profile  
@@ -184,10 +184,10 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  PublicGameTasks  
  DEBF2536-E1A8-4C59-B6A2-414586476AEA  
   
- PublicMusic  
+ Publicmusic  
  3214FAB5-9757-4298-BB61-92A9DEAA44FF  
   
- PublicPictures  
+ Publicpictures  
  B6EBFB86-6907-413C-9AF7-4FC2ABF07CC5  
   
  PublicVideos  
@@ -199,34 +199,34 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  Zuletzt  
  AE50C081-EBD2-438A-8655-8A092E34987A  
   
- RecordedTV  
+ Recordebug  
  BD85E001-112E-431E-983B-7B15AC09FFF1  
   
- RecycleBin  
+ RecycleBin "  
  B7534046-3ECB-4C18-BE4E-64CD4CB7D6AC  
   
  ResourceDir  
  8AD10C31-2ADB-4296-A8F7-E4701232C972  
   
- RoamingAppData  
+ Roamingappdata  
  3EB685DB-65F9-4CF6-A03A-E3EF65729F3D  
   
- SampleMusic  
+ Samplemusic  
  B250C668-F57D-4EE1-A63C-290EE7D1AA1F  
   
- SamplePictures  
+ Samplepictures  
  C4900540-2379-4C75-844B-64E6FAF8716B  
   
- SamplePlaylists  
+ Sampleplaylists  
  15CA69B3-30EE-49C1-ACE1-6B5EC372AFB5  
   
  SampleVideos  
  859EAD94-2E85-48AD-A71A-0969CB56A6CD  
   
- SavedGames  
+ Savedgames  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- SavedSearches  
+ Savedsuchen  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -235,7 +235,7 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  SEARCH_MAPI  
  98EC0E18-2098-4D44-8644-66979315A281  
   
- SearchHome  
+ Searchhome  
  190337D1-B8CA-4121-A639-6D472D16972A  
   
  SendTo  
@@ -256,7 +256,7 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  SyncManager  
  43668BF8-C14E-49B2-97C9-747784D784B7  
   
- SyncResults  
+ Synkresults  
  289A9A43-BE44-4057-A41B-587A76D7E7F9  
   
  SyncSetup  
@@ -271,13 +271,13 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  Vorlagen  
  A63293E8-664E-48DB-A079-DF759E0509F7  
   
- TreeProperties  
+ Treeproperties  
  5B3749AD-B49F-49C1-83EB-15370FBD4882  
   
- UserProfiles  
+ Benutzerprofile  
  0762D272-C50A-4BB0-A382-697DCD729B80  
   
- UsersFiles  
+ Usersfiles  
  F3CE0F7C-4901-4ACC-8648-D5D44B04EF8F  
   
  Videos  
@@ -289,4 +289,4 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [How To: Hinzufügen eines benutzerdefinierten Speicherorts zum Dateidialogfeld](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [How To: Hinzufügen eines benutzerdefinierten Orts zu einem Datei Dialogfeld](how-to-add-a-custom-place-to-a-file-dialog-box.md)

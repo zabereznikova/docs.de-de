@@ -2,12 +2,12 @@
 title: Authentifizierung in SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 5809a75dbadffbd2528f6882aa586aecd3232408
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1723552a48ebfa41e8d6a0f963154fc3b864119d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490097"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957496"
 ---
 # <a name="authentication-in-sql-server"></a>Authentifizierung in SQL Server
 SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizierungsmodus und den gemischten Modus.  
@@ -17,16 +17,16 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
 - Der gemischte Modus unterstützt die Authentifizierung durch Windows und durch SQL Server. Die Paare aus Benutzername und Kennwort werden innerhalb von SQL Server beibehalten.  
   
 > [!IMPORTANT]
->  Es wird empfohlen, möglichst immer die Windows-Authentifizierung zu verwenden. Die Windows-Authentifizierung verwendet zum Authentifizieren der Benutzer in SQL Server eine Reihe verschlüsselter Meldungen. Wenn SQL Server-Anmeldungen verwendet werden, werden SQL Server-Anmeldenamen und verschlüsselte Kennwörter über das Netzwerk übergeben, die sie dadurch unsichererer wird.  
+> Es wird empfohlen, möglichst immer die Windows-Authentifizierung zu verwenden. Die Windows-Authentifizierung verwendet zum Authentifizieren der Benutzer in SQL Server eine Reihe verschlüsselter Meldungen. Wenn SQL Server Anmeldungen verwendet werden, werden SQL Server Anmelde Namen und verschlüsselte Kenn Wörter über das Netzwerk übermittelt, wodurch die Sicherheit erhöht wird.  
   
- Bei der Windows-Authentifizierung sind die Benutzer bereits bei Windows angemeldet und müssen sich nicht noch einmal bei SQL Server anmelden. Die folgenden `SqlConnection.ConnectionString` gibt die Windows-Authentifizierung ohne dass Benutzer einen Benutzernamen und kein Kennwort angeben.  
+ Bei der Windows-Authentifizierung sind die Benutzer bereits bei Windows angemeldet und müssen sich nicht noch einmal bei SQL Server anmelden. Im folgenden `SqlConnection.ConnectionString` wird die Windows-Authentifizierung angegeben, ohne dass Benutzer einen Benutzernamen oder ein Kennwort angeben müssen.  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
 ```  
   
 > [!NOTE]
->  Anmeldungen und Datenbankbenutzer sind nicht dasselbe. Sie müssen Anmeldungen oder Windows-Gruppen in einem separaten Vorgang Datenbankbenutzern oder Rollen zuordnen. Anschließend gewähren Sie den Benutzern oder Rollen Berechtigungen, damit diese auf die Datenbankobjekte zugreifen können.  
+> Anmeldungen und Datenbankbenutzer sind nicht dasselbe. Sie müssen Anmeldungen oder Windows-Gruppen in einem separaten Vorgang Datenbankbenutzern oder Rollen zuordnen. Anschließend gewähren Sie den Benutzern oder Rollen Berechtigungen, damit diese auf die Datenbankobjekte zugreifen können.  
   
 ## <a name="authentication-scenarios"></a>Authentifizierungsszenarien  
  In den folgenden Situationen ist die Windows-Authentifizierung in der Regel die beste Wahl:  
@@ -35,7 +35,7 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
   
 - Die Anwendung und die Datenbank befinden sich auf demselben Computer.  
   
-- Sie verwenden eine Instanz von SQL Server Express oder LocalDB.  
+- Sie verwenden eine Instanz von SQL Server Express oder localdb.  
   
  SQL Server-Anmeldungen werden im Allgemeinen in den folgenden Situationen verwendet:  
   
@@ -43,13 +43,13 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
   
 - Die Benutzer stellen die Verbindung von unterschiedlichen, nicht vertrauenswürdigen Domänen aus her.  
   
-- Internet-Anwendungen, z. B. ASP.NET.  
+- Internet Anwendungen, z. b. ASP.net.  
   
 > [!NOTE]
->  Das Angeben der Windows-Authentifizierung führt nicht zu einer Deaktivierung von SQL Server-Anmeldungen. Wenn Sie die SQL Server-Anmeldungen mit den weit reichenden Berechtigungen deaktivieren möchten, verwenden Sie die Transact-SQL-ALTER LOGIN DISABLE-Anweisung.  
+> Das Angeben der Windows-Authentifizierung führt nicht zu einer Deaktivierung von SQL Server-Anmeldungen. Wenn Sie die SQL Server-Anmeldungen mit den weit reichenden Berechtigungen deaktivieren möchten, verwenden Sie die Transact-SQL-ALTER LOGIN DISABLE-Anweisung.  
   
 ## <a name="login-types"></a>Anmeldungstypen  
- SQL Server unterstützt drei Arten von Anmeldenamen:  
+ SQL Server unterstützt drei Arten von Anmeldungen:  
   
 - Lokales Windows-Benutzerkonto oder vertrauenswürdiges Domänenkonto: SQL Server verlässt sich bei der Authentifizierung der Windows-Benutzerkonten auf Windows.  
   
@@ -58,25 +58,25 @@ SQL Server unterstützt zwei Authentifizierungsmodi: den Windows-Authentifizier
 - SQL Server-Anmeldung: SQL Server speichert in der Masterdatenbank den Benutzernamen und einen Hash des Kennworts. Für die Überprüfung der Anmeldungsversuche werden interne Authentifizierungsmethoden verwendet.  
   
 > [!NOTE]
->  SQL Server bietet Anmeldungen aus Zertifikaten oder asymmetrischen Schlüsseln, die nur für die codesignierung verwendet werden. Zum Herstellen einer Verbindung mit SQL Server können sie nicht verwendet werden.  
+> SQL Server stellt Anmeldungen bereit, die aus Zertifikaten oder asymmetrischen Schlüsseln erstellt werden, die nur für die Code Signierung verwendet werden. Zum Herstellen einer Verbindung mit SQL Server können sie nicht verwendet werden.  
   
 ## <a name="mixed-mode-authentication"></a>Authentifizierung im gemischten Modus  
  Wenn die Authentifizierung im gemischten Modus verwendet werden soll, müssen Sie SQL Server-Anmeldungen erstellen, die in SQL Server gespeichert werden. Zur Laufzeit müssen dann der SQL Server-Benutzername und das Kennwort angegeben werden.  
   
 > [!IMPORTANT]
->  SQL Server wird mit einer SQL Server-Anmeldung mit dem Namen `sa` (kurz für "Systemadministrator") installiert. Weisen Sie der `sa`-Anmeldung ein starkes Kennwort zu, und verwenden Sie die `sa`-Anmeldung nicht in Ihrer Anwendung. Die `sa`-Anmeldung wird der festen Serverrolle `sysadmin` zugeordnet, die nicht widerrufbare administrative Anmeldeinformationen für den gesamten Server besitzt. Wenn es einem Angreifer gelingt, sich als Systemadministrator Zugriff zu verschaffen, stehen ihm Tür und Tor offen. Alle Member der Windows-Gruppe `BUILTIN\Administrators` (der lokalen Administratorgruppe) gehören standardmäßig der Rolle `sysadmin` an, können aber aus dieser Rolle entfernt werden.  
+> SQL Server wird mit einer SQL Server-Anmeldung mit dem Namen `sa` (kurz für "Systemadministrator") installiert. Weisen Sie der `sa`-Anmeldung ein starkes Kennwort zu, und verwenden Sie die `sa`-Anmeldung nicht in Ihrer Anwendung. Die `sa`-Anmeldung wird der festen Serverrolle `sysadmin` zugeordnet, die nicht widerrufbare administrative Anmeldeinformationen für den gesamten Server besitzt. Wenn es einem Angreifer gelingt, sich als Systemadministrator Zugriff zu verschaffen, stehen ihm Tür und Tor offen. Alle Member der Windows-Gruppe `BUILTIN\Administrators` (der lokalen Administratorgruppe) gehören standardmäßig der Rolle `sysadmin` an, können aber aus dieser Rolle entfernt werden.  
   
- SQL Server stellt Mechanismen der Windows-Kennwortrichtlinien für SQL Server-Anmeldungen, bei der Ausführung auf [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] oder höhere Versionen. Richtlinien zur Kennwortkomplexität werden als Maßnahme gegen Brute Force-Angriffe entworfen. Dabei wird die Anzahl der möglichen Kennwörter erhöht. SQL Server verwendet die gleichen Komplexitäts- und Ablaufrichtlinien Richtlinien anwenden [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] auf Kennwörter, die in SQL Server.  
+ SQL Server bietet Windows-Kenn Wort Richtlinien Mechanismen für SQL Server Anmeldungen, wenn es unter [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] oder höheren Versionen ausgeführt wird. Richtlinien zur Kennwortkomplexität werden als Maßnahme gegen Brute Force-Angriffe entworfen. Dabei wird die Anzahl der möglichen Kennwörter erhöht. SQL Server können die gleichen Komplexitäts-und Ablauf Richtlinien anwenden [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] , die in SQL Server verwendet werden.  
   
 > [!IMPORTANT]
->  Das Verketten von Verbindungszeichenfolgen aus Benutzereingaben kann zu einer Anfälligkeit für Angriffe durch Einschleusung von Verbindungszeichenfolgen führen. Verwenden Sie zum Erstellen syntaktisch gültiger Verbindungszeichenfolgen zur Laufzeit den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Das Verketten von Verbindungszeichenfolgen aus Benutzereingaben kann zu einer Anfälligkeit für Angriffe durch Einschleusung von Verbindungszeichenfolgen führen. Verwenden Sie zum Erstellen syntaktisch gültiger Verbindungszeichenfolgen zur Laufzeit den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Weitere Informationen finden Sie in [Connection String Builders (Verbindungszeichenfolgengeneratoren)](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Prinzipale](/sql/relational-databases/security/authentication-access/principals-database-engine)|Beschreibt Anmeldungen und andere Sicherheitsprinzipale in SQL Server.|  
+|[Prinzipale](/sql/relational-databases/security/authentication-access/principals-database-engine)|Beschreibt Anmeldungen und andere Sicherheits Prinzipale in SQL Server.|  
   
 ## <a name="see-also"></a>Siehe auch
 

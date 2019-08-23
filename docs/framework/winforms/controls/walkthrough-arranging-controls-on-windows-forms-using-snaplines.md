@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040256"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950070"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien
 Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Die Windows Forms-Designer bietet Ihnen viele Layouttools, um dies zu erreichen. Eine der wichtigsten Funktionen ist die <xref:System.Windows.Forms.Design.Behavior.SnapLine> -Funktion.
@@ -87,7 +87,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 1. Wählen Sie eines der <xref:System.Windows.Forms.Button> Steuerelemente aus, und verschieben Sie es nahe an den rechten Rand des Formulars, bis eine Ausrichtungslinie angezeigt wird. Der Abstand der Richtungslinie vom rechten Rand aus ist die Summe aus der- <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft des Steuer Elements und den <xref:System.Windows.Forms.Control.Padding%2A> Eigenschafts Werten des Formulars.
 
 > [!NOTE]
->  Wenn die- <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft des Formulars auf 0, 0, 0, 0 (null) festgelegt ist, gibt die <xref:System.Windows.Forms.Control.Padding%2A> Windows Forms-Designer der Form einen Shadowing Wert von 9, 9, 9, 9 an. Um dieses Verhalten zu überschreiben, weisen Sie einen anderen Wert als 0, 0, 0, 0 zu.
+> Wenn die- <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft des Formulars auf 0, 0, 0, 0 (null) festgelegt ist, gibt die <xref:System.Windows.Forms.Control.Padding%2A> Windows Forms-Designer der Form einen Shadowing Wert von 9, 9, 9, 9 an. Um dieses Verhalten zu überschreiben, weisen Sie einen anderen Wert als 0, 0, 0, 0 zu.
 
 1. Ändern Sie den Wert der <xref:System.Windows.Forms.Button> -Eigenschaft <xref:System.Windows.Forms.Control.Margin%2A> des-Steuer Elements <xref:System.Windows.Forms.Control.Margin%2A> , indem Sie im **Eigenschaften** Fenster den Eintrag <xref:System.Windows.Forms.Padding.All%2A> erweitern und die-Eigenschaft auf 0 festlegen. Weitere Informationen finden [Sie unter Exemplarische Vorgehensweise: Das Anordnen von Windows Forms-Steuerelementen mit Auffüll Zeichen, Rändern und](windows-forms-controls-padding-autosize.md)der AutoSize-Eigenschaft.
 

@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 311f4c025072162e0cfb6b87587f8602d33fcd19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3174d463744303e8c90ed0b2e1a4d86ed08fbcfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646869"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947699"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Zugriff des freigegebenen Members, konstanten Members, Enumerationsmembers oder geschachtelten Typs über eine Instanz; der qualifizierende Ausdruck wird nicht ausgewertet
-Eine Instanzvariable für eine Klasse oder Struktur wird verwendet, für den Zugriff auf eine `Shared` Variable, Eigenschaft, Prozedur oder das Ereignis in dieser Klasse oder Struktur definiert. Diese Warnung kann auch auftreten, wenn eine Instanzvariable Zugriff auf eine implizit freigegebenen Member einer Klasse oder Struktur, z. B. eine Konstante oder -Enumeration oder eine geschachtelte Klasse oder Struktur verwendet wird.  
+Eine Instanzvariable einer Klasse oder Struktur wird verwendet, um auf `Shared` eine Variable, eine Eigenschaft, eine Prozedur oder ein Ereignis zuzugreifen, die in dieser Klasse oder Struktur definiert ist. Diese Warnung kann auch auftreten, wenn eine Instanzvariable für den Zugriff auf einen implizit freigegebenen Member einer Klasse oder Struktur verwendet wird, z. b. eine Konstante oder Enumeration oder eine geclusterte Klasse oder Struktur.  
   
- Ein Element freigeben dient nur eine einzige Kopie dieses Elements zu erstellen und Verfügbarmachen dieser einzelnen Kopie für jede Instanz der Klasse oder Struktur, die in der sie deklariert ist. Sie ist konsistent mit diesem Zweck den Zugriff auf eine `Shared` Member über den Namen der Klasse oder Struktur und nicht durch eine Variable, die eine einzelne Instanz dieser Klasse oder Struktur enthält.  
+ Der Zweck der Freigabe eines Members besteht darin, nur eine einzige Kopie dieses Members zu erstellen und diese einzelne Kopie für jede Instanz der Klasse oder Struktur verfügbar zu machen, in der Sie deklariert ist. Der Zugriff auf ein `Shared` Member über den Namen der Klasse oder Struktur ist konsistent, anstatt über eine Variable, die eine einzelne Instanz dieser Klasse oder Struktur enthält.  
   
- Zugreifen auf eine `Shared` Member durch Instanzvariable kann erschweren den Code, zu verstehen, die Tatsache, dass das Element verdeckt `Shared`. Darüber hinaus Zugriff ist Teil eines Ausdrucks, der andere Aktionen ausführt, z. B. eine `Function` Prozedur, die eine Instanz des freigegebenen Members zurückgibt, Visual Basic umgeht den Ausdruck sowie alle weiteren erforderlichen Aktionen sie würden andernfalls ausführen.  
+ Wenn Sie `Shared` über eine Instanzvariable auf einen Member zugreifen, kann es schwieriger sein, den Code zu verstehen, indem die `Shared`Tatsache verdeckt wird, dass der Member ist. Wenn ein solcher Zugriff außerdem Teil eines Ausdrucks ist, der andere Aktionen ausführt, z. b `Function` . eine Prozedur, die eine Instanz des freigegebenen Members zurückgibt, Visual Basic den Ausdruck und alle anderen Aktionen, die andernfalls durchgeführt werden, umgangen.  
   
  Weitere Informationen und ein Beispiel finden Sie unter [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  
   
@@ -29,7 +29,7 @@ Eine Instanzvariable für eine Klasse oder Struktur wird verwendet, für den Zug
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-- Verwenden Sie den Namen der Klasse oder Struktur, die definiert die `Shared` Member darauf zugreifen, wie im folgenden Beispiel gezeigt.  
+- Verwenden Sie den Namen der Klasse oder Struktur, die den `Shared` Member definiert, um darauf zuzugreifen, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 Public Class testClass  
@@ -53,9 +53,9 @@ End Module
 ```  
   
 > [!NOTE]
->  Warnung für die Auswirkungen des Bereichs sein, wenn zwei Programmierelemente mit den gleichen Namen haben. Im vorherigen Beispiel, wenn Sie eine Instanz mit deklarieren `Dim testClass as testClass = Nothing`, behandelt der Compiler einen Aufruf von `testClass.sayHello()` tritt ebenfalls ein Zugriff auf die Methode durch den Namen der Klasse und keine Warnung.  
+> Geben Sie eine Warnung für die Auswirkungen des Bereichs an, wenn zwei Programmier Elemente denselben Namen haben. Wenn Sie im vorherigen Beispiel mithilfe `Dim testClass as testClass = Nothing`von eine-Instanz deklarieren, behandelt der Compiler einen Aufrufen von als Zugriff auf die-Methode über den Klassennamen, und es tritt keine Warnung auf. `testClass.sayHello()`  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Gültigkeitsbereich in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Bereich in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

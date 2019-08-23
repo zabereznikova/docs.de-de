@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 246584a34d6a3a8aaf4cac9845e8bb77d1654fa1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: caa929225701a62c0abb3b335bfd7fb6a129e9e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052436"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941629"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException-Klasse (.NET Native)
-**.NET für Windows-apps für Windows 10, nur .NET Native**  
+**.Net für Windows-Apps für Windows 10, nur .net Native**  
   
  Die Ausnahme, die ausgelöst wird, wenn Metadaten für einen Typ oder Typmember verfügbar sind, aber dessen Implementierung entfernt wurde.  
   
  **Namespace:** System.Reflection  
   
 > [!IMPORTANT]
->  Die `MissingRuntimeArtifactException` Klasse dient nur zur internen Verwendung durch die .NET Native-toolkette. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+> Die `MissingRuntimeArtifactException` -Klasse ist ausschließlich für die interne Verwendung durch die .net Native-Toolkette vorgesehen. Sie ist nicht zur Verwendung in Code von Drittanbietern bestimmt, und die Ausnahme darf nicht im Anwendungscode behandelt werden. Stattdessen vermeiden Sie die Ausnahme, indem Sie Einträge zu Ihrer [Laufzeitanweisungsdatei](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) hinzufügen. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
   
 ## <a name="syntax"></a>Syntax  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -32,8 +32,8 @@ ms.locfileid: "66052436"
   
 |Konstruktor|Beschreibung|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|Initialisiert eine neue Instanz der `MissingRuntimeArtifactException`-Klasse mit einer vom System generierten Meldung, die den Fehler beschreibt.<br /><br /> Dieser Konstruktor ist zur internen Verwendung durch die .NET Native-toolkette nur.|  
-|`public MissingRuntimeArtifactException(String message)`|Initialisiert eine neue Instanz der `MissingRuntimeArtifactException`-Klasse mit einer angegebenen Fehlermeldung.<br /><br /> Dieser Konstruktor ist zur internen Verwendung durch die .NET Native-toolkette nur.|  
+|`public MissingRuntimeArtifactException()`|Initialisiert eine neue Instanz der `MissingRuntimeArtifactException`-Klasse mit einer vom System generierten Meldung, die den Fehler beschreibt.<br /><br /> Dieser Konstruktor ist nur für die interne Verwendung durch die .net Native-Toolkette vorgesehen.|  
+|`public MissingRuntimeArtifactException(String message)`|Initialisiert eine neue Instanz der `MissingRuntimeArtifactException`-Klasse mit einer angegebenen Fehlermeldung.<br /><br /> Dieser Konstruktor ist nur für die interne Verwendung durch die .net Native-Toolkette vorgesehen.|  
   
 ## <a name="properties"></a>Eigenschaften  
   
@@ -70,10 +70,10 @@ ms.locfileid: "66052436"
 ## <a name="usage-details"></a>Details zur Verwendung  
  Die `MissingRuntimeArtifactException`-Ausnahme wird ausgelöst, wenn beim Versuch, einen Typ zu instanziieren oder einen Typmember aufzurufen, zwar die Metadaten des Typs oder Members vorhanden sind, aber die Implementierung entfernt wurde.  
   
- Gibt an, ob Metadaten und der Implementierungscode zur dynamischen Ausführung einer Methode in einer app zur Laufzeit verfügbaren werden durch die laufzeitanweisungsdatei (XML-Konfiguration), definiert \*. "RD.xml". Um das Auslösen dieser Ausnahme durch Ihre App zu verhindern, müssen Sie „\*.rd.xml“ so ändern, dass die von einem Typ oder Typmember benötigten Metadaten zur Laufzeit vorhanden sind. Informationen zum Format der Datei „\*.rd.xml“ finden Sie unter [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Ob Metadaten und der Implementierungs Code zur dynamischen Ausführung einer Methode für eine App zur Laufzeit verfügbar sind, wird von der laufzeitdirektivendatei (XML- \*Konfiguration),. rd. XML, definiert. Um das Auslösen dieser Ausnahme durch Ihre App zu verhindern, müssen Sie „\*.rd.xml“ so ändern, dass die von einem Typ oder Typmember benötigten Metadaten zur Laufzeit vorhanden sind. Informationen zum Format der Datei „\*.rd.xml“ finden Sie unter [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
->  Da diese Ausnahme anzeigt, dass der von der App benötigte Implementierungscode zur Laufzeit nicht verfügbar ist, sollten Sie diese Ausnahme nicht in einem `try`/`catch`-Block behandeln. Stattdessen sollten Sie die Ursache der Ausnahme ermitteln und mithilfe einer Laufzeitanweisungsdatei beseitigen. In der Regel eliminieren Sie diese Ausnahme durch Angabe der entsprechenden `Activate` oder `Dynamic` -Richtlinie für ein Programmelement in der laufzeitanweisungsdatei (\*..RD.XML-Datei). Um den Eintrag zu erhalten, den Sie zur Laufzeitdirektivendatei hinzufügen können, um die Ausnahme zu beseitigen, können Sie eine der beiden Problembehandlungen verwenden:  
+> Da diese Ausnahme anzeigt, dass der von der App benötigte Implementierungscode zur Laufzeit nicht verfügbar ist, sollten Sie diese Ausnahme nicht in einem `try`/`catch`-Block behandeln. Stattdessen sollten Sie die Ursache der Ausnahme ermitteln und mithilfe einer Laufzeitanweisungsdatei beseitigen. In der Regel wird diese Ausnahme durch Angabe der entsprechenden `Activate` - `Dynamic` oder-Richtlinie für ein Programmelement in der laufzeitdirektivendatei (\*. rd. XML-Datei) vermieden. Um den Eintrag zu erhalten, den Sie zur Laufzeitdirektivendatei hinzufügen können, um die Ausnahme zu beseitigen, können Sie eine der beiden Problembehandlungen verwenden:  
 >   
 > - Die [MissingMetadataException-Problembehandlung](https://dotnet.github.io/native/troubleshooter/type.html) für Typen.  
 > - Die [MissingMetadataException-Problembehandlung](https://dotnet.github.io/native/troubleshooter/method.html) für Methoden.  

@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ef3fe1210ae42c52a4fd7f23633d6566bc102a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012931"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956059"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Vorgehensweise: Horizontales Teilen eines Fensters
-Im folgenden Codebeispiel wird der Splitter generiert, die den teilt die <xref:System.Windows.Forms.SplitContainer> Steuerelement Horizontal.  
+Im folgenden Codebeispiel wird der Splitter, der das <xref:System.Windows.Forms.SplitContainer> -Steuerelement horizontal dividiert.  
   
 > [!NOTE]
->  Die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft der <xref:System.Windows.Forms.SplitContainer> Steuerelement bestimmt die Richtung des Splitters, nicht des Steuerelements selbst.  
+> Die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> -Eigenschaft <xref:System.Windows.Forms.SplitContainer> des-Steuer Elements bestimmt die Richtung des Splitters, nicht des Steuer Elements selbst.  
   
-### <a name="to-split-a-window-horizontally"></a>Um ein Fenster horizontal teilen  
+### <a name="to-split-a-window-horizontally"></a>So teilen Sie ein Fenster horizontal  
   
-1. Legen Sie innerhalb einer Prozedur die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft der <xref:System.Windows.Forms.SplitContainer> die Steuerung an <xref:System.Windows.Forms.Orientation.Horizontal>.  
+1. Legen Sie in einer Prozedur die <xref:System.Windows.Forms.SplitContainer.Orientation%2A> -Eigenschaft <xref:System.Windows.Forms.SplitContainer> des-Steuer <xref:System.Windows.Forms.Orientation.Horizontal>Elements auf fest.  
   
     ```vb  
     Sub ShowSplitContainer()  

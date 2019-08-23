@@ -15,84 +15,84 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 24079f24bdae5fefd785a20dda9b29a190fb4068
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 23d9374f1f46c4480079eb4ad5269a197a13a5bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505259"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963887"
 ---
 # <a name="types-of-coordinate-systems"></a>Typen von Koordinatensystemen
-GDI + verwendet drei Koordinatensysteme: Welt, Seiten- und Gerät. Globale Koordinaten sind die Koordinaten, die zum Modellieren einer bestimmten grafikumgebung verwendet und die Koordinaten, die Sie Methoden in .NET Framework übergeben. Seitenkoordinaten beziehen sich auf das Koordinatensystem, die von einer Zeichenoberfläche, z. B. eines Formulars oder Steuerelements verwendet. Gerätekoordinaten beziehen, die von der physischen Zeichengerät, z. B. einen Bildschirm oder Blatt Papier verwendet. Wenn Sie den Aufruf vornehmen `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, die Punkte, die Sie übergeben die <xref:System.Drawing.Graphics.DrawLine%2A> Methode –`(0, 0)` und `(160, 80)`– werden in der Welt Koordinatenraum. Bevor GDI + die Zeile auf dem Bildschirm zeichnen können, durchlaufen eine Sequenz von Transformationen die Koordinaten. Eine Transformation, wird aufgerufen, die globale Transformation, globale Koordinaten in Seitenkoordinaten konvertiert und eine andere Transformation, die genannte Seitentransformation, Seitenkoordinaten in Gerätekoordinaten.  
+GDI+ verwendet drei Koordinaten Bereiche: "World", "page" und "Device". Globale Koordinaten sind die Koordinaten, die verwendet werden, um eine bestimmte Grafik Welt zu modellieren, und sind die Koordinaten, die Sie an Methoden in der .NET Framework übergeben. Seiten Koordinaten verweisen auf das Koordinatensystem, das von einer Zeichen Oberfläche verwendet wird, z. b. ein Formular oder ein Steuerelement. Geräte Koordinaten sind die Koordinaten, die von dem physischen Gerät verwendet werden, auf dem Sie gezeichnet werden, z. b. ein Bildschirm oder ein Papierblatt. Wenn Sie `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`den-Befehl ausführen, sind die Punkte, die Sie <xref:System.Drawing.Graphics.DrawLine%2A> an die`(0, 0)` - `(160, 80)`Methode – und – übergeben, im Weltkoordinaten Bereich. Bevor GDI+ die Linie auf dem Bildschirm zeichnen kann, durchlaufen die Koordinaten eine Sequenz von Transformationen. Eine Transformation, die als globale Transformation bezeichnet wird, konvertiert globale Koordinaten in Seiten Koordinaten, und eine andere Transformation, die als Seiten Transformation bezeichnet wird, konvertiert Seiten Koordinaten in Geräte Koordinaten.  
   
 ## <a name="transforms-and-coordinate-systems"></a>Transformationen und Koordinatensysteme  
- Nehmen wir an, dass Sie mit einem Koordinatensystem arbeiten möchten, die dessen Ursprung im Text der Clientbereich statt in der oberen linken Ecke. Angenommen Sie, z. B., dass den Ursprung 100 Pixel vom linken Rand des Clientbereichs und 50 Pixel vom oberen Rand des Clientbereichs sein soll. Die folgende Abbildung zeigt eine solche einem Koordinatensystem.  
+ Angenommen, Sie möchten mit einem Koordinatensystem arbeiten, dessen Ursprung im Text des Client Bereichs liegt, und nicht in der oberen linken Ecke. Angenommen, Sie möchten, dass der Ursprung 100 Pixel vom linken Rand des Client Bereichs und 50 Pixel vom oberen Rand des Client Bereichs sein soll. Die folgende Abbildung zeigt ein solches Koordinatensystem.  
   
- ![Koordinatensystem](./media/aboutgdip05-art01.gif "AboutGdip05_art01")  
+ ![Koordinaten System](./media/aboutgdip05-art01.gif "AboutGdip05_art01")  
   
- Wenn Sie den Aufruf vornehmen `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, erhalten Sie die Zeile, die in der folgenden Abbildung dargestellt.  
+ Wenn Sie den `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`-Befehl ausführen, erhalten Sie die in der folgenden Abbildung gezeigte Zeile.  
   
- ![Koordinatensystem](./media/aboutgdip05-art02.gif "AboutGdip05_art02")  
+ ![Koordinaten System](./media/aboutgdip05-art02.gif "AboutGdip05_art02")  
   
- Die Koordinaten der Endpunkte der Linie in den drei Koordinatensysteme lauten wie folgt aus:  
+ Die Koordinaten der Endpunkte der Zeile in den drei Koordinaten Räumen lauten wie folgt:  
   
 |||  
 |-|-|  
-|World|(0, 0), ("160", "80")|  
-|Seite|(100, 50), ("260", "130")|  
-|Gerät|(100, 50), ("260", "130")|  
+|World|(0,0) bis (160, 80)|  
+|Seite|(100, 50) bis (260, 130)|  
+|Gerät|(100, 50) bis (260, 130)|  
   
- Beachten Sie, dass die Seite einen Koordinatenbereich hat seinen Ursprung auf der linken oberen Ecke des Clientbereichs. Dies wird immer der Fall sein. Beachten Sie außerdem, da die Maßeinheit Pixel ist, die Gerätekoordinaten die Seitenkoordinaten identisch sind. Wenn Sie die Maßeinheit mit etwas anderem als Pixel (z. B. Zoll) festlegen, werden die Gerätekoordinaten von den Seitenkoordinaten unterscheiden.  
+ Beachten Sie, dass der Seiten Koordinaten Bereich seinen Ursprung in der oberen linken Ecke des Client Bereichs hat. Dies ist immer der Fall. Beachten Sie außerdem, dass die Geräte Koordinaten den Seiten Koordinaten entsprechen, da die Maßeinheit das Pixel ist. Wenn Sie die Maßeinheit auf einen anderen Wert als Pixel festlegen (z. b. Zoll), unterscheiden sich die Geräte Koordinaten von den Seiten Koordinaten.  
   
- Die globale Transformation, die globale Koordinaten in Seitenkoordinaten zugeordnet wird, wird, verbleibt in der <xref:System.Drawing.Graphics.Transform%2A> Eigenschaft der <xref:System.Drawing.Graphics> Klasse. Im vorherigen Beispiel ist die globale Transformation ein Übersetzungseinheiten 100 in X-Richtung und 50 Einheiten in der y-Richtung. Im folgenden Beispiel wird die globale Transformation für einen <xref:System.Drawing.Graphics> Objekt aus, und klicken Sie dann verwendet, die <xref:System.Drawing.Graphics> Objekt zum Zeichnen der Linie, die in der obigen Abbildung gezeigt:  
+ Die globale Transformation, die globale Koordinaten zu Seiten Koordinaten zuordnet, wird in der <xref:System.Drawing.Graphics.Transform%2A> -Eigenschaft <xref:System.Drawing.Graphics> der-Klasse gespeichert. Im vorherigen Beispiel handelt es sich bei der Welt Transformation um eine Translation 100-Einheiten in der x-Richtung und 50-Einheiten in der y-Richtung. Im folgenden Beispiel wird die globale Transformation eines <xref:System.Drawing.Graphics> -Objekts festgelegt, und anschließend wird das- <xref:System.Drawing.Graphics> Objekt verwendet, um die in der vorherigen Abbildung gezeigte Zeile zu zeichnen:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.CoordinateSystems#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#31)]  
   
- Die Seitentransformation wird Seitenkoordinaten Gerätekoordinaten zugeordnet. Die <xref:System.Drawing.Graphics> -Klasse stellt die <xref:System.Drawing.Graphics.PageUnit%2A> und <xref:System.Drawing.Graphics.PageScale%2A> Eigenschaften für das Bearbeiten der Seitentransformation. Die <xref:System.Drawing.Graphics> Klasse bietet auch zwei schreibgeschützte Eigenschaften, <xref:System.Drawing.Graphics.DpiX%2A> und <xref:System.Drawing.Graphics.DpiY%2A>, überprüfen Sie die horizontale und vertikale DPI-Wert des Anzeigegeräts.  
+ Die Seite Transformation ordnet den Geräte Koordinaten Seiten Koordinaten zu. Die <xref:System.Drawing.Graphics> -Klasse stellt <xref:System.Drawing.Graphics.PageUnit%2A> die <xref:System.Drawing.Graphics.PageScale%2A> -Eigenschaft und die-Eigenschaft zum Bearbeiten der Seiten Transformation bereit. Die <xref:System.Drawing.Graphics> -Klasse bietet auch zwei schreibgeschützte Eigenschaften, <xref:System.Drawing.Graphics.DpiX%2A> und <xref:System.Drawing.Graphics.DpiY%2A>zum Untersuchen der horizontalen und vertikalen Punkte pro Zoll des Anzeige Geräts.  
   
- Können Sie die <xref:System.Drawing.Graphics.PageUnit%2A> Eigenschaft der <xref:System.Drawing.Graphics> Klasse, einer Maßeinheit als das Pixel an.  
+ Sie können die <xref:System.Drawing.Graphics.PageUnit%2A> -Eigenschaft <xref:System.Drawing.Graphics> der-Klasse verwenden, um eine andere Maßeinheit als das Pixel anzugeben.  
   
 > [!NOTE]
->  Kann nicht festgelegt werden die <xref:System.Drawing.Graphics.PageUnit%2A> Eigenschaft <xref:System.Drawing.GraphicsUnit.World>, wie dies keine physische Einheit ist, und wird eine Ausnahme ausgelöst.  
+> Die <xref:System.Drawing.Graphics.PageUnit%2A> -Eigenschaft kann nicht auf <xref:System.Drawing.GraphicsUnit.World>festgelegt werden, da es sich hierbei nicht um eine physische Einheit handelt, und es wird eine Ausnahme ausgelöst.  
   
- Das folgende Beispiel zeichnet eine Linie von (0, 0), (2, 1), in dem der Punkt ("2", "1") ist 2 Zoll rechts und 1 Zoll nach unten, an dem Punkt (0, 0):  
+ Im folgenden Beispiel wird eine Zeile von (0,0) zu (2, 1) gezeichnet, wobei der Punkt (2, 1) 2 Zoll nach rechts und 1 Zoll vom Punkt (0,0) ist:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.CoordinateSystems#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#32)]  
   
 > [!NOTE]
->  Wenn Sie beim Erstellen des Stifts eine Breite nicht angeben, wird im vorherige Beispiel eine Linie gezeichnet, die einen Zoll breit ist. Sie können die Stiftbreite angeben, in das zweite Argument für die <xref:System.Drawing.Pen> Konstruktor:  
+> Wenn Sie beim Erstellen des Stifts keine Stift Breite angeben, wird im vorhergehenden Beispiel eine Linie mit einer Breite von einem Zoll gezeichnet. Sie können die Stift Breite im zweiten Argument des <xref:System.Drawing.Pen> Konstruktors angeben:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#33](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#33)]
  [!code-vb[System.Drawing.CoordinateSystems#33](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#33)]  
   
- Wenn Sie davon ausgehen, dass das Anzeigegerät, 96 DPI-Wert in horizontaler Richtung und 96 DPI-Wert in vertikaler Richtung hat, haben die Endpunkte der Linie im vorherigen Beispiel die folgenden Koordinaten in der drei Koordinatensysteme:  
+ Wenn wir davon ausgehen, dass das Anzeigegerät 96 Punkte pro Zoll in horizontaler Richtung und 96 Punkte pro Zoll in vertikaler Richtung aufweist, haben die Endpunkte der Linie im vorherigen Beispiel die folgenden Koordinaten in den drei Koordinaten Räumen:  
   
 |||  
 |-|-|  
-|World|(0, 0), (2, 1)|  
-|Seite|(0, 0), (2, 1)|  
-|Gerät|(0, 0 (null), (192, 96)|  
+|World|(0,0) bis (2, 1)|  
+|Seite|(0,0) bis (2, 1)|  
+|Gerät|(0,0, bis (192, 96)|  
   
- Beachten Sie, da der Ursprung der globalen Koordinatensystem auf der linken oberen Ecke des Clientbereichs ist, die Seitenkoordinaten identisch mit der globalen Koordinaten.  
+ Beachten Sie Folgendes: da sich der Ursprung des World-Koordinaten Bereichs in der oberen linken Ecke des Client Bereichs befindet, sind die Seiten Koordinaten identisch mit den World-Koordinaten.  
   
- Sie können die Welt und Seite-Transformationen, um eine Reihe von Effekten erzielen kombinieren. Nehmen wir beispielsweise an Zoll als Maßeinheit verwendet werden sollen, und den Ursprung des Koordinatensystems 2 Zoll vom linken Rand des Clientbereichs und 1/2 Zoll zwischen dem oberen Rand des Clientbereichs sein sollen. Im folgenden Beispiel wird die Seite "und" World Transformationen von einem <xref:System.Drawing.Graphics> Objekt aus, und klicken Sie dann zeichnet eine Linie von (0, 0), (2, 1):  
+ Sie können die Transformationen für Welt und Seite kombinieren, um eine Vielzahl von Effekten zu erzielen. Angenommen, Sie möchten Zoll als Maßeinheit verwenden, und Sie möchten, dass der Ursprung ihres Koordinatensystems 2 Zoll vom linken Rand des Client Bereichs und 1/2 Zoll vom oberen Rand des Client Bereichs ist. Im folgenden Beispiel werden die Welt-und Seiten Transformationen eines <xref:System.Drawing.Graphics> -Objekts festgelegt, und anschließend wird eine Linie von (0,0) zu (2, 1) gezeichnet:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.CoordinateSystems#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#34)]  
   
- Die folgende Abbildung zeigt die Zeile und der Koordinatensystem.  
+ In der folgenden Abbildung ist die Linie und das Koordinatensystem dargestellt.  
   
- ![Koordinatensystem](./media/aboutgdip05-art03.gif "AboutGdip05_art03")  
+ ![Koordinaten System](./media/aboutgdip05-art03.gif "AboutGdip05_art03")  
   
- Wenn Sie davon ausgehen, dass das Anzeigegerät, 96 DPI-Wert in horizontaler Richtung und 96 DPI-Wert in vertikaler Richtung hat, haben die Endpunkte der Linie im vorherigen Beispiel die folgenden Koordinaten in der drei Koordinatensysteme:  
+ Wenn wir davon ausgehen, dass das Anzeigegerät 96 Punkte pro Zoll in horizontaler Richtung und 96 Punkte pro Zoll in vertikaler Richtung aufweist, haben die Endpunkte der Linie im vorherigen Beispiel die folgenden Koordinaten in den drei Koordinaten Räumen:  
   
 |||  
 |-|-|  
-|World|(0, 0), (2, 1)|  
-|Seite|(2, 0,5), (4, 1.5)|  
-|Gerät|(192, 48), (384, 144)|  
+|World|(0,0) bis (2, 1)|  
+|Seite|(2, 0,5) bis (4, 1,5)|  
+|Gerät|(192, 48) bis (384, 144)|  
   
 ## <a name="see-also"></a>Siehe auch
 

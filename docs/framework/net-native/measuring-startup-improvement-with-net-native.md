@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea993880d68ab13eab8dfb4cf5e1d172025c6186
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 9546ddd12decb7457f4ff890658e2725a8b9dabe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052575"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941749"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Messung der Startverbesserung mit .NET Native
-.NET native wird die Startzeit von apps erheblich verbessert. Diese Verbesserung ist besonders deutlich auf tragbaren Geräten mit geringem Energieverbrauch und bei komplexen Apps. Dieses Thema soll Ihnen den Einstieg in die grundlegende Instrumentierung erleichtern, die Sie benötigen, um diese Startverbesserung zu messen.  
+Mit .net Native wird die Startzeit von apps erheblich verbessert. Diese Verbesserung ist besonders deutlich auf tragbaren Geräten mit geringem Energieverbrauch und bei komplexen Apps. Dieses Thema soll Ihnen den Einstieg in die grundlegende Instrumentierung erleichtern, die Sie benötigen, um diese Startverbesserung zu messen.  
   
  Um Leistungsuntersuchungen zu erleichtern, verwenden .NET Framework und Windows ein Ereignisframework namens Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW), mit dem Ihre App Tools benachrichtigen kann, wenn Ereignisse auftreten. Sie können dann ein Tool namens PerfView verwenden, um ETW-Ereignisse anzuzeigen und zu analysieren. In diesem Thema wird Folgendes erläutert:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66052575"
   
 - Wenn Ihre App das Synchronisieren neuer Nachrichten abgeschlossen hat.  
   
- Instrumentieren einer app ist einfach: Rufen Sie einfach die entsprechende Methode für die abgeleitete Klasse. Mit `AppEventSource` aus dem vorherigen Beispiel können Sie eine Anwendung wie folgt instrumentieren:  
+ Das Instrumentieren einer APP ist einfach: Nennen Sie einfach die entsprechende Methode für die abgeleitete Klasse. Mit `AppEventSource` aus dem vorherigen Beispiel können Sie eine Anwendung wie folgt instrumentieren:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66052575"
  PerfView verwendet ETW-Ereignisse, um Sie bei allen möglichen Leistungsuntersuchungen für Ihre App zu unterstützen. Darüber hinaus ist eine grafische Benutzeroberfläche für die Konfiguration enthalten, mit der Sie die Protokollierung für unterschiedliche Typen von Ereignissen aktivieren oder deaktivieren können. PerfView ist ein kostenloses Tool, das über das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=28567) heruntergeladen werden kann. Weitere Informationen erhalten Sie in den [Videotutorials für PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial).  
   
 > [!NOTE]
->  PerfView kann nicht zum Erfassen von Ereignissen auf ARM-Systemen verwendet werden. Zum Erfassen von Ereignissen auf ARM-Systemen verwenden Sie Windows Performance Recorder (WPR). Weitere Informationen finden Sie im [Blogbeitrag von Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).  
+> PerfView kann nicht zum Erfassen von Ereignissen auf ARM-Systemen verwendet werden. Zum Erfassen von Ereignissen auf ARM-Systemen verwenden Sie Windows Performance Recorder (WPR). Weitere Informationen finden Sie im [Blogbeitrag von Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).  
   
  Sie können PerfView auch von der Befehlszeile aus aufrufen. Um nur die Ereignisse von Ihrem Anbieter zu protokollieren, öffnen Sie das Eingabeaufforderungsfenster und geben folgenden Befehl ein:  
   
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Wählen Sie alle im linken Bereich aufgelisteten Ereignisse aus (STRG+A), und drücken Sie die **EINGABETASTE**. Nun sollten die Zeitstempel jedes Ereignisses angezeigt werden. Diese Zeitstempel sind relativ zum Start der Ablaufverfolgung, sodass Sie die Zeit der einzelnen Ereignisse von der Startzeit des Prozesses abziehen müssen, um die verstrichene Zeit seit dem Start zu ermitteln. Wenn mit STRG+Klick zwei Zeitstempel auswählen, wird der Unterschied zwischen diesen in der Statusleiste am unteren Rand der Seite angezeigt. Auf diese Weise können Sie ganz einfach die abgelaufene Zeit zwischen zwei beliebigen Ereignissen in der Anzeige (einschließlich des Prozessstarts) sehen. Sie können das Kontextmenü für die Ansicht öffnen und eine Reihe nützlicher Optionen auswählen, wie beispielsweise das Exportieren in CSV-Dateien oder das Öffnen von Microsoft Excel zum Speichern oder Verarbeiten der Daten.  
   
- Wiederholen das Verfahren für Ihre ursprüngliche app und die Version, die Sie mit der .NET Native-toolkette erstellt, können Sie den Unterschied in Bezug auf Leistung vergleichen.   .NET native-apps beginnen im Allgemeinen schneller als ohne .NET Native-apps. Wenn Sie an weiteren Details interessiert sind, kann PerfView auch die Teile des Codes identifizieren, die die meiste Zeit verbrauchen. Weitere Informationen erhalten Sie in den [PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) oder durch Lesen des [Blogbeitrags von Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
+ Durch Wiederholen des Verfahrens für Ihre ursprüngliche APP und die Version, die Sie mit der .net Native-Toolkette erstellt haben, können Sie den Unterschied in der Leistung vergleichen.   .Net Native apps werden im Allgemeinen schneller als Non-.net Native apps gestartet. Wenn Sie an weiteren Details interessiert sind, kann PerfView auch die Teile des Codes identifizieren, die die meiste Zeit verbrauchen. Weitere Informationen erhalten Sie in den [PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) oder durch Lesen des [Blogbeitrags von Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
 ## <a name="see-also"></a>Siehe auch
 

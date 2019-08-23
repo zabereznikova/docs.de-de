@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400774"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958788"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
 In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elemente der XAML-Syntax zu beschreiben. Diese Begriffe werden im restlichen Teil dieser Dokumentation häufig verwendet, sowohl für die WPF-Dokumentation als auch für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte verwenden, die von der XAML-Sprachunterstützung auf der System. XAML-Ebene aktiviert werden. Dieses Thema erweitert die grundlegende Terminologie, die im Thema [Übersicht über XAML (WPF)](xaml-overview-wpf.md)vorgestellt wurde.  
@@ -86,7 +86,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
  Die Attribut Syntax ist die XAML-Markup Syntax, mit der ein Wert für eine Eigenschaft festgelegt wird, indem ein Attribut für ein vorhandenes Objekt Element deklariert wird. Der Attribut Name muss mit dem CLR-Elementnamen der-Eigenschaft der-Klasse, die das relevante Object-Element sichert, identisch sein. Auf den Attributnamen folgt ein Zuweisungs Operator (=). Der Attribut Wert muss eine in Anführungszeichen eingeschlossene Zeichenfolge sein.  
   
 > [!NOTE]
->  Sie können abwechselnde Anführungszeichen verwenden, um ein literales Anführungszeichen innerhalb eines Attributs zu platzieren. Beispielsweise können Sie einfache Anführungszeichen als Mittel zum Deklarieren einer Zeichenfolge verwenden, die ein doppeltes Anführungszeichen enthält. Unabhängig davon, ob Sie einfache oder doppelte Anführungszeichen verwenden, sollten Sie ein entsprechendes Paar zum Öffnen und Schließen der Zeichenfolge für den Attribut Wert verwenden. Es gibt auch Escapesequenzen oder andere Techniken zum Umgehen von Zeichen Einschränkungen, die von einer bestimmten XAML-Syntax auferlegt werden. Siehe [XML-Zeichen Entitäten und XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
+> Sie können abwechselnde Anführungszeichen verwenden, um ein literales Anführungszeichen innerhalb eines Attributs zu platzieren. Beispielsweise können Sie einfache Anführungszeichen als Mittel zum Deklarieren einer Zeichenfolge verwenden, die ein doppeltes Anführungszeichen enthält. Unabhängig davon, ob Sie einfache oder doppelte Anführungszeichen verwenden, sollten Sie ein entsprechendes Paar zum Öffnen und Schließen der Zeichenfolge für den Attribut Wert verwenden. Es gibt auch Escapesequenzen oder andere Techniken zum Umgehen von Zeichen Einschränkungen, die von einer bestimmten XAML-Syntax auferlegt werden. Siehe [XML-Zeichen Entitäten und XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
  Damit eine Eigenschaft über die Attribut Syntax festgelegt werden kann, muss sie öffentlich sein und beschreibbar sein. Der Wert der Eigenschaft im Unterstützungs-Typsystem muss ein Werttyp oder ein Verweistyp sein, der beim Zugriff auf den entsprechenden Sicherungstyp von einem XAML-Prozessor instanziiert oder referenziert werden kann.  
   
@@ -128,7 +128,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
   
  Oder Sie können unabhängig vom enthaltenden Objekt Element auf eine angefügte Eigenschaft oder ein angefügtes Ereignis verweisen. (Angefügte Eigenschaften werden in einem zukünftigen Abschnitt erläutert.)  
   
- Sie können auch ein beliebiges Ereignis aus jedem Objekt benennen, auf das über den Standard Namespace mit einem Typnamen zugegriffen werden kann. teilweise qualifizierter *Ereignis* Name; Diese Syntax unterstützt das Anfügen von Handlern für Routing Ereignisse, bei denen der Handler das Routing von Ereignissen aus untergeordneten Elementen verarbeiten soll, aber das übergeordnete Element verfügt nicht auch über dieses Ereignis in der Members-Tabelle. Diese Syntax ähnelt der Syntax des angefügten Ereignisses, aber das Ereignis hier ist kein true angefügtes Ereignis. Stattdessen verweisen Sie auf ein Ereignis mit einem qualifizierten Namen. Weitere Informationen finden Sie unter [Übersicht über Routing Ereignisse](routed-events-overview.md).  
+ Sie können auch ein beliebiges Ereignis aus jedem Objekt benennen, auf das über den Standard Namespace miteinem Typnamen zugegriffen werden kann. teilweise qualifizierter *Ereignis* Name; Diese Syntax unterstützt das Anfügen von Handlern für Routing Ereignisse, bei denen der Handler das Routing von Ereignissen aus untergeordneten Elementen verarbeiten soll, aber das übergeordnete Element verfügt nicht auch über dieses Ereignis in der Members-Tabelle. Diese Syntax ähnelt der Syntax des angefügten Ereignisses, aber das Ereignis hier ist kein true angefügtes Ereignis. Stattdessen verweisen Sie auf ein Ereignis mit einem qualifizierten Namen. Weitere Informationen finden Sie unter [Übersicht über Routing Ereignisse](routed-events-overview.md).  
   
  In einigen Szenarios werden Eigenschaftsnamen manchmal als Wert eines Attributs und nicht als Attribut Name bereitgestellt. Dieser Eigenschaftsname kann auch Qualifizierer einschließen, wie z. b. die Eigenschaft, die im Formular Besitzer *Type*angegeben ist. *dependencypropertyname*. Dieses Szenario kommt häufig beim Schreiben von Stilen oder Vorlagen in XAML vor. Die Verarbeitungs Regeln für Eigenschaftsnamen, die als Attribut Wert bereitgestellt werden, unterscheiden sich voneinander und werden durch den Typ der festzulegenden Eigenschaft oder durch das Verhalten bestimmter WPF-Subsysteme gesteuert. Weitere Informationen finden Sie unter Erstellen von Formaten [und](../controls/styling-and-templating.md)Vorlagen.  
   
@@ -169,7 +169,7 @@ In diesem Thema werden die Begriffe definiert, die verwendet werden, um die Elem
  Ein implizites Auflistungs Element erstellt ein Element in der logischen Struktur Darstellung, obwohl es nicht im Markup als Element angezeigt wird. In der Regel führt der Konstruktor des übergeordneten Typs die Instanziierung für die Auflistung aus, die eine seiner Eigenschaften ist, und die anfänglich leere Auflistung wird Teil der Objektstruktur.  
   
 > [!NOTE]
->  Die generischen Listen-und Wörter<xref:System.Collections.Generic.IList%601> Buch <xref:System.Collections.Generic.IDictionary%602>Schnittstellen (und) werden nicht für die Sammlungs Erkennung unterstützt. Allerdings <xref:System.Collections.Generic.List%601> können Sie die-Klasse als Basisklasse verwenden, da Sie direkt implementiert <xref:System.Collections.IList> , oder <xref:System.Collections.Generic.Dictionary%602> als Basisklasse, da Sie direkt implementiert <xref:System.Collections.IDictionary> .  
+> Die generischen Listen-und Wörter<xref:System.Collections.Generic.IList%601> Buch <xref:System.Collections.Generic.IDictionary%602>Schnittstellen (und) werden nicht für die Sammlungs Erkennung unterstützt. Allerdings <xref:System.Collections.Generic.List%601> können Sie die-Klasse als Basisklasse verwenden, da Sie direkt implementiert <xref:System.Collections.IList> , oder <xref:System.Collections.Generic.Dictionary%602> als Basisklasse, da Sie direkt implementiert <xref:System.Collections.IDictionary> .  
   
  In den .net-Referenzseiten für Auflistungs Typen wird diese Syntax gelegentlich in den XAML-Syntax Abschnitten als implizite Sammlungs Syntax angegeben.  
   

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines Transaktionsdiensts'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: 7f7f060db5a4ffd66524e220e3e3291debd8a3fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be364e7638394a30c199b05dd15ef4c44e18e688
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787594"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964017"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Vorgehensweise: Erstellen eines Transaktionsdiensts
 In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiensts und die Nutzung einer von einem Client initiierten Transaktion für die Koordinierung von Dienstvorgängen veranschaulicht.  
@@ -65,7 +65,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
     }  
     ```  
   
-3. Konfigurieren Sie die Bindungen in der Konfigurationsdatei, wobei Sie angeben, dass der Transaktionskontext übergeben werden sollte, und die dafür zu verwendenden Protokolle festlegen. Weitere Informationen finden Sie unter [ServiceModel-Transaktionskonfiguration](servicemodel-transaction-configuration.md). Der Bindungstyp wird im `binding`-Attribut des Endpunktelements angegeben. Die [ \<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-element.md) Element enthält eine `bindingConfiguration` -Attribut, das auf die Bindungskonfiguration mit dem Namen `transactionalOleTransactionsTcpBinding`, wie in der folgenden Beispielkonfiguration gezeigt.  
+3. Konfigurieren Sie die Bindungen in der Konfigurationsdatei, wobei Sie angeben, dass der Transaktionskontext übergeben werden sollte, und die dafür zu verwendenden Protokolle festlegen. Weitere Informationen finden Sie unter [Service Model Transaction Configuration](servicemodel-transaction-configuration.md). Der Bindungstyp wird im `binding`-Attribut des Endpunktelements angegeben. `bindingConfiguration` Das [ \<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-element.md) -Element enthält ein-Attribut, das auf eine `transactionalOleTransactionsTcpBinding`Bindungs Konfiguration mit dem Namen verweist, wie in der folgenden Beispielkonfiguration gezeigt.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -91,7 +91,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 ### <a name="supporting-multiple-transaction-protocols"></a>Unterstützung mehrerer Transaktionsprotokolle  
   
-1. Um eine optimale Leistung sollten Sie für Szenarien im Zusammenhang mit Client und Dienst mithilfe von Windows Communication Foundation (WCF) geschrieben das OleTransactions-Protokoll verwenden. Allerdings ist das WS-AtomicTransaction (WS-AT)-Protokoll für Szenarien nützlich, bei denen Interoperabilität mit Protokollstapeln eines Drittanbieters erforderlich ist. Sie können WCF-Diensten für beide Protokolle unterstützen, indem mehrere Endpunkte mit entsprechenden protokollspezifischen Bindungen bereitstellen, wie in der folgenden Beispielkonfiguration gezeigt konfigurieren.  
+1. Um eine optimale Leistung zu erzielen, sollten Sie das OleTransactions-Protokoll für Szenarien mit einem Client und einem Dienst verwenden, die mit Windows Communication Foundation (WCF) geschrieben wurden. Allerdings ist das WS-AtomicTransaction (WS-AT)-Protokoll für Szenarien nützlich, bei denen Interoperabilität mit Protokollstapeln eines Drittanbieters erforderlich ist. Sie können WCF-Dienste so konfigurieren, dass Sie beide Protokolle akzeptieren, indem Sie mehrere Endpunkte mit entsprechenden Protokoll spezifischen Bindungen bereitstellen, wie in der folgenden Beispielkonfiguration gezeigt.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -126,7 +126,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>Kontrolle des Abschlusses einer Transaktion  
   
-1. Standardmäßig führen WCF-Vorgänge automatisch Transaktionen, wenn keine nicht behandelten Ausnahmen ausgelöst werden. Sie können dieses Verhalten ändern, indem Sie die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft und die <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>-Methode verwenden. Wenn es erforderlich ist, dass ein Vorgang innerhalb derselben Transaktion erfolgt wie ein anderer Vorgang (Beispiel: ein Debit- und Kredit-Vorgang), können Sie das automatische Verhalten für den Abschluss deaktivieren, indem Sie die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft auf `false` festlegen (wie in folgendem `Debit`-Vorgangsbeispiel gezeigt). Die Transaktion, die der `Debit`-Vorgang nutzt, wird nicht abgeschlossen, bevor eine Methode mit der <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft auf `true` aufgerufen wird (wie in Vorgang `Credit1` gezeigt) oder wenn die <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>-Methode aufgerufen wird, um explizit die Transaktion als abgeschlossen zu kennzeichnen (wie in Vorgang `Credit2` gezeigt). Beachten Sie, dass die beiden Kreditvorgänge zu Illustrationszwecken angeführt werden und dass ein einzelner Kreditvorgang üblicher wäre.  
+1. Standardmäßig vervollständigen WCF-Vorgänge Transaktionen automatisch, wenn keine nicht behandelten Ausnahmen ausgelöst werden. Sie können dieses Verhalten ändern, indem Sie die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft und die <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>-Methode verwenden. Wenn es erforderlich ist, dass ein Vorgang innerhalb derselben Transaktion erfolgt wie ein anderer Vorgang (Beispiel: ein Debit- und Kredit-Vorgang), können Sie das automatische Verhalten für den Abschluss deaktivieren, indem Sie die <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft auf `false` festlegen (wie in folgendem `Debit`-Vorgangsbeispiel gezeigt). Die Transaktion, die der `Debit`-Vorgang nutzt, wird nicht abgeschlossen, bevor eine Methode mit der <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>-Eigenschaft auf `true` aufgerufen wird (wie in Vorgang `Credit1` gezeigt) oder wenn die <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>-Methode aufgerufen wird, um explizit die Transaktion als abgeschlossen zu kennzeichnen (wie in Vorgang `Credit2` gezeigt). Beachten Sie, dass die beiden Kreditvorgänge zu Illustrationszwecken angeführt werden und dass ein einzelner Kreditvorgang üblicher wäre.  
   
     ```csharp
     [ServiceBehavior]  
@@ -182,7 +182,7 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Kontrolle der Lebensdauer einer Transaktionsdienstinstanz  
   
-1. WCF verwendet die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> Eigenschaft, um anzugeben, ob die zugrunde liegende Dienstinstanz beim Abschluss einer Transaktion freigegeben wird. Da hier der Standardwert `true`, sofern nicht anders, Anhänge ein effizientes und vorhersehbares "just-in-Time" WCF-Verhalten konfiguriert. Aufrufe an einen Dienst bei einer nachfolgenden Transaktion erhalten ohne Auswirkung des Status der vorherigen Transaktion garantiert eine neue Dienstinstanz. Obwohl dies oft nützlich sein kann, möchten Sie eventuell den Status innerhalb der Dienstinstanz bis über den Transaktionsabschluss hinaus beibehalten. Beispielsweise könnte dies der Fall sein, wenn erforderliche Status oder Handle zu Ressourcen in der Anschaffung oder Wiederherstellung teuer sind. Sie können dies vornehmen, indem Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>-Eigenschaft auf `false` festlegen. Mit dieser Einstellung stehen die Instanz und alle zugehörigen Status bei folgenden Aufrufen zur Verfügung. Achten Sie hierbei insbesondere darauf, wann und wie der Zustand und die Transaktion gelöscht und abgeschlossen werden. Das folgende Beispiel veranschaulicht die Vorgehensweise, indem die Instanz mit der `runningTotal`-Variablen beibehalten wird.  
+1. WCF verwendet die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> -Eigenschaft, um anzugeben, ob die zugrunde liegende Dienst Instanz freigegeben wird, wenn eine Transaktion abgeschlossen wird. Da standardmäßig auf `true`eingestellt ist, zeigt WCF ein effizientes und vorhersagbares "Just-in-Time"-Aktivierungs Verhalten an, sofern nicht anders konfiguriert. Aufrufe an einen Dienst bei einer nachfolgenden Transaktion erhalten ohne Auswirkung des Status der vorherigen Transaktion garantiert eine neue Dienstinstanz. Obwohl dies oft nützlich sein kann, möchten Sie eventuell den Status innerhalb der Dienstinstanz bis über den Transaktionsabschluss hinaus beibehalten. Beispielsweise könnte dies der Fall sein, wenn erforderliche Status oder Handle zu Ressourcen in der Anschaffung oder Wiederherstellung teuer sind. Sie können dies vornehmen, indem Sie die <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A>-Eigenschaft auf `false` festlegen. Mit dieser Einstellung stehen die Instanz und alle zugehörigen Status bei folgenden Aufrufen zur Verfügung. Achten Sie hierbei insbesondere darauf, wann und wie der Zustand und die Transaktion gelöscht und abgeschlossen werden. Das folgende Beispiel veranschaulicht die Vorgehensweise, indem die Instanz mit der `runningTotal`-Variablen beibehalten wird.  
   
     ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
@@ -217,4 +217,4 @@ In diesem Beispiel werden diverse Aspekte der Erstellung eines Transaktionsdiens
     ```  
   
     > [!NOTE]
-    >  Da die Lebensdauer der Instanz ein dienstinternes Verhalten ist und durch die <xref:System.ServiceModel.ServiceBehaviorAttribute>-Eigenschaft kontrolliert wird, sind keine Änderungen an der Dienstkonfiguration oder am Dienstvertrag erforderlich. Darüber hinaus enthält die Übertragung keine Darstellung hierzu.
+    > Da die Lebensdauer der Instanz ein dienstinternes Verhalten ist und durch die <xref:System.ServiceModel.ServiceBehaviorAttribute>-Eigenschaft kontrolliert wird, sind keine Änderungen an der Dienstkonfiguration oder am Dienstvertrag erforderlich. Darüber hinaus enthält die Übertragung keine Darstellung hierzu.

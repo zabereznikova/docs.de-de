@@ -9,26 +9,26 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868991"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910693"
 ---
 # <a name="security-and-remoting-considerations"></a>Überlegungen zu Sicherheit und Remoting
 Remoting ermöglicht Ihnen das Einrichten transparenter Aufrufe zwischen Anwendungsdomänen, Prozessen oder Computern. Der Sicherheitsstack für den Codezugriff kann jedoch Prozess- oder Computergrenzen nicht überschreiten (dies gilt zwischen Anwendungsdomänen des gleichen Prozesses).  
   
  Jede remotefähige Klasse (abgeleitet von einer <xref:System.MarshalByRefObject>-Klasse) muss die Verantwortung für die Sicherheit übernehmen. Der Code sollte entweder nur in geschlossenen Umgebungen verwendet werden, in denen der aufrufende Code implizit vertrauenswürdig ist, oder Remoteaufrufe sollten so entworfen werden, dass kein geschützter Code für externe Eingaben in ggf. böswilliger Absicht verwendet werden kann.  
   
- Im Allgemeinen, Sie sollten nie verfügbar machen Methoden, Eigenschaften oder Ereignisse, die durch deklarative geschützt sind [LinkDemand](../../../docs/framework/misc/link-demands.md) und <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> sicherheitsüberprüfungen. Mit Remoting werden diese Überprüfungen nicht erzwungen. Andere sicherheitsüberprüfungen, z. B. <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](../../../docs/framework/misc/using-the-assert-method.md)und so weiter funktionieren zwischen Anwendungsdomänen innerhalb eines Prozesses, jedoch nicht in Prozess- oder computerübergreifenden Szenarien.  
+ Im Allgemeinen sollten Sie nie Methoden, Eigenschaften oder Ereignisse verfügbar machen, die durch deklarative [LinkDemand](../../../docs/framework/misc/link-demands.md) -und <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> Sicherheitsüberprüfungen geschützt werden. Mit Remoting werden diese Überprüfungen nicht erzwungen. Andere Sicherheitsüberprüfungen, z <xref:System.Security.Permissions.SecurityAction.Demand>. b., [Assert](../../../docs/framework/misc/using-the-assert-method.md)usw., funktionieren zwischen Anwendungs Domänen innerhalb eines Prozesses, funktionieren jedoch nicht in prozessübergreifenden oder Computer übergreifenden Szenarien.  
   
 ## <a name="protected-objects"></a>Geschützte Objekte  
  Einige Objekte enthalten Ihren Sicherheitszustand in sich. Diese Objekte sollten nicht an nicht vertrauenswürdigen Code übergeben werden, der dann eine über seine eigenen Berechtigungen hinausgehende Sicherheitsautorisierung erhalten würde.  
   
  Ein Beispiel ist das Erstellen eines <xref:System.IO.FileStream>-Objekts. Die <xref:System.Security.Permissions.FileIOPermission> wird zum Zeitpunkt der Erstellung angefordert, und bei Erfolg wird das Dateiobjekt zurückgegeben. Wenn dieser Objektverweis jedoch an Code ohne Dateiberechtigungen übergeben wird, ist das Objekt in der Lage, diese Datei zu lesen und in sie zu schreiben.  
   
- Der einfachste Schutz für ein solches Objekt ist, auf die gleiche **FileIOPermission** von Code, der versucht, den Objektverweis über ein öffentliches API-Element zu erhalten.  
+ Die einfachste Verteidigung für ein solches Objekt besteht darin, die gleiche "" "" "" "" "".  
   
 ## <a name="application-domain-crossing-issues"></a>Probleme beim anwendungsdomänenübergreifenden Zugriff  
  Zum Isolieren von Code in verwalteten Hostingumgebungen ist es üblich, mehrere untergeordnete Anwendungsdomänen mit einer expliziten Richtlinie zu generieren, um die Berechtigungsstufen verschiedener Assemblys zu verringern. In der Standardanwendungsdomäne bleibt die Richtlinie für diese Assemblys jedoch unverändert. Wenn eine der untergeordneten Anwendungsdomänen die Standardanwendungsdomäne zum Laden einer Assembly zwingen kann, gehen die Auswirkungen der Codeisolierung verloren, und Typen in der erzwungen geladenen Assembly können Code auf einer höheren Vertrauensebene ausführen.  
@@ -39,4 +39,4 @@ Remoting ermöglicht Ihnen das Einrichten transparenter Aufrufe zwischen Anwendu
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

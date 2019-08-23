@@ -5,22 +5,22 @@ helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-ms.openlocfilehash: f07138a0b68fff050133d477074571c60cd8651e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f18861eb18f81b631245d1d933b7acb1b3e0e42
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020191"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950514"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Vorgehensweise: Animieren der Durchlässigkeit eines Elements oder eines Pinsels
-Um ein FrameworkElement ein-und auszublenden, animieren Sie dessen <xref:System.Windows.UIElement.Opacity%2A> -Eigenschaft, oder Sie können Animieren der <xref:System.Windows.Media.Brush.Opacity%2A> Eigenschaft der <xref:System.Windows.Media.Brush> (oder Pinsel) verwendet, um es zu zeichnen. Animieren der Durchlässigkeit des Elements können sie und ihren untergeordneten Elementen ein-und ausgeblendet, aber den Pinsel ab, die zum Zeichnen des Elements animieren, können Sie zum welcher Bereich des Elements wird ausgeblendet. Sie können z. B. die Deckkraft eines Pinsels, der zum Zeichnen des Hintergrunds einer Schaltfläche verwendete animieren. Dadurch würde der Hintergrund der Schaltfläche auf der Ansicht, bleiben dessen Text vollständig deckend ein-und ausgeblendet.  
+Um ein FrameworkElement ein-und auszublenden, können Sie seine <xref:System.Windows.UIElement.Opacity%2A> -Eigenschaft animieren, oder Sie können die-Eigenschaft der <xref:System.Windows.Media.Brush> (oder Pinsel) animieren, die <xref:System.Windows.Media.Brush.Opacity%2A> zum Zeichnen verwendet werden. Durch die Animation der Deckkraft des Elements werden diese und ihre untergeordneten Elemente in der Ansicht ausgeblendet, aber die Animation des zum Zeichnen des Elements verwendeten Pinsels ermöglicht es Ihnen, selektiver zu sein, welcher Teil des Elements ausgeblendet wird. Beispielsweise könnten Sie die Deckkraft eines Pinsels animieren, der zum Zeichnen des Hintergrunds einer Schaltfläche verwendet wird. Dies würde dazu führen, dass der Hintergrund der Schaltfläche ein-und ausgeblendet wird, während der Text nicht vollständig deckend ist.  
   
 > [!NOTE]
->  Animieren der <xref:System.Windows.Media.Brush.Opacity%2A> von einer <xref:System.Windows.Media.Brush> bietet Leistungsvorteile gegenüber Animieren der <xref:System.Windows.UIElement.Opacity%2A> Eigenschaft eines Elements.  
+> Die <xref:System.Windows.Media.Brush.Opacity%2A> Animation des einer <xref:System.Windows.Media.Brush> bietet Leistungsvorteile gegenüber der Animation der <xref:System.Windows.UIElement.Opacity%2A> -Eigenschaft eines Elements.  
   
- Im folgenden Beispiel werden zwei Schaltflächen animiert, damit sie ein-und auszublenden. Die Durchlässigkeit des ersten <xref:System.Windows.Controls.Button> aus animiert `1.0` zu `0.0` über eine <xref:System.Windows.Media.Animation.Timeline.Duration%2A> von fünf Sekunden. Die zweite Schaltfläche ist auch animiert, aber die Durchlässigkeit des Pinsels geändert, die zum Zeichnen verwendete seine <xref:System.Windows.Controls.Control.Background%2A> wird anstelle der Durchlässigkeit der gesamten Schaltfläche animiert. Wenn das Beispiel ausgeführt wird, dass die erste Schaltfläche ein-und, vollständig ein, und zwar nur der Hintergrund der zweiten Schaltfläche ein-und ausgeblendet wird. Text und Rahmen bleibt vollständig deckend ist.  
+ Im folgenden Beispiel werden zwei Schaltflächen animiert, sodass Sie in der Ansicht ausgeblendet werden. <xref:System.Windows.Controls.Button> Die Deckkraft des ersten wird von `1.0` bis `0.0` über einen <xref:System.Windows.Media.Animation.Timeline.Duration%2A> von fünf Sekunden animiert. Die zweite Schaltfläche wird ebenfalls animiert, aber die Deckkraft des SolidColorBrush, der zum Zeichnen <xref:System.Windows.Controls.Control.Background%2A> der verwendet wird, wird animiert und nicht die Deckkraft der gesamten Schaltfläche. Wenn das Beispiel ausgeführt wird, wird die erste Schaltfläche vollständig ein-und ausgeblendet, während nur der Hintergrund der zweiten Schaltfläche ein-und ausgeblendet wird. Der Text und der Rahmen bleiben vollständig deckend.  
   
 ## <a name="example"></a>Beispiel  
  [!code-xaml[timingbehaviors_snip#10](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- In diesem Beispiel wurde Code ausgelassen. Das vollständige Beispiel zeigt außerdem das Animieren der Durchlässigkeit einer <xref:System.Windows.Media.Color> innerhalb einer <xref:System.Windows.Media.LinearGradientBrush>.  Das vollständige Beispiel finden Sie unter den [animieren die Durchlässigkeit eines Elements Beispiels](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation).
+ Code wurde in diesem Beispiel ausgelassen. Das vollständige Beispiel zeigt auch, wie Sie die Deckkraft eines <xref:System.Windows.Media.Color> in einem <xref:System.Windows.Media.LinearGradientBrush>animieren.  Das vollständige Beispiel finden Sie im [Beispiel animieren der Durchlässigkeit eines Elements](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation).

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Label-Anweisungen (Visual Basic)'
+title: 'Vorgehensweise: Bezeichnungs Anweisungen (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: cbb80d94dc8280aa67859c89daad1520ce4e9669
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b442b5a0ad731cfc490a7387c78ac9279dddaf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648745"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961326"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>Vorgehensweise: Label-Anweisungen (Visual Basic)
-Anweisungsblöcke bestehen von Codezeilen, die durch Doppelpunkte getrennt sind. Codezeilen, die eine identifizierende Zeichenfolge oder ganzen Zahl vorangestellt werden als *mit der Bezeichnung*. Anweisungsbezeichnungen werden verwendet, um eine einzige Zeile Code für die Verwendung mit Anweisungen wie z. B. Identifikation markieren `On Error Goto`.  
+# <a name="how-to-label-statements-visual-basic"></a>Vorgehensweise: Bezeichnungs Anweisungen (Visual Basic)
+Anweisungsblöcke bestehen aus Codezeilen, die durch Doppelpunkte getrennt sind. Codezeilen, denen eine identifizierende Zeichenfolge oder eine ganze Zahl vorangestellt ist, werden *als bezeichnet*. Mithilfe von Anweisungs Bezeichnungen wird eine Codezeile gekennzeichnet, um Sie für die Verwendung mit Anweisungen wie `On Error Goto`zu kennzeichnen.  
   
- Bezeichnungen können entweder gültiger Visual Basic-Bezeichner sein – z. B. die Programmierelemente identifizieren – oder Integer-Literale. Eine Bezeichnung muss am Anfang einer Zeile des Quellcodes angezeigt werden und muss von einem Doppelpunkt, unabhängig davon, ob sie eine Anweisung in der gleichen Zeile folgt, wird gefolgt sein.  
+ Bezeichnungen können entweder gültige Visual Basic Bezeichner sein – z. b. diejenigen, die Programmier Elemente identifizieren – oder ganzzahlige Literale. Eine Bezeichnung muss am Anfang einer Zeile des Quellcodes vorhanden sein, und es muss ein Doppelpunkt folgen, unabhängig davon, ob auf Sie eine-Anweisung in derselben Zeile folgt.  
   
- Der Compiler identifiziert Bezeichnungen wird geprüft, ob der Anfang der Zeile auf einen bereits definierten Bezeichner entspricht. Wenn dies nicht der Fall ist, wird der Compiler davon ausgegangen, dass es sich um eine Bezeichnung ist.  
+ Der Compiler identifiziert Bezeichnungen, indem er überprüft, ob der Anfang der Zeile mit einem bereits definierten Bezeichner übereinstimmt. Andernfalls geht der Compiler davon aus, dass es sich um eine Bezeichnung handelt.  
   
- Bezeichnungen müssen ihre eigenen Deklarationsabschnitt und verursachen keine Konflikte mit anderen Bezeichnern. Eine Bezeichnung für den Bereich ist der Text der Methode. Deklaration der Bezeichnung hat Vorrang vor in einer mehrdeutigen Situation.  
+ Bezeichnungen verfügen über einen eigenen Deklarations Bereich und stören andere Bezeichner nicht. Der Gültigkeitsbereich einer Bezeichnung ist der Text der Methode. Die Bezeichnungs Deklaration hat in jeder mehrdeutigen Situation Vorrang.  
   
 > [!NOTE]
->  Bezeichnungen können nur auf ausführbaren Anweisungen in Methoden verwendet werden.  
+> Bezeichnungen können nur für ausführbare Anweisungen innerhalb von Methoden verwendet werden.  
   
-### <a name="to-label-a-line-of-code"></a>Um eine einzige Zeile Code zu beschriften.  
+### <a name="to-label-a-line-of-code"></a>So bezeichnen Sie eine Codezeile  
   
-- Fügen Sie einen Bezeichner, gefolgt von einem Doppelpunkt am Anfang der Zeile des Quellcodes.  
+- Platzieren Sie einen Bezeichner, gefolgt von einem Doppelpunkt, am Anfang der Zeile des Quellcodes.  
   
-     Z. B. die folgenden Codezeilen sind mit der Bezeichnung `Jump` und `120`bzw.:  
+     Die folgenden Codezeilen werden z. b. mit `Jump` `120`bzw. gekennzeichnet:  
   
      [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]  
   

@@ -2,18 +2,18 @@
 title: Ändern der Cachefreigabeebenen für Send-Aktivitäten
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 587440bd343513aeff51f1ed0947573fbe612f22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363836"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952586"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Ändern der Cachefreigabeebenen für Send-Aktivitäten
 Mit der Erweiterung <xref:System.ServiceModel.Activities.SendMessageChannelCache> können Sie die Cachefreigabeebenen, die Einstellungen des Kanalfactorycaches und die Einstellungen des Kanalcaches für Workflows anpassen, die Nachrichten mit <xref:System.ServiceModel.Activities.Send>-Messagingaktivitäten an Dienstendpunkte senden. Diese Workflows sind in der Regel Clientworkflows, könnten jedoch auch Workflowdienste sein, die in einem <xref:System.ServiceModel.WorkflowServiceHost> gehostet werden. Der Kanalfactorycache enthält zwischengespeicherte <xref:System.ServiceModel.ChannelFactory%601>-Objekte. Der Kanalcache enthält zwischengespeicherte Kanäle.  
   
 > [!NOTE]
->  Workflows können mittels <xref:System.ServiceModel.Activities.Send>-Messagingaktivitäten Nachrichten oder Parameter senden. Die Workflowlaufzeit fügt dem Cache Kanalfactorys hinzu, die Kanäle vom Typ <xref:System.ServiceModel.Channels.IRequestChannel> erstellen, wenn Sie eine <xref:System.ServiceModel.Activities.ReceiveReply>-Aktivität mit einer <xref:System.ServiceModel.Activities.Send>-Aktivität verwenden, bzw. einen Kanal vom Typ <xref:System.ServiceModel.Channels.IOutputChannel>, wenn Sie nur eine <xref:System.ServiceModel.Activities.Send>-Aktivität (kein <xref:System.ServiceModel.Activities.ReceiveReply>) verwenden.  
+> Workflows können mittels <xref:System.ServiceModel.Activities.Send>-Messagingaktivitäten Nachrichten oder Parameter senden. Die Workflowlaufzeit fügt dem Cache Kanalfactorys hinzu, die Kanäle vom Typ <xref:System.ServiceModel.Channels.IRequestChannel> erstellen, wenn Sie eine <xref:System.ServiceModel.Activities.ReceiveReply>-Aktivität mit einer <xref:System.ServiceModel.Activities.Send>-Aktivität verwenden, bzw. einen Kanal vom Typ <xref:System.ServiceModel.Channels.IOutputChannel>, wenn Sie nur eine <xref:System.ServiceModel.Activities.Send>-Aktivität (kein <xref:System.ServiceModel.Activities.ReceiveReply>) verwenden.  
   
 ## <a name="the-cache-sharing-levels"></a>Die Cachefreigabeebenen  
  In einem von einem <xref:System.ServiceModel.WorkflowServiceHost> gehosteten Workflow wird der von <xref:System.ServiceModel.Activities.Send>-Messagingaktivitäten verwendete Cache von allen Workflowinstanzen auf dem <xref:System.ServiceModel.WorkflowServiceHost> gemeinsam genutzt (Zwischenspeicherung auf Hostebene). Bei einen Clientworkflow, der nicht von einem <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, steht der Cache nur der Workflowinstanz zur Verfügung (Zwischenspeichern auf Instanzebene). Der Cache ist nur verfügbar für <xref:System.ServiceModel.Activities.Send>-Aktivitäten, die keine in der Konfiguration definierten Endpunkte verwenden, es sei denn, die Zwischenspeicherung im unsicheren Modus wurde aktiviert.  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: b2bfe253011e24e6792fc60221d05fd60555e87c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 309cd891fd2d764314060e49a401bd1d8f7b8d32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627050"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963264"
 ---
 # <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung
-Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine vollständige Übersicht und normative versionsverwaltungsanleitung finden Sie unter [Best Practices: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine umfassende Übersicht und eine ausführliche Anleitung zur Versionsverwaltung finden [Sie unter Bewährte Methoden: Versionsverwaltung von Daten](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)Verträgen.  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>Breaking Changes gegenüber Non-breaking Changes  
  Änderungen an einem Datenvertrag können "breaking" oder "non-breaking" sein. Wird ein Datenvertrag auf eine "non-breaking"-Art geändert, kann eine Anwendung, die die ältere Version des Vertrags verwendet, mit einer Anwendung kommunizieren, die die neuere Version verwendet; und eine Anwendung, die die neuere Version des Vertrags verwendet, kann mit einer Anwendung kommunizieren, die die ältere Version verwendet. Andererseits verhindert ein "Breaking Change" die Kommunikation in eine oder beide Richtungen.  
@@ -47,9 +47,9 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
 ## <a name="adding-and-removing-data-members"></a>Das Hinzufügen und Entfernen von Datenelementen  
  In den meisten Fällen ist das Hinzufügen oder Entfernen eines Datenelements kein "Breaking Change", sofern keine strikte Schemavalidierung (neue Instanzen, die gegen das alte Schema validiert werden) erforderlich ist.  
   
- Wenn ein Typ mit einem Extrafeld in einen Typ mit einem fehlenden Feld deserialisiert wird, werden die Extrainformationen ignoriert. (Möglicherweise werden Sie auch gespeichert; Weitere Informationen für Round-Tripping-Zwecke, finden Sie [aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)).  
+ Wenn ein Typ mit einem Extrafeld in einen Typ mit einem fehlenden Feld deserialisiert wird, werden die Extrainformationen ignoriert. (Sie kann auch für Roundtripping-Zwecke gespeichert werden. Weitere Informationen finden Sie unter [Forward-kompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)).  
   
- Wenn ein Typ mit einem fehlenden Feld in einen Typ mit einem Extrafeld deserialisiert wird, behält das Extrafeld seinen Standardwert bei, normalerweise `null`. (Der Standardwert darf geändert werden; weitere Informationen finden Sie unter [versionstolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).)  
+ Wenn ein Typ mit einem fehlenden Feld in einen Typ mit einem Extrafeld deserialisiert wird, behält das Extrafeld seinen Standardwert bei, normalerweise `null`. (Der Standardwert kann geändert werden. Weitere Informationen finden Sie unter [Versions tolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).)  
   
  Beispielsweise können Sie die Klasse `CarV1` für einen Client und die Klasse `CarV2` für einen Dienst verwenden; oder Sie können die Klasse `CarV1`  für einen Dienst und die Klasse `CarV2` für einen Client verwenden.  
   
@@ -85,34 +85,34 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
  Die Änderung des Eigenschaftswerts <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> von `true` nach `false` ist nicht "breaking", aber die Änderung von `false` nach `true` kann "breaking" sein, wenn eine frühere Version des Typs das fragliche Datenelement nicht besitzt.  
   
 > [!NOTE]
->  Auch wenn die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> auf `true` festgelegt ist, müssen die eingehenden Daten NULL oder 0 (null) sein, und es muss ein Typ vorbereitet sein, um diese Möglichkeit abzudecken. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> sollte nicht als Sicherheitsmechanismus zum Schutz gegen ungültige eingehende Daten verwendet werden.  
+> Auch wenn die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> auf `true` festgelegt ist, müssen die eingehenden Daten NULL oder 0 (null) sein, und es muss ein Typ vorbereitet sein, um diese Möglichkeit abzudecken. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> sollte nicht als Sicherheitsmechanismus zum Schutz gegen ungültige eingehende Daten verwendet werden.  
   
 ## <a name="omitted-default-values"></a>Ausgelassene Standardwerte  
- Es ist möglich (wenn auch nicht empfohlen) Festlegen der `EmitDefaultValue` Eigenschaft für das Attribut DataMemberAttribute `false`, wie in beschrieben [Datenmemberwerte Standard](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Wenn diese Einstellung `false` ist, wird das Datenelement nicht ausgegeben, wenn es auf seinen Standardwert (normalerweise NULL oder 0 (null)) festgelegt ist. Dies ist in anderen Versionen auf zwei Arten nicht kompatibel mit erforderlichen Datenelementen:  
+ Es ist möglich (obwohl nicht empfehlenswert), die `EmitDefaultValue` -Eigenschaft für das DataMemberAttribute-Attribut auf `false`festzulegen, wie unter [datmember default values](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)beschrieben. Wenn diese Einstellung `false` ist, wird das Datenelement nicht ausgegeben, wenn es auf seinen Standardwert (normalerweise NULL oder 0 (null)) festgelegt ist. Dies ist in anderen Versionen auf zwei Arten nicht kompatibel mit erforderlichen Datenelementen:  
   
 - Ein Datenvertrag mit einem Datenelement, das in einer Version erforderlich ist, kann keine Standarddaten (NULL oder 0(null)) von einer anderen Version erhalten, in der das Datenelement `EmitDefaultValue` auf `false` festgelegt hat.  
   
 - Ein erforderliches Datenelement, dessen `EmitDefaultValue` auf `false` festgelegt ist, kann nicht verwendet werden, um seinen Standardwert (NULL oder 0 (null)) zu deserialisieren, aber es kann bei der Deserialisierung einen derartigen Wert erhalten. Dies schafft ein Round-Tripping-Problem (Daten können eingelesen werden, aber die gleichen Daten können nicht ausgegeben werden). Wenn daher in einer Version `IsRequired``true` und `EmitDefaultValue``false` ist, sollte die gleiche Kombination für alle anderen Versionen gelten, damit keine Version des Datenvertrags einen Wert produzieren kann, der nicht zu einem Roundtrip führt.  
   
 ## <a name="schema-considerations"></a>Schemaüberlegungen  
- Eine Erklärung, welches Schema für Datenvertragstypen produziert wird, finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Eine Erläuterung, welches Schema für Daten Vertragstypen erstellt wird, finden Sie unter [Daten Vertrags Schema-Referenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- Das Schema WCF erzeugt für Datenvertragstypen macht keine Bereitstellungen für die versionsverwaltung. Das bedeutet, dass das Schema, das von einer bestimmten Version eines Typs exportiert wurde, nur diejenigen Datenelemente enthält, die in dieser Version vorliegen. Die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle ändert nicht das Schema eines Typs.  
+ Das Schema, das von WCF für Daten Vertragstypen erzeugt wird, stellt keine Versionskontrolle bereit. Das bedeutet, dass das Schema, das von einer bestimmten Version eines Typs exportiert wurde, nur diejenigen Datenelemente enthält, die in dieser Version vorliegen. Die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle ändert nicht das Schema eines Typs.  
   
  Datenelemente werden standardmäßig als optionale Elemente ins Schema exportiert. Dies bedeutet, dass der Wert von `minOccurs` (XML-Attribut) auf 0 (null) gesetzt wird. Erforderliche Datenmember werden exportiert, wenn `minOccurs` auf 1 festgelegt wurde.  
   
  Viele der Änderungen, die als "non-breaking" gelten, sind tatsächlich "breaking", wenn eine strenge Einhaltung des Schemas erforderlich ist. Im vorherigen Beispiel würde eine `CarV1`-Instanz, die nur das Element `Model`  enthält, gegen das `CarV2`-Schema (das sowohl über `Model` als auch `Horsepower` verfügt, die aber beide optional sind) positiv geprüft werden. Das Gegenteil stimmt aber nicht: eine `CarV2`-Instanz würde keine Validierung gegen das `CarV1`-Schema bestehen.  
   
- Round-Tripping bringt auch einige zusätzliche Überlegungen mit sich. Weitere Informationen finden Sie im Abschnitt "Schemaüberlegungen" in [aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Round-Tripping bringt auch einige zusätzliche Überlegungen mit sich. Weitere Informationen finden Sie im Abschnitt "Schema Überlegungen" in [Vorwärts kompatiblen Daten Verträgen](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ### <a name="other-permitted-changes"></a>Andere zulässige Änderungen  
  Die Implementierung der <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle ist ein "Non-Breaking Change". Es besteht jedoch kein Round-Tripping-Support für Versionen des Typs vor der Version, in der <xref:System.Runtime.Serialization.IExtensibleDataObject> implementiert wurde. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Enumerationen  
- Das Hinzufügen oder Entfernen einer Enumeration ist ein "Breaking Change". Die Änderung des Namens einer Enumeration ist "breaking", sofern nicht der Vertragsname durch die Verwendung des Attributs `EnumMemberAttribute` der gleiche wie in der alten Version geblieben ist. Weitere Informationen finden Sie unter [Enumerationstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Das Hinzufügen oder Entfernen einer Enumeration ist ein "Breaking Change". Die Änderung des Namens einer Enumeration ist "breaking", sofern nicht der Vertragsname durch die Verwendung des Attributs `EnumMemberAttribute` der gleiche wie in der alten Version geblieben ist. Weitere Informationen finden Sie unter [Enumerationstypen in Daten Verträgen](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Auflistungen  
- Die meisten Sammlungsänderungen sind "non-breaking", da die meisten Sammlungstypen im Datenvertragsmodell gegeneinander austauschbar sind. Eine nicht angepasste Sammlung angepasst zu machen oder umgekehrt ist jedoch ein "Breaking Change". Außerdem ist die Änderung der Anpassungseinstellungen der Sammlung ein "Breaking Change", d. h. eine Änderung des Namens und Namespace ihres Datenvertrags und eine Wiederholung des Elementnamens, des Schlüsselelementnamens und des Wertelementnamens. Weitere Informationen zur sammlungsanpassung finden Sie unter [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+ Die meisten Sammlungsänderungen sind "non-breaking", da die meisten Sammlungstypen im Datenvertragsmodell gegeneinander austauschbar sind. Eine nicht angepasste Sammlung angepasst zu machen oder umgekehrt ist jedoch ein "Breaking Change". Außerdem ist die Änderung der Anpassungseinstellungen der Sammlung ein "Breaking Change", d. h. eine Änderung des Namens und Namespace ihres Datenvertrags und eine Wiederholung des Elementnamens, des Schlüsselelementnamens und des Wertelementnamens. Weitere Informationen zur Sammlungs Anpassung finden Sie unter [Sammlungs Typen in Daten Verträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Natürlich ist die Änderung des Datenvertrags der Inhalte einer Sammlung (z. B. die Änderung von einer Liste ganzer Zahlen zu einer Liste von Zeichenfolgen) ein "Breaking Change".  
   
 ## <a name="see-also"></a>Siehe auch
@@ -126,7 +126,7 @@ Natürlich ist die Änderung des Datenvertrags der Inhalte einer Sammlung (z. B
 - <xref:System.Runtime.Serialization.SerializationException>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - [Versionstolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Bewährte Methoden: Versionsverwaltung von Daten Verträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

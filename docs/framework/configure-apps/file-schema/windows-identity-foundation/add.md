@@ -3,15 +3,15 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 34643d10ef1ed2e87152e5013634e62859e0594e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9505970c1fd7fcdfe62d3c6ef58f5d653fab4106
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791767"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941995"
 ---
 # <a name="add"></a>\<add>
-Der Tokenhandler-Auflistung hinzugefügt den angegebenen Sicherheitstokenhandler.  
+Fügt der tokenhandlerauflistung den angegebenen Sicherheitstokenhandler hinzu.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -40,25 +40,25 @@ Der Tokenhandler-Auflistung hinzugefügt den angegebenen Sicherheitstokenhandler
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Die CLR-Typnamen, der die token-Handler hinzugefügt werden. Weitere Informationen zur Vorgehensweise beim Angeben der `type` Attribut, finden Sie unter [benutzerdefinierte Typverweise](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
+|Typ|Der CLR-Typname des tokenhandlers, der hinzugefügt werden soll. Weitere Informationen zum Angeben des `type` -Attributs finden Sie unter [benutzerdefinierte Typverweise](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> -Klasse, die <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse oder eine abgeleitete Klasse von einer dieser Klassen.|  
-|[\<sessionTokenRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md)|Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Klasse oder abgeleitete Klassen.|  
-|[\<userNameSecurityTokenHandlerRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/usernamesecuritytokenhandlerrequirement.md)|Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> Klasse oder abgeleitete Klassen.|  
-|[\<x509SecurityTokenHandlerRequirement>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/x509securitytokenhandlerrequirement.md)|Bietet optionale Konfiguration für die <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> Klasse oder abgeleitete Klassen.|  
+|[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|Stellt die Konfiguration für <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> die-Klasse <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> , die-Klasse oder eine abgeleitete Klasse einer dieser Klassen bereit.|  
+|[\<sessionTokenRequirement>](sessiontokenrequirement.md)|Stellt die Konfiguration für <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> die-Klasse oder abgeleitete Klassen bereit.|  
+|[\<userNameSecurityTokenHandlerRequirement>](usernamesecuritytokenhandlerrequirement.md)|Stellt die Konfiguration für <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> die-Klasse oder abgeleitete Klassen bereit.|  
+|[\<x509SecurityTokenHandlerRequirement>](x509securitytokenhandlerrequirement.md)|Stellt eine optionale Konfiguration für <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> die-Klasse oder abgeleitete Klassen bereit.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Gibt eine Auflistung von sicherheitstokenhandlern, die mit dem Endpunkt registriert sind.|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|Gibt eine Auflistung von Sicherheitstokenhandlern an, die beim Endpunkt registriert sind.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<add>` -Element kann ein einzelnes untergeordnetes Element, der angibt, die Konfiguration für den Tokenhandler annehmen. Dies ist abhängig davon, ob die Handlerklasse über verwiesen die `type` Attribut der `<add>` -Element stellt Unterstützung für diese Funktion. Klassen für Sicherheitstokenhandler, die dieses Feature müssen einen Konstruktor, akzeptiert verfügbar zu machen eine <xref:System.Xml.XmlElement> Objekt.  
+ Das `<add>` -Element kann ein einzelnes untergeordnetes Element annehmen, das die Konfiguration für den Tokenhandler angibt. Dies hängt davon ab, ob die Handlerklasse, `type` auf die über `<add>` das-Attribut des-Elements verwiesen wird, Unterstützung für diese Funktion bietet Tokenhandlerklassen, die diese Funktion bereitstellen, müssen einen Konstruktor verfügbar machen, der ein <xref:System.Xml.XmlElement> Objekt annimmt.  
   
 ```  
 public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler  
@@ -69,15 +69,15 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
 }  
 ```  
   
- Einige der Klassen für die integrierte Sicherheitstokenhandler bieten diese Funktionalität. Diese Klassen sind <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, und <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.  
+ Einige der integrierten sicherheitstokenhandlerklassen stellen diese Funktionalität bereit. Diese Klassen sind <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>und .<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
 > [!IMPORTANT]
->  Die Auflistung der Tokenhandler kann nur mit einen einzelnen Handler eines beliebigen angegebenen Typs enthalten. Dies bedeutet beispielsweise, dass sollten Sie einen Handler hinzuzufügen, das von abgeleitet ist die <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Klasse der Auflistung müssen Sie zuerst Entfernen der <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, die in der Standardeinstellung aus der Auflistung vorhanden ist. Können Sie die [ \<entfernen >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md) zu einen einzelnen Handler aus der Auflistung oder die Verwendung zu entfernenden Elements der [ \<Löschen >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md) zu alle Handler aus der Auflistung zu entfernenden Elements.  
+> Die tokenhandlerauflistung kann nur einen einzelnen Handler eines beliebigen Typs enthalten. Dies bedeutet beispielsweise Folgendes: Wenn Sie einen von der <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> -Klasse abgeleiteten Handler zur-Auflistung hinzufügen möchten, müssen Sie zuerst den <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, der standardmäßig vorhanden ist, aus der-Auflistung entfernen. Sie können das [ \<remove >](remove.md) -Element verwenden, um einen einzelnen Handler aus der Auflistung zu entfernen, oder das [ \<Clear >](clear.md) -Element verwenden, um alle Handler aus der Auflistung zu entfernen.  
   
- Auf einen Handler angegebenen Einstellungen überschrieben, entsprechende Einstellungen auf die Auflistung der Tokenhandler unter der [ \<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) -Element, und jene, die auf der Dienstebene unter angegeben die [ \<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element.  
+ Die Einstellungen, die für einen Handler angegeben werden, überschreiben die entsprechenden Einstellungen, die für die tokenhandlerauflistung unter dem [ \<securitytokenhandlerconfiguration->](securitytokenhandlerconfiguration.md) -Element angegeben sind, und die auf Dienst Ebene unter [ \< identityconfiguration >](identityconfiguration.md) Element.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende XML zeigt die Verwendung der `<add>` und `<remove>` Elementen, die dem Sicherheitstoken Standardhandler für Sitzung durch einen benutzerdefinierten sitzungentokenhandlers ersetzen. Der XML-Code stammt aus dem `ClaimsAwareWebFarm` Beispiel.  
+ Der folgende XML `<add>` -Code zeigt die Verwendung des `<remove>` -Elements und des-Elements, um den standardsitzungstokenhandler durch einen benutzerdefinierten Sitzungs Token-Handler Der XML-Code stammt aus `ClaimsAwareWebFarm` dem Beispiel.  
   
 ```xml  
 <securityTokenHandlers>  

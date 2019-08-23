@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16f4155cefea20868185febb3d2a566dc1524cc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817955"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956286"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren über Windows Windows Presentation Foundation mit eigenständigen WPF-Anwendungen (WPF). Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ständige Anwendungen stellen ihre eigenen Fenster mithilfe der <xref:System.Windows.Window> -Klasse bereit. In diesem Thema <xref:System.Windows.Window> wird erläutert, bevor die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt werden.  
   
 > [!NOTE]
->  Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] einschließlich und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] loser Seiten, stellen keine eigenen Fenster bereit. Stattdessen werden Sie in Windows von Windows Internet Explorer bereitgestellt. Siehe [Übersicht über WPF-XAML-Browser Anwendungen](wpf-xaml-browser-applications-overview.md).  
+> Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] einschließlich und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] loser Seiten, stellen keine eigenen Fenster bereit. Stattdessen werden Sie in Windows von Windows Internet Explorer bereitgestellt. Siehe [Übersicht über WPF-XAML-Browser Anwendungen](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Die Fensterklasse  
@@ -88,14 +88,14 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Damit eine Markup [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei und eine Code-Behind-Datei zusammenarbeiten können, ist Folgendes erforderlich:  
   
-- Im Markup muss das `Window` -Element das `x:Class` -Attribut enthalten. Wenn die Anwendung erstellt wird `x:Class` , bewirkt [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] das vorhanden sein von in der Markup Datei, dass `partial` eine Klasse erstellt, <xref:System.Windows.Window> die von abgeleitet wird und den Namen hat, `x:Class` der vom-Attribut angegeben wird. Dies erfordert das Hinzufügen einer [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespace Deklaration für [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] das Schema `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). Die generierte `partial` -Klasse implementiert `InitializeComponent` die-Methode, die aufgerufen wird, um die Ereignisse zu registrieren und die Eigenschaften festzulegen, die im Markup implementiert werden.  
+- Im Markup muss das `Window` -Element das `x:Class` -Attribut enthalten. Wenn die Anwendung erstellt wird, bewirkt das vorhanden `x:Class` sein von in der Markup Datei, dass Microsoft Build Engine (MSBuild) `partial` eine Klasse erstellt, <xref:System.Windows.Window> die von abgeleitet wird und den Namen `x:Class` hat, der vom-Attribut angegeben wird. Dies erfordert das Hinzufügen einer [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespace Deklaration für [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] das Schema `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` (). Die generierte `partial` -Klasse implementiert `InitializeComponent` die-Methode, die aufgerufen wird, um die Ereignisse zu registrieren und die Eigenschaften festzulegen, die im Markup implementiert werden.  
   
 - Bei Code-Behind muss die Klasse eine `partial` Klasse mit dem gleichen Namen sein, der im Markup durch das `x:Class` -Attribut angegeben ist, und Sie muss von <xref:System.Windows.Window>abgeleitet werden. Dadurch kann die Code-Behind-Datei mit der `partial` -Klasse verknüpft werden, die beim Erstellen der Anwendung für die Markup Datei generiert wird (siehe [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)).  
   
 - Im Code-Behind muss die <xref:System.Windows.Window> Klasse einen Konstruktor implementieren, der die `InitializeComponent` -Methode aufruft. `InitializeComponent`wird durch die generierte `partial` -Klasse der Markup Datei implementiert, um Ereignisse zu registrieren und im Markup definierte Eigenschaften festzulegen.  
   
 > [!NOTE]
->  Wenn Sie dem Projekt mithilfe <xref:System.Windows.Window> [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]von ein neues hinzufügen, wird <xref:System.Windows.Window> der mithilfe von Markup und Code Behind implementiert und umfasst die erforderliche Konfiguration zum Erstellen der Zuordnung zwischen dem Markup und den Code-Behind-Dateien als. hier beschrieben.  
+> Wenn Sie dem Projekt mithilfe <xref:System.Windows.Window> [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]von ein neues hinzufügen, wird <xref:System.Windows.Window> der mithilfe von Markup und Code Behind implementiert und umfasst die erforderliche Konfiguration zum Erstellen der Zuordnung zwischen dem Markup und den Code-Behind-Dateien als. hier beschrieben.  
   
  Wenn diese Konfiguration vorhanden ist, können Sie sich darauf konzentrieren, das Aussehen des Fensters im [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup zu definieren und dessen Verhalten in Code Behind zu implementieren. Das folgende Beispiel zeigt ein Fenster mit einer Schaltfläche, die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] im Markup implementiert ist, und einen Ereignishandler für <xref:System.Windows.Controls.Primitives.ButtonBase.Click> das-Ereignis der Schaltfläche, die in Code Behind implementiert ist.  
   
@@ -106,13 +106,13 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurieren einer Fensterdefinition für MSBuild  
- Die Art und Weise, wie Sie Ihr Fenster implementieren, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]legt fest, wie die Konfiguration für Für ein Fenster, das sowohl [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mit Markup als auch mit Code-Behind definiert wird:  
+ Wie Sie Ihr Fenster implementieren, legt fest, wie es für MSBuild konfiguriert ist. Für ein Fenster, das sowohl [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mit Markup als auch mit Code-Behind definiert wird:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Markup Dateien werden als [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` -Elemente konfiguriert.  
+- XAML-Markup Dateien werden als MSBuild `Page` -Elemente konfiguriert.  
   
-- Code Behind-Dateien werden als [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` -Elemente konfiguriert.  
+- Code Behind-Dateien werden als MSBuild `Compile` -Elemente konfiguriert.  
   
- Dies wird in der folgenden [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] Projektdatei gezeigt.  
+ Dies wird in der folgenden MSBuild-Projektdatei gezeigt.  
   
 ```xml  
 <Project ...  
@@ -149,7 +149,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
  Ein Fenster, das durch Aufrufen <xref:System.Windows.Window.Show%2A> von geöffnet wird, ist ein nicht modalem Fenster, was bedeutet, dass die Anwendung in einem Modus ausgeführt wird, der es Benutzern ermöglicht, andere Fenster in derselben Anwendung zu aktivieren.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>wird aufgerufen, um Fenster (z. b. Dialogfelder Modal) zu öffnen. Weitere Informationen finden Sie unter [Übersicht über Dialog Felder](dialog-boxes-overview.md) .  
+> <xref:System.Windows.Window.ShowDialog%2A>wird aufgerufen, um Fenster (z. b. Dialogfelder Modal) zu öffnen. Weitere Informationen finden Sie unter [Übersicht über Dialog Felder](dialog-boxes-overview.md) .  
   
  Wenn <xref:System.Windows.Window.Show%2A> aufgerufen wird, führt ein Fenster Initialisierungs Aufgaben aus, bevor es angezeigt wird, um die Infrastruktur zu erstellen, die es ermöglicht, Benutzereingaben zu empfangen. Wenn das Fenster initialisiert wird, wird <xref:System.Windows.Window.SourceInitialized> das-Ereignis ausgelöst, und das Fenster wird angezeigt.  
   
@@ -205,7 +205,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
  Wenn ein Fenster zum ersten Mal geöffnet wird, wird es zum aktiven Fenster (es sei denn <xref:System.Windows.Window.ShowActivated%2A> , es `false`wird angezeigt, wenn auf festgelegt ist). Das *aktive Fenster* ist das Fenster, das zurzeit Benutzereingaben erfasst, z. b. Tastenanschläge und Mausklicks. Wenn ein Fenster aktiv wird, löst es das <xref:System.Windows.Window.Activated> -Ereignis aus.  
   
 > [!NOTE]
->  Wenn ein Fenster zum ersten Mal geöffnet wird <xref:System.Windows.FrameworkElement.Loaded> , <xref:System.Windows.Window.ContentRendered> werden das-Ereignis und das <xref:System.Windows.Window.Activated> -Ereignis erst ausgelöst, nachdem das-Ereignis ausgelöst wurde. Vor diesem Hintergrund kann ein Fenster als geöffnet angesehen werden, wenn <xref:System.Windows.Window.ContentRendered> ausgelöst wird.  
+> Wenn ein Fenster zum ersten Mal geöffnet wird <xref:System.Windows.FrameworkElement.Loaded> , <xref:System.Windows.Window.ContentRendered> werden das-Ereignis und das <xref:System.Windows.Window.Activated> -Ereignis erst ausgelöst, nachdem das-Ereignis ausgelöst wurde. Vor diesem Hintergrund kann ein Fenster als geöffnet angesehen werden, wenn <xref:System.Windows.Window.ContentRendered> ausgelöst wird.  
   
  Nachdem ein Fenster aktiv geworden ist, kann ein Benutzer ein weiteres Fenster in derselben Anwendung oder eine andere Anwendung aktivieren. Wenn dies der Fall ist, wird das derzeit aktive Fenster deaktiviert und <xref:System.Windows.Window.Deactivated> löst das-Ereignis aus. Ebenso wird, wenn der Benutzer ein momentan deaktiviertes Fenster auswählt, das Fenster <xref:System.Windows.Window.Activated> erneut aktiviert und ausgelöst.  
   
@@ -221,7 +221,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
  Wenn eine Hintergrundaufgabe abgeschlossen ist, kann es sein, dass ein Fenster den Benutzer durch Aufrufen <xref:System.Windows.Window.Activate%2A> der-Methode dringender benachrichtigen soll. Wenn der Benutzer mit einer anderen Anwendung interagiert, <xref:System.Windows.Window.Activate%2A> die beim Aufrufen von aktiviert ist, blinkt die Task leisten Schaltfläche des Fensters. Wenn ein Benutzer mit der aktuellen Anwendung interagiert, wird <xref:System.Windows.Window.Activate%2A> durch den Aufruf von das Fenster in den Vordergrund gebracht.  
   
 > [!NOTE]
->  Sie können die Aktivierung des Anwendungsbereichs mithilfe der <xref:System.Windows.Application.Activated?displayProperty=nameWithType> Ereignisse <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> und behandeln.  
+> Sie können die Aktivierung des Anwendungsbereichs mithilfe der <xref:System.Windows.Application.Activated?displayProperty=nameWithType> Ereignisse <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> und behandeln.  
   
 <a name="Closing_a_Window"></a>   
 ### <a name="closing-a-window"></a>Schließen eines Fensters  
@@ -262,9 +262,9 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
  Wenn <xref:System.Windows.Window.Closing> nicht behandelt wird oder wenn es behandelt, aber nicht abgebrochen wird, wird das Fenster geschlossen. Unmittelbar bevor ein Fenster geschlossen wird, <xref:System.Windows.Window.Closed> wird ausgelöst. An dieser Stelle kann das Schließen des Fensters nicht verhindert werden.  
   
 > [!NOTE]
->  Eine Anwendung kann so konfiguriert werden, dass Sie automatisch heruntergefahren wird, wenn das Haupt Anwendungs <xref:System.Windows.Application.MainWindow%2A>Fenster geschlossen wird (siehe) oder das letzte Fenster geschlossen wird. Ausführliche Informationen finden Sie unter <xref:System.Windows.Application.ShutdownMode%2A>.  
+> Eine Anwendung kann so konfiguriert werden, dass Sie automatisch heruntergefahren wird, wenn das Haupt Anwendungs <xref:System.Windows.Application.MainWindow%2A>Fenster geschlossen wird (siehe) oder das letzte Fenster geschlossen wird. Ausführliche Informationen finden Sie unter <xref:System.Windows.Application.ShutdownMode%2A>.  
   
- Während ein Fenster durch Mechanismen, die in den nicht-Client-und Client Bereichen bereitgestellt werden, explizit geschlossen werden kann, kann ein Fenster aufgrund des Verhaltens in anderen Teilen der Anwendung oder [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], einschließlich der folgenden, implizit geschlossen werden:  
+ Während ein Fenster durch Mechanismen, die in den nicht-Client-und Client Bereichen bereitgestellt werden, explizit geschlossen werden kann, kann ein Fenster aufgrund des Verhaltens in anderen Teilen der Anwendung oder von Fenstern implizit geschlossen werden, einschließlich der folgenden:  
   
 - Ein Benutzer meldet sich ab oder fährt Windows herunter.  
   
@@ -275,7 +275,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
 - <xref:System.Windows.Application.Shutdown%2A> wird aufgerufen.  
   
 > [!NOTE]
->  Ein Fenster kann nicht erneut geöffnet werden, nachdem es geschlossen wurde.  
+> Ein Fenster kann nicht erneut geöffnet werden, nachdem es geschlossen wurde.  
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Ereignisse in der Lebensdauer eines Fensters  
@@ -325,7 +325,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
   
  Wenn Sie möchten, dass die Breite und Höhe des Fensters auf die Größe des Fenster Inhalts zugeschnitten ist, können Sie die <xref:System.Windows.Window.SizeToContent%2A> -Eigenschaft mit den folgenden Werten verwenden:  
   
-- <xref:System.Windows.SizeToContent.Manual>. Keine Auswirkung (Standard).  
+- <xref:System.Windows.SizeToContent.Manual> Keine Auswirkung (Standard).  
   
 - <xref:System.Windows.SizeToContent.Width> An Inhalts Breite anpassen, was die gleiche Wirkung hat wie das Festlegen <xref:System.Windows.FrameworkElement.MinWidth%2A> von <xref:System.Windows.FrameworkElement.MaxWidth%2A> sowohl als auch der Breite des Inhalts.  
   
@@ -377,7 +377,7 @@ Benutzer interagieren über Windows Windows Presentation Foundation mit eigenst�
  Ein Fenster mit einem *maximierten* Zustand wird auf die maximal zulässige Größe erweitert. Dies ist nur so groß wie <xref:System.Windows.FrameworkElement.MaxWidth%2A>die Eigenschaften, <xref:System.Windows.FrameworkElement.MaxHeight%2A>und <xref:System.Windows.Window.SizeToContent%2A> . Wie ein minimiertes Fenster kann auch ein maximiertes Fenster nicht mithilfe des Ziehpunkts zur Größenänderung oder durch Ziehen des Rahmens in seiner Größe verändert werden.  
   
 > [!NOTE]
->  Die Werte der <xref:System.Windows.Window.Top%2A>Eigenschaften, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>und <xref:System.Windows.FrameworkElement.Height%2A> eines Fensters stellen immer die Werte für den normalen Zustand dar, auch wenn das Fenster derzeit maximiert oder minimiert ist.  
+> Die Werte der <xref:System.Windows.Window.Top%2A>Eigenschaften, <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>und <xref:System.Windows.FrameworkElement.Height%2A> eines Fensters stellen immer die Werte für den normalen Zustand dar, auch wenn das Fenster derzeit maximiert oder minimiert ist.  
   
  Der Zustand eines Fensters kann durch Festlegen der <xref:System.Windows.Window.WindowState%2A> -Eigenschaft konfiguriert werden, die einen der folgenden <xref:System.Windows.WindowState> Enumerationswerte aufweisen kann:  
   

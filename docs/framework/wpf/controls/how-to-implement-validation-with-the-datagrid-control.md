@@ -8,82 +8,82 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: 6175e60b1dbdbdb31500f484da24b0f94990b2d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8ae651b3085b39673a51cf8d5f65e9bfb9da87d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663340"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962045"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Vorgehensweise: Implementieren von Validierung mit dem DataGrid-Steuerelement
-Die <xref:System.Windows.Controls.DataGrid> -Steuerelement können Sie eine Überprüfung auf die Zelle und die Zeile Ebene durchführen. Überprüfen Sie mit Überprüfung auf Zellenebene einzelne Eigenschaften eines Objekts an Sie gebundenen Daten aus, wenn ein Benutzer einen Wert aktualisiert. Überprüfen Sie mit Überprüfung auf Zeilenebene gesamte Datenobjekte aus, wenn ein Benutzer auf eine Zeile Änderungen ein Commit ausgeführt. Sie können auch benutzerdefinierte visuelles Feedback für Validierungsfehler oder verwenden Sie das standardmäßige visuelle Feedback, das die <xref:System.Windows.Controls.DataGrid> gesteuert.  
+Das <xref:System.Windows.Controls.DataGrid> -Steuerelement ermöglicht es Ihnen, sowohl auf der Zelle als auch auf der Zeilenebene eine Validierung auszuführen. Bei der Überprüfung auf Zellen Ebene überprüfen Sie einzelne Eigenschaften eines gebundenen Datenobjekts, wenn ein Benutzer einen Wert aktualisiert. Bei der Validierung auf Zeilenebene überprüfen Sie die gesamten Datenobjekte, wenn ein Benutzer Änderungen an einer Zeile ausführt. Sie können auch angepassten visuellen Feedback für Validierungs Fehler bereitstellen oder das standardmäßige visuelle Feedback verwenden, <xref:System.Windows.Controls.DataGrid> das das Steuerelement bereitstellt.  
   
- Die folgenden Verfahren wird beschrieben, wie Anwenden von Validierungsregeln zum <xref:System.Windows.Controls.DataGrid> Bindungen und Anpassen des visuellen Feedbacks.  
+ In den folgenden Prozeduren wird beschrieben, wie <xref:System.Windows.Controls.DataGrid> Validierungsregeln auf Bindungen angewendet und das visuelle Feedback angepasst werden.  
   
-### <a name="to-validate-individual-cell-values"></a>Zum Überprüfen der Werte der einzelnen Zellen  
+### <a name="to-validate-individual-cell-values"></a>So überprüfen Sie einzelne Zellwerte  
   
-- Geben Sie einen oder mehrere Validierungsregeln für die Bindung mit einer Spalte verwendet. Dies ist vergleichbar mit Validieren von Daten in einfachen Steuerelementen, wie in beschrieben [Übersicht über die Datenbindung](../data/data-binding-overview.md).  
+- Geben Sie eine oder mehrere Validierungsregeln für die Bindung an, die mit einer Spalte verwendet wird. Dies ähnelt dem Validieren von Daten in einfachen Steuerelementen, wie unter [Übersicht über die Datenbindung](../data/data-binding-overview.md)beschrieben.  
   
-     Das folgende Beispiel zeigt eine <xref:System.Windows.Controls.DataGrid> -Steuerelement mit vier Spalten, die auf verschiedene Eigenschaften eines Geschäftsobjekts gebunden. Drei Spalten geben die <xref:System.Windows.Controls.ExceptionValidationRule> durch Festlegen der <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> Eigenschaft `true`.  
+     Das folgende Beispiel zeigt ein <xref:System.Windows.Controls.DataGrid> -Steuerelement mit vier Spalten, die an verschiedene Eigenschaften eines Geschäftsobjekts gebunden sind. In drei der Spalten wird der <xref:System.Windows.Controls.ExceptionValidationRule> angegeben, indem <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> die- `true`Eigenschaft auf festgelegt wird.  
   
      [!code-xaml[DataGrid_Validation#BasicXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/window1.xaml#basicxaml)]  
   
-     Wenn ein Benutzer einen ungültigen Wert (z. B. eine nicht ganzzahlige in der Kurs-ID-Spalte) eingibt, wird ein roter Rahmen um die Zelle angezeigt. Sie können dieses Feedback der Standard-Überprüfung wie im folgenden Verfahren beschrieben ändern.  
+     Wenn ein Benutzer einen ungültigen Wert eingibt (z. b. eine nicht-ganze Zahl in der Spalte Course ID), wird ein roter Rahmen um die Zelle angezeigt. Sie können dieses standardmäßige Validierungs Feedback ändern, wie im folgenden Verfahren beschrieben.  
   
-### <a name="to-customize-cell-validation-feedback"></a>Die Überprüfung Zellenvalidierungsfeedback anpassen.  
+### <a name="to-customize-cell-validation-feedback"></a>So passen Sie Feedback zur Zellen Überprüfung an  
   
-- Legen Sie die <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> Eigenschaft, um einen Stil geeignet, für die Spalte Bearbeitungssteuerelement der. Da die Bearbeitung von Steuerelementen zur Laufzeit erstellt werden, können keine der <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> angefügte Eigenschaft wie bei einfachen Steuerelementen.  
+- Legen Sie die- <xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A> Eigenschaft der Spalte auf einen Stil fest, der für das Bearbeitungs Steuerelement der Spalte geeignet ist. Da die Bearbeitungs Steuerelemente zur Laufzeit erstellt werden, können Sie die <xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> angefügte-Eigenschaft nicht wie bei einfachen Steuerelementen verwenden.  
   
-     Das folgende Beispiel aktualisiert die im vorherige Beispiel durch das Hinzufügen eines Fehler-Stils, die von den drei Spalten mit Validierungsregeln gemeinsam verwendet werden. Wenn ein Benutzer einen ungültigen Wert eingibt, wird das Format ändert die Hintergrundfarbe der Zelle, und fügt eine QuickInfo. Beachten Sie die Verwendung eines Triggers, um festzustellen, ob ein Überprüfungsfehler vorliegt. Dies ist erforderlich, da es derzeit keine dedizierten Fehlervorlage für Zellen.  
+     Im folgenden Beispiel wird das vorherige Beispiel aktualisiert, indem ein Fehler Stil hinzugefügt wird, der von den drei Spalten mit Validierungsregeln gemeinsam verwendet wird. Wenn ein Benutzer einen ungültigen Wert eingibt, wird die Hintergrundfarbe der Zelle geändert, und es wird eine QuickInfo hinzugefügt. Beachten Sie die Verwendung eines-Auslösers, um zu bestimmen, ob ein Validierungs Fehler vorliegt. Dies ist erforderlich, da derzeit keine dedizierte Fehler Vorlage für Zellen vorhanden ist.  
   
      [!code-xaml[DataGrid_Validation#CellValidationXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#cellvalidationxaml)]  
   
-     Sie können umfangreichere Anpassung implementieren, indem Sie ersetzt die <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A> von der Spalte verwendet wird.  
+     Sie können eine umfassendere Anpassung implementieren, indem Sie <xref:System.Windows.Controls.DataGridColumn.CellStyle%2A> die von der Spalte verwendete ersetzen.  
   
-### <a name="to-validate-multiple-values-in-a-single-row"></a>Um mehrere Werte in einer einzelnen Zeile zu überprüfen.  
+### <a name="to-validate-multiple-values-in-a-single-row"></a>So überprüfen Sie mehrere Werte in einer einzelnen Zeile  
   
-1. Implementieren einer <xref:System.Windows.Controls.ValidationRule> Unterklasse, die mehrere Eigenschaften des gebundenen Objekts überprüft. In Ihrer <xref:System.Windows.Controls.ValidationRule.Validate%2A> methodenimplementierung, wandeln die `value` Parameterwert, der eine <xref:System.Windows.Data.BindingGroup> Instanz. Sie können dann zugreifen, das Datenobjekt mithilfe der <xref:System.Windows.Data.BindingGroup.Items%2A> Eigenschaft.  
+1. Implementieren Sie <xref:System.Windows.Controls.ValidationRule> eine Unterklasse, die mehrere Eigenschaften des gebundenen Datenobjekts überprüft. Wandeln Sie <xref:System.Windows.Controls.ValidationRule.Validate%2A> in der Methoden Implementierung den `value` Parameterwert in eine <xref:System.Windows.Data.BindingGroup> -Instanz um. Anschließend können Sie über die <xref:System.Windows.Data.BindingGroup.Items%2A> -Eigenschaft auf das Datenobjekt zugreifen.  
   
-     Das folgende Beispiel zeigt diesen Vorgang aus, um zu überprüfen, ob die `StartDate` Eigenschaftswert für eine `Course` -Objekt liegt vor dessen `EndDate` -Eigenschaftswert.  
+     Im folgenden Beispiel wird dieser Prozess veranschaulicht, um zu `StartDate` überprüfen, ob `Course` der Eigenschafts Wert für `EndDate` ein-Objekt älter ist als der-Eigenschafts Wert  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2. Fügen Sie die Validierungsregel dem <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> Auflistung. Die <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Eigenschaft bietet direkten Zugriff auf die <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> Eigenschaft eine <xref:System.Windows.Data.BindingGroup> -Instanz, die alle vom Steuerelement verwendeten Bindungen gruppiert.  
+2. Fügen Sie die Validierungs Regel der <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> Auflistung hinzu. Die <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> -Eigenschaft bietet direkten Zugriff auf <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> die-Eigenschaft <xref:System.Windows.Data.BindingGroup> einer-Instanz, die alle vom-Steuerelement verwendeten Bindungen gruppiert.  
   
-     Im folgenden Beispiel wird die <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> -Eigenschaft in XAML. Die <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.ValidationStep.UpdatedValue> , damit die Überprüfung wird nur verwendet werden, nachdem das gebundene Datenobjekt, das aktualisiert wurde.  
+     Im folgenden Beispiel wird die <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> -Eigenschaft in XAML festgelegt. Die <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> -Eigenschaft ist auf <xref:System.Windows.Controls.ValidationStep.UpdatedValue> festgelegt, sodass die Überprüfung erst erfolgt, nachdem das gebundene Datenobjekt aktualisiert wurde.  
   
      [!code-xaml[DataGrid_Validation#RowValidationRulesXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationrulesxaml)]  
   
-     Wenn ein Benutzer ein Enddatum angegeben ist, die vor dem Startdatum liegt, wird ein rotes Ausrufezeichen (!) in der Zeilenheader angezeigt. Sie können dieses Feedback der Standard-Überprüfung wie im folgenden Verfahren beschrieben ändern.  
+     Wenn ein Benutzer ein Enddatum angibt, das vor dem Startdatum liegt, wird ein rotes Ausrufezeichen (!) im Zeilen Header angezeigt. Sie können dieses standardmäßige Validierungs Feedback ändern, wie im folgenden Verfahren beschrieben.  
   
-### <a name="to-customize-row-validation-feedback"></a>Anpassen von Zeile Überprüfung feedback  
+### <a name="to-customize-row-validation-feedback"></a>So passen Sie Feedback zur Zeilen Überprüfung an  
   
-- Legen Sie die <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType>-Eigenschaft fest. Mit dieser Eigenschaft können Sie anpassen, Zeile Überprüfung Feedback für einzelne <xref:System.Windows.Controls.DataGrid> Steuerelemente. Sie können auch mehrere Steuerelemente beeinflussen, mithilfe eines impliziten Zeilen-Stils zum Festlegen der <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> Eigenschaft.  
+- Legen Sie die <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType>-Eigenschaft fest. Diese Eigenschaft ermöglicht es Ihnen, das Feedback der Zeilen Validierung <xref:System.Windows.Controls.DataGrid> für einzelne Steuerelemente anzupassen. Sie können sich auch auf mehrere Steuerelemente auswirken, indem Sie einen impliziten Zeilen <xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType> Stil zum Festlegen der-Eigenschaft verwenden.  
   
-     Im folgende Beispiel ersetzt das standardmäßige Zeile Überprüfung Feedback mit einem Indikator, der besser sichtbar. Wenn ein Benutzer einen ungültigen Wert eingibt, wird ein roter Kreis mit einem weißen Ausrufezeichen in der Zeilenheader angezeigt. Dies tritt auf, für sowohl Zeilen- und Zellenebene Validierungsfehler. Die entsprechende Fehlermeldung wird in einer QuickInfo angezeigt.  
+     Im folgenden Beispiel wird das standardmäßige Zeilen Validierungs Feedback durch einen besser sichtbaren Indikator ersetzt. Wenn ein Benutzer einen ungültigen Wert eingibt, wird ein roter Kreis mit einem weißen Ausrufezeichen im Zeilen Header angezeigt. Dies tritt sowohl bei Zeilen-als auch bei Zellen Validierungs Fehlern auf. Die zugehörige Fehlermeldung wird in einer QuickInfo angezeigt.  
   
      [!code-xaml[DataGrid_Validation#RowValidationFeedbackXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#rowvalidationfeedbackxaml)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel stellt eine vollständige Demo für die Überprüfung von Zellen- und Zeilenoperationen bereit. Die `Course` -Klasse stellt ein Beispiel-Datenobjekt, das implementiert <xref:System.ComponentModel.IEditableObject> zur Unterstützung von Transaktionen. Die <xref:System.Windows.Controls.DataGrid> Steuerelement interagiert mit <xref:System.ComponentModel.IEditableObject> Benutzer Änderungen durch Drücken der ESC-TASTE rückgängig machen können.  
+ Das folgende Beispiel zeigt eine umfassende Demonstration der Zellen-und Zeilen Validierung. Die `Course` -Klasse stellt ein Beispiel Datenobjekt bereit <xref:System.ComponentModel.IEditableObject> , das zur Unterstützung von Transaktionen implementiert. Das <xref:System.Windows.Controls.DataGrid> -Steuerelement interagiert mit <xref:System.ComponentModel.IEditableObject> , um Benutzern das Zurücksetzen von Änderungen durch Drücken von ESC zu ermöglichen.  
   
 > [!NOTE]
->  Ersetzen Sie bei Verwendung von Visual Basic in der ersten Zeile der Datei "MainWindow.xaml" `x:Class="DataGridValidation.MainWindow"` mit `x:Class="MainWindow"`.  
+> Wenn Sie Visual Basic verwenden, ersetzen `x:Class="DataGridValidation.MainWindow"` Sie in der ersten Zeile der Datei "MainWindow. XAML" durch. `x:Class="MainWindow"`  
   
- Um die Überprüfung zu testen, gehen Sie folgendermaßen vor:  
+ Versuchen Sie Folgendes, um die Überprüfung zu testen:  
   
-- Geben Sie in der Kurs-ID-Spalte einen nicht ganzzahligen Wert ein.  
+- Geben Sie in der Spalte Course ID einen nicht ganzzahligen Wert ein.  
   
-- Geben Sie in der Spalte mit Enddatum und ein Datum, das vor dem Startdatum liegt.  
+- Geben Sie in der Spalte Enddatum ein Datum ein, das vor dem Start Datum liegt.  
   
-- Löschen Sie den Wert im Kurs-ID, Start- oder Enddatum an.  
+- Löschen Sie den Wert in Kurs-ID, Start Datum oder Enddatum.  
   
-- Um einen ungültigen Zellenwert rückgängig zu machen, platzieren Sie den Cursor in die Zelle, und drücken Sie die ESC-Taste.  
+- Um einen ungültigen Zellwert rückgängig zu machen, setzen Sie den Cursor wieder in die Zelle, und drücken Sie die ESC-Taste.  
   
-- Drücken Sie die ESC-Taste zweimal, zum Rückgängigmachen von Änderungen für eine gesamte Zeile, wenn die aktuelle Zelle im Bearbeitungsmodus befindet.  
+- Um Änderungen für eine ganze Zeile rückgängig zu machen, wenn sich die aktive Zelle im Bearbeitungsmodus befindet, drücken Sie zweimal die ESC-Taste.  
   
-- Tritt ein Validierungsfehler auf, verschieben Sie den Mauszeiger über dem Indikator in der zugehörigen Fehlermeldung finden Sie unter den Zeilenkopf ein.  
+- Wenn ein Validierungs Fehler auftritt, bewegen Sie den Mauszeiger über den Indikator im Zeilen Header, um die zugehörige Fehlermeldung anzuzeigen.  
   
  [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
  [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  

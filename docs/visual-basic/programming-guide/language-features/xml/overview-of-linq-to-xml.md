@@ -5,59 +5,59 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: a8695e94797c297154db9597c6e9938ed9aecfef
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 5080efdf10a8e3b1f6815e836f9fffe968a8e4e0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063034"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939248"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Übersicht über LINQ to XML in Visual Basic
-Visual Basic bietet Unterstützung für [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] über XML-Literale und XML-Achseneigenschaften. Dadurch können Sie eine vertraute, bequeme Syntax für die Arbeit mit XML in Visual Basic-Code verwenden. *XML-Literale* ermöglichen es Ihnen, XML direkt in Ihrem Code enthalten. *XML-Achseneigenschaften* ermöglichen Ihnen Zugriff auf untergeordnete Knoten untergeordneten Knoten und Attribute eines XML-Literals. Weitere Informationen finden Sie unter [Übersicht über die XML-Literale](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) und [den Zugriff auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
+Visual Basic bietet Unterstützung [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] für über XML-Literale und XML-Achsen Eigenschaften. Dies ermöglicht es Ihnen, eine vertraute, praktische Syntax zum Arbeiten mit XML in Ihrem Visual Basic Code zu verwenden. *XML-Literale* ermöglichen es Ihnen, XML direkt in Ihren Code einzubeziehen. *XML-Achsen Eigenschaften* ermöglichen den Zugriff auf untergeordnete Knoten, Nachfolger Knoten und Attribute eines XML-Literals. Weitere Informationen finden Sie unter [Übersicht über XML-Literale](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) und [zugreifen auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist eine speicherinterne XML-Programmier-API, die speziell dazu entwickelt, nutzen [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Obwohl Sie aufrufen können die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] APIs direkt, nur Visual Basic ermöglicht es Ihnen, deklarieren von XML-Literale und XML-Achseneigenschaften direkt zugreifen.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]ist eine in-Memory-XML-Programmier-API, die speziell [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]für die Nutzung von entworfen wurde. Obwohl Sie die APIs direkt [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] aufrufen können, ermöglicht Ihnen nur Visual Basic das Deklarieren von XML-Literalen und den direkten Zugriff auf die XML-Achsen Eigenschaften.  
   
 > [!NOTE]
->  XML-Literale und XML-Achseneigenschaften sind in deklarativem Code in einer ASP.NET-Seite nicht unterstützt. Um Visual Basic-XML-Funktionen verwenden, fügen Sie Ihren Code in einer CodeBehind-Seite in Ihrer ASP.NET-Anwendung.  
+> XML-Literale und XML-Achsen Eigenschaften werden in deklarativem Code auf einer ASP.NET-Seite nicht unterstützt. Wenn Sie Visual Basic XML-Funktionen verwenden möchten, platzieren Sie den Code in der ASP.NET-Anwendung auf einer Code Behind-Seite.  
   
- [Schaltfläche "Wiedergabe"](./media/overview-of-linq-to-xml/play-video-icon-example.gif) verknüpfte video-Vorführungen, finden Sie unter [wie führen ich erste Schritte mit LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) und [durchführen erstellen Excel-Tabellen mithilfe von LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).   
+ [Wiedergabe](./media/overview-of-linq-to-xml/play-video-icon-example.gif) Schaltfläche Weitere Informationen zu verwandten Videos finden Sie unter [How do i started with LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml) und [How do i create Excel Spreadsheets using LINQ to XML?](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml).   
   
 ## <a name="creating-xml"></a>Erstellen von XML  
- Es gibt zwei Möglichkeiten zum Erstellen von XML-Strukturen in Visual Basic. Sie können XML-Literale direkt im Code deklarieren, oder Sie können die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] APIs, um die Objektstruktur zu erstellen. Beide Prozesse aktivieren Sie den Code, um die endgültige Struktur der XML-Struktur wiederzugeben. Beispielsweise wird im folgenden Codebeispiel wird ein XML-Element erstellt:  
+ Es gibt zwei Möglichkeiten zum Erstellen von XML-Strukturen in Visual Basic. Sie können ein XML-Literale direkt im Code deklarieren, oder Sie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] können die-APIs verwenden, um die Struktur zu erstellen. Beide Prozesse ermöglichen es dem Code, die endgültige Struktur der XML-Struktur widerzuspiegeln. Im folgenden Codebeispiel wird z. b. ein XML-Element erstellt:  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- Weitere Informationen finden Sie unter [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
+ Weitere Informationen finden Sie unter [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md).  
   
-## <a name="accessing-and-navigating-xml"></a>Zugreifen auf, und Navigieren in XML  
- Visual Basic bietet XML-Achseneigenschaften für den Zugriff, und Navigieren in XML-Strukturen. Diese Eigenschaften können Sie XML-Elemente und Attribute, die durch Angeben von XML--Namen für die untergeordneten Elemente zuzugreifen. Alternativ können Sie explizit aufrufen der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Methoden für die Navigation und Suche nach Elementen und Attributen. Das folgende Codebeispiel verwendet z. B. XML-Achseneigenschaften zum Verweisen auf die Attribute und untergeordneten Elemente eines XML-Elements an. Das Codebeispiel verwendet einen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage zum Abrufen von untergeordneten Elementen und als XML-Elemente, die Durchführung effektiv einer Transformation ausgegeben.  
+## <a name="accessing-and-navigating-xml"></a>Zugreifen auf und Navigieren in XML  
+ Visual Basic stellt XML-Achsen Eigenschaften zum Zugreifen auf und Navigieren in XML-Strukturen bereit. Mithilfe dieser Eigenschaften können Sie auf XML-Elemente und-Attribute zugreifen, indem Sie die untergeordneten XML-Elementnamen angeben. Alternativ können Sie die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Methoden zum Navigieren und suchen von Elementen und Attributen explizit aufzurufen. Im folgenden Codebeispiel werden z. b. die XML-Achsen Eigenschaften verwendet, um auf die Attribute und untergeordneten Elemente eines XML-Elements zu verweisen. Im Codebeispiel wird eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage verwendet, um untergeordnete Elemente abzurufen und als XML-Elemente auszugeben, wodurch eine Transformation durchgeführt wird.  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   
- Weitere Informationen finden Sie unter [den Zugriff auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
+ Weitere Informationen finden Sie unter [zugreifen auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
   
 ## <a name="xml-namespaces"></a>XML-Namespaces  
- Visual Basic ermöglicht es Ihnen, geben Sie einen Alias für einen globalen XML-Namespace mithilfe der `Imports` Anweisung. Das folgende Beispiel zeigt, wie Sie mit der `Imports` Anweisung, um ein XML-Namespace importieren:  
+ Visual Basic ermöglicht es Ihnen, mithilfe der `Imports` -Anweisung einen Alias für einen globalen XML-Namespace anzugeben. Im folgenden Beispiel wird gezeigt, wie die `Imports` -Anweisung verwendet wird, um einen XML-Namespace zu importieren:  
   
  [!code-vb[VbXMLSamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#1)]  
   
- Sie können einen XML-Namespace-Alias verwenden, wenn Sie Zugriff auf XML-Achseneigenschaften, und deklarieren die XML-Literale für XML-Dokumente und Elemente.  
+ Sie können einen XML-Namespace-Alias verwenden, wenn Sie auf XML-Achsen Eigenschaften zugreifen und XML-Literale für XML-Dokumente und-Elemente deklarieren.  
   
- Können Sie Abrufen einer <xref:System.Xml.Linq.XNamespace> -Objekt für ein bestimmtes Namespacepräfix mithilfe der [GetXmlNamespace-Operator](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md).  
+ Sie können ein <xref:System.Xml.Linq.XNamespace> Objekt für ein bestimmtes Namespace Präfix mit dem [GetXmlNamespace-Operator](../../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)abrufen.  
   
  Weitere Informationen finden Sie unter [Imports-Anweisung (XML-Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
 ### <a name="using-xml-namespaces-in-xml-literals"></a>Verwenden von XML-Namespaces in XML-Literalen  
- Das folgende Beispiel zeigt, wie Sie erstellen eine <xref:System.Xml.Linq.XElement> Objekt, das den globalen Namespace verwendet `ns`:  
+ Im folgenden Beispiel wird gezeigt, wie ein <xref:System.Xml.Linq.XElement> -Objekt erstellt wird, das den `ns`globalen Namespace verwendet:  
   
  [!code-vb[VbXMLSamples#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#2)]  
   
- Visual Basic-Compiler übersetzt XML-Literale, die XML-Namespace-Aliase in entsprechenden Code, die die XML-Notation verwendet wird enthalten, für die Verwendung von XML-Namespaces, mit der `xmlns` Attribut. Beim Kompilieren erzeugt der Code im Beispiel des vorherigen Abschnitts im Wesentlichen die gleichen ausführbaren Code wie im folgenden Beispiel aus:  
+ Der Visual Basic-Compiler übersetzt XML-Literale, die XML-Namespace Aliase enthalten, in äquivalenten Code, der die XML-Notation zum `xmlns` Verwenden von XML-Namespaces mit dem-Attribut verwendet. Bei der Kompilierung erzeugt der Code im Beispiel des vorherigen Abschnitts im Grunde denselben ausführbaren Code wie im folgenden Beispiel:  
   
  [!code-vb[VbXMLSamples#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#3)]  
   
-### <a name="using-xml-namespaces-in-xml-axis-properties"></a>Verwenden von XML-Namespaces in XML-Achseneigenschaften  
- XML-Namespaces in XML-Literalen deklariert sind nicht verfügbar, für die Verwendung in XML-Achseneigenschaften. Globale Namespaces können jedoch mit der XML-Achseneigenschaften verwendet werden. Verwenden Sie einen Doppelpunkt, um die XML-Namespacepräfixe vom Namen lokalen zu trennen. Beachten Sie folgendes Beispiel:  
+### <a name="using-xml-namespaces-in-xml-axis-properties"></a>Verwenden von XML-Namespaces in XML-Achsen Eigenschaften  
+ XML-Namespaces, die in XML-Literalen deklariert sind, sind nicht für die Verwendung in XML-Achsen Eigenschaften verfügbar. Globale Namespaces können jedoch mit den XML-Achsen Eigenschaften verwendet werden. Verwenden Sie einen Doppelpunkt, um das XML-Namespace Präfix vom lokalen Elementnamen zu trennen. Beachten Sie folgendes Beispiel:  
   
  [!code-vb[VbXMLSamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples1.vb#4)]  
   

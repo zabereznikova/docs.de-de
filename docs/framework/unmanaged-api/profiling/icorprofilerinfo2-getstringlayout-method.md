@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d4efa7cb3bc98c54be2889855c3b756fdbf2847
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782244"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963790"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout-Methode
-Ruft Informationen zum Layout eines Zeichenfolgenobjekts ab. Diese Methode ist in .NET Framework 4 veraltet, und wird durch die [ICorProfilerInfo3:: Getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) Methode.  
+Ruft Informationen zum Layout eines Zeichenfolgenobjekts ab. Diese Methode ist in der .NET Framework 4 veraltet und wird durch die [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) -Methode abgelöst.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,34 +38,34 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parameter  
  `pBufferLengthOffset`  
- [out] Ein Zeiger auf den Offset der Position, relativ zu den `ObjectID` Zeiger, der die Länge der Zeichenfolge speichert. Die Dauer, gespeichert als eine `DWORD`.  
+ vorgenommen Ein Zeiger auf den Offset der Position relativ zum `ObjectID` Zeiger, der die Länge der Zeichenfolge speichert. Die Länge wird als `DWORD`gespeichert.  
   
 > [!NOTE]
->  Dieser Parameter gibt die Länge der Zeichenfolge selbst, nicht die Länge des Puffers zurück. Die Länge des Puffers ist nicht mehr verfügbar.  
+> Dieser Parameter gibt die Länge der Zeichenfolge selbst zurück, nicht die Länge des Puffers. Die Länge des Puffers ist nicht mehr verfügbar.  
   
  `PStringLengthOffset`  
- [out] Ein Zeiger auf den Offset der Position, relativ zu den `ObjectID` Zeiger, der die Länge der Zeichenfolge selbst speichert. Die Dauer, gespeichert als eine `DWORD`.  
+ vorgenommen Ein Zeiger auf den Offset der Position relativ zum `ObjectID` Zeiger, der die Länge der Zeichenfolge selbst speichert. Die Länge wird als `DWORD`gespeichert.  
   
  `pBufferOffset`  
- [out] Ein Zeiger auf den Offset des Puffers, relativ zu den `ObjectID` Zeiger, der die Zeichenfolge mit Breitzeichen speichert.  
+ vorgenommen Ein Zeiger auf den Offset des Puffers relativ zum `ObjectID` Zeiger, der die Zeichenfolge von breit Zeichen speichert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetStringLayout` Methode ruft die Offsets, relativ zu den `ObjectID` -Zeiger ist, der Standorte in der folgenden gespeichert werden:  
+ Die `GetStringLayout` -Methode ruft die Offsets (relativ `ObjectID` zum Zeiger) der Speicherorte ab, an denen Folgendes gespeichert wird:  
   
 - Die Länge des Puffers der Zeichenfolge.  
   
 - Die Länge der Zeichenfolge selbst.  
   
-- Der Puffer, der die tatsächliche Zeichenfolge mit breiten Zeichen enthält.  
+- Der Puffer, der die tatsächliche Zeichenfolge von breit Zeichen enthält.  
   
- Zeichenfolgen können Null-terminiert sein.  
+ Zeichen folgen können auf Null enden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Header:** Corprof. idl, Corprof. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

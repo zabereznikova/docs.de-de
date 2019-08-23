@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658975"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920924"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContext witchoverrides-> Element
 Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse für die Bereitstellung eines Mechanismus zum Deaktivieren neuer Funktionen verwendet wird.  
@@ -138,7 +138,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Steuert, ob leere schlüsselsequenzen in Verbund Schlüsseln durch die XSD-Schema Validierung ignoriert werden. Weitere Informationen finden Sie unter [Entschärfung: XML-Schema](../../../migration-guide/mitigation-xml-schema-validation.md)Validierung.|.NET Framework 4.6|  
   
 > [!NOTE]
->  Anstatt ein `AppContextSwitchOverrides` Element zu einer Anwendungs Konfigurationsdatei hinzuzufügen, können Sie die Schalter auch Programm gesteuert festlegen, indem `static` Sie die C#-Methode `Shared` (in) oder <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> die-Methode (in Visual Basic) aufrufen.  
+> Anstatt ein `AppContextSwitchOverrides` Element zu einer Anwendungs Konfigurationsdatei hinzuzufügen, können Sie die Schalter auch Programm gesteuert festlegen, indem `static` Sie die C#-Methode `Shared` (in) oder <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> die-Methode (in Visual Basic) aufrufen.  
   
  Bibliotheks Entwickler können auch benutzerdefinierte Switches definieren, um Aufrufern zu ermöglichen, geänderte Funktionen zu abonnieren, die in späteren Versionen Ihrer Bibliotheken eingeführt wurden. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.AppContext>-Klasse.  
   

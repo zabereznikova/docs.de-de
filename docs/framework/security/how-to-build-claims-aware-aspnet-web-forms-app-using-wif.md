@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET Web 
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910586"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941294"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET Web Forms-Anwendung mithilfe von WIF
 ## <a name="applies-to"></a>Gilt für  
@@ -71,7 +71,7 @@ ms.locfileid: "64910586"
     </configSections>  
     ```  
   
-2. Fügen Sie ein **\<location>**-Element hinzu, das den Zugriff auf die Verbundmetadaten der Anwendung ermöglicht:  
+2. Fügen Sie ein **\<location>** -Element hinzu, das den Zugriff auf die Verbundmetadaten der Anwendung ermöglicht:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -92,7 +92,7 @@ ms.locfileid: "64910586"
     <authentication mode="None" />  
     ```  
   
-4. Fügen Sie das **\<system.webServer>**-Element hinzu, das die Module für Verbundauthentifizierung definiert. Beachten Sie, dass das *PublicKeyToken*-Attribut identisch mit dem *PublicKeyToken*-Attribut für die **\<configSections>**-Einträge sein muss, die zuvor hinzugefügt wurden:  
+4. Fügen Sie das **\<system.webServer>** -Element hinzu, das die Module für Verbundauthentifizierung definiert. Beachten Sie, dass das *PublicKeyToken*-Attribut identisch mit dem *PublicKeyToken*-Attribut für die **\<configSections>** -Einträge sein muss, die zuvor hinzugefügt wurden:  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "64910586"
     </system.webServer>  
     ```  
   
-5. Fügen Sie folgende auf Windows Identity Foundation bezogene Konfigurationseinträge hinzu, und versichern Sie sich, dass die URL und Portnummer Ihrer ASP.NET-Anwendung mit den Werten des **\<audienceUris>**-Eintrags, des **realm**-Attributs des **\<wsFederation>**-Elements und des **reply**-Attributs des **\<wsFederation>**-Elements übereinstimmen. Vergewissern Sie sich zudem, dass der Wert des **Ausstellers** der URL Ihres Sicherheitstokendiensts entspricht.  
+5. Fügen Sie folgende auf Windows Identity Foundation bezogene Konfigurationseinträge hinzu, und versichern Sie sich, dass die URL und Portnummer Ihrer ASP.NET-Anwendung mit den Werten des **\<audienceUris>** -Eintrags, des **realm**-Attributs des **\<wsFederation>** -Elements und des **reply**-Attributs des **\<wsFederation>** -Elements übereinstimmen. Vergewissern Sie sich zudem, dass der Wert des **Ausstellers** der URL Ihres Sicherheitstokendiensts entspricht.  
   
     ```xml  
     <system.identityModel>  
@@ -161,7 +161,7 @@ ms.locfileid: "64910586"
 2. Speichern Sie die Datei **Default.aspx**, und öffnen Sie dann die CodeBehind-Datei **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** ist möglicherweise im Projektmappen-Explorer unter **Default.aspx** ausgeblendet. Wenn **Default.aspx.cs** nicht sichtbar ist, erweitern Sie **Default.aspx**, indem Sie auf das Dreieck daneben klicken.  
+    > **Default.aspx.cs** ist möglicherweise im Projektmappen-Explorer unter **Default.aspx** ausgeblendet. Wenn **Default.aspx.cs** nicht sichtbar ist, erweitern Sie **Default.aspx**, indem Sie auf das Dreieck daneben klicken.  
   
 3. Ersetzen Sie den vorhandenen Code in der **Page_Load**-Methode von **Default.aspx.cs** durch den folgenden Code:  
   

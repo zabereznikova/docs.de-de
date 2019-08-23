@@ -3,19 +3,19 @@ title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: 1567c669b5e682a7a771d7bedc95a8effa474e36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5747a4cfa93118dd41292904b168bbef02fec415
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790506"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944079"
 ---
 # <a name="tokenreplaycache"></a>\<tokenReplayCache>
-Registriert einen tokenwiederholungscache mit einem Dienst oder ein Sicherheitstoken-Handlerauflistung an.  
+Registriert einen tokenwiedergabe-Cache bei einem Dienst oder einer Sammlung von Sicherheitstokenhandlern.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<caches>  
+\<Caches >  
 \<tokenReplayCache>  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,22 +38,22 @@ Registriert einen tokenwiederholungscache mit einem Dienst oder ein Sicherheitst
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Ein Typ, der von abgeleitet ist die <xref:System.IdentityModel.Tokens.TokenReplayCache> Klasse. Weitere Informationen zur Vorgehensweise beim Angeben eines benutzerdefiniertes `type`, finden Sie unter [benutzerdefinierte Typverweise].
+|Typ|Ein Typ, der von der <xref:System.IdentityModel.Tokens.TokenReplayCache> -Klasse abgeleitet wird. Weitere Informationen zum Angeben eines benutzerdefinierten `type`finden Sie unter [Custom Type References].
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registriert die Caches, die von einem Dienst oder ein Sicherheitstoken-Handlerauflistung verwendet.|  
+|[\<caches>](caches.md)|Registriert die von einem Dienst oder einer sicherheitstokenhandlerauflistung verwendeten Caches.|  
   
 ## <a name="remarks"></a>Hinweise  
- Tokenwiederholungs-Cache wird verwendet, um wiedergegebene Token erkennen. Erkennung von tokenwiederholungen ist aktiviert, die [ \<TokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) Element, das auch die maximale Ablaufzeit für Token angibt.  
+ Der tokenwiedergabe-Cache wird verwendet, um wiedergegebene Token zu erkennen. Die Erkennung der tokenwiedergabe wird durch das [ \<tokenreplayerkennungs->](tokenreplaydetection.md) -Element aktiviert, das auch die maximale Ablaufzeit für Tokens angibt.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende XML zeigt die Konfiguration eines benutzerdefinierten Cache für wiedergegebene Token erkennen.  
+ Der folgende XML-Code zeigt die Konfiguration eines benutzerdefinierten Caches zum Erkennen von wiedergegebenen Token.  
   
 ```xml  
 <caches>  
@@ -65,4 +65,4 @@ Registriert einen tokenwiederholungscache mit einem Dienst oder ein Sicherheitst
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.IdentityModel.Tokens.TokenReplayCache>
-- [\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+- [\<tokenReplayDetection>](tokenreplaydetection.md)

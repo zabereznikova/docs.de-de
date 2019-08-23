@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec65c75fcfd907097f1cd1e0d3092a547272a782
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906450"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933251"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Strukturen und andere Programmierelemente (Visual Basic)
-Sie können die Strukturen in Verbindung mit Arrays, Objekte und Verfahren sowie anderen verwenden. Die Interaktionen verwenden dieselbe Syntax wie diese Elemente einzeln verwenden.  
+Sie können Strukturen in Verbindung mit Arrays, Objekten und Prozeduren sowie untereinander verwenden. Die Interaktionen verwenden die gleiche Syntax wie diese Elemente einzeln verwenden.  
   
 > [!NOTE]
->  Alle Elemente der Struktur in der Strukturdeklaration kann nicht initialisiert werden. Sie können Werte nur für Elemente, die einer Variablen zuweisen, die auf einen Strukturtyp deklariert wurde.  
+> Sie können keines der Structure-Elemente in der Struktur Deklaration initialisieren. Sie können Werte nur Elementen einer Variablen zuweisen, die als Strukturtyp deklariert wurde.  
   
 ## <a name="structures-and-arrays"></a>Strukturen und Arrays  
- Eine Struktur kann es sich um ein Array als ein oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Eine Struktur kann ein Array als ein oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Sie Zugriff auf die Werte eines Arrays innerhalb einer Struktur, die gleiche Weise, die Sie Zugriff auf eine Eigenschaft eines Objekts. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie greifen auf die Werte eines Arrays innerhalb einer Struktur auf die gleiche Weise zu, wie Sie auf eine Eigenschaft in einem Objekt zugreifen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- Sie können auch ein Array von Strukturen deklarieren. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie können auch ein Array von-Strukturen deklarieren. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- Sie gelten dieselben Regeln für den Zugriff auf die Komponenten dieser Data-Architektur. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie befolgen die gleichen Regeln für den Zugriff auf die Komponenten dieser Datenarchitektur. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -56,7 +56,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>Strukturen und Objekte  
- Eine Struktur kann es sich um ein Objekt als eine oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Eine Struktur kann ein Objekt als ein oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- Verwenden Sie eine bestimmte Objektklasse in einer solchen Deklaration statt `Object`.  
+ Sie sollten eine bestimmte Objektklasse in einer solchen Deklaration anstelle `Object`von verwenden.  
   
 ## <a name="structures-and-procedures"></a>Strukturen und Prozeduren  
- Sie können eine Struktur als ein Prozedurargument übergeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie können eine Struktur als Prozedur Argument übergeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Im vorherige Beispiel übergibt der Struktur *als Verweis*, dadurch, dass die Prozedur die Elemente zu ändern, sodass die Änderungen im aufrufenden Code wirksam. Wenn Sie eine Struktur vor solchen Änderungen schützen möchten, können übergeben sie als Wert.  
+ Im vorangehenden Beispiel wird die Struktur als *Verweis*weitergeleitet, sodass die Prozedur die Elemente ändern kann, sodass die Änderungen im aufrufenden Code wirksam werden. Wenn Sie eine Struktur vor solchen Änderungen schützen möchten, übergeben Sie Sie als Wert.  
   
- Sie können auch eine Struktur von Zurückgeben einer `Function` Verfahren. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie können auch eine Struktur aus einer `Function` Prozedur zurückgeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -118,7 +118,7 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- Sie können dieses Verfahren auch verwenden, zum Kapseln einer Struktur, die in einem Modul innerhalb einer Struktur, die definiert, die in einem anderen Modul definiert.  
+ Sie können dieses Verfahren auch verwenden, um eine Struktur zu kapseln, die in einem Modul innerhalb einer Struktur definiert ist, die in einem anderen Modul definiert ist.  
   
  Strukturen können andere Strukturen in beliebiger Tiefe enthalten.  
   

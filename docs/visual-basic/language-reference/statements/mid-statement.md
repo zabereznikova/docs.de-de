@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: ff3b908e2805f4d51463a82d90f2305efc9f1608
-ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
+ms.openlocfilehash: 212ce1f06a01c39acbce43d8d069dae3526b1b4d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041582"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963548"
 ---
 # <a name="mid-statement"></a>Mid-Anweisung
-Ersetzt eine angegebene Anzahl von Zeichen in einem `String` Variable mit dem Zeichen aus einer anderen Zeichenfolge.  
+Ersetzt eine angegebene Anzahl von Zeichen in einer `String` Variablen durch Zeichen aus einer anderen Zeichenfolge.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,33 +32,33 @@ Mid( _
   
 ## <a name="parts"></a>Teile  
  `Target`  
- Erforderlich. Name des der `String` zu ändernden Variablen.  
+ Erforderlich. Der Name der `String` Variablen, die geändert werden soll.  
   
  `Start`  
- Erforderlich. `Integer` -Ausdruck. Die Zeichenposition in `Target` , an dem das Ersetzen des Texts beginnt. `Start` verwendet einen einsbasierten Index.  
+ Erforderlich. `Integer`Begriff. Zeichenposition in `Target` , an der die Text Ersetzung beginnt. `Start`verwendet einen 1-basierten Index.  
   
  `Length`  
- Dies ist optional. `Integer` -Ausdruck. Die Anzahl der zu ersetzenden Zeichen. Wenn nicht angegeben, alle `String` verwendet wird.  
+ Optional. `Integer`Begriff. Anzahl der zu ersetzenden Zeichen. Wenn der `String` Wert weggelassen wird, wird all verwendet.  
   
  `StringExpression`  
- Erforderlich. `String` Ausdruck, der Teil des ersetzt `Target`.  
+ Erforderlich. `String`Ausdruck, der einen Teil `Target`von ersetzt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start` < = 0 oder `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start`< = 0 oder `Length` < 0.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Anzahl der Zeichen ersetzt ist immer kleiner oder gleich der Anzahl der Zeichen in `Target`.  
+ Die Anzahl der ersetzten Zeichen ist immer kleiner oder gleich der Anzahl von Zeichen in `Target`.  
   
- Visual Basic verfügt über eine <xref:Microsoft.VisualBasic.Strings.Mid%2A> Funktion und ein `Mid` Anweisung. Diese Elemente beide für eine angegebene Anzahl von Zeichen in eine Zeichenfolge funktionieren, aber die `Mid` Funktionsergebnis ist die Zeichen bei der die `Mid` Anweisung ersetzt die Zeichen. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic verfügt über <xref:Microsoft.VisualBasic.Strings.Mid%2A> eine-Funktion `Mid` und eine-Anweisung. Diese Elemente funktionieren beide mit einer angegebenen Anzahl von Zeichen in einer Zeichenfolge, aber `Mid` die-Funktion gibt die Zeichen `Mid` zurück, während die-Anweisung die Zeichen ersetzt. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
->  Die `MidB` frühere Versionen von Visual Basic-Anweisung ersetzt eine Teilzeichenfolge in Byte, anstatt in Zeichen. Es dient in erster Linie für das Konvertieren von Zeichenfolgen in Doppelbyte-Zeichensatz (DBCS)-Satz Anwendungen. Alle Visual Basic-Zeichenfolgen werden in Unicode und `MidB` wird nicht mehr unterstützt.  
+> Die `MidB` -Anweisung früherer Versionen von Visual Basic ersetzt eine Teil Zeichenfolge in Bytes und nicht als Zeichen. Es wird hauptsächlich zum Umrechnen von Zeichen folgen in DBCS-Anwendungen (Double-Byte Character Set) verwendet. Alle Visual Basic Zeichenfolgen sind in Unicode `MidB` und werden nicht mehr unterstützt.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `Mid` Anweisung, um eine angegebene Anzahl von Zeichen in einer Zeichenfolgenvariablen durch Zeichen aus einer anderen Zeichenfolge ersetzen.  
+ In diesem Beispiel wird `Mid` die-Anweisung verwendet, um eine angegebene Anzahl von Zeichen in einer Zeichen folgen Variablen durch Zeichen aus einer anderen Zeichenfolge zu ersetzen.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
@@ -67,7 +67,7 @@ Mid( _
   
  **Modul:** `Strings`  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Stadtverordneten** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Siehe auch
 

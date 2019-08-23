@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Bearbeiten von Daten (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 2d45861569bc4a8b57427b01e107f87809203e11
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7921f0aa7582e70967f7fec633f37ef0dbc766de
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946973"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Exemplarische Vorgehensweise: Bearbeiten von Daten (C#)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zum Hinzufügen, Ändern und Löschen von Daten in einer Datenbank bereit. Sie werden eine Kopie der Beispieldatenbank Northwind verwenden, um einen Kunden hinzuzufügen, den Namen des Kunden zu ändern und eine Bestellung zu löschen.  
@@ -16,18 +16,18 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
  Diese exemplarische Vorgehensweise wurde mithilfe von Visual C#-Entwicklungseinstellungen geschrieben.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Für diese exemplarische Vorgehensweise wird Folgendes vorausgesetzt:  
   
 - Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest6") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.  
   
 - Die Beispieldatenbank Northwind.  
   
-     Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie diese von der Microsoft Downloadsite herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Nachdem Sie die Datenbank heruntergeladen haben, kopieren Sie die Datei northwnd.mdf in den Ordner c:\linqtest6.  
+     Befindet sich diese Datenbank nicht auf Ihrem Entwicklungscomputer, können Sie diese von der Microsoft Downloadsite herunterladen. Anweisungen hierzu finden Sie unter [Herunterladen von Beispiel Datenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Nachdem Sie die Datenbank heruntergeladen haben, kopieren Sie die Datei northwnd.mdf in den Ordner c:\linqtest6.  
   
 - Eine von der Datenbank Northwind generierte C#-Codedatei.  
   
-     Sie können diese Datei generieren, mit der Object Relational Designer oder das SQLMetal-Tool. Diese exemplarische Vorgehensweise wurde mithilfe des SQLMetal-Tools mit der folgenden Befehlszeile geschrieben:  
+     Sie können diese Datei mit dem-objektrelationaler Designer oder dem SQLMetal-Tool generieren. Diese exemplarische Vorgehensweise wurde mithilfe des SQLMetal-Tools mit der folgenden Befehlszeile geschrieben:  
   
      **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
   
@@ -36,7 +36,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 ## <a name="overview"></a>Übersicht  
  Diese exemplarische Vorgehensweise umfasst sechs Hauptaufgaben:  
   
-- Erstellen der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projektmappe in Visual Studio.  
+- Erstellen der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt Mappe in Visual Studio  
   
 - Hinzufügen der Datenbank-Codedatei zum Projekt.  
   
@@ -49,19 +49,19 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 - Übergeben dieser Änderungen an der Datenbank Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Erstellen einer LINQ to SQL-Lösung  
- In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projektmappe, die die erforderlichen Verweise zur Erstellung und Ausführung enthält eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt.  
+ In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projekt Mappe, die die erforderlichen Verweise zum Erstellen und Ausführen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eines Projekts enthält.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>So erstellen Sie eine LINQ to SQL-Lösung  
   
-1. Visual Studio **Datei** Startmenü **neu**, und klicken Sie dann auf **Projekt**.  
+1. Zeigen Sie im Menü **Datei** von Visual Studio auf **neu**, und klicken Sie dann auf **Projekt**.  
   
-2. In der **Projekttypen** im Bereich der **neues Projekt** Dialogfeld klicken Sie auf **Visual C#** .  
+2. Klicken Sie im Bereich **Projekttypen** im Dialogfeld **Neues Projekt** auf **C#Visualisierung**.  
   
 3. Klicken Sie im Bereich **Vorlagen** auf **Konsolenanwendung**.  
   
-4. In der **Namen** geben **LinqDataManipulationApp**.  
+4. Geben Sie im Feld **Name den Namen** **LinqDataManipulationApp**ein.  
   
-5. In der **Speicherort** Vergewissern Sie sich, in der Sie die Projektdateien speichern möchten.  
+5. Überprüfen Sie im Feld **Speicherort** , wo die Projektdateien gespeichert werden sollen.  
   
 6. Klicken Sie auf **OK**.  
   
@@ -70,9 +70,9 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-add-systemdatalinq"></a>So fügen Sie System.Data.Linq hinzu  
   
-1. In **Projektmappen-Explorer**, mit der rechten Maustaste **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
+1. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
   
-2. In der **Verweis hinzufügen** Dialogfeld klicken Sie auf **.NET**, klicken Sie auf die System.Data.Linq-Assembly, und klicken Sie dann auf **OK**.  
+2. Klicken Sie im Dialogfeld **Verweis hinzufügen** auf **.net**, klicken Sie auf die Assembly System. Data. Linq, und klicken Sie dann auf **OK**.  
   
      Dem Projekt wird die Assembly hinzugefügt.  
   
@@ -85,9 +85,9 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>So fügen Sie die Northwind-Codedatei dem Projekt hinzu.  
   
-1. Auf der **Projekt** Menü klicken Sie auf **vorhandenes Element hinzufügen**.  
+1. Klicken Sie im Menü **Projekt** auf **Vorhandenes Element hinzufügen**.  
   
-2. In der **vorhandenes Element hinzufügen** Dialogfeld, navigieren Sie zu c:\linqtest6\northwind.cs, und klicken Sie dann auf **hinzufügen**.  
+2. Navigieren Sie im Dialogfeld **Vorhandenes Element hinzufügen** zu c:\linqtest6\northwind.cs, und klicken Sie dann auf **Hinzufügen**.  
   
      Die Datei northwind.cs wird dem Projekt hinzugefügt.  
   
@@ -102,9 +102,9 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 2. Drücken Sie die Taste F5, um die Anwendung an diesem Punkt zu testen.  
   
-     Ein **Konsole** Fenster wird geöffnet.  
+     Ein **Konsolen** Fenster wird geöffnet.  
   
-     Schließen Sie die Anwendung durch Drücken der EINGABETASTE in den **Konsole** Fenster oder durch Klicken auf **Debuggen beenden** auf der Visual Studio **Debuggen** Menü.  
+     Sie können die Anwendung schließen, indem Sie im **Konsolen** Fenster die EINGABETASTE drücken, oder indem Sie im Visual Studio-Menü **Debuggen** auf **Debuggen beenden** klicken.  
   
 ## <a name="creating-a-new-entity"></a>Erstellen einer neuen Entität  
  Eine neue Entität zu erstellen, ist einfach. Sie können Objekte (z. B. `Customer`) erstellen, indem Sie das `new`-Schlüsselwort verwenden.  
@@ -119,7 +119,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 2. Drücken Sie die Taste F5, um die Lösung zu Debuggen.  
   
-3. Drücken Sie die EINGABETASTE in den **Konsole** Fenster aus, um den Debugvorgang unterbrechen und Fortsetzen der exemplarischen Vorgehensweise.  
+3. Drücken Sie im **Konsolen** Fenster die EINGABETASTE, um das Debuggen zu verhindern und die exemplarische Vorgehensweise  
   
 ## <a name="updating-an-entity"></a>Aktualisieren einer Entität  
  In den folgenden Schritten rufen Sie ein `Customer`-Objekt ab und ändern eine seiner Eigenschaften.  
@@ -156,10 +156,10 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 3. Drücken Sie die Taste F5, um die Lösung zu Debuggen.  
   
-4. Drücken Sie die EINGABETASTE in den **Konsole** Fenster aus, um die Anwendung zu schließen.  
+4. Drücken Sie im **Konsolen** Fenster die EINGABETASTE, um die Anwendung zu schließen.  
   
 > [!NOTE]
->  Wenn Sie den neuen Kunden durch Übergeben der Änderungen hinzugefügt haben, können Sie diese Lösung nicht einfach wieder ausführen. Um die Lösung erneut auszuführen, ändern Sie den Namen und die ID des hinzuzufügenden Kunden.  
+> Wenn Sie den neuen Kunden durch Übergeben der Änderungen hinzugefügt haben, können Sie diese Lösung nicht einfach wieder ausführen. Um die Lösung erneut auszuführen, ändern Sie den Namen und die ID des hinzuzufügenden Kunden.  
   
 ## <a name="see-also"></a>Siehe auch
 

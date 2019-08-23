@@ -2,23 +2,23 @@
 title: Konfigurationsbasierte Aktivierung unter IIS und WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 99f6c7d41620a7bafea0981cbeaa5cdcbad5ef12
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636123"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909771"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Konfigurationsbasierte Aktivierung unter IIS und WAS
 
-Wenn Sie einen Windows Communication Foundation (WCF)-Dienst unter Internetinformationsdienste (Internet Information Services, IIS) oder Windows Process Activation Service (WAS) hosten, müssen Sie normalerweise eine SVC-Datei angeben. Die SVC-Datei enthält den Namen des Diensts und eine optionale benutzerdefinierte Diensthostfactory. Diese Zusatzdatei verursacht einen höheren Verwaltungsmehraufwand. Die konfigurationsbasierte Aktivierungsfunktion entfernt die Anforderung einer SVC-Datei, sodass auch der damit verbundene Mehraufwand entfällt.
+Wenn Sie einen Windows Communication Foundation (WCF)-Dienst unter Internetinformationsdienste (IIS) oder Windows Process Activation Service (was) gehostet haben, müssen Sie normalerweise eine SVC-Datei bereitstellen. Die SVC-Datei enthält den Namen des Diensts und eine optionale benutzerdefinierte Diensthostfactory. Diese Zusatzdatei verursacht einen höheren Verwaltungsmehraufwand. Die konfigurationsbasierte Aktivierungsfunktion entfernt die Anforderung einer SVC-Datei, sodass auch der damit verbundene Mehraufwand entfällt.
 
 ## <a name="configuration-based-activation"></a>Konfigurationsbasierte Aktivierung
 
-Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC-Datei eingefügt wurden, in die Datei "Web.config" ein. In der <`serviceHostingEnvironment`> Element vorhanden ist ein <`serviceActivations`> Element. In der <`serviceActivations`>-Element sind eine oder mehrere <`add`>-Elemente, jeweils eines für jeden gehosteten Dienst. Die <`add`>-Element enthält Attribute, mit denen Sie die relative Adresse für den Dienst und den Diensttyp oder eine Diensthostfactory festlegen können. Der folgende Konfigurationsbeispielcode zeigt, wie dieser Abschnitt verwendet wird.
+Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC-Datei eingefügt wurden, in die Datei "Web.config" ein. Innerhalb des <`serviceHostingEnvironment`>-Elements ist ein <`serviceActivations`> Element vorhanden. Innerhalb des <`serviceActivations`> Element mindestens ein <`add`> Elemente, eines für jeden gehosteten Dienst. Das <`add`>-Element enthält Attribute, mit denen Sie die relative Adresse für den Dienst und den Diensttyp oder eine Diensthostfactory festlegen können. Der folgende Konfigurationsbeispielcode zeigt, wie dieser Abschnitt verwendet wird.
 
 > [!NOTE]
->  Jedes <`add`> Element muss einen Dienst oder ein factoryattribut angeben. Es kann auch einen Dienst und Factoryattribute angeben.
+> Jedes <`add`>-Element muss einen Dienst oder ein Factory-Attribut angeben. Es kann auch einen Dienst und Factoryattribute angeben.
 
 ```xml
 <serviceHostingEnvironment>
@@ -32,7 +32,7 @@ Die konfigurationsbasierte Aktivierung fügt die Metadaten, die zuvor in die SVC
 
 > [!NOTE]
 > - Bei Verwendung der konfigurationsbasierten Aktivierung wird Inlinecode in SVC-Dateien nicht unterstützt.
-> - Die `relativeAddress` -Attribut muss auf eine relative Adresse wie z. B. festgelegt werden "\<Unterverzeichnis > / service.svc" oder "~ /\<untergeordnete/service.svc".
+> - Das `relativeAddress` -Attribut muss auf eine relative Adresse wie "\<Sub-Directory >/Service.svc" oder "~/\<Sub-Directory/Service. svc" festgelegt werden.
 > - Es wird eine Konfigurationsausnahme ausgelöst, wenn Sie eine relative Adresse registrieren, für die keine bekannte Erweiterung mit WCF-Zuordnung vorhanden ist.
 > - Die angegebene relative Adresse ist relativ zum Stamm der virtuellen Anwendung.
 > - Aufgrund des hierarchischen Konfigurationsmodells werden die registrierten relativen Adressen auf Computer- und Siteebene von den virtuellen Anwendungen geerbt.

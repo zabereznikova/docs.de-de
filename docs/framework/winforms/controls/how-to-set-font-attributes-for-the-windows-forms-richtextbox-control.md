@@ -14,25 +14,25 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: a6fe5b30c457fae2d53c946092b214f492fe5e9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4919e94c23b1a67680ea0f360304ee0f75c7f425
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013269"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963224"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Festlegen von Schriftartattributen für das RichTextBox-Steuerelement von Windows Forms
-Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement verfügt über zahlreiche Optionen zum Formatieren des Texts angezeigt. Möglich markierten Zeichen fett, unterstrichen oder kursiv formatiert ist, mit der <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> Eigenschaft. Sie können mit dieser Eigenschaft außerdem die Größe und Schriftart der markierten Zeichen ändern. Die <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> Eigenschaft können Sie die Farbe der markierten Zeichen ändern.  
+Das Windows Forms <xref:System.Windows.Forms.RichTextBox> -Steuerelement verfügt über zahlreiche Optionen, um den angezeigten Text zu formatieren. Sie können die ausgewählten Zeichen mit der <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> -Eigenschaft fett formatieren, unterstrichen machen oder kursiv formatieren. Sie können mit dieser Eigenschaft außerdem die Größe und Schriftart der markierten Zeichen ändern. Die <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> -Eigenschaft ermöglicht es Ihnen, die Farbe der ausgewählten Zeichen zu ändern.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>So ändern Sie die Darstellung von Zeichen  
   
-1. Legen Sie die <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> Eigenschaft eine geeignete Schriftart.  
+1. Legen Sie <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> die-Eigenschaft auf eine entsprechende Schriftart fest.  
   
-     Um Benutzer zum Festlegen von Schriftfamilie, Größe und Schriftart in einer Anwendung zu aktivieren, verwenden Sie in der Regel die <xref:System.Windows.Forms.FontDialog> Komponente. Eine Übersicht finden Sie unter [Übersicht über die FontDialog-Komponente](fontdialog-component-overview-windows-forms.md).  
+     Wenn Sie es Benutzern ermöglichen möchten, die Schriftfamilie, die Größe und die Schriftart in einer Anwendung festzulegen, <xref:System.Windows.Forms.FontDialog> verwenden Sie in der Regel die-Komponente. Eine Übersicht finden Sie unter [Übersicht über die FontDialog-Komponente](fontdialog-component-overview-windows-forms.md).  
   
-2. Legen Sie die <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> Eigenschaft eine geeignete Farbe.  
+2. Legen Sie <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> die-Eigenschaft auf eine entsprechende Farbe fest.  
   
-     Um Benutzer zum Festlegen der Farbe in einer Anwendung zu aktivieren, verwenden Sie in der Regel die <xref:System.Windows.Forms.ColorDialog> Komponente. Eine Übersicht finden Sie unter [Übersicht über die ColorDialog-Komponente](colordialog-component-overview-windows-forms.md).  
+     Um Benutzern das Festlegen der Farbe in einer Anwendung zu ermöglichen, verwenden Sie in der <xref:System.Windows.Forms.ColorDialog> Regel die-Komponente. Eine Übersicht finden Sie unter [Übersicht über die ColorDialog-Komponente](colordialog-component-overview-windows-forms.md).  
   
     ```vb  
     RichTextBox1.SelectionFont = New Font("Tahoma", 12, FontStyle.Bold)  
@@ -51,7 +51,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement verf
     ```  
   
     > [!NOTE]
-    >  Diese Eigenschaften wirken sich nur auf markierten Text aus bzw., wenn kein Text markiert ist, auf den Text, der an der aktuellen Position der Einfügemarke eingegeben wird. Informationen zum Markieren von Text programmgesteuert, finden Sie unter <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
+    > Diese Eigenschaften wirken sich nur auf markierten Text aus bzw., wenn kein Text markiert ist, auf den Text, der an der aktuellen Position der Einfügemarke eingegeben wird. Informationen zum programmgesteuerten auswählen von Text finden <xref:System.Windows.Forms.TextBoxBase.Select%2A>Sie unter.  
   
 ## <a name="see-also"></a>Siehe auch
 
