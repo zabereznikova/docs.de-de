@@ -2,24 +2,24 @@
 title: <add> von <services>
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
-ms.openlocfilehash: c07b3377db4f5b434fd021b09de510c1d43ec832
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38dec132626b97accacea1b7007d914edcab0abc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673575"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926658"
 ---
-# <a name="add-of-services"></a><span data-ttu-id="6e7be-102">\<Hinzufügen > der \<Services ></span><span class="sxs-lookup"><span data-stu-id="6e7be-102">\<add> of \<services></span></span>
-<span data-ttu-id="6e7be-103">Gibt die Einstellungen für eine Instanz von <xref:System.Workflow.Runtime.WorkflowRuntime> zum Hosten workflowbasierter Windows Communication Foundation (WCF)-Diensten.</span><span class="sxs-lookup"><span data-stu-id="6e7be-103">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based Windows Communication Foundation (WCF) services.</span></span> <span data-ttu-id="6e7be-104">Dieses Element ist vom Typ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="6e7be-104">This element is of type <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span></span>  
+# <a name="add-of-services"></a><span data-ttu-id="37a99-102">\<> von \<Diensten hinzufügen ></span><span class="sxs-lookup"><span data-stu-id="37a99-102">\<add> of \<services></span></span>
+<span data-ttu-id="37a99-103">Gibt Einstellungen für eine Instanz von <xref:System.Workflow.Runtime.WorkflowRuntime> zum Hosting von Workflow basierten Windows Communication Foundation (WCF)-Diensten an.</span><span class="sxs-lookup"><span data-stu-id="37a99-103">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based Windows Communication Foundation (WCF) services.</span></span> <span data-ttu-id="37a99-104">Dieses Element ist vom Typ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="37a99-104">This element is of type <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span></span>  
   
- <span data-ttu-id="6e7be-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="6e7be-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="6e7be-106">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="6e7be-106">\<behaviors></span></span>  
-<span data-ttu-id="6e7be-107">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="6e7be-107">\<serviceBehaviors></span></span>  
-<span data-ttu-id="6e7be-108">\<behavior></span><span class="sxs-lookup"><span data-stu-id="6e7be-108">\<behavior></span></span>  
-<span data-ttu-id="6e7be-109">\<services></span><span class="sxs-lookup"><span data-stu-id="6e7be-109">\<services></span></span>  
-<span data-ttu-id="6e7be-110">\<add></span><span class="sxs-lookup"><span data-stu-id="6e7be-110">\<add></span></span>  
+ <span data-ttu-id="37a99-105">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="37a99-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="37a99-106">\<behaviors></span><span class="sxs-lookup"><span data-stu-id="37a99-106">\<behaviors></span></span>  
+<span data-ttu-id="37a99-107">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="37a99-107">\<serviceBehaviors></span></span>  
+<span data-ttu-id="37a99-108">\<behavior></span><span class="sxs-lookup"><span data-stu-id="37a99-108">\<behavior></span></span>  
+<span data-ttu-id="37a99-109">\<services></span><span class="sxs-lookup"><span data-stu-id="37a99-109">\<services></span></span>  
+<span data-ttu-id="37a99-110">\<add></span><span class="sxs-lookup"><span data-stu-id="37a99-110">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6e7be-111">Syntax</span><span class="sxs-lookup"><span data-stu-id="6e7be-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37a99-111">Syntax</span><span class="sxs-lookup"><span data-stu-id="37a99-111">Syntax</span></span>  
   
 ```xml  
 <workflowRuntime>
@@ -29,28 +29,28 @@ ms.locfileid: "61673575"
 </workflowRuntime>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="6e7be-112">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="6e7be-112">Attributes and Elements</span></span>  
- <span data-ttu-id="6e7be-113">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="6e7be-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="37a99-112">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="37a99-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="37a99-113">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="37a99-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="6e7be-114">Attribute</span><span class="sxs-lookup"><span data-stu-id="6e7be-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="37a99-114">Attribute</span><span class="sxs-lookup"><span data-stu-id="37a99-114">Attributes</span></span>  
   
-|<span data-ttu-id="6e7be-115">Attribut</span><span class="sxs-lookup"><span data-stu-id="6e7be-115">Attribute</span></span>|<span data-ttu-id="6e7be-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6e7be-116">Description</span></span>|  
+|<span data-ttu-id="37a99-115">Attribut</span><span class="sxs-lookup"><span data-stu-id="37a99-115">Attribute</span></span>|<span data-ttu-id="37a99-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="37a99-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="6e7be-117">Typ</span><span class="sxs-lookup"><span data-stu-id="6e7be-117">type</span></span>|<span data-ttu-id="6e7be-118">Eine Zeichenfolge, die den durch die Assembly bezeichneten Typnamen des zu initialisierenden Diensts angibt.</span><span class="sxs-lookup"><span data-stu-id="6e7be-118">A string that specifies the assembly-qualified type name of the service to be initialized.</span></span> <span data-ttu-id="6e7be-119">Der angegebene Dienst muss bestimmten Regeln über die Signaturen ihrer Konstruktoren folgen.</span><span class="sxs-lookup"><span data-stu-id="6e7be-119">The service specified must follow certain rules about the signatures of their constructors.</span></span> <span data-ttu-id="6e7be-120">Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="6e7be-120">See <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> for more information.</span></span>|  
+|<span data-ttu-id="37a99-117">Typ</span><span class="sxs-lookup"><span data-stu-id="37a99-117">type</span></span>|<span data-ttu-id="37a99-118">Eine Zeichenfolge, die den durch die Assembly bezeichneten Typnamen des zu initialisierenden Diensts angibt.</span><span class="sxs-lookup"><span data-stu-id="37a99-118">A string that specifies the assembly-qualified type name of the service to be initialized.</span></span> <span data-ttu-id="37a99-119">Der angegebene Dienst muss bestimmten Regeln über die Signaturen ihrer Konstruktoren folgen.</span><span class="sxs-lookup"><span data-stu-id="37a99-119">The service specified must follow certain rules about the signatures of their constructors.</span></span> <span data-ttu-id="37a99-120">Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="37a99-120">See <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> for more information.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="6e7be-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="6e7be-121">Child Elements</span></span>  
- <span data-ttu-id="6e7be-122">Keine</span><span class="sxs-lookup"><span data-stu-id="6e7be-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="37a99-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="37a99-121">Child Elements</span></span>  
+ <span data-ttu-id="37a99-122">Keine</span><span class="sxs-lookup"><span data-stu-id="37a99-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="6e7be-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="6e7be-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="37a99-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="37a99-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="6e7be-124">Element</span><span class="sxs-lookup"><span data-stu-id="6e7be-124">Element</span></span>|<span data-ttu-id="6e7be-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6e7be-125">Description</span></span>|  
+|<span data-ttu-id="37a99-124">Element</span><span class="sxs-lookup"><span data-stu-id="37a99-124">Element</span></span>|<span data-ttu-id="37a99-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="37a99-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="6e7be-126">\<services></span><span class="sxs-lookup"><span data-stu-id="6e7be-126">\<services></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/services-of-workflowruntime.md)|<span data-ttu-id="6e7be-127">Eine Auflistung von Diensten, die der <xref:System.Workflow.Runtime.WorkflowRuntime>-Engine hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="6e7be-127">A collection of services that will be added to the <xref:System.Workflow.Runtime.WorkflowRuntime> engine.</span></span> <span data-ttu-id="6e7be-128">Die Elemente sind vom Typ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="6e7be-128">The elements are of type <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span></span>  <span data-ttu-id="6e7be-129">Die in der Auflistung angegebenen Dienste werden von der Workflowruntime-Engine initialisiert und den Diensten hinzugefügt, wenn der entsprechende <xref:System.Workflow.Runtime.WorkflowRuntime>-Konstruktor aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="6e7be-129">The services specified in the collection will be initialized by the workflow runtime engine and added to its services when the appropriate <xref:System.Workflow.Runtime.WorkflowRuntime> constructor is called.</span></span> <span data-ttu-id="6e7be-130">Aus diesem Grund müssen die in der Auflistung angegebenen Dienste bestimmte Regeln bezüglich der Signaturen ihrer Konstruktoren erfüllen.</span><span class="sxs-lookup"><span data-stu-id="6e7be-130">Therefore, the services specified in the collection must follow certain rules about the signatures of their constructors.</span></span> <span data-ttu-id="6e7be-131">Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="6e7be-131">See <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> for more information.</span></span>|  
+|[<span data-ttu-id="37a99-126">\<services></span><span class="sxs-lookup"><span data-stu-id="37a99-126">\<services></span></span>](services-of-workflowruntime.md)|<span data-ttu-id="37a99-127">Eine Auflistung von Diensten, die der <xref:System.Workflow.Runtime.WorkflowRuntime>-Engine hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="37a99-127">A collection of services that will be added to the <xref:System.Workflow.Runtime.WorkflowRuntime> engine.</span></span> <span data-ttu-id="37a99-128">Die Elemente sind vom Typ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="37a99-128">The elements are of type <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span></span>  <span data-ttu-id="37a99-129">Die in der Auflistung angegebenen Dienste werden von der Workflowruntime-Engine initialisiert und den Diensten hinzugefügt, wenn der entsprechende <xref:System.Workflow.Runtime.WorkflowRuntime>-Konstruktor aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="37a99-129">The services specified in the collection will be initialized by the workflow runtime engine and added to its services when the appropriate <xref:System.Workflow.Runtime.WorkflowRuntime> constructor is called.</span></span> <span data-ttu-id="37a99-130">Aus diesem Grund müssen die in der Auflistung angegebenen Dienste bestimmte Regeln bezüglich der Signaturen ihrer Konstruktoren erfüllen.</span><span class="sxs-lookup"><span data-stu-id="37a99-130">Therefore, the services specified in the collection must follow certain rules about the signatures of their constructors.</span></span> <span data-ttu-id="37a99-131">Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="37a99-131">See <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> for more information.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6e7be-132">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6e7be-132">Remarks</span></span>  
- <span data-ttu-id="6e7be-133">Der in diesem Element angegebene Dienst wird von der Workflowruntime-Engine initialisiert und seinen Diensten hinzugefügt, wenn der entsprechende <xref:System.Workflow.Runtime.WorkflowRuntime>-Konstruktor aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="6e7be-133">The service specified in this element will be initialized by the workflow runtime engine and added to its services when the appropriate <xref:System.Workflow.Runtime.WorkflowRuntime> constructor is called.</span></span> <span data-ttu-id="6e7be-134">Deshalb muss der in der Auflistung angegebenen Dienst bestimmten Regeln über die Signaturen ihrer Konstruktoren folgen.</span><span class="sxs-lookup"><span data-stu-id="6e7be-134">Therefore, the service specified must follow certain rules about the signatures of their constructors.</span></span> <span data-ttu-id="6e7be-135">Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="6e7be-135">See <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> for more information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="37a99-132">Hinweise</span><span class="sxs-lookup"><span data-stu-id="37a99-132">Remarks</span></span>  
+ <span data-ttu-id="37a99-133">Der in diesem Element angegebene Dienst wird von der Workflowruntime-Engine initialisiert und seinen Diensten hinzugefügt, wenn der entsprechende <xref:System.Workflow.Runtime.WorkflowRuntime>-Konstruktor aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="37a99-133">The service specified in this element will be initialized by the workflow runtime engine and added to its services when the appropriate <xref:System.Workflow.Runtime.WorkflowRuntime> constructor is called.</span></span> <span data-ttu-id="37a99-134">Deshalb muss der in der Auflistung angegebenen Dienst bestimmten Regeln über die Signaturen ihrer Konstruktoren folgen.</span><span class="sxs-lookup"><span data-stu-id="37a99-134">Therefore, the service specified must follow certain rules about the signatures of their constructors.</span></span> <span data-ttu-id="37a99-135">Weitere Informationen finden Sie unter <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span><span class="sxs-lookup"><span data-stu-id="37a99-135">See <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> for more information.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6e7be-136">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6e7be-136">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="37a99-136">Beispiel</span><span class="sxs-lookup"><span data-stu-id="37a99-136">Example</span></span>  
   
 ```xml  
 <serviceBehaviors>
@@ -66,9 +66,9 @@ ms.locfileid: "61673575"
 </serviceBehaviors>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6e7be-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6e7be-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37a99-137">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37a99-137">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
 - <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
-- <span data-ttu-id="6e7be-138">[Workflowkonfigurationsdateien](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="6e7be-138">[Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span></span>
+- <span data-ttu-id="37a99-138">[Workflow Konfigurationsdateien](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="37a99-138">[Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span></span>

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a7a2475891488d1fdd60f0db4a483c144a73f0d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966911"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947847"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="8ad84-102">Vorgehensweise: Senden von Daten an das aktive untergeordnete MDI-Element</span><span class="sxs-lookup"><span data-stu-id="8ad84-102">How to: Send Data to the Active MDI Child</span></span>
-<span data-ttu-id="8ad84-103">Häufig innerhalb des Kontexts [Multiple Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), Senden von Daten an das aktive untergeordnete Fenster, z. B. wenn der Benutzer Daten aus der Zwischenablage in einer MDI-Anwendung eingefügt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="8ad84-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a><span data-ttu-id="74969-102">Vorgehensweise: Senden von Daten an das aktive untergeordnete MDI-Element</span><span class="sxs-lookup"><span data-stu-id="74969-102">How to: Send Data to the Active MDI Child</span></span>
+<span data-ttu-id="74969-103">Im Kontext von [MDI-Anwendungen (Multiple Document Interface)](multiple-document-interface-mdi-applications.md)müssen häufig Daten an das aktive untergeordnete Fenster gesendet werden, z. b., wenn der Benutzerdaten aus der Zwischenablage in eine MDI-Anwendung einfügt.</span><span class="sxs-lookup"><span data-stu-id="74969-103">Often, within the context of [Multiple-Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), you will need to send data to the active child window, such as when the user pastes data from the Clipboard into an MDI application.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="8ad84-104">Weitere Informationen zu überprüfen, welches untergeordnete Fenster den Fokus besitzt und dessen Inhalt in die Zwischenablage senden, finden Sie unter [Bestimmen des aktiven untergeordneten MDI-Fensters](how-to-determine-the-active-mdi-child.md).</span><span class="sxs-lookup"><span data-stu-id="8ad84-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
+> <span data-ttu-id="74969-104">Informationen zum Überprüfen, welches untergeordnete Fenster den Fokus besitzt und seinen Inhalt in die Zwischenablage sendet, finden Sie unter [bestimmen des aktiven untergeordneten MDI](how-to-determine-the-active-mdi-child.md)-Elements.</span><span class="sxs-lookup"><span data-stu-id="74969-104">For information about verifying which child window has focus and sending its contents to the Clipboard, see [Determining the Active MDI Child](how-to-determine-the-active-mdi-child.md).</span></span>  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="8ad84-105">Zum Senden von Daten auf dem aktiven untergeordneten MDI-Fensters aus der Zwischenablage</span><span class="sxs-lookup"><span data-stu-id="8ad84-105">To send data to the active MDI child window from the Clipboard</span></span>  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a><span data-ttu-id="74969-105">So senden Sie Daten aus der Zwischenablage an das aktive untergeordnete MDI-Fenster</span><span class="sxs-lookup"><span data-stu-id="74969-105">To send data to the active MDI child window from the Clipboard</span></span>  
   
-1. <span data-ttu-id="8ad84-106">Kopieren Sie den Text in der Zwischenablage in das aktive Steuerelement des aktiven untergeordneten Formulars, in einer Methode.</span><span class="sxs-lookup"><span data-stu-id="8ad84-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
+1. <span data-ttu-id="74969-106">Kopieren Sie den Text in der Zwischenablage in eine Methode in das aktive Steuerelement des aktiven untergeordneten Formulars.</span><span class="sxs-lookup"><span data-stu-id="74969-106">Within a method, copy the text on the Clipboard to the active control of the active child form.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="8ad84-107">In diesem Beispiel geht davon aus, es ist ein übergeordnetes MDI-Formular (`Form1`), die eine oder mehrere untergeordnete MDI-Fenster mit wurde ein <xref:System.Windows.Forms.RichTextBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="8ad84-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="8ad84-108">Weitere Informationen finden Sie unter [Erstellen von übergeordneten MDI-Formularen](how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="8ad84-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
+    > <span data-ttu-id="74969-107">In diesem Beispiel wird davon ausgegangen, dass ein übergeordnetes`Form1`MDI-Formular () vorhanden ist, das mindestens ein <xref:System.Windows.Forms.RichTextBox> untergeordnetes MDI-Fenster mit einem-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="74969-107">This example assumes there is an MDI parent form (`Form1`) that has one or more MDI child windows containing a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="74969-108">Weitere Informationen finden Sie unter [Erstellen von übergeordneten MDI-Formularen](how-to-create-mdi-parent-forms.md).</span><span class="sxs-lookup"><span data-stu-id="74969-108">For more information, see [Creating MDI Parent Forms](how-to-create-mdi-parent-forms.md).</span></span>  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -91,10 +91,10 @@ ms.locfileid: "61966911"
     }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="8ad84-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8ad84-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="74969-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="74969-109">See also</span></span>
 
-- [<span data-ttu-id="8ad84-110">MDI-Anwendungen (Multiple Document Interface)</span><span class="sxs-lookup"><span data-stu-id="8ad84-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
-- [<span data-ttu-id="8ad84-111">Vorgehensweise: Erstellen von übergeordneten MDI-Formularen</span><span class="sxs-lookup"><span data-stu-id="8ad84-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
-- [<span data-ttu-id="8ad84-112">Vorgehensweise: Erstellen von untergeordneten MDI-Formularen</span><span class="sxs-lookup"><span data-stu-id="8ad84-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
-- [<span data-ttu-id="8ad84-113">Vorgehensweise: Bestimmen des aktiven untergeordneten MDI-Elements</span><span class="sxs-lookup"><span data-stu-id="8ad84-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
-- [<span data-ttu-id="8ad84-114">Vorgehensweise: Anordnen von untergeordneten MDI-Formularen</span><span class="sxs-lookup"><span data-stu-id="8ad84-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
+- [<span data-ttu-id="74969-110">MDI-Anwendungen (Multiple Document Interface)</span><span class="sxs-lookup"><span data-stu-id="74969-110">Multiple-Document Interface (MDI) Applications</span></span>](multiple-document-interface-mdi-applications.md)
+- [<span data-ttu-id="74969-111">Vorgehensweise: Übergeordnete MDI-Formulare erstellen</span><span class="sxs-lookup"><span data-stu-id="74969-111">How to: Create MDI Parent Forms</span></span>](how-to-create-mdi-parent-forms.md)
+- [<span data-ttu-id="74969-112">Vorgehensweise: Erstellen von untergeordneten MDI-Formularen</span><span class="sxs-lookup"><span data-stu-id="74969-112">How to: Create MDI Child Forms</span></span>](how-to-create-mdi-child-forms.md)
+- [<span data-ttu-id="74969-113">Vorgehensweise: Festlegen des aktiven untergeordneten MDI-Elements</span><span class="sxs-lookup"><span data-stu-id="74969-113">How to: Determine the Active MDI Child</span></span>](how-to-determine-the-active-mdi-child.md)
+- [<span data-ttu-id="74969-114">Vorgehensweise: Untergeordnete MDI-Formulare anordnen</span><span class="sxs-lookup"><span data-stu-id="74969-114">How to: Arrange MDI Child Forms</span></span>](how-to-arrange-mdi-child-forms.md)
