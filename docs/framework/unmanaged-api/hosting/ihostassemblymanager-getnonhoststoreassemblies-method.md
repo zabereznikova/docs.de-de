@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3680721c70ab69776c973913d929f7bdd9db3909
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccd73963302ae99c7d5d1a7201bc77c4544363f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779445"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937898"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies-Methode
-Ruft einen Schnittstellenzeiger auf ein [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , das die Liste der Assemblys, die der Host erwartet, die common Language Runtime (CLR) beim Laden dass darstellt.  
+Ruft einen Schnittstellen Zeiger auf eine [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) ab, die die Liste der Assemblys darstellt, die der Host erwartet, dass die Common Language Runtime (CLR) geladen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,42 +37,42 @@ HRESULT GetNonHostStoreAssemblies (
   
 ## <a name="parameters"></a>Parameter  
  `ppReferenceList`  
- [out] Ein Zeiger auf die Adresse einer `ICLRAssemblyReferenceList` , enthält eine Liste der Verweise auf Assemblys, die der Host erwartet, dass die CLR geladen.  
+ vorgenommen Ein Zeiger auf die Adresse eines `ICLRAssemblyReferenceList` , der eine Liste der Verweise auf Assemblys enthält, die der Host erwartet, dass die CLR geladen wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`GetNonHostStoreAssemblies` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`GetNonHostStoreAssemblies`wurde erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um die Liste der Verweise für die angeforderte erstellen `ICLRAssemblyReferenceList`.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_OUTOFMEMORY|Es war nicht genügend Arbeitsspeicher verfügbar, um die Liste der Verweise für `ICLRAssemblyReferenceList`den angeforderten zu erstellen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die CLR löst Verweise, die mithilfe der folgenden Richtlinien:  
+ Die CLR löst Verweise mithilfe der folgenden Richtlinien auf:  
   
-- Zuerst herangezogen, die Liste von Assemblyverweisen, die vom `GetNonHostStoreAssemblies`.  
+- Zuerst wird die Liste der von `GetNonHostStoreAssemblies`zurückgegebenen Assemblyverweise konsultiert.  
   
-- Wenn die Assembly in der Liste angezeigt wird, wird die CLR, die normalerweise gebunden.  
+- Wenn die Assembly in der Liste angezeigt wird, bindet die CLR Sie normal an Sie.  
   
-- Wenn die Assembly nicht in der Liste angezeigt, und der Host eine Implementierung von stellt [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md), die CLR ruft [IHostAssemblyStore:: ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) auf den Host ermöglichen die die Assembly zum Binden an.  
+- Wenn die Assembly nicht in der Liste angezeigt wird und der Host eine Implementierung von [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)bereitgestellt hat, ruft die CLR [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md) auf, damit der Host die Assembly bereitstellen kann, an die die Bindung erfolgen soll.  
   
-- Andernfalls kann die CLR auf die Assembly zu binden.  
+- Andernfalls kann die CLR nicht an die Assembly gebunden werden.  
   
- Wenn der Host setzt `ppReferenceList` Aufrufe im globalen Assemblycache, null, durchsucht die CLR zuerst `ProvideAssembly`, und von Tests, klicken Sie dann die Anwendungsbasis, um einen Assemblyverweis aufzulösen.  
+ Wenn der Host auf `ppReferenceList` NULL festlegt, testet die CLR zuerst den globalen Assemblycache `ProvideAssembly`, ruft auf und testet dann die Anwendungs Basis, um einen Assemblyverweis aufzulösen.  
   
 > [!NOTE]
->  Bei der Initialisierung, die CLR ruft `GetNonHostStoreAssemblies` nur einmal. Die Methode wird nicht erneut aufgerufen.  
+> Bei der Initialisierung ruft `GetNonHostStoreAssemblies` die CLR nur einmal auf. Die Methode wird nicht erneut aufgerufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: b5ad2280c832b62e043a1f65f082d5475697c38c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545353"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960338"
 ---
 # <a name="packaging-fonts-with-applications"></a>Verpacken von Schriftarten mit Anwendungen
 Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Ihrer Anwendung.  
   
 > [!NOTE]
->  Wie die meisten Arten von Software werden Schriftartdateien eher lizenziert als verkauft. Lizenzen, die die Verwendung von Schriftarten steuern, unterscheiden sich von Hersteller zu Hersteller, aber in den meisten Lizenzen [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] , einschließlich derjenigen, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]die die Schriftarten mit Anwendungen abdecken, können die Schriftarten nicht in Anwendungen eingebettet werden oder anderweitig neu verteilt. Deshalb liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anderweitig verbreiten.  
+> Wie die meisten Arten von Software werden Schriftartdateien eher lizenziert als verkauft. Lizenzen, die die Verwendung von Schriftarten steuern, unterscheiden sich von Hersteller zu Hersteller, aber in den meisten Lizenzen [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] , einschließlich derjenigen, die die Schriftarten in Bezug auf die Schriftarten und Windows abdecken, dürfen die Schriftarten nicht in Anwendungen eingebettet werden oder anderweitig neu verteilt. Deshalb liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anderweitig verbreiten.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Einführung in das Verpacken von Schriftarten  
@@ -81,7 +81,7 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit [
 ```  
   
 > [!NOTE]
->  Wenn Sie der Anwendung Schriftarten als Ressourcen hinzufügen, stellen Sie sicher, dass `<Resource>` Sie das-Element und `<EmbeddedResource>` nicht das-Element in der Projektdatei der Anwendung festlegen. Das `<EmbeddedResource>` -Element für die Buildaktion wird nicht unterstützt.  
+> Wenn Sie der Anwendung Schriftarten als Ressourcen hinzufügen, stellen Sie sicher, dass `<Resource>` Sie das-Element und `<EmbeddedResource>` nicht das-Element in der Projektdatei der Anwendung festlegen. Das `<EmbeddedResource>` -Element für die Buildaktion wird nicht unterstützt.  
   
  Im folgenden Markupbeispiel wird veranschaulicht, wie auf die Schriftartenressourcen der Anwendung verwiesen wird.  
   
@@ -152,7 +152,7 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit [
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  Dieses SDK enthält eine Reihe von OpenType-Beispiel Schriftarten, die Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mit-Anwendungen verwenden können. Die Schriftarten werden in einer Bibliothek nur für Ressourcen definiert. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
+> Dieses SDK enthält eine Reihe von OpenType-Beispiel Schriftarten, die Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mit-Anwendungen verwenden können. Die Schriftarten werden in einer Bibliothek nur für Ressourcen definiert. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Einschränkungen der Verwendung von Schriftarten  

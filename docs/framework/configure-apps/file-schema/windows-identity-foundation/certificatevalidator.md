@@ -3,15 +3,15 @@ title: <certificateValidator>
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-ms.openlocfilehash: df52212305e0865b8c03fdd49068cb7c7da4fa38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c25f183679f41f51ffee4f482bfe7a64763647d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667365"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941902"
 ---
 # <a name="certificatevalidator"></a>\<certificateValidator>
-Gibt einen benutzerdefinierten Typ für die Überprüfung des Zertifikats an. Dieser Typ wird verwendet, nur dann, wenn die `certificateValidationMode` Attribut der [ \<CertificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) Element in "Benutzerdefiniert" festgelegt ist.  
+Gibt einen benutzerdefinierten Typ für die Zertifikats Überprüfung an. Dieser Typ wird nur verwendet, wenn `certificateValidationMode` das-Attribut [ \<des certifiinitievalidation->](certificatevalidation.md) -Elements auf "Custom" festgelegt ist.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,16 +38,16 @@ Gibt einen benutzerdefinierten Typ für die Überprüfung des Zertifikats an. Di
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Gibt einen benutzerdefinierten Typ abgeleitet, die die <xref:System.IdentityModel.Selectors.X509CertificateValidator> Klasse. Legen Sie die `certificateValidationMode` Attribut der [ \<CertificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) Element auf "Custom" zum Verwenden dieses Typs. Weitere Informationen zur Vorgehensweise beim Angeben der `type` Attribut, finden Sie unter [benutzerdefinierte Typverweise](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Dies ist optional.|  
+|Typ|Gibt einen benutzerdefinierten Typ an, der <xref:System.IdentityModel.Selectors.X509CertificateValidator> von der-Klasse abgeleitet wird. Legen Sie `certificateValidationMode` das-Attribut [ \<des certifialievalidation->](certificatevalidation.md) Elements auf "Custom" fest, um diesen Typ zu verwenden. Weitere Informationen zum Angeben des `type` -Attributs finden Sie unter [benutzerdefinierte Typverweise](../windows-workflow-foundation/index.md). Optional.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Steuert die Einstellungen, die token-Handler zum Überprüfen von Zertifikaten verwenden.|  
+|[\<certificateValidation>](certificatevalidation.md)|Steuert die Einstellungen, die von tokenhandlern zum Überprüfen von Zertifikaten verwendet werden.|  
   
 ## <a name="example"></a>Beispiel  
   

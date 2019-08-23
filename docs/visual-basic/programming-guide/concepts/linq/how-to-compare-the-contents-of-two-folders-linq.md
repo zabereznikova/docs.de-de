@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5db73b57cfa21de4f1d14299ed7956a322876898
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593010"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940686"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (Visual Basic)
 Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:  
@@ -19,7 +19,7 @@ Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:
 - Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.  
   
     > [!NOTE]
-    >  Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.  
+    > Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.  
   
  Die hier gezeigte `FileComparer`-Klasse veranschaulicht, wie eine benutzerdefinierte Vergleichsklasse zusammen mit den Standardabfrageoperatoren verwendet wird. Die Klasse ist nicht für die Verwendung in realen Szenarios vorgesehen. Sie verwendet nur den Namen und die Länge jeder Datei in Bytes, um zu bestimmen, ob die Inhalte der einzelnen Ordner identisch sind. In einem realen Szenario sollten Sie diese Vergleichsklasse ändern, um eine gründlichere Überprüfung auf Gleichheit durchzuführen.  
   
@@ -114,7 +114,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Erstellen Sie ein Konsolenanwendungsprojekt für VB.NET, mit einem `Imports` -Anweisung für den Namespace "System.Linq".
+ Erstellen Sie ein Konsolen Anwendungsprojekt in VB.net mit `Imports` einer-Anweisung für den System. Linq-Namespace.
  
 ## <a name="see-also"></a>Siehe auch
 

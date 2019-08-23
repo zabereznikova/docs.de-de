@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: a71758781511f18ddf5451feaf0d308af1b4a652
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ed62d0193639b434d66c446e3b9d0c184577a80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879930"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949563"
 ---
 # <a name="connection-events"></a>Verbindungsereignisse
-Alle von .NET Framework-Datenanbietern **Verbindung** Objekte mit zwei Ereignisse, die Sie verwenden können, um informationsmeldungen aus einer Datenquelle abzurufen oder zu bestimmen, ob der Status der eine **Verbindung** hat geändert. Die folgende Tabelle beschreibt die Ereignisse der **Verbindung** Objekt.  
+Alle .NET Framework Datenanbieter verfügen über **Verbindungs** Objekte mit zwei Ereignissen, mit denen Sie Informationsmeldungen aus einer Datenquelle abrufen oder ermitteln können, ob sich der Status einer **Verbindung** geändert hat. In der folgenden Tabelle werden die Ereignisse des **Connection** -Objekts beschrieben.  
   
 |event|Beschreibung|  
 |-----------|-----------------|  
 |**InfoMessage**|Dieses Ereignis tritt auf, wenn eine Informationsmeldung aus einer Datenquelle zurückgegeben wird. Bei Informationsmeldungen handelt es sich um Meldungen aus einer Datenquelle, die keine Ausnahme auslösen.|  
-|**StateChange**|Tritt auf, wenn der Status der der **Verbindung** Änderungen.|  
+|**StateChange**|Tritt auf, wenn sich der Zustand der **Verbindung** ändert.|  
   
 ## <a name="working-with-the-infomessage-event"></a>Arbeiten mit dem "InfoMessage"-Ereignis  
- Mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis des <xref:System.Data.SqlClient.SqlConnection>-Objekts können Warnungen und Informationsmeldungen aus einer SQL Server-Datenquelle abgerufen werden. Wenn von einer Datenquelle Fehler mit einem Schweregrad zwischen 11 und 16 zurückgegeben werden, wird eine Ausnahme ausgelöst. Mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis können jedoch Meldungen aus der Datenquelle abgerufen werden, die keinem Fehler zugewiesen sind. Bei Microsoft SQL Server werden alle Meldungen mit einem Schweregrad von 10 oder weniger als Informationsmeldungen betrachtet und mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis aufgezeichnet. Weitere Informationen finden Sie unter den [Schweregrade von Datenbank-Engine-Fehler](/sql/relational-databases/errors-events/database-engine-error-severities) Artikel.
+ Mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis des <xref:System.Data.SqlClient.SqlConnection>-Objekts können Warnungen und Informationsmeldungen aus einer SQL Server-Datenquelle abgerufen werden. Wenn von einer Datenquelle Fehler mit einem Schweregrad zwischen 11 und 16 zurückgegeben werden, wird eine Ausnahme ausgelöst. Mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis können jedoch Meldungen aus der Datenquelle abgerufen werden, die keinem Fehler zugewiesen sind. Bei Microsoft SQL Server werden alle Meldungen mit einem Schweregrad von 10 oder weniger als Informationsmeldungen betrachtet und mit dem <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis aufgezeichnet. Weitere Informationen finden Sie im Artikel [Datenbank-Engine Fehler Schweregrade](/sql/relational-databases/errors-events/database-engine-error-severities) .
   
- Die <xref:System.Data.SqlClient.SqlConnection.InfoMessage> -Ereignis empfängt ein <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> Objekt enthält, in dessen **Fehler** -Eigenschaft, die eine Auflistung von Nachrichten aus der Datenquelle. Sie können Abfragen, die **Fehler** Objekte in dieser Auflistung für den Fehlertext und dem Meldungstext sowie die Ursache des Fehlers. Der .NET Framework-Datenanbieter für SQL Server zeigt außerdem Details zu der Datenbank, der gespeicherten Prozedur und der Zeilennummer an, aus der die Meldung stammt.  
+ Das <xref:System.Data.SqlClient.SqlConnection.InfoMessage> -Ereignis empfängt <xref:System.Data.SqlClient.SqlInfoMessageEventArgs> ein Objekt, das in der **Errors** -Eigenschaft eine Sammlung der Nachrichten aus der Datenquelle enthält. Sie können die **Fehler** Objekte in dieser Sammlung nach der Fehlernummer und dem Meldungs Text und der Fehlerquelle Abfragen. Der .NET Framework-Datenanbieter für SQL Server zeigt außerdem Details zu der Datenbank, der gespeicherten Prozedur und der Zeilennummer an, aus der die Meldung stammt.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird veranschaulicht, wie für das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis ein Ereignishandler hinzugefügt wird.  
@@ -66,17 +66,17 @@ protected static void OnInfoMessage(
 ```  
   
 ## <a name="handling-errors-as-infomessages"></a>Behandeln von Fehlern als "InfoMessages"  
- Das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis wird i. d. R. nur für Informations- und Warnmeldungen ausgelöst, die vom Server gesendet werden. Jedoch, wenn ein tatsächlicher Fehler auftritt, die Ausführung der **ExecuteNonQuery** oder **"ExecuteReader"** -Methode, die den Servervorgang initialisiert hat, angehalten, und eine Ausnahme ausgelöst.  
+ Das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis wird i. d. R. nur für Informations- und Warnmeldungen ausgelöst, die vom Server gesendet werden. Wenn jedoch ein tatsächlicher Fehler auftritt, wird die Ausführung der **ExecuteNonQuery** -Methode oder der **ExecuteReader** -Methode, die den Server Vorgang initiiert hat, angehalten, und es wird eine Ausnahme ausgelöst.  
   
  Wenn Sie die Verarbeitung der restlichen Anweisungen in einem Befehl unabhängig von den vom Server erzeugten Fehlern fortsetzen möchten, legen sie die <xref:System.Data.SqlClient.SqlConnection.FireInfoMessageEventOnUserErrors%2A>-Eigenschaft der <xref:System.Data.SqlClient.SqlConnection> auf `true` fest. Bei dieser Vorgehensweise wird bei Fehlern von der Verbindung das <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis ausgelöst, anstatt eine Ausnahme auszulösen und die Verarbeitung zu unterbrechen. Die Clientanwendung kann dann dieses Ereignis behandeln und auf Fehlerbedingungen reagieren.  
   
 > [!NOTE]
->  Wenn aufgrund eines Fehlers mit einem Schweregrad von 17 oder höher der Server die Verarbeitung des Befehls abbricht, muss dieser Fehler als Ausnahme behandelt werden. In diesem Fall wird unabhängig davon, wie der Fehler im <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis behandelt wird, eine Ausnahme ausgelöst.  
+> Wenn aufgrund eines Fehlers mit einem Schweregrad von 17 oder höher der Server die Verarbeitung des Befehls abbricht, muss dieser Fehler als Ausnahme behandelt werden. In diesem Fall wird unabhängig davon, wie der Fehler im <xref:System.Data.SqlClient.SqlConnection.InfoMessage>-Ereignis behandelt wird, eine Ausnahme ausgelöst.  
   
 ## <a name="working-with-the-statechange-event"></a>Arbeiten mit dem "StateChange"-Ereignis  
- Die **StateChange** Ereignis tritt auf, wenn der Status der eine **Verbindung** Änderungen. Die **StateChange** -Ereignis empfängt <xref:System.Data.StateChangeEventArgs> , mit denen Sie bestimmen, der die Änderung des von der **Verbindung** mithilfe der **OriginalState** und **CurrentState** Eigenschaften. Die **OriginalState** -Eigenschaft ist eine <xref:System.Data.ConnectionState> -Enumeration, die den Status der gibt an die **Verbindung** vor der Änderung. **CurrentState** ist eine <xref:System.Data.ConnectionState> -Enumeration, die den Status der gibt an die **Verbindung** nach der Änderung.  
+ Das **StateChange** -Ereignis tritt auf, wenn sich der Status einer **Verbindung** ändert. Das **StateChange** -Ereignis <xref:System.Data.StateChangeEventArgs> empfängt, das es Ihnen ermöglicht, die Änderung des Zustands der **Verbindung** mithilfe der **OriginalState** -Eigenschaft und der **CurrentState** -Eigenschaft zu bestimmen. Die **OriginalState** -Eigenschaft ist <xref:System.Data.ConnectionState> eine-Enumeration, die den Zustand der **Verbindung** vor der Änderung angibt. **CurrentState** ist eine <xref:System.Data.ConnectionState> -Enumeration, die den Zustand der **Verbindung** angibt, nachdem Sie geändert wurde.  
   
- Im folgenden Codebeispiel wird die **StateChange** Ereignis, um eine Nachricht an die Konsole schreiben bei den Status des der **Verbindung** Änderungen.  
+ Im folgenden Codebeispiel wird das **StateChange** -Ereignis verwendet, um eine Meldung in die Konsole zu schreiben, wenn sich der Zustand der **Verbindung** ändert.  
   
 ```vb  
 ' Assumes connection represents a SqlConnection object.  

@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa36399320a8c396a222619172264a32f3eb3505
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0462bcb3bc39c0ccbe8521729df9456cf15d7a69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723601"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955750"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW-Ereignisse in .NET Framework
 Die Ereignisablaufverfolgung für Windows (ETW) ist ein leistungsstarkes, skalierbares Ablaufverfolgungssystem mit geringem Verwaltungsaufwand, das von den Windows-Betriebssystemen bereitgestellt wird. Es stellt eine Ergänzung zur Unterstützung für die Profilerstellung und das Debuggen dar, die von .NET Framework bereitgestellt werden und kann zur Problembehebung von einer Vielzahl von Szenarios verwendet werden.  
   
- In .NET Framework ist die ETW-Ereignisablaufverfolgung für die Common Language Runtime (CLR), die [Task Parallel Library](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) und [Paralleles LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) verfügbar.  
+ In .NET Framework ist die ETW-Ereignisablaufverfolgung für die Common Language Runtime (CLR), die [Task Parallel Library](../../standard/parallel-programming/task-parallel-library-tpl.md) und [Paralleles LINQ (PLINQ)](../../standard/parallel-programming/parallel-linq-plinq.md) verfügbar.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ETW Events in Task Parallel Library and PLINQ (ETW-Ereignisse in der Task Parallel Library und PLINQ)](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)  
@@ -29,5 +29,5 @@ Die Ereignisablaufverfolgung für Windows (ETW) ist ein leistungsstarkes, skalie
 ## <a name="see-also"></a>Siehe auch
 
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
-- [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Task Parallel Library (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../standard/parallel-programming/parallel-linq-plinq.md)

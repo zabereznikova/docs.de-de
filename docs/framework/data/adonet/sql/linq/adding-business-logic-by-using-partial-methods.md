@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: ed440f3315fc25e82b648f21410acb7a2c2a08f9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e3f82c260a2cab85270a9f33a87eb9a9f04b72c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743667"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964142"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Hinzufügen von Geschäftslogik durch Verwenden partieller Methoden
-Sie können anpassen, dass Visual Basic und C# erzeugten Code in Ihre [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekte mit *partielle Methoden*. Der von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erzeugte Code definiert Signaturen als einen Teil einer partiellen Methode. Wenn Sie die Methode implementieren möchten, können Sie eine eigene partielle Methode hinzufügen. Wenn Sie keine eigene Implementierung hinzufügen, verwirft der Compiler die partielle Methodensignatur und ruft die Standardmethoden in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] auf.  
+Sie können Visual Basic und C# generierten Code in Ihren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekten anpassen, indem Sie *partielle Methoden*verwenden. Der von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erzeugte Code definiert Signaturen als einen Teil einer partiellen Methode. Wenn Sie die Methode implementieren möchten, können Sie eine eigene partielle Methode hinzufügen. Wenn Sie keine eigene Implementierung hinzufügen, verwirft der Compiler die partielle Methodensignatur und ruft die Standardmethoden in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] auf.  
   
 > [!NOTE]
->  Wenn Sie Visual Studio verwenden, können Sie den Object Relational Designer, Hinzufügen von Validierungen und andere Anpassungen an Entitätsklassen.  
+> Wenn Sie Visual Studio verwenden, können Sie die objektrelationaler Designer verwenden, um Entitäts Klassen Validierung und andere Anpassungen hinzuzufügen.  
   
  Die Standardzuordnung der `Customer`-Klasse in der Beispieldatenbank Northwind enthält beispielsweise die folgende partielle Methode:  
   
@@ -28,9 +28,9 @@ Sie können anpassen, dass Visual Basic und C# erzeugten Code in Ihre [!INCLUDE[
  [!code-csharp[DLinqOverrideDefault#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/Program.cs#3)]
  [!code-vb[DLinqOverrideDefault#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefault/vb/Module1.vb#3)]  
   
- Dieser Ansatz wird normalerweise verwendet, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zum Überschreiben von Standardmethoden für `Insert`, `Update`, `Delete`, und überprüfen die Eigenschaften während des Lebenszyklus von unternehmensanwendunen Objektereignisse.  
+ Dieser Ansatz wird in der Regel [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in verwendet, um Standard `Insert`Methoden `Update`für `Delete`,, und zu überschreiben, um Eigenschaften während Objekt Lebenszyklus-Ereignissen zu überprüfen.  
   
- Weitere Informationen finden Sie unter [partielle Methoden](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) oder [Partial (Methode) (C# Verweis)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#).  
+ Weitere Informationen finden Sie unter [partielle Methoden](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) oder [partielle (MethodeC# ) (Referenz)](../../../../../csharp/language-reference/keywords/partial-method.md) (C#).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -44,7 +44,7 @@ Sie können anpassen, dass Visual Basic und C# erzeugten Code in Ihre [!INCLUDE[
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Das folgende Beispiel verwendet die Beziehung zwischen der `Shipper`-Entität und der `Order`-Entität. Beachten Sie bei den Methoden die partielle `InsertShipper`-Methode und die partielle `DeleteShipper`-Methode. Diese Methoden überschreiben der standardmäßigen partiellen Methoden [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Zuordnung.  
+ Das folgende Beispiel verwendet die Beziehung zwischen der `Shipper`-Entität und der `Order`-Entität. Beachten Sie bei den Methoden die partielle `InsertShipper`-Methode und die partielle `DeleteShipper`-Methode. Diese Methoden überschreiben die von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] der Zuordnung bereitgestellten standardmäßigen partiellen Methoden.  
   
 ### <a name="code"></a>Code  
  [!code-csharp[DLinqOverrideDefault#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/northwind.cs#1)]

@@ -3,15 +3,15 @@ title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11aeed0277fc13cbd9a65232311bd575a4a81ff7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942582"
 ---
 # <a name="remove"></a>\<remove>
-Entfernt den angegebene Sicherheitstoken-Handler aus der Auflistung der Tokenhandler.  
+Entfernt den angegebenen Sicherheitstokenhandler aus der tokenhandlerauflistung.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -38,19 +38,19 @@ Entfernt den angegebene Sicherheitstoken-Handler aus der Auflistung der Tokenhan
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Die CLR-Typnamen, der die token-Handler entfernt werden soll. Weitere Informationen zur Vorgehensweise beim Angeben der `type` Attribut, finden Sie unter [benutzerdefinierte Typverweise](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Erforderlich.|  
+|Typ|Der CLR-Typname des tokenhandlers, der entfernt werden soll. Weitere Informationen zum Angeben des `type` -Attributs finden Sie unter [benutzerdefinierte Typverweise](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Gibt eine Auflistung von sicherheitstokenhandlern, die mit dem Endpunkt registriert sind.|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|Gibt eine Auflistung von Sicherheitstokenhandlern an, die beim Endpunkt registriert sind.|  
   
 ## <a name="example"></a>Beispiel  
- Das folgende XML zeigt die Verwendung der `<add>` und `<remove>` Elementen, die dem Sicherheitstoken Standardhandler für Sitzung durch einen benutzerdefinierten sitzungentokenhandlers ersetzen. Der XML-Code stammt aus dem `ClaimsAwareWebFarm` Beispiel.  
+ Der folgende XML `<add>` -Code zeigt die Verwendung des `<remove>` -Elements und des-Elements, um den standardsitzungstokenhandler durch einen benutzerdefinierten Sitzungs Token-Handler Der XML-Code stammt aus `ClaimsAwareWebFarm` dem Beispiel.  
   
 ```xml  
 <securityTokenHandlers>  

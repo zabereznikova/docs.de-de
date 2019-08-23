@@ -8,20 +8,20 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a610d41d9db7f205d868713a6e1cd59c311ea916
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964819"
 ---
 # <a name="drag-and-drop"></a>Drag & Drop
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine äußerst flexible Drag- and -Drop-Infrastruktur unterstützt, ziehen und Ablegen von Daten in beide [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen als auch andere [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Anwendungen.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]bietet eine hochgradig flexible Drag & Drop-Infrastruktur, die das ziehen und Ablegen von Daten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sowohl in Anwendungen als auch in anderen Windows-Anwendungen unterstützt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Drag & Drop](drag-and-drop-overview.md)  
  [Daten und Datenobjekte](data-and-data-objects.md)  
- [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [Exemplarische Vorgehensweise: Aktivieren von Drag & Drop in einem Benutzer Steuerelement](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
  [Themen zu Vorgehensweisen](drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  

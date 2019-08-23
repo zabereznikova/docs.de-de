@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)'
+title: 'Vorgehensweise: Unterbrechen und Kombinieren von Anweisungen in Code (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,40 +21,40 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: d3656b924ebaca67c90dc602701c4cef9ce088b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 745974523bd747dd23f3cfaf7cb70bb6cd4513f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648782"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946203"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)
-Wenn Ihr Code schreiben, können Sie gelegentlich lange Anweisungen erstellen, die erfordern, horizontalen Bildlauf im Code-Editor. Obwohl dies Einfluss auf die nicht Ihr Code ausgeführt wird, erleichtert es schwierig für Sie oder andere Personen Lesen des Codes, wie er auf dem Bildschirm angezeigt wird. In solchen Fällen sollten Sie erwägen, die lange Anweisung in mehrere Zeilen unterteilt.  
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Vorgehensweise: Unterbrechen und Kombinieren von Anweisungen in Code (Visual Basic)
+Wenn Sie Ihren Code schreiben, können Sie häufig lange Anweisungen erstellen, die den horizontalen Bildlauf im Code-Editor erfordern. Dies wirkt sich nicht auf die Art und Weise aus, in der der Code ausgeführt wird. es ist jedoch schwierig, den Code so zu lesen, wie er auf dem Monitor angezeigt wird. In solchen Fällen sollten Sie die Unterbrechung der einzelnen langen Anweisung in mehrere Zeilen in Erwägung gezogen.  
   
-### <a name="to-break-a-single-statement-into-multiple-lines"></a>Eine einzelne Anweisung in mehrere Zeilen aufteilen  
+### <a name="to-break-a-single-statement-into-multiple-lines"></a>So brechen Sie eine einzelne Anweisung in mehrere Zeilen um  
   
-- Verwenden Sie das Zeilenfortsetzungszeichen, wird ein Unterstrich (`_`), an dem Punkt, an dem die Zeile umbrochen werden soll. Dem Unterstrich muss ein Leerzeichen direkt vorangestellt und ein Zeilenabschlusszeichen (Wagenrücklauf) direkt nachgestellt sein.  
+- Verwenden Sie das Zeilen Fortsetzungs Zeichen, bei dem es sich`_`um einen Unterstrich () handelt, an der Stelle, an der Sie die Zeile unterbrechen möchten. Dem Unterstrich muss ein Leerzeichen direkt vorangestellt und ein Zeilenabschlusszeichen (Wagenrücklauf) direkt nachgestellt sein.  
   
     > [!NOTE]
-    >  In einigen Fällen Wenn Sie das Zeilenfortsetzungszeichen weglassen wird Visual Basic-Compiler implizit die Anweisung in der nächsten Zeile des Codes fortgesetzt. Eine Liste der Syntaxelemente, die für die Sie dem Zeilenfortsetzungszeichen weglassen können, finden Sie unter "Implizite Zeilenfortsetzung" in [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md).  
+    > Wenn Sie das Zeilen Fortsetzungs Zeichen weglassen, wird der Visual Basic-Compiler in einigen Fällen implizit die Anweisung in der nächsten Codezeile fortsetzen. Eine Liste der Syntax Elemente, für die Sie das Zeilen Fortsetzungs Zeichen weglassen können, finden Sie unter "implizite Zeilen Fortsetzung" in- [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md).  
   
-     Im folgenden Beispiel wird die Anweisung in vier Zeilen mit Zeilenfortsetzungszeichen beendet alle jedoch die letzte Zeile aufgeteilt.  
+     Im folgenden Beispiel wird die-Anweisung in vier Zeilen aufgeteilt, wobei Zeilen Fortsetzungs Zeichen alle außer der letzten Zeile beenden.  
   
      [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]  
   
-     Verwenden diese Sequenz wird Ihr Code einfacher zu lesen, sowohl online als auch gedruckt.  
+     Wenn Sie diese Sequenz verwenden, wird der Code leichter lesbar, sowohl online als auch gedruckt.  
   
-     Das Zeilenfortsetzungszeichen muss das letzte Zeichen in einer Zeile sein. Sie können nicht es mit anderen Elementen in der gleichen Zeile folgen.  
+     Das Zeilen Fortsetzungs Zeichen muss das letzte Zeichen in einer Zeile sein. Sie können das Element nicht in derselben Zeile verfolgen.  
   
-     Einige Einschränkungen vorhanden, wo Sie das Zeilenfortsetzungszeichen verwenden können. Beispielsweise kann nicht in der Mitte ein Argumentname Verwendung. Sie können eine Argumentliste, mit dem Zeilenfortsetzungszeichen unterbrechen, aber die einzelnen Argumente müssen intakt bleiben.  
+     Es gibt einige Einschränkungen, bei denen Sie das Zeilen Fortsetzungs Zeichen verwenden können. Sie können Sie z. b. nicht in der Mitte eines Argument namens verwenden. Sie können eine Argumentliste mit dem Zeilen Fortsetzungs Zeichen unterbrechen, aber die einzelnen Namen der Argumente müssen unverändert bleiben.  
   
-     Einen Kommentar kann nicht fortgesetzt werden, mithilfe einer Zeilenfortsetzungszeichen. Der Compiler überprüfen nicht Sie die Zeichen in einen Kommentar für eine besondere Bedeutung. Für einen mehrzeiligen Kommentar, wiederholen Sie das Kommentarsymbol (`'`) in jeder Zeile.  
+     Sie können einen Kommentar nicht fortsetzen, indem Sie ein Zeilen Fortsetzungs Zeichen verwenden. Der Compiler untersucht die Zeichen in einem Kommentar nicht auf eine besondere Bedeutung. Wiederholen Sie für einen mehrzeiligen Kommentar das Kommentar Symbol`'`() in jeder Zeile.  
   
- Obwohl jede Anweisung in einer eigenen Zeile platzieren die empfohlene Methode ist, ermöglicht Visual Basic auch Sie mehrere Anweisungen in der gleichen Zeile platzieren.  
+ Obwohl das platzieren jeder Anweisung in einer separaten Zeile die empfohlene Methode ist, können Visual Basic auch mehrere-Anweisungen in derselben Zeile platzieren.  
   
-### <a name="to-place-multiple-statements-on-the-same-line"></a>Mehrere Anweisungen in der gleichen Zeile platzieren  
+### <a name="to-place-multiple-statements-on-the-same-line"></a>So platzieren Sie mehrere Anweisungen in derselben Zeile  
   
-- Trennen Sie die Anweisungen durch einen Doppelpunkt (`:`), wie im folgenden Beispiel.  
+- Trennen Sie die-Anweisungen mit einem`:`Doppelpunkt (), wie im folgenden Beispiel gezeigt.  
   
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   

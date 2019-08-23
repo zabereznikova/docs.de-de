@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -? compiler option [Visual Basic]
 - '? compiler option [Visual Basic]'
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
-ms.openlocfilehash: adfde0bd420ccb7af4c4872affe09e5f6cf47e71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 287a2ed3f54f85435a986d3a6ecd77f7009fb195
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938227"
 ---
 # <a name="-help---visual-basic"></a>-help, -? (Visual Basic)
 Zeigt die Compileroptionen an.  
@@ -28,13 +28,13 @@ Zeigt die Compileroptionen an.
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie diese Option in einer Kompilierung einschließen, wird keine Ausgabedatei erstellt, und erfolgt keine Kompilierung.  
+ Wenn Sie diese Option in eine Kompilierung einschließen, wird keine Ausgabedatei erstellt, und es findet keine Kompilierung statt.  
   
 > [!NOTE]
->  Die `-help` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.  
+> Die `-help` Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code zeigt die Hilfe von der Befehlszeile aus.  
+ Im folgenden Code wird die Hilfe von der Befehlszeile aus angezeigt.  
   
 ```  
 vbc -help  

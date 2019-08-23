@@ -12,64 +12,64 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 786466cb0b94a96e629a1f173388ed7d40be7256
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 59559f8775a5fd66a567897b009272df1727b1e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661907"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953332"
 ---
 # <a name="local-type-inference-visual-basic"></a>Lokaler Typrückschluss (Visual Basic)
-Visual Basic-Compiler verwendet *Typrückschluss* um zu bestimmen, die die Datentypen für lokale Variablen deklariert, ohne eine `As` Klausel. Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungsausdrucks ab. Dadurch können Sie Variablen zu deklarieren, ohne explizit einen Typ, wie im folgenden Beispiel gezeigt. Als Ergebnis die Deklarationen sowohl `num1` und `num2` sind stark typisiert, als ganze Zahlen.  
+Der Visual Basic-Compiler verwendet den Typrückschluss, um die Datentypen von lokalen Variablen `As` zu bestimmen, die ohne-Klausel deklariert werden. Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungs Ausdrucks ab. Dadurch können Sie Variablen deklarieren, ohne explizit einen Typ anzugeben, wie im folgenden Beispiel gezeigt. Aufgrund der Deklarationen werden sowohl `num1` als auch `num2` als ganze Zahlen stark typisiert.  
   
  [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
  
 > [!NOTE]
->  Wenn Sie nicht möchten `num2` im vorherigen Beispiel als typisiert wird ein `Integer`, Sie können einen anderen Typ angeben, indem Sie mit einer Deklaration wie `Dim num3 As Object = 3` oder `Dim num4 As Double = 3`.  
+> Wenn Sie im vorherigen Beispiel `num2` nicht `Integer`als typisieren möchten, können Sie einen anderen Typ mithilfe einer Deklaration wie `Dim num3 As Object = 3` oder `Dim num4 As Double = 3`angeben.  
 
 > [!NOTE]
->  Typrückschluss kann nur für nicht statische lokale Variablen verwendet werden. Es kann nicht verwendet werden, um den Typ der Klassenfelder, Eigenschaften oder Funktionen zu bestimmen.
+> Der Typrückschluss kann nur für nicht statische lokale Variablen verwendet werden. Sie kann nicht verwendet werden, um den Typ der Klassen Felder, Eigenschaften oder Funktionen zu bestimmen.
  
- Lokaler Typrückschluss gilt auf Prozedurebene. Es kann nicht zum Deklarieren von Variablen auf Modulebene (innerhalb einer Klasse, Struktur, Modul oder Schnittstelle jedoch nicht innerhalb einer Prozedur oder einem Block) verwendet werden. Wenn `num2` im vorherigen Beispiel wurden ein Feld einer Klasse anstelle der lokalen Variablen in einer Prozedur, die Deklaration würde einen Fehler mit `Option Strict` , und klassifizieren `num2` als ein `Object` mit `Option Strict` deaktiviert. Auf ähnliche Weise lokaler Typrückschluss gilt nicht für Ebene Prozedur-Variablen, die als `Static`.  
+ Der lokale Typrückschluss gilt für die Prozedur Ebene. Sie kann nicht zum Deklarieren von Variablen auf Modulebene verwendet werden (innerhalb einer Klasse, Struktur, eines Moduls oder einer Schnittstelle, aber nicht innerhalb einer Prozedur oder eines Blocks). Wenn `num2` im vorherigen Beispiel ein Feld einer Klasse statt einer lokalen Variablen in einer Prozedur wäre, würde die Deklaration einen Fehler mit `Option Strict` on verursachen `Object` und als mit `Option Strict` off klassifiziert `num2` werden. Ebenso gilt der lokale Typrückschluss nicht für Variablen auf Prozedur Ebene, `Static`die als deklariert wurden.  
   
-## <a name="type-inference-vs-late-binding"></a>Typrückschluss und Späte Bindung  
- Code, der Typrückschluss verwendet ähnelt, Code, der auf die späte Bindung verwendet wird. Typrückschluss Typen jedoch stark der Variablen statt als bleiben `Object`. Der Compiler verwendet eine Variable des Initialisierers um den Wert der Variablen zum Zeitpunkt der Kompilierung zum Erzeugen von Code mit früher Bindung zu ermitteln. Im vorherigen Beispiel `num2`, z. B. `num1`, typisiert ist, als ein `Integer`.  
+## <a name="type-inference-vs-late-binding"></a>Typrückschluss im Vergleich zu Späte Bindung  
+ Code, der den Typrückschluss verwendet, ähnelt dem Code, der die späte Bindung verwendet. Der Typrückschluss gibt jedoch die Variable stark ein, anstatt Sie `Object`als zu belassen. Der Compiler verwendet den Initialisierer einer Variablen, um den Typ der Variable zur Kompilierzeit zu bestimmen, um früh gebundenen Code zu erstellen. Im vorherigen Beispiel `num2`wird, wie `num1`, als `Integer`typisiert.  
   
- Das Verhalten der früh gebundene Variablen unterscheidet sich von spät gebundenen Variablen, für die der Typ nur zur Laufzeit bekannt ist. Die den Typ einem frühen Zeitpunkt kann der Compiler Probleme vor der Ausführung zu identifizieren, Speicher genau zuordnen und Durchführen weiterer Optimierungen. Früher Bindung ermöglicht auch die integrierte Entwicklungsumgebung (IDE) zum Bereitstellen von IntelliSense-Hilfe zu den Elementen eines Objekts von Visual Basic. Früher Bindung wird auch bevorzugt, für die Leistung. Dies ist, da alle Daten in eine spät gebundene Variable müssen, als Typ eingebunden sein `Object`, und das Zugreifen auf Member des Typs zur Laufzeit wird das Programm, die langsamer.  
+ Das Verhalten früh gebundener Variablen unterscheidet sich von der von spät gebundenen Variablen, für die der Typ nur zur Laufzeit bekannt ist. Wenn Sie den Typ früh wissen, kann der Compiler Probleme vor der Ausführung erkennen, Speicher exakt zuordnen und andere Optimierungen durchführen. Die frühe Bindung ermöglicht außerdem der Visual Basic integrierten Entwicklungsumgebung (Integrated Development Environment, IDE), IntelliSense-Hilfe zu den Membern eines Objekts bereitzustellen. Die frühe Bindung wird auch für die Leistung bevorzugt. Dies liegt daran, dass alle in einer spät gebundenen Variablen gespeicherten Daten als Typ `Object`umschließt werden müssen und der Zugriff auf Member des Typs zur Laufzeit das Programm verlangsamt.  
   
 ## <a name="examples"></a>Beispiele  
- Typrückschluss tritt auf, wenn eine lokale Variable, ohne deklariert wird eine `As` Klausel und initialisiert. Der Compiler verwendet den Typ des ersten zugewiesenen Werts als Typ der Variablen an. Die folgenden Zeilen des Codes deklariert beispielsweise eine Variable vom Typ `String`.  
+ Der Typrückschluss tritt auf, wenn eine lokale Variable `As` ohne eine-Klausel deklariert und initialisiert wird. Der Compiler verwendet den Typ des zugewiesenen anfangs Werts als Typ der Variablen. Jede der folgenden Codezeilen deklariert z. b. eine Variable vom Typ `String`.  
   
  [!code-vb[VbVbalrTypeInference#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#2)]  
   
- Der folgende Code veranschaulicht zwei gleichwertige Möglichkeiten zum Erstellen eines Arrays von ganzen Zahlen.  
+ Der folgende Code veranschaulicht zwei äquivalente Möglichkeiten, ein Array von ganzen Zahlen zu erstellen.  
   
  [!code-vb[VbVbalrTypeInference#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#3)]  
   
- Es ist sinnvoll, den Typrückschluss verwenden, um den Typ des eine Schleifensteuerungsvariable zu bestimmen. In den folgenden Code, der Compiler leitet ab, die `number` ist ein `Integer` da `someNumbers2` aus dem vorherigen Beispiel wird ein Array von ganzen Zahlen.  
+ Es ist praktisch, mit dem Typrückschluss den Typ einer Schleifen Steuerungsvariablen zu bestimmen. Im folgenden Code geht der Compiler davon aus, dass `number` ein `Integer` ist, `someNumbers2` da aus dem vorherigen Beispiel ein Array aus ganzen Zahlen ist.  
   
  [!code-vb[VbVbalrTypeInference#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#4)]  
   
- Lokaler Typrückschluss verwendet werden kann, `Using` Anweisungen zu, um den Typ des Ressourcennamens, herzustellen, wie das folgende Beispiel veranschaulicht.  
+ Der lokale Typrückschluss kann in `Using` -Anweisungen verwendet werden, um den Typ des Ressourcen namensfest zulegen, wie im folgenden Beispiel veranschaulicht.  
   
  [!code-vb[VbVbalrTypeInference#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#7)]  
   
- Der Typ einer Variablen kann auch von die Rückgabewerte von Funktionen, die abgeleitet werden, wie das folgende Beispiel veranschaulicht. Beide `pList1` und `pList2` werden Arrays von Prozessen, da `Process.GetProcesses` gibt ein Array von Prozessen.  
+ Der Typ einer Variablen kann auch von den Rückgabe Werten von Functions abgeleitet werden, wie im folgenden Beispiel veranschaulicht. Und sind `pList2` Arrays von-Prozessen, `Process.GetProcesses` da ein Array von-Prozessen zurückgibt. `pList1`  
   
  [!code-vb[VbVbalrTypeInference#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#5)]  
   
-## <a name="option-infer"></a>Option Infer-  
- `Option Infer` ermöglicht, die Sie angeben, ob der lokale Typrückschluss in einer bestimmten Datei zulässig ist. Aktivieren oder blockieren die Option, geben Sie einen der folgenden Anweisungen am Anfang der Datei ein.  
+## <a name="option-infer"></a>Option Infer  
+ `Option Infer`ermöglicht Ihnen, anzugeben, ob der lokale Typrückschluss in einer bestimmten Datei zulässig ist. Wenn Sie oder zum Blockieren der Option aktivieren möchten, geben Sie eine der folgenden Anweisungen am Anfang der Datei ein.  
   
  `Option Infer On`  
   
  `Option Infer Off`  
   
- Wenn Sie einen Wert für nicht angeben `Option Infer` in Ihrem Code ist die Standardeinstellung des Compilers `Option Infer On`. 
+ Wenn Sie im Code keinen Wert für `Option Infer` angeben, ist `Option Infer On`der Compilerstandardwert. 
   
  Wenn der in einer Datei für `Option Infer` festgelegte Wert mit dem in der IDE oder in der Befehlszeile festgelegten Wert im Konflikt steht, hat der Wert in der Datei Vorrang.  
   
- Weitere Informationen finden Sie unter [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md) und [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+ Weitere Informationen finden Sie unter [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md) und [Kompilierungs Seite, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Siehe auch
 

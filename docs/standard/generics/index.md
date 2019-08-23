@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948740"
 ---
 # <a name="generics-in-net"></a>Generics in .NET
 
@@ -128,7 +128,7 @@ ms.locfileid: "69666435"
 - In Visual Basic, C# und C++ kann ein geschachtelter Typ, der in einem generischen Typ eingeschlossen ist, nicht instanziiert werden, es sei denn, die Typen wurden den Typparametern aller einschließenden Typen zugewiesen. Anders ausgedrückt: Ein geschachtelter Typ, der mit diesen Sprachen definiert wurde, enthält bei näherer Betrachtung die Typparameter aller einschließenden Typen. Dadurch können die Typparameter von einschließenden Typen in den Memberdefinitionen eines geschachtelten Typs verwendet werden. Weitere Informationen finden Sie unter "Geschachtelte Typen" in <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
-    >  Ein geschachtelter Typ, der durch Ausgabe von Code in einer dynamischen Assembly oder durch Verwendung von [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) definiert wird, ist nicht erforderlich, um die Typparameter seiner einschließenden Typen zu beinhalten; wenn sie jedoch nicht enthalten sind, befinden sich die Typparameter nicht im Gültigkeitsbereich der geschachtelten Klasse.  
+    > Ein geschachtelter Typ, der durch Ausgabe von Code in einer dynamischen Assembly oder durch Verwendung von [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) definiert wird, ist nicht erforderlich, um die Typparameter seiner einschließenden Typen zu beinhalten; wenn sie jedoch nicht enthalten sind, befinden sich die Typparameter nicht im Gültigkeitsbereich der geschachtelten Klasse.  
   
      Weitere Informationen finden Sie unter "Geschachtelte Typen" in <xref:System.Type.MakeGenericType%2A>.  
   

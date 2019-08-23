@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 017b32dc07f62cc4553a84f7b91687fb34a53c65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401167"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937470"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Vorgehensweise: Hinzufügen eines Ereignishandlers mithilfe von Code
 In diesem Beispiel wird gezeigt, wie einem Element mithilfe von Code ein Ereignishandler hinzugefügt wird.  
@@ -35,7 +35,7 @@ In diesem Beispiel wird gezeigt, wie einem Element mithilfe von Code ein Ereigni
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  Das Hinzufügen eines Ereignis Handlers in der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] anfänglich analysierten Seite ist viel einfacher. Fügen Sie innerhalb des Objekt Elements, dem Sie den Ereignishandler hinzufügen möchten, ein Attribut hinzu, das dem Namen des Ereignisses entspricht, das Sie behandeln möchten. Geben Sie dann den Wert dieses Attributs als Namen der Ereignishandlermethode an, die Sie in der Code Behind-Datei [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] der Seite definiert haben. Weitere Informationen finden Sie unter [Übersicht über](routed-events-overview.md) [XAML (WPF)](xaml-overview-wpf.md) oder Routing Ereignisse.  
+> Das Hinzufügen eines Ereignis Handlers in der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] anfänglich analysierten Seite ist viel einfacher. Fügen Sie innerhalb des Objekt Elements, dem Sie den Ereignishandler hinzufügen möchten, ein Attribut hinzu, das dem Namen des Ereignisses entspricht, das Sie behandeln möchten. Geben Sie dann den Wert dieses Attributs als Namen der Ereignishandlermethode an, die Sie in der Code Behind-Datei [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] der Seite definiert haben. Weitere Informationen finden Sie unter [Übersicht über](routed-events-overview.md) [XAML (WPF)](xaml-overview-wpf.md) oder Routing Ereignisse.  
   
 ## <a name="see-also"></a>Siehe auch
 

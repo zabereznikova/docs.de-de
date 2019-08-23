@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: f58c1365e145166dfe122d455854d44526300a1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a489be46295c213b7a8b355eb3c9786d49dd8f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799306"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958498"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML-Dokumentliteral (Visual Basic)
-Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XDocument> Objekt.  
+Ein Literalwert <xref:System.Xml.Linq.XDocument> , der ein Objekt darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,26 +32,26 @@ rootElement
   
 |Begriff|Definition|  
 |---|---|  
-|`encoding`|Dies ist optional. Literaltext deklariert, welche Codierung des Dokuments verwendet.|  
-|`standalone`|Dies ist optional. Literaltext. Muss "yes" oder "no".|  
-|`piCommentList`|Dies ist optional. Liste der XML-verarbeitungsanweisungen und XML-Kommentare. Hat das folgende Format:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Jede `piComment` kann einen der folgenden sein:<br /><br /> -   [XML-Verarbeitungsanweisungsliteral](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML-Kommentarliteral](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md).|  
-|`rootElement`|Erforderlich. Das Stammelement des Dokuments. Das Format ist eines der folgenden:<br /><br /> <ul><li>[XML-Elementliteral](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Eingebetteter Ausdruck der Form `<%=` `elementExp` `%>`. Die `elementExp` gibt einen der folgenden zurück:<br /><br /> <ul><li>Ein <xref:System.Xml.Linq.XElement>-Objekt.</li><li>Eine Auflistung mit einem <xref:System.Xml.Linq.XElement> -Objekt und eine beliebige Anzahl von <xref:System.Xml.Linq.XProcessingInstruction> und <xref:System.Xml.Linq.XComment> Objekte.</li></ul></li></ul><br /> Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
+|`encoding`|Optional. Literaler Text, der deklariert, welche Codierung das Dokument verwendet.|  
+|`standalone`|Optional. LiteralText. Muss "yes" oder "No" lauten.|  
+|`piCommentList`|Optional. Die Liste der XML-Verarbeitungsanweisungen und XML-Kommentare. Hat das folgende Format:<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> Dabei `piComment` kann es sich um einen der folgenden handeln:<br /><br /> -   [XML-Verarbeitungs Anweisungs Literale](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md).<br />-   [XML-Kommentarliteral.](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|  
+|`rootElement`|Erforderlich. Das Stamm Element des Dokuments. Das Format ist einer der folgenden:<br /><br /> <ul><li>[XML-Elementliterale](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).</li><li>Eingebetteter Ausdruck des Formulars `<%=`. `elementExp` `%>` Der `elementExp` gibt eine der folgenden zurück:<br /><br /> <ul><li>Ein <xref:System.Xml.Linq.XElement>-Objekt.</li><li>Eine Auflistung, die ein <xref:System.Xml.Linq.XElement> -Objekt und eine beliebige <xref:System.Xml.Linq.XProcessingInstruction> Anzahl <xref:System.Xml.Linq.XComment> von-Objekten und-Objekten enthält.</li></ul></li></ul><br /> Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).|  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein <xref:System.Xml.Linq.XDocument>-Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein XML-Dokumentliteral wird durch die XML-Deklaration zu Beginn des Literals identifiziert. Obwohl jede XML-Dokumentliteral genau eine XML-Stammelement benötigen, können sie eine beliebige Anzahl von XML-verarbeitungsanweisungen und XML-Kommentare haben.  
+ Ein XML-Dokumentliteral wird durch die XML-Deklaration am Anfang des Literals identifiziert. Obwohl jedes XML-Dokumentliteral genau ein XML-Stamm Element aufweisen muss, kann es eine beliebige Anzahl von XML-Verarbeitungsanweisungen und XML-Kommentaren enthalten.  
   
- Ein XML-Dokumentliteral kann nicht in einem XML-Element verwendet werden.  
+ Ein XML-Dokumentliteral darf nicht in einem XML-Element vorkommen.  
   
 > [!NOTE]
->  Ein XML-literal kann mehrere Zeilen umfassen, ohne das Zeilenfortsetzungszeichen verwenden. Dadurch können Sie zum Kopieren von Inhalt aus einem XML-Dokument, und fügen ihn direkt in Visual Basic-Programms.  
+> Ein XML-Literale kann mehrere Zeilen umfassen, ohne Zeilen Fortsetzungs Zeichen zu verwenden. Auf diese Weise können Sie Inhalte aus einem XML-Dokument kopieren und direkt in ein Visual Basic Programm einfügen.  
   
- Visual Basic-Compiler konvertiert die XML-Dokumentliteral in Aufrufe an die <xref:System.Xml.Linq.XDocument.%23ctor%2A> und <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> Konstruktoren.  
+ Der Visual Basic Compiler konvertiert das XML-Dokumentliteral in Aufrufe <xref:System.Xml.Linq.XDocument.%23ctor%2A> der <xref:System.Xml.Linq.XDeclaration.%23ctor%2A> -und-Konstruktoren.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt ein XML-Dokument, das ist eine XML-Deklaration, eine verarbeitungsanweisung, einen Kommentar und ein Element, ein anderes Element enthält.  
+ Im folgenden Beispiel wird ein XML-Dokument erstellt, das eine XML-Deklaration, eine Verarbeitungsanweisung, einen Kommentar und ein-Element enthält, das ein anderes-Element enthält.  
   
  [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   

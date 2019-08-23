@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
-ms.openlocfilehash: 3b4e9eff3f5c4c032e75ded0913ce2cc6051498d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91bbf61029d52cf1d434136ee72ef389ca499ebc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949899"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Mauseingabe in einer Windows Forms-Anwendung
 Windows Forms umfasst eine Vielzahl von Mausereignissen und zusätzliche Unterstützung für benutzerdefinierte Mauscursor, Mauserfassung und Drag & Drop-Verhalten.  
@@ -34,5 +34,5 @@ Windows Forms umfasst eine Vielzahl von Mausereignissen und zusätzliche Unterst
  Beschreibt, wie Drag & Drop-Verhalten implementiert wird.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Zugreifen auf die Maus](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
+ [Zugreifen auf die Maus](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
  Listet Themen zum Zugreifen auf die Maus mit Visual Basic auf.

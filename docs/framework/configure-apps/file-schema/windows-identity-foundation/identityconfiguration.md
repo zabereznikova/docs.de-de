@@ -3,16 +3,16 @@ title: <identityConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
 author: BrucePerlerMS
-ms.openlocfilehash: 91d64ce0d6a5cdbf32fec4a476fb111afe9a7952
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f5e0c5ded3d750a1102492c7a506e6d5643b2d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791702"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942751"
 ---
 # <a name="identityconfiguration"></a>\<identityConfiguration>
 
-Gibt die identitätseinstellungen der Servicelevel.
+Gibt Identitäts Einstellungen auf Dienst Ebene an.
 
  \<system.identityModel>\
 \<identityConfiguration>
@@ -37,59 +37,59 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 |Attribut|Beschreibung|
 |---------------|-----------------|
-|Name|Der Name des Konfigurationsabschnitts Identität. Sie können diesen Namen verwenden, um auf um einen bestimmten Konfigurationsabschnitt zu verweisen. Wenn kein `name` -Attribut angegeben ist, im Abschnitt definiert die Standardkonfiguration. Die Standardkonfiguration wird immer für passiven Verbund-Szenarien verwendet werden. Weitere Informationen finden Sie unter den [ \<FederationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) Element.|
-|saveBootstrapContext|Gibt an, ob bootstrap-Token in das Sitzungstoken, das enthalten sein sollen. Der Wert kann auch auf eine Auflistung der Tokenhandler festgelegt werden, durch Festlegen der `saveBootstrapContext` -Attribut für die [ \<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) Element. Ein Wert festgelegt wird, auf die Auflistung der Tokenhandler überschreibt den Wert für den Dienst festgelegt.|
-|maximumClockSkew|Ein <xref:System.TimeSpan> , die die maximal erlaubte taktverschiebung angibt. Steuert die maximal erlaubte uhrabweichung, beim Durchführen von zeitkritischen Vorgängen, z. B. die Ablaufzeit für eine Anmeldung überprüfen. Der Standardwert ist 5 Minuten, "00: 05:00". Weitere Informationen zur Vorgehensweise beim angeben <xref:System.TimeSpan> Werte finden Sie unter [Timespan-Werten](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Die maximale uhrabweichung kann auch auf eine Auflistung der Tokenhandler festgelegt werden, durch Festlegen der `maximumClockSkew` -Attribut für die [ \<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) Element. Ein Wert festgelegt wird, auf die Auflistung der Tokenhandler überschreibt den Wert für den Dienst festgelegt.|
+|Name|Der Name des Identitäts Konfigurations Abschnitts. Sie können diesen Namen verwenden, um auf einen bestimmten Konfigurations Abschnitt zu verweisen. Wenn kein `name` Attribut angegeben wird, definiert der Abschnitt die Standardkonfiguration. Die Standardkonfiguration wird immer für passive Verbund Szenarien verwendet. Weitere Informationen finden Sie unter dem [ \<Element federationconfiguration >](federationconfiguration.md) .|
+|saveBootstrapContext|Gibt an, ob Bootstrap-Token in das Sitzungs Token eingeschlossen werden sollen. Der Wert kann auch für eine tokenhandlerauflistung festgelegt werden `saveBootstrapContext` , indem das-Attribut für das [ \<securitytokenhandlerconfiguration->](securitytokenhandlerconfiguration.md) Element festgelegt wird. Ein für die tokenhandlerauflistung fest gelegder Wert überschreibt den für den Dienst festgelegten Wert.|
+|maximumclockschiefe|Eine <xref:System.TimeSpan> , die die maximal zulässige Takt Neigung angibt. Steuert die maximal zulässige Takt Neigung, wenn Zeit empfindliche Vorgänge durchgeführt werden, z. b. das Überprüfen der Ablaufzeit einer Anmelde Sitzung. Der Standardwert ist 5 Minuten, "00:05:00". Weitere Informationen zum angeben <xref:System.TimeSpan> von Werten finden Sie unter [TimeSpan Values (TimeSpan-Werte](../windows-workflow-foundation/index.md)). Die maximale Takt Abweichung kann auch für eine tokenhandlerauflistung festgelegt werden, `maximumClockSkew` indem das-Attribut für das [ \<securitytokenhandlerconfiguration->](securitytokenhandlerconfiguration.md) Element festgelegt wird. Ein für die tokenhandlerauflistung fest gelegder Wert überschreibt den für den Dienst festgelegten Wert.|
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|[\<caches>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Registriert die Caches für Sitzungstoken und Erkennung von tokenwiederholungen verwendet. Kann auf der Dienstebene oder auf einen Sicherheitstoken-Handlerauflistung angegeben werden. Dies ist optional.|
-|[\<certificateValidation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Steuert die Einstellungen, die token-Handler zum Überprüfen von Zertifikaten verwenden. Kann auf der Dienstebene oder auf einen Sicherheitstoken-Handlerauflistung angegeben werden. Dies ist optional.|
-|[\<claimsAuthenticationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|Registriert einen anspruchsauthentifizierungs-Manager für die eingehenden Ansprüche. Dies ist optional.|
-|[\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|Registriert einen anspruchsautorisierungs-Manager für die eingehenden Ansprüche. Dies ist optional.|
-|[\<claimTypeRequired>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Gibt den Satz von erforderlichen Ansprüchen für eingehende Sicherheitstoken. Dies ist optional.|
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Gibt eine Auflistung von sicherheitstokenhandlern. NULL oder mehr Auflistungen der Sicherheitstokenhandler können angegeben werden. Dies ist optional.|
-|[\<tokenReplayDetection>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|Ermöglicht die Erkennung einer tokenmehrfachverwendung, und gibt an, die Ablaufzeit für Token. Kann auf der Dienstebene oder auf einen Sicherheitstoken-Handlerauflistung angegeben werden. Dies ist optional.|
+|[\<caches>](caches.md)|Registriert die Caches, die für Sitzungs Token und tokenwiedergabe-Erkennung verwendet werden. Kann auf Dienst Ebene oder in einer Auflistung von Sicherheitstokenhandlern angegeben werden. Optional.|
+|[\<certificateValidation>](certificatevalidation.md)|Steuert die Einstellungen, die von tokenhandlern zum Überprüfen von Zertifikaten verwendet werden. Kann auf Dienst Ebene oder in einer Auflistung von Sicherheitstokenhandlern angegeben werden. Optional.|
+|[\<claimsAuthenticationManager>](claimsauthenticationmanager.md)|Registriert einen anspruchsauthentifizierungs-Manager für die eingehenden Ansprüche. Optional.|
+|[\<claimsAuthorizationManager>](claimsauthorizationmanager.md)|Registriert einen Anspruchs Autorisierungs-Manager für die eingehenden Ansprüche. Optional.|
+|[\<claimTypeRequired>](claimtyperequired.md)|Gibt den Satz erforderlicher Ansprüche für eingehende Sicherheits Token an. Optional.|
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|Gibt eine Auflistung von Sicherheitstokenhandlern an. Es können keine oder mehrere Auflistungen von Sicherheitstokenhandlern angegeben werden. Optional.|
+|[\<tokenReplayDetection>](tokenreplaydetection.md)|Aktiviert die Erkennung von tokenwiedergabe und gibt die Ablaufzeit für Token an. Kann auf Dienst Ebene oder in einer Auflistung von Sicherheitstokenhandlern angegeben werden. Optional.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|[\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|Ermöglicht die Konfiguration für Windows Identity Foundation (WIF)-Optionen in Anwendungen zu aktivieren.|
+|[\<system.identityModel>](system-identitymodel.md)|Stellt die Konfiguration zum Aktivieren von WIF-Optionen (Windows Identity Foundation) in-Anwendungen bereit.|
 
 ## <a name="remarks"></a>Hinweise
 
-Mehrere Identitätsspeicher Konfigurationen definiert werden können, jeweils mit einem eindeutigen Namen. Das Verhalten ist wie folgt aus:
+Es können mehrere Identitäts Konfigurationen definiert werden, von denen jede einen eindeutigen Namen hat. Das Verhalten sieht wie folgt aus:
 
-1. Wenn kein `<identityConfiguration>` -Element angegeben ist. Eine Standardkonfiguration für die Identität wird zur Laufzeit erstellt und mit Standardwerten aufgefüllt wurden.
+1. , Wenn `<identityConfiguration>` kein-Element angegeben ist. Eine standardmäßige Identitäts Konfiguration wird zur Laufzeit erstellt und mit Standardwerten aufgefüllt.
 
-2. Wenn ein einzelner `<identityConfiguration>` -Element angegeben ist. Es ist die Standardkonfiguration für die Identität. Es spielt keine Rolle, ob er mit dem Namen oder nicht benannt ist.
+2. , Wenn ein `<identityConfiguration>` einzelnes-Element angegeben wird. Dabei handelt es sich um die Standardkonfiguration für die Identität. Es spielt keine Rolle, ob Sie benannt oder unbenannt ist.
 
-3. Wenn mehrere `<identityConfiguration>` Elemente angegeben werden. Das unbenannte Element gibt die Standardkonfiguration für die Identität an. Es wird empfohlen, bei der Angabe von mehreren `<identityConfiguration>` Elemente, eine davon sollten unbenannt sein.
+3. , Wenn `<identityConfiguration>` mehrere Elemente angegeben werden. Das unbenannte-Element gibt die Standardkonfiguration für die Identität an. Es wird empfohlen, dass Sie bei der `<identityConfiguration>` Angabe mehrerer Elemente unbenannt sein sollten.
 
 > [!WARNING]
-> Bei Angabe mehrerer `<identityConfiguration>` Elemente, eine davon sollten unbenannt sein. Das unbenannte Element werden die Standardkonfiguration für die Identität.
+> Wenn Sie mehrere `<identityConfiguration>` Elemente angeben, sollte eines von Ihnen unbenannt sein. Das unbenannte Element ist die Standardkonfiguration für die Identität.
 
- Einige der Einstellungen in der `<identityConfiguration>` Element überschrieben werden kann, von den Einstellungen für einen Sicherheitstoken-Handlerauflistung oder von den Einstellungen für einzelne Sicherheitstokenhandler.
-
-> [!IMPORTANT]
-> Bei Verwendung der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse, um anspruchsbasierte Zugriffssteuerung in Ihrem Code die identitätskonfiguration bereitzustellen, auf die verweist, die `<federationConfiguration>` -Element konfiguriert die anspruchsautorisierungs-Manager und die Richtlinie, die verwendet wird, um sicherzustellen autorisierungsentscheidungen. Dies gilt, auch in Szenarien, die nicht passiven Webszenarien, z. B. Anwendungen für Windows Communication Foundation (WCF) oder eine Anwendung, die nicht webbasierte ist. Wenn die Anwendung nicht mit einer passiven Webanwendung ist die [ \<"claimsauthorizationmanager" >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) -Element (und seine untergeordneten Richtlinienelemente, sofern vorhanden) der identitätskonfiguration verwiesen wird die einzigen Einstellungen, die angewendet werden. Alle anderen Einstellungen werden ignoriert. Weitere Informationen finden Sie unter den [ \<FederationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) Element.
-
-Die `<identityConfiguration>` Element wird dargestellt, durch die <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> Klasse. Ein Konfigurationsabschnitt für die Identität wird dargestellt, durch die <xref:System.IdentityModel.Configuration.IdentityConfiguration> Klasse.
+ Einige der im `<identityConfiguration>` -Element angegebenen Einstellungen können durch Einstellungen in einer Auflistung von Sicherheitstokenhandlern oder durch Einstellungen in einzelnen Sicherheitstokenhandlern überschrieben werden.
 
 > [!IMPORTANT]
-> Die folgenden Elemente als untergeordnete Elemente angeben die `<identityConfiguration>` Element ist veraltet, obwohl das Verhalten für die Abwärtskompatibilität weiterhin unterstützt wird. Diese Elemente sollten stattdessen angegeben werden, unter dem [ \<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) Element.
+> Wenn Sie die <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> -oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> die-Klasse verwenden, um eine Anspruchs basierte Zugriffs Steuerung im Code bereitzustellen, konfiguriert die Identitäts Konfiguration `<federationConfiguration>` , auf die das-Element verweist, den anspruchsautorisierungs-Manager und die Richtlinie, die verwendet wird, um Autorisierungs Entscheidungen. Dies gilt auch für Szenarien, bei denen es sich nicht um passive Webszenarien handelt, z. b. Windows Communication Foundation (WCF)-Anwendungen oder eine nicht webbasierte Anwendung. Wenn es sich bei der Anwendung nicht um eine passive Webanwendung handelt, werden das [ \<> Element ClaimsAuthorizationManager](claimsauthorizationmanager.md) (und ggf. die untergeordneten Richtlinien Elemente) der referenzierten Identitäts Konfiguration die einzigen Einstellungen angewendet. Alle anderen Einstellungen werden ignoriert. Weitere Informationen finden Sie unter dem [ \<Element federationconfiguration >](federationconfiguration.md) .
+
+Das `<identityConfiguration>` -Element wird durch die <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> -Klasse dargestellt. Ein Identitäts Konfigurations Abschnitt wird durch die <xref:System.IdentityModel.Configuration.IdentityConfiguration> -Klasse dargestellt.
+
+> [!IMPORTANT]
+> Die Angabe der folgenden Elemente als untergeordnete Elemente `<identityConfiguration>` des-Elements wurde als veraltet markiert, obwohl das Verhalten weiterhin aus Gründen der Abwärtskompatibilität unterstützt wird. Diese Elemente sollten stattdessen unter dem [ \<Element securitytokenhandlerconfiguration >](securitytokenhandlerconfiguration.md) angegeben werden.
 >
-> - [\<audienceUris>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)
-> - [\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)
-> - [\<issuerTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)
-> - [\<serviceTokenResolver>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)
+> - [\<audienceUris>](audienceuris.md)
+> - [\<issuerNameRegistry>](issuernameregistry.md)
+> - [\<issuerTokenResolver>](issuertokenresolver.md)
+> - [\<serviceTokenResolver>](servicetokenresolver.md)
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel erstellt eine identitätskonfiguration, die mit dem Namen "AlternateConfiguration". Die identitätskonfiguration gibt Standardeinstellungen.
+Im folgenden Beispiel wird eine Identitäts Konfiguration mit dem Namen "", "Alternativen", erstellt. Die Identitäts Konfiguration gibt die Standardeinstellungen an.
 
 ```xml
 <system.identityModel>

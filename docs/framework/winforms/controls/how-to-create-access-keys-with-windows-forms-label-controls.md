@@ -17,30 +17,30 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd7f238f8c20ba990158f23344e36376d3b1cb7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747107"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950541"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Vorgehensweise: Erstellen von Zugriffstasten mit Windows Forms-Steuerelementen
-Windows Forms <xref:System.Windows.Forms.Label> Steuerelemente können verwendet werden, um die Zugriffstasten für andere Steuerelemente definieren. Wenn Sie einen Zugriffsschlüssel in ein Label-Steuerelement definieren, kann Benutzer drücken, die ALT-Taste plus das Zeichen, das Sie festlegen, um den Fokus auf das Steuerelement zu verschieben, die sie in der Aktivierreihenfolge folgt. Da Bezeichnungen keinen Fokus erhalten können, verschiebt den Fokus automatisch auf das nächste Steuerelement in der Aktivierreihenfolge. Verwenden Sie dieses Verfahren, um Textfelder, Kombinationsfelder, Listenfelder und Datenraster Zugriffsschlüssel zuweisen.  
+Windows Forms <xref:System.Windows.Forms.Label> Steuerelemente können verwendet werden, um Zugriffsschlüssel für andere Steuerelemente zu definieren. Wenn Sie in einem Label-Steuerelement eine Zugriffstaste definieren, kann der Benutzer die Alt-Taste sowie das von Ihnen festgelegten Zeichen drücken, um den Fokus in der Aktivier Reihenfolge auf das Steuerelement zu verschieben. Da Bezeichnungen keinen Fokus erhalten können, wechselt der Fokus automatisch zum nächsten Steuerelement in der Aktivier Reihenfolge. Verwenden Sie dieses Verfahren, um Textfeldern, Kombinations Feldern, Listenfeldern und Daten Rastern Zugriffstasten zuzuweisen.  
   
-### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Zuweisen eine Zugriffstaste auf ein Steuerelement mit einer Bezeichnung  
+### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>So weisen Sie einem Steuerelement mit einer Bezeichnung einen Zugriffsschlüssel zu  
   
-1. Zeichnen Sie zuerst die Bezeichnung, und klicken Sie dann zeichnen Sie das andere Steuerelement zu.  
+1. Zeichnen Sie zuerst die Bezeichnung, und zeichnen Sie dann das andere Steuerelement.  
   
-     - oder -   
+     -oder-  
   
-     Zeichnen Sie die Steuerelemente in beliebiger Reihenfolge aus, und legen Sie die <xref:System.Windows.Forms.Control.TabIndex%2A> -Eigenschaft der Bezeichnung bis eins weniger als das andere Steuerelement.  
+     Zeichnen Sie die Steuerelemente in beliebiger Reihen <xref:System.Windows.Forms.Control.TabIndex%2A> Folge, und legen Sie die-Eigenschaft der Bezeichnung auf ein kleiner als das andere Steuerelement fest.  
   
-2. Legen Sie die Bezeichnung des <xref:System.Windows.Forms.Label.UseMnemonic%2A> Eigenschaft `true`.  
+2. Legen Sie die- <xref:System.Windows.Forms.Label.UseMnemonic%2A> Eigenschaft der `true`Bezeichnung auf fest.  
   
-3. Verwenden Sie ein kaufmännisches und-Zeichen (&), in der Bezeichnung <xref:System.Windows.Forms.Label.Text%2A> Eigenschaft, um den Zugriffsschlüssel für die Bezeichnung zuweisen. Weitere Informationen finden Sie unter [Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md).  
+3. Verwenden Sie ein kaufmännisches und-Zeichen (&) in <xref:System.Windows.Forms.Label.Text%2A> der-Eigenschaft der Bezeichnung, um den Zugriffsschlüssel für die Bezeichnung zuzuweisen. Weitere Informationen finden Sie unter [Erstellen von Zugriffs Schlüsseln für Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)-Steuerelemente.  
   
     > [!NOTE]
-    >  Sie sollten kaufmännische und-Zeichen in ein Label-Steuerelement anzeigen, anstatt Sie zu verwenden, um Zugriffstasten zu erstellen. Dies kann auftreten, wenn Sie ein Label-Steuerelement an ein Feld in einem Recordset binden, in denen die Daten kaufmännische und-Zeichen enthält. Um das kaufmännische und-Zeichen in ein Label-Steuerelement anzuzeigen, legen Sie die <xref:System.Windows.Forms.Label.UseMnemonic%2A> Eigenschaft `false`. Wenn Sie das kaufmännische und-Zeichen anzuzeigen und außerdem einen Zugriffsschlüssel möchten, legen Sie die <xref:System.Windows.Forms.Label.UseMnemonic%2A> Eigenschaft `true` und geben Sie den Zugriffsschlüssel ein kaufmännisches und-Zeichen (&) und dem kaufmännischen und-Zeichen, das mit zwei kaufmännische und-Zeichen angezeigt.  
+    > Möglicherweise möchten Sie kaufmännische und-Zeichen in einem Label-Steuerelement anzeigen, anstatt Sie zum Erstellen von Zugriffs Schlüsseln zu verwenden. Dies kann vorkommen, wenn Sie ein Label-Steuerelement an ein Feld in einem Recordset binden, in dem die Daten kaufmännische Werte enthalten. Legen Sie die <xref:System.Windows.Forms.Label.UseMnemonic%2A> - `false`Eigenschaft auf fest, um kaufmännische Zeichen in einem Label-Steuerelement anzuzeigen. Wenn Sie kaufmännische und auch Zugriffsschlüssel anzeigen möchten, legen Sie die <xref:System.Windows.Forms.Label.UseMnemonic%2A> -Eigenschaft auf `true` fest, und geben Sie den Zugriffsschlüssel mit einem kaufmännischen und-Zeichen (&) und dem kaufmännischen und-Zeichen an, um zwei kaufmännische und-Zeichen anzuzeigen.  
   
     ```vb  
     Label1.UseMnemonic = True  
@@ -65,6 +65,6 @@ Windows Forms <xref:System.Windows.Forms.Label> Steuerelemente können verwendet
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Größe der Größe des Label-Steuerelements in Windows Forms an seinen Inhalt](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Vorgehensweise: Größe eines Windows Forms Label-Steuer Elements an seinen Inhalt anpassen](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Übersicht über das Label-Steuerelement](label-control-overview-windows-forms.md)
 - [Label-Steuerelement](label-control-windows-forms.md)

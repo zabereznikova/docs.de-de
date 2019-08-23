@@ -2,12 +2,12 @@
 title: Abfragekonzepte
 ms.date: 03/30/2017
 ms.assetid: 9a125749-ccb5-49d5-999d-d2db7171d74d
-ms.openlocfilehash: 62af37399cda5220c429fae2d9ab619989050b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be564ae6fe6dc887b77ea4ae213d56d11f309369
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767519"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938561"
 ---
 # <a name="query-concepts"></a>Abfragekonzepte
 In diesem Abschnitt werden Schlüsselkonzepte zur Entwicklung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Abfragen in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erläutert.  
@@ -32,5 +32,5 @@ In diesem Abschnitt werden Schlüsselkonzepte zur Entwicklung von [!INCLUDE[vbte
  [Objektidentität](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  Erklärt das Konzept der Objektidentität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+ [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  Bietet eine Einführung in Abfrageoperationen in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].

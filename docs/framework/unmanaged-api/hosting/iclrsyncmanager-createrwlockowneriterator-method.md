@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1951efecca6c81322c3a0753eaaf06e9651e3d39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64179e132cfaffbb1fcdc2cd0a47bbcc11be2ff0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759153"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943273"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator-Methode
-Fordert, dass die common Language Runtime (CLR) erstellt einen Iterator für den Host zu verwenden, um zu bestimmen, den Satz von Aufgaben, die auf eine Reader / Writer-Sperre warten.  
+Fordert an, dass die Common Language Runtime (CLR) einen Iterator erstellt, mit dem der Host den Satz von Tasks bestimmt, die auf eine Lese-/Schreibsperre warten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,39 +38,39 @@ HRESULT CreateRWLockOwnerIterator (
   
 ## <a name="parameters"></a>Parameter  
  `cookie`  
- [in] Das Cookie, das die gewünschte Reader / Writer-Sperre zugeordnet.  
+ in Das Cookie, das der gewünschten Lese-/Schreibsperre zugeordnet ist.  
   
  `pIterator`  
- [out] Ein Zeiger auf ein Iterator, der übergeben werden kann die [GetRWLockOwnerNext](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md) und [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) Methoden.  
+ vorgenommen Ein Zeiger auf einen Iterator, der an die Methoden [getrwlockbesitznext](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md) und [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) weitergeleitet werden kann.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`CreateRWLockOwnerIterator` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`CreateRWLockOwnerIterator`wurde erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator` wurde in einem Thread aufgerufen, die derzeit auf verwalteten Code ausgeführt wird.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_INVALIDOPERATION|`CreateRWLockOwnerIterator`wurde in einem Thread aufgerufen, der derzeit verwalteten Code ausgeführt hat.|  
   
 ## <a name="remarks"></a>Hinweise  
- Rufen Sie die Hosts in der Regel die `CreateRWLockOwnerIterator`, `DeleteRWLockOwnerIterator`, und `GetRWLockOwnerNext` Methoden während der Deadlockerkennung. Der Host ist dafür verantwortlich, sicherzustellen, dass die Reader / Writer-Sperre noch gültig ist, ist, da die CLR versucht nicht, die die Lese-/ Schreibsperre beibehalten wird. Es stehen verschiedene Strategien für den Host aus, um sicherzustellen, dass die Gültigkeit der Sperre zur Verfügung:  
+ Hosts ruft in der `CreateRWLockOwnerIterator`Regel `DeleteRWLockOwnerIterator`die Methoden `GetRWLockOwnerNext` , und während der Deadlockerkennung auf. Der Host ist dafür verantwortlich, sicherzustellen, dass die Lese-/Schreibsperre weiterhin gültig ist, da die CLR keinen Versuch macht, die Lese-/Schreibsperre aufrechtzuerhalten. Es stehen mehrere Strategien für den Host zur Verfügung, um die Gültigkeit der Sperre sicherzustellen:  
   
-- Der Host kann Freigabeaufrufe für den Lese-/ Schreibsperre (z. B. [IHostSemaphore:: ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) und gleichzeitig sicherstellen, dass dieser Block keinen Deadlock verursacht.  
+- Der Host kann Freigabe Aufrufe für die Reader-Writer-Sperre blockieren (z. b. [IHostSemaphore:: ReleaseSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-releasesemaphore-method.md)) und gleichzeitig sicherstellen, dass dieser Block keinen Deadlock verursacht.  
   
-- Der Host kann das Warten auf das Ereignisobjekt, das der Reader / Writer-Sperre zugeordneten beenden blockieren und wieder sicherstellen, dass dieser Block keinen Deadlock verursacht.  
+- Der Host kann das warten auf das Ereignis Objekt, das der Lese-/Schreibsperre zugeordnet ist, blockieren und sicherstellen, dass dieser Block keinen Deadlock verursacht.  
   
 > [!NOTE]
->  `CreateRWLockOwnerIterator` muss nur auf Threads aufgerufen werden, die derzeit nicht verwalteten Code ausgeführt werden.  
+> `CreateRWLockOwnerIterator`muss nur für Threads aufgerufen werden, die derzeit nicht verwalteten Code ausführen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

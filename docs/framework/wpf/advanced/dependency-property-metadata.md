@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 800bf80e5ba3e697c122bcf4b1bc0f302357d087
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 154a2543c62de545e8b2df711d6ad51989d0689d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401627"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964851"
 ---
 # <a name="dependency-property-metadata"></a>Metadaten für Abhängigkeitseigenschaften
 Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Eigenschaften System enthält ein metadatenberichterstattungs System, das über die Berichte hinausgeht, die über Reflektion oder allgemeine Common Language Runtime (CLR)-Eigenschaften gemeldet werden können. Metadaten für eine Abhängigkeitseigenschaft können auch eindeutig durch die Klasse zugewiesen werden, die eine Abhängigkeitseigenschaft definiert, sie können geändert werden, wenn die Abhängigkeitseigenschaft zu einer anderen Klasse hinzugefügt wird, und sie können gezielt von allen abgeleiteten Klassen überschrieben werden, die die Abhängigkeitseigenschaft von der definierenden Basisklasse erben.  
@@ -38,7 +38,7 @@ Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
  Die <xref:System.Windows.PropertyMetadata> -Klasse wird dann von abgeleitet, um spezifischere Metadaten für Architektur Bereiche wie die Klassen der WPF-Frameworkebene bereitzustellen. <xref:System.Windows.UIPropertyMetadata>Fügt Animations Berichte hinzu und <xref:System.Windows.FrameworkPropertyMetadata> stellt die Eigenschaften der WPF-Frameworkebene bereit, die im vorherigen Abschnitt erwähnt wurden. Wenn Abhängigkeits Eigenschaften registriert werden, können Sie mit diesen <xref:System.Windows.PropertyMetadata> abgeleiteten Klassen registriert werden. Wenn die Metadaten untersucht werden, kann <xref:System.Windows.PropertyMetadata> der Basistyp potenziell in die abgeleiteten Klassen umgewandelt werden, sodass Sie die spezifischeren Eigenschaften überprüfen können.  
   
 > [!NOTE]
->  Die Eigenschafts Merkmale, die in <xref:System.Windows.FrameworkPropertyMetadata> angegeben werden können, werden in dieser Dokumentation manchmal als "Flags" bezeichnet. Wenn Sie neue Metadateninstanzen für die Verwendung in Registrierungen von Abhängigkeits Eigenschaften oder Metadatenüberschreibungen erstellen, geben Sie diese Werte <xref:System.Windows.FrameworkPropertyMetadataOptions> mithilfe der flagweise-Enumeration an, und geben Sie dann möglicherweise verketteten Werte der-Enumeration an die <xref:System.Windows.FrameworkPropertyMetadata> -Konstruktor. Nachdem Sie jedoch erstellt wurden, werden diese Options Merkmale innerhalb <xref:System.Windows.FrameworkPropertyMetadata> von als eine Reihe von booleschen Eigenschaften und nicht im erstellenden Enumerationswert verfügbar gemacht. Mit den booleschen Eigenschaften können Sie jede Bedingung überprüfen, anstatt eine Maske auf einen Flag-Enumerationswert anzuwenden, um die interessanten Informationen abzurufen. Der Konstruktor verwendet die verketteten <xref:System.Windows.FrameworkPropertyMetadataOptions> , um die Länge der Konstruktorsignatur zu gewährleisten, wohingegen die tatsächlich erstellten Metadaten die diskreten Eigenschaften verfügbar machen, um die Abfrage der Metadaten intuitiver zu gestalten.  
+> Die Eigenschafts Merkmale, die in <xref:System.Windows.FrameworkPropertyMetadata> angegeben werden können, werden in dieser Dokumentation manchmal als "Flags" bezeichnet. Wenn Sie neue Metadateninstanzen für die Verwendung in Registrierungen von Abhängigkeits Eigenschaften oder Metadatenüberschreibungen erstellen, geben Sie diese Werte <xref:System.Windows.FrameworkPropertyMetadataOptions> mithilfe der flagweise-Enumeration an, und geben Sie dann möglicherweise verketteten Werte der-Enumeration an die <xref:System.Windows.FrameworkPropertyMetadata> -Konstruktor. Nachdem Sie jedoch erstellt wurden, werden diese Options Merkmale innerhalb <xref:System.Windows.FrameworkPropertyMetadata> von als eine Reihe von booleschen Eigenschaften und nicht im erstellenden Enumerationswert verfügbar gemacht. Mit den booleschen Eigenschaften können Sie jede Bedingung überprüfen, anstatt eine Maske auf einen Flag-Enumerationswert anzuwenden, um die interessanten Informationen abzurufen. Der Konstruktor verwendet die verketteten <xref:System.Windows.FrameworkPropertyMetadataOptions> , um die Länge der Konstruktorsignatur zu gewährleisten, wohingegen die tatsächlich erstellten Metadaten die diskreten Eigenschaften verfügbar machen, um die Abfrage der Metadaten intuitiver zu gestalten.  
   
 <a name="override_or_subclass"></a>   
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Überschreiben von Metadaten und Ableiten einer Klasse  
@@ -78,7 +78,7 @@ Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
  Angefügte Eigenschaften werden in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] als Abhängigkeitseigenschaften implementiert. Dies bedeutet, dass sie auch Metadaten besitzen, die von einzelnen Klassen überschrieben werden können. Die Bereichs Überlegungen für eine angefügte Eigenschaft [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] in sind im allgemeinen <xref:System.Windows.DependencyObject> , dass für jede Eigenschaft eine angefügte Eigenschaft festgelegt werden kann. Daher kann jede <xref:System.Windows.DependencyObject> abgeleitete Klasse die Metadaten für eine beliebige angefügte Eigenschaft überschreiben, da Sie möglicherweise für eine Instanz der Klasse festgelegt wird. Sie können Standardwerte, Rückrufe oder Eigenschaften der Berichterstattung über Merkmale auf WPF-Frameworkebene überschreiben. Wenn die angefügte Eigenschaft auf eine Instanz Ihrer Klasse festgelegt ist, finden diese Merkmale zum Überschreiben von Metadateneigenschaften Anwendung. Falls die Eigenschaft nicht anderweitig festgelegt ist, können Sie z.B. den Standardwert überschreiben, sodass der Überschreibungswert als der Wert der angefügten Eigenschaft auf Ihren Klasseninstanzen gemeldet wird.  
   
 > [!NOTE]
->  Die <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> -Eigenschaft ist für angefügte Eigenschaften nicht relevant.  
+> Die <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> -Eigenschaft ist für angefügte Eigenschaften nicht relevant.  
   
 <a name="dp_add_owner"></a>   
 ### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>Hinzufügen einer Klasse als Besitzer einer vorhandenen Abhängigkeitseigenschaft  

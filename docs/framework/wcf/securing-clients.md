@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 1200875baf39c5fdff613cfd21d4027cd5d8df1b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7f9a02bc650f54338dfcb1d3f41397e745483430
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959532"
 ---
 # <a name="securing-clients"></a>Sichern von Clients
-In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsanforderungen für Clients vor. d. h. der Dienst legt fest, welcher Sicherheitsmodus verwendet wird und ob der Client Anmeldeinformationen angeben muss oder nicht. Der Sicherungsvorgang an einem Client ist also unkompliziert: Man verwendet einfach die vom Dienst erhaltenen Metadaten (sofern diese veröffentlicht wurden) und erstellt einen Client. Die Metadaten geben an, wie der Client konfiguriert wird. Wenn der Dienst erfordert, dass der Client Anmeldeinformationen angibt, müssen Sie Anmeldeinformationen erhalten, die die Anforderung erfüllen. Dieses Thema beschreibt den Vorgang ausführlicher. Weitere Informationen zum Erstellen eines sicheren Diensts finden Sie unter [Securing Services](../../../docs/framework/wcf/securing-services.md).  
+In Windows Communication Foundation (WCF) bestimmt der Dienst die Sicherheitsanforderungen für Clients. d. h. der Dienst legt fest, welcher Sicherheitsmodus verwendet wird und ob der Client Anmeldeinformationen angeben muss oder nicht. Der Sicherungsvorgang an einem Client ist also unkompliziert: Man verwendet einfach die vom Dienst erhaltenen Metadaten (sofern diese veröffentlicht wurden) und erstellt einen Client. Die Metadaten geben an, wie der Client konfiguriert wird. Wenn der Dienst erfordert, dass der Client Anmeldeinformationen angibt, müssen Sie Anmeldeinformationen erhalten, die die Anforderung erfüllen. Dieses Thema beschreibt den Vorgang ausführlicher. Weitere Informationen zum Erstellen eines sicheren Diensts finden Sie unter [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md).  
   
 ## <a name="the-service-specifies-security"></a>Der Dienst legt die Sicherheit fest  
- Standardmäßig haben die WCF-Bindungen aktivierte Sicherheitsfunktionen. (Die Ausnahme ist <xref:System.ServiceModel.BasicHttpBinding>.) Wenn der Dienst mit WCF erstellt wurde, besteht daher wahrscheinlicher, dass er Sicherheitsmaßnahmen, um sicherzustellen, dass Integrität, Vertraulichkeit und Authentifizierung umsetzt. In diesem Fall geben die vom Dienst bereitgestellten Metadaten an, was für den Aufbau eines sicheren Kommunikationskanals erforderlich ist. Wenn die Dienstmetadaten keine Sicherheitsanforderungen enthalten, gibt es keine Möglichkeit, einem Dienst ein Sicherheitsschema wie Secure Sockets Layer (SSL) über HTTP aufzuerlegen. Wenn jedoch der Dienst erfordert, dass der Client Anmeldeinformationen liefert, muss der Entwickler, Bereitsteller oder Administrator des Clients genau diejenigen Anmeldeinformationen liefern, die der Client zur Authentifizierung gegenüber dem Dienst nutzen wird.  
+ Standardmäßig verfügen WCF-Bindungen über aktivierte Sicherheitsfunktionen. (Die Ausnahme ist <xref:System.ServiceModel.BasicHttpBinding>.) Wenn der Dienst mithilfe von WCF erstellt wurde, besteht die Wahrscheinlichkeit, dass er die Sicherheit implementiert, um Authentifizierung, Vertraulichkeit und Integrität sicherzustellen. In diesem Fall geben die vom Dienst bereitgestellten Metadaten an, was für den Aufbau eines sicheren Kommunikationskanals erforderlich ist. Wenn die Dienstmetadaten keine Sicherheitsanforderungen enthalten, gibt es keine Möglichkeit, einem Dienst ein Sicherheitsschema wie Secure Sockets Layer (SSL) über HTTP aufzuerlegen. Wenn jedoch der Dienst erfordert, dass der Client Anmeldeinformationen liefert, muss der Entwickler, Bereitsteller oder Administrator des Clients genau diejenigen Anmeldeinformationen liefern, die der Client zur Authentifizierung gegenüber dem Dienst nutzen wird.  
   
 ## <a name="obtaining-metadata"></a>Erlangen von Metadaten  
- Beim Erstellen eines Clients besteht der erste Schritt darin, die Metadaten für den Dienst zu erlangen, die der Client für die Kommunikation nutzen wird. Dazu gibt es zwei Möglichkeiten. Zuerst, wenn der Dienst einen metadatenaustauschendpunkt (MEX) veröffentlicht oder seine Metadaten verfügbar, über HTTP oder HTTPS macht, Sie können die Metadaten mit den [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), beide generiert Codedateien für einen Client als auch in einer Konfigurationsdatei. (Weitere Informationen zur Verwendung des Tools finden Sie unter [Zugriff auf Dienste, die mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Wenn der Dienst keinen MEX-Endpunkt veröffentlicht und keine Metadaten über HTTP oder HTTPS zur Verfügung stellt, müssen Sie den Dienstersteller um Dokumentation bitten, die die Sicherheitsanforderungen und die Metadaten beschreibt.  
+ Beim Erstellen eines Clients besteht der erste Schritt darin, die Metadaten für den Dienst zu erlangen, die der Client für die Kommunikation nutzen wird. Dazu gibt es zwei Möglichkeiten. Erstens: Wenn der Dienst einen MEX-Endpunkt (Metadata Exchange) veröffentlicht oder seine Metadaten über HTTP oder HTTPS zur Verfügung stellt, können Sie die Metadaten mit dem [Service Model Metadata Utility Tool (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)herunterladen, das beide Code Dateien für einen Client generiert. und eine Konfigurationsdatei. (Weitere Informationen zur Verwendung des Tools finden Sie unter [zugreifen auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).) Wenn der Dienst keinen MEX-Endpunkt veröffentlicht und keine Metadaten über HTTP oder HTTPS zur Verfügung stellt, müssen Sie den Dienstersteller um Dokumentation bitten, die die Sicherheitsanforderungen und die Metadaten beschreibt.  
   
 > [!IMPORTANT]
->  Sie sollten darauf achten, dass die Metadaten von einer vertrauenswürdigen Quelle stammen und dass sie nicht manipuliert wurden. Über das HTTP-Protokoll abgerufene Metadaten werden im Klartext gesendet und können manipuliert werden. Wenn der Dienst die Eigenschaften <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> und <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> verwendet, verwenden Sie den URL, den der Dienstersteller geliefert hat, um die Daten über das HTTPS-Protokoll herunterzuladen.  
+> Sie sollten darauf achten, dass die Metadaten von einer vertrauenswürdigen Quelle stammen und dass sie nicht manipuliert wurden. Über das HTTP-Protokoll abgerufene Metadaten werden im Klartext gesendet und können manipuliert werden. Wenn der Dienst die Eigenschaften <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> und <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> verwendet, verwenden Sie den URL, den der Dienstersteller geliefert hat, um die Daten über das HTTPS-Protokoll herunterzuladen.  
   
 ## <a name="validating-security"></a>Überprüfen von Sicherheit  
  Metadatenquellen können in zwei grundlegende Kategorien aufgeteilt werden: vertrauenswürdige Quellen und nicht vertrauenswürdige Quellen. Wenn Sie einer Quelle vertrauen und den Clientcode und andere Metadaten vom sicheren MEX-Endpunkt der Quelle heruntergeladen haben, können Sie den Client erstellen, ihm die korrekten Anmeldeinformationen zuweisen und ihn ohne Bedenken ausführen.  
@@ -33,14 +33,14 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
 ## <a name="setting-a-client-credential"></a>Festlegen von Clientanmeldeinformationen  
  Das Festlegen von Clientanmeldeinformationen auf einem Client erfolgt in zwei Schritten:  
   
-1. Bestimmen der *Clientanmeldeinformationstyp* der Dienst erfordert. Dies wird durch eine der folgenden beiden Methoden erreicht. Erstens: Wenn Sie Dokumentation vom Dienstersteller besitzen, sollte diese den Typ der Clientanmeldeinformation (sofern vorhanden) angeben, der vom Dienst gefordert wird. Zweitens: Wenn Sie nur eine vom Svcutil.exe-Tool erstellte Konfigurationsdatei besitzen, können Sie die einzelnen Bindungen untersuchen, um herauszufinden, welcher Typ von Anmeldeinformationen benötigt wird.  
+1. Bestimmen Sie den *Typ der Client* Anmelde Informationen, den der Dienst benötigt. Dies wird durch eine der folgenden beiden Methoden erreicht. Erstens: Wenn Sie Dokumentation vom Dienstersteller besitzen, sollte diese den Typ der Clientanmeldeinformation (sofern vorhanden) angeben, der vom Dienst gefordert wird. Zweitens: Wenn Sie nur eine vom Svcutil.exe-Tool erstellte Konfigurationsdatei besitzen, können Sie die einzelnen Bindungen untersuchen, um herauszufinden, welcher Typ von Anmeldeinformationen benötigt wird.  
   
-2. Geben Sie tatsächliche Clientanmeldeinformationen an. Die tatsächlichen Clientanmeldeinformationen wird aufgerufen, eine *clientanmeldeinformationswert* zur Unterscheidung von den Typ. Wenn der Typ der Clientanmeldeinformationen beispielsweise ein Zertifikat angibt, müssen Sie ein X.509-Zertifikat bereitstellen, das von einer Zertifizierungsstelle ausgestellt wurde, der der Dienst vertraut.  
+2. Geben Sie tatsächliche Clientanmeldeinformationen an. Die tatsächlichen Client Anmelde Informationen werden als *Client* Anmelde Informationen bezeichnet, um Sie vom Typ zu unterscheiden. Wenn der Typ der Clientanmeldeinformationen beispielsweise ein Zertifikat angibt, müssen Sie ein X.509-Zertifikat bereitstellen, das von einer Zertifizierungsstelle ausgestellt wurde, der der Dienst vertraut.  
   
 ### <a name="determining-the-client-credential-type"></a>Bestimmen des Typs der Clientanmeldeinformationen  
- Wenn Sie die Konfiguration, sehen Sie das Tool Svcutil.exe generierten Datei haben die [ \<Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Abschnitt aus, um zu bestimmen, welcher Typ von Clientanmeldeinformationen erforderlich ist. Innerhalb des Abschnitts befinden sich Bindungselemente, die die Sicherheitsanforderungen angeben. Untersuchen Sie besonders die \<Sicherheit >-Element jeder Bindung. Zu diesem Element gehört das Attribut `mode`, das Sie auf einen von drei möglichen Werten festlegen können (`Message`, `Transport` oder `TransportWithMessageCredential`). Der Wert des Attributs bestimmt den Modus, und der Modus legt fest, welches der untergeordneten Elemente von Bedeutung ist.  
+ Wenn Sie die Konfigurationsdatei haben, die das Tool Svcutil. exe generiert hat, überprüfen Sie den [ \<Abschnitt Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) , um zu bestimmen, welcher Client Anmelde Informationstyp erforderlich ist. Innerhalb des Abschnitts befinden sich Bindungselemente, die die Sicherheitsanforderungen angeben. Untersuchen Sie insbesondere \<das Security >-Element jeder Bindung. Zu diesem Element gehört das Attribut `mode`, das Sie auf einen von drei möglichen Werten festlegen können (`Message`, `Transport` oder `TransportWithMessageCredential`). Der Wert des Attributs bestimmt den Modus, und der Modus legt fest, welches der untergeordneten Elemente von Bedeutung ist.  
   
- Die `<security>` Element möglicherweise entweder eine `<transport>` oder `<message>` -Element oder beides. Das bedeutende Element ist dasjenige, das dem Sicherheitsmodus entspricht. Der folgende Code gibt beispielsweise an, dass der Sicherheitsmodus `"Message"` und der Typ der Clientanmeldeinformationen für das Element `<message>``"Certificate"` ist. In diesem Fall kann das Element `<transport>` ignoriert werden. Das Element `<message>` legt jedoch fest, dass ein X.509-Zertifikat angegeben werden muss.  
+ Das `<security>` -Element kann entweder ein `<transport>` - `<message>` oder-Element oder beides enthalten. Das bedeutende Element ist dasjenige, das dem Sicherheitsmodus entspricht. Der folgende Code gibt beispielsweise an, dass der Sicherheitsmodus `"Message"` und der Typ der Clientanmeldeinformationen für das Element `<message>``"Certificate"` ist. In diesem Fall kann das Element `<transport>` ignoriert werden. Das Element `<message>` legt jedoch fest, dass ein X.509-Zertifikat angegeben werden muss.  
 
 ```xml  
 <wsHttpBinding>  
@@ -73,10 +73,10 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
   
 - Durch Programmieren in Ihren Clientcode (über die Methode `SetCertificate`).  
   
- Durch das Hinzufügen einer [ \<Verhaltensweisen >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Abschnitt der Konfigurationsdatei für den Client und der `clientCredentials` Element (siehe unten).  
+ Durch Hinzufügen eines [ \<Verhaltens >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Abschnitts der Konfigurationsdatei für den Client und Verwenden des `clientCredentials` -Elements (siehe unten).  
   
-#### <a name="setting-a-clientcredentials-value-in-code"></a>Festlegen einer \<ClientCredentials >-Wert im Code  
- Festlegen einer [ \<ClientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Wert im Code Sie Zugriff auf die <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Eigenschaft der <xref:System.ServiceModel.ClientBase%601> Klasse. Die Eigenschaft gibt ein <xref:System.ServiceModel.Description.ClientCredentials>-Objekt zurück, das Zugriff auf verschiedene Typen von Anmeldeinformationen zulässt (siehe Tabelle unten).  
+#### <a name="setting-a-clientcredentials-value-in-code"></a>Festlegen eines \<Clientanmelde-> Werts im Code  
+ Um einen [ \<Clientanmelde->](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Wert im Code festzulegen, müssen Sie <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> auf <xref:System.ServiceModel.ClientBase%601> die-Eigenschaft der-Klasse zugreifen. Die Eigenschaft gibt ein <xref:System.ServiceModel.Description.ClientCredentials>-Objekt zurück, das Zugriff auf verschiedene Typen von Anmeldeinformationen zulässt (siehe Tabelle unten).  
   
 |ClientCredential-Eigenschaft|Beschreibung|Hinweise|  
 |-------------------------------|-----------------|-----------|  
@@ -88,8 +88,8 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
 |<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Gibt <xref:System.ServiceModel.Security.UserNamePasswordClientCredential> zurück.|Stellt eine Kombination aus Benutzername und Kennwort dar.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Gibt <xref:System.ServiceModel.Security.WindowsClientCredential> zurück.|Stellt Windows-Clientanmeldeinformationen (Kerberos-Anmeldeinformationen) dar. Die Eigenschaften der Klasse sind schreibgeschützt.|  
   
-#### <a name="setting-a-clientcredentials-value-in-configuration"></a>Festlegen einer \<ClientCredentials > Wert in der Konfiguration  
- Werte für die Anmeldeinformationen werden angegeben, ein Endpunktverhalten als untergeordnete Elemente mit den [ \<ClientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Element. Das verwendete Element hängt vom Typ der Clientanmeldeinformationen ab. Das folgende Beispiel zeigt z. B. die Konfiguration festzulegende ein x. 509-Zertifikat mit der <[\<ClientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
+#### <a name="setting-a-clientcredentials-value-in-configuration"></a>Festlegen eines \<Clientanmelde-> Werts in der Konfiguration  
+ Anmelde Informationswerte werden mithilfe eines Endpunkt Verhaltens als unter [ \<](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) geordnete Elemente des clientcreden>-Elements angegeben. Das verwendete Element hängt vom Typ der Clientanmeldeinformationen ab. Das folgende Beispiel zeigt beispielsweise die Konfiguration zum Festlegen eines X. 509-Zertifikats mithilfe des <[\<ClientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
   
 ```xml  
 <configuration>  
@@ -107,7 +107,7 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
 </configuration>  
 ```  
   
- Fügen Sie zum Festlegen der Clientanmeldeinformationen in der Konfiguration einer [ \<EndpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) Element der Konfigurationsdatei hinzu. Darüber hinaus muss das hinzugefügte verhaltenselement verknüpft werden, um die Endpunkte des Diensts mithilfe der `behaviorConfiguration` Attribut der [ \<Endpunkt > der \<Client >](../configure-apps/file-schema/wcf/endpoint-of-client.md) -Element wie im folgenden Beispiel gezeigt. Der Wert des `behaviorConfiguration`-Attributs muss dem Wert des Verhaltensattributs `name` entsprechen.  
+ Fügen Sie der Konfigurationsdatei ein [ \<endpointverhaltens>](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) -Element hinzu, um die Client Anmelde Informationen in der Konfiguration festzulegen. Darüber hinaus muss das hinzugefügte Verhaltens Element mit dem Endpunkt `behaviorConfiguration` [ \<des dienstangs verknüpft werden, indem das-Attribut des-Endpunkt > des \<Client >](../configure-apps/file-schema/wcf/endpoint-of-client.md) -Elements verwendet wird, wie im folgenden Beispiel gezeigt. Der Wert des `behaviorConfiguration`-Attributs muss dem Wert des Verhaltensattributs `name` entsprechen.  
 
 ```xml
 <configuration>
@@ -124,12 +124,12 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
 ```
   
 > [!NOTE]
->  Einige der Werte der Clientanmeldeinformationen können nicht über Anwendungskonfigurationsdateien festgelegt werden, u. a. der Benutzername und das Kennwort oder die Werte für den Windows-Benutzer und das Windows-Kennwort. Solche Werte für die Anmeldeinformationen können nur im Code angegeben werden.  
+> Einige der Werte der Clientanmeldeinformationen können nicht über Anwendungskonfigurationsdateien festgelegt werden, u. a. der Benutzername und das Kennwort oder die Werte für den Windows-Benutzer und das Windows-Kennwort. Solche Werte für die Anmeldeinformationen können nur im Code angegeben werden.  
   
- Weitere Informationen zum Festlegen der Clientanmeldeinformationen, finden Sie unter [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Weitere Informationen zum Festlegen der Client Anmelde Informationen finden [Sie unter Gewusst wie: Geben Sie die Werte](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)der Client Anmelde Informationen an.  
   
 > [!NOTE]
->  `ClientCredentialType` wird ignoriert, wenn `SecurityMode` auf `"TransportWithMessageCredential",` festgelegt wird (siehe Beispielkonfiguration unten).  
+> `ClientCredentialType` wird ignoriert, wenn `SecurityMode` auf `"TransportWithMessageCredential",` festgelegt wird (siehe Beispielkonfiguration unten).  
   
 ```xml  
 <wsHttpBinding>  
@@ -155,6 +155,6 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
 - [Configuration Editor-Tool (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)
 - [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [Vorgehensweise: Angeben von Client Anmelde Informations Werten](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Vorgehensweise: Geben Sie den Typ der Clientanmeldeinformationen](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Vorgehensweise: Geben Sie den Typ der Client Anmelde Informationen an.](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

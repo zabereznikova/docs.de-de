@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 297a951e4678e05da73193133bd6050360b041ff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 481e0983a40bb551d08894ea32f76f332b8fe5a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587349"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943141"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurieren und Erweitern der Laufzeit mit Verhalten
-Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefinierte Erweiterungen, die zu überprüfen und Dienstkonfiguration zu überprüfen oder das Laufzeitverhalten in Windows Communication Foundation (WCF)-Client und Dienst-Anwendungen. In diesem Thema werden die Verhaltensschnittstellen beschrieben und erläutert, wie sie implementiert und wie sie zur Dienstbeschreibung (in einer Dienstanwendung) oder zu einem Endpunkt (in einer Clientanwendung) programmgesteuert oder in einer Konfigurationsdatei hinzugefügt werden können. Weitere Informationen zu vom System bereitgestellten Verhalten verwenden, finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) und [Run-Time-Clientverhalten angeben](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Mit Verhalten können Sie das Standardverhalten ändern und benutzerdefinierte Erweiterungen hinzufügen, die die Dienst Konfiguration überprüfen und überprüfen, oder das Laufzeitverhalten in Windows Communication Foundation (WCF) Client-und Dienst Anwendungen ändern In diesem Thema werden die Verhaltensschnittstellen beschrieben und erläutert, wie sie implementiert und wie sie zur Dienstbeschreibung (in einer Dienstanwendung) oder zu einem Endpunkt (in einer Clientanwendung) programmgesteuert oder in einer Konfigurationsdatei hinzugefügt werden können. Weitere Informationen zur Verwendung des vom System bereitgestellten Verhaltens finden Sie unter [angeben des Dienst Lauf Zeit Verhaltens](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) und [angeben des Client Lauf Zeit Verhaltens](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Verhalten  
- Verhaltenstypen werden hinzugefügt, an den Dienst oder die Dienstendpunkt-beschreibungsobjekten (auf den Dienst oder Client bzw.), bevor diese Objekte von Windows Communication Foundation (WCF) verwendet werden, zum Erstellen einer Laufzeit, die einen WCF-Dienst oder einen WCF-Client ausgeführt wird. Wenn diese Verhaltenstypen während des Lauftzeitkonstruktionsprozesses aufgerufen werden, können sie auf Laufzeiteigenschaften und -methoden zugreifen, die die vom Vertrag, von den Bindungen und von den Adressen erstellte Laufzeit ändern.  
+ Verhaltenstypen werden den Beschreibungs Objekten des Dienst-oder Dienst Endpunkts (auf dem Dienst bzw. Client) hinzugefügt, bevor diese Objekte von Windows Communication Foundation (WCF) zum Erstellen einer Laufzeit verwendet werden, die einen WCF-Dienst oder einen WCF-Client ausführt. Wenn diese Verhaltenstypen während des Lauftzeitkonstruktionsprozesses aufgerufen werden, können sie auf Laufzeiteigenschaften und -methoden zugreifen, die die vom Vertrag, von den Bindungen und von den Adressen erstellte Laufzeit ändern.  
   
 ### <a name="behavior-methods"></a>Verhaltensmethoden  
- Alle Verhaltenstypen verfügen über eine `AddBindingParameters` -Methode, eine `ApplyDispatchBehavior` -Methode, eine `Validate` -Methode, und ein `ApplyClientBehavior` Methode mit einer Ausnahme: Da <xref:System.ServiceModel.Description.IServiceBehavior> kann nicht ausgeführt werden in einem Client wird nicht implementiert `ApplyClientBehavior`.  
+ Alle Verhalten verfügen über `AddBindingParameters` eine-Methode `ApplyDispatchBehavior` , eine- `Validate` Methode, eine- `ApplyClientBehavior` Methode und eine-Methode mit einer Ausnahme: Da <xref:System.ServiceModel.Description.IServiceBehavior> nicht in einem Client ausgeführt werden kann, wird nicht `ApplyClientBehavior`implementiert.  
   
 - Verwenden Sie die `AddBindingParameters`-Methode, um benutzerdefinierte Objekte zu ändern oder einer Sammlung hinzuzufügen, auf die benutzerdefinierte Bindungen beim Erstellen der Laufzeit für ihre Verwendung zugreifen können. Ein Beispiel hierfür ist, wie Schutzanforderungen festgelegt werden, die beeinflussen, wie der Kanal erstellt wird, jedoch dem Kanalentwickler nicht bekannt sind.  
   
@@ -27,14 +27,14 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
 - Verwenden Sie die `ApplyDispatchBehavior`-Methode und die `ApplyClientBehavior`-Methode, um die Beschreibungsstruktur zu untersuchen und die Laufzeit für einen bestimmten Bereich entweder im Dienst oder auf dem Client zu ändern. Sie können auch Erweiterungsobjekte einfügen.  
   
     > [!NOTE]
-    >  Obwohl eine Beschreibungsstruktur in diesen Methoden bereitgestellt wird, dient sie nur zur Überprüfung. Wenn eine Beschreibungsstruktur geändert wird, ist das Verhalten nicht definiert.  
+    > Obwohl eine Beschreibungsstruktur in diesen Methoden bereitgestellt wird, dient sie nur zur Überprüfung. Wenn eine Beschreibungsstruktur geändert wird, ist das Verhalten nicht definiert.  
   
  Der Zugriff auf die Eigenschaften, die Sie ändern können, und die Anpassungsschnittstellen, die Sie implementieren können, erfolgt über die Dienst- und Clientlaufzeitklassen. Die Diensttypen sind die <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse und die <xref:System.ServiceModel.Dispatcher.DispatchOperation>-Klasse. Die Clienttypen sind die <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Klasse und die <xref:System.ServiceModel.Dispatcher.ClientOperation>-Klasse. Die <xref:System.ServiceModel.Dispatcher.ClientRuntime>-Klasse und die <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse sind Erweiterungseinstiegspunkte, um clientweit und dienstweit auf Laufzeiteigenschaften bzw. Erweiterungssammlungen zuzugreifen. Entsprechend machen die <xref:System.ServiceModel.Dispatcher.ClientOperation>-Klasse und die <xref:System.ServiceModel.Dispatcher.DispatchOperation>-Klasse Clientvorgangs- und Dienstvorgangslaufzeit-Eigenschaften bzw. Erweiterungssammlungen verfügbar. Sie können jedoch auf das breiter angelegte Laufzeitobjekt vom Vorgangslaufzeitobjekt aus und umgekehrt zugreifen, sofern erforderlich.  
   
 > [!NOTE]
->  Eine Erläuterung der Laufzeiteigenschaften und Erweiterungstypen, die Sie zum Ändern des ausführungsverhaltens eines Clients verwenden können, finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Eine Erläuterung der Laufzeiteigenschaften und Erweiterungstypen, die Sie zum Ändern des ausführungsverhaltens eines dienstverteilers verwenden können, finden Sie unter [Erweitern von Verteilern](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+> Eine Erläuterung der Lauf Zeiteigenschaften und Erweiterungs Typen, mit denen Sie das Ausführungs Verhalten eines Clients ändern können, finden Sie unter [Erweitern von Clients](../../../../docs/framework/wcf/extending/extending-clients.md). Eine Erläuterung der Lauf Zeiteigenschaften und Erweiterungs Typen, die Sie zum Ändern des Ausführungs Verhaltens eines Dienst Verteilers verwenden können, finden Sie unter [erweitern](../../../../docs/framework/wcf/extending/extending-dispatchers.md)von Dispatcher.  
   
- Die meisten Benutzer von WCF nicht direkt mit der Laufzeit interagieren; Stattdessen verwenden sie kernprogrammierungskonstrukte wie Endpunkte, Verträge, Bindungen, Adressen und Verhaltensattribute für Klassen oder Verhalten in Konfigurationsdateien. Diese Konstrukte bilden die *beschreibungsstruktur*, dies ist die vollständige Spezifikation für die Erstellung einer Laufzeit zur Unterstützung von eines Diensts oder Client, der von der beschreibungsstruktur beschriebenen.  
+ Die meisten WCF-Benutzer interagieren nicht direkt mit der Laufzeit. Stattdessen verwenden Sie konstruktorkonstrukte wie Endpunkte, Verträge, Bindungen, Adressen und Verhaltens Attribute für Klassen oder Verhalten in Konfigurationsdateien. Diese Konstrukte bilden die *Beschreibungs*Struktur, bei der es sich um die umfassende Spezifikation zum Erstellen einer Laufzeit zur Unterstützung eines in der Beschreibungs Struktur beschriebenen diensoder Clients handelt.  
   
  Es gibt vier Arten von Verhalten in WCF:  
   
@@ -65,24 +65,24 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
   
 3. Implementieren eines benutzerdefinierten <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, das die Konfiguration erweitert. Dies ermöglicht die Verwendung des Dienstverhaltens von Anwendungskonfigurationsdateien aus.  
   
- Beispiele für Dienstverhalten in WCF die <xref:System.ServiceModel.ServiceBehaviorAttribute> -Attribut, das <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>, und die <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Verhalten.  
+ Beispiele für Dienst Verhaltensweisen in WCF <xref:System.ServiceModel.ServiceBehaviorAttribute> sind das- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>Attribut, das <xref:System.ServiceModel.Description.ServiceMetadataBehavior> -Attribut und das-Verhalten.  
   
 #### <a name="contract-behaviors"></a>Vertragsverhalten  
  Vertragsverhalten, das die <xref:System.ServiceModel.Description.IContractBehavior>-Schnittstelle implementiert, dient zur Erweiterung der Client- sowie Dienstlaufzeit in einem Vertrag.  
   
- Für das Hinzufügen von Vertragsverhalten zu einem Vertrag stehen zwei Mechanismen zur Verfügung.  Der erste Mechanismus besteht im Erstellen eines benutzerdefinierten Attributs zur Verwendung in der Vertragsschnittstelle. Wenn eine Vertragsschnittstelle übergeben wird entweder eine <xref:System.ServiceModel.ServiceHost> oder <xref:System.ServiceModel.ChannelFactory%601>, WCF untersucht die Attribute für die Schnittstelle. Falls eines der Attribute Implementierungen von <xref:System.ServiceModel.Description.IContractBehavior> darstellt, wird es der Verhaltenssammlung in der für diese Schnittstelle erstellten <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> hinzugefügt.  
+ Für das Hinzufügen von Vertragsverhalten zu einem Vertrag stehen zwei Mechanismen zur Verfügung.  Der erste Mechanismus besteht im Erstellen eines benutzerdefinierten Attributs zur Verwendung in der Vertragsschnittstelle. Wenn eine Vertrags Schnittstelle an eine <xref:System.ServiceModel.ServiceHost> oder eine <xref:System.ServiceModel.ChannelFactory%601>übermittelt wird, untersucht WCF die Attribute für die Schnittstelle. Falls eines der Attribute Implementierungen von <xref:System.ServiceModel.Description.IContractBehavior> darstellt, wird es der Verhaltenssammlung in der für diese Schnittstelle erstellten <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> hinzugefügt.  
   
  Sie können das <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType> auch im benutzerdefinierten Vertragsverhaltensattribut implementieren. In diesem Fall sieht das Verhalten wie folgt aus bei der Anwendung auf:  
   
- • Eine Vertragsschnittstelle. In diesem Fall das Verhalten auf alle Verträge dieses Typs in einen beliebigen Endpunkt angewendet wird und WCF ignoriert den Wert des der <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> Eigenschaft.  
+ • Eine Vertragsschnittstelle. In diesem Fall wird das Verhalten auf alle Verträge dieses Typs in jedem Endpunkt angewendet, und WCF ignoriert den Wert der <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> -Eigenschaft.  
   
  • Eine Dienstklasse. In diesem Fall wird das Verhalten nur auf Endpunkte angewendet, deren Vertrag der Wert der  <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>-Eigenschaft ist.  
   
- • Eine Rückrufklasse. In diesem Fall das Verhalten auf-Endpunkt des duplexclients angewendet wird und WCF ignoriert den Wert des der <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> Eigenschaft.  
+ • Eine Rückrufklasse. In diesem Fall wird das Verhalten auf den Endpunkt des Duplex Clients angewendet, und WCF ignoriert den Wert der <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> -Eigenschaft.  
   
  Der zweite Mechanismus besteht im Hinzufügen des Verhaltens zur Verhaltenssammlung einer <xref:System.ServiceModel.Description.ContractDescription>.  
   
- Beispiele für Vertragsverhalten in WCF die <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> Attribut. Weitere Informationen und ein Beispiel hierzu finden Sie im Verweisthema.  
+ Beispiele für Vertrags Verhalten in WCF sind das <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> -Attribut. Weitere Informationen und ein Beispiel hierzu finden Sie im Verweisthema.  
   
 #### <a name="endpoint-behaviors"></a>Endpunktverhalten  
  Endpunktverhalten, das <xref:System.ServiceModel.Description.IEndpointBehavior> implementiert, ist der Hauptmechanismus, mit dem die gesamte Dienst- oder Clientlaufzeit für einen bestimmten Endpunkt geändert wird.  
@@ -98,11 +98,11 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
 #### <a name="operation-behaviors"></a>Vorgangsverhalten  
  Vorgangsverhalten, das die <xref:System.ServiceModel.Description.IOperationBehavior>-Schnittstelle implementiert, dient zur Erweiterung der Client- sowie Dienstlaufzeit für jeden Vorgang.  
   
- Für das Hinzufügen von Vorgangsverhalten zu einem Vorgang stehen zwei Mechanismen zur Verfügung. Der erste Mechanismus besteht im Erstellen eines benutzerdefinierten Attributs zur Verwendung in der Methode, die den Vorgang formt. Wenn ein Vorgang hinzugefügt wird, entweder eine <xref:System.ServiceModel.ServiceHost> oder ein <xref:System.ServiceModel.ChannelFactory>, fügt WCF <xref:System.ServiceModel.Description.IOperationBehavior> Attribute der Verhaltenssammlung die <xref:System.ServiceModel.Description.OperationDescription> für diesen Vorgang erstellten.  
+ Für das Hinzufügen von Vorgangsverhalten zu einem Vorgang stehen zwei Mechanismen zur Verfügung. Der erste Mechanismus besteht im Erstellen eines benutzerdefinierten Attributs zur Verwendung in der Methode, die den Vorgang formt. Wenn ein <xref:System.ServiceModel.ServiceHost> Vorgang entweder einem oder einem <xref:System.ServiceModel.ChannelFactory>hinzugefügt wird, fügt <xref:System.ServiceModel.Description.IOperationBehavior> WCF der Verhaltens Auflistung in der <xref:System.ServiceModel.Description.OperationDescription> , die für diesen Vorgang erstellt wurde, Attribute hinzu.  
   
  Der zweite Mechanismus besteht im direkten Hinzufügen des Verhaltens zur Verhaltenssammlung einer konstruierten <xref:System.ServiceModel.Description.OperationDescription>.  
   
- Beispiele für Vorgangsverhalten in WCF die <xref:System.ServiceModel.OperationBehaviorAttribute> und <xref:System.ServiceModel.TransactionFlowAttribute>.  
+ Beispiele für Vorgangs Verhaltensweisen in WCF <xref:System.ServiceModel.OperationBehaviorAttribute> sind <xref:System.ServiceModel.TransactionFlowAttribute>und.  
   
  Weitere Informationen und ein Beispiel hierzu finden Sie im Verweisthema.  
   
@@ -110,7 +110,7 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
  Dienst-, Endpunkt- und Vertragsverhalten können so konzipiert werden, dass sie in Code oder mithilfe von Attributen angegeben werden. Nur Dienst- und Endpunktverhalten können mit Anwendungs- oder Webkonfigurationsdateien konfiguriert werden. Durch das Verfügbarmachen von Verhalten mit Attributen können Entwickler ein Verhalten zum Kompilierungszeitpunkt angeben, das zur Laufzeit weder hinzugefügt, entfernt oder geändert werden kann. Dies ist häufig für Verhalten nützlich, das für den korrekten Betrieb eines Diensts immer erforderlich ist (z. B. die transaktionsbezogenen Parameter für das <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType>-Attribut). Durch Verfügbarmachen von Verhalten unter Verwendung der Konfiguration können Entwickler die Spezifikation und Konfiguration des Verhaltens den Personen überlassen, die den Dienst bereitstellen. Dieses Verfahren ist nützlich für Verhalten, das aus optionalen Komponenten oder einer anderen bereitstellungsspezifischen Konfiguration besteht, wie z. B. ob Metadaten für den Dienst verfügbar gemacht werden oder die spezifische Autorisierungskonfiguration für einen Dienst.  
   
 > [!NOTE]
->  Sie können konfigurationsunterstützendes Verhalten auch zur Durchsetzung von Unternehmensrichtlinien verwenden, indem sie in die Konfigurationsdatei machine.config eingefügt werden und diese Elemente gesperrt werden. Eine Beschreibung und ein Beispiel finden Sie unter [Vorgehensweise: Sperren von Endpunkten im Unternehmen](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+> Sie können konfigurationsunterstützendes Verhalten auch zur Durchsetzung von Unternehmensrichtlinien verwenden, indem sie in die Konfigurationsdatei machine.config eingefügt werden und diese Elemente gesperrt werden. Eine Beschreibung und ein Beispiel finden [Sie unter Gewusst wie: Sperren von Endpunkten im Unternehmen](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
  Um ein Verhalten unter Verwendung der Konfiguration verfügbar zu machen, muss ein Entwickler eine abgeleitete Klasse von <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> erstellen und die Erweiterung anschließend in der Konfiguration registrieren.  
   
@@ -181,7 +181,7 @@ protected override object CreateBehavior()
 </configuration>  
 ```  
   
- Wo `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector` ist der verhaltenserweiterungstyp und `HostApplication` ist der Name der Assembly in die diese Klasse kompiliert wurde.  
+ Dabei ist der Verhaltens Erweiterungstyp `HostApplication` und der Name der Assembly, in die diese Klasse kompiliert wurde. `Microsoft.WCF.Documentation.EndpointBehaviorMessageInspector`  
   
 ### <a name="evaluation-order"></a>Auswertungsreihenfolge  
  Die <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> und der <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> sind für das Erstellen der Laufzeit aus dem Programmierungsmodell und der Beschreibung verantwortlich. Verhaltenstypen, wie zuvor beschrieben, tragen zu diesem Erstellungsprozess auf der Dienst-, Endpunkt-, Vertrags- und Vorgangsebene bei.  

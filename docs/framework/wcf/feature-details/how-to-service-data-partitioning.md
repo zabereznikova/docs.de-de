@@ -2,22 +2,22 @@
 title: 'Vorgehensweise: Dienstdatenpartitionierung'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047528"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947869"
 ---
 # <a name="how-to-service-data-partitioning"></a>Vorgehensweise: Dienstdatenpartitionierung
-In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um Meldungen über mehrere Instanzen des gleichen Zieldiensts zu partitionieren. Die Partitionierung von Dienstdaten wird in der Regel verwendet, wenn Sie einen Dienst skalieren müssen, um eine bessere Dienstqualität bereitzustellen, oder wenn Sie Anforderungen verschiedener Kunden jeweils auf bestimmte Art und Weise behandeln müssen. Beispielsweise können Nachrichten von wichtigen Kunden oder "Gold"-Kunden mit einer höheren Priorität als Nachrichten von einem Standardkunden verarbeitet werden müssen.  
+In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um Meldungen über mehrere Instanzen des gleichen Zieldiensts zu partitionieren. Die Partitionierung von Dienstdaten wird in der Regel verwendet, wenn Sie einen Dienst skalieren müssen, um eine bessere Dienstqualität bereitzustellen, oder wenn Sie Anforderungen verschiedener Kunden jeweils auf bestimmte Art und Weise behandeln müssen. Beispielsweise müssen Nachrichten von hochwertigen oder "Gold"-Kunden möglicherweise mit einer höheren Priorität verarbeitet werden als Nachrichten von einem Standardkunden.  
   
  In diesem Beispiel werden Nachrichten zu einem von zwei Instanzen des regularCalc-Diensts geleitet. Beide Instanzen des Diensts sind identisch. Der vom calculator1-Endpunkt vertretene Dienst verarbeitet jedoch Nachrichten von wichtigen Kunden, und der calculator2-Endpunkt verarbeitet Nachrichten von anderen Kunden.  
   
  Die vom Client gesendete Nachricht enthält keine eindeutigen Daten, anhand denen ermittelt werden kann, an welche Dienstinstanz die Meldung weitergeleitet werden soll. Um es allen Clients zu ermöglichen, Daten an einen bestimmten Zieldienst weiterzuleiten, implementieren wir zwei Dienstendpunkte, die zum Empfangen von Nachrichten verwendet werden.  
   
 > [!NOTE]
->  In diesem Beispiel werden zwar bestimmte Endpunkte zum Partitionieren von Daten verwendet, aber dies kann auch mit Informationen erreicht werden, die innerhalb der Meldung selbst enthalten sind, z. B. Header- oder Textdaten.  
+> In diesem Beispiel werden zwar bestimmte Endpunkte zum Partitionieren von Daten verwendet, aber dies kann auch mit Informationen erreicht werden, die innerhalb der Meldung selbst enthalten sind, z. B. Header- oder Textdaten.  
   
 ### <a name="implement-service-data-partitioning"></a>Implementieren der Dienstdatenpartitionierung  
   
@@ -85,7 +85,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </filterTables>  
     ```  
   
-4. Um eingehende Nachrichten anhand der in der Tabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten:  
+4. Um eingehende Nachrichten anhand der in der Tabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht das Zuordnen von "filterTable1" zu den Dienst Endpunkten:  
   
     ```xml  
     <behaviors>  

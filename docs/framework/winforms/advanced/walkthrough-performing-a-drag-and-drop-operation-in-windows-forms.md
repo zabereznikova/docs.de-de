@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cda3e87a4b0eb680d374eb0419a6b6b3157dc4a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747393"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957124"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Exemplarische Vorgehensweise: Ausführen von Drag & Drop-Operationen in Windows Forms
-Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müssen Sie insbesondere eine Reihe von Ereignissen, behandeln die <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, und <xref:System.Windows.Forms.Control.DragDrop> Ereignisse. Wenn Sie die Daten aus den Ereignisargumenten dieser Ereignisse verwenden, können Sie Drag & Drop-Vorgänge problemlos vereinfachen.  
+Um Drag & Drop-Vorgänge in Windows-basierten Anwendungen auszuführen, müssen Sie eine Reihe von Ereignissen verarbeiten, insbesondere die <xref:System.Windows.Forms.Control.DragEnter>Ereignisse, <xref:System.Windows.Forms.Control.DragLeave>und. <xref:System.Windows.Forms.Control.DragDrop> Wenn Sie die Daten aus den Ereignisargumenten dieser Ereignisse verwenden, können Sie Drag & Drop-Vorgänge problemlos vereinfachen.  
   
 ## <a name="dragging-data"></a>Ziehen von Daten  
- Drag & Drop-Vorgänge beginnen immer mit dem Ziehen (Dragging). Die Funktionalität zum Aktivieren von Daten gesammelt werden sollen, wenn es sich bei Beginn des Ziehvorgangs wird implementiert, der <xref:System.Windows.Forms.Control.DoDragDrop%2A> Methode.  
+ Drag & Drop-Vorgänge beginnen immer mit dem Ziehen (Dragging). Die Funktion, mit der Daten beim Ziehen von Daten gesammelt werden können, wird <xref:System.Windows.Forms.Control.DoDragDrop%2A> in der-Methode implementiert.  
   
- Im folgenden Beispiel die <xref:System.Windows.Forms.Control.MouseDown> Ereignis wird verwendet, um den Ziehvorgang gestartet werden, da es am intuitivsten ist (die meisten Drag & Drop-Aktionen beginnen mit der Maustaste gedrückt wird). Beachten Sie dabei jedoch, dass für das Starten des Drag & Drop-Vorgangs jedes beliebige Ereignis verwendet werden kann.  
+ Im folgenden Beispiel wird das <xref:System.Windows.Forms.Control.MouseDown> -Ereignis verwendet, um den Zieh Vorgang zu starten, da es sich hierbei um die intuitivste Aktion handelt (die meisten Drag & Drop-Aktionen beginnen mit der Maustaste, wenn die Maustaste gedrückt ist). Beachten Sie dabei jedoch, dass für das Starten des Drag & Drop-Vorgangs jedes beliebige Ereignis verwendet werden kann.  
   
 > [!NOTE]
->  Bestimmte Steuerelemente verfügen über benutzerdefinierte für Ziehvorgänge spezifische Ereignisse. Die <xref:System.Windows.Forms.ListView> und <xref:System.Windows.Forms.TreeView> -Steuerelemente, z. B. haben eine <xref:System.Windows.Forms.TreeView.ItemDrag> Ereignis.  
+> Bestimmte Steuerelemente verfügen über benutzerdefinierte für Ziehvorgänge spezifische Ereignisse. Die <xref:System.Windows.Forms.ListView> - <xref:System.Windows.Forms.TreeView> und-Steuerelemente haben z. <xref:System.Windows.Forms.TreeView.ItemDrag> b. ein-Ereignis.  
   
 #### <a name="to-start-a-drag-operation"></a>So starten Sie einen Zielvorgang  
   
-1. In der <xref:System.Windows.Forms.Control.MouseDown> Ereignis für das Steuerelement, in dem der Ziehvorgang beginnen, verwenden die `DoDragDrop` Methode, um die zu ziehenden Daten festzulegen und die zulässige Wirkung haben. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DragEventArgs.Data%2A> und <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
+1. Verwenden Sie im- `DoDragDrop` EreignisfürdasSteuerelement,beidemderZiehVorgangbeginnt,die-Methode,umdieDatenfestzulegen,diegezogenwerdensollen,unddiezulässigeAuswirkungderZiehKraft.<xref:System.Windows.Forms.Control.MouseDown> Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DragEventArgs.Data%2A> und <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
   
-     Im folgenden Beispiel wird gezeigt, wie ein Ziehvorgang gestartet wird. Das Steuerelement, an dem der Ziehvorgang beginnt, eine <xref:System.Windows.Forms.Button> -Steuerelement die gezogenen Daten ist die Zeichenfolgendarstellung der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der <xref:System.Windows.Forms.Button> -Steuerelement und die zulässigen Auswirkungen sind entweder kopieren oder verschieben.  
+     Im folgenden Beispiel wird gezeigt, wie ein Ziehvorgang gestartet wird. Das Steuerelement, bei dem der Zieh <xref:System.Windows.Forms.Button> Vorgang beginnt, ist ein-Steuerelement, die gezogenen <xref:System.Windows.Forms.Control.Text%2A> Daten sind die <xref:System.Windows.Forms.Button> Zeichenfolge, die die-Eigenschaft des Steuer Elements darstellt, und die zulässigen Effekte sind entweder kopieren oder verschieben.  
   
     ```vb  
     Private Sub Button1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button1.MouseDown  
@@ -48,18 +48,18 @@ Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müss
     ```  
   
     > [!NOTE]
-    >  Können beliebige Daten verwendet werden, als Parameter in der `DoDragDrop` Methode; im obigen Beispiel ist die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der <xref:System.Windows.Forms.Button> Steuerelement verwendet (anstatt einen Wert fest zu codieren oder Abrufen von Daten aus einem Dataset), da die Eigenschaft mit verbunden war die Position gezogen wurde (die <xref:System.Windows.Forms.Button> Steuerelement). Dies sollte bei der Integration von Drag & Drop-Vorgängen in Windows-basierte Anwendungen stets beachtet werden.  
+    > Alle Daten können als Parameter in der `DoDragDrop` -Methode verwendet werden. im obigen Beispiel wurde die <xref:System.Windows.Forms.Control.Text%2A> -Eigenschaft des <xref:System.Windows.Forms.Button> -Steuer Elements verwendet (anstatt einen Wert hart zu codieren oder Daten aus einem Dataset abzurufen), da die-Eigenschaft mit dem der Speicherort, aus dem <xref:System.Windows.Forms.Button> gezogen wird (das Steuerelement). Dies sollte bei der Integration von Drag & Drop-Vorgängen in Windows-basierte Anwendungen stets beachtet werden.  
   
- Während ein Ziehvorgangs aktiviert ist, können Sie behandeln die <xref:System.Windows.Forms.Control.QueryContinueDrag> -Ereignis, das "Erlaubnis fragt" des Systems, der der Ziehvorgang fortgesetzt. Bei der Behandlung von dieser Methode ist auch der entsprechenden Stelle an, Sie Methoden aufzurufen, die Auswirkungen auf den Ziehvorgang auswirken, z. B. das Erweitern einer <xref:System.Windows.Forms.TreeNode> in einem <xref:System.Windows.Forms.TreeView> steuern, wenn der Cursor darüber bewegt wird.  
+ Während ein Zieh Vorgang wirksam ist, können Sie das <xref:System.Windows.Forms.Control.QueryContinueDrag> -Ereignis behandeln, das "die Berechtigung" für das System zum Fortsetzen des Zieh Vorgangs anfordert. Wenn Sie diese Methode verarbeiten, können Sie auch Methoden aufzurufen, die Auswirkungen auf den Zieh Vorgang haben, z. b. das Erweitern eines <xref:System.Windows.Forms.TreeNode> in einem <xref:System.Windows.Forms.TreeView> -Steuerelement, wenn der Cursor darauf bewegt wird.  
   
 ## <a name="dropping-data"></a>Ablegen von Daten  
- Nachdem Sie begonnen haben, Daten von einer Stelle einer Windows Form oder eines Steuerelements zu ziehen, möchten Sie diese natürlich auch irgendwo ablegen (Dropping). Der Cursor verändert sich, wenn er über einen Bereich auf einem Formular oder Steuerelement bewegt wird, der für das Ablegen von Daten konfiguriert ist. Bereiche in einem Windows-Formular oder Steuerelement durch Festlegen von abgelegte Daten angenommen gestellt werden die <xref:System.Windows.Forms.Control.AllowDrop%2A> -Eigenschaft und die Behandlung der <xref:System.Windows.Forms.Control.DragEnter> und <xref:System.Windows.Forms.Control.DragDrop> Ereignisse.  
+ Nachdem Sie begonnen haben, Daten von einer Stelle einer Windows Form oder eines Steuerelements zu ziehen, möchten Sie diese natürlich auch irgendwo ablegen (Dropping). Der Cursor verändert sich, wenn er über einen Bereich auf einem Formular oder Steuerelement bewegt wird, der für das Ablegen von Daten konfiguriert ist. Alle Bereiche innerhalb eines Windows Forms oder Steuer Elements können so eingerichtet werden, dass Sie verworfene Daten akzeptieren, indem <xref:System.Windows.Forms.Control.DragDrop> Sie die <xref:System.Windows.Forms.Control.AllowDrop%2A> -Eigenschaft festlegen und die <xref:System.Windows.Forms.Control.DragEnter> Ereignisse und behandeln.  
   
 #### <a name="to-perform-a-drop"></a>So führen Sie einen Ablegevorgang aus  
   
-1. Legen Sie die <xref:System.Windows.Forms.Control.AllowDrop%2A> Eigenschaft auf "true".  
+1. Legen Sie <xref:System.Windows.Forms.Control.AllowDrop%2A> die-Eigenschaft auf true fest.  
   
-2. In der `DragEnter` Ereignis für das Steuerelement, in dem der Ablegevorgang erfolgt, stellen Sie sicher, dass die gezogenen Daten einem zulässigen Typ ist (in diesem Fall <xref:System.Windows.Forms.Control.Text%2A>). Der Code legt dann die Auswirkungen, die durchgeführt werden, wenn das ablegen, auf einen Wert in geschieht der <xref:System.Windows.Forms.DragDropEffects> Enumeration. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. Stellen Sie im- <xref:System.Windows.Forms.Control.Text%2A> EreignisfürdasSteuerelement,indemderAblageVorgangauftritt,sicher,dassdiegezogenenDateneinenzulässigenTyphaben(indiesemFall).`DragEnter` Der Code legt dann den Effekt fest, der auftritt, wenn der Ablage Vorgang auf einen Wert <xref:System.Windows.Forms.DragDropEffects> in der-Enumeration angewendet wird. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,11 +83,11 @@ Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müss
     ```  
   
     > [!NOTE]
-    >  Können Ihren eigenen definieren <xref:System.Windows.Forms.DataFormats> durch Angabe Ihrer eigenen Objekt als die <xref:System.Object> Parameter, der die <xref:System.Windows.Forms.DataObject.SetData%2A> Methode. Stellen Sie dabei sicher, dass das angegebene Objekt serialisierbar ist. Weitere Informationen finden Sie unter <xref:System.Runtime.Serialization.ISerializable>.  
+    > Sie können Ihre eigenen <xref:System.Windows.Forms.DataFormats> definieren, indem Sie ein eigenes-Objekt <xref:System.Object> als Parameter der <xref:System.Windows.Forms.DataObject.SetData%2A> -Methode angeben. Stellen Sie dabei sicher, dass das angegebene Objekt serialisierbar ist. Weitere Informationen finden Sie unter <xref:System.Runtime.Serialization.ISerializable>.  
   
-3. In der <xref:System.Windows.Forms.Control.DragDrop> Ereignis für das Steuerelement, in dem der Ablegevorgang erfolgt, verwenden die <xref:System.Windows.Forms.DataObject.GetData%2A> Methode, um die gezogenen Daten abzurufen. Weitere Informationen finden Sie unter <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. Verwenden Sie im- <xref:System.Windows.Forms.DataObject.GetData%2A> Ereignisfürdas-Steuerelement,indemderLöschvorgangausgeführtwird,die-Methode,umdiegezogenenDatenabzurufen.<xref:System.Windows.Forms.Control.DragDrop> Weitere Informationen finden Sie unter <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
-     Im folgenden Beispiel wird eine <xref:System.Windows.Forms.TextBox> ist das Steuerelement gezogene (und auf dem der Ablegevorgang erfolgt). Der Code legt die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der <xref:System.Windows.Forms.TextBox> steuern die gezogenen Daten gleich.  
+     Im folgenden Beispiel ist ein <xref:System.Windows.Forms.TextBox> -Steuerelement das Steuerelement, zu dem gezogen wird (wo der Ablage auftritt). Der Code legt die <xref:System.Windows.Forms.Control.Text%2A> -Eigenschaft <xref:System.Windows.Forms.TextBox> des-Steuer Elements auf die gezogenen Daten fest.  
   
     ```vb  
     Private Sub TextBox1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragDrop  
@@ -104,10 +104,10 @@ Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müss
     ```  
   
     > [!NOTE]
-    >  Sie können darüber hinaus arbeiten, mit der <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> -Eigenschaft, je nach Schlüssel während des Drag & Drop-Vorgangs erschießen bestimmter Effekte auftreten (z. B. ist es standard, um die gezogenen Daten zu kopieren, wenn die STRG-Taste gedrückt wird).  
+    > Außerdem können Sie mit der <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> -Eigenschaft arbeiten, sodass abhängig von den Schlüsseln, die während des Drag & Drop-Vorgangs gedrückt werden, bestimmte Effekte auftreten (z. b. ist es Standard, die gezogenen Daten zu kopieren, wenn die STRG-Taste gedrückt wird).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Hinzufügen von Daten in die Zwischenablage](how-to-add-data-to-the-clipboard.md)
+- [Vorgehensweise: Hinzufügen von Daten zur Zwischenablage](how-to-add-data-to-the-clipboard.md)
 - [Vorgehensweise: Abrufen von Daten aus der Zwischenablage](how-to-retrieve-data-from-the-clipboard.md)
 - [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)

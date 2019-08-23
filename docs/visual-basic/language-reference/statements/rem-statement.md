@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16149ce42e3476cf07a62298f83734fee9ec7253
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783933"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957760"
 ---
 # <a name="rem-statement-visual-basic"></a>REM-Anweisung (Visual Basic)
-Für erläuternde Hinweise im Quellcode eines Programms verwendet.  
+Wird verwendet, um Erläuternde Hinweise in den Quellcode eines Programms einzubeziehen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,18 +32,18 @@ REM comment
   
 ## <a name="parts"></a>Teile  
  `comment`  
- Dies ist optional. Der Text eines Kommentars, die Sie einschließen möchten. Ein Leerzeichen ist erforderlich, zwischen den `REM` Schlüsselwort und `comment`.  
+ Optional. Der Text eines beliebigen Kommentars, den Sie einschließen möchten. Zwischen dem `REM` -Schlüsselwort und `comment`ist ein Leerzeichen erforderlich.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können Einfügen einer `REM` Anweisung, die allein in einer Zeile, oder Sie können in einer Zeile, die nach einer anderen Anweisung einfügen. Die `REM` Anweisung muss die letzte Anweisung in der Zeile sein. Wenn sie eine andere Anweisung folgt die `REM` müssen von dieser Anweisung durch ein Leerzeichen getrennt werden.  
+ Sie können eine `REM` -Anweisung einzeln in eine Zeile einfügen, oder Sie können Sie in einer Zeile nach einer anderen Anweisung platzieren. Die `REM` Anweisung muss die letzte Anweisung in der Zeile sein. Wenn Sie auf eine andere Anweisung folgt `REM` , muss die von dieser Anweisung durch ein Leerzeichen getrennt werden.  
   
- Sie können ein einfaches Anführungszeichen (`'`) anstelle von `REM`. Dies ist "true", gibt an, ob Ihr Kommentar folgt eine weitere Anweisung in der gleichen Zeile oder alleine in einer Zeile.  
+ Anstelle von`'` `REM`können Sie ein einzelnes Anführungszeichen () verwenden. Dies gilt unabhängig davon, ob Ihr Kommentar auf eine andere Anweisung in derselben Zeile folgt oder sich allein in einer Zeile befindet.  
   
 > [!NOTE]
->  Sie können nicht fortgesetzt werden eine `REM` Anweisung, indem Sie eine Zeilenfortsetzungszeichenfolge (`_`). Sobald ein Kommentar beginnt, untersucht der Compiler nicht die Zeichen für eine besondere Bedeutung. Verwenden Sie für einen mehrzeiligen Kommentar, einen anderen `REM` -Anweisung oder ein Kommentarsymbol (`'`) in jeder Zeile.  
+> Sie können eine `REM` Anweisung nicht mithilfe einer Zeilen Fortsetzungs Sequenz fortsetzen`_`(). Nachdem ein Kommentar begonnen hat, untersucht der Compiler die Zeichen nicht auf eine besondere Bedeutung. Verwenden Sie für einen mehrzeiligen Kommentar eine `REM` andere-Anweisung oder ein Kommentar`'`Symbol () für jede Zeile.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel veranschaulicht die `REM` -Anweisung, die für erläuternde Hinweise in einem Programm verwendet wird. Darüber hinaus wird gezeigt, wie Sie das einfache Anführungszeichen verwendet (`'`) anstelle von `REM`.  
+ Im folgenden Beispiel wird die `REM` -Anweisung veranschaulicht, die zum einschließen erklärender Hinweise in ein Programm verwendet wird. Außerdem wird die Alternative zum Verwenden des einfachen Anführungs Zeichens (`'`) anstelle von `REM`angezeigt.  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   

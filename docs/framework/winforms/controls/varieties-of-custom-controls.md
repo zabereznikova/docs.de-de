@@ -11,12 +11,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 71b71dc992497fda25a5e9453affc7bea98141d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 106da550fc6e6c50bc40e103e1f855059a9ffa9c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651557"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950096"
 ---
 # <a name="varieties-of-custom-controls"></a>Arten von benutzerdefinierten Steuerelementen
 .NET Framework bietet Ihnen die Möglichkeit, neue Steuerelemente zu entwickeln und zu implementieren. Sie können die Funktionalität des vertrauten Benutzersteuerelements sowie von vorhandenen Steuerelementen durch Vererbung erweitern. Sie können auch benutzerdefinierte Steuerelemente schreiben, die ihre eigene Grafikausgabe ausführen.  
@@ -24,12 +24,12 @@ ms.locfileid: "64651557"
  Es kann verwirrend sein, eine Entscheidung zu treffen, welche Art von Steuerelement erstellt werden soll. Dieses Thema behandelt die Unterschiede zwischen verschiedenen Arten von Steuerelementen, von denen geerbt werden kann, und bietet Informationen über die Auswahl einer bestimmten Art von Steuerelement für Ihr Projekt.  
   
 > [!NOTE]
->  Informationen zum Erstellen eines Steuerelements, das in Web Forms verwendet werden soll, finden Sie unter [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
+> Informationen zum Erstellen eines Steuerelements, das in Web Forms verwendet werden soll, finden Sie unter [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
   
 ## <a name="base-control-class"></a>Control-Basisklasse  
- Die <xref:System.Windows.Forms.Control> Klasse ist die Basisklasse für Windows Forms-Steuerelemente. Sie bietet die Infrastruktur, die für die grafische Darstellung in Windows Forms-Anwendungen benötigt wird.  
+ Die <xref:System.Windows.Forms.Control> -Klasse ist die Basisklasse für Windows Forms-Steuerelemente. Sie bietet die Infrastruktur, die für die grafische Darstellung in Windows Forms-Anwendungen benötigt wird.  
   
- Die <xref:System.Windows.Forms.Control> Klasse führt die folgenden Aufgaben zur visuellen Darstellung in Windows Forms-Anwendungen zu bieten:  
+ Die <xref:System.Windows.Forms.Control> -Klasse führt die folgenden Aufgaben aus, um die visuelle Darstellung in Windows Forms Anwendungen bereitzustellen:  
   
 - Macht ein Fensterhandle verfügbar.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "64651557"
   
 - Bietet erweiterte Layoutfunktionen.  
   
-- Enthält zahlreiche Eigenschaften für die visuelle Anzeige, z. B. <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, und <xref:System.Windows.Forms.Control.Width%2A>.  
+- Enthält zahlreiche Eigenschaften, die für die visuelle Anzeige <xref:System.Windows.Forms.Control.ForeColor%2A>spezifisch <xref:System.Windows.Forms.Control.BackColor%2A>sind, z <xref:System.Windows.Forms.Control.Width%2A>. b.,, <xref:System.Windows.Forms.Control.Height%2A>und.  
   
 - Bietet die notwendige Unterstützung für Sicherheit und Threading für ein Windows Forms-Steuerelement, um als Microsoft® ActiveX®-Steuerelement zu fungieren.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "64651557"
   
  Ein zusammengesetztes Steuerelement enthält die gesamte Funktionalität, die in jedem der enthaltenen Windows Forms-Steuerelemente implementiert ist, und ermöglicht es Ihnen, deren Eigenschaften selektiv verfügbar zu machen und zu binden. Ein zusammengesetztes Steuerelement bietet auch hohe Funktionalität für die standardmäßige Tastaturbehandlung, sodass Sie keinen zusätzlichen Entwicklungsaufwand betreiben müssen.  
   
- Ein zusammengesetztes Steuerelement kann z.B. erstellt werden, um die Adressdaten von Kunden aus einer Datenbank anzuzeigen. Dieses Steuerelement kann umfassen eine <xref:System.Windows.Forms.DataGridView> -Steuerelement zum Anzeigen der Datenbankfelder, eine <xref:System.Windows.Forms.BindingSource> zum Binden an eine Datenquelle zu behandeln und eine <xref:System.Windows.Forms.BindingNavigator> -Steuerelements zum Navigieren durch Datensätze. Sie können Datenbindungseigenschaften selektiv verfügbar machen und das gesamte Steuerelement verpacken und von Anwendung zu Anwendung wiederverwenden. Ein Beispiel dieser Art von Benutzersteuerelement finden Sie unter [Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente](how-to-apply-attributes-in-windows-forms-controls.md).  
+ Ein zusammengesetztes Steuerelement kann z.B. erstellt werden, um die Adressdaten von Kunden aus einer Datenbank anzuzeigen. Dieses Steuerelement kann ein <xref:System.Windows.Forms.DataGridView> Steuerelement enthalten, um die Daten Bank <xref:System.Windows.Forms.BindingSource> Felder anzuzeigen, ein zum Behandeln der Bindung an eine <xref:System.Windows.Forms.BindingNavigator> Datenquelle und ein-Steuerelement, um durch die Datensätze zu navigieren. Sie können Datenbindungseigenschaften selektiv verfügbar machen und das gesamte Steuerelement verpacken und von Anwendung zu Anwendung wiederverwenden. Ein Beispiel für diese Art von zusammengesetztes Steuerelement [finden Sie unter Gewusst wie: Anwenden von Attributen in Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)-Steuerelementen.  
   
- Um ein zusammengesetztes Steuerelement zu erstellen, leiten Sie von der <xref:System.Windows.Forms.UserControl> Klasse. Die <xref:System.Windows.Forms.UserControl> Basisklasse stellt Tastaturrouting für untergeordnete Steuerelemente aus und ermöglicht untergeordnete Steuerelemente als Gruppe arbeiten kann. Weitere Informationen finden Sie unter [Entwickeln eines zusammengesetzten Windows Forms-Steuerelements](developing-a-composite-windows-forms-control.md).  
+ Zum Erstellen eines zusammengesetzten Steuer Elements leiten Sie <xref:System.Windows.Forms.UserControl> von der-Klasse ab. Die <xref:System.Windows.Forms.UserControl> -Basisklasse stellt Tastatur Routing für untergeordnete Steuerelemente bereit und ermöglicht, dass untergeordnete Steuerelemente als Gruppe funktionieren. Weitere Informationen finden Sie unter [Entwickeln eines zusammengesetzten Windows Forms-Steuerelements](developing-a-composite-windows-forms-control.md).  
   
  **Empfehlung**  
   
@@ -66,9 +66,9 @@ ms.locfileid: "64651557"
 ### <a name="extended-controls"></a>Erweiterte Steuerelemente  
  Sie können ein geerbtes Steuerelement aus jedem vorhandenen Windows Forms-Steuerelement ableiten. Diese Vorgehensweise ermöglicht es Ihnen, die in einem Windows Forms-Steuerelement implementierte Funktionalität zu übernehmen und diese Funktionalität dann durch Hinzufügen von benutzerdefinierten Eigenschaften, Methoden oder weiteren Funktionen zu erweitern. Mit dieser Option können Sie die Farblogik des Basissteuerelements außer Kraft setzen und anschließend die Benutzeroberfläche durch Verändern des Aussehens erweitern.  
   
- Sie können z. B. ein von abgeleitetes Steuerelement erstellen die <xref:System.Windows.Forms.Button> Steuerelement, das nachverfolgt, wie oft einen Benutzer geklickt hat.  
+ Beispielsweise können Sie ein Steuerelement erstellen, das vom <xref:System.Windows.Forms.Button> -Steuerelement abgeleitet wird und nachverfolgt, wie oft ein Benutzer darauf geklickt hat.  
   
- Bei einigen Steuerelementen können Sie auch eine benutzerdefinierte Darstellung auf der grafischen Benutzeroberfläche des Steuerelements hinzufügen, durch Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode der Basisklasse. Sie können für eine erweiterte Schaltfläche, die Klicks nachverfolgt, überschreiben die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, die die basisimplementierung aufgerufen <xref:System.Windows.Forms.Control.OnPaint%2A>, und zeichnen Sie die Anzahl der Klicks in einer Ecke des der <xref:System.Windows.Forms.Button> Clientbereich des Steuerelements.  
+ In einigen Steuerelementen können Sie auch eine benutzerdefinierte Darstellung der grafischen Benutzeroberfläche des Steuer Elements hinzufügen, indem <xref:System.Windows.Forms.Control.OnPaint%2A> Sie die-Methode der-Basisklasse überschreiben. Für eine erweiterte Schaltfläche, mit der Klicks nachverfolgt werden <xref:System.Windows.Forms.Control.OnPaint%2A> , können Sie die-Methode über <xref:System.Windows.Forms.Control.OnPaint%2A>schreiben, um die Basis Implementierung von aufzurufen, und dann <xref:System.Windows.Forms.Button> die Click-Anzahl in einer Ecke des Client Bereichs des Steuer Elements zeichnen.  
   
  **Empfehlung**  
   
@@ -79,13 +79,13 @@ ms.locfileid: "64651557"
 - Sie benötigen keine benutzerdefinierte grafische Benutzeroberfläche, oder Sie möchten eine neue grafische Benutzeroberfläche für ein vorhandenes Steuerelement entwerfen.  
   
 ### <a name="custom-controls"></a>Benutzerdefinierte Steuerelemente  
- Eine weitere Möglichkeit zum Erstellen eines Steuerelements ist von Beginn zu erstellen, durch Erben von <xref:System.Windows.Forms.Control>. Die <xref:System.Windows.Forms.Control> Klasse alle die grundlegende Funktionalität, die von Steuerelementen, darunter Maus- und Tastaturbehandlungsereignisse, benötigt aber keine steuerelementspezifische Funktionalität oder die grafische Benutzeroberfläche bereitstellt.  
+ Eine andere Möglichkeit zum Erstellen eines Steuer Elements besteht darin, ein Steuerelement von Anfang an zu <xref:System.Windows.Forms.Control>erstellen, indem es von erbt. Die <xref:System.Windows.Forms.Control> -Klasse stellt die gesamte grundlegende Funktionalität bereit, die für Steuerelemente erforderlich ist, einschließlich Maus-und Tastatur Behandlungs Ereignissen, aber keine Steuerelement spezifische Funktionalität bzw. grafische Benutzeroberfläche.  
   
- Erstellen ein Steuerelement durch Erben von der <xref:System.Windows.Forms.Control> -Klasse erfordert viel mehr Überlegungen und anstrengungen als ein erben von <xref:System.Windows.Forms.UserControl> oder einem vorhandenen Windows Forms-Steuerelement. Da ein Großteil der Implementierung Ihnen überlassen ist, hat Ihr Steuerelement größere Flexibilität als ein zusammengesetztes oder erweitertes Steuerelement, und Sie können Ihr Steuerelement exakt an Ihre Anforderungen anpassen.  
+ Das Erstellen eines-Steuer Elements durch Erben <xref:System.Windows.Forms.Control> von der-Klasse erfordert viel mehr Überlegungen und Aufwand <xref:System.Windows.Forms.UserControl> als die Vererbung von oder einem vorhandenen Windows Forms-Steuerelement. Da ein Großteil der Implementierung Ihnen überlassen ist, hat Ihr Steuerelement größere Flexibilität als ein zusammengesetztes oder erweitertes Steuerelement, und Sie können Ihr Steuerelement exakt an Ihre Anforderungen anpassen.  
   
- Um ein benutzerdefiniertes Steuerelement zu implementieren, Sie müssen Code schreiben, für die <xref:System.Windows.Forms.Control.OnPaint%2A> Ereignis des Steuerelements als auch alle funktionsspezifischen Code, die Sie benötigen. Sie können auch überschreiben die <xref:System.Windows.Forms.Control.WndProc%2A> -Methode und behandeln Windows-Meldungen direkt. Dies ist die beste Möglichkeit, ein Steuerelement zu erstellen. Sie müssen allerdings mit der Microsoft Win32-API vertraut sein, um diese Technik effektiv einsetzen zu können.  
+ Um ein benutzerdefiniertes Steuerelement zu implementieren, müssen Sie <xref:System.Windows.Forms.Control.OnPaint%2A> Code für das-Ereignis des-Steuer Elements sowie für jeden featurespezifischen Code schreiben, den Sie benötigen. Sie können die <xref:System.Windows.Forms.Control.WndProc%2A> -Methode auch überschreiben und Windows-Meldungen direkt verarbeiten. Dies ist die beste Möglichkeit, ein Steuerelement zu erstellen. Sie müssen allerdings mit der Microsoft Win32-API vertraut sein, um diese Technik effektiv einsetzen zu können.  
   
- Ein Beispiel für ein benutzerdefiniertes Steuerelement ist ein Uhren-Steuerelement, das das Erscheinungsbild und das Verhalten einer analogen Uhr dupliziert. Die benutzerdefinierte Darstellung wird aufgerufen, um die Zeiger der Uhr sich als Reaktion auf verschieben <xref:System.Windows.Forms.Timer.Tick> Ereignisse aus einer internen <xref:System.Windows.Forms.Timer> Komponente. Weitere Informationen finden Sie unter [Vorgehensweise: Entwickeln ein einfachen Windows Forms-Steuerelements](how-to-develop-a-simple-windows-forms-control.md).  
+ Ein Beispiel für ein benutzerdefiniertes Steuerelement ist ein Uhren-Steuerelement, das das Erscheinungsbild und das Verhalten einer analogen Uhr dupliziert. Ein benutzerdefiniertes Zeichnen wird aufgerufen, um zu bewirken, dass die Hände der <xref:System.Windows.Forms.Timer.Tick> Uhr als Reaktion auf <xref:System.Windows.Forms.Timer> Ereignisse aus einer internen Komponente verschoben werden. Weitere Informationen finden Sie unter [Vorgehensweise: Entwickeln Sie ein einfaches Windows Forms](how-to-develop-a-simple-windows-forms-control.md)-Steuerelement.  
   
  **Empfehlung**  
   
@@ -96,20 +96,20 @@ ms.locfileid: "64651557"
 - Sie müssen benutzerdefinierte Funktionalität implementieren, die über Standardsteuerelemente nicht verfügbar ist.  
   
 ### <a name="activex-controls"></a>ActiveX-Steuerelemente  
- Obwohl die Windows Forms-Infrastruktur zum Hosten von Windows Forms-Steuerelementen optimiert wurde, können Sie weiterhin ActiveX-Steuerelemente verwenden. Visual Studio bietet Unterstützung für diese Aufgabe. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von ActiveX-Steuerelemente zu Windows Forms](how-to-add-activex-controls-to-windows-forms.md).  
+ Obwohl die Windows Forms-Infrastruktur zum Hosten von Windows Forms-Steuerelementen optimiert wurde, können Sie weiterhin ActiveX-Steuerelemente verwenden. Visual Studio bietet Unterstützung für diese Aufgabe. Weitere Informationen finden Sie unter [Vorgehensweise: Fügen Sie Windows Forms](how-to-add-activex-controls-to-windows-forms.md)ActiveX-Steuerelemente hinzu.  
   
 ### <a name="windowless-controls"></a>Fensterlose Steuerelemente  
  Die Microsoft Visual Basic® 6.0- und ActiveX-Technologien unterstützen *fensterlose* Steuerelemente. Fensterlose Steuerelemente werden in Windows Forms nicht unterstützt.  
   
 ## <a name="custom-design-experience"></a>Benutzerdefiniertes Entwurfserlebnis  
- Wenn Sie eine benutzerdefinierte Handhabung zur Entwurfszeit implementieren müssen, können Sie Ihren eigenen Designer erstellen. Leiten Sie bei zusammengesetzten Steuerelementen Ihre benutzerdefinierte Designerklasse von den <xref:System.Windows.Forms.Design.ParentControlDesigner> oder <xref:System.Windows.Forms.Design.DocumentDesigner> Klassen. Leiten Sie für erweiterte und benutzerdefinierte Steuerelemente, Ihre benutzerdefinierte Designerklasse von den <xref:System.Windows.Forms.Design.ControlDesigner> Klasse.  
+ Wenn Sie eine benutzerdefinierte Handhabung zur Entwurfszeit implementieren müssen, können Sie Ihren eigenen Designer erstellen. Leiten Sie für zusammengesetzte Steuerelemente die benutzerdefinierte Designer <xref:System.Windows.Forms.Design.ParentControlDesigner> Klasse von <xref:System.Windows.Forms.Design.DocumentDesigner> der-Klasse oder der-Klasse ab. Leiten Sie für erweiterte und benutzerdefinierte Steuerelemente die benutzerdefinierte Designer <xref:System.Windows.Forms.Design.ControlDesigner> Klasse von der-Klasse ab.  
   
- Verwenden der <xref:System.ComponentModel.DesignerAttribute> auf Ihr Steuerelement Ihrem Designer zuzuordnen. Weitere Informationen finden Sie unter [Extending Design-Time Support](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) und [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
+ Verwenden Sie <xref:System.ComponentModel.DesignerAttribute> , um das Steuerelement dem Designer zuzuordnen. Weitere Informationen finden Sie [unter Erweitern der Entwurfszeit Unterstützung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) und [Gewusst wie: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeit Funktionen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))nutzt.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)
-- [Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements](how-to-develop-a-simple-windows-forms-control.md)
+- [Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuer Elements](how-to-develop-a-simple-windows-forms-control.md)
 - [Entwickeln eines zusammengesetzten Windows Forms-Steuerelements](developing-a-composite-windows-forms-control.md)
 - [Erweitern der Entwurfszeitunterstützung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Vorgehensweise: Erstellen eines Windows Forms-Steuer Elements, das Entwurfszeit Features nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

@@ -12,24 +12,24 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 4d2290622e648030f150d9bb06ce1f3000145759
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 440086bfd5384fc46aec2997dbdd9937f7a1b65f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211470"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964334"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit
 
-Zusätzlich zum Erstellen von Ereignissen, die mit der Windows Forms-Designer in Visual Studio, können Sie auch einen Ereignishandler zur Laufzeit erstellen. Durch diese Aktion können Sie Ereignishandler basierend auf Bedingungen in Code zur Laufzeit miteinander verknüpfen, statt sie beim ersten Start des Programms miteinander zu verknüpfen.
+Zusätzlich zum Erstellen von Ereignissen mithilfe des Windows Forms-Designer in Visual Studio können Sie auch einen Ereignishandler zur Laufzeit erstellen. Durch diese Aktion können Sie Ereignishandler basierend auf Bedingungen in Code zur Laufzeit miteinander verknüpfen, statt sie beim ersten Start des Programms miteinander zu verknüpfen.
 
-## <a name="create-an-event-handler-at-run-time"></a>Erstellen Sie einen Ereignishandler zur Laufzeit
+## <a name="create-an-event-handler-at-run-time"></a>Erstellen eines Ereignis Handlers zur Laufzeit
 
-1. Öffnen Sie das Formular, dem einen Ereignishandler hinzugefügt werden soll.
+1. Öffnen Sie das Formular, dem Sie einen Ereignishandler hinzufügen möchten.
 
 2. Fügen Sie eine Methode zu Ihrem Formular hinzu. Verwenden Sie hierfür die Methodensignatur für das Ereignis, das Sie bearbeiten möchten.
 
-     Angenommen, Sie bearbeiten die <xref:System.Windows.Forms.Control.Click> Ereignis eine <xref:System.Windows.Forms.Button> -Steuerelement, erstellen Sie eine Methode z. B. Folgendes:
+     Wenn Sie z. b. das <xref:System.Windows.Forms.Control.Click> -Ereignis <xref:System.Windows.Forms.Button> eines-Steuer Elements verarbeitet haben, würden Sie eine Methode wie die folgende erstellen:
 
     ```vb
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -57,7 +57,7 @@ Zusätzlich zum Erstellen von Ereignissen, die mit der Windows Forms-Designer in
 
 4. Bestimmen Sie, für welches Formular oder Steuerelement Sie einen Ereignishandler erstellen möchten.
 
-5. Fügen Sie in einer Methode innerhalb der Formularklasse einen Code hinzu, der den zu bearbeitenden Ereignishandler angibt. Der folgende Code gibt beispielsweise den Ereignishandler `button1_Click` Handles der <xref:System.Windows.Forms.Control.Click> Ereignis eine <xref:System.Windows.Forms.Button> Steuerelement:
+5. Fügen Sie in einer Methode innerhalb der Formularklasse einen Code hinzu, der den zu bearbeitenden Ereignishandler angibt. Der folgende Code gibt z. b. an, `button1_Click` dass der <xref:System.Windows.Forms.Control.Click> Ereignishandler das <xref:System.Windows.Forms.Button> -Ereignis eines-Steuer Elements behandelt:
 
     ```vb
     AddHandler Button1.Click, AddressOf Button1_Click
@@ -71,10 +71,10 @@ Zusätzlich zum Erstellen von Ereignissen, die mit der Windows Forms-Designer in
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
     ```
 
-     Die <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> -Methode in der oben genannten Visual Basic-Code wird einen Click-Ereignishandler für die Schaltfläche.
+     Die <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> im obigen Visual Basic Code gezeigte-Methode legt einen Click-Ereignishandler für die Schaltfläche fest.
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Übersicht über Ereignishandler](event-handlers-overview-windows-forms.md)
-- [Problembehandlung für geerbte Ereignishandler in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Problembehandlung für geerbte Ereignishandler in Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

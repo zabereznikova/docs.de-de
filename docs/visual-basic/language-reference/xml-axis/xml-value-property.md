@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 1c7aa1cc32bc1c5ef637f7a606db7e695f1dfaee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9edf95c7cedced55ab2441baf51b7c2052e4654c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799163"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942979"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML-Value-Eigenschaft (Visual Basic)
-Ermöglicht den Zugriff auf den Wert des ersten Elements einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte.  
+Bietet Zugriff auf den Wert des ersten Elements einer Auflistung von <xref:System.Xml.Linq.XElement> -Objekten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,23 +32,23 @@ object.Value
 |`object`|Erforderlich. Auflistung von <xref:System.Xml.Linq.XElement>-Objekten.|  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein `String` , den Wert des ersten Elements der Auflistung enthält oder `Nothing` , wenn die Auflistung leer ist.  
+ Ein `String` , der den Wert des ersten Elements der Auflistung enthält, oder `Nothing` , wenn die Auflistung leer ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die <xref:System.Xml.Linq.XElement.Value%2A> Eigenschaft erleichtert das Zugriff auf den Wert des ersten Elements in einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte. Diese Eigenschaft überprüft zuerst, ob die Auflistung über mindestens ein Objekt enthält. Wenn die Auflistung leer ist, gibt diese Eigenschaft `Nothing`. Andernfalls gibt diese Eigenschaft den Wert der die <xref:System.Xml.Linq.XElement.Value%2A> -Eigenschaft des ersten Elements in der Auflistung.  
+ Die <xref:System.Xml.Linq.XElement.Value%2A> -Eigenschaft vereinfacht den Zugriff auf den Wert des ersten Elements in einer Auflistung von <xref:System.Xml.Linq.XElement> -Objekten. Diese Eigenschaft prüft zunächst, ob die Auflistung mindestens ein-Objekt enthält. Wenn die Auflistung leer ist, gibt diese Eigenschaft `Nothing`zurück. Andernfalls gibt diese Eigenschaft den Wert der <xref:System.Xml.Linq.XElement.Value%2A> -Eigenschaft des ersten Elements in der-Auflistung zurück.  
   
 > [!NOTE]
->  Beim Zugriff auf den Wert eines XML-Attributs mithilfe der "\@'-ID, den Wert des Attributs wird als zurückgegeben eine `String` und Sie müssen nicht explizit angeben, die <xref:System.Xml.Linq.XAttribute.Value%2A> Eigenschaft.  
+> Wenn Sie mit dem Bezeichner "\@" auf den Wert eines XML `String` -Attributs zugreifen, wird der-Attribut Wert als zurückgegeben, und Sie müssen die <xref:System.Xml.Linq.XAttribute.Value%2A> -Eigenschaft nicht explizit angeben.  
   
- Um andere Elemente in einer Auflistung zuzugreifen, können Sie die Indexereigenschaft für XML-Erweiterung verwenden. Weitere Informationen finden Sie unter [Erweiterungsindexereigenschaft](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
+ Wenn Sie auf andere Elemente in einer Auflistung zugreifen möchten, können Sie die XML-Erweiterungsindexer-Eigenschaft verwenden. Weitere Informationen finden Sie unter [Extension Indexer-Eigenschaft](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   
 ## <a name="inheritance"></a>Vererbung  
- Die meisten Benutzer haben keinen implementieren <xref:System.Collections.Generic.IEnumerable%601>, und können daher diesen Abschnitt ignorieren.  
+ Die meisten Benutzer müssen nicht implementieren <xref:System.Collections.Generic.IEnumerable%601>und können daher diesen Abschnitt ignorieren.  
   
- Die <xref:System.Xml.Linq.XElement.Value%2A> -Eigenschaft ist eine Erweiterungseigenschaft für Typen, implementieren `IEnumerable(Of XElement)`. Die Bindung dieser Eigenschaft für die Erweiterung wird wie die Bindung der Erweiterungsmethoden: Wenn ein Typ eine der Schnittstellen implementiert und definiert eine Eigenschaft mit dem Namen "Value", hat diese Eigenschaft Vorrang vor der Erweiterungseigenschaft. Das heißt, diese <xref:System.Xml.Linq.XElement.Value%2A> -Eigenschaft kann überschrieben werden, definieren Sie eine neue Eigenschaft in einer Klasse, die implementiert `IEnumerable(Of XElement)`.  
+ Die <xref:System.Xml.Linq.XElement.Value%2A> -Eigenschaft ist eine Erweiterungs Eigenschaft für Typen, `IEnumerable(Of XElement)`die implementieren. Die Bindung dieser Erweiterungs Eigenschaft ähnelt der Bindung von Erweiterungs Methoden: Wenn ein Typ eine der Schnittstellen implementiert und eine Eigenschaft mit dem Namen "Value" definiert, hat diese Eigenschaft Vorrang vor der Erweiterungs Eigenschaft. Anders ausgedrückt: diese <xref:System.Xml.Linq.XElement.Value%2A> Eigenschaft kann überschrieben werden, indem eine neue Eigenschaft in einer Klasse definiert wird, die implementiert. `IEnumerable(Of XElement)`  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der <xref:System.Xml.Linq.XElement.Value%2A> Eigenschaft auf den ersten Knoten in einer Auflistung von <xref:System.Xml.Linq.XElement> Objekte. Im Beispiel wird die untergeordneten Achseneigenschaft verwendet, um die Auflistung aller untergeordneten Knoten mit dem Namen abzurufen `phone` , die sich in der `contact` Objekt.  
+ Im folgenden Beispiel wird gezeigt, wie die <xref:System.Xml.Linq.XElement.Value%2A> -Eigenschaft verwendet wird, um auf den ersten Knoten <xref:System.Xml.Linq.XElement> in einer Auflistung von-Objekten zuzugreifen. Im Beispiel wird die-Eigenschaft der untergeordneten-Achse verwendet, um die Auflistung `phone` aller untergeordneten Knoten `contact` mit dem Namen im-Objekt zu erhalten.  
   
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]  
   
@@ -57,7 +57,7 @@ object.Value
  `Phone number: 206-555-0144`  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie den Wert eines XML-Attributs aus einer Auflistung von abrufen <xref:System.Xml.Linq.XAttribute> Objekte. Im Beispiel wird die Attributachseneigenschaft verwendet, um den Wert der an die `type` -Attribut für alle von der `phone` Elemente.  
+ Im folgenden Beispiel wird gezeigt, wie Sie den Wert eines XML-Attributs aus einer <xref:System.Xml.Linq.XAttribute> Auflistung von-Objekten erhalten. Im Beispiel wird die Eigenschaft Attribut Achse verwendet, um den Wert des `type` -Attributs für alle `phone` Elemente anzuzeigen.  
   
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]  
   

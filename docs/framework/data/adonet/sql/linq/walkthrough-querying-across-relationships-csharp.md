@@ -2,22 +2,22 @@
 title: 'Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742647"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946945"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (C#)
-Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *Zuordnungen* um fremdschlüsselbeziehungen in der Datenbank darzustellen.  
+Diese exemplarische Vorgehensweise veranschaulicht die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Verwendung von Zuordnungen, um Fremdschlüssel Beziehungen in der Datenbank darzustellen.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Diese exemplarische Vorgehensweise wurde mithilfe von Visual C#-Entwicklungseinstellungen geschrieben.  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
- Sie müssen abgeschlossen haben [Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Diese exemplarische Vorgehensweise basiert auf jener und erfordert die Datei northwnd.mdf im Verzeichnis c:\linqtest5.  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
+ Sie müssen die exemplarische Vorgehensweise abgeschlossen [haben: Einfaches Objektmodell und Abfrage (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Diese exemplarische Vorgehensweise basiert auf jener und erfordert die Datei northwnd.mdf im Verzeichnis c:\linqtest5.  
   
 ## <a name="overview"></a>Übersicht  
  Diese exemplarische Vorgehensweise umfasst drei Hauptaufgaben:  
@@ -47,7 +47,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Erstellen und Ausführen einer Abfrage über die Customer-Order-Beziehung  
- Sie können nun direkt auf die `Order`-Objekte zugreifen, und zwar von den `Customer`-Objekten aus oder in umgekehrter Richtung. Sie brauchen nicht in der eine explizite *Join* zwischen Kunden und Bestellungen.  
+ Sie können nun direkt auf die `Order`-Objekte zugreifen, und zwar von den `Customer`-Objekten aus oder in umgekehrter Richtung. Sie benötigen keinen expliziten *Join* zwischen Kunden und Bestellungen.  
   
 ### <a name="to-access-order-objects-by-using-customer-objects"></a>So greifen Sie mithilfe von Customer-Objekten auf Order-Objekte zu  
   
@@ -58,7 +58,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
 2. Drücken Sie F5, um die Anwendung zu debuggen.  
   
     > [!NOTE]
-    >  Sie können den SQL-Code im Konsolenfenster eliminieren, indem Sie `db.Log = Console.Out;` auskommentieren.  
+    > Sie können den SQL-Code im Konsolenfenster eliminieren, indem Sie `db.Log = Console.Out;` auskommentieren.  
   
 3. Drücken Sie die EINGABETASTE im Konsolenfenster, um das Debuggen zu stoppen.  
   
@@ -86,7 +86,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
 4. Drücken Sie die EINGABETASTE im Konsolenfenster, um das Debuggen zu stoppen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Die nächste exemplarische Vorgehensweise ([Exemplarische Vorgehensweise: Bearbeiten von Daten (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) wird veranschaulicht, wie Daten bearbeiten können. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  
+ Die nächste exemplarische Vorgehens[Weise (Exemplarische Vorgehensweise: Bearbeiten von DatenC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md))) veranschaulicht, wie Daten geändert werden. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,18 +2,18 @@
 title: Erstellen von Anwendungsrollen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961168"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Erstellen von Anwendungsrollen in SQL Server
 Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbankrollen oder Benutzern Berechtigungen zuzuweisen. Benutzer können eine Verbindung mit der Datenbank herstellen, die Anwendungsrolle aktivieren und die der Anwendung erteilten Berechtigungen annehmen. Die der Anwendungsrolle gewährten Berechtigungen sind so lange in Kraft, wie die Verbindung besteht.  
   
 > [!IMPORTANT]
->  Anwendungsrollen werden aktiviert, wenn eine Clientanwendung in der Verbindungszeichenfolge einen Anwendungsrollennamen und ein Kennwort bereitstellt. In 2-Ebenen-Anwendungen stellen Anwendungsrollen ein Sicherheitsrisiko dar, weil das Kennwort auf dem Clientcomputer gespeichert werden muss. In 3-Ebenen-Anwendungen können Sie das Kennwort so speichern, dass die Benutzer der Anwendung nicht darauf zugreifen können.  
+> Anwendungsrollen werden aktiviert, wenn eine Clientanwendung in der Verbindungszeichenfolge einen Anwendungsrollennamen und ein Kennwort bereitstellt. In 2-Ebenen-Anwendungen stellen Anwendungsrollen ein Sicherheitsrisiko dar, weil das Kennwort auf dem Clientcomputer gespeichert werden muss. In 3-Ebenen-Anwendungen können Sie das Kennwort so speichern, dass die Benutzer der Anwendung nicht darauf zugreifen können.  
   
 ## <a name="application-role-features"></a>Funktionen der Anwendungsrollen  
  Anwendungsrollen weisen die folgenden Funktionen auf:  
@@ -47,16 +47,16 @@ Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbank
   
  Sie sollten die folgenden Alternativen in Erwägung ziehen.  
   
-- Verwenden Sie Kontextwechsel mit der EXECUTE AS-Anweisung und deren Klauseln NO REVERT und WITH COOKIE. Sie können ein Benutzerkonto in einer Datenbank erstellen, das keiner Anmeldung zugeordnet ist. Anschließend weisen Sie diesem Konto Berechtigungen zu. Die Verwendung von EXECUTE AS mit einem login-less-Benutzer ist sicherer, da sie auf Berechtigungen und nicht auf dem Kennwort basiert. Weitere Informationen finden Sie unter [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Verwenden Sie Kontextwechsel mit der EXECUTE AS-Anweisung und deren Klauseln NO REVERT und WITH COOKIE. Sie können ein Benutzerkonto in einer Datenbank erstellen, das keiner Anmeldung zugeordnet ist. Anschließend weisen Sie diesem Konto Berechtigungen zu. Die Verwendung von EXECUTE AS mit einem login-less-Benutzer ist sicherer, da sie auf Berechtigungen und nicht auf dem Kennwort basiert. Weitere Informationen finden Sie unter [Anpassen von Berechtigungen mit Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Signieren Sie gespeicherte Prozeduren mit Zertifikaten, die nur die Berechtigung gewähren, die zum Ausführen der Prozeduren notwendig ist. Weitere Informationen finden Sie unter [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Signieren Sie gespeicherte Prozeduren mit Zertifikaten, die nur die Berechtigung gewähren, die zum Ausführen der Prozeduren notwendig ist. Weitere Informationen finden Sie [unter Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Weitere Informationen finden Sie in den folgenden Ressourcen.  
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Anwendungsrollen](/sql/relational-databases/security/authentication-access/application-roles)|Beschreibt das Erstellen und Verwenden von Anwendungsrollen in SQL Server 2008.|  
+|[Anwendungs Rollen](/sql/relational-databases/security/authentication-access/application-roles)|Beschreibt das Erstellen und Verwenden von Anwendungsrollen in SQL Server 2008.|  
   
 ## <a name="see-also"></a>Siehe auch
 

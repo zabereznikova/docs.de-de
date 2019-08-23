@@ -2,20 +2,20 @@
 title: Stream
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bafdf41f8e608182cc8cff55ac84a4acbd644d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007798"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958782"
 ---
 # <a name="stream"></a>Stream
 Das Streambeispiel zeigt die Verwendung des Kommunikationsstream-Übertragungsmodus. Der Dienst macht mehrere Vorgänge verfügbar, die Streams senden und empfangen. Dieses Beispiel ist selbst gehostet. Sowohl der Client als auch der Dienst sind Konsolenprogramme.  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
- Windows Communication Foundation (WCF) können in zwei Übertragungsmodi kommunizieren: gepuffert oder per streaming. Im standardmäßigen gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streaming-Übertragungsmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
+ Windows Communication Foundation (WCF) kann in zwei Übertragungsmodi kommunizieren – gepuffert oder Streaming. Im standardmäßigen gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streaming-Übertragungsmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
   
 ## <a name="streaming-and-service-contracts"></a>Streaming und Dienstverträge  
  Streaming ist es wert, beim Entwerfen eines Dienstvertrags in Betracht gezogen zu werden. Wenn ein Vorgang Daten in großem Umfang empfängt oder zurückgibt, sollte man in Betracht ziehen, diese Daten zu streamen, um eine übermäßige Auslastung des Arbeitsspeichers durch das Puffern ein- oder ausgehender Nachrichten zu vermeiden. Zum Übertragen von Daten im Streamingmodus muss der Parameter, der die Daten enthält, der einzige Parameter in der Nachricht sein. Wenn beispielsweise die Eingabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang genau einen Eingabeparameter haben. Ebenso gilt, wenn die Ausgabenachricht im Streamingmodus übertragen werden soll, muss der Vorgang entweder genau einen Ausgabeparameter oder einen Rückgabewert haben. In beiden Fällen muss der Parameter- oder Rückgabewerttyp `Stream`, `Message` oder `IXmlSerializable` sein. Nachfolgend ist der in diesem Streamingbeispiel verwendete Dienstvertrag aufgeführt.  
@@ -61,7 +61,7 @@ public interface IStreamingSample
 </customBinding>  
 ```  
   
- Zusätzlich zum Festlegen des `transferMode` auf `Streamed` legt der oben aufgeführte Konfigurationscode die `maxReceivedMessageSize` auf 64 MB fest. Als Schutzmechanismus legt `maxReceivedMessageSize` einen Höchstwert für die maximal zulässige Größe von Nachrichten beim Empfang fest. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&amp;#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist.  
+ Zusätzlich zum Festlegen des `transferMode` auf `Streamed` legt der oben aufgeführte Konfigurationscode die `maxReceivedMessageSize` auf 64 MB fest. Als Schutzmechanismus legt `maxReceivedMessageSize` einen Höchstwert für die maximal zulässige Größe von Nachrichten beim Empfang fest. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist.  
   
 ## <a name="processing-data-as-it-is-streamed"></a>Verarbeiten von Daten bei deren Streamingübertragung  
  Bei den Vorgängen `GetStream`, `UploadStream` und `EchoStream` werden Daten direkt aus einer Datei gesendet oder empfangene Daten direkt in einer Datei gespeichert. In manchen Fällen ist es jedoch erforderlich, große Mengen von Daten zu senden oder zu empfangen und Teile dieser Daten dabei zu verarbeiten. Eine Möglichkeit in solchen Situationen wäre, einen benutzerdefinierten Stream (eine Klasse, die sich von <xref:System.IO.Stream> ableitet) zu schreiben, der Daten verarbeitet, während diese gelesen oder geschrieben werden. Der `GetReversedStream`-Vorgang und die `ReverseStream`-Klasse sind ein Beispiel für ein solches Vorgehen.  
@@ -167,20 +167,20 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.  
   
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei Svcutil.exe verwenden, müssen Sie den Endpunktnamen in der Clientkonfiguration so ändern, dass er mit dem Clientcode übereinstimmt.  
+> Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei Svcutil.exe verwenden, müssen Sie den Endpunktnamen in der Clientkonfiguration so ändern, dass er mit dem Clientcode übereinstimmt.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - NumericUpDown control [Windows Forms], formatting values
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
-ms.openlocfilehash: a5d8de6db8a0d6f62a082fc381a7b855eb948514
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6db7a1b2aeb7282c3ac827cb8319706ed348fc22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630604"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949152"
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>Vorgehensweise: Festlegen des Formats für das NumericUpDown-Steuerelement in Windows Forms
-Sie können konfigurieren, wie Werte in Windows Forms angezeigt werden <xref:System.Windows.Forms.NumericUpDown> Steuerelement. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Eigenschaft bestimmt, wie viele Ziffern nach dem Dezimaltrennzeichen angezeigt; der Standardwert ist 0. Die <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Eigenschaft bestimmt, ob eine Trennzeichen zwischen allen drei Dezimalstellen eingefügt wird; der Standardwert ist `false`. Das Steuerelement kann Werte im Hexadezimalformat statt decimal-Format angezeigt, wenn die <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> -Eigenschaftensatz auf `true`; der Standardwert ist `false`.  
+Sie können konfigurieren, wie Werte im Windows Forms <xref:System.Windows.Forms.NumericUpDown> Steuerelement angezeigt werden. Die <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> -Eigenschaft bestimmt, wie viele Zahlen nach dem Dezimaltrennzeichen angezeigt werden. der Standardwert ist 0. Die <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> -Eigenschaft bestimmt, ob zwischen allen drei Dezimalziffern ein Trennzeichen eingefügt wird. der `false`Standardwert ist. Das-Steuerelement kann Werte im Hexadezimal Format anstelle des Dezimal Formats <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> anzeigen, wenn die `true`-Eigenschaft auf fest `false`gelegt ist. der Standardwert ist.  
   
-### <a name="to-format-the-numeric-value"></a>Den numerischen Wert formatiert.  
+### <a name="to-format-the-numeric-value"></a>So formatieren Sie den numerischen Wert  
   
-- Zeigen Sie einen Dezimalwert durch Festlegen der <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> Eigenschaft eine ganze Zahl und die Einstellung der <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> Eigenschaft `true` oder `false`.  
+- Zeigen Sie einen Dezimalwert an, <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A> indem Sie die-Eigenschaft auf eine <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A> ganze Zahl festlegen `false`und die-Eigenschaft auf `true` oder festlegen.  
   
     ```vb  
     NumericUpDown1.DecimalPlaces = 2  
@@ -38,9 +38,9 @@ Sie können konfigurieren, wie Werte in Windows Forms angezeigt werden <xref:Sys
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     - oder -   
+     -oder-  
   
-- Zeigen Sie einen hexadezimalen Wert durch Festlegen der <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> Eigenschaft `true`.  
+- Zeigen Sie einen Hexadezimalwert an <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> , indem `true`Sie die-Eigenschaft auf festlegen.  
   
     ```vb  
     NumericUpDown1.Hexadecimal = True  
@@ -55,7 +55,7 @@ Sie können konfigurieren, wie Werte in Windows Forms angezeigt werden <xref:Sys
     ```  
   
     > [!NOTE]
-    >  Auch wenn der Wert auf das Formular als eine Hexadezimalzeichenfolge angezeigt wird, alle Tests ausführen auf der <xref:System.Windows.Forms.NumericUpDown.Value%2A> Eigenschaft wird der decimal-Wert testen.  
+    > Auch wenn der Wert im Formular als hexadezimal angezeigt wird, testen alle Tests, die Sie <xref:System.Windows.Forms.NumericUpDown.Value%2A> für die Eigenschaft ausführen, den Dezimalwert.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - windows [WPF], setting width from a page
 - pages [WPF], setting window width from
 ms.assetid: 31601c92-7889-472a-b07e-bf675ad21c92
-ms.openlocfilehash: fee6d4c9ae9dae03e81cc4be56576763cb59958b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e16b75ecb85550facdf24a5b9e341cf0c061178
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940774"
 ---
 # <a name="how-to-set-the-width-of-a-window-from-a-page"></a>Vorgehensweise: Festlegen der Breite eines Fensters einer Seite
-In diesem Beispiel wird veranschaulicht, wie Sie die Breite des Fensters aus Festlegen einer <xref:System.Windows.Controls.Page>.  
+In diesem Beispiel wird veranschaulicht, wie die Breite des Fensters von einem <xref:System.Windows.Controls.Page>festgelegt wird.  
   
 ## <a name="example"></a>Beispiel  
- Ein <xref:System.Windows.Controls.Page> können, legen Sie die Breite des Hostfensters durch Festlegen von <xref:System.Windows.Controls.Page.WindowWidth%2A>. Diese Eigenschaft ermöglicht die <xref:System.Windows.Controls.Page> keine explizite Kenntnisse in den Typ des Fensters, die darunter gehostet.  
+ Eine <xref:System.Windows.Controls.Page> kann die Breite des Host Fensters <xref:System.Windows.Controls.Page.WindowWidth%2A>durch Festlegen von festlegen. Diese Eigenschaft ermöglicht es <xref:System.Windows.Controls.Page> dem nicht, explizite Informationen über den Typ des Fensters zu haben, in dem es gehostet wird.  
   
 > [!NOTE]
->  Die Breite eines Fensters mit festgelegt <xref:System.Windows.Controls.Page.WindowWidth%2A>, <xref:System.Windows.Controls.Page> muss das untergeordnete Element eines Fensters.  
+> Um die Breite eines Fensters mit <xref:System.Windows.Controls.Page.WindowWidth%2A>festzulegen, muss ein <xref:System.Windows.Controls.Page> untergeordnetes Element eines Fensters sein.  
   
  [!code-xaml[HOWTONavigationSnippets#SetPageWindowWidthXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/SetWindowWidthPage.xaml#setpagewindowwidthxaml)]

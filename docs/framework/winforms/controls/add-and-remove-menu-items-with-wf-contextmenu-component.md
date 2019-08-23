@@ -16,26 +16,26 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: cf70a5cc426b6c6075d1deb11aa2685c39a065c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d1862b1fc1398f0f8c2217b51c4efb93db639af
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640334"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957018"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Vorgehensweise: Hinzufügen und Entfernen von Menüelementen mit der ContextMenu-Komponente von Windows Forms
-Erläutert das Hinzufügen und Entfernen von Tastenkombinations-Menüelemente in Windows Forms.  
+Erläutert das Hinzufügen und Entfernen von Kontextmenü Elementen in Windows Forms.  
   
- Die Windows-Formulare <xref:System.Windows.Forms.ContextMenu> Komponente stellt ein Menü der häufig verwendete Befehle, die auf das ausgewählte Objekt relevant sind. Sie können Elemente zum Kontextmenü hinzufügen, durch das Hinzufügen <xref:System.Windows.Forms.MenuItem> Objekte die <xref:System.Windows.Forms.Menu.MenuItems%2A> Auflistung.  
+ Die Windows Forms <xref:System.Windows.Forms.ContextMenu> Komponente enthält ein Menü mit häufig verwendeten Befehlen, die für das ausgewählte Objekt relevant sind. Sie können dem Kontextmenü Elemente hinzufügen, indem <xref:System.Windows.Forms.MenuItem> Sie der <xref:System.Windows.Forms.Menu.MenuItems%2A> Auflistung Objekte hinzufügen.  
   
- Sie können Elemente aus einem Kontextmenü dauerhaft entfernen. Allerdings zur Laufzeit es möglicherweise besser geeignet ist, ausblenden oder deaktivieren stattdessen die Elemente.  
+ Elemente aus einem Kontextmenü können dauerhaft entfernt werden. zur Laufzeit ist es jedoch möglicherweise besser, die Elemente auszublenden oder zu deaktivieren.  
   
 > [!IMPORTANT]
->  Obwohl <xref:System.Windows.Forms.MenuStrip> und <xref:System.Windows.Forms.ContextMenuStrip> ersetzen und Erweitern der Funktionalität für die <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> Steuerelemente aus früheren Versionen, <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenu> werden für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, wenn Sie auswählen.  
+> Obwohl <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.MainMenu> und <xref:System.Windows.Forms.ContextMenuStrip> die-und- <xref:System.Windows.Forms.ContextMenu> Steuerelemente früherer Versionen ersetzen und Funktionen hinzu <xref:System.Windows.Forms.MainMenu> fügen <xref:System.Windows.Forms.ContextMenu> , werden Sie sowohl für die Abwärtskompatibilität als auch für die zukünftige Verwendung beibehalten, wenn Sie auswählen.  
   
 ### <a name="to-remove-items-from-a-shortcut-menu"></a>So entfernen Sie Elemente aus einem Kontextmenü  
   
-1. Verwenden der <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> oder <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> Methode der <xref:System.Windows.Forms.Menu.MenuItems%2A> Auflistung von der <xref:System.Windows.Forms.ContextMenu> Komponente, um ein bestimmtes Element zu entfernen.  
+1. Verwenden Sie <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> die <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> -Methode oder <xref:System.Windows.Forms.Menu.MenuItems%2A> die-Methode <xref:System.Windows.Forms.ContextMenu> der-Auflistung der-Komponente, um ein bestimmtes Menü Element zu entfernen.  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -58,9 +58,9 @@ Erläutert das Hinzufügen und Entfernen von Tastenkombinations-Menüelemente in
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     - oder -   
+     -oder-  
   
-2. Verwenden der `Clear` Methode der `MenuItems` Auflistung von der <xref:System.Windows.Forms.ContextMenu> Komponente, um alle Elemente aus dem Menü zu entfernen.  
+2. Verwenden Sie `Clear` die-Methode `MenuItems` der <xref:System.Windows.Forms.ContextMenu> -Auflistung der-Komponente, um alle Elemente aus dem Menü zu entfernen.  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  

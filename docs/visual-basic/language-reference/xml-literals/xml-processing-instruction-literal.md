@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c589d3f4ac6bbb9aa9b2b8f2535888bddbf9c934
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938605"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958480"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML-Verarbeitungsanweisungsliteral (Visual Basic)
-Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XProcessingInstruction> Objekt.  
+Ein Literalwert <xref:System.Xml.Linq.XProcessingInstruction> , der ein Objekt darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,37 +26,37 @@ Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XProcessingInstruction> Obje
   
 ## <a name="parts"></a>Teile  
  `<?`  
- Erforderlich. Gibt den Anfang der XML-Verarbeitungsanweisungsliteral an.  
+ Erforderlich. Bezeichnet den Anfang des XML-Verarbeitungsanweisungs-Literals.  
   
  `piName`  
- Erforderlich. Namen Sie, der angibt, welche Anwendung die Verarbeitungsanweisungszielen an. Nicht beginnen mit "Xml" oder "XML".  
+ Erforderlich. Name, der angibt, welche Anwendung die Verarbeitungsanweisung als Ziel hat. Darf nicht mit "XML" oder "XML" beginnen.  
   
  `piData`  
- Dies ist optional. Zeichenfolge, der angibt, wie die Anwendung von soll `piName` das XML-Dokument verarbeitet werden soll.  
+ Optional. Zeichenfolge, die angibt, wie `piName` die von Zielanwendung das XML-Dokument verarbeiten soll.  
   
  `?>`  
- Erforderlich. Kennzeichnet das Ende der verarbeitungsanweisung.  
+ Erforderlich. Bezeichnet das Ende der Verarbeitungsanweisung.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein <xref:System.Xml.Linq.XProcessingInstruction>-Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- XML-Verarbeitung Anweisung Literale geben an, wie Anwendungen ein XML-Dokument verarbeitet werden soll. Wenn eine Anwendung ein XML-Dokument geladen wird, kann die Anwendung die XML-verarbeitungsanweisungen zu bestimmen, wie zum Verarbeiten des Dokuments überprüfen. Die Anwendung interpretiert die Bedeutung von `piName` und `piData`.  
+ XML-Verarbeitungs Anweisungs Literale geben an, wie Anwendungen ein XML-Dokument verarbeiten sollen. Wenn eine Anwendung ein XML-Dokument lädt, kann die Anwendung die XML-Verarbeitungsanweisungen überprüfen, um zu bestimmen, wie das Dokument verarbeitet wird. Die Anwendung interpretiert die Bedeutung von `piName` und `piData`.  
   
- Das XML-Dokumentliteral verwendet die Syntax, die vergleichbar mit der XML-verarbeitungsanweisung ist. Weitere Informationen finden Sie unter [XML-Dokument-Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
-  
-> [!NOTE]
->  Die `piName` Element darf nicht mit den Zeichenfolgen "Xml" oder "XML", beginnen, da diese Bezeichner für XML 1.0-Spezifikation reserviert sind.  
-  
- Sie können eine XML-Verarbeitungsanweisungsliteral einer Variablen zuweisen oder ihn in einem XML-Dokumentliteral.  
+ Das XML-dokumentliterale verwendet eine Syntax, die der XML-Verarbeitungsanweisung ähnelt. Weitere Informationen finden Sie unter [XML Document Literale](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
 > [!NOTE]
->  Ein XML-Literal kann mehrere Zeilen umfassen, ohne der Fortsetzung-Zeile-Zeichen. Dadurch können Sie zum Kopieren von Inhalt aus einem XML-Dokument, und fügen ihn direkt in Visual Basic-Programms.  
+> Das `piName` Element darf nicht mit den Zeichen folgen "XML" oder "XML" beginnen, da die XML 1,0-Spezifikation diese IDs reserviert.  
   
- Visual Basic-Compiler konvertiert die XML-Verarbeitungsanweisungsliteral in einen Aufruf der <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> Konstruktor.  
+ Sie können eine XML-Verarbeitungsanweisungs-Literale einer Variablen zuweisen oder Sie in ein XML-Dokumentliteral einschließen.  
+  
+> [!NOTE]
+> Ein XML-Literale kann mehrere Zeilen umfassen, ohne dass Zeilen Fortsetzungs Zeichen erforderlich sind. Auf diese Weise können Sie Inhalte aus einem XML-Dokument kopieren und direkt in ein Visual Basic Programm einfügen.  
+  
+ Der Visual Basic Compiler konvertiert das XML-Verarbeitungsanweisungsliteral in einen <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> aufrufkonstruktor.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine verarbeitungsanweisung, ein Stylesheet für ein XML-Dokument zu identifizieren.  
+ Im folgenden Beispiel wird eine Verarbeitungsanweisung erstellt, die ein Stylesheet für ein XML-Dokument identifiziert.  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   

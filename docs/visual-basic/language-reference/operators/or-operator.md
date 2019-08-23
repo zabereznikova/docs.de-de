@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: 0277b6f24e62ed5f0cad3dae225c86fffc4c09b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d11a6d009f6ecfea9fb1a86b00c67b87d5555dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013516"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955837"
 ---
 # <a name="or-operator-visual-basic"></a>Or-Operator (Visual Basic)
-Führt eine logische Disjunktion für zwei `Boolean` Ausdrücke oder eine bitweise Disjunktion zweier numerischer Ausdrücke.  
+Führt eine logische Disjunktion zweier `Boolean` Ausdrücke oder eine bitweise Disjunktion zweier numerischer Ausdrücke aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,18 +33,18 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>Teile  
  `result`  
- Erforderlich. Alle `Boolean` oder numerischer Ausdruck. Für `Boolean` hingegen `result` ist die einschließende logische Disjunktion zweier `Boolean` Werte. Für bitweise Operationen: `result` ist ein numerischer Wert, der die inklusive bitweise Disjunktion von zwei numerischen Bitmustern darstellt.  
+ Erforderlich. Ein `Boolean` beliebiger oder numerischer Ausdruck. Zum `Boolean` `Boolean` Vergleich ist die inklusivlogische Disjunktion von zwei Werten. `result` Für bitweise Vorgänge ist ein `result` numerischer Wert, der die inklusive bitweise Disjunktion zweier numerischer Bitmuster darstellt.  
   
  `expression1`  
- Erforderlich. Alle `Boolean` oder numerischer Ausdruck.  
+ Erforderlich. Ein `Boolean` beliebiger oder numerischer Ausdruck.  
   
  `expression2`  
- Erforderlich. Alle `Boolean` oder numerischer Ausdruck.  
+ Erforderlich. Ein `Boolean` beliebiger oder numerischer Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Für `Boolean` hingegen `result` ist `False` Wenn und nur wenn beide `expression1` und `expression2` ergeben `False`. In der folgende Tabelle wird veranschaulicht, wie `result` bestimmt ist.  
+ Zum `Boolean` Vergleich ist `result` `expression1` nurdann,`expression2` wenn sowohl als auch als ausgewertet werden. `False` `False` In der folgenden Tabelle wird `result` veranschaulicht, wie bestimmt wird.  
   
-|Wenn `expression1` ist|Und `expression2` ist|Der Wert des `result` ist|  
+|Wenn `expression1` ist|Und `expression2` ist|Der Wert von `result` ist|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`True`|  
 |`True`|`False`|`True`|  
@@ -52,11 +52,11 @@ result = expression1 Or expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  In einer `Boolean` Vergleich der `Or` Operator immer beide Ausdrücke, die Prozeduraufrufe enthalten, werden ausgewertet. Die [OrElse-Operator](../../../visual-basic/language-reference/operators/orelse-operator.md) führt *kurzschließen*, was bedeutet, dass bei `expression1` ist `True`, klicken Sie dann `expression2` wird nicht ausgewertet.  
+> In einem `Boolean` Vergleich wertet der `Or` -Operator immer beide Ausdrücke aus, die das Ausführen von Prozedur aufrufen einschließen können. Der [OrElse-Operator](../../../visual-basic/language-reference/operators/orelse-operator.md) führt *Kurzschluss*aus, was bedeutet, dass `expression1` , `True`wenn gleich `expression2` ist, nicht ausgewertet wird.  
   
- Für bitweise Operationen: die `Or` Operator führt einen bitweisen Vergleich gleich positionierter Bits in zwei numerischen Ausdrücken und legt das entsprechende Bit in `result` gemäß der folgenden Tabelle.  
+ Für bitweise Operationen führt der `Or` -Operator einen bitweisen Vergleich von identisch positionierten Bits in zwei numerischen Ausdrücken aus und legt das entsprechende Bit in `result` entsprechend der folgenden Tabelle fest.  
   
-|Wenn bit `expression1` ist|Ist und Bit in `expression2` ist|Das entsprechende Bit im `result` ist|  
+|Wenn Bit in `expression1`|Und Bit in `expression2` ist|Das Bit in `result` ist|  
 |--------------------------------|---------------------------------|----------------------------|  
 |1|1|1|  
 |1|0|1|  
@@ -64,29 +64,29 @@ result = expression1 Or expression2
 |0|0|0|  
   
 > [!NOTE]
->  Da die logischen und bitweisen Operatoren auf eine niedrigere Rangfolge als der anderen arithmetischen und relationalen Operatoren haben, sollten alle bitweisen Operationen in Klammern, um die genaue Ausführung sicherzustellen eingeschlossen werden.  
+> Da die logischen und bitweisen Operatoren Vorrang vor anderen arithmetischen und relationalen Operatoren sind, sollten alle bitweisen Vorgänge in Klammern eingeschlossen werden, um eine exakte Ausführung sicherzustellen.  
   
 ## <a name="data-types"></a>Datentypen  
- Wenn die Operanden eines bestehen `Boolean` Ausdruck und einem numerischen Ausdruck konvertiert Visual Basic die `Boolean` Ausdruck in einen numerischen Wert (– 1 für `True` und 0 für `False`) und führt eine bitweise Operation.  
+ Wenn die `Boolean` Operanden aus einem Ausdruck und einem numerischen Ausdruck bestehen, konvertiert Visual Basic den `Boolean` Ausdruck in einen numerischen Wert (– 1 für `True` und 0 für `False`) und führt eine bitweise Operation aus.  
   
- Für eine `Boolean` Vergleich, der Datentyp des Ergebnisses wird die `Boolean`. Einen bitweisen Vergleich, der Ergebniswert vom Datentyp eines numerischen Typs, die für die Datentypen der entsprechenden `expression1` und `expression2`. Siehe die Tabelle "Relationale und bitweise Vergleiche" im [Datentypen von Operatorergebnissen Daten](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ Für einen `Boolean` Vergleich ist `Boolean`der Datentyp des Ergebnisses. Bei einem bitweisen Vergleich ist der Ergebnis Datentyp ein numerischer Typ, der für die Datentypen von `expression1` und `expression2`geeignet ist. Weitere Informationen finden Sie in der Tabelle "relationale und bitweise Vergleiche" in den [Datentypen der Operator Ergebnisse](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="overloading"></a>Überladen  
- Die `Or` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Der `Or` Operator kann *überladen*werden. Dies bedeutet, dass eine Klasse oder Struktur das Verhalten neu definieren kann, wenn ein Operand den Typ dieser Klasse oder Struktur aufweist. Wenn Ihr Code diesen Operator für eine solche Klasse oder Struktur verwendet, stellen Sie sicher, dass Sie das neu definierte Verhalten verstehen. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `Or` Operator, um eine einschließende logische Disjunktion zweier Ausdrücke auszuführen. Das Ergebnis ist eine `Boolean` Wert, der darstellt, ob einer der beiden Ausdrücke `True`.  
+ Im folgenden Beispiel wird der `Or` -Operator verwendet, um eine inklusivlogische Disjunktion für zwei Ausdrücke auszuführen. Das Ergebnis ist ein `Boolean` Wert, der angibt, ob einer der beiden Ausdrücke `True`ist.  
   
  [!code-vb[VbVbalrOperators#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#35)]  
   
- Im vorherige Beispiel erzeugt die Ergebnisse der `True`, `True`, und `False`bzw.  
+ Im vorherigen Beispiel werden die Ergebnisse `True`von `True`, `False`bzw. erzeugt.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `Or` Operator, um die einzelnen Bits von zwei numerischen Ausdrücken einschließende logischen Disjunktion ausgeführt. Das Bit im Ergebnismuster wird festgelegt, wenn eine der entsprechenden Bits in den Operanden auf 1 festgelegt ist.  
+ Im folgenden Beispiel wird der `Or` -Operator verwendet, um die inklusive logische Disjunktion der einzelnen Bits zweier numerischer Ausdrücke auszuführen. Das Bit im Ergebnis Muster wird festgelegt, wenn eine der entsprechenden Bits in den Operanden auf 1 festgelegt ist.  
   
  [!code-vb[VbVbalrOperators#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#36)]  
   
- Im vorherige Beispiel werden die Ergebnisse von 10, 14 und 14, bzw. erzeugt.  
+ Das vorherige Beispiel erzeugt die Ergebnisse von 10, 14 und 14.  
   
 ## <a name="see-also"></a>Siehe auch
 

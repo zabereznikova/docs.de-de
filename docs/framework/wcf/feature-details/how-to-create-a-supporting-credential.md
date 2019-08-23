@@ -2,40 +2,40 @@
 title: 'Vorgehensweise: Erstellen unterstützender Anmeldeinformationen'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 2f922f2df424b0ca2a468ae2f6cb8e8753e1d8a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f95748235aa5238193b8869f8330f0a7fc650d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635497"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968899"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Vorgehensweise: Erstellen unterstützender Anmeldeinformationen
-Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind. Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist. Anmeldeinformationen sind ein *unterstützende Anmeldeinformationen*. In diesem Thema wird erläutert, wie Sie solche Anmeldeinformationen in einem Windows Communication Foundation (WCF)-Client zu implementieren.  
+Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das mehrere Anmeldeinformationen erforderlich sind. Beispielsweise kann ein Dienst vom Client nicht nur den Benutzernamen und das Kennwort fordern, sondern auch Anmeldeinformationen, die belegen, dass der Client älter als 18 Jahre ist. Die zweiten Anmelde Informationen sind *unterstützende*Anmelde Informationen. In diesem Thema wird erläutert, wie solche Anmelde Informationen in einem Windows Communication Foundation (WCF)-Client implementiert werden.  
   
 > [!NOTE]
->  Die Spezifikation für unterstützende Anmeldeinformationen ist Teil der WS-SecurityPolicy-Spezifikation. Weitere Informationen finden Sie unter [Sicherheitsspezifikationen für Webdienste](https://go.microsoft.com/fwlink/?LinkId=88537).  
+> Die Spezifikation für unterstützende Anmeldeinformationen ist Teil der WS-SecurityPolicy-Spezifikation. Weitere Informationen finden Sie unter [Webdienstesicherheit Spezifikationen](https://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Unterstützende Token  
- Kurz gesagt, bei Verwendung von nachrichtensicherheit eine *primären Anmeldeinformationen* wird immer zum Sichern der Nachricht (z. B. ein x. 509-Zertifikat oder ein Kerberos-Ticket) verwendet.  
+ Kurz gesagt: Wenn Sie Nachrichten Sicherheit verwenden, wird immer eine *primäre* Anmelde Information verwendet, um die Nachricht zu sichern (z. b. ein X. 509-Zertifikat oder ein Kerberos-Ticket).  
   
- Gemäß der Spezifikation, verwendet eine Bindung *Token* auf die Sicherung des Nachrichtenaustauschs. Ein *token* ist eine Darstellung von Sicherheitsanmeldeinformationen.  
+ Gemäß der Definition durch die Spezifikation verwendet eine Sicherheitsbindung *Token* , um den Nachrichtenaustausch zu sichern. Ein *Token* ist eine Darstellung von Sicherheits Anmelde Informationen.  
   
- Die Sicherheitsbindung verwendet zum Erstellen einer Signatur ein in ihrer Richtlinie identifiziertes primäres Token. Diese Signatur wird als bezeichnet die *Nachrichtensignatur*.  
+ Die Sicherheitsbindung verwendet zum Erstellen einer Signatur ein in ihrer Richtlinie identifiziertes primäres Token. Diese Signatur wird als *Nachrichten Signatur*bezeichnet.  
   
  Es können zusätzliche Token angegeben werden, um die von dem der Nachrichtensignatur zugeordneten Token bereitgestellten Ansprüche zu erweitern.  
   
 ## <a name="endorsing-signing-and-encrypting"></a>Unterzeichnen, Signieren und Verschlüsseln  
- Ergebnis unterstützender Anmeldeinformationen einem *unterstützendes Token* innerhalb der Nachricht übertragen. Die WS-SecurityPolicy-Spezifikation definiert vier Methoden zum Anhängen eines unterstützenden Tokens an die Nachricht, wie in der folgenden Tabelle beschrieben.  
+ Eine unterstützende Anmelde Informationen führt dazu, dass ein *unterstützendes Token* innerhalb der Nachricht übertragen wird Die WS-SecurityPolicy-Spezifikation definiert vier Methoden zum Anhängen eines unterstützenden Tokens an die Nachricht, wie in der folgenden Tabelle beschrieben.  
   
 |Zweck|Beschreibung|  
 |-------------|-----------------|  
 |Signiert|Das unterstützende Token ist im Sicherheitsheader enthalten und wird durch die Nachrichtensignatur signiert.|  
-|Unterzeichnend|Ein *unterzeichnendes Token* die Nachrichtensignatur signiert.|  
+|Unterzeichnend|Ein unter zeichnendes *Token* signiert die Nachrichten Signatur.|  
 |Signiert und unterzeichnend|Signierte, unterzeichnende Token signieren das gesamte aus der Nachrichtensignatur erstellte `ds:Signature`-Element und werden selbst durch die Nachrichtensignatur signiert; d. h., beide Token (das für die Nachrichtensignatur verwendete Token und das signierte unterzeichnende Token) signieren einander.|  
 |Signiert und verschlüsselnd|Signierte, verschlüsselte unterstützende Token sind signierte unterstützende Token, die beim Anzeigen im `wsse:SecurityHeader` auch verschlüsselt werden.|  
   
 ## <a name="programming-supporting-credentials"></a>Programmieren von unterstützenden Anmeldeinformationen  
- Zum Erstellen eines Diensts, die unterstützende Token verwendet, müssen Sie erstellen, eine [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Um einen Dienst zu erstellen, der unterstützende Token verwendet, müssen Sie eine [ \<CustomBinding->](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)erstellen. (Weitere Informationen finden [Sie unter Vorgehensweise: Erstellen Sie eine benutzerdefinierte Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Der erste Schritt beim Erstellen einer benutzerdefinierten Bindung ist das Erstellen eines Sicherheitsbindungselements, das einer der folgenden drei Typen sein kann:  
   
@@ -60,7 +60,7 @@ Sie können über ein benutzerdefiniertes Sicherheitsschema verfügen, für das 
   
 - *Endpunkt unterstützende Token* unterstützen alle Vorgänge eines Endpunkts. Die Anmeldeinformationen, die das unterstützende Token darstellt, können beim Aufrufen eines beliebigen Endpunktvorgangs verwendet werden.  
   
-- *Vorgang unterstützende Token* unterstützen nur einen bestimmten endpunktvorgang.  
+- Unter *stützende Token* unterstützen nur einen bestimmten Endpunkt Vorgang.  
   
  Wie durch die Eigenschaftennamen angegeben, können unterstützende Anmeldeinformationen erforderlich oder optional sein. Die unterstützenden Anmeldeinformationen werden verwendet, wenn sie vorhanden, aber nicht erforderlich sind; die Authentifizierung schlägt jedoch nicht fehl, wenn sie nicht vorhanden sind.  
   

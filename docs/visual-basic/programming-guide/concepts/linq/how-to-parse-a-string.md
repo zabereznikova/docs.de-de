@@ -1,24 +1,24 @@
 ---
-title: 'Vorgehensweise: Analysiert eine Zeichenfolge (Visual Basic)'
+title: 'Vorgehensweise: Analysieren einer Zeichenfolge (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942596"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956375"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Vorgehensweise: Analysiert eine Zeichenfolge (Visual Basic)
-In diesem Thema wird gezeigt, wie zum Erstellen einer XML-Struktur in C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Vorgehensweise: Analysieren einer Zeichenfolge (Visual Basic)
+In diesem Thema wird gezeigt, wie eine XML- C#Struktur in erstellt wird.  
   
 ## <a name="example"></a>Beispiel  
- Sie können eine Zeichenfolge in Visual Basic analysieren, mit der `XElement.Parse` Methode. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
+ Sie können eine Zeichenfolge in Visual Basic analysieren, indem Sie `XElement.Parse` die-Methode verwenden. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
   
- Sie können mithilfe von XML-Literale können einfach kopieren und fügen Sie der XML-Code in Visual Basic-Programms.  
+ Mithilfe von XML-Literalen können Sie den XML-Code einfach kopieren und in das Visual Basic Programm einfügen.  
   
 > [!NOTE]
->  Das Analysieren von Text oder das Laden eines XML-Dokuments aus einer Textdatei ist weniger effizient als die funktionale Konstruktion. Wenn Sie eine XML-Struktur aus Code initialisieren, verbraucht die funktionale Konstruktion weniger Verarbeitungszeit als das Analysieren des Textes.  
+> Das Analysieren von Text oder das Laden eines XML-Dokuments aus einer Textdatei ist weniger effizient als die funktionale Konstruktion. Wenn Sie eine XML-Struktur aus Code initialisieren, verbraucht die funktionale Konstruktion weniger Verarbeitungszeit als das Analysieren des Textes.  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Analysieren von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML-Datei (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

@@ -2,18 +2,18 @@
 title: Abfragebeispiele
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7be01abf568ed089089b1bc25d2a175f78ae7f7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783109"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962742"
 ---
 # <a name="query-examples"></a>Abfragebeispiele
-Dieser Abschnitt enthält die Visual Basic- und c#-Beispiele für typische [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen. Entwickler, die mit Visual Studio finden viele weitere Beispiele in einer beispiellösung im Abschnitt Beispiele. Weitere Informationen finden Sie unter [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+In diesem Abschnitt finden Sie C# Visual Basic und Beispiele [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für typische Abfragen. Entwickler, die Visual Studio verwenden, können viele weitere Beispiele in einer Beispiellösung finden, die im Abschnitt "Beispiele" verfügbar ist. Weitere Informationen finden Sie unter [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
->  *DB* wird häufig in Codebeispielen verwendet [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation. *DB* wird davon ausgegangen, dass eine Instanz einer *Northwind* -Klasse, die erbt <xref:System.Data.Linq.DataContext>.  
+> *DB* wird häufig in Codebeispielen in der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumentation verwendet. bei der Datenbank handelt es sich um eine Instanz einer *Northwind* -Klasse, die von <xref:System.Data.Linq.DataContext>erbt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Aggregatabfragen](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -62,14 +62,14 @@ Dieser Abschnitt enthält die Visual Basic- und c#-Beispiele für typische [!INC
  Bietet Beispiele für die Verwendung von Fremdschlüsselnavigation in den Klauseln `from`, `where` und `select`.  
   
  [Formulieren von Projektionen](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- Bietet Beispiele für die Kombination `select` mit anderen Funktionen (z. B. *anonyme Typen*) um Abfrageprojektionen zu bilden.  
+ Bietet Beispiele für die `select` Kombination mit anderen Funktionen (z. b. *Anonyme Typen*), um Abfrage Projektionen zu bilden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Erklärt das Konzept der standardmäßigen Abfrageoperatoren, die mit C#.  
+ Erläutert das Konzept der Standard Abfrage Operatoren C#, die mit verwendet werden.  
   
  [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- Erläutert das Konzept der standardmäßigen Abfrageoperatoren, die mithilfe von Visual Basic.  
+ Erläutert das Konzept der Standard Abfrage Operatoren, die Visual Basic verwenden.  
   
  [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Erläutert, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Konzepte für Abfragen verwendet.  

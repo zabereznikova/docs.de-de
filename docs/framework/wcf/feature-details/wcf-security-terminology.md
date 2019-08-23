@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768614"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951642"
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
   
- Weitere Informationen zu den in Windows Communication Foundation (WCF)-Dokumentation verwendeten Begriffe finden Sie unter [grundlegenden Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Weitere Informationen zu den in der Windows Communication Foundation (WCF)-Dokumentation verwendeten Begriffen finden Sie unter [grundlegende Windows Communication Foundation Konzepte](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  Zugriffssteuerungsliste  
  Eine Liste mit den Arten von Sicherheitsschutz, der auf ein Objekt angewendet wird. (Ein Objekt kann eine Datei, ein Prozess, ein Ereignis oder ein sonstiges Element sein, die über einen Sicherheitsdeskriptor verfügen.) Ein Eintrag in einer Zugriffssteuerungsliste wird als Access Control Entry (ACE) bezeichnet. Es gibt zwei Typen von Zugriffssteuerungslisten: freigegebene Zugriffssteuerungslisten und Systemzugriffssteuerungslisten.  
@@ -28,10 +28,10 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Die Kontrolle des Zugriffs auf und der Rechte für eine Ressource, Beispielsweise können die Mitglieder einer Gruppe eine Datei lesen, während die Mitglieder einer anderen Gruppe diese auch bearbeiten dürfen.  
   
  Zertifizierungsstellenzertifikat  
- Identifiziert die Zertifizierungsstelle, die Zertifikate zur Authentifizierung von Clients und Servern ausstellt, die von diesen angefordert werden. Da es sich um einen öffentlichen Schlüssel, der in digitalen Signaturen verwendet enthält, es wird auch bezeichnet als eine *Signaturzertifikat*. Wenn die Zertifizierungsstelle eine Stammzertifizierungsstelle handelt, das ZS-Zertifikat kann bezeichnet werden als eine *Stammzertifikat*. Manchmal auch als bezeichnet ein *Websitezertifikats*.  
+ Identifiziert die Zertifizierungsstelle, die Zertifikate zur Authentifizierung von Clients und Servern ausstellt, die von diesen angefordert werden. Da Sie einen öffentlichen Schlüssel enthält, der in digitalen Signaturen verwendet wird, wird Sie auch als *Signaturzertifikat*bezeichnet. Wenn die Zertifizierungsstelle eine Stamm Zertifizierungsstelle ist, wird das Zertifizierungsstellen Zertifikat möglicherweise als Stamm *Zertifikat*bezeichnet. Wird manchmal auch als *Site Zertifikat*bezeichnet.  
   
  Zertifizierungsstellenhierarchie  
- Eine Zertifizierungsstellenhierarchie enthält mehrere Zertifizierungsstellen. Es ist so konzipiert, dass jede Zertifizierungsstelle von der Zertifizierungsstelle auf einer höheren Ebene der Hierarchie bis zum Anfang der Hierarchie, auch bekannt als zertifiziert ist die *Stammzertifizierungsstelle*, erreicht wird.  
+ Eine Zertifizierungsstellenhierarchie enthält mehrere Zertifizierungsstellen. Es ist so organisiert, dass jede Zertifizierungsstelle von einer anderen Zertifizierungsstelle auf einer höheren Ebene der Hierarchie zertifiziert wird, bis der obere Teil der hierArchie, auch bekannt als Stamm Zertifizierungsstelle, erreicht wird.  
   
  certificate  
  Eine digital signierte Anweisung mit Informationen über eine Entität und ihren öffentlichen Schlüssel, die zwei Informationen verbindet. Zertifikate werden von vertrauenswürdigen Organisationen (oder Entitäten) ausgestellt, die auch als Zertifizierungsstellen bezeichnet werden, nachdem die Zertifizierungsstelle die vorgegebene Identität überprüft hat.  
@@ -62,8 +62,8 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Austauschschlüsselpaar  
  Ein Paar aus einem öffentlichen und einem privaten Schlüssel für die Verschlüsselung von Sitzungsschlüsseln zum sicheren Speichern und Austauschen mit anderen Benutzern.  
   
- hash  
- Ein numerischer Wert fester Größe, der durch Anwendung einer mathematischen Funktion (siehe Hashalgorithmus) auf eine beliebige Datenmenge ermittelt wird. Die Daten enthalten normalerweise zufällige Daten, bekannt als eine *Nonce*. Dienst und Client steuern eine Nonce zum Austausch bei, um die Komplexität des Ergebnisses zu erhöhen. Das Ergebnis ist auch bekannt als eine *Nachrichtenhash*. Das Senden eines Hashwerts ist sicherer als der Einsatz sensibler Daten wie Kennwörter, auch wenn diese verschlüsselt sind. Sender und Empfänger müssen sich auf einen Hashalgorithmus und Nonces verständigen, um den Hashalgorithmus nach dem Empfang überprüfen zu können.  
+ Hashindizes  
+ Ein numerischer Wert fester Größe, der durch Anwendung einer mathematischen Funktion (siehe Hashalgorithmus) auf eine beliebige Datenmenge ermittelt wird. Die Daten enthalten in der Regel zufällige Daten, die als *Nonce*bezeichnet werden. Dienst und Client steuern eine Nonce zum Austausch bei, um die Komplexität des Ergebnisses zu erhöhen. Das Ergebnis wird auch als *Nachrichten Digest*bezeichnet. Das Senden eines Hashwerts ist sicherer als der Einsatz sensibler Daten wie Kennwörter, auch wenn diese verschlüsselt sind. Sender und Empfänger müssen sich auf einen Hashalgorithmus und Nonces verständigen, um den Hashalgorithmus nach dem Empfang überprüfen zu können.  
   
  Hashalgorithmus  
  Ein Algorithmus zur Erzeugung eines Hashwerts aus Daten, beispielsweise aus einer Nachricht oder aus einem Sitzungsschlüssel. Typische Hashalgorithmen sind MD2, MD4, MD5 und SHA-1.  
@@ -90,7 +90,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Der Cryptographic Message Syntax (CMS)-Standard. Eine allgemeine Syntax für Daten, bei denen Kryptografie eingesetzt werden könnte, beispielsweise digitale Signaturen und Verschlüsselungen. Außerdem wird damit eine Syntax zur Verteilung von Zertifikaten oder Zertifikatsperrlisten und anderen Nachrichtenattributen wie Zeitstempeln bereitgestellt.  
   
  Klartext  
- Eine unverschlüsselte Nachricht. Nachrichten werden manchmal als *Klartext* Nachrichten.  
+ Eine unverschlüsselte Nachricht. Nur-Text-Nachrichten werden manchmal als *Klartext* -Nachrichten bezeichnet.  
   
  Berechtigung  
  Das Recht eines Benutzers zur Durchführung verschiedener Systemvorgänge wie Herunterfahren des Systems, Laden von Gerätetreibern oder Ändern der Systemzeit. Das Zugriffstoken eines Benutzers enthält eine Liste der Berechtigungen des Benutzers oder der Benutzergruppe.  
@@ -120,7 +120,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Die Zertifizierungsstelle an der Spitze der Zertifizierungsstellenhierarchie. Die Stammzertifizierungsstelle zertifiziert Zertifizierungsstellen in der nächsten Hierarchieebene.  
   
  Secure Hash Algorithm (SHA)  
- Ein Hashalgorithmus, der einen Nachrichtenhash generiert. Der SHA wird u. a. zusammen mit dem Digital Signature Algorithm (DSA) im Digital Signature Standard (DSS) verwendet. Es gibt vier Arten von SHAS: SHA-1, SHA-256, SHA-384 und SHA-512. SHA-1 generiert einen 160-Bit-Nachrichtenhash. SHA-256, SHA-384 und SHA-512 generieren 256-Bit-, 384-Bit- bzw. 512-Bit-Nachrichtenhashes. Der SHA wurde vom National Institute of Standards and Technology (NIST) und von der National Security Agency (NSA) entwickelt.  
+ Ein Hashalgorithmus, der einen Nachrichtenhash generiert. Der SHA wird u. a. zusammen mit dem Digital Signature Algorithm (DSA) im Digital Signature Standard (DSS) verwendet. Es gibt vier Arten von SHA: SHA-1, SHA-256, SHA-384 und SHA-512. SHA-1 generiert einen 160-Bit-Nachrichtenhash. SHA-256, SHA-384 und SHA-512 generieren 256-Bit-, 384-Bit- bzw. 512-Bit-Nachrichtenhashes. Der SHA wurde vom National Institute of Standards and Technology (NIST) und von der National Security Agency (NSA) entwickelt.  
   
  Secure Sockets Layer (SSL)  
  Ein Protokoll für die sichere Netzwerkkommunikationen mit einer Kombination aus öffentlicher und privater Schlüsseltechnologie.  
@@ -173,10 +173,10 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Die Software, die entscheidet, ob eine Datei als vertrauenswürdig eingestuft wird. Diese Entscheidung basiert auf dem Zertifikat, das der Datei zugeordnet ist.  
   
  Benutzerprinzipalname (UPN)  
- Einen Benutzerkontonamen an (auch bezeichnet als die *Benutzeranmeldename*) und ein Domänenname zur Identifizierung der Domäne, in dem sich das Benutzerkonto befindet. Dies ist das Standardverfahren für die Anmeldung an einer Windows-Domäne. Das Format lautet: someone@example.com (wie bei einer e-Mail-Adresse).  
+ Einen Benutzerkonto Namen (manchmal auch als *Benutzer Anmelde Name*bezeichnet) und einen Domänen Namen, der die Domäne identifiziert, in der sich das Benutzerkonto befindet. Dies ist das Standardverfahren für die Anmeldung an einer Windows-Domäne. Das Format ist: someone@example.com (wie bei einer e-Mail-Adresse).  
   
 > [!NOTE]
->  Abgesehen von standard akzeptiert WCF UPNs kompatiblen Format, z. B. cohowinery.com\someone.  
+> Zusätzlich zum Standard-UPN-Formular akzeptiert WCF UPNs in Form von UPN, z. b. cohowinery. com\someone.  
   
  X.509  
  Ein international anerkannter Zertifikatstandard zur Definition erforderlicher Bestandteile.  
@@ -185,4 +185,4 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
 
 - [Wesentliche Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Sicherheitsmodell für Windows Server-App-Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

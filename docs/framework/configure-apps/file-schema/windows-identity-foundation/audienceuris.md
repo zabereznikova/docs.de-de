@@ -3,15 +3,15 @@ title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 003221ed4dc7f4ccf72d2e0d3a91265e13172813
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941956"
 ---
 # <a name="audienceuris"></a>\<audienceUris>
-Gibt den Satz von URIs, die akzeptable Bezeichner der vertrauenden Seite (RP) sind. Token werden nicht akzeptiert werden, es sei denn, sie eines der zulässigen Audience-URI zugeordnet sind.  
+Gibt den Satz von URIs an, die akzeptable Bezeichner der vertrauenden Seite (RP) sind. Token werden nur akzeptiert, wenn Sie für eine der zulässigen Zielgruppen-URIs festgelegt sind.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -44,32 +44,32 @@ Gibt den Satz von URIs, die akzeptable Bezeichner der vertrauenden Seite (RP) si
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Modus|Ein <xref:System.IdentityModel.Selectors.AudienceUriMode> Wert, der angibt, ob die zielgruppeneinschränkung auf ein eingehendes Token angewendet werden soll. Die möglichen Werte sind "Immer", "Never" und "BearerKeyOnly". Der Standardwert ist "Immer". Dies ist optional.|  
+|Modus|Ein <xref:System.IdentityModel.Selectors.AudienceUriMode> -Wert, der angibt, ob die Zielgruppen Einschränkung auf ein eingehendes Token angewendet werden soll. Mögliche Werte sind "Always", "Never" und "BearerKeyOnly". Der Standardwert ist "Always". Optional.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|`<add value=xs:string>`|Fügt den vom angegebenen URI die `value` -Attribut auf die Sammlung von AudienceUris. Das `value`-Attribut ist erforderlich. Der URI ist Groß-/Kleinschreibung beachtet.|  
-|`<clear>`|Löscht die Auflistung von AudienceUris. Alle Bezeichner werden aus der Auflistung entfernt werden.|  
-|`<remove value=xs:string>`|Entfernt den angegebenen URI die `value` Attribut aus der Sammlung von AudienceUris. Das `value`-Attribut ist erforderlich. Der URI ist Groß-/Kleinschreibung beachtet.|  
+|`<add value=xs:string>`|Fügt den URI, der vom `value` -Attribut angegeben wird, der audienceUris-Auflistung hinzu. Das `value`-Attribut ist erforderlich. Beim URI wird die Groß-/Kleinschreibung beachtet.|  
+|`<clear>`|Löscht die audienceUris-Auflistung. Alle Bezeichner werden aus der Sammlung entfernt.|  
+|`<remove value=xs:string>`|Entfernt den URI, der durch `value` das-Attribut aus der audienceUris-Auflistung angegeben wird. Das `value`-Attribut ist erforderlich. Beim URI wird die Groß-/Kleinschreibung beachtet.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung der Tokenhandler.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung von Sicherheitstokenhandlern bereit.|  
   
 ## <a name="remarks"></a>Hinweise  
- Standardmäßig ist die Auflistung leer. Verwenden Sie `<add>`, `<clear>`, und `<remove>` Elementen, die die Auflistung geändert werden. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> und <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> Objekte verwenden, die die Werte in der Zielgruppe URI-Auflistung so konfigurieren Sie eine Zielgruppe URI-Einschränkungen in zulässige <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> Objekte.  
+ Standardmäßig ist die Auflistung leer. verwenden `<add>`Sie `<clear>`die Elemente `<remove>` , und, um die Auflistung zu ändern. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> und-Objekte verwenden die Werte in der Zielgruppen-URI-Auflistung, um alle <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> zulässigen Audience-URI-Einschränkungen in Objekten zu konfigurieren  
   
- Die `<audienceUris>` Element wird dargestellt, durch die <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> Klasse. Ein einzelner URI der Auflistung hinzugefügt wird dargestellt, durch die <xref:System.IdentityModel.Configuration.AudienceUriElement> Klasse.  
+ Das `<audienceUris>` -Element wird durch die <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> -Klasse dargestellt. Ein einzelner URI, der der Auflistung hinzugefügt wird, <xref:System.IdentityModel.Configuration.AudienceUriElement> wird durch die-Klasse dargestellt.  
   
 > [!NOTE]
->  Die Verwendung der `<audienceUris>` -Element als untergeordnetes Element von der [ \<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) Element ist veraltet, jedoch wird für die Abwärtskompatibilität weiterhin unterstützt. Einstellungen für die `<securityTokenHandlerConfiguration>` Element überschreiben diejenigen auf dem `<identityConfiguration>` Element.  
+> Die Verwendung des `<audienceUris>` -Elements als untergeordnetes Element [ \<des identityconfiguration->](identityconfiguration.md) Elements ist veraltet, wird jedoch aus Gründen der Abwärtskompatibilität weiterhin unterstützt. Die Einstellungen für `<securityTokenHandlerConfiguration>` das-Element überschreiben `<identityConfiguration>` die für das-Element.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende XML zeigt, wie Sie die zulässigen Audience-URI für eine Anwendung zu konfigurieren. In diesem Beispiel wird einen einzigen URI. Akzeptiert Token, die für diesen URI beschränkt, alle anderen werden abgelehnt.  
+ Der folgende XML-Code zeigt, wie die zulässigen Zielgruppen-URIs für eine Anwendung konfiguriert werden. In diesem Beispiel wird ein einzelner URI konfiguriert. Token, die für diesen URI gelten, werden akzeptiert, alle anderen werden abgelehnt.  
   
 ```xml  
 <audienceUris>  

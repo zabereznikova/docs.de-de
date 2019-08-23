@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: 9e692f17dea3af1f7d5f5ccc3ae844b47c64f80a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f177ee397b0641645d55de9e805543a68fa75672
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012776"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952124"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu-Komponente (Windows Forms)
 > [!NOTE]
->  Obwohl `MenuStrip` und `ContextMenuStrip` ersetzen und Erweitern der Funktionalität für die `MainMenu` und <xref:System.Windows.Forms.ContextMenu> Steuerelemente aus früheren Versionen, `MainMenu` und <xref:System.Windows.Forms.ContextMenu> werden für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, wenn Sie auswählen.  
+> Obwohl `MenuStrip` `MainMenu` und `ContextMenuStrip` die-und- <xref:System.Windows.Forms.ContextMenu> Steuerelemente früherer Versionen ersetzen und Funktionen hinzu `MainMenu` fügen <xref:System.Windows.Forms.ContextMenu> , werden Sie sowohl für die Abwärtskompatibilität als auch für die zukünftige Verwendung beibehalten, wenn Sie auswählen.  
   
- Die Windows-Formulare `MainMenu` Komponente wird ein Menü zur Laufzeit angezeigt.  
+ Die Windows Forms `MainMenu` Komponente zeigt ein Menü zur Laufzeit an.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die MainMenu-Komponente](mainmenu-component-overview-windows-forms.md)  
- Erläutert, was diese Komponente ist und die wichtigsten Features und -Eigenschaften.  
+ Erläutert, was diese Komponente ist, und die wichtigsten Features und Eigenschaften.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.MainMenu>  

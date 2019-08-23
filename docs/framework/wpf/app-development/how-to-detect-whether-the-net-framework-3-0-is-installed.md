@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947822"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960245"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Vorgehensweise: Erkennen einer .NET Framework 3.0-Installation
-Bevor Administratoren Microsoft .NET Framework-Anwendungen auf einem System bereitstellen können, müssen sie bestätigen, dass .NET Framework-Laufzeit vorhanden ist. Dieses Thema enthält ein Skript in HTML/JavaScript geschrieben wurde, dass Administratoren verwenden können, um zu bestimmen, ob .NET Framework auf einem System vorhanden ist.  
+Bevor Administratoren Microsoft .NET Framework-Anwendungen auf einem System bereitstellen können, müssen Sie zunächst überprüfen, ob die .NET Framework Laufzeit vorhanden ist. Dieses Thema enthält ein in HTML/JavaScript geschriebenes Skript, mit dem Administratoren ermitteln können, ob die .NET Framework auf einem System vorhanden ist.  
   
 > [!NOTE]
->  Ausführliche Informationen zum Installieren von bereitstellen und Erkennen von Microsoft .NET Framework finden Sie unter den Ausführungen im [Bereitstellen von Microsoft .NET Frameworkversion 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).  
+> Ausführlichere Informationen zum Installieren, bereitstellen und Ermitteln des Microsoft .NET Frameworks finden Sie unter Bereitstellen [Microsoft .NET Framework-Version 3,0](https://go.microsoft.com/fwlink/?LinkId=96739).  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a>Erkennen von ".NET CLR-" Benutzer-Agent-Zeichenfolge  
- Wenn .NET Framework installiert ist, fügt die MSI-Datei ".NET CLR" und die Versionsnummer der Zeichenfolge "UserAgent" hinzu. Das folgende Beispiel zeigt ein Skript in einer einfachen HTML-Seite eingebettet. Das Skript sucht die Zeichenfolge "UserAgent", um festzustellen, ob .NET Framework installiert ist, und zeigt eine Statusmeldung angezeigt wird, auf die Ergebnisse der Suche.  
+## <a name="detect-the-net-clr-user-agent-string"></a>Erkennen der Benutzer-Agent-Zeichenfolge ".NET CLR"  
+ Wenn .NET Framework installiert ist, fügt die msi ".NET CLR" und die Versionsnummer der UserAgent-Zeichenfolge hinzu. Das folgende Beispiel zeigt ein Skript, das in eine einfache HTML-Seite eingebettet ist. Das Skript durchsucht die UserAgent-Zeichenfolge, um zu bestimmen, ob .NET Framework installiert ist, und zeigt eine Statusmeldung für die Ergebnisse der Suche an.  
   
 ```  
 <HTML>  
@@ -113,7 +113,7 @@ Bevor Administratoren Microsoft .NET Framework-Anwendungen auf einem System bere
 </HTML>  
 ```  
   
- Wenn die Suche nach der Version ".NET CLR" erfolgreich ist, wird der folgende Typ der Statusmeldung angezeigt:  
+ Wenn die Suche nach der ".NET CLR"-Version erfolgreich ist, wird der folgende Typ der Statusmeldung angezeigt:  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   

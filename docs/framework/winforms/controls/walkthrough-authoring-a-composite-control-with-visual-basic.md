@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: abfb91c61ef72bfc1626b4cc4dcea42b75e2ab35
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: cb54ef372e6da551b95f1edf61e3844b9dcba4c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040243"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950042"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic
 Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefinierte grafische Schnittstellen erstellt und wiederverwendet werden können. Ein zusammengesetztes Steuerelement ist im wesentlichen eine Komponente mit visueller Darstellung. Daher können zusammengesetzte Steuerelemente aus einem oder mehr Windows Forms-Steuerelementen, Komponenten oder Codeblöcken bestehen. Diese erweitern die Funktionalität durch Validieren von Benutzereingaben, verändern Anzeigeeigenschaften oder führen andere vom Autor gewünschte Aufgaben aus. Zusammengesetzte Steuerelemente können genau wie andere Steuerelemente in Windows Forms platziert werden. Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches zusammengesetztes Steuerelement namens `ctlClock`. Im zweiten Teil der exemplarischen Vorgehensweise erweitern Sie die Funktionalität von `ctlClock` durch Vererbung.
@@ -37,7 +37,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
 3. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **UserControl1.vb** und klicken Sie dann auf **Umbenennen**. Ändern Sie den Dateinamen in `ctlClock.vb`. Klicken Sie auf die Schaltfläche **Ja**, wenn Sie gefragt werden, ob alle Verweise auf das Codeelement „UserControl1“ umbenannt werden sollen.
 
     > [!NOTE]
-    >  Standardmäßig erbt ein zusammengesetztes Steuerelement <xref:System.Windows.Forms.UserControl> von der Klasse, die vom System bereitgestellt wird. Die <xref:System.Windows.Forms.UserControl> -Klasse stellt von allen zusammengesetzten Steuerelementen benötigte Funktionen bereit und implementiert Standardmethoden und-Eigenschaften.
+    > Standardmäßig erbt ein zusammengesetztes Steuerelement <xref:System.Windows.Forms.UserControl> von der Klasse, die vom System bereitgestellt wird. Die <xref:System.Windows.Forms.UserControl> -Klasse stellt von allen zusammengesetzten Steuerelementen benötigte Funktionen bereit und implementiert Standardmethoden und-Eigenschaften.
 
 4. Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.
 
@@ -184,7 +184,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
 5. Durchsuchen Sie die aktuellen Projekte im Projektmappen-Explorer.
 
     > [!NOTE]
-    >  Eine Datei namens **ctlAlarmClock.vb** wurde zum aktuellen Projekt hinzugefügt.
+    > Eine Datei namens **ctlAlarmClock.vb** wurde zum aktuellen Projekt hinzugefügt.
 
 ### <a name="adding-the-alarm-properties"></a>Hinzufügen von Wecker-Eigenschaften
  Eigenschaften werden auf die gleiche Weise zu einem geerbten Steuerelement hinzugefügt wie zu einem zusammengesetzten Steuerelement. Sie verwenden jetzt die Syntax zum Deklarieren von Eigenschaften, um zwei Eigenschaften zu Ihrem Steuerelement hinzuzufügen: `AlarmTime`, wodurch der Wert des Datums und der Uhrzeit gespeichert wird, zu der der Wecker klingelt, und `AlarmSet`, die anzeigt, ob der Wecker eingestellt wurde.
@@ -230,10 +230,10 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
 2. Klicken Sie auf `lblDisplay` (der Anzeigebereich des Steuerelements), und zeigen Sie das Eigenschaftenfenster an.
 
     > [!NOTE]
-    >  Alle Eigenschaften werden angezeigt, sind aber abgeblendet. Das bedeutet, dass die Eigenschaften nativ zu `lblDisplay` sind, und dass sie nicht im Eigenschaftenfenster geändert oder auf sie zugegriffen werden können. Standardmäßig sind in einem zusammengesetzten Steuerelement enthaltene Steuerelemente `Private`, und es ist nicht möglich, auf ihre Eigenschaften zuzugreifen.
+    > Alle Eigenschaften werden angezeigt, sind aber abgeblendet. Das bedeutet, dass die Eigenschaften nativ zu `lblDisplay` sind, und dass sie nicht im Eigenschaftenfenster geändert oder auf sie zugegriffen werden können. Standardmäßig sind in einem zusammengesetzten Steuerelement enthaltene Steuerelemente `Private`, und es ist nicht möglich, auf ihre Eigenschaften zuzugreifen.
 
     > [!NOTE]
-    >  Wenn Sie möchten, dass nachfolgende Benutzer des zusammengesetzten Steuerelements Zugriff auf interne Steuerelemente haben, deklarieren Sie sie als `Public` oder `Protected`. Dadurch können Sie Eigenschaften von Steuerelementen, die in Ihrem zusammengesetzten Steuerelement enthalten sind, festlegen und ändern, indem Sie den entsprechenden Code verwenden.
+    > Wenn Sie möchten, dass nachfolgende Benutzer des zusammengesetzten Steuerelements Zugriff auf interne Steuerelemente haben, deklarieren Sie sie als `Public` oder `Protected`. Dadurch können Sie Eigenschaften von Steuerelementen, die in Ihrem zusammengesetzten Steuerelement enthalten sind, festlegen und ändern, indem Sie den entsprechenden Code verwenden.
 
 3. Fügen Sie <xref:System.Windows.Forms.Label> dem zusammengesetzten Steuerelement ein Steuerelement hinzu.
 
@@ -298,7 +298,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
      Das Hinzufügen dieses Codes dient mehreren Zwecken. Die Anweisung `Overrides` weist das Steuerelement an, diese Methode statt der Methode zu verwenden, die vom Basissteuerelement geerbt wurde. Wenn diese Methode aufgerufen wird, ruft sie durch Aufruf der `MyBase.Timer1_Tick`-Anweisung die überschriebene Methode auf. Damit wird sichergestellt, dass die gesamte Funktionalität, die im ursprünglichen Steuerelement enthalten ist, in diesem Steuerelement reproduziert wird. Anschließend ruft sie zusätzlichen Code auf, um die Wecker-Funktionalität zu integrieren. Ein blinkendes Label-Steuerelement erscheint, wenn der Wecker ausgelöst wird, und ein hörbarer Signalton ertönt.
 
     > [!NOTE]
-    >  Da Sie einen geerbten Ereignishandler außer Kraft setzen, müssen Sie das Ereignis nicht mit dem Schlüsselwort `Handles` angeben. Das Ereignis ist bereits eingebunden. Sie überschreiben lediglich die Implementierung des Handlers.
+    > Da Sie einen geerbten Ereignishandler außer Kraft setzen, müssen Sie das Ereignis nicht mit dem Schlüsselwort `Handles` angeben. Das Ereignis ist bereits eingebunden. Sie überschreiben lediglich die Implementierung des Handlers.
 
      Das Wecker-Steuerelement ist fast abgeschlossen. Sie müssen nur noch eine Möglichkeit zum Deaktivieren implementieren. Zu diesem Zweck fügen Sie Code zur Methode `lblAlarm_Click` hinzu.
 

@@ -2,19 +2,19 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 273bd0d5e68a661c639b82264b440b83d8127427
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783181"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933789"
 ---
 # <a name="policyimporter"></a>\<policyImporter>
 Gibt einen Richtlinienimporter an, der den Import von benutzerdefinierten Richtlinienerklärungen über Bindungen steuert.  
   
  \<system.ServiceModel>  
 \<client>  
-\<metadata>  
+\<Metadaten>  
 \<policyImporters>  
 \<policyImporter>  
   
@@ -38,13 +38,13 @@ Gibt einen Richtlinienimporter an, der den Import von benutzerdefinierten Richtl
 |`type`|Der Typ dieses Elements.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<policyImporters>](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Gibt alle Richtlinienimporter an, die den Import von benutzerdefinierten Richtlinienerklärungen über Bindungen steuern.|  
+|[\<policyimport->](policyimporters.md)|Gibt alle Richtlinienimporter an, die den Import von benutzerdefinierten Richtlinienerklärungen über Bindungen steuern.|  
   
 ## <a name="remarks"></a>Hinweise  
  Mit einem Richtlinienimporter werden benutzerdefinierte Richtlinienerklärungen über Bindungsfeatures gesucht, und es wird ein benutzerdefiniertes Bindungselement angefügt, mit dem die für die Erklärung erforderlichen Features implementiert werden.  
@@ -55,5 +55,5 @@ Gibt einen Richtlinienimporter an, der den Import von benutzerdefinierten Richtl
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Description.MetadataImporter>
-- [WCF-Clientkonfiguration](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Clients](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF-Clientkonfiguration](../../../wcf/feature-details/client-configuration.md)
+- [Clients](../../../wcf/feature-details/clients.md)

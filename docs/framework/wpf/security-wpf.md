@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 6bd597cd2719fb96b8633f724da46a76e416b454
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 019035247b1316eb236b025d4527c42bb6ef526c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817896"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962823"
 ---
 # <a name="security-wpf"></a>Sicherheit (WPF)
 <a name="introduction"></a>Beim Entwickeln von eigenständigen und im Browser gehosteten Anwendungen für Windows Presentation Foundation (WPF) müssen Sie das Sicherheitsmodell in Erwägung gezogen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]eigenständige Anwendungen werden mit uneingeschränkten Berechtigungen (CAS**FullTrust** -Berechtigungs Satz) ausgeführt, unabhängig davon, ob Sie mit Windows Installer (MSI), xcopy oder ClickOnce bereitgestellt werden. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Allerdings kann eine voll vertrauenswürdige Host Anwendung eine teilweise Vertrauens <xref:System.AppDomain> würdige Anwendung mithilfe des .NET Framework Add-in-Modells erstellen. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-ins](./app-development/wpf-add-ins-overview.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "68817896"
 |Anwendungscode|XAML-Ressourcen mit kompiliertem Code-Behind<br /><br /> -oder-<br /><br /> XAML-Dateien, die einem Projekt mit dem Buildtyp **Page**hinzugefügt werden.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
->  Weitere Informationen zu Anwendungs Datendateien und zum Paket [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]finden Sie unter [WPF-Anwendungs Ressource, Inhalts-und Datendateien](./app-development/wpf-application-resource-content-and-data-files.md).  
+> Weitere Informationen zu Anwendungs Datendateien und zum Paket [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]finden Sie unter [WPF-Anwendungs Ressource, Inhalts-und Datendateien](./app-development/wpf-application-resource-content-and-data-files.md).  
   
  Ein Navigieren zu Dateien dieser Inhaltstypen kann sowohl durch einen Benutzer als auch programmgesteuert erfolgen:  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68817896"
      ![Screenshot, der das Dialogfeld "Sicherheitseinstellungen" anzeigt.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
->  Sie können auch aus Internet Explorer zum Dialogfeld „Internetoptionen“ gelangen. Klicken Sie auf Extras und dann auf **Internet Optionen**.  
+> Sie können auch aus Internet Explorer zum Dialogfeld „Internetoptionen“ gelangen. Klicken Sie auf Extras und dann auf **Internet Optionen**.  
   
  Ab Windows Internet Explorer 7 sind die folgenden Sicherheitseinstellungen speziell für .NET Framework enthalten:  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68817896"
  Das WPF <xref:System.Windows.Controls.WebBrowser> -Steuerelement kann zum Hosten von Webinhalt verwendet werden. Das WPF <xref:System.Windows.Controls.WebBrowser> -Steuerelement umfasst das zugrunde liegende WebBrowser-ActiveX-Steuerelement WPF bietet Unterstützung für das Sichern Ihrer Anwendung, wenn Sie das WPF <xref:System.Windows.Controls.WebBrowser> -Steuerelement zum Hosten von nicht vertrauenswürdigem Webinhalt verwenden. Einige Sicherheitsfeatures müssen jedoch direkt von den Anwendungen angewendet werden, die das <xref:System.Windows.Controls.WebBrowser> -Steuerelement verwenden. Weitere Informationen zum WebBrowser-ActiveX-Steuerelement finden Sie unter [WebBrowser-Steuerelement Übersichten und Tutorials](https://go.microsoft.com/fwlink/?LinkId=179388).  
   
 > [!NOTE]
->  Dieser Abschnitt gilt auch für das <xref:System.Windows.Controls.Frame> -Steuerelement, da <xref:System.Windows.Controls.WebBrowser> es den verwendet, um zu HTML-Inhalt zu navigieren.  
+> Dieser Abschnitt gilt auch für das <xref:System.Windows.Controls.Frame> -Steuerelement, da <xref:System.Windows.Controls.WebBrowser> es den verwendet, um zu HTML-Inhalt zu navigieren.  
   
  Wenn das WPF <xref:System.Windows.Controls.WebBrowser> -Steuerelement zum Hosten von nicht vertrauenswürdigem Webinhalt verwendet wird, sollte Ihre <xref:System.AppDomain> Anwendung eine partielle Vertrauensstellung verwenden, um den Anwendungscode vor potenziell schädlichem HTML-Skriptcode zu isolieren. Dies trifft vor allem dann zu, wenn die Anwendung mit dem gehosteten Skript interagiert, indem <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> die <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> -Methode und die-Eigenschaft verwendet werden. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-ins](./app-development/wpf-add-ins-overview.md).  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68817896"
  Funktions Steuerelemente werden durch den Prozess angewendet, der das WebBrowser-ActiveX-Objekt instanziiert. Daher wird unbedingt empfohlen, beim Erstellen einer eigenständigen Anwendung, die zu nicht vertrauenswürdigem Inhalt navigieren kann, zusätzliche Funktionssteuerelemente zu aktivieren.  
   
 > [!NOTE]
->  Diese Empfehlung basiert auf allgemeinen Empfehlungen für MSHTML- und SHDOCVW-Hostsicherheit. Weitere Informationen finden [Sie in den häufig gestellten Fragen zur Sicherheit des MSHTML-Hosts: Teil I von II](https://go.microsoft.com/fwlink/?LinkId=179396) und [häufig gestellte Fragen zur Sicherheit des MSHTML-Hosts: Teil II von II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+> Diese Empfehlung basiert auf allgemeinen Empfehlungen für MSHTML- und SHDOCVW-Hostsicherheit. Weitere Informationen finden [Sie in den häufig gestellten Fragen zur Sicherheit des MSHTML-Hosts: Teil I von II](https://go.microsoft.com/fwlink/?LinkId=179396) und [häufig gestellte Fragen zur Sicherheit des MSHTML-Hosts: Teil II von II](https://go.microsoft.com/fwlink/?LinkId=179415).  
   
  Für eine ausführbare Datei sollten die folgenden Funktionssteuerelemente aktiviert werden, indem der Registrierungswert auf 1 festgelegt wird.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "68817896"
  XBAPs, die in Internet Explorer ausgeführt werden, haben im Vergleich zu normalen eigenständigen Anwendungen ebenfalls ein höheres Maß an Sicherheit. Diese zusätzliche Sicherheit besteht darin, dass Internet Explorer und somit das WebBrowser-ActiveX-Steuerelement in [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] und [!INCLUDE[win7](../../../includes/win7-md.md)]standardmäßig im geschützten Modus ausgeführt wird. Weitere Informationen zum geschützten Modus finden Sie unter [Understanding and working in Protected Mode Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
   
 > [!NOTE]
->  Wenn Sie versuchen, eine XBAP auszuführen, die ein WPF <xref:System.Windows.Controls.WebBrowser> -Steuerelement in Firefox enthält, wird in der Internet <xref:System.Security.SecurityException> Zone eine ausgelöst. Dies geschieht aufgrund der WPF-Sicherheitsrichtlinie.  
+> Wenn Sie versuchen, eine XBAP auszuführen, die ein WPF <xref:System.Windows.Controls.WebBrowser> -Steuerelement in Firefox enthält, wird in der Internet <xref:System.Security.SecurityException> Zone eine ausgelöst. Dies geschieht aufgrund der WPF-Sicherheitsrichtlinie.  
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Deaktivieren von APTCA-Assemblys für teilweise vertrauenswürdige Clientanwendungen  
@@ -241,7 +241,7 @@ ms.locfileid: "68817896"
  Muss eine Assembly für teilweise vertrauenswürdige Clientanwendungen deaktiviert werden, können Sie ein Update schreiben, in dem der Registrierungsschlüssel und dessen Wert aktualisiert werden.  
   
 > [!NOTE]
->  Core .NET Framework Assemblys sind nicht betroffen, da Sie auf diese Weise deaktiviert werden, da Sie für die Durchführung verwalteter Anwendungen erforderlich sind. Die Unterstützung zur Deaktivierung von APTCA-Assemblys zielt hauptsächlich auf Anwendungen von Drittanbietern ab.  
+> Core .NET Framework Assemblys sind nicht betroffen, da Sie auf diese Weise deaktiviert werden, da Sie für die Durchführung verwalteter Anwendungen erforderlich sind. Die Unterstützung zur Deaktivierung von APTCA-Assemblys zielt hauptsächlich auf Anwendungen von Drittanbietern ab.  
   
 <a name="LooseContentSandboxing"></a>   
 ## <a name="sandbox-behavior-for-loose-xaml-files"></a>Sandkastenverhalten für Loose XAML-Dateien  
@@ -258,7 +258,7 @@ ms.locfileid: "68817896"
  Mit dieser Einstellung wird der externe Inhalt in einen Prozess geladen, der von dem Prozess getrennt ist, der die Anwendung hostet. Dieser Prozess ist auf den Standardberechtigungssatz für die Internetzone beschränkt, wodurch er effizient von der Hostanwendung und dem Clientcomputer isoliert ist.  
   
 > [!NOTE]
->  Obwohl die Navigation zu losen [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien von einer <xref:System.Windows.Navigation.NavigationWindow> oder <xref:System.Windows.Controls.Frame> einer eigenständigen Anwendung basierend auf der WPF-Browser-Hostinginfrastruktur implementiert ist, die den PresentationHost-Prozess umfasst, ist die Sicherheitsstufe etwas kleiner als wenn der Inhalt direkt in Internet Explorer unter [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] und [!INCLUDE[win7](../../../includes/win7-md.md)] geladen wird (Dies wäre jedoch immer noch über PresentationHost der Fall). Dies liegt daran, dass eine eigenständige WPF-Anwendung, die einen Webbrowser verwendet, die zusätzliche „Geschützter Modus“-Sicherheitsfunktion von Internet Explorer nicht bereitstellt.  
+> Obwohl die Navigation zu losen [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Dateien von einer <xref:System.Windows.Navigation.NavigationWindow> oder <xref:System.Windows.Controls.Frame> einer eigenständigen Anwendung basierend auf der WPF-Browser-Hostinginfrastruktur implementiert ist, die den PresentationHost-Prozess umfasst, ist die Sicherheitsstufe etwas kleiner als wenn der Inhalt direkt in Internet Explorer unter [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] und [!INCLUDE[win7](../../../includes/win7-md.md)] geladen wird (Dies wäre jedoch immer noch über PresentationHost der Fall). Dies liegt daran, dass eine eigenständige WPF-Anwendung, die einen Webbrowser verwendet, die zusätzliche „Geschützter Modus“-Sicherheitsfunktion von Internet Explorer nicht bereitstellt.  
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Ressourcen zum Entwickeln von WPF-Anwendungen, die die Sicherheit erhöhen  

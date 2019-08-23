@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b682d4b43ece406ee320d6d4f96ed5cda5f17c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6472f02cf2633d936252bfd2a8daa3ff711a4db8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650354"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967877"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Laufzeitausnahmen in .NET Native-Apps
 Es ist wichtig, die Releasebuilds Ihrer App für die universelle Windows-Plattform auf den Zielplattformen zu testen, da die Debug- und Releasekonfigurationen völlig unterschiedlich sind. Die Debugkonfiguration verwendet standardmäßig die .NET Core-Laufzeit zum Kompilieren der App, während die Releasekonfiguration .NET Native verwendet, um die App in systemeigenen Code zu kompilieren.  
   
 > [!IMPORTANT]
->  Informationen zum Umgang mit den [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), und [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) Ausnahmen, die Sie möglicherweise Beim Testen der Releaseversionen Ihrer App auftreten, finden Sie unter "Schritt 4: Manuelles Beheben fehlender Metadaten: in der [Einstieg](../../../docs/framework/net-native/getting-started-with-net-native.md) Thema sowie [Reflektion und .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) und [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+> Informationen zum Umgang mit den Ausnahmen [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [missinginteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)und [missingruntimeartifaktexception](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) , die beim Testen der Releaseversionen ihrer app auftreten können, finden Sie unter "Schritt 4: Manuelles auflösen fehlender Metadaten: im Thema " [Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md) " (Informationen zu den ersten Schritten) sowie über [Refle.net Native](../../../docs/framework/net-native/reflection-and-net-native.md) ktionsdirektiven [(RD. Xml)-Konfigurationsdatei Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Debugbuilds und Releasebuilds  
  Wenn der Debugbuild unter Verwendung der .NET Core-Laufzeit ausgeführt wird, wurde er nicht in systemeigenen Code kompiliert. Dadurch werden alle Dienste, die normalerweise von der Laufzeit bereitgestellt werden, für Ihre App verfügbar.  
@@ -31,7 +31,7 @@ Es ist wichtig, die Releasebuilds Ihrer App für die universelle Windows-Plattfo
 - Der Code wird stark optimiert. Dies bedeutet, dass nach Möglichkeit Inlining verwendet wird. (Beim Inlining wird Code aus externen Routinen in die aufrufende Routine verschoben.)   Die Tatsache, dass .NET Native eine spezielle Laufzeit bietet und aggressives Inlining implementiert, wirkt sich auf die beim Debuggen angezeigte Aufrufliste aus.  Weitere Informationen finden Sie im Abschnitt [Runtime call stack](#CallStack) .  
   
 > [!NOTE]
->  Sie können steuern, ob die Debug- und Releasebuilds mit der .NET Native-Toolkette kompiliert werden, indem Sie das Kontrollkästchen **Mit .NET Native-Toolkette kompilieren** aktivieren oder deaktivieren.   Beachten Sie jedoch, dass die Produktionsversion Ihrer App vom Windows Store immer mit der .NET Native-Toolkette kompiliert wird.  
+> Sie können steuern, ob die Debug- und Releasebuilds mit der .NET Native-Toolkette kompiliert werden, indem Sie das Kontrollkästchen **Mit .NET Native-Toolkette kompilieren** aktivieren oder deaktivieren.   Beachten Sie jedoch, dass die Produktionsversion Ihrer App vom Windows Store immer mit der .NET Native-Toolkette kompiliert wird.  
   
 <a name="Messages"></a>   
 ## <a name="runtime-exception-messages"></a>Runtime exception messages  
@@ -61,5 +61,5 @@ Additional information: Value does not fall within the expected range.
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen von .NET Native Windows Universal-Apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+- [Debuggen .net Native universellen Windows-apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)

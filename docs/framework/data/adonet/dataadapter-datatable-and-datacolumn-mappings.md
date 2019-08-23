@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb6841dd24c4c7587cc2424cc1e606194da34585
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032694"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944059"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>"DataTable" und "DataColumn"-Zuordnungen mit "DataAdapter"
-Ein **DataAdapter** enthält eine Auflistung von NULL oder mehr <xref:System.Data.Common.DataTableMapping> Objekte in der **TableMappings** Eigenschaft. Ein **DataTableMapping** stellt eine masterzuordnung zwischen den Daten, die von einer Abfrage für eine Datenquelle zurückgegeben und ein <xref:System.Data.DataTable>. Die **DataTableMapping** Namen übergeben werden kann, anstelle von der **DataTable** -Namens an die **füllen** -Methode der der **DataAdapter**. Das folgende Beispiel erstellt eine **DataTableMapping** mit dem Namen **AuthorsMapping** für die **Autoren** Tabelle.  
+Ein **DataAdapter** enthält eine Auflistung von 0 (NULL <xref:System.Data.Common.DataTableMapping> ) oder mehr Objekten in der **TableMappings** -Eigenschaft. Eine **DataTableMapping** bietet eine Master Zuordnung zwischen den Daten, die von einer Abfrage an eine Datenquelle zurückgegeben <xref:System.Data.DataTable>werden, und einem. Der **DataTableMapping** -Name kann anstelle des Namen der **Daten** Tabelle an die **Fill** -Methode von **DataAdapter**weitergegeben werden. Im folgenden Beispiel wird eine **DataTableMapping** mit dem Namen " **AuthorsMapping** " für die Tabelle " **Authors** " erstellt.  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -23,11 +23,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- Ein **DataTableMapping** können Sie mit der Spaltennamen in einer **DataTable** , die sich von denen in der Datenbank sind. Die **DataAdapter** mithilfe der Zuordnung der Spalten entsprechen, wenn die Tabelle aktualisiert wird.  
+ Eine **DataTableMapping** -Funktion ermöglicht es Ihnen, Spaltennamen in einer **Daten** Tabelle zu verwenden, die sich von denen in der Datenbank unterscheiden. Der **DataAdapter** verwendet die Zuordnung, um die Spalten zu vergleichen, wenn die Tabelle aktualisiert wird.  
   
- Wenn Sie nicht angeben eine **TableName** oder ein **DataTableMapping** Namen beim Aufruf der **füllen** oder **Update** -Methode der der  **DataAdapter**, **DataAdapter** sucht nach einem **DataTableMapping** mit dem Namen "Table". Wenn das **DataTableMapping** ist nicht vorhanden, die **TableName** von der **DataTable** "Table". Sie können einen Standardwert angeben **DataTableMapping** durch das Erstellen einer **DataTableMapping** mit dem Namen "Table".  
+ Wenn Sie beim Aufrufen der **Fill** -oder **Update** -Methode von **DataAdapter**keinen **TableName** -oder **DataTableMapping** -Namen angeben, sucht der **DataAdapter** nach einem **DataTableMapping** mit dem Namen "Table". Wenn dieses **DataTableMapping** -Element nicht vorhanden ist, lautet der **TableName** der **Daten** Tabelle "Table". Sie können eine DataTableMapping-Standard **Zuordnung** angeben, indem Sie eine **DataTableMapping** mit dem Namen "Table" erstellen.  
   
- Das folgende Codebeispiel erstellt eine **DataTableMapping** (aus der <xref:System.Data.Common> Namespace) und erleichtert die standardzuordnung für den angegebenen **DataAdapter** durch benennen "Table". Das Beispiel ordnet dann die Spalten aus der ersten Tabelle im Ergebnis Abfrage (die **Kunden** Tabelle mit den **Northwind** Datenbank) auf eine Gruppe von benutzerfreundlicheren Namen in der **Northwind-Kunden**  -Tabelle in der <xref:System.Data.DataSet>. Für Spalten, die nicht zugeordnet werden, wird der Name der Spalte in der Datenquelle verwendet.  
+ Im folgenden Codebeispiel wird eine **DataTableMapping** (aus dem <xref:System.Data.Common> -Namespace) erstellt und als Standard Zuordnung für den angegebenen **DataAdapter** festgelegt, indem Sie "Table" benannt wird. Im Beispiel werden dann die Spalten aus der ersten Tabelle im Abfrageergebnis (die **Customers** -Tabelle der **Northwind** -Datenbank) einem Satz benutzerfreundlicher Namen in der **Northwind** - <xref:System.Data.DataSet>Kunden Tabelle in zugeordnet. Für Spalten, die nicht zugeordnet werden, wird der Name der Spalte in der Datenquelle verwendet.  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -49,11 +49,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- In komplexeren Situationen, Sie können festlegen, dass Sie dasselbe **DataAdapter** um Laden verschiedener Tabellen mit verschiedenen Zuordnungen zu unterstützen. Zu diesem Zweck fügen Sie einfach zusätzliche **DataTableMapping** Objekte.  
+ In komplexeren Situationen können Sie festlegen, dass der gleiche **DataAdapter** das Laden verschiedener Tabellen mit unterschiedlichen Zuordnungen unterstützt. Fügen Sie zu diesem Zweck einfach weitere **DataTableMapping** -Objekte hinzu.  
   
- Wenn die **füllen** -Methode übergeben eine Instanz von eine **DataSet** und ein **DataTableMapping** Namen, sofern eine Zuordnung mit diesem Namen vorhanden ist, andernfalls eine  **DataTable** , wird der Name wird verwendet.  
+ Wenn die **Fill** -Methode an eine Instanz eines **DataSets** und einen **DataTableMapping** -Namen übertragen wird, wird Sie verwendet, wenn eine Zuordnung mit diesem Namen vorhanden ist. Andernfalls wird eine **Daten** Tabelle mit diesem Namen verwendet.  
   
- Erstellen Sie in den folgenden Beispielen ein **DataTableMapping** mit dem Namen **Kunden** und **DataTable** Name des **BizTalkSchema**. Das Beispiel ordnet dann die von der SELECT-Anweisung zurückgegebenen Zeilen der **BizTalkSchema** **DataTable**.  
+ In den folgenden Beispielen wird eine **DataTableMapping** mit dem Namen **Customers** und dem Namen der **Daten** Tabelle **BizTalkSchema**erstellt. Im Beispiel werden dann die von der SELECT-Anweisung zurückgegebenen Zeilen der **BizTalkSchema** - **Daten**Tabelle zugeordnet.  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -78,19 +78,19 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
->  Wenn für eine Spaltenzuordnung kein Quellspaltenname bzw. für eine Tabellenzuordnung kein Quelltabellenname angegeben wird, werden automatisch Standardnamen generiert. Wenn keine Spalte "Quelle" für eine spaltenzuordnung angegeben ist, erhält die spaltenzuordnung einen Standardnamen der **SourceColumn** *N,* ab **SourceColumn1**. Wenn für eine tabellenzuordnung kein Quelltabellenname angegeben wird, erhält die tabellenzuordnung einen Standardnamen der **SourceTable** *N*, beginnend mit **SourceTable1**.  
+> Wenn für eine Spaltenzuordnung kein Quellspaltenname bzw. für eine Tabellenzuordnung kein Quelltabellenname angegeben wird, werden automatisch Standardnamen generiert. Wenn für eine Spalten Zuordnung keine Quell Spalte bereitgestellt wird, erhält die Spalten Zuordnung den inkrementellen Standardnamen **sourcecolnumn** *N,* beginnend mit **SourceColumn1**. Wenn für eine Tabellen Zuordnung kein Quell Tabellenname angegeben wird, erhält die Tabellen Zuordnung einen inkrementellen Standardnamen für **SourceTable** *N*, beginnend mit **SourceTable1**.  
   
 > [!NOTE]
->  Es wird empfohlen, dass Sie vermeiden, dass die Namenskonvention des **SourceColumn** *N* für eine spaltenzuordnung, oder **SourceTable** *N* für eine Tabelle Zuordnung, die der Namen, die Sie angeben, ein Konflikt mit einer vorhandenen Zuordnung Standardspaltennamen in kann die **ColumnMappingCollection** oder Zuordnung Tabellennamen in der **DataTableMappingCollection** . Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.  
+> Es wird empfohlen, dass Sie die Benennungs Konvention von **sourcecolnumn** *N* für eine Spalten Zuordnung oder **SourceTable** *n* für eine Tabellen Zuordnung vermeiden, da der von Ihnen bereitgestellte Name in Konflikt mit einem vorhandenen Standard Spalten-Zuordnungsnamen im  **ColumnMappingCollection** oder Tabellen Zuordnung Name in **DataTableMappingCollection**. Wenn der angegebene Name bereits vorhanden ist, wird eine Ausnahme ausgelöst.  
   
 ## <a name="handling-multiple-result-sets"></a>Umgang mit mehreren Resultsets  
- Wenn Ihre **SelectCommand** mehrere Tabellen gibt **füllen** generiert automatisch Tabellennamen mit inkrementellen Werten für die Tabellen in der **DataSet**, beginnend mit der Tabellennamen und weiter auf im Formular angegeben habe **TableName** *N*, beginnend mit **TableName1**. Sie können mit tabellenzuordnungen können Sie den automatisch generierten Tabellennamen einem Namen zuordnen für die Tabelle im angegebenen soll die **DataSet**. Z. B. für eine **SelectCommand** , die zwei Tabellen zurückgibt **Kunden** und **Bestellungen**, geben Sie den folgenden Aufruf **füllen**.  
+ Wenn der **SelectCommand** mehrere Tabellen zurückgibt, generiert **Fill** automatisch Tabellennamen mit inkrementellen Werten für die Tabellen im **DataSet**, beginnend mit dem angegebenen Tabellennamen und fortsetzen in der Form **TableName** . *N*, beginnend mit **TableName1**. Sie können Tabellen Zuordnungen verwenden, um den automatisch generierten Tabellennamen einem Namen zuzuordnen, den Sie für die Tabelle im **DataSet**angeben möchten. Geben Sie beispielsweise für einen **SelectCommand** , der zwei Tabellen, **Kunden** und **Bestellungen**zurückgibt, den folgenden Auffüll Befehl aus.  
   
 ```  
 adapter.Fill(customersDataSet, "Customers")  
 ```  
   
- Werden zwei Tabellen erstellt, der **DataSet**: **Kunden** und **Customers1**. Sie können die tabellenzuordnungen verwenden, um sicherzustellen, dass die zweite Tabelle den Namen **Bestellungen** anstelle von **Customers1**. Zu diesem Zweck ordnen Sie die Quelltabelle **Customers1** auf die **DataSet** Tabelle **Bestellungen**, wie im folgenden Beispiel gezeigt.  
+ Im **DataSet**werden zwei Tabellen erstellt: **Kunden** und **Customers1**. Sie können Tabellen Zuordnungen verwenden, um sicherzustellen, dass die zweite Tabelle den Namen **Orders** anstelle von **Customers1**hat. Ordnen Sie zu diesem Zweck die Quell Tabelle von **Customers1** den **DataSet** -Tabellen **Bestellungen**zu, wie im folgenden Beispiel gezeigt.  
   
 ```  
 adapter.TableMappings.Add("Customers1", "Orders")  

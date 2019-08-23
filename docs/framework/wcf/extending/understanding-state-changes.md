@@ -2,12 +2,12 @@
 title: Grundlegendes zu Zustandsänderungen
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363940"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963084"
 ---
 # <a name="understanding-state-changes"></a>Grundlegendes zu Zustandsänderungen
 In diesem Thema werden die Zustände und Übergänge in Kanälen, die Typen zum Strukturieren von Kanalzuständen und deren Implementierung erläutert.  
@@ -58,7 +58,7 @@ Abbildung 2. Die CommunicationObject-Implementierung des ICommunicationObject-Zu
  <xref:System.ServiceModel.Channels.CommunicationObject> stellt Implementierungen von Abort, Close und Open bereit. Bereitgestellt wird außerdem eine Fault-Methode, die einen Zustandsübergang in den Faulted-Zustand verursacht. Abbildung 2 zeigt den <xref:System.ServiceModel.ICommunicationObject>-Zustandsautomaten. Dabei wird jeder Übergang durch die Methode bezeichnet, die ihn verursacht hat (nicht bezeichnete Übergänge treten innerhalb der Implementierung der Methode auf, die den letzten bezeichneten Übergang verursacht hat).  
   
 > [!NOTE]
->  Bei allen <xref:System.ServiceModel.Channels.CommunicationObject>-Implementierungen des Kommunikationszustands gets/sets sind die Threads synchronisiert.  
+> Bei allen <xref:System.ServiceModel.Channels.CommunicationObject>-Implementierungen des Kommunikationszustands gets/sets sind die Threads synchronisiert.  
   
  Konstruktor  
   

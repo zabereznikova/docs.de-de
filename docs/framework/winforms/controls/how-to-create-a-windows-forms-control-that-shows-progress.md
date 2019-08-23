@@ -10,12 +10,12 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 877df5139fd0e626cd2242e3790bc7100f6233aa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84f0caace70f9877e84fdd01dc69216dc10fe485
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599332"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950579"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das den Fortschritt anzeigt
 Das folgende Codebeispiel zeigt ein benutzerdefiniertes Steuerelement mit dem Namen `FlashTrackBar`, mit dem der Benutzer die Ebene oder den Fortschritt einer Anwendung anzeigen lassen kann. Es verwendet Farbverläufe, um den Fortschritt darzustellen.  
@@ -26,9 +26,9 @@ Das folgende Codebeispiel zeigt ein benutzerdefiniertes Steuerelement mit dem Na
   
 - Definieren benutzerdefinierter Ereignisse. (`FlashTrackBar` definiert das `ValueChanged`-Ereignis.)  
   
-- Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um die Logik zum Zeichnen des Steuerelements bereitzustellen.  
+- Überschreiben <xref:System.Windows.Forms.Control.OnPaint%2A> der-Methode, um Logik zum Zeichnen des Steuer Elements bereitzustellen.  
   
-- Berechnen des verfügbaren Bereichs für das Zeichnen des Steuerelements mit dessen <xref:System.Windows.Forms.Control.ClientRectangle%2A> Eigenschaft. Dies erfolgt normalerweise durch `FlashTrackBar` in der Methode `OptimizedInvalidate`.  
+- Berechnen des Bereichs, der zum Zeichnen des Steuer Elements mithilfe <xref:System.Windows.Forms.Control.ClientRectangle%2A> der-Eigenschaft verfügbar ist. Dies erfolgt normalerweise durch `FlashTrackBar` in der Methode `OptimizedInvalidate`.  
   
 - Implementieren der Serialisierung oder Dauerhaftigkeit für eine Eigenschaft, wenn sie in Windows Forms-Designer geändert wird. `FlashTrackBar` definiert die Methoden `ShouldSerializeStartColor` und `ShouldSerializeEndColor` für die Serialisierung der Eigenschaften `StartColor` und `EndColor`.  
   
@@ -55,9 +55,9 @@ Das folgende Codebeispiel zeigt ein benutzerdefiniertes Steuerelement mit dem Na
 |`OnValueChanged`|Die Methode, die das `ValueChanged`-Ereignis auslöst.|  
   
 > [!NOTE]
->  `FlashTrackBar` verwendet die <xref:System.EventArgs> -Klasse für Ereignisdaten und <xref:System.EventHandler> für den Ereignisdelegat.  
+> `FlashTrackBar`verwendet die <xref:System.EventArgs> -Klasse für Ereignisdaten <xref:System.EventHandler> und für den Ereignis Delegaten.  
   
- Zum Behandeln der entsprechenden *EventName* Ereignisse `FlashTrackBar` überschreibt die folgenden Methoden, die es erbt <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ Um die entsprechenden *EventName* -Ereignisse zu `FlashTrackBar` behandeln, überschreibt die folgenden Methoden, von <xref:System.Windows.Forms.Control?displayProperty=nameWithType>denen Sie erbt:  
   
 - <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -69,7 +69,7 @@ Das folgende Codebeispiel zeigt ein benutzerdefiniertes Steuerelement mit dem Na
   
 - <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- Um die entsprechenden durch geänderte Eigenschaften ausgelöste Ereignisse behandeln `FlashTrackBar` überschreibt die folgenden Methoden, die es erbt <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ `FlashTrackBar` Überschreibt die folgenden Methoden, von denen Sie erbt, um die entsprechenden von <xref:System.Windows.Forms.Control?displayProperty=nameWithType>der Eigenschaft geänderten Ereignisse zu behandeln:  
   
 - <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   

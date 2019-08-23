@@ -2,12 +2,12 @@
 title: Sicherer Datenzugriff
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664219"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963141"
 ---
 # <a name="secure-data-access"></a>Sicherer Datenzugriff
 Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsmechanismen kennen, die im zugrunde liegenden Datenspeicher oder der zugrundeliegenden Datenbank verfügbar sind. Außerdem müssen Sie die Auswirkungen anderer in Ihrer Anwendung enthaltenen Funktionen oder Komponenten auf die Sicherheit berücksichtigen.  
@@ -24,7 +24,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Beschreibt bewährte Methoden und Techniken zum Schützen von Verbindungsinformationen, z. B. das Verwenden der geschützten Konfiguration zur Verschlüsselung von Verbindungszeichenfolgen.|  
-|[Empfehlungen für Strategien für den Datenzugriff](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
+|[Empfehlungen für Datenzugriffs Strategien](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
 |[Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)|Beschreibt, wie aus Benutzereingabe zur Laufzeit Verbindungszeichenfolgen erstellt werden können.|  
 |[Übersicht über die SQL Server-Sicherheit](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Beschreibt die SQL Server-Sicherheitsarchitektur.|  
   
@@ -46,7 +46,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Übersicht über Skriptangriffe](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Beschreibt, wie Sie sich vor Skript- und SQL-Anweisung-Exploits schützen können.|  
+|[Übersicht über Skript Exploits](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Beschreibt, wie Sie sich vor Skript- und SQL-Anweisung-Exploits schützen können.|  
   
 ## <a name="probing-attacks"></a>Angriffe anhand von ausgewerteten Fehlerinformationen  
  Angreifer verwenden für ihre Angriffe häufig Informationen aus Fehlermeldungen. Diese können z. B. Aufschluss über den Namen des Servers, der Datenbank oder der Tabelle geben. Da Fehlermeldungen spezifische Informationen über eine Anwendung bzw. Datenquelle enthalten können, können Sie die Anwendung bzw. Datenquelle besser schützen, indem Sie lediglich Informationen verfügbar machen, die vom Client explizit angefordert werden.  
@@ -55,8 +55,8 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Grundlagen der Ausnahmebehandlung](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Beschreibt die grundlegenden Formen der Behandlung von Ausnahmen mit der "try/catch/finally"-Struktur.|  
-|[Bewährte Methoden für Ausnahmen](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Beschreibt bewährte Vorgehensweisen bei der Behandlung von Ausnahmen.|  
+|[Grundlagen der Ausnahmebehandlung](../../../standard/exceptions/exception-handling-fundamentals.md)|Beschreibt die grundlegenden Formen der Behandlung von Ausnahmen mit der "try/catch/finally"-Struktur.|  
+|[Bewährte Methoden für Ausnahmen](../../../standard/exceptions/best-practices-for-exceptions.md)|Beschreibt bewährte Vorgehensweisen bei der Behandlung von Ausnahmen.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Schützen von Microsoft Access- und Excel-Datenquellen  
  Microsoft Access und Microsoft Excel können dort, wo die Sicherheitsanforderungen nur minimal sind, als Datenspeicher für ADO.NET-Anwendungen fungieren. Deren Sicherheitsfunktionen sind zwar zur Abschreckung unwissender Benutzer geeignet, können aber von erfahrenen Angreifern durchaus umgangen werden. Die physischen Datendateien für Access und Excel befinden sich im Dateisystem, und der Zugriff darauf muss für alle Benutzer gewährleistet sein. Sie sind daher für Angriffe anfällig, bei denen Daten gestohlen oder zerstört werden, denn sie können problemlos kopiert oder bearbeitet werden. Wenn also eine robustere Sicherheit verlangt wird, verwenden Sie SQL Server oder eine andere serverbasierte Datenbank, in der die physischen Datendateien nicht aus dem Dateisystem gelesen werden können.  
@@ -65,9 +65,9 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Überlegungen zur Sicherheit und Anleitungen für Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Beschreibt die Sicherheitsverfahren von Access 2007, wie die Verschlüsselung von Dateien, die Verwaltung von Kennwörtern und die Umwandlung von Datenbanken in die neuen Formate ACCDB und ACCDE sowie die Verwendung anderer Sicherheitsoptionen.|  
-|[Grundlegendes zur Rolle der Arbeitsgruppen-Informationsdateien in der Access-Sicherheit](https://support.microsoft.com/kb/305542)|Erläutert die Rolle und die Beziehung der Arbeitsgruppeninformationsdatei in der Access 2003-Sicherheit.|  
-|[Häufig gestellte Fragen zur Sicherheit für Microsoft Access-Versionen 2.0 bis 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Herunterladbare Version der Antworten auf häufig gestellte Fragen (FAQ) zum Thema "Sicherheit in Microsoft Access".|  
+|[Sicherheitsüberlegungen und Anleitungen für den Zugriff 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Beschreibt die Sicherheitsverfahren von Access 2007, wie die Verschlüsselung von Dateien, die Verwaltung von Kennwörtern und die Umwandlung von Datenbanken in die neuen Formate ACCDB und ACCDE sowie die Verwendung anderer Sicherheitsoptionen.|  
+|[Grundlegendes zur Rolle der Arbeitsgruppen-Informationsdateien in Access Security](https://support.microsoft.com/kb/305542)|Erläutert die Rolle und die Beziehung der Arbeitsgruppeninformationsdatei in der Access 2003-Sicherheit.|  
+|[Häufig gestellte Fragen zu Microsoft Access Security für Microsoft Access-Versionen 2,0 bis 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Herunterladbare Version der Antworten auf häufig gestellte Fragen (FAQ) zum Thema "Sicherheit in Microsoft Access".|  
 ## <a name="enterprise-services"></a>Enterprise Services  
  COM+ enthält ein eigenes Sicherheitsmodell, das auf die Windows NT-Konten und den Prozess-/Threadidentitätswechsel zurückgreift. Der <xref:System.EnterpriseServices>-Namespace stellt Wrapper bereit, die es .NET-Anwendungen ermöglichen, über die <xref:System.EnterpriseServices.ServicedComponent>-Klasse verwalteten Code mit COM+-Sicherheitsdiensten zu integrieren.  
   
@@ -91,7 +91,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
 
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Empfehlungen für Strategien für den Datenzugriff](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
+- [Empfehlungen für Datenzugriffs Strategien](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

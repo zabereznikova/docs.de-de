@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad928fb223ce22c65bb86a78c7d4cd006651a2d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796753"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950758"
 ---
 # <a name="pack-uris-in-wpf"></a>Paket-URI in WPF
 
@@ -85,7 +85,7 @@ In den folgenden Abschnitten wird erläutert, wie [!INCLUDE[TLA2#tla_uri#plural]
 
 ## <a name="resource-file-pack-uris"></a>Paket-URIs der Ressourcendatei
 
-Ressourcen Dateien werden als [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` Elemente konfiguriert und in Assemblys kompiliert. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]unterstützt die Erstellung von [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] Paketen, mit denen Ressourcen Dateien identifiziert werden können, die entweder in der lokalen Assembly kompiliert oder in eine Assembly kompiliert werden, auf die von der lokalen Assembly verwiesen wird.
+Ressourcen Dateien werden als MSBuild `Resource` -Elemente konfiguriert und in Assemblys kompiliert. WPF unterstützt die Erstellung von Paket-URIs, die verwendet werden können, um Ressourcen Dateien zu identifizieren, die entweder in der lokalen Assembly kompiliert oder in eine Assembly kompiliert werden, auf die von der lokalen Assembly verwiesen wird.
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -186,9 +186,9 @@ Das folgende Beispiel zeigt das Paket [!INCLUDE[TLA2#tla_uri](../../../../includ
 
 ## <a name="page-files"></a>Seitendateien
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Dateien, die als [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente konfiguriert werden, werden auf die gleiche Weise wie Ressourcen Dateien in Assemblys kompiliert. Folglich können Elemente mithilfe von Paket [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] für Ressourcen Dateien identifiziert werden. `Page` [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]
+XAML-Dateien, die als MSBuild `Page` -Elemente konfiguriert werden, werden auf die gleiche Weise wie Ressourcen Dateien in Assemblys kompiliert. Folglich können MSBuild `Page` -Elemente mithilfe von Paket-URIs für Ressourcen Dateien identifiziert werden.
 
-Die Typen von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dateien, die häufig als [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente konfiguriert werden, haben eines der folgenden Elemente als Stamm Element:
+Die Typen von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dateien, die im Allgemeinen als MSBuild`Page` -Elemente konfiguriert werden, haben eines der folgenden Elemente als Stamm Element:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 

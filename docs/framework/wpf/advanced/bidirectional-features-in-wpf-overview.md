@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: d2b35a50d9d09bffd69ae8b8217d6e778ce66ea0
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: b009c2503c7cbf6aca847fc7318135842a060f69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796404"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965041"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Übersicht über bidirektionale Features in WPF
 Anders als bei jeder anderen Entwicklungs [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Plattform bietet viele Funktionen, die eine schnelle Entwicklung von bidirektionalem Inhalt unterstützen, z. b. von links nach rechts und von rechts nach Links zu Daten im selben Dokument. Gleichzeitig wird für Benutzer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , die bidirektionale Features wie arabische und Hebräisch sprachige Benutzer benötigen, eine hervorragende benutzerfreundliche Benutzersprache erstellt.  
@@ -154,9 +154,9 @@ Anders als bei jeder anderen Entwicklungs [!INCLUDE[TLA2#tla_winclient](../../..
   
 <a name="NumberSubstitution"></a>   
 ## <a name="number-substitution"></a>Ersetzen von Zahlen  
- In der Vergangenheit hat die Zahl Ersetzung unterstützt, indem die Darstellung verschiedener kultureller Formen für die gleichen Ziffern zugelassen wurde, während der interne Speicher dieser Ziffern für verschiedene Gebiets Schemas einheitlich gehalten wird, z. b. Wenn Zahlen in [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] die bekannten hexadezimalen Werte 0x40, 0x41, werden jedoch entsprechend der ausgewählten Sprache angezeigt.  
+ In der Vergangenheit hat Windows das Ersetzen von Zahlen unterstützt, indem es die Darstellung verschiedener kultureller Formen für die gleichen Ziffern ermöglicht und dabei den internen Speicher dieser Ziffern in verschiedenen Gebiets Schemas einheitlich gehalten hat, z. b. Wenn Zahlen in ihren bekannte hexadezimal Werte, 0x40, 0x41, werden jedoch entsprechend der ausgewählten Sprache angezeigt.  
   
- Dadurch haben Anwendungen die Möglichkeit, numerische Werte zu verarbeiten, ohne Sie von einer Sprache in eine andere konvertieren zu müssen. ein Benutzer kann z [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] . b. eine Kalkulations Tabelle in einem lokalisierten arabischen [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] öffnen und die in Arabisch formatierten Zahlen anzeigen, aber öffnen Sie ihn in eine europäische Version von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] und die Darstellung der gleichen Zahlen in der Europäischen Darstellung. Dies ist auch für andere Symbole, wie z.B. Kommas als Trennzeichen und das Prozentsatzsymbol notwendig, da sie normalerweise Zahlen in einem Dokument begleiten.  
+ Dadurch haben Anwendungen die Möglichkeit, numerische Werte zu verarbeiten, ohne Sie von einer Sprache in eine andere konvertieren zu müssen. ein Benutzer kann z [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] . b. eine Kalkulations Tabelle in einem lokalisierten arabischen Fenster öffnen und die in Arabisch formatierten Zahlen anzeigen, aber in einem Die Europäische Version von Windows und die Darstellung der gleichen Zahlen in der Europäischen Darstellung. Dies ist auch für andere Symbole, wie z.B. Kommas als Trennzeichen und das Prozentsatzsymbol notwendig, da sie normalerweise Zahlen in einem Dokument begleiten.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt diese Tradition fort und fügt weitere Unterstützung für diese Funktion hinzu, die mehreren Benutzern die Steuerung darüber ermöglicht, wann und wie die Ersetzung verwendet wird. Diese Funktion ist für jede Sprache konzipiert, da sie besonders für bidirektionalen Inhalt nützlich ist, bei dem die Strukturierung von Ziffern für eine bestimmte Sprache in der Regel eine Herausforderung für die Entwickler der Anwendung darstellt, da eine Anwendung aufgrund der verschiedenen Kulturen möglicherweise weiter ausgeführt wird.  
   
@@ -190,7 +190,7 @@ Anders als bei jeder anderen Entwicklungs [!INCLUDE[TLA2#tla_winclient](../../..
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Zahlen werden mithilfe der herkömmlichen Ziffern für die Zahlen Kultur gerendert. In <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>den meisten Kulturen ist dies mit identisch. <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> Führt jedoch zu lateinischen Ziffern für einige arabische Kulturen, wohingegen dieser Wert arabische Ziffern für alle arabischen Kulturen zur Folge hat.  
   
- Was bedeuten diese Werte für einen Entwickler von bidirektionalem Inhalt? In den meisten Fällen muss der Entwickler möglicherweise nur die <xref:System.Windows.FlowDirection> Sprache der einzelnen Text [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elemente definieren. die <xref:System.Windows.Media.NumberSubstitution> Logik übernimmt `Language="ar-SA"` z. b. die Anzeige der Zahlen entsprechend der richtigen. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Das folgende Beispiel veranschaulicht die Verwendung von arabischen und englischen Zahlen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in einer-Anwendung, die in [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]einer arabischen Version von ausgeführt wird.  
+ Was bedeuten diese Werte für einen Entwickler von bidirektionalem Inhalt? In den meisten Fällen muss der Entwickler möglicherweise nur die <xref:System.Windows.FlowDirection> Sprache der einzelnen Text [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Elemente definieren. die <xref:System.Windows.Media.NumberSubstitution> Logik übernimmt `Language="ar-SA"` z. b. die Anzeige der Zahlen entsprechend der richtigen. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Das folgende Beispiel veranschaulicht die Verwendung von arabischen und englischen Zahlen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in einer-Anwendung, die in einer arabischen Version von Windows ausgeführt wird.  
   
  [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   

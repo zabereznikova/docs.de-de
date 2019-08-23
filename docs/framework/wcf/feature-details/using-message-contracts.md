@@ -7,22 +7,22 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 829bdda3f3302d8d3c41e704dc8caf88720d1ebc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 18d0ea97f1de40044d40fa85c9792c809fb73346
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637595"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959881"
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
-In der Regel beim Erstellen von Windows Communication Foundation (WCF)-Anwendungen, Entwickler Achten Sie besonders auf die Datenstrukturen und serialisierungsprobleme und müssen nicht auf die Struktur der Nachrichten achten, in denen die Daten transportiert werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
+Beim Entwickeln von Windows Communication Foundation (WCF)-Anwendungen achten Entwickler in der Regel auf die Datenstrukturen und Serialisierungsprobleme und müssen sich nicht mit der Struktur der Nachrichten befassen, in denen die Daten übertragen werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
   
- Allerdings ist zuweilen die vollständige Kontrolle über die Struktur einer SOAP-Nachricht wichtiger als die Kontrolle über dessen Inhalte. Dies gilt insbesondere, wenn Interoperabilität wichtig ist oder um Sicherheitsprobleme speziell auf der Ebene der Nachricht oder des Nachrichtenteils zu kontrollieren. In diesen Fällen können Sie erstellen eine *Nachrichtenvertrag* , mit der Sie die Struktur der benötigten SOAP-Nachricht angeben.  
+ Allerdings ist zuweilen die vollständige Kontrolle über die Struktur einer SOAP-Nachricht wichtiger als die Kontrolle über dessen Inhalte. Dies gilt insbesondere, wenn Interoperabilität wichtig ist oder um Sicherheitsprobleme speziell auf der Ebene der Nachricht oder des Nachrichtenteils zu kontrollieren. In diesen Fällen können Sie einen *Nachrichten Vertrag* erstellen, der es Ihnen ermöglicht, die Struktur der exakten SOAP-Nachricht anzugeben.  
   
  Dieses Thema beschreibt, wie die unterschiedlichen Attribute für Nachrichtenverträge zur Erstellung eines spezifischen Nachrichtenvertrags für Ihren Vorgang verwendet werden.  
   
 ## <a name="using-message-contracts-in-operations"></a>Verwenden von Nachrichtenverträgen in Vorgängen  
- WCF unterstützt Vorgänge, die entweder die *Remoteprozeduraufruf-Remoteprozeduraufruf (RPC)-Stil* oder *messagingstil*. Bei einem Vorgang im RPC-Stil können Sie jeden serialisierbaren Typ verwenden, und Sie haben Zugriff auf die Funktionen, die für lokale Aufrufe verfügbar sind, beispielsweise mehrere Parameter sowie der `ref`-Parameter und der `out`-Parameter. In diesem Stil steuert die gewählte Form der Serialisierung, die Struktur der Daten in den zugrunde liegenden Nachrichten, und die WCF-Laufzeit erstellt die Nachrichten zur Unterstützung des Vorgangs. Dadurch können Entwickler, die sich mit SOAP und SOAP-Nachrichten nicht auskennen, Dienstanwendungen schnell und einfach erstellen und verwenden.  
+ WCF unterstützt Vorgänge, die entweder für den *Remote Prozedur Aufruf (RPC)* oder den *Messaging Stil*modelliert wurden. Bei einem Vorgang im RPC-Stil können Sie jeden serialisierbaren Typ verwenden, und Sie haben Zugriff auf die Funktionen, die für lokale Aufrufe verfügbar sind, beispielsweise mehrere Parameter sowie der `ref`-Parameter und der `out`-Parameter. In diesem Stil steuert die gewählte Form der Serialisierung die Struktur der Daten in den zugrunde liegenden Nachrichten, und die WCF-Laufzeit erstellt die Nachrichten, um den Vorgang zu unterstützen. Dadurch können Entwickler, die sich mit SOAP und SOAP-Nachrichten nicht auskennen, Dienstanwendungen schnell und einfach erstellen und verwenden.  
   
  Das folgende Codebeispiel zeigt einen im RPC-Stil erstellten Dienstvorgang.  
   
@@ -31,7 +31,7 @@ In der Regel beim Erstellen von Windows Communication Foundation (WCF)-Anwendung
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- Normalerweise ist ein Datenvertrag ausreichend, um das Schema für die Nachrichten zu definieren. Beispielsweise reicht es im vorherigen Beispiel für die meisten Anwendungen aus, wenn `BankingTransaction` und `BankingTransactionResponse` über Datenverträge für die Inhaltsdefinition der zugrunde liegenden SOAP-Nachrichten verfügen. Weitere Informationen zu Datenverträgen finden Sie unter [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Normalerweise ist ein Datenvertrag ausreichend, um das Schema für die Nachrichten zu definieren. Beispielsweise reicht es im vorherigen Beispiel für die meisten Anwendungen aus, wenn `BankingTransaction` und `BankingTransactionResponse` über Datenverträge für die Inhaltsdefinition der zugrunde liegenden SOAP-Nachrichten verfügen. Weitere Informationen zu Daten Verträgen finden Sie unter [Verwenden von Daten Verträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Zuweilen ist es allerdings notwendig, die Struktur der übertragenen SOAP-Nachricht genau zu steuern. Das gängigste Szenario hierfür besteht aus dem Einfügen von benutzerdefinierten SOAP-Headern. Ein weiteres übliches Szenario ist die Definition von Sicherheitseigenschaften für Nachrichtenheader und -text, das heißt, die Entscheidung, ob diese Elemente digital signiert und verschlüsselt werden. Schließlich erfordern eine Reihe von Drittanbieter-SOAP-Stapeln Nachrichten in einem bestimmten Format. Vorgänge im Messagingstil bieten diese Kontrolle.  
   
@@ -105,7 +105,7 @@ public class BankingTransaction
  Das <xref:System.ServiceModel.MessageContractAttribute> ermöglicht Ihnen das Angeben des WrapperName-Attributs und des WrapperNamespace-Attributs, die den Namen des Wrapperelements im Textkörper der SOAP-Nachricht steuern. Standardmäßig wird der Name des Typs des Nachrichtenvertrags für den Wrapper verwendet, und der Namespace, in dem der Nachrichtenvertrag `http://tempuri.org/` definiert ist, fungiert als Standardnamespace.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribute werden in Nachrichtenverträgen ignoriert. Ist ein <xref:System.Runtime.Serialization.KnownTypeAttribute> erforderlich, platzieren Sie es auf dem Vorgang, der den in Frage kommenden Nachrichtenvertrag nutzt.  
+> <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribute werden in Nachrichtenverträgen ignoriert. Ist ein <xref:System.Runtime.Serialization.KnownTypeAttribute> erforderlich, platzieren Sie es auf dem Vorgang, der den in Frage kommenden Nachrichtenvertrag nutzt.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Kontrollieren von Header- und Textteilnamen und Namespaces  
  In der SOAP-Darstellung eines Nachrichtenvertrags wird jeder Header und jeder Textteil einem XML-Element zugeordnet, das über einen Namen und einen Namespace verfügt.  
@@ -151,10 +151,10 @@ public class BankingTransaction
  Um das Wrapperelement zu unterdrücken, legen Sie die <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A>-Eigenschaft auf `false` fest. Um den Namen und den Namespace des Wrapperelements zu kontrollieren, verwenden Sie die Eigenschaften <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> und <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A>.  
   
 > [!NOTE]
->  Das Vorhandensein von mehr als einem Nachrichtentextteil in nicht umbrochenen Nachrichten ist nicht mit dem WS-I Basic Profile 1.1 kompatibel und wird bei der Gestaltung neuer Nachrichtenverträge nicht empfohlen. Allerdings kann es bei spezifischen Interoperabilitätsszenarien notwendig sein, mehr als einen nicht umbrochenen Nachrichtentextteil zu haben. Wenn Sie mehrere Daten in einem Nachrichtentext übertragen möchten, wird die Verwendung des Standardumbruchmodus empfohlen. Mehr als einen Nachrichtenheader in nicht umbrochenen Nachrichten zu haben, ist vollkommen akzeptabel.  
+> Das Vorhandensein von mehr als einem Nachrichtentextteil in nicht umbrochenen Nachrichten ist nicht mit dem WS-I Basic Profile 1.1 kompatibel und wird bei der Gestaltung neuer Nachrichtenverträge nicht empfohlen. Allerdings kann es bei spezifischen Interoperabilitätsszenarien notwendig sein, mehr als einen nicht umbrochenen Nachrichtentextteil zu haben. Wenn Sie mehrere Daten in einem Nachrichtentext übertragen möchten, wird die Verwendung des Standardumbruchmodus empfohlen. Mehr als einen Nachrichtenheader in nicht umbrochenen Nachrichten zu haben, ist vollkommen akzeptabel.  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>Verwendung von benutzerdefinierten Typen innerhalb von Nachrichtenverträgen  
- Jeder einzelne Nachrichtenheader und Nachrichtentextteil wird mithilfe der ausgewählten Serialisierungs-Engine für den Dienstvertrag, bei dem die Nachricht verwendet wird, serialisiert (in XML konvertiert). Die Standardserialisierungs-Engine, `XmlFormatter`, kann jeden Typ verarbeiten, der über einen Datenvertrag verfügt; entweder explizit (durch <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) oder implizit (bei einem primitiven Typ mit <xref:System.SerializableAttribute?displayProperty=nameWithType> usw.). Weitere Informationen finden Sie unter [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Jeder einzelne Nachrichtenheader und Nachrichtentextteil wird mithilfe der ausgewählten Serialisierungs-Engine für den Dienstvertrag, bei dem die Nachricht verwendet wird, serialisiert (in XML konvertiert). Die Standardserialisierungs-Engine, `XmlFormatter`, kann jeden Typ verarbeiten, der über einen Datenvertrag verfügt; entweder explizit (durch <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) oder implizit (bei einem primitiven Typ mit <xref:System.SerializableAttribute?displayProperty=nameWithType> usw.). Weitere Informationen finden Sie unter [Verwenden von Daten Verträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
  Im vorangehenden Beispiel müssen die Typen `Operation` und `BankingTransactionData` über einen Datenvertrag verfügen, und `transactionDate` ist serialisierbar, da <xref:System.DateTime> primitiv ist (und über einen impliziten Datenvertrag verfügt).  
   
@@ -250,7 +250,7 @@ public class PatientRecord
   
 - `Relay`  
   
- Das `Actor`-Attribut oder das `Role`-Attribut legt den URI (Uniform Resource Identifier) des Knotens fest, für den ein bestimmter Header angegeben wurde. Das `MustUnderstand`-Attribut gibt an, ob der Header die Knotenverarbeitung versteht. Das `Relay`-Attribut gibt an, ob der Header an Downstreamknoten weitergeleitet werden soll. WCF führt keine verarbeitet diese Attribute bei eingehenden Nachrichten, mit Ausnahme der `MustUnderstand` -Attribut, wie im Abschnitt "Versionsvergabe" weiter unten in diesem Thema angegeben. Allerdings wird es Ihnen ermöglicht, diese Attribute wie erforderlich zu lesen und zu schreiben (wie in der folgenden Beschreibung).  
+ Das `Actor`-Attribut oder das `Role`-Attribut legt den URI (Uniform Resource Identifier) des Knotens fest, für den ein bestimmter Header angegeben wurde. Das `MustUnderstand`-Attribut gibt an, ob der Header die Knotenverarbeitung versteht. Das `Relay`-Attribut gibt an, ob der Header an Downstreamknoten weitergeleitet werden soll. WCF führt keine Verarbeitung dieser Attribute für eingehende Nachrichten aus, mit Ausnahme des `MustUnderstand` -Attributs, wie im Abschnitt "Versionsverwaltung von Nachrichten Verträgen" weiter unten in diesem Thema angegeben. Allerdings wird es Ihnen ermöglicht, diese Attribute wie erforderlich zu lesen und zu schreiben (wie in der folgenden Beschreibung).  
   
  Beim Versand einer Nachricht werden diese Attribute nicht standardmäßig ausgegeben. Sie können diese auf zwei Arten ändern: Sie können die Attribute statisch auf einen gewünschten Wert festlegen, indem Sie die Eigenschaften <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>, <xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType> und <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> ändern (siehe folgendes Codebeispiel). (Beachten Sie, dass es keine `Role`-Eigenschaft gibt; die Einrichtung der <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A>-Eigenschaft gibt das `Role`-Attribut aus, wenn Sie SOAP 1.2 verwenden).  
   
@@ -303,7 +303,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  Wenn eine Nachricht empfangen und dann zurückgesendet wird, werden die SOAP-Attributeinstellungen nur für Header des <xref:System.ServiceModel.MessageHeader%601>-Typs wiederhergestellt.  
   
 ## <a name="order-of-soap-body-parts"></a>Reihenfolge von SOAP-Textteilen  
- In einigen Fällen müssen Sie die Reihenfolge der Textteile kontrollieren. Die Reihenfolge der Textelemente ist standardmäßig alphabetisch, kann aber über die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>-Eigenschaft gesteuert werden. Diese Eigenschaft verfügt über dieselbe Semantik wie die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, abgesehen vom Verhalten im Vererbungsszenario (in Nachrichtenverträgen werden Textmember vom Basistyp nicht vor den Textmembern des abgeleiteten Typs sortiert). Weitere Informationen finden Sie unter [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ In einigen Fällen müssen Sie die Reihenfolge der Textteile kontrollieren. Die Reihenfolge der Textelemente ist standardmäßig alphabetisch, kann aber über die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType>-Eigenschaft gesteuert werden. Diese Eigenschaft verfügt über dieselbe Semantik wie die Eigenschaft <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType>, abgesehen vom Verhalten im Vererbungsszenario (in Nachrichtenverträgen werden Textmember vom Basistyp nicht vor den Textmembern des abgeleiteten Typs sortiert). Weitere Informationen finden Sie unter [Datenmember-Reihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  Im folgenden Beispiel käme `amount` normalerweise zuerst, da es alphabetisch an erster Stelle steht. Die <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A>-Eigenschaft setzt es jedoch an die dritte Position.  
   
@@ -323,7 +323,7 @@ public class BankingTransaction
   
  Für Versionsheader gelten die folgenden Regeln:  
   
-- WCF nicht dem fehlenden Header Objekt – die entsprechenden Member behalten die Standardwerte bei.  
+- WCF ist nicht auf die fehlenden Header – die entsprechenden Member haben die Standardwerte beibehalten.  
   
 - WCF ignoriert auch unerwartete zusätzliche Header. Die Ausnahme zu dieser Regel besteht darin, dass der zusätzliche Header über ein `MustUnderstand`-Attribut verfügt, das in der eingehenden SOAP-Nachricht auf `true` festgelegt ist – in diesem Fall wird eine Ausnahme ausgelöst, da ein Header, der verstanden werden muss, nicht verarbeitet werden kann.  
   
@@ -370,7 +370,7 @@ public class PatientRecord : PersonRecord
 - Bei Verwendung desselben Nachrichtenvertrags in mehreren Vorgängen werden mehrere Nachrichtentypen im WSDL-Dokument generiert. Die Namen werden durch Hinzufügen der Zahlen "2", "3" usw. für eine aufeinanderfolgende Verwendung eindeutig gekennzeichnet. Beim Rückimport der WSDL werden mehrere Nachrichtenvertragstypen erstellt, die abgesehen von ihren Namen identisch sind.  
   
 ## <a name="soap-encoding-considerations"></a>Überlegungen zur SOAP-Codierung  
- WCF ermöglicht es, Sie verwenden das ältere SOAP-Codierungsformat für XML, wird dessen Verwendung jedoch nicht empfohlen. Bei der Verwendung dieses Formats (durch Festlegen der `Use`-Eigenschaft auf `Encoded` auf dem <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>, das auf den Dienstvertrag angewandt wird), gelten die folgenden zusätzlichen Überlegungen:  
+ WCF ermöglicht es Ihnen, die Legacy-SOAP-Codierungsstil von XML zu verwenden. es wird jedoch nicht empfohlen, die Verwendung zu verwenden. Bei der Verwendung dieses Formats (durch Festlegen der `Use`-Eigenschaft auf `Encoded` auf dem <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>, das auf den Dienstvertrag angewandt wird), gelten die folgenden zusätzlichen Überlegungen:  
   
 - Die Nachrichtenheader werden nicht unterstützt. Dies bedeutet, dass das Attribut <xref:System.ServiceModel.MessageHeaderAttribute> und das Arrayattribut <xref:System.ServiceModel.MessageHeaderArrayAttribute> nicht mit der SOAP-Codierung kompatibel sind.  
   

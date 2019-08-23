@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 47d6fe1d4c99adaf3313c87e0b3411049e3b2452
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489651"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933635"
 ---
 # <a name="net-framework-tools"></a>.NET Framework-Tools
 Die .NET Framework-Tools erleichtern Ihnen das Erstellen, Bereitstellen und Verwalten von Anwendungen und Komponenten für .NET Framework.  
@@ -26,7 +26,7 @@ Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden a
  Die Befehlszeilentools führen Sie am besten über die Developer-Eingabeaufforderung für Visual Studio aus. Mit diesen Hilfsprogrammen können Sie die Tools einfacher ausführen, ohne zum Installationsordner navigieren zu müssen. Weitere Informationen finden Sie unter [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
->  Einige Tools können nur auf 32-Bit-Computern oder auf 64-Bit-Computern ausgeführt werden. Stellen Sie sicher, dass Sie die entsprechende Version des Tools für Ihren Computer ausführen.  
+> Einige Tools können nur auf 32-Bit-Computern oder auf 64-Bit-Computern ausgeführt werden. Stellen Sie sicher, dass Sie die entsprechende Version des Tools für Ihren Computer ausführen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)  

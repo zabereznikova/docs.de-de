@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671822"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963532"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error-Anweisung (Visual Basic)
 Aktiviert eine Fehler Behandlungs Routine und gibt den Speicherort der Routine innerhalb einer Prozedur an. kann auch verwendet werden, um eine Fehler Behandlungs Routine zu deaktivieren. Die `On Error` -Anweisung wird bei der unstrukturierten Fehlerbehandlung verwendet und kann anstelle der strukturierten Ausnahmebehandlung verwendet werden. Die [strukturierte Ausnahmebehandlung](../../../standard/exceptions/index.md) ist in .NET integriert, ist im Allgemeinen effizienter und wird daher empfohlen, wenn Laufzeitfehler in der Anwendung behandelt werden.
@@ -35,7 +35,7 @@ Aktiviert eine Fehler Behandlungs Routine und gibt den Speicherort der Routine i
  Ohne Fehlerbehandlung oder Ausnahmebehandlung ist jeder auftretende Laufzeitfehler schwerwiegend: eine Fehlermeldung wird angezeigt, und die Ausführung wird beendet.
 
 > [!NOTE]
->  Das `Error` -Schlüsselwort wird auch in der [Error-Anweisung](../../../visual-basic/language-reference/statements/error-statement.md)verwendet, die aus Gründen der Abwärtskompatibilität unterstützt wird.
+> Das `Error` -Schlüsselwort wird auch in der [Error-Anweisung](../../../visual-basic/language-reference/statements/error-statement.md)verwendet, die aus Gründen der Abwärtskompatibilität unterstützt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>Hinweise
 
 > [!NOTE]
->  Es empfiehlt sich, nach Möglichkeit eine strukturierte Ausnahmebehandlung in Ihrem Code zu verwenden, anstatt eine unstrukturierte Ausnahmebehandlung und `On Error` die-Anweisung zu verwenden. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+> Es empfiehlt sich, nach Möglichkeit eine strukturierte Ausnahmebehandlung in Ihrem Code zu verwenden, anstatt eine unstrukturierte Ausnahmebehandlung und `On Error` die-Anweisung zu verwenden. Weitere Informationen finden Sie unter [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
  Ein "aktivierter" Fehlerhandler ist ein Fehlerhandler, der von `On Error` einer-Anweisung aktiviert wird. Ein "aktiver" Fehlerhandler ist ein aktivierter Handler, der gerade einen Fehler behandelt.
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Jedes Mal, wenn der Fehlerhandler die Steuerung zurück an eine aufrufenden Prozedur übergibt, wird dieses Verfahren zur aktuellen Prozedur. Sobald ein Fehlerhandler in einer Prozedur behandelt wird, wird die Ausführung in der aktuellen Prozedur an dem von der `Resume` -Anweisung festgelegten Punkt fortgesetzt.
   
 > [!NOTE]
->  Eine Fehler Behandlungs Routine ist weder eine `Sub` Prozedur noch eine `Function` Prozedur. Es handelt sich um einen Code Abschnitt, der durch eine Zeilen Bezeichnung oder eine Zeilennummer gekennzeichnet ist.
+> Eine Fehler Behandlungs Routine ist weder eine `Sub` Prozedur noch eine `Function` Prozedur. Es handelt sich um einen Code Abschnitt, der durch eine Zeilen Bezeichnung oder eine Zeilennummer gekennzeichnet ist.
   
 ## <a name="number-property"></a>Number-Eigenschaft
  Fehlerbehandlungsroutinen basieren auf dem Wert in der `Number` -Eigenschaft `Err` des-Objekts, um die Ursache des Fehlers zu bestimmen. Die Routine sollte relevante Eigenschaftswerte im `Err` Objekt testen oder speichern, bevor ein anderer Fehler auftreten kann, oder bevor eine Prozedur aufgerufen wird, die möglicherweise einen Fehler verursacht. Die Eigenschaftswerte im `Err` -Objekt spiegeln nur den letzten Fehler wider. Die Fehlermeldung, die `Err.Number` zugeordnet ist, `Err.Description`ist in enthalten.  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`bewirkt, dass die Ausführung mit der Anweisung unmittelbar nach der-Anweisung fortgesetzt wird, die den Laufzeitfehler verursacht hat, oder mit der-Anweisung, die unmittelbar nach dem `On Error Resume Next` letzten Aufruf der Prozedur, die die Anweisung enthält, ausgeführt wird. Mit dieser Anweisung kann die Ausführung trotz eines Lauf zeitfehlers fortgesetzt werden. Sie können die Fehler Behandlungs Routine platzieren, in der der Fehler auftritt, anstatt die Steuerung an einen anderen Speicherort innerhalb der Prozedur zu übertragen. Wenn `On Error Resume Next` eine-Anweisung aufgerufen wird, wenn eine andere Prozedur aufgerufen wird, sollten `On Error Resume Next` Sie in jeder aufgerufenen Routine eine-Anweisung ausführen, wenn Sie eine Inline Fehlerbehandlung innerhalb dieser Routine ausführen möchten.
   
 > [!NOTE]
->  Das `On Error Resume Next` -Konstrukt kann bei der `On Error GoTo` Behandlung von Fehlern, die während des Zugriffs auf andere Objekte generiert werden, vorzuziehen sein. Durch `Err` das überprüfen nach jeder Interaktion mit einem Objekt werden Mehrdeutigkeiten darüber entfernt, auf welches Objekt der Code zugegriffen hat. Sie können sicherstellen, welches Objekt den Fehlercode in `Err.Number`eingefügt hat, und welches Objekt den Fehler ursprünglich generiert hat (das in `Err.Source`angegebene Objekt).
+> Das `On Error Resume Next` -Konstrukt kann bei der `On Error GoTo` Behandlung von Fehlern, die während des Zugriffs auf andere Objekte generiert werden, vorzuziehen sein. Durch `Err` das überprüfen nach jeder Interaktion mit einem Objekt werden Mehrdeutigkeiten darüber entfernt, auf welches Objekt der Code zugegriffen hat. Sie können sicherstellen, welches Objekt den Fehlercode in `Err.Number`eingefügt hat, und welches Objekt den Fehler ursprünglich generiert hat (das in `Err.Source`angegebene Objekt).
 
 ## <a name="on-error-goto-0"></a>Bei Fehler "GoTo 0"
  `On Error GoTo 0`deaktiviert die Fehlerbehandlung in der aktuellen Prozedur. Die Zeile 0 wird nicht als Start des Fehler Behandlungs Codes angegeben, auch wenn die Prozedur eine Zeile mit der nummerierten 0 enthält. Ohne eine `On Error GoTo 0` -Anweisung wird ein Fehlerhandler automatisch deaktiviert, wenn eine Prozedur beendet wird.

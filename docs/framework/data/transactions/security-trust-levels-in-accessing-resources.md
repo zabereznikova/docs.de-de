@@ -2,31 +2,31 @@
 title: Vertrauensebenen für Sicherheit beim Zugriff auf Ressourcen
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 847467b964e86f6d13be6ba103162512270fa684
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948720"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Vertrauensebenen für Sicherheit beim Zugriff auf Ressourcen
 In diesem Thema wird erläutert, wie der Zugriff auf die Typen von Ressourcen eingeschränkt wird, die <xref:System.Transactions> verfügbar macht.  
   
  Es gibt drei Hauptvertrauensebenen für <xref:System.Transactions>. Die Vertrauensebenen werden basierend auf den Ressourcentypen definiert, die <xref:System.Transactions> verfügbar macht, und auf der Grundlage der Vertrauensebene, die für den Zugriff auf diese Ressourcen erforderlich sein soll. Die Ressourcen, auf die <xref:System.Transactions> Zugriff gewährt, sind Systemspeicher, freigegebene prozessübergreifende Ressourcen und systemweite Ressourcen. Die Ebenen sind:  
   
-- **AllowPartiallyTrustedCallers** (APTCA) für Anwendungen, die Transaktionen innerhalb einer einzelnen Anwendungsdomäne verwenden.  
+- **Allowpartiallytreuhänder** -Aufrufer (APTCA) für Anwendungen, die Transaktionen innerhalb einer einzelnen Anwendungsdomäne verwenden.  
   
-- **DistributedTransactionPermission** (DTP) für Anwendungen, die verteilte Transaktionen verwenden.  
+- **Distributedtransaktionberechtigung** (DTP) für Anwendungen, die verteilte Transaktionen verwenden.  
   
 - Volle Vertrauenswürdigkeit für dauerhafte Ressourcen, Konfigurationsverwaltungsanwendungen und Legacy-Interop-Anwendungen  
   
 > [!NOTE]
->  Sie sollten keine Eintragungsschnittstelle mit Identitätswechselkontexten aufrufen.  
+> Sie sollten keine Eintragungsschnittstelle mit Identitätswechselkontexten aufrufen.  
   
 ## <a name="trust-levels"></a>Vertrauensebenen  
   
 ### <a name="aptca-partial-trust"></a>APTCA (teilweise vertrauenswürdig)  
- Die <xref:System.Transactions> Assembly kann von teilweise vertrauenswürdigem Code aufgerufen werden, da er mit gekennzeichnet wurde die **AllowPartiallyTrustedCallers** -Attribut (APTCA). Dieses Attribut entfernt im Wesentlichen die implizite <xref:System.Security.Permissions.SecurityAction.LinkDemand> für die **FullTrust** , Berechtigungssatz ist andernfalls automatisch auf jede öffentlich zugängliche Methode jeden platziert. Für einige Typen und Member sind allerdings weiterhin stärkere Berechtigungen erforderlich.  
+ Die <xref:System.Transactions> Assembly kann von teilweise vertrauenswürdigem Code aufgerufen werden, da Sie mit dem **allowpartiallytrust dcaller** -Attribut (APTCA) gekennzeichnet wurde. Dieses Attribut entfernt im Grunde den <xref:System.Security.Permissions.SecurityAction.LinkDemand> impliziten für den **FullTrust** -Berechtigungs Satz, der andernfalls automatisch für jede öffentlich zugängliche Methode in jedem Typ platziert wird. Für einige Typen und Member sind allerdings weiterhin stärkere Berechtigungen erforderlich.  
   
  Das APTCA-Attribut ermöglicht es Anwendungen, Transaktionen in teilweiser Vertrauenswürdigkeit innerhalb einer einzelnen Anwendungsdomäne zu verwenden. Dadurch ist die Verwendung nicht eskalierter Transaktionen und flüchtiger Eintragungen möglich, die zur Fehlerbehandlung verwendet werden können. Ein Beispiel dafür sind eine Transaktions-Hashtabelle und eine Anwendung, die sie verwendet. Daten können mit einer einzigen Transaktion der Hashtabelle hinzugefügt oder aus ihr entfernt werden. Wird später ein Rollback für diese Transaktion ausgeführt, können alle Änderungen, die im Rahmen dieser Transaktion an der Hashtabelle vorgenommen wurden, wieder rückgängig gemacht werden.  
   
@@ -38,11 +38,11 @@ In diesem Thema wird erläutert, wie der Zugriff auf die Typen von Ressourcen ei
   
  Um die Wiederherstellung zu ermöglichen, ist dieser Anwendungstyp in der Lage, Systemressourcen permanent zu belegen. Das liegt daran, dass sich der wiederherstellungsfähige Transaktions-Manager Transaktionen, für die ein Commit ausgeführt wurde, so lange merken muss, bis er bestätigen kann, dass alle Ressourcen-Manager, die an der Transaktion teilnehmen, Kenntnis über das Ergebnis erhalten haben. Daher benötigt dieser Anwendungstyp volle Vertrauenswürdigkeit und sollte erst nach Erteilung dieser Vertrauensebene ausgeführt werden.  
   
- Weitere Informationen zu permanenten Eintragungen und Wiederherstellung finden Sie unter den [eintragen von Ressourcen als Teilnehmer an einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) und [Performing Recovery](../../../../docs/framework/data/transactions/performing-recovery.md) Themen.  
+ Weitere Informationen zu dauerhaften Eintragung und Wiederherstellung finden Sie in den Themen eintragen von [Ressourcen als Teilnehmer in einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) und [Durchführen von Wiederherstellungs](../../../../docs/framework/data/transactions/performing-recovery.md) Themen.  
   
  Anwendungen, die Legacy-Interop-Aufgaben mit COM+ ausführen, benötigen ebenfalls die volle Vertrauenswürdigkeit.  
   
- Im folgenden finden eine Liste von Typen und Member nicht durch aufgerufen werden teilweise vertrauenswürdigen Code, da mit der sie ergänzt wurden die **FullTrust** deklarativen Sicherheitsattribut:  
+ Im folgenden finden Sie eine Liste von Typen und Membern, die von teilweise vertrauenswürdigem Code nicht aufgerufen werden können, da Sie mit dem deklarativen **FullTrust** -Sicherheits Attribut ergänzt werden:  
   
  `PermissionSetAttribute(SecurityAction.LinkDemand, Name := "FullTrust")`  
   
@@ -62,4 +62,4 @@ In diesem Thema wird erläutert, wie der Zugriff auf die Typen von Ressourcen ei
   
 - <xref:System.Transactions.TransactionScope.%23ctor%28System.Transactions.TransactionScopeOption%2CSystem.Transactions.TransactionOptions%2CSystem.Transactions.EnterpriseServicesInteropOption%29>  
   
- Nur der direkte Aufrufer besitzt erforderlich ist der **FullTrust** Berechtigungssatz, der oben genannten Typen oder Methoden verwenden.
+ Nur der unmittelbare Aufrufer muss den **FullTrust** -Berechtigungs Satz besitzen, um die oben genannten Typen oder Methoden zu verwenden.

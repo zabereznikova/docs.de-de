@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e13c4df87909629a45830e3b7950551434ed5ab1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422637"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946589"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Anbieterstatistiken für SQL Server
 Ab .NET Framework Version 2.0 unterstützt der .NET Framework-Datenanbieter für SQL Server Laufzeitstatistiken. Sie müssen die Statistik aktivieren, indem Sie nach dem Erstellen eines gültigen Verbindungsobjekts die <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>-Eigenschaft des <xref:System.Data.SqlClient.SqlConnection>-Objekts auf `True` festlegen. Nach dem Aktivieren der Statistik können Sie sie als "Momentaufnahme" betrachten, indem Sie einen <xref:System.Collections.IDictionary>-Verweis über die <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts abrufen. Blättern Sie durch die Liste wie durch Wörterbucheinträge mit Name-Wert-Paaren. Diese Name-Wert-Paare sind nicht sortiert. Sie können jederzeit die <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts aufrufen, um die Zähler zurückzusetzen. Wenn das Erfassen der Statistik nicht aktiviert wurde, wird keine Ausnahme ausgelöst. Wenn <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> aufgerufen wird, ohne vorher <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> aufzurufen, stellen die abgerufenen Werte die Anfangswerte für die einzelnen Einträge dar. Wenn Sie die Statistik aktivieren, die Anwendung für eine gewisse Zeit ausführen und dann die Statistik wieder deaktivieren, entsprechen die abgerufenen Werte den Werten, die bis zu dem Zeitpunkt erfasst wurden, an dem die Statistik deaktiviert wurde. Alle statistischen Werte werden auf der Basis einzelner Verbindungen erfasst.  
   
 ## <a name="statistical-values-available"></a>Verfügbare statistische Werte  
- Gegenwärtig sind vom Anbieter Microsoft SQL Server 18 verschiedene Elemente verfügbar. Die Anzahl der verfügbaren Elemente zugegriffen werden kann, über die **Anzahl** Eigenschaft der <xref:System.Collections.IDictionary> Schnittstellenreferenz zurückgegebenes <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Alle Zähler für Anbieterstatistiken verwenden die common Language Runtime <xref:System.Int64> Typ (**lange** in c# und Visual Basic), d.h. 64 Bits breit. Der maximale Wert, der die **int64** -Datentyp, gemäß der **int64. MaxValue** Feld, ((2^63)-1)). Wenn die Werte für die Zähler diesen Maximalwert erreichen, können sie nicht mehr als korrekt bezeichnet werden. Dies bedeutet, dass **int64. MaxValue**-1((2^63)-2) ist tatsächlich der größte gültige Wert für alle Statistiken.  
+ Gegenwärtig sind vom Anbieter Microsoft SQL Server 18 verschiedene Elemente verfügbar. Auf die Anzahl der verfügbaren Elemente kann über die **count** -Eigenschaft des <xref:System.Collections.IDictionary> von <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>zurückgegebenen Schnittstellen Verweises zugegriffen werden. Alle Leistungsindikatoren für Anbieter Statistiken verwenden den Common Language Runtime <xref:System.Int64> -Typ (**Long** in C# und Visual Basic), der 64 Bits breit ist. Der maximale Wert des **Int64** -Datentyps gemäß der Definition durch **Int64. MaxValue** -Feld, ist ((2 ^ 63)-1)). Wenn die Werte für die Zähler diesen Maximalwert erreichen, können sie nicht mehr als korrekt bezeichnet werden. Dies bedeutet, dass **Int64. MaxValue**-1 ((2 ^ 63)-2) ist tatsächlich der größte gültige Wert für jede Statistik.  
   
 > [!NOTE]
->  Für die zurückgegebene Anbieterstatistik wird ein Wörterbuch verwendet, da sich die Anzahl, die Namen und die Reihenfolge der zurückgegebenen Statistiken zukünftig ändern können. Anwendungen sollten sich nicht darauf verlassen, dass ein bestimmter Wert in einem Wörterbuch gefunden wird, sondern stattdessen überprüfen, ob der Wert vorhanden ist, und entsprechend verzweigen.  
+> Für die zurückgegebene Anbieterstatistik wird ein Wörterbuch verwendet, da sich die Anzahl, die Namen und die Reihenfolge der zurückgegebenen Statistiken zukünftig ändern können. Anwendungen sollten sich nicht darauf verlassen, dass ein bestimmter Wert in einem Wörterbuch gefunden wird, sondern stattdessen überprüfen, ob der Wert vorhanden ist, und entsprechend verzweigen.  
   
  In der folgenden Tabelle werden die aktuell verfügbaren statistischen Werte beschrieben. Beachten Sie, dass die Schlüsselnamen für die einzelnen Werte für regionale Versionen von Microsoft .NET Framework nicht lokalisiert werden.  
   
@@ -48,7 +48,7 @@ Ab .NET Framework Version 2.0 unterstützt der .NET Framework-Datenanbieter fü
  Die folgende Konsolenanwendung zeigt, wie die Statistik für eine Verbindung aktiviert, vier einzelne statistischen Werte abgerufen und diese in das Konsolenfenster geschrieben werden.  
   
 > [!NOTE]
->  Im folgenden Beispiel wird das Beispiel **AdventureWorks** Datenbank in SQL Server enthalten. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+> Im folgenden Beispiel wird die **AdventureWorks** -Beispieldatenbank verwendet, die in SQL Server enthalten ist. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
   
 ```vb  
 Option Strict On  
@@ -204,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  Die folgende Konsolenanwendung zeigt, wie die Statistik für eine Verbindung aktiviert, vier einzelne statistischen Werte abgerufen und diese in das Konsolenfenster geschrieben werden.  
   
 > [!NOTE]
->  Im folgenden Beispiel wird das Beispiel **AdventureWorks** Datenbank in SQL Server enthalten. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
+> Im folgenden Beispiel wird die **AdventureWorks** -Beispieldatenbank verwendet, die in SQL Server enthalten ist. Bei der im Beispielcode bereitgestellten Verbindungszeichenfolge wird angenommen, dass die Datenbank auf dem lokalen Computer installiert und verfügbar ist. Ändern Sie die Verbindungszeichenfolge entsprechend der Umgebung.  
   
 ```vb  
 Option Strict On  

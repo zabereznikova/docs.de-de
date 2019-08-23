@@ -5,38 +5,38 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a2c32d133799ee5338c18d0f51bced49cb3dc4b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963181"
 ---
 # <a name="schema-restrictions"></a>Schemaeinschränkungen
-Der zweite optionale Parameter, der die **GetSchema** Methode ist, die Einschränkungen, die verwendet werden, um die Schemainformationen begrenzen zurückgegeben werden soll, und es wird zum Übergeben der **GetSchema** -Methode, wie ein Array von Zeichenfolgen . Die Position im Array bestimmt die Werte, die zurückgegeben werden können. Dies entspricht der Anzahl der Einschränkungen.  
+Der zweite optionale Parameter der **GetSchema** -Methode sind die Einschränkungen, die verwendet werden, um die Menge der zurückgegebenen Schema Informationen einzuschränken, und Sie werden als Zeichen folgen Array an die **GetSchema** -Methode übergeben. Die Position im Array bestimmt die Werte, die zurückgegeben werden können. Dies entspricht der Anzahl der Einschränkungen.  
   
  In der folgenden Tabelle werden beispielsweise die Einschränkungen beschrieben, die von der Schemaauflistung "Tables" mithilfe des .NET Framework-Datenanbieters für SQL Server unterstützt werden. Zusätzliche Einschränkungen für SQL Server-Schemaauflistungen werden am Ende dieses Themas aufgeführt.  
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
 |Tabelle|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ## <a name="specifying-restriction-values"></a>Angeben der Einschränkungswerte  
- Wenn Sie eine der Einschränkungen der Tables-Schemaauflistung verwenden möchten, erstellen Sie ein Zeichenfolgenarray mit vier Elementen und fügen einen Wert in das Element ein, das mit der Einschränkungsnummer übereinstimmt. Z. B. zum Einschränken der in den Tabellen zurückgegeben, durch die **GetSchema** Methode, um nur die Tabellen im Schema "Umsatz" legen Sie das zweite Element des Arrays, das "Sales" vor der Übergabe an die **GetSchema** Methode.  
+ Wenn Sie eine der Einschränkungen der Tables-Schemaauflistung verwenden möchten, erstellen Sie ein Zeichenfolgenarray mit vier Elementen und fügen einen Wert in das Element ein, das mit der Einschränkungsnummer übereinstimmt. Um beispielsweise die von der **GetSchema** -Methode zurückgegebenen Tabellen nur auf die Tabellen im "Sales"-Schema zu beschränken, legen Sie das zweite Element des Arrays auf "Sales" fest, bevor Sie es an die **GetSchema** -Methode übergeben.  
   
 > [!NOTE]
->  Die Einschränkungsauflistungen für den `SqlClient` und den `OracleClient` verfügen über eine zusätzliche `ParameterName`-Spalte. Die Spalte für den Einschränkungsstandard ist zwar aus Gründen der Abwärtskompatibilität vorhanden, wird aber derzeit ignoriert. Verwenden Sie Abfragen mit Parametern statt Zeichenfolgenersetzungen, um das Risiko eines SQL-Injection-Angriffs beim Angeben der Einschränkungswerte zu minimieren.  
+> Die Einschränkungsauflistungen für den `SqlClient` und den `OracleClient` verfügen über eine zusätzliche `ParameterName`-Spalte. Die Spalte für den Einschränkungsstandard ist zwar aus Gründen der Abwärtskompatibilität vorhanden, wird aber derzeit ignoriert. Verwenden Sie Abfragen mit Parametern statt Zeichenfolgenersetzungen, um das Risiko eines SQL-Injection-Angriffs beim Angeben der Einschränkungswerte zu minimieren.  
   
 > [!NOTE]
->  Die Anzahl der Elementen im Array muss kleiner oder gleich der Anzahl der Einschränkungen sein, die für die angegebene Schemaauflistung unterstützt werden, da sonst eine <xref:System.ArgumentException> ausgelöst wird. Es können weniger Elemente als die maximale Anzahl der Einschränkungen vorhanden sein. Es wird davon ausgegangen, dass die fehlenden Einschränkungen NULL (uneingeschränkt) sind.  
+> Die Anzahl der Elementen im Array muss kleiner oder gleich der Anzahl der Einschränkungen sein, die für die angegebene Schemaauflistung unterstützt werden, da sonst eine <xref:System.ArgumentException> ausgelöst wird. Es können weniger Elemente als die maximale Anzahl der Einschränkungen vorhanden sein. Es wird davon ausgegangen, dass die fehlenden Einschränkungen NULL (uneingeschränkt) sind.  
   
- Sie können einen verwalteten .NET Framework-Anbieter, um die Liste der unterstützten Einschränkungen durch den Aufruf zu bestimmen, Abfragen der **GetSchema** Methode durch den Namen der schemaauflistung der Einschränkungen, die "Restrictions" lautet. Dabei wird eine <xref:System.Data.DataTable> mit einer Liste der Auflistungsnamen, Einschränkungsnamen, Standardeinschränkungswerte und der Anzahl der Einschränkungen zurückgegeben.  
+ Sie können einen .NET Framework verwalteten Anbieter Abfragen, um die Liste der unterstützten Einschränkungen zu ermitteln, indem Sie die **GetSchema** -Methode mit dem Namen der Einschränkungs Schema Auflistung aufrufen. Dies ist "Einschränkungen". Dabei wird eine <xref:System.Data.DataTable> mit einer Liste der Auflistungsnamen, Einschränkungsnamen, Standardeinschränkungswerte und der Anzahl der Einschränkungen zurückgegeben.  
   
 ### <a name="example"></a>Beispiel  
- Die folgenden Beispiele veranschaulichen, wie Sie mit der <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Methode von der .NET Framework-Datenanbieter für SQL Server <xref:System.Data.SqlClient.SqlConnection> -Klasse zum Abrufen von Schemainformationen zu allen enthaltenen Tabellen die **AdventureWorks**Beispieldatenbank und zum Einschränken der Informationen, die an die Tabellen im "Sales"-Schema zurückgegeben:  
+ In den folgenden Beispielen wird veranschaulicht, wie <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> die-Methode der .NET Framework Datenanbieter für die <xref:System.Data.SqlClient.SqlConnection> SQL Server-Klasse verwendet wird, um Schema Informationen zu allen Tabellen abzurufen, die in der **AdventureWorks** -Beispieldatenbank enthalten sind. und um die Informationen einzuschränken, die nur auf die Tabellen im "Sales"-Schema zurückgegeben werden:  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -149,7 +149,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
 |Tabelle|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
@@ -158,7 +158,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
 |Tabelle|@Table|TABLE_NAME|3|  
 |Spalte|@Column|COLUMN_NAME|4|  
@@ -167,7 +167,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
 |Tabelle|@Table|TABLE_NAME|3|  
 |Spalte|@Column|COLUMN_NAME|4|  
@@ -176,7 +176,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
 |Tabelle|@Table|TABLE_NAME|3|  
   
@@ -184,7 +184,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|VIEW_CATALOG|1|  
+|Katalog|@Catalog|VIEW_CATALOG|1|  
 |Besitzer|@Owner|VIEW_SCHEMA|2|  
 |Tabelle|@Table|VIEW_NAME|3|  
 |Spalte|@Column|COLUMN_NAME|4|  
@@ -193,7 +193,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|SPECIFIC_CATALOG|1|  
+|Katalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Besitzer|@Owner|SPECIFIC_SCHEMA|2|  
 |Name|@Name|SPECIFIC_NAME|3|  
 |Parameter|@Parameter|PARAMETER_NAME|4|  
@@ -202,7 +202,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|SPECIFIC_CATALOG|1|  
+|Katalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Besitzer|@Owner|SPECIFIC_SCHEMA|2|  
 |Name|@Name|SPECIFIC_NAME|3|  
 |Typ|@Type|ROUTINE_TYPE|4|  
@@ -211,7 +211,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|db_name()|1|  
+|Katalog|@Catalog|db_name()|1|  
 |Besitzer|@Owner|user_name()|2|  
 |Tabelle|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
@@ -221,7 +221,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|db_name()|1|  
+|Katalog|@Catalog|db_name()|1|  
 |Besitzer|@Owner|user_name()|2|  
 |Tabelle|@Table|o.name|3|  
   
@@ -236,7 +236,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
+|Katalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Besitzer|@Owner|CONSTRAINT_SCHEMA|2|  
 |Tabelle|@Table|TABLE_NAME|3|  
 |Name|@Name|CONSTRAINT_NAME|4|  
@@ -248,7 +248,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
 |Tabelle|@Table|TABLE_NAME|3|  
   
@@ -256,7 +256,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Catalog|@Catalog|TABLE_CATALOG|1|  
+|Katalog|@Catalog|TABLE_CATALOG|1|  
 |Besitzer|@Owner|TABLE_SCHEMA|2|  
 |Tabelle|@Table|TABLE_NAME|3|  
 |Spalte|@Column|COLUMN_NAME|4|  

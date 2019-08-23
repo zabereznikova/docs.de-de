@@ -5,45 +5,45 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cba2201bf8087633103efe45c5236cab3af0a0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876368"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964738"
 ---
 # <a name="single-bulk-copy-operations"></a>Einzelne Massenkopiervorgänge
 Ein SQL Server-Massenkopiervorgang wird am einfachsten durchgeführt, indem ein einzelner Vorgang für eine Datenbank ausgeführt wird. Ein Massenkopiervorgang wird in der Standardeinstellung als isolierter Vorgang durchgeführt. Der Kopiervorgang wird nicht transaktiv und ohne die Möglichkeit eines Rollbacks durchgeführt.  
   
 > [!NOTE]
->  Wenn Sie beim Auftreten eines Fehler einen Rollback der gesamten Massenkopie oder eines Teils davon ausführen müssen, können Sie eine von <xref:System.Data.SqlClient.SqlBulkCopy> verwaltete Transaktion verwenden oder den Massenkopiervorgang innerhalb einer bestehenden Transaktion durchführen. **"SqlBulkCopy"** funktioniert auch mit <xref:System.Transactions> , wenn die Verbindung (implizit oder explizit) in eingetragen ist eine **System.Transactions** Transaktion.  
+> Wenn Sie beim Auftreten eines Fehler einen Rollback der gesamten Massenkopie oder eines Teils davon ausführen müssen, können Sie eine von <xref:System.Data.SqlClient.SqlBulkCopy> verwaltete Transaktion verwenden oder den Massenkopiervorgang innerhalb einer bestehenden Transaktion durchführen. **SqlBulkCopy** funktioniert auch mit <xref:System.Transactions> , wenn die Verbindung (implizit oder explizit) in eine **System. Transactions** -Transaktion eingetragen ist.  
 >   
->  Weitere Informationen finden Sie unter [Transaktionen und Massenkopiervorgänge](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
+>  Weitere Informationen finden Sie unter [Transaktionen und Massen Kopiervorgänge](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).  
   
  Im Allgemeinen müssen für einen Massenkopiervorgang folgende Schritte ausgeführt werden:  
   
 1. Stellen Sie eine Verbindung mit dem Quellserver her, und rufen Sie die zu kopierenden Daten ab. Daten können auch aus anderen Quellen stammen, wenn sie aus einem <xref:System.Data.IDataReader>-Objekt oder einem <xref:System.Data.DataTable>-Objekt abgerufen werden können.  
   
-2. Verbinden mit dem Zielserver (es sei denn, Sie möchten **"SqlBulkCopy"** zum Herstellen einer Verbindung für Sie).  
+2. Stellen Sie eine Verbindung mit dem Zielserver her (es sei denn, Sie möchten mit **SqlBulkCopy** eine Verbindung für Sie herstellen).  
   
 3. Erstellen Sie ein <xref:System.Data.SqlClient.SqlBulkCopy>-Objekt, und legen Sie die notwendigen Eigenschaften fest.  
   
-4. Legen Sie die **DestinationTableName** Vorgang zum Einfügen von Eigenschaft, um die Zieltabelle für den größten Teil anzugeben.  
+4. Legen Sie die **DestinationTableName** -Eigenschaft so fest, dass Sie die Ziel Tabelle für den Massen Einfügungs Vorgang angibt.  
   
-5. Rufen Sie eine der der **WriteToServer** Methoden.  
+5. Ruft eine der Methoden " **Write-to-Server** " auf.  
   
-6. Aktualisieren Sie optional Eigenschaften, und rufen **WriteToServer** wieder nach Bedarf.  
+6. Aktualisieren Sie optional die Eigenschaften, und wenden Sie ggf. erneut " **Write-Server** " an.  
   
 7. Rufen Sie die <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>-Methode auf, oder betten Sie die Massenkopiervorgänge in eine `Using`-Anweisung ein.  
   
 > [!CAUTION]
->  Es wird empfohlen, dass die Datentypen in der Quell- und Zielspalte übereinstimmen. Wenn die Datentypen nicht übereinstimmen, **"SqlBulkCopy"** versucht, jeden Quellwert in den Zieldatentyp, die anhand der Regeln, die vom Anwender verwendete konvertieren <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Konvertierungen können sich auf die Leistungsfähigkeit auswirken und zu unerwarteten Fehlern führen. Ein `Double`-Datentyp kann beispielsweise häufig, aber nicht immer in einen `Decimal`-Datentyp konvertiert werden.  
+>  Es wird empfohlen, dass die Datentypen in der Quell- und Zielspalte übereinstimmen. Wenn die Datentypen nicht identisch sind, versucht **SqlBulkCopy** , jeden Quellwert mithilfe der von <xref:System.Data.SqlClient.SqlParameter.Value%2A>verwendeten Regeln in den Ziel Datentyp zu konvertieren. Konvertierungen können sich auf die Leistungsfähigkeit auswirken und zu unerwarteten Fehlern führen. Ein `Double`-Datentyp kann beispielsweise häufig, aber nicht immer in einen `Decimal`-Datentyp konvertiert werden.  
   
 ## <a name="example"></a>Beispiel  
- In der folgenden Konsolenanwendung wird veranschaulicht, wie Daten mithilfe der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse geladen werden. In diesem Beispiel eine <xref:System.Data.SqlClient.SqlDataReader> wird verwendet, um das Kopieren von Daten aus der **Production.Product** Tabelle in SQL Server **AdventureWorks** Datenbank in eine ähnliche Tabelle in der gleichen Datenbank.  
+ In der folgenden Konsolenanwendung wird veranschaulicht, wie Daten mithilfe der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse geladen werden. In diesem Beispiel wird ein <xref:System.Data.SqlClient.SqlDataReader> zum Kopieren von Daten aus der **Production. Product** -Tabelle in der SQL Server **AdventureWorks** -Datenbank in eine ähnliche Tabelle in derselben Datenbank verwendet.  
   
 > [!IMPORTANT]
->  In diesem Beispiel wird nicht ausgeführt werden, es sei denn, Sie die Arbeitstabellen erstellt haben, wie in beschrieben [Einrichtung der Massenkopierbeispiele](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Dieser Code wird bereitgestellt, um zu veranschaulichen die Syntax für die Verwendung von **"SqlBulkCopy"** nur. Wenn sich die Quell- und die Zieltabelle in derselben SQL Server-Instanz befinden, lassen sich die Daten einfacher und schneller mit einer Transact-SQL-`INSERT … SELECT`-Anweisung kopieren.  
+> Dieses Beispiel wird nur dann ausgeführt, wenn Sie die Arbeits Tabellen erstellt haben, wie unter [Beispiel für Massen Kopier](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)Vorgänge beschrieben. Dieser Code wird bereitgestellt, um die Syntax nur für die Verwendung von **SqlBulkCopy** zu veranschaulichen. Wenn sich die Quell- und die Zieltabelle in derselben SQL Server-Instanz befinden, lassen sich die Daten einfacher und schneller mit einer Transact-SQL-`INSERT … SELECT`-Anweisung kopieren.  
   
  [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
  [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]  
@@ -52,7 +52,7 @@ Ein SQL Server-Massenkopiervorgang wird am einfachsten durchgeführt, indem ein
  Im folgenden Beispiel wird die <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>-Methode zum Ausführen der BULK INSERT-Anweisung veranschaulicht.  
   
 > [!NOTE]
->  Der Dateipfad für die Datenquelle ist relativ zum Server. Der Serverprozess muss auf diesen Pfad zugreifen können, damit der Massenkopiervorgang erfolgreich ausgeführt werden kann.  
+> Der Dateipfad für die Datenquelle ist relativ zum Server. Der Serverprozess muss auf diesen Pfad zugreifen können, damit der Massenkopiervorgang erfolgreich ausgeführt werden kann.  
   
 ```vb  
 Using connection As SqlConnection = New SqlConnection(connectionString)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816209"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962994"
 ---
 # <a name="thread-safe-collections"></a>Threadsichere Auflistungen
 Das .NET Framework 4 führt den <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace ein, der mehrere Auflistungsklassen einschließt, die sowohl threadsicher als auch skalierbar sind. Mehrere Threads können diesen Auflistungen sicher und effizient Elemente hinzufügen bzw. daraus entfernen, ohne dass zusätzliche Synchronisierung in Benutzercode erforderlich ist. Wenn Sie neuen Code schreiben, verwenden Sie immer dann die Klassen für parallele Auflistungsvorgänge, wenn mehrere Threads gleichzeitig Schreibvorgänge in der Auflistung ausführen. Wenn Sie nur von einer freigegebenen Auflistung lesen, können Sie die Klassen im <xref:System.Collections.Generic?displayProperty=nameWithType>-Namespace verwenden. Es wird empfohlen, keine 1.0-Auflistungsklassen zu verwenden, sofern als Zielversion nicht .NET Framework 1.1 oder eine frühere Laufzeit festgelegt wird.  
@@ -30,11 +30,11 @@ Das .NET Framework 4 führt den <xref:System.Collections.Concurrent?displayPrope
  Für die <xref:System.Collections.Concurrent.ConcurrentQueue%601>-Klasse und die <xref:System.Collections.Concurrent.ConcurrentStack%601>-Klasse werden gar keine Sperren verwendet. Stattdessen wird die Threadsicherheit durch <xref:System.Threading.Interlocked>-Vorgänge gewährleistet.  
   
 > [!NOTE]
->  Da die gleichzeitigen Auflistungsklassen <xref:System.Collections.ICollection> unterstützen, stellen sie Implementierungen für die <xref:System.Collections.ICollection.IsSynchronized%2A>-Eigenschaft und die <xref:System.Collections.ICollection.SyncRoot%2A>-Eigenschaft bereit, auch wenn diese Eigenschaften nicht relevant sind. `IsSynchronized` gibt immer `false` zurück, und `SyncRoot` ist immer `null` (`Nothing` in Visual Basic).  
+> Da die gleichzeitigen Auflistungsklassen <xref:System.Collections.ICollection> unterstützen, stellen sie Implementierungen für die <xref:System.Collections.ICollection.IsSynchronized%2A>-Eigenschaft und die <xref:System.Collections.ICollection.SyncRoot%2A>-Eigenschaft bereit, auch wenn diese Eigenschaften nicht relevant sind. `IsSynchronized` gibt immer `false` zurück, und `SyncRoot` ist immer `null` (`Nothing` in Visual Basic).  
   
  In der folgenden Tabelle sind die Auflistungstypen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace aufgeführt.  
   
-|Typ|Beschreibung|  
+|Typ|BESCHREIBUNG|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Stellt Begrenzungs- und Blockierungsfunktionen für jeden Typ bereit, von dem <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> implementiert wird. Weitere Informationen finden Sie unter [Übersicht über BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Threadsichere Implementierung eines Wörterbuchs von Schlüssel-Wert-Paaren.|  
@@ -45,7 +45,7 @@ Das .NET Framework 4 führt den <xref:System.Collections.Concurrent?displayPrope
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung|  
+|Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Übersicht über BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Beschreibt die vom <xref:System.Collections.Concurrent.BlockingCollection%601>-Typ bereitgestellte Funktion.|  
 |[Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Beschreibt, wie Elemente aus einem <xref:System.Collections.Concurrent.ConcurrentDictionary%602>-Objekt hinzugefügt und entfernt werden.|  

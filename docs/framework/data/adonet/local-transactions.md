@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: f686c20a9afd981405e32854fcc594abac78c85c
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a0cb72913c10712ece188a782095b93f98cdc0b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882027"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955765"
 ---
 # <a name="local-transactions"></a>Lokale Transaktionen
-Transaktionen werden in ADO.NET verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzige Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&amp;#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn der Task entweder ein Fehler auftritt, werden beide Aktualisierungen ein Rollback ausgeführt.  
+Transaktionen werden in ADO.NET verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzige Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn eine der beiden Aufgaben fehlschlägt, wird für beide Updates ein Rollback ausgeführt.  
   
 ## <a name="determining-the-transaction-type"></a>Bestimmen des Transaktionstyps  
- Um eine lokale Transaktion zu sein, wenn es eine Phase hat nur und direkt von der Datenbank behandelt wird, wird als Transaktion betrachtet. In einer verteilten Transaktion zu sein, wenn er von einem Transaktionsmonitor koordiniert ist und verwendet für die transaktionsauflösung ausfallsichere Mechanismen verwenden (z. B. Zweiphasen-Commit), wird als Transaktion betrachtet.  
+ Eine Transaktion wird als lokale Transaktion betrachtet, wenn es sich um eine Einphasentransaktion handelt, die von der Datenbank direkt verarbeitet wird. Eine Transaktion wird als verteilte Transaktion betrachtet, wenn Sie durch einen Transaktions Monitor koordiniert wird und ausfallsichere Mechanismen (z. b. Zweiphasencommit) für die Transaktions Auflösung verwendet.  
   
- Die einzelnen .NET Framework-Datenanbieter verfügen jeweils über ein eigenes `Transaction`-Objekt für das Ausführen lokaler Transaktionen. Wählen Sie eine <xref:System.Data.SqlClient>-Transaktion, wenn eine Transaktion in einer SQL Server-Datenbank ausgeführt werden muss. Verwenden Sie für eine Oracle-Transaktion den <xref:System.Data.OracleClient>-Anbieter. Darüber hinaus steht eine <xref:System.Data.Common.DbTransaction> -Klasse, die zum Schreiben anbieterunabhängiger Code, die Transaktionen erfordert.  
+ Die einzelnen .NET Framework-Datenanbieter verfügen jeweils über ein eigenes `Transaction`-Objekt für das Ausführen lokaler Transaktionen. Wählen Sie eine <xref:System.Data.SqlClient>-Transaktion, wenn eine Transaktion in einer SQL Server-Datenbank ausgeführt werden muss. Verwenden Sie für eine Oracle-Transaktion den <xref:System.Data.OracleClient>-Anbieter. Außerdem gibt es eine <xref:System.Data.Common.DbTransaction> -Klasse, die zum Schreiben von Anbieter unabhängigem Code verfügbar ist, der Transaktionen erfordert.  
   
 > [!NOTE]
-> Transaktionen sind am effizientesten, wenn sie auf dem Server ausgeführt werden. Wenn Sie mit einer SQL Server-Datenbank arbeiten, die häufig explizite Transaktionen verwendet, empfiehlt es sich, die Transaktionen unter Verwendung der BEGIN TRANSACTION-Anweisung von Transact-SQL als gespeicherte Prozeduren zu schreiben.
+> Transaktionen sind am effizientesten, wenn Sie auf dem Server ausgeführt werden. Wenn Sie mit einer SQL Server-Datenbank arbeiten, die häufig explizite Transaktionen verwendet, empfiehlt es sich, die Transaktionen unter Verwendung der BEGIN TRANSACTION-Anweisung von Transact-SQL als gespeicherte Prozeduren zu schreiben.
   
 ## <a name="performing-a-transaction-using-a-single-connection"></a>Ausführen einer Transaktion unter Verwendung einer einzelnen Verbindung  
  In ADO.NET können Sie Transaktionen mit dem `Connection`-Objekt steuern. Zum Initiieren einer lokalen Transaktion steht Ihnen die `BeginTransaction`-Methode zur Verfügung. Nachdem Sie eine Transaktion gestartet haben, können Sie mit der `Transaction`-Eigenschaft eines `Command`-Objekts einen Befehl in dieser Transaktion eintragen. Dann können Sie für Änderungen an der Datenquelle auf Grundlage des Erfolgs oder Fehlschlags der Komponenten der Transaktion einen Commit oder Rollback ausführen.  
   
 > [!NOTE]
->  Die `EnlistDistributedTransaction`-Methode darf nicht für eine lokale Transaktion verwendet werden.  
+> Die `EnlistDistributedTransaction`-Methode darf nicht für eine lokale Transaktion verwendet werden.  
   
- Der Gültigkeitsbereich der Transaktion ist auf die Verbindung beschränkt. Im folgenden Beispiel wird eine explizite Transaktion ausgeführt, die aus zwei separaten Befehlen im `try`-Block besteht. Die Befehle führen INSERT-Anweisungen für die Production.ScrapReason-Tabelle in der SQL Server AdventureWorks-Beispieldatenbank, die ein Commit ausgeführt wird, wenn keine Ausnahmen ausgelöst werden. Wenn eine Ausnahme ausgelöst wird, führt der Code im `catch`-Block einen Rollback für die Transaktion aus. Wenn die Transaktion abgebrochen oder die Verbindung geschlossen wird, bevor die Transaktion beendet wurde, wird automatisch ein Rollback für die Transaktion ausgeführt.  
+ Der Gültigkeitsbereich der Transaktion ist auf die Verbindung beschränkt. Im folgenden Beispiel wird eine explizite Transaktion ausgeführt, die aus zwei separaten Befehlen im `try`-Block besteht. Die Befehle führen INSERT-Anweisungen für die Production. ScrapReason-Tabelle in der AdventureWorks-SQL Server-Beispieldatenbank aus, für die ein Commit ausgeführt wird, wenn keine Ausnahmen ausgelöst werden. Wenn eine Ausnahme ausgelöst wird, führt der Code im `catch`-Block einen Rollback für die Transaktion aus. Wenn die Transaktion abgebrochen oder die Verbindung geschlossen wird, bevor die Transaktion beendet wurde, wird automatisch ein Rollback für die Transaktion ausgeführt.  
   
 ## <a name="example"></a>Beispiel  
  Führen Sie diese Schritte aus, um eine Transaktion auszuführen:  

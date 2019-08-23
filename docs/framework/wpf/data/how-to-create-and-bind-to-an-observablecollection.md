@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401427"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965476"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Vorgehensweise: Erstellen und Binden eine ObservableCollection-Klasse
 Dieses Beispiel zeigt, wie Sie eine Auflistung erstellen und binden, die von der <xref:System.Collections.ObjectModel.ObservableCollection%601> -Klasse abgeleitet wird. dabei handelt es sich um eine Auflistungs Klasse, die beim Hinzufügen oder Entfernen von Elementen Benachrichtigungen bereitstellt.  
@@ -136,7 +136,7 @@ End Class
  Die Definition von `NameItemTemplate` wird hier nicht gezeigt.  
   
 > [!NOTE]
->  Die Objekte in der Auflistung müssen die unter [Übersicht über Bindungsquellen](binding-sources-overview.md) beschriebenen Anforderungen erfüllen. Insbesondere wenn Sie oder <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> verwenden ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] z. b. Wenn Sie möchten, dass sich die Quell Eigenschaften dynamisch ändern), müssen Sie einen geeigneten Benachrichtigungs Mechanismus für geänderte Eigenschaften implementieren, z. b. den <xref:System.ComponentModel.INotifyPropertyChanged>Schnittstelle.  
+> Die Objekte in der Auflistung müssen die unter [Übersicht über Bindungsquellen](binding-sources-overview.md) beschriebenen Anforderungen erfüllen. Insbesondere wenn Sie oder <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> verwenden ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] z. b. Wenn Sie möchten, dass sich die Quell Eigenschaften dynamisch ändern), müssen Sie einen geeigneten Benachrichtigungs Mechanismus für geänderte Eigenschaften implementieren, z. b. den <xref:System.ComponentModel.INotifyPropertyChanged>Schnittstelle.  
   
  Weitere Informationen finden Sie in der [Übersicht über die Datenbindung](data-binding-overview.md) unter „Binden an Auflistungen“.  
   

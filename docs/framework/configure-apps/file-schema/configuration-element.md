@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration element
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
-ms.openlocfilehash: 9a7b25c74763c020c0e19c3f6099db9001acf773
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e09ec49024b769c516fd97085904781f64b4486
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921251"
 ---
 # <a name="configuration-element"></a>\<Configuration >-Element
 
@@ -31,32 +31,32 @@ Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-An
 
 ## <a name="attributes"></a>Attribute
 
-Keiner
+None
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
-Keiner
+None
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
 |     | Beschreibung |
 | --- | ----------- |
-| [ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an.|
-| [ **\<Startup >** Schema für Laufzeiteinstellungen](~/docs/framework/configure-apps/file-schema/startup/index.md) | Alle Elemente in das Schema für starteinstellungen. |
-| [ **\<Common Language Runtime >** Schema für Laufzeiteinstellungen](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Alle Elemente in das Schema für Laufzeiteinstellungen. |
-| [ **\<system.runtime.remoting>** Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Alle Elemente im Schema für Remoteeinstellungen. |
-| [ **\<system.Net >** Schema für Laufzeiteinstellungen](~/docs/framework/configure-apps/file-schema/network/index.md) | Alle Elemente in der netzwerkeinstellungsschema. |
-| [ **\<cryptographySettings>** Settings Schema](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Alle Elemente im Schema für Kryptografieeinstellungen. |
-| [ **\<Konfiguration >** Schema für Konfigurationsabschnitte](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Alle Elemente in den Einstellungen des Konfigurationsschemas-Abschnitt. |
-| [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | Alle Elemente im Einstellungsschema für Ablaufverfolgung und Debuggen. |
-| [Einstellungen für die ASP.NET-Konfigurationsschema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | Alle Elemente in die ASP.NET-Konfigurationsschema, die Elemente für die Konfiguration von ASP.NET-Websites und-Anwendungen enthält. Verwendet *"Web.config"* Dateien. |
-| [ **\<webServices>** Settings Schema](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Alle Elemente in das Einstellungsschema für Webdienste. |
-| [Web Settings Schema (Schema für Webeinstellungen)](~/docs/framework/configure-apps/file-schema/web/index.md) | Alle Elemente im Webeinstellungsschema, das Elemente für die Konfiguration von ASP.NET mit einer Hostanwendung wie IIS enthält. Verwendet *aspnet.config* Dateien. |
+| [ **\<assemblyBinding>** ](assemblybinding-element-for-configuration.md) | Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an.|
+| [Schema für Start > Einstellungen  **\<** ](./startup/index.md) | Alle Elemente im Start Einstellungs Schema. |
+| [Schema für Lauf Zeit > Einstellungen  **\<** ](./runtime/index.md) | Alle Elemente im Lauf Zeit Einstellungs Schema. |
+| [Schema für **System. Runtime. Remoting > Einstellungen \<** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Alle Elemente im Remoting-Einstellungs Schema. |
+| [Schema für **System .net-> Einstellungen \<** ](./network/index.md) | Alle Elemente im Netzwerk Einstellungs Schema. |
+| [cryptographySettings > Einstellungs Schema  **\<** ](./cryptography/index.md) | Alle Elemente im kryptografieeinstellungs-Schema. |
+| [Schema der Konfigurations > Abschnitte  **\<** ](configuration-sections-schema.md) | Alle Elemente im Konfigurations Abschnitts Einstellungs Schema. |
+| [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](./trace-debug/index.md) | Alle Elemente im Ablauf Verfolgungs-und debugeinstellungs Schema. |
+| [Schema der ASP.NET-Konfigurationseinstellungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | Alle Elemente im ASP.NET-Konfigurations Schema, die Elemente zum Konfigurieren von ASP.NET-Websites und-Anwendungen enthalten. Wird in *Web. config* -Dateien verwendet. |
+| [Schema für Webservices-> Einstellungen  **\<** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Alle Elemente im Webdienst-Einstellungs Schema. |
+| [Web Settings Schema (Schema für Webeinstellungen)](./web/index.md) | Alle Elemente im Webeinstellungsschema, das Elemente für die Konfiguration von ASP.NET mit einer Hostanwendung wie IIS enthält. Wird in *ASPNET. config* -Dateien verwendet. |
 
 ## <a name="remarks"></a>Hinweise
 
-Jede der Konfigurationsdateien muss genau einen enthalten  **\<Configuration >** Element.
+Jede Konfigurationsdatei muss genau ein  **\<Konfigurations >** Element enthalten.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdatei Schema für die .NET Framework](index.md)

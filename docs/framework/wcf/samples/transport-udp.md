@@ -2,31 +2,31 @@
 title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 4ae4bf22f452035d10ecba6bcf93bf580ab7f5f8
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b88ed6a66c70f50434dba313373278bca11b71c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422161"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941040"
 ---
 # <a name="transport-udp"></a>Transport: UDP
-Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und -Multicast als einen benutzerdefinierten Windows Communication Foundation (WCF)-Transport implementiert wird. Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in WCF anhand des kanalframeworks und WCF-best Practices beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  
+Das UDP-Transport Beispiel veranschaulicht, wie UDP-Unicast und Multicast als benutzerdefinierter Windows Communication Foundation (WCF)-Transport implementiert werden. Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in WCF mithilfe des Channel-Frameworks und der folgenden bewährten WCF-Methoden beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  
   
-1. Entscheiden Sie, welche des Kanals [Nachrichtenaustauschmuster](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel oder IReplyChannel) Ihre ChannelFactory und vom ChannelListener unterstützt. Dann entscheiden Sie sich, ob Sie die sitzungsbasierten Variationen dieser Schnittstellen unterstützen.  
+1. Entscheiden Sie, welche der Kanal [Nachrichtenaustausch Muster](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel oder IReplyChannel) ihre ChannelFactory und Channellistener unterstützen. Dann entscheiden Sie sich, ob Sie die sitzungsbasierten Variationen dieser Schnittstellen unterstützen.  
   
 2. Erstellen Sie eine Kanalfactory und einen Kanallistener, die Ihr Nachrichtenaustauschmuster unterstützen.  
   
 3. Stellen Sie sicher, dass alle netzwerkspezifischen Ausnahmen zu der entsprechenden abgeleiteten Klasse von <xref:System.ServiceModel.CommunicationException> normalisiert werden.  
   
-4. Hinzufügen einer [ \<Bindung >](../../../../docs/framework/misc/binding.md) -Element, das den benutzerdefinierten Transport einem Kanalstapel hinzufügt. Weitere Informationen finden Sie unter [Hinzufügen eines Bindungselements](#AddingABindingElement).  
+4. Fügen Sie eine [ \<Bindung >](../../../../docs/framework/misc/binding.md) -Element hinzu, das den benutzerdefinierten Transport einem Kanal Stapel hinzufügt. Weitere Informationen finden Sie unter [Hinzufügen eines Bindungs Elements](#AddingABindingElement).  
   
 5. Fügen Sie einen Bindungselementerweiterungs-Abschnitt hinzu, um das neue Bindungselement für das Konfigurationssystem verfügbar zu machen.  
   
 6. Fügen Sie Metadatenerweiterungen hinzu, um anderen Endpunkten Funktionen mitzuteilen.  
   
-7. Fügen Sie eine Bindung hinzu, die einen Stapel mit Bindungselementen entsprechend einem genau definierten Profil vorkonfiguriert. Weitere Informationen finden Sie unter [Hinzufügen einer Standardbindung](#AddingAStandardBinding).  
+7. Fügen Sie eine Bindung hinzu, die einen Stapel mit Bindungselementen entsprechend einem genau definierten Profil vorkonfiguriert. Weitere Informationen finden Sie unter [Hinzufügen einer Standard Bindung](#AddingAStandardBinding).  
   
-8. Fügen Sie einen Bindungsabschnitt und ein Bindungskonfigurationselement hinzu, um die Bindung für das Konfigurationssystem verfügbar zu machen. Weitere Informationen finden Sie unter [Hinzufügen von Konfigurationsunterstützung](#AddingConfigurationSupport).  
+8. Fügen Sie einen Bindungsabschnitt und ein Bindungskonfigurationselement hinzu, um die Bindung für das Konfigurationssystem verfügbar zu machen. Weitere Informationen finden Sie [unter Hinzufügen von Konfigurations Unterstützung](#AddingConfigurationSupport).  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>Nachrichtenaustauschmuster  
@@ -47,36 +47,36 @@ Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und -Multicast 
  Jedes dieser Nachrichtenaustauschmuster kann außerdem Sitzungen unterstützen. Die neue Funktion von sitzungsfähigen Kanälen besteht darin, dass alle in einem Kanal gesendeten und empfangenen Nachrichten korreliert werden. Das Anforderungs-Antwort-Muster ist eine eigenständige, aus zwei Nachrichten bestehende Sitzung, da die Anforderung und die Antwort korreliert werden. Demgegenüber impliziert das Anforderungs-Antwort-Muster, das Sitzungen unterstützt, dass alle Anforderungs-/Antwort-Paare in diesem Kanal miteinander korreliert werden. Dadurch ergeben sich sechs Nachrichtenaustauschmuster zur Auswahl: Datagramm, Anforderung-Antwort, Duplex, Datagramm mit Sitzungen, Anforderung-Antwort mit Sitzungen und Duplex mit Sitzungen.  
   
 > [!NOTE]
->  Für den UDP-Transport wird nur das Nachrichtenaustauschmuster Datagramm unterstützt, da UDP grundsätzlich ein "fire and forget"-Protokoll ist.  
+> Für den UDP-Transport wird nur das Nachrichtenaustauschmuster Datagramm unterstützt, da UDP grundsätzlich ein "fire and forget"-Protokoll ist.  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Der ICommunicationObject- und der WCF-Objektlebenszyklus  
- WCF bietet einen allgemeinen Zustandsautomaten, der verwendet wird, zum Verwalten des legenszyklus von Objekten wie <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, und <xref:System.ServiceModel.Channels.IChannelListener> , die für die Kommunikation verwendet werden. Es gibt fünf Zustände, in denen diese Kommunikationsobjekte vorhanden sein können. Die Zustände werden durch die <xref:System.ServiceModel.CommunicationState>-Enumeration dargestellt und lauten wie folgt:  
+ WCF verfügt über einen gemeinsamen Zustands Automat, der zum Verwalten des Lebenszyklus von <xref:System.ServiceModel.Channels.IChannel>Objekten <xref:System.ServiceModel.Channels.IChannelFactory>wie, <xref:System.ServiceModel.Channels.IChannelListener> und verwendet wird, die für die Kommunikation verwendet werden. Es gibt fünf Zustände, in denen diese Kommunikationsobjekte vorhanden sein können. Die Zustände werden durch die <xref:System.ServiceModel.CommunicationState>-Enumeration dargestellt und lauten wie folgt:  
   
-- Erstellt: Dies ist der Zustand einer <xref:System.ServiceModel.ICommunicationObject> Wenn es zuerst instanziiert. In diesem Zustand tritt keine Eingabe/Ausgabe (E/A) auf.  
+- Schaff Dies ist der Zustand <xref:System.ServiceModel.ICommunicationObject> eines, wenn es zuerst instanziiert wird. In diesem Zustand tritt keine Eingabe/Ausgabe (E/A) auf.  
   
-- Opening: Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Open%2A> aufgerufen wird. An diesem Punkt werden Eigenschaften unveränderlich gemacht, und Eingabe/Ausgabe kann beginnen. Dieser Übergang ist nur vom Created-Zustand aus gültig.  
+- Einleit Objekte übergehen in diesen Zustand, <xref:System.ServiceModel.ICommunicationObject.Open%2A> wenn aufgerufen wird. An diesem Punkt werden Eigenschaften unveränderlich gemacht, und Eingabe/Ausgabe kann beginnen. Dieser Übergang ist nur vom Created-Zustand aus gültig.  
   
-- Geöffnet: Objekt geht zu diesem Zustand, wenn der Öffnungsprozess abgeschlossen ist. Dieser Übergang ist nur vom Opening-Zustand aus gültig. An diesem Punkt ist das Objekt für die Übertragung voll verwendbar.  
+- Ge Objekte wechseln in diesen Zustand, wenn der geöffnete Prozess abgeschlossen ist. Dieser Übergang ist nur vom Opening-Zustand aus gültig. An diesem Punkt ist das Objekt für die Übertragung voll verwendbar.  
   
-- Schließen: Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> für ein ordnungsgemäßes Herunterfahren aufgerufen wird. Dieser Übergang ist nur vom Opened-Zustand aus gültig.  
+- Abschlusses Objekte wechseln in diesen Zustand, <xref:System.ServiceModel.ICommunicationObject.Close%2A> wenn für ein ordnungsgemäßes Herunterfahren aufgerufen wird. Dieser Übergang ist nur vom Opened-Zustand aus gültig.  
   
-- Geschlossen: Im Closed werden Zustandsobjekte nicht mehr verwendet werden. Im Allgemeinen steht der größte Teil der Konfiguration noch zur Ansicht bereit, es kann aber keine Kommunikation auftreten. Dieser Zustand ist mit "Verworfen" vergleichbar.  
+- Geschlossen In den geschlossenen Zustands können Objekte nicht mehr verwendet werden. Im Allgemeinen steht der größte Teil der Konfiguration noch zur Ansicht bereit, es kann aber keine Kommunikation auftreten. Dieser Zustand ist mit "Verworfen" vergleichbar.  
   
-- Fehler: In den Faulted-Zustand sind die Objekte zugegriffen werden kann, um die Überprüfung jedoch nicht mehr verwendet werden. Wenn ein nicht behebbarer Fehler auftritt, geht das Objekt in diesen Zustand über. Der einzige gültige Übergang von diesem Status wird in der `Closed` Zustand.  
+- Faulted Im Faulted-Zustand sind die Objekte für die Überprüfung zugänglich, aber nicht mehr verwendbar. Wenn ein nicht behebbarer Fehler auftritt, geht das Objekt in diesen Zustand über. Der einzige gültige Übergang von diesem Zustand erfolgt in den `Closed` -Zustand.  
   
  Es gibt Ereignisse, die für jeden Zustandsübergang ausgelöst werden. Die <xref:System.ServiceModel.ICommunicationObject.Abort%2A>-Methode kann jederzeit aufgerufen werden und sorgt dafür, dass das Objekt sofort vom aktuellen Zustand in den Closed-Zustand übergeht. Beim Aufrufen von <xref:System.ServiceModel.ICommunicationObject.Abort%2A> wird nicht abgeschlossene Arbeit beendet.  
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>Kanalfactory und Kanallistener  
- Der nächste Schritt beim Schreiben eines benutzerdefinierten Transports besteht im Erstellen einer Implementierung von <xref:System.ServiceModel.Channels.IChannelFactory> für Clientkanäle und von <xref:System.ServiceModel.Channels.IChannelListener> für Dienstkanäle. Die Kanalebene verwendet ein Factorymuster zum Erstellen von Kanälen. WCF stellt basisklassenhilfen für diesen Prozess bereit.  
+ Der nächste Schritt beim Schreiben eines benutzerdefinierten Transports besteht im Erstellen einer Implementierung von <xref:System.ServiceModel.Channels.IChannelFactory> für Clientkanäle und von <xref:System.ServiceModel.Channels.IChannelListener> für Dienstkanäle. Die Kanalebene verwendet ein Factorymuster zum Erstellen von Kanälen. WCF stellt Basisklassen Hilfen für diesen Prozess bereit.  
   
 - Die <xref:System.ServiceModel.Channels.CommunicationObject>-Klasse implementiert <xref:System.ServiceModel.ICommunicationObject> und setzt den zuvor in Schritt 2 beschriebenen Zustandsautomaten durch. 
 
-- Die <xref:System.ServiceModel.Channels.ChannelManagerBase> -Klasse implementiert <xref:System.ServiceModel.Channels.CommunicationObject> und bietet eine einheitliche Basisklasse für <xref:System.ServiceModel.Channels.ChannelFactoryBase> und <xref:System.ServiceModel.Channels.ChannelListenerBase>. Die <xref:System.ServiceModel.Channels.ChannelManagerBase>-Klasse funktioniert in Verbindung mit <xref:System.ServiceModel.Channels.ChannelBase>. Dies ist eine Basisklasse, die <xref:System.ServiceModel.Channels.IChannel> implementiert.  
+- Die <xref:System.ServiceModel.Channels.ChannelManagerBase> -Klasse <xref:System.ServiceModel.Channels.CommunicationObject> implementiert und stellt eine einheitliche Basisklasse <xref:System.ServiceModel.Channels.ChannelFactoryBase> für <xref:System.ServiceModel.Channels.ChannelListenerBase>und bereit. Die <xref:System.ServiceModel.Channels.ChannelManagerBase>-Klasse funktioniert in Verbindung mit <xref:System.ServiceModel.Channels.ChannelBase>. Dies ist eine Basisklasse, die <xref:System.ServiceModel.Channels.IChannel> implementiert.  
   
-- Die <xref:System.ServiceModel.Channels.ChannelFactoryBase> -Klasse implementiert <xref:System.ServiceModel.Channels.ChannelManagerBase> und <xref:System.ServiceModel.Channels.IChannelFactory> und konsolidiert die `CreateChannel` -Überladungen in einer `OnCreateChannel` abstrakte Methode.  
+- Die <xref:System.ServiceModel.Channels.ChannelFactoryBase> -Klasse <xref:System.ServiceModel.Channels.ChannelManagerBase> implementiert <xref:System.ServiceModel.Channels.IChannelFactory> und und konsolidiert die `CreateChannel` -über Ladungen in `OnCreateChannel` einer abstrakten Methode.  
   
-- Die <xref:System.ServiceModel.Channels.ChannelListenerBase> -Klasse implementiert <xref:System.ServiceModel.Channels.IChannelListener>. Die Klasse wird für grundlegende Zustandsverwaltung verwendet.  
+- Die <xref:System.ServiceModel.Channels.ChannelListenerBase> -Klasse <xref:System.ServiceModel.Channels.IChannelListener>implementiert. Die Klasse wird für grundlegende Zustandsverwaltung verwendet.  
   
  In diesem Beispiel ist die Factoryimplementierung in "UdpChannelFactory.cs" enthalten, und die Listenerimplementierung ist in "UdpChannelListener.cs" enthalten. Die <xref:System.ServiceModel.Channels.IChannel>-Implementierungen sind in "UdpOutputChannel.cs" und "UdpInputChannel.cs" enthalten.  
   
@@ -96,7 +96,7 @@ this.socket = new Socket(this.remoteEndPoint.AddressFamily, SocketType.Dgram, Pr
 this.socket.Close(0);  
 ```  
   
- Implementieren Sie anschließend `Send()` und `BeginSend()` / `EndSend()`. Dieser Vorgang ist in zwei Hauptabschnitte unterteilt. Serialisieren Sie zuerst die Nachricht in ein Bytearray:  
+ Anschließend implementieren `Send()` wir und `BeginSend()`. / `EndSend()` Dieser Vorgang ist in zwei Hauptabschnitte unterteilt. Serialisieren Sie zuerst die Nachricht in ein Bytearray:  
   
 ```csharp
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
@@ -109,20 +109,20 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 ```  
   
 ### <a name="the-udpchannellistener"></a>Der UdpChannelListener  
- Die `UdpChannelListener` abgeleitet, dass das Beispiel implementiert die <xref:System.ServiceModel.Channels.ChannelListenerBase> Klasse. Er verwendet einen einzelnen UDP-Socket, um Datagramme zu empfangen. Die `OnOpen`-Methode empfängt Daten mit dem UDP-Socket in einer asynchronen Schleife. Die Daten werden dann mit dem Nachrichtencodierungsframework in Nachrichten konvertiert:  
+ Der `UdpChannelListener` , den das Beispiel implementiert, wird <xref:System.ServiceModel.Channels.ChannelListenerBase> von der-Klasse abgeleitet. Er verwendet einen einzelnen UDP-Socket, um Datagramme zu empfangen. Die `OnOpen`-Methode empfängt Daten mit dem UDP-Socket in einer asynchronen Schleife. Die Daten werden dann mit dem Nachrichtencodierungsframework in Nachrichten konvertiert:  
   
 ```csharp
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
 ```  
   
- Da derselbe Datagrammkanal Nachrichten darstellt, die aus einer Reihe von Quellen eintreffen, ist der `UdpChannelListener` ein Singletonlistener. Es gibt höchstens einen aktiven <xref:System.ServiceModel.Channels.IChannel> diesem Listener gleichzeitig zugeordnet. In diesem Beispiel wird nur dann ein weiterer generiert, wenn ein Kanal, der mit der `AcceptChannel`-Methode zurückgegeben wird, anschließend freigegeben wird. Wenn eine Nachricht empfangen wird, wird sie in diesem Singletonkanal in die Warteschlange eingereiht.  
+ Da derselbe Datagrammkanal Nachrichten darstellt, die aus einer Reihe von Quellen eintreffen, ist der `UdpChannelListener` ein Singletonlistener. Es gibt höchstens eine aktive <xref:System.ServiceModel.Channels.IChannel> , die diesem Listener gleichzeitig zugeordnet ist. In diesem Beispiel wird nur dann ein weiterer generiert, wenn ein Kanal, der mit der `AcceptChannel`-Methode zurückgegeben wird, anschließend freigegeben wird. Wenn eine Nachricht empfangen wird, wird sie in diesem Singletonkanal in die Warteschlange eingereiht.  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
- Die `UdpInputChannel` -Klasse implementiert `IInputChannel`. Sie besteht aus einer Warteschlange mit eingehenden Nachrichten, die vom `UdpChannelListener`-Socket gefüllt wird. Diese Nachrichten werden mit der `IInputChannel.Receive`-Methode aus der Warteschlange entfernt.  
+ Die `UdpInputChannel` -Klasse `IInputChannel`implementiert. Sie besteht aus einer Warteschlange mit eingehenden Nachrichten, die vom `UdpChannelListener`-Socket gefüllt wird. Diese Nachrichten werden mit der `IInputChannel.Receive`-Methode aus der Warteschlange entfernt.  
   
 <a name="AddingABindingElement"></a>   
 ## <a name="adding-a-binding-element"></a>Hinzufügen eines Bindungselements  
- Nachdem nun die Factorys und Kanäle erstellt sind, müssen sie der ServiceModel-Laufzeit über eine Bindung verfügbar gemacht werden. Eine Bindung ist eine Auflistung von Bindungselementen, die den mit einer Dienstadresse verknüpften Kommunikationsstapel darstellt. Jedes Element im Stapel wird durch dargestellt eine [ \<Bindung >](../../../../docs/framework/misc/binding.md) Element.  
+ Nachdem nun die Factorys und Kanäle erstellt sind, müssen sie der ServiceModel-Laufzeit über eine Bindung verfügbar gemacht werden. Eine Bindung ist eine Auflistung von Bindungselementen, die den mit einer Dienstadresse verknüpften Kommunikationsstapel darstellt. Jedes Element im Stapel wird durch eine [ \<Bindung >](../../../../docs/framework/misc/binding.md) -Elements dargestellt.  
   
  Im Beispiel ist das Bindungselement `UdpTransportBindingElement`, das von <xref:System.ServiceModel.Channels.TransportBindingElement> abgeleitet wird. Es überschreibt die folgenden Methoden zum Erstellen der der Bindung zugeordneten Factorys.  
   
@@ -141,7 +141,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Es enthält auch Member zum Klonen des `BindingElement` und Zurückgeben unseres Schemas (soap.udp).  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Hinzufügen von Metadatenunterstützung für ein Transportbindungselement  
- Um den Transport in ein Metadatensystem zu integrieren, muss dieser sowohl den Import als auch den Export von Richtlinien unterstützen. Dadurch können Clients für die Bindung zu generieren die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Um den Transport in ein Metadatensystem zu integrieren, muss dieser sowohl den Import als auch den Export von Richtlinien unterstützen. Dies ermöglicht es uns, Clients unserer Bindung über das [Service Model Metadata Utility-Tool (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)zu generieren.  
   
 ### <a name="adding-wsdl-support"></a>Hinzufügen von WSDL-Unterstützung  
  Das Transportbindungselement in einer Bindung ist für den Export und Import von Adressierungsinformationen in/zu Metadaten verantwortlich. Bei der Nutzung einer SOAP-Bindung sollte das Transportbindungselement ebenfalls einen korrekten Transport-URI in die Metadaten exportieren.  
@@ -185,7 +185,7 @@ if (soapBinding != null)
   
  Bei der Ausführung von "Svcutil.exe" gibt es zwei Optionen, um "Svcutil.exe" dazu zu bewegen, die WSDL-Importerweiterungen zu laden:  
   
-1. Verweisen Sie Svcutil.exe Konfigurationsdatei mithilfe der/svcutilconfig:\<Datei >.  
+1. Zeigen Sie Svcutil. exe mit der Datei >/SvcutilConfig:\<auf unsere Konfigurationsdatei.  
   
 2. Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
   
@@ -204,7 +204,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  Das benutzerdefinierte Bindungselement kann Richtlinienassertionen in die WSDL-Bindung für einen Dienstendpunkt exportieren, um die Funktionen dieses Bindungselements auszudrücken.  
   
 #### <a name="policy-export"></a>Richtlinienexport  
- Die `UdpTransportBindingElement` -Typ implementiert `IPolicyExportExtension` zum Hinzufügen der Unterstützung für das Exportieren der Richtlinie. Als Ergebnis schließt `System.ServiceModel.MetadataExporter``UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung ein, die dieses enthält.  
+ Der `UdpTransportBindingElement` Typ implementiert `IPolicyExportExtension` , um Unterstützung für das Exportieren von Richtlinien hinzuzufügen Als Ergebnis schließt `System.ServiceModel.MetadataExporter``UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung ein, die dieses enthält.  
   
  Fügen Sie in `IPolicyExportExtension.ExportPolicy` eine Assertion für UDP und eine weitere Assertion ein, wenn Sie sich im Multicastmodus befinden. Grund hierfür ist, dass der Multicastmodus Einfluss auf die Art und Weise hat, in der der Kommunikationsstapel erstellt wird, weshalb eine Koordinierung zwischen beiden Seiten stattfinden muss.  
   
@@ -247,7 +247,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Dann implementieren Sie `IPolicyImporterExtension` aus der registrierten Klasse (`UdpBindingElementImporter`). Prüfen Sie in `ImportPolicy()` die Assertionen im entsprechenden Namespace, verarbeiten Sie sie für die Generierung des Transports, und prüfen Sie, ob Multicast vorliegt. Entfernen Sie darüber hinaus die gehandhabten Assertionen aus der Liste der Bindungsassertionen. Erneut stehen bei der Ausführung von "Svcutil.exe" zwei Optionen für die Integration zur Verfügung:  
   
-1. Verweisen Sie Svcutil.exe Konfigurationsdatei mithilfe der/svcutilconfig:\<Datei >.  
+1. Zeigen Sie Svcutil. exe mit der Datei >/SvcutilConfig:\<auf unsere Konfigurationsdatei.  
   
 2. Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Hinzufügen einer Standardbindung  
  Das Bindungselement kann auf die beiden folgenden Arten verwendet werden:  
   
-- Durch eine benutzerdefinierte Bindung: Eine benutzerdefinierte Bindung ermöglicht den Benutzer, eigene Bindungen basierend auf einer beliebigen Gruppe von Bindungselementen erstellen.  
+- Über eine benutzerdefinierte Bindung: Eine benutzerdefinierte Bindung ermöglicht dem Benutzer, basierend auf einer beliebigen Gruppe von Bindungs Elementen eine eigene Bindung zu erstellen.  
   
-- Über eine vom System bereitgestellte Bindung, die das Bindungselement enthält. WCF bietet mehrere vom System definierte Bindungen, z. B. `BasicHttpBinding`, `NetTcpBinding`, und `WsHttpBinding`. Jede dieser Bindungen wird einem genau definierten Profil zugeordnet.  
+- Über eine vom System bereitgestellte Bindung, die das Bindungselement enthält. WCF stellt eine Reihe von System definierten Bindungen bereit, wie z `BasicHttpBinding`. b., `WsHttpBinding` `NetTcpBinding`und. Jede dieser Bindungen wird einem genau definierten Profil zugeordnet.  
   
  Das Beispiel implementiert eine Profilbindung in `SampleProfileUdpBinding`, die von <xref:System.ServiceModel.Channels.Binding> abgeleitet wurde. `SampleProfileUdpBinding` enthält bis zu vier Bindungselemente: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` und `ReliableSessionBindingElement`.  
   
@@ -337,7 +337,7 @@ if (context.Endpoint.Binding is CustomBinding)
 ```  
   
 ### <a name="binding-section"></a>Bindungsabschnitt  
- Der Abschnitt `SampleProfileUdpBindingCollectionElement` ist ein `StandardBindingCollectionElement`, das die `SampleProfileUdpBinding` für das Konfigurationssystem verfügbar macht. Dem `SampleProfileUdpBindingConfigurationElement`, das sich von `StandardBindingElement` herleitet, wird der Großteil der Implementierung übertragen. Die `SampleProfileUdpBindingConfigurationElement` verfügt über Eigenschaften, die die Eigenschaften auf entsprechen `SampleProfileUdpBinding`, und Funktionen für die Zuordnung der `ConfigurationElement` Bindung. Schließlich wird die `OnApplyConfiguration`-Methode in der `SampleProfileUdpBinding` überschrieben. Dies wird im folgenden Beispielcode veranschaulicht.  
+ Der Abschnitt `SampleProfileUdpBindingCollectionElement` ist ein `StandardBindingCollectionElement`, das die `SampleProfileUdpBinding` für das Konfigurationssystem verfügbar macht. Dem `SampleProfileUdpBindingConfigurationElement`, das sich von `StandardBindingElement` herleitet, wird der Großteil der Implementierung übertragen. Der `SampleProfileUdpBindingConfigurationElement` verfügt über Eigenschaften, die den Eigenschaften für `SampleProfileUdpBinding`entsprechen, und Funktionen, die `ConfigurationElement` der Bindung zugeordnet werden sollen. Schließlich wird die `OnApplyConfiguration`-Methode in der `SampleProfileUdpBinding` überschrieben. Dies wird im folgenden Beispielcode veranschaulicht.  
   
 ```csharp
 protected override void OnApplyConfiguration(string configurationName)  
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Der UDP-Testdienst und der Client  
- Testcode für die Verwendung dieses Beispieltransports ist in den UdpTestService- und UdpTestClient-Verzeichnissen verfügbar. Der Dienstcode besteht aus zwei Tests: Ein Test richtet die Bindungen und Endpunkte über den Code ein und der andere über die Konfiguration. Beide Tests verwenden zwei Endpunkte. Ein Endpunkt verwendet die `SampleUdpProfileBinding` mit [ \<ReliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) festgelegt `true`. Der andere Endpunkt verwendet eine benutzerdefinierte Bindung mit `UdpTransportBindingElement`. Dies ist äquivalent zur Verwendung `SampleUdpProfileBinding` mit [ \<ReliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) festgelegt `false`. Beide Tests erstellen einen Dienst, fügen einen Endpunkt für jede Bindung hinzu, öffnen den Dienst und warten anschließend darauf, dass der Benutzer die EINGABETASTE drückt, bevor der Dienst beendet wird.  
+ Testcode für die Verwendung dieses Beispieltransports ist in den UdpTestService- und UdpTestClient-Verzeichnissen verfügbar. Der Dienstcode besteht aus zwei Tests: Ein Test richtet die Bindungen und Endpunkte über den Code ein und der andere über die Konfiguration. Beide Tests verwenden zwei Endpunkte. Ein Endpunkt verwendet das `SampleUdpProfileBinding` with [ \<ReliableSession->](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) , `true`das auf festgelegt ist. Der andere Endpunkt verwendet eine benutzerdefinierte Bindung mit `UdpTransportBindingElement`. Dies entspricht der Verwendung `SampleUdpProfileBinding` von with [ \<ReliableSession, >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) auf `false`festgelegt ist. Beide Tests erstellen einen Dienst, fügen einen Endpunkt für jede Bindung hinzu, öffnen den Dienst und warten anschließend darauf, dass der Benutzer die EINGABETASTE drückt, bevor der Dienst beendet wird.  
   
  Wenn Sie die Testanwendung für den Dienst starten, sollte folgende Ausgabe angezeigt werden:  
   
@@ -466,9 +466,9 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Befolgen Sie die Anweisungen unter Erstellen [der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md), um die Lösung zu erstellen.  
   
-2. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Um das Beispiel in einer Konfiguration mit einem einzigen Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 3. Informationen finden Sie im vorhergehenden Abschnitt "Der UDP-Testdienst und der Client".  
   
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

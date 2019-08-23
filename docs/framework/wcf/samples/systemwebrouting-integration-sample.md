@@ -2,77 +2,77 @@
 title: SystemWebRouting-Integrationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: a9f9dc871b92b8cd689234c79b09c98e38a2848d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 032be700beaa38ed6c08ed1940aab558b2106591
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650989"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964481"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting-Integrationsbeispiel
-In diesem Beispiel wird die Integration der Hostebene in die Klassen im <xref:System.Web.Routing>-Namespace veranschaulicht. Mit den Klassen im <xref:System.Web.Routing>-Namespace können Anwendungen URLs verwenden, die einer physischen Ressource nicht direkt entsprechen. Webrouting ermöglicht es, den Entwickler zum Erstellen von virtueller Adressen für HTTP, klicken Sie dann wieder die tatsächlichen WCF-Diensten zugeordnet sind. Dies ist nützlich, wenn ein WCF-Dienst gehostet werden muss, ohne dass eine physische Datei oder Ressource erforderlich ist, oder wenn auf Dienste mit URLs zugegriffen werden muss, die keine Dateierweiterung wie .html oder .aspx enthalten. In diesem Beispiel wird veranschaulicht, wie mithilfe der <xref:System.Web.Routing.RouteTable>-Klasse virtuelle URIs erstellt werden können, die in global.asax definierten, ausgeführten Diensten zugeordnet werden. 
+In diesem Beispiel wird die Integration der Hostebene in die Klassen im <xref:System.Web.Routing>-Namespace veranschaulicht. Mit den Klassen im <xref:System.Web.Routing>-Namespace können Anwendungen URLs verwenden, die einer physischen Ressource nicht direkt entsprechen. Die Verwendung von Webrouting ermöglicht es dem Entwickler, virtuelle Adressen für http zu erstellen, die dann wieder den eigentlichen WCF-Diensten zugeordnet werden. Dies ist nützlich, wenn ein WCF-Dienst gehostet werden muss, ohne dass eine physische Datei oder Ressource erforderlich ist, oder wenn auf Dienste mit URLs zugegriffen werden muss, die keine Dateierweiterung wie .html oder .aspx enthalten. In diesem Beispiel wird veranschaulicht, wie mithilfe der <xref:System.Web.Routing.RouteTable>-Klasse virtuelle URIs erstellt werden können, die in global.asax definierten, ausgeführten Diensten zugeordnet werden. 
 
 > [!NOTE]
->  Die Klassen im <xref:System.Web.Routing>-Namespace können nur für Dienste verwendet werden, die über HTTP gehostet werden.  
+> Die Klassen im <xref:System.Web.Routing>-Namespace können nur für Dienste verwendet werden, die über HTTP gehostet werden.  
   
-In diesem Beispiel verwendet WCF, um zwei RSS-Feeds zu erstellen: eine `movies` feed und ein `channels` feed. Die URLs zur Aktivierung der Dienste enthalten keine Erweiterung und registriert sind, der `Application_Start` Methode der `Global` abgeleitete Klasse die <xref:System.Web.HttpApplication> Klasse.  
+In diesem Beispiel werden WCF verwendet, um zwei RSS- `movies` Feeds zu erstellen `channels` : einen Feed und einen Feed. Die URLs zum Aktivieren der Dienste enthalten keine Erweiterung und werden in der `Application_Start` -Methode `Global` der Klasse registriert, die von der <xref:System.Web.HttpApplication> -Klasse abgeleitet ist.  
   
 > [!NOTE]
->  Dieses Beispiel funktioniert nur in IIS (Internetinformationsdienste) 7.0 und höher, wie IIS 6.0 verwendet eine andere Methode für die Unterstützung von URLs ohne Erweiterung.  
+> Dieses Beispiel funktioniert nur in Internetinformationsdienste (IIS) 7,0 und höher, da IIS 6,0 eine andere Methode zur Unterstützung von URLs ohne Erweiterungen verwendet.  
 
-#### <a name="to-download-this-sample"></a>Dieses Beispiel herunterladen
+#### <a name="to-download-this-sample"></a>So laden Sie dieses Beispiel herunter
   
-In diesem Beispiel möglicherweise bereits auf Ihrem Computer installiert werden. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+Dieses Beispiel ist möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+ Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1. Öffnen Sie die Datei webroutingintegration.sln in mit Visual Studio.  
+1. Öffnen Sie in Visual Studio die Datei "webroutingintegration. sln".  
   
 2. Drücken Sie F5, um die Projektmappe auszuführen und den Webentwicklungsserver zu starten.  
   
      Eine Verzeichnisliste für das Beispiel wird angezeigt. Beachten Sie, dass es keine Dateien mit der Dateierweiterung SVC gibt.  
   
-3. Fügen Sie in der Adressleiste `movies` an die URL so, dass die It liest `http://localhost:[port]/movies` und drücken Sie EINGABETASTE.  
+3. Fügen Sie in der Adressleiste `movies` die URL hinzu, damit Sie gelesen `http://localhost:[port]/movies` wird, und drücken Sie die EINGABETASTE.  
   
      Der Filmfeed (movies) wird im Browser angezeigt.  
   
-4. Fügen Sie in der Adressleiste `channels` an die URL ein, das ist also Lesevorgänge `http://localhost:[port]/channels` und drücken Sie EINGABETASTE.  
+4. Fügen Sie `channels` in der Adressleiste der URL ein, sodass der Lese `http://localhost:[port]/channels` -und drücken der EINGABETASTE ist.  
   
      Der Channelfeed wird im Browser angezeigt.  
   
 5. Schließen Sie den Webbrowser, indem Sie ALT+F4 drücken.  
   
-     Wenn der Entwicklungsserver nicht beendet wurde, mit der rechten Maustaste in des Symbols im Infobereich, und wählen Sie **beenden**.  
+     Wenn der Entwicklungs Server nicht beendet wurde, klicken Sie mit der rechten Maustaste auf das Benachrichtigungs Bereichs Symbol, und wählen Sie **Beenden**aus.  
   
 #### <a name="to-use-this-sample-when-hosted-in-iis"></a>So verwenden Sie dieses Beispiel, wenn es in IIS gehostet wird  
   
-1. Öffnen Sie die Datei webroutingintegration.sln in mit Visual Studio.  
+1. Öffnen Sie in Visual Studio die Datei "webroutingintegration. sln".  
   
 2. Erstellen Sie das Projekt, indem Sie STRG+UMSCHALT+B drücken.  
   
 3. Erstellen Sie eine Webanwendung im Internetinformationsdienste-Manager.  
   
-    1. Im IIS-Manager mit der rechten Maustaste die **Default Web Site** , und wählen Sie **Hinzufügen einer Anwendung**.  
+    1. Klicken Sie im IIS-Manager mit der rechten Maustaste auf die **Standard Website** , und wählen Sie **Anwendung hinzufügen**aus.  
   
-    2. Für die **Alias**, geben Sie in `WebRoutingIntegration`.  
+    2. Geben`WebRoutingIntegration`Sie für den **Alias**ein.  
   
-    3. Für die **physischer Pfad**, wählen Sie den Ordner "Service" innerhalb des Projekts.  
+    3. Wählen Sie für den **physischen Pfad**den Dienst Ordner innerhalb des Projekts aus.  
   
     4. Klicken Sie auf **OK**.  
   
-4. Starten Sie die Anwendung, indem Sie mit der rechten Maustaste in der Web-Anwendung und auswählen **-Anwendung verwalten** und dann **Durchsuchen**.  
+4. Starten Sie die Anwendung, indem Sie mit der rechten Maustaste auf die Webanwendung klicken und **Anwendung verwalten** und dann **Durchsuchen**auswählen.  
   
-5. Fügen Sie in der Adressleiste `movies` an die URL ein, das ist also Lesevorgänge `http://localhost:[port]/movies` und drücken Sie EINGABETASTE.  
+5. Fügen Sie `movies` in der Adressleiste der URL ein, sodass der Lese `http://localhost:[port]/movies` -und drücken der EINGABETASTE ist.  
   
      Der Filmfeed (movies) wird im Browser angezeigt.  
   
-6. Fügen Sie in der Adressleiste `channels` an die URL ein, das ist also Lesevorgänge `http://localhost:[port]/channels` und drücken Sie EINGABETASTE.  
+6. Fügen Sie `channels` in der Adressleiste der URL ein, sodass der Lese `http://localhost:[port]/channels` -und drücken der EINGABETASTE ist.  
   
      Der Channelfeed wird im Browser angezeigt.  
   
@@ -81,8 +81,8 @@ In diesem Beispiel möglicherweise bereits auf Ihrem Computer installiert werden
  In diesem Beispiel wird gezeigt, dass die Hostebene mit den Klassen im <xref:System.Web.Routing>-Namespace eingesetzt werden kann, um die Anforderungen von Diensten zu routen, die über HTTP gehostet werden.  
   
 > [!NOTE]
->  Sie müssen die Version des Standardanwendungspools auf Aktualisieren [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] , wenn sie auf Version 2 festgelegt ist.  
+> Sie müssen die standardmäßige Anwendungs Poolversion auf [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] aktualisieren, wenn Sie auf Version 2 festgelegt ist.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric-Hosting-und persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

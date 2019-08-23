@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711b4c79b32aa3db4d3681d29e08dbd3d2ddbd02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cb53818d0e12d625b0609a80b4d8473713525d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660266"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941641"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native und Kompilierung
 Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Desktop-Anwendungen sind in einer bestimmten Programmiersprache geschrieben und in eine Zwischensprache (Intermediate Language, IL) kompiliert. Zur Laufzeit ist ein JIT-Compiler (Just-In-Time) dafür zuständig, die Zwischensprache für den lokalen Computer in systemeigenen Code zu kompilieren, unmittelbar bevor eine Methode zum ersten Mal ausgeführt wird. Im Gegensatz dazu konvertiert die .NET Native-Toolkette den Quellcode zur Kompilierzeit in systemeigenen Code. In diesem Abschnitt wird .NET Native mit anderen Kompilierungsverfahren verglichen, die für .NET Framework-Apps verfügbar sind. Zudem enthält dieser Abschnitt einen konkreten Überblick über die Erzeugung von nativem Code mit .NET Native, der Ihnen dabei helfen kann zu verstehen, warum Ausnahmen nicht im JIT-kompilierten Code auftreten, die hingegen in Code auftreten, der mit .NET Native kompiliert wurde.  
   
-## <a name="net-native-generating-native-binaries"></a>.NET Native: Generieren von systemeigenen Binärdateien  
+## <a name="net-native-generating-native-binaries"></a>.Net Native: Native Binärdateien werden generiert  
  Eine Anwendung, die auf das .NET Framework ausgerichtet ist und nicht mithilfe der .NET Native-Toolkette kompiliert wurde, besteht aus Ihrer Anwendungsassembly, die Folgendes umfasst:  
   
-- [Metadaten](../../../docs/standard/metadata-and-self-describing-components.md), die die Assembly, ihre Abhängigkeiten, die enthaltenen Typen und ihre Member beschreiben. Die Metadaten werden für die Reflektion und den spät gebunden Zugriff sowie in einigen Fällen auch vom Compiler und den Buildtools verwendet.  
+- [Metadaten](../../standard/metadata-and-self-describing-components.md), die die Assembly, ihre Abhängigkeiten, die enthaltenen Typen und ihre Member beschreiben. Die Metadaten werden für die Reflektion und den spät gebunden Zugriff sowie in einigen Fällen auch vom Compiler und den Buildtools verwendet.  
   
 - Implementierungscode. Dieser besteht aus Opcodes der Zwischensprache (Intermediate Language, IL). Zur Laufzeit übersetzt der JIT-Compiler (Just-In-Time) den Implementierungscode für die Zielplattform in systemeigenen Code.  
   
@@ -50,16 +50,16 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
 - Dadurch wird die vollständige Common Language Runtime (CLR) durch eine umgestaltete Common Language Runtime ersetzt, die in erster Linie den Garbage Collector enthält. Die umgestaltete Common Language Runtime befindet sich in einer Bibliothek namens "mrt100_app.dll", die für die Anwendung lokal verfügbar und nur wenige hundert Kilobyte groß ist. Dies ist dadurch möglich, dass die statische Verknüpfung den Bedarf an vielen der von der Common Language Runtime ausgeführten Dienste beseitigt.  
   
     > [!NOTE]
-    >  .NET Native verwendet denselben Garbage Collector als Standard-CLR (Common Language Runtime). Beim .NET Native Garbage Collector ist die Garbage Collection im Hintergrund standardmäßig aktiviert. Weitere Informationen zur Garbage Collection finden Sie unter [Grundlagen der Garbage Collection](../../../docs/standard/garbage-collection/fundamentals.md).  
+    > .NET Native verwendet denselben Garbage Collector als Standard-CLR (Common Language Runtime). Beim .NET Native Garbage Collector ist die Garbage Collection im Hintergrund standardmäßig aktiviert. Weitere Informationen zur Garbage Collection finden Sie unter [Grundlagen der Garbage Collection](../../standard/garbage-collection/fundamentals.md).  
   
 > [!IMPORTANT]
->  .NET Native kompiliert eine gesamte Anwendung in eine systemeigene Anwendung. Es ist Ihnen dabei nicht gestattet, einzelne Assemblys, die eine Klassenbibliothek enthalten, in nativen Code zu kompilieren, damit diese unabhängig vom verwalteten Code aufgerufen werden können.  
+> .NET Native kompiliert eine gesamte Anwendung in eine systemeigene Anwendung. Es ist Ihnen dabei nicht gestattet, einzelne Assemblys, die eine Klassenbibliothek enthalten, in nativen Code zu kompilieren, damit diese unabhängig vom verwalteten Code aufgerufen werden können.  
   
  Die von der .NET Native-Toolkette erzeugte resultierende App wird im Debug- oder Releaseverzeichnis Ihres Projektverzeichnisses in ein Verzeichnis namens „ilc.out“ geschrieben. Die App besteht aus den folgenden Dateien:  
   
-- *\<Anwendungsname>*.exe: Eine ausführbare Stubdatei, die die Kontrolle an einen speziellen `Main`-Export in der Datei *\<Anwendungsname>*.dll übergibt.  
+- *\<Anwendungsname>* .exe: Eine ausführbare Stubdatei, die die Kontrolle an einen speziellen `Main`-Export in der Datei *\<Anwendungsname>* .dll übergibt.  
   
-- *\<Anwendungsname>*.dll: Eine Windows-DLL (Dynamic Link Library), die sämtlichen Anwendungscode sowie den Code aus der .NET Framework-Klassenbibliothek und allen Bibliotheken von Drittanbietern enthält, zu denen Abhängigkeiten bestehen.  Sie enthält auch Unterstützungscode, z. B. den für die Zusammenarbeit mit Windows und zum Serialisieren von Objekten in der App erforderlichen Code.  
+- *\<Anwendungsname>* .dll: Eine Windows-DLL (Dynamic Link Library), die sämtlichen Anwendungscode sowie den Code aus der .NET Framework-Klassenbibliothek und allen Bibliotheken von Drittanbietern enthält, zu denen Abhängigkeiten bestehen.  Sie enthält auch Unterstützungscode, z. B. den für die Zusammenarbeit mit Windows und zum Serialisieren von Objekten in der App erforderlichen Code.  
   
 - "mrt100_app.dll": Eine umgestaltete Common Language Runtime, die Laufzeitdienste wie die Garbage Collection bereitstellt.  
   
@@ -102,7 +102,7 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Metadaten und selbstbeschreibende Komponenten](../../../docs/standard/metadata-and-self-describing-components.md)
-- [Inside .NET Native (Channel 9-Video)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Metadaten und selbstbeschreibende Komponenten](../../standard/metadata-and-self-describing-components.md)
+- [In .net Native (Channel 9-Video)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [.NET Native Allgemeine Problembehandlung](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

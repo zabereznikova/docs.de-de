@@ -16,48 +16,48 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83c72704ccb01baf68a3cacb6252367e07909fa8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d36d8ef3bfdbd6a1acf787a91003e2ff3139a4d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638417"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963967"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2-Schnittstelle
-Bietet Methoden, die von der common Language Runtime (CLR) verwendet werden, um einen Codeprofiler benachrichtigt, wenn die Ereignisse, die der Profiler abonniert hat, auftreten. Die `ICorProfilerCallback2` Schnittstelle ist eine Erweiterung von der [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) Schnittstelle. D. h. wird neue Rückrufe, die in .NET Framework, Version 2.0 eingeführt wurde.  
+Stellt Methoden bereit, die vom Common Language Runtime (CLR) verwendet werden, um einen Codeprofiler zu benachrichtigen, wenn die Ereignisse, die der Profiler abonniert hat, auftreten. Die `ICorProfilerCallback2` -Schnittstelle ist eine Erweiterung der [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) -Schnittstelle. Das heißt, es werden neue Rückrufe bereitstellt, die in der .NET Framework Version 2,0 eingeführt wurden.  
   
 > [!NOTE]
->  Jede Implementierung muss es sich um ein HRESULT, der mit dem Wert S_OK bei Erfolg oder E_FAIL bei einem Fehler zurückgeben. Die CLR ignoriert derzeit das HRESULT, der von jedem Rückruf mit Ausnahme zurückgegeben wird [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
+> Jede Methoden Implementierung muss ein HRESULT mit dem Wert S_OK on Success oder E_FAIL bei Failure zurückgeben. Derzeit ignoriert die CLR das HRESULT, das von jedem Rückruf zurückgegeben wird, mit Ausnahme von [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[FinalizeableObjectQueued-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Benachrichtigt Sie den Profiler, dass ein Objekt mit einem Finalizer an den Finalizerthread für die Ausführung von in die Warteschlange gestellt hat seine `Finalize` Methode.|  
-|[GarbageCollectionFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Benachrichtigt den Profiler an, eine Garbagecollection abgeschlossen wurde und alle Garbage Collection-Rückrufe ausgegeben wurden.|  
-|[GarbageCollectionStarted-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Benachrichtigt den Profiler, dass eine Garbagecollection gestartet wurde.|  
-|[HandleCreated-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Benachrichtigt den Profiler an, dass eine Garbage Collection-Handle erstellt wurde.|  
-|[HandleDestroyed-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Benachrichtigt den Profiler, dass eine Garbage Collection-Handle zerstört wurde.|  
-|[RootReferences2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Benachrichtigt den Profiler über Root-verweisen an, nach eine Garbagecollection aufgetreten ist. Diese Methode ist eine Erweiterung von der [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) Methode.|  
-|[SurvivingReferences-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Benachrichtigt den Profiler über Objektverweise, die eine Garbagecollection noch vorhanden sind.|  
-|[ThreadNameChanged-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Benachrichtigt den Profiler, dass der Name eines Threads geändert wurde.|  
+|[FinalizeableObjectQueued-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Benachrichtigt den Codeprofiler, dass ein Objekt mit einem Finalizer für die Ausführung der `Finalize` -Methode in die Warteschlange für den Finalizerthread eingereiht wurde.|  
+|[GarbageCollectionFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Benachrichtigt den Profiler, dass ein Garbage Collection abgeschlossen wurde und alle Garbage Collection Rückrufe dafür ausgegeben wurden.|  
+|[GarbageCollectionStarted-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Benachrichtigt den Codeprofiler, dass ein Garbage Collection gestartet wurde.|  
+|[HandleCreated-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Benachrichtigt den Codeprofiler, dass ein Garbage Collection Handle erstellt wurde.|  
+|[HandleDestroyed-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Benachrichtigt den Codeprofiler, dass ein Garbage Collection Handle zerstört wurde.|  
+|[RootReferences2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Benachrichtigt den Profiler über Stamm Verweise, nachdem ein Garbage Collection aufgetreten ist. Diese Methode ist eine Erweiterung der [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) -Methode.|  
+|[SurvivingReferences-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Benachrichtigt den Profiler über Objekt Verweise, die eine Garbage Collection noch nicht vorhanden sind.|  
+|[ThreadNameChanged-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Benachrichtigt den Codeprofiler, dass sich der Name eines Threads geändert hat.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die CLR ruft eine Methode in der `ICorProfilerCallback` (oder `ICorProfilerCallback2`) Schnittstelle, um den Profiler, wenn ein Ereignis zu benachrichtigen, die der Profiler abonniert haben, erfolgt. Dies ist die primäre Rückrufschnittstelle, die über die CLR mit der Codeprofiler kommuniziert.  
+ Die CLR ruft eine Methode in der `ICorProfilerCallback` -Schnitt `ICorProfilerCallback2`Stelle (oder) auf, um den Profiler zu benachrichtigen, wenn ein Ereignis auftritt, das der Profiler abonniert hat. Dies ist die primäre Rückruf Schnittstelle, über die die CLR mit dem Codeprofiler kommuniziert.  
   
- Ein Codeprofiler muss die Methoden implementieren die `ICorProfilerCallback` Schnittstelle. Der Profiler muss für die .NET Framework 2.0 und höheren Versionen, auch implementieren die `ICorProfilerCallback2` Methoden. Jede Implementierung muss es sich um ein HRESULT, der mit dem Wert S_OK bei Erfolg oder E_FAIL bei einem Fehler zurückgeben. Die CLR ignoriert derzeit das HRESULT, der von jedem Rückruf mit Ausnahme zurückgegeben wird [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
+ Ein Codeprofiler muss die Methoden der `ICorProfilerCallback` -Schnittstelle implementieren. Für den .NET Framework 2,0 und höhere Versionen muss der Profiler auch die `ICorProfilerCallback2` -Methoden implementieren. Jede Methoden Implementierung muss ein HRESULT mit dem Wert S_OK on Success oder E_FAIL bei Failure zurückgeben. Derzeit ignoriert die CLR das HRESULT, das von jedem Rückruf zurückgegeben wird, mit Ausnahme von [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
   
- Ein Codeprofiler muss in der Microsoft Windows-Registrierung, die COM-Objekt, das implementiert Registrieren der `ICorProfilerCallback` und `ICorProfilerCallback2` Schnittstellen. Ein Codeprofiler abonniert die Ereignisse, die für die sie die Benachrichtigung durch den Aufruf empfangen möchte [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). Dies erfolgt in der Regel in der Profiler Implementierung von [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md). Der Profiler kann dann auf die Benachrichtigung von der Laufzeit, wenn ein Ereignis eintritt oder ist nur in einem ausgeführten Common Language Runtime-Prozess aufgetreten.  
+ Ein Codeprofiler muss sich in der Microsoft Windows-Registrierung registrieren, dessen com-Objekt `ICorProfilerCallback` die `ICorProfilerCallback2` -Schnittstelle und die-Schnittstelle implementiert. Ein Codeprofiler abonniert die Ereignisse, für die er eine Benachrichtigung erhalten möchte, indem er [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)anfordert. Dies erfolgt in der Regel in der Implementierung von [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)durch den Profiler. Der Profiler kann dann eine Benachrichtigung von der Laufzeit empfangen, wenn ein Ereignis im Begriff ist oder gerade in einem ausgeführten Lauf Zeit Prozess aufgetreten ist.  
   
 > [!NOTE]
->  Der Profiler wird ein einzelnes COM-Objekt registriert. Wenn der Profiler, .NET Framework, Version 1.0 oder 1.1 abzielt, muss das COM-Objekt nur die Methoden der implementieren `ICorProfilerCallback`. Wenn er .NET Framework, Version 2.0 abzielt ist und höher muss das COM-Objekt auch die Methoden der implementieren `ICorProfilerCallback2`.  
+> Der Profiler registriert ein einzelnes COM-Objekt. Wenn der Profiler auf .NET Framework Version 1,0 oder 1,1 abzielt, muss dieses COM-Objekt nur die Methoden von `ICorProfilerCallback`implementieren. Wenn Sie .NET Framework Version 2,0 und höher ausgerichtet ist, muss das COM-Objekt auch die Methoden von `ICorProfilerCallback2`implementieren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Header:** Corprof. idl, Corprof. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

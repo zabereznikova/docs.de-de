@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880592"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965220"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions-Integration in SQL Server
-.NET Framework, Version 2.0 eingeführt, ein neues Transaktionsframework, die über zugegriffen werden kann die <xref:System.Transactions> Namespace. Dieses Framework macht Transaktionen auf eine Weise verfügbar, die voll in das .NET Framework einschließlich ADO.NET integriert ist.  
+In der .NET Framework Version 2,0 wurde ein Transaktions Framework eingeführt, auf das über <xref:System.Transactions> den-Namespace zugegriffen werden kann. Dieses Framework macht Transaktionen auf eine Weise verfügbar, die voll in das .NET Framework einschließlich ADO.NET integriert ist.  
   
- Zusätzlich zu den Erweiterungen der Programmierbarkeit können <xref:System.Transactions> und ADO.NET zusammenarbeiten, um beim Arbeiten mit Transaktionen Optimierungen zu koordinieren. Eine heraufstufbare Transaktion ist eine kompakte (lokale) Transaktion, die automatisch bei Bedarf auf eine vollverteilte Transaktion höhergestuft werden kann.  
+ Zusätzlich zu den Verbesserungen der Programmier <xref:System.Transactions> barkeit können und ADO.net zusammenarbeiten, um Optimierungen bei der Arbeit mit Transaktionen zu koordinieren. Eine heraufstufbare Transaktion ist eine kompakte (lokale) Transaktion, die automatisch bei Bedarf auf eine vollverteilte Transaktion höhergestuft werden kann.  
   
- Beginnend mit ADO.NET 2.0 <xref:System.Data.SqlClient> unterstützt heraufstufbare Transaktionen, bei der Arbeit mit SQL Server. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Heraufstufbare Transaktionen erfolgen automatisch und erfordern keinen Eingriff seitens des Entwicklers.  
+ Ab ADO.NET 2,0 unterstützt <xref:System.Data.SqlClient> Heraufstufbare Transaktionen, wenn Sie mit SQL Server arbeiten. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Heraufstufbare Transaktionen erfolgen automatisch und erfordern keinen Eingriff des Entwicklers.  
   
- Heraufstufbare Transaktionen sind nur verfügbar, wenn Sie die .NET Framework-Datenanbieter für SQL Server verwenden (`SqlClient`) mit SQL Server.  
+ Heraufstufbare Transaktionen sind nur verfügbar, wenn Sie die .NET Framework Datenanbieter`SqlClient`für SQL Server () mit SQL Server verwenden.  
   
 ## <a name="creating-promotable-transactions"></a>Erstellen heraufstufbarer Transaktionen  
  Der .NET Framework-Anbieter für SQL Server bietet Unterstützung für heraufstufbare Transaktionen, die über die Klassen im .NET Framework <xref:System.Transactions>-Namespace behandelt werden. Heraufstufbare Transaktionen optimieren verteilte Transaktionen, indem sie das Erstellen einer verteilten Transaktion verzögern, bis diese benötigt wird. Wenn nur ein Ressourcen-Manager erforderlich ist, erfolgt keine verteilte Transaktion.  
   
 > [!NOTE]
->  In einem teilweise vertrauenswürdigen Szenario wird die <xref:System.Transactions.DistributedTransactionPermission> benötigt, wenn eine Transaktion zu einer verteilten Transaktion heraufgestuft wird.  
+> In einem teilweise vertrauenswürdigen Szenario wird die <xref:System.Transactions.DistributedTransactionPermission> benötigt, wenn eine Transaktion zu einer verteilten Transaktion heraufgestuft wird.  
   
 ## <a name="promotable-transaction-scenarios"></a>Szenarien für heraufstufbare Transaktionen  
- Heraufstufbare Transaktionen beanspruchen normalerweise erhebliche Systemressourcen und werden von MS DTC (Microsoft Distributed Transaction Coordinator) verwaltet, der alle Ressourcen-Manager integriert, auf die in der Transaktion zugegriffen wird. Eine heraufstufbare Transaktion ist eine besondere Form einer <xref:System.Transactions> Transaktion, die effektiv die Arbeit zu einer einfachen SQL Server-Transaktion delegiert. <xref:System.Transactions>, <xref:System.Data.SqlClient>, und SQL Server-koordinieren die Arbeit zur Behandlung der Transaktions, Stufen sie bei Bedarf auf eine vollständig verteilte Transaktion hoch.  
+ Heraufstufbare Transaktionen beanspruchen normalerweise erhebliche Systemressourcen und werden von MS DTC (Microsoft Distributed Transaction Coordinator) verwaltet, der alle Ressourcen-Manager integriert, auf die in der Transaktion zugegriffen wird. Eine heraufstufbare Transaktion ist eine besondere <xref:System.Transactions> Form einer Transaktion, die die Arbeit effektiv an eine einfache SQL Server Transaktion delegiert. <xref:System.Transactions>, <xref:System.Data.SqlClient>und SQL Server die bei der Verarbeitung der Transaktion beteiligten Arbeit koordinieren und bei Bedarf auf eine vollständig verteilte Transaktion herauf Stufen.  
   
  Der Vorteil der Verwendung heraufstufbarer Transaktionen besteht darin, dass beim Öffnen einer Verbindung mit einer aktiven <xref:System.Transactions.TransactionScope> -Transaktion die Transaktion als kompakte Transaktion durchgeführt wird, wenn keine weiteren Verbindungen geöffnet sind und der zusätzliche Mehraufwand einer vollständig verteilten Transaktion vermieden werden kann.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "65880592"
  Wenn innerhalb des <xref:System.Transactions.TransactionScope>eine Ausnahme auftritt, wird die Transaktion als inkonsistent markiert und abgebrochen. Sie wird zurückgesetzt, wenn der <xref:System.Transactions.TransactionScope> verworfen wird. Wenn keine Ausnahme auftritt, werden die beteiligten Transaktionen übernommen.  
   
 > [!NOTE]
->  Die `TransactionScope` -Klasse erstellt standardmäßig eine Transaktion mit dem <xref:System.Transactions.Transaction.IsolationLevel%2A> `Serializable` . Je nach Anwendung möchten Sie möglicherweise den Isolationsgrad senken, um Konfliktpotential in Ihrer Anwendung zu vermeiden.  
+> Die `TransactionScope` -Klasse erstellt standardmäßig eine Transaktion mit dem <xref:System.Transactions.Transaction.IsolationLevel%2A> `Serializable` . Je nach Anwendung möchten Sie möglicherweise den Isolationsgrad senken, um Konfliktpotential in Ihrer Anwendung zu vermeiden.  
   
 > [!NOTE]
->  Es wird empfohlen, dass Sie nur Update-, Einfüge- und Löschvorgänge in verteilten Transaktionen durchführen, da diese erhebliche Datenbankressorcen beanspruchen. Select-Anweisungen können Datenbankressourcen unnötigerweise blockieren, und in einigen Szenarien kann es erforderlich sein, Transaktionen für Select-Vorgänge zu verwenden. Arbeiten, die nicht mit der Datenbank zusammenhängen, sollten außerhalb des Bereichs der Transaktion durchgeführt werden, außer wenn andere transaktive Ressourcen-Manager verwendet werden. Obwohl eine Ausnahme innerhalb des Bereichs der Transaktion dazu führt, dass die Transaktion keinen Commit ausführt, verfügt die <xref:System.Transactions.TransactionScope> -Klasse über keine Funktion zum Zurücksetzen von Änderungen, die vom Code außerhalb des Bereichs der Transaktion selbst durchgeführt wurden. Wenn Sie beim Zurücksetzen der Transaktion Maßnahmen ergreifen müssen, müssen Sie Ihre eigene Implementierung der <xref:System.Transactions.IEnlistmentNotification> -Schnittstelle schreiben und in der Transaktion explizit eintragen.  
+> Es wird empfohlen, dass Sie nur Update-, Einfüge- und Löschvorgänge in verteilten Transaktionen durchführen, da diese erhebliche Datenbankressorcen beanspruchen. Select-Anweisungen können Datenbankressourcen unnötigerweise blockieren, und in einigen Szenarien kann es erforderlich sein, Transaktionen für Select-Vorgänge zu verwenden. Arbeiten, die nicht mit der Datenbank zusammenhängen, sollten außerhalb des Bereichs der Transaktion durchgeführt werden, außer wenn andere transaktive Ressourcen-Manager verwendet werden. Obwohl eine Ausnahme innerhalb des Bereichs der Transaktion dazu führt, dass die Transaktion keinen Commit ausführt, verfügt die <xref:System.Transactions.TransactionScope> -Klasse über keine Funktion zum Zurücksetzen von Änderungen, die vom Code außerhalb des Bereichs der Transaktion selbst durchgeführt wurden. Wenn Sie beim Zurücksetzen der Transaktion Maßnahmen ergreifen müssen, müssen Sie Ihre eigene Implementierung der <xref:System.Transactions.IEnlistmentNotification> -Schnittstelle schreiben und in der Transaktion explizit eintragen.  
   
 ## <a name="example"></a>Beispiel  
  Das Arbeiten mit <xref:System.Transactions> setzt einen Verweis auf "System.Transactions.dll" voraus.  

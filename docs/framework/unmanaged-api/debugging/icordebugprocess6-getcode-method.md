@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 810590f0d1f7f74b778d73d98a9f7f9b1988b75f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d896cc4316c2de6fa1cb0bacc9ff8b1f3713129
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967555"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode-Methode
 Ruft Informationen über den verwalteten Code an einer bestimmten Codeadresse ab.  
@@ -24,22 +24,22 @@ HRESULT GetCode(
   
 ## <a name="parameters"></a>Parameter  
  `codeAddress`  
- [in] Ein [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) Wert, der die Startadresse des verwalteten Codesegments angibt.  
+ in Ein [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) -Wert, der die Startadresse des verwalteten Code Segments angibt.  
   
  `ppCode`  
- [out] Ein Zeiger auf die Adresse ein "ICorDebugCode"-Objekt, das ein Segment von verwaltetem Code darstellt.  
+ vorgenommen Ein Zeiger auf die Adresse eines ICorDebugCode-Objekts, das ein Segment von verwaltetem Code darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Diese Methode ist nur mit .NET Native verfügbar.  
+> Diese Methode ist nur mit .NET Native verfügbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

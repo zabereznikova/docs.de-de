@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 934efd707f2a52da5ba604139c8e4510aad4606b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009707"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964459"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Übersicht über das Splitter-Steuerelement (Windows Forms)
 > [!IMPORTANT]
->  Obwohl <xref:System.Windows.Forms.SplitContainer> das <xref:System.Windows.Forms.Splitter>-Steuerelement vorheriger Versionen ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.Splitter>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
+> Obwohl <xref:System.Windows.Forms.SplitContainer> das <xref:System.Windows.Forms.Splitter>-Steuerelement vorheriger Versionen ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.Splitter>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
- Windows Forms <xref:System.Windows.Forms.Splitter> Steuerelemente werden verwendet, um zur Laufzeit die Größe angedockter Steuerelemente ändern. Die <xref:System.Windows.Forms.Splitter> -Steuerelement wird häufig in Formularen mit Steuerelementen, die Daten, um darzustellen, deren Bereiche Daten Informationen zu verschiedenen Zeitpunkten unterschiedliche Breiten enthalten, wie Windows-Explorer variabler Länge verwendet.  
+ Windows Forms <xref:System.Windows.Forms.Splitter> Steuerelemente werden verwendet, um die Größe angedockter Steuerelemente zur Laufzeit zu ändern. Das <xref:System.Windows.Forms.Splitter> -Steuerelement wird häufig in Formularen mit Steuerelementen verwendet, die unterschiedliche Längen von Daten aufweisen, wie Windows-Explorer, deren Datenbereiche zu unterschiedlichen Zeiten Informationen mit unterschiedlichen breiten enthalten.  
   
-## <a name="working-with-the-splitter-control"></a>Arbeiten mit dem Splittersteuerelement  
- Wenn der Benutzer den Mauszeiger am Rand eines Steuerelements nicht angedockte, die von einem Splittersteuerelement geändert werden kann zeigt, wird der Mauszeiger seine Darstellung, um anzugeben, dass die Größe des Steuerelements geändert werden kann. Der Benutzer kann mit dem Splittersteuerelement des angedockten Steuerelements ändern, der direkt davor ist. Aus diesem Grund, um den Benutzer zum Ändern der Größe eines angedockten Steuerelements zur Laufzeit zu aktivieren, docken Sie das Steuerelement an eine Kante eines Containers geändert werden kann, und docken Sie anschließend auf der gleichen Seite des Containers ein Splittersteuerelement.  
+## <a name="working-with-the-splitter-control"></a>Arbeiten mit dem Splitter Steuerelement  
+ Wenn der Benutzer mit dem Mauszeiger auf den nicht angedockten Rand eines Steuer Elements zeigt, dessen Größe durch ein Splitter Steuerelement geändert werden kann, ändert der Zeiger seine Darstellung, um anzugeben, dass die Größe des Steuer Elements geändert werden kann. Mit dem Splitter Steuerelement kann der Benutzer die Größe des angedockten Steuer Elements ändern, das sich unmittelbar vor dem Steuerelement befindet. Damit der Benutzer die Größe eines angedockten Steuer Elements zur Laufzeit ändern kann, docken Sie das Steuerelement so an, dass es an einen Rand eines Containers angepasst wird, und Andocken Sie dann ein Splitter Steuerelement an dieselbe Seite dieses Containers.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Vorgehensweise: Steuerelemente auf Windows Forms Andocken](how-to-dock-controls-on-windows-forms.md)
 - [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

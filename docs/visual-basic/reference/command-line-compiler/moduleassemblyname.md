@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 70cef109e4f2947fb4e38b9bfd19433257cce136
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 052d6937846df39bd94d532e1b63ebe522dbf6c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663507"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964678"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 Gibt den Namen der Assembly an, zu der dieses Modul gehört.  
@@ -26,29 +26,29 @@ Gibt den Namen der Assembly an, zu der dieses Modul gehört.
   
 |Begriff|Definition|  
 |---|---|  
-|`assembly_name`|Der Name der Assembly, der dieses Modul eine angehören soll.|  
+|`assembly_name`|Der Name der Assembly, zu der dieses Modul gehört.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Compiler verarbeitet die `-moduleassemblyname` Option nur, wenn die `-target:module` -Option wurde angegeben. Dies bewirkt, dass den Compiler ein Modul zu erstellen. Das Modul, das vom Compiler erstellten gilt nur für die Assembly mit angegebenen die `-moduleassemblyname` Option. Wenn Sie das Modul in einer anderen Assembly platzieren, werden Laufzeitfehler auftreten.  
+ Der Compiler verarbeitet die `-moduleassemblyname` Option nur, wenn `-target:module` die Option angegeben wurde. Dies bewirkt, dass der Compiler ein Modul erstellt. Das vom Compiler erstellte Modul ist nur für die mit der `-moduleassemblyname` Option angegebene Assembly gültig. Wenn Sie das Modul in einer anderen Assembly platzieren, treten Laufzeitfehler auf.  
   
- Die `-moduleassemblyname` Option ist nur erforderlich, wenn Folgendes zutrifft:  
+ Die `-moduleassemblyname` Option wird nur benötigt, wenn Folgendes zutrifft:  
   
-- Ein Datentyp in das Modul benötigt Zugriff auf eine `Friend` Typ in einer referenzierten Assembly.  
+- Ein Datentyp im Modul benötigt Zugriff auf einen `Friend` Typ in einer Assembly, auf die verwiesen wird.  
   
-- Die referenzierte Assembly wurde Friend-Assembly-Zugriff auf die Assembly gewährt werden, in dem das Modul erstellt wird.  
+- Die Assembly, auf die verwiesen wird, hat Friend-Assembly-Zugriff auf die Assembly erteilt, in der das Modul erstellt wird.  
   
- Weitere Informationen zum Erstellen eines Moduls finden Sie unter [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Weitere Informationen zu Friend-Assemblys, finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend-assemblies.md).  
+ Weitere Informationen zum Erstellen eines Moduls finden Sie unter [/Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Weitere Informationen zu Friend-Assemblys finden Sie unter [Friend](../../../standard/assembly/friend-assemblies.md)-Assemblys  
   
 > [!NOTE]
->  Die `-moduleassemblyname` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie an einer Eingabeaufforderung kompilieren.  
+> Die `-moduleassemblyname` Option ist in der Visual Studio-Entwicklungsumgebung nicht verfügbar. Sie ist nur verfügbar, wenn Sie über eine Eingabeaufforderung kompilieren.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Erstellen einer Mehrfachdateiassembly](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [-Referenz (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-Verweis (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [Assemblys in .NET](../../../standard/assembly/index.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

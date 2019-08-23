@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877101"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957194"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen
 
@@ -43,7 +43,7 @@ Der Schwerpunkt dieser exemplarischen Vorgehensweise liegt nicht auf dem Code f�
 
 #### <a name="to-begin-making-the-application"></a>So beginnen Sie mit der Erstellung der Anwendung
 
-- Erstellen Sie eine neue Windows-Anwendung in Visual Basic oder Visual C#. Geben Sie dem Projekt den Namen **Pizzabestellung**. (Weitere Informationen finden Sie unter [Erstellen neuer Projektmappen und Projekte](/visualstudio/ide/creating-solutions-and-projects).)
+- Erstellen Sie eine neue Windows-Anwendung in Visual Basic C#oder Visual. Geben Sie dem Projekt den Namen **Pizzabestellung**. (Weitere Informationen finden Sie unter [Erstellen neuer Projektmappen und Projekte](/visualstudio/ide/creating-solutions-and-projects).)
 
 ## <a name="adding-the-controls-to-the-form"></a>Hinzufügen der Steuerelemente zum Formular
 
@@ -58,9 +58,9 @@ Wenn Sie Steuerelemente zu einem Formular hinzufügen, sollten Sie die folgenden
 
 - Stellen Sie sicher, dass jedes Label-Steuerelement, das ein TextBox-Steuerelement beschreibt, dem TextBox-Steuerelement in der Aktivierreihenfolge direkt vorangestellt ist.
 
-- Hinzufügen, mit dem Zeichen "&" eine Zugriffstaste der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft eines beliebigen Steuerelements, die der Benutzer navigieren kann soll.
+- Fügen Sie der- <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft eines beliebigen Steuer Elements, zu dem der Benutzer navigieren kann, eine Zugriffstaste mit dem Zeichen "&" hinzu.
 
-- Hinzufügen, mit dem Zeichen "&" eine Zugriffstaste der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der Bezeichnung, die einem Steuerelement vorangestellt, die der Benutzer ggf. ist zu navigieren. Legen Sie <xref:System.Windows.Forms.Label.UseMnemonic%2A>-Eigenschaft der Bezeichnungen auf `true` fest, sodass der Fokus auf das nächste Steuerelement in der Aktivierreihenfolge festgelegt wird, wenn der Benutzer die Zugriffstaste drückt.
+- Fügen Sie der- <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der Bezeichnung, die einem Steuerelement vorangestellt ist, zu dem der Benutzer navigieren kann, eine Zugriffstaste mit dem Zeichen "&" hinzu. Legen Sie <xref:System.Windows.Forms.Label.UseMnemonic%2A>-Eigenschaft der Bezeichnungen auf `true` fest, sodass der Fokus auf das nächste Steuerelement in der Aktivierreihenfolge festgelegt wird, wenn der Benutzer die Zugriffstaste drückt.
 
 - Fügen Sie allen Menüelementen Zugriffstasten hinzu.
 
@@ -68,7 +68,7 @@ Wenn Sie Steuerelemente zu einem Formular hinzufügen, sollten Sie die folgenden
 
 - Gehen Sie entsprechend der nachstehenden Beschreibung vor, um dem Formular die Steuerelemente hinzuzufügen und die Eigenschaften festzulegen. Am Ende der Tabelle finden Sie ein Bild, das ein Modell für die Anordnung der Steuerelemente auf dem Formular zeigt.
 
-   |Object|Eigenschaft|Wert|
+   |Objekt|Eigenschaft|Wert|
    |------------|--------------|-----------|
    |Form1|AccessibleDescription|Bestellformular|
    ||AccessibleName|Bestellformular|
@@ -140,13 +140,13 @@ Wenn Sie Steuerelemente zu einem Formular hinzufügen, sollten Sie die folgenden
    |MenuItem|Name|exitApp|
    ||Text|&Beenden|
 
-   Das Formular sieht in etwa wie in der folgenden Abbildung:
+   Das Formular sieht in etwa wie in der folgenden Abbildung aus:
 
-   ![Die pizzabestellformular mit einer Namen im Textfeld "und" Größe "und" Beläge Auswahl.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   ![Das Pizza Order-Formular mit dem Textfeld Name und der Auswahl Größe und Unterschrift.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
 ## <a name="supporting-high-contrast-mode"></a>Unterstützen des Modus für hohe Kontraste
 
-Der Modus für hohe Kontraste ist eine Windows-Systemeinstellung, die die Lesbarkeit verbessert, indem kontrastreiche Farben und Schriftgrade verwendet werden, die für sehbehinderte Benutzer vorteilhaft sind. Die <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Eigenschaft wird bereitgestellt, um zu bestimmen, ob der Modus für hohe Kontraste festgelegt ist.
+Der Modus für hohe Kontraste ist eine Windows-Systemeinstellung, die die Lesbarkeit verbessert, indem kontrastreiche Farben und Schriftgrade verwendet werden, die für sehbehinderte Benutzer vorteilhaft sind. Die <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> -Eigenschaft wird bereitgestellt, um zu bestimmen, ob der hoher Kontrast Modus festgelegt ist.
 
 Wenn "SystemInformation.HighContrast" gleich `true` ist, muss die Anwendung wie folgt vorgehen:
 
@@ -158,7 +158,7 @@ Wenn "SystemInformation.HighContrast" gleich `true` ist, muss die Anwendung wie 
 
 Die Anwendung muss beim Start die Einstellung von <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> überprüfen und danach auf das Systemereignis <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> reagieren. Das <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>-Ereignis wird immer dann ausgelöst, wenn sich der Wert von <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> geändert hat.
 
-In der vorliegenden Anwendung ist `lblCompanyName` das einzige Element, für das nicht die Systemeinstellungen für Farbe verwendet werden. Die <xref:System.Drawing.SystemColors> Klasse wird verwendet, um die farbeinstellungen der Bezeichnung in die vom Benutzer ausgewählten Systemfarben zu ändern.
+In der vorliegenden Anwendung ist `lblCompanyName` das einzige Element, für das nicht die Systemeinstellungen für Farbe verwendet werden. Die <xref:System.Drawing.SystemColors> -Klasse wird verwendet, um die Farbeinstellungen der Bezeichnung in die vom Benutzer ausgewählten Systemfarben zu ändern.
 
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>So aktivieren Sie den Modus für hohe Kontraste auf effektive Weise
 
@@ -303,7 +303,7 @@ In dieser Anwendung gibt es keine Informationen, die ausschließlich über eine 
 
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>So stellen Sie Informationen auf andere Weise als über Tonfolgen bereit
 
-1. Lassen Sie die Titelleiste mithilfe der Windows-API-Funktion "FlashWindow" blinken. Ein Beispiel für das Aufrufen von Windows-API-Funktionen, finden Sie unter [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+1. Lassen Sie die Titelleiste mithilfe der Windows-API-Funktion "FlashWindow" blinken. Ein Beispiel zum Abrufen von Windows-API-Funktionen finden [Sie unter Exemplarische Vorgehensweise: Aufrufen von Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)-APIs.
 
     > [!NOTE]
     > Möglicherweise hat der Benutzer den Windows-Dienst "Darstellungsoptionen" aktiviert, der ebenfalls bewirkt, dass das Fenster blinkt, wenn Systemsounds über die integrierten Lautsprecher des Computers wiedergegeben werden.

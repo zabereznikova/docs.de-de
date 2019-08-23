@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611475"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956047"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>
@@ -40,7 +40,7 @@ ms.locfileid: "69611475"
  Wenn Sie das XBAP-Projekt ausführen, wird es in einem Browserfenster geöffnet, nicht in einem eigenständigen Fenster. Wenn Sie die XBAP aus Visual Studio debuggen, wird die Anwendung mit der Internet Zonen Berechtigung ausgeführt und löst daher Sicherheits Ausnahmen aus, wenn diese Berechtigungen überschritten werden. Weitere Informationen finden Sie unter[ Sicherheit (WPF)](../security-wpf.md) und [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../wpf-partial-trust-security.md).  
   
 > [!NOTE]
->  Wenn Sie nicht mit Visual Studio entwickeln oder mehr über die Projektdateien erfahren möchten, finden Sie weitere Informationen unter [Building a WPF Application](building-a-wpf-application-wpf.md).  
+> Wenn Sie nicht mit Visual Studio entwickeln oder mehr über die Projektdateien erfahren möchten, finden Sie weitere Informationen unter [Building a WPF Application](building-a-wpf-application-wpf.md).  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>Bereitstellen einer XBAP  
@@ -174,7 +174,7 @@ ms.locfileid: "69611475"
 |Internet|Schlägt fehl mit „Vertrauenswürdigkeit nicht gewährt“|Signieren Sie die XBAP mit einem Zertifikat.|  
   
 > [!NOTE]
->  Das in der obigen Tabelle beschriebene Verhalten gilt für vollständig vertrauenswürdige XBAPs, die nicht dem ClickOnce Trusted-Bereitstellungsmodell folgen.  
+> Das in der obigen Tabelle beschriebene Verhalten gilt für vollständig vertrauenswürdige XBAPs, die nicht dem ClickOnce Trusted-Bereitstellungsmodell folgen.  
   
  Es wird empfohlen, dass Sie das ClickOnce Trusted-Bereitstellungsmodell zum Bereitstellen einer vollständig vertrauenswürdigen XBAP verwenden. Mit diesem Modell können Sie der XBAP unabhängig von der Sicherheitszone automatisch die volle Vertrauenswürdigkeit gewähren lassen, sodass der Benutzer nicht aufgefordert wird. Als Teil dieses Modells müssen Sie die Anwendung mit einem Zertifikat für einen vertrauenswürdigen Verleger signieren. Weitere Informationen finden Sie unter [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview) und [Introduction to Code Signing (Einführung in die Codesignatur)](https://go.microsoft.com/fwlink/?LinkId=166327).  
   

@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 87788906cfbf5b230c3b976395d9a40c655ae41a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: MT
+ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591659"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949207"
 ---
 # <a name="serialization-and-deserialization"></a>Serialisierung und Deserialisierung
-Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine, die <xref:System.Runtime.Serialization.DataContractSerializer>. Die <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt zwischen .NET Framework-Objekten und XML-Code in beide Richtungen. In diesem Thema wird die Funktionsweise des Serialisierungsprogramms erklärt.  
+Windows Communication Foundation (WCF) umfasst ein neues Serialisierungsmodul, <xref:System.Runtime.Serialization.DataContractSerializer>das. Der <xref:System.Runtime.Serialization.DataContractSerializer> übersetzt zwischen .NET Framework-Objekten und XML in beide Richtungen. In diesem Thema wird die Funktionsweise des Serialisierungsprogramms erklärt.  
   
- Beim Serialisieren von .NET Framework-Objekten, erkennt das Serialisierungsprogramm verschiedene serialisierungsprogrammiermodelle, einschließlich des neuen *Datenvertrag* Modell. Eine vollständige Liste der unterstützten Typen finden Sie unter [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Eine Einführung in Datenverträge finden Sie unter [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+ Beim Serialisieren von .NET Framework Objekten versteht das Serialisierungsprogramm eine Reihe von Programmier Modellen für die Serialisierung, einschließlich des neuen *Daten Vertrags* Modells. Eine vollständige Liste der unterstützten Typen finden Sie unter [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Eine Einführung in Datenverträge finden Sie unter [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- Beim Deserialisieren von XML verwendet das Serialisierungsprogramm die <xref:System.Xml.XmlReader> -Klasse und die <xref:System.Xml.XmlWriter> -Klasse. Sie unterstützt auch die <xref:System.Xml.XmlDictionaryReader> und <xref:System.Xml.XmlDictionaryWriter> zu aktivierenden erzeugt optimiertes XML in einigen Fällen, z. B. wenn mit dem WCF-binary XML formatieren.  
+ Beim Deserialisieren von XML verwendet das Serialisierungsprogramm die <xref:System.Xml.XmlReader> -Klasse und die <xref:System.Xml.XmlWriter> -Klasse. Außerdem unterstützt es <xref:System.Xml.XmlDictionaryReader> die <xref:System.Xml.XmlDictionaryWriter> Klassen und, damit es in einigen Fällen optimierte XML-Daten erzeugt, z. b. wenn das binäre WCF-XML-Format verwendet wird.  
   
- WCF umfasst auch ein zugehöriges Serialisierungsprogramm Namens der <xref:System.Runtime.Serialization.NetDataContractSerializer>. Die <xref:System.Runtime.Serialization.NetDataContractSerializer> ist vergleichbar mit der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Serialisierungsprogramme, da es auch .NET Framework-Typnamen als Teil der serialisierten Daten gibt. Es wird verwendet, wenn die Endpunkte, die die Serialisierung und die Deserialisierung durchführen, die gleichen Datentypen verwenden. Sowohl <xref:System.Runtime.Serialization.DataContractSerializer> als auch <xref:System.Runtime.Serialization.NetDataContractSerializer> sind von der gemeinsamen Basisklasse <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleitet.  
+ WCF enthält auch einen begleitenden Serialisierer, <xref:System.Runtime.Serialization.NetDataContractSerializer>den. Das <xref:System.Runtime.Serialization.NetDataContractSerializer> -Element ähnelt dem <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> und dem-Serialisierungstyp, da es auch .NET Framework Typnamen als Teil der serialisierten Daten ausgibt. Es wird verwendet, wenn die Endpunkte, die die Serialisierung und die Deserialisierung durchführen, die gleichen Datentypen verwenden. Sowohl <xref:System.Runtime.Serialization.DataContractSerializer> als auch <xref:System.Runtime.Serialization.NetDataContractSerializer> sind von der gemeinsamen Basisklasse <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleitet.  
   
 > [!WARNING]
->  Der <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert Zeichenfolgen mit Steuerzeichen mit einem Hexadezimalwert kleiner als 20 als XML-Entitäten. Dies kann ein Problem mit einem nicht-WCF-Client führen, wenn solche Daten an einen WCF-Dienst sendet.  
+>  Der <xref:System.Runtime.Serialization.DataContractSerializer> serialisiert Zeichenfolgen mit Steuerzeichen mit einem Hexadezimalwert kleiner als 20 als XML-Entitäten. Dies kann zu einem Problem mit einem nicht-WCF-Client führen, wenn solche Daten an einen WCF-Dienst gesendet werden.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>Erstellen einer DataContractSerializer-Instanz  
  Das Erstellen einer <xref:System.Runtime.Serialization.DataContractSerializer> -Instanz ist ein wichtiger Schritt. Sie können nach der Erstellung dieser Instanz keine Einstellungen mehr ändern.  
@@ -74,12 +74,12 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
  Diese Werte können als Zeichenfolgen oder als Instanzen der <xref:System.Xml.XmlDictionaryString> -Klasse übergeben werden, damit sie unter Verwendung des binären XML-Formats optimiert werden können.  
   
 ### <a name="setting-the-maximum-objects-quota"></a>Festlegen des maximalen Objektkontingents  
- Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `maxItemsInObjectGraph` -Parameter. Dieser Parameter legt die maximale Anzahl von Objekten fest, die das Serialisierungsprogramm in einem <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> -Methodenaufruf serialisieren oder deserialisieren kann. (Die Methode liest immer ein Stammobjekt, aber dieses Objekt kann in seinen Datenmembern andere Objekte enthalten. Diese Objekte können wiederum andere Objekte enthalten usw.) Der Standard ist 65536. Beachten Sie, dass beim Serialisieren und Deserialisieren von Arrays jeder Arrayeintrag als separates Objekt betrachtet wird. Beachten Sie zudem, dass einige Objekte über eine große Speicherdarstellung verfügen und dass dieses Kontingent allein daher möglicherweise nicht ausreicht, um einen Denial-of-Service-Angriff zu verhindern. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen zu Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Wenn Sie das Kontingent über die Standardeinstellung hinaus erhöhen müssen, müssen Sie dies unbedingt sowohl auf der sendenden (serialisierenden) als auch der empfangenden (deserialisierenden) Seite tun, da das Kontingent sowohl für das Lesen als auch das Schreiben von Daten gilt.  
+ Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `maxItemsInObjectGraph` -Parameter. Dieser Parameter legt die maximale Anzahl von Objekten fest, die das Serialisierungsprogramm in einem <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> -Methodenaufruf serialisieren oder deserialisieren kann. (Die Methode liest immer ein Stammobjekt, aber dieses Objekt kann in seinen Datenmembern andere Objekte enthalten. Diese Objekte können wiederum andere Objekte enthalten usw.) Der Standard ist 65536. Beachten Sie, dass beim Serialisieren und Deserialisieren von Arrays jeder Arrayeintrag als separates Objekt betrachtet wird. Beachten Sie zudem, dass einige Objekte über eine große Speicherdarstellung verfügen und dass dieses Kontingent allein daher möglicherweise nicht ausreicht, um einen Denial-of-Service-Angriff zu verhindern. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen für Daten](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md). Wenn Sie das Kontingent über die Standardeinstellung hinaus erhöhen müssen, müssen Sie dies unbedingt sowohl auf der sendenden (serialisierenden) als auch der empfangenden (deserialisierenden) Seite tun, da das Kontingent sowohl für das Lesen als auch das Schreiben von Daten gilt.  
   
 ### <a name="round-trips"></a>Roundtrips  
  Ein *Roundtrip* tritt auf, wenn ein Objekt in einem Vorgang deserialisiert und erneut serialisiert wird. Das heißt, Daten werden aus XML in eine Objektinstanz und wieder zurück in einen XML-Stream umgewandelt.  
   
- Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `ignoreExtensionDataObject` -Parameter, der standardmäßig auf `false` festgelegt ist. In diesem Standardmodus können Daten von einer neueren Version des Datenvertrags zu einer älteren Datenvertragsversion und wieder zurück zur neueren Version geschickt werden, ohne dass Datenverluste auftreten, sofern der Datenvertrag die <xref:System.Runtime.Serialization.IExtensibleDataObject> -Schnittstelle implementiert. Nehmen wir beispielsweise an, Version&#160;1 des `Person` -Datenvertrags enthält die Datenmember `Name` und `PhoneNumber` , und in Version&#160;2 wurde der Member `Nickname` hinzugefügt. Wenn `IExtensibleDataObject` implementiert wurde, dann werden beim Senden der Daten von Version 2 an Version 1 die `Nickname` -Daten gespeichert und beim erneuten Serialisieren der Daten wieder ausgegeben. Daher gehen in Roundtrips keine Daten verloren. Weitere Informationen finden Sie unter [aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) und [Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).  
+ Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `ignoreExtensionDataObject` -Parameter, der standardmäßig auf `false` festgelegt ist. In diesem Standardmodus können Daten von einer neueren Version des Datenvertrags zu einer älteren Datenvertragsversion und wieder zurück zur neueren Version geschickt werden, ohne dass Datenverluste auftreten, sofern der Datenvertrag die <xref:System.Runtime.Serialization.IExtensibleDataObject> -Schnittstelle implementiert. Nehmen wir beispielsweise an, Version&#160;1 des `Person` -Datenvertrags enthält die Datenmember `Name` und `PhoneNumber` , und in Version&#160;2 wurde der Member `Nickname` hinzugefügt. Wenn `IExtensibleDataObject` implementiert wurde, dann werden beim Senden der Daten von Version 2 an Version 1 die `Nickname` -Daten gespeichert und beim erneuten Serialisieren der Daten wieder ausgegeben. Daher gehen in Roundtrips keine Daten verloren. Weitere Informationen finden Sie unter [Forward-kompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md) und [Versions](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)Verwaltung von Daten Verträgen.  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>Bedenken hinsichtlich der Sicherheit und Schemavalidierung bei Roundtrips  
  Roundtrips beeinträchtigen möglicherweise die Sicherheit. Beispielsweise kann das Deserialisieren und Speichern von großen Mengen externer Daten ein Sicherheitsrisiko darstellen. Es kann Sicherheitsbedenken in Bezug auf die erneute Ausgabe dieser Daten geben, weil sich diese nicht verifizieren lassen, insbesondere wenn sie digital signiert sind. Beispielsweise könnte im obigen Szenario der Endpunkt mit Version&#160;1 einen `Nickname` -Wert signieren, der bösartige Daten enthält. Schließlich kann es Bedenken hinsichtlich der Schemavalidierung geben: Es kann wünschenswert sein, dass ein Endpunkt nur Daten, die genau dem angegebenen Datenvertrag entsprechen, und keine zusätzlichen Werte ausgibt. Im vorigen Beispiel besagt der Datenvertrag des Endpunkts mit Version&#160;1, dass dieser nur `Name` und `PhoneNumber`ausgibt, und bei Verwendung einer Schemavalidierung verursacht die Ausgabe des zusätzlichen `Nickname` -Werts einen Fehler.  
@@ -115,7 +115,7 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
   
 - Semantik. Gelegentlich ist es wichtig, die Tatsache zu vermerken, dass zwei Verweise auf das gleiche Objekt und nicht auf zwei identische Objekte zeigen.  
   
- Aus diesem Grund verfügen einige `DataContractSerializer` -Konstruktorüberladungen über den `preserveObjectReferences` -Parameter (dessen Standardwert lautet `false`). Wenn dieser Parameter auf festgelegt ist `true`, eine spezielle Methode Objektverweise, die nur WCF versteht, Codierung wird verwendet. Wenn der Parameter auf `true`festgelegt wird, sieht das XML-Codebeispiel etwa wie folgt aus.  
+ Aus diesem Grund verfügen einige `DataContractSerializer` -Konstruktorüberladungen über den `preserveObjectReferences` -Parameter (dessen Standardwert lautet `false`). Wenn dieser Parameter auf `true`festgelegt ist, wird eine spezielle Methode zur Codierung von Objekt verweisen verwendet, die nur WCF versteht. Wenn der Parameter auf `true`festgelegt wird, sieht das XML-Codebeispiel etwa wie folgt aus.  
   
 ```xml  
 <PurchaseOrder ser:id="1">  
@@ -124,10 +124,10 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
 </PurchaseOrder>  
 ```  
   
- Der Namespace "Ser" verweist auf den standardserialisierungsnamespace `http://schemas.microsoft.com/2003/10/Serialization/`. Jedes Datenelement wird nur einmal serialisiert und erhält eine ID-Nummer. Bei nachfolgender Verwendung wird ein Verweis auf die bereits serialisierten Daten erzeugt.  
+ Der "ser"-Namespace verweist auf den Standardserialisierungsnamespace `http://schemas.microsoft.com/2003/10/Serialization/`. Jedes Datenelement wird nur einmal serialisiert und erhält eine ID-Nummer. Bei nachfolgender Verwendung wird ein Verweis auf die bereits serialisierten Daten erzeugt.  
   
 > [!IMPORTANT]
->  Ist sowohl das Attribut "id" als auch das Attribut "ref" im `XMLElement`des Datenvertrags vorhanden, wird das Attribut "ref" berücksichtigt, und das Attribut "id" wird ignoriert.  
+> Ist sowohl das Attribut "id" als auch das Attribut "ref" im `XMLElement`des Datenvertrags vorhanden, wird das Attribut "ref" berücksichtigt, und das Attribut "id" wird ignoriert.  
   
  Es ist wichtig, die Einschränkungen dieses Modus zu kennen:  
   
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
 >  Wenn der `preserveObjectReferences` -Modus aktiviert ist, muss der `maxItemsInObjectGraph` -Wert unbedingt auf das richtige Kontingent festgelegt werden. Aufgrund der Art und Weise, wie Arrays in diesem Modus behandelt werden, ist es für Angreifer einfach, eine kleine bösartige Nachricht zu erstellen, die in zu einem hohen Speicherverbrauch führt, der nur durch das `maxItemsInObjectGraph` -Kontingent begrenzt wird.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Angeben eines Datenvertrag-Ersatzzeichens  
- Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `dataContractSurrogate` -Parameter, der möglicherweise auf `null`festgelegt ist. Andernfalls können Sie mit diesem Parameter ein *Datenvertrag-Ersatzzeichen*festlegen, d.&#160;h. einen Typ, der die <xref:System.Runtime.Serialization.IDataContractSurrogate> -Schnittstelle implementiert. Sie können dann mithilfe dieser Schnittstelle die Serialisierung und Deserialisierung anpassen. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
+ Einige `DataContractSerializer` -Konstruktorüberladungen verfügen über den `dataContractSurrogate` -Parameter, der möglicherweise auf `null`festgelegt ist. Andernfalls können Sie mit diesem Parameter ein *Datenvertrag-Ersatzzeichen*festlegen, d.&#160;h. einen Typ, der die <xref:System.Runtime.Serialization.IDataContractSurrogate> -Schnittstelle implementiert. Sie können dann mithilfe dieser Schnittstelle die Serialisierung und Deserialisierung anpassen. Weitere Informationen finden Sie unter [Data Contract Surrogates](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  
   
 ## <a name="serialization"></a>Serialisierung  
  Die folgenden Ausführungen gelten für alle von <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleiteten Klassen, einschließlich der <xref:System.Runtime.Serialization.DataContractSerializer> -Klasse und der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Klasse.  
@@ -149,7 +149,7 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
 ### <a name="simple-serialization"></a>Einfache Serialisierung  
  Die grundlegendste Möglichkeit, ein Objekt zu serialisieren, besteht darin, es der <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> -Methode zu übergeben. Es gibt drei Überladungen, jeweils eine zum Schreiben in ein <xref:System.IO.Stream>-Objekt, ein <xref:System.Xml.XmlWriter>-Objekt oder ein <xref:System.Xml.XmlDictionaryWriter>-Objekt. Bei Verwendung der <xref:System.IO.Stream> -Überladung enthält die Ausgabe XML in UTF-8-Codierung. Bei Verwendung der <xref:System.Xml.XmlDictionaryWriter> -Überladung optimiert das Serialisierungsprogramm seine Ausgabe für binäres XML.  
   
- Bei Verwendung der <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> Methode, die das Serialisierungsprogramm den Standardnamen und den Namespace für das Wrapperelement verwendet und schreibt ihn zusammen mit dem Inhalt (siehe Abschnitt "Angeben der standardmäßigen Stamm-Namen und Namespace" oben).  
+ Bei Verwendung der <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> -Methode verwendet das Serialisierungsprogramm den Standardnamen und-Namespace für das Wrapper Element und schreibt es zusammen mit dem Inhalt (Weitere Informationen finden Sie im vorherigen Abschnitt "angeben des Standard Stamms und Namespace").  
   
  Im folgenden Codebeispiel wird der Schreibvorgang mit <xref:System.Xml.XmlDictionaryWriter>veranschaulicht.  
   
@@ -169,7 +169,7 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
  Verwenden Sie die Methoden <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A>, <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A>und <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> , um das Endelement und den Inhalt des Objekts zu schreiben bzw. das Wrapperelement zu schließen.  
   
 > [!NOTE]
->  Es sind keine <xref:System.IO.Stream> -Überladungen für diese Methoden verfügbar.  
+> Es sind keine <xref:System.IO.Stream> -Überladungen für diese Methoden verfügbar.  
   
  Diese schrittweise Serialisierung wird üblicherweise in zwei Fällen eingesetzt. Erstens wird sie verwendet, um Inhalte wie Attribute oder Kommentare zwischen `WriteStartObject` und `WriteObjectContent`einzufügen. Dies wird im folgenden Beispiel veranschaulicht.  
   
@@ -200,7 +200,7 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
 ```  
   
 > [!NOTE]
->  Die Verwendung der schrittweisen Serialisierung kann in XML resultieren, das keinem gültigen Schema entspricht.  
+> Die Verwendung der schrittweisen Serialisierung kann in XML resultieren, das keinem gültigen Schema entspricht.  
   
 ## <a name="deserialization"></a>Deserialisierung  
  Die folgenden Ausführungen gelten für alle von <xref:System.Runtime.Serialization.XmlObjectSerializer>abgeleiteten Klassen, einschließlich der <xref:System.Runtime.Serialization.DataContractSerializer> -Klasse und der <xref:System.Runtime.Serialization.NetDataContractSerializer> -Klasse.  
@@ -221,12 +221,12 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
   
  Beachten Sie, dass Sie Attribute dieses Wrapperelements lesen können, bevor der Reader an `ReadObject`übergeben wird.  
   
- Bei Verwendung einer der einfachen `ReadObject` Überladungen, sucht das Deserialisierungsprogramm für den Standardnamen und den Namespace für das Wrapperelement (Siehe den vorangehenden Abschnitt, "Angeben der standardmäßigen Stamm-Namen und Namespace") und löst eine Ausnahme aus, wenn eine unbekannte gefunden Element. Im vorstehenden Beispiel wird das Wrapperelement `<Person>` erwartet. Die <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> -Methode wird aufgerufen, um zu überprüfen, ob der Reader auf einem Element mit dem erwarteten Namen positioniert wurde.  
+ Wenn Sie eine der einfachen `ReadObject` über Ladungen verwenden, sucht das Deserialisierungsprogramm im Wrapper Element nach dem Standardnamen und-Namespace (siehe den vorherigen Abschnitt "angeben des standardmäßigen Stamm namens und Namespace") und löst eine Ausnahme aus, wenn ein unbekannter gefunden wird. gewisses. Im vorstehenden Beispiel wird das Wrapperelement `<Person>` erwartet. Die <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> -Methode wird aufgerufen, um zu überprüfen, ob der Reader auf einem Element mit dem erwarteten Namen positioniert wurde.  
   
  Es gibt eine Möglichkeit, diese Namensüberprüfung des Wrapperelements zu deaktivieren. Einige Überladungen der `ReadObject` -Methode akzeptieren den Booleschen Parameter `verifyObjectName`, der standardmäßig auf `true` festgelegt ist. Wenn der Parameter auf `false`festgelegt wird, werden Name und Namespace des Wrapperelements ignoriert. Dies ist beim Lesen von XML hilfreich, das mit dem oben beschriebenen schrittweisen Serialisierungsmechanismus geschrieben wurde.  
   
 ## <a name="using-the-netdatacontractserializer"></a>Verwenden von NetDataContractSerializer  
- Der Hauptunterschied zwischen der `DataContractSerializer` und die <xref:System.Runtime.Serialization.NetDataContractSerializer> ist, die die `DataContractSerializer` Datenvertragsnamen arbeitet, verwendet, während die `NetDataContractSerializer` gibt vollständige .NET Framework-Assembly und Typ-Namen im serialisierten XML. Dies bedeutet, dass die Endpunkte für Serialisierung und Deserialisierung genau die gleichen Datentypen verwenden müssen. Folglich muss der Mechanismus der bekannten Typen nicht in Verbindung mit `NetDataContractSerializer` verwendet werden, weil stets bekannt ist, welche Typen im Einzelnen deserialisiert werden müssen.  
+ `DataContractSerializer` Der Hauptunterschied zwischen <xref:System.Runtime.Serialization.NetDataContractSerializer> und besteht darin, dass der `DataContractSerializer` Daten Vertrags Namen verwendet, während der `NetDataContractSerializer` vollständige .NET Framework Assembly und Typnamen in der serialisierten XML ausgibt. Dies bedeutet, dass die Endpunkte für Serialisierung und Deserialisierung genau die gleichen Datentypen verwenden müssen. Folglich muss der Mechanismus der bekannten Typen nicht in Verbindung mit `NetDataContractSerializer` verwendet werden, weil stets bekannt ist, welche Typen im Einzelnen deserialisiert werden müssen.  
   
  Es können jedoch verschiedene Probleme auftreten:  
   
@@ -234,11 +234,11 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
   
 - Versionskontrolle. Die Angabe vollständiger Typ- und Assemblynamen im XML schränkt die Verfahren zur Versionskontrolle der Typen schwerwiegend ein. Folgendes kann nicht geändert werden: Typnamen, Namespaces, Assemblynamen und Assemblyversionen. Wenn die <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> -Eigenschaft oder der Konstruktorparameter auf <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> statt den Standardwert <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> festgelegt wird, sind Änderungen der Assemblyversion, jedoch keine generischen Parametertypen zulässig.  
   
-- Interoperabilität. Da in der XML-Namen von .NET Framework-Typ und die Assembly enthalten sind, können keine andere Plattformen als .NET Framework die resultierenden Daten zugreifen.  
+- Interoperabilität. Da .NET Framework Typ-und Assemblynamen in der XML-Datei enthalten sind, können andere Plattformen als die .NET Framework nicht auf die resultierenden Daten zugreifen.  
   
 - Leistung. Die Ausgabe von Typ- und Assemblynamen vergrößert den Umfang des resultierenden XML bedeutend.  
   
- Dieser Mechanismus ähnelt Binär- oder SOAP-Serialisierung, die von .NET Framework-Remoting verwendet (insbesondere die <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> und <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>).  
+ Dieser Mechanismus ähnelt der binären Serialisierung oder der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>SOAP-Serialisierung, die von .NET Framework Remoting verwendet wird (insbesondere von und).  
   
  Die Verwendung von `NetDataContractSerializer` unterscheidet sich von der Verwendung von `DataContractSerializer`lediglich in folgender Hinsicht:  
   
@@ -254,16 +254,16 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
   
 - Die <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> -Methode und die <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> -Methode sind Aliase für die <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> -Methode bzw. die <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> -Methode. Sie sollen ein konsistenteres Programmiermodell für die binäre Serialisierung oder SOAP-Serialisierung bereitstellen.  
   
- Weitere Informationen zu diesen Funktionen finden Sie unter [Binärserialisierung](../../../../docs/standard/serialization/binary-serialization.md).  
+ Weitere Informationen zu diesen Funktionen finden Sie unter [binäre Serialisierung](../../../standard/serialization/binary-serialization.md).  
   
  Die von der `NetDataContractSerializer` -Klasse und der `DataContractSerializer` -Klasse verwendeten XML-Formate sind normalerweise nicht kompatibel. Das heißt, es ist nicht möglich, Daten mit einem dieser Serialisierungsprogramme zu serialisieren und sie mit dem anderen Serialisierungsprogramm zu deserialisieren.  
   
- Beachten Sie außerdem, dass die `NetDataContractSerializer` gibt den vollständigen Typ- und Assemblyinformationen Namen von .NET Framework für jeden Knoten im Objektdiagramm enthalten keine. Diese Informationen werden nur im Fall möglicher Mehrdeutigkeiten ausgegeben. Das heißt, sie werden auf der Stammobjektebene und für polymorphe Fälle ausgegeben.  
+ Beachten Sie außerdem, dass `NetDataContractSerializer` nicht den vollständigen .NET Framework-und Assemblynamen für jeden Knoten im Objekt Diagramm ausgibt. Diese Informationen werden nur im Fall möglicher Mehrdeutigkeiten ausgegeben. Das heißt, sie werden auf der Stammobjektebene und für polymorphe Fälle ausgegeben.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>
-- [Binäre Serialisierung](../../../../docs/standard/serialization/binary-serialization.md)
+- [Binäre Serialisierung](../../../standard/serialization/binary-serialization.md)
 - [Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

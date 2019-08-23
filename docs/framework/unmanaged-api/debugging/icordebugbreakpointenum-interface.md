@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fd42f13f699b0b79fd69311186f2b2ca0c9998a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8192bd7ccaebab78158f11adb79509031132ecd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645297"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937021"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum-Schnittstelle
 
-ICorDebugEnum-Methoden implementiert, und listet ICorDebugBreakpoint-Arrays.  
+Implementiert ICorDebugEnum-Methoden und listet ICorDebugBreakpoint-Arrays auf.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugBreakpoint` Instanzen aus der Enumeration, die an der aktuellen Position ab.|  
+|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugBreakpoint` -Instanzen ab der aktuellen Position aus der-Enumeration ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 > [!NOTE]
->  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
+> Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: 2be428f0ae83596a4398fc9830af40d05f6ab191
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e6ff29e7d292a291c2cb4984a80c5a0927f18d2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638655"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934980"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM-Anwendungen
-Windows Communication Foundation (WCF) bietet die Entwickler von verwaltetem Code eine reichhaltige Umgebung zum Erstellen von verbundenen Anwendungen. Jedoch wenn Sie eine erhebliche Investition in nicht verwaltetem Code mit COM-basierten haben und nicht migrieren möchten, können Sie weiterhin WCF-Webdienste direkt in den vorhandenen Code integrieren mit den WCF-Dienstmoniker. Der Dienstmoniker kann in vielen verschiedenen COM-basierten Entwicklungsumgebungen wie Office VBA, Visual Basic 6.0 oder Visual C++ 6.0 verwendet werden.  
+Windows Communication Foundation (WCF) stellt dem Entwickler von verwaltetem Code eine umfangreiche Umgebung zum Erstellen verbundener Anwendungen zur Verfügung. Wenn Sie jedoch beträchtliche Investitionen in nicht verwalteten COM-basierten Code haben und nicht migrieren möchten, können Sie WCF-Webdienste mit dem WCF-Dienstmoniker weiterhin direkt in Ihren vorhandenen Code integrieren. Der Dienstmoniker kann in vielen verschiedenen COM-basierten Entwicklungsumgebungen wie Office VBA, Visual Basic 6.0 oder Visual C++ 6.0 verwendet werden.  
   
 > [!NOTE]
->  Der Dienstmoniker verwendet einen WCF-Kommunikationskanal für die gesamte Kommunikation. Die Sicherheits- und Identitätsmechanismen für diesen Channel unterscheiden sich von den Mechanismen in COM- und DCOM-Standardproxys. Darüber hinaus ist, da der Dienstmoniker einen WCF-Kommunikationskanal das Standardtimeout verwendet eine Minute, bis alle Aufrufe.  
+> Der Dienstmoniker verwendet einen WCF-Kommunikationskanal für die gesamte Kommunikation. Die Sicherheits- und Identitätsmechanismen für diesen Channel unterscheiden sich von den Mechanismen in COM- und DCOM-Standardproxys. Da der Dienstmoniker außerdem einen WCF-Kommunikationskanal verwendet, beträgt der Standard Timeout Zeitraum eine Minute für alle Aufrufe.  
   
- Der Dienstmoniker wird verwendet, mit der `GetObject` Funktion, die den nicht verwalteten Entwickler einen stark typisierten, COM-spezifischen Ansatz zum Aufrufen von WCF-Webdiensten bereit. Dies erfordert eine lokale, COM-sichtbare Definition der WCF-Web-Dienstvertrag und die Bindung, die verwendet werden soll. Wie andere WCF-Clients muss der Dienstmoniker einen typisierten Kanal für den Dienst erstellen, obwohl diese kanalerstellung transparent für den COM-Programmierer, beim ersten Methodenaufruf auftritt.  
+ Der Dienstmoniker wird mit der `GetObject` -Funktion verwendet, um dem nicht verwalteten Entwickler einen stark typisierten, com-spezifischen Ansatz zum Aufrufen von WCF-Webdiensten zur Verfügung zu stellen. Hierfür ist eine lokale, com-sichtbare Definition des WCF-Webdienst Vertrags und die zu verwendende Bindung erforderlich. Wie andere WCF-Clients muss der Dienstmoniker einen typisierten Kanal für den Dienst erstellen, obwohl diese Kanal Erstellung für den com-Programmierer beim ersten Methodenaufruf transparent erfolgt.  
   
- Enthält, die auch andere WCF-Clients, wenn den Moniker verwenden Geben Sie Anwendungen, die Adresse, Bindung und Vertrag für die Kommunikation mit einem Dienst. Der Vertrag kann mithilfe der folgenden Methoden spezifiziert werden:  
+ Gemeinsam mit anderen WCF-Clients geben Anwendungen bei der Verwendung des Monikers die Adresse, die Bindung und den Vertrag für die Kommunikation mit einem Dienst an. Der Vertrag kann mithilfe der folgenden Methoden spezifiziert werden:  
   
 - Typisierter Vertrag: Der Vertrag wird auf dem Clientcomputer als für COM sichtbarer Typ registriert.  
   
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) bietet die Entwickler von verwaltetem Cod
 |`serializer`|Geben Sie entweder die Verwendung des "XML"- oder des "datacontract"-Serialisierungsprogramms an.|  
   
 > [!NOTE]
->  Selbst bei Verwendung mit vollständig COM-basierten Clients erfordert der Dienstmoniker, WCF und .NET Framework 2.0 unterstützen, auf dem Clientcomputer installiert werden. Außerdem müssen Clientanwendungen, die den Dienstmoniker verwenden, die entsprechende Version der .NET Framework-Laufzeit laden. Bei Verwendung des Monikers innerhalb von Office-Anwendungen ist möglicherweise eine Konfigurationsdatei erforderlich, um sicherzustellen, dass die richtige Framework-Version geladen ist. In Excel muss beispielsweise der folgende Text in einer Datei mit dem Namen Excel.exe.config in dasselbe Verzeichnis abgelegt werden wie die Excel.exe-Datei:  
+> Selbst bei Verwendung mit vollständig com-basierten Clients muss der Dienstmoniker WCF und die unterstützende .NET Framework 2,0 auf dem Client Computer installieren. Außerdem müssen Clientanwendungen, die den Dienstmoniker verwenden, die entsprechende Version der .NET Framework-Laufzeit laden. Bei Verwendung des Monikers innerhalb von Office-Anwendungen ist möglicherweise eine Konfigurationsdatei erforderlich, um sicherzustellen, dass die richtige Framework-Version geladen ist. In Excel muss beispielsweise der folgende Text in einer Datei mit dem Namen Excel.exe.config in dasselbe Verzeichnis abgelegt werden wie die Excel.exe-Datei:  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   

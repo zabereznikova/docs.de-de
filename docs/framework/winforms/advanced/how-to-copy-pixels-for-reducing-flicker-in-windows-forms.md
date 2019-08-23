@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a18539153c64a5059d8079f6e245115b026bb91
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950149"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Vorgehensweise: Kopieren von Pixeln zum Vermindern des Flackerns in Windows Forms
-Wenn Sie eine einfache Grafik animieren, können Benutzer manchmal Flimmern oder andere unerwünschte visuelle Effekte auftreten. Eine Möglichkeit zum Beschränken dieses Problems ist, einen "Bitblt" auf die Grafik verwenden. BitBlt ist die "Bitblocktransfer" der Farbdaten aus einem Ursprung Rechteck aus Pixeln einen Ziel-Rechteck aus Pixeln.  
+Wenn Sie eine einfache Grafik animieren, können Benutzer mitunter Flimmern oder andere unerwünschte visuelle Effekte erkennen. Eine Möglichkeit, dieses Problem einzuschränken, besteht darin, einen "Bitblt"-Prozess in der Grafik zu verwenden. BitBLT ist die "Bitblock Übertragung" der Farbdaten von einem Ursprungs Rechteck von Pixeln bis hin zu einem Ziel Rechteck von Pixeln.  
   
- Mit Windows Forms, Bitblt erfolgt mithilfe der <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode der <xref:System.Drawing.Graphics> Klasse. In den Parametern der Methode geben Sie an der Quelle und Ziel (als Punkt), die Größe des Bereichs für den kopiert werden und das Graphics-Objekt verwendet, um die neue Form zu zeichnen.  
+ Mit Windows Forms wird BitBLT mithilfe der <xref:System.Drawing.Graphics.CopyFromScreen%2A> -Methode <xref:System.Drawing.Graphics> der-Klasse erreicht. In den Parametern der-Methode geben Sie die Quelle und das Ziel (als Punkte), die Größe des zu kopierenden Bereichs und das Grafik Objekt an, das zum Zeichnen der neuen Form verwendet wird.  
   
- Im folgenden Beispiel wird eine Form gezeichnet wird, auf dem Formular in der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Anschließend wird die <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode wird verwendet, um die Form zu duplizieren.  
+ Im folgenden Beispiel wird eine Form im <xref:System.Windows.Forms.Control.Paint> -Ereignishandler auf dem Formular gezeichnet. Anschließend wird die <xref:System.Drawing.Graphics.CopyFromScreen%2A> -Methode verwendet, um die Form zu duplizieren.  
   
 > [!NOTE]
->  Festlegen des Formulars <xref:System.Windows.Forms.Control.DoubleBuffered%2A> Eigenschaft `true` veranlasst grafikbasierte-Code in die <xref:System.Windows.Forms.Control.Paint> Ereignis werden doppelt gepufferte. Obwohl dies nicht über aller erkennbaren Leistungsgewinne besitzt, wenn Sie den folgenden Code verwenden, ist es etwas zu bedenken, bei der Arbeit mit komplexeren grafikbearbeitung Code.  
+> Das Festlegen der- <xref:System.Windows.Forms.Control.DoubleBuffered%2A> Eigenschaft des `true` Formulars auf führt dazu, dass Grafik basierter <xref:System.Windows.Forms.Control.Paint> Code im-Ereignis doppelt gepuffert wird. Obwohl dies bei der Verwendung des folgenden Codes keine erkennbaren Leistungssteigerungen hat, ist es bei der Arbeit mit komplexeren Grafik Bearbeitungs Codes zu beachten.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -60,7 +60,7 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Der obige Code ausgeführt wird, in der Form <xref:System.Windows.Forms.Control.Paint> -Ereignishandler so, dass die Grafiken erhalten bleiben, wenn das Formular neu gezeichnet wird. Rufen Sie daher nicht Grafiken bezogene Methoden in der <xref:System.Windows.Forms.Form.Load> -Ereignishandler, da der gezeichnete Inhalt nicht neu gezeichnet wird, wenn das Formular vergrößert bzw. verkleinert oder durch eine andere Form verdeckt.  
+ Der obige Code wird im- <xref:System.Windows.Forms.Control.Paint> Ereignishandler des Formulars ausgeführt, sodass die Grafiken persistent bleiben, wenn das Formular neu gezeichnet wird. Daher sollten Sie keine Grafik bezogenen Methoden im <xref:System.Windows.Forms.Form.Load> -Ereignishandler aufzurufen, da der gezeichnete Inhalt nicht neu gezeichnet wird, wenn die Größe des Formulars geändert oder von einem anderen Formular verdeckt wird.  
   
 ## <a name="see-also"></a>Siehe auch
 

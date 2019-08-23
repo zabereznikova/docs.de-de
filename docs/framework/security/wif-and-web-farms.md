@@ -3,12 +3,12 @@ title: WIF und Webfarmen
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 656e7b116b9da68dbb38a5a2fc3d1ed90fda576a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592276"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967189"
 ---
 # <a name="wif-and-web-farms"></a>WIF und Webfarmen
 Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von einer Anwendung der vertrauenden Seite zu sichern, die in einer Webfarm bereitgestellt wird, müssen Sie bestimmte Schritte durchführen, um sicherzustellen, dass WIF Token von Instanzen der Anwendung der vertrauenden Seite verarbeiten kann. Diese Anwendung wird auf verschiedenen Computern in der Farm ausgeführt. Diese Verarbeitung beinhaltet die Überprüfung von Signaturen der Sitzungstokens, die Verschlüsselung, Entschlüsselung und Zwischenspeicherung der Sitzungstoken, und die Erkennung von wiedergegebenen Sicherheitstoken.  
@@ -55,10 +55,10 @@ Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von eine
 - Wenn Ihre Anwendung wiedergegebene Token erkennt, müssen Sie einer ähnlichen Strategie für verteilte Zwischenspeicher für den Zwischenspeicher der wiedergegebene Token folgen. Leiten Sie von <xref:System.IdentityModel.Tokens.TokenReplayCache> ab, und verweisen Sie auf den Caching-Dienst für wiedergegebene Token im Konfigurationselement [\<TokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
->  Alle Beispiel-XML und Code in diesem Thema stammt aus dem [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) Beispiel.  
+> Der gesamte XML-Beispielcode und der Code in diesem Thema stammen aus dem Beispiel [claimsawarewebfarm](https://go.microsoft.com/fwlink/?LinkID=248408) .  
   
 > [!IMPORTANT]
->  Die Beispiele in diesem Thema werden unverändert bereitgestellt, und sollen nicht ohne Änderungen im Produktionscode verwendet werden.  
+> Die Beispiele in diesem Thema werden unverändert bereitgestellt, und sollen nicht ohne Änderungen im Produktionscode verwendet werden.  
   
 <a name="BKMK_TheWCFCachingService"></a>   
 ## <a name="the-wcf-caching-service"></a>Der WCF-Caching-Dienst  

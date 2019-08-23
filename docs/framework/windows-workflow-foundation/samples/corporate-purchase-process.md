@@ -2,23 +2,23 @@
 title: Unternehmenseinkaufsprozess
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d019c1915e691fcba00fa8f1b0884a898ce02fab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876171"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951529"
 ---
 # <a name="corporate-purchase-process"></a>Unternehmenseinkaufsprozess
 In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.
 
- Dieses Beispiel enthält eine ASP.NET-Anwendung für den Client, die ermöglicht, die Interaktion mit dem Prozess als verschiedene Beteiligte (als ursprünglicher anforderer oder eines bestimmten Anbieters).
+ Dieses Beispiel enthält eine ASP.NET-Client Anwendung, die die Interaktion mit dem Prozess als verschiedene Teilnehmer ermöglicht (als ursprünglicher Anforderer oder bestimmter Hersteller).
 
 ## <a name="requirements"></a>Anforderungen
 
 - Visual Studio 2012.
 
-- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 ## <a name="demonstrates"></a>Veranschaulicht
 
@@ -36,19 +36,19 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 
 - Nachverfolgung
 
-- Hosten von [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in verschiedenen Clients (Webanwendungen mit ASP.NET und WinForms-Anwendungen).
+- Hosting [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in verschiedenen Clients (ASP.NET Webanwendungen und WinForms-Anwendungen).
 
 > [!IMPORTANT]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+> Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Beschreibung des Vorgangs  
- Dieses Beispiel zeigt eine Implementierung eines Programms Windows Workflow Foundation (WF), um die Angebote von Anbietern für ein allgemeines Unternehmen erfasst.  
+ Dieses Beispiel zeigt eine Implementierung eines Windows Workflow Foundation-Programms (WF) zum Sammeln von Vorschlägen von Anbietern für ein generisches Unternehmen.  
   
 1. Ein Mitarbeiter des Unternehmens X erstellt eine Ausschreibung (Request for Proposal, RFP).  
   
@@ -82,7 +82,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 |-------------|-----------------|  
 |Allgemeine|Die im Vorgang verwendeten Entitätsobjekte (Ausschreibung, Anbieter und Angebot).|  
 |WfDefinition|Die Definition des Vorgangs (als [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Programm) und der Host (`PurchaseProcessHost`), die von den Clientanwendungen zum Erstellen und Verwenden von Instanzen des Einkaufsworkflows verwendet werden.|  
-|WebClient|Eine ASP.NET-Clientanwendung, die Benutzern das Erstellen und die Instanzen des Einkaufsvorgangs teilnehmen kann. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
+|WebClient|Eine ASP.NET-Client Anwendung, mit der die Benutzer Instanzen des Einkaufs Vorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
 |WinFormsClient|Eine Windows Forms-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
@@ -127,7 +127,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 |Formular|Beschreibung|  
 |-|-|  
 |NewRfp|Erstellt und sendet eine neue Ausschreibung.|  
-|ShowProposals|Zeigt alle aktuellen und abgeschlossenen Ausschreibungen an. **Hinweis**:  Müssen Sie möglicherweise klicken Sie auf die **aktualisieren** Schaltfläche in der Benutzeroberfläche, um die Änderungen in diesem Bildschirm angezeigt wird, nachdem Sie erstellen oder ändern eine Ausschreibung.|  
+|ShowProposals|Zeigt alle aktuellen und abgeschlossenen Ausschreibungen an. **Hinweis**:  Sie müssen möglicherweise auf die Schaltfläche **Aktualisieren** in der Benutzeroberfläche klicken, um Änderungen in diesem Bildschirm anzuzeigen, nachdem Sie eine Anforderung für einen Vorschlag erstellt oder geändert haben.|  
 |SubmitProposal|Ruft im Rahmen einer bestimmten Ausschreibung ein Angebot eines Anbieters ab. Dieses Fenster wird nur von Anbietern verwendet.|  
 |ViewRfp|Zeigt alle Informationen über eine Ausschreibung an (eingegangene Angebote, Daten, Werte usw.). Dieses Fenster wird nur vom Ersteller der Ausschreibung verwendet.|  
   
@@ -143,11 +143,11 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1. Öffnen Sie mit Visual Studio 2010 die PurchaseProcess.sln-Projektmappendatei.  
+1. Öffnen Sie mit Visual Studio 2010 die Projektmappendatei "PurchaseProcess. sln".  
   
-2. Öffnen Sie zum Ausführen des webclientprojekts **Projektmappen-Explorer** mit der rechten Maustaste die **WebClient** Projekt. Wählen Sie **als Startprojekt festlegen**.  
+2. Um das WebClient Projekt auszuführen, öffnen Sie **Projektmappen-Explorer** , und klicken Sie mit der rechten Maustaste auf das **WebClient** Projekt. Wählen Sie **als Startprojekt festlegen**aus.  
   
-3. Öffnen Sie zum Ausführen der WinForms-Clientprojekts **Projektmappen-Explorer** mit der rechten Maustaste die **WinForms Client** Projekt. Wählen Sie **als Startprojekt festlegen**.  
+3. Um das WinForms-Client Projekt auszuführen, öffnen Sie **Projektmappen-Explorer** , und klicken Sie mit der rechten Maustaste auf das **WinForms-Client** Projekt. Wählen Sie **als Startprojekt festlegen**aus.  
   
 4. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
@@ -155,20 +155,20 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 ### <a name="web-client-options"></a>Webclientoptionen  
   
-- **Erstellen Sie eine neue Ausschreibung**: Erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
+- **Erstellen Sie eine neue RFP**-Datei: Erstellt eine neue Anforderung für Vorschläge (RFP) und startet einen Workflow für den Kaufvorgang.  
   
-- **Aktualisieren Sie**: Aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
+- **Aktualisieren**: Aktualisiert die Liste aktiver und fertiggestelltes RFPs im Hauptfenster.  
   
-- **Ansicht**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
+- **Ansicht**: Zeigt den Inhalt einer vorhandenen RFP-Datei an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
   
-- Zeigen Sie als an: Der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.  
+- Anzeigen als: Der Benutzer kann mit verschiedenen Identitäten auf den RFP zugreifen, indem er den gewünschten Teilnehmer im Kombinations Feld **anzeigen als** im aktiven RFPs-Raster auswählt.  
   
 ### <a name="winforms-client-options"></a>WinForms-Clientoptionen  
   
-- **Ausschreibung erstellen**: Erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
+- **Erstellen von RFP**: Erstellt eine neue Anforderung für Vorschläge (RFP) und startet einen Workflow für den Kaufvorgang.  
   
-- **Aktualisieren Sie**: Aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
+- **Aktualisieren**: Aktualisiert die Liste aktiver und fertiggestelltes RFPs im Hauptfenster.  
   
-- **Ausschreibung anzeigen**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
+- **RFP anzeigen**: Zeigt den Inhalt einer vorhandenen RFP-Datei an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
   
-- **Herstellen einer Verbindung als**: Der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.
+- **Verbinden als**: Der Benutzer kann mit verschiedenen Identitäten auf den RFP zugreifen, indem er den gewünschten Teilnehmer im Kombinations Feld **anzeigen als** im aktiven RFPs-Raster auswählt.

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bestimmen der Mausklick ausgewählten TreeView-Knotens (Windows Forms)'
+title: 'Vorgehensweise: Ermitteln, auf welchen TreeView-Knoten geklickt wurde (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-ms.openlocfilehash: 71f13c7b160822c92475d4d03e923b40d4f0454d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93158daf987e2f19516b8fb3abf80bfe79a12c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771045"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967345"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Vorgehensweise: Bestimmen der Mausklick ausgewählten TreeView-Knotens (Windows Forms)
-Bei der Arbeit mit der Windows Forms <xref:System.Windows.Forms.TreeView> -Steuerelement, eine häufige Aufgabe besteht darin zu bestimmen, welcher Knoten auf den geklickt wurde, und entsprechend reagieren.  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a>Vorgehensweise: Ermitteln, auf welchen TreeView-Knoten geklickt wurde (Windows Forms)
+Beim Arbeiten mit dem Windows Forms <xref:System.Windows.Forms.TreeView> -Steuerelement besteht eine gängige Aufgabe darin, zu ermitteln, auf welchen Knoten geklickt wurde, und entsprechend zu reagieren.  
   
-### <a name="to-determine-which-treeview-node-was-clicked"></a>Zum Ermitteln des per Mausklick ausgewählten TreeView-Knotens  
+### <a name="to-determine-which-treeview-node-was-clicked"></a>So bestimmen Sie, auf welchen TreeView-Knoten geklickt wurde  
   
-1. Verwenden der <xref:System.EventArgs> Objekts, das einen Verweis auf das geklickt wurde Node-Objekt zurückgegeben.  
+1. Verwenden Sie <xref:System.EventArgs> das-Objekt, um einen Verweis auf das angeklickte Knoten Objekt zurückzugeben.  
   
-2. Bestimmen, welche Knoten geklickt wurde, indem Sie überprüfen die <xref:System.Windows.Forms.TreeViewEventArgs> -Klasse, die Daten, die im Zusammenhang mit der das Ereignis enthält.  
+2. Bestimmen Sie, auf welchen Knoten geklickt wurde <xref:System.Windows.Forms.TreeViewEventArgs> , indem Sie die-Klasse überprüfen, die auf das ereignisbezogene Daten enthält.  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -56,7 +56,7 @@ Bei der Arbeit mit der Windows Forms <xref:System.Windows.Forms.TreeView> -Steue
     ```  
   
     > [!NOTE]
-    >  Als Alternative können Sie die <xref:System.Windows.Forms.MouseEventArgs> von der <xref:System.Windows.Forms.Control.MouseDown> oder <xref:System.Windows.Forms.Control.MouseUp> abzurufenden Ereignisses die <xref:System.Drawing.Point.X%2A> und <xref:System.Drawing.Point.Y%2A> -Koordinatenwerte von der <xref:System.Drawing.Point> , an der geklickt wurde. Verwenden Sie dann die <xref:System.Windows.Forms.TreeView> des Steuerelements <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> Methode, um zu bestimmen, welcher Knoten geklickt wurde.  
+    > Als Alternative können <xref:System.Windows.Forms.MouseEventArgs> Sie den <xref:System.Windows.Forms.Control.MouseDown> des-Ereignisses oder <xref:System.Windows.Forms.Control.MouseUp> das-Ereignis verwenden <xref:System.Drawing.Point> , um <xref:System.Drawing.Point.X%2A> die <xref:System.Drawing.Point.Y%2A> -und-Koordinaten Werte des-Werts zu erhalten, in dem der Klick aufgetreten ist. Verwenden Sie dann die <xref:System.Windows.Forms.TreeView> - <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> Methode des Steuer Elements, um zu ermitteln, auf welchen Knoten geklickt wurde.  
   
 ## <a name="see-also"></a>Siehe auch
 

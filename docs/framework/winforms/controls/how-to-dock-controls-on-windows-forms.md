@@ -6,35 +6,35 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: dc514fd8b9b7a17bf07a878e42729db4187d2b82
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941496"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963624"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Vorgehensweise: Andocken von Steuerelementen in Windows Forms
-Sie können Andocken von Steuerelementen an den Rändern des Formulars oder Sie geben Sie im Container des Steuerelements (ein Formular oder ein Container-Steuerelement). Beispielsweise Windows-Explorer angedockt seine <xref:System.Windows.Forms.TreeView> Steuerelement auf der linken Seite des Fensters und die zugehörige <xref:System.Windows.Forms.ListView> Steuerelement auf die rechte Seite des Fensters. Verwenden der <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft für alle sichtbaren Windows Forms-Steuerelemente, um den Andockmodus zu definieren.  
+Sie können Steuerelemente an die Ränder Ihres Formulars andocken, oder Sie können den Container des Steuer Elements ausfüllen (entweder ein Formular oder ein Container Steuerelement). Windows-Explorer dockt <xref:System.Windows.Forms.TreeView> das Steuerelement beispielsweise an die linke Seite des Fensters und dessen <xref:System.Windows.Forms.ListView> Steuerelement auf der rechten Seite des Fensters an. Verwenden Sie <xref:System.Windows.Forms.Control.Dock%2A> die-Eigenschaft für alle sichtbaren Windows Forms Steuerelemente, um den Docking Modus zu definieren.  
   
 > [!NOTE]
->  Steuerelemente werden in umgekehrter Z-Reihenfolge angedockt.  
+> Steuerelemente werden in umgekehrter z-Reihenfolge angedockt.  
   
- Die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft interagiert mit der <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft. Weitere Informationen finden Sie unter [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md).  
+ Die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft interagiert mit <xref:System.Windows.Forms.Control.AutoSize%2A> der-Eigenschaft. Weitere Informationen finden Sie unter [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md).  
   
-### <a name="to-dock-a-control"></a>So docken Sie ein Steuerelement an  
+### <a name="to-dock-a-control"></a>Zum Andocken eines Steuer Elements  
   
-1. Wählen Sie das Steuerelement, das Sie andocken möchten.  
+1. Wählen Sie das Steuerelement aus, das Sie andocken möchten.  
   
-2. Klicken Sie im Eigenschaftenfenster auf den Pfeil rechts neben der <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft.  
+2. Klicken Sie im Eigenschaftenfenster auf den Pfeil rechts neben der <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft.  
   
-     Ein Editor wird mit einer Reihe von Feldern, die darstellt, die Kanten und der Mitte des Formulars angezeigt.  
+     Es wird ein Editor angezeigt, der eine Reihe von Feldern anzeigt, die die Ränder und den Mittelpunkt des Formulars darstellen.  
   
-3. Klicken Sie auf die Schaltfläche ", die den Rand des Formulars darstellt, in dem das Steuerelement angedockt werden soll. Klicken Sie auf das mittlere Feld, um den Inhalt des Steuerelements Formular oder Containersteuerelement zu füllen. Klicken Sie auf **(keine)** zum Andocken zu deaktivieren.  
+3. Klicken Sie auf die Schaltfläche, die den Rand des Formulars darstellt, in dem Sie das Steuerelement andocken möchten. Um den Inhalt des Formular-oder Container Steuer Elements des Steuer Elements auszufüllen, klicken Sie auf das Feld Center. Klicken Sie zum Deaktivieren des Andock auf **(keine)** .  
   
-     Das Steuerelement wird automatische größenanpassung die Grenzen der verankerten Kante.  
+     Die Größe des Steuer Elements wird automatisch an die Grenzen des angedockten Rands angepasst.  
   
     > [!NOTE]
-    >  Geerbte Steuerelemente muss `Protected` angedockt werden kann. Um die Zugriffsebene eines Steuerelements zu ändern, legen Sie dessen **Modifizierer** Eigenschaft im Eigenschaftenfenster angezeigt.  
+    > Geerbte Steuerelemente `Protected` müssen in der Lage sein, angedockt zu werden. Um die Zugriffsebene eines Steuer Elements zu ändern, legen Sie seine modifizierereigenschaft in der Eigenschaftenfenster fest.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -43,7 +43,7 @@ Sie können Andocken von Steuerelementen an den Rändern des Formulars oder Sie 
 - [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
 - [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)
-- [Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Vorgehensweise: Verankern und Andocken untergeordneter Steuerelemente in einem FlowLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Vorgehensweise: Verankern und Andocken untergeordneter Steuerelemente in einem TableLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md)
-- [Vorgehensweise: Verankern von Steuerelementen in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Vorgehensweise: Verankern von Steuerelementen auf Windows Forms](how-to-anchor-controls-on-windows-forms.md)

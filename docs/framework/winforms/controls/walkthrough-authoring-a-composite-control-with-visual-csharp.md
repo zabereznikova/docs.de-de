@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 12b506e859579a0755c2e9842e792c59968c94a8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 1de1ff4147ddb8cb3316795aefd38622de205a73
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666749"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950053"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuer Elements mit Visual C\#
 
@@ -187,7 +187,7 @@ Der erste Schritt beim Erstellen eines geerbten Steuerelements ist das Ableiten 
 5. Durchsuchen Sie die aktuellen Projekte im Projektmappen-Explorer.
 
     > [!NOTE]
-    >  Eine Datei namens **ctlAlarmClock.cs** wurde zum aktuellen Projekt hinzugefügt.
+    > Eine Datei namens **ctlAlarmClock.cs** wurde zum aktuellen Projekt hinzugefügt.
 
 ### <a name="adding-the-alarm-properties"></a>Hinzufügen von Wecker-Eigenschaften
 

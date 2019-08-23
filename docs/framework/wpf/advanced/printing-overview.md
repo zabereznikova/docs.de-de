@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545303"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958549"
 ---
 # <a name="printing-overview"></a>Übersicht über das Drucken
 Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Presentation Foundation (WPF) verwenden, über einen umfangreichen neuen Satz von Druck-und drucksystemverwaltungs-APIs. Mit [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] stehen einige dieser Erweiterungen des Drucksystems auch Entwicklern zur Verfügung, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Anwendungen erstellen, sowie Entwicklern, die nicht verwalteten Code verwenden. Im Zentrum dieser neuen Funktionen stehen das neue [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]-Dateiformat und der [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Druckpfad.  
@@ -35,11 +35,11 @@ Mit Microsoft .NET Framework verfügen Anwendungsentwickler, die Windows Present
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS-Druckpfad  
- Der XML Paper Specification (XPS)-Druckpfad ist ein [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] neues Feature, mit dem die Behandlung von Druck Vorgängen in Windows-Anwendungen neu definiert wird. Da [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] eine Sprache für die Dokument Darstellung (z. b. RTF), ein druckerspoolerformat (z. b. WMF) und eine Seitenbeschreibungssprache (z. b. PCL oder PostScript) ersetzen kann, behält der neue Druckpfad das XPS-Format von der Anwendungs Veröffentlichung bis zum abschließende Verarbeitung im Druckertreiber oder-Gerät.  
+ Der XML Paper Specification (XPS)-Druckpfad ist ein neues Windows-Feature, mit dem die Behandlung von Druck Vorgängen in Windows-Anwendungen neu definiert wird. Da [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] eine Sprache für die Dokument Darstellung (z. b. RTF), ein druckerspoolerformat (z. b. WMF) und eine Seitenbeschreibungssprache (z. b. PCL oder PostScript) ersetzen kann, behält der neue Druckpfad das XPS-Format von der Anwendungs Veröffentlichung bis zum abschließende Verarbeitung im Druckertreiber oder-Gerät.  
   
  Der XPS-Druckpfad basiert auf dem XPS-Druckertreiber Modell (XPSDrv), das Entwicklern verschiedene Vorteile bietet, wie [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] z. b. Drucken, verbesserte Farbunterstützung und erheblich verbesserte Druckleistung. (Weitere Informationen zu XPSDrv finden Sie in der [Dokumentation zum Windows-Treiberkit](/windows-hardware/drivers/).)  
   
- Der Vorgang des Druck Spoolers für XPS-Dokumente entspricht im Wesentlichen dem in früheren Versionen von Windows. Es wurde jedoch verbessert, um den XPS-Druck Pfad zusätzlich zum vorhandenen GDI-Druckpfad zu unterstützen. Der neue Druckpfad nutzt nativ eine XPS-Spooldatei. Wenngleich die für frühere Versionen von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] geschriebenen Druckertreiber für den Benutzermodus weiterhin funktionieren, ist ein XPS-Druckertreiber (XPSDrv) erforderlich, um den XPS-Druckpfad zu verwenden.  
+ Der Vorgang des Druck Spoolers für XPS-Dokumente entspricht im Wesentlichen dem in früheren Versionen von Windows. Es wurde jedoch verbessert, um den XPS-Druck Pfad zusätzlich zum vorhandenen GDI-Druckpfad zu unterstützen. Der neue Druckpfad nutzt nativ eine XPS-Spooldatei. Obwohl für frühere Versionen von Windows geschriebene Druckertreiber für den Benutzermodus weiterhin funktionieren, ist ein XPS-Druckertreiber (XPSDrv) erforderlich, um den XPS-Druckpfad zu verwenden.  
   
  Die Vorteile des XPS-Druck Pfads sind erheblich und umfassen Folgendes:  
   

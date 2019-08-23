@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380023"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945088"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Sortieren von Elementen in einer Sequenz
 Verwenden Sie den <xref:System.Linq.Enumerable.OrderBy%2A>-Operator, um eine Sequenz nach einem oder mehreren Schlüsseln zu sortieren.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dient zur Sortierung mithilfe einfacher, primitiver Typen wie z. B. `string`, `int`und so weiter. Sortierungen für komplexe, mehrwertige Klassen, z. B. anonyme Typen, werden nicht unterstützt. Außerdem werden keine `byte`-Datentypen unterstützt.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ist so konzipiert, dass die Reihenfolge `string`von einfachen primitiven Typen wie, `int`usw. unterstützt wird. Sortierungen für komplexe, mehrwertige Klassen, z. B. anonyme Typen, werden nicht unterstützt. Außerdem werden keine `byte`-Datentypen unterstützt.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel sortiert `Employees` nach dem Einstellungsdatum.  
@@ -43,7 +43,7 @@ Verwenden Sie den <xref:System.Linq.Enumerable.OrderBy%2A>-Operator, um eine Seq
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel werden die Bestellungen von `EmployeeID 1` von `ShipCountry`, und klicken Sie dann absteigend nach Fracht sortiert.  
+ Im folgenden Beispiel werden die Bestel `EmployeeID 1` Lungen `ShipCountry`von nach und dann von der höchsten zur niedrigsten Fracht sortiert.  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  

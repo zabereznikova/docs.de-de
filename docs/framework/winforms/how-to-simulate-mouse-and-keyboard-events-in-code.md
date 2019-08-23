@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 1d2e837ec13e6a0b507d004cd75c2f77ae0008dc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13ed0e5268f8bcfe2a504040803f3f96909657eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583406"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964267"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Vorgehensweise: Simulieren von Maus- und Tastaturereignissen in Code
 Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Maus- und Tastatureingaben bereit. Dieses Thema enthält eine Übersicht über diese Optionen.  
@@ -42,7 +42,7 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
 >  Wenn Ihre Anwendung für internationale Verwendung mit unterschiedlichen Tastaturen vorgesehen ist, kann ein Verwenden von <xref:System.Windows.Forms.SendKeys.Send%2A?displayProperty=nameWithType> zu unvorhersehbaren Ergebnissen führen und sollte vermieden werden.  
   
 > [!NOTE]
->  Die <xref:System.Windows.Forms.SendKeys> -Klasse wurde für .NET Framework 3.0 aktualisiert, damit sie in Anwendungen verwendet werden kann, die unter Windows Vista ausgeführt werden. Die verbesserte Sicherheit von Windows Vista (Stichwort Benutzerkontensteuerung) verhindert, dass die vorherige Implementierung ordnungsgemäß funktioniert.  
+> Die <xref:System.Windows.Forms.SendKeys> -Klasse wurde für .NET Framework 3.0 aktualisiert, damit sie in Anwendungen verwendet werden kann, die unter Windows Vista ausgeführt werden. Die verbesserte Sicherheit von Windows Vista (Stichwort Benutzerkontensteuerung) verhindert, dass die vorherige Implementierung ordnungsgemäß funktioniert.  
 >   
 >  Die <xref:System.Windows.Forms.SendKeys> -Klasse ist anfällig für Probleme hinsichtlich der zeitlichen Steuerung, sodass einige Entwickler gezwungen waren, Umgehungslösungen zu finden. Die aktualisierte Implementierung ist immer noch anfällig für Probleme hinsichtlich der zeitlichen Steuerung, ist jedoch etwas schneller und erfordert möglicherweise Änderungen an den Umgehungslösungen. Die <xref:System.Windows.Forms.SendKeys> -Klasse versucht zunächst, die vorherige Implementierung zu verwenden. Schlägt dies fehl, wird die neue Implementierung verwendet. Infolgedessen verhält sich die <xref:System.Windows.Forms.SendKeys> -Klasse unter verschiedenen Betriebssystemen möglicherweise unterschiedlich. Verwendet die <xref:System.Windows.Forms.SendKeys> -Klasse die neue Implementierung, wartet die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode nicht auf zu verarbeitende Nachrichten, wenn diese an einen anderen Prozess gesendet werden.  
 >   
@@ -69,7 +69,7 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
 1. Aktivieren Sie das Anwendungsfenster, das die Tastatureingaben empfängt, und rufen Sie dann die <xref:System.Windows.Forms.SendKeys.Send%2A> - oder die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode auf. Da keine verwaltete Methode zum Aktivieren einer anderen Anwendung vorhanden ist, müssen Sie systemeigene Windows-Methoden verwenden, um den Fokus auf andere Anwendungen zu erzwingen. Im folgenden Codebeispiel wird ein Plattformaufruf dazu verwendet, die Methoden `FindWindow` und `SetForegroundWindow` aufzurufen, um das Anwendungsfenster Rechner zu aktivieren, und dann wird <xref:System.Windows.Forms.SendKeys.SendWait%2A> aufgerufen, um einige Berechnungselemente an Rechner zu senden.  
   
     > [!NOTE]
-    >  Die richtigen Parameter des `FindWindow` -Aufrufs, der nach der Anwendung Rechner sucht, können je nach Windows-Version unterschiedlich sein.  Im folgenden Code wird die Anwendung Rechner unter [!INCLUDE[win7](../../../includes/win7-md.md)]gesucht. Ändern Sie unter [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]den ersten Parameter in "SciCalc". Sie können das zu Visual Studio gehörende Tool Spy++ verwenden, um die richtigen Parameter zu ermitteln.  
+    > Die richtigen Parameter des `FindWindow` -Aufrufs, der nach der Anwendung Rechner sucht, können je nach Windows-Version unterschiedlich sein.  Im folgenden Code wird die Anwendung Rechner unter [!INCLUDE[win7](../../../includes/win7-md.md)]gesucht. Ändern Sie unter [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]den ersten Parameter in "SciCalc". Sie können das zu Visual Studio gehörende Tool Spy++ verwenden, um die richtigen Parameter zu ermitteln.  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: 163ec17f3ea96744290c54a73054ab132f842127
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43507ac8e9b5843e8fa9496737a3d77b3a425a7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963769"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 Gibt an, dass eine Eigenschaft geschrieben, jedoch nicht gelesen werden kann.  
@@ -24,27 +24,27 @@ Gibt an, dass eine Eigenschaft geschrieben, jedoch nicht gelesen werden kann.
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="rules"></a>Regeln  
- **Deklarationskontext.** Sie können `WriteOnly` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `WriteOnly` Eigenschaft muss eine Klasse, Struktur oder Modul, und eine Quelldatei, Namespace oder Prozedur nicht möglich.  
+ **Deklarations Kontext.** Sie können `WriteOnly` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarations `WriteOnly` Kontext für eine Eigenschaft eine Klasse, eine Struktur oder ein Modul sein muss und weder eine Quelldatei, ein Namespace noch eine Prozedur sein darf.  
   
- Sie können deklarieren, dass eine Eigenschaft als `WriteOnly`, aber keine Variable.  
+ Sie können eine Eigenschaft als `WriteOnly`, jedoch nicht als Variable deklarieren.  
   
-## <a name="when-to-use-writeonly"></a>WriteOnly-Verwendung  
- Gelegentlich möchten Sie den verwendeten Code in der Lage, einen Wert festlegen, aber nicht zu ermitteln, was es ist. Sensible Daten, z. B. eine Sozialversicherungsnummer oder ein Kennwort, müssen z. B. Zugriff von einer beliebigen Komponente geschützt werden müssen, die ihn nicht festgelegt. In diesen Fällen können Sie eine `WriteOnly` Eigenschaft zum Festlegen des Werts.  
+## <a name="when-to-use-writeonly"></a>Verwendung von "schreibgeschützt"  
+ Manchmal möchten Sie, dass der verarbeitende Code einen Wert festlegen kann, aber nicht ermitteln kann, was er ist. Sensible Daten, z. b. eine Sozialversicherungsnummer oder ein Kennwort, müssen z. b. vor dem Zugriff durch eine beliebige Komponente geschützt werden, die Sie nicht festgelegt hat. In diesen Fällen können Sie eine `WriteOnly` -Eigenschaft verwenden, um den Wert festzulegen.  
   
 > [!IMPORTANT]
->  Wenn Sie definieren und Verwenden einer `WriteOnly` -Eigenschaft, sollten Sie die folgenden zusätzlichen Schutzmaßnahmen:  
+> Wenn Sie eine `WriteOnly` Eigenschaft definieren und verwenden, sollten Sie die folgenden zusätzlichen Schutzmaßnahmen beachten:  
   
-- **Überschreiben.** Wenn die Eigenschaft auf einen Member einer Klasse ist, können sie standardmäßig [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), und nicht deklarieren `Overridable` oder `MustOverride`. Dadurch wird verhindert, dass eine abgeleitete Klasse unerwünschten Zugriff über eine Außerkraftsetzung.  
+- **Dende.** Wenn die Eigenschaft ein Member einer Klasse ist, lassen Sie die Standardeinstellung [nodeverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)zu, und deklarieren Sie Sie `Overridable` nicht `MustOverride`oder. Dadurch wird verhindert, dass eine abgeleitete Klasse den unerwünschten Zugriff über eine außer Kraft Setzung ermöglicht.  
   
-- **Zugriffsebene.** Wenn Sie vertrauliche Daten von der Eigenschaft in eine oder mehrere Variablen enthalten, deklarieren sie [Private](../../../visual-basic/language-reference/modifiers/private.md) , damit kein anderer Code darauf zugreifen kann.  
+- **Zugriffsebene.** Wenn Sie die sensiblen Daten der Eigenschaft in einer oder mehreren Variablen speichern, deklarieren Sie diese als [Privat](../../../visual-basic/language-reference/modifiers/private.md) , sodass kein anderer Code darauf zugreifen kann.  
   
-- **Verschlüsselung.** Store Sie alle vertrauliche Daten in verschlüsselter Form und nicht im nur-Text. Wenn Schadsoftware aus irgendeinem Grund den Zugriff auf diesen Bereich des Arbeitsspeichers hinzugefügt werden, ist es schwieriger, stellen die Daten verwenden. Verschlüsselung ist auch nützlich, wenn es erforderlich, um die sensiblen Daten zu serialisieren ist.  
+- **Verschlüsselungs.** Speichern Sie alle sensiblen Daten in verschlüsselter Form und nicht als Klartext. Wenn bösartiger Code auf diese Weise Zugriff auf diesen Speicherbereich erlangt, ist es schwieriger, die Daten zu verwenden. Die Verschlüsselung ist auch dann nützlich, wenn es erforderlich ist, die sensiblen Daten zu serialisieren.  
   
-- **Das Zurücksetzen.** Wenn die Klasse, Struktur oder Module, die die Eigenschaft wird beendet, die sensiblen Daten zurückzusetzen, auf die Standardwerte oder in andere Werte ohne Bedeutung. Dies bietet zusätzlichen Schutz, wenn dieser Bereich des Arbeitsspeichers für den allgemeinen Zugriff freigegeben wird.  
+- **Zurücksetzen.** Wenn die Klasse, Struktur oder das Modul, das die Eigenschaft definiert, beendet wird, setzen Sie die sensiblen Daten auf die Standardwerte oder auf andere bedeutungslose Werte zurück. Dies bietet zusätzlichen Schutz, wenn dieser Speicherbereich für den allgemeinen Zugriff freigegeben wird.  
   
-- **Dauerhaftigkeit.** Erhalten Sie vertraulichen Daten, z. B. auf dem Datenträger bleiben nicht werden, wenn Sie es vermeiden können. Schreiben Sie auch nicht sensiblen Daten in die Zwischenablage.  
+- **Persistenz.** Bewahren Sie keine sensiblen Daten auf, z. b. auf dem Datenträger, wenn Sie dies vermeiden können. Schreiben Sie außerdem keine sensiblen Daten in die Zwischenablage.  
   
- Die `WriteOnly` Modifizierer kann in diesem Kontext verwendet werden:  
+ Der `WriteOnly` -Modifizierer kann in diesem Kontext verwendet werden:  
   
  [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   

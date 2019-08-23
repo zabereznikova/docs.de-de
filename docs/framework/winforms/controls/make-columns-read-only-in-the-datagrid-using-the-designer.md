@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 6bdd561c863a461f43a5a7aac025fead1f971bb0
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 82be9d31ff6bb3f2f5dd8a55b4426103d466bdd6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039812"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952091"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>Vorgehensweise: Festlegen von schreibgeschützten Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Standardmäßig können Benutzer im Windows Forms <xref:System.Windows.Forms.DataGridView> Steuerelement angezeigte Text-und numerische Daten ändern. Wenn Sie Daten anzeigen möchten, die nicht für Änderungen vorgesehen sind, müssen Sie die Spalten, die die Daten enthalten, als schreibgeschützt festlegen. Informationen dazu, wie das Steuerelement vollständig schreibgeschützt wird, finden [Sie unter Gewusst wie: Verhindern Sie das Hinzufügen und Löschen von Zeilen im Windows Forms DataGridView-](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)Steuerelement mithilfe des Designers.
@@ -28,7 +28,7 @@ Standardmäßig können Benutzer im Windows Forms <xref:System.Windows.Forms.Dat
 3. Legen Sie im Raster **Spalten Eigenschaften** die <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> -Eigenschaft auf `true`fest.
 
     > [!NOTE]
-    >  Sie können eine Spalte auch als schreibgeschützt festlegen, wenn Sie Sie hinzufügen, indem Sie im Dialogfeld **Spalte hinzufügen** das Kontrollkästchen Schreibgeschützt aktivieren.
+    > Sie können eine Spalte auch als schreibgeschützt festlegen, wenn Sie Sie hinzufügen, indem Sie im Dialogfeld **Spalte hinzufügen** das Kontrollkästchen Schreibgeschützt aktivieren.
 
 ## <a name="see-also"></a>Siehe auch
 
