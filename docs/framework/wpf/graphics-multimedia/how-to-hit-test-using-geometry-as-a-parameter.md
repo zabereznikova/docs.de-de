@@ -9,33 +9,33 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bed7784b00f49178c9a87def74b62f7ce620ec7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947360"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923407"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Vorgehensweise: Treffertest mit Geometrie als Parameter
-Dieses Beispiel zeigt, wie Sie einen Treffertest durchführen, auf einem visuellen Objekt mit einem <xref:System.Windows.Media.Geometry> Parameter als Treffer zu testen.  
+Dieses Beispiel zeigt, wie Sie einen Treffer Test für ein visuelles Objekt ausführen, <xref:System.Windows.Media.Geometry> indem Sie als Treffer Testparameter verwenden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie ein Treffertest eingerichtet <xref:System.Windows.Media.GeometryHitTestParameters> für die <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> Methode. Die <xref:System.Windows.Point> Wert an der `OnMouseDown` -Methode zum Erstellen einer <xref:System.Windows.Media.Geometry> Objekt um den Bereich des Treffertests zu erweitern.  
+ Im folgenden Beispiel wird gezeigt, wie Sie einen Treffer Test mithilfe <xref:System.Windows.Media.GeometryHitTestParameters> von für <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> die-Methode einrichten. Der <xref:System.Windows.Point> Wert, der an die `OnMouseDown` -Methode weitergegeben wird, wird <xref:System.Windows.Media.Geometry> verwendet, um ein-Objekt zu erstellen, um den Bereich des Treffer Tests zu erweitern.  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet10)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet10)]  
   
- Die <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> -Eigenschaft des <xref:System.Windows.Media.GeometryHitTestResult> enthält Informationen über die Ergebnisse eines Treffertests verwendet eine <xref:System.Windows.Media.Geometry> als Hit test Parameter. In der folgenden Abbildung wird die Beziehung zwischen der Treffertestgeometrie (blauer Kreis) und dem gerenderten Inhalt des Zielobjekts (rotes Quadrat) dargestellt.  
+ Die <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> -Eigenschaft <xref:System.Windows.Media.GeometryHitTestResult> von enthält Informationen zu den Ergebnissen eines Treffer Tests, der einen <xref:System.Windows.Media.Geometry> als Treffer Testparameter verwendet. In der folgenden Abbildung wird die Beziehung zwischen der Treffertestgeometrie (blauer Kreis) und dem gerenderten Inhalt des Zielobjekts (rotes Quadrat) dargestellt.  
   
- ![Diagramm, das zeigt, dass IntersectionDetail verwendet den Treffertest durchführen.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
+ ![Diagramm, das IntersectionDetail anzeigt, das bei Treffer Tests verwendet wird.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
   
- Das folgende Beispiel zeigt, wie Sie einen Treffertestrückruf implementieren bei einem <xref:System.Windows.Media.Geometry> als Treffertestparameter verwendet wird. Die `result` Parameter der Umwandlung in einen <xref:System.Windows.Media.GeometryHitTestResult> zum Abrufen des Werts der <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> Eigenschaft. Den Wert der Eigenschaft können Sie bestimmen, ob die <xref:System.Windows.Media.Geometry> -Treffertestparameter ganz oder teilweise enthalten ist in den gerenderten Inhalt des Treffertestziels. In diesem Fall fügt der Beispielcode der Liste visueller Objekte nur Treffertestergebnisse hinzu, die vollständig im Zielbereich enthalten sind.  
+ Im folgenden Beispiel wird gezeigt, wie Sie einen Treffer Test Rückruf implementieren <xref:System.Windows.Media.Geometry> , wenn ein als Treffer Testparameter verwendet wird. Der `result` -Parameter wird in einen <xref:System.Windows.Media.GeometryHitTestResult> umgewandelt, um den Wert der- <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> Eigenschaft abzurufen. Mit dem Eigenschafts Wert können Sie feststellen <xref:System.Windows.Media.Geometry> , ob der Treffer Testparameter vollständig oder teilweise im gerenderten Inhalt des Treffer Test Ziels enthalten ist. In diesem Fall fügt der Beispielcode der Liste visueller Objekte nur Treffertestergebnisse hinzu, die vollständig im Zielbereich enthalten sind.  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet11)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet11)]  
   
 > [!NOTE]
->  Die <xref:System.Windows.Media.HitTestResult> Rückruf nicht aufgerufen werden soll, wenn die Schnittmenge aufweist <xref:System.Windows.Media.IntersectionDetail.Empty>.  
+> Der <xref:System.Windows.Media.HitTestResult> Rückruf sollte nicht aufgerufen werden, wenn die Überschneidungs <xref:System.Windows.Media.IntersectionDetail.Empty>Details ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

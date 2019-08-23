@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 19ebad32ad8c7018b910a3d230f43031008dcdc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663681"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927384"
 ---
 # <a name="gcserver-element"></a>\<gcserver->-Element
 Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server ausführt.  
@@ -65,7 +65,7 @@ Gibt an, ob die Common Language Runtime die Garbage Collection auf dem Server au
  Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden. Wenn es in der Computerkonfigurationsdatei enthalten ist, wird es ignoriert.  
   
 > [!NOTE]
->  In .NET Framework 4 und früheren Versionen ist die gleichzeitige Garbage Collection nicht verfügbar, wenn die Garbage Collection auf dem Server aktiviert ist. Beginnend mit dem .NET Framework 4,5 ist der Server Garbage Collection gleichzeitig. Um nicht gleichzeitige Server Garbage Collection zu verwenden, legen `<gcServer>` Sie das `true` -Element auf und das [ \<gcConcurrent-> Element](gcconcurrent-element.md) auf `false`fest.  
+> In .NET Framework 4 und früheren Versionen ist die gleichzeitige Garbage Collection nicht verfügbar, wenn die Garbage Collection auf dem Server aktiviert ist. Beginnend mit dem .NET Framework 4,5 ist der Server Garbage Collection gleichzeitig. Um nicht gleichzeitige Server Garbage Collection zu verwenden, legen `<gcServer>` Sie das `true` -Element auf und das [ \<gcConcurrent-> Element](gcconcurrent-element.md) auf `false`fest.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Garbage Collection auf dem Server aktiviert.  

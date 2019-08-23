@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28feddffff7dc5dba1860b3d2d1327a17bd08190
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b142f1a05036eddf44c69d8b7da95091dc8f445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772947"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963096"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType-Methode
-Gibt an, die von abgeleiteten Typ, der <xref:System.AppDomainManager?displayProperty=nameWithType> -Klasse von den Anwendungsdomänen-Manager, die zum Initialisieren der Standardanwendungsdomäne verwendet werden.  
+Gibt den von der <xref:System.AppDomainManager?displayProperty=nameWithType> -Klasse abgeleiteten Typ des Anwendungs Domänen-Managers an, der zum Initialisieren der Standard Anwendungsdomäne verwendet wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +37,13 @@ HRESULT SetAppDomainManagerType(
   
 ## <a name="parameters"></a>Parameter  
  `wszAppDomainManagerAssembly`  
- [in] Der Anzeigename der Assembly, die die Anwendung-Typ enthält; Zum Beispiel: "AdMgrExample, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6856bccf150f00b3".  
+ in Der Anzeige Name der Assembly, die den Typ des Anwendungs Domänen-Managers enthält. Zum Beispiel: "AdMgrExample, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccs150s00b3".  
   
  `wszAppDomainManagerType`  
- [in] Der Typname, der den Anwendungsdomänen-Manager, einschließlich des Namespaces.  
+ in Der Typname des Anwendungs Domänen-Managers, einschließlich des Namespace.  
   
  `dwInitializeDomainFlags`  
- [in] Eine Kombination von [EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md) Enumerationswerte, der Informationen zu den Anwendungsdomänen-Manager bereitstellen.  
+ in Eine Kombination aus [einitializenewdomainflags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md) -Enumerationswerten, die Informationen über den Anwendungs Domänen-Manager bereitstellen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -51,22 +51,22 @@ HRESULT SetAppDomainManagerType(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
   
 ## <a name="remarks"></a>Hinweise  
- Derzeit die einzige definierte Wert für `dwInitializeDomainFlags` ist `eInitializeNewDomainFlags_NoSecurityChanges`, die der common Language Runtime (CLR) teilt mit, dass die Anwendungsdomänen-Manager nicht während der Ausführung ändern von Sicherheitseinstellungen wird der <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> Methode. Dies ermöglicht der CLR, das Laden von Assemblys zu optimieren, die die bedingte <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut (APTCA). Dies kann zu einer erheblichen Verbesserung Startzeit führen, wenn der transitive Abschluss von diesem Satz von Assemblys groß ist.  
+ Derzeit ist `dwInitializeDomainFlags` `eInitializeNewDomainFlags_NoSecurityChanges`der einzige definierte Wert für, der die Common Language Runtime (CLR) anweist, dass der Anwendungs Domänen-Manager <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> während der Ausführung der Methode keine Sicherheitseinstellungen ändert. Dadurch kann die CLR das Laden von Assemblys optimieren, die über <xref:System.Security.AllowPartiallyTrustedCallersAttribute> das Conditional-Attribut (APTCA) verfügen. Dies kann zu einer erheblichen Verbesserung der Startzeit führen, wenn die transitiv Schließung dieses Assemblysatzes sehr groß ist.  
   
 > [!IMPORTANT]
->  Wenn der Host gibt `eInitializeNewDomainFlags_NoSecurityChanges` für den Anwendungsdomänen-Manager, ein <xref:System.InvalidOperationException> wird ausgelöst, wenn es versucht wird, auf die Sicherheit der Anwendungsdomäne zu ändern.  
+> Wenn der Host für `eInitializeNewDomainFlags_NoSecurityChanges` den Anwendungs Domänen-Manager angibt <xref:System.InvalidOperationException> , wird eine ausgelöst, wenn versucht wird, die Sicherheit der Anwendungsdomäne zu ändern.  
   
- Aufrufen der [ICLRControl:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)Methode entspricht dem Aufruf `ICLRDomainManager::SetAppDomainManagerType` mit `eInitializeNewDomainFlags_None`.  
+ Das Aufrufen der [ICLRControl:: abtappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)-Methode entspricht dem `ICLRDomainManager::SetAppDomainManagerType` aufrufen `eInitializeNewDomainFlags_None`von mit.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

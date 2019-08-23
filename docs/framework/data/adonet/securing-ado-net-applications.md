@@ -2,12 +2,12 @@
 title: Sichern von ADO.NET-Anwendungen
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4c9c21f4d1f4a08ca6d676ee7b4c9e80709ba19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664193"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963118"
 ---
 # <a name="securing-adonet-applications"></a>Sichern von ADO.NET-Anwendungen
 Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fallstricke bei der Codierung zu umgehen, wie die Nichtvalidierung von Benutzereingaben. Eine Anwendung, die auf Daten zugreift, verfügt über viele mögliche Schwachstellen, über die ein Hacker vertrauliche Daten abrufen, manipulieren oder vernichten kann. Es ist daher unerlässlich, alle Sicherheitsaspekte zu verstehen, und zwar beginnend bei der Erstellung von Gefahrenmodellen während des Anwendungsentwurfs bis hin zur eigentlichen Bereitstellung der Anwendung und ihrem laufenden Betrieb.  
@@ -36,10 +36,10 @@ Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fall
  [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  Beschreibt SQL Server-Sicherheitsfunktionen aus Entwicklersicht.  
   
- [Sicherheitsüberlegungen](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Überlegungen zur Sicherheit](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
  Beschreibt Sicherheitsfunktionen für Entity Framework-Anwendungen.  
   
- [Sicherheit](../../../../docs/standard/security/index.md)  
+ [Sicherheit](../../../standard/security/index.md)  
  Enthält Links zu Themen, in denen alle Aspekte der Sicherheit in .NET beschrieben werden.  
   
  [Sicherheitstools](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  

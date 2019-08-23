@@ -2,12 +2,12 @@
 title: Ereignisse
 description: Erfahren Sie F# , wie Sie mithilfe von Ereignissen Funktionsaufrufe mit Benutzeraktionen verknüpfen können, die bei der GUI-Programmierung wichtig sind.
 ms.date: 05/16/2016
-ms.openlocfilehash: eed2caff569638ea5aa972a000dfa71a3b64f60b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627567"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917282"
 ---
 # <a name="events"></a>Ereignisse
 
@@ -175,7 +175,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>Siehe auch
 
 - [Mitglieder](index.md)
-- [Behandeln und Auswerfen von Ereignissen](../../../../docs/standard/events/index.md)
+- [Behandeln und Auswerfen von Ereignissen](../../../standard/events/index.md)
 - [Lambda-Ausdrücke: Das `fun`-Schlüsselwort](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control. Event-Modul](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control. Event&#60;'t&#62; -Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)

@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662147"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913903"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Bekannte Probleme von und Überlegungen zu LINQ to Entities
-Dieser Abschnitt enthält Informationen zu bekannten Problemen mit LINQ to Entities-Abfragen.  
+Dieser Abschnitt enthält Informationen zu bekannten Problemen bei LINQ to Entities-Abfragen.  
   
-- [LINQ-Abfragen, können nicht zwischengespeichert werden](#LINQQueriesThatAreNotCached)  
+- [LINQ-Abfragen, die nicht zwischengespeichert werden können](#LINQQueriesThatAreNotCached)  
   
-- [Fehlende Sortierung](#OrderingInfoLost)  
+- [Bestellinformationen sind verloren gegangen](#OrderingInfoLost)  
   
-- [Ganzzahlen ohne Vorzeichen, die nicht unterstützt](#UnsignedIntsUnsupported)  
+- [Ganze Zahlen ohne Vorzeichen werden nicht unterstützt.](#UnsignedIntsUnsupported)  
   
-- [Fehler bei der Datentypkonvertierung](#TypeConversionErrors)  
+- [Typkonvertierungs Fehler](#TypeConversionErrors)  
   
-- [Verweisen auf nicht skalare Variablen werden nicht unterstützt](#RefNonScalarClosures)  
+- [Verweise auf nicht skalare Variablen werden nicht unterstützt.](#RefNonScalarClosures)  
   
-- [Geschachtelte Abfragen schlagen möglicherweise mit SQLServer 2000 fehl.](#NestedQueriesSQL2000)  
+- [Geschachbte Abfragen können mit SQL Server 2000-Fehler fehlschlagen](#NestedQueriesSQL2000)  
   
-- [Projizieren auf einen anonymen Typ](#ProjectToAnonymousType)  
+- [Projizieren in einen anonymen Typ](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>LINQ-Abfragen, die nicht zwischengespeichert werden können  
@@ -35,14 +35,14 @@ Dieser Abschnitt enthält Informationen zu bekannten Problemen mit LINQ to Entit
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>Fehlende Sortierung  
- Beim Projizieren von Spalten in einen anonymen Typ führt dazu, dass Informationen zur Reihenfolge der bei einigen Abfragen verloren, die für eine SQL Server 2005-Datenbank, legen Sie auf dem Kompatibilitätsgrad "80" ausgeführt werden.  Dies kann vorkommen, wenn ein Spaltenname in der Sortierliste einem Spaltennamen im Selektor entspricht, wie im folgenden Beispiel dargestellt:  
+ Das Projizieren von Spalten in einen anonymen Typ bewirkt, dass die Bestellinformationen in einigen Abfragen verloren gehen, die für eine SQL Server 2005-Datenbank mit dem Kompatibilitäts Grad "80" ausgeführt werden.  Dies kann vorkommen, wenn ein Spaltenname in der Sortierliste einem Spaltennamen im Selektor entspricht, wie im folgenden Beispiel dargestellt:  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Keine Unterstützung von ganzen Zahlen ohne Vorzeichen  
- Einen Ganzzahltyp ohne Vorzeichen angeben, in einer LINQ to Entities-Abfrage wird nicht unterstützt werden, da die [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] Ganzzahlen ohne Vorzeichen wird nicht unterstützt. Wenn Sie eine Ganzzahl ohne Vorzeichen angeben einer <xref:System.ArgumentException> Ausnahme aus, während der Übersetzung des Abfrageausdrucks, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird die Bestellung mit der ID 48000 abgefragt.  
+ Das [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] angeben eines ganzzahligen Typs ohne Vorzeichen in einer LINQ to Entities Abfrage wird nicht unterstützt, da von keine Ganzzahlen ohne Vorzeichen unterstützt werden. Wenn Sie eine ganze Zahl ohne Vorzeichen angeben, <xref:System.ArgumentException> wird während der Übersetzung des Abfrage Ausdrucks eine Ausnahme ausgelöst, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird die Bestellung mit der ID 48000 abgefragt.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -58,7 +58,7 @@ Dieser Abschnitt enthält Informationen zu bekannten Problemen mit LINQ to Entit
  Verweise auf eine nicht skalare Variable, beispielsweise eine Entität, in einer Abfrage werden nicht unterstützt. Bei der Ausführung einer solchen Abfrage wird eine <xref:System.NotSupportedException>-Ausnahme mit der Meldung ausgelöst, dass ein konstanter Wert des Typs `EntityType` nicht erstellt werden kann, weil im gegebenen Kontext nur primitive Typen, beispielsweise Int32, Zeichenfolge und Guid unterstützt werden.  
   
 > [!NOTE]
->  Verweise auf eine Auflistung von skalaren Variablen werden unterstützt.  
+> Verweise auf eine Auflistung von skalaren Variablen werden unterstützt.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  

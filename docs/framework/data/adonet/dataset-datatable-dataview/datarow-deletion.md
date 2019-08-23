@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c80294c4bc879e6a1df4c9d1170eef14b8b83de
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879865"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915814"
 ---
 # <a name="datarow-deletion"></a>"DataRow"-Löschung
-Stehen zwei Methoden Sie löschen können eine <xref:System.Data.DataRow> -Objekt aus einer <xref:System.Data.DataTable> Objekt: die **entfernen** -Methode der der <xref:System.Data.DataRowCollection> -Objekt, und die <xref:System.Data.DataRow.Delete%2A> -Methode der der **DataRow**Objekt. Während der <xref:System.Data.DataRowCollection.Remove%2A> Methode löscht eine **DataRow** aus der **DataRowCollection**, <xref:System.Data.DataRow.Delete%2A> Methode wird nur die Zeile zum Löschen gekennzeichnet. Die tatsächlich entfernt, wenn die Anwendung ruft die **AcceptChanges** Methode. Mithilfe von <xref:System.Data.DataRow.Delete%2A> können Sie programmgesteuert überprüfen, welche Zeilen zum Löschen markiert sind, bevor Sie sie tatsächlich entfernen. Wenn eine Zeile zum Löschen markiert ist, wird deren <xref:System.Data.DataRow.RowState%2A>-Eigenschaft auf <xref:System.Data.DataRow.Delete%2A> festgelegt.  
+Es gibt zwei Methoden zum <xref:System.Data.DataRow> Löschen eines-Objekts aus einem <xref:System.Data.DataTable> -Objekt: <xref:System.Data.DataRowCollection> die **Remove** -Methode des-Objekts und die <xref:System.Data.DataRow.Delete%2A> -Methode des **DataRow** -Objekts. Während die <xref:System.Data.DataRowCollection.Remove%2A> -Methode eine **DataRow** aus der **DataRowCollection**löscht, <xref:System.Data.DataRow.Delete%2A> markiert die Methode nur die Zeile zum Löschen. Das eigentliche Entfernen tritt auf, wenn die Anwendung die Methode " **akzeptchanges** " aufruft. Mithilfe von <xref:System.Data.DataRow.Delete%2A> können Sie programmgesteuert überprüfen, welche Zeilen zum Löschen markiert sind, bevor Sie sie tatsächlich entfernen. Wenn eine Zeile zum Löschen markiert ist, wird deren <xref:System.Data.DataRow.RowState%2A>-Eigenschaft auf <xref:System.Data.DataRow.Delete%2A> festgelegt.  
   
  Beim Durchlaufen eines <xref:System.Data.DataRow.Delete%2A>-Objekts sollten weder <xref:System.Data.DataRowCollection.Remove%2A> noch <xref:System.Data.DataRowCollection> in einer foreach-Schleife aufgerufen werden. Der Auflistungszustand wird durch <xref:System.Data.DataRow.Delete%2A> und <xref:System.Data.DataRowCollection.Remove%2A> nicht geändert.  
   
- Bei Verwendung einer <xref:System.Data.DataSet> oder **DataTable** in Verbindung mit einer **DataAdapter** und einer relationalen Datenquelle, verwenden Sie die **löschen** -Methode der der  **DataRow** auf die Zeile zu entfernen. Die **löschen** Methode kennzeichnet die Zeile als **gelöschte** in die **DataSet** oder **DataTable** jedoch nicht entfernt. Stattdessen, wenn die **DataAdapter** findet eine Zeile, die als **gelöschte**, Ausführen der **DeleteCommand** Methode, um die Zeile in der Datenquelle zu löschen. Die Zeile kann dann dauerhaft entfernt werden mithilfe der **AcceptChanges** Methode. Bei Verwendung von **entfernen** zum Löschen der zeilenupdates die Zeile wird vollständig aus der Tabelle entfernt jedoch **DataAdapter** die Zeile in der Datenquelle werden nicht gelöscht.  
+ Wenn Sie eine <xref:System.Data.DataSet> -oder- **Daten** Tabelle zusammen mit einem **DataAdapter** und einer relationalen Datenquelle verwenden, verwenden Sie die **Delete** -Methode der **DataRow** , um die Zeile zu entfernen. Die **Delete** -Methode markiert die Zeile als **gelöscht** im **DataSet** oder in der Datentabelle, entfernt Sie jedoch nicht. Wenn der **DataAdapter** auf eine Zeile stößt, die als **gelöscht**markiert ist, führt er stattdessen seine **DeleteCommand** -Methode aus, um die Zeile in der Datenquelle zu löschen. Die Zeile kann dann mithilfe der Methode " **Accept tchanges** " dauerhaft entfernt werden. Wenn Sie zum Löschen der Zeile " **Entfernen** " verwenden, wird die Zeile vollständig aus der Tabelle entfernt, aber der **DataAdapter** löscht die Zeile nicht in der Datenquelle.  
   
- Die **entfernen** Methode der **DataRowCollection** akzeptiert eine **DataRow** als Argument und entfernt sie aus der Auflistung, wie im folgenden Beispiel gezeigt.  
+ Die **Remove** -Methode der **DataRowCollection** übernimmt eine **DataRow** als Argument und entfernt Sie aus der Auflistung, wie im folgenden Beispiel gezeigt.  
   
 ```vb  
 workTable.Rows.Remove(workRow)  
@@ -29,7 +29,7 @@ workTable.Rows.Remove(workRow)
 workTable.Rows.Remove(workRow);  
 ```  
   
- Im Gegensatz dazu wird im folgenden Beispiel wird veranschaulicht, wie zum Aufrufen der **löschen** Methode für eine **DataRow** so ändern Sie seine **RowState** zu **gelöschte** .  
+ Im Gegensatz dazu wird im folgenden Beispiel veranschaulicht, wie die **Delete** -Methode für eine **DataRow** aufgerufen wird, um den **RowState** in " **deleted**" zu ändern.  
   
 ```vb  
 workRow.Delete  
@@ -39,10 +39,10 @@ workRow.Delete
 workRow.Delete();  
 ```  
   
- Wenn eine Zeile zum Löschen markiert ist, und Sie rufen die **AcceptChanges** Methode der **DataTable** Objekt ist, wird die Zeile wurde aus entfernt die **DataTable**. Im Gegensatz dazu sind Aufrufen **RejectChanges**, **RowState** wiederhergestellt, bevor Sie als markiert wird, was sie die Zeile **gelöschte**.  
+ Wenn eine Zeile zum Löschen markiert ist und Sie die **Accept-Changes** -Methode des **datbare** -Objekts aufzurufen, wird die Zeile aus der **Daten**Tabelle entfernt. Wenn Sie dagegen **RejectChanges**aufrufen, wird der **RowState** der Zeile auf den Wert zurückgesetzt, der vor der Markierung als **gelöscht**markiert wurde.  
   
 > [!NOTE]
->  Wenn die **RowState** von eine **DataRow** ist **Added**, d. h. sie gerade hinzugefügt wurde, in der Tabelle und wird dann als markiert **gelöschte**, ist aus der Tabelle entfernt.  
+> Wenn der **RowState** einer **DataRow** **hinzugefügt**wird, was bedeutet, dass Sie der Tabelle soeben hinzugefügt wurde und dann als **gelöscht**markiert ist, wird Sie aus der Tabelle entfernt.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -9,108 +9,108 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: c37a42a5905e34a995efbd73d332b7ef8f90e51d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8399a56fca87704e10456a4cf8109d7c80d4db45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603224"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964405"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Vorgehensweise: Erstellen eines linearen Pfadfarbverlaufs
-Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Möglichkeit, die Sie ausfüllen einer Form nach und nach Ändern von Farben anpassen. Beispielsweise können Sie eine Farbe für den Mittelpunkt der einen Pfad und eine andere Farbe für die Grenze eines Pfads angeben. Sie können auch separate Farben für die einzelnen mehrere Punkte entlang der Grenzen eines Pfads angeben.  
+Mit <xref:System.Drawing.Drawing2D.PathGradientBrush> der-Klasse können Sie die Art und Weise anpassen, in der Sie eine Form ausfüllen. Sie können z. b. eine Farbe für den Mittelpunkt eines Pfades und eine andere Farbe für die Grenze eines Pfads angeben. Sie können auch separate Farben für jeden der einzelnen Punkte entlang der Grenze eines Pfads angeben.  
   
 > [!NOTE]
->  In GDI +, ist ein Pfad eine Sequenz von Linien und Kurven, die von verwaltet eine <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt. Weitere Informationen zu GDI +-Pfaden finden Sie unter [Grafikpfade in GDI +](graphics-paths-in-gdi.md) und [Constructing und zeichnen Pfade](constructing-and-drawing-paths.md).  
+> In GDI+ ist ein Pfad eine Sequenz von Linien und Kurven, die von einem <xref:System.Drawing.Drawing2D.GraphicsPath> -Objekt verwaltet werden. Weitere Informationen zu GDI+-Pfaden finden Sie unter [Grafik Pfade in GDI+](graphics-paths-in-gdi.md) und [Erstellen und Zeichnen von Pfaden](constructing-and-drawing-paths.md).  
 
-In die Beispielen in diesem Artikel werden die Methoden, die von eines Steuerelements aufgerufen werden <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
+Die Beispiele in diesem Artikel sind Methoden, die vom- <xref:System.Windows.Forms.Control.Paint> Ereignishandler eines Steuer Elements aufgerufen werden.  
 
-### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Um eine Ellipse mit eines linearen Pfadfarbverlaufs zu füllen.  
+### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>So füllen Sie eine Ellipse mit einem Pfad Farbverlauf aus  
   
-- Im folgenden Beispiel wird eine Ellipse mit der ein Pinsel mit Farbverlauf. Die Farbe in der Mitte auf Blau festgelegt und die Mittelpunktfarbe Hellblau festgelegt. Die folgende Abbildung zeigt die ausgefüllte Ellipse.  
+- Im folgenden Beispiel wird eine Ellipse mit einem Pfad Farbverlaufs Pinsel gefüllt. Die Mittel Farbe ist auf Blau festgelegt, und die Begrenzungs Farbe ist auf Aqua festgelegt. Die folgende Abbildung zeigt die gefüllte Ellipse.  
   
-     ![Farbverlaufspfad füllt eine Ellipse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
+     ![Der Farbverlaufs Pfad füllt eine Ellipse aus.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
-     Standardmäßig wird ein Pinsel mit Farbverlauf außerhalb der Grenzen des Pfads nicht erweitert. Wenn Sie Pfadfarbverlaufs verwenden, um einer Figur zu füllen, die über die Begrenzung des Pfads hinausgeht, wird der Bereich des Bildschirms außerhalb des Pfads wird nicht aufgefüllt.  
+     Standardmäßig wird der Pinsel mit dem Pfad Farbverlauf nicht außerhalb der Grenze des Pfads erweitert. Wenn Sie den Pfad Farbverlaufs Pinsel zum Auffüllen einer Abbildung verwenden, die über die Grenze des Pfads hinausgeht, wird der Bereich des Bildschirms außerhalb des Pfades nicht aufgefüllt.  
   
-     Die folgende Abbildung zeigt, was geschieht, wenn Sie ändern, die <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> rufen Sie in den folgenden Code zur `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     In der folgenden Abbildung wird gezeigt, was geschieht, <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`Wenn Sie den-Befehl im folgenden Code in ändern:  
   
-     ![Farbverlaufspfad außerhalb der Grenzen des Pfads erweitert.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
+     ![Der Farbverlaufs Pfad wurde über die Grenze des Pfades hinaus erweitert.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
   
-     Das vorherige Codebeispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs> e, die ein Parameter ist der <xref:System.Windows.Forms.PaintEventHandler>.  
+     Das vorangehende Codebeispiel wurde für die Verwendung mit Windows Forms entwickelt und erfordert den <xref:System.Windows.Forms.PaintEventArgs> e, bei dem es sich um <xref:System.Windows.Forms.PaintEventHandler>einen Parameter von handelt.  
   
-### <a name="to-specify-points-on-the-boundary"></a>Punkte für die Grenze angeben.  
+### <a name="to-specify-points-on-the-boundary"></a>So geben Sie Punkte auf der Grenze an  
   
-- Im folgende Beispiel wird einen Pinsel mit Farbverlauf aus einem Pfad sternförmiger erstellt. Der Code legt die <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> -Eigenschaft, die die Farbe auf den Schwerpunkt des Sterns in Rot festlegt. Dann legt der Code die <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> Eigenschaft, um verschiedene Farben anzugeben (gespeichert der `colors` Array) an den einzelnen Positionen im der `points` Array. Das endgültige Code-Anweisung füllt den sternförmiger Pfad mit dem Pfad Farbverlaufspinsel.  
+- Im folgenden Beispiel wird ein Pfad Farbverlaufs Pinsel aus einem sternförmigen Pfad konstruiert. Der Code legt die <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterColor%2A> -Eigenschaft fest, die die Farbe am Schwerpunkt des Stern auf rot festlegt. Anschließend legt der Code die <xref:System.Drawing.Drawing2D.PathGradientBrush.SurroundColors%2A> -Eigenschaft fest, um verschiedene Farben ( `colors` im Array gespeichert) an `points` den einzelnen Punkten im Array anzugeben. Die abschließende Code Anweisung füllt den sternförmigen Pfad mit dem Pfad Farbverlaufs Pinsel.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
-- Das folgende Beispiel zeichnet ein linearen Pfadfarbverlaufs ohne eine <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt im Code. Bestimmte <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> Konstruktor in diesem Beispiel empfängt ein Array von Punkten benötigt jedoch keiner <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt. Beachten Sie außerdem, dass die <xref:System.Drawing.Drawing2D.PathGradientBrush> wird verwendet, um ein Rechteck, das keinen Pfad zu füllen. Das Rechteck ist größer als der geschlossenen Pfad verwendet, um den Pinsel, zu definieren, damit einige des Rechtecks nicht vom Pinsel gezeichnet wird. Die folgende Abbildung zeigt das Rechteck (gepunkteten Linie) und der Teil des Rechtecks gezeichnet, indem Pfadfarbverlaufs: 
+- Im folgenden Beispiel wird ein Pfad Farbverlauf ohne <xref:System.Drawing.Drawing2D.GraphicsPath> ein-Objekt im Code gezeichnet. Der bestimmte <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> Konstruktor im Beispiel empfängt ein Array von Punkten, <xref:System.Drawing.Drawing2D.GraphicsPath> erfordert jedoch kein-Objekt. Beachten Sie außerdem, dass <xref:System.Drawing.Drawing2D.PathGradientBrush> verwendet wird, um ein Rechteck auszufüllen, nicht um einen Pfad. Das Rechteck ist größer als der geschlossene Pfad, mit dem der Pinsel definiert wird, sodass ein Teil des Rechtecks nicht durch den Pinsel gezeichnet wird. Die folgende Abbildung zeigt das Rechteck (gepunktete Linie) und den Teil des Rechtecks, das durch den Pfad Farbverlaufs Pinsel gezeichnet wird: 
   
-     ![Farbverlauf Teil von Pfadfarbverlaufs gezeichnet.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
+     ![Der vom Pfad Farbverlaufs Pinsel gezeichnete Farbverlaufs Teil.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
   
-### <a name="to-customize-a-path-gradient"></a>Zum Anpassen eines linearen Pfadfarbverlaufs  
+### <a name="to-customize-a-path-gradient"></a>So passen Sie einen Pfad Farbverlauf an  
   
-- Eine Möglichkeit, einen Pinsel mit Farbverlauf anzupassen ist, legen Sie dessen <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> Eigenschaft. Die Skalierungen Fokus geben Sie einen internen Pfad, die sich innerhalb der Hauptausführungspfad. Die Farbe in der Mitte wird überall innerhalb des inneren Pfades und nicht nur auf den Mittelpunkt angezeigt.  
+- Eine Möglichkeit, einen Pfad Farbverlaufs Pinsel anzupassen, besteht <xref:System.Drawing.Drawing2D.PathGradientBrush.FocusScales%2A> darin, seine-Eigenschaft festzulegen. Die Fokus Skalen geben einen inneren Pfad an, der sich innerhalb des Haupt Pfads befindet. Die Mittel Farbe wird überall innerhalb dieses inneren Pfades anstelle des Mittelpunkts angezeigt.  
   
-     Das folgende Beispiel erstellt einen Pinsel mit Farbverlauf auf der Grundlage einen elliptischen Pfads. Der Code wird die Grenze Farbe in Blau, legt die Farbe in der Mitte zu Hellblau und verwendet dann Pfadfarbverlaufs zum Ausfüllen des elliptischen Pfads.  
+     Im folgenden Beispiel wird ein Pfad Farbverlaufs Pinsel auf der Grundlage eines elliptischen Pfads erstellt. Der Code legt die Begrenzungs Farbe auf blau fest, legt die Mittel Farbe auf Aqua fest und verwendet dann den Pfad Farbverlaufs Pinsel, um den Ellipsen Pfad auszufüllen.  
   
-     Als Nächstes legt der Code die Skalierungen Fokus des Farbverlaufspinsels Pfad fest. Die X-Fokusskalierung 0,3 festgelegt ist, und die Skalierung des y den Fokus auf 0,8 festgelegt ist. Der Code Ruft die <xref:System.Drawing.Graphics.TranslateTransform%2A> -Methode der ein <xref:System.Drawing.Graphics> Objekt, damit der nachfolgende Aufruf von <xref:System.Drawing.Graphics.FillPath%2A> wird eine Ellipse, die sich rechts neben die erste Ellipse befindet.  
+     Als nächstes legt der Code die Fokus Skalen des Pinsel mit dem Pfad Farbverlauf fest. Die x-Fokus Skala ist auf 0,3 festgelegt, und die y-Fokus Skala ist auf 0,8 festgelegt. Der Code Ruft die <xref:System.Drawing.Graphics.TranslateTransform%2A> -Methode <xref:System.Drawing.Graphics> eines-Objekts auf <xref:System.Drawing.Graphics.FillPath%2A> , sodass der nachfolgende Aufruf von eine Ellipse füllt, die sich rechts von der ersten Ellipse befindet.  
   
-     Angenommen Sie, um die Auswirkungen der Fokus Skalen anzuzeigen, eine kleine Ellipse, die für die wichtigsten Ellipse freigegeben hat seinen Mittelpunkt. Kleinere (innere) Ellipse ist die wichtigsten Ellipse (über ihren Mittelpunkt) das horizontal mit einem Faktor von 0.3 und vertikal um den Faktor 0,8 skaliert. Wenn Sie von der Begrenzung der äußeren Ellipse an der Begrenzung des inneren Ellipse bewegen, ändert die Farbe allmählich von Blau zu Hellblau. Wie Sie von der Begrenzung des inneren Ellipse zum freigegebenen Center, bleibt die Farbe Aquamarin verschieben.  
+     Um die Auswirkung der Fokus Skalen anzuzeigen, stellen Sie sich eine kleine Ellipse vor, die das Zentrum mit der Haupt Ellipse teilt. Die kleine (innere) Ellipse ist die Hauptellipse, die horizontal um den Faktor 0,3 und vertikal um den Faktor 0,8 skaliert wird. Wenn Sie von der Grenze der äußeren Ellipse zur Grenze der inneren Ellipse wechseln, ändert sich die Farbe allmählich von blau zu Aqua. Wenn Sie von der Begrenzung der inneren Ellipse zum Shared Center wechseln, bleibt die Farbe Aqua.  
   
-     In der folgenden Abbildung ist das Ergebnis des angegebenen Codes dargestellt. Ellipse auf der linken Seite ist Aqua nur auf den Mittelpunkt. Ellipse auf der rechten Seite ist Aqua überall innerhalb des inneren Pfads.  
+     In der folgenden Abbildung ist das Ergebnis des angegebenen Codes dargestellt. Die Ellipse auf der linken Seite ist nur für Aqua am Mittelpunkt. Die Ellipse auf der rechten Seite ist Aqua Everywhere innerhalb des inneren Pfades.  
   
- ![Der Fokus Skalen Farbverlaufseffekt](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
+ ![Farbverlaufs Effekt von Fokus Skalen](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
   
-### <a name="to-customize-with-interpolation"></a>Bei der Interpolation anpassen  
+### <a name="to-customize-with-interpolation"></a>So passen Sie mit Interpolations an  
   
-- Eine weitere Möglichkeit zum Anpassen von eines Pinsels mit Farbverlauf ist ein Array von Farben und ein Array von Interpolationspositionen an.  
+- Eine andere Möglichkeit zum Anpassen eines Farbverlaufs Pinsels besteht darin, ein Array von Interpolations Farben und ein Array von Interpolations Positionen anzugeben.  
   
-     Das folgende Beispiel erstellt einen Pinsel mit Farbverlauf auf der Grundlage eines Dreiecks. Der Code legt die <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> Eigenschaft des Pfadfarbverlaufs an ein Array von Farben (Dunkelgrün, Aqua, Blau) und ein Array von Interpolationspositionen ("0", "0.25", "1"). Während Sie von der Begrenzung des Dreiecks auf den Mittelpunkt bewegen, ändert die Farbe allmählich von Dunkelgrün Hellblau und dann von Aqua in Blau. Die Änderung von Dunkelgrün Aqua erfolgt in 25 Prozent der Entfernung von Dunkelgrün in Blau.  
+     Im folgenden Beispiel wird ein auf einem Dreieck basierender Pfad Farbverlauf erstellt. Mit dem Code wird <xref:System.Drawing.Drawing2D.PathGradientBrush.InterpolationColors%2A> die-Eigenschaft des Farbverlaufs Pinsels festgelegt, um ein Array von Interpolations Farben (dunkelgrün, Aqua, Blue) und ein Array von Interpolations Positionen (0, 0,25, 1) anzugeben. Wenn Sie von der Grenze des Dreiecks zum Mittelpunkt wechseln, ändert sich die Farbe allmählich von Dunkelgrün zu Aqua und dann von Aqua zu blau. Die Änderung von Dunkelgrün zu Aqua erfolgt in 25 Prozent der Entfernung von Dunkelgrün zu blau.  
   
-     Die folgende Abbildung zeigt das Dreieck mit benutzerdefinierten Pfadfarbverlaufs gefüllt.  
+     Die folgende Abbildung zeigt das Dreieck, das mit dem benutzerdefinierten Pfad Farbverlaufs Pinsel gefüllt ist.  
   
-     ![Dreieck wird mit benutzerdefinierter Pfad Farbverlaufspinsel gefüllt.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
+     ![Dreieck mit benutzerdefiniertem Pfad Farbverlaufs Pinsel.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
   
-### <a name="to-set-the-center-point"></a>Den Mittelpunkt festlegen  
+### <a name="to-set-the-center-point"></a>So legen Sie den Mittelpunkt fest  
   
-- Wird standardmäßig der Mittelpunkt des Pfadfarbverlaufs an den Schwerpunkt des Pfads verwendet, um den Pinsel zu erstellen. Sie können den Speicherort des Mittelpunkts ändern, durch Festlegen der <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> Eigenschaft der <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse.  
+- Standardmäßig befindet sich der Mittelpunkt eines Pfad Farbverlaufs Pinsels im Schwerpunkt des Pfads, der zum Erstellen des Pinsels verwendet wird. Sie können den Speicherort des Mittelpunkts ändern, indem Sie <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> die-Eigenschaft <xref:System.Drawing.Drawing2D.PathGradientBrush> der-Klasse festlegen.  
   
-     Das folgende Beispiel erstellt einen Pinsel mit Farbverlauf auf der Grundlage einer Ellipse an. Der Mittelpunkt der Ellipse ist (70, 35), aber auf der Mittelpunkt des Pfadfarbverlaufs festgelegt ist ("120", "40").  
+     Im folgenden Beispiel wird ein auf einer Ellipse basierender Pfad Farbverlauf erstellt. Der Mittelpunkt der Ellipse liegt bei (70, 35), aber der Mittelpunkt des Farbverlaufs Pinsels ist auf (120, 40) festgelegt.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     Die folgende Abbildung zeigt die ausgefüllte Ellipse und den Mittelpunkt des Pfadfarbverlaufs:  
+     Die folgende Abbildung zeigt die gefüllte Ellipse und den Mittelpunkt des Pfads für den Pfad Farbverlauf:  
   
-     ![Farbverlaufspfad mit gefüllte Ellipse und Center Punkt.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
+     ![Der Farbverlaufs Pfad mit ausgefüllter Ellipse und Mittelpunkt.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
-- Sie können den Mittelpunkt des Pfadfarbverlaufs an einem Speicherort außerhalb des Pfads festlegen, die zum Erstellen des Pinsels verwendet wurde. Im folgenden Beispiel ersetzt der Aufruf zum Festlegen der <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> Eigenschaft im vorangehenden Code.  
+- Sie können den Mittelpunkt eines Farbverlaufs Pinsels auf einen Speicherort außerhalb des Pfads festlegen, der zum Erstellen des Pinsels verwendet wurde. Im folgenden Beispiel wird der-Befehl ersetzt, <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> um die-Eigenschaft im vorangehenden Code festzulegen.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     Die folgende Abbildung zeigt die Ausgabe durch diese Änderung:  
+     Die folgende Abbildung zeigt die Ausgabe mit dieser Änderung:  
   
-     ![Farbverlaufspfad mit einem Mittelpunkt außerhalb des Pfads.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
+     ![Der Farbverlaufs Pfad mit dem Mittelpunkt außerhalb des Pfads.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
-     In der vorherigen Abbildung sind die Punkte in der rechten oberen Ecke der Ellipse nicht reines Blau (obwohl sie sehr dicht beieinander liegen). Die Farben im Farbverlauf positioniert sind, als ob die Füllung auf den Punkt (145, 35) erreicht, in dem die Farbe reines Blau (0, 0, 255) wäre. Aber die Füllung nie erreicht (145, 35), da ein Pinsel mit Farbverlauf nur innerhalb des Pfads zeichnet.  
+     In der obigen Abbildung sind die Punkte ganz rechts von der Ellipse nicht rein blau (obwohl Sie sehr nah sind). Die Farben im Farbverlauf werden so positioniert, als ob das Ausfüllen den Punkt erreicht hat (145, 35), bei dem die Farbe rein blau (0,0) ist (0, 0, 255). Die Füllung erreicht jedoch nie (145, 35), da ein Pfad Farbverlaufs Pinsel nur innerhalb des Pfads zeichnet.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Im vorherigen Beispiel sind für die Verwendung mit Windows Forms konzipiert und erfordern <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
+ Die vorhergehenden Beispiele sind für die Verwendung mit Windows Forms konzipiert und erfordern <xref:System.Windows.Forms.PaintEventArgs> `e`, was ein Parameter des <xref:System.Windows.Forms.Control.Paint> Ereignis Handlers ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: OLE DB-, ODBC- und Oracle-Verbindungspooling
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7552f4a95af51774071f0a4017637570d648dd86
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772033"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929254"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB-, ODBC- und Oracle-Verbindungspooling
 Durch Verbindungspooling kann die Leistung und Skalierbarkeit einer Anwendung wesentlich erhöht werden. In diesem Abschnitt wird das Verbindungspooling für die .NET Framework-Datenanbieter für OLE DB, ODBC und Oracle erläutert.  
@@ -21,12 +21,12 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Es wird empfohlen, nach Abschluss der Verwendung einer Verbindung diese immer zu schließen oder zu verwerfen, um die Verbindung an den Pool zurückzugeben. Verbindungen, die nicht explizit geschlossen werden, werden möglicherweise nicht an den Pool zurückgegeben. Beispielsweise wird eine Verbindung, die sich nicht mehr im Gültigkeitsbereich befindet, aber nicht explizit geschlossen wurde, nur dann an den Verbindungspool zurückgegeben, wenn die maximale Poolgröße erreicht wurde und die Verbindung immer noch gültig ist.  
   
- Weitere Informationen zu OLE DB-Sitzungspooling oder -Ressourcenpooling, sowie zum Deaktivieren des Poolings durch Überschreiben der Standardwerte für den OLE DB-Anbieter, finden Sie unter den [OLE DB Programmer's Guide](https://go.microsoft.com/fwlink/?linkid=45232).  
+ Weitere Informationen zum OLE DB-Sitzungs-oder Ressourcen Pooling sowie zum Deaktivieren des Poolings durch Überschreiben der Standardwerte für den OLE DB Anbieter Dienst finden Sie im [OLE DB Programmer es Guide](https://go.microsoft.com/fwlink/?linkid=45232).  
   
 ## <a name="connection-pooling-for-odbc"></a>Verbindungspooling für ODBC  
  Das Verbindungspooling für .NET Framework-Datenanbieter für ODBC wird von dem für die Verbindung verwendeten ODBC-Treiber-Manager verwaltet und wird nicht vom .NET Framework-Datenanbieter für ODBC beeinflusst.  
   
- Öffnen Sie zum Aktivieren oder Deaktivieren von Anwendungspooling, **ODBC-Datenquellenadministrator** in den Ordner "Verwaltung" der Systemsteuerung. Die **Verbindungspooling** Registerkarte können Sie die Verbindungspoolingparameter für jeden installierten ODBC-Treiber angeben. Beachten Sie, dass im Fall von Verbindungspoolingänderungen für einen bestimmten ODBC-Treiber alle Anwendungen betroffen sind, die diesen ODBC-Treiber verwenden.  
+ Um das Verbindungspooling zu aktivieren oder zu deaktivieren, öffnen Sie in der Systemsteuerung im Ordnerverwaltung den **ODBC-Datenquellen-Administrator** . Auf der Registerkarte **Verbindungspooling** können Sie Verbindungspooling-Parameter für jeden installierten ODBC-Treiber angeben. Beachten Sie, dass im Fall von Verbindungspoolingänderungen für einen bestimmten ODBC-Treiber alle Anwendungen betroffen sind, die diesen ODBC-Treiber verwenden.  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Verbindungspooling für OracleClient  
  Der .NET Framework-Datenanbieter für Oracle stellt das Verbindungspooling für die ADO.NET-Clientanwendung automatisch bereit. Sie können auch mehrere Modifizierer für Verbindungszeichenfolgen angeben, um das Verbindungspoolingverhalten zu steuern (siehe "Steuern von Verbindungspooling mit Verbindungszeichenfolgen-Schlüsselwörtern" weiter unten in diesem Thema).  
@@ -48,10 +48,10 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Wenn eine Verbindung zu einem nicht mehr vorhandenen Server besteht, kann diese Verbindung auch ohne dass die Verbindungspoolfunktion die unterbrochene Verbindung gefunden und als ungültig markiert hat aus dem Pool genommen werden. In diesem Fall wird eine Ausnahme ausgelöst. Sie müssen die Verbindung dennoch trennen, um sie an den Pool zurückzugeben.  
   
- Rufen Sie nicht `Close` oder `Dispose` für eine `Connection`, einen `DataReader` oder ein anderes verwaltetes Objekt in der `Finalize`-Methode der Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
+ Rufen Sie nicht `Close` oder `Dispose` für eine `Connection`, einen `DataReader` oder ein anderes verwaltetes Objekt in der `Finalize`-Methode der Klasse auf. Geben Sie in einer Finalize-Methode nur nicht verwaltete Ressourcen frei, die der Klasse direkt gehören. Wenn die Klasse keine nicht verwalteten Ressourcen besitzt, definieren Sie in der Klasse keine `Finalize`-Methode. Weitere Informationen finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
 ### <a name="transaction-support"></a>Transaktionsunterstützung  
- Verbindungen werden aus dem Pool entnommen und basierend auf dem Transaktionskontext zugewiesen. Der Kontext des anfordernden Threads und der zugewiesenen Verbindung müssen übereinstimmen. Aus diesem Grund jedem Verbindungspool wird tatsächlich in Verbindungen unterteilt, denen kein Transaktionskontext verknüpft ist, und in *N* Teilbereiche, die jeweils Verbindungen für einen bestimmten Transaktionskontext enthalten.  
+ Verbindungen werden aus dem Pool entnommen und basierend auf dem Transaktionskontext zugewiesen. Der Kontext des anfordernden Threads und der zugewiesenen Verbindung müssen übereinstimmen. Daher wird jeder Verbindungspool tatsächlich in Verbindungen unterteilt, denen kein Transaktionskontext zugeordnet ist, und in *N* Unterteilungen, die jeweils Verbindungen mit einem bestimmten Transaktionskontext enthalten.  
   
  Wenn eine Verbindung geschlossen wird, wird sie an den Pool und an den entsprechenden Teilbereich auf der Grundlage des Transaktionskontexts zurückgegeben. Sie können die Verbindung daher trennen, ohne einen Fehler zu generieren, auch wenn eine verteilte Transaktion noch aussteht. So haben Sie die Möglichkeit, die verteilte Transaktion zu einem späteren Zeitpunkt durchzuführen oder abzubrechen.  
   
@@ -60,7 +60,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  In der folgenden Tabelle werden die <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>-Werte beschrieben, die zum Anpassen des Verbindungspoolingverhaltens verwendet werden können.  
   
-|Name|Standard|Beschreibung|  
+|Name|Default|Beschreibung|  
 |----------|-------------|-----------------|  
 |`Connection Lifetime`|0|Wenn eine Verbindung an den Pool zurückgegeben wird, wird die Erstellungszeit mit der aktuellen Zeit verglichen. Wenn diese Zeitspanne (in Sekunden) größer ist als der für die `Connection Lifetime` angegebene Wert, wird die Verbindung zerstört. Dies ist hilfreich bei Gruppenkonfigurationen, um einen Lastenausgleich zwischen einem bereits aktiven Server und einem Server zu erzwingen, der gerade erst online gegangen ist.<br /><br /> Der Wert 0 (null) bewirkt, dass an den Pool zurückgegebene Verbindungen den maximalen Timeout besitzen.|  
 |`Enlist`|"true"|Im Falle von `true` wird die Verbindung automatisch von der Poolfunktion im aktuellen Transaktionskontext des Erstellungsthreads aufgelistet, wenn ein Transaktionskontext vorhanden ist.|  

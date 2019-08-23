@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: ecf8fb93688c0e7566083f43581ada8dce53d2ca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0976a0e07aead1bbaf951c6db8266c5de1a31cd8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589596"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929702"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Vorgehensweise: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern des Aussehens und Verhaltens
 Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet eine Reihe von Möglichkeiten, sein Aussehen und Verhalten mithilfe von Eigenschaften, Ereignissen und Assistentenklassen anzupassen. Gelegentlich haben Sie möglicherweise Anforderungen an die Zellen, die über die Möglichkeiten hinausgehen, die diese Features bieten können. Sie können Ihre eigene benutzerdefinierte <xref:System.Windows.Forms.DataGridViewCell>-Klasse erstellen, um erweiterte Funktionalität bereitzustellen.  
@@ -26,12 +26,12 @@ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement bietet eine Reihe von
  Erstellen Sie zum Verwenden dieser Klassen ein Formular mit einem <xref:System.Windows.Forms.DataGridView>-Steuerelement, fügen Sie der <xref:System.Windows.Forms.DataGridView.Columns%2A>-Auflistung ein oder mehrere `DataGridViewRolloverColumn`-Objekte hinzu, und füllen Sie das Steuerelement mit Zeilen, die Werte enthalten.  
   
 > [!NOTE]
->  Dieses Beispiel funktioniert nicht ordnungsgemäß, wenn Sie leere Zeilen hinzufügen. Leere Zeilen werden beispielsweise erstellt, wenn Sie dem Steuerelement Zeilen hinzufügen, indem Sie die <xref:System.Windows.Forms.DataGridView.RowCount%2A>-Eigenschaft festlegen. Der Grund dafür ist, dass die in diesem Fall hinzugefügten Zeilen automatisch freigegeben werden. Das heißt, dass `DataGridViewRolloverCell`-Objekte erst instanziiert werden, wenn Sie auf einzelne Zellen klicken und somit die Freigabe der zugeordneten Zeilen aufheben.  
+> Dieses Beispiel funktioniert nicht ordnungsgemäß, wenn Sie leere Zeilen hinzufügen. Leere Zeilen werden beispielsweise erstellt, wenn Sie dem Steuerelement Zeilen hinzufügen, indem Sie die <xref:System.Windows.Forms.DataGridView.RowCount%2A>-Eigenschaft festlegen. Der Grund dafür ist, dass die in diesem Fall hinzugefügten Zeilen automatisch freigegeben werden. Das heißt, dass `DataGridViewRolloverCell`-Objekte erst instanziiert werden, wenn Sie auf einzelne Zellen klicken und somit die Freigabe der zugeordneten Zeilen aufheben.  
   
- Da bei dieser Art der Zellenanpassung nicht freigegebene Zeilen benötigt werden, eignet sie sich nicht für große DataSets. Weitere Informationen zum Freigeben von Zeilen finden Sie unter [Best Practices für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Da bei dieser Art der Zellenanpassung nicht freigegebene Zeilen benötigt werden, eignet sie sich nicht für große DataSets. Weitere Informationen zur Zeilen Freigabe finden Sie unter [bewährte Methoden zum Skalieren des Windows Forms DataGridView-Steuer](best-practices-for-scaling-the-windows-forms-datagridview-control.md)Elements.  
   
 > [!NOTE]
->  Wenn Sie aus <xref:System.Windows.Forms.DataGridViewCell> oder <xref:System.Windows.Forms.DataGridViewColumn> ableiten und der abgeleiteten Klasse neue Eigenschaften hinzufügen, müssen Sie die `Clone`-Methode überschreiben, damit die neuen Eigenschaften bei Klonvorgängen kopiert werden. Außerdem sollten Sie die `Clone`-Methode der Basisklasse aufrufen, damit die Eigenschaften der Basisklasse in die neue Zelle oder Spalte kopiert werden.  
+> Wenn Sie aus <xref:System.Windows.Forms.DataGridViewCell> oder <xref:System.Windows.Forms.DataGridViewColumn> ableiten und der abgeleiteten Klasse neue Eigenschaften hinzufügen, müssen Sie die `Clone`-Methode überschreiben, damit die neuen Eigenschaften bei Klonvorgängen kopiert werden. Außerdem sollten Sie die `Clone`-Methode der Basisklasse aufrufen, damit die Eigenschaften der Basisklasse in die neue Zelle oder Spalte kopiert werden.  
   
 ### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>So passen Sie Zellen und Spalten im DataGridView-Steuerelement an  
   

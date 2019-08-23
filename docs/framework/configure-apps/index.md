@@ -24,18 +24,18 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456201"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912883"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
 .NET Framework bietet Entwicklern und Administratoren die Möglichkeit, die Ausführung von Anwendungen über Konfigurationsdateien flexibel zu steuern. Konfigurationsdateien sind XML-Dateien, die je nach Bedarf verändert werden können. So kann der Administrator bestimmen, auf welche geschützten Ressourcen eine Anwendung zugreifen kann, welche Assemblyversionen sie verwenden soll und wo sich Remoteanwendungen befinden. Entwickler wiederum können Einstellungen in Konfigurationsdateien einfügen, sodass eine Anwendung nicht jedes Mal neu kompiliert werden muss, wenn sich ihre Einstellungen ändern. In diesem Abschnitt wird beschrieben, was konfiguriert werden kann und warum die Konfiguration einer Anwendung von Nutzen sein kann.  
   
 > [!NOTE]
->  Verwalteter Code kann mithilfe der Klassen im <xref:System.Configuration>-Namespace Einstellungen aus den Konfigurationsdateien lesen, jedoch keine Einstellungen in diese Dateien schreiben.  
+> Verwalteter Code kann mithilfe der Klassen im <xref:System.Configuration>-Namespace Einstellungen aus den Konfigurationsdateien lesen, jedoch keine Einstellungen in diese Dateien schreiben.  
   
  Dieses Thema beschreibt die Syntax von Konfigurationsdateien und enthält Informationen zu den drei Arten von Konfigurationsdateien: Computer, Anwendung und Sicherheit.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66456201"
   
  Wie bei allen XML-Dateien wird bei der Syntax von Konfigurationsdateien die Groß-/Kleinschreibung berücksichtigt.  
   
- Sie können Konfigurationseinstellungen mithilfe von vordefinierten Attributen vornehmen. Diese Attribute sind Name/Wert-Paare innerhalb des Anfangstags eines Elements. Durch den folgenden Beispielcode werden zwei Attribute (`version` und `href`) für das `<codeBase>`-Element angegeben, das den Ort bezeichnet, an dem die Common Language Runtime eine Assembly auffinden kann (weitere Informationen hierzu finden Sie unter [Festlegen des Speicherortes einer Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)).  
+ Sie können Konfigurationseinstellungen mithilfe von vordefinierten Attributen vornehmen. Diese Attribute sind Name/Wert-Paare innerhalb des Anfangstags eines Elements. Durch den folgenden Beispielcode werden zwei Attribute (`version` und `href`) für das `<codeBase>`-Element angegeben, das den Ort bezeichnet, an dem die Common Language Runtime eine Assembly auffinden kann (weitere Informationen hierzu finden Sie unter [Festlegen des Speicherortes einer Assembly](specify-assembly-location.md)).  
   
 ```xml  
 <codeBase version="2.0.0.0"  
@@ -54,12 +54,12 @@ ms.locfileid: "66456201"
 ## <a name="machine-configuration-files"></a>Computerkonfigurationsdateien  
  Die Computerkonfigurationsdatei Machine.config enthält Einstellungen, die für den gesamten Computer gelten. Diese Datei befindet sich im Verzeichnis "%*runtime install path*%\Config". Machine.config enthält Konfigurationseinstellungen für die computerweite Assemblybindung, für integrierte [Remotingkanäle](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) und für ASP.NET.  
   
- Das Konfigurationssystem durchsucht zuerst die Computerkonfigurationsdatei nach dem [ **\<appSettings>** -Element](~/docs/framework/configure-apps/file-schema/appsettings/index.md) und anderen Konfigurationsabschnitten, die von einem Entwickler möglicherweise definiert wurden. Anschließend wird die Anwendungskonfigurationsdatei durchsucht. Aus Gründen der Übersichtlichkeit der Computerkonfigurationsdatei empfiehlt es sich, diese Einstellungen in der Anwendungskonfigurationsdatei zu speichern. Wenn sich diese Einstellungen in der Computerkonfigurationsdatei befinden, ist das System jedoch u. U. einfacher zu warten. Wird z. B. die Komponente eines Drittanbieters sowohl von der Client- als auch von der Serveranwendung verwendet, ist es einfacher, die Einstellungen für diese Komponente in der gleichen Datei zu speichern. In diesem Fall ist die Computerkonfigurationsdatei dafür am besten geeignet, und Sie vermeiden redundante Informationen in zwei verschiedenen Dateien.  
+ Das Konfigurationssystem durchsucht zuerst die Computerkonfigurationsdatei nach dem [ **\<appSettings>** -Element](./file-schema/appsettings/index.md) und anderen Konfigurationsabschnitten, die von einem Entwickler möglicherweise definiert wurden. Anschließend wird die Anwendungskonfigurationsdatei durchsucht. Aus Gründen der Übersichtlichkeit der Computerkonfigurationsdatei empfiehlt es sich, diese Einstellungen in der Anwendungskonfigurationsdatei zu speichern. Wenn sich diese Einstellungen in der Computerkonfigurationsdatei befinden, ist das System jedoch u. U. einfacher zu warten. Wird z. B. die Komponente eines Drittanbieters sowohl von der Client- als auch von der Serveranwendung verwendet, ist es einfacher, die Einstellungen für diese Komponente in der gleichen Datei zu speichern. In diesem Fall ist die Computerkonfigurationsdatei dafür am besten geeignet, und Sie vermeiden redundante Informationen in zwei verschiedenen Dateien.  
   
 > [!NOTE]
->  Wenn Sie eine Anwendung mithilfe von XCOPY bereitstellen, werden die Einstellungen nicht in die Computerkonfigurationsdatei kopiert.  
+> Wenn Sie eine Anwendung mithilfe von XCOPY bereitstellen, werden die Einstellungen nicht in die Computerkonfigurationsdatei kopiert.  
   
- Weitere Informationen dazu, wie die Common Language Runtime die Computerkonfigurationsdatei für die Assemblybindung verwendet, finden Sie unter [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Weitere Informationen dazu, wie die Common Language Runtime die Computerkonfigurationsdatei für die Assemblybindung verwendet, finden Sie unter [So sucht Common Language Runtime nach Assemblys](../deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="application-configuration-files"></a>Anwendungskonfigurationsdateien  
  Eine Anwendungskonfigurationsdatei enthält App-spezifische Einstellungen. Eine solche Datei enthält Konfigurationseinstellungen, die von der Common Language Runtime gelesen werden (z. B. Assemblybindungsrichtlinien, Remotingobjekte usw.), und Einstellungen, die von der App gelesen werden können.  
@@ -72,7 +72,7 @@ ms.locfileid: "66456201"
   
      Wenn Sie in Visual Studio entwickeln, legen Sie die Quellkonfigurationsdatei für Ihre App im Projektverzeichnis ab, und legen Sie die zugehörige Eigenschaft **In Ausgabeverzeichnis kopieren** auf **Immer kopieren** oder **Kopieren, wenn neuer** fest. Die Konfigurationsdatei trägt den gleichen Namen wie die App, die Dateierweiterung lautet .config. Beispielsweise sollte eine App mit dem Namen myApp.exe eine Quellkonfigurationsdatei mit dem Namen myApp.exe.config haben.  
   
-     Visual Studio kopiert die Quellkonfigurationsdatei automatisch in das Verzeichnis, in dem die kompilierte Assembly platziert wird, um die Ausgabekonfigurationsdatei zu erstellen, die mit der App bereitgestellt wird. In einigen Fällen wird die Ausgabekonfigurationsdatei von Visual Studio möglicherweise geändert. Weitere Informationen dazu finden Sie im Abschnitt [Umleiten von Assemblyversionen auf App-Ebene](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) des Artikels [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md).  
+     Visual Studio kopiert die Quellkonfigurationsdatei automatisch in das Verzeichnis, in dem die kompilierte Assembly platziert wird, um die Ausgabekonfigurationsdatei zu erstellen, die mit der App bereitgestellt wird. In einigen Fällen wird die Ausgabekonfigurationsdatei von Visual Studio möglicherweise geändert. Weitere Informationen dazu finden Sie im Abschnitt [Umleiten von Assemblyversionen auf App-Ebene](redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) des Artikels [Umleiten von Assemblyversionen](redirect-assembly-versions.md).  
   
 - Von ASP.NET gehostete App.  
   
@@ -87,10 +87,10 @@ ms.locfileid: "66456201"
      In diesem Tag bezeichnet `location` die URL, an der sich die Konfigurationsdatei befindet. Dadurch wird die App-Basis festgelegt. Die Konfigurationsdatei und die App müssen sich in derselben Website befinden.  
   
 ## <a name="security-configuration-files"></a>Sicherheitskonfigurationsdateien  
- Sicherheitskonfigurationsdateien enthalten Informationen zur Codegruppenhierarchie und zu Berechtigungen, die einer Richtlinienebene zugeordnet sind. Es wird dringend empfohlen, mithilfe des [Sicherheitsrichtlinientools für den Codezugriff (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) die Sicherheitsrichtlinie dahingehend zu ändern, dass Richtlinienänderungen keinesfalls zur Beschädigung der Sicherheitskonfigurationsdateien führen können.  
+ Sicherheitskonfigurationsdateien enthalten Informationen zur Codegruppenhierarchie und zu Berechtigungen, die einer Richtlinienebene zugeordnet sind. Es wird dringend empfohlen, mithilfe des [Sicherheitsrichtlinientools für den Codezugriff (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) die Sicherheitsrichtlinie dahingehend zu ändern, dass Richtlinienänderungen keinesfalls zur Beschädigung der Sicherheitskonfigurationsdateien führen können.  
   
 > [!NOTE]
->  Ab .NET Framework 4 sind die Sicherheitskonfigurationsdateien nur vorhanden, wenn Sicherheitsrichtlinie geändert wurde.  
+> Ab .NET Framework 4 sind die Sicherheits Konfigurationsdateien nur vorhanden, wenn die Sicherheitsrichtlinie geändert wurde.  
   
  Die Sicherheitskonfigurationsdateien sind an folgenden Speicherorten abgelegt:  
   
@@ -101,30 +101,30 @@ ms.locfileid: "66456201"
 - Konfigurationsdatei für Benutzerrichtlinien: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Suchen von Assemblys mit DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Vorgehensweise: Suchen von Assemblys mit DEVPATH](how-to-locate-assemblies-by-using-devpath.md)  
  Beschreibt, wie die Common Language Runtime angewiesen wird, beim Suchen nach Assemblys die DEVPATH-Umgebungsvariable zu verwenden.  
   
- [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
+ [Umleiten von Assemblyversionen](redirect-assembly-versions.md)  
  Beschreibt das Festlegen des Speicherorts und der zu verwendenden Version einer Assembly.  
   
- [Festlegen des Speicherortes einer Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)  
+ [Festlegen des Speicherortes einer Assembly](specify-assembly-location.md)  
  Beschreibt, wie festgelegt wird, wo die Common Language Runtime nach einer Assembly suchen soll.  
   
- [Konfigurieren kryptografischer Klassen](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [Konfigurieren kryptografischer Klassen](configure-cryptography-classes.md)  
  Beschreibt die Zuordnung eines Algorithmusnamens zu einer kryptografischen Klasse und eines Objektbezeichners zu einem kryptografischen Algorithmus.  
   
- [Vorgehensweise: Erstellen einer Herausgeberrichtlinie](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [Vorgehensweise: Erstellen einer Herausgeber Richtlinie](how-to-create-a-publisher-policy.md)  
  Beschreibt die Situationen, in denen Sie eine Herausgeberrichtliniendatei hinzufügen sollten, um Assemblyumleitung und CodeBase-Einstellungen anzugeben, sowie die entsprechende Vorgehensweise.  
   
- [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Konfigurationsdateischema](./file-schema/index.md)  
  Beschreibt die Schemahierarchie für Startup, Laufzeit, Netzwerk und anderen Arten von Konfigurationseinstellungen.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Festlegen des Speicherortes einer Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Konfigurationsdateischema](./file-schema/index.md)
+- [Festlegen des Speicherortes einer Assembly](specify-assembly-location.md)
+- [Umleiten von Assemblyversionen](redirect-assembly-versions.md)
 - [ASP.NET-Websiteverwaltung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
-- [Serversicherheits-richtlinienverwaltung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (Richtlinientool für die Codezugriffssicherheit)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
-- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Verwaltung von Sicherheitsrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
+- [Caspol.exe (Richtlinientool für die Codezugriffssicherheit)](../tools/caspol-exe-code-access-security-policy-tool.md)
+- [Assemblys in der Common Language Runtime (CLR)](../app-domains/assemblies-in-the-common-language-runtime.md)

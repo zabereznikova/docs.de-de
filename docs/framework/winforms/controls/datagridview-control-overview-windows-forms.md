@@ -19,55 +19,55 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: 4db2a8b0e30a6bb3db0c5c629d868bc01dc15a8c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 992bf57642c955a87cd7675e0bbe7c52131e8039
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648080"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969146"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Übersicht über das DataGridView-Steuerelement (Windows Forms)
 > [!NOTE]
->  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, können Sie anzeigen und Bearbeiten von Tabellendaten aus vielen unterschiedlichen Datenquellen.  
+ Mit dem <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie tabellarische Daten aus vielen unterschiedlichen Arten von Datenquellen anzeigen und bearbeiten.  
   
- Binden von Daten an die <xref:System.Windows.Forms.DataGridView> Steuerelement ist einfach und intuitiv, und in vielen Fällen ist es so einfach wie das Festlegen der <xref:System.Windows.Forms.DataGridView.DataSource%2A> Eigenschaft. Wenn Sie mit einer Datenquelle, die mehrere Listen oder Tabellen enthält binden, legen Sie die <xref:System.Windows.Forms.DataGridView.DataMember%2A> Eigenschaft in eine Zeichenfolge, der angibt, die Liste oder Tabelle zum Binden an.  
+ Das Binden von Daten <xref:System.Windows.Forms.DataGridView> an das Steuerelement ist unkompliziert und intuitiv, und in vielen Fällen ist es genauso einfach <xref:System.Windows.Forms.DataGridView.DataSource%2A> wie das Festlegen der-Eigenschaft. Wenn Sie an eine Datenquelle binden, die mehrere Listen oder Tabellen enthält, legen <xref:System.Windows.Forms.DataGridView.DataMember%2A> Sie die-Eigenschaft auf eine Zeichenfolge fest, die die Liste oder Tabelle angibt, an die die Bindung erfolgen soll.  
   
- Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die standardmäßige Windows Forms-Datenbindungsmodell verwendet, damit die Bindung an Instanzen von Klassen, die in der folgenden Liste beschrieben:  
+ Das <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt das Standard-Daten Bindungs Modell Windows Forms, sodass es an Instanzen von Klassen gebunden wird, die in der folgenden Liste beschrieben werden:  
   
-- Jede Klasse, implementiert die <xref:System.Collections.IList> -Schnittstelle, einschließlich eindimensionale Arrays.  
+- Jede Klasse, die die <xref:System.Collections.IList> -Schnittstelle implementiert, einschließlich eindimensionaler Arrays.  
   
-- Jede Klasse, implementiert die <xref:System.ComponentModel.IListSource> Schnittstelle, z. B. die <xref:System.Data.DataTable> und <xref:System.Data.DataSet> Klassen.  
+- Jede Klasse, die die <xref:System.ComponentModel.IListSource> -Schnittstelle implementiert, <xref:System.Data.DataTable> z <xref:System.Data.DataSet> . b. die Klassen und.  
   
-- Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingList> Schnittstelle, z. B. die <xref:System.ComponentModel.BindingList%601> Klasse.  
+- Jede Klasse, die die <xref:System.ComponentModel.IBindingList> -Schnittstelle implementiert, <xref:System.ComponentModel.BindingList%601> z. b. die-Klasse.  
   
-- Jede Klasse, implementiert die <xref:System.ComponentModel.IBindingListView> Schnittstelle, z. B. die <xref:System.Windows.Forms.BindingSource> Klasse.  
+- Jede Klasse, die die <xref:System.ComponentModel.IBindingListView> -Schnittstelle implementiert, <xref:System.Windows.Forms.BindingSource> z. b. die-Klasse.  
   
- Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die Datenbindung an die öffentlichen Eigenschaften der Objekte, die von diesen Schnittstellen zurückgegeben und die Properties-Auflistung, die zurückgegeben werden, indem ein <xref:System.ComponentModel.ICustomTypeDescriptor> Schnittstelle, wenn auf die zurückgegebenen Objekte implementiert.  
+ Das <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die Datenbindung an die öffentlichen Eigenschaften der Objekte, die von diesen Schnittstellen zurückgegeben werden <xref:System.ComponentModel.ICustomTypeDescriptor> , oder an die von einer Schnittstelle zurückgegebene Eigenschaften Auflistung, sofern Sie für die zurückgegebenen Objekte  
   
- In der Regel eine Bindung an eine <xref:System.Windows.Forms.BindingSource> Komponente und die Bindung der <xref:System.Windows.Forms.BindingSource> Komponente in eine andere Datenquelle, oder füllen Sie es mit Geschäftsobjekten. Die <xref:System.Windows.Forms.BindingSource> Komponente ist die bevorzugte Datenquelle aus, da sie eine an eine Vielzahl von Datenquellen Bindung können und kann viele Datenbindung Probleme automatisch beheben. Weitere Informationen finden Sie unter [BindingSource-Komponente](bindingsource-component.md).  
+ In der Regel Binden Sie eine Bindung <xref:System.Windows.Forms.BindingSource> an eine Komponente und <xref:System.Windows.Forms.BindingSource> binden die Komponente an eine andere Datenquelle oder füllen Sie mit Geschäftsobjekten auf. Die <xref:System.Windows.Forms.BindingSource> Komponente ist die bevorzugte Datenquelle, da Sie an eine Vielzahl von Datenquellen gebunden werden kann und viele Probleme mit der Datenbindung automatisch lösen kann. Weitere Informationen finden Sie unter [BindingSource-Komponente](bindingsource-component.md).  
   
- Die <xref:System.Windows.Forms.DataGridView> Steuerelement kann auch verwendet werden, *ungebundenen* -Modus mit keinen zugrunde liegenden Datenspeicher. Ein Codebeispiel, das ein ungebundenes verwendet <xref:System.Windows.Forms.DataGridView> steuern, finden Sie unter [Exemplarische Vorgehensweise: Erstellen eine nicht gebundene Windows Forms-DataGridView-Steuerelement](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md).  
+ Das <xref:System.Windows.Forms.DataGridView> -Steuerelement kann auch im *ungebundenen* Modus ohne zugrunde liegenden Datenspeicher verwendet werden. Ein Codebeispiel, das ein ungebundenes <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet [, finden Sie unter Exemplarische Vorgehensweise: Erstellen eines ungebundenen Windows Forms DataGridView-](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)Steuer Elements.  
   
- Die <xref:System.Windows.Forms.DataGridView> Steuerelement ist hochgradig konfigurierbar und erweiterbar, und bietet viele Eigenschaften, Methoden und Ereignisse, dessen Darstellung und Verhalten anpassen. Wenn Sie Ihre Windows Forms-Anwendung, die Tabellendaten anzeigen möchten, erwägen Sie die Verwendung der <xref:System.Windows.Forms.DataGridView> Steuerelement vor anderen (z. B. <xref:System.Windows.Forms.DataGrid>). Wenn Sie ein kleines Raster von schreibgeschützten Werten angezeigt werden, oder wenn Sie einen Benutzer zum Bearbeiten einer Tabelle mit Millionen von Datensätzen, aktivieren die <xref:System.Windows.Forms.DataGridView> Steuerelement wird Ihnen eine leicht programmierbar, speichereffizienten Lösung.  
+ Das <xref:System.Windows.Forms.DataGridView> Steuerelement ist hochgradig konfigurier Bar und erweiterbar und bietet viele Eigenschaften, Methoden und Ereignisse, um seine Darstellung und das Verhalten anzupassen. Wenn Sie möchten, dass die Windows Forms Anwendung tabellarische Daten anzeigt, sollten <xref:System.Windows.Forms.DataGridView> Sie das-Steuerelement vor anderen <xref:System.Windows.Forms.DataGrid>verwenden (z. b.). Wenn Sie ein kleines Raster mit schreibgeschützten Werten anzeigen oder wenn Sie es einem Benutzer ermöglichen, eine Tabelle mit Millionen von Datensätzen zu bearbeiten, bietet Ihnen <xref:System.Windows.Forms.DataGridView> das-Steuerelement eine leicht programmierbare, Speicher effiziente Lösung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Zusammenfassung der DataGridView-Steuerelementtechnologie](datagridview-control-technology-summary-windows-forms.md)  
- Fasst <xref:System.Windows.Forms.DataGridView> Konzepte und die Verwendung von verwandten Klassen zu steuern.  
+ Fasst <xref:System.Windows.Forms.DataGridView> Steuerelement Konzepte und die Verwendung verwandter Klassen zusammen.  
   
  [Architektur des DataGridView-Steuerelements](datagridview-control-architecture-windows-forms.md)  
- Beschreibt die Architektur von der <xref:System.Windows.Forms.DataGridView> -Steuerelement, erläutert die zugehörige und Vererbung.  
+ Beschreibt die Architektur des <xref:System.Windows.Forms.DataGridView> -Steuer Elements und erläutert die Typhierarchie und die Vererbungs Struktur.  
   
  [Szenarien für das DataGridView-Steuerelement](datagridview-control-scenarios-windows-forms.md)  
- Beschreibt die häufigsten Szenarien, in denen <xref:System.Windows.Forms.DataGridView> Steuerelemente verwendet werden.  
+ Beschreibt die gängigsten Szenarien, in <xref:System.Windows.Forms.DataGridView> denen Steuerelemente verwendet werden.  
   
  [Codeverzeichnis für DataGridView-Steuerelementcode](datagridview-control-code-directory-windows-forms.md)  
  Enthält Links zu Codebeispielen in der Dokumentation für verschiedene <xref:System.Windows.Forms.DataGridView> Aufgaben. Diese Beispiele sind nach Art der Aufgabe kategorisiert.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Spaltentypen im DataGridView-Steuerelement in Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Spaltentypen in Windows Forms <xref:System.Windows.Forms.DataGridView> Steuerelement zum Anzeigen von Informationen und ermöglichen Benutzern das Ändern oder Hinzufügen von Informationen verwendet.  
+ Erläutert die Spaltentypen im Windows Forms <xref:System.Windows.Forms.DataGridView> Steuerelement, mit denen Informationen angezeigt werden, und ermöglicht Benutzern das ändern oder Hinzufügen von Informationen.  
   
  [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Enthält Themen, in denen beschrieben wird, wie das Steuerelement entweder manuell oder mit Daten aus einer externen Datenquelle gefüllt wird.  

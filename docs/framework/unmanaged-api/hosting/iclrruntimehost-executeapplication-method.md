@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca8db6fd1296420011dcbfbbb0e5682f8a484dc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768816"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965359"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication-Methode
-In Szenarien für die ClickOnce-Manifest-basierten verwendet, an die Anwendung in einer neuen Domäne aktiviert werden. Weitere Informationen zu diesen Szenarien finden Sie unter [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment).  
+Wird in Manifest-basierten ClickOnce-Bereitstellungs Szenarien verwendet, um die Anwendung anzugeben, die in einer neuen Domäne aktiviert werden soll. Weitere Informationen zu diesen Szenarien finden Sie unter [ClickOnce-Sicherheit und-Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,48 +42,48 @@ HRESULT ExecuteApplication(
   
 ## <a name="parameters"></a>Parameter  
  `pwzAppFullName`  
- [in] Der vollständige Name der Anwendung entsprechend der Definition für <xref:System.ApplicationIdentity>.  
+ in Der vollständige Name der Anwendung, wie für <xref:System.ApplicationIdentity>definiert.  
   
  `dwManifestPaths`  
- [in] Die Anzahl der Zeichenfolgen, die innerhalb der `ppwzManifestPaths` Array.  
+ in Die Anzahl der Zeichen folgen, die `ppwzManifestPaths` im Array enthalten sind.  
   
  `ppwzManifestPaths`  
- [in] Optional. Ein Zeichenfolgenarray, das Manifestspfade für die Anwendung enthält.  
+ [in] Optional. Ein Zeichen folgen Array, das Manifeste Pfade für die Anwendung enthält.  
   
  `dwActivationData`  
- [in] Die Anzahl der Zeichenfolgen, die innerhalb der `ppwzActivationData` Array.  
+ in Die Anzahl der Zeichen folgen, die `ppwzActivationData` im Array enthalten sind.  
   
  `ppwzActivationData`  
- [in] Optional. Ein Zeichenfolgenarray mit den von der Anwendung Aktivierungsdaten wie z. B. den Abfragezeichenfolgenabschnitt der URL für Anwendungen, die über das Internet bereitgestellt.  
+ [in] Optional. Ein Zeichen folgen Array, das die Aktivierungsdaten der Anwendung enthält, z. b. den Teil der Abfrage Zeichenfolge der URL für Anwendungen, die über das Web bereitgestellt werden  
   
  `pReturnValue`  
- [out] Der Wert, der von den Einstiegspunkt der Anwendung zurückgegeben wird.  
+ vorgenommen Der Wert, der vom Einstiegspunkt der Anwendung zurückgegeben wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`ExecuteApplication`wurde erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Der Common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben wird, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- `ExecuteApplication` Dient zum Aktivieren von ClickOnce-Anwendungen in eine neu erstellte Anwendungsdomäne.  
+ `ExecuteApplication`wird verwendet, um ClickOnce-Anwendungen in einer neu erstellten Anwendungsdomäne zu aktivieren.  
   
- Die `pReturnValue` Output-Parameter von der Anwendung zurückgegebenen Wert festgelegt ist. Wenn Sie angeben, dass der Wert Null für `pReturnValue`, `ExecuteApplication` schlägt nicht fehl, aber keinen Wert zurück.  
+ Der `pReturnValue` Output-Parameter wird auf den Wert festgelegt, der von der Anwendung zurückgegeben wird. Wenn Sie für `pReturnValue` `ExecuteApplication` den Wert NULL angeben, schlägt nicht fehl, aber es wird kein Wert zurückgegeben.  
   
 > [!IMPORTANT]
->  Rufen Sie nicht die [Methode starten](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) Methode vor dem Aufruf der `ExecuteApplication` Methode, um eine manifestbasierte Anwendung zu aktivieren. Wenn die `Start` Methode zuerst aufgerufen wird, die `ExecuteApplication` Methodenaufruf schlägt fehl.  
+> Rufen Sie nicht die Methode [Start Methode](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) auf, bevor `ExecuteApplication` Sie die-Methode aufrufen, um eine Manifest-basierte Anwendung zu aktivieren. Wenn die `Start` -Methode zuerst aufgerufen wird, `ExecuteApplication` kann der Methodenaufruf nicht ausgeführt werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

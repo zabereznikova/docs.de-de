@@ -10,57 +10,57 @@ helpviewer_keywords:
 - tables [WPF], manipulating columns
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
-ms.openlocfilehash: d379d1a98bff614ff9e16cdd340bb69644988743
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18a26c76688ebf668293cb1254404d6d2cf15208
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913594"
 ---
 # <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>Vorgehensweise: Bearbeiten der Spalten einer Tabelle mit der Columns-Eigenschaft
-Dieses Beispiel veranschaulicht einige der häufigsten Vorgänge, die für die Spalten einer Tabelle über ausgeführt werden können die <xref:System.Windows.Documents.Table.Columns%2A> Eigenschaft.  
+In diesem Beispiel werden einige der gängigeren Vorgänge veranschaulicht, die über die <xref:System.Windows.Documents.Table.Columns%2A> -Eigenschaft für die Spalten einer Tabelle ausgeführt werden können.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine neue Tabelle erstellt und verwendet dann die <xref:System.Windows.Documents.TableColumnCollection.Add%2A> Methode, um die Spalten der Tabelle hinzufügen <xref:System.Windows.Documents.Table.Columns%2A> Auflistung.  
+ Im folgenden Beispiel wird eine neue Tabelle erstellt, und anschließend <xref:System.Windows.Documents.TableColumnCollection.Add%2A> wird die-Methode verwendet, um der <xref:System.Windows.Documents.Table.Columns%2A> -Auflistung der Tabelle Spalten hinzuzufügen.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Add](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_add)]
  [!code-vb[TableSnippets2#_Table_Columns_Add](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_add)]  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel fügt eine neue <xref:System.Windows.Documents.TableColumn>.  Die neue Spalte wird an Indexposition 0 (null), die somit in der Tabelle der ersten neuen Spalte eingefügt.  
+ Im folgenden Beispiel wird eine neue <xref:System.Windows.Documents.TableColumn>eingefügt.  Die neue Spalte wird an der Indexposition 0 eingefügt, sodass Sie die neue erste Spalte in der Tabelle ist.  
   
 > [!NOTE]
->  Die <xref:System.Windows.Documents.TableColumnCollection> Auflistung standardmäßige nullbasierte Indizierung verwendet.  
+> Die <xref:System.Windows.Documents.TableColumnCollection> -Auflistung verwendet die standardmäßige NULL basierte Indizierung.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Insert](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_insert)]
  [!code-vb[TableSnippets2#_Table_Columns_Insert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_insert)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel greift auf eine beliebigen Eigenschaften für Spalten in der <xref:System.Windows.Documents.TableColumnCollection> Auflistung, die auf bestimmte Spalten nach Index verwiesen.  
+ Im folgenden Beispiel wird auf einige beliebige Eigenschaften von Spalten in <xref:System.Windows.Documents.TableColumnCollection> der-Auflistung zugegriffen, die auf bestimmte Spalten nach Index verweisen.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Manip](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_manip)]
  [!code-vb[TableSnippets2#_Table_Columns_Manip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_manip)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel ruft die Anzahl der derzeit von der Tabelle gehosteten Spalten ab.  
+ Im folgenden Beispiel wird die Anzahl der Spalten abgerufen, die derzeit von der-Tabelle gehostet werden.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Count](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_count)]
  [!code-vb[TableSnippets2#_Table_Columns_Count](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_count)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine bestimmte Spalte als Verweis.  
+ Im folgenden Beispiel wird eine bestimmte Spalte als Verweis entfernt.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_DelRef](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_delref)]
  [!code-vb[TableSnippets2#_Table_Columns_DelRef](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_delref)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine bestimmte Spalte anhand des Indexes an.  
+ Im folgenden Beispiel wird eine bestimmte Spalte nach dem Index entfernt.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_DelIndex](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_delindex)]
  [!code-vb[TableSnippets2#_Table_Columns_DelIndex](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_delindex)]  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel entfernt alle Spalten aus der Tabelle Columns-Auflistung.  
+ Im folgenden Beispiel werden alle Spalten aus der Columns-Auflistung der Tabelle entfernt.  
   
  [!code-csharp[TableSnippets2#_Table_Columns_Clear](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets2/CSharp/Window1.xaml.cs#_table_columns_clear)]
  [!code-vb[TableSnippets2#_Table_Columns_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_columns_clear)]  

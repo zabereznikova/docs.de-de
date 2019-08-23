@@ -6,34 +6,34 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: b009d19ed949edbd52ec02252ba1e2271e4cb738
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3f383b6cccba7825637ea65a0e13280b91b406c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750562"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939733"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Vorgehensweise: Verwenden von QuickInfos in ToolStrip-Steuerelementen
-Anzeigen einer <xref:System.Windows.Forms.ToolTip> für die <xref:System.Windows.Forms.ToolStrip> Steuerelement durch Festlegen des Steuerelements verwendet werden soll <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> Eigenschaft `true`.  
+<xref:System.Windows.Forms.ToolTip> Sie können ein-Objekt für <xref:System.Windows.Forms.ToolStrip> das gewünschte Steuerelement anzeigen, indem Sie <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> die- `true`Eigenschaft des-Steuer Elements auf festlegen.  
   
-### <a name="to-display-a-tooltip"></a>Um eine QuickInfo anzuzeigen  
+### <a name="to-display-a-tooltip"></a>So zeigen Sie eine QuickInfo an  
   
-- Legen Sie die <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> Eigenschaft des Steuerelements `true`.  
+- Legen Sie <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> die-Eigenschaft des- `true`Steuer Elements auf fest.  
   
      Der Standardwert von <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> ist `true`, und der Standardwert von <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> und <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType> ist `false`.  
   
-### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>ToolTipText-Eigenschaft für den QuickInfo-Text eines ToolStripButton verwenden  
+### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>So verwenden Sie die ToolTipText-Eigenschaft für den QuickInfo-Text eines ToolStripButton  
   
-1. Legen Sie die <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> Eigenschaft der Schaltfläche auf `true`.  
+1. Legen Sie <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> die-Eigenschaft der Schalt `true`Fläche auf fest.  
   
-2. Legen Sie die <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType> Eigenschaft der Schaltfläche auf `false`.  
+2. Legen Sie <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType> die-Eigenschaft der Schalt `false`Fläche auf fest.  
   
-     Die `AutoToolTip` Eigenschaft `true` standardmäßig für <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, und <xref:System.Windows.Forms.ToolStripSplitButton>.  
+     Die `AutoToolTip` -Eigenschaft `true` ist standardmäßig <xref:System.Windows.Forms.ToolStripButton>für <xref:System.Windows.Forms.ToolStripDropDownButton>, und <xref:System.Windows.Forms.ToolStripSplitButton>.  
   
-     Ein <xref:System.Windows.Forms.ToolStripButton> verwendet die `Text` -Eigenschaft für die <xref:System.Windows.Forms.ToolTip> Text standardmäßig. Verwenden Sie dieses Verfahren zum Anzeigen von benutzerdefinierten Texts in einem <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>.  
+     Verwendet standardmäßig die- <xref:System.Windows.Forms.ToolTip> EigenschaftfürdenText.`Text` <xref:System.Windows.Forms.ToolStripButton> Verwenden Sie dieses Verfahren, um benutzerdefinierten Text <xref:System.Windows.Forms.ToolStripButton>in einem <xref:System.Windows.Forms.ToolTip>anzuzeigen.  
   
 > [!NOTE]
->  Setzen Sie <xref:System.Windows.Forms.ToolStripItemDisplayStyle> zu <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> oder <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>, auf die Schaltfläche wird kein Text angezeigt, aber die QuickInfo immer noch angezeigt wird.  
+> Wenn Sie auf <xref:System.Windows.Forms.ToolStripItemDisplayStyle> <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> oder<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>festlegen, wird kein Text auf der Schaltfläche angezeigt, aber die QuickInfo wird weiterhin angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch
 

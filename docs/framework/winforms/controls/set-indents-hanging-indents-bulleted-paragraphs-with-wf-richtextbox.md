@@ -13,15 +13,15 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: ef579923ac2b9ea9905a60000d93f6bfc90ed5b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d095e3561cd346e6dbd99d1be7468f6ad5725a6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960460"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox-Steuerelement von Windows Forms
-Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement verfügt über zahlreiche Optionen zum Formatieren des Texts angezeigt. Sie können markierte Absätze als Aufzählungen formatieren, durch Festlegen der <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> Eigenschaft. Sie können auch die <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, und <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> Eigenschaften den Einzug der Absätze relativ zum linken und rechten Rand des Steuerelements und dem linken Rand anderer Textzeilen festlegen.  
+Das Windows Forms <xref:System.Windows.Forms.RichTextBox> -Steuerelement verfügt über zahlreiche Optionen, um den angezeigten Text zu formatieren. Sie können ausgewählte Absätze als aufzählt formatieren, indem Sie <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> die-Eigenschaft festlegen. Sie können auch die <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>Eigenschaften, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>und <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> verwenden, um den Einzug von Absätzen in Bezug auf den linken und rechten Rand des Steuer Elements und den linken Rand anderer Textzeilen festzulegen.  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>So formatieren Sie einen Absatz als Aufzählung  
   
@@ -41,11 +41,11 @@ Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement verf
   
 ### <a name="to-indent-a-paragraph"></a>So ziehen Sie einen Absatz ein  
   
-1. Legen Sie die <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> Eigenschaft, um eine ganze Zahl, die den Abstand zwischen dem linken Rand des Steuerelements und dem linken Rand des Texts in Pixel.  
+1. Legen Sie <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> die-Eigenschaft auf eine ganze Zahl fest, die den Abstand zwischen dem linken Rand des Steuer Elements und dem linken Rand des Texts in Pixel darstellt.  
   
-2. Legen Sie die <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> Eigenschaft, um eine ganze Zahl, die den Abstand zwischen dem linken Rand der ersten Zeile des Texts im Absatz und dem linken Rand nachfolgender Zeilen in demselben Absatz in Pixel. Der Wert des der <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> Eigenschaft gilt nur für Zeilen in einem Absatz, die der ersten Zeile umschlossen sein.  
+2. Legen Sie <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> für die-Eigenschaft eine ganze Zahl fest, die den Abstand zwischen dem linken Rand der ersten Textzeile im Absatz und dem linken Rand der nachfolgenden Zeilen desselben Absatzes in Pixel darstellt. Der Wert <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> der-Eigenschaft gilt nur für Zeilen in einem Absatz, die unter der ersten Zeile umschließt wurden.  
   
-3. Legen Sie die <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> Eigenschaft, um eine ganze Zahl, die den Abstand zwischen dem rechten Rand des Steuerelements und dem rechten Rand des Texts in Pixel.  
+3. Legen Sie <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> die-Eigenschaft auf eine ganze Zahl fest, die den Abstand zwischen dem rechten Rand des Steuer Elements und dem rechten Rand des Texts in Pixel darstellt.  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -66,7 +66,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement verf
     ```  
   
     > [!NOTE]
-    >  Alle genannten Eigenschaften wirken sich auf sämtliche Absätze, in denen Text markiert ist, sowie auf nach der aktuellen Einfügemarke eingegebenen Text aus. Wenn ein Benutzer beispielsweise ein Wort in einem Absatz markiert und dann den Einzug anpasst, wird die neue Einstellung auf den gesamten Absatz, in dem dieses Wort steht, und auf alle Absätze angewendet, die hinter diesem Absatz eingegeben werden. Informationen zum Auswählen von Text programmgesteuert, finden Sie unter <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
+    > Alle genannten Eigenschaften wirken sich auf sämtliche Absätze, in denen Text markiert ist, sowie auf nach der aktuellen Einfügemarke eingegebenen Text aus. Wenn ein Benutzer beispielsweise ein Wort in einem Absatz markiert und dann den Einzug anpasst, wird die neue Einstellung auf den gesamten Absatz, in dem dieses Wort steht, und auf alle Absätze angewendet, die hinter diesem Absatz eingegeben werden. Informationen zum programmgesteuerten auswählen von Text finden <xref:System.Windows.Forms.TextBoxBase.Select%2A>Sie unter.  
   
 ## <a name="see-also"></a>Siehe auch
 

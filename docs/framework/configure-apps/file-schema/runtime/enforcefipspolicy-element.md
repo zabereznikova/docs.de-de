@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb28eddf7e9f13bceaf47de28633073f59f3920d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f13243ddef7020f4d7a50e519ae8281702b0d261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663744"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927420"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforcemepspolicy > Element
 Gibt an, ob die Computerkonfigurationsanforderung durchgesetzt wird, dass kryptografische Algorithmen den Federal Information Processing Standards (FIPS) entsprechen müssen.  
@@ -75,4 +75,4 @@ Gibt an, ob die Computerkonfigurationsanforderung durchgesetzt wird, dass krypto
 
 - [Schema für Laufzeiteinstellungen](index.md)
 - [Konfigurationsdateischema](../index.md)
-- [Kryptografiemodell](../../../../../docs/standard/security/cryptography-model.md)
+- [Kryptografiemodell](../../../../standard/security/cryptography-model.md)

@@ -1,5 +1,5 @@
 ---
-title: My.Forms-Objekt (Visual Basic)
+title: My. Forms-Objekt (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.Forms
@@ -7,48 +7,48 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fa5c77dd12c98100e3d17fc473a6802180d1e32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949317"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965984"
 ---
 # <a name="myforms-object"></a>My.Forms-Objekt
-Stellt Eigenschaften bereit, für den Zugriff auf eine Instanz von jedem Windows-Formular, das im aktuellen Projekt deklariert.  
+Stellt Eigenschaften für den Zugriff auf eine Instanz der einzelnen im aktuellen Projekt deklarierten Windows Forms bereit.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `My.Forms` Objekt stellt eine Instanz jedes Formular im aktuellen Projekt. Der Name der Eigenschaft ist identisch mit den Namen des Formulars, das die Eigenschaft zugreift.   
+ Das `My.Forms` -Objekt stellt eine Instanz der einzelnen Formulare im aktuellen Projekt bereit. Der Name der Eigenschaft ist identisch mit dem Namen der Form, auf die die Eigenschaft zugreift.   
   
- Sie können die bereitgestellten Formulare zugreifen der `My.Forms` Objekt mit dem Namen des Formulars ohne Qualifizierung. Da die Namen der Eigenschaft den Namen des Formulars Typ identisch ist, können Sie auf ein Formular zugreifen, als hätte sie eine Standardinstanz. `My.Forms.Form1.Show` entspricht beispielsweise `Form1.Show`.  
+ Sie können auf die Formulare zugreifen, die `My.Forms` vom-Objekt bereitgestellt werden, indem Sie den Namen des Formulars ohne Qualifikation verwenden. Da der Eigenschaftsname mit dem Typnamen des Formulars identisch ist, können Sie auf ein Formular zugreifen, als wäre es eine Standard Instanz. `My.Forms.Form1.Show` entspricht beispielsweise `Form1.Show`.  
   
- Die `My.Forms` Objekt verfügbar macht, nur die Formulare, die mit dem aktuellen Projekt verknüpft ist. Er bietet Zugriff auf Formulare, die in referenzierten DLLs deklariert. Sie müssen ein Formular für den Zugriff auf, der eine DLL-Datei enthält den qualifizierten Namen des Formulars, geschrieben als verwenden *DllName*. *Formularname*.  
+ Das `My.Forms` -Objekt macht nur die dem aktuellen Projekt zugeordneten Formulare verfügbar. Der Zugriff auf Formulare, die in referenzierten DLLs deklariert sind, ist nicht möglich. Wenn Sie auf ein Formular zugreifen möchten, das eine DLL bereitstellt, müssen Sie den qualifizierten Namen des Formulars verwenden, der als *dllName*geschrieben wurde. *FormName*.  
   
- Sie können die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> Eigenschaft zum Abrufen einer Auflistung der offenen Formulare aller Anwendungen.  
+ Sie können die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> -Eigenschaft verwenden, um eine Auflistung aller geöffneten Formulare der Anwendung zu erhalten.  
   
- Das Objekt und seine Eigenschaften sind nur für Windows-Anwendungen verfügbar.  
+ Das-Objekt und seine Eigenschaften sind nur für Windows-Anwendungen verfügbar.  
   
 ## <a name="properties"></a>Eigenschaften  
- Jede Eigenschaft der `My.Forms` -Objekt bietet Zugriff auf eine Instanz eines Formulars im aktuellen Projekt. Der Name der Eigenschaft ist identisch mit den Namen des Formulars, das die Eigenschaft zugreift, und der Eigenschaftentyp entspricht dem Typ des Formulars.  
+ Jede Eigenschaft des `My.Forms` -Objekts ermöglicht den Zugriff auf eine Instanz eines Formulars im aktuellen Projekt. Der Name der Eigenschaft ist identisch mit dem Namen der Form, auf die die Eigenschaft zugreift, und der Eigenschaftentyp entspricht dem Typ des Formulars.  
   
 > [!NOTE]
->  Bei ein Namenskonflikt wird der Eigenschaftsname Zugriff auf ein Formular ist *RootNamespace*_*Namespace*\_*Formularname*. Betrachten Sie z. B. zwei Formulare mit dem Namen `Form1.`eines dieser Formulare im RootNamespace ist `WindowsApplication1` und im Namespace `Namespace1`, greifen Sie auf diesem Formular kann über `My.Forms.WindowsApplication1_Namespace1_Form1`.  
+> Wenn ein namens Konflikt vorliegt, ist der Eigenschaftsname für den Zugriff auf ein Formular *RootNamespace*_*Namespace*\_*FormName*. Sehen Sie sich beispielsweise zwei Formulare `Form1.`mit dem Namen an, wenn sich eines dieser Formulare im `WindowsApplication1` Stamm Namespace und im `Namespace1`-Namespace befindet, auf dieses `My.Forms.WindowsApplication1_Namespace1_Form1`Formular überzugreifen.  
   
- Die `My.Forms` -Objekt bietet Zugriff auf die Instanz des Hauptformulars der Anwendung, die beim Start erstellt wurde. Für alle anderen Formen der `My.Forms` -Objekt erstellt eine neue Instanz des Formulars auf, wenn darauf zugegriffen wird, und diese speichert. Nachfolgende Versuche, diese Eigenschaft den Zugriff auf zurück diese Instanz des Formulars  
+ Das `My.Forms` -Objekt ermöglicht den Zugriff auf die Instanz des Haupt Formulars der Anwendung, das beim Start erstellt wurde. Bei allen anderen Formularen erstellt das `My.Forms` -Objekt eine neue Instanz des Formulars, wenn darauf zugegriffen wird, und speichert es. Bei nachfolgenden versuchen, auf diese Eigenschaft zuzugreifen, wird diese Instanz des Formulars zurückgegeben.  
   
- Sie können durch Zuweisen eines Formulars dispose `Nothing` der Eigenschaft für dieses Formular. Der Eigenschaftensetter Ruft die <xref:System.Windows.Forms.Form.Close%2A> -Methode der das Formular, und klicken Sie dann weist `Nothing` gespeicherten Wert. Wenn Sie einen beliebigen Wert außer zuweisen `Nothing` löst der Setter der Eigenschaft ein <xref:System.ArgumentException> Ausnahme.  
+ Sie können ein Formular verwerfen, indem Sie `Nothing` die-Eigenschaft für dieses Formular zuweisen. Der Eigenschaften Setter Ruft die <xref:System.Windows.Forms.Form.Close%2A> -Methode des Formulars auf und weist `Nothing` dann dem gespeicherten Wert zu. Wenn Sie der-Eigenschaft einen anderen `Nothing` Wert als zuweisen, löst der Setter eine <xref:System.ArgumentException> Ausnahme aus.  
   
- Sie können testen, ob eine Eigenschaft der `My.Forms` Objekt wird eine Instanz des Formulars mithilfe der `Is` oder `IsNot` Operator. Sie können diese Operatoren verwenden, um zu überprüfen, ob der Wert der Eigenschaft ist `Nothing`.  
+ Sie können mithilfe des `My.Forms` `Is` or `IsNot` -Operators testen, ob eine Eigenschaft des Objekts eine Instanz des Formulars speichert. Sie können diese Operatoren verwenden, um zu überprüfen, ob der `Nothing`Wert der-Eigenschaft ist.  
   
 > [!NOTE]
->  In der Regel die `Is` oder `IsNot` Operator muss den Wert der Eigenschaft zum Ausführen des Vergleichs zu lesen. Aber wenn die Eigenschaft derzeit speichert `Nothing`, die Eigenschaft erstellt eine neue Instanz des Formulars und dann diese Instanz zurückgibt. Visual Basic-Compiler behandelt jedoch die Eigenschaften der `My.Forms` -Objekts auf andere Weise und ermöglicht die `Is` oder `IsNot` Operator, um den Status der Eigenschaft zu überprüfen, ohne Änderung ihres Werts.  
+> In der Regel `Is` muss `IsNot` der-Operator oder der-Operator den Wert der-Eigenschaft lesen, um den Vergleich durchzuführen. Wenn die Eigenschaft derzeit jedoch gespeichert `Nothing`wird, erstellt die-Eigenschaft eine neue Instanz des Formulars und gibt diese Instanz zurück. Der Visual Basic Compiler behandelt jedoch die Eigenschaften des `My.Forms` Objekts anders und ermöglicht dem `Is` or `IsNot` -Operator, den Status der Eigenschaft zu überprüfen, ohne den Wert zu ändern.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird der Titel der standardmäßigen `SidebarMenu` Formular.  
+ In diesem Beispiel wird der Titel des Standard `SidebarMenu` Formulars geändert.  
   
  [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]  
   
- Für dieses Beispiel funktioniert, müssen Ihr Projekt ein Formular mit dem Namen `SidebarMenu`.  
+ Damit dieses Beispiel funktioniert, muss das Projekt über ein Formular mit dem `SidebarMenu`Namen verfügen.  
   
  Dieser Code funktioniert nur in einem Windows-Anwendungsprojekt.  
   
@@ -61,8 +61,8 @@ Stellt Eigenschaften bereit, für den Zugriff auf eine Instanz von jedem Windows
 |Windows-Anwendung|**Ja**|  
 |Klassenbibliothek|Nein|  
 |Konsolenanwendung|Nein|  
-|Windows-Steuerelementbibliothek|Nein|  
-|Websteuerelementbibliothek|Nein|  
+|Windows-Steuerelement Bibliothek|Nein|  
+|Websteuer Element Bibliothek|Nein|  
 |Windows-Dienst|Nein|  
 |Website|Nein|  
   

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 220fb3236786eb894bb78d12104025d24c9876ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690433"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960892"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Vorgehensweise: Erkennen einer .NET Framework 3.5-Installation
-Bevor Administratoren Windows Presentation Foundation (WPF)-Anwendungen auf einem System, die .NET Framework 3.5 ausgerichtet ist bereitstellen können, müssen sie bestätigen, dass die .NET Framework 3.5-Laufzeit vorhanden ist. Dieses Thema enthält ein Skript in HTML/JavaScript geschrieben wurde, dass Administratoren verwenden können, um zu bestimmen, ob .NET Framework 3.5 auf einem System vorhanden ist.  
+Bevor Administratoren Windows Presentation Foundation (WPF)-Anwendungen auf einem System bereitstellen können, das auf das .NET Framework 3,5 abzielt, müssen Sie zunächst bestätigen, dass die .NET Framework 3,5-Laufzeit vorhanden ist. Dieses Thema enthält ein in HTML/JavaScript geschriebenes Skript, mit dem Administratoren ermitteln können, ob die .NET Framework 3,5 in einem System vorhanden ist.  
   
 > [!NOTE]
->  Ausführlichere Informationen zum Installieren von bereitstellen und Erkennen von .NET Framework finden Sie unter [Installieren von .NET Framework für Entwickler](../../install/guide-for-developers.md).  
+> Ausführlichere Informationen zum Installieren, bereitstellen und Ermitteln des .NET Framework finden Sie unter [Installieren des .NET Framework für Entwickler](../../install/guide-for-developers.md).  
   
 ## <a name="example"></a>Beispiel  
- Wenn .NET Framework 3.5 installiert ist, fügt die MSI-Datei ".NET CLR" und die Versionsnummer der Zeichenfolge "UserAgent" hinzu. Das folgende Beispiel zeigt ein Skript in einer einfachen HTML-Seite eingebettet. Das Skript sucht die Zeichenfolge "UserAgent", um zu bestimmen, ob .NET Framework 3.5 installiert ist, und zeigt eine Statusmeldung angezeigt wird, auf die Ergebnisse der Suche.  
+ Wenn die .NET Framework 3,5 installiert ist, fügt die msi ".NET CLR" und die Versionsnummer der UserAgent-Zeichenfolge hinzu. Das folgende Beispiel zeigt ein Skript, das in eine einfache HTML-Seite eingebettet ist. Das Skript durchsucht die UserAgent-Zeichenfolge, um zu bestimmen, ob die .NET Framework 3,5 installiert ist, und zeigt eine Statusmeldung für die Ergebnisse der Suche an.  
   
 > [!NOTE]
->  Dieses Skript dient für Internet Explorer. Andere Browser können die .NET CLR-Informationen nicht in der Zeichenfolge "UserAgent" enthalten.  
+> Dieses Skript ist für Internet Explorer konzipiert. Andere Browser enthalten möglicherweise keine .NET CLR-Informationen in der UserAgent-Zeichenfolge.  
   
 ```  
 <HTML>  
@@ -116,7 +116,7 @@ Bevor Administratoren Windows Presentation Foundation (WPF)-Anwendungen auf eine
 </HTML>  
 ```  
   
- Wenn die Suche nach der Version ".NET CLR" erfolgreich ist, wird der folgende Typ der Statusmeldung angezeigt:  
+ Wenn die Suche nach der ".NET CLR"-Version erfolgreich ist, wird der folgende Typ der Statusmeldung angezeigt:  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   

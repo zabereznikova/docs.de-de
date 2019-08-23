@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3fed44fe814ec873cffb1aa4006e11445f8e03db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965770"
 ---
 # <a name="imaptoken-interface"></a>IMapToken-Schnittstelle
-Bietet Funktionen für die Zuordnung zwischen den Assemblys.  
+Stellt Mapping-Funktionen zwischen Assemblys bereit.  
   
 > [!NOTE]
->  Die `IMapToken` Schnittstelle muss durch den Client implementiert werden.  
+> Die `IMapToken` Schnittstelle muss vom Client implementiert werden.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Map-Methode](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Ordnet eine Beziehung zwischen zwei Assemblys mithilfe von Signaturen von Metadaten.|  
+|[Map-Methode](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Ordnet mithilfe von Metadatensignaturen eine Beziehung zwischen zwei Assemblys zu.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Header:** Cor. h  
   
- **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
+ **Fern** Wird als Ressource in Mscoree. dll verwendet.  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

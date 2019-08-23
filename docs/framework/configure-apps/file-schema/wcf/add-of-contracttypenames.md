@@ -2,15 +2,15 @@
 title: <add> von <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 856298cb0639cf19b941f326b5b9a25aa6663088
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24f1478b99aef909ae93f87a70be257e9ba10d7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701189"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926747"
 ---
-# <a name="add-of-contracttypenames"></a>\<add> of \<contractTypeNames>
-Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen gesucht wird, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen. Beachten Sie, dass in Windows Communication Foundation (WCF), ein Endpunkt nur als einen Vertrag unterstützen kann.  
+# <a name="add-of-contracttypenames"></a>\<Fügen Sie > \<von "kontrattypames" hinzu >
+Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen gesucht wird, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen. Beachten Sie, dass ein Endpunkt in Windows Communication Foundation (WCF) nur einen Vertrag unterstützen kann.  
   
  \<system.ServiceModel>  
 \<standardEndpoints>  
@@ -52,13 +52,13 @@ Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen 
 |namespace|Eine Zeichenfolge, die den Namespace des Vertragstyps angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Eine Auflistung von Vertragstypnamen.|  
+|[\<contractTypeNames>](contracttypenames.md)|Eine Auflistung von Vertragstypnamen.|  
   
 ## <a name="see-also"></a>Siehe auch
 

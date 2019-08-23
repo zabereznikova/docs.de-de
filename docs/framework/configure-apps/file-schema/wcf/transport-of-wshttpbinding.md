@@ -2,22 +2,22 @@
 title: <transport> von <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 21e38acf-450a-4bda-82b6-de305e1f7cd8
-ms.openlocfilehash: ea025751020d6d98292f6bc3ecfe9421af0cb793
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 384267e3d018d714f95356461eb303bc9ec0cb3e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788218"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934639"
 ---
-# <a name="transport-of-wshttpbinding"></a>\<transport> of \<wsHttpBinding>
+# <a name="transport-of-wshttpbinding"></a>\<Transport > von \<WSHttpBinding >
 
 Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 
-\<system.serviceModel>\
-\<bindings>\
+\<System. Service Model > \
+\<Bindungen > \
 \<wsHttpBinding>\
-\<binding>\
-\<security>\
+\<Bindungs > \
+\<Sicherheits > \
 \<transport>
 
 ## <a name="syntax"></a>Syntax
@@ -87,7 +87,7 @@ Keine
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Gibt die Sicherheitsfunktionen von der [ \<WsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|
+|[\<security>](security-of-wshttpbinding.md)|Stellt die Sicherheitsfunktionen des [ \<WSHttpBinding->](wshttpbinding.md)dar.|
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -95,8 +95,8 @@ Keine
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
-- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Sichern von Diensten und Clients](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

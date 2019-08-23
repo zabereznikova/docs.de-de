@@ -10,65 +10,65 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 859dc75169e443d07361951692a428507886fa2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859719"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947802"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Vorgehensweise: Ermitteln, ob ein Druckauftrag zu dieser Tageszeit gedruckt werden kann
-Druckwarteschlangen sind für 24 Stunden pro Tag nicht immer verfügbar. Sie haben die Start- und einer Uhrzeit-Eigenschaften, die festgelegt werden können, um sie zu bestimmten Zeiten des Tages nicht verfügbar zu machen. Dieses Feature kann z. B. verwendet werden, um einen Drucker, für die exklusive Verwendung von einer bestimmten Abteilung nach 17: 00 Uhr zu reservieren. Diese Abteilung müsste eine andere Warteschlange Wartung des Druckers als andere Abteilungen verwenden. Die Warteschlange für die anderen Abteilungen würden nach 17 Uhr nicht verfügbar ist, festgelegt werden, während die Warteschlange für die bevorzugte-Abteilung festgelegt werden konnte, werden jederzeit zur Verfügung stehen.  
+Druck Warteschlangen sind nicht immer für 24 Stunden pro Tag verfügbar. Sie verfügen über Start-und Endzeit Eigenschaften, die festgelegt werden können, um Sie zu bestimmten Tageszeiten nicht verfügbar zu machen. Diese Funktion kann z. b. verwendet werden, um einen Drucker für die ausschließliche Verwendung einer bestimmten Abteilung nach 5 Uhr zu reservieren. Diese Abteilung hätte eine andere Warteschlange als die von anderen Abteilungen verwendete Warteschlange. Die Warteschlange für die anderen Abteilungen ist so eingestellt, dass Sie nach 5 Uhr nicht verfügbar ist, während die Warteschlange für die bevorzugte Abteilung jederzeit als verfügbar festgelegt werden kann.  
   
- Darüber hinaus können der Druckaufträge selbst festgelegt werden, nur innerhalb einer angegebenen Zeitspanne druckbaren sein.  
+ Darüber hinaus können Druckaufträge selbst so festgelegt werden, dass Sie nur innerhalb eines angegebenen Zeitraums gedruckt werden können.  
   
- Die <xref:System.Printing.PrintQueue> und <xref:System.Printing.PrintSystemJobInfo> in .NET Framework-APIs von Microsoft verfügbar gemachten Klassen bieten eine Möglichkeit, Remote geprüft, ob ein bestimmter Druckauftrag zum aktuellen Zeitpunkt auf eine bestimmte Warteschlange drucken kann.  
+ Die <xref:System.Printing.PrintQueue> Klassen <xref:System.Printing.PrintSystemJobInfo> und, die in den APIs von Microsoft .NET Framework verfügbar gemacht werden, bieten eine Möglichkeit zur Remote Überprüfung, ob ein angegebener Druckauftrag zum aktuellen Zeitpunkt für eine bestimmte Warteschlange gedruckt werden kann.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Beispiel, das bei einem Druckauftrag Problemdiagnose kann.  
+ Das folgende Beispiel zeigt ein Beispiel, mit dem Probleme mit einem Druckauftrag diagnostiziert werden können.  
   
- Es gibt zwei wichtige Schritte für diese Art von Funktion wie folgt.  
+ Für diese Art von Funktion gibt es die folgenden zwei Hauptschritte:  
   
-1. Lesen der <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> und <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> Eigenschaften der <xref:System.Printing.PrintQueue> zu bestimmen, ob die aktuelle Zeit zwischen ihnen liegt.  
+1. Lesen Sie <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> die <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> -Eigenschaft und <xref:System.Printing.PrintQueue> die-Eigenschaft des, um zu bestimmen, ob die aktuelle Zeit zwischen Ihnen liegt.  
   
-2. Lesen der <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> und <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> Eigenschaften der <xref:System.Printing.PrintSystemJobInfo> zu bestimmen, ob die aktuelle Zeit zwischen ihnen liegt.  
+2. Lesen Sie <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> die <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> -Eigenschaft und <xref:System.Printing.PrintSystemJobInfo> die-Eigenschaft des, um zu bestimmen, ob die aktuelle Zeit zwischen Ihnen liegt.  
   
- Jedoch Komplikationen auftreten, von der Tatsache ab, die diese Eigenschaften nicht <xref:System.DateTime> Objekte. Sondern <xref:System.Int32> -Objekten, die Uhrzeit als die Anzahl von Minuten seit Mitternacht Ausdrücken. Darüber hinaus ist dies nicht Mitternacht in der aktuellen Zeitzone, aber Mitternacht UTC (Coordinated Universal Time).  
+ Allerdings entstehen Komplikationen aufgrund der Tatsache, dass es sich <xref:System.DateTime> bei diesen Eigenschaften nicht um Objekte handelt. Stattdessen handelt es <xref:System.Int32> sich um Objekte, die die Tageszeit als Anzahl von Minuten seit Mitternacht Ausdrücken. Außerdem ist dies nicht Mitternacht in der aktuellen Zeitzone, sondern Mitternacht UTC (koordinierte Weltzeit).  
   
- Im erste Codebeispiel stellt die statische Methode **ReportQueueAndJobAvailability**, die übergeben wird eine <xref:System.Printing.PrintSystemJobInfo> und ruft die Hilfsmethoden zum bestimmen, ob der Druckauftrag zum aktuellen Zeitpunkt und, sofern nicht der Fall, wenn es ausdrucken zu können. Beachten Sie, dass eine <xref:System.Printing.PrintQueue> nicht an die Methode übergeben wird. Grund hierfür ist die <xref:System.Printing.PrintSystemJobInfo> enthält einen Verweis auf die Warteschlange in die <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> Eigenschaft.  
+ Im ersten Codebeispiel wird die statische Methode **ReportQueueAndJobAvailability**dargestellt, der ein <xref:System.Printing.PrintSystemJobInfo> weitergegeben wird, und Hilfsmethoden werden aufgerufen, um zu bestimmen, ob der Auftrag zum aktuellen Zeitpunkt gedruckt werden kann, und andernfalls, wenn er nicht gedruckt werden kann. Beachten Sie, <xref:System.Printing.PrintQueue> dass ein nicht an die-Methode übermittelt wird. Dies liegt daran, <xref:System.Printing.PrintSystemJobInfo> dass der einen Verweis auf die Warteschlange <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> in der-Eigenschaft enthält.  
   
- Die untergeordneten Methoden enthalten, die überladene **ReportAvailabilityAtThisTime** Methode, die entweder übernehmen kann eine <xref:System.Printing.PrintQueue> oder <xref:System.Printing.PrintSystemJobInfo> als Parameter. Es gibt auch eine **TimeConverter.ConvertToLocalHumanReadableTime**. Alle diese Methoden werden nachfolgend beschrieben.  
+ Die untergeordneten Methoden enthalten die überladene **ReportAvailabilityAtThisTime** -Methode, <xref:System.Printing.PrintQueue> die entweder <xref:System.Printing.PrintSystemJobInfo> einen oder einen als Parameter annehmen kann. Es ist auch ein **TimeConverter. converttolocalhumanread abletime**-Wert vorhanden. Alle diese Methoden werden im folgenden erläutert.  
   
- Die **ReportQueueAndJobAvailability** Methode beginnt mit der überprüft wird, wenn entweder die Warteschlange oder der Druckauftrag zurzeit nicht verfügbar ist. Wenn eine der Eigenschaften nicht verfügbar ist, überprüft Sie, wenn finden Sie unter der Warteschlange nicht verfügbar. Wenn sie nicht verfügbar ist, meldet die Methode diese Fakten- und die Uhrzeit, wann die Warteschlange wieder verfügbar wird. Er überprüft dann den Auftrag und wenn es nicht mehr verfügbar ist, meldet das nächste Mal umfassen, wenn es gedruckt werden kann. Schließlich meldet die Methode die früheste Uhrzeit, wann der Auftrag gedruckt werden kann. Dies ist das spätere der folgenden zwei Mal.  
+ Die Methode **ReportQueueAndJobAvailability** prüft zunächst, ob die Warteschlange oder der Druckauftrag zu diesem Zeitpunkt nicht verfügbar ist. Wenn eine der beiden Optionen nicht verfügbar ist, wird überprüft, ob die Warteschlange nicht verfügbar ist. Wenn Sie nicht verfügbar ist, meldet die Methode diesen Fakt und die Uhrzeit, zu der die Warteschlange wieder verfügbar wird. Anschließend wird der Auftrag überprüft, und wenn er nicht verfügbar ist, meldet er die nächste Zeitspanne, zu der er gedruckt werden kann. Schließlich meldet die-Methode die früheste Uhrzeit, zu der der Auftrag drucken kann. Dies ist das spätere zwei fache.  
   
-- Der nächste Zeitpunkt, die Warteschlange verfügbar ist.  
+- Der Zeitpunkt, zu dem die Druck Warteschlange als nächstes verfügbar ist.  
   
-- Der Zeitpunkt, wenn der Druckauftrag neben verfügbar ist.  
+- Der Zeitpunkt, zu dem der Druckauftrag als nächstes verfügbar ist.  
   
- Beim Melden von der Tageszeit, die <xref:System.DateTime.ToShortTimeString%2A> Methode wird auch aufgerufen werden, da diese Methode der Jahre, Monate und Tage in der Ausgabe unterdrückt. Sie können nicht die Verfügbarkeit eines Druckauftrags oder eine Druckwarteschlange auf bestimmte Jahre, Monate oder Tage einschränken.  
+ Beim Melden der Tageszeiten wird auch <xref:System.DateTime.ToShortTimeString%2A> die-Methode aufgerufen, da diese Methode die Jahre, Monate und Tage der Ausgabe unterdrückt. Die Verfügbarkeit einer Druck Warteschlange oder eines Druckauftrags kann nicht auf bestimmte Jahre, Monate oder Tage beschränkt werden.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
  [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
  [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
- Die beiden Überladungen, der die **ReportAvailabilityAtThisTime** Methode sind identisch, mit Ausnahme des Datentyps übergebenen, sodass nur die <xref:System.Printing.PrintQueue> Version wird unten angezeigt.  
+ Die zwei über Ladungen der **ReportAvailabilityAtThisTime** -Methode sind mit Ausnahme des an Sie übergebenen Typs identisch, sodass nur <xref:System.Printing.PrintQueue> die-Version unten dargestellt wird.  
   
 > [!NOTE]
->  Die Tatsache, dass die Methoden, mit Ausnahme des Typs identisch sind, wirft die Frage, warum das Beispiel eine generische Methode keine erstellt **ReportAvailabilityAtThisTime\<T >** . Der Grund dafür besteht darin, dass eine solche Methode würde zu einer Klasse eingeschränkt werden, die die **StartTimeOfDay** und **UntilTimeOfDay enthält** Eigenschaften, die die Methode aufruft, jedoch eine generische Methode kann nur beschränkt werden ein Single-Klasse und die einzige Klasse, die sowohl <xref:System.Printing.PrintQueue> und <xref:System.Printing.PrintSystemJobInfo> in die Vererbung ist Baum <xref:System.Printing.PrintSystemObject> der über keine solche Eigenschaften verfügt.  
+> Die Tatsache, dass die Methoden mit Ausnahme des Typs identisch sind, wirft die Frage, warum das Beispiel keine generische Methode " **ReportAvailabilityAtThisTime\<T >** " erstellt. Der Grund hierfür ist, dass eine solche Methode auf eine Klasse beschränkt werden muss, die die Eigenschaften **StartTimeOfDay** und **UntilTimeOfDay** hat, die von der Methode aufgerufen werden, aber eine generische Methode kann nur auf eine einzelne Klasse beschränkt werden, und die einzige Klasse, die für beide gilt. und in der Vererbungs Struktur <xref:System.Printing.PrintSystemObject> ist, die über keine derartigen Eigenschaften verfügt. <xref:System.Printing.PrintSystemJobInfo> <xref:System.Printing.PrintQueue>  
   
- Die **ReportAvailabilityAtThisTime** -Methode (im folgenden Codebeispiel dargestellt) beginnt, durch die Initialisierung einer <xref:System.Boolean> Sentinelvariable, die `true`. Wird zum zurückgesetzt `false`, wenn die Warteschlange nicht verfügbar ist.  
+ Die **ReportAvailabilityAtThisTime** -Methode (im folgenden Codebeispiel dargestellt) beginnt mit dem Initialisieren <xref:System.Boolean> einer Sentinel- `true`Variablen in. Sie wird auf `false`zurückgesetzt, wenn die Warteschlange nicht verfügbar ist.  
   
- Als Nächstes die Methode überprüft, ob der Start und "until" identisch sind. Wenn dies der Fall, die Warteschlange ist immer verfügbar, deshalb gibt die Methode zurück `true`.  
+ Als nächstes überprüft die Methode, ob die Start-und "Until"-Zeiten identisch sind. Wenn dies der Fall ist, ist die Warteschlange immer verfügbar, sodass `true`die Methode zurückgibt.  
   
- Wenn die Warteschlange nicht ständig vorliegen, wird die Methode verwendet die statische <xref:System.DateTime.UtcNow%2A> -Eigenschaft zum Abrufen der aktuellen Zeit eine <xref:System.DateTime> Objekt. (Wir müssen lokale Zeit nicht mehr, da die <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> und <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> Eigenschaften werden in UTC-Zeit.)  
+ Wenn die Warteschlange nicht ständig verfügbar ist, verwendet die-Methode die statische <xref:System.DateTime.UtcNow%2A> -Eigenschaft, um die aktuelle Zeit <xref:System.DateTime> als-Objekt zu erhalten. (Lokale Zeit ist nicht erforderlich, da die <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> - <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> Eigenschaft und die-Eigenschaft selbst in UTC-Zeit sind.)  
   
- Diese beiden Eigenschaften sind jedoch nicht <xref:System.DateTime> Objekte. Sie sind <xref:System.Int32>s, der die Zeit als die Anzahl der Minuten nach der UTC-Mitternacht ausdrückt. Damit wir konvertiert haben unsere <xref:System.DateTime> Objekt Minuten nach Mitternacht. Wenn Sie fertig sind, überprüft die Methode einfach an, um herauszufinden, ob "jetzt" ist zwischen der Warteschlange starten und "bis"-Zeit, legt der Sentinelwert auf "false", wenn "jetzt" liegt nicht zwischen den beiden Zeiten, und gibt den Sentinelwert zurück.  
+ Diese beiden Eigenschaften sind jedoch keine <xref:System.DateTime> -Objekte. <xref:System.Int32>Sie Ausdrücken die Zeit als Anzahl von Minuten nach-UTC-Mitternacht. Wir müssen also unser <xref:System.DateTime> Objekt in Minuten nach Mitternacht konvertieren. Wenn dies der Fall ist, prüft die Methode einfach, ob "Now" zwischen den Start-und "Until"-Zeiten der Warteschlange liegt, und legt den Sentinel auf "false" fest, wenn "Now" nicht zwischen den beiden Vorkommen liegt, und gibt den Sentinel zurück.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- Die **TimeConverter.ConvertToLocalHumanReadableTime** (im folgenden Codebeispiel dargestellt) Methode verwendet keine Methoden, die mit Microsoft .NET Framework eingeführt wurde, daher wird. Die Methode verfügt über eine doppelte Konvertierungsaufgabe: sie müssen eine ganze Zahl, die Minuten nach Mitternacht Ausdrücken und konvertieren Sie ihn in einen Menschen lesbarer Zeit und sie müssen dies in die lokale Zeit konvertieren. Er erreicht dies, indem zuerst ein <xref:System.DateTime> -Objekt, das auf Mitternacht UTC-Zeit aus, und klicken Sie dann es verwendet die <xref:System.DateTime.AddMinutes%2A> Methode, um die Minuten hinzuzufügen, die an die Methode übergeben wurden. Dies gibt eine neue <xref:System.DateTime> Ausdrücken der ursprünglichen Zeit, die an die Methode übergeben wurde. Die <xref:System.DateTime.ToLocalTime%2A> -Methode konvertiert diese dann in die lokale Zeit.  
+ Die **TimeConverter. converttolocalhumanleabletime** -Methode (im folgenden Codebeispiel dargestellt) verwendet keine Methoden, die mit Microsoft .NET Framework eingeführt wurden, sodass die Diskussion kurz ist. Die Methode verfügt über einen Double-Konvertierungs Task: Sie muss eine ganze Zahl sein, die Minuten nach Mitternacht ausdrückt, und Sie muss in eine lesbare Zeit konvertiert werden, und Sie muss in die Ortszeit konvertiert werden. Dies wird erreicht, indem zuerst ein <xref:System.DateTime> -Objekt erstellt wird, das auf Mitternacht UTC festgelegt ist. Anschließend wird die <xref:System.DateTime.AddMinutes%2A> -Methode verwendet, um die Minuten hinzuzufügen, die an die-Methode weitergegeben wurden. Dadurch wird die ursprüngliche <xref:System.DateTime> Zeit zurückgegeben, die an die-Methode übermittelt wurde. Die <xref:System.DateTime.ToLocalTime%2A> Methode konvertiert diese dann in die lokale Zeit.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

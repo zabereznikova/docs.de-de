@@ -2,18 +2,18 @@
 title: Sichern von Nachrichten mit Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331521"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911709"
 ---
 # <a name="securing-messages-using-transport-security"></a>Sichern von Nachrichten mit Transportsicherheit
 In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher erläutert, mit der Sie an eine Warteschlange gesendete Nachrichten sichern können.  
   
 > [!NOTE]
->  Bevor Sie dieses Thema lesen, empfiehlt es sich, [Sicherheitskonzepte](../../../../docs/framework/wcf/feature-details/security-concepts.md)zu lesen.  
+> Bevor Sie dieses Thema lesen, empfiehlt es sich, [Sicherheitskonzepte](../../../../docs/framework/wcf/feature-details/security-concepts.md)zu lesen.  
   
  Die folgende Abbildung stellt ein konzeptionelles Modell der in der Warteschlange befindlichen Kommunikation mithilfe von Windows Communication Foundation (WCF) bereit. Diese Abbildung und die Terminologie dienen zum Beschreiben von Transportsicherheitskonzepten:  
   
@@ -53,7 +53,7 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
  Um die Windows-Sicherheit verwenden zu können, ist die Active Directory-Integration erforderlich. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> ist der standardmäßige Transportsicherheitsmodus. Wenn dies festgelegt ist, fügt der WCF-Kanal die Windows-SID an die MSMQ-Nachricht an und verwendet das interne Zertifikat, das aus Active Directory abgerufen wurde. MSMQ verwendet dieses interne Zertifikat, um die Nachricht zu sichern. Der Warteschlangenmanager, der die Nachricht empfängt, verwendet Active Directory, um ein entsprechendes Zertifikat zu suchen, mit dem der Client authentifiziert werden kann. Zugleich wird dadurch überprüft, dass die SID auch der des Clients entspricht. Dieser Authentifizierungsschritt wird ausgeführt, wenn ein Zertifikat, sei es intern erstellt worden wie im Fall des `WindowsDomain`-Authentifizierungsmodus, oder extern wie im Fall des `Certificate`-Authentifizierungsmodus, an die Nachricht angehängt wird, selbst wenn für die Zielwarteschlange nicht festgelegt wurde, dass eine Authentifizierung notwendig ist.  
   
 > [!NOTE]
->  Beim Erstellen einer Warteschlange können Sie die Warteschlange als authentifizierte Warteschlange kennzeichnen, um anzugeben, dass für die Warteschlange eine Authentifizierung des Clients, der die Nachricht an die Warteschlange sendet, erforderlich ist. Dadurch wird sichergestellt, dass keine nicht authentifizierten Nachrichten in die Warteschlange aufgenommen werden.  
+> Beim Erstellen einer Warteschlange können Sie die Warteschlange als authentifizierte Warteschlange kennzeichnen, um anzugeben, dass für die Warteschlange eine Authentifizierung des Clients, der die Nachricht an die Warteschlange sendet, erforderlich ist. Dadurch wird sichergestellt, dass keine nicht authentifizierten Nachrichten in die Warteschlange aufgenommen werden.  
   
  Die an die Nachricht angehängte SID wird ebenfalls zum Überprüfen der Zielwarteschlange anhand der ACL verwendet, um sicherzustellen, dass der Client die Berechtigung hat, die Nachrichten an die Warteschlange zu senden.  
   
@@ -76,13 +76,13 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
  Zusätzlich zum Signieren der Nachricht wird die MSMQ-Nachricht mit dem öffentlichen Schlüssel des Zertifikats aus Active Directory verschlüsselt, das zum empfangenden Warteschlangenmanager gehört, der Host der Zielwarteschlange ist. Der sendende Warteschlangenmanager stellt sicher, dass die MSMQ-Nachricht bei der Übertragung verschlüsselt ist. Der empfangende Warteschlangenmanager verschlüsselt die MSMQ-Nachricht mit dem privaten Schlüssel des internen Zertifikats und speichert die Nachricht in der Warteschlange (bei Authentifizierung und Autorisierung) als Klartext.  
   
 > [!NOTE]
->  Zum Verschlüsseln der Nachricht ist ein Active Directory-Zugriff erforderlich (`UseActiveDirectory`-Eigenschaft von <xref:System.ServiceModel.NetMsmqBinding> muss auf `true` festgelegt werden), der wiederum mit <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> und <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> verwendet werden kann.  
+> Zum Verschlüsseln der Nachricht ist ein Active Directory-Zugriff erforderlich (`UseActiveDirectory`-Eigenschaft von <xref:System.ServiceModel.NetMsmqBinding> muss auf `true` festgelegt werden), der wiederum mit <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> und <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> verwendet werden kann.  
   
 #### <a name="none-protection-level"></a>Ohne Schutzebene  
  Dies wird impliziert, wenn <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> auf <xref:System.Net.Security.ProtectionLevel.None> festgelegt wurde. Dies ist kein gültiger Wert für andere Authentifizierungsmodi.  
   
 > [!NOTE]
->  Wenn die MSMQ-Nachricht signiert wurde, überprüft MSMQ, ob die Nachricht mit dem angehängten Zertifikat (intern oder extern), das vom Status der Warteschlange (authentifiziert oder nicht authentifiziert) unabhängig ist, signiert wurde.  
+> Wenn die MSMQ-Nachricht signiert wurde, überprüft MSMQ, ob die Nachricht mit dem angehängten Zertifikat (intern oder extern), das vom Status der Warteschlange (authentifiziert oder nicht authentifiziert) unabhängig ist, signiert wurde.  
   
 ### <a name="msmq-encryption-algorithm"></a>MSMQ-Verschlüsselungsalgorithmus  
  Der Verschlüsselungsalgorithmus gibt den Algorithmus an, mit dem die MSMQ-Nachricht bei der Übertragung verschlüsselt werden soll. Diese Eigenschaft wird nur verwendet, wenn <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> auf <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> festgelegt wurde.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960626"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Vorgehensweise: Erstellen einer Oberfläche im Stil von Windows Explorer in Windows Forms
 Windows Explorer ist eine gängige Benutzeroberfläche für Anwendungen.
@@ -35,7 +35,7 @@ Windows Explorer ist eine gängige Benutzeroberfläche für Anwendungen.
 3. Wählen Sie alle drei Steuerelemente aus, indem Sie die STRG-Taste gedrückt halten und darauf klicken. Wenn Sie das <xref:System.Windows.Forms.SplitContainer> Steuerelement auswählen, klicken Sie auf die Splitter Leiste anstelle der Panels.
 
     > [!NOTE]
-    >  Verwenden Sie nicht den Befehl **Alle auswählen** im Menü **Bearbeiten** . Wenn Sie dies tun, wird die im nächsten Schritt benötigte Eigenschaft nicht im **Eigenschaften** Fenster angezeigt.
+    > Verwenden Sie nicht den Befehl **Alle auswählen** im Menü **Bearbeiten** . Wenn Sie dies tun, wird die im nächsten Schritt benötigte Eigenschaft nicht im **Eigenschaften** Fenster angezeigt.
 
 4. Legen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.SplitContainer.Dock%2A> auf <xref:System.Windows.Forms.DockStyle.Fill>fest.
 
@@ -44,7 +44,7 @@ Windows Explorer ist eine gängige Benutzeroberfläche für Anwendungen.
      Das Formular zeigt eine zweiteilige Benutzeroberfläche an, ähnlich der von Windows Explorer.
 
     > [!NOTE]
-    >  Wenn Sie den Splitter ziehen, ändert sich die Größe der Panels.
+    > Wenn Sie den Splitter ziehen, ändert sich die Größe der Panels.
 
 ## <a name="see-also"></a>Siehe auch
 

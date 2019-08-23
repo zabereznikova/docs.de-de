@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: a85d8012eea14abe4ddcdb35fa154245894a7f97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e7f5fcc6d76f654f53eea6677962cb097e98b881
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582943"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912305"
 ---
 # <a name="option-infer-statement"></a>Option Infer-Anweisung
 Ermöglicht die Verwendung des lokalen Typrückschlusses beim Deklarieren von Variablen.  
@@ -31,8 +31,8 @@ Option Infer { On | Off }
   
 |Begriff|Definition|  
 |---|---|  
-|`On`|Dies ist optional. Ermöglicht den lokalen Typrückschluss.|  
-|`Off`|Dies ist optional. Deaktiviert den lokalen Typrückschluss.|  
+|`On`|Optional. Ermöglicht den lokalen Typrückschluss.|  
+|`Off`|Optional. Deaktiviert den lokalen Typrückschluss.|  
   
 ## <a name="remarks"></a>Hinweise  
  Geben Sie zum Festlegen von `Option Infer` in einer Datei am Anfang der Datei `Option Infer On` oder `Option Infer Off` ein. Wenn der in einer Datei für `Option Infer` festgelegte Wert mit dem in der IDE oder in der Befehlszeile festgelegten Wert im Konflikt steht, hat der Wert in der Datei Vorrang.  
@@ -41,25 +41,25 @@ Option Infer { On | Off }
   
  In der folgenden Abbildung ist `Option Infer` eingeschaltet. Die Variable in der Deklaration `Dim someVar = 2` wird als ganze Zahl durch Typrückschluss deklariert.
 
- Der folgende Screenshot zeigt IntelliSense, wenn Option Infer aktiviert ist: 
+ Der folgende Screenshot zeigt IntelliSense, wenn Option Infer auf on gilt: 
   
- ![Bildschirmabbildung von IntelliSense-Ansicht angezeigt, wenn Option Infer aktiviert ist.](./media/option-infer-statement/option-infer-as-integer-on.png)  
+ ![Screenshot der IntelliSense-Ansicht, wenn die Option Infer On ist.](./media/option-infer-statement/option-infer-as-integer-on.png)  
   
- In der folgenden Abbildung ist `Option Infer` deaktiviert. Die Variable in der Deklaration `Dim someVar = 2` ist durch Typrückschluss als `Object` deklariert. In diesem Beispiel die **Option Strict** Einstellung **aus** auf die [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+ In der folgenden Abbildung ist `Option Infer` deaktiviert. Die Variable in der Deklaration `Dim someVar = 2` ist durch Typrückschluss als `Object` deklariert. In diesem Beispiel ist die **Option Strict** -Einstellung auf der [Seite kompilieren, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)auf **Off** festgelegt.  
   
- Der folgende Screenshot zeigt IntelliSense, wenn Option Infer deaktiviert ist:
+ Der folgende Screenshot zeigt IntelliSense, wenn die Option Infer deaktiviert ist:
  
- ![Bildschirmabbildung von IntelliSense-Ansicht angezeigt, wenn Option Infer deaktiviert ist.](./media/option-infer-statement/option-infer-as-object-off.png)  
+ ![Screenshot der IntelliSense-Ansicht, wenn die Option Infer deaktiviert ist.](./media/option-infer-statement/option-infer-as-object-off.png)  
   
 > [!NOTE]
->  Wenn eine Variable als `Object`deklariert ist, kann sich der Laufzeittyp ändern, während das Programm ausgeführt wird. Visual Basic führt Operationen mit Bezeichnung *Boxing* und *unboxing* für die Konvertierung zwischen einer `Object` und ein Werttyp, der Ausführung langsamer macht. Weitere Informationen zu Boxing und unboxing finden Sie unter den [Visual Basic-Sprachspezifikation](~/_vblang/spec/conversions.md#value-type-conversions).
+> Wenn eine Variable als `Object`deklariert ist, kann sich der Laufzeittyp ändern, während das Programm ausgeführt wird. Visual Basic führt Vorgänge namens *Boxing* und *Unboxing* aus, um zwischen `Object` einem-und einem-Werttyp zu konvertieren, wodurch die Ausführung langsamer wird. Weitere Informationen zu Boxing und Unboxing finden Sie in der [Visual Basic-Sprachspezifikation](~/_vblang/spec/conversions.md#value-type-conversions).
   
  Typrückschluss findet auf Prozedurebene Anwendung und nicht außerhalb einer Prozedur in einer Klasse, Struktur, Modul oder Schnittstelle.  
   
- Weitere Informationen finden Sie unter [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+ Weitere Informationen finden Sie unter [lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Wenn eine Option Infer-Anweisung nicht vorhanden ist  
- Wenn der Quellcode kein `Option Infer` -Anweisung, die **Option Infer** festlegen auf die [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) wird verwendet. Wenn der Befehlszeilen-Compiler verwendet wird, die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption verwendet wird.  
+ Wenn der Quellcode keine- `Option Infer` Anweisung enthält, wird die Einstellung **Option Infer** auf der [Seite kompilieren, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) verwendet. Wenn der Befehlszeilen Compiler verwendet wird, wird die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption verwendet.  
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Festlegen der Option Infer in der IDE  
   
@@ -67,13 +67,13 @@ Option Infer { On | Off }
   
 2. Klicken Sie auf die Registerkarte **Kompilieren**.  
   
-3. Legen Sie den Wert der **Option infer-** Feld.  
+3. Legen Sie den Wert im Feld **Option ableiten** fest.  
   
- Bei der Erstellung eines neuen Projekts die **Option Infer** festlegen auf die **Kompilieren** Registerkarte nastaven NA hodnotu der **Option Infer** festlegen in der **VB Defaults** Das Dialogfeld. Für den Zugriff auf die **VB Defaults** Dialogfeld auf die **Tools** Menü klicken Sie auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** **Projekte und Lösungen**, und klicken Sie dann auf **VB Defaults**. Die ursprüngliche Standardeinstellung in **VB Defaults** ist `On`.  
+ Wenn Sie ein neues Projekt erstellen, wird die Einstellung **Option Infer** auf der Registerkarte **Kompilieren** auf die Einstellung **Option Infer** im Dialogfeld **VB-Standardwerte** festgelegt. Um auf das Dialogfeld **VB-Standardeinstellungen** zuzugreifen , klicken Sie im Menü Extras auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** **Projekte und Lösungen**, und klicken Sie dann auf **VB Defaults**. Die ursprüngliche Standardeinstellung in **VB-Standardeinstellungen** ist `On`.  
   
 #### <a name="to-set-option-infer-on-the-command-line"></a>Festlegen der Option Infer in der Befehlszeile.  
   
-- Enthalten die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption in der **Vbc** Befehl.  
+- Fügen Sie die [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) -Compileroption in den **vbc** -Befehl ein.  
   
 ## <a name="default-data-types-and-values"></a>Standarddatentypen und -werte  
  Die folgende Tabelle beschreibt die Ergebnisse der verschiedenen Kombinationen der Spezifizierung von Datentyp und Initialisierung in einer `Dim`-Anweisung.  
@@ -81,7 +81,7 @@ Option Infer { On | Off }
 |Datentyp angegeben?|Initialisierung angegeben?|Beispiel|Ergebnis|  
 |---|---|---|---|  
 |Nein|Nein|`Dim qty`|Wenn `Option Strict` deaktiviert ist (Standard), ist die Variable auf `Nothing` eingestellt.<br /><br /> Wenn `Option Strict` aktiviert ist, tritt ein Kompilierzeitfehler auf.|  
-|Nein|Ja|`Dim qty = 5`|Wenn `Option Infer` aktiviert ist (Standard), übernimmt die Variable den Datentyp des Initialisierers an. Finden Sie unter [lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Wenn `Option Infer` und `Option Strict` ausgeschaltet sind, nimmt die Variable den Datentyp des `Object` an.<br /><br /> Wenn `Option Infer` deaktiviert ist und `Option Strict` aktiviert ist, tritt ein Kompilierzeitfehler auf.|  
+|Nein|Ja|`Dim qty = 5`|Wenn `Option Infer` aktiviert ist (Standard), übernimmt die Variable den Datentyp des Initialisierers an. Siehe [lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Wenn `Option Infer` und `Option Strict` ausgeschaltet sind, nimmt die Variable den Datentyp des `Object` an.<br /><br /> Wenn `Option Infer` deaktiviert ist und `Option Strict` aktiviert ist, tritt ein Kompilierzeitfehler auf.|  
 |Ja|Nein|`Dim qty As Integer`|Die Variable wird auf den Standardwert für den Datentyp initialisiert. Weitere Informationen finden Sie unter [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md).|  
 |Ja|Ja|`Dim qty  As Integer = 5`|Wenn der Datentyp der Initialisierung nicht in den angegebenen Datentyp konvertiert werden kann, tritt ein Fehler während der Kompilierung auf.|  
   

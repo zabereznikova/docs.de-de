@@ -2,37 +2,37 @@
 title: SQL-CLR-Typenzuordnung
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: d2ec70d014198299bd911b1a72ab8eb26c096ba9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ac2c62388e554dad31beb54966fa2a4d5ffea2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592474"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945027"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR-Typenzuordnung
 In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektmodell zugeordnet, das in einer beliebigen Programmiersprache erstellt wurde. Bei der Ausführung der Anwendung wandelt LINQ to SQL die sprachintegrierten Abfragen im Objektmodell in SQL um und sendet sie zur Ausführung an die Datenbank. Wenn die Datenbank die Ergebnisse zurückgibt, übersetzt LINQ to SQL diese zurück in Objekte, mit denen in einer Programmiersprache gearbeitet werden kann.  
   
- Um Daten zwischen dem Objektmodell und der Datenbank übersetzt eine *Typzuordnung* muss definiert werden. Mithilfe des Typmappings stellt LINQ to SQL eine Zuordnung zwischen jedem Typ der CLR (Common Language Runtime) und einem bestimmten SQL Server-Typ her. Die Typmappings und andere Mappinginformationen, wie Datenbankstrukturen und Tabellenbeziehungen, können im Objektmodell mithilfe von attributbasiertem Mapping definiert werden. Alternativ dazu können die Mappinginformationen außerhalb des Objektmodells mit einer externen Mappingdatei festgelegt werden. Weitere Informationen finden Sie unter [attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) und [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+ Um Daten zwischen dem Objektmodell und der Datenbank zu übersetzen, muss eine *Typzuordnung* definiert werden. Mithilfe des Typmappings stellt LINQ to SQL eine Zuordnung zwischen jedem Typ der CLR (Common Language Runtime) und einem bestimmten SQL Server-Typ her. Die Typmappings und andere Mappinginformationen, wie Datenbankstrukturen und Tabellenbeziehungen, können im Objektmodell mithilfe von attributbasiertem Mapping definiert werden. Alternativ dazu können die Mappinginformationen außerhalb des Objektmodells mit einer externen Mappingdatei festgelegt werden. Weitere Informationen finden Sie unter [Attribut basierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) und [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
  In diesem Thema werden folgende Punkte erläutert:  
   
-- [Standardtypmapping](#DefaultTypeMapping)  
+- [Standardtyp Zuordnung](#DefaultTypeMapping)  
   
-- [Laufzeitverhaltens-Matrix des Typmappings](#BehaviorMatrix)  
+- [Typzuordnung Lauf Zeit Verhaltens-Matrix](#BehaviorMatrix)  
   
-- [Unterschiede im Verhalten zwischen CLR und SQL-Ausführung](#BehaviorDiffs)  
+- [Verhaltensunterschiede zwischen der CLR-und SQL-Ausführung](#BehaviorDiffs)  
   
-- [Enumerationsmapping](#EnumMapping)  
+- [Enum-Zuordnung](#EnumMapping)  
   
-- [Numerisches Mapping](#NumericMapping)  
+- [Numerische Zuordnung](#NumericMapping)  
   
-- [Text- und XML-Zuordnung](#TextMapping)  
+- [Text-und XML-Zuordnung](#TextMapping)  
   
-- [Datums- und Uhrzeitmapping](#DateMapping)  
+- [Datums-und Uhrzeit Zuordnung](#DateMapping)  
   
-- [Binäres Mapping](#BinaryMapping)  
+- [Binäre Zuordnung](#BinaryMapping)  
   
-- [Verschiedene Mappingtypen](#MiscMapping)  
+- [Sonstige Zuordnung](#MiscMapping)  
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Standardtypmapping  
@@ -42,15 +42,15 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Laufzeitverhaltens-Matrix des Typmappings  
- In der folgenden Grafik wird das erwartete Laufzeitverhalten spezifischer Typmappings dargestellt, wenn Daten von der Datenbank abgerufen oder in ihr gespeichert werden. Mit Ausnahme der Serialisierung unterstützt LINQ to SQL kein Mapping zwischen CLR- oder SQL Server-Datentypen, die nicht in dieser Matrix aufgeführt sind. Weitere Informationen zur Unterstützung von Serialisierung finden Sie unter [Binärserialisierung](#BinarySerialization).  
+ In der folgenden Grafik wird das erwartete Laufzeitverhalten spezifischer Typmappings dargestellt, wenn Daten von der Datenbank abgerufen oder in ihr gespeichert werden. Mit Ausnahme der Serialisierung unterstützt LINQ to SQL kein Mapping zwischen CLR- oder SQL Server-Datentypen, die nicht in dieser Matrix aufgeführt sind. Weitere Informationen zur Serialisierungsunterstützung finden Sie unter [binäre Serialisierung](#BinarySerialization).  
  
-![SQL Server bis SQL CLR-Datentyp-Zuordnungstabelle](media/sql-clr-type-mapping.png)
+![SQL CLR-Datentyp-Mapping-Tabelle SQL Server](media/sql-clr-type-mapping.png)
 
 > [!NOTE]
->  Einige Typmappings können bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen.  
+> Einige Typmappings können bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen.  
   
 ### <a name="custom-type-mapping"></a>Benutzerdefinierte Typmappings  
- Mit LINQ to SQL sind die Standardtypmappings nicht auf diejenigen beschränkt, die von O/R-Designer, SQLMetal und der <xref:System.Data.Linq.DataContext.CreateDatabase%2A>-Methode verwendet werden. Sie können benutzerdefinierte Typmappings erstellen, indem Sie sie explizit in einer DBML-Datei angeben. Mit dieser DBML-Datei können Sie danach den Objektmodellcode und die Mappingdatei erstellen. Weitere Informationen finden Sie unter [SQL-CLR-benutzerdefinierte Datentypzuordnungen](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
+ Mit LINQ to SQL sind die Standardtypmappings nicht auf diejenigen beschränkt, die von O/R-Designer, SQLMetal und der <xref:System.Data.Linq.DataContext.CreateDatabase%2A>-Methode verwendet werden. Sie können benutzerdefinierte Typmappings erstellen, indem Sie sie explizit in einer DBML-Datei angeben. Mit dieser DBML-Datei können Sie danach den Objektmodellcode und die Mappingdatei erstellen. Weitere Informationen finden Sie unter [benutzerdefinierte SQL-CLR-](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)Typzuordnungen.  
   
 <a name="BehaviorDiffs"></a>   
 ## <a name="behavior-differences-between-clr-and-sql-execution"></a>Verhaltensunterschiede zwischen CLR- und SQL-Ausführung  
@@ -60,7 +60,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
   
 - In SQL Server und der CLR werden verschiedene vergleichbare Datentypen unterschiedlich sortiert. Zum Beispiel werden SQL Server-Daten des Typs `UNIQUEIDENTIFIER` anders sortiert als CLR-Daten des Typs <xref:System.Guid?displayProperty=nameWithType>.  
   
-- SQL Server behandelt verschiedene Vorgänge für Zeichenfolgenvergleiche anders als die CLR. In SQL Server ist das Verhalten bei Zeichenfolgenvergleichen von den Sortierungseinstellungen auf dem Server abhängig. Weitere Informationen finden Sie unter [arbeiten mit Sortierungen](https://go.microsoft.com/fwlink/?LinkId=115330) in der Microsoft SQL Server-Onlinedokumentation.  
+- SQL Server behandelt verschiedene Vorgänge für Zeichenfolgenvergleiche anders als die CLR. In SQL Server ist das Verhalten bei Zeichenfolgenvergleichen von den Sortierungseinstellungen auf dem Server abhängig. Weitere Informationen finden Sie unter [Arbeiten mit Sortierungen](https://go.microsoft.com/fwlink/?LinkId=115330) in der Microsoft SQL Server-Onlinedokumentation.  
   
 - Für einige zugeordnete Funktionen werden von SQL Server andere Werte zurückgegeben als von der CLR. Die Funktionen für die Überprüfung auf Gleichheit beispielsweise unterscheiden sich, da von SQL Server zwei Zeichenketten als gleich aufgefasst werden, wenn sie sich lediglich durch nachgestellte Leerzeichen unterscheiden, während solche Zeichenketten von der CLR als unterschiedlich aufgefasst werden.  
   
@@ -77,11 +77,11 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
      Wenn ein CLR-<xref:System.Enum?displayProperty=nameWithType>-Typ einem SQL-Texttyp zugeordnet wird, wird der SQL-Datenbankwert den Namen der CLR-<xref:System.Enum?displayProperty=nameWithType>-Member zugeordnet. Enthält z. B. ein <xref:System.Enum?displayProperty=nameWithType> mit dem Namen `DaysOfWeek` einen Member mit dem Namen `Tue` und dem zugrunde liegenden Ganzzahlwert 3, wird dieser dem Datenbankwert `Tue` zugeordnet.  
   
 > [!NOTE]
->  Beim Mapping von SQL-Texttypen zu einer CLR-<xref:System.Enum?displayProperty=nameWithType> sollten nur die Namen der <xref:System.Enum>-Member in der zugeordneten SQL-Spalte enthalten sein. Andere Werte werden in der der <xref:System.Enum> zugeordneten SQL-Spalte nicht unterstützt.  
+> Beim Mapping von SQL-Texttypen zu einer CLR-<xref:System.Enum?displayProperty=nameWithType> sollten nur die Namen der <xref:System.Enum>-Member in der zugeordneten SQL-Spalte enthalten sein. Andere Werte werden in der der <xref:System.Enum> zugeordneten SQL-Spalte nicht unterstützt.  
   
- Mit dem O/R-Designer und dem SQLMetal-Befehlszeilentool kann ein SQL-Typ nicht automatisch einer CLR-<xref:System.Enum>-Klasse zugeordnet werden. Sie müssen diese Zuordnung explizit konfigurieren, indem Sie eine DBML-Datei zur Verwendung mit dem O/R-Designer und SQLMetal anpassen. Weitere Informationen zum Zuordnen von benutzerdefinierten Typen finden Sie unter [SQL-CLR-benutzerdefinierte Typenzuordnungen](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
+ Mit dem O/R-Designer und dem SQLMetal-Befehlszeilentool kann ein SQL-Typ nicht automatisch einer CLR-<xref:System.Enum>-Klasse zugeordnet werden. Sie müssen diese Zuordnung explizit konfigurieren, indem Sie eine DBML-Datei zur Verwendung mit dem O/R-Designer und SQLMetal anpassen. Weitere Informationen zur benutzerdefinierten Typzuordnung finden Sie unter [benutzerdefinierte SQL-CLR-](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md)Typzuordnungen.  
   
- Da eine SQL-Spalte, die für eine Enumeration von den gleichen Typ wie andere numerische Spalten und Textspalten werden; Diese Tools nicht Ihrer Absicht und erkennt standardmäßig die Zuordnung wie im folgenden beschrieben [numerisches Mapping](#NumericMapping) und [Text- und XML-Mapping](#TextMapping) Abschnitte. Weitere Informationen zum Generieren von Code mit der DBML-Datei finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ Da eine SQL-Spalte, die für die Enumeration vorgesehen ist, vom gleichen Typ wie andere numerische Spalten und Textspalten ist. Diese Tools erkennen ihre Absicht und die Standard Zuordnung nicht, wie in den folgenden Abschnitten zu den folgenden [numerischen Mapping](#NumericMapping) -und [Text-und XML-Mapping](#TextMapping) -Abschnitten beschrieben wird. Weitere Informationen zum Generieren von Code mit der DBML-Datei finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
  Die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode erstellt eine SQL-Spalte eines numerischen Typs zum Mapping eines CLR-<xref:System.Enum?displayProperty=nameWithType>-Typs.  
   
@@ -119,10 +119,10 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 |<xref:System.Single?displayProperty=nameWithType>|`REAL`|  
 |<xref:System.Double?displayProperty=nameWithType>|`FLOAT`|  
   
- Es können viele andere numerische Mappings ausgewählt werden. Einige davon können jedoch bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Weitere Informationen finden Sie unter den [Typ zuordnen Laufzeitverhaltens-Matrix](#BehaviorMatrix).  
+ Es können viele andere numerische Mappings ausgewählt werden. Einige davon können jedoch bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Weitere Informationen finden Sie unter [Lauf Zeit Verhaltens-Matrix für Typzuordnung](#BehaviorMatrix).  
   
 ### <a name="decimal-and-money-types"></a>Dezimal- und Währungstypen  
- Die standardgenauigkeit von SQL Server `DECIMAL` Typ (18 Dezimalstellen links und rechts vom Dezimaltrennzeichen) ist wesentlich kleiner ist als die Genauigkeit des CLR <xref:System.Decimal?displayProperty=nameWithType> Typ, der es standardmäßig zugeordnet ist. Dies kann beim Speichern von Daten in der Datenbank zu Genauigkeitsverlust führen. Umgekehrt kann jedoch das gleiche auftreten, wenn der SQL Server-Typ `DECIMAL` für eine Genauigkeit von mehr als 29 Stellen konfiguriert ist. Wenn der SQL Server-Typ `DECIMAL` für eine höhere Genauigkeit konfiguriert ist als der CLR-Typ <xref:System.Decimal?displayProperty=nameWithType>, kann Genauigkeitsverlust beim Abrufen von Daten aus der Datenbank auftreten.  
+ Die Standardgenauigkeit SQL Server `DECIMAL` Typs (18 Dezimalziffern Links und rechts vom Dezimaltrennzeichen) ist wesentlich kleiner als die Genauigkeit des CLR <xref:System.Decimal?displayProperty=nameWithType> -Typs, mit dem Sie standardmäßig gekoppelt ist. Dies kann beim Speichern von Daten in der Datenbank zu Genauigkeitsverlust führen. Umgekehrt kann jedoch das gleiche auftreten, wenn der SQL Server-Typ `DECIMAL` für eine Genauigkeit von mehr als 29 Stellen konfiguriert ist. Wenn der SQL Server-Typ `DECIMAL` für eine höhere Genauigkeit konfiguriert ist als der CLR-Typ <xref:System.Decimal?displayProperty=nameWithType>, kann Genauigkeitsverlust beim Abrufen von Daten aus der Datenbank auftreten.  
   
  Die SQL Server-Typen `MONEY` und `SMALLMONEY`, die standardmäßig ebenfalls dem CLR-Typ <xref:System.Decimal?displayProperty=nameWithType> zugeordnet werden, haben eine niedrigere Genauigkeit. Dies kann beim Speichern von Daten in der Datenbank einen Überlauf oder Datenverlust verursachen.  
   
@@ -149,7 +149,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 |<xref:System.Char?displayProperty=nameWithType>[]|`NVARCHAR(4000)`|  
 |Benutzerdefinierter Typ, mit dem `Parse()` und `ToString()` implementiert werden.|`NVARCHAR(MAX)`|  
   
- Es können viele andere textbasierte und XML-Mappings ausgewählt werden. Einige davon können jedoch bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Weitere Informationen finden Sie unter den [Typ zuordnen Laufzeitverhaltens-Matrix](#BehaviorMatrix).  
+ Es können viele andere textbasierte und XML-Mappings ausgewählt werden. Einige davon können jedoch bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Weitere Informationen finden Sie unter [Lauf Zeit Verhaltens-Matrix für Typzuordnung](#BehaviorMatrix).  
   
 ### <a name="xml-types"></a>XML-Typen  
  Der `XML`-Datentyp von SQL Server ist seit Microsoft SQL Server 2005 verfügbar. Der `XML`-Datentyp von SQL Server kann <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XDocument> oder <xref:System.String> zugeordnet werden. Wenn die Spalte XML-Fragmente speichert, die nicht in <xref:System.Xml.Linq.XElement> eingelesen werden können, muss die Spalte <xref:System.String> zugeordnet werden, um Laufzeitfehler zu vermeiden. Zu den XML-Fragmenten, die <xref:System.String> zugeordnet werden müssen, zählen die folgenden:  
@@ -162,13 +162,13 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
   
 - Kommentare  
   
- Obwohl Sie zugeordnet werden können <xref:System.Xml.Linq.XElement> und <xref:System.Xml.Linq.XDocument> mit SQL Server, siehe die [Typ Zuordnung Laufzeitverhaltens-Matrix](#BehaviorMatrix), wird die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Methode verfügt über keine Standard-SQL Server-Typzuordnung für diese Typen.  
+ Obwohl Sie wie in <xref:System.Xml.Linq.XElement> der [Lauf Zeit Verhaltens-Matrix für die Typzuordnung](#BehaviorMatrix)dargestellt und SQL Server können, <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> verfügt die- <xref:System.Xml.Linq.XDocument> Methode über keine standardmäßige SQL Server Typzuordnung für diese Typen.  
   
 ### <a name="custom-types"></a>Benutzerdefinierte Typen  
- Wenn eine Klasse implementiert `Parse()` und `ToString()`, Sie können das Objekt zuordnen, einem beliebigen SQL-Texttyp (`CHAR`, `NCHAR`, `VARCHAR`, `NVARCHAR`, `TEXT`, `NTEXT`, `XML`). Das Objekt wird in der Datenbank gespeichert, indem der von `ToString()` zurückgegebene Wert in der zugeordneten Datenbankspalte gespeichert wird. Das Objekt wird rekonstruiert, indem `Parse()` für die von der Datenbank zurückgegebene Zeichenfolge aufgerufen wird.  
+ Wenn eine Klasse und `Parse()` implementiert `ToString()`, können Sie das-Objekt einem beliebigen SQL-Texttyp `NCHAR`( `VARCHAR``CHAR`, `NVARCHAR`, `TEXT`, `NTEXT`, `XML`,,) zuordnen. Das Objekt wird in der Datenbank gespeichert, indem der von `ToString()` zurückgegebene Wert in der zugeordneten Datenbankspalte gespeichert wird. Das Objekt wird rekonstruiert, indem `Parse()` für die von der Datenbank zurückgegebene Zeichenfolge aufgerufen wird.  
   
 > [!NOTE]
->  LINQ to SQL unterstützt keine Serialisierung mithilfe von <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>.  
+> LINQ to SQL unterstützt keine Serialisierung mithilfe von <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>.  
   
 <a name="DateMapping"></a>   
 ## <a name="date-and-time-mapping"></a>Datums- und Uhrzeitmapping  
@@ -191,18 +191,18 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
 |<xref:System.TimeSpan?displayProperty=nameWithType>|`TIME`|  
   
- Es können viele andere Datums- und Uhrzeitmappings ausgewählt werden. Einige davon können jedoch bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Weitere Informationen finden Sie unter den [Typ zuordnen Laufzeitverhaltens-Matrix](#BehaviorMatrix).  
+ Es können viele andere Datums- und Uhrzeitmappings ausgewählt werden. Einige davon können jedoch bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Weitere Informationen finden Sie unter [Lauf Zeit Verhaltens-Matrix für Typzuordnung](#BehaviorMatrix).  
   
 > [!NOTE]
->  Die SQL Server-Typen `DATETIME2`, `DATETIMEOFFSET`, `DATE` und `TIME` sind seit Microsoft SQL Server 2008 verfügbar. LINQ to SQL unterstützt das Mapping dieser neuen Typen seit .NET Framework, Version 3.5, SP1.  
+> Die SQL Server-Typen `DATETIME2`, `DATETIMEOFFSET`, `DATE` und `TIME` sind seit Microsoft SQL Server 2008 verfügbar. LINQ to SQL unterstützt das Mapping dieser neuen Typen seit .NET Framework, Version 3.5, SP1.  
   
 ### <a name="systemdatetime"></a>System.DateTime  
- Der Bereich und die Genauigkeit des CLR-Typs <xref:System.DateTime?displayProperty=nameWithType> sind größer als der Bereich und die Genauigkeit des SQL Server-Typs `DATETIME`. Diese beiden Typen werden mit dem Standardtypmapping der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode einander zugeordnet. Um Ausnahmen im Zusammenhang mit außerhalb des Bereichs von `DATETIME` liegenden Datumswerten zu vermeiden, sollte der seit Microsoft SQL Server 2008 verfügbare `DATETIME2`-Typ verwendet werden. `DATETIME2` kann mit übereinstimmen, den Bereich und die Genauigkeit der CLR <xref:System.DateTime?displayProperty=nameWithType>.  
+ Der Bereich und die Genauigkeit des CLR-Typs <xref:System.DateTime?displayProperty=nameWithType> sind größer als der Bereich und die Genauigkeit des SQL Server-Typs `DATETIME`. Diese beiden Typen werden mit dem Standardtypmapping der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode einander zugeordnet. Um Ausnahmen im Zusammenhang mit außerhalb des Bereichs von `DATETIME` liegenden Datumswerten zu vermeiden, sollte der seit Microsoft SQL Server 2008 verfügbare `DATETIME2`-Typ verwendet werden. `DATETIME2`kann den Bereich und die Genauigkeit der CLR <xref:System.DateTime?displayProperty=nameWithType>vergleichen.  
   
- SQL Server-Datumswerte unterstützen keine <xref:System.TimeZone>, eine Funktion, die in der CLR große Bedeutung hat. <xref:System.TimeZone>-Werte werden ohne <xref:System.TimeZone>-Umwandlung in der Datenbank gespeichert, unabhängig von den ursprünglichen <xref:System.DateTimeKind>-Informationen. Werden <xref:System.DateTime>-Werte aus der Datenbank abgerufen, werden diese wie in <xref:System.DateTime> mit einer <xref:System.DateTimeKind> von <xref:System.DateTimeKind.Unspecified> geladen. Weitere Informationen zu unterstützten <xref:System.DateTime?displayProperty=nameWithType> Methoden finden Sie unter [System.DateTime-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ SQL Server-Datumswerte unterstützen keine <xref:System.TimeZone>, eine Funktion, die in der CLR große Bedeutung hat. <xref:System.TimeZone>-Werte werden ohne <xref:System.TimeZone>-Umwandlung in der Datenbank gespeichert, unabhängig von den ursprünglichen <xref:System.DateTimeKind>-Informationen. Werden <xref:System.DateTime>-Werte aus der Datenbank abgerufen, werden diese wie in <xref:System.DateTime> mit einer <xref:System.DateTimeKind> von <xref:System.DateTimeKind.Unspecified> geladen. Weitere Informationen zu unterstützten <xref:System.DateTime?displayProperty=nameWithType> Methoden finden Sie unter [System. DateTime-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
- Mit Microsoft SQL Server 2008 und .NET Framework 3.5 SP1 kann der CLR-Typ <xref:System.TimeSpan?displayProperty=nameWithType> dem SQL Server-Typ `TIME` zugeordnet werden. Es gibt jedoch große Unterschiede im von dem CLR-Typ <xref:System.TimeSpan?displayProperty=nameWithType> und dem SQL Server-Typ `TIME` unterstützten Bereich. Das Mapping von Stundenwerten kleiner als 0 oder größer als 23:59:59.9999999 zum SQL-Typ `TIME` hat Überlaufausnahmen zur Folge. Weitere Informationen finden Sie unter [System.TimeSpan-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
+ Mit Microsoft SQL Server 2008 und .NET Framework 3.5 SP1 kann der CLR-Typ <xref:System.TimeSpan?displayProperty=nameWithType> dem SQL Server-Typ `TIME` zugeordnet werden. Es gibt jedoch große Unterschiede im von dem CLR-Typ <xref:System.TimeSpan?displayProperty=nameWithType> und dem SQL Server-Typ `TIME` unterstützten Bereich. Das Mapping von Stundenwerten kleiner als 0 oder größer als 23:59:59.9999999 zum SQL-Typ `TIME` hat Überlaufausnahmen zur Folge. Weitere Informationen finden Sie unter [System. TimeSpan-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
   
  In Microsoft SQL Server 2000 und SQL Server 2005 können <xref:System.TimeSpan> keine Datenbankfelder zugeordnet werden. Dennoch werden Operationen für <xref:System.TimeSpan> unterstützt, da <xref:System.TimeSpan>-Werte von <xref:System.DateTime>-Subtraktionen zurückgegeben oder als Literal oder gebundene Variable in einen Ausdruck integriert werden können.  
   
@@ -215,7 +215,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)` mit der `FILESTREAM` Attribut|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)`mit dem `FILESTREAM` -Attribut|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   
@@ -227,16 +227,16 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Runtime.Serialization.ISerializable?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
   
- Es können viele andere binäre Mappings ausgewählt werden. Einige davon können jedoch bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Weitere Informationen finden Sie unter den [Typ zuordnen Laufzeitverhaltens-Matrix](#BehaviorMatrix).  
+ Es können viele andere binäre Mappings ausgewählt werden. Einige davon können jedoch bei der Übertragung in die Datenbank oder aus der Datenbank einen Überlauf oder Datenverlust verursachen. Weitere Informationen finden Sie unter [Lauf Zeit Verhaltens-Matrix für Typzuordnung](#BehaviorMatrix).  
   
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  Das `FILESTREAM`-Attribut für `VARBINARY(MAX)`-Spalten ist seit Microsoft SQL Server 2008 verfügbar. Dieses Attribut kann ab .NET Framework Version 3.5 SP1 mit LINQ to SQL zugeordnet werden.  
   
- Obwohl `VARBINARY(MAX)`-Spalten mit dem `FILESTREAM`-Attribut <xref:System.Data.Linq.Binary>-Objekten zugeordnet werden können, können von der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode keine Spalten mit dem `FILESTREAM`-Attribut automatisch erstellt werden. Weitere Informationen zu `FILESTREAM`, finden Sie unter [Übersicht über FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=115291) auf Microsoft SQL Server-Onlinedokumentation.  
+ Obwohl `VARBINARY(MAX)`-Spalten mit dem `FILESTREAM`-Attribut <xref:System.Data.Linq.Binary>-Objekten zugeordnet werden können, können von der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode keine Spalten mit dem `FILESTREAM`-Attribut automatisch erstellt werden. Weitere Informationen `FILESTREAM`zu finden Sie unter [Übersicht über FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=115291) auf Microsoft SQL Server-Onlinedokumentation.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>Binäre Serialisierung  
- Wenn eine Klasse die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle implementiert, kann ein Objekt in ein beliebiges binäres SQL-Feld (`BINARY`, `VARBINARY`, `IMAGE`) serialisiert werden. Das Objekt wird je nach Implementierung der <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle serialisiert und deserialisiert. Weitere Informationen finden Sie unter [Binärserialisierung](https://go.microsoft.com/fwlink/?LinkId=115581).  
+ Wenn eine Klasse die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle implementiert, kann ein Objekt in ein beliebiges binäres SQL-Feld (`BINARY`, `VARBINARY`, `IMAGE`) serialisiert werden. Das Objekt wird je nach Implementierung der <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle serialisiert und deserialisiert. Weitere Informationen finden Sie unter [binäre Serialisierung](https://go.microsoft.com/fwlink/?LinkId=115581).  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>Verschiedene Mappingtypen  
@@ -254,7 +254,7 @@ In LINQ to SQL wird das Datenmodell einer relationalen Datenbank einem Objektm
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  
   
- LINQ to SQL unterstützt keine anderen Typmappings für diese Typen.  Weitere Informationen finden Sie unter den [Typ zuordnen Laufzeitverhaltens-Matrix](#BehaviorMatrix).  
+ LINQ to SQL unterstützt keine anderen Typmappings für diese Typen.  Weitere Informationen finden Sie unter [Lauf Zeit Verhaltens-Matrix für Typzuordnung](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,20 +2,20 @@
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: d3afc04fec996f4e24eb6e5ad771886480cd9cb9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 48ffbbb8ccac34c5eb605edc4aab17d0e2b3499e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491046"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922925"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
-In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) für einen Workflowdienst nachverfolgung aktivieren und die Überwachungsereignisse in Event Tracing for Windows (ETW) ausgegeben wird. In dem Beispiel wird der ETW-Überwachungsteilnehmer (<xref:System.Activities.Tracking.EtwTrackingParticipant>) zur Ausgabe von Workflowüberwachungsdatensätzen in ETW verwendet.
+In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF)-Nachverfolgung für einen Workflow Dienst aktiviert und die Überwachungs Ereignisse in der Ereignis Ablauf Verfolgung für Windows (ETW) ausgegeben werden. In dem Beispiel wird der ETW-Überwachungsteilnehmer (<xref:System.Activities.Tracking.EtwTrackingParticipant>) zur Ausgabe von Workflowüberwachungsdatensätzen in ETW verwendet.
 
  Der Workflow in dem Beispiel erhält eine Anforderung, weist den Umkehrwert der Eingabedaten der Eingabevariablen zu und gibt den Umkehrwert an den Client zurück. Wenn die Eingabedaten 0 betragen, tritt eine nicht behandelte Ausnahme aufgrund einer Division durch 0 (null) auf, aufgrund der der Workflow abgebrochen wird. Wenn die Nachverfolgung aktiviert ist, wird der Fehlerdatensatz an ETW ausgegeben, sodass der Fehler später behoben werden kann. Der ETW-Überwachungsteilnehmer ist mit einem Überwachungsprofil konfiguriert, um Überwachungsdatensätze zu abonnieren. Das Überwachungsprofil ist in der Datei "Web.config" definiert und für den ETW-Überwachungsteilnehmer als Konfigurationsparameter bereitgestellt. Der ETW-Überwachungsteilnehmer ist in der Datei "Web.config" des Workflowdiensts konfiguriert und wird auf den Dienst als Dienstverhalten angewendet. In diesem Beispiel zeigen Sie die Überwachungsereignisse im Ereignisprotokoll mithilfe der Ereignisanzeige an.
 
 ## <a name="workflow-tracking-details"></a>Workflowüberwachungsdetails
- Windows Workflow Foundation stellt eine Überwachungsinfrastruktur, um die Ausführung einer Workflowinstanz nachzuverfolgen. Die Überwachungslaufzeit erstellt eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Ereignissen auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.
+ Windows Workflow Foundation stellt eine Überwachungsinfrastruktur bereit, mit der die Ausführung einer Workflow Instanz nachverfolgt werden können. Die Überwachungslaufzeit erstellt eine Workflowinstanz, um Ereignisse in Verbindung mit dem Workflowlebenszyklus, Ereignisse aus den Workflowaktivitäten sowie benutzerdefinierte Ereignissen auszugeben. In der folgenden Tabelle sind die primären Komponenten der Überwachungsinfrastruktur aufgeführt.
 
 |Komponente|Beschreibung|
 |---------------|-----------------|
@@ -39,43 +39,43 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) f�
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1. Öffnen Sie die Projektmappendatei "etwtrackingparticipantsample.sln" in mit Visual Studio 2010.
+1. Öffnen Sie mit Visual Studio 2010 die Projektmappendatei "etwtrackingparticipantsample. sln".
 
 2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
 
 3. Drücken Sie F5, um die Projektmappe auszuführen.
 
-     Der Dienst lauscht standardmäßig an Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
+     Standardmäßig lauscht der Dienst an Port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4. Öffnen Sie die WCF-Testclient mit Datei-Explorer.
+4. Öffnen Sie im Datei-Explorer den WCF-Test Client.
 
-     WCF-Testclient (WcfTestClient.exe) befindet sich in der \<Visual Studio 2010-Installationsordner > \Common7\IDE\-Ordner.
+     Der WCF-Test Client (WcfTestClient. exe) befindet sich im \<Ordner "Visual Studio 2010-Installationsordner" > Ordner "\common7\ide\".
 
-     Der Standardinstallationsordner für die Visual Studio 2010 ist c:\Programme\Microsoft c:\Programme\Microsoft Visual Studio 10.0.
+     Der Standard Installationsordner von Visual Studio 2010 ist c:\Programme\Microsoft Visual Studio 10,0.
 
-5. Wählen Sie im WCF-Testclient **Dienst hinzufügen** aus der **Datei** Menü.
+5. Wählen Sie im WCF-Test Client im Menü **Datei** die Option **Dienst hinzufügen** aus.
 
      Fügen Sie die Endpunktadresse im Eingabefeld hinzu. Die Standardeinstellung ist `http://localhost:53797/SampleWorkflowService.xamlx`.
 
 6. Öffnen Sie die Ereignisanzeige.
 
-     Starten Sie vor dem Aufrufen des Diensts die Ereignisanzeige über den **starten** , wählen Sie im Menü **ausführen** und geben Sie im `eventvwr.exe`. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.
+     Bevor Sie den Dienst aufrufen, starten Sie Ereignisanzeige über das Startmenü, wählen Sie **Ausführen** aus, `eventvwr.exe`und geben Sie ein. Stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom Workflowdienst ausgegebene Überwachungsereignisse ausführt.
 
-7. In der Strukturansicht der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, und **Microsoft**. Mit der rechten Maustaste **Microsoft** , und wählen Sie **Ansicht** und dann **analytische und Debugprotokolle** , aktivieren Sie die analytischen und Debugprotokolle
+7. Navigieren Sie in der Strukturansicht des Ereignisanzeige zu **Ereignisanzeige**, **Anwendungs-und Dienst Protokolle**und **Microsoft**. Klicken Sie mit der rechten Maustaste auf **Microsoft** , und wählen Sie **Ansicht** und dann **analytische und Debugprotokolle anzeigen** , um die analytischen und Debugprotokolle
 
-     Sicherstellen, dass die **analytische und Debugprotokolle** Option aktiviert ist.
+     Stellen Sie sicher, dass die Option **analytische und Debugprotokolle anzeigen** aktiviert ist.
 
-8. In der Strukturansicht in der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren** zum Aktivieren der **analytisch** Protokoll.
+8. Navigieren Sie in der Strukturansicht in Ereignisanzeige zu **Ereignisanzeige**, Anwendungs **-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Klicken Sie mit der rechten Maustaste auf **Analyse** , und wählen Sie **Protokoll aktivieren** aus, um das **analytische** Protokoll
 
 9. Testen Sie den Dienst mithilfe des WCF-Testclients, indem Sie auf `GetData` doppelklicken.
 
      Dadurch wird die `GetData`-Methode geöffnet. Die Anforderung akzeptiert einen Parameter und stellt sicher, dass der Wert 0 beträgt, was dem Standard entspricht.
 
-     Klicken Sie auf **Aufrufen**.
+     Klicken Sie auf **aufrufen**.
 
 10. Achten Sie auf die vom Workflow ausgegebenen Ereignisse.
 
-     Wechseln Sie zurück zur Ereignisanzeige, und navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **aktualisieren**.
+     Wechseln Sie zurück zu Ereignisanzeige, und navigieren Sie zu **Ereignisanzeige**, Anwendungs **-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Klicken Sie mit der rechten Maustasteauf **Analyse** , und wählen Sie
 
      Die Workflowereignisse werden in der Ereignisanzeige angezeigt. Beachten Sie, dass Workflowausführungsereignisse angezeigt werden und dass es sich bei einem dieser Ereignisse um eine unbehandelte Ausnahme handelt, die dem Fehler im Workflow entspricht. Es wird auch ein Warnungsereignis von der Workflowaktivität ausgegeben, das angibt, dass die Aktivität einen Fehler auslöst.
 
@@ -125,18 +125,18 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) f�
 
 1. Öffnen Sie die Ereignisanzeige.
 
-2. Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll deaktivieren**.
+2. Navigieren Sie zu **Ereignisanzeige**, Anwendungs **-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Klicken Sie mit der rechten Maustaste auf **Analyse** , und wählen Sie **Protokoll deaktivieren**
 
-3. Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendung Server-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll löschen**.
+3. Navigieren Sie zu **Ereignisanzeige**, Anwendungs **-und Dienst Protokolle**, **Microsoft**, **Windows**, **Anwendungs Server-Anwendungen**. Klicken Sie mit der rechten Maustaste auf **Analyse** , und wählen Sie **Protokoll löschen**
 
-4. Wählen Sie die **löschen** Option aus, um die Ereignisse zu löschen.
+4. Wählen Sie die Option **Clear** aus, um die Ereignisse zu löschen.
 
 ## <a name="known-issue"></a>Bekanntes Problem
 
 > [!NOTE]
->  Es gibt ein bekanntes Problem in der Ereignisanzeige, bei dem bei der Decodierung von ETW-Ereignissen ein Fehler auftritt. Möglicherweise wird eine Fehlermeldung ähnlich der Folgenden angezeigt.
+> Es gibt ein bekanntes Problem in der Ereignisanzeige, bei dem bei der Decodierung von ETW-Ereignissen ein Fehler auftritt. Möglicherweise wird eine Fehlermeldung ähnlich der Folgenden angezeigt.
 >
->  Die Beschreibung für Ereigniskennung \<Id > aus der Quelle Microsoft Windows-Anwendungsserver-Anwendungen wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
+>  Die Beschreibung für die Ereignis \<-ID-ID > von der Quelle "Microsoft-Windows-Application Server-Applications" wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können die Komponente auf dem lokalen Computer installieren oder reparieren.
 >
 >  Wenn dieser Fehler auftritt, klicken Sie im Aktionsbereich auf "Aktualisieren". Das Ereignis sollte jetzt ordnungsgemäß decodiert werden.
 
@@ -145,10 +145,10 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) f�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric-Überwachungs Beispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

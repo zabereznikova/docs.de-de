@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 7af01bda05b113be02261051421a91bdea776851
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 91369392f33f2a86a7a4cb5ffb3faa668c113348
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644570"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965413"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML-Kommentarliteral (Visual Basic)
-Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XComment> Objekt.  
+Ein Literalwert <xref:System.Xml.Linq.XComment> , der ein Objekt darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -29,29 +29,29 @@ Ein Zeichenfolgenliteral, ein <xref:System.Xml.Linq.XComment> Objekt.
   
 |Begriff|Definition|  
 |---|---|  
-|`<!--`|Erforderlich. Kennzeichnet den Anfang des XML-Kommentar.|  
-|`content`|Erforderlich. Text, der in der XML-Kommentar angezeigt werden. Eine Reihe von zwei Bindestriche (-) oder das Ende mit einem Bindestrich neben dem schließenden Tag darf keine enthalten werden.|  
-|`-->`|Erforderlich. Kennzeichnet das Ende des XML-Kommentar.|  
+|`<!--`|Erforderlich. Gibt den Anfang des XML-Kommentars an.|  
+|`content`|Erforderlich. Text, der im XML-Kommentar angezeigt werden soll. Kann keine Reihe von zwei Bindestrichen (--) enthalten oder auf einen Bindestrich neben dem schließenden Tag enden.|  
+|`-->`|Erforderlich. Bezeichnet das Ende des XML-Kommentars.|  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein <xref:System.Xml.Linq.XComment>-Objekt.  
   
 ## <a name="remarks"></a>Hinweise  
- XML-Kommentarliterale enthalten nicht den Inhalt des Dokuments; Sie enthalten Informationen über das Dokument. Der Abschnitt der XML-Kommentar endet mit der Sequenz "-->". Dies bedeutet Folgendes:  
+ XML-Kommentar Literale enthalten keinen Dokumentinhalt. Sie enthalten Informationen über das Dokument. Der XML-Kommentar Abschnitt endet mit der Sequenz "-->". Dies impliziert die folgenden Punkte:  
   
-- Sie können keinen eingebetteten Ausdruck in einem XML-Kommentarliteral verwenden, da die Trennzeichen für eingebettete Ausdrücke gültigen XML-Kommentar Inhalt sind.  
+- Ein eingebetteter Ausdruck kann nicht in einem XML-kommentarliteralausdruck verwendet werden, da die eingebetteten Ausdrucks Trennzeichen gültige XML-Kommentar Inhalte sind.  
   
-- Abschnitte der XML-Kommentar können nicht geschachtelt werden, da `content` "kann nicht den Wert-->" enthalten.  
+- XML-Kommentar Abschnitte können nicht eingebettet werden, `content` da den Wert "-->" nicht enthalten kann.  
   
- Sie können eine Variable einem XML-Kommentarliteral zuweisen, oder Sie können es in ein XML-Elementliteral einschließen.  
+ Sie können einer Variablen einen XML-Kommentarliterals zuweisen, oder Sie können Sie in ein XML-Elementliteral einschließen.  
   
 > [!NOTE]
->  Ein XML-literal kann mehrere Zeilen umfassen, ohne das Zeilenfortsetzungszeichen verwenden. Dieses Feature können Sie Inhalt aus einem XML-Dokument kopieren und fügen ihn direkt in Visual Basic-Programms.  
+> Ein XML-Literale kann mehrere Zeilen umfassen, ohne Zeilen Fortsetzungs Zeichen zu verwenden. Mit dieser Funktion können Sie Inhalte aus einem XML-Dokument kopieren und direkt in ein Visual Basic Programm einfügen.  
   
- Visual Basic-Compiler konvertiert die XML-Kommentarliteral in einen Aufruf der <xref:System.Xml.Linq.XComment.%23ctor%2A> Konstruktor.  
+ Der Visual Basic Compiler konvertiert das XML-kommentarliteralzeichen in <xref:System.Xml.Linq.XComment.%23ctor%2A> einen-Konstruktor-Konstruktor.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt einen XML-Kommentar mit dem Text "Dies ist ein Kommentar".  
+ Im folgenden Beispiel wird ein XML-Kommentar erstellt, der den Text "This is a comment" enthält.  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   

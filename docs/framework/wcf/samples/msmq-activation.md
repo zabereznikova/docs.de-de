@@ -2,29 +2,29 @@
 title: MSMQ-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 43d6cde7a9342b57933cd3e7475bd4412da86d92
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 7cf6a4663f96c9e960b11cbbfe29b492e89405f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487556"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930413"
 ---
 # <a name="msmq-activation"></a>MSMQ-Aktivierung
-Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Activation Service (WAS), die von einer Nachrichtenwarteschlange gelesen werden. Dieses Beispiel verwendet die `netMsmqBinding` und basiert auf der [bidirektionaler Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md) Beispiel. In diesem Fall handelt es sich bei dem Dienst um eine im Internet gehostete Anwendung. Der Client ist selbst gehostet und gibt an die Konsole aus, um den Status eingereichter Bestellungen zu beobachten.  
+Dieses Beispiel veranschaulicht das Hosten von Anwendungen in Windows Process Activation Service (WAS), die von einer Nachrichtenwarteschlange gelesen werden. Dieses Beispiel verwendet das `netMsmqBinding` und basiert auf dem Beispiel für die bidirektionale [Kommunikation](../../../../docs/framework/wcf/samples/two-way-communication.md) . In diesem Fall handelt es sich bei dem Dienst um eine im Internet gehostete Anwendung. Der Client ist selbst gehostet und gibt an die Konsole aus, um den Status eingereichter Bestellungen zu beobachten.  
   
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
+> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
   
 > [!NOTE]
->  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
+> Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) zum Herunterladen aller WCF und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle [!INCLUDE[wf1](../../../../includes/wf1-md.md)] WCF-und-Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows Process Activation Service (WAS), der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../../includes/lserver-md.md)], stellt IIS-ähnliche Funktionenbereit, die zuvor nur für HTTP-basierte Anwendungen zur Verfügung standen, die Nicht-HTTP-Protokolle verwenden. Windows Communication Foundation (WCF) verwendet die Listeneradapter-Schnittstelle, um aktivierungsanforderungen weiterzugeben, die über die von WCF, z. B. TCP, Named Pipes und MSMQ unterstützten nicht-HTTP-Protokolle empfangen werden. Die Funktionalität für den Empfang von Anforderungen über Nicht-HTTP-Protokolle wird von verwalteten Windows-Diensten gehostet, die in "SMSvcHost.exe" ausgeführt werden.  
+ Windows Process Activation Service (WAS), der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../../includes/lserver-md.md)], stellt IIS-ähnliche Funktionenbereit, die zuvor nur für HTTP-basierte Anwendungen zur Verfügung standen, die Nicht-HTTP-Protokolle verwenden. Windows Communication Foundation (WCF) verwendet die Listeneradapter-Schnittstelle zum Übermitteln von Aktivierungs Anforderungen, die über die von WCF unterstützten nicht-HTTP-Protokolle, wie z. b. TCP, Named Pipes und MSMQ, empfangen werden. Die Funktionalität für den Empfang von Anforderungen über Nicht-HTTP-Protokolle wird von verwalteten Windows-Diensten gehostet, die in "SMSvcHost.exe" ausgeführt werden.  
   
  Der Net.Msmq-Listeneradapterdienst (NetMsmqActivator) aktiviert in der Warteschlange befindliche Anwendungen auf der Grundlage von Nachrichten in der Warteschlange.  
   
@@ -85,7 +85,7 @@ public class OrderProcessorService : IOrderProcessor
  Der MSMQ-Warteschlangenname wird im appSettings-Abschnitt der Konfigurationsdatei angegeben. Der Endpunkt für den Dienst wird im Abschnitt "System.serviceModel" der Konfigurationsdatei definiert.  
   
 > [!NOTE]
->  Der Name der MSMQ-Warteschlange und die Endpunktadresse verwenden geringfügig abweichende Adressierungskonventionen. Im MSQM-Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die WCF-Endpunktadresse gibt ein net.msmq:-Schema verwendet "Localhost" für den lokalen Computer und Schrägstriche im Pfad. Um aus einer Warteschlange zu lesen, die auf einem Remotecomputer gehostet wird, ersetzen Sie "." und localhost durch den Namen des Remotecomputers.  
+> Der Name der MSMQ-Warteschlange und die Endpunktadresse verwenden geringfügig abweichende Adressierungskonventionen. Im MSQM-Warteschlangennamen wird ein Punkt (.) für den lokalen Computer verwendet, und in der Pfadangabe werden umgekehrte Schrägstriche als Trennzeichen verwendet. Die WCF-Endpunkt Adresse gibt ein net. MSMQ:-Schema an, verwendet "localhost" für den lokalen Computer und verwendet Schrägstriche im Pfad. Um aus einer Warteschlange zu lesen, die auf einem Remotecomputer gehostet wird, ersetzen Sie "." und localhost durch den Namen des Remotecomputers.  
   
  Um den Dienstcode in WAS zu hosten, wird eine SVC-Datei mit dem Namen der Klasse verwendet.  
   
@@ -215,19 +215,19 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Stellen Sie sicher, dass IIS 7.0 installiert ist, da dies zur WAS-Aktivierung erforderlich ist.  
+1. Stellen Sie sicher, dass IIS 7,0 installiert ist, da es für die was-Aktivierung erforderlich ist.  
   
-2. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Darüber hinaus müssen Sie die WCF-nicht-HTTP-Aktivierung-Komponenten installieren:  
+2. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben. Außerdem müssen Sie die WCF-nicht-http-Aktivierungs Komponenten installieren:  
   
     1. Wählen Sie im Menü **Start** die **Systemsteuerung** aus.  
   
-    2. Wählen Sie **Programme und Funktionen**.  
+    2. Wählen Sie **Programme und Funktionen**aus.  
   
-    3. Klicken Sie auf **Windows-Funktionen ein- oder ausschalten**.  
+    3. Klicken Sie **auf Windows-Funktionen ein-oder ausschalten**.  
   
-    4. Klicken Sie unter **Featureübersicht**, klicken Sie auf **Features hinzufügen**.  
+    4. KlickenSie unter featurezusammenfassung auf **Features hinzufügen**.  
   
-    5. Erweitern Sie die **Microsoft .NET Framework 3.0** Knoten und überprüfen Sie die **Windows Communication Foundation-nicht-HTTP-Aktivierung** Feature.  
+    5. Erweitern Sie den Knoten **Microsoft .NET Framework 3,0** , und überprüfen Sie die Funktion **Windows Communication Foundation nicht-HTTP-Aktivierung** .  
   
 3. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
@@ -235,15 +235,15 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 5. Der MSMQ-Aktivierungsdienst wird standardmäßig als Netzwerkdienst ausgeführt. Daher muss die Warteschlange, die zur Aktivierung der Anwendung verwendet wird, über Empfangs- und Einsehberechtigungen für den Netzwerkdienst verfügen. Diese können durch Verwendung von Message Queuing MMC hinzugefügt werden:  
   
-    1. Von der **starten** Menü klicken Sie auf **ausführen**, geben Sie dann `Compmgmt.msc` und drücken Sie EINGABETASTE.  
+    1. Klicken Sie im Startmenü auf **Ausführen**, geben `Compmgmt.msc` Sie ein, und drücken Sie dann die EINGABETASTE.  
   
-    2. Klicken Sie unter **Dienste und Anwendungen**, erweitern Sie **Message Queuing-** .  
+    2. Erweitern Sie unter **Dienste und Anwendungen** **Message Queuing**.  
   
-    3. Klicken Sie auf **Private Warteschlangen**.  
+    3. Klicken Sie auf **private Warteschlangen**.  
   
-    4. Mit der rechten Maustaste in der Warteschlange (servicemodelsamples/Service.svc), und wählen Sie **Eigenschaften**.  
+    4. Klicken Sie mit der rechten Maustaste auf die Warteschlange (Service Model Samples/Service. svc), und wählen Sie **Eigenschaften**aus.  
   
-    5. Auf der **Sicherheit** auf **hinzufügen** Peek gewähren, und erhalten Sie die Berechtigungen für Netzwerkdienst.  
+    5. Klicken Sie auf der Registerkarte **Sicherheit** auf **Hinzufügen** , und geben Sie dem Netzwerkdienst die Berechtigungen Peek und Receive.  
   
 6. Konfigurieren Sie den Windows Process Activation Service (WAS), um die MSMQ-Aktivierung zu unterstützen.  
   
@@ -270,11 +270,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  Dieser Befehl ist eine einzelne Textzeile.  
   
-         Dieser Befehl aktiviert die Anwendung/servicemodelsamples darauf zugegriffen werden kann `http://localhost/servicemodelsamples` und `net.msmq://localhost/servicemodelsamples`.
+         Dieser Befehl ermöglicht den Zugriff auf die Anwendung/ServiceModelSamples-Anwendung `http://localhost/servicemodelsamples` mithilfe `net.msmq://localhost/servicemodelsamples`von und.
   
-7. Falls noch nicht geschehen, stellen Sie sicher, dass der MSMQ-Aktivierungsdienst aktiviert ist. Von der **starten** Menü klicken Sie auf **ausführen**, und geben `Services.msc`. Durchsuchen Sie die Liste der Dienste für die **Net.Msmq-Listeneradapter**. Mit der rechten Maustaste, und wählen Sie **Eigenschaften**. Legen Sie die **Starttyp** zu **automatische**, klicken Sie auf **übernehmen** , und klicken Sie auf die **starten** Schaltfläche. Dieser Schritt muss nur einmal vor der ersten Verwendung des Net.Msmq-Listeneradapterdiensts durchgeführt werden.  
+7. Falls noch nicht geschehen, stellen Sie sicher, dass der MSMQ-Aktivierungsdienst aktiviert ist. Klicken Sie im Startmenü auf **Ausführen**, und geben `Services.msc`Sie ein. Durchsuchen Sie die Liste der Dienste für den **net. MSMQ-Listeneradapter**. Klicken Sie mit der rechten Maustaste, und wählen Sie **Eigenschaften**. Legen Sie den **Starttyp** auf **automatisch**fest, klicken Sie auf übernehmen und **dann** auf **Start** . Dieser Schritt muss nur einmal vor der ersten Verwendung des Net.Msmq-Listeneradapterdiensts durchgeführt werden.  
   
-8. Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Ändern Sie zusätzlich den Code auf dem Client, der die Bestellung einsendet, sodass beim Einsenden der Bestellung der Computername im URI der Warteschlange angegeben wird. Verwenden Sie folgenden Code:  
+8. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md). Ändern Sie zusätzlich den Code auf dem Client, der die Bestellung einsendet, sodass beim Einsenden der Bestellung der Computername im URI der Warteschlange angegeben wird. Verwenden Sie folgenden Code:  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -305,7 +305,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     >  Durch die Ausführung der Batchdatei wird der DefaultAppPool zurückgesetzt und mit .NET Framework, Version 2.0, ausgeführt.  
   
- Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit aktiviert. Der Typ der Transportsicherheit wird durch zwei Eigenschaften festgelegt: `MsmqAuthenticationMode` und `MsmqProtectionLevel`. Standardmäßig wird der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es ein Teil einer Domäne sein. Wenn Sie in diesem Beispiel auf einem Computer, die nicht Teil einer Domäne ist ausführen, wird der folgende Fehler empfangen: "Des Benutzers interne Message Queuing-Zertifikat ist nicht vorhanden".  
+ Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit aktiviert. Der Typ der Transportsicherheit wird durch zwei Eigenschaften festgelegt: `MsmqAuthenticationMode` und `MsmqProtectionLevel`. Standardmäßig wird der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es ein Teil einer Domäne sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der nicht Teil einer Domäne ist, wird folgender Fehler angezeigt: Das interne Message queuingzertifikat des Benutzers ist nicht vorhanden.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>So führen Sie das Beispiel auf einem Computer aus, der zu einer Arbeitsgruppe gehört  
   
@@ -332,7 +332,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     1. Führen Sie "Inetmgr.exe" aus.  
   
-    2. Klicken Sie unter **Anwendungspools**, mit der rechten Maustaste die **AppPool** (in der Regel **DefaultAppPool**), und wählen Sie **Anwendungspoolstandardwerte festlegen...** .  
+    2. Klicken Sie unter **Anwendungs Pools**mit der rechten Maustaste auf den **AppPool** (normalerweise **DefaultAppPool**), und wählen Sie **Anwendungs Pool Standardwerte festlegen**... aus.  
   
     3. Ändern Sie die Identitätseigenschaften, um das bestimmte Benutzerkonto zu verwenden.  
   
@@ -340,9 +340,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     1. Führen Sie "Services.msc" aus.  
   
-    2. Mit der rechten Maustaste die **Net.MsmqListener-Adapter**, und wählen Sie **Eigenschaften**.  
+    2. Klicken Sie mit der rechten Maustaste auf **net. MsmqListener**, und wählen Sie **Eigenschaften**aus.  
   
-4. Ändern Sie das Konto in der **Anmeldung** Registerkarte.  
+4. Ändern Sie das Konto auf der Registerkarte **Anmeldung** .  
   
 5. In der Arbeitsgruppe muss der Dienst auch mit einem uneingeschränkten Token ausgeführt werden. Führen Sie hierzu in einem Befehlsfenster Folgendes aus:  
   
@@ -352,4 +352,4 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ## <a name="see-also"></a>Siehe auch
 
-- [AppFabric-Hosting- und-persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric-Hosting-und persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkId=193961)

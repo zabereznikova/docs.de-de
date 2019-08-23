@@ -2,14 +2,14 @@
 title: <transport> von <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dbc55db25c0c49d72ec2cd8dd1041a3f8705d8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788283"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940635"
 ---
-# <a name="transport-of-peertransport"></a>\<Transport > von \<PeerTransport >
+# <a name="transport-of-peertransport"></a>\<Transport > von \<"Peer Transport" >
 Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet werden, die mit dieser Bindung konfiguriert sind.  
   
  \<system.serviceModel>  
@@ -35,7 +35,7 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|credentialType|Dies ist optional. Gibt den Typ von Anmeldeinformationen an, die zum Überprüfen von über den Peertransport gesendeten Nachrichten verwendet werden. Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|Optional. Gibt den Typ von Anmeldeinformationen an, die zum Überprüfen von über den Peertransport gesendeten Nachrichten verwendet werden. Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
 ## <a name="credentialtype-attribute"></a>credentialType-Attribut  
   
@@ -45,16 +45,16 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 |Kennwort|Zur Authentifizierung des Peerkanaltransports ist ein korrektes Kennwort erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ None  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Definiert die Sicherheitseinstellungen für einen Peertransport.|  
+|[\<security>](security-of-peertransport.md)|Definiert die Sicherheitseinstellungen für einen Peertransport.|  
   
 ## <a name="remarks"></a>Hinweise  
- Dieses Element wird nur festgelegt, wenn das Mode-Attribut des [ \<Sicherheit >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) nastaven NA hodnotu `Transport` oder `TransportWithMessageCredential`.  
+ Dieses Element wird nur festgelegt, wenn das Mode-Attribut von [ \<Security >](security-of-peertransport.md) auf `TransportWithMessageCredential` `Transport` oder festgelegt ist.  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -62,10 +62,10 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Transportsicherheit](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
-- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Transportsicherheit](../../../wcf/feature-details/transport-security.md)
+- [Transportprotokolle](../../../wcf/feature-details/transports.md)
+- [Auswählen eines Transports](../../../wcf/feature-details/choosing-a-transport.md)
+- [Bindungen](../../../wcf/bindings.md)
+- [Erweitern von Bindungen](../../../wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

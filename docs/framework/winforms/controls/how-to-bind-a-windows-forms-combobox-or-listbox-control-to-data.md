@@ -15,25 +15,25 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f361526c44f8fbb9ab282fe15ae109b67e8f01dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054015"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922751"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Vorgehensweise: Binden eines ComboBox-Steuerelements oder ListBox-Steuerelements in Windows Forms an Daten
-Sie binden die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.ListBox> auf Daten für Aufgaben wie das Durchsuchen von Daten in einer Datenbank eingeben neuer Daten, oder Bearbeiten vorhandener Daten.  
+Sie können und <xref:System.Windows.Forms.ListBox> an <xref:System.Windows.Forms.ComboBox> Daten binden, um Aufgaben wie das Durchsuchen von Daten in einer Datenbank, das Eingeben neuer Daten oder das Bearbeiten vorhandener Daten auszuführen.  
   
-### <a name="to-bind-a-combobox-or-listbox-control"></a>Zum Binden eines ComboBox-Steuerelements oder ListBox-Steuerelements  
+### <a name="to-bind-a-combobox-or-listbox-control"></a>So binden Sie ein ComboBox-oder ListBox-Steuerelement  
   
-1. Legen Sie die `DataSource` Eigenschaft, um ein Datenquellenobjekt. Mögliche Datenquellen umfassen eine <xref:System.Windows.Forms.BindingSource> an Daten, einer Datentabelle, eine Data source View, ein Dataset gebunden ist, eine Datenansicht Manager, ein Array oder eine beliebige Klasse, die implementiert die <xref:System.Collections.IList> Schnittstelle. Weitere Informationen finden Sie unter [von Windows Forms unterstützte Datenquellen](../data-sources-supported-by-windows-forms.md).  
+1. Legen Sie `DataSource` die-Eigenschaft auf ein Datenquellen Objekt fest. Mögliche Datenquellen sind eine <xref:System.Windows.Forms.BindingSource> gebundene Datenquelle, eine Datentabelle, eine Datenansicht, ein DataSet, ein Datenansichts-Manager, ein Array oder eine beliebige Klasse, <xref:System.Collections.IList> die die Schnittstelle implementiert. Weitere Informationen finden Sie [unter von Windows Forms unterstützte Datenquellen](../data-sources-supported-by-windows-forms.md).  
   
-2. Wenn Sie in eine Tabelle binden, legen Sie die `DisplayMember` -Eigenschaft auf den Namen einer Spalte in der Datenquelle.  
+2. Wenn Sie an eine Tabelle binden, legen Sie die `DisplayMember` -Eigenschaft auf den Namen einer Spalte in der Datenquelle fest.  
   
      \- oder –  
   
-     Wenn Sie eine Bindung eine <xref:System.Collections.IList>, legen Sie eine öffentliche Eigenschaft des Typs in der Liste der Anzeigemember.  
+     Wenn Sie an eine <xref:System.Collections.IList>binden, legen Sie den Anzeigemember auf eine öffentliche Eigenschaft des Typs in der Liste fest.  
   
     ```vb  
     Private Sub BindComboBox()  
@@ -51,7 +51,7 @@ Sie binden die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.For
     ```  
   
     > [!NOTE]
-    >  Wenn Sie eine Datenquelle gebunden sind, die nicht implementiert die <xref:System.ComponentModel.IBindingList> Schnittstelle, z. B. eine <xref:System.Collections.ArrayList>, Daten für das gebundene Steuerelement werden nicht aktualisiert werden, wenn die Datenquelle aktualisiert wird. Z. B. Wenn Sie über ein Kombinationsfeld gebunden ein <xref:System.Collections.ArrayList> und Daten werden hinzugefügt, um die <xref:System.Collections.ArrayList>, diese neue Elemente werden nicht im Kombinationsfeld angezeigt. Sie können jedoch erzwingen, dass im Kombinationsfeld aktualisiert werden, durch den Aufruf der <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> und <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> Methoden für die Instanz der <xref:System.Windows.Forms.BindingContext> Klasse an die das Steuerelement gebunden ist.  
+    > Wenn Sie an eine Datenquelle gebunden sind, die die <xref:System.ComponentModel.IBindingList> -Schnittstelle nicht implementiert (z <xref:System.Collections.ArrayList>. b.), werden die Daten des gebundenen Steuer Elements nicht aktualisiert, wenn die Datenquelle aktualisiert wird. Wenn Sie z. b. ein Kombinations Feld an ein <xref:System.Collections.ArrayList> -Element gebunden haben und Daten <xref:System.Collections.ArrayList>zu hinzugefügt werden, werden diese neuen Elemente nicht im Kombinations Feld angezeigt. Sie können jedoch erzwingen, dass das Kombinations Feld aktualisiert wird, indem Sie <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> die <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> -Methode und die-Methode <xref:System.Windows.Forms.BindingContext> für die Instanz der-Klasse aufrufen, an die das Steuerelement gebunden ist.  
   
 ## <a name="see-also"></a>Siehe auch
 

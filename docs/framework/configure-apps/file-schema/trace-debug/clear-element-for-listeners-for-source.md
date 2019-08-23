@@ -1,5 +1,5 @@
 ---
-title: <clear> -Element für <listeners> für <source>
+title: <clear>-Element <listeners> für für<source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d51a74b4c31d1250d2f5d6517f760f886e0a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673784"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920556"
 ---
-# <a name="clear-element-for-listeners-for-source"></a>\<clear >-Element für \<Listener > für \<Quelle >
+# <a name="clear-element-for-listeners-for-source"></a>\<> Element für \<Listener > für \<Quell > Löschen
 Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.  
   
  \<configuration>  
 \<system.diagnostics>  
 \<Quellen >  
-\<Quelle >  
-\<listeners>  
+\<Quell >  
+\<Listener >  
 \<clear>  
   
 ## <a name="syntax"></a>Syntax  
@@ -47,16 +47,16 @@ Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.
 |`system.diagnostics`|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
 |`sources`|Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.|  
 |`source`|Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.|  
-|`listeners`|Gibt die Listener, die sammeln, speichern und Weiterleiten von Nachrichten an.|  
+|`listeners`|Gibt Listener an, die Nachrichten erfassen, speichern und weiterleiten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `<clear>` -Element entfernt alle Listener aus der `Listeners` Sammlung für eine Ablaufverfolgungsquelle, einschließlich der <xref:System.Diagnostics.DefaultTraceListener>. Können Sie die `<clear>` Element vor der Verwendung der `<add>` Element, stellen Sie sicher, dass keine anderen aktiven Listener in der Auflistung vorhanden sind.  
+ Das `<clear>` -Element entfernt alle Listener aus `Listeners` der-Auflistung für eine Ablauf Verfolgungs Quelle <xref:System.Diagnostics.DefaultTraceListener>, einschließlich der. Sie können das `<clear>` -Element verwenden, bevor `<add>` Sie das-Element verwenden, um sicher zu sein, dass keine anderen aktiven Listener in der Auflistung vorhanden sind.  
   
 ## <a name="configuration-file"></a>Konfigurationsdatei  
- Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
+ Dieses Element kann in der Computer Konfigurationsdatei (Machine. config) und in der Anwendungs Konfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit der `<clear>` Element vor der Verwendung der `<add>` Elemente, die Listener hinzugefügt werden `console` und `textListener` auf die `Listeners` Auflistung für die Ablaufverfolgungsquelle `TraceSourceApp`.  
+ Im folgenden Beispiel wird gezeigt, wie das `<clear>` `console` -Element verwendet wird `<add>` , bevor die-Elemente zum `textListener` hinzufügen `Listeners` der Listener und der- `TraceSourceApp`Auflistung für die Ablauf Verfolgungs Quelle verwendet werden.  
   
 ```xml  
 <configuration>  
@@ -88,5 +88,5 @@ Löscht die `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](index.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../debug-trace-profile/trace-listeners.md)

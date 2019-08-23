@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039710"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912614"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms
 Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberfläche des Formulars entworfen, um eine Benutzeroberfläche (UI) zu definieren. Ein- *Steuer* Element ist eine Komponente auf einem Formular, mit dem Informationen angezeigt oder Benutzereingaben akzeptiert werden. Weitere Informationen zu-Steuerelementen finden Sie unter Windows Forms-Steuer [Elemente](index.md).
@@ -30,7 +30,7 @@ Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberf
      Das-Steuerelement wird dem Formular mit der angegebenen Position und Größe hinzugefügt.
 
     > [!NOTE]
-    >  Für jedes Steuerelement ist eine Standardgröße definiert. Sie können dem Formular ein Steuerelement in der Standardgröße des Steuer Elements hinzufügen, indem Sie es aus der **Toolbox** in das Formular ziehen.
+    > Für jedes Steuerelement ist eine Standardgröße definiert. Sie können dem Formular ein Steuerelement in der Standardgröße des Steuer Elements hinzufügen, indem Sie es aus der **Toolbox** in das Formular ziehen.
 
 ## <a name="to-drag-a-control-to-a-form"></a>So ziehen Sie ein Steuerelement in ein Formular
 
@@ -41,12 +41,12 @@ Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberf
      Das-Steuerelement wird dem Formular an der angegebenen Position in seiner Standardgröße hinzugefügt.
 
     > [!NOTE]
-    >  Sie können auf ein Steuerelement in der **Toolbox** doppelklicken, um es der oberen linken Ecke des Formulars in seiner Standardgröße hinzuzufügen.
+    > Sie können auf ein Steuerelement in der **Toolbox** doppelklicken, um es der oberen linken Ecke des Formulars in seiner Standardgröße hinzuzufügen.
 
      Sie können einem Formular auch zur Laufzeit dynamisch Steuerelemente hinzufügen. Im folgenden Codebeispiel wird dem Formular <xref:System.Windows.Forms.TextBox> ein-Steuerelement hinzugefügt, wenn auf <xref:System.Windows.Forms.Button> ein-Steuerelement geklickt wird.
 
     > [!NOTE]
-    >  Für das folgende Verfahren ist es erforderlich, dass ein Formular mit einem Schalt `Button1`Flächen-Steuerelement vorhanden ist, das bereits darauf platziert ist.
+    > Für das folgende Verfahren ist es erforderlich, dass ein Formular mit einem Schalt `Button1`Flächen-Steuerelement vorhanden ist, das bereits darauf platziert ist.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>So fügen Sie einem Formular ein Steuerelement Programm gesteuert hinzu
 
@@ -81,7 +81,7 @@ Die meisten Formulare werden durch das Hinzufügen von Steuerelementen zur Oberf
     ```
 
     > [!NOTE]
-    >  Sie können auch Code hinzufügen, um andere Eigenschaften des Steuer Elements zu initialisieren.
+    > Sie können auch Code hinzufügen, um andere Eigenschaften des Steuer Elements zu initialisieren.
 
     > [!IMPORTANT]
     >  Sie können den lokalen Computer mit einem Sicherheitsrisiko über das Netzwerk verfügbar machen, indem Sie auf `UserControl`eine böswillige verweisen. Dies wäre nur ein Problem, wenn eine böswillige Person ein schädliches benutzerdefiniertes Steuerelement erstellt, gefolgt von dem, das Sie versehentlich dem Projekt hinzufügen.
