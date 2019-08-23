@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3651a4be94fa624d0dd6ab64b8c3f8169945de0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81653c69353b60d7287240505f53b26552c21774
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987622"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960989"
 ---
-# <a name="icordebugprocessenum-interface"></a><span data-ttu-id="acba1-102">ICorDebugProcessEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="acba1-102">ICorDebugProcessEnum Interface</span></span>
-<span data-ttu-id="acba1-103">ICorDebugEnum-Methoden implementiert, und listet ICorDebugProcess-Arrays.</span><span class="sxs-lookup"><span data-stu-id="acba1-103">Implements ICorDebugEnum methods and enumerates ICorDebugProcess arrays.</span></span>  
+# <a name="icordebugprocessenum-interface"></a><span data-ttu-id="d9117-102">ICorDebugProcessEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d9117-102">ICorDebugProcessEnum Interface</span></span>
+<span data-ttu-id="d9117-103">Implementiert ICorDebugEnum-Methoden und listet ICorDebugProcess-Arrays auf.</span><span class="sxs-lookup"><span data-stu-id="d9117-103">Implements ICorDebugEnum methods and enumerates ICorDebugProcess arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="acba1-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="acba1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="d9117-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="d9117-104">Methods</span></span>  
   
-|<span data-ttu-id="acba1-105">Methode</span><span class="sxs-lookup"><span data-stu-id="acba1-105">Method</span></span>|<span data-ttu-id="acba1-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="acba1-106">Description</span></span>|  
+|<span data-ttu-id="d9117-105">Methode</span><span class="sxs-lookup"><span data-stu-id="d9117-105">Method</span></span>|<span data-ttu-id="d9117-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d9117-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="acba1-107">Next-Methode</span><span class="sxs-lookup"><span data-stu-id="acba1-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|<span data-ttu-id="acba1-108">Ruft die angegebene Anzahl von `ICorDebugProcess` Instanzen aus der Enumeration, die an der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="acba1-108">Gets the specified number of `ICorDebugProcess` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="d9117-107">Next-Methode</span><span class="sxs-lookup"><span data-stu-id="d9117-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|<span data-ttu-id="d9117-108">Ruft die angegebene Anzahl von `ICorDebugProcess` -Instanzen ab der aktuellen Position aus der-Enumeration ab.</span><span class="sxs-lookup"><span data-stu-id="d9117-108">Gets the specified number of `ICorDebugProcess` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="acba1-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="acba1-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9117-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d9117-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="acba1-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="acba1-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="d9117-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="d9117-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="acba1-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="acba1-111">Requirements</span></span>  
- <span data-ttu-id="acba1-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="acba1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9117-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d9117-111">Requirements</span></span>  
+ <span data-ttu-id="d9117-112">**Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9117-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="acba1-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="acba1-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d9117-113">**Header:** Cordebug. idl, Cordebug. h</span><span class="sxs-lookup"><span data-stu-id="d9117-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="acba1-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="acba1-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d9117-114">**Fern** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9117-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="acba1-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="acba1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d9117-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9117-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="acba1-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="acba1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d9117-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d9117-116">See also</span></span>
 
-- [<span data-ttu-id="acba1-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="acba1-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d9117-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d9117-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
