@@ -7,8 +7,6 @@
       href: expressions.md
     - name: Ausdruckskörpermember
       href: expression-bodied-members.md
-    - name: Operatoren
-      href: operators.md
     - name: Anonyme Funktionen
       items:
         - name: Übersicht

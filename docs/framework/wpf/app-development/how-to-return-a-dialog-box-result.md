@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - dialog boxes [WPF], returning results
 ms.assetid: 4c5cf286-746b-4052-934d-d80cbf8acba3
-ms.openlocfilehash: b574a5bbc08d947371837116915c2fc8c13ec81d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e3670006762bcd09634b29314ecf2d05b1a44da
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006707"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968233"
 ---
-# <a name="how-to-return-a-dialog-box-result"></a><span data-ttu-id="255c7-102">Vorgehensweise: Zurückgeben eines Dialogfeldergebnisses</span><span class="sxs-lookup"><span data-stu-id="255c7-102">How to: Return a Dialog Box Result</span></span>
-<span data-ttu-id="255c7-103">Dieses Beispiel zeigt, wie Sie das Dialogergebnis für ein Fenster abrufen, die durch den Aufruf geöffnet wird <xref:System.Windows.Window.ShowDialog%2A>.</span><span class="sxs-lookup"><span data-stu-id="255c7-103">This example shows how to retrieve the dialog result for a window that is opened by calling <xref:System.Windows.Window.ShowDialog%2A>.</span></span>  
+# <a name="how-to-return-a-dialog-box-result"></a><span data-ttu-id="39fb8-102">Vorgehensweise: Zurückgeben eines Dialogfeldergebnisses</span><span class="sxs-lookup"><span data-stu-id="39fb8-102">How to: Return a Dialog Box Result</span></span>
+<span data-ttu-id="39fb8-103">Dieses Beispiel zeigt, wie das Dialogfeld Ergebnis für ein Fenster abgerufen wird, das durch <xref:System.Windows.Window.ShowDialog%2A>Aufrufen von geöffnet wird.</span><span class="sxs-lookup"><span data-stu-id="39fb8-103">This example shows how to retrieve the dialog result for a window that is opened by calling <xref:System.Windows.Window.ShowDialog%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="255c7-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="255c7-104">Example</span></span>  
- <span data-ttu-id="255c7-105">Bevor Sie ein Dialogfeld wird geschlossen, und seine <xref:System.Windows.Window.DialogResult%2A> legen Sie mit einer <xref:System.Nullable%601> <xref:System.Boolean> , der angibt, wie der Benutzer das Dialogfeld geschlossen.</span><span class="sxs-lookup"><span data-stu-id="255c7-105">Before a dialog box closes, its <xref:System.Windows.Window.DialogResult%2A> property should be set with a <xref:System.Nullable%601><xref:System.Boolean> that indicates how the user closed the dialog box.</span></span> <span data-ttu-id="255c7-106">Dieser Wert wird zurückgegeben, indem <xref:System.Windows.Window.ShowDialog%2A> damit Clientcode, um zu bestimmen, wie Sie das Dialogfeld geschlossen wurde und folglich wie das Ergebnis verarbeitet.</span><span class="sxs-lookup"><span data-stu-id="255c7-106">This value is returned by <xref:System.Windows.Window.ShowDialog%2A> to allow client code to determine how the dialog box was closed and, consequently, how to process the result.</span></span>  
+## <a name="example"></a><span data-ttu-id="39fb8-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="39fb8-104">Example</span></span>  
+ <span data-ttu-id="39fb8-105">Bevor ein Dialogfeld geschlossen wird, <xref:System.Windows.Window.DialogResult%2A> sollte seine-Eigenschaft mit einem <xref:System.Nullable%601> <xref:System.Boolean> festgelegt werden, das angibt, wie der Benutzer das Dialogfeld geschlossen hat.</span><span class="sxs-lookup"><span data-stu-id="39fb8-105">Before a dialog box closes, its <xref:System.Windows.Window.DialogResult%2A> property should be set with a <xref:System.Nullable%601><xref:System.Boolean> that indicates how the user closed the dialog box.</span></span> <span data-ttu-id="39fb8-106">Dieser Wert wird von <xref:System.Windows.Window.ShowDialog%2A> zurückgegeben, damit Client Code bestimmen kann, wie das Dialogfeld geschlossen wurde, und damit das Ergebnis verarbeitet wird.</span><span class="sxs-lookup"><span data-stu-id="39fb8-106">This value is returned by <xref:System.Windows.Window.ShowDialog%2A> to allow client code to determine how the dialog box was closed and, consequently, how to process the result.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="255c7-107"><xref:System.Windows.Window.DialogResult%2A> kann nur festgelegt werden, wenn ein Fenster, durch den Aufruf geöffnet wurde <xref:System.Windows.Window.ShowDialog%2A>.</span><span class="sxs-lookup"><span data-stu-id="255c7-107"><xref:System.Windows.Window.DialogResult%2A> can only be set if a window was opened by calling <xref:System.Windows.Window.ShowDialog%2A>.</span></span>  
+> <span data-ttu-id="39fb8-107"><xref:System.Windows.Window.DialogResult%2A>kann nur festgelegt werden, wenn ein Fenster durch Aufrufen <xref:System.Windows.Window.ShowDialog%2A>von geöffnet wurde.</span><span class="sxs-lookup"><span data-stu-id="39fb8-107"><xref:System.Windows.Window.DialogResult%2A> can only be set if a window was opened by calling <xref:System.Windows.Window.ShowDialog%2A>.</span></span>  
   
  [!code-csharp[HOWTOWindowManagementSnippets#GetDialogResultCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#getdialogresultcode)]
  [!code-vb[HOWTOWindowManagementSnippets#GetDialogResultCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#getdialogresultcode)]  
   
-## <a name="net-framework-security"></a><span data-ttu-id="255c7-108">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="255c7-108">.NET Framework Security</span></span>  
- <span data-ttu-id="255c7-109">Aufrufen von <xref:System.Windows.Window.ShowDialog%2A> erfordert die Berechtigung, die alle Fenster und Benutzereingabeereignisse uneingeschränkt verwenden.</span><span class="sxs-lookup"><span data-stu-id="255c7-109">Calling <xref:System.Windows.Window.ShowDialog%2A> requires permission to use all windows and user input events without restriction.</span></span>
+## <a name="net-framework-security"></a><span data-ttu-id="39fb8-108">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="39fb8-108">.NET Framework Security</span></span>  
+ <span data-ttu-id="39fb8-109">Der <xref:System.Windows.Window.ShowDialog%2A> Aufruf von erfordert die Berechtigung, alle Windows-und Benutzereingabe Ereignisse ohne Einschränkung zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="39fb8-109">Calling <xref:System.Windows.Window.ShowDialog%2A> requires permission to use all windows and user input events without restriction.</span></span>
