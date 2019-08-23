@@ -1,15 +1,15 @@
 ---
-title: Erstellen das Office Open XML-Quelldokument (Visual Basic)
+title: Erstellen des Office Open-Quell-XML-Dokuments (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923421"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965255"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Erstellen das Office Open XML-Quelldokument (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Erstellen des Office Open-Quell-XML-Dokuments (Visual Basic)
 In diesem Thema wird das Erstellen des Office Open XML-WordprocessingML-Dokuments erläutert, das in den anderen Beispielen in diesem Lernprogramm verwendet wird. Wenn Sie diese Anweisungen befolgen, entspricht Ihre Ausgabe der Ausgabe im jeweiligen Beispiel.  
   
  Die Beispiele in diesem Lernprogramm funktionieren mit jedem gültigen WordprocessingML-Dokument.  
@@ -44,14 +44,14 @@ In diesem Thema wird das Erstellen des Office Open XML-WordprocessingML-Dokument
   
 3. Formatieren Sie die erste Zeile mit der Formatvorlage "Überschrift 1".  
   
-4. Wählen Sie die Zeilen, die Visual Basic-Code enthalten. Die erste Zeile beginnt mit dem `Imports`-Schlüsselwort. Die letzte Zeile ist "End Class". Formatieren Sie die Zeilen mit der Schriftart Courier. Formatieren Sie sie anschließend mit einer neuen Formatvorlage, und geben Sie der neuen Formatvorlage den Namen "Code".  
+4. Wählen Sie die Zeilen aus, die den Visual Basic Code enthalten. Die erste Zeile beginnt mit dem `Imports`-Schlüsselwort. Die letzte Zeile ist "End Class". Formatieren Sie die Zeilen mit der Schriftart Courier. Formatieren Sie sie anschließend mit einer neuen Formatvorlage, und geben Sie der neuen Formatvorlage den Namen "Code".  
   
 5. Wählen Sie zum Schluss die gesamte Zeile aus, die die Ausgabe enthält, und formatieren Sie sie mit der `Code`-Formatvorlage.  
   
 6. Speichern Sie das Dokument, und nennen Sie es <legacyBold>SampleDoc.docx</legacyBold>.  
   
     > [!NOTE]
-    >  Wenn Sie Microsoft Word 2003 verwenden, wählen Sie in der Dropdownliste **Dateityp** die Option **Word 2007-Dokument**.  
+    > Wenn Sie Microsoft Word 2003 verwenden, wählen Sie in der Dropdownliste **Dateityp** die Option **Word 2007-Dokument**.  
   
 ## <a name="see-also"></a>Siehe auch
 

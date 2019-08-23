@@ -15,41 +15,41 @@ helpviewer_keywords:
 - Terminate event [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 07018828-2d49-4cf5-a44b-19fb15d9efea
-ms.openlocfilehash: 3129824f6e4047420c422503cc366a1c8d28b7e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 679f4fd55f142c2c4bb63a556feb95c074960b12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61865292"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914734"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a>Exemplarische Vorgehensweise: Definieren von Klassen (Visual Basic)
 
-Diese exemplarische Vorgehensweise veranschaulicht, wie Sie Klassen definieren, die Sie zum Erstellen von Objekten verwenden können. Außerdem erfahren Sie, wie die neue Klasse Eigenschaften und Methoden hinzugefügt, und zeigt, wie ein Objekt zu initialisieren.  
+In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Klassen definiert werden, die Sie dann zum Erstellen von-Objekten verwenden können. Außerdem wird gezeigt, wie Sie der neuen Klasse Eigenschaften und Methoden hinzufügen und wie ein Objekt initialisiert wird.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="to-define-a-class"></a>So definieren Sie eine Klasse
   
-1. Erstellen Sie ein Projekt, indem Sie auf **neues Projekt** auf die **Datei** Menü. Das Dialogfeld **Neues Projekt** wird angezeigt.  
+1. Erstellen Sie ein Projekt, indem Sie im Menü **Datei** auf **Neues Projekt** klicken. Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-2. Wählen Sie Windows-Anwendung, aus der Liste der Visual Basic-Projektvorlagen, die das neue Projekt anzuzeigen.  
+2. Wählen Sie in der Liste der Visual Basic Projektvorlagen die Option Windows-Anwendung aus, um das neue Projekt anzuzeigen.  
   
-3. Fügen Sie eine neue Klasse für das Projekt, indem Sie auf **Klasse hinzufügen** auf die **Projekt** Menü. Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.  
+3. Fügen Sie dem Projekt eine neue Klasse hinzu, indem Sie im Menü **Projekt** auf **Klasse hinzufügen** klicken. Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.  
   
-4. Wählen Sie die **Klasse** Vorlage.  
+4. Wählen Sie die **Klassen** Vorlage aus.  
   
-5. Nennen Sie die neue Klasse `UserNameInfo.vb`, und klicken Sie dann auf **hinzufügen** um den Code für die neue Klasse anzuzeigen.  
+5. Benennen Sie die neue `UserNameInfo.vb`Klasse, und klicken Sie dann auf **Hinzufügen** , um den Code für die neue Klasse anzuzeigen.  
   
      [!code-vb[VbVbalrOOP#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#5)]
   
     > [!NOTE]
-    >  Können Sie die Visual Basic **Code-Editor** Startformulars eine Klasse hinzu, durch Eingabe der `Class` Schlüsselwort, gefolgt vom Namen der neuen Klasse. Die **Code-Editor** bietet ein entsprechendes `End Class` -Anweisung für Sie.  
+    > Sie können den Visual Basic **Code-Editor** verwenden, um dem Start Formular eine Klasse hinzuzufügen, `Class` indem Sie das Schlüsselwort gefolgt vom Namen der neuen Klasse eingeben. Der **Code-Editor** stellt eine `End Class` entsprechende-Anweisung für Sie bereit.  
   
-6. Definieren Sie ein privates Feld für die Klasse, indem Sie den folgenden Code zwischen Hinzufügen der `Class` und `End Class` Anweisungen:  
+6. Definieren Sie ein privates Feld für die-Klasse, indem Sie den folgenden `Class` Code `End Class` zwischen den-und-Anweisungen hinzufügen:  
   
      [!code-vb[VbVbalrOOP#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#7)]
   
-     Deklarieren das Feld als `Private` bedeutet, sie kann nur innerhalb der Klasse verwendet werden. Können Sie Felder verfügbar machen von außerhalb einer Klasse mit Zugriffsmodifizierern wie z. B. `Public` , umfassenderen Zugriff bereitstellen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Das Deklarieren des `Private` Felds bedeutet, dass es nur innerhalb der Klasse verwendet werden kann. Sie können Felder außerhalb einer Klasse verfügbar machen `Public` , indem Sie Zugriffsmodifizierer wie verwenden, die mehr Zugriff bereitstellen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 7. Definieren Sie eine Eigenschaft für die Klasse, indem Sie den folgenden Code hinzufügen:  
   
@@ -59,25 +59,25 @@ Diese exemplarische Vorgehensweise veranschaulicht, wie Sie Klassen definieren, 
   
      [!code-vb[VbVbalrOOP#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#9)]
   
-9. Definieren Sie einen parametrisierten Konstruktor für die neue Klasse, durch das Hinzufügen einer Prozedur, die mit dem Namen `Sub New`:  
+9. Definieren Sie einen parametrisierten Konstruktor für die neue Klasse, indem Sie eine `Sub New`Prozedur mit dem Namen hinzufügen:  
   
      [!code-vb[VbVbalrOOP#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#10)]
   
-     Die `Sub New` Konstruktor wird automatisch aufgerufen, wenn ein Objekt auf Grundlage dieser Klasse erstellt wird. Dieser Konstruktor legt den Wert des Felds, das den Benutzernamen enthält.  
+     Der `Sub New` Konstruktor wird automatisch aufgerufen, wenn ein Objekt erstellt wird, das auf dieser Klasse basiert. Dieser Konstruktor legt den Wert des Felds fest, das den Benutzernamen enthält.  
   
-## <a name="to-create-a-button-to-test-the-class"></a>Zum Erstellen einer Schaltfläche, um die Klasse zu testen.
+## <a name="to-create-a-button-to-test-the-class"></a>So erstellen Sie eine Schaltfläche zum Testen der Klasse
   
-1. Ändern des Startformulars in den Entwurfsmodus durch Rechtsklick auf seinen Namen im **Projektmappen-Explorer** , und klicken Sie dann auf **Ansicht-Designer**. Standardmäßig heißt das Startformular für Windows-Anwendungsprojekte "Form1.vb". Das Hauptformular wird angezeigt.  
+1. Ändern Sie das Start Formular in den Entwurfs Modus, indem Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf den Namen klicken und dann **auf Designer anzeigen**klicken. Standardmäßig hat das Start Formular für Windows-Anwendungsprojekte den Namen Form1. vb. Das Hauptformular wird dann angezeigt.  
   
-2. Das Hauptformular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um den Code für die Anzeige der `Button1_Click` -Ereignishandler. Fügen Sie den folgenden Code zum Aufrufen der Testprozedur hinzu:  
+2. Fügen Sie dem Hauptformular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um den `Button1_Click` Code für den Ereignishandler anzuzeigen. Fügen Sie den folgenden Code hinzu, um die Testprozedur aufzurufen:  
   
      [!code-vb[VbVbalrOOP#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#12)]
   
 ## <a name="to-run-your-application"></a>So führen Sie Ihre Anwendung aus
   
-1. Führen Sie Ihre Anwendung durch Drücken von F5. Klicken Sie auf die Schaltfläche im Formular die Testprozedur aufrufen. Es wird die Meldung besagt, dass die ursprüngliche `UserName` "MOORE, BOBBY", ist, da die Prozedur aufgerufen der `Capitalize` -Methode des Objekts.  
+1. Führen Sie die Anwendung aus, indem Sie F5 drücken. Klicken Sie auf die Schaltfläche im Formular, um die Testprozedur aufzurufen. Es wird eine Meldung angezeigt, die besagt `UserName` , dass das Original "Moore, Bobby" ist, weil `Capitalize` die Prozedur die-Methode des-Objekts aufgerufen hat.  
   
-2. Klicken Sie auf **OK**, um das Meldungsfeld zu schließen. Die `Button1 Click` Prozedur ändert den Wert für die `UserName` Eigenschaft und zeigt einer Meldung, die besagt, dass den neuen Wert des `UserName` "Worden, Joe" ist.  
+2. Klicken Sie auf **OK**, um das Meldungsfeld zu schließen. Die `Button1 Click` Prozedur ändert den Wert `UserName` der-Eigenschaft und zeigt eine Meldung an, die besagt, dass `UserName` der neue Wert von "hat, Joe" lautet.  
   
 ## <a name="see-also"></a>Siehe auch
 

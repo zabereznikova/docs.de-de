@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a62bd3507c14e42798c903ae51edb0187e666c8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663759"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920823"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<Enableampmparameseadjustment-> Element
 Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regeln zum Analysieren von Datums Zeichenfolgen verwenden, die einen Tag, einen Monat, eine Stunde und einen am/pm-Kenn Zeichner enthalten.  
@@ -68,7 +68,7 @@ Bestimmt, ob Datums-und Uhrzeit Analysemethoden einen angepassten Satz von Regel
  Das `<EnableAmPmParseAdjustment>` -Element hat keine Auswirkung auf <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>die <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>Methoden <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>,, <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> und.  
   
 > [!IMPORTANT]
->  In .net Core und .net Native sind die angepassten am/pm-Analyse-Regeln standardmäßig aktiviert.  
+> In .net Core und .net Native sind die angepassten am/pm-Analyse-Regeln standardmäßig aktiviert.  
   
  Wenn die Verarbeitungs Anpassungs Regel nicht aktiviert ist, wird die erste Ziffer der Zeichenfolge als Stunde der 12-Stunden-Uhrzeit interpretiert, und der Rest der Zeichenfolge außer dem am/pm-Kenn Zeichner wird ignoriert. Das von der-Methode für die-Methode zurückgegebene Datum und die Uhrzeit bestehen aus dem aktuellen Datum und der Stunde des Tages, der aus der Datums Zeichenfolge extrahiert wird.  
   

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: f2f36cc7fe59262e1e16b913e18daa7363240847
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a641b1e7565842a1edf6aeec88bdc37ee0786ab4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648044"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969113"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Definieren einer Eigenschaft in Windows Forms-Steuerelementen
 Eine Übersicht über Eigenschaften finden Sie unter [Übersicht über Eigenschaften](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Es gibt einige wichtige Überlegungen beim Definieren einer Eigenschaft:  
   
 - Sie müssen auf die Eigenschaften, die Sie definieren, Attribute anwenden. Attribute geben an, wie der Designer eine Eigenschaft anzeigen sollte. Einzelheiten hierzu finden Sie unter [Attribute für Komponenten in der Entwurfszeit](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
-- Wenn die visuelle Darstellung des Steuerelements ändern der Eigenschaft beeinflusst werden, rufen Sie die <xref:System.Windows.Forms.Control.Invalidate%2A> Methode (, die das Steuerelement erbt von <xref:System.Windows.Forms.Control>) aus der `set` Accessor. <xref:System.Windows.Forms.Control.Invalidate%2A> Ruft die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode, die das Steuerelement neu zeichnet. Mehrere Aufrufe <xref:System.Windows.Forms.Control.Invalidate%2A> führen zu einem einzigen Aufruf <xref:System.Windows.Forms.Control.OnPaint%2A> für Effizienz.  
+- Wenn sich die Änderung der-Eigenschaft auf die visuelle Darstellung des Steuer Elements <xref:System.Windows.Forms.Control.Invalidate%2A> auswirkt, müssen Sie die-Methode ( <xref:System.Windows.Forms.Control>die von Ihrem `set` Steuerelement erbt) aus der-Zugriffsmethode aufrufen. <xref:System.Windows.Forms.Control.Invalidate%2A>Ruft wiederum die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode auf, die das-Steuerelement neu zeichnet. Mehrere Aufrufe <xref:System.Windows.Forms.Control.Invalidate%2A> von führen zu einem einzigen <xref:System.Windows.Forms.Control.OnPaint%2A> Aufruf von aus Gründen der Effizienz.  
   
 - Die .NET Framework-Klassenbibliothek stellt Typkonverter für häufig verwendete Datentypen wie z.B. ganze Zahlen, Dezimalzahlen, boolesche Werte und andere bereit. Der Zweck eines Typkonverters ist im Allgemeinen, die Konvertierung von einer Zeichenfolge in einen Wert (von Zeichenfolgedaten in andere Datentypen) bereitzustellen. Allgemeine Datentypen sind Standardtypkonverter, die Werte in Zeichenfolgen und Zeichenfolgen in die entsprechenden Datentypen konvertieren. Wenn Sie eine Eigenschaft definieren (d.h. nicht dem Standard entsprechend), die einen benutzerdefinierten Datentyp aufweist, müssen Sie ein Attribut anwenden, das den dieser Eigenschaft zuzuordnenden Typkonverter angibt. Sie können ein Attribut auch verwenden, um einer Eigenschaft einen benutzerdefinierten Typeditor für die Benutzeroberfläche zuzuordnen. Ein Typeditor für die Benutzeroberfläche stellt eine Benutzeroberfläche für die Bearbeitung einer Eigenschaft oder eines Datentyps bereit. So ist beispielsweise ein Farbwähler ein Typeditor für die Benutzeroberfläche. Beispiele für Attribute werden am Ende dieses Themas angegeben.  
   
     > [!NOTE]
-    >  Wenn für Ihre benutzerdefinierte Eigenschaft kein Typkonverter oder Typeditor für die Benutzeroberfläche verfügbar ist, können Sie einen implementieren, wie unter [Erweitern der Entwurfszeitunterstützung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
+    > Wenn für Ihre benutzerdefinierte Eigenschaft kein Typkonverter oder Typeditor für die Benutzeroberfläche verfügbar ist, können Sie einen implementieren, wie unter [Erweitern der Entwurfszeitunterstützung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
   
  Das folgende Codefragment definiert eine benutzerdefinierte Eigenschaft mit dem Namen `EndColor` für das benutzerdefinierte Steuerelement `FlashTrackBar`.  
   
@@ -95,7 +95,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Das folgende Codefragment ordnet der Eigenschaft `Value` einen Typkonverter und einen Typeditor für die Benutzeroberfläche zu. In diesem Fall `Value` ist eine ganze Zahl und verfügt über einen Standardtypkonverter, aber die <xref:System.ComponentModel.TypeConverterAttribute> Attribut angewendet wird, einen benutzerdefinierten Typkonverter (`FlashTrackBarValueConverter`), die im Designer, um sie als Prozentwert anzeigen können. Im Typeditor für die Benutzeroberfläche, `FlashTrackBarValueEditor`, kann der Prozentwert visuell angezeigt werden. In diesem Beispiel wird außerdem gezeigt, dass der Typkonverter oder-Editor, die gemäß der <xref:System.ComponentModel.TypeConverterAttribute> oder <xref:System.ComponentModel.EditorAttribute> Attribut den Standardkonverter überschreibt.  
+ Das folgende Codefragment ordnet der Eigenschaft `Value` einen Typkonverter und einen Typeditor für die Benutzeroberfläche zu. In diesem Fall `Value` ist eine ganze Zahl, die über einen Standardtyp Konverter <xref:System.ComponentModel.TypeConverterAttribute> verfügt, aber das-Attribut wendet`FlashTrackBarValueConverter`einen benutzerdefinierten Typkonverter () an, der es dem Designer ermöglicht, ihn als Prozentsatz anzuzeigen. Im Typeditor für die Benutzeroberfläche, `FlashTrackBarValueEditor`, kann der Prozentwert visuell angezeigt werden. Dieses Beispiel zeigt auch, dass der vom <xref:System.ComponentModel.TypeConverterAttribute> -oder <xref:System.ComponentModel.EditorAttribute> -Attribut angegebene Typkonverter oder Editor den Standard Konverter überschreibt.  
   
 ```vb  
 <Category("Flash"), _  

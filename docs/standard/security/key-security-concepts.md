@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82a739d3823ff93bf2f797eabf3a8a326b10741c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917256"
 ---
 # <a name="key-security-concepts"></a>Schlüsselbegriffe der Sicherheit
 Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsprobleme bei mobilem Code zu beheben und Komponenten die Möglichkeit einzuräumen, die Berechtigungen von Benutzern zu überprüfen.  
@@ -52,7 +52,7 @@ Microsoft .NET Framework bietet rollenbasierte Sicherheit, um Sicherheitsproblem
  Im folgenden Beispiel muss der aktive Prinzipal ein Administrator sein. Der `name`-Parameter ist `null`, sodass die Anforderung von allen Benutzern übergeben werden kann, die Administratoren sind.  
   
 > [!NOTE]
->  Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um Code ausführen zu können, der Administratorberechtigungen erfordert, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.   
+> Unter Windows Vista werden die Berechtigungen eines Benutzers über die Benutzerkontensteuerung (User Account Control, UAC) bestimmt. Als Mitglied der integrierten Administratorgruppe sind Ihnen zwei Zugriffstoken für die Laufzeit zugewiesen: ein Standardbenutzertoken und ein Administratorzugriffstoken. Standardmäßig verwenden Sie die Standardbenutzerrolle. Um Code ausführen zu können, der Administratorberechtigungen erfordert, müssen Sie zuerst Ihre Berechtigungen von Standardbenutzer auf Administrator erhöhen. Dazu starten Sie eine Anwendung, indem Sie mit der rechten Maustaste auf das Anwendungssymbol klicken und angeben, dass Sie die Anwendung als Administrator ausführen möchten.  
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]

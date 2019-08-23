@@ -8,48 +8,48 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 88c2f2d872ae32b2cb3f0df13ce4816400695385
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348204"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963786"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Vorgehensweise: Abrufen von Daten aus der Zwischenablage
-Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für die Interaktion mit der Windows-Betriebssystem-Zwischenablage-Funktion verwenden können. Viele Anwendungen verwenden die Zwischenablage als temporäre Repository für Daten. Beispielsweise werden die Zwischenablage von Textverarbeitungsprogrammen während Ausschneiden und Einfügen-Vorgänge verwenden. Die Zwischenablage ist auch nützlich für die Übertragung von Informationen von einer Anwendung in eine andere.  
+Die <xref:System.Windows.Forms.Clipboard> -Klasse stellt Methoden bereit, die Sie verwenden können, um mit der Zwischenablage des Windows-Betriebssystems zu interagieren. Viele Anwendungen verwenden die Zwischenablage als temporäres Repository für-Daten. Beispielsweise wird die Zwischenablage von Word-Prozessoren während Ausschneide-und Einfügevorgängen verwendet. Die Zwischenablage eignet sich auch zum Übertragen von Informationen aus einer Anwendung in eine andere.  
   
- Einige Anwendungen speichern Daten in der Zwischenablage in verschiedenen Formaten, um die Anzahl von anderen Anwendungen zu erhöhen, die möglicherweise die Daten verwenden können. Ein Zwischenablageformat ist eine Zeichenfolge, die das Format angibt. Eine Anwendung, die dieses Format verwendet, kann die zugehörigen Daten in der Zwischenablage abrufen. Die <xref:System.Windows.Forms.DataFormats> Klasse stellt vordefinierte Formatnamen für Ihre Verwendung. Sie können auch eigene Formatnamen verwenden oder den Typ eines Objekts als Format. Weitere Informationen zum Hinzufügen von Daten in die Zwischenablage, finden Sie unter [Vorgehensweise: Hinzufügen von Daten in die Zwischenablage](how-to-add-data-to-the-clipboard.md).  
+ Einige Anwendungen speichern Daten in mehreren Formaten in der Zwischenablage, um die Anzahl von anderen Anwendungen zu erhöhen, die die Daten potenziell verwenden können. Ein Zwischenablage Format ist eine Zeichenfolge, die das Format angibt. Eine Anwendung, die das identifizierte Format verwendet, kann die zugeordneten Daten in der Zwischenablage abrufen. Die <xref:System.Windows.Forms.DataFormats> -Klasse stellt vordefinierte Format Namen für ihre Verwendung bereit. Sie können auch Ihre eigenen Format Namen verwenden oder den Typ eines Objekts als sein Format verwenden. Weitere Informationen zum Hinzufügen von Daten zur Zwischenablage [finden Sie unter Gewusst wie: Fügen Sie der Zwischenablage](how-to-add-data-to-the-clipboard.md)Daten hinzu.  
   
- Um zu bestimmen, ob die Zwischenablage Daten in einem bestimmten Format enthält, verwenden Sie eine der der `Contains` *Format* Methoden oder <xref:System.Windows.Forms.Clipboard.GetData%2A> Methode. Um Daten aus der Zwischenablage abzurufen, verwenden Sie eines der `Get` *Format* Methoden oder <xref:System.Windows.Forms.Clipboard.GetData%2A> Methode. Diese Methoden sind neu in .NET Framework 2.0.  
+ Verwenden Sie eine der `Contains` *Format* Methoden oder die <xref:System.Windows.Forms.Clipboard.GetData%2A> -Methode, um zu bestimmen, ob die Zwischenablage Daten in einem bestimmten Format enthält. Verwenden Sie zum Abrufen von Daten aus der Zwischenablage eine `Get`der- *Format* Methoden <xref:System.Windows.Forms.Clipboard.GetData%2A> oder die-Methode. Diese Methoden sind neu in .NET Framework 2,0.  
   
- Um Daten aus der Zwischenablage mit Versionen vor .NET Framework 2.0 zuzugreifen, verwenden die <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> Methode, und rufen Sie die Methoden des zurückgegebenen <xref:System.Windows.Forms.IDataObject>. Um zu bestimmen, ob ein bestimmtes Format in das zurückgegebene Objekt verfügbar ist, rufen Sie z. B. die <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> Methode.  
+ Für den Zugriff auf Daten aus der Zwischenablage mithilfe von Versionen vor .NET Framework 2,0 verwenden <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> Sie die-Methode, und aufrufen Sie <xref:System.Windows.Forms.IDataObject>die-Methoden der zurückgegebenen. Um zu bestimmen, ob ein bestimmtes Format im zurückgegebenen Objekt verfügbar ist, können Sie Beispiels <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> Weise die-Methode aufzurufen.  
   
 > [!NOTE]
->  Alle Windows-basierten Anwendungen Freigabe der Zwischenablage des Systems. Aus diesem Grund werden die Inhalte können geändert werden, wenn Sie in einer anderen Anwendung wechseln.  
+> Alle Windows-basierten Anwendungen nutzen die Zwischenablage des Systems gemeinsam. Daher können sich die Inhalte ändern, wenn Sie zu einer anderen Anwendung wechseln.  
 >   
->  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur in Threads auf Singlethread-Apartment (STA) Modus verwendet werden. Um diese Klasse verwenden zu können, stellen sicher, dass Ihre `Main` Methode ist mit markiert die <xref:System.STAThreadAttribute> Attribut.  
+>  Die <xref:System.Windows.Forms.Clipboard> -Klasse kann nur in Threads verwendet werden, die auf den STA-Modus (Single Thread Apartment) festgelegt sind. Um diese Klasse zu verwenden, stellen Sie `Main` sicher, dass die- <xref:System.STAThreadAttribute> Methode mit dem-Attribut gekennzeichnet ist.  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Zum Abrufen von Daten aus der Zwischenablage in einem einzelnen, gemeinsamen format  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>So rufen Sie Daten aus der Zwischenablage in einem einzelnen, allgemeinen Format ab  
   
-1. Verwenden der <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, oder <xref:System.Windows.Forms.Clipboard.GetText%2A> Methode. Verwenden Sie optional den entsprechenden `Contains` *Format* Methoden, um zu bestimmen, ob die Daten in einem bestimmten Format verfügbar sind. Diese Methoden sind nur in .NET Framework 2.0 verfügbar.  
+1. Verwenden Sie <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>die <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>- <xref:System.Windows.Forms.Clipboard.GetImage%2A>,- <xref:System.Windows.Forms.Clipboard.GetText%2A> ,-oder-Methode. Verwenden Sie optional die entsprechenden `Contains`- *Format* Methoden, um zu bestimmen, ob Daten in einem bestimmten Format verfügbar sind. Diese Methoden sind nur in .NET Framework 2,0 verfügbar.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Zum Abrufen von Daten aus der Zwischenablage in einem benutzerdefinierten format  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>So rufen Sie Daten aus der Zwischenablage in einem benutzerdefinierten Format ab  
   
-1. Verwenden der <xref:System.Windows.Forms.Clipboard.GetData%2A> Methode mit einem benutzerdefinierten Format-Namen. Diese Methode ist nur in .NET Framework 2.0 verfügbar.  
+1. Verwenden Sie <xref:System.Windows.Forms.Clipboard.GetData%2A> die-Methode mit einem benutzerdefinierten Format Namen. Diese Methode ist nur in .NET Framework 2,0 verfügbar.  
   
-     Sie können auch die Namen von vordefinierten Format mit der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DataFormats>.  
+     Sie können auch vordefinierte Format Namen mit der <xref:System.Windows.Forms.Clipboard.SetData%2A> -Methode verwenden. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Zum Abrufen von Daten aus der Zwischenablage in mehreren Formaten  
+### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>So rufen Sie Daten aus der Zwischenablage in mehreren Formaten ab  
   
-1. Verwenden Sie die <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>-Methode. Sie müssen diese Methode verwenden, zum Abrufen von Daten aus der Zwischenablage auf Versionen vor .NET Framework 2.0.  
+1. Verwenden Sie die <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>-Methode. Sie müssen diese Methode zum Abrufen von Daten aus der Zwischenablage in früheren Versionen als .NET Framework 2,0 verwenden.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
@@ -59,4 +59,4 @@ Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für 
 ## <a name="see-also"></a>Siehe auch
 
 - [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)
-- [Vorgehensweise: Hinzufügen von Daten in die Zwischenablage](how-to-add-data-to-the-clipboard.md)
+- [Vorgehensweise: Hinzufügen von Daten zur Zwischenablage](how-to-add-data-to-the-clipboard.md)

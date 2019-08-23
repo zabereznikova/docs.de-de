@@ -11,36 +11,36 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: 7e68bb2f6a3bff0a0a5ff7f8011c2642c141eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebeca5f933eac4da2bf3d4f300866fd2ff52b32a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593444"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917669"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Ändern des Rahmen- und Rasterlinienstils im DataGridView-Steuerelement in Windows Forms
-Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, können Sie die Darstellung von Rahmen und Gitternetzlinien auf die Verbesserung der benutzerfreundlichkeit des Steuerelements anpassen. Sie können die Farbe der Gitternetzlinien und die Steuerelement-Rahmenart zusätzlich die Rahmenarten für die Zellen innerhalb des Steuerelements zu ändern. Sie können auch andere Zelle Rahmenarten für die normalen Zellen Zeilenheaderzellen und Spaltenheaderzellen anwenden.  
+Mit dem <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie die Darstellung der Rahmen-und Gitternetz Linien des Steuer Elements anpassen, um die Benutzer Leistung zu verbessern. Sie können die Gitternetz Linien Farbe und die Rahmenart des Steuer Elements zusätzlich zu den Rahmen Stilen für die Zellen im Steuerelement ändern. Sie können auch unterschiedliche Zell Rahmen Stile für normale Zellen, Zeilen Header Zellen und Spaltenheader Zellen anwenden.  
   
 > [!NOTE]
->  Die Farbe der Gitternetzlinien wird verwendet, nur mit der <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, und <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> Werte von der <xref:System.Windows.Forms.DataGridViewCellBorderStyle> Enumeration und die <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> Wert der <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> Enumeration. Die anderen Werte dieser Enumerationen verwenden Sie Farben, die vom Betriebssystem angegeben. Darüber hinaus, wenn visuelle Stile auf Windows XP und Windows Server 2003-Familie über aktiviert sind die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> -Methode, die <xref:System.Windows.Forms.DataGridView.GridColor%2A> Eigenschaftswert wird nicht verwendet.  
+> Die Gitternetz Linien Farbe wird nur mit den <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>Werten <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, und <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> der <xref:System.Windows.Forms.DataGridViewCellBorderStyle> -Enumeration und dem <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> Wert der <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> -Enumeration verwendet. Bei den anderen Werten dieser Enumerationen werden vom Betriebssystem angegebene Farben verwendet. Wenn visuelle Stile unter Windows XP und der Windows Server 2003-Familie über die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> -Methode aktiviert sind, wird der <xref:System.Windows.Forms.DataGridView.GridColor%2A> -Eigenschafts Wert außerdem nicht verwendet.  
   
-### <a name="to-change-the-gridline-color-programmatically"></a>So ändern Sie die Farbe der Gitternetzlinien programmgesteuert  
+### <a name="to-change-the-gridline-color-programmatically"></a>So ändern Sie die Gitternetz Linien Farbe Programm gesteuert  
   
 - Legen Sie die <xref:System.Windows.Forms.DataGridView.GridColor%2A>-Eigenschaft fest.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>So ändern Sie die Rahmenart des gesamten DataGridView-Steuerelement programmgesteuert  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>So ändern Sie die Rahmenart des gesamten DataGridView-Steuer Elements Programm gesteuert  
   
 - Legen Sie die <xref:System.Windows.Forms.DataGridView.BorderStyle%2A>-Eigenschaft auf einen der <xref:System.Windows.Forms.BorderStyle>-Enumerationswerte fest.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>So ändern Sie programmgesteuert die Rahmenarten für DataGridView-Zellen  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>So ändern Sie die Rahmen Stile für DataGridView-Zellen Programm gesteuert  
   
-- Legen Sie die <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, und <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> Eigenschaften.  
+- Legen Sie <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>die <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>Eigenschaften, <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> und fest.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  

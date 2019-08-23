@@ -3,20 +3,20 @@ title: <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9096e812-626a-409a-9eda-c31a60b84c55
-ms.openlocfilehash: 88ad61dca6c0f756a14538e7b207532ff7173ec5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0a3c3a27b40000432b40b7008f81251fe771ca2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913144"
 ---
 # <a name="workflowinstancequery"></a>\<workflowInstanceQuery>
 Stellt eine Abfrage dar, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgt, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.  
   
- Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Weitere Informationen zu Überwachungs Profil Abfragen finden Sie unter nach [Verfolgungs profile](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
 \<system.serviceModel>  
-\<tracking>  
+\<Überwachungs >  
 \<trackingProfile>  
 \<workflow>  
 \<workflowInstanceQueries>  
@@ -50,13 +50,13 @@ Stellt eine Abfrage dar, die Änderungen im Lebenszyklus einer Workflowinstanz n
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz bei der Erstellung von Nachverfolgungsdatensätzen.|  
+|[\<Status >](states.md)|Eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz bei der Erstellung von Nachverfolgungsdatensätzen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<workflowInstanceQueries>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequeries.md)|Stellt eine Auflistung von Konfigurationselementen dar, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgen, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.|  
+|[\<workflowInstanceQueries>](workflowinstancequeries.md)|Stellt eine Auflistung von Konfigurationselementen dar, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgen, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.|  
   
 ## <a name="remarks"></a>Hinweise  
  <xref:System.Activities.Tracking.WorkflowInstanceQuery> – Wird für das Abonnieren der folgenden <xref:System.Activities.Tracking.TrackingRecord>-Objekte verwendet:  
@@ -88,5 +88,5 @@ Stellt eine Abfrage dar, die Änderungen im Lebenszyklus einer Workflowinstanz n
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsprofile](../../../windows-workflow-foundation/tracking-profiles.md)

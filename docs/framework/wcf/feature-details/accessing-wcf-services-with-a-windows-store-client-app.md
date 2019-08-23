@@ -2,12 +2,12 @@
 title: Zugreifen auf WCF-Dienste mit einer Windows Store-Client-App
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784318"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964967"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Zugreifen auf WCF-Dienste mit einer Windows Store-Client-App
 Mit Windows 8 wird ein neuer Anwendungstyp, die so genannten Windows Store-Anwendungen, eingeführt. Diese Anwendungen sind für Touchscreenoberflächen konzipiert. .NET Framework 4.5 ermöglicht Windows Store-Anwendungen das Aufrufen von WCF-Diensten.  
@@ -16,7 +16,7 @@ Mit Windows 8 wird ein neuer Anwendungstyp, die so genannten Windows Store-Anwen
  Innerhalb einer Windows Store-Anwendung ist ein Teilbereich der WCF-Funktionen verfügbar. Ausführliche Informationen finden Sie in den folgenden Abschnitten.  
   
 > [!IMPORTANT]
->  Verwenden Sie die WinRT-Syndication-APIs anstelle der von WCF verfügbar gemachten APIs. Weitere Informationen finden Sie unter , [WinRT-Syndication-API](https://go.microsoft.com/fwlink/?LinkId=236265)  
+> Verwenden Sie die WinRT-Syndication-APIs anstelle der von WCF verfügbar gemachten APIs. Weitere Informationen finden Sie unter , [WinRT-Syndication-API](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
 >  Das Hinzufügen eines Webdienstverweises zu einer Windows Runtime-Komponente unter Verwendung von „Dienstverweis hinzufügen“ wird nicht unterstützt.  
@@ -55,7 +55,7 @@ Mit Windows 8 wird ein neuer Anwendungstyp, die so genannten Windows Store-Anwen
  Sowohl textbasierte als auch binäre Codierungen werden unterstützt. Alle WCF-Übertragungsmodi werden unterstützt. Weitere Informationen finden Sie unter [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md).  
   
 ### <a name="add-service-reference"></a>Dienstverweis hinzufügen  
- Um einen WCF-Dienst aus einer Windows Store-Anwendung aufzurufen, verwenden Sie die Funktion „Dienstverweis hinzufügen“ in Visual Studio 2012. Sie werden bei Verwendung von „Dienstverweis hinzufügen“ innerhalb einer Windows Store-Anwendung einige Funktionsunterschiede bemerken. Als erstes wird keine Konfigurationsdatei generiert. Da Windows Store-Anwendungen keine Konfigurationsdateien verwenden, müssen sie im Code konfiguriert werden. Dieser Konfigurationscode befindet sich in der Datei „References.cs“, die durch „Dienstverweis hinzufügen“ generiert wird. Um diese Datei anzuzeigen, müssen Sie "Alle Dateien anzeigen" Wählen Sie im Projektmappen-Explorer zur Verfügung. Die Datei befindet sich innerhalb des Projekts unter dem Knoten „Dienstverweise“ und dann „Reference.svcmap“. Alle Vorgänge, die für WCF-Dienste in einer Windows Store-Anwendung generiert werden, werden unter Verwendung des taskbasierten asynchronen Musters asynchron implementiert. Weitere Informationen finden Sie unter [asynchrone Aufgaben – asynchrone Programmierung mit Aufgaben vereinfachen](https://msdn.microsoft.com/magazine/ff959203.aspx).  
+ Um einen WCF-Dienst aus einer Windows Store-Anwendung aufzurufen, verwenden Sie die Funktion „Dienstverweis hinzufügen“ in Visual Studio 2012. Sie werden bei Verwendung von „Dienstverweis hinzufügen“ innerhalb einer Windows Store-Anwendung einige Funktionsunterschiede bemerken. Als erstes wird keine Konfigurationsdatei generiert. Da Windows Store-Anwendungen keine Konfigurationsdateien verwenden, müssen sie im Code konfiguriert werden. Dieser Konfigurationscode befindet sich in der Datei „References.cs“, die durch „Dienstverweis hinzufügen“ generiert wird. Um diese Datei anzuzeigen, müssen Sie im Projektmappen-Explorer "alle Dateien anzeigen" auswählen. Die Datei befindet sich innerhalb des Projekts unter dem Knoten „Dienstverweise“ und dann „Reference.svcmap“. Alle Vorgänge, die für WCF-Dienste in einer Windows Store-Anwendung generiert werden, werden unter Verwendung des taskbasierten asynchronen Musters asynchron implementiert. Weitere Informationen finden Sie unter [asynchrone Aufgaben: Vereinfachen der asynchronen Programmierung mit Aufgaben](https://msdn.microsoft.com/magazine/ff959203.aspx).  
   
  Da die Konfiguration nun im Code generiert wird, werden alle Änderungen in der Datei „Reference.cs“ überschrieben, sobald der Dienstverweis aktualisiert wird. Um diese Situation zu vermeiden, wird der Konfigurationscode innerhalb einer partiellen Methode generiert, die Sie in der Clientproxyklasse implementieren können. Die partielle Methode wird folgendermaßen deklariert:  
   
@@ -118,11 +118,11 @@ Die folgenden Sicherheitsmodi werden in Windows Store-Anwendungen unterstützt:
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-Die folgenden Clientanmeldeinformationstypen werden in Windows Store-Anwendungen unterstützt:
+Die folgenden Client Anmelde Informationstypen werden in Windows Store-Anwendungen unterstützt:
   
-1. Keiner  
+1. None  
   
-2. Standard  
+2. Einfach  
   
 3. Digest  
   
@@ -136,10 +136,10 @@ Die folgenden Clientanmeldeinformationstypen werden in Windows Store-Anwendungen
   
 8. Windows (Transportsicherheit)  
   
- Damit Windows Store-Anwendungen auf standardmäßige Windows-Anmeldeinformationen zugreifen und diese senden können, müssen Sie diese Funktionalität innerhalb der Datei „Package.appmanifest“ aktivieren. Öffnen Sie diese Datei, und wählen Sie die Registerkarte "Funktionen", und wählen Sie "Standard Windows-Anmeldeinformationen". Dadurch kann die Anwendung eine Verbindung mit Intranetressourcen herstellen, die Domänenanmeldeinformationen erfordern.  
+ Damit Windows Store-Anwendungen auf standardmäßige Windows-Anmeldeinformationen zugreifen und diese senden können, müssen Sie diese Funktionalität innerhalb der Datei „Package.appmanifest“ aktivieren. Öffnen Sie diese Datei, wählen Sie die Registerkarte Funktionen aus, und wählen Sie "Windows-Standard Anmelde Informationen" Dadurch kann die Anwendung eine Verbindung mit Intranetressourcen herstellen, die Domänenanmeldeinformationen erfordern.  
   
 > [!IMPORTANT]
->  In der Reihenfolge für Windows Store-Anwendungen computerübergreifend Aufrufe ausführen können, müssen Sie eine weitere Funktion namens "Home/Work Networking" aktivieren. Diese Einstellung befindet sich ebenfalls in der Datei „Package.appmanifest“ auf der Registerkarte für Funktionen. Aktivieren Sie das Kontrollkästchen „Home/Work Networking“. Dadurch erhält die Anwendung eingehenden und ausgehenden Zugriff auf die Netzwerke der vertrauenswürdigen Orte des Benutzers wie Heim und Arbeit. Wichtige eingehende Ports sind immer blockiert. Für den Zugriff auf Internetdienste müssen Sie auch die Internetfunktion (Client) aktivieren.  
+> Damit Windows Store-Anwendungen Computer übergreifende Aufrufe durchführen können, müssen Sie eine weitere Funktion mit dem Namen "Home/work Networking" aktivieren. Diese Einstellung befindet sich ebenfalls in der Datei „Package.appmanifest“ auf der Registerkarte für Funktionen. Aktivieren Sie das Kontrollkästchen „Home/Work Networking“. Dadurch erhält die Anwendung eingehenden und ausgehenden Zugriff auf die Netzwerke der vertrauenswürdigen Orte des Benutzers wie Heim und Arbeit. Wichtige eingehende Ports sind immer blockiert. Für den Zugriff auf Internetdienste müssen Sie auch die Internetfunktion (Client) aktivieren.  
   
 ### <a name="misc"></a>Sonstiges  
  Die Verwendung der folgenden Klassen wird für Windows Store-Anwendungen unterstützt:  
@@ -177,8 +177,8 @@ void async SomeMethod()
 ## <a name="see-also"></a>Siehe auch
 
 - [WCF in Windows Store-Apps-Blog](https://blogs.msdn.com/b/piyushjo/archive/2011/09/22/wcf-in-win8-metro-styled-apps-absolutely-supported.aspx)
-- [WCF Windows Store-Clients und Sicherheit](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
-- [Windows Store-Apps und computerübergreifende Aufrufe](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
-- [Aufrufen eines WCF-Diensts in Azure aus einer Windows Store-App bereitgestellt](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [WCF-Windows Store-Clients und-Sicherheit](https://blogs.msdn.com/b/piyushjo/archive/2011/10/11/calling-a-wcf-service-from-a-metro-application-adding-security.aspx)
+- [Windows Store-Apps und Computer übergreifende Aufrufe](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
+- [Aufrufen eines in Azure bereitgestellten WCF-dienstanaus einer Windows Store-App](https://blogs.msdn.com/b/piyushjo/archive/2011/10/22/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario.aspx)
 - [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [Bindungen](../../../../docs/framework/wcf/bindings.md)

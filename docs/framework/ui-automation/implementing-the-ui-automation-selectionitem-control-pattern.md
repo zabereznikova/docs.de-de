@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, Selection Item control pattern
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
-ms.openlocfilehash: b1d5a0b11510a123d5fbebd656c1fdcd338870e7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef1d31499f65834fa1268147e45f82294fe560a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649487"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935690"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>Implementieren des SelectionItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden [Sie unter Windows Automation-API: Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746)der Benutzeroberfläche.  
   
  Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.ISelectionItemProvider>, einschließlich Informationen über Eigenschaften, Methoden und Ereignissen. Links zu zusätzlichen Referenzen sind am Ende dieser Übersicht aufgelistet.  
   
- Das <xref:System.Windows.Automation.SelectionItemPattern> -Steuerelementmuster dient zur Unterstützung von Steuerelementen, die als einzelne auswählbare untergeordnete Elemente von Containersteuerelementen fungieren, die <xref:System.Windows.Automation.Provider.ISelectionProvider>implementieren. Beispiele für Steuerelemente, die das SelectionItem-Steuerelementmuster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ Das <xref:System.Windows.Automation.SelectionItemPattern> -Steuerelementmuster dient zur Unterstützung von Steuerelementen, die als einzelne auswählbare untergeordnete Elemente von Containersteuerelementen fungieren, die <xref:System.Windows.Automation.Provider.ISelectionProvider>implementieren. Beispiele für Steuerelemente, die das SelectionItem-Steuerelement Muster implementieren, finden Sie unter [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md) .  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
@@ -33,9 +33,9 @@ ms.locfileid: "64649487"
   
 |Erforderliche Member|Memberart|Hinweise|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Eigenschaft|None|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Methode|None|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|event|Dieses wird ausgelöst, wenn die Auswahl in einem Container maßgeblich geändert wurde und dies das Senden weiterer <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> - und <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> -Ereignisse erfordert, als die <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> -Konstante gestattet.|  
   
 - Wenn das Ergebnis von <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>, <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>oder <xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A> ein einzelnes ausgewähltes Element ist, muss ein <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> ausgelöst werden. Andernfalls senden Sie entsprechend <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>/ <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> .  
@@ -56,4 +56,4 @@ ms.locfileid: "64649487"
 - [Implementieren des Selection-Steuerelementmusters der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/implementing-the-ui-automation-selection-control-pattern.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
-- [Beispiel für einen Fragmentanbieter](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))
+- [Beispiel für Fragment-Anbieter](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771502(v=vs.90))

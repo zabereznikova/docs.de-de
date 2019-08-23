@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 60c238430d44371bbd3859c3864fd2ef73f70098
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: a6d000bc853046cffbc2bddc54d1f5faec689032
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037910"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968612"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Vorgehensweise: Erben von Windows Forms
 
@@ -40,12 +40,12 @@ Weitere Informationen zum Erben von Formularen zur Entwurfszeit mit dem Dialogfe
     public class Form2 : Namespace1.Form1
     ```
 
- Denken Sie beim Erben von Formularen daran, dass Probleme mit Ereignishandlern auftreten können, die zwei Mal aufgerufen werden, da jedes Ereignis sowohl von der Basisklasse als auch von der geerbten Klasse behandelt wird. Weitere Informationen dazu, wie Sie dieses Problem vermeiden können, finden Sie unter [Problembehandlung für geerbte Ereignishandler in Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
+ Denken Sie beim Erben von Formularen daran, dass Probleme mit Ereignishandlern auftreten können, die zwei Mal aufgerufen werden, da jedes Ereignis sowohl von der Basisklasse als auch von der geerbten Klasse behandelt wird. Weitere Informationen dazu, wie Sie dieses Problem vermeiden können, finden Sie unter [Problembehandlung für geerbte Ereignishandler in Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Inherits-Anweisung](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [Imports-Anweisung (.NET-Namespace und -Typ)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Inherits-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [using](../../../csharp/language-reference/keywords/using.md)
 - [Auswirkungen beim Ändern der Darstellung von Basisformularen](effects-of-modifying-base-form-appearance.md)
 - [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)

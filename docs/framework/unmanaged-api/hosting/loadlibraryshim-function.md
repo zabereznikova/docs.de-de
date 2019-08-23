@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ab44ce8f51620d83084d1dd16e98b2b310feb76
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768522"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968941"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim-Funktion
-Lädt die angegebene Version einer DLL, die in .NET Framework redistributable-Paket enthalten ist.  
+Lädt eine angegebene Version einer DLL, die im .NET Framework verteilbaren Paket enthalten ist.  
   
- Diese Funktion ist in .NET Framework 4 veraltet. Verwenden der [ICLRRuntimeInfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) Methode stattdessen.  
+ Diese Funktion wurde im .NET Framework 4 als veraltet markiert. Verwenden Sie stattdessen die [iclrruntimumfo:: LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) -Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,33 +42,33 @@ HRESULT LoadLibraryShim (
   
 ## <a name="parameters"></a>Parameter  
  `szDllName`  
- [in] Eine 0 (null) endende Zeichenfolge mit dem Namen der DLL aus dem .NET Framework-Klassenbibliothek geladen werden.  
+ in Eine mit NULL endende Zeichenfolge, die den Namen der DLL darstellt, die aus der .NET Framework Bibliothek geladen werden soll.  
   
  `szVersion`  
- [in] Eine 0 (null) endende Zeichenfolge, die die Version der DLL zu ladende darstellt. Wenn `szVersion` null ist, ist die Version, die für das Laden, die neueste Version der angegebenen DLL ist, die kleiner als die Version 4 ist ausgewählt. D. h. alle Versionen gleich oder größer als 4-Version werden ignoriert, wenn `szVersion` null ist, und wenn keine Version kleiner als 4-Version installiert ist, kann die DLL zu laden. Dadurch wird sichergestellt, dass die Installation von .NET Framework 4 nicht auf bereits vorhandene Anwendungen oder Komponenten auswirkt. Finden Sie im Eintrag [In-Proc SxS und Migration Schnellstart](https://go.microsoft.com/fwlink/?LinkId=200329) im CLR-Teamblog.  
+ in Eine mit NULL endende Zeichenfolge, die die Version der zu ladenden DLL darstellt. Wenn `szVersion` NULL ist, ist die für das Laden ausgewählte Version die neueste Version der angegebenen DLL, die kleiner als Version 4 ist. Das heißt, dass alle Versionen, die gleich oder größer als Version 4 sind `szVersion` , ignoriert werden, wenn NULL ist, und wenn keine Version, die kleiner als Version 4 ist, installiert ist, kann die dll nicht geladen werden. Dadurch wird sichergestellt, dass die Installation des .NET Framework 4 keine Auswirkungen auf bereits vorhandene Anwendungen oder Komponenten hat. Weitere Informationen finden Sie im Blogbeitrag [in-Proc SxS and Migration Schnellstart](https://go.microsoft.com/fwlink/?LinkId=200329) im CLR-Teamblog.  
   
  `pvReserved`  
- Für zukünftige Verwendung reserviert.  
+ Zur künftigen Verwendung reserviert.  
   
  `phModDll`  
- [out] Ein Zeiger auf das Handle des Moduls.  
+ vorgenommen Ein Zeiger auf das Handle des Moduls.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt Component Object Model (COM) Standardfehlercodes in "Winerror.h", zusätzlich zu den folgenden Werten definiert.  
+ Diese Methode gibt zusätzlich zu den folgenden Werten in WinError. h definierte Standard-Component Object Model (com)-Fehlercodes zurück.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|CLR_E_SHIM_RUNTIMELOAD|Laden von `szDllName` ist das Laden, die die common Language Runtime (CLR), und die erforderliche Version der CLR kann nicht geladen werden.|  
+|CLR_E_SHIM_RUNTIMELOAD|Das `szDllName` laden erfordert das Laden der Common Language Runtime (CLR), und die erforderliche Version der CLR kann nicht geladen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion wird zum Laden von DLLs, die in .NET Framework redistributable-Paket enthalten sind. Es wird nicht vom Benutzer generierte DLLs geladen werden.  
+ Diese Funktion wird zum Laden von DLLs verwendet, die in der .NET Framework verteilbaren Pakets enthalten sind. Benutzergenerierte DLLs werden nicht geladen.  
   
 > [!NOTE]
->  Ab .NET Framework, Version 2.0, bewirkt, dass Fusion.dll Laden der CLR geladen werden. Dies ist, da die Funktionen in Fusion.dll jetzt Wrapper sind, deren Implementierungen von der Runtime bereitgestellt werden.  
+> Beginnend mit der .NET Framework Version 2,0 bewirkt das Laden von Fusion. dll, dass die CLR geladen wird. Dies liegt daran, dass die Funktionen in Fusion. dll nun Wrapper sind, deren Implementierungen von der Laufzeit bereitgestellt werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   

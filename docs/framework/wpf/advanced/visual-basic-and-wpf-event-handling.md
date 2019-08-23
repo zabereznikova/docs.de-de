@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 4ff006099dd2fa706cb575eec18e135d6e74ad46
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8407958ec76be7e402025ece57371e67581e5291
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972324"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942121"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic- und WPF-Ereignisbehandlung
 Speziell für die Microsoft Visual Basic .NET-Sprache können Sie das sprachspezifische `Handles` Schlüsselwort verwenden, um Ereignishandler Instanzen zuzuordnen, anstatt Ereignishandler mit Attributen anzufügen oder die <xref:System.Windows.UIElement.AddHandler%2A> -Methode zu verwenden. Allerdings weist die `Handles`-Technik für das Anfügen von Handlern an Instanzen einige Einschränkungen auf, da die `Handles`-Syntax einige der spezifischen Funktionen von Routingereignissen des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignissystems nicht unterstützt.  
@@ -34,13 +34,13 @@ Speziell für die Microsoft Visual Basic .NET-Sprache können Sie das sprachspez
  `Handles` kann keine Handler anfügen, die für Ereignisse aufgerufen werden, die bereits als behandelt markiert sind. Stattdessen müssen Sie Code verwenden und die `handledEventsToo` -über <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>Ladung aufrufen.  
   
 > [!NOTE]
->  Verwenden Sie die `Handles` Syntax nicht in Visual Basic Code, wenn Sie einen Ereignishandler für das gleiche Ereignis in XAML angeben. In diesem Fall wird der Ereignishandler zweimal aufgerufen.  
+> Verwenden Sie die `Handles` Syntax nicht in Visual Basic Code, wenn Sie einen Ereignishandler für das gleiche Ereignis in XAML angeben. In diesem Fall wird der Ereignishandler zweimal aufgerufen.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>So implementiert WPF die „Handles“-Funktionalität  
  Wenn eine [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite kompiliert wird, deklariert `WithEvents` `Friend` die zwischen Datei Verweise auf jedes Element auf der Seite, das über <xref:System.Windows.FrameworkContentElement.Name%2A> einen Eigenschaften Satz (oder eine [x:Name-Direktive](../../xaml-services/x-name-directive.md) deklariert) verfügt. Jede benannte Instanz ist potenziell ein Element, das an einem Handler mit `Handles` zugewiesen werden kann.  
   
 > [!NOTE]
->  In kann IntelliSense Ihnen den Abschluss zeigen, auf den Elemente für einen `Handles` Verweis in einer Seite verfügbar sind. [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] Dies kann jedoch einen Kompilierungsschritt dauern, sodass die Zwischendatei alle `Friends`-Verweise auffüllen kann.  
+> In kann IntelliSense Ihnen den Abschluss zeigen, auf den Elemente für einen `Handles` Verweis in einer Seite verfügbar sind. [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] Dies kann jedoch einen Kompilierungsschritt dauern, sodass die Zwischendatei alle `Friends`-Verweise auffüllen kann.  
   
 ## <a name="see-also"></a>Siehe auch
 

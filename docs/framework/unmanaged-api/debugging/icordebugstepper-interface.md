@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f1d94ffde71962c848bece808bf2d982093896a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c57b13b05522614ff066b93cb9f6a437cb340576
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652164"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962684"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper-Schnittstelle
 Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgeführt wird, dient zwischen der Veröffentlichung und dem Abschluss eines Befehls als Bezeichner und ermöglicht das Abbrechen eines Schritts.  
@@ -30,37 +30,37 @@ Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgefü
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Deactivate-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Bewirkt, dass dieser `ICorDebugStepper` , mit dem letzten Schrittbefehl abzubrechen, er empfangen.|  
-|[IsActive-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Ruft einen Wert, der angibt, ob dies `ICorDebugStepper` aktuell einen Schritt ausgeführt wird.|  
-|[SetInterceptMask-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Legt einen CorDebugIntercept-Wert, der angibt, die Typen von Code, der durchlaufen werden.|  
-|[SetRangeIL-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Legt einen Wert, der angibt, ob Aufrufe von [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) Argumentwerte, die relativ zu den systemeigenen Code oder Code für Microsoft intermediate Language (MSIL) der Methode, die schrittweise durchlaufen wird übergeben.|  
-|[SetUnmappedStopMask-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Legt einen CorDebugUnmappedStop-Wert, der den Typ von nicht zugeordnetem Code gibt an, in dem die Ausführung angehalten wird.|  
-|[Step-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Bewirkt, dass dieser `ICorDebugStepper` , Schritt für Schritt durch den enthaltenen Thread und (optional) um weiterhin schrittweises Durchlaufen von Funktionen, in dem Thread aufgerufen werden.|  
-|[StepOut-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Bewirkt, dass dieser `ICorDebugStepper` Schritt für Schritt durch den enthaltenen Thread und beendet wird, wenn der aktuelle Frame die steuerelementrückgabe an den aufrufenden Rahmen.|  
-|[StepRange-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Bewirkt, dass dieser `ICorDebugStepper` , Schritt für Schritt durch den enthaltenen Thread und zurückzugeben, wenn sie Code nach dem letzten von der angegebenen Bereiche erreicht.|  
+|[Deactivate-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Dies `ICorDebugStepper` bewirkt, dass der letzte Schritt Befehl abgebrochen wird.|  
+|[IsActive-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Ruft einen Wert ab, der angibt `ICorDebugStepper` , ob dieser gerade einen Schritt ausführt.|  
+|[SetInterceptMask-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Legt einen CorDebugIntercept-Wert fest, der die Typen von Code angibt, die in Einzelschritten werden.|  
+|[SetRangeIL-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Legt einen Wert fest, der angibt, ob Aufrufe von [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) Argument Werte in Bezug auf den systemeigenen Code oder den MSIL-Code (Microsoft Intermediate Language) der Methode übergeben, die durchlaufen wird.|  
+|[SetUnmappedStopMask-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Legt einen CorDebugUnmappedStop-Wert fest, der den Typ des nicht zugeordneten Codes angibt, in dem die Ausführung angehalten wird.|  
+|[Step-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Bewirkt, `ICorDebugStepper` dass dieser den enthaltenden Thread schrittweise durchläuft, und optional, um die Einzelschritt Weise durch Funktionen fortzusetzen, die innerhalb des Threads aufgerufen werden.|  
+|[StepOut-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Bewirkt, `ICorDebugStepper` dass dieser den enthaltenden Thread in einem Schritt durchläuft und fertiggestellt wird, wenn der aktuelle Frame die Steuerung an den aufrufenden Frame zurückgibt.|  
+|[StepRange-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Bewirkt, `ICorDebugStepper` dass dieser den enthaltenden Thread in einen Schritt einschlägt und zurückgibt, wenn er Code über den letzten der angegebenen Bereiche hinaus erreicht.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `ICorDebugStepper` -Schnittstelle dient folgenden Zwecken:  
   
-- Er fungiert als Bezeichner zwischen ein Schrittbefehl, der ausgegeben wird und dem Abschluss dieses Befehls.  
+- Er fungiert als Bezeichner zwischen einem ausgegebene Schritt Befehl und dem Abschluss dieses Befehls.  
   
-- Es bietet eine zentrale Schnittstelle zum kapseln alle das schrittweise durchlaufen, die ausgeführt werden können.  
+- Sie stellt eine zentrale Schnittstelle zum Kapseln der gesamten schrittweise bereit, die ausgeführt werden können.  
   
-- Es bietet eine Möglichkeit, einer schrittweisen Ausführung vorzeitig abbrechen.  
+- Es bietet eine Möglichkeit, einen schrittweise Abbruch abzubrechen.  
   
- Es können mehrere zugeordnetem pro Thread vorhanden sein. Z. B. ein Haltepunkt erreicht werden kann, während bei einem Prozedurschritt für eine Funktion, und der Benutzer eine neue schrittweisen Ausführung innerhalb dieser Funktion beginnen möchten. Es ist Aufgabe des Debuggers zu bestimmen, wie für diese Situation. Der Debugger sollten die ursprünglichen schrittweisen Ausführung abbrechen oder Schachteln von beiden Vorgänge. Die `ICorDebugStepper` Schnittstelle unterstützt beides.  
+ Pro Thread kann mehr als ein Stepper vorhanden sein. Beispielsweise kann ein Haltepunkt beim Durchlaufen einer Funktion gedrückt werden, und der Benutzer möchte einen neuen Schritt Vorgang innerhalb dieser Funktion starten. Der Debugger kann feststellen, wie diese Situation behandelt werden soll. Der Debugger kann den ursprünglichen Schritt Vorgang abbrechen oder die beiden Vorgänge schachteln. Die `ICorDebugStepper` -Schnittstelle unterstützt beide Optionen.  
   
- Eine zugeordnetem kann zwischen Threads migrieren, wenn die common Language Runtime (CLR) Cross-Thread, gemarshallten aufruft.  
+ Ein Stepper kann zwischen Threads migriert werden, wenn die Common Language Runtime (CLR) einen Thread übergreifenden, gemarshallten Aufrufvorgang durchführt.  
   
 > [!NOTE]
->  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
+> Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl, CorDebug.h  
+ **Header:** Cordebug. idl, Cordebug. h  
   
- **Bibliothek:** CorGuids.lib  
+ **Fern** CorGuids.lib  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

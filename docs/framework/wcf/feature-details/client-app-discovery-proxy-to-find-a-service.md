@@ -2,15 +2,15 @@
 title: 'Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 9f04c3ba59b67f2f19a3f65ce96d4d9f624a0e82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630702"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963875"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet
-Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), Sie implementiert einen WCF-Dienst, der sich beim suchproxy registriert. In diesem Thema erstellen Sie einen WCF-Client, der den suchproxy verwendet, um den WCF-Dienst zu finden.  
+Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren. Im vorherigen Thema, [Vorgehensweise: Implementieren Sie einen sichtbaren Dienst, der beim suchproxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)registriert ist, haben Sie einen WCF-Dienst implementiert, der sich selbst beim suchproxy registriert. In diesem Thema erstellen Sie einen WCF-Client, der den suchproxy verwendet, um den WCF-Dienst zu suchen.  
   
 ### <a name="implement-the-client"></a>Implementieren des Clients  
   
@@ -25,7 +25,7 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
 3. Fügen Sie dem Projekt die Datei GeneratedClient.cs hinzu, die Sie am Ende dieses Themas finden.  
   
     > [!NOTE]
-    >  Diese Datei wird normalerweise mit einem Tool wie Svcutil.exe generiert. Sie wird der Einfachheit halber in diesem Thema bereitgestellt.  
+    > Diese Datei wird normalerweise mit einem Tool wie Svcutil.exe generiert. Sie wird der Einfachheit halber in diesem Thema bereitgestellt.  
   
 4. Öffnen Sie die Datei Program.cs, und fügen Sie die folgende Methode hinzu. Diese Methode verwendet eine Endpunktadresse und verwendet sie zum Initialisieren des Dienstclients (Proxy).  
   
@@ -101,7 +101,7 @@ Dieses Thema ist das dritte von drei Themen, in denen erläutert wird, wie sie e
     }  
     ```  
   
- Sie haben das Implementieren der Clientanwendung abgeschlossen. Fortfahren mit [Vorgehensweise: Testen des Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
+ Sie haben das Implementieren der Clientanwendung abgeschlossen. Fortfahren mit [der Vorgehensweise: Testen Sie den suchproxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Beispiel  
  Dies ist die vollständige Codeauflistung für dieses Thema.  
@@ -284,5 +284,5 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, das beim Suchproxy registriert.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Vorgehensweise: Implementieren eines Ermittlungs Proxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Vorgehensweise: Implementieren Sie einen sichtbaren Dienst, der sich beim suchproxy registriert.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a31a42362e934d14b9cb66724618814e2b232c06
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 2486316cf582da09eaa8998d06efb8a4e4ea3a88
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967213"
 ---
 # <a name="runtime-profiling"></a>Laufzeit-Profilerstellung
 Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Bereitstellung oder einem Bereitstellungsszenario. Dieser Abschnitt ist für Entwickler und Systemadministratoren vorgesehen, die Informationen zur Leistung der Anwendung erfassen möchten.  
@@ -49,12 +49,12 @@ Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Be
      Sie müssen zudem einen Registrierungsschlüssel ändern, um verschiedene Versionen der Laufzeit oder mehrere Clientanwendungen mit dem gleichen Namen zu unterscheiden. Weitere Informationen finden Sie unter [Performance Counters and In-Process Side-By-Side Applications](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md).  
   
 > [!NOTE]
->  Wenn neue Leistungsindikatoren installiert werden, während die Leistungskonsole ausgeführt wird, beenden Sie die Leistungskonsole und starten sie anschließend neu, damit die neuen Indikatoren angezeigt werden.  
+> Wenn neue Leistungsindikatoren installiert werden, während die Leistungskonsole ausgeführt wird, beenden Sie die Leistungskonsole und starten sie anschließend neu, damit die neuen Indikatoren angezeigt werden.  
   
  Wenn Sie für eine Assembly ein Profil erstellen möchten, die sich in einer Zone oder auf einer Remotefreigabe befindet, stellen Sie sicher, dass die Remoteassembly auf dem Computer über volle Vertrauenswürdigkeit verfügt, auf dem die Leistungsindikatoren ausgeführt werden. Ist die Vertrauenswürdigkeit der Assembly zu gering bemessen, funktionieren die Leistungsindikatoren nicht. Informationen zum Gewähren von Vertrauenswürdigkeit für verschiedene Zonen finden Sie unter [Caspol.exe (Code Access Security Policy-Tool)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
->  Auf Systemen, auf denen die .NET Framework 4 installiert ist, zeigt der System Monitor möglicherweise in einigen Kategorien, z. b. **.NET CLR-Daten** und **.NET CLR-Netzwerk**, keine Daten für Leistungsindikatoren für Anwendungen an, die mithilfe von .net entwickelt wurden. Framework 1,1. Wenn dies der Fall ist, können Sie den Systemmonitor entsprechend konfigurieren, um diese Daten durch Hinzufügen des [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)-Elements in der Konfigurationsdatei der Anwendung anzuzeigen.  
+> Auf Systemen, auf denen die .NET Framework 4 installiert ist, zeigt der System Monitor möglicherweise in einigen Kategorien, z. b. **.NET CLR-Daten** und **.NET CLR-Netzwerk**, keine Daten für Leistungsindikatoren für Anwendungen an, die mithilfe von .net entwickelt wurden. Framework 1,1. Wenn dies der Fall ist, können Sie den Systemmonitor entsprechend konfigurieren, um diese Daten durch Hinzufügen des [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)-Elements in der Konfigurationsdatei der Anwendung anzuzeigen.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Programmgesteuertes Lesen und Erstellen von Leistungsindikatoren  
  Der .NET Framework stellt Klassen bereit, mit denen Sie Programm gesteuert auf dieselben Leistungsinformationen zugreifen können, die in der Leistungs Konsole verfügbar sind. Mithilfe dieser Klassen können Sie auch benutzerdefinierte Leistungsindikatoren erstellen. In der folgenden Tabelle werden einige der Leistungs Überwachungs Klassen beschrieben, die in der .NET Framework bereitgestellt werden.  

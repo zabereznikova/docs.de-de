@@ -2,18 +2,18 @@
 title: Dienstidentitätsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 587c1b8f5cd509db343266f5903847d3b94b7460
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 999e05918eb7ac852336136a1e7512a2e9d7b9db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664694"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964538"
 ---
 # <a name="service-identity-sample"></a>Dienstidentitätsbeispiel
-Dieses Dienstidentitätsbeispiel veranschaulicht das Festlegen der Identität eines Diensts. Während der Entwurfszeit kann ein Client die Identität mithilfe der Metadaten des Diensts abrufen und zur Laufzeit die Identität des Diensts authentifizieren. Das Konzept der Dienstidentität besteht darin, dass ein Client einen Dienst authentifizieren kann, bevor er einen seiner Vorgänge aufruft. Auf diese Weise wird der Client vor nicht authentifizierten Aufrufen geschützt. Bei einer sicheren Verbindung authentifiziert der Dienst auch die Anmeldeinformationen eines Clients, bevor er diesem Zugriff gewährt. Diese Funktion steht jedoch nicht im Mittelpunkt dieses Beispiels. Finden Sie in die Beispielen in [Client](../../../../docs/framework/wcf/samples/client.md) anzugeben, dass die Server-Authentifizierung.
+Dieses Dienstidentitätsbeispiel veranschaulicht das Festlegen der Identität eines Diensts. Während der Entwurfszeit kann ein Client die Identität mithilfe der Metadaten des Diensts abrufen und zur Laufzeit die Identität des Diensts authentifizieren. Das Konzept der Dienstidentität besteht darin, dass ein Client einen Dienst authentifizieren kann, bevor er einen seiner Vorgänge aufruft. Auf diese Weise wird der Client vor nicht authentifizierten Aufrufen geschützt. Bei einer sicheren Verbindung authentifiziert der Dienst auch die Anmeldeinformationen eines Clients, bevor er diesem Zugriff gewährt. Diese Funktion steht jedoch nicht im Mittelpunkt dieses Beispiels. Sehen Sie sich die Beispiele in [Client](../../../../docs/framework/wcf/samples/client.md) an, die die Server Authentifizierung anzeigen.
 
 > [!NOTE]
->  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.
+> Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.
 
  In diesem Beispiel werden die folgenden Funktionen veranschaulicht:
 
@@ -107,26 +107,26 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Stellen Sie sicher, dass Sie das [einmalige Setup Verfahren für die Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ausgeführt haben.
 
 2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.
 
-3. Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Um das Beispiel in einer Konfiguration mit einem Computer oder Computer übergreifend auszuführen, befolgen Sie die Anweisungen unter [Ausführen der Windows Communication Foundation Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>So führen Sie das Beispiel auf demselben Computer aus
 
-1. Importieren Sie unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] oder [!INCLUDE[wv](../../../../includes/wv-md.md)] die Zertifikatdatei Identity.pfx im Identitätsprojektmappenordner mithilfe des MMC-Snap-In-Tools in den Zertifikatspeicher LocalMachine/Mein (persönlicher) Zertifikatspeicher. Diese Datei ist durch ein Kennwort geschützt. Während des Imports werden Sie um ein Kennwort gebeten. Typ `xyz` in das Kennwortfeld. Weitere Informationen finden Sie unter [How to: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) Thema. Sobald dies geschehen ist, führen Sie "Setup.bat" im Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten aus, die dieses Zertifikat in den Speicher CurrentUser/vertrauenswürdige Personen, für die Verwendung auf dem Client kopiert.
+1. Importieren Sie unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] oder [!INCLUDE[wv](../../../../includes/wv-md.md)] die Zertifikatdatei Identity.pfx im Identitätsprojektmappenordner mithilfe des MMC-Snap-In-Tools in den Zertifikatspeicher LocalMachine/Mein (persönlicher) Zertifikatspeicher. Diese Datei ist durch ein Kennwort geschützt. Während des Imports werden Sie um ein Kennwort gebeten. Geben `xyz` Sie in das Feld Kennwort ein. Weitere Informationen finden Sie unter [How to: Anzeigen von Zertifikaten mit dem MMC-Snap](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) -in Thema. Führen Sie anschließend die Datei "Setup. bat" in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten aus, die dieses Zertifikat zur Verwendung auf dem Client in den Speicher "CurrentUser/Trusted People" kopiert.
 
-2. Auf [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], führen Sie Setup.bat aus dem beispielinstallationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung mit Administratorrechten aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
+2. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]Führen Sie Setup. bat aus dem Beispiel Installationsordner innerhalb einer Visual Studio 2012-Eingabeaufforderung mit Administratorrechten aus. Hiermit werden alle Zertifikate installiert, die zum Ausführen des Beispiels erforderlich sind.
 
     > [!NOTE]
-    >  Die Batchdatei "Setup.bat" wird aus einer Visual Studio 2012-Eingabeaufforderung ausgeführt werden soll. Die PATH-Umgebungsvariable festgelegt in der Visual Studio 2012-Eingabeaufforderung verweist auf das Verzeichnis mit ausführbaren Dateien, die durch das Skript Setup.bat erforderlich sind. Wenn Sie mit dem Beispiel fertig sind, müssen Sie die Datei Cleanup.bat ausführen, um die Zertifikate zu entfernen. In anderen Sicherheitsbeispielen werden die gleichen Zertifikate verwendet.  
+    >  Die Batchdatei "Setup. bat" ist so konzipiert, dass Sie über eine Visual Studio 2012-Eingabeaufforderung ausgeführt wird. Die in der Visual Studio 2012-Eingabeaufforderung festgelegte PATH-Umgebungsvariable verweist auf das Verzeichnis, das ausführbare Dateien enthält, die für das Skript "Setup. bat" erforderlich sind. Wenn Sie mit dem Beispiel fertig sind, müssen Sie die Datei Cleanup.bat ausführen, um die Zertifikate zu entfernen. In anderen Sicherheitsbeispielen werden die gleichen Zertifikate verwendet.  
   
-3. Starten Sie "Service.exe" aus dem Verzeichnis "\service\bin". Stellen Sie sicher, dass der Dienst ist bereit und zeigt eine Eingabeaufforderung drücken \<Eingabetaste > um den Dienst zu beenden.  
+3. Starten Sie "Service.exe" aus dem Verzeichnis "\service\bin". Stellen Sie sicher, dass der Dienst darauf hinweist, dass der Dienst bereit ist \<, und zeigt eine Eingabeaufforderung an, um die Eingabetaste zu drücken >  
   
 4. Starten Sie "Client.exe" aus dem Verzeichnis "\client\bin" oder durch das Drücken der Taste F5 in Visual Studio zum Erstellen und Ausführen. In der Clientkonsolenanwendung wird Clientaktivität angezeigt.  
   
-5. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+5. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
   
 ### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   
@@ -140,21 +140,21 @@ class CustomIdentityVerifier : IdentityVerifier
   
 5. Kopieren Sie die Clientprogrammdateien in das Clientverzeichnis auf dem Clientcomputer. Kopieren Sie die Dateien Setup.bat, Cleanup.bat und ImportServiceCert.bat ebenfalls auf den Client.  
   
-6. Führen Sie auf den Dienst `setup.bat service` in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Ausführung `setup.bat` mit der `service` Argument wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in die Datei Service.cer exportiert.  
+6. Führen `setup.bat service` Sie auf dem-Dienst in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Wenn `setup.bat` Sie mit `service` dem-Argument ausführen, wird ein Dienst Zertifikat mit dem voll qualifizierten Domänen Namen des Computers erstellt und in die Datei Service. CER exportiert.  
   
 7. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
   
 8. Ändern Sie in der Datei Client.exe.config auf dem Clientcomputer den Wert für die Adresse des Endpunkts, sodass er mit der neuen Adresse Ihres Diensts übereinstimmt. Es gibt mehrere Instanzen, die geändert werden müssen.  
   
-9. Führen Sie auf dem Client importservicecert.bat aus in einer Developer-Eingabeaufforderung für Visual Studio mit Administratorrechten geöffnet. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
+9. Führen Sie auf dem Client ImportServiceCert. bat in einem Developer-Eingabeaufforderung für Visual Studio aus, das mit Administratorrechten geöffnet wurde. Dadurch wird das Dienstzertifikat aus der Datei Service.cer in den Speicher CurrentUser – TrustedPeople importiert.  
   
 10. Starten Sie auf dem Dienstcomputer Service.exe an einer Eingabeaufforderung.  
   
-11. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung. Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+11. Starten Sie auf dem Clientcomputer Client.exe an einer Eingabeaufforderung. Wenn der Client und der Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))Weitere Informationen.  
   
 ### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
 - Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
     > [!NOTE]
-    >  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele, die Zertifikate computerübergreifend verwenden ausgeführt haben, achten Sie darauf, dass Sie die Dienstzertifikate entfernen, die in den Speicher CurrentUser – trustedpeople installiert wurden. Zu diesem Zweck verwenden Sie den folgenden Befehl aus: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Zum Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+    >  Wenn dieses Beispiel computerübergreifend ausgeführt wird, entfernt dieses Skript keine Dienstzertifikate auf einem Client. Wenn Sie Windows Communication Foundation (WCF)-Beispiele ausgeführt haben, die Zertifikate Computer übergreifend verwenden, müssen Sie sicherstellen, dass Sie die Dienst Zertifikate löschen, die im Speicher CurrentUser-treudpeople installiert wurden. Verwenden Sie hierzu den folgenden Befehl: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Beispiel: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

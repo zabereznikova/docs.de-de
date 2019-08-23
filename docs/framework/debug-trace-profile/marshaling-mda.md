@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c8e42e76a61eb0820c1af72c20d004161ad25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e1583ba8ecfa461958f96bea6cb2b9d3313349b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753971"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967284"
 ---
 # <a name="marshaling-mda"></a>marshaling-MDA
 Der `marshaling`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn die CLR Marshallinginformationen für einen Methodenparameter oder das Feld einer Struktur einrichtet. Dieser MDA funktioniert nicht mit JIT-kompilierten Assemblys.  
@@ -22,7 +22,7 @@ Der `marshaling`-MDA (Managed Debugging Assistant, Assistent für verwaltetes De
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>Ausgabe  
  Der MDA zeigt den Typ des Parameters bzw. Felds in den verwalteten und nicht verwalteten Kontexten sowie die Struktur bzw. Methode an, die diesen Typ enthält.  Das Folgende ist ein Beispiel für die Ausgabe für ein Feld:  
   
 ```  
@@ -31,7 +31,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Konfiguration  
- Durch Konfigurieren des MDA können Sie die gemeldeten Marshallinginformationen anhand der betroffenen Feld- oder Methodennamen filtern.  Im folgenden Beispiel wird gezeigt, wie die Elemente `methodFilter`, `fieldFilter` und `match` verwendet werden, um Filter anzugeben.  Wird das `name`-Attribut auf ein Sternchen (*) festgelegt, werden alle Namen erfasst.  
+ Durch Konfigurieren des MDA können Sie die gemeldeten Marshallinginformationen anhand der betroffenen Feld- oder Methodennamen filtern.  Im folgenden Beispiel wird gezeigt, wie die Elemente `methodFilter`, `fieldFilter` und `match` verwendet werden, um Filter anzugeben.  Wenn das `name` -Attribut auf ein Sternchen\*() festgelegt wird, entspricht es allen.  
   
 ```xml  
 <mdaConfig>  

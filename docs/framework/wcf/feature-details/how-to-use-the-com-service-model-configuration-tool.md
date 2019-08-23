@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 6f677d067ea0a93310036b13dba90e43731e8094
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9677e516ef6c91ef344e10bc8f608a397a4ed157
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606498"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966139"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Vorgehensweise: Verwenden des COM+-Dienstmodell-Konfigurationstools
 Nachdem Sie einen geeigneten Hosting-Modus ausgewählt haben, verwenden Sie das COM+-Dienstmodell-Konfigurations-Befehlszeilentool (ComSvcConfig.exe) zur Konfigurierung der Anwendungsschnittstellen, die als Webdienste verfügbar gemacht werden.  
   
 > [!NOTE]
->  Sie müssen über Administratorrechte verfügen, um die folgenden Aufgaben auszuführen zu können.  
+> Sie müssen über Administratorrechte verfügen, um die folgenden Aufgaben auszuführen zu können.  
   
  Wenn Sie ComSvcConfig.exe auf einem Windows 7-Computer verwenden, um einen Webdienst für die Verwendung der neuesten Dienstmodellversion (derzeit 4.5) zu konfigurieren, führen Sie folgende Schritte aus:  
   
-1. Legen Sie den Registrierungsschlüssel `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` auf einen DWORD-Wert, der 0 x 00000001  
+1. Legen Sie den Registrierungs `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` Schlüssel auf den DWORD-Wert 0x00000001 fest.  
   
 2. Führen Sie comsvcconfig.exe aus.  
   
 3. Legen Sie den in Schritt 1 festgelegten Registrierungsschlüssel wieder auf den ursprünglichen Wert fest, oder löschen Sie ihn, wenn er nicht vorhanden war.  
   
 > [!IMPORTANT]
->  Es ist wichtig, diesen Registrierungsschlüssel wieder zurückzuversetzen, weil er einen Kompatibilitätsschlüssel darstellt. Wird diese Änderung nicht rückgängig gemacht, können Probleme mit anderen .NET-Anwendungen auftreten, die auf dem Computer ausgeführt werden).  
+> Es ist wichtig, diesen Registrierungsschlüssel wieder zurückzuversetzen, weil er einen Kompatibilitätsschlüssel darstellt. Wird diese Änderung nicht rückgängig gemacht, können Probleme mit anderen .NET-Anwendungen auftreten, die auf dem Computer ausgeführt werden).  
   
 > [!WARNING]
->  Bei Verwendung von ComSvcConfig.exe/install auf einem Windows 8-Computer ein Dialogfeld wird mit dem Hinweis angezeigt "eine app auf Ihrem PC benötigt die folgende Windows-Features: .NET Framework 3.5 (umfasst .NET 2.0 und .NET 3.0" Wenn .NET Framework 3.5 nicht installiert ist. Dieses Dialogfeld kann ignoriert werden. Alternativ können Sie den OnlyUseLatestCLR-Registrierungsschlüssel auf den DWORD-Wert 0x00000001 festlegen.  
+>  Bei der Verwendung von ComSvcConfig. exe/install auf einem Windows 8-Computer wird ein Dialogfeld mit dem Hinweis angezeigt, dass für eine APP auf Ihrem PC Folgendes Windows-Feature erforderlich ist: .NET Framework 3,5 (enthält .NET 2,0 und .NET 3,0), wenn .NET Framework 3,5 nicht installiert ist. Dieses Dialogfeld kann ignoriert werden. Alternativ können Sie den OnlyUseLatestCLR-Registrierungsschlüssel auf den DWORD-Wert 0x00000001 festlegen.  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Um mithilfe des COM+-Hostingmodus eine Schnittstelle zu der Gruppe von Schnittstellen hinzuzufügen, die als Webdienste verfügbar gemacht werden sollen.  
   
