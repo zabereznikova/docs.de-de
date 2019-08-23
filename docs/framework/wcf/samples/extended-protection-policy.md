@@ -2,12 +2,12 @@
 title: Erweiterte Schutzrichtlinie
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: c2a79798569e308c37bd66bf0bdf8dee0cfa6951
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0e6c2bdac3880b12a1b447fe3caf07c4a81a8d80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650059"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961484"
 ---
 # <a name="extended-protection-policy"></a>Erweiterte Schutzrichtlinie
 Der erweiterte Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-In-The-Middle-Angriffen (MITM-Angriff, Janusangriff). Ein MITM-Angriff ist eine Sicherheitsbedrohung, bei der ein MITM die Anmeldeinformationen eines Clients an einen Server weiterleitet.  
@@ -19,34 +19,34 @@ Der erweiterte Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-In-The-M
  Wenn sich Anwendungen über Kerberos, Digest oder NTLM mit HTTPS authentifizieren, wird zunächst ein Transport Level Security (TLS)-Kanal eingerichtet. Die Authentifizierung erfolgt dann über den sicheren Kanal. Zwischen dem von SSL und dem bei der Authentifizierung erstellten Sitzungsschlüssel besteht jedoch keine Bindung. Jeder MITM kann sich zwischen den Client und den Server schalten und anfangen, die Anforderungen vom Client weiterzuleiten, auch wenn der Transportkanal selbst sicher ist. Der Server selbst kann nicht feststellen, ob der sichere Kanal vom Client oder von einem MITM eingerichtet wurde. Die Lösung bei einem Szenario dieser Art besteht darin, den äußeren TLS-Kanal mit dem inneren Authentifizierungskanal auf eine Weise zu binden, die es dem Server ermöglicht, festzustellen, ob es einen MITM gibt.  
   
 > [!NOTE]
->  Dieses Beispiel funktioniert nur, wenn es unter IIS gehostet wird und nicht unter Cassini – Visual Studio Development Server, da hier keine HTTPS-Unterstützung gegeben ist.  
+> Dieses Beispiel funktioniert nur, wenn es unter IIS gehostet wird und nicht unter Cassini – Visual Studio Development Server, da hier keine HTTPS-Unterstützung gegeben ist.  
   
 > [!NOTE]
->  Diese Funktion ist aktuell nur unter Windows 7 verfügbar. Die folgenden Schritte gelten für Windows 7.  
+> Diese Funktion ist aktuell nur unter Windows 7 verfügbar. Die folgenden Schritte gelten für Windows 7.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1. Installieren Sie Internetinformationsdienste über **Systemsteuerung**, **Programme hinzufügen/entfernen**, **Windows Features**.  
+1. Installieren **Sie**Internetinformationsdienste über die **Systemsteuerung**, "Software" und " **Windows-Funktionen**".  
   
-2. Installieren Sie **Windows-Authentifizierung** in **Windows Features**, **Internetinformationsdienste**, **WWW-Dienste**,  **Sicherheit**, und **Windows-Authentifizierung**.  
+2. Installieren Sie die **Windows-Authentifizierung** in **Windows-Features**, **Internetinformationsdienste**, **World Wide Web-Diensten**, **Sicherheit**und **Windows-Authentifizierung**.  
   
-3. Installieren Sie **Windows Communication Foundation-HTTP-Aktivierung** in **Windows Features**, **Microsoft .NET Framework 3.5.1**, und **Windows-Kommunikation Foundation-HTTP-Aktivierung**.  
+3. Installieren Sie **Windows Communication Foundation http-Aktivierung** in **Windows-Features**, **Microsoft .NET Framework 3.5.1**und **Windows Communication Foundation http-Aktivierung**.  
   
 4. In diesem Beispiel muss der Client eine Verbindung über einen sicheren Kanal zum Server herstellen. Dazu muss ein Serverzertifikat vorliegen, das im IIS (Internet Information Services)-Manager installiert werden kann.  
   
-    1. Öffnen Sie IIS-Manager. Open **Serverzertifikate**, die angezeigt wird, der **Ansicht "Feature"** Registerkarte, wenn der Stammknoten (Computername) ausgewählt ist.  
+    1. Öffnen Sie IIS-Manager. Öffnen Sie **Server Zertifikate**, die auf der Registerkarte **Funktions Ansicht** angezeigt werden, wenn der Stamm Knoten (Computername) ausgewählt ist.  
   
     2. Erstellen Sie zum Testen dieses Beispiels ein selbstsigniertes Zertifikat. Wenn Sie von Internet Explorer keine Meldung hinsichtlich der fehlenden Sicherheit des Zertifikats erhalten möchten, installieren Sie das Zertifikat im entsprechenden Autoritätsspeicher für vertrauenswürdige Zertifikate.  
   
-5. Öffnen der **Aktionen** Bereich für die Standardwebsite. Klicken Sie auf **Site bearbeiten**, **Bindungen**. Fügen Sie HTTPS als Typ hinzu, wenn nicht bereits vorhanden ist, und geben Sie die Portnummer 443 an. Weisen Sie das im vorangehenden Schritt erstellte SSL-Zertifikat zu.  
+5. Öffnen Sie den **Aktions** Bereich für die Standard Website. Klicken Sie auf **Website bearbeiten**und dann auf **Bindungen**. Fügen Sie HTTPS als Typ hinzu, wenn nicht bereits vorhanden ist, und geben Sie die Portnummer 443 an. Weisen Sie das im vorangehenden Schritt erstellte SSL-Zertifikat zu.  
   
 6. Erstellen Sie den Dienst. Hierdurch wird ein virtuelles Verzeichnis in IIS erstellt. Die DLL-, SVC- und CONFIG-Dateien, die dafür erforderlich sind, dass der Dienst über das Web gehostet wird, werden kopiert.  
   
-7. Öffnen Sie IIS-Manager. Mit der rechten Maustaste in des virtuellen Verzeichnis (**ExtendedProtection**), der im vorherigen Schritt erstellt wurde. Wählen Sie **in Anwendung konvertieren**.  
+7. Öffnen Sie IIS-Manager. Klicken Sie mit der rechten Maustaste auf das virtuelle Verzeichnis (**ExtendedProtection**), das im vorherigen Schritt erstellt wurde. Wählen Sie **in Anwendung konvertieren**aus.  
   
-8. Öffnen der **Authentifizierung** im IIS-Manager-Modul für dieses virtuelle Verzeichnis und Enable **Windows-Authentifizierung**.  
+8. Öffnen Sie das **Authentifizierungs** Modul für dieses virtuelle Verzeichnis im IIS-Manager, und aktivieren Sie die **Windows-Authentifizierung**.  
   
-9. Open **Erweiterte Einstellungen** unter **Windows-Authentifizierung** für dieses virtuelle Verzeichnis, und legen Sie ihn auf **erforderlich**.  
+9. Öffnen Sie **Erweiterte Einstellungen** unter **Windows-Authentifizierung** für dieses virtuelle Verzeichnis, und legen Sie es auf **erforderlich**fest.  
   
 10. Sie können den Dienst testen, indem Sie die HTTPS-URL in einem Browserfenster öffnen. (Geben Sie einen vollqualifizierten Domänennamen an.) Möchten Sie von einem Remotecomputer aus auf die URL zugreifen, konfigurieren Sie die Firewall entsprechend, damit ein- und ausgehende HTTP- und HTTPS-Verbindungen hergestellt werden können.  
   
@@ -59,6 +59,6 @@ Der erweiterte Schutz ist eine Sicherheitsinitiative zum Schutz vor Man-In-The-M
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
+>  Wenn dieses Verzeichnis nicht vorhanden ist, wechseln Sie zu [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF)-Beispiele für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , um alle Windows Communication Foundation (WCF [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ) und Beispiele herunterzuladen. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

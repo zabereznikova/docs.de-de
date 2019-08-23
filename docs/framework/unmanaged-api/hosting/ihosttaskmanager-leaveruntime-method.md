@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 959cb541013ca0a26557e849874dbb329489d855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749529"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959042"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime-Methode
-Benachrichtigt den Host aus, die aktuell ausgeführte Aufgabe ist, lassen die common Language Runtime (CLR) und geben nicht verwalteten Code zu.  
+Benachrichtigt den Host, dass die derzeit ausgeführte Aufgabe im Begriff ist, die Common Language Runtime (CLR) zu verlassen und nicht verwalteten Code einzugeben.  
   
 > [!IMPORTANT]
->  Ein entsprechender Aufruf von [IHostTaskManager:: EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) benachrichtigt den Host, dass die aktuell ausgeführte Aufgabe wieder in verwaltetem Code eintritt.  
+> Ein entsprechender Aufruf von [IHostTaskManager:: EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) benachrichtigt den Host darüber, dass die gerade ausgeführte Aufgabe den verwalteten Code erneut in den Status wechselt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,38 +40,38 @@ HRESULT LeaveRuntime (
   
 ## <a name="parameters"></a>Parameter  
  `target`  
- [in] Die Adresse innerhalb der zugeordneten portierbaren ausführbaren Datei der nicht verwaltete Funktion aufgerufen werden.  
+ in Die Adresse in der zugeordneten portablen ausführbaren Datei der nicht verwalteten Funktion, die aufgerufen werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
-|HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
+|S_OK|`LeaveRuntime`wurde erfolgreich zurückgegeben.|  
+|HOST_E_CLRNOTAVAILABLE|Die CLR wurde nicht in einen Prozess geladen, oder die CLR befindet sich in einem Zustand, in dem Sie verwalteten Code nicht ausführen oder den-Befehl nicht erfolgreich verarbeiten kann.|  
+|HOST_E_TIMEOUT|Timeout des Aufrufes.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
-|E_OUTOFMEMORY|Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Zuweisung abzuschließen.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierter Thread oder eine Fiber darauf wartete.|  
+|E_FAIL|Ein unbekannter schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, kann die CLR innerhalb des Prozesses nicht mehr verwendet werden. Nachfolgende Aufrufe von Hostingmethoden geben HOST_E_CLRNOTAVAILABLE zurück.|  
+|E_OUTOFMEMORY|Es ist nicht genügend Arbeitsspeicher verfügbar, um die angeforderte Zuordnung abzuschließen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Von Aufrufsequenzen an und von nicht verwaltetem Code können geschachtelt werden. Beispielsweise wird die folgenden Liste beschrieben, eine hypothetische Situation, in denen die Reihenfolge der Aufrufe von `LeaveRuntime`, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), und `IHostTaskManager::EnterRuntime` ermöglicht es dem Host, um die geschachtelten Ebenen zu identifizieren.  
+ Die Aufrufe von Sequenzen in und aus nicht verwaltetem Code können eingebettet werden. In der folgenden Liste wird z. b. eine hypothetische Situation beschrieben, in der `LeaveRuntime`die Sequenz von Aufrufen von, [IHostTaskManager:: ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), und `IHostTaskManager::EnterRuntime` ermöglicht dem Host das Identifizieren Sie die unter-und-Ebenen.  
   
-|Aktion|Aufruf der entsprechenden Methode|  
+|Aktion|Entsprechender Methodenaufrufe|  
 |------------|-------------------------------|  
-|Eine verwaltete ausführbare Visual Basic-Aufrufe über eine nicht verwaltete Funktion, die mit der Plattform in C geschriebene aufrufen.|`IHostTaskManager::LeaveRuntime`|  
-|Die nicht verwaltete C-Funktion ruft eine Methode in eine verwaltete DLL, die in geschriebenen C#.|`IHostTaskManager::ReverseEnterRuntime`|  
-|Die verwaltete C# Funktion aufruft, eine andere nicht verwaltete Funktion, die in C geschrieben wurden, ebenfalls mit einem Plattformaufruf.|`IHostTaskManager::LeaveRuntime`|  
-|Die zweite nicht verwaltete Funktion zurück, der Ausführung der C# Funktion.|`IHostTaskManager::EnterRuntime`|  
-|Die C# Funktion gibt die Ausführung an die erste nicht verwaltete Funktion.|`IHostTaskManager::ReverseLeaveRuntime`|  
-|Die erste nicht verwaltete Funktion setzt die Ausführung in Visual Basic-Programm.|`IHostTaskManager::EnterRuntime`|  
+|Eine verwaltete Visual Basic ausführbare Datei Ruft eine nicht verwaltete Funktion auf, die mit einem Platt Form Aufruf in C geschrieben wurde.|`IHostTaskManager::LeaveRuntime`|  
+|Die nicht verwaltete C-Funktion Ruft eine Methode in einer verwalteten DLL auf C#, die in geschrieben wurde.|`IHostTaskManager::ReverseEnterRuntime`|  
+|Die verwaltete C# Funktion Ruft eine andere in C geschriebene, nicht verwaltete Funktion auf, die auch Platt Form Aufrufe verwendet.|`IHostTaskManager::LeaveRuntime`|  
+|Die zweite nicht verwaltete Funktion gibt die Ausführung an C# die Funktion zurück.|`IHostTaskManager::EnterRuntime`|  
+|Die C# -Funktion gibt die Ausführung an die erste nicht verwaltete Funktion zurück.|`IHostTaskManager::ReverseLeaveRuntime`|  
+|Die erste nicht verwaltete Funktion gibt die Ausführung an das Visual Basic Programm zurück.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Formen** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
+ **Fern** Als Ressource in Mscoree. dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

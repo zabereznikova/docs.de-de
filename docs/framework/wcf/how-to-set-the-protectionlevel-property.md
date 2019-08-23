@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 222fda180923cdc7b0d7b7ab413c151c69add259
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928959"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950978"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft
-Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anwenden und die Eigenschaft einrichten. Sie können den Schutz auf Dienstebene einrichten, um alle Teile einer Nachricht anzupassen. Darüber hinaus können Sie den Schutz auf stärker unterteilten Ebenen einrichten – von den Methoden zu den Nachrichtenteilen. Weitere Informationen zu den `ProtectionLevel` -Eigenschaft finden Sie unter [Verständnis Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md).  
+Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anwenden und die Eigenschaft einrichten. Sie können den Schutz auf Dienstebene einrichten, um alle Teile einer Nachricht anzupassen. Darüber hinaus können Sie den Schutz auf stärker unterteilten Ebenen einrichten – von den Methoden zu den Nachrichtenteilen. Weitere Informationen zur- `ProtectionLevel` Eigenschaft finden Sie Untergrund Legendes zu [Schutz Ebenen](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
->  Schutzebenen können nur im Code, nicht in der Konfiguration festgelegt werden.  
+> Schutzebenen können nur im Code, nicht in der Konfiguration festgelegt werden.  
   
 ### <a name="to-sign-all-messages-for-a-service"></a>So signieren Sie alle Nachrichten für einen Dienst  
   
@@ -42,7 +42,7 @@ Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anw
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>Schützen von Fehlernachrichten  
- Ausnahmen, die für einen Dienst ausgelöst werden, können als SOAP-Fehler an einen Client gesendet werden. Weitere Informationen zum Erstellen stark Fehler eingegeben haben, finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) und [Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
+ Ausnahmen, die für einen Dienst ausgelöst werden, können als SOAP-Fehler an einen Client gesendet werden. Weitere Informationen zum Erstellen stark typisierter Fehler finden Sie unter [angeben und behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) und [Gewusst wie: Deklarieren von Fehlern in](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)Dienstverträgen.  
   
 #### <a name="to-protect-a-fault-message"></a>So schützen Sie eine Fehlernachricht  
   
@@ -61,7 +61,7 @@ Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anw
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>Schützen von Nachrichtenteilen  
- Verwenden Sie einen Nachrichtenvertrag, um Teile einer Nachricht zu schützen. Weitere Informationen zu Meldungsverträgen finden Sie unter [Using Message Contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+ Verwenden Sie einen Nachrichtenvertrag, um Teile einer Nachricht zu schützen. Weitere Informationen zu Nachrichten Verträgen finden Sie unter [Verwenden von Nachrichten Verträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
 #### <a name="to-protect-a-message-body"></a>So schützen Sie einen Nachrichtentext  
   
@@ -71,7 +71,7 @@ Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anw
   
 3. Wenden Sie das <xref:System.ServiceModel.MessageHeaderAttribute>-Attribut auf ein Feld an, das als Nachrichtenheader ausgedrückt wird, und setzen Sie die `ProtectionLevel`-Eigenschaft auf <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
-4. Anwenden der <xref:System.ServiceModel.MessageBodyMemberAttribute> für jedes Feld, das als Teil des Nachrichtentexts ausgedrückt werden, und legen Sie die `ProtectionLevel` Eigenschaft <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, wie im folgenden Beispiel gezeigt.  
+4. Wenden Sie auf ein beliebiges Feld an, das als Teil des Nachrichten Texts ausgedrückt wird, und `ProtectionLevel` legen Sie <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>die-Eigenschaft auf fest, wie im folgenden Beispiel gezeigt. <xref:System.ServiceModel.MessageBodyMemberAttribute>  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  

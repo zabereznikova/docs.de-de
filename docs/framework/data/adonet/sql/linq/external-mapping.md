@@ -2,28 +2,28 @@
 title: Externe Zuordnung
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 0b6ced31f5534bd040917ecc5d241d54d9bee95f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619713"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950330"
 ---
 # <a name="external-mapping"></a>Externe Zuordnung
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt *externe Zuordnung*, einen Prozess mit dem Sie eine separate XML-Datei verwenden, um die Zuordnung zwischen dem Datenmodell der Datenbank und dem Objektmodell an. Die Verwendung einer externen Zuordnungsdatei bietet u. a. folgende Vorteile:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]unterstützt *externe Zuordnung*, einen Prozess, mit dem Sie eine separate XML-Datei verwenden, um die Zuordnung zwischen dem Datenmodell der Datenbank und dem Objektmodell anzugeben. Die Verwendung einer externen Zuordnungsdatei bietet u. a. folgende Vorteile:  
   
 - Sie können den Zuordnungscode vom Anwendungscode trennen. Hierdurch wird die Übersichtlichkeit des Anwendungscodes verbessert.  
   
 - Eine externe Zuordnungsdatei kann in etwa wie eine Konfigurationsdatei behandelt werden. Beispielsweise können Sie das Anwendungsverhalten aktualisieren, nachdem die Binärdateien bereits ausgeliefert wurden, indem Sie einfach die externe Zuordnungsdatei austauschen.  
   
 ## <a name="requirements"></a>Anforderungen  
- Die Zuordnungsdatei muss eine XML-Datei, und überprüfen Sie die Datei muss anhand einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Schemadefinitionsdatei (.xsd).  
+ Die Zuordnungsdatei muss eine XML-Datei sein, und die Datei muss [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] anhand einer Schema Definitionsdatei (. xsd) überprüft werden.  
   
  Dabei gelten folgende Regeln:  
   
 - Die Zuordnungsdatei muss eine XML-Datei sein.  
   
-- Die XML-Zuordnungsdatei muss gegenüber der XML-Schemadefinitionsdatei gültig sein. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen von DBML- und externen Zuordnungsdateien](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+- Die XML-Zuordnungsdatei muss gegenüber der XML-Schemadefinitionsdatei gültig sein. Weitere Informationen finden Sie unter [Vorgehensweise: Validieren von DBML-und](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
   
 - Externe Zuordnungen überschreiben attributbasierte Zuordnungen. Dies bedeutet, dass alle für Klassen erstellten Zuordnungsattribute von <xref:System.Data.Linq.DataContext> ignoriert werden, wenn Sie <xref:System.Data.Linq.DataContext> unter Verwendung einer externen Zuordnungsquelle erstellen. Dieses Verhalten gilt unabhängig davon, ob die Klasse in der externen Zuordnungsdatei enthalten ist.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "64619713"
 ## <a name="xml-schema-definition-file"></a>XML-Schemadefinitionsdatei  
  Die externe Zuordnung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] muss gegenüber der folgenden XML-Schemadefinition gültig sein.  
   
- Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer DBML-Datei verwendet wird. Weitere Informationen finden Sie unter [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
+ Beachten Sie den Unterschied zwischen dieser Schemadefinitionsdatei und der Schemadefinitionsdatei, die zum Überprüfen einer DBML-Datei verwendet wird. Weitere Informationen finden Sie unter [Code Generierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  Visual Studio-Benutzer findet auch diese XSD-Datei in das Dialogfeld für die XML-Schemas wie "Datei"LinqToSqlMapping.xsd". Um diese Datei ordnungsgemäß zum Überprüfen einer externen Zuordnungsdatei zu verwenden, finden Sie unter [Vorgehensweise: Überprüfen von DBML- und externen Zuordnungsdateien](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+> Visual Studio-Benutzer finden diese XSD-Datei auch im Dialogfeld XML-Schemas als "linqdesqlmapping. xsd". Informationen dazu, wie Sie diese Datei ordnungsgemäß für die Validierung einer externen [Datei verwenden, finden Sie unter Gewusst wie: Validieren von DBML-und](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)externen Mapping-Dateien.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  

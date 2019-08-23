@@ -11,33 +11,33 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 630b0c48def77449f426b287a26f95af7cfb930e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36cf71529b1f81c27881638d788117222c37171d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936629"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955883"
 ---
 # <a name="new-operator-visual-basic"></a>Operator New (Visual Basic)
-Führt eine `New` -Klausel zum Erstellen einer neuen Objektinstanz gibt eine Konstruktoreinschränkung für einen Typparameter oder identifiziert eine `Sub` Prozedur als ein Klassenkonstruktor.  
+Führt eine `New` -Klausel ein, um eine neue Objektinstanz zu erstellen, gibt eine Konstruktoreinschränkung für einen Typparameter `Sub` an oder identifiziert eine Prozedur als Klassenkonstruktor.  
   
 ## <a name="remarks"></a>Hinweise  
- In einer Deklaration oder zuweisungsanweisung eine `New` -Klausel muss angeben eine definierte Klasse, die von dem die Instanz erstellt werden kann. Dies bedeutet, dass die Klasse einen oder mehrere Konstruktoren verfügbar machen muss, die der aufrufende Code zugreifen können.  
+ In einer Deklaration oder Zuweisungsanweisung `New` muss eine-Klausel eine definierte Klasse angeben, aus der die Instanz erstellt werden kann. Dies bedeutet, dass die Klasse einen oder mehrere Konstruktoren verfügbar machen muss, auf die der aufrufenden Code zugreifen kann.  
   
- Sie können eine `New` -Klausel in einer deklarationsanweisung oder eine zuweisungsanweisung. Wenn die Anweisung ausgeführt wird, ruft er den entsprechenden Konstruktor der angegebenen Klasse und übergeben von Argumenten, die Sie angegeben haben. Das folgende Beispiel zeigt dies durch das Erstellen von Instanzen von einem `Customer` -Klasse, die zwei Konstruktoren, die keine Parameter akzeptiert und eine, die einen Zeichenfolgenparameter akzeptiert.  
+ Sie können eine `New` -Klausel in einer Deklarations Anweisung oder einer Zuweisungsanweisung verwenden. Wenn die Anweisung ausgeführt wird, wird der entsprechende Konstruktor der angegebenen Klasse aufgerufen, wobei alle von Ihnen bereitgestellten Argumente übergeben werden. Dies wird im folgenden Beispiel veranschaulicht, indem Instanzen `Customer` einer Klasse erstellt werden, die über zwei Konstruktoren verfügt, eine, die keine Parameter annimmt, und eine Klasse, die einen String-Parameter annimmt.  
   
  [!code-vb[VbVbalrKeywords#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#11)]  
   
- Da Arrays Klassen sind `New` können eine neues Array-Instanz erstellen, wie in den folgenden Beispielen gezeigt.  
+ Da Arrays Klassen sind, `New` kann eine neue Array Instanz erstellen, wie in den folgenden Beispielen gezeigt.  
   
  [!code-vb[VbVbalrKeywords#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class6.vb#12)]  
   
- Löst die common Language Runtime (CLR) eine <xref:System.OutOfMemoryException> Fehler, wenn nicht genügend zum Erstellen der neuen Instanz Arbeitsspeicher.  
+ Der Common Language Runtime (CLR) löst einen <xref:System.OutOfMemoryException> Fehler aus, wenn nicht genügend Arbeitsspeicher vorhanden ist, um die neue Instanz zu erstellen.  
   
 > [!NOTE]
->  Die `New` -Schlüsselwort wird auch in der Parameterliste des Typs verwendet, um anzugeben, dass der angegebene Typ der einen zugänglichen parameterlosen Konstruktor verfügbar machen muss. Weitere Informationen über Typparameter und Einschränkungen finden Sie unter [Typliste](../../../visual-basic/language-reference/statements/type-list.md).  
+> Das `New` -Schlüsselwort wird auch in Typparameter Listen verwendet, um anzugeben, dass der angegebene Typ einen zugänglichen Parameter losen Konstruktor verfügbar machen muss. Weitere Informationen zu Typparametern und Einschränkungen finden Sie unter [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
   
- Um eine Konstruktorprozedur für eine Klasse zu erstellen, legen Sie den Namen des eine `Sub` Vorgehensweise die `New` Schlüsselwort. Weitere Informationen finden Sie unter [Object Lifetime: Wie die Objekte erstellt und zerstört werden](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Zum Erstellen einer konstruktorprozedur für eine Klasse legen Sie den Namen einer `Sub` Prozedur auf das `New` Schlüsselwort fest. Weitere Informationen finden [Sie unter Objekt Lebensdauer: Die Art und Weise, wie](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)Objekte erstellt und zerstört werden.  
   
  Das `New`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   
@@ -53,4 +53,4 @@ Führt eine `New` -Klausel zum Erstellen einer neuen Objektinstanz gibt eine Kon
 - [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Typliste](../../../visual-basic/language-reference/statements/type-list.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Objektlebensdauer: Wie die Objekte erstellt und zerstört werden](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Objekt Lebensdauer: Erstellen und zerstören von Objekten](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
